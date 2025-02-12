@@ -25,28 +25,28 @@ public class PhysicsDiagnostics : DDLObjectType, IDDLObjectType<PhysicsDiagnosti
 		FailsafeMaximumVelocity = ddl.GetValue<float>(0xe7108bb2u, FailsafeMaximumVelocity);
 	}
 
-	[DDLRegistration(0x2e1bc26bu)]
+	[DDLRegistration(0xc2793146u)]
 	public bool BreakablesVerbose { get; set; } = false;
 
-	[DDLRegistration(0x2e1bc26bu, description: "Warn when one object has more than this many collisions being tested on it.")]
+	[DDLRegistration(0x99c60687u, description: "Warn when one object has more than this many collisions being tested on it.")]
 	public sbyte WarnOnThisManyCollisions { get; set; } = 9;
 
-	[DDLRegistration(0x2e1bc26bu)]
+	[DDLRegistration(0x7be46d45u)]
 	public short WarnWhenRemovingThisManyObjects { get; set; } = 0;
 
-	[DDLRegistration(0x2e1bc26bu, description: "Record up to this many manifold modifiers per frame, so we can report them if we run out of memory.")]
+	[DDLRegistration(0x77929e85u, description: "Record up to this many manifold modifiers per frame, so we can report them if we run out of memory.")]
 	public short ManifoldModifierLogLength { get; set; } = 0;
 
-	[DDLRegistration(0x2e1bc26bu, description: "If more than this many collisions in one frame, dump a report to TTY")]
+	[DDLRegistration(0x30cd215au, description: "If more than this many collisions in one frame, dump a report to TTY")]
 	public short WarnOnThisManyManifoldsGloballyInOneFrame { get; set; } = 32767;
 
-	[DDLRegistration(0x2e1bc26bu, description: "If more than this many bodies activated in one frame, dump a report to TTY")]
+	[DDLRegistration(0x7f2a3396u, description: "If more than this many bodies activated in one frame, dump a report to TTY")]
 	public short WarnOnThisManyBodyActivationsGloballyInOneFrame { get; set; } = 32767;
 
-	[DDLRegistration(0x2e1bc26bu, description: "Do WarnOnThisManyManifoldsGloballyInOneFrame no more than once per this many seconds")]
+	[DDLRegistration(0xc056257fu, description: "Do WarnOnThisManyManifoldsGloballyInOneFrame no more than once per this many seconds")]
 	public float MinimumSecondsBetweenExcessiveManifoldReports { get; set; } = 5.00f;
 
-	[DDLRegistration(0x2e1bc26bu, description: "Attempts to set velocities higher than this will cause the object to zero out its velocity instead and throw an error. This is an additional failsafe on top of the maximum speed in the Motion Properties.")]
+	[DDLRegistration(0xe7108bb2u, description: "Attempts to set velocities higher than this will cause the object to zero out its velocity instead and throw an error. This is an additional failsafe on top of the maximum speed in the Motion Properties.")]
 	public float FailsafeMaximumVelocity { get; set; } = 1000.00f;
 
 	public static PhysicsDiagnostics Create(DDLObject ddl) => new(ddl);

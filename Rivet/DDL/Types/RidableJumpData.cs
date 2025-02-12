@@ -22,19 +22,19 @@ public class RidableJumpData : DDLObjectType, IDDLObjectType<RidableJumpData> {
 		MaxJumpDist = ddl.GetValue<float>(0x43fa48bcu, MaxJumpDist);
 	}
 
-	[DDLRegistration(0x977309deu, description: "Force a specific height above the start position to use as the peak of the jump.")]
+	[DDLRegistration(0x99740e0cu, description: "Force a specific height above the start position to use as the peak of the jump.")]
 	public float OverrideHeight { get; set; } = 1.25f;
 
-	[DDLRegistration(0x977309deu, description: "If the distance to jump is <= MinJumpDist, then this is the speed the bot will use during the jump.")]
+	[DDLRegistration(0xac9b1f11u, description: "If the distance to jump is <= MinJumpDist, then this is the speed the bot will use during the jump.")]
 	public float MinJumpSpeed { get; set; } = 12.00f;
 
-	[DDLRegistration(0x977309deu, description: "If the distance to jump is >= MaxJumpDist, then this is the speed the bot will use during the jump.")]
+	[DDLRegistration(0x3ce80ffbu, description: "If the distance to jump is >= MaxJumpDist, then this is the speed the bot will use during the jump.")]
 	public float MaxJumpSpeed { get; set; } = 35.00f;
 
-	[DDLRegistration(0x977309deu, description: "The jump distance associated with the MinJumpSpeed.")]
+	[DDLRegistration(0x8ff733b3u, description: "The jump distance associated with the MinJumpSpeed.")]
 	public float MinJumpDist { get; set; } = 5.00f;
 
-	[DDLRegistration(0x977309deu, description: "The jump distance associated with the MaxJumpSpeed.")]
+	[DDLRegistration(0x43fa48bcu, description: "The jump distance associated with the MaxJumpSpeed.")]
 	public float MaxJumpDist { get; set; } = 20.00f;
 
 	public static RidableJumpData Create(DDLObject ddl) => new(ddl);

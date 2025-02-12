@@ -18,7 +18,7 @@ public class TriggerEffectDataFeedback : TriggerEffectDataBase, IDDLObjectType<T
 		PositionBegin = ddl.GetValue<uint>(0xca8006c1u, PositionBegin);
 	}
 
-	[DDLRegistration(0xce090d43u, description: "0 = Not pressed at all. 9 = Fully pressed.")]
+	[DDLRegistration(0xca8006c1u, description: "0 = Not pressed at all. 9 = Fully pressed.")]
 	public uint PositionBegin { get; set; } = 0x00000000;
 
 	public new static TriggerEffectDataFeedback Create(DDLObject ddl) => new(ddl);

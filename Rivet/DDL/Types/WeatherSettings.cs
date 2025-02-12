@@ -24,25 +24,25 @@ public class WeatherSettings : DDLObjectType, IDDLObjectType<WeatherSettings> {
 		WeatherRippleThreshold = ddl.GetValue<float>(0x6f84096bu, WeatherRippleThreshold);
 	}
 
-	[DDLRegistration(0xcfaf1028u)]
+	[DDLRegistration(0x9d60aabbu)]
 	public float WeatherCellSize { get; set; } = 5.00f;
 
-	[DDLRegistration(0xcfaf1028u)]
+	[DDLRegistration(0xff34adb9u)]
 	public float WeatherGSplashAge { get; set; } = 0.10f;
 
-	[DDLRegistration(0xcfaf1028u)]
+	[DDLRegistration(0xfbbb7f85u)]
 	public float WeatherGSplashScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcfaf1028u)]
+	[DDLRegistration(0x71ab12e8u)]
 	public float WeatherGSplashColor { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcfaf1028u)]
+	[DDLRegistration(0xc71d636bu)]
 	public float WeatherGSplashAlpha { get; set; } = 0.50f;
 
-	[DDLRegistration(0xcfaf1028u)]
+	[DDLRegistration(0x8f8f743du)]
 	public float WeatherGSplashNearFade { get; set; } = 0.50f;
 
-	[DDLRegistration(0xcfaf1028u)]
+	[DDLRegistration(0x6f84096bu)]
 	public float WeatherRippleThreshold { get; set; } = 0.10f;
 
 	public static WeatherSettings Create(DDLObject ddl) => new(ddl);

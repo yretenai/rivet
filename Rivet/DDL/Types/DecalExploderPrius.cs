@@ -23,22 +23,22 @@ public class DecalExploderPrius : DDLObjectType, IDDLObjectType<DecalExploderPri
 		DriverEvents = ddl.GetBitset<x27b34de0>(0x9d1f4b4du, x27b34de0Values.Lookup);
 	}
 
-	[DDLRegistration(0x3b7ecb8bu)]
+	[DDLRegistration(0xe8c9b5bfu)]
 	public float CheckDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3b7ecb8bu, description: "Max spread (in degrees)")]
+	[DDLRegistration(0x191f829eu, description: "Max spread (in degrees)")]
 	public float MaxAngle { get; set; } = 180.00f;
 
-	[DDLRegistration(0x3b7ecb8bu)]
+	[DDLRegistration(0x0e0eb473u)]
 	public xf356f148 UseDirection { get; set; } = xf356f148.Down;
 
-	[DDLRegistration(0x3b7ecb8bu)]
+	[DDLRegistration(0xafc79ea8u)]
 	public byte MaxDecals { get; set; } = 0x08;
 
-	[DDLRegistration(0x3b7ecb8bu, description: "Only explode if the DeathEvent's DamageType is kExplosive")]
+	[DDLRegistration(0x56a7a54au, description: "Only explode if the DeathEvent's DamageType is kExplosive")]
 	public bool DeathEventMustBeExplosive { get; set; } = false;
 
-	[DDLRegistration(0x3b7ecb8bu, "Triggered by")]
+	[DDLRegistration(0x9d1f4b4du, "Triggered by")]
 	public x27b34de0 DriverEvents { get; set; } = (x27b34de0) 0x00000005;
 
 	public static DecalExploderPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class ShotMotionProtonSeekerPrius : HomingShotMotionGamePrius, IDDLObject
 		TargetBreakoffSpeed = ddl.GetValue<float>(0xc1f5788bu, TargetBreakoffSpeed);
 	}
 
-	[DDLRegistration(0x7f6a5264u)]
+	[DDLRegistration(0xdb79bfaau)]
 	public float FlightSpeedAccel { get; set; } = 50.00f;
 
-	[DDLRegistration(0x7f6a5264u)]
+	[DDLRegistration(0x10cab3d3u)]
 	public float FlightSpeedMax { get; set; } = 100.00f;
 
-	[DDLRegistration(0x7f6a5264u)]
+	[DDLRegistration(0x360df86cu)]
 	public float HomingRangeMin { get; set; } = 10.00f;
 
-	[DDLRegistration(0x7f6a5264u)]
+	[DDLRegistration(0xc1f5788bu)]
 	public float TargetBreakoffSpeed { get; set; } = 8.00f;
 
 	public new static ShotMotionProtonSeekerPrius Create(DDLObject ddl) => new(ddl);

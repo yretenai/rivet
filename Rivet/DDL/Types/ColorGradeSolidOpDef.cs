@@ -23,22 +23,22 @@ public class ColorGradeSolidOpDef : DDLObjectType, IDDLObjectType<ColorGradeSoli
 		Color = ddl.GetObject<DDLVector3>(0x7f058428u);
 	}
 
-	[DDLRegistration(0xb489c108u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb489c108u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xb489c108u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 100.00f;
 
-	[DDLRegistration(0xb489c108u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0xb489c108u)]
+	[DDLRegistration(0x1b4f6c9au)]
 	public x58442634 BlendType { get; set; } = x58442634.Multiply;
 
-	[DDLRegistration(0xb489c108u)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
 	public static ColorGradeSolidOpDef Create(DDLObject ddl) => new(ddl);

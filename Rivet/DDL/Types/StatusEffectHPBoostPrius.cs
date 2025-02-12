@@ -19,10 +19,10 @@ public class StatusEffectHPBoostPrius : StatusEffectBasePrius, IDDLObjectType<St
 		IsPercent = ddl.GetValue<bool>(0x858c4cf5u, IsPercent);
 	}
 
-	[DDLRegistration(0xd77a32feu)]
+	[DDLRegistration(0xb0d93e25u)]
 	public float Amount { get; set; } = 50.00f;
 
-	[DDLRegistration(0xd77a32feu)]
+	[DDLRegistration(0x858c4cf5u)]
 	public bool IsPercent { get; set; } = true;
 
 	public new static StatusEffectHPBoostPrius Create(DDLObject ddl) => new(ddl);

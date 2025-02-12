@@ -22,19 +22,19 @@ public class VendorMenuOpenedDevstatsEvent : EventBase, IDDLObjectType<VendorMen
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x3ada1843u, "Event ID", "Unique ID for this particular Devstats event.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique ID for this particular Devstats event.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x3ada1843u, "Menu Segment ID", "ID for this segment of time during which the player had the vendor window open. Matches the Menu Segment Id in the corresponding Vendor Menu Closed event.")]
+	[DDLRegistration(0x40f9a2c2u, "Menu Segment ID", "ID for this segment of time during which the player had the vendor window open. Matches the Menu Segment Id in the corresponding Vendor Menu Closed event.")]
 	public string? MenuSegmentId { get; set; } = default;
 
-	[DDLRegistration(0x3ada1843u, "Initial Tab", "The tab that the menu was initially opened to.")]
+	[DDLRegistration(0x18da9841u, "Initial Tab", "The tab that the menu was initially opened to.")]
 	public VendorTabs InitialTab { get; set; } = VendorTabs.Purchase;
 
-	[DDLRegistration(0x3ada1843u, "Player Pos Info", "Where the player was when they opened the vendor window.")]
+	[DDLRegistration(0xeadcc3e4u, "Player Pos Info", "Where the player was when they opened the vendor window.")]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x3ada1843u, "Primary Segment Info", "The primary segment during which this event was sent. I.e. the primary mission or objective.")]
+	[DDLRegistration(0x9e8725dbu, "Primary Segment Info", "The primary segment during which this event was sent. I.e. the primary mission or objective.")]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static VendorMenuOpenedDevstatsEvent Create(DDLObject ddl) => new(ddl);

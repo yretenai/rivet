@@ -18,7 +18,7 @@ public class QueryVolumeShape : DDLObjectType, IDDLObjectType<QueryVolumeShape> 
 		Offset = ddl.GetObject<DDLVector3>(0x677284b7u);
 	}
 
-	[DDLRegistration(0x04d85407u, description: "Offset from its corresponding actor's position")]
+	[DDLRegistration(0x677284b7u, description: "Offset from its corresponding actor's position")]
 	public DDLVector3? Offset { get; set; } = default;
 
 	public static QueryVolumeShape Create(DDLObject ddl) => new(ddl);

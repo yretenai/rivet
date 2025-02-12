@@ -20,13 +20,13 @@ public class Proof3 : DDLObjectType, IDDLObjectType<Proof3> {
 		SelB = ddl.GetEnum<SelB>(0x77d81d02u, SelBValues.Lookup);
 	}
 
-	[DDLRegistration(0xab3397d5u)]
+	[DDLRegistration(0x3a58e94du)]
 	public int A { get; set; } = 0;
 
-	[DDLRegistration(0xab3397d5u)]
+	[DDLRegistration(0xeed14cb8u)]
 	public SelB SelA { get; set; } = SelB.Q;
 
-	[DDLRegistration(0xab3397d5u)]
+	[DDLRegistration(0x77d81d02u)]
 	public SelB SelB { get; set; } = SelB.Q;
 
 	public static Proof3 Create(DDLObject ddl) => new(ddl);

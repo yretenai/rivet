@@ -21,16 +21,16 @@ public class BuiltDataModified : DDLObjectType, IDDLObjectType<BuiltDataModified
 		HasErrorsWarnings = ddl.GetValue<bool>(0x4f55bc76u, HasErrorsWarnings);
 	}
 
-	[DDLRegistration(0xbfbd83c6u)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xbfbd83c6u)]
+	[DDLRegistration(0xf22b4107u)]
 	public string? TargetPath { get; set; } = default;
 
-	[DDLRegistration(0xbfbd83c6u)]
+	[DDLRegistration(0x75a19d21u)]
 	public x8b211a61 TargetType { get; set; } = x8b211a61.Pid;
 
-	[DDLRegistration(0xbfbd83c6u)]
+	[DDLRegistration(0x4f55bc76u)]
 	public bool HasErrorsWarnings { get; set; } = false;
 
 	public static BuiltDataModified Create(DDLObject ddl) => new(ddl);

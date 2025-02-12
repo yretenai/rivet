@@ -18,7 +18,7 @@ public class OverlayTrigger_Tools : DDLObjectType, IDDLObjectType<OverlayTrigger
 		Trigger = ddl.GetObject<AbstractTriggerPrius_Tools>(0x1b816c65u);
 	}
 
-	[DDLRegistration(0xde3f5637u)]
+	[DDLRegistration(0x1b816c65u)]
 	public AbstractTriggerPrius_Tools? Trigger { get; set; } = default;
 
 	public static OverlayTrigger_Tools Create(DDLObject ddl) => new(ddl);

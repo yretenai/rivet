@@ -19,10 +19,10 @@ public class PerformanceSelectionIndices : DDLObjectType, IDDLObjectType<Perform
 		ParentIndex = ddl.GetValue<uint>(0xaca85f71u, ParentIndex);
 	}
 
-	[DDLRegistration(0x469b59adu)]
+	[DDLRegistration(0x9920abc0u)]
 	public uint Index { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x469b59adu)]
+	[DDLRegistration(0xaca85f71u)]
 	public uint ParentIndex { get; set; } = 0x00000000;
 
 	public static PerformanceSelectionIndices Create(DDLObject ddl) => new(ddl);

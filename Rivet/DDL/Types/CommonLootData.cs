@@ -18,7 +18,7 @@ public class CommonLootData : DDLObjectType, IDDLObjectType<CommonLootData> {
 		LootSetupConfig = ddl.GetValue<RivetAssetId>(0x169493acu, LootSetupConfig);
 	}
 
-	[DDLRegistration(0x19950d87u)]
+	[DDLRegistration(0x169493acu)]
 	public RivetAssetId LootSetupConfig { get; set; } = default;
 
 	public static CommonLootData Create(DDLObject ddl) => new(ddl);

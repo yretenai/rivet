@@ -18,7 +18,7 @@ public class HoudiniIntegrationPlugin : DDLObjectType, IDDLObjectType<HoudiniInt
 		Plugin = ddl.GetString(0xd71669f3) ?? Plugin;
 	}
 
-	[DDLRegistration(0xc7cc42d9u, description: "This is the path to the selected Houdini digital asset.")]
+	[DDLRegistration(0xd71669f3u, description: "This is the path to the selected Houdini digital asset.")]
 	public string? Plugin { get; set; } = default;
 
 	public static HoudiniIntegrationPlugin Create(DDLObject ddl) => new(ddl);

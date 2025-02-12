@@ -19,10 +19,10 @@ public class GrenadeShotTargetPrius : DDLObjectType, IDDLObjectType<GrenadeShotT
 		DisablePhysics = ddl.GetValue<bool>(0x20d44b38u, DisablePhysics);
 	}
 
-	[DDLRegistration(0x68d55968u)]
+	[DDLRegistration(0xa9559cf4u)]
 	public float TargetAngleMax { get; set; } = 30.00f;
 
-	[DDLRegistration(0x68d55968u, description: "Disable physics on projectiles entering the target volume")]
+	[DDLRegistration(0x20d44b38u, description: "Disable physics on projectiles entering the target volume")]
 	public bool DisablePhysics { get; set; } = false;
 
 	public static GrenadeShotTargetPrius Create(DDLObject ddl) => new(ddl);

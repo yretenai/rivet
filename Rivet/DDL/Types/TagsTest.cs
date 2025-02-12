@@ -24,25 +24,25 @@ public class TagsTest : DDLObjectType, IDDLObjectType<TagsTest> {
 		PropertyDisplayInstanceOnly = ddl.GetValue<int>(0xd62f0283u, PropertyDisplayInstanceOnly);
 	}
 
-	[DDLRegistration(0x687211f1u)]
+	[DDLRegistration(0xf4df697eu)]
 	public int Single { get; set; } = 0;
 
-	[DDLRegistration(0x687211f1u)]
+	[DDLRegistration(0xdcc28fc4u)]
 	public int Multi { get; set; } = 0;
 
-	[DDLRegistration(0x687211f1u)]
+	[DDLRegistration(0xa0f4a8c9u)]
 	public int SelectPlusA { get; set; } = 0;
 
-	[DDLRegistration(0x687211f1u)]
+	[DDLRegistration(0x39fdf973u)]
 	public int SelectPlusB { get; set; } = 0;
 
-	[DDLRegistration(0x687211f1u)]
+	[DDLRegistration(0x8197bd9au)]
 	public int PropertyDisplayNone { get; set; } = 0;
 
-	[DDLRegistration(0x687211f1u)]
+	[DDLRegistration(0x3133bd4fu)]
 	public int PropertyDisplayAssetOnly { get; set; } = 0;
 
-	[DDLRegistration(0x687211f1u)]
+	[DDLRegistration(0xd62f0283u)]
 	public int PropertyDisplayInstanceOnly { get; set; } = 0;
 
 	public static TagsTest Create(DDLObject ddl) => new(ddl);

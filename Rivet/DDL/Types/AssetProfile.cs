@@ -21,16 +21,16 @@ public class AssetProfile : DDLObjectType, IDDLObjectType<AssetProfile> {
 		Fields = ddl.GetObjects<AssetField>(0x409dadefu);
 	}
 
-	[DDLRegistration(0x9c7ac38du)]
+	[DDLRegistration(0xb6e788d7u)]
 	public uint AssetId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9c7ac38du)]
+	[DDLRegistration(0x8970bd6du)]
 	public AssetTypes AssetType { get; set; } = AssetTypes.ActorAsset;
 
-	[DDLRegistration(0x9c7ac38du)]
+	[DDLRegistration(0xcb989364u)]
 	public uint ChildrenCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9c7ac38du)]
+	[DDLRegistration(0x409dadefu)]
 	public List<AssetField?> Fields { get; set; } = [];
 
 	public static AssetProfile Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class TriggerEffectConfig : ConfigBase, IDDLObjectType<TriggerEffectConfi
 		TriggerEffectSequence = ddl.GetObject<TriggerEffectSequenceBase>(0x3e2fcad2u);
 	}
 
-	[DDLRegistration(0x336655bau)]
+	[DDLRegistration(0x3e2fcad2u)]
 	public TriggerEffectSequenceBase? TriggerEffectSequence { get; set; } = default;
 
 	public new static TriggerEffectConfig Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class AwarenessPartialManagerPrius : DDLObjectType, IDDLObjectType<Awaren
 		OnEngagedPartial = ddl.GetString(0xc072c706) ?? OnEngagedPartial;
 	}
 
-	[DDLRegistration(0x1be094beu)]
+	[DDLRegistration(0xbbb9a522u)]
 	public string? OnPassivePartial { get; set; } = default;
 
-	[DDLRegistration(0x1be094beu)]
+	[DDLRegistration(0xc072c706u)]
 	public string? OnEngagedPartial { get; set; } = default;
 
 	public static AwarenessPartialManagerPrius Create(DDLObject ddl) => new(ddl);

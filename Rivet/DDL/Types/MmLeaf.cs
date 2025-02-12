@@ -18,7 +18,7 @@ public class MmLeaf : DDLObjectType, IDDLObjectType<MmLeaf> {
 		Moo = ddl.GetString(0xaa73a309) ?? Moo;
 	}
 
-	[DDLRegistration(0x1d9b3079u)]
+	[DDLRegistration(0xaa73a309u)]
 	public string? Moo { get; set; } = default;
 
 	public static MmLeaf Create(DDLObject ddl) => new(ddl);

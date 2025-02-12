@@ -19,10 +19,10 @@ public class CreateVisualEffectInstEngineCommand : DDLObjectType, IDDLObjectType
 		Path = ddl.GetValue<RivetAssetId>(0x3bc44bbfu, Path);
 	}
 
-	[DDLRegistration(0x8fdd5661u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8fdd5661u)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public RivetAssetId Path { get; set; } = default;
 
 	public static CreateVisualEffectInstEngineCommand Create(DDLObject ddl) => new(ddl);

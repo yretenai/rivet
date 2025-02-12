@@ -18,7 +18,7 @@ public class DebugResetTimeLocalActionPrius : DDLObjectType, IDDLObjectType<Debu
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xeeb97931u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
 	public static DebugResetTimeLocalActionPrius Create(DDLObject ddl) => new(ddl);

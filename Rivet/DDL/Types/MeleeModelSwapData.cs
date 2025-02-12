@@ -22,19 +22,19 @@ public class MeleeModelSwapData : DDLObjectType, IDDLObjectType<MeleeModelSwapDa
 		SpecificHero = ddl.GetEnum<HeroTypes>(0x419e02a9u, HeroTypesValues.Lookup);
 	}
 
-	[DDLRegistration(0x9ab26759u)]
+	[DDLRegistration(0x64227d29u)]
 	public string? ModelLabel { get; set; } = default;
 
-	[DDLRegistration(0x9ab26759u, description: "The unlock pack this item belongs to.")]
+	[DDLRegistration(0xa74e9e93u, description: "The unlock pack this item belongs to.")]
 	public x84053194 Pack { get; set; } = x84053194.One;
 
-	[DDLRegistration(0x9ab26759u, description: "Scale to apply for this head size.")]
+	[DDLRegistration(0xcec6be18u, description: "Scale to apply for this head size.")]
 	public RivetAssetId Model { get; set; } = default;
 
-	[DDLRegistration(0x9ab26759u, description: "The audio switch value to use for this model swap.")]
+	[DDLRegistration(0x20ee3d6au, description: "The audio switch value to use for this model swap.")]
 	public string? AudioSwitchValue { get; set; } = "";
 
-	[DDLRegistration(0x9ab26759u, description: "Value other than kNone means this is only for the specified hero.")]
+	[DDLRegistration(0x419e02a9u, description: "Value other than kNone means this is only for the specified hero.")]
 	public HeroTypes SpecificHero { get; set; } = HeroTypes.None;
 
 	public static MeleeModelSwapData Create(DDLObject ddl) => new(ddl);

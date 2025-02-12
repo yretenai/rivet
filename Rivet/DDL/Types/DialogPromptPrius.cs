@@ -21,16 +21,16 @@ public class DialogPromptPrius : DDLObjectType, IDDLObjectType<DialogPromptPrius
 		LastLineCount = ddl.GetValue<int>(0x7959886cu, LastLineCount);
 	}
 
-	[DDLRegistration(0x57313b24u)]
+	[DDLRegistration(0xd5ea3f71u)]
 	public GenericOfferPrius? TalkOffer { get; set; } = default;
 
-	[DDLRegistration(0x57313b24u)]
+	[DDLRegistration(0x14618f8cu)]
 	public string? TalkOfferText { get; set; } = default;
 
-	[DDLRegistration(0x57313b24u)]
+	[DDLRegistration(0x56524057u)]
 	public List<DialogPromptEntry?> Lines { get; set; } = [];
 
-	[DDLRegistration(0x57313b24u, description: "Say the last line this many times. Negative = infinite (until another prompt is added.)")]
+	[DDLRegistration(0x7959886cu, description: "Say the last line this many times. Negative = infinite (until another prompt is added.)")]
 	public int LastLineCount { get; set; } = 1;
 
 	public static DialogPromptPrius Create(DDLObject ddl) => new(ddl);

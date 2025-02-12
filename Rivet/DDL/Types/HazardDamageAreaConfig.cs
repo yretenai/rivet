@@ -31,46 +31,46 @@ public class HazardDamageAreaConfig : ConfigBase, IDDLObjectType<HazardDamageAre
 		SweptSphereEndOffset = ddl.GetObject<DDLVector3>(0xd7f5902cu);
 	}
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0xe2a53270u)]
 	public float HazardLifetime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0xfc2e344au)]
 	public float InsideDPS { get; set; } = 0.00f;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0xdcaa0dd9u)]
 	public float DotDPS { get; set; } = 25.00f;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0x91fef556u)]
 	public float DotDuration { get; set; } = 2.00f;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0x06d5955cu)]
 	public float ConditionDuration { get; set; } = 4.00f;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0xbed7d58du)]
 	public float Elevation { get; set; } = 0.00f;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0x2856176du)]
 	public float WarmUpTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0xb29b36abu)]
 	public float EffectOffTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x800030f0u, description: "Send damage packets at this interval (we can't send them every frame, that's just too much)")]
+	[DDLRegistration(0xcf20fa13u, description: "Send damage packets at this interval (we can't send them every frame, that's just too much)")]
 	public float DamageSendInterval { get; set; } = 0.50f;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0x2e553fddu)]
 	public bool Knockback { get; set; } = false;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0xee3d188cu)]
 	public bool UseSweptSphere { get; set; } = false;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0x3be354f0u)]
 	public bool DamageFriends { get; set; } = false;
 
-	[DDLRegistration(0x800030f0u)]
+	[DDLRegistration(0xd7f5902cu)]
 	public DDLVector3? SweptSphereEndOffset { get; set; } = default;
 
 	public new static HazardDamageAreaConfig Create(DDLObject ddl) => new(ddl);

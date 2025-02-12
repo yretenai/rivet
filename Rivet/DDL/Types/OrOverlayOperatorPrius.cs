@@ -18,7 +18,7 @@ public class OrOverlayOperatorPrius : BaseCustomOverlayTriggerPrius, IDDLObjectT
 		Triggers = ddl.GetObjects<TriggerArray>(0xf4cf343du);
 	}
 
-	[DDLRegistration(0xffe3b9b7u, description: "Any one trigger in this array being true makes this Or trigger true")]
+	[DDLRegistration(0xf4cf343du, description: "Any one trigger in this array being true makes this Or trigger true")]
 	public List<TriggerArray?> Triggers { get; set; } = [];
 
 	public new static OrOverlayOperatorPrius Create(DDLObject ddl) => new(ddl);

@@ -44,85 +44,85 @@ public class EngineDebugSettings : DDLObjectType, IDDLObjectType<EngineDebugSett
 		EnvProbeLookupRangeHigh = ddl.GetValue<ushort>(0x5bfabac9u, EnvProbeLookupRangeHigh);
 	}
 
-	[DDLRegistration(0x62e59f3eu, "Prototype Messages", "Show Prototype Messages")]
+	[DDLRegistration(0x51b6dc19u, "Prototype Messages", "Show Prototype Messages")]
 	public bool PrototypeMessageEnable { get; set; } = true;
 
-	[DDLRegistration(0x62e59f3eu, "Debug Messages Enabled", "Show Debug Messages")]
+	[DDLRegistration(0xf3cdfe9au, "Debug Messages Enabled", "Show Debug Messages")]
 	public bool DebugMessageEnable { get; set; } = true;
 
-	[DDLRegistration(0x62e59f3eu, "Show Frame Time Graph", "Displays the frame time graph on screen")]
+	[DDLRegistration(0x6d98be00u, "Show Frame Time Graph", "Displays the frame time graph on screen")]
 	public bool FrameTimeGraphEnable { get; set; } = true;
 
-	[DDLRegistration(0x62e59f3eu, "Show Frame Time Histogram", "Displays a histogram of frame times on screen")]
+	[DDLRegistration(0x5a017e46u, "Show Frame Time Histogram", "Displays a histogram of frame times on screen")]
 	public bool FrameTimeHistogramEnable { get; set; } = false;
 
-	[DDLRegistration(0x62e59f3eu, "Hide Frame Time Displays?", "Hides the frame time graphs even when they are active during a PerfTestSystem test")]
+	[DDLRegistration(0xfc75b0bdu, "Hide Frame Time Displays?", "Hides the frame time graphs even when they are active during a PerfTestSystem test")]
 	public bool FrameTimeHideDisplay { get; set; } = false;
 
-	[DDLRegistration(0x62e59f3eu, "Show tile boundaries")]
+	[DDLRegistration(0x8e5e7c68u, "Show tile boundaries")]
 	public bool TileBoundaryEnable { get; set; } = false;
 
-	[DDLRegistration(0x62e59f3eu)]
+	[DDLRegistration(0xcaaabc5eu)]
 	public bool AssetManagerDebugDraw { get; set; } = false;
 
-	[DDLRegistration(0x62e59f3eu)]
+	[DDLRegistration(0xc99d2ca9u)]
 	public bool AssetLoadingDebugDraw { get; set; } = true;
 
-	[DDLRegistration(0x62e59f3eu)]
+	[DDLRegistration(0xeaa35dfcu)]
 	public bool FailAllAssetLoads { get; set; } = false;
 
-	[DDLRegistration(0x62e59f3eu)]
+	[DDLRegistration(0x778f6a85u)]
 	public bool FailAssetsAsMissing { get; set; } = false;
 
-	[DDLRegistration(0x62e59f3eu, "Verify models cleanup physics on destruction", "When a ModelInst gets destroyed, verify that its physics representation has been torn down.")]
+	[DDLRegistration(0x589b4addu, "Verify models cleanup physics on destruction", "When a ModelInst gets destroyed, verify that its physics representation has been torn down.")]
 	public bool VerifyModelsHaveNoPhysicsOnDestruction { get; set; } = false;
 
-	[DDLRegistration(0x62e59f3eu)]
+	[DDLRegistration(0xe8309ad3u)]
 	public ushort ScriptDebugPort { get; set; } = 0x04bb;
 
-	[DDLRegistration(0x62e59f3eu)]
+	[DDLRegistration(0xbfb3645fu)]
 	public uint ScriptSignalsPerFrameMax { get; set; } = 0x00000400;
 
-	[DDLRegistration(0x62e59f3eu, "Show Top Asserts", "Displays a list of the the most frequently hit asserts and warnings")]
+	[DDLRegistration(0xa55fe23au, "Show Top Asserts", "Displays a list of the the most frequently hit asserts and warnings")]
 	public bool EnableTopAsserts { get; set; } = false;
 
-	[DDLRegistration(0x62e59f3eu, "Extra Texture Mem Alloc Checks", "Helps track down memory page remapping problems")]
+	[DDLRegistration(0x94c84eceu, "Extra Texture Mem Alloc Checks", "Helps track down memory page remapping problems")]
 	public bool ExtraTextureMemAllocChecks { get; set; } = false;
 
-	[DDLRegistration(0x62e59f3eu, "Stall after loading", "Let the game load the level, but then halt all actor updates. For regression testing.")]
+	[DDLRegistration(0x67edc53fu, "Stall after loading", "Let the game load the level, but then halt all actor updates. For regression testing.")]
 	public bool StallGameAfterLoadBeforeUpdates { get; set; } = false;
 
-	[DDLRegistration(0x62e59f3eu)]
+	[DDLRegistration(0x99cd3063u)]
 	public bool ErrorActorsEnable { get; set; } = true;
 
-	[DDLRegistration(0x62e59f3eu)]
+	[DDLRegistration(0x243d08a6u)]
 	public uint AssetLoadTextPosX { get; set; } = 0x00000014;
 
-	[DDLRegistration(0x62e59f3eu)]
+	[DDLRegistration(0x533a3830u)]
 	public uint AssetLoadTextPosY { get; set; } = 0x00000014;
 
-	[DDLRegistration(0x62e59f3eu)]
+	[DDLRegistration(0xfce261bdu)]
 	public bool DebugMenuEnable { get; set; } = false;
 
-	[DDLRegistration(0x62e59f3eu)]
+	[DDLRegistration(0x2c621a25u)]
 	public bool DebugMenuEasyDebugDelay { get; set; } = true;
 
-	[DDLRegistration(0x62e59f3eu, "Vertex Density Low")]
+	[DDLRegistration(0x6e3fc7f3u, "Vertex Density Low")]
 	public float TargetVertexDensityLow { get; set; } = 0.05f;
 
-	[DDLRegistration(0x62e59f3eu, "Vertex Density High")]
+	[DDLRegistration(0xa69e8cbfu, "Vertex Density High")]
 	public float TargetVertexDensityHigh { get; set; } = 0.50f;
 
-	[DDLRegistration(0x62e59f3eu, "Pixels Per Meter Low")]
+	[DDLRegistration(0x5afa5e35u, "Pixels Per Meter Low")]
 	public float TargetTexelsPerMeterLow { get; set; } = 0.00f;
 
-	[DDLRegistration(0x62e59f3eu, "Pixels Per Meter High")]
+	[DDLRegistration(0xd4ad2ea3u, "Pixels Per Meter High")]
 	public float TargetTexelsPerMeterHigh { get; set; } = 1200.00f;
 
-	[DDLRegistration(0x62e59f3eu, "Env Probe Lookup Range Low")]
+	[DDLRegistration(0x68f0cbe9u, "Env Probe Lookup Range Low")]
 	public ushort EnvProbeLookupRangeLow { get; set; } = 0x0002;
 
-	[DDLRegistration(0x62e59f3eu, "Env Probe Lookup Range High")]
+	[DDLRegistration(0x5bfabac9u, "Env Probe Lookup Range High")]
 	public ushort EnvProbeLookupRangeHigh { get; set; } = 0x000a;
 
 	public static EngineDebugSettings Create(DDLObject ddl) => new(ddl);

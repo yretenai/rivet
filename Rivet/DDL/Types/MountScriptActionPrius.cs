@@ -19,10 +19,10 @@ public class MountScriptActionPrius : DDLObjectType, IDDLObjectType<MountScriptA
 		InstantMount = ddl.GetValue<bool>(0xd542435au, InstantMount);
 	}
 
-	[DDLRegistration(0xf822d8f5u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0xf822d8f5u, description: "If true, causes the hero to be instantly riding the mount. No intro anims are played.")]
+	[DDLRegistration(0xd542435au, description: "If true, causes the hero to be instantly riding the mount. No intro anims are played.")]
 	public bool InstantMount { get; set; } = false;
 
 	public static MountScriptActionPrius Create(DDLObject ddl) => new(ddl);

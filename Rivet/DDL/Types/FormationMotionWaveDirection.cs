@@ -18,7 +18,7 @@ public class FormationMotionWaveDirection : FormationMotionWaveBase, IDDLObjectT
 		MotionDirection = ddl.GetObject<DDLVector3>(0x29478e52u);
 	}
 
-	[DDLRegistration(0xd9c5d9beu, description: "Direction to apply motion.")]
+	[DDLRegistration(0x29478e52u, description: "Direction to apply motion.")]
 	public DDLVector3? MotionDirection { get; set; } = default;
 
 	public new static FormationMotionWaveDirection Create(DDLObject ddl) => new(ddl);

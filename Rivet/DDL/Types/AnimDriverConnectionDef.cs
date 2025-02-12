@@ -19,10 +19,10 @@ public class AnimDriverConnectionDef : DDLObjectType, IDDLObjectType<AnimDriverC
 		OutputIndex = ddl.GetValue<uint>(0x9d7bc01fu, OutputIndex);
 	}
 
-	[DDLRegistration(0x75e51413u)]
+	[DDLRegistration(0x04a96b99u)]
 	public string? RefNodeName { get; set; } = "";
 
-	[DDLRegistration(0x75e51413u)]
+	[DDLRegistration(0x9d7bc01fu)]
 	public uint OutputIndex { get; set; } = 0x00000000;
 
 	public static AnimDriverConnectionDef Create(DDLObject ddl) => new(ddl);

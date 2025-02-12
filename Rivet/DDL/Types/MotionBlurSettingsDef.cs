@@ -19,10 +19,10 @@ public class MotionBlurSettingsDef : DDLObjectType, IDDLObjectType<MotionBlurSet
 		ExposureDuration = ddl.GetValue<float>(0xc6704b05u, ExposureDuration);
 	}
 
-	[DDLRegistration(0x2f34a1d9u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x2f34a1d9u)]
+	[DDLRegistration(0xc6704b05u)]
 	public float ExposureDuration { get; set; } = 0.33f;
 
 	public static MotionBlurSettingsDef Create(DDLObject ddl) => new(ddl);

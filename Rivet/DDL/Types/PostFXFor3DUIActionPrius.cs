@@ -18,7 +18,7 @@ public class PostFXFor3DUIActionPrius : DDLObjectType, IDDLObjectType<PostFXFor3
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xcb82d974u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
 	public static PostFXFor3DUIActionPrius Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class RobotTestActionEventInfo : DDLObjectType, IDDLObjectType<RobotTestA
 		TypeDetailInfo = ddl.GetString(0xf530477e) ?? TypeDetailInfo;
 	}
 
-	[DDLRegistration(0x059e4874u, description: "Cinematic action unique id")]
+	[DDLRegistration(0x32ca55d0u, description: "Cinematic action unique id")]
 	public uint UniqueId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x059e4874u, description: "when spawned what is the shot play count")]
+	[DDLRegistration(0x53239a16u, description: "when spawned what is the shot play count")]
 	public uint ShotPlayCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x059e4874u, description: "Event Type spawned or Stopped")]
+	[DDLRegistration(0xf2b5bb32u, description: "Event Type spawned or Stopped")]
 	public x32784e2f EventType { get; set; } = x32784e2f.EventSpawned;
 
-	[DDLRegistration(0x059e4874u, description: "Actor Name")]
+	[DDLRegistration(0xcc4a4d21u, description: "Actor Name")]
 	public string? ActorName { get; set; } = default;
 
-	[DDLRegistration(0x059e4874u, description: "Action Info")]
+	[DDLRegistration(0x874b2194u, description: "Action Info")]
 	public string? ActionType { get; set; } = default;
 
-	[DDLRegistration(0x059e4874u, description: "Duration Type")]
+	[DDLRegistration(0x41e2529fu, description: "Duration Type")]
 	public string? DurationType { get; set; } = default;
 
-	[DDLRegistration(0x059e4874u, description: "Type detail info")]
+	[DDLRegistration(0xf530477eu, description: "Type detail info")]
 	public string? TypeDetailInfo { get; set; } = default;
 
 	public static RobotTestActionEventInfo Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class Cinematic2CharacterLookInfo : DDLObjectType, IDDLObjectType<Cinemat
 		MaterialTextureOverrides = ddl.GetObjects<Cinematic2MaterialTextureOverrideInfo>(0x667945b1u);
 	}
 
-	[DDLRegistration(0x15df95aeu, description: "Looks to enable.")]
+	[DDLRegistration(0xec785832u, description: "Looks to enable.")]
 	public List<string?> Looks { get; set; } = [];
 
-	[DDLRegistration(0x15df95aeu)]
+	[DDLRegistration(0x68221c5du)]
 	public List<Cinematic2MaterialReplaceInfo?> MaterialOverrides { get; set; } = [];
 
-	[DDLRegistration(0x15df95aeu)]
+	[DDLRegistration(0xb7896f8eu)]
 	public List<Cinematic2MaterialConstOverrideInfo?> MaterialConstOverrides { get; set; } = [];
 
-	[DDLRegistration(0x15df95aeu)]
+	[DDLRegistration(0x667945b1u)]
 	public List<Cinematic2MaterialTextureOverrideInfo?> MaterialTextureOverrides { get; set; } = [];
 
 	public static Cinematic2CharacterLookInfo Create(DDLObject ddl) => new(ddl);

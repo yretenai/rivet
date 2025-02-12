@@ -18,7 +18,7 @@ public class ZoomConfig : ConfigBase, IDDLObjectType<ZoomConfig> {
 		ZoomLevels = ddl.GetObjects<ZoomData>(0x90e332d5u);
 	}
 
-	[DDLRegistration(0xdb4379b0u)]
+	[DDLRegistration(0x90e332d5u)]
 	public List<ZoomData?> ZoomLevels { get; set; } = [];
 
 	public new static ZoomConfig Create(DDLObject ddl) => new(ddl);

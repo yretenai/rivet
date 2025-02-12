@@ -18,7 +18,7 @@ public class UIOptionPresetTypeSettingList : UIOptionPresetTypeBase, IDDLObjectT
 		ListOptions = ddl.GetObjects<UIOptionListOptionData>(0xf2b7b76du);
 	}
 
-	[DDLRegistration(0x870718b9u, description: "label/descriptions for list options")]
+	[DDLRegistration(0xf2b7b76du, description: "label/descriptions for list options")]
 	public List<UIOptionListOptionData?> ListOptions { get; set; } = [];
 
 	public new static UIOptionPresetTypeSettingList Create(DDLObject ddl) => new(ddl);

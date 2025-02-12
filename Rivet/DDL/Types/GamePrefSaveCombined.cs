@@ -19,10 +19,10 @@ public class GamePrefSaveCombined : DDLObjectType, IDDLObjectType<GamePrefSaveCo
 		PCSave = ddl.GetObject<PCGamePreferencesSave>(0x4fdb8a60u);
 	}
 
-	[DDLRegistration(0xe5fb2f7eu)]
+	[DDLRegistration(0x28584f20u)]
 	public GamePreferencesSave? BaseSave { get; set; } = default;
 
-	[DDLRegistration(0xe5fb2f7eu)]
+	[DDLRegistration(0x4fdb8a60u)]
 	public PCGamePreferencesSave? PCSave { get; set; } = default;
 
 	public static GamePrefSaveCombined Create(DDLObject ddl) => new(ddl);

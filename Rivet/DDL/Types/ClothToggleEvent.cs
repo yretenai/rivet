@@ -19,10 +19,10 @@ public class ClothToggleEvent : EventBase, IDDLObjectType<ClothToggleEvent> {
 		EnableBlending = ddl.GetValue<bool>(0x9b9706afu, EnableBlending);
 	}
 
-	[DDLRegistration(0x166e8c8eu)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0x166e8c8eu, description: "when checked we use any blending/transition setup in havok else we pop to new cloth state")]
+	[DDLRegistration(0x9b9706afu, description: "when checked we use any blending/transition setup in havok else we pop to new cloth state")]
 	public bool EnableBlending { get; set; } = true;
 
 	public new static ClothToggleEvent Create(DDLObject ddl) => new(ddl);

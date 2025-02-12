@@ -18,7 +18,7 @@ public class OutputPlugStringHash : OutputPlugBaseDef, IDDLObjectType<OutputPlug
 		Value = ddl.GetObject<StringHashPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x82aa0726u)]
+	[DDLRegistration(0x042494f5u)]
 	public StringHashPlug? Value { get; set; } = default;
 
 	public new static OutputPlugStringHash Create(DDLObject ddl) => new(ddl);

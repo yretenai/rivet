@@ -27,34 +27,34 @@ public class AnimPerformanceSetDef : DDLObjectType, IDDLObjectType<AnimPerforman
 		CustomPerformanceClipGroups = ddl.GetValues<RivetAssetId>(0xb2fdd699u);
 	}
 
-	[DDLRegistration(0xc3cec65bu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xc3cec65bu)]
+	[DDLRegistration(0x9569384fu)]
 	public RivetAssetId FacialPosesClip { get; set; } = default;
 
-	[DDLRegistration(0xc3cec65bu)]
+	[DDLRegistration(0xe262eae7u)]
 	public RivetAssetId HeadActorPath { get; set; } = default;
 
-	[DDLRegistration(0xc3cec65bu)]
+	[DDLRegistration(0x8b17dd67u)]
 	public RivetAssetId PreviewBodyModelPath { get; set; } = default;
 
-	[DDLRegistration(0xc3cec65bu)]
+	[DDLRegistration(0x910dc2bau)]
 	public RivetAssetId BodyActorPath { get; set; } = default;
 
-	[DDLRegistration(0xc3cec65bu)]
+	[DDLRegistration(0x1d0e31d0u)]
 	public RivetAssetId GestureAnimationModelPath { get; set; } = default;
 
-	[DDLRegistration(0xc3cec65bu)]
+	[DDLRegistration(0xc9bbd1ddu)]
 	public RivetAssetId LocalizationPath { get; set; } = default;
 
-	[DDLRegistration(0xc3cec65bu)]
+	[DDLRegistration(0xd5e07cd5u)]
 	public RivetAssetId BodyGestureGroup { get; set; } = default;
 
-	[DDLRegistration(0xc3cec65bu)]
+	[DDLRegistration(0x73a72cf2u)]
 	public List<RivetAssetId> PerformanceClipGroups { get; set; } = [];
 
-	[DDLRegistration(0xc3cec65bu)]
+	[DDLRegistration(0xb2fdd699u)]
 	public List<RivetAssetId> CustomPerformanceClipGroups { get; set; } = [];
 
 	public static AnimPerformanceSetDef Create(DDLObject ddl) => new(ddl);

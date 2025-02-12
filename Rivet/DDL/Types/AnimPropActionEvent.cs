@@ -23,22 +23,22 @@ public class AnimPropActionEvent : EventBase, IDDLObjectType<AnimPropActionEvent
 		MatchAnimType = ddl.GetEnum<xd458e3df>(0x24fabc40u, xd458e3dfValues.Lookup);
 	}
 
-	[DDLRegistration(0x99442740u, "Prop Name")]
+	[DDLRegistration(0x97a161efu, "Prop Name")]
 	public string? PropName { get; set; } = default;
 
-	[DDLRegistration(0x99442740u, "Action Type")]
+	[DDLRegistration(0x874b2194u, "Action Type")]
 	public xe76a4768 ActionType { get; set; } = xe76a4768.AttachRight;
 
-	[DDLRegistration(0x99442740u, "Action Text")]
+	[DDLRegistration(0x301ed17au, "Action Text")]
 	public string? ActionText { get; set; } = default;
 
-	[DDLRegistration(0x99442740u, "Auto Remove")]
+	[DDLRegistration(0x37a7c558u, "Auto Remove")]
 	public bool AutoRemove { get; set; } = true;
 
-	[DDLRegistration(0x99442740u, "Spawn For Shot")]
+	[DDLRegistration(0x0d313a39u, "Spawn For Shot")]
 	public bool SpawnForShot { get; set; } = false;
 
-	[DDLRegistration(0x99442740u, "Match Anim")]
+	[DDLRegistration(0x24fabc40u, "Match Anim")]
 	public xd458e3df MatchAnimType { get; set; } = xd458e3df.Default;
 
 	public new static AnimPropActionEvent Create(DDLObject ddl) => new(ddl);

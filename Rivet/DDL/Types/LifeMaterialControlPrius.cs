@@ -20,13 +20,13 @@ public class LifeMaterialControlPrius : DDLObjectType, IDDLObjectType<LifeMateri
 		FadeTime = ddl.GetValue<float>(0x8833d162u, FadeTime);
 	}
 
-	[DDLRegistration(0xce056248u)]
+	[DDLRegistration(0x8cd13823u)]
 	public string? VarName { get; set; } = "LifeValue";
 
-	[DDLRegistration(0xce056248u, description: "Alive = 0, Dead = 1")]
+	[DDLRegistration(0xe88e6631u, description: "Alive = 0, Dead = 1")]
 	public bool InvertValue { get; set; } = false;
 
-	[DDLRegistration(0xce056248u)]
+	[DDLRegistration(0x8833d162u)]
 	public float FadeTime { get; set; } = 2.00f;
 
 	public static LifeMaterialControlPrius Create(DDLObject ddl) => new(ddl);

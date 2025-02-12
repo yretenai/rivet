@@ -25,28 +25,28 @@ public class ECMResponseDef : DDLObjectType, IDDLObjectType<ECMResponseDef> {
 		CommentNodes = ddl.GetDictionary<RivetAssetId, ECMCommentNodeDef>(0x6461c08f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMCommentNodeDef>(mapId));
 	}
 
-	[DDLRegistration(0x61365696u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x61365696u)]
+	[DDLRegistration(0x9920abc0u)]
 	public int Index { get; set; } = 0;
 
-	[DDLRegistration(0x61365696u, "Enabled")]
+	[DDLRegistration(0x5113d8bcu, "Enabled")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x61365696u, "Response Name")]
+	[DDLRegistration(0x6eb3beb6u, "Response Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x61365696u)]
+	[DDLRegistration(0x9c603cc1u)]
 	public Dictionary<RivetAssetId, ECMEffectNodeDef?> EffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x61365696u)]
+	[DDLRegistration(0x1982bfedu)]
 	public Dictionary<RivetAssetId, ECMInputNodeDef?> InputNodes { get; set; } = [];
 
-	[DDLRegistration(0x61365696u)]
+	[DDLRegistration(0x2e2a59cbu)]
 	public Dictionary<RivetAssetId, ECMFieldOpNodeDef?> FieldOpNodes { get; set; } = [];
 
-	[DDLRegistration(0x61365696u)]
+	[DDLRegistration(0x6461c08fu)]
 	public Dictionary<RivetAssetId, ECMCommentNodeDef?> CommentNodes { get; set; } = [];
 
 	public static ECMResponseDef Create(DDLObject ddl) => new(ddl);

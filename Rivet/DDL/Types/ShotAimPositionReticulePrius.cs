@@ -18,7 +18,7 @@ public class ShotAimPositionReticulePrius : DDLObjectType, IDDLObjectType<ShotAi
 		ReticuleActor = ddl.GetValue<RivetAssetId>(0xefba6c06u, ReticuleActor);
 	}
 
-	[DDLRegistration(0x209f54ebu)]
+	[DDLRegistration(0xefba6c06u)]
 	public RivetAssetId ReticuleActor { get; set; } = default;
 
 	public static ShotAimPositionReticulePrius Create(DDLObject ddl) => new(ddl);

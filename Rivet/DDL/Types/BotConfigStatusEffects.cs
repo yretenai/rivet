@@ -27,34 +27,34 @@ public class BotConfigStatusEffects : ConfigBase, IDDLObjectType<BotConfigStatus
 		RynotizeTrackerPrius = ddl.GetObject<StatusEffectTrackerRynotizePrius>(0x21aa1e39u);
 	}
 
-	[DDLRegistration(0x44fbf2e9u, "Fire Tracker Prius")]
+	[DDLRegistration(0x1e88c992u, "Fire Tracker Prius")]
 	public StatusEffectTrackerFirePrius? FireTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x44fbf2e9u, "Freeze Tracker Prius")]
+	[DDLRegistration(0x72373026u, "Freeze Tracker Prius")]
 	public StatusEffectTrackerFreezePrius? FreezeTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x44fbf2e9u, "Pixelized Tracker Prius")]
+	[DDLRegistration(0x05d48d42u, "Pixelized Tracker Prius")]
 	public StatusEffectTrackerBasePrius? PixelizedTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x44fbf2e9u, "Fossilize Tracker Prius")]
+	[DDLRegistration(0x805ee9bfu, "Fossilize Tracker Prius")]
 	public StatusEffectTrackerFossilizePrius? FossilizeTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x44fbf2e9u, "Shrubbery Tracker Prius")]
+	[DDLRegistration(0xb35aac7au, "Shrubbery Tracker Prius")]
 	public StatusEffectTrackerShrubberyPrius? ShrubberyTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x44fbf2e9u, "MagnaMissile Tracker Prius")]
+	[DDLRegistration(0x20a01904u, "MagnaMissile Tracker Prius")]
 	public StatusEffectTrackerMagnaMissilePrius? MagnaMissileTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x44fbf2e9u, "Lightning Rod Tracker Prius")]
+	[DDLRegistration(0x9dc20243u, "Lightning Rod Tracker Prius")]
 	public StatusEffectTrackerLightningRodPrius? LightningRodTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x44fbf2e9u, "ProtoGrenade Tracker Prius")]
+	[DDLRegistration(0x35a2dd0fu, "ProtoGrenade Tracker Prius")]
 	public StatusEffectTrackerProtoGrenadePrius? ProtoGrenadeTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x44fbf2e9u, "Warp Rifle Implode Tracker Prius")]
+	[DDLRegistration(0x2cf648dcu, "Warp Rifle Implode Tracker Prius")]
 	public StatusEffectTrackerWarpRifleImplodePrius? WarpRifleImplodeTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x44fbf2e9u, "Rynotize Tracker Prius")]
+	[DDLRegistration(0x21aa1e39u, "Rynotize Tracker Prius")]
 	public StatusEffectTrackerRynotizePrius? RynotizeTrackerPrius { get; set; } = default;
 
 	public new static BotConfigStatusEffects Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class SaveImageDef : DDLObjectType, IDDLObjectType<SaveImageDef> {
 		Image = ddl.GetObject<SaveImage>(0xdc6ec89eu);
 	}
 
-	[DDLRegistration(0x644f2fc4u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x644f2fc4u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x644f2fc4u)]
+	[DDLRegistration(0xdc6ec89eu)]
 	public SaveImage? Image { get; set; } = default;
 
 	public static SaveImageDef Create(DDLObject ddl) => new(ddl);

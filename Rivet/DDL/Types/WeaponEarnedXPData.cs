@@ -19,10 +19,10 @@ public class WeaponEarnedXPData : DDLObjectType, IDDLObjectType<WeaponEarnedXPDa
 		XPValue = ddl.GetValue<float>(0x551baad0u, XPValue);
 	}
 
-	[DDLRegistration(0x9b4de8f7u, "XP Source")]
+	[DDLRegistration(0x2aa7da6du, "XP Source")]
 	public xaaf755d6 XPSource { get; set; } = xaaf755d6.Damage;
 
-	[DDLRegistration(0x9b4de8f7u, "XP Value")]
+	[DDLRegistration(0x551baad0u, "XP Value")]
 	public float XPValue { get; set; } = 0.00f;
 
 	public static WeaponEarnedXPData Create(DDLObject ddl) => new(ddl);

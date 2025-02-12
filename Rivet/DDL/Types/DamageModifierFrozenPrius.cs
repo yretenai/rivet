@@ -18,7 +18,7 @@ public class DamageModifierFrozenPrius : DamageModifierIncomingPrius, IDDLObject
 		MeleeModifier = ddl.GetValue<float>(0x853c6ecdu, MeleeModifier);
 	}
 
-	[DDLRegistration(0x26c4b870u)]
+	[DDLRegistration(0x853c6ecdu)]
 	public float MeleeModifier { get; set; } = 2.00f;
 
 	public new static DamageModifierFrozenPrius Create(DDLObject ddl) => new(ddl);

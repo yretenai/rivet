@@ -19,10 +19,10 @@ public class ActorPositionNodeDef : ActorNodeBaseDef, IDDLObjectType<ActorPositi
 		Pos = ddl.GetObject<OutputPlugVec3>(0xaa8ccf65u);
 	}
 
-	[DDLRegistration(0x0024db04u)]
+	[DDLRegistration(0x5d269a38u)]
 	public InputPlugActor? Actor { get; set; } = default;
 
-	[DDLRegistration(0x0024db04u)]
+	[DDLRegistration(0xaa8ccf65u)]
 	public OutputPlugVec3? Pos { get; set; } = default;
 
 	public new static ActorPositionNodeDef Create(DDLObject ddl) => new(ddl);

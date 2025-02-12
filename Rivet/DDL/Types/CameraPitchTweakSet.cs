@@ -18,7 +18,7 @@ public class CameraPitchTweakSet : CameraPitchTweak, IDDLObjectType<CameraPitchT
 		Pitch = ddl.GetValue<float>(0x3ecc7218u, Pitch);
 	}
 
-	[DDLRegistration(0xf66b3004u)]
+	[DDLRegistration(0x3ecc7218u)]
 	public float Pitch { get; set; } = 10.00f;
 
 	public new static CameraPitchTweakSet Create(DDLObject ddl) => new(ddl);

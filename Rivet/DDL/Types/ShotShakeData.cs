@@ -22,19 +22,19 @@ public class ShotShakeData : DDLObjectType, IDDLObjectType<ShotShakeData> {
 		LocalOnly = ddl.GetValue<bool>(0x93f318bcu, LocalOnly);
 	}
 
-	[DDLRegistration(0x5f97ecbeu)]
+	[DDLRegistration(0x33fddf05u)]
 	public x113c2f5c ShakeEvent { get; set; } = x113c2f5c.Impact;
 
-	[DDLRegistration(0x5f97ecbeu)]
+	[DDLRegistration(0x3e5851e0u)]
 	public RivetAssetId ShakeConfig { get; set; } = default;
 
-	[DDLRegistration(0x5f97ecbeu)]
+	[DDLRegistration(0xf8a3836du)]
 	public float InnerRadius { get; set; } = -1.00f;
 
-	[DDLRegistration(0x5f97ecbeu)]
+	[DDLRegistration(0xf6b6fbdeu)]
 	public float OuterRadius { get; set; } = -1.00f;
 
-	[DDLRegistration(0x5f97ecbeu)]
+	[DDLRegistration(0x93f318bcu)]
 	public bool LocalOnly { get; set; } = false;
 
 	public static ShotShakeData Create(DDLObject ddl) => new(ddl);

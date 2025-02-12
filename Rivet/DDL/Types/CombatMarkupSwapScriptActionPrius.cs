@@ -19,10 +19,10 @@ public class CombatMarkupSwapScriptActionPrius : DDLObjectType, IDDLObjectType<C
 		ReadMe = ddl.GetValue<bool>(0x2cc9ec36u, ReadMe);
 	}
 
-	[DDLRegistration(0xa0766cb6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Spawning;
 
-	[DDLRegistration(0xa0766cb6u, "ReadMe(mouseover)", "The passed in variables except firepoints are static. Meaning after the first time you run the node, that combat area markups will be permanent for that node")]
+	[DDLRegistration(0x2cc9ec36u, "ReadMe(mouseover)", "The passed in variables except firepoints are static. Meaning after the first time you run the node, that combat area markups will be permanent for that node")]
 	public bool ReadMe { get; set; } = true;
 
 	public static CombatMarkupSwapScriptActionPrius Create(DDLObject ddl) => new(ddl);

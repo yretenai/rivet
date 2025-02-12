@@ -18,7 +18,7 @@ public class IconMapMultiChild : IconMapBase, IDDLObjectType<IconMapMultiChild> 
 		IconMap = ddl.GetObject<IconMapBase>(0x98f29d61u);
 	}
 
-	[DDLRegistration(0x202e78afu)]
+	[DDLRegistration(0x98f29d61u)]
 	public IconMapBase? IconMap { get; set; } = default;
 
 	public new static IconMapMultiChild Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class TriggerSwitchDelayedEvent : EventBase, IDDLObjectType<TriggerSwitch
 		Index = ddl.GetValue<short>(0x9920abc0u, Index);
 	}
 
-	[DDLRegistration(0x2c8bbeaeu)]
+	[DDLRegistration(0x3d8ea309u)]
 	public uint GroupHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x2c8bbeaeu)]
+	[DDLRegistration(0x32d0ae43u)]
 	public short SequenceNumber { get; set; } = 0;
 
-	[DDLRegistration(0x2c8bbeaeu)]
+	[DDLRegistration(0x9920abc0u)]
 	public short Index { get; set; } = 0;
 
 	public new static TriggerSwitchDelayedEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class PathsAndIds : DDLObjectType, IDDLObjectType<PathsAndIds> {
 		Ids = ddl.GetValues<RivetAssetId>(0x5a8f8e51u);
 	}
 
-	[DDLRegistration(0xb4097630u)]
+	[DDLRegistration(0x92e94ad0u)]
 	public List<RivetAssetId> Paths { get; set; } = [];
 
-	[DDLRegistration(0xb4097630u)]
+	[DDLRegistration(0x5a8f8e51u)]
 	public List<RivetAssetId> Ids { get; set; } = [];
 
 	public static PathsAndIds Create(DDLObject ddl) => new(ddl);

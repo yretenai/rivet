@@ -18,7 +18,7 @@ public class AnimTopiaryPosedModelEvent : EventBase, IDDLObjectType<AnimTopiaryP
 		PosedModel = ddl.GetValue<RivetAssetId>(0xf56def1fu, PosedModel);
 	}
 
-	[DDLRegistration(0x13440412u, description: "A reference to the model that matches this pose to be spawned at runtime.")]
+	[DDLRegistration(0xf56def1fu, description: "A reference to the model that matches this pose to be spawned at runtime.")]
 	public RivetAssetId PosedModel { get; set; } = default;
 
 	public new static AnimTopiaryPosedModelEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class AmmoConfigBase : ConfigBase, IDDLObjectType<AmmoConfigBase> {
 		MaxReserveAmmo = ddl.GetValue<uint>(0x9679a035u, MaxReserveAmmo);
 	}
 
-	[DDLRegistration(0x30441108u)]
+	[DDLRegistration(0x9679a035u)]
 	public uint MaxReserveAmmo { get; set; } = 0x00000064;
 
 	public new static AmmoConfigBase Create(DDLObject ddl) => new(ddl);

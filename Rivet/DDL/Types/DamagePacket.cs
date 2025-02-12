@@ -28,37 +28,37 @@ public class DamagePacket : DamageRequest, IDDLObjectType<DamagePacket> {
 		WeakSpotHitHash = ddl.GetValue<uint>(0x73e8f2feu, WeakSpotHitHash);
 	}
 
-	[DDLRegistration(0xe4db3046u, description: "Handle of actor receiving damage.")]
+	[DDLRegistration(0x7817619bu, description: "Handle of actor receiving damage.")]
 	public uint Target { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe4db3046u, description: "Direction from source of damage to target.")]
+	[DDLRegistration(0x188c2ef8u, description: "Direction from source of damage to target.")]
 	public DDLVector3? HitDirection { get; set; } = default;
 
-	[DDLRegistration(0xe4db3046u, description: "Hit position of damage.")]
+	[DDLRegistration(0x568973e3u, description: "Hit position of damage.")]
 	public DDLVector3? HitPosition { get; set; } = default;
 
-	[DDLRegistration(0xe4db3046u, description: "Surface normal on target at hit position.")]
+	[DDLRegistration(0xc3272bc7u, description: "Surface normal on target at hit position.")]
 	public DDLVector3? HitNormal { get; set; } = default;
 
-	[DDLRegistration(0xe4db3046u, description: "Distance from center of damage shape.")]
+	[DDLRegistration(0xd9de2d79u, description: "Distance from center of damage shape.")]
 	public float HitRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe4db3046u, description: "Name hash of joint that's been hit on target.")]
+	[DDLRegistration(0x1022a771u, description: "Name hash of joint that's been hit on target.")]
 	public uint HitJointNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe4db3046u, description: "Material that was hit on the target.")]
+	[DDLRegistration(0xd49b94d3u, description: "Material that was hit on the target.")]
 	public uint HitMaterialIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe4db3046u, description: "Audio Material that was hit on the target.")]
+	[DDLRegistration(0xeaa5a004u, description: "Audio Material that was hit on the target.")]
 	public uint HitAudioMaterialIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe4db3046u, description: "Response flags from target.")]
+	[DDLRegistration(0x0439f6aau, description: "Response flags from target.")]
 	public x677185a8 ResponseFlags { get; set; } = (x677185a8) 0x00000000;
 
-	[DDLRegistration(0xe4db3046u, description: "This is the actual amount of damage that was dealt to the health component.")]
+	[DDLRegistration(0xe0acd595u, description: "This is the actual amount of damage that was dealt to the health component.")]
 	public float AmountInflicted { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe4db3046u)]
+	[DDLRegistration(0x73e8f2feu)]
 	public uint WeakSpotHitHash { get; set; } = 0x00000000;
 
 	public new static DamagePacket Create(DDLObject ddl) => new(ddl);

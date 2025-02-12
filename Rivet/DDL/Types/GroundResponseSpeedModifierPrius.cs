@@ -18,7 +18,7 @@ public class GroundResponseSpeedModifierPrius : HeroGroundResponseBasePrius, IDD
 		SpeedConfigCollection = ddl.GetObject<HeroSpeedConfigCollection>(0x7630c913u);
 	}
 
-	[DDLRegistration(0x42c2b55cu)]
+	[DDLRegistration(0x7630c913u)]
 	public HeroSpeedConfigCollection? SpeedConfigCollection { get; set; } = default;
 
 	public new static GroundResponseSpeedModifierPrius Create(DDLObject ddl) => new(ddl);

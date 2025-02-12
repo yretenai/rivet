@@ -18,7 +18,7 @@ public class WwiseSwitchSelectItem : DDLObjectType, IDDLObjectType<WwiseSwitchSe
 		SwitchGroupList = ddl.GetObjects<WwiseSwitch>(0xa76c9412u);
 	}
 
-	[DDLRegistration(0x3170d767u)]
+	[DDLRegistration(0xa76c9412u)]
 	public List<WwiseSwitch?> SwitchGroupList { get; set; } = [];
 
 	public static WwiseSwitchSelectItem Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class CameraShakeActionPrius : DDLObjectType, IDDLObjectType<CameraShakeA
 		CameraShakeConfig = ddl.GetValue<RivetAssetId>(0xb610c5e4u, CameraShakeConfig);
 	}
 
-	[DDLRegistration(0xf158c8ddu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0xf158c8ddu, "Inner Radius", "If <i>Position</i> is set, when the Hero is within this radius the camera will shake at full strength.")]
+	[DDLRegistration(0xf8a3836du, "Inner Radius", "If <i>Position</i> is set, when the Hero is within this radius the camera will shake at full strength.")]
 	public float InnerRadius { get; set; } = 10.00f;
 
-	[DDLRegistration(0xf158c8ddu, "Outer Radius", "If <i>Position</i> is set, as the Hero gets further away from Inner Radius, the camera shake will become less violent.  When the Hero passes this radius, the camera will not shake.")]
+	[DDLRegistration(0xf6b6fbdeu, "Outer Radius", "If <i>Position</i> is set, as the Hero gets further away from Inner Radius, the camera shake will become less violent.  When the Hero passes this radius, the camera will not shake.")]
 	public float OuterRadius { get; set; } = 20.00f;
 
-	[DDLRegistration(0xf158c8ddu, "If true, the shaking will following the Actor specified by <i>Position</i> (for example, a rocket taking off).")]
+	[DDLRegistration(0x3c181f0bu, "If true, the shaking will following the Actor specified by <i>Position</i> (for example, a rocket taking off).")]
 	public bool FollowPositionActor { get; set; } = false;
 
-	[DDLRegistration(0xf158c8ddu, description: "Drag and drop a .config file used for camera shaking here (example: camerashake_explosionsmall.config).")]
+	[DDLRegistration(0xb610c5e4u, description: "Drag and drop a .config file used for camera shaking here (example: camerashake_explosionsmall.config).")]
 	public RivetAssetId CameraShakeConfig { get; set; } = default;
 
 	public static CameraShakeActionPrius Create(DDLObject ddl) => new(ddl);

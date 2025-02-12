@@ -26,31 +26,31 @@ public class BreakableBusterPrius : DDLObjectType, IDDLObjectType<BreakableBuste
 		DamageInXZPlane = ddl.GetValue<bool>(0x758e3570u, DamageInXZPlane);
 	}
 
-	[DDLRegistration(0x22aa694au)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
-	[DDLRegistration(0x22aa694au)]
+	[DDLRegistration(0x46a4eea5u)]
 	public DDLVector3? LocalOffset { get; set; } = default;
 
-	[DDLRegistration(0x22aa694au)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x22aa694au)]
+	[DDLRegistration(0x69e55b8au)]
 	public float SpeedThreshold { get; set; } = 5.00f;
 
-	[DDLRegistration(0x22aa694au)]
+	[DDLRegistration(0x05186ed7u)]
 	public float DamagePerSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0x22aa694au)]
+	[DDLRegistration(0xd96a20dcu)]
 	public string? DamageHash { get; set; } = "BreakableBuster";
 
-	[DDLRegistration(0x22aa694au, description: "Determines the maximum number of collision hits per damage request.")]
+	[DDLRegistration(0x1eb7640eu, description: "Determines the maximum number of collision hits per damage request.")]
 	public xad01e8be ActorType { get; set; } = xad01e8be.Bot;
 
-	[DDLRegistration(0x22aa694au)]
+	[DDLRegistration(0x53802713u)]
 	public bool RequireEngaged { get; set; } = false;
 
-	[DDLRegistration(0x22aa694au)]
+	[DDLRegistration(0x758e3570u)]
 	public bool DamageInXZPlane { get; set; } = true;
 
 	public static BreakableBusterPrius Create(DDLObject ddl) => new(ddl);

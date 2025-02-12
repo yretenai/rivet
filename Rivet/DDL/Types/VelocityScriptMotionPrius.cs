@@ -20,13 +20,13 @@ public class VelocityScriptMotionPrius : DDLObjectType, IDDLObjectType<VelocityS
 		Decel = ddl.GetValue<float>(0xa9242a88u, Decel);
 	}
 
-	[DDLRegistration(0x319fa795u)]
+	[DDLRegistration(0xd6f8c91du)]
 	public float IdealSpeed { get; set; } = -1.00f;
 
-	[DDLRegistration(0x319fa795u)]
+	[DDLRegistration(0x44affa24u)]
 	public float Accel { get; set; } = 10.00f;
 
-	[DDLRegistration(0x319fa795u)]
+	[DDLRegistration(0xa9242a88u)]
 	public float Decel { get; set; } = 10.00f;
 
 	public static VelocityScriptMotionPrius Create(DDLObject ddl) => new(ddl);

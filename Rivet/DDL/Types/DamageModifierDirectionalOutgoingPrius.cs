@@ -18,7 +18,7 @@ public class DamageModifierDirectionalOutgoingPrius : DamageModifierOutgoingPriu
 		DamageMult = ddl.GetValue<float>(0x2cc08993u, DamageMult);
 	}
 
-	[DDLRegistration(0xf2f533d9u)]
+	[DDLRegistration(0x2cc08993u)]
 	public float DamageMult { get; set; } = 0.00f;
 
 	public new static DamageModifierDirectionalOutgoingPrius Create(DDLObject ddl) => new(ddl);

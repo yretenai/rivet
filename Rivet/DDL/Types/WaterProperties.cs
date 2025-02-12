@@ -32,49 +32,49 @@ public class WaterProperties : DDLObjectType, IDDLObjectType<WaterProperties> {
 		FlowMapPath = ddl.GetValue<RivetAssetId>(0x252a5deau, FlowMapPath);
 	}
 
-	[DDLRegistration(0x1f51d4dau, "Water Color")]
+	[DDLRegistration(0xb1fafd5bu, "Water Color")]
 	public DDLVector3? WaterColor { get; set; } = default;
 
-	[DDLRegistration(0x1f51d4dau, "Water Color Scale")]
+	[DDLRegistration(0x95e7a4c2u, "Water Color Scale")]
 	public float WaterColorScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f51d4dau, "Water Scale")]
+	[DDLRegistration(0x3bea9036u, "Water Scale")]
 	public float WaterScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1f51d4dau, "Foam Color")]
+	[DDLRegistration(0xba580abeu, "Foam Color")]
 	public DDLVector3? FoamColor { get; set; } = default;
 
-	[DDLRegistration(0x1f51d4dau, "Foam Amplitude")]
+	[DDLRegistration(0x11528a14u, "Foam Amplitude")]
 	public float FoamAmp { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f51d4dau, "Foam Power")]
+	[DDLRegistration(0x778443f7u, "Foam Power")]
 	public float FoamPower { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1f51d4dau, "Water Depth")]
+	[DDLRegistration(0x2d0fa9dbu, "Water Depth")]
 	public float WaterDepth { get; set; } = 2.00f;
 
-	[DDLRegistration(0x1f51d4dau, "Water Gloss")]
+	[DDLRegistration(0xc5f927e7u, "Water Gloss")]
 	public float WaterGloss { get; set; } = 0.70f;
 
-	[DDLRegistration(0x1f51d4dau, "Water Darkening")]
+	[DDLRegistration(0x857bffc4u, "Water Darkening")]
 	public float Darkening { get; set; } = 0.50f;
 
-	[DDLRegistration(0x1f51d4dau, "Flow Rate")]
+	[DDLRegistration(0x297b23ffu, "Flow Rate")]
 	public float FlowRate { get; set; } = 0.50f;
 
-	[DDLRegistration(0x1f51d4dau, "Flow Phase")]
+	[DDLRegistration(0x114ec9dfu, "Flow Phase")]
 	public float FlowPhase { get; set; } = 0.05f;
 
-	[DDLRegistration(0x1f51d4dau, "Flow Noise")]
+	[DDLRegistration(0x5d5a893du, "Flow Noise")]
 	public float FlowNoise { get; set; } = 0.10f;
 
-	[DDLRegistration(0x1f51d4dau, "Caustics Intensity")]
+	[DDLRegistration(0x02ff96e8u, "Caustics Intensity")]
 	public float CausticsIntensity { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f51d4dau, "Caustics Depth Bias")]
+	[DDLRegistration(0x82a8fdaau, "Caustics Depth Bias")]
 	public float CausticsDepthBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f51d4dau, "Flow Texture")]
+	[DDLRegistration(0x252a5deau, "Flow Texture")]
 	public RivetAssetId FlowMapPath { get; set; } = default;
 
 	public static WaterProperties Create(DDLObject ddl) => new(ddl);

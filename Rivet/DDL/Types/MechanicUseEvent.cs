@@ -18,7 +18,7 @@ public class MechanicUseEvent : UDSEventBase, IDDLObjectType<MechanicUseEvent> {
 		UsedMechanics = ddl.GetStrings(0xd8ad4a41u);
 	}
 
-	[DDLRegistration(0x15365323u)]
+	[DDLRegistration(0xd8ad4a41u)]
 	public List<string?> UsedMechanics { get; set; } = [];
 
 	public new static MechanicUseEvent Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class OnButtonPressedActionPrius : DDLObjectType, IDDLObjectType<OnButton
 		SignalMax = ddl.GetValue<int>(0x9149785eu, SignalMax);
 	}
 
-	[DDLRegistration(0x231a7d0bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x231a7d0bu)]
+	[DDLRegistration(0x3e035e82u)]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0x231a7d0bu, "Max times to Fire", "The number of times connected outputs can be signaled (-1 == infinite).")]
+	[DDLRegistration(0x9149785eu, "Max times to Fire", "The number of times connected outputs can be signaled (-1 == infinite).")]
 	public int SignalMax { get; set; } = -1;
 
 	public static OnButtonPressedActionPrius Create(DDLObject ddl) => new(ddl);

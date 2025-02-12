@@ -19,10 +19,10 @@ public class PredictableTrajectoryShotMotionPrius : BasicShotMotionPrius, IDDLOb
 		TrajectoryHeight = ddl.GetValue<float>(0xfc593428u, TrajectoryHeight);
 	}
 
-	[DDLRegistration(0xfaf07b79u, description: "Time it takes for the shot to land at its target position")]
+	[DDLRegistration(0xf00a8409u, description: "Time it takes for the shot to land at its target position")]
 	public float TrajectoryTime { get; set; } = 4.00f;
 
-	[DDLRegistration(0xfaf07b79u)]
+	[DDLRegistration(0xfc593428u)]
 	public float TrajectoryHeight { get; set; } = 10.00f;
 
 	public new static PredictableTrajectoryShotMotionPrius Create(DDLObject ddl) => new(ddl);

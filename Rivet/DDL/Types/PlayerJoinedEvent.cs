@@ -18,7 +18,7 @@ public class PlayerJoinedEvent : EventBase, IDDLObjectType<PlayerJoinedEvent> {
 		ClientIndex = ddl.GetValue<uint>(0x40d7aaa7u, ClientIndex);
 	}
 
-	[DDLRegistration(0x4942873fu, description: "Index of the player/client who joined.")]
+	[DDLRegistration(0x40d7aaa7u, description: "Index of the player/client who joined.")]
 	public uint ClientIndex { get; set; } = 0x00000000;
 
 	public new static PlayerJoinedEvent Create(DDLObject ddl) => new(ddl);

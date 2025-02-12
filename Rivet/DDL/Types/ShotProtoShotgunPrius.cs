@@ -24,25 +24,25 @@ public class ShotProtoShotgunPrius : SimpleShotPrius, IDDLObjectType<ShotProtoSh
 		DamageHashString = ddl.GetString(0x5a2efcb4) ?? DamageHashString;
 	}
 
-	[DDLRegistration(0x526bda7du, "Audio Endpoint", "Actor asset to spawn at endpoints that did not hit anything.")]
+	[DDLRegistration(0x49b26719u, "Audio Endpoint", "Actor asset to spawn at endpoints that did not hit anything.")]
 	public RivetAssetId AudioEndpoint { get; set; } = default;
 
-	[DDLRegistration(0x526bda7du, "Close Range damage")]
+	[DDLRegistration(0xf9273eeeu, "Close Range damage")]
 	public ProtoShotgunDamageRange? CloseRangeDamage { get; set; } = default;
 
-	[DDLRegistration(0x526bda7du, "Mid Range Damage")]
+	[DDLRegistration(0x34a69b54u, "Mid Range Damage")]
 	public ProtoShotgunDamageRange? MidRangeDamage { get; set; } = default;
 
-	[DDLRegistration(0x526bda7du, "Long Range Damage")]
+	[DDLRegistration(0x8f353c5fu, "Long Range Damage")]
 	public ProtoShotgunDamageRange? LongRangeDamage { get; set; } = default;
 
-	[DDLRegistration(0x526bda7du, "Ember DOT Damage (%)", "Percent of spreadsheet damage amount (for shot #2) to apply as a DOT when a bot is impacted by both projectiles in a blast.")]
+	[DDLRegistration(0xe020aa92u, "Ember DOT Damage (%)", "Percent of spreadsheet damage amount (for shot #2) to apply as a DOT when a bot is impacted by both projectiles in a blast.")]
 	public float EmberDotDamage { get; set; } = 0.10f;
 
-	[DDLRegistration(0x526bda7du, "Ember DOT Duration")]
+	[DDLRegistration(0x17bc70ffu, "Ember DOT Duration")]
 	public float EmberDotDuration { get; set; } = 3.50f;
 
-	[DDLRegistration(0x526bda7du, "Damage Hash String")]
+	[DDLRegistration(0x5a2efcb4u, "Damage Hash String")]
 	public string? DamageHashString { get; set; } = default;
 
 	public new static ShotProtoShotgunPrius Create(DDLObject ddl) => new(ddl);

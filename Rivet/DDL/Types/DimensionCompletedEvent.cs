@@ -18,7 +18,7 @@ public class DimensionCompletedEvent : EventBase, IDDLObjectType<DimensionComple
 		DimensionHash = ddl.GetValue<uint>(0xc00cf507u, DimensionHash);
 	}
 
-	[DDLRegistration(0x625e7896u)]
+	[DDLRegistration(0xc00cf507u)]
 	public uint DimensionHash { get; set; } = 0x00000000;
 
 	public new static DimensionCompletedEvent Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class Cinematic2ZoneActionDef : DDLObjectType, IDDLObjectType<Cinematic2Z
 		VisibleTypes = ddl.GetBitset<x0cc20fb0>(0x6d3935b5u, x0cc20fb0Values.Lookup);
 	}
 
-	[DDLRegistration(0x2f7a0741u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x2f7a0741u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2f7a0741u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x2f7a0741u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2f7a0741u)]
+	[DDLRegistration(0x075b87a7u)]
 	public List<RivetAssetId> ZonePaths { get; set; } = [];
 
-	[DDLRegistration(0x2f7a0741u)]
+	[DDLRegistration(0x8c608af2u)]
 	public x39897f27 ZoneOp { get; set; } = x39897f27.ZoneOpHide;
 
-	[DDLRegistration(0x2f7a0741u)]
+	[DDLRegistration(0x6d3935b5u)]
 	public x0cc20fb0 VisibleTypes { get; set; } = (x0cc20fb0) 0x000003ff;
 
 	public static Cinematic2ZoneActionDef Create(DDLObject ddl) => new(ddl);

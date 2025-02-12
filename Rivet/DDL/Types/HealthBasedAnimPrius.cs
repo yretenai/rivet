@@ -19,10 +19,10 @@ public class HealthBasedAnimPrius : DDLObjectType, IDDLObjectType<HealthBasedAni
 		SnapAnim = ddl.GetValue<bool>(0xbad2eb9bu, SnapAnim);
 	}
 
-	[DDLRegistration(0xfd507c5fu)]
+	[DDLRegistration(0x7a8704f5u)]
 	public string? DriverName { get; set; } = "";
 
-	[DDLRegistration(0xfd507c5fu, description: "True to snap the animation instead of playing it up to the current percentage.")]
+	[DDLRegistration(0xbad2eb9bu, description: "True to snap the animation instead of playing it up to the current percentage.")]
 	public bool SnapAnim { get; set; } = false;
 
 	public static HealthBasedAnimPrius Create(DDLObject ddl) => new(ddl);

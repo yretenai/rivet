@@ -21,16 +21,16 @@ public class VolumeIntroDataPrius : IntroDataPrius, IDDLObjectType<VolumeIntroDa
 		FaceVolumeOrientation = ddl.GetValue<bool>(0xdd83bdc7u, FaceVolumeOrientation);
 	}
 
-	[DDLRegistration(0xbae45010u)]
+	[DDLRegistration(0x87e283b9u)]
 	public RivetAssetId Volume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xbae45010u)]
+	[DDLRegistration(0xbc2d5985u)]
 	public xb717d73b Position { get; set; } = xb717d73b.RandomValidNav;
 
-	[DDLRegistration(0xbae45010u)]
+	[DDLRegistration(0xf989be2bu)]
 	public bool WantsFlank { get; set; } = false;
 
-	[DDLRegistration(0xbae45010u)]
+	[DDLRegistration(0xdd83bdc7u)]
 	public bool FaceVolumeOrientation { get; set; } = false;
 
 	public new static VolumeIntroDataPrius Create(DDLObject ddl) => new(ddl);

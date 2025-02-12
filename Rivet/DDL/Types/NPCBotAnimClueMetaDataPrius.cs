@@ -19,10 +19,10 @@ public class NPCBotAnimClueMetaDataPrius : DDLObjectType, IDDLObjectType<NPCBotA
 		AnimClues = ddl.GetValues<RivetAssetId>(0xadd6c683u);
 	}
 
-	[DDLRegistration(0xd5aa3bb8u, "Primary Clue", "The primary clue that this bot should start fleeing too.  If nothing is defind here, we look for an anim component on this actor to be our primary clue.")]
+	[DDLRegistration(0x69fed122u, "Primary Clue", "The primary clue that this bot should start fleeing too.  If nothing is defind here, we look for an anim component on this actor to be our primary clue.")]
 	public RivetAssetId PrimaryClue { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd5aa3bb8u, "Anim Clue", "List of anim clues to use as secondary targets.")]
+	[DDLRegistration(0xadd6c683u, "Anim Clue", "List of anim clues to use as secondary targets.")]
 	public List<RivetAssetId> AnimClues { get; set; } = [];
 
 	public static NPCBotAnimClueMetaDataPrius Create(DDLObject ddl) => new(ddl);

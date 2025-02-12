@@ -19,10 +19,10 @@ public class BotCommandZordoomChaseActionPrius : DDLObjectType, IDDLObjectType<B
 		PrepareAnim = ddl.GetString(0x8c45b5c5) ?? PrepareAnim;
 	}
 
-	[DDLRegistration(0x7bc1045fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0x7bc1045fu, "(Optional) Prepare Anim", "If provided, boss will use this anim to make the boss to smack a few extra things loose prior to starting a run.")]
+	[DDLRegistration(0x8c45b5c5u, "(Optional) Prepare Anim", "If provided, boss will use this anim to make the boss to smack a few extra things loose prior to starting a run.")]
 	public string? PrepareAnim { get; set; } = default;
 
 	public static BotCommandZordoomChaseActionPrius Create(DDLObject ddl) => new(ddl);

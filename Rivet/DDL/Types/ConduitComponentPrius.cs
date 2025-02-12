@@ -24,25 +24,25 @@ public class ConduitComponentPrius : DDLObjectType, IDDLObjectType<ConduitCompon
 		Mappings = ddl.GetValues<RivetAssetId>(0xec2bfe69u);
 	}
 
-	[DDLRegistration(0x6684481du, "On Conduit Destroy")]
+	[DDLRegistration(0x492b64a1u, "On Conduit Destroy")]
 	public xa54ee12b DestroyBehavior { get; set; } = xa54ee12b.Stop;
 
-	[DDLRegistration(0x6684481du, "Stop Sounds on Destroy?")]
+	[DDLRegistration(0x59c20eb1u, "Stop Sounds on Destroy?")]
 	public bool StopAllSoundsOnDestroy { get; set; } = false;
 
-	[DDLRegistration(0x6684481du, "Skip Deactivate On Destroy")]
+	[DDLRegistration(0x3cff81c8u, "Skip Deactivate On Destroy")]
 	public bool SkipDeactivateOnDestroy { get; set; } = false;
 
-	[DDLRegistration(0x6684481du, "Share Sound Source", "The conduit will only play sounds if a source at the given locator already exists.")]
+	[DDLRegistration(0x85d9e149u, "Share Sound Source", "The conduit will only play sounds if a source at the given locator already exists.")]
 	public bool ShareSoundSource { get; set; } = false;
 
-	[DDLRegistration(0x6684481du, "Sound Source Locator")]
+	[DDLRegistration(0x88e0f6dbu, "Sound Source Locator")]
 	public string? SoundSourceLocator { get; set; } = default;
 
-	[DDLRegistration(0x6684481du, "Max Activate Event Delay")]
+	[DDLRegistration(0x380f11ccu, "Max Activate Event Delay")]
 	public uint MaxActivateEventDelay { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x6684481du, "Conduit Assets", "Collection of Conduit Mapping assets to load. First entry is highest priority.")]
+	[DDLRegistration(0xec2bfe69u, "Conduit Assets", "Collection of Conduit Mapping assets to load. First entry is highest priority.")]
 	public List<RivetAssetId> Mappings { get; set; } = [];
 
 	public static ConduitComponentPrius Create(DDLObject ddl) => new(ddl);

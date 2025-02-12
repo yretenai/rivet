@@ -20,13 +20,13 @@ public class ScriptVarNodeAuxReadOnly : DDLObjectType, IDDLObjectType<ScriptVarN
 		Notes = ddl.GetObject<GraphNodeNotesDef>(0x18486a4du);
 	}
 
-	[DDLRegistration(0x66124f64u)]
+	[DDLRegistration(0x5e2c110cu)]
 	public string? VarType { get; set; } = default;
 
-	[DDLRegistration(0x66124f64u, "Name")]
+	[DDLRegistration(0xe40dfcbau, "Name")]
 	public string? GlobalName { get; set; } = default;
 
-	[DDLRegistration(0x66124f64u)]
+	[DDLRegistration(0x18486a4du)]
 	public GraphNodeNotesDef? Notes { get; set; } = default;
 
 	public static ScriptVarNodeAuxReadOnly Create(DDLObject ddl) => new(ddl);

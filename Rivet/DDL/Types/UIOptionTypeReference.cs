@@ -18,7 +18,7 @@ public class UIOptionTypeReference : UIOptionTypeBase, IDDLObjectType<UIOptionTy
 		ReferencePageID = ddl.GetEnum<x58b2a3a9>(0xfe8b1c1cu, x58b2a3a9Values.Lookup);
 	}
 
-	[DDLRegistration(0xa661a8d2u, description: "Page that holds the option this is a reference to.")]
+	[DDLRegistration(0xfe8b1c1cu, description: "Page that holds the option this is a reference to.")]
 	public x58b2a3a9 ReferencePageID { get; set; } = x58b2a3a9.PageMain;
 
 	public new static UIOptionTypeReference Create(DDLObject ddl) => new(ddl);

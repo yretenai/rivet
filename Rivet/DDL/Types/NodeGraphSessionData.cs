@@ -24,25 +24,25 @@ public class NodeGraphSessionData : DDLObjectType, IDDLObjectType<NodeGraphSessi
 		FocusData = ddl.GetObject<NodeGraphFocusData>(0x310012cfu);
 	}
 
-	[DDLRegistration(0x75c550cdu)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x75c550cdu)]
+	[DDLRegistration(0x76b05713u)]
 	public RivetAssetId GraphId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x75c550cdu)]
+	[DDLRegistration(0xda1e4a39u)]
 	public RivetAssetId HoverNode { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x75c550cdu)]
+	[DDLRegistration(0xf703b56eu)]
 	public List<RivetAssetId> SelectedNodes { get; set; } = [];
 
-	[DDLRegistration(0x75c550cdu)]
+	[DDLRegistration(0xfadc380eu)]
 	public List<RivetAssetId> SelectedConnections { get; set; } = [];
 
-	[DDLRegistration(0x75c550cdu)]
+	[DDLRegistration(0xc423050bu)]
 	public List<RivetAssetId> HighlightedNodes { get; set; } = [];
 
-	[DDLRegistration(0x75c550cdu)]
+	[DDLRegistration(0x310012cfu)]
 	public NodeGraphFocusData? FocusData { get; set; } = default;
 
 	public static NodeGraphSessionData Create(DDLObject ddl) => new(ddl);

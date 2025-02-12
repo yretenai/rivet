@@ -23,22 +23,22 @@ public class OrbitCamData : DDLObjectType, IDDLObjectType<OrbitCamData> {
 		StickConfig = ddl.GetValue<RivetAssetId>(0x3bc8f276u, StickConfig);
 	}
 
-	[DDLRegistration(0xb27719dau)]
+	[DDLRegistration(0xc7fa135fu)]
 	public float TetherDistance { get; set; } = 10.00f;
 
-	[DDLRegistration(0xb27719dau)]
+	[DDLRegistration(0x448e693au)]
 	public float MinDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb27719dau)]
+	[DDLRegistration(0xc9e37699u)]
 	public float ZoomSpeed { get; set; } = 8.00f;
 
-	[DDLRegistration(0xb27719dau)]
+	[DDLRegistration(0x9b39be8au)]
 	public float ZoomAccel { get; set; } = 400.00f;
 
-	[DDLRegistration(0xb27719dau)]
+	[DDLRegistration(0x76b26e26u)]
 	public float ZoomDecel { get; set; } = 10000.00f;
 
-	[DDLRegistration(0xb27719dau, "StickConfig")]
+	[DDLRegistration(0x3bc8f276u, "StickConfig")]
 	public RivetAssetId StickConfig { get; set; } = default;
 
 	public static OrbitCamData Create(DDLObject ddl) => new(ddl);

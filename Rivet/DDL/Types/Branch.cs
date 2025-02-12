@@ -24,25 +24,25 @@ public class Branch : DDLObjectType, IDDLObjectType<Branch> {
 		MayaScripts = ddl.GetObjects<MayaScriptData>(0x8cb0f031u);
 	}
 
-	[DDLRegistration(0x85fe5578u)]
+	[DDLRegistration(0xa1772e58u)]
 	public List<RivetAssetId> CodeBranches { get; set; } = [];
 
-	[DDLRegistration(0x85fe5578u)]
+	[DDLRegistration(0xeeb2b4ccu)]
 	public string? MayaVersion { get; set; } = default;
 
-	[DDLRegistration(0x85fe5578u)]
+	[DDLRegistration(0x0c44d190u)]
 	public string? BranchName { get; set; } = default;
 
-	[DDLRegistration(0x85fe5578u)]
+	[DDLRegistration(0xe670e7f0u)]
 	public List<string?> Games { get; set; } = [];
 
-	[DDLRegistration(0x85fe5578u)]
+	[DDLRegistration(0x1c0b36beu)]
 	public HoudiniEngineData? HoudiniEngine { get; set; } = default;
 
-	[DDLRegistration(0x85fe5578u)]
+	[DDLRegistration(0x4785f028u)]
 	public CodeData? Code { get; set; } = default;
 
-	[DDLRegistration(0x85fe5578u)]
+	[DDLRegistration(0x8cb0f031u)]
 	public List<MayaScriptData?> MayaScripts { get; set; } = [];
 
 	public static Branch Create(DDLObject ddl) => new(ddl);

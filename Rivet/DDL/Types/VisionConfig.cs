@@ -24,25 +24,25 @@ public class VisionConfig : DDLObjectType, IDDLObjectType<VisionConfig> {
 		ConeHalfAngle = ddl.GetValue<float>(0x004cc508u, ConeHalfAngle);
 	}
 
-	[DDLRegistration(0x05ad7564u)]
+	[DDLRegistration(0x7b804017u)]
 	public float SphereRadius { get; set; } = 3.00f;
 
-	[DDLRegistration(0x05ad7564u)]
+	[DDLRegistration(0x89b1b8f4u)]
 	public float WedgeRadius { get; set; } = 15.00f;
 
-	[DDLRegistration(0x05ad7564u)]
+	[DDLRegistration(0x963ab5afu)]
 	public float WedgeHalfAngle { get; set; } = 90.00f;
 
-	[DDLRegistration(0x05ad7564u)]
+	[DDLRegistration(0x9f057313u)]
 	public float WedgeHeightUp { get; set; } = 3.00f;
 
-	[DDLRegistration(0x05ad7564u)]
+	[DDLRegistration(0x9d4889c8u)]
 	public float WedgeHeightDown { get; set; } = -2.00f;
 
-	[DDLRegistration(0x05ad7564u)]
+	[DDLRegistration(0x104bdc4du)]
 	public float ConeRadius { get; set; } = 30.00f;
 
-	[DDLRegistration(0x05ad7564u)]
+	[DDLRegistration(0x004cc508u)]
 	public float ConeHalfAngle { get; set; } = 25.00f;
 
 	public static VisionConfig Create(DDLObject ddl) => new(ddl);

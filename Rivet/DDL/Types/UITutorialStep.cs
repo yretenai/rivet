@@ -18,7 +18,7 @@ public class UITutorialStep : DDLObjectType, IDDLObjectType<UITutorialStep> {
 		Tutorial = ddl.GetObject<UITutorialStepBase>(0x3c6a4299u);
 	}
 
-	[DDLRegistration(0xb6b96d2bu)]
+	[DDLRegistration(0x3c6a4299u)]
 	public UITutorialStepBase? Tutorial { get; set; } = default;
 
 	public static UITutorialStep Create(DDLObject ddl) => new(ddl);

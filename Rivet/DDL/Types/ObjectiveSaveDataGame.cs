@@ -18,7 +18,7 @@ public class ObjectiveSaveDataGame : ObjectiveSaveDataShared, IDDLObjectType<Obj
 		ObjectiveFlagsGame = ddl.GetBitset<ObjectiveFlagsGame>(0xddf1d6d4u, ObjectiveFlagsGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x38d836aau)]
+	[DDLRegistration(0xddf1d6d4u)]
 	public ObjectiveFlagsGame ObjectiveFlagsGame { get; set; } = (ObjectiveFlagsGame) 0x00000000;
 
 	public new static ObjectiveSaveDataGame Create(DDLObject ddl) => new(ddl);

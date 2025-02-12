@@ -19,10 +19,10 @@ public class Cinematic2IdMapDef : DDLObjectType, IDDLObjectType<Cinematic2IdMapD
 		TargetId = ddl.GetValue<RivetAssetId>(0xc3642b05u, TargetId);
 	}
 
-	[DDLRegistration(0x90fbb70du)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x90fbb70du)]
+	[DDLRegistration(0xc3642b05u)]
 	public RivetAssetId TargetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static Cinematic2IdMapDef Create(DDLObject ddl) => new(ddl);

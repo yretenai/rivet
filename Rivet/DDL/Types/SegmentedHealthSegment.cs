@@ -21,16 +21,16 @@ public class SegmentedHealthSegment : DDLObjectType, IDDLObjectType<SegmentedHea
 		RegenRateRamp = ddl.GetValue<float>(0xd3306691u, RegenRateRamp);
 	}
 
-	[DDLRegistration(0x1a388944u, "Segment Weight")]
+	[DDLRegistration(0xa025d0b0u, "Segment Weight")]
 	public float SegmentWeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1a388944u, "Regen Rate Start")]
+	[DDLRegistration(0xb138336au, "Regen Rate Start")]
 	public float RegenRateStart { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1a388944u, "Regen Rate Final")]
+	[DDLRegistration(0xc2943a23u, "Regen Rate Final")]
 	public float RegenRateFinal { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1a388944u, "Regen Rate Ramp")]
+	[DDLRegistration(0xd3306691u, "Regen Rate Ramp")]
 	public float RegenRateRamp { get; set; } = 1.00f;
 
 	public static SegmentedHealthSegment Create(DDLObject ddl) => new(ddl);

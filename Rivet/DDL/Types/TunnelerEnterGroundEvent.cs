@@ -21,16 +21,16 @@ public class TunnelerEnterGroundEvent : EventBase, IDDLObjectType<TunnelerEnterG
 		AudioMaterial = ddl.GetEnum<x10b3c4cf>(0xf14e1df7u, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0xc81e1a80u)]
+	[DDLRegistration(0x14d1d767u)]
 	public bool IsFirstEnter { get; set; } = false;
 
-	[DDLRegistration(0xc81e1a80u)]
+	[DDLRegistration(0x39fb8d44u)]
 	public bool IsPuppy { get; set; } = false;
 
-	[DDLRegistration(0xc81e1a80u)]
+	[DDLRegistration(0x4ba3454cu)]
 	public x10b3c4cf GroundMaterial { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0xc81e1a80u)]
+	[DDLRegistration(0xf14e1df7u)]
 	public x10b3c4cf AudioMaterial { get; set; } = x10b3c4cf.None;
 
 	public new static TunnelerEnterGroundEvent Create(DDLObject ddl) => new(ddl);

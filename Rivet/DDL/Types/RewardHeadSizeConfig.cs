@@ -18,7 +18,7 @@ public class RewardHeadSizeConfig : ConfigBase, IDDLObjectType<RewardHeadSizeCon
 		HeadSizeMappings = ddl.GetObjects<HeadSizeMapping>(0x545d887fu);
 	}
 
-	[DDLRegistration(0x221b6911u)]
+	[DDLRegistration(0x545d887fu)]
 	public List<HeadSizeMapping?> HeadSizeMappings { get; set; } = [];
 
 	public new static RewardHeadSizeConfig Create(DDLObject ddl) => new(ddl);

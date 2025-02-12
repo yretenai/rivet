@@ -23,22 +23,22 @@ public class FollowCurveActionPrius : DDLObjectType, IDDLObjectType<FollowCurveA
 		SkipIntroPath = ddl.GetValue<bool>(0xcbfe15e8u, SkipIntroPath);
 	}
 
-	[DDLRegistration(0x08e4247eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.CurveFollower;
 
-	[DDLRegistration(0x08e4247eu, description: "Follow a smooth curve transition from current position to the new curve")]
+	[DDLRegistration(0xa4a1652au, description: "Follow a smooth curve transition from current position to the new curve")]
 	public bool DoSmoothTransition { get; set; } = false;
 
-	[DDLRegistration(0x08e4247eu, description: "Whether to go to the closest point on the curve rather than the start of the curve when not doing a smooth transition.")]
+	[DDLRegistration(0xf5be890fu, description: "Whether to go to the closest point on the curve rather than the start of the curve when not doing a smooth transition.")]
 	public bool UseClosestPoint { get; set; } = false;
 
-	[DDLRegistration(0x08e4247eu, description: "Adds the necessary components to Actor, but they're unsynced, so this should only be used for debugging purposes.")]
+	[DDLRegistration(0xe55227d5u, description: "Adds the necessary components to Actor, but they're unsynced, so this should only be used for debugging purposes.")]
 	public bool AddUnsyncedComponents { get; set; } = false;
 
-	[DDLRegistration(0x08e4247eu, description: "Stops listening for events when the curve follower reaches the end.")]
+	[DDLRegistration(0x597af841u, description: "Stops listening for events when the curve follower reaches the end.")]
 	public bool StopListeningAtEnd { get; set; } = true;
 
-	[DDLRegistration(0x08e4247eu, description: "Force don't make and follow an intro path to the curve start.")]
+	[DDLRegistration(0xcbfe15e8u, description: "Force don't make and follow an intro path to the curve start.")]
 	public bool SkipIntroPath { get; set; } = false;
 
 	public static FollowCurveActionPrius Create(DDLObject ddl) => new(ddl);

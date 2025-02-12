@@ -18,7 +18,7 @@ public class ActivityPriorityChangeEvent : UDSEventBase, IDDLObjectType<Activity
 		PrioritizedActivities = ddl.GetObjects<PriortizedActivity>(0xf53f4f6fu);
 	}
 
-	[DDLRegistration(0xd712be2cu)]
+	[DDLRegistration(0xf53f4f6fu)]
 	public List<PriortizedActivity?> PrioritizedActivities { get; set; } = [];
 
 	public new static ActivityPriorityChangeEvent Create(DDLObject ddl) => new(ddl);

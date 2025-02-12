@@ -22,19 +22,19 @@ public class MissionGraphGameDef : MissionGraphSharedDef, IDDLObjectType<Mission
 		ChallengeModePrereqNodes = ddl.GetDictionary<RivetAssetId, ChallengeModePrereqNodeDef>(0x71b2dcc7, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ChallengeModePrereqNodeDef>(mapId));
 	}
 
-	[DDLRegistration(0x1e213ea9u)]
+	[DDLRegistration(0xacae6ecbu)]
 	public InitMissionGraphNodeGameDef? InitNode { get; set; } = default;
 
-	[DDLRegistration(0x1e213ea9u)]
+	[DDLRegistration(0x6b15ce6cu)]
 	public Dictionary<RivetAssetId, MissionNodeGameDef?> MissionNodes { get; set; } = [];
 
-	[DDLRegistration(0x1e213ea9u)]
+	[DDLRegistration(0xef771473u)]
 	public Dictionary<RivetAssetId, CharacterPrereqNodeDef?> CharacterPrereqNodes { get; set; } = [];
 
-	[DDLRegistration(0x1e213ea9u)]
+	[DDLRegistration(0xc73b0357u)]
 	public Dictionary<RivetAssetId, ItemPrereqNodeDef?> ItemPrereqNodes { get; set; } = [];
 
-	[DDLRegistration(0x1e213ea9u)]
+	[DDLRegistration(0x71b2dcc7u)]
 	public Dictionary<RivetAssetId, ChallengeModePrereqNodeDef?> ChallengeModePrereqNodes { get; set; } = [];
 
 	public new static MissionGraphGameDef Create(DDLObject ddl) => new(ddl);

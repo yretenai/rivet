@@ -21,16 +21,16 @@ public class PlanetMenuDialog : DDLObjectType, IDDLObjectType<PlanetMenuDialog> 
 		PlayOnActive = ddl.GetValue<bool>(0x72bede4au, PlayOnActive);
 	}
 
-	[DDLRegistration(0x9b5d145au, description: "Dialog to trigger on focus.")]
+	[DDLRegistration(0x7b199605u, description: "Dialog to trigger on focus.")]
 	public DialogTriggerGame Dialog { get; set; } = DialogTriggerGame.None;
 
-	[DDLRegistration(0x9b5d145au, description: "Mission to check.")]
+	[DDLRegistration(0x918d9104u, description: "Mission to check.")]
 	public string? Mission { get; set; } = default;
 
-	[DDLRegistration(0x9b5d145au, description: "Play if given mission is available.")]
+	[DDLRegistration(0x5523441eu, description: "Play if given mission is available.")]
 	public bool PlayOnAvailable { get; set; } = false;
 
-	[DDLRegistration(0x9b5d145au, description: "Play if given mission is active.")]
+	[DDLRegistration(0x72bede4au, description: "Play if given mission is active.")]
 	public bool PlayOnActive { get; set; } = false;
 
 	public static PlanetMenuDialog Create(DDLObject ddl) => new(ddl);

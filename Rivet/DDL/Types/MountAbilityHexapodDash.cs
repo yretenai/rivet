@@ -18,7 +18,7 @@ public class MountAbilityHexapodDash : MountAbilityBase, IDDLObjectType<MountAbi
 		DashSpeed = ddl.GetValue<float>(0x48d89a41u, DashSpeed);
 	}
 
-	[DDLRegistration(0xd0d7f344u)]
+	[DDLRegistration(0x48d89a41u)]
 	public float DashSpeed { get; set; } = 0.00f;
 
 	public new static MountAbilityHexapodDash Create(DDLObject ddl) => new(ddl);

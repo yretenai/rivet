@@ -23,22 +23,22 @@ public class BounceEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObjectType<Bo
 		MinSpeed = ddl.GetValue<float>(0xf0d89680u, MinSpeed);
 	}
 
-	[DDLRegistration(0x729f1050u)]
+	[DDLRegistration(0x0719a4ccu)]
 	public InputPlugUInt? BounceCountIn { get; set; } = default;
 
-	[DDLRegistration(0x729f1050u)]
+	[DDLRegistration(0x68069532u)]
 	public OutputPlugUInt? BounceCountOut { get; set; } = default;
 
-	[DDLRegistration(0x729f1050u)]
+	[DDLRegistration(0xc6b86ea1u)]
 	public BounceScaleData? EnvironmentHit { get; set; } = default;
 
-	[DDLRegistration(0x729f1050u)]
+	[DDLRegistration(0xee05eaabu)]
 	public BounceScaleData? ActorHit { get; set; } = default;
 
-	[DDLRegistration(0x729f1050u)]
+	[DDLRegistration(0xcb34d143u)]
 	public float ActorBounceGravity { get; set; } = 0.00f;
 
-	[DDLRegistration(0x729f1050u)]
+	[DDLRegistration(0xf0d89680u)]
 	public float MinSpeed { get; set; } = 0.00f;
 
 	public new static BounceEffectNodeDef Create(DDLObject ddl) => new(ddl);

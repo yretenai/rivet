@@ -18,7 +18,7 @@ public class RYNOPlayPickedUpEvent : EventBase, IDDLObjectType<RYNOPlayPickedUpE
 		RynoId = ddl.GetEnum<x81d3e717>(0xce849c90u, x81d3e717Values.Lookup);
 	}
 
-	[DDLRegistration(0x9f36ba85u, description: "Unique identifier of this RYNO plan.")]
+	[DDLRegistration(0xce849c90u, description: "Unique identifier of this RYNO plan.")]
 	public x81d3e717 RynoId { get; set; } = x81d3e717.None;
 
 	public new static RYNOPlayPickedUpEvent Create(DDLObject ddl) => new(ddl);

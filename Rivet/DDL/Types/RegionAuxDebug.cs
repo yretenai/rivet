@@ -18,7 +18,7 @@ public class RegionAuxDebug : DDLObjectType, IDDLObjectType<RegionAuxDebug> {
 		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
 	}
 
-	[DDLRegistration(0x8f7093dau)]
+	[DDLRegistration(0x9c997da9u)]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
 	public static RegionAuxDebug Create(DDLObject ddl) => new(ddl);

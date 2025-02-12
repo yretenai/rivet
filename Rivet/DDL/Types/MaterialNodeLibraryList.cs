@@ -20,13 +20,13 @@ public class MaterialNodeLibraryList : DDLObjectType, IDDLObjectType<MaterialNod
 		TimeStampHigh = ddl.GetValue<uint>(0x20fa3d23u, TimeStampHigh);
 	}
 
-	[DDLRegistration(0x755953beu)]
+	[DDLRegistration(0xb820caa5u)]
 	public List<MaterialNodeLibrary?> Libraries { get; set; } = [];
 
-	[DDLRegistration(0x755953beu)]
+	[DDLRegistration(0xd95c8f23u)]
 	public uint TimeStampLow { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x755953beu)]
+	[DDLRegistration(0x20fa3d23u)]
 	public uint TimeStampHigh { get; set; } = 0x00000000;
 
 	public static MaterialNodeLibraryList Create(DDLObject ddl) => new(ddl);

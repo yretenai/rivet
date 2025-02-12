@@ -23,22 +23,22 @@ public class AnimDamageProcessorExplosionPrius : AnimDamageAttackStyleBase, IDDL
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x59f66d47u, "Damage Type")]
+	[DDLRegistration(0x840c154du, "Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Explosion;
 
-	[DDLRegistration(0x59f66d47u)]
+	[DDLRegistration(0x93d0d934u)]
 	public DamageRequestFlags DamageFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
-	[DDLRegistration(0x59f66d47u, "Primary Locator")]
+	[DDLRegistration(0x0520e489u, "Primary Locator")]
 	public string? DamageJoint { get; set; } = default;
 
-	[DDLRegistration(0x59f66d47u, "Explosion Data")]
+	[DDLRegistration(0x7860aa8fu, "Explosion Data")]
 	public DamageModifierExplosionPrius? ExplosionData { get; set; } = default;
 
-	[DDLRegistration(0x59f66d47u, "Use Line Of Sight")]
+	[DDLRegistration(0x454d6308u, "Use Line Of Sight")]
 	public bool UseLineOfSight { get; set; } = true;
 
-	[DDLRegistration(0x59f66d47u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
 	public new static AnimDamageProcessorExplosionPrius Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class BataliaCannonTargetPrius : DDLObjectType, IDDLObjectType<BataliaCan
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0xc3fc8fcfu)]
+	[DDLRegistration(0xaaede4f1u)]
 	public float FrontY { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc3fc8fcfu)]
+	[DDLRegistration(0x33e4b54bu)]
 	public float FrontZ { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc3fc8fcfu)]
+	[DDLRegistration(0x6136a1d2u)]
 	public float BackY { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc3fc8fcfu)]
+	[DDLRegistration(0xf83ff068u)]
 	public float BackZ { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc3fc8fcfu)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
 	public static BataliaCannonTargetPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class TriggerPadInvalidStandEvent : EventBase, IDDLObjectType<TriggerPadI
 		UserHandle = ddl.GetValue<uint>(0x25e06c12u, UserHandle);
 	}
 
-	[DDLRegistration(0xaf6ef420u)]
+	[DDLRegistration(0x25e06c12u)]
 	public uint UserHandle { get; set; } = 0x00000000;
 
 	public new static TriggerPadInvalidStandEvent Create(DDLObject ddl) => new(ddl);

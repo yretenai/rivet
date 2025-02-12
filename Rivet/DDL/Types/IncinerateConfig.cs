@@ -23,22 +23,22 @@ public class IncinerateConfig : ConfigBase, IDDLObjectType<IncinerateConfig> {
 		UseJointCrawl = ddl.GetValue<bool>(0xd85731c6u, UseJointCrawl);
 	}
 
-	[DDLRegistration(0x552a26f1u)]
+	[DDLRegistration(0x8c6ad731u)]
 	public string? BodyAnchorJoint { get; set; } = default;
 
-	[DDLRegistration(0x552a26f1u)]
+	[DDLRegistration(0xa9b2b374u)]
 	public RivetAssetId PreMaterialGraph { get; set; } = default;
 
-	[DDLRegistration(0x552a26f1u)]
+	[DDLRegistration(0xcaf646bfu)]
 	public RivetAssetId PostMaterialGraph { get; set; } = default;
 
-	[DDLRegistration(0x552a26f1u, description: "Default incinerate duration.  IncinerateStartEvent can be used to override that value")]
+	[DDLRegistration(0xfa0f8223u, description: "Default incinerate duration.  IncinerateStartEvent can be used to override that value")]
 	public float DefaultDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x552a26f1u, description: "Default incinerate delay.  IncinerateStartEvent can be used to override that value")]
+	[DDLRegistration(0xa801dc02u, description: "Default incinerate delay.  IncinerateStartEvent can be used to override that value")]
 	public float DefaultDelay { get; set; } = 0.20f;
 
-	[DDLRegistration(0x552a26f1u)]
+	[DDLRegistration(0xd85731c6u)]
 	public bool UseJointCrawl { get; set; } = true;
 
 	public new static IncinerateConfig Create(DDLObject ddl) => new(ddl);

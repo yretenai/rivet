@@ -20,13 +20,13 @@ public class AnimSkeletonInfo : DDLObjectType, IDDLObjectType<AnimSkeletonInfo> 
 		HeadSkeleton = ddl.GetValue<RivetAssetId>(0xc9a07590u, HeadSkeleton);
 	}
 
-	[DDLRegistration(0x5e797069u, description: "The name of namespace in Maya.")]
+	[DDLRegistration(0xe7b7ef37u, description: "The name of namespace in Maya.")]
 	public string? MayaNameSpace { get; set; } = default;
 
-	[DDLRegistration(0x5e797069u, description: "model whose skeleton is used to animate in maya ")]
+	[DDLRegistration(0x7a9eab17u, description: "model whose skeleton is used to animate in maya ")]
 	public RivetAssetId BodySkeleton { get; set; } = default;
 
-	[DDLRegistration(0x5e797069u, description: "model whose skeleton is used to animate in maya as this option's head ")]
+	[DDLRegistration(0xc9a07590u, description: "model whose skeleton is used to animate in maya as this option's head ")]
 	public RivetAssetId HeadSkeleton { get; set; } = default;
 
 	public static AnimSkeletonInfo Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class CameraForwardTweakActorForward : CameraForwardTweakValid, IDDLObjec
 		CameraForwardActor = ddl.GetValue<RivetAssetId>(0x6ac68046u, CameraForwardActor);
 	}
 
-	[DDLRegistration(0x8597d716u)]
+	[DDLRegistration(0x6ac68046u)]
 	public RivetAssetId CameraForwardActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static CameraForwardTweakActorForward Create(DDLObject ddl) => new(ddl);

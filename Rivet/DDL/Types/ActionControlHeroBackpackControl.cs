@@ -18,7 +18,7 @@ public class ActionControlHeroBackpackControl : DDLObjectType, IDDLObjectType<Ac
 		Control = ddl.GetEnum<x257e8082>(0xec314f73u, x257e8082Values.Lookup);
 	}
 
-	[DDLRegistration(0xfbfc98fau)]
+	[DDLRegistration(0xec314f73u)]
 	public x257e8082 Control { get; set; } = x257e8082.ViewBackpack;
 
 	public static ActionControlHeroBackpackControl Create(DDLObject ddl) => new(ddl);

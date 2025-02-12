@@ -29,40 +29,40 @@ public class PlayAnimActionPrius : DDLObjectType, IDDLObjectType<PlayAnimActionP
 		DeactivateBaseLayer = ddl.GetValue<bool>(0xdcb6294cu, DeactivateBaseLayer);
 	}
 
-	[DDLRegistration(0x169038c7u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x169038c7u, description: "The name of the animation (AnimDriver) found in the animset of the Actor.  This can be used instead of the <i>Anim</i> input.")]
+	[DDLRegistration(0xc9e716ceu, description: "The name of the animation (AnimDriver) found in the animset of the Actor.  This can be used instead of the <i>Anim</i> input.")]
 	public string? AnimName { get; set; } = default;
 
-	[DDLRegistration(0x169038c7u, description: "If the animation has motion, play the animation in world space.")]
+	[DDLRegistration(0xb06402c8u, description: "If the animation has motion, play the animation in world space.")]
 	public bool WorldSpace { get; set; } = false;
 
-	[DDLRegistration(0x169038c7u, description: "If using world space, preserve the current scale applied to the <i>Target</i>.")]
+	[DDLRegistration(0xbad0177au, description: "If using world space, preserve the current scale applied to the <i>Target</i>.")]
 	public bool PreserveScale { get; set; } = false;
 
-	[DDLRegistration(0x169038c7u, description: "Skip to the last frame on start.")]
+	[DDLRegistration(0x5c71eeb5u, description: "Skip to the last frame on start.")]
 	public bool SkipToEnd { get; set; } = false;
 
-	[DDLRegistration(0x169038c7u, description: "Start on a random frame within the animation, not synced unless using the SyncedAnimated anim script interface.")]
+	[DDLRegistration(0x73d10ea0u, description: "Start on a random frame within the animation, not synced unless using the SyncedAnimated anim script interface.")]
 	public bool StartOnRndFrame { get; set; } = false;
 
-	[DDLRegistration(0x169038c7u, description: "If not starting on a random frame, if this is >= 0 we will start the anim at this time. Not synced unless using the SyncedAnimated anim script interface.")]
+	[DDLRegistration(0x0ddd36f9u, description: "If not starting on a random frame, if this is >= 0 we will start the anim at this time. Not synced unless using the SyncedAnimated anim script interface.")]
 	public float StartAtSpecificTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x169038c7u, description: "Whether <i>StartAtSpecificTime</i> is absolute (real number of seconds into the animation) [false] or normalized (0-1, the percent of the animation done) [true].")]
+	[DDLRegistration(0xbaf1607au, description: "Whether <i>StartAtSpecificTime</i> is absolute (real number of seconds into the animation) [false] or normalized (0-1, the percent of the animation done) [true].")]
 	public bool SpecificTimeIsNormalized { get; set; } = false;
 
-	[DDLRegistration(0x169038c7u, description: "Controls the LayerDeactivateMode")]
+	[DDLRegistration(0x3aa780aeu, description: "Controls the LayerDeactivateMode")]
 	public bool RemoveDriverOnDone { get; set; } = true;
 
-	[DDLRegistration(0x169038c7u, description: "Automatically restart animations when the cinematic finishes.  Cinematics will cause PlayAnims to stop their animations.  Set this to true to auto restart the anim when the cinematic finishes.")]
+	[DDLRegistration(0x59992c9cu, description: "Automatically restart animations when the cinematic finishes.  Cinematics will cause PlayAnims to stop their animations.  Set this to true to auto restart the anim when the cinematic finishes.")]
 	public bool RestartAnimOnCinematicEnd { get; set; } = false;
 
-	[DDLRegistration(0x169038c7u, description: "If set to false, the animation's motion channel will be ignored.")]
+	[DDLRegistration(0xcccfcaf3u, description: "If set to false, the animation's motion channel will be ignored.")]
 	public bool ApplyMotion { get; set; } = true;
 
-	[DDLRegistration(0x169038c7u, description: "If set to true, it will deactivate the default layer of animations first.")]
+	[DDLRegistration(0xdcb6294cu, description: "If set to true, it will deactivate the default layer of animations first.")]
 	public bool DeactivateBaseLayer { get; set; } = false;
 
 	public static PlayAnimActionPrius Create(DDLObject ddl) => new(ddl);

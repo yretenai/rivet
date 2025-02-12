@@ -19,10 +19,10 @@ public class UDSHintLinks : DDLObjectType, IDDLObjectType<UDSHintLinks> {
 		AssociatedMedia = ddl.GetDictionary<string, UDSHintMedia>(0xcc2c8447, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<UDSHintMedia>(mapId));
 	}
 
-	[DDLRegistration(0x07b544ccu)]
+	[DDLRegistration(0xc7096228u)]
 	public UBPObjectId? AssociatedActivity { get; set; } = default;
 
-	[DDLRegistration(0x07b544ccu)]
+	[DDLRegistration(0xcc2c8447u)]
 	public Dictionary<string, UDSHintMedia?> AssociatedMedia { get; set; } = [];
 
 	public static UDSHintLinks Create(DDLObject ddl) => new(ddl);

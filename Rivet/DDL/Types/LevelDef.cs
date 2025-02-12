@@ -28,37 +28,37 @@ public class LevelDef : DDLObjectType, IDDLObjectType<LevelDef> {
 		AssetSwapPlatSpec = ddl.GetValue<RivetAssetId>(0x22ff43f2u, AssetSwapPlatSpec);
 	}
 
-	[DDLRegistration(0xf7789466u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xf7789466u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xf7789466u, "Default NamedLink")]
+	[DDLRegistration(0xeca46962u, "Default NamedLink")]
 	public string? DefaultNamedLink { get; set; } = default;
 
-	[DDLRegistration(0xf7789466u, "Install Group", "Install group of this level")]
+	[DDLRegistration(0xfa716c43u, "Install Group", "Install group of this level")]
 	public int InstallGroup { get; set; } = 0;
 
-	[DDLRegistration(0xf7789466u, "Global Region")]
+	[DDLRegistration(0x057d5a1fu, "Global Region")]
 	public RivetAssetId GlobalRegion { get; set; } = default;
 
-	[DDLRegistration(0xf7789466u, "Root Regions")]
+	[DDLRegistration(0xa38d1acbu, "Root Regions")]
 	public List<RivetAssetId> Regions { get; set; } = [];
 
-	[DDLRegistration(0xf7789466u, "AABB region for world map rendering")]
+	[DDLRegistration(0x20248023u, "AABB region for world map rendering")]
 	public DDLAABB? WorldMapAABB { get; set; } = default;
 
-	[DDLRegistration(0xf7789466u)]
+	[DDLRegistration(0x17b372b2u)]
 	public LevelGridSettings? GridSettings { get; set; } = default;
 
-	[DDLRegistration(0xf7789466u)]
+	[DDLRegistration(0x90972571u)]
 	public LevelDefAux? Aux { get; set; } = default;
 
-	[DDLRegistration(0xf7789466u)]
+	[DDLRegistration(0xa99cdab8u)]
 	public RivetAssetId HibernateSet { get; set; } = default;
 
-	[DDLRegistration(0xf7789466u, description: "Config for per-platform exclusions of .zone files")]
+	[DDLRegistration(0x22ff43f2u, description: "Config for per-platform exclusions of .zone files")]
 	public RivetAssetId AssetSwapPlatSpec { get; set; } = default;
 
 	public static LevelDef Create(DDLObject ddl) => new(ddl);

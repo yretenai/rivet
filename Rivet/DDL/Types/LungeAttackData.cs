@@ -31,46 +31,46 @@ public class LungeAttackData : DDLObjectType, IDDLObjectType<LungeAttackData> {
 		NumLungeVariations = ddl.GetValue<int>(0x065a05c2u, NumLungeVariations);
 	}
 
-	[DDLRegistration(0xa18815c3u)]
+	[DDLRegistration(0x8082daf2u)]
 	public bool DoTell { get; set; } = true;
 
-	[DDLRegistration(0xa18815c3u, description: "How long the wind-up/tell animation lasts in seconds.")]
+	[DDLRegistration(0xa3a1233bu, description: "How long the wind-up/tell animation lasts in seconds.")]
 	public float TellTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa18815c3u, description: "0 - means to target where the player is now. 1 - means to jump where the player will be partway through the lunge. Other values will cause these two positions to be interpolated.")]
+	[DDLRegistration(0xdfe2b94fu, description: "0 - means to target where the player is now. 1 - means to jump where the player will be partway through the lunge. Other values will cause these two positions to be interpolated.")]
 	public float TellPredictiveT { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa18815c3u, description: "Degrees/Second")]
+	[DDLRegistration(0x828e016du, description: "Degrees/Second")]
 	public float TellMaxRotationSpeed { get; set; } = 2000.00f;
 
-	[DDLRegistration(0xa18815c3u)]
+	[DDLRegistration(0xbf067034u)]
 	public float LungeDistance { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa18815c3u)]
+	[DDLRegistration(0x4b5b7ee6u)]
 	public float LungeTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa18815c3u, description: "Try to land this distance from your target.")]
+	[DDLRegistration(0xbe47ab0fu, description: "Try to land this distance from your target.")]
 	public float LungeLandingOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa18815c3u)]
+	[DDLRegistration(0xcbe9feb2u)]
 	public bool DoRecover { get; set; } = true;
 
-	[DDLRegistration(0xa18815c3u)]
+	[DDLRegistration(0x07d817beu)]
 	public float RecoveryTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa18815c3u)]
+	[DDLRegistration(0x5de519a1u)]
 	public bool StickToPlayer { get; set; } = false;
 
-	[DDLRegistration(0xa18815c3u)]
+	[DDLRegistration(0xaa7ccfdau)]
 	public bool DisableFriendlyCVC { get; set; } = true;
 
-	[DDLRegistration(0xa18815c3u)]
+	[DDLRegistration(0x47d95b5cu)]
 	public bool BailIfOffscreenAfterTell { get; set; } = false;
 
-	[DDLRegistration(0xa18815c3u)]
+	[DDLRegistration(0xf0c3f765u)]
 	public float BailIfCloserThanAfterTell { get; set; } = 1.50f;
 
-	[DDLRegistration(0xa18815c3u, description: "If this is higher than 1 we'll pick an index filter so that we can have variations.")]
+	[DDLRegistration(0x065a05c2u, description: "If this is higher than 1 we'll pick an index filter so that we can have variations.")]
 	public int NumLungeVariations { get; set; } = 1;
 
 	public static LungeAttackData Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class ScriptGraphDef : DDLObjectType, IDDLObjectType<ScriptGraphDef> {
 		ScriptGraphs = ddl.GetDictionary<RivetAssetId, NodeGraphContents>(0xb6beea44, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NodeGraphContents>(mapId));
 	}
 
-	[DDLRegistration(0x49b59f43u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x49b59f43u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x49b59f43u)]
+	[DDLRegistration(0x98b21bedu)]
 	public RivetAssetId MainScriptGraphId { get; set; } = new RivetAssetId(0xffffffffffffffff);
 
-	[DDLRegistration(0x49b59f43u)]
+	[DDLRegistration(0xb6beea44u)]
 	public Dictionary<RivetAssetId, NodeGraphContents?> ScriptGraphs { get; set; } = [];
 
 	public static ScriptGraphDef Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class RYNOPortalObjectDataPrius : DDLObjectType, IDDLObjectType<RYNOPorta
 		ShouldStartUpsideDown = ddl.GetValue<bool>(0xc2bc76bcu, ShouldStartUpsideDown);
 	}
 
-	[DDLRegistration(0xbdb1c5edu)]
+	[DDLRegistration(0x1c40d771u)]
 	public bool ShouldFall { get; set; } = true;
 
-	[DDLRegistration(0xbdb1c5edu)]
+	[DDLRegistration(0xe21a286au)]
 	public bool ShouldRotate { get; set; } = true;
 
-	[DDLRegistration(0xbdb1c5edu)]
+	[DDLRegistration(0xc2bc76bcu)]
 	public bool ShouldStartUpsideDown { get; set; } = false;
 
 	public static RYNOPortalObjectDataPrius Create(DDLObject ddl) => new(ddl);

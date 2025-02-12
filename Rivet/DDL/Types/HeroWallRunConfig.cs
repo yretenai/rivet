@@ -35,58 +35,58 @@ public class HeroWallRunConfig : DDLObjectType, IDDLObjectType<HeroWallRunConfig
 		CamAdjustAngleTolerance = ddl.GetValue<float>(0x77cc8133u, CamAdjustAngleTolerance);
 	}
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0xbe8ef3eau)]
 	public float WallRunEntrySpeed { get; set; } = 3.50f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0xe4645f68u)]
 	public float WallRunMaxInputAngle { get; set; } = 70.00f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0x9b370ad0u)]
 	public float WallRunSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0x2466126fu)]
 	public float WallRunDecel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0x765ca345u)]
 	public float WallRunCenteringSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0x3f158c17u)]
 	public float WallRunCurvatureTolerance { get; set; } = 30.00f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0xb12bae1au)]
 	public float WallRunMinInputCornerAngle { get; set; } = 45.00f;
 
-	[DDLRegistration(0x75d47782u, description: "0 means no max")]
+	[DDLRegistration(0xab325e02u, description: "0 means no max")]
 	public float WallRunMaxTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0xd4bbd418u)]
 	public float WallRunForwardJumpAngle { get; set; } = 45.00f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0x8dfe0e92u)]
 	public float WallRunForwardJumpInputAngle { get; set; } = 45.00f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0xa1fb9554u)]
 	public bool WallRunNoInputForwardJump { get; set; } = true;
 
-	[DDLRegistration(0x75d47782u, description: "Delay before the camera tries to center behind the player again")]
+	[DDLRegistration(0x81e300aeu, description: "Delay before the camera tries to center behind the player again")]
 	public float CamAdjustInputDelay { get; set; } = 0.50f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0xb6671c28u)]
 	public float CamAdjustSpeedMax { get; set; } = 200.00f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0xe3dcd1dau)]
 	public float CamAdjustAccel { get; set; } = 50.00f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0x0e570176u)]
 	public float CamAdjustDecel { get; set; } = 50.00f;
 
-	[DDLRegistration(0x75d47782u)]
+	[DDLRegistration(0x6b712ec8u)]
 	public float CamAdjustRelativeVertAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0x75d47782u, description: "0 means looking directly into the wall")]
+	[DDLRegistration(0xa4b9ca93u, description: "0 means looking directly into the wall")]
 	public float CamAdjustRelativeHorzAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0x75d47782u, description: "Tolerance value to prevent camera jitter from small changes in desired facing")]
+	[DDLRegistration(0x77cc8133u, description: "Tolerance value to prevent camera jitter from small changes in desired facing")]
 	public float CamAdjustAngleTolerance { get; set; } = 0.50f;
 
 	public static HeroWallRunConfig Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class HoverbootJumpData : DDLObjectType, IDDLObjectType<HoverbootJumpData
 		BreakableSpeedThreshold = ddl.GetValue<float>(0x62799f5fu, BreakableSpeedThreshold);
 	}
 
-	[DDLRegistration(0xb930036du)]
+	[DDLRegistration(0x771ee838u)]
 	public float MinInitialHorizontalSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb930036du, description: "How much to accelerate the turn speed towards our desired facing")]
+	[DDLRegistration(0xc4a00637u, description: "How much to accelerate the turn speed towards our desired facing")]
 	public float TurnSpeedGain { get; set; } = -15.00f;
 
-	[DDLRegistration(0xb930036du, description: "How much to damp the turn speed as we near our desired facing")]
+	[DDLRegistration(0x487651beu, description: "How much to damp the turn speed as we near our desired facing")]
 	public float TurnSpeedDamp { get; set; } = -8.00f;
 
-	[DDLRegistration(0xb930036du, description: "Max turn speed in degrees/sec")]
+	[DDLRegistration(0xa66b2ab3u, description: "Max turn speed in degrees/sec")]
 	public float TurnSpeedMax { get; set; } = 90.00f;
 
-	[DDLRegistration(0xb930036du)]
+	[DDLRegistration(0x62799f5fu)]
 	public float BreakableSpeedThreshold { get; set; } = 10.00f;
 
 	public static HoverbootJumpData Create(DDLObject ddl) => new(ddl);

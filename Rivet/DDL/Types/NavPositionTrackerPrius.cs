@@ -18,7 +18,7 @@ public class NavPositionTrackerPrius : DDLObjectType, IDDLObjectType<NavPosition
 		TrackedPositions = ddl.GetBitset<x68643947>(0xb8fdd9feu, x68643947Values.Lookup);
 	}
 
-	[DDLRegistration(0x06a47b97u)]
+	[DDLRegistration(0xb8fdd9feu)]
 	public x68643947 TrackedPositions { get; set; } = (x68643947) 0x00000000;
 
 	public static NavPositionTrackerPrius Create(DDLObject ddl) => new(ddl);

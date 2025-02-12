@@ -18,7 +18,7 @@ public class ScriptVarWatchString : DDLObjectType, IDDLObjectType<ScriptVarWatch
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0xc588fd4cu)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
 	public static ScriptVarWatchString Create(DDLObject ddl) => new(ddl);

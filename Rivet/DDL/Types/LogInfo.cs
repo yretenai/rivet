@@ -19,10 +19,10 @@ public class LogInfo : DDLObjectType, IDDLObjectType<LogInfo> {
 		Text = ddl.GetString(0x0b1b6777) ?? Text;
 	}
 
-	[DDLRegistration(0x48dfcd70u, description: "indentation level of the tree to display item at")]
+	[DDLRegistration(0xd00de2e9u, description: "indentation level of the tree to display item at")]
 	public uint Indent { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x48dfcd70u, description: "string to display at this level of the tree")]
+	[DDLRegistration(0x0b1b6777u, description: "string to display at this level of the tree")]
 	public string? Text { get; set; } = default;
 
 	public static LogInfo Create(DDLObject ddl) => new(ddl);

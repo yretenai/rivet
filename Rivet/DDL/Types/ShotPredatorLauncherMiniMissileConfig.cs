@@ -19,10 +19,10 @@ public class ShotPredatorLauncherMiniMissileConfig : ConfigBase, IDDLObjectType<
 		ShotPrius = ddl.GetObject<ShotPredatorLauncherMiniMissilePrius>(0x66fe4621u);
 	}
 
-	[DDLRegistration(0xa1177662u)]
+	[DDLRegistration(0xaecc75f8u)]
 	public RivetAssetId MiniMissileActor { get; set; } = default;
 
-	[DDLRegistration(0xa1177662u, "Shot Prius")]
+	[DDLRegistration(0x66fe4621u, "Shot Prius")]
 	public ShotPredatorLauncherMiniMissilePrius? ShotPrius { get; set; } = default;
 
 	public new static ShotPredatorLauncherMiniMissileConfig Create(DDLObject ddl) => new(ddl);

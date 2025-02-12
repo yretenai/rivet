@@ -23,22 +23,22 @@ public class GameInteractIconFXPrius : EnabledComponentBasePrius, IDDLObjectType
 		NonPOIOffCloseDist = ddl.GetValue<float>(0xd11d0848u, NonPOIOffCloseDist);
 	}
 
-	[DDLRegistration(0x853e284au, "Display Dist: Locked", "The distance to display the locked icon (uses DisplayInteractLockedIconEvent and HideInteractLockedIconEvent) when the interact isn't available.")]
+	[DDLRegistration(0xe890961bu, "Display Dist: Locked", "The distance to display the locked icon (uses DisplayInteractLockedIconEvent and HideInteractLockedIconEvent) when the interact isn't available.")]
 	public float DistToDisplayLocked { get; set; } = 5.00f;
 
-	[DDLRegistration(0x853e284au, "Display Dist: Available", "The distance to display the ineract icon when the interact is available (uses DisplayInteractIconEvent and HideInteractIconEvent). Will hide when the interact offer is available.")]
+	[DDLRegistration(0xb5adfacfu, "Display Dist: Available", "The distance to display the ineract icon when the interact is available (uses DisplayInteractIconEvent and HideInteractIconEvent). Will hide when the interact offer is available.")]
 	public float DistToDisplayAvail { get; set; } = 30.00f;
 
-	[DDLRegistration(0x853e284au, "Out of Range Padding", "In order to not display and hide quickly and the player steps into and out of range we will use this as an addition distance the player has to move away from the interact to hide the icon.")]
+	[DDLRegistration(0xdc931a12u, "Out of Range Padding", "In order to not display and hide quickly and the player steps into and out of range we will use this as an addition distance the player has to move away from the interact to hide the icon.")]
 	public float OutOfRangePadding { get; set; } = 2.00f;
 
-	[DDLRegistration(0x853e284au, "Auto switch to Button POI?", "Whether to auto switch to any DisplayButtonPOI icon when close enough.")]
+	[DDLRegistration(0x6951c633u, "Auto switch to Button POI?", "Whether to auto switch to any DisplayButtonPOI icon when close enough.")]
 	public bool AutoUseButtonPOI { get; set; } = false;
 
-	[DDLRegistration(0x853e284au, "Auto Button POI distance", "The distance to auto switch to the button icon via the DisplayButtonPOI component.")]
+	[DDLRegistration(0xe078a881u, "Auto Button POI distance", "The distance to auto switch to the button icon via the DisplayButtonPOI component.")]
 	public float AutoUseButtonPOIDist { get; set; } = 1.50f;
 
-	[DDLRegistration(0x853e284au, "No POI Close Off Dist", "If we are not set to switch to a button POI and if this is set to something > 0 we will hide the icon when the player gets closer than this distance.")]
+	[DDLRegistration(0xd11d0848u, "No POI Close Off Dist", "If we are not set to switch to a button POI and if this is set to something > 0 we will hide the icon when the player gets closer than this distance.")]
 	public float NonPOIOffCloseDist { get; set; } = -1.00f;
 
 	public new static GameInteractIconFXPrius Create(DDLObject ddl) => new(ddl);

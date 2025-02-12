@@ -23,22 +23,22 @@ public class StructuredLogMatrix : DDLObjectType, IDDLObjectType<StructuredLogMa
 		W = ddl.GetObject<DDLVector4>(0xce8c5c1cu);
 	}
 
-	[DDLRegistration(0x461eea2fu)]
+	[DDLRegistration(0x3006a975u)]
 	public string? TestName { get; set; } = default;
 
-	[DDLRegistration(0x461eea2fu)]
+	[DDLRegistration(0x11d33588u)]
 	public string? VariableName { get; set; } = default;
 
-	[DDLRegistration(0x461eea2fu)]
+	[DDLRegistration(0x5e33418du)]
 	public DDLVector4? X { get; set; } = default;
 
-	[DDLRegistration(0x461eea2fu)]
+	[DDLRegistration(0x2934711bu)]
 	public DDLVector4? Y { get; set; } = default;
 
-	[DDLRegistration(0x461eea2fu)]
+	[DDLRegistration(0xb03d20a1u)]
 	public DDLVector4? Z { get; set; } = default;
 
-	[DDLRegistration(0x461eea2fu)]
+	[DDLRegistration(0xce8c5c1cu)]
 	public DDLVector4? W { get; set; } = default;
 
 	public static StructuredLogMatrix Create(DDLObject ddl) => new(ddl);

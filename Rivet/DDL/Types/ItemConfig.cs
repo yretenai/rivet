@@ -22,19 +22,19 @@ public class ItemConfig : ConfigBase, IDDLObjectType<ItemConfig> {
 		ItemActor = ddl.GetValue<RivetAssetId>(0x925cd211u, ItemActor);
 	}
 
-	[DDLRegistration(0xa88f833fu, "Code Name")]
+	[DDLRegistration(0x6eb3beb6u, "Code Name")]
 	public string? Name { get; set; } = "Item";
 
-	[DDLRegistration(0xa88f833fu, "Display Name")]
+	[DDLRegistration(0xeaf33243u, "Display Name")]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0xa88f833fu, "Stackable")]
+	[DDLRegistration(0xf4daa975u, "Stackable")]
 	public bool Stackable { get; set; } = true;
 
-	[DDLRegistration(0xa88f833fu, "Max Count", "Zero sets the max as the maximum value of a 32-bit unsigned integer (effectively infinite for most applications)")]
+	[DDLRegistration(0x9c4783f5u, "Max Count", "Zero sets the max as the maximum value of a 32-bit unsigned integer (effectively infinite for most applications)")]
 	public uint MaxCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa88f833fu, "Item Actor")]
+	[DDLRegistration(0x925cd211u, "Item Actor")]
 	public RivetAssetId ItemActor { get; set; } = default;
 
 	public new static ItemConfig Create(DDLObject ddl) => new(ddl);

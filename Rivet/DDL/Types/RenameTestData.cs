@@ -18,7 +18,7 @@ public class RenameTestData : DDLObjectType, IDDLObjectType<RenameTestData> {
 		TestObjs = ddl.GetObjects<RenameTestObj>(0x316953dfu);
 	}
 
-	[DDLRegistration(0x5c690f5cu)]
+	[DDLRegistration(0x316953dfu)]
 	public List<RenameTestObj?> TestObjs { get; set; } = [];
 
 	public static RenameTestData Create(DDLObject ddl) => new(ddl);

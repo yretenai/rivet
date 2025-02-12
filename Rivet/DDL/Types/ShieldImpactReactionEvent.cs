@@ -18,7 +18,7 @@ public class ShieldImpactReactionEvent : EventBase, IDDLObjectType<ShieldImpactR
 		Intensity = ddl.GetValue<float>(0x6b4f279eu, Intensity);
 	}
 
-	[DDLRegistration(0x995e0f1bu)]
+	[DDLRegistration(0x6b4f279eu)]
 	public float Intensity { get; set; } = 0.00f;
 
 	public new static ShieldImpactReactionEvent Create(DDLObject ddl) => new(ddl);

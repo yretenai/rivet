@@ -19,10 +19,10 @@ public class FrozenShatterEvent : EventBase, IDDLObjectType<FrozenShatterEvent> 
 		IsUpgraded = ddl.GetValue<bool>(0x253c8e18u, IsUpgraded);
 	}
 
-	[DDLRegistration(0x0d50b0e6u)]
+	[DDLRegistration(0x7260124fu)]
 	public bool IsDead { get; set; } = false;
 
-	[DDLRegistration(0x0d50b0e6u)]
+	[DDLRegistration(0x253c8e18u)]
 	public bool IsUpgraded { get; set; } = false;
 
 	public new static FrozenShatterEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class HeroMotionConfig : DDLObjectType, IDDLObjectType<HeroMotionConfig> 
 		MagBootSpeeds = ddl.GetObject<HeroSpeedConfigCollection>(0x42027865u);
 	}
 
-	[DDLRegistration(0x66fee90du)]
+	[DDLRegistration(0x25dc4009u)]
 	public HeroSpeedConfigCollection? StandardSpeeds { get; set; } = default;
 
-	[DDLRegistration(0x66fee90du)]
+	[DDLRegistration(0x42027865u)]
 	public HeroSpeedConfigCollection? MagBootSpeeds { get; set; } = default;
 
 	public static HeroMotionConfig Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class RecoveryLedgeDisablerSettings : DDLObjectType, IDDLObjectType<Recov
 		MaxDisablerVolumes = ddl.GetValue<int>(0x4e2b5c6cu, MaxDisablerVolumes);
 	}
 
-	[DDLRegistration(0xd767f530u)]
+	[DDLRegistration(0x4e2b5c6cu)]
 	public int MaxDisablerVolumes { get; set; } = 64;
 
 	public static RecoveryLedgeDisablerSettings Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class TrafficSettings : DDLObjectType, IDDLObjectType<TrafficSettings> {
 		SpawnsPerFrame = ddl.GetValue<uint>(0xb5ae1627u, SpawnsPerFrame);
 	}
 
-	[DDLRegistration(0xce7f0224u)]
+	[DDLRegistration(0x04a3c26bu)]
 	public int MaxNodes { get; set; } = 4096;
 
-	[DDLRegistration(0xce7f0224u)]
+	[DDLRegistration(0xb93e7adcu)]
 	public int MaxObstacles { get; set; } = 32;
 
-	[DDLRegistration(0xce7f0224u)]
+	[DDLRegistration(0xc0f608e4u)]
 	public float InstantiationBudget { get; set; } = 0.00f;
 
-	[DDLRegistration(0xce7f0224u)]
+	[DDLRegistration(0xd427fe09u)]
 	public float InstantiationBudgetPerfMode { get; set; } = 0.00f;
 
-	[DDLRegistration(0xce7f0224u)]
+	[DDLRegistration(0xd48aeb11u)]
 	public float InstantiationBudgetMediumPerfMode { get; set; } = 0.00f;
 
-	[DDLRegistration(0xce7f0224u)]
+	[DDLRegistration(0xb9819e15u)]
 	public float InstantiationBudgetLowPerfMode { get; set; } = 0.00f;
 
-	[DDLRegistration(0xce7f0224u)]
+	[DDLRegistration(0xb5ae1627u)]
 	public uint SpawnsPerFrame { get; set; } = 0x00000032;
 
 	public static TrafficSettings Create(DDLObject ddl) => new(ddl);

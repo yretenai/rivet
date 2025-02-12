@@ -22,19 +22,19 @@ public class ProjectileBeamStartEvent : EventBase, IDDLObjectType<ProjectileBeam
 		IsTargetingPlayer = ddl.GetValue<bool>(0x7c869570u, IsTargetingPlayer);
 	}
 
-	[DDLRegistration(0x7f87c6e8u, description: "Optional.  Locator in model where the beam Starts.")]
+	[DDLRegistration(0xc78e2943u, description: "Optional.  Locator in model where the beam Starts.")]
 	public uint BeamStartLocatorHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7f87c6e8u, description: "Hash to identify the beam type")]
+	[DDLRegistration(0x26a7db04u, description: "Hash to identify the beam type")]
 	public uint BeamHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7f87c6e8u)]
+	[DDLRegistration(0x2083aedeu)]
 	public byte FXVersion { get; set; } = 0x00;
 
-	[DDLRegistration(0x7f87c6e8u, description: "Can be passed directly to VFX KeyFrame modifiers in a conduit to adjust the scale of the generated beam.")]
+	[DDLRegistration(0xe4561398u, description: "Can be passed directly to VFX KeyFrame modifiers in a conduit to adjust the scale of the generated beam.")]
 	public float ScaleMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7f87c6e8u)]
+	[DDLRegistration(0x7c869570u)]
 	public bool IsTargetingPlayer { get; set; } = false;
 
 	public new static ProjectileBeamStartEvent Create(DDLObject ddl) => new(ddl);

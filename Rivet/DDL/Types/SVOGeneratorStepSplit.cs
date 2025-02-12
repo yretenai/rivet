@@ -18,7 +18,7 @@ public class SVOGeneratorStepSplit : DDLObjectType, IDDLObjectType<SVOGeneratorS
 		Elements = ddl.GetObjects<SVOGeneratorStepSplitElement>(0xbe4bba2du);
 	}
 
-	[DDLRegistration(0xa9290642u)]
+	[DDLRegistration(0xbe4bba2du)]
 	public List<SVOGeneratorStepSplitElement?> Elements { get; set; } = [];
 
 	public static SVOGeneratorStepSplit Create(DDLObject ddl) => new(ddl);

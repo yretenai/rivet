@@ -19,10 +19,10 @@ public class ManagedPrefabActorSettings : DDLObjectType, IDDLObjectType<ManagedP
 		MaxSpawnedAllSystemsTotal = ddl.GetValue<int>(0x5f9604c6u, MaxSpawnedAllSystemsTotal);
 	}
 
-	[DDLRegistration(0xfdd65db3u)]
+	[DDLRegistration(0x2c1272f3u)]
 	public bool AllSystemsEnabled { get; set; } = true;
 
-	[DDLRegistration(0xfdd65db3u)]
+	[DDLRegistration(0x5f9604c6u)]
 	public int MaxSpawnedAllSystemsTotal { get; set; } = -1;
 
 	public static ManagedPrefabActorSettings Create(DDLObject ddl) => new(ddl);

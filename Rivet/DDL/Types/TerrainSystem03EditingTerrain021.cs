@@ -22,19 +22,19 @@ public class TerrainSystem03EditingTerrain021 : DDLObjectType, IDDLObjectType<Te
 		Line05 = ddl.GetString(0x7f124bc4) ?? Line05;
 	}
 
-	[DDLRegistration(0x2f45c568u, description: "Brushes have many parameters.  The radius can be specified in addition to the")]
+	[DDLRegistration(0x787f8fddu, description: "Brushes have many parameters.  The radius can be specified in addition to the")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x2f45c568u, description: "falloff and falloff type.  The falloff indicates how much feathering happens at")]
+	[DDLRegistration(0xe176de67u, description: "falloff and falloff type.  The falloff indicates how much feathering happens at")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x2f45c568u, description: "the edge of the brush.  The falloff type indicates how the brush is feathered.")]
+	[DDLRegistration(0x9671eef1u, description: "the edge of the brush.  The falloff type indicates how the brush is feathered.")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x2f45c568u, description: "Brushes can be rotated, and each brush has a parameter which determines how the")]
+	[DDLRegistration(0x08157b52u, description: "Brushes can be rotated, and each brush has a parameter which determines how the")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x2f45c568u, description: "paint is applied")]
+	[DDLRegistration(0x7f124bc4u, description: "paint is applied")]
 	public string? Line05 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain021 Create(DDLObject ddl) => new(ddl);

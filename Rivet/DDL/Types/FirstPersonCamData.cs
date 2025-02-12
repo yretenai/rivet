@@ -19,10 +19,10 @@ public class FirstPersonCamData : DDLObjectType, IDDLObjectType<FirstPersonCamDa
 		StickConfig = ddl.GetValue<RivetAssetId>(0x3bc8f276u, StickConfig);
 	}
 
-	[DDLRegistration(0x3f0b5b0du)]
+	[DDLRegistration(0x44749354u)]
 	public YawAndPitchData? YawAndPitch { get; set; } = default;
 
-	[DDLRegistration(0x3f0b5b0du, "StickConfig")]
+	[DDLRegistration(0x3bc8f276u, "StickConfig")]
 	public RivetAssetId StickConfig { get; set; } = default;
 
 	public static FirstPersonCamData Create(DDLObject ddl) => new(ddl);

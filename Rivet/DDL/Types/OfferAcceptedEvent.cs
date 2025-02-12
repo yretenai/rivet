@@ -18,7 +18,7 @@ public class OfferAcceptedEvent : EventBase, IDDLObjectType<OfferAcceptedEvent> 
 		Instigator = ddl.GetValue<uint>(0x33f2e3d5u, Instigator);
 	}
 
-	[DDLRegistration(0x7d6aed69u)]
+	[DDLRegistration(0x33f2e3d5u)]
 	public uint Instigator { get; set; } = 0x00000000;
 
 	public new static OfferAcceptedEvent Create(DDLObject ddl) => new(ddl);

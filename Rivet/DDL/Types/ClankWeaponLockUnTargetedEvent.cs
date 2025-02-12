@@ -18,7 +18,7 @@ public class ClankWeaponLockUnTargetedEvent : EventBase, IDDLObjectType<ClankWea
 		IsEmpty = ddl.GetValue<bool>(0x603a2fc2u, IsEmpty);
 	}
 
-	[DDLRegistration(0x1cee2c72u)]
+	[DDLRegistration(0x603a2fc2u)]
 	public bool IsEmpty { get; set; } = false;
 
 	public new static ClankWeaponLockUnTargetedEvent Create(DDLObject ddl) => new(ddl);

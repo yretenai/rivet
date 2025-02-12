@@ -132,349 +132,349 @@ public class RenderSettingsUser : DDLObjectType, IDDLObjectType<RenderSettingsUs
 		VolumetricFogResolution = ddl.GetObject<DDLVector3>(0x31b3217fu);
 	}
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x393a3cefu)]
 	public bool RenderEnable { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xaf60d91au)]
 	public bool PrintGPURes { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x389bff04u)]
 	public bool CombineProfileEntries { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xeabb6f86u)]
 	public bool SortProfileEntries { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du, "Enable Motion Blur")]
+	[DDLRegistration(0x535ecce6u, "Enable Motion Blur")]
 	public bool MotionBlurEnable { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du, "Enable Temporal AA")]
+	[DDLRegistration(0xa34cdba5u, "Enable Temporal AA")]
 	public bool TemporalAaEnable { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du, "Enable HDR By Default")]
+	[DDLRegistration(0x59248258u, "Enable HDR By Default")]
 	public bool HdrEnableByDefault { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x22b9bdfeu)]
 	public bool AllowLcDebugAdjust { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x0f946ec5u)]
 	public bool DegenerateOcclusionCameraCut { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x2df02b80u)]
 	public bool BlendDefaultEnvProbeTextures { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du, "PC ONLY: Do not init redundant render targets when settings change.")]
+	[DDLRegistration(0x9072105au, "PC ONLY: Do not init redundant render targets when settings change.")]
 	public bool DoNotInitRedundantRenderTargets { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xd4dfb539u)]
 	public int MinGoboMaterialTextureSize { get; set; } = 128;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xb9dec2ebu)]
 	public float MinGoboUntexturedSize { get; set; } = 16.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xe1a25103u)]
 	public int ModelSubsetGpuRegistrySize { get; set; } = 49152;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x737124fau)]
 	public int MaterialGpuRegistryUpdates { get; set; } = 3072;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x11241c26u)]
 	public int MaterialGpuRegistrySize { get; set; } = 8192;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x74389e86u)]
 	public float ImpostorDrawDistanceRuntimeEnvProbe { get; set; } = 70.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xbff1a5d0u)]
 	public float ImpostorDrawDistanceDefaultHFov { get; set; } = 65.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x0e0979abu)]
 	public float ImpostorHQBaseDistance { get; set; } = 600.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x1a3ae1b4u)]
 	public float ImpostorDrawDistance { get; set; } = 145.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x55b8497au)]
 	public float HibernateInstLongDrawDistance { get; set; } = 5120.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x358f68beu)]
 	public float HibernateInstLongDrawDistance60Hz { get; set; } = 5120.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xa1319b9fu)]
 	public float HibernateInstDrawDistance { get; set; } = 1280.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x0ab22dedu)]
 	public float HibernateInstDrawDistance60Hz { get; set; } = 1280.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xc829bd77u)]
 	public float HibernateInstOffScrDrawDistance { get; set; } = 300.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x93cc3fcdu)]
 	public float HibernateInstOffScrDrawDistance60Hz { get; set; } = 300.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x0eda2941u)]
 	public float HibernateFXDrawDistance { get; set; } = 256.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xf1005d67u)]
 	public float HibernateFXDrawDistance60Hz { get; set; } = 256.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xe65b8f24u)]
 	public float HibernateATestFadeDistance { get; set; } = 512.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xac44b8c4u)]
 	public float HibernateATestFadeDistance60Hz { get; set; } = 512.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x158b1987u)]
 	public float HibernateInstRadiusFactor { get; set; } = 80.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xaf88acd4u)]
 	public float HibernateInstRadiusFactor60Hz { get; set; } = 80.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xbb4aa3b5u)]
 	public float HibernateUIMinRadius { get; set; } = 8.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x485bd3e9u)]
 	public uint HibernateFXMaxCount { get; set; } = 0x00000bb8;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xfacfd033u)]
 	public float AmbientAnimationFadeDistance { get; set; } = 128.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x8af240c2u)]
 	public bool CsmUseModelsInFarLodCache { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x00f421b2u)]
 	public float CsmFarLodTransitionDist { get; set; } = 150.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xa36df1d7u)]
 	public int RenderAllocPreCommitMB { get; set; } = 4;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xe38b6bd8u)]
 	public int RenderAllocGrowPercent { get; set; } = 25;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x7b6df77eu)]
 	public int ViewContextMax { get; set; } = 1;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xaa142768u)]
 	public int PerViewRenderQueries { get; set; } = 1024;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xc520c719u)]
 	public int RenderQueryDeferredFreeCount { get; set; } = 12;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x77bd500bu)]
 	public bool DeferredRenderQueries { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x030117adu)]
 	public float PerfAdaptationFovHigh { get; set; } = 76.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xf603e4d6u)]
 	public float PerfAdaptationFovVeryHigh { get; set; } = 90.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xb10a1991u)]
 	public float PerfAdaptationFovExtreme { get; set; } = 100.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xb6da0df7u)]
 	public float PerfAdaptationRotationHigh { get; set; } = 6.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x9ac57661u)]
 	public float PerfAdaptationRotationVeryHigh { get; set; } = 15.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x710d43c5u)]
 	public float PerfAdaptationRotationExtreme { get; set; } = 40.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xd417e2b9u)]
 	public float PerfAdaptationMovementHigh { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x9e586785u)]
 	public float PerfAdaptationMovementVeryHigh { get; set; } = 6.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x373ab243u)]
 	public float PerfAdaptationMovementExtreme { get; set; } = 20.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xd650df83u)]
 	public float PerfAdaptationHeightHigh { get; set; } = 12.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x7c4bb16du)]
 	public float PerfAdaptationHeightVeryHigh { get; set; } = 50.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x9c964e8au)]
 	public float PerfAdaptationHeightExtreme { get; set; } = 100.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xa31660c2u)]
 	public bool VFXDisableCameraOrientation { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xe5cdafdbu)]
 	public float VFXTessellationCamStep { get; set; } = 16.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xaa73a989u)]
 	public float VFXLightingOverScan { get; set; } = 0.05f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xc27dea87u)]
 	public float VFXLightingBlurSize { get; set; } = 1.50f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x9815c423u)]
 	public float VFXTessellationAdd { get; set; } = 0.10f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x138ca430u)]
 	public float VFXStreamingFade { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x1d521a4fu)]
 	public float VFXWakeUpFade { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x4da26555u)]
 	public int MaxVFXCustomStreams { get; set; } = 1536;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x127d636fu)]
 	public int MaxVFXVectorFields { get; set; } = 128;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x0645de7bu)]
 	public int MaxVFXGPUParticles { get; set; } = 32768;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xefeaba2bu)]
 	public int MaxVFXGPUEmitters { get; set; } = 768;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xe49cf36eu)]
 	public float LightPlacedCasterMin { get; set; } = 1024.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xd891cc37u)]
 	public float LightPlacedCasterMax { get; set; } = 40960.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x976d7aaeu)]
 	public float LightPlacedCasterDensitySmall { get; set; } = 4.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xbb43b903u)]
 	public float LightPlacedCasterDensityLarge { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xe23709bcu)]
 	public float LightGridBleedReduction { get; set; } = 0.30f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xbe573efbu)]
 	public float LightGridFadeTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x0ac4cfc9u)]
 	public int LightGridStagingSlotMax { get; set; } = 32;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xdd8fbafcu)]
 	public int LightGridStreamSlotMax { get; set; } = 12;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x7ebf9498u)]
 	public float WaterFoamEmissiveScale { get; set; } = 8.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xdab2e16du)]
 	public float VolumetricFogLargeNoiseTiling { get; set; } = 0.12f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x0ed9e494u)]
 	public float VolumetricFogLargeNoiseSpeed { get; set; } = 0.50f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x97398da8u)]
 	public float VolumetricFogSmallNoiseTiling { get; set; } = 1.50f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x37d479f4u)]
 	public float VolumetricFogSmallNoiseSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xe975596cu)]
 	public float NeededDisplaySafeArea { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0437dd0du, "Extra Flushes Enabled")]
+	[DDLRegistration(0x70ddacb9u, "Extra Flushes Enabled")]
 	public bool ExtraFlushesEnabled { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x9bbcdd8du)]
 	public string? WindowTitle { get; set; } = "No window title has been set";
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xbfa6d134u)]
 	public bool UseStickyConfig { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x32cfc0a7u)]
 	public bool FullscreenArg { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xc9ea889du)]
 	public bool BorderlessWindow { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x6ae4bea3u)]
 	public bool StartMaximized { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xb9f35334u)]
 	public bool AllowFullScreenModeSwitch { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x717cb169u)]
 	public x30866c77 AspectRatioOverride { get; set; } = x30866c77.None;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xe169c2ddu)]
 	public bool EnableAspectBlur { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xaa2aa165u)]
 	public bool D3dDebug { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x6e78964fu)]
 	public bool EnableCommandRingReclamation { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x234e018cu)]
 	public bool D3dPrintLabels { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du, "Disable GPU Profiler Cost")]
+	[DDLRegistration(0xe9b8d901u, "Disable GPU Profiler Cost")]
 	public bool DisableGPUProfilerCost { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x6d4577aau)]
 	public bool RequestDx11_1Device { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xfd2881bau)]
 	public bool TextureStreamingEnabled { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xa09d434du)]
 	public bool TextureStreamingLegacyMode { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x7a8e8bb1u)]
 	public DDLVector2? Max2DCanvasSize { get; set; } = default;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xa77b4a38u)]
 	public float CanvasDpiScalingFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x20595a08u)]
 	public bool UseCanvasDpiScalingFactor { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x185c5f66u)]
 	public bool PauseMapAllowMats { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xf3497ed2u)]
 	public bool SupportWaterBrushes { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x607ba6f2u)]
 	public bool UI3DOccludesLensFlare { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x25581286u)]
 	public bool EnableSubsurfaceBrdf { get; set; } = false;
 
-	[DDLRegistration(0x0437dd0du, "Enable Ambient Shadows")]
+	[DDLRegistration(0x6e3382a4u, "Enable Ambient Shadows")]
 	public bool EnableAmbientShadows { get; set; } = true;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x4886117fu)]
 	public float RippleDisplacment { get; set; } = 0.10f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xa482f099u)]
 	public float RippleAmplitude { get; set; } = 0.10f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x0a866da9u)]
 	public float RippleRate { get; set; } = 128.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xa6323217u)]
 	public float ImpulseMaxCamera { get; set; } = 50.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0xa652b248u)]
 	public float ImpulseMaxRadius { get; set; } = 0.25f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x9b1b4c03u)]
 	public float ImpulseMinMove { get; set; } = 0.10f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x425129d5u)]
 	public float BrushMinMove { get; set; } = 0.10f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x9577e201u)]
 	public float EstTimeToRenderEnvProbeFaceCpu { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x927e4addu)]
 	public float EstTimeToRenderEnvProbeFaceGpu { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x9c384862u)]
 	public float ForceFieldsEdgeSize { get; set; } = 64.00f;
 
-	[DDLRegistration(0x0437dd0du)]
+	[DDLRegistration(0x31b3217fu)]
 	public DDLVector3? VolumetricFogResolution { get; set; } = default;
 
 	public static RenderSettingsUser Create(DDLObject ddl) => new(ddl);

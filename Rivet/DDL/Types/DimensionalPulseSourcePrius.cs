@@ -18,7 +18,7 @@ public class DimensionalPulseSourcePrius : DDLObjectType, IDDLObjectType<Dimensi
 		Config = ddl.GetValue<RivetAssetId>(0xeaf2611bu, Config);
 	}
 
-	[DDLRegistration(0xb4a9d39cu)]
+	[DDLRegistration(0xeaf2611bu)]
 	public RivetAssetId Config { get; set; } = default;
 
 	public static DimensionalPulseSourcePrius Create(DDLObject ddl) => new(ddl);

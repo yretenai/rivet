@@ -18,7 +18,7 @@ public class TriggerSwitchRandomEnabledPrius : TriggerSwitchSimplePrius, IDDLObj
 		ChanceToBeEnabled = ddl.GetValue<float>(0xd7620a70u, ChanceToBeEnabled);
 	}
 
-	[DDLRegistration(0x16d9ff09u, "Chance to be enabled", "The chance (0-1) for this trigger to be enabled on load (synced).")]
+	[DDLRegistration(0xd7620a70u, "Chance to be enabled", "The chance (0-1) for this trigger to be enabled on load (synced).")]
 	public float ChanceToBeEnabled { get; set; } = 0.50f;
 
 	public new static TriggerSwitchRandomEnabledPrius Create(DDLObject ddl) => new(ddl);

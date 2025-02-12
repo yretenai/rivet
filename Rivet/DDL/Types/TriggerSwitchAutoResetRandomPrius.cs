@@ -19,10 +19,10 @@ public class TriggerSwitchAutoResetRandomPrius : TriggerSwitchAutoResetPrius, ID
 		RandomResetTimeMax = ddl.GetValue<float>(0xa0add8c6u, RandomResetTimeMax);
 	}
 
-	[DDLRegistration(0x9fedacbeu, "Reset Time Min", "Min random time to reset when triggered out of its init state")]
+	[DDLRegistration(0x9ca0e79fu, "Reset Time Min", "Min random time to reset when triggered out of its init state")]
 	public float RandomResetTimeMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9fedacbeu, "Reset Time Max", "Max random time to reset when triggered out of its init state")]
+	[DDLRegistration(0xa0add8c6u, "Reset Time Max", "Max random time to reset when triggered out of its init state")]
 	public float RandomResetTimeMax { get; set; } = 0.00f;
 
 	public new static TriggerSwitchAutoResetRandomPrius Create(DDLObject ddl) => new(ddl);

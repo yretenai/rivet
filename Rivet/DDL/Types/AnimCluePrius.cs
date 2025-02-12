@@ -57,124 +57,124 @@ public class AnimCluePrius : IntroDataPrius, IDDLObjectType<AnimCluePrius> {
 		AnimSetMapping = ddl.GetObjects<AnimSetMapping>(0x3f6511d6u);
 	}
 
-	[DDLRegistration(0x8ede2eb2u, "Allow Patrol Path Bots", "This clue moves the bot (eg. walking while playing).")]
+	[DDLRegistration(0x145fb7d5u, "Allow Patrol Path Bots", "This clue moves the bot (eg. walking while playing).")]
 	public bool MovingAnim { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Allow Passive Bots", "This should be used while passive.")]
+	[DDLRegistration(0xecb475a5u, "Allow Passive Bots", "This should be used while passive.")]
 	public bool Idle { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Allow Searching Bots", "This clue can be used by bots who are searching.")]
+	[DDLRegistration(0x8a8895c0u, "Allow Searching Bots", "This clue can be used by bots who are searching.")]
 	public bool Search { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Allow Alert Bots", "This clue can be used by bots who are alert to an enemy presence.")]
+	[DDLRegistration(0x0eae8a00u, "Allow Alert Bots", "This clue can be used by bots who are alert to an enemy presence.")]
 	public bool Alert { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Check Facing", "Bots will only use this clue if their movement direction matches the actor facing.")]
+	[DDLRegistration(0x1712823au, "Check Facing", "Bots will only use this clue if their movement direction matches the actor facing.")]
 	public bool CheckFacing { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Ambush", "This clue can be used by bots looking to ambush someone.")]
+	[DDLRegistration(0xa9ded6abu, "Ambush", "This clue can be used by bots looking to ambush someone.")]
 	public bool Ambush { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Hide", "This clue can be used by bots looking to hide.")]
+	[DDLRegistration(0x94090b9bu, "Hide", "This clue can be used by bots looking to hide.")]
 	public bool Hide { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Use Maya Anim Offset", "If true, we use the offset in maya-space for where the bot is.")]
+	[DDLRegistration(0xb522b2b3u, "Use Maya Anim Offset", "If true, we use the offset in maya-space for where the bot is.")]
 	public bool UseMayaAnimOffset { get; set; } = true;
 
-	[DDLRegistration(0x8ede2eb2u, "Quit on Engaged", "Should we bail on this anim if we go engaged.")]
+	[DDLRegistration(0x687fec3bu, "Quit on Engaged", "Should we bail on this anim if we go engaged.")]
 	public bool QuitOnEngaged { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Engaged Intro Abort Time", "If positive then we can exit this clue if we have been in the intro anim for less than this.")]
+	[DDLRegistration(0xc9425ac4u, "Engaged Intro Abort Time", "If positive then we can exit this clue if we have been in the intro anim for less than this.")]
 	public float EngagedIntroAbortTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x8ede2eb2u, "Engaged Outro Delay", "If we bail when engaged, we wait at least this long to do so.")]
+	[DDLRegistration(0x3f627305u, "Engaged Outro Delay", "If we bail when engaged, we wait at least this long to do so.")]
 	public float EngagedOutroDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8ede2eb2u, "Set Invincible")]
+	[DDLRegistration(0x5ea71c45u, "Set Invincible")]
 	public bool SetInvincible { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Can Be Interrupted", "What kinds of higher priority behaviors can interrupt this anim?")]
+	[DDLRegistration(0x2f4cd430u, "Can Be Interrupted", "What kinds of higher priority behaviors can interrupt this anim?")]
 	public x1879f53b InterruptibleBy { get; set; } = x1879f53b.Anything;
 
-	[DDLRegistration(0x8ede2eb2u, "On Screen Intro", "Even if this clue is visible, guys can be spawned here and they won't pop in. For one-time use anims")]
+	[DDLRegistration(0xb3a945e1u, "On Screen Intro", "Even if this clue is visible, guys can be spawned here and they won't pop in. For one-time use anims")]
 	public bool OnScreenIntro { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "On Screen Loop", "Even if this clue is visible, guys can be spawned here and they won't pop in. For looped anims we intend to keep playing")]
+	[DDLRegistration(0x8ebf8a93u, "On Screen Loop", "Even if this clue is visible, guys can be spawned here and they won't pop in. For looped anims we intend to keep playing")]
 	public bool OnScreenLooped { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Force finishing anim?", "If set to true, will allow our user to finish their animation (intro-use-outro) even if the anim clue (this actor) doesn't exist anymore. Note: Do NOT use this when using a looping use anim, it will not exit out of it (there is no 'finish' for looping animations).")]
+	[DDLRegistration(0xb05098d4u, "Force finishing anim?", "If set to true, will allow our user to finish their animation (intro-use-outro) even if the anim clue (this actor) doesn't exist anymore. Note: Do NOT use this when using a looping use anim, it will not exit out of it (there is no 'finish' for looping animations).")]
 	public bool ForceFinishAnim { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Play at current pos", "Play the anim without moving the bot to the exact clue position.")]
+	[DDLRegistration(0x3b1859d0u, "Play at current pos", "Play the anim without moving the bot to the exact clue position.")]
 	public bool PlayAtCurrentPos { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Jump Intro", "This is a special jump intro. These require an intro (take-off), a use loop(in-air), and a outro (landing) anim.")]
+	[DDLRegistration(0xb5ac22b1u, "Jump Intro", "This is a special jump intro. These require an intro (take-off), a use loop(in-air), and a outro (landing) anim.")]
 	public bool JumpIntro { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Start Intro Material FX", "Sends events to any intro related material fx")]
+	[DDLRegistration(0xe2dfba67u, "Start Intro Material FX", "Sends events to any intro related material fx")]
 	public bool StartIntroMaterialFX { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Allow Proximity Spawn", "If this clue can be used by the Proximity Spawn system for automatic on-screen spawning")]
+	[DDLRegistration(0x36ca7164u, "Allow Proximity Spawn", "If this clue can be used by the Proximity Spawn system for automatic on-screen spawning")]
 	public bool AllowProximitySpawns { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Snap To Ground")]
+	[DDLRegistration(0x9aa85a83u, "Snap To Ground")]
 	public bool SnapToGround { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Only Play Object Once Owner is Done", "Play the object anim only if the owner finishes their anim without getting interrupted")]
+	[DDLRegistration(0xf7d8e39au, "Only Play Object Once Owner is Done", "Play the object anim only if the owner finishes their anim without getting interrupted")]
 	public bool PlayObjWhenOwnerDone { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Destroy Actor On Complete", "If on, the bot will destroy itself after using this clue")]
+	[DDLRegistration(0x8d3de1d3u, "Destroy Actor On Complete", "If on, the bot will destroy itself after using this clue")]
 	public bool DeleteUserOnComplete { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Move Intro", "(optional) move into position anim")]
+	[DDLRegistration(0x0a743987u, "Move Intro", "(optional) move into position anim")]
 	public string? MoveIntro { get; set; } = default;
 
-	[DDLRegistration(0x8ede2eb2u, "Intro Anim", "(optional) intro anim")]
+	[DDLRegistration(0xf227a2c3u, "Intro Anim", "(optional) intro anim")]
 	public string? IntroAnim { get; set; } = default;
 
-	[DDLRegistration(0x8ede2eb2u, "Use Anim", "the middle anim (loop if possible)")]
+	[DDLRegistration(0x186fd0e1u, "Use Anim", "the middle anim (loop if possible)")]
 	public string? UseAnim { get; set; } = default;
 
-	[DDLRegistration(0x8ede2eb2u, "Outro Anim", "(optional) outro anim")]
+	[DDLRegistration(0xa0ecf634u, "Outro Anim", "(optional) outro anim")]
 	public string? OutroAnim { get; set; } = default;
 
-	[DDLRegistration(0x8ede2eb2u, "Fast Outro Anim", "(optional) fast (engaged) outro anim")]
+	[DDLRegistration(0xf3676fd6u, "Fast Outro Anim", "(optional) fast (engaged) outro anim")]
 	public string? FastOutroAnim { get; set; } = default;
 
-	[DDLRegistration(0x8ede2eb2u, "Move Outro", "(optional) move out of position anim")]
+	[DDLRegistration(0x022c1cb9u, "Move Outro", "(optional) move out of position anim")]
 	public string? MoveOutro { get; set; } = default;
 
-	[DDLRegistration(0x8ede2eb2u, "Object Intro Anim", "(optional) intro anim for the object")]
+	[DDLRegistration(0x09d6c7e9u, "Object Intro Anim", "(optional) intro anim for the object")]
 	public string? ObjectIntroAnim { get; set; } = default;
 
-	[DDLRegistration(0x8ede2eb2u, "Object Use Anim", "the middle anim for the object (can loop)")]
+	[DDLRegistration(0x5ef22f53u, "Object Use Anim", "the middle anim for the object (can loop)")]
 	public string? ObjectUseAnim { get; set; } = default;
 
-	[DDLRegistration(0x8ede2eb2u, "Object Outro Anim", "(optional) outro anim for the object")]
+	[DDLRegistration(0x5b1d931eu, "Object Outro Anim", "(optional) outro anim for the object")]
 	public string? ObjectOutroAnim { get; set; } = default;
 
-	[DDLRegistration(0x8ede2eb2u, "Object Idle Anim", "What anim do we play while being unused")]
+	[DDLRegistration(0xc26edd45u, "Object Idle Anim", "What anim do we play while being unused")]
 	public string? ObjectIdleAnim { get; set; } = "Idle";
 
-	[DDLRegistration(0x8ede2eb2u, "Loop Count", "Number of times loop the use anim if it is a looping anim. -1 for infinite.")]
+	[DDLRegistration(0x238ee6b3u, "Loop Count", "Number of times loop the use anim if it is a looping anim. -1 for infinite.")]
 	public int LoopCount { get; set; } = -1;
 
-	[DDLRegistration(0x8ede2eb2u, "Min Time At Clue", "If you have a looping anim you must play it until you are at the clue for at least this amount of time.")]
+	[DDLRegistration(0x737e7040u, "Min Time At Clue", "If you have a looping anim you must play it until you are at the clue for at least this amount of time.")]
 	public float MinTimeAtClue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8ede2eb2u, "Can Reset", "Can this object return to idle.")]
+	[DDLRegistration(0x89068b6eu, "Can Reset", "Can this object return to idle.")]
 	public bool CanReset { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Allow Multi Use", "More than one guy can use this at once.")]
+	[DDLRegistration(0x4aef39f5u, "Allow Multi Use", "More than one guy can use this at once.")]
 	public bool AllowMultiUse { get; set; } = false;
 
-	[DDLRegistration(0x8ede2eb2u, "Max Anim Index", "Cycle through index 1 through this. If Allow Multi Use is checked index 1 will be used only for the first user.")]
+	[DDLRegistration(0x5b3e10fau, "Max Anim Index", "Cycle through index 1 through this. If Allow Multi Use is checked index 1 will be used only for the first user.")]
 	public xa3886454 MaxAnimIndex { get; set; } = xa3886454.None;
 
-	[DDLRegistration(0x8ede2eb2u, "Object Actor", "(optional) The specified actor will be considered the Object")]
+	[DDLRegistration(0xc858642eu, "Object Actor", "(optional) The specified actor will be considered the Object")]
 	public RivetAssetId ObjectActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8ede2eb2u, "Anim Set Mapping")]
+	[DDLRegistration(0x3f6511d6u, "Anim Set Mapping")]
 	public List<AnimSetMapping?> AnimSetMapping { get; set; } = [];
 
 	public new static AnimCluePrius Create(DDLObject ddl) => new(ddl);

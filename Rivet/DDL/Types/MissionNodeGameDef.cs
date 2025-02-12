@@ -29,40 +29,40 @@ public class MissionNodeGameDef : MissionNodeSharedDef, IDDLObjectType<MissionNo
 		AbandonOnLoad = ddl.GetValue<bool>(0xd6c498cdu, AbandonOnLoad);
 	}
 
-	[DDLRegistration(0x33408d17u, "Available Debug Load Info")]
+	[DDLRegistration(0x42bd84aau, "Available Debug Load Info")]
 	public ObjectiveLoadInfo? AvailableDebugLoadInfo { get; set; } = default;
 
-	[DDLRegistration(0x33408d17u, "UI Info")]
+	[DDLRegistration(0x13490c9du, "UI Info")]
 	public MissionNodeInfoUI? InfoUI { get; set; } = default;
 
-	[DDLRegistration(0x33408d17u, "Mission Type")]
+	[DDLRegistration(0x773e274fu, "Mission Type")]
 	public x1953eb86 MissionType { get; set; } = x1953eb86.GoldenPath;
 
-	[DDLRegistration(0x33408d17u, "Save File Completion Weight", "How much weight to give this mission when calculating the save file completion percentage for this category. This weight is split evenly across all objectives in this mission. See the save system config for the overall category completion percentage weights.")]
+	[DDLRegistration(0x449e6864u, "Save File Completion Weight", "How much weight to give this mission when calculating the save file completion percentage for this category. This weight is split evenly across all objectives in this mission. See the save system config for the overall category completion percentage weights.")]
 	public float SaveCompletionWeight { get; set; } = 30.00f;
 
-	[DDLRegistration(0x33408d17u, "Activity Alternate ID", "Leave blank to just use the Mission/Objective name. However, if the name is more than 32 characters, an AlternateId must be provided. Cannot contain spaces and cannot start with an _.")]
+	[DDLRegistration(0x341a200cu, "Activity Alternate ID", "Leave blank to just use the Mission/Objective name. However, if the name is more than 32 characters, an AlternateId must be provided. Cannot contain spaces and cannot start with an _.")]
 	public string? ActivityAlternateID { get; set; } = default;
 
-	[DDLRegistration(0x33408d17u, "Activity Mission Name Override", "Loctag for the name of this mission in the activity card/task. If empty, use the name loctag in the UI info instead. Localized text can be at most 128 characters.")]
+	[DDLRegistration(0xb53d6d8eu, "Activity Mission Name Override", "Loctag for the name of this mission in the activity card/task. If empty, use the name loctag in the UI info instead. Localized text can be at most 128 characters.")]
 	public string? ActivityNameTagOverride { get; set; } = default;
 
-	[DDLRegistration(0x33408d17u, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
+	[DDLRegistration(0xbfd45ea9u, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
 	public uint ActivityPlaytimeEstimate { get; set; } = 0x00000005;
 
-	[DDLRegistration(0x33408d17u, "Activity Card Info")]
+	[DDLRegistration(0x4afa8815u, "Activity Card Info")]
 	public MissionActivityCardInfo? ActivityCard { get; set; } = default;
 
-	[DDLRegistration(0x33408d17u, "Activity Hints")]
+	[DDLRegistration(0xf00bc587u, "Activity Hints")]
 	public List<ActivityHint?> Hints { get; set; } = [];
 
-	[DDLRegistration(0x33408d17u, "Activity Intent Checkpoint/Planet")]
+	[DDLRegistration(0x67055436u, "Activity Intent Checkpoint/Planet")]
 	public string? ActivityIntentTarget { get; set; } = default;
 
-	[DDLRegistration(0x33408d17u, "Can Abandon?", "Can this mission be abandoned by the user?")]
+	[DDLRegistration(0x534ff8c8u, "Can Abandon?", "Can this mission be abandoned by the user?")]
 	public bool CanAbandon { get; set; } = false;
 
-	[DDLRegistration(0x33408d17u, "Abandon on Load?", "Should this mission be abandoned when the game reloads or loads in initially?")]
+	[DDLRegistration(0xd6c498cdu, "Abandon on Load?", "Should this mission be abandoned when the game reloads or loads in initially?")]
 	public bool AbandonOnLoad { get; set; } = false;
 
 	public new static MissionNodeGameDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ProximitySpawnSaveData : DDLObjectType, IDDLObjectType<ProximitySpa
 		RewardedValue = ddl.GetValue<float>(0x69e3b5cfu, RewardedValue);
 	}
 
-	[DDLRegistration(0x03403953u)]
+	[DDLRegistration(0x69e3b5cfu)]
 	public float RewardedValue { get; set; } = 0.00f;
 
 	public static ProximitySpawnSaveData Create(DDLObject ddl) => new(ddl);

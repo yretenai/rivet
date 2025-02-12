@@ -22,19 +22,19 @@ public class NavMeshObstructionPrius : DDLObjectType, IDDLObjectType<NavMeshObst
 		RotationLocator = ddl.GetString(0x6434df47) ?? RotationLocator;
 	}
 
-	[DDLRegistration(0x9d8aadf8u, description: "Ignored for crime usage, for custom overlays, this flag must be true for the obstruction to be processed")]
+	[DDLRegistration(0x640eadb9u, description: "Ignored for crime usage, for custom overlays, this flag must be true for the obstruction to be processed")]
 	public bool EnableOnLoad { get; set; } = false;
 
-	[DDLRegistration(0x9d8aadf8u)]
+	[DDLRegistration(0xc4633319u)]
 	public NavMeshObstructionShapeBase? Shape { get; set; } = default;
 
-	[DDLRegistration(0x9d8aadf8u)]
+	[DDLRegistration(0xa75a871bu)]
 	public x464e86be Mode { get; set; } = x464e86be.BatchedStatic;
 
-	[DDLRegistration(0x9d8aadf8u)]
+	[DDLRegistration(0x6eb51d6cu)]
 	public bool CheckStationary { get; set; } = true;
 
-	[DDLRegistration(0x9d8aadf8u)]
+	[DDLRegistration(0x6434df47u)]
 	public string? RotationLocator { get; set; } = default;
 
 	public static NavMeshObstructionPrius Create(DDLObject ddl) => new(ddl);

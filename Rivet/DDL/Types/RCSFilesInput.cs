@@ -20,13 +20,13 @@ public class RCSFilesInput : DDLObjectType, IDDLObjectType<RCSFilesInput> {
 		ShowDeleted = ddl.GetValue<bool>(0xdf0eee6cu, ShowDeleted);
 	}
 
-	[DDLRegistration(0x23d7b0f2u, description: "Files (or paths/wildcards) to get file information.")]
+	[DDLRegistration(0x08a35046u, description: "Files (or paths/wildcards) to get file information.")]
 	public List<string?> Views { get; set; } = [];
 
-	[DDLRegistration(0x23d7b0f2u)]
+	[DDLRegistration(0x4ed9a03du)]
 	public int MaxStats { get; set; } = -1;
 
-	[DDLRegistration(0x23d7b0f2u)]
+	[DDLRegistration(0xdf0eee6cu)]
 	public bool ShowDeleted { get; set; } = false;
 
 	public static RCSFilesInput Create(DDLObject ddl) => new(ddl);

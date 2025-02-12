@@ -20,13 +20,13 @@ public class DepthOfFieldGameConfig : ConfigBase, IDDLObjectType<DepthOfFieldGam
 		CameraNearMax = ddl.GetValue<float>(0x2d4a76c1u, CameraNearMax);
 	}
 
-	[DDLRegistration(0xff62e83eu, "Base Game Setup")]
+	[DDLRegistration(0x8b4fe3adu, "Base Game Setup")]
 	public DepthOfFieldBaseSetup? BaseGameSetup { get; set; } = default;
 
-	[DDLRegistration(0xff62e83eu, description: "When the camera gets this close to the hero, near DOF is off")]
+	[DDLRegistration(0x11474998u, description: "When the camera gets this close to the hero, near DOF is off")]
 	public float CameraNearMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0xff62e83eu, description: "Start scaling down near DOF when within this range of hero")]
+	[DDLRegistration(0x2d4a76c1u, description: "Start scaling down near DOF when within this range of hero")]
 	public float CameraNearMax { get; set; } = 3.00f;
 
 	public new static DepthOfFieldGameConfig Create(DDLObject ddl) => new(ddl);

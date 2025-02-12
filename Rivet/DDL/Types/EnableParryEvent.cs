@@ -20,13 +20,13 @@ public class EnableParryEvent : EventBase, IDDLObjectType<EnableParryEvent> {
 		NextAnimRate = ddl.GetValue<float>(0x3e177b88u, NextAnimRate);
 	}
 
-	[DDLRegistration(0x45ae6ddcu, description: "How long the target can block with the shield to parry this attack")]
+	[DDLRegistration(0x58a7b768u, description: "How long the target can block with the shield to parry this attack")]
 	public float TargetParryTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0x45ae6ddcu, description: "Animation to play if attack was parried")]
+	[DDLRegistration(0x8e326e08u, description: "Animation to play if attack was parried")]
 	public string? NextAnim { get; set; } = default;
 
-	[DDLRegistration(0x45ae6ddcu, description: "Time scale of next animation")]
+	[DDLRegistration(0x3e177b88u, description: "Time scale of next animation")]
 	public float NextAnimRate { get; set; } = 1.00f;
 
 	public new static EnableParryEvent Create(DDLObject ddl) => new(ddl);

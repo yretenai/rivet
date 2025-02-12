@@ -20,13 +20,13 @@ public class AnimSetPreviewData : DDLObjectType, IDDLObjectType<AnimSetPreviewDa
 		Model = ddl.GetValue<RivetAssetId>(0xcec6be18u, Model);
 	}
 
-	[DDLRegistration(0x1f56c443u, description: "Actor that can contain a preview model and conduits for previewing")]
+	[DDLRegistration(0x5d269a38u, description: "Actor that can contain a preview model and conduits for previewing")]
 	public RivetAssetId Actor { get; set; } = default;
 
-	[DDLRegistration(0x1f56c443u, description: "Additional conduits that can be loaded to respond to events")]
+	[DDLRegistration(0xfc5131b9u, description: "Additional conduits that can be loaded to respond to events")]
 	public List<RivetAssetId> Conduit { get; set; } = [];
 
-	[DDLRegistration(0x1f56c443u, description: "Model used for previewing")]
+	[DDLRegistration(0xcec6be18u, description: "Model used for previewing")]
 	public RivetAssetId Model { get; set; } = default;
 
 	public static AnimSetPreviewData Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class TestTriggerNodeDef : NodeBaseDef, IDDLObjectType<TestTriggerNodeDef
 		Out = ddl.GetObject<OutputPlugInt>(0x93bf4450u);
 	}
 
-	[DDLRegistration(0x5de72e68u)]
+	[DDLRegistration(0x4ef19112u)]
 	public string? DebugName { get; set; } = default;
 
-	[DDLRegistration(0x5de72e68u)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugInt? Out { get; set; } = default;
 
 	public new static TestTriggerNodeDef Create(DDLObject ddl) => new(ddl);

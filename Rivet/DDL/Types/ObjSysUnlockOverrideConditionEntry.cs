@@ -18,7 +18,7 @@ public class ObjSysUnlockOverrideConditionEntry : DDLObjectType, IDDLObjectType<
 		Condition = ddl.GetObject<ObjSysUnlockOverrideConditionBase>(0x3f2b174fu);
 	}
 
-	[DDLRegistration(0x9ec5b23du)]
+	[DDLRegistration(0x3f2b174fu)]
 	public ObjSysUnlockOverrideConditionBase? Condition { get; set; } = default;
 
 	public static ObjSysUnlockOverrideConditionEntry Create(DDLObject ddl) => new(ddl);

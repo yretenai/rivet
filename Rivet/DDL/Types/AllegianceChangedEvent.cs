@@ -19,10 +19,10 @@ public class AllegianceChangedEvent : EventBase, IDDLObjectType<AllegianceChange
 		NewAllegiance = ddl.GetEnum<x6bdf4ba1>(0x051d1728u, x6bdf4ba1Values.Lookup);
 	}
 
-	[DDLRegistration(0x4fb02b3cu)]
+	[DDLRegistration(0x723656f6u)]
 	public x6bdf4ba1 OldAllegiance { get; set; } = x6bdf4ba1.Neutral;
 
-	[DDLRegistration(0x4fb02b3cu)]
+	[DDLRegistration(0x051d1728u)]
 	public x6bdf4ba1 NewAllegiance { get; set; } = x6bdf4ba1.Neutral;
 
 	public new static AllegianceChangedEvent Create(DDLObject ddl) => new(ddl);

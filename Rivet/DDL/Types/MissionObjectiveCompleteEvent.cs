@@ -21,16 +21,16 @@ public class MissionObjectiveCompleteEvent : EventBase, IDDLObjectType<MissionOb
 		IsSkipping = ddl.GetValue<bool>(0x5cc05663u, IsSkipping);
 	}
 
-	[DDLRegistration(0x3e870b52u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x3e870b52u)]
+	[DDLRegistration(0x58746b9bu)]
 	public string? ObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0x3e870b52u)]
+	[DDLRegistration(0x5863bde4u)]
 	public uint ObjectiveInstanceID { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3e870b52u, description: "True if the objective is being set to 'complete' as a prerequisite for loading straight into a mission from the frontend.")]
+	[DDLRegistration(0x5cc05663u, description: "True if the objective is being set to 'complete' as a prerequisite for loading straight into a mission from the frontend.")]
 	public bool IsSkipping { get; set; } = false;
 
 	public new static MissionObjectiveCompleteEvent Create(DDLObject ddl) => new(ddl);

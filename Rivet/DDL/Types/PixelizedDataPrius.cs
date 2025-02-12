@@ -21,16 +21,16 @@ public class PixelizedDataPrius : PixelizedPhysicsDataPrius, IDDLObjectType<Pixe
 		PixelShiftUp = ddl.GetValue<int>(0x7b62b88au, PixelShiftUp);
 	}
 
-	[DDLRegistration(0xb8cbe93du)]
+	[DDLRegistration(0xbac27482u)]
 	public uint TextureWidth { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb8cbe93du)]
+	[DDLRegistration(0x8f1e0de6u)]
 	public uint TextureHeight { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb8cbe93du)]
+	[DDLRegistration(0x07a0dc4au)]
 	public DDLVector3? ObjSpaceBoundsExtents { get; set; } = default;
 
-	[DDLRegistration(0xb8cbe93du)]
+	[DDLRegistration(0x7b62b88au)]
 	public int PixelShiftUp { get; set; } = 0;
 
 	public new static PixelizedDataPrius Create(DDLObject ddl) => new(ddl);

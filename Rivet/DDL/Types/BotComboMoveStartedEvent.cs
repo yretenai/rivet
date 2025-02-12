@@ -18,7 +18,7 @@ public class BotComboMoveStartedEvent : EventBase, IDDLObjectType<BotComboMoveSt
 		MoveName = ddl.GetString(0xfacff3ba) ?? MoveName;
 	}
 
-	[DDLRegistration(0xc8ffce60u)]
+	[DDLRegistration(0xfacff3bau)]
 	public string? MoveName { get; set; } = default;
 
 	public new static BotComboMoveStartedEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ActivityClueSpawnConditionSpecificActorAsset : DDLObjectType, IDDLO
 		BotActor = ddl.GetObject<AssetReferenceDef>(0xa33638e4u);
 	}
 
-	[DDLRegistration(0xdfc2b4e0u, "Bot Actor", "Only spawn this bot at this clue. Make sure you uncheck Autoload")]
+	[DDLRegistration(0xa33638e4u, "Bot Actor", "Only spawn this bot at this clue. Make sure you uncheck Autoload")]
 	public AssetReferenceDef? BotActor { get; set; } = default;
 
 	public static ActivityClueSpawnConditionSpecificActorAsset Create(DDLObject ddl) => new(ddl);

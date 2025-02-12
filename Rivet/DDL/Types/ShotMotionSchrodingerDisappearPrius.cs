@@ -28,37 +28,37 @@ public class ShotMotionSchrodingerDisappearPrius : BasicShotMotionPrius, IDDLObj
 		DebugDraw = ddl.GetValue<bool>(0x6020521bu, DebugDraw);
 	}
 
-	[DDLRegistration(0xcf5c1df5u, "Outro Anim")]
+	[DDLRegistration(0xa0ecf634u, "Outro Anim")]
 	public string? OutroAnim { get; set; } = "Outro";
 
-	[DDLRegistration(0xcf5c1df5u, "Bounce Up Time")]
+	[DDLRegistration(0xf7462f9au, "Bounce Up Time")]
 	public float BounceUpTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcf5c1df5u, "Bounce Post Up Time")]
+	[DDLRegistration(0xaa372ad1u, "Bounce Post Up Time")]
 	public float BouncePostUpTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0xcf5c1df5u, "Bounce Up Min")]
+	[DDLRegistration(0xae860eb4u, "Bounce Up Min")]
 	public float BounceUpMin { get; set; } = 1.50f;
 
-	[DDLRegistration(0xcf5c1df5u, "Bounce Up Max")]
+	[DDLRegistration(0x928b31edu, "Bounce Up Max")]
 	public float BounceUpMax { get; set; } = 3.00f;
 
-	[DDLRegistration(0xcf5c1df5u, "Bounce Back Min")]
+	[DDLRegistration(0xfd24a6a5u, "Bounce Back Min")]
 	public float BounceBackMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0xcf5c1df5u, "Bounce Back Max")]
+	[DDLRegistration(0xc12999fcu, "Bounce Back Max")]
 	public float BounceBackMax { get; set; } = 4.00f;
 
-	[DDLRegistration(0xcf5c1df5u, "Bounce Lateral Min")]
+	[DDLRegistration(0x2a47a704u, "Bounce Lateral Min")]
 	public float BounceLateralMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0xcf5c1df5u, "Bounce Lateral Max")]
+	[DDLRegistration(0x164a985du, "Bounce Lateral Max")]
 	public float BounceLateralMax { get; set; } = 4.00f;
 
-	[DDLRegistration(0xcf5c1df5u, "Rift Actor")]
+	[DDLRegistration(0x4e466389u, "Rift Actor")]
 	public RivetAssetId RiftActor { get; set; } = default;
 
-	[DDLRegistration(0xcf5c1df5u, "Debug Draw")]
+	[DDLRegistration(0x6020521bu, "Debug Draw")]
 	public bool DebugDraw { get; set; } = false;
 
 	public new static ShotMotionSchrodingerDisappearPrius Create(DDLObject ddl) => new(ddl);

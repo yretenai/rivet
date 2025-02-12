@@ -19,10 +19,10 @@ public class TestUIElementLabel1 : DDLObjectType, IDDLObjectType<TestUIElementLa
 		Id = ddl.GetValue<int>(0x8a514a8du, Id);
 	}
 
-	[DDLRegistration(0x69d5b9d3u)]
+	[DDLRegistration(0x6b17a7f8u)]
 	public string? LastName { get; set; } = default;
 
-	[DDLRegistration(0x69d5b9d3u)]
+	[DDLRegistration(0x8a514a8du)]
 	public int Id { get; set; } = 0;
 
 	public static TestUIElementLabel1 Create(DDLObject ddl) => new(ddl);

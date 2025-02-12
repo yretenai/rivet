@@ -19,10 +19,10 @@ public class OnDeactivatedActionPrius : DDLObjectType, IDDLObjectType<OnDeactiva
 		SignalMax = ddl.GetValue<int>(0x9149785eu, SignalMax);
 	}
 
-	[DDLRegistration(0x31934244u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x31934244u, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
 	public static OnDeactivatedActionPrius Create(DDLObject ddl) => new(ddl);

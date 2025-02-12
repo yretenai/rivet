@@ -19,10 +19,10 @@ public class CommandJumpToActionPrius : DDLObjectType, IDDLObjectType<CommandJum
 		PickBestLandSpot = ddl.GetValue<bool>(0x270e045du, PickBestLandSpot);
 	}
 
-	[DDLRegistration(0xa8b074f4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0xa8b074f4u, description: "Pick the best spot to land at based on target. If off, just land at that exact spot.")]
+	[DDLRegistration(0x270e045du, description: "Pick the best spot to land at based on target. If off, just land at that exact spot.")]
 	public bool PickBestLandSpot { get; set; } = false;
 
 	public static CommandJumpToActionPrius Create(DDLObject ddl) => new(ddl);

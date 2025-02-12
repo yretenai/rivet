@@ -19,10 +19,10 @@ public class LoadedZoneDevstatsEvent : EventBase, IDDLObjectType<LoadedZoneDevst
 		ZoneName = ddl.GetString(0x63344b7e) ?? ZoneName;
 	}
 
-	[DDLRegistration(0x44ff072cu)]
+	[DDLRegistration(0x6dca4420u)]
 	public string? ParentEventId { get; set; } = default;
 
-	[DDLRegistration(0x44ff072cu)]
+	[DDLRegistration(0x63344b7eu)]
 	public string? ZoneName { get; set; } = default;
 
 	public new static LoadedZoneDevstatsEvent Create(DDLObject ddl) => new(ddl);

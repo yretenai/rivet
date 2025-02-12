@@ -22,19 +22,19 @@ public class ConfigMod : DDLObjectType, IDDLObjectType<ConfigMod> {
 		ClassFlags = ddl.GetValue<uint>(0xf8aa77d3u, ClassFlags);
 	}
 
-	[DDLRegistration(0xefde4917u)]
+	[DDLRegistration(0x364c3afdu)]
 	public string? Variable { get; set; } = default;
 
-	[DDLRegistration(0xefde4917u)]
+	[DDLRegistration(0xc6d13976u)]
 	public x2d67b08a Op { get; set; } = x2d67b08a.Multiply;
 
-	[DDLRegistration(0xefde4917u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0xefde4917u)]
+	[DDLRegistration(0xec6beb88u)]
 	public int GroupId { get; set; } = 0;
 
-	[DDLRegistration(0xefde4917u)]
+	[DDLRegistration(0xf8aa77d3u)]
 	public uint ClassFlags { get; set; } = 0x00000000;
 
 	public static ConfigMod Create(DDLObject ddl) => new(ddl);

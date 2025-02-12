@@ -42,79 +42,79 @@ public class SlottedInteractObjectPrius : DDLObjectType, IDDLObjectType<SlottedI
 		ConditionList = ddl.GetObjects<InteractConditionPriusItem>(0xdfb6a5f0u);
 	}
 
-	[DDLRegistration(0x073c48cdu, "Link Group", "Link to other actors to create pool of interact locations")]
+	[DDLRegistration(0xc29e167fu, "Link Group", "Link to other actors to create pool of interact locations")]
 	public RivetAssetId LinkGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x073c48cdu, "Required Users", "How many users must be attached to execute this interact, -1 is all setup")]
+	[DDLRegistration(0x32a647c3u, "Required Users", "How many users must be attached to execute this interact, -1 is all setup")]
 	public int RequiredUsers { get; set; } = -1;
 
-	[DDLRegistration(0x073c48cdu, "Retrigger Time", "Upon completion, seconds to wait before interact becomes available again")]
+	[DDLRegistration(0xb7252b03u, "Retrigger Time", "Upon completion, seconds to wait before interact becomes available again")]
 	public float RetriggerTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x073c48cdu, "Is Looping Interact", "If true, treat interact as a looping interaction")]
+	[DDLRegistration(0x6567e7ebu, "Is Looping Interact", "If true, treat interact as a looping interaction")]
 	public bool LoopingInteract { get; set; } = false;
 
-	[DDLRegistration(0x073c48cdu, "Looping Time", "How long to loop in the user state to complete the interaction, -1 is infinite")]
+	[DDLRegistration(0x5ad340f6u, "Looping Time", "How long to loop in the user state to complete the interaction, -1 is infinite")]
 	public float LoopingTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x073c48cdu, "Lock User In Loop", "If true, once looping interaction has begun, disable manual exit")]
+	[DDLRegistration(0xeceb48b4u, "Lock User In Loop", "If true, once looping interaction has begun, disable manual exit")]
 	public bool LoopingLocked { get; set; } = false;
 
-	[DDLRegistration(0x073c48cdu, "Start Locked", "When execution is locked, hero can attach but not enter use phase")]
+	[DDLRegistration(0x0dd8a9efu, "Start Locked", "When execution is locked, hero can attach but not enter use phase")]
 	public bool ExecuteLocked { get; set; } = false;
 
-	[DDLRegistration(0x073c48cdu, "Start Disabled", "When interact is disabled, prompts will not show up")]
+	[DDLRegistration(0xc67c538eu, "Start Disabled", "When interact is disabled, prompts will not show up")]
 	public bool StartDisabled { get; set; } = false;
 
-	[DDLRegistration(0x073c48cdu, "Complete With User", "When true, consider self complete when hero is done, not our own animation")]
+	[DDLRegistration(0x8e8bb756u, "Complete With User", "When true, consider self complete when hero is done, not our own animation")]
 	public bool StayInUseUntilEnd { get; set; } = true;
 
-	[DDLRegistration(0x073c48cdu, "Coll Ignore On Use", "If true, mover will ignore this object during use")]
+	[DDLRegistration(0x12bafc58u, "Coll Ignore On Use", "If true, mover will ignore this object during use")]
 	public bool IgnoreOnUse { get; set; } = true;
 
-	[DDLRegistration(0x073c48cdu, "No User Gravity", "If true, gravity will not be applied to hero movement during interaction")]
+	[DDLRegistration(0xa2f8897cu, "No User Gravity", "If true, gravity will not be applied to hero movement during interaction")]
 	public bool DisableGravity { get; set; } = false;
 
-	[DDLRegistration(0x073c48cdu, "No User Damage", "If true, user cannot take damage during interaction")]
+	[DDLRegistration(0xe3f0ee8du, "No User Damage", "If true, user cannot take damage during interaction")]
 	public bool MakeInvulnerable { get; set; } = false;
 
-	[DDLRegistration(0x073c48cdu, "Use Fade-to-Black", "Whether to start with a fade before activating the camera or moving the hero.")]
+	[DDLRegistration(0xe92588bfu, "Use Fade-to-Black", "Whether to start with a fade before activating the camera or moving the hero.")]
 	public bool DoStartFade { get; set; } = false;
 
-	[DDLRegistration(0x073c48cdu, "Fade-Out Time", "If fading on interact, time-to-black")]
+	[DDLRegistration(0xa94be0b5u, "Fade-Out Time", "If fading on interact, time-to-black")]
 	public float StartFadeOutTime { get; set; } = 1.75f;
 
-	[DDLRegistration(0x073c48cdu, "Fade-Hold Time", "If fading on interact, time to hold black")]
+	[DDLRegistration(0xcc246975u, "Fade-Hold Time", "If fading on interact, time to hold black")]
 	public float StartFadeHoldTime { get; set; } = 0.10f;
 
-	[DDLRegistration(0x073c48cdu, "Fade-In Time", "If fading on interact, time-from-black")]
+	[DDLRegistration(0xd01137ccu, "Fade-In Time", "If fading on interact, time-from-black")]
 	public float StartFadeInTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x073c48cdu, "Disable Manual Exit", "Lock player out from manually exiting wait state or looping interacts")]
+	[DDLRegistration(0x897dfd79u, "Disable Manual Exit", "Lock player out from manually exiting wait state or looping interacts")]
 	public bool LockPlayerInInteract { get; set; } = false;
 
-	[DDLRegistration(0x073c48cdu, "Show Progress Bar", "True if you wish to display a progress bar to show interact progress")]
+	[DDLRegistration(0x83086190u, "Show Progress Bar", "True if you wish to display a progress bar to show interact progress")]
 	public bool DisplayProgressBar { get; set; } = false;
 
-	[DDLRegistration(0x073c48cdu, "Show Bar From Start", "If true, progress bar will display during pre-use phase of interact")]
+	[DDLRegistration(0x6fec8b74u, "Show Bar From Start", "If true, progress bar will display during pre-use phase of interact")]
 	public bool DisplayProgressBarFromStart { get; set; } = false;
 
-	[DDLRegistration(0x073c48cdu, "Interact Offset", "Offset for the interact location for the hero.")]
+	[DDLRegistration(0x43315372u, "Interact Offset", "Offset for the interact location for the hero.")]
 	public DDLVector3? InteractOffset { get; set; } = default;
 
-	[DDLRegistration(0x073c48cdu, "Sync Joint Offset", "Offset for fixing bad sync joints at the end of the project when there are no animators.")]
+	[DDLRegistration(0xfa104631u, "Sync Joint Offset", "Offset for fixing bad sync joints at the end of the project when there are no animators.")]
 	public DDLVector3? SyncJointOffset { get; set; } = default;
 
-	[DDLRegistration(0x073c48cdu, "Link Wait Message", "Message to display when waiting for other linked interacts")]
+	[DDLRegistration(0x5786f5d2u, "Link Wait Message", "Message to display when waiting for other linked interacts")]
 	public string? LinkWaitLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x073c48cdu)]
+	[DDLRegistration(0x3a379babu)]
 	public SlottedInteractAnimData? AnimData { get; set; } = default;
 
-	[DDLRegistration(0x073c48cdu, "Interact Locations")]
+	[DDLRegistration(0x0bcdfdc9u, "Interact Locations")]
 	public List<InteractLocationPriusItem?> LocationList { get; set; } = [];
 
-	[DDLRegistration(0x073c48cdu, "Interact Conditions")]
+	[DDLRegistration(0xdfb6a5f0u, "Interact Conditions")]
 	public List<InteractConditionPriusItem?> ConditionList { get; set; } = [];
 
 	public static SlottedInteractObjectPrius Create(DDLObject ddl) => new(ddl);

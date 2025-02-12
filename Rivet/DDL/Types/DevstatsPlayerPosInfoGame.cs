@@ -21,16 +21,16 @@ public class DevstatsPlayerPosInfoGame : DevstatsProjSpecificBase, IDDLObjectTyp
 		MaxHealth = ddl.GetValue<float>(0x72aa54beu, MaxHealth);
 	}
 
-	[DDLRegistration(0x723ad9deu)]
+	[DDLRegistration(0x35b99224u)]
 	public RivetAssetId MountAsset { get; set; } = default;
 
-	[DDLRegistration(0x723ad9deu)]
+	[DDLRegistration(0x605d31d6u)]
 	public string? Difficulty { get; set; } = default;
 
-	[DDLRegistration(0x723ad9deu)]
+	[DDLRegistration(0xd8295f28u)]
 	public float CurrentHealth { get; set; } = -1.00f;
 
-	[DDLRegistration(0x723ad9deu)]
+	[DDLRegistration(0x72aa54beu)]
 	public float MaxHealth { get; set; } = -1.00f;
 
 	public new static DevstatsPlayerPosInfoGame Create(DDLObject ddl) => new(ddl);

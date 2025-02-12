@@ -23,22 +23,22 @@ public class RYNOPortalObjectPrius : DDLObjectType, IDDLObjectType<RYNOPortalObj
 		VersionIndex = ddl.GetValue<byte>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0x3cdfcbb3u, description: "Post composite shader to apply to object spawned from the portal.")]
+	[DDLRegistration(0xe2b72d5fu, description: "Post composite shader to apply to object spawned from the portal.")]
 	public RivetAssetId PostCompositeShader { get; set; } = default;
 
-	[DDLRegistration(0x3cdfcbb3u, description: "Pre composite shader to apply to object spawned from the portal.")]
+	[DDLRegistration(0x076e460du, description: "Pre composite shader to apply to object spawned from the portal.")]
 	public RivetAssetId PreCompositeShader { get; set; } = default;
 
-	[DDLRegistration(0x3cdfcbb3u, description: "Conduit to add to obejct spawned from the portal.")]
+	[DDLRegistration(0xfc5131b9u, description: "Conduit to add to obejct spawned from the portal.")]
 	public RivetAssetId Conduit { get; set; } = default;
 
-	[DDLRegistration(0x3cdfcbb3u)]
+	[DDLRegistration(0xdfbb9f90u)]
 	public uint PortalActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3cdfcbb3u)]
+	[DDLRegistration(0xc750e4dau)]
 	public xbf5ff3c6 Size { get; set; } = xbf5ff3c6.Small;
 
-	[DDLRegistration(0x3cdfcbb3u)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
 	public static RYNOPortalObjectPrius Create(DDLObject ddl) => new(ddl);

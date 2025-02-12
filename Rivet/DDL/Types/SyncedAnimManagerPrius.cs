@@ -26,31 +26,31 @@ public class SyncedAnimManagerPrius : DDLObjectType, IDDLObjectType<SyncedAnimMa
 		AllowGuestReordering = ddl.GetValue<bool>(0x0160dea2u, AllowGuestReordering);
 	}
 
-	[DDLRegistration(0xa1c84a08u, description: "Anim hash for the host")]
+	[DDLRegistration(0x467c0a70u, description: "Anim hash for the host")]
 	public uint AnimHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa1c84a08u, description: "Info about each guest participant")]
+	[DDLRegistration(0xc2377fb0u, description: "Info about each guest participant")]
 	public List<SyncedAnimGuestEntry?> GuestEntries { get; set; } = [];
 
-	[DDLRegistration(0xa1c84a08u, description: "Controls how the anchor position is computed")]
+	[DDLRegistration(0x2d0f9dd3u, description: "Controls how the anchor position is computed")]
 	public x91b33164 AnchorPosType { get; set; } = x91b33164.Guest;
 
-	[DDLRegistration(0xa1c84a08u, description: "Controls how the anchor rotation is computed")]
+	[DDLRegistration(0x08b050eau, description: "Controls how the anchor rotation is computed")]
 	public xb40cfc5d AnchorRotType { get; set; } = xb40cfc5d.HostToGuest2D;
 
-	[DDLRegistration(0xa1c84a08u, description: "Controls how vertical alignment is controlled")]
+	[DDLRegistration(0xadd9a8c5u, description: "Controls how vertical alignment is controlled")]
 	public x17f5b8aa VertAlignType { get; set; } = x17f5b8aa.AnchorPos;
 
-	[DDLRegistration(0xa1c84a08u, description: "User tag for identifying the purpose of the synced anim")]
+	[DDLRegistration(0x61b318d7u, description: "User tag for identifying the purpose of the synced anim")]
 	public xb1a3ff98 TagType { get; set; } = xb1a3ff98.Generic;
 
-	[DDLRegistration(0xa1c84a08u, description: "If TRUE, we will force the frames marked with a SyncedAnimImpact event to render")]
+	[DDLRegistration(0xd5b1336bu, description: "If TRUE, we will force the frames marked with a SyncedAnimImpact event to render")]
 	public bool SnapToImpactFrames { get; set; } = true;
 
-	[DDLRegistration(0xa1c84a08u)]
+	[DDLRegistration(0xbcc0e546u)]
 	public float EarliestGuestEngageTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa1c84a08u, description: "If TRUE, the GuestEntries is allowed to be reordered to minimize sliding")]
+	[DDLRegistration(0x0160dea2u, description: "If TRUE, the GuestEntries is allowed to be reordered to minimize sliding")]
 	public bool AllowGuestReordering { get; set; } = true;
 
 	public static SyncedAnimManagerPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MasterWeaponList : ConfigBase, IDDLObjectType<MasterWeaponList> {
 		Weapons = ddl.GetObjects<WeaponListElement>(0x53e4d8d9u);
 	}
 
-	[DDLRegistration(0x3b8a44abu, "Weapons")]
+	[DDLRegistration(0x53e4d8d9u, "Weapons")]
 	public List<WeaponListElement?> Weapons { get; set; } = [];
 
 	public new static MasterWeaponList Create(DDLObject ddl) => new(ddl);

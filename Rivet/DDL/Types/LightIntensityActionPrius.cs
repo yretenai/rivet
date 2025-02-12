@@ -24,25 +24,25 @@ public class LightIntensityActionPrius : DDLObjectType, IDDLObjectType<LightInte
 		MaxTimes = ddl.GetValue<int>(0x0449291bu, MaxTimes);
 	}
 
-	[DDLRegistration(0xb82f648eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0xb82f648eu)]
+	[DDLRegistration(0x12568d7bu)]
 	public LightIntensityFlags Flags { get; set; } = (LightIntensityFlags) 0x00000000;
 
-	[DDLRegistration(0xb82f648eu)]
+	[DDLRegistration(0x1f5c59dfu)]
 	public xd73d2720 CurveType { get; set; } = xd73d2720.SCurve;
 
-	[DDLRegistration(0xb82f648eu, "Starting intensity")]
+	[DDLRegistration(0x08f1c8c7u, "Starting intensity")]
 	public float StartIntensity { get; set; } = 100.00f;
 
-	[DDLRegistration(0xb82f648eu, "Ending intensity")]
+	[DDLRegistration(0x5f4ed25cu, "Ending intensity")]
 	public float EndIntensity { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb82f648eu, description: "The time in seconds to dim/undim the light.")]
+	[DDLRegistration(0x7c5e3db0u, description: "The time in seconds to dim/undim the light.")]
 	public float Duration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb82f648eu, description: "Maximum number of times to travel from the start to the end (-1 = infinite).")]
+	[DDLRegistration(0x0449291bu, description: "Maximum number of times to travel from the start to the end (-1 = infinite).")]
 	public int MaxTimes { get; set; } = -1;
 
 	public static LightIntensityActionPrius Create(DDLObject ddl) => new(ddl);

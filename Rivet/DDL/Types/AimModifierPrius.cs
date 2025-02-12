@@ -18,7 +18,7 @@ public class AimModifierPrius : DDLObjectType, IDDLObjectType<AimModifierPrius> 
 		AimModIndex = ddl.GetValue<uint>(0x2c4cf9e2u, AimModIndex);
 	}
 
-	[DDLRegistration(0x02b7bfa1u)]
+	[DDLRegistration(0x2c4cf9e2u)]
 	public uint AimModIndex { get; set; } = 0x00000000;
 
 	public static AimModifierPrius Create(DDLObject ddl) => new(ddl);

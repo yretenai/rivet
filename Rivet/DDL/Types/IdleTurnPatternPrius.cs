@@ -22,19 +22,19 @@ public class IdleTurnPatternPrius : DDLObjectType, IDDLObjectType<IdleTurnPatter
 		MaxTurnDelay = ddl.GetValue<float>(0x4d1c67b9u, MaxTurnDelay);
 	}
 
-	[DDLRegistration(0xdc6453fbu, description: "True to use turn pattern while idle instead of fidget and wander.")]
+	[DDLRegistration(0x5113d8bcu, description: "True to use turn pattern while idle instead of fidget and wander.")]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0xdc6453fbu)]
+	[DDLRegistration(0x926e39d5u)]
 	public x81884035 Directions { get; set; } = (x81884035) 0x00000000;
 
-	[DDLRegistration(0xdc6453fbu)]
+	[DDLRegistration(0x64294012u)]
 	public x32fe2d84 TurnType { get; set; } = x32fe2d84.CycleAntiClockwise;
 
-	[DDLRegistration(0xdc6453fbu)]
+	[DDLRegistration(0xdd6f7753u)]
 	public float MinTurnDelay { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdc6453fbu)]
+	[DDLRegistration(0x4d1c67b9u)]
 	public float MaxTurnDelay { get; set; } = 1.00f;
 
 	public static IdleTurnPatternPrius Create(DDLObject ddl) => new(ddl);

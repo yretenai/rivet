@@ -18,7 +18,7 @@ public class PickupZerpStonePrius : GamePickupItemPrius, IDDLObjectType<PickupZe
 		SaveID = ddl.GetValue<int>(0xf61c4918u, SaveID);
 	}
 
-	[DDLRegistration(0xbac008b5u, description: "Unique identifier of this ZerpStone for saving the game.")]
+	[DDLRegistration(0xf61c4918u, description: "Unique identifier of this ZerpStone for saving the game.")]
 	public int SaveID { get; set; } = -1;
 
 	public new static PickupZerpStonePrius Create(DDLObject ddl) => new(ddl);

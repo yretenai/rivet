@@ -23,22 +23,22 @@ public class Cinematic2ToggleLookActionDef : DDLObjectType, IDDLObjectType<Cinem
 		LooksToDisable = ddl.GetStrings(0x03e44c4cu);
 	}
 
-	[DDLRegistration(0xb3aa2594u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb3aa2594u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb3aa2594u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0xb3aa2594u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb3aa2594u)]
+	[DDLRegistration(0x34dbfb35u)]
 	public List<string?> LooksToEnable { get; set; } = [];
 
-	[DDLRegistration(0xb3aa2594u)]
+	[DDLRegistration(0x03e44c4cu)]
 	public List<string?> LooksToDisable { get; set; } = [];
 
 	public static Cinematic2ToggleLookActionDef Create(DDLObject ddl) => new(ddl);

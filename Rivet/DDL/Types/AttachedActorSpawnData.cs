@@ -20,13 +20,13 @@ public class AttachedActorSpawnData : ActorSpawnData, IDDLObjectType<AttachedAct
 		AttachLocator = ddl.GetValue<uint>(0xfa8dcd9au, AttachLocator);
 	}
 
-	[DDLRegistration(0x6dd82d0eu, description: "The actor we are going to attach to.")]
+	[DDLRegistration(0x03f62e28u, description: "The actor we are going to attach to.")]
 	public uint Parent { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x6dd82d0eu, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6dd82d0eu, description: "Hash of locator on the Parent we will attach to.")]
+	[DDLRegistration(0xfa8dcd9au, description: "Hash of locator on the Parent we will attach to.")]
 	public uint AttachLocator { get; set; } = 0x00000000;
 
 	public new static AttachedActorSpawnData Create(DDLObject ddl) => new(ddl);

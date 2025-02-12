@@ -19,10 +19,10 @@ public class DamageModifierMinMaxPrius : DamageModifierIncomingPrius, IDDLObject
 		Max = ddl.GetValue<float>(0xb7230b40u, Max);
 	}
 
-	[DDLRegistration(0x6318ce99u)]
+	[DDLRegistration(0x8b2e3419u)]
 	public float Min { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6318ce99u)]
+	[DDLRegistration(0xb7230b40u)]
 	public float Max { get; set; } = 1000.00f;
 
 	public new static DamageModifierMinMaxPrius Create(DDLObject ddl) => new(ddl);

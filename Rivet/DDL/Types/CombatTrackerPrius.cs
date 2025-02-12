@@ -18,7 +18,7 @@ public class CombatTrackerPrius : DDLObjectType, IDDLObjectType<CombatTrackerPri
 		CombatEndedQuietTime = ddl.GetValue<float>(0xeeab6a25u, CombatEndedQuietTime);
 	}
 
-	[DDLRegistration(0x3b2b8325u, description: "Combat has ended if there is no one targeting me and I am targeting no one for this long.")]
+	[DDLRegistration(0xeeab6a25u, description: "Combat has ended if there is no one targeting me and I am targeting no one for this long.")]
 	public float CombatEndedQuietTime { get; set; } = 3.00f;
 
 	public static CombatTrackerPrius Create(DDLObject ddl) => new(ddl);

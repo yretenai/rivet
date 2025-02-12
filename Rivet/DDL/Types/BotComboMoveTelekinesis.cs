@@ -18,7 +18,7 @@ public class BotComboMoveTelekinesis : BotComboMove, IDDLObjectType<BotComboMove
 		Data = ddl.GetObject<TelekinesisData>(0x3d519cedu);
 	}
 
-	[DDLRegistration(0x8b57ba8bu)]
+	[DDLRegistration(0x3d519cedu)]
 	public TelekinesisData? Data { get; set; } = default;
 
 	public new static BotComboMoveTelekinesis Create(DDLObject ddl) => new(ddl);

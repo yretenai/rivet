@@ -22,19 +22,19 @@ public class CameraAimContextVariableFOVConfig : CameraAimContextConfig, IDDLObj
 		MaxFieldOfView = ddl.GetValue<float>(0x235687c7u, MaxFieldOfView);
 	}
 
-	[DDLRegistration(0xb2edddf3u)]
+	[DDLRegistration(0xf63dbb91u)]
 	public HackySeparatorStruct? SeparatorFOVConfig { get; set; } = default;
 
-	[DDLRegistration(0xb2edddf3u)]
+	[DDLRegistration(0x470416b3u)]
 	public float BlendGain { get; set; } = -5.00f;
 
-	[DDLRegistration(0xb2edddf3u)]
+	[DDLRegistration(0xcbd2413au)]
 	public float BlendDamp { get; set; } = -12.00f;
 
-	[DDLRegistration(0xb2edddf3u)]
+	[DDLRegistration(0xec350db4u)]
 	public float BlendMaxSpeed { get; set; } = 30.00f;
 
-	[DDLRegistration(0xb2edddf3u)]
+	[DDLRegistration(0x235687c7u)]
 	public float MaxFieldOfView { get; set; } = 100.00f;
 
 	public new static CameraAimContextVariableFOVConfig Create(DDLObject ddl) => new(ddl);

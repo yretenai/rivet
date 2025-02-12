@@ -18,7 +18,7 @@ public class NefariousFinaleHeadPrius : NefariousFinaleWeaponPrius, IDDLObjectTy
 		ShotEmitLocator = ddl.GetString(0x01194d35) ?? ShotEmitLocator;
 	}
 
-	[DDLRegistration(0xf83c8572u)]
+	[DDLRegistration(0x01194d35u)]
 	public string? ShotEmitLocator { get; set; } = default;
 
 	public new static NefariousFinaleHeadPrius Create(DDLObject ddl) => new(ddl);

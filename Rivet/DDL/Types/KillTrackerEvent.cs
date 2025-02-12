@@ -19,10 +19,10 @@ public class KillTrackerEvent : EventBase, IDDLObjectType<KillTrackerEvent> {
 		NumKills = ddl.GetValue<uint>(0x78fcd420u, NumKills);
 	}
 
-	[DDLRegistration(0x2454c037u, description: "Handle of actor tracking kills.")]
+	[DDLRegistration(0x29f67982u, description: "Handle of actor tracking kills.")]
 	public uint Damager { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x2454c037u)]
+	[DDLRegistration(0x78fcd420u)]
 	public uint NumKills { get; set; } = 0x00000000;
 
 	public new static KillTrackerEvent Create(DDLObject ddl) => new(ddl);

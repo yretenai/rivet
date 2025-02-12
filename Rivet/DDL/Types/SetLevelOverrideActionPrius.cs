@@ -19,10 +19,10 @@ public class SetLevelOverrideActionPrius : DDLObjectType, IDDLObjectType<SetLeve
 		OverrideLevelEnum = ddl.GetEnum<LevelEnum>(0xdf56320eu, LevelEnumValues.Lookup);
 	}
 
-	[DDLRegistration(0xf0d44eceu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
-	[DDLRegistration(0xf0d44eceu, "Level", "The current level override.")]
+	[DDLRegistration(0xdf56320eu, "Level", "The current level override.")]
 	public LevelEnum OverrideLevelEnum { get; set; } = LevelEnum.None;
 
 	public static SetLevelOverrideActionPrius Create(DDLObject ddl) => new(ddl);

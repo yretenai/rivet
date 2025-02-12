@@ -18,7 +18,7 @@ public class BotComboMove : BotComboMoveBase, IDDLObjectType<BotComboMove> {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0x741fe203u, description: "Move Name")]
+	[DDLRegistration(0x6eb3beb6u, description: "Move Name")]
 	public string? Name { get; set; } = default;
 
 	public new static BotComboMove Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class AmmoPickupSpawnControllerPrius : PickupSpawnControllerPrius, IDDLOb
 		ValidateAmmoNeed = ddl.GetValue<bool>(0x614bca7fu, ValidateAmmoNeed);
 	}
 
-	[DDLRegistration(0x4e6a5e9eu)]
+	[DDLRegistration(0x614bca7fu)]
 	public bool ValidateAmmoNeed { get; set; } = true;
 
 	public new static AmmoPickupSpawnControllerPrius Create(DDLObject ddl) => new(ddl);

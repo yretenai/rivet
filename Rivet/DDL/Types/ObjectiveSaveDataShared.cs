@@ -21,16 +21,16 @@ public class ObjectiveSaveDataShared : ObjSysNodeSaveData, IDDLObjectType<Object
 		ObjectiveDevstatsSegmentId = ddl.GetValue<uint>(0xad80b380u, ObjectiveDevstatsSegmentId);
 	}
 
-	[DDLRegistration(0x0fefeb30u)]
+	[DDLRegistration(0xff29859au)]
 	public ObjectiveStates ObjectiveState { get; set; } = ObjectiveStates.Inactive;
 
-	[DDLRegistration(0x0fefeb30u)]
+	[DDLRegistration(0x91ef17d9u)]
 	public float ScriptObjectiveVairable { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0fefeb30u)]
+	[DDLRegistration(0x73242281u)]
 	public uint MissionDevstatsSegmentId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0fefeb30u)]
+	[DDLRegistration(0xad80b380u)]
 	public uint ObjectiveDevstatsSegmentId { get; set; } = 0x00000000;
 
 	public new static ObjectiveSaveDataShared Create(DDLObject ddl) => new(ddl);

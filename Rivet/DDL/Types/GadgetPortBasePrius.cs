@@ -18,7 +18,7 @@ public class GadgetPortBasePrius : DDLObjectType, IDDLObjectType<GadgetPortBaseP
 		PortOfferPrius = ddl.GetObject<GadgetPortOfferPrius>(0x2aca32a6u);
 	}
 
-	[DDLRegistration(0x642ab49eu, "Offer Info", "Information for the offer (placement, range, facing, etc).")]
+	[DDLRegistration(0x2aca32a6u, "Offer Info", "Information for the offer (placement, range, facing, etc).")]
 	public GadgetPortOfferPrius? PortOfferPrius { get; set; } = default;
 
 	public static GadgetPortBasePrius Create(DDLObject ddl) => new(ddl);

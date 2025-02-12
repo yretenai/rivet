@@ -18,7 +18,7 @@ public class FlockOverrideData : DDLObjectType, IDDLObjectType<FlockOverrideData
 		Template = ddl.GetValue<RivetAssetId>(0x6d61a2f3u, Template);
 	}
 
-	[DDLRegistration(0x66d81efeu)]
+	[DDLRegistration(0x6d61a2f3u)]
 	public RivetAssetId Template { get; set; } = default;
 
 	public static FlockOverrideData Create(DDLObject ddl) => new(ddl);

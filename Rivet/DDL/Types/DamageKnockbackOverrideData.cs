@@ -23,22 +23,22 @@ public class DamageKnockbackOverrideData : DDLObjectType, IDDLObjectType<DamageK
 		BossData = ddl.GetObject<DamageKnockbackPerTypeData>(0x6f529fe2u);
 	}
 
-	[DDLRegistration(0x6d21ea0fu)]
+	[DDLRegistration(0xc48450a5u)]
 	public DamageKnockbackPerTypeData? SmallData { get; set; } = default;
 
-	[DDLRegistration(0x6d21ea0fu)]
+	[DDLRegistration(0x561676dcu)]
 	public DamageKnockbackPerTypeData? MediumData { get; set; } = default;
 
-	[DDLRegistration(0x6d21ea0fu)]
+	[DDLRegistration(0x6a611115u)]
 	public DamageKnockbackPerTypeData? TankData { get; set; } = default;
 
-	[DDLRegistration(0x6d21ea0fu)]
+	[DDLRegistration(0xd1b3dcabu)]
 	public DamageKnockbackPerTypeData? LargeData { get; set; } = default;
 
-	[DDLRegistration(0x6d21ea0fu)]
+	[DDLRegistration(0xa2f8eb5du)]
 	public DamageKnockbackPerTypeData? TransportData { get; set; } = default;
 
-	[DDLRegistration(0x6d21ea0fu)]
+	[DDLRegistration(0x6f529fe2u)]
 	public DamageKnockbackPerTypeData? BossData { get; set; } = default;
 
 	public static DamageKnockbackOverrideData Create(DDLObject ddl) => new(ddl);

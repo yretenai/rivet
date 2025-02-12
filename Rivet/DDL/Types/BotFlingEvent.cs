@@ -25,28 +25,28 @@ public class BotFlingEvent : BotForceMoveBaseEvent, IDDLObjectType<BotFlingEvent
 		UseSourceActorFacingForTargeting = ddl.GetValue<bool>(0x5aef8e56u, UseSourceActorFacingForTargeting);
 	}
 
-	[DDLRegistration(0x5efd7d29u, description: "If this locator exists we will fly to it. If it does not exist we will check the fling locator, and fly in its direction. If that does not exist we will fly radially away from the triggering actor.")]
+	[DDLRegistration(0x7abba555u, description: "If this locator exists we will fly to it. If it does not exist we will check the fling locator, and fly in its direction. If that does not exist we will fly radially away from the triggering actor.")]
 	public string? TargetLocator { get; set; } = default;
 
-	[DDLRegistration(0x5efd7d29u, description: "This locator's local-forward determines the direction we will fly. This locator is used if TargetLocator does not exist. If it does not exist we will fly radially away from the triggering actor.")]
+	[DDLRegistration(0x6e10775bu, description: "This locator's local-forward determines the direction we will fly. This locator is used if TargetLocator does not exist. If it does not exist we will fly radially away from the triggering actor.")]
 	public string? FlingLocator { get; set; } = default;
 
-	[DDLRegistration(0x5efd7d29u, description: "How fast we move when using FlingLocator or when being flung radially (no TargetLocator and no FlingLocator)")]
+	[DDLRegistration(0x16753237u, description: "How fast we move when using FlingLocator or when being flung radially (no TargetLocator and no FlingLocator)")]
 	public float Speed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x5efd7d29u, description: "Cone full angle in degrees. If < 0, this will use the auto-targeting angle (AutoTargetCone) in the kinetic config.")]
+	[DDLRegistration(0x9dc4a9cfu, description: "Cone full angle in degrees. If < 0, this will use the auto-targeting angle (AutoTargetCone) in the kinetic config.")]
 	public float OverrideAutoTargetAngle { get; set; } = -1.00f;
 
-	[DDLRegistration(0x5efd7d29u, description: "When using a FlingLocator this is how much of a cone to launch in")]
+	[DDLRegistration(0x6f4b25f7u, description: "When using a FlingLocator this is how much of a cone to launch in")]
 	public bool VaryDirection { get; set; } = true;
 
-	[DDLRegistration(0x5efd7d29u, description: "Fling code adjusts the trajectory to avoid steep flings.  Turn this on to allow any y velocity, regardless of steepness.")]
+	[DDLRegistration(0x5d845c9du, description: "Fling code adjusts the trajectory to avoid steep flings.  Turn this on to allow any y velocity, regardless of steepness.")]
 	public bool PreserveYVelocity { get; set; } = false;
 
-	[DDLRegistration(0x5efd7d29u, description: "Fling in the direction the flinger is facing. (only used if TargetLocator and FlingLocator are not used)")]
+	[DDLRegistration(0x4e910edcu, description: "Fling in the direction the flinger is facing. (only used if TargetLocator and FlingLocator are not used)")]
 	public bool UseSourceActorFacing { get; set; } = false;
 
-	[DDLRegistration(0x5efd7d29u, description: "Use the trap's facing when finding targets to fling to. When false, the fling direction is used. (ie, Spring boards should pass true, Sound blaster should pass false). ")]
+	[DDLRegistration(0x5aef8e56u, description: "Use the trap's facing when finding targets to fling to. When false, the fling direction is used. (ie, Spring boards should pass true, Sound blaster should pass false). ")]
 	public bool UseSourceActorFacingForTargeting { get; set; } = false;
 
 	public new static BotFlingEvent Create(DDLObject ddl) => new(ddl);

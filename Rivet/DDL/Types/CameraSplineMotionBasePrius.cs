@@ -21,16 +21,16 @@ public class CameraSplineMotionBasePrius : DDLObjectType, IDDLObjectType<CameraS
 		SpeedMax = ddl.GetValue<float>(0xb6419fbau, SpeedMax);
 	}
 
-	[DDLRegistration(0x1d80adc6u, "Motion Spline")]
+	[DDLRegistration(0x93329739u, "Motion Spline")]
 	public RivetAssetId MotionSpline { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x1d80adc6u, "Speed Accel")]
+	[DDLRegistration(0x5d9ea52cu, "Speed Accel")]
 	public float SpeedAccel { get; set; } = 3.00f;
 
-	[DDLRegistration(0x1d80adc6u, "Speed Decel")]
+	[DDLRegistration(0xb0157580u, "Speed Decel")]
 	public float SpeedDecel { get; set; } = 3.00f;
 
-	[DDLRegistration(0x1d80adc6u, "Speed Max")]
+	[DDLRegistration(0xb6419fbau, "Speed Max")]
 	public float SpeedMax { get; set; } = 3.00f;
 
 	public static CameraSplineMotionBasePrius Create(DDLObject ddl) => new(ddl);

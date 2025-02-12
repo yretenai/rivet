@@ -18,7 +18,7 @@ public class SetOneHitKillActionPrius : DDLObjectType, IDDLObjectType<SetOneHitK
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x42dda008u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
 	public static SetOneHitKillActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class CustomHeadData : DDLObjectType, IDDLObjectType<CustomHeadData> {
 		HeadModel = ddl.GetValue<RivetAssetId>(0x7596a61cu, HeadModel);
 	}
 
-	[DDLRegistration(0xe4029254u, description: "The id for this head that corresponds to what the UI uses ( <= 0 == none, 1 == Dan, 2 == Nefarious, 3 == Qwarkbot, 4 == Snagglebeast, 5 == T-Rex, 6 == Victor).")]
+	[DDLRegistration(0xa6811891u, description: "The id for this head that corresponds to what the UI uses ( <= 0 == none, 1 == Dan, 2 == Nefarious, 3 == Qwarkbot, 4 == Snagglebeast, 5 == T-Rex, 6 == Victor).")]
 	public sbyte HeadID { get; set; } = -1;
 
-	[DDLRegistration(0xe4029254u)]
+	[DDLRegistration(0x7596a61cu)]
 	public RivetAssetId HeadModel { get; set; } = default;
 
 	public static CustomHeadData Create(DDLObject ddl) => new(ddl);

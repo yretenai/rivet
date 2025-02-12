@@ -19,10 +19,10 @@ public class ShieldItemConfig : GameItemConfig, IDDLObjectType<ShieldItemConfig>
 		ShieldConfig = ddl.GetValue<RivetAssetId>(0xa0c7672cu, ShieldConfig);
 	}
 
-	[DDLRegistration(0xf5c655adu)]
+	[DDLRegistration(0xb72a0e33u)]
 	public RivetAssetId WeaponConfig { get; set; } = default;
 
-	[DDLRegistration(0xf5c655adu)]
+	[DDLRegistration(0xa0c7672cu)]
 	public RivetAssetId ShieldConfig { get; set; } = default;
 
 	public new static ShieldItemConfig Create(DDLObject ddl) => new(ddl);

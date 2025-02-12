@@ -23,22 +23,22 @@ public class ActivityClueGamePrius : DDLObjectType, IDDLObjectType<ActivityClueG
 		AnimSets = ddl.GetObjects<ActivityClueAnimSetData>(0x03492d19u);
 	}
 
-	[DDLRegistration(0x619f2dfeu, "Activity", "How should the bot behave when using this ActivityClue")]
+	[DDLRegistration(0x5675b42au, "Activity", "How should the bot behave when using this ActivityClue")]
 	public ActivityClueActivityBase? Activity { get; set; } = default;
 
-	[DDLRegistration(0x619f2dfeu, "Use Conditions", "All these conditions must stay true for the bot to keep using the clue")]
+	[DDLRegistration(0xbd3060f1u, "Use Conditions", "All these conditions must stay true for the bot to keep using the clue")]
 	public List<ActivityClueConditionWrapper?> UseConditions { get; set; } = [];
 
-	[DDLRegistration(0x619f2dfeu, "Select Conditions", "All these conditions must be true before a bot decides to use this clue. Once a bot decides to use a clue, they stop checking these")]
+	[DDLRegistration(0xd6d6c6d9u, "Select Conditions", "All these conditions must be true before a bot decides to use this clue. Once a bot decides to use a clue, they stop checking these")]
 	public List<ActivityClueConditionWrapper?> SelectConditions { get; set; } = [];
 
-	[DDLRegistration(0x619f2dfeu, "Spawn Conditions", "All these conditions must be true for a spawner to put a bot on this clue. These are only checked by Spawners")]
+	[DDLRegistration(0xf0d2646bu, "Spawn Conditions", "All these conditions must be true for a spawner to put a bot on this clue. These are only checked by Spawners")]
 	public List<ActivityClueSpawnConditionWrapper?> SpawnConditions { get; set; } = [];
 
-	[DDLRegistration(0x619f2dfeu, "Modules", "Extra functionality applied to bots during their entire use of the Activity")]
+	[DDLRegistration(0x2f5d20efu, "Modules", "Extra functionality applied to bots during their entire use of the Activity")]
 	public List<ActivityClueModuleWrapper?> Modules { get; set; } = [];
 
-	[DDLRegistration(0x619f2dfeu, "AnimSets", "AnimSets for all the standard bot rigs")]
+	[DDLRegistration(0x03492d19u, "AnimSets", "AnimSets for all the standard bot rigs")]
 	public List<ActivityClueAnimSetData?> AnimSets { get; set; } = [];
 
 	public static ActivityClueGamePrius Create(DDLObject ddl) => new(ddl);

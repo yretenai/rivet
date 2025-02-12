@@ -21,16 +21,16 @@ public class VolumetricCloudsShadowDef : DDLObjectType, IDDLObjectType<Volumetri
 		ShadowSpeed = ddl.GetValue<float>(0x3f0e8c7du, ShadowSpeed);
 	}
 
-	[DDLRegistration(0x1368744du)]
+	[DDLRegistration(0x38477dd8u)]
 	public bool EnabledShadow { get; set; } = false;
 
-	[DDLRegistration(0x1368744du, description: "It adds this value to control the overall shadow of clouds.")]
+	[DDLRegistration(0xf14ce9c1u, description: "It adds this value to control the overall shadow of clouds.")]
 	public float ShadowBrightness { get; set; } = 0.50f;
 
-	[DDLRegistration(0x1368744du, "Shadow Size Ratio", "Scales the size ratio which shadows are rendered.")]
+	[DDLRegistration(0x03556cd9u, "Shadow Size Ratio", "Scales the size ratio which shadows are rendered.")]
 	public float ShadowTiling { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1368744du)]
+	[DDLRegistration(0x3f0e8c7du)]
 	public float ShadowSpeed { get; set; } = 1.00f;
 
 	public static VolumetricCloudsShadowDef Create(DDLObject ddl) => new(ddl);

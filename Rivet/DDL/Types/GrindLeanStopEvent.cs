@@ -18,7 +18,7 @@ public class GrindLeanStopEvent : EventBase, IDDLObjectType<GrindLeanStopEvent> 
 		IsLeft = ddl.GetValue<bool>(0xe522bc03u, IsLeft);
 	}
 
-	[DDLRegistration(0x4fda6dc4u)]
+	[DDLRegistration(0xe522bc03u)]
 	public bool IsLeft { get; set; } = false;
 
 	public new static GrindLeanStopEvent Create(DDLObject ddl) => new(ddl);

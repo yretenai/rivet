@@ -22,19 +22,19 @@ public class ColorGradeVibranceOpDef : DDLObjectType, IDDLObjectType<ColorGradeV
 		Vibrance = ddl.GetValue<float>(0x9fc73539u, Vibrance);
 	}
 
-	[DDLRegistration(0xe7fafd5fu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xe7fafd5fu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xe7fafd5fu)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 100.00f;
 
-	[DDLRegistration(0xe7fafd5fu)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0xe7fafd5fu)]
+	[DDLRegistration(0x9fc73539u)]
 	public float Vibrance { get; set; } = 0.00f;
 
 	public static ColorGradeVibranceOpDef Create(DDLObject ddl) => new(ddl);

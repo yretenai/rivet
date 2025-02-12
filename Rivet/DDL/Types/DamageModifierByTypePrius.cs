@@ -18,7 +18,7 @@ public class DamageModifierByTypePrius : DamageModifierInvulnerablePrius, IDDLOb
 		InvincibleToDamageTypes = ddl.GetEnums<DamageTypesGame>(0x30fed5eau, DamageTypesGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x13372a43u)]
+	[DDLRegistration(0x30fed5eau)]
 	public List<DamageTypesGame> InvincibleToDamageTypes { get; set; } = [];
 
 	public new static DamageModifierByTypePrius Create(DDLObject ddl) => new(ddl);

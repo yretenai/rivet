@@ -19,10 +19,10 @@ public class MayaAnimClipData : DDLObjectType, IDDLObjectType<MayaAnimClipData> 
 		NewName = ddl.GetString(0x8b9127ec) ?? NewName;
 	}
 
-	[DDLRegistration(0xc9337ff5u)]
+	[DDLRegistration(0x2da990c2u)]
 	public string? OldName { get; set; } = default;
 
-	[DDLRegistration(0xc9337ff5u)]
+	[DDLRegistration(0x8b9127ecu)]
 	public string? NewName { get; set; } = default;
 
 	public static MayaAnimClipData Create(DDLObject ddl) => new(ddl);

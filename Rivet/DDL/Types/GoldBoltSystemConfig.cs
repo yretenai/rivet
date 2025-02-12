@@ -23,22 +23,22 @@ public class GoldBoltSystemConfig : ConfigBase, IDDLObjectType<GoldBoltSystemCon
 		ShipSkinConfig = ddl.GetValue<RivetAssetId>(0xf0183657u, ShipSkinConfig);
 	}
 
-	[DDLRegistration(0x38fb4b65u)]
+	[DDLRegistration(0xe8c87d0fu)]
 	public List<GoldBoltRewardCost?> Rewards { get; set; } = [];
 
-	[DDLRegistration(0x38fb4b65u)]
+	[DDLRegistration(0x5858daabu)]
 	public RivetAssetId HeadSizeConfig { get; set; } = default;
 
-	[DDLRegistration(0x38fb4b65u)]
+	[DDLRegistration(0x479883e6u)]
 	public RivetAssetId MeleeModelSwapConfig { get; set; } = default;
 
-	[DDLRegistration(0x38fb4b65u)]
+	[DDLRegistration(0x6e6a1dedu)]
 	public RivetAssetId HomeRunHitterConfig { get; set; } = default;
 
-	[DDLRegistration(0x38fb4b65u)]
+	[DDLRegistration(0x50681d04u)]
 	public RivetAssetId RewardRenderModeConfig { get; set; } = default;
 
-	[DDLRegistration(0x38fb4b65u)]
+	[DDLRegistration(0xf0183657u)]
 	public RivetAssetId ShipSkinConfig { get; set; } = default;
 
 	public new static GoldBoltSystemConfig Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class CollectionDef : DDLObjectType, IDDLObjectType<CollectionDef> {
 		CustomSearch = ddl.GetString(0x39e7f2e4) ?? CustomSearch;
 	}
 
-	[DDLRegistration(0x3cf8d6d9u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x3cf8d6d9u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x3cf8d6d9u, description: "Smart or normal collection.")]
+	[DDLRegistration(0xbc4e9799u, description: "Smart or normal collection.")]
 	public x9b56bf2d Type { get; set; } = x9b56bf2d.Collection;
 
-	[DDLRegistration(0x3cf8d6d9u, description: "Only valid if Type is a 'normal' collection. Paths to assets, relative to the asset source root.")]
+	[DDLRegistration(0x92e94ad0u, description: "Only valid if Type is a 'normal' collection. Paths to assets, relative to the asset source root.")]
 	public List<RivetAssetId> Paths { get; set; } = [];
 
-	[DDLRegistration(0x3cf8d6d9u, description: "Only valid if Type is a 'smart' collection. Search criteria for use by the vault.")]
+	[DDLRegistration(0x39e7f2e4u, description: "Only valid if Type is a 'smart' collection. Search criteria for use by the vault.")]
 	public string? CustomSearch { get; set; } = default;
 
 	public static CollectionDef Create(DDLObject ddl) => new(ddl);

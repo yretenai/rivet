@@ -19,10 +19,10 @@ public class Cinematic2ExitEvent : EventBase, IDDLObjectType<Cinematic2ExitEvent
 		EarlyExit = ddl.GetValue<bool>(0x8b3d97ddu, EarlyExit);
 	}
 
-	[DDLRegistration(0x77bae62cu)]
+	[DDLRegistration(0x86c5706cu)]
 	public DDLTransform? EndMatrix { get; set; } = default;
 
-	[DDLRegistration(0x77bae62cu)]
+	[DDLRegistration(0x8b3d97ddu)]
 	public bool EarlyExit { get; set; } = false;
 
 	public new static Cinematic2ExitEvent Create(DDLObject ddl) => new(ddl);

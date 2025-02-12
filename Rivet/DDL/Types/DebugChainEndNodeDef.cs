@@ -18,7 +18,7 @@ public class DebugChainEndNodeDef : MissionSystemLogicNodeDef, IDDLObjectType<De
 		DebugOnlyOutput = ddl.GetObject<OutputPlugBoolean>(0xc0b99ef8u);
 	}
 
-	[DDLRegistration(0x54a47ec4u)]
+	[DDLRegistration(0xc0b99ef8u)]
 	public OutputPlugBoolean? DebugOnlyOutput { get; set; } = default;
 
 	public new static DebugChainEndNodeDef Create(DDLObject ddl) => new(ddl);

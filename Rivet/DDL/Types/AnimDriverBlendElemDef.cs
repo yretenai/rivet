@@ -22,19 +22,19 @@ public class AnimDriverBlendElemDef : DDLObjectType, IDDLObjectType<AnimDriverBl
 		End = ddl.GetValue<float>(0x2aa91a78u, End);
 	}
 
-	[DDLRegistration(0xb5e77016u)]
+	[DDLRegistration(0x04a96b99u)]
 	public string? RefNodeName { get; set; } = "";
 
-	[DDLRegistration(0xb5e77016u)]
+	[DDLRegistration(0x9d7bc01fu)]
 	public uint OutputIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb5e77016u)]
+	[DDLRegistration(0xc882b46cu)]
 	public xfd5aa1cb SmoothType { get; set; } = xfd5aa1cb.Linear;
 
-	[DDLRegistration(0xb5e77016u)]
+	[DDLRegistration(0x862a994eu)]
 	public float Start { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb5e77016u)]
+	[DDLRegistration(0x2aa91a78u)]
 	public float End { get; set; } = 0.00f;
 
 	public static AnimDriverBlendElemDef Create(DDLObject ddl) => new(ddl);

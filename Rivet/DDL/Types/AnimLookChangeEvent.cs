@@ -19,10 +19,10 @@ public class AnimLookChangeEvent : EventBase, IDDLObjectType<AnimLookChangeEvent
 		EnableLooks = ddl.GetStrings(0x37c7283du);
 	}
 
-	[DDLRegistration(0x2127e69bu, description: "Looks to enabled")]
+	[DDLRegistration(0x9ad9f90du, description: "Looks to enabled")]
 	public List<string?> DisableLooks { get; set; } = [];
 
-	[DDLRegistration(0x2127e69bu, description: "Looks to disable.")]
+	[DDLRegistration(0x37c7283du, description: "Looks to disable.")]
 	public List<string?> EnableLooks { get; set; } = [];
 
 	public new static AnimLookChangeEvent Create(DDLObject ddl) => new(ddl);

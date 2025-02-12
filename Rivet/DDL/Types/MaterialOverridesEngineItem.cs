@@ -18,7 +18,7 @@ public class MaterialOverridesEngineItem : DDLObjectType, IDDLObjectType<Materia
 		AssetPath = ddl.GetDictionary<string, RivetAssetId>(0x0efa614b, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 	}
 
-	[DDLRegistration(0xd0672e59u)]
+	[DDLRegistration(0x0efa614bu)]
 	public Dictionary<string, RivetAssetId> AssetPath { get; set; } = [];
 
 	public static MaterialOverridesEngineItem Create(DDLObject ddl) => new(ddl);

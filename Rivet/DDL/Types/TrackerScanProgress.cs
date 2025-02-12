@@ -20,13 +20,13 @@ public class TrackerScanProgress : DDLObjectType, IDDLObjectType<TrackerScanProg
 		CountScannedFiles = ddl.GetValue<uint>(0xb9c7d3aau, CountScannedFiles);
 	}
 
-	[DDLRegistration(0x2cbb094du)]
+	[DDLRegistration(0x565f758cu)]
 	public bool Scanning { get; set; } = false;
 
-	[DDLRegistration(0x2cbb094du)]
+	[DDLRegistration(0xc485dbd6u)]
 	public string? Directory { get; set; } = default;
 
-	[DDLRegistration(0x2cbb094du)]
+	[DDLRegistration(0xb9c7d3aau)]
 	public uint CountScannedFiles { get; set; } = 0x00000000;
 
 	public static TrackerScanProgress Create(DDLObject ddl) => new(ddl);

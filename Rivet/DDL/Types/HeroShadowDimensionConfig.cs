@@ -22,19 +22,19 @@ public class HeroShadowDimensionConfig : DDLObjectType, IDDLObjectType<HeroShado
 		HeroTimeScale = ddl.GetValue<float>(0xeb49e748u, HeroTimeScale);
 	}
 
-	[DDLRegistration(0xf5e37230u, description: "Portal actor used to do a portal zip")]
+	[DDLRegistration(0x72354d60u, description: "Portal actor used to do a portal zip")]
 	public RivetAssetId ShadowDimensionAtmosphere { get; set; } = default;
 
-	[DDLRegistration(0xf5e37230u)]
+	[DDLRegistration(0xb0eee38du)]
 	public float CoolDownTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0xf5e37230u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 10.00f;
 
-	[DDLRegistration(0xf5e37230u)]
+	[DDLRegistration(0xd696c4a8u)]
 	public float WorldTimeScale { get; set; } = 0.25f;
 
-	[DDLRegistration(0xf5e37230u)]
+	[DDLRegistration(0xeb49e748u)]
 	public float HeroTimeScale { get; set; } = 0.50f;
 
 	public static HeroShadowDimensionConfig Create(DDLObject ddl) => new(ddl);

@@ -35,58 +35,58 @@ public class VisualEffectLightAttr : DDLObjectType, IDDLObjectType<VisualEffectL
 		IES = ddl.GetValue<RivetAssetId>(0xed7ebb7au, IES);
 	}
 
-	[DDLRegistration(0x3cb97d00u, "Style")]
+	[DDLRegistration(0x2aee74abu, "Style")]
 	public xc53d61ca Style { get; set; } = xc53d61ca.PointLight;
 
-	[DDLRegistration(0x3cb97d00u, "Radius")]
+	[DDLRegistration(0x0504203du, "Radius")]
 	public float Radius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3cb97d00u, "Inner Cone")]
+	[DDLRegistration(0x5d7bbc1au, "Inner Cone")]
 	public float InnerCone { get; set; } = 15.00f;
 
-	[DDLRegistration(0x3cb97d00u, "Outer Cone")]
+	[DDLRegistration(0xcc1e2b6du, "Outer Cone")]
 	public float OuterCone { get; set; } = 45.00f;
 
-	[DDLRegistration(0x3cb97d00u, "CutOff Dist")]
+	[DDLRegistration(0xead45b23u, "CutOff Dist")]
 	public float CutOffDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3cb97d00u, "CutOn Dist")]
+	[DDLRegistration(0x258b8c4fu, "CutOn Dist")]
 	public float CutOnDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3cb97d00u, "Spec Intensity")]
+	[DDLRegistration(0x85609e3fu, "Spec Intensity")]
 	public float SpecIntensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3cb97d00u, "Shadow Fade Dist")]
+	[DDLRegistration(0x33d350f8u, "Shadow Fade Dist")]
 	public float ShadowFadeDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3cb97d00u, "Volumetric Fog Intensity")]
+	[DDLRegistration(0x9321765au, "Volumetric Fog Intensity")]
 	public float VolumetricFogScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3cb97d00u, "Bulb Radius")]
+	[DDLRegistration(0x41e5466fu, "Bulb Radius")]
 	public float BulbRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3cb97d00u, "Bulb Length")]
+	[DDLRegistration(0x7be4b687u, "Bulb Length")]
 	public float BulbLength { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3cb97d00u, "Bulb Is Rectangle")]
+	[DDLRegistration(0x98f61e67u, "Bulb Is Rectangle")]
 	public bool BulbIsRectangle { get; set; } = false;
 
-	[DDLRegistration(0x3cb97d00u, "Use Atmosphere Multiplier")]
+	[DDLRegistration(0x33510e45u, "Use Atmosphere Multiplier")]
 	public bool UseAtmosphereMultiplier { get; set; } = true;
 
-	[DDLRegistration(0x3cb97d00u, "Skip Light Capture", "If checked, this light will not be active during lightgrid or envprobe capture - particularly useful for disabling emissive materials")]
+	[DDLRegistration(0x64ede99au, "Skip Light Capture", "If checked, this light will not be active during lightgrid or envprobe capture - particularly useful for disabling emissive materials")]
 	public bool SkipLightCapture { get; set; } = false;
 
-	[DDLRegistration(0x3cb97d00u, "Only Light Capture", "If checked, this light will only be active during lightgrid and envprobe capture.")]
+	[DDLRegistration(0x1559dec2u, "Only Light Capture", "If checked, this light will only be active during lightgrid and envprobe capture.")]
 	public bool OnlyLightCapture { get; set; } = false;
 
-	[DDLRegistration(0x3cb97d00u, "Cast Shadows")]
+	[DDLRegistration(0xfc091c24u, "Cast Shadows")]
 	public bool CastShadows { get; set; } = false;
 
-	[DDLRegistration(0x3cb97d00u, "Shadow Resolution")]
+	[DDLRegistration(0x4344f8a2u, "Shadow Resolution")]
 	public ShadowRes ShadowRes { get; set; } = ShadowRes.Normal;
 
-	[DDLRegistration(0x3cb97d00u, "IES Profile", "Add an IES profile when the material port is disconnected")]
+	[DDLRegistration(0xed7ebb7au, "IES Profile", "Add an IES profile when the material port is disconnected")]
 	public RivetAssetId IES { get; set; } = default;
 
 	public static VisualEffectLightAttr Create(DDLObject ddl) => new(ddl);

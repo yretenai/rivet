@@ -18,7 +18,7 @@ public class AssetSizeResult : DDLObjectType, IDDLObjectType<AssetSizeResult> {
 		Results = ddl.GetDictionary<RivetAssetId, AssetSizeResultItem>(0x9e49872c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AssetSizeResultItem>(mapId));
 	}
 
-	[DDLRegistration(0xa33e70f4u)]
+	[DDLRegistration(0x9e49872cu)]
 	public Dictionary<RivetAssetId, AssetSizeResultItem?> Results { get; set; } = [];
 
 	public static AssetSizeResult Create(DDLObject ddl) => new(ddl);

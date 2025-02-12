@@ -21,16 +21,16 @@ public class VanityCategoryListItem : DDLObjectType, IDDLObjectType<VanityCatego
 		ShowOnVendorMenu = ddl.GetValue<bool>(0x159446acu, ShowOnVendorMenu);
 	}
 
-	[DDLRegistration(0xf07da320u, "Category", "Category Type")]
+	[DDLRegistration(0x916b9072u, "Category", "Category Type")]
 	public xa3499465 VanityCategory { get; set; } = xa3499465.Head;
 
-	[DDLRegistration(0xf07da320u, "Category LocTag", "Localization tag for category")]
+	[DDLRegistration(0x09f47308u, "Category LocTag", "Localization tag for category")]
 	public string? VanityCategoryLocTag { get; set; } = default;
 
-	[DDLRegistration(0xf07da320u, "Category Menu", "Category Menu")]
+	[DDLRegistration(0xcbbe6a10u, "Category Menu", "Category Menu")]
 	public xca348341 VanityMenu { get; set; } = xca348341.None;
 
-	[DDLRegistration(0xf07da320u, "Show on Vendor", "Show on Vendor Menu")]
+	[DDLRegistration(0x159446acu, "Show on Vendor", "Show on Vendor Menu")]
 	public bool ShowOnVendorMenu { get; set; } = true;
 
 	public static VanityCategoryListItem Create(DDLObject ddl) => new(ddl);

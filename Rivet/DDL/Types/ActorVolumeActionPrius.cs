@@ -19,10 +19,10 @@ public class ActorVolumeActionPrius : DDLObjectType, IDDLObjectType<ActorVolumeA
 		VolumeCheckType = ddl.GetEnum<x2726daf1>(0xfe4c9c8cu, x2726daf1Values.Lookup);
 	}
 
-	[DDLRegistration(0x447e15abu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x447e15abu)]
+	[DDLRegistration(0xfe4c9c8cu)]
 	public x2726daf1 VolumeCheckType { get; set; } = x2726daf1.Inside;
 
 	public static ActorVolumeActionPrius Create(DDLObject ddl) => new(ddl);

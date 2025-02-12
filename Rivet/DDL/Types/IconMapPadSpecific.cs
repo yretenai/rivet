@@ -27,34 +27,34 @@ public class IconMapPadSpecific : IconMapBase, IDDLObjectType<IconMapPadSpecific
 		SteamOverride = ddl.GetObject<IconMapOverride>(0xbca286cbu);
 	}
 
-	[DDLRegistration(0x7de43456u)]
+	[DDLRegistration(0x1a9fdab1u)]
 	public IconMapBase? DefaultIconMap { get; set; } = default;
 
-	[DDLRegistration(0x7de43456u)]
+	[DDLRegistration(0x7e1ead8fu)]
 	public IconMapOverride? X360Override { get; set; } = default;
 
-	[DDLRegistration(0x7de43456u)]
+	[DDLRegistration(0x1820af3eu)]
 	public IconMapOverride? XOneOverride { get; set; } = default;
 
-	[DDLRegistration(0x7de43456u)]
+	[DDLRegistration(0xdb7472ddu)]
 	public IconMapOverride? DualShockOverride { get; set; } = default;
 
-	[DDLRegistration(0x7de43456u)]
+	[DDLRegistration(0x6b39f689u)]
 	public IconMapOverride? DualSenseOverride { get; set; } = default;
 
-	[DDLRegistration(0x7de43456u)]
+	[DDLRegistration(0x7d523c20u)]
 	public IconMapOverride? SteamDeckOverride { get; set; } = default;
 
-	[DDLRegistration(0x7de43456u)]
+	[DDLRegistration(0xd81eb57au)]
 	public IconMapOverride? SwitchProOverride { get; set; } = default;
 
-	[DDLRegistration(0x7de43456u)]
+	[DDLRegistration(0xb1987712u)]
 	public IconMapOverride? GenericOverride { get; set; } = default;
 
-	[DDLRegistration(0x7de43456u)]
+	[DDLRegistration(0x38ded677u)]
 	public IconMapOverride? MkbOverride { get; set; } = default;
 
-	[DDLRegistration(0x7de43456u)]
+	[DDLRegistration(0xbca286cbu)]
 	public IconMapOverride? SteamOverride { get; set; } = default;
 
 	public new static IconMapPadSpecific Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class AnimClipIKEvent : EventBase, IDDLObjectType<AnimClipIKEvent> {
 		IKName = ddl.GetString(0x5037d62a) ?? IKName;
 	}
 
-	[DDLRegistration(0x07800f5cu)]
+	[DDLRegistration(0x1f5c59dfu)]
 	public xd2b6d7dc CurveType { get; set; } = xd2b6d7dc.BlendFactor;
 
-	[DDLRegistration(0x07800f5cu)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0x07800f5cu)]
+	[DDLRegistration(0xf805a3f6u)]
 	public float BlendTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x07800f5cu)]
+	[DDLRegistration(0x5037d62au)]
 	public string? IKName { get; set; } = default;
 
 	public new static AnimClipIKEvent Create(DDLObject ddl) => new(ddl);

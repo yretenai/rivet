@@ -20,13 +20,13 @@ public class ApplyLoadoutScriptActionPrius : DDLObjectType, IDDLObjectType<Apply
 		RachetteLoadout = ddl.GetValue<RivetAssetId>(0x31867150u, RachetteLoadout);
 	}
 
-	[DDLRegistration(0xe80b8e33u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0xe80b8e33u, "Ratchet Loadout")]
+	[DDLRegistration(0x65978147u, "Ratchet Loadout")]
 	public RivetAssetId RatchetLoadout { get; set; } = default;
 
-	[DDLRegistration(0xe80b8e33u, "Rachette Loadout")]
+	[DDLRegistration(0x31867150u, "Rachette Loadout")]
 	public RivetAssetId RachetteLoadout { get; set; } = default;
 
 	public static ApplyLoadoutScriptActionPrius Create(DDLObject ddl) => new(ddl);

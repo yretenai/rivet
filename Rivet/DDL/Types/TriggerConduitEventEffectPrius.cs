@@ -20,13 +20,13 @@ public class TriggerConduitEventEffectPrius : ScriptedShotEffectBasePrius, IDDLO
 		Broadcast = ddl.GetValue<bool>(0x190ce3f9u, Broadcast);
 	}
 
-	[DDLRegistration(0x5e0d4b83u)]
+	[DDLRegistration(0x1eb7640eu)]
 	public x04891b54 ActorType { get; set; } = x04891b54.HitActor;
 
-	[DDLRegistration(0x5e0d4b83u)]
+	[DDLRegistration(0x22fdc666u)]
 	public ScriptedShotGenericEvent? Event { get; set; } = default;
 
-	[DDLRegistration(0x5e0d4b83u)]
+	[DDLRegistration(0x190ce3f9u)]
 	public bool Broadcast { get; set; } = false;
 
 	public new static TriggerConduitEventEffectPrius Create(DDLObject ddl) => new(ddl);

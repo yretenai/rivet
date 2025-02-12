@@ -20,13 +20,13 @@ public class VisualEffectPerformanceAttr : DDLObjectType, IDDLObjectType<VisualE
 		Frame = ddl.GetObject<VisualEffectFrameAttr>(0xacabf00cu);
 	}
 
-	[DDLRegistration(0xe7ddc95fu)]
+	[DDLRegistration(0x61f23114u)]
 	public x21f55189 Source { get; set; } = x21f55189.Self;
 
-	[DDLRegistration(0xe7ddc95fu)]
+	[DDLRegistration(0x895d0326u)]
 	public VisualEffectSpawnAttr? Spawn { get; set; } = default;
 
-	[DDLRegistration(0xe7ddc95fu)]
+	[DDLRegistration(0xacabf00cu)]
 	public VisualEffectFrameAttr? Frame { get; set; } = default;
 
 	public static VisualEffectPerformanceAttr Create(DDLObject ddl) => new(ddl);

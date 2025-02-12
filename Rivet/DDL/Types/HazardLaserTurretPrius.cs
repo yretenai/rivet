@@ -29,40 +29,40 @@ public class HazardLaserTurretPrius : DDLObjectType, IDDLObjectType<HazardLaserT
 		StartActive = ddl.GetValue<bool>(0x3e035e82u, StartActive);
 	}
 
-	[DDLRegistration(0xd7c5a2eeu, description: "Location where the laser comes from.")]
+	[DDLRegistration(0x82517cadu, description: "Location where the laser comes from.")]
 	public string? LaserStartLocName { get; set; } = "igLoc_LaserEmit";
 
-	[DDLRegistration(0xd7c5a2eeu, description: "Location where the laser ends (will be moved in code, just needs to exist to draw the beam).")]
+	[DDLRegistration(0x10fd28fau, description: "Location where the laser ends (will be moved in code, just needs to exist to draw the beam).")]
 	public string? LaserEndLocName { get; set; } = "igLoc_LaserEnd";
 
-	[DDLRegistration(0xd7c5a2eeu, description: "The name of the joint to use for yaw rotation.")]
+	[DDLRegistration(0x39d7862au, description: "The name of the joint to use for yaw rotation.")]
 	public string? YawJointName { get; set; } = "Yaw_Joint";
 
-	[DDLRegistration(0xd7c5a2eeu, description: "The name of the joint to use for pitch rotation.")]
+	[DDLRegistration(0x7100f11fu, description: "The name of the joint to use for pitch rotation.")]
 	public string? PitchJointName { get; set; } = "Pitch_Joint";
 
-	[DDLRegistration(0xd7c5a2eeu, description: "Turn speed in degrees.")]
+	[DDLRegistration(0x6cc70f48u, description: "Turn speed in degrees.")]
 	public float TurnSpeed { get; set; } = 30.00f;
 
-	[DDLRegistration(0xd7c5a2eeu, description: "FOV in degrees (how much the turret can see).")]
+	[DDLRegistration(0xe651b84fu, description: "FOV in degrees (how much the turret can see).")]
 	public float FOVAngle { get; set; } = 45.00f;
 
-	[DDLRegistration(0xd7c5a2eeu, description: "Delay before firing (after it pops up).")]
+	[DDLRegistration(0x129ecf75u, description: "Delay before firing (after it pops up).")]
 	public float FireDelay { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd7c5a2eeu, description: "The range of the turret (aka, the max laser length).")]
+	[DDLRegistration(0x39409066u, description: "The range of the turret (aka, the max laser length).")]
 	public float RangeDist { get; set; } = 30.00f;
 
-	[DDLRegistration(0xd7c5a2eeu, description: "Laser damage per second.")]
+	[DDLRegistration(0x0b178a37u, description: "Laser damage per second.")]
 	public float DPSAmt { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd7c5a2eeu)]
+	[DDLRegistration(0x4a5fe10eu)]
 	public RivetAssetId InnerAwareness { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd7c5a2eeu)]
+	[DDLRegistration(0x077cb65cu)]
 	public RivetAssetId OuterAwareness { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd7c5a2eeu, description: "Start active (otherwise will need to be toggled on in script).")]
+	[DDLRegistration(0x3e035e82u, description: "Start active (otherwise will need to be toggled on in script).")]
 	public bool StartActive { get; set; } = true;
 
 	public static HazardLaserTurretPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class Cinematic2ActorTagsDef : DDLObjectType, IDDLObjectType<Cinematic2Ac
 		Tags = ddl.GetStrings(0x5f2c5496u);
 	}
 
-	[DDLRegistration(0x77670b93u)]
+	[DDLRegistration(0x5f2c5496u)]
 	public List<string?> Tags { get; set; } = [];
 
 	public static Cinematic2ActorTagsDef Create(DDLObject ddl) => new(ddl);

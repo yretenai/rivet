@@ -22,19 +22,19 @@ public class StatusEffectAvengerPrius : StatusEffectBasePrius, IDDLObjectType<St
 		HPIsPercent = ddl.GetValue<bool>(0xd6d154f6u, HPIsPercent);
 	}
 
-	[DDLRegistration(0x9fb2104du)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 30.00f;
 
-	[DDLRegistration(0x9fb2104du)]
+	[DDLRegistration(0xe64393a5u)]
 	public float PerDeathDamageBoost { get; set; } = 10.00f;
 
-	[DDLRegistration(0x9fb2104du)]
+	[DDLRegistration(0xda280e89u)]
 	public bool DamageIsPercent { get; set; } = true;
 
-	[DDLRegistration(0x9fb2104du)]
+	[DDLRegistration(0xa8dd1db9u)]
 	public float PerDeathHPBoost { get; set; } = 10.00f;
 
-	[DDLRegistration(0x9fb2104du)]
+	[DDLRegistration(0xd6d154f6u)]
 	public bool HPIsPercent { get; set; } = true;
 
 	public new static StatusEffectAvengerPrius Create(DDLObject ddl) => new(ddl);

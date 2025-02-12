@@ -19,10 +19,10 @@ public class CheckInventoryActionPrius : DDLObjectType, IDDLObjectType<CheckInve
 		Items = ddl.GetObjects<CheckInventoryArrayElement>(0xf84d258cu);
 	}
 
-	[DDLRegistration(0x77ff5b2fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0x77ff5b2fu)]
+	[DDLRegistration(0xf84d258cu)]
 	public List<CheckInventoryArrayElement?> Items { get; set; } = [];
 
 	public static CheckInventoryActionPrius Create(DDLObject ddl) => new(ddl);

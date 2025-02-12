@@ -22,19 +22,19 @@ public class WeaponEquippedFXOnEvent : EventBase, IDDLObjectType<WeaponEquippedF
 		OwnerIsHero = ddl.GetValue<bool>(0x0022f6dcu, OwnerIsHero);
 	}
 
-	[DDLRegistration(0xec18259cu, description: "Until FX can see enum values, I'll have to send this as a string.")]
+	[DDLRegistration(0xcb3c1ce8u, description: "Until FX can see enum values, I'll have to send this as a string.")]
 	public string? WeaponTypeName { get; set; } = default;
 
-	[DDLRegistration(0xec18259cu)]
+	[DDLRegistration(0x9e860af6u)]
 	public uint EquipIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xec18259cu)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0xec18259cu)]
+	[DDLRegistration(0xd23b3317u)]
 	public bool OwnerIsLocal { get; set; } = false;
 
-	[DDLRegistration(0xec18259cu)]
+	[DDLRegistration(0x0022f6dcu)]
 	public bool OwnerIsHero { get; set; } = false;
 
 	public new static WeaponEquippedFXOnEvent Create(DDLObject ddl) => new(ddl);

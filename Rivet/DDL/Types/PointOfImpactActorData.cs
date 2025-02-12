@@ -24,25 +24,25 @@ public class PointOfImpactActorData : DDLObjectType, IDDLObjectType<PointOfImpac
 		TargetTypes = ddl.GetBitset<TargetType>(0x85109145u, TargetTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x3d2a0fb3u, "Point Of Impact Actor", "Actor for indicating the point of impact")]
+	[DDLRegistration(0x52fba301u, "Point Of Impact Actor", "Actor for indicating the point of impact")]
 	public RivetAssetId PointOfImpactActor { get; set; } = default;
 
-	[DDLRegistration(0x3d2a0fb3u, "Scale Point Of Impact Actor", "If true we'll scale the size of the impact actor to take up a percentage of the screen.")]
+	[DDLRegistration(0xd96005f9u, "Scale Point Of Impact Actor", "If true we'll scale the size of the impact actor to take up a percentage of the screen.")]
 	public bool ScalePointOfImpactActor { get; set; } = true;
 
-	[DDLRegistration(0x3d2a0fb3u, "Point Of Impact Size", "Scale of the POI actor relative to the screen")]
+	[DDLRegistration(0x1a90e993u, "Point Of Impact Size", "Scale of the POI actor relative to the screen")]
 	public float PointOfImpactSize { get; set; } = 0.05f;
 
-	[DDLRegistration(0x3d2a0fb3u, "Impact Actor Skip Depth", "Draw the impact actor in front of everything")]
+	[DDLRegistration(0x559378e3u, "Impact Actor Skip Depth", "Draw the impact actor in front of everything")]
 	public bool ImpactActorSkipDepth { get; set; } = true;
 
-	[DDLRegistration(0x3d2a0fb3u, "Apply Material To Impact Actor", "Use the arc material to render the impact actor")]
+	[DDLRegistration(0x19e8f40du, "Apply Material To Impact Actor", "Use the arc material to render the impact actor")]
 	public bool ApplyMaterialToImpactActor { get; set; } = false;
 
-	[DDLRegistration(0x3d2a0fb3u, "Actor Orientation", "Determines how the orientation matrix for the Point Of Impact Actor is calculated.")]
+	[DDLRegistration(0xa073542au, "Actor Orientation", "Determines how the orientation matrix for the Point Of Impact Actor is calculated.")]
 	public ActorOrientation ActorOrientation { get; set; } = ActorOrientation.CameraToHitIsZAxis;
 
-	[DDLRegistration(0x3d2a0fb3u, "Target Types", "The set of targeted actor types this Point Of Impact Actor is valid for.")]
+	[DDLRegistration(0x85109145u, "Target Types", "The set of targeted actor types this Point Of Impact Actor is valid for.")]
 	public TargetType TargetTypes { get; set; } = (TargetType) 0x00000000;
 
 	public static PointOfImpactActorData Create(DDLObject ddl) => new(ddl);

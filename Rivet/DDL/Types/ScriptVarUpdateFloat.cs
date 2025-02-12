@@ -18,7 +18,7 @@ public class ScriptVarUpdateFloat : DDLObjectType, IDDLObjectType<ScriptVarUpdat
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0xa5bc13b4u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
 	public static ScriptVarUpdateFloat Create(DDLObject ddl) => new(ddl);

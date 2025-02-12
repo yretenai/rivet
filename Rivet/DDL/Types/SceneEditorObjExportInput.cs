@@ -19,10 +19,10 @@ public class SceneEditorObjExportInput : DDLObjectType, IDDLObjectType<SceneEdit
 		LodScale = ddl.GetValue<float>(0x1d595b30u, LodScale);
 	}
 
-	[DDLRegistration(0x467d8176u, description: "Path of the zone to export")]
+	[DDLRegistration(0x3643be77u, description: "Path of the zone to export")]
 	public RivetAssetId ZonePath { get; set; } = "";
 
-	[DDLRegistration(0x467d8176u, description: "LOD scale to apply when exporting")]
+	[DDLRegistration(0x1d595b30u, description: "LOD scale to apply when exporting")]
 	public float LodScale { get; set; } = 1.00f;
 
 	public static SceneEditorObjExportInput Create(DDLObject ddl) => new(ddl);

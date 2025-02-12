@@ -18,7 +18,7 @@ public class StatusEffectDamageStartEvent : EventBase, IDDLObjectType<StatusEffe
 		DamageTypeName = ddl.GetString(0xeaa6e76a) ?? DamageTypeName;
 	}
 
-	[DDLRegistration(0xd3043986u)]
+	[DDLRegistration(0xeaa6e76au)]
 	public string? DamageTypeName { get; set; } = default;
 
 	public new static StatusEffectDamageStartEvent Create(DDLObject ddl) => new(ddl);

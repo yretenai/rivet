@@ -19,10 +19,10 @@ public class AnimVarMonitorElement : DDLObjectType, IDDLObjectType<AnimVarMonito
 		RTPC = ddl.GetString(0xee39bca9) ?? RTPC;
 	}
 
-	[DDLRegistration(0xd3f3d2e1u)]
+	[DDLRegistration(0x740bb72bu)]
 	public string? AnimVar { get; set; } = default;
 
-	[DDLRegistration(0xd3f3d2e1u)]
+	[DDLRegistration(0xee39bca9u)]
 	public string? RTPC { get; set; } = default;
 
 	public static AnimVarMonitorElement Create(DDLObject ddl) => new(ddl);

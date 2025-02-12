@@ -18,7 +18,7 @@ public class HoudiniConfigDataFileGroup : HoudiniConfigData, IDDLObjectType<Houd
 		Values = ddl.GetValues<RivetAssetId>(0x04df0281u);
 	}
 
-	[DDLRegistration(0xfdd25430u, description: "The file paths that will be imported into Houdini.  They will be accessible as a (comma-separated) detail attribute using the tag name.  If a path refers to a model, actor, or other peice of geometry, that geometry will be imported into Houdini and grouped by the tag name.")]
+	[DDLRegistration(0x04df0281u, description: "The file paths that will be imported into Houdini.  They will be accessible as a (comma-separated) detail attribute using the tag name.  If a path refers to a model, actor, or other peice of geometry, that geometry will be imported into Houdini and grouped by the tag name.")]
 	public List<RivetAssetId> Values { get; set; } = [];
 
 	public new static HoudiniConfigDataFileGroup Create(DDLObject ddl) => new(ddl);

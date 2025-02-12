@@ -19,10 +19,10 @@ public class AimModContractingSpreadOffScreenPrius : AimModifierPrius, IDDLObjec
 		OnScreen = ddl.GetObject<ContractingVolley>(0x24432213u);
 	}
 
-	[DDLRegistration(0xa75d2336u, "Off Screen")]
+	[DDLRegistration(0x70eed091u, "Off Screen")]
 	public ContractingVolley? OffScreen { get; set; } = default;
 
-	[DDLRegistration(0xa75d2336u, "On Screen")]
+	[DDLRegistration(0x24432213u, "On Screen")]
 	public ContractingVolley? OnScreen { get; set; } = default;
 
 	public new static AimModContractingSpreadOffScreenPrius Create(DDLObject ddl) => new(ddl);

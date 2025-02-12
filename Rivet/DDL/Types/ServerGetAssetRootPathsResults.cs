@@ -19,10 +19,10 @@ public class ServerGetAssetRootPathsResults : DDLObjectType, IDDLObjectType<Serv
 		SourceFolder = ddl.GetValue<RivetAssetId>(0x3bb003d8u, SourceFolder);
 	}
 
-	[DDLRegistration(0x073b73aeu)]
+	[DDLRegistration(0xcbec5a79u)]
 	public RivetAssetId BuiltFolder { get; set; } = default;
 
-	[DDLRegistration(0x073b73aeu)]
+	[DDLRegistration(0x3bb003d8u)]
 	public RivetAssetId SourceFolder { get; set; } = default;
 
 	public static ServerGetAssetRootPathsResults Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ArachnodroidMissileCooldownEvent : EventBase, IDDLObjectType<Arachn
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0xe18a29d7u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
 	public new static ArachnodroidMissileCooldownEvent Create(DDLObject ddl) => new(ddl);

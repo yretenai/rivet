@@ -18,7 +18,7 @@ public class ActivityClueUserDataStoppedEvent : EventBase, IDDLObjectType<Activi
 		User = ddl.GetValue<uint>(0xbd0316f9u, User);
 	}
 
-	[DDLRegistration(0x9b9b4e7du, "User", "The bot that just stopped this clue's activity")]
+	[DDLRegistration(0xbd0316f9u, "User", "The bot that just stopped this clue's activity")]
 	public uint User { get; set; } = 0x00000000;
 
 	public new static ActivityClueUserDataStoppedEvent Create(DDLObject ddl) => new(ddl);

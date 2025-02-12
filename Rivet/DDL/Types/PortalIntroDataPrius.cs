@@ -32,49 +32,49 @@ public class PortalIntroDataPrius : IntroDataPrius, IDDLObjectType<PortalIntroDa
 		DropShipBonusDist = ddl.GetValue<float>(0xa4456301u, DropShipBonusDist);
 	}
 
-	[DDLRegistration(0x5fbf8cb0u, "Portal Asset")]
+	[DDLRegistration(0x99619335u, "Portal Asset")]
 	public RivetAssetId PortalAsset { get; set; } = default;
 
-	[DDLRegistration(0x5fbf8cb0u, "Dest Dist")]
+	[DDLRegistration(0x93e236afu, "Dest Dist")]
 	public float DestDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5fbf8cb0u, "Wait Anim")]
+	[DDLRegistration(0xd103b125u, "Wait Anim")]
 	public string? WaitAnim { get; set; } = "Idle";
 
-	[DDLRegistration(0x5fbf8cb0u, "Jump Anim")]
+	[DDLRegistration(0xcb3dc9d4u, "Jump Anim")]
 	public string? JumpAnim { get; set; } = "Jump";
 
-	[DDLRegistration(0x5fbf8cb0u, "In Air Anim")]
+	[DDLRegistration(0xf91d895du, "In Air Anim")]
 	public string? InAirAnim { get; set; } = "Jump_In_Air";
 
-	[DDLRegistration(0x5fbf8cb0u, "Land Anim")]
+	[DDLRegistration(0x8d373b62u, "Land Anim")]
 	public string? LandAnim { get; set; } = "Land";
 
-	[DDLRegistration(0x5fbf8cb0u, "Hover Intro Anim")]
+	[DDLRegistration(0x198ef61eu, "Hover Intro Anim")]
 	public string? HoverIntroAnim { get; set; } = "Hover_Intro";
 
-	[DDLRegistration(0x5fbf8cb0u, "Hover Anim")]
+	[DDLRegistration(0x38cac627u, "Hover Anim")]
 	public string? HoverAnim { get; set; } = "Hover_Move";
 
-	[DDLRegistration(0x5fbf8cb0u, "Hover Y Offset")]
+	[DDLRegistration(0x0fd6e31fu, "Hover Y Offset")]
 	public float HoverYOffset { get; set; } = 1.50f;
 
-	[DDLRegistration(0x5fbf8cb0u)]
+	[DDLRegistration(0xea318765u)]
 	public RivetAssetId PreShader { get; set; } = default;
 
-	[DDLRegistration(0x5fbf8cb0u)]
+	[DDLRegistration(0x3e4aa554u)]
 	public RivetAssetId PostShader { get; set; } = default;
 
-	[DDLRegistration(0x5fbf8cb0u, "Open Time")]
+	[DDLRegistration(0xea59bf87u, "Open Time")]
 	public float OpenTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5fbf8cb0u, "Close Time")]
+	[DDLRegistration(0xc926d00eu, "Close Time")]
 	public float CloseTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x5fbf8cb0u, "Time Between Intros")]
+	[DDLRegistration(0x312cfb42u, "Time Between Intros")]
 	public float TimeBetweenIntros { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5fbf8cb0u)]
+	[DDLRegistration(0xa4456301u)]
 	public float DropShipBonusDist { get; set; } = 8.00f;
 
 	public new static PortalIntroDataPrius Create(DDLObject ddl) => new(ddl);

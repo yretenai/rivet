@@ -18,7 +18,7 @@ public class DifficultyModProgressionBonusConfig : ConfigBase, IDDLObjectType<Di
 		ModProgressionBonuses = ddl.GetObjects<ProgressionBonusEntry>(0x18f4c422u);
 	}
 
-	[DDLRegistration(0xd1e78125u, description: "Progression Bonuses that are added onto the value of a difficulty mod, depending on how far the player is in the game.")]
+	[DDLRegistration(0x18f4c422u, description: "Progression Bonuses that are added onto the value of a difficulty mod, depending on how far the player is in the game.")]
 	public List<ProgressionBonusEntry?> ModProgressionBonuses { get; set; } = [];
 
 	public new static DifficultyModProgressionBonusConfig Create(DDLObject ddl) => new(ddl);

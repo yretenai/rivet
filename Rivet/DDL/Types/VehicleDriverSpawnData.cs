@@ -20,13 +20,13 @@ public class VehicleDriverSpawnData : ActorSpawnData, IDDLObjectType<VehicleDriv
 		ComponentTypeHash = ddl.GetValue<uint>(0x4ae31559u, ComponentTypeHash);
 	}
 
-	[DDLRegistration(0x57289b35u)]
+	[DDLRegistration(0x41c2ab0au)]
 	public uint VehicleHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x57289b35u)]
+	[DDLRegistration(0x25e06c12u)]
 	public uint UserHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x57289b35u)]
+	[DDLRegistration(0x4ae31559u)]
 	public uint ComponentTypeHash { get; set; } = 0x00000000;
 
 	public new static VehicleDriverSpawnData Create(DDLObject ddl) => new(ddl);

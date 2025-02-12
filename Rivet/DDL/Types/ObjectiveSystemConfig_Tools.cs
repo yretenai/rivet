@@ -18,7 +18,7 @@ public class ObjectiveSystemConfig_Tools : ConfigBase, IDDLObjectType<ObjectiveS
 		DebugGraphList = ddl.GetObject<DebugGraphList_Tools>(0x63f0f436u);
 	}
 
-	[DDLRegistration(0x05d42736u)]
+	[DDLRegistration(0x63f0f436u)]
 	public DebugGraphList_Tools? DebugGraphList { get; set; } = default;
 
 	public new static ObjectiveSystemConfig_Tools Create(DDLObject ddl) => new(ddl);

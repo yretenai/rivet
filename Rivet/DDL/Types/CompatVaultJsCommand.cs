@@ -18,7 +18,7 @@ public class CompatVaultJsCommand : DDLObjectType, IDDLObjectType<CompatVaultJsC
 		Type = ddl.GetEnum<x63e8ba6e>(0xbc4e9799u, x63e8ba6eValues.Lookup);
 	}
 
-	[DDLRegistration(0x4b7d5149u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x63e8ba6e Type { get; set; } = x63e8ba6e.ReplaceSceneNodes;
 
 	public static CompatVaultJsCommand Create(DDLObject ddl) => new(ddl);

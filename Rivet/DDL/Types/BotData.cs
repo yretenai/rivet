@@ -43,82 +43,82 @@ public class BotData : BotSetupData, IDDLObjectType<BotData> {
 		UseShieldBotHealth = ddl.GetValue<bool>(0x9cface8eu, UseShieldBotHealth);
 	}
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0x21b5e238u)]
 	public float AggressorDesire { get; set; } = 0.00f;
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0x15b95801u)]
 	public float DefenderDesire { get; set; } = 0.00f;
 
-	[DDLRegistration(0x59da994bu, description: "Whether to have the pixelize effect during the death anim and then destroy the actor at the end of the anim (true) or (false) to let the pixels sit around after the death anim and explode when hit or timed out.")]
+	[DDLRegistration(0xd0b8693cu, description: "Whether to have the pixelize effect during the death anim and then destroy the actor at the end of the anim (true) or (false) to let the pixels sit around after the death anim and explode when hit or timed out.")]
 	public bool DisablePixelizeDeath { get; set; } = false;
 
-	[DDLRegistration(0x59da994bu, "DisablePixelizerExplodeDelay", "Whether to skip the delay from the pixelizer effect freezing the actor in place/becoming a billboard and exploding.")]
+	[DDLRegistration(0x671d9563u, "DisablePixelizerExplodeDelay", "Whether to skip the delay from the pixelizer effect freezing the actor in place/becoming a billboard and exploding.")]
 	public bool DisablePixelizeFreeze { get; set; } = false;
 
-	[DDLRegistration(0x59da994bu, description: "Don't freeze the death animation")]
+	[DDLRegistration(0x390dcd30u, description: "Don't freeze the death animation")]
 	public bool DisablePixelizeAnimFreeze { get; set; } = false;
 
-	[DDLRegistration(0x59da994bu, description: "Don't sheepinate this enemy")]
+	[DDLRegistration(0x49443388u, description: "Don't sheepinate this enemy")]
 	public bool Insheepible { get; set; } = false;
 
-	[DDLRegistration(0x59da994bu, description: "Add a BotIKManager")]
+	[DDLRegistration(0x19603e8eu, description: "Add a BotIKManager")]
 	public bool UseIK { get; set; } = false;
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0xf24761b2u)]
 	public float ScaleMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0xce4a5eebu)]
 	public float ScaleMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0x59da994bu, description: "If StuckBehavior is allowed and bot is off of nav, this bot will try to get onto closest nav")]
+	[DDLRegistration(0x7124423au, description: "If StuckBehavior is allowed and bot is off of nav, this bot will try to get onto closest nav")]
 	public bool AllowStuckBehavior { get; set; } = true;
 
-	[DDLRegistration(0x59da994bu, description: "If true, bot will try to find its combatmarkups at the end of its intros(after secondary if given one)")]
+	[DDLRegistration(0x8b88b493u, description: "If true, bot will try to find its combatmarkups at the end of its intros(after secondary if given one)")]
 	public bool AllowAutoCombatMarkupSetup { get; set; } = true;
 
-	[DDLRegistration(0x59da994bu, description: "If true and this bot uses firepoints, bot will try to find a firepoinset to use at the end of its intros(after secondarys if given one)")]
+	[DDLRegistration(0xbf6ab262u, description: "If true and this bot uses firepoints, bot will try to find a firepoinset to use at the end of its intros(after secondarys if given one)")]
 	public bool AllowAutoFirepointSetFind { get; set; } = true;
 
-	[DDLRegistration(0x59da994bu, description: "How far the bot will look to find usable CombatMarkup Areas")]
+	[DDLRegistration(0xfd51d0c6u, description: "How far the bot will look to find usable CombatMarkup Areas")]
 	public float AutoCombatSetupFindRadius { get; set; } = 40.00f;
 
-	[DDLRegistration(0x59da994bu, description: "If no IdleArea is set on this bot and one isn't found thru autosetup, it will create one at its location with this radius")]
+	[DDLRegistration(0x183b05cdu, description: "If no IdleArea is set on this bot and one isn't found thru autosetup, it will create one at its location with this radius")]
 	public float FallbackIdleAreaRadius { get; set; } = 10.00f;
 
-	[DDLRegistration(0x59da994bu, description: "If no DefensiveArea is set on this bot and one isn't found thru autosetup, it will create one at its location with this radius")]
+	[DDLRegistration(0x901f688cu, description: "If no DefensiveArea is set on this bot and one isn't found thru autosetup, it will create one at its location with this radius")]
 	public float FallbackDefensiveAreaRadius { get; set; } = 20.00f;
 
-	[DDLRegistration(0x59da994bu, description: "If no CombatArea is set on this bot and one isn't found thru autosetup, it will create one at its location with this radius")]
+	[DDLRegistration(0xe8713c92u, description: "If no CombatArea is set on this bot and one isn't found thru autosetup, it will create one at its location with this radius")]
 	public float FallbackCombatAreaRadius { get; set; } = 40.00f;
 
-	[DDLRegistration(0x59da994bu, description: "If true fallback areas created by the bot will move with the bot.")]
+	[DDLRegistration(0x53e03055u, description: "If true fallback areas created by the bot will move with the bot.")]
 	public bool FallbackAreaFollowsBot { get; set; } = false;
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0x8a5e149au)]
 	public x0363f69e VariantSelectMode { get; set; } = x0363f69e.FromSystem;
 
-	[DDLRegistration(0x59da994bu, description: "Defines the RTPC values for various situations for SoundFocus_RTPC")]
+	[DDLRegistration(0x8d2ce588u, description: "Defines the RTPC values for various situations for SoundFocus_RTPC")]
 	public SoundFocusComponentData? SoundFocusData { get; set; } = default;
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0x885938c5u)]
 	public x53ecdc9c AttackJobPool { get; set; } = x53ecdc9c.None;
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0x897726f3u)]
 	public bool LavaDeathEnabled { get; set; } = true;
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0x68ece06fu)]
 	public bool OneHitDeath { get; set; } = false;
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0xbdcfb68bu)]
 	public bool AllowJumpsForPursue { get; set; } = true;
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0xddc7f7f9u)]
 	public bool ForceWallCrawlOnIntroCurveUse { get; set; } = false;
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0x2ea2b6ebu)]
 	public bool WaterProcessorActive { get; set; } = false;
 
-	[DDLRegistration(0x59da994bu)]
+	[DDLRegistration(0x9cface8eu)]
 	public bool UseShieldBotHealth { get; set; } = false;
 
 	public new static BotData Create(DDLObject ddl) => new(ddl);

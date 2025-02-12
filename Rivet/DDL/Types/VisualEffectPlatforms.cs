@@ -21,16 +21,16 @@ public class VisualEffectPlatforms : DDLObjectType, IDDLObjectType<VisualEffectP
 		PC = ddl.GetEnum<x3d49dc75>(0xb45b56feu, x3d49dc75Values.Lookup);
 	}
 
-	[DDLRegistration(0x9b2ecc08u, "PS4 Pro")]
+	[DDLRegistration(0x28da71e5u, "PS4 Pro")]
 	public x3d49dc75 PS4Pro { get; set; } = x3d49dc75.All;
 
-	[DDLRegistration(0x9b2ecc08u, "PS4")]
+	[DDLRegistration(0x31c762a9u, "PS4")]
 	public x3d49dc75 PS4 { get; set; } = x3d49dc75.All;
 
-	[DDLRegistration(0x9b2ecc08u, "PS5")]
+	[DDLRegistration(0x46c0523fu, "PS5")]
 	public x3d49dc75 PS5 { get; set; } = x3d49dc75.All;
 
-	[DDLRegistration(0x9b2ecc08u, "PC")]
+	[DDLRegistration(0xb45b56feu, "PC")]
 	public x3d49dc75 PC { get; set; } = x3d49dc75.All;
 
 	public static VisualEffectPlatforms Create(DDLObject ddl) => new(ddl);

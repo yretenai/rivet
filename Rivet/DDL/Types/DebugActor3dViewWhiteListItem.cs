@@ -19,10 +19,10 @@ public class DebugActor3dViewWhiteListItem : DDLObjectType, IDDLObjectType<Debug
 		WhiteListChildren = ddl.GetValue<bool>(0xc9ed811fu, WhiteListChildren);
 	}
 
-	[DDLRegistration(0x47a33c88u)]
+	[DDLRegistration(0x33ef2cbfu)]
 	public string? WhiteListedComponentName { get; set; } = default;
 
-	[DDLRegistration(0x47a33c88u)]
+	[DDLRegistration(0xc9ed811fu)]
 	public bool WhiteListChildren { get; set; } = false;
 
 	public static DebugActor3dViewWhiteListItem Create(DDLObject ddl) => new(ddl);

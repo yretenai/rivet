@@ -20,13 +20,13 @@ public class PirateChallengeWelcomeElement : DDLObjectType, IDDLObjectType<Pirat
 		Line = ddl.GetString(0xe1847446) ?? Line;
 	}
 
-	[DDLRegistration(0x0b729d33u, "Play On Hero")]
+	[DDLRegistration(0x19a79b8bu, "Play On Hero")]
 	public bool PlayOnHero { get; set; } = false;
 
-	[DDLRegistration(0x0b729d33u, "Pirate Type")]
+	[DDLRegistration(0x3148c575u, "Pirate Type")]
 	public PirateTypes PirateType { get; set; } = PirateTypes.Green;
 
-	[DDLRegistration(0x0b729d33u)]
+	[DDLRegistration(0xe1847446u)]
 	public string? Line { get; set; } = default;
 
 	public static PirateChallengeWelcomeElement Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class VehicleHoverJetsOnEvent : EventBase, IDDLObjectType<VehicleHoverJet
 		VehicleId = ddl.GetValue<uint>(0x62feded2u, VehicleId);
 	}
 
-	[DDLRegistration(0x3ac166bcu)]
+	[DDLRegistration(0x62feded2u)]
 	public uint VehicleId { get; set; } = 0x00000000;
 
 	public new static VehicleHoverJetsOnEvent Create(DDLObject ddl) => new(ddl);

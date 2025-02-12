@@ -18,7 +18,7 @@ public class AimAssistAutoTargetLocationTargetLocation : AimAssistAutoTargetLoca
 		TargetIndex = ddl.GetValue<byte>(0x5c537f74u, TargetIndex);
 	}
 
-	[DDLRegistration(0x1e50cd41u, "Target Index")]
+	[DDLRegistration(0x5c537f74u, "Target Index")]
 	public byte TargetIndex { get; set; } = 0x00;
 
 	public new static AimAssistAutoTargetLocationTargetLocation Create(DDLObject ddl) => new(ddl);

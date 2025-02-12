@@ -19,10 +19,10 @@ public class ActorTimeScaleMatchBasePrius : DDLObjectType, IDDLObjectType<ActorT
 		BlendOutTime = ddl.GetValue<float>(0xda2e044eu, BlendOutTime);
 	}
 
-	[DDLRegistration(0xf9cad906u, description: "Optional limit on how long to match time scale")]
+	[DDLRegistration(0x920f0ef5u, description: "Optional limit on how long to match time scale")]
 	public float MaxTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xf9cad906u, description: "Optional blend out time for when we stop matching the target actor")]
+	[DDLRegistration(0xda2e044eu, description: "Optional blend out time for when we stop matching the target actor")]
 	public float BlendOutTime { get; set; } = 0.00f;
 
 	public static ActorTimeScaleMatchBasePrius Create(DDLObject ddl) => new(ddl);

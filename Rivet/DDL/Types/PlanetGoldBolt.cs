@@ -23,22 +23,22 @@ public class PlanetGoldBolt : DDLObjectType, IDDLObjectType<PlanetGoldBolt> {
 		Hints = ddl.GetObjects<ActivityHint>(0xf00bc587u);
 	}
 
-	[DDLRegistration(0x7785fc46u)]
+	[DDLRegistration(0xcd7269d0u)]
 	public GoldBoltEnum SaveId { get; set; } = GoldBoltEnum.NefCity_1;
 
-	[DDLRegistration(0x7785fc46u, description: "HACK! Check this to override which save id is used to generate this task's task id. DO NOT USE EXCEPT WITH PERMISSION FROM DAVID CHRISTO!")]
+	[DDLRegistration(0xc402d609u, description: "HACK! Check this to override which save id is used to generate this task's task id. DO NOT USE EXCEPT WITH PERMISSION FROM DAVID CHRISTO!")]
 	public bool HACK_UseOverrideTaskId { get; set; } = false;
 
-	[DDLRegistration(0x7785fc46u, description: "HACK! Use this save id as the basis for the task id instead of the value of the SaveId field. DO NOT USE EXCEPT WITH PERMISSION FROM DAVID CHRISTO!")]
+	[DDLRegistration(0x2b1e6217u, description: "HACK! Use this save id as the basis for the task id instead of the value of the SaveId field. DO NOT USE EXCEPT WITH PERMISSION FROM DAVID CHRISTO!")]
 	public GoldBoltEnum HACK_OverrideTaskId { get; set; } = GoldBoltEnum.NefCity_1;
 
-	[DDLRegistration(0x7785fc46u, description: "Loctag of the name of this gold bolt to show in the task. Localized text can be at most 128 characters.")]
+	[DDLRegistration(0x2d78cbbdu, description: "Loctag of the name of this gold bolt to show in the task. Localized text can be at most 128 characters.")]
 	public string? NameTag { get; set; } = default;
 
-	[DDLRegistration(0x7785fc46u, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
+	[DDLRegistration(0xa76d47a6u, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
 	public uint DefaultPlaytimeEstimate { get; set; } = 0x00000005;
 
-	[DDLRegistration(0x7785fc46u)]
+	[DDLRegistration(0xf00bc587u)]
 	public List<ActivityHint?> Hints { get; set; } = [];
 
 	public static PlanetGoldBolt Create(DDLObject ddl) => new(ddl);

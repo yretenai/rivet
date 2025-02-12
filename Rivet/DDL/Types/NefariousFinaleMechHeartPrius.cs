@@ -30,43 +30,43 @@ public class NefariousFinaleMechHeartPrius : DamageModifierIncomingPrius, IDDLOb
 		WeakSpotDummyActor = ddl.GetValue<RivetAssetId>(0x754b91e9u, WeakSpotDummyActor);
 	}
 
-	[DDLRegistration(0x18fbe1b3u, description: "Gets subdivided for the heart nodes")]
+	[DDLRegistration(0x56acb646u, description: "Gets subdivided for the heart nodes")]
 	public float HeartBaseHealth { get; set; } = 100.00f;
 
-	[DDLRegistration(0x18fbe1b3u, description: "Health when we need to hit laser phase")]
+	[DDLRegistration(0xb0570c28u, description: "Health when we need to hit laser phase")]
 	public float HeartLaserPhaseHealth { get; set; } = 100.00f;
 
-	[DDLRegistration(0x18fbe1b3u)]
+	[DDLRegistration(0x1d51dd0bu)]
 	public RivetAssetId HitShader { get; set; } = default;
 
-	[DDLRegistration(0x18fbe1b3u)]
+	[DDLRegistration(0xd2d7cb4du)]
 	public float HitShaderDuration { get; set; } = 0.25f;
 
-	[DDLRegistration(0x18fbe1b3u)]
+	[DDLRegistration(0x5359907au)]
 	public string? GeneralReactAnim { get; set; } = "React_Twitch";
 
-	[DDLRegistration(0x18fbe1b3u)]
+	[DDLRegistration(0x319d26e5u)]
 	public NefariousFinaleMechHeartWeakspotData? Chamber1_NodeA_Data { get; set; } = default;
 
-	[DDLRegistration(0x18fbe1b3u)]
+	[DDLRegistration(0xb709544bu)]
 	public NefariousFinaleMechHeartWeakspotData? Chamber1_NodeB_Data { get; set; } = default;
 
-	[DDLRegistration(0x18fbe1b3u)]
+	[DDLRegistration(0x4603f415u)]
 	public NefariousFinaleMechHeartWeakspotData? Chamber2_NodeA_Data { get; set; } = default;
 
-	[DDLRegistration(0x18fbe1b3u)]
+	[DDLRegistration(0xc09786bbu)]
 	public NefariousFinaleMechHeartWeakspotData? Chamber2_NodeB_Data { get; set; } = default;
 
-	[DDLRegistration(0x18fbe1b3u)]
+	[DDLRegistration(0xdda6b87au)]
 	public NefariousFinaleMechHeartWeakspotData? Chamber3_NodeA_Data { get; set; } = default;
 
-	[DDLRegistration(0x18fbe1b3u)]
+	[DDLRegistration(0x5b32cad4u)]
 	public NefariousFinaleMechHeartWeakspotData? Chamber3_NodeB_Data { get; set; } = default;
 
-	[DDLRegistration(0x18fbe1b3u)]
+	[DDLRegistration(0x9e7c97e3u)]
 	public NefariousFinaleMechHeartWeakspotData? HeartCore_Data { get; set; } = default;
 
-	[DDLRegistration(0x18fbe1b3u)]
+	[DDLRegistration(0x754b91e9u)]
 	public RivetAssetId WeakSpotDummyActor { get; set; } = default;
 
 	public new static NefariousFinaleMechHeartPrius Create(DDLObject ddl) => new(ddl);

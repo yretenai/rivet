@@ -22,19 +22,19 @@ public class EngineControlModelInstanceData : DDLObjectType, IDDLObjectType<Engi
 		Type = ddl.GetEnum<x018449e9>(0xbc4e9799u, x018449e9Values.Lookup);
 	}
 
-	[DDLRegistration(0x20a9eda3u)]
+	[DDLRegistration(0x0a7308e7u)]
 	public Dictionary<uint, bool> ActiveLooks { get; set; } = [];
 
-	[DDLRegistration(0x20a9eda3u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x20a9eda3u)]
+	[DDLRegistration(0xb8b499c3u)]
 	public RivetAssetId ModelAssetPath { get; set; } = default;
 
-	[DDLRegistration(0x20a9eda3u)]
+	[DDLRegistration(0x3842c592u)]
 	public DDLTransform? ObjToWorld { get; set; } = default;
 
-	[DDLRegistration(0x20a9eda3u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x018449e9 Type { get; set; } = x018449e9.Model;
 
 	public static EngineControlModelInstanceData Create(DDLObject ddl) => new(ddl);

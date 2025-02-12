@@ -27,34 +27,34 @@ public class HexapodSlideData : DDLObjectType, IDDLObjectType<HexapodSlideData> 
 		SlopeMaxDot = ddl.GetValue<float>(0xc7c5a4f1u, SlopeMaxDot);
 	}
 
-	[DDLRegistration(0x9fe647dcu, "Max Speed")]
+	[DDLRegistration(0x16b83961u, "Max Speed")]
 	public float MaxSpeed { get; set; } = 4.00f;
 
-	[DDLRegistration(0x9fe647dcu, "Gravity Accel")]
+	[DDLRegistration(0x5ef2b816u, "Gravity Accel")]
 	public float GravityAccel { get; set; } = 10.00f;
 
-	[DDLRegistration(0x9fe647dcu, "Slide Past Time")]
+	[DDLRegistration(0xe8eb3818u, "Slide Past Time")]
 	public float SlidePastTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0x9fe647dcu, "Walk Speed Horizontal")]
+	[DDLRegistration(0x3b043e98u, "Walk Speed Horizontal")]
 	public float WalkSpeedHorizontal { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9fe647dcu, "Walk Speed Vertical")]
+	[DDLRegistration(0x24031498u, "Walk Speed Vertical")]
 	public float WalkSpeedVertical { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9fe647dcu, "Dash Speed Horizontal")]
+	[DDLRegistration(0x730b9d61u, "Dash Speed Horizontal")]
 	public float DashSpeedHorizontal { get; set; } = 2.00f;
 
-	[DDLRegistration(0x9fe647dcu, "Dash Speed Vertical")]
+	[DDLRegistration(0x0c43af68u, "Dash Speed Vertical")]
 	public float DashSpeedVertical { get; set; } = 2.00f;
 
-	[DDLRegistration(0x9fe647dcu, "Move Accel")]
+	[DDLRegistration(0x4d8dca42u, "Move Accel")]
 	public float MoveAccel { get; set; } = 10.00f;
 
-	[DDLRegistration(0x9fe647dcu, "Slope Min Dot")]
+	[DDLRegistration(0x82c7e773u, "Slope Min Dot")]
 	public float SlopeMinDot { get; set; } = -0.10f;
 
-	[DDLRegistration(0x9fe647dcu, "Slope Max Dot")]
+	[DDLRegistration(0xc7c5a4f1u, "Slope Max Dot")]
 	public float SlopeMaxDot { get; set; } = 0.71f;
 
 	public static HexapodSlideData Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class UseTurretOfferPrius : ProximityOfferPrius, IDDLObjectType<UseTurret
 		CustomLocTagPreHashed = ddl.GetValue<uint>(0xace76f16u, CustomLocTagPreHashed);
 	}
 
-	[DDLRegistration(0x45cbb467u)]
+	[DDLRegistration(0xa88f833fu)]
 	public RivetAssetId ItemConfig { get; set; } = default;
 
-	[DDLRegistration(0x45cbb467u, description: "Whether or not to override the UseTurretOffer default location tag.")]
+	[DDLRegistration(0x71ccba48u, description: "Whether or not to override the UseTurretOffer default location tag.")]
 	public bool UseCustomLocTag { get; set; } = false;
 
-	[DDLRegistration(0x45cbb467u, description: "If the above is set, what location tag we should use.")]
+	[DDLRegistration(0xb597d7c1u, description: "If the above is set, what location tag we should use.")]
 	public string? CustomLocTag { get; set; } = "";
 
-	[DDLRegistration(0x45cbb467u, description: "Provide the hash rather than the string so we don't have to deal with strings.")]
+	[DDLRegistration(0xace76f16u, description: "Provide the hash rather than the string so we don't have to deal with strings.")]
 	public uint CustomLocTagPreHashed { get; set; } = 0x00000000;
 
 	public new static UseTurretOfferPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class FetchAssetError : DDLObjectType, IDDLObjectType<FetchAssetError> {
 		Error = ddl.GetString(0x448e70b0) ?? Error;
 	}
 
-	[DDLRegistration(0xfa9e31a8u, description: "Id of the asset that was fetched")]
+	[DDLRegistration(0xb6e788d7u, description: "Id of the asset that was fetched")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xfa9e31a8u, description: "Path to the asset that was fetched, relative to the asset source root")]
+	[DDLRegistration(0x0efa614bu, description: "Path to the asset that was fetched, relative to the asset source root")]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xfa9e31a8u, description: "Revision number of the asset that was fetched; 0 means an empty asset")]
+	[DDLRegistration(0x9762a8bcu, description: "Revision number of the asset that was fetched; 0 means an empty asset")]
 	public int Revision { get; set; } = -1;
 
-	[DDLRegistration(0xfa9e31a8u, description: "Additional information about the problem that was encountered")]
+	[DDLRegistration(0x448e70b0u, description: "Additional information about the problem that was encountered")]
 	public string? Error { get; set; } = "";
 
 	public static FetchAssetError Create(DDLObject ddl) => new(ddl);

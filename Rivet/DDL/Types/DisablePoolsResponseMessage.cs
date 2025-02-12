@@ -19,10 +19,10 @@ public class DisablePoolsResponseMessage : DDLObjectType, IDDLObjectType<Disable
 		LastMessage = ddl.GetValue<byte>(0x87e83d61u, LastMessage);
 	}
 
-	[DDLRegistration(0x34e5bdabu)]
+	[DDLRegistration(0x239eef0du)]
 	public ushort RequestId { get; set; } = 0x0000;
 
-	[DDLRegistration(0x34e5bdabu)]
+	[DDLRegistration(0x87e83d61u)]
 	public byte LastMessage { get; set; } = 0x00;
 
 	public static DisablePoolsResponseMessage Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DamageTunerBlasterPrius : DamageTunerBasePrius, IDDLObjectType<Dama
 		DamageMultiplier = ddl.GetValue<float>(0x26406e37u, DamageMultiplier);
 	}
 
-	[DDLRegistration(0xbcf1dad2u)]
+	[DDLRegistration(0x26406e37u)]
 	public float DamageMultiplier { get; set; } = 0.50f;
 
 	public new static DamageTunerBlasterPrius Create(DDLObject ddl) => new(ddl);

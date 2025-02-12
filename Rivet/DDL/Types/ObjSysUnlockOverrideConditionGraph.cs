@@ -18,7 +18,7 @@ public class ObjSysUnlockOverrideConditionGraph : ObjSysUnlockOverrideConditionB
 		MissionGraph = ddl.GetObject<AssetReferenceDef>(0x7f6dce4cu);
 	}
 
-	[DDLRegistration(0xbca12a91u, description: "If you need different unlock rules for different mission graphs, (eg demo graphs), put the not default graphs here")]
+	[DDLRegistration(0x7f6dce4cu, description: "If you need different unlock rules for different mission graphs, (eg demo graphs), put the not default graphs here")]
 	public AssetReferenceDef? MissionGraph { get; set; } = default;
 
 	public new static ObjSysUnlockOverrideConditionGraph Create(DDLObject ddl) => new(ddl);

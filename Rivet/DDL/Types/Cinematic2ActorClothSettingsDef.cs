@@ -21,16 +21,16 @@ public class Cinematic2ActorClothSettingsDef : DDLObjectType, IDDLObjectType<Cin
 		Teleport = ddl.GetValue<bool>(0x22862bfdu, Teleport);
 	}
 
-	[DDLRegistration(0x59b89d00u, description: "This will enable cloth simulation during the cinematic (other cloth settings no longer apply if this is unchecked).")]
+	[DDLRegistration(0xcdd88655u, description: "This will enable cloth simulation during the cinematic (other cloth settings no longer apply if this is unchecked).")]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0x59b89d00u, description: "This should be set to true if the cloth is on a moving platform.")]
+	[DDLRegistration(0xd851b68cu, description: "This should be set to true if the cloth is on a moving platform.")]
 	public bool OnMovingPlatform { get; set; } = false;
 
-	[DDLRegistration(0x59b89d00u, description: "This will enable cloth settling during transitions.")]
+	[DDLRegistration(0x10eb2eadu, description: "This will enable cloth settling during transitions.")]
 	public bool Settle { get; set; } = true;
 
-	[DDLRegistration(0x59b89d00u, description: "This will enable cloth teleporting during shot transitions.")]
+	[DDLRegistration(0x22862bfdu, description: "This will enable cloth teleporting during shot transitions.")]
 	public bool Teleport { get; set; } = true;
 
 	public static Cinematic2ActorClothSettingsDef Create(DDLObject ddl) => new(ddl);

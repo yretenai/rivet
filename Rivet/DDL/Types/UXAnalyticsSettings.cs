@@ -26,31 +26,31 @@ public class UXAnalyticsSettings : DDLObjectType, IDDLObjectType<UXAnalyticsSett
 		DebugEventMode = ddl.GetEnum<x9c7f04c6>(0x72cd5082u, x9c7f04c6Values.Lookup);
 	}
 
-	[DDLRegistration(0xaddbf497u, "Devstats Enabled")]
+	[DDLRegistration(0x5113d8bcu, "Devstats Enabled")]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0xaddbf497u)]
+	[DDLRegistration(0xef896febu)]
 	public string? TitleName { get; set; } = default;
 
-	[DDLRegistration(0xaddbf497u)]
+	[DDLRegistration(0x016ae9edu)]
 	public string? IssuerId { get; set; } = default;
 
-	[DDLRegistration(0xaddbf497u)]
+	[DDLRegistration(0x2f89fce0u)]
 	public string? AppId { get; set; } = default;
 
-	[DDLRegistration(0xaddbf497u)]
+	[DDLRegistration(0xbe725f26u)]
 	public string? ApiKey { get; set; } = default;
 
-	[DDLRegistration(0xaddbf497u)]
+	[DDLRegistration(0x3176db72u)]
 	public string? SecretKey { get; set; } = default;
 
-	[DDLRegistration(0xaddbf497u)]
+	[DDLRegistration(0x56859ca1u)]
 	public string? ServerName { get; set; } = default;
 
-	[DDLRegistration(0xaddbf497u)]
+	[DDLRegistration(0xafacaca8u)]
 	public string? ConfigServerName { get; set; } = default;
 
-	[DDLRegistration(0xaddbf497u)]
+	[DDLRegistration(0x72cd5082u)]
 	public x9c7f04c6 DebugEventMode { get; set; } = x9c7f04c6.Default;
 
 	public static UXAnalyticsSettings Create(DDLObject ddl) => new(ddl);

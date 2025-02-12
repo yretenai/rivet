@@ -19,10 +19,10 @@ public class ChainLightningStartChainEvent : EventBase, IDDLObjectType<ChainLigh
 		ToHandle = ddl.GetValue<uint>(0xed294533u, ToHandle);
 	}
 
-	[DDLRegistration(0x21d71c17u)]
+	[DDLRegistration(0xfe54b255u)]
 	public uint FromHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x21d71c17u)]
+	[DDLRegistration(0xed294533u)]
 	public uint ToHandle { get; set; } = 0x00000000;
 
 	public new static ChainLightningStartChainEvent Create(DDLObject ddl) => new(ddl);

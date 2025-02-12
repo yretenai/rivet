@@ -18,7 +18,7 @@ public class AnimChunkData : DDLObjectType, IDDLObjectType<AnimChunkData> {
 		ChunkType = ddl.GetEnum<ChunkType>(0x6df07d3cu, ChunkTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x8753efd0u)]
+	[DDLRegistration(0x6df07d3cu)]
 	public ChunkType ChunkType { get; set; } = ChunkType.Misc;
 
 	public static AnimChunkData Create(DDLObject ddl) => new(ddl);

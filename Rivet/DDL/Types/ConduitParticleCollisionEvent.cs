@@ -20,13 +20,13 @@ public class ConduitParticleCollisionEvent : EventBase, IDDLObjectType<ConduitPa
 		ParticleScale = ddl.GetValue<float>(0x31cce366u, ParticleScale);
 	}
 
-	[DDLRegistration(0xd1225f87u, "Hit Actor")]
+	[DDLRegistration(0x47c66f9du, "Hit Actor")]
 	public uint HitActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd1225f87u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0xd1225f87u, "Particle Scale")]
+	[DDLRegistration(0x31cce366u, "Particle Scale")]
 	public float ParticleScale { get; set; } = 1.00f;
 
 	public new static ConduitParticleCollisionEvent Create(DDLObject ddl) => new(ddl);

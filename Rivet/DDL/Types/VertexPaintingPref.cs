@@ -33,52 +33,52 @@ public class VertexPaintingPref : DDLObjectType, IDDLObjectType<VertexPaintingPr
 		TerrainPaintingPref = ddl.GetObject<TerrainPaintingPref>(0x017e1e59u);
 	}
 
-	[DDLRegistration(0xa0ee4977u, "Red")]
+	[DDLRegistration(0xd0347646u, "Red")]
 	public float Red { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa0ee4977u, "Green")]
+	[DDLRegistration(0xc9c922e0u, "Green")]
 	public float Green { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa0ee4977u, "Blue")]
+	[DDLRegistration(0xaea60a04u, "Blue")]
 	public float Blue { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa0ee4977u, "Alpha")]
+	[DDLRegistration(0xc9b3f5abu, "Alpha")]
 	public float Alpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa0ee4977u, "Enable Red")]
+	[DDLRegistration(0xb2cb49c0u, "Enable Red")]
 	public bool EnableRed { get; set; } = true;
 
-	[DDLRegistration(0xa0ee4977u, "Enable Green")]
+	[DDLRegistration(0x127652efu, "Enable Green")]
 	public bool EnableGreen { get; set; } = true;
 
-	[DDLRegistration(0xa0ee4977u, "Enable Blue")]
+	[DDLRegistration(0xaa1fd32eu, "Enable Blue")]
 	public bool EnableBlue { get; set; } = true;
 
-	[DDLRegistration(0xa0ee4977u, "Enable Alpha")]
+	[DDLRegistration(0x120c85a4u, "Enable Alpha")]
 	public bool EnableAlpha { get; set; } = true;
 
-	[DDLRegistration(0xa0ee4977u, "Brush Size")]
+	[DDLRegistration(0x0504203du, "Brush Size")]
 	public float Radius { get; set; } = 0.75f;
 
-	[DDLRegistration(0xa0ee4977u, "Brush Fall-Off")]
+	[DDLRegistration(0x76ca0920u, "Brush Fall-Off")]
 	public float FallOff { get; set; } = 0.35f;
 
-	[DDLRegistration(0xa0ee4977u, "Brush Pressure")]
+	[DDLRegistration(0xa5ae1d17u, "Brush Pressure")]
 	public float Pressure { get; set; } = 0.35f;
 
-	[DDLRegistration(0xa0ee4977u, "Channel Debug")]
+	[DDLRegistration(0xaf9b8346u, "Channel Debug")]
 	public xff467ac8 ChannelDebug { get; set; } = xff467ac8.Off;
 
-	[DDLRegistration(0xa0ee4977u, "Wheel Controls")]
+	[DDLRegistration(0x1bea956bu, "Wheel Controls")]
 	public x2c6c1f8d WheelControl { get; set; } = x2c6c1f8d.Size;
 
-	[DDLRegistration(0xa0ee4977u, "Middle Click")]
+	[DDLRegistration(0xacfdc81au, "Middle Click")]
 	public xa80d41ff MiddleClick { get; set; } = xa80d41ff.FillZero;
 
-	[DDLRegistration(0xa0ee4977u, "Resolution")]
+	[DDLRegistration(0x26e551b3u, "Resolution")]
 	public x1678ea2f Resolution { get; set; } = x1678ea2f.ResHigh;
 
-	[DDLRegistration(0xa0ee4977u)]
+	[DDLRegistration(0x017e1e59u)]
 	public TerrainPaintingPref? TerrainPaintingPref { get; set; } = default;
 
 	public static VertexPaintingPref Create(DDLObject ddl) => new(ddl);

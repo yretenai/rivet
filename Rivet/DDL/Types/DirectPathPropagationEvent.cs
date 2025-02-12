@@ -19,10 +19,10 @@ public class DirectPathPropagationEvent : EventBase, IDDLObjectType<DirectPathPr
 		TurnOn = ddl.GetValue<bool>(0x70af5e04u, TurnOn);
 	}
 
-	[DDLRegistration(0x8cfc37eau, description: "Unique ID for matching up with callbacks")]
+	[DDLRegistration(0x32ca55d0u, description: "Unique ID for matching up with callbacks")]
 	public uint UniqueId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8cfc37eau, description: "Turn on or off DirectPathPropagation for this actor")]
+	[DDLRegistration(0x70af5e04u, description: "Turn on or off DirectPathPropagation for this actor")]
 	public bool TurnOn { get; set; } = true;
 
 	public new static DirectPathPropagationEvent Create(DDLObject ddl) => new(ddl);

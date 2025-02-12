@@ -22,19 +22,19 @@ public class AmbientAnimationOverride : DDLObjectType, IDDLObjectType<AmbientAni
 		MinDynamicForce = ddl.GetValue<float>(0xc5819946u, MinDynamicForce);
 	}
 
-	[DDLRegistration(0xa3b711d2u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0xa3b711d2u, "Ambient Animation", "Sets the model instance ambient animation scale.")]
+	[DDLRegistration(0xc424914bu, "Ambient Animation", "Sets the model instance ambient animation scale.")]
 	public float AmbientAnimation { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa3b711d2u, "Max Displacement", "Maximum displacement when maximum force is reached.")]
+	[DDLRegistration(0x307d5e3au, "Max Displacement", "Maximum displacement when maximum force is reached.")]
 	public float MaxDisplacement { get; set; } = 2.00f;
 
-	[DDLRegistration(0xa3b711d2u, "Max Dynamic Force", "Maximum force exerted on the model instance before it stops reacting further.")]
+	[DDLRegistration(0xe23afe77u, "Max Dynamic Force", "Maximum force exerted on the model instance before it stops reacting further.")]
 	public float MaxDynamicForce { get; set; } = 8.00f;
 
-	[DDLRegistration(0xa3b711d2u, "Min Dynamic Force", "Minimum force exerted on the model instance before it starts reacting.")]
+	[DDLRegistration(0xc5819946u, "Min Dynamic Force", "Minimum force exerted on the model instance before it starts reacting.")]
 	public float MinDynamicForce { get; set; } = 0.00f;
 
 	public static AmbientAnimationOverride Create(DDLObject ddl) => new(ddl);

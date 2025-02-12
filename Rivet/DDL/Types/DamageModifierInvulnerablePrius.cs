@@ -19,10 +19,10 @@ public class DamageModifierInvulnerablePrius : DamageModifierIncomingPrius, IDDL
 		AllowReacts = ddl.GetValue<bool>(0x7d494b99u, AllowReacts);
 	}
 
-	[DDLRegistration(0xf2bf1056u, "Lifetime", "The modifier will be automatically disabled after this much time has elapsed")]
+	[DDLRegistration(0xc7e68df8u, "Lifetime", "The modifier will be automatically disabled after this much time has elapsed")]
 	public float Lifetime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xf2bf1056u, "Allow Reacts", "Instead of ignoring damage completely, just set the amount to 0")]
+	[DDLRegistration(0x7d494b99u, "Allow Reacts", "Instead of ignoring damage completely, just set the amount to 0")]
 	public bool AllowReacts { get; set; } = false;
 
 	public new static DamageModifierInvulnerablePrius Create(DDLObject ddl) => new(ddl);

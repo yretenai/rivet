@@ -20,13 +20,13 @@ public class OnDeadActionPrius : DDLObjectType, IDDLObjectType<OnDeadActionPrius
 		InitListening = ddl.GetValue<bool>(0xf387b27au, InitListening);
 	}
 
-	[DDLRegistration(0xb93e980fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0xb93e980fu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0xb93e980fu, "Start listening on load?", "Whether to start in our listening state when the script is loaded.")]
+	[DDLRegistration(0xf387b27au, "Start listening on load?", "Whether to start in our listening state when the script is loaded.")]
 	public bool InitListening { get; set; } = true;
 
 	public static OnDeadActionPrius Create(DDLObject ddl) => new(ddl);

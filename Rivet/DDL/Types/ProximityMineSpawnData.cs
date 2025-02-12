@@ -18,7 +18,7 @@ public class ProximityMineSpawnData : AttachableShotSpawnData, IDDLObjectType<Pr
 		ConfigPath = ddl.GetValue<uint>(0x227a02fdu, ConfigPath);
 	}
 
-	[DDLRegistration(0x78b841c3u)]
+	[DDLRegistration(0x227a02fdu)]
 	public uint ConfigPath { get; set; } = 0x00000000;
 
 	public new static ProximityMineSpawnData Create(DDLObject ddl) => new(ddl);

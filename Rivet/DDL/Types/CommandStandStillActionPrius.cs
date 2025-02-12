@@ -19,10 +19,10 @@ public class CommandStandStillActionPrius : DDLObjectType, IDDLObjectType<Comman
 		AimAtPrimaryTarget = ddl.GetValue<bool>(0x8fb28cebu, AimAtPrimaryTarget);
 	}
 
-	[DDLRegistration(0x5facb5e8u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0x5facb5e8u)]
+	[DDLRegistration(0x8fb28cebu)]
 	public bool AimAtPrimaryTarget { get; set; } = false;
 
 	public static CommandStandStillActionPrius Create(DDLObject ddl) => new(ddl);

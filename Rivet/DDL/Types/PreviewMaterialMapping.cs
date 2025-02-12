@@ -19,10 +19,10 @@ public class PreviewMaterialMapping : DDLObjectType, IDDLObjectType<PreviewMater
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0x4ee8cefdu)]
+	[DDLRegistration(0x271494aeu)]
 	public bool Applied { get; set; } = true;
 
-	[DDLRegistration(0x4ee8cefdu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
 	public static PreviewMaterialMapping Create(DDLObject ddl) => new(ddl);

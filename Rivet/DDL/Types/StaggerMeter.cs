@@ -24,25 +24,25 @@ public class StaggerMeter : DDLObjectType, IDDLObjectType<StaggerMeter> {
 		Cooldown = ddl.GetValue<float>(0x246291a9u, Cooldown);
 	}
 
-	[DDLRegistration(0xbffbbd24u)]
+	[DDLRegistration(0x4ef19112u)]
 	public string? DebugName { get; set; } = default;
 
-	[DDLRegistration(0xbffbbd24u)]
+	[DDLRegistration(0x406345f1u)]
 	public x7f7c56aa Types { get; set; } = (x7f7c56aa) 0x00000001;
 
-	[DDLRegistration(0xbffbbd24u, description: "Once a bot receives this much damage he'll stagger")]
+	[DDLRegistration(0x0d245446u, description: "Once a bot receives this much damage he'll stagger")]
 	public float Threshhold { get; set; } = 25.00f;
 
-	[DDLRegistration(0xbffbbd24u, description: "A bot's stagger decreases at this rate.")]
+	[DDLRegistration(0xa0950b67u, description: "A bot's stagger decreases at this rate.")]
 	public float Decay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbffbbd24u, description: "A bot's stagger starts decreasing if he receives no damage for this long.")]
+	[DDLRegistration(0x1cb5b22cu, description: "A bot's stagger starts decreasing if he receives no damage for this long.")]
 	public float DecayDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbffbbd24u, description: "The starting value for this meter.")]
+	[DDLRegistration(0xc59eb3b5u, description: "The starting value for this meter.")]
 	public float StartingValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbffbbd24u, description: "The min time between reacts by this meter.")]
+	[DDLRegistration(0x246291a9u, description: "The min time between reacts by this meter.")]
 	public float Cooldown { get; set; } = 0.00f;
 
 	public static StaggerMeter Create(DDLObject ddl) => new(ddl);

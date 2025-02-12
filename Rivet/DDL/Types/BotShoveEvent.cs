@@ -19,10 +19,10 @@ public class BotShoveEvent : BotForceMoveBaseEvent, IDDLObjectType<BotShoveEvent
 		Speed = ddl.GetValue<float>(0x16753237u, Speed);
 	}
 
-	[DDLRegistration(0x1d001cacu, description: "This locator's local-forward determines the direction we will fly. If it does not exist we will fly radially away from the triggering actor.")]
+	[DDLRegistration(0x12510966u, description: "This locator's local-forward determines the direction we will fly. If it does not exist we will fly radially away from the triggering actor.")]
 	public string? ShoveLocator { get; set; } = default;
 
-	[DDLRegistration(0x1d001cacu, description: "How fast we move when using ShoveLocator or when being shoved radially (no TargetLocator and no FlingLocator)")]
+	[DDLRegistration(0x16753237u, description: "How fast we move when using ShoveLocator or when being shoved radially (no TargetLocator and no FlingLocator)")]
 	public float Speed { get; set; } = 0.00f;
 
 	public new static BotShoveEvent Create(DDLObject ddl) => new(ddl);

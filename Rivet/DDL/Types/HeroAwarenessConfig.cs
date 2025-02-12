@@ -37,64 +37,64 @@ public class HeroAwarenessConfig : DDLObjectType, IDDLObjectType<HeroAwarenessCo
 		TraversalMaxAge = ddl.GetValue<float>(0xde6e6a85u, TraversalMaxAge);
 	}
 
-	[DDLRegistration(0xa91e14e1u, description: "Max head turn speed to look at a target in degrees/sec.")]
+	[DDLRegistration(0xa85e9d66u, description: "Max head turn speed to look at a target in degrees/sec.")]
 	public float HeadTurnActivateMaxSpeed { get; set; } = 225.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Head turn acceleration to look at a targetin degrees/sec^2.")]
+	[DDLRegistration(0x66e642efu, description: "Head turn acceleration to look at a targetin degrees/sec^2.")]
 	public float HeadTurnActivateAccel { get; set; } = 450.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Head turn deceleration to look at a targetin degrees/sec^2.")]
+	[DDLRegistration(0x8b6d9243u, description: "Head turn deceleration to look at a targetin degrees/sec^2.")]
 	public float HeadTurnActivateDecel { get; set; } = 450.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Max head turn speed to look forward again in degrees/sec^2.")]
+	[DDLRegistration(0x11e23829u, description: "Max head turn speed to look forward again in degrees/sec^2.")]
 	public float HeadTurnRecoveryMaxSpeed { get; set; } = 225.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Head turn acceleration to look forward again in degrees/sec^2.")]
+	[DDLRegistration(0x994b7534u, description: "Head turn acceleration to look forward again in degrees/sec^2.")]
 	public float HeadTurnRecoveryAccel { get; set; } = 450.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Head turn deceleration to look forward again in degrees/sec^2.")]
+	[DDLRegistration(0x74c0a598u, description: "Head turn deceleration to look forward again in degrees/sec^2.")]
 	public float HeadTurnRecoveryDecel { get; set; } = 450.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Max left/right head turn angle.")]
+	[DDLRegistration(0x2b83d06bu, description: "Max left/right head turn angle.")]
 	public float HeadTurnMaxYaw { get; set; } = 90.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Max up/down head turn angle.")]
+	[DDLRegistration(0xc7816ef2u, description: "Max up/down head turn angle.")]
 	public float HeadTurnMaxPitch { get; set; } = 40.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Minimum time between playing the head look driver. (seconds)")]
+	[DDLRegistration(0xec1b2ab2u, description: "Minimum time between playing the head look driver. (seconds)")]
 	public float HeadLookDriverCooldown { get; set; } = 0.50f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Hero will look at most recent aim assist target within this range.")]
+	[DDLRegistration(0xd575e854u, description: "Hero will look at most recent aim assist target within this range.")]
 	public float AimAssistTargetRange { get; set; } = 10.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Hero will stop looking at aim assist target if out of range for more than this amount of time.")]
+	[DDLRegistration(0xe083973du, description: "Hero will stop looking at aim assist target if out of range for more than this amount of time.")]
 	public float AimAssistTargetDecayTime { get; set; } = 5.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Max range that a recent attacker can be at for us to look at them.")]
+	[DDLRegistration(0xa931f555u, description: "Max range that a recent attacker can be at for us to look at them.")]
 	public float RecentAttackerRange { get; set; } = 30.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Only look at our recent attacker if they've attacked us within this many seconds.")]
+	[DDLRegistration(0xaf74e184u, description: "Only look at our recent attacker if they've attacked us within this many seconds.")]
 	public float RecentAttackerMaxAge { get; set; } = 5.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Max range to look at manually placed points of interest.")]
+	[DDLRegistration(0x1eebee0bu, description: "Max range to look at manually placed points of interest.")]
 	public float PointOfInterestRange { get; set; } = 10.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Max range to look at an NPC.")]
+	[DDLRegistration(0x643fc3b5u, description: "Max range to look at an NPC.")]
 	public float NPCRange { get; set; } = 15.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Hero will try to keep the same NPC target for this amount of time. A speaking NPC will pre-empt this time.")]
+	[DDLRegistration(0x0a20e812u, description: "Hero will try to keep the same NPC target for this amount of time. A speaking NPC will pre-empt this time.")]
 	public float NPCKeepTargetDuration { get; set; } = 5.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Max range to look at a nearby enemy.")]
+	[DDLRegistration(0x51f0feeeu, description: "Max range to look at a nearby enemy.")]
 	public float EnemyRange { get; set; } = 20.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Hero will check periodically at this interval for a new enemy to look at.")]
+	[DDLRegistration(0x21586223u, description: "Hero will check periodically at this interval for a new enemy to look at.")]
 	public float EnemyCheckInterval { get; set; } = 10.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Max range to look at traversal objects near the player.")]
+	[DDLRegistration(0x023f7d11u, description: "Max range to look at traversal objects near the player.")]
 	public float TraversalRange { get; set; } = 10.00f;
 
-	[DDLRegistration(0xa91e14e1u, description: "Look at a traversal for at most this long.")]
+	[DDLRegistration(0xde6e6a85u, description: "Look at a traversal for at most this long.")]
 	public float TraversalMaxAge { get; set; } = 7.50f;
 
 	public static HeroAwarenessConfig Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class RewardRenderModeConfig : ConfigBase, IDDLObjectType<RewardRenderMod
 		RenderModes = ddl.GetObjects<RewardRenderModeData>(0x75c158fbu);
 	}
 
-	[DDLRegistration(0x50681d04u)]
+	[DDLRegistration(0x75c158fbu)]
 	public List<RewardRenderModeData?> RenderModes { get; set; } = [];
 
 	public new static RewardRenderModeConfig Create(DDLObject ddl) => new(ddl);

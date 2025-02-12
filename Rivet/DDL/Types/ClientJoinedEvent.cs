@@ -18,7 +18,7 @@ public class ClientJoinedEvent : EventBase, IDDLObjectType<ClientJoinedEvent> {
 		ClientIndex = ddl.GetValue<uint>(0x40d7aaa7u, ClientIndex);
 	}
 
-	[DDLRegistration(0x86b33e43u)]
+	[DDLRegistration(0x40d7aaa7u)]
 	public uint ClientIndex { get; set; } = 0x00000000;
 
 	public new static ClientJoinedEvent Create(DDLObject ddl) => new(ddl);

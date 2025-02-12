@@ -19,10 +19,10 @@ public class TriggerOtherEntry : DDLObjectType, IDDLObjectType<TriggerOtherEntry
 		ActorToTrigger = ddl.GetValue<RivetAssetId>(0x591b96aeu, ActorToTrigger);
 	}
 
-	[DDLRegistration(0x05870fefu, "Group name to trigger", "A switchtrigger group name to trigger")]
+	[DDLRegistration(0xfd6ea7c7u, "Group name to trigger", "A switchtrigger group name to trigger")]
 	public string? GroupToTrigger { get; set; } = "";
 
-	[DDLRegistration(0x05870fefu, "Actor/group to trigger", "The actor or actorgroup on which to trigger a switch.")]
+	[DDLRegistration(0x591b96aeu, "Actor/group to trigger", "The actor or actorgroup on which to trigger a switch.")]
 	public RivetAssetId ActorToTrigger { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static TriggerOtherEntry Create(DDLObject ddl) => new(ddl);

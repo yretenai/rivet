@@ -18,7 +18,7 @@ public class IntOutNodeDef : NodeBaseDef, IDDLObjectType<IntOutNodeDef> {
 		Out = ddl.GetObject<OutputPlugInt>(0x93bf4450u);
 	}
 
-	[DDLRegistration(0x8d78b49fu)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugInt? Out { get; set; } = default;
 
 	public new static IntOutNodeDef Create(DDLObject ddl) => new(ddl);

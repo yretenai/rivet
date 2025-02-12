@@ -19,10 +19,10 @@ public class SyncedAnimImpactEvent : EventBase, IDDLObjectType<SyncedAnimImpactE
 		ImpactData = ddl.GetObject<SyncedAnimImpactDataBase>(0x9744117du);
 	}
 
-	[DDLRegistration(0x5c8c0ec0u, description: "When used on the host, marks which participant does this impact apply to")]
+	[DDLRegistration(0x5a433acau, description: "When used on the host, marks which participant does this impact apply to")]
 	public x19aa8603 Participant { get; set; } = x19aa8603.Guest1;
 
-	[DDLRegistration(0x5c8c0ec0u)]
+	[DDLRegistration(0x9744117du)]
 	public SyncedAnimImpactDataBase? ImpactData { get; set; } = default;
 
 	public new static SyncedAnimImpactEvent Create(DDLObject ddl) => new(ddl);

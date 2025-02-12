@@ -21,16 +21,16 @@ public class DamageVolumeScriptActionPrius : DDLObjectType, IDDLObjectType<Damag
 		DamageOffTime = ddl.GetValue<float>(0xdca24126u, DamageOffTime);
 	}
 
-	[DDLRegistration(0x65f6e704u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0x65f6e704u)]
+	[DDLRegistration(0x2856176du)]
 	public float WarmUpTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x65f6e704u)]
+	[DDLRegistration(0x581aa955u)]
 	public float DamageOnTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x65f6e704u, description: "If this value is negative, it will auto disable after damge time instead of cycle")]
+	[DDLRegistration(0xdca24126u, description: "If this value is negative, it will auto disable after damge time instead of cycle")]
 	public float DamageOffTime { get; set; } = 2.50f;
 
 	public static DamageVolumeScriptActionPrius Create(DDLObject ddl) => new(ddl);

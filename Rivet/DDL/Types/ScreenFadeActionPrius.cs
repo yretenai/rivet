@@ -20,13 +20,13 @@ public class ScreenFadeActionPrius : DDLObjectType, IDDLObjectType<ScreenFadeAct
 		IsWhite = ddl.GetValue<bool>(0x4a32dfa2u, IsWhite);
 	}
 
-	[DDLRegistration(0x386a7d4du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Screen;
 
-	[DDLRegistration(0x386a7d4du, description: "The time the fade takes.")]
+	[DDLRegistration(0x7c5e3db0u, description: "The time the fade takes.")]
 	public float Duration { get; set; } = 3.00f;
 
-	[DDLRegistration(0x386a7d4du, description: "True for white, false for black")]
+	[DDLRegistration(0x4a32dfa2u, description: "True for white, false for black")]
 	public bool IsWhite { get; set; } = false;
 
 	public static ScreenFadeActionPrius Create(DDLObject ddl) => new(ddl);

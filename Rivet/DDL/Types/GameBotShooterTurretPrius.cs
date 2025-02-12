@@ -19,10 +19,10 @@ public class GameBotShooterTurretPrius : GameBotShooterBasePrius, IDDLObjectType
 		ShieldCollisionActor = ddl.GetValue<RivetAssetId>(0xa08806d8u, ShieldCollisionActor);
 	}
 
-	[DDLRegistration(0xdf3d71f1u, description: "Who mounts this thing anyway?")]
+	[DDLRegistration(0x944d9393u, description: "Who mounts this thing anyway?")]
 	public RivetAssetId Pilot { get; set; } = default;
 
-	[DDLRegistration(0xdf3d71f1u, description: "Collision that is turned on when the shield is up.")]
+	[DDLRegistration(0xa08806d8u, description: "Collision that is turned on when the shield is up.")]
 	public RivetAssetId ShieldCollisionActor { get; set; } = default;
 
 	public new static GameBotShooterTurretPrius Create(DDLObject ddl) => new(ddl);

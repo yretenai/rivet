@@ -18,7 +18,7 @@ public class UIViewBaseData : DDLObjectType, IDDLObjectType<UIViewBaseData> {
 		OverrideAR = ddl.GetValue<float>(0x3c8222c5u, OverrideAR);
 	}
 
-	[DDLRegistration(0x3a7c7ea3u, "Override AR", "Manually set material aspect ratio (overrides MaintainAspectRatio setting if set).")]
+	[DDLRegistration(0x3c8222c5u, "Override AR", "Manually set material aspect ratio (overrides MaintainAspectRatio setting if set).")]
 	public float OverrideAR { get; set; } = 0.00f;
 
 	public static UIViewBaseData Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class BotComboMoveFinaleAimCalibration : BotComboMoveBase, IDDLObjectType
 		WeaponActorVol = ddl.GetValue<RivetAssetId>(0x3ddbd4bau, WeaponActorVol);
 	}
 
-	[DDLRegistration(0xf67fe0f5u)]
+	[DDLRegistration(0xfec29c86u)]
 	public RivetAssetId PortalActorAsset { get; set; } = default;
 
-	[DDLRegistration(0xf67fe0f5u)]
+	[DDLRegistration(0x0f03001bu)]
 	public RivetAssetId WeaponActorAsset { get; set; } = default;
 
-	[DDLRegistration(0xf67fe0f5u)]
+	[DDLRegistration(0x3ddbd4bau)]
 	public RivetAssetId WeaponActorVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static BotComboMoveFinaleAimCalibration Create(DDLObject ddl) => new(ddl);

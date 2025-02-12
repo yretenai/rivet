@@ -21,16 +21,16 @@ public class HeroRegenHealthPrius : HealthPrius, IDDLObjectType<HeroRegenHealthP
 		StandardRegenRate = ddl.GetValue<float>(0xa9d288bdu, StandardRegenRate);
 	}
 
-	[DDLRegistration(0xfd5c1688u, "Regen Delay")]
+	[DDLRegistration(0x58d35b49u, "Regen Delay")]
 	public float RegenDelay { get; set; } = 3.00f;
 
-	[DDLRegistration(0xfd5c1688u, "Critical Percent")]
+	[DDLRegistration(0xcc22b023u, "Critical Percent")]
 	public float CriticalPercent { get; set; } = 0.25f;
 
-	[DDLRegistration(0xfd5c1688u, "Critical Regen Rate")]
+	[DDLRegistration(0x19ca4e8bu, "Critical Regen Rate")]
 	public float CriticalRegenRate { get; set; } = 10.00f;
 
-	[DDLRegistration(0xfd5c1688u, "Standard Regen Rate")]
+	[DDLRegistration(0xa9d288bdu, "Standard Regen Rate")]
 	public float StandardRegenRate { get; set; } = 1.00f;
 
 	public new static HeroRegenHealthPrius Create(DDLObject ddl) => new(ddl);

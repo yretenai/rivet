@@ -19,10 +19,10 @@ public class JumpLandEvent : EventBase, IDDLObjectType<JumpLandEvent> {
 		Material = ddl.GetEnum<x10b3c4cf>(0x86bfc8e5u, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0x85074850u, description: "Speed component along normal when hit ground. Always positive. Manually calculate this if you're entering the value in anim events.")]
+	[DDLRegistration(0x2eebd29bu, description: "Speed component along normal when hit ground. Always positive. Manually calculate this if you're entering the value in anim events.")]
 	public float SpeedAlongNormal { get; set; } = 0.00f;
 
-	[DDLRegistration(0x85074850u, description: "Collision hit material (output)")]
+	[DDLRegistration(0x86bfc8e5u, description: "Collision hit material (output)")]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
 	public new static JumpLandEvent Create(DDLObject ddl) => new(ddl);

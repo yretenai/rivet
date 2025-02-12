@@ -21,16 +21,16 @@ public class TerrainRoadCurveData : DDLObjectType, IDDLObjectType<TerrainRoadCur
 		HeightProperties = ddl.GetObject<TerrainRoadCompositeProperties>(0x8ce294bcu);
 	}
 
-	[DDLRegistration(0xc6433726u, "Width (meters)", "The road width (in meters).")]
+	[DDLRegistration(0x112c21c0u, "Width (meters)", "The road width (in meters).")]
 	public float WidthMeters { get; set; } = 2.00f;
 
-	[DDLRegistration(0xc6433726u, description: "A value that will be used to sort roads when compositing them.  Lower values will composite first.  If two roads have the same sort value, the lower layer id will happen first; otherwise, it will be arbitrary")]
+	[DDLRegistration(0x55c1c85du, description: "A value that will be used to sort roads when compositing them.  Lower values will composite first.  If two roads have the same sort value, the lower layer id will happen first; otherwise, it will be arbitrary")]
 	public float SortValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc6433726u, "Material Properties", "This contains properties used for compositing the road material.")]
+	[DDLRegistration(0x1dd026c7u, "Material Properties", "This contains properties used for compositing the road material.")]
 	public TerrainRoadMaterialCompositeProperties? MaterialProperties { get; set; } = default;
 
-	[DDLRegistration(0xc6433726u, "Height Properties", "This contains properties used for compositing the road height.")]
+	[DDLRegistration(0x8ce294bcu, "Height Properties", "This contains properties used for compositing the road height.")]
 	public TerrainRoadCompositeProperties? HeightProperties { get; set; } = default;
 
 	public static TerrainRoadCurveData Create(DDLObject ddl) => new(ddl);

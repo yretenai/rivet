@@ -28,37 +28,37 @@ public class AnimControllerComponentPrius : DDLObjectType, IDDLObjectType<AnimCo
 		MaxAnimTreeSize = ddl.GetValue<ushort>(0x67512479u, MaxAnimTreeSize);
 	}
 
-	[DDLRegistration(0x1e0b001eu, description: "Collection of animsets to load. First entry is highest priority.")]
+	[DDLRegistration(0x03492d19u, description: "Collection of animsets to load. First entry is highest priority.")]
 	public List<RivetAssetId> AnimSets { get; set; } = [];
 
-	[DDLRegistration(0x1e0b001eu, description: "Standard / just head / just body")]
+	[DDLRegistration(0x4eb38c52u, description: "Standard / just head / just body")]
 	public x9675aa42 PerformanceType { get; set; } = x9675aa42.TypeStandard;
 
-	[DDLRegistration(0x1e0b001eu, description: "Performance set for facial / body performance animation.")]
+	[DDLRegistration(0x535a8946u, description: "Performance set for facial / body performance animation.")]
 	public RivetAssetId PerformanceSet { get; set; } = default;
 
-	[DDLRegistration(0x1e0b001eu, description: "AnimSet that will be used to override gestures in the performance set.")]
+	[DDLRegistration(0x3e8d411bu, description: "AnimSet that will be used to override gestures in the performance set.")]
 	public RivetAssetId PerformanceSetOverride { get; set; } = default;
 
-	[DDLRegistration(0x1e0b001eu, description: "Additional performance sets")]
+	[DDLRegistration(0xe6e90e46u, description: "Additional performance sets")]
 	public List<RivetAssetId> PerformanceSetsAux { get; set; } = [];
 
-	[DDLRegistration(0x1e0b001eu, description: "Maxmimum distance to which animation is updated (0.0 always tries to update).")]
+	[DDLRegistration(0x75ad2b16u, description: "Maxmimum distance to which animation is updated (0.0 always tries to update).")]
 	public float MaxUpdateDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1e0b001eu, description: "Bsphere radius multiplier which is used to defined animdynamics update distance.")]
+	[DDLRegistration(0x2cd2f6bfu, description: "Bsphere radius multiplier which is used to defined animdynamics update distance.")]
 	public float AnimDynamicsUpdateMultiplier { get; set; } = 50.00f;
 
-	[DDLRegistration(0x1e0b001eu, description: "Never attempt to cull anim tree evaluates")]
+	[DDLRegistration(0x6a1ae3acu, description: "Never attempt to cull anim tree evaluates")]
 	public bool NeverCull { get; set; } = false;
 
-	[DDLRegistration(0x1e0b001eu, description: "Force back to bind pose after animation end. Mostly for bouncies, to avoid skinning penalty")]
+	[DDLRegistration(0xf08a76dau, description: "Force back to bind pose after animation end. Mostly for bouncies, to avoid skinning penalty")]
 	public bool BindAfterAnimEnd { get; set; } = false;
 
-	[DDLRegistration(0x1e0b001eu, description: "Automatically freeze skinning when no animations are active (does nothing if already in bind).")]
+	[DDLRegistration(0xa8bd7957u, description: "Automatically freeze skinning when no animations are active (does nothing if already in bind).")]
 	public bool AutoFreezeSkinning { get; set; } = false;
 
-	[DDLRegistration(0x1e0b001eu, description: "Maximum size for the cached anim tree")]
+	[DDLRegistration(0x67512479u, description: "Maximum size for the cached anim tree")]
 	public ushort MaxAnimTreeSize { get; set; } = 0x1000;
 
 	public static AnimControllerComponentPrius Create(DDLObject ddl) => new(ddl);

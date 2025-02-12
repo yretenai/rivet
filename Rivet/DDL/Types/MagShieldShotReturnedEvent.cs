@@ -18,7 +18,7 @@ public class MagShieldShotReturnedEvent : EventBase, IDDLObjectType<MagShieldSho
 		OriginalShotAsset = ddl.GetValue<RivetAssetId>(0x0261a43au, OriginalShotAsset);
 	}
 
-	[DDLRegistration(0xea3466a5u)]
+	[DDLRegistration(0x0261a43au)]
 	public RivetAssetId OriginalShotAsset { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static MagShieldShotReturnedEvent Create(DDLObject ddl) => new(ddl);

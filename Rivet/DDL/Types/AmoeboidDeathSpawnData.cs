@@ -20,13 +20,13 @@ public class AmoeboidDeathSpawnData : DDLObjectType, IDDLObjectType<AmoeboidDeat
 		NumToSpawn = ddl.GetValue<byte>(0xbf9d56a9u, NumToSpawn);
 	}
 
-	[DDLRegistration(0xc28ce825u, description: "If specified, will spawn an instance of this template instead of the actor below.")]
+	[DDLRegistration(0x07d22e57u, description: "If specified, will spawn an instance of this template instead of the actor below.")]
 	public RivetAssetId ActorTemplate { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc28ce825u)]
+	[DDLRegistration(0x5d269a38u)]
 	public RivetAssetId Actor { get; set; } = default;
 
-	[DDLRegistration(0xc28ce825u)]
+	[DDLRegistration(0xbf9d56a9u)]
 	public byte NumToSpawn { get; set; } = 0x02;
 
 	public static AmoeboidDeathSpawnData Create(DDLObject ddl) => new(ddl);

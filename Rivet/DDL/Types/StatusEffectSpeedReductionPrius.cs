@@ -18,7 +18,7 @@ public class StatusEffectSpeedReductionPrius : StatusEffectBasePrius, IDDLObject
 		Multiplier = ddl.GetValue<float>(0x7facf762u, Multiplier);
 	}
 
-	[DDLRegistration(0x353c2b19u)]
+	[DDLRegistration(0x7facf762u)]
 	public float Multiplier { get; set; } = 0.50f;
 
 	public new static StatusEffectSpeedReductionPrius Create(DDLObject ddl) => new(ddl);

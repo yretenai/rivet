@@ -23,22 +23,22 @@ public class HeroButtonReleaseListenerActionPrius : DDLObjectType, IDDLObjectTyp
 		RetriggerDelay = ddl.GetValue<float>(0xffff3a00u, RetriggerDelay);
 	}
 
-	[DDLRegistration(0x0c96d298u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x0c96d298u)]
+	[DDLRegistration(0xe7282389u)]
 	public x290280c7 InputType { get; set; } = x290280c7.Button;
 
-	[DDLRegistration(0x0c96d298u)]
+	[DDLRegistration(0x047ee25au)]
 	public xe50c3252 Button { get; set; } = xe50c3252.None;
 
-	[DDLRegistration(0x0c96d298u)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public ActionControlBase? Action { get; set; } = default;
 
-	[DDLRegistration(0x0c96d298u, "Start Listening?", "Whether to start immediately or only after StartListening signal is received")]
+	[DDLRegistration(0xda0f12cau, "Start Listening?", "Whether to start immediately or only after StartListening signal is received")]
 	public bool StartListening { get; set; } = true;
 
-	[DDLRegistration(0x0c96d298u, "Retrigger Delay", "If postive, delay before sending another OnButtonReleasedSignal, if negative, stops listening after one press")]
+	[DDLRegistration(0xffff3a00u, "Retrigger Delay", "If postive, delay before sending another OnButtonReleasedSignal, if negative, stops listening after one press")]
 	public float RetriggerDelay { get; set; } = -1.00f;
 
 	public static HeroButtonReleaseListenerActionPrius Create(DDLObject ddl) => new(ddl);

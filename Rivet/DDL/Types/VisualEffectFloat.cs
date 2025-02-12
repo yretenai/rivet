@@ -18,7 +18,7 @@ public class VisualEffectFloat : DDLObjectType, IDDLObjectType<VisualEffectFloat
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x089d69beu)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
 	public static VisualEffectFloat Create(DDLObject ddl) => new(ddl);

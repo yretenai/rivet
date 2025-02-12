@@ -19,10 +19,10 @@ public class CodePaths : DDLObjectType, IDDLObjectType<CodePaths> {
 		PublishedDirectory = ddl.GetString(0xf7eba446) ?? PublishedDirectory;
 	}
 
-	[DDLRegistration(0xa3482cc3u)]
+	[DDLRegistration(0xf42cb711u)]
 	public string? CodePath { get; set; } = default;
 
-	[DDLRegistration(0xa3482cc3u)]
+	[DDLRegistration(0xf7eba446u)]
 	public string? PublishedDirectory { get; set; } = default;
 
 	public static CodePaths Create(DDLObject ddl) => new(ddl);

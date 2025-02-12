@@ -19,10 +19,10 @@ public class DropItem : DDLObjectType, IDDLObjectType<DropItem> {
 		DropAsset = ddl.GetValue<RivetAssetId>(0xf89e7e6fu, DropAsset);
 	}
 
-	[DDLRegistration(0x2e680526u, "Drop Held Weapon")]
+	[DDLRegistration(0x041b1859u, "Drop Held Weapon")]
 	public bool DropWeapon { get; set; } = false;
 
-	[DDLRegistration(0x2e680526u, "Drop Asset")]
+	[DDLRegistration(0xf89e7e6fu, "Drop Asset")]
 	public RivetAssetId DropAsset { get; set; } = default;
 
 	public static DropItem Create(DDLObject ddl) => new(ddl);

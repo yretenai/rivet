@@ -18,7 +18,7 @@ public class VisualEffectNewNodeDataList : DDLObjectType, IDDLObjectType<VisualE
 		NewNodeDataList = ddl.GetObjects<VisualEffectNewNodeData>(0x114361c3u);
 	}
 
-	[DDLRegistration(0x308d50f3u)]
+	[DDLRegistration(0x114361c3u)]
 	public List<VisualEffectNewNodeData?> NewNodeDataList { get; set; } = [];
 
 	public static VisualEffectNewNodeDataList Create(DDLObject ddl) => new(ddl);

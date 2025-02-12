@@ -19,10 +19,10 @@ public class IMGuiGraphDrawColumn : DDLObjectType, IDDLObjectType<IMGuiGraphDraw
 		MaxDrawWidth = ddl.GetValue<float>(0xa7763c65u, MaxDrawWidth);
 	}
 
-	[DDLRegistration(0x5a23a0cbu)]
+	[DDLRegistration(0x93273c5du)]
 	public List<IMGuiGraphDrawNode?> ColumnNodes { get; set; } = [];
 
-	[DDLRegistration(0x5a23a0cbu)]
+	[DDLRegistration(0xa7763c65u)]
 	public float MaxDrawWidth { get; set; } = 0.00f;
 
 	public static IMGuiGraphDrawColumn Create(DDLObject ddl) => new(ddl);

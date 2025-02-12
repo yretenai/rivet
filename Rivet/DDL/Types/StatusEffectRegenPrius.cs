@@ -20,13 +20,13 @@ public class StatusEffectRegenPrius : StatusEffectBasePrius, IDDLObjectType<Stat
 		CanRessurect = ddl.GetValue<bool>(0x8adaccf8u, CanRessurect);
 	}
 
-	[DDLRegistration(0x5723cbbbu)]
+	[DDLRegistration(0xb0d93e25u)]
 	public float Amount { get; set; } = 10.00f;
 
-	[DDLRegistration(0x5723cbbbu)]
+	[DDLRegistration(0x858c4cf5u)]
 	public bool IsPercent { get; set; } = false;
 
-	[DDLRegistration(0x5723cbbbu)]
+	[DDLRegistration(0x8adaccf8u)]
 	public bool CanRessurect { get; set; } = false;
 
 	public new static StatusEffectRegenPrius Create(DDLObject ddl) => new(ddl);

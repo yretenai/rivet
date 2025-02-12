@@ -19,10 +19,10 @@ public class StreamingVideoToggleOfferPrius : ProximityOfferPrius, IDDLObjectTyp
 		DisableText = ddl.GetString(0x76fbc837) ?? DisableText;
 	}
 
-	[DDLRegistration(0x588acf5au)]
+	[DDLRegistration(0x0fa2be5du)]
 	public string? EnableText { get; set; } = "[BTN_Y] Enable Video";
 
-	[DDLRegistration(0x588acf5au)]
+	[DDLRegistration(0x76fbc837u)]
 	public string? DisableText { get; set; } = "[BTN_Y] Disable Video";
 
 	public new static StreamingVideoToggleOfferPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class NodalShotEventNodeBaseDef : NodeBaseDef, IDDLObjectType<NodalShotEv
 		Output = ddl.GetObject<OutputPlugSignal>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0x72b303d4u)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugEventInitialization? Input { get; set; } = default;
 
-	[DDLRegistration(0x72b303d4u)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugSignal? Output { get; set; } = default;
 
 	public new static NodalShotEventNodeBaseDef Create(DDLObject ddl) => new(ddl);

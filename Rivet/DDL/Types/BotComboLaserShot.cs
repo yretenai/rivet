@@ -27,34 +27,34 @@ public class BotComboLaserShot : BotComboMove, IDDLObjectType<BotComboLaserShot>
 		LaserShotType = ddl.GetObject<BotComboLaserShotType>(0x0240dd6cu);
 	}
 
-	[DDLRegistration(0x9e55c93cu, "Intro Laser Anim")]
+	[DDLRegistration(0xf227a2c3u, "Intro Laser Anim")]
 	public string? IntroAnim { get; set; } = default;
 
-	[DDLRegistration(0x9e55c93cu, "Targeting Anim")]
+	[DDLRegistration(0xb333e5e0u, "Targeting Anim")]
 	public string? TargetingAnim { get; set; } = default;
 
-	[DDLRegistration(0x9e55c93cu, "Laser Active Anim")]
+	[DDLRegistration(0x52ecbce8u, "Laser Active Anim")]
 	public string? LoopingAnim { get; set; } = default;
 
-	[DDLRegistration(0x9e55c93cu, "Outro Laser Anim")]
+	[DDLRegistration(0xa0ecf634u, "Outro Laser Anim")]
 	public string? OutroAnim { get; set; } = default;
 
-	[DDLRegistration(0x9e55c93cu, "Laser Emit Locator", "The locator where the laser will emit from")]
+	[DDLRegistration(0xf6fd9a1cu, "Laser Emit Locator", "The locator where the laser will emit from")]
 	public string? LaserEmitLocator { get; set; } = "igLoc_head_laser";
 
-	[DDLRegistration(0x9e55c93cu, "Laser Length")]
+	[DDLRegistration(0x2d4d4979u, "Laser Length")]
 	public float LaserMaxLength { get; set; } = 100.00f;
 
-	[DDLRegistration(0x9e55c93cu)]
+	[DDLRegistration(0xbef6b0d3u)]
 	public RivetAssetId CurveActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9e55c93cu)]
+	[DDLRegistration(0x760d56f1u)]
 	public bool DisableHitReactPartialsDuringAttack { get; set; } = false;
 
-	[DDLRegistration(0x9e55c93cu)]
+	[DDLRegistration(0x7e9e8e66u)]
 	public RivetAssetId SpawnedShotConfig { get; set; } = default;
 
-	[DDLRegistration(0x9e55c93cu)]
+	[DDLRegistration(0x0240dd6cu)]
 	public BotComboLaserShotType? LaserShotType { get; set; } = default;
 
 	public new static BotComboLaserShot Create(DDLObject ddl) => new(ddl);

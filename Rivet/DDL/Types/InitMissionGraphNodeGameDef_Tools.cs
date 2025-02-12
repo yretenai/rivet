@@ -18,7 +18,7 @@ public class InitMissionGraphNodeGameDef_Tools : NodeBaseDef, IDDLObjectType<Ini
 		Start = ddl.GetObject<OutputPlugBoolean>(0x862a994eu);
 	}
 
-	[DDLRegistration(0x6f1939bcu)]
+	[DDLRegistration(0x862a994eu)]
 	public OutputPlugBoolean? Start { get; set; } = default;
 
 	public new static InitMissionGraphNodeGameDef_Tools Create(DDLObject ddl) => new(ddl);

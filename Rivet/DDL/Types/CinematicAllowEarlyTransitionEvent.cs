@@ -21,16 +21,16 @@ public class CinematicAllowEarlyTransitionEvent : EventBase, IDDLObjectType<Cine
 		CurrentShotOnly = ddl.GetValue<bool>(0x4f232549u, CurrentShotOnly);
 	}
 
-	[DDLRegistration(0x39f5aa6bu)]
+	[DDLRegistration(0x84c71a05u)]
 	public float AnimBlendOutTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x39f5aa6bu, description: "Allow early exit from the cinematic if the left stick has input.")]
+	[DDLRegistration(0xa72dd3e4u, description: "Allow early exit from the cinematic if the left stick has input.")]
 	public bool AllowStickInput { get; set; } = true;
 
-	[DDLRegistration(0x39f5aa6bu, description: "Allow early exit from the cinematic if the user presses the jump button.")]
+	[DDLRegistration(0x6d1d8448u, description: "Allow early exit from the cinematic if the user presses the jump button.")]
 	public bool AllowJumpInput { get; set; } = false;
 
-	[DDLRegistration(0x39f5aa6bu, description: "If a new cinematic shot (not the current one) starts playing, will it re-possess the hero?")]
+	[DDLRegistration(0x4f232549u, description: "If a new cinematic shot (not the current one) starts playing, will it re-possess the hero?")]
 	public bool CurrentShotOnly { get; set; } = false;
 
 	public new static CinematicAllowEarlyTransitionEvent Create(DDLObject ddl) => new(ddl);

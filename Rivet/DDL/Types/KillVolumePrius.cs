@@ -24,25 +24,25 @@ public class KillVolumePrius : DDLObjectType, IDDLObjectType<KillVolumePrius> {
 		Relationship = ddl.GetEnum<AllegianceRelation>(0xe38a7c20u, AllegianceRelationValues.Lookup);
 	}
 
-	[DDLRegistration(0xaa57ee66u, "Kill Heroes")]
+	[DDLRegistration(0xcbcb4600u, "Kill Heroes")]
 	public bool KillHeroes { get; set; } = true;
 
-	[DDLRegistration(0xaa57ee66u, "Kill Bots")]
+	[DDLRegistration(0xdfb10270u, "Kill Bots")]
 	public bool KillBots { get; set; } = true;
 
-	[DDLRegistration(0xaa57ee66u, "Fall to death?")]
+	[DDLRegistration(0x9390695au, "Fall to death?")]
 	public bool FallToDeath { get; set; } = false;
 
-	[DDLRegistration(0xaa57ee66u, "Credit Last Damager?")]
+	[DDLRegistration(0xcb1da7a8u, "Credit Last Damager?")]
 	public bool CreditLastDamager { get; set; } = true;
 
-	[DDLRegistration(0xaa57ee66u, "Max Credit Time", "Only give credit to the last damager if the damage occurred within this amount of time.")]
+	[DDLRegistration(0x0fa5ecc5u, "Max Credit Time", "Only give credit to the last damager if the damage occurred within this amount of time.")]
 	public float MaxCreditTime { get; set; } = 2.50f;
 
-	[DDLRegistration(0xaa57ee66u, "Allegiance Type")]
+	[DDLRegistration(0x216d98dcu, "Allegiance Type")]
 	public x6bdf4ba1 SourceAllegiance { get; set; } = x6bdf4ba1.Neutral;
 
-	[DDLRegistration(0xaa57ee66u, "Allegiance Relation")]
+	[DDLRegistration(0xe38a7c20u, "Allegiance Relation")]
 	public AllegianceRelation Relationship { get; set; } = AllegianceRelation.Any;
 
 	public static KillVolumePrius Create(DDLObject ddl) => new(ddl);

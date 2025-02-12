@@ -23,22 +23,22 @@ public class GameBotMeleeSwarmerJumperPrius : GameBotMeleeSwarmerPrius, IDDLObje
 		MaxSingleJumpDist = ddl.GetValue<float>(0x437f7525u, MaxSingleJumpDist);
 	}
 
-	[DDLRegistration(0x28015bfeu)]
+	[DDLRegistration(0xe6dbb73au)]
 	public float JumpDistMin { get; set; } = 6.00f;
 
-	[DDLRegistration(0x28015bfeu)]
+	[DDLRegistration(0xdad68863u)]
 	public float JumpDistMax { get; set; } = 12.00f;
 
-	[DDLRegistration(0x28015bfeu)]
+	[DDLRegistration(0x87ed9537u)]
 	public string? JumpDistVarName { get; set; } = "Distance";
 
-	[DDLRegistration(0x28015bfeu)]
+	[DDLRegistration(0xb6a0801fu)]
 	public float JumpDistVarMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x28015bfeu)]
+	[DDLRegistration(0x8aadbf46u)]
 	public float JumpDistVarMax { get; set; } = 3.00f;
 
-	[DDLRegistration(0x28015bfeu)]
+	[DDLRegistration(0x437f7525u)]
 	public float MaxSingleJumpDist { get; set; } = 12.00f;
 
 	public new static GameBotMeleeSwarmerJumperPrius Create(DDLObject ddl) => new(ddl);

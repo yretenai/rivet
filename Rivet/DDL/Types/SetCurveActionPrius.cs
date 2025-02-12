@@ -22,19 +22,19 @@ public class SetCurveActionPrius : DDLObjectType, IDDLObjectType<SetCurveActionP
 		SmoothingStartType = ddl.GetEnum<x3376434d>(0x0eba1810u, x3376434dValues.Lookup);
 	}
 
-	[DDLRegistration(0x3476405fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.CurveFollower;
 
-	[DDLRegistration(0x3476405fu, "Use closest point?", "Whether to go to the closest point on the curve rather than the start of the curve when not doing a smooth transition.")]
+	[DDLRegistration(0x52dce52au, "Use closest point?", "Whether to go to the closest point on the curve rather than the start of the curve when not doing a smooth transition.")]
 	public bool UseClosestPt { get; set; } = false;
 
-	[DDLRegistration(0x3476405fu, "Smooth transition?", "For AmbientCurveFollowers, whether to go smoothly from our current position to the new curve. Otherwise it will snap there.")]
+	[DDLRegistration(0x6097908au, "Smooth transition?", "For AmbientCurveFollowers, whether to go smoothly from our current position to the new curve. Otherwise it will snap there.")]
 	public bool DoSmoothTrans { get; set; } = false;
 
-	[DDLRegistration(0x3476405fu, "Smoothing Type", "For AmbientCurveFollowers, what type of smooth transition should we use?")]
+	[DDLRegistration(0xc6252625u, "Smoothing Type", "For AmbientCurveFollowers, what type of smooth transition should we use?")]
 	public xb02a7b53 SmoothingType { get; set; } = xb02a7b53.IntroCurveBroken;
 
-	[DDLRegistration(0x3476405fu, "Smoothing Start Type", "For AmbientCurveFollowers, how should we pick the position we arrive at on the new curve?")]
+	[DDLRegistration(0x0eba1810u, "Smoothing Start Type", "For AmbientCurveFollowers, how should we pick the position we arrive at on the new curve?")]
 	public x3376434d SmoothingStartType { get; set; } = x3376434d.ClosestPoint;
 
 	public static SetCurveActionPrius Create(DDLObject ddl) => new(ddl);

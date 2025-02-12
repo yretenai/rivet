@@ -22,19 +22,19 @@ public class DebugGraphDrawSettings : DDLObjectType, IDDLObjectType<DebugGraphDr
 		VerticalSpacingMode = ddl.GetEnum<VerticalSpacingMode>(0x3953b966u, VerticalSpacingModeValues.Lookup);
 	}
 
-	[DDLRegistration(0xf08f152fu)]
+	[DDLRegistration(0x8e8a7491u)]
 	public float ScrollSpeedVertical { get; set; } = 600.00f;
 
-	[DDLRegistration(0xf08f152fu)]
+	[DDLRegistration(0xa7744e00u)]
 	public float ScrollSpeedHorizontal { get; set; } = 1200.00f;
 
-	[DDLRegistration(0xf08f152fu)]
+	[DDLRegistration(0xf170cf67u)]
 	public float NodeSpacingVertical { get; set; } = 100.00f;
 
-	[DDLRegistration(0xf08f152fu)]
+	[DDLRegistration(0xb9211dc5u)]
 	public float NodeSpacingHorizontal { get; set; } = 400.00f;
 
-	[DDLRegistration(0xf08f152fu)]
+	[DDLRegistration(0x3953b966u)]
 	public VerticalSpacingMode VerticalSpacingMode { get; set; } = VerticalSpacingMode.BalancedSpacing;
 
 	public static DebugGraphDrawSettings Create(DDLObject ddl) => new(ddl);

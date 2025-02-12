@@ -19,10 +19,10 @@ public class VendorPurchaseEvent : EventBase, IDDLObjectType<VendorPurchaseEvent
 		ShowRemapTutorial = ddl.GetValue<bool>(0xb27e60efu, ShowRemapTutorial);
 	}
 
-	[DDLRegistration(0x02a33a08u)]
+	[DDLRegistration(0xca0166ccu)]
 	public string? WeaponName { get; set; } = default;
 
-	[DDLRegistration(0x02a33a08u)]
+	[DDLRegistration(0xb27e60efu)]
 	public bool ShowRemapTutorial { get; set; } = false;
 
 	public new static VendorPurchaseEvent Create(DDLObject ddl) => new(ddl);

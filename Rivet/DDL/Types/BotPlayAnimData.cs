@@ -20,13 +20,13 @@ public class BotPlayAnimData : DDLObjectType, IDDLObjectType<BotPlayAnimData> {
 		ApplyGravity = ddl.GetValue<bool>(0x024332adu, ApplyGravity);
 	}
 
-	[DDLRegistration(0xc676d502u, "Anim Driver")]
+	[DDLRegistration(0x10f54dceu, "Anim Driver")]
 	public string? AnimDriver { get; set; } = default;
 
-	[DDLRegistration(0xc676d502u, "Anim Duration")]
+	[DDLRegistration(0x93db1700u, "Anim Duration")]
 	public float AnimDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc676d502u, "Apply Gravity")]
+	[DDLRegistration(0x024332adu, "Apply Gravity")]
 	public bool ApplyGravity { get; set; } = true;
 
 	public static BotPlayAnimData Create(DDLObject ddl) => new(ddl);

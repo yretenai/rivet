@@ -21,16 +21,16 @@ public class CrowdSpawnerSettings : DDLObjectType, IDDLObjectType<CrowdSpawnerSe
 		MaxDisallowVolumes = ddl.GetValue<int>(0xc193f390u, MaxDisallowVolumes);
 	}
 
-	[DDLRegistration(0x786e1ab5u)]
+	[DDLRegistration(0xc80b5da4u)]
 	public int InitialMaxSpawners { get; set; } = 32;
 
-	[DDLRegistration(0x786e1ab5u)]
+	[DDLRegistration(0x58a647a4u)]
 	public int MaxModels { get; set; } = 256;
 
-	[DDLRegistration(0x786e1ab5u)]
+	[DDLRegistration(0x3006ed07u)]
 	public int ModelSwitchesPerFrame { get; set; } = 32;
 
-	[DDLRegistration(0x786e1ab5u)]
+	[DDLRegistration(0xc193f390u)]
 	public int MaxDisallowVolumes { get; set; } = 16;
 
 	public static CrowdSpawnerSettings Create(DDLObject ddl) => new(ddl);

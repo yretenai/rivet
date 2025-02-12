@@ -18,7 +18,7 @@ public class Cinematic2MusicGameSyncDef : DDLObjectType, IDDLObjectType<Cinemati
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0xc8fae948u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
 	public static Cinematic2MusicGameSyncDef Create(DDLObject ddl) => new(ddl);

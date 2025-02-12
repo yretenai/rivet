@@ -23,22 +23,22 @@ public class VehicleCurveFollowerPrius : DDLObjectType, IDDLObjectType<VehicleCu
 		MaxBankAngle = ddl.GetValue<float>(0x289fc108u, MaxBankAngle);
 	}
 
-	[DDLRegistration(0x4dda3ad0u)]
+	[DDLRegistration(0x44affa24u)]
 	public float Accel { get; set; } = 100.00f;
 
-	[DDLRegistration(0x4dda3ad0u)]
+	[DDLRegistration(0xa9242a88u)]
 	public float Decel { get; set; } = 30.00f;
 
-	[DDLRegistration(0x4dda3ad0u)]
+	[DDLRegistration(0xe985a478u)]
 	public float BankAccel { get; set; } = 60.00f;
 
-	[DDLRegistration(0x4dda3ad0u)]
+	[DDLRegistration(0x27387af7u)]
 	public float MaxBankSpeed { get; set; } = 30.00f;
 
-	[DDLRegistration(0x4dda3ad0u)]
+	[DDLRegistration(0x9b2a0818u)]
 	public float BankLookaheadTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4dda3ad0u)]
+	[DDLRegistration(0x289fc108u)]
 	public float MaxBankAngle { get; set; } = 90.00f;
 
 	public static VehicleCurveFollowerPrius Create(DDLObject ddl) => new(ddl);

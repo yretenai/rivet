@@ -19,10 +19,10 @@ public class DamageModifierIncomingForceKnockbackPrius : DamageModifierIncomingP
 		KnockbackAmount = ddl.GetValue<float>(0x7b1e600bu, KnockbackAmount);
 	}
 
-	[DDLRegistration(0x12adf195u, description: "Forces incoming damage to this knockback level")]
+	[DDLRegistration(0x2554a262u, description: "Forces incoming damage to this knockback level")]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x12adf195u, description: "Forces incoming knockback to this amount (negative value means no change)")]
+	[DDLRegistration(0x7b1e600bu, description: "Forces incoming knockback to this amount (negative value means no change)")]
 	public float KnockbackAmount { get; set; } = -1.00f;
 
 	public new static DamageModifierIncomingForceKnockbackPrius Create(DDLObject ddl) => new(ddl);

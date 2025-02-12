@@ -19,10 +19,10 @@ public class VehicleMergeDistance : DDLObjectType, IDDLObjectType<VehicleMergeDi
 		Distance = ddl.GetValue<float>(0xe69327f1u, Distance);
 	}
 
-	[DDLRegistration(0x824a60d9u, description: "When the vehicle is moving at this speed, use the corresponding distance.")]
+	[DDLRegistration(0x16753237u, description: "When the vehicle is moving at this speed, use the corresponding distance.")]
 	public float Speed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x824a60d9u, description: "The distance along the current lane's direction that a vehicle can use to merge onto another lane.")]
+	[DDLRegistration(0xe69327f1u, description: "The distance along the current lane's direction that a vehicle can use to merge onto another lane.")]
 	public float Distance { get; set; } = 0.00f;
 
 	public static VehicleMergeDistance Create(DDLObject ddl) => new(ddl);

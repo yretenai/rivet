@@ -18,7 +18,7 @@ public class ObjectiveNodeBuiltTableEntry : DDLObjectType, IDDLObjectType<Object
 		ObjectiveData = ddl.GetObject<ObjectiveNodeBuiltShared>(0xaba4e6feu);
 	}
 
-	[DDLRegistration(0x98e5fff2u)]
+	[DDLRegistration(0xaba4e6feu)]
 	public ObjectiveNodeBuiltShared? ObjectiveData { get; set; } = default;
 
 	public static ObjectiveNodeBuiltTableEntry Create(DDLObject ddl) => new(ddl);

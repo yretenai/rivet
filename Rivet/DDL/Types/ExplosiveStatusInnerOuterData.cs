@@ -21,16 +21,16 @@ public class ExplosiveStatusInnerOuterData : DDLObjectType, IDDLObjectType<Explo
 		OuterRadius = ddl.GetValue<float>(0xf6b6fbdeu, OuterRadius);
 	}
 
-	[DDLRegistration(0xf246b070u)]
+	[DDLRegistration(0xd217b95bu)]
 	public float InnerDamage { get; set; } = 100.00f;
 
-	[DDLRegistration(0xf246b070u)]
+	[DDLRegistration(0xdc02c1e8u)]
 	public float OuterDamage { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf246b070u)]
+	[DDLRegistration(0xf8a3836du)]
 	public float InnerRadius { get; set; } = 5.00f;
 
-	[DDLRegistration(0xf246b070u)]
+	[DDLRegistration(0xf6b6fbdeu)]
 	public float OuterRadius { get; set; } = 8.00f;
 
 	public static ExplosiveStatusInnerOuterData Create(DDLObject ddl) => new(ddl);

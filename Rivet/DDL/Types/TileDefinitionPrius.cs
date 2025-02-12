@@ -19,10 +19,10 @@ public class TileDefinitionPrius : DDLObjectType, IDDLObjectType<TileDefinitionP
 		Length = ddl.GetValue<float>(0x3f05d0d5u, Length);
 	}
 
-	[DDLRegistration(0x12369a72u, "Actor Group", "Set of actors to duplicate when using this tile definitions.")]
+	[DDLRegistration(0x1a5a7710u, "Actor Group", "Set of actors to duplicate when using this tile definitions.")]
 	public RivetAssetId ActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x12369a72u, "Length", "How far in meters the next tile should be spawned from this one.")]
+	[DDLRegistration(0x3f05d0d5u, "Length", "How far in meters the next tile should be spawned from this one.")]
 	public float Length { get; set; } = 0.00f;
 
 	public static TileDefinitionPrius Create(DDLObject ddl) => new(ddl);

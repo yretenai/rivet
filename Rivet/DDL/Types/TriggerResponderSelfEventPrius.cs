@@ -18,7 +18,7 @@ public class TriggerResponderSelfEventPrius : TriggerResponderBasePrius, IDDLObj
 		Event = ddl.GetObject<EventBase>(0x22fdc666u);
 	}
 
-	[DDLRegistration(0xd3a0e036u, "Event Type", "The event that we will send")]
+	[DDLRegistration(0x22fdc666u, "Event Type", "The event that we will send")]
 	public EventBase? Event { get; set; } = default;
 
 	public new static TriggerResponderSelfEventPrius Create(DDLObject ddl) => new(ddl);

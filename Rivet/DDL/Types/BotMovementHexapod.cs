@@ -25,28 +25,28 @@ public class BotMovementHexapod : BotMovementBase, IDDLObjectType<BotMovementHex
 		FallData = ddl.GetObject<HexapodFallData>(0xab175a58u);
 	}
 
-	[DDLRegistration(0x54bf27a8u)]
+	[DDLRegistration(0x44affa24u)]
 	public float Accel { get; set; } = 0.00f;
 
-	[DDLRegistration(0x54bf27a8u)]
+	[DDLRegistration(0x48d89a41u)]
 	public float DashSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0x54bf27a8u)]
+	[DDLRegistration(0xe29bc0b8u)]
 	public float DashDuration { get; set; } = 0.35f;
 
-	[DDLRegistration(0x54bf27a8u)]
+	[DDLRegistration(0x25dc5f1eu)]
 	public float SprintSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x54bf27a8u)]
+	[DDLRegistration(0xa32b8933u)]
 	public float SprintTimerMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0x54bf27a8u)]
+	[DDLRegistration(0x9f26b66au)]
 	public float SprintTimerMax { get; set; } = 4.00f;
 
-	[DDLRegistration(0x54bf27a8u, "Slide Data")]
+	[DDLRegistration(0xda82fe40u, "Slide Data")]
 	public HexapodSlideData? SlideData { get; set; } = default;
 
-	[DDLRegistration(0x54bf27a8u, "Fall Data")]
+	[DDLRegistration(0xab175a58u, "Fall Data")]
 	public HexapodFallData? FallData { get; set; } = default;
 
 	public new static BotMovementHexapod Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DialogListSingle : DDLObjectType, IDDLObjectType<DialogListSingle> 
 		LocTag = ddl.GetString(0x06f8b0e5) ?? LocTag;
 	}
 
-	[DDLRegistration(0xe04a6f37u, "Localization Tag")]
+	[DDLRegistration(0x06f8b0e5u, "Localization Tag")]
 	public string? LocTag { get; set; } = default;
 
 	public static DialogListSingle Create(DDLObject ddl) => new(ddl);

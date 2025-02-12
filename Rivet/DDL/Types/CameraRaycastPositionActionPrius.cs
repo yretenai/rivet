@@ -20,13 +20,13 @@ public class CameraRaycastPositionActionPrius : DDLObjectType, IDDLObjectType<Ca
 		PhysCollProfile = ddl.GetEnum<x3e1c088d>(0x8286160bu, x3e1c088dValues.Lookup);
 	}
 
-	[DDLRegistration(0x4195b93du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0x4195b93du, "Distance", "Distance to cast ray.")]
+	[DDLRegistration(0xe69327f1u, "Distance", "Distance to cast ray.")]
 	public float Distance { get; set; } = 20.00f;
 
-	[DDLRegistration(0x4195b93du, description: "Physics collision profile to use to determine where the raycast hits.")]
+	[DDLRegistration(0x8286160bu, description: "Physics collision profile to use to determine where the raycast hits.")]
 	public x3e1c088d PhysCollProfile { get; set; } = x3e1c088d.HeroGround;
 
 	public static CameraRaycastPositionActionPrius Create(DDLObject ddl) => new(ddl);

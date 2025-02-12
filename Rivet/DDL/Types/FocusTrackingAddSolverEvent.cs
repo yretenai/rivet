@@ -18,7 +18,7 @@ public class FocusTrackingAddSolverEvent : EventBase, IDDLObjectType<FocusTracki
 		Data = ddl.GetObject<FocusTrackingSolverData>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0x31b75dc6u)]
+	[DDLRegistration(0x9d6333d3u)]
 	public FocusTrackingSolverData? Data { get; set; } = default;
 
 	public new static FocusTrackingAddSolverEvent Create(DDLObject ddl) => new(ddl);

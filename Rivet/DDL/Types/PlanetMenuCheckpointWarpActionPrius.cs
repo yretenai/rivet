@@ -19,10 +19,10 @@ public class PlanetMenuCheckpointWarpActionPrius : DDLObjectType, IDDLObjectType
 		ImmediatelyApplyChangesToSaveData = ddl.GetValue<bool>(0x2671365bu, ImmediatelyApplyChangesToSaveData);
 	}
 
-	[DDLRegistration(0xef4b7025u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0xef4b7025u, description: "If the game happens to save while this warp is requested/active, should the changes be immediately reflected in the save file? Does not actually trigger a save.")]
+	[DDLRegistration(0x2671365bu, description: "If the game happens to save while this warp is requested/active, should the changes be immediately reflected in the save file? Does not actually trigger a save.")]
 	public bool ImmediatelyApplyChangesToSaveData { get; set; } = false;
 
 	public static PlanetMenuCheckpointWarpActionPrius Create(DDLObject ddl) => new(ddl);

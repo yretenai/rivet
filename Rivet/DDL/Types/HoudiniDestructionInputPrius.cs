@@ -21,16 +21,16 @@ public class HoudiniDestructionInputPrius : DDLObjectType, IDDLObjectType<Houdin
 		Falloff = ddl.GetValue<float>(0x4e874fc0u, Falloff);
 	}
 
-	[DDLRegistration(0x1c200b68u, description: "The transform of the force so that points can be checked to see if they are inside the volume.")]
+	[DDLRegistration(0x3842c592u, description: "The transform of the force so that points can be checked to see if they are inside the volume.")]
 	public DDLTransform? ObjToWorld { get; set; } = default;
 
-	[DDLRegistration(0x1c200b68u, description: "The veleocity of the explosive force in meters per second.")]
+	[DDLRegistration(0x44d96bd9u, description: "The veleocity of the explosive force in meters per second.")]
 	public float Velocity { get; set; } = 2.00f;
 
-	[DDLRegistration(0x1c200b68u, "Revolutions Per Second", "The minimum and maximum number of revolutions a destruction piece makes in a second.")]
+	[DDLRegistration(0x0fee8687u, "Revolutions Per Second", "The minimum and maximum number of revolutions a destruction piece makes in a second.")]
 	public DDLVector2? RevolutionsPerSecond { get; set; } = default;
 
-	[DDLRegistration(0x1c200b68u, description: "The falloff of the force from the edge of the radius; a falloff of 0 indicates that the velocity is constant within the radius.")]
+	[DDLRegistration(0x4e874fc0u, description: "The falloff of the force from the edge of the radius; a falloff of 0 indicates that the velocity is constant within the radius.")]
 	public float Falloff { get; set; } = 0.35f;
 
 	public static HoudiniDestructionInputPrius Create(DDLObject ddl) => new(ddl);

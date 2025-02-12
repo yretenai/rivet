@@ -21,16 +21,16 @@ public class BuildManagerStatus : DDLObjectType, IDDLObjectType<BuildManagerStat
 		BackgroundPlatforms = ddl.GetStrings(0xf7b2b3b0u);
 	}
 
-	[DDLRegistration(0xa093cfdbu)]
+	[DDLRegistration(0x8940ceb4u)]
 	public bool PausedByUser { get; set; } = false;
 
-	[DDLRegistration(0xa093cfdbu)]
+	[DDLRegistration(0x29ef6f9fu)]
 	public bool PausedUpdatingBuilders { get; set; } = false;
 
-	[DDLRegistration(0xa093cfdbu)]
+	[DDLRegistration(0xb665f602u)]
 	public bool BackgroundBuildPausedForTracker { get; set; } = false;
 
-	[DDLRegistration(0xa093cfdbu)]
+	[DDLRegistration(0xf7b2b3b0u)]
 	public List<string?> BackgroundPlatforms { get; set; } = [];
 
 	public static BuildManagerStatus Create(DDLObject ddl) => new(ddl);

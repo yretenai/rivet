@@ -19,10 +19,10 @@ public class GrindOffEvent : EventBase, IDDLObjectType<GrindOffEvent> {
 		GrindActor = ddl.GetValue<uint>(0x110c8d91u, GrindActor);
 	}
 
-	[DDLRegistration(0x94ffbccbu)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0x94ffbccbu)]
+	[DDLRegistration(0x110c8d91u)]
 	public uint GrindActor { get; set; } = 0x00000000;
 
 	public new static GrindOffEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class PickupTradingCardPrius : GamePickupItemPrius, IDDLObjectType<Pickup
 		CardID = ddl.GetEnum<x507460e6>(0x7b6ab6e3u, x507460e6Values.Lookup);
 	}
 
-	[DDLRegistration(0x663f1234u, description: "How many cards are picked up")]
+	[DDLRegistration(0x77f386d3u, description: "How many cards are picked up")]
 	public byte CardCount { get; set; } = 0x01;
 
-	[DDLRegistration(0x663f1234u, description: "Specific or random card")]
+	[DDLRegistration(0x7b6ab6e3u, description: "Specific or random card")]
 	public x507460e6 CardID { get; set; } = x507460e6.Random;
 
 	public new static PickupTradingCardPrius Create(DDLObject ddl) => new(ddl);

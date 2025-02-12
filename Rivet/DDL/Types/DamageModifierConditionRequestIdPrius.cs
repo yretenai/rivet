@@ -19,10 +19,10 @@ public class DamageModifierConditionRequestIdPrius : DamageModifierConditionBase
 		IsInclude = ddl.GetValue<bool>(0x9497a047u, IsInclude);
 	}
 
-	[DDLRegistration(0x2a369d76u)]
+	[DDLRegistration(0x239eef0du)]
 	public uint RequestId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x2a369d76u)]
+	[DDLRegistration(0x9497a047u)]
 	public bool IsInclude { get; set; } = true;
 
 	public new static DamageModifierConditionRequestIdPrius Create(DDLObject ddl) => new(ddl);

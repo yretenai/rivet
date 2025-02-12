@@ -20,13 +20,13 @@ public class DbVerifyAssetItem : DDLObjectType, IDDLObjectType<DbVerifyAssetItem
 		AssetPath = ddl.GetValue<RivetAssetId>(0x0efa614bu, AssetPath);
 	}
 
-	[DDLRegistration(0xbb0776feu)]
+	[DDLRegistration(0xbac01e3au)]
 	public xec2141ec State { get; set; } = xec2141ec.DbUpToDate;
 
-	[DDLRegistration(0xbb0776feu)]
+	[DDLRegistration(0x8d9e6941u)]
 	public string? LastSavedTime { get; set; } = "";
 
-	[DDLRegistration(0xbb0776feu)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
 	public static DbVerifyAssetItem Create(DDLObject ddl) => new(ddl);

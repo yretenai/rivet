@@ -18,7 +18,7 @@ public class AnimPauseEngineItem : DDLObjectType, IDDLObjectType<AnimPauseEngine
 		Pause = ddl.GetValue<bool>(0xcec95e2cu, Pause);
 	}
 
-	[DDLRegistration(0xb2113361u)]
+	[DDLRegistration(0xcec95e2cu)]
 	public bool Pause { get; set; } = false;
 
 	public static AnimPauseEngineItem Create(DDLObject ddl) => new(ddl);

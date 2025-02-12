@@ -18,7 +18,7 @@ public class ImpactMaterialListenerPrius : DDLObjectType, IDDLObjectType<ImpactM
 		HitShaderData = ddl.GetObject<BotHitShaderData>(0xbe73a2efu);
 	}
 
-	[DDLRegistration(0x25298947u, "Hit Shader Data")]
+	[DDLRegistration(0xbe73a2efu, "Hit Shader Data")]
 	public BotHitShaderData? HitShaderData { get; set; } = default;
 
 	public static ImpactMaterialListenerPrius Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class GameEndDevstatsEvent : EventBase, IDDLObjectType<GameEndDevstatsEve
 		Duration_gameplay_secs = ddl.GetValue<int>(0xa07941dbu, Duration_gameplay_secs);
 	}
 
-	[DDLRegistration(0x79af6628u)]
+	[DDLRegistration(0x2ad883a1u)]
 	public string? Game_id { get; set; } = default;
 
-	[DDLRegistration(0x79af6628u)]
+	[DDLRegistration(0x5cc69481u)]
 	public string? Level_id { get; set; } = default;
 
-	[DDLRegistration(0x79af6628u)]
+	[DDLRegistration(0xdfc8be2du)]
 	public string? End_reason { get; set; } = default;
 
-	[DDLRegistration(0x79af6628u)]
+	[DDLRegistration(0x07682825u)]
 	public string? Mode { get; set; } = default;
 
-	[DDLRegistration(0x79af6628u)]
+	[DDLRegistration(0xe114dc5cu)]
 	public int Player_count { get; set; } = 0;
 
-	[DDLRegistration(0x79af6628u)]
+	[DDLRegistration(0xf03ee55cu)]
 	public int Player_count_local { get; set; } = 0;
 
-	[DDLRegistration(0x79af6628u)]
+	[DDLRegistration(0xce772e9au)]
 	public bool Is_online { get; set; } = false;
 
-	[DDLRegistration(0x79af6628u)]
+	[DDLRegistration(0x4e59109cu)]
 	public int Duration_secs { get; set; } = -1;
 
-	[DDLRegistration(0x79af6628u)]
+	[DDLRegistration(0xa07941dbu)]
 	public int Duration_gameplay_secs { get; set; } = -1;
 
 	public new static GameEndDevstatsEvent Create(DDLObject ddl) => new(ddl);

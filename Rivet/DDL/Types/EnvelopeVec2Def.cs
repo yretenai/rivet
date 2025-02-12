@@ -28,37 +28,37 @@ public class EnvelopeVec2Def : DDLObjectType, IDDLObjectType<EnvelopeVec2Def> {
 		Points = ddl.GetDictionary<RivetAssetId, EnvelopePointVec2>(0x19c2c04e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EnvelopePointVec2>(mapId));
 	}
 
-	[DDLRegistration(0x0de97da2u)]
+	[DDLRegistration(0xac589b88u)]
 	public bool CanAddOrRemovePoints { get; set; } = false;
 
-	[DDLRegistration(0x0de97da2u)]
+	[DDLRegistration(0x01505f32u)]
 	public float MinX { get; set; } = -1000000.00f;
 
-	[DDLRegistration(0x0de97da2u)]
+	[DDLRegistration(0x76576fa4u)]
 	public float MinY { get; set; } = -1000000.00f;
 
-	[DDLRegistration(0x0de97da2u)]
+	[DDLRegistration(0x13dbbb5du)]
 	public float MaxX { get; set; } = 1000000.00f;
 
-	[DDLRegistration(0x0de97da2u)]
+	[DDLRegistration(0x64dc8bcbu)]
 	public float MaxY { get; set; } = 1000000.00f;
 
-	[DDLRegistration(0x0de97da2u)]
+	[DDLRegistration(0x59cf96cdu)]
 	public float VisibleMinX { get; set; } = -1000000.00f;
 
-	[DDLRegistration(0x0de97da2u)]
+	[DDLRegistration(0x2ec8a65bu)]
 	public float VisibleMinY { get; set; } = -1000000.00f;
 
-	[DDLRegistration(0x0de97da2u)]
+	[DDLRegistration(0x4b4472a2u)]
 	public float VisibleMaxX { get; set; } = 1000000.00f;
 
-	[DDLRegistration(0x0de97da2u)]
+	[DDLRegistration(0x3c434234u)]
 	public float VisibleMaxY { get; set; } = 1000000.00f;
 
-	[DDLRegistration(0x0de97da2u)]
+	[DDLRegistration(0x7c71d118u)]
 	public string? DefaultPoints { get; set; } = default;
 
-	[DDLRegistration(0x0de97da2u)]
+	[DDLRegistration(0x19c2c04eu)]
 	public Dictionary<RivetAssetId, EnvelopePointVec2?> Points { get; set; } = [];
 
 	public static EnvelopeVec2Def Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class CheckAnimFilterActionPrius : DDLObjectType, IDDLObjectType<CheckAni
 		QueryCamera = ddl.GetValue<bool>(0xc594aeb6u, QueryCamera);
 	}
 
-	[DDLRegistration(0xe4a50fa4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0xe4a50fa4u)]
+	[DDLRegistration(0x14c22d78u)]
 	public x6571cd70 FilterGroup { get; set; } = x6571cd70.Elevation;
 
-	[DDLRegistration(0xe4a50fa4u)]
+	[DDLRegistration(0xd404a13fu)]
 	public xfdd79442 FilterId { get; set; } = xfdd79442.Any;
 
-	[DDLRegistration(0xe4a50fa4u, description: "Should we check the camera's filter value?")]
+	[DDLRegistration(0xc594aeb6u, description: "Should we check the camera's filter value?")]
 	public bool QueryCamera { get; set; } = false;
 
 	public static CheckAnimFilterActionPrius Create(DDLObject ddl) => new(ddl);

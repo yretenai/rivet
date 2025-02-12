@@ -20,13 +20,13 @@ public class ControlRemapPresetData : DDLObjectType, IDDLObjectType<ControlRemap
 		RemapSet = ddl.GetObject<ControlRemapSet>(0xf2c7cf7du);
 	}
 
-	[DDLRegistration(0xe733a797u)]
+	[DDLRegistration(0x8a514a8du)]
 	public xcc18a97d Id { get; set; } = xcc18a97d.None;
 
-	[DDLRegistration(0xe733a797u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0xe733a797u)]
+	[DDLRegistration(0xf2c7cf7du)]
 	public ControlRemapSet? RemapSet { get; set; } = default;
 
 	public static ControlRemapPresetData Create(DDLObject ddl) => new(ddl);

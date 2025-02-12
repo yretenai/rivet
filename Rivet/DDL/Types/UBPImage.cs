@@ -19,10 +19,10 @@ public class UBPImage : DDLObjectType, IDDLObjectType<UBPImage> {
 		Type = ddl.GetString(0x1c7c38a7) ?? Type;
 	}
 
-	[DDLRegistration(0x66574d0cu)]
+	[DDLRegistration(0xe66e2a87u)]
 	public RivetAssetId Url { get; set; } = default;
 
-	[DDLRegistration(0x66574d0cu)]
+	[DDLRegistration(0x1c7c38a7u)]
 	public string? Type { get; set; } = default;
 
 	public static UBPImage Create(DDLObject ddl) => new(ddl);

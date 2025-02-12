@@ -20,13 +20,13 @@ public class FadeModelAlphaActionPrius : DDLObjectType, IDDLObjectType<FadeModel
 		HighQualityAlpha = ddl.GetValue<bool>(0xee39dbf5u, HighQualityAlpha);
 	}
 
-	[DDLRegistration(0x129b07efu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0x129b07efu, "Dissolve Instead", "Instead of doing alpha(which doesnt get rid of the alpha) do a dissolve")]
+	[DDLRegistration(0x805dbea8u, "Dissolve Instead", "Instead of doing alpha(which doesnt get rid of the alpha) do a dissolve")]
 	public bool Dissolve { get; set; } = false;
 
-	[DDLRegistration(0x129b07efu, "Use High Quality Alpha", "Use a high quality alpha fade (for complex models, expensive)")]
+	[DDLRegistration(0xee39dbf5u, "Use High Quality Alpha", "Use a high quality alpha fade (for complex models, expensive)")]
 	public bool HighQualityAlpha { get; set; } = false;
 
 	public static FadeModelAlphaActionPrius Create(DDLObject ddl) => new(ddl);

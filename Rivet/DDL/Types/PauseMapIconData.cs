@@ -21,16 +21,16 @@ public class PauseMapIconData : DDLObjectType, IDDLObjectType<PauseMapIconData> 
 		Label = ddl.GetString(0x17f49c29) ?? Label;
 	}
 
-	[DDLRegistration(0xfce0cbd2u, description: "PauseMapElementType value.")]
+	[DDLRegistration(0xbc4e9799u, description: "PauseMapElementType value.")]
 	public PauseMapElementType Type { get; set; } = PauseMapElementType.Objective;
 
-	[DDLRegistration(0xfce0cbd2u, description: "Which symbol type to instance")]
+	[DDLRegistration(0x86cd9534u, description: "Which symbol type to instance")]
 	public x8578b610 SymbolType { get; set; } = x8578b610.Generic;
 
-	[DDLRegistration(0xfce0cbd2u, description: "Texture to display.")]
+	[DDLRegistration(0x838c6e4au, description: "Texture to display.")]
 	public RivetAssetId Texture { get; set; } = "";
 
-	[DDLRegistration(0xfce0cbd2u, description: "Player-facing name.")]
+	[DDLRegistration(0x17f49c29u, description: "Player-facing name.")]
 	public string? Label { get; set; } = default;
 
 	public static PauseMapIconData Create(DDLObject ddl) => new(ddl);

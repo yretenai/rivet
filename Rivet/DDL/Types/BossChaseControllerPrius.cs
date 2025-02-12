@@ -20,13 +20,13 @@ public class BossChaseControllerPrius : DDLObjectType, IDDLObjectType<BossChaseC
 		DistanceParams = ddl.GetObject<IdealDistanceParamsDDL>(0x96157196u);
 	}
 
-	[DDLRegistration(0xf598b643u, "Start Speed", "Default chase speed of the bot.")]
+	[DDLRegistration(0x774d9212u, "Start Speed", "Default chase speed of the bot.")]
 	public float StartSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0xf598b643u, description: "The locator on the boss that is used for finding distances between the boss and the hero.")]
+	[DDLRegistration(0x4a179166u, description: "The locator on the boss that is used for finding distances between the boss and the hero.")]
 	public string? ChaseLocator { get; set; } = default;
 
-	[DDLRegistration(0xf598b643u, "Distance Params")]
+	[DDLRegistration(0x96157196u, "Distance Params")]
 	public IdealDistanceParamsDDL? DistanceParams { get; set; } = default;
 
 	public static BossChaseControllerPrius Create(DDLObject ddl) => new(ddl);

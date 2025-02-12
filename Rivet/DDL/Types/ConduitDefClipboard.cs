@@ -28,37 +28,37 @@ public class ConduitDefClipboard : DDLObjectType, IDDLObjectType<ConduitDefClipb
 		Responses = ddl.GetObjects<ECMResponseDef>(0xb3a20098u);
 	}
 
-	[DDLRegistration(0x038bba08u)]
+	[DDLRegistration(0xffcb8104u)]
 	public string? Compatibility { get; set; } = default;
 
-	[DDLRegistration(0x038bba08u)]
+	[DDLRegistration(0xb1ad53f6u)]
 	public string? ClipboardType { get; set; } = default;
 
-	[DDLRegistration(0x038bba08u)]
+	[DDLRegistration(0x6461c08fu)]
 	public Dictionary<RivetAssetId, ECMCommentNodeDef?> CommentNodes { get; set; } = [];
 
-	[DDLRegistration(0x038bba08u)]
+	[DDLRegistration(0x1982bfedu)]
 	public Dictionary<RivetAssetId, ECMInputNodeDef?> InputNodes { get; set; } = [];
 
-	[DDLRegistration(0x038bba08u)]
+	[DDLRegistration(0x9c603cc1u)]
 	public Dictionary<RivetAssetId, ECMEffectNodeDef?> EffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x038bba08u)]
+	[DDLRegistration(0x2e2a59cbu)]
 	public Dictionary<RivetAssetId, ECMFieldOpNodeDef?> FieldOpNodes { get; set; } = [];
 
-	[DDLRegistration(0x038bba08u)]
+	[DDLRegistration(0x86fc0ba6u)]
 	public Dictionary<RivetAssetId, ECMSelectorNodeDef?> SelectorNodes { get; set; } = [];
 
-	[DDLRegistration(0x038bba08u)]
+	[DDLRegistration(0x76b05713u)]
 	public RivetAssetId GraphId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x038bba08u)]
+	[DDLRegistration(0x6dff192du)]
 	public List<ECMEventDef?> Events { get; set; } = [];
 
-	[DDLRegistration(0x038bba08u)]
+	[DDLRegistration(0x799d04b5u)]
 	public List<ECMFilterDef?> Filters { get; set; } = [];
 
-	[DDLRegistration(0x038bba08u)]
+	[DDLRegistration(0xb3a20098u)]
 	public List<ECMResponseDef?> Responses { get; set; } = [];
 
 	public static ConduitDefClipboard Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class StatusEffectDamageReturnPrius : StatusEffectBasePrius, IDDLObjectTy
 		ReturnRanged = ddl.GetValue<bool>(0x00e349e4u, ReturnRanged);
 	}
 
-	[DDLRegistration(0xb9d46b12u)]
+	[DDLRegistration(0xb0d93e25u)]
 	public float Amount { get; set; } = 50.00f;
 
-	[DDLRegistration(0xb9d46b12u)]
+	[DDLRegistration(0x858c4cf5u)]
 	public bool IsPercent { get; set; } = true;
 
-	[DDLRegistration(0xb9d46b12u)]
+	[DDLRegistration(0xbf29c58cu)]
 	public bool ReturnMelee { get; set; } = true;
 
-	[DDLRegistration(0xb9d46b12u)]
+	[DDLRegistration(0x00e349e4u)]
 	public bool ReturnRanged { get; set; } = false;
 
 	public new static StatusEffectDamageReturnPrius Create(DDLObject ddl) => new(ddl);

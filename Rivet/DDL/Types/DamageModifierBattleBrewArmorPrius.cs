@@ -21,16 +21,16 @@ public class DamageModifierBattleBrewArmorPrius : DamageModifierIncomingPrius, I
 		MaxMeleeKnockback = ddl.GetEnum<KnockbackLevels>(0xa9b526a6u, KnockbackLevelsValues.Lookup);
 	}
 
-	[DDLRegistration(0x4e451073u)]
+	[DDLRegistration(0x09159bfau)]
 	public float RangedDamageModifier { get; set; } = 0.10f;
 
-	[DDLRegistration(0x4e451073u)]
+	[DDLRegistration(0x784ce125u)]
 	public float MeleeDamageModifier { get; set; } = 0.25f;
 
-	[DDLRegistration(0x4e451073u)]
+	[DDLRegistration(0x25cc17f9u)]
 	public KnockbackLevels MaxRangedKnockback { get; set; } = KnockbackLevels.One;
 
-	[DDLRegistration(0x4e451073u)]
+	[DDLRegistration(0xa9b526a6u)]
 	public KnockbackLevels MaxMeleeKnockback { get; set; } = KnockbackLevels.Two;
 
 	public new static DamageModifierBattleBrewArmorPrius Create(DDLObject ddl) => new(ddl);

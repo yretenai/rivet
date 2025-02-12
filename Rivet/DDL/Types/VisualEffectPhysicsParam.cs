@@ -31,46 +31,46 @@ public class VisualEffectPhysicsParam : DDLObjectType, IDDLObjectType<VisualEffe
 		CollisionAngularVelocity = ddl.GetObject<DDLVector2>(0x8d878378u);
 	}
 
-	[DDLRegistration(0x3ba6a89au, "Rotation Speed Decay", "The duration in seconds of Particles Rotation Speed decay/slow-down after first collision")]
+	[DDLRegistration(0xb1c3a6fbu, "Rotation Speed Decay", "The duration in seconds of Particles Rotation Speed decay/slow-down after first collision")]
 	public float CollisionRotationSpeedDecay { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ba6a89au, "Beam Length Min", "Prevents particles of type beam from becoming too short after collision")]
+	[DDLRegistration(0x2cbdb22eu, "Beam Length Min", "Prevents particles of type beam from becoming too short after collision")]
 	public float CollisionBeamClamp { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ba6a89au, "Beam Scale", "Adjusts particles beam length with every collision")]
+	[DDLRegistration(0x60f8e050u, "Beam Scale", "Adjusts particles beam length with every collision")]
 	public float CollisionBeamScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ba6a89au, "Life Scale", "Adjusts particles maximum life-time with every collision")]
+	[DDLRegistration(0xd661926eu, "Life Scale", "Adjusts particles maximum life-time with every collision")]
 	public float CollisionLifeScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ba6a89au, "Distance", "CPU Physics is only active when main camera is within this distance, GPU logic is unaffected by this limit.")]
+	[DDLRegistration(0x735fc935u, "Distance", "CPU Physics is only active when main camera is within this distance, GPU logic is unaffected by this limit.")]
 	public float CollisionDistance { get; set; } = 32.00f;
 
-	[DDLRegistration(0x3ba6a89au, "Radius", "radius of the sphere wrapping each particle")]
+	[DDLRegistration(0x7d546bbau, "Radius", "radius of the sphere wrapping each particle")]
 	public float CollisionRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ba6a89au, "Mass", "used only for transfer of momentum (knocking stuff over). 0 is automatically turned into 'very very small'")]
+	[DDLRegistration(0xb603f6a2u, "Mass", "used only for transfer of momentum (knocking stuff over). 0 is automatically turned into 'very very small'")]
 	public float CollisionMass { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ba6a89au, "Bounciness", "0: not bouncy, 1: 100% bouncy")]
+	[DDLRegistration(0x06fd1fb6u, "Bounciness", "0: not bouncy, 1: 100% bouncy")]
 	public float CollisionRestitution { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ba6a89au, "Friction")]
+	[DDLRegistration(0x7dc14bbfu, "Friction")]
 	public float CollisionFriction { get; set; } = 0.50f;
 
-	[DDLRegistration(0x3ba6a89au, "Drag", "units unknown")]
+	[DDLRegistration(0x29d755c8u, "Drag", "units unknown")]
 	public float CollisionLinearDamping { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ba6a89au, "Gravity multiplier", "Give the middle finger to Galileo")]
+	[DDLRegistration(0x747edc12u, "Gravity multiplier", "Give the middle finger to Galileo")]
 	public float CollisionGravityMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ba6a89au, "Collision Delay", "Particles won't start testing collision until this many seconds after they are spawned.")]
+	[DDLRegistration(0x90c7646cu, "Collision Delay", "Particles won't start testing collision until this many seconds after they are spawned.")]
 	public float CollisionStartTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ba6a89au, "Model", "Use model asset collision geometry instead of the default spheres; Very expensive, use with caution!")]
+	[DDLRegistration(0x99449b50u, "Model", "Use model asset collision geometry instead of the default spheres; Very expensive, use with caution!")]
 	public RivetAssetId CollisionModel { get; set; } = default;
 
-	[DDLRegistration(0x3ba6a89au, "Model Angular Velocity", "Initial rotation speed of custom collision Model")]
+	[DDLRegistration(0x8d878378u, "Model Angular Velocity", "Initial rotation speed of custom collision Model")]
 	public DDLVector2? CollisionAngularVelocity { get; set; } = default;
 
 	public static VisualEffectPhysicsParam Create(DDLObject ddl) => new(ddl);

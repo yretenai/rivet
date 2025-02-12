@@ -18,7 +18,7 @@ public class SoundPropagation2InvSqDef : DDLObjectType, IDDLObjectType<SoundProp
 		VolumeAtDistance = ddl.GetValue<float>(0xfd8eb3e0u, VolumeAtDistance);
 	}
 
-	[DDLRegistration(0xbde7704eu, description: "distance at which VolumedB is still full volume (as if the sound was measured at this distance to get the VolumedB)")]
+	[DDLRegistration(0xfd8eb3e0u, description: "distance at which VolumedB is still full volume (as if the sound was measured at this distance to get the VolumedB)")]
 	public float VolumeAtDistance { get; set; } = 1.00f;
 
 	public static SoundPropagation2InvSqDef Create(DDLObject ddl) => new(ddl);

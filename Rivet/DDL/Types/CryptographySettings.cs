@@ -20,13 +20,13 @@ public class CryptographySettings : DDLObjectType, IDDLObjectType<CryptographySe
 		WrapMessages = ddl.GetValue<bool>(0xc7177294u, WrapMessages);
 	}
 
-	[DDLRegistration(0x75ea5eccu)]
+	[DDLRegistration(0x83b900d2u)]
 	public x27dd4d8e Level { get; set; } = x27dd4d8e.CryptographyFull;
 
-	[DDLRegistration(0x75ea5eccu)]
+	[DDLRegistration(0xff695b63u)]
 	public bool CrcMessages { get; set; } = true;
 
-	[DDLRegistration(0x75ea5eccu)]
+	[DDLRegistration(0xc7177294u)]
 	public bool WrapMessages { get; set; } = true;
 
 	public static CryptographySettings Create(DDLObject ddl) => new(ddl);

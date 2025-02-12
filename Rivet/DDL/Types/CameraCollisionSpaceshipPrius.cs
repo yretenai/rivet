@@ -19,10 +19,10 @@ public class CameraCollisionSpaceshipPrius : CameraCollisionBasePrius, IDDLObjec
 		CollRadiusBroad = ddl.GetValue<float>(0x91ae75f7u, CollRadiusBroad);
 	}
 
-	[DDLRegistration(0xf8ab95afu)]
+	[DDLRegistration(0xe24c4bdcu)]
 	public float CollRadiusNarrow { get; set; } = 0.01f;
 
-	[DDLRegistration(0xf8ab95afu)]
+	[DDLRegistration(0x91ae75f7u)]
 	public float CollRadiusBroad { get; set; } = 0.25f;
 
 	public new static CameraCollisionSpaceshipPrius Create(DDLObject ddl) => new(ddl);

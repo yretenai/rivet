@@ -28,37 +28,37 @@ public class GameUISettings : DDLObjectType, IDDLObjectType<GameUISettings> {
 		EnableDisplayGraphicsPC = ddl.GetValue<bool>(0x564c1500u, EnableDisplayGraphicsPC);
 	}
 
-	[DDLRegistration(0x7af51c67u)]
+	[DDLRegistration(0x715d45fdu)]
 	public bool ForceNoUnload { get; set; } = false;
 
-	[DDLRegistration(0x7af51c67u)]
+	[DDLRegistration(0x4752795du)]
 	public bool EnableHUD { get; set; } = true;
 
-	[DDLRegistration(0x7af51c67u)]
+	[DDLRegistration(0x689f1b10u)]
 	public bool EnablePauseMenu { get; set; } = true;
 
-	[DDLRegistration(0x7af51c67u)]
+	[DDLRegistration(0x6f88e9cau)]
 	public bool EnableOverlay { get; set; } = true;
 
-	[DDLRegistration(0x7af51c67u)]
+	[DDLRegistration(0x8d12147cu)]
 	public bool Enable3DText { get; set; } = true;
 
-	[DDLRegistration(0x7af51c67u)]
+	[DDLRegistration(0x5ed35619u)]
 	public bool EnablePlanetMenu { get; set; } = true;
 
-	[DDLRegistration(0x7af51c67u)]
+	[DDLRegistration(0x5b3edf70u)]
 	public bool EnableVendor { get; set; } = true;
 
-	[DDLRegistration(0x7af51c67u)]
+	[DDLRegistration(0x880605d2u)]
 	public bool EnableZurkie { get; set; } = true;
 
-	[DDLRegistration(0x7af51c67u)]
+	[DDLRegistration(0x5ebe33ebu)]
 	public bool EnableMessages { get; set; } = true;
 
-	[DDLRegistration(0x7af51c67u)]
+	[DDLRegistration(0x0e08e939u)]
 	public bool EnableLobby { get; set; } = true;
 
-	[DDLRegistration(0x7af51c67u)]
+	[DDLRegistration(0x564c1500u)]
 	public bool EnableDisplayGraphicsPC { get; set; } = true;
 
 	public static GameUISettings Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class AssetMigrationSearch : DDLObjectType, IDDLObjectType<AssetMigration
 		Limit = ddl.GetValue<int>(0x66c524a1u, Limit);
 	}
 
-	[DDLRegistration(0xf72d3757u)]
+	[DDLRegistration(0xa3c99911u)]
 	public string? FileCriteria { get; set; } = default;
 
-	[DDLRegistration(0xf72d3757u)]
+	[DDLRegistration(0x51abd94eu)]
 	public string? CreatedBy { get; set; } = default;
 
-	[DDLRegistration(0xf72d3757u)]
+	[DDLRegistration(0x06395b49u)]
 	public List<string?> Suffixes { get; set; } = [];
 
-	[DDLRegistration(0xf72d3757u)]
+	[DDLRegistration(0x2d616c1fu)]
 	public List<string?> Branches { get; set; } = [];
 
-	[DDLRegistration(0xf72d3757u)]
+	[DDLRegistration(0x74903fb5u)]
 	public bool UsePath { get; set; } = false;
 
-	[DDLRegistration(0xf72d3757u)]
+	[DDLRegistration(0x66c524a1u)]
 	public int Limit { get; set; } = 1000;
 
 	public static AssetMigrationSearch Create(DDLObject ddl) => new(ddl);

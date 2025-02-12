@@ -24,25 +24,25 @@ public class EnvProbeJob : DDLObjectType, IDDLObjectType<EnvProbeJob> {
 		LightingCondition = ddl.GetEnum<LightingConditions>(0xc3b54f69u, LightingConditionsValues.Lookup);
 	}
 
-	[DDLRegistration(0x8fe2878cu)]
+	[DDLRegistration(0x03b0ddc6u)]
 	public uint Changelist { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8fe2878cu)]
+	[DDLRegistration(0x3fdfd590u)]
 	public bool CaptureDirectOnly { get; set; } = false;
 
-	[DDLRegistration(0x8fe2878cu)]
+	[DDLRegistration(0x10008aa0u)]
 	public bool UpdateProbeProxy { get; set; } = false;
 
-	[DDLRegistration(0x8fe2878cu)]
+	[DDLRegistration(0xdf5240c7u)]
 	public List<string?> ProbeZones { get; set; } = [];
 
-	[DDLRegistration(0x8fe2878cu)]
+	[DDLRegistration(0x9c997da9u)]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
-	[DDLRegistration(0x8fe2878cu)]
+	[DDLRegistration(0x79fd859au)]
 	public RivetAssetId Atmosphere { get; set; } = default;
 
-	[DDLRegistration(0x8fe2878cu)]
+	[DDLRegistration(0xc3b54f69u)]
 	public LightingConditions LightingCondition { get; set; } = LightingConditions.Day;
 
 	public static EnvProbeJob Create(DDLObject ddl) => new(ddl);

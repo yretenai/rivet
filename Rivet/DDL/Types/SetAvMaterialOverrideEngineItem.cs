@@ -18,7 +18,7 @@ public class SetAvMaterialOverrideEngineItem : DDLObjectType, IDDLObjectType<Set
 		AvMaterialOverride = ddl.GetEnum<x10b3c4cf>(0x496d09e3u, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0x8f92daeeu)]
+	[DDLRegistration(0x496d09e3u)]
 	public x10b3c4cf AvMaterialOverride { get; set; } = x10b3c4cf.None;
 
 	public static SetAvMaterialOverrideEngineItem Create(DDLObject ddl) => new(ddl);

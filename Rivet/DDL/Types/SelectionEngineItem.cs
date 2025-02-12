@@ -19,10 +19,10 @@ public class SelectionEngineItem : DDLObjectType, IDDLObjectType<SelectionEngine
 		LastSelectedNode = ddl.GetValue<RivetAssetId>(0xe5dee6adu, LastSelectedNode);
 	}
 
-	[DDLRegistration(0x94c8af86u)]
+	[DDLRegistration(0xf703b56eu)]
 	public Dictionary<RivetAssetId, bool> SelectedNodes { get; set; } = [];
 
-	[DDLRegistration(0x94c8af86u)]
+	[DDLRegistration(0xe5dee6adu)]
 	public RivetAssetId LastSelectedNode { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static SelectionEngineItem Create(DDLObject ddl) => new(ddl);

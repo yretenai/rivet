@@ -20,13 +20,13 @@ public class BloodPoolPrius : DDLObjectType, IDDLObjectType<BloodPoolPrius> {
 		MaxPools = ddl.GetValue<uint>(0x06e4bf20u, MaxPools);
 	}
 
-	[DDLRegistration(0x67c96fc5u)]
+	[DDLRegistration(0x476a774eu)]
 	public List<string?> BloodPoolJoints { get; set; } = [];
 
-	[DDLRegistration(0x67c96fc5u)]
+	[DDLRegistration(0x7ce74647u)]
 	public float MaxDist { get; set; } = 0.20f;
 
-	[DDLRegistration(0x67c96fc5u)]
+	[DDLRegistration(0x06e4bf20u)]
 	public uint MaxPools { get; set; } = 0x00000001;
 
 	public static BloodPoolPrius Create(DDLObject ddl) => new(ddl);

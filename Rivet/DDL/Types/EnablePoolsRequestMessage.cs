@@ -20,13 +20,13 @@ public class EnablePoolsRequestMessage : DDLObjectType, IDDLObjectType<EnablePoo
 		PoolIds = ddl.GetValues<ushort>(0x540841afu);
 	}
 
-	[DDLRegistration(0x09fb3cebu)]
+	[DDLRegistration(0x239eef0du)]
 	public ushort RequestId { get; set; } = 0x0000;
 
-	[DDLRegistration(0x09fb3cebu)]
+	[DDLRegistration(0x87e83d61u)]
 	public byte LastMessage { get; set; } = 0x00;
 
-	[DDLRegistration(0x09fb3cebu)]
+	[DDLRegistration(0x540841afu)]
 	public List<ushort> PoolIds { get; set; } = [];
 
 	public static EnablePoolsRequestMessage Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ThemeCustomColor : DDLObjectType, IDDLObjectType<ThemeCustomColor> 
 		ColorSpec = ddl.GetString(0x7f0fcb79) ?? ColorSpec;
 	}
 
-	[DDLRegistration(0xccdc6723u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xccdc6723u)]
+	[DDLRegistration(0x7f0fcb79u)]
 	public string? ColorSpec { get; set; } = default;
 
 	public static ThemeCustomColor Create(DDLObject ddl) => new(ddl);

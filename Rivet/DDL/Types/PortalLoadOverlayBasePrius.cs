@@ -19,10 +19,10 @@ public class PortalLoadOverlayBasePrius : PortalLoadPrius, IDDLObjectType<Portal
 		AutoUnload = ddl.GetValue<bool>(0x974a1794u, AutoUnload);
 	}
 
-	[DDLRegistration(0x0a8e2854u)]
+	[DDLRegistration(0xb8155f86u)]
 	public RivetAssetId Overlay { get; set; } = default;
 
-	[DDLRegistration(0x0a8e2854u, description: "Automatically unload this overlay if 1.) the player is no longer in the overlay and 2.) the portal is closed")]
+	[DDLRegistration(0x974a1794u, description: "Automatically unload this overlay if 1.) the player is no longer in the overlay and 2.) the portal is closed")]
 	public bool AutoUnload { get; set; } = true;
 
 	public new static PortalLoadOverlayBasePrius Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class ManipulatorEngineItem : DDLObjectType, IDDLObjectType<ManipulatorEn
 		UseWorldSpace = ddl.GetValue<bool>(0x220435a9u, UseWorldSpace);
 	}
 
-	[DDLRegistration(0x3da3cc31u)]
+	[DDLRegistration(0x791b2bb1u)]
 	public DDLMatrix4? WorldMatrix { get; set; } = default;
 
-	[DDLRegistration(0x3da3cc31u)]
+	[DDLRegistration(0x2da7b94cu)]
 	public DDLVector3? AimPosition { get; set; } = default;
 
-	[DDLRegistration(0x3da3cc31u)]
+	[DDLRegistration(0x9aaacfbau)]
 	public DDLMatrix4? WorldMatrixDragBegin { get; set; } = default;
 
-	[DDLRegistration(0x3da3cc31u)]
+	[DDLRegistration(0x1d5f1904u)]
 	public ManipulatorType ManipulatorType { get; set; } = ManipulatorType.Translation;
 
-	[DDLRegistration(0x3da3cc31u)]
+	[DDLRegistration(0xbe3ef38cu)]
 	public ManipulatorSpace ManipulatorSpace { get; set; } = ManipulatorSpace.World;
 
-	[DDLRegistration(0x3da3cc31u)]
+	[DDLRegistration(0xf0c6c559u)]
 	public bool UseLastSelectedNode { get; set; } = false;
 
-	[DDLRegistration(0x3da3cc31u)]
+	[DDLRegistration(0x0e907f4cu)]
 	public bool MoveSelectedNodes { get; set; } = false;
 
-	[DDLRegistration(0x3da3cc31u)]
+	[DDLRegistration(0x220435a9u)]
 	public bool UseWorldSpace { get; set; } = false;
 
 	public static ManipulatorEngineItem Create(DDLObject ddl) => new(ddl);

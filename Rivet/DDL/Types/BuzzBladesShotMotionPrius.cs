@@ -20,13 +20,13 @@ public class BuzzBladesShotMotionPrius : BasicShotMotionPrius, IDDLObjectType<Bu
 		TargetSearchRadius = ddl.GetValue<float>(0xe327cd38u, TargetSearchRadius);
 	}
 
-	[DDLRegistration(0x7767fa6eu)]
+	[DDLRegistration(0x73e25a00u)]
 	public uint MaxBounces { get; set; } = 0x00000005;
 
-	[DDLRegistration(0x7767fa6eu)]
+	[DDLRegistration(0xb74c2620u)]
 	public string? SpinJoint { get; set; } = default;
 
-	[DDLRegistration(0x7767fa6eu)]
+	[DDLRegistration(0xe327cd38u)]
 	public float TargetSearchRadius { get; set; } = 10.00f;
 
 	public new static BuzzBladesShotMotionPrius Create(DDLObject ddl) => new(ddl);

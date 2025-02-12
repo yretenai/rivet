@@ -18,7 +18,7 @@ public class TargetHunterComponentTypePrius : TargetHunterBasePrius, IDDLObjectT
 		TargetComponentName = ddl.GetString(0x6b44e129) ?? TargetComponentName;
 	}
 
-	[DDLRegistration(0x8a8d5183u, "Target Component Name")]
+	[DDLRegistration(0x6b44e129u, "Target Component Name")]
 	public string? TargetComponentName { get; set; } = default;
 
 	public new static TargetHunterComponentTypePrius Create(DDLObject ddl) => new(ddl);

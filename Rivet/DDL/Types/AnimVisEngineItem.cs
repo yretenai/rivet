@@ -20,13 +20,13 @@ public class AnimVisEngineItem : DDLObjectType, IDDLObjectType<AnimVisEngineItem
 		VisNodes = ddl.GetObjects<AnimVisNodeDef>(0x7c5a51b2u);
 	}
 
-	[DDLRegistration(0xcc04e14eu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xcc04e14eu)]
+	[DDLRegistration(0x12466ab3u)]
 	public List<AnimVisSizeInfo?> SizeInfo { get; set; } = [];
 
-	[DDLRegistration(0xcc04e14eu)]
+	[DDLRegistration(0x7c5a51b2u)]
 	public List<AnimVisNodeDef?> VisNodes { get; set; } = [];
 
 	public static AnimVisEngineItem Create(DDLObject ddl) => new(ddl);

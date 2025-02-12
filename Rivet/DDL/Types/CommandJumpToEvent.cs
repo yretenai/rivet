@@ -20,13 +20,13 @@ public class CommandJumpToEvent : CommandEvent, IDDLObjectType<CommandJumpToEven
 		TrajectoryName = ddl.GetString(0xc1bd624a) ?? TrajectoryName;
 	}
 
-	[DDLRegistration(0x085b5c3fu)]
+	[DDLRegistration(0x3a387b17u)]
 	public uint DestinationActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x085b5c3fu)]
+	[DDLRegistration(0x270e045du)]
 	public bool PickBestLandSpot { get; set; } = false;
 
-	[DDLRegistration(0x085b5c3fu)]
+	[DDLRegistration(0xc1bd624au)]
 	public string? TrajectoryName { get; set; } = default;
 
 	public new static CommandJumpToEvent Create(DDLObject ddl) => new(ddl);

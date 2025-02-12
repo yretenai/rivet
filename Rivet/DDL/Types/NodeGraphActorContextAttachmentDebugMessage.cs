@@ -19,10 +19,10 @@ public class NodeGraphActorContextAttachmentDebugMessage : DDLObjectType, IDDLOb
 		ActorContextId = ddl.GetValue<uint>(0x55ffc909u, ActorContextId);
 	}
 
-	[DDLRegistration(0xd5a4f79bu)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd5a4f79bu)]
+	[DDLRegistration(0x55ffc909u)]
 	public uint ActorContextId { get; set; } = 0x00000000;
 
 	public static NodeGraphActorContextAttachmentDebugMessage Create(DDLObject ddl) => new(ddl);

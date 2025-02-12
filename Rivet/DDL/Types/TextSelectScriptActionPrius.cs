@@ -19,10 +19,10 @@ public class TextSelectScriptActionPrius : DDLObjectType, IDDLObjectType<TextSel
 		TextLine = ddl.GetStrings(0xd5f69346u);
 	}
 
-	[DDLRegistration(0x6c52c7e1u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Conversation;
 
-	[DDLRegistration(0x6c52c7e1u)]
+	[DDLRegistration(0xd5f69346u)]
 	public List<string?> TextLine { get; set; } = [];
 
 	public static TextSelectScriptActionPrius Create(DDLObject ddl) => new(ddl);

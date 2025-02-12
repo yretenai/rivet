@@ -18,7 +18,7 @@ public class AnimGrenadeReleaseEvent : EventBase, IDDLObjectType<AnimGrenadeRele
 		EmitLocatorOverride = ddl.GetString(0xee8b5bfc) ?? EmitLocatorOverride;
 	}
 
-	[DDLRegistration(0xbb048831u, description: "Optional. If provided, the grenade will be emited at this locator")]
+	[DDLRegistration(0xee8b5bfcu, description: "Optional. If provided, the grenade will be emited at this locator")]
 	public string? EmitLocatorOverride { get; set; } = default;
 
 	public new static AnimGrenadeReleaseEvent Create(DDLObject ddl) => new(ddl);

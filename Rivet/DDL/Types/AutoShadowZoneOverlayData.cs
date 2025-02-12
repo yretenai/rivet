@@ -18,7 +18,7 @@ public class AutoShadowZoneOverlayData : RegionGameDataBase, IDDLObjectType<Auto
 		Zone = ddl.GetValue<RivetAssetId>(0x907b00b7u, Zone);
 	}
 
-	[DDLRegistration(0x4cfed7f1u, description: "Zone to automatically shadow overlay zones to.")]
+	[DDLRegistration(0x907b00b7u, description: "Zone to automatically shadow overlay zones to.")]
 	public RivetAssetId Zone { get; set; } = default;
 
 	public new static AutoShadowZoneOverlayData Create(DDLObject ddl) => new(ddl);

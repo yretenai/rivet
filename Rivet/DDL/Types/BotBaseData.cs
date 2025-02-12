@@ -34,55 +34,55 @@ public class BotBaseData : DDLObjectType, IDDLObjectType<BotBaseData> {
 		ApplyActorScaleToSpeed = ddl.GetValue<bool>(0x752c1559u, ApplyActorScaleToSpeed);
 	}
 
-	[DDLRegistration(0xd5d88438u)]
+	[DDLRegistration(0xf0a26d74u)]
 	public float Health { get; set; } = 100.00f;
 
-	[DDLRegistration(0xd5d88438u)]
+	[DDLRegistration(0x07b898c1u)]
 	public x87e08126 HealthFlags { get; set; } = (x87e08126) 0x00000000;
 
-	[DDLRegistration(0xd5d88438u, description: "Base Type: BotConfigBaseMovement")]
+	[DDLRegistration(0xf6fce067u, description: "Base Type: BotConfigBaseMovement")]
 	public RivetAssetId MovementConfig { get; set; } = default;
 
-	[DDLRegistration(0xd5d88438u, description: "Base Type: Movement3DConfig")]
+	[DDLRegistration(0xa6821710u, description: "Base Type: Movement3DConfig")]
 	public RivetAssetId Movement3DConfig { get; set; } = default;
 
-	[DDLRegistration(0xd5d88438u, description: "Base Type: BotConfigBaseMovement")]
+	[DDLRegistration(0xd3e3c0f8u, description: "Base Type: BotConfigBaseMovement")]
 	public RivetAssetId MeleeConfig { get; set; } = default;
 
-	[DDLRegistration(0xd5d88438u, description: "Base Type: BotConfigHitReact")]
+	[DDLRegistration(0xeaee95feu, description: "Base Type: BotConfigHitReact")]
 	public RivetAssetId HitReactConfig { get; set; } = default;
 
-	[DDLRegistration(0xd5d88438u, description: "Base Type: BotConfigBaseTargeting")]
+	[DDLRegistration(0x08dd2ddeu, description: "Base Type: BotConfigBaseTargeting")]
 	public RivetAssetId TargetingConfig { get; set; } = default;
 
-	[DDLRegistration(0xd5d88438u, description: "Base Type: BotConfigBaseAwareness")]
+	[DDLRegistration(0xdea9552au, description: "Base Type: BotConfigBaseAwareness")]
 	public RivetAssetId AwarenessConfig { get; set; } = default;
 
-	[DDLRegistration(0xd5d88438u, description: "Base Type: PropConfig")]
+	[DDLRegistration(0x97e7b151u, description: "Base Type: PropConfig")]
 	public RivetAssetId PropConfig { get; set; } = default;
 
-	[DDLRegistration(0xd5d88438u, description: "Base Type: RandomAttachConfig")]
+	[DDLRegistration(0x68e19d6du, description: "Base Type: RandomAttachConfig")]
 	public RivetAssetId RandomAttachConfig { get; set; } = default;
 
-	[DDLRegistration(0xd5d88438u, description: "Base Type: BotConfigBaseDeath")]
+	[DDLRegistration(0x8827495fu, description: "Base Type: BotConfigBaseDeath")]
 	public RivetAssetId DeathConfig { get; set; } = default;
 
-	[DDLRegistration(0xd5d88438u, description: "Base Type: TargetingAimAngleConfig")]
+	[DDLRegistration(0x646d6db0u, description: "Base Type: TargetingAimAngleConfig")]
 	public RivetAssetId TargetingAimAngleConfig { get; set; } = default;
 
-	[DDLRegistration(0xd5d88438u, description: "Base Type: BotConfigPhysics")]
+	[DDLRegistration(0xd2f3fa18u, description: "Base Type: BotConfigPhysics")]
 	public RivetAssetId BotConfigPhysics { get; set; } = default;
 
-	[DDLRegistration(0xd5d88438u, "Config Mod Defs")]
+	[DDLRegistration(0x3d4ae417u, "Config Mod Defs")]
 	public List<BotBaseDataModDef?> ConfigModDefs { get; set; } = [];
 
-	[DDLRegistration(0xd5d88438u, description: "Hide this bot immediately on spawn to allow behaviors and animations to initialize before it's drawn.")]
+	[DDLRegistration(0x6251b268u, description: "Hide this bot immediately on spawn to allow behaviors and animations to initialize before it's drawn.")]
 	public bool UseBotStartup { get; set; } = true;
 
-	[DDLRegistration(0xd5d88438u, description: "Activate a user pose driver on spawn so initial anims will blend from the bot's starting pose.")]
+	[DDLRegistration(0x3d8b488fu, description: "Activate a user pose driver on spawn so initial anims will blend from the bot's starting pose.")]
 	public bool ActivateUserPoseDriverOnInit { get; set; } = false;
 
-	[DDLRegistration(0xd5d88438u, description: "If Actor is scaled, make sure to scale the speed and turn speeds on bot as well")]
+	[DDLRegistration(0x752c1559u, description: "If Actor is scaled, make sure to scale the speed and turn speeds on bot as well")]
 	public bool ApplyActorScaleToSpeed { get; set; } = true;
 
 	public static BotBaseData Create(DDLObject ddl) => new(ddl);

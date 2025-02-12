@@ -21,16 +21,16 @@ public class PlatformSpeedActionPrius : DDLObjectType, IDDLObjectType<PlatformSp
 		Speed = ddl.GetValue<float>(0x16753237u, Speed);
 	}
 
-	[DDLRegistration(0x40e80340u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0x40e80340u, "Acceleration")]
+	[DDLRegistration(0x44affa24u, "Acceleration")]
 	public float Accel { get; set; } = -1.00f;
 
-	[DDLRegistration(0x40e80340u, "Deceleration")]
+	[DDLRegistration(0xa9242a88u, "Deceleration")]
 	public float Decel { get; set; } = -1.00f;
 
-	[DDLRegistration(0x40e80340u, "Max Speed")]
+	[DDLRegistration(0x16753237u, "Max Speed")]
 	public float Speed { get; set; } = -1.00f;
 
 	public static PlatformSpeedActionPrius Create(DDLObject ddl) => new(ddl);

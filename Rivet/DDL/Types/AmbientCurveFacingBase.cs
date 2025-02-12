@@ -22,19 +22,19 @@ public class AmbientCurveFacingBase : DDLObjectType, IDDLObjectType<AmbientCurve
 		MaxSlowDownAngle = ddl.GetValue<float>(0x670c3799u, MaxSlowDownAngle);
 	}
 
-	[DDLRegistration(0x3266f70bu, description: "Use to control how fast we can turn in degrees per second.  Negative value means instantaneious")]
+	[DDLRegistration(0x6cc70f48u, description: "Use to control how fast we can turn in degrees per second.  Negative value means instantaneious")]
 	public float TurnSpeed { get; set; } = -1.00f;
 
-	[DDLRegistration(0x3266f70bu, description: "Acceleration for our turn speed")]
+	[DDLRegistration(0x3e1dc75bu, description: "Acceleration for our turn speed")]
 	public float TurnAccel { get; set; } = 90.00f;
 
-	[DDLRegistration(0x3266f70bu, description: "Deceleration for our turn speed")]
+	[DDLRegistration(0xd39617f7u, description: "Deceleration for our turn speed")]
 	public float TurnDecel { get; set; } = 90.00f;
 
-	[DDLRegistration(0x3266f70bu, description: "If our desired and current facing differ by this much, we'll start to slow down.")]
+	[DDLRegistration(0x36f58cc4u, description: "If our desired and current facing differ by this much, we'll start to slow down.")]
 	public float MinSlowDownAngle { get; set; } = 180.00f;
 
-	[DDLRegistration(0x3266f70bu, description: "If our desired and current facing differ by this much, we'll stop moving.")]
+	[DDLRegistration(0x670c3799u, description: "If our desired and current facing differ by this much, we'll stop moving.")]
 	public float MaxSlowDownAngle { get; set; } = 180.00f;
 
 	public static AmbientCurveFacingBase Create(DDLObject ddl) => new(ddl);

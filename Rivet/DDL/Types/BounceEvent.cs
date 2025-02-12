@@ -22,19 +22,19 @@ public class BounceEvent : EventBase, IDDLObjectType<BounceEvent> {
 		HasBonusFromButtonPress = ddl.GetValue<bool>(0x53df0812u, HasBonusFromButtonPress);
 	}
 
-	[DDLRegistration(0x6f70be0fu)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0x6f70be0fu)]
+	[DDLRegistration(0x272c0560u)]
 	public float FallHeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6f70be0fu)]
+	[DDLRegistration(0x33f2e3d5u)]
 	public uint Instigator { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x6f70be0fu)]
+	[DDLRegistration(0xabd94235u)]
 	public float LaunchSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6f70be0fu)]
+	[DDLRegistration(0x53df0812u)]
 	public bool HasBonusFromButtonPress { get; set; } = false;
 
 	public new static BounceEvent Create(DDLObject ddl) => new(ddl);

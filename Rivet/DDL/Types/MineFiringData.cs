@@ -19,10 +19,10 @@ public class MineFiringData : DDLObjectType, IDDLObjectType<MineFiringData> {
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0x7714bb3eu)]
+	[DDLRegistration(0xb78af24fu)]
 	public string? PartialAnim { get; set; } = default;
 
-	[DDLRegistration(0x7714bb3eu)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
 	public static MineFiringData Create(DDLObject ddl) => new(ddl);

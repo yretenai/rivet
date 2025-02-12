@@ -20,13 +20,13 @@ public class HeroSpaceshipFlightConstraintPrius : DDLObjectType, IDDLObjectType<
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x51776967u, description: "How high above the actor we can fly")]
+	[DDLRegistration(0xd698c019u, description: "How high above the actor we can fly")]
 	public float OffsetUp { get; set; } = 0.00f;
 
-	[DDLRegistration(0x51776967u, description: "How far below the actor we can fly")]
+	[DDLRegistration(0x35cfcae9u, description: "How far below the actor we can fly")]
 	public float OffsetDown { get; set; } = 0.00f;
 
-	[DDLRegistration(0x51776967u, description: "How far around the actor we can fly")]
+	[DDLRegistration(0x0504203du, description: "How far around the actor we can fly")]
 	public float Radius { get; set; } = 0.00f;
 
 	public static HeroSpaceshipFlightConstraintPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class WeaponListElement : DDLObjectType, IDDLObjectType<WeaponListElement
 		ItemConfigFile = ddl.GetValue<RivetAssetId>(0x22c4a442u, ItemConfigFile);
 	}
 
-	[DDLRegistration(0x7db9d7d2u)]
+	[DDLRegistration(0x22c4a442u)]
 	public RivetAssetId ItemConfigFile { get; set; } = default;
 
 	public static WeaponListElement Create(DDLObject ddl) => new(ddl);

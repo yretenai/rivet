@@ -18,7 +18,7 @@ public class ScriptVarUpdateBool : DDLObjectType, IDDLObjectType<ScriptVarUpdate
 		Value = ddl.GetValue<bool>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x45338ae0u)]
+	[DDLRegistration(0x042494f5u)]
 	public bool Value { get; set; } = false;
 
 	public static ScriptVarUpdateBool Create(DDLObject ddl) => new(ddl);

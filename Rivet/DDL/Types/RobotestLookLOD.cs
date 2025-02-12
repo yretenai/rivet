@@ -18,7 +18,7 @@ public class RobotestLookLOD : DDLObjectType, IDDLObjectType<RobotestLookLOD> {
 		SubsetRemap = ddl.GetValues<ushort>(0xaa4b61eeu);
 	}
 
-	[DDLRegistration(0xfe5f0120u, description: "Contents of the modelinst's subset_remap blob for this LOD")]
+	[DDLRegistration(0xaa4b61eeu, description: "Contents of the modelinst's subset_remap blob for this LOD")]
 	public List<ushort> SubsetRemap { get; set; } = [];
 
 	public static RobotestLookLOD Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class HoverbootOmniBoostPadPrius : EnabledComponentBasePrius, IDDLObjectT
 		DetectFastSpeed = ddl.GetValue<float>(0x1c13b359u, DetectFastSpeed);
 	}
 
-	[DDLRegistration(0x8af4ed2au, description: "Name of joint to rotate pad to orient with player.")]
+	[DDLRegistration(0x640db3edu, description: "Name of joint to rotate pad to orient with player.")]
 	public string? RotationJointName { get; set; } = "inset";
 
-	[DDLRegistration(0x8af4ed2au)]
+	[DDLRegistration(0xddbfbfc9u)]
 	public float DetectRangeMin { get; set; } = 3.00f;
 
-	[DDLRegistration(0x8af4ed2au)]
+	[DDLRegistration(0xe9fae50fu)]
 	public float DetectRangeMaxSlow { get; set; } = 10.00f;
 
-	[DDLRegistration(0x8af4ed2au)]
+	[DDLRegistration(0xf99bdd16u)]
 	public float DetectRangeMaxFast { get; set; } = 20.00f;
 
-	[DDLRegistration(0x8af4ed2au)]
+	[DDLRegistration(0x47ab25a2u)]
 	public float DetectSlowSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x8af4ed2au)]
+	[DDLRegistration(0x1c13b359u)]
 	public float DetectFastSpeed { get; set; } = 18.00f;
 
 	public new static HoverbootOmniBoostPadPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class WeaponEmptyFireEvent : EventBase, IDDLObjectType<WeaponEmptyFireEve
 		IsDrawn = ddl.GetValue<byte>(0xe03a5ef8u, IsDrawn);
 	}
 
-	[DDLRegistration(0xb683414fu)]
+	[DDLRegistration(0xee73b5b3u)]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb683414fu)]
+	[DDLRegistration(0x206feddcu)]
 	public byte FromSustain { get; set; } = 0x00;
 
-	[DDLRegistration(0xb683414fu)]
+	[DDLRegistration(0xe03a5ef8u)]
 	public byte IsDrawn { get; set; } = 0x01;
 
 	public new static WeaponEmptyFireEvent Create(DDLObject ddl) => new(ddl);

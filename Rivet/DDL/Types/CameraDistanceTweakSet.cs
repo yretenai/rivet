@@ -20,13 +20,13 @@ public class CameraDistanceTweakSet : CameraDistanceTweak, IDDLObjectType<Camera
 		BiDirectionalField = ddl.GetValue<bool>(0x955abfcau, BiDirectionalField);
 	}
 
-	[DDLRegistration(0x863b42fdu)]
+	[DDLRegistration(0xe69327f1u)]
 	public float Distance { get; set; } = 4.65f;
 
-	[DDLRegistration(0x863b42fdu)]
+	[DDLRegistration(0x75edc1a7u)]
 	public float BlendFieldCompletePercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0x863b42fdu, "Bi-Directional Field")]
+	[DDLRegistration(0x955abfcau, "Bi-Directional Field")]
 	public bool BiDirectionalField { get; set; } = false;
 
 	public new static CameraDistanceTweakSet Create(DDLObject ddl) => new(ddl);

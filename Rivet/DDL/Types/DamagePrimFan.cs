@@ -22,19 +22,19 @@ public class DamagePrimFan : DamagePrimBase, IDDLObjectType<DamagePrimFan> {
 		DamageRadius = ddl.GetValue<float>(0xe3e6fa68u, DamageRadius);
 	}
 
-	[DDLRegistration(0xd2765a2fu, "Secondary Locator")]
+	[DDLRegistration(0x105999dfu, "Secondary Locator")]
 	public string? DamageLocatorSecondary { get; set; } = default;
 
-	[DDLRegistration(0xd2765a2fu, "Secondary Local Offset", "This is an offset in model space.")]
+	[DDLRegistration(0x2d270ce4u, "Secondary Local Offset", "This is an offset in model space.")]
 	public DDLVector3? LocalOffsetSecondary { get; set; } = default;
 
-	[DDLRegistration(0xd2765a2fu, "Fan Spacing")]
+	[DDLRegistration(0x914cdf90u, "Fan Spacing")]
 	public float FanSpacing { get; set; } = 0.50f;
 
-	[DDLRegistration(0xd2765a2fu, "Max Subdivide")]
+	[DDLRegistration(0xfb78ccfdu, "Max Subdivide")]
 	public int MaxSubdivide { get; set; } = 10;
 
-	[DDLRegistration(0xd2765a2fu, "Damage Radius")]
+	[DDLRegistration(0xe3e6fa68u, "Damage Radius")]
 	public float DamageRadius { get; set; } = 1.00f;
 
 	public new static DamagePrimFan Create(DDLObject ddl) => new(ddl);

@@ -39,70 +39,70 @@ public class ShotCarpetBomberData : DDLObjectType, IDDLObjectType<ShotCarpetBomb
 		SpreadAngleDireciton = ddl.GetEnum<DropSpreadAngleDireciton>(0xd1207449u, DropSpreadAngleDirecitonValues.Lookup);
 	}
 
-	[DDLRegistration(0x2671eb28u)]
+	[DDLRegistration(0xc6876343u)]
 	public string? IntroIdleAnim { get; set; } = default;
 
-	[DDLRegistration(0x2671eb28u)]
+	[DDLRegistration(0x27ec8e48u)]
 	public string? StartFlyAnim { get; set; } = default;
 
-	[DDLRegistration(0x2671eb28u)]
+	[DDLRegistration(0x2c808fabu)]
 	public string? FlyLoopAnim { get; set; } = default;
 
-	[DDLRegistration(0x2671eb28u, description: "Number of shots generated when drop is initiated (clamped to be at LEAST 1).")]
+	[DDLRegistration(0xa7793030u, description: "Number of shots generated when drop is initiated (clamped to be at LEAST 1).")]
 	public byte ShotsPerDrop { get; set; } = 0x09;
 
-	[DDLRegistration(0x2671eb28u, description: "The last sub shots spawned. They are created when the main shot collides and explodes.")]
+	[DDLRegistration(0xa28fe59bu, description: "The last sub shots spawned. They are created when the main shot collides and explodes.")]
 	public byte ShotsOnDestroy { get; set; } = 0x0a;
 
-	[DDLRegistration(0x2671eb28u, "Targeting Cone Length", "Length of the axis of the spherical cone used to target enemies (points down from the shot)")]
+	[DDLRegistration(0x300b9bc6u, "Targeting Cone Length", "Length of the axis of the spherical cone used to target enemies (points down from the shot)")]
 	public float TargetingConeAxisLength { get; set; } = 15.00f;
 
-	[DDLRegistration(0x2671eb28u, "Targeting Cone Angle", "Angle of the spherical cone used to target enemies (points down from the shot)")]
+	[DDLRegistration(0xec7ad98cu, "Targeting Cone Angle", "Angle of the spherical cone used to target enemies (points down from the shot)")]
 	public float TargetingConeAngle { get; set; } = 50.00f;
 
-	[DDLRegistration(0x2671eb28u, description: "Time it takes for the main projectile to reach its cruising height before doing its main flying functionality")]
+	[DDLRegistration(0x39febe6bu, description: "Time it takes for the main projectile to reach its cruising height before doing its main flying functionality")]
 	public float ShotIntroTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2671eb28u)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.Three;
 
-	[DDLRegistration(0x2671eb28u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 100.00f;
 
-	[DDLRegistration(0x2671eb28u, description: "The max time that the main projectile and be crashing down towards the ground before automatically exploding.")]
+	[DDLRegistration(0x94df5a67u, description: "The max time that the main projectile and be crashing down towards the ground before automatically exploding.")]
 	public float MaxCrashTime { get; set; } = 5.00f;
 
-	[DDLRegistration(0x2671eb28u, description: "Time after activation for first launch to happen.")]
+	[DDLRegistration(0xaf990de2u, description: "Time after activation for first launch to happen.")]
 	public float TimeUntilFirstDrop { get; set; } = 0.10f;
 
-	[DDLRegistration(0x2671eb28u, description: "Angle from DropSpreadAngleDireciton at which the sub shots will initially move at (in degrees).")]
+	[DDLRegistration(0xf23fe6a1u, description: "Angle from DropSpreadAngleDireciton at which the sub shots will initially move at (in degrees).")]
 	public float DropSpreadAngle { get; set; } = 75.00f;
 
-	[DDLRegistration(0x2671eb28u, description: "Max random angle (in either direction) off of the DropSpreadAngle at which the sub shots will initially move at  (in degrees).")]
+	[DDLRegistration(0x536f0f82u, description: "Max random angle (in either direction) off of the DropSpreadAngle at which the sub shots will initially move at  (in degrees).")]
 	public float RandomAngleOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2671eb28u, description: "Amount of time it takes for all of the projectiles of a drop to be spawned.")]
+	[DDLRegistration(0x94511094u, description: "Amount of time it takes for all of the projectiles of a drop to be spawned.")]
 	public float DropTimeSpan { get; set; } = 0.30f;
 
-	[DDLRegistration(0x2671eb28u, description: "Max random time after DropTimeSpan at which the sub shots will spawn.")]
+	[DDLRegistration(0x7ddf343du, description: "Max random time after DropTimeSpan at which the sub shots will spawn.")]
 	public float RandomDropTimeOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2671eb28u, description: "The distance at which the last set of bombs ignores all collisions.")]
+	[DDLRegistration(0x6f46f335u, description: "The distance at which the last set of bombs ignores all collisions.")]
 	public float LastBombCollIgnoreDist { get; set; } = 0.10f;
 
-	[DDLRegistration(0x2671eb28u, description: "Angle above horizontal at with the last subshots are fired at.")]
+	[DDLRegistration(0xde417137u, description: "Angle above horizontal at with the last subshots are fired at.")]
 	public float LastBombAngle { get; set; } = 15.00f;
 
-	[DDLRegistration(0x2671eb28u, description: "Max random angle (in either direction) off of the LastBombAngle at which the sub shots will initially move at (in degrees).")]
+	[DDLRegistration(0xa04ca5a5u, description: "Max random angle (in either direction) off of the LastBombAngle at which the sub shots will initially move at (in degrees).")]
 	public float LastBombRandomAngleOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2671eb28u, description: "When the drop time span is nonzero, this allows the spread to alternate between left to right and right to left.")]
+	[DDLRegistration(0x9223ce19u, description: "When the drop time span is nonzero, this allows the spread to alternate between left to right and right to left.")]
 	public bool AlternateDropSpreadDir { get; set; } = true;
 
-	[DDLRegistration(0x2671eb28u, description: "The enemy that is hit with the main carpet bombar shot will be ignored by the subshots at the end.")]
+	[DDLRegistration(0xb49038eau, description: "The enemy that is hit with the main carpet bombar shot will be ignored by the subshots at the end.")]
 	public bool LastBombIgnoreHitActor { get; set; } = true;
 
-	[DDLRegistration(0x2671eb28u)]
+	[DDLRegistration(0xd1207449u)]
 	public DropSpreadAngleDireciton SpreadAngleDireciton { get; set; } = DropSpreadAngleDireciton.Down;
 
 	public static ShotCarpetBomberData Create(DDLObject ddl) => new(ddl);

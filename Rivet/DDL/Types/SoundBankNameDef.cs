@@ -24,25 +24,25 @@ public class SoundBankNameDef : DDLObjectType, IDDLObjectType<SoundBankNameDef> 
 		EnvironmentNames = ddl.GetStrings(0x9593fd9bu);
 	}
 
-	[DDLRegistration(0x24095c8fu)]
+	[DDLRegistration(0x2365a4dcu)]
 	public string? BankName { get; set; } = default;
 
-	[DDLRegistration(0x24095c8fu)]
+	[DDLRegistration(0xaa2a04cdu)]
 	public List<string?> EventNames { get; set; } = [];
 
-	[DDLRegistration(0x24095c8fu)]
+	[DDLRegistration(0x9c339bf2u)]
 	public List<string?> TriggerNames { get; set; } = [];
 
-	[DDLRegistration(0x24095c8fu)]
+	[DDLRegistration(0x0e2afa42u)]
 	public List<SoundGroupNameDef?> StateGroupNames { get; set; } = [];
 
-	[DDLRegistration(0x24095c8fu)]
+	[DDLRegistration(0xc007ebbfu)]
 	public List<SoundGroupNameDef?> SwitchGroupNames { get; set; } = [];
 
-	[DDLRegistration(0x24095c8fu)]
+	[DDLRegistration(0xa9451eeau)]
 	public List<string?> GameParameterNames { get; set; } = [];
 
-	[DDLRegistration(0x24095c8fu)]
+	[DDLRegistration(0x9593fd9bu)]
 	public List<string?> EnvironmentNames { get; set; } = [];
 
 	public static SoundBankNameDef Create(DDLObject ddl) => new(ddl);

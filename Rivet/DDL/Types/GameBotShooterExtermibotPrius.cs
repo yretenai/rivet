@@ -19,10 +19,10 @@ public class GameBotShooterExtermibotPrius : GameBotShooterPrius, IDDLObjectType
 		FirepointSearch = ddl.GetValue<bool>(0x0df8e3b7u, FirepointSearch);
 	}
 
-	[DDLRegistration(0x14ada102u, description: "Never approach a target if out of range.")]
+	[DDLRegistration(0x85237278u, description: "Never approach a target if out of range.")]
 	public bool NeverChase { get; set; } = false;
 
-	[DDLRegistration(0x14ada102u, description: "Search for nearby firepoints.")]
+	[DDLRegistration(0x0df8e3b7u, description: "Search for nearby firepoints.")]
 	public bool FirepointSearch { get; set; } = true;
 
 	public new static GameBotShooterExtermibotPrius Create(DDLObject ddl) => new(ddl);

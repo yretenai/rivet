@@ -19,10 +19,10 @@ public class SceneEditorRelocateFileInput : DDLObjectType, IDDLObjectType<SceneE
 		DstPath = ddl.GetValue<RivetAssetId>(0xe8b916fdu, DstPath);
 	}
 
-	[DDLRegistration(0x22a8dfc9u)]
+	[DDLRegistration(0x535c2c8au)]
 	public RivetAssetId SrcPath { get; set; } = "";
 
-	[DDLRegistration(0x22a8dfc9u)]
+	[DDLRegistration(0xe8b916fdu)]
 	public RivetAssetId DstPath { get; set; } = "";
 
 	public static SceneEditorRelocateFileInput Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class BotGeneratorByShotComponentPrius : BotGeneratorComponentPrius, IDDL
 		EmitLocatorHash = ddl.GetValue<uint>(0x87c49c5eu, EmitLocatorHash);
 	}
 
-	[DDLRegistration(0x7da9f148u)]
+	[DDLRegistration(0xb171e6aeu)]
 	public RivetAssetId ShotConfig { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x7da9f148u, description: "Total number of additional bots to spawn.  -1 is unlimited")]
+	[DDLRegistration(0xcfea747cu, description: "Total number of additional bots to spawn.  -1 is unlimited")]
 	public int MaxTotalSpawns { get; set; } = -1;
 
-	[DDLRegistration(0x7da9f148u)]
+	[DDLRegistration(0x87c49c5eu)]
 	public uint EmitLocatorHash { get; set; } = 0x00000000;
 
 	public new static BotGeneratorByShotComponentPrius Create(DDLObject ddl) => new(ddl);

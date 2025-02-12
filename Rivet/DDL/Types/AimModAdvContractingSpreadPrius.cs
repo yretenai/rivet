@@ -22,19 +22,19 @@ public class AimModAdvContractingSpreadPrius : AimModifierPrius, IDDLObjectType<
 		ResetDist = ddl.GetValue<float>(0xab4b7cabu, ResetDist);
 	}
 
-	[DDLRegistration(0xff0c416bu)]
+	[DDLRegistration(0xcc7fd050u)]
 	public ContractingVolley? InitialVolley { get; set; } = default;
 
-	[DDLRegistration(0xff0c416bu)]
+	[DDLRegistration(0x77e56887u)]
 	public ContractingVolley? FinalVolley { get; set; } = default;
 
-	[DDLRegistration(0xff0c416bu)]
+	[DDLRegistration(0x0d3958b4u)]
 	public float VolleysToReachFinal { get; set; } = 0.00f;
 
-	[DDLRegistration(0xff0c416bu)]
+	[DDLRegistration(0x45a33419u)]
 	public float ResetTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xff0c416bu)]
+	[DDLRegistration(0xab4b7cabu)]
 	public float ResetDist { get; set; } = 0.00f;
 
 	public new static AimModAdvContractingSpreadPrius Create(DDLObject ddl) => new(ddl);

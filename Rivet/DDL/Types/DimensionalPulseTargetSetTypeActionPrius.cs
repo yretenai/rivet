@@ -19,10 +19,10 @@ public class DimensionalPulseTargetSetTypeActionPrius : DDLObjectType, IDDLObjec
 		TargetPrius = ddl.GetObject<DimensionalPulseTargetBasePrius>(0xfea43a2au);
 	}
 
-	[DDLRegistration(0x69901d16u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x69901d16u)]
+	[DDLRegistration(0xfea43a2au)]
 	public DimensionalPulseTargetBasePrius? TargetPrius { get; set; } = default;
 
 	public static DimensionalPulseTargetSetTypeActionPrius Create(DDLObject ddl) => new(ddl);

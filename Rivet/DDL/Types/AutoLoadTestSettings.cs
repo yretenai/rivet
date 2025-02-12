@@ -21,16 +21,16 @@ public class AutoLoadTestSettings : DDLObjectType, IDDLObjectType<AutoLoadTestSe
 		ServerPort = ddl.GetValue<ushort>(0x4b37bf6bu, ServerPort);
 	}
 
-	[DDLRegistration(0xc4639a80u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0xc4639a80u)]
+	[DDLRegistration(0x4e1606d5u)]
 	public bool SingleRunMode { get; set; } = false;
 
-	[DDLRegistration(0xc4639a80u)]
+	[DDLRegistration(0x4557303au)]
 	public string? ServerIP { get; set; } = "0.0.0.0";
 
-	[DDLRegistration(0xc4639a80u)]
+	[DDLRegistration(0x4b37bf6bu)]
 	public ushort ServerPort { get; set; } = 0x0000;
 
 	public static AutoLoadTestSettings Create(DDLObject ddl) => new(ddl);

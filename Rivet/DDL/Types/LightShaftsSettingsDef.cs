@@ -23,22 +23,22 @@ public class LightShaftsSettingsDef : DDLObjectType, IDDLObjectType<LightShaftsS
 		Color = ddl.GetObject<DDLVector3>(0x7f058428u);
 	}
 
-	[DDLRegistration(0x804fba5au)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0x804fba5au)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 15.00f;
 
-	[DDLRegistration(0x804fba5au)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x804fba5au)]
+	[DDLRegistration(0x8c03b095u)]
 	public float ConeAngle { get; set; } = 60.00f;
 
-	[DDLRegistration(0x804fba5au, description: "The distance (in meters) at which the light shafts effect is inserted into the alpha sort layer. Generally 0 works best to avoid popping with vfx, but in cinematic situations it can look better to sort light shafts farther away than far DoF")]
+	[DDLRegistration(0xf7962fd7u, description: "The distance (in meters) at which the light shafts effect is inserted into the alpha sort layer. Generally 0 works best to avoid popping with vfx, but in cinematic situations it can look better to sort light shafts farther away than far DoF")]
 	public float SortDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x804fba5au)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
 	public static LightShaftsSettingsDef Create(DDLObject ddl) => new(ddl);

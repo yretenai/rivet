@@ -19,10 +19,10 @@ public class AnimClipGroupIdDef : DDLObjectType, IDDLObjectType<AnimClipGroupIdD
 		Id = ddl.GetString(0x8a514a8d) ?? Id;
 	}
 
-	[DDLRegistration(0x71a82335u)]
+	[DDLRegistration(0x74938804u)]
 	public string? Group { get; set; } = default;
 
-	[DDLRegistration(0x71a82335u)]
+	[DDLRegistration(0x8a514a8du)]
 	public string? Id { get; set; } = default;
 
 	public static AnimClipGroupIdDef Create(DDLObject ddl) => new(ddl);

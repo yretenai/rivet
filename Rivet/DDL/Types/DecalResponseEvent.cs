@@ -41,76 +41,76 @@ public class DecalResponseEvent : ResponseEvent, IDDLObjectType<DecalResponseEve
 		CoveredMaterialArray1 = ddl.GetValue<ulong>(0x5faca25bu, CoveredMaterialArray1);
 	}
 
-	[DDLRegistration(0x56fa2f9bu)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public RivetAssetId Material { get; set; } = default;
 
-	[DDLRegistration(0x56fa2f9bu)]
+	[DDLRegistration(0xc9b3f5abu)]
 	public float Alpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0x56fa2f9bu, "Start Delay")]
+	[DDLRegistration(0xcaf1ec7fu, "Start Delay")]
 	public float StartDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x56fa2f9bu, description: "Duration of the decal, 0 = infinite")]
+	[DDLRegistration(0xc7e68df8u, description: "Duration of the decal, 0 = infinite")]
 	public float Lifetime { get; set; } = 10.00f;
 
-	[DDLRegistration(0x56fa2f9bu, "Infinite Lifetime Chance", "Chance of decal living infinitely: 0 = Use Lifetime, > 0 a chance to live forever")]
+	[DDLRegistration(0x5c754e57u, "Infinite Lifetime Chance", "Chance of decal living infinitely: 0 = Use Lifetime, > 0 a chance to live forever")]
 	public float InfiniteLifetimeChance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x56fa2f9bu, description: "Height, in meters")]
+	[DDLRegistration(0xc750e4dau, description: "Height, in meters")]
 	public float Size { get; set; } = 1.00f;
 
-	[DDLRegistration(0x56fa2f9bu, "W:H Ratio")]
+	[DDLRegistration(0xaa6dbfb2u, "W:H Ratio")]
 	public float WhRatio { get; set; } = 1.00f;
 
-	[DDLRegistration(0x56fa2f9bu, "Depth Ratio")]
+	[DDLRegistration(0x5d17de57u, "Depth Ratio")]
 	public float DepthRatio { get; set; } = 1.00f;
 
-	[DDLRegistration(0x56fa2f9bu, "Material LoD Distance")]
+	[DDLRegistration(0x1d304c23u, "Material LoD Distance")]
 	public float LodDistance { get; set; } = 100.00f;
 
-	[DDLRegistration(0x56fa2f9bu, "Fade Distance")]
+	[DDLRegistration(0xa05039a0u, "Fade Distance")]
 	public float FadeDistance { get; set; } = 25.00f;
 
-	[DDLRegistration(0x56fa2f9bu, "Fade Duration")]
+	[DDLRegistration(0x3a9d23e1u, "Fade Duration")]
 	public float FadeDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x56fa2f9bu, "Conduit Delete Fade Out")]
+	[DDLRegistration(0x731479cbu, "Conduit Delete Fade Out")]
 	public float ConduitDeleteFadeOut { get; set; } = -1.00f;
 
-	[DDLRegistration(0x56fa2f9bu, "Max Projection Angle")]
+	[DDLRegistration(0x191f829eu, "Max Projection Angle")]
 	public float MaxAngle { get; set; } = 72.00f;
 
-	[DDLRegistration(0x56fa2f9bu, "Is Important", "This decal is important for gameplay, so it should be made if possible")]
+	[DDLRegistration(0x7ee5cdfcu, "Is Important", "This decal is important for gameplay, so it should be made if possible")]
 	public bool IsImportant { get; set; } = false;
 
-	[DDLRegistration(0x56fa2f9bu, "Is Required", "This decal is required for gameplay, so it should be made if possible")]
+	[DDLRegistration(0xa0affed3u, "Is Required", "This decal is required for gameplay, so it should be made if possible")]
 	public bool IsRequired { get; set; } = false;
 
-	[DDLRegistration(0x56fa2f9bu, description: "Randomly orient the decal")]
+	[DDLRegistration(0xe2b8652au, description: "Randomly orient the decal")]
 	public bool RandOrient { get; set; } = true;
 
-	[DDLRegistration(0x56fa2f9bu, "Apply to bots", "Controls whether this decal will apply to models flagged as bots")]
+	[DDLRegistration(0xf3ebe52cu, "Apply to bots", "Controls whether this decal will apply to models flagged as bots")]
 	public bool ApplyToBots { get; set; } = false;
 
-	[DDLRegistration(0x56fa2f9bu, "Swap Forward & Up", "Swap the fwd and up vectors from the source orientation when setting the decal orientation.")]
+	[DDLRegistration(0x85c49d37u, "Swap Forward & Up", "Swap the fwd and up vectors from the source orientation when setting the decal orientation.")]
 	public bool SwapForwardAndUp { get; set; } = false;
 
-	[DDLRegistration(0x56fa2f9bu, "Allow Single Overlap")]
+	[DDLRegistration(0xaec8f1bcu, "Allow Single Overlap")]
 	public bool AllowSingleOverlap { get; set; } = false;
 
-	[DDLRegistration(0x56fa2f9bu, "Replace Overlapping Decal")]
+	[DDLRegistration(0x728c0a50u, "Replace Overlapping Decal")]
 	public bool ReplaceOverlapping { get; set; } = false;
 
-	[DDLRegistration(0x56fa2f9bu, "Update Overlapping Decal")]
+	[DDLRegistration(0xe803b4f8u, "Update Overlapping Decal")]
 	public bool UpdateOverlapping { get; set; } = false;
 
-	[DDLRegistration(0x56fa2f9bu, "Covered Materials", "Materials that the decal will be applied to")]
+	[DDLRegistration(0xa92a5308u, "Covered Materials", "Materials that the decal will be applied to")]
 	public ulong CoveredMaterialArray { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x56fa2f9bu)]
+	[DDLRegistration(0x28ab92cdu)]
 	public ulong CoveredMaterialArray0 { get; set; } = 0xffffffffffffffff;
 
-	[DDLRegistration(0x56fa2f9bu)]
+	[DDLRegistration(0x5faca25bu)]
 	public ulong CoveredMaterialArray1 { get; set; } = 0xffffffffffffffff;
 
 	public new static DecalResponseEvent Create(DDLObject ddl) => new(ddl);

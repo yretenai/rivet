@@ -18,7 +18,7 @@ public class UDSHintEntities : DDLObjectType, IDDLObjectType<UDSHintEntities> {
 		Hints = ddl.GetObjects<UDSHint>(0x31caea83u);
 	}
 
-	[DDLRegistration(0xbe99826bu)]
+	[DDLRegistration(0x31caea83u)]
 	public List<UDSHint?> Hints { get; set; } = [];
 
 	public static UDSHintEntities Create(DDLObject ddl) => new(ddl);

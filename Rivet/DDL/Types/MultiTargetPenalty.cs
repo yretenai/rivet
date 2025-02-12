@@ -19,10 +19,10 @@ public class MultiTargetPenalty : DDLObjectType, IDDLObjectType<MultiTargetPenal
 		Penalty = ddl.GetValue<float>(0xae08ece0u, Penalty);
 	}
 
-	[DDLRegistration(0x5f896fcdu)]
+	[DDLRegistration(0xa03b83f8u)]
 	public float NumTargeters { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5f896fcdu)]
+	[DDLRegistration(0xae08ece0u)]
 	public float Penalty { get; set; } = 0.00f;
 
 	public static MultiTargetPenalty Create(DDLObject ddl) => new(ddl);

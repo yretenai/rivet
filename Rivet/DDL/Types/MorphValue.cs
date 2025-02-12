@@ -19,10 +19,10 @@ public class MorphValue : DDLObjectType, IDDLObjectType<MorphValue> {
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x6351bc26u)]
+	[DDLRegistration(0x6980ea8bu)]
 	public string? Blendname { get; set; } = default;
 
-	[DDLRegistration(0x6351bc26u, description: "0.0 to 1.0")]
+	[DDLRegistration(0x042494f5u, description: "0.0 to 1.0")]
 	public float Value { get; set; } = 0.00f;
 
 	public static MorphValue Create(DDLObject ddl) => new(ddl);

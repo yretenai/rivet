@@ -21,16 +21,16 @@ public class VisualEffectColorKeyFrames : DDLObjectType, IDDLObjectType<VisualEf
 		Value = ddl.GetObject<DDLVector3>(0x042494f5u);
 	}
 
-	[DDLRegistration(0xc9ed354eu, "Loop")]
+	[DDLRegistration(0xe15c9369u, "Loop")]
 	public bool EnableLooping { get; set; } = true;
 
-	[DDLRegistration(0xc9ed354eu, "Use Emitter Age")]
+	[DDLRegistration(0x81d6b7fcu, "Use Emitter Age")]
 	public bool UseEmitterAge { get; set; } = false;
 
-	[DDLRegistration(0xc9ed354eu, "LifeTime Override")]
+	[DDLRegistration(0x580128bbu, "LifeTime Override")]
 	public float LifeTimeOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc9ed354eu)]
+	[DDLRegistration(0x042494f5u)]
 	public DDLVector3? Value { get; set; } = default;
 
 	public static VisualEffectColorKeyFrames Create(DDLObject ddl) => new(ddl);

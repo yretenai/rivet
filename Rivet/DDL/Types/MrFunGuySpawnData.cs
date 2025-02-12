@@ -40,73 +40,73 @@ public class MrFunGuySpawnData : ActorSpawnData, IDDLObjectType<MrFunGuySpawnDat
 		LandPos = ddl.GetObject<DDLVector3>(0xc6ab960eu);
 	}
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The shot owner's actor handle.")]
+	[DDLRegistration(0x6151ad8fu, description: "The shot owner's actor handle.")]
 	public uint OwnerHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The shot's actor handle.")]
+	[DDLRegistration(0xf47be90bu, description: "The shot's actor handle.")]
 	public uint ShotHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "AssetId for the asset we're spawning.")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning.")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The zone index we should put the spawned guy into.")]
+	[DDLRegistration(0x0c9266b7u, description: "The zone index we should put the spawned guy into.")]
 	public int ZoneIndex { get; set; } = 0;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "AssetId for the SpawnedShotConfig we will use for the Mr. Fun Guy turret shots.")]
+	[DDLRegistration(0x4a739e64u, description: "AssetId for the SpawnedShotConfig we will use for the Mr. Fun Guy turret shots.")]
 	public RivetAssetId TurretShotConfigAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdcb1c0aeu)]
+	[DDLRegistration(0x902af590u)]
 	public uint WeaponId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdcb1c0aeu)]
+	[DDLRegistration(0x42a5ee59u)]
 	public uint WeaponNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The maximum amount of time the bot can be alive.")]
+	[DDLRegistration(0xa9f6b83cu, description: "The maximum amount of time the bot can be alive.")]
 	public float MaxLifetime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The damage that each shot from the turret deals.")]
+	[DDLRegistration(0xbf4e0743u, description: "The damage that each shot from the turret deals.")]
 	public float TurretShotDamage { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The fire rate of the bot's turret.")]
+	[DDLRegistration(0x9b3b0baeu, description: "The fire rate of the bot's turret.")]
 	public float TurretFireRate { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The maximum distance from the target that the bot will start shooting from. Note: There's a tweak buffer that's added to this once firing has already started, to avoid jittery behavior.")]
+	[DDLRegistration(0x75a49560u, description: "The maximum distance from the target that the bot will start shooting from. Note: There's a tweak buffer that's added to this once firing has already started, to avoid jittery behavior.")]
 	public float AttackRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The maximum number of bullets the bot can shoot before despawning.")]
+	[DDLRegistration(0xaf5be69eu, description: "The maximum number of bullets the bot can shoot before despawning.")]
 	public byte TurretAmmoCapacity { get; set; } = 0x00;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The amount of time the poison status will last after applying to an enemy.")]
+	[DDLRegistration(0xe0f01d72u, description: "The amount of time the poison status will last after applying to an enemy.")]
 	public float PoisonStatusDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "Whether the bot has the upgrade that enables an AOE cloud on death.")]
+	[DDLRegistration(0xdeeff85bu, description: "Whether the bot has the upgrade that enables an AOE cloud on death.")]
 	public float HasAOECloudOnDeathUpgrade { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "A multiplier that's applied to movement speed.")]
+	[DDLRegistration(0xcf3689d0u, description: "A multiplier that's applied to movement speed.")]
 	public float MovementSpeedMultiplier { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "A multiplier that affects how much more enemies will want to target Mr Fun Guy over the hero.")]
+	[DDLRegistration(0x25aa93a3u, description: "A multiplier that affects how much more enemies will want to target Mr Fun Guy over the hero.")]
 	public float AggroBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The damage per second applied to the enemies inside the gas cloud.")]
+	[DDLRegistration(0x3a91fda5u, description: "The damage per second applied to the enemies inside the gas cloud.")]
 	public float GasDamage { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The angle (in degrees, offset from forward) that this fun guy/gal should bounce towards while playing their spawn animation")]
+	[DDLRegistration(0xe12d1d66u, description: "The angle (in degrees, offset from forward) that this fun guy/gal should bounce towards while playing their spawn animation")]
 	public float SpawnBounceAngleOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdcb1c0aeu, description: "The distance that the bot should bounce from their initial spawn position, to offset them from their partner (gal/guy)")]
+	[DDLRegistration(0xbde92493u, description: "The distance that the bot should bounce from their initial spawn position, to offset them from their partner (gal/guy)")]
 	public float SpawnBounceDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdcb1c0aeu)]
+	[DDLRegistration(0x45e23d0fu)]
 	public DDLVector3? SpawnPos { get; set; } = default;
 
-	[DDLRegistration(0xdcb1c0aeu)]
+	[DDLRegistration(0xb37847eeu)]
 	public DDLVector3? Facing { get; set; } = default;
 
-	[DDLRegistration(0xdcb1c0aeu)]
+	[DDLRegistration(0x76fcc3adu)]
 	public DDLVector3? Up { get; set; } = default;
 
-	[DDLRegistration(0xdcb1c0aeu)]
+	[DDLRegistration(0xc6ab960eu)]
 	public DDLVector3? LandPos { get; set; } = default;
 
 	public new static MrFunGuySpawnData Create(DDLObject ddl) => new(ddl);

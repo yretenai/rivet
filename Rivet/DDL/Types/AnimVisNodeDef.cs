@@ -25,28 +25,28 @@ public class AnimVisNodeDef : DDLObjectType, IDDLObjectType<AnimVisNodeDef> {
 		RefNames = ddl.GetStrings(0x83a5eaa8u);
 	}
 
-	[DDLRegistration(0x689ef173u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x6c8f7f60 Type { get; set; } = x6c8f7f60.TypeDriverClip;
 
-	[DDLRegistration(0x689ef173u)]
+	[DDLRegistration(0x7a8704f5u)]
 	public string? DriverName { get; set; } = default;
 
-	[DDLRegistration(0x689ef173u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x689ef173u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x689ef173u)]
+	[DDLRegistration(0x1cbeb3a9u)]
 	public float LocalTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x689ef173u)]
+	[DDLRegistration(0x18637134u)]
 	public float LocalWeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0x689ef173u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 0.00f;
 
-	[DDLRegistration(0x689ef173u)]
+	[DDLRegistration(0x83a5eaa8u)]
 	public List<string?> RefNames { get; set; } = [];
 
 	public static AnimVisNodeDef Create(DDLObject ddl) => new(ddl);

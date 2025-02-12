@@ -23,22 +23,22 @@ public class StatusEffectActorTrailPrius : StatusEffectBasePrius, IDDLObjectType
 		DropOnGround = ddl.GetValue<bool>(0xdfab1e86u, DropOnGround);
 	}
 
-	[DDLRegistration(0x4ef6aeacu)]
+	[DDLRegistration(0x5d269a38u)]
 	public RivetAssetId Actor { get; set; } = default;
 
-	[DDLRegistration(0x4ef6aeacu, "Time Delay Initial Spawn")]
+	[DDLRegistration(0x097aeb88u, "Time Delay Initial Spawn")]
 	public float TimeDelayInitialSpawn { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4ef6aeacu, "Distance For Initial Spawn")]
+	[DDLRegistration(0x9a0d9e51u, "Distance For Initial Spawn")]
 	public float DistanceForInitialSpawn { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4ef6aeacu, "Time Between Spawns")]
+	[DDLRegistration(0x34a6a75bu, "Time Between Spawns")]
 	public float TimeBetweenSpawns { get; set; } = 0.25f;
 
-	[DDLRegistration(0x4ef6aeacu, "Distance Between Spawns")]
+	[DDLRegistration(0x200e976cu, "Distance Between Spawns")]
 	public float DistanceBetweenSpawns { get; set; } = 0.50f;
 
-	[DDLRegistration(0x4ef6aeacu, "Drop On Ground")]
+	[DDLRegistration(0xdfab1e86u, "Drop On Ground")]
 	public bool DropOnGround { get; set; } = true;
 
 	public new static StatusEffectActorTrailPrius Create(DDLObject ddl) => new(ddl);

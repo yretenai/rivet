@@ -19,10 +19,10 @@ public class DynamicEnumValueType : DDLObjectType, IDDLObjectType<DynamicEnumVal
 		EnumValue = ddl.GetString(0xa7cf9ee5) ?? EnumValue;
 	}
 
-	[DDLRegistration(0x8d528ae0u)]
+	[DDLRegistration(0xb8179c8du)]
 	public string? EnumAsset { get; set; } = default;
 
-	[DDLRegistration(0x8d528ae0u)]
+	[DDLRegistration(0xa7cf9ee5u)]
 	public string? EnumValue { get; set; } = default;
 
 	public static DynamicEnumValueType Create(DDLObject ddl) => new(ddl);

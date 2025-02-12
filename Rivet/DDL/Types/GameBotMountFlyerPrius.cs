@@ -20,13 +20,13 @@ public class GameBotMountFlyerPrius : BotPrius, IDDLObjectType<GameBotMountFlyer
 		MountData = ddl.GetValue<RivetAssetId>(0x6c6a0baeu, MountData);
 	}
 
-	[DDLRegistration(0x71da7cbcu)]
+	[DDLRegistration(0xbc92ccf0u)]
 	public RivetAssetId GunWeapon { get; set; } = default;
 
-	[DDLRegistration(0x71da7cbcu)]
+	[DDLRegistration(0xe9b42302u)]
 	public RivetAssetId BreathWeapon { get; set; } = default;
 
-	[DDLRegistration(0x71da7cbcu)]
+	[DDLRegistration(0x6c6a0baeu)]
 	public RivetAssetId MountData { get; set; } = default;
 
 	public new static GameBotMountFlyerPrius Create(DDLObject ddl) => new(ddl);

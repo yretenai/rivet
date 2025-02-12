@@ -25,28 +25,28 @@ public class EventStimulus : DDLObjectType, IDDLObjectType<EventStimulus> {
 		RelevantAwareness = ddl.GetBitset<RelevantAwareness>(0x2575d3dcu, RelevantAwarenessValues.Lookup);
 	}
 
-	[DDLRegistration(0xa0fb5782u)]
+	[DDLRegistration(0x22fdc666u)]
 	public EventBase? Event { get; set; } = default;
 
-	[DDLRegistration(0xa0fb5782u, description: "With each event, target confirmation becomes this much closer to being confirmed.")]
+	[DDLRegistration(0x8c4af54bu, description: "With each event, target confirmation becomes this much closer to being confirmed.")]
 	public float BonusConfirmTime { get; set; } = 5.00f;
 
-	[DDLRegistration(0xa0fb5782u)]
+	[DDLRegistration(0x5c01be78u)]
 	public xbd2e617d NewMinTargetAwareness { get; set; } = xbd2e617d.Spotting;
 
-	[DDLRegistration(0xa0fb5782u)]
+	[DDLRegistration(0x504e1083u)]
 	public float Aggro { get; set; } = 15.00f;
 
-	[DDLRegistration(0xa0fb5782u, description: "<= 0 means 'events sent to me only'.")]
+	[DDLRegistration(0xc03b8831u, description: "<= 0 means 'events sent to me only'.")]
 	public float ListenRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa0fb5782u)]
+	[DDLRegistration(0x96d5cd23u)]
 	public bool StealTargetFromFriendlySender { get; set; } = true;
 
-	[DDLRegistration(0xa0fb5782u)]
+	[DDLRegistration(0x826b4443u)]
 	public bool StealthDamage { get; set; } = false;
 
-	[DDLRegistration(0xa0fb5782u)]
+	[DDLRegistration(0x2575d3dcu)]
 	public RelevantAwareness RelevantAwareness { get; set; } = (RelevantAwareness) 0x00000001;
 
 	public static EventStimulus Create(DDLObject ddl) => new(ddl);

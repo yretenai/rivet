@@ -19,10 +19,10 @@ public class AudioChannelsNonLoc : DDLObjectType, IDDLObjectType<AudioChannelsNo
 		Channels = ddl.GetObject<AudioChannels>(0x09155fc6u);
 	}
 
-	[DDLRegistration(0xcf1c5da1u, description: "Bink sound compression value (0 = lossless, 4 = perceptibly lossless, 99 = very lossy).")]
+	[DDLRegistration(0xe5a2b98eu, description: "Bink sound compression value (0 = lossless, 4 = perceptibly lossless, 99 = very lossy).")]
 	public uint Compression { get; set; } = 0x00000003;
 
-	[DDLRegistration(0xcf1c5da1u, description: "Audio channels.")]
+	[DDLRegistration(0x09155fc6u, description: "Audio channels.")]
 	public AudioChannels? Channels { get; set; } = default;
 
 	public static AudioChannelsNonLoc Create(DDLObject ddl) => new(ddl);

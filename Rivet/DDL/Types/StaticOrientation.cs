@@ -18,7 +18,7 @@ public class StaticOrientation : OrientationMode, IDDLObjectType<StaticOrientati
 		OneTimeRotation = ddl.GetObject<DDLVector3>(0x053541dbu);
 	}
 
-	[DDLRegistration(0xb9868964u)]
+	[DDLRegistration(0x053541dbu)]
 	public DDLVector3? OneTimeRotation { get; set; } = default;
 
 	public new static StaticOrientation Create(DDLObject ddl) => new(ddl);

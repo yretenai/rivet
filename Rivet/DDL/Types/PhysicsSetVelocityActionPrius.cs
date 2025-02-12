@@ -19,10 +19,10 @@ public class PhysicsSetVelocityActionPrius : DDLObjectType, IDDLObjectType<Physi
 		IsLocalSpace = ddl.GetValue<bool>(0x4f3e03d4u, IsLocalSpace);
 	}
 
-	[DDLRegistration(0x296949e7u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x296949e7u, description: "False: vectors are world space. True: vectors are local (object) space.")]
+	[DDLRegistration(0x4f3e03d4u, description: "False: vectors are world space. True: vectors are local (object) space.")]
 	public bool IsLocalSpace { get; set; } = false;
 
 	public static PhysicsSetVelocityActionPrius Create(DDLObject ddl) => new(ddl);

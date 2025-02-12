@@ -19,10 +19,10 @@ public class SoundGroupNameDef : DDLObjectType, IDDLObjectType<SoundGroupNameDef
 		Names = ddl.GetStrings(0xeb608581u);
 	}
 
-	[DDLRegistration(0x19a94048u)]
+	[DDLRegistration(0xb215bfb7u)]
 	public string? GroupName { get; set; } = default;
 
-	[DDLRegistration(0x19a94048u)]
+	[DDLRegistration(0xeb608581u)]
 	public List<string?> Names { get; set; } = [];
 
 	public static SoundGroupNameDef Create(DDLObject ddl) => new(ddl);

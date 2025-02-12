@@ -23,22 +23,22 @@ public class MoverGroundOverrides : DDLObjectType, IDDLObjectType<MoverGroundOve
 		OrientDamp = ddl.GetValue<float>(0x33b678bdu, OrientDamp);
 	}
 
-	[DDLRegistration(0x3bbb9d1cu, "Step-Up Height")]
+	[DDLRegistration(0xd094ec68u, "Step-Up Height")]
 	public float StepUpHeight { get; set; } = -100.00f;
 
-	[DDLRegistration(0x3bbb9d1cu, "Step-Down Height")]
+	[DDLRegistration(0x0bc74600u, "Step-Down Height")]
 	public float StepDownHeight { get; set; } = -100.00f;
 
-	[DDLRegistration(0x3bbb9d1cu, "Good Ground Slope")]
+	[DDLRegistration(0xa8ff9570u, "Good Ground Slope")]
 	public float GoodGroundSlope { get; set; } = -100.00f;
 
-	[DDLRegistration(0x3bbb9d1cu, "Max Height Fail")]
+	[DDLRegistration(0x7b4c57f1u, "Max Height Fail")]
 	public float MaxHeightFail { get; set; } = -100.00f;
 
-	[DDLRegistration(0x3bbb9d1cu, "Orient Gain")]
+	[DDLRegistration(0xbf602f34u, "Orient Gain")]
 	public float OrientGain { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3bbb9d1cu, "Orient Damp")]
+	[DDLRegistration(0x33b678bdu, "Orient Damp")]
 	public float OrientDamp { get; set; } = 0.00f;
 
 	public static MoverGroundOverrides Create(DDLObject ddl) => new(ddl);

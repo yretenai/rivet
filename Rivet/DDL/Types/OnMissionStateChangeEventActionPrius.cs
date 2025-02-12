@@ -19,10 +19,10 @@ public class OnMissionStateChangeEventActionPrius : DDLObjectType, IDDLObjectTyp
 		ChangeOption = ddl.GetEnum<StateChangeOption>(0x484c6cd7u, StateChangeOptionValues.Lookup);
 	}
 
-	[DDLRegistration(0xb2eb1342u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
-	[DDLRegistration(0xb2eb1342u)]
+	[DDLRegistration(0x484c6cd7u)]
 	public StateChangeOption ChangeOption { get; set; } = StateChangeOption.TriggerOnLoadAndEvent;
 
 	public static OnMissionStateChangeEventActionPrius Create(DDLObject ddl) => new(ddl);

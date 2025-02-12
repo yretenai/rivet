@@ -19,10 +19,10 @@ public class KeyLightTransformEngineItem : DDLObjectType, IDDLObjectType<KeyLigh
 		YawDegrees = ddl.GetValue<float>(0x42ae2f15u, YawDegrees);
 	}
 
-	[DDLRegistration(0xee76faf3u)]
+	[DDLRegistration(0xb3094e4du)]
 	public float PitchDegrees { get; set; } = 0.00f;
 
-	[DDLRegistration(0xee76faf3u)]
+	[DDLRegistration(0x42ae2f15u)]
 	public float YawDegrees { get; set; } = 0.00f;
 
 	public static KeyLightTransformEngineItem Create(DDLObject ddl) => new(ddl);

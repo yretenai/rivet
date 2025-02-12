@@ -19,10 +19,10 @@ public class BlackoutData : DDLObjectType, IDDLObjectType<BlackoutData> {
 		BlackoutMaterials = ddl.GetObjects<BlackoutMaterialItem>(0x8ecfb46bu);
 	}
 
-	[DDLRegistration(0xf6700375u)]
+	[DDLRegistration(0x7bad33e1u)]
 	public AssetReferenceDef? FilterAsset { get; set; } = default;
 
-	[DDLRegistration(0xf6700375u)]
+	[DDLRegistration(0x8ecfb46bu)]
 	public List<BlackoutMaterialItem?> BlackoutMaterials { get; set; } = [];
 
 	public static BlackoutData Create(DDLObject ddl) => new(ddl);

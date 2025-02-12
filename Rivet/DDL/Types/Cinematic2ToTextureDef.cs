@@ -19,10 +19,10 @@ public class Cinematic2ToTextureDef : DDLObjectType, IDDLObjectType<Cinematic2To
 		TextureType = ddl.GetEnum<x8af8ec29>(0x58cf7ca5u, x8af8ec29Values.Lookup);
 	}
 
-	[DDLRegistration(0x28fdff9eu, description: "Slot to use as the render destination")]
+	[DDLRegistration(0x781f0bebu, description: "Slot to use as the render destination")]
 	public x16517126 TextureSlot { get; set; } = x16517126.RenderTextureSlotNone;
 
-	[DDLRegistration(0x28fdff9eu)]
+	[DDLRegistration(0x58cf7ca5u)]
 	public x8af8ec29 TextureType { get; set; } = x8af8ec29.RenderTextureTypeNone;
 
 	public static Cinematic2ToTextureDef Create(DDLObject ddl) => new(ddl);

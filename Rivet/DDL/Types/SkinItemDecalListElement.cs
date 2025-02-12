@@ -21,16 +21,16 @@ public class SkinItemDecalListElement : DDLObjectType, IDDLObjectType<SkinItemDe
 		Decal = ddl.GetObject<SkinItemDecal>(0xcd48ef8cu);
 	}
 
-	[DDLRegistration(0x3956ece6u, "Debug Name", "Debug only name string")]
+	[DDLRegistration(0x4ef19112u, "Debug Name", "Debug only name string")]
 	public string? DebugName { get; set; } = default;
 
-	[DDLRegistration(0x3956ece6u, "Name LocTag", "Localization tag for name")]
+	[DDLRegistration(0xa0041b54u, "Name LocTag", "Localization tag for name")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0x3956ece6u, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0x3956ece6u, "Decal", "Decal parameters")]
+	[DDLRegistration(0xcd48ef8cu, "Decal", "Decal parameters")]
 	public SkinItemDecal? Decal { get; set; } = default;
 
 	public static SkinItemDecalListElement Create(DDLObject ddl) => new(ddl);

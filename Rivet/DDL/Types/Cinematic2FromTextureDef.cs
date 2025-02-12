@@ -22,19 +22,19 @@ public class Cinematic2FromTextureDef : DDLObjectType, IDDLObjectType<Cinematic2
 		TransferVelocityDepth = ddl.GetValue<bool>(0x826fc872u, TransferVelocityDepth);
 	}
 
-	[DDLRegistration(0xd5653ef5u, description: "Slot to use as the texture source")]
+	[DDLRegistration(0x781f0bebu, description: "Slot to use as the texture source")]
 	public x16517126 TextureSlot { get; set; } = x16517126.RenderTextureSlotNone;
 
-	[DDLRegistration(0xd5653ef5u, description: "ActorId of the actor on which to override the texture")]
+	[DDLRegistration(0x6c21ca8au, description: "ActorId of the actor on which to override the texture")]
 	public RivetAssetId ActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd5653ef5u, description: "Texture sampler name")]
+	[DDLRegistration(0x30712231u, description: "Texture sampler name")]
 	public string? TextureSamplerName { get; set; } = default;
 
-	[DDLRegistration(0xd5653ef5u, "MaterialMappingName", "Material mapping name (can be empty to apply to all mappings)")]
+	[DDLRegistration(0x981e6927u, "MaterialMappingName", "Material mapping name (can be empty to apply to all mappings)")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0xd5653ef5u, description: "Whether to transfer velocity and depth from the offscreen into the main view")]
+	[DDLRegistration(0x826fc872u, description: "Whether to transfer velocity and depth from the offscreen into the main view")]
 	public bool TransferVelocityDepth { get; set; } = false;
 
 	public static Cinematic2FromTextureDef Create(DDLObject ddl) => new(ddl);

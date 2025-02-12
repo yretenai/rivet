@@ -26,31 +26,31 @@ public class FinaleLaserSweepConfig : DDLObjectType, IDDLObjectType<FinaleLaserS
 		GroundBlastRadius = ddl.GetValue<float>(0x954fca38u, GroundBlastRadius);
 	}
 
-	[DDLRegistration(0x56414d93u)]
+	[DDLRegistration(0x3ddbd4bau)]
 	public RivetAssetId WeaponActorVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x56414d93u)]
+	[DDLRegistration(0xc23a6c53u)]
 	public RivetAssetId CurveActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x56414d93u)]
+	[DDLRegistration(0x391d6f9eu)]
 	public RivetAssetId GroundBlastTriggerVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x56414d93u)]
+	[DDLRegistration(0xd74af6eeu)]
 	public List<FinaleLaserCurve?> CurveList { get; set; } = [];
 
-	[DDLRegistration(0x56414d93u)]
+	[DDLRegistration(0x68ee6562u)]
 	public float DelayTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x56414d93u)]
+	[DDLRegistration(0x1a29bd24u)]
 	public float InitialSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x56414d93u)]
+	[DDLRegistration(0xb0586e2bu)]
 	public float GroundBlastAccel { get; set; } = 20.00f;
 
-	[DDLRegistration(0x56414d93u)]
+	[DDLRegistration(0x2b105609u)]
 	public float GroundBlastMaxSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0x56414d93u)]
+	[DDLRegistration(0x954fca38u)]
 	public float GroundBlastRadius { get; set; } = 4.00f;
 
 	public static FinaleLaserSweepConfig Create(DDLObject ddl) => new(ddl);

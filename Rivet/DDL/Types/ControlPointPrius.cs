@@ -20,13 +20,13 @@ public class ControlPointPrius : DDLObjectType, IDDLObjectType<ControlPointPrius
 		RatePerTeamMember = ddl.GetValue<float>(0xaaa33e3du, RatePerTeamMember);
 	}
 
-	[DDLRegistration(0x0a059c49u, description: "Capture radius in meters")]
+	[DDLRegistration(0x0504203du, description: "Capture radius in meters")]
 	public float Radius { get; set; } = 10.00f;
 
-	[DDLRegistration(0x0a059c49u, description: "Total capture time in seconds")]
+	[DDLRegistration(0x44ae873au, description: "Total capture time in seconds")]
 	public float TimeToCap { get; set; } = 60.00f;
 
-	[DDLRegistration(0x0a059c49u, description: "Capture rate per team member")]
+	[DDLRegistration(0xaaa33e3du, description: "Capture rate per team member")]
 	public float RatePerTeamMember { get; set; } = 0.10f;
 
 	public static ControlPointPrius Create(DDLObject ddl) => new(ddl);

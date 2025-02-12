@@ -18,7 +18,7 @@ public class VendorPropManagerPrius : SimplePropManagerPrius, IDDLObjectType<Ven
 		BeamInConfig = ddl.GetValue<RivetAssetId>(0x41075a28u, BeamInConfig);
 	}
 
-	[DDLRegistration(0x3c41d6eeu)]
+	[DDLRegistration(0x41075a28u)]
 	public RivetAssetId BeamInConfig { get; set; } = default;
 
 	public new static VendorPropManagerPrius Create(DDLObject ddl) => new(ddl);

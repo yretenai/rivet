@@ -20,13 +20,13 @@ public class DialogDebugWarningMessageEvent : EventBase, IDDLObjectType<DialogDe
 		Message = ddl.GetEnum<x7f6273a0>(0xb7575347u, x7f6273a0Values.Lookup);
 	}
 
-	[DDLRegistration(0x7250ad85u)]
+	[DDLRegistration(0x3446b219u)]
 	public uint LocalizationTag { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7250ad85u)]
+	[DDLRegistration(0x32ca55d0u)]
 	public uint UniqueId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7250ad85u, description: "The type of potential problem that may have occured with dialog.")]
+	[DDLRegistration(0xb7575347u, description: "The type of potential problem that may have occured with dialog.")]
 	public x7f6273a0 Message { get; set; } = x7f6273a0.NoSoundBank;
 
 	public new static DialogDebugWarningMessageEvent Create(DDLObject ddl) => new(ddl);

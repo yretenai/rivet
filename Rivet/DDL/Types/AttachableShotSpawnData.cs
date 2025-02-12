@@ -27,34 +27,34 @@ public class AttachableShotSpawnData : ActorSpawnData, IDDLObjectType<Attachable
 		AttachMaterial = ddl.GetValue<int>(0x63eb5738u, AttachMaterial);
 	}
 
-	[DDLRegistration(0x19f942feu, description: "The shot owner/root/source. The shooter.")]
+	[DDLRegistration(0x8b1a8202u, description: "The shot owner/root/source. The shooter.")]
 	public uint ShotOwner { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x19f942feu, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x19f942feu)]
+	[DDLRegistration(0x902af590u)]
 	public uint WeaponId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x19f942feu)]
+	[DDLRegistration(0xf28cbe41u)]
 	public float SpawnTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x19f942feu)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0x19f942feu)]
+	[DDLRegistration(0x24c2eb7eu)]
 	public uint AttachActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x19f942feu)]
+	[DDLRegistration(0xfd42c180u)]
 	public int AttachJoint { get; set; } = -1;
 
-	[DDLRegistration(0x19f942feu)]
+	[DDLRegistration(0xd5b2f2a5u)]
 	public DDLTransform? RelativeMatrix { get; set; } = default;
 
-	[DDLRegistration(0x19f942feu)]
+	[DDLRegistration(0x0c04db8eu)]
 	public DDLVector3? RelativeNormal { get; set; } = default;
 
-	[DDLRegistration(0x19f942feu)]
+	[DDLRegistration(0x63eb5738u)]
 	public int AttachMaterial { get; set; } = 0;
 
 	public new static AttachableShotSpawnData Create(DDLObject ddl) => new(ddl);

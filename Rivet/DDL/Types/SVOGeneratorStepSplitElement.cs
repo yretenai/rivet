@@ -20,13 +20,13 @@ public class SVOGeneratorStepSplitElement : DDLObjectType, IDDLObjectType<SVOGen
 		Intersecting = ddl.GetValue<bool>(0xd8f94ed8u, Intersecting);
 	}
 
-	[DDLRegistration(0xeaee246cu)]
+	[DDLRegistration(0x7e88a543u)]
 	public DDLVector3? Center { get; set; } = default;
 
-	[DDLRegistration(0xeaee246cu)]
+	[DDLRegistration(0x107672fbu)]
 	public DDLVector3? Radii { get; set; } = default;
 
-	[DDLRegistration(0xeaee246cu)]
+	[DDLRegistration(0xd8f94ed8u)]
 	public bool Intersecting { get; set; } = false;
 
 	public static SVOGeneratorStepSplitElement Create(DDLObject ddl) => new(ddl);

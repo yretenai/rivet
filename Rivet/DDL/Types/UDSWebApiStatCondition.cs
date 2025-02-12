@@ -19,10 +19,10 @@ public class UDSWebApiStatCondition : DDLObjectType, IDDLObjectType<UDSWebApiSta
 		Property = ddl.GetObject<UDSWebApiStatProperty>(0x8885c3f8u);
 	}
 
-	[DDLRegistration(0x8faccf4cu)]
+	[DDLRegistration(0xa2b910beu)]
 	public string? EventName { get; set; } = default;
 
-	[DDLRegistration(0x8faccf4cu)]
+	[DDLRegistration(0x8885c3f8u)]
 	public UDSWebApiStatProperty? Property { get; set; } = default;
 
 	public static UDSWebApiStatCondition Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ChainLightningExplosionEvent : EventBase, IDDLObjectType<ChainLight
 		ArcCount = ddl.GetValue<int>(0xf4cfe2b1u, ArcCount);
 	}
 
-	[DDLRegistration(0x2889a74bu)]
+	[DDLRegistration(0xf4cfe2b1u)]
 	public int ArcCount { get; set; } = 0;
 
 	public new static ChainLightningExplosionEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class VendorOfferPrius : OfferPrius, IDDLObjectType<VendorOfferPrius> {
 		OfferText = ddl.GetString(0x781aef97) ?? OfferText;
 	}
 
-	[DDLRegistration(0xc936dbdbu)]
+	[DDLRegistration(0x781aef97u)]
 	public string? OfferText { get; set; } = "Buy Items";
 
 	public new static VendorOfferPrius Create(DDLObject ddl) => new(ddl);

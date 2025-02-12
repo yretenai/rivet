@@ -18,7 +18,7 @@ public class ProximitySpawnerDamagedEvent : EventBase, IDDLObjectType<ProximityS
 		DamagedByHandle = ddl.GetValue<uint>(0x8d884ff1u, DamagedByHandle);
 	}
 
-	[DDLRegistration(0xb770fdf6u)]
+	[DDLRegistration(0x8d884ff1u)]
 	public uint DamagedByHandle { get; set; } = 0x00000000;
 
 	public new static ProximitySpawnerDamagedEvent Create(DDLObject ddl) => new(ddl);

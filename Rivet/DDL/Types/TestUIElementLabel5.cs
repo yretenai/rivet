@@ -21,16 +21,16 @@ public class TestUIElementLabel5 : DDLObjectType, IDDLObjectType<TestUIElementLa
 		TestLabel4 = ddl.GetDictionary<RivetAssetId, TestUIElementLabel1>(0x0015c7ba, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<TestUIElementLabel1>(mapId));
 	}
 
-	[DDLRegistration(0x6eb87dcau)]
+	[DDLRegistration(0x707f3335u)]
 	public List<TestUIElementLabel1?> TestLabel1 { get; set; } = [];
 
-	[DDLRegistration(0x6eb87dcau)]
+	[DDLRegistration(0xe976628fu)]
 	public List<TestUIElementLabel1?> TestLabel2 { get; set; } = [];
 
-	[DDLRegistration(0x6eb87dcau)]
+	[DDLRegistration(0x9e715219u)]
 	public Dictionary<RivetAssetId, TestUIElementLabel1?> TestLabel3 { get; set; } = [];
 
-	[DDLRegistration(0x6eb87dcau)]
+	[DDLRegistration(0x0015c7bau)]
 	public Dictionary<RivetAssetId, TestUIElementLabel1?> TestLabel4 { get; set; } = [];
 
 	public static TestUIElementLabel5 Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class EnterRagdollStatePrius : ScriptedShotEffectBasePrius, IDDLObjectTyp
 		LifeTime = ddl.GetValue<float>(0x67d422c6u, LifeTime);
 	}
 
-	[DDLRegistration(0xbf2d557cu)]
+	[DDLRegistration(0xebf69433u)]
 	public float Impulse { get; set; } = 15.00f;
 
-	[DDLRegistration(0xbf2d557cu)]
+	[DDLRegistration(0x67d422c6u)]
 	public float LifeTime { get; set; } = 2.00f;
 
 	public new static EnterRagdollStatePrius Create(DDLObject ddl) => new(ddl);

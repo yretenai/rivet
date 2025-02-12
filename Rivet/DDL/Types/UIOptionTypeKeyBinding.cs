@@ -19,10 +19,10 @@ public class UIOptionTypeKeyBinding : UIOptionTypeSettingBase, IDDLObjectType<UI
 		PrimaryLocked = ddl.GetValue<bool>(0xcd291a73u, PrimaryLocked);
 	}
 
-	[DDLRegistration(0x5088d72cu, description: "see PadSystem::s_NxActionInput for a list of action names")]
+	[DDLRegistration(0x55b608bbu, description: "see PadSystem::s_NxActionInput for a list of action names")]
 	public string? ActionName { get; set; } = "";
 
-	[DDLRegistration(0x5088d72cu, description: "if true, default action can not be rebinded")]
+	[DDLRegistration(0xcd291a73u, description: "if true, default action can not be rebinded")]
 	public bool PrimaryLocked { get; set; } = false;
 
 	public new static UIOptionTypeKeyBinding Create(DDLObject ddl) => new(ddl);

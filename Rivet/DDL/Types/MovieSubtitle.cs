@@ -20,13 +20,13 @@ public class MovieSubtitle : DDLObjectType, IDDLObjectType<MovieSubtitle> {
 		LocTag = ddl.GetString(0x06f8b0e5) ?? LocTag;
 	}
 
-	[DDLRegistration(0xc354b421u, "Starting Frame")]
+	[DDLRegistration(0x0c933754u, "Starting Frame")]
 	public uint FrameStart { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc354b421u, "Ending Frame")]
+	[DDLRegistration(0x9b52ce56u, "Ending Frame")]
 	public uint FrameEnd { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc354b421u, "Loc Tag of the subtitle")]
+	[DDLRegistration(0x06f8b0e5u, "Loc Tag of the subtitle")]
 	public string? LocTag { get; set; } = default;
 
 	public static MovieSubtitle Create(DDLObject ddl) => new(ddl);

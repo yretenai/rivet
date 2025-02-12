@@ -18,7 +18,7 @@ public class MovingSurfaceOverrideVolumePrius : DDLObjectType, IDDLObjectType<Mo
 		SurfaceActor = ddl.GetValue<RivetAssetId>(0x048f1885u, SurfaceActor);
 	}
 
-	[DDLRegistration(0x1a78009eu)]
+	[DDLRegistration(0x048f1885u)]
 	public RivetAssetId SurfaceActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static MovingSurfaceOverrideVolumePrius Create(DDLObject ddl) => new(ddl);

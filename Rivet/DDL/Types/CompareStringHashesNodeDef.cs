@@ -22,19 +22,19 @@ public class CompareStringHashesNodeDef : LogicNodeBaseDef, IDDLObjectType<Compa
 		NotEqual = ddl.GetObject<OutputPlugSignal>(0x9e476ea5u);
 	}
 
-	[DDLRegistration(0x96615285u)]
+	[DDLRegistration(0xbc236b65u)]
 	public InputPlugSignal? Compare { get; set; } = default;
 
-	[DDLRegistration(0x96615285u)]
+	[DDLRegistration(0x3a58e94du)]
 	public InputPlugStringHash? A { get; set; } = default;
 
-	[DDLRegistration(0x96615285u)]
+	[DDLRegistration(0xa351b8f7u)]
 	public InputPlugStringHash? B { get; set; } = default;
 
-	[DDLRegistration(0x96615285u, "A == B")]
+	[DDLRegistration(0x37f8d936u, "A == B")]
 	public OutputPlugSignal? Equal { get; set; } = default;
 
-	[DDLRegistration(0x96615285u, "A != B")]
+	[DDLRegistration(0x9e476ea5u, "A != B")]
 	public OutputPlugSignal? NotEqual { get; set; } = default;
 
 	public new static CompareStringHashesNodeDef Create(DDLObject ddl) => new(ddl);

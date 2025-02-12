@@ -21,16 +21,16 @@ public class TaskDef : ActivityDefBase, IDDLObjectType<TaskDef> {
 		Subtasks = ddl.GetObjects<SubtaskDef>(0xd0ea373du);
 	}
 
-	[DDLRegistration(0xde94000fu, description: "Localized text can be at most 128 characters.")]
+	[DDLRegistration(0x2d78cbbdu, description: "Localized text can be at most 128 characters.")]
 	public string? NameTag { get; set; } = default;
 
-	[DDLRegistration(0xde94000fu, description: "Whether or not the player must complete this task to complete the activity card.")]
+	[DDLRegistration(0x49a05f7au, description: "Whether or not the player must complete this task to complete the activity card.")]
 	public bool RequiredForCompletion { get; set; } = true;
 
-	[DDLRegistration(0xde94000fu, description: "Should this task be hidden as a spoiler?")]
+	[DDLRegistration(0xb625a7dau, description: "Should this task be hidden as a spoiler?")]
 	public bool Hidden { get; set; } = false;
 
-	[DDLRegistration(0xde94000fu)]
+	[DDLRegistration(0xd0ea373du)]
 	public List<SubtaskDef?> Subtasks { get; set; } = [];
 
 	public new static TaskDef Create(DDLObject ddl) => new(ddl);

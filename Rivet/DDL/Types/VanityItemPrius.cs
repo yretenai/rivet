@@ -20,13 +20,13 @@ public class VanityItemPrius : SkinItemPrius, IDDLObjectType<VanityItemPrius> {
 		Color = ddl.GetObject<VanityColorData>(0x7f058428u);
 	}
 
-	[DDLRegistration(0xf6ad1389u)]
+	[DDLRegistration(0xda6b255du)]
 	public uint ExpirationTime { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf6ad1389u)]
+	[DDLRegistration(0x031dd2ddu)]
 	public byte BeenPreviewed { get; set; } = 0x00;
 
-	[DDLRegistration(0xf6ad1389u)]
+	[DDLRegistration(0x7f058428u)]
 	public VanityColorData? Color { get; set; } = default;
 
 	public new static VanityItemPrius Create(DDLObject ddl) => new(ddl);

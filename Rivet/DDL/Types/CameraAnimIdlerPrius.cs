@@ -19,10 +19,10 @@ public class CameraAnimIdlerPrius : DDLObjectType, IDDLObjectType<CameraAnimIdle
 		CameraAnimName = ddl.GetString(0x2152a015) ?? CameraAnimName;
 	}
 
-	[DDLRegistration(0x7cdbef64u, "Idle Select")]
+	[DDLRegistration(0xe747921au, "Idle Select")]
 	public x2c44a864 IdleAnim { get; set; } = x2c44a864.None;
 
-	[DDLRegistration(0x7cdbef64u, "Custom Driver")]
+	[DDLRegistration(0x2152a015u, "Custom Driver")]
 	public string? CameraAnimName { get; set; } = default;
 
 	public static CameraAnimIdlerPrius Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class AnimatedBouncyPrius : TrampolinePrius, IDDLObjectType<AnimatedBounc
 		MaxFXDistance = ddl.GetValue<float>(0x542c3ed1u, MaxFXDistance);
 	}
 
-	[DDLRegistration(0x7fa24d10u, description: "Should this bouncy start active?")]
+	[DDLRegistration(0x3e035e82u, description: "Should this bouncy start active?")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0x7fa24d10u, description: "Looping driver to play while the bouncy is inactive.")]
+	[DDLRegistration(0xfb92cd64u, description: "Looping driver to play while the bouncy is inactive.")]
 	public string? InactiveLoopDriver { get; set; } = default;
 
-	[DDLRegistration(0x7fa24d10u, description: "Looping driver to play while the bouncy is active.")]
+	[DDLRegistration(0xbc7f62b4u, description: "Looping driver to play while the bouncy is active.")]
 	public string? ActiveLoopDriver { get; set; } = default;
 
-	[DDLRegistration(0x7fa24d10u, description: "Driver to play while the bouncy is transitioning from inactive to active.")]
+	[DDLRegistration(0x6a4b08aeu, description: "Driver to play while the bouncy is transitioning from inactive to active.")]
 	public string? ActivatingDriver { get; set; } = default;
 
-	[DDLRegistration(0x7fa24d10u, description: "Partial driver to play when an actor lands on the bouncy. Actor will be launched once the animation has sent the BouncyLaunchEvent.")]
+	[DDLRegistration(0x4f63a6f1u, description: "Partial driver to play when an actor lands on the bouncy. Actor will be launched once the animation has sent the BouncyLaunchEvent.")]
 	public string? PartialReactDriver { get; set; } = default;
 
-	[DDLRegistration(0x7fa24d10u, description: "Steam FX and audio is only active while this bouncy is active and the hero is within this distance.")]
+	[DDLRegistration(0x542c3ed1u, description: "Steam FX and audio is only active while this bouncy is active and the hero is within this distance.")]
 	public float MaxFXDistance { get; set; } = 60.00f;
 
 	public new static AnimatedBouncyPrius Create(DDLObject ddl) => new(ddl);

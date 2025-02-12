@@ -20,13 +20,13 @@ public class PickupBaseOfferPrius : HoldOfferPrius, IDDLObjectType<PickupBaseOff
 		HeightDown = ddl.GetValue<float>(0x18b154fau, HeightDown);
 	}
 
-	[DDLRegistration(0xd7a912fcu, "Require Path?", "Whether we require no collision from the prospective collector and us (a clear path).")]
+	[DDLRegistration(0xf7872abfu, "Require Path?", "Whether we require no collision from the prospective collector and us (a clear path).")]
 	public bool RequirePath { get; set; } = true;
 
-	[DDLRegistration(0xd7a912fcu, "Height Up")]
+	[DDLRegistration(0x7be988d7u, "Height Up")]
 	public float HeightUp { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd7a912fcu, "Height Down")]
+	[DDLRegistration(0x18b154fau, "Height Down")]
 	public float HeightDown { get; set; } = 0.10f;
 
 	public new static PickupBaseOfferPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MultiHeuristicTargetingPrius : HeuristicTargetingPrius, IDDLObjectT
 		MaxTrackedTargets = ddl.GetValue<int>(0xb7611a91u, MaxTrackedTargets);
 	}
 
-	[DDLRegistration(0xaa517c49u, description: "Max number of targets to track.")]
+	[DDLRegistration(0xb7611a91u, description: "Max number of targets to track.")]
 	public int MaxTrackedTargets { get; set; } = 1;
 
 	public new static MultiHeuristicTargetingPrius Create(DDLObject ddl) => new(ddl);

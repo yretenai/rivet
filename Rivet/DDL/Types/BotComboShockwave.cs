@@ -32,49 +32,49 @@ public class BotComboShockwave : BotComboMoveMelee, IDDLObjectType<BotComboShock
 		KnockbackForce = ddl.GetValue<float>(0x28d6ed59u, KnockbackForce);
 	}
 
-	[DDLRegistration(0x388535efu)]
+	[DDLRegistration(0x10f54dceu)]
 	public string? AnimDriver { get; set; } = default;
 
-	[DDLRegistration(0x388535efu)]
+	[DDLRegistration(0xc54e6703u)]
 	public string? SourceLocator { get; set; } = default;
 
-	[DDLRegistration(0x388535efu, description: "If true, instead of actor position or sourcelocator, we will have the shockwave start at mover's ground position below it")]
+	[DDLRegistration(0x13119462u, description: "If true, instead of actor position or sourcelocator, we will have the shockwave start at mover's ground position below it")]
 	public bool SourceIsActorEffectiveGround { get; set; } = false;
 
-	[DDLRegistration(0x388535efu)]
+	[DDLRegistration(0x8e18c0c5u)]
 	public DDLVector3? SourceOffset { get; set; } = default;
 
-	[DDLRegistration(0x388535efu)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x388535efu)]
+	[DDLRegistration(0xece213a3u)]
 	public float Thickness { get; set; } = 0.00f;
 
-	[DDLRegistration(0x388535efu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 0.00f;
 
-	[DDLRegistration(0x388535efu)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x388535efu, description: "If greater than 0.0f, the shockwave will grow to radius by this time and then stick around til duration")]
+	[DDLRegistration(0xecfa5c44u, description: "If greater than 0.0f, the shockwave will grow to radius by this time and then stick around til duration")]
 	public float GrowDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x388535efu)]
+	[DDLRegistration(0x2fb01a0bu)]
 	public float Damage { get; set; } = 0.00f;
 
-	[DDLRegistration(0x388535efu, description: "Type of damage.")]
+	[DDLRegistration(0x840c154du, description: "Type of damage.")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x388535efu, description: "Level of knockback applied.")]
+	[DDLRegistration(0x2e553fddu, description: "Level of knockback applied.")]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.Four;
 
-	[DDLRegistration(0x388535efu)]
+	[DDLRegistration(0x3be354f0u)]
 	public byte DamageFriends { get; set; } = 0x00;
 
-	[DDLRegistration(0x388535efu)]
+	[DDLRegistration(0x37e1f098u)]
 	public float StatusAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x388535efu)]
+	[DDLRegistration(0x28d6ed59u)]
 	public float KnockbackForce { get; set; } = 1.00f;
 
 	public new static BotComboShockwave Create(DDLObject ddl) => new(ddl);

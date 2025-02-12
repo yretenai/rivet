@@ -18,7 +18,7 @@ public class MapRange : DDLObjectType, IDDLObjectType<MapRange> {
 		Mappings = ddl.GetObjects<MapRangeElement>(0xec2bfe69u);
 	}
 
-	[DDLRegistration(0x664a1fb3u, description: "All values of X MUST be sorted smallest to largest.")]
+	[DDLRegistration(0xec2bfe69u, description: "All values of X MUST be sorted smallest to largest.")]
 	public List<MapRangeElement?> Mappings { get; set; } = [];
 
 	public static MapRange Create(DDLObject ddl) => new(ddl);

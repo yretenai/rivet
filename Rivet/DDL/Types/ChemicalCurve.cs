@@ -21,16 +21,16 @@ public class ChemicalCurve : DDLObjectType, IDDLObjectType<ChemicalCurve> {
 		RenderOverrides = ddl.GetObjects<ChemicalRenderOverride>(0xd1f6fba2u);
 	}
 
-	[DDLRegistration(0x04d920b2u, description: "What material to apply to the curve visual effect inst.")]
+	[DDLRegistration(0x86bfc8e5u, description: "What material to apply to the curve visual effect inst.")]
 	public RivetAssetId Material { get; set; } = default;
 
-	[DDLRegistration(0x04d920b2u, description: "Radius of the visual effect itself.")]
+	[DDLRegistration(0xdffb841bu, description: "Radius of the visual effect itself.")]
 	public float CurveRadius { get; set; } = 0.25f;
 
-	[DDLRegistration(0x04d920b2u, description: "The material is tiled such that this is the width/height of the tile.")]
+	[DDLRegistration(0xe967eb72u, description: "The material is tiled such that this is the width/height of the tile.")]
 	public float TileDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x04d920b2u, description: "Render overrides to apply to the created visual effect.")]
+	[DDLRegistration(0xd1f6fba2u, description: "Render overrides to apply to the created visual effect.")]
 	public List<ChemicalRenderOverride?> RenderOverrides { get; set; } = [];
 
 	public static ChemicalCurve Create(DDLObject ddl) => new(ddl);

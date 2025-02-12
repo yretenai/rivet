@@ -22,19 +22,19 @@ public class FlockingVolumesMaxExceededDevstatsEvent : EventBase, IDDLObjectType
 		RequiredMax = ddl.GetValue<int>(0x939b0cbdu, RequiredMax);
 	}
 
-	[DDLRegistration(0xfa8371d5u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xfa8371d5u)]
+	[DDLRegistration(0x83b900d2u)]
 	public string? Level { get; set; } = default;
 
-	[DDLRegistration(0xfa8371d5u)]
+	[DDLRegistration(0xc3db52f8u)]
 	public x3947cf7f LocationType { get; set; } = x3947cf7f.FlockingVolume;
 
-	[DDLRegistration(0xfa8371d5u)]
+	[DDLRegistration(0xedc6853cu)]
 	public uint CurrentMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfa8371d5u)]
+	[DDLRegistration(0x939b0cbdu)]
 	public int RequiredMax { get; set; } = 0;
 
 	public new static FlockingVolumesMaxExceededDevstatsEvent Create(DDLObject ddl) => new(ddl);

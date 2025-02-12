@@ -18,7 +18,7 @@ public class PickupRuinTokenPrius : GamePickupItemPrius, IDDLObjectType<PickupRu
 		SaveID = ddl.GetEnum<xeccc3486>(0xf61c4918u, xeccc3486Values.Lookup);
 	}
 
-	[DDLRegistration(0x9c577b70u, description: "Unique identifier of this Ruin Token for saving the game.")]
+	[DDLRegistration(0xf61c4918u, description: "Unique identifier of this Ruin Token for saving the game.")]
 	public xeccc3486 SaveID { get; set; } = xeccc3486.None;
 
 	public new static PickupRuinTokenPrius Create(DDLObject ddl) => new(ddl);

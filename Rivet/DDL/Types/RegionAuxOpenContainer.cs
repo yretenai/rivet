@@ -28,37 +28,37 @@ public class RegionAuxOpenContainer : DDLObjectType, IDDLObjectType<RegionAuxOpe
 		Regions = ddl.GetValues<RivetAssetId>(0xa38d1acbu);
 	}
 
-	[DDLRegistration(0x6f36f05fu, "Tile Radius")]
+	[DDLRegistration(0xe406382bu, "Tile Radius")]
 	public uint TileRadius { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x6f36f05fu, "Load Distance")]
+	[DDLRegistration(0xe94325c0u, "Load Distance")]
 	public uint LoadDistance { get; set; } = 0x00000096;
 
-	[DDLRegistration(0x6f36f05fu, "Unload Distance")]
+	[DDLRegistration(0x4822588au, "Unload Distance")]
 	public uint UnloadDistance { get; set; } = 0x000000aa;
 
-	[DDLRegistration(0x6f36f05fu, "Map Overlay")]
+	[DDLRegistration(0x10c367a4u, "Map Overlay")]
 	public Region2DMapOverlay? MapOverlay { get; set; } = default;
 
-	[DDLRegistration(0x6f36f05fu)]
+	[DDLRegistration(0xffddb037u)]
 	public Dictionary<RivetAssetId, RegionFolderNode?> Folders { get; set; } = [];
 
-	[DDLRegistration(0x6f36f05fu)]
+	[DDLRegistration(0xa18793c9u)]
 	public Dictionary<RivetAssetId, RivetAssetId> ZoneAssetIdToFolder { get; set; } = [];
 
-	[DDLRegistration(0x6f36f05fu)]
+	[DDLRegistration(0x9c997da9u)]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
-	[DDLRegistration(0x6f36f05fu, "Navigation mesh mode")]
+	[DDLRegistration(0x0b7842eau, "Navigation mesh mode")]
 	public x287f0b35 NavFormat { get; set; } = x287f0b35.Tiled;
 
-	[DDLRegistration(0x6f36f05fu)]
+	[DDLRegistration(0xfaaad4d2u)]
 	public List<RivetAssetId> NavExclusionZones { get; set; } = [];
 
-	[DDLRegistration(0x6f36f05fu)]
+	[DDLRegistration(0xc4bd3cf8u)]
 	public List<RivetAssetId> NavInclusionZones { get; set; } = [];
 
-	[DDLRegistration(0x6f36f05fu)]
+	[DDLRegistration(0xa38d1acbu)]
 	public List<RivetAssetId> Regions { get; set; } = [];
 
 	public static RegionAuxOpenContainer Create(DDLObject ddl) => new(ddl);

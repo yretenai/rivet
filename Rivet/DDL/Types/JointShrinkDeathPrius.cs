@@ -20,13 +20,13 @@ public class JointShrinkDeathPrius : DDLObjectType, IDDLObjectType<JointShrinkDe
 		JointMoveSpeed = ddl.GetValue<float>(0x452317afu, JointMoveSpeed);
 	}
 
-	[DDLRegistration(0x6de00c16u)]
+	[DDLRegistration(0xcaf1ec7fu)]
 	public float StartDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6de00c16u)]
+	[DDLRegistration(0x00dc74a2u)]
 	public float ShrinkTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6de00c16u)]
+	[DDLRegistration(0x452317afu)]
 	public float JointMoveSpeed { get; set; } = 0.50f;
 
 	public static JointShrinkDeathPrius Create(DDLObject ddl) => new(ddl);

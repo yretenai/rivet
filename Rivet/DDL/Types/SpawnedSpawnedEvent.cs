@@ -18,7 +18,7 @@ public class SpawnedSpawnedEvent : EventBase, IDDLObjectType<SpawnedSpawnedEvent
 		SpawnedHandle = ddl.GetValue<uint>(0xc20bfae3u, SpawnedHandle);
 	}
 
-	[DDLRegistration(0x4cc70bb0u)]
+	[DDLRegistration(0xc20bfae3u)]
 	public uint SpawnedHandle { get; set; } = 0x00000000;
 
 	public new static SpawnedSpawnedEvent Create(DDLObject ddl) => new(ddl);

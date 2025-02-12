@@ -19,10 +19,10 @@ public class CoverObjectBoxPrius : DDLObjectType, IDDLObjectType<CoverObjectBoxP
 		GenerateAIPerches = ddl.GetValue<bool>(0x9eea63f2u, GenerateAIPerches);
 	}
 
-	[DDLRegistration(0x63f2379fu, "Bot Firepoints")]
+	[DDLRegistration(0x3339440au, "Bot Firepoints")]
 	public bool GenFirepoints { get; set; } = true;
 
-	[DDLRegistration(0x63f2379fu, "Bot Perches")]
+	[DDLRegistration(0x9eea63f2u, "Bot Perches")]
 	public bool GenerateAIPerches { get; set; } = true;
 
 	public static CoverObjectBoxPrius Create(DDLObject ddl) => new(ddl);

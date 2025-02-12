@@ -24,25 +24,25 @@ public class AttachToWaterSurfaceEvent : EventBase, IDDLObjectType<AttachToWater
 		UpdateOffscreen = ddl.GetValue<bool>(0x9e43a644u, UpdateOffscreen);
 	}
 
-	[DDLRegistration(0xa5e6d12fu)]
+	[DDLRegistration(0xf06dfcd8u)]
 	public float LerpToWaterPosDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa5e6d12fu)]
+	[DDLRegistration(0xb14f48d1u)]
 	public float EventDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa5e6d12fu)]
+	[DDLRegistration(0xcb1c250au)]
 	public float BobGain { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa5e6d12fu)]
+	[DDLRegistration(0x47ca7283u)]
 	public float BobDamp { get; set; } = -8.00f;
 
-	[DDLRegistration(0xa5e6d12fu)]
+	[DDLRegistration(0xcc77003fu)]
 	public float BobMaxSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa5e6d12fu)]
+	[DDLRegistration(0x8d5cdbeau)]
 	public float MotionDepth { get; set; } = 0.10f;
 
-	[DDLRegistration(0xa5e6d12fu, description: "Attach to water surface, even if object is not drawn.")]
+	[DDLRegistration(0x9e43a644u, description: "Attach to water surface, even if object is not drawn.")]
 	public bool UpdateOffscreen { get; set; } = false;
 
 	public new static AttachToWaterSurfaceEvent Create(DDLObject ddl) => new(ddl);

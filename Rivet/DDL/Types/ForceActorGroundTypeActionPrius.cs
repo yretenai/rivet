@@ -19,10 +19,10 @@ public class ForceActorGroundTypeActionPrius : DDLObjectType, IDDLObjectType<For
 		GroundType = ddl.GetEnum<x10b3c4cf>(0x31ad1722u, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0x55afef5au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x55afef5au)]
+	[DDLRegistration(0x31ad1722u)]
 	public x10b3c4cf GroundType { get; set; } = x10b3c4cf.None;
 
 	public static ForceActorGroundTypeActionPrius Create(DDLObject ddl) => new(ddl);

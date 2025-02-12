@@ -18,7 +18,7 @@ public class AssetSizeRequest : DDLObjectType, IDDLObjectType<AssetSizeRequest> 
 		AssetPaths = ddl.GetValues<RivetAssetId>(0x280c42ffu);
 	}
 
-	[DDLRegistration(0xd74b4378u, description: "List of assets paths, relative to the asset source root, that you want to get the size of.")]
+	[DDLRegistration(0x280c42ffu, description: "List of assets paths, relative to the asset source root, that you want to get the size of.")]
 	public List<RivetAssetId> AssetPaths { get; set; } = [];
 
 	public static AssetSizeRequest Create(DDLObject ddl) => new(ddl);

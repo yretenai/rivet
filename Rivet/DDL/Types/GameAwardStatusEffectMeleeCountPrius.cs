@@ -20,13 +20,13 @@ public class GameAwardStatusEffectMeleeCountPrius : AwardBasePrius, IDDLObjectTy
 		AllowThrownWeapon = ddl.GetValue<bool>(0xf6a01ae1u, AllowThrownWeapon);
 	}
 
-	[DDLRegistration(0x6e1d0533u)]
+	[DDLRegistration(0xedfb7a1bu)]
 	public StatusEffectBasePrius? RequiredStatusEffect { get; set; } = default;
 
-	[DDLRegistration(0x6e1d0533u, "Melee Weapons", "Reference to assets for melee weapons")]
+	[DDLRegistration(0x04f96d2eu, "Melee Weapons", "Reference to assets for melee weapons")]
 	public List<ActorAssetReferenceDef?> MeleeWeaponAssets { get; set; } = [];
 
-	[DDLRegistration(0x6e1d0533u)]
+	[DDLRegistration(0xf6a01ae1u)]
 	public bool AllowThrownWeapon { get; set; } = false;
 
 	public new static GameAwardStatusEffectMeleeCountPrius Create(DDLObject ddl) => new(ddl);

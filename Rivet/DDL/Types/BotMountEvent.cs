@@ -19,10 +19,10 @@ public class BotMountEvent : EventBase, IDDLObjectType<BotMountEvent> {
 		MountedActor = ddl.GetValue<uint>(0x682cda99u, MountedActor);
 	}
 
-	[DDLRegistration(0x31c6ee4au)]
+	[DDLRegistration(0xae1c15d4u)]
 	public uint ControllingActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x31c6ee4au)]
+	[DDLRegistration(0x682cda99u)]
 	public uint MountedActor { get; set; } = 0x00000000;
 
 	public new static BotMountEvent Create(DDLObject ddl) => new(ddl);

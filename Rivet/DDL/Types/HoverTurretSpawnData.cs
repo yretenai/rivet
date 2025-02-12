@@ -18,7 +18,7 @@ public class HoverTurretSpawnData : AttachableShotSpawnData, IDDLObjectType<Hove
 		ConfigPath = ddl.GetValue<uint>(0x227a02fdu, ConfigPath);
 	}
 
-	[DDLRegistration(0xda25abe3u)]
+	[DDLRegistration(0x227a02fdu)]
 	public uint ConfigPath { get; set; } = 0x00000000;
 
 	public new static HoverTurretSpawnData Create(DDLObject ddl) => new(ddl);

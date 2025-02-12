@@ -19,10 +19,10 @@ public class PickupGoldBoltPrius : GamePickupItemPrius, IDDLObjectType<PickupGol
 		PreviouslyCollectedMaterialOverride = ddl.GetObject<PickupMaterialOverride>(0x25f333f6u);
 	}
 
-	[DDLRegistration(0xaeb5f488u, description: "Unique identifier of this gold bolt for saving the game")]
+	[DDLRegistration(0xf61c4918u, description: "Unique identifier of this gold bolt for saving the game")]
 	public GoldBoltEnum SaveID { get; set; } = GoldBoltEnum.None;
 
-	[DDLRegistration(0xaeb5f488u, description: "Material override to use when the player collected this gold bolt in a previous playthrough and now will just get bolts.")]
+	[DDLRegistration(0x25f333f6u, description: "Material override to use when the player collected this gold bolt in a previous playthrough and now will just get bolts.")]
 	public PickupMaterialOverride? PreviouslyCollectedMaterialOverride { get; set; } = default;
 
 	public new static PickupGoldBoltPrius Create(DDLObject ddl) => new(ddl);

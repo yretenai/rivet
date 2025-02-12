@@ -19,10 +19,10 @@ public class QueryVolumeShapeCone : QueryVolumeShape, IDDLObjectType<QueryVolume
 		HalfAngle = ddl.GetValue<float>(0x0ad75ffdu, HalfAngle);
 	}
 
-	[DDLRegistration(0xb4629debu, description: "Length of one side of the cube")]
+	[DDLRegistration(0x3f05d0d5u, description: "Length of one side of the cube")]
 	public float Length { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb4629debu, description: "Half-angle of the cone. A 45-degree half angle would make a 90-degree cone.")]
+	[DDLRegistration(0x0ad75ffdu, description: "Half-angle of the cone. A 45-degree half angle would make a 90-degree cone.")]
 	public float HalfAngle { get; set; } = 45.00f;
 
 	public new static QueryVolumeShapeCone Create(DDLObject ddl) => new(ddl);

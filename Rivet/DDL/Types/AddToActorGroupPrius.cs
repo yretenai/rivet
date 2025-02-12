@@ -18,7 +18,7 @@ public class AddToActorGroupPrius : DDLObjectType, IDDLObjectType<AddToActorGrou
 		GlobalActorGroupName = ddl.GetString(0x6686d1ec) ?? GlobalActorGroupName;
 	}
 
-	[DDLRegistration(0xbc8bf628u)]
+	[DDLRegistration(0x6686d1ecu)]
 	public string? GlobalActorGroupName { get; set; } = default;
 
 	public static AddToActorGroupPrius Create(DDLObject ddl) => new(ddl);

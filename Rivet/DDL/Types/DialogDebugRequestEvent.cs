@@ -26,31 +26,31 @@ public class DialogDebugRequestEvent : EventBase, IDDLObjectType<DialogDebugRequ
 		SoundBankAssetId = ddl.GetValue<RivetAssetId>(0xb0db4907u, SoundBankAssetId);
 	}
 
-	[DDLRegistration(0xab09dea9u, description: "Unique ID for matching up with callbacks")]
+	[DDLRegistration(0x32ca55d0u, description: "Unique ID for matching up with callbacks")]
 	public uint UniqueId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xab09dea9u, description: "Localization enum used by Emergent VO system")]
+	[DDLRegistration(0x152754cbu, description: "Localization enum used by Emergent VO system")]
 	public uint LineIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xab09dea9u)]
+	[DDLRegistration(0x3446b219u)]
 	public uint LocalizationTag { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xab09dea9u, description: "Unique ID for pieces of dialog per component")]
+	[DDLRegistration(0x75b3e503u, description: "Unique ID for pieces of dialog per component")]
 	public ushort PlayCountId { get; set; } = 0x0000;
 
-	[DDLRegistration(0xab09dea9u, description: "Component's Id")]
+	[DDLRegistration(0xf34a033au, description: "Component's Id")]
 	public uint ComponentId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xab09dea9u, description: "Hash of the local hero name if this dialog is to be played only when a specific hero is local authority.")]
+	[DDLRegistration(0xc56ca2f0u, description: "Hash of the local hero name if this dialog is to be played only when a specific hero is local authority.")]
 	public uint LocalHeroNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xab09dea9u, description: "Dialog start time.")]
+	[DDLRegistration(0x0c5bae2bu, description: "Dialog start time.")]
 	public float StartTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xab09dea9u, description: "Only play this sound on the actor's authority machine.")]
+	[DDLRegistration(0x68d7984cu, description: "Only play this sound on the actor's authority machine.")]
 	public bool PlayOnlyOnAuthority { get; set; } = false;
 
-	[DDLRegistration(0xab09dea9u)]
+	[DDLRegistration(0xb0db4907u)]
 	public RivetAssetId SoundBankAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static DialogDebugRequestEvent Create(DDLObject ddl) => new(ddl);

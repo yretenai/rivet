@@ -18,7 +18,7 @@ public class OutputPlugVec3 : OutputPlugBaseDef, IDDLObjectType<OutputPlugVec3> 
 		Value = ddl.GetObject<DDLVector3>(0x042494f5u);
 	}
 
-	[DDLRegistration(0xa287aae9u)]
+	[DDLRegistration(0x042494f5u)]
 	public DDLVector3? Value { get; set; } = default;
 
 	public new static OutputPlugVec3 Create(DDLObject ddl) => new(ddl);

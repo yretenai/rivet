@@ -21,16 +21,16 @@ public class DebugCylinderComponentPrius : DDLObjectType, IDDLObjectType<DebugCy
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0x1f53b99fu)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1f53b99fu)]
+	[DDLRegistration(0x9d956a9du)]
 	public float HalfHeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1f53b99fu)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x1f53b99fu)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
 	public static DebugCylinderComponentPrius Create(DDLObject ddl) => new(ddl);

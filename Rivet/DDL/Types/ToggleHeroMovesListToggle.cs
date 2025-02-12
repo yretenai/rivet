@@ -18,7 +18,7 @@ public class ToggleHeroMovesListToggle : ToggleHeroMovesListBase, IDDLObjectType
 		ToggleList = ddl.GetObject<HeroMoveAbilities>(0x3ba13937u);
 	}
 
-	[DDLRegistration(0xcb729f43u)]
+	[DDLRegistration(0x3ba13937u)]
 	public HeroMoveAbilities? ToggleList { get; set; } = default;
 
 	public new static ToggleHeroMovesListToggle Create(DDLObject ddl) => new(ddl);

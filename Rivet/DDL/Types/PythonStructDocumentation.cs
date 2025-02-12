@@ -22,19 +22,19 @@ public class PythonStructDocumentation : DDLObjectType, IDDLObjectType<PythonStr
 		Fields = ddl.GetObjects<PythonDdlDocumentation>(0x409dadefu);
 	}
 
-	[DDLRegistration(0xe4d13a03u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0xe4d13a03u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0xe4d13a03u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xe4d13a03u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0xe4d13a03u)]
+	[DDLRegistration(0x409dadefu)]
 	public List<PythonDdlDocumentation?> Fields { get; set; } = [];
 
 	public static PythonStructDocumentation Create(DDLObject ddl) => new(ddl);

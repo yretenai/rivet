@@ -18,7 +18,7 @@ public class DialogPromptLineEmergent : DialogPromptLine, IDDLObjectType<DialogP
 		Trigger = ddl.GetEnum<DialogTriggerGame>(0x1b816c65u, DialogTriggerGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x631e99d2u)]
+	[DDLRegistration(0x1b816c65u)]
 	public DialogTriggerGame Trigger { get; set; } = DialogTriggerGame.None;
 
 	public new static DialogPromptLineEmergent Create(DDLObject ddl) => new(ddl);

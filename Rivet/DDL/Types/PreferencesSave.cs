@@ -44,85 +44,85 @@ public class PreferencesSave : DDLObjectType, IDDLObjectType<PreferencesSave> {
 		MouseControlAiming = ddl.GetObject<MouseControl>(0x16fd74ddu);
 	}
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x687252d3u)]
 	public float LookSensitivity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x7ce7a3ecu)]
 	public float GammaCorrection { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0xbec8f849u)]
 	public bool CameraInvertX { get; set; } = false;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0xc9cfc8dfu)]
 	public bool CameraInvertY { get; set; } = false;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x386a1547u)]
 	public bool RumbleEnabled { get; set; } = true;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0xdf19bbdeu)]
 	public bool ControllerSpeakerEnabled { get; set; } = true;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x7fe01227u)]
 	public bool SubtitlesEnabled { get; set; } = false;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0xf08f6078u)]
 	public bool TextSubtitlesEnabled { get; set; } = false;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0xfb2e249bu)]
 	public bool GoreEnabled { get; set; } = true;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x288fa10au)]
 	public bool ProfanityEnabled { get; set; } = true;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x29e32c27u)]
 	public bool OutlinesEnabled { get; set; } = true;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0xfa015d76u)]
 	public bool VoiceChatEnabled { get; set; } = true;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0xc3c57025u)]
 	public float MasterVolume { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0xde5b0e67u)]
 	public float MusicVolume { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x74cab5ecu)]
 	public float DialogVolume { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x5de67143u)]
 	public float SFXVolume { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0xa5f4a40cu)]
 	public float UIVolume { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x5f94eee6u)]
 	public float HitConfirmVolume { get; set; } = 0.50f;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x336e1824u)]
 	public float ControllerSpeakerVolume { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x4b360d91u)]
 	public int ListeningMode { get; set; } = 0;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0xd78a4e53u)]
 	public int HeadphonesListeningMode { get; set; } = 3;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x6e3c6b00u)]
 	public int UIAdjustX { get; set; } = 128;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x193b5b96u)]
 	public int UIAdjustY { get; set; } = 72;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0xfe837691u)]
 	public int UIAdjustW { get; set; } = 0;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x738b7b64u)]
 	public int UIAdjustH { get; set; } = 0;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x77d219fau)]
 	public MouseControl? MouseControlNormal { get; set; } = default;
 
-	[DDLRegistration(0x8579df44u)]
+	[DDLRegistration(0x16fd74ddu)]
 	public MouseControl? MouseControlAiming { get; set; } = default;
 
 	public static PreferencesSave Create(DDLObject ddl) => new(ddl);

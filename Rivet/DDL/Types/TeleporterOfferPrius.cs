@@ -19,10 +19,10 @@ public class TeleporterOfferPrius : GenericOfferPrius, IDDLObjectType<Teleporter
 		StandPositionLocator = ddl.GetString(0xe59a9423) ?? StandPositionLocator;
 	}
 
-	[DDLRegistration(0xc273fcd1u, "Destination Checkpoint", "Name of the checkpoint we're checkpoint-warping to.")]
+	[DDLRegistration(0xc5604415u, "Destination Checkpoint", "Name of the checkpoint we're checkpoint-warping to.")]
 	public string? DestinationCheckpoint { get; set; } = default;
 
-	[DDLRegistration(0xc273fcd1u)]
+	[DDLRegistration(0xe59a9423u)]
 	public string? StandPositionLocator { get; set; } = default;
 
 	public new static TeleporterOfferPrius Create(DDLObject ddl) => new(ddl);

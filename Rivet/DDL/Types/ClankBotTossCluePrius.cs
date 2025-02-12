@@ -19,10 +19,10 @@ public class ClankBotTossCluePrius : DDLObjectType, IDDLObjectType<ClankBotTossC
 		BridgebotOnly = ddl.GetValue<bool>(0x4d397f52u, BridgebotOnly);
 	}
 
-	[DDLRegistration(0xbe721cd9u)]
+	[DDLRegistration(0x0cfa1a99u)]
 	public bool UseAllEdges { get; set; } = false;
 
-	[DDLRegistration(0xbe721cd9u)]
+	[DDLRegistration(0x4d397f52u)]
 	public bool BridgebotOnly { get; set; } = false;
 
 	public static ClankBotTossCluePrius Create(DDLObject ddl) => new(ddl);

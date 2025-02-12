@@ -20,13 +20,13 @@ public class CreateThumbnailInput : DDLObjectType, IDDLObjectType<CreateThumbnai
 		Changelist = ddl.GetValue<int>(0x03b0ddc6u, Changelist);
 	}
 
-	[DDLRegistration(0x87db845du)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x87db845du)]
+	[DDLRegistration(0x7b9ca923u)]
 	public RivetAssetId BuiltDirectory { get; set; } = default;
 
-	[DDLRegistration(0x87db845du)]
+	[DDLRegistration(0x03b0ddc6u)]
 	public int Changelist { get; set; } = 0;
 
 	public static CreateThumbnailInput Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class UDSWebApiDef : DDLObjectType, IDDLObjectType<UDSWebApiDef> {
 		TrophyStatExtractions = ddl.GetObjects<UDSWebApiStatRule>(0x901f5b11u);
 	}
 
-	[DDLRegistration(0x12217f9du)]
+	[DDLRegistration(0xb3f0afcbu)]
 	public List<UDSWebApiObject?> Objects { get; set; } = [];
 
-	[DDLRegistration(0x12217f9du)]
+	[DDLRegistration(0x098356a7u)]
 	public Dictionary<string, xefe0cd8b> ObjectIdTypes { get; set; } = [];
 
-	[DDLRegistration(0x12217f9du)]
+	[DDLRegistration(0x77f59a8cu)]
 	public List<UDSWebApiStatDef?> TrophyStatDefinitions { get; set; } = [];
 
-	[DDLRegistration(0x12217f9du)]
+	[DDLRegistration(0x901f5b11u)]
 	public List<UDSWebApiStatRule?> TrophyStatExtractions { get; set; } = [];
 
 	public static UDSWebApiDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class PhotomodeFilterActorSpawnData : ActorSpawnData, IDDLObjectType<Phot
 		SpawnTransform = ddl.GetObject<DDLTransform>(0x1793260du);
 	}
 
-	[DDLRegistration(0x728df61du)]
+	[DDLRegistration(0xb54bdec6u)]
 	public RivetAssetId ActorAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x728df61du)]
+	[DDLRegistration(0x1793260du)]
 	public DDLTransform? SpawnTransform { get; set; } = default;
 
 	public new static PhotomodeFilterActorSpawnData Create(DDLObject ddl) => new(ddl);

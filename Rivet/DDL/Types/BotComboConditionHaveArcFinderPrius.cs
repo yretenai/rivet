@@ -25,28 +25,28 @@ public class BotComboConditionHaveArcFinderPrius : BotComboConditionBasePrius, I
 		UseLastNavPosition = ddl.GetValue<bool>(0xc387f89cu, UseLastNavPosition);
 	}
 
-	[DDLRegistration(0x92b37285u)]
+	[DDLRegistration(0x085f80e0u)]
 	public string? EmitLocatorName { get; set; } = "";
 
-	[DDLRegistration(0x92b37285u)]
+	[DDLRegistration(0xd292ec09u)]
 	public float DesiredFlightTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0x92b37285u)]
+	[DDLRegistration(0xf0d89680u)]
 	public float MinSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x92b37285u)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 50.00f;
 
-	[DDLRegistration(0x92b37285u)]
+	[DDLRegistration(0xb0e87cbdu)]
 	public float ArcHeight0 { get; set; } = 1.00f;
 
-	[DDLRegistration(0x92b37285u)]
+	[DDLRegistration(0xc7ef4c2bu)]
 	public float ArcHeight1 { get; set; } = 2.00f;
 
-	[DDLRegistration(0x92b37285u)]
+	[DDLRegistration(0x5ee61d91u)]
 	public float ArcHeight2 { get; set; } = 0.50f;
 
-	[DDLRegistration(0x92b37285u)]
+	[DDLRegistration(0xc387f89cu)]
 	public bool UseLastNavPosition { get; set; } = true;
 
 	public new static BotComboConditionHaveArcFinderPrius Create(DDLObject ddl) => new(ddl);

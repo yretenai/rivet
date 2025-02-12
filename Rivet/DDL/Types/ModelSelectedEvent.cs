@@ -19,10 +19,10 @@ public class ModelSelectedEvent : EventBase, IDDLObjectType<ModelSelectedEvent> 
 		ModelIndex = ddl.GetValue<uint>(0xeaf64ac0u, ModelIndex);
 	}
 
-	[DDLRegistration(0x0e5272bbu)]
+	[DDLRegistration(0xc5a69919u)]
 	public RivetAssetId ModelId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0e5272bbu)]
+	[DDLRegistration(0xeaf64ac0u)]
 	public uint ModelIndex { get; set; } = 0x00000000;
 
 	public new static ModelSelectedEvent Create(DDLObject ddl) => new(ddl);

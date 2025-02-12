@@ -21,16 +21,16 @@ public class AimAssistTargetZoneGroundRelative : AimAssistTargetZone, IDDLObject
 		OuterRadius = ddl.GetValue<float>(0xf6b6fbdeu, OuterRadius);
 	}
 
-	[DDLRegistration(0x50ab63b9u, "Aim Box Bottom Offset")]
+	[DDLRegistration(0xe13d28cau, "Aim Box Bottom Offset")]
 	public float BottomOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x50ab63b9u, "Aim Box Top Offset")]
+	[DDLRegistration(0xc37c1502u, "Aim Box Top Offset")]
 	public float TopOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x50ab63b9u, "Inner Capsule Radius")]
+	[DDLRegistration(0xf8a3836du, "Inner Capsule Radius")]
 	public float InnerRadius { get; set; } = 3.00f;
 
-	[DDLRegistration(0x50ab63b9u, "Outer Capsule Radius")]
+	[DDLRegistration(0xf6b6fbdeu, "Outer Capsule Radius")]
 	public float OuterRadius { get; set; } = 5.00f;
 
 	public new static AimAssistTargetZoneGroundRelative Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class UIArenaChallengeRewardGeneric : UIArenaChallengeReward, IDDLObjectT
 		Icon = ddl.GetValue<RivetAssetId>(0x5504e96bu, Icon);
 	}
 
-	[DDLRegistration(0x61dc9cf2u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x61dc9cf2u)]
+	[DDLRegistration(0x5504e96bu)]
 	public RivetAssetId Icon { get; set; } = default;
 
 	public new static UIArenaChallengeRewardGeneric Create(DDLObject ddl) => new(ddl);

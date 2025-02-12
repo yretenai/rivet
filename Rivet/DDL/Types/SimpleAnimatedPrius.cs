@@ -21,16 +21,16 @@ public class SimpleAnimatedPrius : DDLObjectType, IDDLObjectType<SimpleAnimatedP
 		RndRateMax = ddl.GetValue<float>(0x27324fb9u, RndRateMax);
 	}
 
-	[DDLRegistration(0x9adb85dcu, description: "The anim driver (if using AnimControllerComponent) or the anim clip (if using SimpleAnimComponent) to play.")]
+	[DDLRegistration(0xc9e716ceu, description: "The anim driver (if using AnimControllerComponent) or the anim clip (if using SimpleAnimComponent) to play.")]
 	public string? AnimName { get; set; } = "Object_Idle";
 
-	[DDLRegistration(0x9adb85dcu, "Start at a random frame", "Start at a random frame, not synced.")]
+	[DDLRegistration(0x73d10ea0u, "Start at a random frame", "Start at a random frame, not synced.")]
 	public bool StartOnRndFrame { get; set; } = false;
 
-	[DDLRegistration(0x9adb85dcu, "Random Rate:Min", "If this value is >= 0, will apply a min random rate of this amount. If max random rate is < 0, we will apply this rate non-randomly. No random rate will be applied if both min and max are set to < 0.")]
+	[DDLRegistration(0x1b3f70e0u, "Random Rate:Min", "If this value is >= 0, will apply a min random rate of this amount. If max random rate is < 0, we will apply this rate non-randomly. No random rate will be applied if both min and max are set to < 0.")]
 	public float RndRateMin { get; set; } = -1.00f;
 
-	[DDLRegistration(0x9adb85dcu, "Random Rate:Max", "If this value is >= 0, will apply a max random rate of this amount.  If min random rate is < 0, we will apply this rate non-randomly. No random rate will be applied if both min and max are set to < 0.")]
+	[DDLRegistration(0x27324fb9u, "Random Rate:Max", "If this value is >= 0, will apply a max random rate of this amount.  If min random rate is < 0, we will apply this rate non-randomly. No random rate will be applied if both min and max are set to < 0.")]
 	public float RndRateMax { get; set; } = -1.00f;
 
 	public static SimpleAnimatedPrius Create(DDLObject ddl) => new(ddl);

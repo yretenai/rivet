@@ -19,10 +19,10 @@ public class GlobalSaveTableQueryActionPrius : DDLObjectType, IDDLObjectType<Glo
 		CheckType = ddl.GetEnum<x70316bbe>(0xb6b0f22cu, x70316bbeValues.Lookup);
 	}
 
-	[DDLRegistration(0xe9102f51u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Save;
 
-	[DDLRegistration(0xe9102f51u)]
+	[DDLRegistration(0xb6b0f22cu)]
 	public x70316bbe CheckType { get; set; } = x70316bbe.KeyExists;
 
 	public static GlobalSaveTableQueryActionPrius Create(DDLObject ddl) => new(ddl);

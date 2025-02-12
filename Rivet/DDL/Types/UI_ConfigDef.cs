@@ -23,22 +23,22 @@ public class UI_ConfigDef : DDLObjectType, IDDLObjectType<UI_ConfigDef> {
 		Def = ddl.GetString(0x2691c8a8) ?? Def;
 	}
 
-	[DDLRegistration(0xf343009bu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xf343009bu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xf343009bu)]
+	[DDLRegistration(0xc72bc198u)]
 	public x9750cc97 LoadType { get; set; } = x9750cc97.LoadMarked;
 
-	[DDLRegistration(0xf343009bu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public ConfigType? Type { get; set; } = default;
 
-	[DDLRegistration(0xf343009bu, "Asset Swaps")]
+	[DDLRegistration(0x8228c9aeu, "Asset Swaps")]
 	public AssetSwap? AssetSwaps { get; set; } = default;
 
-	[DDLRegistration(0xf343009bu)]
+	[DDLRegistration(0x2691c8a8u)]
 	public string? Def { get; set; } = default;
 
 	public static UI_ConfigDef Create(DDLObject ddl) => new(ddl);

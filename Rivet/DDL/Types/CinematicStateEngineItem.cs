@@ -26,31 +26,31 @@ public class CinematicStateEngineItem : DDLObjectType, IDDLObjectType<CinematicS
 		TrackState = ddl.GetDictionary<RivetAssetId, CinematicTrackState>(0x7917fbd8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CinematicTrackState>(mapId));
 	}
 
-	[DDLRegistration(0xa1bb7d92u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xa1bb7d92u)]
+	[DDLRegistration(0xca6a194cu)]
 	public Cinematic2Def? Cinematic2Def { get; set; } = default;
 
-	[DDLRegistration(0xa1bb7d92u)]
+	[DDLRegistration(0x0bd3c98fu)]
 	public bool Focused { get; set; } = true;
 
-	[DDLRegistration(0xa1bb7d92u)]
+	[DDLRegistration(0x75ff0940u)]
 	public bool Loaded { get; set; } = false;
 
-	[DDLRegistration(0xa1bb7d92u)]
+	[DDLRegistration(0x3842c592u)]
 	public DDLMatrix4? ObjToWorld { get; set; } = default;
 
-	[DDLRegistration(0xa1bb7d92u)]
+	[DDLRegistration(0xd21350dau)]
 	public bool Playing { get; set; } = false;
 
-	[DDLRegistration(0xa1bb7d92u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public double Time { get; set; } = 0;
 
-	[DDLRegistration(0xa1bb7d92u)]
+	[DDLRegistration(0x27e71ee4u)]
 	public Dictionary<RivetAssetId, RivetAssetId> TracksInactive { get; set; } = [];
 
-	[DDLRegistration(0xa1bb7d92u)]
+	[DDLRegistration(0x7917fbd8u)]
 	public Dictionary<RivetAssetId, CinematicTrackState?> TrackState { get; set; } = [];
 
 	public static CinematicStateEngineItem Create(DDLObject ddl) => new(ddl);

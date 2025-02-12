@@ -22,19 +22,19 @@ public class SetAllowedClankbotsActionPrius : DDLObjectType, IDDLObjectType<SetA
 		AllowStretchbot = ddl.GetValue<bool>(0x16399e51u, AllowStretchbot);
 	}
 
-	[DDLRegistration(0x83b35a77u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Puzzle;
 
-	[DDLRegistration(0x83b35a77u)]
+	[DDLRegistration(0x3c072816u)]
 	public bool AllowClankbot { get; set; } = true;
 
-	[DDLRegistration(0x83b35a77u)]
+	[DDLRegistration(0x7095ccc1u)]
 	public bool AllowPowerbot { get; set; } = true;
 
-	[DDLRegistration(0x83b35a77u)]
+	[DDLRegistration(0x31b7f029u)]
 	public bool AllowSpringbot { get; set; } = true;
 
-	[DDLRegistration(0x83b35a77u)]
+	[DDLRegistration(0x16399e51u)]
 	public bool AllowStretchbot { get; set; } = true;
 
 	public static SetAllowedClankbotsActionPrius Create(DDLObject ddl) => new(ddl);

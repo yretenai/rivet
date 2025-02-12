@@ -20,13 +20,13 @@ public class AnimFootstepRemovedEventKey : DDLObjectType, IDDLObjectType<AnimFoo
 		AutoGenFrame = ddl.GetValue<uint>(0x829269e6u, AutoGenFrame);
 	}
 
-	[DDLRegistration(0xea32f2a3u)]
+	[DDLRegistration(0x1311db05u)]
 	public x94d69111 Side { get; set; } = x94d69111.Left;
 
-	[DDLRegistration(0xea32f2a3u)]
+	[DDLRegistration(0x2660e2d4u)]
 	public ulong AnimPoseKey { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xea32f2a3u)]
+	[DDLRegistration(0x829269e6u)]
 	public uint AutoGenFrame { get; set; } = 0x00000000;
 
 	public static AnimFootstepRemovedEventKey Create(DDLObject ddl) => new(ddl);

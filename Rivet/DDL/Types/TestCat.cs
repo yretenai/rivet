@@ -19,10 +19,10 @@ public class TestCat : DDLObjectType, IDDLObjectType<TestCat> {
 		Lives = ddl.GetValue<int>(0x4467b29fu, Lives);
 	}
 
-	[DDLRegistration(0xdfe5a719u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xdfe5a719u)]
+	[DDLRegistration(0x4467b29fu)]
 	public int Lives { get; set; } = 9;
 
 	public static TestCat Create(DDLObject ddl) => new(ddl);

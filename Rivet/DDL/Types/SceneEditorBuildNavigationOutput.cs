@@ -19,10 +19,10 @@ public class SceneEditorBuildNavigationOutput : DDLObjectType, IDDLObjectType<Sc
 		ErrorMessage = ddl.GetString(0xd59b5565) ?? ErrorMessage;
 	}
 
-	[DDLRegistration(0xbf01f03du)]
+	[DDLRegistration(0x6eeabc8au)]
 	public bool Success { get; set; } = false;
 
-	[DDLRegistration(0xbf01f03du)]
+	[DDLRegistration(0xd59b5565u)]
 	public string? ErrorMessage { get; set; } = default;
 
 	public static SceneEditorBuildNavigationOutput Create(DDLObject ddl) => new(ddl);

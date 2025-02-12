@@ -18,7 +18,7 @@ public class LookAtHeroActionPrius : DDLObjectType, IDDLObjectType<LookAtHeroAct
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x94dcf357u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Ally;
 
 	public static LookAtHeroActionPrius Create(DDLObject ddl) => new(ddl);

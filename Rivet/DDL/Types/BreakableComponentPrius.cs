@@ -32,49 +32,49 @@ public class BreakableComponentPrius : BreakableBasePrius, IDDLObjectType<Breaka
 		DestroyedChunkConduit = ddl.GetValue<RivetAssetId>(0x0eda6a09u, DestroyedChunkConduit);
 	}
 
-	[DDLRegistration(0x5b84ff07u, "Damaged at health")]
+	[DDLRegistration(0x3b00cce2u, "Damaged at health")]
 	public float BrokenAtHealth { get; set; } = 60.00f;
 
-	[DDLRegistration(0x5b84ff07u, "Disable Spawns On Manual", "If we've been destroyed manually, don't spawn more chunks and such. Useful for \"throwable\" breakables where the breakable stays and a new actor is thrown")]
+	[DDLRegistration(0xebbeed02u, "Disable Spawns On Manual", "If we've been destroyed manually, don't spawn more chunks and such. Useful for \"throwable\" breakables where the breakable stays and a new actor is thrown")]
 	public bool DisableSpawnsOnManual { get; set; } = false;
 
-	[DDLRegistration(0x5b84ff07u, "Damaged model", "Model to switch to when state is switched to damaged.")]
+	[DDLRegistration(0x2902cf5bu, "Damaged model", "Model to switch to when state is switched to damaged.")]
 	public RivetAssetId BrokenModel { get; set; } = default;
 
-	[DDLRegistration(0x5b84ff07u, "Damaged anim set", "Anim set to switch to when state is switched to damaged.")]
+	[DDLRegistration(0x0399af59u, "Damaged anim set", "Anim set to switch to when state is switched to damaged.")]
 	public RivetAssetId BrokenAnimSet { get; set; } = default;
 
-	[DDLRegistration(0x5b84ff07u, description: "Activate this driver when broken")]
+	[DDLRegistration(0x5bbcf319u, description: "Activate this driver when broken")]
 	public string? BrokenAnimDriver { get; set; } = default;
 
-	[DDLRegistration(0x5b84ff07u, "Spawnable Damaged chunk models", "Chunk models flying off the whole model when switching to damaged model, which can optional collide. Specify a locator per chunk, or leave blank for igLoc_ncchunk01, igLoc_ncchunk02, ... on original model.")]
+	[DDLRegistration(0x33256921u, "Spawnable Damaged chunk models", "Chunk models flying off the whole model when switching to damaged model, which can optional collide. Specify a locator per chunk, or leave blank for igLoc_ncchunk01, igLoc_ncchunk02, ... on original model.")]
 	public List<SpawnableChunk?> BrokenNoncollidingChunkModels { get; set; } = [];
 
-	[DDLRegistration(0x5b84ff07u, "DEPRECATED - Damaged chunk models", "Chunk models flying off whole model when switching to damaged model. Placed at Locator igLoc_chunk01, igLoc_chunk02, ... on original model.")]
+	[DDLRegistration(0x51fde2d3u, "DEPRECATED - Damaged chunk models", "Chunk models flying off whole model when switching to damaged model. Placed at Locator igLoc_chunk01, igLoc_chunk02, ... on original model.")]
 	public List<RivetAssetId> BrokenChunkModels { get; set; } = [];
 
-	[DDLRegistration(0x5b84ff07u, "DEPREACTED - Damaged debris models", "A number of debris flying off whole model at locator igLoc_chunk01, igLoc_chunk02, ... on original model.")]
+	[DDLRegistration(0x1bf7cf5cu, "DEPREACTED - Damaged debris models", "A number of debris flying off whole model at locator igLoc_chunk01, igLoc_chunk02, ... on original model.")]
 	public List<RivetAssetId> BrokenDebrisModels { get; set; } = [];
 
-	[DDLRegistration(0x5b84ff07u, "Destroyed model", "Model to switch to when state is switched to destroyed.")]
+	[DDLRegistration(0x408586ccu, "Destroyed model", "Model to switch to when state is switched to destroyed.")]
 	public RivetAssetId DestroyedModel { get; set; } = default;
 
-	[DDLRegistration(0x5b84ff07u, "Destroyed anim set", "Anim set to switch to when state is switched to destroyed.")]
+	[DDLRegistration(0x32992337u, "Destroyed anim set", "Anim set to switch to when state is switched to destroyed.")]
 	public RivetAssetId DestroyedAnimSet { get; set; } = default;
 
-	[DDLRegistration(0x5b84ff07u, description: "Activate this driver when broken")]
+	[DDLRegistration(0x8ec3c245u, description: "Activate this driver when broken")]
 	public string? DestroyedAnimDriver { get; set; } = default;
 
-	[DDLRegistration(0x5b84ff07u, "Spawnable Destroyed chunk models", "As 'Damaged chunk models', which can optionally collide. Specify a locator per chunk, or leave blank for igLoc_ncchunk01, igLoc_ncchunk02, ... on original model.")]
+	[DDLRegistration(0xfb7b7ff8u, "Spawnable Destroyed chunk models", "As 'Damaged chunk models', which can optionally collide. Specify a locator per chunk, or leave blank for igLoc_ncchunk01, igLoc_ncchunk02, ... on original model.")]
 	public List<SpawnableChunk?> DestroyedNoncollidingChunkModels { get; set; } = [];
 
-	[DDLRegistration(0x5b84ff07u, "DEPREACTED - Destroyed chunk models", "Chunk models flying off damaged model when switching to destroyed model.  Placed at Locator igLoc_chunk01, igLoc_chunk02, ... on damaged model.")]
+	[DDLRegistration(0x33f5803du, "DEPREACTED - Destroyed chunk models", "Chunk models flying off damaged model when switching to destroyed model.  Placed at Locator igLoc_chunk01, igLoc_chunk02, ... on damaged model.")]
 	public List<RivetAssetId> DestroyedChunkModels { get; set; } = [];
 
-	[DDLRegistration(0x5b84ff07u, "DEPRECATED - Destroyed debris models", "A number of debris flying off damaged model at locator igLoc_chunk01, igLoc_chunk02, ... on damaged model.")]
+	[DDLRegistration(0x5c270841u, "DEPRECATED - Destroyed debris models", "A number of debris flying off damaged model at locator igLoc_chunk01, igLoc_chunk02, ... on damaged model.")]
 	public List<RivetAssetId> DestroyedDebrisModels { get; set; } = [];
 
-	[DDLRegistration(0x5b84ff07u, "Destroyed chunk conduit", "Conduit that will get added to spawned chunks.")]
+	[DDLRegistration(0x0eda6a09u, "Destroyed chunk conduit", "Conduit that will get added to spawned chunks.")]
 	public RivetAssetId DestroyedChunkConduit { get; set; } = default;
 
 	public new static BreakableComponentPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class DevstatsSegmentSystemSaveData : DDLObjectType, IDDLObjectType<Devst
 		PrimarySegment = ddl.GetValue<uint>(0x84a0626eu, PrimarySegment);
 	}
 
-	[DDLRegistration(0xd6277b15u)]
+	[DDLRegistration(0xdccf6659u)]
 	public Dictionary<uint, DevstatsSegmentSaveData?> Segments { get; set; } = [];
 
-	[DDLRegistration(0xd6277b15u)]
+	[DDLRegistration(0x84a0626eu)]
 	public uint PrimarySegment { get; set; } = 0x00000000;
 
 	public static DevstatsSegmentSystemSaveData Create(DDLObject ddl) => new(ddl);

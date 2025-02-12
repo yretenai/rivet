@@ -18,7 +18,7 @@ public class CommandStopFollowCurveEvent : CommandEvent, IDDLObjectType<CommandS
 		Sync = ddl.GetValue<bool>(0x1cbb35cau, Sync);
 	}
 
-	[DDLRegistration(0x720f1566u, description: "Should sync position when stop")]
+	[DDLRegistration(0x1cbb35cau, description: "Should sync position when stop")]
 	public bool Sync { get; set; } = false;
 
 	public new static CommandStopFollowCurveEvent Create(DDLObject ddl) => new(ddl);

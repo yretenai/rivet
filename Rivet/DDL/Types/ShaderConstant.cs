@@ -34,55 +34,55 @@ public class ShaderConstant : DDLObjectType, IDDLObjectType<ShaderConstant> {
 		VisibilityCondition = ddl.GetObject<MaterialNodeInputVisibilityCondition>(0x10b37a44u);
 	}
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0xaa785586u)]
 	public string? InputInternalName { get; set; } = default;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0x8c1e6e85u)]
 	public string? UIType { get; set; } = default;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0x8ba94c76u)]
 	public string? Labels { get; set; } = default;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0x74938804u)]
 	public string? Group { get; set; } = default;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0xbd9f03f1u)]
 	public string? SortOrder { get; set; } = default;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0xaa160e78u)]
 	public string? SubGraphAncestors { get; set; } = default;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0x677284b7u)]
 	public ushort Offset { get; set; } = 0x0000;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0xc750e4dau)]
 	public ushort Size { get; set; } = 0x0000;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0x6c79323fu)]
 	public List<float> MinRange { get; set; } = [];
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0x8a199ddeu)]
 	public List<float> MaxRange { get; set; } = [];
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0xff2f5391u)]
 	public List<float> Content { get; set; } = [];
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0x5819ef65u)]
 	public List<MaterialNodeInputSelectItem?> SelectItems { get; set; } = [];
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0xfd8c5200u)]
 	public bool DeveloperMode { get; set; } = false;
 
-	[DDLRegistration(0xac429e93u)]
+	[DDLRegistration(0x10b37a44u)]
 	public MaterialNodeInputVisibilityCondition? VisibilityCondition { get; set; } = default;
 
 	public static ShaderConstant Create(DDLObject ddl) => new(ddl);

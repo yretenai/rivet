@@ -18,7 +18,7 @@ public class RevivingStopEvent : EventBase, IDDLObjectType<RevivingStopEvent> {
 		ReviveTargetHandle = ddl.GetValue<uint>(0xf631720eu, ReviveTargetHandle);
 	}
 
-	[DDLRegistration(0xc252f234u, "Revive Target")]
+	[DDLRegistration(0xf631720eu, "Revive Target")]
 	public uint ReviveTargetHandle { get; set; } = 0x00000000;
 
 	public new static RevivingStopEvent Create(DDLObject ddl) => new(ddl);

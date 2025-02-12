@@ -20,13 +20,13 @@ public class ECMSelector : DDLObjectType, IDDLObjectType<ECMSelector> {
 		IsValid = ddl.GetValue<bool>(0x84fa27f9u, IsValid);
 	}
 
-	[DDLRegistration(0x974edddcu, "Fields")]
+	[DDLRegistration(0x042494f5u, "Fields")]
 	public List<ECMField?> Value { get; set; } = [];
 
-	[DDLRegistration(0x974edddcu, "Operator")]
+	[DDLRegistration(0xc6d13976u, "Operator")]
 	public xec77cf54 Op { get; set; } = xec77cf54.SelOpEQ;
 
-	[DDLRegistration(0x974edddcu)]
+	[DDLRegistration(0x84fa27f9u)]
 	public bool IsValid { get; set; } = true;
 
 	public static ECMSelector Create(DDLObject ddl) => new(ddl);

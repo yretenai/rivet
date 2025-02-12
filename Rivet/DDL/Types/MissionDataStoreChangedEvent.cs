@@ -18,7 +18,7 @@ public class MissionDataStoreChangedEvent : EventBase, IDDLObjectType<MissionDat
 		MissionName = ddl.GetString(0xa5c30e60) ?? MissionName;
 	}
 
-	[DDLRegistration(0xbc1a72c8u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
 	public new static MissionDataStoreChangedEvent Create(DDLObject ddl) => new(ddl);

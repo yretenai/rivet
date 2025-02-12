@@ -24,25 +24,25 @@ public class ExplodeEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObjectType<E
 		ExplodeData = ddl.GetObject<DamageModifierExplosionPrius>(0xc66d633cu);
 	}
 
-	[DDLRegistration(0xe62e90e7u, "Damage Type")]
+	[DDLRegistration(0x840c154du, "Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Explosion;
 
-	[DDLRegistration(0xe62e90e7u)]
+	[DDLRegistration(0x93d0d934u)]
 	public DamageRequestFlags DamageFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
-	[DDLRegistration(0xe62e90e7u, "Damage Offset")]
+	[DDLRegistration(0x81905ee2u, "Damage Offset")]
 	public DDLVector3? DamageOffset { get; set; } = default;
 
-	[DDLRegistration(0xe62e90e7u, "Offset Mode")]
+	[DDLRegistration(0xbefa1d79u, "Offset Mode")]
 	public xe1cdcd87 OffsetMode { get; set; } = xe1cdcd87.Local;
 
-	[DDLRegistration(0xe62e90e7u, "Impulse")]
+	[DDLRegistration(0xebf69433u, "Impulse")]
 	public float Impulse { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe62e90e7u, "Trigger Event")]
+	[DDLRegistration(0x55aed815u, "Trigger Event")]
 	public bool TriggerEvent { get; set; } = true;
 
-	[DDLRegistration(0xe62e90e7u)]
+	[DDLRegistration(0xc66d633cu)]
 	public DamageModifierExplosionPrius? ExplodeData { get; set; } = default;
 
 	public new static ExplodeEffectNodeDef Create(DDLObject ddl) => new(ddl);

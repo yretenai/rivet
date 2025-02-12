@@ -20,13 +20,13 @@ public class BeamOutEffectPrius : DDLObjectType, IDDLObjectType<BeamOutEffectPri
 		BeamOutConfigOverride = ddl.GetValue<RivetAssetId>(0x276df15eu, BeamOutConfigOverride);
 	}
 
-	[DDLRegistration(0xdfbe1151u, description: "Whether to auto-delete once our beam out completes. Note, this can be overwritten by the thing that beams us out.")]
+	[DDLRegistration(0x2f6b9d71u, description: "Whether to auto-delete once our beam out completes. Note, this can be overwritten by the thing that beams us out.")]
 	public bool DeleteAfterBeamOut { get; set; } = false;
 
-	[DDLRegistration(0xdfbe1151u, description: "Config that controls how the dissolve happens")]
+	[DDLRegistration(0xc4483ad1u, description: "Config that controls how the dissolve happens")]
 	public RivetAssetId BeamOutConfig { get; set; } = default;
 
-	[DDLRegistration(0xdfbe1151u, description: "AssetId to use instead of the file path")]
+	[DDLRegistration(0x276df15eu, description: "AssetId to use instead of the file path")]
 	public RivetAssetId BeamOutConfigOverride { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static BeamOutEffectPrius Create(DDLObject ddl) => new(ddl);

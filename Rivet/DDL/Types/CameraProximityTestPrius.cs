@@ -18,7 +18,7 @@ public class CameraProximityTestPrius : DDLObjectType, IDDLObjectType<CameraProx
 		DistanceThreshold = ddl.GetValue<float>(0xe3819433u, DistanceThreshold);
 	}
 
-	[DDLRegistration(0xb7f67961u)]
+	[DDLRegistration(0xe3819433u)]
 	public float DistanceThreshold { get; set; } = 100.00f;
 
 	public static CameraProximityTestPrius Create(DDLObject ddl) => new(ddl);

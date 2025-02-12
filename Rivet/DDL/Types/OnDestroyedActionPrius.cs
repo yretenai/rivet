@@ -20,13 +20,13 @@ public class OnDestroyedActionPrius : DDLObjectType, IDDLObjectType<OnDestroyedA
 		ListenOnStart = ddl.GetValue<bool>(0x426f1075u, ListenOnStart);
 	}
 
-	[DDLRegistration(0xa0bc0b6fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0xa0bc0b6fu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0xa0bc0b6fu, "Listen on start", "Listen on startup")]
+	[DDLRegistration(0x426f1075u, "Listen on start", "Listen on startup")]
 	public bool ListenOnStart { get; set; } = true;
 
 	public static OnDestroyedActionPrius Create(DDLObject ddl) => new(ddl);

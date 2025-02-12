@@ -19,10 +19,10 @@ public class BotBaseDataModDef : DDLObjectType, IDDLObjectType<BotBaseDataModDef
 		ModList = ddl.GetObjects<ConfigModListElement>(0x2649755bu);
 	}
 
-	[DDLRegistration(0x13c512d6u, "Variable", "Variable to modify")]
+	[DDLRegistration(0x364c3afdu, "Variable", "Variable to modify")]
 	public x751872e8 Variable { get; set; } = x751872e8.None;
 
-	[DDLRegistration(0x13c512d6u, "Config Mod List", "List of config mods to apply")]
+	[DDLRegistration(0x2649755bu, "Config Mod List", "List of config mods to apply")]
 	public List<ConfigModListElement?> ModList { get; set; } = [];
 
 	public static BotBaseDataModDef Create(DDLObject ddl) => new(ddl);

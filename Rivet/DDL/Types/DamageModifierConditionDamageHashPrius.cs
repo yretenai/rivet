@@ -20,13 +20,13 @@ public class DamageModifierConditionDamageHashPrius : DamageModifierConditionBas
 		IsInclude = ddl.GetValue<bool>(0x9497a047u, IsInclude);
 	}
 
-	[DDLRegistration(0x8bb2bbb5u)]
+	[DDLRegistration(0x4624269bu)]
 	public string? DamageString { get; set; } = default;
 
-	[DDLRegistration(0x8bb2bbb5u)]
+	[DDLRegistration(0xd96a20dcu)]
 	public uint DamageHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8bb2bbb5u)]
+	[DDLRegistration(0x9497a047u)]
 	public bool IsInclude { get; set; } = true;
 
 	public new static DamageModifierConditionDamageHashPrius Create(DDLObject ddl) => new(ddl);

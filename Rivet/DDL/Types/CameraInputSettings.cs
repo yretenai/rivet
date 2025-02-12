@@ -34,55 +34,55 @@ public class CameraInputSettings : DDLObjectType, IDDLObjectType<CameraInputSett
 		DisplayDebugAxes = ddl.GetValue<bool>(0x314620c3u, DisplayDebugAxes);
 	}
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0xb5e1a446u)]
 	public int ZedQuality { get; set; } = 0;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0xb15e243bu)]
 	public int ZedResolution { get; set; } = 1;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0xc3d8165au)]
 	public int ResolutionWidth { get; set; } = 0;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0x076f4d62u)]
 	public int ResolutionHeight { get; set; } = 0;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0x331b0992u)]
 	public float FrameRate { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0xe6f936e0u)]
 	public string? CameraName { get; set; } = default;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0x3ba21cbfu)]
 	public int FrameBufferCount { get; set; } = 12;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0x32a6fcefu)]
 	public float FrameDelayMs { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0x3f407aa2u)]
 	public float LeftClip { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0xffb70677u)]
 	public float RightClip { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0xa887717bu)]
 	public float TopClip { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0xea1fad13u)]
 	public float BottomClip { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0x2fe5e681u)]
 	public float ChromaKey { get; set; } = 0.47f;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0xba4fe962u)]
 	public float LinearKey { get; set; } = -0.01f;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0x5ee81684u)]
 	public float SpillReduction { get; set; } = 0.49f;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0x03e5a9a1u)]
 	public bool BlueScreen { get; set; } = false;
 
-	[DDLRegistration(0xd11a42aau)]
+	[DDLRegistration(0x314620c3u)]
 	public bool DisplayDebugAxes { get; set; } = false;
 
 	public static CameraInputSettings Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class LogQueryEnableLoggerInput : DDLObjectType, IDDLObjectType<LogQueryE
 		NameHash = ddl.GetValue<uint>(0xc2f561e2u, NameHash);
 	}
 
-	[DDLRegistration(0xc0ef184eu, description: "Name hash of the logger that we want to enable")]
+	[DDLRegistration(0xc2f561e2u, description: "Name hash of the logger that we want to enable")]
 	public uint NameHash { get; set; } = 0x00000000;
 
 	public static LogQueryEnableLoggerInput Create(DDLObject ddl) => new(ddl);

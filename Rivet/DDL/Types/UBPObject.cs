@@ -20,13 +20,13 @@ public class UBPObject : DDLObjectType, IDDLObjectType<UBPObject> {
 		EntitySubtype = ddl.GetEnum<x56d897ac>(0x2b2fec50u, x56d897acValues.Lookup);
 	}
 
-	[DDLRegistration(0x886e2e66u)]
+	[DDLRegistration(0xf55ff6dau)]
 	public string? EntityId { get; set; } = default;
 
-	[DDLRegistration(0x886e2e66u)]
+	[DDLRegistration(0x8b63dca3u)]
 	public x80ef7527 EntityType { get; set; } = x80ef7527.PSNObject;
 
-	[DDLRegistration(0x886e2e66u)]
+	[DDLRegistration(0x2b2fec50u)]
 	public x56d897ac EntitySubtype { get; set; } = x56d897ac.Activity;
 
 	public static UBPObject Create(DDLObject ddl) => new(ddl);

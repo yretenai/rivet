@@ -33,52 +33,52 @@ public class BotSetupData : DDLObjectType, IDDLObjectType<BotSetupData> {
 		HomeContainerRegion = ddl.GetValue<RivetAssetId>(0xbcc039c0u, HomeContainerRegion);
 	}
 
-	[DDLRegistration(0x05f793ccu)]
+	[DDLRegistration(0xfcf12cc6u)]
 	public bool SpawnEngagedWithHero { get; set; } = false;
 
-	[DDLRegistration(0x05f793ccu, description: "Forces bots to use the hover class to do spawn path intros.")]
+	[DDLRegistration(0xb7777f84u, description: "Forces bots to use the hover class to do spawn path intros.")]
 	public bool ForceHoverPathIntro { get; set; } = false;
 
-	[DDLRegistration(0x05f793ccu, description: "Bot will interrupt its intro and try go engaged when damaged")]
+	[DDLRegistration(0xe1fbf750u, description: "Bot will interrupt its intro and try go engaged when damaged")]
 	public bool IntroIsInterruptibleByDamage { get; set; } = false;
 
-	[DDLRegistration(0x05f793ccu, description: "Bot will interrupt its intro and try go engaged when damaged if the damage happens after landing on the ground")]
+	[DDLRegistration(0xfea77be4u, description: "Bot will interrupt its intro and try go engaged when damaged if the damage happens after landing on the ground")]
 	public bool IntroIsInterruptibleByDamageOnLand { get; set; } = true;
 
-	[DDLRegistration(0x05f793ccu, description: "Bot will interrupt its intro and try go engaged when target within melee range")]
+	[DDLRegistration(0x4aa10542u, description: "Bot will interrupt its intro and try go engaged when target within melee range")]
 	public bool IntroIsInterruptibleByMeleeRange { get; set; } = true;
 
-	[DDLRegistration(0x05f793ccu, description: "Bot will interrupt its intro and try go engaged when target within awareness and confirmed")]
+	[DDLRegistration(0x814cc204u, description: "Bot will interrupt its intro and try go engaged when target within awareness and confirmed")]
 	public bool IntroIsInterruptibleByAwareness { get; set; } = false;
 
-	[DDLRegistration(0x05f793ccu, description: "Bot will interrupt its intro and try go engaged/modecontrolled when setup with ModeControl node")]
+	[DDLRegistration(0x39192ff5u, description: "Bot will interrupt its intro and try go engaged/modecontrolled when setup with ModeControl node")]
 	public bool IntroIsInterruptibleByModeControl { get; set; } = true;
 
-	[DDLRegistration(0x05f793ccu, description: "If the intro is interrupted, should we return to the intro once we are done with the interruption?")]
+	[DDLRegistration(0xb11e7b36u, description: "If the intro is interrupted, should we return to the intro once we are done with the interruption?")]
 	public bool InterruptedIntroCanBeResumed { get; set; } = false;
 
-	[DDLRegistration(0x05f793ccu)]
+	[DDLRegistration(0x236586cbu)]
 	public MovementStyleGame IntroSpeed { get; set; } = MovementStyleGame.Run;
 
-	[DDLRegistration(0x05f793ccu, description: "Alert Behavior will just face and skip Alert Anims")]
+	[DDLRegistration(0x88656e30u, description: "Alert Behavior will just face and skip Alert Anims")]
 	public bool SkipAlertAnim { get; set; } = false;
 
-	[DDLRegistration(0x05f793ccu)]
+	[DDLRegistration(0xba0dad77u)]
 	public bool DisableIdleWander { get; set; } = false;
 
-	[DDLRegistration(0x05f793ccu)]
+	[DDLRegistration(0x68b17a10u)]
 	public bool AllowRetaliation { get; set; } = true;
 
-	[DDLRegistration(0x05f793ccu)]
+	[DDLRegistration(0x123cb9aau)]
 	public float IdleWanderMinCooldown { get; set; } = 2.00f;
 
-	[DDLRegistration(0x05f793ccu)]
+	[DDLRegistration(0xde31c2a5u)]
 	public float IdleWanderMaxCooldown { get; set; } = 6.00f;
 
-	[DDLRegistration(0x05f793ccu)]
+	[DDLRegistration(0xc7e3238bu)]
 	public bool AllowHibernationBasedOnLoadedRegion { get; set; } = true;
 
-	[DDLRegistration(0x05f793ccu, description: "Region where bot will be forced to call home. When this region unloads, bot will hibernate until it is loaded in again. By default bot just chooses whatever current loaded in container region is")]
+	[DDLRegistration(0xbcc039c0u, description: "Region where bot will be forced to call home. When this region unloads, bot will hibernate until it is loaded in again. By default bot just chooses whatever current loaded in container region is")]
 	public RivetAssetId HomeContainerRegion { get; set; } = default;
 
 	public static BotSetupData Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class BattleBrewEffectData : DDLObjectType, IDDLObjectType<BattleBrewEffe
 		Emitters = ddl.GetObjects<BattleBrewEmitterWrapper>(0xb0a4fc8cu);
 	}
 
-	[DDLRegistration(0x608dbe7du)]
+	[DDLRegistration(0xba84a8cfu)]
 	public string? BrewName { get; set; } = default;
 
-	[DDLRegistration(0x608dbe7du)]
+	[DDLRegistration(0xb0a4fc8cu)]
 	public List<BattleBrewEmitterWrapper?> Emitters { get; set; } = [];
 
 	public static BattleBrewEffectData Create(DDLObject ddl) => new(ddl);

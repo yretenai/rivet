@@ -26,31 +26,31 @@ public class HitReactGamePrius : HitReactPrius, IDDLObjectType<HitReactGamePrius
 		ApplyCooldownToMeleeDamage = ddl.GetValue<bool>(0x8c884b8du, ApplyCooldownToMeleeDamage);
 	}
 
-	[DDLRegistration(0x1c70e4ddu)]
+	[DDLRegistration(0x25b695d8u)]
 	public List<BotReactionBucket?> Buckets { get; set; } = [];
 
-	[DDLRegistration(0x1c70e4ddu, "Knockback Data")]
+	[DDLRegistration(0xcc96e476u, "Knockback Data")]
 	public KnockbackData? KnockbackData { get; set; } = default;
 
-	[DDLRegistration(0x1c70e4ddu, "Knockdown Data")]
+	[DDLRegistration(0x0a615951u, "Knockdown Data")]
 	public KnockdownData? KnockdownData { get; set; } = default;
 
-	[DDLRegistration(0x1c70e4ddu, "Death Data")]
+	[DDLRegistration(0xc5c5429eu, "Death Data")]
 	public DeathData? DeathData { get; set; } = default;
 
-	[DDLRegistration(0x1c70e4ddu, "Hit Shader Data")]
+	[DDLRegistration(0xbe73a2efu, "Hit Shader Data")]
 	public BotHitShaderData? HitShaderData { get; set; } = default;
 
-	[DDLRegistration(0x1c70e4ddu)]
+	[DDLRegistration(0x5de60dbeu)]
 	public bool TestCollision { get; set; } = false;
 
-	[DDLRegistration(0x1c70e4ddu)]
+	[DDLRegistration(0x4015bc6eu)]
 	public float CollisionTestHeight { get; set; } = 1.50f;
 
-	[DDLRegistration(0x1c70e4ddu)]
+	[DDLRegistration(0x8e24373bu)]
 	public float CollisionTestRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1c70e4ddu, "Apply Cooldown to Melee Damage")]
+	[DDLRegistration(0x8c884b8du, "Apply Cooldown to Melee Damage")]
 	public bool ApplyCooldownToMeleeDamage { get; set; } = false;
 
 	public new static HitReactGamePrius Create(DDLObject ddl) => new(ddl);

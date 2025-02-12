@@ -23,22 +23,22 @@ public class VendorPrius : DDLObjectType, IDDLObjectType<VendorPrius> {
 		PurchaseCameraActor = ddl.GetValue<RivetAssetId>(0x2ce3a298u, PurchaseCameraActor);
 	}
 
-	[DDLRegistration(0x19712944u)]
+	[DDLRegistration(0x3d54432bu)]
 	public List<RivetAssetId> VendorConfigs { get; set; } = [];
 
-	[DDLRegistration(0x19712944u)]
+	[DDLRegistration(0x3e035e82u)]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0x19712944u)]
+	[DDLRegistration(0x5a5f9e61u)]
 	public bool AllowUpgrades { get; set; } = true;
 
-	[DDLRegistration(0x19712944u, description: "Vendor Tutorial type")]
+	[DDLRegistration(0x0e832f21u, description: "Vendor Tutorial type")]
 	public xf88150a5 TutorialType { get; set; } = xf88150a5.None;
 
-	[DDLRegistration(0x19712944u)]
+	[DDLRegistration(0x8c4c71fbu)]
 	public RivetAssetId PurchaseVolumeActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x19712944u)]
+	[DDLRegistration(0x2ce3a298u)]
 	public RivetAssetId PurchaseCameraActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static VendorPrius Create(DDLObject ddl) => new(ddl);

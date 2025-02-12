@@ -20,13 +20,13 @@ public class DamagePrimCapsule : DamagePrimBase, IDDLObjectType<DamagePrimCapsul
 		DamageRadius = ddl.GetValue<float>(0xe3e6fa68u, DamageRadius);
 	}
 
-	[DDLRegistration(0xda0a6b77u, "Secondary Locator")]
+	[DDLRegistration(0x105999dfu, "Secondary Locator")]
 	public string? DamageLocatorSecondary { get; set; } = default;
 
-	[DDLRegistration(0xda0a6b77u, "Secondary Local Offset", "This is an offset in model space.")]
+	[DDLRegistration(0x2d270ce4u, "Secondary Local Offset", "This is an offset in model space.")]
 	public DDLVector3? LocalOffsetSecondary { get; set; } = default;
 
-	[DDLRegistration(0xda0a6b77u, "Damage Radius")]
+	[DDLRegistration(0xe3e6fa68u, "Damage Radius")]
 	public float DamageRadius { get; set; } = 1.00f;
 
 	public new static DamagePrimCapsule Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class AmoeboidSplitEvent : EventBase, IDDLObjectType<AmoeboidSplitEvent> 
 		WasFrozen = ddl.GetValue<bool>(0xe347cc9du, WasFrozen);
 	}
 
-	[DDLRegistration(0xee55d3e1u)]
+	[DDLRegistration(0xe347cc9du)]
 	public bool WasFrozen { get; set; } = false;
 
 	public new static AmoeboidSplitEvent Create(DDLObject ddl) => new(ddl);

@@ -28,37 +28,37 @@ public class Cinematic2BehaviorPlayAnimClipActionDef : DDLObjectType, IDDLObject
 		MayaActorSplitOrder = ddl.GetValue<ushort>(0xd78a5606u, MayaActorSplitOrder);
 	}
 
-	[DDLRegistration(0x47162bf7u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x47162bf7u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x47162bf7u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x47162bf7u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x47162bf7u)]
+	[DDLRegistration(0x461f415eu)]
 	public float BlendInDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x47162bf7u)]
+	[DDLRegistration(0x3ae47cafu)]
 	public RivetAssetId AnimClip { get; set; } = default;
 
-	[DDLRegistration(0x47162bf7u, description: "This is the offset into the specified anim clip.")]
+	[DDLRegistration(0xc0afb406u, description: "This is the offset into the specified anim clip.")]
 	public float ClipStartOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x47162bf7u, description: "ActorId of the actor we wish play relative to (can be empty)")]
+	[DDLRegistration(0x6d367288u, description: "ActorId of the actor we wish play relative to (can be empty)")]
 	public RivetAssetId TargetActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x47162bf7u, description: "Locator on the specified actor we wish play relative to (can be empty)")]
+	[DDLRegistration(0x4bd4816eu, description: "Locator on the specified actor we wish play relative to (can be empty)")]
 	public string? TargetLocatorName { get; set; } = default;
 
-	[DDLRegistration(0x47162bf7u)]
+	[DDLRegistration(0x0247ad16u)]
 	public Cinematic2MayaShotExportInfo? MayaShotInfo { get; set; } = default;
 
-	[DDLRegistration(0x47162bf7u)]
+	[DDLRegistration(0xd78a5606u)]
 	public ushort MayaActorSplitOrder { get; set; } = 0x0000;
 
 	public static Cinematic2BehaviorPlayAnimClipActionDef Create(DDLObject ddl) => new(ddl);

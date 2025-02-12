@@ -33,52 +33,52 @@ public class DamageIntelConfig : ConfigBase, IDDLObjectType<DamageIntelConfig> {
 		SpawnOffsetY = ddl.GetValue<float>(0x6ec5b4e2u, SpawnOffsetY);
 	}
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0x0755c419u)]
 	public RivetAssetId DigitActor { get; set; } = default;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0xa84b3f5cu)]
 	public float Spacing { get; set; } = 0.50f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0x7f14a608u)]
 	public float MinDist { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0x942d4960u)]
 	public float StartScale { get; set; } = 0.50f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0xa4614bafu)]
 	public float EndScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0x62957ab3u)]
 	public float PathEndSide { get; set; } = 0.50f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0x7a6104fcu)]
 	public float PathEndForward { get; set; } = 1.50f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0xe76b7d85u)]
 	public float PathEndUp { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0x7c53b7b2u)]
 	public float PathSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0xa44c44f6u)]
 	public float ScaleDistance { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0xb3c3a627u)]
 	public float ScaleExponent { get; set; } = 0.50f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0x739fb439u)]
 	public float GroupingDist { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0x9d77fc8bu)]
 	public float GroupingTime { get; set; } = 1.50f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0xe8fc2920u)]
 	public float NormalScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0x9cb0936au)]
 	public float WeakspotScale { get; set; } = 1.50f;
 
-	[DDLRegistration(0x0202a4d5u)]
+	[DDLRegistration(0x6ec5b4e2u)]
 	public float SpawnOffsetY { get; set; } = 0.00f;
 
 	public new static DamageIntelConfig Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class OrderedListArrangeActionPrius : DDLObjectType, IDDLObjectType<Order
 		ShuffleForceMove = ddl.GetValue<bool>(0xd2512f99u, ShuffleForceMove);
 	}
 
-	[DDLRegistration(0xb540844du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Lists;
 
-	[DDLRegistration(0xb540844du, description: "If set, guarantees that shuffle will move every item")]
+	[DDLRegistration(0xd2512f99u, description: "If set, guarantees that shuffle will move every item")]
 	public bool ShuffleForceMove { get; set; } = false;
 
 	public static OrderedListArrangeActionPrius Create(DDLObject ddl) => new(ddl);

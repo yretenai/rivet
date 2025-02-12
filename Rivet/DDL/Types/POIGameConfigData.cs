@@ -19,10 +19,10 @@ public class POIGameConfigData : POIConfigData, IDDLObjectType<POIGameConfigData
 		SymbolType = ddl.GetEnum<x942777d3>(0x86cd9534u, x942777d3Values.Lookup);
 	}
 
-	[DDLRegistration(0x6b32a1a2u, description: "Outro behavior")]
+	[DDLRegistration(0x0b0e2cdfu, description: "Outro behavior")]
 	public POIAttributeOutroBase? Outro { get; set; } = default;
 
-	[DDLRegistration(0x6b32a1a2u, description: "Which POI symbol type to instance")]
+	[DDLRegistration(0x86cd9534u, description: "Which POI symbol type to instance")]
 	public x942777d3 SymbolType { get; set; } = x942777d3.Generic;
 
 	public new static POIGameConfigData Create(DDLObject ddl) => new(ddl);

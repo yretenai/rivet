@@ -18,7 +18,7 @@ public class ComboDisplayDataComboString : ComboDisplayDataBase, IDDLObjectType<
 		ComboString = ddl.GetString(0x654da4f6) ?? ComboString;
 	}
 
-	[DDLRegistration(0xc34eebe9u)]
+	[DDLRegistration(0x654da4f6u)]
 	public string? ComboString { get; set; } = default;
 
 	public new static ComboDisplayDataComboString Create(DDLObject ddl) => new(ddl);

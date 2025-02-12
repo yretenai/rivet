@@ -18,7 +18,7 @@ public class ActivityClueConditionFacingMatch : DDLObjectType, IDDLObjectType<Ac
 		MaxAngle = ddl.GetValue<float>(0x191f829eu, MaxAngle);
 	}
 
-	[DDLRegistration(0xd4ef1e5au, "Max Angle", "The bot's forward must be within the many degrees of the clue's forward")]
+	[DDLRegistration(0x191f829eu, "Max Angle", "The bot's forward must be within the many degrees of the clue's forward")]
 	public float MaxAngle { get; set; } = 90.00f;
 
 	public static ActivityClueConditionFacingMatch Create(DDLObject ddl) => new(ddl);

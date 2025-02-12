@@ -18,7 +18,7 @@ public class PortalActivateActionPrius : DDLObjectType, IDDLObjectType<PortalAct
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x681ef346u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
 	public static PortalActivateActionPrius Create(DDLObject ddl) => new(ddl);

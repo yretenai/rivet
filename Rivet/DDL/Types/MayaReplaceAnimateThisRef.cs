@@ -20,13 +20,13 @@ public class MayaReplaceAnimateThisRef : DDLObjectType, IDDLObjectType<MayaRepla
 		NewReferencePath = ddl.GetString(0xd4a42fe9) ?? NewReferencePath;
 	}
 
-	[DDLRegistration(0x43db41d3u)]
+	[DDLRegistration(0xfb5169fbu)]
 	public string? MayaPath { get; set; } = default;
 
-	[DDLRegistration(0x43db41d3u)]
+	[DDLRegistration(0x166db0a0u)]
 	public string? OldReferencePath { get; set; } = default;
 
-	[DDLRegistration(0x43db41d3u)]
+	[DDLRegistration(0xd4a42fe9u)]
 	public string? NewReferencePath { get; set; } = default;
 
 	public static MayaReplaceAnimateThisRef Create(DDLObject ddl) => new(ddl);

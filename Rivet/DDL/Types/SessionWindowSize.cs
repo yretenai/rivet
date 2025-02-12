@@ -19,10 +19,10 @@ public class SessionWindowSize : DDLObjectType, IDDLObjectType<SessionWindowSize
 		Height = ddl.GetValue<int>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0x71a50c0eu)]
+	[DDLRegistration(0x954989eeu)]
 	public int Width { get; set; } = 512;
 
-	[DDLRegistration(0x71a50c0eu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public int Height { get; set; } = 512;
 
 	public static SessionWindowSize Create(DDLObject ddl) => new(ddl);

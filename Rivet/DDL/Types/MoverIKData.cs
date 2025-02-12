@@ -19,10 +19,10 @@ public class MoverIKData : DDLObjectType, IDDLObjectType<MoverIKData> {
 		MaxHeightBelowAnim = ddl.GetValue<float>(0x36e0b036u, MaxHeightBelowAnim);
 	}
 
-	[DDLRegistration(0x164300cau, description: "If IK is enabled, the height above the foot position from the animation result a ground check will start when evaluating the actor's ground offset.")]
+	[DDLRegistration(0x0ab908c6u, description: "If IK is enabled, the height above the foot position from the animation result a ground check will start when evaluating the actor's ground offset.")]
 	public float MaxHeightAboveAnim { get; set; } = 0.21f;
 
-	[DDLRegistration(0x164300cau, description: "If IK is enabled, the height below the foot position from the animation result a ground check will end when evaluating the actor's ground offset.")]
+	[DDLRegistration(0x36e0b036u, description: "If IK is enabled, the height below the foot position from the animation result a ground check will end when evaluating the actor's ground offset.")]
 	public float MaxHeightBelowAnim { get; set; } = 0.21f;
 
 	public static MoverIKData Create(DDLObject ddl) => new(ddl);

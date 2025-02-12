@@ -25,28 +25,28 @@ public class TerrainSystem03EditingTerrain : DDLObjectType, IDDLObjectType<Terra
 		Line08 = ddl.GetString(0x01a33779) ?? Line08;
 	}
 
-	[DDLRegistration(0x123a2190u, description: "To edit a piece of terrain, select it in the Level Editor.  Hold the <i>J</i> key to")]
+	[DDLRegistration(0x787f8fddu, description: "To edit a piece of terrain, select it in the Level Editor.  Hold the <i>J</i> key to")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x123a2190u, description: "enter <i>Terrain Paint Mode</i>; this should bring up the Terrain Paint Panel,")]
+	[DDLRegistration(0xe176de67u, description: "enter <i>Terrain Paint Mode</i>; this should bring up the Terrain Paint Panel,")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x123a2190u, description: "which contains many brush options.  While in <i>Terrain Paint Mode</i>, click the")]
+	[DDLRegistration(0x9671eef1u, description: "which contains many brush options.  While in <i>Terrain Paint Mode</i>, click the")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x123a2190u, description: "left mouse button (and drag) to apply paint to the terrain using the current")]
+	[DDLRegistration(0x08157b52u, description: "left mouse button (and drag) to apply paint to the terrain using the current")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x123a2190u, description: "brush options.  Some brush options can be inverted; for invertable brushes,")]
+	[DDLRegistration(0x7f124bc4u, description: "brush options.  Some brush options can be inverted; for invertable brushes,")]
 	public string? Line05 { get; set; } = default;
 
-	[DDLRegistration(0x123a2190u, description: "clicking the right mouse button (and dragging) will apply the <i>inverted</i> paint")]
+	[DDLRegistration(0xe61b1a7eu, description: "clicking the right mouse button (and dragging) will apply the <i>inverted</i> paint")]
 	public string? Line06 { get; set; } = default;
 
-	[DDLRegistration(0x123a2190u, description: "to the terrain.  For brushes that cannot be inverted, the right mouse button")]
+	[DDLRegistration(0x911c2ae8u, description: "to the terrain.  For brushes that cannot be inverted, the right mouse button")]
 	public string? Line07 { get; set; } = default;
 
-	[DDLRegistration(0x123a2190u, description: "behaves the same as the left.")]
+	[DDLRegistration(0x01a33779u, description: "behaves the same as the left.")]
 	public string? Line08 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain Create(DDLObject ddl) => new(ddl);

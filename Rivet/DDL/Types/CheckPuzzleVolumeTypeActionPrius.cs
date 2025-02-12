@@ -18,7 +18,7 @@ public class CheckPuzzleVolumeTypeActionPrius : DDLObjectType, IDDLObjectType<Ch
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xb2e5e2a4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Puzzle;
 
 	public static CheckPuzzleVolumeTypeActionPrius Create(DDLObject ddl) => new(ddl);

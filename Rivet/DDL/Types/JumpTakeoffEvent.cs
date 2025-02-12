@@ -18,7 +18,7 @@ public class JumpTakeoffEvent : EventBase, IDDLObjectType<JumpTakeoffEvent> {
 		Material = ddl.GetEnum<x10b3c4cf>(0x86bfc8e5u, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0x46d08639u, description: "Collision hit material (output)")]
+	[DDLRegistration(0x86bfc8e5u, description: "Collision hit material (output)")]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
 	public new static JumpTakeoffEvent Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class DepthOfFieldVolumePrius : DDLObjectType, IDDLObjectType<DepthOfFiel
 		DisableDOF = ddl.GetValue<bool>(0x95a5d5c7u, DisableDOF);
 	}
 
-	[DDLRegistration(0x9564864eu)]
+	[DDLRegistration(0x5acb163cu)]
 	public float BlurStartDistance { get; set; } = 50.00f;
 
-	[DDLRegistration(0x9564864eu)]
+	[DDLRegistration(0x730b441fu)]
 	public float BlurValue { get; set; } = 2.50f;
 
-	[DDLRegistration(0x9564864eu)]
+	[DDLRegistration(0x389a1da6u)]
 	public float BlurNearDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9564864eu)]
+	[DDLRegistration(0xf1d75c63u)]
 	public float BlurNearValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9564864eu)]
+	[DDLRegistration(0xbfbaac56u)]
 	public float BlendOnTime { get; set; } = 0.20f;
 
-	[DDLRegistration(0x9564864eu)]
+	[DDLRegistration(0x95a5d5c7u)]
 	public bool DisableDOF { get; set; } = false;
 
 	public static DepthOfFieldVolumePrius Create(DDLObject ddl) => new(ddl);

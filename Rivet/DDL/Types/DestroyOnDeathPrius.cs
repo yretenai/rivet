@@ -18,7 +18,7 @@ public class DestroyOnDeathPrius : DDLObjectType, IDDLObjectType<DestroyOnDeathP
 		Delay = ddl.GetValue<float>(0xabc94c5au, Delay);
 	}
 
-	[DDLRegistration(0xbd7d9154u)]
+	[DDLRegistration(0xabc94c5au)]
 	public float Delay { get; set; } = 0.00f;
 
 	public static DestroyOnDeathPrius Create(DDLObject ddl) => new(ddl);

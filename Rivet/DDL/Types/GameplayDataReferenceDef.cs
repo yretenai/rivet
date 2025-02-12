@@ -19,10 +19,10 @@ public class GameplayDataReferenceDef : DDLObjectType, IDDLObjectType<GameplayDa
 		DataType = ddl.GetString(0xdf0abd28) ?? DataType;
 	}
 
-	[DDLRegistration(0x37fad3c5u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x37fad3c5u, "Type")]
+	[DDLRegistration(0xdf0abd28u, "Type")]
 	public string? DataType { get; set; } = default;
 
 	public static GameplayDataReferenceDef Create(DDLObject ddl) => new(ddl);

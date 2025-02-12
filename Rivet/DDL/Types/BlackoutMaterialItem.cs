@@ -19,10 +19,10 @@ public class BlackoutMaterialItem : DDLObjectType, IDDLObjectType<BlackoutMateri
 		Material = ddl.GetValue<RivetAssetId>(0x86bfc8e5u, Material);
 	}
 
-	[DDLRegistration(0x2817ca9cu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x2817ca9cu)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public RivetAssetId Material { get; set; } = default;
 
 	public static BlackoutMaterialItem Create(DDLObject ddl) => new(ddl);

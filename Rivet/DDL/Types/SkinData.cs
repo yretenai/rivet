@@ -23,22 +23,22 @@ public class SkinData : DDLObjectType, IDDLObjectType<SkinData> {
 		OxygenTankModel = ddl.GetValue<RivetAssetId>(0xce8dd78bu, OxygenTankModel);
 	}
 
-	[DDLRegistration(0x1131f88au, "Body Look Group")]
+	[DDLRegistration(0xaab66edeu, "Body Look Group")]
 	public string? BodyLookGroup { get; set; } = default;
 
-	[DDLRegistration(0x1131f88au, "Glove Look Group")]
+	[DDLRegistration(0xc1a6779fu, "Glove Look Group")]
 	public string? GloveLookGroup { get; set; } = default;
 
-	[DDLRegistration(0x1131f88au, "Boots Look Group")]
+	[DDLRegistration(0x8a133d52u, "Boots Look Group")]
 	public string? BootsLookGroup { get; set; } = default;
 
-	[DDLRegistration(0x1131f88au, "Cap Look Group")]
+	[DDLRegistration(0xc407913au, "Cap Look Group")]
 	public string? CapLookGroup { get; set; } = default;
 
-	[DDLRegistration(0x1131f88au, "Helmet Model")]
+	[DDLRegistration(0x537019f1u, "Helmet Model")]
 	public RivetAssetId HelmetModel { get; set; } = default;
 
-	[DDLRegistration(0x1131f88au, "Oxygen Tank Model")]
+	[DDLRegistration(0xce8dd78bu, "Oxygen Tank Model")]
 	public RivetAssetId OxygenTankModel { get; set; } = default;
 
 	public static SkinData Create(DDLObject ddl) => new(ddl);

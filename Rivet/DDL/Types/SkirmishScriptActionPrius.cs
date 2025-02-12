@@ -19,10 +19,10 @@ public class SkirmishScriptActionPrius : DDLObjectType, IDDLObjectType<SkirmishS
 		SquadActorGroup = ddl.GetValue<RivetAssetId>(0x2de37949u, SquadActorGroup);
 	}
 
-	[DDLRegistration(0x85addc03u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0x85addc03u)]
+	[DDLRegistration(0x2de37949u)]
 	public RivetAssetId SquadActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static SkirmishScriptActionPrius Create(DDLObject ddl) => new(ddl);

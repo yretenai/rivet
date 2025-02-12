@@ -21,16 +21,16 @@ public class FarmLightingConfig2 : ConfigBase, IDDLObjectType<FarmLightingConfig
 		DefaultLevelFile = ddl.GetValue<RivetAssetId>(0xa982630au, DefaultLevelFile);
 	}
 
-	[DDLRegistration(0xff813e44u, "Open Regions")]
+	[DDLRegistration(0xf01dee22u, "Open Regions")]
 	public List<FarmOpenRegionData?> OpenRegions { get; set; } = [];
 
-	[DDLRegistration(0xff813e44u, "Instance Regions")]
+	[DDLRegistration(0xd467001au, "Instance Regions")]
 	public List<FarmInstanceRegionData?> InstanceRegions { get; set; } = [];
 
-	[DDLRegistration(0xff813e44u, "Default Region", "used if no region is specified")]
+	[DDLRegistration(0x54a9ae47u, "Default Region", "used if no region is specified")]
 	public RivetAssetId DefaultRegion { get; set; } = default;
 
-	[DDLRegistration(0xff813e44u, "Default Level", "default level for regions")]
+	[DDLRegistration(0xa982630au, "Default Level", "default level for regions")]
 	public RivetAssetId DefaultLevelFile { get; set; } = default;
 
 	public new static FarmLightingConfig2 Create(DDLObject ddl) => new(ddl);

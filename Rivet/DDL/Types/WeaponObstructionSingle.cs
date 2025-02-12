@@ -18,7 +18,7 @@ public class WeaponObstructionSingle : WeaponObstructionBase, IDDLObjectType<Wea
 		Weapon = ddl.GetObject<BarrelObstructionBase>(0x574be981u);
 	}
 
-	[DDLRegistration(0x1c7d7bbau)]
+	[DDLRegistration(0x574be981u)]
 	public BarrelObstructionBase? Weapon { get; set; } = default;
 
 	public new static WeaponObstructionSingle Create(DDLObject ddl) => new(ddl);

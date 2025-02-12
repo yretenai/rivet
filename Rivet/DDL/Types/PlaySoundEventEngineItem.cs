@@ -18,7 +18,7 @@ public class PlaySoundEventEngineItem : DDLObjectType, IDDLObjectType<PlaySoundE
 		WwiseEvent = ddl.GetObject<WwiseEvent>(0xcebb3bc3u);
 	}
 
-	[DDLRegistration(0x360a88b1u)]
+	[DDLRegistration(0xcebb3bc3u)]
 	public WwiseEvent? WwiseEvent { get; set; } = default;
 
 	public static PlaySoundEventEngineItem Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ConversationCommunicatorHUDPrius : ConversationCommunicatorBasePriu
 		SpeakerNameLocTag = ddl.GetString(0x208bdcbe) ?? SpeakerNameLocTag;
 	}
 
-	[DDLRegistration(0x09402e79u)]
+	[DDLRegistration(0x8f837688u)]
 	public RivetAssetId SpeakerTexture { get; set; } = default;
 
-	[DDLRegistration(0x09402e79u, description: "Will be replaced with localized text if it exists.")]
+	[DDLRegistration(0x208bdcbeu, description: "Will be replaced with localized text if it exists.")]
 	public string? SpeakerNameLocTag { get; set; } = "INVALID";
 
 	public new static ConversationCommunicatorHUDPrius Create(DDLObject ddl) => new(ddl);

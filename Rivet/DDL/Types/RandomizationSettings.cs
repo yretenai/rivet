@@ -21,16 +21,16 @@ public class RandomizationSettings : DDLObjectType, IDDLObjectType<Randomization
 		Enable = ddl.GetValue<bool>(0xcdd88655u, Enable);
 	}
 
-	[DDLRegistration(0xd649de83u)]
+	[DDLRegistration(0x9656fc30u)]
 	public float ScaleAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd649de83u)]
+	[DDLRegistration(0xe6287300u)]
 	public float AngleAmount { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd649de83u)]
+	[DDLRegistration(0x72e832f1u)]
 	public bool RandomAsset { get; set; } = true;
 
-	[DDLRegistration(0xd649de83u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = false;
 
 	public static RandomizationSettings Create(DDLObject ddl) => new(ddl);

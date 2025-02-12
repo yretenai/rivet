@@ -20,13 +20,13 @@ public class StateDependentCameraConfigData : DDLObjectType, IDDLObjectType<Stat
 		AllowCameraInput = ddl.GetValue<bool>(0xc114162fu, AllowCameraInput);
 	}
 
-	[DDLRegistration(0xd2b7631cu)]
+	[DDLRegistration(0xec658ed4u)]
 	public string? StateString { get; set; } = "";
 
-	[DDLRegistration(0xd2b7631cu)]
+	[DDLRegistration(0x0d3bb808u)]
 	public CameraAimContextConfig? AimContext { get; set; } = default;
 
-	[DDLRegistration(0xd2b7631cu, description: "Allow camera moving while in the mounting state.")]
+	[DDLRegistration(0xc114162fu, description: "Allow camera moving while in the mounting state.")]
 	public bool AllowCameraInput { get; set; } = true;
 
 	public static StateDependentCameraConfigData Create(DDLObject ddl) => new(ddl);

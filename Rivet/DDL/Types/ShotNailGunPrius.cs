@@ -27,34 +27,34 @@ public class ShotNailGunPrius : BasicBulletPrius, IDDLObjectType<ShotNailGunPriu
 		PlantedShotAsset = ddl.GetValue<RivetAssetId>(0xeeca44e2u, PlantedShotAsset);
 	}
 
-	[DDLRegistration(0x2392c3dfu, description: "Distance from planted shots that new shots can be and still register to drive the existing nail deeper.")]
+	[DDLRegistration(0x130488f8u, description: "Distance from planted shots that new shots can be and still register to drive the existing nail deeper.")]
 	public float MaximumValidDistance { get; set; } = 0.50f;
 
-	[DDLRegistration(0x2392c3dfu, description: "Distance that the nail should embed on each subsequent hit.")]
+	[DDLRegistration(0xc0169bf8u, description: "Distance that the nail should embed on each subsequent hit.")]
 	public float EmbedDistancePerHit { get; set; } = 0.20f;
 
-	[DDLRegistration(0x2392c3dfu, description: "Maximum distance the nail should embed.")]
+	[DDLRegistration(0x172b14b6u, description: "Maximum distance the nail should embed.")]
 	public float MaxEmbedDistance { get; set; } = 0.75f;
 
-	[DDLRegistration(0x2392c3dfu, description: "Amount of bonus to be applied with each subsequent hit to an embedded nail.")]
+	[DDLRegistration(0x9f435c50u, description: "Amount of bonus to be applied with each subsequent hit to an embedded nail.")]
 	public float DamageMultiplierPerEmbed { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2392c3dfu, description: "Maximum number of hits tracked on an embedded shot for increasing damage multiplier.")]
+	[DDLRegistration(0xfe9a3649u, description: "Maximum number of hits tracked on an embedded shot for increasing damage multiplier.")]
 	public int MaxHitCount { get; set; } = 5;
 
-	[DDLRegistration(0x2392c3dfu, description: "Maximum duration the planted shot can live when embedded into the environment. (-1 means unlimited)")]
+	[DDLRegistration(0xfbb13158u, description: "Maximum duration the planted shot can live when embedded into the environment. (-1 means unlimited)")]
 	public float PlantedLifetimeEnviro { get; set; } = 5.00f;
 
-	[DDLRegistration(0x2392c3dfu, description: "Base duration the planted shot can live when embedded into a bot. (-1 means unlimited)")]
+	[DDLRegistration(0xc1aaff74u, description: "Base duration the planted shot can live when embedded into a bot. (-1 means unlimited)")]
 	public float PlantedLifetimeBot { get; set; } = -1.00f;
 
-	[DDLRegistration(0x2392c3dfu, description: "Amount of time the planted shot's lifetime will be extended by each subsequent hit embedding it further.")]
+	[DDLRegistration(0x65bb60f4u, description: "Amount of time the planted shot's lifetime will be extended by each subsequent hit embedding it further.")]
 	public float PlantedLifetimeBotExtend { get; set; } = 2.00f;
 
-	[DDLRegistration(0x2392c3dfu, description: "Maximum lifetime the planted shot can have at any given moment regardless of the number of subsequent hits.")]
+	[DDLRegistration(0xaca5cab2u, description: "Maximum lifetime the planted shot can have at any given moment regardless of the number of subsequent hits.")]
 	public float PlantedLifetimeBotMax { get; set; } = 10.00f;
 
-	[DDLRegistration(0x2392c3dfu)]
+	[DDLRegistration(0xeeca44e2u)]
 	public RivetAssetId PlantedShotAsset { get; set; } = default;
 
 	public new static ShotNailGunPrius Create(DDLObject ddl) => new(ddl);

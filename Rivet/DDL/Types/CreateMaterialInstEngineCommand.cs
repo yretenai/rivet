@@ -18,7 +18,7 @@ public class CreateMaterialInstEngineCommand : DDLObjectType, IDDLObjectType<Cre
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 	}
 
-	[DDLRegistration(0x894c8d37u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static CreateMaterialInstEngineCommand Create(DDLObject ddl) => new(ddl);

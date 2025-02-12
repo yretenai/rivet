@@ -24,25 +24,25 @@ public class AttachToWaterSurfacePrius : DDLObjectType, IDDLObjectType<AttachToW
 		UpdateOffscreen = ddl.GetValue<bool>(0x9e43a644u, UpdateOffscreen);
 	}
 
-	[DDLRegistration(0xbcccf9d7u, "Bob Values Source")]
+	[DDLRegistration(0x15fa182du, "Bob Values Source")]
 	public x24d9b2cf BobValuesSource { get; set; } = x24d9b2cf.DontUse;
 
-	[DDLRegistration(0xbcccf9d7u)]
+	[DDLRegistration(0xcb1c250au)]
 	public float BobGain { get; set; } = -1.00f;
 
-	[DDLRegistration(0xbcccf9d7u)]
+	[DDLRegistration(0x47ca7283u)]
 	public float BobDamp { get; set; } = -8.00f;
 
-	[DDLRegistration(0xbcccf9d7u)]
+	[DDLRegistration(0xcc77003fu)]
 	public float BobMaxSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbcccf9d7u, "Persisten or event driven")]
+	[DDLRegistration(0xc75e3e4eu, "Persisten or event driven")]
 	public ActivationType Activation { get; set; } = ActivationType.EventDriven;
 
-	[DDLRegistration(0xbcccf9d7u)]
+	[DDLRegistration(0x8d5cdbeau)]
 	public float MotionDepth { get; set; } = 0.10f;
 
-	[DDLRegistration(0xbcccf9d7u, description: "Attach to water surface, even if object is not drawn.")]
+	[DDLRegistration(0x9e43a644u, description: "Attach to water surface, even if object is not drawn.")]
 	public bool UpdateOffscreen { get; set; } = false;
 
 	public static AttachToWaterSurfacePrius Create(DDLObject ddl) => new(ddl);

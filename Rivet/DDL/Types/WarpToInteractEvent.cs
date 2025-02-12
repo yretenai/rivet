@@ -19,10 +19,10 @@ public class WarpToInteractEvent : EventBase, IDDLObjectType<WarpToInteractEvent
 		InteractLocation = ddl.GetValue<byte>(0x0aa57484u, InteractLocation);
 	}
 
-	[DDLRegistration(0x90a47fa0u)]
+	[DDLRegistration(0x8bbbb97bu)]
 	public uint InteractHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x90a47fa0u)]
+	[DDLRegistration(0x0aa57484u)]
 	public byte InteractLocation { get; set; } = 0x00;
 
 	public new static WarpToInteractEvent Create(DDLObject ddl) => new(ddl);

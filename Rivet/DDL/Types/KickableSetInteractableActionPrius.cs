@@ -18,7 +18,7 @@ public class KickableSetInteractableActionPrius : DDLObjectType, IDDLObjectType<
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x6bdafaffu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Physics;
 
 	public static KickableSetInteractableActionPrius Create(DDLObject ddl) => new(ddl);

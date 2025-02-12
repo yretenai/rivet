@@ -19,10 +19,10 @@ public class GadgetItemConfig : GameItemConfig, IDDLObjectType<GadgetItemConfig>
 		HelpTextTag = ddl.GetString(0x4b5c5ca7) ?? HelpTextTag;
 	}
 
-	[DDLRegistration(0x555b0b91u)]
+	[DDLRegistration(0x03ec9f66u)]
 	public HudGadgetEnum GadgetType { get; set; } = HudGadgetEnum.Omniboots;
 
-	[DDLRegistration(0x555b0b91u, description: "Loc tag for help text")]
+	[DDLRegistration(0x4b5c5ca7u, description: "Loc tag for help text")]
 	public string? HelpTextTag { get; set; } = default;
 
 	public new static GadgetItemConfig Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class BossBotCordelionNefariousShieldManagerPrius : DDLObjectType, IDDLOb
 		DamageToExpire = ddl.GetValue<float>(0xf1d25b07u, DamageToExpire);
 	}
 
-	[DDLRegistration(0x367c7c50u, description: "Apply this material to the bot while shielded")]
+	[DDLRegistration(0xfc03343bu, description: "Apply this material to the bot while shielded")]
 	public RivetAssetId ShieldedMaterial { get; set; } = default;
 
-	[DDLRegistration(0x367c7c50u, description: "How much time to elapse for shield to expire. -1 means infinite")]
+	[DDLRegistration(0xb02e8883u, description: "How much time to elapse for shield to expire. -1 means infinite")]
 	public float TimeToExpire { get; set; } = -1.00f;
 
-	[DDLRegistration(0x367c7c50u, description: "How much damage must the shield take before it expires. -1 means infinite")]
+	[DDLRegistration(0xf1d25b07u, description: "How much damage must the shield take before it expires. -1 means infinite")]
 	public float DamageToExpire { get; set; } = 600.00f;
 
 	public static BossBotCordelionNefariousShieldManagerPrius Create(DDLObject ddl) => new(ddl);

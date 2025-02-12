@@ -28,37 +28,37 @@ public class PirateChallengeControllerPrius : DDLObjectType, IDDLObjectType<Pira
 		PirateData = ddl.GetObjects<PirateData>(0x1065613fu);
 	}
 
-	[DDLRegistration(0x5a4f7770u, "Inactive Anim")]
+	[DDLRegistration(0x088953a3u, "Inactive Anim")]
 	public string? InactiveAnim { get; set; } = "Off";
 
-	[DDLRegistration(0x5a4f7770u, "Activate Anim")]
+	[DDLRegistration(0xadba4079u, "Activate Anim")]
 	public string? ActivateAnim { get; set; } = "Activated";
 
-	[DDLRegistration(0x5a4f7770u, "Interrupt Anim")]
+	[DDLRegistration(0x6ee0f877u, "Interrupt Anim")]
 	public string? InterruptAnim { get; set; } = "Interrupt";
 
-	[DDLRegistration(0x5a4f7770u, "Ready Off")]
+	[DDLRegistration(0x415d91e0u, "Ready Off")]
 	public string? ReadyOffAnim { get; set; } = "Ready_Light_Off";
 
-	[DDLRegistration(0x5a4f7770u, "Ready On")]
+	[DDLRegistration(0x2f430f83u, "Ready On")]
 	public string? ReadyOnAnim { get; set; } = "Ready";
 
-	[DDLRegistration(0x5a4f7770u, "Perform Anim")]
+	[DDLRegistration(0x5b0d08dcu, "Perform Anim")]
 	public string? PerformAnim { get; set; } = "Sing";
 
-	[DDLRegistration(0x5a4f7770u, "Instruction Anim")]
+	[DDLRegistration(0x5bc91f87u, "Instruction Anim")]
 	public string? InstructionAnim { get; set; } = "Instruction";
 
-	[DDLRegistration(0x5a4f7770u, "Celebrate Anim")]
+	[DDLRegistration(0xc8581959u, "Celebrate Anim")]
 	public string? CelebrateAnim { get; set; } = "Celebrate";
 
-	[DDLRegistration(0x5a4f7770u, "Taunt Anim")]
+	[DDLRegistration(0xb3db7a8eu, "Taunt Anim")]
 	public string? TauntAnim { get; set; } = "Taunt";
 
-	[DDLRegistration(0x5a4f7770u, "Deactivate Anim")]
+	[DDLRegistration(0x10af5f8au, "Deactivate Anim")]
 	public string? DeactivateAnim { get; set; } = "Deactivated";
 
-	[DDLRegistration(0x5a4f7770u)]
+	[DDLRegistration(0x1065613fu)]
 	public List<PirateData?> PirateData { get; set; } = [];
 
 	public static PirateChallengeControllerPrius Create(DDLObject ddl) => new(ddl);

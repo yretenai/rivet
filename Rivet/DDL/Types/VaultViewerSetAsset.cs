@@ -21,16 +21,16 @@ public class VaultViewerSetAsset : DDLObjectType, IDDLObjectType<VaultViewerSetA
 		AnimSetModelAssetPath = ddl.GetString(0x930315ab) ?? AnimSetModelAssetPath;
 	}
 
-	[DDLRegistration(0x6da353b4u)]
+	[DDLRegistration(0x5b8d9442u)]
 	public string? AssetName { get; set; } = default;
 
-	[DDLRegistration(0x6da353b4u)]
+	[DDLRegistration(0x5d0f513cu)]
 	public List<string?> AnimSetStack { get; set; } = [];
 
-	[DDLRegistration(0x6da353b4u)]
+	[DDLRegistration(0xf49c395eu)]
 	public string? AnimSetActorAssetPath { get; set; } = default;
 
-	[DDLRegistration(0x6da353b4u)]
+	[DDLRegistration(0x930315abu)]
 	public string? AnimSetModelAssetPath { get; set; } = default;
 
 	public static VaultViewerSetAsset Create(DDLObject ddl) => new(ddl);

@@ -36,61 +36,61 @@ public class NetSettings : DDLObjectType, IDDLObjectType<NetSettings> {
 		AwardsEnable = ddl.GetValue<bool>(0xf02a15b5u, AwardsEnable);
 	}
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0x6596fc13u)]
 	public bool LanTimeoutEnable { get; set; } = true;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0x0bf139f5u)]
 	public bool VersionCheckEnable { get; set; } = true;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0xf6561226u)]
 	public ushort PingPort { get; set; } = 0x0000;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0x16fdb4a6u)]
 	public ushort PingPortExternal { get; set; } = 0x0000;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0xd6d9ca8cu)]
 	public ushort RoomListRequestPort { get; set; } = 0x0000;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0xf433af4cu)]
 	public ushort RoomListResponsePort { get; set; } = 0x0000;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0xe0cefa80u)]
 	public string? DefaultBrowsePool { get; set; } = "Default_Browse_Pool";
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0x98bd7c55u)]
 	public bool RestrictBrowseGamesToFriends { get; set; } = false;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0x4da22870u)]
 	public bool RestoreRoomAvailableWhenLoseClients { get; set; } = false;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0x9243e896u)]
 	public bool IntrospectionEnable { get; set; } = false;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0xf380409eu)]
 	public ulong TitleId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0x574d6401u)]
 	public uint VersionId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0xff3cab9bu)]
 	public uint LocalAddress { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = false;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0xe9b56f54u)]
 	public bool ProfilingEnable { get; set; } = false;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0x5ca50228u)]
 	public bool LanEnable { get; set; } = true;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0x35a49967u)]
 	public bool P2PEnable { get; set; } = false;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0x0e60157au)]
 	public bool VoiceChatEnable { get; set; } = true;
 
-	[DDLRegistration(0x07691d1eu)]
+	[DDLRegistration(0xf02a15b5u)]
 	public bool AwardsEnable { get; set; } = false;
 
 	public static NetSettings Create(DDLObject ddl) => new(ddl);

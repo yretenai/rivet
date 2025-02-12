@@ -18,7 +18,7 @@ public class AnimHammerCrankLightEvent : EventBase, IDDLObjectType<AnimHammerCra
 		LightsOn = ddl.GetValue<byte>(0xd5fb23e2u, LightsOn);
 	}
 
-	[DDLRegistration(0xdd26f716u)]
+	[DDLRegistration(0xd5fb23e2u)]
 	public byte LightsOn { get; set; } = 0x00;
 
 	public new static AnimHammerCrankLightEvent Create(DDLObject ddl) => new(ddl);

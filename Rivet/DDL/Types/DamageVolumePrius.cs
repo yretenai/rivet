@@ -40,73 +40,73 @@ public class DamageVolumePrius : DDLObjectType, IDDLObjectType<DamageVolumePrius
 		DamageString = ddl.GetString(0x4624269b) ?? DamageString;
 	}
 
-	[DDLRegistration(0x02a0ca56u, "Start Active", "Use Activate/Deactivate to toggle.  This affects the whole actor.")]
+	[DDLRegistration(0x3e035e82u, "Start Active", "Use Activate/Deactivate to toggle.  This affects the whole actor.")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0x02a0ca56u, "Start Component Enabled", "Use EnableDamageVolumeEvent/DisableDamageVolumeEvent or the ToggleEvent to toggle this component only.")]
+	[DDLRegistration(0x2c5d7e8au, "Start Component Enabled", "Use EnableDamageVolumeEvent/DisableDamageVolumeEvent or the ToggleEvent to toggle this component only.")]
 	public bool StartComponentEnabled { get; set; } = true;
 
-	[DDLRegistration(0x02a0ca56u, "Damage Per Second")]
+	[DDLRegistration(0x287ed02au, "Damage Per Second")]
 	public float DamagePerSecond { get; set; } = 1.00f;
 
-	[DDLRegistration(0x02a0ca56u, "Damage Interval")]
+	[DDLRegistration(0x420d2682u, "Damage Interval")]
 	public float DamageInterval { get; set; } = 0.50f;
 
-	[DDLRegistration(0x02a0ca56u, "Ignore Duration", "Actors that take damage from this volume ignore subsequent damage from it for this amount of time")]
+	[DDLRegistration(0x2ee45555u, "Ignore Duration", "Actors that take damage from this volume ignore subsequent damage from it for this amount of time")]
 	public float IgnoreDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x02a0ca56u, "Damage Type")]
+	[DDLRegistration(0xbc4e9799u, "Damage Type")]
 	public DamageTypesGame Type { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x02a0ca56u, "Status Amount")]
+	[DDLRegistration(0x37e1f098u, "Status Amount")]
 	public float StatusAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x02a0ca56u, "StatusLastsForever")]
+	[DDLRegistration(0x104df5b7u, "StatusLastsForever")]
 	public bool StatusLastsForever { get; set; } = false;
 
-	[DDLRegistration(0x02a0ca56u, "Knockback Level")]
+	[DDLRegistration(0x2e553fddu, "Knockback Level")]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x02a0ca56u, "Knockback Amount")]
+	[DDLRegistration(0x7b1e600bu, "Knockback Amount")]
 	public float KnockbackAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x02a0ca56u, "Request Flags")]
+	[DDLRegistration(0x93d0d934u, "Request Flags")]
 	public DamageRequestFlags DamageFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
-	[DDLRegistration(0x02a0ca56u, "Allegiance Type")]
+	[DDLRegistration(0x216d98dcu, "Allegiance Type")]
 	public x6bdf4ba1 SourceAllegiance { get; set; } = x6bdf4ba1.Neutral;
 
-	[DDLRegistration(0x02a0ca56u, "Allegiance Relation")]
+	[DDLRegistration(0xe38a7c20u, "Allegiance Relation")]
 	public AllegianceRelation Relationship { get; set; } = AllegianceRelation.Any;
 
-	[DDLRegistration(0x02a0ca56u)]
+	[DDLRegistration(0x85109145u)]
 	public TargetType TargetTypes { get; set; } = (TargetType) 0x00000000;
 
-	[DDLRegistration(0x02a0ca56u, "Damage Heroes", "Here for backwards compatibility.")]
+	[DDLRegistration(0x8f161bf5u, "Damage Heroes", "Here for backwards compatibility.")]
 	public bool DamageHeroes { get; set; } = true;
 
-	[DDLRegistration(0x02a0ca56u, "Damage Bots", "Here for backwards compatibility.")]
+	[DDLRegistration(0x796db299u, "Damage Bots", "Here for backwards compatibility.")]
 	public bool DamageBots { get; set; } = false;
 
-	[DDLRegistration(0x02a0ca56u, "Radius", "Only used when the prius is not on a Volume")]
+	[DDLRegistration(0x0504203du, "Radius", "Only used when the prius is not on a Volume")]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x02a0ca56u, "Always Use Radius", "If true, override the actor's volume shape to add a sphere with the specified radius.")]
+	[DDLRegistration(0x2b3260f4u, "Always Use Radius", "If true, override the actor's volume shape to add a sphere with the specified radius.")]
 	public bool AlwaysUseRadius { get; set; } = false;
 
-	[DDLRegistration(0x02a0ca56u, "Targetable Only", "Only damage targetable actors.")]
+	[DDLRegistration(0xc779ff5cu, "Targetable Only", "Only damage targetable actors.")]
 	public bool TargetableOnly { get; set; } = true;
 
-	[DDLRegistration(0x02a0ca56u, "Test BSpheres Only", "Only test against target bspheres.")]
+	[DDLRegistration(0x73f028d8u, "Test BSpheres Only", "Only test against target bspheres.")]
 	public bool TestBSpheresOnly { get; set; } = false;
 
-	[DDLRegistration(0x02a0ca56u, "No Spawn Rewards", "Actors killed by this volume don't spawn rewards")]
+	[DDLRegistration(0x8c940ca0u, "No Spawn Rewards", "Actors killed by this volume don't spawn rewards")]
 	public bool NoSpawnRewards { get; set; } = true;
 
-	[DDLRegistration(0x02a0ca56u, "Radial Hit Direction", "Actors will react as if the damage happened from the center of the volume towards them. If unchecked it will be straight up.")]
+	[DDLRegistration(0x7738f229u, "Radial Hit Direction", "Actors will react as if the damage happened from the center of the volume towards them. If unchecked it will be straight up.")]
 	public bool RadialHitDir { get; set; } = true;
 
-	[DDLRegistration(0x02a0ca56u, "Damage String")]
+	[DDLRegistration(0x4624269bu, "Damage String")]
 	public string? DamageString { get; set; } = "";
 
 	public static DamageVolumePrius Create(DDLObject ddl) => new(ddl);

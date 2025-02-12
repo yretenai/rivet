@@ -21,16 +21,16 @@ public class UBPObjectsDef : DDLObjectType, IDDLObjectType<UBPObjectsDef> {
 		Entities = ddl.GetStrings(0x539bbbc3u);
 	}
 
-	[DDLRegistration(0x86c1ffefu)]
+	[DDLRegistration(0x5af80aeeu)]
 	public string? SchemaVersion { get; set; } = default;
 
-	[DDLRegistration(0x86c1ffefu)]
+	[DDLRegistration(0x0aa38892u)]
 	public xe07d4302 ContextType { get; set; } = xe07d4302.NPCommunicationId;
 
-	[DDLRegistration(0x86c1ffefu)]
+	[DDLRegistration(0x06df9fd7u)]
 	public string? ContextId { get; set; } = default;
 
-	[DDLRegistration(0x86c1ffefu)]
+	[DDLRegistration(0x539bbbc3u)]
 	public List<string?> Entities { get; set; } = [];
 
 	public static UBPObjectsDef Create(DDLObject ddl) => new(ddl);

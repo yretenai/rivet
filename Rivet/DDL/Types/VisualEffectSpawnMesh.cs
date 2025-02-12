@@ -20,13 +20,13 @@ public class VisualEffectSpawnMesh : DDLObjectType, IDDLObjectType<VisualEffectS
 		ExcludeModelMaterialMappings = ddl.GetStrings(0x98ce9e8cu);
 	}
 
-	[DDLRegistration(0x7225c9b5u, "Target Spawn Style Node")]
+	[DDLRegistration(0x3f7b4531u, "Target Spawn Style Node")]
 	public string? TargetSpawnStyleNode { get; set; } = default;
 
-	[DDLRegistration(0x7225c9b5u, "Target Model Material Mappings")]
+	[DDLRegistration(0x53142c99u, "Target Model Material Mappings")]
 	public List<string?> TargetModelMaterialMappings { get; set; } = [];
 
-	[DDLRegistration(0x7225c9b5u, "Exclude Model Material Mappings")]
+	[DDLRegistration(0x98ce9e8cu, "Exclude Model Material Mappings")]
 	public List<string?> ExcludeModelMaterialMappings { get; set; } = [];
 
 	public static VisualEffectSpawnMesh Create(DDLObject ddl) => new(ddl);

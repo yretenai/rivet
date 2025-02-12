@@ -25,28 +25,28 @@ public class DeviceSpecificLocalization : DDLObjectType, IDDLObjectType<DeviceSp
 		MkbLocalizationID = ddl.GetString(0xba35dfc1) ?? MkbLocalizationID;
 	}
 
-	[DDLRegistration(0xf434dc65u, description: "Default localization entry")]
+	[DDLRegistration(0x036fa988u, description: "Default localization entry")]
 	public string? DefaultLocalizationID { get; set; } = "";
 
-	[DDLRegistration(0xf434dc65u, description: "Localization entry when Xbox 360 controller is used")]
+	[DDLRegistration(0xcfac8a1fu, description: "Localization entry when Xbox 360 controller is used")]
 	public string? X360LocalizationID { get; set; } = "";
 
-	[DDLRegistration(0xf434dc65u, description: "Localization entry when Xbox One controller is used")]
+	[DDLRegistration(0x385421afu, description: "Localization entry when Xbox One controller is used")]
 	public string? XOneLocalizationID { get; set; } = "";
 
-	[DDLRegistration(0xf434dc65u, description: "Localization entry when DualShock controller is used")]
+	[DDLRegistration(0x0e674387u, description: "Localization entry when DualShock controller is used")]
 	public string? DualShockLocalizationID { get; set; } = "";
 
-	[DDLRegistration(0xf434dc65u, description: "Localization entry when DualSense controller is used")]
+	[DDLRegistration(0x713e61c4u, description: "Localization entry when DualSense controller is used")]
 	public string? DualSenseLocalizationID { get; set; } = "";
 
-	[DDLRegistration(0xf434dc65u, description: "Localization entry when SteamDeck is used")]
+	[DDLRegistration(0x18047e58u, description: "Localization entry when SteamDeck is used")]
 	public string? SteamDeckLocalizationID { get; set; } = "";
 
-	[DDLRegistration(0xf434dc65u, description: "Localization entry when Generic controller is used")]
+	[DDLRegistration(0xffd0d0e0u, description: "Localization entry when Generic controller is used")]
 	public string? GenericLocalizationID { get; set; } = "";
 
-	[DDLRegistration(0xf434dc65u, description: "Localization entry when MKB is used")]
+	[DDLRegistration(0xba35dfc1u, description: "Localization entry when MKB is used")]
 	public string? MkbLocalizationID { get; set; } = "";
 
 	public static DeviceSpecificLocalization Create(DDLObject ddl) => new(ddl);

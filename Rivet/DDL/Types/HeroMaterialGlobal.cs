@@ -20,13 +20,13 @@ public class HeroMaterialGlobal : DDLObjectType, IDDLObjectType<HeroMaterialGlob
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0xd15f62c2u)]
+	[DDLRegistration(0x5814524du)]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0xd15f62c2u)]
+	[DDLRegistration(0xc6991700u)]
 	public string? ConstantName { get; set; } = default;
 
-	[DDLRegistration(0xd15f62c2u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
 	public static HeroMaterialGlobal Create(DDLObject ddl) => new(ddl);

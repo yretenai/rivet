@@ -20,13 +20,13 @@ public class HealEffectPrius : ScriptedShotEffectBasePrius, IDDLObjectType<HealE
 		ContinuousMode = ddl.GetValue<bool>(0x0678540du, ContinuousMode);
 	}
 
-	[DDLRegistration(0x6cd2ed9au)]
+	[DDLRegistration(0x1eb7640eu)]
 	public x04891b54 ActorType { get; set; } = x04891b54.HitActor;
 
-	[DDLRegistration(0x6cd2ed9au)]
+	[DDLRegistration(0xf0a26d74u)]
 	public float Health { get; set; } = 25.00f;
 
-	[DDLRegistration(0x6cd2ed9au)]
+	[DDLRegistration(0x0678540du)]
 	public bool ContinuousMode { get; set; } = false;
 
 	public new static HealEffectPrius Create(DDLObject ddl) => new(ddl);

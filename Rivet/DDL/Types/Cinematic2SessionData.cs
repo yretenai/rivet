@@ -20,13 +20,13 @@ public class Cinematic2SessionData : DDLObjectType, IDDLObjectType<Cinematic2Ses
 		DebugOptions = ddl.GetObject<EditorDebugOptions>(0x856074f2u);
 	}
 
-	[DDLRegistration(0x28f06c28u)]
+	[DDLRegistration(0x145893dbu)]
 	public Dictionary<RivetAssetId, RivetAssetId> Selection { get; set; } = [];
 
-	[DDLRegistration(0x28f06c28u)]
+	[DDLRegistration(0xabfb67b1u)]
 	public EditorRenderMode RenderMode { get; set; } = EditorRenderMode.FullLighting;
 
-	[DDLRegistration(0x28f06c28u)]
+	[DDLRegistration(0x856074f2u)]
 	public EditorDebugOptions? DebugOptions { get; set; } = default;
 
 	public static Cinematic2SessionData Create(DDLObject ddl) => new(ddl);

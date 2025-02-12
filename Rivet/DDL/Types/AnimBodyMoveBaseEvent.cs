@@ -18,7 +18,7 @@ public class AnimBodyMoveBaseEvent : EventBase, IDDLObjectType<AnimBodyMoveBaseE
 		Speed = ddl.GetEnum<x59a8f068>(0x16753237u, x59a8f068Values.Lookup);
 	}
 
-	[DDLRegistration(0xd5c01fe6u, description: "How fast is the character moving")]
+	[DDLRegistration(0x16753237u, description: "How fast is the character moving")]
 	public x59a8f068 Speed { get; set; } = x59a8f068.Walk;
 
 	public new static AnimBodyMoveBaseEvent Create(DDLObject ddl) => new(ddl);

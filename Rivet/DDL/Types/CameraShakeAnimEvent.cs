@@ -19,10 +19,10 @@ public class CameraShakeAnimEvent : EventBase, IDDLObjectType<CameraShakeAnimEve
 		FollowActor = ddl.GetValue<bool>(0x6b8aab60u, FollowActor);
 	}
 
-	[DDLRegistration(0x4673a5c8u)]
+	[DDLRegistration(0x6d55f883u)]
 	public CameraShakingWithFallOffData? Shake { get; set; } = default;
 
-	[DDLRegistration(0x4673a5c8u)]
+	[DDLRegistration(0x6b8aab60u)]
 	public bool FollowActor { get; set; } = false;
 
 	public new static CameraShakeAnimEvent Create(DDLObject ddl) => new(ddl);

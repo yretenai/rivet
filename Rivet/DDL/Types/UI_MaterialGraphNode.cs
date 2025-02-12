@@ -25,28 +25,28 @@ public class UI_MaterialGraphNode : DDLObjectType, IDDLObjectType<UI_MaterialGra
 		InputList = ddl.GetDictionary<uint, UI_MaterialGraphNodeInput>(0x2f3e8cb8, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<UI_MaterialGraphNodeInput>(mapId));
 	}
 
-	[DDLRegistration(0x8b6e1f19u)]
+	[DDLRegistration(0xaa93a9e7u)]
 	public int IdLow { get; set; } = 0;
 
-	[DDLRegistration(0x8b6e1f19u, description: "The display name of the variable.\n\nThis will show up in both the Material Editor and Material Graph and can be safely changed without breaking any external references (Materials, Render Overrides, etc.).")]
+	[DDLRegistration(0x6eb3beb6u, description: "The display name of the variable.\n\nThis will show up in both the Material Editor and Material Graph and can be safely changed without breaking any external references (Materials, Render Overrides, etc.).")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x8b6e1f19u, "Variable Name", "The actual name of the variable that will be used in the generated shader code.\n\nWARNING: It is safe (and encouraged) to give newly created nodes appropriate variable names.\nHowever, it is not safe to change a node's variable name once it may be in use!\nAny external references (Materials, Render Overrides, etc.) will silently break.")]
+	[DDLRegistration(0x11d33588u, "Variable Name", "The actual name of the variable that will be used in the generated shader code.\n\nWARNING: It is safe (and encouraged) to give newly created nodes appropriate variable names.\nHowever, it is not safe to change a node's variable name once it may be in use!\nAny external references (Materials, Render Overrides, etc.) will silently break.")]
 	public string? VariableName { get; set; } = default;
 
-	[DDLRegistration(0x8b6e1f19u, "Material Node")]
+	[DDLRegistration(0x1d927af7u, "Material Node")]
 	public string? MaterialNode { get; set; } = default;
 
-	[DDLRegistration(0x8b6e1f19u, description: "If true, the node name will be prepended to all exposed inputs.")]
+	[DDLRegistration(0x5dda1f00u, description: "If true, the node name will be prepended to all exposed inputs.")]
 	public bool PrependNodeName { get; set; } = false;
 
-	[DDLRegistration(0x8b6e1f19u, description: "A subgraph node's exposed inputs will be grouped under its name when viewed in the Material Editor.\nThis value controls the order of that group relative to its siblings.")]
+	[DDLRegistration(0xbd9f03f1u, description: "A subgraph node's exposed inputs will be grouped under its name when viewed in the Material Editor.\nThis value controls the order of that group relative to its siblings.")]
 	public int SortOrder { get; set; } = 0;
 
-	[DDLRegistration(0x8b6e1f19u)]
+	[DDLRegistration(0xf2039ed8u)]
 	public bool IsSubGraph { get; set; } = false;
 
-	[DDLRegistration(0x8b6e1f19u)]
+	[DDLRegistration(0x2f3e8cb8u)]
 	public Dictionary<uint, UI_MaterialGraphNodeInput?> InputList { get; set; } = [];
 
 	public static UI_MaterialGraphNode Create(DDLObject ddl) => new(ddl);

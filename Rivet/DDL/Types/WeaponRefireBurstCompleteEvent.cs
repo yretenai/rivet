@@ -20,13 +20,13 @@ public class WeaponRefireBurstCompleteEvent : EventBase, IDDLObjectType<WeaponRe
 		OwnerIsLocal = ddl.GetValue<bool>(0xd23b3317u, OwnerIsLocal);
 	}
 
-	[DDLRegistration(0x983d5cfcu)]
+	[DDLRegistration(0x7e74115eu)]
 	public uint BurstSize { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x983d5cfcu)]
+	[DDLRegistration(0x0022f6dcu)]
 	public bool OwnerIsHero { get; set; } = false;
 
-	[DDLRegistration(0x983d5cfcu)]
+	[DDLRegistration(0xd23b3317u)]
 	public bool OwnerIsLocal { get; set; } = false;
 
 	public new static WeaponRefireBurstCompleteEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class DamageModifierInnerOuterPrius : DamageModifierOutgoingPrius, IDDLOb
 		RequestID = ddl.GetValue<uint>(0x18f0cfc5u, RequestID);
 	}
 
-	[DDLRegistration(0x0ed7100fu)]
+	[DDLRegistration(0xa521b107u)]
 	public DamageInnerOuterData? DamageData { get; set; } = default;
 
-	[DDLRegistration(0x0ed7100fu)]
+	[DDLRegistration(0x18f0cfc5u)]
 	public uint RequestID { get; set; } = 0x00000000;
 
 	public new static DamageModifierInnerOuterPrius Create(DDLObject ddl) => new(ddl);

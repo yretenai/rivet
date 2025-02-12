@@ -18,7 +18,7 @@ public class WeaponGroovitronPrius : WeaponGamePrius, IDDLObjectType<WeaponGroov
 		DanceTrophyConfig = ddl.GetValue<RivetAssetId>(0x0a4795f3u, DanceTrophyConfig);
 	}
 
-	[DDLRegistration(0x7fa5cd90u)]
+	[DDLRegistration(0x0a4795f3u)]
 	public RivetAssetId DanceTrophyConfig { get; set; } = default;
 
 	public new static WeaponGroovitronPrius Create(DDLObject ddl) => new(ddl);

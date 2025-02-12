@@ -18,7 +18,7 @@ public class SplineGeneratorItem : DDLObjectType, IDDLObjectType<SplineGenerator
 		SplineGenerators = ddl.GetObject<SplineGenerator>(0x75f95de6u);
 	}
 
-	[DDLRegistration(0x81fc9f88u)]
+	[DDLRegistration(0x75f95de6u)]
 	public SplineGenerator? SplineGenerators { get; set; } = default;
 
 	public static SplineGeneratorItem Create(DDLObject ddl) => new(ddl);

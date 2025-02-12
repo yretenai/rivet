@@ -23,22 +23,22 @@ public class GameBotPoolSharkPrius : BotPrius, IDDLObjectType<GameBotPoolSharkPr
 		DesiredPathYOffset = ddl.GetValue<float>(0xece7819du, DesiredPathYOffset);
 	}
 
-	[DDLRegistration(0xee150bb7u, "Ignore Water", "If true, this poolshark will do normal poolshark behavior regardless of water volumes")]
+	[DDLRegistration(0xbc8d2c8au, "Ignore Water", "If true, this poolshark will do normal poolshark behavior regardless of water volumes")]
 	public bool IgnoreWater { get; set; } = false;
 
-	[DDLRegistration(0xee150bb7u, "Start in Flounder State?", "Whether the shark is placed out of water and should start in its flounder state.")]
+	[DDLRegistration(0x1ee15bdau, "Start in Flounder State?", "Whether the shark is placed out of water and should start in its flounder state.")]
 	public bool StartFloundering { get; set; } = false;
 
-	[DDLRegistration(0xee150bb7u, "Deep Water Shark?", "Whether this shark is in deep water (aka, Ratchet can not swim under the sea). Will be overridden to false if we are in hydrowater.")]
+	[DDLRegistration(0xbd9d6a98u, "Deep Water Shark?", "Whether this shark is in deep water (aka, Ratchet can not swim under the sea). Will be overridden to false if we are in hydrowater.")]
 	public bool IsInDeepWater { get; set; } = true;
 
-	[DDLRegistration(0xee150bb7u, "Water Y Pos", "If the shark isn't in hydro water, what is the level of the water he is in.")]
+	[DDLRegistration(0xdeab6593u, "Water Y Pos", "If the shark isn't in hydro water, what is the level of the water he is in.")]
 	public float WaterYPos { get; set; } = 0.00f;
 
-	[DDLRegistration(0xee150bb7u, "Idle Swim Paths", "The path(s) the shark will swim on when he can swim and there is no tasty hero to go eat.")]
+	[DDLRegistration(0x3468469du, "Idle Swim Paths", "The path(s) the shark will swim on when he can swim and there is no tasty hero to go eat.")]
 	public RivetAssetId IdleSwimPaths { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xee150bb7u, "Path Y Offset", "The y offset for following a path (so the path can be on the surface of the water but the shark under the water).")]
+	[DDLRegistration(0xece7819du, "Path Y Offset", "The y offset for following a path (so the path can be on the surface of the water but the shark under the water).")]
 	public float DesiredPathYOffset { get; set; } = 0.00f;
 
 	public new static GameBotPoolSharkPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class AimAssistTargetZone : DDLObjectType, IDDLObjectType<AimAssistTarget
 		AimAssistFactor = ddl.GetValue<float>(0x04bf6bffu, AimAssistFactor);
 	}
 
-	[DDLRegistration(0x348dd48eu, "Aim Assist Strength")]
+	[DDLRegistration(0x04bf6bffu, "Aim Assist Strength")]
 	public float AimAssistFactor { get; set; } = 1.00f;
 
 	public static AimAssistTargetZone Create(DDLObject ddl) => new(ddl);

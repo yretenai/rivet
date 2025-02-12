@@ -21,16 +21,16 @@ public class AimModLockOnAimingAtCoverPrius : AimModifierPrius, IDDLObjectType<A
 		LockDelay = ddl.GetValue<float>(0xba7cba66u, LockDelay);
 	}
 
-	[DDLRegistration(0xf7f872acu, description: "Locator for LoS testing")]
+	[DDLRegistration(0xc54e6703u, description: "Locator for LoS testing")]
 	public string? SourceLocator { get; set; } = default;
 
-	[DDLRegistration(0xf7f872acu, description: "Radius for LoS collision")]
+	[DDLRegistration(0xc7f69ee3u, description: "Radius for LoS collision")]
 	public float CollRadius { get; set; } = 0.10f;
 
-	[DDLRegistration(0xf7f872acu, description: "Target needs to be within this amount of meters away from colliding cover to lock aim")]
+	[DDLRegistration(0x62a27d08u, description: "Target needs to be within this amount of meters away from colliding cover to lock aim")]
 	public float LockRangeFromTargetToCover { get; set; } = 5.00f;
 
-	[DDLRegistration(0xf7f872acu, description: "When Lock is valid, wait this much seconds before locking")]
+	[DDLRegistration(0xba7cba66u, description: "When Lock is valid, wait this much seconds before locking")]
 	public float LockDelay { get; set; } = 0.10f;
 
 	public new static AimModLockOnAimingAtCoverPrius Create(DDLObject ddl) => new(ddl);

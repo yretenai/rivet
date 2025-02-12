@@ -18,7 +18,7 @@ public class FlyerPickupStartEvent : EventBase, IDDLObjectType<FlyerPickupStartE
 		TargetPickup = ddl.GetValue<uint>(0xb32f73dbu, TargetPickup);
 	}
 
-	[DDLRegistration(0x374badcau)]
+	[DDLRegistration(0xb32f73dbu)]
 	public uint TargetPickup { get; set; } = 0x00000000;
 
 	public new static FlyerPickupStartEvent Create(DDLObject ddl) => new(ddl);

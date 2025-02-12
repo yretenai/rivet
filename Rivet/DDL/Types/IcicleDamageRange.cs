@@ -23,22 +23,22 @@ public class IcicleDamageRange : DDLObjectType, IDDLObjectType<IcicleDamageRange
 		KnockbackAmount = ddl.GetValue<float>(0x7b1e600bu, KnockbackAmount);
 	}
 
-	[DDLRegistration(0x09cf1339u)]
+	[DDLRegistration(0x9a8cfc51u)]
 	public bool IsFirst { get; set; } = false;
 
-	[DDLRegistration(0x09cf1339u, "Start Range Percent")]
+	[DDLRegistration(0x2b62dc22u, "Start Range Percent")]
 	public float StartRangePercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0x09cf1339u, "Damage Percent")]
+	[DDLRegistration(0x7bbba4a0u, "Damage Percent")]
 	public float DamagePercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0x09cf1339u, "Status Percent")]
+	[DDLRegistration(0xd50b14feu, "Status Percent")]
 	public float StatusPercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0x09cf1339u, "Knockback Level")]
+	[DDLRegistration(0x2554a262u, "Knockback Level")]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x09cf1339u, "Knockback Amount")]
+	[DDLRegistration(0x7b1e600bu, "Knockback Amount")]
 	public float KnockbackAmount { get; set; } = 0.00f;
 
 	public static IcicleDamageRange Create(DDLObject ddl) => new(ddl);

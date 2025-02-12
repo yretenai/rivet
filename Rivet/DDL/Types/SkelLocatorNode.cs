@@ -18,7 +18,7 @@ public class SkelLocatorNode : DDLObjectType, IDDLObjectType<SkelLocatorNode> {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0xddf73451u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
 	public static SkelLocatorNode Create(DDLObject ddl) => new(ddl);

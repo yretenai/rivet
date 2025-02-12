@@ -29,40 +29,40 @@ public class ScriptVarWatch : DDLObjectType, IDDLObjectType<ScriptVarWatch> {
 		Pinned = ddl.GetValue<bool>(0xdb5fab80u, Pinned);
 	}
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0x32ca55d0u)]
 	public RivetAssetId UniqueId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0x4ffcecbfu)]
 	public RivetAssetId InstanceTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0xfa3122e7u)]
 	public uint PropertyId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0x61b43292u)]
 	public uint Sort { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0x0531e1ccu)]
 	public string? OriginalName { get; set; } = default;
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x36ed0644 Type { get; set; } = x36ed0644.Float;
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0x76b05713u)]
 	public RivetAssetId GraphId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0xc0e0f909u)]
 	public RivetAssetId ZoneId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb1b08b1fu)]
+	[DDLRegistration(0xdb5fab80u)]
 	public bool Pinned { get; set; } = false;
 
 	public static ScriptVarWatch Create(DDLObject ddl) => new(ddl);

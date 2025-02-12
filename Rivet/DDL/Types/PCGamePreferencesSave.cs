@@ -29,40 +29,40 @@ public class PCGamePreferencesSave : DDLObjectType, IDDLObjectType<PCGamePrefere
 		SoundPerformanceMode = ddl.GetValue<uint>(0x9b4e3dbbu, SoundPerformanceMode);
 	}
 
-	[DDLRegistration(0x9ed17ce1u, description: "True if the boot flow has been seen")]
+	[DDLRegistration(0x7121f4efu, description: "True if the boot flow has been seen")]
 	public bool BootFlowShown { get; set; } = false;
 
-	[DDLRegistration(0x9ed17ce1u, description: "True if linked to PSN once")]
+	[DDLRegistration(0xf7faf7f6u, description: "True if linked to PSN once")]
 	public bool PSNAccountLinked { get; set; } = false;
 
-	[DDLRegistration(0x9ed17ce1u, description: "True if user accepted during first time boot or changed value in the settings")]
+	[DDLRegistration(0xa5cbfa7bu, description: "True if user accepted during first time boot or changed value in the settings")]
 	public int AcceptedSIEAnalytics { get; set; } = -1;
 
-	[DDLRegistration(0x9ed17ce1u, description: "Mouse sensitivity and inversion settings when player is on a flying mount")]
+	[DDLRegistration(0x1c630bddu, description: "Mouse sensitivity and inversion settings when player is on a flying mount")]
 	public MouseControl? MouseControlFlying { get; set; } = default;
 
-	[DDLRegistration(0x9ed17ce1u, description: "True if sprint mode is set to toggle instead of hold")]
+	[DDLRegistration(0x5913d2edu, description: "True if sprint mode is set to toggle instead of hold")]
 	public bool SprintToggle { get; set; } = false;
 
-	[DDLRegistration(0x9ed17ce1u)]
+	[DDLRegistration(0x4385c1aeu)]
 	public ListeningMode ListeningModePC { get; set; } = ListeningMode.ListeningModeSpeakers;
 
-	[DDLRegistration(0x9ed17ce1u)]
+	[DDLRegistration(0x1894ebaau)]
 	public int HudWidescreenScale { get; set; } = 0;
 
-	[DDLRegistration(0x9ed17ce1u)]
+	[DDLRegistration(0x526f0506u)]
 	public bool EnableAudioHaptics { get; set; } = true;
 
-	[DDLRegistration(0x9ed17ce1u)]
+	[DDLRegistration(0x7f7b23b0u)]
 	public int ScePadAudioPathMode { get; set; } = 0;
 
-	[DDLRegistration(0x9ed17ce1u, description: "Aim Invert stick control for X direction")]
+	[DDLRegistration(0x5d264e40u, description: "Aim Invert stick control for X direction")]
 	public bool AimInvertX { get; set; } = false;
 
-	[DDLRegistration(0x9ed17ce1u, description: "Aim Invert stick control for Y direction")]
+	[DDLRegistration(0x2a217ed6u, description: "Aim Invert stick control for Y direction")]
 	public bool AimInvertY { get; set; } = false;
 
-	[DDLRegistration(0x9ed17ce1u, description: "Limits maximum amount of sounds to reduce CPU workload")]
+	[DDLRegistration(0x9b4e3dbbu, description: "Limits maximum amount of sounds to reduce CPU workload")]
 	public uint SoundPerformanceMode { get; set; } = 0x00000000;
 
 	public static PCGamePreferencesSave Create(DDLObject ddl) => new(ddl);

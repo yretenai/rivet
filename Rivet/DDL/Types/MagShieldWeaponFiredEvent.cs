@@ -20,13 +20,13 @@ public class MagShieldWeaponFiredEvent : WeaponTriggeredEvent, IDDLObjectType<Ma
 		Blue = ddl.GetValue<float>(0xaea60a04u, Blue);
 	}
 
-	[DDLRegistration(0x9afb259fu)]
+	[DDLRegistration(0xd0347646u)]
 	public float Red { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9afb259fu)]
+	[DDLRegistration(0xc9c922e0u)]
 	public float Green { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9afb259fu)]
+	[DDLRegistration(0xaea60a04u)]
 	public float Blue { get; set; } = 0.00f;
 
 	public new static MagShieldWeaponFiredEvent Create(DDLObject ddl) => new(ddl);

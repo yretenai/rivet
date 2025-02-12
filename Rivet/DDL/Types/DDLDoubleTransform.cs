@@ -21,16 +21,16 @@ public class DDLDoubleTransform : DDLObjectType, IDDLObjectType<DDLDoubleTransfo
 		Shear = ddl.GetObject<DDLDoubleVector3>(0x13603d12u);
 	}
 
-	[DDLRegistration(0x0b10dc95u, description: "Location")]
+	[DDLRegistration(0xbc2d5985u, description: "Location")]
 	public DDLDoubleVector3? Position { get; set; } = default;
 
-	[DDLRegistration(0x0b10dc95u, "Rotation", "Euler Rotation in degrees")]
+	[DDLRegistration(0x99453ee8u, "Rotation", "Euler Rotation in degrees")]
 	public DDLDoubleVector3? EulerRotation { get; set; } = default;
 
-	[DDLRegistration(0x0b10dc95u, description: "Per-axis scale")]
+	[DDLRegistration(0xf515e945u, description: "Per-axis scale")]
 	public DDLDoubleVector3? Scale { get; set; } = default;
 
-	[DDLRegistration(0x0b10dc95u, description: "Shearing along major axis")]
+	[DDLRegistration(0x13603d12u, description: "Shearing along major axis")]
 	public DDLDoubleVector3? Shear { get; set; } = default;
 
 	public static DDLDoubleTransform Create(DDLObject ddl) => new(ddl);

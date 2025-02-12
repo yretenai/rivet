@@ -18,7 +18,7 @@ public class AutoGenerateFromRegionOverlayData : RegionGameDataBase, IDDLObjectT
 		Region = ddl.GetValue<RivetAssetId>(0x311abf11u, Region);
 	}
 
-	[DDLRegistration(0x25269e62u, description: "Region to pull zones from; must be of an instance unit or an open unit.")]
+	[DDLRegistration(0x311abf11u, description: "Region to pull zones from; must be of an instance unit or an open unit.")]
 	public RivetAssetId Region { get; set; } = default;
 
 	public new static AutoGenerateFromRegionOverlayData Create(DDLObject ddl) => new(ddl);

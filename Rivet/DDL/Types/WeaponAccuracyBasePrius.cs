@@ -18,7 +18,7 @@ public class WeaponAccuracyBasePrius : DDLObjectType, IDDLObjectType<WeaponAccur
 		ModifyVelocityForAutoTarget = ddl.GetValue<bool>(0xf3916a59u, ModifyVelocityForAutoTarget);
 	}
 
-	[DDLRegistration(0xc20c25d6u)]
+	[DDLRegistration(0xf3916a59u)]
 	public bool ModifyVelocityForAutoTarget { get; set; } = true;
 
 	public static WeaponAccuracyBasePrius Create(DDLObject ddl) => new(ddl);

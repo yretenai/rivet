@@ -19,10 +19,10 @@ public class WeaponIconData : DDLObjectType, IDDLObjectType<WeaponIconData> {
 		Icon = ddl.GetString(0x5504e96b) ?? Icon;
 	}
 
-	[DDLRegistration(0x99acf7a8u, description: "HudWeaponEnum value.")]
+	[DDLRegistration(0x574be981u, description: "HudWeaponEnum value.")]
 	public HudWeaponEnum Weapon { get; set; } = HudWeaponEnum.Generic;
 
-	[DDLRegistration(0x99acf7a8u, description: "Icon SVG filename.")]
+	[DDLRegistration(0x5504e96bu, description: "Icon SVG filename.")]
 	public string? Icon { get; set; } = "WpnUnknown";
 
 	public static WeaponIconData Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class ShootingTauntData : DDLObjectType, IDDLObjectType<ShootingTauntData
 		AimAdjustBias = ddl.GetValue<float>(0x004af6bau, AimAdjustBias);
 	}
 
-	[DDLRegistration(0x50e2e8eeu, description: "Minimum number of ranged attacks before bot can taunt. Actual num is rand between min and max. Uses TauntChance once actual number is hit.")]
+	[DDLRegistration(0x590d8a16u, description: "Minimum number of ranged attacks before bot can taunt. Actual num is rand between min and max. Uses TauntChance once actual number is hit.")]
 	public int MinRangedAttacksMissedForTaunt { get; set; } = 3;
 
-	[DDLRegistration(0x50e2e8eeu, description: "Maximum number of ranged attacks before bot can taunt. Actual num is rand between min and max. Uses TauntChance once actual number is hit.")]
+	[DDLRegistration(0xe932902au, description: "Maximum number of ranged attacks before bot can taunt. Actual num is rand between min and max. Uses TauntChance once actual number is hit.")]
 	public int MaxRangedAttacksMissedForTaunt { get; set; } = 3;
 
-	[DDLRegistration(0x50e2e8eeu, description: "Once the ranged-attacks-missed-for-taunt has been reached, there is this amount of chance that we will taunt")]
+	[DDLRegistration(0x63a2f192u, description: "Once the ranged-attacks-missed-for-taunt has been reached, there is this amount of chance that we will taunt")]
 	public float TauntChance { get; set; } = 0.40f;
 
-	[DDLRegistration(0x50e2e8eeu, description: "Chance of randomly taunting every few seconds when idle")]
+	[DDLRegistration(0x52d8671bu, description: "Chance of randomly taunting every few seconds when idle")]
 	public float IdleTauntChance { get; set; } = 0.25f;
 
-	[DDLRegistration(0x50e2e8eeu, description: "In between every ranged attack, we have this amount of chance to aim fidget")]
+	[DDLRegistration(0x4219b0b4u, description: "In between every ranged attack, we have this amount of chance to aim fidget")]
 	public float AimFidgetChance { get; set; } = 0.40f;
 
-	[DDLRegistration(0x50e2e8eeu, description: "Whenever an AimFidget goes off, we bias towards AimAdjust(slight step) over doing an Aim_IdleFidget")]
+	[DDLRegistration(0x004af6bau, description: "Whenever an AimFidget goes off, we bias towards AimAdjust(slight step) over doing an Aim_IdleFidget")]
 	public float AimAdjustBias { get; set; } = 0.65f;
 
 	public static ShootingTauntData Create(DDLObject ddl) => new(ddl);

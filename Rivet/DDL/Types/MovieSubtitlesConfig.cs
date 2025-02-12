@@ -18,7 +18,7 @@ public class MovieSubtitlesConfig : ConfigBase, IDDLObjectType<MovieSubtitlesCon
 		Subtitle = ddl.GetObjects<MovieSubtitle>(0xab842ac1u);
 	}
 
-	[DDLRegistration(0xfe9e0af7u, "Array of Subtitles")]
+	[DDLRegistration(0xab842ac1u, "Array of Subtitles")]
 	public List<MovieSubtitle?> Subtitle { get; set; } = [];
 
 	public new static MovieSubtitlesConfig Create(DDLObject ddl) => new(ddl);

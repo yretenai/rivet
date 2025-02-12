@@ -18,7 +18,7 @@ public class SubtaskDef : ActivityDefBase, IDDLObjectType<SubtaskDef> {
 		Hidden = ddl.GetValue<bool>(0xb625a7dau, Hidden);
 	}
 
-	[DDLRegistration(0x4f2a95c1u, description: "Should this subtask be hidden as a spoiler?")]
+	[DDLRegistration(0xb625a7dau, description: "Should this subtask be hidden as a spoiler?")]
 	public bool Hidden { get; set; } = false;
 
 	public new static SubtaskDef Create(DDLObject ddl) => new(ddl);

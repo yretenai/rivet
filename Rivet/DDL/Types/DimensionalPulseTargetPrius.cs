@@ -25,28 +25,28 @@ public class DimensionalPulseTargetPrius : DimensionalPulseTargetBasePrius, IDDL
 		NavObstruction = ddl.GetObject<PulseNavObstruction>(0xb89f80a5u);
 	}
 
-	[DDLRegistration(0x783b402eu, description: "Should this actor use the default conduit specified in the config?")]
+	[DDLRegistration(0xa77e8cd5u, description: "Should this actor use the default conduit specified in the config?")]
 	public bool UseDefaultConduit { get; set; } = true;
 
-	[DDLRegistration(0x783b402eu, description: "Does this object want to override the shaders applied when affected by a pulse? If not, the shaders will be taken from the config.")]
+	[DDLRegistration(0x652313b3u, description: "Does this object want to override the shaders applied when affected by a pulse? If not, the shaders will be taken from the config.")]
 	public bool OverrideShaders { get; set; } = false;
 
-	[DDLRegistration(0x783b402eu, description: "Pre-composite shader to apply to the actor. Shader is applied immediately upon the pulse going out.")]
+	[DDLRegistration(0x076e460du, description: "Pre-composite shader to apply to the actor. Shader is applied immediately upon the pulse going out.")]
 	public RivetAssetId PreCompositeShader { get; set; } = default;
 
-	[DDLRegistration(0x783b402eu, description: "Post-composite shader to apply to the actor. Shader is applied immediately upon the pulse going out.")]
+	[DDLRegistration(0xe2b72d5fu, description: "Post-composite shader to apply to the actor. Shader is applied immediately upon the pulse going out.")]
 	public RivetAssetId PostCompositeShader { get; set; } = default;
 
-	[DDLRegistration(0x783b402eu, description: "Lifetime of the composite shaders on the actor after it has been hit by the pulse (if greater than the time left in the pulse). -1 = don't remove the shaders")]
+	[DDLRegistration(0xd2ab2353u, description: "Lifetime of the composite shaders on the actor after it has been hit by the pulse (if greater than the time left in the pulse). -1 = don't remove the shaders")]
 	public float PostHitEffectLifetime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x783b402eu, description: "Play this anim driver when the actor gets hit.")]
+	[DDLRegistration(0xdd88dafau, description: "Play this anim driver when the actor gets hit.")]
 	public string? ReactDriver { get; set; } = default;
 
-	[DDLRegistration(0x783b402eu, description: "Does this actor obstruct nav while it is active? Turning this on will incur a performance cost.")]
+	[DDLRegistration(0x4e0dfde0u, description: "Does this actor obstruct nav while it is active? Turning this on will incur a performance cost.")]
 	public bool ObstructsNav { get; set; } = false;
 
-	[DDLRegistration(0x783b402eu)]
+	[DDLRegistration(0xb89f80a5u)]
 	public PulseNavObstruction? NavObstruction { get; set; } = default;
 
 	public new static DimensionalPulseTargetPrius Create(DDLObject ddl) => new(ddl);

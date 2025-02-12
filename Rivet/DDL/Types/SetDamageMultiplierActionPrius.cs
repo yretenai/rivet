@@ -23,22 +23,22 @@ public class SetDamageMultiplierActionPrius : DDLObjectType, IDDLObjectType<SetD
 		ApplyToKnockdown = ddl.GetValue<bool>(0xaae98b21u, ApplyToKnockdown);
 	}
 
-	[DDLRegistration(0x305cb285u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
-	[DDLRegistration(0x305cb285u, "Damage Filters")]
+	[DDLRegistration(0x2032e08du, "Damage Filters")]
 	public List<DamageTypesGame> FilterTypes { get; set; } = [];
 
-	[DDLRegistration(0x305cb285u, "Allegiance Types")]
+	[DDLRegistration(0xcbbd390fu, "Allegiance Types")]
 	public List<x6bdf4ba1> AllegianceTypes { get; set; } = [];
 
-	[DDLRegistration(0x305cb285u)]
+	[DDLRegistration(0x96f0a657u)]
 	public bool FilterIsExclude { get; set; } = false;
 
-	[DDLRegistration(0x305cb285u)]
+	[DDLRegistration(0x6f683f76u)]
 	public bool ModifyOutgoingDamage { get; set; } = false;
 
-	[DDLRegistration(0x305cb285u)]
+	[DDLRegistration(0xaae98b21u)]
 	public bool ApplyToKnockdown { get; set; } = false;
 
 	public static SetDamageMultiplierActionPrius Create(DDLObject ddl) => new(ddl);

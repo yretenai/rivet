@@ -18,7 +18,7 @@ public class SingleShotFiringPrius : BasicShotFiringPrius, IDDLObjectType<Single
 		CullRemoteShots = ddl.GetValue<bool>(0xe3b60c8eu, CullRemoteShots);
 	}
 
-	[DDLRegistration(0xc7f154f5u)]
+	[DDLRegistration(0xe3b60c8eu)]
 	public bool CullRemoteShots { get; set; } = false;
 
 	public new static SingleShotFiringPrius Create(DDLObject ddl) => new(ddl);

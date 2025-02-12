@@ -19,10 +19,10 @@ public class GameBotShooterTestDummyPrius : GameBotShooterPrius, IDDLObjectType<
 		WeaponType = ddl.GetObject<GameBotWeaponType>(0x18fc4fe3u);
 	}
 
-	[DDLRegistration(0x4bee735eu, description: "Whether the bot is stationary (never moves).")]
+	[DDLRegistration(0x03cf2aceu, description: "Whether the bot is stationary (never moves).")]
 	public bool IsStationary { get; set; } = false;
 
-	[DDLRegistration(0x4bee735eu, description: "The bot's weapon. Note if 'none' is selected he will still do his engaged animations (engaged idle, engaged move) unless his awareness config or physical awareness is such that he won't get engaged. Also note that the bomb version uses the shooting config and the shot config (the pyro version does not, you need to specify the attack parameters here).")]
+	[DDLRegistration(0x18fc4fe3u, description: "The bot's weapon. Note if 'none' is selected he will still do his engaged animations (engaged idle, engaged move) unless his awareness config or physical awareness is such that he won't get engaged. Also note that the bomb version uses the shooting config and the shot config (the pyro version does not, you need to specify the attack parameters here).")]
 	public GameBotWeaponType? WeaponType { get; set; } = default;
 
 	public new static GameBotShooterTestDummyPrius Create(DDLObject ddl) => new(ddl);

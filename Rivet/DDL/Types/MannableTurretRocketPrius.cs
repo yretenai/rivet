@@ -25,28 +25,28 @@ public class MannableTurretRocketPrius : DDLObjectType, IDDLObjectType<MannableT
 		MaxPitchSpeed = ddl.GetValue<float>(0xb9365e9bu, MaxPitchSpeed);
 	}
 
-	[DDLRegistration(0xb9e84af3u, "FreeYaw")]
+	[DDLRegistration(0xbeca3d19u, "FreeYaw")]
 	public bool FreeYaw { get; set; } = false;
 
-	[DDLRegistration(0xb9e84af3u, "Right Limit")]
+	[DDLRegistration(0x0bad2fd6u, "Right Limit")]
 	public float YawLimitMin { get; set; } = 90.00f;
 
-	[DDLRegistration(0xb9e84af3u, "Left  Limit")]
+	[DDLRegistration(0x37a0108fu, "Left  Limit")]
 	public float YawLimitMax { get; set; } = 90.00f;
 
-	[DDLRegistration(0xb9e84af3u, "Up Limit")]
+	[DDLRegistration(0x6eec5171u, "Up Limit")]
 	public float PitchLimitMin { get; set; } = 45.00f;
 
-	[DDLRegistration(0xb9e84af3u, "Down Limit")]
+	[DDLRegistration(0x52e16e28u, "Down Limit")]
 	public float PitchLimitMax { get; set; } = 30.00f;
 
-	[DDLRegistration(0xb9e84af3u, "Only Heroes")]
+	[DDLRegistration(0x93a738dau, "Only Heroes")]
 	public bool OnlyHeroes { get; set; } = false;
 
-	[DDLRegistration(0xb9e84af3u, "Max Yaw Speed")]
+	[DDLRegistration(0x710f81a1u, "Max Yaw Speed")]
 	public float MaxYawSpeed { get; set; } = 720.00f;
 
-	[DDLRegistration(0xb9e84af3u, "Max Pitch Speed")]
+	[DDLRegistration(0xb9365e9bu, "Max Pitch Speed")]
 	public float MaxPitchSpeed { get; set; } = 360.00f;
 
 	public static MannableTurretRocketPrius Create(DDLObject ddl) => new(ddl);

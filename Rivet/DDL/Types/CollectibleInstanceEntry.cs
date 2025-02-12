@@ -18,7 +18,7 @@ public class CollectibleInstanceEntry : DDLObjectType, IDDLObjectType<Collectibl
 		InstanceInfo = ddl.GetObject<CollectibleInstanceInfo>(0xedb6ea2bu);
 	}
 
-	[DDLRegistration(0xdf805b90u)]
+	[DDLRegistration(0xedb6ea2bu)]
 	public CollectibleInstanceInfo? InstanceInfo { get; set; } = default;
 
 	public static CollectibleInstanceEntry Create(DDLObject ddl) => new(ddl);

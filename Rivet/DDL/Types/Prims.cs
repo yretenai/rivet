@@ -28,37 +28,37 @@ public class Prims : DDLObjectType, IDDLObjectType<Prims> {
 		U64 = ddl.GetValue<ulong>(0x2f863fa0u, U64);
 	}
 
-	[DDLRegistration(0xb9cc76c7u)]
+	[DDLRegistration(0xf3b6b4a8u)]
 	public bool BOOL { get; set; } = true;
 
-	[DDLRegistration(0xb9cc76c7u)]
+	[DDLRegistration(0xa5f273f9u)]
 	public float F32 { get; set; } = 9.00f;
 
-	[DDLRegistration(0xb9cc76c7u)]
+	[DDLRegistration(0x31e62289u)]
 	public double F64 { get; set; } = 102.4;
 
-	[DDLRegistration(0xb9cc76c7u)]
+	[DDLRegistration(0xe88c5752u)]
 	public sbyte I8 { get; set; } = -8;
 
-	[DDLRegistration(0xb9cc76c7u, "Foobar")]
+	[DDLRegistration(0x9bf5925fu, "Foobar")]
 	public short I16 { get; set; } = 0;
 
-	[DDLRegistration(0xb9cc76c7u)]
+	[DDLRegistration(0xaeae34c4u)]
 	public int I32 { get; set; } = 0;
 
-	[DDLRegistration(0xb9cc76c7u)]
+	[DDLRegistration(0x3aba65b4u)]
 	public long I64 { get; set; } = 1099511627775;
 
-	[DDLRegistration(0xb9cc76c7u)]
+	[DDLRegistration(0x0efb0a0fu)]
 	public byte U8 { get; set; } = 0xfa;
 
-	[DDLRegistration(0xb9cc76c7u)]
+	[DDLRegistration(0x8ec9c84bu)]
 	public ushort U16 { get; set; } = 0x0000;
 
-	[DDLRegistration(0xb9cc76c7u)]
+	[DDLRegistration(0xbb926ed0u)]
 	public uint U32 { get; set; } = 0x000fffff;
 
-	[DDLRegistration(0xb9cc76c7u)]
+	[DDLRegistration(0x2f863fa0u)]
 	public ulong U64 { get; set; } = 0x0000000000000000;
 
 	public static Prims Create(DDLObject ddl) => new(ddl);

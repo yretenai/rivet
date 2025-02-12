@@ -23,22 +23,22 @@ public class PhotomodeSystemSharedConfig : ConfigBase, IDDLObjectType<PhotomodeS
 		Filters = ddl.GetObjects<FilterData>(0x799d04b5u);
 	}
 
-	[DDLRegistration(0x41c600f0u)]
+	[DDLRegistration(0x421458bbu)]
 	public InputSettingsData? InputSettings { get; set; } = default;
 
-	[DDLRegistration(0x41c600f0u)]
+	[DDLRegistration(0x94bb6350u)]
 	public StickerModeData? StickerMode { get; set; } = default;
 
-	[DDLRegistration(0x41c600f0u)]
+	[DDLRegistration(0x7e3ed937u)]
 	public PhotoLightSettings? LightSettings { get; set; } = default;
 
-	[DDLRegistration(0x41c600f0u)]
+	[DDLRegistration(0x6ab54452u)]
 	public PhotomodeCameraManagerData? Cameras { get; set; } = default;
 
-	[DDLRegistration(0x41c600f0u)]
+	[DDLRegistration(0xc016c75du)]
 	public List<FrameData?> Frames { get; set; } = [];
 
-	[DDLRegistration(0x41c600f0u)]
+	[DDLRegistration(0x799d04b5u)]
 	public List<FilterData?> Filters { get; set; } = [];
 
 	public new static PhotomodeSystemSharedConfig Create(DDLObject ddl) => new(ddl);

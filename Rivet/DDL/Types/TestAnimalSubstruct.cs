@@ -20,13 +20,13 @@ public class TestAnimalSubstruct : DDLObjectType, IDDLObjectType<TestAnimalSubst
 		Pet = ddl.GetObject<TestAnimal>(0xce07b24cu);
 	}
 
-	[DDLRegistration(0x0ad1fa5eu)]
+	[DDLRegistration(0xc3f65630u)]
 	public string? HiddenField { get; set; } = default;
 
-	[DDLRegistration(0x0ad1fa5eu)]
+	[DDLRegistration(0xd6332abdu)]
 	public string? Owner { get; set; } = default;
 
-	[DDLRegistration(0x0ad1fa5eu)]
+	[DDLRegistration(0xce07b24cu)]
 	public TestAnimal? Pet { get; set; } = default;
 
 	public static TestAnimalSubstruct Create(DDLObject ddl) => new(ddl);

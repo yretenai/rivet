@@ -18,7 +18,7 @@ public class AnimEventResponderPrius : DDLObjectType, IDDLObjectType<AnimEventRe
 		AnimEventMaps = ddl.GetObjects<AnimEventResponderElement>(0xf2cbd218u);
 	}
 
-	[DDLRegistration(0x9ea9108bu)]
+	[DDLRegistration(0xf2cbd218u)]
 	public List<AnimEventResponderElement?> AnimEventMaps { get; set; } = [];
 
 	public static AnimEventResponderPrius Create(DDLObject ddl) => new(ddl);

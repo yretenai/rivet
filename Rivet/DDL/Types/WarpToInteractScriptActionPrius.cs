@@ -20,13 +20,13 @@ public class WarpToInteractScriptActionPrius : DDLObjectType, IDDLObjectType<War
 		StartActive = ddl.GetValue<bool>(0x3e035e82u, StartActive);
 	}
 
-	[DDLRegistration(0x2bd025b8u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0x2bd025b8u)]
+	[DDLRegistration(0x0aa57484u)]
 	public float InteractLocation { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2bd025b8u, description: "Start node as active")]
+	[DDLRegistration(0x3e035e82u, description: "Start node as active")]
 	public bool StartActive { get; set; } = false;
 
 	public static WarpToInteractScriptActionPrius Create(DDLObject ddl) => new(ddl);

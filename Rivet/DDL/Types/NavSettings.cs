@@ -46,91 +46,91 @@ public class NavSettings : DDLObjectType, IDDLObjectType<NavSettings> {
 		Navigation3DSettings = ddl.GetObject<Nav3DSettings>(0x138da834u);
 	}
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x3a2c99d3u)]
 	public uint NavFindPathMemoryBudget { get; set; } = 0x00300000;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xd4e71d7eu)]
 	public ushort NavFindPathSlotCount { get; set; } = 0x0400;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x8a400a8du)]
 	public ushort PolyLookupHeaderSize { get; set; } = 0x0800;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x110a5669u)]
 	public ushort PolyLookupEntrySize { get; set; } = 0x2000;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xf51f2161u)]
 	public int MaximumActiveClueCount { get; set; } = 0;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xeace9874u)]
 	public uint MeshCount { get; set; } = 0x00000002;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xfe7b9e53u)]
 	public ushort FindPathQueryTypeCnt { get; set; } = 0x0200;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x69061cf3u)]
 	public ushort FindPathQueryTypeLimit { get; set; } = 0x000c;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x74b39a22u)]
 	public ushort ClosestPtOnNavQueryTypeCnt { get; set; } = 0x0480;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x584f1a95u)]
 	public ushort ClosestPtOnNavQueryTypeLimit { get; set; } = 0x0480;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x9213d159u)]
 	public ushort FindPolysQueryTypeCnt { get; set; } = 0x0200;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x758ac410u)]
 	public ushort FindPolysQueryTypeLimit { get; set; } = 0x0200;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xe31e25c9u)]
 	public ushort RandPtInVolumesQueryTypeCnt { get; set; } = 0x0200;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xbe1b0902u)]
 	public ushort RandPtInVolumesQueryTypeLimit { get; set; } = 0x0200;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xa1348f7eu)]
 	public ushort ClosestCustomCluesQueryTypeCnt { get; set; } = 0x0200;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x239c39a1u)]
 	public ushort ClosestCustomCluesQueryTypeLimit { get; set; } = 0x0200;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x4c86e9d5u)]
 	public ushort MeshGeneratorQueryTypeCnt { get; set; } = 0x0040;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xcabe755cu)]
 	public ushort MeshGeneratorQueryTypeLimit { get; set; } = 0x0004;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x7f1797a6u)]
 	public NavAStarSettings? AStarSettings { get; set; } = default;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xfde96e9cu)]
 	public int ModifyNavDbSize { get; set; } = 4096;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xe7df3b97u)]
 	public float DebugMeshDrawDistance { get; set; } = 200.00f;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xa0db81deu)]
 	public float DebugDetailDrawDistanceMin { get; set; } = 5.00f;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x9cd6be87u)]
 	public float DebugDetailDrawDistanceMax { get; set; } = 50.00f;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xef859fe4u)]
 	public int MaxObstructionCount { get; set; } = 256;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x61b6b7cbu)]
 	public uint NavMeshGeneratorTileAllocSize { get; set; } = 0x0000c000;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x3a412a7eu)]
 	public bool ObbObstructionPaddingEnable { get; set; } = true;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xb61a8fb3u)]
 	public int MaxLoadedContainers { get; set; } = -1;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0xea3391e1u)]
 	public bool EnableDebugTracing { get; set; } = true;
 
-	[DDLRegistration(0x207495e2u)]
+	[DDLRegistration(0x138da834u)]
 	public Nav3DSettings? Navigation3DSettings { get; set; } = default;
 
 	public static NavSettings Create(DDLObject ddl) => new(ddl);

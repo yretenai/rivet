@@ -49,100 +49,100 @@ public class TerrainSystem00TerrainDef : DDLObjectType, IDDLObjectType<TerrainSy
 		Line40 = ddl.GetString(0x6b147a4f) ?? Line40;
 	}
 
-	[DDLRegistration(0x88986e5au, description: "The TerrainDef asset type contains all the data needed to render the terrain.")]
+	[DDLRegistration(0x787f8fddu, description: "The TerrainDef asset type contains all the data needed to render the terrain.")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "There are several referenced assets: <i>HeightField</i>,")]
+	[DDLRegistration(0xe176de67u, description: "There are several referenced assets: <i>HeightField</i>,")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "<i>HeightField Paint</i>, <i>SplatMask</i>, <i>SplatMask Paint</i>, <i>Vista")]
+	[DDLRegistration(0x9671eef1u, description: "<i>HeightField Paint</i>, <i>SplatMask</i>, <i>SplatMask Paint</i>, <i>Vista")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "Map</i>, and <i>Material</i>.  Both the HeightField and SplatMask have two")]
+	[DDLRegistration(0x08157b52u, description: "Map</i>, and <i>Material</i>.  Both the HeightField and SplatMask have two")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "textures.  The primary <i>HeightField</i> and <i>SplatMask</i> textures are")]
+	[DDLRegistration(0x7f124bc4u, description: "textures.  The primary <i>HeightField</i> and <i>SplatMask</i> textures are")]
 	public string? Line05 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "what will be rendered in-game as the terrain.  The other two textures (ending")]
+	[DDLRegistration(0xe61b1a7eu, description: "what will be rendered in-game as the terrain.  The other two textures (ending")]
 	public string? Line06 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "in <i>Paint</i>) are used by the editor only for painting on the terrain.  The")]
+	[DDLRegistration(0x911c2ae8u, description: "in <i>Paint</i>) are used by the editor only for painting on the terrain.  The")]
 	public string? Line07 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "paint textures are 2D texture arrays, where the texture specified by <i>Source")]
+	[DDLRegistration(0x01a33779u, description: "paint textures are 2D texture arrays, where the texture specified by <i>Source")]
 	public string? Line08 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "Path</i> will contain all the user-painted data, and the other textures are all")]
+	[DDLRegistration(0x76a407efu, description: "Path</i> will contain all the user-painted data, and the other textures are all")]
 	public string? Line09 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "images that can be created by a DCC tool and act as a base layer for all")]
+	[DDLRegistration(0x16638e0au, description: "images that can be created by a DCC tool and act as a base layer for all")]
 	public string? Line10 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "subsequent painting.")]
+	[DDLRegistration(0x6164be9cu, description: "subsequent painting.")]
 	public string? Line11 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "<br><br>")]
+	[DDLRegistration(0xf86def26u, description: "<br><br>")]
 	public string? Line12 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "The <i>Vista Map</i> is a texture that represents the color of distant terrain.")]
+	[DDLRegistration(0x8f6adfb0u, description: "The <i>Vista Map</i> is a texture that represents the color of distant terrain.")]
 	public string? Line13 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "<br><br>")]
+	[DDLRegistration(0x110e4a13u, description: "<br><br>")]
 	public string? Line14 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "The <i>Material</i> is the material (and materialgraph) that will be used to")]
+	[DDLRegistration(0x66097a85u, description: "The <i>Material</i> is the material (and materialgraph) that will be used to")]
 	public string? Line15 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "render the terrain.  Terrain material graphs must expose five sub-graphs for")]
+	[DDLRegistration(0xff002b3fu, description: "render the terrain.  Terrain material graphs must expose five sub-graphs for")]
 	public string? Line16 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "the splatmask layers: <i>Base</i>, <i>Red</i>, <i>Green</i>, <i>Blue</i>, and")]
+	[DDLRegistration(0x88071ba9u, description: "the splatmask layers: <i>Base</i>, <i>Red</i>, <i>Green</i>, <i>Blue</i>, and")]
 	public string? Line17 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "<i>Alpha</i>.  The textures used by these sub graphs will be overridden by the")]
+	[DDLRegistration(0x18b80638u, description: "<i>Alpha</i>.  The textures used by these sub graphs will be overridden by the")]
 	public string? Line18 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "values contained in the material paint layers.  Terrain material graphs must")]
+	[DDLRegistration(0x6fbf36aeu, description: "values contained in the material paint layers.  Terrain material graphs must")]
 	public string? Line19 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "also be sure to use the UVs provided by the <i>Terrain Data</i> not as well as")]
+	[DDLRegistration(0x3d4eddc9u, description: "also be sure to use the UVs provided by the <i>Terrain Data</i> not as well as")]
 	public string? Line20 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "funnel the displacement to the final combiner.")]
+	[DDLRegistration(0x4a49ed5fu, description: "funnel the displacement to the final combiner.")]
 	public string? Line21 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "<br><br>")]
+	[DDLRegistration(0xd340bce5u, description: "<br><br>")]
 	public string? Line22 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "The <i>TerrainDef</i> also allows the user to specifiy the <i>Height</i> of the")]
+	[DDLRegistration(0xa4478c73u, description: "The <i>TerrainDef</i> also allows the user to specifiy the <i>Height</i> of the")]
 	public string? Line23 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "terrain (in meters); the <i>Height</i> value correlates to a value of 1 in the")]
+	[DDLRegistration(0x3a2319d0u, description: "terrain (in meters); the <i>Height</i> value correlates to a value of 1 in the")]
 	public string? Line24 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "grayscale heightfield texture.")]
+	[DDLRegistration(0x4d242946u, description: "grayscale heightfield texture.")]
 	public string? Line25 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "<br><br>")]
+	[DDLRegistration(0xd42d78fcu, description: "<br><br>")]
 	public string? Line26 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "Materials can be applied to the terrain by assigning material assets to the")]
+	[DDLRegistration(0xa32a486au, description: "Materials can be applied to the terrain by assigning material assets to the")]
 	public string? Line27 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "appropriate material layer in the Terrain Def.  Note that each layer corresponds")]
+	[DDLRegistration(0x339555fbu, description: "appropriate material layer in the Terrain Def.  Note that each layer corresponds")]
 	public string? Line28 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "to a specific sub-graph node (like <i>basic_normal_gloss.materialgraph</i>.  The")]
+	[DDLRegistration(0x4492656du, description: "to a specific sub-graph node (like <i>basic_normal_gloss.materialgraph</i>.  The")]
 	public string? Line29 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "textures (and overrides) specified in the material layer will be applied to the")]
+	[DDLRegistration(0x2455ec88u, description: "textures (and overrides) specified in the material layer will be applied to the")]
 	public string? Line30 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "appropriate sub graph node.  Material layers can also specify the tile size (in")]
+	[DDLRegistration(0x5352dc1eu, description: "appropriate sub graph node.  Material layers can also specify the tile size (in")]
 	public string? Line31 { get; set; } = default;
 
-	[DDLRegistration(0x88986e5au, description: "meters) that the layer will be tiled across the terrain.")]
+	[DDLRegistration(0x6b147a4fu, description: "meters) that the layer will be tiled across the terrain.")]
 	public string? Line40 { get; set; } = default;
 
 	public static TerrainSystem00TerrainDef Create(DDLObject ddl) => new(ddl);

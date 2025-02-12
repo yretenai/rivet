@@ -53,112 +53,112 @@ public class HeroCameraConfig : DDLObjectType, IDDLObjectType<HeroCameraConfig> 
 		PassiveShiftCameraAimContextConfig = ddl.GetValue<RivetAssetId>(0x2b355a16u, PassiveShiftCameraAimContextConfig);
 	}
 
-	[DDLRegistration(0xf1c01c30u, "Default Camera Follow Config")]
+	[DDLRegistration(0x479a8857u, "Default Camera Follow Config")]
 	public RivetAssetId DefaultCameraFollowConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Default Camera Aim Context Config")]
+	[DDLRegistration(0xeacaba4du, "Default Camera Aim Context Config")]
 	public RivetAssetId DefaultCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Default Camera Stick Config")]
+	[DDLRegistration(0x0205c944u, "Default Camera Stick Config")]
 	public RivetAssetId DefaultCameraStickConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Default Camera Follow Fast Config")]
+	[DDLRegistration(0x85f30c6du, "Default Camera Follow Fast Config")]
 	public RivetAssetId DefaultCameraFollowFastConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Casual Camera Follow Conifg")]
+	[DDLRegistration(0xeba23786u, "Casual Camera Follow Conifg")]
 	public RivetAssetId CasualCameraFollowConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Strafe Camera Aim Context Config")]
+	[DDLRegistration(0xd65cd1a2u, "Strafe Camera Aim Context Config")]
 	public RivetAssetId StrafeCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Strafe Camera Stick Config")]
+	[DDLRegistration(0xe68333e6u, "Strafe Camera Stick Config")]
 	public RivetAssetId StrafeCameraStickConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Look Camera Stick Config")]
+	[DDLRegistration(0xf078b6f0u, "Look Camera Stick Config")]
 	public RivetAssetId LookCameraStickConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "OTS Camera Aim Context Config")]
+	[DDLRegistration(0x89480bbdu, "OTS Camera Aim Context Config")]
 	public RivetAssetId OTSCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "OTS Camera Stick Config")]
+	[DDLRegistration(0xafb5e6bdu, "OTS Camera Stick Config")]
 	public RivetAssetId OTSCameraStickConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Ledge Camera Follow Config")]
+	[DDLRegistration(0xb9d82580u, "Ledge Camera Follow Config")]
 	public RivetAssetId LedgeCameraFollowConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Ledge Camera Aim Context Config")]
+	[DDLRegistration(0x18a307c2u, "Ledge Camera Aim Context Config")]
 	public RivetAssetId LedgeCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Climb Camera Follow Config")]
+	[DDLRegistration(0xd44919eeu, "Climb Camera Follow Config")]
 	public RivetAssetId ClimbCameraFollowConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Climb Camera Aim Context Config")]
+	[DDLRegistration(0xb5723db8u, "Climb Camera Aim Context Config")]
 	public RivetAssetId ClimbCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Glide Camera Follow Config")]
+	[DDLRegistration(0x6697dec2u, "Glide Camera Follow Config")]
 	public RivetAssetId GlideCameraFollowConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Glide Camera Aim Context Config")]
+	[DDLRegistration(0xf1a297cau, "Glide Camera Aim Context Config")]
 	public RivetAssetId GlideCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Swingshot Camera Follow Config")]
+	[DDLRegistration(0xa1343ef7u, "Swingshot Camera Follow Config")]
 	public RivetAssetId SwingshotCameraFollowConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Swingshot Camera Aim Context Config")]
+	[DDLRegistration(0x1f9ff7c0u, "Swingshot Camera Aim Context Config")]
 	public RivetAssetId SwingshotCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Slingshot Camera Aim Context Config")]
+	[DDLRegistration(0x13a4f0dbu, "Slingshot Camera Aim Context Config")]
 	public RivetAssetId SlingshotCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Tether Camera Aim Context Config")]
+	[DDLRegistration(0x7b26fb27u, "Tether Camera Aim Context Config")]
 	public RivetAssetId TetherCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Swim Camera Follow Config")]
+	[DDLRegistration(0x89e05de0u, "Swim Camera Follow Config")]
 	public RivetAssetId SwimCameraFollowConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Swim Camera Aim Context Config")]
+	[DDLRegistration(0x4821457eu, "Swim Camera Aim Context Config")]
 	public RivetAssetId SwimCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Hydropack Camera Follow Config")]
+	[DDLRegistration(0x52fefed9u, "Hydropack Camera Follow Config")]
 	public RivetAssetId HydropackCameraFollowConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Hydropack Camera Aim Context Config")]
+	[DDLRegistration(0xdb7c25efu, "Hydropack Camera Aim Context Config")]
 	public RivetAssetId HydropackCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Conversation Camera Aim Context Config")]
+	[DDLRegistration(0x27cd16a7u, "Conversation Camera Aim Context Config")]
 	public RivetAssetId ConversationCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Wall Jump Camera Aim Context Config")]
+	[DDLRegistration(0x40ada22au, "Wall Jump Camera Aim Context Config")]
 	public RivetAssetId WallJumpCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Taxi Camera Aim Context Config")]
+	[DDLRegistration(0x5d3cce19u, "Taxi Camera Aim Context Config")]
 	public RivetAssetId TaxiCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Grind Camera Follow Config")]
+	[DDLRegistration(0x8425c865u, "Grind Camera Follow Config")]
 	public RivetAssetId GrindCameraFollowConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Grind Camera Aim Context Config")]
+	[DDLRegistration(0xa14226dau, "Grind Camera Aim Context Config")]
 	public RivetAssetId GrindCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "RideLedge Camera Aim Context Config")]
+	[DDLRegistration(0x82ad44fau, "RideLedge Camera Aim Context Config")]
 	public RivetAssetId RideLedgeCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Slide Camera Follow Config")]
+	[DDLRegistration(0x67b9f91du, "Slide Camera Follow Config")]
 	public RivetAssetId SlideCameraFollowConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Slide Camera Aim Context Config")]
+	[DDLRegistration(0xce9757dau, "Slide Camera Aim Context Config")]
 	public RivetAssetId SlideCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Wall Run Camera Aim Context Config")]
+	[DDLRegistration(0xf687d7feu, "Wall Run Camera Aim Context Config")]
 	public RivetAssetId WallRunCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Magboot Launch Camera Aim Context Config")]
+	[DDLRegistration(0xda3331f9u, "Magboot Launch Camera Aim Context Config")]
 	public RivetAssetId MagbootLaunchCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Hoverboot Camera Aim Context Config")]
+	[DDLRegistration(0xdac953ebu, "Hoverboot Camera Aim Context Config")]
 	public RivetAssetId HoverbootCameraAimContextConfig { get; set; } = default;
 
-	[DDLRegistration(0xf1c01c30u, "Passive Shift Camera Aim Context Config")]
+	[DDLRegistration(0x2b355a16u, "Passive Shift Camera Aim Context Config")]
 	public RivetAssetId PassiveShiftCameraAimContextConfig { get; set; } = default;
 
 	public static HeroCameraConfig Create(DDLObject ddl) => new(ddl);

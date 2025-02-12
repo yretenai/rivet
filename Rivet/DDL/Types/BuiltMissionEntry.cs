@@ -20,13 +20,13 @@ public class BuiltMissionEntry : DDLObjectType, IDDLObjectType<BuiltMissionEntry
 		ObjectiveGraph = ddl.GetValue<RivetAssetId>(0x55ff52bdu, ObjectiveGraph);
 	}
 
-	[DDLRegistration(0x976454d0u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x976454d0u)]
+	[DDLRegistration(0x7f6dce4cu)]
 	public RivetAssetId MissionGraph { get; set; } = default;
 
-	[DDLRegistration(0x976454d0u)]
+	[DDLRegistration(0x55ff52bdu)]
 	public RivetAssetId ObjectiveGraph { get; set; } = default;
 
 	public static BuiltMissionEntry Create(DDLObject ddl) => new(ddl);

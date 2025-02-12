@@ -18,7 +18,7 @@ public class HUDMessageTimerTickEvent : EventBase, IDDLObjectType<HUDMessageTime
 		TimeLeft = ddl.GetValue<uint>(0xb7be87b6u, TimeLeft);
 	}
 
-	[DDLRegistration(0x67304a3au)]
+	[DDLRegistration(0xb7be87b6u)]
 	public uint TimeLeft { get; set; } = 0x00000000;
 
 	public new static HUDMessageTimerTickEvent Create(DDLObject ddl) => new(ddl);

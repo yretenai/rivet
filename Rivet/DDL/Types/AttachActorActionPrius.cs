@@ -23,22 +23,22 @@ public class AttachActorActionPrius : DDLObjectType, IDDLObjectType<AttachActorA
 		UpdateRotation = ddl.GetValue<bool>(0xb1abf387u, UpdateRotation);
 	}
 
-	[DDLRegistration(0xadc13064u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0xadc13064u)]
+	[DDLRegistration(0x5d269a38u)]
 	public RivetAssetId Actor { get; set; } = default;
 
-	[DDLRegistration(0xadc13064u)]
+	[DDLRegistration(0x710e1574u)]
 	public bool AttachRelative { get; set; } = false;
 
-	[DDLRegistration(0xadc13064u)]
+	[DDLRegistration(0x84a6b0c6u)]
 	public string? Joint { get; set; } = "head";
 
-	[DDLRegistration(0xadc13064u)]
+	[DDLRegistration(0x677284b7u)]
 	public DDLVector3? Offset { get; set; } = default;
 
-	[DDLRegistration(0xadc13064u)]
+	[DDLRegistration(0xb1abf387u)]
 	public bool UpdateRotation { get; set; } = true;
 
 	public static AttachActorActionPrius Create(DDLObject ddl) => new(ddl);

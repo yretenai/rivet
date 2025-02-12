@@ -19,10 +19,10 @@ public class ModelSwapOnEventPrius : DDLObjectType, IDDLObjectType<ModelSwapOnEv
 		ListenEvent = ddl.GetObject<EventBase>(0xa76e74deu);
 	}
 
-	[DDLRegistration(0xbdad776eu)]
+	[DDLRegistration(0xea836acfu)]
 	public RivetAssetId AlternateModel { get; set; } = default;
 
-	[DDLRegistration(0xbdad776eu, "Event Type", "The event that we should listen for.")]
+	[DDLRegistration(0xa76e74deu, "Event Type", "The event that we should listen for.")]
 	public EventBase? ListenEvent { get; set; } = default;
 
 	public static ModelSwapOnEventPrius Create(DDLObject ddl) => new(ddl);

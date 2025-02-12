@@ -18,7 +18,7 @@ public class EyeBeamChargedStartEvent : EventBase, IDDLObjectType<EyeBeamCharged
 		EyeIndex = ddl.GetValue<byte>(0xa17178cfu, EyeIndex);
 	}
 
-	[DDLRegistration(0xe8ad89deu)]
+	[DDLRegistration(0xa17178cfu)]
 	public byte EyeIndex { get; set; } = 0x00;
 
 	public new static EyeBeamChargedStartEvent Create(DDLObject ddl) => new(ddl);

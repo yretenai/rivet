@@ -21,16 +21,16 @@ public class TimeScaleRampedPrius : TimeScaleBasePrius, IDDLObjectType<TimeScale
 		BlendOutExponent = ddl.GetValue<float>(0xac7060e8u, BlendOutExponent);
 	}
 
-	[DDLRegistration(0x783bab7fu, description: "How long to blend to the TimeScale")]
+	[DDLRegistration(0x461f415eu, description: "How long to blend to the TimeScale")]
 	public float BlendInDuration { get; set; } = 0.15f;
 
-	[DDLRegistration(0x783bab7fu, description: "Exponent of the blend-in curve")]
+	[DDLRegistration(0xcb5db9ceu, description: "Exponent of the blend-in curve")]
 	public float BlendInExponent { get; set; } = 0.65f;
 
-	[DDLRegistration(0x783bab7fu, description: "How long to blend out of the TimeScale")]
+	[DDLRegistration(0x21329878u, description: "How long to blend out of the TimeScale")]
 	public float BlendOutDuration { get; set; } = 0.15f;
 
-	[DDLRegistration(0x783bab7fu, description: "Exponent of the blend-in curve")]
+	[DDLRegistration(0xac7060e8u, description: "Exponent of the blend-in curve")]
 	public float BlendOutExponent { get; set; } = 0.65f;
 
 	public new static TimeScaleRampedPrius Create(DDLObject ddl) => new(ddl);

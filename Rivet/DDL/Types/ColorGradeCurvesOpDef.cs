@@ -22,19 +22,19 @@ public class ColorGradeCurvesOpDef : DDLObjectType, IDDLObjectType<ColorGradeCur
 		Curve = ddl.GetObject<BezierCurveDef>(0x4eca9176u);
 	}
 
-	[DDLRegistration(0x6e0859c7u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6e0859c7u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x6e0859c7u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 100.00f;
 
-	[DDLRegistration(0x6e0859c7u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x6e0859c7u)]
+	[DDLRegistration(0x4eca9176u)]
 	public BezierCurveDef? Curve { get; set; } = default;
 
 	public static ColorGradeCurvesOpDef Create(DDLObject ddl) => new(ddl);

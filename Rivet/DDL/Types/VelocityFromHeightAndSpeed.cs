@@ -19,10 +19,10 @@ public class VelocityFromHeightAndSpeed : GrenadeVelocityMode, IDDLObjectType<Ve
 		Speed = ddl.GetValue<float>(0x16753237u, Speed);
 	}
 
-	[DDLRegistration(0x67daf6ceu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 1.00f;
 
-	[DDLRegistration(0x67daf6ceu)]
+	[DDLRegistration(0x16753237u)]
 	public float Speed { get; set; } = 15.00f;
 
 	public new static VelocityFromHeightAndSpeed Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class StructuredLogAnimTreePerformanceClipNodeGesture : DDLObjectType, ID
 		Flags = ddl.GetBitset<StructuredLogAnimTreePerformanceClipNodeGestureFlags>(0x12568d7bu, StructuredLogAnimTreePerformanceClipNodeGestureFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0xe63d6d1cu)]
+	[DDLRegistration(0x842d53a9u)]
 	public string? ClipName { get; set; } = default;
 
-	[DDLRegistration(0xe63d6d1cu)]
+	[DDLRegistration(0x837de247u)]
 	public string? ModelFrom { get; set; } = default;
 
-	[DDLRegistration(0xe63d6d1cu)]
+	[DDLRegistration(0xad182c8du)]
 	public string? ModelTo { get; set; } = default;
 
-	[DDLRegistration(0xe63d6d1cu)]
+	[DDLRegistration(0xb59ab5eau)]
 	public float ClipTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe63d6d1cu)]
+	[DDLRegistration(0x2a5461e3u)]
 	public float ClipWeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe63d6d1cu)]
+	[DDLRegistration(0x12568d7bu)]
 	public StructuredLogAnimTreePerformanceClipNodeGestureFlags Flags { get; set; } = (StructuredLogAnimTreePerformanceClipNodeGestureFlags) 0x00000000;
 
 	public static StructuredLogAnimTreePerformanceClipNodeGesture Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class InputCountMissionSystemNodeDef : AndMissionSystemNodeDef, IDDLObjec
 		NumRequired = ddl.GetValue<uint>(0x257a6d10u, NumRequired);
 	}
 
-	[DDLRegistration(0xdbf734bau, description: "The minimum number of inputs needed to be true for the output to be true. (Must be at least 1)")]
+	[DDLRegistration(0x257a6d10u, description: "The minimum number of inputs needed to be true for the output to be true. (Must be at least 1)")]
 	public uint NumRequired { get; set; } = 0x00000001;
 
 	public new static InputCountMissionSystemNodeDef Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class LightingModeTransitionStartedEvent : EventBase, IDDLObjectType<Ligh
 		IsSaved = ddl.GetValue<bool>(0xf11ec123u, IsSaved);
 	}
 
-	[DDLRegistration(0x4d116e75u)]
+	[DDLRegistration(0xac531221u)]
 	public LightingModeGame CurrMode { get; set; } = LightingModeGame.Day;
 
-	[DDLRegistration(0x4d116e75u)]
+	[DDLRegistration(0x42781e41u)]
 	public LightingModeGame NewMode { get; set; } = LightingModeGame.Day;
 
-	[DDLRegistration(0x4d116e75u)]
+	[DDLRegistration(0xf11ec123u)]
 	public bool IsSaved { get; set; } = false;
 
 	public new static LightingModeTransitionStartedEvent Create(DDLObject ddl) => new(ddl);

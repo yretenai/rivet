@@ -27,34 +27,34 @@ public class PortalRenderPrius : DDLObjectType, IDDLObjectType<PortalRenderPrius
 		ThresholdClipExtents = ddl.GetObject<DDLVector3>(0x77e8ecd6u);
 	}
 
-	[DDLRegistration(0x9decefecu)]
+	[DDLRegistration(0x21926360u)]
 	public RivetAssetId OverrideMaterial { get; set; } = default;
 
-	[DDLRegistration(0x9decefecu)]
+	[DDLRegistration(0xa1fc7498u)]
 	public string? OverrideMaterialName { get; set; } = default;
 
-	[DDLRegistration(0x9decefecu)]
+	[DDLRegistration(0x65e0b511u)]
 	public string? OverrideTextureName { get; set; } = default;
 
-	[DDLRegistration(0x9decefecu)]
+	[DDLRegistration(0x376f1a65u)]
 	public string? TimeToOpenConstantName { get; set; } = default;
 
-	[DDLRegistration(0x9decefecu)]
+	[DDLRegistration(0x0cc5ab81u)]
 	public float TimeToOpen { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9decefecu)]
+	[DDLRegistration(0x6ff88051u)]
 	public float ResolutionMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9decefecu)]
+	[DDLRegistration(0xfff3b681u)]
 	public string? LuminanceScaleConstantName { get; set; } = default;
 
-	[DDLRegistration(0x9decefecu)]
+	[DDLRegistration(0x57e1ba0au)]
 	public float LuminanceScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9decefecu)]
+	[DDLRegistration(0x5398763du)]
 	public bool EnableToneMapping { get; set; } = true;
 
-	[DDLRegistration(0x9decefecu, description: "Optional x/y/z extents to describe size of portal area for to clip rendering for things that may cross the portal threshold.")]
+	[DDLRegistration(0x77e8ecd6u, description: "Optional x/y/z extents to describe size of portal area for to clip rendering for things that may cross the portal threshold.")]
 	public DDLVector3? ThresholdClipExtents { get; set; } = default;
 
 	public static PortalRenderPrius Create(DDLObject ddl) => new(ddl);

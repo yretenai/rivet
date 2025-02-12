@@ -19,10 +19,10 @@ public class DebugCommonMenuSettings : DDLObjectType, IDDLObjectType<DebugCommon
 		Operate = ddl.GetStrings(0x45209593u);
 	}
 
-	[DDLRegistration(0xc52f0717u, description: "Debug-menu entries to merge into common items, format: 'Parent Menu/Item Name'")]
+	[DDLRegistration(0xf84d258cu, description: "Debug-menu entries to merge into common items, format: 'Parent Menu/Item Name'")]
 	public List<string?> Items { get; set; } = [];
 
-	[DDLRegistration(0xc52f0717u, description: "Debug-menu entries to automatically operate at startup, format: 'Parent Menu/Item Name'")]
+	[DDLRegistration(0x45209593u, description: "Debug-menu entries to automatically operate at startup, format: 'Parent Menu/Item Name'")]
 	public List<string?> Operate { get; set; } = [];
 
 	public static DebugCommonMenuSettings Create(DDLObject ddl) => new(ddl);

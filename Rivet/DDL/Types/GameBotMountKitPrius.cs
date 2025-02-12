@@ -18,7 +18,7 @@ public class GameBotMountKitPrius : BotPrius, IDDLObjectType<GameBotMountKitPriu
 		GunWeapon = ddl.GetValue<RivetAssetId>(0xbc92ccf0u, GunWeapon);
 	}
 
-	[DDLRegistration(0x179f6cd9u)]
+	[DDLRegistration(0xbc92ccf0u)]
 	public RivetAssetId GunWeapon { get; set; } = default;
 
 	public new static GameBotMountKitPrius Create(DDLObject ddl) => new(ddl);

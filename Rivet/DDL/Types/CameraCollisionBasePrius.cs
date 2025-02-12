@@ -25,28 +25,28 @@ public class CameraCollisionBasePrius : DDLObjectType, IDDLObjectType<CameraColl
 		DistInPower = ddl.GetValue<float>(0x8594cd74u, DistInPower);
 	}
 
-	[DDLRegistration(0x04b41be1u)]
+	[DDLRegistration(0x9edc4376u)]
 	public float WallClearance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x04b41be1u)]
+	[DDLRegistration(0x200275b5u)]
 	public float GainOut { get; set; } = 0.00f;
 
-	[DDLRegistration(0x04b41be1u)]
+	[DDLRegistration(0xbeb88e37u)]
 	public float GainOutBlend { get; set; } = 0.00f;
 
-	[DDLRegistration(0x04b41be1u)]
+	[DDLRegistration(0x840a98dcu)]
 	public float GainInMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x04b41be1u)]
+	[DDLRegistration(0xb807a785u)]
 	public float GainInMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x04b41be1u)]
+	[DDLRegistration(0x0f815dd1u)]
 	public float DistInMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x04b41be1u)]
+	[DDLRegistration(0x338c6288u)]
 	public float DistInMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x04b41be1u)]
+	[DDLRegistration(0x8594cd74u)]
 	public float DistInPower { get; set; } = 0.00f;
 
 	public static CameraCollisionBasePrius Create(DDLObject ddl) => new(ddl);

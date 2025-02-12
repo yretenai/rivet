@@ -51,106 +51,106 @@ public class WaterDef : DDLObjectType, IDDLObjectType<WaterDef> {
 		Wave3 = ddl.GetValue<float>(0xe03f7d73u, Wave3);
 	}
 
-	[DDLRegistration(0xdfe81cafu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xd291bf0b Type { get; set; } = xd291bf0b.Ocean;
 
-	[DDLRegistration(0xdfe81cafu, "Reflection Image", "IBL Cube Map image that overrides the global reflection probe.")]
+	[DDLRegistration(0xc29852b9u, "Reflection Image", "IBL Cube Map image that overrides the global reflection probe.")]
 	public RivetAssetId ReflectionMap { get; set; } = default;
 
-	[DDLRegistration(0xdfe81cafu, "Material", "The material asset that defines water deep color specified with the Depth parameter")]
+	[DDLRegistration(0x86bfc8e5u, "Material", "The material asset that defines water deep color specified with the Depth parameter")]
 	public RivetAssetId Material { get; set; } = default;
 
-	[DDLRegistration(0xdfe81cafu, "A/V Material", "Audio-visual material response for e.g. FX. Returned from collisions and forwarded by events into Conduits.")]
+	[DDLRegistration(0xe73ba957u, "A/V Material", "Audio-visual material response for e.g. FX. Returned from collisions and forwarded by events into Conduits.")]
 	public string? AVMaterial { get; set; } = default;
 
-	[DDLRegistration(0xdfe81cafu, "Audio Material", "Material for audio propagation. If unset, inherits A/V material")]
+	[DDLRegistration(0xf14e1df7u, "Audio Material", "Material for audio propagation. If unset, inherits A/V material")]
 	public string? AudioMaterial { get; set; } = default;
 
-	[DDLRegistration(0xdfe81cafu, "Distance Factor")]
+	[DDLRegistration(0xf4e39365u, "Distance Factor")]
 	public float DistanceFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Foam Color", "Water foam color")]
+	[DDLRegistration(0xba580abeu, "Foam Color", "Water foam color")]
 	public DDLVector3? FoamColor { get; set; } = default;
 
-	[DDLRegistration(0xdfe81cafu, "Wave Amplitude", "Scale factor for simulated wave amplitude")]
+	[DDLRegistration(0x6a71a734u, "Wave Amplitude", "Scale factor for simulated wave amplitude")]
 	public float WaveAmplitude { get; set; } = 4.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Chop Scale", "In addition to height displacements, the simulation also applies lateral displacements. This controls the non-linearity and therefore 'choppiness' in the resulting wave shapes.")]
+	[DDLRegistration(0x9f6d419du, "Chop Scale", "In addition to height displacements, the simulation also applies lateral displacements. This controls the non-linearity and therefore 'choppiness' in the resulting wave shapes.")]
 	public float ChopScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Wind Speed", "The speed of the wind inducing the waves, it is interpreted as metres per second")]
+	[DDLRegistration(0x7fbbc235u, "Wind Speed", "The speed of the wind inducing the waves, it is interpreted as metres per second")]
 	public float WindSpeed { get; set; } = 32.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Time Scale", "The global time multiplier")]
+	[DDLRegistration(0x5fe2ecbau, "Time Scale", "The global time multiplier")]
 	public float TimeScale { get; set; } = 0.85f;
 
-	[DDLRegistration(0xdfe81cafu, "Darkening", "Darkening of surfaces under water to simulate material wetness")]
+	[DDLRegistration(0x857bffc4u, "Darkening", "Darkening of surfaces under water to simulate material wetness")]
 	public float Darkening { get; set; } = 0.50f;
 
-	[DDLRegistration(0xdfe81cafu, "Depth", "Maximum water depth at which there is no more refraction and the Deep Color parameter fully takes over")]
+	[DDLRegistration(0xe3f0d0a8u, "Depth", "Maximum water depth at which there is no more refraction and the Deep Color parameter fully takes over")]
 	public float Depth { get; set; } = 2.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Color", "Water color at the deepest depth specified with the Depth parameter")]
+	[DDLRegistration(0x7f058428u, "Color", "Water color at the deepest depth specified with the Depth parameter")]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0xdfe81cafu, "Wind Independence", "Zero is the water is completely wind dependent One is the water is completely confused (wind independent)")]
+	[DDLRegistration(0x45d79277u, "Wind Independence", "Zero is the water is completely wind dependent One is the water is completely confused (wind independent)")]
 	public float WindIndependence { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Normal Z Scale", "The scale of the z component of the normal when creating a normal from the gradient map.  Larger values are smother, smaller have more details.")]
+	[DDLRegistration(0xc47eb79eu, "Normal Z Scale", "The scale of the z component of the normal when creating a normal from the gradient map.  Larger values are smother, smaller have more details.")]
 	public float Normalz { get; set; } = 2.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Foam Amplitude", "The amount of foam to add to the water.  If this value is zero, the system is off.")]
+	[DDLRegistration(0x11528a14u, "Foam Amplitude", "The amount of foam to add to the water.  If this value is zero, the system is off.")]
 	public float FoamAmp { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Foam Bias", "The amount to bias down the foam to give it some dropout.")]
+	[DDLRegistration(0x95a28253u, "Foam Bias", "The amount to bias down the foam to give it some dropout.")]
 	public float FoamBias { get; set; } = 3.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Foam Emit", "The amount of foam to emit per frame.")]
+	[DDLRegistration(0x59c10d9du, "Foam Emit", "The amount of foam to emit per frame.")]
 	public float FoamEmit { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Foam Fade", "The amount of foam to fade out per frame.")]
+	[DDLRegistration(0x9d7005a8u, "Foam Fade", "The amount of foam to fade out per frame.")]
 	public float FoamFade { get; set; } = 0.40f;
 
-	[DDLRegistration(0xdfe81cafu, "Foam Power", "The rate at which lower foam value drop off.  Higher numbers cause faster dropoff.")]
+	[DDLRegistration(0x778443f7u, "Foam Power", "The rate at which lower foam value drop off.  Higher numbers cause faster dropoff.")]
 	public float FoamPower { get; set; } = 2.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Wave Elongate", "How elongated the waves are. 0 is off, 0.25 is no shape at all. 8 is very elongated.")]
+	[DDLRegistration(0xffd4376bu, "Wave Elongate", "How elongated the waves are. 0 is off, 0.25 is no shape at all. 8 is very elongated.")]
 	public float WaveElongate { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Cascade 0", "The physical size of the first cascade.")]
+	[DDLRegistration(0x4db5ac36u, "Cascade 0", "The physical size of the first cascade.")]
 	public float Cascade0 { get; set; } = 1024.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Cascade 1", "The physical size of the second cascade.")]
+	[DDLRegistration(0x3ab29ca0u, "Cascade 1", "The physical size of the second cascade.")]
 	public float Cascade1 { get; set; } = 195.79f;
 
-	[DDLRegistration(0xdfe81cafu, "Cascade 2", "The physical size of the third cascade.")]
+	[DDLRegistration(0xa3bbcd1au, "Cascade 2", "The physical size of the third cascade.")]
 	public float Cascade2 { get; set; } = 37.44f;
 
-	[DDLRegistration(0xdfe81cafu, "Cascade 3", "The physical size of the fourth cascade.")]
+	[DDLRegistration(0xd4bcfd8cu, "Cascade 3", "The physical size of the fourth cascade.")]
 	public float Cascade3 { get; set; } = 35.11f;
 
-	[DDLRegistration(0xdfe81cafu, "Tile 0", "The uv tile rate for the first cascade.")]
+	[DDLRegistration(0xea935850u, "Tile 0", "The uv tile rate for the first cascade.")]
 	public float Tile0 { get; set; } = 5.10f;
 
-	[DDLRegistration(0xdfe81cafu, "Tile 1", "The uv tile rate for the second cascade.")]
+	[DDLRegistration(0x9d9468c6u, "Tile 1", "The uv tile rate for the second cascade.")]
 	public float Tile1 { get; set; } = 3.50f;
 
-	[DDLRegistration(0xdfe81cafu, "Tile 2", "The uv tile rate for the third cascade.")]
+	[DDLRegistration(0x049d397cu, "Tile 2", "The uv tile rate for the third cascade.")]
 	public float Tile2 { get; set; } = 3.10f;
 
-	[DDLRegistration(0xdfe81cafu, "Tile 3", "The uv tile rate for the fourth cascade.")]
+	[DDLRegistration(0x739a09eau, "Tile 3", "The uv tile rate for the fourth cascade.")]
 	public float Tile3 { get; set; } = 17.30f;
 
-	[DDLRegistration(0xdfe81cafu, "Wave 0", "The wave amplitude scale the first cascade.")]
+	[DDLRegistration(0x79362cc9u, "Wave 0", "The wave amplitude scale the first cascade.")]
 	public float Wave0 { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Wave 1", "The wave amplitude scale the second cascade.")]
+	[DDLRegistration(0x0e311c5fu, "Wave 1", "The wave amplitude scale the second cascade.")]
 	public float Wave1 { get; set; } = 2.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Wave 2", "The wave amplitude scale the third cascade.")]
+	[DDLRegistration(0x97384de5u, "Wave 2", "The wave amplitude scale the third cascade.")]
 	public float Wave2 { get; set; } = 20.00f;
 
-	[DDLRegistration(0xdfe81cafu, "Wave 3", "The wave amplitude scale the fourth cascade.")]
+	[DDLRegistration(0xe03f7d73u, "Wave 3", "The wave amplitude scale the fourth cascade.")]
 	public float Wave3 { get; set; } = 4.00f;
 
 	public static WaterDef Create(DDLObject ddl) => new(ddl);

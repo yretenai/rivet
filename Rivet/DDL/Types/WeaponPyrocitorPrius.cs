@@ -18,7 +18,7 @@ public class WeaponPyrocitorPrius : WeaponGamePrius, IDDLObjectType<WeaponPyroci
 		PyrocitorSubShotConfig = ddl.GetValue<RivetAssetId>(0x18a813f7u, PyrocitorSubShotConfig);
 	}
 
-	[DDLRegistration(0xca4a9d6eu)]
+	[DDLRegistration(0x18a813f7u)]
 	public RivetAssetId PyrocitorSubShotConfig { get; set; } = default;
 
 	public new static WeaponPyrocitorPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class UI_SoundEvent : DDLObjectType, IDDLObjectType<UI_SoundEvent> {
 		TriggerLocator = ddl.GetString(0x85b17d52) ?? TriggerLocator;
 	}
 
-	[DDLRegistration(0x90b28b83u)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public x6f4fd950 Action { get; set; } = x6f4fd950.SoundEventActionPlay;
 
-	[DDLRegistration(0x90b28b83u)]
+	[DDLRegistration(0xcebb3bc3u)]
 	public WwiseEvent? WwiseEvent { get; set; } = default;
 
-	[DDLRegistration(0x90b28b83u)]
+	[DDLRegistration(0xfd9e2a20u)]
 	public string? EventInitiator { get; set; } = default;
 
-	[DDLRegistration(0x90b28b83u, description: "Locator set from the Anim Trigger")]
+	[DDLRegistration(0x85b17d52u, description: "Locator set from the Anim Trigger")]
 	public string? TriggerLocator { get; set; } = default;
 
 	public static UI_SoundEvent Create(DDLObject ddl) => new(ddl);

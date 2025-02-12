@@ -19,10 +19,10 @@ public class LockMapIconActionPrius : DDLObjectType, IDDLObjectType<LockMapIconA
 		Type = ddl.GetEnum<PauseMapElementType>(0xbc4e9799u, PauseMapElementTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0xa99ee150u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0xa99ee150u, "Icon Type", "PauseMapElementType to lock.")]
+	[DDLRegistration(0xbc4e9799u, "Icon Type", "PauseMapElementType to lock.")]
 	public PauseMapElementType Type { get; set; } = PauseMapElementType.Objective;
 
 	public static LockMapIconActionPrius Create(DDLObject ddl) => new(ddl);

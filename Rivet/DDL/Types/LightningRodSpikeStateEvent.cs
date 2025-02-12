@@ -18,7 +18,7 @@ public class LightningRodSpikeStateEvent : EventBase, IDDLObjectType<LightningRo
 		PercentFull = ddl.GetValue<float>(0x29adde1eu, PercentFull);
 	}
 
-	[DDLRegistration(0x7ee1281cu)]
+	[DDLRegistration(0x29adde1eu)]
 	public float PercentFull { get; set; } = 0.00f;
 
 	public new static LightningRodSpikeStateEvent Create(DDLObject ddl) => new(ddl);

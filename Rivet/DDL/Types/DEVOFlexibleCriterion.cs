@@ -23,22 +23,22 @@ public class DEVOFlexibleCriterion : DDLObjectType, IDDLObjectType<DEVOFlexibleC
 		IncludeNumericHigh = ddl.GetValue<bool>(0xb6ff0eacu, IncludeNumericHigh);
 	}
 
-	[DDLRegistration(0xcc08f78bu, "Fact name", "Name (key) of the fact this criterion compares. Corresponds to the header in the source spreadsheet.")]
+	[DDLRegistration(0xf901b9abu, "Fact name", "Name (key) of the fact this criterion compares. Corresponds to the header in the source spreadsheet.")]
 	public string? FactName { get; set; } = default;
 
-	[DDLRegistration(0xcc08f78bu, "= this string", "If nonempty, value must equal this string (case-sensitive). If empty, this is a numeric criterion.")]
+	[DDLRegistration(0x76321eb6u, "= this string", "If nonempty, value must equal this string (case-sensitive). If empty, this is a numeric criterion.")]
 	public string? AsString { get; set; } = default;
 
-	[DDLRegistration(0xcc08f78bu, "> this", "Fact value must be greater than this. May be negative infinity.")]
+	[DDLRegistration(0x71195476u, "> this", "Fact value must be greater than this. May be negative infinity.")]
 	public float NumericLow { get; set; } = -999999986991104.00f;
 
-	[DDLRegistration(0xcc08f78bu, "< this", "Fact value must be less than this. May be infinity.")]
+	[DDLRegistration(0x3b53dd83u, "< this", "Fact value must be less than this. May be infinity.")]
 	public float NumericHigh { get; set; } = 999999986991104.00f;
 
-	[DDLRegistration(0xcc08f78bu, "Include Low Value", "Fact may be equal to the low value")]
+	[DDLRegistration(0xd5c78e69u, "Include Low Value", "Fact may be equal to the low value")]
 	public bool IncludeNumericLow { get; set; } = true;
 
-	[DDLRegistration(0xcc08f78bu, "Include High Value", "Fact may be equal to the high value")]
+	[DDLRegistration(0xb6ff0eacu, "Include High Value", "Fact may be equal to the high value")]
 	public bool IncludeNumericHigh { get; set; } = true;
 
 	public static DEVOFlexibleCriterion Create(DDLObject ddl) => new(ddl);

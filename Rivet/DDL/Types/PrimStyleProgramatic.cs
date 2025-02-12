@@ -21,16 +21,16 @@ public class PrimStyleProgramatic : PrimStyleBase, IDDLObjectType<PrimStyleProgr
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x22b993a6u)]
+	[DDLRegistration(0x2aee74abu)]
 	public uint Style { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x22b993a6u)]
+	[DDLRegistration(0x3ca9681eu)]
 	public DDLVector3? PosA { get; set; } = default;
 
-	[DDLRegistration(0x22b993a6u)]
+	[DDLRegistration(0xa5a039a4u)]
 	public DDLVector3? PosB { get; set; } = default;
 
-	[DDLRegistration(0x22b993a6u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
 	public new static PrimStyleProgramatic Create(DDLObject ddl) => new(ddl);

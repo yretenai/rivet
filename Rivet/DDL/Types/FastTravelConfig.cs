@@ -18,7 +18,7 @@ public class FastTravelConfig : ConfigBase, IDDLObjectType<FastTravelConfig> {
 		Props = ddl.GetObjects<FastTravelPropElement>(0x422d6669u);
 	}
 
-	[DDLRegistration(0x42b31686u)]
+	[DDLRegistration(0x422d6669u)]
 	public List<FastTravelPropElement?> Props { get; set; } = [];
 
 	public new static FastTravelConfig Create(DDLObject ddl) => new(ddl);

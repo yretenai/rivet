@@ -21,16 +21,16 @@ public class ChunkSpawnerPrius : DDLObjectType, IDDLObjectType<ChunkSpawnerPrius
 		SpawnItems = ddl.GetObjects<ChunkSpawnItem>(0x34ecdaffu);
 	}
 
-	[DDLRegistration(0x11008d50u)]
+	[DDLRegistration(0x7876c1edu)]
 	public ChunkSpawnParams? SpawnParams { get; set; } = default;
 
-	[DDLRegistration(0x11008d50u)]
+	[DDLRegistration(0x1a32ea4eu)]
 	public bool SpawnOnDeath { get; set; } = true;
 
-	[DDLRegistration(0x11008d50u)]
+	[DDLRegistration(0x36aa00cau)]
 	public float HitDirectionBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0x11008d50u)]
+	[DDLRegistration(0x34ecdaffu)]
 	public List<ChunkSpawnItem?> SpawnItems { get; set; } = [];
 
 	public static ChunkSpawnerPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class TriggerByBasePrius : DDLObjectType, IDDLObjectType<TriggerByBasePri
 		Condition = ddl.GetObject<TriggerConditionAlwaysPrius>(0x3f2b174fu);
 	}
 
-	[DDLRegistration(0x7224cc34u, "Component Enabled?", "Whether this component starts enabled. Use the Toggle Event to change it via script.")]
+	[DDLRegistration(0x6f36ca8bu, "Component Enabled?", "Whether this component starts enabled. Use the Toggle Event to change it via script.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0x7224cc34u, "Untrigger instead?", "Rather than sending a trigger send an untrigger.")]
+	[DDLRegistration(0x5c193ce3u, "Untrigger instead?", "Rather than sending a trigger send an untrigger.")]
 	public bool DoUntrigger { get; set; } = false;
 
-	[DDLRegistration(0x7224cc34u, "Group Name", "Triggers, switches and responses with a matching name act as a separate group")]
+	[DDLRegistration(0xb215bfb7u, "Group Name", "Triggers, switches and responses with a matching name act as a separate group")]
 	public string? GroupName { get; set; } = default;
 
-	[DDLRegistration(0x7224cc34u, description: "Choose a condition for this to trigger")]
+	[DDLRegistration(0x3f2b174fu, description: "Choose a condition for this to trigger")]
 	public TriggerConditionAlwaysPrius? Condition { get; set; } = default;
 
 	public static TriggerByBasePrius Create(DDLObject ddl) => new(ddl);

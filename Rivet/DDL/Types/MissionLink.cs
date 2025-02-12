@@ -18,7 +18,7 @@ public class MissionLink : ActivityLinkBase, IDDLObjectType<MissionLink> {
 		MissionName = ddl.GetString(0xa5c30e60) ?? MissionName;
 	}
 
-	[DDLRegistration(0xcd4ce997u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
 	public new static MissionLink Create(DDLObject ddl) => new(ddl);

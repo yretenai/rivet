@@ -18,7 +18,7 @@ public class IntPlug : DDLObjectType, IDDLObjectType<IntPlug> {
 		Value = ddl.GetValue<int>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0xb75ad9fbu)]
+	[DDLRegistration(0x042494f5u)]
 	public int Value { get; set; } = 0;
 
 	public static IntPlug Create(DDLObject ddl) => new(ddl);

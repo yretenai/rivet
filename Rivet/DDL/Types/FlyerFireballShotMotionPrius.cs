@@ -18,7 +18,7 @@ public class FlyerFireballShotMotionPrius : HomingShotMotionPrius, IDDLObjectTyp
 		Acceleration = ddl.GetValue<float>(0xb9f88dfbu, Acceleration);
 	}
 
-	[DDLRegistration(0xf83fabecu)]
+	[DDLRegistration(0xb9f88dfbu)]
 	public float Acceleration { get; set; } = 100.00f;
 
 	public new static FlyerFireballShotMotionPrius Create(DDLObject ddl) => new(ddl);

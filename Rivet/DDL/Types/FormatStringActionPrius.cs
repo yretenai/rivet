@@ -20,13 +20,13 @@ public class FormatStringActionPrius : DDLObjectType, IDDLObjectType<FormatStrin
 		FormatAsInt = ddl.GetValue<bool>(0x995b8ec6u, FormatAsInt);
 	}
 
-	[DDLRegistration(0x03ce0b9du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
-	[DDLRegistration(0x03ce0b9du, "Format String", "Format String - values from input variables can be inserted using '{variable name}', for example, {Vector} (case-sensitive) for the variable connected to the Vector plug. Can also match connected variables by Name for when multiple connections per plug exist.")]
+	[DDLRegistration(0xcf3e248eu, "Format String", "Format String - values from input variables can be inserted using '{variable name}', for example, {Vector} (case-sensitive) for the variable connected to the Vector plug. Can also match connected variables by Name for when multiple connections per plug exist.")]
 	public string? FormatString { get; set; } = default;
 
-	[DDLRegistration(0x03ce0b9du, "Format As Int", "Number inputs get printed as integers isntead of floats")]
+	[DDLRegistration(0x995b8ec6u, "Format As Int", "Number inputs get printed as integers isntead of floats")]
 	public bool FormatAsInt { get; set; } = false;
 
 	public static FormatStringActionPrius Create(DDLObject ddl) => new(ddl);

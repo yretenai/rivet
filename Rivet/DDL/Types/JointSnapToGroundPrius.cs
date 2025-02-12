@@ -21,16 +21,16 @@ public class JointSnapToGroundPrius : DDLObjectType, IDDLObjectType<JointSnapToG
 		EndCheckYOffset = ddl.GetValue<float>(0x07ef5c87u, EndCheckYOffset);
 	}
 
-	[DDLRegistration(0x16439c26u)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
-	[DDLRegistration(0x16439c26u)]
+	[DDLRegistration(0x1690eaedu)]
 	public bool OffsetsAreLocal { get; set; } = true;
 
-	[DDLRegistration(0x16439c26u)]
+	[DDLRegistration(0x1d5a5f07u)]
 	public float StartCheckYOffset { get; set; } = 1.00f;
 
-	[DDLRegistration(0x16439c26u)]
+	[DDLRegistration(0x07ef5c87u)]
 	public float EndCheckYOffset { get; set; } = -15.00f;
 
 	public static JointSnapToGroundPrius Create(DDLObject ddl) => new(ddl);

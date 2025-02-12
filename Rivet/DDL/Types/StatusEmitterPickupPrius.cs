@@ -21,16 +21,16 @@ public class StatusEmitterPickupPrius : PickupBasePrius, IDDLObjectType<StatusEm
 		EffectData = ddl.GetObject<StatusEmitterBasePrius>(0x41b67391u);
 	}
 
-	[DDLRegistration(0xa8f1400au, description: "Require a prompt to pickup?")]
+	[DDLRegistration(0x1eb9e195u, description: "Require a prompt to pickup?")]
 	public bool AutoPickup { get; set; } = true;
 
-	[DDLRegistration(0xa8f1400au, description: "Bob up and down")]
+	[DDLRegistration(0xdf9e9889u, description: "Bob up and down")]
 	public bool Bob { get; set; } = true;
 
-	[DDLRegistration(0xa8f1400au, description: "Spin as you bob")]
+	[DDLRegistration(0x229ae43fu, description: "Spin as you bob")]
 	public bool Spin { get; set; } = true;
 
-	[DDLRegistration(0xa8f1400au)]
+	[DDLRegistration(0x41b67391u)]
 	public StatusEmitterBasePrius? EffectData { get; set; } = default;
 
 	public new static StatusEmitterPickupPrius Create(DDLObject ddl) => new(ddl);

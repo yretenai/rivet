@@ -19,10 +19,10 @@ public class VisualEffectNewNodeData : DDLObjectType, IDDLObjectType<VisualEffec
 		InitialValue = ddl.GetString(0x08781be6) ?? InitialValue;
 	}
 
-	[DDLRegistration(0x0fa8abe0u)]
+	[DDLRegistration(0x5430bc1bu)]
 	public string? SymbolName { get; set; } = default;
 
-	[DDLRegistration(0x0fa8abe0u)]
+	[DDLRegistration(0x08781be6u)]
 	public string? InitialValue { get; set; } = default;
 
 	public static VisualEffectNewNodeData Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class ManualAwarenessPrius : AwarenessBasePrius, IDDLObjectType<ManualAwa
 		PerformLOSTests = ddl.GetValue<bool>(0x08893521u, PerformLOSTests);
 	}
 
-	[DDLRegistration(0xb3d7fa07u)]
+	[DDLRegistration(0x9a4d8bb9u)]
 	public bool UpdateVisionShapes { get; set; } = false;
 
-	[DDLRegistration(0xb3d7fa07u, description: "Bypass the normal rules for valid targets.")]
+	[DDLRegistration(0x8e3b4fe9u, description: "Bypass the normal rules for valid targets.")]
 	public bool Force { get; set; } = true;
 
-	[DDLRegistration(0xb3d7fa07u, description: "If true then we can stop targeting targets that we can't see")]
+	[DDLRegistration(0x08893521u, description: "If true then we can stop targeting targets that we can't see")]
 	public bool PerformLOSTests { get; set; } = false;
 
 	public new static ManualAwarenessPrius Create(DDLObject ddl) => new(ddl);

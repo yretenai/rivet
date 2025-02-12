@@ -32,49 +32,49 @@ public class CurveAttachPrius : DDLObjectType, IDDLObjectType<CurveAttachPrius> 
 		UseLinearCurveSegments = ddl.GetValue<bool>(0x0a34f98bu, UseLinearCurveSegments);
 	}
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0x7f0e9134u)]
 	public RivetAssetId StartAttachActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0x4b0102deu)]
 	public bool StartAttachRelative { get; set; } = true;
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0x10d96c20u)]
 	public RivetAssetId EndAttachActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0xe98bd19au)]
 	public bool EndAttachRelative { get; set; } = true;
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0xe5fa74f3u)]
 	public float CurveLength { get; set; } = -1.00f;
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0x21f9728au)]
 	public float SwayMaxAngle { get; set; } = 10.00f;
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0xbe601592u)]
 	public float SwayFrequency { get; set; } = 2.50f;
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0x5c9a4009u)]
 	public float StretchMaxDistance { get; set; } = 10.00f;
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0xa12d363cu)]
 	public float StretchFrequency { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0x51da4873u)]
 	public RivetAssetId CurveModel { get; set; } = default;
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0x4b94d305u)]
 	public string? CurveStartJoint { get; set; } = default;
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0xc7b72c06u)]
 	public string? CurveEndJoint { get; set; } = default;
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0xc38ba667u)]
 	public float CurveModelVerticalOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0bf4d256u)]
+	[DDLRegistration(0x4830ad14u)]
 	public float CurveModelHorizontalOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0bf4d256u, description: "Curve will be appoximated with linear segments between control points. This should be disabled if the distance between control points is expected to be large.")]
+	[DDLRegistration(0x0a34f98bu, description: "Curve will be appoximated with linear segments between control points. This should be disabled if the distance between control points is expected to be large.")]
 	public bool UseLinearCurveSegments { get; set; } = true;
 
 	public static CurveAttachPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class JointMoveSequenceEntry : DDLObjectType, IDDLObjectType<JointMoveSeq
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x71ba70beu)]
+	[DDLRegistration(0xa49f34bbu)]
 	public RivetAssetId Location { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x71ba70beu)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 3.00f;
 
 	public static JointMoveSequenceEntry Create(DDLObject ddl) => new(ddl);

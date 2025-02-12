@@ -18,7 +18,7 @@ public class ActorTimeScaleMatchActorPrius : ActorTimeScaleMatchBasePrius, IDDLO
 		TargetActor = ddl.GetValue<uint>(0x98554e8cu, TargetActor);
 	}
 
-	[DDLRegistration(0x7ef97fedu, description: "Handle of the actor we want to match actor time scale of")]
+	[DDLRegistration(0x98554e8cu, description: "Handle of the actor we want to match actor time scale of")]
 	public uint TargetActor { get; set; } = 0x00000000;
 
 	public new static ActorTimeScaleMatchActorPrius Create(DDLObject ddl) => new(ddl);

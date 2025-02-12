@@ -20,13 +20,13 @@ public class TestFlagStructPrius : DDLObjectType, IDDLObjectType<TestFlagStructP
 		Third = ddl.GetString(0x3d61eca5) ?? Third;
 	}
 
-	[DDLRegistration(0x098c676cu)]
+	[DDLRegistration(0x5039af38u)]
 	public TestFlags One { get; set; } = (TestFlags) 0x00000000;
 
-	[DDLRegistration(0x098c676cu)]
+	[DDLRegistration(0x3b9fa3afu)]
 	public TestFlags Two { get; set; } = (TestFlags) 0x00000000;
 
-	[DDLRegistration(0x098c676cu)]
+	[DDLRegistration(0x3d61eca5u)]
 	public string? Third { get; set; } = default;
 
 	public static TestFlagStructPrius Create(DDLObject ddl) => new(ddl);

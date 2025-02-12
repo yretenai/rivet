@@ -18,7 +18,7 @@ public class CameraRotateSpecifiedNodesEngineItem : DDLObjectType, IDDLObjectTyp
 		RotateObjectsByYawAngle = ddl.GetDictionary<RivetAssetId, double>(0x936112a6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<double>(mapId));
 	}
 
-	[DDLRegistration(0xdfbc9e85u)]
+	[DDLRegistration(0x936112a6u)]
 	public Dictionary<RivetAssetId, double> RotateObjectsByYawAngle { get; set; } = [];
 
 	public static CameraRotateSpecifiedNodesEngineItem Create(DDLObject ddl) => new(ddl);

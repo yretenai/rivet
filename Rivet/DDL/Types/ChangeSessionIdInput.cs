@@ -18,7 +18,7 @@ public class ChangeSessionIdInput : DDLObjectType, IDDLObjectType<ChangeSessionI
 		SessionId = ddl.GetValue<RivetAssetId>(0xbbad2afau, SessionId);
 	}
 
-	[DDLRegistration(0xcf400ce6u)]
+	[DDLRegistration(0xbbad2afau)]
 	public RivetAssetId SessionId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ChangeSessionIdInput Create(DDLObject ddl) => new(ddl);

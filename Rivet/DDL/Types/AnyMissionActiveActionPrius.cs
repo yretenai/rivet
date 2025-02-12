@@ -18,7 +18,7 @@ public class AnyMissionActiveActionPrius : DDLObjectType, IDDLObjectType<AnyMiss
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x06d21421u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
 	public static AnyMissionActiveActionPrius Create(DDLObject ddl) => new(ddl);

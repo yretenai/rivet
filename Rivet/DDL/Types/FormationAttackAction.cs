@@ -19,10 +19,10 @@ public class FormationAttackAction : DDLObjectType, IDDLObjectType<FormationAtta
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x9444087du)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public xbf382bc0 Action { get; set; } = xbf382bc0.Wait;
 
-	[DDLRegistration(0x9444087du, description: "General purpose value for the actions")]
+	[DDLRegistration(0x042494f5u, description: "General purpose value for the actions")]
 	public float Value { get; set; } = 1.00f;
 
 	public static FormationAttackAction Create(DDLObject ddl) => new(ddl);

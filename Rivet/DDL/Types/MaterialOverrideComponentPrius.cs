@@ -18,7 +18,7 @@ public class MaterialOverrideComponentPrius : DDLObjectType, IDDLObjectType<Mate
 		MaterialSwaps = ddl.GetObjects<MaterialSwap>(0xd66bddffu);
 	}
 
-	[DDLRegistration(0xd3e5d817u)]
+	[DDLRegistration(0xd66bddffu)]
 	public List<MaterialSwap?> MaterialSwaps { get; set; } = [];
 
 	public static MaterialOverrideComponentPrius Create(DDLObject ddl) => new(ddl);

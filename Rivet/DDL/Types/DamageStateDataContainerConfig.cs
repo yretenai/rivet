@@ -18,7 +18,7 @@ public class DamageStateDataContainerConfig : DamageStateDataContainerBase, IDDL
 		Config = ddl.GetValue<RivetAssetId>(0xeaf2611bu, Config);
 	}
 
-	[DDLRegistration(0xe816d1eeu, description: "Type: Damage State Manager Config")]
+	[DDLRegistration(0xeaf2611bu, description: "Type: Damage State Manager Config")]
 	public RivetAssetId Config { get; set; } = default;
 
 	public new static DamageStateDataContainerConfig Create(DDLObject ddl) => new(ddl);

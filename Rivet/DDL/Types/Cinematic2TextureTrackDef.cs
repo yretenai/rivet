@@ -23,22 +23,22 @@ public class Cinematic2TextureTrackDef : DDLObjectType, IDDLObjectType<Cinematic
 		Actions = ddl.GetDictionary<RivetAssetId, Cinematic2TextureActionDef>(0x04a292d7, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2TextureActionDef>(mapId));
 	}
 
-	[DDLRegistration(0xdd421eccu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdd421eccu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xdd421eccu, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0xdd421eccu, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0xdd421eccu, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0xdd421eccu)]
+	[DDLRegistration(0x04a292d7u)]
 	public Dictionary<RivetAssetId, Cinematic2TextureActionDef?> Actions { get; set; } = [];
 
 	public static Cinematic2TextureTrackDef Create(DDLObject ddl) => new(ddl);

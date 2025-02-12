@@ -19,10 +19,10 @@ public class CameraCurveElement : DDLObjectType, IDDLObjectType<CameraCurveEleme
 		Y = ddl.GetValue<float>(0x2934711bu, Y);
 	}
 
-	[DDLRegistration(0x9598cbd5u)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9598cbd5u)]
+	[DDLRegistration(0x2934711bu)]
 	public float Y { get; set; } = 0.00f;
 
 	public static CameraCurveElement Create(DDLObject ddl) => new(ddl);

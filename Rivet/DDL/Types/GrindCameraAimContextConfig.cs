@@ -34,55 +34,55 @@ public class GrindCameraAimContextConfig : CameraAimContextVariableFOVConfig, ID
 		TraversalOffsetUp = ddl.GetObject<DDLVector3>(0xae085239u);
 	}
 
-	[DDLRegistration(0xa14226dau, "Max Speed Level Offset")]
+	[DDLRegistration(0x0c0f75ffu, "Max Speed Level Offset")]
 	public DDLVector3? MaxSpeedOffsetLevel { get; set; } = default;
 
-	[DDLRegistration(0xa14226dau, "Max Speed Down Offset")]
+	[DDLRegistration(0xff848257u, "Max Speed Down Offset")]
 	public DDLVector3? MaxSpeedOffsetDown { get; set; } = default;
 
-	[DDLRegistration(0xa14226dau, "Max Speed Up Offset")]
+	[DDLRegistration(0x884e73c8u, "Max Speed Up Offset")]
 	public DDLVector3? MaxSpeedOffsetUp { get; set; } = default;
 
-	[DDLRegistration(0xa14226dau)]
+	[DDLRegistration(0xffee1d80u)]
 	public HackySeparatorStruct? SeparatorGrindConfig_01 { get; set; } = default;
 
-	[DDLRegistration(0xa14226dau)]
+	[DDLRegistration(0xaba121e3u)]
 	public float GapApproachBlendGain { get; set; } = -10.00f;
 
-	[DDLRegistration(0xa14226dau)]
+	[DDLRegistration(0x2777766au)]
 	public float GapApproachBlendDamp { get; set; } = -10.00f;
 
-	[DDLRegistration(0xa14226dau)]
+	[DDLRegistration(0x7cd017fcu)]
 	public float GapApproachBlendMaxSpeed { get; set; } = 30.00f;
 
-	[DDLRegistration(0xa14226dau, "Full Gap Approach Level Offset")]
+	[DDLRegistration(0x13810b77u, "Full Gap Approach Level Offset")]
 	public DDLVector3? FullGapApproachStandOffsetLevel { get; set; } = default;
 
-	[DDLRegistration(0xa14226dau, "Full Gap Approach Down Offset")]
+	[DDLRegistration(0xab796484u, "Full Gap Approach Down Offset")]
 	public DDLVector3? FullGapApproachStandOffsetDown { get; set; } = default;
 
-	[DDLRegistration(0xa14226dau, "Full Gap Approach Up Offset")]
+	[DDLRegistration(0xe0d33a3fu, "Full Gap Approach Up Offset")]
 	public DDLVector3? FullGapApproachStandOffsetUp { get; set; } = default;
 
-	[DDLRegistration(0xa14226dau)]
+	[DDLRegistration(0x66e74c3au)]
 	public HackySeparatorStruct? SeparatorGrindConfig_02 { get; set; } = default;
 
-	[DDLRegistration(0xa14226dau)]
+	[DDLRegistration(0x7c12a6e9u)]
 	public float TraversalBlendGain { get; set; } = -50.00f;
 
-	[DDLRegistration(0xa14226dau)]
+	[DDLRegistration(0xf0c4f160u)]
 	public float TraversalBlendDamp { get; set; } = -50.00f;
 
-	[DDLRegistration(0xa14226dau)]
+	[DDLRegistration(0x20484091u)]
 	public float TraversalBlendMaxSpeed { get; set; } = 30.00f;
 
-	[DDLRegistration(0xa14226dau, "Traversal Level Offset")]
+	[DDLRegistration(0xab299d78u, "Traversal Level Offset")]
 	public DDLVector3? TraversalOffsetLevel { get; set; } = default;
 
-	[DDLRegistration(0xa14226dau, "Traversal Down Offset")]
+	[DDLRegistration(0xbe4a64b3u, "Traversal Down Offset")]
 	public DDLVector3? TraversalOffsetDown { get; set; } = default;
 
-	[DDLRegistration(0xa14226dau, "Traversal Up Offset")]
+	[DDLRegistration(0xae085239u, "Traversal Up Offset")]
 	public DDLVector3? TraversalOffsetUp { get; set; } = default;
 
 	public new static GrindCameraAimContextConfig Create(DDLObject ddl) => new(ddl);

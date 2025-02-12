@@ -18,7 +18,7 @@ public class WeaponTunnelerPrius : WeaponGamePrius, IDDLObjectType<WeaponTunnele
 		InitialLockOnDuration = ddl.GetValue<float>(0x4d8ba716u, InitialLockOnDuration);
 	}
 
-	[DDLRegistration(0x9584a05eu)]
+	[DDLRegistration(0x4d8ba716u)]
 	public float InitialLockOnDuration { get; set; } = 0.05f;
 
 	public new static WeaponTunnelerPrius Create(DDLObject ddl) => new(ddl);

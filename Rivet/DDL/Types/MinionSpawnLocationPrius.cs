@@ -18,7 +18,7 @@ public class MinionSpawnLocationPrius : EnabledComponentBasePrius, IDDLObjectTyp
 		MasterSpawnLoc = ddl.GetValue<RivetAssetId>(0xb42955e8u, MasterSpawnLoc);
 	}
 
-	[DDLRegistration(0x04757a5eu, "Master Spawn Location", "The spawn location for the minion's master (does not work with a template and it must be active).")]
+	[DDLRegistration(0xb42955e8u, "Master Spawn Location", "The spawn location for the minion's master (does not work with a template and it must be active).")]
 	public RivetAssetId MasterSpawnLoc { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static MinionSpawnLocationPrius Create(DDLObject ddl) => new(ddl);

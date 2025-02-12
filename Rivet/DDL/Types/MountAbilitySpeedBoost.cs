@@ -23,22 +23,22 @@ public class MountAbilitySpeedBoost : MountAbilityBase, IDDLObjectType<MountAbil
 		BoostOutroAnim = ddl.GetString(0x439ed1d0) ?? BoostOutroAnim;
 	}
 
-	[DDLRegistration(0x3992ae0du, description: "Amount of additional speed added to the base speed when a boost is activated.")]
+	[DDLRegistration(0xb32eb162u, description: "Amount of additional speed added to the base speed when a boost is activated.")]
 	public float AdditionalBoostSpeed { get; set; } = 4.00f;
 
-	[DDLRegistration(0x3992ae0du, description: "Duration of time that the boost lasts for.")]
+	[DDLRegistration(0x6d72cb38u, description: "Duration of time that the boost lasts for.")]
 	public float BoostDuration { get; set; } = 2.00f;
 
-	[DDLRegistration(0x3992ae0du, description: "Hold input to boost.")]
+	[DDLRegistration(0xbde99b1cu, description: "Hold input to boost.")]
 	public bool HoldToBoost { get; set; } = false;
 
-	[DDLRegistration(0x3992ae0du, description: "Intro Boosting Anim ")]
+	[DDLRegistration(0x11558527u, description: "Intro Boosting Anim ")]
 	public string? BoostIntroAnim { get; set; } = default;
 
-	[DDLRegistration(0x3992ae0du, description: "Boosting Anim during loop")]
+	[DDLRegistration(0xcdf4dc19u, description: "Boosting Anim during loop")]
 	public string? BoostLoopingAnim { get; set; } = default;
 
-	[DDLRegistration(0x3992ae0du, description: "Boosting Anim during outr")]
+	[DDLRegistration(0x439ed1d0u, description: "Boosting Anim during outr")]
 	public string? BoostOutroAnim { get; set; } = default;
 
 	public new static MountAbilitySpeedBoost Create(DDLObject ddl) => new(ddl);

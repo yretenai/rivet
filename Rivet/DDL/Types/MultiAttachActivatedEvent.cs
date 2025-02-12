@@ -18,7 +18,7 @@ public class MultiAttachActivatedEvent : EventBase, IDDLObjectType<MultiAttachAc
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0x5af60efau)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
 	public new static MultiAttachActivatedEvent Create(DDLObject ddl) => new(ddl);

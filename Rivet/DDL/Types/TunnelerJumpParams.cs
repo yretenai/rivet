@@ -22,19 +22,19 @@ public class TunnelerJumpParams : DDLObjectType, IDDLObjectType<TunnelerJumpPara
 		TargetSearchHeight = ddl.GetValue<float>(0x2d16466du, TargetSearchHeight);
 	}
 
-	[DDLRegistration(0x04018b74u, description: "Ideal angle of the initial jump trajectory.")]
+	[DDLRegistration(0xcc7f5545u, description: "Ideal angle of the initial jump trajectory.")]
 	public float IdealJumpAngle { get; set; } = 20.00f;
 
-	[DDLRegistration(0x04018b74u, description: "Minimum distance to a target that we are allowed to jump from, given clear line of sight and level terrain.")]
+	[DDLRegistration(0x409f5a2bu, description: "Minimum distance to a target that we are allowed to jump from, given clear line of sight and level terrain.")]
 	public float MinimumJumpDistance { get; set; } = 10.00f;
 
-	[DDLRegistration(0x04018b74u, description: "Distance out from the projectile that we look for targets to jump at.")]
+	[DDLRegistration(0x455fab52u, description: "Distance out from the projectile that we look for targets to jump at.")]
 	public float TargetSearchDistance { get; set; } = 40.00f;
 
-	[DDLRegistration(0x04018b74u, description: "Half-angle of the wedge to use for the target query.")]
+	[DDLRegistration(0x45ab6123u, description: "Half-angle of the wedge to use for the target query.")]
 	public float TargetSearchHalfAngle { get; set; } = 10.00f;
 
-	[DDLRegistration(0x04018b74u, description: "Height of the wedge to use for the target query.")]
+	[DDLRegistration(0x2d16466du, description: "Height of the wedge to use for the target query.")]
 	public float TargetSearchHeight { get; set; } = 25.00f;
 
 	public static TunnelerJumpParams Create(DDLObject ddl) => new(ddl);

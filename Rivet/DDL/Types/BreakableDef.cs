@@ -22,19 +22,19 @@ public class BreakableDef : DDLObjectType, IDDLObjectType<BreakableDef> {
 		BreakableAssetList = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x3397c683, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 	}
 
-	[DDLRegistration(0xd8240b9au)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xd8240b9au)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xd8240b9au)]
+	[DDLRegistration(0x84a54ba3u)]
 	public RivetAssetId Foundation { get; set; } = default;
 
-	[DDLRegistration(0xd8240b9au)]
+	[DDLRegistration(0xf79c0eb3u)]
 	public NodeGraphCollectionDef? NodeGraphCollection { get; set; } = default;
 
-	[DDLRegistration(0xd8240b9au)]
+	[DDLRegistration(0x3397c683u)]
 	public Dictionary<RivetAssetId, RivetAssetId> BreakableAssetList { get; set; } = [];
 
 	public static BreakableDef Create(DDLObject ddl) => new(ddl);

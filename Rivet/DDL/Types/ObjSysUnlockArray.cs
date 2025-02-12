@@ -18,7 +18,7 @@ public class ObjSysUnlockArray : DDLObjectType, IDDLObjectType<ObjSysUnlockArray
 		ObjectiveUnlocks = ddl.GetObjects<ObjSysUnlock>(0xe3e104a6u);
 	}
 
-	[DDLRegistration(0x9079f1d2u)]
+	[DDLRegistration(0xe3e104a6u)]
 	public List<ObjSysUnlock?> ObjectiveUnlocks { get; set; } = [];
 
 	public static ObjSysUnlockArray Create(DDLObject ddl) => new(ddl);

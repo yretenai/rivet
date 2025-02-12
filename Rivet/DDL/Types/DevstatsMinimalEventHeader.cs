@@ -21,16 +21,16 @@ public class DevstatsMinimalEventHeader : DDLObjectType, IDDLObjectType<Devstats
 		Client_timestamp = ddl.GetValue<ulong>(0x18c1b68cu, Client_timestamp);
 	}
 
-	[DDLRegistration(0xaf6c6f95u)]
+	[DDLRegistration(0x69398931u)]
 	public string? User_id { get; set; } = default;
 
-	[DDLRegistration(0xaf6c6f95u)]
+	[DDLRegistration(0xf554b136u)]
 	public string? Session_id { get; set; } = default;
 
-	[DDLRegistration(0xaf6c6f95u)]
+	[DDLRegistration(0x09e8589bu)]
 	public string? Title_id { get; set; } = default;
 
-	[DDLRegistration(0xaf6c6f95u)]
+	[DDLRegistration(0x18c1b68cu)]
 	public ulong Client_timestamp { get; set; } = 0x0000000000000000;
 
 	public static DevstatsMinimalEventHeader Create(DDLObject ddl) => new(ddl);

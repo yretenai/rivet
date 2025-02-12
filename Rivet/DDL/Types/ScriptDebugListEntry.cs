@@ -23,22 +23,22 @@ public class ScriptDebugListEntry : DDLObjectType, IDDLObjectType<ScriptDebugLis
 		Boolean_Value = ddl.GetValue<bool>(0x3ae3d702u, Boolean_Value);
 	}
 
-	[DDLRegistration(0xa84a6e02u)]
+	[DDLRegistration(0x50408431u)]
 	public DDLVector3? Vector_Value { get; set; } = default;
 
-	[DDLRegistration(0xa84a6e02u)]
+	[DDLRegistration(0xcc4a4d21u)]
 	public string? ActorName { get; set; } = default;
 
-	[DDLRegistration(0xa84a6e02u)]
+	[DDLRegistration(0xfbaa04e4u)]
 	public RivetAssetId ActorTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa84a6e02u)]
+	[DDLRegistration(0xcb34142du)]
 	public string? String_Value { get; set; } = default;
 
-	[DDLRegistration(0xa84a6e02u)]
+	[DDLRegistration(0xa471cc78u)]
 	public float Number_Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa84a6e02u)]
+	[DDLRegistration(0x3ae3d702u)]
 	public bool Boolean_Value { get; set; } = false;
 
 	public static ScriptDebugListEntry Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class HeroXPAddedEvent : EventBase, IDDLObjectType<HeroXPAddedEvent> {
 		PlayerPosInfo = ddl.GetObject<DevstatsPlayerPositionInfo>(0xeadcc3e4u);
 	}
 
-	[DDLRegistration(0xa4e33ea7u, description: "How much XP the player just received.")]
+	[DDLRegistration(0xb0d93e25u, description: "How much XP the player just received.")]
 	public uint Amount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa4e33ea7u, "Career Total", "How much XP the player has received over the entire playthrough, including the current amount given.")]
+	[DDLRegistration(0x0dbecc03u, "Career Total", "How much XP the player has received over the entire playthrough, including the current amount given.")]
 	public uint CareerTotal { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa4e33ea7u, "Primary Segment", "What mission/objective the hero was on when they leveled up.")]
+	[DDLRegistration(0x9e8725dbu, "Primary Segment", "What mission/objective the hero was on when they leveled up.")]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
-	[DDLRegistration(0xa4e33ea7u, "Player Pos", "Where the player was when they leveled up.")]
+	[DDLRegistration(0xeadcc3e4u, "Player Pos", "Where the player was when they leveled up.")]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
 	public new static HeroXPAddedEvent Create(DDLObject ddl) => new(ddl);

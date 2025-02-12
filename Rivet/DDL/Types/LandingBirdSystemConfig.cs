@@ -29,40 +29,40 @@ public class LandingBirdSystemConfig : ConfigBase, IDDLObjectType<LandingBirdSys
 		BirdTypes = ddl.GetObjects<LandingBirdType>(0x6f844477u);
 	}
 
-	[DDLRegistration(0xe2d25465u, "Initial Load Delay", "Don't spawn landing birds after the game loads in until this much time has passed.")]
+	[DDLRegistration(0x6bc8e325u, "Initial Load Delay", "Don't spawn landing birds after the game loads in until this much time has passed.")]
 	public float InitialLoadDelay { get; set; } = 15.00f;
 
-	[DDLRegistration(0xe2d25465u, "Post Flee Cooldown", "After all of the landing birds have despawned due to fleeing, wait at least this time before spawning again.")]
+	[DDLRegistration(0x6ebd89a8u, "Post Flee Cooldown", "After all of the landing birds have despawned due to fleeing, wait at least this time before spawning again.")]
 	public float PostFleeCooldown { get; set; } = 30.00f;
 
-	[DDLRegistration(0xe2d25465u, "Max Idle Speed", "The hero is considered idle if he is moving slower than this speed.")]
+	[DDLRegistration(0x40189a17u, "Max Idle Speed", "The hero is considered idle if he is moving slower than this speed.")]
 	public float MaxIdleSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0xe2d25465u, "Idle Spawn Delay", "The hero must be idle for at least this amount of time before birds begin spawning.")]
+	[DDLRegistration(0x7370d587u, "Idle Spawn Delay", "The hero must be idle for at least this amount of time before birds begin spawning.")]
 	public float IdleSpawnDelay { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe2d25465u, "Land Circle Offset XZ", "How far in front of the player should the center of the bird land circle be?")]
+	[DDLRegistration(0xafa9accdu, "Land Circle Offset XZ", "How far in front of the player should the center of the bird land circle be?")]
 	public float LandCircleOffsetXZ { get; set; } = 10.00f;
 
-	[DDLRegistration(0xe2d25465u, "Land Circle Radius XZ", "The circle where birds land will have this radius horizontally.")]
+	[DDLRegistration(0xbf7ed98bu, "Land Circle Radius XZ", "The circle where birds land will have this radius horizontally.")]
 	public float LandCircleRadiusXZ { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe2d25465u, "Max Land Height Diff", "Birds may not land at locations more than this distance from the hero vertically.")]
+	[DDLRegistration(0x10f7a304u, "Max Land Height Diff", "Birds may not land at locations more than this distance from the hero vertically.")]
 	public float MaxLandHeightDiff { get; set; } = 6.00f;
 
-	[DDLRegistration(0xe2d25465u, "Max Land Normal Angle", "Birds may not land on locations that have a surface normal that is more than this angle (degrees) from the +Y axis.")]
+	[DDLRegistration(0xae60ccd2u, "Max Land Normal Angle", "Birds may not land on locations that have a surface normal that is more than this angle (degrees) from the +Y axis.")]
 	public float MaxLandNormalAngle { get; set; } = 30.00f;
 
-	[DDLRegistration(0xe2d25465u, "Flee Destroy Offscreen Delay", "How long after the birds go offscreen should they be destroyed?")]
+	[DDLRegistration(0xc3bae185u, "Flee Destroy Offscreen Delay", "How long after the birds go offscreen should they be destroyed?")]
 	public float FleeDestroyOffscreenDelay { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe2d25465u, "Flee from Dimensional Pulses?", "Should ledge birds flee from affecting dimensional pulses?")]
+	[DDLRegistration(0x97e14b23u, "Flee from Dimensional Pulses?", "Should ledge birds flee from affecting dimensional pulses?")]
 	public bool FleeFromPulses { get; set; } = true;
 
-	[DDLRegistration(0xe2d25465u)]
+	[DDLRegistration(0xefb78e9cu)]
 	public DimensionalPulseTargetFlockPrius? PulseFlockTargetPrius { get; set; } = default;
 
-	[DDLRegistration(0xe2d25465u)]
+	[DDLRegistration(0x6f844477u)]
 	public List<LandingBirdType?> BirdTypes { get; set; } = [];
 
 	public new static LandingBirdSystemConfig Create(DDLObject ddl) => new(ddl);

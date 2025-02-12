@@ -21,16 +21,16 @@ public class SimpleMotionAnimatedPrius : DDLObjectType, IDDLObjectType<SimpleMot
 		StartOnRndFrame = ddl.GetValue<bool>(0x73d10ea0u, StartOnRndFrame);
 	}
 
-	[DDLRegistration(0x43941462u, "Anim Name")]
+	[DDLRegistration(0xc9e716ceu, "Anim Name")]
 	public string? AnimName { get; set; } = "Object_Idle";
 
-	[DDLRegistration(0x43941462u, "Motion Type")]
+	[DDLRegistration(0x7b43320eu, "Motion Type")]
 	public x0b513de9 MotionType { get; set; } = x0b513de9.FromStart;
 
-	[DDLRegistration(0x43941462u, "Start Active")]
+	[DDLRegistration(0x3e035e82u, "Start Active")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0x43941462u, "Start at a random frame", "Start at a random frame, is synced.")]
+	[DDLRegistration(0x73d10ea0u, "Start at a random frame", "Start at a random frame, is synced.")]
 	public bool StartOnRndFrame { get; set; } = false;
 
 	public static SimpleMotionAnimatedPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class InteractConditionPriusItem : DDLObjectType, IDDLObjectType<Interact
 		ConditionData = ddl.GetObject<InteractUserConditionBasePrius>(0x368dae8bu);
 	}
 
-	[DDLRegistration(0xf2c99c32u)]
+	[DDLRegistration(0x368dae8bu)]
 	public InteractUserConditionBasePrius? ConditionData { get; set; } = default;
 
 	public static InteractConditionPriusItem Create(DDLObject ddl) => new(ddl);

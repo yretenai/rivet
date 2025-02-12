@@ -29,40 +29,40 @@ public class SwingingMotionPrius : DDLObjectType, IDDLObjectType<SwingingMotionP
 		EnableSoundEvents = ddl.GetValue<bool>(0x887bf205u, EnableSoundEvents);
 	}
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0x2351cbfau)]
 	public string? PivotJoint { get; set; } = default;
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0x248a2a1cu)]
 	public string? ReferenceJoint { get; set; } = default;
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0xe27cd0cbu)]
 	public xd0fb54d1 Constraint { get; set; } = xd0fb54d1.NegY;
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0x768ce09bu)]
 	public x30dbcb6e SwingPlane { get; set; } = x30dbcb6e.Z;
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0x2b473067u)]
 	public float CenterOfMassDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0x244c2294u)]
 	public float AngleLimit { get; set; } = 90.00f;
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0xe4520813u)]
 	public float PosAngleLimit { get; set; } = 90.00f;
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0x5eabfd51u)]
 	public float NegAngleLimit { get; set; } = 90.00f;
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0x5bf7469fu)]
 	public float Gravity { get; set; } = 9.80f;
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0x891afb4eu)]
 	public bool ConstrainToPlane { get; set; } = false;
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0xa3cf6b90u)]
 	public bool ReversePivotJoint { get; set; } = false;
 
-	[DDLRegistration(0xd3ecc4b1u)]
+	[DDLRegistration(0x887bf205u)]
 	public bool EnableSoundEvents { get; set; } = true;
 
 	public static SwingingMotionPrius Create(DDLObject ddl) => new(ddl);

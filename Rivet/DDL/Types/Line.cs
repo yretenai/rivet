@@ -23,22 +23,22 @@ public class Line : DDLObjectType, IDDLObjectType<Line> {
 		Followup = ddl.GetObject<DEVOFollowup>(0xe71bc74bu);
 	}
 
-	[DDLRegistration(0xe1847446u)]
+	[DDLRegistration(0x3ebbe218u)]
 	public VoiceGame CharacterVoice { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0xe1847446u)]
+	[DDLRegistration(0x16868feau)]
 	public string? LineTagStart { get; set; } = default;
 
-	[DDLRegistration(0xe1847446u)]
+	[DDLRegistration(0x4d044360u)]
 	public string? LineTagEnd { get; set; } = default;
 
-	[DDLRegistration(0xe1847446u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe1847446u, "Writeback to memory", "Facts written to character or world memory for testing in future rules")]
+	[DDLRegistration(0x183ac164u, "Writeback to memory", "Facts written to character or world memory for testing in future rules")]
 	public List<DEVOLineMemoryWriteback?> Writebacks { get; set; } = [];
 
-	[DDLRegistration(0xe1847446u, description: "Provokes a reply from myself or others.")]
+	[DDLRegistration(0xe71bc74bu, description: "Provokes a reply from myself or others.")]
 	public DEVOFollowup? Followup { get; set; } = default;
 
 	public static Line Create(DDLObject ddl) => new(ddl);

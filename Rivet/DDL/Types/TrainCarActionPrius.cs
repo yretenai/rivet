@@ -18,7 +18,7 @@ public class TrainCarActionPrius : DDLObjectType, IDDLObjectType<TrainCarActionP
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xac0d114au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Movement;
 
 	public static TrainCarActionPrius Create(DDLObject ddl) => new(ddl);

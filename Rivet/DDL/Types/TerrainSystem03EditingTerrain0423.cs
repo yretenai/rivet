@@ -20,13 +20,13 @@ public class TerrainSystem03EditingTerrain0423 : DDLObjectType, IDDLObjectType<T
 		Line02 = ddl.GetString(0xe176de67) ?? Line02;
 	}
 
-	[DDLRegistration(0xd336e2c8u, description: "The <b>IG_SPLATMASK_G_OUTPUT</b> output should receive a Houdini HeightField")]
+	[DDLRegistration(0x0f78bf4bu, description: "The <b>IG_SPLATMASK_G_OUTPUT</b> output should receive a Houdini HeightField")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0xd336e2c8u, description: "Mask node that contains the green channel data.  This will be sent back to the.")]
+	[DDLRegistration(0x787f8fddu, description: "Mask node that contains the green channel data.  This will be sent back to the.")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0xd336e2c8u, description: "editor and update the green splatmask channel.")]
+	[DDLRegistration(0xe176de67u, description: "editor and update the green splatmask channel.")]
 	public string? Line02 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0423 Create(DDLObject ddl) => new(ddl);

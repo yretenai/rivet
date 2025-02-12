@@ -29,40 +29,40 @@ public class HBAOPlusSettings : DDLObjectType, IDDLObjectType<HBAOPlusSettings> 
 		EnableNormalMap = ddl.GetValue<bool>(0xc9ce5c27u, EnableNormalMap);
 	}
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.20f;
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0x7217aaebu)]
 	public float Bias { get; set; } = 0.35f;
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0x7b1b6dc8u)]
 	public float SmallScaleAO { get; set; } = 0.60f;
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0x5e0e329fu)]
 	public float LargeScaleAO { get; set; } = 1.00f;
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0x79f48d92u)]
 	public float PowerExponent { get; set; } = 3.20f;
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0x349763dbu)]
 	public bool EnableForegroundAO { get; set; } = true;
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0x38fe0187u)]
 	public float ForegroundViewDepth { get; set; } = 11.00f;
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0x654942e6u)]
 	public bool EnableBackgroundAO { get; set; } = true;
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0x78ceba79u)]
 	public float BackgroundViewDepth { get; set; } = 110.00f;
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0x29cc56e9u)]
 	public bool EnableBlur { get; set; } = true;
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0x8ce00f3eu)]
 	public float BlurSharpness { get; set; } = 16.00f;
 
-	[DDLRegistration(0x053dc86du)]
+	[DDLRegistration(0xc9ce5c27u)]
 	public bool EnableNormalMap { get; set; } = true;
 
 	public static HBAOPlusSettings Create(DDLObject ddl) => new(ddl);

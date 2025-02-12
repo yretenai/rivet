@@ -20,13 +20,13 @@ public class SetAbilityEnabledActionPrius : DDLObjectType, IDDLObjectType<SetAbi
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0x332de084u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0x332de084u)]
+	[DDLRegistration(0x34258d04u)]
 	public Ability Ability { get; set; } = Ability.Jumping;
 
-	[DDLRegistration(0x332de084u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
 	public static SetAbilityEnabledActionPrius Create(DDLObject ddl) => new(ddl);

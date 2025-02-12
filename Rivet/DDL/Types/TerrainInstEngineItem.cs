@@ -21,16 +21,16 @@ public class TerrainInstEngineItem : DDLObjectType, IDDLObjectType<TerrainInstEn
 		TerrainDef = ddl.GetObject<TerrainDef>(0x03d3b7c9u);
 	}
 
-	[DDLRegistration(0x4acb79a2u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x4acb79a2u)]
+	[DDLRegistration(0x6aa1ee15u)]
 	public List<MaterialDef?> SplatMaskMaterialDefs { get; set; } = [];
 
-	[DDLRegistration(0x4acb79a2u)]
+	[DDLRegistration(0x2da44da2u)]
 	public MaterialDef? VistaMapMaterialDef { get; set; } = default;
 
-	[DDLRegistration(0x4acb79a2u)]
+	[DDLRegistration(0x03d3b7c9u)]
 	public TerrainDef? TerrainDef { get; set; } = default;
 
 	public static TerrainInstEngineItem Create(DDLObject ddl) => new(ddl);

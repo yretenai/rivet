@@ -19,10 +19,10 @@ public class AimAssistTargetZoneOBB : AimAssistTargetZone, IDDLObjectType<AimAss
 		OuterMult = ddl.GetValue<float>(0x65f63888u, OuterMult);
 	}
 
-	[DDLRegistration(0xbcad0efeu, "Inner Capsule OBB Multiplier")]
+	[DDLRegistration(0xf493afffu, "Inner Capsule OBB Multiplier")]
 	public float InnerMult { get; set; } = 1.20f;
 
-	[DDLRegistration(0xbcad0efeu, "Outer Capsule OBB Multiplier")]
+	[DDLRegistration(0x65f63888u, "Outer Capsule OBB Multiplier")]
 	public float OuterMult { get; set; } = 2.00f;
 
 	public new static AimAssistTargetZoneOBB Create(DDLObject ddl) => new(ddl);

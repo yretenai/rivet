@@ -21,16 +21,16 @@ public class UDSBulkImportDef : DDLObjectType, IDDLObjectType<UDSBulkImportDef> 
 		Entities = ddl.GetObject<UDSBulkEntities>(0x539bbbc3u);
 	}
 
-	[DDLRegistration(0x810290dbu)]
+	[DDLRegistration(0x5af80aeeu)]
 	public string? SchemaVersion { get; set; } = default;
 
-	[DDLRegistration(0x810290dbu)]
+	[DDLRegistration(0x0aa38892u)]
 	public string? ContextType { get; set; } = default;
 
-	[DDLRegistration(0x810290dbu)]
+	[DDLRegistration(0x06df9fd7u)]
 	public string? ContextId { get; set; } = default;
 
-	[DDLRegistration(0x810290dbu)]
+	[DDLRegistration(0x539bbbc3u)]
 	public UDSBulkEntities? Entities { get; set; } = default;
 
 	public static UDSBulkImportDef Create(DDLObject ddl) => new(ddl);

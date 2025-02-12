@@ -19,10 +19,10 @@ public class ChestOfferPrius : OfferPrius, IDDLObjectType<ChestOfferPrius> {
 		Keys = ddl.GetObject<ChestKeyList>(0x841e845cu);
 	}
 
-	[DDLRegistration(0xda434e26u)]
+	[DDLRegistration(0x4258124au)]
 	public CommonLootData? ChestLootConfig { get; set; } = default;
 
-	[DDLRegistration(0xda434e26u, "Key Options", "Lists keys to open the chest, any single list can open the chest")]
+	[DDLRegistration(0x841e845cu, "Key Options", "Lists keys to open the chest, any single list can open the chest")]
 	public ChestKeyList? Keys { get; set; } = default;
 
 	public new static ChestOfferPrius Create(DDLObject ddl) => new(ddl);

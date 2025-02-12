@@ -18,7 +18,7 @@ public class AmbientCurveFacingActor : AmbientCurveFacingBase, IDDLObjectType<Am
 		TargetActor = ddl.GetValue<RivetAssetId>(0x98554e8cu, TargetActor);
 	}
 
-	[DDLRegistration(0x3be2e33bu)]
+	[DDLRegistration(0x98554e8cu)]
 	public RivetAssetId TargetActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static AmbientCurveFacingActor Create(DDLObject ddl) => new(ddl);

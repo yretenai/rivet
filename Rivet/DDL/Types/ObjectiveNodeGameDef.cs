@@ -25,28 +25,28 @@ public class ObjectiveNodeGameDef : ObjectiveNodeSharedDef, IDDLObjectType<Objec
 		AllowGameIntent = ddl.GetValue<bool>(0x3d5f845bu, AllowGameIntent);
 	}
 
-	[DDLRegistration(0xdbeb67a3u, "Debug Load Info")]
+	[DDLRegistration(0x88452526u, "Debug Load Info")]
 	public ObjectiveLoadInfo? DebugLoadInfo { get; set; } = default;
 
-	[DDLRegistration(0xdbeb67a3u, "Segment Complete", "Is this an objective we track for segments")]
+	[DDLRegistration(0x93cbc267u, "Segment Complete", "Is this an objective we track for segments")]
 	public bool SegmentComplete { get; set; } = false;
 
-	[DDLRegistration(0xdbeb67a3u, "UI Mode")]
+	[DDLRegistration(0x970a7e07u, "UI Mode")]
 	public x41993474 UIMode { get; set; } = x41993474.Normal;
 
-	[DDLRegistration(0xdbeb67a3u, "UI Info")]
+	[DDLRegistration(0x13490c9du, "UI Info")]
 	public ObjectiveNodeInfoUI? InfoUI { get; set; } = default;
 
-	[DDLRegistration(0xdbeb67a3u, "Alternate Planets", "This objective can be considered the 'current planet's primary objective' if on one of these planets.")]
+	[DDLRegistration(0xf3f7896eu, "Alternate Planets", "This objective can be considered the 'current planet's primary objective' if on one of these planets.")]
 	public List<string?> AlternatePlanets { get; set; } = [];
 
-	[DDLRegistration(0xdbeb67a3u, "Activity Task Mode")]
+	[DDLRegistration(0xef10b498u, "Activity Task Mode")]
 	public x41993474 TaskMode { get; set; } = x41993474.Normal;
 
-	[DDLRegistration(0xdbeb67a3u, "Activity Task Info")]
+	[DDLRegistration(0xb353c264u, "Activity Task Info")]
 	public ObjectiveTaskInfo? TaskInfo { get; set; } = default;
 
-	[DDLRegistration(0xdbeb67a3u, "Allow Game Intent Warp Out?", "Should we allow game intent warps to other activity cards while this objective is active?")]
+	[DDLRegistration(0x3d5f845bu, "Allow Game Intent Warp Out?", "Should we allow game intent warps to other activity cards while this objective is active?")]
 	public bool AllowGameIntent { get; set; } = true;
 
 	public new static ObjectiveNodeGameDef Create(DDLObject ddl) => new(ddl);

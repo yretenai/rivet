@@ -20,13 +20,13 @@ public class InputNodeBaseDef : NodeBaseDef, IDDLObjectType<InputNodeBaseDef> {
 		SortValue = ddl.GetValue<float>(0x55c1c85du, SortValue);
 	}
 
-	[DDLRegistration(0xd814e072u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xd814e072u)]
+	[DDLRegistration(0x2da990c2u)]
 	public string? OldName { get; set; } = default;
 
-	[DDLRegistration(0xd814e072u)]
+	[DDLRegistration(0x55c1c85du)]
 	public float SortValue { get; set; } = 0.00f;
 
 	public new static InputNodeBaseDef Create(DDLObject ddl) => new(ddl);

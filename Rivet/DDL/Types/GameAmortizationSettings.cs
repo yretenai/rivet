@@ -22,19 +22,19 @@ public class GameAmortizationSettings : DDLObjectType, IDDLObjectType<GameAmorti
 		DoIncreasedProtoGrenadeQueryReduction = ddl.GetValue<bool>(0xdfba60bdu, DoIncreasedProtoGrenadeQueryReduction);
 	}
 
-	[DDLRegistration(0xc008e20au)]
+	[DDLRegistration(0xf8aaf56fu)]
 	public GameFrameIntervalAmoritizationSettings? FrameIntervalSettings { get; set; } = default;
 
-	[DDLRegistration(0xc008e20au)]
+	[DDLRegistration(0x744f9837u)]
 	public GameFrameBudgetAmortizationSettings? FrameBudgetSettings { get; set; } = default;
 
-	[DDLRegistration(0xc008e20au, description: "True: Amortize damage state changes and limit chunk counts. False: Perform damage state changes on the frame they are requested and don't limit chunk counts.")]
+	[DDLRegistration(0xcee9f355u, description: "True: Amortize damage state changes and limit chunk counts. False: Perform damage state changes on the frame they are requested and don't limit chunk counts.")]
 	public bool DoDamageStateAmortization { get; set; } = true;
 
-	[DDLRegistration(0xc008e20au, description: "True: Amortize simple pickup spawns from the LootSystem to limit the number of spawns per frame. False: Perform the LootSystem simple pickup spawns on the frame they are requested and don't limit spawns per frame.")]
+	[DDLRegistration(0x79fc0860u, description: "True: Amortize simple pickup spawns from the LootSystem to limit the number of spawns per frame. False: Perform the LootSystem simple pickup spawns on the frame they are requested and don't limit spawns per frame.")]
 	public bool DoLootSystemSimpleSpawnPickupAmortization { get; set; } = true;
 
-	[DDLRegistration(0xc008e20au, description: "True: reduce the number of targeted queries per environment hit further. False: reduce the number of targeted queries per environment hit the standard amount.")]
+	[DDLRegistration(0xdfba60bdu, description: "True: reduce the number of targeted queries per environment hit further. False: reduce the number of targeted queries per environment hit the standard amount.")]
 	public bool DoIncreasedProtoGrenadeQueryReduction { get; set; } = true;
 
 	public static GameAmortizationSettings Create(DDLObject ddl) => new(ddl);

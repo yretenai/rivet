@@ -18,7 +18,7 @@ public class ShotBotSpawnerPrius : BasicBulletPrius, IDDLObjectType<ShotBotSpawn
 		BotAsset = ddl.GetValue<RivetAssetId>(0xe5ec3441u, BotAsset);
 	}
 
-	[DDLRegistration(0x7a7c9785u)]
+	[DDLRegistration(0xe5ec3441u)]
 	public RivetAssetId BotAsset { get; set; } = default;
 
 	public new static ShotBotSpawnerPrius Create(DDLObject ddl) => new(ddl);

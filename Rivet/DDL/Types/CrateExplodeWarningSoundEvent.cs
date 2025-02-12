@@ -19,10 +19,10 @@ public class CrateExplodeWarningSoundEvent : EventBase, IDDLObjectType<CrateExpl
 		NumCountdownStages = ddl.GetValue<uint>(0x0f2aa70cu, NumCountdownStages);
 	}
 
-	[DDLRegistration(0x8e97f119u)]
+	[DDLRegistration(0xcddfea82u)]
 	public uint CountdownStage { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8e97f119u)]
+	[DDLRegistration(0x0f2aa70cu)]
 	public uint NumCountdownStages { get; set; } = 0x00000000;
 
 	public new static CrateExplodeWarningSoundEvent Create(DDLObject ddl) => new(ddl);

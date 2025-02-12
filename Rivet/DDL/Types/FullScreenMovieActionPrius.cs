@@ -20,13 +20,13 @@ public class FullScreenMovieActionPrius : DDLObjectType, IDDLObjectType<FullScre
 		SubtitleConfig = ddl.GetValue<RivetAssetId>(0x8437e2b0u, SubtitleConfig);
 	}
 
-	[DDLRegistration(0x10f57890u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Deprecated;
 
-	[DDLRegistration(0x10f57890u, "Movie File", "Movie File to play full screen")]
+	[DDLRegistration(0x3c6b5acau, "Movie File", "Movie File to play full screen")]
 	public RivetAssetId MovieFile { get; set; } = default;
 
-	[DDLRegistration(0x10f57890u, "Subtitle Config", "Config File for subtitles")]
+	[DDLRegistration(0x8437e2b0u, "Subtitle Config", "Config File for subtitles")]
 	public RivetAssetId SubtitleConfig { get; set; } = default;
 
 	public static FullScreenMovieActionPrius Create(DDLObject ddl) => new(ddl);

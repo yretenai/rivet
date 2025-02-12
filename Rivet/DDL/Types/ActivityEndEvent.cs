@@ -23,22 +23,22 @@ public class ActivityEndEvent : UDSEventBase, IDDLObjectType<ActivityEndEvent> {
 		DifficultySetting = ddl.GetValue<int>(0x1f96728eu, DifficultySetting);
 	}
 
-	[DDLRegistration(0x45ecd7f7u)]
+	[DDLRegistration(0x875ebf15u)]
 	public string? ActivityId { get; set; } = default;
 
-	[DDLRegistration(0x45ecd7f7u)]
+	[DDLRegistration(0xfeeb3766u)]
 	public x57af8350 Outcome { get; set; } = x57af8350.Completed;
 
-	[DDLRegistration(0x45ecd7f7u)]
+	[DDLRegistration(0xea0bd494u)]
 	public int Score { get; set; } = 0;
 
-	[DDLRegistration(0x45ecd7f7u)]
+	[DDLRegistration(0xc74cfc3fu)]
 	public string? ZoneId { get; set; } = default;
 
-	[DDLRegistration(0x45ecd7f7u)]
+	[DDLRegistration(0xef79418eu)]
 	public List<float> MapPosition { get; set; } = [];
 
-	[DDLRegistration(0x45ecd7f7u)]
+	[DDLRegistration(0x1f96728eu)]
 	public int DifficultySetting { get; set; } = 0;
 
 	public new static ActivityEndEvent Create(DDLObject ddl) => new(ddl);

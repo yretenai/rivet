@@ -25,28 +25,28 @@ public class ShotMotionIcicleBombPrius : ShotMotionBasePrius, IDDLObjectType<Sho
 		SoundEmitter = ddl.GetValue<RivetAssetId>(0xdf9c5e6du, SoundEmitter);
 	}
 
-	[DDLRegistration(0xe1d6ff16u, "Initial Radius")]
+	[DDLRegistration(0x81b63d6cu, "Initial Radius")]
 	public float InitialRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe1d6ff16u, "Final Radius")]
+	[DDLRegistration(0x3a2c85bbu, "Final Radius")]
 	public float FinalRadius { get; set; } = 10.00f;
 
-	[DDLRegistration(0xe1d6ff16u, "Expand Time")]
+	[DDLRegistration(0x753619b7u, "Expand Time")]
 	public float ExpandTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0xe1d6ff16u, "Max Time")]
+	[DDLRegistration(0x920f0ef5u, "Max Time")]
 	public float MaxTime { get; set; } = 1.25f;
 
-	[DDLRegistration(0xe1d6ff16u, "Spin Up Time")]
+	[DDLRegistration(0x8a3fd6c5u, "Spin Up Time")]
 	public float SpinUpTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe1d6ff16u, "Spin Down Time")]
+	[DDLRegistration(0xa21066bdu, "Spin Down Time")]
 	public float SpinDownTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe1d6ff16u, "Spin Speed")]
+	[DDLRegistration(0x259fa4d1u, "Spin Speed")]
 	public float SpinSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe1d6ff16u, "Sound Emitter")]
+	[DDLRegistration(0xdf9c5e6du, "Sound Emitter")]
 	public RivetAssetId SoundEmitter { get; set; } = default;
 
 	public new static ShotMotionIcicleBombPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PhysicsComponentPriuses : DDLObjectType, IDDLObjectType<PhysicsComp
 		Priuses = ddl.GetObjects<PhysicsComponentPrius>(0x79f6ec58u);
 	}
 
-	[DDLRegistration(0xa6bef6c4u)]
+	[DDLRegistration(0x79f6ec58u)]
 	public List<PhysicsComponentPrius?> Priuses { get; set; } = [];
 
 	public static PhysicsComponentPriuses Create(DDLObject ddl) => new(ddl);

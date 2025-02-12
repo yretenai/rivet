@@ -18,7 +18,7 @@ public class IdlingEvent : EventBase, IDDLObjectType<IdlingEvent> {
 		Distance = ddl.GetValue<float>(0xe69327f1u, Distance);
 	}
 
-	[DDLRegistration(0x9208ff44u, description: "Distance to nearest camera.")]
+	[DDLRegistration(0xe69327f1u, description: "Distance to nearest camera.")]
 	public float Distance { get; set; } = 0.00f;
 
 	public new static IdlingEvent Create(DDLObject ddl) => new(ddl);

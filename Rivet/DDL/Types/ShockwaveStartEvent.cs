@@ -21,16 +21,16 @@ public class ShockwaveStartEvent : EventBase, IDDLObjectType<ShockwaveStartEvent
 		LifeDuration = ddl.GetValue<float>(0x6e9cfaf8u, LifeDuration);
 	}
 
-	[DDLRegistration(0xdd449ea4u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdd449ea4u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdd449ea4u)]
+	[DDLRegistration(0xecfa5c44u)]
 	public float GrowDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdd449ea4u)]
+	[DDLRegistration(0x6e9cfaf8u)]
 	public float LifeDuration { get; set; } = 0.00f;
 
 	public new static ShockwaveStartEvent Create(DDLObject ddl) => new(ddl);

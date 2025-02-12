@@ -19,10 +19,10 @@ public class PlanetMenuAcceptEvent : EventBase, IDDLObjectType<PlanetMenuAcceptE
 		DestinationCheckpointName = ddl.GetString(0x41f2d10d) ?? DestinationCheckpointName;
 	}
 
-	[DDLRegistration(0x245cb81au)]
+	[DDLRegistration(0x136b3eabu)]
 	public string? InterplanetaryCheckpointName { get; set; } = default;
 
-	[DDLRegistration(0x245cb81au)]
+	[DDLRegistration(0x41f2d10du)]
 	public string? DestinationCheckpointName { get; set; } = default;
 
 	public new static PlanetMenuAcceptEvent Create(DDLObject ddl) => new(ddl);

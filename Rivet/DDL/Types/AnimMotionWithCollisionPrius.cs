@@ -18,7 +18,7 @@ public class AnimMotionWithCollisionPrius : DDLObjectType, IDDLObjectType<AnimMo
 		BodySize = ddl.GetObject<MoverBodySize>(0x61026269u);
 	}
 
-	[DDLRegistration(0x0d6cbcc6u)]
+	[DDLRegistration(0x61026269u)]
 	public MoverBodySize? BodySize { get; set; } = default;
 
 	public static AnimMotionWithCollisionPrius Create(DDLObject ddl) => new(ddl);

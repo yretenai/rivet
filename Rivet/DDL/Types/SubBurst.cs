@@ -21,16 +21,16 @@ public class SubBurst : DDLObjectType, IDDLObjectType<SubBurst> {
 		Burst = ddl.GetObject<Burst>(0x646d6c71u);
 	}
 
-	[DDLRegistration(0x3c4ddd1eu)]
+	[DDLRegistration(0x75c66c1eu)]
 	public float PauseDurationMin { get; set; } = 0.30f;
 
-	[DDLRegistration(0x3c4ddd1eu)]
+	[DDLRegistration(0x49cb5347u)]
 	public float PauseDurationMax { get; set; } = 0.50f;
 
-	[DDLRegistration(0x3c4ddd1eu)]
+	[DDLRegistration(0xa7fac1cau)]
 	public float PauseDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3c4ddd1eu)]
+	[DDLRegistration(0x646d6c71u)]
 	public Burst? Burst { get; set; } = default;
 
 	public static SubBurst Create(DDLObject ddl) => new(ddl);

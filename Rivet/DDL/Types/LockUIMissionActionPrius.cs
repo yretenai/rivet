@@ -18,7 +18,7 @@ public class LockUIMissionActionPrius : DDLObjectType, IDDLObjectType<LockUIMiss
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x3f4a11e1u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
 	public static LockUIMissionActionPrius Create(DDLObject ddl) => new(ddl);

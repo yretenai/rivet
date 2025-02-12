@@ -19,10 +19,10 @@ public class RequiredItemEntry : DDLObjectType, IDDLObjectType<RequiredItemEntry
 		RemoveWhenUnlocked = ddl.GetValue<bool>(0x37a80ee3u, RemoveWhenUnlocked);
 	}
 
-	[DDLRegistration(0x01a64706u)]
+	[DDLRegistration(0xa88f833fu)]
 	public RivetAssetId ItemConfig { get; set; } = default;
 
-	[DDLRegistration(0x01a64706u, description: "Remove this item when it unlocks something")]
+	[DDLRegistration(0x37a80ee3u, description: "Remove this item when it unlocks something")]
 	public bool RemoveWhenUnlocked { get; set; } = true;
 
 	public static RequiredItemEntry Create(DDLObject ddl) => new(ddl);

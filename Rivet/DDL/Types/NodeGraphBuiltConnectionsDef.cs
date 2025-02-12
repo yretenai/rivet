@@ -18,7 +18,7 @@ public class NodeGraphBuiltConnectionsDef : DDLObjectType, IDDLObjectType<NodeGr
 		Connections = ddl.GetObjects<ConnectionTuidDef>(0x322aadceu);
 	}
 
-	[DDLRegistration(0x4b0be801u)]
+	[DDLRegistration(0x322aadceu)]
 	public List<ConnectionTuidDef?> Connections { get; set; } = [];
 
 	public static NodeGraphBuiltConnectionsDef Create(DDLObject ddl) => new(ddl);

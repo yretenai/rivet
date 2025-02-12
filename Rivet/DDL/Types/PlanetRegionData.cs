@@ -29,40 +29,40 @@ public class PlanetRegionData : DDLObjectType, IDDLObjectType<PlanetRegionData> 
 		ConditionalLightingModes = ddl.GetObjects<PlanetLightingCondition>(0x2a15ccb0u);
 	}
 
-	[DDLRegistration(0xf2e3a8bbu, "Planet Name (in code)", "Name of the planet in code.")]
+	[DDLRegistration(0x38548038u, "Planet Name (in code)", "Name of the planet in code.")]
 	public string? PlanetName { get; set; } = default;
 
-	[DDLRegistration(0xf2e3a8bbu, "Main Region", "Each planet must have one, and only one, main region.")]
+	[DDLRegistration(0xe71d5cb8u, "Main Region", "Each planet must have one, and only one, main region.")]
 	public bool IsMainRegion { get; set; } = true;
 
-	[DDLRegistration(0xf2e3a8bbu, "Level Enum", "LevelEnum entry, for per-Planet save data.")]
+	[DDLRegistration(0x4223680au, "Level Enum", "LevelEnum entry, for per-Planet save data.")]
 	public LevelEnum LevelEnum { get; set; } = LevelEnum.None;
 
-	[DDLRegistration(0xf2e3a8bbu, "Interplanetary Checkpoint", "When traveling to this planet, what checkpoint should we use for interplanetary space.")]
+	[DDLRegistration(0xbfa9c073u, "Interplanetary Checkpoint", "When traveling to this planet, what checkpoint should we use for interplanetary space.")]
 	public string? InterplanetaryCheckpoint { get; set; } = default;
 
-	[DDLRegistration(0xf2e3a8bbu, "Checkpoint", "When traveling to this planet, what checkpoint should we spawn into?")]
+	[DDLRegistration(0xd436a987u, "Checkpoint", "When traveling to this planet, what checkpoint should we spawn into?")]
 	public string? Checkpoint { get; set; } = default;
 
-	[DDLRegistration(0xf2e3a8bbu, "Hero Type", "When traveling to this planet, what hero should we spawn as.")]
+	[DDLRegistration(0xc7c22b65u, "Hero Type", "When traveling to this planet, what hero should we spawn as.")]
 	public HeroTypes HeroTypes { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0xf2e3a8bbu, "Planet Menu Data", "Various data for the Ship UI.")]
+	[DDLRegistration(0x220a36e5u, "Planet Menu Data", "Various data for the Ship UI.")]
 	public PlanetMenuData? MenuData { get; set; } = default;
 
-	[DDLRegistration(0xf2e3a8bbu, "Planet Activity Data", "Various data for the activity card for this planet.")]
+	[DDLRegistration(0xf11de3a5u, "Planet Activity Data", "Various data for the activity card for this planet.")]
 	public PlanetActivityData? ActivityData { get; set; } = default;
 
-	[DDLRegistration(0xf2e3a8bbu, "Default UI Map", "Map to use on the Pause menu if not defined by script (must exist in Maps array below).")]
+	[DDLRegistration(0x7ad0bc7fu, "Default UI Map", "Map to use on the Pause menu if not defined by script (must exist in Maps array below).")]
 	public UIDisplayObjectType DefaultMap { get; set; } = UIDisplayObjectType.None;
 
-	[DDLRegistration(0xf2e3a8bbu, "UI Maps", "Maps for use on the Pause menu. System will use the script-defined map, or the default otherwise.")]
+	[DDLRegistration(0x77bec815u, "UI Maps", "Maps for use on the Pause menu. System will use the script-defined map, or the default otherwise.")]
 	public List<PlanetMap?> Maps { get; set; } = [];
 
-	[DDLRegistration(0xf2e3a8bbu, "Default Lighting Mode", "Lighting mode to set during travel if none of the conditional lighting modes were satisfied.")]
+	[DDLRegistration(0x95f292abu, "Default Lighting Mode", "Lighting mode to set during travel if none of the conditional lighting modes were satisfied.")]
 	public LightingModeGame DefaultLightingMode { get; set; } = LightingModeGame.Day;
 
-	[DDLRegistration(0xf2e3a8bbu, "Conditional Lighting Modes", "Pick a conditional lighting mode from this list to apply to during travel. System will use the last satisfied lighting mode, or the default if none were satisfied.")]
+	[DDLRegistration(0x2a15ccb0u, "Conditional Lighting Modes", "Pick a conditional lighting mode from this list to apply to during travel. System will use the last satisfied lighting mode, or the default if none were satisfied.")]
 	public List<PlanetLightingCondition?> ConditionalLightingModes { get; set; } = [];
 
 	public static PlanetRegionData Create(DDLObject ddl) => new(ddl);

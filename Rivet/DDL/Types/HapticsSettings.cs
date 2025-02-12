@@ -20,13 +20,13 @@ public class HapticsSettings : DDLObjectType, IDDLObjectType<HapticsSettings> {
 		DrawDebugImguiWindow = ddl.GetValue<bool>(0x623d726eu, DrawDebugImguiWindow);
 	}
 
-	[DDLRegistration(0x7493077au, "Low Pass Filter Cutoff Percent", "Percent of Low Pass Filter Cutoff [0, 1]")]
+	[DDLRegistration(0xb8a4e7fau, "Low Pass Filter Cutoff Percent", "Percent of Low Pass Filter Cutoff [0, 1]")]
 	public float LowPassFilterCutoffPercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7493077au, "Display Analog Trigger Values", "Should the trigger analog values be displayed?")]
+	[DDLRegistration(0xf56cd0d1u, "Display Analog Trigger Values", "Should the trigger analog values be displayed?")]
 	public bool DisplayAnalogValues { get; set; } = false;
 
-	[DDLRegistration(0x7493077au, "Draw Haptics Debug ImGui Window", "Should the Haptics Debug ImGui window be displayed?")]
+	[DDLRegistration(0x623d726eu, "Draw Haptics Debug ImGui Window", "Should the Haptics Debug ImGui window be displayed?")]
 	public bool DrawDebugImguiWindow { get; set; } = false;
 
 	public static HapticsSettings Create(DDLObject ddl) => new(ddl);

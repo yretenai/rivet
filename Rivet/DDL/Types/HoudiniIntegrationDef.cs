@@ -21,16 +21,16 @@ public class HoudiniIntegrationDef : DDLObjectType, IDDLObjectType<HoudiniIntegr
 		SavedParameters = ddl.GetDictionary<string, TweakVarFile>(0x32627343, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<TweakVarFile>(mapId));
 	}
 
-	[DDLRegistration(0x880bf299u)]
+	[DDLRegistration(0x56829721u)]
 	public HoudiniIntegrationLicense? License { get; set; } = default;
 
-	[DDLRegistration(0x880bf299u, description: "This is the digital asset that will be used when procedurally generating data with Houdini.")]
+	[DDLRegistration(0xd71669f3u, description: "This is the digital asset that will be used when procedurally generating data with Houdini.")]
 	public HoudiniIntegrationPlugin? Plugin { get; set; } = default;
 
-	[DDLRegistration(0x880bf299u, description: "These are the parameters for the currently-selected digital asset.")]
+	[DDLRegistration(0xdda516c7u, description: "These are the parameters for the currently-selected digital asset.")]
 	public TweakVarFile? Parameters { get; set; } = default;
 
-	[DDLRegistration(0x880bf299u, description: "This contains all the saved parameter values for all the plugins that have been used with this integration over time.")]
+	[DDLRegistration(0x32627343u, description: "This contains all the saved parameter values for all the plugins that have been used with this integration over time.")]
 	public Dictionary<string, TweakVarFile?> SavedParameters { get; set; } = [];
 
 	public static HoudiniIntegrationDef Create(DDLObject ddl) => new(ddl);

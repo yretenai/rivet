@@ -18,7 +18,7 @@ public class WeaponBurstCanceledEvent : EventBase, IDDLObjectType<WeaponBurstCan
 		TriggerIndex = ddl.GetValue<uint>(0xee73b5b3u, TriggerIndex);
 	}
 
-	[DDLRegistration(0x77680f39u)]
+	[DDLRegistration(0xee73b5b3u)]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
 	public new static WeaponBurstCanceledEvent Create(DDLObject ddl) => new(ddl);

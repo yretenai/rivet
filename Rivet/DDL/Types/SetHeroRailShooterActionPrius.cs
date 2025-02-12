@@ -18,7 +18,7 @@ public class SetHeroRailShooterActionPrius : DDLObjectType, IDDLObjectType<SetHe
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x78cf33dfu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
 	public static SetHeroRailShooterActionPrius Create(DDLObject ddl) => new(ddl);

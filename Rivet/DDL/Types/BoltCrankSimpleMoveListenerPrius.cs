@@ -21,16 +21,16 @@ public class BoltCrankSimpleMoveListenerPrius : DDLObjectType, IDDLObjectType<Bo
 		DirectionVol = ddl.GetValue<RivetAssetId>(0x3badf52cu, DirectionVol);
 	}
 
-	[DDLRegistration(0xc60f5324u, description: "If this is blank we'll look at the actor that we are on.")]
+	[DDLRegistration(0xa8de01b8u, description: "If this is blank we'll look at the actor that we are on.")]
 	public RivetAssetId Crank { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc60f5324u, description: "The volume we are at when the crank is at 0.")]
+	[DDLRegistration(0xcf6c50d0u, description: "The volume we are at when the crank is at 0.")]
 	public RivetAssetId StartVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc60f5324u, description: "The volume we are at when the crank is at 1.")]
+	[DDLRegistration(0x8b95d04cu, description: "The volume we are at when the crank is at 1.")]
 	public RivetAssetId EndVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc60f5324u, description: "The volume we use to guestimate which direction we are actually going to rotate from Start to End.")]
+	[DDLRegistration(0x3badf52cu, description: "The volume we use to guestimate which direction we are actually going to rotate from Start to End.")]
 	public RivetAssetId DirectionVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static BoltCrankSimpleMoveListenerPrius Create(DDLObject ddl) => new(ddl);

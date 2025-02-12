@@ -22,19 +22,19 @@ public class VertexPaintNode : DDLObjectType, IDDLObjectType<VertexPaintNode> {
 		MetersPerVoxel = ddl.GetValue<float>(0x8e7d5e11u, MetersPerVoxel);
 	}
 
-	[DDLRegistration(0x8b81e805u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8b81e805u)]
+	[DDLRegistration(0x0f0182ffu)]
 	public bool IsDeleted { get; set; } = false;
 
-	[DDLRegistration(0x8b81e805u)]
+	[DDLRegistration(0x4d7a8baeu)]
 	public Dictionary<RivetAssetId, uint> ColorMap { get; set; } = [];
 
-	[DDLRegistration(0x8b81e805u)]
+	[DDLRegistration(0x7ccd1470u)]
 	public uint DefaultColor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8b81e805u)]
+	[DDLRegistration(0x8e7d5e11u)]
 	public float MetersPerVoxel { get; set; } = 0.10f;
 
 	public static VertexPaintNode Create(DDLObject ddl) => new(ddl);

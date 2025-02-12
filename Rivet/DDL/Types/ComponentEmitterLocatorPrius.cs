@@ -20,13 +20,13 @@ public class ComponentEmitterLocatorPrius : ComponentEmitterBasePrius, IDDLObjec
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0x74434b49u)]
+	[DDLRegistration(0x13b721dbu)]
 	public bool EmitFromUser { get; set; } = false;
 
-	[DDLRegistration(0x74434b49u)]
+	[DDLRegistration(0x4cdc032fu)]
 	public bool UseWorldUp { get; set; } = false;
 
-	[DDLRegistration(0x74434b49u)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = "igLoc_bulletEmit";
 
 	public new static ComponentEmitterLocatorPrius Create(DDLObject ddl) => new(ddl);

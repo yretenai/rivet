@@ -18,7 +18,7 @@ public class OnUpdateIntervalNodeDef : NodalShotEventNodeBaseDef, IDDLObjectType
 		Interval = ddl.GetObject<InputPlugFloat>(0xe3c752bbu);
 	}
 
-	[DDLRegistration(0x720fb7dfu)]
+	[DDLRegistration(0xe3c752bbu)]
 	public InputPlugFloat? Interval { get; set; } = default;
 
 	public new static OnUpdateIntervalNodeDef Create(DDLObject ddl) => new(ddl);

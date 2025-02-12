@@ -20,13 +20,13 @@ public class AreaEnableActionPrius : DDLObjectType, IDDLObjectType<AreaEnableAct
 		OnlyExclusive = ddl.GetValue<bool>(0xeda43036u, OnlyExclusive);
 	}
 
-	[DDLRegistration(0x5b3a6c30u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x5b3a6c30u, "Area", "Name of area to toggle visibility on")]
+	[DDLRegistration(0xdbabcd0eu, "Area", "Name of area to toggle visibility on")]
 	public string? AreaName { get; set; } = default;
 
-	[DDLRegistration(0x5b3a6c30u, "Exclusive", "Only operate on hexes exclusive to this area")]
+	[DDLRegistration(0xeda43036u, "Exclusive", "Only operate on hexes exclusive to this area")]
 	public bool OnlyExclusive { get; set; } = true;
 
 	public static AreaEnableActionPrius Create(DDLObject ddl) => new(ddl);

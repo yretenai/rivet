@@ -24,25 +24,25 @@ public class DbVerifyResult : DDLObjectType, IDDLObjectType<DbVerifyResult> {
 		HashClashes = ddl.GetValue<uint>(0xb80668acu, HashClashes);
 	}
 
-	[DDLRegistration(0x42f419cau)]
+	[DDLRegistration(0x105dff48u)]
 	public Dictionary<uint, DbVerifyAssetCollection?> AssetCollection { get; set; } = [];
 
-	[DDLRegistration(0x42f419cau)]
+	[DDLRegistration(0x123cec1fu)]
 	public uint FileCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x42f419cau)]
+	[DDLRegistration(0x8a7f8ea9u)]
 	public uint DbEntryCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x42f419cau)]
+	[DDLRegistration(0x867c8878u)]
 	public uint ErrorCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x42f419cau)]
+	[DDLRegistration(0xbee35768u)]
 	public uint UnionCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x42f419cau)]
+	[DDLRegistration(0xc54e4432u)]
 	public uint UncleanAssetPath { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x42f419cau)]
+	[DDLRegistration(0xb80668acu)]
 	public uint HashClashes { get; set; } = 0x00000000;
 
 	public static DbVerifyResult Create(DDLObject ddl) => new(ddl);

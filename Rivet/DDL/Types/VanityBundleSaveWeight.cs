@@ -19,10 +19,10 @@ public class VanityBundleSaveWeight : DDLObjectType, IDDLObjectType<VanityBundle
 		Weight = ddl.GetValue<float>(0x39b51b26u, Weight);
 	}
 
-	[DDLRegistration(0xa0253babu)]
+	[DDLRegistration(0xcd7269d0u)]
 	public xd230f155 SaveId { get; set; } = xd230f155.GalacticRangerHead;
 
-	[DDLRegistration(0xa0253babu, description: "How much weight to give this vanity bundle when calculating the save file completion percentage.")]
+	[DDLRegistration(0x39b51b26u, description: "How much weight to give this vanity bundle when calculating the save file completion percentage.")]
 	public float Weight { get; set; } = 1.00f;
 
 	public static VanityBundleSaveWeight Create(DDLObject ddl) => new(ddl);

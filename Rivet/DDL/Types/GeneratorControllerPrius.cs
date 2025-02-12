@@ -18,7 +18,7 @@ public class GeneratorControllerPrius : DDLObjectType, IDDLObjectType<GeneratorC
 		SplineGenerator = ddl.GetObjects<SplineGeneratorItem>(0x93fe7ab1u);
 	}
 
-	[DDLRegistration(0x04a006d2u)]
+	[DDLRegistration(0x93fe7ab1u)]
 	public List<SplineGeneratorItem?> SplineGenerator { get; set; } = [];
 
 	public static GeneratorControllerPrius Create(DDLObject ddl) => new(ddl);

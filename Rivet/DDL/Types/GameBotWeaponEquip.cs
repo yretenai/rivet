@@ -20,13 +20,13 @@ public class GameBotWeaponEquip : GameBotWeaponType, IDDLObjectType<GameBotWeapo
 		ShootingConfig = ddl.GetValue<RivetAssetId>(0x3e01df5fu, ShootingConfig);
 	}
 
-	[DDLRegistration(0xe1c8c678u, "Gun Locator", "The name of the locator the gun should attach to.")]
+	[DDLRegistration(0xfa8dcd9au, "Gun Locator", "The name of the locator the gun should attach to.")]
 	public string? AttachLocator { get; set; } = "igLoc_gunAttach";
 
-	[DDLRegistration(0xe1c8c678u, "Firing (weapon) Config", "Base Type: GameBotConfigFiring")]
+	[DDLRegistration(0xbf45b6ebu, "Firing (weapon) Config", "Base Type: GameBotConfigFiring")]
 	public RivetAssetId FiringConfig { get; set; } = default;
 
-	[DDLRegistration(0xe1c8c678u, "(Opt) Shooting Config", "Optional shooting config to override the one set on the BotConfigData.")]
+	[DDLRegistration(0x3e01df5fu, "(Opt) Shooting Config", "Optional shooting config to override the one set on the BotConfigData.")]
 	public RivetAssetId ShootingConfig { get; set; } = default;
 
 	public new static GameBotWeaponEquip Create(DDLObject ddl) => new(ddl);

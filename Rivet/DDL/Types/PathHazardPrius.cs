@@ -28,37 +28,37 @@ public class PathHazardPrius : DDLObjectType, IDDLObjectType<PathHazardPrius> {
 		IdleDecel = ddl.GetValue<float>(0x632e9434u, IdleDecel);
 	}
 
-	[DDLRegistration(0x713263ffu)]
+	[DDLRegistration(0xaf666352u)]
 	public float TrackingDistance { get; set; } = 6.00f;
 
-	[DDLRegistration(0x713263ffu)]
+	[DDLRegistration(0xfe94d1b9u)]
 	public float TrackingSpeed { get; set; } = 3.00f;
 
-	[DDLRegistration(0x713263ffu, description: "Accel when tracking the player.")]
+	[DDLRegistration(0xac4e19aau, description: "Accel when tracking the player.")]
 	public float TrackingAccel { get; set; } = 1.00f;
 
-	[DDLRegistration(0x713263ffu, description: "Decel when tracking the player.")]
+	[DDLRegistration(0x41c5c906u, description: "Decel when tracking the player.")]
 	public float TrackingDecel { get; set; } = 2.00f;
 
-	[DDLRegistration(0x713263ffu)]
+	[DDLRegistration(0x2085862du)]
 	public float TelegraphTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x713263ffu)]
+	[DDLRegistration(0xcc77d1d0u)]
 	public float RetreatTime { get; set; } = 10.00f;
 
-	[DDLRegistration(0x713263ffu, description: "Path we follow.")]
+	[DDLRegistration(0x2c2a8f27u, description: "Path we follow.")]
 	public RivetAssetId MovementCurve { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x713263ffu, description: "Y pos offset on the path.")]
+	[DDLRegistration(0xd5970c69u, description: "Y pos offset on the path.")]
 	public float CurveYPosOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x713263ffu, description: "Speed when idling on the path.")]
+	[DDLRegistration(0xdc7f8c8bu, description: "Speed when idling on the path.")]
 	public float IdleSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0x713263ffu, description: "Accel when idle on the path.")]
+	[DDLRegistration(0x8ea54498u, description: "Accel when idle on the path.")]
 	public float IdleAccel { get; set; } = 2.00f;
 
-	[DDLRegistration(0x713263ffu, description: "Decel when idle on the path.")]
+	[DDLRegistration(0x632e9434u, description: "Decel when idle on the path.")]
 	public float IdleDecel { get; set; } = 2.00f;
 
 	public static PathHazardPrius Create(DDLObject ddl) => new(ddl);

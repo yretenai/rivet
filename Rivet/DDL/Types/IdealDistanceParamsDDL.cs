@@ -23,22 +23,22 @@ public class IdealDistanceParamsDDL : DDLObjectType, IDDLObjectType<IdealDistanc
 		Acceleration = ddl.GetValue<float>(0xb9f88dfbu, Acceleration);
 	}
 
-	[DDLRegistration(0xcd539866u, "Ideal Min Distance", "Min distance this actor wants to be away from hero.")]
+	[DDLRegistration(0x53c1d680u, "Ideal Min Distance", "Min distance this actor wants to be away from hero.")]
 	public float IdealMinDistance { get; set; } = 27.00f;
 
-	[DDLRegistration(0xcd539866u, "Ideal Max Distance", "Max distance this actor wants to be away from hero.")]
+	[DDLRegistration(0x9fccad8fu, "Ideal Max Distance", "Max distance this actor wants to be away from hero.")]
 	public float IdealMaxDistance { get; set; } = 37.00f;
 
-	[DDLRegistration(0xcd539866u, "Min Chase Speed", "Minimum speed this actor is allowed to go.")]
+	[DDLRegistration(0xcd80b81au, "Min Chase Speed", "Minimum speed this actor is allowed to go.")]
 	public float MinChaseSpeed { get; set; } = 8.00f;
 
-	[DDLRegistration(0xcd539866u, "Max Chase Speed", "Maximum speed this actor is allowed to go.")]
+	[DDLRegistration(0x8dcfc06cu, "Max Chase Speed", "Maximum speed this actor is allowed to go.")]
 	public float MaxChaseSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0xcd539866u, description: "How much should the actor decelerate to get back to the ideal distance")]
+	[DDLRegistration(0xc9ee30a8u, description: "How much should the actor decelerate to get back to the ideal distance")]
 	public float Deceleration { get; set; } = -10.00f;
 
-	[DDLRegistration(0xcd539866u, description: "How much should the actor accelerate to get back to the ideal distance")]
+	[DDLRegistration(0xb9f88dfbu, description: "How much should the actor accelerate to get back to the ideal distance")]
 	public float Acceleration { get; set; } = 10.00f;
 
 	public static IdealDistanceParamsDDL Create(DDLObject ddl) => new(ddl);

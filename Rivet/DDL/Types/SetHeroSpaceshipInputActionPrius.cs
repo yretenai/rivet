@@ -19,10 +19,10 @@ public class SetHeroSpaceshipInputActionPrius : DDLObjectType, IDDLObjectType<Se
 		HideMissileHudOnDisable = ddl.GetValue<bool>(0x4c354502u, HideMissileHudOnDisable);
 	}
 
-	[DDLRegistration(0x510110fbu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x510110fbu, "Hide Missile HUD when Disabled?", "When disabling the missiles (specifically, not the 'disable all weapons'), whether to hide the missile HUD.")]
+	[DDLRegistration(0x4c354502u, "Hide Missile HUD when Disabled?", "When disabling the missiles (specifically, not the 'disable all weapons'), whether to hide the missile HUD.")]
 	public bool HideMissileHudOnDisable { get; set; } = false;
 
 	public static SetHeroSpaceshipInputActionPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class CloudSettings : DDLObjectType, IDDLObjectType<CloudSettings> {
 		ShadowMaxAtten = ddl.GetValue<float>(0xbe576930u, ShadowMaxAtten);
 	}
 
-	[DDLRegistration(0x05bed27eu)]
+	[DDLRegistration(0x21f14b93u)]
 	public float ShadowPenumbraScale { get; set; } = 6.00f;
 
-	[DDLRegistration(0x05bed27eu)]
+	[DDLRegistration(0xaac5f438u)]
 	public float ShadowTapRatio { get; set; } = 0.50f;
 
-	[DDLRegistration(0x05bed27eu)]
+	[DDLRegistration(0xbe576930u)]
 	public float ShadowMaxAtten { get; set; } = 0.00f;
 
 	public static CloudSettings Create(DDLObject ddl) => new(ddl);

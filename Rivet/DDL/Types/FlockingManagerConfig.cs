@@ -20,13 +20,13 @@ public class FlockingManagerConfig : ConfigBase, IDDLObjectType<FlockingManagerC
 		FlockConfigs = ddl.GetValues<RivetAssetId>(0xfdc1f358u);
 	}
 
-	[DDLRegistration(0x3c9e6e67u)]
+	[DDLRegistration(0xef2d955fu)]
 	public float RefreshPeriod { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3c9e6e67u)]
+	[DDLRegistration(0x046296c4u)]
 	public List<string?> FlockTypeNames { get; set; } = [];
 
-	[DDLRegistration(0x3c9e6e67u)]
+	[DDLRegistration(0xfdc1f358u)]
 	public List<RivetAssetId> FlockConfigs { get; set; } = [];
 
 	public new static FlockingManagerConfig Create(DDLObject ddl) => new(ddl);

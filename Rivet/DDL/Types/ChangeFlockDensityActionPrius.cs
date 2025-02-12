@@ -20,13 +20,13 @@ public class ChangeFlockDensityActionPrius : DDLObjectType, IDDLObjectType<Chang
 		FlockDensityConfig = ddl.GetValue<RivetAssetId>(0xfec78f0du, FlockDensityConfig);
 	}
 
-	[DDLRegistration(0xcdfb6482u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Ambient;
 
-	[DDLRegistration(0xcdfb6482u)]
+	[DDLRegistration(0xd1677a17u)]
 	public List<string?> FlockTypes { get; set; } = [];
 
-	[DDLRegistration(0xcdfb6482u)]
+	[DDLRegistration(0xfec78f0du)]
 	public RivetAssetId FlockDensityConfig { get; set; } = default;
 
 	public static ChangeFlockDensityActionPrius Create(DDLObject ddl) => new(ddl);

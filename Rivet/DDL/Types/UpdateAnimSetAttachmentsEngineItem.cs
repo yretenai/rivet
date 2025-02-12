@@ -18,7 +18,7 @@ public class UpdateAnimSetAttachmentsEngineItem : DDLObjectType, IDDLObjectType<
 		Attachments = ddl.GetObjects<AnimAttachmentDef>(0xca18ab0du);
 	}
 
-	[DDLRegistration(0xcbf48aacu)]
+	[DDLRegistration(0xca18ab0du)]
 	public List<AnimAttachmentDef?> Attachments { get; set; } = [];
 
 	public static UpdateAnimSetAttachmentsEngineItem Create(DDLObject ddl) => new(ddl);

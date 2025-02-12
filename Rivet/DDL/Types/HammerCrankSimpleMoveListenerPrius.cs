@@ -20,13 +20,13 @@ public class HammerCrankSimpleMoveListenerPrius : DDLObjectType, IDDLObjectType<
 		EndVol = ddl.GetValue<RivetAssetId>(0x8b95d04cu, EndVol);
 	}
 
-	[DDLRegistration(0xa34804aau, description: "If this is blank we'll look at the actor that we are on.")]
+	[DDLRegistration(0xfda1f175u, description: "If this is blank we'll look at the actor that we are on.")]
 	public RivetAssetId HammerCrank { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa34804aau, description: "The volume we are at when the crank is at 0.")]
+	[DDLRegistration(0xcf6c50d0u, description: "The volume we are at when the crank is at 0.")]
 	public RivetAssetId StartVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa34804aau, description: "The volume we are at when the crank is at 1.")]
+	[DDLRegistration(0x8b95d04cu, description: "The volume we are at when the crank is at 1.")]
 	public RivetAssetId EndVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static HammerCrankSimpleMoveListenerPrius Create(DDLObject ddl) => new(ddl);

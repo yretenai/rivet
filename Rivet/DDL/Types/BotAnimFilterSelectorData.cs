@@ -18,7 +18,7 @@ public class BotAnimFilterSelectorData : DDLObjectType, IDDLObjectType<BotAnimFi
 		LooksToFilters = ddl.GetObjects<LooksToFilters>(0x34d66690u);
 	}
 
-	[DDLRegistration(0x6307e609u, "Looks To Filters")]
+	[DDLRegistration(0x34d66690u, "Looks To Filters")]
 	public List<LooksToFilters?> LooksToFilters { get; set; } = [];
 
 	public static BotAnimFilterSelectorData Create(DDLObject ddl) => new(ddl);

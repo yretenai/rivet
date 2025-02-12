@@ -18,7 +18,7 @@ public class VaultEntryList : DDLObjectType, IDDLObjectType<VaultEntryList> {
 		Results = ddl.GetObjects<VaultEntry>(0x9e49872cu);
 	}
 
-	[DDLRegistration(0x657b0205u)]
+	[DDLRegistration(0x9e49872cu)]
 	public List<VaultEntry?> Results { get; set; } = [];
 
 	public static VaultEntryList Create(DDLObject ddl) => new(ddl);

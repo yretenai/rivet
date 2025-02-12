@@ -19,10 +19,10 @@ public class DamageEmitterMultiPrius : EnabledComponentBasePrius, IDDLObjectType
 		HeroCloseDist = ddl.GetValue<float>(0x9365934eu, HeroCloseDist);
 	}
 
-	[DDLRegistration(0xc8df2c32u, description: "List of damage sources, we'll do a few per frame.")]
+	[DDLRegistration(0xc850416bu, description: "List of damage sources, we'll do a few per frame.")]
 	public List<DamageEmitEntry?> DamageSources { get; set; } = [];
 
-	[DDLRegistration(0xc8df2c32u, "Hero Close Distance", "We'll only do our damage collision checks when a hero is in range. Use <= 0 for infinite range.")]
+	[DDLRegistration(0x9365934eu, "Hero Close Distance", "We'll only do our damage collision checks when a hero is in range. Use <= 0 for infinite range.")]
 	public float HeroCloseDist { get; set; } = 20.00f;
 
 	public new static DamageEmitterMultiPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class SoundPropagation2RoomPrius : DDLObjectType, IDDLObjectType<SoundPro
 		Shapes = ddl.GetValues<RivetAssetId>(0xada3eb75u);
 	}
 
-	[DDLRegistration(0x37c8d1acu, description: "the wwise effect (share-set) to apply")]
+	[DDLRegistration(0xb266fef4u, description: "the wwise effect (share-set) to apply")]
 	public string? EffectName { get; set; } = default;
 
-	[DDLRegistration(0x37c8d1acu, description: "priority relative to other rooms (lower priority is a more interior room)")]
+	[DDLRegistration(0x98a76157u, description: "priority relative to other rooms (lower priority is a more interior room)")]
 	public float Priority { get; set; } = 100.00f;
 
-	[DDLRegistration(0x37c8d1acu)]
+	[DDLRegistration(0xb1b64094u)]
 	public SoundPropagation2RoomParamsDef? Params { get; set; } = default;
 
-	[DDLRegistration(0x37c8d1acu, description: "list of room shapes")]
+	[DDLRegistration(0xada3eb75u, description: "list of room shapes")]
 	public List<RivetAssetId> Shapes { get; set; } = [];
 
 	public static SoundPropagation2RoomPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class CameraFollowNodeEngineItem : DDLObjectType, IDDLObjectType<CameraFo
 		Node = ddl.GetValue<RivetAssetId>(0xb5ef28f5u, Node);
 	}
 
-	[DDLRegistration(0x93666e4au)]
+	[DDLRegistration(0xb5ef28f5u)]
 	public RivetAssetId Node { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static CameraFollowNodeEngineItem Create(DDLObject ddl) => new(ddl);

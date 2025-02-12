@@ -18,7 +18,7 @@ public class AnimTriggerEmergentVOEvent : EventBase, IDDLObjectType<AnimTriggerE
 		DialogType = ddl.GetEnum<DialogTriggerGame>(0x9f3f12d7u, DialogTriggerGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x53e0eae3u)]
+	[DDLRegistration(0x9f3f12d7u)]
 	public DialogTriggerGame DialogType { get; set; } = DialogTriggerGame.None;
 
 	public new static AnimTriggerEmergentVOEvent Create(DDLObject ddl) => new(ddl);

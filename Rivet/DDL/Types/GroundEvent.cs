@@ -26,31 +26,31 @@ public class GroundEvent : EventBase, IDDLObjectType<GroundEvent> {
 		FoundCollision = ddl.GetValue<bool>(0x870d19f4u, FoundCollision);
 	}
 
-	[DDLRegistration(0x7ec34fe2u, description: "Locator to use for ground collision checks (input)")]
+	[DDLRegistration(0x5814524du, description: "Locator to use for ground collision checks (input)")]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0x7ec34fe2u, description: "Distance to check for ground (input)")]
+	[DDLRegistration(0xe8c9b5bfu, description: "Distance to check for ground (input)")]
 	public float CheckDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7ec34fe2u, description: "Arbitrary string, can be used for conduit response selection (input)")]
+	[DDLRegistration(0x17f49c29u, description: "Arbitrary string, can be used for conduit response selection (input)")]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x7ec34fe2u, description: "Do collision checks instead of using the move report results")]
+	[DDLRegistration(0x198fefc3u, description: "Do collision checks instead of using the move report results")]
 	public bool DoCollision { get; set; } = false;
 
-	[DDLRegistration(0x7ec34fe2u, description: "Collision hit material (output)")]
+	[DDLRegistration(0x86bfc8e5u, description: "Collision hit material (output)")]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0x7ec34fe2u, description: "The specific material asset of the ground object")]
+	[DDLRegistration(0xf55a8ae3u, description: "The specific material asset of the ground object")]
 	public ulong MaterialAsset { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x7ec34fe2u, description: "Collision query handle, internal use only")]
+	[DDLRegistration(0x6f08606au, description: "Collision query handle, internal use only")]
 	public ulong QueryHandle { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x7ec34fe2u, description: "True if the ground level is below water (output only if actor has a Mover component)")]
+	[DDLRegistration(0x4c861799u, description: "True if the ground level is below water (output only if actor has a Mover component)")]
 	public bool InWater { get; set; } = false;
 
-	[DDLRegistration(0x7ec34fe2u, description: "True if ground collision was found (output)")]
+	[DDLRegistration(0x870d19f4u, description: "True if ground collision was found (output)")]
 	public bool FoundCollision { get; set; } = false;
 
 	public new static GroundEvent Create(DDLObject ddl) => new(ddl);

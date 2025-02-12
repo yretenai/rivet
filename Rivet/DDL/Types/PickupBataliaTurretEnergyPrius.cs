@@ -18,7 +18,7 @@ public class PickupBataliaTurretEnergyPrius : GamePickupItemPrius, IDDLObjectTyp
 		Energy = ddl.GetValue<float>(0xa96937f6u, Energy);
 	}
 
-	[DDLRegistration(0xe13ead88u)]
+	[DDLRegistration(0xa96937f6u)]
 	public float Energy { get; set; } = 1.00f;
 
 	public new static PickupBataliaTurretEnergyPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ArmorBrokenEvent : EventBase, IDDLObjectType<ArmorBrokenEvent> {
 		JointNameHash = ddl.GetValue<uint>(0xb33f841cu, JointNameHash);
 	}
 
-	[DDLRegistration(0xeb6bf009u)]
+	[DDLRegistration(0xb33f841cu)]
 	public uint JointNameHash { get; set; } = 0x00000000;
 
 	public new static ArmorBrokenEvent Create(DDLObject ddl) => new(ddl);

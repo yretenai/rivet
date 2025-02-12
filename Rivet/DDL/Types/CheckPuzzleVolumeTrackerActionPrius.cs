@@ -19,10 +19,10 @@ public class CheckPuzzleVolumeTrackerActionPrius : DDLObjectType, IDDLObjectType
 		StartListening = ddl.GetValue<bool>(0xda0f12cau, StartListening);
 	}
 
-	[DDLRegistration(0x1e319c96u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Puzzle;
 
-	[DDLRegistration(0x1e319c96u)]
+	[DDLRegistration(0xda0f12cau)]
 	public bool StartListening { get; set; } = true;
 
 	public static CheckPuzzleVolumeTrackerActionPrius Create(DDLObject ddl) => new(ddl);

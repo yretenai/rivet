@@ -19,10 +19,10 @@ public class StatusEmitterRequestPrius : StatusEmitterBasePrius, IDDLObjectType<
 		Enemies = ddl.GetValue<bool>(0x79e82906u, Enemies);
 	}
 
-	[DDLRegistration(0x2618c148u)]
+	[DDLRegistration(0x20041351u)]
 	public bool Friends { get; set; } = false;
 
-	[DDLRegistration(0x2618c148u)]
+	[DDLRegistration(0x79e82906u)]
 	public bool Enemies { get; set; } = true;
 
 	public new static StatusEmitterRequestPrius Create(DDLObject ddl) => new(ddl);

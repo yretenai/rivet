@@ -19,10 +19,10 @@ public class MapElementTypeArray : DDLObjectType, IDDLObjectType<MapElementTypeA
 		Checkpoints = ddl.GetObjects<MapElementData>(0xba0400acu);
 	}
 
-	[DDLRegistration(0xac5c711fu)]
+	[DDLRegistration(0xec76065cu)]
 	public AssetReferenceDef? LevelZone { get; set; } = default;
 
-	[DDLRegistration(0xac5c711fu)]
+	[DDLRegistration(0xba0400acu)]
 	public List<MapElementData?> Checkpoints { get; set; } = [];
 
 	public static MapElementTypeArray Create(DDLObject ddl) => new(ddl);

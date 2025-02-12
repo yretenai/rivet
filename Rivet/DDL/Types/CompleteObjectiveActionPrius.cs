@@ -18,7 +18,7 @@ public class CompleteObjectiveActionPrius : DDLObjectType, IDDLObjectType<Comple
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xbfeb5b9eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
 	public static CompleteObjectiveActionPrius Create(DDLObject ddl) => new(ddl);

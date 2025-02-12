@@ -19,10 +19,10 @@ public class UDSBulkActivityLinks : DDLObjectType, IDDLObjectType<UDSBulkActivit
 		SubCategory = ddl.GetObjects<UDSBulkObjectLink>(0xffea1812u);
 	}
 
-	[DDLRegistration(0x0c0cbd42u)]
+	[DDLRegistration(0x88ca8652u)]
 	public List<UDSBulkObjectLink?> Tasks { get; set; } = [];
 
-	[DDLRegistration(0x0c0cbd42u)]
+	[DDLRegistration(0xffea1812u)]
 	public List<UDSBulkObjectLink?> SubCategory { get; set; } = [];
 
 	public static UDSBulkActivityLinks Create(DDLObject ddl) => new(ddl);

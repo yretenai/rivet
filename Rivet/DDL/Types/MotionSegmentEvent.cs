@@ -18,7 +18,7 @@ public class MotionSegmentEvent : EventBase, IDDLObjectType<MotionSegmentEvent> 
 		M_SegmentName = ddl.GetString(0x194af8ea) ?? M_SegmentName;
 	}
 
-	[DDLRegistration(0x6c1a8c51u)]
+	[DDLRegistration(0x194af8eau)]
 	public string? M_SegmentName { get; set; } = default;
 
 	public new static MotionSegmentEvent Create(DDLObject ddl) => new(ddl);

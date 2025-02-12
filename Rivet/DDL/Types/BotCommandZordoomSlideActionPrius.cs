@@ -19,10 +19,10 @@ public class BotCommandZordoomSlideActionPrius : DDLObjectType, IDDLObjectType<B
 		SlideAnim = ddl.GetString(0x10da6978) ?? SlideAnim;
 	}
 
-	[DDLRegistration(0xedb7e116u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0xedb7e116u, "Slide Anim", "Boss will play this anim while sliding to the destination. This anim's motion will be scaled so that the boss will end up at the destination with the provided facing. This anim will be rate scaled to match the boss's move speed.")]
+	[DDLRegistration(0x10da6978u, "Slide Anim", "Boss will play this anim while sliding to the destination. This anim's motion will be scaled so that the boss will end up at the destination with the provided facing. This anim will be rate scaled to match the boss's move speed.")]
 	public string? SlideAnim { get; set; } = default;
 
 	public static BotCommandZordoomSlideActionPrius Create(DDLObject ddl) => new(ddl);

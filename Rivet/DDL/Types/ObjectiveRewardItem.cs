@@ -21,16 +21,16 @@ public class ObjectiveRewardItem : ObjectiveRewardBase, IDDLObjectType<Objective
 		ShowOnMisisonComplete = ddl.GetValue<bool>(0x107e66a3u, ShowOnMisisonComplete);
 	}
 
-	[DDLRegistration(0xd2cef9feu)]
+	[DDLRegistration(0xa88f833fu)]
 	public RivetAssetId ItemConfig { get; set; } = default;
 
-	[DDLRegistration(0xd2cef9feu)]
+	[DDLRegistration(0x9c8a88a3u)]
 	public uint Count { get; set; } = 0x00000001;
 
-	[DDLRegistration(0xd2cef9feu, "Auto Equip", "True if this item is auto-equipped when awarded")]
+	[DDLRegistration(0xdf49d3afu, "Auto Equip", "True if this item is auto-equipped when awarded")]
 	public bool AutoEquip { get; set; } = false;
 
-	[DDLRegistration(0xd2cef9feu, description: "Don't show on End")]
+	[DDLRegistration(0x107e66a3u, description: "Don't show on End")]
 	public bool ShowOnMisisonComplete { get; set; } = true;
 
 	public new static ObjectiveRewardItem Create(DDLObject ddl) => new(ddl);

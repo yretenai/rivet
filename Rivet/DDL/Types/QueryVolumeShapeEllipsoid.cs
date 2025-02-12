@@ -20,13 +20,13 @@ public class QueryVolumeShapeEllipsoid : QueryVolumeShape, IDDLObjectType<QueryV
 		Height = ddl.GetValue<float>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0xfb2f0271u, description: "Length of the ellipsoid")]
+	[DDLRegistration(0x3f05d0d5u, description: "Length of the ellipsoid")]
 	public float Length { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfb2f0271u, description: "Width of the ellipsoid")]
+	[DDLRegistration(0x954989eeu, description: "Width of the ellipsoid")]
 	public float Width { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfb2f0271u, description: "Height of the ellipsoid")]
+	[DDLRegistration(0xcb35ab68u, description: "Height of the ellipsoid")]
 	public float Height { get; set; } = 1.00f;
 
 	public new static QueryVolumeShapeEllipsoid Create(DDLObject ddl) => new(ddl);

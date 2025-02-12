@@ -18,7 +18,7 @@ public class MaterialConstantBlendStartedEvent : EventBase, IDDLObjectType<Mater
 		TargetValue = ddl.GetValue<float>(0xc1574041u, TargetValue);
 	}
 
-	[DDLRegistration(0x96ad2bd2u)]
+	[DDLRegistration(0xc1574041u)]
 	public float TargetValue { get; set; } = 0.00f;
 
 	public new static MaterialConstantBlendStartedEvent Create(DDLObject ddl) => new(ddl);

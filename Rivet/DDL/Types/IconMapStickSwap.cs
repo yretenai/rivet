@@ -19,10 +19,10 @@ public class IconMapStickSwap : IconMapBase, IDDLObjectType<IconMapStickSwap> {
 		SwappedIconId = ddl.GetEnum<IconIdGame>(0xab0e13f1u, IconIdGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x44c5ae1du, description: "Icon when remap stick swap is disabled")]
+	[DDLRegistration(0x097e90aeu, description: "Icon when remap stick swap is disabled")]
 	public IconIdGame NormalIconId { get; set; } = IconIdGame.None;
 
-	[DDLRegistration(0x44c5ae1du, description: "Icon when remap stick swap is enabled")]
+	[DDLRegistration(0xab0e13f1u, description: "Icon when remap stick swap is enabled")]
 	public IconIdGame SwappedIconId { get; set; } = IconIdGame.None;
 
 	public new static IconMapStickSwap Create(DDLObject ddl) => new(ddl);

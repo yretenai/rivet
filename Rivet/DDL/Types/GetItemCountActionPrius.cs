@@ -19,10 +19,10 @@ public class GetItemCountActionPrius : DDLObjectType, IDDLObjectType<GetItemCoun
 		ItemConfig = ddl.GetValue<RivetAssetId>(0xa88f833fu, ItemConfig);
 	}
 
-	[DDLRegistration(0xba217d9du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0xba217d9du)]
+	[DDLRegistration(0xa88f833fu)]
 	public RivetAssetId ItemConfig { get; set; } = default;
 
 	public static GetItemCountActionPrius Create(DDLObject ddl) => new(ddl);

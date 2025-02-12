@@ -23,22 +23,22 @@ public class StatusEffectPoisonConfig : StatusEffectConfig, IDDLObjectType<Statu
 		VictimMaterialGraph = ddl.GetValue<RivetAssetId>(0xee2f28cbu, VictimMaterialGraph);
 	}
 
-	[DDLRegistration(0x4a8c9c12u)]
+	[DDLRegistration(0x287ed02au)]
 	public float DamagePerSecond { get; set; } = 5.00f;
 
-	[DDLRegistration(0x4a8c9c12u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 8.00f;
 
-	[DDLRegistration(0x4a8c9c12u, "Explosion Damage Type")]
+	[DDLRegistration(0x9eca2505u, "Explosion Damage Type")]
 	public DamageTypesGame ExplosionDamageType { get; set; } = DamageTypesGame.Explosion;
 
-	[DDLRegistration(0x4a8c9c12u, "Explosion Status Type")]
+	[DDLRegistration(0x7e18df3eu, "Explosion Status Type")]
 	public DamageTypesGame ExplosionStatusType { get; set; } = DamageTypesGame.Poison;
 
-	[DDLRegistration(0x4a8c9c12u, "Explosion Data")]
+	[DDLRegistration(0x7860aa8fu, "Explosion Data")]
 	public DamageModifierExplosionPrius? ExplosionData { get; set; } = default;
 
-	[DDLRegistration(0x4a8c9c12u)]
+	[DDLRegistration(0xee2f28cbu)]
 	public RivetAssetId VictimMaterialGraph { get; set; } = default;
 
 	public new static StatusEffectPoisonConfig Create(DDLObject ddl) => new(ddl);

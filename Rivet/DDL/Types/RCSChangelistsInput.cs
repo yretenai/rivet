@@ -19,10 +19,10 @@ public class RCSChangelistsInput : DDLObjectType, IDDLObjectType<RCSChangelistsI
 		Max = ddl.GetValue<uint>(0xb7230b40u, Max);
 	}
 
-	[DDLRegistration(0x4998733bu, description: "If specified, only changelists with the given status are listed.")]
+	[DDLRegistration(0x45782b7bu, description: "If specified, only changelists with the given status are listed.")]
 	public xd68b2713 Status { get; set; } = xd68b2713.Any;
 
-	[DDLRegistration(0x4998733bu, description: "The maximum number of changelists to list. If <= 0, results are unlimited.")]
+	[DDLRegistration(0xb7230b40u, description: "The maximum number of changelists to list. If <= 0, results are unlimited.")]
 	public uint Max { get; set; } = 0x00000064;
 
 	public static RCSChangelistsInput Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class SlottedInteractCompleteEvent : InteractOnCompleteEvent, IDDLObjectT
 		UserFourLocation = ddl.GetEnum<LocationIndex>(0xddf6a751u, LocationIndexValues.Lookup);
 	}
 
-	[DDLRegistration(0x024a104au)]
+	[DDLRegistration(0xf2e07e00u)]
 	public LocationIndex UserOneLocation { get; set; } = LocationIndex.IndexOne;
 
-	[DDLRegistration(0x024a104au)]
+	[DDLRegistration(0x31a21d33u)]
 	public LocationIndex UserTwoLocation { get; set; } = LocationIndex.IndexOne;
 
-	[DDLRegistration(0x024a104au)]
+	[DDLRegistration(0x3e17eee7u)]
 	public LocationIndex UserThreeLocation { get; set; } = LocationIndex.IndexOne;
 
-	[DDLRegistration(0x024a104au)]
+	[DDLRegistration(0xddf6a751u)]
 	public LocationIndex UserFourLocation { get; set; } = LocationIndex.IndexOne;
 
 	public new static SlottedInteractCompleteEvent Create(DDLObject ddl) => new(ddl);

@@ -28,37 +28,37 @@ public class DynamicInstanceItem : DDLObjectType, IDDLObjectType<DynamicInstance
 		InstanceOrientation = ddl.GetEnum<xc34e772f>(0x5ef5932eu, xc34e772fValues.Lookup);
 	}
 
-	[DDLRegistration(0xeddeb4aeu, description: "Instance Asset")]
+	[DDLRegistration(0x8938b71du, description: "Instance Asset")]
 	public RivetAssetId InstanceAsset { get; set; } = default;
 
-	[DDLRegistration(0xeddeb4aeu, description: "Instance on ends of curve")]
+	[DDLRegistration(0xb7150214u, description: "Instance on ends of curve")]
 	public bool InstanceOnEndpoints { get; set; } = false;
 
-	[DDLRegistration(0xeddeb4aeu, "Probability", ".5 means try to place this instance 50% of the time")]
+	[DDLRegistration(0xb6db3833u, "Probability", ".5 means try to place this instance 50% of the time")]
 	public float InstanceProbability { get; set; } = 1.00f;
 
-	[DDLRegistration(0xeddeb4aeu, "Scale Variance", "Scale randomly varies +/- this value")]
+	[DDLRegistration(0x45358871u, "Scale Variance", "Scale randomly varies +/- this value")]
 	public float InstanceScaleVariation { get; set; } = 0.00f;
 
-	[DDLRegistration(0xeddeb4aeu, description: "Instance asset at this metric, otherwise on verts")]
+	[DDLRegistration(0x17302fa9u, description: "Instance asset at this metric, otherwise on verts")]
 	public float InstanceDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xeddeb4aeu, description: "Offset from on curve placement")]
+	[DDLRegistration(0x8a58c3b6u, description: "Offset from on curve placement")]
 	public DDLVector3? InstanceOffset { get; set; } = default;
 
-	[DDLRegistration(0xeddeb4aeu, "Placement Variation", "Amplitude of placement variation")]
+	[DDLRegistration(0x6625cc4au, "Placement Variation", "Amplitude of placement variation")]
 	public DDLVector3? InstanceOffsetVariation { get; set; } = default;
 
-	[DDLRegistration(0xeddeb4aeu, description: "Rotation values (degrees) used in combination with InstanceOrientation selection")]
+	[DDLRegistration(0x22de2dd9u, description: "Rotation values (degrees) used in combination with InstanceOrientation selection")]
 	public DDLVector3? InstanceRotation { get; set; } = default;
 
-	[DDLRegistration(0xeddeb4aeu, description: "Amplitude of Rotation Increment (degrees)  or Random Variation combined with InstanceOrientation selection")]
+	[DDLRegistration(0x6d2cf927u, description: "Amplitude of Rotation Increment (degrees)  or Random Variation combined with InstanceOrientation selection")]
 	public DDLVector3? InstanceRotationVariation { get; set; } = default;
 
-	[DDLRegistration(0xeddeb4aeu, description: "Use values of InstanceRotationVariation as +/- range for random rotation")]
+	[DDLRegistration(0x7974d46bu, description: "Use values of InstanceRotationVariation as +/- range for random rotation")]
 	public bool InstanceRandomRotation { get; set; } = false;
 
-	[DDLRegistration(0xeddeb4aeu, description: "instance orientation to use in combination with Instance Rotation and Variation properties")]
+	[DDLRegistration(0x5ef5932eu, description: "instance orientation to use in combination with Instance Rotation and Variation properties")]
 	public xc34e772f InstanceOrientation { get; set; } = xc34e772f.Parallel;
 
 	public static DynamicInstanceItem Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class GroundTriggerInvalidUserEvent : EventBase, IDDLObjectType<GroundTri
 		UserHandle = ddl.GetValue<uint>(0x25e06c12u, UserHandle);
 	}
 
-	[DDLRegistration(0x9710d78fu)]
+	[DDLRegistration(0x25e06c12u)]
 	public uint UserHandle { get; set; } = 0x00000000;
 
 	public new static GroundTriggerInvalidUserEvent Create(DDLObject ddl) => new(ddl);

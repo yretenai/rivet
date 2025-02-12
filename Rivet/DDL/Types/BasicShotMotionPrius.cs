@@ -27,34 +27,34 @@ public class BasicShotMotionPrius : ShotMotionBasePrius, IDDLObjectType<BasicSho
 		EmitSimOffset = ddl.GetObject<DDLVector3>(0xc069a8a0u);
 	}
 
-	[DDLRegistration(0x4bccd259u)]
+	[DDLRegistration(0x9f20ad55u)]
 	public float FlightSpeed { get; set; } = 100.00f;
 
-	[DDLRegistration(0x4bccd259u, "Coll Radius Impact", "Collision radius used against the environment")]
+	[DDLRegistration(0xbb6c5d71u, "Coll Radius Impact", "Collision radius used against the environment")]
 	public float CollRadiusImpact { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4bccd259u, "Coll Radius Damage", "Collision radius used for damage")]
+	[DDLRegistration(0xc7f69ee3u, "Coll Radius Damage", "Collision radius used for damage")]
 	public float CollRadius { get; set; } = 0.10f;
 
-	[DDLRegistration(0x4bccd259u)]
+	[DDLRegistration(0x5bf7469fu)]
 	public float Gravity { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4bccd259u, description: "Should this shot perform collision tests along the camera line instead of starting from the emit position?")]
+	[DDLRegistration(0xef1417d5u, description: "Should this shot perform collision tests along the camera line instead of starting from the emit position?")]
 	public bool FireFromLookPosition { get; set; } = true;
 
-	[DDLRegistration(0x4bccd259u)]
+	[DDLRegistration(0x3a7d57a3u)]
 	public FireFromLookData? FireFromLookPositionData { get; set; } = default;
 
-	[DDLRegistration(0x4bccd259u, description: "When this shot collides with ground, set its velocity to zero.")]
+	[DDLRegistration(0xca824002u, description: "When this shot collides with ground, set its velocity to zero.")]
 	public bool StopOnGroundHit { get; set; } = false;
 
-	[DDLRegistration(0x4bccd259u, description: "Don't allow the shot to move past it's max range. This will look bad.")]
+	[DDLRegistration(0xd018d051u, description: "Don't allow the shot to move past it's max range. This will look bad.")]
 	public bool ClampMotionToRange { get; set; } = false;
 
-	[DDLRegistration(0x4bccd259u, description: "If true, final position of shot and vfx are adjusted for one frame of target velocity after a collision is processed. This is useful if the target is moving quickly.")]
+	[DDLRegistration(0x331eb05du, description: "If true, final position of shot and vfx are adjusted for one frame of target velocity after a collision is processed. This is useful if the target is moving quickly.")]
 	public bool ApplyTargetVelToHitPos { get; set; } = false;
 
-	[DDLRegistration(0x4bccd259u, description: "Non-zero value creates simulation position as offset from emit position")]
+	[DDLRegistration(0xc069a8a0u, description: "Non-zero value creates simulation position as offset from emit position")]
 	public DDLVector3? EmitSimOffset { get; set; } = default;
 
 	public new static BasicShotMotionPrius Create(DDLObject ddl) => new(ddl);

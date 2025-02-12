@@ -18,7 +18,7 @@ public class SquadFactoryPrius : SpawnerFactoryPrius, IDDLObjectType<SquadFactor
 		SquadMembers = ddl.GetValue<uint>(0xcc8b61bfu, SquadMembers);
 	}
 
-	[DDLRegistration(0x8e467aacu)]
+	[DDLRegistration(0xcc8b61bfu)]
 	public uint SquadMembers { get; set; } = 0x00000000;
 
 	public new static SquadFactoryPrius Create(DDLObject ddl) => new(ddl);

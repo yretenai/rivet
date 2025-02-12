@@ -18,7 +18,7 @@ public class IconMapAccessibilityControl : IconMapBase, IDDLObjectType<IconMapAc
 		AccessibilityControl = ddl.GetEnum<xbdfca5a1>(0xeec6b383u, xbdfca5a1Values.Lookup);
 	}
 
-	[DDLRegistration(0x0174925fu)]
+	[DDLRegistration(0xeec6b383u)]
 	public xbdfca5a1 AccessibilityControl { get; set; } = xbdfca5a1.SelectUp;
 
 	public new static IconMapAccessibilityControl Create(DDLObject ddl) => new(ddl);

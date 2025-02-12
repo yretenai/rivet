@@ -19,10 +19,10 @@ public class UVTiling : DDLObjectType, IDDLObjectType<UVTiling> {
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x26f5747bu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x59a8501f Type { get; set; } = x59a8501f.FullLength;
 
-	[DDLRegistration(0x26f5747bu)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 1.00f;
 
 	public static UVTiling Create(DDLObject ddl) => new(ddl);

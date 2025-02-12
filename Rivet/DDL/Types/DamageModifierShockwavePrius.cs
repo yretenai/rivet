@@ -23,22 +23,22 @@ public class DamageModifierShockwavePrius : DamageModifierOutgoingPrius, IDDLObj
 		OuterRadius = ddl.GetValue<float>(0xf6b6fbdeu, OuterRadius);
 	}
 
-	[DDLRegistration(0xe489cb45u)]
+	[DDLRegistration(0x239eef0du)]
 	public uint RequestId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe489cb45u)]
+	[DDLRegistration(0xdcf8a816u)]
 	public DDLVector3? CenterPosition { get; set; } = default;
 
-	[DDLRegistration(0xe489cb45u)]
+	[DDLRegistration(0x3afbc108u)]
 	public DDLVector3? UpVector { get; set; } = default;
 
-	[DDLRegistration(0xe489cb45u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 0.10f;
 
-	[DDLRegistration(0xe489cb45u)]
+	[DDLRegistration(0xf8a3836du)]
 	public float InnerRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe489cb45u)]
+	[DDLRegistration(0xf6b6fbdeu)]
 	public float OuterRadius { get; set; } = 5.00f;
 
 	public new static DamageModifierShockwavePrius Create(DDLObject ddl) => new(ddl);

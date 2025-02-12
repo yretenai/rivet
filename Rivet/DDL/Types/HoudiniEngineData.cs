@@ -19,10 +19,10 @@ public class HoudiniEngineData : DDLObjectType, IDDLObjectType<HoudiniEngineData
 		InstallerFileName = ddl.GetString(0x22bf09a1) ?? InstallerFileName;
 	}
 
-	[DDLRegistration(0x063ba64eu, description: "root folder for Houdini Engine installers")]
+	[DDLRegistration(0xe018c631u, description: "root folder for Houdini Engine installers")]
 	public string? InstallerLocation { get; set; } = default;
 
-	[DDLRegistration(0x063ba64eu, description: "format for the installer filename")]
+	[DDLRegistration(0x22bf09a1u, description: "format for the installer filename")]
 	public string? InstallerFileName { get; set; } = default;
 
 	public static HoudiniEngineData Create(DDLObject ddl) => new(ddl);

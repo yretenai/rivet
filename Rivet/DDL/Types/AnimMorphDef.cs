@@ -20,13 +20,13 @@ public class AnimMorphDef : DDLObjectType, IDDLObjectType<AnimMorphDef> {
 		IsFacialModelDebug = ddl.GetValue<bool>(0x88b9251au, IsFacialModelDebug);
 	}
 
-	[DDLRegistration(0xccd42cb5u, description: "The magnitude at which a morph delta is deemed relevant. Deltas smaller than this value are ignored. (in millimeters)")]
+	[DDLRegistration(0xdd785220u, description: "The magnitude at which a morph delta is deemed relevant. Deltas smaller than this value are ignored. (in millimeters)")]
 	public float MorphDeltaPrecision { get; set; } = 0.10f;
 
-	[DDLRegistration(0xccd42cb5u, description: "The magnitude at which a facial morph delta is deemed relevant. Deltas smaller than this value are ignored. (in millimeters)")]
+	[DDLRegistration(0x4581dfd6u, description: "The magnitude at which a facial morph delta is deemed relevant. Deltas smaller than this value are ignored. (in millimeters)")]
 	public float MorphDeltaPrecisionFacial { get; set; } = 0.10f;
 
-	[DDLRegistration(0xccd42cb5u, description: "Enable debug mode. This stores all morph targets at full precision and allows iterating on compression settings at runtime.")]
+	[DDLRegistration(0x88b9251au, description: "Enable debug mode. This stores all morph targets at full precision and allows iterating on compression settings at runtime.")]
 	public bool IsFacialModelDebug { get; set; } = false;
 
 	public static AnimMorphDef Create(DDLObject ddl) => new(ddl);

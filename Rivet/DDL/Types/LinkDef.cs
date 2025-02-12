@@ -21,16 +21,16 @@ public class LinkDef : DDLObjectType, IDDLObjectType<LinkDef> {
 		DestinationObject = ddl.GetValue<RivetAssetId>(0x3d63c633u, DestinationObject);
 	}
 
-	[DDLRegistration(0xfe8603f8u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xfe8603f8u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xfe8603f8u)]
+	[DDLRegistration(0x7fbfa1f9u)]
 	public RivetAssetId SourceObject { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xfe8603f8u)]
+	[DDLRegistration(0x3d63c633u)]
 	public RivetAssetId DestinationObject { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static LinkDef Create(DDLObject ddl) => new(ddl);

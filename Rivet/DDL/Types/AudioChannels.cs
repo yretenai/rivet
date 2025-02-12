@@ -23,22 +23,22 @@ public class AudioChannels : DDLObjectType, IDDLObjectType<AudioChannels> {
 		LowFrequency = ddl.GetValue<RivetAssetId>(0x003d0d67u, LowFrequency);
 	}
 
-	[DDLRegistration(0x7ee48ad4u, "Left", "The sound file for the left channel.")]
+	[DDLRegistration(0x4af727d8u, "Left", "The sound file for the left channel.")]
 	public RivetAssetId Left { get; set; } = default;
 
-	[DDLRegistration(0x7ee48ad4u, "Center", "The sound file for the center channel.")]
+	[DDLRegistration(0x7e88a543u, "Center", "The sound file for the center channel.")]
 	public RivetAssetId Center { get; set; } = default;
 
-	[DDLRegistration(0x7ee48ad4u, "Right", "The sound file for the right channel.")]
+	[DDLRegistration(0xad99b9d5u, "Right", "The sound file for the right channel.")]
 	public RivetAssetId Right { get; set; } = default;
 
-	[DDLRegistration(0x7ee48ad4u, "Left Surround", "The sound file for the left-surround channel.")]
+	[DDLRegistration(0xe5e9b9b8u, "Left Surround", "The sound file for the left-surround channel.")]
 	public RivetAssetId LeftSurround { get; set; } = default;
 
-	[DDLRegistration(0x7ee48ad4u, "Right Surround", "The sound file for the right-surround channel.")]
+	[DDLRegistration(0x6911d4edu, "Right Surround", "The sound file for the right-surround channel.")]
 	public RivetAssetId RightSurround { get; set; } = default;
 
-	[DDLRegistration(0x7ee48ad4u, "Low Frequency", "The sound file for the low-frequency channel.")]
+	[DDLRegistration(0x003d0d67u, "Low Frequency", "The sound file for the low-frequency channel.")]
 	public RivetAssetId LowFrequency { get; set; } = default;
 
 	public static AudioChannels Create(DDLObject ddl) => new(ddl);

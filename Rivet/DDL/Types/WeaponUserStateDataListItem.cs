@@ -18,7 +18,7 @@ public class WeaponUserStateDataListItem : DDLObjectType, IDDLObjectType<WeaponU
 		UserState = ddl.GetObject<WeaponUserStateData>(0xc70b5e21u);
 	}
 
-	[DDLRegistration(0x28386056u)]
+	[DDLRegistration(0xc70b5e21u)]
 	public WeaponUserStateData? UserState { get; set; } = default;
 
 	public static WeaponUserStateDataListItem Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class JumpLandCameraShakeData : DDLObjectType, IDDLObjectType<JumpLandCam
 		MaxShakeIntensityScale = ddl.GetValue<float>(0x7d222bd3u, MaxShakeIntensityScale);
 	}
 
-	[DDLRegistration(0xaa457e22u)]
+	[DDLRegistration(0xaf3535afu)]
 	public CameraShakingWithFallOffData? ShakeWithFallOffData { get; set; } = default;
 
-	[DDLRegistration(0xaa457e22u, description: "Speeds below this cause shake to be scaled by MinShakeIntensityScale")]
+	[DDLRegistration(0x367cebdfu, description: "Speeds below this cause shake to be scaled by MinShakeIntensityScale")]
 	public float MinShakeLandSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0xaa457e22u, description: "Speeds above this cause shake to be scaled by MaxShakeIntensityScale")]
+	[DDLRegistration(0x23f73f2du, description: "Speeds above this cause shake to be scaled by MaxShakeIntensityScale")]
 	public float MaxShakeLandSpeed { get; set; } = 50.00f;
 
-	[DDLRegistration(0xaa457e22u, description: "Speeds below MinShakeLandSpeed cause shake to be scaled by this amount.")]
+	[DDLRegistration(0x3c351455u, description: "Speeds below MinShakeLandSpeed cause shake to be scaled by this amount.")]
 	public float MinShakeIntensityScale { get; set; } = 0.50f;
 
-	[DDLRegistration(0xaa457e22u, description: "Speeds above MaxShakeLandSpeed cause shake to be scaled by this amount.")]
+	[DDLRegistration(0x7d222bd3u, description: "Speeds above MaxShakeLandSpeed cause shake to be scaled by this amount.")]
 	public float MaxShakeIntensityScale { get; set; } = 1.00f;
 
 	public static JumpLandCameraShakeData Create(DDLObject ddl) => new(ddl);

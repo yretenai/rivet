@@ -21,16 +21,16 @@ public class SpawnerSpawnEvent : EventBase, IDDLObjectType<SpawnerSpawnEvent> {
 		SpawnIndex = ddl.GetValue<uint>(0x558154b3u, SpawnIndex);
 	}
 
-	[DDLRegistration(0x67f05f55u)]
+	[DDLRegistration(0xc20bfae3u)]
 	public uint SpawnedHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x67f05f55u)]
+	[DDLRegistration(0xc0dd8c72u)]
 	public uint SpawnLocation { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x67f05f55u)]
+	[DDLRegistration(0xd3cc74d8u)]
 	public uint SpawnFactory { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x67f05f55u)]
+	[DDLRegistration(0x558154b3u)]
 	public uint SpawnIndex { get; set; } = 0x00000000;
 
 	public new static SpawnerSpawnEvent Create(DDLObject ddl) => new(ddl);

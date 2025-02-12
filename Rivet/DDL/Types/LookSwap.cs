@@ -20,13 +20,13 @@ public class LookSwap : DDLObjectType, IDDLObjectType<LookSwap> {
 		LooksToEnable = ddl.GetStrings(0x34dbfb35u);
 	}
 
-	[DDLRegistration(0xd63ce571u, "Death Only")]
+	[DDLRegistration(0x88ef82adu, "Death Only")]
 	public bool DeathOnly { get; set; } = false;
 
-	[DDLRegistration(0xd63ce571u, description: "If the look named 'From' is enabled we will switch to the look named 'To'")]
+	[DDLRegistration(0x2f48a06cu, description: "If the look named 'From' is enabled we will switch to the look named 'To'")]
 	public string? LookToDisable { get; set; } = default;
 
-	[DDLRegistration(0xd63ce571u, description: "If the look named 'From' is enabled we will switch to the look named 'To'")]
+	[DDLRegistration(0x34dbfb35u, description: "If the look named 'From' is enabled we will switch to the look named 'To'")]
 	public List<string?> LooksToEnable { get; set; } = [];
 
 	public static LookSwap Create(DDLObject ddl) => new(ddl);

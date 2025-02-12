@@ -19,10 +19,10 @@ public class AutoDestroyOffscreenPrius : DDLObjectType, IDDLObjectType<AutoDestr
 		ResetTimerOnScreen = ddl.GetValue<bool>(0xb471328eu, ResetTimerOnScreen);
 	}
 
-	[DDLRegistration(0xbca51a55u, description: "How long does the actor have to be offscreen before deleting.")]
+	[DDLRegistration(0xc2722c31u, description: "How long does the actor have to be offscreen before deleting.")]
 	public float TimeOffscreen { get; set; } = 2.00f;
 
-	[DDLRegistration(0xbca51a55u, description: "Does the time offscreen need to be continuous?")]
+	[DDLRegistration(0xb471328eu, description: "Does the time offscreen need to be continuous?")]
 	public bool ResetTimerOnScreen { get; set; } = true;
 
 	public static AutoDestroyOffscreenPrius Create(DDLObject ddl) => new(ddl);

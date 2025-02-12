@@ -28,37 +28,37 @@ public class GroundWaveShotPrius : BasicBulletPrius, IDDLObjectType<GroundWaveSh
 		DistPerFX = ddl.GetValue<float>(0x47e1207au, DistPerFX);
 	}
 
-	[DDLRegistration(0xecb3861eu)]
+	[DDLRegistration(0xf825a066u)]
 	public float WaveDamageHeight { get; set; } = 0.50f;
 
-	[DDLRegistration(0xecb3861eu, description: "If set to > 0.0f, we will take this amount of time (in seconds) to accelerate to our max speed (WaveForwardSpeed).")]
+	[DDLRegistration(0x05a57dc7u, description: "If set to > 0.0f, we will take this amount of time (in seconds) to accelerate to our max speed (WaveForwardSpeed).")]
 	public float TimeToWaveMaxSpeed { get; set; } = -1.00f;
 
-	[DDLRegistration(0xecb3861eu, description: "If using acceleration, the initial speed of the wave when it is created.")]
+	[DDLRegistration(0xa19aa5f8u, description: "If using acceleration, the initial speed of the wave when it is created.")]
 	public float WaveForwardInitSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xecb3861eu)]
+	[DDLRegistration(0xf382759fu)]
 	public float WaveForwardSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0xecb3861eu)]
+	[DDLRegistration(0xb6409007u)]
 	public float WaveStartWidth { get; set; } = 0.00f;
 
-	[DDLRegistration(0xecb3861eu)]
+	[DDLRegistration(0x67a16cafu)]
 	public float WaveMaxWidth { get; set; } = 10.00f;
 
-	[DDLRegistration(0xecb3861eu)]
+	[DDLRegistration(0x2e920017u)]
 	public float WaveGrowthSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0xecb3861eu)]
+	[DDLRegistration(0xeb3a6c89u)]
 	public float WaveMaxAngle { get; set; } = 45.00f;
 
-	[DDLRegistration(0xecb3861eu)]
+	[DDLRegistration(0xc60962c8u)]
 	public float WaveTravelHeight { get; set; } = 0.10f;
 
-	[DDLRegistration(0xecb3861eu)]
+	[DDLRegistration(0xcc0435c6u)]
 	public float WaveSphereOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xecb3861eu)]
+	[DDLRegistration(0x47e1207au)]
 	public float DistPerFX { get; set; } = 0.25f;
 
 	public new static GroundWaveShotPrius Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class AnimDriverMirrorNodeDef : DDLObjectType, IDDLObjectType<AnimDriverM
 		Connection = ddl.GetObject<AnimDriverConnectionDef>(0xf2c12d5fu);
 	}
 
-	[DDLRegistration(0xa6e49e13u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xa6e49e13u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0xa6e49e13u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa6e49e13u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa6e49e13u)]
+	[DDLRegistration(0xb59f464au)]
 	public xf92271f3 Axis { get; set; } = xf92271f3.MirrorNodeAxisYZ;
 
-	[DDLRegistration(0xa6e49e13u)]
+	[DDLRegistration(0xf2c12d5fu)]
 	public AnimDriverConnectionDef? Connection { get; set; } = default;
 
 	public static AnimDriverMirrorNodeDef Create(DDLObject ddl) => new(ddl);

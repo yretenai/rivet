@@ -18,7 +18,7 @@ public class ActivityClueModuleSetInvincible : DDLObjectType, IDDLObjectType<Act
 		Prius = ddl.GetObject<DamageModifierInvulnerablePrius>(0x3bd7ee9eu);
 	}
 
-	[DDLRegistration(0x4045f4f2u, description: "A damage modifier that will let us be invincible")]
+	[DDLRegistration(0x3bd7ee9eu, description: "A damage modifier that will let us be invincible")]
 	public DamageModifierInvulnerablePrius? Prius { get; set; } = default;
 
 	public static ActivityClueModuleSetInvincible Create(DDLObject ddl) => new(ddl);

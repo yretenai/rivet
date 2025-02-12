@@ -19,10 +19,10 @@ public class SystemSaveDataContainer : DDLObjectType, IDDLObjectType<SystemSaveD
 		SaveData = ddl.GetObject<SaveDataBase>(0x3011269bu);
 	}
 
-	[DDLRegistration(0x560809a6u)]
+	[DDLRegistration(0xc3c1abfeu)]
 	public string? SaveName { get; set; } = default;
 
-	[DDLRegistration(0x560809a6u)]
+	[DDLRegistration(0x3011269bu)]
 	public SaveDataBase? SaveData { get; set; } = default;
 
 	public static SystemSaveDataContainer Create(DDLObject ddl) => new(ddl);

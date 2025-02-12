@@ -19,10 +19,10 @@ public class AssetMigrationPingResult : DDLObjectType, IDDLObjectType<AssetMigra
 		LocalFormattedTime = ddl.GetString(0xa0d38cd0) ?? LocalFormattedTime;
 	}
 
-	[DDLRegistration(0x17ee3472u)]
+	[DDLRegistration(0x45782b7bu)]
 	public string? Status { get; set; } = default;
 
-	[DDLRegistration(0x17ee3472u)]
+	[DDLRegistration(0xa0d38cd0u)]
 	public string? LocalFormattedTime { get; set; } = default;
 
 	public static AssetMigrationPingResult Create(DDLObject ddl) => new(ddl);

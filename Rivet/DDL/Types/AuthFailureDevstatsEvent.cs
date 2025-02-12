@@ -18,7 +18,7 @@ public class AuthFailureDevstatsEvent : EventBase, IDDLObjectType<AuthFailureDev
 		ID = ddl.GetString(0xb13f6a45) ?? ID;
 	}
 
-	[DDLRegistration(0x4f187eb0u)]
+	[DDLRegistration(0xb13f6a45u)]
 	public string? ID { get; set; } = default;
 
 	public new static AuthFailureDevstatsEvent Create(DDLObject ddl) => new(ddl);

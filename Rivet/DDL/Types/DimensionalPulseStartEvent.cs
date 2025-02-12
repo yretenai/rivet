@@ -18,7 +18,7 @@ public class DimensionalPulseStartEvent : EventBase, IDDLObjectType<DimensionalP
 		DefaultEffectChance = ddl.GetValue<float>(0x685c78e6u, DefaultEffectChance);
 	}
 
-	[DDLRegistration(0x0f6db693u)]
+	[DDLRegistration(0x685c78e6u)]
 	public float DefaultEffectChance { get; set; } = 0.00f;
 
 	public new static DimensionalPulseStartEvent Create(DDLObject ddl) => new(ddl);

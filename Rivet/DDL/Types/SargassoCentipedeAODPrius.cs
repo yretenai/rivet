@@ -28,37 +28,37 @@ public class SargassoCentipedeAODPrius : DDLObjectType, IDDLObjectType<SargassoC
 		AODCVCActor = ddl.GetValue<RivetAssetId>(0xb6834848u, AODCVCActor);
 	}
 
-	[DDLRegistration(0xf28dabafu)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 4.00f;
 
-	[DDLRegistration(0xf28dabafu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 3.00f;
 
-	[DDLRegistration(0xf28dabafu)]
+	[DDLRegistration(0x5e5ae0f8u)]
 	public float OnSpawnDamage { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf28dabafu)]
+	[DDLRegistration(0x375bf074u)]
 	public KnockbackLevels OnSpawnKnockback { get; set; } = KnockbackLevels.Three;
 
-	[DDLRegistration(0xf28dabafu)]
+	[DDLRegistration(0x2fb01a0bu)]
 	public float Damage { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf28dabafu)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.One;
 
-	[DDLRegistration(0xf28dabafu)]
+	[DDLRegistration(0x2ee45555u)]
 	public float IgnoreDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf28dabafu)]
+	[DDLRegistration(0x67d422c6u)]
 	public float LifeTime { get; set; } = 10.00f;
 
-	[DDLRegistration(0xf28dabafu, "Damage Type")]
+	[DDLRegistration(0x840c154du, "Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Poison;
 
-	[DDLRegistration(0xf28dabafu)]
+	[DDLRegistration(0x4624269bu)]
 	public string? DamageString { get; set; } = "Boss_AOD";
 
-	[DDLRegistration(0xf28dabafu, "AOD CVC Actor")]
+	[DDLRegistration(0xb6834848u, "AOD CVC Actor")]
 	public RivetAssetId AODCVCActor { get; set; } = default;
 
 	public static SargassoCentipedeAODPrius Create(DDLObject ddl) => new(ddl);

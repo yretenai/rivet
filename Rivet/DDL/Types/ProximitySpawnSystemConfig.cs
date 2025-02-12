@@ -20,13 +20,13 @@ public class ProximitySpawnSystemConfig : ConfigBase, IDDLObjectType<ProximitySp
 		NavClueGatherRadius = ddl.GetValue<float>(0xa7a613f9u, NavClueGatherRadius);
 	}
 
-	[DDLRegistration(0x76ac4a6bu, description: "Default config used for spawning if none is specified when enabled")]
+	[DDLRegistration(0xa3563558u, description: "Default config used for spawning if none is specified when enabled")]
 	public RivetAssetId DefaultSpawnConfig { get; set; } = default;
 
-	[DDLRegistration(0x76ac4a6bu, description: "Maximum range to search for anim clues")]
+	[DDLRegistration(0x3d750059u, description: "Maximum range to search for anim clues")]
 	public float AnimClueGatherRadius { get; set; } = 50.00f;
 
-	[DDLRegistration(0x76ac4a6bu, description: "Maximum range to search for navigation clues")]
+	[DDLRegistration(0xa7a613f9u, description: "Maximum range to search for navigation clues")]
 	public float NavClueGatherRadius { get; set; } = 70.00f;
 
 	public new static ProximitySpawnSystemConfig Create(DDLObject ddl) => new(ddl);

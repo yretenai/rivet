@@ -20,13 +20,13 @@ public class AssetTypeSettings : DDLObjectType, IDDLObjectType<AssetTypeSettings
 		AutoReloadEnable = ddl.GetValue<bool>(0x4ab50b87u, AutoReloadEnable);
 	}
 
-	[DDLRegistration(0xc48959d2u)]
+	[DDLRegistration(0x9c4783f5u)]
 	public int MaxCount { get; set; } = 8;
 
-	[DDLRegistration(0xc48959d2u)]
+	[DDLRegistration(0x02cef5dfu)]
 	public bool ForceDefault { get; set; } = false;
 
-	[DDLRegistration(0xc48959d2u)]
+	[DDLRegistration(0x4ab50b87u)]
 	public bool AutoReloadEnable { get; set; } = false;
 
 	public static AssetTypeSettings Create(DDLObject ddl) => new(ddl);

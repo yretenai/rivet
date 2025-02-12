@@ -20,13 +20,13 @@ public class SkinItemTextureOverride : DDLObjectType, IDDLObjectType<SkinItemTex
 		ConstantName = ddl.GetString(0xc6991700) ?? ConstantName;
 	}
 
-	[DDLRegistration(0x4a72d761u, "Original Material", "Original Material file (optional)")]
+	[DDLRegistration(0x3608a389u, "Original Material", "Original Material file (optional)")]
 	public AssetReferenceDef? OriginalMaterial { get; set; } = default;
 
-	[DDLRegistration(0x4a72d761u, "Override Texture", "Override Texture file")]
+	[DDLRegistration(0xc9018aaeu, "Override Texture", "Override Texture file")]
 	public AssetReferenceDef? OverrideTexture { get; set; } = default;
 
-	[DDLRegistration(0x4a72d761u, "Constant Name", "Constant Name string")]
+	[DDLRegistration(0xc6991700u, "Constant Name", "Constant Name string")]
 	public string? ConstantName { get; set; } = default;
 
 	public static SkinItemTextureOverride Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class GrenadeShotMotionGamePrius : GrenadeShotMotionPrius, IDDLObjectType
 		ApplyExternalMotionToVelocity = ddl.GetValue<bool>(0x4d57d0acu, ApplyExternalMotionToVelocity);
 	}
 
-	[DDLRegistration(0x16bcd584u, description: "Always apply external motion to the velocity even if the moving surface is in follow mode.")]
+	[DDLRegistration(0x4d57d0acu, description: "Always apply external motion to the velocity even if the moving surface is in follow mode.")]
 	public bool ApplyExternalMotionToVelocity { get; set; } = false;
 
 	public new static GrenadeShotMotionGamePrius Create(DDLObject ddl) => new(ddl);

@@ -30,43 +30,43 @@ public class SoundSourceComponentPrius : DDLObjectType, IDDLObjectType<SoundSour
 		RandomSelectList = ddl.GetObjects<WwiseSwitchSelectItem>(0x1bab6614u);
 	}
 
-	[DDLRegistration(0x6afd5c14u, description: "When checked, source panning will reference camera position and attenuation will reference boom position.")]
+	[DDLRegistration(0x683d2aa1u, description: "When checked, source panning will reference camera position and attenuation will reference boom position.")]
 	public bool Use3dBoom { get; set; } = true;
 
-	[DDLRegistration(0x6afd5c14u, description: "When checked, will be used in Propagation2 system (able to be affected by propagation, reverb, occlusion)")]
+	[DDLRegistration(0x85ed0e0bu, description: "When checked, will be used in Propagation2 system (able to be affected by propagation, reverb, occlusion)")]
 	public bool UsePropagation2 { get; set; } = false;
 
-	[DDLRegistration(0x6afd5c14u, description: "Uses Propagation2 portaling system. Only valid when UsePropagation2 is checked.")]
+	[DDLRegistration(0xd1cc1229u, description: "Uses Propagation2 portaling system. Only valid when UsePropagation2 is checked.")]
 	public bool Propagation2UsePortaling { get; set; } = true;
 
-	[DDLRegistration(0x6afd5c14u, description: "Uses Propagation2 reverbs. Only valid when UsePropagation2 is checked.")]
+	[DDLRegistration(0xfc9b6180u, description: "Uses Propagation2 reverbs. Only valid when UsePropagation2 is checked.")]
 	public bool Propagation2UseReverb { get; set; } = false;
 
-	[DDLRegistration(0x6afd5c14u, description: "This object should evaluate direct path propagation")]
+	[DDLRegistration(0x43a8e3f8u, description: "This object should evaluate direct path propagation")]
 	public bool DirectPathPropagation { get; set; } = true;
 
-	[DDLRegistration(0x6afd5c14u, description: "When checked, the source will track its reverb environments and blend them with reverb sends from listener and player environments. When unchecked, only listener and player environment reverbs will affect this source.")]
+	[DDLRegistration(0xcc7b2cb3u, description: "When checked, the source will track its reverb environments and blend them with reverb sends from listener and player environments. When unchecked, only listener and player environment reverbs will affect this source.")]
 	public bool SourceDependentReverb { get; set; } = false;
 
-	[DDLRegistration(0x6afd5c14u, description: "Scale factor to apply in the local horizontal direction of the 2D sample area")]
+	[DDLRegistration(0x090731b2u, description: "Scale factor to apply in the local horizontal direction of the 2D sample area")]
 	public float DirectPathSampleAreaScaleX { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6afd5c14u, description: "Scale factor to apply in the local horizontal direction of the 2D sample area")]
+	[DDLRegistration(0x7e000124u, description: "Scale factor to apply in the local horizontal direction of the 2D sample area")]
 	public float DirectPathSampleAreaScaleY { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6afd5c14u, description: "Exponential stickiness factor to apply to the direct path estimate when it's increasing. At 0 the next value is immediately taken, at 1 the value never updates, and at .5 half of the new value is blended with the previous one.")]
+	[DDLRegistration(0x37c10dd1u, description: "Exponential stickiness factor to apply to the direct path estimate when it's increasing. At 0 the next value is immediately taken, at 1 the value never updates, and at .5 half of the new value is blended with the previous one.")]
 	public float DirectPathStickinessIncreasing { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6afd5c14u, description: "Exponential stickiness factor to apply to the direct path estimate when it's decreasing. At 0 the next value is immediately taken, at 1 the value never updates, and at .5 half of the new value is blended with the previous one.")]
+	[DDLRegistration(0x406a18bcu, description: "Exponential stickiness factor to apply to the direct path estimate when it's decreasing. At 0 the next value is immediately taken, at 1 the value never updates, and at .5 half of the new value is blended with the previous one.")]
 	public float DirectPathStickinessDecreasing { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6afd5c14u, description: "The total maximum number of switch groups that can allowed on this component between those defined here and added later by gameplay.")]
+	[DDLRegistration(0xe2b0bd65u, description: "The total maximum number of switch groups that can allowed on this component between those defined here and added later by gameplay.")]
 	public uint SwitchGroupsCountMax { get; set; } = 0x00000008;
 
-	[DDLRegistration(0x6afd5c14u, description: "List of switch group(s) to apply to this actor")]
+	[DDLRegistration(0xa76c9412u, description: "List of switch group(s) to apply to this actor")]
 	public List<WwiseSwitch?> SwitchGroupList { get; set; } = [];
 
-	[DDLRegistration(0x6afd5c14u, description: "List of set of switch groups from which actor picks one")]
+	[DDLRegistration(0x1bab6614u, description: "List of set of switch groups from which actor picks one")]
 	public List<WwiseSwitchSelectItem?> RandomSelectList { get; set; } = [];
 
 	public static SoundSourceComponentPrius Create(DDLObject ddl) => new(ddl);

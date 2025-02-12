@@ -21,16 +21,16 @@ public class UIArenaCup : DDLObjectType, IDDLObjectType<UIArenaCup> {
 		Challenges = ddl.GetObjects<UIArenaChallenge>(0xdc83f9d9u);
 	}
 
-	[DDLRegistration(0x491dc60bu)]
+	[DDLRegistration(0x3265b4aau)]
 	public string? Title { get; set; } = default;
 
-	[DDLRegistration(0x491dc60bu)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x491dc60bu, description: "Mission (available) at which this cup becomes unlocked.")]
+	[DDLRegistration(0x489fe4edu, description: "Mission (available) at which this cup becomes unlocked.")]
 	public string? MissionUnlock { get; set; } = default;
 
-	[DDLRegistration(0x491dc60bu, "Challenges")]
+	[DDLRegistration(0xdc83f9d9u, "Challenges")]
 	public List<UIArenaChallenge?> Challenges { get; set; } = [];
 
 	public static UIArenaCup Create(DDLObject ddl) => new(ddl);

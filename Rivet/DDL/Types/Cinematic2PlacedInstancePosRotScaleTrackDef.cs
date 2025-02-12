@@ -25,28 +25,28 @@ public class Cinematic2PlacedInstancePosRotScaleTrackDef : DDLObjectType, IDDLOb
 		Scale = ddl.GetObject<Cinematic2ScaleCurveTrackDef>(0xf515e945u);
 	}
 
-	[DDLRegistration(0xcb65dfd9u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xcb65dfd9u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xcb65dfd9u, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0xcb65dfd9u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0xcb65dfd9u, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0xcb65dfd9u)]
+	[DDLRegistration(0xbc2d5985u)]
 	public Cinematic2PositionCurveTrackDef? Position { get; set; } = default;
 
-	[DDLRegistration(0xcb65dfd9u)]
+	[DDLRegistration(0xd37d2581u)]
 	public Cinematic2RotationCurveTrackDef? Rotation { get; set; } = default;
 
-	[DDLRegistration(0xcb65dfd9u)]
+	[DDLRegistration(0xf515e945u)]
 	public Cinematic2ScaleCurveTrackDef? Scale { get; set; } = default;
 
 	public static Cinematic2PlacedInstancePosRotScaleTrackDef Create(DDLObject ddl) => new(ddl);

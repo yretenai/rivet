@@ -45,88 +45,88 @@ public class BotMovementSteerable : BotMovementBase, IDDLObjectType<BotMovementS
 		ForceLegLook = ddl.GetValue<bool>(0xe98d9d7bu, ForceLegLook);
 	}
 
-	[DDLRegistration(0xaaca6ca9u, description: "Boost Launch Anim during Mounting")]
+	[DDLRegistration(0xf8abbea1u, description: "Boost Launch Anim during Mounting")]
 	public string? BoostLaunchAnimName { get; set; } = default;
 
-	[DDLRegistration(0xaaca6ca9u, description: "Amount of additional speed added to the base speed when the stick input is fully forward.")]
+	[DDLRegistration(0x52db9d79u, description: "Amount of additional speed added to the base speed when the stick input is fully forward.")]
 	public float InputBoost { get; set; } = 2.00f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "Amount of reducing speed subtracted from the base speed when the stick input is fully backwards.")]
+	[DDLRegistration(0x129d879au, description: "Amount of reducing speed subtracted from the base speed when the stick input is fully backwards.")]
 	public float InputBrake { get; set; } = 2.00f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "Gravity that the mount experiences while boost launching/gliding.")]
+	[DDLRegistration(0x79d1c631u, description: "Gravity that the mount experiences while boost launching/gliding.")]
 	public float BoostLaunchGravity { get; set; } = -7.50f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "The rate at which the actor turns while boosting (in degrees per second).")]
+	[DDLRegistration(0x2637de8au, description: "The rate at which the actor turns while boosting (in degrees per second).")]
 	public float BoostTurnRate { get; set; } = 60.00f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "The rate at which the actor turns while boosting AND launching (in degrees per second).")]
+	[DDLRegistration(0x0657806du, description: "The rate at which the actor turns while boosting AND launching (in degrees per second).")]
 	public float BoostLaunchTurnRate { get; set; } = 60.00f;
 
-	[DDLRegistration(0xaaca6ca9u)]
+	[DDLRegistration(0x3e5e2233u)]
 	public float CameraAngleTolerance { get; set; } = 0.10f;
 
-	[DDLRegistration(0xaaca6ca9u)]
+	[DDLRegistration(0xc62f446du)]
 	public float CameraAccel { get; set; } = 400.00f;
 
-	[DDLRegistration(0xaaca6ca9u)]
+	[DDLRegistration(0x2ba494c1u)]
 	public float CameraDecel { get; set; } = 400.00f;
 
-	[DDLRegistration(0xaaca6ca9u)]
+	[DDLRegistration(0xf94715a5u)]
 	public float CameraMaxYawSpeed { get; set; } = 400.00f;
 
-	[DDLRegistration(0xaaca6ca9u)]
+	[DDLRegistration(0x2a38448au)]
 	public float CameraMaxPitchSpeed { get; set; } = 400.00f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "Lean Anim Var Acceleration")]
+	[DDLRegistration(0xb612ff12u, description: "Lean Anim Var Acceleration")]
 	public float LeanAnimAccel { get; set; } = 10.00f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "Lean Anim Var Deceleration")]
+	[DDLRegistration(0x5b992fbeu, description: "Lean Anim Var Deceleration")]
 	public float LeanAnimDecel { get; set; } = 10.00f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "Lean Anim Var Max Speed")]
+	[DDLRegistration(0xfef99bc5u, description: "Lean Anim Var Max Speed")]
 	public float LeanAnimMaxSpeed { get; set; } = 3.00f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "If true, when this state is dismounted, the bot will continue straight after dismounting.")]
+	[DDLRegistration(0xe5db1c50u, description: "If true, when this state is dismounted, the bot will continue straight after dismounting.")]
 	public bool AutoPilotAfterDismount { get; set; } = false;
 
-	[DDLRegistration(0xaaca6ca9u, description: "The speed the bot takes when it is autopiloting.")]
+	[DDLRegistration(0xfa92a0a9u, description: "The speed the bot takes when it is autopiloting.")]
 	public float AutoPilotSpeed { get; set; } = 8.00f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "When this bot is controlled the bot will explode when impacting geo and other actors.")]
+	[DDLRegistration(0xe1fb744fu, description: "When this bot is controlled the bot will explode when impacting geo and other actors.")]
 	public bool KamikazeOnImpact { get; set; } = false;
 
-	[DDLRegistration(0xaaca6ca9u, "Damage Hero From Kamikaze", "In what situation do we want a kamikazing steerable to hurt the player (assuming hero is INSIDE of kamikaze damage radius).")]
+	[DDLRegistration(0xbcbb5b42u, "Damage Hero From Kamikaze", "In what situation do we want a kamikazing steerable to hurt the player (assuming hero is INSIDE of kamikaze damage radius).")]
 	public x99bafe38 DamageHeroKamikaze { get; set; } = x99bafe38.MountedOnly;
 
-	[DDLRegistration(0xaaca6ca9u, "Max Kamikaze Impact Angle", "The maximum angle between the mount's forward and the impact point (in degrees.)")]
+	[DDLRegistration(0x0196cc25u, "Max Kamikaze Impact Angle", "The maximum angle between the mount's forward and the impact point (in degrees.)")]
 	public float MaxImpactAngle { get; set; } = 50.00f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "Data for setting up the passive damage that a mounted bot can perform while a hero controls them.")]
+	[DDLRegistration(0x071543d2u, description: "Data for setting up the passive damage that a mounted bot can perform while a hero controls them.")]
 	public BotMountDamageData? BotKamikazeDamageData { get; set; } = default;
 
-	[DDLRegistration(0xaaca6ca9u, description: "Data for setting up the passive damage that a mounted bot can perform while a hero controls them.")]
+	[DDLRegistration(0xe38d4b35u, description: "Data for setting up the passive damage that a mounted bot can perform while a hero controls them.")]
 	public BotMountDamageData? BotImpactDamageData { get; set; } = default;
 
-	[DDLRegistration(0xaaca6ca9u)]
+	[DDLRegistration(0xf0e65c6eu)]
 	public string? ImpactIntroAnim { get; set; } = default;
 
-	[DDLRegistration(0xaaca6ca9u)]
+	[DDLRegistration(0xa22d0899u)]
 	public string? ImpactOutroAnim { get; set; } = default;
 
-	[DDLRegistration(0xaaca6ca9u, description: "The radius of the sphere used by the breakable buster component.")]
+	[DDLRegistration(0x84a34b77u, description: "The radius of the sphere used by the breakable buster component.")]
 	public float BreakableBusterRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "The damage of the breakable buster per speed.")]
+	[DDLRegistration(0xae177141u, description: "The damage of the breakable buster per speed.")]
 	public float BreakableBusterDamage { get; set; } = 10.00f;
 
-	[DDLRegistration(0xaaca6ca9u, description: "Locator used to position the breakable buster.")]
+	[DDLRegistration(0xed2412b2u, description: "Locator used to position the breakable buster.")]
 	public string? BreakableBusterLocator { get; set; } = "igLoc_Attach";
 
-	[DDLRegistration(0xaaca6ca9u, description: "Fed into the BreakableBuster's Local Offset.")]
+	[DDLRegistration(0x466f3ca0u, description: "Fed into the BreakableBuster's Local Offset.")]
 	public DDLVector3? BreakableBusterLocalOffset { get; set; } = default;
 
-	[DDLRegistration(0xaaca6ca9u, description: "Debug option for forcing the leg look to always be on.")]
+	[DDLRegistration(0xe98d9d7bu, description: "Debug option for forcing the leg look to always be on.")]
 	public bool ForceLegLook { get; set; } = false;
 
 	public new static BotMovementSteerable Create(DDLObject ddl) => new(ddl);

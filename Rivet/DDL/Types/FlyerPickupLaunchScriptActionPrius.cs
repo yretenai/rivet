@@ -18,7 +18,7 @@ public class FlyerPickupLaunchScriptActionPrius : DDLObjectType, IDDLObjectType<
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x57b634b4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
 	public static FlyerPickupLaunchScriptActionPrius Create(DDLObject ddl) => new(ddl);

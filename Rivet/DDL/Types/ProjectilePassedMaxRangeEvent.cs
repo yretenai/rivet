@@ -19,10 +19,10 @@ public class ProjectilePassedMaxRangeEvent : EventBase, IDDLObjectType<Projectil
 		VersionIndex = ddl.GetValue<byte>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0x8f98872cu)]
+	[DDLRegistration(0x9da07479u)]
 	public string? PerkName { get; set; } = default;
 
-	[DDLRegistration(0x8f98872cu)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
 	public new static ProjectilePassedMaxRangeEvent Create(DDLObject ddl) => new(ddl);

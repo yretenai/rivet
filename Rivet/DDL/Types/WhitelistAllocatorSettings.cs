@@ -19,10 +19,10 @@ public class WhitelistAllocatorSettings : DDLObjectType, IDDLObjectType<Whitelis
 		WhitelistAssetPaths = ddl.GetStrings(0x8a2e669bu);
 	}
 
-	[DDLRegistration(0x41505d4fu)]
+	[DDLRegistration(0xb2caad4fu)]
 	public uint WhitelistAllocatorSize { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x41505d4fu)]
+	[DDLRegistration(0x8a2e669bu)]
 	public List<string?> WhitelistAssetPaths { get; set; } = [];
 
 	public static WhitelistAllocatorSettings Create(DDLObject ddl) => new(ddl);

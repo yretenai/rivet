@@ -20,13 +20,13 @@ public class AddToInventoryActionPrius : DDLObjectType, IDDLObjectType<AddToInve
 		Count = ddl.GetValue<uint>(0x9c8a88a3u, Count);
 	}
 
-	[DDLRegistration(0x91a9d73eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0x91a9d73eu)]
+	[DDLRegistration(0xa88f833fu)]
 	public RivetAssetId ItemConfig { get; set; } = default;
 
-	[DDLRegistration(0x91a9d73eu)]
+	[DDLRegistration(0x9c8a88a3u)]
 	public uint Count { get; set; } = 0x00000001;
 
 	public static AddToInventoryActionPrius Create(DDLObject ddl) => new(ddl);

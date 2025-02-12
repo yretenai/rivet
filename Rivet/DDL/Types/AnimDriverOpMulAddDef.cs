@@ -26,31 +26,31 @@ public class AnimDriverOpMulAddDef : DDLObjectType, IDDLObjectType<AnimDriverOpM
 		Add = ddl.GetValue<float>(0xd74f5a2eu, Add);
 	}
 
-	[DDLRegistration(0xdbf91f9fu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xdbf91f9fu)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0xdbf91f9fu)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdbf91f9fu)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdbf91f9fu)]
+	[DDLRegistration(0x8262958fu)]
 	public x9f234d85 OpType { get; set; } = x9f234d85.AnimDriverOpTypeMultiplyAdd;
 
-	[DDLRegistration(0xdbf91f9fu)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdbf91f9fu)]
+	[DDLRegistration(0x322aadceu)]
 	public List<AnimDriverOpConnection?> Connections { get; set; } = [];
 
-	[DDLRegistration(0xdbf91f9fu)]
+	[DDLRegistration(0x83570868u)]
 	public float Mul { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdbf91f9fu)]
+	[DDLRegistration(0xd74f5a2eu)]
 	public float Add { get; set; } = 0.00f;
 
 	public static AnimDriverOpMulAddDef Create(DDLObject ddl) => new(ddl);

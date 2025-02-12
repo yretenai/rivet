@@ -25,28 +25,28 @@ public class DevstatsPrimarySegmentInfo : DDLObjectType, IDDLObjectType<Devstats
 		PrimaryParentSegmentTime = ddl.GetValue<float>(0x4b1b8924u, PrimaryParentSegmentTime);
 	}
 
-	[DDLRegistration(0x57fcc4bau)]
+	[DDLRegistration(0x33a693f0u)]
 	public string? PrimarySegmentId { get; set; } = default;
 
-	[DDLRegistration(0x57fcc4bau)]
+	[DDLRegistration(0xcff7799du)]
 	public string? ParentSegmentId { get; set; } = default;
 
-	[DDLRegistration(0x57fcc4bau)]
+	[DDLRegistration(0xd9d043a5u)]
 	public xc6f5c0d7 PrimarySegmentType { get; set; } = xc6f5c0d7.Playthrough;
 
-	[DDLRegistration(0x57fcc4bau)]
+	[DDLRegistration(0x495ca178u)]
 	public xc6f5c0d7 ParentSegmentType { get; set; } = xc6f5c0d7.Playthrough;
 
-	[DDLRegistration(0x57fcc4bau)]
+	[DDLRegistration(0x0b2d6a8au)]
 	public string? PrimarySegmentName { get; set; } = default;
 
-	[DDLRegistration(0x57fcc4bau)]
+	[DDLRegistration(0x7aac6f67u)]
 	public string? PrimaryParentSegmentName { get; set; } = default;
 
-	[DDLRegistration(0x57fcc4bau)]
+	[DDLRegistration(0x3a9a8cc9u)]
 	public float PrimarySegmentTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x57fcc4bau)]
+	[DDLRegistration(0x4b1b8924u)]
 	public float PrimaryParentSegmentTime { get; set; } = 0.00f;
 
 	public static DevstatsPrimarySegmentInfo Create(DDLObject ddl) => new(ddl);

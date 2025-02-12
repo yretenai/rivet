@@ -18,7 +18,7 @@ public class TriggerPadInvalidLeaveEvent : EventBase, IDDLObjectType<TriggerPadI
 		UserHandle = ddl.GetValue<uint>(0x25e06c12u, UserHandle);
 	}
 
-	[DDLRegistration(0x5d1d797bu)]
+	[DDLRegistration(0x25e06c12u)]
 	public uint UserHandle { get; set; } = 0x00000000;
 
 	public new static TriggerPadInvalidLeaveEvent Create(DDLObject ddl) => new(ddl);

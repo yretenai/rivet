@@ -19,10 +19,10 @@ public class PrimStyleSphere : PrimStyleBase, IDDLObjectType<PrimStyleSphere> {
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x195d3c93u)]
+	[DDLRegistration(0x4ced6821u)]
 	public string? CenterPointLocator { get; set; } = default;
 
-	[DDLRegistration(0x195d3c93u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
 	public new static PrimStyleSphere Create(DDLObject ddl) => new(ddl);

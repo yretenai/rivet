@@ -20,13 +20,13 @@ public class SyncValueActionPrius : DDLObjectType, IDDLObjectType<SyncValueActio
 		ValueIn = ddl.GetValue<float>(0x1518fe92u, ValueIn);
 	}
 
-	[DDLRegistration(0xc4a53c97u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0xc4a53c97u, description: "Name of the component")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of the component")]
 	public string? Name { get; set; } = "Score";
 
-	[DDLRegistration(0xc4a53c97u, description: "Input value to set, add, subtract, multiply, or divide (can be overridden with input variable)")]
+	[DDLRegistration(0x1518fe92u, description: "Input value to set, add, subtract, multiply, or divide (can be overridden with input variable)")]
 	public float ValueIn { get; set; } = 0.00f;
 
 	public static SyncValueActionPrius Create(DDLObject ddl) => new(ddl);

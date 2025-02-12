@@ -18,7 +18,7 @@ public class TriggerArray : DDLObjectType, IDDLObjectType<TriggerArray> {
 		Trig = ddl.GetObject<BaseCustomOverlayTriggerPrius>(0xc515b04cu);
 	}
 
-	[DDLRegistration(0xcf0c3c05u)]
+	[DDLRegistration(0xc515b04cu)]
 	public BaseCustomOverlayTriggerPrius? Trig { get; set; } = default;
 
 	public static TriggerArray Create(DDLObject ddl) => new(ddl);

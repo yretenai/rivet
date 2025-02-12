@@ -18,7 +18,7 @@ public class DamageTunerBasePrius : DDLObjectType, IDDLObjectType<DamageTunerBas
 		LifeTime = ddl.GetValue<float>(0x67d422c6u, LifeTime);
 	}
 
-	[DDLRegistration(0x6731a781u)]
+	[DDLRegistration(0x67d422c6u)]
 	public float LifeTime { get; set; } = 0.00f;
 
 	public static DamageTunerBasePrius Create(DDLObject ddl) => new(ddl);

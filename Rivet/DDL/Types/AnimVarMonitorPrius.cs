@@ -18,7 +18,7 @@ public class AnimVarMonitorPrius : DDLObjectType, IDDLObjectType<AnimVarMonitorP
 		Vars = ddl.GetObjects<AnimVarMonitorElement>(0xc2907a09u);
 	}
 
-	[DDLRegistration(0x2edb5feeu)]
+	[DDLRegistration(0xc2907a09u)]
 	public List<AnimVarMonitorElement?> Vars { get; set; } = [];
 
 	public static AnimVarMonitorPrius Create(DDLObject ddl) => new(ddl);

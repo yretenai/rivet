@@ -18,7 +18,7 @@ public class AimModForwardPrius : AimModifierPrius, IDDLObjectType<AimModForward
 		ReferenceLocator = ddl.GetString(0x10a1eab4) ?? ReferenceLocator;
 	}
 
-	[DDLRegistration(0x64d8ddc0u)]
+	[DDLRegistration(0x10a1eab4u)]
 	public string? ReferenceLocator { get; set; } = default;
 
 	public new static AimModForwardPrius Create(DDLObject ddl) => new(ddl);

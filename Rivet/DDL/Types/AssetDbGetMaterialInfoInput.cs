@@ -20,13 +20,13 @@ public class AssetDbGetMaterialInfoInput : DDLObjectType, IDDLObjectType<AssetDb
 		MaterialTemplatePath = ddl.GetString(0x8a6cb9c2) ?? MaterialTemplatePath;
 	}
 
-	[DDLRegistration(0x1770c2a0u)]
+	[DDLRegistration(0x8a514a8du)]
 	public uint Id { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1770c2a0u)]
+	[DDLRegistration(0x93b919bdu)]
 	public string? MaterialPath { get; set; } = default;
 
-	[DDLRegistration(0x1770c2a0u)]
+	[DDLRegistration(0x8a6cb9c2u)]
 	public string? MaterialTemplatePath { get; set; } = default;
 
 	public static AssetDbGetMaterialInfoInput Create(DDLObject ddl) => new(ddl);

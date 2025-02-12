@@ -19,10 +19,10 @@ public class ConduitBuilderSettings : DDLObjectType, IDDLObjectType<ConduitBuild
 		MaxResponseGraphDepth = ddl.GetValue<int>(0xd9649e37u, MaxResponseGraphDepth);
 	}
 
-	[DDLRegistration(0x8f18947au)]
+	[DDLRegistration(0x86e91c49u)]
 	public int MaxValueStackCount { get; set; } = 8;
 
-	[DDLRegistration(0x8f18947au)]
+	[DDLRegistration(0xd9649e37u)]
 	public int MaxResponseGraphDepth { get; set; } = 16;
 
 	public static ConduitBuilderSettings Create(DDLObject ddl) => new(ddl);

@@ -33,52 +33,52 @@ public class HeroJumpConfig : DDLObjectType, IDDLObjectType<HeroJumpConfig> {
 		TimeToPeakIsGravity = ddl.GetValue<bool>(0x66f02e2eu, TimeToPeakIsGravity);
 	}
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x3bf3b970u)]
 	public float HeightMin { get; set; } = 0.75f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x07fe8629u)]
 	public float HeightMax { get; set; } = 1.50f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x0a54bc58u)]
 	public float TimeToPeak { get; set; } = 0.50f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0xcb427caau)]
 	public float ButtonMinHoldTime { get; set; } = 0.20f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x074f07a5u)]
 	public float ButtonMaxHoldTime { get; set; } = 0.40f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x36cc3cb4u)]
 	public float MomentumWeightMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x0ac103edu)]
 	public float MomentumWeightMax { get; set; } = 0.50f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x8772be2eu)]
 	public float MomentumMinTime { get; set; } = 0.20f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x9db8bf3fu)]
 	public float MomentumTransitionTime { get; set; } = 0.20f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x2672e710u)]
 	public float NoInputTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0xcbd98deeu)]
 	public float NoGlideTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x7b6d7dc8u)]
 	public float NoFallTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x638180f8u)]
 	public float DoubleJumpTimeStart { get; set; } = 0.20f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x74afa539u)]
 	public float DoubleJumpHeightMin { get; set; } = 1.30f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x8424e464u)]
 	public float TerminalVelocity { get; set; } = 50.00f;
 
-	[DDLRegistration(0xd228f2ffu)]
+	[DDLRegistration(0x66f02e2eu)]
 	public bool TimeToPeakIsGravity { get; set; } = false;
 
 	public static HeroJumpConfig Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class FocusTrackingNamedSolver : DDLObjectType, IDDLObjectType<FocusTrack
 		SolverDefinition = ddl.GetObject<FocusTrackingSolverData>(0x23ca3809u);
 	}
 
-	[DDLRegistration(0x9bb2541du, description: "Name of this solver which can be referenced on a FocusTrackingAddNamedSolverEvent")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of this solver which can be referenced on a FocusTrackingAddNamedSolverEvent")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x9bb2541du, description: "Default Solvers always to be added to the FocusTrackingInstance unless overriden by clip")]
+	[DDLRegistration(0x23ca3809u, description: "Default Solvers always to be added to the FocusTrackingInstance unless overriden by clip")]
 	public FocusTrackingSolverData? SolverDefinition { get; set; } = default;
 
 	public static FocusTrackingNamedSolver Create(DDLObject ddl) => new(ddl);

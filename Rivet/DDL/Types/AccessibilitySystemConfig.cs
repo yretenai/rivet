@@ -21,16 +21,16 @@ public class AccessibilitySystemConfig : ConfigBase, IDDLObjectType<Accessibilit
 		ControlRemapData = ddl.GetObject<AccessibilityRemapData>(0x6e300f35u);
 	}
 
-	[DDLRegistration(0xc8669b59u, "Color Blind Filters")]
+	[DDLRegistration(0x51f45b69u, "Color Blind Filters")]
 	public ColorBlindFilterData? ColorBlindFilters { get; set; } = default;
 
-	[DDLRegistration(0xc8669b59u, "Highlight Materials")]
+	[DDLRegistration(0xb95dd4c4u, "Highlight Materials")]
 	public List<AccessibilityMaterial?> AccessibilityMaterials { get; set; } = [];
 
-	[DDLRegistration(0xc8669b59u, "Hero Highlight Material Bypasses", "Accessibility shaders will not be applied to materials with this name on the hero.")]
+	[DDLRegistration(0xcac899f1u, "Hero Highlight Material Bypasses", "Accessibility shaders will not be applied to materials with this name on the hero.")]
 	public List<string?> HeroHighlightBypasses { get; set; } = [];
 
-	[DDLRegistration(0xc8669b59u, "Control remaps")]
+	[DDLRegistration(0x6e300f35u, "Control remaps")]
 	public AccessibilityRemapData? ControlRemapData { get; set; } = default;
 
 	public new static AccessibilitySystemConfig Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class GetPlanetMenuInterplanetaryCheckpointActionPrius : DDLObjectType, I
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xf4da53f0u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
 	public static GetPlanetMenuInterplanetaryCheckpointActionPrius Create(DDLObject ddl) => new(ddl);

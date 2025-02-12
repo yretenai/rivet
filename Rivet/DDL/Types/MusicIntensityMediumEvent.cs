@@ -19,10 +19,10 @@ public class MusicIntensityMediumEvent : EventBase, IDDLObjectType<MusicIntensit
 		Blended = ddl.GetValue<float>(0x68390ff9u, Blended);
 	}
 
-	[DDLRegistration(0x1a15c7d0u)]
+	[DDLRegistration(0x30e6f29cu)]
 	public float Raw { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1a15c7d0u)]
+	[DDLRegistration(0x68390ff9u)]
 	public float Blended { get; set; } = 0.00f;
 
 	public new static MusicIntensityMediumEvent Create(DDLObject ddl) => new(ddl);

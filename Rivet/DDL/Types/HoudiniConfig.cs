@@ -22,19 +22,19 @@ public class HoudiniConfig : ConfigBase, IDDLObjectType<HoudiniConfig> {
 		Strings = ddl.GetObjects<HoudiniConfigDataString>(0xb57009cdu);
 	}
 
-	[DDLRegistration(0x2029034fu)]
+	[DDLRegistration(0x0c4c3ed4u)]
 	public List<HoudiniConfigDataFileGroup?> FileGroups { get; set; } = [];
 
-	[DDLRegistration(0x2029034fu)]
+	[DDLRegistration(0x1f668c98u)]
 	public List<HoudiniConfigDataFile?> Files { get; set; } = [];
 
-	[DDLRegistration(0x2029034fu)]
+	[DDLRegistration(0xa5da43f9u)]
 	public List<HoudiniConfigDataFloat?> Floats { get; set; } = [];
 
-	[DDLRegistration(0x2029034fu)]
+	[DDLRegistration(0x7687a458u)]
 	public List<HoudiniConfigDataInteger?> Integers { get; set; } = [];
 
-	[DDLRegistration(0x2029034fu)]
+	[DDLRegistration(0xb57009cdu)]
 	public List<HoudiniConfigDataString?> Strings { get; set; } = [];
 
 	public new static HoudiniConfig Create(DDLObject ddl) => new(ddl);

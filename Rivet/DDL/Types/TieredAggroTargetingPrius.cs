@@ -34,55 +34,55 @@ public class TieredAggroTargetingPrius : TargetingBasePrius, IDDLObjectType<Tier
 		Data = ddl.GetObject<TierData>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0x749ba1b6u, description: "Automatically engage targets inside this distance.")]
+	[DDLRegistration(0xce2a18b2u, description: "Automatically engage targets inside this distance.")]
 	public float InitialEngageDistanceMin { get; set; } = 5.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "Allow idle guys to gain prox aggro at this distance.")]
+	[DDLRegistration(0xc399aa1bu, description: "Allow idle guys to gain prox aggro at this distance.")]
 	public float InitialEngageDistanceXZ { get; set; } = 20.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "Allow idle guys to gain prox aggro at this distance.")]
+	[DDLRegistration(0xe2238a31u, description: "Allow idle guys to gain prox aggro at this distance.")]
 	public float InitialEngageDistanceY { get; set; } = 12.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "Guys need to be inside the Initial Engage Distance for Initial Engage Delay +/- Initial Engage Delay Variance this long to gain aggro.")]
+	[DDLRegistration(0xb1d108ceu, description: "Guys need to be inside the Initial Engage Distance for Initial Engage Delay +/- Initial Engage Delay Variance this long to gain aggro.")]
 	public float InitialEngageDelay { get; set; } = 8.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "Guys need to be inside the Initial Engage Distance for Initial Engage Delay +/- Initial Engage Delay Variance this long to gain aggro.")]
+	[DDLRegistration(0x769d2a55u, description: "Guys need to be inside the Initial Engage Distance for Initial Engage Delay +/- Initial Engage Delay Variance this long to gain aggro.")]
 	public float InitialEngageDelayVariance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "Engage heroes on the ground this many times faster.")]
+	[DDLRegistration(0xff95badbu, description: "Engage heroes on the ground this many times faster.")]
 	public float GroundEngageScalar { get; set; } = 2.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "Engage heroes on traversal this many times faster.")]
+	[DDLRegistration(0x54833763u, description: "Engage heroes on traversal this many times faster.")]
 	public float TraversalEngageScalar { get; set; } = 1.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "How fast we forget about hostile actions from each attacker")]
+	[DDLRegistration(0x110bdf65u, description: "How fast we forget about hostile actions from each attacker")]
 	public float DamageAggroBleedRate { get; set; } = 10.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "How long must we not receive damage from a target before his aggro starts bleeding")]
+	[DDLRegistration(0x028b9529u, description: "How long must we not receive damage from a target before his aggro starts bleeding")]
 	public float DamageAggroBleedDelay { get; set; } = 5.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "When friends this close to us are shot we will accrue aggro equal to DamageAggroBleedRate. It will interpolate down to zero at DamageFriendRangeMax.")]
+	[DDLRegistration(0xd041d76au, description: "When friends this close to us are shot we will accrue aggro equal to DamageAggroBleedRate. It will interpolate down to zero at DamageFriendRangeMax.")]
 	public float DamageFriendRangeMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "When friends inside this range are damaged we will start to accrue aggro. The amount will interpolate from zero up to DamageAggroBleedRate at DamageFriendRangeMin.")]
+	[DDLRegistration(0xec4ce833u, description: "When friends inside this range are damaged we will start to accrue aggro. The amount will interpolate from zero up to DamageAggroBleedRate at DamageFriendRangeMin.")]
 	public float DamageFriendRangeMax { get; set; } = 6.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "This is the minimum amount of aggro a target must have to be targetable.")]
+	[DDLRegistration(0x3176b0a6u, description: "This is the minimum amount of aggro a target must have to be targetable.")]
 	public float StartAggro { get; set; } = 10.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "This is the amount of aggro a current target must reach to be dropped.")]
+	[DDLRegistration(0xbde2de4eu, description: "This is the amount of aggro a current target must reach to be dropped.")]
 	public float StopAggro { get; set; } = 0.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "If we have a target a new target must have at least this much more aggro.")]
+	[DDLRegistration(0x5dd33da5u, description: "If we have a target a new target must have at least this much more aggro.")]
 	public float SwitchAggro { get; set; } = 10.00f;
 
-	[DDLRegistration(0x749ba1b6u, description: "Don't bother asking the TargetData component if we can target it")]
+	[DDLRegistration(0x3427f195u, description: "Don't bother asking the TargetData component if we can target it")]
 	public bool IgnoreMaxTargeters { get; set; } = false;
 
-	[DDLRegistration(0x749ba1b6u)]
+	[DDLRegistration(0x5155733cu)]
 	public bool TiersAreExclusive { get; set; } = false;
 
-	[DDLRegistration(0x749ba1b6u)]
+	[DDLRegistration(0x9d6333d3u)]
 	public TierData? Data { get; set; } = default;
 
 	public new static TieredAggroTargetingPrius Create(DDLObject ddl) => new(ddl);

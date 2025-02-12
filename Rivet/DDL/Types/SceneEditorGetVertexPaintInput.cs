@@ -18,7 +18,7 @@ public class SceneEditorGetVertexPaintInput : DDLObjectType, IDDLObjectType<Scen
 		WorldIds = ddl.GetValues<RivetAssetId>(0x5df2a824u);
 	}
 
-	[DDLRegistration(0x0ddae0fdu)]
+	[DDLRegistration(0x5df2a824u)]
 	public List<RivetAssetId> WorldIds { get; set; } = [];
 
 	public static SceneEditorGetVertexPaintInput Create(DDLObject ddl) => new(ddl);

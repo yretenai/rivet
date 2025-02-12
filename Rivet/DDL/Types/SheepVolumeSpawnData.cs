@@ -20,13 +20,13 @@ public class SheepVolumeSpawnData : ActorSpawnData, IDDLObjectType<SheepVolumeSp
 		Position = ddl.GetObject<DDLVector3>(0xbc2d5985u);
 	}
 
-	[DDLRegistration(0x55ffabfcu)]
+	[DDLRegistration(0x06d2ae12u)]
 	public uint SheepHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x55ffabfcu, description: "The zone index we should put the spawned guy into.")]
+	[DDLRegistration(0x0c9266b7u, description: "The zone index we should put the spawned guy into.")]
 	public int ZoneIndex { get; set; } = 0;
 
-	[DDLRegistration(0x55ffabfcu)]
+	[DDLRegistration(0xbc2d5985u)]
 	public DDLVector3? Position { get; set; } = default;
 
 	public new static SheepVolumeSpawnData Create(DDLObject ddl) => new(ddl);

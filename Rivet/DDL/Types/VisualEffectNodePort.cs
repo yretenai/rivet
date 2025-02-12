@@ -19,10 +19,10 @@ public class VisualEffectNodePort : DDLObjectType, IDDLObjectType<VisualEffectNo
 		Type = ddl.GetString(0xbc4e9799) ?? Type;
 	}
 
-	[DDLRegistration(0xaeb1a10bu)]
+	[DDLRegistration(0x93971d83u)]
 	public string? InternalName { get; set; } = default;
 
-	[DDLRegistration(0xaeb1a10bu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = "unknown";
 
 	public static VisualEffectNodePort Create(DDLObject ddl) => new(ddl);

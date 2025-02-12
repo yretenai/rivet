@@ -19,10 +19,10 @@ public class GetLevelIDActionPrius : DDLObjectType, IDDLObjectType<GetLevelIDAct
 		LevelEnum = ddl.GetEnum<LevelEnum>(0x4223680au, LevelEnumValues.Lookup);
 	}
 
-	[DDLRegistration(0x117d6470u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
-	[DDLRegistration(0x117d6470u, "Level")]
+	[DDLRegistration(0x4223680au, "Level")]
 	public LevelEnum LevelEnum { get; set; } = LevelEnum.None;
 
 	public static GetLevelIDActionPrius Create(DDLObject ddl) => new(ddl);

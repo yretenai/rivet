@@ -18,7 +18,7 @@ public class ShellCasingDataSingleEmit : ShellCasingData, IDDLObjectType<ShellCa
 		SpawnLocator = ddl.GetString(0x52bc144e) ?? SpawnLocator;
 	}
 
-	[DDLRegistration(0x03f97996u)]
+	[DDLRegistration(0x52bc144eu)]
 	public string? SpawnLocator { get; set; } = default;
 
 	public new static ShellCasingDataSingleEmit Create(DDLObject ddl) => new(ddl);

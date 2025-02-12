@@ -25,28 +25,28 @@ public class WeaponEconomySnapshotDevstatsEvent : EventBase, IDDLObjectType<Weap
 		PurchaseState = ddl.GetEnum<xf5af8e81>(0x70bda712u, xf5af8e81Values.Lookup);
 	}
 
-	[DDLRegistration(0xd7ff9255u)]
+	[DDLRegistration(0x6dca4420u)]
 	public string? ParentEventId { get; set; } = default;
 
-	[DDLRegistration(0xd7ff9255u)]
+	[DDLRegistration(0xca0166ccu)]
 	public string? WeaponName { get; set; } = default;
 
-	[DDLRegistration(0xd7ff9255u)]
+	[DDLRegistration(0x9328145bu)]
 	public uint ModsPurchased { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd7ff9255u)]
+	[DDLRegistration(0x0a33c2eau)]
 	public uint CurrentLevel { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd7ff9255u)]
+	[DDLRegistration(0x186dfad6u)]
 	public uint CurrentXP { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd7ff9255u)]
+	[DDLRegistration(0x86f66603u)]
 	public float CurrentAmmo { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd7ff9255u)]
+	[DDLRegistration(0x1214e89au)]
 	public float MaxAmmo { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd7ff9255u)]
+	[DDLRegistration(0x70bda712u)]
 	public xf5af8e81 PurchaseState { get; set; } = xf5af8e81.Locked;
 
 	public new static WeaponEconomySnapshotDevstatsEvent Create(DDLObject ddl) => new(ddl);

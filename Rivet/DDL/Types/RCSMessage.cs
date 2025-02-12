@@ -20,13 +20,13 @@ public class RCSMessage : DDLObjectType, IDDLObjectType<RCSMessage> {
 		ClientFilePaths = ddl.GetValues<RivetAssetId>(0x1f9e96ebu);
 	}
 
-	[DDLRegistration(0x12da7e90u, description: "Not all messages are recorded, but the total number is always reported here.")]
+	[DDLRegistration(0xdb7c2d9fu, description: "Not all messages are recorded, but the total number is always reported here.")]
 	public uint Total { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x12da7e90u, description: "The first few messages (the server caps the number of messages returned by a single query).")]
+	[DDLRegistration(0x2103a3e6u, description: "The first few messages (the server caps the number of messages returned by a single query).")]
 	public List<string?> Messages { get; set; } = [];
 
-	[DDLRegistration(0x12da7e90u, description: "The full file path in the client's workspace that each message refers to.")]
+	[DDLRegistration(0x1f9e96ebu, description: "The full file path in the client's workspace that each message refers to.")]
 	public List<RivetAssetId> ClientFilePaths { get; set; } = [];
 
 	public static RCSMessage Create(DDLObject ddl) => new(ddl);

@@ -37,64 +37,64 @@ public class ProjectileHitEvent : EventBase, IDDLObjectType<ProjectileHitEvent> 
 		FollowAttachActor = ddl.GetValue<byte>(0x7f05cf4du, FollowAttachActor);
 	}
 
-	[DDLRegistration(0x0e385024u, "Hit Actor")]
+	[DDLRegistration(0x47c66f9du, "Hit Actor")]
 	public uint HitActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0x79cb4b29u)]
 	public uint UserActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0x908a038du)]
 	public uint HitCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0x70056141u)]
 	public uint HitJointHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0e385024u, description: "Projectile speed on impact.")]
+	[DDLRegistration(0x1a75b919u, description: "Projectile speed on impact.")]
 	public float HitSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0xeb9e8212u)]
 	public DDLTransform? ReflectionDir { get; set; } = default;
 
-	[DDLRegistration(0x0e385024u, description: "Collision hit material")]
+	[DDLRegistration(0x86bfc8e5u, description: "Collision hit material")]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0x9da07479u)]
 	public string? PerkName { get; set; } = default;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0x7f3a87a1u)]
 	public bool EdgeImpact { get; set; } = false;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0x0ab8d969u)]
 	public byte FriendlyFire { get; set; } = 0x00;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0xb5bc4f7fu)]
 	public byte HitCharacter { get; set; } = 0x00;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0xd7ceb8fdu)]
 	public byte HitHero { get; set; } = 0x00;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0xbfa08c78u)]
 	public byte HitWeakspot { get; set; } = 0x00;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0x455dc04bu)]
 	public byte HitGround { get; set; } = 0x00;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0xee605335u)]
 	public byte HitWater { get; set; } = 0x00;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0x572809b0u)]
 	public byte IsUnderwater { get; set; } = 0x00;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0x0e385024u)]
+	[DDLRegistration(0x27e1719fu)]
 	public byte SourceIsHero { get; set; } = 0x00;
 
-	[DDLRegistration(0x0e385024u, "Attach Actor")]
+	[DDLRegistration(0xaac2d682u, "Attach Actor")]
 	public uint AttachActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0e385024u, "Follow Attach Actor?")]
+	[DDLRegistration(0x7f05cf4du, "Follow Attach Actor?")]
 	public byte FollowAttachActor { get; set; } = 0x00;
 
 	public new static ProjectileHitEvent Create(DDLObject ddl) => new(ddl);

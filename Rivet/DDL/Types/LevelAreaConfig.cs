@@ -18,7 +18,7 @@ public class LevelAreaConfig : ConfigBase, IDDLObjectType<LevelAreaConfig> {
 		Areas = ddl.GetObjects<LevelArea>(0x41e37e9du);
 	}
 
-	[DDLRegistration(0x53a0873du, description: "Areas for this level")]
+	[DDLRegistration(0x41e37e9du, description: "Areas for this level")]
 	public List<LevelArea?> Areas { get; set; } = [];
 
 	public new static LevelAreaConfig Create(DDLObject ddl) => new(ddl);

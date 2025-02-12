@@ -21,16 +21,16 @@ public class SkinManagerColorPrius : DDLObjectType, IDDLObjectType<SkinManagerCo
 		ColorConfigNameHash = ddl.GetValue<uint>(0xb79e641cu, ColorConfigNameHash);
 	}
 
-	[DDLRegistration(0xb1b8c2dbu)]
+	[DDLRegistration(0x985f8c67u)]
 	public uint ColorConstantNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb1b8c2dbu)]
+	[DDLRegistration(0x27726256u)]
 	public DDLVector3? ColorValue { get; set; } = default;
 
-	[DDLRegistration(0xb1b8c2dbu)]
+	[DDLRegistration(0xb741ea15u)]
 	public RivetAssetId ColorConfigAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb1b8c2dbu)]
+	[DDLRegistration(0xb79e641cu)]
 	public uint ColorConfigNameHash { get; set; } = 0x00000000;
 
 	public static SkinManagerColorPrius Create(DDLObject ddl) => new(ddl);

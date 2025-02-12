@@ -19,10 +19,10 @@ public class CheckpointOverlayTriggerPrius : BaseCustomOverlayTriggerPrius, IDDL
 		UnloadOnCheckpointChange = ddl.GetValue<bool>(0xa5aeddeau, UnloadOnCheckpointChange);
 	}
 
-	[DDLRegistration(0xd4ca3ec2u)]
+	[DDLRegistration(0xd436a987u)]
 	public string? Checkpoint { get; set; } = default;
 
-	[DDLRegistration(0xd4ca3ec2u, description: "Should this overlay unload if the checkpoint changes from the defined checkpoint after the overlay has loaded?")]
+	[DDLRegistration(0xa5aeddeau, description: "Should this overlay unload if the checkpoint changes from the defined checkpoint after the overlay has loaded?")]
 	public bool UnloadOnCheckpointChange { get; set; } = true;
 
 	public new static CheckpointOverlayTriggerPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class GalacticMapSetPreMapMovieActionPrius : DDLObjectType, IDDLObjectTyp
 		UnlockLevelEnum = ddl.GetEnum<LevelEnum>(0x2c3d938du, LevelEnumValues.Lookup);
 	}
 
-	[DDLRegistration(0x748f98fau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
-	[DDLRegistration(0x748f98fau, "PreMap Movie File", "The movie to play in between the get-in cinematic and showing the galactic map.")]
+	[DDLRegistration(0x3c6b5acau, "PreMap Movie File", "The movie to play in between the get-in cinematic and showing the galactic map.")]
 	public RivetAssetId MovieFile { get; set; } = default;
 
-	[DDLRegistration(0x748f98fau, "Movie Subtitle Config", "Config File for subtitles")]
+	[DDLRegistration(0x8437e2b0u, "Movie Subtitle Config", "Config File for subtitles")]
 	public RivetAssetId SubtitleConfig { get; set; } = default;
 
-	[DDLRegistration(0x748f98fau, "(Opt) Level To Unlock", "Optional level to unlock when we play the movie. ")]
+	[DDLRegistration(0x2c3d938du, "(Opt) Level To Unlock", "Optional level to unlock when we play the movie. ")]
 	public LevelEnum UnlockLevelEnum { get; set; } = LevelEnum.None;
 
 	public static GalacticMapSetPreMapMovieActionPrius Create(DDLObject ddl) => new(ddl);

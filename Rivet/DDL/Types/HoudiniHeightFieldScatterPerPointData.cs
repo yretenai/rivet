@@ -22,19 +22,19 @@ public class HoudiniHeightFieldScatterPerPointData : DDLObjectType, IDDLObjectTy
 		SourceLayerName = ddl.GetString(0xd16b513d) ?? SourceLayerName;
 	}
 
-	[DDLRegistration(0x098856c4u, "Per Point Count Method", "How to position points around the source points. Points are uniformly scattered in the circular rings around the source points.")]
+	[DDLRegistration(0x493c4cd6u, "Per Point Count Method", "How to position points around the source points. Points are uniformly scattered in the circular rings around the source points.")]
 	public x17a2adb9 PerPointCountMethod { get; set; } = x17a2adb9.ExactNumber;
 
-	[DDLRegistration(0x098856c4u, "Exact Number", "The exact number of points to be scattered around the points with matching tags as Source Layer Name.")]
+	[DDLRegistration(0x88ad89d5u, "Exact Number", "The exact number of points to be scattered around the points with matching tags as Source Layer Name.")]
 	public int ParamExactNumber { get; set; } = 10;
 
-	[DDLRegistration(0x098856c4u, "Range", "The range that the poisson distribution spans on.")]
+	[DDLRegistration(0x67b21701u, "Range", "The range that the poisson distribution spans on.")]
 	public DDLVector2? ParamPoissonRange { get; set; } = default;
 
-	[DDLRegistration(0x098856c4u, "Positioning Method", "How to position points around the source points.  Points are uniformly scattered in the circular rings around the source points.")]
+	[DDLRegistration(0x364e4f57u, "Positioning Method", "How to position points around the source points.  Points are uniformly scattered in the circular rings around the source points.")]
 	public xf12451bd PositioningMethod { get; set; } = xf12451bd.Offset;
 
-	[DDLRegistration(0x098856c4u, "Source Layer", "The name of the layer from the source points that the new points would be scattered around.")]
+	[DDLRegistration(0xd16b513du, "Source Layer", "The name of the layer from the source points that the new points would be scattered around.")]
 	public string? SourceLayerName { get; set; } = default;
 
 	public static HoudiniHeightFieldScatterPerPointData Create(DDLObject ddl) => new(ddl);

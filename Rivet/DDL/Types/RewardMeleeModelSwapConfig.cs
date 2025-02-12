@@ -21,16 +21,16 @@ public class RewardMeleeModelSwapConfig : ConfigBase, IDDLObjectType<RewardMelee
 		MeleeModelSwapData = ddl.GetObjects<MeleeModelSwapData>(0x9ab26759u);
 	}
 
-	[DDLRegistration(0x7b69db64u, description: "The audio switch group for the melee weapon.")]
+	[DDLRegistration(0x5059219bu, description: "The audio switch group for the melee weapon.")]
 	public string? AudioSwitchGroup { get; set; } = "";
 
-	[DDLRegistration(0x7b69db64u, description: "The default audio switch value for the wrench. This is used when we don't have a model swap active.")]
+	[DDLRegistration(0x19114b71u, description: "The default audio switch value for the wrench. This is used when we don't have a model swap active.")]
 	public string? DefaultWrenchAudioSwitchValue { get; set; } = "";
 
-	[DDLRegistration(0x7b69db64u, description: "The default audio switch value for the hammer. This is used when we don't have a model swap active.")]
+	[DDLRegistration(0x490a23c5u, description: "The default audio switch value for the hammer. This is used when we don't have a model swap active.")]
 	public string? DefaultHammerAudioSwitchValue { get; set; } = "";
 
-	[DDLRegistration(0x7b69db64u)]
+	[DDLRegistration(0x9ab26759u)]
 	public List<MeleeModelSwapData?> MeleeModelSwapData { get; set; } = [];
 
 	public new static RewardMeleeModelSwapConfig Create(DDLObject ddl) => new(ddl);

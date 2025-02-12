@@ -20,13 +20,13 @@ public class EffectToolFPSPrius : EffectToolBasePrius, IDDLObjectType<EffectTool
 		AllowRotation = ddl.GetValue<bool>(0x95f85695u, AllowRotation);
 	}
 
-	[DDLRegistration(0x849f0638u)]
+	[DDLRegistration(0xe7986b3cu)]
 	public bool AllowPan { get; set; } = true;
 
-	[DDLRegistration(0x849f0638u)]
+	[DDLRegistration(0x60b30526u)]
 	public bool AllowZoom { get; set; } = true;
 
-	[DDLRegistration(0x849f0638u)]
+	[DDLRegistration(0x95f85695u)]
 	public bool AllowRotation { get; set; } = true;
 
 	public new static EffectToolFPSPrius Create(DDLObject ddl) => new(ddl);

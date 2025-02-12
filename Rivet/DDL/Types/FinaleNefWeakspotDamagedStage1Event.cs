@@ -22,19 +22,19 @@ public class FinaleNefWeakspotDamagedStage1Event : EventBase, IDDLObjectType<Fin
 		Is_Claw_Weakspot = ddl.GetValue<bool>(0x195ddf71u, Is_Claw_Weakspot);
 	}
 
-	[DDLRegistration(0x5ad9d825u)]
+	[DDLRegistration(0xcd0b6f25u)]
 	public string? WeakspotName { get; set; } = default;
 
-	[DDLRegistration(0x5ad9d825u)]
+	[DDLRegistration(0x1bbdae68u)]
 	public byte PortalIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0x5ad9d825u)]
+	[DDLRegistration(0x5f1b476eu)]
 	public bool Is_Triggered_Once { get; set; } = false;
 
-	[DDLRegistration(0x5ad9d825u)]
+	[DDLRegistration(0x9a4b223eu)]
 	public bool Triggered_On_Main_Mech { get; set; } = false;
 
-	[DDLRegistration(0x5ad9d825u)]
+	[DDLRegistration(0x195ddf71u)]
 	public bool Is_Claw_Weakspot { get; set; } = false;
 
 	public new static FinaleNefWeakspotDamagedStage1Event Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DamageModAddOutgoingPrius : DamageModifierOutgoingPrius, IDDLObject
 		Add = ddl.GetValue<float>(0xd74f5a2eu, Add);
 	}
 
-	[DDLRegistration(0xc690d25fu)]
+	[DDLRegistration(0xd74f5a2eu)]
 	public float Add { get; set; } = 1.00f;
 
 	public new static DamageModAddOutgoingPrius Create(DDLObject ddl) => new(ddl);

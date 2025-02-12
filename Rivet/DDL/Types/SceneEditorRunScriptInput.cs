@@ -18,7 +18,7 @@ public class SceneEditorRunScriptInput : DDLObjectType, IDDLObjectType<SceneEdit
 		ScriptPath = ddl.GetValue<RivetAssetId>(0x3d259a8du, ScriptPath);
 	}
 
-	[DDLRegistration(0xbb4c1203u, description: "Path of the javascript to run")]
+	[DDLRegistration(0x3d259a8du, description: "Path of the javascript to run")]
 	public RivetAssetId ScriptPath { get; set; } = "";
 
 	public static SceneEditorRunScriptInput Create(DDLObject ddl) => new(ddl);

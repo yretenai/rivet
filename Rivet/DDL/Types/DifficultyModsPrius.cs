@@ -19,10 +19,10 @@ public class DifficultyModsPrius : DDLObjectType, IDDLObjectType<DifficultyModsP
 		DifficultyModProgressionBonusConfig = ddl.GetValue<RivetAssetId>(0xd1e78125u, DifficultyModProgressionBonusConfig);
 	}
 
-	[DDLRegistration(0x95b257e5u)]
+	[DDLRegistration(0x5f875925u)]
 	public RivetAssetId DifficultyModConfig { get; set; } = default;
 
-	[DDLRegistration(0x95b257e5u)]
+	[DDLRegistration(0xd1e78125u)]
 	public RivetAssetId DifficultyModProgressionBonusConfig { get; set; } = default;
 
 	public static DifficultyModsPrius Create(DDLObject ddl) => new(ddl);

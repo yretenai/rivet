@@ -20,13 +20,13 @@ public class InteractLocationLocatorOfferPrius : HoldOfferPrius, IDDLObjectType<
 		NeedPath = ddl.GetValue<bool>(0x3d65079bu, NeedPath);
 	}
 
-	[DDLRegistration(0xb2cf29f9u)]
+	[DDLRegistration(0x86d968feu)]
 	public string? InteractVolumeLocator { get; set; } = default;
 
-	[DDLRegistration(0xb2cf29f9u, "Validate CVC")]
+	[DDLRegistration(0x7609f2bfu, "Validate CVC")]
 	public bool ValidateCVC { get; set; } = true;
 
-	[DDLRegistration(0xb2cf29f9u)]
+	[DDLRegistration(0x3d65079bu)]
 	public bool NeedPath { get; set; } = false;
 
 	public new static InteractLocationLocatorOfferPrius Create(DDLObject ddl) => new(ddl);

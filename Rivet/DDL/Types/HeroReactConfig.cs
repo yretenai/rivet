@@ -23,22 +23,22 @@ public class HeroReactConfig : DDLObjectType, IDDLObjectType<HeroReactConfig> {
 		InvulnerabilityPeriod = ddl.GetValue<float>(0x5f6c90ecu, InvulnerabilityPeriod);
 	}
 
-	[DDLRegistration(0xa93c6743u)]
+	[DDLRegistration(0xd740c899u)]
 	public bool AlwaysReactToMelee { get; set; } = true;
 
-	[DDLRegistration(0xa93c6743u)]
+	[DDLRegistration(0x09e632b7u)]
 	public bool AlwaysReactToExplosions { get; set; } = false;
 
-	[DDLRegistration(0xa93c6743u, "Twitch Data")]
+	[DDLRegistration(0x8ff83020u, "Twitch Data")]
 	public HeroReactLevelData? TwitchData { get; set; } = default;
 
-	[DDLRegistration(0xa93c6743u, "Knockback Data")]
+	[DDLRegistration(0xcc96e476u, "Knockback Data")]
 	public HeroReactLevelData? KnockbackData { get; set; } = default;
 
-	[DDLRegistration(0xa93c6743u, "Knockdown Data")]
+	[DDLRegistration(0x0a615951u, "Knockdown Data")]
 	public HeroReactLevelData? KnockdownData { get; set; } = default;
 
-	[DDLRegistration(0xa93c6743u, description: "The minimum amount of time between hits.")]
+	[DDLRegistration(0x5f6c90ecu, description: "The minimum amount of time between hits.")]
 	public float InvulnerabilityPeriod { get; set; } = 0.00f;
 
 	public static HeroReactConfig Create(DDLObject ddl) => new(ddl);

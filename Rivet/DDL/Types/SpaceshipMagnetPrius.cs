@@ -18,7 +18,7 @@ public class SpaceshipMagnetPrius : DDLObjectType, IDDLObjectType<SpaceshipMagne
 		MagnetConfig = ddl.GetValue<RivetAssetId>(0xdaae4ec0u, MagnetConfig);
 	}
 
-	[DDLRegistration(0xec5d9bdfu, "Magnet Config", "The config for the parameters of the magnet.")]
+	[DDLRegistration(0xdaae4ec0u, "Magnet Config", "The config for the parameters of the magnet.")]
 	public RivetAssetId MagnetConfig { get; set; } = default;
 
 	public static SpaceshipMagnetPrius Create(DDLObject ddl) => new(ddl);

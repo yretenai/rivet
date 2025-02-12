@@ -19,10 +19,10 @@ public class ReflectEmitterPrius : WeaponEmitterBasePrius, IDDLObjectType<Reflec
 		NudgeOffHitPosition = ddl.GetValue<float>(0x62e02209u, NudgeOffHitPosition);
 	}
 
-	[DDLRegistration(0xd2e0cd91u)]
+	[DDLRegistration(0x9031c02eu)]
 	public float SkewTowardsNormal { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd2e0cd91u)]
+	[DDLRegistration(0x62e02209u)]
 	public float NudgeOffHitPosition { get; set; } = 0.10f;
 
 	public new static ReflectEmitterPrius Create(DDLObject ddl) => new(ddl);

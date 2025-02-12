@@ -21,16 +21,16 @@ public class TargetFileBuildOutput : DDLObjectType, IDDLObjectType<TargetFileBui
 		Levels = ddl.GetValues<int>(0xa1522a7eu);
 	}
 
-	[DDLRegistration(0x2c4ae382u)]
+	[DDLRegistration(0x2103a3e6u)]
 	public List<string?> Messages { get; set; } = [];
 
-	[DDLRegistration(0x2c4ae382u)]
+	[DDLRegistration(0xf604188fu)]
 	public List<string?> MessageFormatStrings { get; set; } = [];
 
-	[DDLRegistration(0x2c4ae382u)]
+	[DDLRegistration(0xa21b5c64u)]
 	public List<bool> MessageIsValidation { get; set; } = [];
 
-	[DDLRegistration(0x2c4ae382u)]
+	[DDLRegistration(0xa1522a7eu)]
 	public List<int> Levels { get; set; } = [];
 
 	public static TargetFileBuildOutput Create(DDLObject ddl) => new(ddl);

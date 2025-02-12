@@ -20,13 +20,13 @@ public class LosHeuristics : DDLObjectType, IDDLObjectType<LosHeuristics> {
 		HiddenTimeMax = ddl.GetValue<float>(0xf5d356efu, HiddenTimeMax);
 	}
 
-	[DDLRegistration(0x2892c67bu, description: "How much more we target guys who have been visible for VisibleTimeMax")]
+	[DDLRegistration(0x39b51b26u, description: "How much more we target guys who have been visible for VisibleTimeMax")]
 	public float Weight { get; set; } = 2.00f;
 
-	[DDLRegistration(0x2892c67bu)]
+	[DDLRegistration(0x586ac93du)]
 	public float VisibleTimeMax { get; set; } = 5.00f;
 
-	[DDLRegistration(0x2892c67bu)]
+	[DDLRegistration(0xf5d356efu)]
 	public float HiddenTimeMax { get; set; } = 10.00f;
 
 	public static LosHeuristics Create(DDLObject ddl) => new(ddl);

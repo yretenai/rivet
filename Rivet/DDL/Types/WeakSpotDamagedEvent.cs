@@ -22,19 +22,19 @@ public class WeakSpotDamagedEvent : EventBase, IDDLObjectType<WeakSpotDamagedEve
 		DamageAmount = ddl.GetValue<float>(0x563be470u, DamageAmount);
 	}
 
-	[DDLRegistration(0xbb461b95u, description: "Name hash of weakspot.")]
+	[DDLRegistration(0xc2f561e2u, description: "Name hash of weakspot.")]
 	public uint NameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbb461b95u, description: "Name hash of the weapon")]
+	[DDLRegistration(0x42a5ee59u, description: "Name hash of the weapon")]
 	public uint WeaponNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbb461b95u, description: "Name of locator or joint weakspot is attached to.")]
+	[DDLRegistration(0x5814524du, description: "Name of locator or joint weakspot is attached to.")]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0xbb461b95u)]
+	[DDLRegistration(0x13ab5436u)]
 	public float HealthPercent { get; set; } = 100.00f;
 
-	[DDLRegistration(0xbb461b95u)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 0.00f;
 
 	public new static WeakSpotDamagedEvent Create(DDLObject ddl) => new(ddl);

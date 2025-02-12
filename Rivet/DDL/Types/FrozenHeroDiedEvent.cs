@@ -18,7 +18,7 @@ public class FrozenHeroDiedEvent : EventBase, IDDLObjectType<FrozenHeroDiedEvent
 		SpinnerActor = ddl.GetValue<uint>(0xb56d7975u, SpinnerActor);
 	}
 
-	[DDLRegistration(0x3475ecc9u, description: "Handle of the ice spinner actor.")]
+	[DDLRegistration(0xb56d7975u, description: "Handle of the ice spinner actor.")]
 	public uint SpinnerActor { get; set; } = 0x00000000;
 
 	public new static FrozenHeroDiedEvent Create(DDLObject ddl) => new(ddl);

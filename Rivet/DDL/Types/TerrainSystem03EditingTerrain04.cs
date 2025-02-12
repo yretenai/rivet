@@ -37,64 +37,64 @@ public class TerrainSystem03EditingTerrain04 : DDLObjectType, IDDLObjectType<Ter
 		Line19 = ddl.GetString(0x6fbf36ae) ?? Line19;
 	}
 
-	[DDLRegistration(0xc3da4a38u, description: "The terrain editor supports limited Houdini integration.  To use the Houdini")]
+	[DDLRegistration(0x0f78bf4bu, description: "The terrain editor supports limited Houdini integration.  To use the Houdini")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "integration, the proper version of Houdini must be installed.  The tools will")]
+	[DDLRegistration(0x787f8fddu, description: "integration, the proper version of Houdini must be installed.  The tools will")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "indicate if Houdini is not installed or not installed at the proper version.")]
+	[DDLRegistration(0xe176de67u, description: "indicate if Houdini is not installed or not installed at the proper version.")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "<br><br>")]
+	[DDLRegistration(0x9671eef1u, description: "<br><br>")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "Houdini integration works by sending the heightfield, splatmask, and selection")]
+	[DDLRegistration(0x08157b52u, description: "Houdini integration works by sending the heightfield, splatmask, and selection")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "mask to a user-created HDA file.  The heightfield, splatmask, and selection")]
+	[DDLRegistration(0x7f124bc4u, description: "mask to a user-created HDA file.  The heightfield, splatmask, and selection")]
 	public string? Line05 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "mask are sent to specifically-named inputs.  Likewise, the heightfield and")]
+	[DDLRegistration(0xe61b1a7eu, description: "mask are sent to specifically-named inputs.  Likewise, the heightfield and")]
 	public string? Line06 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "splatmask are output on specifically-named outputs.  User-created HDA files")]
+	[DDLRegistration(0x911c2ae8u, description: "splatmask are output on specifically-named outputs.  User-created HDA files")]
 	public string? Line07 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "must live in the Terrain Houdini folder under the project's asset branch")]
+	[DDLRegistration(0x01a33779u, description: "must live in the Terrain Houdini folder under the project's asset branch")]
 	public string? Line08 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "(<i>tool/Terrain/Houdini</i>).")]
+	[DDLRegistration(0x76a407efu, description: "(<i>tool/Terrain/Houdini</i>).")]
 	public string? Line09 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "<br><br>")]
+	[DDLRegistration(0x16638e0au, description: "<br><br>")]
 	public string? Line10 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "Several user-created HDA parameters will show up in Orbit in a property panel.")]
+	[DDLRegistration(0x6164be9cu, description: "Several user-created HDA parameters will show up in Orbit in a property panel.")]
 	public string? Line11 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "Users can add integers, floating-point numbers, colors, strings, and vectors")]
+	[DDLRegistration(0xf86def26u, description: "Users can add integers, floating-point numbers, colors, strings, and vectors")]
 	public string? Line12 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "(of length 2, 3, and 4) as parameters, and these parameters will show up in")]
+	[DDLRegistration(0x8f6adfb0u, description: "(of length 2, 3, and 4) as parameters, and these parameters will show up in")]
 	public string? Line13 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "Orbit.")]
+	[DDLRegistration(0x110e4a13u, description: "Orbit.")]
 	public string? Line14 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "<br><br>")]
+	[DDLRegistration(0x66097a85u, description: "<br><br>")]
 	public string? Line15 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "Because Houdini plugins are treated like a black box, they can be difficult to")]
+	[DDLRegistration(0xff002b3fu, description: "Because Houdini plugins are treated like a black box, they can be difficult to")]
 	public string? Line16 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "debug.  To facilitate debugging, after a plugin has been run, the user can click")]
+	[DDLRegistration(0x88071ba9u, description: "debug.  To facilitate debugging, after a plugin has been run, the user can click")]
 	public string? Line17 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "the save icon to save a .HIP file that can be loaded in Houdini.  The .HIP file")]
+	[DDLRegistration(0x18b80638u, description: "the save icon to save a .HIP file that can be loaded in Houdini.  The .HIP file")]
 	public string? Line18 { get; set; } = default;
 
-	[DDLRegistration(0xc3da4a38u, description: "is saved to the absolute path specified in the text input.")]
+	[DDLRegistration(0x6fbf36aeu, description: "is saved to the absolute path specified in the text input.")]
 	public string? Line19 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain04 Create(DDLObject ddl) => new(ddl);

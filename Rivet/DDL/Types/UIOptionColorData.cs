@@ -20,13 +20,13 @@ public class UIOptionColorData : DDLObjectType, IDDLObjectType<UIOptionColorData
 		ColorValue = ddl.GetObject<DDLVector3>(0x27726256u);
 	}
 
-	[DDLRegistration(0xa0883596u, description: "The name of this color, used for reference in options data. 'None' is invalid, as this is used to signify no color.")]
+	[DDLRegistration(0xe122a241u, description: "The name of this color, used for reference in options data. 'None' is invalid, as this is used to signify no color.")]
 	public string? ColorName { get; set; } = "-NotSet-";
 
-	[DDLRegistration(0xa0883596u, description: "The display name of this color.")]
+	[DDLRegistration(0x66625c39u, description: "The display name of this color.")]
 	public string? ColorDisplayName { get; set; } = "";
 
-	[DDLRegistration(0xa0883596u)]
+	[DDLRegistration(0x27726256u)]
 	public DDLVector3? ColorValue { get; set; } = default;
 
 	public static UIOptionColorData Create(DDLObject ddl) => new(ddl);

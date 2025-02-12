@@ -18,7 +18,7 @@ public class TargetMarkedUnreachableEvent : EventBase, IDDLObjectType<TargetMark
 		TargetActorHandle = ddl.GetValue<uint>(0xa68ca01fu, TargetActorHandle);
 	}
 
-	[DDLRegistration(0xa536ac62u)]
+	[DDLRegistration(0xa68ca01fu)]
 	public uint TargetActorHandle { get; set; } = 0x00000000;
 
 	public new static TargetMarkedUnreachableEvent Create(DDLObject ddl) => new(ddl);

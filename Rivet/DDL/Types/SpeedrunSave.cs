@@ -19,10 +19,10 @@ public class SpeedrunSave : DDLObjectType, IDDLObjectType<SpeedrunSave> {
 		TimerStarted = ddl.GetValue<bool>(0x8e514127u, TimerStarted);
 	}
 
-	[DDLRegistration(0xb23c8426u)]
+	[DDLRegistration(0x88ce26bdu)]
 	public double SpeedrunTime { get; set; } = 0;
 
-	[DDLRegistration(0xb23c8426u)]
+	[DDLRegistration(0x8e514127u)]
 	public bool TimerStarted { get; set; } = false;
 
 	public static SpeedrunSave Create(DDLObject ddl) => new(ddl);

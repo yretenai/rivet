@@ -21,16 +21,16 @@ public class CameraContextVolumePrius : DDLObjectType, IDDLObjectType<CameraCont
 		ApplyTraversal = ddl.GetValue<bool>(0x93ddaf4du, ApplyTraversal);
 	}
 
-	[DDLRegistration(0x6eb23002u)]
+	[DDLRegistration(0xa47e522cu)]
 	public RivetAssetId CameraContextConfig { get; set; } = default;
 
-	[DDLRegistration(0x6eb23002u)]
+	[DDLRegistration(0x598c5a79u)]
 	public RivetAssetId CameraContextAimConfig { get; set; } = default;
 
-	[DDLRegistration(0x6eb23002u)]
+	[DDLRegistration(0x9ecee873u)]
 	public bool ApplyGround { get; set; } = true;
 
-	[DDLRegistration(0x6eb23002u)]
+	[DDLRegistration(0x93ddaf4du)]
 	public bool ApplyTraversal { get; set; } = true;
 
 	public static CameraContextVolumePrius Create(DDLObject ddl) => new(ddl);

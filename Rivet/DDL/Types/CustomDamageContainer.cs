@@ -18,7 +18,7 @@ public class CustomDamageContainer : DDLObjectType, IDDLObjectType<CustomDamageC
 		CustomDamage = ddl.GetObject<CustomDamageBase>(0x9cdf7d2fu);
 	}
 
-	[DDLRegistration(0xfe6816b1u)]
+	[DDLRegistration(0x9cdf7d2fu)]
 	public CustomDamageBase? CustomDamage { get; set; } = default;
 
 	public static CustomDamageContainer Create(DDLObject ddl) => new(ddl);

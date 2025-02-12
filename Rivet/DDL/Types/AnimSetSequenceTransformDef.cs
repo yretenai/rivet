@@ -22,19 +22,19 @@ public class AnimSetSequenceTransformDef : DDLObjectType, IDDLObjectType<AnimSet
 		V2 = ddl.GetValues<float>(0x50879470u);
 	}
 
-	[DDLRegistration(0x0101024cu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0101024cu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0101024cu)]
+	[DDLRegistration(0xbe89f55cu)]
 	public List<float> V0 { get; set; } = [];
 
-	[DDLRegistration(0x0101024cu)]
+	[DDLRegistration(0xc98ec5cau)]
 	public List<float> V1 { get; set; } = [];
 
-	[DDLRegistration(0x0101024cu)]
+	[DDLRegistration(0x50879470u)]
 	public List<float> V2 { get; set; } = [];
 
 	public static AnimSetSequenceTransformDef Create(DDLObject ddl) => new(ddl);

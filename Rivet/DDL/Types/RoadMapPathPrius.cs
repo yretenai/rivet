@@ -18,7 +18,7 @@ public class RoadMapPathPrius : DDLObjectType, IDDLObjectType<RoadMapPathPrius> 
 		AuthoredNodeData = ddl.GetObject<AuthoredNodeData>(0xcd6020fdu);
 	}
 
-	[DDLRegistration(0x42706662u, "Authored Node Data", "Path data that Houdini will pass on to each vehicle node it generates.")]
+	[DDLRegistration(0xcd6020fdu, "Authored Node Data", "Path data that Houdini will pass on to each vehicle node it generates.")]
 	public AuthoredNodeData? AuthoredNodeData { get; set; } = default;
 
 	public static RoadMapPathPrius Create(DDLObject ddl) => new(ddl);

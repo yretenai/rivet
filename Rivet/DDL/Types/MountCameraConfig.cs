@@ -24,25 +24,25 @@ public class MountCameraConfig : ConfigBase, IDDLObjectType<MountCameraConfig> {
 		UseMoveStickAsInput = ddl.GetValue<bool>(0xefe527a8u, UseMoveStickAsInput);
 	}
 
-	[DDLRegistration(0x1bf25fc0u)]
+	[DDLRegistration(0x858c56d7u)]
 	public List<StateDependentCameraConfigData?> StateDependentCameraData { get; set; } = [];
 
-	[DDLRegistration(0x1bf25fc0u)]
+	[DDLRegistration(0x6828ce70u)]
 	public List<SpeedDependentCameraConfigData?> SpeedDependentCameraData { get; set; } = [];
 
-	[DDLRegistration(0x1bf25fc0u, "FollowCameraConfigDefault")]
+	[DDLRegistration(0x5afbbea3u, "FollowCameraConfigDefault")]
 	public FollowCameraUserConfig? FollowCameraConfig { get; set; } = default;
 
-	[DDLRegistration(0x1bf25fc0u, description: "If true, then the up-vector for the camera is the up-vector of the rider. If false, the up-vector for the camera will be inverse gravity")]
+	[DDLRegistration(0x5d962a97u, description: "If true, then the up-vector for the camera is the up-vector of the rider. If false, the up-vector for the camera will be inverse gravity")]
 	public bool CameraUpIsUserUp { get; set; } = false;
 
-	[DDLRegistration(0x1bf25fc0u, description: "If true the strafe camera will attempt to rotate around collision that is in between the camera target and the camera instead of clipping in.")]
+	[DDLRegistration(0x3a72795du, description: "If true the strafe camera will attempt to rotate around collision that is in between the camera target and the camera instead of clipping in.")]
 	public bool EnableRotateAroundCollision { get; set; } = true;
 
-	[DDLRegistration(0x1bf25fc0u, description: "If true we'll always draw our reticle even if we aren't in an aim-state.")]
+	[DDLRegistration(0x16fffd51u, description: "If true we'll always draw our reticle even if we aren't in an aim-state.")]
 	public bool AlwaysShowReticle { get; set; } = false;
 
-	[DDLRegistration(0x1bf25fc0u, description: "If true, the move stick will be used to drive camera motion.")]
+	[DDLRegistration(0xefe527a8u, description: "If true, the move stick will be used to drive camera motion.")]
 	public bool UseMoveStickAsInput { get; set; } = false;
 
 	public new static MountCameraConfig Create(DDLObject ddl) => new(ddl);

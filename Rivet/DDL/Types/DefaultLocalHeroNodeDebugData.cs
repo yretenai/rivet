@@ -22,19 +22,19 @@ public class DefaultLocalHeroNodeDebugData : NodeGraphDebugDataBase, IDDLObjectT
 		HeroUserName = ddl.GetString(0x02d8d1c5) ?? HeroUserName;
 	}
 
-	[DDLRegistration(0xf02b2c2du)]
+	[DDLRegistration(0x78e146d3u)]
 	public string? HeroActorName { get; set; } = default;
 
-	[DDLRegistration(0xf02b2c2du)]
+	[DDLRegistration(0x4f010f16u)]
 	public RivetAssetId HeroActorTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf02b2c2du)]
+	[DDLRegistration(0x04149d20u)]
 	public uint HeroActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf02b2c2du)]
+	[DDLRegistration(0x5040e029u)]
 	public int HeroUserIndex { get; set; } = 0;
 
-	[DDLRegistration(0xf02b2c2du)]
+	[DDLRegistration(0x02d8d1c5u)]
 	public string? HeroUserName { get; set; } = default;
 
 	public new static DefaultLocalHeroNodeDebugData Create(DDLObject ddl) => new(ddl);

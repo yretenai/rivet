@@ -28,37 +28,37 @@ public class ShrubbingPref : DDLObjectType, IDDLObjectType<ShrubbingPref> {
 		Footprint = ddl.GetValue<float>(0x7cff393bu, Footprint);
 	}
 
-	[DDLRegistration(0x68f921f3u, "Algorithm")]
+	[DDLRegistration(0x17f853b5u, "Algorithm")]
 	public x6ad2490c Algorithm { get; set; } = x6ad2490c.Fixed;
 
-	[DDLRegistration(0x68f921f3u, "Rotation")]
+	[DDLRegistration(0xd37d2581u, "Rotation")]
 	public float Rotation { get; set; } = 0.00f;
 
-	[DDLRegistration(0x68f921f3u, "Rotation Random")]
+	[DDLRegistration(0x6a02ea61u, "Rotation Random")]
 	public float RotationRandom { get; set; } = 1.00f;
 
-	[DDLRegistration(0x68f921f3u, "Normal Tilt")]
+	[DDLRegistration(0x727f4856u, "Normal Tilt")]
 	public float NormalTilt { get; set; } = 1.00f;
 
-	[DDLRegistration(0x68f921f3u, "Scale")]
+	[DDLRegistration(0xf515e945u, "Scale")]
 	public float Scale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x68f921f3u, "Scale Random")]
+	[DDLRegistration(0x0ecc56a7u, "Scale Random")]
 	public float ScaleRandom { get; set; } = 1.00f;
 
-	[DDLRegistration(0x68f921f3u, "Wheel Controls")]
+	[DDLRegistration(0x1bea956bu, "Wheel Controls")]
 	public xc6714fdc WheelControl { get; set; } = xc6714fdc.Radius;
 
-	[DDLRegistration(0x68f921f3u, "Brush Radius")]
+	[DDLRegistration(0x0504203du, "Brush Radius")]
 	public float Radius { get; set; } = 2.00f;
 
-	[DDLRegistration(0x68f921f3u, "Brush Height")]
+	[DDLRegistration(0xcb35ab68u, "Brush Height")]
 	public float Height { get; set; } = 2.00f;
 
-	[DDLRegistration(0x68f921f3u, "Brush Density")]
+	[DDLRegistration(0xc14209c2u, "Brush Density")]
 	public float Density { get; set; } = 0.35f;
 
-	[DDLRegistration(0x68f921f3u, "Footprint")]
+	[DDLRegistration(0x7cff393bu, "Footprint")]
 	public float Footprint { get; set; } = 1.00f;
 
 	public static ShrubbingPref Create(DDLObject ddl) => new(ddl);

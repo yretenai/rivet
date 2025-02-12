@@ -19,10 +19,10 @@ public class LaunchChromeVault : DDLObjectType, IDDLObjectType<LaunchChromeVault
 		Search = ddl.GetObject<CompatVaultSearchCommand>(0x8a8895c0u);
 	}
 
-	[DDLRegistration(0x0e69a500u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x63e8ba6e Type { get; set; } = x63e8ba6e.ReplaceSceneNodes;
 
-	[DDLRegistration(0x0e69a500u)]
+	[DDLRegistration(0x8a8895c0u)]
 	public CompatVaultSearchCommand? Search { get; set; } = default;
 
 	public static LaunchChromeVault Create(DDLObject ddl) => new(ddl);

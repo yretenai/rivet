@@ -19,10 +19,10 @@ public class DamagePrimBase : DDLObjectType, IDDLObjectType<DamagePrimBase> {
 		LocalOffset = ddl.GetObject<DDLVector3>(0x46a4eea5u);
 	}
 
-	[DDLRegistration(0xe6d5259fu, "Primary Locator")]
+	[DDLRegistration(0x604b5af6u, "Primary Locator")]
 	public string? DamageLocator { get; set; } = default;
 
-	[DDLRegistration(0xe6d5259fu, "Local Offset", "This is an offset in model space.")]
+	[DDLRegistration(0x46a4eea5u, "Local Offset", "This is an offset in model space.")]
 	public DDLVector3? LocalOffset { get; set; } = default;
 
 	public static DamagePrimBase Create(DDLObject ddl) => new(ddl);

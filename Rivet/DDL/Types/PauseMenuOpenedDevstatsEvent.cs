@@ -22,19 +22,19 @@ public class PauseMenuOpenedDevstatsEvent : EventBase, IDDLObjectType<PauseMenuO
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x316b4aa6u, "Event ID", "Unique event ID for this event instance.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique event ID for this event instance.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x316b4aa6u, "Menu Segment ID", "Segment ID that matches with the segment ID in the corresponding PauseMenuClosed event.")]
+	[DDLRegistration(0x40f9a2c2u, "Menu Segment ID", "Segment ID that matches with the segment ID in the corresponding PauseMenuClosed event.")]
 	public string? MenuSegmentId { get; set; } = default;
 
-	[DDLRegistration(0x316b4aa6u, "Initial Tab", "The tab that the menu is initially opened to.")]
+	[DDLRegistration(0x18da9841u, "Initial Tab", "The tab that the menu is initially opened to.")]
 	public PauseTabs InitialTab { get; set; } = PauseTabs.Map;
 
-	[DDLRegistration(0x316b4aa6u, description: "Where the player was when the menu was opened.")]
+	[DDLRegistration(0xeadcc3e4u, description: "Where the player was when the menu was opened.")]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x316b4aa6u, description: "The player's primary segment (mission/objective/etc.) when the menu was opened.")]
+	[DDLRegistration(0x9e8725dbu, description: "The player's primary segment (mission/objective/etc.) when the menu was opened.")]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static PauseMenuOpenedDevstatsEvent Create(DDLObject ddl) => new(ddl);

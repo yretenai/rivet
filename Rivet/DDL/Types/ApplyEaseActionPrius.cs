@@ -21,16 +21,16 @@ public class ApplyEaseActionPrius : DDLObjectType, IDDLObjectType<ApplyEaseActio
 		EaseBlendOut = ddl.GetValue<float>(0x014d7084u, EaseBlendOut);
 	}
 
-	[DDLRegistration(0x4d91e99bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
-	[DDLRegistration(0x4d91e99bu, description: "Easing Type to use")]
+	[DDLRegistration(0x3d627360u, description: "Easing Type to use")]
 	public xfb252bce EaseBlendType { get; set; } = xfb252bce.EaseInOut;
 
-	[DDLRegistration(0x4d91e99bu, description: "When using easing mode, blending in value")]
+	[DDLRegistration(0x4a3eec5fu, description: "When using easing mode, blending in value")]
 	public float EaseBlendIn { get; set; } = 0.20f;
 
-	[DDLRegistration(0x4d91e99bu, description: "When using easing mode, blending out value")]
+	[DDLRegistration(0x014d7084u, description: "When using easing mode, blending out value")]
 	public float EaseBlendOut { get; set; } = 0.20f;
 
 	public static ApplyEaseActionPrius Create(DDLObject ddl) => new(ddl);

@@ -28,37 +28,37 @@ public class CurveFollowerBankingPrius : DDLObjectType, IDDLObjectType<CurveFoll
 		AccelTime = ddl.GetValue<float>(0x21cf03a7u, AccelTime);
 	}
 
-	[DDLRegistration(0x0bd7c1f6u, "Enabled?", "Whether this component starts enabled or not.")]
+	[DDLRegistration(0x6f36ca8bu, "Enabled?", "Whether this component starts enabled or not.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0x0bd7c1f6u, "Use Bank anim var?", "Whether the banking will be through a anim var ('Bank') or by rotating the actor instead. Note that the Bank anim var should go from -max_angle to max_angle unless the normalized option below is checked (in which case, 0-1).")]
+	[DDLRegistration(0x1e1c5a38u, "Use Bank anim var?", "Whether the banking will be through a anim var ('Bank') or by rotating the actor instead. Note that the Bank anim var should go from -max_angle to max_angle unless the normalized option below is checked (in which case, 0-1).")]
 	public bool UseBankAnim { get; set; } = false;
 
-	[DDLRegistration(0x0bd7c1f6u, "Use Lean anim var?", "Whether the banking will be through a anim var ('Lean') or by rotating the actor instead. Note that the Lean anim var should go from -max_angle to max_angle unless the normalized option below is checked (in which case, 0-1).")]
+	[DDLRegistration(0x18350f9au, "Use Lean anim var?", "Whether the banking will be through a anim var ('Lean') or by rotating the actor instead. Note that the Lean anim var should go from -max_angle to max_angle unless the normalized option below is checked (in which case, 0-1).")]
 	public bool UseLeanAnimVar { get; set; } = false;
 
-	[DDLRegistration(0x0bd7c1f6u, "Normalize anim var?", "We generally just set the anim var to the actual bank angle (<= max bank angle), setting this will make us normalize the banking angle and set the anim var to a value 0-1 (0 = -max_angle, 1 = max_angle, 0.5 = no bank).")]
+	[DDLRegistration(0x6c86d595u, "Normalize anim var?", "We generally just set the anim var to the actual bank angle (<= max bank angle), setting this will make us normalize the banking angle and set the anim var to a value 0-1 (0 = -max_angle, 1 = max_angle, 0.5 = no bank).")]
 	public bool NormalizeBank { get; set; } = false;
 
-	[DDLRegistration(0x0bd7c1f6u, "Reverse normalized range?", "If the above is checked to normalize the anim var, this will switch the range (max_angle to -max_angle corresponds to 0-1. This is used in case the anim var set up in the animset is in the opposite direction.")]
+	[DDLRegistration(0x4a0fccadu, "Reverse normalized range?", "If the above is checked to normalize the anim var, this will switch the range (max_angle to -max_angle corresponds to 0-1. This is used in case the anim var set up in the animset is in the opposite direction.")]
 	public bool ReverseNormBank { get; set; } = false;
 
-	[DDLRegistration(0x0bd7c1f6u, "Max Banking Angle", "The maximum banking angle (in degrees) we should use.")]
+	[DDLRegistration(0x289fc108u, "Max Banking Angle", "The maximum banking angle (in degrees) we should use.")]
 	public float MaxBankAngle { get; set; } = 45.00f;
 
-	[DDLRegistration(0x0bd7c1f6u, "Speed for Max Angle", "The amount of max banking should be dependent on the speed of the actor - this will correspond a speed for the max banking angle and use cap for the banking angle based on a linear interpolation.")]
+	[DDLRegistration(0xd2b9577fu, "Speed for Max Angle", "The amount of max banking should be dependent on the speed of the actor - this will correspond a speed for the max banking angle and use cap for the banking angle based on a linear interpolation.")]
 	public float SpeedForMaxAngle { get; set; } = 20.00f;
 
-	[DDLRegistration(0x0bd7c1f6u, "Look Ahead Time", "Amount of 'forward looking'; the time before a turn that we will start banking and to start easing out (when approaching a straight).")]
+	[DDLRegistration(0x463883afu, "Look Ahead Time", "Amount of 'forward looking'; the time before a turn that we will start banking and to start easing out (when approaching a straight).")]
 	public float LookAheadTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x0bd7c1f6u, "Time for Max Bank", "The time it should take for the actor to go from 0 degrees to the max bank angle.")]
+	[DDLRegistration(0x0380feeau, "Time for Max Bank", "The time it should take for the actor to go from 0 degrees to the max bank angle.")]
 	public float TimeToMaxBank { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0bd7c1f6u, "Time to No Bank", "The time it should take when exiting a turn (from max bank) to remove the bank.")]
+	[DDLRegistration(0x9958de50u, "Time to No Bank", "The time it should take when exiting a turn (from max bank) to remove the bank.")]
 	public float TimeToExitBank { get; set; } = 0.50f;
 
-	[DDLRegistration(0x0bd7c1f6u, "Accel Time", "If > 0, the time to hit max banking speed.  Using acceleration will soften the banking so it's not as jittery.")]
+	[DDLRegistration(0x21cf03a7u, "Accel Time", "If > 0, the time to hit max banking speed.  Using acceleration will soften the banking so it's not as jittery.")]
 	public float AccelTime { get; set; } = 0.50f;
 
 	public static CurveFollowerBankingPrius Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class CurveFollowerAutoStopperPrius : DDLObjectType, IDDLObjectType<Curve
 		ResumeDist = ddl.GetValue<float>(0xa5c98a92u, ResumeDist);
 	}
 
-	[DDLRegistration(0xd9d54076u, "Enabled?", "Whether this component starts enabled or not.")]
+	[DDLRegistration(0x6f36ca8bu, "Enabled?", "Whether this component starts enabled or not.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0xd9d54076u, "Stop Distance", "The ideal separation to keep with things (aka, the distance between us and the thing we stopped for).")]
+	[DDLRegistration(0xa5a1fdc7u, "Stop Distance", "The ideal separation to keep with things (aka, the distance between us and the thing we stopped for).")]
 	public float StopDist { get; set; } = 3.00f;
 
-	[DDLRegistration(0xd9d54076u, "Look Ahead Distance", "For AmbientPathFollowers only: How far ahead we look for something we might run into. Note that we will use whatever deceleration will have us stop in time and give us our desired stop distance.")]
+	[DDLRegistration(0xa8d0cb1du, "Look Ahead Distance", "For AmbientPathFollowers only: How far ahead we look for something we might run into. Note that we will use whatever deceleration will have us stop in time and give us our desired stop distance.")]
 	public float LookAheadDist { get; set; } = 10.00f;
 
-	[DDLRegistration(0xd9d54076u, "Override Accel?", "Whether to override the acceleration of this actor (if it is an ambient curve follower) when resuming.")]
+	[DDLRegistration(0x6de8a897u, "Override Accel?", "Whether to override the acceleration of this actor (if it is an ambient curve follower) when resuming.")]
 	public bool OverrideAccel { get; set; } = false;
 
-	[DDLRegistration(0xd9d54076u, "Resume Accel", "If set to override the acceleration, we'll use this acceleration when resuming when slowed/stopped.")]
+	[DDLRegistration(0xb202f9e5u, "Resume Accel", "If set to override the acceleration, we'll use this acceleration when resuming when slowed/stopped.")]
 	public float ResumeAccel { get; set; } = 5.00f;
 
-	[DDLRegistration(0xd9d54076u, "Only one coll check?", "Whether to use only 1 collision request from the center of the object, for performance (otherwise uses a max of 3 depending on the dimensions of the bounding box).")]
+	[DDLRegistration(0x31686ff3u, "Only one coll check?", "Whether to use only 1 collision request from the center of the object, for performance (otherwise uses a max of 3 depending on the dimensions of the bounding box).")]
 	public bool OneCollCheck { get; set; } = true;
 
-	[DDLRegistration(0xd9d54076u, "Stopped coll check time", "The amount of time between coll checks when stopped (for performance).")]
+	[DDLRegistration(0x38035175u, "Stopped coll check time", "The amount of time between coll checks when stopped (for performance).")]
 	public float StopCollCheckTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0xd9d54076u, "Resume Early Dist", "For AmbientCurveFollowers, allow for an early start with the hit actor (if it is another curve follower) is this distance or greater away from our stop distance.")]
+	[DDLRegistration(0xa5c98a92u, "Resume Early Dist", "For AmbientCurveFollowers, allow for an early start with the hit actor (if it is another curve follower) is this distance or greater away from our stop distance.")]
 	public float ResumeDist { get; set; } = 0.00f;
 
 	public static CurveFollowerAutoStopperPrius Create(DDLObject ddl) => new(ddl);

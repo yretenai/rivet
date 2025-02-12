@@ -19,10 +19,10 @@ public class TriggerEmergentDialogActionPrius : DDLObjectType, IDDLObjectType<Tr
 		Event = ddl.GetEnum<DialogTriggerGame>(0x22fdc666u, DialogTriggerGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x256d6c07u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
-	[DDLRegistration(0x256d6c07u)]
+	[DDLRegistration(0x22fdc666u)]
 	public DialogTriggerGame Event { get; set; } = DialogTriggerGame.None;
 
 	public static TriggerEmergentDialogActionPrius Create(DDLObject ddl) => new(ddl);

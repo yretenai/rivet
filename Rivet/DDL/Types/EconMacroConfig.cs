@@ -18,7 +18,7 @@ public class EconMacroConfig : ConfigBase, IDDLObjectType<EconMacroConfig> {
 		Econ = ddl.GetObjects<MacroEcon>(0x1fd256d3u);
 	}
 
-	[DDLRegistration(0x0aa59542u)]
+	[DDLRegistration(0x1fd256d3u)]
 	public List<MacroEcon?> Econ { get; set; } = [];
 
 	public new static EconMacroConfig Create(DDLObject ddl) => new(ddl);

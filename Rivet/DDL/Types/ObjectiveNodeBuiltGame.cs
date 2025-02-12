@@ -20,13 +20,13 @@ public class ObjectiveNodeBuiltGame : ObjectiveNodeBuiltShared, IDDLObjectType<O
 		ContributesToProgress = ddl.GetValue<bool>(0x5e722b74u, ContributesToProgress);
 	}
 
-	[DDLRegistration(0x740486f4u)]
+	[DDLRegistration(0x88452526u)]
 	public ObjectiveLoadInfo? DebugLoadInfo { get; set; } = default;
 
-	[DDLRegistration(0x740486f4u)]
+	[DDLRegistration(0x38548038u)]
 	public string? PlanetName { get; set; } = default;
 
-	[DDLRegistration(0x740486f4u)]
+	[DDLRegistration(0x5e722b74u)]
 	public bool ContributesToProgress { get; set; } = false;
 
 	public new static ObjectiveNodeBuiltGame Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class KamehamehaChargeUpCompletedEvent : EventBase, IDDLObjectType<Kameha
 		VersionIndex = ddl.GetValue<uint>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0x963d531eu)]
+	[DDLRegistration(0x6e091c9au)]
 	public uint VersionIndex { get; set; } = 0x00000000;
 
 	public new static KamehamehaChargeUpCompletedEvent Create(DDLObject ddl) => new(ddl);

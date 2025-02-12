@@ -18,7 +18,7 @@ public class ShadowDimensionTraversablePrius : DDLObjectType, IDDLObjectType<Sha
 		ActivationType = ddl.GetEnum<x723e41b3>(0x79aee756u, x723e41b3Values.Lookup);
 	}
 
-	[DDLRegistration(0x3262e7f3u)]
+	[DDLRegistration(0x79aee756u)]
 	public x723e41b3 ActivationType { get; set; } = x723e41b3.OffWhenActive;
 
 	public static ShadowDimensionTraversablePrius Create(DDLObject ddl) => new(ddl);

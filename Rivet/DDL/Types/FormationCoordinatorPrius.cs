@@ -25,28 +25,28 @@ public class FormationCoordinatorPrius : DDLObjectType, IDDLObjectType<Formation
 		BotTemplate = ddl.GetValue<RivetAssetId>(0x6874a056u, BotTemplate);
 	}
 
-	[DDLRegistration(0xaae91262u)]
+	[DDLRegistration(0x382fe313u)]
 	public RivetAssetId SpawnIntoGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xaae91262u)]
+	[DDLRegistration(0xe3655ff0u)]
 	public float WaitDuration { get; set; } = 4.00f;
 
-	[DDLRegistration(0xaae91262u)]
+	[DDLRegistration(0xa0879ea8u)]
 	public float AttackDuration { get; set; } = 0.50f;
 
-	[DDLRegistration(0xaae91262u)]
+	[DDLRegistration(0x3a524cf4u)]
 	public float NumCycles { get; set; } = 1.00f;
 
-	[DDLRegistration(0xaae91262u)]
+	[DDLRegistration(0x2c12d0fdu)]
 	public List<FormationEntry?> Entries { get; set; } = [];
 
-	[DDLRegistration(0xaae91262u)]
+	[DDLRegistration(0x3c145470u)]
 	public List<FormationMotionInfo?> MotionInfo { get; set; } = [];
 
-	[DDLRegistration(0xaae91262u, description: "Pivot actor to move relative to.  NONE means move relative to attack point bounds center")]
+	[DDLRegistration(0x24ff8f01u, description: "Pivot actor to move relative to.  NONE means move relative to attack point bounds center")]
 	public RivetAssetId MotionPivotActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xaae91262u)]
+	[DDLRegistration(0x6874a056u)]
 	public RivetAssetId BotTemplate { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static FormationCoordinatorPrius Create(DDLObject ddl) => new(ddl);

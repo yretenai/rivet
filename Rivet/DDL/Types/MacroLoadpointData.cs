@@ -22,19 +22,19 @@ public class MacroLoadpointData : DDLObjectType, IDDLObjectType<MacroLoadpointDa
 		CheckpointName = ddl.GetString(0x71d061f1) ?? CheckpointName;
 	}
 
-	[DDLRegistration(0x82a6774au, description: "Mission graph to start")]
+	[DDLRegistration(0x7f6dce4cu, description: "Mission graph to start")]
 	public AssetReferenceDef? MissionGraph { get; set; } = default;
 
-	[DDLRegistration(0x82a6774au, "Mission Name", "For Debug and Non-Final Demos etc only where you need to start mid graph - (Optional) mission name to start")]
+	[DDLRegistration(0xa5c30e60u, "Mission Name", "For Debug and Non-Final Demos etc only where you need to start mid graph - (Optional) mission name to start")]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x82a6774au, "Objective Name", "For Debug and Non-Final Demos etc only where you need to start mid graph - (Optional) objective name to start (or AVAILABLE for available state)")]
+	[DDLRegistration(0x58746b9bu, "Objective Name", "For Debug and Non-Final Demos etc only where you need to start mid graph - (Optional) objective name to start (or AVAILABLE for available state)")]
 	public string? ObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0x82a6774au, "Loadpoint Name LocTag", "Localization tag for loadpoint name.")]
+	[DDLRegistration(0xc3b90c7fu, "Loadpoint Name LocTag", "Localization tag for loadpoint name.")]
 	public string? LoadpointNameLocTag { get; set; } = default;
 
-	[DDLRegistration(0x82a6774au, "Checkpoint", "Name of the first checkpoint (should match definition in LevelController actor in the level).")]
+	[DDLRegistration(0x71d061f1u, "Checkpoint", "Name of the first checkpoint (should match definition in LevelController actor in the level).")]
 	public string? CheckpointName { get; set; } = default;
 
 	public static MacroLoadpointData Create(DDLObject ddl) => new(ddl);

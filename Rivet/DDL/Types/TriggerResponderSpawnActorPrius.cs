@@ -24,25 +24,25 @@ public class TriggerResponderSpawnActorPrius : TriggerResponderBasePrius, IDDLOb
 		BreakableHitVel = ddl.GetValue<float>(0x53ee5219u, BreakableHitVel);
 	}
 
-	[DDLRegistration(0xd5d47ec9u, "Actor to Spawn", "The actor we want to spawn on trigger of this actor.")]
+	[DDLRegistration(0xe942b41eu, "Actor to Spawn", "The actor we want to spawn on trigger of this actor.")]
 	public RivetAssetId ActorToSpawn { get; set; } = default;
 
-	[DDLRegistration(0xd5d47ec9u, "Break on Spawn?", "Whether to break this actor when spawning.")]
+	[DDLRegistration(0x3c7b7d30u, "Break on Spawn?", "Whether to break this actor when spawning.")]
 	public bool BreakOnSpawn { get; set; } = false;
 
-	[DDLRegistration(0xd5d47ec9u, "Engage heroes?", "Whether to make the spawned actor, should he have an awareness, engage the heroes when spawned.")]
+	[DDLRegistration(0x012ca444u, "Engage heroes?", "Whether to make the spawned actor, should he have an awareness, engage the heroes when spawned.")]
 	public bool EngageHeroesOnSpawn { get; set; } = false;
 
-	[DDLRegistration(0xd5d47ec9u, "Disable Loot Drop?", "Whether to disable all loot drop components on this actor when we are enabled (so we don't spawn an enemy and loot).")]
+	[DDLRegistration(0xc8d86167u, "Disable Loot Drop?", "Whether to disable all loot drop components on this actor when we are enabled (so we don't spawn an enemy and loot).")]
 	public bool DisableLootDropComp { get; set; } = true;
 
-	[DDLRegistration(0xd5d47ec9u, "Spawn Offset", "Offset from this actor in which to spawn at.")]
+	[DDLRegistration(0xaeb205ceu, "Spawn Offset", "Offset from this actor in which to spawn at.")]
 	public DDLVector3? SpawnOffset { get; set; } = default;
 
-	[DDLRegistration(0xd5d47ec9u, "Spawn Velocity", "Initial spawn velocity ONLY SUPPORTED ON SOME ACTORS")]
+	[DDLRegistration(0x209bd310u, "Spawn Velocity", "Initial spawn velocity ONLY SUPPORTED ON SOME ACTORS")]
 	public DDLVector3? SpawnVelocity { get; set; } = default;
 
-	[DDLRegistration(0xd5d47ec9u, "Breakable hit factor", "Amount of hit velocity from a breakable to use")]
+	[DDLRegistration(0x53ee5219u, "Breakable hit factor", "Amount of hit velocity from a breakable to use")]
 	public float BreakableHitVel { get; set; } = 10.00f;
 
 	public new static TriggerResponderSpawnActorPrius Create(DDLObject ddl) => new(ddl);

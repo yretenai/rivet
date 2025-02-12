@@ -18,7 +18,7 @@ public class DialogPromptLineText : DialogPromptLine, IDDLObjectType<DialogPromp
 		LocalizationTag = ddl.GetString(0x3446b219) ?? LocalizationTag;
 	}
 
-	[DDLRegistration(0xa2779294u)]
+	[DDLRegistration(0x3446b219u)]
 	public string? LocalizationTag { get; set; } = default;
 
 	public new static DialogPromptLineText Create(DDLObject ddl) => new(ddl);

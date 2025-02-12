@@ -22,19 +22,19 @@ public class HeroSpeedConfigCollection : DDLObjectType, IDDLObjectType<HeroSpeed
 		RunDecel = ddl.GetValue<float>(0x4a6c5b02u, RunDecel);
 	}
 
-	[DDLRegistration(0xb9975e6bu, "Normal Speed")]
+	[DDLRegistration(0xea9590d5u, "Normal Speed")]
 	public HeroSpeedConfig? NormalSpeedConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9975e6bu, "Aim Speed")]
+	[DDLRegistration(0x295decfau, "Aim Speed")]
 	public HeroSpeedConfig? AimSpeedConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9975e6bu, "Jump Speed")]
+	[DDLRegistration(0x76a7baf5u, "Jump Speed")]
 	public HeroSpeedConfig? JumpSpeedConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9975e6bu)]
+	[DDLRegistration(0xa7e78baeu)]
 	public float RunAccel { get; set; } = 35.00f;
 
-	[DDLRegistration(0xb9975e6bu)]
+	[DDLRegistration(0x4a6c5b02u)]
 	public float RunDecel { get; set; } = 50.00f;
 
 	public static HeroSpeedConfigCollection Create(DDLObject ddl) => new(ddl);

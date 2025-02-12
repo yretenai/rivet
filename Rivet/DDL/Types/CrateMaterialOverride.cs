@@ -20,13 +20,13 @@ public class CrateMaterialOverride : DDLObjectType, IDDLObjectType<CrateMaterial
 		MaterialType = ddl.GetEnum<x2351894b>(0x1433c59bu, x2351894bValues.Lookup);
 	}
 
-	[DDLRegistration(0x79d82f88u)]
+	[DDLRegistration(0xffafa5a1u)]
 	public RivetAssetId MaterialOverride { get; set; } = default;
 
-	[DDLRegistration(0x79d82f88u)]
+	[DDLRegistration(0x981e6927u)]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x79d82f88u)]
+	[DDLRegistration(0x1433c59bu)]
 	public x2351894b MaterialType { get; set; } = x2351894b.OverrideBase;
 
 	public static CrateMaterialOverride Create(DDLObject ddl) => new(ddl);

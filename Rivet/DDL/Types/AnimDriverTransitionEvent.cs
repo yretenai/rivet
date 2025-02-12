@@ -20,13 +20,13 @@ public class AnimDriverTransitionEvent : EventBase, IDDLObjectType<AnimDriverTra
 		NextDriver = ddl.GetString(0x21fc6036) ?? NextDriver;
 	}
 
-	[DDLRegistration(0xd293eb88u, "Layer Id", "Id of the layer whose active driver was changed.")]
+	[DDLRegistration(0xd7132e94u, "Layer Id", "Id of the layer whose active driver was changed.")]
 	public uint LayerId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd293eb88u, "Previous Driver", "Name of the driver on this layer that just got deactivated. Empty if there was no previous driver for this layer.")]
+	[DDLRegistration(0xa01bcb06u, "Previous Driver", "Name of the driver on this layer that just got deactivated. Empty if there was no previous driver for this layer.")]
 	public string? PrevDriver { get; set; } = default;
 
-	[DDLRegistration(0xd293eb88u, "Next Driver", "Name of the driver on this layer that just got activated. Empty if there is no new driver (i.e. the layer deactivated)")]
+	[DDLRegistration(0x21fc6036u, "Next Driver", "Name of the driver on this layer that just got activated. Empty if there is no new driver (i.e. the layer deactivated)")]
 	public string? NextDriver { get; set; } = default;
 
 	public new static AnimDriverTransitionEvent Create(DDLObject ddl) => new(ddl);

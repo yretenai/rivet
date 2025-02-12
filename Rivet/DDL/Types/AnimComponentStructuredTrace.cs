@@ -21,16 +21,16 @@ public class AnimComponentStructuredTrace : DDLObjectType, IDDLObjectType<AnimCo
 		Message = ddl.GetString(0xb7575347) ?? Message;
 	}
 
-	[DDLRegistration(0x742a6860u)]
+	[DDLRegistration(0x50316047u)]
 	public int MTime { get; set; } = 0;
 
-	[DDLRegistration(0x742a6860u)]
+	[DDLRegistration(0x8fe149a4u)]
 	public int STime { get; set; } = 0;
 
-	[DDLRegistration(0x742a6860u)]
+	[DDLRegistration(0xcc4a4d21u)]
 	public string? ActorName { get; set; } = default;
 
-	[DDLRegistration(0x742a6860u)]
+	[DDLRegistration(0xb7575347u)]
 	public string? Message { get; set; } = default;
 
 	public static AnimComponentStructuredTrace Create(DDLObject ddl) => new(ddl);

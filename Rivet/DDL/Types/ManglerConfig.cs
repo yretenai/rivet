@@ -27,34 +27,34 @@ public class ManglerConfig : DDLObjectType, IDDLObjectType<ManglerConfig> {
 		OverloadLevel = ddl.GetValue<uint>(0x91f73e07u, OverloadLevel);
 	}
 
-	[DDLRegistration(0xc0f30ae3u)]
+	[DDLRegistration(0xa4c3f833u)]
 	public float TimeBetweenAttacksMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc0f30ae3u)]
+	[DDLRegistration(0x98cec76au)]
 	public float TimeBetweenAttacksMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc0f30ae3u)]
+	[DDLRegistration(0x511c363cu)]
 	public float PreMoveTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc0f30ae3u)]
+	[DDLRegistration(0x1f570251u)]
 	public float MoveSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc0f30ae3u)]
+	[DDLRegistration(0x774a542bu)]
 	public float ShockwaveTellDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc0f30ae3u)]
+	[DDLRegistration(0xc4a4377du)]
 	public float ShockwaveDuration { get; set; } = 1.85f;
 
-	[DDLRegistration(0xc0f30ae3u)]
+	[DDLRegistration(0x180968d3u)]
 	public float ShockwaveRadius { get; set; } = 50.00f;
 
-	[DDLRegistration(0xc0f30ae3u)]
+	[DDLRegistration(0x39ff1c65u)]
 	public float ShockwaveThiccness { get; set; } = 3.00f;
 
-	[DDLRegistration(0xc0f30ae3u)]
+	[DDLRegistration(0x43f0a9aau)]
 	public bool ShockwaveUnlocked { get; set; } = false;
 
-	[DDLRegistration(0xc0f30ae3u)]
+	[DDLRegistration(0x91f73e07u)]
 	public uint OverloadLevel { get; set; } = 0x00000000;
 
 	public static ManglerConfig Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class EmergentVOConfig : ConfigBase, IDDLObjectType<EmergentVOConfig> {
 		RuleArray = ddl.GetObjects<DialogRuleArray>(0xecd171d3u);
 	}
 
-	[DDLRegistration(0xde8b92bfu)]
+	[DDLRegistration(0xecd171d3u)]
 	public List<DialogRuleArray?> RuleArray { get; set; } = [];
 
 	public new static EmergentVOConfig Create(DDLObject ddl) => new(ddl);

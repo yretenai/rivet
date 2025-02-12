@@ -18,7 +18,7 @@ public class DimensionalPulseTargetSwapPrius : DimensionalPulseTargetPrius, IDDL
 		NextActor = ddl.GetValue<RivetAssetId>(0x64fc2030u, NextActor);
 	}
 
-	[DDLRegistration(0xdb41ced7u, description: "Next actor to swap to. Show the post hit effect on the next actor (not this one).")]
+	[DDLRegistration(0x64fc2030u, description: "Next actor to swap to. Show the post hit effect on the next actor (not this one).")]
 	public RivetAssetId NextActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static DimensionalPulseTargetSwapPrius Create(DDLObject ddl) => new(ddl);

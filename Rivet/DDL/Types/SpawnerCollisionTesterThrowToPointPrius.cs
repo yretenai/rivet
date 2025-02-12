@@ -20,13 +20,13 @@ public class SpawnerCollisionTesterThrowToPointPrius : DDLObjectType, IDDLObject
 		ThrowHeight = ddl.GetValue<float>(0xd7e273b9u, ThrowHeight);
 	}
 
-	[DDLRegistration(0xac5b393eu, description: "Tolerance for adjusting the spawn location to nearest nav")]
+	[DDLRegistration(0x6f905aedu, description: "Tolerance for adjusting the spawn location to nearest nav")]
 	public float DistanceTolerance { get; set; } = 2.00f;
 
-	[DDLRegistration(0xac5b393eu, description: "Enables using a projectile arc check instead of straight line collision")]
+	[DDLRegistration(0x48a7d6bfu, description: "Enables using a projectile arc check instead of straight line collision")]
 	public bool DoArcCheck { get; set; } = false;
 
-	[DDLRegistration(0xac5b393eu)]
+	[DDLRegistration(0xd7e273b9u)]
 	public float ThrowHeight { get; set; } = 3.00f;
 
 	public static SpawnerCollisionTesterThrowToPointPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class SoundFlagsEngineItem : DDLObjectType, IDDLObjectType<SoundFlagsEngi
 		ShowDebugHud = ddl.GetValue<bool>(0x750e7efcu, ShowDebugHud);
 	}
 
-	[DDLRegistration(0xe121bad7u)]
+	[DDLRegistration(0x750e7efcu)]
 	public bool ShowDebugHud { get; set; } = false;
 
 	public static SoundFlagsEngineItem Create(DDLObject ddl) => new(ddl);

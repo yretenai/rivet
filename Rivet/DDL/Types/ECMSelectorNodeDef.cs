@@ -23,22 +23,22 @@ public class ECMSelectorNodeDef : DDLObjectType, IDDLObjectType<ECMSelectorNodeD
 		Connections = ddl.GetObjects<ECMNodeConnection>(0x322aadceu);
 	}
 
-	[DDLRegistration(0x43834271u)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x43834271u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x43834271u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x43834271u)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = false;
 
-	[DDLRegistration(0x43834271u, "Operator")]
+	[DDLRegistration(0xbc4e9799u, "Operator")]
 	public xec77cf54 Type { get; set; } = xec77cf54.SelOpEQ;
 
-	[DDLRegistration(0x43834271u)]
+	[DDLRegistration(0x322aadceu)]
 	public List<ECMNodeConnection?> Connections { get; set; } = [];
 
 	public static ECMSelectorNodeDef Create(DDLObject ddl) => new(ddl);

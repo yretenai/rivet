@@ -19,10 +19,10 @@ public class ItemInventoryPrius : DDLObjectType, IDDLObjectType<ItemInventoryPri
 		SyncType = ddl.GetEnum<SyncTypes>(0x25c8252eu, SyncTypesValues.Lookup);
 	}
 
-	[DDLRegistration(0xda128d6eu)]
+	[DDLRegistration(0xc750e4dau)]
 	public uint Size { get; set; } = 0x00000010;
 
-	[DDLRegistration(0xda128d6eu)]
+	[DDLRegistration(0x25c8252eu)]
 	public SyncTypes SyncType { get; set; } = SyncTypes.SyncContinuous;
 
 	public static ItemInventoryPrius Create(DDLObject ddl) => new(ddl);

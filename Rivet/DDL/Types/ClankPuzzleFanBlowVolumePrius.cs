@@ -20,13 +20,13 @@ public class ClankPuzzleFanBlowVolumePrius : DDLObjectType, IDDLObjectType<Clank
 		SetBotRunDirection = ddl.GetValue<bool>(0x6075c328u, SetBotRunDirection);
 	}
 
-	[DDLRegistration(0x942ce58du, description: "z meters per second in local space")]
+	[DDLRegistration(0x6496917cu, description: "z meters per second in local space")]
 	public float LocalZMotion { get; set; } = 1.00f;
 
-	[DDLRegistration(0x942ce58du, description: "x meters per second in local space")]
+	[DDLRegistration(0xf3098055u, description: "x meters per second in local space")]
 	public float LocalXMotion { get; set; } = 0.00f;
 
-	[DDLRegistration(0x942ce58du)]
+	[DDLRegistration(0x6075c328u)]
 	public bool SetBotRunDirection { get; set; } = true;
 
 	public static ClankPuzzleFanBlowVolumePrius Create(DDLObject ddl) => new(ddl);

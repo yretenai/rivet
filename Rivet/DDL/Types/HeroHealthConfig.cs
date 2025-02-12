@@ -20,13 +20,13 @@ public class HeroHealthConfig : DDLObjectType, IDDLObjectType<HeroHealthConfig> 
 		PostHitReactImmunity = ddl.GetValue<float>(0x195242ceu, PostHitReactImmunity);
 	}
 
-	[DDLRegistration(0xd5e3d13du, "Post Cinematic Immunity")]
+	[DDLRegistration(0xacaf5004u, "Post Cinematic Immunity")]
 	public float PostCinematicImmunity { get; set; } = 0.50f;
 
-	[DDLRegistration(0xd5e3d13du, "Post Fade In Immunity")]
+	[DDLRegistration(0xf08f0e37u, "Post Fade In Immunity")]
 	public float PostFadeInImmunity { get; set; } = 0.50f;
 
-	[DDLRegistration(0xd5e3d13du, "Post Hit React Immunity")]
+	[DDLRegistration(0x195242ceu, "Post Hit React Immunity")]
 	public float PostHitReactImmunity { get; set; } = 0.50f;
 
 	public static HeroHealthConfig Create(DDLObject ddl) => new(ddl);

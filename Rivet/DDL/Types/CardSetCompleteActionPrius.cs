@@ -19,10 +19,10 @@ public class CardSetCompleteActionPrius : DDLObjectType, IDDLObjectType<CardSetC
 		CardSet = ddl.GetEnum<xa57aac73>(0xf33e5f14u, xa57aac73Values.Lookup);
 	}
 
-	[DDLRegistration(0xebbabe76u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0xebbabe76u, description: "Trading card set")]
+	[DDLRegistration(0xf33e5f14u, description: "Trading card set")]
 	public xa57aac73 CardSet { get; set; } = xa57aac73.Veldin;
 
 	public static CardSetCompleteActionPrius Create(DDLObject ddl) => new(ddl);

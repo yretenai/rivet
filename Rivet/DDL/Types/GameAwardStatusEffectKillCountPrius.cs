@@ -18,7 +18,7 @@ public class GameAwardStatusEffectKillCountPrius : AwardBasePrius, IDDLObjectTyp
 		RequiredStatusEffect = ddl.GetObject<StatusEffectBasePrius>(0xedfb7a1bu);
 	}
 
-	[DDLRegistration(0x424284aeu)]
+	[DDLRegistration(0xedfb7a1bu)]
 	public StatusEffectBasePrius? RequiredStatusEffect { get; set; } = default;
 
 	public new static GameAwardStatusEffectKillCountPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class VehicleObstaclePrius : DDLObjectType, IDDLObjectType<VehicleObstacl
 		RemoveVehicles = ddl.GetValue<bool>(0x80d67c2fu, RemoveVehicles);
 	}
 
-	[DDLRegistration(0x299f4ae2u, "Remove Vehicles While Active?", "Should we remove all vehicles within this volume while this volume actor is active?")]
+	[DDLRegistration(0x80d67c2fu, "Remove Vehicles While Active?", "Should we remove all vehicles within this volume while this volume actor is active?")]
 	public bool RemoveVehicles { get; set; } = false;
 
 	public static VehicleObstaclePrius Create(DDLObject ddl) => new(ddl);

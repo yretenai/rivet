@@ -19,10 +19,10 @@ public class DamageModifierConditionalInvulnerablePrius : DamageModifierInvulner
 		AllegianceFilter = ddl.GetValue<uint>(0x1b32101du, AllegianceFilter);
 	}
 
-	[DDLRegistration(0x14670e2eu, "Damage Type Filter")]
+	[DDLRegistration(0xa75ecb2fu, "Damage Type Filter")]
 	public List<DamageTypesGame> DamageFilter { get; set; } = [];
 
-	[DDLRegistration(0x14670e2eu)]
+	[DDLRegistration(0x1b32101du)]
 	public uint AllegianceFilter { get; set; } = 0x00000000;
 
 	public new static DamageModifierConditionalInvulnerablePrius Create(DDLObject ddl) => new(ddl);

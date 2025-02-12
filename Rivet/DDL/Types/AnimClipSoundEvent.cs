@@ -18,7 +18,7 @@ public class AnimClipSoundEvent : DDLObjectType, IDDLObjectType<AnimClipSoundEve
 		SoundBankId = ddl.GetValue<uint>(0xb306d7bbu, SoundBankId);
 	}
 
-	[DDLRegistration(0x04a5f49au)]
+	[DDLRegistration(0xb306d7bbu)]
 	public uint SoundBankId { get; set; } = 0x00000000;
 
 	public static AnimClipSoundEvent Create(DDLObject ddl) => new(ddl);

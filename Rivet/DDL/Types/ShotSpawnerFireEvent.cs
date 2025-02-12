@@ -20,13 +20,13 @@ public class ShotSpawnerFireEvent : EventBase, IDDLObjectType<ShotSpawnerFireEve
 		SkipInitialExternalMotion = ddl.GetValue<bool>(0x7abb3555u, SkipInitialExternalMotion);
 	}
 
-	[DDLRegistration(0x726af75fu)]
+	[DDLRegistration(0xc409037fu)]
 	public uint ShotIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x726af75fu)]
+	[DDLRegistration(0xa761bc40u)]
 	public string? LocatorOverride { get; set; } = default;
 
-	[DDLRegistration(0x726af75fu)]
+	[DDLRegistration(0x7abb3555u)]
 	public bool SkipInitialExternalMotion { get; set; } = false;
 
 	public new static ShotSpawnerFireEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MissionNodeBuiltTableEntry : DDLObjectType, IDDLObjectType<MissionN
 		MissionData = ddl.GetObject<MissionNodeBuiltShared>(0x56138305u);
 	}
 
-	[DDLRegistration(0x06f6b3c5u)]
+	[DDLRegistration(0x56138305u)]
 	public MissionNodeBuiltShared? MissionData { get; set; } = default;
 
 	public static MissionNodeBuiltTableEntry Create(DDLObject ddl) => new(ddl);

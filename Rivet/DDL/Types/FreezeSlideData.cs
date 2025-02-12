@@ -28,37 +28,37 @@ public class FreezeSlideData : DDLObjectType, IDDLObjectType<FreezeSlideData> {
 		RotationDecel = ddl.GetValue<float>(0x5ac295a1u, RotationDecel);
 	}
 
-	[DDLRegistration(0x0b1475c4u, "Direct Hit Speed", "The speed a sliding character will move if hit by the icicle bomb")]
+	[DDLRegistration(0x9db9e90au, "Direct Hit Speed", "The speed a sliding character will move if hit by the icicle bomb")]
 	public float DirectHitSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x0b1475c4u, "Min Speed", "The minimum speed a sliding character will start at.")]
+	[DDLRegistration(0xf0d89680u, "Min Speed", "The minimum speed a sliding character will start at.")]
 	public float MinSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0x0b1475c4u, "Hit Distance For Min Speed", "The character needs to be frozen at by a shot from this distance or greater to move at Min Speed")]
+	[DDLRegistration(0x4ee426feu, "Hit Distance For Min Speed", "The character needs to be frozen at by a shot from this distance or greater to move at Min Speed")]
 	public float HitDistanceForMinSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0b1475c4u, "Max Speed", "The maximum speed a sliding character will start at.")]
+	[DDLRegistration(0x16b83961u, "Max Speed", "The maximum speed a sliding character will start at.")]
 	public float MaxSpeed { get; set; } = 8.00f;
 
-	[DDLRegistration(0x0b1475c4u, "Hit Distance For Max Speed", "The character needs to be frozen at by a shot from this distance or greater to move at Min Speed")]
+	[DDLRegistration(0xa884891fu, "Hit Distance For Max Speed", "The character needs to be frozen at by a shot from this distance or greater to move at Min Speed")]
 	public float HitDistanceForMaxSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0b1475c4u, "Fall Off Power", "The speed at which the slide speed interpolates. 1 = linear. 2 = parabolic.")]
+	[DDLRegistration(0x8a9a09b7u, "Fall Off Power", "The speed at which the slide speed interpolates. 1 = linear. 2 = parabolic.")]
 	public float SpeedFallOffPower { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0b1475c4u, "Frictionless Duration", "How long does the character slide for before they begin to decelerate.")]
+	[DDLRegistration(0x63627c34u, "Frictionless Duration", "How long does the character slide for before they begin to decelerate.")]
 	public float FrictionlessDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0b1475c4u, "Decel", "How fast the character decelerates.")]
+	[DDLRegistration(0xa9242a88u, "Decel", "How fast the character decelerates.")]
 	public float Decel { get; set; } = 12.00f;
 
-	[DDLRegistration(0x0b1475c4u, "Min Rotation", "The minimum initial rotation in degrees per second.")]
+	[DDLRegistration(0x71606b4au, "Min Rotation", "The minimum initial rotation in degrees per second.")]
 	public float MinRotation { get; set; } = 10.00f;
 
-	[DDLRegistration(0x0b1475c4u, "Max Rotation", "The maximum initial rotation in degrees per second.")]
+	[DDLRegistration(0xbd6d1045u, "Max Rotation", "The maximum initial rotation in degrees per second.")]
 	public float MaxRotation { get; set; } = 10.00f;
 
-	[DDLRegistration(0x0b1475c4u, "Rotation Decel", "The deceleration of our rotation. This is only applied after exiting the 'Frictionless Duration'")]
+	[DDLRegistration(0x5ac295a1u, "Rotation Decel", "The deceleration of our rotation. This is only applied after exiting the 'Frictionless Duration'")]
 	public float RotationDecel { get; set; } = 10.00f;
 
 	public static FreezeSlideData Create(DDLObject ddl) => new(ddl);

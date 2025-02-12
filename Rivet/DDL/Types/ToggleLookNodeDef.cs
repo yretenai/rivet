@@ -25,28 +25,28 @@ public class ToggleLookNodeDef : DDLObjectType, IDDLObjectType<ToggleLookNodeDef
 		LookName = ddl.GetString(0xad8c1e16) ?? LookName;
 	}
 
-	[DDLRegistration(0x80b9fd1eu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x80b9fd1eu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x577f103e Type { get; set; } = x577f103e.Invalid;
 
-	[DDLRegistration(0x80b9fd1eu)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = false;
 
-	[DDLRegistration(0x80b9fd1eu)]
+	[DDLRegistration(0x7effd393u)]
 	public bool Disabled { get; set; } = false;
 
-	[DDLRegistration(0x80b9fd1eu)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x80b9fd1eu)]
+	[DDLRegistration(0x2934711bu)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x80b9fd1eu)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugSignal? Input { get; set; } = default;
 
-	[DDLRegistration(0x80b9fd1eu)]
+	[DDLRegistration(0xad8c1e16u)]
 	public string? LookName { get; set; } = default;
 
 	public static ToggleLookNodeDef Create(DDLObject ddl) => new(ddl);

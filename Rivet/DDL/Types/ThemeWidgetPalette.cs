@@ -19,10 +19,10 @@ public class ThemeWidgetPalette : DDLObjectType, IDDLObjectType<ThemeWidgetPalet
 		ColorDefs = ddl.GetObjects<ThemeColorDef>(0x9eb68663u);
 	}
 
-	[DDLRegistration(0xdcda3a9au)]
+	[DDLRegistration(0x019c7f29u)]
 	public List<string?> ClassNames { get; set; } = [];
 
-	[DDLRegistration(0xdcda3a9au)]
+	[DDLRegistration(0x9eb68663u)]
 	public List<ThemeColorDef?> ColorDefs { get; set; } = [];
 
 	public static ThemeWidgetPalette Create(DDLObject ddl) => new(ddl);

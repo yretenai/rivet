@@ -20,13 +20,13 @@ public class AutoHideOnViewWhenHeroInCinematicPrius : DDLObjectType, IDDLObjectT
 		DoNotHideIfCreatedInCine = ddl.GetValue<bool>(0x774b9f55u, DoNotHideIfCreatedInCine);
 	}
 
-	[DDLRegistration(0xdb1c70b1u, "Component Active?", "Whether this component is active or not.")]
+	[DDLRegistration(0x70774ba8u, "Component Active?", "Whether this component is active or not.")]
 	public bool IsActive { get; set; } = true;
 
-	[DDLRegistration(0xdb1c70b1u, "Pickup: Only Apply When Collecting", "Whether to auto hide/collect when the pickup is collecting, to let it be visible when idle during a cinematic.")]
+	[DDLRegistration(0x605fa28eu, "Pickup: Only Apply When Collecting", "Whether to auto hide/collect when the pickup is collecting, to let it be visible when idle during a cinematic.")]
 	public bool PickupOnlyHideCollect { get; set; } = false;
 
-	[DDLRegistration(0xdb1c70b1u, "Do not hide when created in cinematic?", "If we were created when a cinematic was active and this is set we will not auto hide for the cinematic.")]
+	[DDLRegistration(0x774b9f55u, "Do not hide when created in cinematic?", "If we were created when a cinematic was active and this is set we will not auto hide for the cinematic.")]
 	public bool DoNotHideIfCreatedInCine { get; set; } = false;
 
 	public static AutoHideOnViewWhenHeroInCinematicPrius Create(DDLObject ddl) => new(ddl);

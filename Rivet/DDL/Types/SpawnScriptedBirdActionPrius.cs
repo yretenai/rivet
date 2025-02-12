@@ -24,25 +24,25 @@ public class SpawnScriptedBirdActionPrius : DDLObjectType, IDDLObjectType<SpawnS
 		FlockSoundSource = ddl.GetObject<SoundSourceComponentPrius>(0xd8e09e63u);
 	}
 
-	[DDLRegistration(0x042e37d2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x042e37d2u, description: "Should the birds wait until the entire flock has spawned before fading in?")]
+	[DDLRegistration(0x33f6aab5u, description: "Should the birds wait until the entire flock has spawned before fading in?")]
 	public bool WaitAllSpawned { get; set; } = false;
 
-	[DDLRegistration(0x042e37d2u, description: "Each bird should be at least this distance from other birds.")]
+	[DDLRegistration(0x0241d495u, description: "Each bird should be at least this distance from other birds.")]
 	public float MinSeparation { get; set; } = 0.25f;
 
-	[DDLRegistration(0x042e37d2u, description: "How large should the flock be? If spawning birds as landed, only 4 birds will spawn per frame.")]
+	[DDLRegistration(0xa7039594u, description: "How large should the flock be? If spawning birds as landed, only 4 birds will spawn per frame.")]
 	public int FlockSize { get; set; } = 16;
 
-	[DDLRegistration(0x042e37d2u, description: "Automatically flee when the hero is within this distance of any flock members. -1 = don't flee")]
+	[DDLRegistration(0x84061f99u, description: "Automatically flee when the hero is within this distance of any flock members. -1 = don't flee")]
 	public float FleeDistance { get; set; } = -1.00f;
 
-	[DDLRegistration(0x042e37d2u, description: "Automatically flee when someone nearby is in combat?")]
+	[DDLRegistration(0xd124ba40u, description: "Automatically flee when someone nearby is in combat?")]
 	public bool FleeOnNearbyCombat { get; set; } = false;
 
-	[DDLRegistration(0x042e37d2u, "SoundSourceComponentPrius", "This is the sound source component used for the flock. Only one sound source is created (at the average position of the flock).")]
+	[DDLRegistration(0xd8e09e63u, "SoundSourceComponentPrius", "This is the sound source component used for the flock. Only one sound source is created (at the average position of the flock).")]
 	public SoundSourceComponentPrius? FlockSoundSource { get; set; } = default;
 
 	public static SpawnScriptedBirdActionPrius Create(DDLObject ddl) => new(ddl);

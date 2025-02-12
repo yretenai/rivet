@@ -18,7 +18,7 @@ public class MountEvent : EventBase, IDDLObjectType<MountEvent> {
 		MountActorHandle = ddl.GetValue<uint>(0xe31054a4u, MountActorHandle);
 	}
 
-	[DDLRegistration(0x0cb8c2dfu)]
+	[DDLRegistration(0xe31054a4u)]
 	public uint MountActorHandle { get; set; } = 0x00000000;
 
 	public new static MountEvent Create(DDLObject ddl) => new(ddl);

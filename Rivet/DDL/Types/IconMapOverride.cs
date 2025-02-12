@@ -19,10 +19,10 @@ public class IconMapOverride : DDLObjectType, IDDLObjectType<IconMapOverride> {
 		IconMap = ddl.GetObject<IconMapBase>(0x98f29d61u);
 	}
 
-	[DDLRegistration(0x3525d8c0u, description: "Use this IconMap instead of the default specified")]
+	[DDLRegistration(0xa8398703u, description: "Use this IconMap instead of the default specified")]
 	public bool OverrideDefault { get; set; } = false;
 
-	[DDLRegistration(0x3525d8c0u)]
+	[DDLRegistration(0x98f29d61u)]
 	public IconMapBase? IconMap { get; set; } = default;
 
 	public static IconMapOverride Create(DDLObject ddl) => new(ddl);

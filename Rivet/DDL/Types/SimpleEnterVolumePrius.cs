@@ -20,13 +20,13 @@ public class SimpleEnterVolumePrius : DDLObjectType, IDDLObjectType<SimpleEnterV
 		FlybySubType = ddl.GetEnum<x32557ecb>(0x49a4d24du, x32557ecbValues.Lookup);
 	}
 
-	[DDLRegistration(0xbf8d996fu)]
+	[DDLRegistration(0x30c54eddu)]
 	public xc4393200 SimpleEnterVolType { get; set; } = xc4393200.Tree;
 
-	[DDLRegistration(0xbf8d996fu)]
+	[DDLRegistration(0x736b92a9u)]
 	public xa2c3aa4a TreeSubType { get; set; } = xa2c3aa4a.Small;
 
-	[DDLRegistration(0xbf8d996fu)]
+	[DDLRegistration(0x49a4d24du)]
 	public x32557ecb FlybySubType { get; set; } = x32557ecb.Small;
 
 	public static SimpleEnterVolumePrius Create(DDLObject ddl) => new(ddl);

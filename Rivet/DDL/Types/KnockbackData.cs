@@ -19,10 +19,10 @@ public class KnockbackData : DDLObjectType, IDDLObjectType<KnockbackData> {
 		ScaleData = ddl.GetObject<ScaleData>(0xdc1e20e6u);
 	}
 
-	[DDLRegistration(0xcc96e476u)]
+	[DDLRegistration(0x2f1e32beu)]
 	public string? Driver { get; set; } = "React_Knockback";
 
-	[DDLRegistration(0xcc96e476u, "Scale Data")]
+	[DDLRegistration(0xdc1e20e6u, "Scale Data")]
 	public ScaleData? ScaleData { get; set; } = default;
 
 	public static KnockbackData Create(DDLObject ddl) => new(ddl);

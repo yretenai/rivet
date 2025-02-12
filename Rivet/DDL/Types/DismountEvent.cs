@@ -18,7 +18,7 @@ public class DismountEvent : EventBase, IDDLObjectType<DismountEvent> {
 		MountActorHandle = ddl.GetValue<uint>(0xe31054a4u, MountActorHandle);
 	}
 
-	[DDLRegistration(0x18788224u)]
+	[DDLRegistration(0xe31054a4u)]
 	public uint MountActorHandle { get; set; } = 0x00000000;
 
 	public new static DismountEvent Create(DDLObject ddl) => new(ddl);

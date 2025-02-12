@@ -19,10 +19,10 @@ public class FirepointSetPrius : DDLObjectType, IDDLObjectType<FirepointSetPrius
 		Firepoints = ddl.GetValues<RivetAssetId>(0xb506afa2u);
 	}
 
-	[DDLRegistration(0x08be9ef1u)]
+	[DDLRegistration(0x37a8306du)]
 	public BotUsage BotUsage { get; set; } = BotUsage.EnemyGround;
 
-	[DDLRegistration(0x08be9ef1u, "Firepoint List", "List of Firepoints that this Set comprised of")]
+	[DDLRegistration(0xb506afa2u, "Firepoint List", "List of Firepoints that this Set comprised of")]
 	public List<RivetAssetId> Firepoints { get; set; } = [];
 
 	public static FirepointSetPrius Create(DDLObject ddl) => new(ddl);

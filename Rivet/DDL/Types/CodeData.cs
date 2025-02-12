@@ -19,10 +19,10 @@ public class CodeData : DDLObjectType, IDDLObjectType<CodeData> {
 		Paths = ddl.GetObjects<CodePaths>(0x92e94ad0u);
 	}
 
-	[DDLRegistration(0x528bcf7du)]
+	[DDLRegistration(0x38e0b470u)]
 	public string? DefaultPublishedDirectory { get; set; } = default;
 
-	[DDLRegistration(0x528bcf7du)]
+	[DDLRegistration(0x92e94ad0u)]
 	public List<CodePaths?> Paths { get; set; } = [];
 
 	public static CodeData Create(DDLObject ddl) => new(ddl);

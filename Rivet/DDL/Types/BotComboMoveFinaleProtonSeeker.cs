@@ -29,40 +29,40 @@ public class BotComboMoveFinaleProtonSeeker : BotComboMoveBase, IDDLObjectType<B
 		FiringPatterns = ddl.GetObjects<ProtonSeekerFiringPattern>(0xe7a793ddu);
 	}
 
-	[DDLRegistration(0x12896da3u)]
+	[DDLRegistration(0x332351eau)]
 	public RivetAssetId SpawnedShotConfigTargeted { get; set; } = default;
 
-	[DDLRegistration(0x12896da3u)]
+	[DDLRegistration(0x0021ea3fu)]
 	public RivetAssetId SpawnedShotConfigScatter { get; set; } = default;
 
-	[DDLRegistration(0x12896da3u)]
+	[DDLRegistration(0xfeaa8997u)]
 	public RivetAssetId SpawnedShotConfigExplosive { get; set; } = default;
 
-	[DDLRegistration(0x12896da3u)]
+	[DDLRegistration(0xfec29c86u)]
 	public RivetAssetId PortalActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x12896da3u)]
+	[DDLRegistration(0x0f03001bu)]
 	public RivetAssetId WeaponActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x12896da3u)]
+	[DDLRegistration(0x59c9ba1fu)]
 	public RivetAssetId WeaponActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x12896da3u)]
+	[DDLRegistration(0x3ddbd4bau)]
 	public RivetAssetId WeaponActorVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x12896da3u)]
+	[DDLRegistration(0x40094dbdu)]
 	public string? WeaponActorEmitLocator { get; set; } = default;
 
-	[DDLRegistration(0x12896da3u)]
+	[DDLRegistration(0xb95b8abeu)]
 	public bool CancelOutOfVolume { get; set; } = false;
 
-	[DDLRegistration(0x12896da3u)]
+	[DDLRegistration(0xe09d2afcu)]
 	public bool RemainAfterAttack { get; set; } = false;
 
-	[DDLRegistration(0x12896da3u, description: "If true, the bot will do each firing pattern before leaving instead of pickign one at random")]
+	[DDLRegistration(0xd081eca5u, description: "If true, the bot will do each firing pattern before leaving instead of pickign one at random")]
 	public bool GoThruEachFiringPattern { get; set; } = false;
 
-	[DDLRegistration(0x12896da3u)]
+	[DDLRegistration(0xe7a793ddu)]
 	public List<ProtonSeekerFiringPattern?> FiringPatterns { get; set; } = [];
 
 	public new static BotComboMoveFinaleProtonSeeker Create(DDLObject ddl) => new(ddl);

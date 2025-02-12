@@ -18,7 +18,7 @@ public class CameraShakeShotEffectPrius : ScriptedShotEffectBasePrius, IDDLObjec
 		ShakeData = ddl.GetObject<CameraShakingWithFallOffData>(0x9c710c08u);
 	}
 
-	[DDLRegistration(0x3977a94du)]
+	[DDLRegistration(0x9c710c08u)]
 	public CameraShakingWithFallOffData? ShakeData { get; set; } = default;
 
 	public new static CameraShakeShotEffectPrius Create(DDLObject ddl) => new(ddl);

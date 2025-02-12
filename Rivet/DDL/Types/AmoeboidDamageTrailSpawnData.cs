@@ -25,28 +25,28 @@ public class AmoeboidDamageTrailSpawnData : ActorSpawnData, IDDLObjectType<Amoeb
 		Lifetime = ddl.GetValue<float>(0xc7e68df8u, Lifetime);
 	}
 
-	[DDLRegistration(0xdf04f2e0u)]
+	[DDLRegistration(0x6151ad8fu)]
 	public uint OwnerHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdf04f2e0u)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdf04f2e0u)]
+	[DDLRegistration(0x0c9266b7u)]
 	public int ZoneIndex { get; set; } = 0;
 
-	[DDLRegistration(0xdf04f2e0u)]
+	[DDLRegistration(0x45e23d0fu)]
 	public DDLVector3? SpawnPos { get; set; } = default;
 
-	[DDLRegistration(0xdf04f2e0u)]
+	[DDLRegistration(0xcd1e83eeu)]
 	public DDLVector3? SpawnUp { get; set; } = default;
 
-	[DDLRegistration(0xdf04f2e0u)]
+	[DDLRegistration(0x5c81ff53u)]
 	public DDLVector3? SpawnFwd { get; set; } = default;
 
-	[DDLRegistration(0xdf04f2e0u)]
+	[DDLRegistration(0x4bd562d1u)]
 	public DDLVector3? SpawnExtents { get; set; } = default;
 
-	[DDLRegistration(0xdf04f2e0u)]
+	[DDLRegistration(0xc7e68df8u)]
 	public float Lifetime { get; set; } = 0.00f;
 
 	public new static AmoeboidDamageTrailSpawnData Create(DDLObject ddl) => new(ddl);

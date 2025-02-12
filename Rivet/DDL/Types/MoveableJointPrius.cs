@@ -18,7 +18,7 @@ public class MoveableJointPrius : DDLObjectType, IDDLObjectType<MoveableJointPri
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0x4303d889u, description: "Locator that is attached to the joint we want to move.  You can also use the joint name here directly instead.")]
+	[DDLRegistration(0x7bac1d57u, description: "Locator that is attached to the joint we want to move.  You can also use the joint name here directly instead.")]
 	public string? Locator { get; set; } = default;
 
 	public static MoveableJointPrius Create(DDLObject ddl) => new(ddl);

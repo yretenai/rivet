@@ -26,31 +26,31 @@ public class MoveCosinePrius : Base, IDDLObjectType<MoveCosinePrius> {
 		Period = ddl.GetValue<float>(0xfbc050a9u, Period);
 	}
 
-	[DDLRegistration(0xd5ba509fu)]
+	[DDLRegistration(0xef1993ccu)]
 	public List<float> DynamicArray { get; set; } = [];
 
-	[DDLRegistration(0xd5ba509fu)]
+	[DDLRegistration(0x2b9ab9c6u)]
 	public List<float> StaticArray { get; set; } = [];
 
-	[DDLRegistration(0xd5ba509fu)]
+	[DDLRegistration(0x173c9ba3u)]
 	public List<string?> DynamicStrings { get; set; } = [];
 
-	[DDLRegistration(0xd5ba509fu)]
+	[DDLRegistration(0x64c4a145u)]
 	public List<Simple?> DynamicStructs { get; set; } = [];
 
-	[DDLRegistration(0xd5ba509fu)]
+	[DDLRegistration(0x36687e7cu)]
 	public List<string?> StaticStrings { get; set; } = [];
 
-	[DDLRegistration(0xd5ba509fu)]
+	[DDLRegistration(0xa0c6fcceu)]
 	public string? String { get; set; } = default;
 
-	[DDLRegistration(0xd5ba509fu)]
+	[DDLRegistration(0x650c78f5u)]
 	public Simple? SingleStruct { get; set; } = default;
 
-	[DDLRegistration(0xd5ba509fu)]
+	[DDLRegistration(0xe950071du)]
 	public float Amplitude { get; set; } = 2.00f;
 
-	[DDLRegistration(0xd5ba509fu)]
+	[DDLRegistration(0xfbc050a9u)]
 	public float Period { get; set; } = 4.00f;
 
 	public new static MoveCosinePrius Create(DDLObject ddl) => new(ddl);

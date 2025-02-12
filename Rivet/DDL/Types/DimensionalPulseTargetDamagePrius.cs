@@ -19,10 +19,10 @@ public class DimensionalPulseTargetDamagePrius : DimensionalPulseTargetBasePrius
 		MaxDamageDelayTime = ddl.GetValue<float>(0xe0b61d2au, MaxDamageDelayTime);
 	}
 
-	[DDLRegistration(0x81f9454au)]
+	[DDLRegistration(0xb31005ceu)]
 	public float MinDamageDelayTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x81f9454au)]
+	[DDLRegistration(0xe0b61d2au)]
 	public float MaxDamageDelayTime { get; set; } = 0.00f;
 
 	public new static DimensionalPulseTargetDamagePrius Create(DDLObject ddl) => new(ddl);

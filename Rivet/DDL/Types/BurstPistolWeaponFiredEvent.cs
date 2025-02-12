@@ -18,7 +18,7 @@ public class BurstPistolWeaponFiredEvent : WeaponTriggeredEvent, IDDLObjectType<
 		IsRapidFireMode = ddl.GetValue<bool>(0x8e5cb9e6u, IsRapidFireMode);
 	}
 
-	[DDLRegistration(0x434d44a9u)]
+	[DDLRegistration(0x8e5cb9e6u)]
 	public bool IsRapidFireMode { get; set; } = false;
 
 	public new static BurstPistolWeaponFiredEvent Create(DDLObject ddl) => new(ddl);

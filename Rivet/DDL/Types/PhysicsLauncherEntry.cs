@@ -20,13 +20,13 @@ public class PhysicsLauncherEntry : DDLObjectType, IDDLObjectType<PhysicsLaunche
 		TargetId = ddl.GetString(0xc3642b05) ?? TargetId;
 	}
 
-	[DDLRegistration(0xa34f7cedu)]
+	[DDLRegistration(0x4b2b87f8u)]
 	public RivetAssetId TargetVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa34f7cedu)]
+	[DDLRegistration(0x38e49f4au)]
 	public float ArcHeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa34f7cedu)]
+	[DDLRegistration(0xc3642b05u)]
 	public string? TargetId { get; set; } = default;
 
 	public static PhysicsLauncherEntry Create(DDLObject ddl) => new(ddl);

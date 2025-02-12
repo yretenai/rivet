@@ -67,154 +67,154 @@ public class GameCampaignSave : CampaignSave, IDDLObjectType<GameCampaignSave> {
 		EntitlementPSNRaritaniumToGive = ddl.GetValue<uint>(0x2778140au, EntitlementPSNRaritaniumToGive);
 	}
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x8444b6f6u)]
 	public uint PlaytestHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x59ad7b1eu)]
 	public uint CampaignSaveID { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xd72ac128u)]
 	public int CharacterId { get; set; } = -1;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x4a96b708u)]
 	public uint CareerBolts { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x84b45ffdu)]
 	public uint SpentBolts { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x6fc394ceu)]
 	public ulong CareerExp { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x863d4a12u)]
 	public ulong CareerWeaponExp { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x876a54ceu)]
 	public float CareerRaritanium { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xc8f97111u)]
 	public float CareerRaritaniumSpend { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x06dfcc00u)]
 	public double Playtime { get; set; } = 0;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x204b772eu)]
 	public uint LastSaveTime { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x605d31d6u)]
 	public int Difficulty { get; set; } = 1;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xabf06062u)]
 	public List<uint> LevelBolts { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xf997f0f2u)]
 	public List<uint> LevelGoldBolts { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xd94b72f2u)]
 	public List<uint> LevelRYNOPlans { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x41422e75u)]
 	public List<uint> LevelVanityPickups { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xe454cf3du)]
 	public List<uint> LevelRaritanium { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xfd02271cu)]
 	public List<ulong> LevelExp { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xbeca600fu)]
 	public List<ulong> LevelWeaponExp { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x37703f56u)]
 	public GameStage GameStage { get; set; } = GameStage.EarlyGame;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xfe09ed85u)]
 	public xd00d73b0 GameFlags { get; set; } = (xd00d73b0) 0x00000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xde85567du)]
 	public bool IsChallengeModeAvailable { get; set; } = false;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xa9a8466cu)]
 	public bool IsChallengeMode { get; set; } = false;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x7a8544cdu)]
 	public bool NeedsOnlyGadgetsFromLoadout { get; set; } = false;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x0bb46a2eu)]
 	public ulong RYNOPlansCollected { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x3853f073u)]
 	public ulong ZerpStonesCollected { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x5baeb5fbu)]
 	public ulong RuinTokensCollected { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xbce0ae5bu)]
 	public ulong VanityPickupsCollected { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xac3d0e89u)]
 	public byte BoltMultiplier { get; set; } = 0x01;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x9d36738eu)]
 	public byte BoltMultiplierKillsLeft { get; set; } = 0x02;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x2d7bf973u)]
 	public bool HasRYNODroppedOtherIP { get; set; } = false;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x88fb26efu)]
 	public RivetAssetId QuickSelectWeaponUp { get; set; } = default;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x63ea728fu)]
 	public RivetAssetId QuickSelectWeaponRight { get; set; } = default;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x3e4095fcu)]
 	public RivetAssetId QuickSelectWeaponDown { get; set; } = default;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x58d8e2afu)]
 	public RivetAssetId QuickSelectWeaponLeft { get; set; } = default;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xdf7038b1u)]
 	public bool TutorialRaritaniumAwarded { get; set; } = false;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xed84f3b5u)]
 	public List<string?> VendorWeaponNowInStockShown { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x739bb2e2u)]
 	public bool FirstOmegaWeaponPurchased { get; set; } = false;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x82c10439u)]
 	public bool EntitlementRaritaniumAwarded { get; set; } = false;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x27a57bf9u)]
 	public uint EntitlementRaritaniumToGive { get; set; } = 0x00000014;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xbab22070u)]
 	public bool EntitlementPixelizerAwarded { get; set; } = false;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xa05350bcu)]
 	public bool EntitlementCarbonoxAwarded { get; set; } = false;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x4245fd0eu)]
 	public List<bool> Entitlement5ArmorAwarded { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xa139e33cu)]
 	public List<string?> UITutorialsComplete { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x147057d2u)]
 	public List<string?> NewItemsViewed { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xd0526a4fu)]
 	public List<string?> NewMissionsViewed { get; set; } = [];
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x88a00900u)]
 	public SaveControlRemapData? ControlRemap { get; set; } = default;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x712e5ab7u)]
 	public float CompletionPercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0xb5c50241u)]
 	public bool EntitlementPSNLinkedAwarded { get; set; } = false;
 
-	[DDLRegistration(0x5da4b89fu)]
+	[DDLRegistration(0x2778140au)]
 	public uint EntitlementPSNRaritaniumToGive { get; set; } = 0x00000019;
 
 	public new static GameCampaignSave Create(DDLObject ddl) => new(ddl);

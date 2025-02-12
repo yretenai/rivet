@@ -24,25 +24,25 @@ public class MountAbilityFlyGoto : MountAbilityBase, IDDLObjectType<MountAbility
 		MaxOutroSpeed = ddl.GetValue<float>(0xf9cb9259u, MaxOutroSpeed);
 	}
 
-	[DDLRegistration(0x14288b4du, description: "Anim played when close enough to the goto's destination to play an outro.")]
+	[DDLRegistration(0x52eadacfu, description: "Anim played when close enough to the goto's destination to play an outro.")]
 	public string? AnimOutroName { get; set; } = default;
 
-	[DDLRegistration(0x14288b4du, description: "Anim played at the start of the goto to orient the the flyer appropriately.")]
+	[DDLRegistration(0x00218e38u, description: "Anim played at the start of the goto to orient the the flyer appropriately.")]
 	public string? AnimIntroName { get; set; } = default;
 
-	[DDLRegistration(0x14288b4du, description: "The locator on the flyer that the pickup actually attaches to.")]
+	[DDLRegistration(0x0cb06900u, description: "The locator on the flyer that the pickup actually attaches to.")]
 	public string? FlyerGotoLocator { get; set; } = default;
 
-	[DDLRegistration(0x14288b4du, description: "The locator on the actor that the flyer is heading towards")]
+	[DDLRegistration(0x7d971e7du, description: "The locator on the actor that the flyer is heading towards")]
 	public string? GotoActorLocator { get; set; } = default;
 
-	[DDLRegistration(0x14288b4du, description: "Speed at which the flyer approaches the goto location.")]
+	[DDLRegistration(0xbc7dba80u, description: "Speed at which the flyer approaches the goto location.")]
 	public float GotoSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0x14288b4du, description: "Min Speed at which the flyer travels at whiling playing the outro animation at the goto location")]
+	[DDLRegistration(0xb984ea2fu, description: "Min Speed at which the flyer travels at whiling playing the outro animation at the goto location")]
 	public float MinOutroSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0x14288b4du, description: "Max Speed at which the flyer travels at whiling playing the outro animation at the goto location")]
+	[DDLRegistration(0xf9cb9259u, description: "Max Speed at which the flyer travels at whiling playing the outro animation at the goto location")]
 	public float MaxOutroSpeed { get; set; } = 15.00f;
 
 	public new static MountAbilityFlyGoto Create(DDLObject ddl) => new(ddl);

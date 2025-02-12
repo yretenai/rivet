@@ -22,19 +22,19 @@ public class RenderOverrideConstantComponentPrius : DDLObjectType, IDDLObjectTyp
 		TransitionTime = ddl.GetValue<float>(0xf115e357u, TransitionTime);
 	}
 
-	[DDLRegistration(0x232544eeu, description: "The name of the render constant to set.")]
+	[DDLRegistration(0xc6991700u, description: "The name of the render constant to set.")]
 	public string? ConstantName { get; set; } = default;
 
-	[DDLRegistration(0x232544eeu, description: "The specific Maya material mapping to apply this setting to. If None, the setting will be applied to all material mappings.")]
+	[DDLRegistration(0x981e6927u, description: "The specific Maya material mapping to apply this setting to. If None, the setting will be applied to all material mappings.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x232544eeu, description: "Starting constant values.")]
+	[DDLRegistration(0x651c34d0u, description: "Starting constant values.")]
 	public DDLVector4? StartValue { get; set; } = default;
 
-	[DDLRegistration(0x232544eeu, description: "Ending constant values.")]
+	[DDLRegistration(0x5550361fu, description: "Ending constant values.")]
 	public DDLVector4? EndValue { get; set; } = default;
 
-	[DDLRegistration(0x232544eeu, description: "Duration of the lerp")]
+	[DDLRegistration(0xf115e357u, description: "Duration of the lerp")]
 	public float TransitionTime { get; set; } = 0.00f;
 
 	public static RenderOverrideConstantComponentPrius Create(DDLObject ddl) => new(ddl);

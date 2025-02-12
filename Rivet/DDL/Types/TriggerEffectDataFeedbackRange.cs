@@ -19,10 +19,10 @@ public class TriggerEffectDataFeedbackRange : TriggerEffectDataBase, IDDLObjectT
 		PositionEnd = ddl.GetValue<uint>(0x0ea8cffcu, PositionEnd);
 	}
 
-	[DDLRegistration(0x23f5b95bu, description: "0 = Not pressed at all. 9 = Fully pressed.")]
+	[DDLRegistration(0xca8006c1u, description: "0 = Not pressed at all. 9 = Fully pressed.")]
 	public uint PositionBegin { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x23f5b95bu, description: "0 = Not pressed at all. 9 = Fully pressed.")]
+	[DDLRegistration(0x0ea8cffcu, description: "0 = Not pressed at all. 9 = Fully pressed.")]
 	public uint PositionEnd { get; set; } = 0x00000000;
 
 	public new static TriggerEffectDataFeedbackRange Create(DDLObject ddl) => new(ddl);

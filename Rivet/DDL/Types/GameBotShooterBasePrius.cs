@@ -19,10 +19,10 @@ public class GameBotShooterBasePrius : BotPrius, IDDLObjectType<GameBotShooterBa
 		IsWearingHelmet = ddl.GetValue<bool>(0x66e09c3au, IsWearingHelmet);
 	}
 
-	[DDLRegistration(0xbc9539bau)]
+	[DDLRegistration(0x387f35fbu)]
 	public BotIntroData? IntroData { get; set; } = default;
 
-	[DDLRegistration(0xbc9539bau, description: "Flag to tell audio system to apply processing to dialog.")]
+	[DDLRegistration(0x66e09c3au, description: "Flag to tell audio system to apply processing to dialog.")]
 	public bool IsWearingHelmet { get; set; } = false;
 
 	public new static GameBotShooterBasePrius Create(DDLObject ddl) => new(ddl);

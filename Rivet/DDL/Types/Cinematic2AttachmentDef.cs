@@ -20,13 +20,13 @@ public class Cinematic2AttachmentDef : DDLObjectType, IDDLObjectType<Cinematic2A
 		JointName = ddl.GetString(0x5ba51db8) ?? JointName;
 	}
 
-	[DDLRegistration(0x32a15aa1u, description: "Attach origin to joint")]
+	[DDLRegistration(0x66348122u, description: "Attach origin to joint")]
 	public bool AttachToJoint { get; set; } = false;
 
-	[DDLRegistration(0x32a15aa1u, description: "Set attachment origin to locator")]
+	[DDLRegistration(0x5814524du, description: "Set attachment origin to locator")]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0x32a15aa1u, description: "Set attachment origin to joint")]
+	[DDLRegistration(0x5ba51db8u, description: "Set attachment origin to joint")]
 	public string? JointName { get; set; } = default;
 
 	public static Cinematic2AttachmentDef Create(DDLObject ddl) => new(ddl);

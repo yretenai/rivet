@@ -19,10 +19,10 @@ public class UDSHintStatus : DDLObjectType, IDDLObjectType<UDSHintStatus> {
 		Order = ddl.GetValue<int>(0x2dbb705du, Order);
 	}
 
-	[DDLRegistration(0x286aabb9u)]
+	[DDLRegistration(0x72cab753u)]
 	public bool Active { get; set; } = false;
 
-	[DDLRegistration(0x286aabb9u)]
+	[DDLRegistration(0x2dbb705du)]
 	public int Order { get; set; } = 0;
 
 	public static UDSHintStatus Create(DDLObject ddl) => new(ddl);

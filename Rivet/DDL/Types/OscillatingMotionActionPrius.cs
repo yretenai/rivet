@@ -24,25 +24,25 @@ public class OscillatingMotionActionPrius : DDLObjectType, IDDLObjectType<Oscill
 		BlendOutTime = ddl.GetValue<float>(0xda2e044eu, BlendOutTime);
 	}
 
-	[DDLRegistration(0xffe2b481u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Movement;
 
-	[DDLRegistration(0xffe2b481u, "Use Real Time?", "Oscillate in real time or in world time? Real time should only be used for UI.")]
+	[DDLRegistration(0xdda1dddbu, "Use Real Time?", "Oscillate in real time or in world time? Real time should only be used for UI.")]
 	public bool UseRealTime { get; set; } = false;
 
-	[DDLRegistration(0xffe2b481u, "Frequency", "Oscillating frequency for each axis in local space.")]
+	[DDLRegistration(0xa482271fu, "Frequency", "Oscillating frequency for each axis in local space.")]
 	public DDLVector3? Frequency { get; set; } = default;
 
-	[DDLRegistration(0xffe2b481u, "Start Blend In Time", "Blend the amplitude in over this amount of time when the motion initially starts.")]
+	[DDLRegistration(0x9bbb4cafu, "Start Blend In Time", "Blend the amplitude in over this amount of time when the motion initially starts.")]
 	public float StartBlendTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xffe2b481u, "Change Blend Time", "Blend the amplitude over this amount of time when changing the motion amplitude.")]
+	[DDLRegistration(0x7ad8375au, "Change Blend Time", "Blend the amplitude over this amount of time when changing the motion amplitude.")]
 	public float ChangeBlendTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xffe2b481u, "Stop On Unload", "Stop all oscillating motions started by this node when this zone is unloaded.")]
+	[DDLRegistration(0x200c9c22u, "Stop On Unload", "Stop all oscillating motions started by this node when this zone is unloaded.")]
 	public bool StopOnUnload { get; set; } = true;
 
-	[DDLRegistration(0xffe2b481u, "Blend Out Time", "Any oscillating motion stopped by this node for any reason blends out over this time. This will stomp whatever blend out time they might have had before. -1 = instantaneous")]
+	[DDLRegistration(0xda2e044eu, "Blend Out Time", "Any oscillating motion stopped by this node for any reason blends out over this time. This will stomp whatever blend out time they might have had before. -1 = instantaneous")]
 	public float BlendOutTime { get; set; } = 0.00f;
 
 	public static OscillatingMotionActionPrius Create(DDLObject ddl) => new(ddl);

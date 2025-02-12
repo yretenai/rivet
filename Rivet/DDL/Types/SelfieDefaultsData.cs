@@ -24,25 +24,25 @@ public class SelfieDefaultsData : DDLObjectType, IDDLObjectType<SelfieDefaultsDa
 		APFar = ddl.GetValue<float>(0x06d4d107u, APFar);
 	}
 
-	[DDLRegistration(0x83e7fc7bu)]
+	[DDLRegistration(0x2f1e32beu)]
 	public string? Driver { get; set; } = default;
 
-	[DDLRegistration(0x83e7fc7bu)]
+	[DDLRegistration(0x81ed667du)]
 	public string? DriverCat { get; set; } = default;
 
-	[DDLRegistration(0x83e7fc7bu)]
+	[DDLRegistration(0x6ca7e042u)]
 	public float FOV { get; set; } = 73.00f;
 
-	[DDLRegistration(0x83e7fc7bu)]
+	[DDLRegistration(0xce705c80u)]
 	public float RangeNear { get; set; } = 0.00f;
 
-	[DDLRegistration(0x83e7fc7bu)]
+	[DDLRegistration(0x833b90c3u)]
 	public float APNear { get; set; } = 10.00f;
 
-	[DDLRegistration(0x83e7fc7bu)]
+	[DDLRegistration(0xff79ca67u)]
 	public float RangeFar { get; set; } = 1.80f;
 
-	[DDLRegistration(0x83e7fc7bu)]
+	[DDLRegistration(0x06d4d107u)]
 	public float APFar { get; set; } = 1.30f;
 
 	public static SelfieDefaultsData Create(DDLObject ddl) => new(ddl);

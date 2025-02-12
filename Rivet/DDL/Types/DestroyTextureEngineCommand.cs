@@ -18,7 +18,7 @@ public class DestroyTextureEngineCommand : DDLObjectType, IDDLObjectType<Destroy
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 	}
 
-	[DDLRegistration(0x31c718c8u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static DestroyTextureEngineCommand Create(DDLObject ddl) => new(ddl);

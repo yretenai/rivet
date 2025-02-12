@@ -20,13 +20,13 @@ public class PlatformOrientationActionPrius : DDLObjectType, IDDLObjectType<Plat
 		BlendTime = ddl.GetValue<float>(0xf805a3f6u, BlendTime);
 	}
 
-	[DDLRegistration(0x6e5fe2d2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0x6e5fe2d2u, "Orientation Style")]
+	[DDLRegistration(0xbb5c948du, "Orientation Style")]
 	public x3cdeb00d Orientation { get; set; } = x3cdeb00d.Placed;
 
-	[DDLRegistration(0x6e5fe2d2u, "Blend Time", "How long to blend from the original orientation to the new type")]
+	[DDLRegistration(0xf805a3f6u, "Blend Time", "How long to blend from the original orientation to the new type")]
 	public float BlendTime { get; set; } = 2.00f;
 
 	public static PlatformOrientationActionPrius Create(DDLObject ddl) => new(ddl);

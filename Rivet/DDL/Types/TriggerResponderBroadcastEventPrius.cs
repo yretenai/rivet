@@ -19,10 +19,10 @@ public class TriggerResponderBroadcastEventPrius : TriggerResponderBasePrius, ID
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x3963b4abu, "Event Type", "The event that we will send")]
+	[DDLRegistration(0x22fdc666u, "Event Type", "The event that we will send")]
 	public EventBase? Event { get; set; } = default;
 
-	[DDLRegistration(0x3963b4abu)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 5.00f;
 
 	public new static TriggerResponderBroadcastEventPrius Create(DDLObject ddl) => new(ddl);

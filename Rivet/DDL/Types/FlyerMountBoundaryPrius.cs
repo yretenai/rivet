@@ -18,7 +18,7 @@ public class FlyerMountBoundaryPrius : DDLObjectType, IDDLObjectType<FlyerMountB
 		BoundaryType = ddl.GetEnum<xe41b4b91>(0xfd3f9a03u, xe41b4b91Values.Lookup);
 	}
 
-	[DDLRegistration(0x35543370u)]
+	[DDLRegistration(0xfd3f9a03u)]
 	public xe41b4b91 BoundaryType { get; set; } = xe41b4b91.Barrier;
 
 	public static FlyerMountBoundaryPrius Create(DDLObject ddl) => new(ddl);

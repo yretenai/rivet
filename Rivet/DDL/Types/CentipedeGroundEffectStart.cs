@@ -18,7 +18,7 @@ public class CentipedeGroundEffectStart : EventBase, IDDLObjectType<CentipedeGro
 		PincerHash = ddl.GetValue<uint>(0xcaef5f05u, PincerHash);
 	}
 
-	[DDLRegistration(0xfc534c04u)]
+	[DDLRegistration(0xcaef5f05u)]
 	public uint PincerHash { get; set; } = 0x00000000;
 
 	public new static CentipedeGroundEffectStart Create(DDLObject ddl) => new(ddl);

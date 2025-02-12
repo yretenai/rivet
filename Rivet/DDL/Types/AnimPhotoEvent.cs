@@ -19,10 +19,10 @@ public class AnimPhotoEvent : EventBase, IDDLObjectType<AnimPhotoEvent> {
 		ValueMultiplier = ddl.GetValue<float>(0xe022deadu, ValueMultiplier);
 	}
 
-	[DDLRegistration(0xc233319eu, description: "Localization tag for photo evaluation")]
+	[DDLRegistration(0xd7df5485u, description: "Localization tag for photo evaluation")]
 	public string? AnimDescription { get; set; } = "PHOTO_EVENT";
 
-	[DDLRegistration(0xc233319eu, description: "Photo value multiplier")]
+	[DDLRegistration(0xe022deadu, description: "Photo value multiplier")]
 	public float ValueMultiplier { get; set; } = 1.00f;
 
 	public new static AnimPhotoEvent Create(DDLObject ddl) => new(ddl);

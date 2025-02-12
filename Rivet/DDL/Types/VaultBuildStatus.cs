@@ -20,13 +20,13 @@ public class VaultBuildStatus : DDLObjectType, IDDLObjectType<VaultBuildStatus> 
 		LastToCCount = ddl.GetValue<int>(0x130c1f55u, LastToCCount);
 	}
 
-	[DDLRegistration(0x5c1f35e3u)]
+	[DDLRegistration(0x7459aa19u)]
 	public RivetAssetId _id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5c1f35e3u, description: "Indicates if the ToC is rebuilding (should always be true).")]
+	[DDLRegistration(0xb58b9a80u, description: "Indicates if the ToC is rebuilding (should always be true).")]
 	public bool IsBuildingToC { get; set; } = false;
 
-	[DDLRegistration(0x5c1f35e3u, description: "Last known ToC count of existing json source assets (i.e. does not include .png, .dae, etc.).")]
+	[DDLRegistration(0x130c1f55u, description: "Last known ToC count of existing json source assets (i.e. does not include .png, .dae, etc.).")]
 	public int LastToCCount { get; set; } = 0;
 
 	public static VaultBuildStatus Create(DDLObject ddl) => new(ddl);

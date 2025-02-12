@@ -18,7 +18,7 @@ public class CinematicAttachActionEngineItem : DDLObjectType, IDDLObjectType<Cin
 		Parent = ddl.GetValue<RivetAssetId>(0x03f62e28u, Parent);
 	}
 
-	[DDLRegistration(0x83a0bd39u)]
+	[DDLRegistration(0x03f62e28u)]
 	public RivetAssetId Parent { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static CinematicAttachActionEngineItem Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class TopiarySprinklerPlantedEvent : EventBase, IDDLObjectType<TopiarySpr
 		SurfaceIsMostlyVertical = ddl.GetValue<bool>(0x4b3f179cu, SurfaceIsMostlyVertical);
 	}
 
-	[DDLRegistration(0x095f842cu)]
+	[DDLRegistration(0x4b3f179cu)]
 	public bool SurfaceIsMostlyVertical { get; set; } = false;
 
 	public new static TopiarySprinklerPlantedEvent Create(DDLObject ddl) => new(ddl);

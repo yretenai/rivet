@@ -18,7 +18,7 @@ public class AndOverlayOperatorPrius_Tools : DDLObjectType, IDDLObjectType<AndOv
 		Triggers = ddl.GetObjects<BaseOverlayOperatorPrius_Tools>(0xf4cf343du);
 	}
 
-	[DDLRegistration(0x6cfbf13fu)]
+	[DDLRegistration(0xf4cf343du)]
 	public List<BaseOverlayOperatorPrius_Tools?> Triggers { get; set; } = [];
 
 	public static AndOverlayOperatorPrius_Tools Create(DDLObject ddl) => new(ddl);

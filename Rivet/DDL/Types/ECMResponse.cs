@@ -22,19 +22,19 @@ public class ECMResponse : DDLObjectType, IDDLObjectType<ECMResponse> {
 		IsValid = ddl.GetValue<bool>(0x84fa27f9u, IsValid);
 	}
 
-	[DDLRegistration(0x3fa7347au, "Group Index")]
+	[DDLRegistration(0xeefb3d57u, "Group Index")]
 	public byte GroupIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0x3fa7347au, "Response Name")]
+	[DDLRegistration(0x6eb3beb6u, "Response Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x3fa7347au, "Response Subsystem Type")]
+	[DDLRegistration(0xbc4e9799u, "Response Subsystem Type")]
 	public x7d682dac Type { get; set; } = x7d682dac.KeyFrameMod;
 
-	[DDLRegistration(0x3fa7347au, "Response Field Mapping")]
+	[DDLRegistration(0x739793abu, "Response Field Mapping")]
 	public List<ECMFieldMap?> FieldMap { get; set; } = [];
 
-	[DDLRegistration(0x3fa7347au)]
+	[DDLRegistration(0x84fa27f9u)]
 	public bool IsValid { get; set; } = true;
 
 	public static ECMResponse Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class ItemLoadoutList : DDLObjectType, IDDLObjectType<ItemLoadoutList> {
 		Items = ddl.GetObjects<ItemLoadoutListElement>(0xf84d258cu);
 	}
 
-	[DDLRegistration(0xba6c382bu, "Item Loadout List Name", "Item Loadout List Name")]
+	[DDLRegistration(0x6eb3beb6u, "Item Loadout List Name", "Item Loadout List Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xba6c382bu, "Post Process Equip", "Run a post-process on what is equipped based on this loadout")]
+	[DDLRegistration(0x6aba5673u, "Post Process Equip", "Run a post-process on what is equipped based on this loadout")]
 	public bool PostProcessEquip { get; set; } = false;
 
-	[DDLRegistration(0xba6c382bu, "Item Select Type", "Item Loadout List Select Type")]
+	[DDLRegistration(0xe2660679u, "Item Select Type", "Item Loadout List Select Type")]
 	public xb4920c11 SelectType { get; set; } = xb4920c11.SelectAll;
 
-	[DDLRegistration(0xba6c382bu, "Item List", "Item list")]
+	[DDLRegistration(0xf84d258cu, "Item List", "Item list")]
 	public List<ItemLoadoutListElement?> Items { get; set; } = [];
 
 	public static ItemLoadoutList Create(DDLObject ddl) => new(ddl);

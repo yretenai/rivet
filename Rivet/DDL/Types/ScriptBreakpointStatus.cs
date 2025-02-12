@@ -22,19 +22,19 @@ public class ScriptBreakpointStatus : DDLObjectType, IDDLObjectType<ScriptBreakp
 		Status = ddl.GetString(0x45782b7b) ?? Status;
 	}
 
-	[DDLRegistration(0x9c8c6439u)]
+	[DDLRegistration(0x1414e790u)]
 	public RivetAssetId SourceId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9c8c6439u)]
+	[DDLRegistration(0x86c92af9u)]
 	public RivetAssetId ScriptId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9c8c6439u)]
+	[DDLRegistration(0xedb3d930u)]
 	public uint SourcePlug { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9c8c6439u)]
+	[DDLRegistration(0xbc59250eu)]
 	public uint ScriptPlug { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9c8c6439u)]
+	[DDLRegistration(0x45782b7bu)]
 	public string? Status { get; set; } = default;
 
 	public static ScriptBreakpointStatus Create(DDLObject ddl) => new(ddl);

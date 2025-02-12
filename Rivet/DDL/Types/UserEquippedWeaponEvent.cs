@@ -22,19 +22,19 @@ public class UserEquippedWeaponEvent : EventBase, IDDLObjectType<UserEquippedWea
 		PrevWeaponId = ddl.GetValue<uint>(0x7857149du, PrevWeaponId);
 	}
 
-	[DDLRegistration(0xec1b83deu)]
+	[DDLRegistration(0xca0166ccu)]
 	public string? WeaponName { get; set; } = default;
 
-	[DDLRegistration(0xec1b83deu)]
+	[DDLRegistration(0x902af590u)]
 	public uint WeaponId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xec1b83deu)]
+	[DDLRegistration(0x9e860af6u)]
 	public uint EquipIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xec1b83deu)]
+	[DDLRegistration(0xa8a22212u)]
 	public string? PrevWeaponName { get; set; } = default;
 
-	[DDLRegistration(0xec1b83deu)]
+	[DDLRegistration(0x7857149du)]
 	public uint PrevWeaponId { get; set; } = 0x00000000;
 
 	public new static UserEquippedWeaponEvent Create(DDLObject ddl) => new(ddl);

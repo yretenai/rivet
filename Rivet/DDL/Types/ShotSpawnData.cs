@@ -19,10 +19,10 @@ public class ShotSpawnData : ActorSpawnData, IDDLObjectType<ShotSpawnData> {
 		AttackId = ddl.GetValue<uint>(0xa9d10a0fu, AttackId);
 	}
 
-	[DDLRegistration(0xf30d35d1u)]
+	[DDLRegistration(0xd6332abdu)]
 	public ulong Owner { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xf30d35d1u)]
+	[DDLRegistration(0xa9d10a0fu)]
 	public uint AttackId { get; set; } = 0x00000000;
 
 	public new static ShotSpawnData Create(DDLObject ddl) => new(ddl);

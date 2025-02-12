@@ -25,28 +25,28 @@ public class ProjectileThrowingConfig : ConfigBase, IDDLObjectType<ProjectileThr
 		CameraFacingOffset = ddl.GetValue<float>(0x478fd459u, CameraFacingOffset);
 	}
 
-	[DDLRegistration(0xbcd4e648u)]
+	[DDLRegistration(0xd292ec09u)]
 	public float DesiredFlightTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbcd4e648u)]
+	[DDLRegistration(0xf0d89680u)]
 	public float MinSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0xbcd4e648u)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 50.00f;
 
-	[DDLRegistration(0xbcd4e648u)]
+	[DDLRegistration(0x5f3d6c97u)]
 	public List<float> ArcHeights { get; set; } = [];
 
-	[DDLRegistration(0xbcd4e648u)]
+	[DDLRegistration(0x74e30d9bu)]
 	public float CollCheckWidth { get; set; } = 0.10f;
 
-	[DDLRegistration(0xbcd4e648u, description: "This is the max speed used for predicition.  If the target is faster than this, his detected speed will be clamped to this.")]
+	[DDLRegistration(0x0276306eu, description: "This is the max speed used for predicition.  If the target is faster than this, his detected speed will be clamped to this.")]
 	public float MaxPredictionSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0xbcd4e648u, description: "MaxPredictionSpeedTraversal: This is the max speed used for predicition while target is traversing.  If the target is faster than this, his detected speed will be clamped to this.")]
+	[DDLRegistration(0x1cdc53fdu, description: "MaxPredictionSpeedTraversal: This is the max speed used for predicition while target is traversing.  If the target is faster than this, his detected speed will be clamped to this.")]
 	public float MaxPredictionSpeedTraversal { get; set; } = 7.00f;
 
-	[DDLRegistration(0xbcd4e648u, description: "CameraFacingOffset: Try to land at this distance in front of the camera")]
+	[DDLRegistration(0x478fd459u, description: "CameraFacingOffset: Try to land at this distance in front of the camera")]
 	public float CameraFacingOffset { get; set; } = 0.00f;
 
 	public new static ProjectileThrowingConfig Create(DDLObject ddl) => new(ddl);

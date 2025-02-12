@@ -30,43 +30,43 @@ public class SplineCameraFlyPrius : CameraPrius, IDDLObjectType<SplineCameraFlyP
 		TurnSpeedMax = ddl.GetValue<float>(0xa66b2ab3u, TurnSpeedMax);
 	}
 
-	[DDLRegistration(0xdb38953au, "Motion Spline")]
+	[DDLRegistration(0x93329739u, "Motion Spline")]
 	public RivetAssetId MotionSpline { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdb38953au, "Target Actor")]
+	[DDLRegistration(0x98554e8cu, "Target Actor")]
 	public RivetAssetId TargetActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdb38953au, "Look Mode")]
+	[DDLRegistration(0x646527bbu, "Look Mode")]
 	public x73a6f97a LookMode { get; set; } = x73a6f97a.Target;
 
-	[DDLRegistration(0xdb38953au, "Start At End")]
+	[DDLRegistration(0x39b65e8cu, "Start At End")]
 	public bool StartAtEnd { get; set; } = false;
 
-	[DDLRegistration(0xdb38953au, "Target Offset")]
+	[DDLRegistration(0xabbb80f6u, "Target Offset")]
 	public DDLVector3? TargetOffset { get; set; } = default;
 
-	[DDLRegistration(0xdb38953au, "Yaw Offset")]
+	[DDLRegistration(0xe21edee9u, "Yaw Offset")]
 	public float YawOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdb38953au, "Pitch Offset")]
+	[DDLRegistration(0x919dc438u, "Pitch Offset")]
 	public float PitchOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdb38953au, "Speed Accel")]
+	[DDLRegistration(0x5d9ea52cu, "Speed Accel")]
 	public float SpeedAccel { get; set; } = 3.00f;
 
-	[DDLRegistration(0xdb38953au, "Speed Decel")]
+	[DDLRegistration(0xb0157580u, "Speed Decel")]
 	public float SpeedDecel { get; set; } = 3.00f;
 
-	[DDLRegistration(0xdb38953au, "Speed Max")]
+	[DDLRegistration(0xb6419fbau, "Speed Max")]
 	public float SpeedMax { get; set; } = 3.00f;
 
-	[DDLRegistration(0xdb38953au, "Turn Speed Accel")]
+	[DDLRegistration(0x3757494cu, "Turn Speed Accel")]
 	public float TurnSpeedAccel { get; set; } = 75.00f;
 
-	[DDLRegistration(0xdb38953au, "Turn Speed Decel")]
+	[DDLRegistration(0xdadc99e0u, "Turn Speed Decel")]
 	public float TurnSpeedDecel { get; set; } = 20.00f;
 
-	[DDLRegistration(0xdb38953au, "Turn Speed Max")]
+	[DDLRegistration(0xa66b2ab3u, "Turn Speed Max")]
 	public float TurnSpeedMax { get; set; } = 75.00f;
 
 	public new static SplineCameraFlyPrius Create(DDLObject ddl) => new(ddl);

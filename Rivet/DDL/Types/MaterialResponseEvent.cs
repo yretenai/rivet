@@ -20,13 +20,13 @@ public class MaterialResponseEvent : ResponseEvent, IDDLObjectType<MaterialRespo
 		Reset = ddl.GetValue<bool>(0x49ce738cu, Reset);
 	}
 
-	[DDLRegistration(0x759743e2u, "MaterialMappingName", "The Maya material mapping to apply this setting to.")]
+	[DDLRegistration(0x981e6927u, "MaterialMappingName", "The Maya material mapping to apply this setting to.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x759743e2u, description: "The material/materialgraph asset to assign to the actor.")]
+	[DDLRegistration(0x86bfc8e5u, description: "The material/materialgraph asset to assign to the actor.")]
 	public RivetAssetId Material { get; set; } = default;
 
-	[DDLRegistration(0x759743e2u, description: "Reset the Maya material mapping to its original material")]
+	[DDLRegistration(0x49ce738cu, description: "Reset the Maya material mapping to its original material")]
 	public bool Reset { get; set; } = false;
 
 	public new static MaterialResponseEvent Create(DDLObject ddl) => new(ddl);

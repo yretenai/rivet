@@ -36,61 +36,61 @@ public class VelocityFollowerData : DDLObjectType, IDDLObjectType<VelocityFollow
 		MinPitch = ddl.GetValue<float>(0xd861d6afu, MinPitch);
 	}
 
-	[DDLRegistration(0x28cefc9cu, "Velocity Track On")]
+	[DDLRegistration(0x5113d8bcu, "Velocity Track On")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x28cefc9cu, "Motion mode")]
+	[DDLRegistration(0x6057228cu, "Motion mode")]
 	public x79dd0c33 MotionMode { get; set; } = x79dd0c33.Default;
 
-	[DDLRegistration(0x28cefc9cu, "Default Pitch")]
+	[DDLRegistration(0x3d04e240u, "Default Pitch")]
 	public float DefaultPitch { get; set; } = 3.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Speed Trigger")]
+	[DDLRegistration(0x288cb339u, "Speed Trigger")]
 	public float SpeedTrigger { get; set; } = 2.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Post Input Delay")]
+	[DDLRegistration(0x9ce4492du, "Post Input Delay")]
 	public float PostInputDelay { get; set; } = 1.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Yaw Turn Speed Max")]
+	[DDLRegistration(0xee2137e5u, "Yaw Turn Speed Max")]
 	public float SpeedMaxYaw { get; set; } = 230.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Pitch Turn Speed Max")]
+	[DDLRegistration(0x5cef694eu, "Pitch Turn Speed Max")]
 	public float SpeedMaxPitch { get; set; } = 57.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Turn Accel or Gain")]
+	[DDLRegistration(0xd0dd75a7u, "Turn Accel or Gain")]
 	public float AccelOrGain { get; set; } = 90.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Acceleration of Turn Accel or Gain")]
+	[DDLRegistration(0xc0909ea8u, "Acceleration of Turn Accel or Gain")]
 	public float AccelOrGainAccel { get; set; } = 150.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Turn Decel or Damp")]
+	[DDLRegistration(0x2042fe2bu, "Turn Decel or Damp")]
 	public float DecelOrDamp { get; set; } = 50.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Dead Back Angle")]
+	[DDLRegistration(0x34ca5d60u, "Dead Back Angle")]
 	public float DeadBackAngle { get; set; } = 32.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Dead Front Angle")]
+	[DDLRegistration(0x5ed6ef1du, "Dead Front Angle")]
 	public float DeadFrontAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Pitch Scale Up")]
+	[DDLRegistration(0xbee0bd55u, "Pitch Scale Up")]
 	public float PitchScaleUp { get; set; } = 1.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Pitch Scale Down")]
+	[DDLRegistration(0x47b7af19u, "Pitch Scale Down")]
 	public float PitchScaleDown { get; set; } = 2.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Min Angle Difference")]
+	[DDLRegistration(0x17c900d0u, "Min Angle Difference")]
 	public float MinYawPitchDiffTolerance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Min Speed")]
+	[DDLRegistration(0x01979b47u, "Min Speed")]
 	public float MinSpeedTolerance { get; set; } = 4.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Max Yaw Diff From Facing")]
+	[DDLRegistration(0xd219dd80u, "Max Yaw Diff From Facing")]
 	public float MaxYawDiff { get; set; } = 360.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Max Pitch (Absolute)")]
+	[DDLRegistration(0x3e01794eu, "Max Pitch (Absolute)")]
 	public float MaxPitch { get; set; } = 60.00f;
 
-	[DDLRegistration(0x28cefc9cu, "Min Pitch (Absolute)")]
+	[DDLRegistration(0xd861d6afu, "Min Pitch (Absolute)")]
 	public float MinPitch { get; set; } = 0.00f;
 
 	public static VelocityFollowerData Create(DDLObject ddl) => new(ddl);

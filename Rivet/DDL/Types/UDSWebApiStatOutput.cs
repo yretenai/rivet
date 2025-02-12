@@ -18,7 +18,7 @@ public class UDSWebApiStatOutput : DDLObjectType, IDDLObjectType<UDSWebApiStatOu
 		StatName = ddl.GetString(0x4c02f6d0) ?? StatName;
 	}
 
-	[DDLRegistration(0x6441b0c1u)]
+	[DDLRegistration(0x4c02f6d0u)]
 	public string? StatName { get; set; } = default;
 
 	public static UDSWebApiStatOutput Create(DDLObject ddl) => new(ddl);

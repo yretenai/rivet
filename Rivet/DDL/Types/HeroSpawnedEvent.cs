@@ -19,10 +19,10 @@ public class HeroSpawnedEvent : EventBase, IDDLObjectType<HeroSpawnedEvent> {
 		ActorPosition = ddl.GetObject<DDLVector3>(0xd69ed521u);
 	}
 
-	[DDLRegistration(0x183d74d2u, description: "Handle of the actor.")]
+	[DDLRegistration(0x5d269a38u, description: "Handle of the actor.")]
 	public uint Actor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x183d74d2u, description: "Position of the actor.")]
+	[DDLRegistration(0xd69ed521u, description: "Position of the actor.")]
 	public DDLVector3? ActorPosition { get; set; } = default;
 
 	public new static HeroSpawnedEvent Create(DDLObject ddl) => new(ddl);

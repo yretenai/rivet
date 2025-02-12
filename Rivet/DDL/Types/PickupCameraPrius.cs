@@ -19,10 +19,10 @@ public class PickupCameraPrius : DDLObjectType, IDDLObjectType<PickupCameraPrius
 		PickupAnim = ddl.GetString(0xad0053ab) ?? PickupAnim;
 	}
 
-	[DDLRegistration(0xcae1735bu)]
+	[DDLRegistration(0xdfa62471u)]
 	public RivetAssetId CameraActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xcae1735bu)]
+	[DDLRegistration(0xad0053abu)]
 	public string? PickupAnim { get; set; } = "Pickup_Item";
 
 	public static PickupCameraPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class InteractAttachPropEvent : EventBase, IDDLObjectType<InteractAttachP
 		AttachPointHash = ddl.GetValue<uint>(0x1557331fu, AttachPointHash);
 	}
 
-	[DDLRegistration(0xdf62d6d9u)]
+	[DDLRegistration(0x8bbbb97bu)]
 	public uint InteractHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdf62d6d9u)]
+	[DDLRegistration(0xd2edbef4u)]
 	public uint PropHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdf62d6d9u)]
+	[DDLRegistration(0x1557331fu)]
 	public uint AttachPointHash { get; set; } = 0x00000000;
 
 	public new static InteractAttachPropEvent Create(DDLObject ddl) => new(ddl);

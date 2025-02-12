@@ -18,7 +18,7 @@ public class GadgetSettings : DDLObjectType, IDDLObjectType<GadgetSettings> {
 		DrawDebugImguiWindow = ddl.GetValue<bool>(0x623d726eu, DrawDebugImguiWindow);
 	}
 
-	[DDLRegistration(0x08bd3a8au, "Draw Gadget Debug ImGui Window", "Should the Gadget Debug ImGui window be displayed?")]
+	[DDLRegistration(0x623d726eu, "Draw Gadget Debug ImGui Window", "Should the Gadget Debug ImGui window be displayed?")]
 	public bool DrawDebugImguiWindow { get; set; } = false;
 
 	public static GadgetSettings Create(DDLObject ddl) => new(ddl);

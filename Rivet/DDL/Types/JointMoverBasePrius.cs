@@ -23,22 +23,22 @@ public class JointMoverBasePrius : DDLObjectType, IDDLObjectType<JointMoverBaseP
 		Speed = ddl.GetValue<float>(0x16753237u, Speed);
 	}
 
-	[DDLRegistration(0x469b2acfu)]
+	[DDLRegistration(0x6f36ca8bu)]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0x469b2acfu)]
+	[DDLRegistration(0x75337aedu)]
 	public bool CreateJointMover { get; set; } = false;
 
-	[DDLRegistration(0x469b2acfu, description: "Locator or joint name")]
+	[DDLRegistration(0x7bac1d57u, description: "Locator or joint name")]
 	public string? Locator { get; set; } = default;
 
-	[DDLRegistration(0x469b2acfu)]
+	[DDLRegistration(0x44affa24u)]
 	public float Accel { get; set; } = 10.00f;
 
-	[DDLRegistration(0x469b2acfu)]
+	[DDLRegistration(0xa9242a88u)]
 	public float Decel { get; set; } = 10.00f;
 
-	[DDLRegistration(0x469b2acfu)]
+	[DDLRegistration(0x16753237u)]
 	public float Speed { get; set; } = 10.00f;
 
 	public static JointMoverBasePrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class StreamingVideoMaterialOverride : DDLObjectType, IDDLObjectType<Stre
 		OverrideMaterialAsset = ddl.GetValue<RivetAssetId>(0xc7e5d498u, OverrideMaterialAsset);
 	}
 
-	[DDLRegistration(0x6d737963u, description: "Name of material to override texture on.")]
+	[DDLRegistration(0xc6ceecb4u, description: "Name of material to override texture on.")]
 	public string? MaterialName { get; set; } = default;
 
-	[DDLRegistration(0x6d737963u, description: "Name of texture on material to override on.")]
+	[DDLRegistration(0x8a32558au, description: "Name of texture on material to override on.")]
 	public string? TextureName { get; set; } = default;
 
-	[DDLRegistration(0x6d737963u, description: "Override material asset to replace original material for video (optional).")]
+	[DDLRegistration(0xc7e5d498u, description: "Override material asset to replace original material for video (optional).")]
 	public RivetAssetId OverrideMaterialAsset { get; set; } = default;
 
 	public static StreamingVideoMaterialOverride Create(DDLObject ddl) => new(ddl);

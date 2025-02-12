@@ -25,28 +25,28 @@ public class ConduitControllerComponentPrius : DDLObjectType, IDDLObjectType<Con
 		ActiveDurationMax = ddl.GetValue<float>(0x79911e1eu, ActiveDurationMax);
 	}
 
-	[DDLRegistration(0x211bdb98u, "Controller Starts On")]
+	[DDLRegistration(0x4bfdec38u, "Controller Starts On")]
 	public bool StartOnFlag { get; set; } = true;
 
-	[DDLRegistration(0x211bdb98u, "Random Activation")]
+	[DDLRegistration(0x0630331au, "Random Activation")]
 	public bool RandomActivateFlag { get; set; } = true;
 
-	[DDLRegistration(0x211bdb98u, "Random Delay Min")]
+	[DDLRegistration(0xbb8fb610u, "Random Delay Min")]
 	public float RandomActivateDelayMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0x211bdb98u, "Random Delay Max")]
+	[DDLRegistration(0x87828949u, "Random Delay Max")]
 	public float RandomActivateDelayMax { get; set; } = 4.00f;
 
-	[DDLRegistration(0x211bdb98u, "Random Once", "Turn controller off after randomly activating a single effect")]
+	[DDLRegistration(0xc0f61c25u, "Random Once", "Turn controller off after randomly activating a single effect")]
 	public bool RandomActivateOnceFlag { get; set; } = false;
 
-	[DDLRegistration(0x211bdb98u, "Set Effect Duration")]
+	[DDLRegistration(0x6d79e5ccu, "Set Effect Duration")]
 	public bool ActiveDurationFlag { get; set; } = false;
 
-	[DDLRegistration(0x211bdb98u, "Effect Duration Min", "For continuous effects, the minimum duration to leave the effect on for.")]
+	[DDLRegistration(0x459c2147u, "Effect Duration Min", "For continuous effects, the minimum duration to leave the effect on for.")]
 	public float ActiveDurationMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0x211bdb98u, "Effect Duration Max", "For continuous effects, the maximum duration to leave the effect on for.")]
+	[DDLRegistration(0x79911e1eu, "Effect Duration Max", "For continuous effects, the maximum duration to leave the effect on for.")]
 	public float ActiveDurationMax { get; set; } = 2.00f;
 
 	public static ConduitControllerComponentPrius Create(DDLObject ddl) => new(ddl);

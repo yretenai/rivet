@@ -18,7 +18,7 @@ public class PhysicsLauncherPrius : DDLObjectType, IDDLObjectType<PhysicsLaunche
 		LaunchTargets = ddl.GetObjects<PhysicsLauncherEntry>(0xcc9ad339u);
 	}
 
-	[DDLRegistration(0xaaeac3c2u)]
+	[DDLRegistration(0xcc9ad339u)]
 	public List<PhysicsLauncherEntry?> LaunchTargets { get; set; } = [];
 
 	public static PhysicsLauncherPrius Create(DDLObject ddl) => new(ddl);

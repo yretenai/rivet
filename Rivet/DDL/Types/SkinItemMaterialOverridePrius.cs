@@ -21,16 +21,16 @@ public class SkinItemMaterialOverridePrius : DDLObjectType, IDDLObjectType<SkinI
 		SecondaryOverrideNameHash = ddl.GetValue<RivetAssetId>(0x203169f6u, SecondaryOverrideNameHash);
 	}
 
-	[DDLRegistration(0x6f566899u)]
+	[DDLRegistration(0x45587fd6u)]
 	public RivetAssetId MaterialNameHash { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6f566899u)]
+	[DDLRegistration(0x65d8ca67u)]
 	public RivetAssetId OverrideNameHash { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6f566899u)]
+	[DDLRegistration(0x00b1dc47u)]
 	public RivetAssetId SecondaryMaterialNameHash { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6f566899u)]
+	[DDLRegistration(0x203169f6u)]
 	public RivetAssetId SecondaryOverrideNameHash { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static SkinItemMaterialOverridePrius Create(DDLObject ddl) => new(ddl);

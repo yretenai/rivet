@@ -21,16 +21,16 @@ public class WeakspotPrius : DamageModifierIncomingPrius, IDDLObjectType<Weakspo
 		AddTargetLocation = ddl.GetValue<bool>(0x55ae1b22u, AddTargetLocation);
 	}
 
-	[DDLRegistration(0x527294b1u, "Name", "Name of this weakspot, e.g. 'head' for a headshot weakspot.")]
+	[DDLRegistration(0x6eb3beb6u, "Name", "Name of this weakspot, e.g. 'head' for a headshot weakspot.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x527294b1u, "Joint/Locator Name", "Name of joint or locator this weakspot is attached to.")]
+	[DDLRegistration(0x5ba51db8u, "Joint/Locator Name", "Name of joint or locator this weakspot is attached to.")]
 	public string? JointName { get; set; } = default;
 
-	[DDLRegistration(0x527294b1u, "Damage Scale", "Scale damage by this much when hit.")]
+	[DDLRegistration(0x7493bd0au, "Damage Scale", "Scale damage by this much when hit.")]
 	public float DamageScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x527294b1u, "Add Target Location", "Automatically add a weakspot target location at the weakspot joint.")]
+	[DDLRegistration(0x55ae1b22u, "Add Target Location", "Automatically add a weakspot target location at the weakspot joint.")]
 	public bool AddTargetLocation { get; set; } = false;
 
 	public new static WeakspotPrius Create(DDLObject ddl) => new(ddl);

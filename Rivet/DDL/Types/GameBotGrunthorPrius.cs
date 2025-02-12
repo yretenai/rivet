@@ -20,13 +20,13 @@ public class GameBotGrunthorPrius : GameBotMeleeBasePrius, IDDLObjectType<GameBo
 		ArcFinderHeight2 = ddl.GetValue<float>(0x360e360au, ArcFinderHeight2);
 	}
 
-	[DDLRegistration(0x7d07557fu)]
+	[DDLRegistration(0xd8005726u)]
 	public float ArcFinderHeight0 { get; set; } = 6.00f;
 
-	[DDLRegistration(0x7d07557fu)]
+	[DDLRegistration(0xaf0767b0u)]
 	public float ArcFinderHeight1 { get; set; } = 8.00f;
 
-	[DDLRegistration(0x7d07557fu)]
+	[DDLRegistration(0x360e360au)]
 	public float ArcFinderHeight2 { get; set; } = 10.00f;
 
 	public new static GameBotGrunthorPrius Create(DDLObject ddl) => new(ddl);

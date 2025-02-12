@@ -19,10 +19,10 @@ public class SetMaterialActionPrius : DDLObjectType, IDDLObjectType<SetMaterialA
 		MaterialOverrideData = ddl.GetObjects<SetMaterialOverrideData>(0x027c2d01u);
 	}
 
-	[DDLRegistration(0x4f98d333u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0x4f98d333u, description: "Material replacement parameters. Limited to 8.")]
+	[DDLRegistration(0x027c2d01u, description: "Material replacement parameters. Limited to 8.")]
 	public List<SetMaterialOverrideData?> MaterialOverrideData { get; set; } = [];
 
 	public static SetMaterialActionPrius Create(DDLObject ddl) => new(ddl);

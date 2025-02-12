@@ -21,16 +21,16 @@ public class WwiseLookupEventElemDef : DDLObjectType, IDDLObjectType<WwiseLookup
 		AttenuationRadius = ddl.GetValue<float>(0x7216ddacu, AttenuationRadius);
 	}
 
-	[DDLRegistration(0xbe107f02u)]
+	[DDLRegistration(0x8a514a8du)]
 	public uint Id { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbe107f02u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xbe107f02u)]
+	[DDLRegistration(0x7e086fc8u)]
 	public bool IsDialog { get; set; } = false;
 
-	[DDLRegistration(0xbe107f02u)]
+	[DDLRegistration(0x7216ddacu)]
 	public float AttenuationRadius { get; set; } = 0.00f;
 
 	public static WwiseLookupEventElemDef Create(DDLObject ddl) => new(ddl);

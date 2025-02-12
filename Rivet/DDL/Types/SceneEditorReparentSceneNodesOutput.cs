@@ -18,7 +18,7 @@ public class SceneEditorReparentSceneNodesOutput : DDLObjectType, IDDLObjectType
 		Success = ddl.GetValue<bool>(0x6eeabc8au, Success);
 	}
 
-	[DDLRegistration(0xfc356215u)]
+	[DDLRegistration(0x6eeabc8au)]
 	public bool Success { get; set; } = false;
 
 	public static SceneEditorReparentSceneNodesOutput Create(DDLObject ddl) => new(ddl);

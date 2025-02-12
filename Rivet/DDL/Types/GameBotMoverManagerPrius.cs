@@ -18,7 +18,7 @@ public class GameBotMoverManagerPrius : BotMoverManagerPrius, IDDLObjectType<Gam
 		UseHeroMove = ddl.GetValue<bool>(0x729255e0u, UseHeroMove);
 	}
 
-	[DDLRegistration(0xb8e8ddc3u)]
+	[DDLRegistration(0x729255e0u)]
 	public bool UseHeroMove { get; set; } = false;
 
 	public new static GameBotMoverManagerPrius Create(DDLObject ddl) => new(ddl);

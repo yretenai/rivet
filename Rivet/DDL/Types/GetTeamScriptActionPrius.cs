@@ -18,7 +18,7 @@ public class GetTeamScriptActionPrius : DDLObjectType, IDDLObjectType<GetTeamScr
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xad6217f6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
 	public static GetTeamScriptActionPrius Create(DDLObject ddl) => new(ddl);

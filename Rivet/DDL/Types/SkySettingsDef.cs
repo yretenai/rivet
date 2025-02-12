@@ -21,16 +21,16 @@ public class SkySettingsDef : DDLObjectType, IDDLObjectType<SkySettingsDef> {
 		SkyBoxSunThreshold = ddl.GetValue<float>(0xfc347756u, SkyBoxSunThreshold);
 	}
 
-	[DDLRegistration(0xa3730467u, "Sky Model Scale", "Sky Object Scale Used For Fogging")]
+	[DDLRegistration(0x87b327afu, "Sky Model Scale", "Sky Object Scale Used For Fogging")]
 	public float SkyObjectsScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa3730467u, "Sky Models")]
+	[DDLRegistration(0xa820b707u, "Sky Models")]
 	public List<RivetAssetId> SkyObjects { get; set; } = [];
 
-	[DDLRegistration(0xa3730467u, "Sky Box Image", "Cube Map or 2D Lat-Long texture for the sky background. A Lat-Long with a 4x1 aspect ratio will be mirrored for the lower hemisphere.")]
+	[DDLRegistration(0x181be623u, "Sky Box Image", "Cube Map or 2D Lat-Long texture for the sky background. A Lat-Long with a 4x1 aspect ratio will be mirrored for the lower hemisphere.")]
 	public RivetAssetId SkyBoxCubeMap { get; set; } = default;
 
-	[DDLRegistration(0xa3730467u, "Sky Box Sun Threshold", "Values greater than this in the sky box are clamped during lighting capture")]
+	[DDLRegistration(0xfc347756u, "Sky Box Sun Threshold", "Values greater than this in the sky box are clamped during lighting capture")]
 	public float SkyBoxSunThreshold { get; set; } = 10.00f;
 
 	public static SkySettingsDef Create(DDLObject ddl) => new(ddl);

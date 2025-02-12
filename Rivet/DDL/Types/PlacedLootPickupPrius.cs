@@ -18,7 +18,7 @@ public class PlacedLootPickupPrius : DDLObjectType, IDDLObjectType<PlacedLootPic
 		LootData = ddl.GetObject<CommonLootData>(0xbcec9320u);
 	}
 
-	[DDLRegistration(0xa17c014fu)]
+	[DDLRegistration(0xbcec9320u)]
 	public CommonLootData? LootData { get; set; } = default;
 
 	public static PlacedLootPickupPrius Create(DDLObject ddl) => new(ddl);

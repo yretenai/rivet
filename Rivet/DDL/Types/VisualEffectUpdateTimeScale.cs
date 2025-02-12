@@ -19,10 +19,10 @@ public class VisualEffectUpdateTimeScale : DDLObjectType, IDDLObjectType<VisualE
 		Scale = ddl.GetValue<float>(0xf515e945u, Scale);
 	}
 
-	[DDLRegistration(0x972dae69u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x1ab32e78 Type { get; set; } = x1ab32e78.Parent;
 
-	[DDLRegistration(0x972dae69u)]
+	[DDLRegistration(0xf515e945u)]
 	public float Scale { get; set; } = 1.00f;
 
 	public static VisualEffectUpdateTimeScale Create(DDLObject ddl) => new(ddl);

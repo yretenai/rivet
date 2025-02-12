@@ -19,10 +19,10 @@ public class VfxDurationEngineItem : DDLObjectType, IDDLObjectType<VfxDurationEn
 		VfxPath = ddl.GetValue<RivetAssetId>(0x8e13e533u, VfxPath);
 	}
 
-	[DDLRegistration(0xa9131045u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa9131045u)]
+	[DDLRegistration(0x8e13e533u)]
 	public RivetAssetId VfxPath { get; set; } = default;
 
 	public static VfxDurationEngineItem Create(DDLObject ddl) => new(ddl);

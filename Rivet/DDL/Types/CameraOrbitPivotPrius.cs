@@ -19,10 +19,10 @@ public class CameraOrbitPivotPrius : DDLObjectType, IDDLObjectType<CameraOrbitPi
 		Offset = ddl.GetObject<DDLVector3>(0x677284b7u);
 	}
 
-	[DDLRegistration(0x195ad358u, "Pivot Offset", "CameraAxis from Pivot")]
+	[DDLRegistration(0x48ba0f4bu, "Pivot Offset", "CameraAxis from Pivot")]
 	public DDLVector3? PivotOffset { get; set; } = default;
 
-	[DDLRegistration(0x195ad358u, "Offset", "CameraAxis from Pivot")]
+	[DDLRegistration(0x677284b7u, "Offset", "CameraAxis from Pivot")]
 	public DDLVector3? Offset { get; set; } = default;
 
 	public static CameraOrbitPivotPrius Create(DDLObject ddl) => new(ddl);

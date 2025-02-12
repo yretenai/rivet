@@ -19,10 +19,10 @@ public class GridTileData : DDLObjectType, IDDLObjectType<GridTileData> {
 		TileIndex = ddl.GetValue<uint>(0x95a0a58bu, TileIndex);
 	}
 
-	[DDLRegistration(0xa3812f1fu)]
+	[DDLRegistration(0xb8580a40u)]
 	public uint GridIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa3812f1fu)]
+	[DDLRegistration(0x95a0a58bu)]
 	public uint TileIndex { get; set; } = 0x00000000;
 
 	public static GridTileData Create(DDLObject ddl) => new(ddl);

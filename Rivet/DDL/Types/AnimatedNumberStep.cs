@@ -22,19 +22,19 @@ public class AnimatedNumberStep : DDLObjectType, IDDLObjectType<AnimatedNumberSt
 		EaseOut = ddl.GetValue<float>(0x4acc6cbeu, EaseOut);
 	}
 
-	[DDLRegistration(0xe8027967u)]
+	[DDLRegistration(0x651c34d0u)]
 	public float StartValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe8027967u)]
+	[DDLRegistration(0x5550361fu)]
 	public float EndValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe8027967u, description: "How long it takes to get to the end value")]
+	[DDLRegistration(0x5f0458f5u, description: "How long it takes to get to the end value")]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe8027967u, description: "-1 = fast start, 0 = linear start, 1 = slow start")]
+	[DDLRegistration(0xcff6917au, description: "-1 = fast start, 0 = linear start, 1 = slow start")]
 	public float EaseIn { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe8027967u, description: "-1 = fast end, 0 = linear end, 1 = slow end")]
+	[DDLRegistration(0x4acc6cbeu, description: "-1 = fast end, 0 = linear end, 1 = slow end")]
 	public float EaseOut { get; set; } = 0.00f;
 
 	public static AnimatedNumberStep Create(DDLObject ddl) => new(ddl);

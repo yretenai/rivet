@@ -18,7 +18,7 @@ public class TargetShapeContainer : DDLObjectType, IDDLObjectType<TargetShapeCon
 		Shape = ddl.GetObject<TargetShape>(0xc4633319u);
 	}
 
-	[DDLRegistration(0x93267cbeu)]
+	[DDLRegistration(0xc4633319u)]
 	public TargetShape? Shape { get; set; } = default;
 
 	public static TargetShapeContainer Create(DDLObject ddl) => new(ddl);

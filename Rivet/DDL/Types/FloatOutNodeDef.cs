@@ -18,7 +18,7 @@ public class FloatOutNodeDef : NodeBaseDef, IDDLObjectType<FloatOutNodeDef> {
 		Out = ddl.GetObject<OutputPlugFloat>(0x93bf4450u);
 	}
 
-	[DDLRegistration(0x7dd00c5bu)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugFloat? Out { get; set; } = default;
 
 	public new static FloatOutNodeDef Create(DDLObject ddl) => new(ddl);

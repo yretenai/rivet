@@ -23,22 +23,22 @@ public class DecalTrailAttributes : DDLObjectType, IDDLObjectType<DecalTrailAttr
 		MaxLength = ddl.GetValue<float>(0xbd0de91fu, MaxLength);
 	}
 
-	[DDLRegistration(0xd5354488u, "Key-Frame Access Type", "Use head particle age or traveled distance to evaluate key-frames")]
+	[DDLRegistration(0x521686a5u, "Key-Frame Access Type", "Use head particle age or traveled distance to evaluate key-frames")]
 	public KeyFrameAccessType KeyFrameAccessType { get; set; } = KeyFrameAccessType.Age;
 
-	[DDLRegistration(0xd5354488u, "Display Trail Bounds")]
+	[DDLRegistration(0x788d57a7u, "Display Trail Bounds")]
 	public bool DisplayTrailBounds { get; set; } = true;
 
-	[DDLRegistration(0xd5354488u, "Skip Skinned Meshes", "Don't spawn decals on skinned meshes")]
+	[DDLRegistration(0x7ce75ea6u, "Skip Skinned Meshes", "Don't spawn decals on skinned meshes")]
 	public bool SkipSkinnedMeshes { get; set; } = true;
 
-	[DDLRegistration(0xd5354488u, "Segment Life-time", "Life-time of the segments spawned")]
+	[DDLRegistration(0xec4b22ccu, "Segment Life-time", "Life-time of the segments spawned")]
 	public float SegmentLifetime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd5354488u, "Segment Size", "Minimum distance traveled that results in a segment placement")]
+	[DDLRegistration(0x542d5dd9u, "Segment Size", "Minimum distance traveled that results in a segment placement")]
 	public float SegmentSize { get; set; } = 0.10f;
 
-	[DDLRegistration(0xd5354488u, "Max Length", "Maximum Trail length before the tail starts disappearing")]
+	[DDLRegistration(0xbd0de91fu, "Max Length", "Maximum Trail length before the tail starts disappearing")]
 	public float MaxLength { get; set; } = 16.00f;
 
 	public static DecalTrailAttributes Create(DDLObject ddl) => new(ddl);

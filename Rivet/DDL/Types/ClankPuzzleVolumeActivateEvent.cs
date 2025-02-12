@@ -18,7 +18,7 @@ public class ClankPuzzleVolumeActivateEvent : EventBase, IDDLObjectType<ClankPuz
 		GroundedVolume = ddl.GetValue<bool>(0x434f2284u, GroundedVolume);
 	}
 
-	[DDLRegistration(0x3e6e5c0cu)]
+	[DDLRegistration(0x434f2284u)]
 	public bool GroundedVolume { get; set; } = false;
 
 	public new static ClankPuzzleVolumeActivateEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class InventoryChangedEvent : EventBase, IDDLObjectType<InventoryChangedE
 		Component = ddl.GetValue<uint>(0xcb033e5bu, Component);
 	}
 
-	[DDLRegistration(0x635d9bd5u)]
+	[DDLRegistration(0x5d269a38u)]
 	public uint Actor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x635d9bd5u)]
+	[DDLRegistration(0xcb033e5bu)]
 	public uint Component { get; set; } = 0x00000000;
 
 	public new static InventoryChangedEvent Create(DDLObject ddl) => new(ddl);

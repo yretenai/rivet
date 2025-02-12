@@ -22,19 +22,19 @@ public class ConnectionTuidDef : NodeGraphItemDef, IDDLObjectType<ConnectionTuid
 		TargetPlugId = ddl.GetValue<RivetAssetId>(0x6e8ea00eu, TargetPlugId);
 	}
 
-	[DDLRegistration(0xf16ecadcu)]
+	[DDLRegistration(0x0f9f2930u)]
 	public List<ConnectionPinDef?> Pins { get; set; } = [];
 
-	[DDLRegistration(0xf16ecadcu)]
+	[DDLRegistration(0xde701d92u)]
 	public RivetAssetId SourceNodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf16ecadcu)]
+	[DDLRegistration(0x4b2de03du)]
 	public RivetAssetId SourcePlugId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf16ecadcu)]
+	[DDLRegistration(0xfbd35da1u)]
 	public RivetAssetId TargetNodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf16ecadcu)]
+	[DDLRegistration(0x6e8ea00eu)]
 	public RivetAssetId TargetPlugId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static ConnectionTuidDef Create(DDLObject ddl) => new(ddl);

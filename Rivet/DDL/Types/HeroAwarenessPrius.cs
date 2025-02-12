@@ -19,10 +19,10 @@ public class HeroAwarenessPrius : AwarenessBasePrius, IDDLObjectType<HeroAwarene
 		SourceLocatorName = ddl.GetString(0x058c28db) ?? SourceLocatorName;
 	}
 
-	[DDLRegistration(0xbe4b7ef6u)]
+	[DDLRegistration(0xb26fac4cu)]
 	public AwarenessLos AwarenessLos { get; set; } = AwarenessLos.AllTargets;
 
-	[DDLRegistration(0xbe4b7ef6u)]
+	[DDLRegistration(0x058c28dbu)]
 	public string? SourceLocatorName { get; set; } = "head";
 
 	public new static HeroAwarenessPrius Create(DDLObject ddl) => new(ddl);

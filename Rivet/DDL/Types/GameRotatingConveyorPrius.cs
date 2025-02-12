@@ -19,10 +19,10 @@ public class GameRotatingConveyorPrius : MovingSurfacePrius, IDDLObjectType<Game
 		RotationRate = ddl.GetValue<float>(0xb0b29e9bu, RotationRate);
 	}
 
-	[DDLRegistration(0xd724e93du)]
+	[DDLRegistration(0xc15f726bu)]
 	public DDLVector3? LocalOrigin { get; set; } = default;
 
-	[DDLRegistration(0xd724e93du, description: "clockwise degrees per second in local space")]
+	[DDLRegistration(0xb0b29e9bu, description: "clockwise degrees per second in local space")]
 	public float RotationRate { get; set; } = 1.00f;
 
 	public new static GameRotatingConveyorPrius Create(DDLObject ddl) => new(ddl);

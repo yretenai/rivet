@@ -20,13 +20,13 @@ public class HPThresholdEvent : EventBase, IDDLObjectType<HPThresholdEvent> {
 		HitJoint = ddl.GetValue<uint>(0x88a63be8u, HitJoint);
 	}
 
-	[DDLRegistration(0xfaed3898u)]
+	[DDLRegistration(0xead514e4u)]
 	public float HPFraction { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfaed3898u)]
+	[DDLRegistration(0x66cfe3eau)]
 	public uint ThresholdIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfaed3898u)]
+	[DDLRegistration(0x88a63be8u)]
 	public uint HitJoint { get; set; } = 0x00000000;
 
 	public new static HPThresholdEvent Create(DDLObject ddl) => new(ddl);

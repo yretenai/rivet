@@ -18,7 +18,7 @@ public class DamageTunerDiminishingReturnsPrius : DamageTunerBasePrius, IDDLObje
 		DiminishingValue = ddl.GetValue<float>(0xcdb935b6u, DiminishingValue);
 	}
 
-	[DDLRegistration(0x1fe03b35u)]
+	[DDLRegistration(0xcdb935b6u)]
 	public float DiminishingValue { get; set; } = 1.00f;
 
 	public new static DamageTunerDiminishingReturnsPrius Create(DDLObject ddl) => new(ddl);

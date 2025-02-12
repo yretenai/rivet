@@ -19,10 +19,10 @@ public class ShotGloveOfDoomPrius : LobbedShotPrius, IDDLObjectType<ShotGloveOfD
 		AgentActor = ddl.GetValue<RivetAssetId>(0xae3ced3cu, AgentActor);
 	}
 
-	[DDLRegistration(0x77eb1bbdu)]
+	[DDLRegistration(0x1d16931fu)]
 	public RivetAssetId ManagerActor { get; set; } = default;
 
-	[DDLRegistration(0x77eb1bbdu)]
+	[DDLRegistration(0xae3ced3cu)]
 	public RivetAssetId AgentActor { get; set; } = default;
 
 	public new static ShotGloveOfDoomPrius Create(DDLObject ddl) => new(ddl);

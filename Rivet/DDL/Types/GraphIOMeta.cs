@@ -23,22 +23,22 @@ public class GraphIOMeta : DDLObjectType, IDDLObjectType<GraphIOMeta> {
 		Tooltip = ddl.GetString(0xa0533c88) ?? Tooltip;
 	}
 
-	[DDLRegistration(0x9669c0f7u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0x9669c0f7u)]
+	[DDLRegistration(0xf4b3e9a4u)]
 	public string? SubType { get; set; } = default;
 
-	[DDLRegistration(0x9669c0f7u)]
+	[DDLRegistration(0x90fe53d9u)]
 	public x06e9cd50 Dir { get; set; } = x06e9cd50.Invalid;
 
-	[DDLRegistration(0x9669c0f7u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9669c0f7u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x9669c0f7u)]
+	[DDLRegistration(0xa0533c88u)]
 	public string? Tooltip { get; set; } = default;
 
 	public static GraphIOMeta Create(DDLObject ddl) => new(ddl);

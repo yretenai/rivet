@@ -18,7 +18,7 @@ public class UIViewInfoConfig : ConfigBase, IDDLObjectType<UIViewInfoConfig> {
 		Views = ddl.GetObjects<UIViewInfo>(0x08a35046u);
 	}
 
-	[DDLRegistration(0x7ad2d6f8u)]
+	[DDLRegistration(0x08a35046u)]
 	public List<UIViewInfo?> Views { get; set; } = [];
 
 	public new static UIViewInfoConfig Create(DDLObject ddl) => new(ddl);

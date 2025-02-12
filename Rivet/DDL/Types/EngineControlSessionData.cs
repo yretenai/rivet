@@ -24,25 +24,25 @@ public class EngineControlSessionData : DDLObjectType, IDDLObjectType<EngineCont
 		ModelInstances = ddl.GetDictionary<RivetAssetId, EngineControlModelInstanceData>(0x4e9467ed, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EngineControlModelInstanceData>(mapId));
 	}
 
-	[DDLRegistration(0xbb476265u)]
+	[DDLRegistration(0x7566b265u)]
 	public bool Active { get; set; } = false;
 
-	[DDLRegistration(0xbb476265u)]
+	[DDLRegistration(0xe153be82u)]
 	public Dictionary<RivetAssetId, EngineControlActorData?> Actors { get; set; } = [];
 
-	[DDLRegistration(0xbb476265u)]
+	[DDLRegistration(0xb7eef61du)]
 	public Dictionary<RivetAssetId, EngineControlAssetOverride?> AssetOverrides { get; set; } = [];
 
-	[DDLRegistration(0xbb476265u)]
+	[DDLRegistration(0x79fd859au)]
 	public RivetAssetId Atmosphere { get; set; } = "required/atmospheres/default_atmosphere.atmosphere";
 
-	[DDLRegistration(0xbb476265u)]
+	[DDLRegistration(0x42a1ebf3u)]
 	public float BrightnessScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbb476265u)]
+	[DDLRegistration(0x6ab54452u)]
 	public Dictionary<string, EngineControlCamera?> Cameras { get; set; } = [];
 
-	[DDLRegistration(0xbb476265u)]
+	[DDLRegistration(0x4e9467edu)]
 	public Dictionary<RivetAssetId, EngineControlModelInstanceData?> ModelInstances { get; set; } = [];
 
 	public static EngineControlSessionData Create(DDLObject ddl) => new(ddl);

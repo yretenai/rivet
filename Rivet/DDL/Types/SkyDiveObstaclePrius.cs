@@ -18,7 +18,7 @@ public class SkyDiveObstaclePrius : DDLObjectType, IDDLObjectType<SkyDiveObstacl
 		DamageAmount = ddl.GetValue<float>(0x563be470u, DamageAmount);
 	}
 
-	[DDLRegistration(0xbc5aaf0fu)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 0.00f;
 
 	public static SkyDiveObstaclePrius Create(DDLObject ddl) => new(ddl);

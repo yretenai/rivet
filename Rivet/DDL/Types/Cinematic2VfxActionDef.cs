@@ -32,49 +32,49 @@ public class Cinematic2VfxActionDef : DDLObjectType, IDDLObjectType<Cinematic2Vf
 		SubActions = ddl.GetDictionary<RivetAssetId, Cinematic2VfxSubActionDef>(0x5aa13e85, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2VfxSubActionDef>(mapId));
 	}
 
-	[DDLRegistration(0x2f4354dau)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x2f4354dau)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2f4354dau)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x2f4354dau)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2f4354dau)]
+	[DDLRegistration(0x8e13e533u)]
 	public RivetAssetId VfxPath { get; set; } = default;
 
-	[DDLRegistration(0x2f4354dau)]
+	[DDLRegistration(0x8638cf34u)]
 	public DDLTransform? OffsetTransform { get; set; } = default;
 
-	[DDLRegistration(0x2f4354dau, description: "Attach Vfx to joint")]
+	[DDLRegistration(0x66348122u, description: "Attach Vfx to joint")]
 	public bool AttachToJoint { get; set; } = false;
 
-	[DDLRegistration(0x2f4354dau)]
+	[DDLRegistration(0x5814524du)]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0x2f4354dau)]
+	[DDLRegistration(0x5ba51db8u)]
 	public string? JointName { get; set; } = default;
 
-	[DDLRegistration(0x2f4354dau)]
+	[DDLRegistration(0xbe80f2d5u)]
 	public RivetAssetId SecondaryActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x2f4354dau)]
+	[DDLRegistration(0x06d2317bu)]
 	public string? SecondaryActorLocatorName { get; set; } = default;
 
-	[DDLRegistration(0x2f4354dau, description: "If set to true, when the tracked action completes, remove the effect and all particles right away; otherwise the effect will finish simulating before it is removed.")]
+	[DDLRegistration(0x635c25beu, description: "If set to true, when the tracked action completes, remove the effect and all particles right away; otherwise the effect will finish simulating before it is removed.")]
 	public bool KillImmediate { get; set; } = false;
 
-	[DDLRegistration(0x2f4354dau, description: "When jumping to another shot, should we preserve the VFX?")]
+	[DDLRegistration(0xc0f60590u, description: "When jumping to another shot, should we preserve the VFX?")]
 	public bool PreserveOnJump { get; set; } = false;
 
-	[DDLRegistration(0x2f4354dau, description: "Max number of simultaneous instances allowed to be active at the same time (typically used for looping shots). A value of 0 means no limit.")]
+	[DDLRegistration(0x8ed02efbu, description: "Max number of simultaneous instances allowed to be active at the same time (typically used for looping shots). A value of 0 means no limit.")]
 	public int InstanceCountMax { get; set; } = 0;
 
-	[DDLRegistration(0x2f4354dau)]
+	[DDLRegistration(0x5aa13e85u)]
 	public Dictionary<RivetAssetId, Cinematic2VfxSubActionDef?> SubActions { get; set; } = [];
 
 	public static Cinematic2VfxActionDef Create(DDLObject ddl) => new(ddl);

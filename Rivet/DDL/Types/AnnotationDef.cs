@@ -20,13 +20,13 @@ public class AnnotationDef : DDLObjectType, IDDLObjectType<AnnotationDef> {
 		VisibleDistance = ddl.GetValue<float>(0x3581c3dcu, VisibleDistance);
 	}
 
-	[DDLRegistration(0x8dc47c70u)]
+	[DDLRegistration(0x0b1b6777u)]
 	public List<string?> Text { get; set; } = [];
 
-	[DDLRegistration(0x8dc47c70u)]
+	[DDLRegistration(0x7f058428u)]
 	public x6898de8f Color { get; set; } = x6898de8f.White;
 
-	[DDLRegistration(0x8dc47c70u)]
+	[DDLRegistration(0x3581c3dcu)]
 	public float VisibleDistance { get; set; } = 50.00f;
 
 	public static AnnotationDef Create(DDLObject ddl) => new(ddl);

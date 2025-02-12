@@ -18,7 +18,7 @@ public class SkelJointsNode : DDLObjectType, IDDLObjectType<SkelJointsNode> {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0x224f7c7cu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
 	public static SkelJointsNode Create(DDLObject ddl) => new(ddl);

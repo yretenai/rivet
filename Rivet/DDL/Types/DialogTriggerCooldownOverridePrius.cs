@@ -19,10 +19,10 @@ public class DialogTriggerCooldownOverridePrius : DDLObjectType, IDDLObjectType<
 		Cooldown = ddl.GetValue<float>(0x246291a9u, Cooldown);
 	}
 
-	[DDLRegistration(0xbbcbb46cu)]
+	[DDLRegistration(0x1b816c65u)]
 	public DialogTriggerGame Trigger { get; set; } = DialogTriggerGame.None;
 
-	[DDLRegistration(0xbbcbb46cu)]
+	[DDLRegistration(0x246291a9u)]
 	public float Cooldown { get; set; } = 0.00f;
 
 	public static DialogTriggerCooldownOverridePrius Create(DDLObject ddl) => new(ddl);

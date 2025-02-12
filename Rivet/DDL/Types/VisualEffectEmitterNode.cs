@@ -39,70 +39,70 @@ public class VisualEffectEmitterNode : DDLObjectType, IDDLObjectType<VisualEffec
 		InputPort_PerfAttrOverrides = ddl.GetObject<VisualEffectPerfAttrOverride>(0xd24cc1bau);
 	}
 
-	[DDLRegistration(0x1b98f123u)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x1b98f123u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x1b98f123u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x1b98f123u, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x1b98f123u)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<VisualEffectNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0x1b98f123u)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<VisualEffectNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
-	[DDLRegistration(0x1b98f123u)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = true;
 
-	[DDLRegistration(0x1b98f123u, "Activation Chance", "A 0-1 value that represents the 0-100% chance this emitter will spawn, per instance.<br>Good for adding randomization, even optimization, i.e. sparks")]
+	[DDLRegistration(0x06240a1eu, "Activation Chance", "A 0-1 value that represents the 0-100% chance this emitter will spawn, per instance.<br>Good for adding randomization, even optimization, i.e. sparks")]
 	public float ActivationChance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1b98f123u, "Randomize Instance", "On/off checkbox. Determines whether the emitter will randomly generate different results every instance.<br><b>On:</b> It will generate a random value between any 2 values you have set in a range, for all attributes.<br><b>Off:</b> It will always generate the <b>same</b> random values, based on instance ID and Random Seed. This is mostly used for cinematics, when you want to have precise control over the look of the vfx.")]
+	[DDLRegistration(0x0049dc16u, "Randomize Instance", "On/off checkbox. Determines whether the emitter will randomly generate different results every instance.<br><b>On:</b> It will generate a random value between any 2 values you have set in a range, for all attributes.<br><b>Off:</b> It will always generate the <b>same</b> random values, based on instance ID and Random Seed. This is mostly used for cinematics, when you want to have precise control over the look of the vfx.")]
 	public bool RandomizeInstance { get; set; } = true;
 
-	[DDLRegistration(0x1b98f123u, "Draw Spawn Style", "On/off checkbox. Turns on a wireframe preview of your emitter shape.<br>By default, this is not displayed in-game unless you also enable it with the Debug Menu option:<br>Rendering > VisualEffects > Display Tagged Spawn Styles = ON")]
+	[DDLRegistration(0x397a98ceu, "Draw Spawn Style", "On/off checkbox. Turns on a wireframe preview of your emitter shape.<br>By default, this is not displayed in-game unless you also enable it with the Debug Menu option:<br>Rendering > VisualEffects > Display Tagged Spawn Styles = ON")]
 	public bool DrawSpawnStyle { get; set; } = false;
 
-	[DDLRegistration(0x1b98f123u, "Dynamic Scaling", "On/off checkbox. Turning this on allows your emitter to be scaleable, when the vfx package is scaled.")]
+	[DDLRegistration(0xd726cd51u, "Dynamic Scaling", "On/off checkbox. Turning this on allows your emitter to be scaleable, when the vfx package is scaled.")]
 	public bool DynamicScaling { get; set; } = false;
 
-	[DDLRegistration(0x1b98f123u, "Particle Space", "<br><b>World:</b> Particles are parented to the world. If the emitter moves, the particles will be left behind.<br><b>Local:</b> Particles are parented to the actor/locator they are spawned on. It will inherit all movement of the parent.<br><b>Physics:</b> Particles can collide with the world.<br><i>CPU type</i> uses the Havoc physics engine, and is more expensive. (Don't put this everywhere.)<br><i>GPU type</i> uses the depth buffer to 'see' where the ground is and fake collision. The limitation is that this cannot happen offscreen.")]
+	[DDLRegistration(0xf4f807d8u, "Particle Space", "<br><b>World:</b> Particles are parented to the world. If the emitter moves, the particles will be left behind.<br><b>Local:</b> Particles are parented to the actor/locator they are spawned on. It will inherit all movement of the parent.<br><b>Physics:</b> Particles can collide with the world.<br><i>CPU type</i> uses the Havoc physics engine, and is more expensive. (Don't put this everywhere.)<br><i>GPU type</i> uses the depth buffer to 'see' where the ground is and fake collision. The limitation is that this cannot happen offscreen.")]
 	public x8db2fd48 ParticleSpace { get; set; } = x8db2fd48.World;
 
-	[DDLRegistration(0x1b98f123u, "Emitter Type", "<b>CPU:</b> Calculated on the CPU.<br><b>GPU:</b> Calculated on the GPU.")]
+	[DDLRegistration(0xf5bf036du, "Emitter Type", "<b>CPU:</b> Calculated on the CPU.<br><b>GPU:</b> Calculated on the GPU.")]
 	public EmitterType EmitterType { get; set; } = EmitterType.CPU;
 
-	[DDLRegistration(0x1b98f123u, "Max Active Particles", "How many particles allowed to exist at a time. When number is reached, no more will spawn until some die.")]
+	[DDLRegistration(0x4eff65dfu, "Max Active Particles", "How many particles allowed to exist at a time. When number is reached, no more will spawn until some die.")]
 	public uint MaxActiveParticles { get; set; } = 0x00002000;
 
-	[DDLRegistration(0x1b98f123u, "Max Spawned Particles", "How many particles allowed to spawn in total. Overrides other parameters like emitter lifetime, spawn rate, etc.")]
+	[DDLRegistration(0xd2cfb0eau, "Max Spawned Particles", "How many particles allowed to spawn in total. Overrides other parameters like emitter lifetime, spawn rate, etc.")]
 	public uint MaxParticles { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1b98f123u, "Inherit Screen Color", "Inherit the screen-space spawn location color, GPU particles only!")]
+	[DDLRegistration(0x63893772u, "Inherit Screen Color", "Inherit the screen-space spawn location color, GPU particles only!")]
 	public bool InheritScreenColor { get; set; } = false;
 
-	[DDLRegistration(0x1b98f123u, "OnDeath Spawn Count", "How many particles to burst at the death of the emitter.")]
+	[DDLRegistration(0x5d61b8b4u, "OnDeath Spawn Count", "How many particles to burst at the death of the emitter.")]
 	public uint OnDeathSpawnCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1b98f123u, "Emitter Spaces", "Tells the emitter if transforms are relative to the parent actor/locator, or to the world/global.<br><b>Direction:</b> Rotation values for the emitter.<br>Local is the default. Use World space when you want the emitter to always face up or down. (ex: a fountain)<br><b>Position:</b> Translation/offset values for the emitter.<br>'Local' is relative to the transform of whatever it�s spawned on.<br>'World' is global, and useful for Y offsets.")]
+	[DDLRegistration(0x64e1100au, "Emitter Spaces", "Tells the emitter if transforms are relative to the parent actor/locator, or to the world/global.<br><b>Direction:</b> Rotation values for the emitter.<br>Local is the default. Use World space when you want the emitter to always face up or down. (ex: a fountain)<br><b>Position:</b> Translation/offset values for the emitter.<br>'Local' is relative to the transform of whatever it�s spawned on.<br>'World' is global, and useful for Y offsets.")]
 	public SeparateSpaces? EmitterSpaces { get; set; } = default;
 
-	[DDLRegistration(0x1b98f123u, "Emission", "Set/keyframe properties of the emitter itself, relative to the owning actor's frame-of-reference.<br><b>Angles:</b> roll, pitch, yaw rotations<br><b>Offset:</b> X, Y, Z translation")]
+	[DDLRegistration(0x0a23e184u, "Emission", "Set/keyframe properties of the emitter itself, relative to the owning actor's frame-of-reference.<br><b>Angles:</b> roll, pitch, yaw rotations<br><b>Offset:</b> X, Y, Z translation")]
 	public VisualEffectEmission? Emission { get; set; } = default;
 
-	[DDLRegistration(0x1b98f123u, "Particle Render")]
+	[DDLRegistration(0x08877f75u, "Particle Render")]
 	public VisualEffectParticleRender? ParticleRender { get; set; } = default;
 
-	[DDLRegistration(0x1b98f123u, "Particle Motion")]
+	[DDLRegistration(0x692547f7u, "Particle Motion")]
 	public VisualEffectParticleMotion? ParticleMotion { get; set; } = default;
 
-	[DDLRegistration(0x1b98f123u, "Performance Attributes")]
+	[DDLRegistration(0xd24cc1bau, "Performance Attributes")]
 	public VisualEffectPerfAttrOverride? InputPort_PerfAttrOverrides { get; set; } = default;
 
 	public static VisualEffectEmitterNode Create(DDLObject ddl) => new(ddl);

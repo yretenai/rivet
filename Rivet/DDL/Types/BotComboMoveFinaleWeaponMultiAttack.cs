@@ -19,10 +19,10 @@ public class BotComboMoveFinaleWeaponMultiAttack : BotComboMoveBase, IDDLObjectT
 		AttackVolumeArm = ddl.GetValue<RivetAssetId>(0xd8c72d57u, AttackVolumeArm);
 	}
 
-	[DDLRegistration(0x05ba0363u)]
+	[DDLRegistration(0x77dc1348u)]
 	public RivetAssetId AttackVolumeHead { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x05ba0363u)]
+	[DDLRegistration(0xd8c72d57u)]
 	public RivetAssetId AttackVolumeArm { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static BotComboMoveFinaleWeaponMultiAttack Create(DDLObject ddl) => new(ddl);

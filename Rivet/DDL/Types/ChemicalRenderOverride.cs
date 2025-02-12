@@ -22,19 +22,19 @@ public class ChemicalRenderOverride : DDLObjectType, IDDLObjectType<ChemicalRend
 		Texture = ddl.GetValue<RivetAssetId>(0x838c6e4au, Texture);
 	}
 
-	[DDLRegistration(0x4a1e78f3u, description: "Name of the node in the materialgraph this is overriding.")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of the node in the materialgraph this is overriding.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x4a1e78f3u, description: "What type of node is this overriding?")]
+	[DDLRegistration(0xbc4e9799u, description: "What type of node is this overriding?")]
 	public x18f892a3 Type { get; set; } = x18f892a3.Constant;
 
-	[DDLRegistration(0x4a1e78f3u)]
+	[DDLRegistration(0x11306034u)]
 	public DDLVector4? Constants { get; set; } = default;
 
-	[DDLRegistration(0x4a1e78f3u)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x4a1e78f3u)]
+	[DDLRegistration(0x838c6e4au)]
 	public RivetAssetId Texture { get; set; } = default;
 
 	public static ChemicalRenderOverride Create(DDLObject ddl) => new(ddl);

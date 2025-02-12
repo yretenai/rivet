@@ -18,7 +18,7 @@ public class StructuredLoggingLogAnimVarActionPrius : DDLObjectType, IDDLObjectT
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x23419e86u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
 	public static StructuredLoggingLogAnimVarActionPrius Create(DDLObject ddl) => new(ddl);

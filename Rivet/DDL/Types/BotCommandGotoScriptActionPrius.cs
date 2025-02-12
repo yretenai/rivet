@@ -25,28 +25,28 @@ public class BotCommandGotoScriptActionPrius : DDLObjectType, IDDLObjectType<Bot
 		FollowCurve = ddl.GetValue<bool>(0x7866a02eu, FollowCurve);
 	}
 
-	[DDLRegistration(0xe87046f7u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0xe87046f7u)]
+	[DDLRegistration(0x23cc44cdu)]
 	public MovementStyleGame MoveStyle { get; set; } = MovementStyleGame.Run;
 
-	[DDLRegistration(0xe87046f7u)]
+	[DDLRegistration(0x28b1d191u)]
 	public bool SkipIntro { get; set; } = false;
 
-	[DDLRegistration(0xe87046f7u)]
+	[DDLRegistration(0x20e9f4afu)]
 	public bool SkipOutro { get; set; } = false;
 
-	[DDLRegistration(0xe87046f7u)]
+	[DDLRegistration(0xa20b4a70u)]
 	public bool UseDestinationFacing { get; set; } = false;
 
-	[DDLRegistration(0xe87046f7u)]
+	[DDLRegistration(0x5253314eu)]
 	public bool IgnoreHero { get; set; } = false;
 
-	[DDLRegistration(0xe87046f7u)]
+	[DDLRegistration(0xdc607e05u)]
 	public bool StopForHero { get; set; } = false;
 
-	[DDLRegistration(0xe87046f7u)]
+	[DDLRegistration(0x7866a02eu)]
 	public bool FollowCurve { get; set; } = false;
 
 	public static BotCommandGotoScriptActionPrius Create(DDLObject ddl) => new(ddl);

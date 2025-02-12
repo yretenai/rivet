@@ -18,7 +18,7 @@ public class DamageModifierIncomingBattleBrewFloatPrius : DamageModifierIncoming
 		IncomingDamageMultiplier = ddl.GetValue<float>(0x7bd0e83au, IncomingDamageMultiplier);
 	}
 
-	[DDLRegistration(0xea96a2fcu)]
+	[DDLRegistration(0x7bd0e83au)]
 	public float IncomingDamageMultiplier { get; set; } = 1.50f;
 
 	public new static DamageModifierIncomingBattleBrewFloatPrius Create(DDLObject ddl) => new(ddl);

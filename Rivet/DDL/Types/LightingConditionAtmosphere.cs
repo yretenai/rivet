@@ -19,10 +19,10 @@ public class LightingConditionAtmosphere : DDLObjectType, IDDLObjectType<Lightin
 		LightingCondition = ddl.GetEnum<LightingConditions>(0xc3b54f69u, LightingConditionsValues.Lookup);
 	}
 
-	[DDLRegistration(0x41260ebcu)]
+	[DDLRegistration(0x79fd859au)]
 	public RivetAssetId Atmosphere { get; set; } = default;
 
-	[DDLRegistration(0x41260ebcu)]
+	[DDLRegistration(0xc3b54f69u)]
 	public LightingConditions LightingCondition { get; set; } = LightingConditions.Day;
 
 	public static LightingConditionAtmosphere Create(DDLObject ddl) => new(ddl);

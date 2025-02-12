@@ -18,7 +18,7 @@ public class CheckpointQueryActionPrius : DDLObjectType, IDDLObjectType<Checkpoi
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x363ced70u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Checkpoint;
 
 	public static CheckpointQueryActionPrius Create(DDLObject ddl) => new(ddl);

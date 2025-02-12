@@ -21,16 +21,16 @@ public class PyrocitorSubShotConfig : ConfigBase, IDDLObjectType<PyrocitorSubSho
 		EmberShotPrius = ddl.GetObject<PyrocitorEmberShotPrius>(0x55ef016fu);
 	}
 
-	[DDLRegistration(0x18a813f7u)]
+	[DDLRegistration(0x1ceb0793u)]
 	public RivetAssetId ExplosionShotActor { get; set; } = default;
 
-	[DDLRegistration(0x18a813f7u, "Shot Prius")]
+	[DDLRegistration(0x7a1a7335u, "Shot Prius")]
 	public PyrocitorExplosionShotPrius? ExplosionShotPrius { get; set; } = default;
 
-	[DDLRegistration(0x18a813f7u)]
+	[DDLRegistration(0x331e75c9u)]
 	public RivetAssetId EmberShotActor { get; set; } = default;
 
-	[DDLRegistration(0x18a813f7u, "Shot Prius")]
+	[DDLRegistration(0x55ef016fu, "Shot Prius")]
 	public PyrocitorEmberShotPrius? EmberShotPrius { get; set; } = default;
 
 	public new static PyrocitorSubShotConfig Create(DDLObject ddl) => new(ddl);

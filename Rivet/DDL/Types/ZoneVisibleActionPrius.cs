@@ -19,10 +19,10 @@ public class ZoneVisibleActionPrius : DDLObjectType, IDDLObjectType<ZoneVisibleA
 		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
 	}
 
-	[DDLRegistration(0x958a2298u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x958a2298u, "Zones", "Zones to set visibility for")]
+	[DDLRegistration(0x9c997da9u, "Zones", "Zones to set visibility for")]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
 	public static ZoneVisibleActionPrius Create(DDLObject ddl) => new(ddl);

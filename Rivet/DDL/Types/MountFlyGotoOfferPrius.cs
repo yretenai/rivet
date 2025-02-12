@@ -18,7 +18,7 @@ public class MountFlyGotoOfferPrius : GenericOfferPrius, IDDLObjectType<MountFly
 		AcceptConeAngle = ddl.GetValue<float>(0xb70f849eu, AcceptConeAngle);
 	}
 
-	[DDLRegistration(0xd4b2900du, description: "The cone whose tip is at the mount's position and has an axis along the mount's forward. The actors containing a mount pickup offer must be inside this cone to be accepted. ")]
+	[DDLRegistration(0xb70f849eu, description: "The cone whose tip is at the mount's position and has an axis along the mount's forward. The actors containing a mount pickup offer must be inside this cone to be accepted. ")]
 	public float AcceptConeAngle { get; set; } = 90.00f;
 
 	public new static MountFlyGotoOfferPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class GameMovingSurfaceConveyorPrius : MovingSurfacePrius, IDDLObjectType
 		LocalXMotion = ddl.GetValue<float>(0xf3098055u, LocalXMotion);
 	}
 
-	[DDLRegistration(0x7d7fee2bu, description: "z meters per second in local space")]
+	[DDLRegistration(0x6496917cu, description: "z meters per second in local space")]
 	public float LocalZMotion { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7d7fee2bu, description: "x meters per second in local space")]
+	[DDLRegistration(0xf3098055u, description: "x meters per second in local space")]
 	public float LocalXMotion { get; set; } = 0.00f;
 
 	public new static GameMovingSurfaceConveyorPrius Create(DDLObject ddl) => new(ddl);

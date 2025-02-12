@@ -18,7 +18,7 @@ public class UI_Cinematic2FolderHash : DDLObjectType, IDDLObjectType<UI_Cinemati
 		Folders = ddl.GetDictionary<RivetAssetId, Cinematic2FolderDef>(0xffddb037, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2FolderDef>(mapId));
 	}
 
-	[DDLRegistration(0xeeaf3157u)]
+	[DDLRegistration(0xffddb037u)]
 	public Dictionary<RivetAssetId, Cinematic2FolderDef?> Folders { get; set; } = [];
 
 	public static UI_Cinematic2FolderHash Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ActivityClueRequestOutroEvent : EventBase, IDDLObjectType<ActivityC
 		OutroSpeed = ddl.GetValue<int>(0x00ee2a20u, OutroSpeed);
 	}
 
-	[DDLRegistration(0x225a5643u, description: "Type: DDL::ActivityClueOutroSpeedSelect::Index. How hasty we should go through the outro. Each behavior gets to interpret this as it sees fit")]
+	[DDLRegistration(0x00ee2a20u, description: "Type: DDL::ActivityClueOutroSpeedSelect::Index. How hasty we should go through the outro. Each behavior gets to interpret this as it sees fit")]
 	public int OutroSpeed { get; set; } = 0;
 
 	public new static ActivityClueRequestOutroEvent Create(DDLObject ddl) => new(ddl);

@@ -50,103 +50,103 @@ public class Cinematic2ActorDef : DDLObjectType, IDDLObjectType<Cinematic2ActorD
 		TextureTracks = ddl.GetDictionary<RivetAssetId, Cinematic2ActorTextureTrackDef>(0x5e3ec2c7, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ActorTextureTrackDef>(mapId));
 	}
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x96f1f1f8u)]
 	public DDLTransform? StartTransform { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x653e2373u)]
 	public Dictionary<RivetAssetId, Cinematic2PlacedInstanceEventTrackDef?> EventTracks { get; set; } = [];
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0xba2bc52eu)]
 	public Cinematic2PlacedInstanceHideTrackDef? HideTrack { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x6125fb96u)]
 	public Cinematic2PlacedInstancePosRotScaleTrackDef? PosRotScaleTrack { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x00ea59a6u)]
 	public Dictionary<RivetAssetId, Cinematic2PlacedInstanceOrphanTrackDef?> OrphanTracks { get; set; } = [];
 
-	[DDLRegistration(0xb0f5b2b9u, description: "Actor is only enabled on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Actor is only enabled on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0xf0bd2b69u)]
 	public RivetAssetId DefaultActorPath { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u, description: "Indicates the associated .actor is used for previewing only. Prevents the .actor file from being considered a referenced asset.")]
+	[DDLRegistration(0xc2612b29u, description: "Indicates the associated .actor is used for previewing only. Prevents the .actor file from being considered a referenced asset.")]
 	public bool EditorOnly { get; set; } = false;
 
-	[DDLRegistration(0xb0f5b2b9u, description: "Specifies the custom animset to use (primiarly for driver overrides).")]
+	[DDLRegistration(0xcf0a521eu, description: "Specifies the custom animset to use (primiarly for driver overrides).")]
 	public RivetAssetId AnimSetCustomPath { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u, description: "A set of gameplay-defined values used when processing this actor.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values used when processing this actor.")]
 	public Cinematic2ActorTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u, description: "This is used to possess an Actor specified by the script.")]
+	[DDLRegistration(0x64b3d149u, description: "This is used to possess an Actor specified by the script.")]
 	public x565e978b ScriptTarget { get; set; } = x565e978b.ActorNone;
 
-	[DDLRegistration(0xb0f5b2b9u, description: "This defines how cinematic plays the first shot for possessed actor to play at cine position or actor position.")]
+	[DDLRegistration(0xf40571c5u, description: "This defines how cinematic plays the first shot for possessed actor to play at cine position or actor position.")]
 	public xc237fc83 StartMode { get; set; } = xc237fc83.None;
 
-	[DDLRegistration(0xb0f5b2b9u, description: "This defines what will happen to the actor at the end of the cinematic.")]
+	[DDLRegistration(0x0df8572au, description: "This defines what will happen to the actor at the end of the cinematic.")]
 	public xa4c61284 EndMode { get; set; } = xa4c61284.PersistOnEnd;
 
-	[DDLRegistration(0xb0f5b2b9u, description: "When we go to possess an actor specified by the script if the game passes null we hide that actor rather than possess them.")]
+	[DDLRegistration(0x3794da57u, description: "When we go to possess an actor specified by the script if the game passes null we hide that actor rather than possess them.")]
 	public bool DoNotSpawnIfScriptTargetIsNull { get; set; } = false;
 
-	[DDLRegistration(0xb0f5b2b9u, "Cloth Settings", "These are settings that define how cloth behaves during the cinematic.")]
+	[DDLRegistration(0x0c484a54u, "Cloth Settings", "These are settings that define how cloth behaves during the cinematic.")]
 	public Cinematic2ActorClothSettingsDef? ClothSettings { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u, "Model Settings", "These are settings for the model used during the cinematic.")]
+	[DDLRegistration(0x3791a88au, "Model Settings", "These are settings for the model used during the cinematic.")]
 	public Cinematic2ActorModelSettingsDef? ModelSettings { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u, "Maya Export Info", "This contains information used when the actor is exported from Maya.")]
+	[DDLRegistration(0xa1192d52u, "Maya Export Info", "This contains information used when the actor is exported from Maya.")]
 	public Cinematic2MayaExportInfo? MayaExportInfo { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u, description: "When pushing cine drivers we blend out all non cine drivers")]
+	[DDLRegistration(0xa49e1a88u, description: "When pushing cine drivers we blend out all non cine drivers")]
 	public bool BlendOutNonCineDrivers { get; set; } = false;
 
-	[DDLRegistration(0xb0f5b2b9u, description: "Make cine use a cine exclusive head for this actor isntead of using body's head manager's head")]
+	[DDLRegistration(0x69ff93a8u, description: "Make cine use a cine exclusive head for this actor isntead of using body's head manager's head")]
 	public bool UseSpawnedHead { get; set; } = false;
 
-	[DDLRegistration(0xb0f5b2b9u, description: "If positive we trigger the blend out of the actor before the end of cienmatic")]
+	[DDLRegistration(0x21329878u, description: "If positive we trigger the blend out of the actor before the end of cienmatic")]
 	public float BlendOutDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x46b73e9cu)]
 	public Dictionary<RivetAssetId, Cinematic2ActorAudioTrackDef?> AudioTracks { get; set; } = [];
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0xa920c62au)]
 	public Dictionary<RivetAssetId, Cinematic2ActorBehaviorTrackDef?> BehaviorTracks { get; set; } = [];
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x4ad0df61u)]
 	public Dictionary<RivetAssetId, Cinematic2ActorJointTweakTrackDef?> JointTweakTracks { get; set; } = [];
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0xad469e6eu)]
 	public Dictionary<RivetAssetId, Cinematic2ActorMaterialOverrideTrackDef?> MaterialTracks { get; set; } = [];
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0xbc4d8836u)]
 	public Dictionary<RivetAssetId, Cinematic2ActorVfxTrackDef?> VfxTracks { get; set; } = [];
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x5a6788c3u)]
 	public Dictionary<RivetAssetId, Cinematic2ActorMovieTrackDef?> MovieTracks { get; set; } = [];
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0xac71691cu)]
 	public Cinematic2ActorLooksTrackDef? LooksTrack { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x1db7c94eu)]
 	public Cinematic2ActorDialogGroupTrackDef? DialogGroupTrack { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x09e8458eu)]
 	public Dictionary<RivetAssetId, Cinematic2ActorTagTrackDef?> TagTracks { get; set; } = [];
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x9c70102bu)]
 	public Cinematic2ActorClothTrackDef? ClothTrack { get; set; } = default;
 
-	[DDLRegistration(0xb0f5b2b9u)]
+	[DDLRegistration(0x5e3ec2c7u)]
 	public Dictionary<RivetAssetId, Cinematic2ActorTextureTrackDef?> TextureTracks { get; set; } = [];
 
 	public static Cinematic2ActorDef Create(DDLObject ddl) => new(ddl);

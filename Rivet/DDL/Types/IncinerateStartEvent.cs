@@ -21,16 +21,16 @@ public class IncinerateStartEvent : EventBase, IDDLObjectType<IncinerateStartEve
 		SourcePosition = ddl.GetObject<DDLVector3>(0xd0952e12u);
 	}
 
-	[DDLRegistration(0x9dedbd50u, description: "Can be used to override default duration specified in the IncinerateConfig")]
+	[DDLRegistration(0xabc94c5au, description: "Can be used to override default duration specified in the IncinerateConfig")]
 	public float Delay { get; set; } = -1.00f;
 
-	[DDLRegistration(0x9dedbd50u, description: "Can be used to override default duration specified in the IncinerateConfig")]
+	[DDLRegistration(0x7c5e3db0u, description: "Can be used to override default duration specified in the IncinerateConfig")]
 	public float Duration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x9dedbd50u)]
+	[DDLRegistration(0xba39bf96u)]
 	public uint SourceJointHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9dedbd50u)]
+	[DDLRegistration(0xd0952e12u)]
 	public DDLVector3? SourcePosition { get; set; } = default;
 
 	public new static IncinerateStartEvent Create(DDLObject ddl) => new(ddl);

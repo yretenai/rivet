@@ -32,49 +32,49 @@ public class HeroBounceConfig : DDLObjectType, IDDLObjectType<HeroBounceConfig> 
 		CasualSuperBounceFollowCameraUserConfig = ddl.GetValue<RivetAssetId>(0x1c1b6707u, CasualSuperBounceFollowCameraUserConfig);
 	}
 
-	[DDLRegistration(0xca61313eu, description: "The surface normal of a trampoline must be within this angle of the bounceable's up vector.")]
+	[DDLRegistration(0xe855014au, description: "The surface normal of a trampoline must be within this angle of the bounceable's up vector.")]
 	public float AssistMaxSurfaceNormalAngle { get; set; } = 45.00f;
 
-	[DDLRegistration(0xca61313eu, description: "Horizontal radius in which to look for nearby trampolines to assist the player's trajectory.")]
+	[DDLRegistration(0x2c9bc5ffu, description: "Horizontal radius in which to look for nearby trampolines to assist the player's trajectory.")]
 	public float AssistRadiusHoriz { get; set; } = 2.00f;
 
-	[DDLRegistration(0xca61313eu, description: "Vertical radius in which to look for nearby trampolines to assist the player's trajectory.")]
+	[DDLRegistration(0x9c0cbd67u, description: "Vertical radius in which to look for nearby trampolines to assist the player's trajectory.")]
 	public float AssistRadiusVert { get; set; } = 5.00f;
 
-	[DDLRegistration(0xca61313eu, description: "Only assist the hero's with movement if the assist target is at least this distance away. (Max distance determined by horizontal radius + target radius)")]
+	[DDLRegistration(0x4ebbc239u, description: "Only assist the hero's with movement if the assist target is at least this distance away. (Max distance determined by horizontal radius + target radius)")]
 	public float MinAssistDistHoriz { get; set; } = 1.00f;
 
-	[DDLRegistration(0xca61313eu, description: "Maximum angle between the input direction and the assist direction when the assist target is at the min assist distance.")]
+	[DDLRegistration(0x4f3feb8bu, description: "Maximum angle between the input direction and the assist direction when the assist target is at the min assist distance.")]
 	public float MaxAngleAtMinAssistDist { get; set; } = 45.00f;
 
-	[DDLRegistration(0xca61313eu, description: "Maximum angle between the input direction and the assist direction when the assist target is at the max assist distance.")]
+	[DDLRegistration(0x0f7093fdu, description: "Maximum angle between the input direction and the assist direction when the assist target is at the max assist distance.")]
 	public float MaxAngleAtMaxAssistDist { get; set; } = 60.00f;
 
-	[DDLRegistration(0xca61313eu, description: "Give the angle portion of the score this much weight. Lower scores are better.")]
+	[DDLRegistration(0x582a1535u, description: "Give the angle portion of the score this much weight. Lower scores are better.")]
 	public float AssistAngleScoreWeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xca61313eu, description: "Give the assist distance portion of the score this much weight. Lower scores are better.")]
+	[DDLRegistration(0x20e48ef7u, description: "Give the assist distance portion of the score this much weight. Lower scores are better.")]
 	public float AssistDistScoreWeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xca61313eu, description: "How much weight to give the assist direction when deciding a frame's horizontal motion. 0 = No assist. 1 = Full assist (input direction does nothing)")]
+	[DDLRegistration(0x48416fc4u, description: "How much weight to give the assist direction when deciding a frame's horizontal motion. 0 = No assist. 1 = Full assist (input direction does nothing)")]
 	public float AssistInputWeight { get; set; } = 0.50f;
 
-	[DDLRegistration(0xca61313eu)]
+	[DDLRegistration(0x5ae624abu)]
 	public float BonusHeightForButtonPress { get; set; } = 2.00f;
 
-	[DDLRegistration(0xca61313eu)]
+	[DDLRegistration(0xb610c5e4u)]
 	public RivetAssetId CameraShakeConfig { get; set; } = default;
 
-	[DDLRegistration(0xca61313eu)]
+	[DDLRegistration(0xdeb68592u)]
 	public RivetAssetId BounceFollowCameraUserConfig { get; set; } = default;
 
-	[DDLRegistration(0xca61313eu)]
+	[DDLRegistration(0x8189dc41u)]
 	public RivetAssetId CasualBounceFollowCameraUserConfig { get; set; } = default;
 
-	[DDLRegistration(0xca61313eu)]
+	[DDLRegistration(0x765fc190u)]
 	public RivetAssetId SuperBounceFollowCameraUserConfig { get; set; } = default;
 
-	[DDLRegistration(0xca61313eu)]
+	[DDLRegistration(0x1c1b6707u)]
 	public RivetAssetId CasualSuperBounceFollowCameraUserConfig { get; set; } = default;
 
 	public static HeroBounceConfig Create(DDLObject ddl) => new(ddl);

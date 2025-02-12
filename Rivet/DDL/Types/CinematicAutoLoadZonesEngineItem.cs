@@ -18,7 +18,7 @@ public class CinematicAutoLoadZonesEngineItem : DDLObjectType, IDDLObjectType<Ci
 		ZoneList = ddl.GetStrings(0x79dfcd60u);
 	}
 
-	[DDLRegistration(0xb62c987au)]
+	[DDLRegistration(0x79dfcd60u)]
 	public List<string?> ZoneList { get; set; } = [];
 
 	public static CinematicAutoLoadZonesEngineItem Create(DDLObject ddl) => new(ddl);

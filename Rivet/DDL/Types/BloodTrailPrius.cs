@@ -24,25 +24,25 @@ public class BloodTrailPrius : DDLObjectType, IDDLObjectType<BloodTrailPrius> {
 		MaxDamage = ddl.GetValue<float>(0xadb823c1u, MaxDamage);
 	}
 
-	[DDLRegistration(0x3d7471a1u)]
+	[DDLRegistration(0xae3e01f4u)]
 	public float SplatFrequency { get; set; } = 0.50f;
 
-	[DDLRegistration(0x3d7471a1u)]
+	[DDLRegistration(0x6c0b0c6eu)]
 	public float MovingSplatFrequency { get; set; } = 0.20f;
 
-	[DDLRegistration(0x3d7471a1u)]
+	[DDLRegistration(0x69e55b8au)]
 	public float SpeedThreshold { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3d7471a1u)]
+	[DDLRegistration(0xd4e44237u)]
 	public float RandOffset { get; set; } = 0.30f;
 
-	[DDLRegistration(0x3d7471a1u)]
+	[DDLRegistration(0xc822776du)]
 	public bool UseDamageTimer { get; set; } = true;
 
-	[DDLRegistration(0x3d7471a1u)]
+	[DDLRegistration(0x124e0874u)]
 	public float MaxDuration { get; set; } = 3.00f;
 
-	[DDLRegistration(0x3d7471a1u)]
+	[DDLRegistration(0xadb823c1u)]
 	public float MaxDamage { get; set; } = 30.00f;
 
 	public static BloodTrailPrius Create(DDLObject ddl) => new(ddl);

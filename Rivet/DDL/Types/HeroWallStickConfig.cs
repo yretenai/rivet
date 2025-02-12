@@ -27,34 +27,34 @@ public class HeroWallStickConfig : DDLObjectType, IDDLObjectType<HeroWallStickCo
 		WallJumpUpMinHeightGain = ddl.GetValue<float>(0xd850e548u, WallJumpUpMinHeightGain);
 	}
 
-	[DDLRegistration(0xcd1ef6f2u)]
+	[DDLRegistration(0x8ec75cadu)]
 	public float WallStickGravity { get; set; } = -20.00f;
 
-	[DDLRegistration(0xcd1ef6f2u)]
+	[DDLRegistration(0x8308091du)]
 	public float WallStickTerminalVelocity { get; set; } = -40.00f;
 
-	[DDLRegistration(0xcd1ef6f2u)]
+	[DDLRegistration(0x589998b7u)]
 	public float WallStickNoSlideTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0xcd1ef6f2u)]
+	[DDLRegistration(0x7c69d5c9u)]
 	public float WallStickMinGroundHeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcd1ef6f2u)]
+	[DDLRegistration(0x26d4c680u)]
 	public float WallStickFacingIntoWallThreshold { get; set; } = 70.00f;
 
-	[DDLRegistration(0xcd1ef6f2u)]
+	[DDLRegistration(0x07c7c8feu)]
 	public float WallJumpCameraAccel { get; set; } = 1000.00f;
 
-	[DDLRegistration(0xcd1ef6f2u)]
+	[DDLRegistration(0xea4c1852u)]
 	public float WallJumpCameraDecel { get; set; } = 500.00f;
 
-	[DDLRegistration(0xcd1ef6f2u)]
+	[DDLRegistration(0xb7cb8499u)]
 	public float WallJumpCameraMaxSpeedYaw { get; set; } = 230.00f;
 
-	[DDLRegistration(0xcd1ef6f2u)]
+	[DDLRegistration(0x8d0de468u)]
 	public float WallJumpCameraMaxSpeedPitch { get; set; } = 57.00f;
 
-	[DDLRegistration(0xcd1ef6f2u)]
+	[DDLRegistration(0xd850e548u)]
 	public float WallJumpUpMinHeightGain { get; set; } = 0.50f;
 
 	public static HeroWallStickConfig Create(DDLObject ddl) => new(ddl);

@@ -37,64 +37,64 @@ public class CameraInputYawAndPitchPrius : DDLObjectType, IDDLObjectType<CameraI
 		JitterRate = ddl.GetValue<float>(0xbb359c06u, JitterRate);
 	}
 
-	[DDLRegistration(0x904b126eu, "On Activate Action")]
+	[DDLRegistration(0x9da4f68du, "On Activate Action")]
 	public xf787d865 ActivateAction { get; set; } = xf787d865.Reset;
 
-	[DDLRegistration(0x904b126eu, "Yaw Min")]
+	[DDLRegistration(0x975af737u, "Yaw Min")]
 	public float YawMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x904b126eu, "Yaw Max")]
+	[DDLRegistration(0xab57c86eu, "Yaw Max")]
 	public float YawMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x904b126eu, "Pitch Min")]
+	[DDLRegistration(0xfb99e53bu, "Pitch Min")]
 	public float PitchMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x904b126eu, "Pitch Max")]
+	[DDLRegistration(0xc794da62u, "Pitch Max")]
 	public float PitchMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x904b126eu, "Initial Yaw")]
+	[DDLRegistration(0x7ddfeff9u, "Initial Yaw")]
 	public float InitialYaw { get; set; } = 0.00f;
 
-	[DDLRegistration(0x904b126eu, "Initial Pitch")]
+	[DDLRegistration(0x3290fd0bu, "Initial Pitch")]
 	public float InitialPitch { get; set; } = 0.00f;
 
-	[DDLRegistration(0x904b126eu, "Yaw Soft Zone")]
+	[DDLRegistration(0x9ce69f57u, "Yaw Soft Zone")]
 	public float YawSoftZone { get; set; } = 0.00f;
 
-	[DDLRegistration(0x904b126eu, "Pitch Soft Zone")]
+	[DDLRegistration(0xf9a7e1f0u, "Pitch Soft Zone")]
 	public float PitchSoftZone { get; set; } = 0.00f;
 
-	[DDLRegistration(0x904b126eu, "Settle Gain")]
+	[DDLRegistration(0x7c0ccd53u, "Settle Gain")]
 	public float SettleGain { get; set; } = -0.80f;
 
-	[DDLRegistration(0x904b126eu, "Settle Damp")]
+	[DDLRegistration(0xf0da9adau, "Settle Damp")]
 	public float SettleDamp { get; set; } = -1.60f;
 
-	[DDLRegistration(0x904b126eu, "Settle Delay")]
+	[DDLRegistration(0x9256f6b8u, "Settle Delay")]
 	public float SettleDelay { get; set; } = 0.15f;
 
-	[DDLRegistration(0x904b126eu, "Apply Zero Settle")]
+	[DDLRegistration(0x17a20bd1u, "Apply Zero Settle")]
 	public bool ApplySettle { get; set; } = false;
 
-	[DDLRegistration(0x904b126eu, "Actor As Reference")]
+	[DDLRegistration(0x554086d6u, "Actor As Reference")]
 	public bool ActorRefMatrix { get; set; } = true;
 
-	[DDLRegistration(0x904b126eu, "Allow Move Stick Input")]
+	[DDLRegistration(0xc4785cd0u, "Allow Move Stick Input")]
 	public bool AllowMoveStickInput { get; set; } = false;
 
-	[DDLRegistration(0x904b126eu, "Allow Menu Move Input as Stick Input (MKB)")]
+	[DDLRegistration(0xa15517afu, "Allow Menu Move Input as Stick Input (MKB)")]
 	public bool AllowMenuMoveStickInput { get; set; } = false;
 
-	[DDLRegistration(0x904b126eu, "Stick Config")]
+	[DDLRegistration(0x3bc8f276u, "Stick Config")]
 	public RivetAssetId StickConfig { get; set; } = default;
 
-	[DDLRegistration(0x904b126eu)]
+	[DDLRegistration(0x09181d6du)]
 	public float JitterMaxPush { get; set; } = 0.00f;
 
-	[DDLRegistration(0x904b126eu)]
+	[DDLRegistration(0x0aebfd22u)]
 	public float JitterMinPush { get; set; } = 0.00f;
 
-	[DDLRegistration(0x904b126eu)]
+	[DDLRegistration(0xbb359c06u)]
 	public float JitterRate { get; set; } = 0.00f;
 
 	public static CameraInputYawAndPitchPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ShortcutIconData : DDLObjectType, IDDLObjectType<ShortcutIconData> 
 		Icon = ddl.GetString(0x5504e96b) ?? Icon;
 	}
 
-	[DDLRegistration(0xfab722e1u, description: "AccessibilityButtonAction value.")]
+	[DDLRegistration(0xd4f982ecu, description: "AccessibilityButtonAction value.")]
 	public AccessibilityButtonAction Shortcut { get; set; } = AccessibilityButtonAction.None;
 
-	[DDLRegistration(0xfab722e1u, description: "Icon SVG filename.")]
+	[DDLRegistration(0x5504e96bu, description: "Icon SVG filename.")]
 	public string? Icon { get; set; } = "";
 
 	public static ShortcutIconData Create(DDLObject ddl) => new(ddl);

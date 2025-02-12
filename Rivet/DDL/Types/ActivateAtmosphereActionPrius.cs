@@ -20,13 +20,13 @@ public class ActivateAtmosphereActionPrius : DDLObjectType, IDDLObjectType<Activ
 		DisableOnDestroy = ddl.GetValue<bool>(0x725c91c6u, DisableOnDestroy);
 	}
 
-	[DDLRegistration(0x4e937e5fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0x4e937e5fu, description: "The atmosphere to make active.")]
+	[DDLRegistration(0x79fd859au, description: "The atmosphere to make active.")]
 	public RivetAssetId Atmosphere { get; set; } = default;
 
-	[DDLRegistration(0x4e937e5fu)]
+	[DDLRegistration(0x725c91c6u)]
 	public bool DisableOnDestroy { get; set; } = false;
 
 	public static ActivateAtmosphereActionPrius Create(DDLObject ddl) => new(ddl);

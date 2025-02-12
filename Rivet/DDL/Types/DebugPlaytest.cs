@@ -37,64 +37,64 @@ public class DebugPlaytest : DDLObjectType, IDDLObjectType<DebugPlaytest> {
 		HeroInfo = ddl.GetObject<DebugPlaytestHeroInfo>(0x52d4b776u);
 	}
 
-	[DDLRegistration(0xb90da889u, "Playtest Name", "Name of this playtest to show in the playtest menu.")]
+	[DDLRegistration(0x6eb3beb6u, "Playtest Name", "Name of this playtest to show in the playtest menu.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xb90da889u, "Playtest Description", "Description to show as a tooltip at the bottom of the screen while this playtest is selected.")]
+	[DDLRegistration(0xe03811fdu, "Playtest Description", "Description to show as a tooltip at the bottom of the screen while this playtest is selected.")]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0xb90da889u, "Command Line Alias", "Name to force this playtest from the command line, no spaces are allowed in this string.")]
+	[DDLRegistration(0x221022c0u, "Command Line Alias", "Name to force this playtest from the command line, no spaces are allowed in this string.")]
 	public string? CommandLineAlias { get; set; } = default;
 
-	[DDLRegistration(0xb90da889u, "Is Demo?", "Should we set the demo mode? Checking this would be like setting --demo <name> on the command line.")]
+	[DDLRegistration(0x490784cbu, "Is Demo?", "Should we set the demo mode? Checking this would be like setting --demo <name> on the command line.")]
 	public bool IsDemo { get; set; } = false;
 
-	[DDLRegistration(0xb90da889u, "Demo Name", "Name of the demo. Works similarly to adding --demo <name> to the command line.")]
+	[DDLRegistration(0x62515d26u, "Demo Name", "Name of the demo. Works similarly to adding --demo <name> to the command line.")]
 	public string? DemoName { get; set; } = default;
 
-	[DDLRegistration(0xb90da889u, "Cine Time Code Mode", "Should we turn on cine timecodes during this playtest?")]
+	[DDLRegistration(0xf5029197u, "Cine Time Code Mode", "Should we turn on cine timecodes during this playtest?")]
 	public x0c74f3c1 CineTimeCodeMode { get; set; } = x0c74f3c1.EnabledCine;
 
-	[DDLRegistration(0xb90da889u, "Enable Recovery Ledges On Walk Off?")]
+	[DDLRegistration(0x89333d78u, "Enable Recovery Ledges On Walk Off?")]
 	public bool EnableRecoveryLedgesOnWalkOff { get; set; } = false;
 
-	[DDLRegistration(0xb90da889u, "Enable Recovery Ledges On Run Off in Combat?")]
+	[DDLRegistration(0x5940e245u, "Enable Recovery Ledges On Run Off in Combat?")]
 	public bool EnableRecoveryLedgesOnRunOffCombat { get; set; } = true;
 
-	[DDLRegistration(0xb90da889u, "Enable Recovery Ledges On Run Off (No Combat)?")]
+	[DDLRegistration(0xe4ca5bcbu, "Enable Recovery Ledges On Run Off (No Combat)?")]
 	public bool EnableRecoveryLedgesOnRunOffNoCombat { get; set; } = false;
 
-	[DDLRegistration(0xb90da889u, "Enable Recovery Ledges On Knocked Off?")]
+	[DDLRegistration(0x89f226bau, "Enable Recovery Ledges On Knocked Off?")]
 	public bool EnableRecoveryLedgesOnKnockOff { get; set; } = true;
 
-	[DDLRegistration(0xb90da889u, "Enable Front Recovery Ledges on Jump?")]
+	[DDLRegistration(0x22f471b7u, "Enable Front Recovery Ledges on Jump?")]
 	public bool EnableFrontRecoveryLedgesOnJump { get; set; } = true;
 
-	[DDLRegistration(0xb90da889u, "Enable Platforming Shadow Decal")]
+	[DDLRegistration(0x7740f899u, "Enable Platforming Shadow Decal")]
 	public bool EnablePlatformingShadowDecal { get; set; } = true;
 
-	[DDLRegistration(0xb90da889u, "Rift Tether Combat Targeting")]
+	[DDLRegistration(0x8543519au, "Rift Tether Combat Targeting")]
 	public bool RiftTetherCombatTargeting { get; set; } = true;
 
-	[DDLRegistration(0xb90da889u, "Flyer Camera Stick Option")]
+	[DDLRegistration(0xda2adf7du, "Flyer Camera Stick Option")]
 	public FlyerCameraStickOption FlyerCameraStickOption { get; set; } = FlyerCameraStickOption.LeftStick;
 
-	[DDLRegistration(0xb90da889u, "Flyer Camera Responsiveness Option")]
+	[DDLRegistration(0x2cb69e5fu, "Flyer Camera Responsiveness Option")]
 	public x8b42b541 FlyerCameraResponsivenessOption { get; set; } = x8b42b541.Slow;
 
-	[DDLRegistration(0xb90da889u, "Flyer Stick Invert")]
+	[DDLRegistration(0x22ab5effu, "Flyer Stick Invert")]
 	public bool FlyerStickInvert { get; set; } = true;
 
-	[DDLRegistration(0xb90da889u, "Mission Info")]
+	[DDLRegistration(0x30694131u, "Mission Info")]
 	public DebugPlaytestMissionInfo? MissionInfo { get; set; } = default;
 
-	[DDLRegistration(0xb90da889u, "Load Info")]
+	[DDLRegistration(0x807ca7e6u, "Load Info")]
 	public DebugPlaytestLoadInfo? LoadInfo { get; set; } = default;
 
-	[DDLRegistration(0xb90da889u, "Override Hero?", "Check this to change the hero to spawn as and/or the loadout to spawn with.")]
+	[DDLRegistration(0xffc5854fu, "Override Hero?", "Check this to change the hero to spawn as and/or the loadout to spawn with.")]
 	public bool OverrideHero { get; set; } = false;
 
-	[DDLRegistration(0xb90da889u, "Hero Info")]
+	[DDLRegistration(0x52d4b776u, "Hero Info")]
 	public DebugPlaytestHeroInfo? HeroInfo { get; set; } = default;
 
 	public static DebugPlaytest Create(DDLObject ddl) => new(ddl);

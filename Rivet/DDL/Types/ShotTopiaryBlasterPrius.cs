@@ -19,10 +19,10 @@ public class ShotTopiaryBlasterPrius : GrenadeShotPrius, IDDLObjectType<ShotTopi
 		SprinklerPrius = ddl.GetObject<TopiarySprinklerPrius>(0x60ae7e2fu);
 	}
 
-	[DDLRegistration(0x625ce07eu)]
+	[DDLRegistration(0x065f0a89u)]
 	public RivetAssetId SprinklerActor { get; set; } = default;
 
-	[DDLRegistration(0x625ce07eu)]
+	[DDLRegistration(0x60ae7e2fu)]
 	public TopiarySprinklerPrius? SprinklerPrius { get; set; } = default;
 
 	public new static ShotTopiaryBlasterPrius Create(DDLObject ddl) => new(ddl);

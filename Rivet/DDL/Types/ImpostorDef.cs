@@ -31,46 +31,46 @@ public class ImpostorDef : DDLObjectType, IDDLObjectType<ImpostorDef> {
 		ActorOverrides = ddl.GetString(0x98c0918b) ?? ActorOverrides;
 	}
 
-	[DDLRegistration(0x4c1cc5f1u, "Transform")]
+	[DDLRegistration(0x1a4f9d52u, "Transform")]
 	public DDLDoubleTransform? LocalTransform { get; set; } = default;
 
-	[DDLRegistration(0x4c1cc5f1u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x4c1cc5f1u)]
+	[DDLRegistration(0xf6202c3eu)]
 	public bool NeedsAttention { get; set; } = false;
 
-	[DDLRegistration(0x4c1cc5f1u)]
+	[DDLRegistration(0x03f62e28u)]
 	public RivetAssetId Parent { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4c1cc5f1u)]
+	[DDLRegistration(0x8e92acfdu)]
 	public RivetAssetId ParentTerrain { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4c1cc5f1u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4c1cc5f1u)]
+	[DDLRegistration(0x0f0182ffu)]
 	public bool IsDeleted { get; set; } = false;
 
-	[DDLRegistration(0x4c1cc5f1u, description: "User settable sorting key")]
+	[DDLRegistration(0x55c1c85du, description: "User settable sorting key")]
 	public float SortValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4c1cc5f1u, "Type")]
+	[DDLRegistration(0x8970bd6du, "Type")]
 	public AssetExtensions AssetType { get; set; } = AssetExtensions.Actor;
 
-	[DDLRegistration(0x4c1cc5f1u, "Asset Path")]
+	[DDLRegistration(0x0efa614bu, "Asset Path")]
 	public RivetAssetId AssetPath { get; set; } = "";
 
-	[DDLRegistration(0x4c1cc5f1u)]
+	[DDLRegistration(0x9c408fd6u)]
 	public HoudiniIntegrationDef? HoudiniIntegration { get; set; } = default;
 
-	[DDLRegistration(0x4c1cc5f1u)]
+	[DDLRegistration(0x8ab8cb41u)]
 	public bool HoudiniIntegrationEnabled { get; set; } = false;
 
-	[DDLRegistration(0x4c1cc5f1u, "Asset Overrides")]
+	[DDLRegistration(0xb7eef61du, "Asset Overrides")]
 	public string? AssetOverrides { get; set; } = default;
 
-	[DDLRegistration(0x4c1cc5f1u, "Actor Overrides")]
+	[DDLRegistration(0x98c0918bu, "Actor Overrides")]
 	public string? ActorOverrides { get; set; } = default;
 
 	public static ImpostorDef Create(DDLObject ddl) => new(ddl);

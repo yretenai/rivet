@@ -23,22 +23,22 @@ public class BotComboMoveZordoomChaseMelee : BotComboMoveBase, IDDLObjectType<Bo
 		OutroDuration = ddl.GetValue<float>(0x80f15ac6u, OutroDuration);
 	}
 
-	[DDLRegistration(0x8d5b338au)]
+	[DDLRegistration(0xf227a2c3u)]
 	public string? IntroAnim { get; set; } = default;
 
-	[DDLRegistration(0x8d5b338au)]
+	[DDLRegistration(0x3f3770a4u)]
 	public string? ActiveAnim { get; set; } = default;
 
-	[DDLRegistration(0x8d5b338au)]
+	[DDLRegistration(0xa0ecf634u)]
 	public string? OutroAnim { get; set; } = default;
 
-	[DDLRegistration(0x8d5b338au)]
+	[DDLRegistration(0x5d9ecce9u)]
 	public float IntroDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8d5b338au)]
+	[DDLRegistration(0xda754e51u)]
 	public float ActiveDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8d5b338au)]
+	[DDLRegistration(0x80f15ac6u)]
 	public float OutroDuration { get; set; } = 0.00f;
 
 	public new static BotComboMoveZordoomChaseMelee Create(DDLObject ddl) => new(ddl);

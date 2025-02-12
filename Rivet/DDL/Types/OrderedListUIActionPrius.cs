@@ -30,43 +30,43 @@ public class OrderedListUIActionPrius : DDLObjectType, IDDLObjectType<OrderedLis
 		AllowReposition = ddl.GetValue<bool>(0x18582dcbu, AllowReposition);
 	}
 
-	[DDLRegistration(0x9b489bafu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Lists;
 
-	[DDLRegistration(0x9b489bafu, "Window Position", "Initial Window Position")]
+	[DDLRegistration(0xca1fb3d7u, "Window Position", "Initial Window Position")]
 	public DDLVector2? WindowPosition { get; set; } = default;
 
-	[DDLRegistration(0x9b489bafu, "Window Position is 3D", " Window Position is a 3D World coordinate")]
+	[DDLRegistration(0x19cb9b48u, "Window Position is 3D", " Window Position is a 3D World coordinate")]
 	public bool WindowPosition3D { get; set; } = false;
 
-	[DDLRegistration(0x9b489bafu, "Window Size", "Initial Window Size: 0,0 means auto size")]
+	[DDLRegistration(0xa2979036u, "Window Size", "Initial Window Size: 0,0 means auto size")]
 	public DDLVector2? WindowSize { get; set; } = default;
 
-	[DDLRegistration(0x9b489bafu, description: "Number of columns in UI list")]
+	[DDLRegistration(0xf8571729u, description: "Number of columns in UI list")]
 	public int NumColumns { get; set; } = 1;
 
-	[DDLRegistration(0x9b489bafu, description: "List item width: 0 means Auto")]
+	[DDLRegistration(0x5a33c1c7u, description: "List item width: 0 means Auto")]
 	public int ItemWidth { get; set; } = 0;
 
-	[DDLRegistration(0x9b489bafu, description: "List item height: 0 means Auto")]
+	[DDLRegistration(0x8948494cu, description: "List item height: 0 means Auto")]
 	public int ItemHeight { get; set; } = 0;
 
-	[DDLRegistration(0x9b489bafu, description: "Display index numbers on list items")]
+	[DDLRegistration(0x9b00d397u, description: "Display index numbers on list items")]
 	public bool IndexNumbers { get; set; } = false;
 
-	[DDLRegistration(0x9b489bafu, description: "Which value(s) to use as item label. Auto: Choose label automatically.  Composite: Display all the values")]
+	[DDLRegistration(0xd7982755u, description: "Which value(s) to use as item label. Auto: Choose label automatically.  Composite: Display all the values")]
 	public x940d80bd LabelType { get; set; } = x940d80bd.String;
 
-	[DDLRegistration(0x9b489bafu, description: "Auto focus on Show")]
+	[DDLRegistration(0x4ffa5af6u, description: "Auto focus on Show")]
 	public bool AutoFocus { get; set; } = false;
 
-	[DDLRegistration(0x9b489bafu, description: "UI window has a title bar")]
+	[DDLRegistration(0x33c3586fu, description: "UI window has a title bar")]
 	public bool ShowTitlebar { get; set; } = true;
 
-	[DDLRegistration(0x9b489bafu, description: "Allow window to be resized")]
+	[DDLRegistration(0xe099c984u, description: "Allow window to be resized")]
 	public bool AllowResize { get; set; } = true;
 
-	[DDLRegistration(0x9b489bafu, description: "Allow window to be repositioned")]
+	[DDLRegistration(0x18582dcbu, description: "Allow window to be repositioned")]
 	public bool AllowReposition { get; set; } = true;
 
 	public static OrderedListUIActionPrius Create(DDLObject ddl) => new(ddl);

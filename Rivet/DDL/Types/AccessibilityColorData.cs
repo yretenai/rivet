@@ -19,10 +19,10 @@ public class AccessibilityColorData : DDLObjectType, IDDLObjectType<Accessibilit
 		ColorValue = ddl.GetObject<DDLVector3>(0x27726256u);
 	}
 
-	[DDLRegistration(0xb2457259u, description: "The name of this color, used for reference in options data. 'None' is invalid, as this is used to signify no color.")]
+	[DDLRegistration(0xe122a241u, description: "The name of this color, used for reference in options data. 'None' is invalid, as this is used to signify no color.")]
 	public string? ColorName { get; set; } = "-NotSet-";
 
-	[DDLRegistration(0xb2457259u)]
+	[DDLRegistration(0x27726256u)]
 	public DDLVector3? ColorValue { get; set; } = default;
 
 	public static AccessibilityColorData Create(DDLObject ddl) => new(ddl);

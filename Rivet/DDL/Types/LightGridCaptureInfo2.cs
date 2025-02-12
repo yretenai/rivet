@@ -29,40 +29,40 @@ public class LightGridCaptureInfo2 : DDLObjectType, IDDLObjectType<LightGridCapt
 		BounceCount = ddl.GetValue<int>(0xd107f0cau, BounceCount);
 	}
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0x7645386bu)]
 	public string? JobName { get; set; } = default;
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0xe3ef773au)]
 	public CaptureJobInfo? JobInfo { get; set; } = default;
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0x374cc4d3u)]
 	public List<CaptureGridInfo2?> GridInfo { get; set; } = [];
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0x9c997da9u)]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0x79fd859au)]
 	public RivetAssetId Atmosphere { get; set; } = default;
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0xeace710au)]
 	public RivetAssetId ErrorLogPath { get; set; } = default;
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0x0d644b55u)]
 	public RivetAssetId ProgressLogPath { get; set; } = default;
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0x5f32b191u)]
 	public RivetAssetId ZoneLightbinRelativePath { get; set; } = default;
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0x3fdfd590u)]
 	public bool CaptureDirectOnly { get; set; } = false;
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0x72fa9f42u)]
 	public bool HighQualityCapture { get; set; } = false;
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0xc3b54f69u)]
 	public LightingConditions LightingCondition { get; set; } = LightingConditions.Day;
 
-	[DDLRegistration(0xae9af74au)]
+	[DDLRegistration(0xd107f0cau)]
 	public int BounceCount { get; set; } = 0;
 
 	public static LightGridCaptureInfo2 Create(DDLObject ddl) => new(ddl);

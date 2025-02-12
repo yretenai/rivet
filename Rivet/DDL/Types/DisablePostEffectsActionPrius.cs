@@ -18,7 +18,7 @@ public class DisablePostEffectsActionPrius : DDLObjectType, IDDLObjectType<Disab
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xac628da8u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
 	public static DisablePostEffectsActionPrius Create(DDLObject ddl) => new(ddl);

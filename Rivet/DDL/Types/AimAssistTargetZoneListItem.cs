@@ -18,7 +18,7 @@ public class AimAssistTargetZoneListItem : DDLObjectType, IDDLObjectType<AimAssi
 		TargetZone = ddl.GetObject<AimAssistTargetZone>(0x59940a0fu);
 	}
 
-	[DDLRegistration(0x90271b36u)]
+	[DDLRegistration(0x59940a0fu)]
 	public AimAssistTargetZone? TargetZone { get; set; } = default;
 
 	public static AimAssistTargetZoneListItem Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class InteractLocationPriusItem : DDLObjectType, IDDLObjectType<InteractL
 		LocationData = ddl.GetObject<InteractLocationPrius>(0xe2f6f6b2u);
 	}
 
-	[DDLRegistration(0x5e529c7au)]
+	[DDLRegistration(0xe2f6f6b2u)]
 	public InteractLocationPrius? LocationData { get; set; } = default;
 
 	public static InteractLocationPriusItem Create(DDLObject ddl) => new(ddl);

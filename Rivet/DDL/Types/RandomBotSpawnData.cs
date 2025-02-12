@@ -21,16 +21,16 @@ public class RandomBotSpawnData : ActorSpawnData, IDDLObjectType<RandomBotSpawnD
 		BotAssetId = ddl.GetValue<RivetAssetId>(0xa3b23e10u, BotAssetId);
 	}
 
-	[DDLRegistration(0x8b876ba0u, description: "The spawn position")]
+	[DDLRegistration(0x6257c096u, description: "The spawn position")]
 	public DDLVector3? SpawnPoint { get; set; } = default;
 
-	[DDLRegistration(0x8b876ba0u, description: "The encounter controller actor.")]
+	[DDLRegistration(0x6e3df2afu, description: "The encounter controller actor.")]
 	public uint EncounterControllerActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8b876ba0u, description: "The home area volume actor.")]
+	[DDLRegistration(0x52894ce8u, description: "The home area volume actor.")]
 	public uint HomeArea { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8b876ba0u, description: "The bot asset id.")]
+	[DDLRegistration(0xa3b23e10u, description: "The bot asset id.")]
 	public RivetAssetId BotAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static RandomBotSpawnData Create(DDLObject ddl) => new(ddl);

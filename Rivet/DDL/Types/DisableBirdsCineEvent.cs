@@ -18,7 +18,7 @@ public class DisableBirdsCineEvent : EventBase, IDDLObjectType<DisableBirdsCineE
 		FadeOutTime = ddl.GetValue<float>(0xf2879affu, FadeOutTime);
 	}
 
-	[DDLRegistration(0x6ebaf6b1u)]
+	[DDLRegistration(0xf2879affu)]
 	public float FadeOutTime { get; set; } = 1.00f;
 
 	public new static DisableBirdsCineEvent Create(DDLObject ddl) => new(ddl);

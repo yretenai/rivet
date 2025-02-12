@@ -19,10 +19,10 @@ public class TimeScaleStartEvent : EventBase, IDDLObjectType<TimeScaleStartEvent
 		Data = ddl.GetObject<TimeScaleBasePrius>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0x659a8191u)]
+	[DDLRegistration(0xb4c37748u)]
 	public bool IsEnabled { get; set; } = true;
 
-	[DDLRegistration(0x659a8191u)]
+	[DDLRegistration(0x9d6333d3u)]
 	public TimeScaleBasePrius? Data { get; set; } = default;
 
 	public new static TimeScaleStartEvent Create(DDLObject ddl) => new(ddl);

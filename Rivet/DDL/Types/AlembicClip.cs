@@ -22,19 +22,19 @@ public class AlembicClip : DDLObjectType, IDDLObjectType<AlembicClip> {
 		AnimatingLooks = ddl.GetStrings(0x28e1bfc3u);
 	}
 
-	[DDLRegistration(0x20d65636u, description: "also used as clip name to be used inside animset")]
+	[DDLRegistration(0x6eb3beb6u, description: "also used as clip name to be used inside animset")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x20d65636u)]
+	[DDLRegistration(0xd15aa6a0u)]
 	public RivetAssetId ClipPath { get; set; } = "";
 
-	[DDLRegistration(0x20d65636u, description: "The frame of the first sample (using the content file's native sample rate).")]
+	[DDLRegistration(0xcd935029u, description: "The frame of the first sample (using the content file's native sample rate).")]
 	public int StartFrame { get; set; } = 0;
 
-	[DDLRegistration(0x20d65636u, description: "The frame of the last sample (using the content file's native sample rate).")]
+	[DDLRegistration(0xfddf52e6u, description: "The frame of the last sample (using the content file's native sample rate).")]
 	public int EndFrame { get; set; } = 0;
 
-	[DDLRegistration(0x20d65636u)]
+	[DDLRegistration(0x28e1bfc3u)]
 	public List<string?> AnimatingLooks { get; set; } = [];
 
 	public static AlembicClip Create(DDLObject ddl) => new(ddl);

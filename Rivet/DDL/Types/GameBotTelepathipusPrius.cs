@@ -21,16 +21,16 @@ public class GameBotTelepathipusPrius : GameBotShooterJetPackPrius, IDDLObjectTy
 		IsV2Telepathipus = ddl.GetValue<bool>(0x146ef83cu, IsV2Telepathipus);
 	}
 
-	[DDLRegistration(0xd72d76abu)]
+	[DDLRegistration(0x35a75a11u)]
 	public bool StartTrapped { get; set; } = false;
 
-	[DDLRegistration(0xd72d76abu)]
+	[DDLRegistration(0x4413d6d3u)]
 	public bool StartSleeping { get; set; } = false;
 
-	[DDLRegistration(0xd72d76abu)]
+	[DDLRegistration(0xbe2c2829u)]
 	public float WakeRadius { get; set; } = 25.00f;
 
-	[DDLRegistration(0xd72d76abu)]
+	[DDLRegistration(0x146ef83cu)]
 	public bool IsV2Telepathipus { get; set; } = false;
 
 	public new static GameBotTelepathipusPrius Create(DDLObject ddl) => new(ddl);

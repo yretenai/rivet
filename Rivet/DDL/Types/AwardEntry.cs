@@ -18,7 +18,7 @@ public class AwardEntry : DDLObjectType, IDDLObjectType<AwardEntry> {
 		Award = ddl.GetObject<AwardBasePrius>(0x9308e226u);
 	}
 
-	[DDLRegistration(0x4a4a9e1fu, description: "Contains information about how to track progress towards this award.")]
+	[DDLRegistration(0x9308e226u, description: "Contains information about how to track progress towards this award.")]
 	public AwardBasePrius? Award { get; set; } = default;
 
 	public static AwardEntry Create(DDLObject ddl) => new(ddl);

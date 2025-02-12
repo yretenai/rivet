@@ -51,106 +51,106 @@ public class AnimDriverDef : DDLObjectType, IDDLObjectType<AnimDriverDef> {
 		TransitionDurationSelf = ddl.GetValue<float>(0x7bf037b7u, TransitionDurationSelf);
 	}
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x260d3d5cu)]
 	public string? RootName { get; set; } = default;
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0xd9b71e25u)]
 	public uint RootIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xd8f9f212u, "Layer type")]
+	[DDLRegistration(0x6d91c682u, "Layer type")]
 	public x7c99d780 LayerType { get; set; } = x7c99d780.LayerTypeBase;
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x12568d7bu)]
 	public AnimDriverDefFlags Flags { get; set; } = (AnimDriverDefFlags) 0x00000001;
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0xd7132e94u)]
 	public uint LayerId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x570de844u)]
 	public float X1 { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x4e16d905u)]
 	public float Y1 { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x898c5a25u)]
 	public List<AnimDriverClipNodeDef?> ClipNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x02fb73dau)]
 	public List<AnimDriverPoseNodeDef?> PoseNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0xbd8a0826u)]
 	public List<AnimDriverBiBlendNodeDef?> BiBlendNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x4389a930u)]
 	public List<AnimDriverTriBlendNodeDef?> TriBlendNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x9dc0997cu)]
 	public List<AnimDriverBlendNodeDef?> BlendNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x83220fbcu)]
 	public List<AnimDriverSequenceNodeDef?> SequenceNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x6d7a6d51u)]
 	public List<AnimDriverRandomNodeDef?> RandomNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x251668bdu)]
 	public List<AnimDriverGridNodeDef?> GridNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0xa43a03d4u)]
 	public List<AnimDriverSelectNodeDef?> SelectNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x4103242fu)]
 	public List<AnimDriverMirrorNodeDef?> MirrorNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x082a2f1eu)]
 	public List<AnimDriverPerformanceNodeDef?> PerformanceNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0xc2907a09u)]
 	public List<AnimDriverVarDef?> Vars { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x23bbd396u)]
 	public List<AnimDriverFilterVarDef?> FilterVars { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0xe079afa9u)]
 	public List<AnimDriverOpMulAddDef?> MulAddOps { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0xd991bfc2u)]
 	public List<AnimDriverOpClampDef?> ClampOps { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x0d5d4a35u)]
 	public List<AnimDriverOpSmoothDef?> SmoothOps { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0x73b55faau)]
 	public List<AnimDriverGroupNodeDef?> GroupNodes { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u)]
+	[DDLRegistration(0xa59f2b5au)]
 	public List<AnimDriverCommentDef?> Comments { get; set; } = [];
 
-	[DDLRegistration(0xd8f9f212u, "Trans default")]
+	[DDLRegistration(0x54af03abu, "Trans default")]
 	public float TransitionDurationDefault { get; set; } = 0.25f;
 
-	[DDLRegistration(0xd8f9f212u, "Trans from none")]
+	[DDLRegistration(0xeb6a6262u, "Trans from none")]
 	public float TransitionDurationFromNone { get; set; } = 0.25f;
 
-	[DDLRegistration(0xd8f9f212u, "Trans to none")]
+	[DDLRegistration(0x87c0415du, "Trans to none")]
 	public float TransitionDurationToNone { get; set; } = 0.25f;
 
-	[DDLRegistration(0xd8f9f212u, "Trans self")]
+	[DDLRegistration(0x7bf037b7u, "Trans self")]
 	public float TransitionDurationSelf { get; set; } = 0.25f;
 
 	public static AnimDriverDef Create(DDLObject ddl) => new(ddl);

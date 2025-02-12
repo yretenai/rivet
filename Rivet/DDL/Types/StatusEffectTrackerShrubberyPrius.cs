@@ -20,13 +20,13 @@ public class StatusEffectTrackerShrubberyPrius : StatusEffectTrackerBasePrius, I
 		RemoveBotOnDeath = ddl.GetValue<bool>(0x2d0a53ffu, RemoveBotOnDeath);
 	}
 
-	[DDLRegistration(0xd0b1dd1fu, "Topiary Model")]
+	[DDLRegistration(0xc15f0313u, "Topiary Model")]
 	public AssetReferenceDef? TopiaryModel { get; set; } = default;
 
-	[DDLRegistration(0xd0b1dd1fu, "Can Ignore Sprinkler After Breakout")]
+	[DDLRegistration(0x734feaabu, "Can Ignore Sprinkler After Breakout")]
 	public bool CanIgnoreSprinklerAfterBreakout { get; set; } = false;
 
-	[DDLRegistration(0xd0b1dd1fu, description: "If the bot dies while shrubbed, remove the bot so that it doesnt stick around when the status is done.")]
+	[DDLRegistration(0x2d0a53ffu, description: "If the bot dies while shrubbed, remove the bot so that it doesnt stick around when the status is done.")]
 	public bool RemoveBotOnDeath { get; set; } = true;
 
 	public new static StatusEffectTrackerShrubberyPrius Create(DDLObject ddl) => new(ddl);

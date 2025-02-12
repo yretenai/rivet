@@ -18,7 +18,7 @@ public class BeamOutConfig : IncinerateConfig, IDDLObjectType<BeamOutConfig> {
 		SourceJoint = ddl.GetString(0x8d47f7c0) ?? SourceJoint;
 	}
 
-	[DDLRegistration(0xc4483ad1u)]
+	[DDLRegistration(0x8d47f7c0u)]
 	public string? SourceJoint { get; set; } = default;
 
 	public new static BeamOutConfig Create(DDLObject ddl) => new(ddl);

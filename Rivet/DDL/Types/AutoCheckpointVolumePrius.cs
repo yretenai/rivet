@@ -18,7 +18,7 @@ public class AutoCheckpointVolumePrius : DDLObjectType, IDDLObjectType<AutoCheck
 		Checkpoints = ddl.GetStrings(0xba0400acu);
 	}
 
-	[DDLRegistration(0x7952b56bu, description: "Pick the first checkpoint in this list that is in the same container region as we are now and whose actor exists.")]
+	[DDLRegistration(0xba0400acu, description: "Pick the first checkpoint in this list that is in the same container region as we are now and whose actor exists.")]
 	public List<string?> Checkpoints { get; set; } = [];
 
 	public static AutoCheckpointVolumePrius Create(DDLObject ddl) => new(ddl);

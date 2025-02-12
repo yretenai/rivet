@@ -19,10 +19,10 @@ public class ZerpStonePrius : DDLObjectType, IDDLObjectType<ZerpStonePrius> {
 		ZerpPickupActor = ddl.GetValue<RivetAssetId>(0x08305210u, ZerpPickupActor);
 	}
 
-	[DDLRegistration(0xce448bfau, description: "Unique identifier of this ZerpStone for saving the game, for each saveID we spawn a zerpstone.")]
+	[DDLRegistration(0xda96a499u, description: "Unique identifier of this ZerpStone for saving the game, for each saveID we spawn a zerpstone.")]
 	public List<int> SaveIDs { get; set; } = [];
 
-	[DDLRegistration(0xce448bfau, description: "Zerp pickup actor spawned on destroy.")]
+	[DDLRegistration(0x08305210u, description: "Zerp pickup actor spawned on destroy.")]
 	public RivetAssetId ZerpPickupActor { get; set; } = default;
 
 	public static ZerpStonePrius Create(DDLObject ddl) => new(ddl);

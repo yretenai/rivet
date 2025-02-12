@@ -25,28 +25,28 @@ public class VisualEffectKeyFrameNode : DDLObjectType, IDDLObjectType<VisualEffe
 		Collection = ddl.GetObject<KeyFrameCollection>(0x277b3b0bu);
 	}
 
-	[DDLRegistration(0x904eb287u)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x904eb287u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x904eb287u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x904eb287u, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x904eb287u)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<VisualEffectNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0x904eb287u)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<VisualEffectNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
-	[DDLRegistration(0x904eb287u, "LifeTime Override", "Replaces LifeTime Override attribute on emitter/render properties")]
+	[DDLRegistration(0x65a34ae4u, "LifeTime Override", "Replaces LifeTime Override attribute on emitter/render properties")]
 	public VisualEffectFloat? InputPort_LifeTimeOverride { get; set; } = default;
 
-	[DDLRegistration(0x904eb287u, "KeyFrames")]
+	[DDLRegistration(0x277b3b0bu, "KeyFrames")]
 	public KeyFrameCollection? Collection { get; set; } = default;
 
 	public static VisualEffectKeyFrameNode Create(DDLObject ddl) => new(ddl);

@@ -49,100 +49,100 @@ public class PhysicsSettings : DDLObjectType, IDDLObjectType<PhysicsSettings> {
 		PhysicsEnable = ddl.GetValue<bool>(0x0a5ca63eu, PhysicsEnable);
 	}
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0xb2e14bcau)]
 	public bool ClothEnable { get; set; } = true;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x3bfd2690u)]
 	public bool RagdollAnimPoseJointsEnable { get; set; } = true;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0xf1af6b6bu)]
 	public bool KickablesAndRagdollsEnable { get; set; } = true;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x3cded5efu)]
 	public bool RagdollSelfCollision { get; set; } = true;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0xeaed84b1u)]
 	public bool FatalThreadConcurrencyAsserts { get; set; } = true;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x046ac4c7u)]
 	public bool SingleThreadedInPlaceLoads { get; set; } = false;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x9a46e93bu)]
 	public bool RagdollUpdateSkipUnmovedObjects { get; set; } = true;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x85dc3cddu)]
 	public int RayCastQueryCount { get; set; } = 4096;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x2dccb4d2u)]
 	public int SweptSphereQueryCount { get; set; } = 4096;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0xad51b632u)]
 	public int SweptCapsuleQueryCount { get; set; } = 256;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x5e523521u)]
 	public int ClosestPointsQueryCount { get; set; } = 512;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0xf82411c6u)]
 	public int MaxDeferredLoads { get; set; } = 512;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x012cfdf1u)]
 	public int MaxTrackedSceneObjects { get; set; } = 4096;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0xbcac0306u)]
 	public int MaxIgnoredSceneObjects { get; set; } = 2048;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x7084eaaeu)]
 	public int MaxProcrastinatedIgnoreListAdds { get; set; } = 1230;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x80aeccb0u)]
 	public int PhysicsQueryAllocSize { get; set; } = 5242880;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0xae31effcu)]
 	public List<ushort> PhysicsQuerySmallBlockSizes { get; set; } = [];
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x61a93fb0u)]
 	public int PhysicsStepLocalStreamAllocSize { get; set; } = 30408704;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x90eb4c84u)]
 	public int PhysicsPersistentStreamAllocSize { get; set; } = 30408704;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x0e300cc5u)]
 	public float PhysicsBroadphaseRadiusX { get; set; } = 4096.00f;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x79373c53u)]
 	public float PhysicsBroadphaseRadiusY { get; set; } = 4096.00f;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0xe03e6de9u)]
 	public float PhysicsBroadphaseRadiusZ { get; set; } = 4096.00f;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x6c3151eau)]
 	public float GravityMagnitude { get; set; } = 9.80f;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0xcf0b8319u)]
 	public float UnderSampleUpdatingRagdollsAnimFurtherThanThisFromCamera { get; set; } = 30.00f;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0xe5237217u)]
 	public ushort UnderSampleCullFractionFrames { get; set; } = 0x0004;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x07c33cfeu)]
 	public bool EnableUnderSampleUpdatingRagdolls { get; set; } = true;
 
-	[DDLRegistration(0xa2234895u, description: "i29 day1 60hz optimization")]
+	[DDLRegistration(0xe5e850a3u, description: "i29 day1 60hz optimization")]
 	public bool SkipAnimUserPoseSetupOnRagdollActivate { get; set; } = true;
 
-	[DDLRegistration(0xa2234895u, description: "0: 6ms spikes, 1: skip wasted work for single-body chunks, 2: bypass hknpPhysicsSystem ctor")]
+	[DDLRegistration(0x510becdbu, description: "0: 6ms spikes, 1: skip wasted work for single-body chunks, 2: bypass hknpPhysicsSystem ctor")]
 	public int ChunkedBodyOptimizationAggression { get; set; } = 2;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0xa4cdca0bu)]
 	public ushort VisualDebuggerPort { get; set; } = 0xafc9;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x015650edu)]
 	public uint DebugHeapSize { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa2234895u, description: "To reduce the number of unique materials in the Havok library, do a complicated thing where we save off the materials we get from Maya, create the body with a default material, then add the materials back after going through our own code to de-duplicate them")]
+	[DDLRegistration(0x4a8941e6u, description: "To reduce the number of unique materials in the Havok library, do a complicated thing where we save off the materials we get from Maya, create the body with a default material, then add the materials back after going through our own code to de-duplicate them")]
 	public bool OverrideBodyMaterialsComingFromMaya { get; set; } = true;
 
-	[DDLRegistration(0xa2234895u)]
+	[DDLRegistration(0x0a5ca63eu)]
 	public bool PhysicsEnable { get; set; } = true;
 
 	public static PhysicsSettings Create(DDLObject ddl) => new(ddl);

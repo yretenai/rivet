@@ -24,25 +24,25 @@ public class FlyerMountPathPrius : DDLObjectType, IDDLObjectType<FlyerMountPathP
 		CameraFOV = ddl.GetValue<float>(0x2e75509au, CameraFOV);
 	}
 
-	[DDLRegistration(0x810ae3acu)]
+	[DDLRegistration(0xdc375565u)]
 	public float HorizontalExtent { get; set; } = 10.00f;
 
-	[DDLRegistration(0x810ae3acu)]
+	[DDLRegistration(0x8c33ce75u)]
 	public float VerticalExtent { get; set; } = 5.00f;
 
-	[DDLRegistration(0x810ae3acu)]
+	[DDLRegistration(0x7f00e1f5u)]
 	public float CameraMaxHorizontalOffset { get; set; } = 2.00f;
 
-	[DDLRegistration(0x810ae3acu)]
+	[DDLRegistration(0xd0f83896u)]
 	public float CameraForwardOffset { get; set; } = -12.00f;
 
-	[DDLRegistration(0x810ae3acu)]
+	[DDLRegistration(0x6cb5b490u)]
 	public float CameraPivotHeight { get; set; } = 4.00f;
 
-	[DDLRegistration(0x810ae3acu)]
+	[DDLRegistration(0xbc4ccc51u)]
 	public float CameraPitch { get; set; } = 0.00f;
 
-	[DDLRegistration(0x810ae3acu)]
+	[DDLRegistration(0x2e75509au)]
 	public float CameraFOV { get; set; } = 82.00f;
 
 	public static FlyerMountPathPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class RenderConstantOverride : DDLObjectType, IDDLObjectType<RenderConsta
 		Value = ddl.GetValues<float>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x348e46ebu, description: "Name of the node in the material graph this is being overridden")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of the node in the material graph this is being overridden")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x348e46ebu, description: "Name of the Maya material mapping the override is restricted to")]
+	[DDLRegistration(0x981e6927u, description: "Name of the Maya material mapping the override is restricted to")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x348e46ebu)]
+	[DDLRegistration(0x042494f5u)]
 	public List<float> Value { get; set; } = [];
 
 	public static RenderConstantOverride Create(DDLObject ddl) => new(ddl);

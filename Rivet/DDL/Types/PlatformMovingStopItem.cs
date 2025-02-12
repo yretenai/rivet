@@ -24,25 +24,25 @@ public class PlatformMovingStopItem : DDLObjectType, IDDLObjectType<PlatformMovi
 		OfferLOCTag = ddl.GetString(0xda16bb20) ?? OfferLOCTag;
 	}
 
-	[DDLRegistration(0xc87d3cb1u, "Stop Volume")]
+	[DDLRegistration(0x62da917au, "Stop Volume")]
 	public RivetAssetId StopVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc87d3cb1u, "Stop Type")]
+	[DDLRegistration(0xa8037a19u, "Stop Type")]
 	public x8b0475d0 StopType { get; set; } = x8b0475d0.Manual;
 
-	[DDLRegistration(0xc87d3cb1u, "Action Time")]
+	[DDLRegistration(0x6401eef8u, "Action Time")]
 	public float ActionTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0xc87d3cb1u, "(Opt) Call Volume", "If a hero enters this call volume, the platform will be called to this stop.")]
+	[DDLRegistration(0x8dd2e6f5u, "(Opt) Call Volume", "If a hero enters this call volume, the platform will be called to this stop.")]
 	public RivetAssetId CallVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc87d3cb1u, "(Opt) Squash Volume", "If a hero is inside the squash volume, the platform will stop so as to not squish them.")]
+	[DDLRegistration(0x1a290659u, "(Opt) Squash Volume", "If a hero is inside the squash volume, the platform will stop so as to not squish them.")]
 	public RivetAssetId SquashVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc87d3cb1u, "Squash Stop Distance", "The minimum distance from the squash volume to stop at if there is a hero in the squash volume.")]
+	[DDLRegistration(0x660de44fu, "Squash Stop Distance", "The minimum distance from the squash volume to stop at if there is a hero in the squash volume.")]
 	public float SquashStopDist { get; set; } = 4.00f;
 
-	[DDLRegistration(0xc87d3cb1u, "(Opt) Offer Loc Tag", "If this stop is set to 'Use Interact Offer' we will use this Loc tag for the offer rather than the one set in the offer prius.")]
+	[DDLRegistration(0xda16bb20u, "(Opt) Offer Loc Tag", "If this stop is set to 'Use Interact Offer' we will use this Loc tag for the offer rather than the one set in the offer prius.")]
 	public string? OfferLOCTag { get; set; } = default;
 
 	public static PlatformMovingStopItem Create(DDLObject ddl) => new(ddl);

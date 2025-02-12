@@ -21,16 +21,16 @@ public class CompoundRotateWhileMoving : OrientationMode, IDDLObjectType<Compoun
 		LocalRotationalSpeed = ddl.GetValue<float>(0xd16fdf3du, LocalRotationalSpeed);
 	}
 
-	[DDLRegistration(0x824c80ebu, description: "Axis to rotate around in our motion oriented world space")]
+	[DDLRegistration(0x451c94ccu, description: "Axis to rotate around in our motion oriented world space")]
 	public RotationAxis MotionOrientedAxis { get; set; } = RotationAxis.X;
 
-	[DDLRegistration(0x824c80ebu, description: "Speed to rotate around the motion oriented axis (degrees per second)")]
+	[DDLRegistration(0x7292613du, description: "Speed to rotate around the motion oriented axis (degrees per second)")]
 	public float MotionOrientedRotationalSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x824c80ebu, description: "Axis to rotate around in our local space")]
+	[DDLRegistration(0xf625ad16u, description: "Axis to rotate around in our local space")]
 	public RotationAxis LocalAxis { get; set; } = RotationAxis.X;
 
-	[DDLRegistration(0x824c80ebu, description: "Speed to rotate around the local axis (degrees per second)")]
+	[DDLRegistration(0xd16fdf3du, description: "Speed to rotate around the local axis (degrees per second)")]
 	public float LocalRotationalSpeed { get; set; } = 0.00f;
 
 	public new static CompoundRotateWhileMoving Create(DDLObject ddl) => new(ddl);

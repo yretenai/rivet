@@ -19,10 +19,10 @@ public class SimpleHitReactPrius : DDLObjectType, IDDLObjectType<SimpleHitReactP
 		LayerType = ddl.GetEnum<x7c99d780>(0x6d91c682u, x7c99d780Values.Lookup);
 	}
 
-	[DDLRegistration(0x9cfd6f20u, "Hit React Anim Driver", "What anim to use for our hit react. If blank or not in the animset, we will use React_Knockback.")]
+	[DDLRegistration(0xcfbfc6bau, "Hit React Anim Driver", "What anim to use for our hit react. If blank or not in the animset, we will use React_Knockback.")]
 	public string? HitReactAnim { get; set; } = default;
 
-	[DDLRegistration(0x9cfd6f20u, "Layer Type", "Layer type, only for use with SimpleAnimComponent")]
+	[DDLRegistration(0x6d91c682u, "Layer Type", "Layer type, only for use with SimpleAnimComponent")]
 	public x7c99d780 LayerType { get; set; } = x7c99d780.LayerTypeBase;
 
 	public static SimpleHitReactPrius Create(DDLObject ddl) => new(ddl);

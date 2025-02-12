@@ -20,13 +20,13 @@ public class TriggerByOthersPrius : TriggerByBasePrius, IDDLObjectType<TriggerBy
 		TriggeringActors = ddl.GetObjects<TriggerByOthersEntry>(0xc435c16cu);
 	}
 
-	[DDLRegistration(0x25134682u)]
+	[DDLRegistration(0xa75a871bu)]
 	public x6200f389 Mode { get; set; } = x6200f389.All;
 
-	[DDLRegistration(0x25134682u, description: "Count value used for some modes")]
+	[DDLRegistration(0xa8e85133u, description: "Count value used for some modes")]
 	public int Number { get; set; } = 1;
 
-	[DDLRegistration(0x25134682u, "Triggering Actors", "Test if these actors have been triggered")]
+	[DDLRegistration(0xc435c16cu, "Triggering Actors", "Test if these actors have been triggered")]
 	public List<TriggerByOthersEntry?> TriggeringActors { get; set; } = [];
 
 	public new static TriggerByOthersPrius Create(DDLObject ddl) => new(ddl);

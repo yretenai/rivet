@@ -28,37 +28,37 @@ public class PrefabDef : DDLObjectType, IDDLObjectType<PrefabDef> {
 		FixupTable = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x2f885ab0, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 	}
 
-	[DDLRegistration(0x83b44e79u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x83b44e79u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x83b44e79u)]
+	[DDLRegistration(0x41496fdeu)]
 	public Dictionary<RivetAssetId, SceneNode?> SceneNodes { get; set; } = [];
 
-	[DDLRegistration(0x83b44e79u)]
+	[DDLRegistration(0xd4a16a95u)]
 	public Dictionary<RivetAssetId, ActorGroupNode?> ActorGroups { get; set; } = [];
 
-	[DDLRegistration(0x83b44e79u)]
+	[DDLRegistration(0x98b21bedu)]
 	public RivetAssetId MainScriptGraphId { get; set; } = new RivetAssetId(0xffffffffffffffff);
 
-	[DDLRegistration(0x83b44e79u)]
+	[DDLRegistration(0xb6beea44u)]
 	public Dictionary<RivetAssetId, NodeGraphContents?> ScriptGraphs { get; set; } = [];
 
-	[DDLRegistration(0x83b44e79u)]
+	[DDLRegistration(0x84e9cc70u)]
 	public Dictionary<RivetAssetId, VarNode?> VarNodes { get; set; } = [];
 
-	[DDLRegistration(0x83b44e79u)]
+	[DDLRegistration(0xb9ed55e1u)]
 	public Dictionary<RivetAssetId, VertexPaintNode?> VertexPaintNodes { get; set; } = [];
 
-	[DDLRegistration(0x83b44e79u, "Impostor Attributes")]
+	[DDLRegistration(0xfd931cb7u, "Impostor Attributes")]
 	public ImpostorAttributes? ImpostorAttributes { get; set; } = default;
 
-	[DDLRegistration(0x83b44e79u, "Render Flags")]
+	[DDLRegistration(0x2459666du, "Render Flags")]
 	public PrefabRenderFlags? RenderFlags { get; set; } = default;
 
-	[DDLRegistration(0x83b44e79u, description: "Used to fix a bug where nested scene nodes did not have an ID that matched their key in the SceneNodes hashmap.  Can eventually be removed once all zone override data is fixed up in all projects.")]
+	[DDLRegistration(0x2f885ab0u, description: "Used to fix a bug where nested scene nodes did not have an ID that matched their key in the SceneNodes hashmap.  Can eventually be removed once all zone override data is fixed up in all projects.")]
 	public Dictionary<RivetAssetId, RivetAssetId> FixupTable { get; set; } = [];
 
 	public static PrefabDef Create(DDLObject ddl) => new(ddl);

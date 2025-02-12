@@ -25,28 +25,28 @@ public class MaterialConstantEventControlledPrius : DDLObjectType, IDDLObjectTyp
 		Event = ddl.GetObject<EventBase>(0x22fdc666u);
 	}
 
-	[DDLRegistration(0x44af4324u, description: "The name of the material constant to change.")]
+	[DDLRegistration(0xc6991700u, description: "The name of the material constant to change.")]
 	public string? ConstantName { get; set; } = "TValue";
 
-	[DDLRegistration(0x44af4324u, description: "The Maya material mapping to apply this setting to.")]
+	[DDLRegistration(0x981e6927u, description: "The Maya material mapping to apply this setting to.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x44af4324u, description: "The initial value of the constant.")]
+	[DDLRegistration(0x08781be6u, description: "The initial value of the constant.")]
 	public float InitialValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x44af4324u, description: "The value to change the constant to in response to the event.")]
+	[DDLRegistration(0x456e15b9u, description: "The value to change the constant to in response to the event.")]
 	public float EventValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0x44af4324u, description: "Should the material constant's value be set to Initial when this activates?")]
+	[DDLRegistration(0x30bfe732u, description: "Should the material constant's value be set to Initial when this activates?")]
 	public bool SetInitialValueOnActivate { get; set; } = true;
 
-	[DDLRegistration(0x44af4324u)]
+	[DDLRegistration(0xb34024eau)]
 	public MaterialConstantBlendBase? BlendStyle { get; set; } = default;
 
-	[DDLRegistration(0x44af4324u, description: "Is this a self event?")]
+	[DDLRegistration(0xad9ebd15u, description: "Is this a self event?")]
 	public bool IsSelfEvent { get; set; } = false;
 
-	[DDLRegistration(0x44af4324u, description: "This event causes the material constant to change.")]
+	[DDLRegistration(0x22fdc666u, description: "This event causes the material constant to change.")]
 	public EventBase? Event { get; set; } = default;
 
 	public static MaterialConstantEventControlledPrius Create(DDLObject ddl) => new(ddl);

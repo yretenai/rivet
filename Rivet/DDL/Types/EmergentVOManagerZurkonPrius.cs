@@ -19,10 +19,10 @@ public class EmergentVOManagerZurkonPrius : EmergentVOManagerGamePrius, IDDLObje
 		HeroHandle = ddl.GetValue<uint>(0x581d988du, HeroHandle);
 	}
 
-	[DDLRegistration(0x565dc85au)]
+	[DDLRegistration(0x63f2ca25u)]
 	public ulong EmergentVOConfigAssetId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x565dc85au)]
+	[DDLRegistration(0x581d988du)]
 	public uint HeroHandle { get; set; } = 0x00000000;
 
 	public new static EmergentVOManagerZurkonPrius Create(DDLObject ddl) => new(ddl);

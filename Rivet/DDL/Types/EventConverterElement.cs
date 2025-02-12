@@ -21,16 +21,16 @@ public class EventConverterElement : DDLObjectType, IDDLObjectType<EventConverte
 		PlayedOnce = ddl.GetValue<bool>(0xd7aeb82cu, PlayedOnce);
 	}
 
-	[DDLRegistration(0x8fc8eb86u, "Input Event")]
+	[DDLRegistration(0xc7adef5fu, "Input Event")]
 	public string? InputEventName { get; set; } = default;
 
-	[DDLRegistration(0x8fc8eb86u, description: "Fire events on this event or events derived from this event")]
+	[DDLRegistration(0x6cd8ad82u, description: "Fire events on this event or events derived from this event")]
 	public bool OnDerivedEvent { get; set; } = true;
 
-	[DDLRegistration(0x8fc8eb86u)]
+	[DDLRegistration(0x0d9fcc64u)]
 	public List<EventListElement?> Outputs { get; set; } = [];
 
-	[DDLRegistration(0x8fc8eb86u)]
+	[DDLRegistration(0xd7aeb82cu)]
 	public bool PlayedOnce { get; set; } = false;
 
 	public static EventConverterElement Create(DDLObject ddl) => new(ddl);

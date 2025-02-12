@@ -18,7 +18,7 @@ public class VanityClosetCameraPrius : DDLObjectType, IDDLObjectType<VanityClose
 		VanityCameraName = ddl.GetString(0x279a2bfe) ?? VanityCameraName;
 	}
 
-	[DDLRegistration(0xcba60887u)]
+	[DDLRegistration(0x279a2bfeu)]
 	public string? VanityCameraName { get; set; } = default;
 
 	public static VanityClosetCameraPrius Create(DDLObject ddl) => new(ddl);

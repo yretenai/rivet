@@ -19,10 +19,10 @@ public class HoverEffectChangedEvent : EventBase, IDDLObjectType<HoverEffectChan
 		SpeedType = ddl.GetEnum<x0828cfe7>(0xe127ee0fu, x0828cfe7Values.Lookup);
 	}
 
-	[DDLRegistration(0xb05dde83u)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0xb05dde83u, description: "kFast : Speed is greater than or equal to speed threshold on HoverEffectManagerPrius. kSlow : Speed is less than threshold.")]
+	[DDLRegistration(0xe127ee0fu, description: "kFast : Speed is greater than or equal to speed threshold on HoverEffectManagerPrius. kSlow : Speed is less than threshold.")]
 	public x0828cfe7 SpeedType { get; set; } = x0828cfe7.Slow;
 
 	public new static HoverEffectChangedEvent Create(DDLObject ddl) => new(ddl);

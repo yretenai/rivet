@@ -18,7 +18,7 @@ public class InventoryFullEvent : EventBase, IDDLObjectType<InventoryFullEvent> 
 		Actor = ddl.GetValue<uint>(0x5d269a38u, Actor);
 	}
 
-	[DDLRegistration(0x9a9a9a05u)]
+	[DDLRegistration(0x5d269a38u)]
 	public uint Actor { get; set; } = 0x00000000;
 
 	public new static InventoryFullEvent Create(DDLObject ddl) => new(ddl);

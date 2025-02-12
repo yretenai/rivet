@@ -18,7 +18,7 @@ public class SaveActorActivationStatePrius : DDLObjectType, IDDLObjectType<SaveA
 		IsEnabled = ddl.GetValue<bool>(0xb4c37748u, IsEnabled);
 	}
 
-	[DDLRegistration(0x15e6e99du, "Is Enabled?", "Whether this component is enabled or not. Uses the Deleted save flag.")]
+	[DDLRegistration(0xb4c37748u, "Is Enabled?", "Whether this component is enabled or not. Uses the Deleted save flag.")]
 	public bool IsEnabled { get; set; } = false;
 
 	public static SaveActorActivationStatePrius Create(DDLObject ddl) => new(ddl);

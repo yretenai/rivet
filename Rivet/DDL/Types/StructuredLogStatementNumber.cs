@@ -18,7 +18,7 @@ public class StructuredLogStatementNumber : StructuredLogStatement, IDDLObjectTy
 		Number = ddl.GetValue<float>(0xa8e85133u, Number);
 	}
 
-	[DDLRegistration(0x8c7cfedbu)]
+	[DDLRegistration(0xa8e85133u)]
 	public float Number { get; set; } = 0.00f;
 
 	public new static StructuredLogStatementNumber Create(DDLObject ddl) => new(ddl);

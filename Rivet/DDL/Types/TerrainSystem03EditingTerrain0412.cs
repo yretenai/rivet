@@ -23,22 +23,22 @@ public class TerrainSystem03EditingTerrain0412 : DDLObjectType, IDDLObjectType<T
 		Line05 = ddl.GetString(0x7f124bc4) ?? Line05;
 	}
 
-	[DDLRegistration(0x8f1c819du, description: "The <b>IG_MASK_INPUT</b> node will receive a Houdini HeightField Mask node")]
+	[DDLRegistration(0x0f78bf4bu, description: "The <b>IG_MASK_INPUT</b> node will receive a Houdini HeightField Mask node")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x8f1c819du, description: "and represents the selected area of the terrain in the editor.")]
+	[DDLRegistration(0x787f8fddu, description: "and represents the selected area of the terrain in the editor.")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x8f1c819du, description: "<br><br>")]
+	[DDLRegistration(0xe176de67u, description: "<br><br>")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x8f1c819du, description: "The </b>IG_MASK_WORLD_SPACE_INPUT</b> node will receive a Houdini HeightField")]
+	[DDLRegistration(0x9671eef1u, description: "The </b>IG_MASK_WORLD_SPACE_INPUT</b> node will receive a Houdini HeightField")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x8f1c819du, description: "Mask node that is meant to work with the <b>IG_HEIGHTFIELD_WORLD_SPACE_INPUT</b>")]
+	[DDLRegistration(0x08157b52u, description: "Mask node that is meant to work with the <b>IG_HEIGHTFIELD_WORLD_SPACE_INPUT</b>")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x8f1c819du, description: "input.  This is mostly used for scattering.")]
+	[DDLRegistration(0x7f124bc4u, description: "input.  This is mostly used for scattering.")]
 	public string? Line05 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0412 Create(DDLObject ddl) => new(ddl);

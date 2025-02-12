@@ -19,10 +19,10 @@ public class DeleteActorOnEventPrius : DDLObjectType, IDDLObjectType<DeleteActor
 		Kill = ddl.GetValue<bool>(0x37b996d9u, Kill);
 	}
 
-	[DDLRegistration(0x88cd5e67u, "Event Type", "The event that will cause us to be deleted")]
+	[DDLRegistration(0xa76e74deu, "Event Type", "The event that will cause us to be deleted")]
 	public EventBase? ListenEvent { get; set; } = default;
 
-	[DDLRegistration(0x88cd5e67u)]
+	[DDLRegistration(0x37b996d9u)]
 	public bool Kill { get; set; } = false;
 
 	public static DeleteActorOnEventPrius Create(DDLObject ddl) => new(ddl);

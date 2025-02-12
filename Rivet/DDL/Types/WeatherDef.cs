@@ -21,16 +21,16 @@ public class WeatherDef : DDLObjectType, IDDLObjectType<WeatherDef> {
 		Wind = ddl.GetObject<WindDef>(0x119b944eu);
 	}
 
-	[DDLRegistration(0x81305bd6u, description: "Sets the global material constant: WeatherConstant")]
+	[DDLRegistration(0xe1806535u, description: "Sets the global material constant: WeatherConstant")]
 	public float WeatherConstant { get; set; } = 0.00f;
 
-	[DDLRegistration(0x81305bd6u)]
+	[DDLRegistration(0x862f855fu)]
 	public WetSurfacesDef? WetSurfaces { get; set; } = default;
 
-	[DDLRegistration(0x81305bd6u)]
+	[DDLRegistration(0x4ea8a676u)]
 	public ParticlesDef? Particles { get; set; } = default;
 
-	[DDLRegistration(0x81305bd6u)]
+	[DDLRegistration(0x119b944eu)]
 	public WindDef? Wind { get; set; } = default;
 
 	public static WeatherDef Create(DDLObject ddl) => new(ddl);

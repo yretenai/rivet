@@ -19,10 +19,10 @@ public class NodalShotTransitionStateNodeDef : NodalShotStateNodeBaseDef, IDDLOb
 		StateName = ddl.GetObject<InputPlugString>(0xb6351547u);
 	}
 
-	[DDLRegistration(0x78e90c44u)]
+	[DDLRegistration(0x2c23f963u)]
 	public InputPlugSignal? Transition { get; set; } = default;
 
-	[DDLRegistration(0x78e90c44u)]
+	[DDLRegistration(0xb6351547u)]
 	public InputPlugString? StateName { get; set; } = default;
 
 	public new static NodalShotTransitionStateNodeDef Create(DDLObject ddl) => new(ddl);

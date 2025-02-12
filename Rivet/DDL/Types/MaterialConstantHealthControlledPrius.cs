@@ -22,19 +22,19 @@ public class MaterialConstantHealthControlledPrius : DDLObjectType, IDDLObjectTy
 		ValueData = ddl.GetObjects<MaterialConstantHealthControlledValueData>(0x91a25047u);
 	}
 
-	[DDLRegistration(0x550e109au, description: "The name of the material constant to change.")]
+	[DDLRegistration(0xc6991700u, description: "The name of the material constant to change.")]
 	public string? ConstantName { get; set; } = "TValue";
 
-	[DDLRegistration(0x550e109au, description: "The Maya material mapping to apply this setting to.")]
+	[DDLRegistration(0x981e6927u, description: "The Maya material mapping to apply this setting to.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x550e109au, description: "If true, HealthAmount in ValueData is a hit point value.")]
+	[DDLRegistration(0x77a137c6u, description: "If true, HealthAmount in ValueData is a hit point value.")]
 	public bool UseHitPoints { get; set; } = false;
 
-	[DDLRegistration(0x550e109au, description: "If true, material values will blend continually between thresholds.")]
+	[DDLRegistration(0xd12767c0u, description: "If true, material values will blend continually between thresholds.")]
 	public bool Continuous { get; set; } = false;
 
-	[DDLRegistration(0x550e109au)]
+	[DDLRegistration(0x91a25047u)]
 	public List<MaterialConstantHealthControlledValueData?> ValueData { get; set; } = [];
 
 	public static MaterialConstantHealthControlledPrius Create(DDLObject ddl) => new(ddl);

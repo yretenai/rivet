@@ -18,7 +18,7 @@ public class InputPlugBoolean : InputPlugBaseDef, IDDLObjectType<InputPlugBoolea
 		Value = ddl.GetObject<BooleanPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x8717d06bu)]
+	[DDLRegistration(0x042494f5u)]
 	public BooleanPlug? Value { get; set; } = default;
 
 	public new static InputPlugBoolean Create(DDLObject ddl) => new(ddl);

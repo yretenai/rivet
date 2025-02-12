@@ -35,58 +35,58 @@ public class Proof4 : DDLObjectType, IDDLObjectType<Proof4> {
 		DM = ddl.GetString(0x7d4dacac) ?? DM;
 	}
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0xd38f4bbbu)]
 	public int BaseField { get; set; } = 0;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0xa351b8f7u)]
 	public float B { get; set; } = 0.00f;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0x4a321dc2u)]
 	public double D { get; set; } = 0;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0x31e62289u)]
 	public double F64 { get; set; } = 0;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0x6511f622u)]
 	public bool Bool { get; set; } = false;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0x8b6feb50u)]
 	public bool Boolean { get; set; } = false;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0xd4568861u)]
 	public List<int> C { get; set; } = [];
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0xb5956d7du)]
 	public BitsB BitsB { get; set; } = (BitsB) 0x00000000;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0xe2aa8c1cu)]
 	public Proof3? Proof { get; set; } = default;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0xe128a208u)]
 	public Dictionary<int, int> Hash { get; set; } = [];
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0xc9e19805u)]
 	public string? S { get; set; } = default;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0xa43c7ceeu)]
 	public RivetAssetId F { get; set; } = default;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0x57850da6u)]
 	public RivetAssetId T { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0xad8a30c5u)]
 	public string? J { get; set; } = default;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0x3a58e94du)]
 	public RivetAssetId A { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0x25d440ceu)]
 	public uint U32b { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0x3bb5a8efu)]
 	public string? MLS { get; set; } = default;
 
-	[DDLRegistration(0x35570276u)]
+	[DDLRegistration(0x7d4dacacu)]
 	public string? DM { get; set; } = default;
 
 	public static Proof4 Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class TrajectoryHighlightOffEvent : EventBase, IDDLObjectType<TrajectoryH
 		ImpactScale = ddl.GetValue<float>(0xc4714088u, ImpactScale);
 	}
 
-	[DDLRegistration(0x891281b6u)]
+	[DDLRegistration(0xaaf95d02u)]
 	public string? ColorKeyFrameModName { get; set; } = default;
 
-	[DDLRegistration(0x891281b6u)]
+	[DDLRegistration(0xb0af9da6u)]
 	public float ColorR { get; set; } = 0.00f;
 
-	[DDLRegistration(0x891281b6u)]
+	[DDLRegistration(0xdd72794du)]
 	public float ColorG { get; set; } = 0.00f;
 
-	[DDLRegistration(0x891281b6u)]
+	[DDLRegistration(0xad188dc2u)]
 	public float ColorB { get; set; } = 0.00f;
 
-	[DDLRegistration(0x891281b6u)]
+	[DDLRegistration(0xc4714088u)]
 	public float ImpactScale { get; set; } = 0.00f;
 
 	public new static TrajectoryHighlightOffEvent Create(DDLObject ddl) => new(ddl);

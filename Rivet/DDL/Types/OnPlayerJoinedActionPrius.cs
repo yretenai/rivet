@@ -18,7 +18,7 @@ public class OnPlayerJoinedActionPrius : DDLObjectType, IDDLObjectType<OnPlayerJ
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xf6ec66f4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
 	public static OnPlayerJoinedActionPrius Create(DDLObject ddl) => new(ddl);

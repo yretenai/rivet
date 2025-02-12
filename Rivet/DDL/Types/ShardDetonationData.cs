@@ -18,7 +18,7 @@ public class ShardDetonationData : DDLObjectType, IDDLObjectType<ShardDetonation
 		DamagePercent = ddl.GetValue<float>(0x7bbba4a0u, DamagePercent);
 	}
 
-	[DDLRegistration(0xec3e5404u, "Damage Percent", "This percentage of the grenade's direct damage amount that the shards will deal.")]
+	[DDLRegistration(0x7bbba4a0u, "Damage Percent", "This percentage of the grenade's direct damage amount that the shards will deal.")]
 	public float DamagePercent { get; set; } = 0.20f;
 
 	public static ShardDetonationData Create(DDLObject ddl) => new(ddl);

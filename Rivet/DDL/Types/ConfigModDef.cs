@@ -19,10 +19,10 @@ public class ConfigModDef : DDLObjectType, IDDLObjectType<ConfigModDef> {
 		ModList = ddl.GetObjects<ConfigModListElement>(0x2649755bu);
 	}
 
-	[DDLRegistration(0x9271c016u, "Variable", "Variable to modify")]
+	[DDLRegistration(0x364c3afdu, "Variable", "Variable to modify")]
 	public xeefd048a Variable { get; set; } = xeefd048a.None;
 
-	[DDLRegistration(0x9271c016u, "Config Mod List", "List of config mods to apply")]
+	[DDLRegistration(0x2649755bu, "Config Mod List", "List of config mods to apply")]
 	public List<ConfigModListElement?> ModList { get; set; } = [];
 
 	public static ConfigModDef Create(DDLObject ddl) => new(ddl);

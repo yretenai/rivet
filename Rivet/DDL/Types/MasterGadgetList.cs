@@ -18,7 +18,7 @@ public class MasterGadgetList : ConfigBase, IDDLObjectType<MasterGadgetList> {
 		Gadgets = ddl.GetObjects<GadgetListElement>(0x173f995au);
 	}
 
-	[DDLRegistration(0x209a942eu, "Gadgets")]
+	[DDLRegistration(0x173f995au, "Gadgets")]
 	public List<GadgetListElement?> Gadgets { get; set; } = [];
 
 	public new static MasterGadgetList Create(DDLObject ddl) => new(ddl);

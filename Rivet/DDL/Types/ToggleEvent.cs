@@ -18,7 +18,7 @@ public class ToggleEvent : EventBase, IDDLObjectType<ToggleEvent> {
 		ToggleType = ddl.GetEnum<ToggleType>(0xf3b79606u, ToggleTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x4202b1b2u)]
+	[DDLRegistration(0xf3b79606u)]
 	public ToggleType ToggleType { get; set; } = ToggleType.TurnOn;
 
 	public new static ToggleEvent Create(DDLObject ddl) => new(ddl);

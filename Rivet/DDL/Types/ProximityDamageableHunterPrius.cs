@@ -22,19 +22,19 @@ public class ProximityDamageableHunterPrius : DDLObjectType, IDDLObjectType<Prox
 		IsHero = ddl.GetValue<bool>(0xce8b35edu, IsHero);
 	}
 
-	[DDLRegistration(0x2e8da9feu)]
+	[DDLRegistration(0xa521b107u)]
 	public ProximityDamageData? DamageData { get; set; } = default;
 
-	[DDLRegistration(0x2e8da9feu)]
+	[DDLRegistration(0x033c91dcu)]
 	public float GatherRadius { get; set; } = 50.00f;
 
-	[DDLRegistration(0x2e8da9feu)]
+	[DDLRegistration(0x75d349f4u)]
 	public byte GatherFrameDelay { get; set; } = 0x1e;
 
-	[DDLRegistration(0x2e8da9feu)]
+	[DDLRegistration(0x49246c69u)]
 	public byte DamageCheckDelay { get; set; } = 0x0f;
 
-	[DDLRegistration(0x2e8da9feu)]
+	[DDLRegistration(0xce8b35edu)]
 	public bool IsHero { get; set; } = false;
 
 	public static ProximityDamageableHunterPrius Create(DDLObject ddl) => new(ddl);

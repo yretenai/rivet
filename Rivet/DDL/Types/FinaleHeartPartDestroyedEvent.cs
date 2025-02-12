@@ -20,13 +20,13 @@ public class FinaleHeartPartDestroyedEvent : EventBase, IDDLObjectType<FinaleHea
 		IsChamber = ddl.GetValue<bool>(0xa7632962u, IsChamber);
 	}
 
-	[DDLRegistration(0x9356e66cu)]
+	[DDLRegistration(0x90b2e82eu)]
 	public byte NodeChamberIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0x9356e66cu)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
-	[DDLRegistration(0x9356e66cu)]
+	[DDLRegistration(0xa7632962u)]
 	public bool IsChamber { get; set; } = false;
 
 	public new static FinaleHeartPartDestroyedEvent Create(DDLObject ddl) => new(ddl);

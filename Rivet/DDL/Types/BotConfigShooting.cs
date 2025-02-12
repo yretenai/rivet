@@ -61,136 +61,136 @@ public class BotConfigShooting : ConfigBase, IDDLObjectType<BotConfigShooting> {
 		InterruptTauntWhenDamaged = ddl.GetValue<bool>(0x109f514cu, InterruptTauntWhenDamaged);
 	}
 
-	[DDLRegistration(0x6ef06539u, description: "Wants to be at this distance to fire")]
+	[DDLRegistration(0xe7132813u, description: "Wants to be at this distance to fire")]
 	public float DesiredFireDistance { get; set; } = 20.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "The max distance the bot will fire weapons from")]
+	[DDLRegistration(0x0b64296eu, description: "The max distance the bot will fire weapons from")]
 	public float MaxFireDistance { get; set; } = 40.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "Should this bot always be trying to Aim when idle?")]
+	[DDLRegistration(0x7c899559u, description: "Should this bot always be trying to Aim when idle?")]
 	public bool AimWhileIdle { get; set; } = true;
 
-	[DDLRegistration(0x6ef06539u, description: "Prioritize remaining at a checkpoint over chasing.")]
+	[DDLRegistration(0x276698c3u, description: "Prioritize remaining at a checkpoint over chasing.")]
 	public bool UseFirepoints { get; set; } = true;
 
-	[DDLRegistration(0x6ef06539u, description: "Allow the use of firepoints set to EnemyGround (if valid).")]
+	[DDLRegistration(0xe5754766u, description: "Allow the use of firepoints set to EnemyGround (if valid).")]
 	public bool AllowGroundFirepoints { get; set; } = true;
 
-	[DDLRegistration(0x6ef06539u, description: "Allow the use of firepoints set to EnemyAir (if valid).")]
+	[DDLRegistration(0x9f0d8f82u, description: "Allow the use of firepoints set to EnemyAir (if valid).")]
 	public bool AllowAirFirepoints { get; set; } = true;
 
-	[DDLRegistration(0x6ef06539u, description: "Are we allowed to chase as last resort to get into firing range?")]
+	[DDLRegistration(0xc14d7cb0u, description: "Are we allowed to chase as last resort to get into firing range?")]
 	public bool AllowChase { get; set; } = true;
 
-	[DDLRegistration(0x6ef06539u, description: "Are we allowed to reposition if not using firepoints?")]
+	[DDLRegistration(0xb7ceb8edu, description: "Are we allowed to reposition if not using firepoints?")]
 	public bool AllowRepositioning { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u, description: "Minimum angle as seen from target to move when repositioning")]
+	[DDLRegistration(0xff8295edu, description: "Minimum angle as seen from target to move when repositioning")]
 	public float RepositionAngleMin { get; set; } = 10.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "Maximum angle as seen from target to move when repositioning")]
+	[DDLRegistration(0xc38faab4u, description: "Maximum angle as seen from target to move when repositioning")]
 	public float RepositionAngleMax { get; set; } = 20.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "Minimum distance to move when repositioning")]
+	[DDLRegistration(0x682e1f3cu, description: "Minimum distance to move when repositioning")]
 	public float RepositionMoveDistanceMin { get; set; } = 5.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "Minimum desired distance from target when repositioning")]
+	[DDLRegistration(0x6ede906fu, description: "Minimum desired distance from target when repositioning")]
 	public float RepositionTargetDistanceMin { get; set; } = 15.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "Maximum desired distance from target when repositioning")]
+	[DDLRegistration(0x52d3af36u, description: "Maximum desired distance from target when repositioning")]
 	public float RepositionTargetDistanceMax { get; set; } = 25.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "Minimum distance from other enemies when repositioning")]
+	[DDLRegistration(0x17b3145eu, description: "Minimum distance from other enemies when repositioning")]
 	public float RepositionEnemySpacing { get; set; } = 5.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "Prioritize shooting over reaching a firepoint after a knockback.")]
+	[DDLRegistration(0xa618b6deu, description: "Prioritize shooting over reaching a firepoint after a knockback.")]
 	public bool ShootAfterKnockback { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u, description: "Bot will only reload at a firepoint. If we need to reload, will move to one it was using")]
+	[DDLRegistration(0x7c4ad92au, description: "Bot will only reload at a firepoint. If we need to reload, will move to one it was using")]
 	public bool NeedFirepointToReload { get; set; } = true;
 
-	[DDLRegistration(0x6ef06539u, description: "Is Target valid even without LoS")]
+	[DDLRegistration(0xcbc8200du, description: "Is Target valid even without LoS")]
 	public bool RequireLoS { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u, description: "Bot will stop mid-ranged attack if the firepoint it is currently using becomes invalidated")]
+	[DDLRegistration(0x7e3f2fbeu, description: "Bot will stop mid-ranged attack if the firepoint it is currently using becomes invalidated")]
 	public bool InterruptableByInvalidFirepoints { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u, description: "Bot will stop mid-ranged attack in order to melee if target too close")]
+	[DDLRegistration(0xc0cdd00eu, description: "Bot will stop mid-ranged attack in order to melee if target too close")]
 	public bool InterruptableToMelee { get; set; } = true;
 
-	[DDLRegistration(0x6ef06539u, description: "Bot will opt to use combos for ranged attacks that are NOT ranged attack combos")]
+	[DDLRegistration(0x3ee689d8u, description: "Bot will opt to use combos for ranged attacks that are NOT ranged attack combos")]
 	public bool UseNoFiringRangedAttackCombos { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u, description: "Everytime a bot wants to shoot, it will require an attack job. Job Drop happens when full shooting pattern is done")]
+	[DDLRegistration(0x24872df7u, description: "Everytime a bot wants to shoot, it will require an attack job. Job Drop happens when full shooting pattern is done")]
 	public bool UseAttackJobsForShootingPattern { get; set; } = true;
 
-	[DDLRegistration(0x6ef06539u, description: "Evasive dive roll when taking damage")]
+	[DDLRegistration(0xb043e277u, description: "Evasive dive roll when taking damage")]
 	public bool AllowDiveRoll { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u, description: "A random percent from Min and max is used against the amount of percent health we've taken since last dodge")]
+	[DDLRegistration(0x31dbc7e0u, description: "A random percent from Min and max is used against the amount of percent health we've taken since last dodge")]
 	public float DiveRollMinPercent { get; set; } = 0.40f;
 
-	[DDLRegistration(0x6ef06539u, description: "A random percent from Min and max is used against the amount of percent health we've taken since last dodge")]
+	[DDLRegistration(0x30d75d54u, description: "A random percent from Min and max is used against the amount of percent health we've taken since last dodge")]
 	public float DiveRollMaxPercent { get; set; } = 0.60f;
 
-	[DDLRegistration(0x6ef06539u, description: "Are we allowed to throw projectiles while repositioning or chasing?")]
+	[DDLRegistration(0xede2ffeeu, description: "Are we allowed to throw projectiles while repositioning or chasing?")]
 	public bool ThrowWhileMoving { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u, description: "Delay between shots for throwing projectiles while moving")]
+	[DDLRegistration(0x1070ff0bu, description: "Delay between shots for throwing projectiles while moving")]
 	public float ThrowDelay { get; set; } = 0.50f;
 
-	[DDLRegistration(0x6ef06539u, description: "Anim driver for throwing projectiles while repositioning")]
+	[DDLRegistration(0x12f15068u, description: "Anim driver for throwing projectiles while repositioning")]
 	public string? StrafeThrowAnimDriver { get; set; } = default;
 
-	[DDLRegistration(0x6ef06539u, description: "When can the bot taunt")]
+	[DDLRegistration(0x50e2e8eeu, description: "When can the bot taunt")]
 	public ShootingTauntData? ShootingTauntData { get; set; } = default;
 
-	[DDLRegistration(0x6ef06539u, description: "Shooting data for when a bot uses a stationary shooting firepoint")]
+	[DDLRegistration(0xe0440c8bu, description: "Shooting data for when a bot uses a stationary shooting firepoint")]
 	public FirepointShootingData? StationaryFirepointShooting { get; set; } = default;
 
-	[DDLRegistration(0x6ef06539u, description: "Shooting data for when a bot uses a rollout firepoint")]
+	[DDLRegistration(0x6362bc8eu, description: "Shooting data for when a bot uses a rollout firepoint")]
 	public FirepointShootingData? RolloutFirepointShooting { get; set; } = default;
 
-	[DDLRegistration(0x6ef06539u, description: "Max angle to consider facing our target (in degrees).")]
+	[DDLRegistration(0x2a6fac99u, description: "Max angle to consider facing our target (in degrees).")]
 	public float MaxFacingAngle { get; set; } = 20.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "Whether we should rotate the actor to face the target rather than use the bot state face state.")]
+	[DDLRegistration(0xfe376e6fu, description: "Whether we should rotate the actor to face the target rather than use the bot state face state.")]
 	public bool RotateToFace { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u, description: "If using RotateToFace, this is the max rotation speed we will use (degrees per second).")]
+	[DDLRegistration(0x7bd861eau, description: "If using RotateToFace, this is the max rotation speed we will use (degrees per second).")]
 	public float FaceRotateMaxSpeed { get; set; } = 180.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "If using RotateToFace, this is the rotation acceleration (degrees per second squared).")]
+	[DDLRegistration(0x0dd70c65u, description: "If using RotateToFace, this is the rotation acceleration (degrees per second squared).")]
 	public float FaceRotateAccel { get; set; } = 180.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "If using RotateToFace, this is the rotation deceleration (degrees per second squared).")]
+	[DDLRegistration(0xe05cdcc9u, description: "If using RotateToFace, this is the rotation deceleration (degrees per second squared).")]
 	public float FaceRotateDecel { get; set; } = 180.00f;
 
-	[DDLRegistration(0x6ef06539u, description: "If true, when the bot goes to a firepoint, it will use the firepoint's facing as the end of goto facing")]
+	[DDLRegistration(0xdb50147cu, description: "If true, when the bot goes to a firepoint, it will use the firepoint's facing as the end of goto facing")]
 	public bool UseFPFacingForGoto { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u)]
+	[DDLRegistration(0xb363df1au)]
 	public float FPHunterRangeMin { get; set; } = 5.00f;
 
-	[DDLRegistration(0x6ef06539u)]
+	[DDLRegistration(0x951c6094u)]
 	public float FPHunterRangeIdeal { get; set; } = 10.00f;
 
-	[DDLRegistration(0x6ef06539u)]
+	[DDLRegistration(0x8f6ee043u)]
 	public float FPHunterRangeMax { get; set; } = 20.00f;
 
-	[DDLRegistration(0x6ef06539u)]
+	[DDLRegistration(0xd5599056u)]
 	public bool FPHunterSetRangeMaxAsGatherRadius { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u, description: "Probability (0-1) of taunting or celebrating when a target other than the hero is hit")]
+	[DDLRegistration(0xffc9452cu, description: "Probability (0-1) of taunting or celebrating when a target other than the hero is hit")]
 	public float NonHeroTauntOrCelebrateProbability { get; set; } = 0.20f;
 
-	[DDLRegistration(0x6ef06539u, description: "If shooter is not facing the target, turn to face before shooting")]
+	[DDLRegistration(0xe250f4aeu, description: "If shooter is not facing the target, turn to face before shooting")]
 	public bool FaceBeforeShooting { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u, description: "When line of sight is blocked, use a search behavior")]
+	[DDLRegistration(0xeda6a531u, description: "When line of sight is blocked, use a search behavior")]
 	public bool UseSearchWhenLosBlocked { get; set; } = false;
 
-	[DDLRegistration(0x6ef06539u, description: "If damaged while taunting or celebrating, interrupt the taunt animation")]
+	[DDLRegistration(0x109f514cu, description: "If damaged while taunting or celebrating, interrupt the taunt animation")]
 	public bool InterruptTauntWhenDamaged { get; set; } = true;
 
 	public new static BotConfigShooting Create(DDLObject ddl) => new(ddl);

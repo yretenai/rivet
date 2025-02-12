@@ -20,13 +20,13 @@ public class UIOptionsPresetData : DDLObjectType, IDDLObjectType<UIOptionsPreset
 		DescriptionAlt = ddl.GetString(0x29bf0d94) ?? DescriptionAlt;
 	}
 
-	[DDLRegistration(0x76b28efdu, description: "Array of options which simplified controls will modify.")]
+	[DDLRegistration(0xd1df99bfu, description: "Array of options which simplified controls will modify.")]
 	public List<UIPresetOption?> Options { get; set; } = [];
 
-	[DDLRegistration(0x76b28efdu)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x76b28efdu, "Description (Alternate)")]
+	[DDLRegistration(0x29bf0d94u, "Description (Alternate)")]
 	public string? DescriptionAlt { get; set; } = default;
 
 	public static UIOptionsPresetData Create(DDLObject ddl) => new(ddl);

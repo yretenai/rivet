@@ -19,10 +19,10 @@ public class AwarenessChangedEvent : EventBase, IDDLObjectType<AwarenessChangedE
 		TargetActorHandle = ddl.GetValue<uint>(0xa68ca01fu, TargetActorHandle);
 	}
 
-	[DDLRegistration(0xaf6558a1u)]
+	[DDLRegistration(0x2563c2e7u)]
 	public bool IsEngaged { get; set; } = false;
 
-	[DDLRegistration(0xaf6558a1u)]
+	[DDLRegistration(0xa68ca01fu)]
 	public uint TargetActorHandle { get; set; } = 0x00000000;
 
 	public new static AwarenessChangedEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ActorInstEngineItem : DDLObjectType, IDDLObjectType<ActorInstEngine
 		Matrix = ddl.GetObject<DDLMatrix4>(0xc64b0fa8u);
 	}
 
-	[DDLRegistration(0x213d0815u)]
+	[DDLRegistration(0xb8132d8bu)]
 	public ActorDef? ActorDef { get; set; } = default;
 
-	[DDLRegistration(0x213d0815u)]
+	[DDLRegistration(0xc64b0fa8u)]
 	public DDLMatrix4? Matrix { get; set; } = default;
 
 	public static ActorInstEngineItem Create(DDLObject ddl) => new(ddl);

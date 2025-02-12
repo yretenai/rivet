@@ -18,7 +18,7 @@ public class KamehamehaChargeUpStartedEvent : EventBase, IDDLObjectType<Kamehame
 		ChargeTimeLevel = ddl.GetValue<uint>(0xa28131fcu, ChargeTimeLevel);
 	}
 
-	[DDLRegistration(0x67f3c222u)]
+	[DDLRegistration(0xa28131fcu)]
 	public uint ChargeTimeLevel { get; set; } = 0x00000000;
 
 	public new static KamehamehaChargeUpStartedEvent Create(DDLObject ddl) => new(ddl);

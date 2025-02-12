@@ -20,13 +20,13 @@ public class DivideFloatsNodeDef : MathNodeBaseDef, IDDLObjectType<DivideFloatsN
 		Quotient = ddl.GetObject<OutputPlugFloat>(0x105db555u);
 	}
 
-	[DDLRegistration(0x336237dcu)]
+	[DDLRegistration(0xa9a37991u)]
 	public InputPlugFloat? Numerator { get; set; } = default;
 
-	[DDLRegistration(0x336237dcu)]
+	[DDLRegistration(0xc366af91u)]
 	public InputPlugFloat? Denominator { get; set; } = default;
 
-	[DDLRegistration(0x336237dcu)]
+	[DDLRegistration(0x105db555u)]
 	public OutputPlugFloat? Quotient { get; set; } = default;
 
 	public new static DivideFloatsNodeDef Create(DDLObject ddl) => new(ddl);

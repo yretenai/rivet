@@ -20,13 +20,13 @@ public class WeaponManagerEvent : EventBase, IDDLObjectType<WeaponManagerEvent> 
 		TriggerIndex = ddl.GetValue<int>(0xee73b5b3u, TriggerIndex);
 	}
 
-	[DDLRegistration(0x15d48413u)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public x18e441ce Action { get; set; } = x18e441ce.WeaponHide;
 
-	[DDLRegistration(0x15d48413u)]
+	[DDLRegistration(0x18fc4fe3u)]
 	public string? WeaponType { get; set; } = default;
 
-	[DDLRegistration(0x15d48413u)]
+	[DDLRegistration(0xee73b5b3u)]
 	public int TriggerIndex { get; set; } = 0;
 
 	public new static WeaponManagerEvent Create(DDLObject ddl) => new(ddl);

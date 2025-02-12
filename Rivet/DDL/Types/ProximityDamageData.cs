@@ -20,13 +20,13 @@ public class ProximityDamageData : DDLObjectType, IDDLObjectType<ProximityDamage
 		DamageRadius = ddl.GetValue<float>(0xe3e6fa68u, DamageRadius);
 	}
 
-	[DDLRegistration(0x16fb0f65u)]
+	[DDLRegistration(0x56f13c62u)]
 	public string? DamageName { get; set; } = "ProximityDamage";
 
-	[DDLRegistration(0x16fb0f65u)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 100.00f;
 
-	[DDLRegistration(0x16fb0f65u)]
+	[DDLRegistration(0xe3e6fa68u)]
 	public float DamageRadius { get; set; } = 1.00f;
 
 	public static ProximityDamageData Create(DDLObject ddl) => new(ddl);

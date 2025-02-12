@@ -21,16 +21,16 @@ public class TestSubstructUsage : DDLObjectType, IDDLObjectType<TestSubstructUsa
 		SubStruct4 = ddl.GetObject<TestSubstructBase3>(0x3f6e489au);
 	}
 
-	[DDLRegistration(0x9fe809bfu)]
+	[DDLRegistration(0x4f04bc15u)]
 	public TestSubstructBase1? SubStruct1 { get; set; } = default;
 
-	[DDLRegistration(0x9fe809bfu)]
+	[DDLRegistration(0xd60dedafu)]
 	public TestSubstructBase1? SubStruct2 { get; set; } = default;
 
-	[DDLRegistration(0x9fe809bfu)]
+	[DDLRegistration(0xa10add39u)]
 	public TestSubstructBase2? SubStruct3 { get; set; } = default;
 
-	[DDLRegistration(0x9fe809bfu)]
+	[DDLRegistration(0x3f6e489au)]
 	public TestSubstructBase3? SubStruct4 { get; set; } = default;
 
 	public static TestSubstructUsage Create(DDLObject ddl) => new(ddl);

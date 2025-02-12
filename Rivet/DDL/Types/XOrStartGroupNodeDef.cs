@@ -19,10 +19,10 @@ public class XOrStartGroupNodeDef : MissionSystemNodeBaseDef, IDDLObjectType<XOr
 		Outputs = ddl.GetObjects<OutputPlugBoolean>(0x0d9fcc64u);
 	}
 
-	[DDLRegistration(0xb2078453u)]
+	[DDLRegistration(0x3d19ee29u)]
 	public List<InputPlugBoolean?> Inputs { get; set; } = [];
 
-	[DDLRegistration(0xb2078453u)]
+	[DDLRegistration(0x0d9fcc64u)]
 	public List<OutputPlugBoolean?> Outputs { get; set; } = [];
 
 	public new static XOrStartGroupNodeDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class InputNodeActorDef : InputNodeBaseDef, IDDLObjectType<InputNodeActor
 		Output = ddl.GetObject<OutputPlugActor>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0x93452627u)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugActor? Input { get; set; } = default;
 
-	[DDLRegistration(0x93452627u)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugActor? Output { get; set; } = default;
 
 	public new static InputNodeActorDef Create(DDLObject ddl) => new(ddl);

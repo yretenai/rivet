@@ -18,7 +18,7 @@ public class CameraSplineMotionPathFollowPrius : CameraSplineMotionBasePrius, ID
 		TravelForward = ddl.GetValue<bool>(0xcccca932u, TravelForward);
 	}
 
-	[DDLRegistration(0x97d753e4u, "Travel Forward")]
+	[DDLRegistration(0xcccca932u, "Travel Forward")]
 	public bool TravelForward { get; set; } = true;
 
 	public new static CameraSplineMotionPathFollowPrius Create(DDLObject ddl) => new(ddl);

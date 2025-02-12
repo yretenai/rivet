@@ -31,46 +31,46 @@ public class HeroFlavorAnimConfig : DDLObjectType, IDDLObjectType<HeroFlavorAnim
 		HeroAwareness = ddl.GetObject<HeroAwarenessConfig>(0x5fd01dd0u);
 	}
 
-	[DDLRegistration(0x99daea31u, "Fidget Interval Min")]
+	[DDLRegistration(0xe7d7f59eu, "Fidget Interval Min")]
 	public float FidgetIntervalMin { get; set; } = 3.00f;
 
-	[DDLRegistration(0x99daea31u, "Fidget Interval Max")]
+	[DDLRegistration(0xdbdacac7u, "Fidget Interval Max")]
 	public float FidgetIntervalMax { get; set; } = 5.00f;
 
-	[DDLRegistration(0x99daea31u, description: "Everything less than this is short range")]
+	[DDLRegistration(0x91ce0483u, description: "Everything less than this is short range")]
 	public float JumpLandHeightRangeShort { get; set; } = 5.00f;
 
-	[DDLRegistration(0x99daea31u, description: "Everything greater than this is long range")]
+	[DDLRegistration(0xd39b90dcu, description: "Everything greater than this is long range")]
 	public float JumpLandHeightRangeLong { get; set; } = 10.00f;
 
-	[DDLRegistration(0x99daea31u, description: "Anything greater than this will play the fall land driver instead of the normal jump land driver")]
+	[DDLRegistration(0x92c8e416u, description: "Anything greater than this will play the fall land driver instead of the normal jump land driver")]
 	public float FallHeightRangeShort { get; set; } = 10.00f;
 
-	[DDLRegistration(0x99daea31u, description: "Anything less than this but greater than short range is short range.  Anything greater than this but less than long range is medium.")]
+	[DDLRegistration(0x2828a3d5u, description: "Anything less than this but greater than short range is short range.  Anything greater than this but less than long range is medium.")]
 	public float FallHeightRangeMid { get; set; } = 20.00f;
 
-	[DDLRegistration(0x99daea31u, description: "Anything greater than this is long range")]
+	[DDLRegistration(0x6399095eu, description: "Anything greater than this is long range")]
 	public float FallHeightRangeLong { get; set; } = 30.00f;
 
-	[DDLRegistration(0x99daea31u, description: "Degrees per second")]
+	[DDLRegistration(0xae9d14e4u, description: "Degrees per second")]
 	public float SlopeVarLerpSpeed { get; set; } = 180.00f;
 
-	[DDLRegistration(0x99daea31u)]
+	[DDLRegistration(0xd58c9625u)]
 	public float TurbulenceMinSpeed { get; set; } = 55.00f;
 
-	[DDLRegistration(0x99daea31u)]
+	[DDLRegistration(0x33ec39c4u)]
 	public float TurbulenceMaxSpeed { get; set; } = 75.00f;
 
-	[DDLRegistration(0x99daea31u)]
+	[DDLRegistration(0x414ee70cu)]
 	public FlavorCycleConfig? RunCycles { get; set; } = default;
 
-	[DDLRegistration(0x99daea31u)]
+	[DDLRegistration(0xe386f418u)]
 	public FlavorCycleConfig? GrindCycles { get; set; } = default;
 
-	[DDLRegistration(0x99daea31u)]
+	[DDLRegistration(0xa9a5d53cu)]
 	public FlavorCycleConfig? GrindSlideCycles { get; set; } = default;
 
-	[DDLRegistration(0x99daea31u)]
+	[DDLRegistration(0x5fd01dd0u)]
 	public HeroAwarenessConfig? HeroAwareness { get; set; } = default;
 
 	public static HeroFlavorAnimConfig Create(DDLObject ddl) => new(ddl);

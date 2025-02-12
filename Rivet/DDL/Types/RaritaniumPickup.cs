@@ -19,10 +19,10 @@ public class RaritaniumPickup : DDLObjectType, IDDLObjectType<RaritaniumPickup> 
 		Chance = ddl.GetValue<float>(0x1a437543u, Chance);
 	}
 
-	[DDLRegistration(0xfc0ec04cu)]
+	[DDLRegistration(0x5d269a38u)]
 	public RivetAssetId Actor { get; set; } = default;
 
-	[DDLRegistration(0xfc0ec04cu)]
+	[DDLRegistration(0x1a437543u)]
 	public float Chance { get; set; } = 1.00f;
 
 	public static RaritaniumPickup Create(DDLObject ddl) => new(ddl);

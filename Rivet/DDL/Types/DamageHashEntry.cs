@@ -18,7 +18,7 @@ public class DamageHashEntry : DDLObjectType, IDDLObjectType<DamageHashEntry> {
 		DamageString = ddl.GetString(0x4624269b) ?? DamageString;
 	}
 
-	[DDLRegistration(0xd54f48afu)]
+	[DDLRegistration(0x4624269bu)]
 	public string? DamageString { get; set; } = default;
 
 	public static DamageHashEntry Create(DDLObject ddl) => new(ddl);

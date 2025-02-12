@@ -18,7 +18,7 @@ public class CineCameraDisableYawPitchEvent : EventBase, IDDLObjectType<CineCame
 		DoRecenter = ddl.GetValue<bool>(0x5cd5014eu, DoRecenter);
 	}
 
-	[DDLRegistration(0xf382d99au)]
+	[DDLRegistration(0x5cd5014eu)]
 	public bool DoRecenter { get; set; } = true;
 
 	public new static CineCameraDisableYawPitchEvent Create(DDLObject ddl) => new(ddl);

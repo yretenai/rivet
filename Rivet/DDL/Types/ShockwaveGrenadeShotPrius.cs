@@ -19,10 +19,10 @@ public class ShockwaveGrenadeShotPrius : GrenadeShotPrius, IDDLObjectType<Shockw
 		OuterRingActor = ddl.GetValue<RivetAssetId>(0x14ecfda5u, OuterRingActor);
 	}
 
-	[DDLRegistration(0x0e18a83bu)]
+	[DDLRegistration(0x59cfaaf7u)]
 	public RivetAssetId InnerRingActor { get; set; } = default;
 
-	[DDLRegistration(0x0e18a83bu)]
+	[DDLRegistration(0x14ecfda5u)]
 	public RivetAssetId OuterRingActor { get; set; } = default;
 
 	public new static ShockwaveGrenadeShotPrius Create(DDLObject ddl) => new(ddl);

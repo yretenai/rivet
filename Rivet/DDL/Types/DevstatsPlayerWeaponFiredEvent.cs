@@ -21,16 +21,16 @@ public class DevstatsPlayerWeaponFiredEvent : EventBase, IDDLObjectType<Devstats
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x2a7d73c9u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x2a7d73c9u)]
+	[DDLRegistration(0x74ba9afau)]
 	public string? DevstatsName { get; set; } = default;
 
-	[DDLRegistration(0x2a7d73c9u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x2a7d73c9u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static DevstatsPlayerWeaponFiredEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ActivityClueAnimSetFilterSpecificActors : DDLObjectType, IDDLObject
 		SpecificActors = ddl.GetObjects<AssetReferenceDef>(0xc8eae754u);
 	}
 
-	[DDLRegistration(0x70de9557u, "Specific Actors", "Only these actors are allowed to use this animset")]
+	[DDLRegistration(0xc8eae754u, "Specific Actors", "Only these actors are allowed to use this animset")]
 	public List<AssetReferenceDef?> SpecificActors { get; set; } = [];
 
 	public static ActivityClueAnimSetFilterSpecificActors Create(DDLObject ddl) => new(ddl);

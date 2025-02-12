@@ -23,22 +23,22 @@ public class GraphCommentBoxAux : DDLObjectType, IDDLObjectType<GraphCommentBoxA
 		Height = ddl.GetValue<float>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0xfb16233eu, "Comment Title")]
+	[DDLRegistration(0x959e3154u, "Comment Title")]
 	public string? Comment { get; set; } = default;
 
-	[DDLRegistration(0xfb16233eu, "Comment Text", "This value will show up inside the comment box.  It will be word-wrapped and clipped.")]
+	[DDLRegistration(0xe03811fdu, "Comment Text", "This value will show up inside the comment box.  It will be word-wrapped and clipped.")]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0xfb16233eu)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0xfb16233eu)]
+	[DDLRegistration(0xc9b3f5abu)]
 	public float Alpha { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfb16233eu)]
+	[DDLRegistration(0x954989eeu)]
 	public float Width { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfb16233eu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 0.00f;
 
 	public static GraphCommentBoxAux Create(DDLObject ddl) => new(ddl);

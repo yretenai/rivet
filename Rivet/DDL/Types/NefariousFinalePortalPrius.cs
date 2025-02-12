@@ -20,13 +20,13 @@ public class NefariousFinalePortalPrius : DDLObjectType, IDDLObjectType<Nefariou
 		DestroyDelayAfterClose = ddl.GetValue<float>(0xeecfbc3bu, DestroyDelayAfterClose);
 	}
 
-	[DDLRegistration(0xe6e1caefu, description: "How long from being created we are considered open")]
+	[DDLRegistration(0xbac21f1bu, description: "How long from being created we are considered open")]
 	public float DesiredOpenTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0xe6e1caefu, description: "How long we take to close the portal")]
+	[DDLRegistration(0x30cf94c1u, description: "How long we take to close the portal")]
 	public float DesiredCloseTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0xe6e1caefu, description: "How long we take to destroy the portal after fully closing")]
+	[DDLRegistration(0xeecfbc3bu, description: "How long we take to destroy the portal after fully closing")]
 	public float DestroyDelayAfterClose { get; set; } = 0.10f;
 
 	public static NefariousFinalePortalPrius Create(DDLObject ddl) => new(ddl);

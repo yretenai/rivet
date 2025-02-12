@@ -18,7 +18,7 @@ public class MountPickupOfferPrius : MountFlyGotoOfferPrius, IDDLObjectType<Moun
 		OnlyPickupOnce = ddl.GetValue<bool>(0xcb825912u, OnlyPickupOnce);
 	}
 
-	[DDLRegistration(0xa44fd4b9u, description: "If this is true, the pickup using this component can only be picked up one by a flying mount.")]
+	[DDLRegistration(0xcb825912u, description: "If this is true, the pickup using this component can only be picked up one by a flying mount.")]
 	public bool OnlyPickupOnce { get; set; } = true;
 
 	public new static MountPickupOfferPrius Create(DDLObject ddl) => new(ddl);

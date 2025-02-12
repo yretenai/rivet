@@ -19,10 +19,10 @@ public class TriggerResponderDamageSelfPrius : TriggerResponderBasePrius, IDDLOb
 		DamageType = ddl.GetEnum<DamageTypesGame>(0x840c154du, DamageTypesGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x82e1f439u)]
+	[DDLRegistration(0xb0d93e25u)]
 	public float Amount { get; set; } = 100.00f;
 
-	[DDLRegistration(0x82e1f439u, "Damage Type")]
+	[DDLRegistration(0x840c154du, "Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Melee;
 
 	public new static TriggerResponderDamageSelfPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class AimAssistSnapLockData : DDLObjectType, IDDLObjectType<AimAssistSnap
 		SnapDecayTime = ddl.GetValue<float>(0xe9e0dba1u, SnapDecayTime);
 	}
 
-	[DDLRegistration(0x2b93d4c9u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0x2b93d4c9u, "Snap Hold Time")]
+	[DDLRegistration(0x5d4bafd1u, "Snap Hold Time")]
 	public float SnapHoldTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0x2b93d4c9u, "Snap Decay Time")]
+	[DDLRegistration(0xe9e0dba1u, "Snap Decay Time")]
 	public float SnapDecayTime { get; set; } = 0.50f;
 
 	public static AimAssistSnapLockData Create(DDLObject ddl) => new(ddl);

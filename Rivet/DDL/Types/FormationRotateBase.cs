@@ -18,7 +18,7 @@ public class FormationRotateBase : FormationMotionBase, IDDLObjectType<Formation
 		DegreesPerSecond = ddl.GetValue<float>(0x1f11e275u, DegreesPerSecond);
 	}
 
-	[DDLRegistration(0x48559f73u, description: "How fast to rotate")]
+	[DDLRegistration(0x1f11e275u, description: "How fast to rotate")]
 	public float DegreesPerSecond { get; set; } = 90.00f;
 
 	public new static FormationRotateBase Create(DDLObject ddl) => new(ddl);

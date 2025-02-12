@@ -18,7 +18,7 @@ public class VehicleSoundOnEvent : EventBase, IDDLObjectType<VehicleSoundOnEvent
 		VehicleId = ddl.GetValue<uint>(0x62feded2u, VehicleId);
 	}
 
-	[DDLRegistration(0xd8771f1du)]
+	[DDLRegistration(0x62feded2u)]
 	public uint VehicleId { get; set; } = 0x00000000;
 
 	public new static VehicleSoundOnEvent Create(DDLObject ddl) => new(ddl);

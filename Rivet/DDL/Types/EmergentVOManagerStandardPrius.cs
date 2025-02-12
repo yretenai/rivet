@@ -21,16 +21,16 @@ public class EmergentVOManagerStandardPrius : EmergentVOManagerGamePrius, IDDLOb
 		TriggerRadius = ddl.GetValue<float>(0xcc7f53a5u, TriggerRadius);
 	}
 
-	[DDLRegistration(0x752daa97u)]
+	[DDLRegistration(0x1304101eu)]
 	public VoiceGame VoiceMin { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0x752daa97u)]
+	[DDLRegistration(0x2f092f47u)]
 	public VoiceGame VoiceMax { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0x752daa97u, description: "Base Type: EmergentVOConfig")]
+	[DDLRegistration(0xde8b92bfu, description: "Base Type: EmergentVOConfig")]
 	public RivetAssetId EmergentVOConfig { get; set; } = default;
 
-	[DDLRegistration(0x752daa97u, description: "Only trigger VO if within this distance from nearest hero.  Negative = infinity.")]
+	[DDLRegistration(0xcc7f53a5u, description: "Only trigger VO if within this distance from nearest hero.  Negative = infinity.")]
 	public float TriggerRadius { get; set; } = 30.00f;
 
 	public new static EmergentVOManagerStandardPrius Create(DDLObject ddl) => new(ddl);

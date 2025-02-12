@@ -24,25 +24,25 @@ public class PickupSpawnControllerPrius : DDLObjectType, IDDLObjectType<PickupSp
 		MaxSpawnDelay = ddl.GetValue<float>(0x9e4d0b50u, MaxSpawnDelay);
 	}
 
-	[DDLRegistration(0x8f395e29u, "Spawn Location Group")]
+	[DDLRegistration(0x001557ddu, "Spawn Location Group")]
 	public RivetAssetId SpawnLocationGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8f395e29u, "Pickup Actor")]
+	[DDLRegistration(0x2b00e05fu, "Pickup Actor")]
 	public RivetAssetId PickupActor { get; set; } = default;
 
-	[DDLRegistration(0x8f395e29u, "Start Active")]
+	[DDLRegistration(0x3e035e82u, "Start Active")]
 	public int StartActive { get; set; } = -1;
 
-	[DDLRegistration(0x8f395e29u, "Fill Max")]
+	[DDLRegistration(0x2c53f487u, "Fill Max")]
 	public int FillMax { get; set; } = -1;
 
-	[DDLRegistration(0x8f395e29u, "Min Hero Distance")]
+	[DDLRegistration(0x5ada8518u, "Min Hero Distance")]
 	public float MinHeroDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8f395e29u, "Min Spawn Delay")]
+	[DDLRegistration(0xde027326u, "Min Spawn Delay")]
 	public float MinSpawnDelay { get; set; } = 3.00f;
 
-	[DDLRegistration(0x8f395e29u, "Max Spawn Delay")]
+	[DDLRegistration(0x9e4d0b50u, "Max Spawn Delay")]
 	public float MaxSpawnDelay { get; set; } = 6.00f;
 
 	public static PickupSpawnControllerPrius Create(DDLObject ddl) => new(ddl);

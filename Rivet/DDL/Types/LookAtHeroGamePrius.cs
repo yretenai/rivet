@@ -18,7 +18,7 @@ public class LookAtHeroGamePrius : LookAtHeroPrius, IDDLObjectType<LookAtHeroGam
 		OtherwiseLookAtTarget = ddl.GetValue<bool>(0x312dc0d1u, OtherwiseLookAtTarget);
 	}
 
-	[DDLRegistration(0x61eae401u, description: "When set, look at the bot's target when not looking at the hero.")]
+	[DDLRegistration(0x312dc0d1u, description: "When set, look at the bot's target when not looking at the hero.")]
 	public bool OtherwiseLookAtTarget { get; set; } = false;
 
 	public new static LookAtHeroGamePrius Create(DDLObject ddl) => new(ddl);

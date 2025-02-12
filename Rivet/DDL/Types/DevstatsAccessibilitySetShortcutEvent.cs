@@ -22,19 +22,19 @@ public class DevstatsAccessibilitySetShortcutEvent : EventBase, IDDLObjectType<D
 		ButtonAction = ddl.GetString(0x824ae85a) ?? ButtonAction;
 	}
 
-	[DDLRegistration(0x1f2a185eu)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x1f2a185eu)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x1f2a185eu)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
-	[DDLRegistration(0x1f2a185eu)]
+	[DDLRegistration(0xb346619fu)]
 	public string? ButtonIndex { get; set; } = default;
 
-	[DDLRegistration(0x1f2a185eu)]
+	[DDLRegistration(0x824ae85au)]
 	public string? ButtonAction { get; set; } = default;
 
 	public new static DevstatsAccessibilitySetShortcutEvent Create(DDLObject ddl) => new(ddl);

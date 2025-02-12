@@ -23,22 +23,22 @@ public class HazardLaserPrius : DDLObjectType, IDDLObjectType<HazardLaserPrius> 
 		IgnoreEnvironment = ddl.GetValue<bool>(0xe24326ddu, IgnoreEnvironment);
 	}
 
-	[DDLRegistration(0x88277df6u, description: "SourceNode")]
+	[DDLRegistration(0xe2e405f9u, description: "SourceNode")]
 	public HazardLaserNodePrius? SourceNode { get; set; } = default;
 
-	[DDLRegistration(0x88277df6u, description: "TargetNode")]
+	[DDLRegistration(0x7c00224du, description: "TargetNode")]
 	public HazardLaserNodePrius? TargetNode { get; set; } = default;
 
-	[DDLRegistration(0x88277df6u)]
+	[DDLRegistration(0xc8133ea2u)]
 	public bool Capped { get; set; } = false;
 
-	[DDLRegistration(0x88277df6u, description: "Sync timing of the nodes")]
+	[DDLRegistration(0x51f269a0u, description: "Sync timing of the nodes")]
 	public bool SyncNodes { get; set; } = true;
 
-	[DDLRegistration(0x88277df6u)]
+	[DDLRegistration(0xd5e764f9u)]
 	public bool CanBreak { get; set; } = true;
 
-	[DDLRegistration(0x88277df6u)]
+	[DDLRegistration(0xe24326ddu)]
 	public bool IgnoreEnvironment { get; set; } = false;
 
 	public static HazardLaserPrius Create(DDLObject ddl) => new(ddl);

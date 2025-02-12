@@ -19,10 +19,10 @@ public class ColorCorrectionSettingsDef : DDLObjectType, IDDLObjectType<ColorCor
 		SourcePath = ddl.GetValue<RivetAssetId>(0x6ccf66b3u, SourcePath);
 	}
 
-	[DDLRegistration(0xbdd7144du)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0xbdd7144du)]
+	[DDLRegistration(0x6ccf66b3u)]
 	public RivetAssetId SourcePath { get; set; } = default;
 
 	public static ColorCorrectionSettingsDef Create(DDLObject ddl) => new(ddl);

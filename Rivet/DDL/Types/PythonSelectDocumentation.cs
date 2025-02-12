@@ -22,19 +22,19 @@ public class PythonSelectDocumentation : DDLObjectType, IDDLObjectType<PythonSel
 		Items = ddl.GetObjects<PythonDdlDocumentation>(0xf84d258cu);
 	}
 
-	[DDLRegistration(0x95728f8fu)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x95728f8fu)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x95728f8fu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x95728f8fu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0x95728f8fu)]
+	[DDLRegistration(0xf84d258cu)]
 	public List<PythonDdlDocumentation?> Items { get; set; } = [];
 
 	public static PythonSelectDocumentation Create(DDLObject ddl) => new(ddl);

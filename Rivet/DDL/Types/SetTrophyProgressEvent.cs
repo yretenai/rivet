@@ -21,16 +21,16 @@ public class SetTrophyProgressEvent : CustomEvent, IDDLObjectType<SetTrophyProgr
 		SteamAchievement = ddl.GetString(0xc1b3c602) ?? SteamAchievement;
 	}
 
-	[DDLRegistration(0xfda8e965u)]
+	[DDLRegistration(0x6884ac4au)]
 	public uint TrophyCodeNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfda8e965u)]
+	[DDLRegistration(0xd8004f36u)]
 	public uint Progress { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfda8e965u)]
+	[DDLRegistration(0xc1574041u)]
 	public uint TargetValue { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfda8e965u)]
+	[DDLRegistration(0xc1b3c602u)]
 	public string? SteamAchievement { get; set; } = default;
 
 	public new static SetTrophyProgressEvent Create(DDLObject ddl) => new(ddl);

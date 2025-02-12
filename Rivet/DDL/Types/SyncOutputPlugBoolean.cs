@@ -20,13 +20,13 @@ public class SyncOutputPlugBoolean : OutputPlugBaseDef, IDDLObjectType<SyncOutpu
 		SyncOutputFlags = ddl.GetBitset<SyncOutputFlag>(0x5a33cee8u, SyncOutputFlagValues.Lookup);
 	}
 
-	[DDLRegistration(0x9d3c8ab5u)]
+	[DDLRegistration(0x042494f5u)]
 	public BooleanPlug? Value { get; set; } = default;
 
-	[DDLRegistration(0x9d3c8ab5u)]
+	[DDLRegistration(0x42683cb4u)]
 	public string? SyncLabel { get; set; } = default;
 
-	[DDLRegistration(0x9d3c8ab5u)]
+	[DDLRegistration(0x5a33cee8u)]
 	public SyncOutputFlag SyncOutputFlags { get; set; } = (SyncOutputFlag) 0x00000001;
 
 	public new static SyncOutputPlugBoolean Create(DDLObject ddl) => new(ddl);

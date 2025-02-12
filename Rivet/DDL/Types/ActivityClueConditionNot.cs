@@ -18,7 +18,7 @@ public class ActivityClueConditionNot : DDLObjectType, IDDLObjectType<ActivityCl
 		InverseCondition = ddl.GetObject<ActivityClueConditionBase>(0xa6e40507u);
 	}
 
-	[DDLRegistration(0xec842a32u, "Inverse Condition", "Flip the result of this condition")]
+	[DDLRegistration(0xa6e40507u, "Inverse Condition", "Flip the result of this condition")]
 	public ActivityClueConditionBase? InverseCondition { get; set; } = default;
 
 	public static ActivityClueConditionNot Create(DDLObject ddl) => new(ddl);

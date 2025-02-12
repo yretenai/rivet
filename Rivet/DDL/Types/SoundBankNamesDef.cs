@@ -18,7 +18,7 @@ public class SoundBankNamesDef : DDLObjectType, IDDLObjectType<SoundBankNamesDef
 		BankNames = ddl.GetObjects<SoundBankNameDef>(0x464adbddu);
 	}
 
-	[DDLRegistration(0xa6acec8cu)]
+	[DDLRegistration(0x464adbddu)]
 	public List<SoundBankNameDef?> BankNames { get; set; } = [];
 
 	public static SoundBankNamesDef Create(DDLObject ddl) => new(ddl);

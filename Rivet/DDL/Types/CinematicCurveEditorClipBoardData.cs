@@ -20,13 +20,13 @@ public class CinematicCurveEditorClipBoardData : DDLObjectType, IDDLObjectType<C
 		Value = ddl.GetObjects<CinematicCurveEditorClipBoardValue>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x8fad0d9du)]
+	[DDLRegistration(0x02d31803u)]
 	public string? ClipboardType { get; set; } = default;
 
-	[DDLRegistration(0x8fad0d9du)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0x8fad0d9du)]
+	[DDLRegistration(0x042494f5u)]
 	public List<CinematicCurveEditorClipBoardValue?> Value { get; set; } = [];
 
 	public static CinematicCurveEditorClipBoardData Create(DDLObject ddl) => new(ddl);

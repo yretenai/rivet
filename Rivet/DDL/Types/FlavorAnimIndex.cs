@@ -19,10 +19,10 @@ public class FlavorAnimIndex : DDLObjectType, IDDLObjectType<FlavorAnimIndex> {
 		CanDuplicate = ddl.GetValue<bool>(0xcf5c2a3au, CanDuplicate);
 	}
 
-	[DDLRegistration(0x1a0a438cu)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1a0a438cu)]
+	[DDLRegistration(0xcf5c2a3au)]
 	public bool CanDuplicate { get; set; } = false;
 
 	public static FlavorAnimIndex Create(DDLObject ddl) => new(ddl);

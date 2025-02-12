@@ -18,7 +18,7 @@ public class LookDef : DDLObjectType, IDDLObjectType<LookDef> {
 		LookName = ddl.GetString(0xad8c1e16) ?? LookName;
 	}
 
-	[DDLRegistration(0x15bfc955u, description: "Name of this look.")]
+	[DDLRegistration(0xad8c1e16u, description: "Name of this look.")]
 	public string? LookName { get; set; } = "Default";
 
 	public static LookDef Create(DDLObject ddl) => new(ddl);

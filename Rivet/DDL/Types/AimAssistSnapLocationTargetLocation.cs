@@ -18,7 +18,7 @@ public class AimAssistSnapLocationTargetLocation : AimAssistSnapLocation, IDDLOb
 		TargetIndex = ddl.GetValue<byte>(0x5c537f74u, TargetIndex);
 	}
 
-	[DDLRegistration(0xbfba1334u, "Target Index")]
+	[DDLRegistration(0x5c537f74u, "Target Index")]
 	public byte TargetIndex { get; set; } = 0x00;
 
 	public new static AimAssistSnapLocationTargetLocation Create(DDLObject ddl) => new(ddl);

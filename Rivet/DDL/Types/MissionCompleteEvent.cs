@@ -20,13 +20,13 @@ public class MissionCompleteEvent : EventBase, IDDLObjectType<MissionCompleteEve
 		IsSkipping = ddl.GetValue<bool>(0x5cc05663u, IsSkipping);
 	}
 
-	[DDLRegistration(0xcc580b11u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0xcc580b11u, description: "True if we shouldn't show the mission-complete dialog.")]
+	[DDLRegistration(0xa3d8f631u, description: "True if we shouldn't show the mission-complete dialog.")]
 	public bool SilentMode { get; set; } = false;
 
-	[DDLRegistration(0xcc580b11u, description: "True if the objective is being set to 'complete' as a prerequisite for loading straight into a mission from the frontend.")]
+	[DDLRegistration(0x5cc05663u, description: "True if the objective is being set to 'complete' as a prerequisite for loading straight into a mission from the frontend.")]
 	public bool IsSkipping { get; set; } = false;
 
 	public new static MissionCompleteEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class BreakableBlockData : DDLObjectType, IDDLObjectType<BreakableBlockDa
 		LookName = ddl.GetString(0xad8c1e16) ?? LookName;
 	}
 
-	[DDLRegistration(0xd22dc74eu)]
+	[DDLRegistration(0xb8b499c3u)]
 	public RivetAssetId ModelAssetPath { get; set; } = default;
 
-	[DDLRegistration(0xd22dc74eu)]
+	[DDLRegistration(0xad8c1e16u)]
 	public string? LookName { get; set; } = default;
 
 	public static BreakableBlockData Create(DDLObject ddl) => new(ddl);

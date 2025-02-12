@@ -18,7 +18,7 @@ public class PlayerLeftEvent : EventBase, IDDLObjectType<PlayerLeftEvent> {
 		ClientIndex = ddl.GetValue<uint>(0x40d7aaa7u, ClientIndex);
 	}
 
-	[DDLRegistration(0x29c07ad9u, description: "Index of the player/client who left.")]
+	[DDLRegistration(0x40d7aaa7u, description: "Index of the player/client who left.")]
 	public uint ClientIndex { get; set; } = 0x00000000;
 
 	public new static PlayerLeftEvent Create(DDLObject ddl) => new(ddl);

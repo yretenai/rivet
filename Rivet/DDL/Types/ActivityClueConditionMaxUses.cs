@@ -18,7 +18,7 @@ public class ActivityClueConditionMaxUses : DDLObjectType, IDDLObjectType<Activi
 		MaxUses = ddl.GetValue<uint>(0x070f706fu, MaxUses);
 	}
 
-	[DDLRegistration(0x2c5b0011u, "Max Uses", "Only return true if this clue's Activity has been used fewer than this many times")]
+	[DDLRegistration(0x070f706fu, "Max Uses", "Only return true if this clue's Activity has been used fewer than this many times")]
 	public uint MaxUses { get; set; } = 0x00000001;
 
 	public static ActivityClueConditionMaxUses Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class UICountDownActionPrius : DDLObjectType, IDDLObjectType<UICountDownA
 		StartTime = ddl.GetValue<float>(0x0c5bae2bu, StartTime);
 	}
 
-	[DDLRegistration(0x729b37c6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x729b37c6u, "Text Message", "Text to appear beneath clock")]
+	[DDLRegistration(0x723bca34u, "Text Message", "Text to appear beneath clock")]
 	public string? MessageText { get; set; } = default;
 
-	[DDLRegistration(0x729b37c6u, "Start Time Seconds", "Time to start counting down from in seconds.")]
+	[DDLRegistration(0x0c5bae2bu, "Start Time Seconds", "Time to start counting down from in seconds.")]
 	public float StartTime { get; set; } = 60.00f;
 
 	public static UICountDownActionPrius Create(DDLObject ddl) => new(ddl);

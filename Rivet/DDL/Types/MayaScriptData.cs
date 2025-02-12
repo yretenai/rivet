@@ -19,10 +19,10 @@ public class MayaScriptData : DDLObjectType, IDDLObjectType<MayaScriptData> {
 		ScriptPath = ddl.GetString(0x3d259a8d) ?? ScriptPath;
 	}
 
-	[DDLRegistration(0xaf7b5129u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xaf7b5129u)]
+	[DDLRegistration(0x3d259a8du)]
 	public string? ScriptPath { get; set; } = default;
 
 	public static MayaScriptData Create(DDLObject ddl) => new(ddl);

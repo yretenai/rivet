@@ -20,13 +20,13 @@ public class RCSRevertInput : DDLObjectType, IDDLObjectType<RCSRevertInput> {
 		Changelist = ddl.GetValue<uint>(0x03b0ddc6u, Changelist);
 	}
 
-	[DDLRegistration(0xfb615158u, description: "Can be full paths to files to sync, or paths with wildcards.")]
+	[DDLRegistration(0x08a35046u, description: "Can be full paths to files to sync, or paths with wildcards.")]
 	public List<string?> Views { get; set; } = [];
 
-	[DDLRegistration(0xfb615158u, description: "Only revert files that have not been modified.")]
+	[DDLRegistration(0xb4a69317u, description: "Only revert files that have not been modified.")]
 	public bool IfNotModified { get; set; } = false;
 
-	[DDLRegistration(0xfb615158u, description: "Revert files in this changelist")]
+	[DDLRegistration(0x03b0ddc6u, description: "Revert files in this changelist")]
 	public uint Changelist { get; set; } = 0x00000000;
 
 	public static RCSRevertInput Create(DDLObject ddl) => new(ddl);

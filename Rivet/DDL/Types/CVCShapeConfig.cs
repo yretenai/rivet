@@ -20,13 +20,13 @@ public class CVCShapeConfig : DDLObjectType, IDDLObjectType<CVCShapeConfig> {
 		HeightDown = ddl.GetValue<float>(0x18b154fau, HeightDown);
 	}
 
-	[DDLRegistration(0xe283bc40u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.35f;
 
-	[DDLRegistration(0xe283bc40u)]
+	[DDLRegistration(0x7be988d7u)]
 	public float HeightUp { get; set; } = 2.00f;
 
-	[DDLRegistration(0xe283bc40u)]
+	[DDLRegistration(0x18b154fau)]
 	public float HeightDown { get; set; } = 0.10f;
 
 	public static CVCShapeConfig Create(DDLObject ddl) => new(ddl);

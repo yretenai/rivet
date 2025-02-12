@@ -21,16 +21,16 @@ public class AimAssistTraversalModifier : DDLObjectType, IDDLObjectType<AimAssis
 		CenterMod = ddl.GetValue<float>(0x9237bce3u, CenterMod);
 	}
 
-	[DDLRegistration(0x8bc7b099u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = false;
 
-	[DDLRegistration(0x8bc7b099u)]
+	[DDLRegistration(0x259d7ff2u)]
 	public float FrictionMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8bc7b099u)]
+	[DDLRegistration(0xcc015279u)]
 	public float MagnetMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8bc7b099u)]
+	[DDLRegistration(0x9237bce3u)]
 	public float CenterMod { get; set; } = 1.00f;
 
 	public static AimAssistTraversalModifier Create(DDLObject ddl) => new(ddl);

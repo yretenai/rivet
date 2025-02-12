@@ -23,22 +23,22 @@ public class ProjectileFlyingStartEvent : EventBase, IDDLObjectType<ProjectileFl
 		SourceIsHero = ddl.GetValue<byte>(0x27e1719fu, SourceIsHero);
 	}
 
-	[DDLRegistration(0x80f6a3cau)]
+	[DDLRegistration(0xcb3c1ce8u)]
 	public string? WeaponTypeName { get; set; } = default;
 
-	[DDLRegistration(0x80f6a3cau)]
+	[DDLRegistration(0x9da07479u)]
 	public string? PerkName { get; set; } = default;
 
-	[DDLRegistration(0x80f6a3cau)]
+	[DDLRegistration(0xe04c13fau)]
 	public bool ShowTracers { get; set; } = true;
 
-	[DDLRegistration(0x80f6a3cau)]
+	[DDLRegistration(0x544bc8e7u)]
 	public bool FirstShot { get; set; } = false;
 
-	[DDLRegistration(0x80f6a3cau)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0x80f6a3cau)]
+	[DDLRegistration(0x27e1719fu)]
 	public byte SourceIsHero { get; set; } = 0x00;
 
 	public new static ProjectileFlyingStartEvent Create(DDLObject ddl) => new(ddl);

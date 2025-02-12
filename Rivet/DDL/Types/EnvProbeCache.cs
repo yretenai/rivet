@@ -41,76 +41,76 @@ public class EnvProbeCache : DDLObjectType, IDDLObjectType<EnvProbeCache> {
 		ProxyDistPosZ = ddl.GetValue<float>(0x0d0df8c5u, ProxyDistPosZ);
 	}
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x19f9d546u)]
 	public DDLVector3? ProbePos { get; set; } = default;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0xf30cee0eu)]
 	public DDLVector3? AxisX { get; set; } = default;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x840bde98u)]
 	public DDLVector3? AxisY { get; set; } = default;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x1d028f22u)]
 	public DDLVector3? AxisZ { get; set; } = default;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x1b92eaaeu)]
 	public int Mip16Index { get; set; } = -1;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0xb5e26831u)]
 	public int Mip32AssetIndex { get; set; } = -1;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x165dd1d2u)]
 	public int Mip32SubIndex { get; set; } = -1;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0xe64c5e33u)]
 	public VolumeShapes VolumeShape { get; set; } = VolumeShapes.Ellipsoid;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0xcd3b03d5u)]
 	public DDLVector3? ProbeOffset { get; set; } = default;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x64557ecdu)]
 	public float FalloffDistNegX { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0xf7aa0ce2u)]
 	public float FalloffDistPosX { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x13524e5bu)]
 	public float FalloffDistNegY { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x80ad3c74u)]
 	public float FalloffDistPosY { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x8a5b1fe1u)]
 	public float FalloffDistNegZ { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x19a46dceu)]
 	public float FalloffDistPosZ { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x70fcebc6u)]
 	public float ProxyDistNegX { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0xe30399e9u)]
 	public float ProxyDistPosX { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x07fbdb50u)]
 	public float ProxyDistNegY { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x9404a97fu)]
 	public float ProxyDistPosY { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x9ef28aeau)]
 	public float ProxyDistNegZ { get; set; } = 1.00f;
 
-	[DDLRegistration(0x981b452bu)]
+	[DDLRegistration(0x0d0df8c5u)]
 	public float ProxyDistPosZ { get; set; } = 1.00f;
 
 	public static EnvProbeCache Create(DDLObject ddl) => new(ddl);

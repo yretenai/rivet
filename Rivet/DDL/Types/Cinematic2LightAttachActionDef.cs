@@ -25,28 +25,28 @@ public class Cinematic2LightAttachActionDef : DDLObjectType, IDDLObjectType<Cine
 		OffsetTransform = ddl.GetObject<DDLTransform>(0x8638cf34u);
 	}
 
-	[DDLRegistration(0x23514a28u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x23514a28u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x23514a28u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x23514a28u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x23514a28u)]
+	[DDLRegistration(0x6c21ca8au)]
 	public RivetAssetId ActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x23514a28u)]
+	[DDLRegistration(0x5814524du)]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0x23514a28u)]
+	[DDLRegistration(0x482a9e81u)]
 	public x5332e9b5 TransformInheritance { get; set; } = (x5332e9b5) 0x00000007;
 
-	[DDLRegistration(0x23514a28u)]
+	[DDLRegistration(0x8638cf34u)]
 	public DDLTransform? OffsetTransform { get; set; } = default;
 
 	public static Cinematic2LightAttachActionDef Create(DDLObject ddl) => new(ddl);

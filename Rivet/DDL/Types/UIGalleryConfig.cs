@@ -18,7 +18,7 @@ public class UIGalleryConfig : ConfigBase, IDDLObjectType<UIGalleryConfig> {
 		Entries = ddl.GetObjects<UIGalleryEntry>(0x2c12d0fdu);
 	}
 
-	[DDLRegistration(0x0f85a47eu, "Entries", "List of Gallery entries.")]
+	[DDLRegistration(0x2c12d0fdu, "Entries", "List of Gallery entries.")]
 	public List<UIGalleryEntry?> Entries { get; set; } = [];
 
 	public new static UIGalleryConfig Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DamageModifierIncomingAllowKnockbackPrius : DamageModifierIncomingP
 		AllowedKnockbacks = ddl.GetBitset<KnockbackLevelFlags>(0xe6b0ab90u, KnockbackLevelFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0xafa63b41u, description: "The knockbacks allowed to pass through to the actor.")]
+	[DDLRegistration(0xe6b0ab90u, description: "The knockbacks allowed to pass through to the actor.")]
 	public KnockbackLevelFlags AllowedKnockbacks { get; set; } = (KnockbackLevelFlags) 0x00000001;
 
 	public new static DamageModifierIncomingAllowKnockbackPrius Create(DDLObject ddl) => new(ddl);

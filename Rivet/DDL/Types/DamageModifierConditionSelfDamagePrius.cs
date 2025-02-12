@@ -18,7 +18,7 @@ public class DamageModifierConditionSelfDamagePrius : DamageModifierConditionBas
 		IsInclude = ddl.GetValue<bool>(0x9497a047u, IsInclude);
 	}
 
-	[DDLRegistration(0x158fb1b2u)]
+	[DDLRegistration(0x9497a047u)]
 	public bool IsInclude { get; set; } = false;
 
 	public new static DamageModifierConditionSelfDamagePrius Create(DDLObject ddl) => new(ddl);

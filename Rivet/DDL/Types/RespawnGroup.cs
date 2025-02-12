@@ -20,13 +20,13 @@ public class RespawnGroup : DDLObjectType, IDDLObjectType<RespawnGroup> {
 		RespawnWhenAnyCrateDestroyed = ddl.GetValue<bool>(0x871e13d9u, RespawnWhenAnyCrateDestroyed);
 	}
 
-	[DDLRegistration(0xd1279ac6u, description: "The list of resettable actors in this group (these need to all be the same kind of actor")]
+	[DDLRegistration(0x1396fd04u, description: "The list of resettable actors in this group (these need to all be the same kind of actor")]
 	public RivetAssetId ResettableActors { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd1279ac6u, description: "This is the actor asset that we want to replace the ResettableActors with when we respawn them.")]
+	[DDLRegistration(0xbe48845fu, description: "This is the actor asset that we want to replace the ResettableActors with when we respawn them.")]
 	public RivetAssetId RespawnAsset { get; set; } = default;
 
-	[DDLRegistration(0xd1279ac6u, description: "Whether the respawn timer should start if any crate is destroyed. If this is false, no crates will respawn until all of them have been destroyed.")]
+	[DDLRegistration(0x871e13d9u, description: "Whether the respawn timer should start if any crate is destroyed. If this is false, no crates will respawn until all of them have been destroyed.")]
 	public bool RespawnWhenAnyCrateDestroyed { get; set; } = false;
 
 	public static RespawnGroup Create(DDLObject ddl) => new(ddl);

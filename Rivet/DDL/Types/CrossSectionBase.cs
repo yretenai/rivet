@@ -28,37 +28,37 @@ public class CrossSectionBase : DDLObjectType, IDDLObjectType<CrossSectionBase> 
 		ReverseFaces = ddl.GetValue<bool>(0x18f8dfeau, ReverseFaces);
 	}
 
-	[DDLRegistration(0x86693f80u)]
+	[DDLRegistration(0xf56601b6u)]
 	public CrossSectionChoice? CrossSection { get; set; } = default;
 
-	[DDLRegistration(0x86693f80u, description: "Width of Circle. Second with for bottom of Trapezoid")]
+	[DDLRegistration(0x954989eeu, description: "Width of Circle. Second with for bottom of Trapezoid")]
 	public DDLVector2? Width { get; set; } = default;
 
-	[DDLRegistration(0x86693f80u, description: "Height of Shape")]
+	[DDLRegistration(0xcb35ab68u, description: "Height of Shape")]
 	public float Height { get; set; } = 0.50f;
 
-	[DDLRegistration(0x86693f80u, description: "Scale Shape")]
+	[DDLRegistration(0xf515e945u, description: "Scale Shape")]
 	public float Scale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x86693f80u, description: "Scale at distal end")]
+	[DDLRegistration(0xa2c90a17u, description: "Scale at distal end")]
 	public DDLVector2? Taper { get; set; } = default;
 
-	[DDLRegistration(0x86693f80u, description: "Placement of model on curve")]
+	[DDLRegistration(0xca26ea02u, description: "Placement of model on curve")]
 	public xb8c27e2a Placement { get; set; } = xb8c27e2a.Center;
 
-	[DDLRegistration(0x86693f80u, "Offset", "Offset from on curve placement")]
+	[DDLRegistration(0x677284b7u, "Offset", "Offset from on curve placement")]
 	public DDLVector3? Offset { get; set; } = default;
 
-	[DDLRegistration(0x86693f80u, "Path Noise", "Noise Spatial Amplitude and Frequency")]
+	[DDLRegistration(0x8edcdf6du, "Path Noise", "Noise Spatial Amplitude and Frequency")]
 	public DDLVector2? PathNoise { get; set; } = default;
 
-	[DDLRegistration(0x86693f80u, description: "multiplier for amounnt of natural bank to use.  0.0 results in Y-up model")]
+	[DDLRegistration(0x583fb719u, description: "multiplier for amounnt of natural bank to use.  0.0 results in Y-up model")]
 	public float BankScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0x86693f80u, description: "type of termination on each end of model")]
+	[DDLRegistration(0x1bfac016u, description: "type of termination on each end of model")]
 	public x86f6b8ca EndCap { get; set; } = x86f6b8ca.Round;
 
-	[DDLRegistration(0x86693f80u, description: "reverse faces and normals")]
+	[DDLRegistration(0x18f8dfeau, description: "reverse faces and normals")]
 	public bool ReverseFaces { get; set; } = false;
 
 	public static CrossSectionBase Create(DDLObject ddl) => new(ddl);

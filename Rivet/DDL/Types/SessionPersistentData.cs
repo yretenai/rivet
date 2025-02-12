@@ -21,16 +21,16 @@ public class SessionPersistentData : DDLObjectType, IDDLObjectType<SessionPersis
 		ObjectPivot = ddl.GetDictionary<RivetAssetId, SessionPivot>(0x10824b23, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SessionPivot>(mapId));
 	}
 
-	[DDLRegistration(0xe1bcb8d1u)]
+	[DDLRegistration(0x958bdf12u)]
 	public SceneEditorPrefs? SceneEditorPrefs { get; set; } = default;
 
-	[DDLRegistration(0xe1bcb8d1u)]
+	[DDLRegistration(0x226554c4u)]
 	public SessionPropertyPanelState? PropPanelState { get; set; } = default;
 
-	[DDLRegistration(0xe1bcb8d1u)]
+	[DDLRegistration(0x3f19bd1au)]
 	public Dictionary<RivetAssetId, SessionPivot?> AssetPivot { get; set; } = [];
 
-	[DDLRegistration(0xe1bcb8d1u)]
+	[DDLRegistration(0x10824b23u)]
 	public Dictionary<RivetAssetId, SessionPivot?> ObjectPivot { get; set; } = [];
 
 	public static SessionPersistentData Create(DDLObject ddl) => new(ddl);

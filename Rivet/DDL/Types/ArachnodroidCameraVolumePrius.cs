@@ -18,7 +18,7 @@ public class ArachnodroidCameraVolumePrius : DDLObjectType, IDDLObjectType<Arach
 		CameraMode = ddl.GetEnum<x0a752b9a>(0x2f100f4du, x0a752b9aValues.Lookup);
 	}
 
-	[DDLRegistration(0xa5d7ca6au)]
+	[DDLRegistration(0x2f100f4du)]
 	public x0a752b9a CameraMode { get; set; } = x0a752b9a.ModeLevel;
 
 	public static ArachnodroidCameraVolumePrius Create(DDLObject ddl) => new(ddl);

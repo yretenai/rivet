@@ -37,64 +37,64 @@ public class PerfSpecData : DDLObjectType, IDDLObjectType<PerfSpecData> {
 		EstTimeToRenderEnvProbeFaceGpu = ddl.GetValue<float>(0x927e4addu, EstTimeToRenderEnvProbeFaceGpu);
 	}
 
-	[DDLRegistration(0xfdb8dcd1u)]
+	[DDLRegistration(0xf09ed78eu)]
 	public PerfSpecTypeGame Spec { get; set; } = PerfSpecTypeGame.None;
 
-	[DDLRegistration(0xfdb8dcd1u, "LoD Scale Multiplier")]
+	[DDLRegistration(0xdcd98a8du, "LoD Scale Multiplier")]
 	public float LodScaleMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfdb8dcd1u, "Model LoD Clamp")]
+	[DDLRegistration(0x79c9bc71u, "Model LoD Clamp")]
 	public x04a11042 ModelLodClamp { get; set; } = x04a11042.Lod0;
 
-	[DDLRegistration(0xfdb8dcd1u, "CSM Shadow LOD Count Bias", "The bias subtracts from default setting, to a minimum value of 1")]
+	[DDLRegistration(0xdb3aacceu, "CSM Shadow LOD Count Bias", "The bias subtracts from default setting, to a minimum value of 1")]
 	public int CsmLodCountBias { get; set; } = 0;
 
-	[DDLRegistration(0xfdb8dcd1u, "Shadow Draw Dist Multiplier")]
+	[DDLRegistration(0x219f702cu, "Shadow Draw Dist Multiplier")]
 	public float ShadowDrawDistMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfdb8dcd1u, "VolumetricFog FarDistance Multiplier")]
+	[DDLRegistration(0x2d6a35f3u, "VolumetricFog FarDistance Multiplier")]
 	public float VolumetricFarDistanceMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfdb8dcd1u, "VolumetricFog Resolution Multiplier (0.05 - 2)")]
+	[DDLRegistration(0x160fa505u, "VolumetricFog Resolution Multiplier (0.05 - 2)")]
 	public float VolumetricResolutionMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfdb8dcd1u, "AmbientOcclusion RadiusInMeters Multiplier")]
+	[DDLRegistration(0x61d78b16u, "AmbientOcclusion RadiusInMeters Multiplier")]
 	public float AORadiusInMetersMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfdb8dcd1u, "AmbientOcclusion DistanceInMeters Multiplier")]
+	[DDLRegistration(0xf77a1483u, "AmbientOcclusion DistanceInMeters Multiplier")]
 	public float AODistanceInMetersMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfdb8dcd1u, "Weather WetSurfaces VFX Splash Range Multiplier")]
+	[DDLRegistration(0x93170dd9u, "Weather WetSurfaces VFX Splash Range Multiplier")]
 	public float WeatherVFXSplashRangeMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfdb8dcd1u, "Weather Particles MaxDrawDistance Multiplier")]
+	[DDLRegistration(0xcfbc9044u, "Weather Particles MaxDrawDistance Multiplier")]
 	public float WeatherParticlesMaxDrawDistanceMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfdb8dcd1u, "Weather Particles Density Multiplier")]
+	[DDLRegistration(0xb183b2f6u, "Weather Particles Density Multiplier")]
 	public float WeatherParticlesDensityMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfdb8dcd1u, "Volumetric clouds")]
+	[DDLRegistration(0xa88df77fu, "Volumetric clouds")]
 	public bool EnabledVolumetricClouds { get; set; } = true;
 
-	[DDLRegistration(0xfdb8dcd1u, "Cloud Down Sampling")]
+	[DDLRegistration(0x7ac66a09u, "Cloud Down Sampling")]
 	public float CloudDownSample { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfdb8dcd1u, "Cloud Edge Blur")]
+	[DDLRegistration(0x3f3301fau, "Cloud Edge Blur")]
 	public bool EnabledCloudEdgeBlur { get; set; } = true;
 
-	[DDLRegistration(0xfdb8dcd1u, "Cloud LoD Depth")]
+	[DDLRegistration(0x5cff0333u, "Cloud LoD Depth")]
 	public bool EnabledCloudLODDepth { get; set; } = true;
 
-	[DDLRegistration(0xfdb8dcd1u, "Cloud Shadows")]
+	[DDLRegistration(0x4a6caacau, "Cloud Shadows")]
 	public bool EnabledCloudShadow { get; set; } = true;
 
-	[DDLRegistration(0xfdb8dcd1u, "Cloud God Rays")]
+	[DDLRegistration(0x3645192eu, "Cloud God Rays")]
 	public bool EnabledCloudGodray { get; set; } = true;
 
-	[DDLRegistration(0xfdb8dcd1u, "Estimated Seconds to Render Env. Probe Face (CPU)")]
+	[DDLRegistration(0x9577e201u, "Estimated Seconds to Render Env. Probe Face (CPU)")]
 	public float EstTimeToRenderEnvProbeFaceCpu { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfdb8dcd1u, "Estimated Seconds to Render Env. Probe Face (GPU)")]
+	[DDLRegistration(0x927e4addu, "Estimated Seconds to Render Env. Probe Face (GPU)")]
 	public float EstTimeToRenderEnvProbeFaceGpu { get; set; } = 0.00f;
 
 	public static PerfSpecData Create(DDLObject ddl) => new(ddl);

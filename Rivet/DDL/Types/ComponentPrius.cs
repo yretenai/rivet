@@ -20,13 +20,13 @@ public class ComponentPrius : DDLObjectType, IDDLObjectType<ComponentPrius> {
 		Status = ddl.GetEnum<x8eb28adc>(0x45782b7bu, x8eb28adcValues.Lookup);
 	}
 
-	[DDLRegistration(0x50183bd2u, description: "The name of the component prius.")]
+	[DDLRegistration(0x5ec4dfe5u, description: "The name of the component prius.")]
 	public string? PriusName { get; set; } = default;
 
-	[DDLRegistration(0x50183bd2u, description: "JSON text representing the overrides to the component prius defaults.")]
+	[DDLRegistration(0x491145f6u, description: "JSON text representing the overrides to the component prius defaults.")]
 	public string? Overrides { get; set; } = default;
 
-	[DDLRegistration(0x50183bd2u, description: "Status flag indicating how the engine should handle this component override.")]
+	[DDLRegistration(0x45782b7bu, description: "Status flag indicating how the engine should handle this component override.")]
 	public x8eb28adc Status { get; set; } = x8eb28adc.NotSpecified;
 
 	public static ComponentPrius Create(DDLObject ddl) => new(ddl);

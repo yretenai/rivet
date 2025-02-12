@@ -19,10 +19,10 @@ public class UISkipPuzzleActionPrius : DDLObjectType, IDDLObjectType<UISkipPuzzl
 		SummaryLocTags = ddl.GetStrings(0x86b5220eu);
 	}
 
-	[DDLRegistration(0xa4c0b94eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0xa4c0b94eu, description: "Story summary of what happened during the puzzle.")]
+	[DDLRegistration(0x86b5220eu, description: "Story summary of what happened during the puzzle.")]
 	public List<string?> SummaryLocTags { get; set; } = [];
 
 	public static UISkipPuzzleActionPrius Create(DDLObject ddl) => new(ddl);

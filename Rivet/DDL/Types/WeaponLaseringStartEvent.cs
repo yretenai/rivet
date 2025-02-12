@@ -22,19 +22,19 @@ public class WeaponLaseringStartEvent : EventBase, IDDLObjectType<WeaponLasering
 		EndLocator = ddl.GetString(0xe7e59581) ?? EndLocator;
 	}
 
-	[DDLRegistration(0x5334dfbfu, "Hit Pos Actor Handle")]
+	[DDLRegistration(0xf5f07b53u, "Hit Pos Actor Handle")]
 	public uint HitPosActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5334dfbfu, description: "Hash for differentiating beams")]
+	[DDLRegistration(0x26a7db04u, description: "Hash for differentiating beams")]
 	public uint BeamHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5334dfbfu, description: "The game's current difficulty level")]
+	[DDLRegistration(0xd2b2d773u, description: "The game's current difficulty level")]
 	public byte DifficultyLevel { get; set; } = 0x01;
 
-	[DDLRegistration(0x5334dfbfu, description: "Locator name in model where the beam starts.")]
+	[DDLRegistration(0x45890f60u, description: "Locator name in model where the beam starts.")]
 	public string? StartLocator { get; set; } = default;
 
-	[DDLRegistration(0x5334dfbfu, description: "Locator name in model where the beam ends.")]
+	[DDLRegistration(0xe7e59581u, description: "Locator name in model where the beam ends.")]
 	public string? EndLocator { get; set; } = default;
 
 	public new static WeaponLaseringStartEvent Create(DDLObject ddl) => new(ddl);

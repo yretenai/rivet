@@ -20,13 +20,13 @@ public class HoverMoverManagerPrius : BotMoverManagerPrius, IDDLObjectType<Hover
 		CeilingCheckBottom = ddl.GetValue<float>(0x577e1479u, CeilingCheckBottom);
 	}
 
-	[DDLRegistration(0x50503620u, "Ceiling Check Radius", "Ceiling check radius")]
+	[DDLRegistration(0xe55d0887u, "Ceiling Check Radius", "Ceiling check radius")]
 	public float CeilingCheckRadius { get; set; } = 0.15f;
 
-	[DDLRegistration(0x50503620u, "Ceiling Check Top", "Distance above our actor position that the ceiling check's top is.")]
+	[DDLRegistration(0x5b9c385au, "Ceiling Check Top", "Distance above our actor position that the ceiling check's top is.")]
 	public float CeilingCheckTop { get; set; } = 5.00f;
 
-	[DDLRegistration(0x50503620u, "Ceiling Check Bottom", "Distance above our actor position that the ceiling check's bottom is.")]
+	[DDLRegistration(0x577e1479u, "Ceiling Check Bottom", "Distance above our actor position that the ceiling check's bottom is.")]
 	public float CeilingCheckBottom { get; set; } = 1.00f;
 
 	public new static HoverMoverManagerPrius Create(DDLObject ddl) => new(ddl);

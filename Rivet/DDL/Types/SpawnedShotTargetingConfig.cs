@@ -18,7 +18,7 @@ public class SpawnedShotTargetingConfig : ConfigBase, IDDLObjectType<SpawnedShot
 		TargetingPrius = ddl.GetObject<SpawnShotTargetingPrius>(0xace13f57u);
 	}
 
-	[DDLRegistration(0x99204c55u, description: "How the spawned shot will be directed.")]
+	[DDLRegistration(0xace13f57u, description: "How the spawned shot will be directed.")]
 	public SpawnShotTargetingPrius? TargetingPrius { get; set; } = default;
 
 	public new static SpawnedShotTargetingConfig Create(DDLObject ddl) => new(ddl);

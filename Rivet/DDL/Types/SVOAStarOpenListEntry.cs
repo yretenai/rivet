@@ -19,10 +19,10 @@ public class SVOAStarOpenListEntry : DDLObjectType, IDDLObjectType<SVOAStarOpenL
 		Handle = ddl.GetValue<ulong>(0xaff86ebeu, Handle);
 	}
 
-	[DDLRegistration(0xa5544798u)]
+	[DDLRegistration(0x4b8383aeu)]
 	public float FValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa5544798u)]
+	[DDLRegistration(0xaff86ebeu)]
 	public ulong Handle { get; set; } = 0x0000000000000000;
 
 	public static SVOAStarOpenListEntry Create(DDLObject ddl) => new(ddl);

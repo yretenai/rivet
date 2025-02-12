@@ -18,7 +18,7 @@ public class BotComboConditionListEntry : DDLObjectType, IDDLObjectType<BotCombo
 		BotComboCondition = ddl.GetObject<BotComboConditionBasePrius>(0x4f46982du);
 	}
 
-	[DDLRegistration(0xc0fdb9c1u)]
+	[DDLRegistration(0x4f46982du)]
 	public BotComboConditionBasePrius? BotComboCondition { get; set; } = default;
 
 	public static BotComboConditionListEntry Create(DDLObject ddl) => new(ddl);

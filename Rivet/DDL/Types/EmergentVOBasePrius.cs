@@ -19,10 +19,10 @@ public class EmergentVOBasePrius : DDLObjectType, IDDLObjectType<EmergentVOBaseP
 		DialogTags = ddl.GetObject<EmergentVOTagList>(0x7c5dd1d8u);
 	}
 
-	[DDLRegistration(0x62c7a2d2u)]
+	[DDLRegistration(0xc43edf73u)]
 	public string? EntityType { get; set; } = default;
 
-	[DDLRegistration(0x62c7a2d2u)]
+	[DDLRegistration(0x7c5dd1d8u)]
 	public EmergentVOTagList? DialogTags { get; set; } = default;
 
 	public static EmergentVOBasePrius Create(DDLObject ddl) => new(ddl);

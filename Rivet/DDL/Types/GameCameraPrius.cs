@@ -19,10 +19,10 @@ public class GameCameraPrius : CameraPrius, IDDLObjectType<GameCameraPrius> {
 		ForceCamAimOnCasual = ddl.GetValue<bool>(0xa189776du, ForceCamAimOnCasual);
 	}
 
-	[DDLRegistration(0x3c6b69c3u, "NonCasual: Force Cam Dir Aiming?", "The default hero aiming in a non-follow cam is to use the hero forward. Checking this will override that and use the camera direction instead when player isn't using casual controls.")]
+	[DDLRegistration(0xce70ce9eu, "NonCasual: Force Cam Dir Aiming?", "The default hero aiming in a non-follow cam is to use the hero forward. Checking this will override that and use the camera direction instead when player isn't using casual controls.")]
 	public bool ForceCamDirAim { get; set; } = false;
 
-	[DDLRegistration(0x3c6b69c3u, "Casual: Force Cam Dir Aiming?", "Like the above, but is for casual controls so it will force the hero aiming to be the camera direction when using casual controls.")]
+	[DDLRegistration(0xa189776du, "Casual: Force Cam Dir Aiming?", "Like the above, but is for casual controls so it will force the hero aiming to be the camera direction when using casual controls.")]
 	public bool ForceCamAimOnCasual { get; set; } = false;
 
 	public new static GameCameraPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DeathData : DDLObjectType, IDDLObjectType<DeathData> {
 		BlastKnockbackLevel = ddl.GetEnum<KnockbackLevels>(0x4c616d1fu, KnockbackLevelsValues.Lookup);
 	}
 
-	[DDLRegistration(0xc5c5429eu, description: "The knockback level that causes this bot to blast death")]
+	[DDLRegistration(0x4c616d1fu, description: "The knockback level that causes this bot to blast death")]
 	public KnockbackLevels BlastKnockbackLevel { get; set; } = KnockbackLevels.Four;
 
 	public static DeathData Create(DDLObject ddl) => new(ddl);

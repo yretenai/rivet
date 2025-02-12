@@ -20,13 +20,13 @@ public class ElementalBoneEffectEvent : EventBase, IDDLObjectType<ElementalBoneE
 		CustomTag = ddl.GetString(0xbe32cb65) ?? CustomTag;
 	}
 
-	[DDLRegistration(0xd3c42a86u)]
+	[DDLRegistration(0x3ca28123u)]
 	public string? ParentLocator { get; set; } = default;
 
-	[DDLRegistration(0xd3c42a86u)]
+	[DDLRegistration(0xe6135cacu)]
 	public string? ChildLocator { get; set; } = default;
 
-	[DDLRegistration(0xd3c42a86u)]
+	[DDLRegistration(0xbe32cb65u)]
 	public string? CustomTag { get; set; } = default;
 
 	public new static ElementalBoneEffectEvent Create(DDLObject ddl) => new(ddl);

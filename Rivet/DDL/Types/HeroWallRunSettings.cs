@@ -19,10 +19,10 @@ public class HeroWallRunSettings : DDLObjectType, IDDLObjectType<HeroWallRunSett
 		DebugNonActorWallRuns = ddl.GetValue<bool>(0x4ca5b6f1u, DebugNonActorWallRuns);
 	}
 
-	[DDLRegistration(0x4b130691u)]
+	[DDLRegistration(0x2f44ddd9u)]
 	public bool DebugCollisionChecks { get; set; } = false;
 
-	[DDLRegistration(0x4b130691u)]
+	[DDLRegistration(0x4ca5b6f1u)]
 	public bool DebugNonActorWallRuns { get; set; } = false;
 
 	public static HeroWallRunSettings Create(DDLObject ddl) => new(ddl);

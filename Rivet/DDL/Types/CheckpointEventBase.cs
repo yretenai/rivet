@@ -18,7 +18,7 @@ public class CheckpointEventBase : EventBase, IDDLObjectType<CheckpointEventBase
 		CheckpointHash = ddl.GetValue<uint>(0xfe4b7d4fu, CheckpointHash);
 	}
 
-	[DDLRegistration(0xadf0440bu)]
+	[DDLRegistration(0xfe4b7d4fu)]
 	public uint CheckpointHash { get; set; } = 0x00000000;
 
 	public new static CheckpointEventBase Create(DDLObject ddl) => new(ddl);

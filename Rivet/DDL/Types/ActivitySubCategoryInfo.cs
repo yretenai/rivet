@@ -19,10 +19,10 @@ public class ActivitySubCategoryInfo : DDLObjectType, IDDLObjectType<ActivitySub
 		NameTag = ddl.GetString(0x2d78cbbd) ?? NameTag;
 	}
 
-	[DDLRegistration(0x552f5c96u)]
+	[DDLRegistration(0x797697c5u)]
 	public xbd8d5c4d SubCategory { get; set; } = xbd8d5c4d.NULL;
 
-	[DDLRegistration(0x552f5c96u, description: "Loctag for the name of this subcategory on the activity cards. Localized text can be at most 128 characters.")]
+	[DDLRegistration(0x2d78cbbdu, description: "Loctag for the name of this subcategory on the activity cards. Localized text can be at most 128 characters.")]
 	public string? NameTag { get; set; } = default;
 
 	public static ActivitySubCategoryInfo Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class DecalAttributes : DDLObjectType, IDDLObjectType<DecalAttributes> {
 		DisplayBounds = ddl.GetValue<bool>(0x8a14c71bu, DisplayBounds);
 	}
 
-	[DDLRegistration(0xd3487570u, "ZFade Threshold")]
+	[DDLRegistration(0x4d6519b9u, "ZFade Threshold")]
 	public float ZFadeThreshold { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd3487570u, "ZFade Power")]
+	[DDLRegistration(0xe3b7d610u, "ZFade Power")]
 	public float ZFadePower { get; set; } = 2.00f;
 
-	[DDLRegistration(0xd3487570u, "Display Bounds")]
+	[DDLRegistration(0x8a14c71bu, "Display Bounds")]
 	public bool DisplayBounds { get; set; } = true;
 
 	public static DecalAttributes Create(DDLObject ddl) => new(ddl);

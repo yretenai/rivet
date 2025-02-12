@@ -18,7 +18,7 @@ public class FlewByStartEvent : EventBase, IDDLObjectType<FlewByStartEvent> {
 		StartSpeed = ddl.GetValue<float>(0x774d9212u, StartSpeed);
 	}
 
-	[DDLRegistration(0x624235acu)]
+	[DDLRegistration(0x774d9212u)]
 	public float StartSpeed { get; set; } = 0.00f;
 
 	public new static FlewByStartEvent Create(DDLObject ddl) => new(ddl);

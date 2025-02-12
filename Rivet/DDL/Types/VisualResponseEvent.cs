@@ -38,67 +38,67 @@ public class VisualResponseEvent : ResponseEvent, IDDLObjectType<VisualResponseE
 		ExcludeModelMaterialMappingHashes = ddl.GetString(0x2f07f341) ?? ExcludeModelMaterialMappingHashes;
 	}
 
-	[DDLRegistration(0xcfb26502u, "Attach Locator/Joint")]
+	[DDLRegistration(0x94bbadd6u, "Attach Locator/Joint")]
 	public string? AttachLocJoint { get; set; } = default;
 
-	[DDLRegistration(0xcfb26502u, "Attach Locator/Joint Hash")]
+	[DDLRegistration(0xc6e692acu, "Attach Locator/Joint Hash")]
 	public uint AttachHashLocJoint { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcfb26502u, "Follow Attach Locator/Joint?")]
+	[DDLRegistration(0x0a7da544u, "Follow Attach Locator/Joint?")]
 	public bool FollowLocJoint { get; set; } = true;
 
-	[DDLRegistration(0xcfb26502u, "Follow Attach Actor?")]
+	[DDLRegistration(0x6b8aab60u, "Follow Attach Actor?")]
 	public bool FollowActor { get; set; } = true;
 
-	[DDLRegistration(0xcfb26502u, "Visual Effect Spawn Mesh")]
+	[DDLRegistration(0x6e8b6fa3u, "Visual Effect Spawn Mesh")]
 	public uint FXSpawnMesh { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcfb26502u, "Visual Effect Asset")]
+	[DDLRegistration(0x41f71a88u, "Visual Effect Asset")]
 	public RivetAssetId FXPackage { get; set; } = default;
 
-	[DDLRegistration(0xcfb26502u, "Start Effect")]
+	[DDLRegistration(0xc37d3372u, "Start Effect")]
 	public sbyte StartEffect { get; set; } = 1;
 
-	[DDLRegistration(0xcfb26502u, "On Conduit Delete", "-1 = use actor behavior, 0 = continue, 1 = stop, 2 = kill")]
+	[DDLRegistration(0xe42c89b5u, "On Conduit Delete", "-1 = use actor behavior, 0 = continue, 1 = stop, 2 = kill")]
 	public sbyte OnConduitDelete { get; set; } = -1;
 
-	[DDLRegistration(0xcfb26502u, "Start Delay")]
+	[DDLRegistration(0xcaf1ec7fu, "Start Delay")]
 	public float StartDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcfb26502u, "Fade Out", "Fade out duration when the effect is stopped but not killed")]
+	[DDLRegistration(0xa9e43db1u, "Fade Out", "Fade out duration when the effect is stopped but not killed")]
 	public float FadeOut { get; set; } = -1.00f;
 
-	[DDLRegistration(0xcfb26502u, "Fade In", "Fade in duration when the effect is spawned")]
+	[DDLRegistration(0x84ac8cf2u, "Fade In", "Fade in duration when the effect is spawned")]
 	public float FadeIn { get; set; } = -1.00f;
 
-	[DDLRegistration(0xcfb26502u, "Reference Actor")]
+	[DDLRegistration(0xed2233bdu, "Reference Actor")]
 	public uint RefHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcfb26502u, "Reference Locator/Joint")]
+	[DDLRegistration(0xe2e796b0u, "Reference Locator/Joint")]
 	public string? RefLocator { get; set; } = default;
 
-	[DDLRegistration(0xcfb26502u, "Single Viewport")]
+	[DDLRegistration(0x05510162u, "Single Viewport")]
 	public sbyte SingleViewport { get; set; } = -1;
 
-	[DDLRegistration(0xcfb26502u, "Exclude Viewport")]
+	[DDLRegistration(0x5f225fa9u, "Exclude Viewport")]
 	public sbyte ExcludeViewport { get; set; } = -1;
 
-	[DDLRegistration(0xcfb26502u, "Max Instances")]
+	[DDLRegistration(0x64bd89f9u, "Max Instances")]
 	public byte MaxInstances { get; set; } = 0x00;
 
-	[DDLRegistration(0xcfb26502u, "Real Time Update", "1 = continue update when game is paused, 0 = halt update when game is paused")]
+	[DDLRegistration(0x8e13e456u, "Real Time Update", "1 = continue update when game is paused, 0 = halt update when game is paused")]
 	public byte RealTimeUpdate { get; set; } = 0x00;
 
-	[DDLRegistration(0xcfb26502u, "Apply Parent Influence", "If this VisualEffect is spawned inside of a ParentInfluence volume, should ParentInfluence be applied over its lifetime?")]
+	[DDLRegistration(0x13f3e34fu, "Apply Parent Influence", "If this VisualEffect is spawned inside of a ParentInfluence volume, should ParentInfluence be applied over its lifetime?")]
 	public bool ApplyParentInfluence { get; set; } = true;
 
-	[DDLRegistration(0xcfb26502u)]
+	[DDLRegistration(0x14a54f75u)]
 	public uint TargetSpawnStyleNodeHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcfb26502u)]
+	[DDLRegistration(0x986cd3c1u)]
 	public string? TargetModelMaterialMappingHashes { get; set; } = default;
 
-	[DDLRegistration(0xcfb26502u)]
+	[DDLRegistration(0x2f07f341u)]
 	public string? ExcludeModelMaterialMappingHashes { get; set; } = default;
 
 	public new static VisualResponseEvent Create(DDLObject ddl) => new(ddl);

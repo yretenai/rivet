@@ -23,22 +23,22 @@ public class HurdleShotAlongGroundMotionPrius : MoveAlongGroundShotMotionPrius, 
 		SyncHeightWithDummy = ddl.GetValue<bool>(0x25db9ef9u, SyncHeightWithDummy);
 	}
 
-	[DDLRegistration(0x68adb7e1u)]
+	[DDLRegistration(0xaca59732u)]
 	public DDLVector3? HurdleShotDirection { get; set; } = default;
 
-	[DDLRegistration(0x68adb7e1u)]
+	[DDLRegistration(0x2baf0d74u)]
 	public float SpreadWidthTarget { get; set; } = 2.00f;
 
-	[DDLRegistration(0x68adb7e1u)]
+	[DDLRegistration(0xa362dbbbu)]
 	public float SpreadTime { get; set; } = 0.30f;
 
-	[DDLRegistration(0x68adb7e1u)]
+	[DDLRegistration(0x636b5793u)]
 	public float MaxGroundSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0x68adb7e1u)]
+	[DDLRegistration(0xa2c2fc42u)]
 	public bool SpreadRightOfFiringActor { get; set; } = false;
 
-	[DDLRegistration(0x68adb7e1u)]
+	[DDLRegistration(0x25db9ef9u)]
 	public bool SyncHeightWithDummy { get; set; } = false;
 
 	public new static HurdleShotAlongGroundMotionPrius Create(DDLObject ddl) => new(ddl);

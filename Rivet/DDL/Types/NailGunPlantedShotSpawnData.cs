@@ -23,22 +23,22 @@ public class NailGunPlantedShotSpawnData : AttachableShotSpawnData, IDDLObjectTy
 		MaxHitCount = ddl.GetValue<int>(0xfe9a3649u, MaxHitCount);
 	}
 
-	[DDLRegistration(0xd3eec85bu)]
+	[DDLRegistration(0xd91c3262u)]
 	public int SyncedAttackId { get; set; } = 0;
 
-	[DDLRegistration(0xd3eec85bu)]
+	[DDLRegistration(0x22685082u)]
 	public int TrackedIndex { get; set; } = -1;
 
-	[DDLRegistration(0xd3eec85bu, description: "Distance that the nail should embed on each subsequent hit.")]
+	[DDLRegistration(0xc0169bf8u, description: "Distance that the nail should embed on each subsequent hit.")]
 	public float EmbedDistancePerHit { get; set; } = 0.20f;
 
-	[DDLRegistration(0xd3eec85bu, description: "Maximum distance the nail should embed.")]
+	[DDLRegistration(0x172b14b6u, description: "Maximum distance the nail should embed.")]
 	public float MaxEmbedDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd3eec85bu, description: "Maximum lifetime of the planted shot.")]
+	[DDLRegistration(0xa9f6b83cu, description: "Maximum lifetime of the planted shot.")]
 	public float MaxLifetime { get; set; } = 5.00f;
 
-	[DDLRegistration(0xd3eec85bu, description: "Maximum hit count which gets applied towards bonus damage multiplier.")]
+	[DDLRegistration(0xfe9a3649u, description: "Maximum hit count which gets applied towards bonus damage multiplier.")]
 	public int MaxHitCount { get; set; } = 5;
 
 	public new static NailGunPlantedShotSpawnData Create(DDLObject ddl) => new(ddl);

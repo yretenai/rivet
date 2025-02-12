@@ -20,13 +20,13 @@ public class Cinematic2CameraShakeTrackDefaultValues : DDLObjectType, IDDLObject
 		MagnitudeJitter = ddl.GetValue<float>(0x01dc6b8fu, MagnitudeJitter);
 	}
 
-	[DDLRegistration(0x34139b74u)]
+	[DDLRegistration(0x05e174a0u)]
 	public float MagnitudeShake { get; set; } = 0.00f;
 
-	[DDLRegistration(0x34139b74u)]
+	[DDLRegistration(0x83abb6ebu)]
 	public float MagnitudeWave { get; set; } = 0.40f;
 
-	[DDLRegistration(0x34139b74u)]
+	[DDLRegistration(0x01dc6b8fu)]
 	public float MagnitudeJitter { get; set; } = 0.00f;
 
 	public static Cinematic2CameraShakeTrackDefaultValues Create(DDLObject ddl) => new(ddl);

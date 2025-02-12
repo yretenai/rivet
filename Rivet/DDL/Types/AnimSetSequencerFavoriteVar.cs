@@ -19,10 +19,10 @@ public class AnimSetSequencerFavoriteVar : DDLObjectType, IDDLObjectType<AnimSet
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x3c9a602fu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x3c9a602fu)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
 	public static AnimSetSequencerFavoriteVar Create(DDLObject ddl) => new(ddl);

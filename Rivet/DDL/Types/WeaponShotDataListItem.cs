@@ -18,7 +18,7 @@ public class WeaponShotDataListItem : DDLObjectType, IDDLObjectType<WeaponShotDa
 		Shot = ddl.GetObject<WeaponShotData>(0x9b97480bu);
 	}
 
-	[DDLRegistration(0x57143ce2u)]
+	[DDLRegistration(0x9b97480bu)]
 	public WeaponShotData? Shot { get; set; } = default;
 
 	public static WeaponShotDataListItem Create(DDLObject ddl) => new(ddl);

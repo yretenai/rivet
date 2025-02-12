@@ -35,58 +35,58 @@ public class MannableTurretBataliaPrius : DDLObjectType, IDDLObjectType<Mannable
 		TurretOfferPrius = ddl.GetObject<UseTurretOfferPrius>(0x50d39793u);
 	}
 
-	[DDLRegistration(0x4a2cdedau)]
+	[DDLRegistration(0x68f0fd3du)]
 	public DDLVector3? CameraOffset { get; set; } = default;
 
-	[DDLRegistration(0x4a2cdedau, description: "Joint on the model to adjust pitch on")]
+	[DDLRegistration(0xd2c06413u, description: "Joint on the model to adjust pitch on")]
 	public string? PitchJoint { get; set; } = "pitch_pivot";
 
-	[DDLRegistration(0x4a2cdedau, description: "Joint on the model to adjust yaw on")]
+	[DDLRegistration(0x8dcc3694u, description: "Joint on the model to adjust yaw on")]
 	public string? YawJoint { get; set; } = "yaw_pivot";
 
-	[DDLRegistration(0x4a2cdedau, "Right Limit")]
+	[DDLRegistration(0x0bad2fd6u, "Right Limit")]
 	public float YawLimitMin { get; set; } = 90.00f;
 
-	[DDLRegistration(0x4a2cdedau, "Left  Limit")]
+	[DDLRegistration(0x37a0108fu, "Left  Limit")]
 	public float YawLimitMax { get; set; } = 90.00f;
 
-	[DDLRegistration(0x4a2cdedau, "Up Limit")]
+	[DDLRegistration(0x6eec5171u, "Up Limit")]
 	public float PitchLimitMin { get; set; } = 45.00f;
 
-	[DDLRegistration(0x4a2cdedau, "Down Limit")]
+	[DDLRegistration(0x52e16e28u, "Down Limit")]
 	public float PitchLimitMax { get; set; } = 30.00f;
 
-	[DDLRegistration(0x4a2cdedau, "Max Yaw Speed")]
+	[DDLRegistration(0x710f81a1u, "Max Yaw Speed")]
 	public float MaxYawSpeed { get; set; } = 720.00f;
 
-	[DDLRegistration(0x4a2cdedau, "Max Pitch Speed")]
+	[DDLRegistration(0xb9365e9bu, "Max Pitch Speed")]
 	public float MaxPitchSpeed { get; set; } = 360.00f;
 
-	[DDLRegistration(0x4a2cdedau, description: "This is a SpawnedShotConfig.")]
+	[DDLRegistration(0x56b26112u, description: "This is a SpawnedShotConfig.")]
 	public RivetAssetId ShotConfigMachineGun { get; set; } = default;
 
-	[DDLRegistration(0x4a2cdedau)]
+	[DDLRegistration(0xe38befd9u)]
 	public float MachineGunFireDelay { get; set; } = 0.25f;
 
-	[DDLRegistration(0x4a2cdedau, description: "This is a SpawnedShotConfig.")]
+	[DDLRegistration(0xae622536u, description: "This is a SpawnedShotConfig.")]
 	public RivetAssetId ShotConfigIonCannon { get; set; } = default;
 
-	[DDLRegistration(0x4a2cdedau, "Max Cannon Dam Mult", "The damage multiplier for when the cannon has max charge")]
+	[DDLRegistration(0xd4fd1beau, "Max Cannon Dam Mult", "The damage multiplier for when the cannon has max charge")]
 	public float MaxIonCannonDamageMultiplier { get; set; } = 5.00f;
 
-	[DDLRegistration(0x4a2cdedau, description: "Max energy the ion cannon can hold")]
+	[DDLRegistration(0x67c14c45u, description: "Max energy the ion cannon can hold")]
 	public float MaxIonCannonEnergy { get; set; } = 10.00f;
 
-	[DDLRegistration(0x4a2cdedau, description: "Volume to stand in to prompt the player to enter the turret")]
+	[DDLRegistration(0x3aff0846u, description: "Volume to stand in to prompt the player to enter the turret")]
 	public RivetAssetId OfferVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4a2cdedau, description: "The actor for the turret when viewed externally.  This will be hidden when the player enters")]
+	[DDLRegistration(0x72f78b5fu, description: "The actor for the turret when viewed externally.  This will be hidden when the player enters")]
 	public RivetAssetId ExternalActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4a2cdedau, description: "The actor ships will target and do damage to as a proxy to the player.")]
+	[DDLRegistration(0xdca0ce77u, description: "The actor ships will target and do damage to as a proxy to the player.")]
 	public RivetAssetId DamageActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4a2cdedau, "Turret Offer Info", "Information for the offer (placement, range, facing, etc).")]
+	[DDLRegistration(0x50d39793u, "Turret Offer Info", "Information for the offer (placement, range, facing, etc).")]
 	public UseTurretOfferPrius? TurretOfferPrius { get; set; } = default;
 
 	public static MannableTurretBataliaPrius Create(DDLObject ddl) => new(ddl);

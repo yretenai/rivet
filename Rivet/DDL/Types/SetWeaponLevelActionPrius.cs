@@ -20,13 +20,13 @@ public class SetWeaponLevelActionPrius : DDLObjectType, IDDLObjectType<SetWeapon
 		WeaponLevel = ddl.GetValue<uint>(0x33cd2a28u, WeaponLevel);
 	}
 
-	[DDLRegistration(0xbade881cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Weapon;
 
-	[DDLRegistration(0xbade881cu, "Weapon Item Config")]
+	[DDLRegistration(0xb72a0e33u, "Weapon Item Config")]
 	public RivetAssetId WeaponConfig { get; set; } = default;
 
-	[DDLRegistration(0xbade881cu, "Weapon Level", "Level to set the weapon to (0 means do not apply). Will use the input level if one is specified on the node.")]
+	[DDLRegistration(0x33cd2a28u, "Weapon Level", "Level to set the weapon to (0 means do not apply). Will use the input level if one is specified on the node.")]
 	public uint WeaponLevel { get; set; } = 0x00000000;
 
 	public static SetWeaponLevelActionPrius Create(DDLObject ddl) => new(ddl);

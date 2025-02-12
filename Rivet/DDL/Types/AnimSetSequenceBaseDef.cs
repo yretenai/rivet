@@ -19,10 +19,10 @@ public class AnimSetSequenceBaseDef : DDLObjectType, IDDLObjectType<AnimSetSeque
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0x2998c9edu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x2998c9edu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
 	public static AnimSetSequenceBaseDef Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class CurveEndingDecalPrius : DDLObjectType, IDDLObjectType<CurveEndingDe
 		CollCheckOnStart = ddl.GetValue<bool>(0xf38148d6u, CollCheckOnStart);
 	}
 
-	[DDLRegistration(0x9fdf1d7eu, description: "Decal for the ending point")]
+	[DDLRegistration(0x829bd648u, description: "Decal for the ending point")]
 	public RivetAssetId TargetTexture { get; set; } = default;
 
-	[DDLRegistration(0x9fdf1d7eu, description: "Size-scaling for the target decal")]
+	[DDLRegistration(0x30663df1u, description: "Size-scaling for the target decal")]
 	public float TargetScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9fdf1d7eu, description: "Decals have random rotation instead of using the curve")]
+	[DDLRegistration(0xd9b0529du, description: "Decals have random rotation instead of using the curve")]
 	public bool RandomOrientation { get; set; } = false;
 
-	[DDLRegistration(0x9fdf1d7eu, description: "If true we'll do a short ground to try and find a good normal. Expensive if you have lots of these")]
+	[DDLRegistration(0xf38148d6u, description: "If true we'll do a short ground to try and find a good normal. Expensive if you have lots of these")]
 	public bool CollCheckOnStart { get; set; } = false;
 
 	public static CurveEndingDecalPrius Create(DDLObject ddl) => new(ddl);

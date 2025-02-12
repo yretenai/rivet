@@ -23,22 +23,22 @@ public class SceneEditorHotkey : DDLObjectType, IDDLObjectType<SceneEditorHotkey
 		Trigger2 = ddl.GetStrings(0xf514453bu);
 	}
 
-	[DDLRegistration(0x51e5f6b4u)]
+	[DDLRegistration(0xb2f8624au)]
 	public string? ControlName { get; set; } = default;
 
-	[DDLRegistration(0x51e5f6b4u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x51e5f6b4u)]
+	[DDLRegistration(0x1ccca4e0u)]
 	public List<string?> Key1 { get; set; } = [];
 
-	[DDLRegistration(0x51e5f6b4u)]
+	[DDLRegistration(0x6c1d1481u)]
 	public List<string?> Trigger1 { get; set; } = [];
 
-	[DDLRegistration(0x51e5f6b4u)]
+	[DDLRegistration(0x85c5f55au)]
 	public List<string?> Key2 { get; set; } = [];
 
-	[DDLRegistration(0x51e5f6b4u)]
+	[DDLRegistration(0xf514453bu)]
 	public List<string?> Trigger2 { get; set; } = [];
 
 	public static SceneEditorHotkey Create(DDLObject ddl) => new(ddl);

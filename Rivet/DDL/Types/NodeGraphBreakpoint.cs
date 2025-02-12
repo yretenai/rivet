@@ -21,16 +21,16 @@ public class NodeGraphBreakpoint : DDLObjectType, IDDLObjectType<NodeGraphBreakp
 		Is_enabled = ddl.GetValue<bool>(0xd2ae60a5u, Is_enabled);
 	}
 
-	[DDLRegistration(0x45622ec7u)]
+	[DDLRegistration(0x7b5b132eu)]
 	public string? Asset_path { get; set; } = default;
 
-	[DDLRegistration(0x45622ec7u)]
+	[DDLRegistration(0x885ac573u)]
 	public RivetAssetId Node_id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x45622ec7u)]
+	[DDLRegistration(0x4b76c710u)]
 	public string? Node_type { get; set; } = default;
 
-	[DDLRegistration(0x45622ec7u)]
+	[DDLRegistration(0xd2ae60a5u)]
 	public bool Is_enabled { get; set; } = false;
 
 	public static NodeGraphBreakpoint Create(DDLObject ddl) => new(ddl);

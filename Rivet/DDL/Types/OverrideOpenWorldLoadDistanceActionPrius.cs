@@ -18,7 +18,7 @@ public class OverrideOpenWorldLoadDistanceActionPrius : DDLObjectType, IDDLObjec
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x896f666fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
 	public static OverrideOpenWorldLoadDistanceActionPrius Create(DDLObject ddl) => new(ddl);

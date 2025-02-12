@@ -18,7 +18,7 @@ public class ShipMagnetTurnedOnEvent : EventBase, IDDLObjectType<ShipMagnetTurne
 		DifficultyLevel = ddl.GetValue<byte>(0xd2b2d773u, DifficultyLevel);
 	}
 
-	[DDLRegistration(0x8ade4f73u, description: "The game's current difficulty level, to help determine what magnet cone FX to use.")]
+	[DDLRegistration(0xd2b2d773u, description: "The game's current difficulty level, to help determine what magnet cone FX to use.")]
 	public byte DifficultyLevel { get; set; } = 0x01;
 
 	public new static ShipMagnetTurnedOnEvent Create(DDLObject ddl) => new(ddl);

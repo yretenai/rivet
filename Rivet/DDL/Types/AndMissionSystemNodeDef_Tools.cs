@@ -19,10 +19,10 @@ public class AndMissionSystemNodeDef_Tools : NodeBaseDef, IDDLObjectType<AndMiss
 		Output = ddl.GetObject<OutputPlugBoolean>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0x3f852adbu)]
+	[DDLRegistration(0x3d19ee29u)]
 	public List<InputPlugBoolean?> Inputs { get; set; } = [];
 
-	[DDLRegistration(0x3f852adbu)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugBoolean? Output { get; set; } = default;
 
 	public new static AndMissionSystemNodeDef_Tools Create(DDLObject ddl) => new(ddl);

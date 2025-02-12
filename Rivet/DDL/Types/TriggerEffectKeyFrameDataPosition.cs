@@ -18,7 +18,7 @@ public class TriggerEffectKeyFrameDataPosition : TriggerEffectKeyFrameDataBase, 
 		TriggerAnalogValue = ddl.GetValue<float>(0xdc88b6c9u, TriggerAnalogValue);
 	}
 
-	[DDLRegistration(0xe330c34cu, description: "0 = Trigger not pressed. 1 = trigger fully pressed.")]
+	[DDLRegistration(0xdc88b6c9u, description: "0 = Trigger not pressed. 1 = trigger fully pressed.")]
 	public float TriggerAnalogValue { get; set; } = 0.00f;
 
 	public new static TriggerEffectKeyFrameDataPosition Create(DDLObject ddl) => new(ddl);

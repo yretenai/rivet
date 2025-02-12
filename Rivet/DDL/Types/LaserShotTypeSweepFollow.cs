@@ -24,25 +24,25 @@ public class LaserShotTypeSweepFollow : BotComboLaserShotType, IDDLObjectType<La
 		TimeToStopAfterDamageTarget = ddl.GetValue<float>(0x19fdfb2bu, TimeToStopAfterDamageTarget);
 	}
 
-	[DDLRegistration(0x25927b42u, description: "How long it takes for laser to fully sweep curve before following")]
+	[DDLRegistration(0x0d88b95eu, description: "How long it takes for laser to fully sweep curve before following")]
 	public float LaserSweepTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x25927b42u, description: "How long to follow target with the laser shot")]
+	[DDLRegistration(0x543e7292u, description: "How long to follow target with the laser shot")]
 	public float LaserFollowTime { get; set; } = 1.50f;
 
-	[DDLRegistration(0x25927b42u)]
+	[DDLRegistration(0x49065dfdu)]
 	public float InitFollowSpeed { get; set; } = 4.00f;
 
-	[DDLRegistration(0x25927b42u)]
+	[DDLRegistration(0x09f9ef4fu)]
 	public float MaxFollowSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x25927b42u)]
+	[DDLRegistration(0x7203cb7cu)]
 	public float FollowAccel { get; set; } = 3.00f;
 
-	[DDLRegistration(0x25927b42u)]
+	[DDLRegistration(0x9f881bd0u)]
 	public float FollowDecel { get; set; } = 2.00f;
 
-	[DDLRegistration(0x25927b42u, description: "If greater than 0.0, the bot will stop firing after this amount of seconds after damaging its target")]
+	[DDLRegistration(0x19fdfb2bu, description: "If greater than 0.0, the bot will stop firing after this amount of seconds after damaging its target")]
 	public float TimeToStopAfterDamageTarget { get; set; } = -1.00f;
 
 	public new static LaserShotTypeSweepFollow Create(DDLObject ddl) => new(ddl);

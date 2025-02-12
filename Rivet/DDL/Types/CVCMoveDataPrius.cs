@@ -27,34 +27,34 @@ public class CVCMoveDataPrius : DDLObjectType, IDDLObjectType<CVCMoveDataPrius> 
 		ApplyActorScale = ddl.GetValue<bool>(0x3b6cec91u, ApplyActorScale);
 	}
 
-	[DDLRegistration(0xcc681e8du)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.50f;
 
-	[DDLRegistration(0xcc681e8du)]
+	[DDLRegistration(0x7be988d7u)]
 	public float HeightUp { get; set; } = 2.00f;
 
-	[DDLRegistration(0xcc681e8du)]
+	[DDLRegistration(0x18b154fau)]
 	public float HeightDown { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcc681e8du)]
+	[DDLRegistration(0x5354102fu)]
 	public float PushValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcc681e8du)]
+	[DDLRegistration(0x6bcc1e52u)]
 	public bool PushOnEqual { get; set; } = false;
 
-	[DDLRegistration(0xcc681e8du)]
+	[DDLRegistration(0x6e2a1af2u)]
 	public bool FullSpeedDeflection { get; set; } = false;
 
-	[DDLRegistration(0xcc681e8du)]
+	[DDLRegistration(0x19e2d4c8u)]
 	public float SoftRadiusInner { get; set; } = 0.25f;
 
-	[DDLRegistration(0xcc681e8du)]
+	[DDLRegistration(0x000bd750u)]
 	public float SoftRadiusOuter { get; set; } = 0.75f;
 
-	[DDLRegistration(0xcc681e8du)]
+	[DDLRegistration(0xa60463e3u)]
 	public bool AllowSoftCollisions { get; set; } = false;
 
-	[DDLRegistration(0xcc681e8du, description: "If TRUE the actor scale will get applied to the shape")]
+	[DDLRegistration(0x3b6cec91u, description: "If TRUE the actor scale will get applied to the shape")]
 	public bool ApplyActorScale { get; set; } = false;
 
 	public static CVCMoveDataPrius Create(DDLObject ddl) => new(ddl);

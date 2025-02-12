@@ -21,16 +21,16 @@ public class SetWeaponEquipableActionPrius : DDLObjectType, IDDLObjectType<SetWe
 		ForceUnequipIfNowUnequipable = ddl.GetValue<bool>(0x9a546549u, ForceUnequipIfNowUnequipable);
 	}
 
-	[DDLRegistration(0x4d230233u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0x4d230233u)]
+	[DDLRegistration(0x574be981u)]
 	public WeaponMacroType Weapon { get; set; } = WeaponMacroType.None;
 
-	[DDLRegistration(0x4d230233u)]
+	[DDLRegistration(0x46daa1c2u)]
 	public bool Equipable { get; set; } = false;
 
-	[DDLRegistration(0x4d230233u, description: "Force unequip if already equipped")]
+	[DDLRegistration(0x9a546549u, description: "Force unequip if already equipped")]
 	public bool ForceUnequipIfNowUnequipable { get; set; } = true;
 
 	public static SetWeaponEquipableActionPrius Create(DDLObject ddl) => new(ddl);

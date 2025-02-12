@@ -18,7 +18,7 @@ public class ChangeWeaponZoomEvent : EventBase, IDDLObjectType<ChangeWeaponZoomE
 		ZoomLevel = ddl.GetValue<int>(0x5c2f447cu, ZoomLevel);
 	}
 
-	[DDLRegistration(0xdd8f46acu)]
+	[DDLRegistration(0x5c2f447cu)]
 	public int ZoomLevel { get; set; } = 0;
 
 	public new static ChangeWeaponZoomEvent Create(DDLObject ddl) => new(ddl);

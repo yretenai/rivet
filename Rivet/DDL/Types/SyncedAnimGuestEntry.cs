@@ -20,13 +20,13 @@ public class SyncedAnimGuestEntry : DDLObjectType, IDDLObjectType<SyncedAnimGues
 		SyncOffsetJointHash = ddl.GetValue<uint>(0x7e7a3688u, SyncOffsetJointHash);
 	}
 
-	[DDLRegistration(0x82daf8a8u)]
+	[DDLRegistration(0x271d0a82u)]
 	public uint GuestActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x82daf8a8u)]
+	[DDLRegistration(0x4eff12f2u)]
 	public uint GuestAnimHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x82daf8a8u, description: "Used to make the host sync to a locator/joint on a guest instead of their actual position")]
+	[DDLRegistration(0x7e7a3688u, description: "Used to make the host sync to a locator/joint on a guest instead of their actual position")]
 	public uint SyncOffsetJointHash { get; set; } = 0x00000000;
 
 	public static SyncedAnimGuestEntry Create(DDLObject ddl) => new(ddl);

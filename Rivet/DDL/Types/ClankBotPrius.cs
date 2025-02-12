@@ -28,37 +28,37 @@ public class ClankBotPrius : DDLObjectType, IDDLObjectType<ClankBotPrius> {
 		ShakeData = ddl.GetObject<CameraShakingWithFallOffData>(0x9c710c08u);
 	}
 
-	[DDLRegistration(0x8dbc1d41u)]
+	[DDLRegistration(0x67f94adau)]
 	public x190611d9 Role { get; set; } = x190611d9.Base;
 
-	[DDLRegistration(0x8dbc1d41u, description: "Clank Bot")]
+	[DDLRegistration(0x42cf1de2u, description: "Clank Bot")]
 	public RivetAssetId ClankBot { get; set; } = default;
 
-	[DDLRegistration(0x8dbc1d41u, description: "PowerBot")]
+	[DDLRegistration(0x0e5df935u, description: "PowerBot")]
 	public RivetAssetId PowerBot { get; set; } = default;
 
-	[DDLRegistration(0x8dbc1d41u, description: "SpringBot")]
+	[DDLRegistration(0x1366e7c7u, description: "SpringBot")]
 	public RivetAssetId SpringBot { get; set; } = default;
 
-	[DDLRegistration(0x8dbc1d41u, description: "StretchBot")]
+	[DDLRegistration(0xc9d669e7u, description: "StretchBot")]
 	public RivetAssetId StretchBot { get; set; } = default;
 
-	[DDLRegistration(0x8dbc1d41u, description: "Invis Coll for stretch bot.")]
+	[DDLRegistration(0xc5cecd34u, description: "Invis Coll for stretch bot.")]
 	public RivetAssetId StretchPieces { get; set; } = default;
 
-	[DDLRegistration(0x8dbc1d41u, description: "Invis Coll for stretch bot.")]
+	[DDLRegistration(0x1d4afc57u, description: "Invis Coll for stretch bot.")]
 	public RivetAssetId StretchPieceVis { get; set; } = default;
 
-	[DDLRegistration(0x8dbc1d41u)]
+	[DDLRegistration(0x38e49f4au)]
 	public float ArcHeight { get; set; } = 0.50f;
 
-	[DDLRegistration(0x8dbc1d41u)]
+	[DDLRegistration(0x1d761e6fu)]
 	public float GravMultiplier { get; set; } = 2.00f;
 
-	[DDLRegistration(0x8dbc1d41u)]
+	[DDLRegistration(0x11b3976fu)]
 	public float SpringRadius { get; set; } = 0.75f;
 
-	[DDLRegistration(0x8dbc1d41u, description: "For bombs, the shake they will do when they explode.")]
+	[DDLRegistration(0x9c710c08u, description: "For bombs, the shake they will do when they explode.")]
 	public CameraShakingWithFallOffData? ShakeData { get; set; } = default;
 
 	public static ClankBotPrius Create(DDLObject ddl) => new(ddl);

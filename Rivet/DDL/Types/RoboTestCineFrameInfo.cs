@@ -25,28 +25,28 @@ public class RoboTestCineFrameInfo : DDLObjectType, IDDLObjectType<RoboTestCineF
 		ActionEvents = ddl.GetObjects<RobotTestActionEventInfo>(0xfa534adcu);
 	}
 
-	[DDLRegistration(0x9675bf31u, description: "Test we're a part of")]
+	[DDLRegistration(0x3006a975u, description: "Test we're a part of")]
 	public string? TestName { get; set; } = default;
 
-	[DDLRegistration(0x9675bf31u, description: "Cine time")]
+	[DDLRegistration(0x8c7ed954u, description: "Cine time")]
 	public float CurrentCineTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9675bf31u, description: "Cinematic status")]
+	[DDLRegistration(0x45782b7bu, description: "Cinematic status")]
 	public string? Status { get; set; } = default;
 
-	[DDLRegistration(0x9675bf31u, description: "Asset name ")]
+	[DDLRegistration(0xc8c00481u, description: "Asset name ")]
 	public string? CinematicAsset { get; set; } = default;
 
-	[DDLRegistration(0x9675bf31u, description: "Cine transform at the end of the frame")]
+	[DDLRegistration(0xf54f1ea1u, description: "Cine transform at the end of the frame")]
 	public DDLTransform? Transform { get; set; } = default;
 
-	[DDLRegistration(0x9675bf31u, description: "Shot and actor enabled this frame")]
+	[DDLRegistration(0x81b250f5u, description: "Shot and actor enabled this frame")]
 	public List<RobotTestCineEnableShotActor?> EnabledShotActors { get; set; } = [];
 
-	[DDLRegistration(0x9675bf31u, description: "Actor info this frame")]
+	[DDLRegistration(0x9950b1b8u, description: "Actor info this frame")]
 	public List<RobotestCineFrameActorInfo?> ActorInfos { get; set; } = [];
 
-	[DDLRegistration(0x9675bf31u, description: "Action events this frame")]
+	[DDLRegistration(0xfa534adcu, description: "Action events this frame")]
 	public List<RobotTestActionEventInfo?> ActionEvents { get; set; } = [];
 
 	public static RoboTestCineFrameInfo Create(DDLObject ddl) => new(ddl);

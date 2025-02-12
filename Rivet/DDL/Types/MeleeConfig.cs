@@ -20,13 +20,13 @@ public class MeleeConfig : ConfigBase, IDDLObjectType<MeleeConfig> {
 		MeleeAttackList = ddl.GetObjects<MeleeAttackData>(0x1b9dd2e8u);
 	}
 
-	[DDLRegistration(0xd3e3c0f8u, "Streak Config")]
+	[DDLRegistration(0xb6282e07u, "Streak Config")]
 	public RivetAssetId StreakConfig { get; set; } = default;
 
-	[DDLRegistration(0xd3e3c0f8u)]
+	[DDLRegistration(0x0637d96cu)]
 	public DamageKnockbackOverrideData? ThrownOverrideData { get; set; } = default;
 
-	[DDLRegistration(0xd3e3c0f8u, "Melee Attack List")]
+	[DDLRegistration(0x1b9dd2e8u, "Melee Attack List")]
 	public List<MeleeAttackData?> MeleeAttackList { get; set; } = [];
 
 	public new static MeleeConfig Create(DDLObject ddl) => new(ddl);

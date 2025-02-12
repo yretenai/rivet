@@ -23,22 +23,22 @@ public class DirectionHeuristics : DDLObjectType, IDDLObjectType<DirectionHeuris
 		FlankDist = ddl.GetValue<float>(0x3d1e098au, FlankDist);
 	}
 
-	[DDLRegistration(0xe39b3409u, description: "How much we prioritize targets our phalanx wants us to target. Not used by default.")]
+	[DDLRegistration(0x1e7b2795u, description: "How much we prioritize targets our phalanx wants us to target. Not used by default.")]
 	public float PhalanxWeight { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe39b3409u, description: "How much we care about aiming in the same direction as everyone else.")]
+	[DDLRegistration(0xf4463a64u, description: "How much we care about aiming in the same direction as everyone else.")]
 	public float BattleAxisWeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe39b3409u)]
+	[DDLRegistration(0x656102feu)]
 	public float BattleAxisSideDistMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe39b3409u)]
+	[DDLRegistration(0x596c3da7u)]
 	public float BattleAxisSideDistMax { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe39b3409u, description: "How mad we get at people flanking us.")]
+	[DDLRegistration(0x238a9617u, description: "How mad we get at people flanking us.")]
 	public float FlankWeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe39b3409u, description: "How far ahead of the pack an enemy has to go to count as flanking")]
+	[DDLRegistration(0x3d1e098au, description: "How far ahead of the pack an enemy has to go to count as flanking")]
 	public float FlankDist { get; set; } = 5.00f;
 
 	public static DirectionHeuristics Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PlayAnimClipEngineItem : DDLObjectType, IDDLObjectType<PlayAnimClip
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0xdace5495u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
 	public static PlayAnimClipEngineItem Create(DDLObject ddl) => new(ddl);

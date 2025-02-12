@@ -19,10 +19,10 @@ public class SoundListenerPriority : DDLObjectType, IDDLObjectType<SoundListener
 		Priority = ddl.GetValue<byte>(0x98a76157u, Priority);
 	}
 
-	[DDLRegistration(0x944b8ef2u, description: "Which client this is")]
+	[DDLRegistration(0xf93c4a32u, description: "Which client this is")]
 	public x803b6ebb Client { get; set; } = x803b6ebb.None;
 
-	[DDLRegistration(0x944b8ef2u, description: "What priority this client has. A higher number = a greater override")]
+	[DDLRegistration(0x98a76157u, description: "What priority this client has. A higher number = a greater override")]
 	public byte Priority { get; set; } = 0x00;
 
 	public static SoundListenerPriority Create(DDLObject ddl) => new(ddl);

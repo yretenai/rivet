@@ -23,22 +23,22 @@ public class VaultEntry : DDLObjectType, IDDLObjectType<VaultEntry> {
 		Error = ddl.GetEnum<xead8c4ad>(0x448e70b0u, xead8c4adValues.Lookup);
 	}
 
-	[DDLRegistration(0x9c24e5acu)]
+	[DDLRegistration(0xa8c8332du)]
 	public RivetAssetId VaultId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9c24e5acu)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public RivetAssetId Path { get; set; } = default;
 
-	[DDLRegistration(0x9c24e5acu)]
+	[DDLRegistration(0x51abd94eu)]
 	public string? CreatedBy { get; set; } = default;
 
-	[DDLRegistration(0x9c24e5acu)]
+	[DDLRegistration(0x37cf2924u)]
 	public string? ModifiedBy { get; set; } = default;
 
-	[DDLRegistration(0x9c24e5acu)]
+	[DDLRegistration(0x45782b7bu)]
 	public x26d01116 Status { get; set; } = x26d01116.UpToDate;
 
-	[DDLRegistration(0x9c24e5acu)]
+	[DDLRegistration(0x448e70b0u)]
 	public xead8c4ad Error { get; set; } = xead8c4ad.Ok;
 
 	public static VaultEntry Create(DDLObject ddl) => new(ddl);

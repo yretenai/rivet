@@ -19,10 +19,10 @@ public class CheckPuzzleTargetTypeActionPrius : DDLObjectType, IDDLObjectType<Ch
 		TargetType = ddl.GetBitset<xf32dacf0>(0x75a19d21u, xf32dacf0Values.Lookup);
 	}
 
-	[DDLRegistration(0x4dce5228u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Puzzle;
 
-	[DDLRegistration(0x4dce5228u)]
+	[DDLRegistration(0x75a19d21u)]
 	public xf32dacf0 TargetType { get; set; } = (xf32dacf0) 0x00000000;
 
 	public static CheckPuzzleTargetTypeActionPrius Create(DDLObject ddl) => new(ddl);

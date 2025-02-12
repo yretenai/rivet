@@ -18,7 +18,7 @@ public class DialogRuleArray : DDLObjectType, IDDLObjectType<DialogRuleArray> {
 		Rules = ddl.GetObjects<DialogRuleContainer>(0x90c955fdu);
 	}
 
-	[DDLRegistration(0x3a0fa4f4u)]
+	[DDLRegistration(0x90c955fdu)]
 	public List<DialogRuleContainer?> Rules { get; set; } = [];
 
 	public static DialogRuleArray Create(DDLObject ddl) => new(ddl);

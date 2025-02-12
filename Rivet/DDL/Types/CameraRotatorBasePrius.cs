@@ -20,13 +20,13 @@ public class CameraRotatorBasePrius : DDLObjectType, IDDLObjectType<CameraRotato
 		TurnSpeedMax = ddl.GetValue<float>(0xa66b2ab3u, TurnSpeedMax);
 	}
 
-	[DDLRegistration(0xd3332971u, "Turn Speed Accel")]
+	[DDLRegistration(0x3757494cu, "Turn Speed Accel")]
 	public float TurnSpeedAccel { get; set; } = 2000.00f;
 
-	[DDLRegistration(0xd3332971u, "Turn Speed Decel")]
+	[DDLRegistration(0xdadc99e0u, "Turn Speed Decel")]
 	public float TurnSpeedDecel { get; set; } = 1000.00f;
 
-	[DDLRegistration(0xd3332971u, "Turn Speed Max")]
+	[DDLRegistration(0xa66b2ab3u, "Turn Speed Max")]
 	public float TurnSpeedMax { get; set; } = 2000.00f;
 
 	public static CameraRotatorBasePrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DestroyedEvent : EventBase, IDDLObjectType<DestroyedEvent> {
 		Destroyer = ddl.GetValue<uint>(0xadb5f863u, Destroyer);
 	}
 
-	[DDLRegistration(0xacbefeb2u)]
+	[DDLRegistration(0xadb5f863u)]
 	public uint Destroyer { get; set; } = 0x00000000;
 
 	public new static DestroyedEvent Create(DDLObject ddl) => new(ddl);

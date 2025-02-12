@@ -19,10 +19,10 @@ public class PickupArachnodroidPrius : GamePickupItemPrius, IDDLObjectType<Picku
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x57883b24u)]
+	[DDLRegistration(0x467560d9u)]
 	public x6310440e PickupType { get; set; } = x6310440e.Health;
 
-	[DDLRegistration(0x57883b24u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 5.00f;
 
 	public new static PickupArachnodroidPrius Create(DDLObject ddl) => new(ddl);

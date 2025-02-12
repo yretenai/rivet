@@ -19,10 +19,10 @@ public class ECMField : DDLObjectType, IDDLObjectType<ECMField> {
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0x9d1b27d1u, "Field Type")]
+	[DDLRegistration(0xbc4e9799u, "Field Type")]
 	public x89ca8df1 Type { get; set; } = x89ca8df1.FieldResponse;
 
-	[DDLRegistration(0x9d1b27d1u, "Field Identifer or Value")]
+	[DDLRegistration(0x042494f5u, "Field Identifer or Value")]
 	public string? Value { get; set; } = default;
 
 	public static ECMField Create(DDLObject ddl) => new(ddl);

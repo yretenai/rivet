@@ -19,10 +19,10 @@ public class FadeMasterVolumeActionPrius : DDLObjectType, IDDLObjectType<FadeMas
 		FadeTime = ddl.GetValue<float>(0x8833d162u, FadeTime);
 	}
 
-	[DDLRegistration(0xc759c4ffu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
-	[DDLRegistration(0xc759c4ffu, description: "The time to take for the fade, overridden by the FadeTime input.")]
+	[DDLRegistration(0x8833d162u, description: "The time to take for the fade, overridden by the FadeTime input.")]
 	public float FadeTime { get; set; } = 0.00f;
 
 	public static FadeMasterVolumeActionPrius Create(DDLObject ddl) => new(ddl);

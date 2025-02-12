@@ -20,13 +20,13 @@ public class DevstatsBigObjectivePOIsDisabledEvent : EventBase, IDDLObjectType<D
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x7b2b9128u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x7b2b9128u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x7b2b9128u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static DevstatsBigObjectivePOIsDisabledEvent Create(DDLObject ddl) => new(ddl);

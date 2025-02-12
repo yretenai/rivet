@@ -19,10 +19,10 @@ public class MasterItemLoadoutList : ConfigBase, IDDLObjectType<MasterItemLoadou
 		MissionLoadouts = ddl.GetObjects<MissionTestLoadout>(0x9c4b4d92u);
 	}
 
-	[DDLRegistration(0x79fad5c0u, "Item Loadout Category List", "Item loadout category list(s)")]
+	[DDLRegistration(0x5ba74a3eu, "Item Loadout Category List", "Item loadout category list(s)")]
 	public List<ItemLoadoutCategoryList?> ItemLoadoutCategoryList { get; set; } = [];
 
-	[DDLRegistration(0x79fad5c0u, "Mission Loadouts", "Test loadouts for missions")]
+	[DDLRegistration(0x9c4b4d92u, "Mission Loadouts", "Test loadouts for missions")]
 	public List<MissionTestLoadout?> MissionLoadouts { get; set; } = [];
 
 	public new static MasterItemLoadoutList Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class ClankPackConfig : ConfigBase, IDDLObjectType<ClankPackConfig> {
 		HasHelipack = ddl.GetValue<bool>(0x853fe62cu, HasHelipack);
 	}
 
-	[DDLRegistration(0x079d6844u)]
+	[DDLRegistration(0x8aace5b8u)]
 	public RivetAssetId ClankPackActor { get; set; } = default;
 
-	[DDLRegistration(0x079d6844u)]
+	[DDLRegistration(0xc244423au)]
 	public string? RatchetAttachLocator { get; set; } = default;
 
-	[DDLRegistration(0x079d6844u)]
+	[DDLRegistration(0xae989d31u)]
 	public string? ClankAttachLocator { get; set; } = default;
 
-	[DDLRegistration(0x079d6844u)]
+	[DDLRegistration(0xffdc5057u)]
 	public bool BrokenClank { get; set; } = false;
 
-	[DDLRegistration(0x079d6844u)]
+	[DDLRegistration(0x853fe62cu)]
 	public bool HasHelipack { get; set; } = true;
 
 	public new static ClankPackConfig Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class NefariousFinaleMechHeartWeakspotData : DDLObjectType, IDDLObjectTyp
 		Partial_Anim = ddl.GetString(0x93758e1c) ?? Partial_Anim;
 	}
 
-	[DDLRegistration(0xd751ca1cu)]
+	[DDLRegistration(0xb48a742fu)]
 	public string? MaterialMappingName_Trim { get; set; } = default;
 
-	[DDLRegistration(0xd751ca1cu)]
+	[DDLRegistration(0x096c4750u)]
 	public string? ConstantOverride_Trim { get; set; } = default;
 
-	[DDLRegistration(0xd751ca1cu)]
+	[DDLRegistration(0x297f833du)]
 	public string? MaterialMappingName_Bulb { get; set; } = default;
 
-	[DDLRegistration(0xd751ca1cu)]
+	[DDLRegistration(0x9499b042u)]
 	public string? ConstantOverride_Bulb { get; set; } = "Crack_Threshold";
 
-	[DDLRegistration(0xd751ca1cu)]
+	[DDLRegistration(0x93758e1cu)]
 	public string? Partial_Anim { get; set; } = default;
 
 	public static NefariousFinaleMechHeartWeakspotData Create(DDLObject ddl) => new(ddl);

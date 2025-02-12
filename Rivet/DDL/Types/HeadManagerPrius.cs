@@ -27,34 +27,34 @@ public class HeadManagerPrius : DDLObjectType, IDDLObjectType<HeadManagerPrius> 
 		CustomJointMap = ddl.GetObjects<CustomJointMapEntry>(0x38cdd168u);
 	}
 
-	[DDLRegistration(0x924d450cu, "Head Actor", "Head actor asset")]
+	[DDLRegistration(0xe676823cu, "Head Actor", "Head actor asset")]
 	public RivetAssetId HeadActor { get; set; } = default;
 
-	[DDLRegistration(0x924d450cu, "Head Model", "Model asset, ignored if head actor asset is specified")]
+	[DDLRegistration(0x7596a61cu, "Head Model", "Model asset, ignored if head actor asset is specified")]
 	public RivetAssetId HeadModel { get; set; } = default;
 
-	[DDLRegistration(0x924d450cu, "Auto Match Joints")]
+	[DDLRegistration(0x3aa872c6u, "Auto Match Joints")]
 	public bool AutoMatchJoints { get; set; } = true;
 
-	[DDLRegistration(0x924d450cu, "Apply model variant")]
+	[DDLRegistration(0xe3ff1024u, "Apply model variant")]
 	public bool UseModelVariant { get; set; } = false;
 
-	[DDLRegistration(0x924d450cu, "Enabled update on jobs")]
+	[DDLRegistration(0x28a48cadu, "Enabled update on jobs")]
 	public bool AllowUpdateAsync { get; set; } = true;
 
-	[DDLRegistration(0x924d450cu, "Enable fast BSphere")]
+	[DDLRegistration(0x33c7434au, "Enable fast BSphere")]
 	public bool AllowFastBSphere { get; set; } = false;
 
-	[DDLRegistration(0x924d450cu, "Drive the head anim material component")]
+	[DDLRegistration(0x62d47bb2u, "Drive the head anim material component")]
 	public bool DriveAnimMaterialComponent { get; set; } = false;
 
-	[DDLRegistration(0x924d450cu, "ModelVariant file")]
+	[DDLRegistration(0x27a47dadu, "ModelVariant file")]
 	public RivetAssetId ModelVariant { get; set; } = default;
 
-	[DDLRegistration(0x924d450cu, "Named Variant", "The specific named variant within the .modelvariant file that you want to apply.")]
+	[DDLRegistration(0x1320265au, "Named Variant", "The specific named variant within the .modelvariant file that you want to apply.")]
 	public string? VariantName { get; set; } = default;
 
-	[DDLRegistration(0x924d450cu, "Custom Joint Map")]
+	[DDLRegistration(0x38cdd168u, "Custom Joint Map")]
 	public List<CustomJointMapEntry?> CustomJointMap { get; set; } = [];
 
 	public static HeadManagerPrius Create(DDLObject ddl) => new(ddl);

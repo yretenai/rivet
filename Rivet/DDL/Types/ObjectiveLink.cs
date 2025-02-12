@@ -20,13 +20,13 @@ public class ObjectiveLink : ActivityLinkBase, IDDLObjectType<ObjectiveLink> {
 		EndObjectiveName = ddl.GetString(0x0f9039d9) ?? EndObjectiveName;
 	}
 
-	[DDLRegistration(0x30fb8c6cu, description: "The mission in which these objectives reside.")]
+	[DDLRegistration(0xa5c30e60u, description: "The mission in which these objectives reside.")]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x30fb8c6cu, description: "This activity should be active between StartObjectiveName and EndObjectiveName, inclusive")]
+	[DDLRegistration(0xe2320ffau, description: "This activity should be active between StartObjectiveName and EndObjectiveName, inclusive")]
 	public string? StartObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0x30fb8c6cu, description: "If left blank, activity is only active during StartObjectiveName, otherwise this activity should be active between StartObjectiveName and EndObjectiveName inclusive")]
+	[DDLRegistration(0x0f9039d9u, description: "If left blank, activity is only active during StartObjectiveName, otherwise this activity should be active between StartObjectiveName and EndObjectiveName inclusive")]
 	public string? EndObjectiveName { get; set; } = default;
 
 	public new static ObjectiveLink Create(DDLObject ddl) => new(ddl);

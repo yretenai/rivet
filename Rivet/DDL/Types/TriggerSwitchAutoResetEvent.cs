@@ -18,7 +18,7 @@ public class TriggerSwitchAutoResetEvent : EventBase, IDDLObjectType<TriggerSwit
 		SequenceNumber = ddl.GetValue<short>(0x32d0ae43u, SequenceNumber);
 	}
 
-	[DDLRegistration(0xd2b36969u)]
+	[DDLRegistration(0x32d0ae43u)]
 	public short SequenceNumber { get; set; } = 0;
 
 	public new static TriggerSwitchAutoResetEvent Create(DDLObject ddl) => new(ddl);

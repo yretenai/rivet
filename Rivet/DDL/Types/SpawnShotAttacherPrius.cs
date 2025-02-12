@@ -18,7 +18,7 @@ public class SpawnShotAttacherPrius : DDLObjectType, IDDLObjectType<SpawnShotAtt
 		AttachActorAsset = ddl.GetValue<RivetAssetId>(0x2113b95au, AttachActorAsset);
 	}
 
-	[DDLRegistration(0xa22d3742u)]
+	[DDLRegistration(0x2113b95au)]
 	public RivetAssetId AttachActorAsset { get; set; } = default;
 
 	public static SpawnShotAttacherPrius Create(DDLObject ddl) => new(ddl);

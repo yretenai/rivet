@@ -18,7 +18,7 @@ public class UDSWebApiReward : DDLObjectType, IDDLObjectType<UDSWebApiReward> {
 		Name = ddl.GetDictionary<string, string>(0xce811188, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
 	}
 
-	[DDLRegistration(0x32ec9088u)]
+	[DDLRegistration(0xce811188u)]
 	public Dictionary<string, string?> Name { get; set; } = [];
 
 	public static UDSWebApiReward Create(DDLObject ddl) => new(ddl);

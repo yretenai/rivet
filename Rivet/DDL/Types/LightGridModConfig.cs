@@ -20,13 +20,13 @@ public class LightGridModConfig : ConfigBase, IDDLObjectType<LightGridModConfig>
 		ColorMods = ddl.GetObjects<ColorModulation>(0xdc1f2ebdu);
 	}
 
-	[DDLRegistration(0x54ebf356u, "AO Strength", "The strength of the ambient occlusion effect (0 = disabled)")]
+	[DDLRegistration(0x6b20e09fu, "AO Strength", "The strength of the ambient occlusion effect (0 = disabled)")]
 	public float AoStength { get; set; } = 1.00f;
 
-	[DDLRegistration(0x54ebf356u, "AO Verticality", "How strongly the ao is biased vertically (0 = no bias)")]
+	[DDLRegistration(0x88441f9eu, "AO Verticality", "How strongly the ao is biased vertically (0 = no bias)")]
 	public float AoVerticality { get; set; } = 1.00f;
 
-	[DDLRegistration(0x54ebf356u, "Color Modulations", "A list of color modulations by height")]
+	[DDLRegistration(0xdc1f2ebdu, "Color Modulations", "A list of color modulations by height")]
 	public List<ColorModulation?> ColorMods { get; set; } = [];
 
 	public new static LightGridModConfig Create(DDLObject ddl) => new(ddl);

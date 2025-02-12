@@ -18,7 +18,7 @@ public class AnimChunkEvent : EventBase, IDDLObjectType<AnimChunkEvent> {
 		Data = ddl.GetObject<AnimChunkData>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0xbbeea700u)]
+	[DDLRegistration(0x9d6333d3u)]
 	public AnimChunkData? Data { get; set; } = default;
 
 	public new static AnimChunkEvent Create(DDLObject ddl) => new(ddl);

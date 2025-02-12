@@ -24,25 +24,25 @@ public class UI_OutsourceMaterialDef : DDLObjectType, IDDLObjectType<UI_Outsourc
 		Textures = ddl.GetValues<RivetAssetId>(0x5f860466u);
 	}
 
-	[DDLRegistration(0x69b41e78u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x69b41e78u, "Shader", "The shader to use for this material.")]
+	[DDLRegistration(0x8be88c69u, "Shader", "The shader to use for this material.")]
 	public string? TemplatePath { get; set; } = "required/materials/basic_normal_gloss.materialgraph";
 
-	[DDLRegistration(0x69b41e78u, "A/V Material", "Audio-visual material response for e.g. FX. Returned from collisions and forwarded by events into Conduits.")]
+	[DDLRegistration(0xe73ba957u, "A/V Material", "Audio-visual material response for e.g. FX. Returned from collisions and forwarded by events into Conduits.")]
 	public string? AVMaterial { get; set; } = default;
 
-	[DDLRegistration(0x69b41e78u, description: "Both sides of geometry with this material will be drawn (no back-face culling)")]
+	[DDLRegistration(0x3e799799u, description: "Both sides of geometry with this material will be drawn (no back-face culling)")]
 	public bool DoubleSided { get; set; } = false;
 
-	[DDLRegistration(0x69b41e78u, "Sort Triangles", "Sort Triangles back to front when alpha blending is enabled")]
+	[DDLRegistration(0x38ec511cu, "Sort Triangles", "Sort Triangles back to front when alpha blending is enabled")]
 	public bool SortTriangles { get; set; } = false;
 
-	[DDLRegistration(0x69b41e78u)]
+	[DDLRegistration(0xa731268eu)]
 	public MaterialAlpha? AlphaProperties { get; set; } = default;
 
-	[DDLRegistration(0x69b41e78u, description: "The textures used by this material.")]
+	[DDLRegistration(0x5f860466u, description: "The textures used by this material.")]
 	public List<RivetAssetId> Textures { get; set; } = [];
 
 	public static UI_OutsourceMaterialDef Create(DDLObject ddl) => new(ddl);

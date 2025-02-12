@@ -18,7 +18,7 @@ public class SkinItemCompanionItemListElement : DDLObjectType, IDDLObjectType<Sk
 		CompanionItem = ddl.GetObject<AssetReferenceDef>(0x6561b09eu);
 	}
 
-	[DDLRegistration(0x10a7f3e9u, "Companion Item", "Companion SkinItemConfig file")]
+	[DDLRegistration(0x6561b09eu, "Companion Item", "Companion SkinItemConfig file")]
 	public AssetReferenceDef? CompanionItem { get; set; } = default;
 
 	public static SkinItemCompanionItemListElement Create(DDLObject ddl) => new(ddl);

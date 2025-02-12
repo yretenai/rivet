@@ -19,10 +19,10 @@ public class SubShotConfig : ConfigBase, IDDLObjectType<SubShotConfig> {
 		SubShotPrius = ddl.GetObject<ShotBasePrius>(0x3113c837u);
 	}
 
-	[DDLRegistration(0x45f2be71u)]
+	[DDLRegistration(0x57e2bc91u)]
 	public RivetAssetId SubShotActor { get; set; } = default;
 
-	[DDLRegistration(0x45f2be71u)]
+	[DDLRegistration(0x3113c837u)]
 	public ShotBasePrius? SubShotPrius { get; set; } = default;
 
 	public new static SubShotConfig Create(DDLObject ddl) => new(ddl);

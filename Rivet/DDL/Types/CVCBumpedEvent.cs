@@ -20,13 +20,13 @@ public class CVCBumpedEvent : EventBase, IDDLObjectType<CVCBumpedEvent> {
 		IntersectionNormal = ddl.GetObject<DDLVector3>(0xaf83ccf3u);
 	}
 
-	[DDLRegistration(0x74534a1cu)]
+	[DDLRegistration(0x65b783f6u)]
 	public uint BumpingActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x74534a1cu)]
+	[DDLRegistration(0xf682d69fu)]
 	public uint BumpedActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x74534a1cu)]
+	[DDLRegistration(0xaf83ccf3u)]
 	public DDLVector3? IntersectionNormal { get; set; } = default;
 
 	public new static CVCBumpedEvent Create(DDLObject ddl) => new(ddl);

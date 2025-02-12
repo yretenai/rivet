@@ -18,7 +18,7 @@ public class AimAssistSnapLocationJoint : AimAssistSnapLocation, IDDLObjectType<
 		JointName = ddl.GetString(0x5ba51db8) ?? JointName;
 	}
 
-	[DDLRegistration(0x2079caf5u, "Joint Name")]
+	[DDLRegistration(0x5ba51db8u, "Joint Name")]
 	public string? JointName { get; set; } = default;
 
 	public new static AimAssistSnapLocationJoint Create(DDLObject ddl) => new(ddl);

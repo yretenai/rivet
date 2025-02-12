@@ -18,7 +18,7 @@ public class AlembicImportInfo : DDLObjectType, IDDLObjectType<AlembicImportInfo
 		Actors = ddl.GetObjects<AlembicActor>(0xe153be82u);
 	}
 
-	[DDLRegistration(0xac7e9763u, description: "Actor in cinematic")]
+	[DDLRegistration(0xe153be82u, description: "Actor in cinematic")]
 	public List<AlembicActor?> Actors { get; set; } = [];
 
 	public static AlembicImportInfo Create(DDLObject ddl) => new(ddl);

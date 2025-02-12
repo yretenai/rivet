@@ -19,10 +19,10 @@ public class PhotoLightData : DDLObjectType, IDDLObjectType<PhotoLightData> {
 		MaxIntensity = ddl.GetValue<float>(0xf7283102u, MaxIntensity);
 	}
 
-	[DDLRegistration(0x74cece71u)]
+	[DDLRegistration(0x675b21e8u)]
 	public float MinIntensity { get; set; } = 0.10f;
 
-	[DDLRegistration(0x74cece71u)]
+	[DDLRegistration(0xf7283102u)]
 	public float MaxIntensity { get; set; } = 20.00f;
 
 	public static PhotoLightData Create(DDLObject ddl) => new(ddl);

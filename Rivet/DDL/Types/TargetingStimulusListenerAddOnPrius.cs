@@ -20,13 +20,13 @@ public class TargetingStimulusListenerAddOnPrius : DDLObjectType, IDDLObjectType
 		ListenRadius = ddl.GetValue<float>(0xc03b8831u, ListenRadius);
 	}
 
-	[DDLRegistration(0xbd5946bbu, description: "With each event, target confirmation becomes this much closer to being confirmed.")]
+	[DDLRegistration(0x8c4af54bu, description: "With each event, target confirmation becomes this much closer to being confirmed.")]
 	public float BonusConfirmTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbd5946bbu)]
+	[DDLRegistration(0x504e1083u)]
 	public float Aggro { get; set; } = 15.00f;
 
-	[DDLRegistration(0xbd5946bbu)]
+	[DDLRegistration(0xc03b8831u)]
 	public float ListenRadius { get; set; } = 30.00f;
 
 	public static TargetingStimulusListenerAddOnPrius Create(DDLObject ddl) => new(ddl);

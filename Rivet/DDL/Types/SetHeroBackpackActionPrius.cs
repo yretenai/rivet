@@ -21,16 +21,16 @@ public class SetHeroBackpackActionPrius : DDLObjectType, IDDLObjectType<SetHeroB
 		OverrideBackpackConfig = ddl.GetValue<RivetAssetId>(0xde895c83u, OverrideBackpackConfig);
 	}
 
-	[DDLRegistration(0xa02f802bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0xa02f802bu, "Affected Heroes", "What heroes should this change apply to?")]
+	[DDLRegistration(0x4c858936u, "Affected Heroes", "What heroes should this change apply to?")]
 	public HeroTypeFlags AffectedCharacters { get; set; } = (HeroTypeFlags) 0x00000005;
 
-	[DDLRegistration(0xa02f802bu, "Has Backpack?", "Should the hero even have a backpack at all?")]
+	[DDLRegistration(0x6b263f42u, "Has Backpack?", "Should the hero even have a backpack at all?")]
 	public bool HasBackpack { get; set; } = true;
 
-	[DDLRegistration(0xa02f802bu, "Backpack Config", "Backpack config to swap to.")]
+	[DDLRegistration(0xde895c83u, "Backpack Config", "Backpack config to swap to.")]
 	public RivetAssetId OverrideBackpackConfig { get; set; } = default;
 
 	public static SetHeroBackpackActionPrius Create(DDLObject ddl) => new(ddl);

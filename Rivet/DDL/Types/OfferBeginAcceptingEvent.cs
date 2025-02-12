@@ -18,7 +18,7 @@ public class OfferBeginAcceptingEvent : EventBase, IDDLObjectType<OfferBeginAcce
 		Instigator = ddl.GetValue<uint>(0x33f2e3d5u, Instigator);
 	}
 
-	[DDLRegistration(0x0cfa6a65u)]
+	[DDLRegistration(0x33f2e3d5u)]
 	public uint Instigator { get; set; } = 0x00000000;
 
 	public new static OfferBeginAcceptingEvent Create(DDLObject ddl) => new(ddl);

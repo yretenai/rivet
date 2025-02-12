@@ -20,13 +20,13 @@ public class ModifyResult : DDLObjectType, IDDLObjectType<ModifyResult> {
 		LastChanged = ddl.GetString(0x92a630e4) ?? LastChanged;
 	}
 
-	[DDLRegistration(0x2f363b40u, description: "Token indicating what change number this was in the changelog.")]
+	[DDLRegistration(0x46646dfau, description: "Token indicating what change number this was in the changelog.")]
 	public ulong Token { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x2f363b40u, description: "Information about any errors that were encountered.")]
+	[DDLRegistration(0x448e70b0u, description: "Information about any errors that were encountered.")]
 	public string? Error { get; set; } = default;
 
-	[DDLRegistration(0x2f363b40u, description: "If the change was successful, contains time that the change was made.")]
+	[DDLRegistration(0x92a630e4u, description: "If the change was successful, contains time that the change was made.")]
 	public string? LastChanged { get; set; } = "";
 
 	public static ModifyResult Create(DDLObject ddl) => new(ddl);

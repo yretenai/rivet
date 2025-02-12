@@ -19,10 +19,10 @@ public class UIHUDIconToggleOption : DDLObjectType, IDDLObjectType<UIHUDIconTogg
 		ToggleOnValue = ddl.GetValue<byte>(0xe227ea36u, ToggleOnValue);
 	}
 
-	[DDLRegistration(0x61ec92e9u)]
+	[DDLRegistration(0x0f172a74u)]
 	public x33afe7f4 OptionID { get; set; } = x33afe7f4.Resume;
 
-	[DDLRegistration(0x61ec92e9u)]
+	[DDLRegistration(0xe227ea36u)]
 	public byte ToggleOnValue { get; set; } = 0x01;
 
 	public static UIHUDIconToggleOption Create(DDLObject ddl) => new(ddl);

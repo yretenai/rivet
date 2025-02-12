@@ -21,16 +21,16 @@ public class PulseMineSpawnData : AttachableShotSpawnData, IDDLObjectType<PulseM
 		ShotInterval = ddl.GetValue<float>(0x09a94546u, ShotInterval);
 	}
 
-	[DDLRegistration(0xb3c1d029u)]
+	[DDLRegistration(0x227a02fdu)]
 	public uint ConfigPath { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb3c1d029u)]
+	[DDLRegistration(0x1138b034u)]
 	public uint SubShotAsset { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb3c1d029u)]
+	[DDLRegistration(0x1731e614u)]
 	public byte ShotsToSpawn { get; set; } = 0x03;
 
-	[DDLRegistration(0xb3c1d029u)]
+	[DDLRegistration(0x09a94546u)]
 	public float ShotInterval { get; set; } = 1.00f;
 
 	public new static PulseMineSpawnData Create(DDLObject ddl) => new(ddl);

@@ -38,67 +38,67 @@ public class SaveSettings : DDLObjectType, IDDLObjectType<SaveSettings> {
 		FatalAssertOnSaveIconDeadlock = ddl.GetValue<bool>(0x6a6ec0d5u, FatalAssertOnSaveIconDeadlock);
 	}
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0x43184e68u)]
 	public int NumUsers { get; set; } = 4;
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0x49c19a2au)]
 	public List<uint> SaveVersion { get; set; } = [];
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0x78bd86e4u)]
 	public List<string?> SaveTypeNames { get; set; } = [];
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0x3c1048cdu)]
 	public List<uint> SaveTypeSizes { get; set; } = [];
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0xd5a36e11u)]
 	public List<uint> NewTypeSizes { get; set; } = [];
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0xd1070d8du)]
 	public uint CRCWriterHeapSize { get; set; } = 0x00200000;
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0x42fafa74u)]
 	public List<bool> SaveTypeSlots { get; set; } = [];
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0x3265b4aau)]
 	public string? Title { get; set; } = "GameName";
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0x735bf2fdu)]
 	public bool UseCRC { get; set; } = false;
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0xf2e088deu)]
 	public bool ShowMessages { get; set; } = true;
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0x76224e57u)]
 	public bool CaptureSaveIcons { get; set; } = false;
 
-	[DDLRegistration(0xee67c8ddu, description: "Each user may have at most this many snapshot saves.")]
+	[DDLRegistration(0xbd2c1b26u, description: "Each user may have at most this many snapshot saves.")]
 	public int MaxSnapshotsPerSlot { get; set; } = 16;
 
-	[DDLRegistration(0xee67c8ddu, "Limits the New Save option in the save dialog for manual saves")]
+	[DDLRegistration(0x5b68d7c4u, "Limits the New Save option in the save dialog for manual saves")]
 	public int MaxSavesPerSlot { get; set; } = 4;
 
-	[DDLRegistration(0xee67c8ddu, "TTY debug level")]
+	[DDLRegistration(0x9d856168u, "TTY debug level")]
 	public int DebugVerbosity { get; set; } = 0;
 
-	[DDLRegistration(0xee67c8ddu, "Debug window")]
+	[DDLRegistration(0x8101b35au, "Debug window")]
 	public int DebugUI { get; set; } = 0;
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0xa028247fu)]
 	public bool ExtSaveEnable { get; set; } = true;
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0x6e46160eu)]
 	public bool ExtLoadEnable { get; set; } = true;
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0x2b95d71bu)]
 	public bool ShowSaveIcon { get; set; } = true;
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0x3644a148u)]
 	public float MinSaveIconTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0xee67c8ddu)]
+	[DDLRegistration(0xcef2cdd4u)]
 	public bool FatalAssertOnSaveBufferOverflow { get; set; } = false;
 
-	[DDLRegistration(0xee67c8ddu, "Crash on Save Icon Deadlock?")]
+	[DDLRegistration(0x6a6ec0d5u, "Crash on Save Icon Deadlock?")]
 	public bool FatalAssertOnSaveIconDeadlock { get; set; } = false;
 
 	public static SaveSettings Create(DDLObject ddl) => new(ddl);

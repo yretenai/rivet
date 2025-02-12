@@ -19,10 +19,10 @@ public class GameBotTankBasePrius : BotPrius, IDDLObjectType<GameBotTankBasePriu
 		DamageVolumeExtents = ddl.GetObject<DDLVector3>(0x5de5eb28u);
 	}
 
-	[DDLRegistration(0x987b4e46u)]
+	[DDLRegistration(0x1c0b82f0u)]
 	public float TimeBetweenVolleys { get; set; } = 3.00f;
 
-	[DDLRegistration(0x987b4e46u)]
+	[DDLRegistration(0x5de5eb28u)]
 	public DDLVector3? DamageVolumeExtents { get; set; } = default;
 
 	public new static GameBotTankBasePrius Create(DDLObject ddl) => new(ddl);

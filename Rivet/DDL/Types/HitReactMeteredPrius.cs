@@ -31,46 +31,46 @@ public class HitReactMeteredPrius : HitReactPrius, IDDLObjectType<HitReactMetere
 		PopFacingOnMeleeHit = ddl.GetValue<bool>(0x28034942u, PopFacingOnMeleeHit);
 	}
 
-	[DDLRegistration(0xa6789e54u)]
+	[DDLRegistration(0xbe5a19b1u)]
 	public HitReactMeters? MeterData { get; set; } = default;
 
-	[DDLRegistration(0xa6789e54u, description: "Force there to be at least this much time between full body react anims.")]
+	[DDLRegistration(0x01a79d7bu, description: "Force there to be at least this much time between full body react anims.")]
 	public float FullbodyCooldown { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa6789e54u)]
+	[DDLRegistration(0x4f63a6f1u)]
 	public string? PartialReactDriver { get; set; } = "React_TwitchIdle";
 
-	[DDLRegistration(0xa6789e54u, description: "Partial hit-react cooldown (seconds).")]
+	[DDLRegistration(0xa4e1f543u, description: "Partial hit-react cooldown (seconds).")]
 	public float PartialReactCooldown { get; set; } = 0.25f;
 
-	[DDLRegistration(0xa6789e54u, description: "When we're damaged while throwing grenades, forces the bot to hitreact.")]
+	[DDLRegistration(0x7af0b486u, description: "When we're damaged while throwing grenades, forces the bot to hitreact.")]
 	public bool ForceInterruptThrows { get; set; } = false;
 
-	[DDLRegistration(0xa6789e54u, description: "Don't use the stagger meter for melee - always stagger.")]
+	[DDLRegistration(0xd740c899u, description: "Don't use the stagger meter for melee - always stagger.")]
 	public bool AlwaysReactToMelee { get; set; } = false;
 
-	[DDLRegistration(0xa6789e54u)]
+	[DDLRegistration(0xea705a6cu)]
 	public RivetAssetId BodypartToFilterConfig { get; set; } = default;
 
-	[DDLRegistration(0xa6789e54u, description: "Force knockback anims to be this long")]
+	[DDLRegistration(0xb4da608au, description: "Force knockback anims to be this long")]
 	public float OverrideKnockbackLength { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa6789e54u, description: "Force knockdown anims to be this long")]
+	[DDLRegistration(0xdbcfdb29u, description: "Force knockdown anims to be this long")]
 	public float OverrideKnockdownLength { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa6789e54u, description: "When we get hit by continuous damage start a looping partial.")]
+	[DDLRegistration(0xcf13bfe0u, description: "When we get hit by continuous damage start a looping partial.")]
 	public bool EnableContinuousPartials { get; set; } = false;
 
-	[DDLRegistration(0xa6789e54u, description: "Play the continuous partial for this long after the last hit.")]
+	[DDLRegistration(0xd3e857dau, description: "Play the continuous partial for this long after the last hit.")]
 	public float ContinousPartialTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa6789e54u)]
+	[DDLRegistration(0xa7f5f712u)]
 	public float KineticResistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa6789e54u)]
+	[DDLRegistration(0x019e69f6u)]
 	public List<KnockbackReactionModifier?> ReactionMods { get; set; } = [];
 
-	[DDLRegistration(0xa6789e54u)]
+	[DDLRegistration(0x28034942u)]
 	public bool PopFacingOnMeleeHit { get; set; } = true;
 
 	public new static HitReactMeteredPrius Create(DDLObject ddl) => new(ddl);

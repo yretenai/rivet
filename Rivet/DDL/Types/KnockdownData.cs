@@ -20,13 +20,13 @@ public class KnockdownData : DDLObjectType, IDDLObjectType<KnockdownData> {
 		Blast = ddl.GetObject<ScaleData>(0x571c694du);
 	}
 
-	[DDLRegistration(0x0a615951u)]
+	[DDLRegistration(0x2f1e32beu)]
 	public string? Driver { get; set; } = "React_Knockdown";
 
-	[DDLRegistration(0x0a615951u)]
+	[DDLRegistration(0x1ffd2683u)]
 	public ScaleData? Normal { get; set; } = default;
 
-	[DDLRegistration(0x0a615951u)]
+	[DDLRegistration(0x571c694du)]
 	public ScaleData? Blast { get; set; } = default;
 
 	public static KnockdownData Create(DDLObject ddl) => new(ddl);

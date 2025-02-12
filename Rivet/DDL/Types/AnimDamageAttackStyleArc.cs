@@ -24,25 +24,25 @@ public class AnimDamageAttackStyleArc : AnimDamageAttackStyleBase, IDDLObjectTyp
 		KnockbackAmount = ddl.GetValue<float>(0x7b1e600bu, KnockbackAmount);
 	}
 
-	[DDLRegistration(0xa6ec85c8u, "Arc center height")]
+	[DDLRegistration(0x33055b3eu, "Arc center height")]
 	public float ArcCenterHeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa6ec85c8u, "Locator for damage")]
+	[DDLRegistration(0x0520e489u, "Locator for damage")]
 	public string? DamageJoint { get; set; } = default;
 
-	[DDLRegistration(0xa6ec85c8u, "Damage Radius")]
+	[DDLRegistration(0xe3e6fa68u, "Damage Radius")]
 	public float DamageRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa6ec85c8u, "Damage Type")]
+	[DDLRegistration(0x840c154du, "Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Melee;
 
-	[DDLRegistration(0xa6ec85c8u, "Damage Amount")]
+	[DDLRegistration(0x563be470u, "Damage Amount")]
 	public float DamageAmount { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa6ec85c8u)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0xa6ec85c8u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = -1.00f;
 
 	public new static AnimDamageAttackStyleArc Create(DDLObject ddl) => new(ddl);

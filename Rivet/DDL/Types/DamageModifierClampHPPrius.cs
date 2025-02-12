@@ -18,7 +18,7 @@ public class DamageModifierClampHPPrius : DamageModifierIncomingPrius, IDDLObjec
 		ClampHPAt = ddl.GetValue<float>(0x6a31ad2eu, ClampHPAt);
 	}
 
-	[DDLRegistration(0xcc2d7055u)]
+	[DDLRegistration(0x6a31ad2eu)]
 	public float ClampHPAt { get; set; } = 10.00f;
 
 	public new static DamageModifierClampHPPrius Create(DDLObject ddl) => new(ddl);

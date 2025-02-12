@@ -18,7 +18,7 @@ public class FossilizeZoomChangeEvent : EventBase, IDDLObjectType<FossilizeZoomC
 		ZoomValue = ddl.GetValue<uint>(0xdbb2d05bu, ZoomValue);
 	}
 
-	[DDLRegistration(0x18fb1dafu, description: "The value of the zoom level.")]
+	[DDLRegistration(0xdbb2d05bu, description: "The value of the zoom level.")]
 	public uint ZoomValue { get; set; } = 0x00000000;
 
 	public new static FossilizeZoomChangeEvent Create(DDLObject ddl) => new(ddl);

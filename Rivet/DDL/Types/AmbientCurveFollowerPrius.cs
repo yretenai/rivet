@@ -32,49 +32,49 @@ public class AmbientCurveFollowerPrius : DDLObjectType, IDDLObjectType<AmbientCu
 		FacingData = ddl.GetObject<AmbientCurveFacingBase>(0xda7e3fc7u);
 	}
 
-	[DDLRegistration(0x1cec857fu, description: "If following a curve that doesn't loop, what do you want to do when an endpoint is reached")]
+	[DDLRegistration(0xd344790du, description: "If following a curve that doesn't loop, what do you want to do when an endpoint is reached")]
 	public xd93fd23f OpenCurveFollowType { get; set; } = xd93fd23f.OneShot;
 
-	[DDLRegistration(0x1cec857fu, description: "Whether to slow to a stop at the end of an open path.")]
+	[DDLRegistration(0x5af812a7u, description: "Whether to slow to a stop at the end of an open path.")]
 	public bool DoOpenCurveStop { get; set; } = true;
 
-	[DDLRegistration(0x1cec857fu, description: "Acceleration rate in m/s for this curve follower (use only positive values).")]
+	[DDLRegistration(0xb9f88dfbu, description: "Acceleration rate in m/s for this curve follower (use only positive values).")]
 	public float Acceleration { get; set; } = 5.00f;
 
-	[DDLRegistration(0x1cec857fu, description: "Decceleration rate in m/s for this curve follower (use only positive values).")]
+	[DDLRegistration(0xc9ee30a8u, description: "Decceleration rate in m/s for this curve follower (use only positive values).")]
 	public float Deceleration { get; set; } = 5.00f;
 
-	[DDLRegistration(0x1cec857fu, description: "Maximum speed in m/s for this curve follower (use only positive values).")]
+	[DDLRegistration(0x16b83961u, description: "Maximum speed in m/s for this curve follower (use only positive values).")]
 	public float MaxSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0x1cec857fu, description: "Force the actor orientation to remain Y-Up.")]
+	[DDLRegistration(0x947d9c5du, description: "Force the actor orientation to remain Y-Up.")]
 	public bool ForceYUp { get; set; } = false;
 
-	[DDLRegistration(0x1cec857fu, description: "Tuning factor for sharpness of curve for min dist to target curve( 0-1.0)")]
+	[DDLRegistration(0xb2398100u, description: "Tuning factor for sharpness of curve for min dist to target curve( 0-1.0)")]
 	public float IntroCurveMinDistFactor { get; set; } = 0.20f;
 
-	[DDLRegistration(0x1cec857fu, description: "Tuning factor for sharpness of curve for max dist to target curve( 0-1.0)")]
+	[DDLRegistration(0xf276f976u, description: "Tuning factor for sharpness of curve for max dist to target curve( 0-1.0)")]
 	public float IntroCurveMaxDistFactor { get; set; } = 0.50f;
 
-	[DDLRegistration(0x1cec857fu, description: "Tuning factor for sharpness of curve for angle to target( 0-1.0)")]
+	[DDLRegistration(0xa95f634cu, description: "Tuning factor for sharpness of curve for angle to target( 0-1.0)")]
 	public float IntroCurveAngleFactor { get; set; } = 0.25f;
 
-	[DDLRegistration(0x1cec857fu, description: "Max turn rate for starting transition (deg/sec)")]
+	[DDLRegistration(0x75e591c8u, description: "Max turn rate for starting transition (deg/sec)")]
 	public float IntroCurveMaxTurnRate { get; set; } = 45.00f;
 
-	[DDLRegistration(0x1cec857fu, description: "Should the orientation of the follower be locked to the intro curve, or should we use the normal turning logic.")]
+	[DDLRegistration(0x40bd7a58u, description: "Should the orientation of the follower be locked to the intro curve, or should we use the normal turning logic.")]
 	public bool IntroCurveLockToOrientation { get; set; } = true;
 
-	[DDLRegistration(0x1cec857fu)]
+	[DDLRegistration(0x28b60846u)]
 	public bool SyncUpdate { get; set; } = true;
 
-	[DDLRegistration(0x1cec857fu)]
+	[DDLRegistration(0x15e49676u)]
 	public bool DeleteAtEnd { get; set; } = false;
 
-	[DDLRegistration(0x1cec857fu, description: "Whether to apply facing as described in FacingData below.")]
+	[DDLRegistration(0xb4316292u, description: "Whether to apply facing as described in FacingData below.")]
 	public bool ApplyFacing { get; set; } = true;
 
-	[DDLRegistration(0x1cec857fu, description: "Controls where we should face")]
+	[DDLRegistration(0xda7e3fc7u, description: "Controls where we should face")]
 	public AmbientCurveFacingBase? FacingData { get; set; } = default;
 
 	public static AmbientCurveFollowerPrius Create(DDLObject ddl) => new(ddl);

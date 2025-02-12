@@ -18,7 +18,7 @@ public class BaseOverlayOperatorPrius_Tools : DDLObjectType, IDDLObjectType<Base
 		Trig = ddl.GetObject<AbstractTriggerPrius_Tools>(0xc515b04cu);
 	}
 
-	[DDLRegistration(0x8ab66b2bu)]
+	[DDLRegistration(0xc515b04cu)]
 	public AbstractTriggerPrius_Tools? Trig { get; set; } = default;
 
 	public static BaseOverlayOperatorPrius_Tools Create(DDLObject ddl) => new(ddl);

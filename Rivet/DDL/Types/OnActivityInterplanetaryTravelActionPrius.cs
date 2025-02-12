@@ -19,10 +19,10 @@ public class OnActivityInterplanetaryTravelActionPrius : DDLObjectType, IDDLObje
 		InitiallyListening = ddl.GetValue<bool>(0x51d42fd7u, InitiallyListening);
 	}
 
-	[DDLRegistration(0xc92c854fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
-	[DDLRegistration(0xc92c854fu)]
+	[DDLRegistration(0x51d42fd7u)]
 	public bool InitiallyListening { get; set; } = true;
 
 	public static OnActivityInterplanetaryTravelActionPrius Create(DDLObject ddl) => new(ddl);

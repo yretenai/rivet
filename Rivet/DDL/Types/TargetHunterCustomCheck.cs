@@ -18,7 +18,7 @@ public class TargetHunterCustomCheck : DDLObjectType, IDDLObjectType<TargetHunte
 		Check = ddl.GetObject<TargetCheckBasePrius>(0x25dd60d2u);
 	}
 
-	[DDLRegistration(0x5c6631feu)]
+	[DDLRegistration(0x25dd60d2u)]
 	public TargetCheckBasePrius? Check { get; set; } = default;
 
 	public static TargetHunterCustomCheck Create(DDLObject ddl) => new(ddl);

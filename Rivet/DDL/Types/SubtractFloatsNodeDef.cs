@@ -19,10 +19,10 @@ public class SubtractFloatsNodeDef : MathNodeBaseDef, IDDLObjectType<SubtractFlo
 		Difference = ddl.GetObject<OutputPlugFloat>(0x080014b7u);
 	}
 
-	[DDLRegistration(0x31dae492u)]
+	[DDLRegistration(0xd0f69254u)]
 	public List<InputPlugFloat?> Float { get; set; } = [];
 
-	[DDLRegistration(0x31dae492u)]
+	[DDLRegistration(0x080014b7u)]
 	public OutputPlugFloat? Difference { get; set; } = default;
 
 	public new static SubtractFloatsNodeDef Create(DDLObject ddl) => new(ddl);

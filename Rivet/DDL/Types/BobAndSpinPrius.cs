@@ -30,43 +30,43 @@ public class BobAndSpinPrius : DDLObjectType, IDDLObjectType<BobAndSpinPrius> {
 		UseRealTime = ddl.GetValue<bool>(0xdda1dddbu, UseRealTime);
 	}
 
-	[DDLRegistration(0x1536e000u)]
+	[DDLRegistration(0x5418c02au)]
 	public bool UseBob { get; set; } = true;
 
-	[DDLRegistration(0x1536e000u, "Bob: Frequency")]
+	[DDLRegistration(0xa482271fu, "Bob: Frequency")]
 	public float Frequency { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1536e000u, "Bob: Amplitude")]
+	[DDLRegistration(0xe950071du, "Bob: Amplitude")]
 	public float Amplitude { get; set; } = 0.25f;
 
-	[DDLRegistration(0x1536e000u, "Bob: Bump Height By Amplitude", "Should the height be adjusted up by the value of Amplitude?")]
+	[DDLRegistration(0xa192426cu, "Bob: Bump Height By Amplitude", "Should the height be adjusted up by the value of Amplitude?")]
 	public bool BumpHeightByAmp { get; set; } = false;
 
-	[DDLRegistration(0x1536e000u, "Bob: Randomize Offset", "Adds a random offset to the bobbing")]
+	[DDLRegistration(0x3eb3a4aeu, "Bob: Randomize Offset", "Adds a random offset to the bobbing")]
 	public bool RadomizeBob { get; set; } = false;
 
-	[DDLRegistration(0x1536e000u)]
+	[DDLRegistration(0x6dce9035u)]
 	public bool UseSpin { get; set; } = true;
 
-	[DDLRegistration(0x1536e000u, "Spin: Rate")]
+	[DDLRegistration(0x229ae43fu, "Spin: Rate")]
 	public float Spin { get; set; } = 180.00f;
 
-	[DDLRegistration(0x1536e000u, "Spin: Random Offset", "Whether to apply a rotational offset so all pickups with the same spin aren't in-sync.")]
+	[DDLRegistration(0xd9b0529du, "Spin: Random Offset", "Whether to apply a rotational offset so all pickups with the same spin aren't in-sync.")]
 	public bool RandomOrientation { get; set; } = true;
 
-	[DDLRegistration(0x1536e000u, "Spin: Axis")]
+	[DDLRegistration(0x5c144527u, "Spin: Axis")]
 	public xe09c5937 SpinAxis { get; set; } = xe09c5937.YAxisWorld;
 
-	[DDLRegistration(0x1536e000u, "Spin: Random Additional Axis", "Whether to apply a random secondary rotation axis to make a tumble.")]
+	[DDLRegistration(0x6f21e018u, "Spin: Random Additional Axis", "Whether to apply a random secondary rotation axis to make a tumble.")]
 	public bool ApplyRand2ndRotAxis { get; set; } = false;
 
-	[DDLRegistration(0x1536e000u, "Spin: Random Additional Axis Rate", "The spin rate around this secondary rotation axis, in degrees per second.")]
+	[DDLRegistration(0x2145324fu, "Spin: Random Additional Axis Rate", "The spin rate around this secondary rotation axis, in degrees per second.")]
 	public float RandRotAxisSpin { get; set; } = 180.00f;
 
-	[DDLRegistration(0x1536e000u)]
+	[DDLRegistration(0xf4e15e57u)]
 	public bool FullAsync { get; set; } = false;
 
-	[DDLRegistration(0x1536e000u, description: "This should only be true if in the pause ui zone")]
+	[DDLRegistration(0xdda1dddbu, description: "This should only be true if in the pause ui zone")]
 	public bool UseRealTime { get; set; } = false;
 
 	public static BobAndSpinPrius Create(DDLObject ddl) => new(ddl);

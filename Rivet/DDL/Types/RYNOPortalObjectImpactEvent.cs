@@ -22,19 +22,19 @@ public class RYNOPortalObjectImpactEvent : EventBase, IDDLObjectType<RYNOPortalO
 		VersionIndex = ddl.GetValue<byte>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0x6171e75du)]
+	[DDLRegistration(0xebc689d9u)]
 	public bool InAir { get; set; } = false;
 
-	[DDLRegistration(0x6171e75du)]
+	[DDLRegistration(0xaf7a201fu)]
 	public bool DoesLanding { get; set; } = false;
 
-	[DDLRegistration(0x6171e75du)]
+	[DDLRegistration(0x52a18d8cu)]
 	public xbf5ff3c6 PortalSize { get; set; } = xbf5ff3c6.Small;
 
-	[DDLRegistration(0x6171e75du)]
+	[DDLRegistration(0xeb9e8212u)]
 	public DDLTransform? ReflectionDir { get; set; } = default;
 
-	[DDLRegistration(0x6171e75du)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
 	public new static RYNOPortalObjectImpactEvent Create(DDLObject ddl) => new(ddl);

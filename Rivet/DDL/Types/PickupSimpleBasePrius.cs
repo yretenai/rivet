@@ -29,40 +29,40 @@ public class PickupSimpleBasePrius : DDLObjectType, IDDLObjectType<PickupSimpleB
 		DoSwarm = ddl.GetValue<bool>(0xf499e387u, DoSwarm);
 	}
 
-	[DDLRegistration(0x4beb1ef6u)]
+	[DDLRegistration(0x44d96bd9u)]
 	public DDLVector3? Velocity { get; set; } = default;
 
-	[DDLRegistration(0x4beb1ef6u, "Decay Timer")]
+	[DDLRegistration(0xc4ffecadu, "Decay Timer")]
 	public float DecayTimer { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4beb1ef6u, "Pickup Delay")]
+	[DDLRegistration(0x68cab92du, "Pickup Delay")]
 	public float NoPickupTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4beb1ef6u, "Pickup Range")]
+	[DDLRegistration(0xfcf2ecefu, "Pickup Range")]
 	public float PickupRange { get; set; } = 3.00f;
 
-	[DDLRegistration(0x4beb1ef6u, "Auto Collect Timer", "If non-negative this pickup will auto-collect to the closest hero after this amount of time")]
+	[DDLRegistration(0x86b122abu, "Auto Collect Timer", "If non-negative this pickup will auto-collect to the closest hero after this amount of time")]
 	public float AutoCollectTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x4beb1ef6u, "Ideal Collect Time", "When collection begins, if our flight time is estimated to be longer then this, we'll increase our flight speed to try and make it this.")]
+	[DDLRegistration(0x908387d3u, "Ideal Collect Time", "When collection begins, if our flight time is estimated to be longer then this, we'll increase our flight speed to try and make it this.")]
 	public float IdealCollectTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x4beb1ef6u)]
+	[DDLRegistration(0xe6a2a2d6u)]
 	public bool StartFixed { get; set; } = false;
 
-	[DDLRegistration(0x4beb1ef6u, description: "Whether to apply a bob on this actor while idle.")]
+	[DDLRegistration(0xe24123b6u, description: "Whether to apply a bob on this actor while idle.")]
 	public bool DoBob { get; set; } = true;
 
-	[DDLRegistration(0x4beb1ef6u, description: "Whether to apply a spin on this actor.")]
+	[DDLRegistration(0x94c116b9u, description: "Whether to apply a spin on this actor.")]
 	public bool DoSpin { get; set; } = true;
 
-	[DDLRegistration(0x4beb1ef6u, description: "If this pickup falls out of the world should it autocollect to the nearest hero?")]
+	[DDLRegistration(0x8526b881u, description: "If this pickup falls out of the world should it autocollect to the nearest hero?")]
 	public bool AutoCollectOnFallOut { get; set; } = false;
 
-	[DDLRegistration(0x4beb1ef6u, description: "Autocollect to the nearest hero on spawn")]
+	[DDLRegistration(0x4c922c82u, description: "Autocollect to the nearest hero on spawn")]
 	public bool AutoCollectOnSpawn { get; set; } = false;
 
-	[DDLRegistration(0x4beb1ef6u, description: "True to swarm toward collector. False to fly straight toward collector.")]
+	[DDLRegistration(0xf499e387u, description: "True to swarm toward collector. False to fly straight toward collector.")]
 	public bool DoSwarm { get; set; } = true;
 
 	public static PickupSimpleBasePrius Create(DDLObject ddl) => new(ddl);

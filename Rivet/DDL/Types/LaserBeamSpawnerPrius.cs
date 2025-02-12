@@ -18,7 +18,7 @@ public class LaserBeamSpawnerPrius : DDLObjectType, IDDLObjectType<LaserBeamSpaw
 		SpawnedShotConfig = ddl.GetValue<RivetAssetId>(0x7e9e8e66u, SpawnedShotConfig);
 	}
 
-	[DDLRegistration(0x4e6d7aa0u, description: "Config of type SpawnedShotConfig that defines a BotLaserBeamShot.")]
+	[DDLRegistration(0x7e9e8e66u, description: "Config of type SpawnedShotConfig that defines a BotLaserBeamShot.")]
 	public RivetAssetId SpawnedShotConfig { get; set; } = default;
 
 	public static LaserBeamSpawnerPrius Create(DDLObject ddl) => new(ddl);

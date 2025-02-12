@@ -19,10 +19,10 @@ public class AnimDamageIdealFrameEvent : EventBase, IDDLObjectType<AnimDamageIde
 		ImpactLevel = ddl.GetEnum<x3b1e2e8d>(0xb2dda91fu, x3b1e2e8dValues.Lookup);
 	}
 
-	[DDLRegistration(0x3e35842eu)]
+	[DDLRegistration(0x08f29378u)]
 	public x80ca62e9 ImpactLocation { get; set; } = x80ca62e9.Impact_Torso;
 
-	[DDLRegistration(0x3e35842eu)]
+	[DDLRegistration(0xb2dda91fu)]
 	public x3b1e2e8d ImpactLevel { get; set; } = x3b1e2e8d.Impact_Light;
 
 	public new static AnimDamageIdealFrameEvent Create(DDLObject ddl) => new(ddl);

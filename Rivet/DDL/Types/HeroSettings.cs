@@ -29,40 +29,40 @@ public class HeroSettings : DDLObjectType, IDDLObjectType<HeroSettings> {
 		EnablePhaseDash = ddl.GetValue<bool>(0x022a5f75u, EnablePhaseDash);
 	}
 
-	[DDLRegistration(0xbff1d849u)]
+	[DDLRegistration(0x4508a560u)]
 	public RivetAssetId OverrideDefaultItemLoadout { get; set; } = default;
 
-	[DDLRegistration(0xbff1d849u)]
+	[DDLRegistration(0x1565b327u)]
 	public HeroTypes DebugSwapHeroType { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0xbff1d849u)]
+	[DDLRegistration(0x3ce7abbdu)]
 	public HeroTypes DebugSpawnHeroType { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0xbff1d849u)]
+	[DDLRegistration(0xb516432bu)]
 	public HeroAltControlSettings? AltControlSettings { get; set; } = default;
 
-	[DDLRegistration(0xbff1d849u)]
+	[DDLRegistration(0x79317a36u)]
 	public HeroRunSpeedSettings? RunSpeedSettings { get; set; } = default;
 
-	[DDLRegistration(0xbff1d849u)]
+	[DDLRegistration(0x57816e4fu)]
 	public HeroSprintSettings? SprintSettings { get; set; } = default;
 
-	[DDLRegistration(0xbff1d849u)]
+	[DDLRegistration(0x88a25138u)]
 	public HeroRecoveryLedgeSettings? RecoveryLedgeSettings { get; set; } = default;
 
-	[DDLRegistration(0xbff1d849u)]
+	[DDLRegistration(0xa7114034u)]
 	public HeroHoverbootSettings? HoverbootSettings { get; set; } = default;
 
-	[DDLRegistration(0xbff1d849u)]
+	[DDLRegistration(0x3ca4475au)]
 	public HeroWallRunSettings? WallRunSettings { get; set; } = default;
 
-	[DDLRegistration(0xbff1d849u)]
+	[DDLRegistration(0x4f9f31dfu)]
 	public float XpGainMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbff1d849u, description: "When you are in the air, should we show a special shadow directly below the hero?")]
+	[DDLRegistration(0x7740f899u, description: "When you are in the air, should we show a special shadow directly below the hero?")]
 	public bool EnablePlatformingShadowDecal { get; set; } = true;
 
-	[DDLRegistration(0xbff1d849u)]
+	[DDLRegistration(0x022a5f75u)]
 	public bool EnablePhaseDash { get; set; } = true;
 
 	public static HeroSettings Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class RynoPlanCountActionPrius : DDLObjectType, IDDLObjectType<RynoPlanCo
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xfb42b5aeu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
 	public static RynoPlanCountActionPrius Create(DDLObject ddl) => new(ddl);

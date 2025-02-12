@@ -18,7 +18,7 @@ public class TargetingAimAngleGamePrius : TargetingAimAnglePrius, IDDLObjectType
 		PassiveAimAtNone = ddl.GetValue<bool>(0x561e7494u, PassiveAimAtNone);
 	}
 
-	[DDLRegistration(0xcea0fdb6u, description: "When going passive from engaged, set facing to none")]
+	[DDLRegistration(0x561e7494u, description: "When going passive from engaged, set facing to none")]
 	public bool PassiveAimAtNone { get; set; } = true;
 
 	public new static TargetingAimAngleGamePrius Create(DDLObject ddl) => new(ddl);

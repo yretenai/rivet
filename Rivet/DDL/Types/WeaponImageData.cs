@@ -20,13 +20,13 @@ public class WeaponImageData : DDLObjectType, IDDLObjectType<WeaponImageData> {
 		TextureV5 = ddl.GetValue<RivetAssetId>(0x1ace56adu, TextureV5);
 	}
 
-	[DDLRegistration(0xc68e3073u, description: "HudWeaponEnum value.")]
+	[DDLRegistration(0x574be981u, description: "HudWeaponEnum value.")]
 	public HudWeaponEnum Weapon { get; set; } = HudWeaponEnum.Generic;
 
-	[DDLRegistration(0xc68e3073u, description: "Texture to display.")]
+	[DDLRegistration(0x838c6e4au, description: "Texture to display.")]
 	public RivetAssetId Texture { get; set; } = "";
 
-	[DDLRegistration(0xc68e3073u, description: "Texture to display for V5 and above.")]
+	[DDLRegistration(0x1ace56adu, description: "Texture to display for V5 and above.")]
 	public RivetAssetId TextureV5 { get; set; } = "";
 
 	public static WeaponImageData Create(DDLObject ddl) => new(ddl);

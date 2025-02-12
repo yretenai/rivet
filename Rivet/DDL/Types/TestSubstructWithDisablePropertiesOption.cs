@@ -20,13 +20,13 @@ public class TestSubstructWithDisablePropertiesOption : DDLObjectType, IDDLObjec
 		HiddenPet = ddl.GetObject<TestAnimal>(0x09024a4eu);
 	}
 
-	[DDLRegistration(0x70959310u)]
+	[DDLRegistration(0xce07b24cu)]
 	public TestAnimal? Pet { get; set; } = default;
 
-	[DDLRegistration(0x70959310u)]
+	[DDLRegistration(0x5b1c7bf1u)]
 	public TestAnimal? DisabledPet { get; set; } = default;
 
-	[DDLRegistration(0x70959310u)]
+	[DDLRegistration(0x09024a4eu)]
 	public TestAnimal? HiddenPet { get; set; } = default;
 
 	public static TestSubstructWithDisablePropertiesOption Create(DDLObject ddl) => new(ddl);

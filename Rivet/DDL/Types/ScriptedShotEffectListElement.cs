@@ -19,10 +19,10 @@ public class ScriptedShotEffectListElement : DDLObjectType, IDDLObjectType<Scrip
 		Effect = ddl.GetObject<ScriptedShotEffectBasePrius>(0x8818df95u);
 	}
 
-	[DDLRegistration(0xe61759bcu)]
+	[DDLRegistration(0xf2b5bb32u)]
 	public x21e2284d EventType { get; set; } = x21e2284d.OnSpawn;
 
-	[DDLRegistration(0xe61759bcu)]
+	[DDLRegistration(0x8818df95u)]
 	public ScriptedShotEffectBasePrius? Effect { get; set; } = default;
 
 	public static ScriptedShotEffectListElement Create(DDLObject ddl) => new(ddl);

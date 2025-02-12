@@ -18,7 +18,7 @@ public class HashListConfig : ConfigBase, IDDLObjectType<HashListConfig> {
 		HashList = ddl.GetStrings(0x50a6559fu);
 	}
 
-	[DDLRegistration(0x7a9b07adu, description: "List of strings to be processed by consumer.  User system should define specific actions.")]
+	[DDLRegistration(0x50a6559fu, description: "List of strings to be processed by consumer.  User system should define specific actions.")]
 	public List<string?> HashList { get; set; } = [];
 
 	public new static HashListConfig Create(DDLObject ddl) => new(ddl);

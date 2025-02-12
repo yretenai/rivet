@@ -19,10 +19,10 @@ public class OverrideHoverbootConfigActionPrius : DDLObjectType, IDDLObjectType<
 		OverrideConfig = ddl.GetValue<RivetAssetId>(0xb8b3c47fu, OverrideConfig);
 	}
 
-	[DDLRegistration(0x2c033167u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x2c033167u, description: "Override hoverboot config to set on Hero.")]
+	[DDLRegistration(0xb8b3c47fu, description: "Override hoverboot config to set on Hero.")]
 	public RivetAssetId OverrideConfig { get; set; } = default;
 
 	public static OverrideHoverbootConfigActionPrius Create(DDLObject ddl) => new(ddl);

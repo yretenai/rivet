@@ -18,7 +18,7 @@ public class AnimAdditiveBlendEvent : EventBase, IDDLObjectType<AnimAdditiveBlen
 		BlendValue = ddl.GetValue<float>(0x9d8ac4b4u, BlendValue);
 	}
 
-	[DDLRegistration(0x3de672e6u)]
+	[DDLRegistration(0x9d8ac4b4u)]
 	public float BlendValue { get; set; } = 0.00f;
 
 	public new static AnimAdditiveBlendEvent Create(DDLObject ddl) => new(ddl);

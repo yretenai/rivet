@@ -20,13 +20,13 @@ public class VanityUIColor : DDLObjectType, IDDLObjectType<VanityUIColor> {
 		UIColorSecondary = ddl.GetObject<DDLVector3>(0xc33d9b03u);
 	}
 
-	[DDLRegistration(0x90e4a08bu, "Color Index")]
+	[DDLRegistration(0xba765d63u, "Color Index")]
 	public byte ColorIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0x90e4a08bu, "UI Color Primary")]
+	[DDLRegistration(0xb006f9f4u, "UI Color Primary")]
 	public DDLVector3? UIColorPrimary { get; set; } = default;
 
-	[DDLRegistration(0x90e4a08bu, "UI Color Secondary")]
+	[DDLRegistration(0xc33d9b03u, "UI Color Secondary")]
 	public DDLVector3? UIColorSecondary { get; set; } = default;
 
 	public static VanityUIColor Create(DDLObject ddl) => new(ddl);

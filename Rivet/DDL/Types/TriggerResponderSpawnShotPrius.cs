@@ -19,10 +19,10 @@ public class TriggerResponderSpawnShotPrius : TriggerResponderBasePrius, IDDLObj
 		LocatorOverride = ddl.GetString(0xa761bc40) ?? LocatorOverride;
 	}
 
-	[DDLRegistration(0xc9f6ceb4u)]
+	[DDLRegistration(0xc409037fu)]
 	public int ShotIndex { get; set; } = 0;
 
-	[DDLRegistration(0xc9f6ceb4u)]
+	[DDLRegistration(0xa761bc40u)]
 	public string? LocatorOverride { get; set; } = default;
 
 	public new static TriggerResponderSpawnShotPrius Create(DDLObject ddl) => new(ddl);

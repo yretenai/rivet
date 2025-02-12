@@ -19,10 +19,10 @@ public class ArmoredHealthPrius : HealthPrius, IDDLObjectType<ArmoredHealthPrius
 		HPDamageReductionPercentage = ddl.GetValue<float>(0xc8abb9d7u, HPDamageReductionPercentage);
 	}
 
-	[DDLRegistration(0x248cd4d3u, description: "Actor's max and starting armor points.")]
+	[DDLRegistration(0xe2592f10u, description: "Actor's max and starting armor points.")]
 	public float MaxArmorPoints { get; set; } = 100.00f;
 
-	[DDLRegistration(0x248cd4d3u, description: "Percentage of HP damage reduction from armor.")]
+	[DDLRegistration(0xc8abb9d7u, description: "Percentage of HP damage reduction from armor.")]
 	public float HPDamageReductionPercentage { get; set; } = 1.00f;
 
 	public new static ArmoredHealthPrius Create(DDLObject ddl) => new(ddl);

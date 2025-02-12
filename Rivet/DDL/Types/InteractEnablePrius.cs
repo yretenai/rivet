@@ -24,25 +24,25 @@ public class InteractEnablePrius : DDLObjectType, IDDLObjectType<InteractEnableP
 		InteractOfferPrius = ddl.GetObject<InteractGeneralOfferPrius>(0xb5acc8f8u);
 	}
 
-	[DDLRegistration(0xf92aaa25u, "Start Active?", "Whether we start active or should wait for script activation (via the toggle actor script node).")]
+	[DDLRegistration(0x3e035e82u, "Start Active?", "Whether we start active or should wait for script activation (via the toggle actor script node).")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0xf92aaa25u, "Anim to Play when Inactive.", "The anim driver to use when we are inactive (not interactable).")]
+	[DDLRegistration(0x78c8ed4bu, "Anim to Play when Inactive.", "The anim driver to use when we are inactive (not interactable).")]
 	public string? AnimDriverInactive { get; set; } = "Interact_Unavail";
 
-	[DDLRegistration(0xf92aaa25u, "Anim to Play when Active", "The anim driver to play when we are active and interactable.")]
+	[DDLRegistration(0xdb6ffe4eu, "Anim to Play when Active", "The anim driver to play when we are active and interactable.")]
 	public string? AnimDriverActive { get; set; } = "Interact_Avail";
 
-	[DDLRegistration(0xf92aaa25u, "Anim to Play on Use", "The anim driver to use when the player interacts with us.")]
+	[DDLRegistration(0x408cdf38u, "Anim to Play on Use", "The anim driver to use when the player interacts with us.")]
 	public string? AnimDriverUse { get; set; } = "Interact_Use";
 
-	[DDLRegistration(0xf92aaa25u, "Enable type", "Whether to enable, disable, or toggle enabled state the actors.")]
+	[DDLRegistration(0xb8f74eb3u, "Enable type", "Whether to enable, disable, or toggle enabled state the actors.")]
 	public x96f58b25 EnableType { get; set; } = x96f58b25.InteractEnable;
 
-	[DDLRegistration(0xf92aaa25u, "Actor(group) to Enable", "The actors to enable/disable/toggle (whatever type was selected above) using the Toggle Event.")]
+	[DDLRegistration(0x5ffbe5a4u, "Actor(group) to Enable", "The actors to enable/disable/toggle (whatever type was selected above) using the Toggle Event.")]
 	public RivetAssetId EnableActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf92aaa25u, "Interact Offer Info", "Information for the offer (placement, range, facing, etc).")]
+	[DDLRegistration(0xb5acc8f8u, "Interact Offer Info", "Information for the offer (placement, range, facing, etc).")]
 	public InteractGeneralOfferPrius? InteractOfferPrius { get; set; } = default;
 
 	public static InteractEnablePrius Create(DDLObject ddl) => new(ddl);

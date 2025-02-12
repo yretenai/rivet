@@ -22,19 +22,19 @@ public class MissionActivityCardInfo : DDLObjectType, IDDLObjectType<MissionActi
 		Reward = ddl.GetObject<ActivityReward>(0x70a93c34u);
 	}
 
-	[DDLRegistration(0x9a95fbdbu, "Activity Card Enabled in OS?", "Should this card exist at the OS level?")]
+	[DDLRegistration(0x5113d8bcu, "Activity Card Enabled in OS?", "Should this card exist at the OS level?")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x9a95fbdbu, "Activity Mission Desc Override", "Loctag for the desc of this mission in the activity card/task. If empty, use the desc loctag in the UI info instead. Localized text can be at most 1024 characters.")]
+	[DDLRegistration(0x6a429009u, "Activity Mission Desc Override", "Loctag for the desc of this mission in the activity card/task. If empty, use the desc loctag in the UI info instead. Localized text can be at most 1024 characters.")]
 	public string? ActivityDescTagOverride { get; set; } = default;
 
-	[DDLRegistration(0x9a95fbdbu, "Small Activity Card Image", "Path to a small image of size 864 x 1040 PNG 24-bit non-interlaced. This image will be shown on the card itself.")]
+	[DDLRegistration(0xfbf28f9au, "Small Activity Card Image", "Path to a small image of size 864 x 1040 PNG 24-bit non-interlaced. This image will be shown on the card itself.")]
 	public RivetAssetId ActivitySmallImage { get; set; } = default;
 
-	[DDLRegistration(0x9a95fbdbu, "Large Activity Card Image", "Path to a large image of size 3840 x 2160 PNG 24-bit non-interlaced. This image will be shown when the card is 'maximized'.")]
+	[DDLRegistration(0x1c5f9511u, "Large Activity Card Image", "Path to a large image of size 3840 x 2160 PNG 24-bit non-interlaced. This image will be shown when the card is 'maximized'.")]
 	public RivetAssetId ActivityLargeImage { get; set; } = default;
 
-	[DDLRegistration(0x9a95fbdbu)]
+	[DDLRegistration(0x70a93c34u)]
 	public ActivityReward? Reward { get; set; } = default;
 
 	public static MissionActivityCardInfo Create(DDLObject ddl) => new(ddl);

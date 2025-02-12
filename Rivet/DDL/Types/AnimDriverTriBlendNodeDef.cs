@@ -27,34 +27,34 @@ public class AnimDriverTriBlendNodeDef : DDLObjectType, IDDLObjectType<AnimDrive
 		ConnectionC = ddl.GetObject<AnimDriverConnectionDef>(0x14f39d62u);
 	}
 
-	[DDLRegistration(0x252b383du)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x252b383du)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0x252b383du)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x252b383du)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x252b383du)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xb417d8f1 Type { get; set; } = xb417d8f1.TriBlendNodeTypeDefault;
 
-	[DDLRegistration(0x252b383du)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
-	[DDLRegistration(0x252b383du, "Weights")]
+	[DDLRegistration(0x1b381060u, "Weights")]
 	public AnimDriverDefTriBlendWeights? Weights { get; set; } = default;
 
-	[DDLRegistration(0x252b383du)]
+	[DDLRegistration(0xfafdfc4eu)]
 	public AnimDriverConnectionDef? ConnectionA { get; set; } = default;
 
-	[DDLRegistration(0x252b383du)]
+	[DDLRegistration(0x63f4adf4u)]
 	public AnimDriverConnectionDef? ConnectionB { get; set; } = default;
 
-	[DDLRegistration(0x252b383du)]
+	[DDLRegistration(0x14f39d62u)]
 	public AnimDriverConnectionDef? ConnectionC { get; set; } = default;
 
 	public static AnimDriverTriBlendNodeDef Create(DDLObject ddl) => new(ddl);

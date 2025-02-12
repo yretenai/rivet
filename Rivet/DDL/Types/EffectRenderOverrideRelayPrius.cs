@@ -20,13 +20,13 @@ public class EffectRenderOverrideRelayPrius : DDLObjectType, IDDLObjectType<Effe
 		RenderOverrides = ddl.GetObjects<EffectRenderOverride>(0xd1f6fba2u);
 	}
 
-	[DDLRegistration(0xaa39546cu)]
+	[DDLRegistration(0x2b5088d4u)]
 	public EventBase? TriggeringEvent { get; set; } = default;
 
-	[DDLRegistration(0xaa39546cu, "Max Triggering Events", "Once we've seen this number of triggering events, stop relaying render overrides to new visual effects. Once the last visual effect gets destroyed, this component will delete itself. -1 = infinite")]
+	[DDLRegistration(0x69fa6e4cu, "Max Triggering Events", "Once we've seen this number of triggering events, stop relaying render overrides to new visual effects. Once the last visual effect gets destroyed, this component will delete itself. -1 = infinite")]
 	public int MaxTriggeringEvents { get; set; } = 1;
 
-	[DDLRegistration(0xaa39546cu)]
+	[DDLRegistration(0xd1f6fba2u)]
 	public List<EffectRenderOverride?> RenderOverrides { get; set; } = [];
 
 	public static EffectRenderOverrideRelayPrius Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class CommentBaseDef : NodeGraphItemDef, IDDLObjectType<CommentBaseDef> {
 		Height = ddl.GetValue<float>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0x956aca59u)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
-	[DDLRegistration(0x956aca59u)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956aca59u)]
+	[DDLRegistration(0x2934711bu)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956aca59u)]
+	[DDLRegistration(0x954989eeu)]
 	public float Width { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956aca59u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 0.00f;
 
 	public new static CommentBaseDef Create(DDLObject ddl) => new(ddl);

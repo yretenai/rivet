@@ -22,19 +22,19 @@ public class ConduitActorPropertiesPrius : DDLObjectType, IDDLObjectType<Conduit
 		BlockTimerDuration = ddl.GetValue<float>(0xf0a044d6u, BlockTimerDuration);
 	}
 
-	[DDLRegistration(0x44f1e771u)]
+	[DDLRegistration(0xc750e4dau)]
 	public string? Size { get; set; } = default;
 
-	[DDLRegistration(0x44f1e771u)]
+	[DDLRegistration(0x1554d8e6u)]
 	public string? CharacterType { get; set; } = default;
 
-	[DDLRegistration(0x44f1e771u, description: "Time to count down on receiving damage.  Will only reset if timer is already at 0.")]
+	[DDLRegistration(0xf4235539u, description: "Time to count down on receiving damage.  Will only reset if timer is already at 0.")]
 	public float DamageTimerDuration { get; set; } = 0.15f;
 
-	[DDLRegistration(0x44f1e771u, description: "Time to count down on receiving weakspot damage.  Will only reset if timer is already at 0.")]
+	[DDLRegistration(0x22d64cc5u, description: "Time to count down on receiving weakspot damage.  Will only reset if timer is already at 0.")]
 	public float WeakspotTimerDuration { get; set; } = 0.20f;
 
-	[DDLRegistration(0x44f1e771u, description: "Time to count down on blocking damage.  Will only reset if timer is already at 0.")]
+	[DDLRegistration(0xf0a044d6u, description: "Time to count down on blocking damage.  Will only reset if timer is already at 0.")]
 	public float BlockTimerDuration { get; set; } = 0.15f;
 
 	public static ConduitActorPropertiesPrius Create(DDLObject ddl) => new(ddl);

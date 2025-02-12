@@ -18,7 +18,7 @@ public class MeleeWeaponItemConfig : WeaponItemConfig, IDDLObjectType<MeleeWeapo
 		MeleeConfig = ddl.GetValue<RivetAssetId>(0xd3e3c0f8u, MeleeConfig);
 	}
 
-	[DDLRegistration(0x70591b44u)]
+	[DDLRegistration(0xd3e3c0f8u)]
 	public RivetAssetId MeleeConfig { get; set; } = default;
 
 	public new static MeleeWeaponItemConfig Create(DDLObject ddl) => new(ddl);

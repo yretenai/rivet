@@ -20,13 +20,13 @@ public class SunsetSpawnerFactoryScriptActionPrius : DDLObjectType, IDDLObjectTy
 		UseSegChk = ddl.GetValue<bool>(0x5d30df31u, UseSegChk);
 	}
 
-	[DDLRegistration(0xfec46c68u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Spawning;
 
-	[DDLRegistration(0xfec46c68u, "Setup")]
+	[DDLRegistration(0xfadc7dc1u, "Setup")]
 	public SunsetSpawnerFactoryPrius? Factory { get; set; } = default;
 
-	[DDLRegistration(0xfec46c68u, "Use segment checkpoint logic?", "Whether to consider whether the player has passed the setup's given segment checkpoint (we spawn all enemies in the setup if the player hasn't passed the checkpoint and we are set to consider it).")]
+	[DDLRegistration(0x5d30df31u, "Use segment checkpoint logic?", "Whether to consider whether the player has passed the setup's given segment checkpoint (we spawn all enemies in the setup if the player hasn't passed the checkpoint and we are set to consider it).")]
 	public bool UseSegChk { get; set; } = true;
 
 	public static SunsetSpawnerFactoryScriptActionPrius Create(DDLObject ddl) => new(ddl);

@@ -38,67 +38,67 @@ public class SharedHeroConfig : ConfigBase, IDDLObjectType<SharedHeroConfig> {
 		SuperMeter = ddl.GetObject<HeroSuperMeterPrius>(0xf52004e1u);
 	}
 
-	[DDLRegistration(0x27dac59fu, "Camera")]
+	[DDLRegistration(0x0564a062u, "Camera")]
 	public HeroCameraConfig? Camera { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Base Depth of Field Config")]
+	[DDLRegistration(0x3e8850a9u, "Base Depth of Field Config")]
 	public RivetAssetId BaseDepthOfFieldConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Aim Assist Config")]
+	[DDLRegistration(0x0df3bd36u, "Aim Assist Config")]
 	public RivetAssetId AimAssistUserConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Casual Mode Aim Assist Config")]
+	[DDLRegistration(0x33fef942u, "Casual Mode Aim Assist Config")]
 	public RivetAssetId CasualAimAssistUserConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Hero Mover Config")]
+	[DDLRegistration(0xee0ed482u, "Hero Mover Config")]
 	public RivetAssetId HeroMoverConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Prop Config")]
+	[DDLRegistration(0x97e7b151u, "Prop Config")]
 	public RivetAssetId PropConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Default Zoom Config")]
+	[DDLRegistration(0xdaf18825u, "Default Zoom Config")]
 	public RivetAssetId DefaultZoomConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Default Weapon Beam In Config")]
+	[DDLRegistration(0xf915014cu, "Default Weapon Beam In Config")]
 	public RivetAssetId DefaultWeaponBeamInConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Beam In Config")]
+	[DDLRegistration(0x41075a28u, "Beam In Config")]
 	public RivetAssetId BeamInConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Beam Out Config")]
+	[DDLRegistration(0xc4483ad1u, "Beam Out Config")]
 	public RivetAssetId BeamOutConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Clank Puzzle Target Config")]
+	[DDLRegistration(0xefc617b2u, "Clank Puzzle Target Config")]
 	public RivetAssetId ClankPuzzleTargetConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Motion")]
+	[DDLRegistration(0xcb86ef8fu, "Motion")]
 	public HeroMotionConfig? Motion { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "React")]
+	[DDLRegistration(0x0036a314u, "React")]
 	public HeroReactConfig? React { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "CVC")]
+	[DDLRegistration(0x9cb16f5au, "CVC")]
 	public HeroCVCConfig? CVC { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Melee Smash")]
+	[DDLRegistration(0xb433cdb6u, "Melee Smash")]
 	public HeroMeleeSmashConfig? MeleeSmash { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Aiming")]
+	[DDLRegistration(0x7ed24ba4u, "Aiming")]
 	public HeroAimConfig? Aiming { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Flavor Animation")]
+	[DDLRegistration(0x51866fa5u, "Flavor Animation")]
 	public HeroFlavorAnimConfig? FlavorAnim { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Attacker")]
+	[DDLRegistration(0x3b944763u, "Attacker")]
 	public HeroAttackerConfig? AttackerConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Health")]
+	[DDLRegistration(0xc153d59cu, "Health")]
 	public HeroHealthConfig? HealthConfig { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Effects")]
+	[DDLRegistration(0x49e15f92u, "Effects")]
 	public HeroEffectsConfig? Effects { get; set; } = default;
 
-	[DDLRegistration(0x27dac59fu, "Super Meter")]
+	[DDLRegistration(0xf52004e1u, "Super Meter")]
 	public HeroSuperMeterPrius? SuperMeter { get; set; } = default;
 
 	public new static SharedHeroConfig Create(DDLObject ddl) => new(ddl);

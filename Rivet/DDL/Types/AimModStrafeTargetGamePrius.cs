@@ -21,16 +21,16 @@ public class AimModStrafeTargetGamePrius : AimModStrafeTargetPrius, IDDLObjectTy
 		FanFromCenter = ddl.GetValue<bool>(0x778b70fau, FanFromCenter);
 	}
 
-	[DDLRegistration(0x4f9e109cu, description: "If true, the strafe will be along the forward instead of along the sides of the target")]
+	[DDLRegistration(0x1deeff38u, description: "If true, the strafe will be along the forward instead of along the sides of the target")]
 	public bool StrafeAlongForward { get; set; } = false;
 
-	[DDLRegistration(0x4f9e109cu, description: "By default the strafe goes right-to-left and from shooter-to-target. If true, reverses the direction")]
+	[DDLRegistration(0xa175378eu, description: "By default the strafe goes right-to-left and from shooter-to-target. If true, reverses the direction")]
 	public bool ReverseStrafeDir { get; set; } = false;
 
-	[DDLRegistration(0x4f9e109cu, description: "If true, randomizes strafe direction")]
+	[DDLRegistration(0x9fb0d575u, description: "If true, randomizes strafe direction")]
 	public bool RandomizeStrafeDir { get; set; } = false;
 
-	[DDLRegistration(0x4f9e109cu, description: "If true, the aim mod will center the shot the first shot and then fan")]
+	[DDLRegistration(0x778b70fau, description: "If true, the aim mod will center the shot the first shot and then fan")]
 	public bool FanFromCenter { get; set; } = false;
 
 	public new static AimModStrafeTargetGamePrius Create(DDLObject ddl) => new(ddl);

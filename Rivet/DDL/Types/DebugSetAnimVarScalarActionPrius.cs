@@ -18,7 +18,7 @@ public class DebugSetAnimVarScalarActionPrius : DDLObjectType, IDDLObjectType<De
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xcd2cd224u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
 	public static DebugSetAnimVarScalarActionPrius Create(DDLObject ddl) => new(ddl);

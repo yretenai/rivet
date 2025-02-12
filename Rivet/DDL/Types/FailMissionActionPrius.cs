@@ -20,13 +20,13 @@ public class FailMissionActionPrius : DDLObjectType, IDDLObjectType<FailMissionA
 		FailureReason = ddl.GetString(0xcdb7921c) ?? FailureReason;
 	}
 
-	[DDLRegistration(0x462ed425u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
-	[DDLRegistration(0x462ed425u, description: "When the mission fails")]
+	[DDLRegistration(0xb1c39682u, description: "When the mission fails")]
 	public x71dc1c4a FailureAction { get; set; } = x71dc1c4a.AutoReloadMissionState;
 
-	[DDLRegistration(0x462ed425u)]
+	[DDLRegistration(0xcdb7921cu)]
 	public string? FailureReason { get; set; } = "INVALID";
 
 	public static FailMissionActionPrius Create(DDLObject ddl) => new(ddl);

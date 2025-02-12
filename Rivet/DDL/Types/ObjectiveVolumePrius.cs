@@ -19,10 +19,10 @@ public class ObjectiveVolumePrius : DDLObjectType, IDDLObjectType<ObjectiveVolum
 		Objective = ddl.GetString(0x3b6b6e0d) ?? Objective;
 	}
 
-	[DDLRegistration(0x7b14c5c2u, description: "What mission is this volume marking up?")]
+	[DDLRegistration(0x918d9104u, description: "What mission is this volume marking up?")]
 	public string? Mission { get; set; } = default;
 
-	[DDLRegistration(0x7b14c5c2u, description: "What objective is this volume marking up?")]
+	[DDLRegistration(0x3b6b6e0du, description: "What objective is this volume marking up?")]
 	public string? Objective { get; set; } = default;
 
 	public static ObjectiveVolumePrius Create(DDLObject ddl) => new(ddl);

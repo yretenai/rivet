@@ -23,22 +23,22 @@ public class HurdleShotPrius : GroundWaveShotPrius, IDDLObjectType<HurdleShotPri
 		SecondaryShotPrius = ddl.GetObject<ShotBasePrius>(0x73df6d85u);
 	}
 
-	[DDLRegistration(0x2b449d75u)]
+	[DDLRegistration(0x49c78205u)]
 	public bool DamageFromBeginning { get; set; } = false;
 
-	[DDLRegistration(0x2b449d75u)]
+	[DDLRegistration(0xe032a00fu)]
 	public bool DisableGroundCrawlMotion { get; set; } = false;
 
-	[DDLRegistration(0x2b449d75u)]
+	[DDLRegistration(0x90281afeu)]
 	public uint NumShotsInHurdle { get; set; } = 0x00000005;
 
-	[DDLRegistration(0x2b449d75u)]
+	[DDLRegistration(0xc749f57cu)]
 	public string? SecondaryShotSpawnEmit { get; set; } = default;
 
-	[DDLRegistration(0x2b449d75u)]
+	[DDLRegistration(0x53f41586u)]
 	public RivetAssetId SecondaryShotAsset { get; set; } = default;
 
-	[DDLRegistration(0x2b449d75u)]
+	[DDLRegistration(0x73df6d85u)]
 	public ShotBasePrius? SecondaryShotPrius { get; set; } = default;
 
 	public new static HurdleShotPrius Create(DDLObject ddl) => new(ddl);

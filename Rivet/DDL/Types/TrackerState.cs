@@ -23,22 +23,22 @@ public class TrackerState : DDLObjectType, IDDLObjectType<TrackerState> {
 		WebServerStatus = ddl.GetObject<WebServerStatus>(0x1a457ba5u);
 	}
 
-	[DDLRegistration(0xd40704feu)]
+	[DDLRegistration(0xa093cfdbu)]
 	public BuildManagerStatus? BuildManagerStatus { get; set; } = default;
 
-	[DDLRegistration(0xd40704feu)]
+	[DDLRegistration(0x57d7b408u)]
 	public List<BuildWorkerProgress?> BuildWorkerStatus { get; set; } = [];
 
-	[DDLRegistration(0xd40704feu)]
+	[DDLRegistration(0xc2889962u)]
 	public RequestProcessorStatus? RequestProcessorStatus { get; set; } = default;
 
-	[DDLRegistration(0xd40704feu)]
+	[DDLRegistration(0x0cb41b9cu)]
 	public List<string?> StatusMessages { get; set; } = [];
 
-	[DDLRegistration(0xd40704feu)]
+	[DDLRegistration(0xd91feac8u)]
 	public TrackerScanProgress? TrackerStatus { get; set; } = default;
 
-	[DDLRegistration(0xd40704feu)]
+	[DDLRegistration(0x1a457ba5u)]
 	public WebServerStatus? WebServerStatus { get; set; } = default;
 
 	public static TrackerState Create(DDLObject ddl) => new(ddl);

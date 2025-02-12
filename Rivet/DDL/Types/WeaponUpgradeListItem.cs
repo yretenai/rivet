@@ -19,10 +19,10 @@ public class WeaponUpgradeListItem : DDLObjectType, IDDLObjectType<WeaponUpgrade
 		ModValue = ddl.GetValue<float>(0x20c2261eu, ModValue);
 	}
 
-	[DDLRegistration(0x88949813u)]
+	[DDLRegistration(0xee5fda6au)]
 	public xdbb7aaff ModType { get; set; } = xdbb7aaff.None;
 
-	[DDLRegistration(0x88949813u)]
+	[DDLRegistration(0x20c2261eu)]
 	public float ModValue { get; set; } = 0.00f;
 
 	public static WeaponUpgradeListItem Create(DDLObject ddl) => new(ddl);

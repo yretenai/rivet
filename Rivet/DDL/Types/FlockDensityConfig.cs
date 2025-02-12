@@ -20,13 +20,13 @@ public class FlockDensityConfig : ConfigBase, IDDLObjectType<FlockDensityConfig>
 		MaxFlockSize = ddl.GetValue<int>(0x3b648308u, MaxFlockSize);
 	}
 
-	[DDLRegistration(0xfec78f0du)]
+	[DDLRegistration(0x140ef916u)]
 	public byte MaxActivatedVolumeNum { get; set; } = 0x05;
 
-	[DDLRegistration(0xfec78f0du, "Min Flock Size")]
+	[DDLRegistration(0xab1793e2u, "Min Flock Size")]
 	public int MinFlockSize { get; set; } = 6;
 
-	[DDLRegistration(0xfec78f0du, "Max Flock Size")]
+	[DDLRegistration(0x3b648308u, "Max Flock Size")]
 	public int MaxFlockSize { get; set; } = 20;
 
 	public new static FlockDensityConfig Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ShotMotionVolcanicEruptorRockPrius : BasicShotMotionPrius, IDDLObje
 		GravityVariance = ddl.GetValue<float>(0x48b4ee7cu, GravityVariance);
 	}
 
-	[DDLRegistration(0x823bd7eau, "Flight Speed Variance")]
+	[DDLRegistration(0xb1db25e2u, "Flight Speed Variance")]
 	public float FlightSpeedVariance { get; set; } = 5.00f;
 
-	[DDLRegistration(0x823bd7eau, "Gravity Variance")]
+	[DDLRegistration(0x48b4ee7cu, "Gravity Variance")]
 	public float GravityVariance { get; set; } = 5.00f;
 
 	public new static ShotMotionVolcanicEruptorRockPrius Create(DDLObject ddl) => new(ddl);

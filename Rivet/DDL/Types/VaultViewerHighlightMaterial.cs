@@ -20,13 +20,13 @@ public class VaultViewerHighlightMaterial : DDLObjectType, IDDLObjectType<VaultV
 		Highlight = ddl.GetValue<bool>(0x4b654738u, Highlight);
 	}
 
-	[DDLRegistration(0x62df6864u)]
+	[DDLRegistration(0x981e6927u)]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x62df6864u)]
+	[DDLRegistration(0xefce1692u)]
 	public RivetAssetId LunaName { get; set; } = default;
 
-	[DDLRegistration(0x62df6864u)]
+	[DDLRegistration(0x4b654738u)]
 	public bool Highlight { get; set; } = false;
 
 	public static VaultViewerHighlightMaterial Create(DDLObject ddl) => new(ddl);

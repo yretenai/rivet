@@ -25,28 +25,28 @@ public class WeaponModData : DDLObjectType, IDDLObjectType<WeaponModData> {
 		TileIndex = ddl.GetEnum<x1b1e7614>(0x95a0a58bu, x1b1e7614Values.Lookup);
 	}
 
-	[DDLRegistration(0xfa9a0eb5u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xdbb7aaff Type { get; set; } = xdbb7aaff.None;
 
-	[DDLRegistration(0xfa9a0eb5u)]
+	[DDLRegistration(0x38d1dc59u)]
 	public x1c87ac4a IconType { get; set; } = x1c87ac4a.None;
 
-	[DDLRegistration(0xfa9a0eb5u, description: "If true, Value is a percentage modifier")]
+	[DDLRegistration(0x858c4cf5u, description: "If true, Value is a percentage modifier")]
 	public bool IsPercent { get; set; } = false;
 
-	[DDLRegistration(0xfa9a0eb5u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfa9a0eb5u)]
+	[DDLRegistration(0x28b6544cu)]
 	public uint Cost { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfa9a0eb5u)]
+	[DDLRegistration(0xa0041b54u)]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0xfa9a0eb5u)]
+	[DDLRegistration(0xe02bccb2u)]
 	public string? DescLocTag { get; set; } = default;
 
-	[DDLRegistration(0xfa9a0eb5u)]
+	[DDLRegistration(0x95a0a58bu)]
 	public x1b1e7614 TileIndex { get; set; } = x1b1e7614.Empty;
 
 	public static WeaponModData Create(DDLObject ddl) => new(ddl);

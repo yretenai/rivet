@@ -22,19 +22,19 @@ public class VarNode : DDLObjectType, IDDLObjectType<VarNode> {
 		RenderTextureOverrides = ddl.GetDictionary<RivetAssetId, VarRenderTextureOverride>(0xe301fc32, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VarRenderTextureOverride>(mapId));
 	}
 
-	[DDLRegistration(0x578dae60u)]
+	[DDLRegistration(0xee2eb97eu)]
 	public Dictionary<RivetAssetId, VarSceneNodeReference?> SceneNodeReferences { get; set; } = [];
 
-	[DDLRegistration(0x578dae60u)]
+	[DDLRegistration(0x68221c5du)]
 	public Dictionary<RivetAssetId, VarMaterialOverride?> MaterialOverrides { get; set; } = [];
 
-	[DDLRegistration(0x578dae60u)]
+	[DDLRegistration(0xfee09530u)]
 	public Dictionary<RivetAssetId, VarRenderConstantOverride?> RenderConstantOverrides { get; set; } = [];
 
-	[DDLRegistration(0x578dae60u)]
+	[DDLRegistration(0xcc0be14au)]
 	public Dictionary<RivetAssetId, VarRenderColorOverride?> RenderColorOverrides { get; set; } = [];
 
-	[DDLRegistration(0x578dae60u)]
+	[DDLRegistration(0xe301fc32u)]
 	public Dictionary<RivetAssetId, VarRenderTextureOverride?> RenderTextureOverrides { get; set; } = [];
 
 	public static VarNode Create(DDLObject ddl) => new(ddl);

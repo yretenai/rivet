@@ -19,10 +19,10 @@ public class BeamImpactStartEvent : EventBase, IDDLObjectType<BeamImpactStartEve
 		BeamHash = ddl.GetValue<uint>(0x26a7db04u, BeamHash);
 	}
 
-	[DDLRegistration(0xa06d6512u)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
-	[DDLRegistration(0xa06d6512u, description: "Optional Hash for differentiating beams in the conduit filter")]
+	[DDLRegistration(0x26a7db04u, description: "Optional Hash for differentiating beams in the conduit filter")]
 	public uint BeamHash { get; set; } = 0x00000000;
 
 	public new static BeamImpactStartEvent Create(DDLObject ddl) => new(ddl);

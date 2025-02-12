@@ -18,7 +18,7 @@ public class SoundPropagation2LinearDef : DDLObjectType, IDDLObjectType<SoundPro
 		MaxDistance = ddl.GetValue<float>(0x88831235u, MaxDistance);
 	}
 
-	[DDLRegistration(0x544a7a2eu, description: "the distance to SP_MIN_GAIN_LEVEL")]
+	[DDLRegistration(0x88831235u, description: "the distance to SP_MIN_GAIN_LEVEL")]
 	public float MaxDistance { get; set; } = 1000.00f;
 
 	public static SoundPropagation2LinearDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class CritterTypeConfig : ConfigBase, IDDLObjectType<CritterTypeConfig> {
 		DefaultDensity = ddl.GetObject<CritterDensity>(0x432f4e12u);
 	}
 
-	[DDLRegistration(0xa8c9ece6u)]
+	[DDLRegistration(0x358cc844u)]
 	public RivetAssetId CritterActor { get; set; } = default;
 
-	[DDLRegistration(0xa8c9ece6u)]
+	[DDLRegistration(0x432f4e12u)]
 	public CritterDensity? DefaultDensity { get; set; } = default;
 
 	public new static CritterTypeConfig Create(DDLObject ddl) => new(ddl);

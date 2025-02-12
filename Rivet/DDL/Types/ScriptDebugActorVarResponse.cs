@@ -19,10 +19,10 @@ public class ScriptDebugActorVarResponse : DDLObjectType, IDDLObjectType<ScriptD
 		Actors = ddl.GetObjects<ScriptDebugActorGroupEntry>(0xe153be82u);
 	}
 
-	[DDLRegistration(0x451481f6u)]
+	[DDLRegistration(0xbb3171e6u)]
 	public RivetAssetId VarTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x451481f6u)]
+	[DDLRegistration(0xe153be82u)]
 	public List<ScriptDebugActorGroupEntry?> Actors { get; set; } = [];
 
 	public static ScriptDebugActorVarResponse Create(DDLObject ddl) => new(ddl);

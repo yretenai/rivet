@@ -19,10 +19,10 @@ public class ClipboardScriptGraphEditor : DDLObjectType, IDDLObjectType<Clipboar
 		CopyObject = ddl.GetObject<ClipboardScriptGraphCopyObject>(0x0588cf88u);
 	}
 
-	[DDLRegistration(0x201abd12u)]
+	[DDLRegistration(0xffcb8104u)]
 	public string? Compatibility { get; set; } = default;
 
-	[DDLRegistration(0x201abd12u)]
+	[DDLRegistration(0x0588cf88u)]
 	public ClipboardScriptGraphCopyObject? CopyObject { get; set; } = default;
 
 	public static ClipboardScriptGraphEditor Create(DDLObject ddl) => new(ddl);

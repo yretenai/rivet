@@ -20,13 +20,13 @@ public class UIDifficultyConfig : ConfigBase, IDDLObjectType<UIDifficultyConfig>
 		DefaultDifficultyID = ddl.GetEnum<DifficultyLevel>(0x103ace5cu, DifficultyLevelValues.Lookup);
 	}
 
-	[DDLRegistration(0x27cb46bcu, "Difficulty Levels", "Difficulty data for the UI.")]
+	[DDLRegistration(0x63e7d044u, "Difficulty Levels", "Difficulty data for the UI.")]
 	public List<UIDifficultyData?> DifficultyLevelData { get; set; } = [];
 
-	[DDLRegistration(0x27cb46bcu, "Super Easy Difficulty")]
+	[DDLRegistration(0x95f5bd15u, "Super Easy Difficulty")]
 	public UIDifficultyData? SuperEasyDifficultyData { get; set; } = default;
 
-	[DDLRegistration(0x27cb46bcu, "Default Difficulty ID", "The default difficulty level when starting a new game.")]
+	[DDLRegistration(0x103ace5cu, "Default Difficulty ID", "The default difficulty level when starting a new game.")]
 	public DifficultyLevel DefaultDifficultyID { get; set; } = DifficultyLevel.Normal;
 
 	public new static UIDifficultyConfig Create(DDLObject ddl) => new(ddl);

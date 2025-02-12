@@ -19,10 +19,10 @@ public class CodeBranchRef : DDLObjectType, IDDLObjectType<CodeBranchRef> {
 		CurrentSymbolRoot = ddl.GetValue<RivetAssetId>(0x571153d8u, CurrentSymbolRoot);
 	}
 
-	[DDLRegistration(0xfc7c2c47u)]
+	[DDLRegistration(0x59332499u)]
 	public RivetAssetId BranchPath { get; set; } = default;
 
-	[DDLRegistration(0xfc7c2c47u)]
+	[DDLRegistration(0x571153d8u)]
 	public RivetAssetId CurrentSymbolRoot { get; set; } = default;
 
 	public static CodeBranchRef Create(DDLObject ddl) => new(ddl);

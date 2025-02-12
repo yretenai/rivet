@@ -18,7 +18,7 @@ public class GalacticMapManualTriggerLandingActionPrius : DDLObjectType, IDDLObj
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x3d5a0966u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
 	public static GalacticMapManualTriggerLandingActionPrius Create(DDLObject ddl) => new(ddl);

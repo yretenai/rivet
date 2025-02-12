@@ -21,16 +21,16 @@ public class SyncValuePrius : DDLObjectType, IDDLObjectType<SyncValuePrius> {
 		MaxValue = ddl.GetValue<float>(0x04e99fa3u, MaxValue);
 	}
 
-	[DDLRegistration(0x9b816a81u, description: "Name of the component")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of the component")]
 	public string? Name { get; set; } = "Score";
 
-	[DDLRegistration(0x9b816a81u, description: "Start value")]
+	[DDLRegistration(0x651c34d0u, description: "Start value")]
 	public float StartValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9b816a81u, description: "Minimum value")]
+	[DDLRegistration(0xe2893042u, description: "Minimum value")]
 	public float MinValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9b816a81u, description: "Maximum value")]
+	[DDLRegistration(0x04e99fa3u, description: "Maximum value")]
 	public float MaxValue { get; set; } = 999999.00f;
 
 	public static SyncValuePrius Create(DDLObject ddl) => new(ddl);

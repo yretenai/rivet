@@ -20,13 +20,13 @@ public class GainRaritaniumEvent : EventBase, IDDLObjectType<GainRaritaniumEvent
 		TotalRaritanium = ddl.GetValue<float>(0xded2c85au, TotalRaritanium);
 	}
 
-	[DDLRegistration(0x2afccb84u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x2afccb84u)]
+	[DDLRegistration(0x6c07833bu)]
 	public float NewRaritanium { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2afccb84u)]
+	[DDLRegistration(0xded2c85au)]
 	public float TotalRaritanium { get; set; } = 0.00f;
 
 	public new static GainRaritaniumEvent Create(DDLObject ddl) => new(ddl);

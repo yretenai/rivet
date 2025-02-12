@@ -19,10 +19,10 @@ public class AddFloatsNodeDef : MathNodeBaseDef, IDDLObjectType<AddFloatsNodeDef
 		Sum = ddl.GetObject<OutputPlugFloat>(0xe2e8b684u);
 	}
 
-	[DDLRegistration(0x6314f150u)]
+	[DDLRegistration(0x6b596841u)]
 	public List<InputPlugFloat?> Addend { get; set; } = [];
 
-	[DDLRegistration(0x6314f150u)]
+	[DDLRegistration(0xe2e8b684u)]
 	public OutputPlugFloat? Sum { get; set; } = default;
 
 	public new static AddFloatsNodeDef Create(DDLObject ddl) => new(ddl);

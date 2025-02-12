@@ -19,10 +19,10 @@ public class TargetSystemSettings : DDLObjectType, IDDLObjectType<TargetSystemSe
 		QueryMax = ddl.GetValue<int>(0xd6ef73b0u, QueryMax);
 	}
 
-	[DDLRegistration(0xdd2a021fu)]
+	[DDLRegistration(0x54093533u)]
 	public int TargetMax { get; set; } = 2048;
 
-	[DDLRegistration(0xdd2a021fu)]
+	[DDLRegistration(0xd6ef73b0u)]
 	public int QueryMax { get; set; } = 512;
 
 	public static TargetSystemSettings Create(DDLObject ddl) => new(ddl);

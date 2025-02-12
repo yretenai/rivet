@@ -32,49 +32,49 @@ public class GameBotConfigMelee : BotConfigMelee, IDDLObjectType<GameBotConfigMe
 		AllowRetaliateCombo = ddl.GetValue<bool>(0x7416f9fau, AllowRetaliateCombo);
 	}
 
-	[DDLRegistration(0xf4e3ca66u, description: "Range at which a bot will wait to melee when they are flanking")]
+	[DDLRegistration(0x36a2eab3u, description: "Range at which a bot will wait to melee when they are flanking")]
 	public float WaitForAttackRangeForFlank { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf4e3ca66u, description: "Range at which a bot will wait to melee when they are locked out due to the Attack Job system.")]
+	[DDLRegistration(0x3ea20850u, description: "Range at which a bot will wait to melee when they are locked out due to the Attack Job system.")]
 	public float WaitForAttackRange { get; set; } = 5.00f;
 
-	[DDLRegistration(0xf4e3ca66u, description: "How long to look ahead when estimating the target's future position")]
+	[DDLRegistration(0x932faa92u, description: "How long to look ahead when estimating the target's future position")]
 	public float AttackRangePredictionTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf4e3ca66u, description: "Minimum Missed attacks required before bot taunts (a random number from min to max is chosen)")]
+	[DDLRegistration(0xb93e1604u, description: "Minimum Missed attacks required before bot taunts (a random number from min to max is chosen)")]
 	public float MinMissedAttacksForTaunt { get; set; } = 2.00f;
 
-	[DDLRegistration(0xf4e3ca66u, description: "Maximum Missed attacks required before bot taunts (a random number from min to max is chosen)")]
+	[DDLRegistration(0x628145e3u, description: "Maximum Missed attacks required before bot taunts (a random number from min to max is chosen)")]
 	public float MaxMissedAttacksForTaunt { get; set; } = 3.00f;
 
-	[DDLRegistration(0xf4e3ca66u, description: "Probability (0-1) of taunting after a missed attack")]
+	[DDLRegistration(0x63a2f192u, description: "Probability (0-1) of taunting after a missed attack")]
 	public float TauntChance { get; set; } = 0.50f;
 
-	[DDLRegistration(0xf4e3ca66u, description: "Probability (0-1) of randomly taunting when idle")]
+	[DDLRegistration(0x52d8671bu, description: "Probability (0-1) of randomly taunting when idle")]
 	public float IdleTauntChance { get; set; } = 0.50f;
 
-	[DDLRegistration(0xf4e3ca66u, description: "Cooldown duration for taunting")]
+	[DDLRegistration(0x2a2b9e76u, description: "Cooldown duration for taunting")]
 	public float TauntCooldownDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf4e3ca66u, description: "Minimum distance to target for taunt or celebrate")]
+	[DDLRegistration(0x617a620eu, description: "Minimum distance to target for taunt or celebrate")]
 	public float TauntCelebrateMinDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf4e3ca66u, description: "Probability (0-1) of taunting or celebrating when a target other than the hero is hit")]
+	[DDLRegistration(0xffc9452cu, description: "Probability (0-1) of taunting or celebrating when a target other than the hero is hit")]
 	public float NonHeroTauntOrCelebrateProbability { get; set; } = 0.20f;
 
-	[DDLRegistration(0xf4e3ca66u, description: "Minimum angle for turning to face")]
+	[DDLRegistration(0x034f40b9u, description: "Minimum angle for turning to face")]
 	public float FacingAngle { get; set; } = 45.00f;
 
-	[DDLRegistration(0xf4e3ca66u, description: "If the bot's target is unreachable, the bot will exit out of behavior if this is true")]
+	[DDLRegistration(0xac7d387au, description: "If the bot's target is unreachable, the bot will exit out of behavior if this is true")]
 	public bool ExitOnUnreachableTarget { get; set; } = true;
 
-	[DDLRegistration(0xf4e3ca66u, description: "If true, the bot will pursue target if it missed a ranged attack enough times or is occluded from target")]
+	[DDLRegistration(0xd87f4fc0u, description: "If true, the bot will pursue target if it missed a ranged attack enough times or is occluded from target")]
 	public bool DoPursueBehavior { get; set; } = false;
 
-	[DDLRegistration(0xf4e3ca66u, description: "If true, the bot will face the target before moving")]
+	[DDLRegistration(0x3a6e21f8u, description: "If true, the bot will face the target before moving")]
 	public bool FaceThenGo { get; set; } = false;
 
-	[DDLRegistration(0xf4e3ca66u, description: "If true, the bot will attack without moving if possible after a hit react state")]
+	[DDLRegistration(0x7416f9fau, description: "If true, the bot will attack without moving if possible after a hit react state")]
 	public bool AllowRetaliateCombo { get; set; } = false;
 
 	public new static GameBotConfigMelee Create(DDLObject ddl) => new(ddl);

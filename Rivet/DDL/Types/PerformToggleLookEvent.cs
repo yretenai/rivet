@@ -21,16 +21,16 @@ public class PerformToggleLookEvent : EventBase, IDDLObjectType<PerformToggleLoo
 		ApplyLookGroup = ddl.GetValue<byte>(0x189eacacu, ApplyLookGroup);
 	}
 
-	[DDLRegistration(0x6a478ec8u)]
+	[DDLRegistration(0x0c559cb1u)]
 	public uint LookNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x6a478ec8u)]
+	[DDLRegistration(0x70af5e04u)]
 	public byte TurnOn { get; set; } = 0x01;
 
-	[DDLRegistration(0x6a478ec8u)]
+	[DDLRegistration(0xa286144cu)]
 	public byte LookGroup { get; set; } = 0x00;
 
-	[DDLRegistration(0x6a478ec8u)]
+	[DDLRegistration(0x189eacacu)]
 	public byte ApplyLookGroup { get; set; } = 0x00;
 
 	public new static PerformToggleLookEvent Create(DDLObject ddl) => new(ddl);

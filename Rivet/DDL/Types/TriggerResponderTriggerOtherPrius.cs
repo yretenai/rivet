@@ -18,7 +18,7 @@ public class TriggerResponderTriggerOtherPrius : TriggerResponderBasePrius, IDDL
 		ActorsToTrigger = ddl.GetObjects<TriggerOtherEntry>(0x2a359c83u);
 	}
 
-	[DDLRegistration(0x42e3d6e7u, "Actors to trigger", "Trigger each actor/group with each switch's group-name")]
+	[DDLRegistration(0x2a359c83u, "Actors to trigger", "Trigger each actor/group with each switch's group-name")]
 	public List<TriggerOtherEntry?> ActorsToTrigger { get; set; } = [];
 
 	public new static TriggerResponderTriggerOtherPrius Create(DDLObject ddl) => new(ddl);

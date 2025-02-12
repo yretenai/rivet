@@ -23,22 +23,22 @@ public class TargetCheckProjectileArcPrius : TargetCheckBasePrius, IDDLObjectTyp
 		EndOffset = ddl.GetObject<DDLVector3>(0x27fcfb73u);
 	}
 
-	[DDLRegistration(0x977ea7bfu, description: "Use the target object's bounding radius for the check")]
+	[DDLRegistration(0x0d9649f5u, description: "Use the target object's bounding radius for the check")]
 	public bool UseTargetRadius { get; set; } = false;
 
-	[DDLRegistration(0x977ea7bfu, description: "Radius of the swept sphere checks, used only if there's no ProjectileThrowing component on the actor, and UseTargetRadius is false.")]
+	[DDLRegistration(0xa16ee5e9u, description: "Radius of the swept sphere checks, used only if there's no ProjectileThrowing component on the actor, and UseTargetRadius is false.")]
 	public float CheckRadius { get; set; } = 0.20f;
 
-	[DDLRegistration(0x977ea7bfu)]
+	[DDLRegistration(0xef116147u)]
 	public x84a7fecd StartType { get; set; } = x84a7fecd.HuntingActor;
 
-	[DDLRegistration(0x977ea7bfu)]
+	[DDLRegistration(0x16ec47a8u)]
 	public x84a7fecd EndType { get; set; } = x84a7fecd.TargetHunterTarget;
 
-	[DDLRegistration(0x977ea7bfu)]
+	[DDLRegistration(0x2c176850u)]
 	public DDLVector3? StartOffset { get; set; } = default;
 
-	[DDLRegistration(0x977ea7bfu)]
+	[DDLRegistration(0x27fcfb73u)]
 	public DDLVector3? EndOffset { get; set; } = default;
 
 	public new static TargetCheckProjectileArcPrius Create(DDLObject ddl) => new(ddl);

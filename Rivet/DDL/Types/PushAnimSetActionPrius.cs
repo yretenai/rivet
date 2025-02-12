@@ -20,13 +20,13 @@ public class PushAnimSetActionPrius : DDLObjectType, IDDLObjectType<PushAnimSetA
 		RemoveAnimSetOnScriptUnload = ddl.GetValue<bool>(0x5e67d709u, RemoveAnimSetOnScriptUnload);
 	}
 
-	[DDLRegistration(0xb8f12f17u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0xb8f12f17u)]
+	[DDLRegistration(0xffcf15f1u)]
 	public RivetAssetId AnimSet { get; set; } = default;
 
-	[DDLRegistration(0xb8f12f17u)]
+	[DDLRegistration(0x5e67d709u)]
 	public bool RemoveAnimSetOnScriptUnload { get; set; } = true;
 
 	public static PushAnimSetActionPrius Create(DDLObject ddl) => new(ddl);

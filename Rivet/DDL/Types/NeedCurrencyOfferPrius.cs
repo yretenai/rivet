@@ -18,7 +18,7 @@ public class NeedCurrencyOfferPrius : HoldOfferPrius, IDDLObjectType<NeedCurrenc
 		RequiredCurrency = ddl.GetValue<int>(0x8481d714u, RequiredCurrency);
 	}
 
-	[DDLRegistration(0x9e829a98u)]
+	[DDLRegistration(0x8481d714u)]
 	public int RequiredCurrency { get; set; } = 0;
 
 	public new static NeedCurrencyOfferPrius Create(DDLObject ddl) => new(ddl);

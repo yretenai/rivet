@@ -18,7 +18,7 @@ public class PortalTetherItemConfig : GameItemConfig, IDDLObjectType<PortalTethe
 		PortalTetherPrius = ddl.GetObject<GadgetPortalTetherPrius>(0x1b18f80fu);
 	}
 
-	[DDLRegistration(0x3eec7003u)]
+	[DDLRegistration(0x1b18f80fu)]
 	public GadgetPortalTetherPrius? PortalTetherPrius { get; set; } = default;
 
 	public new static PortalTetherItemConfig Create(DDLObject ddl) => new(ddl);

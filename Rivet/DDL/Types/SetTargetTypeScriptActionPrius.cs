@@ -19,10 +19,10 @@ public class SetTargetTypeScriptActionPrius : DDLObjectType, IDDLObjectType<SetT
 		TargetType = ddl.GetBitset<TargetType>(0x75a19d21u, TargetTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x0ca55343u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x0ca55343u)]
+	[DDLRegistration(0x75a19d21u)]
 	public TargetType TargetType { get; set; } = (TargetType) 0x00000000;
 
 	public static SetTargetTypeScriptActionPrius Create(DDLObject ddl) => new(ddl);

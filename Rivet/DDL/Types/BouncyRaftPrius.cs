@@ -20,13 +20,13 @@ public class BouncyRaftPrius : TrampolinePrius, IDDLObjectType<BouncyRaftPrius> 
 		CloseWarningDuration = ddl.GetValue<float>(0x9f1aed38u, CloseWarningDuration);
 	}
 
-	[DDLRegistration(0x5c4c37b6u, description: "Should this raft always be open?")]
+	[DDLRegistration(0x80c3c1f9u, description: "Should this raft always be open?")]
 	public bool AlwaysOpen { get; set; } = false;
 
-	[DDLRegistration(0x5c4c37b6u, description: "Total amount of time raft stays open after being damaged.")]
+	[DDLRegistration(0xa5dbf798u, description: "Total amount of time raft stays open after being damaged.")]
 	public float OpenDuration { get; set; } = 8.00f;
 
-	[DDLRegistration(0x5c4c37b6u, description: "Amount of warning time raft provides before closing.")]
+	[DDLRegistration(0x9f1aed38u, description: "Amount of warning time raft provides before closing.")]
 	public float CloseWarningDuration { get; set; } = 3.00f;
 
 	public new static BouncyRaftPrius Create(DDLObject ddl) => new(ddl);

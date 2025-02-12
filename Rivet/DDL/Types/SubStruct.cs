@@ -19,10 +19,10 @@ public class SubStruct : DDLObjectType, IDDLObjectType<SubStruct> {
 		Val = ddl.GetValue<int>(0xbd8a93acu, Val);
 	}
 
-	[DDLRegistration(0x59bfc531u)]
+	[DDLRegistration(0x76fb8a30u)]
 	public string? Str { get; set; } = "ClassSubStructDefault";
 
-	[DDLRegistration(0x59bfc531u)]
+	[DDLRegistration(0xbd8a93acu)]
 	public int Val { get; set; } = 4;
 
 	public static SubStruct Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MagShieldFullImpactEvent : EventBase, IDDLObjectType<MagShieldFullI
 		DeductAmmo = ddl.GetValue<bool>(0xf07e3290u, DeductAmmo);
 	}
 
-	[DDLRegistration(0x8db9e760u)]
+	[DDLRegistration(0xf07e3290u)]
 	public bool DeductAmmo { get; set; } = true;
 
 	public new static MagShieldFullImpactEvent Create(DDLObject ddl) => new(ddl);

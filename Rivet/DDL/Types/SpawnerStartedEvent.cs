@@ -18,7 +18,7 @@ public class SpawnerStartedEvent : EventBase, IDDLObjectType<SpawnerStartedEvent
 		SpawnerComponentHandle = ddl.GetValue<uint>(0xac64db40u, SpawnerComponentHandle);
 	}
 
-	[DDLRegistration(0x4f106999u)]
+	[DDLRegistration(0xac64db40u)]
 	public uint SpawnerComponentHandle { get; set; } = 0x00000000;
 
 	public new static SpawnerStartedEvent Create(DDLObject ddl) => new(ddl);

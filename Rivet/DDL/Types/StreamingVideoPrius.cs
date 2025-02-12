@@ -25,28 +25,28 @@ public class StreamingVideoPrius : DDLObjectType, IDDLObjectType<StreamingVideoP
 		MaterialTexture = ddl.GetString(0x263188db) ?? MaterialTexture;
 	}
 
-	[DDLRegistration(0x43959a94u)]
+	[DDLRegistration(0xeaf2611bu)]
 	public RivetAssetId Config { get; set; } = default;
 
-	[DDLRegistration(0x43959a94u, description: "Preload the video when the config is set")]
+	[DDLRegistration(0x7b8d9392u, description: "Preload the video when the config is set")]
 	public bool PreloadVideo { get; set; } = false;
 
-	[DDLRegistration(0x43959a94u, description: "Whether or not to play the video on actor activation.")]
+	[DDLRegistration(0xa94769d6u, description: "Whether or not to play the video on actor activation.")]
 	public bool PlayOnActivation { get; set; } = true;
 
-	[DDLRegistration(0x43959a94u, description: "Video activation delay, ignored if PlayOnActivation is false.")]
+	[DDLRegistration(0xa0d7730bu, description: "Video activation delay, ignored if PlayOnActivation is false.")]
 	public float ActivationDelay { get; set; } = -1.00f;
 
-	[DDLRegistration(0x43959a94u)]
+	[DDLRegistration(0xffafa5a1u)]
 	public StreamingVideoMaterialOverride? MaterialOverride { get; set; } = default;
 
-	[DDLRegistration(0x43959a94u)]
+	[DDLRegistration(0xc4e9061fu)]
 	public List<StreamingVideoMaterialOverride?> ExtraMaterialOverrides { get; set; } = [];
 
-	[DDLRegistration(0x43959a94u, "Material (Deprecated)")]
+	[DDLRegistration(0x2176bd2au, "Material (Deprecated)")]
 	public string? TextureToReplace { get; set; } = default;
 
-	[DDLRegistration(0x43959a94u, "Texture (Deprecated)")]
+	[DDLRegistration(0x263188dbu, "Texture (Deprecated)")]
 	public string? MaterialTexture { get; set; } = "BaseMap2D_Texture";
 
 	public static StreamingVideoPrius Create(DDLObject ddl) => new(ddl);

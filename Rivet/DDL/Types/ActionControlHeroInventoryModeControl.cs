@@ -18,7 +18,7 @@ public class ActionControlHeroInventoryModeControl : DDLObjectType, IDDLObjectTy
 		Control = ddl.GetEnum<x6a041ccf>(0xec314f73u, x6a041ccfValues.Lookup);
 	}
 
-	[DDLRegistration(0xcb01efceu)]
+	[DDLRegistration(0xec314f73u)]
 	public x6a041ccf Control { get; set; } = x6a041ccf.InventorySelect;
 
 	public static ActionControlHeroInventoryModeControl Create(DDLObject ddl) => new(ddl);

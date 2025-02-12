@@ -19,10 +19,10 @@ public class ScreenSettings : DDLObjectType, IDDLObjectType<ScreenSettings> {
 		StandardFov = ddl.GetValues<float>(0x5453e3a8u);
 	}
 
-	[DDLRegistration(0x95580584u)]
+	[DDLRegistration(0xd5ec88deu)]
 	public List<float> WideFov { get; set; } = [];
 
-	[DDLRegistration(0x95580584u)]
+	[DDLRegistration(0x5453e3a8u)]
 	public List<float> StandardFov { get; set; } = [];
 
 	public static ScreenSettings Create(DDLObject ddl) => new(ddl);

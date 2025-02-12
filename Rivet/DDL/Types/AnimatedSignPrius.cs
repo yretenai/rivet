@@ -25,28 +25,28 @@ public class AnimatedSignPrius : DDLObjectType, IDDLObjectType<AnimatedSignPrius
 		TriggeringTargets = ddl.GetBitset<TargetTypeGame>(0xe93ed42bu, TargetTypeGameValues.Lookup);
 	}
 
-	[DDLRegistration(0xb27699e0u, "Trigger Volume")]
+	[DDLRegistration(0x4e99f021u, "Trigger Volume")]
 	public RivetAssetId TriggerVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb27699e0u)]
+	[DDLRegistration(0xe747921au)]
 	public string? IdleAnim { get; set; } = default;
 
-	[DDLRegistration(0xb27699e0u)]
+	[DDLRegistration(0x7fd8d65au)]
 	public string? IdleToTriggeredAnim { get; set; } = default;
 
-	[DDLRegistration(0xb27699e0u)]
+	[DDLRegistration(0x933bc277u)]
 	public string? TriggeredAnim { get; set; } = default;
 
-	[DDLRegistration(0xb27699e0u)]
+	[DDLRegistration(0x2fa6a5c4u)]
 	public string? TriggeredToIdleAnim { get; set; } = default;
 
-	[DDLRegistration(0xb27699e0u, "Attached Lights")]
+	[DDLRegistration(0xea214fc6u, "Attached Lights")]
 	public List<AttachedLightData?> AttachedLights { get; set; } = [];
 
-	[DDLRegistration(0xb27699e0u, "Light Track")]
+	[DDLRegistration(0x20632106u, "Light Track")]
 	public string? LightTrack { get; set; } = default;
 
-	[DDLRegistration(0xb27699e0u)]
+	[DDLRegistration(0xe93ed42bu)]
 	public TargetTypeGame TriggeringTargets { get; set; } = (TargetTypeGame) 0x00000000;
 
 	public static AnimatedSignPrius Create(DDLObject ddl) => new(ddl);

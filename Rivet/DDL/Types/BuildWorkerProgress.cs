@@ -24,25 +24,25 @@ public class BuildWorkerProgress : DDLObjectType, IDDLObjectType<BuildWorkerProg
 		BuildEstimatedTime = ddl.GetValue<ulong>(0x208e64bau, BuildEstimatedTime);
 	}
 
-	[DDLRegistration(0xbca2f979u)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xbca2f979u)]
+	[DDLRegistration(0xc3642b05u)]
 	public string? TargetId { get; set; } = default;
 
-	[DDLRegistration(0xbca2f979u)]
+	[DDLRegistration(0x75a19d21u)]
 	public x8b211a61 TargetType { get; set; } = x8b211a61.Pid;
 
-	[DDLRegistration(0xbca2f979u)]
+	[DDLRegistration(0xbac01e3au)]
 	public xa2b63d63 State { get; set; } = xa2b63d63.Idle;
 
-	[DDLRegistration(0xbca2f979u)]
+	[DDLRegistration(0xd4ff8fbcu)]
 	public uint BuildRuleHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbca2f979u)]
+	[DDLRegistration(0x94ec5d36u)]
 	public ulong BuildStartTime { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xbca2f979u)]
+	[DDLRegistration(0x208e64bau)]
 	public ulong BuildEstimatedTime { get; set; } = 0x0000000000000000;
 
 	public static BuildWorkerProgress Create(DDLObject ddl) => new(ddl);

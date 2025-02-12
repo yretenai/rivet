@@ -22,19 +22,19 @@ public class BattleBrewEmitterAuraPrius : BattleBrewEmitterBasePrius, IDDLObject
 		DebugDraw = ddl.GetValue<bool>(0x6020521bu, DebugDraw);
 	}
 
-	[DDLRegistration(0x22e9af2bu)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 0.00f;
 
-	[DDLRegistration(0x22e9af2bu)]
+	[DDLRegistration(0x753619b7u)]
 	public float ExpandTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x22e9af2bu)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x22e9af2bu, description: "This is the types of target that can receive the effect of this aura. If this is left unchanged, then all targets are valid.")]
+	[DDLRegistration(0x3b4c9303u, description: "This is the types of target that can receive the effect of this aura. If this is left unchanged, then all targets are valid.")]
 	public TargetType ValidTargetTypes { get; set; } = (TargetType) 0x00000000;
 
-	[DDLRegistration(0x22e9af2bu)]
+	[DDLRegistration(0x6020521bu)]
 	public bool DebugDraw { get; set; } = true;
 
 	public new static BattleBrewEmitterAuraPrius Create(DDLObject ddl) => new(ddl);

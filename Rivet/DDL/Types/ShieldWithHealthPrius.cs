@@ -20,13 +20,13 @@ public class ShieldWithHealthPrius : DamageModifierIncomingPrius, IDDLObjectType
 		MaterialID = ddl.GetValue<RivetAssetId>(0xe6bcba51u, MaterialID);
 	}
 
-	[DDLRegistration(0xa9a4e9f6u, description: "Initital health the shield starts with")]
+	[DDLRegistration(0xba976b43u, description: "Initital health the shield starts with")]
 	public float ShieldHealth { get; set; } = 100.00f;
 
-	[DDLRegistration(0xa9a4e9f6u, description: "Amount that damage is mitigated, 0 is none - 100 is all damage [0-100]")]
+	[DDLRegistration(0xd3071983u, description: "Amount that damage is mitigated, 0 is none - 100 is all damage [0-100]")]
 	public float PercentDamageMitigation { get; set; } = 95.00f;
 
-	[DDLRegistration(0xa9a4e9f6u)]
+	[DDLRegistration(0xe6bcba51u)]
 	public RivetAssetId MaterialID { get; set; } = default;
 
 	public new static ShieldWithHealthPrius Create(DDLObject ddl) => new(ddl);

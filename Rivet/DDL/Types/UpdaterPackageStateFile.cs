@@ -25,28 +25,28 @@ public class UpdaterPackageStateFile : DDLObjectType, IDDLObjectType<UpdaterPack
 		IsPackageUnpacked = ddl.GetValue<bool>(0xf369b90bu, IsPackageUnpacked);
 	}
 
-	[DDLRegistration(0x75e487d2u)]
+	[DDLRegistration(0xc78ccd21u)]
 	public string? PackageRootDir { get; set; } = "";
 
-	[DDLRegistration(0x75e487d2u)]
+	[DDLRegistration(0xcb4b0515u)]
 	public string? PackageFolder { get; set; } = "";
 
-	[DDLRegistration(0x75e487d2u)]
+	[DDLRegistration(0x9f8fab1bu)]
 	public string? PackageConfigFile { get; set; } = "";
 
-	[DDLRegistration(0x75e487d2u)]
+	[DDLRegistration(0xf9209020u)]
 	public string? MainPackageFile { get; set; } = "";
 
-	[DDLRegistration(0x75e487d2u)]
+	[DDLRegistration(0x4bd40e09u)]
 	public bool IsCodeFolder { get; set; } = false;
 
-	[DDLRegistration(0x75e487d2u)]
+	[DDLRegistration(0x48274b4eu)]
 	public bool IsConfigDownloaded { get; set; } = false;
 
-	[DDLRegistration(0x75e487d2u)]
+	[DDLRegistration(0xab321f0eu)]
 	public bool IsPackageDownloaded { get; set; } = false;
 
-	[DDLRegistration(0x75e487d2u)]
+	[DDLRegistration(0xf369b90bu)]
 	public bool IsPackageUnpacked { get; set; } = false;
 
 	public static UpdaterPackageStateFile Create(DDLObject ddl) => new(ddl);

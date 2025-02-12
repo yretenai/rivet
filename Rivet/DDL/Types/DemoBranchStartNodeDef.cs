@@ -20,13 +20,13 @@ public class DemoBranchStartNodeDef : BranchStartNodeBaseDef, IDDLObjectType<Dem
 		DemoType = ddl.GetString(0xb0ac7409) ?? DemoType;
 	}
 
-	[DDLRegistration(0xdaae9981u)]
+	[DDLRegistration(0xe6d21f10u)]
 	public OutputPlugBoolean? Demo { get; set; } = default;
 
-	[DDLRegistration(0xdaae9981u)]
+	[DDLRegistration(0xe5cbdffcu)]
 	public OutputPlugBoolean? NotDemo { get; set; } = default;
 
-	[DDLRegistration(0xdaae9981u, "Demo Type", "The commandline string after '-demo'.")]
+	[DDLRegistration(0xb0ac7409u, "Demo Type", "The commandline string after '-demo'.")]
 	public string? DemoType { get; set; } = default;
 
 	public new static DemoBranchStartNodeDef Create(DDLObject ddl) => new(ddl);

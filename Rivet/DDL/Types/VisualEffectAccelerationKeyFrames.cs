@@ -23,22 +23,22 @@ public class VisualEffectAccelerationKeyFrames : DDLObjectType, IDDLObjectType<V
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x74d35364u, "Loop")]
+	[DDLRegistration(0xe15c9369u, "Loop")]
 	public bool EnableLooping { get; set; } = true;
 
-	[DDLRegistration(0x74d35364u, "Use Emitter Age")]
+	[DDLRegistration(0x81d6b7fcu, "Use Emitter Age")]
 	public bool UseEmitterAge { get; set; } = false;
 
-	[DDLRegistration(0x74d35364u, "LifeTime Override")]
+	[DDLRegistration(0x580128bbu, "LifeTime Override")]
 	public float LifeTimeOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0x74d35364u, "Direction")]
+	[DDLRegistration(0x5caab88du, "Direction")]
 	public VisualEffectAngles? Angles { get; set; } = default;
 
-	[DDLRegistration(0x74d35364u, "Space")]
+	[DDLRegistration(0x30210dfbu, "Space")]
 	public xfe5100b1 Space { get; set; } = xfe5100b1.World;
 
-	[DDLRegistration(0x74d35364u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
 	public static VisualEffectAccelerationKeyFrames Create(DDLObject ddl) => new(ddl);

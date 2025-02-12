@@ -19,10 +19,10 @@ public class LooksToFilters : DDLObjectType, IDDLObjectType<LooksToFilters> {
 		Filters = ddl.GetObjects<FilterPair>(0x799d04b5u);
 	}
 
-	[DDLRegistration(0x34d66690u)]
+	[DDLRegistration(0xec785832u)]
 	public List<string?> Looks { get; set; } = [];
 
-	[DDLRegistration(0x34d66690u)]
+	[DDLRegistration(0x799d04b5u)]
 	public List<FilterPair?> Filters { get; set; } = [];
 
 	public static LooksToFilters Create(DDLObject ddl) => new(ddl);

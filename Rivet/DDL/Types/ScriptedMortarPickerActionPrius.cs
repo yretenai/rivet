@@ -20,13 +20,13 @@ public class ScriptedMortarPickerActionPrius : DDLObjectType, IDDLObjectType<Scr
 		FarCutOff = ddl.GetValue<float>(0x9c28f0acu, FarCutOff);
 	}
 
-	[DDLRegistration(0x80e09958u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.World;
 
-	[DDLRegistration(0x80e09958u)]
+	[DDLRegistration(0x36c34547u)]
 	public float NearCutOff { get; set; } = 5.00f;
 
-	[DDLRegistration(0x80e09958u)]
+	[DDLRegistration(0x9c28f0acu)]
 	public float FarCutOff { get; set; } = 100.00f;
 
 	public static ScriptedMortarPickerActionPrius Create(DDLObject ddl) => new(ddl);

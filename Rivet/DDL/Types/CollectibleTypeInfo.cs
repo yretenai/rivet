@@ -19,10 +19,10 @@ public class CollectibleTypeInfo : CollectibleTypeInfoBase, IDDLObjectType<Colle
 		PreRegisteredInstances = ddl.GetObjects<CollectibleInstanceEntry>(0xe637229du);
 	}
 
-	[DDLRegistration(0xcf32e535u, description: "If true, the instances for this type must be collected in order")]
+	[DDLRegistration(0xae7581c8u, description: "If true, the instances for this type must be collected in order")]
 	public bool AutoSequential { get; set; } = false;
 
-	[DDLRegistration(0xcf32e535u, description: "Optionally, can register instances that will just be collected from script via string id here")]
+	[DDLRegistration(0xe637229du, description: "Optionally, can register instances that will just be collected from script via string id here")]
 	public List<CollectibleInstanceEntry?> PreRegisteredInstances { get; set; } = [];
 
 	public new static CollectibleTypeInfo Create(DDLObject ddl) => new(ddl);

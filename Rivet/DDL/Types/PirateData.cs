@@ -19,10 +19,10 @@ public class PirateData : DDLObjectType, IDDLObjectType<PirateData> {
 		Pirate = ddl.GetValue<RivetAssetId>(0xee12171cu, Pirate);
 	}
 
-	[DDLRegistration(0x1065613fu, "Pirate Type")]
+	[DDLRegistration(0x3148c575u, "Pirate Type")]
 	public PirateTypes PirateType { get; set; } = PirateTypes.Green;
 
-	[DDLRegistration(0x1065613fu, "Pirate")]
+	[DDLRegistration(0xee12171cu, "Pirate")]
 	public RivetAssetId Pirate { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static PirateData Create(DDLObject ddl) => new(ddl);

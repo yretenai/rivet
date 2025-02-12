@@ -23,22 +23,22 @@ public class TerrainSystem03EditingTerrain0413 : DDLObjectType, IDDLObjectType<T
 		Line05 = ddl.GetString(0x7f124bc4) ?? Line05;
 	}
 
-	[DDLRegistration(0xf81bb10bu, description: "The <b>IG_SPLATMASK_R_INPUT</b> node will receeive a Houdini HeightField mask")]
+	[DDLRegistration(0x0f78bf4bu, description: "The <b>IG_SPLATMASK_R_INPUT</b> node will receeive a Houdini HeightField mask")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0xf81bb10bu, description: "that contains the red channel of the splatmask as input.")]
+	[DDLRegistration(0x787f8fddu, description: "that contains the red channel of the splatmask as input.")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0xf81bb10bu, description: "<br><br>")]
+	[DDLRegistration(0xe176de67u, description: "<br><br>")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0xf81bb10bu, description: "The <b>IG_SPLATMASK_R_WORLD_SPACE_INPUT</b> node will receive a Houdini")]
+	[DDLRegistration(0x9671eef1u, description: "The <b>IG_SPLATMASK_R_WORLD_SPACE_INPUT</b> node will receive a Houdini")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0xf81bb10bu, description: "HeightField mask that contains the red channel of the splatmask as input and is")]
+	[DDLRegistration(0x08157b52u, description: "HeightField mask that contains the red channel of the splatmask as input and is")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0xf81bb10bu, description: "meant to work in conjuction with <b>IG_HEIGHTFIELD_WORLD_SPACE_INPUT</b>.")]
+	[DDLRegistration(0x7f124bc4u, description: "meant to work in conjuction with <b>IG_HEIGHTFIELD_WORLD_SPACE_INPUT</b>.")]
 	public string? Line05 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0413 Create(DDLObject ddl) => new(ddl);

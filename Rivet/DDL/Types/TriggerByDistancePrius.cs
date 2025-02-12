@@ -40,73 +40,73 @@ public class TriggerByDistancePrius : TriggerByBasePrius, IDDLObjectType<Trigger
 		PollingDelayMax = ddl.GetValue<float>(0x8ef96cc2u, PollingDelayMax);
 	}
 
-	[DDLRegistration(0xe8777fe8u, "Allow Revoking Trigger?", "Whether to do the opposite trigger (untrigger if set to trigger, trigger if set to untrigger) when nothing is in our range (i.e., fall out of triggered state).")]
+	[DDLRegistration(0xcf9fe64cu, "Allow Revoking Trigger?", "Whether to do the opposite trigger (untrigger if set to trigger, trigger if set to untrigger) when nothing is in our range (i.e., fall out of triggered state).")]
 	public bool AllowRevokeTrigger { get; set; } = false;
 
-	[DDLRegistration(0xe8777fe8u, "Auto Disable Type", "Whether to automatically disable this component when we trigger or untrigger (requires a trigger first).  Can set it to not auto disable.")]
+	[DDLRegistration(0xc0d3221bu, "Auto Disable Type", "Whether to automatically disable this component when we trigger or untrigger (requires a trigger first).  Can set it to not auto disable.")]
 	public xafae1264 AutoDisableType { get; set; } = xafae1264.DoNotDisable;
 
-	[DDLRegistration(0xe8777fe8u, "Disable if no triggerables?", "Disable if this actor has no triggerables or if those triggerables are disabled.")]
+	[DDLRegistration(0xb9bd0c9eu, "Disable if no triggerables?", "Disable if this actor has no triggerables or if those triggerables are disabled.")]
 	public bool DisableIfNoTrigs { get; set; } = true;
 
-	[DDLRegistration(0xe8777fe8u, "Trigger by heroes?", "Whether we trigger based on heroes' distance to this actor.")]
+	[DDLRegistration(0xe56b929au, "Trigger by heroes?", "Whether we trigger based on heroes' distance to this actor.")]
 	public bool TriggerByHeroes { get; set; } = true;
 
-	[DDLRegistration(0xe8777fe8u, "Trigger by bots?", "Whether we trigger based on the distance between bots and this actor.")]
+	[DDLRegistration(0x07f6306cu, "Trigger by bots?", "Whether we trigger based on the distance between bots and this actor.")]
 	public bool TriggerByBots { get; set; } = true;
 
-	[DDLRegistration(0xe8777fe8u, "Trigger by any?", "Whether we trigger based on the distance to any type of Target.")]
+	[DDLRegistration(0xfe1886d2u, "Trigger by any?", "Whether we trigger based on the distance to any type of Target.")]
 	public bool TriggerByAny { get; set; } = false;
 
-	[DDLRegistration(0xe8777fe8u, "Collision shape", "Shape used for the trigger test volume")]
+	[DDLRegistration(0xc4633319u, "Collision shape", "Shape used for the trigger test volume")]
 	public x17c3a26f Shape { get; set; } = x17c3a26f.Sphere;
 
-	[DDLRegistration(0xe8777fe8u, "Shpere Trigger Range", "The distance from this actor to trigger/untrigger at.")]
+	[DDLRegistration(0xe5c2f546u, "Shpere Trigger Range", "The distance from this actor to trigger/untrigger at.")]
 	public float TriggerDist { get; set; } = 10.00f;
 
-	[DDLRegistration(0xe8777fe8u, "Trigger Range: Pad", "Padding distance on the trigger/untrigger range for when to do the opposite. For example, if trigger dist was at 10m and the padding was 5m then we would trigger/untrigger at 10m but wouldn't untrigger/trigger until 15m.")]
+	[DDLRegistration(0x323396e4u, "Trigger Range: Pad", "Padding distance on the trigger/untrigger range for when to do the opposite. For example, if trigger dist was at 10m and the padding was 5m then we would trigger/untrigger at 10m but wouldn't untrigger/trigger until 15m.")]
 	public float TriggerDistPad { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe8777fe8u, "X-Offset", "Offset of volume")]
+	[DDLRegistration(0x30d28d6du, "X-Offset", "Offset of volume")]
 	public float OffsetX { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe8777fe8u, "Y-Offset", "Offset of volume")]
+	[DDLRegistration(0x47d5bdfbu, "Y-Offset", "Offset of volume")]
 	public float OffsetY { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe8777fe8u, "Z-Offset", "Offset of volume")]
+	[DDLRegistration(0xdedcec41u, "Z-Offset", "Offset of volume")]
 	public float OffsetZ { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe8777fe8u, "Box width", "Size of box in object's X")]
+	[DDLRegistration(0x41268601u, "Box width", "Size of box in object's X")]
 	public float BoxX { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe8777fe8u, "Box Height", "Size of box in object's Y")]
+	[DDLRegistration(0x3621b697u, "Box Height", "Size of box in object's Y")]
 	public float BoxY { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe8777fe8u, "Box Length", "Size of box in object's Z")]
+	[DDLRegistration(0xaf28e72du, "Box Length", "Size of box in object's Z")]
 	public float BoxZ { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe8777fe8u, "Volume", "If the shape is set to volume, it will just use this volume")]
+	[DDLRegistration(0x87e283b9u, "Volume", "If the shape is set to volume, it will just use this volume")]
 	public RivetAssetId Volume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xe8777fe8u, "Restrict sphere by Angle?", "Whether to restrict the trigger to targets that are in an angle range from our forward (so 'in-sight'). If not set, will use just distance to trigger us (only use angle if necessary).")]
+	[DDLRegistration(0x6c7db018u, "Restrict sphere by Angle?", "Whether to restrict the trigger to targets that are in an angle range from our forward (so 'in-sight'). If not set, will use just distance to trigger us (only use angle if necessary).")]
 	public bool RestrictByAngle { get; set; } = false;
 
-	[DDLRegistration(0xe8777fe8u, "Symmetric angle range?", "Whether the angle range is symmetric across the forward-direction (so 45 to 90 range would also allow for -45 to -90).")]
+	[DDLRegistration(0x00142736u, "Symmetric angle range?", "Whether the angle range is symmetric across the forward-direction (so 45 to 90 range would also allow for -45 to -90).")]
 	public bool SymTriggerAngle { get; set; } = true;
 
-	[DDLRegistration(0xe8777fe8u, "Trigger Angle: Min", "If set to consider the angle, the min angle (in degrees) from the actor's facing direction to the hero/bot to allow triggering.")]
+	[DDLRegistration(0x7b57d539u, "Trigger Angle: Min", "If set to consider the angle, the min angle (in degrees) from the actor's facing direction to the hero/bot to allow triggering.")]
 	public float AngleMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe8777fe8u, "Trigger Angle: Max", "If set to consider the angle, the max angle (in degrees) from the actor's facing direction to the hero/bot to allow triggering.")]
+	[DDLRegistration(0x475aea60u, "Trigger Angle: Max", "If set to consider the angle, the max angle (in degrees) from the actor's facing direction to the hero/bot to allow triggering.")]
 	public float AngleMax { get; set; } = 90.00f;
 
-	[DDLRegistration(0xe8777fe8u, "Trigger Angle: Pad", "The padding on the trigger angle range so we don't untrigger on a harsh boundry.")]
+	[DDLRegistration(0x47a5860cu, "Trigger Angle: Pad", "The padding on the trigger angle range so we don't untrigger on a harsh boundry.")]
 	public float AnglePad { get; set; } = 10.00f;
 
-	[DDLRegistration(0xe8777fe8u, "Polling Delay (Min)", "Minimum time to delay polling.  Polling delay will be a random value between min and max - used to randomize activation times so that all triggers don't go off at the same time")]
+	[DDLRegistration(0xb2f4539bu, "Polling Delay (Min)", "Minimum time to delay polling.  Polling delay will be a random value between min and max - used to randomize activation times so that all triggers don't go off at the same time")]
 	public float PollingDelayMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe8777fe8u, "Polling Delay (Max)", "Maximum time to delay polling.  Polling delay will be a random value between min and max - used to randomize activation times so that all triggers don't go off at the same time")]
+	[DDLRegistration(0x8ef96cc2u, "Polling Delay (Max)", "Maximum time to delay polling.  Polling delay will be a random value between min and max - used to randomize activation times so that all triggers don't go off at the same time")]
 	public float PollingDelayMax { get; set; } = 0.00f;
 
 	public new static TriggerByDistancePrius Create(DDLObject ddl) => new(ddl);

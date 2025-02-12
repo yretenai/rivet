@@ -20,13 +20,13 @@ public class AssetCacheInfo : DDLObjectType, IDDLObjectType<AssetCacheInfo> {
 		Items = ddl.GetObjects<AssetCacheEntry>(0xf84d258cu);
 	}
 
-	[DDLRegistration(0xa670470au, description: "Number of items in the cache.")]
+	[DDLRegistration(0xdb7c2d9fu, description: "Number of items in the cache.")]
 	public uint Total { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa670470au, description: "Estimated size in bytes of all items in the cache (sum of file sizes on disk, items might occupy more memory than this).")]
+	[DDLRegistration(0x28b6544cu, description: "Estimated size in bytes of all items in the cache (sum of file sizes on disk, items might occupy more memory than this).")]
 	public long Cost { get; set; } = 0;
 
-	[DDLRegistration(0xa670470au, description: "Items that are currently cached in memory.")]
+	[DDLRegistration(0xf84d258cu, description: "Items that are currently cached in memory.")]
 	public List<AssetCacheEntry?> Items { get; set; } = [];
 
 	public static AssetCacheInfo Create(DDLObject ddl) => new(ddl);

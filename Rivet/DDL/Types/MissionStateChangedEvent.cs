@@ -20,13 +20,13 @@ public class MissionStateChangedEvent : EventBase, IDDLObjectType<MissionStateCh
 		PreviousState = ddl.GetEnum<MissionStates>(0xf6c107b4u, MissionStatesValues.Lookup);
 	}
 
-	[DDLRegistration(0x0f1b34e7u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x0f1b34e7u)]
+	[DDLRegistration(0xd5bb196bu)]
 	public MissionStates MissionState { get; set; } = MissionStates.Inactive;
 
-	[DDLRegistration(0x0f1b34e7u)]
+	[DDLRegistration(0xf6c107b4u)]
 	public MissionStates PreviousState { get; set; } = MissionStates.Inactive;
 
 	public new static MissionStateChangedEvent Create(DDLObject ddl) => new(ddl);

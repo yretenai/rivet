@@ -18,7 +18,7 @@ public class AimAssistAutoTargetLocationJoint : AimAssistAutoTargetLocation, IDD
 		JointName = ddl.GetString(0x5ba51db8) ?? JointName;
 	}
 
-	[DDLRegistration(0x573d4889u, "Joint Name")]
+	[DDLRegistration(0x5ba51db8u, "Joint Name")]
 	public string? JointName { get; set; } = default;
 
 	public new static AimAssistAutoTargetLocationJoint Create(DDLObject ddl) => new(ddl);

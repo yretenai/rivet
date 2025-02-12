@@ -24,25 +24,25 @@ public class SkinItemColorOverride : DDLObjectType, IDDLObjectType<SkinItemColor
 		ColorConfigName = ddl.GetString(0x351f7eaa) ?? ColorConfigName;
 	}
 
-	[DDLRegistration(0x40313556u, "Color Channels", "Color channels available")]
+	[DDLRegistration(0x12c50e26u, "Color Channels", "Color channels available")]
 	public x3126d105 ColorChannels { get; set; } = x3126d105.All;
 
-	[DDLRegistration(0x40313556u, "Color Constant Name", "Color constant name")]
+	[DDLRegistration(0x76c51e4cu, "Color Constant Name", "Color constant name")]
 	public string? ColorConstantName { get; set; } = default;
 
-	[DDLRegistration(0x40313556u, "Red", "Red value in range 0 to 255")]
+	[DDLRegistration(0xbee6a893u, "Red", "Red value in range 0 to 255")]
 	public byte R { get; set; } = 0x00;
 
-	[DDLRegistration(0x40313556u, "Green", "Green value in range 0 to 255")]
+	[DDLRegistration(0xd33b4c78u, "Green", "Green value in range 0 to 255")]
 	public byte G { get; set; } = 0x00;
 
-	[DDLRegistration(0x40313556u, "Blue", "Blue value in range 0 to 255")]
+	[DDLRegistration(0xa351b8f7u, "Blue", "Blue value in range 0 to 255")]
 	public byte B { get; set; } = 0x00;
 
-	[DDLRegistration(0x40313556u, "Color Config", "Color config to use with this model")]
+	[DDLRegistration(0xa50ec5bfu, "Color Config", "Color config to use with this model")]
 	public RivetAssetId ColorConfig { get; set; } = default;
 
-	[DDLRegistration(0x40313556u, "Color Config Name", "Name of the color in the color config")]
+	[DDLRegistration(0x351f7eaau, "Color Config Name", "Name of the color in the color config")]
 	public string? ColorConfigName { get; set; } = default;
 
 	public static SkinItemColorOverride Create(DDLObject ddl) => new(ddl);

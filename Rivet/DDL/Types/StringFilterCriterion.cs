@@ -19,10 +19,10 @@ public class StringFilterCriterion : DDLObjectType, IDDLObjectType<StringFilterC
 		Argument = ddl.GetString(0xf710867a) ?? Argument;
 	}
 
-	[DDLRegistration(0x5dd85c2bu)]
+	[DDLRegistration(0xe8efbebcu)]
 	public x57689c9c Test { get; set; } = x57689c9c.Contains;
 
-	[DDLRegistration(0x5dd85c2bu)]
+	[DDLRegistration(0xf710867au)]
 	public string? Argument { get; set; } = default;
 
 	public static StringFilterCriterion Create(DDLObject ddl) => new(ddl);

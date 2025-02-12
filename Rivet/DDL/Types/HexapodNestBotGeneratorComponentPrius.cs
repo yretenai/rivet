@@ -23,22 +23,22 @@ public class HexapodNestBotGeneratorComponentPrius : BotGeneratorComponentPrius,
 		KillSpawnedBotsOnDeath = ddl.GetValue<bool>(0xc170b025u, KillSpawnedBotsOnDeath);
 	}
 
-	[DDLRegistration(0x97269d39u)]
+	[DDLRegistration(0x1b319e6au)]
 	public uint SpawnCountMax { get; set; } = 0x00000007;
 
-	[DDLRegistration(0x97269d39u)]
+	[DDLRegistration(0x59dcabadu)]
 	public uint GlobalSpawnCountMax { get; set; } = 0x0000001e;
 
-	[DDLRegistration(0x97269d39u)]
+	[DDLRegistration(0x5eb1b94bu)]
 	public uint SimultaneousSpawnCount { get; set; } = 0x00000001;
 
-	[DDLRegistration(0x97269d39u)]
+	[DDLRegistration(0xfd52da1eu)]
 	public float SpawnThrowHeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x97269d39u)]
+	[DDLRegistration(0x0e1451ffu)]
 	public float SpawnMaxTargetRange { get; set; } = 50.00f;
 
-	[DDLRegistration(0x97269d39u)]
+	[DDLRegistration(0xc170b025u)]
 	public bool KillSpawnedBotsOnDeath { get; set; } = true;
 
 	public new static HexapodNestBotGeneratorComponentPrius Create(DDLObject ddl) => new(ddl);

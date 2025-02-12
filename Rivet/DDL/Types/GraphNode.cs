@@ -27,34 +27,34 @@ public class GraphNode : DDLObjectType, IDDLObjectType<GraphNode> {
 		Aux = ddl.GetString(0x90972571) ?? Aux;
 	}
 
-	[DDLRegistration(0x392b1f59u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x392b1f59u)]
+	[DDLRegistration(0xf88aee81u)]
 	public float XPos { get; set; } = 0.00f;
 
-	[DDLRegistration(0x392b1f59u)]
+	[DDLRegistration(0x403689e4u)]
 	public float YPos { get; set; } = 0.00f;
 
-	[DDLRegistration(0x392b1f59u)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = false;
 
-	[DDLRegistration(0x392b1f59u)]
+	[DDLRegistration(0x7effd393u)]
 	public bool Disabled { get; set; } = false;
 
-	[DDLRegistration(0x392b1f59u)]
+	[DDLRegistration(0xaffcfa8au)]
 	public Dictionary<RivetAssetId, GraphConMeta?> ConMeta { get; set; } = [];
 
-	[DDLRegistration(0x392b1f59u, "Node Comment")]
+	[DDLRegistration(0x959e3154u, "Node Comment")]
 	public string? Comment { get; set; } = default;
 
-	[DDLRegistration(0x392b1f59u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = "kNodeTypeInvalid";
 
-	[DDLRegistration(0x392b1f59u)]
+	[DDLRegistration(0xf4b3e9a4u)]
 	public string? SubType { get; set; } = "kNodeTypeInvalid";
 
-	[DDLRegistration(0x392b1f59u)]
+	[DDLRegistration(0x90972571u)]
 	public string? Aux { get; set; } = default;
 
 	public static GraphNode Create(DDLObject ddl) => new(ddl);

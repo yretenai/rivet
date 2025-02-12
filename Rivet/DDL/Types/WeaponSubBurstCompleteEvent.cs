@@ -18,7 +18,7 @@ public class WeaponSubBurstCompleteEvent : EventBase, IDDLObjectType<WeaponSubBu
 		TriggerIndex = ddl.GetValue<uint>(0xee73b5b3u, TriggerIndex);
 	}
 
-	[DDLRegistration(0x4654cfa2u)]
+	[DDLRegistration(0xee73b5b3u)]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
 	public new static WeaponSubBurstCompleteEvent Create(DDLObject ddl) => new(ddl);

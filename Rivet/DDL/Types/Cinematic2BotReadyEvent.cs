@@ -19,10 +19,10 @@ public class Cinematic2BotReadyEvent : EventBase, IDDLObjectType<Cinematic2BotRe
 		DeactivateAnimLayerZero = ddl.GetValue<bool>(0x61dca39fu, DeactivateAnimLayerZero);
 	}
 
-	[DDLRegistration(0xc926f1feu)]
+	[DDLRegistration(0xbe1b63b8u)]
 	public bool Successful { get; set; } = true;
 
-	[DDLRegistration(0xc926f1feu)]
+	[DDLRegistration(0x61dca39fu)]
 	public bool DeactivateAnimLayerZero { get; set; } = false;
 
 	public new static Cinematic2BotReadyEvent Create(DDLObject ddl) => new(ddl);

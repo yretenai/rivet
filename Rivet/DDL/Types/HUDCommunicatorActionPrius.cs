@@ -20,13 +20,13 @@ public class HUDCommunicatorActionPrius : DDLObjectType, IDDLObjectType<HUDCommu
 		SpeakerNameLocTag = ddl.GetString(0x208bdcbe) ?? SpeakerNameLocTag;
 	}
 
-	[DDLRegistration(0x34ccd72cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x34ccd72cu)]
+	[DDLRegistration(0x8f837688u)]
 	public RivetAssetId SpeakerTexture { get; set; } = default;
 
-	[DDLRegistration(0x34ccd72cu, description: "Will be replaced with localized text if it exists.")]
+	[DDLRegistration(0x208bdcbeu, description: "Will be replaced with localized text if it exists.")]
 	public string? SpeakerNameLocTag { get; set; } = "INVALID";
 
 	public static HUDCommunicatorActionPrius Create(DDLObject ddl) => new(ddl);

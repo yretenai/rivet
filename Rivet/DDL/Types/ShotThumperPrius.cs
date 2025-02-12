@@ -25,28 +25,28 @@ public class ShotThumperPrius : LobbedShotPrius, IDDLObjectType<ShotThumperPrius
 		ThumpMaterialGraph = ddl.GetValue<RivetAssetId>(0x1cc1eb9au, ThumpMaterialGraph);
 	}
 
-	[DDLRegistration(0x08db89a8u)]
+	[DDLRegistration(0xfa30acd6u)]
 	public float ThumpRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x08db89a8u)]
+	[DDLRegistration(0x34012783u)]
 	public float ThumpHeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0x08db89a8u)]
+	[DDLRegistration(0x25da27a8u)]
 	public float ThumpDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x08db89a8u)]
+	[DDLRegistration(0x902fd783u)]
 	public float ThumpDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x08db89a8u)]
+	[DDLRegistration(0x4762f7dfu)]
 	public DamageLOSTypes DamageLOSType { get; set; } = DamageLOSTypes.None;
 
-	[DDLRegistration(0x08db89a8u)]
+	[DDLRegistration(0x99c0ed26u)]
 	public RivetAssetId OrbitActor { get; set; } = default;
 
-	[DDLRegistration(0x08db89a8u)]
+	[DDLRegistration(0x66c001e1u)]
 	public RivetAssetId ThumpActor { get; set; } = default;
 
-	[DDLRegistration(0x08db89a8u)]
+	[DDLRegistration(0x1cc1eb9au)]
 	public RivetAssetId ThumpMaterialGraph { get; set; } = default;
 
 	public new static ShotThumperPrius Create(DDLObject ddl) => new(ddl);

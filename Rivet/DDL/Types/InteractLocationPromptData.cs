@@ -27,34 +27,34 @@ public class InteractLocationPromptData : DDLObjectType, IDDLObjectType<Interact
 		POILocator = ddl.GetString(0xd19b3e4a) ?? POILocator;
 	}
 
-	[DDLRegistration(0xab62b7a2u, "Prompt Loc Tag", "Localization Tag of label displayed")]
+	[DDLRegistration(0x6abc0167u, "Prompt Loc Tag", "Localization Tag of label displayed")]
 	public string? PromptTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xab62b7a2u, "In World Prompt", "When true, show as an in-world POI, otherwise a use-message")]
+	[DDLRegistration(0xfb08a211u, "In World Prompt", "When true, show as an in-world POI, otherwise a use-message")]
 	public bool InWorldPrompt { get; set; } = true;
 
-	[DDLRegistration(0xab62b7a2u, "POI Display Type", "The style of POI to use for display")]
+	[DDLRegistration(0xfeb66587u, "POI Display Type", "The style of POI to use for display")]
 	public x275d9b04 POISubtype { get; set; } = x275d9b04.Pickup;
 
-	[DDLRegistration(0xab62b7a2u, "POI Preview Type", "The style of the poi when it is in preview mode - when it is far away or not the active prompt")]
+	[DDLRegistration(0x398dd6b8u, "POI Preview Type", "The style of the poi when it is in preview mode - when it is far away or not the active prompt")]
 	public x8d1d7e8a POIPreviewSubtype { get; set; } = x8d1d7e8a.Preview;
 
-	[DDLRegistration(0xab62b7a2u, "POI Test Visibility", "Whether to test collision line-of-sight to interact for showing prompt")]
+	[DDLRegistration(0x78ff87d4u, "POI Test Visibility", "Whether to test collision line-of-sight to interact for showing prompt")]
 	public bool POILOSCheck { get; set; } = false;
 
-	[DDLRegistration(0xab62b7a2u, "POI Preview Range", "Distance from object to display preview POI")]
+	[DDLRegistration(0x1a4186b9u, "POI Preview Range", "Distance from object to display preview POI")]
 	public float PreviewRange { get; set; } = 4.00f;
 
-	[DDLRegistration(0xab62b7a2u, "Prompt Facing Mode", "Facing behavior for the POI display")]
+	[DDLRegistration(0xb28ef75bu, "Prompt Facing Mode", "Facing behavior for the POI display")]
 	public x11d5b447 PromptFacingMode { get; set; } = x11d5b447.AlwaysFacing;
 
-	[DDLRegistration(0xab62b7a2u, description: "Actor relative direction to face POI in fixed-facing mode")]
+	[DDLRegistration(0x3f394095u, description: "Actor relative direction to face POI in fixed-facing mode")]
 	public DDLVector3? FixedPromptForward { get; set; } = default;
 
-	[DDLRegistration(0xab62b7a2u, description: "Local offset for in-world POI display.")]
+	[DDLRegistration(0x5a1dc6d9u, description: "Local offset for in-world POI display.")]
 	public DDLVector3? POIOffset { get; set; } = default;
 
-	[DDLRegistration(0xab62b7a2u, description: "Locator at which to visually place POI in world (optional)")]
+	[DDLRegistration(0xd19b3e4au, description: "Locator at which to visually place POI in world (optional)")]
 	public string? POILocator { get; set; } = default;
 
 	public static InteractLocationPromptData Create(DDLObject ddl) => new(ddl);

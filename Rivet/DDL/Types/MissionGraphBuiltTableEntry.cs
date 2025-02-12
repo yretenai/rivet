@@ -18,7 +18,7 @@ public class MissionGraphBuiltTableEntry : DDLObjectType, IDDLObjectType<Mission
 		MissionGraphData = ddl.GetObject<MissionGraphBuiltShared>(0x769fa6c9u);
 	}
 
-	[DDLRegistration(0x2eee1527u)]
+	[DDLRegistration(0x769fa6c9u)]
 	public MissionGraphBuiltShared? MissionGraphData { get; set; } = default;
 
 	public static MissionGraphBuiltTableEntry Create(DDLObject ddl) => new(ddl);

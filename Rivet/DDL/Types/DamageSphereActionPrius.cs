@@ -29,40 +29,40 @@ public class DamageSphereActionPrius : DDLObjectType, IDDLObjectType<DamageSpher
 		CustomDamageEntries = ddl.GetObjects<CustomDamageContainer>(0x0d53b4d9u);
 	}
 
-	[DDLRegistration(0xb22f5b7au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
-	[DDLRegistration(0xb22f5b7au, description: "The radius of the sphere (can be overridden with the 'Radius' input variable)")]
+	[DDLRegistration(0x0504203du, description: "The radius of the sphere (can be overridden with the 'Radius' input variable)")]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb22f5b7au, description: "Amount of damage to do (can be overridden with the 'Amount' input variable)")]
+	[DDLRegistration(0xb0d93e25u, description: "Amount of damage to do (can be overridden with the 'Amount' input variable)")]
 	public float Amount { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb22f5b7au)]
+	[DDLRegistration(0xbc4e9799u)]
 	public DamageTypesGame Type { get; set; } = DamageTypesGame.Bullet;
 
-	[DDLRegistration(0xb22f5b7au)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0xb22f5b7au, description: "Amount of knockback to apply. -1 means we'll use the damage as the knockback amount.")]
+	[DDLRegistration(0x7b1e600bu, description: "Amount of knockback to apply. -1 means we'll use the damage as the knockback amount.")]
 	public float KnockbackAmount { get; set; } = -1.00f;
 
-	[DDLRegistration(0xb22f5b7au)]
+	[DDLRegistration(0x12568d7bu)]
 	public DamageRequestFlags Flags { get; set; } = (DamageRequestFlags) 0x00000000;
 
-	[DDLRegistration(0xb22f5b7au)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb22f5b7au)]
+	[DDLRegistration(0x06d5955cu)]
 	public float ConditionDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb22f5b7au)]
+	[DDLRegistration(0xa39af12eu)]
 	public List<DamageStatusData?> DamageStatus { get; set; } = [];
 
-	[DDLRegistration(0xb22f5b7au)]
+	[DDLRegistration(0xd96a20dcu)]
 	public string? DamageHash { get; set; } = default;
 
-	[DDLRegistration(0xb22f5b7au)]
+	[DDLRegistration(0x0d53b4d9u)]
 	public List<CustomDamageContainer?> CustomDamageEntries { get; set; } = [];
 
 	public static DamageSphereActionPrius Create(DDLObject ddl) => new(ddl);

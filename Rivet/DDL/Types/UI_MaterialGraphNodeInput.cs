@@ -22,19 +22,19 @@ public class UI_MaterialGraphNodeInput : DDLObjectType, IDDLObjectType<UI_Materi
 		InternalSortOrder = ddl.GetValue<int>(0x15d6f320u, InternalSortOrder);
 	}
 
-	[DDLRegistration(0x207fff5eu)]
+	[DDLRegistration(0xc17bfe16u)]
 	public MaterialNodeInputPort? Input { get; set; } = default;
 
-	[DDLRegistration(0x207fff5eu)]
+	[DDLRegistration(0xaef3f8a9u)]
 	public bool IsConnected { get; set; } = false;
 
-	[DDLRegistration(0x207fff5eu)]
+	[DDLRegistration(0xc5f8fa27u)]
 	public MaterialNodePortUI? PortUI { get; set; } = default;
 
-	[DDLRegistration(0x207fff5eu)]
+	[DDLRegistration(0xbcb0be0du)]
 	public MaterialNodeUserInput? UserInput { get; set; } = default;
 
-	[DDLRegistration(0x207fff5eu)]
+	[DDLRegistration(0x15d6f320u)]
 	public int InternalSortOrder { get; set; } = 0;
 
 	public static UI_MaterialGraphNodeInput Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class Cinematic2LookAtActionDef : DDLObjectType, IDDLObjectType<Cinematic
 		EyeFocusOffsetFromHead = ddl.GetValue<bool>(0xe6ac0bcdu, EyeFocusOffsetFromHead);
 	}
 
-	[DDLRegistration(0x8b732ee6u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8b732ee6u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8b732ee6u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x8b732ee6u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8b732ee6u)]
+	[DDLRegistration(0x1fb4aa38u)]
 	public Cinematic2LookAtDataDef? HeadLookAtData { get; set; } = default;
 
-	[DDLRegistration(0x8b732ee6u)]
+	[DDLRegistration(0xd8445391u)]
 	public Cinematic2LookAtDataDef? EyeLookAtData { get; set; } = default;
 
-	[DDLRegistration(0x8b732ee6u)]
+	[DDLRegistration(0x461f415eu)]
 	public float BlendInDuration { get; set; } = 0.25f;
 
-	[DDLRegistration(0x8b732ee6u)]
+	[DDLRegistration(0x21329878u)]
 	public float BlendOutDuration { get; set; } = 0.25f;
 
-	[DDLRegistration(0x8b732ee6u, description: "If true, the eye's horizontal and vertical focus angles will be offset from the head angles.")]
+	[DDLRegistration(0xe6ac0bcdu, description: "If true, the eye's horizontal and vertical focus angles will be offset from the head angles.")]
 	public bool EyeFocusOffsetFromHead { get; set; } = false;
 
 	public static Cinematic2LookAtActionDef Create(DDLObject ddl) => new(ddl);

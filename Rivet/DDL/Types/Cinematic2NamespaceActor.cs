@@ -19,10 +19,10 @@ public class Cinematic2NamespaceActor : DDLObjectType, IDDLObjectType<Cinematic2
 		Actor = ddl.GetValue<RivetAssetId>(0x5d269a38u, Actor);
 	}
 
-	[DDLRegistration(0x373044acu, description: "Namespace, in Maya, to associate with this actor assignment.")]
+	[DDLRegistration(0x2676c033u, description: "Namespace, in Maya, to associate with this actor assignment.")]
 	public string? MayaNamespace { get; set; } = default;
 
-	[DDLRegistration(0x373044acu, description: "Actor file to assign to actors from Maya that match the defined MayaNameSpace.")]
+	[DDLRegistration(0x5d269a38u, description: "Actor file to assign to actors from Maya that match the defined MayaNameSpace.")]
 	public RivetAssetId Actor { get; set; } = default;
 
 	public static Cinematic2NamespaceActor Create(DDLObject ddl) => new(ddl);

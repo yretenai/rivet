@@ -18,7 +18,7 @@ public class Cinematic2ActorActionPrius : DDLObjectType, IDDLObjectType<Cinemati
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x7077b6b9u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Cinematic;
 
 	public static Cinematic2ActorActionPrius Create(DDLObject ddl) => new(ddl);

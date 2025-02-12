@@ -19,10 +19,10 @@ public class VendorActivateScriptActionPrius : DDLObjectType, IDDLObjectType<Ven
 		Activate = ddl.GetValue<bool>(0x4c67b9ddu, Activate);
 	}
 
-	[DDLRegistration(0x6e8cb1d2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0x6e8cb1d2u)]
+	[DDLRegistration(0x4c67b9ddu)]
 	public bool Activate { get; set; } = true;
 
 	public static VendorActivateScriptActionPrius Create(DDLObject ddl) => new(ddl);

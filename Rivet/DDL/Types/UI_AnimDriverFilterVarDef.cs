@@ -24,25 +24,25 @@ public class UI_AnimDriverFilterVarDef : DDLObjectType, IDDLObjectType<UI_AnimDr
 		UIData = ddl.GetObject<UI_AnimDriverFilterVarContainer>(0xad33cacfu);
 	}
 
-	[DDLRegistration(0x18292153u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x18292153u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x18292153u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x18292153u)]
+	[DDLRegistration(0x74938804u)]
 	public string? Group { get; set; } = default;
 
-	[DDLRegistration(0x18292153u)]
+	[DDLRegistration(0x5a8f8e51u)]
 	public List<string?> Ids { get; set; } = [];
 
-	[DDLRegistration(0x18292153u)]
+	[DDLRegistration(0x322aadceu)]
 	public List<AnimDriverVarConnection?> Connections { get; set; } = [];
 
-	[DDLRegistration(0x18292153u, "Filter")]
+	[DDLRegistration(0xad33cacfu, "Filter")]
 	public UI_AnimDriverFilterVarContainer? UIData { get; set; } = default;
 
 	public static UI_AnimDriverFilterVarDef Create(DDLObject ddl) => new(ddl);

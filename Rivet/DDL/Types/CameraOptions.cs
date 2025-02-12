@@ -29,40 +29,40 @@ public class CameraOptions : DDLObjectType, IDDLObjectType<CameraOptions> {
 		RenderLightsOnlyFromSelection = ddl.GetValue<bool>(0x937a0185u, RenderLightsOnlyFromSelection);
 	}
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0x98b017e3u)]
 	public bool RenderObjects { get; set; } = false;
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0x41f5fc7au)]
 	public bool RenderCameras { get; set; } = true;
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0xf2264635u)]
 	public bool RenderLights { get; set; } = true;
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0x09e6a08eu)]
 	public bool RenderLocators { get; set; } = true;
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0x7db99b53u)]
 	public bool RenderModelOutlines { get; set; } = true;
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0x2e6b8198u)]
 	public bool RenderLightShells { get; set; } = true;
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0x4212ce1au)]
 	public x41c556d2 ShellMode { get; set; } = x41c556d2.Wireframe;
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0x5d653e06u)]
 	public xc8d9a31c FilterType { get; set; } = xc8d9a31c.All;
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0x74938804u)]
 	public x633f0e50 Group { get; set; } = x633f0e50.Cine;
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0xe996a013u)]
 	public bool RenderInnerShells { get; set; } = false;
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0xf7d11c0bu)]
 	public bool EnableLightsOnlyFromGroup { get; set; } = false;
 
-	[DDLRegistration(0xdcbd71f8u)]
+	[DDLRegistration(0x937a0185u)]
 	public bool RenderLightsOnlyFromSelection { get; set; } = false;
 
 	public static CameraOptions Create(DDLObject ddl) => new(ddl);

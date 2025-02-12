@@ -31,46 +31,46 @@ public class WeaponHammerPrius : WeaponMeleePrius, IDDLObjectType<WeaponHammerPr
 		ThrowPickupAttachment = ddl.GetObject<WeaponPickupAttachment>(0x7bf606ecu);
 	}
 
-	[DDLRegistration(0x70d3da52u)]
+	[DDLRegistration(0x0451c6d0u)]
 	public ThrownWeaponDamageInfo? ThrowDamageInfo { get; set; } = default;
 
-	[DDLRegistration(0x70d3da52u)]
+	[DDLRegistration(0xb147ab42u)]
 	public float ThrowMaxDistance { get; set; } = 6.75f;
 
-	[DDLRegistration(0x70d3da52u)]
+	[DDLRegistration(0xa292a92bu)]
 	public float ThrowOutHorizontalSpeed { get; set; } = 30.00f;
 
-	[DDLRegistration(0x70d3da52u)]
+	[DDLRegistration(0xdb5bb6f1u)]
 	public float ThrowOutMaxVerticalSpeed { get; set; } = -1.00f;
 
-	[DDLRegistration(0x70d3da52u)]
+	[DDLRegistration(0x45b806e4u)]
 	public float ThrowOutGravity { get; set; } = 30.00f;
 
-	[DDLRegistration(0x70d3da52u, description: "Amount of the hammer's speed to keep after bouncing off of something.")]
+	[DDLRegistration(0x9a3904fdu, description: "Amount of the hammer's speed to keep after bouncing off of something.")]
 	public float ThrowBounceRestitution { get; set; } = 0.50f;
 
-	[DDLRegistration(0x70d3da52u)]
+	[DDLRegistration(0xdd4789f5u)]
 	public float ThrowReturnMaxSpeed { get; set; } = 25.00f;
 
-	[DDLRegistration(0x70d3da52u, description: "Max acceleration back towards the player after the hammer has hit something.")]
+	[DDLRegistration(0x14f631bfu, description: "Max acceleration back towards the player after the hammer has hit something.")]
 	public float ThrowReturnAccel { get; set; } = 30.00f;
 
-	[DDLRegistration(0x70d3da52u, description: "On starting to return to the hand, turn this quickly towards the hero to begin with.")]
+	[DDLRegistration(0x543e35ccu, description: "On starting to return to the hand, turn this quickly towards the hero to begin with.")]
 	public float ThrowTurnSpeedMin { get; set; } = 60.00f;
 
-	[DDLRegistration(0x70d3da52u, description: "Increase the turn speed of the hammer by this much each second during the return.")]
+	[DDLRegistration(0xe3009020u, description: "Increase the turn speed of the hammer by this much each second during the return.")]
 	public float ThrowTurnAccel { get; set; } = 300.00f;
 
-	[DDLRegistration(0x70d3da52u, description: "Spin speed of the hammer after it is thrown.")]
+	[DDLRegistration(0xf882f3aau, description: "Spin speed of the hammer after it is thrown.")]
 	public float ThrowSpinSpeed { get; set; } = 3000.00f;
 
-	[DDLRegistration(0x70d3da52u)]
+	[DDLRegistration(0x30f2bd44u)]
 	public DDLVector3? ThrowSpinCenterOffset { get; set; } = default;
 
-	[DDLRegistration(0x70d3da52u, "Should Vibrate on Return?", "Should the hammer vibrate slightly while returning to Rivet's hand?")]
+	[DDLRegistration(0x5ddb59d9u, "Should Vibrate on Return?", "Should the hammer vibrate slightly while returning to Rivet's hand?")]
 	public bool ShouldVibrateOnReturn { get; set; } = true;
 
-	[DDLRegistration(0x70d3da52u, "Throw Pickup Attachment")]
+	[DDLRegistration(0x7bf606ecu, "Throw Pickup Attachment")]
 	public WeaponPickupAttachment? ThrowPickupAttachment { get; set; } = default;
 
 	public new static WeaponHammerPrius Create(DDLObject ddl) => new(ddl);

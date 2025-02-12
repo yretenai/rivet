@@ -19,10 +19,10 @@ public class PirateChallengeControllerScriptActionPrius : DDLObjectType, IDDLObj
 		Sequence = ddl.GetObject<PirateChallengeSquence>(0xa8876a5bu);
 	}
 
-	[DDLRegistration(0x09861f0au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Mission;
 
-	[DDLRegistration(0x09861f0au)]
+	[DDLRegistration(0xa8876a5bu)]
 	public PirateChallengeSquence? Sequence { get; set; } = default;
 
 	public static PirateChallengeControllerScriptActionPrius Create(DDLObject ddl) => new(ddl);

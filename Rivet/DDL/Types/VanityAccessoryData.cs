@@ -23,22 +23,22 @@ public class VanityAccessoryData : DDLObjectType, IDDLObjectType<VanityAccessory
 		OnForDefault = ddl.GetValue<bool>(0xafbbf9eau, OnForDefault);
 	}
 
-	[DDLRegistration(0x77910c26u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x56bca86c Type { get; set; } = x56bca86c.Rebreather;
 
-	[DDLRegistration(0x77910c26u)]
+	[DDLRegistration(0xce4eaef0u)]
 	public VanityBundleType BundleType { get; set; } = VanityBundleType.Head;
 
-	[DDLRegistration(0x77910c26u)]
+	[DDLRegistration(0x301c5cc0u)]
 	public x036ceb0b SkinType { get; set; } = x036ceb0b.Body;
 
-	[DDLRegistration(0x77910c26u)]
+	[DDLRegistration(0xe1790da4u)]
 	public RivetAssetId RatchetModel { get; set; } = default;
 
-	[DDLRegistration(0x77910c26u)]
+	[DDLRegistration(0xc9b44a57u)]
 	public RivetAssetId RivetModel { get; set; } = default;
 
-	[DDLRegistration(0x77910c26u)]
+	[DDLRegistration(0xafbbf9eau)]
 	public bool OnForDefault { get; set; } = true;
 
 	public static VanityAccessoryData Create(DDLObject ddl) => new(ddl);

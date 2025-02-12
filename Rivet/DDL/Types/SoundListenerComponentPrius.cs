@@ -19,10 +19,10 @@ public class SoundListenerComponentPrius : DDLObjectType, IDDLObjectType<SoundLi
 		LocatorName = ddl.GetString(0x5814524d) ?? LocatorName;
 	}
 
-	[DDLRegistration(0x26feec65u, description: "The types of things this listener spatializes")]
+	[DDLRegistration(0xbc4e9799u, description: "The types of things this listener spatializes")]
 	public x9baa48b3 Type { get; set; } = (x9baa48b3) 0x00000003;
 
-	[DDLRegistration(0x26feec65u, description: "The locator that drives this listener. Leave blank to use the actor position")]
+	[DDLRegistration(0x5814524du, description: "The locator that drives this listener. Leave blank to use the actor position")]
 	public string? LocatorName { get; set; } = default;
 
 	public static SoundListenerComponentPrius Create(DDLObject ddl) => new(ddl);

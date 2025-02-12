@@ -21,16 +21,16 @@ public class OrderedListBuildActionPrius : DDLObjectType, IDDLObjectType<Ordered
 		Initialization = ddl.GetObject<OrderedListInitializer>(0xb422d39au);
 	}
 
-	[DDLRegistration(0x8c9349d4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Lists;
 
-	[DDLRegistration(0x8c9349d4u, description: "Add all actors from a group separately (instead of storing as one item)")]
+	[DDLRegistration(0x291e4e4fu, description: "Add all actors from a group separately (instead of storing as one item)")]
 	public bool ConvertGroupsToActors { get; set; } = false;
 
-	[DDLRegistration(0x8c9349d4u, description: "If true, the data will be updated to the current value of the variable every time it is accessed")]
+	[DDLRegistration(0x3877c353u, description: "If true, the data will be updated to the current value of the variable every time it is accessed")]
 	public bool StoreByVarName { get; set; } = false;
 
-	[DDLRegistration(0x8c9349d4u)]
+	[DDLRegistration(0xb422d39au)]
 	public OrderedListInitializer? Initialization { get; set; } = default;
 
 	public static OrderedListBuildActionPrius Create(DDLObject ddl) => new(ddl);

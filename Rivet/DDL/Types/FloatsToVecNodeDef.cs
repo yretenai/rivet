@@ -21,16 +21,16 @@ public class FloatsToVecNodeDef : MathNodeBaseDef, IDDLObjectType<FloatsToVecNod
 		Vec = ddl.GetObject<OutputPlugVec3>(0x49594b39u);
 	}
 
-	[DDLRegistration(0x3651fefdu, "X")]
+	[DDLRegistration(0x0cdc9f9bu, "X")]
 	public InputPlugFloat? InX { get; set; } = default;
 
-	[DDLRegistration(0x3651fefdu, "Y")]
+	[DDLRegistration(0x7bdbaf0du, "Y")]
 	public InputPlugFloat? InY { get; set; } = default;
 
-	[DDLRegistration(0x3651fefdu, "Z")]
+	[DDLRegistration(0xe2d2feb7u, "Z")]
 	public InputPlugFloat? InZ { get; set; } = default;
 
-	[DDLRegistration(0x3651fefdu)]
+	[DDLRegistration(0x49594b39u)]
 	public OutputPlugVec3? Vec { get; set; } = default;
 
 	public new static FloatsToVecNodeDef Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class PilotSpawnData : ActorSpawnData, IDDLObjectType<PilotSpawnData> {
 		AttachLocator = ddl.GetValue<uint>(0xfa8dcd9au, AttachLocator);
 	}
 
-	[DDLRegistration(0x27d25163u)]
+	[DDLRegistration(0x41c2ab0au)]
 	public uint VehicleHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x27d25163u, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x27d25163u, description: "Locator to attach Pilot on Vehicle")]
+	[DDLRegistration(0xfa8dcd9au, description: "Locator to attach Pilot on Vehicle")]
 	public uint AttachLocator { get; set; } = 0x00000000;
 
 	public new static PilotSpawnData Create(DDLObject ddl) => new(ddl);

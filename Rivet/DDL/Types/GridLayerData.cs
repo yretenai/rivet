@@ -19,10 +19,10 @@ public class GridLayerData : DDLObjectType, IDDLObjectType<GridLayerData> {
 		Tiles = ddl.GetObjects<GridTileData>(0x0546487au);
 	}
 
-	[DDLRegistration(0xd2d00004u)]
+	[DDLRegistration(0xbf6cefadu)]
 	public string? LayerName { get; set; } = default;
 
-	[DDLRegistration(0xd2d00004u)]
+	[DDLRegistration(0x0546487au)]
 	public List<GridTileData?> Tiles { get; set; } = [];
 
 	public static GridLayerData Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class AwardSaveEntry : DDLObjectType, IDDLObjectType<AwardSaveEntry> {
 		AwardSave = ddl.GetObject<AwardBaseSave>(0x5af0f626u);
 	}
 
-	[DDLRegistration(0x34de10b8u)]
+	[DDLRegistration(0xa15b4218u)]
 	public string? CodeName { get; set; } = default;
 
-	[DDLRegistration(0x34de10b8u)]
+	[DDLRegistration(0x5af0f626u)]
 	public AwardBaseSave? AwardSave { get; set; } = default;
 
 	public static AwardSaveEntry Create(DDLObject ddl) => new(ddl);

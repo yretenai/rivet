@@ -19,10 +19,10 @@ public class DynamicNavObstructionHelperPrius : DDLObjectType, IDDLObjectType<Dy
 		ThisActorDoesNotMove = ddl.GetValue<bool>(0xdf150e63u, ThisActorDoesNotMove);
 	}
 
-	[DDLRegistration(0xe1cefc8bu)]
+	[DDLRegistration(0xf125ec02u)]
 	public NavMeshObstructionPrius? NavMeshObstructionPriusData { get; set; } = default;
 
-	[DDLRegistration(0xe1cefc8bu)]
+	[DDLRegistration(0xdf150e63u)]
 	public bool ThisActorDoesNotMove { get; set; } = true;
 
 	public static DynamicNavObstructionHelperPrius Create(DDLObject ddl) => new(ddl);

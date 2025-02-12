@@ -21,16 +21,16 @@ public class ProjectileThrowingPrius : DDLObjectType, IDDLObjectType<ProjectileT
 		SnapTargetPositionToGround = ddl.GetValue<bool>(0x268ccd0bu, SnapTargetPositionToGround);
 	}
 
-	[DDLRegistration(0xae949eabu)]
+	[DDLRegistration(0xbcd4e648u)]
 	public RivetAssetId ProjectileThrowingConfig { get; set; } = default;
 
-	[DDLRegistration(0xae949eabu, "CheckStartLocator", "Start throw checks from here.")]
+	[DDLRegistration(0x8a6428cdu, "CheckStartLocator", "Start throw checks from here.")]
 	public string? ThrowLocator { get; set; } = default;
 
-	[DDLRegistration(0xae949eabu)]
+	[DDLRegistration(0xb6fbb46fu)]
 	public bool UseArcFinder { get; set; } = false;
 
-	[DDLRegistration(0xae949eabu)]
+	[DDLRegistration(0x268ccd0bu)]
 	public bool SnapTargetPositionToGround { get; set; } = false;
 
 	public static ProjectileThrowingPrius Create(DDLObject ddl) => new(ddl);

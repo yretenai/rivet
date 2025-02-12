@@ -23,22 +23,22 @@ public class DamageEventBase : DamagePacket, IDDLObjectType<DamageEventBase> {
 		TargetActorFilterTypes = ddl.GetValue<uint>(0x79ddb45bu, TargetActorFilterTypes);
 	}
 
-	[DDLRegistration(0xe17b5006u, description: "Health Percent on damaged target, after damage is applied.")]
+	[DDLRegistration(0x13ab5436u, description: "Health Percent on damaged target, after damage is applied.")]
 	public float HealthPercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe17b5006u, "Attach Actor")]
+	[DDLRegistration(0xaac2d682u, "Attach Actor")]
 	public uint AttachActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe17b5006u, "Follow Attach Actor?")]
+	[DDLRegistration(0x7f05cf4du, "Follow Attach Actor?")]
 	public bool FollowAttachActor { get; set; } = false;
 
-	[DDLRegistration(0xe17b5006u, "Continuous Damage")]
+	[DDLRegistration(0xd12767c0u, "Continuous Damage")]
 	public bool Continuous { get; set; } = false;
 
-	[DDLRegistration(0xe17b5006u, "Damager Actor Filter Types", "All the high level ActorFilterTypes of actor dealing this damage")]
+	[DDLRegistration(0x8fd7b89au, "Damager Actor Filter Types", "All the high level ActorFilterTypes of actor dealing this damage")]
 	public uint DamagerActorFilterTypes { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe17b5006u, "Target Actor Filter Types", "All the high level ActorFilterTypes of actor receiving this damage")]
+	[DDLRegistration(0x79ddb45bu, "Target Actor Filter Types", "All the high level ActorFilterTypes of actor receiving this damage")]
 	public uint TargetActorFilterTypes { get; set; } = 0x00000000;
 
 	public new static DamageEventBase Create(DDLObject ddl) => new(ddl);

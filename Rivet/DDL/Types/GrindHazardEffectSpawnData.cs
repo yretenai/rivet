@@ -21,16 +21,16 @@ public class GrindHazardEffectSpawnData : ActorSpawnData, IDDLObjectType<GrindHa
 		EndPos = ddl.GetObject<DDLVector3>(0x0210a10bu);
 	}
 
-	[DDLRegistration(0x8667010au)]
+	[DDLRegistration(0x6151ad8fu)]
 	public uint OwnerHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8667010au)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8667010au)]
+	[DDLRegistration(0x46e92197u)]
 	public DDLVector3? StartPos { get; set; } = default;
 
-	[DDLRegistration(0x8667010au)]
+	[DDLRegistration(0x0210a10bu)]
 	public DDLVector3? EndPos { get; set; } = default;
 
 	public new static GrindHazardEffectSpawnData Create(DDLObject ddl) => new(ddl);

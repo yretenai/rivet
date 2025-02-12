@@ -20,13 +20,13 @@ public class HealthPrius : DDLObjectType, IDDLObjectType<HealthPrius> {
 		Flags = ddl.GetBitset<HealthFlags>(0x12568d7bu, HealthFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0x2e39fb24u, description: "Actor's max and starting hit points.")]
+	[DDLRegistration(0x597fdb96u, description: "Actor's max and starting hit points.")]
 	public float MaxHitPoints { get; set; } = 100.00f;
 
-	[DDLRegistration(0x2e39fb24u, description: "Actor is considered injured if hit points are below this threshold.")]
+	[DDLRegistration(0x0d16b16fu, description: "Actor is considered injured if hit points are below this threshold.")]
 	public float InjuredHitPoints { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2e39fb24u, description: "Flags.")]
+	[DDLRegistration(0x12568d7bu, description: "Flags.")]
 	public HealthFlags Flags { get; set; } = (HealthFlags) 0x00000000;
 
 	public static HealthPrius Create(DDLObject ddl) => new(ddl);

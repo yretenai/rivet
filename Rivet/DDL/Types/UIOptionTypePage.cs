@@ -18,7 +18,7 @@ public class UIOptionTypePage : UIOptionTypeBase, IDDLObjectType<UIOptionTypePag
 		PageID = ddl.GetEnum<x58b2a3a9>(0x982d0b4cu, x58b2a3a9Values.Lookup);
 	}
 
-	[DDLRegistration(0xc654c1ccu)]
+	[DDLRegistration(0x982d0b4cu)]
 	public x58b2a3a9 PageID { get; set; } = x58b2a3a9.PageMain;
 
 	public new static UIOptionTypePage Create(DDLObject ddl) => new(ddl);

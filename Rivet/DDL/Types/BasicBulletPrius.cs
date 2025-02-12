@@ -18,7 +18,7 @@ public class BasicBulletPrius : SimpleShotPrius, IDDLObjectType<BasicBulletPrius
 		DamageData = ddl.GetObject<ShotDamageData>(0xa521b107u);
 	}
 
-	[DDLRegistration(0x673e81cfu)]
+	[DDLRegistration(0xa521b107u)]
 	public ShotDamageData? DamageData { get; set; } = default;
 
 	public new static BasicBulletPrius Create(DDLObject ddl) => new(ddl);

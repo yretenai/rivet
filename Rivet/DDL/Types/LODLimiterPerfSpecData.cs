@@ -20,13 +20,13 @@ public class LODLimiterPerfSpecData : DDLObjectType, IDDLObjectType<LODLimiterPe
 		DisableDuringCinematics = ddl.GetValue<bool>(0x860699a4u, DisableDuringCinematics);
 	}
 
-	[DDLRegistration(0xd3951802u)]
+	[DDLRegistration(0xf09ed78eu)]
 	public PerfSpecTypeGame Spec { get; set; } = PerfSpecTypeGame.None;
 
-	[DDLRegistration(0xd3951802u)]
+	[DDLRegistration(0x0bdbc4abu)]
 	public uint MinLOD { get; set; } = 0x00000001;
 
-	[DDLRegistration(0xd3951802u)]
+	[DDLRegistration(0x860699a4u)]
 	public bool DisableDuringCinematics { get; set; } = true;
 
 	public static LODLimiterPerfSpecData Create(DDLObject ddl) => new(ddl);

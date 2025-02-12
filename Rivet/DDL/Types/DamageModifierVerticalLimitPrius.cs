@@ -20,13 +20,13 @@ public class DamageModifierVerticalLimitPrius : DamageModifierOutgoingPrius, IDD
 		DamageNameFilter = ddl.GetString(0xbeac239e) ?? DamageNameFilter;
 	}
 
-	[DDLRegistration(0xa7dda0ecu)]
+	[DDLRegistration(0x4782278fu)]
 	public float OffsetMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa7dda0ecu)]
+	[DDLRegistration(0x7b8f18d6u)]
 	public float OffsetMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa7dda0ecu, description: "if filled out, we only apply this damage mod to damages with same damage name hash")]
+	[DDLRegistration(0xbeac239eu, description: "if filled out, we only apply this damage mod to damages with same damage name hash")]
 	public string? DamageNameFilter { get; set; } = "";
 
 	public new static DamageModifierVerticalLimitPrius Create(DDLObject ddl) => new(ddl);

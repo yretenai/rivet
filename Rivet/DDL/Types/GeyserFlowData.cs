@@ -31,46 +31,46 @@ public class GeyserFlowData : DDLObjectType, IDDLObjectType<GeyserFlowData> {
 		RadiusOuter = ddl.GetValue<float>(0xf0c65fd8u, RadiusOuter);
 	}
 
-	[DDLRegistration(0x73a680ddu, "Flow Vel")]
+	[DDLRegistration(0xd2e39292u, "Flow Vel")]
 	public float FlowVel { get; set; } = 20.00f;
 
-	[DDLRegistration(0x73a680ddu, "Flow Duration")]
+	[DDLRegistration(0x8bdfffe6u, "Flow Duration")]
 	public float FlowDuration { get; set; } = 4.00f;
 
-	[DDLRegistration(0x73a680ddu, "Taper Vel")]
+	[DDLRegistration(0x3581c75au, "Taper Vel")]
 	public float TaperVel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x73a680ddu, "Taper Duration")]
+	[DDLRegistration(0xf405d909u, "Taper Duration")]
 	public float TaperDuration { get; set; } = 2.00f;
 
-	[DDLRegistration(0x73a680ddu, "Post Taper Duration")]
+	[DDLRegistration(0xc0434ad5u, "Post Taper Duration")]
 	public float PostTaperDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x73a680ddu, "Checks Per Second")]
+	[DDLRegistration(0x8bbb0eeau, "Checks Per Second")]
 	public float ChecksPerSecond { get; set; } = 2.00f;
 
-	[DDLRegistration(0x73a680ddu, "Gravity")]
+	[DDLRegistration(0x5bf7469fu, "Gravity")]
 	public float Gravity { get; set; } = 9.80f;
 
-	[DDLRegistration(0x73a680ddu, "Damage")]
+	[DDLRegistration(0x2fb01a0bu, "Damage")]
 	public float Damage { get; set; } = 5.00f;
 
-	[DDLRegistration(0x73a680ddu, "Knockback")]
+	[DDLRegistration(0x2e553fddu, "Knockback")]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.One;
 
-	[DDLRegistration(0x73a680ddu, "Knockback Amount")]
+	[DDLRegistration(0x7b1e600bu, "Knockback Amount")]
 	public float KnockbackAmount { get; set; } = 10.00f;
 
-	[DDLRegistration(0x73a680ddu, "Material Inner")]
+	[DDLRegistration(0x9ac4db76u, "Material Inner")]
 	public RivetAssetId MaterialInner { get; set; } = default;
 
-	[DDLRegistration(0x73a680ddu, "Radius Inner")]
+	[DDLRegistration(0xe92f5c40u, "Radius Inner")]
 	public float RadiusInner { get; set; } = 0.40f;
 
-	[DDLRegistration(0x73a680ddu, "Material Outer")]
+	[DDLRegistration(0x832dd8eeu, "Material Outer")]
 	public RivetAssetId MaterialOuter { get; set; } = default;
 
-	[DDLRegistration(0x73a680ddu, "Radius Outer")]
+	[DDLRegistration(0xf0c65fd8u, "Radius Outer")]
 	public float RadiusOuter { get; set; } = 0.75f;
 
 	public static GeyserFlowData Create(DDLObject ddl) => new(ddl);

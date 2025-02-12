@@ -19,10 +19,10 @@ public class LootListConfig : ConfigBase, IDDLObjectType<LootListConfig> {
 		Items = ddl.GetObjects<ItemElement>(0xf84d258cu);
 	}
 
-	[DDLRegistration(0x342f7277u)]
+	[DDLRegistration(0xe2660679u)]
 	public xd80b176a SelectType { get; set; } = xd80b176a.Random;
 
-	[DDLRegistration(0x342f7277u)]
+	[DDLRegistration(0xf84d258cu)]
 	public List<ItemElement?> Items { get; set; } = [];
 
 	public new static LootListConfig Create(DDLObject ddl) => new(ddl);

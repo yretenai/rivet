@@ -26,31 +26,31 @@ public class GrindCameraOverrideVolumePrius : DDLObjectType, IDDLObjectType<Grin
 		BlendOutTime = ddl.GetValue<float>(0xda2e044eu, BlendOutTime);
 	}
 
-	[DDLRegistration(0x5c2a7120u, description: "Camera offset from the hero.")]
+	[DDLRegistration(0x90977284u, description: "Camera offset from the hero.")]
 	public DDLVector3? HeroOffset { get; set; } = default;
 
-	[DDLRegistration(0x5c2a7120u, description: "True: Add HeroOffset to the offset defined in the AimContext config. False: Replace the offset defined in the AimContext config.")]
+	[DDLRegistration(0xb9f21a71u, description: "True: Add HeroOffset to the offset defined in the AimContext config. False: Replace the offset defined in the AimContext config.")]
 	public bool IsHeroOffsetAdditive { get; set; } = true;
 
-	[DDLRegistration(0x5c2a7120u, description: "Look ahead along the curve by this amount. (meters)")]
+	[DDLRegistration(0xc46f4a79u, description: "Look ahead along the curve by this amount. (meters)")]
 	public float CurveLookAheadDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5c2a7120u, description: "True: Add CurveLookAheadDistance to the default. False: Replace the default.")]
+	[DDLRegistration(0x388844e5u, description: "True: Add CurveLookAheadDistance to the default. False: Replace the default.")]
 	public bool IsCurveLookAheadDistanceAdditive { get; set; } = true;
 
-	[DDLRegistration(0x5c2a7120u, description: "Use this actor as the Look at target instead of a location up ahead on the curve.")]
+	[DDLRegistration(0xa37bf657u, description: "Use this actor as the Look at target instead of a location up ahead on the curve.")]
 	public RivetAssetId LookAtActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5c2a7120u, description: "Offset from the target that we want to look at. If LookAtActor is set, offset from that actor. If not, offset from the look ahead position on the curve.")]
+	[DDLRegistration(0xabbb80f6u, description: "Offset from the target that we want to look at. If LookAtActor is set, offset from that actor. If not, offset from the look ahead position on the curve.")]
 	public DDLVector3? TargetOffset { get; set; } = default;
 
-	[DDLRegistration(0x5c2a7120u, description: "True: TargetOffset is relative to the LookAtActor's matrix or the path direction/matrix at the look ahead position. False: The offset is in world space.")]
+	[DDLRegistration(0x3a36060au, description: "True: TargetOffset is relative to the LookAtActor's matrix or the path direction/matrix at the look ahead position. False: The offset is in world space.")]
 	public bool IsTargetOffsetRelative { get; set; } = true;
 
-	[DDLRegistration(0x5c2a7120u, description: "Time to blend into the override values. (seconds)")]
+	[DDLRegistration(0x69e34f4bu, description: "Time to blend into the override values. (seconds)")]
 	public float BlendInTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0x5c2a7120u, description: "Time to blend out of the override values. (seconds)")]
+	[DDLRegistration(0xda2e044eu, description: "Time to blend out of the override values. (seconds)")]
 	public float BlendOutTime { get; set; } = 0.25f;
 
 	public static GrindCameraOverrideVolumePrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class VaultMarkOutOfDateInput : DDLObjectType, IDDLObjectType<VaultMarkOu
 		Paths = ddl.GetValues<RivetAssetId>(0x92e94ad0u);
 	}
 
-	[DDLRegistration(0x4e38daffu, description: "List of file paths that you want to reindex.")]
+	[DDLRegistration(0x92e94ad0u, description: "List of file paths that you want to reindex.")]
 	public List<RivetAssetId> Paths { get; set; } = [];
 
 	public static VaultMarkOutOfDateInput Create(DDLObject ddl) => new(ddl);

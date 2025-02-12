@@ -19,10 +19,10 @@ public class StreamingVideoPlaylistConfig : StreamingVideoBaseConfig, IDDLObject
 		ImmediatePlay = ddl.GetObject<StreamingVideoBaseConfig>(0x5e6c3857u);
 	}
 
-	[DDLRegistration(0x218bd039u)]
+	[DDLRegistration(0x2d83ac5du)]
 	public List<StreamingVideoPlaylistElement?> Playlist { get; set; } = [];
 
-	[DDLRegistration(0x218bd039u)]
+	[DDLRegistration(0x5e6c3857u)]
 	public StreamingVideoBaseConfig? ImmediatePlay { get; set; } = default;
 
 	public new static StreamingVideoPlaylistConfig Create(DDLObject ddl) => new(ddl);

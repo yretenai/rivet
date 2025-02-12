@@ -28,37 +28,37 @@ public class FocusTrackingSolverData : DDLObjectType, IDDLObjectType<FocusTracki
 		WeightSpreadScheme = ddl.GetEnum<WeightSpreadScheme>(0xab2ca92fu, WeightSpreadSchemeValues.Lookup);
 	}
 
-	[DDLRegistration(0x2bd53253u, description: "Name of the JointChain to affect with FocusTracking")]
+	[DDLRegistration(0x4fdcefafu, description: "Name of the JointChain to affect with FocusTracking")]
 	public string? JointChain { get; set; } = "";
 
-	[DDLRegistration(0x2bd53253u, description: "Name of a Joint to use as the End Effector for FocusTracking Calculations. If joint not found, will try finding locator of same name")]
+	[DDLRegistration(0xd003d36cu, description: "Name of a Joint to use as the End Effector for FocusTracking Calculations. If joint not found, will try finding locator of same name")]
 	public string? EndEffectorJoint { get; set; } = "";
 
-	[DDLRegistration(0x2bd53253u, description: "Optional named FocusPosition the EndEffector tracks.  The named FocusPosition must be listed in the FocusTrackingConfig and set from code")]
+	[DDLRegistration(0xfd2be175u, description: "Optional named FocusPosition the EndEffector tracks.  The named FocusPosition must be listed in the FocusTrackingConfig and set from code")]
 	public string? FocusPositionName { get; set; } = "";
 
-	[DDLRegistration(0x2bd53253u, description: "If this is checked, the solver will correct based on current anim pose rather than a reference pose time")]
+	[DDLRegistration(0x990982deu, description: "If this is checked, the solver will correct based on current anim pose rather than a reference pose time")]
 	public bool PollRefPoseEveryTick { get; set; } = false;
 
-	[DDLRegistration(0x2bd53253u, description: "Time of clip to use to generate an Reference Pose to create additives from (in seconds)")]
+	[DDLRegistration(0x45631e85u, description: "Time of clip to use to generate an Reference Pose to create additives from (in seconds)")]
 	public float ReferencePoseTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2bd53253u, description: "Forces Reference Pose's EndEffector's forward to be the character's model forward")]
+	[DDLRegistration(0x2c5f605bu, description: "Forces Reference Pose's EndEffector's forward to be the character's model forward")]
 	public bool SetEndEffectorFwdToModelFwd { get; set; } = true;
 
-	[DDLRegistration(0x2bd53253u, description: "Min allowable adjustment from reference pose along local y-axis (in degrees)")]
+	[DDLRegistration(0xb2a54151u, description: "Min allowable adjustment from reference pose along local y-axis (in degrees)")]
 	public float MinYawAngle { get; set; } = -90.00f;
 
-	[DDLRegistration(0x2bd53253u, description: "Max allowable adjustment from reference pose along local y-axis (in degrees)")]
+	[DDLRegistration(0x7ea83a5eu, description: "Max allowable adjustment from reference pose along local y-axis (in degrees)")]
 	public float MaxYawAngle { get; set; } = 90.00f;
 
-	[DDLRegistration(0x2bd53253u, description: "Min allowable adjustment from reference pose along local x-axis (in degrees)")]
+	[DDLRegistration(0xf6de9d12u, description: "Min allowable adjustment from reference pose along local x-axis (in degrees)")]
 	public float MinPitchAngle { get; set; } = -90.00f;
 
-	[DDLRegistration(0x2bd53253u, description: "Max allowable adjustment from reference pose along local x-axis (in degrees)")]
+	[DDLRegistration(0xb691e564u, description: "Max allowable adjustment from reference pose along local x-axis (in degrees)")]
 	public float MaxPitchAngle { get; set; } = 90.00f;
 
-	[DDLRegistration(0x2bd53253u, description: "How we spread the error thru the JointChain")]
+	[DDLRegistration(0xab2ca92fu, description: "How we spread the error thru the JointChain")]
 	public WeightSpreadScheme WeightSpreadScheme { get; set; } = WeightSpreadScheme.EvenSpread;
 
 	public static FocusTrackingSolverData Create(DDLObject ddl) => new(ddl);

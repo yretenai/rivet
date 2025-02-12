@@ -23,22 +23,22 @@ public class PreDecideLootEntry : DDLObjectType, IDDLObjectType<PreDecideLootEnt
 		LootIdNum = ddl.GetValue<byte>(0xc0cd522eu, LootIdNum);
 	}
 
-	[DDLRegistration(0x94b5bb66u, description: "The actor to spawn if this entry is choosen.")]
+	[DDLRegistration(0x79b3b63eu, description: "The actor to spawn if this entry is choosen.")]
 	public RivetAssetId LootActor { get; set; } = default;
 
-	[DDLRegistration(0x94b5bb66u, description: "The percent (0-1) chance we will choose this as our loot to drop.")]
+	[DDLRegistration(0x7bb5a4deu, description: "The percent (0-1) chance we will choose this as our loot to drop.")]
 	public float PickChance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x94b5bb66u, "Change material constant?", "Whether we want to change this actor's specified material constant if we decide on this loot to drop.")]
+	[DDLRegistration(0x57b45b9fu, "Change material constant?", "Whether we want to change this actor's specified material constant if we decide on this loot to drop.")]
 	public bool ChangeMaterialConst { get; set; } = true;
 
-	[DDLRegistration(0x94b5bb66u, "Material Constant Name", "Material constant to set on this actor if this .")]
+	[DDLRegistration(0xacdadd83u, "Material Constant Name", "Material constant to set on this actor if this .")]
 	public string? MaterialConstName { get; set; } = "colorPicker";
 
-	[DDLRegistration(0x94b5bb66u, "Material Constant Value", "Value for the material constant for the triggered state.")]
+	[DDLRegistration(0x525539b5u, "Material Constant Value", "Value for the material constant for the triggered state.")]
 	public float MaterialConstValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0x94b5bb66u, "Id Num", "An identifier for this loot entry - we will send the CarryingLootEvent when we pick what loot to drop with IdNum set to this value so the conduit can respond to what we are carrying.")]
+	[DDLRegistration(0xc0cd522eu, "Id Num", "An identifier for this loot entry - we will send the CarryingLootEvent when we pick what loot to drop with IdNum set to this value so the conduit can respond to what we are carrying.")]
 	public byte LootIdNum { get; set; } = 0x00;
 
 	public static PreDecideLootEntry Create(DDLObject ddl) => new(ddl);

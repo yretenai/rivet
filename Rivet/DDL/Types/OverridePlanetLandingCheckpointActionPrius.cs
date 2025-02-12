@@ -18,7 +18,7 @@ public class OverridePlanetLandingCheckpointActionPrius : DDLObjectType, IDDLObj
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x12217e5bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
 	public static OverridePlanetLandingCheckpointActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class GiveAmmoActionPrius : DDLObjectType, IDDLObjectType<GiveAmmoActionP
 		GiveFullAmmo = ddl.GetValue<bool>(0x3e048d62u, GiveFullAmmo);
 	}
 
-	[DDLRegistration(0x8d3330d3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Weapon;
 
-	[DDLRegistration(0x8d3330d3u)]
+	[DDLRegistration(0x3e048d62u)]
 	public bool GiveFullAmmo { get; set; } = true;
 
 	public static GiveAmmoActionPrius Create(DDLObject ddl) => new(ddl);

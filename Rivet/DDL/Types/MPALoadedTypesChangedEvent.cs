@@ -18,7 +18,7 @@ public class MPALoadedTypesChangedEvent : EventBase, IDDLObjectType<MPALoadedTyp
 		SystemType = ddl.GetEnum<xb1be5abd>(0x7709150fu, xb1be5abdValues.Lookup);
 	}
 
-	[DDLRegistration(0xa06c9c6eu)]
+	[DDLRegistration(0x7709150fu)]
 	public xb1be5abd SystemType { get; set; } = xb1be5abd.Base;
 
 	public new static MPALoadedTypesChangedEvent Create(DDLObject ddl) => new(ddl);

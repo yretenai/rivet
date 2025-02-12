@@ -18,7 +18,7 @@ public class IconMapMkbBinding : IconMapBase, IDDLObjectType<IconMapMkbBinding> 
 		Button = ddl.GetEnum<x7b87880c>(0x047ee25au, x7b87880cValues.Lookup);
 	}
 
-	[DDLRegistration(0x42ad0423u)]
+	[DDLRegistration(0x047ee25au)]
 	public x7b87880c Button { get; set; } = x7b87880c.NoPadButton;
 
 	public new static IconMapMkbBinding Create(DDLObject ddl) => new(ddl);

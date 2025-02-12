@@ -27,34 +27,34 @@ public class UIViewRTTPrius : DDLObjectType, IDDLObjectType<UIViewRTTPrius> {
 		DrawInDebugCam = ddl.GetValue<bool>(0xc545854eu, DrawInDebugCam);
 	}
 
-	[DDLRegistration(0xfe0571c9u)]
+	[DDLRegistration(0xf5517605u)]
 	public UIViewBaseData? ViewType { get; set; } = default;
 
-	[DDLRegistration(0xfe0571c9u, "AutoLoad On Activate", "Whether to auto load the view when activated. If false, you will want to use the UIViewRTTLoadAction script node to manually trigger the load.")]
+	[DDLRegistration(0x763dd64fu, "AutoLoad On Activate", "Whether to auto load the view when activated. If false, you will want to use the UIViewRTTLoadAction script node to manually trigger the load.")]
 	public bool AutoLoadViewOnActivate { get; set; } = true;
 
-	[DDLRegistration(0xfe0571c9u, "Material", "The name of the material with the texture we will be overriding.")]
+	[DDLRegistration(0x86bfc8e5u, "Material", "The name of the material with the texture we will be overriding.")]
 	public string? Material { get; set; } = "lambert1";
 
-	[DDLRegistration(0xfe0571c9u, "Texture To Replace", "The texture on the above material that we will override.")]
+	[DDLRegistration(0x2176bd2au, "Texture To Replace", "The texture on the above material that we will override.")]
 	public string? TextureToReplace { get; set; } = "scaleform_Texture";
 
-	[DDLRegistration(0xfe0571c9u, "Maintain Aspect Ratio", "If actor is scaled, crop material to avoid stretch/squash.")]
+	[DDLRegistration(0x7452b832u, "Maintain Aspect Ratio", "If actor is scaled, crop material to avoid stretch/squash.")]
 	public bool MaintainAspectRatio { get; set; } = false;
 
-	[DDLRegistration(0xfe0571c9u, "Material Scale Var", "Render constant name for materialgraph UV scale.")]
+	[DDLRegistration(0xb941e550u, "Material Scale Var", "Render constant name for materialgraph UV scale.")]
 	public string? MaterialScaleVar { get; set; } = "uv_scale";
 
-	[DDLRegistration(0xfe0571c9u, "Material Offset X Var", "Render constant name for materialgraph UV offset X.")]
+	[DDLRegistration(0x4d065c70u, "Material Offset X Var", "Render constant name for materialgraph UV offset X.")]
 	public string? MaterialOffsetXVar { get; set; } = "offset_u";
 
-	[DDLRegistration(0xfe0571c9u, "Material Offset Y Var", "Render constant name for materialgraph UV offset Y.")]
+	[DDLRegistration(0xf5ba3b15u, "Material Offset Y Var", "Render constant name for materialgraph UV offset Y.")]
 	public string? MaterialOffsetYVar { get; set; } = "offset_v";
 
-	[DDLRegistration(0xfe0571c9u, "Apply 3DUIElement Flag?", "Whether to apply the 3DUIElement flag to the ModelInst so VFX always draws behind this actor.")]
+	[DDLRegistration(0x8db4fb59u, "Apply 3DUIElement Flag?", "Whether to apply the 3DUIElement flag to the ModelInst so VFX always draws behind this actor.")]
 	public bool Apply3DUIElementFlag { get; set; } = true;
 
-	[DDLRegistration(0xfe0571c9u, "Draw In Debug Cam", "Keep drawing the Actor while Debug Camera is active.")]
+	[DDLRegistration(0xc545854eu, "Draw In Debug Cam", "Keep drawing the Actor while Debug Camera is active.")]
 	public bool DrawInDebugCam { get; set; } = false;
 
 	public static UIViewRTTPrius Create(DDLObject ddl) => new(ddl);

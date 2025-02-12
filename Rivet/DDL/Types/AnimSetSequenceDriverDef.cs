@@ -20,13 +20,13 @@ public class AnimSetSequenceDriverDef : DDLObjectType, IDDLObjectType<AnimSetSeq
 		DriverName = ddl.GetString(0x7a8704f5) ?? DriverName;
 	}
 
-	[DDLRegistration(0x78578249u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x78578249u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x78578249u)]
+	[DDLRegistration(0x7a8704f5u)]
 	public string? DriverName { get; set; } = default;
 
 	public static AnimSetSequenceDriverDef Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class TerrainSystem03EditingTerrain0312 : DDLObjectType, IDDLObjectType<T
 		Line03 = ddl.GetString(0x9671eef1) ?? Line03;
 	}
 
-	[DDLRegistration(0x8a539718u, description: "This copies the terrain selected (in the <i>Selection Mask</i> target to the")]
+	[DDLRegistration(0x0f78bf4bu, description: "This copies the terrain selected (in the <i>Selection Mask</i> target to the")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x8a539718u, description: "brush dropdown.  This will also set the current brush to the <i>Clipboard</i>")]
+	[DDLRegistration(0x787f8fddu, description: "brush dropdown.  This will also set the current brush to the <i>Clipboard</i>")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x8a539718u, description: "brush and switch the target to <i>Terrain</i>, so the copied data can be pasted")]
+	[DDLRegistration(0xe176de67u, description: "brush and switch the target to <i>Terrain</i>, so the copied data can be pasted")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x8a539718u, description: "immediately.")]
+	[DDLRegistration(0x9671eef1u, description: "immediately.")]
 	public string? Line03 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0312 Create(DDLObject ddl) => new(ddl);

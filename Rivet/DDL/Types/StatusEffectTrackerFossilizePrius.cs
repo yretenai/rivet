@@ -22,19 +22,19 @@ public class StatusEffectTrackerFossilizePrius : StatusEffectTrackerBasePrius, I
 		Shader = ddl.GetValue<RivetAssetId>(0xc18bd04fu, Shader);
 	}
 
-	[DDLRegistration(0x1cb5b6c7u, description: "How full does the tracker have to be to make the bot start walking")]
+	[DDLRegistration(0xa1eef345u, description: "How full does the tracker have to be to make the bot start walking")]
 	public float PercentForWalk { get; set; } = 0.30f;
 
-	[DDLRegistration(0x1cb5b6c7u, description: "How full does the tracker have to be to make the bot stop walking")]
+	[DDLRegistration(0x5fb7e9dfu, description: "How full does the tracker have to be to make the bot stop walking")]
 	public float PercentForUnWalk { get; set; } = 0.10f;
 
-	[DDLRegistration(0x1cb5b6c7u, description: "How much time slow should we apply to the character, must be less than 1 (1=100%)")]
+	[DDLRegistration(0x4982e6dcu, description: "How much time slow should we apply to the character, must be less than 1 (1=100%)")]
 	public float SlowSpeed { get; set; } = 0.40f;
 
-	[DDLRegistration(0x1cb5b6c7u)]
+	[DDLRegistration(0x4c1f8462u)]
 	public RivetAssetId BeardActor { get; set; } = default;
 
-	[DDLRegistration(0x1cb5b6c7u, description: "A material to apply to the target.  The TValue gets scaled up as the effect is applied.")]
+	[DDLRegistration(0xc18bd04fu, description: "A material to apply to the target.  The TValue gets scaled up as the effect is applied.")]
 	public RivetAssetId Shader { get; set; } = default;
 
 	public new static StatusEffectTrackerFossilizePrius Create(DDLObject ddl) => new(ddl);

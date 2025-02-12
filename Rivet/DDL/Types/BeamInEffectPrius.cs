@@ -19,10 +19,10 @@ public class BeamInEffectPrius : DDLObjectType, IDDLObjectType<BeamInEffectPrius
 		BeamInConfigOverride = ddl.GetValue<RivetAssetId>(0xcbf73581u, BeamInConfigOverride);
 	}
 
-	[DDLRegistration(0x9c8e728du, description: "Config that controls how the dissolve happens")]
+	[DDLRegistration(0x41075a28u, description: "Config that controls how the dissolve happens")]
 	public RivetAssetId BeamInConfig { get; set; } = default;
 
-	[DDLRegistration(0x9c8e728du, description: "AssetId to use instead of the file path")]
+	[DDLRegistration(0xcbf73581u, description: "AssetId to use instead of the file path")]
 	public RivetAssetId BeamInConfigOverride { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static BeamInEffectPrius Create(DDLObject ddl) => new(ddl);

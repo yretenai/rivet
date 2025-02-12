@@ -19,10 +19,10 @@ public class IndexListMessage : DDLObjectType, IDDLObjectType<IndexListMessage> 
 		Indexes = ddl.GetValues<short>(0x5b788b6au);
 	}
 
-	[DDLRegistration(0xb6d7e25au)]
+	[DDLRegistration(0xc56e3adau)]
 	public byte MessageType { get; set; } = 0x00;
 
-	[DDLRegistration(0xb6d7e25au)]
+	[DDLRegistration(0x5b788b6au)]
 	public List<short> Indexes { get; set; } = [];
 
 	public static IndexListMessage Create(DDLObject ddl) => new(ddl);

@@ -32,49 +32,49 @@ public class SimplePromptPrius : DDLObjectType, IDDLObjectType<SimplePromptPrius
 		Priority = ddl.GetValue<float>(0x98a76157u, Priority);
 	}
 
-	[DDLRegistration(0x38b128e6u, "Trigger Count")]
+	[DDLRegistration(0xebd996d0u, "Trigger Count")]
 	public uint TriggerCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x38b128e6u, "Retrigger Delay")]
+	[DDLRegistration(0xffff3a00u, "Retrigger Delay")]
 	public float RetriggerDelay { get; set; } = 1.00f;
 
-	[DDLRegistration(0x38b128e6u, "Prompt Text")]
+	[DDLRegistration(0x4e875b9du, "Prompt Text")]
 	public string? PromptText { get; set; } = "Use";
 
-	[DDLRegistration(0x38b128e6u)]
+	[DDLRegistration(0x29dc9e4au)]
 	public string? Tag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x38b128e6u, "Use Range")]
+	[DDLRegistration(0x6a4e2be2u, "Use Range")]
 	public float UseRange { get; set; } = 3.00f;
 
-	[DDLRegistration(0x38b128e6u, "Volume As Range")]
+	[DDLRegistration(0xa8fbfba2u, "Volume As Range")]
 	public bool VolumeRange { get; set; } = true;
 
-	[DDLRegistration(0x38b128e6u, "Alt Prompt Volume")]
+	[DDLRegistration(0x5feec1a4u, "Alt Prompt Volume")]
 	public RivetAssetId AltPromptVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x38b128e6u, "Prompt Offset (relative to Actor forward)")]
+	[DDLRegistration(0xec8ca6cau, "Prompt Offset (relative to Actor forward)")]
 	public DDLVector3? PromptOffset { get; set; } = default;
 
-	[DDLRegistration(0x38b128e6u, "Prompt Angle Min")]
+	[DDLRegistration(0x34a61898u, "Prompt Angle Min")]
 	public float PromptAngleMin { get; set; } = -180.00f;
 
-	[DDLRegistration(0x38b128e6u, "Prompt Angle Max")]
+	[DDLRegistration(0x08ab27c1u, "Prompt Angle Max")]
 	public float PromptAngleMax { get; set; } = 180.00f;
 
-	[DDLRegistration(0x38b128e6u, "Use POI")]
+	[DDLRegistration(0x72826ad6u, "Use POI")]
 	public bool UsePOI { get; set; } = true;
 
-	[DDLRegistration(0x38b128e6u, "POI Type")]
+	[DDLRegistration(0xfeb66587u, "POI Type")]
 	public x275d9b04 POISubtype { get; set; } = x275d9b04.Pickup;
 
-	[DDLRegistration(0x38b128e6u, "Preview Range")]
+	[DDLRegistration(0x1a4186b9u, "Preview Range")]
 	public float PreviewRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0x38b128e6u, "Start Active")]
+	[DDLRegistration(0x3e035e82u, "Start Active")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0x38b128e6u, "Priority")]
+	[DDLRegistration(0x98a76157u, "Priority")]
 	public float Priority { get; set; } = 2.00f;
 
 	public static SimplePromptPrius Create(DDLObject ddl) => new(ddl);

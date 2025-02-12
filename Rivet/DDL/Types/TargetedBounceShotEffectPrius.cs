@@ -19,10 +19,10 @@ public class TargetedBounceShotEffectPrius : BounceShotEffectPrius, IDDLObjectTy
 		Angle = ddl.GetValue<float>(0x19d289c8u, Angle);
 	}
 
-	[DDLRegistration(0xaee3c6eeu)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 10.00f;
 
-	[DDLRegistration(0xaee3c6eeu)]
+	[DDLRegistration(0x19d289c8u)]
 	public float Angle { get; set; } = 30.00f;
 
 	public new static TargetedBounceShotEffectPrius Create(DDLObject ddl) => new(ddl);

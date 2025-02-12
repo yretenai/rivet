@@ -22,19 +22,19 @@ public class CheckpointWarpActionPrius : DDLObjectType, IDDLObjectType<Checkpoin
 		ImmediatelySaveCheckpoint = ddl.GetValue<bool>(0x6741a7f7u, ImmediatelySaveCheckpoint);
 	}
 
-	[DDLRegistration(0x12d39e83u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x12d39e83u)]
+	[DDLRegistration(0x71d061f1u)]
 	public string? CheckpointName { get; set; } = default;
 
-	[DDLRegistration(0x12d39e83u, description: "Leaving this (or the input var) blank will clear the dimension checkpoint.")]
+	[DDLRegistration(0x821e4847u, description: "Leaving this (or the input var) blank will clear the dimension checkpoint.")]
 	public string? DimensionCheckpointName { get; set; } = default;
 
-	[DDLRegistration(0x12d39e83u, "Desired Hero", "Should we also swap heroes during the checkpoint warp? Leaving this as 'None' will not change the hero type.")]
+	[DDLRegistration(0xa8d61efbu, "Desired Hero", "Should we also swap heroes during the checkpoint warp? Leaving this as 'None' will not change the hero type.")]
 	public HeroTypes DesiredHero { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0x12d39e83u)]
+	[DDLRegistration(0x6741a7f7u)]
 	public bool ImmediatelySaveCheckpoint { get; set; } = false;
 
 	public static CheckpointWarpActionPrius Create(DDLObject ddl) => new(ddl);

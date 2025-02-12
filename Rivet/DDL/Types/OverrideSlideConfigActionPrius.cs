@@ -19,10 +19,10 @@ public class OverrideSlideConfigActionPrius : DDLObjectType, IDDLObjectType<Over
 		OverrideConfig = ddl.GetValue<RivetAssetId>(0xb8b3c47fu, OverrideConfig);
 	}
 
-	[DDLRegistration(0x6cdc7551u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x6cdc7551u, description: "Override slide config to set on Hero.")]
+	[DDLRegistration(0xb8b3c47fu, description: "Override slide config to set on Hero.")]
 	public RivetAssetId OverrideConfig { get; set; } = default;
 
 	public static OverrideSlideConfigActionPrius Create(DDLObject ddl) => new(ddl);

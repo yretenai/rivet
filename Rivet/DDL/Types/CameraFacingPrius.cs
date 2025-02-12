@@ -19,10 +19,10 @@ public class CameraFacingPrius : DDLObjectType, IDDLObjectType<CameraFacingPrius
 		UseCameraForward = ddl.GetValue<bool>(0x7fb9c410u, UseCameraForward);
 	}
 
-	[DDLRegistration(0xa902b3ebu, "XZ Only")]
+	[DDLRegistration(0x7bc7f470u, "XZ Only")]
 	public bool XZOnly { get; set; } = true;
 
-	[DDLRegistration(0xa902b3ebu, "Use Camera Forward")]
+	[DDLRegistration(0x7fb9c410u, "Use Camera Forward")]
 	public bool UseCameraForward { get; set; } = false;
 
 	public static CameraFacingPrius Create(DDLObject ddl) => new(ddl);

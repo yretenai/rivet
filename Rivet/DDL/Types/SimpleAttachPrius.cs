@@ -19,10 +19,10 @@ public class SimpleAttachPrius : DDLObjectType, IDDLObjectType<SimpleAttachPrius
 		UpdateRotation = ddl.GetValue<bool>(0xb1abf387u, UpdateRotation);
 	}
 
-	[DDLRegistration(0x01cfcefau, description: "Sync to non-authority clients")]
+	[DDLRegistration(0x1cbb35cau, description: "Sync to non-authority clients")]
 	public bool Sync { get; set; } = true;
 
-	[DDLRegistration(0x01cfcefau)]
+	[DDLRegistration(0xb1abf387u)]
 	public bool UpdateRotation { get; set; } = true;
 
 	public static SimpleAttachPrius Create(DDLObject ddl) => new(ddl);

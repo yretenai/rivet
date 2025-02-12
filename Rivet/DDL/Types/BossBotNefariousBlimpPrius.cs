@@ -23,22 +23,22 @@ public class BossBotNefariousBlimpPrius : BotPrius, IDDLObjectType<BossBotNefari
 		NefariousPilotScale = ddl.GetValue<float>(0x44ceb319u, NefariousPilotScale);
 	}
 
-	[DDLRegistration(0xafebbe10u)]
+	[DDLRegistration(0x6a3ad847u)]
 	public bool AllowCelebrates { get; set; } = true;
 
-	[DDLRegistration(0xafebbe10u)]
+	[DDLRegistration(0x5d8cb773u)]
 	public HoverShuffleData? HoverShuffleData { get; set; } = default;
 
-	[DDLRegistration(0xafebbe10u)]
+	[DDLRegistration(0xafd04b08u)]
 	public bool UseFirepointFacingForShuffle { get; set; } = false;
 
-	[DDLRegistration(0xafebbe10u)]
+	[DDLRegistration(0xaa27ccc1u)]
 	public RivetAssetId NefariousPilotAsset { get; set; } = default;
 
-	[DDLRegistration(0xafebbe10u)]
+	[DDLRegistration(0x0d1ba870u)]
 	public string? LocatorToAttachPilot { get; set; } = "igLoc_nefarious_attach";
 
-	[DDLRegistration(0xafebbe10u)]
+	[DDLRegistration(0x44ceb319u)]
 	public float NefariousPilotScale { get; set; } = 1.00f;
 
 	public new static BossBotNefariousBlimpPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class MissionOrderListBase : DDLObjectType, IDDLObjectType<MissionOrderLi
 		MissionOrderConfigs = ddl.GetValues<RivetAssetId>(0x01066a49u);
 	}
 
-	[DDLRegistration(0x5effcc35u)]
+	[DDLRegistration(0x12518503u)]
 	public string? MissionOrderListId { get; set; } = default;
 
-	[DDLRegistration(0x5effcc35u)]
+	[DDLRegistration(0x01066a49u)]
 	public List<RivetAssetId> MissionOrderConfigs { get; set; } = [];
 
 	public static MissionOrderListBase Create(DDLObject ddl) => new(ddl);

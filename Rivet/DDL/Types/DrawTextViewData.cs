@@ -25,28 +25,28 @@ public class DrawTextViewData : UIAtlasBaseData, IDDLObjectType<DrawTextViewData
 		FontSize = ddl.GetValue<uint>(0xbc438b44u, FontSize);
 	}
 
-	[DDLRegistration(0xdc4ad097u)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
-	[DDLRegistration(0xdc4ad097u, "Text Color")]
+	[DDLRegistration(0x7f31f6cfu, "Text Color")]
 	public DDLVector3? TextColor { get; set; } = default;
 
-	[DDLRegistration(0xdc4ad097u, "Text Alpha")]
+	[DDLRegistration(0xc987874cu, "Text Alpha")]
 	public float TextAlpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdc4ad097u, "Background Color")]
+	[DDLRegistration(0x00cbda4au, "Background Color")]
 	public DDLVector3? BackgroundColor { get; set; } = default;
 
-	[DDLRegistration(0xdc4ad097u, "Background Alpha")]
+	[DDLRegistration(0xb67dabc9u, "Background Alpha")]
 	public float BackgroundAlpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdc4ad097u, "UI Size CSS Class", "For UI use only - what CSS class we should use for the size, useful for DrawText cards of different aspect ratios.")]
+	[DDLRegistration(0xe2145917u, "UI Size CSS Class", "For UI use only - what CSS class we should use for the size, useful for DrawText cards of different aspect ratios.")]
 	public string? SizeCSSClass { get; set; } = "fullSize";
 
-	[DDLRegistration(0xdc4ad097u, "Text Alignment")]
+	[DDLRegistration(0xae338150u, "Text Alignment")]
 	public x84bbe706 Alignment { get; set; } = x84bbe706.Center;
 
-	[DDLRegistration(0xdc4ad097u, "Font Size")]
+	[DDLRegistration(0xbc438b44u, "Font Size")]
 	public uint FontSize { get; set; } = 0x00000020;
 
 	public new static DrawTextViewData Create(DDLObject ddl) => new(ddl);

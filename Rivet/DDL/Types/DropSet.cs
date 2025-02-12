@@ -20,13 +20,13 @@ public class DropSet : DDLObjectType, IDDLObjectType<DropSet> {
 		DropList = ddl.GetObjects<DropItem>(0x75bbd820u);
 	}
 
-	[DDLRegistration(0xf4d08254u, "Standard Drop Weight")]
+	[DDLRegistration(0x54997044u, "Standard Drop Weight")]
 	public float DropWeightStandard { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf4d08254u, "Shielded Drop Weight")]
+	[DDLRegistration(0xa9985b10u, "Shielded Drop Weight")]
 	public float DropWeightShielded { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf4d08254u, "Drop List")]
+	[DDLRegistration(0x75bbd820u, "Drop List")]
 	public List<DropItem?> DropList { get; set; } = [];
 
 	public static DropSet Create(DDLObject ddl) => new(ddl);

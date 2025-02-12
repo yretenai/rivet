@@ -18,7 +18,7 @@ public class WeaponLaserHittingStartEvent : EventBase, IDDLObjectType<WeaponLase
 		HitPosActorHandle = ddl.GetValue<uint>(0xf5f07b53u, HitPosActorHandle);
 	}
 
-	[DDLRegistration(0xaf462bc0u, "Hit Pos Actor Handle")]
+	[DDLRegistration(0xf5f07b53u, "Hit Pos Actor Handle")]
 	public uint HitPosActorHandle { get; set; } = 0x00000000;
 
 	public new static WeaponLaserHittingStartEvent Create(DDLObject ddl) => new(ddl);

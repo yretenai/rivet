@@ -24,25 +24,25 @@ public class KickableComponentPrius : DDLObjectType, IDDLObjectType<KickableComp
 		CustomProperties = ddl.GetObject<PhysicsCustomizationProperties>(0x8e301f6cu);
 	}
 
-	[DDLRegistration(0x873313d7u, "Nudgeable", "If this kickable is to be nudged instead of kicked, used for larger objects.")]
+	[DDLRegistration(0x25dfa00du, "Nudgeable", "If this kickable is to be nudged instead of kicked, used for larger objects.")]
 	public bool IsNudgeable { get; set; } = false;
 
-	[DDLRegistration(0x873313d7u, "NudgeFactor", "Default 1.0, less if you have problems with nudgeable stability.")]
+	[DDLRegistration(0xade04108u, "NudgeFactor", "Default 1.0, less if you have problems with nudgeable stability.")]
 	public float NudgeFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x873313d7u)]
+	[DDLRegistration(0xf3f8afe6u)]
 	public bool AutoAllocPhysicsAndAnimController { get; set; } = true;
 
-	[DDLRegistration(0x873313d7u, "Activate At Any Distance", "Initialize and settle this kickable's physics immediately, even when it spawns far away. Helpful if you need to script impulses on faraway objects, but will cause hitches on zone load if overused.")]
+	[DDLRegistration(0xd14f83c8u, "Activate At Any Distance", "Initialize and settle this kickable's physics immediately, even when it spawns far away. Helpful if you need to script impulses on faraway objects, but will cause hitches on zone load if overused.")]
 	public bool StartActivated { get; set; } = false;
 
-	[DDLRegistration(0x873313d7u, "Start Interactable", "If false, kwon't be kickable until interactability is enabled via script or code")]
+	[DDLRegistration(0x0dd944a6u, "Start Interactable", "If false, kwon't be kickable until interactability is enabled via script or code")]
 	public bool StartInteractable { get; set; } = true;
 
-	[DDLRegistration(0x873313d7u, description: "If true, this kickable will deactivate itself on spawn unless breakables system is told to spawn the extra props")]
+	[DDLRegistration(0xd93276abu, description: "If true, this kickable will deactivate itself on spawn unless breakables system is told to spawn the extra props")]
 	public bool ExtraProp { get; set; } = false;
 
-	[DDLRegistration(0x873313d7u, "Custom Physics Properties", "Adjust physical behavior of this object. These numbers override Maya, so you must opt-in explicitly.")]
+	[DDLRegistration(0x8e301f6cu, "Custom Physics Properties", "Adjust physical behavior of this object. These numbers override Maya, so you must opt-in explicitly.")]
 	public PhysicsCustomizationProperties? CustomProperties { get; set; } = default;
 
 	public static KickableComponentPrius Create(DDLObject ddl) => new(ddl);

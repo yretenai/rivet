@@ -22,19 +22,19 @@ public class VaultBuildStatusOutput : DDLObjectType, IDDLObjectType<VaultBuildSt
 		OutdatedEntryCount = ddl.GetValue<int>(0xaf477f9eu, OutdatedEntryCount);
 	}
 
-	[DDLRegistration(0xee7d7eccu, description: "Indicates if the ToC is rebuilding. Happens before entries are updated.")]
+	[DDLRegistration(0xb58b9a80u, description: "Indicates if the ToC is rebuilding. Happens before entries are updated.")]
 	public bool IsBuildingToC { get; set; } = false;
 
-	[DDLRegistration(0xee7d7eccu, description: "Indicates if entries are being updated. This involves updating reference links (which can add more entries to the ToC).")]
+	[DDLRegistration(0x1c56d168u, description: "Indicates if entries are being updated. This involves updating reference links (which can add more entries to the ToC).")]
 	public bool IsUpdatingEntries { get; set; } = false;
 
-	[DDLRegistration(0xee7d7eccu, description: "Current ToC entry count. Will be equal to TotalEntryCount unless ToC is rebuilding.")]
+	[DDLRegistration(0x2ddf55c9u, description: "Current ToC entry count. Will be equal to TotalEntryCount unless ToC is rebuilding.")]
 	public int CurrentEntryCount { get; set; } = 0;
 
-	[DDLRegistration(0xee7d7eccu, description: "Total ToC entry count. Will be equal to CurrentEntryCount unless ToC is rebuilding.")]
+	[DDLRegistration(0x00ed6d38u, description: "Total ToC entry count. Will be equal to CurrentEntryCount unless ToC is rebuilding.")]
 	public int TotalEntryCount { get; set; } = 0;
 
-	[DDLRegistration(0xee7d7eccu, description: "Count of entries that are currently marked as either out-of-date or processing.")]
+	[DDLRegistration(0xaf477f9eu, description: "Count of entries that are currently marked as either out-of-date or processing.")]
 	public int OutdatedEntryCount { get; set; } = 0;
 
 	public static VaultBuildStatusOutput Create(DDLObject ddl) => new(ddl);

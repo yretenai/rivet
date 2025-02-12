@@ -23,22 +23,22 @@ public class BounceShotEffectPrius : ScriptedShotEffectBasePrius, IDDLObjectType
 		MinVelocity = ddl.GetValue<float>(0xe6c42512u, MinVelocity);
 	}
 
-	[DDLRegistration(0x3a27f907u)]
+	[DDLRegistration(0xc1e53f68u)]
 	public float RollBounceScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3a27f907u)]
+	[DDLRegistration(0xd781f505u)]
 	public float FlatHitBounceScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3a27f907u)]
+	[DDLRegistration(0x188f7915u)]
 	public float ActorRollBounceScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3a27f907u)]
+	[DDLRegistration(0x80ec6e1au)]
 	public float ActorFlatHitBounceScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3a27f907u)]
+	[DDLRegistration(0xcb34d143u)]
 	public float ActorBounceGravity { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3a27f907u)]
+	[DDLRegistration(0xe6c42512u)]
 	public float MinVelocity { get; set; } = 0.00f;
 
 	public new static BounceShotEffectPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PlasmaStrikerWeakspotData : DDLObjectType, IDDLObjectType<PlasmaStr
 		JointName = ddl.GetString(0x5ba51db8) ?? JointName;
 	}
 
-	[DDLRegistration(0xa6a4950fu)]
+	[DDLRegistration(0x5ba51db8u)]
 	public string? JointName { get; set; } = default;
 
 	public static PlasmaStrikerWeakspotData Create(DDLObject ddl) => new(ddl);

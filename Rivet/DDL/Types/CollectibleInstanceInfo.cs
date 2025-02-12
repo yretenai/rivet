@@ -18,7 +18,7 @@ public class CollectibleInstanceInfo : DDLObjectType, IDDLObjectType<Collectible
 		InstanceId = ddl.GetString(0x52563470) ?? InstanceId;
 	}
 
-	[DDLRegistration(0xb190f067u)]
+	[DDLRegistration(0x52563470u)]
 	public string? InstanceId { get; set; } = default;
 
 	public static CollectibleInstanceInfo Create(DDLObject ddl) => new(ddl);

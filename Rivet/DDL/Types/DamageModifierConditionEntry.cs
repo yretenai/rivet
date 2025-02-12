@@ -18,7 +18,7 @@ public class DamageModifierConditionEntry : DDLObjectType, IDDLObjectType<Damage
 		Condition = ddl.GetObject<DamageModifierConditionBasePrius>(0x3f2b174fu);
 	}
 
-	[DDLRegistration(0x326fc921u)]
+	[DDLRegistration(0x3f2b174fu)]
 	public DamageModifierConditionBasePrius? Condition { get; set; } = default;
 
 	public static DamageModifierConditionEntry Create(DDLObject ddl) => new(ddl);

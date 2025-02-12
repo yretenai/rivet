@@ -21,16 +21,16 @@ public class TerrainSystem : DDLObjectType, IDDLObjectType<TerrainSystem> {
 		Line04 = ddl.GetString(0x08157b52) ?? Line04;
 	}
 
-	[DDLRegistration(0x8e55bb5bu, description: "The terrain editor allows you to edit heightfields and splatmasks to create")]
+	[DDLRegistration(0x787f8fddu, description: "The terrain editor allows you to edit heightfields and splatmasks to create")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x8e55bb5bu, description: "terrain.  It supports user-defined brushes (both bitmap and HLSL) for painting")]
+	[DDLRegistration(0xe176de67u, description: "terrain.  It supports user-defined brushes (both bitmap and HLSL) for painting")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x8e55bb5bu, description: "and has limited Houdini integration.  Currently, each piece of terrain is a 1km")]
+	[DDLRegistration(0x9671eef1u, description: "and has limited Houdini integration.  Currently, each piece of terrain is a 1km")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x8e55bb5bu, description: "x 1km tile (although you can have as many tiles as you want in a level).")]
+	[DDLRegistration(0x08157b52u, description: "x 1km tile (although you can have as many tiles as you want in a level).")]
 	public string? Line04 { get; set; } = default;
 
 	public static TerrainSystem Create(DDLObject ddl) => new(ddl);

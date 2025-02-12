@@ -20,13 +20,13 @@ public class WeaponBurstShotCountedEvent : EventBase, IDDLObjectType<WeaponBurst
 		TotalShots = ddl.GetValue<int>(0x7edc305cu, TotalShots);
 	}
 
-	[DDLRegistration(0xdd147aebu)]
+	[DDLRegistration(0xee73b5b3u)]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdd147aebu)]
+	[DDLRegistration(0x108d4906u)]
 	public int NumShots { get; set; } = 0;
 
-	[DDLRegistration(0xdd147aebu)]
+	[DDLRegistration(0x7edc305cu)]
 	public int TotalShots { get; set; } = 0;
 
 	public new static WeaponBurstShotCountedEvent Create(DDLObject ddl) => new(ddl);

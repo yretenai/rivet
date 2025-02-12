@@ -20,13 +20,13 @@ public class ContractingVolley : DDLObjectType, IDDLObjectType<ContractingVolley
 		ShotsToMinAccuracy = ddl.GetValue<float>(0xe4a2c370u, ShotsToMinAccuracy);
 	}
 
-	[DDLRegistration(0xaf32bf19u, "Inaccuracy Min")]
+	[DDLRegistration(0x445162fdu, "Inaccuracy Min")]
 	public float InaccuracyMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaf32bf19u, "Inaccuracy Max")]
+	[DDLRegistration(0x785c5da4u, "Inaccuracy Max")]
 	public float InaccuracyMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaf32bf19u, "Shots To Min Accuracy")]
+	[DDLRegistration(0xe4a2c370u, "Shots To Min Accuracy")]
 	public float ShotsToMinAccuracy { get; set; } = 0.00f;
 
 	public static ContractingVolley Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SelectionData3D : DDLObjectType, IDDLObjectType<SelectionData3D> {
 		LastSelectedObject = ddl.GetValue<RivetAssetId>(0x986b8d51u, LastSelectedObject);
 	}
 
-	[DDLRegistration(0xe3c0fd2fu)]
+	[DDLRegistration(0x7bd56f26u)]
 	public Dictionary<RivetAssetId, RivetAssetId> SelectedObjects { get; set; } = [];
 
-	[DDLRegistration(0xe3c0fd2fu)]
+	[DDLRegistration(0x986b8d51u)]
 	public RivetAssetId LastSelectedObject { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static SelectionData3D Create(DDLObject ddl) => new(ddl);

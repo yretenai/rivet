@@ -19,10 +19,10 @@ public class ClankPackLoadoutConfig : ConfigBase, IDDLObjectType<ClankPackLoadou
 		BackpackConfigForRivet = ddl.GetValue<RivetAssetId>(0x54ebe16au, BackpackConfigForRivet);
 	}
 
-	[DDLRegistration(0x6798c686u, description: "The pack to use as Ratchet.")]
+	[DDLRegistration(0xa139fb2au, description: "The pack to use as Ratchet.")]
 	public RivetAssetId BackpackConfigForRatchet { get; set; } = default;
 
-	[DDLRegistration(0x6798c686u, description: "The pack to use as Rivet.")]
+	[DDLRegistration(0x54ebe16au, description: "The pack to use as Rivet.")]
 	public RivetAssetId BackpackConfigForRivet { get; set; } = default;
 
 	public new static ClankPackLoadoutConfig Create(DDLObject ddl) => new(ddl);

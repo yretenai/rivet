@@ -20,13 +20,13 @@ public class JointAlignEntry : DDLObjectType, IDDLObjectType<JointAlignEntry> {
 		ApplyToChildren = ddl.GetValue<bool>(0xd9b7ab9du, ApplyToChildren);
 	}
 
-	[DDLRegistration(0x79186207u, description: "Name of the joint we're allowed to modify")]
+	[DDLRegistration(0x5ba51db8u, description: "Name of the joint we're allowed to modify")]
 	public string? JointName { get; set; } = "";
 
-	[DDLRegistration(0x79186207u, description: "Percent of adjustment to blend in (use -1 for auto weighting) ")]
+	[DDLRegistration(0x39b51b26u, description: "Percent of adjustment to blend in (use -1 for auto weighting) ")]
 	public float Weight { get; set; } = -1.00f;
 
-	[DDLRegistration(0x79186207u, description: "TRUE if we are allowed to modify child joints")]
+	[DDLRegistration(0xd9b7ab9du, description: "TRUE if we are allowed to modify child joints")]
 	public bool ApplyToChildren { get; set; } = false;
 
 	public static JointAlignEntry Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class LandingBirdType : DDLObjectType, IDDLObjectType<LandingBirdType> {
 		Planets = ddl.GetStrings(0xbc30e83eu);
 	}
 
-	[DDLRegistration(0x93b33652u)]
+	[DDLRegistration(0x4b6c9353u)]
 	public string? TypeName { get; set; } = default;
 
-	[DDLRegistration(0x93b33652u)]
+	[DDLRegistration(0xeaf2611bu)]
 	public RivetAssetId Config { get; set; } = default;
 
-	[DDLRegistration(0x93b33652u)]
+	[DDLRegistration(0xbc30e83eu)]
 	public List<string?> Planets { get; set; } = [];
 
 	public static LandingBirdType Create(DDLObject ddl) => new(ddl);

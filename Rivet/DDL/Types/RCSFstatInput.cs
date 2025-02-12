@@ -20,13 +20,13 @@ public class RCSFstatInput : DDLObjectType, IDDLObjectType<RCSFstatInput> {
 		Flags = ddl.GetBitset<x8f003545>(0x12568d7bu, x8f003545Values.Lookup);
 	}
 
-	[DDLRegistration(0x5c2d4628u, description: "Files (or paths/wildcards) to get file information.")]
+	[DDLRegistration(0x08a35046u, description: "Files (or paths/wildcards) to get file information.")]
 	public List<string?> Views { get; set; } = [];
 
-	[DDLRegistration(0x5c2d4628u, description: "Store extra information in the dictionary so the calling code can validate the Fstat result.")]
+	[DDLRegistration(0x548bd263u, description: "Store extra information in the dictionary so the calling code can validate the Fstat result.")]
 	public bool IncludeValidationData { get; set; } = false;
 
-	[DDLRegistration(0x5c2d4628u, description: "Flags indicating what file statistics you want.")]
+	[DDLRegistration(0x12568d7bu, description: "Flags indicating what file statistics you want.")]
 	public x8f003545 Flags { get; set; } = (x8f003545) 0x00000200;
 
 	public static RCSFstatInput Create(DDLObject ddl) => new(ddl);

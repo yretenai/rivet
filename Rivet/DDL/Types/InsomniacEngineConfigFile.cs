@@ -31,46 +31,46 @@ public class InsomniacEngineConfigFile : DDLObjectType, IDDLObjectType<Insomniac
 		PreviousBranch = ddl.GetDictionary<string, string>(0x8fb2fa46, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
 	}
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0xa49f34bbu)]
 	public LunaFtpUserLocation? Location { get; set; } = default;
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0x2e59b3d6u)]
 	public LunaFtpProjectConfigFile? Project { get; set; } = default;
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0x85fe5578u)]
 	public string? Branch { get; set; } = "";
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0x6137d899u)]
 	public string? BranchRootDir { get; set; } = "";
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0x68e61cd3u)]
 	public LunaFtpToolsPackageConfigFile? ToolsPackage { get; set; } = default;
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0x2b2fea00u)]
 	public string? ToolsRootDir { get; set; } = "";
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0xc9241f36u)]
 	public string? ToolsJunctionDir { get; set; } = "";
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0xf8363250u)]
 	public bool IsToolsCodeFolder { get; set; } = false;
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0xeb61a125u)]
 	public string? InstalledUpdaterVersion { get; set; } = "";
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0x3aab9c64u)]
 	public string? InstalledHavokVersion { get; set; } = "";
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0x8fcab4cfu)]
 	public string? InstalledWinExtVersion { get; set; } = "";
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0xb92cfc70u)]
 	public string? InstalledMaya2018Version { get; set; } = "";
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0x5344db00u)]
 	public string? InstalledMaya2020Version { get; set; } = "";
 
-	[DDLRegistration(0xfd209d15u)]
+	[DDLRegistration(0x8fb2fa46u)]
 	public Dictionary<string, string?> PreviousBranch { get; set; } = [];
 
 	public static InsomniacEngineConfigFile Create(DDLObject ddl) => new(ddl);

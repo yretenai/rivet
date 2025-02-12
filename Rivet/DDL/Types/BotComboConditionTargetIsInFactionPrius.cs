@@ -19,10 +19,10 @@ public class BotComboConditionTargetIsInFactionPrius : BotComboConditionBasePriu
 		FlipFactionCondition = ddl.GetValue<bool>(0x1f5d97eau, FlipFactionCondition);
 	}
 
-	[DDLRegistration(0xe9e21cfau, "Target Faction", "Faction the Target must be in")]
+	[DDLRegistration(0x82eee8a8u, "Target Faction", "Faction the Target must be in")]
 	public x6bdf4ba1 Faction { get; set; } = x6bdf4ba1.Neutral;
 
-	[DDLRegistration(0xe9e21cfau, "Is Not In", "If Checked, Condition will check if target is NOT in the faction")]
+	[DDLRegistration(0x1f5d97eau, "Is Not In", "If Checked, Condition will check if target is NOT in the faction")]
 	public bool FlipFactionCondition { get; set; } = false;
 
 	public new static BotComboConditionTargetIsInFactionPrius Create(DDLObject ddl) => new(ddl);

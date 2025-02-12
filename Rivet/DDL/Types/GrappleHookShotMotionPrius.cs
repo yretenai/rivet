@@ -19,10 +19,10 @@ public class GrappleHookShotMotionPrius : ShotMotionBasePrius, IDDLObjectType<Gr
 		CollRadius = ddl.GetValue<float>(0xc7f69ee3u, CollRadius);
 	}
 
-	[DDLRegistration(0x3d56ab2bu)]
+	[DDLRegistration(0x9f20ad55u)]
 	public float FlightSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0x3d56ab2bu)]
+	[DDLRegistration(0xc7f69ee3u)]
 	public float CollRadius { get; set; } = 0.10f;
 
 	public new static GrappleHookShotMotionPrius Create(DDLObject ddl) => new(ddl);

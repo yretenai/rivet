@@ -21,16 +21,16 @@ public class ClassModifierDef : DDLObjectType, IDDLObjectType<ClassModifierDef> 
 		ModClassD = ddl.GetValue<float>(0xca6a3cedu, ModClassD);
 	}
 
-	[DDLRegistration(0x9063e12fu, "Class A modifier")]
+	[DDLRegistration(0xba00c862u, "Class A modifier")]
 	public float ModClassA { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9063e12fu, "Class B modifier")]
+	[DDLRegistration(0x230999d8u, "Class B modifier")]
 	public float ModClassB { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9063e12fu, "Class C modifier")]
+	[DDLRegistration(0x540ea94eu, "Class C modifier")]
 	public float ModClassC { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9063e12fu, "Class D modifier")]
+	[DDLRegistration(0xca6a3cedu, "Class D modifier")]
 	public float ModClassD { get; set; } = 0.00f;
 
 	public static ClassModifierDef Create(DDLObject ddl) => new(ddl);

@@ -29,40 +29,40 @@ public class WeaponConfigBase : ConfigBase, IDDLObjectType<WeaponConfigBase> {
 		TriggerList = ddl.GetObjects<WeaponTriggerDataListItem>(0x2076dda9u);
 	}
 
-	[DDLRegistration(0x93ac1e01u)]
+	[DDLRegistration(0xca0166ccu)]
 	public string? WeaponName { get; set; } = default;
 
-	[DDLRegistration(0x93ac1e01u)]
+	[DDLRegistration(0x1284143bu)]
 	public string? WeaponDamageHashString { get; set; } = default;
 
-	[DDLRegistration(0x93ac1e01u, "Weapon Prius")]
+	[DDLRegistration(0x3bd7ee9eu, "Weapon Prius")]
 	public WeaponBasePrius? Prius { get; set; } = default;
 
-	[DDLRegistration(0x93ac1e01u)]
+	[DDLRegistration(0x3fe77051u)]
 	public WeaponMacroType MacroType { get; set; } = WeaponMacroType.None;
 
-	[DDLRegistration(0x93ac1e01u)]
+	[DDLRegistration(0xfd42c180u)]
 	public string? AttachJoint { get; set; } = default;
 
-	[DDLRegistration(0x93ac1e01u)]
+	[DDLRegistration(0xc047dafeu)]
 	public x40175545 DefFlags { get; set; } = (x40175545) 0x00000000;
 
-	[DDLRegistration(0x93ac1e01u, "Emitter List")]
+	[DDLRegistration(0x3da9ac5cu, "Emitter List")]
 	public List<WeaponEmitterDataListItem?> EmitterList { get; set; } = [];
 
-	[DDLRegistration(0x93ac1e01u, "Ammo List")]
+	[DDLRegistration(0x03b59b3bu, "Ammo List")]
 	public List<WeaponAmmoDataListItem?> AmmoList { get; set; } = [];
 
-	[DDLRegistration(0x93ac1e01u, "Shot List")]
+	[DDLRegistration(0x35eb8552u, "Shot List")]
 	public List<WeaponShotDataListItem?> ShotList { get; set; } = [];
 
-	[DDLRegistration(0x93ac1e01u, "Accuracy List")]
+	[DDLRegistration(0x3ed6b194u, "Accuracy List")]
 	public List<WeaponAccuracyDataListItem?> AccuracyList { get; set; } = [];
 
-	[DDLRegistration(0x93ac1e01u, "User State List")]
+	[DDLRegistration(0x5de6cd03u, "User State List")]
 	public List<WeaponUserStateDataListItem?> UserStateList { get; set; } = [];
 
-	[DDLRegistration(0x93ac1e01u, "Trigger List")]
+	[DDLRegistration(0x2076dda9u, "Trigger List")]
 	public List<WeaponTriggerDataListItem?> TriggerList { get; set; } = [];
 
 	public new static WeaponConfigBase Create(DDLObject ddl) => new(ddl);

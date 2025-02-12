@@ -18,7 +18,7 @@ public class NodalShotInitFirstStateNodeDef : NodalShotStateNodeBaseDef, IDDLObj
 		EventSet = ddl.GetObjects<OutputPlugEventInitialization>(0x33eef3f7u);
 	}
 
-	[DDLRegistration(0x53b550acu)]
+	[DDLRegistration(0x33eef3f7u)]
 	public List<OutputPlugEventInitialization?> EventSet { get; set; } = [];
 
 	public new static NodalShotInitFirstStateNodeDef Create(DDLObject ddl) => new(ddl);

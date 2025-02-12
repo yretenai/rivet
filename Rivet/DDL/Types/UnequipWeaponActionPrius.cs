@@ -18,7 +18,7 @@ public class UnequipWeaponActionPrius : DDLObjectType, IDDLObjectType<UnequipWea
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x250f79b3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Weapon;
 
 	public static UnequipWeaponActionPrius Create(DDLObject ddl) => new(ddl);

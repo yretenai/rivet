@@ -21,16 +21,16 @@ public class HoudiniMenuItem : DDLObjectType, IDDLObjectType<HoudiniMenuItem> {
 		Behavior = ddl.GetEnum<xa1814bf4>(0xc1aa1dc0u, xa1814bf4Values.Lookup);
 	}
 
-	[DDLRegistration(0xed89b267u)]
+	[DDLRegistration(0x3265b4aau)]
 	public string? Title { get; set; } = default;
 
-	[DDLRegistration(0xed89b267u)]
+	[DDLRegistration(0xa0533c88u)]
 	public string? Tooltip { get; set; } = default;
 
-	[DDLRegistration(0xed89b267u)]
+	[DDLRegistration(0x1f0caeb4u)]
 	public List<string?> HythonCode { get; set; } = [];
 
-	[DDLRegistration(0xed89b267u)]
+	[DDLRegistration(0xc1aa1dc0u)]
 	public xa1814bf4 Behavior { get; set; } = xa1814bf4.Keep;
 
 	public static HoudiniMenuItem Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class WeaponEquipListenerConfig : ConfigBase, IDDLObjectType<WeaponEquipL
 		EquipListenerData = ddl.GetObject<WeaponEquipListenerData>(0xc1c4ec55u);
 	}
 
-	[DDLRegistration(0xdb8aa2d3u)]
+	[DDLRegistration(0xc1c4ec55u)]
 	public WeaponEquipListenerData? EquipListenerData { get; set; } = default;
 
 	public new static WeaponEquipListenerConfig Create(DDLObject ddl) => new(ddl);

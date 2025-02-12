@@ -19,10 +19,10 @@ public class CinematicClipboardData : DDLObjectType, IDDLObjectType<CinematicCli
 		JsonData = ddl.GetObjects<BlobDef>(0xf0ade33eu);
 	}
 
-	[DDLRegistration(0xcd503d67u)]
+	[DDLRegistration(0x280c42ffu)]
 	public List<RivetAssetId> AssetPaths { get; set; } = [];
 
-	[DDLRegistration(0xcd503d67u)]
+	[DDLRegistration(0xf0ade33eu)]
 	public List<BlobDef?> JsonData { get; set; } = [];
 
 	public static CinematicClipboardData Create(DDLObject ddl) => new(ddl);

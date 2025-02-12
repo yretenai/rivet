@@ -19,10 +19,10 @@ public class PlatformActivitySystemSaveData : DDLObjectType, IDDLObjectType<Plat
 		DerivedSaveData = ddl.GetObject<PlatformActivitySystemSaveBase>(0x0dc52c00u);
 	}
 
-	[DDLRegistration(0xc393b61du)]
+	[DDLRegistration(0xa05da2c8u)]
 	public List<uint> CachedAvailableActivities { get; set; } = [];
 
-	[DDLRegistration(0xc393b61du)]
+	[DDLRegistration(0x0dc52c00u)]
 	public PlatformActivitySystemSaveBase? DerivedSaveData { get; set; } = default;
 
 	public static PlatformActivitySystemSaveData Create(DDLObject ddl) => new(ddl);

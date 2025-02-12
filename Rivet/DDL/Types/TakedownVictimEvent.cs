@@ -19,10 +19,10 @@ public class TakedownVictimEvent : EventBase, IDDLObjectType<TakedownVictimEvent
 		Delayed = ddl.GetValue<bool>(0x6d6b290fu, Delayed);
 	}
 
-	[DDLRegistration(0x23d6f497u)]
+	[DDLRegistration(0x14c58735u)]
 	public uint DamagerHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x23d6f497u)]
+	[DDLRegistration(0x6d6b290fu)]
 	public bool Delayed { get; set; } = false;
 
 	public new static TakedownVictimEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class LootSetupElement : DDLObjectType, IDDLObjectType<LootSetupElement> 
 		LootMode = ddl.GetString(0x86d527e8) ?? LootMode;
 	}
 
-	[DDLRegistration(0x15537ddcu)]
+	[DDLRegistration(0xbf8c84c7u)]
 	public RivetAssetId LootTableConfig { get; set; } = default;
 
-	[DDLRegistration(0x15537ddcu)]
+	[DDLRegistration(0x86d527e8u)]
 	public string? LootMode { get; set; } = default;
 
 	public static LootSetupElement Create(DDLObject ddl) => new(ddl);

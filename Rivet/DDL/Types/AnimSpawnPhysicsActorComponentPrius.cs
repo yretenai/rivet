@@ -18,7 +18,7 @@ public class AnimSpawnPhysicsActorComponentPrius : DDLObjectType, IDDLObjectType
 		SpawnList = ddl.GetObjects<SpawnPhysicsActorEntry>(0xd9d0de1cu);
 	}
 
-	[DDLRegistration(0x38363a7eu, "Spawn List", "Array of all the actors we can spawn. Use the index # as the index of what to spawn on the AnimSpawnHavokActorEvent.")]
+	[DDLRegistration(0xd9d0de1cu, "Spawn List", "Array of all the actors we can spawn. Use the index # as the index of what to spawn on the AnimSpawnHavokActorEvent.")]
 	public List<SpawnPhysicsActorEntry?> SpawnList { get; set; } = [];
 
 	public static AnimSpawnPhysicsActorComponentPrius Create(DDLObject ddl) => new(ddl);

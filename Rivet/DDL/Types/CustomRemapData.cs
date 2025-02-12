@@ -18,7 +18,7 @@ public class CustomRemapData : DDLObjectType, IDDLObjectType<CustomRemapData> {
 		RemapSet = ddl.GetObject<ControlRemapSet>(0xf2c7cf7du);
 	}
 
-	[DDLRegistration(0x16c1335cu)]
+	[DDLRegistration(0xf2c7cf7du)]
 	public ControlRemapSet? RemapSet { get; set; } = default;
 
 	public static CustomRemapData Create(DDLObject ddl) => new(ddl);

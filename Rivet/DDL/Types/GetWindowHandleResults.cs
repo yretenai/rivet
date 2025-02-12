@@ -18,7 +18,7 @@ public class GetWindowHandleResults : DDLObjectType, IDDLObjectType<GetWindowHan
 		WindowHandle = ddl.GetString(0x0a5b02bc) ?? WindowHandle;
 	}
 
-	[DDLRegistration(0xe7c6a831u)]
+	[DDLRegistration(0x0a5b02bcu)]
 	public string? WindowHandle { get; set; } = default;
 
 	public static GetWindowHandleResults Create(DDLObject ddl) => new(ddl);

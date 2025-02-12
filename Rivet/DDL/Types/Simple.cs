@@ -18,7 +18,7 @@ public class Simple : DDLObjectType, IDDLObjectType<Simple> {
 		F = ddl.GetValue<float>(0x9f525c26u, F);
 	}
 
-	[DDLRegistration(0xff037365u)]
+	[DDLRegistration(0x9f525c26u)]
 	public float F { get; set; } = 0.00f;
 
 	public static Simple Create(DDLObject ddl) => new(ddl);

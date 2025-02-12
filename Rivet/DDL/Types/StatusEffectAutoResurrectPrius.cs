@@ -20,13 +20,13 @@ public class StatusEffectAutoResurrectPrius : StatusEffectBasePrius, IDDLObjectT
 		IsPercent = ddl.GetValue<bool>(0x858c4cf5u, IsPercent);
 	}
 
-	[DDLRegistration(0xf3035974u)]
+	[DDLRegistration(0xabc94c5au)]
 	public float Delay { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf3035974u)]
+	[DDLRegistration(0xd9edad1au)]
 	public float ReturnHP { get; set; } = 50.00f;
 
-	[DDLRegistration(0xf3035974u)]
+	[DDLRegistration(0x858c4cf5u)]
 	public bool IsPercent { get; set; } = true;
 
 	public new static StatusEffectAutoResurrectPrius Create(DDLObject ddl) => new(ddl);

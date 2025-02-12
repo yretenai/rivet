@@ -19,10 +19,10 @@ public class CompatVaultLoadAsset : DDLObjectType, IDDLObjectType<CompatVaultLoa
 		Asset = ddl.GetValue<RivetAssetId>(0x1bfc969du, Asset);
 	}
 
-	[DDLRegistration(0x748088c9u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x63e8ba6e Type { get; set; } = x63e8ba6e.ReplaceSceneNodes;
 
-	[DDLRegistration(0x748088c9u)]
+	[DDLRegistration(0x1bfc969du)]
 	public RivetAssetId Asset { get; set; } = default;
 
 	public static CompatVaultLoadAsset Create(DDLObject ddl) => new(ddl);

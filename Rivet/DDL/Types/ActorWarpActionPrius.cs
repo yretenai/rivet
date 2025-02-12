@@ -24,25 +24,25 @@ public class ActorWarpActionPrius : DDLObjectType, IDDLObjectType<ActorWarpActio
 		UniqueLoadScreenName = ddl.GetString(0xabc70ac1) ?? UniqueLoadScreenName;
 	}
 
-	[DDLRegistration(0x5aa59eb0u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x5aa59eb0u, "Force Relative", "The Actor(s) or Actor Group(s) will be positioned relative to the destination Actor.")]
+	[DDLRegistration(0xbcb848a1u, "Force Relative", "The Actor(s) or Actor Group(s) will be positioned relative to the destination Actor.")]
 	public bool ForceRelative { get; set; } = false;
 
-	[DDLRegistration(0x5aa59eb0u, "Reset Actor State", "At the destination, the Actor will be in the same state it was before the warp.")]
+	[DDLRegistration(0x49ce738cu, "Reset Actor State", "At the destination, the Actor will be in the same state it was before the warp.")]
 	public bool Reset { get; set; } = true;
 
-	[DDLRegistration(0x5aa59eb0u, "Reset Actor To State", "At the destination, the Actor will be in the specified state.")]
+	[DDLRegistration(0xa6e9fb75u, "Reset Actor To State", "At the destination, the Actor will be in the specified state.")]
 	public xcf5ccb68 ResetType { get; set; } = xcf5ccb68.Stand;
 
-	[DDLRegistration(0x5aa59eb0u, "Reset Camera", "After warping, the player camera will be in the initial position.")]
+	[DDLRegistration(0xb3ab2b56u, "Reset Camera", "After warping, the player camera will be in the initial position.")]
 	public bool ResetCamera { get; set; } = true;
 
-	[DDLRegistration(0x5aa59eb0u, "Force Load Screen")]
+	[DDLRegistration(0xc79490c4u, "Force Load Screen")]
 	public bool ForceLoadScreen { get; set; } = false;
 
-	[DDLRegistration(0x5aa59eb0u, "Unique Load Screen")]
+	[DDLRegistration(0xabc70ac1u, "Unique Load Screen")]
 	public string? UniqueLoadScreenName { get; set; } = default;
 
 	public static ActorWarpActionPrius Create(DDLObject ddl) => new(ddl);

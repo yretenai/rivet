@@ -21,16 +21,16 @@ public class DoorOfferPrius : ProximityOfferPrius, IDDLObjectType<DoorOfferPrius
 		UnlockWithKeyTextTag = ddl.GetString(0x5273ec2f) ?? UnlockWithKeyTextTag;
 	}
 
-	[DDLRegistration(0x2fd6a780u, description: "The localization tag for the text to show when the door can be opened.")]
+	[DDLRegistration(0x667296cau, description: "The localization tag for the text to show when the door can be opened.")]
 	public string? OpenTextTag { get; set; } = default;
 
-	[DDLRegistration(0x2fd6a780u, description: "The localization tag for the text to show when the door can be closed.")]
+	[DDLRegistration(0xaa49ad23u, description: "The localization tag for the text to show when the door can be closed.")]
 	public string? CloseTextTag { get; set; } = default;
 
-	[DDLRegistration(0x2fd6a780u, description: "The localization tag for the text to show when the door is locked.")]
+	[DDLRegistration(0x3a3fb626u, description: "The localization tag for the text to show when the door is locked.")]
 	public string? LockedTextTag { get; set; } = default;
 
-	[DDLRegistration(0x2fd6a780u, description: "The localization tag for the text to show when the door can be unlocked with a key.")]
+	[DDLRegistration(0x5273ec2fu, description: "The localization tag for the text to show when the door can be unlocked with a key.")]
 	public string? UnlockWithKeyTextTag { get; set; } = default;
 
 	public new static DoorOfferPrius Create(DDLObject ddl) => new(ddl);

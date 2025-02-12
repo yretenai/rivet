@@ -18,7 +18,7 @@ public class ProtoGrenadeShardDissolveQuicklyEvent : EventBase, IDDLObjectType<P
 		IsExploding = ddl.GetValue<bool>(0x68da67c3u, IsExploding);
 	}
 
-	[DDLRegistration(0x3b999415u)]
+	[DDLRegistration(0x68da67c3u)]
 	public bool IsExploding { get; set; } = false;
 
 	public new static ProtoGrenadeShardDissolveQuicklyEvent Create(DDLObject ddl) => new(ddl);

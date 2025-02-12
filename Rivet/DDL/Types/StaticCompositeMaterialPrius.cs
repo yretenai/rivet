@@ -20,13 +20,13 @@ public class StaticCompositeMaterialPrius : DDLObjectType, IDDLObjectType<Static
 		IsPreMaterial = ddl.GetValue<bool>(0x96a3a365u, IsPreMaterial);
 	}
 
-	[DDLRegistration(0x6bdd6ed9u, description: "The material/materialgraph asset to apply to the actor.")]
+	[DDLRegistration(0xa71ff48bu, description: "The material/materialgraph asset to apply to the actor.")]
 	public RivetAssetId NewMaterial { get; set; } = default;
 
-	[DDLRegistration(0x6bdd6ed9u)]
+	[DDLRegistration(0x2715e9d5u)]
 	public float MaterialAlpha { get; set; } = 0.50f;
 
-	[DDLRegistration(0x6bdd6ed9u)]
+	[DDLRegistration(0x96a3a365u)]
 	public bool IsPreMaterial { get; set; } = true;
 
 	public static StaticCompositeMaterialPrius Create(DDLObject ddl) => new(ddl);

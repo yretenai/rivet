@@ -19,10 +19,10 @@ public class CameraShakeListenerPrius : DDLObjectType, IDDLObjectType<CameraShak
 		RadiusMultiplier = ddl.GetValue<float>(0xc1c3688bu, RadiusMultiplier);
 	}
 
-	[DDLRegistration(0x233ffefau)]
+	[DDLRegistration(0x31311c56u)]
 	public float MagnitudeMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x233ffefau)]
+	[DDLRegistration(0xc1c3688bu)]
 	public float RadiusMultiplier { get; set; } = 1.00f;
 
 	public static CameraShakeListenerPrius Create(DDLObject ddl) => new(ddl);

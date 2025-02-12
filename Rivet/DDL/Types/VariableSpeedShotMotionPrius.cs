@@ -21,16 +21,16 @@ public class VariableSpeedShotMotionPrius : BasicShotMotionPrius, IDDLObjectType
 		ConfigModDefs = ddl.GetObjects<VariableSpeedShotMotionPriusModDef>(0x3d4ae417u);
 	}
 
-	[DDLRegistration(0x12434a44u)]
+	[DDLRegistration(0xf0d89680u)]
 	public float MinSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0x12434a44u)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 50.00f;
 
-	[DDLRegistration(0x12434a44u)]
+	[DDLRegistration(0xd9b0da6cu)]
 	public float FlightTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x12434a44u, "Config Mod Defs")]
+	[DDLRegistration(0x3d4ae417u, "Config Mod Defs")]
 	public List<VariableSpeedShotMotionPriusModDef?> ConfigModDefs { get; set; } = [];
 
 	public new static VariableSpeedShotMotionPrius Create(DDLObject ddl) => new(ddl);

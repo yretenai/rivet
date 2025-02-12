@@ -19,10 +19,10 @@ public class TestGameMissionObjectiveFaux : DDLObjectType, IDDLObjectType<TestGa
 		AllowVignettes = ddl.GetValue<bool>(0x796b773cu, AllowVignettes);
 	}
 
-	[DDLRegistration(0x8afa0c3au)]
+	[DDLRegistration(0x1b92e3ecu)]
 	public bool Toggle { get; set; } = true;
 
-	[DDLRegistration(0x8afa0c3au)]
+	[DDLRegistration(0x796b773cu)]
 	public bool AllowVignettes { get; set; } = false;
 
 	public static TestGameMissionObjectiveFaux Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class HealedEvent : EventBase, IDDLObjectType<HealedEvent> {
 		Amount = ddl.GetValue<float>(0xb0d93e25u, Amount);
 	}
 
-	[DDLRegistration(0x817884ddu)]
+	[DDLRegistration(0x5e19b71eu)]
 	public uint Healer { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x817884ddu)]
+	[DDLRegistration(0xaacd024fu)]
 	public uint Healed { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x817884ddu)]
+	[DDLRegistration(0xb0d93e25u)]
 	public float Amount { get; set; } = 0.00f;
 
 	public new static HealedEvent Create(DDLObject ddl) => new(ddl);

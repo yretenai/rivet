@@ -38,67 +38,67 @@ public class HeroMoveAbilities : DDLObjectType, IDDLObjectType<HeroMoveAbilities
 		Sprint = ddl.GetValue<bool>(0xd1f81bd0u, Sprint);
 	}
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0xdfaef7c8u)]
 	public bool Move { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0x7a238d09u)]
 	public bool Run { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0x9723c6a6u)]
 	public bool Jump { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0x93d25f20u)]
 	public bool DoubleJump { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0x6917307fu)]
 	public bool Shoot { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0xd6b4b760u)]
 	public bool Melee { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0xd7f1adeau)]
 	public bool Ledge { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0xdbf41d9au)]
 	public bool Interact { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0xc3f2eb51u)]
 	public bool Grind { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0xfedc13e1u)]
 	public bool Glide { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0x23ba36c2u)]
 	public bool Mount { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0x970f9ee0u)]
 	public bool WallStick { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0xcca967d9u)]
 	public bool WallRun { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0xabfe1db0u)]
 	public bool Dash { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0x07b6bb08u)]
 	public bool AirDash { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0xb9bea386u)]
 	public bool Hoverboot { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0x3b37929cu)]
 	public bool MagbootLaunch { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0x266b6847u)]
 	public bool PortalZip { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0xc8f7494fu)]
 	public bool WeaponWheel { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0x464a8cc4u)]
 	public bool WeaponToggle { get; set; } = true;
 
-	[DDLRegistration(0x7f488219u)]
+	[DDLRegistration(0xd1f81bd0u)]
 	public bool Sprint { get; set; } = true;
 
 	public static HeroMoveAbilities Create(DDLObject ddl) => new(ddl);

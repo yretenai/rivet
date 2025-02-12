@@ -18,7 +18,7 @@ public class ObjectiveGraphContainer : DDLObjectType, IDDLObjectType<ObjectiveGr
 		AssetPath = ddl.GetValue<RivetAssetId>(0x0efa614bu, AssetPath);
 	}
 
-	[DDLRegistration(0xc3077a13u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
 	public static ObjectiveGraphContainer Create(DDLObject ddl) => new(ddl);

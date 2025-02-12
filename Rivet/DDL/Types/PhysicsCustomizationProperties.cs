@@ -21,16 +21,16 @@ public class PhysicsCustomizationProperties : DDLObjectType, IDDLObjectType<Phys
 		MaterialPropertiesOverrideValues = ddl.GetObject<PhysicsMaterialPropertiesParam>(0x955bcd85u);
 	}
 
-	[DDLRegistration(0x098c39adu, "Override Motion Properties?", "If true, replace Havok's default motion properies, or anything set in Maya, with the values below.")]
+	[DDLRegistration(0xacfb0ed2u, "Override Motion Properties?", "If true, replace Havok's default motion properies, or anything set in Maya, with the values below.")]
 	public bool WantsOverrideMotionProperties { get; set; } = false;
 
-	[DDLRegistration(0x098c39adu, description: "Use these numbers instead of default or Maya-configured motion properties")]
+	[DDLRegistration(0xe108f42du, description: "Use these numbers instead of default or Maya-configured motion properties")]
 	public PhysicsMotionPropertiesParam? MotionPropertiesOverrideValues { get; set; } = default;
 
-	[DDLRegistration(0x098c39adu, "Override Material Properties?", "If true, replace Havok's default material properies, or anything set in Maya, with the values below.")]
+	[DDLRegistration(0x426da14au, "Override Material Properties?", "If true, replace Havok's default material properies, or anything set in Maya, with the values below.")]
 	public bool WantsOverrideMaterial { get; set; } = false;
 
-	[DDLRegistration(0x098c39adu, description: "Use these numbers instead of default or Maya-configured materials")]
+	[DDLRegistration(0x955bcd85u, description: "Use these numbers instead of default or Maya-configured materials")]
 	public PhysicsMaterialPropertiesParam? MaterialPropertiesOverrideValues { get; set; } = default;
 
 	public static PhysicsCustomizationProperties Create(DDLObject ddl) => new(ddl);

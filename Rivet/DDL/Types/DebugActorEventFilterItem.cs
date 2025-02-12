@@ -18,7 +18,7 @@ public class DebugActorEventFilterItem : DDLObjectType, IDDLObjectType<DebugActo
 		EventItem = ddl.GetObject<EventBase>(0x6170c905u);
 	}
 
-	[DDLRegistration(0x1b5447acu)]
+	[DDLRegistration(0x6170c905u)]
 	public EventBase? EventItem { get; set; } = default;
 
 	public static DebugActorEventFilterItem Create(DDLObject ddl) => new(ddl);

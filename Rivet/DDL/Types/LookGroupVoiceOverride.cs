@@ -20,13 +20,13 @@ public class LookGroupVoiceOverride : DDLObjectType, IDDLObjectType<LookGroupVoi
 		OverrideVoiceMax = ddl.GetEnum<VoiceGame>(0x882484c2u, VoiceGameValues.Lookup);
 	}
 
-	[DDLRegistration(0xf093a8c9u, "Look Groups")]
+	[DDLRegistration(0xb6c4ab29u, "Look Groups")]
 	public List<string?> LookGroups { get; set; } = [];
 
-	[DDLRegistration(0xf093a8c9u, "Override Voice Min")]
+	[DDLRegistration(0xb429bb9bu, "Override Voice Min")]
 	public VoiceGame OverrideVoiceMin { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0xf093a8c9u, "Override Voice Max")]
+	[DDLRegistration(0x882484c2u, "Override Voice Max")]
 	public VoiceGame OverrideVoiceMax { get; set; } = VoiceGame.Unused;
 
 	public static LookGroupVoiceOverride Create(DDLObject ddl) => new(ddl);

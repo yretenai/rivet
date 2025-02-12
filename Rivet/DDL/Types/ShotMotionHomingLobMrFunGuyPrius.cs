@@ -19,10 +19,10 @@ public class ShotMotionHomingLobMrFunGuyPrius : ShotMotionHomingLobPrius, IDDLOb
 		MinFlightTime = ddl.GetValue<float>(0x60da1a63u, MinFlightTime);
 	}
 
-	[DDLRegistration(0x61b4d412u)]
+	[DDLRegistration(0x4c09c0a9u)]
 	public float DesiredDistanceForDesiredHeight { get; set; } = 10.00f;
 
-	[DDLRegistration(0x61b4d412u, description: "The minimum amount of time it should take the bullet to get to the target.")]
+	[DDLRegistration(0x60da1a63u, description: "The minimum amount of time it should take the bullet to get to the target.")]
 	public float MinFlightTime { get; set; } = 0.25f;
 
 	public new static ShotMotionHomingLobMrFunGuyPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class RippleEvent : EventBase, IDDLObjectType<RippleEvent> {
 		Strength = ddl.GetValue<float>(0x2cb85ca8u, Strength);
 	}
 
-	[DDLRegistration(0x19761c3cu)]
+	[DDLRegistration(0x33f2e3d5u)]
 	public uint Instigator { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x19761c3cu)]
+	[DDLRegistration(0x2cb85ca8u)]
 	public float Strength { get; set; } = 1.00f;
 
 	public new static RippleEvent Create(DDLObject ddl) => new(ddl);

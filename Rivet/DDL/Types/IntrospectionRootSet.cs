@@ -20,13 +20,13 @@ public class IntrospectionRootSet : DDLObjectType, IDDLObjectType<IntrospectionR
 		Roots = ddl.GetValues<RivetAssetId>(0xfef27f4fu);
 	}
 
-	[DDLRegistration(0xc2c6a5d6u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xc2c6a5d6u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x39ee8d91 Type { get; set; } = x39ee8d91.OpenUnit;
 
-	[DDLRegistration(0xc2c6a5d6u)]
+	[DDLRegistration(0xfef27f4fu)]
 	public List<RivetAssetId> Roots { get; set; } = [];
 
 	public static IntrospectionRootSet Create(DDLObject ddl) => new(ddl);

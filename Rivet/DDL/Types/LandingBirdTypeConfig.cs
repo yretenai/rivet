@@ -26,31 +26,31 @@ public class LandingBirdTypeConfig : ConfigBase, IDDLObjectType<LandingBirdTypeC
 		FlockSoundSource = ddl.GetObject<SoundSourceComponentPrius>(0xd8e09e63u);
 	}
 
-	[DDLRegistration(0xfd5188eeu, "Bird Asset", "This is the bird actor asset to spawn offscreen and land near the hero.")]
+	[DDLRegistration(0x341b971bu, "Bird Asset", "This is the bird actor asset to spawn offscreen and land near the hero.")]
 	public RivetAssetId BirdAsset { get; set; } = default;
 
-	[DDLRegistration(0xfd5188eeu, "Min Spawn Period", "After a bird is spawned, the system must wait at least this amount of time before spawning another.")]
+	[DDLRegistration(0xa206a681u, "Min Spawn Period", "After a bird is spawned, the system must wait at least this amount of time before spawning another.")]
 	public float MinSpawnPeriod { get; set; } = 0.25f;
 
-	[DDLRegistration(0xfd5188eeu, "Max Spawn Period", "After a bird is spawned, the system may wait at most this amount of time before spawning another.")]
+	[DDLRegistration(0x1b203df0u, "Max Spawn Period", "After a bird is spawned, the system may wait at most this amount of time before spawning another.")]
 	public float MaxSpawnPeriod { get; set; } = 2.00f;
 
-	[DDLRegistration(0xfd5188eeu, "Min Bird Separation", "How far birds must be from each other.")]
+	[DDLRegistration(0x67e3c696u, "Min Bird Separation", "How far birds must be from each other.")]
 	public float MinBirdSeparation { get; set; } = 0.15f;
 
-	[DDLRegistration(0xfd5188eeu, "Max Spawned Birds", "Maximum number of birds to spawn around the hero.")]
+	[DDLRegistration(0xa90ecfa9u, "Max Spawned Birds", "Maximum number of birds to spawn around the hero.")]
 	public int MaxSpawnCount { get; set; } = 25;
 
-	[DDLRegistration(0xfd5188eeu, "Spawn Height", "How high above the land location should birds spawn?")]
+	[DDLRegistration(0x02f52a11u, "Spawn Height", "How high above the land location should birds spawn?")]
 	public float SpawnHeight { get; set; } = 20.00f;
 
-	[DDLRegistration(0xfd5188eeu, "Spawn Radius", "How far horizontally should the birds spawn from their landing location. A smaller value makes for steeper landings.")]
+	[DDLRegistration(0xccc4a144u, "Spawn Radius", "How far horizontally should the birds spawn from their landing location. A smaller value makes for steeper landings.")]
 	public float SpawnRadius { get; set; } = 5.00f;
 
-	[DDLRegistration(0xfd5188eeu, "Land Physics Radius", "When querying to see if a land position is valid, this is the radius of the physics query.")]
+	[DDLRegistration(0x8ad34522u, "Land Physics Radius", "When querying to see if a land position is valid, this is the radius of the physics query.")]
 	public float LandPhysicsRadius { get; set; } = 0.10f;
 
-	[DDLRegistration(0xfd5188eeu, "SoundSourceComponentPrius", "This is the sound source component used for the flock. Only one sound source is created (at the average position of the flock).")]
+	[DDLRegistration(0xd8e09e63u, "SoundSourceComponentPrius", "This is the sound source component used for the flock. Only one sound source is created (at the average position of the flock).")]
 	public SoundSourceComponentPrius? FlockSoundSource { get; set; } = default;
 
 	public new static LandingBirdTypeConfig Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ShotRYNOGrenadePrius : LobbedShotPrius, IDDLObjectType<ShotRYNOGren
 		RYNOShot = ddl.GetObject<WeaponShotData>(0x029b048du);
 	}
 
-	[DDLRegistration(0xd4f0ade1u)]
+	[DDLRegistration(0x029b048du)]
 	public WeaponShotData? RYNOShot { get; set; } = default;
 
 	public new static ShotRYNOGrenadePrius Create(DDLObject ddl) => new(ddl);

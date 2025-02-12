@@ -19,10 +19,10 @@ public class StatusEffectDamageReductionPrius : StatusEffectBasePrius, IDDLObjec
 		IsPercent = ddl.GetValue<bool>(0x858c4cf5u, IsPercent);
 	}
 
-	[DDLRegistration(0x09de03a8u, description: "The amount our outgoing damage is reduced.")]
+	[DDLRegistration(0xb0d93e25u, description: "The amount our outgoing damage is reduced.")]
 	public float Amount { get; set; } = 50.00f;
 
-	[DDLRegistration(0x09de03a8u, "Is Percent", "Is 'Amount' a percent value from 0-100 or is it a fixed amount.")]
+	[DDLRegistration(0x858c4cf5u, "Is Percent", "Is 'Amount' a percent value from 0-100 or is it a fixed amount.")]
 	public bool IsPercent { get; set; } = true;
 
 	public new static StatusEffectDamageReductionPrius Create(DDLObject ddl) => new(ddl);

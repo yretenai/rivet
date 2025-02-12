@@ -19,10 +19,10 @@ public class OnBlockActionPrius : DDLObjectType, IDDLObjectType<OnBlockActionPri
 		StartActive = ddl.GetValue<bool>(0x3e035e82u, StartActive);
 	}
 
-	[DDLRegistration(0x5f1d2162u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
-	[DDLRegistration(0x5f1d2162u)]
+	[DDLRegistration(0x3e035e82u)]
 	public bool StartActive { get; set; } = true;
 
 	public static OnBlockActionPrius Create(DDLObject ddl) => new(ddl);

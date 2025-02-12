@@ -20,13 +20,13 @@ public class VonIonBossShipAttackSpawnData : ActorSpawnData, IDDLObjectType<VonI
 		PatternAction = ddl.GetValue<int>(0x5afdb1deu, PatternAction);
 	}
 
-	[DDLRegistration(0xbd5a9951u)]
+	[DDLRegistration(0x9db721adu)]
 	public uint VonIonBossShipHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbd5a9951u)]
+	[DDLRegistration(0x63316affu)]
 	public uint TargetHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbd5a9951u)]
+	[DDLRegistration(0x5afdb1deu)]
 	public int PatternAction { get; set; } = 0;
 
 	public new static VonIonBossShipAttackSpawnData Create(DDLObject ddl) => new(ddl);

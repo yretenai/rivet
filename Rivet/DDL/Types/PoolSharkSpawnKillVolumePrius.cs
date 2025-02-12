@@ -21,16 +21,16 @@ public class PoolSharkSpawnKillVolumePrius : DDLObjectType, IDDLObjectType<PoolS
 		OtherVolumesToUse = ddl.GetValues<RivetAssetId>(0xe2a16507u);
 	}
 
-	[DDLRegistration(0xb083ee10u, description: "How long after hero is in volume will we spawn shark to kill hero")]
+	[DDLRegistration(0x97503532u, description: "How long after hero is in volume will we spawn shark to kill hero")]
 	public float TimeInVolumeToSpawnShark { get; set; } = 1.50f;
 
-	[DDLRegistration(0xb083ee10u, description: "If Shark has been alive this long, just destroy shark and retry spawn")]
+	[DDLRegistration(0x45a33419u, description: "If Shark has been alive this long, just destroy shark and retry spawn")]
 	public float ResetTime { get; set; } = 4.00f;
 
-	[DDLRegistration(0xb083ee10u, description: "Reference to poolshark actor we want to summon")]
+	[DDLRegistration(0xb38ccd62u, description: "Reference to poolshark actor we want to summon")]
 	public RivetAssetId PoolSharkActor { get; set; } = default;
 
-	[DDLRegistration(0xb083ee10u, description: "Volumes in this list will also count as -hero is inside so we will spawn shark- along with this main volume")]
+	[DDLRegistration(0xe2a16507u, description: "Volumes in this list will also count as -hero is inside so we will spawn shark- along with this main volume")]
 	public List<RivetAssetId> OtherVolumesToUse { get; set; } = [];
 
 	public static PoolSharkSpawnKillVolumePrius Create(DDLObject ddl) => new(ddl);

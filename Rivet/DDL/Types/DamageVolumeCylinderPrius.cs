@@ -19,10 +19,10 @@ public class DamageVolumeCylinderPrius : DamageVolumePrius, IDDLObjectType<Damag
 		EndLocator = ddl.GetString(0xe7e59581) ?? EndLocator;
 	}
 
-	[DDLRegistration(0x1f4fe59du, description: "Cylinder goes from this locator to EndLocator.  Cylinder will use DamageVolumePrius::Radius.")]
+	[DDLRegistration(0x45890f60u, description: "Cylinder goes from this locator to EndLocator.  Cylinder will use DamageVolumePrius::Radius.")]
 	public string? StartLocator { get; set; } = default;
 
-	[DDLRegistration(0x1f4fe59du)]
+	[DDLRegistration(0xe7e59581u)]
 	public string? EndLocator { get; set; } = default;
 
 	public new static DamageVolumeCylinderPrius Create(DDLObject ddl) => new(ddl);

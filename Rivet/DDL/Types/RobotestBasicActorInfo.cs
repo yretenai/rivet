@@ -20,13 +20,13 @@ public class RobotestBasicActorInfo : DDLObjectType, IDDLObjectType<RobotestBasi
 		ModelName = ddl.GetString(0x64443d31) ?? ModelName;
 	}
 
-	[DDLRegistration(0x1557c0d6u, description: "tuid for actor if available")]
+	[DDLRegistration(0xfbaa04e4u, description: "tuid for actor if available")]
 	public RivetAssetId ActorTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x1557c0d6u, description: "actor ? actor->GetAssetName() : '(null)' ")]
+	[DDLRegistration(0xcc4a4d21u, description: "actor ? actor->GetAssetName() : '(null)' ")]
 	public string? ActorName { get; set; } = default;
 
-	[DDLRegistration(0x1557c0d6u, description: "model_inst ? model_inst->GetModel()->GetAssetName() : '(null)' ")]
+	[DDLRegistration(0x64443d31u, description: "model_inst ? model_inst->GetModel()->GetAssetName() : '(null)' ")]
 	public string? ModelName { get; set; } = default;
 
 	public static RobotestBasicActorInfo Create(DDLObject ddl) => new(ddl);

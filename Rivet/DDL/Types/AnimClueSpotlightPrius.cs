@@ -20,13 +20,13 @@ public class AnimClueSpotlightPrius : DDLObjectType, IDDLObjectType<AnimClueSpot
 		AimDurationMax = ddl.GetValue<float>(0xb47243d6u, AimDurationMax);
 	}
 
-	[DDLRegistration(0x96608c54u)]
+	[DDLRegistration(0x40252365u)]
 	public List<RivetAssetId> AimTargets { get; set; } = [];
 
-	[DDLRegistration(0x96608c54u)]
+	[DDLRegistration(0x887f7c8fu)]
 	public float AimDurationMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0x96608c54u)]
+	[DDLRegistration(0xb47243d6u)]
 	public float AimDurationMax { get; set; } = 3.00f;
 
 	public static AnimClueSpotlightPrius Create(DDLObject ddl) => new(ddl);

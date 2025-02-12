@@ -24,25 +24,25 @@ public class BattleBrewScalePrius : BattleBrewBasePrius, IDDLObjectType<BattleBr
 		Trampoline = ddl.GetObject<TrampolinePrius>(0x0f7bf349u);
 	}
 
-	[DDLRegistration(0x4c1e9a42u, description: "This is the actor that will be spawned (invisible) on top of the enemy when it is shrunk, so that the player can bounce off of them.")]
+	[DDLRegistration(0x5d9a96efu, description: "This is the actor that will be spawned (invisible) on top of the enemy when it is shrunk, so that the player can bounce off of them.")]
 	public RivetAssetId TrampolineActor { get; set; } = default;
 
-	[DDLRegistration(0x4c1e9a42u, description: "The desired scale the enemy will scale to and stay at while this brew is active.")]
+	[DDLRegistration(0x2e318123u, description: "The desired scale the enemy will scale to and stay at while this brew is active.")]
 	public float EnemyScale { get; set; } = 0.50f;
 
-	[DDLRegistration(0x4c1e9a42u, description: "The animation to play when the enemy begins shrinking. ")]
+	[DDLRegistration(0xa6a58654u, description: "The animation to play when the enemy begins shrinking. ")]
 	public string? ScaleReactAnimDriver { get; set; } = "React_Knockback";
 
-	[DDLRegistration(0x4c1e9a42u, description: "The knockback reaction enemies should use when they are jumped on. ")]
+	[DDLRegistration(0xed968220u, description: "The knockback reaction enemies should use when they are jumped on. ")]
 	public KnockbackLevels ShrunkJumpedOnKnockback { get; set; } = KnockbackLevels.Three;
 
-	[DDLRegistration(0x4c1e9a42u)]
+	[DDLRegistration(0x0fd58369u)]
 	public DamageModifierIncomingBattleBrewScalePrius? IncomingDamageModifier { get; set; } = default;
 
-	[DDLRegistration(0x4c1e9a42u)]
+	[DDLRegistration(0x65db3b20u)]
 	public DamageModifierOutgoingBattleBrewScalePrius? OutgoingDamageModifier { get; set; } = default;
 
-	[DDLRegistration(0x4c1e9a42u, description: "When scaled, the enemy will have a look enabled that will allow players to jump on their head and bounce off. This is the data for the invisible platform on their head.")]
+	[DDLRegistration(0x0f7bf349u, description: "When scaled, the enemy will have a look enabled that will allow players to jump on their head and bounce off. This is the data for the invisible platform on their head.")]
 	public TrampolinePrius? Trampoline { get; set; } = default;
 
 	public new static BattleBrewScalePrius Create(DDLObject ddl) => new(ddl);

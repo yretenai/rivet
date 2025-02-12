@@ -19,10 +19,10 @@ public class NavigationProperties : DDLObjectType, IDDLObjectType<NavigationProp
 		WalkableArea = ddl.GetValue<bool>(0x1450a354u, WalkableArea);
 	}
 
-	[DDLRegistration(0x4132849fu, "Skip Nav Generation")]
+	[DDLRegistration(0x97a5242eu, "Skip Nav Generation")]
 	public bool SkipNavGeneration { get; set; } = false;
 
-	[DDLRegistration(0x4132849fu, "Walkable Area")]
+	[DDLRegistration(0x1450a354u, "Walkable Area")]
 	public bool WalkableArea { get; set; } = true;
 
 	public static NavigationProperties Create(DDLObject ddl) => new(ddl);

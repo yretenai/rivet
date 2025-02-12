@@ -21,16 +21,16 @@ public class NodeGraphFocusData : DDLObjectType, IDDLObjectType<NodeGraphFocusDa
 		ShowNode = ddl.GetValue<bool>(0xb3fcefdfu, ShowNode);
 	}
 
-	[DDLRegistration(0xb6235d2au)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xb6235d2au)]
+	[DDLRegistration(0x76b05713u)]
 	public RivetAssetId GraphId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb6235d2au)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb6235d2au)]
+	[DDLRegistration(0xb3fcefdfu)]
 	public bool ShowNode { get; set; } = true;
 
 	public static NodeGraphFocusData Create(DDLObject ddl) => new(ddl);

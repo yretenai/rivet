@@ -18,7 +18,7 @@ public class HoverbootStartEvent : EventBase, IDDLObjectType<HoverbootStartEvent
 		IsForHoverbootState = ddl.GetValue<bool>(0x491fe4e4u, IsForHoverbootState);
 	}
 
-	[DDLRegistration(0x74875a55u)]
+	[DDLRegistration(0x491fe4e4u)]
 	public bool IsForHoverbootState { get; set; } = false;
 
 	public new static HoverbootStartEvent Create(DDLObject ddl) => new(ddl);

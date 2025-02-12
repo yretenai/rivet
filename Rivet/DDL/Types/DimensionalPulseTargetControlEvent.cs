@@ -18,7 +18,7 @@ public class DimensionalPulseTargetControlEvent : EventBase, IDDLObjectType<Dime
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0xf1ccd1beu)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
 	public new static DimensionalPulseTargetControlEvent Create(DDLObject ddl) => new(ddl);

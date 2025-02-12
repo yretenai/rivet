@@ -19,10 +19,10 @@ public class IntrospectionAssetEntry : DDLObjectType, IDDLObjectType<Introspecti
 		Language = ddl.GetEnum<x0572515d>(0x2edaccc5u, x0572515dValues.Lookup);
 	}
 
-	[DDLRegistration(0xc747e1e8u)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc747e1e8u)]
+	[DDLRegistration(0x2edaccc5u)]
 	public x0572515d Language { get; set; } = x0572515d.LanguageNone;
 
 	public static IntrospectionAssetEntry Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class TimeScaleCancelEvent : EventBase, IDDLObjectType<TimeScaleCancelEve
 		Channel = ddl.GetEnum<xd4d128f9>(0xa313ed7fu, xd4d128f9Values.Lookup);
 	}
 
-	[DDLRegistration(0x298310ecu)]
+	[DDLRegistration(0xa313ed7fu)]
 	public xd4d128f9 Channel { get; set; } = xd4d128f9.HeroMelee;
 
 	public new static TimeScaleCancelEvent Create(DDLObject ddl) => new(ddl);

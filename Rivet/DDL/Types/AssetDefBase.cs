@@ -19,10 +19,10 @@ public class AssetDefBase : DDLObjectType, IDDLObjectType<AssetDefBase> {
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
 	}
 
-	[DDLRegistration(0xf0314c4du)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xf0314c4du)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
 	public static AssetDefBase Create(DDLObject ddl) => new(ddl);

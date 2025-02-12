@@ -18,7 +18,7 @@ public class CapturableProgressChangedEvent : EventBase, IDDLObjectType<Capturab
 		CaptureProgress = ddl.GetValue<float>(0xde797426u, CaptureProgress);
 	}
 
-	[DDLRegistration(0x7dc107beu)]
+	[DDLRegistration(0xde797426u)]
 	public float CaptureProgress { get; set; } = 0.00f;
 
 	public new static CapturableProgressChangedEvent Create(DDLObject ddl) => new(ddl);

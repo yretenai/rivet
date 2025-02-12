@@ -18,7 +18,7 @@ public class PhotomodeCameraFreeMovePrius : PhotomodeCameraBasePrius, IDDLObject
 		CamData = ddl.GetObject<FreeMoveCamData>(0xa857067cu);
 	}
 
-	[DDLRegistration(0x095dc8ddu)]
+	[DDLRegistration(0xa857067cu)]
 	public FreeMoveCamData? CamData { get; set; } = default;
 
 	public new static PhotomodeCameraFreeMovePrius Create(DDLObject ddl) => new(ddl);

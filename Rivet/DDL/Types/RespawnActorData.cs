@@ -22,19 +22,19 @@ public class RespawnActorData : ActorSpawnData, IDDLObjectType<RespawnActorData>
 		ActorIndex = ddl.GetValue<int>(0xf7e954d4u, ActorIndex);
 	}
 
-	[DDLRegistration(0xda69ad0cu)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xda69ad0cu)]
+	[DDLRegistration(0xf54f1ea1u)]
 	public DDLTransform? Transform { get; set; } = default;
 
-	[DDLRegistration(0xda69ad0cu)]
+	[DDLRegistration(0x6151ad8fu)]
 	public uint OwnerHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xda69ad0cu)]
+	[DDLRegistration(0xeefb3d57u)]
 	public int GroupIndex { get; set; } = 0;
 
-	[DDLRegistration(0xda69ad0cu)]
+	[DDLRegistration(0xf7e954d4u)]
 	public int ActorIndex { get; set; } = 0;
 
 	public new static RespawnActorData Create(DDLObject ddl) => new(ddl);

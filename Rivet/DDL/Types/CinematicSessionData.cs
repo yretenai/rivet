@@ -21,16 +21,16 @@ public class CinematicSessionData : DDLObjectType, IDDLObjectType<CinematicSessi
 		DebugFlags = ddl.GetBitset<xac616886>(0xc3cda8a5u, xac616886Values.Lookup);
 	}
 
-	[DDLRegistration(0x5a4ff6a6u)]
+	[DDLRegistration(0x5219e2c5u)]
 	public bool FreeCam { get; set; } = false;
 
-	[DDLRegistration(0x5a4ff6a6u)]
+	[DDLRegistration(0x71399ab8u)]
 	public int CameraFilterIndex { get; set; } = -1;
 
-	[DDLRegistration(0x5a4ff6a6u)]
+	[DDLRegistration(0x4260c5fau)]
 	public int CameraMaxFilters { get; set; } = 0;
 
-	[DDLRegistration(0x5a4ff6a6u)]
+	[DDLRegistration(0xc3cda8a5u)]
 	public xac616886 DebugFlags { get; set; } = (xac616886) 0x00000000;
 
 	public static CinematicSessionData Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class AnimVisDumpJointTransformDef : DDLObjectType, IDDLObjectType<AnimVi
 		V2 = ddl.GetValues<float>(0x50879470u);
 	}
 
-	[DDLRegistration(0x012ed1a1u)]
+	[DDLRegistration(0xbe89f55cu)]
 	public List<float> V0 { get; set; } = [];
 
-	[DDLRegistration(0x012ed1a1u)]
+	[DDLRegistration(0xc98ec5cau)]
 	public List<float> V1 { get; set; } = [];
 
-	[DDLRegistration(0x012ed1a1u)]
+	[DDLRegistration(0x50879470u)]
 	public List<float> V2 { get; set; } = [];
 
 	public static AnimVisDumpJointTransformDef Create(DDLObject ddl) => new(ddl);

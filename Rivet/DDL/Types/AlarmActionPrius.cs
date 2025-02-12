@@ -19,10 +19,10 @@ public class AlarmActionPrius : DDLObjectType, IDDLObjectType<AlarmActionPrius> 
 		AlarmDuration = ddl.GetValue<float>(0x1af1c114u, AlarmDuration);
 	}
 
-	[DDLRegistration(0x654c7287u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x654c7287u, description: "Alarm Duration. Negative means infinity")]
+	[DDLRegistration(0x1af1c114u, description: "Alarm Duration. Negative means infinity")]
 	public float AlarmDuration { get; set; } = -1.00f;
 
 	public static AlarmActionPrius Create(DDLObject ddl) => new(ddl);

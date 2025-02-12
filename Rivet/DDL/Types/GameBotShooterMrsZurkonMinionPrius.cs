@@ -18,7 +18,7 @@ public class GameBotShooterMrsZurkonMinionPrius : GameBotShooterJetPackPrius, ID
 		ShieldActor = ddl.GetValue<RivetAssetId>(0xb785ec5cu, ShieldActor);
 	}
 
-	[DDLRegistration(0x8ac96200u)]
+	[DDLRegistration(0xb785ec5cu)]
 	public RivetAssetId ShieldActor { get; set; } = default;
 
 	public new static GameBotShooterMrsZurkonMinionPrius Create(DDLObject ddl) => new(ddl);

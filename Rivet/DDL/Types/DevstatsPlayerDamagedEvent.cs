@@ -23,22 +23,22 @@ public class DevstatsPlayerDamagedEvent : EventBase, IDDLObjectType<DevstatsPlay
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x75de590au)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x75de590au)]
+	[DDLRegistration(0x8710eb41u)]
 	public uint DamageSource { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x75de590au)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x75de590au)]
+	[DDLRegistration(0x39251668u)]
 	public float NewHealth { get; set; } = 0.00f;
 
-	[DDLRegistration(0x75de590au)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x75de590au)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static DevstatsPlayerDamagedEvent Create(DDLObject ddl) => new(ddl);

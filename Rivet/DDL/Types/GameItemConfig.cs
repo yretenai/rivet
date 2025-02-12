@@ -18,7 +18,7 @@ public class GameItemConfig : ItemConfig, IDDLObjectType<GameItemConfig> {
 		GameItemData = ddl.GetObject<GameItemData>(0x7ccdfa11u);
 	}
 
-	[DDLRegistration(0xf1864f6du)]
+	[DDLRegistration(0x7ccdfa11u)]
 	public GameItemData? GameItemData { get; set; } = default;
 
 	public new static GameItemConfig Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ProjectileHitMarkerPrius : DDLObjectType, IDDLObjectType<Projectile
 		AppearTime = ddl.GetValue<float>(0x2dbcef31u, AppearTime);
 	}
 
-	[DDLRegistration(0xc6fbee51u)]
+	[DDLRegistration(0x9aa85a83u)]
 	public bool SnapToGround { get; set; } = false;
 
-	[DDLRegistration(0xc6fbee51u)]
+	[DDLRegistration(0x2dbcef31u)]
 	public float AppearTime { get; set; } = 0.00f;
 
 	public static ProjectileHitMarkerPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class CameraClipDef : DDLObjectType, IDDLObjectType<CameraClipDef> {
 		Far = ddl.GetValue<float>(0x5ba30dbfu, Far);
 	}
 
-	[DDLRegistration(0x6059066bu)]
+	[DDLRegistration(0x46dcdca1u)]
 	public float Near { get; set; } = 0.10f;
 
-	[DDLRegistration(0x6059066bu)]
+	[DDLRegistration(0x5ba30dbfu)]
 	public float Far { get; set; } = 1000.00f;
 
 	public static CameraClipDef Create(DDLObject ddl) => new(ddl);

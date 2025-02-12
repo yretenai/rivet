@@ -19,10 +19,10 @@ public class OnUnPoweredEvent : EventBase, IDDLObjectType<OnUnPoweredEvent> {
 		Receptor = ddl.GetValue<uint>(0x13c31517u, Receptor);
 	}
 
-	[DDLRegistration(0x870d7c05u, description: "Handle of actor powering receptor.")]
+	[DDLRegistration(0x42cf1de2u, description: "Handle of actor powering receptor.")]
 	public uint ClankBot { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x870d7c05u, description: "Handle of actor receiving damage.")]
+	[DDLRegistration(0x13c31517u, description: "Handle of actor receiving damage.")]
 	public uint Receptor { get; set; } = 0x00000000;
 
 	public new static OnUnPoweredEvent Create(DDLObject ddl) => new(ddl);

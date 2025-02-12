@@ -20,13 +20,13 @@ public class GameHeroSingleSpawnPointPrius : HeroSingleSpawnPointPrius, IDDLObje
 		SuppressObjective = ddl.GetValue<bool>(0x3363f9d8u, SuppressObjective);
 	}
 
-	[DDLRegistration(0x48d69b0cu, description: "Orient the spawned player's gravity to point along the spawn point's negative-y")]
+	[DDLRegistration(0x4498a5d4u, description: "Orient the spawned player's gravity to point along the spawn point's negative-y")]
 	public bool OrientGravityToUp { get; set; } = false;
 
-	[DDLRegistration(0x48d69b0cu, description: "Is this checkpoint saved in the save file?")]
+	[DDLRegistration(0x3bf1cc03u, description: "Is this checkpoint saved in the save file?")]
 	public bool SavedCheckpoint { get; set; } = true;
 
-	[DDLRegistration(0x48d69b0cu, description: "Suppress updating the display of the current objective")]
+	[DDLRegistration(0x3363f9d8u, description: "Suppress updating the display of the current objective")]
 	public bool SuppressObjective { get; set; } = false;
 
 	public new static GameHeroSingleSpawnPointPrius Create(DDLObject ddl) => new(ddl);

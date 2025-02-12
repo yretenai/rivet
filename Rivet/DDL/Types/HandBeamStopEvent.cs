@@ -18,7 +18,7 @@ public class HandBeamStopEvent : EventBase, IDDLObjectType<HandBeamStopEvent> {
 		Is_Right_Hand = ddl.GetValue<bool>(0xa24be18du, Is_Right_Hand);
 	}
 
-	[DDLRegistration(0x491f7533u)]
+	[DDLRegistration(0xa24be18du)]
 	public bool Is_Right_Hand { get; set; } = true;
 
 	public new static HandBeamStopEvent Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class GenericChunk : DDLObjectType, IDDLObjectType<GenericChunk> {
 		UsesAudioConduit = ddl.GetValue<bool>(0xba330feeu, UsesAudioConduit);
 	}
 
-	[DDLRegistration(0xf016fa22u, "Chunk Model")]
+	[DDLRegistration(0x68ab5795u, "Chunk Model")]
 	public RivetAssetId ChunkModel { get; set; } = default;
 
-	[DDLRegistration(0xf016fa22u, "Trigger Spawn Event", "If true this chunk will trigger a ChunkSpawnedEvent when it is created")]
+	[DDLRegistration(0xee6cfc7eu, "Trigger Spawn Event", "If true this chunk will trigger a ChunkSpawnedEvent when it is created")]
 	public bool TriggerSpawnEvent { get; set; } = true;
 
-	[DDLRegistration(0xf016fa22u, "Uses FX Conduit")]
+	[DDLRegistration(0x7cde1af8u, "Uses FX Conduit")]
 	public bool UsesFXConduit { get; set; } = false;
 
-	[DDLRegistration(0xf016fa22u, "Uses Audio Conduit")]
+	[DDLRegistration(0xba330feeu, "Uses Audio Conduit")]
 	public bool UsesAudioConduit { get; set; } = false;
 
 	public static GenericChunk Create(DDLObject ddl) => new(ddl);

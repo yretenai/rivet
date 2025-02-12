@@ -18,7 +18,7 @@ public class DamageModifierExplosionTargetTypePrius : DDLObjectType, IDDLObjectT
 		Damages = ddl.GetObjects<TargetTypeDamage>(0x5ef14914u);
 	}
 
-	[DDLRegistration(0x051a56c1u)]
+	[DDLRegistration(0x5ef14914u)]
 	public List<TargetTypeDamage?> Damages { get; set; } = [];
 
 	public static DamageModifierExplosionTargetTypePrius Create(DDLObject ddl) => new(ddl);

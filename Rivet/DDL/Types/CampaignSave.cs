@@ -23,22 +23,22 @@ public class CampaignSave : DDLObjectType, IDDLObjectType<CampaignSave> {
 		PlaythroughSegmentId = ddl.GetValue<uint>(0x591f4379u, PlaythroughSegmentId);
 	}
 
-	[DDLRegistration(0x47fb50dbu)]
+	[DDLRegistration(0x0a33c2eau)]
 	public int CurrentLevel { get; set; } = -1;
 
-	[DDLRegistration(0x47fb50dbu)]
+	[DDLRegistration(0x9fc0c119u)]
 	public uint CurrentCheckpoint { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x47fb50dbu)]
+	[DDLRegistration(0x1c0795f3u)]
 	public ulong CurrentCheckpointId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x47fb50dbu)]
+	[DDLRegistration(0xffd52ac4u)]
 	public LightingModeGame CurrentLightingMode { get; set; } = LightingModeGame.Day;
 
-	[DDLRegistration(0x47fb50dbu)]
+	[DDLRegistration(0x4098e60eu)]
 	public bool CurrentLightingModeValid { get; set; } = false;
 
-	[DDLRegistration(0x47fb50dbu)]
+	[DDLRegistration(0x591f4379u)]
 	public uint PlaythroughSegmentId { get; set; } = 0x00000000;
 
 	public static CampaignSave Create(DDLObject ddl) => new(ddl);

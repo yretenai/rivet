@@ -19,10 +19,10 @@ public class ItemElement : DDLObjectType, IDDLObjectType<ItemElement> {
 		DropWeight = ddl.GetValue<float>(0x6ae5eafeu, DropWeight);
 	}
 
-	[DDLRegistration(0x7ceba432u)]
+	[DDLRegistration(0xa88f833fu)]
 	public RivetAssetId ItemConfig { get; set; } = default;
 
-	[DDLRegistration(0x7ceba432u, "DropChance")]
+	[DDLRegistration(0x6ae5eafeu, "DropChance")]
 	public float DropWeight { get; set; } = 1.00f;
 
 	public static ItemElement Create(DDLObject ddl) => new(ddl);

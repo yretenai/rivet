@@ -21,16 +21,16 @@ public class BlizonShiftCrystalPrius : DDLObjectType, IDDLObjectType<BlizonShift
 		AllowMeleeThrowTrigger = ddl.GetValue<bool>(0x241dc13au, AllowMeleeThrowTrigger);
 	}
 
-	[DDLRegistration(0x817ff3b3u)]
+	[DDLRegistration(0x72d3512cu)]
 	public string? CheckpointA { get; set; } = default;
 
-	[DDLRegistration(0x817ff3b3u)]
+	[DDLRegistration(0xebda0096u)]
 	public string? CheckpointB { get; set; } = default;
 
-	[DDLRegistration(0x817ff3b3u)]
+	[DDLRegistration(0xae10fe0fu)]
 	public x2bbd4e7a VisibilityMode { get; set; } = x2bbd4e7a.EitherCheckpoint;
 
-	[DDLRegistration(0x817ff3b3u)]
+	[DDLRegistration(0x241dc13au)]
 	public bool AllowMeleeThrowTrigger { get; set; } = false;
 
 	public static BlizonShiftCrystalPrius Create(DDLObject ddl) => new(ddl);

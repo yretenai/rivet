@@ -18,7 +18,7 @@ public class TargetCheckDistancePrius : TargetCheckBasePrius, IDDLObjectType<Tar
 		Distance = ddl.GetValue<float>(0xe69327f1u, Distance);
 	}
 
-	[DDLRegistration(0x54c3522au)]
+	[DDLRegistration(0xe69327f1u)]
 	public float Distance { get; set; } = 0.00f;
 
 	public new static TargetCheckDistancePrius Create(DDLObject ddl) => new(ddl);

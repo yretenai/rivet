@@ -20,13 +20,13 @@ public class HeroMeleeSmashConfig : DDLObjectType, IDDLObjectType<HeroMeleeSmash
 		MeleeSmashCameraShakeConfig = ddl.GetValue<RivetAssetId>(0xab2b42b0u, MeleeSmashCameraShakeConfig);
 	}
 
-	[DDLRegistration(0x93fafa11u)]
+	[DDLRegistration(0xbade2cbfu)]
 	public float MeleeSmashMinHeight { get; set; } = 3.00f;
 
-	[DDLRegistration(0x93fafa11u)]
+	[DDLRegistration(0x2860974bu)]
 	public float MeleeSmashDescendGravity { get; set; } = 200.00f;
 
-	[DDLRegistration(0x93fafa11u)]
+	[DDLRegistration(0xab2b42b0u)]
 	public RivetAssetId MeleeSmashCameraShakeConfig { get; set; } = default;
 
 	public static HeroMeleeSmashConfig Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class PauseMapElementPrius : DDLObjectType, IDDLObjectType<PauseMapElemen
 		OverridePosition = ddl.GetObject<DDLVector3>(0x1b00f200u);
 	}
 
-	[DDLRegistration(0x012ee6b9u, "Map Element Type")]
+	[DDLRegistration(0xbc4e9799u, "Map Element Type")]
 	public PauseMapElementType Type { get; set; } = PauseMapElementType.Objective;
 
-	[DDLRegistration(0x012ee6b9u, "Hide this instance on the map?")]
+	[DDLRegistration(0x94090b9bu, "Hide this instance on the map?")]
 	public bool Hide { get; set; } = false;
 
-	[DDLRegistration(0x012ee6b9u, "Rotate icon using Actor face direction?")]
+	[DDLRegistration(0x009e0eb9u, "Rotate icon using Actor face direction?")]
 	public bool ShowRotation { get; set; } = false;
 
-	[DDLRegistration(0x012ee6b9u, "Always show, even in fog-of-war?")]
+	[DDLRegistration(0x71b2433du, "Always show, even in fog-of-war?")]
 	public bool AlwaysVisible { get; set; } = false;
 
-	[DDLRegistration(0x012ee6b9u)]
+	[DDLRegistration(0x1b00f200u)]
 	public DDLVector3? OverridePosition { get; set; } = default;
 
 	public static PauseMapElementPrius Create(DDLObject ddl) => new(ddl);

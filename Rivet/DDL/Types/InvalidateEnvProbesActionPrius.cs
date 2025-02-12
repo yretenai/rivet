@@ -19,10 +19,10 @@ public class InvalidateEnvProbesActionPrius : DDLObjectType, IDDLObjectType<Inva
 		EnvProbeZone = ddl.GetValue<RivetAssetId>(0x25f5a0c8u, EnvProbeZone);
 	}
 
-	[DDLRegistration(0x40d37971u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0x40d37971u)]
+	[DDLRegistration(0x25f5a0c8u)]
 	public RivetAssetId EnvProbeZone { get; set; } = default;
 
 	public static InvalidateEnvProbesActionPrius Create(DDLObject ddl) => new(ddl);

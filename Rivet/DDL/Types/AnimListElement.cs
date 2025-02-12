@@ -24,25 +24,25 @@ public class AnimListElement : DDLObjectType, IDDLObjectType<AnimListElement> {
 		OverrideAnimNotInMap = ddl.GetValue<bool>(0xe5039e96u, OverrideAnimNotInMap);
 	}
 
-	[DDLRegistration(0x542556abu)]
+	[DDLRegistration(0x5052469bu)]
 	public string? AnimationName { get; set; } = default;
 
-	[DDLRegistration(0x542556abu)]
+	[DDLRegistration(0x98a76157u)]
 	public uint Priority { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x542556abu, description: "Play animation once per lifetime.")]
+	[DDLRegistration(0xba3988abu, description: "Play animation once per lifetime.")]
 	public bool PlayOnce { get; set; } = false;
 
-	[DDLRegistration(0x542556abu)]
+	[DDLRegistration(0xca9dd718u)]
 	public bool OverrideAlways { get; set; } = false;
 
-	[DDLRegistration(0x542556abu, "Override by priority", "Allow animations to override any animation of equal or lesser priority that is currently playing")]
+	[DDLRegistration(0x48ac47d7u, "Override by priority", "Allow animations to override any animation of equal or lesser priority that is currently playing")]
 	public bool OverrideByPriority { get; set; } = true;
 
-	[DDLRegistration(0x542556abu)]
+	[DDLRegistration(0x3475e87eu)]
 	public bool OverrideSameAnim { get; set; } = true;
 
-	[DDLRegistration(0x542556abu, description: "Override animations trigger from outside this prius")]
+	[DDLRegistration(0xe5039e96u, description: "Override animations trigger from outside this prius")]
 	public bool OverrideAnimNotInMap { get; set; } = false;
 
 	public static AnimListElement Create(DDLObject ddl) => new(ddl);

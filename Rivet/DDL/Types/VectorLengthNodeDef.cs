@@ -19,10 +19,10 @@ public class VectorLengthNodeDef : MathNodeBaseDef, IDDLObjectType<VectorLengthN
 		Length = ddl.GetObject<OutputPlugFloat>(0x3f05d0d5u);
 	}
 
-	[DDLRegistration(0xd3c39404u)]
+	[DDLRegistration(0x49594b39u)]
 	public InputPlugVec3? Vec { get; set; } = default;
 
-	[DDLRegistration(0xd3c39404u)]
+	[DDLRegistration(0x3f05d0d5u)]
 	public OutputPlugFloat? Length { get; set; } = default;
 
 	public new static VectorLengthNodeDef Create(DDLObject ddl) => new(ddl);

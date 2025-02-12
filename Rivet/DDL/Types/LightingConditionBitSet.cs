@@ -22,19 +22,19 @@ public class LightingConditionBitSet : DDLObjectType, IDDLObjectType<LightingCon
 		Blackout = ddl.GetValue<bool>(0xf64df6a5u, Blackout);
 	}
 
-	[DDLRegistration(0x5fea3405u, "Day")]
+	[DDLRegistration(0xcff50059u, "Day")]
 	public bool Day { get; set; } = true;
 
-	[DDLRegistration(0x5fea3405u, "Overcast")]
+	[DDLRegistration(0xf1877eb3u, "Overcast")]
 	public bool Overcast { get; set; } = true;
 
-	[DDLRegistration(0x5fea3405u, "Sunset")]
+	[DDLRegistration(0xf19283eau, "Sunset")]
 	public bool Sunset { get; set; } = true;
 
-	[DDLRegistration(0x5fea3405u, "Night")]
+	[DDLRegistration(0x0889c356u, "Night")]
 	public bool Night { get; set; } = true;
 
-	[DDLRegistration(0x5fea3405u, "Blackout")]
+	[DDLRegistration(0xf64df6a5u, "Blackout")]
 	public bool Blackout { get; set; } = true;
 
 	public static LightingConditionBitSet Create(DDLObject ddl) => new(ddl);

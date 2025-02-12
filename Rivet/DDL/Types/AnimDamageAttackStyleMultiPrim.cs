@@ -30,43 +30,43 @@ public class AnimDamageAttackStyleMultiPrim : AnimDamageAttackStyleBase, IDDLObj
 		CustomDamageEntries = ddl.GetObjects<CustomDamageContainer>(0x0d53b4d9u);
 	}
 
-	[DDLRegistration(0xc08dd2f1u, description: "If true, use a DamagePrimConfig asset for the prims instead of the prims list.")]
+	[DDLRegistration(0xc5e172b9u, description: "If true, use a DamagePrimConfig asset for the prims instead of the prims list.")]
 	public bool UsePrimConfig { get; set; } = false;
 
-	[DDLRegistration(0xc08dd2f1u)]
+	[DDLRegistration(0xb9cc76c7u)]
 	public List<DamagePrimContainer?> Prims { get; set; } = [];
 
-	[DDLRegistration(0xc08dd2f1u)]
+	[DDLRegistration(0x578145d8u)]
 	public RivetAssetId PrimConfig { get; set; } = default;
 
-	[DDLRegistration(0xc08dd2f1u, "Damage Type")]
+	[DDLRegistration(0x840c154du, "Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Melee;
 
-	[DDLRegistration(0xc08dd2f1u, "Damage Amount")]
+	[DDLRegistration(0x563be470u, "Damage Amount")]
 	public float DamageAmount { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc08dd2f1u, "Status Amount")]
+	[DDLRegistration(0x37e1f098u, "Status Amount")]
 	public float StatusAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc08dd2f1u)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0xc08dd2f1u, "Knockback Amount")]
+	[DDLRegistration(0x7b1e600bu, "Knockback Amount")]
 	public float KnockbackAmount { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc08dd2f1u, "Knockback Force")]
+	[DDLRegistration(0x28d6ed59u, "Knockback Force")]
 	public float KnockbackForce { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc08dd2f1u, "Duration Override")]
+	[DDLRegistration(0x0bb3cda6u, "Duration Override")]
 	public float DurationOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc08dd2f1u, "Hit Pause Time")]
+	[DDLRegistration(0xa0fb18acu, "Hit Pause Time")]
 	public float HitPauseTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc08dd2f1u)]
+	[DDLRegistration(0x2bc801dfu)]
 	public DamageRequestFlags RequestFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
-	[DDLRegistration(0xc08dd2f1u)]
+	[DDLRegistration(0x0d53b4d9u)]
 	public List<CustomDamageContainer?> CustomDamageEntries { get; set; } = [];
 
 	public new static AnimDamageAttackStyleMultiPrim Create(DDLObject ddl) => new(ddl);

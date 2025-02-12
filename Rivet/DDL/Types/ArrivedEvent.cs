@@ -18,7 +18,7 @@ public class ArrivedEvent : EventBase, IDDLObjectType<ArrivedEvent> {
 		Destination = ddl.GetObject<DDLTransform>(0xb31a6f71u);
 	}
 
-	[DDLRegistration(0xb3073347u)]
+	[DDLRegistration(0xb31a6f71u)]
 	public DDLTransform? Destination { get; set; } = default;
 
 	public new static ArrivedEvent Create(DDLObject ddl) => new(ddl);

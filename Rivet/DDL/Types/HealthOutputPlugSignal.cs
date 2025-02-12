@@ -21,16 +21,16 @@ public class HealthOutputPlugSignal : DDLObjectType, IDDLObjectType<HealthOutput
 		HealthPercentage = ddl.GetValue<float>(0xe144b2a1u, HealthPercentage);
 	}
 
-	[DDLRegistration(0x456a88dau)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x456a88dau)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x577f103e Type { get; set; } = x577f103e.Invalid;
 
-	[DDLRegistration(0x456a88dau)]
+	[DDLRegistration(0x042494f5u)]
 	public SignalPlug? Value { get; set; } = default;
 
-	[DDLRegistration(0x456a88dau)]
+	[DDLRegistration(0xe144b2a1u)]
 	public float HealthPercentage { get; set; } = 0.00f;
 
 	public static HealthOutputPlugSignal Create(DDLObject ddl) => new(ddl);

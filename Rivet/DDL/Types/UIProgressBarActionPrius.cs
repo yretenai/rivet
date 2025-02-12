@@ -23,22 +23,22 @@ public class UIProgressBarActionPrius : DDLObjectType, IDDLObjectType<UIProgress
 		EndPercent = ddl.GetValue<float>(0xfc156bd7u, EndPercent);
 	}
 
-	[DDLRegistration(0x6b06581au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x6b06581au, description: "Progress bar type")]
+	[DDLRegistration(0xcdbda9d1u, description: "Progress bar type")]
 	public x8a20ee54 BarType { get; set; } = x8a20ee54.Generic;
 
-	[DDLRegistration(0x6b06581au, description: "Show friendly version of boss bar?")]
+	[DDLRegistration(0x6e871bcbu, description: "Show friendly version of boss bar?")]
 	public bool IsFriend { get; set; } = false;
 
-	[DDLRegistration(0x6b06581au, description: "Text to display on the UI.")]
+	[DDLRegistration(0x0b1b6777u, description: "Text to display on the UI.")]
 	public string? Text { get; set; } = "";
 
-	[DDLRegistration(0x6b06581au, description: "Initial Percent of Bar")]
+	[DDLRegistration(0x5e79f136u, description: "Initial Percent of Bar")]
 	public float StartPercent { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6b06581au, description: "Final Percent of Bar")]
+	[DDLRegistration(0xfc156bd7u, description: "Final Percent of Bar")]
 	public float EndPercent { get; set; } = 0.00f;
 
 	public static UIProgressBarActionPrius Create(DDLObject ddl) => new(ddl);

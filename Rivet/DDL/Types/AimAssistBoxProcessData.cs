@@ -18,7 +18,7 @@ public class AimAssistBoxProcessData : AimAssistCurveData, IDDLObjectType<AimAss
 		BoxSlideFactor = ddl.GetValue<float>(0xe9abd634u, BoxSlideFactor);
 	}
 
-	[DDLRegistration(0x0e1722c0u, "Slide Factor", "How much the Aim Assist Box around a target should slide towards the reticule as the reticule approaches the target.  Helps catch the player's reticule before reaching the target to improve feel/responsiveness.")]
+	[DDLRegistration(0xe9abd634u, "Slide Factor", "How much the Aim Assist Box around a target should slide towards the reticule as the reticule approaches the target.  Helps catch the player's reticule before reaching the target to improve feel/responsiveness.")]
 	public float BoxSlideFactor { get; set; } = 0.50f;
 
 	public new static AimAssistBoxProcessData Create(DDLObject ddl) => new(ddl);

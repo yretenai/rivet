@@ -20,13 +20,13 @@ public class KeyFrame : DDLObjectType, IDDLObjectType<KeyFrame> {
 		Position = ddl.GetValue<float>(0xbc2d5985u, Position);
 	}
 
-	[DDLRegistration(0x551a056bu)]
+	[DDLRegistration(0x39caded9u)]
 	public KeyFrameValuePair? Pair { get; set; } = default;
 
-	[DDLRegistration(0x551a056bu)]
+	[DDLRegistration(0x660fc875u)]
 	public RangeStyle RangeStyle { get; set; } = RangeStyle.Random;
 
-	[DDLRegistration(0x551a056bu)]
+	[DDLRegistration(0xbc2d5985u)]
 	public float Position { get; set; } = 0.00f;
 
 	public static KeyFrame Create(DDLObject ddl) => new(ddl);

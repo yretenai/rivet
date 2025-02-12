@@ -21,16 +21,16 @@ public class FlyerODShotSpawnData : ActorSpawnData, IDDLObjectType<FlyerODShotSp
 		Facing = ddl.GetObject<DDLVector3>(0xb37847eeu);
 	}
 
-	[DDLRegistration(0x50d3915fu, description: "The FlyerOD spawning a shot")]
+	[DDLRegistration(0xa2c9e54au, description: "The FlyerOD spawning a shot")]
 	public ulong FlyerOD { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x50d3915fu, description: "AssetID of the flyer shot")]
+	[DDLRegistration(0x8d89a81fu, description: "AssetID of the flyer shot")]
 	public RivetAssetId AssetID { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x50d3915fu)]
+	[DDLRegistration(0xaa8ccf65u)]
 	public DDLVector3? Pos { get; set; } = default;
 
-	[DDLRegistration(0x50d3915fu)]
+	[DDLRegistration(0xb37847eeu)]
 	public DDLVector3? Facing { get; set; } = default;
 
 	public new static FlyerODShotSpawnData Create(DDLObject ddl) => new(ddl);

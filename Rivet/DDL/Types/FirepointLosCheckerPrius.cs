@@ -18,7 +18,7 @@ public class FirepointLosCheckerPrius : LosCheckerPrius, IDDLObjectType<Firepoin
 		FPHandle = ddl.GetValue<uint>(0x8d9ca6deu, FPHandle);
 	}
 
-	[DDLRegistration(0xd7ec3fb3u)]
+	[DDLRegistration(0x8d9ca6deu)]
 	public uint FPHandle { get; set; } = 0x00000000;
 
 	public new static FirepointLosCheckerPrius Create(DDLObject ddl) => new(ddl);

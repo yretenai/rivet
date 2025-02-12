@@ -18,7 +18,7 @@ public class GlobalSaveTableSaveData : DDLObjectType, IDDLObjectType<GlobalSaveT
 		Table = ddl.GetDictionary<uint, float>(0xef7a4387, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetValue<float>(mapId));
 	}
 
-	[DDLRegistration(0x4f38bae1u)]
+	[DDLRegistration(0xef7a4387u)]
 	public Dictionary<uint, float> Table { get; set; } = [];
 
 	public static GlobalSaveTableSaveData Create(DDLObject ddl) => new(ddl);

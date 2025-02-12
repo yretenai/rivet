@@ -24,25 +24,25 @@ public class ClearVanityOverrideEvent : EventBase, IDDLObjectType<ClearVanityOve
 		ClearBoots = ddl.GetValue<bool>(0xcbb942ddu, ClearBoots);
 	}
 
-	[DDLRegistration(0x79a11348u, "Clear Helmet")]
+	[DDLRegistration(0x59301b0fu, "Clear Helmet")]
 	public bool ClearHelmet { get; set; } = true;
 
-	[DDLRegistration(0x79a11348u, "Clear Head")]
+	[DDLRegistration(0x39ef099bu, "Clear Head")]
 	public bool ClearHead { get; set; } = true;
 
-	[DDLRegistration(0x79a11348u, "Clear Torso")]
+	[DDLRegistration(0x6ba7da54u, "Clear Torso")]
 	public bool ClearTorso { get; set; } = true;
 
-	[DDLRegistration(0x79a11348u, "Clear Left Glove")]
+	[DDLRegistration(0x706c25edu, "Clear Left Glove")]
 	public bool ClearLeftGlove { get; set; } = true;
 
-	[DDLRegistration(0x79a11348u, "Clear Right Glove")]
+	[DDLRegistration(0x04c6cec9u, "Clear Right Glove")]
 	public bool ClearRightGlove { get; set; } = true;
 
-	[DDLRegistration(0x79a11348u, "Clear Legs")]
+	[DDLRegistration(0x6304bc8du, "Clear Legs")]
 	public bool ClearLegs { get; set; } = true;
 
-	[DDLRegistration(0x79a11348u, "Clear Boots")]
+	[DDLRegistration(0xcbb942ddu, "Clear Boots")]
 	public bool ClearBoots { get; set; } = true;
 
 	public new static ClearVanityOverrideEvent Create(DDLObject ddl) => new(ddl);

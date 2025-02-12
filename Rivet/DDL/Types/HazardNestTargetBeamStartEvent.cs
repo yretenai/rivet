@@ -18,7 +18,7 @@ public class HazardNestTargetBeamStartEvent : EventBase, IDDLObjectType<HazardNe
 		BeamDuration = ddl.GetValue<float>(0xd4b30240u, BeamDuration);
 	}
 
-	[DDLRegistration(0x2fb52ab7u)]
+	[DDLRegistration(0xd4b30240u)]
 	public float BeamDuration { get; set; } = 1.00f;
 
 	public new static HazardNestTargetBeamStartEvent Create(DDLObject ddl) => new(ddl);

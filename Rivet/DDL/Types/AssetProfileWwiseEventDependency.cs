@@ -19,10 +19,10 @@ public class AssetProfileWwiseEventDependency : DDLObjectType, IDDLObjectType<As
 		WwiseHash = ddl.GetValue<uint>(0xc42721c9u, WwiseHash);
 	}
 
-	[DDLRegistration(0xd3a9f9d9u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xd3a9f9d9u)]
+	[DDLRegistration(0xc42721c9u)]
 	public uint WwiseHash { get; set; } = 0x00000000;
 
 	public static AssetProfileWwiseEventDependency Create(DDLObject ddl) => new(ddl);

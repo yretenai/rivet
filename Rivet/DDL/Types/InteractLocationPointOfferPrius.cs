@@ -23,22 +23,22 @@ public class InteractLocationPointOfferPrius : HoldOfferPrius, IDDLObjectType<In
 		FixedPromptForward = ddl.GetObject<DDLVector3>(0x3f394095u);
 	}
 
-	[DDLRegistration(0x6d5535dbu, "Circle Facing")]
+	[DDLRegistration(0x3ef87bc4u, "Circle Facing")]
 	public bool CircleFacing { get; set; } = false;
 
-	[DDLRegistration(0x6d5535dbu, "Validate CVC")]
+	[DDLRegistration(0x7609f2bfu, "Validate CVC")]
 	public bool ValidateCVC { get; set; } = true;
 
-	[DDLRegistration(0x6d5535dbu, "Check collision")]
+	[DDLRegistration(0x485a8ab7u, "Check collision")]
 	public bool CheckCollision { get; set; } = true;
 
-	[DDLRegistration(0x6d5535dbu, "Offer Box Min Width")]
+	[DDLRegistration(0x256cca88u, "Offer Box Min Width")]
 	public float OfferBoxMinWidth { get; set; } = -1.00f;
 
-	[DDLRegistration(0x6d5535dbu, "Use Box Offset")]
+	[DDLRegistration(0x9df09a52u, "Use Box Offset")]
 	public DDLVector3? UseBoxOffset { get; set; } = default;
 
-	[DDLRegistration(0x6d5535dbu)]
+	[DDLRegistration(0x3f394095u)]
 	public DDLVector3? FixedPromptForward { get; set; } = default;
 
 	public new static InteractLocationPointOfferPrius Create(DDLObject ddl) => new(ddl);

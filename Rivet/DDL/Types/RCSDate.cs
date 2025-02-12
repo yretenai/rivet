@@ -23,22 +23,22 @@ public class RCSDate : DDLObjectType, IDDLObjectType<RCSDate> {
 		Seconds = ddl.GetValue<byte>(0x2e3c6adeu, Seconds);
 	}
 
-	[DDLRegistration(0x3ae6f7c5u, description: "1-12 where 1 = January and 12 = December.")]
+	[DDLRegistration(0x97e5dcc7u, description: "1-12 where 1 = January and 12 = December.")]
 	public byte Month { get; set; } = 0x00;
 
-	[DDLRegistration(0x3ae6f7c5u)]
+	[DDLRegistration(0xcff50059u)]
 	public byte Day { get; set; } = 0x00;
 
-	[DDLRegistration(0x3ae6f7c5u)]
+	[DDLRegistration(0x8b12b387u)]
 	public byte Year { get; set; } = 0x00;
 
-	[DDLRegistration(0x3ae6f7c5u, description: "Military style, 24-hour clock.")]
+	[DDLRegistration(0x9349714cu, description: "Military style, 24-hour clock.")]
 	public byte Hours { get; set; } = 0x00;
 
-	[DDLRegistration(0x3ae6f7c5u)]
+	[DDLRegistration(0xa181299bu)]
 	public byte Minutes { get; set; } = 0x00;
 
-	[DDLRegistration(0x3ae6f7c5u)]
+	[DDLRegistration(0x2e3c6adeu)]
 	public byte Seconds { get; set; } = 0x00;
 
 	public static RCSDate Create(DDLObject ddl) => new(ddl);

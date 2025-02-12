@@ -20,13 +20,13 @@ public class LootDropConfig : ConfigBase, IDDLObjectType<LootDropConfig> {
 		CardPickups = ddl.GetObjects<CardPickup>(0x112e0323u);
 	}
 
-	[DDLRegistration(0xd636ee58u)]
+	[DDLRegistration(0x51fa022fu)]
 	public List<CashPickup?> CashPickups { get; set; } = [];
 
-	[DDLRegistration(0xd636ee58u)]
+	[DDLRegistration(0xb69a23fdu)]
 	public List<RaritaniumPickup?> RaritaniumPickups { get; set; } = [];
 
-	[DDLRegistration(0xd636ee58u)]
+	[DDLRegistration(0x112e0323u)]
 	public List<CardPickup?> CardPickups { get; set; } = [];
 
 	public new static LootDropConfig Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DamageModifierHeroOnlyPrius : DamageModifierIncomingPrius, IDDLObje
 		DisableKnockbacks = ddl.GetValue<bool>(0x463963c0u, DisableKnockbacks);
 	}
 
-	[DDLRegistration(0x65cef12au)]
+	[DDLRegistration(0x463963c0u)]
 	public bool DisableKnockbacks { get; set; } = false;
 
 	public new static DamageModifierHeroOnlyPrius Create(DDLObject ddl) => new(ddl);

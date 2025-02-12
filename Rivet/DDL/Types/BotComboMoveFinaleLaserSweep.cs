@@ -42,79 +42,79 @@ public class BotComboMoveFinaleLaserSweep : BotComboMove, IDDLObjectType<BotComb
 		ArmOutroBodyAnimLF = ddl.GetString(0xdd723716) ?? ArmOutroBodyAnimLF;
 	}
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0x0240dd6cu)]
 	public BotComboLaserShotType? LaserShotType { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u, "Laser Length")]
+	[DDLRegistration(0x2d4d4979u, "Laser Length")]
 	public float LaserMaxLength { get; set; } = 100.00f;
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0x7e9e8e66u)]
 	public RivetAssetId SpawnedShotConfig { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0xbef6b0d3u)]
 	public RivetAssetId CurveActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0x64ce791au)]
 	public List<FinaleLaserSweepConfig?> MultiLaserSweepData { get; set; } = [];
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0xfec29c86u)]
 	public RivetAssetId PortalActorAsset { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0x0f03001bu)]
 	public RivetAssetId WeaponActorAsset { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0x5c91d6a7u)]
 	public string? WeaponActorAimJoint { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0x40094dbdu)]
 	public string? WeaponActorEmitLocator { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0xf459bfe3u)]
 	public bool AttachCurveToTarget { get; set; } = false;
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0x0d3a1937u)]
 	public RivetAssetId AttachCurveTargetVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0xfd85b67eu)]
 	public bool PredictTarget { get; set; } = false;
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0x799dfaefu)]
 	public uint SweepCount { get; set; } = 0x00000001;
 
-	[DDLRegistration(0xeb2ac0b9u)]
+	[DDLRegistration(0xb95b8abeu)]
 	public bool CancelOutOfVolume { get; set; } = false;
 
-	[DDLRegistration(0xeb2ac0b9u, "Intro Laser Anim for arm")]
+	[DDLRegistration(0x9dd911b8u, "Intro Laser Anim for arm")]
 	public string? ArmIntroAnim { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u, "Laser Aim In Anim for arm")]
+	[DDLRegistration(0xd9da80e2u, "Laser Aim In Anim for arm")]
 	public string? ArmAimAnim { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u, "Laser Loop Anim for arm")]
+	[DDLRegistration(0xcc4f911du, "Laser Loop Anim for arm")]
 	public string? ArmLoopingAnim { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u, "Laser Aim Out Anim for arm")]
+	[DDLRegistration(0x792c4607u, "Laser Aim Out Anim for arm")]
 	public string? ArmAimOutAnim { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u, "Outro Laser Anim for arm")]
+	[DDLRegistration(0xcf12454fu, "Outro Laser Anim for arm")]
 	public string? ArmOutroAnim { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u, "Intro Laser Anim for BODY(rt arm)")]
+	[DDLRegistration(0xf1faaaf2u, "Intro Laser Anim for BODY(rt arm)")]
 	public string? ArmIntroBodyAnimRT { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u, "Laser Loop Anim for BODY(rt arm)")]
+	[DDLRegistration(0x403ed9ebu, "Laser Loop Anim for BODY(rt arm)")]
 	public string? ArmLoopBodyAnimRT { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u, "Outro Laser Anim for BODY(rt arm)")]
+	[DDLRegistration(0xfa8a7981u, "Outro Laser Anim for BODY(rt arm)")]
 	public string? ArmOutroBodyAnimRT { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u, "Intro Laser Anim for BODY(lf arm)")]
+	[DDLRegistration(0xd602e465u, "Intro Laser Anim for BODY(lf arm)")]
 	public string? ArmIntroBodyAnimLF { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u, "Laser Loop Anim for BODY(lf arm)")]
+	[DDLRegistration(0x67c6977cu, "Laser Loop Anim for BODY(lf arm)")]
 	public string? ArmLoopBodyAnimLF { get; set; } = default;
 
-	[DDLRegistration(0xeb2ac0b9u, "Outro Laser Anim for BODY(lf arm)")]
+	[DDLRegistration(0xdd723716u, "Outro Laser Anim for BODY(lf arm)")]
 	public string? ArmOutroBodyAnimLF { get; set; } = default;
 
 	public new static BotComboMoveFinaleLaserSweep Create(DDLObject ddl) => new(ddl);

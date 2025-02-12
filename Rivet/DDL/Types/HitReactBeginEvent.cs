@@ -19,10 +19,10 @@ public class HitReactBeginEvent : EventBase, IDDLObjectType<HitReactBeginEvent> 
 		State = ddl.GetEnum<AttackState>(0xbac01e3au, AttackStateValues.Lookup);
 	}
 
-	[DDLRegistration(0x84f20db2u, description: "Driver name of animation to play when hit")]
+	[DDLRegistration(0x573ba4ebu, description: "Driver name of animation to play when hit")]
 	public string? Anim { get; set; } = default;
 
-	[DDLRegistration(0x84f20db2u, description: "Attack behavior state when hit")]
+	[DDLRegistration(0xbac01e3au, description: "Attack behavior state when hit")]
 	public AttackState State { get; set; } = AttackState.Defend;
 
 	public new static HitReactBeginEvent Create(DDLObject ddl) => new(ddl);

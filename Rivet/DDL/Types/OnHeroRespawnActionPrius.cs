@@ -19,10 +19,10 @@ public class OnHeroRespawnActionPrius : DDLObjectType, IDDLObjectType<OnHeroResp
 		Active = ddl.GetValue<bool>(0x7566b265u, Active);
 	}
 
-	[DDLRegistration(0xe6485d68u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0xe6485d68u, "Start Active", "Controls the output signal")]
+	[DDLRegistration(0x7566b265u, "Start Active", "Controls the output signal")]
 	public bool Active { get; set; } = true;
 
 	public static OnHeroRespawnActionPrius Create(DDLObject ddl) => new(ddl);

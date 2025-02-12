@@ -18,7 +18,7 @@ public class VanitytSettings : DDLObjectType, IDDLObjectType<VanitytSettings> {
 		DrawDebugImguiWindow = ddl.GetValue<bool>(0x623d726eu, DrawDebugImguiWindow);
 	}
 
-	[DDLRegistration(0x305b331cu, "Draw Vanity Debug ImGui Window", "Should the Vanity Debug ImGui window be displayed?")]
+	[DDLRegistration(0x623d726eu, "Draw Vanity Debug ImGui Window", "Should the Vanity Debug ImGui window be displayed?")]
 	public bool DrawDebugImguiWindow { get; set; } = false;
 
 	public static VanitytSettings Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class RCSResolveInput : DDLObjectType, IDDLObjectType<RCSResolveInput> {
 		Preview = ddl.GetValue<bool>(0xb86f4c08u, Preview);
 	}
 
-	[DDLRegistration(0x13139b07u, description: "Resolve operation to perform on the specified files.")]
+	[DDLRegistration(0xf7d1a503u, description: "Resolve operation to perform on the specified files.")]
 	public x5c9fe7cc AutoResolve { get; set; } = x5c9fe7cc.Safe;
 
-	[DDLRegistration(0x13139b07u, description: "Changelist number of the files to resolve; specify 0 for the default changelist; specify less than zero to omit this parameter (files should be explicitly listed in this case).")]
+	[DDLRegistration(0x03b0ddc6u, description: "Changelist number of the files to resolve; specify 0 for the default changelist; specify less than zero to omit this parameter (files should be explicitly listed in this case).")]
 	public int Changelist { get; set; } = 0;
 
-	[DDLRegistration(0x13139b07u, description: "Intended to be full paths to files to resolve, but you can also use wildcards (you can omit this list and resolve a whole changelist by specifying the changelist parameter)")]
+	[DDLRegistration(0x1f668c98u, description: "Intended to be full paths to files to resolve, but you can also use wildcards (you can omit this list and resolve a whole changelist by specifying the changelist parameter)")]
 	public List<string?> Files { get; set; } = [];
 
-	[DDLRegistration(0x13139b07u, description: "If true, preview the resolve instead of actually executing it.")]
+	[DDLRegistration(0xb86f4c08u, description: "If true, preview the resolve instead of actually executing it.")]
 	public bool Preview { get; set; } = false;
 
 	public static RCSResolveInput Create(DDLObject ddl) => new(ddl);

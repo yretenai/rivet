@@ -19,10 +19,10 @@ public class AnimDamageAttackModDef : DDLObjectType, IDDLObjectType<AnimDamageAt
 		ModList = ddl.GetObjects<ConfigModListElement>(0x2649755bu);
 	}
 
-	[DDLRegistration(0xc815120bu, "Variable", "Variable to modify")]
+	[DDLRegistration(0x364c3afdu, "Variable", "Variable to modify")]
 	public x8da10c81 Variable { get; set; } = x8da10c81.None;
 
-	[DDLRegistration(0xc815120bu, "Config Mod List", "List of config mods to apply")]
+	[DDLRegistration(0x2649755bu, "Config Mod List", "List of config mods to apply")]
 	public List<ConfigModListElement?> ModList { get; set; } = [];
 
 	public static AnimDamageAttackModDef Create(DDLObject ddl) => new(ddl);

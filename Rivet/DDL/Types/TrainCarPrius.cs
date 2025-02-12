@@ -21,16 +21,16 @@ public class TrainCarPrius : DDLObjectType, IDDLObjectType<TrainCarPrius> {
 		AdditionalTolerance = ddl.GetValue<float>(0xe6f6600au, AdditionalTolerance);
 	}
 
-	[DDLRegistration(0x436645c9u)]
+	[DDLRegistration(0x5a1856d3u)]
 	public bool InitiallyEnabled { get; set; } = true;
 
-	[DDLRegistration(0x436645c9u)]
+	[DDLRegistration(0xbac5525bu)]
 	public uint MaxPositionHistoryPoints { get; set; } = 0x00000080;
 
-	[DDLRegistration(0x436645c9u, description: "How far in the -Z direction the rear axle is.")]
+	[DDLRegistration(0x052ae833u, description: "How far in the -Z direction the rear axle is.")]
 	public float RearAxleOffset { get; set; } = 5.00f;
 
-	[DDLRegistration(0x436645c9u, description: "Additional tolerance to use when calculating the history segment to use for the Rear Axle.  A small value (0.1-0.2) here can help prevent the TrainCar from flip-flopping between 2 different history segments on subsequent frames.")]
+	[DDLRegistration(0xe6f6600au, description: "Additional tolerance to use when calculating the history segment to use for the Rear Axle.  A small value (0.1-0.2) here can help prevent the TrainCar from flip-flopping between 2 different history segments on subsequent frames.")]
 	public float AdditionalTolerance { get; set; } = 0.00f;
 
 	public static TrainCarPrius Create(DDLObject ddl) => new(ddl);

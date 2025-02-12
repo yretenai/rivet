@@ -22,19 +22,19 @@ public class HeroHookshotConfig : DDLObjectType, IDDLObjectType<HeroHookshotConf
 		AnimMaxTargetSpeed = ddl.GetValue<float>(0x13a4ffe7u, AnimMaxTargetSpeed);
 	}
 
-	[DDLRegistration(0x056b79f2u)]
+	[DDLRegistration(0x9d4b8549u)]
 	public float IdealCableLength { get; set; } = 3.00f;
 
-	[DDLRegistration(0x056b79f2u)]
+	[DDLRegistration(0x44affa24u)]
 	public float Accel { get; set; } = 40.00f;
 
-	[DDLRegistration(0x056b79f2u)]
+	[DDLRegistration(0xa9242a88u)]
 	public float Decel { get; set; } = 60.00f;
 
-	[DDLRegistration(0x056b79f2u)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0x056b79f2u)]
+	[DDLRegistration(0x13a4ffe7u)]
 	public float AnimMaxTargetSpeed { get; set; } = 20.00f;
 
 	public static HeroHookshotConfig Create(DDLObject ddl) => new(ddl);

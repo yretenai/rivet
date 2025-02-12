@@ -23,22 +23,22 @@ public class VaultMetaData : DDLObjectType, IDDLObjectType<VaultMetaData> {
 		SourceDataFile = ddl.GetString(0xb3f3ab86) ?? SourceDataFile;
 	}
 
-	[DDLRegistration(0x037889aau)]
+	[DDLRegistration(0xe128a208u)]
 	public uint Hash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x037889aau)]
+	[DDLRegistration(0x51abd94eu)]
 	public string? CreatedBy { get; set; } = "UNKNOWN";
 
-	[DDLRegistration(0x037889aau)]
+	[DDLRegistration(0xabaffb72u)]
 	public string? LastModifiedBy { get; set; } = "UNKNOWN";
 
-	[DDLRegistration(0x037889aau)]
+	[DDLRegistration(0x5f2c5496u)]
 	public string? Tags { get; set; } = "{}";
 
-	[DDLRegistration(0x037889aau)]
+	[DDLRegistration(0x09225d15u)]
 	public bool ForceUpdate { get; set; } = false;
 
-	[DDLRegistration(0x037889aau)]
+	[DDLRegistration(0xb3f3ab86u)]
 	public string? SourceDataFile { get; set; } = "";
 
 	public static VaultMetaData Create(DDLObject ddl) => new(ddl);

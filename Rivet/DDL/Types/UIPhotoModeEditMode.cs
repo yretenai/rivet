@@ -20,13 +20,13 @@ public class UIPhotoModeEditMode : DDLObjectType, IDDLObjectType<UIPhotoModeEdit
 		Icon = ddl.GetString(0x5504e96b) ?? Icon;
 	}
 
-	[DDLRegistration(0x0d851659u)]
+	[DDLRegistration(0x6863c464u)]
 	public x9b43a852 EditModeType { get; set; } = x9b43a852.Camera;
 
-	[DDLRegistration(0x0d851659u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x0d851659u)]
+	[DDLRegistration(0x5504e96bu)]
 	public string? Icon { get; set; } = default;
 
 	public static UIPhotoModeEditMode Create(DDLObject ddl) => new(ddl);

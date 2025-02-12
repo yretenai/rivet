@@ -23,22 +23,22 @@ public class ExplosionKnockbackData : DDLObjectType, IDDLObjectType<ExplosionKno
 		EnableSelfKnockback = ddl.GetValue<bool>(0xe954c43eu, EnableSelfKnockback);
 	}
 
-	[DDLRegistration(0x1f5e6962u)]
+	[DDLRegistration(0x2554a262u)]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x1f5e6962u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f5e6962u)]
+	[DDLRegistration(0x2ff4f3c1u)]
 	public float RangeMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f5e6962u)]
+	[DDLRegistration(0x13f9cc98u)]
 	public float RangeMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f5e6962u)]
+	[DDLRegistration(0x2360dbc7u)]
 	public int MaxVictims { get; set; } = -1;
 
-	[DDLRegistration(0x1f5e6962u)]
+	[DDLRegistration(0xe954c43eu)]
 	public bool EnableSelfKnockback { get; set; } = false;
 
 	public static ExplosionKnockbackData Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class UI_AnimDriverFilterVarContainer : DDLObjectType, IDDLObjectType<UI_
 		Ids = ddl.GetObjects<UI_AnimDriverFilterVarId>(0x5a8f8e51u);
 	}
 
-	[DDLRegistration(0xe9fd918cu)]
+	[DDLRegistration(0x74938804u)]
 	public UI_AnimDriverFilterVarGroup? Group { get; set; } = default;
 
-	[DDLRegistration(0xe9fd918cu)]
+	[DDLRegistration(0x5a8f8e51u)]
 	public List<UI_AnimDriverFilterVarId?> Ids { get; set; } = [];
 
 	public static UI_AnimDriverFilterVarContainer Create(DDLObject ddl) => new(ddl);

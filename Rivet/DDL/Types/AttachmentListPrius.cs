@@ -18,7 +18,7 @@ public class AttachmentListPrius : DDLObjectType, IDDLObjectType<AttachmentListP
 		MaxAttachments = ddl.GetValue<uint>(0xe338472du, MaxAttachments);
 	}
 
-	[DDLRegistration(0xc4f1297du)]
+	[DDLRegistration(0xe338472du)]
 	public uint MaxAttachments { get; set; } = 0x00000004;
 
 	public static AttachmentListPrius Create(DDLObject ddl) => new(ddl);

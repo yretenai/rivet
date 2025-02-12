@@ -18,7 +18,7 @@ public class ScalePrototypingPrius : DDLObjectType, IDDLObjectType<ScalePrototyp
 		Scale = ddl.GetValue<float>(0xf515e945u, Scale);
 	}
 
-	[DDLRegistration(0xc7b249cdu)]
+	[DDLRegistration(0xf515e945u)]
 	public float Scale { get; set; } = 1.00f;
 
 	public static ScalePrototypingPrius Create(DDLObject ddl) => new(ddl);

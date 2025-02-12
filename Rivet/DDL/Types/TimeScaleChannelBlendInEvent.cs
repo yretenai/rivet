@@ -19,10 +19,10 @@ public class TimeScaleChannelBlendInEvent : EventBase, IDDLObjectType<TimeScaleC
 		BlendInDuration = ddl.GetValue<float>(0x461f415eu, BlendInDuration);
 	}
 
-	[DDLRegistration(0xb23bd4b8u)]
+	[DDLRegistration(0xec985263u)]
 	public uint ChannelHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb23bd4b8u)]
+	[DDLRegistration(0x461f415eu)]
 	public float BlendInDuration { get; set; } = 0.00f;
 
 	public new static TimeScaleChannelBlendInEvent Create(DDLObject ddl) => new(ddl);

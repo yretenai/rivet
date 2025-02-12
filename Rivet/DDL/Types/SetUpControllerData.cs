@@ -22,19 +22,19 @@ public class SetUpControllerData : DDLObjectType, IDDLObjectType<SetUpController
 		DebugLogging = ddl.GetValue<bool>(0x9fc0ec8fu, DebugLogging);
 	}
 
-	[DDLRegistration(0xe065fbe6u, description: "A name, currently for debugging only, that should be unique for this setup.")]
+	[DDLRegistration(0x9e0c1481u, description: "A name, currently for debugging only, that should be unique for this setup.")]
 	public string? UniqueSetupName { get; set; } = "";
 
-	[DDLRegistration(0xe065fbe6u, description: "The checkpoint name for this setup.")]
+	[DDLRegistration(0x71d061f1u, description: "The checkpoint name for this setup.")]
 	public string? CheckpointName { get; set; } = "";
 
-	[DDLRegistration(0xe065fbe6u, description: "The initial number to spawn the first time the player encounters this setup")]
+	[DDLRegistration(0x90d607b0u, description: "The initial number to spawn the first time the player encounters this setup")]
 	public byte InitialCount { get; set; } = 0x01;
 
-	[DDLRegistration(0xe065fbe6u, description: "Setup Type, (Both is a minor spawned even during major setups)")]
+	[DDLRegistration(0x826375e3u, description: "Setup Type, (Both is a minor spawned even during major setups)")]
 	public SetupTypeEnum SetupType { get; set; } = SetupTypeEnum.Major;
 
-	[DDLRegistration(0xe065fbe6u, description: "True to logging for this setup")]
+	[DDLRegistration(0x9fc0ec8fu, description: "True to logging for this setup")]
 	public bool DebugLogging { get; set; } = false;
 
 	public static SetUpControllerData Create(DDLObject ddl) => new(ddl);

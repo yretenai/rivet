@@ -18,7 +18,7 @@ public class CurveFromActorListPrius : DDLObjectType, IDDLObjectType<CurveFromAc
 		SourceActors = ddl.GetValues<RivetAssetId>(0x0839faf0u);
 	}
 
-	[DDLRegistration(0xa7302551u)]
+	[DDLRegistration(0x0839faf0u)]
 	public List<RivetAssetId> SourceActors { get; set; } = [];
 
 	public static CurveFromActorListPrius Create(DDLObject ddl) => new(ddl);

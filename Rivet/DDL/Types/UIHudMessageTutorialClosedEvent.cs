@@ -18,7 +18,7 @@ public class UIHudMessageTutorialClosedEvent : EventBase, IDDLObjectType<UIHudMe
 		RequestId = ddl.GetValue<uint>(0x239eef0du, RequestId);
 	}
 
-	[DDLRegistration(0x04b16fe5u)]
+	[DDLRegistration(0x239eef0du)]
 	public uint RequestId { get; set; } = 0x00000000;
 
 	public new static UIHudMessageTutorialClosedEvent Create(DDLObject ddl) => new(ddl);

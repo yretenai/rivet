@@ -18,7 +18,7 @@ public class MeshUvDef : DDLObjectType, IDDLObjectType<MeshUvDef> {
 		Uv = ddl.GetValues<float>(0x9f9f6698u);
 	}
 
-	[DDLRegistration(0x1d9bc567u)]
+	[DDLRegistration(0x9f9f6698u)]
 	public List<float> Uv { get; set; } = [];
 
 	public static MeshUvDef Create(DDLObject ddl) => new(ddl);

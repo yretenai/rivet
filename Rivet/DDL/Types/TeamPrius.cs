@@ -18,7 +18,7 @@ public class TeamPrius : DDLObjectType, IDDLObjectType<TeamPrius> {
 		Team = ddl.GetEnum<xc115d639>(0xf47066afu, xc115d639Values.Lookup);
 	}
 
-	[DDLRegistration(0xed7c1637u)]
+	[DDLRegistration(0xf47066afu)]
 	public xc115d639 Team { get; set; } = xc115d639.None;
 
 	public static TeamPrius Create(DDLObject ddl) => new(ddl);

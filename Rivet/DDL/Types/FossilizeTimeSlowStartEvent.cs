@@ -18,7 +18,7 @@ public class FossilizeTimeSlowStartEvent : EventBase, IDDLObjectType<FossilizeTi
 		NewSlow = ddl.GetValue<bool>(0xe0b52837u, NewSlow);
 	}
 
-	[DDLRegistration(0x0edeafaau, description: "If true, the player is starting a new slow, if false, we are starting slow after a shot was fired.")]
+	[DDLRegistration(0xe0b52837u, description: "If true, the player is starting a new slow, if false, we are starting slow after a shot was fired.")]
 	public bool NewSlow { get; set; } = true;
 
 	public new static FossilizeTimeSlowStartEvent Create(DDLObject ddl) => new(ddl);

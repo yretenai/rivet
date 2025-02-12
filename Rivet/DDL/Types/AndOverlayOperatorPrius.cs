@@ -18,7 +18,7 @@ public class AndOverlayOperatorPrius : BaseCustomOverlayTriggerPrius, IDDLObject
 		Triggers = ddl.GetObjects<TriggerArray>(0xf4cf343du);
 	}
 
-	[DDLRegistration(0x05196c70u, description: "All triggers in this array must be true for this And trigger to be true")]
+	[DDLRegistration(0xf4cf343du, description: "All triggers in this array must be true for this And trigger to be true")]
 	public List<TriggerArray?> Triggers { get; set; } = [];
 
 	public new static AndOverlayOperatorPrius Create(DDLObject ddl) => new(ddl);

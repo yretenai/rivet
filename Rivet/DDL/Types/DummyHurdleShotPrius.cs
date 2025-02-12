@@ -19,10 +19,10 @@ public class DummyHurdleShotPrius : BasicBulletPrius, IDDLObjectType<DummyHurdle
 		WantsLeftOffset = ddl.GetValue<bool>(0x9f9b2090u, WantsLeftOffset);
 	}
 
-	[DDLRegistration(0x0f7dc481u)]
+	[DDLRegistration(0xc9814627u)]
 	public uint ShotIndexForHurdle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0f7dc481u)]
+	[DDLRegistration(0x9f9b2090u)]
 	public bool WantsLeftOffset { get; set; } = false;
 
 	public new static DummyHurdleShotPrius Create(DDLObject ddl) => new(ddl);

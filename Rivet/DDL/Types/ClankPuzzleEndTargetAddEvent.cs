@@ -19,10 +19,10 @@ public class ClankPuzzleEndTargetAddEvent : EventBase, IDDLObjectType<ClankPuzzl
 		BotOrientation = ddl.GetObject<DDLTransform>(0x3b048d6au);
 	}
 
-	[DDLRegistration(0x5b8fefcfu)]
+	[DDLRegistration(0x629a2a7fu)]
 	public uint BotCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5b8fefcfu)]
+	[DDLRegistration(0x3b048d6au)]
 	public DDLTransform? BotOrientation { get; set; } = default;
 
 	public new static ClankPuzzleEndTargetAddEvent Create(DDLObject ddl) => new(ddl);

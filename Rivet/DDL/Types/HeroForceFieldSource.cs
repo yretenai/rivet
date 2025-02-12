@@ -20,13 +20,13 @@ public class HeroForceFieldSource : DDLObjectType, IDDLObjectType<HeroForceField
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0xc17f9a88u)]
+	[DDLRegistration(0x5814524du)]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0xc17f9a88u)]
+	[DDLRegistration(0x2cb85ca8u)]
 	public float Strength { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc17f9a88u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.25f;
 
 	public static HeroForceFieldSource Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SceneEditorSetCameraPivotAndFocusDistanceInput : DDLObjectType, IDD
 		Pivot = ddl.GetObject<DDLVector3>(0x85fcb535u);
 	}
 
-	[DDLRegistration(0xbce49dd8u)]
+	[DDLRegistration(0x546334a6u)]
 	public float FocusDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbce49dd8u)]
+	[DDLRegistration(0x85fcb535u)]
 	public DDLVector3? Pivot { get; set; } = default;
 
 	public static SceneEditorSetCameraPivotAndFocusDistanceInput Create(DDLObject ddl) => new(ddl);

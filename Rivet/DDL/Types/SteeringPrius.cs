@@ -23,22 +23,22 @@ public class SteeringPrius : DDLObjectType, IDDLObjectType<SteeringPrius> {
 		PartnerData = ddl.GetObject<SteeringPartnerCurveConfig>(0xfc34300cu);
 	}
 
-	[DDLRegistration(0xfcdc5947u, "Height")]
+	[DDLRegistration(0xd181b6eau, "Height")]
 	public float ActorHeight { get; set; } = 1.50f;
 
-	[DDLRegistration(0xfcdc5947u, "Nav Radius Hard")]
+	[DDLRegistration(0x7bc39ce4u, "Nav Radius Hard")]
 	public float NavCollRadiusHard { get; set; } = 0.35f;
 
-	[DDLRegistration(0xfcdc5947u, "Nav Radius Soft")]
+	[DDLRegistration(0xc55ca641u, "Nav Radius Soft")]
 	public float NavCollRadiusSoft { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfcdc5947u, "Always Use Accel", "Allows use of Acceleration even when using movement intro animations.")]
+	[DDLRegistration(0xc6e2b259u, "Always Use Accel", "Allows use of Acceleration even when using movement intro animations.")]
 	public bool AlwaysUseAccel { get; set; } = false;
 
-	[DDLRegistration(0xfcdc5947u, "Use Nav Position Tracker Queries", "If true, this bot's NavPositionTracker will track its ground position using closest pt on nav queries.")]
+	[DDLRegistration(0x617c7319u, "Use Nav Position Tracker Queries", "If true, this bot's NavPositionTracker will track its ground position using closest pt on nav queries.")]
 	public bool UseNavPositionTrackerQueries { get; set; } = false;
 
-	[DDLRegistration(0xfcdc5947u)]
+	[DDLRegistration(0xfc34300cu)]
 	public SteeringPartnerCurveConfig? PartnerData { get; set; } = default;
 
 	public static SteeringPrius Create(DDLObject ddl) => new(ddl);

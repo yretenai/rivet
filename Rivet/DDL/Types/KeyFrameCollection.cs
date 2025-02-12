@@ -19,10 +19,10 @@ public class KeyFrameCollection : DDLObjectType, IDDLObjectType<KeyFrameCollecti
 		KeyFrames = ddl.GetObjects<KeyFrame>(0x13398253u);
 	}
 
-	[DDLRegistration(0xaf9c5fafu)]
+	[DDLRegistration(0x4c68ca42u)]
 	public KeyFrameType KeyFrameType { get; set; } = KeyFrameType.Float;
 
-	[DDLRegistration(0xaf9c5fafu)]
+	[DDLRegistration(0x13398253u)]
 	public List<KeyFrame?> KeyFrames { get; set; } = [];
 
 	public static KeyFrameCollection Create(DDLObject ddl) => new(ddl);

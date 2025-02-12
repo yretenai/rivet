@@ -19,10 +19,10 @@ public class LookGroupDef : DDLObjectType, IDDLObjectType<LookGroupDef> {
 		Looks = ddl.GetObjects<LookDef>(0xec785832u);
 	}
 
-	[DDLRegistration(0x983dfbd5u, description: "Name of this group.")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of this group.")]
 	public string? Name { get; set; } = "LookGroup";
 
-	[DDLRegistration(0x983dfbd5u, description: "Names of all the looks in this group.")]
+	[DDLRegistration(0xec785832u, description: "Names of all the looks in this group.")]
 	public List<LookDef?> Looks { get; set; } = [];
 
 	public static LookGroupDef Create(DDLObject ddl) => new(ddl);

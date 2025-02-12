@@ -22,19 +22,19 @@ public class Cinematic2TagActionDef : DDLObjectType, IDDLObjectType<Cinematic2Ta
 		Tags = ddl.GetObject<Cinematic2ActionTagsDef>(0x5f2c5496u);
 	}
 
-	[DDLRegistration(0x3ce605a3u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3ce605a3u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ce605a3u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x3ce605a3u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ce605a3u, description: "A set of gameplay-defined values to determine behavior.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine behavior.")]
 	public Cinematic2ActionTagsDef? Tags { get; set; } = default;
 
 	public static Cinematic2TagActionDef Create(DDLObject ddl) => new(ddl);

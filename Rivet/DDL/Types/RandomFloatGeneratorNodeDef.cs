@@ -23,22 +23,22 @@ public class RandomFloatGeneratorNodeDef : MathNodeBaseDef, IDDLObjectType<Rando
 		Info = ddl.GetString(0xfb19f1e7) ?? Info;
 	}
 
-	[DDLRegistration(0xd9863f57u)]
+	[DDLRegistration(0x9b44b772u)]
 	public InputPlugSignal? GenerateNext { get; set; } = default;
 
-	[DDLRegistration(0xd9863f57u)]
+	[DDLRegistration(0x9691f737u)]
 	public OutputPlugSignal? OnGenerateNext { get; set; } = default;
 
-	[DDLRegistration(0xd9863f57u, description: "Inclusive")]
+	[DDLRegistration(0x8b2e3419u, description: "Inclusive")]
 	public InputPlugFloat? Min { get; set; } = default;
 
-	[DDLRegistration(0xd9863f57u, description: "Exclusive")]
+	[DDLRegistration(0xb7230b40u, description: "Exclusive")]
 	public InputPlugFloat? Max { get; set; } = default;
 
-	[DDLRegistration(0xd9863f57u)]
+	[DDLRegistration(0x34bfd08cu)]
 	public OutputPlugFloat? Next { get; set; } = default;
 
-	[DDLRegistration(0xd9863f57u)]
+	[DDLRegistration(0xfb19f1e7u)]
 	public string? Info { get; set; } = "You must signal this node each time you want a new random number, even for the first number.";
 
 	public new static RandomFloatGeneratorNodeDef Create(DDLObject ddl) => new(ddl);

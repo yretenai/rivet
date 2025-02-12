@@ -19,10 +19,10 @@ public class ObstructionShapeOBB : NavMeshObstructionShapeBase, IDDLObjectType<O
 		Rotation = ddl.GetObject<DDLVector3>(0xd37d2581u);
 	}
 
-	[DDLRegistration(0x049eee68u)]
+	[DDLRegistration(0x62c56bc8u)]
 	public DDLVector3? Extents { get; set; } = default;
 
-	[DDLRegistration(0x049eee68u)]
+	[DDLRegistration(0xd37d2581u)]
 	public DDLVector3? Rotation { get; set; } = default;
 
 	public new static ObstructionShapeOBB Create(DDLObject ddl) => new(ddl);

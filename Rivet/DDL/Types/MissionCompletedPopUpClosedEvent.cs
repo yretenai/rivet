@@ -18,7 +18,7 @@ public class MissionCompletedPopUpClosedEvent : EventBase, IDDLObjectType<Missio
 		MissionHash = ddl.GetValue<uint>(0x2a5812deu, MissionHash);
 	}
 
-	[DDLRegistration(0x7e5143cfu)]
+	[DDLRegistration(0x2a5812deu)]
 	public uint MissionHash { get; set; } = 0x00000000;
 
 	public new static MissionCompletedPopUpClosedEvent Create(DDLObject ddl) => new(ddl);

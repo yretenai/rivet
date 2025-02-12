@@ -18,7 +18,7 @@ public class StringPlug : DDLObjectType, IDDLObjectType<StringPlug> {
 		Text = ddl.GetString(0x0b1b6777) ?? Text;
 	}
 
-	[DDLRegistration(0x6a64840fu)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
 	public static StringPlug Create(DDLObject ddl) => new(ddl);

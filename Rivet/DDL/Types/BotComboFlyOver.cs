@@ -22,19 +22,19 @@ public class BotComboFlyOver : BotComboMove, IDDLObjectType<BotComboFlyOver> {
 		FlyOverOutroAnimRate = ddl.GetValue<float>(0x633979a7u, FlyOverOutroAnimRate);
 	}
 
-	[DDLRegistration(0xdcb74779u, description: "FirepointSet that is used by the boss to navigate to during the flyover and AFTER the flyover (until a new firepointset is grabbed during another flyover.")]
+	[DDLRegistration(0xde41ffb7u, description: "FirepointSet that is used by the boss to navigate to during the flyover and AFTER the flyover (until a new firepointset is grabbed during another flyover.")]
 	public RivetAssetId FirepointSetActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdcb74779u, description: "Name of driver that plays the fly over.")]
+	[DDLRegistration(0x3dfca8c4u, description: "Name of driver that plays the fly over.")]
 	public string? FlyOverAnimName { get; set; } = "Tail_Attack";
 
-	[DDLRegistration(0xdcb74779u, description: "Rate at which the flyover anim plays.")]
+	[DDLRegistration(0xbc33e9fbu, description: "Rate at which the flyover anim plays.")]
 	public float FlyOverAnimRate { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdcb74779u, description: "Name of driver that plays outro (reemerging from the water)")]
+	[DDLRegistration(0xe2f63898u, description: "Name of driver that plays outro (reemerging from the water)")]
 	public string? FlyOverOutroAnimName { get; set; } = "Tail_Reentry";
 
-	[DDLRegistration(0xdcb74779u, description: "Rate at which the flyover anim plays.")]
+	[DDLRegistration(0x633979a7u, description: "Rate at which the flyover anim plays.")]
 	public float FlyOverOutroAnimRate { get; set; } = 1.00f;
 
 	public new static BotComboFlyOver Create(DDLObject ddl) => new(ddl);

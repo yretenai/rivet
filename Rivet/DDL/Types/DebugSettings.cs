@@ -44,85 +44,85 @@ public class DebugSettings : DDLObjectType, IDDLObjectType<DebugSettings> {
 		PlayDialogAudit = ddl.GetValue<bool>(0x6401ee36u, PlayDialogAudit);
 	}
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x3ea7200au)]
 	public bool DrawCommandLine { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0xf8b2f124u)]
 	public bool AutoHost { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x1ff43a0eu)]
 	public bool AutoJoin { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x6e052556u)]
 	public string? AutoJoinServerName { get; set; } = default;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0xf79d0ee6u)]
 	public float FrontendRepeatDelay { get; set; } = 0.25f;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x08544732u)]
 	public float FrontendRepeatRate { get; set; } = 0.08f;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x9b3fd52eu)]
 	public bool FrontendRequireLockCode { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0xc9cbdd9bu)]
 	public bool SpawnSubprocess { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x7dba7981u)]
 	public bool LoadWithMultiplePlayers { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x068777e3u)]
 	public bool AutoMatchmake { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x51752de2u)]
 	public string? OverrideServerName { get; set; } = default;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0xefae0092u)]
 	public int DayOffset { get; set; } = 0;
 
-	[DDLRegistration(0x177d9f75u, "Debug Server Info", "Shows fps, server cpu and memory")]
+	[DDLRegistration(0x839b460eu, "Debug Server Info", "Shows fps, server cpu and memory")]
 	public bool DebugServerInfoEnable { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u, "Debug Current Local Time", "Shows current local time")]
+	[DDLRegistration(0xc7f48756u, "Debug Current Local Time", "Shows current local time")]
 	public bool DebugCurrentLocalTimeEnable { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0xdc14613bu)]
 	public bool SaveToDisk { get; set; } = true;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x704c5464u)]
 	public bool MatOverrideVolumesEnable { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u, "Lighting Condition Report")]
+	[DDLRegistration(0x550f0891u, "Lighting Condition Report")]
 	public bool DrawLightingCondition { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0xcc01680du)]
 	public bool DisableAllPrefabSpawning { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0xceddda51u)]
 	public bool VignetteMemTest { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x1c427b31u)]
 	public bool CrimeMemTest { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x10309889u)]
 	public bool CollectiblesMemTest { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0xd19327d1u)]
 	public string? FullscreenMaterialName { get; set; } = default;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x961d5753u)]
 	public ulong StagingMemoryLimit { get; set; } = 0x0000000000000100;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x1723ede2u)]
 	public bool EnableDPadQuickSelect { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x5e8b1743u)]
 	public bool DoWeaponTriggerEffects { get; set; } = true;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0xb5efa675u)]
 	public bool DoHoverbootSurfaceDeformation { get; set; } = false;
 
-	[DDLRegistration(0x177d9f75u)]
+	[DDLRegistration(0x6401ee36u)]
 	public bool PlayDialogAudit { get; set; } = false;
 
 	public static DebugSettings Create(DDLObject ddl) => new(ddl);

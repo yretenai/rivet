@@ -19,10 +19,10 @@ public class ItemLoadoutComponentOverrideListElement : DDLObjectType, IDDLObject
 		SkinItemOverrideList = ddl.GetObjects<SkinItemOverride>(0xd07b8f26u);
 	}
 
-	[DDLRegistration(0x7fa5a9deu, "Item Config", "Item to override")]
+	[DDLRegistration(0x2f8be5aeu, "Item Config", "Item to override")]
 	public RivetAssetId Item { get; set; } = default;
 
-	[DDLRegistration(0x7fa5a9deu, "Skin Item Override List", "Skin item overrides for this item (optional)")]
+	[DDLRegistration(0xd07b8f26u, "Skin Item Override List", "Skin item overrides for this item (optional)")]
 	public List<SkinItemOverride?> SkinItemOverrideList { get; set; } = [];
 
 	public static ItemLoadoutComponentOverrideListElement Create(DDLObject ddl) => new(ddl);

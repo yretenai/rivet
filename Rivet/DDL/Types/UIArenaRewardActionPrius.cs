@@ -20,13 +20,13 @@ public class UIArenaRewardActionPrius : DDLObjectType, IDDLObjectType<UIArenaRew
 		Amount = ddl.GetValue<uint>(0xb0d93e25u, Amount);
 	}
 
-	[DDLRegistration(0xe5edf0dcu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0xe5edf0dcu, description: "What type of reward?")]
+	[DDLRegistration(0xbc4e9799u, description: "What type of reward?")]
 	public x3a1207ee Type { get; set; } = x3a1207ee.Bolts;
 
-	[DDLRegistration(0xe5edf0dcu, description: "How much?")]
+	[DDLRegistration(0xb0d93e25u, description: "How much?")]
 	public uint Amount { get; set; } = 0x00000000;
 
 	public static UIArenaRewardActionPrius Create(DDLObject ddl) => new(ddl);

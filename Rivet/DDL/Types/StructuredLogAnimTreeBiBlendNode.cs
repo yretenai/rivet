@@ -21,16 +21,16 @@ public class StructuredLogAnimTreeBiBlendNode : StructuredLogAnimTreeNode, IDDLO
 		Factor = ddl.GetValue<float>(0xd340a267u, Factor);
 	}
 
-	[DDLRegistration(0x349214d7u)]
+	[DDLRegistration(0x31db17e2u)]
 	public x8dc10932 BlendEventsType { get; set; } = x8dc10932.AnimBlendAuxTypeDominant;
 
-	[DDLRegistration(0x349214d7u)]
+	[DDLRegistration(0x696d50fbu)]
 	public x8dc10932 BlendCustomTrackType { get; set; } = x8dc10932.AnimBlendAuxTypeDominant;
 
-	[DDLRegistration(0x349214d7u)]
+	[DDLRegistration(0xe26f236du)]
 	public x8dc10932 BlendMorphType { get; set; } = x8dc10932.AnimBlendAuxTypeDominant;
 
-	[DDLRegistration(0x349214d7u)]
+	[DDLRegistration(0xd340a267u)]
 	public float Factor { get; set; } = 0.00f;
 
 	public new static StructuredLogAnimTreeBiBlendNode Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class SceneEditorSelectAndFocusInput : DDLObjectType, IDDLObjectType<Scen
 		Tuids = ddl.GetValues<RivetAssetId>(0x005953f7u);
 	}
 
-	[DDLRegistration(0xc01f0ce4u)]
+	[DDLRegistration(0x005953f7u)]
 	public List<RivetAssetId> Tuids { get; set; } = [];
 
 	public static SceneEditorSelectAndFocusInput Create(DDLObject ddl) => new(ddl);

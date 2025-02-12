@@ -22,19 +22,19 @@ public class SendEventActionPrius : DDLObjectType, IDDLObjectType<SendEventActio
 		Synced = ddl.GetValue<bool>(0x35f3ddffu, Synced);
 	}
 
-	[DDLRegistration(0x6d153622u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x6d153622u)]
+	[DDLRegistration(0x22fdc666u)]
 	public EventBase? Event { get; set; } = default;
 
-	[DDLRegistration(0x6d153622u)]
+	[DDLRegistration(0x1eb6dc82u)]
 	public bool SendToSelfOnly { get; set; } = false;
 
-	[DDLRegistration(0x6d153622u)]
+	[DDLRegistration(0x24f8572cu)]
 	public bool RequireActivated { get; set; } = true;
 
-	[DDLRegistration(0x6d153622u, description: "True to sync to client machines.")]
+	[DDLRegistration(0x35f3ddffu, description: "True to sync to client machines.")]
 	public bool Synced { get; set; } = false;
 
 	public static SendEventActionPrius Create(DDLObject ddl) => new(ddl);

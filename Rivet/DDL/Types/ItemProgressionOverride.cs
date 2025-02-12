@@ -18,7 +18,7 @@ public class ItemProgressionOverride : DDLObjectType, IDDLObjectType<ItemProgres
 		ProgressLevel = ddl.GetValue<float>(0x39fe5e50u, ProgressLevel);
 	}
 
-	[DDLRegistration(0x8385d20au)]
+	[DDLRegistration(0x39fe5e50u)]
 	public float ProgressLevel { get; set; } = 0.00f;
 
 	public static ItemProgressionOverride Create(DDLObject ddl) => new(ddl);

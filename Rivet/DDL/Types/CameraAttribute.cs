@@ -19,10 +19,10 @@ public class CameraAttribute : DDLObjectType, IDDLObjectType<CameraAttribute> {
 		PerspectiveData = ddl.GetObject<CameraPerspectiveData>(0x697c5113u);
 	}
 
-	[DDLRegistration(0x696ece1du, "Camera Type", "Camera Type")]
+	[DDLRegistration(0x34041fcfu, "Camera Type", "Camera Type")]
 	public CameraType CameraType { get; set; } = CameraType.CameraPerspective;
 
-	[DDLRegistration(0x696ece1du, "Perspective Data", "Info for perspective camera")]
+	[DDLRegistration(0x697c5113u, "Perspective Data", "Info for perspective camera")]
 	public CameraPerspectiveData? PerspectiveData { get; set; } = default;
 
 	public static CameraAttribute Create(DDLObject ddl) => new(ddl);

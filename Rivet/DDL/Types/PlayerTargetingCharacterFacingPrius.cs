@@ -18,7 +18,7 @@ public class PlayerTargetingCharacterFacingPrius : PlayerTargetingBasePrius, IDD
 		VerticalAngle = ddl.GetValue<float>(0x38305741u, VerticalAngle);
 	}
 
-	[DDLRegistration(0xe5467ddeu)]
+	[DDLRegistration(0x38305741u)]
 	public float VerticalAngle { get; set; } = 0.00f;
 
 	public new static PlayerTargetingCharacterFacingPrius Create(DDLObject ddl) => new(ddl);

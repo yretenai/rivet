@@ -19,10 +19,10 @@ public class SceneEditorCreatePrefabInput : DDLObjectType, IDDLObjectType<SceneE
 		AssetPath = ddl.GetValue<RivetAssetId>(0x0efa614bu, AssetPath);
 	}
 
-	[DDLRegistration(0x33a30978u)]
+	[DDLRegistration(0x0e5ccd84u)]
 	public RivetAssetId SceneNodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x33a30978u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = "";
 
 	public static SceneEditorCreatePrefabInput Create(DDLObject ddl) => new(ddl);

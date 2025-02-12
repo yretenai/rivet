@@ -19,10 +19,10 @@ public class CameraForwardTweakLookAtTarget : CameraForwardTweakValid, IDDLObjec
 		TargetOffset = ddl.GetObject<DDLVector3>(0xabbb80f6u);
 	}
 
-	[DDLRegistration(0xc5a48d87u)]
+	[DDLRegistration(0xa37bf657u)]
 	public RivetAssetId LookAtActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc5a48d87u, "Target Offset")]
+	[DDLRegistration(0xabbb80f6u, "Target Offset")]
 	public DDLVector3? TargetOffset { get; set; } = default;
 
 	public new static CameraForwardTweakLookAtTarget Create(DDLObject ddl) => new(ddl);

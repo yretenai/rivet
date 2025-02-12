@@ -33,52 +33,52 @@ public class PlayDialogActionPrius : DDLObjectType, IDDLObjectType<PlayDialogAct
 		PlayAsAnOverlap = ddl.GetValue<bool>(0x8a0890fdu, PlayAsAnOverlap);
 	}
 
-	[DDLRegistration(0x46957611u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
-	[DDLRegistration(0x46957611u)]
+	[DDLRegistration(0x29dc9e4au)]
 	public string? Tag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x46957611u, description: "Priority of this line.")]
+	[DDLRegistration(0x98a76157u, description: "Priority of this line.")]
 	public x90d1aef7 Priority { get; set; } = x90d1aef7.Medium;
 
-	[DDLRegistration(0x46957611u, description: "Interrupt lines of the same priority.")]
+	[DDLRegistration(0x3e2813a0u, description: "Interrupt lines of the same priority.")]
 	public bool InterruptSamePriorityLines { get; set; } = true;
 
-	[DDLRegistration(0x46957611u, description: "Queue this line up if it can't play right now.")]
+	[DDLRegistration(0x66aeb3a2u, description: "Queue this line up if it can't play right now.")]
 	public bool Queue { get; set; } = false;
 
-	[DDLRegistration(0x46957611u, description: "Delete from queue if it the line hasn't been able to play for this long.  Negative = infinite.")]
+	[DDLRegistration(0xc6aa3a36u, description: "Delete from queue if it the line hasn't been able to play for this long.  Negative = infinite.")]
 	public float MaxQueueTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x46957611u, description: "Use this until Tag is specified.")]
+	[DDLRegistration(0x99f2b59fu, description: "Use this until Tag is specified.")]
 	public string? TempText { get; set; } = default;
 
-	[DDLRegistration(0x46957611u, description: "Show temp text for this long.")]
+	[DDLRegistration(0x1aaa06d6u, description: "Show temp text for this long.")]
 	public float TempTextDuration { get; set; } = 6.00f;
 
-	[DDLRegistration(0x46957611u, description: "Stops when the hero dies, regardless of who is saying the line.")]
+	[DDLRegistration(0x283d76eeu, description: "Stops when the hero dies, regardless of who is saying the line.")]
 	public bool StopOnHeroDeath { get; set; } = true;
 
-	[DDLRegistration(0x46957611u, description: "Stop playing if a cinematic starts.")]
+	[DDLRegistration(0x0c951a7cu, description: "Stop playing if a cinematic starts.")]
 	public bool StopForCinematics { get; set; } = false;
 
-	[DDLRegistration(0x46957611u, description: "Stop all playing sound effects.")]
+	[DDLRegistration(0x5e0d53abu, description: "Stop all playing sound effects.")]
 	public bool StopAllSoundsOnSpeaker { get; set; } = false;
 
-	[DDLRegistration(0x46957611u, description: "This line can't be interrupted based on priority.  Any new lines will play over this line.  Use this for intentional overlaps.")]
+	[DDLRegistration(0x37e2edbcu, description: "This line can't be interrupted based on priority.  Any new lines will play over this line.  Use this for intentional overlaps.")]
 	public bool CantBeInterrupted { get; set; } = false;
 
-	[DDLRegistration(0x46957611u, description: "For bots, if TRUE, the line will be stopped when the bot becomes engaged")]
+	[DDLRegistration(0x72d87f26u, description: "For bots, if TRUE, the line will be stopped when the bot becomes engaged")]
 	public bool StopOnEngaged { get; set; } = false;
 
-	[DDLRegistration(0x46957611u, description: "If TRUE, the line will be stopped if the speaker dies")]
+	[DDLRegistration(0x31aa484fu, description: "If TRUE, the line will be stopped if the speaker dies")]
 	public bool StopOnDeath { get; set; } = true;
 
-	[DDLRegistration(0x46957611u, description: "If true, script node will signal both interrupted and finshed on interrupted signal.")]
+	[DDLRegistration(0xee25be21u, description: "If true, script node will signal both interrupted and finshed on interrupted signal.")]
 	public bool SignalFinishedOnInterrupted { get; set; } = true;
 
-	[DDLRegistration(0x46957611u, description: "If true, we will play this dialog overlapping others.")]
+	[DDLRegistration(0x8a0890fdu, description: "If true, we will play this dialog overlapping others.")]
 	public bool PlayAsAnOverlap { get; set; } = false;
 
 	public static PlayDialogActionPrius Create(DDLObject ddl) => new(ddl);

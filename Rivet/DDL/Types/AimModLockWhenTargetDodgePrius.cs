@@ -19,10 +19,10 @@ public class AimModLockWhenTargetDodgePrius : AimModifierPrius, IDDLObjectType<A
 		PostDodgeTimeToLock = ddl.GetValue<float>(0x69603d1fu, PostDodgeTimeToLock);
 	}
 
-	[DDLRegistration(0x80d1d30cu, description: "How much time after burst starts to wait before we start caring about dodges")]
+	[DDLRegistration(0xa0e0eb68u, description: "How much time after burst starts to wait before we start caring about dodges")]
 	public float AllowLockDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x80d1d30cu, description: "After a dodge, delay this amount of time before locking")]
+	[DDLRegistration(0x69603d1fu, description: "After a dodge, delay this amount of time before locking")]
 	public float PostDodgeTimeToLock { get; set; } = 0.00f;
 
 	public new static AimModLockWhenTargetDodgePrius Create(DDLObject ddl) => new(ddl);

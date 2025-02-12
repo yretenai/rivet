@@ -18,7 +18,7 @@ public class StartSimpleLocatorFXCrawlEvent : EventBase, IDDLObjectType<StartSim
 		LocatorCrawl = ddl.GetObject<SimpleLocatorFXCrawlPrius>(0x87e3b17bu);
 	}
 
-	[DDLRegistration(0x72fb236cu)]
+	[DDLRegistration(0x87e3b17bu)]
 	public SimpleLocatorFXCrawlPrius? LocatorCrawl { get; set; } = default;
 
 	public new static StartSimpleLocatorFXCrawlEvent Create(DDLObject ddl) => new(ddl);

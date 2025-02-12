@@ -18,7 +18,7 @@ public class NodalShotVariableNodeBaseDef : NodeBaseDef, IDDLObjectType<NodalSho
 		Name = ddl.GetObject<InputPlugString>(0x6eb3beb6u);
 	}
 
-	[DDLRegistration(0x7486efbfu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public InputPlugString? Name { get; set; } = default;
 
 	public new static NodalShotVariableNodeBaseDef Create(DDLObject ddl) => new(ddl);

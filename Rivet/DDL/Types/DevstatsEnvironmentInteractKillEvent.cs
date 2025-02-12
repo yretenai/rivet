@@ -22,19 +22,19 @@ public class DevstatsEnvironmentInteractKillEvent : EventBase, IDDLObjectType<De
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x16c037b6u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x16c037b6u)]
+	[DDLRegistration(0xd82ca12cu)]
 	public string? EnvironmentInteractName { get; set; } = default;
 
-	[DDLRegistration(0x16c037b6u)]
+	[DDLRegistration(0xb8b4fcffu)]
 	public int VictimCount { get; set; } = -1;
 
-	[DDLRegistration(0x16c037b6u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x16c037b6u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static DevstatsEnvironmentInteractKillEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ShrubberyRampUpStartEvent : EventBase, IDDLObjectType<ShrubberyRamp
 		ApplyInstantly = ddl.GetValue<bool>(0x6abcc027u, ApplyInstantly);
 	}
 
-	[DDLRegistration(0x60df27d5u, description: "Should the effects be applied instantly?")]
+	[DDLRegistration(0x6abcc027u, description: "Should the effects be applied instantly?")]
 	public bool ApplyInstantly { get; set; } = false;
 
 	public new static ShrubberyRampUpStartEvent Create(DDLObject ddl) => new(ddl);

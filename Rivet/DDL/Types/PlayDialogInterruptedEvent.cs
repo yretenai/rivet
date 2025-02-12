@@ -19,10 +19,10 @@ public class PlayDialogInterruptedEvent : EventBase, IDDLObjectType<PlayDialogIn
 		InterrupterComponentHandle = ddl.GetValue<uint>(0xf2dc61ebu, InterrupterComponentHandle);
 	}
 
-	[DDLRegistration(0x48af85f7u, description: "Handle of the PlayDialogComponent that was interrupted.")]
+	[DDLRegistration(0x476a3691u, description: "Handle of the PlayDialogComponent that was interrupted.")]
 	public uint InterruptedComponentHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x48af85f7u, description: "Handle of the PlayDialogComponent that interrupted InterruptedComponentHandle.")]
+	[DDLRegistration(0xf2dc61ebu, description: "Handle of the PlayDialogComponent that interrupted InterruptedComponentHandle.")]
 	public uint InterrupterComponentHandle { get; set; } = 0x00000000;
 
 	public new static PlayDialogInterruptedEvent Create(DDLObject ddl) => new(ddl);

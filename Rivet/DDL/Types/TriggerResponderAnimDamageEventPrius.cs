@@ -19,10 +19,10 @@ public class TriggerResponderAnimDamageEventPrius : TriggerResponderBasePrius, I
 		DamageDuration = ddl.GetValue<float>(0xdd944989u, DamageDuration);
 	}
 
-	[DDLRegistration(0x9875fdbbu)]
+	[DDLRegistration(0x6650a828u)]
 	public uint AttackIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9875fdbbu)]
+	[DDLRegistration(0xdd944989u)]
 	public float DamageDuration { get; set; } = 0.25f;
 
 	public new static TriggerResponderAnimDamageEventPrius Create(DDLObject ddl) => new(ddl);

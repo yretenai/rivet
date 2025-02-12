@@ -19,10 +19,10 @@ public class UpdatePoolsMessage : DDLObjectType, IDDLObjectType<UpdatePoolsMessa
 		PoolGenerations = ddl.GetValues<byte>(0x4b3b2283u);
 	}
 
-	[DDLRegistration(0xdb8404f5u)]
+	[DDLRegistration(0x540841afu)]
 	public List<ushort> PoolIds { get; set; } = [];
 
-	[DDLRegistration(0xdb8404f5u)]
+	[DDLRegistration(0x4b3b2283u)]
 	public List<byte> PoolGenerations { get; set; } = [];
 
 	public static UpdatePoolsMessage Create(DDLObject ddl) => new(ddl);

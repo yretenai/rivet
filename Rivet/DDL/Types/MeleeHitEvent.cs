@@ -21,16 +21,16 @@ public class MeleeHitEvent : EventBase, IDDLObjectType<MeleeHitEvent> {
 		DealtDamage = ddl.GetValue<byte>(0x4245ee6bu, DealtDamage);
 	}
 
-	[DDLRegistration(0xfa7f4708u)]
+	[DDLRegistration(0xd96a20dcu)]
 	public uint DamageHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfa7f4708u)]
+	[DDLRegistration(0x42a5ee59u)]
 	public uint WeaponNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfa7f4708u, description: "Collision hit material")]
+	[DDLRegistration(0x86bfc8e5u, description: "Collision hit material")]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0xfa7f4708u)]
+	[DDLRegistration(0x4245ee6bu)]
 	public byte DealtDamage { get; set; } = 0x00;
 
 	public new static MeleeHitEvent Create(DDLObject ddl) => new(ddl);

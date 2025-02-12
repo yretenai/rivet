@@ -19,10 +19,10 @@ public class ModelSplineMaterialExtraHair : DDLObjectType, IDDLObjectType<ModelS
 		SpecShift = ddl.GetValue<float>(0xf48c18c8u, SpecShift);
 	}
 
-	[DDLRegistration(0x50b03308u, "Transmittance")]
+	[DDLRegistration(0x6e91413eu, "Transmittance")]
 	public float Transmittance { get; set; } = 0.50f;
 
-	[DDLRegistration(0x50b03308u, "Secondary Specular Shift")]
+	[DDLRegistration(0xf48c18c8u, "Secondary Specular Shift")]
 	public float SpecShift { get; set; } = 0.50f;
 
 	public static ModelSplineMaterialExtraHair Create(DDLObject ddl) => new(ddl);

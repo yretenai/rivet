@@ -21,16 +21,16 @@ public class AwardsConfig : ConfigBase, IDDLObjectType<AwardsConfig> {
 		AwardGroups = ddl.GetObjects<AwardGroup>(0xff03c137u);
 	}
 
-	[DDLRegistration(0xd700f2fbu, "Name Tag", "Localization tag for the short name of this award set (for this title as a whole).")]
+	[DDLRegistration(0xa0041b54u, "Name Tag", "Localization tag for the short name of this award set (for this title as a whole).")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0xd700f2fbu, "Image Path", "Path for the image to display for this award group in the OS. Must be a 512x512 png.")]
+	[DDLRegistration(0x3c1a7294u, "Image Path", "Path for the image to display for this award group in the OS. Must be a 512x512 png.")]
 	public RivetAssetId ImagePath { get; set; } = default;
 
-	[DDLRegistration(0xd700f2fbu, "Set Version", "The current version of this award set. Required by some platforms.")]
+	[DDLRegistration(0xda46fe05u, "Set Version", "The current version of this award set. Required by some platforms.")]
 	public string? AwardSetVersion { get; set; } = "1.0";
 
-	[DDLRegistration(0xd700f2fbu, "Award Groups")]
+	[DDLRegistration(0xff03c137u, "Award Groups")]
 	public List<AwardGroup?> AwardGroups { get; set; } = [];
 
 	public new static AwardsConfig Create(DDLObject ddl) => new(ddl);

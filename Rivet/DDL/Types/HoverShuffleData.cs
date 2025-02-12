@@ -22,19 +22,19 @@ public class HoverShuffleData : DDLObjectType, IDDLObjectType<HoverShuffleData> 
 		HoverShuffleDesiredMoveSpeed = ddl.GetValue<float>(0x275ee12fu, HoverShuffleDesiredMoveSpeed);
 	}
 
-	[DDLRegistration(0x5d8cb773u, description: "If bot has a Hover_Shuffle animDriver, it will Hover_Shuffle over regular move if move distance is GREATER than this number")]
+	[DDLRegistration(0x85acb5f5u, description: "If bot has a Hover_Shuffle animDriver, it will Hover_Shuffle over regular move if move distance is GREATER than this number")]
 	public float HoverShuffleMinRange { get; set; } = 6.00f;
 
-	[DDLRegistration(0x5d8cb773u, description: "If bot has a Hover_Shuffle animDriver, it will Hover_Shuffle over regular move if move distance is LESS than this number")]
+	[DDLRegistration(0x63cc1a14u, description: "If bot has a Hover_Shuffle animDriver, it will Hover_Shuffle over regular move if move distance is LESS than this number")]
 	public float HoverShuffleMaxRange { get; set; } = 20.00f;
 
-	[DDLRegistration(0x5d8cb773u, description: "When bot does a Hover_Shuffle, if move dist is less than this number, Range filter is kRangeShort")]
+	[DDLRegistration(0x75b71ad4u, description: "When bot does a Hover_Shuffle, if move dist is less than this number, Range filter is kRangeShort")]
 	public float HoverShuffleDistShortThreshold { get; set; } = 13.00f;
 
-	[DDLRegistration(0x5d8cb773u, description: "When bot does a Hover_Shuffle, if move dist is less than this number, Range filter is kRangeMedium(short has priority)")]
+	[DDLRegistration(0x0824840cu, description: "When bot does a Hover_Shuffle, if move dist is less than this number, Range filter is kRangeMedium(short has priority)")]
 	public float HoverShuffleDistMediumThreshold { get; set; } = 13.00f;
 
-	[DDLRegistration(0x5d8cb773u, description: "If set, override the animation move speed of the shuffle animations")]
+	[DDLRegistration(0x275ee12fu, description: "If set, override the animation move speed of the shuffle animations")]
 	public float HoverShuffleDesiredMoveSpeed { get; set; } = -1.00f;
 
 	public static HoverShuffleData Create(DDLObject ddl) => new(ddl);

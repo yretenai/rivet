@@ -29,40 +29,40 @@ public class ShotDamageData : DDLObjectType, IDDLObjectType<ShotDamageData> {
 		CustomDamageEntries = ddl.GetObjects<CustomDamageContainer>(0x0d53b4d9u);
 	}
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0x2fb01a0bu)]
 	public float Damage { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0x840c154du)]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0xa9f955d3u)]
 	public List<KnockbackTierData?> KnockbackTiers { get; set; } = [];
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0x93d0d934u)]
 	public DamageRequestFlags DamageFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0x32db3fb4u)]
 	public float HeadshotMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0xed56b719u)]
 	public float AOE { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0xebf69433u)]
 	public float Impulse { get; set; } = 22.00f;
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0x37e1f098u)]
 	public float StatusAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0x2ee45555u)]
 	public float IgnoreDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0x04e7e2a7u)]
 	public float HitPauseDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0x5a2efcb4u)]
 	public string? DamageHashString { get; set; } = default;
 
-	[DDLRegistration(0x87e0415eu)]
+	[DDLRegistration(0x0d53b4d9u)]
 	public List<CustomDamageContainer?> CustomDamageEntries { get; set; } = [];
 
 	public static ShotDamageData Create(DDLObject ddl) => new(ddl);

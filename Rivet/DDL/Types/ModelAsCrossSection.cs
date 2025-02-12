@@ -18,7 +18,7 @@ public class ModelAsCrossSection : CrossSectionChoice, IDDLObjectType<ModelAsCro
 		Model = ddl.GetValue<RivetAssetId>(0xcec6be18u, Model);
 	}
 
-	[DDLRegistration(0xcadcbe38u, description: "Model")]
+	[DDLRegistration(0xcec6be18u, description: "Model")]
 	public RivetAssetId Model { get; set; } = default;
 
 	public new static ModelAsCrossSection Create(DDLObject ddl) => new(ddl);

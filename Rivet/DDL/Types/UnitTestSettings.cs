@@ -20,13 +20,13 @@ public class UnitTestSettings : DDLObjectType, IDDLObjectType<UnitTestSettings> 
 		DebugHeapToUseForJsonBuffer = ddl.GetValue<uint>(0xe61fe393u, DebugHeapToUseForJsonBuffer);
 	}
 
-	[DDLRegistration(0x28d90fc6u)]
+	[DDLRegistration(0x0fc9ca37u)]
 	public string? LogFile { get; set; } = "";
 
-	[DDLRegistration(0x28d90fc6u)]
+	[DDLRegistration(0x6fbe6d0cu)]
 	public bool AppendToLogFile { get; set; } = false;
 
-	[DDLRegistration(0x28d90fc6u, description: "How much memory to carve out of the debug heap for use in temporarily serializing DDL objects to JSON.")]
+	[DDLRegistration(0xe61fe393u, description: "How much memory to carve out of the debug heap for use in temporarily serializing DDL objects to JSON.")]
 	public uint DebugHeapToUseForJsonBuffer { get; set; } = 0x00200000;
 
 	public static UnitTestSettings Create(DDLObject ddl) => new(ddl);

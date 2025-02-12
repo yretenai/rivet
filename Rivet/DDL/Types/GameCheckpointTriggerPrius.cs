@@ -22,19 +22,19 @@ public class GameCheckpointTriggerPrius : DDLObjectType, IDDLObjectType<GameChec
 		NonVolRange = ddl.GetValue<float>(0x5551d3feu, NonVolRange);
 	}
 
-	[DDLRegistration(0x079093d1u, "Start Enabled?", "Whether to be enabled on load.")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled?", "Whether to be enabled on load.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0x079093d1u, "Checkpoint Name", "The name of the checkpoint to set when this is triggered.")]
+	[DDLRegistration(0x71d061f1u, "Checkpoint Name", "The name of the checkpoint to set when this is triggered.")]
 	public string? CheckpointName { get; set; } = "default";
 
-	[DDLRegistration(0x079093d1u, "Reusable?", "Whether this checkpoint trigger remains active once it's been triggered (aka, can be triggered repeatably without a reload).")]
+	[DDLRegistration(0xcb294925u, "Reusable?", "Whether this checkpoint trigger remains active once it's been triggered (aka, can be triggered repeatably without a reload).")]
 	public bool IsReusable { get; set; } = false;
 
-	[DDLRegistration(0x079093d1u, "Additional Area", "A volume/area to also trigger this checkpoint.")]
+	[DDLRegistration(0x65de3080u, "Additional Area", "A volume/area to also trigger this checkpoint.")]
 	public RivetAssetId AddlArea { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x079093d1u, "Non Volume Range", "If this component isn't on a volume, we'll use this range instead for detecting a hero is close enough to trigger.")]
+	[DDLRegistration(0x5551d3feu, "Non Volume Range", "If this component isn't on a volume, we'll use this range instead for detecting a hero is close enough to trigger.")]
 	public float NonVolRange { get; set; } = 10.00f;
 
 	public static GameCheckpointTriggerPrius Create(DDLObject ddl) => new(ddl);

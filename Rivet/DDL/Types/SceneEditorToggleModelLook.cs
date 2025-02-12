@@ -18,7 +18,7 @@ public class SceneEditorToggleModelLook : DDLObjectType, IDDLObjectType<SceneEdi
 		Look = ddl.GetString(0x1baa14b2) ?? Look;
 	}
 
-	[DDLRegistration(0x0611ae57u)]
+	[DDLRegistration(0x1baa14b2u)]
 	public string? Look { get; set; } = default;
 
 	public static SceneEditorToggleModelLook Create(DDLObject ddl) => new(ddl);

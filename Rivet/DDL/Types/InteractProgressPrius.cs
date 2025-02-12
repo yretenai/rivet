@@ -18,7 +18,7 @@ public class InteractProgressPrius : DDLObjectType, IDDLObjectType<InteractProgr
 		InputNodeName = ddl.GetString(0x670e12c7) ?? InputNodeName;
 	}
 
-	[DDLRegistration(0x208d3657u, "Input Node Name")]
+	[DDLRegistration(0x670e12c7u, "Input Node Name")]
 	public string? InputNodeName { get; set; } = "Hack_Progress";
 
 	public static InteractProgressPrius Create(DDLObject ddl) => new(ddl);

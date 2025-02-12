@@ -18,7 +18,7 @@ public class POITypePing : POIInstanceDataBase, IDDLObjectType<POITypePing> {
 		Type = ddl.GetEnum<PauseMapElementType>(0xbc4e9799u, PauseMapElementTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x53368b52u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public PauseMapElementType Type { get; set; } = PauseMapElementType.Objective;
 
 	public new static POITypePing Create(DDLObject ddl) => new(ddl);

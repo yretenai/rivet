@@ -33,52 +33,52 @@ public class HeroPortalZipLineData : DDLObjectType, IDDLObjectType<HeroPortalZip
 		SplineTilingDistance = ddl.GetValue<float>(0x771b7ab5u, SplineTilingDistance);
 	}
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0xabd94235u)]
 	public float LaunchSpeed { get; set; } = 75.00f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0x00a70eadu)]
 	public float LaunchMaxHeight { get; set; } = 3.00f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0x73cfc08bu)]
 	public float LaunchDistanceForMaxHeight { get; set; } = 20.00f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0xf3cf40a8u)]
 	public float LaunchMinTime { get; set; } = 0.20f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0xf03ca0e7u)]
 	public float LaunchMaxTime { get; set; } = 0.40f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0x23a78838u)]
 	public float TautTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0x0c8e3e46u)]
 	public float TautMinAmplitude { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0x9cfd2eacu)]
 	public float TautMaxAmplitude { get; set; } = 0.20f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0xcbe7672fu)]
 	public float TautFrequency { get; set; } = 0.50f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0x1e044121u)]
 	public float RecoilMinWaveLength { get; set; } = 2.00f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0xe900bc78u)]
 	public float RecoilMaxAmplitude { get; set; } = 0.50f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0x1c826ff4u)]
 	public RivetAssetId ProjectileActor { get; set; } = default;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0x31927ee6u)]
 	public float ProjectileActorScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0x90e8d3cfu)]
 	public RivetAssetId SplineMaterial { get; set; } = default;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0x0a68ac1au)]
 	public float SplineWidth { get; set; } = 0.02f;
 
-	[DDLRegistration(0xb1d32fbdu)]
+	[DDLRegistration(0x771b7ab5u)]
 	public float SplineTilingDistance { get; set; } = -1.00f;
 
 	public static HeroPortalZipLineData Create(DDLObject ddl) => new(ddl);

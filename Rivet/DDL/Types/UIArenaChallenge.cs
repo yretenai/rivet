@@ -25,28 +25,28 @@ public class UIArenaChallenge : DDLObjectType, IDDLObjectType<UIArenaChallenge> 
 		GlobalSaveTableKey = ddl.GetString(0x6cecc314) ?? GlobalSaveTableKey;
 	}
 
-	[DDLRegistration(0x8d9cbbf4u)]
+	[DDLRegistration(0x3265b4aau)]
 	public string? Title { get; set; } = default;
 
-	[DDLRegistration(0x8d9cbbf4u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x8d9cbbf4u)]
+	[DDLRegistration(0x70a93c34u)]
 	public UIArenaChallengeReward? Reward { get; set; } = default;
 
-	[DDLRegistration(0x8d9cbbf4u)]
+	[DDLRegistration(0x0705ae88u)]
 	public UIArenaChallengeReward? RewardSecondary { get; set; } = default;
 
-	[DDLRegistration(0x8d9cbbf4u)]
+	[DDLRegistration(0x04f23303u)]
 	public UIArenaChallengeReward? ChallengeModeReward { get; set; } = default;
 
-	[DDLRegistration(0x8d9cbbf4u)]
+	[DDLRegistration(0x2514e3a5u)]
 	public UIArenaChallengeReward? ChallengeModeRewardSecondary { get; set; } = default;
 
-	[DDLRegistration(0x8d9cbbf4u, description: "Mission to load when selecting this challenge (locked until mission available).")]
+	[DDLRegistration(0xa5c30e60u, description: "Mission to load when selecting this challenge (locked until mission available).")]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x8d9cbbf4u, description: "Global save key associated with this challenge's completion.")]
+	[DDLRegistration(0x6cecc314u, description: "Global save key associated with this challenge's completion.")]
 	public string? GlobalSaveTableKey { get; set; } = default;
 
 	public static UIArenaChallenge Create(DDLObject ddl) => new(ddl);

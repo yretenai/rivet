@@ -30,43 +30,43 @@ public class SkinManagerPrius : SkinManagerBasePrius, IDDLObjectType<SkinManager
 		IgnoreHead = ddl.GetValue<bool>(0xa46ea954u, IgnoreHead);
 	}
 
-	[DDLRegistration(0xcac4304au, "Type", "Type of actor")]
+	[DDLRegistration(0xbc4e9799u, "Type", "Type of actor")]
 	public x7b720148 Type { get; set; } = x7b720148.Bot;
 
-	[DDLRegistration(0xcac4304au, "Body Type", "Body type for this actor")]
+	[DDLRegistration(0x1a1c112au, "Body Type", "Body type for this actor")]
 	public x5d60d87e BodyType { get; set; } = x5d60d87e.HM1;
 
-	[DDLRegistration(0xcac4304au, "Max Layers Override", "Override the default maximum layers for this actor")]
+	[DDLRegistration(0xbae3df2du, "Max Layers Override", "Override the default maximum layers for this actor")]
 	public uint MaxLayersOverride { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcac4304au)]
+	[DDLRegistration(0x82c2bd1cu)]
 	public bool AddedDynamically { get; set; } = false;
 
-	[DDLRegistration(0xcac4304au, "Apply Skin Tint", "Apply an RGB skin tint to this actor")]
+	[DDLRegistration(0x5a450569u, "Apply Skin Tint", "Apply an RGB skin tint to this actor")]
 	public bool ApplySkinTint { get; set; } = false;
 
-	[DDLRegistration(0xcac4304au)]
+	[DDLRegistration(0x76c51e4cu)]
 	public string? ColorConstantName { get; set; } = "Skin_Tint";
 
-	[DDLRegistration(0xcac4304au, "Red", "Red value in range 0 to 255")]
+	[DDLRegistration(0xbee6a893u, "Red", "Red value in range 0 to 255")]
 	public byte R { get; set; } = 0x00;
 
-	[DDLRegistration(0xcac4304au, "Green", "Green value in range 0 to 255")]
+	[DDLRegistration(0xd33b4c78u, "Green", "Green value in range 0 to 255")]
 	public byte G { get; set; } = 0x00;
 
-	[DDLRegistration(0xcac4304au, "Blue", "Blue value in range 0 to 255")]
+	[DDLRegistration(0xa351b8f7u, "Blue", "Blue value in range 0 to 255")]
 	public byte B { get; set; } = 0x00;
 
-	[DDLRegistration(0xcac4304au, "Color Config", "Skin color config to use with this actor")]
+	[DDLRegistration(0xa50ec5bfu, "Color Config", "Skin color config to use with this actor")]
 	public RivetAssetId ColorConfig { get; set; } = default;
 
-	[DDLRegistration(0xcac4304au, "Color Config Name", "Name of the color in the skin color config")]
+	[DDLRegistration(0x351f7eaau, "Color Config Name", "Name of the color in the skin color config")]
 	public string? ColorConfigName { get; set; } = default;
 
-	[DDLRegistration(0xcac4304au)]
+	[DDLRegistration(0xfbc9245fu)]
 	public List<SkinManagerColorPrius?> ColorList { get; set; } = [];
 
-	[DDLRegistration(0xcac4304au, description: "Ignore modifying the head actor")]
+	[DDLRegistration(0xa46ea954u, description: "Ignore modifying the head actor")]
 	public bool IgnoreHead { get; set; } = false;
 
 	public new static SkinManagerPrius Create(DDLObject ddl) => new(ddl);

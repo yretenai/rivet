@@ -19,10 +19,10 @@ public class OnStringMessageActionPrius : OnCustomEventActionBasePrius, IDDLObje
 		MessageRequired = ddl.GetString(0xfec6cca3) ?? MessageRequired;
 	}
 
-	[DDLRegistration(0x4f9fcd3bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x4f9fcd3bu, description: "If not empty, will only trigger when this message is received.")]
+	[DDLRegistration(0xfec6cca3u, description: "If not empty, will only trigger when this message is received.")]
 	public string? MessageRequired { get; set; } = "";
 
 	public new static OnStringMessageActionPrius Create(DDLObject ddl) => new(ddl);

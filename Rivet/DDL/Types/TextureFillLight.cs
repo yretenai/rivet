@@ -22,19 +22,19 @@ public class TextureFillLight : DDLObjectType, IDDLObjectType<TextureFillLight> 
 		FillLightElevation = ddl.GetValue<float>(0x569cc8d0u, FillLightElevation);
 	}
 
-	[DDLRegistration(0x64ba71a3u)]
+	[DDLRegistration(0xee3b1deau)]
 	public DDLVector3? FillLightColor { get; set; } = default;
 
-	[DDLRegistration(0x64ba71a3u, "Intensity")]
+	[DDLRegistration(0x83043ac3u, "Intensity")]
 	public float FillLightIntensity { get; set; } = 0.00f;
 
-	[DDLRegistration(0x64ba71a3u, "SpecIntensity")]
+	[DDLRegistration(0x15a585e7u, "SpecIntensity")]
 	public float FillLightSpecIntensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x64ba71a3u, "Azimuth")]
+	[DDLRegistration(0x6c8f1f63u, "Azimuth")]
 	public float FillLightAzimuth { get; set; } = 0.00f;
 
-	[DDLRegistration(0x64ba71a3u, "Elevation")]
+	[DDLRegistration(0x569cc8d0u, "Elevation")]
 	public float FillLightElevation { get; set; } = 45.00f;
 
 	public static TextureFillLight Create(DDLObject ddl) => new(ddl);

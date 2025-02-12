@@ -22,19 +22,19 @@ public class ConnectionEffectPrius : DDLObjectType, IDDLObjectType<ConnectionEff
 		ConnectedOffset = ddl.GetObject<DDLVector3>(0xd6ce116bu);
 	}
 
-	[DDLRegistration(0x8009d13cu, "Locator on main actor")]
+	[DDLRegistration(0x5e0849bdu, "Locator on main actor")]
 	public string? MainLocator { get; set; } = default;
 
-	[DDLRegistration(0x8009d13cu, "Main actor fx offset")]
+	[DDLRegistration(0xacf4ce05u, "Main actor fx offset")]
 	public DDLVector3? MainOffset { get; set; } = default;
 
-	[DDLRegistration(0x8009d13cu, "Connected Actor")]
+	[DDLRegistration(0xea5a6203u, "Connected Actor")]
 	public RivetAssetId ConnectedActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8009d13cu, "Locator on connected actor")]
+	[DDLRegistration(0xf4783f3du, "Locator on connected actor")]
 	public string? ConnectedLocator { get; set; } = default;
 
-	[DDLRegistration(0x8009d13cu, "Connected actor fx offset")]
+	[DDLRegistration(0xd6ce116bu, "Connected actor fx offset")]
 	public DDLVector3? ConnectedOffset { get; set; } = default;
 
 	public static ConnectionEffectPrius Create(DDLObject ddl) => new(ddl);

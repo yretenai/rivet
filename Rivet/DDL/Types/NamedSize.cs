@@ -19,10 +19,10 @@ public class NamedSize : DDLObjectType, IDDLObjectType<NamedSize> {
 		Size = ddl.GetValue<uint>(0xc750e4dau, Size);
 	}
 
-	[DDLRegistration(0x444847b8u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x444847b8u)]
+	[DDLRegistration(0xc750e4dau)]
 	public uint Size { get; set; } = 0x00000000;
 
 	public static NamedSize Create(DDLObject ddl) => new(ddl);

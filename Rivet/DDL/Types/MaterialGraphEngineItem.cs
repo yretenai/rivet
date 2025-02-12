@@ -22,19 +22,19 @@ public class MaterialGraphEngineItem : DDLObjectType, IDDLObjectType<MaterialGra
 		MaterialGraphDef = ddl.GetObject<MaterialGraphDef>(0xb67789c2u);
 	}
 
-	[DDLRegistration(0x5384d94bu)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x5384d94bu)]
+	[DDLRegistration(0x8e3b4fe9u)]
 	public bool Force { get; set; } = false;
 
-	[DDLRegistration(0x5384d94bu)]
+	[DDLRegistration(0x20b26178u)]
 	public int ForceCounter { get; set; } = 0;
 
-	[DDLRegistration(0x5384d94bu)]
+	[DDLRegistration(0x755953beu)]
 	public MaterialNodeLibraryList? MaterialNodeLibraryList { get; set; } = default;
 
-	[DDLRegistration(0x5384d94bu)]
+	[DDLRegistration(0xb67789c2u)]
 	public MaterialGraphDef? MaterialGraphDef { get; set; } = default;
 
 	public static MaterialGraphEngineItem Create(DDLObject ddl) => new(ddl);

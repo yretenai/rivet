@@ -20,13 +20,13 @@ public class Cinematic2Settings : DDLObjectType, IDDLObjectType<Cinematic2Settin
 		MovieUIUpdateDelay = ddl.GetValue<float>(0x78f3d516u, MovieUIUpdateDelay);
 	}
 
-	[DDLRegistration(0x17a28287u)]
+	[DDLRegistration(0x71f2be5eu)]
 	public x0c74f3c1 TimecodeMode { get; set; } = x0c74f3c1.Disabled;
 
-	[DDLRegistration(0x17a28287u)]
+	[DDLRegistration(0x7d223a82u)]
 	public float VfxUISpawnDelay { get; set; } = 0.55f;
 
-	[DDLRegistration(0x17a28287u)]
+	[DDLRegistration(0x78f3d516u)]
 	public float MovieUIUpdateDelay { get; set; } = 0.10f;
 
 	public static Cinematic2Settings Create(DDLObject ddl) => new(ddl);

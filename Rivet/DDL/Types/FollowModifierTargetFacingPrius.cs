@@ -39,70 +39,70 @@ public class FollowModifierTargetFacingPrius : DDLObjectType, IDDLObjectType<Fol
 		MotionMode = ddl.GetEnum<x79dd0c33>(0x6057228cu, x79dd0c33Values.Lookup);
 	}
 
-	[DDLRegistration(0xd727f3b0u, "Priority")]
+	[DDLRegistration(0x98a76157u, "Priority")]
 	public xf94df176 Priority { get; set; } = xf94df176.Default;
 
-	[DDLRegistration(0xd727f3b0u, "Vector Apply")]
+	[DDLRegistration(0xff506db2u, "Vector Apply")]
 	public x531b18aa VectorMode { get; set; } = x531b18aa.None;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0xe9df027du)]
 	public DDLVector3? TargetVector { get; set; } = default;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0xa68ca01fu)]
 	public uint TargetActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0xdf99230eu)]
 	public float TargetYaw { get; set; } = 9999.00f;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0xfbbfa6acu)]
 	public float TargetPitch { get; set; } = 9999.00f;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0x121a236fu)]
 	public float TargetTolerance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0xd0dd75a7u)]
 	public float AccelOrGain { get; set; } = 30.00f;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0x2042fe2bu)]
 	public float DecelOrDamp { get; set; } = 8.00f;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0xee2137e5u)]
 	public float SpeedMaxYaw { get; set; } = 230.00f;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0x5cef694eu)]
 	public float SpeedMaxPitch { get; set; } = 57.00f;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0x8f28295eu)]
 	public float ApplyDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0x00b39182u)]
 	public float LockBlendTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0x44ccc370u)]
 	public float PeakAngle { get; set; } = 3.14f;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0xafd78f02u)]
 	public float BackDeadAngle { get; set; } = 31.51f;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0xde5d2683u)]
 	public bool DestroyOnBlock { get; set; } = true;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0x856e8376u)]
 	public bool DestroyOnInput { get; set; } = false;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0x07fd4567u)]
 	public bool DestroyOnComplete { get; set; } = false;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0xcce09cfdu)]
 	public bool UseYawInput { get; set; } = false;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0x057d1da2u)]
 	public bool UsePitchInput { get; set; } = false;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0xa6c1b50fu)]
 	public bool ApplyWithInput { get; set; } = true;
 
-	[DDLRegistration(0xd727f3b0u)]
+	[DDLRegistration(0x6057228cu)]
 	public x79dd0c33 MotionMode { get; set; } = x79dd0c33.Default;
 
 	public static FollowModifierTargetFacingPrius Create(DDLObject ddl) => new(ddl);

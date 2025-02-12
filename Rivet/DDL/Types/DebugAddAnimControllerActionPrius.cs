@@ -19,10 +19,10 @@ public class DebugAddAnimControllerActionPrius : DDLObjectType, IDDLObjectType<D
 		Seed = ddl.GetValue<uint>(0x741723b6u, Seed);
 	}
 
-	[DDLRegistration(0x73a2685eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0x73a2685eu, "Random Seed", "Random seed to initialize an AnimController with")]
+	[DDLRegistration(0x741723b6u, "Random Seed", "Random seed to initialize an AnimController with")]
 	public uint Seed { get; set; } = 0x00000000;
 
 	public static DebugAddAnimControllerActionPrius Create(DDLObject ddl) => new(ddl);

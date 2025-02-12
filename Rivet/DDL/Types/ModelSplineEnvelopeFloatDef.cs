@@ -19,10 +19,10 @@ public class ModelSplineEnvelopeFloatDef : DDLObjectType, IDDLObjectType<ModelSp
 		Envelope = ddl.GetObject<EnvelopeFloatDef>(0x7094c518u);
 	}
 
-	[DDLRegistration(0xd3a52239u)]
+	[DDLRegistration(0x950d56d7u)]
 	public float BaseValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd3a52239u)]
+	[DDLRegistration(0x7094c518u)]
 	public EnvelopeFloatDef? Envelope { get; set; } = default;
 
 	public static ModelSplineEnvelopeFloatDef Create(DDLObject ddl) => new(ddl);

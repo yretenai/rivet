@@ -18,7 +18,7 @@ public class WeakspotDestructiblePrius : WeakspotPrius, IDDLObjectType<WeakspotD
 		HitPoints = ddl.GetValue<float>(0xc518cd0au, HitPoints);
 	}
 
-	[DDLRegistration(0xedd5f8c3u, "Hit Points", "Weakspot becomes unuseable when HP reaches 0.  If set to negative, HP is not used.")]
+	[DDLRegistration(0xc518cd0au, "Hit Points", "Weakspot becomes unuseable when HP reaches 0.  If set to negative, HP is not used.")]
 	public float HitPoints { get; set; } = -1.00f;
 
 	public new static WeakspotDestructiblePrius Create(DDLObject ddl) => new(ddl);

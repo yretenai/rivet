@@ -25,28 +25,28 @@ public class DevstatsSystemMenuOptionChangedEvent : EventBase, IDDLObjectType<De
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0xed99432eu)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xed99432eu)]
+	[DDLRegistration(0xde3246bcu)]
 	public string? OptionName { get; set; } = default;
 
-	[DDLRegistration(0xed99432eu)]
+	[DDLRegistration(0xbb242993u)]
 	public string? StringValue { get; set; } = default;
 
-	[DDLRegistration(0xed99432eu)]
+	[DDLRegistration(0xf03f0a74u)]
 	public float FloatValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xed99432eu)]
+	[DDLRegistration(0xb9bc2cbcu)]
 	public byte UIntValue { get; set; } = 0x00;
 
-	[DDLRegistration(0xed99432eu)]
+	[DDLRegistration(0x17365398u)]
 	public bool IsPreset { get; set; } = false;
 
-	[DDLRegistration(0xed99432eu)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0xed99432eu)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static DevstatsSystemMenuOptionChangedEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class GlobalSaveTableChangedEvent : EventBase, IDDLObjectType<GlobalSaveT
 		Key = ddl.GetValue<uint>(0xa0c58260u, Key);
 	}
 
-	[DDLRegistration(0x7ffba52au, description: "Reason why the global save table changed.")]
+	[DDLRegistration(0x05c0c66bu, description: "Reason why the global save table changed.")]
 	public x5d051641 Reason { get; set; } = x5d051641.Load;
 
-	[DDLRegistration(0x7ffba52au, "Key", "Key that was changed or 0 if multiple keys were changed at once.")]
+	[DDLRegistration(0xa0c58260u, "Key", "Key that was changed or 0 if multiple keys were changed at once.")]
 	public uint Key { get; set; } = 0x00000000;
 
 	public new static GlobalSaveTableChangedEvent Create(DDLObject ddl) => new(ddl);

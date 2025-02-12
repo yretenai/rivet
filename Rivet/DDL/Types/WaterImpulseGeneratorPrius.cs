@@ -18,7 +18,7 @@ public class WaterImpulseGeneratorPrius : DDLObjectType, IDDLObjectType<WaterImp
 		ImpulseList = ddl.GetObjects<WaterImpulseData>(0xa804b292u);
 	}
 
-	[DDLRegistration(0xaa4bf9eeu)]
+	[DDLRegistration(0xa804b292u)]
 	public List<WaterImpulseData?> ImpulseList { get; set; } = [];
 
 	public static WaterImpulseGeneratorPrius Create(DDLObject ddl) => new(ddl);

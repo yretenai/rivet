@@ -21,16 +21,16 @@ public class GameFrameBudgetAmortizationSettings : DDLObjectType, IDDLObjectType
 		MaxShardSpawnsPerFrame = ddl.GetValue<uint>(0x0f925da6u, MaxShardSpawnsPerFrame);
 	}
 
-	[DDLRegistration(0x421455b9u, description: "Don't spawn more than this many chunks per damage state. Reduce the number of generic chunks first. Then, look chunks.")]
+	[DDLRegistration(0x78d406d5u, description: "Don't spawn more than this many chunks per damage state. Reduce the number of generic chunks first. Then, look chunks.")]
 	public uint MaxDamageStateChunksPerState { get; set; } = 0x00000014;
 
-	[DDLRegistration(0x421455b9u, description: "Stop processing damage state changes this frame if we will pass this number of chunks for the frame.")]
+	[DDLRegistration(0x6ebfe8e3u, description: "Stop processing damage state changes this frame if we will pass this number of chunks for the frame.")]
 	public uint MaxDamageStateChunksPerFrame { get; set; } = 0x0000001e;
 
-	[DDLRegistration(0x421455b9u, description: "Stop processing LootSystem simple spawn requests this frame if we will pass this number of pickups for the frame.")]
+	[DDLRegistration(0xd50c55aeu, description: "Stop processing LootSystem simple spawn requests this frame if we will pass this number of pickups for the frame.")]
 	public uint MaxLootSystemSimpleSpawnPickupsPerFrame { get; set; } = 0x00000028;
 
-	[DDLRegistration(0x421455b9u, description: "Shatterbomb/ProtoGrenade shard spawns are spread across several frames, so only allow spawning this many during one frame.")]
+	[DDLRegistration(0x0f925da6u, description: "Shatterbomb/ProtoGrenade shard spawns are spread across several frames, so only allow spawning this many during one frame.")]
 	public uint MaxShardSpawnsPerFrame { get; set; } = 0x00000014;
 
 	public static GameFrameBudgetAmortizationSettings Create(DDLObject ddl) => new(ddl);

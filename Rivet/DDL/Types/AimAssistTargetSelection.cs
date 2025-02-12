@@ -35,58 +35,58 @@ public class AimAssistTargetSelection : DDLObjectType, IDDLObjectType<AimAssistT
 		AutoTargetOuterAngleTrav = ddl.GetValue<float>(0x86362b44u, AutoTargetOuterAngleTrav);
 	}
 
-	[DDLRegistration(0x6a7d116du, "Persistence Zone Factor")]
+	[DDLRegistration(0x5b5ec948u, "Persistence Zone Factor")]
 	public float PersistenceZoneFactor { get; set; } = 0.50f;
 
-	[DDLRegistration(0x6a7d116du, "Persistence Hold Time")]
+	[DDLRegistration(0x4c347bc7u, "Persistence Hold Time")]
 	public float PersistenceHoldTime { get; set; } = 1.50f;
 
-	[DDLRegistration(0x6a7d116du, "Persistence Inner Time")]
+	[DDLRegistration(0x3c96f8e2u, "Persistence Inner Time")]
 	public float PersistenceInnerTime { get; set; } = 0.70f;
 
-	[DDLRegistration(0x6a7d116du, "Persistence Inner Mod")]
+	[DDLRegistration(0xa96db49cu, "Persistence Inner Mod")]
 	public float PersistenceInnerMod { get; set; } = 3.00f;
 
-	[DDLRegistration(0x6a7d116du, "Select Persist Scale")]
+	[DDLRegistration(0x498182a0u, "Select Persist Scale")]
 	public float SelectPersistScale { get; set; } = 1.02f;
 
-	[DDLRegistration(0x6a7d116du, "Select Camera On Scale")]
+	[DDLRegistration(0x268bd042u, "Select Camera On Scale")]
 	public float SelectCameraOnScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6a7d116du, "Select Angle Weight")]
+	[DDLRegistration(0x60bd29a6u, "Select Angle Weight")]
 	public float SelectAngleWeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6a7d116du, "Select Distance Weight")]
+	[DDLRegistration(0xad639a21u, "Select Distance Weight")]
 	public float SelectDistanceWeight { get; set; } = 0.10f;
 
-	[DDLRegistration(0x6a7d116du, "Select Recent Damage Scale")]
+	[DDLRegistration(0x2d09435cu, "Select Recent Damage Scale")]
 	public float SelectRecentDamageScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6a7d116du, "Select Recent Damage Time")]
+	[DDLRegistration(0x4e859b5du, "Select Recent Damage Time")]
 	public float SelectRecentDamageTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6a7d116du, "Select Search Angle")]
+	[DDLRegistration(0x59638d87u, "Select Search Angle")]
 	public float TargetSearchAngle { get; set; } = 25.00f;
 
-	[DDLRegistration(0x6a7d116du, "Select Pitch Search Angle (if used)")]
+	[DDLRegistration(0x1d61f7c0u, "Select Pitch Search Angle (if used)")]
 	public float TargetSearchAnglePitch { get; set; } = 25.00f;
 
-	[DDLRegistration(0x6a7d116du, "Use Search Angle From User Instead Of Camera")]
+	[DDLRegistration(0xcfcece6au, "Use Search Angle From User Instead Of Camera")]
 	public bool UseSearchAngleFromUser { get; set; } = false;
 
-	[DDLRegistration(0x6a7d116du, "Use Separate Search Angle For Pitch")]
+	[DDLRegistration(0x43d15d8eu, "Use Separate Search Angle For Pitch")]
 	public bool UseSearchAngleSeparatePitch { get; set; } = false;
 
-	[DDLRegistration(0x6a7d116du, "AutoTarget Outer Range")]
+	[DDLRegistration(0xc4768e80u, "AutoTarget Outer Range")]
 	public float AutoTargetOuterRange { get; set; } = 2.00f;
 
-	[DDLRegistration(0x6a7d116du, "AutoTarget Outer Angle")]
+	[DDLRegistration(0x577091c0u, "AutoTarget Outer Angle")]
 	public float AutoTargetOuterAngle { get; set; } = 2.00f;
 
-	[DDLRegistration(0x6a7d116du, "AutoTarget Outer Range Trav")]
+	[DDLRegistration(0x3504f24cu, "AutoTarget Outer Range Trav")]
 	public float AutoTargetOuterRangeTrav { get; set; } = 2.00f;
 
-	[DDLRegistration(0x6a7d116du, "AutoTarget Outer Angle Trav")]
+	[DDLRegistration(0x86362b44u, "AutoTarget Outer Angle Trav")]
 	public float AutoTargetOuterAngleTrav { get; set; } = 2.00f;
 
 	public static AimAssistTargetSelection Create(DDLObject ddl) => new(ddl);

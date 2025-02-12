@@ -21,16 +21,16 @@ public class ExplodedDealtEvent : EventBase, IDDLObjectType<ExplodedDealtEvent> 
 		ExplodedActorLocation = ddl.GetObject<DDLVector3>(0x164a1f81u);
 	}
 
-	[DDLRegistration(0xa79c1a7du)]
+	[DDLRegistration(0x186cc71bu)]
 	public DamageTypesGame LastDamageType { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0xa79c1a7du)]
+	[DDLRegistration(0xa66a5725u)]
 	public bool SmokePuff { get; set; } = false;
 
-	[DDLRegistration(0xa79c1a7du)]
+	[DDLRegistration(0x52592f6cu)]
 	public uint ExplodedActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa79c1a7du)]
+	[DDLRegistration(0x164a1f81u)]
 	public DDLVector3? ExplodedActorLocation { get; set; } = default;
 
 	public new static ExplodedDealtEvent Create(DDLObject ddl) => new(ddl);

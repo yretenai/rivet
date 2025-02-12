@@ -22,19 +22,19 @@ public class MissionNodeGameDef_Tools : NodeBaseDef, IDDLObjectType<MissionNodeG
 		Output = ddl.GetObject<OutputPlugBoolean>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0xfa5df9b8u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0xfa5df9b8u)]
+	[DDLRegistration(0x55ff52bdu)]
 	public AssetReferenceDef? ObjectiveGraph { get; set; } = default;
 
-	[DDLRegistration(0xfa5df9b8u)]
+	[DDLRegistration(0xb4577d57u)]
 	public xc1d164ee UnlockBehavior { get; set; } = xc1d164ee.Available;
 
-	[DDLRegistration(0xfa5df9b8u)]
+	[DDLRegistration(0x3d19ee29u)]
 	public List<InputPlugBoolean?> Inputs { get; set; } = [];
 
-	[DDLRegistration(0xfa5df9b8u)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugBoolean? Output { get; set; } = default;
 
 	public new static MissionNodeGameDef_Tools Create(DDLObject ddl) => new(ddl);

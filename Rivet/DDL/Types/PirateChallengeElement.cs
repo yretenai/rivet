@@ -19,10 +19,10 @@ public class PirateChallengeElement : DDLObjectType, IDDLObjectType<PirateChalle
 		Line = ddl.GetString(0xe1847446) ?? Line;
 	}
 
-	[DDLRegistration(0x323265f4u, "Pirate Type")]
+	[DDLRegistration(0x3148c575u, "Pirate Type")]
 	public PirateTypes PirateType { get; set; } = PirateTypes.Green;
 
-	[DDLRegistration(0x323265f4u)]
+	[DDLRegistration(0xe1847446u)]
 	public string? Line { get; set; } = default;
 
 	public static PirateChallengeElement Create(DDLObject ddl) => new(ddl);

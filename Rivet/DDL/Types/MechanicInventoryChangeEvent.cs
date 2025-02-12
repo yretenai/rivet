@@ -19,10 +19,10 @@ public class MechanicInventoryChangeEvent : ChangeModeEvent, IDDLObjectType<Mech
 		RemovedMechanics = ddl.GetStrings(0xe5f14bc7u);
 	}
 
-	[DDLRegistration(0x35748b97u)]
+	[DDLRegistration(0x159a406bu)]
 	public List<string?> AddedMechanics { get; set; } = [];
 
-	[DDLRegistration(0x35748b97u)]
+	[DDLRegistration(0xe5f14bc7u)]
 	public List<string?> RemovedMechanics { get; set; } = [];
 
 	public new static MechanicInventoryChangeEvent Create(DDLObject ddl) => new(ddl);

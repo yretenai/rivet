@@ -18,7 +18,7 @@ public class BotGroundResponseDamagePrius : BotGroundResponseBasePrius, IDDLObje
 		DPS = ddl.GetValue<float>(0xd213ce3du, DPS);
 	}
 
-	[DDLRegistration(0xb02406b9u)]
+	[DDLRegistration(0xd213ce3du)]
 	public float DPS { get; set; } = 0.00f;
 
 	public new static BotGroundResponseDamagePrius Create(DDLObject ddl) => new(ddl);

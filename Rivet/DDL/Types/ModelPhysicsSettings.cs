@@ -21,16 +21,16 @@ public class ModelPhysicsSettings : DDLObjectType, IDDLObjectType<ModelPhysicsSe
 		PhysicsPerformance = ddl.GetEnum<x21a0df30>(0x235cdcedu, x21a0df30Values.Lookup);
 	}
 
-	[DDLRegistration(0x929c6810u, "Collision Type")]
+	[DDLRegistration(0x56defaedu, "Collision Type")]
 	public CollisionType CollisionType { get; set; } = CollisionType.Static;
 
-	[DDLRegistration(0x929c6810u, "Collision Only", "The model will not be rendered in the game")]
+	[DDLRegistration(0x3ad99e94u, "Collision Only", "The model will not be rendered in the game")]
 	public bool CollisionOnly { get; set; } = false;
 
-	[DDLRegistration(0x929c6810u, "Save Mem By Not Moving", "This object is only used as static collision, so save memory by not loading the data that makes it move.")]
+	[DDLRegistration(0x596a3623u, "Save Mem By Not Moving", "This object is only used as static collision, so save memory by not loading the data that makes it move.")]
 	public bool IsOnlyStatic { get; set; } = true;
 
-	[DDLRegistration(0x929c6810u, "Physics Performance", "Set to 'bad' to override triangle limits for mesh shapes.")]
+	[DDLRegistration(0x235cdcedu, "Physics Performance", "Set to 'bad' to override triangle limits for mesh shapes.")]
 	public x21a0df30 PhysicsPerformance { get; set; } = x21a0df30.Good;
 
 	public static ModelPhysicsSettings Create(DDLObject ddl) => new(ddl);

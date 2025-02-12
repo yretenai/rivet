@@ -18,7 +18,7 @@ public class GameFocusTrackingConfig : FocusTrackingConfig, IDDLObjectType<GameF
 		GameFocusTrackingData = ddl.GetObject<GameFocusTrackingManagerData>(0xd44893b3u);
 	}
 
-	[DDLRegistration(0x59d9e07fu)]
+	[DDLRegistration(0xd44893b3u)]
 	public GameFocusTrackingManagerData? GameFocusTrackingData { get; set; } = default;
 
 	public new static GameFocusTrackingConfig Create(DDLObject ddl) => new(ddl);

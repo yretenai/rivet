@@ -18,7 +18,7 @@ public class PickupLandEvent : EventBase, IDDLObjectType<PickupLandEvent> {
 		Landed = ddl.GetValue<uint>(0x92aca777u, Landed);
 	}
 
-	[DDLRegistration(0x336c846cu, description: "Actor that landed.")]
+	[DDLRegistration(0x92aca777u, description: "Actor that landed.")]
 	public uint Landed { get; set; } = 0x00000000;
 
 	public new static PickupLandEvent Create(DDLObject ddl) => new(ddl);

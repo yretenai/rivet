@@ -20,13 +20,13 @@ public class RegionAuxInstanceUnit : DDLObjectType, IDDLObjectType<RegionAuxInst
 		NamedLinks = ddl.GetDictionary<RivetAssetId, RegionNamedLink>(0x6bee750e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionNamedLink>(mapId));
 	}
 
-	[DDLRegistration(0x25a9c1fcu, "Map Overlay (Devstats Only)")]
+	[DDLRegistration(0x10c367a4u, "Map Overlay (Devstats Only)")]
 	public Region2DMapOverlay? MapOverlay { get; set; } = default;
 
-	[DDLRegistration(0x25a9c1fcu)]
+	[DDLRegistration(0x9c997da9u)]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
-	[DDLRegistration(0x25a9c1fcu)]
+	[DDLRegistration(0x6bee750eu)]
 	public Dictionary<RivetAssetId, RegionNamedLink?> NamedLinks { get; set; } = [];
 
 	public static RegionAuxInstanceUnit Create(DDLObject ddl) => new(ddl);

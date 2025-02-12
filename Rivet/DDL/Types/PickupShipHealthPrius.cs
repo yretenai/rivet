@@ -18,7 +18,7 @@ public class PickupShipHealthPrius : GamePickupItemPrius, IDDLObjectType<PickupS
 		HealthPercent = ddl.GetValue<float>(0x13ab5436u, HealthPercent);
 	}
 
-	[DDLRegistration(0x7958efa4u)]
+	[DDLRegistration(0x13ab5436u)]
 	public float HealthPercent { get; set; } = 0.40f;
 
 	public new static PickupShipHealthPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class MaterialNodeConnectedPort : DDLObjectType, IDDLObjectType<MaterialN
 		PortInternalName = ddl.GetString(0x26d2dc9c) ?? PortInternalName;
 	}
 
-	[DDLRegistration(0xcb6d0673u)]
+	[DDLRegistration(0x6a7d28a3u)]
 	public uint NodeIdLow { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcb6d0673u)]
+	[DDLRegistration(0xcdf19fa4u)]
 	public uint NodeIdHigh { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcb6d0673u)]
+	[DDLRegistration(0x26d2dc9cu)]
 	public string? PortInternalName { get; set; } = default;
 
 	public static MaterialNodeConnectedPort Create(DDLObject ddl) => new(ddl);

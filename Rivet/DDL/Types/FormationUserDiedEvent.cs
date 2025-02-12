@@ -19,10 +19,10 @@ public class FormationUserDiedEvent : EventBase, IDDLObjectType<FormationUserDie
 		DamageType = ddl.GetEnum<DamageTypesGame>(0x840c154du, DamageTypesGameValues.Lookup);
 	}
 
-	[DDLRegistration(0xc1616e86u)]
+	[DDLRegistration(0x14c58735u)]
 	public uint DamagerHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc1616e86u)]
+	[DDLRegistration(0x840c154du)]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.None;
 
 	public new static FormationUserDiedEvent Create(DDLObject ddl) => new(ddl);

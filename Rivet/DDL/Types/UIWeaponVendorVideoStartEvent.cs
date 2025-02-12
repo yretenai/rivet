@@ -18,7 +18,7 @@ public class UIWeaponVendorVideoStartEvent : EventBase, IDDLObjectType<UIWeaponV
 		WeaponName = ddl.GetString(0xca0166cc) ?? WeaponName;
 	}
 
-	[DDLRegistration(0x7909ebbfu)]
+	[DDLRegistration(0xca0166ccu)]
 	public string? WeaponName { get; set; } = default;
 
 	public new static UIWeaponVendorVideoStartEvent Create(DDLObject ddl) => new(ddl);

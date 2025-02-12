@@ -18,7 +18,7 @@ public class BugItSettings : DDLObjectType, IDDLObjectType<BugItSettings> {
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0x2d551d14u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
 	public static BugItSettings Create(DDLObject ddl) => new(ddl);

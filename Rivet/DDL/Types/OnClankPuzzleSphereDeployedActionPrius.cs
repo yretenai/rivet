@@ -20,13 +20,13 @@ public class OnClankPuzzleSphereDeployedActionPrius : DDLObjectType, IDDLObjectT
 		VolumeType = ddl.GetEnum<x17b935fe>(0x9135042fu, x17b935feValues.Lookup);
 	}
 
-	[DDLRegistration(0x090e53dcu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Puzzle;
 
-	[DDLRegistration(0x090e53dcu)]
+	[DDLRegistration(0xda0f12cau)]
 	public bool StartListening { get; set; } = true;
 
-	[DDLRegistration(0x090e53dcu, description: "What type of volumes will trigger this action.  If kNone, all will trigger.")]
+	[DDLRegistration(0x9135042fu, description: "What type of volumes will trigger this action.  If kNone, all will trigger.")]
 	public x17b935fe VolumeType { get; set; } = x17b935fe.None;
 
 	public static OnClankPuzzleSphereDeployedActionPrius Create(DDLObject ddl) => new(ddl);

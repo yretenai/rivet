@@ -21,16 +21,16 @@ public class UI_PerformanceKeyFrame : DDLObjectType, IDDLObjectType<UI_Performan
 		ValueReadOnly = ddl.GetValue<float>(0xc5897018u, ValueReadOnly);
 	}
 
-	[DDLRegistration(0xb9b97c3cu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb9b97c3cu)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb9b97c3cu)]
+	[DDLRegistration(0xdd1b7a3du)]
 	public bool ValueDisabled { get; set; } = false;
 
-	[DDLRegistration(0xb9b97c3cu, "Value")]
+	[DDLRegistration(0xc5897018u, "Value")]
 	public float ValueReadOnly { get; set; } = 0.00f;
 
 	public static UI_PerformanceKeyFrame Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class LODLimiterPrius : DDLObjectType, IDDLObjectType<LODLimiterPrius> {
 		MinLODsPerSpec = ddl.GetObjects<LODLimiterPerfSpecData>(0x5b05a821u);
 	}
 
-	[DDLRegistration(0xe1dac700u)]
+	[DDLRegistration(0x0bdbc4abu)]
 	public uint MinLOD { get; set; } = 0x00000001;
 
-	[DDLRegistration(0xe1dac700u)]
+	[DDLRegistration(0x860699a4u)]
 	public bool DisableDuringCinematics { get; set; } = true;
 
-	[DDLRegistration(0xe1dac700u, description: "Values entered in this array will override the default values above when the specified perf spec is active")]
+	[DDLRegistration(0x5b05a821u, description: "Values entered in this array will override the default values above when the specified perf spec is active")]
 	public List<LODLimiterPerfSpecData?> MinLODsPerSpec { get; set; } = [];
 
 	public static LODLimiterPrius Create(DDLObject ddl) => new(ddl);

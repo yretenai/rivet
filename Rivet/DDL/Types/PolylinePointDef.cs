@@ -19,10 +19,10 @@ public class PolylinePointDef : DDLObjectType, IDDLObjectType<PolylinePointDef> 
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
 	}
 
-	[DDLRegistration(0x2e8585aau)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x2e8585aau)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
 	public static PolylinePointDef Create(DDLObject ddl) => new(ddl);

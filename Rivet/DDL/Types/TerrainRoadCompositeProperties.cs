@@ -22,19 +22,19 @@ public class TerrainRoadCompositeProperties : DDLObjectType, IDDLObjectType<Terr
 		FalloffEasingMode = ddl.GetEnum<x93b1b93c>(0x34747428u, x93b1b93cValues.Lookup);
 	}
 
-	[DDLRegistration(0xd6728204u, description: "The amount by which this road will affect the heightfield; 0.0 indicates this road won't affect the heightfield at all, 1.0 indicates the road will fully move the heightfield.")]
+	[DDLRegistration(0x2cb85ca8u, description: "The amount by which this road will affect the heightfield; 0.0 indicates this road won't affect the heightfield at all, 1.0 indicates the road will fully move the heightfield.")]
 	public float Strength { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd6728204u, "Fade In", "This is how much the height will fade in.  With a fade of 0.0, the height will be fully started at the first point of the curve; with a fade of 1.0, the height will be faded in until it is fully visible at the second point in the curve.")]
+	[DDLRegistration(0x84ac8cf2u, "Fade In", "This is how much the height will fade in.  With a fade of 0.0, the height will be fully started at the first point of the curve; with a fade of 1.0, the height will be faded in until it is fully visible at the second point in the curve.")]
 	public float FadeIn { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd6728204u, "Fade Out", "This is how much the height will fade out.  With a fade of 0.0, the height will be fully faded by the last point of the curve; with a fade of 1.0, the height will be faded out from the second-to-last point and be fully-faded at the last point.")]
+	[DDLRegistration(0xa9e43db1u, "Fade Out", "This is how much the height will fade out.  With a fade of 0.0, the height will be fully faded by the last point of the curve; with a fade of 1.0, the height will be faded out from the second-to-last point and be fully-faded at the last point.")]
 	public float FadeOut { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd6728204u, description: "The falloff amount on each side of the road (this ranges from 0.0 - 1.0 and represents a fraction of the radius).")]
+	[DDLRegistration(0x4e874fc0u, description: "The falloff amount on each side of the road (this ranges from 0.0 - 1.0 and represents a fraction of the radius).")]
 	public float Falloff { get; set; } = 0.35f;
 
-	[DDLRegistration(0xd6728204u, "Falloff Easing Mode", "The easing mode that will be applied to the falloff")]
+	[DDLRegistration(0x34747428u, "Falloff Easing Mode", "The easing mode that will be applied to the falloff")]
 	public x93b1b93c FalloffEasingMode { get; set; } = x93b1b93c.EaseInOut;
 
 	public static TerrainRoadCompositeProperties Create(DDLObject ddl) => new(ddl);

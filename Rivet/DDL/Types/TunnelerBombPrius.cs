@@ -32,49 +32,49 @@ public class TunnelerBombPrius : DDLObjectType, IDDLObjectType<TunnelerBombPrius
 		JumpParams = ddl.GetObject<TunnelerJumpParams>(0xda6beb4bu);
 	}
 
-	[DDLRegistration(0x446e1348u)]
+	[DDLRegistration(0xd6332abdu)]
 	public uint Owner { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x446e1348u)]
+	[DDLRegistration(0x63316affu)]
 	public uint TargetHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x446e1348u, description: "Weapon ID")]
+	[DDLRegistration(0x902af590u, description: "Weapon ID")]
 	public uint WeaponId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x446e1348u)]
+	[DDLRegistration(0x2fb01a0bu)]
 	public float Damage { get; set; } = 0.00f;
 
-	[DDLRegistration(0x446e1348u)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x446e1348u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x446e1348u, description: "Distance from an enemy at which the shot will spawn the bomb that rises from the ground to explode.")]
+	[DDLRegistration(0xcc7f53a5u, description: "Distance from an enemy at which the shot will spawn the bomb that rises from the ground to explode.")]
 	public float TriggerRadius { get; set; } = 2.00f;
 
-	[DDLRegistration(0x446e1348u, description: "Amount of time it takes for the bomb to rise from the ground.")]
+	[DDLRegistration(0xc646f565u, description: "Amount of time it takes for the bomb to rise from the ground.")]
 	public float RiseUpDuration { get; set; } = 0.20f;
 
-	[DDLRegistration(0x446e1348u, description: "Distance from the ground that the bomb will rise to before exploding.")]
+	[DDLRegistration(0x5c8bef24u, description: "Distance from the ground that the bomb will rise to before exploding.")]
 	public float RiseUpDistance { get; set; } = 1.50f;
 
-	[DDLRegistration(0x446e1348u, description: "Amount of time after the bomb finishes rising but before it actually explodes.")]
+	[DDLRegistration(0x9b27bde3u, description: "Amount of time after the bomb finishes rising but before it actually explodes.")]
 	public float ExplodeDelay { get; set; } = 0.05f;
 
-	[DDLRegistration(0x446e1348u, description: "Distance from the bomb that enemies will be damaged by the explosion.")]
+	[DDLRegistration(0xb789c5e4u, description: "Distance from the bomb that enemies will be damaged by the explosion.")]
 	public float ExplodeRadius { get; set; } = 2.50f;
 
-	[DDLRegistration(0x446e1348u, description: "Limit of angle from projectile to target to count towards exploding; helps prioritize exploding due to enemies in front rather than to the side/behind.")]
+	[DDLRegistration(0x293c7871u, description: "Limit of angle from projectile to target to count towards exploding; helps prioritize exploding due to enemies in front rather than to the side/behind.")]
 	public float ExplodeAngle { get; set; } = 110.00f;
 
-	[DDLRegistration(0x446e1348u)]
+	[DDLRegistration(0x28512c61u)]
 	public bool ExplodeUseLOS { get; set; } = true;
 
-	[DDLRegistration(0x446e1348u)]
+	[DDLRegistration(0xf00ae55eu)]
 	public bool AdditionalExplosion { get; set; } = false;
 
-	[DDLRegistration(0x446e1348u)]
+	[DDLRegistration(0xda6beb4bu)]
 	public TunnelerJumpParams? JumpParams { get; set; } = default;
 
 	public static TunnelerBombPrius Create(DDLObject ddl) => new(ddl);

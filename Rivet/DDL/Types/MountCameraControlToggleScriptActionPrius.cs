@@ -18,7 +18,7 @@ public class MountCameraControlToggleScriptActionPrius : DDLObjectType, IDDLObje
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xac2625c4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
 	public static MountCameraControlToggleScriptActionPrius Create(DDLObject ddl) => new(ddl);

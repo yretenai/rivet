@@ -28,37 +28,37 @@ public class DudeExploderPrius : DDLObjectType, IDDLObjectType<DudeExploderPrius
 		GenericChunks = ddl.GetObject<GenericChunks>(0x1c9c7798u);
 	}
 
-	[DDLRegistration(0x3f43bd34u)]
+	[DDLRegistration(0x9b27bde3u)]
 	public float ExplodeDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3f43bd34u, description: "If set to a number >= 0, we will do a random delay to explode between this min and the above explode delay.")]
+	[DDLRegistration(0x39b289deu, description: "If set to a number >= 0, we will do a random delay to explode between this min and the above explode delay.")]
 	public float ExplodeDelayMin { get; set; } = -1.00f;
 
-	[DDLRegistration(0x3f43bd34u)]
+	[DDLRegistration(0xde52bd13u)]
 	public float HideDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3f43bd34u, description: "Should this dude always explode when he dies, or only when indicated by the damage request?")]
+	[DDLRegistration(0xa24877a2u, description: "Should this dude always explode when he dies, or only when indicated by the damage request?")]
 	public bool AlwaysExplodeOnDeath { get; set; } = false;
 
-	[DDLRegistration(0x3f43bd34u)]
+	[DDLRegistration(0xf0d89680u)]
 	public float MinSpeed { get; set; } = 7.00f;
 
-	[DDLRegistration(0x3f43bd34u)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x3f43bd34u)]
+	[DDLRegistration(0x216409e5u)]
 	public int MaxSpecificChunks { get; set; } = -1;
 
-	[DDLRegistration(0x3f43bd34u)]
+	[DDLRegistration(0x2d5706d6u)]
 	public int MaxTotalChunks { get; set; } = -1;
 
-	[DDLRegistration(0x3f43bd34u)]
+	[DDLRegistration(0x92b450cdu)]
 	public float ChunkLifetime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x3f43bd34u)]
+	[DDLRegistration(0xd08cd304u)]
 	public List<SpecificChunk?> SpecificChunks { get; set; } = [];
 
-	[DDLRegistration(0x3f43bd34u)]
+	[DDLRegistration(0x1c9c7798u)]
 	public GenericChunks? GenericChunks { get; set; } = default;
 
 	public static DudeExploderPrius Create(DDLObject ddl) => new(ddl);

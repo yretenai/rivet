@@ -22,19 +22,19 @@ public class SpeedDependentCameraConfigData : DDLObjectType, IDDLObjectType<Spee
 		AllowCameraInput = ddl.GetValue<bool>(0xc114162fu, AllowCameraInput);
 	}
 
-	[DDLRegistration(0x54ebe33au)]
+	[DDLRegistration(0x16753237u)]
 	public float Speed { get; set; } = 6.00f;
 
-	[DDLRegistration(0x54ebe33au)]
+	[DDLRegistration(0x0d3bb808u)]
 	public CameraAimContextConfig? AimContext { get; set; } = default;
 
-	[DDLRegistration(0x54ebe33au, "FollowCameraConfigOverride", "If UseFollowConfigOverride is flagged as true, this follow config will be used. Otherwise the default will be used.")]
+	[DDLRegistration(0x5afbbea3u, "FollowCameraConfigOverride", "If UseFollowConfigOverride is flagged as true, this follow config will be used. Otherwise the default will be used.")]
 	public FollowCameraUserConfig? FollowCameraConfig { get; set; } = default;
 
-	[DDLRegistration(0x54ebe33au)]
+	[DDLRegistration(0x26755e46u)]
 	public bool UseFollowConfigOverride { get; set; } = false;
 
-	[DDLRegistration(0x54ebe33au, description: "Allow camera moving while in the mounting state.")]
+	[DDLRegistration(0xc114162fu, description: "Allow camera moving while in the mounting state.")]
 	public bool AllowCameraInput { get; set; } = true;
 
 	public static SpeedDependentCameraConfigData Create(DDLObject ddl) => new(ddl);

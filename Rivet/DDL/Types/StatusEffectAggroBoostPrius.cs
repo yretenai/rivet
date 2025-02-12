@@ -18,7 +18,7 @@ public class StatusEffectAggroBoostPrius : StatusEffectBasePrius, IDDLObjectType
 		Amount = ddl.GetValue<float>(0xb0d93e25u, Amount);
 	}
 
-	[DDLRegistration(0xe7dc8bb0u)]
+	[DDLRegistration(0xb0d93e25u)]
 	public float Amount { get; set; } = 50.00f;
 
 	public new static StatusEffectAggroBoostPrius Create(DDLObject ddl) => new(ddl);

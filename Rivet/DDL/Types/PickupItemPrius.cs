@@ -24,25 +24,25 @@ public class PickupItemPrius : PickupSharedPrius, IDDLObjectType<PickupItemPrius
 		AddToInvOnCollectStart = ddl.GetValue<bool>(0x5dd11eadu, AddToInvOnCollectStart);
 	}
 
-	[DDLRegistration(0x7182d3a6u)]
+	[DDLRegistration(0xa88f833fu)]
 	public RivetAssetId ItemConfig { get; set; } = default;
 
-	[DDLRegistration(0x7182d3a6u)]
+	[DDLRegistration(0x9c8a88a3u)]
 	public uint Count { get; set; } = 0x00000001;
 
-	[DDLRegistration(0x7182d3a6u, description: "Require a prompt to pickup?")]
+	[DDLRegistration(0x1eb9e195u, description: "Require a prompt to pickup?")]
 	public bool AutoPickup { get; set; } = false;
 
-	[DDLRegistration(0x7182d3a6u)]
+	[DDLRegistration(0x2e2969ccu)]
 	public bool PreferUnsynced { get; set; } = false;
 
-	[DDLRegistration(0x7182d3a6u)]
+	[DDLRegistration(0xf8803c35u)]
 	public bool CheapStackables { get; set; } = false;
 
-	[DDLRegistration(0x7182d3a6u)]
+	[DDLRegistration(0x8955637du)]
 	public bool AutoCollectOnSanity { get; set; } = false;
 
-	[DDLRegistration(0x7182d3a6u, description: "Whether to add the item to the collector's inventory when the collect starts (starts coming to the collector) rather than at the end (pickup).")]
+	[DDLRegistration(0x5dd11eadu, description: "Whether to add the item to the collector's inventory when the collect starts (starts coming to the collector) rather than at the end (pickup).")]
 	public bool AddToInvOnCollectStart { get; set; } = false;
 
 	public new static PickupItemPrius Create(DDLObject ddl) => new(ddl);

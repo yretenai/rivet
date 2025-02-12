@@ -18,7 +18,7 @@ public class HeroSkinManagerPrius : SkinManagerBasePrius, IDDLObjectType<HeroSki
 		HeroType = ddl.GetEnum<HeroTypes>(0x1583d108u, HeroTypesValues.Lookup);
 	}
 
-	[DDLRegistration(0xc6059c33u)]
+	[DDLRegistration(0x1583d108u)]
 	public HeroTypes HeroType { get; set; } = HeroTypes.None;
 
 	public new static HeroSkinManagerPrius Create(DDLObject ddl) => new(ddl);

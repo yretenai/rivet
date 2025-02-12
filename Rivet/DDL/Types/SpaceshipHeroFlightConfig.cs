@@ -30,43 +30,43 @@ public class SpaceshipHeroFlightConfig : ConfigBase, IDDLObjectType<SpaceshipHer
 		CamDefaultBasePitchOffset = ddl.GetValue<float>(0x833d80bcu, CamDefaultBasePitchOffset);
 	}
 
-	[DDLRegistration(0xb44dc139u, description: "How much percent of max health to be the max damage the hero will get when they run into something (damage is still scaled from impact angle).")]
+	[DDLRegistration(0xcdde061au, description: "How much percent of max health to be the max damage the hero will get when they run into something (damage is still scaled from impact angle).")]
 	public float HitCollDmgPercent { get; set; } = 0.10f;
 
-	[DDLRegistration(0xb44dc139u, description: "When using a percentage of max health for the damage, what the minimum damage is.")]
+	[DDLRegistration(0x9c6cc541u, description: "When using a percentage of max health for the damage, what the minimum damage is.")]
 	public float HitCollDmgMinAmount { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb44dc139u)]
+	[DDLRegistration(0x1de24741u)]
 	public float TargetingRange { get; set; } = 200.00f;
 
-	[DDLRegistration(0xb44dc139u)]
+	[DDLRegistration(0xa7855420u)]
 	public float DefaultMovementSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0xb44dc139u)]
+	[DDLRegistration(0x8490b2acu)]
 	public float FiringMovmentSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0xb44dc139u)]
+	[DDLRegistration(0x2afa8304u)]
 	public float ThrustMovementSpeed { get; set; } = 50.00f;
 
-	[DDLRegistration(0xb44dc139u, "Allow bullets when thrusting?", "Whether to allow firing bullets while boosting - otherwise we will drop out of the boost to fire.")]
+	[DDLRegistration(0x8761f602u, "Allow bullets when thrusting?", "Whether to allow firing bullets while boosting - otherwise we will drop out of the boost to fire.")]
 	public bool AllowBulletsWhenThrusting { get; set; } = false;
 
-	[DDLRegistration(0xb44dc139u, "Allow Y/Triangle DodgeRoll?", "Whether to use Y/Triangle as dodge roll. Will not work when in magnet mode if bullets are enabled as the magnet use maps to this button.")]
+	[DDLRegistration(0xe5e5b19du, "Allow Y/Triangle DodgeRoll?", "Whether to use Y/Triangle as dodge roll. Will not work when in magnet mode if bullets are enabled as the magnet use maps to this button.")]
 	public bool AllowNonDirRoll { get; set; } = false;
 
-	[DDLRegistration(0xb44dc139u, description: "Default FOV for the camera in free-flight mode.")]
+	[DDLRegistration(0x73ed030fu, description: "Default FOV for the camera in free-flight mode.")]
 	public float CamDefaultFOV { get; set; } = 80.39f;
 
-	[DDLRegistration(0xb44dc139u, description: "Default camera height from the ship in free-flight mode.")]
+	[DDLRegistration(0x9eca8234u, description: "Default camera height from the ship in free-flight mode.")]
 	public float CamDefaultFollowHeight { get; set; } = 6.25f;
 
-	[DDLRegistration(0xb44dc139u, description: "Default follow camera distance for the ship in free-flight mode.")]
+	[DDLRegistration(0xb1a2c459u, description: "Default follow camera distance for the ship in free-flight mode.")]
 	public float CamDefaultFollowDist { get; set; } = -18.50f;
 
-	[DDLRegistration(0xb44dc139u, description: "Default target offset (what the camera is looking at, aka relative-y offset from the ship).")]
+	[DDLRegistration(0x893a1e0fu, description: "Default target offset (what the camera is looking at, aka relative-y offset from the ship).")]
 	public float CamDefaultTargetRelYOffset { get; set; } = -1.00f;
 
-	[DDLRegistration(0xb44dc139u, description: "Default base offset to the pitch (in degrees).")]
+	[DDLRegistration(0x833d80bcu, description: "Default base offset to the pitch (in degrees).")]
 	public float CamDefaultBasePitchOffset { get; set; } = 4.05f;
 
 	public new static SpaceshipHeroFlightConfig Create(DDLObject ddl) => new(ddl);

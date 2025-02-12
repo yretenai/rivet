@@ -20,13 +20,13 @@ public class PlayDialogDestroyedEvent : EventBase, IDDLObjectType<PlayDialogDest
 		ClientHandle = ddl.GetValue<uint>(0x7cf76d44u, ClientHandle);
 	}
 
-	[DDLRegistration(0x9858c5c2u, description: "Handle of the PlayDialogComponent that was destroyed.")]
+	[DDLRegistration(0x6cd1b588u, description: "Handle of the PlayDialogComponent that was destroyed.")]
 	public uint DestroyedComponentHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9858c5c2u)]
+	[DDLRegistration(0xf513f79du)]
 	public uint SpeakerActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9858c5c2u)]
+	[DDLRegistration(0x7cf76d44u)]
 	public uint ClientHandle { get; set; } = 0x00000000;
 
 	public new static PlayDialogDestroyedEvent Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class NefariousFinaleLaserArmPrius : NefariousFinaleWeaponPrius, IDDLObje
 		AimMaxV = ddl.GetValue<float>(0xba9b30b1u, AimMaxV);
 	}
 
-	[DDLRegistration(0x8ab62350u)]
+	[DDLRegistration(0x21ac6113u)]
 	public List<string?> ClawLocator { get; set; } = [];
 
-	[DDLRegistration(0x8ab62350u)]
+	[DDLRegistration(0x8611cd7cu)]
 	public float AimRefX { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8ab62350u)]
+	[DDLRegistration(0xf116fdeau)]
 	public float AimRefY { get; set; } = 15.00f;
 
-	[DDLRegistration(0x8ab62350u)]
+	[DDLRegistration(0x681fac50u)]
 	public float AimRefZ { get; set; } = 36.00f;
 
-	[DDLRegistration(0x8ab62350u)]
+	[DDLRegistration(0x521fe9bdu)]
 	public float AimMinH { get; set; } = -110.00f;
 
-	[DDLRegistration(0x8ab62350u)]
+	[DDLRegistration(0x79200f63u)]
 	public float AimCenterH { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8ab62350u)]
+	[DDLRegistration(0x40940dd2u)]
 	public float AimMaxH { get; set; } = 110.00f;
 
-	[DDLRegistration(0x8ab62350u)]
+	[DDLRegistration(0xa810d4deu)]
 	public float AimMinV { get; set; } = -45.00f;
 
-	[DDLRegistration(0x8ab62350u)]
+	[DDLRegistration(0x832f3200u)]
 	public float AimCenterV { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8ab62350u)]
+	[DDLRegistration(0xba9b30b1u)]
 	public float AimMaxV { get; set; } = 45.00f;
 
 	public new static NefariousFinaleLaserArmPrius Create(DDLObject ddl) => new(ddl);

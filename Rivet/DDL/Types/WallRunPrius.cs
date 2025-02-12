@@ -20,13 +20,13 @@ public class WallRunPrius : DDLObjectType, IDDLObjectType<WallRunPrius> {
 		VerticalExtent = ddl.GetValue<float>(0x8c33ce75u, VerticalExtent);
 	}
 
-	[DDLRegistration(0xb695d679u)]
+	[DDLRegistration(0x273a388du)]
 	public x3e452084 CenteringMode { get; set; } = x3e452084.None;
 
-	[DDLRegistration(0xb695d679u, description: "Player uses this direction along the panel on attach.")]
+	[DDLRegistration(0x0bcab400u, description: "Player uses this direction along the panel on attach.")]
 	public x46ba7b62 InitialDirection { get; set; } = x46ba7b62.None;
 
-	[DDLRegistration(0xb695d679u, description: "Local y-extent of wallrun actor as measured from actor position.")]
+	[DDLRegistration(0x8c33ce75u, description: "Local y-extent of wallrun actor as measured from actor position.")]
 	public float VerticalExtent { get; set; } = 1.00f;
 
 	public static WallRunPrius Create(DDLObject ddl) => new(ddl);

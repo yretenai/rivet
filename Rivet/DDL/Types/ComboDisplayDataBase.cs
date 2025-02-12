@@ -18,7 +18,7 @@ public class ComboDisplayDataBase : DDLObjectType, IDDLObjectType<ComboDisplayDa
 		DisplayName = ddl.GetString(0xeaf33243) ?? DisplayName;
 	}
 
-	[DDLRegistration(0x0845a39bu)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
 	public static ComboDisplayDataBase Create(DDLObject ddl) => new(ddl);

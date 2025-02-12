@@ -18,7 +18,7 @@ public class SVOAStarDebugStepElement : DDLObjectType, IDDLObjectType<SVOAStarDe
 		Step = ddl.GetObject<SVOAStarDebugStepBase>(0x73293e8cu);
 	}
 
-	[DDLRegistration(0xc1a1fc33u)]
+	[DDLRegistration(0x73293e8cu)]
 	public SVOAStarDebugStepBase? Step { get; set; } = default;
 
 	public static SVOAStarDebugStepElement Create(DDLObject ddl) => new(ddl);

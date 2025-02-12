@@ -20,13 +20,13 @@ public class WeaponFiredEvent : WeaponTriggeredEvent, IDDLObjectType<WeaponFired
 		PerkName = ddl.GetString(0x9da07479) ?? PerkName;
 	}
 
-	[DDLRegistration(0xf6607648u)]
+	[DDLRegistration(0x085f80e0u)]
 	public string? EmitLocatorName { get; set; } = default;
 
-	[DDLRegistration(0xf6607648u)]
+	[DDLRegistration(0xcb3c1ce8u)]
 	public string? WeaponTypeName { get; set; } = default;
 
-	[DDLRegistration(0xf6607648u)]
+	[DDLRegistration(0x9da07479u)]
 	public string? PerkName { get; set; } = default;
 
 	public new static WeaponFiredEvent Create(DDLObject ddl) => new(ddl);

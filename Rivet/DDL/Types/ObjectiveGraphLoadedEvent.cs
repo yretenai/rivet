@@ -18,7 +18,7 @@ public class ObjectiveGraphLoadedEvent : EventBase, IDDLObjectType<ObjectiveGrap
 		MissionName = ddl.GetString(0xa5c30e60) ?? MissionName;
 	}
 
-	[DDLRegistration(0xe8d687dbu)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
 	public new static ObjectiveGraphLoadedEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class WaterSplashEvent : EventBase, IDDLObjectType<WaterSplashEvent> {
 		Material = ddl.GetEnum<x10b3c4cf>(0x86bfc8e5u, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0xe8ee569du)]
+	[DDLRegistration(0xc750e4dau)]
 	public x56b85d4c Size { get; set; } = x56b85d4c.SplashSmall;
 
-	[DDLRegistration(0xe8ee569du)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
 	public new static WaterSplashEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class AmbientShooterFireEvent : EventBase, IDDLObjectType<AmbientShooterF
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x99226e4eu)]
+	[DDLRegistration(0x98554e8cu)]
 	public RivetAssetId TargetActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x99226e4eu, description: "Optional duration of the firing.  Use 0 for a single shot")]
+	[DDLRegistration(0x7c5e3db0u, description: "Optional duration of the firing.  Use 0 for a single shot")]
 	public float Duration { get; set; } = 0.00f;
 
 	public new static AmbientShooterFireEvent Create(DDLObject ddl) => new(ddl);

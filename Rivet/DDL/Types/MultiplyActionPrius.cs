@@ -19,10 +19,10 @@ public class MultiplyActionPrius : DDLObjectType, IDDLObjectType<MultiplyActionP
 		Integer = ddl.GetValue<bool>(0x5be5c833u, Integer);
 	}
 
-	[DDLRegistration(0x07f9c829u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
-	[DDLRegistration(0x07f9c829u, description: "Integers Only")]
+	[DDLRegistration(0x5be5c833u, description: "Integers Only")]
 	public bool Integer { get; set; } = false;
 
 	public static MultiplyActionPrius Create(DDLObject ddl) => new(ddl);

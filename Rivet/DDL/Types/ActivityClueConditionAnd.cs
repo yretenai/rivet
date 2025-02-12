@@ -18,7 +18,7 @@ public class ActivityClueConditionAnd : DDLObjectType, IDDLObjectType<ActivityCl
 		AllConditions = ddl.GetObjects<ActivityClueConditionWrapper>(0xcc4fe0b5u);
 	}
 
-	[DDLRegistration(0xe3744c2au, "All Conditions", "Every single one of these conditions must be true for the And condition to return true")]
+	[DDLRegistration(0xcc4fe0b5u, "All Conditions", "Every single one of these conditions must be true for the And condition to return true")]
 	public List<ActivityClueConditionWrapper?> AllConditions { get; set; } = [];
 
 	public static ActivityClueConditionAnd Create(DDLObject ddl) => new(ddl);

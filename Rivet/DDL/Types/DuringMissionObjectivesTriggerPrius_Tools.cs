@@ -20,13 +20,13 @@ public class DuringMissionObjectivesTriggerPrius_Tools : AbstractTriggerPrius_To
 		EndObjectiveName = ddl.GetString(0x0f9039d9) ?? EndObjectiveName;
 	}
 
-	[DDLRegistration(0xe8cc2bcbu, description: "Mission during which this overlay should load.")]
+	[DDLRegistration(0xa5c30e60u, description: "Mission during which this overlay should load.")]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0xe8cc2bcbu, description: "First active objective during which this overlay should load.")]
+	[DDLRegistration(0xe2320ffau, description: "First active objective during which this overlay should load.")]
 	public string? StartObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0xe8cc2bcbu, description: "Last active objective during which this overlay should load.")]
+	[DDLRegistration(0x0f9039d9u, description: "Last active objective during which this overlay should load.")]
 	public string? EndObjectiveName { get; set; } = default;
 
 	public new static DuringMissionObjectivesTriggerPrius_Tools Create(DDLObject ddl) => new(ddl);

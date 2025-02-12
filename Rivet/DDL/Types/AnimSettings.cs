@@ -26,31 +26,31 @@ public class AnimSettings : DDLObjectType, IDDLObjectType<AnimSettings> {
 		MorphTargetDeltaChannelPrecision = ddl.GetValue<float>(0xbad440d7u, MorphTargetDeltaChannelPrecision);
 	}
 
-	[DDLRegistration(0xf0c13705u)]
+	[DDLRegistration(0x0ae0e588u)]
 	public uint MaxJobCount { get; set; } = 0x00000400;
 
-	[DDLRegistration(0xf0c13705u)]
+	[DDLRegistration(0xf96ebe09u)]
 	public uint MaxDriverUserPoseCount { get; set; } = 0x00000080;
 
-	[DDLRegistration(0xf0c13705u)]
+	[DDLRegistration(0x3003622eu)]
 	public bool CullAllCullable { get; set; } = false;
 
-	[DDLRegistration(0xf0c13705u)]
+	[DDLRegistration(0x78cd1fe2u)]
 	public List<ushort> AnimDriverDataAllocBlockSizes { get; set; } = [];
 
-	[DDLRegistration(0xf0c13705u)]
+	[DDLRegistration(0x1091f086u)]
 	public List<ushort> AnimDriverDataAllocBlockCounts { get; set; } = [];
 
-	[DDLRegistration(0xf0c13705u)]
+	[DDLRegistration(0x6ae46b93u)]
 	public uint AnimStreamInitAllocSize { get; set; } = 0x01200000;
 
-	[DDLRegistration(0xf0c13705u)]
+	[DDLRegistration(0xa34474d0u)]
 	public bool DebugDriverMemoryClearing { get; set; } = false;
 
-	[DDLRegistration(0xf0c13705u)]
+	[DDLRegistration(0x78bdd1e9u)]
 	public bool DebugDriverMemoryAllocating { get; set; } = false;
 
-	[DDLRegistration(0xf0c13705u)]
+	[DDLRegistration(0xbad440d7u)]
 	public float MorphTargetDeltaChannelPrecision { get; set; } = 0.10f;
 
 	public static AnimSettings Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class LODLimiterSetMinLodEvent : EventBase, IDDLObjectType<LODLimiterSetM
 		MinLod = ddl.GetValue<uint>(0xa531c0c1u, MinLod);
 	}
 
-	[DDLRegistration(0x1f0a265bu)]
+	[DDLRegistration(0xa531c0c1u)]
 	public uint MinLod { get; set; } = 0x00000000;
 
 	public new static LODLimiterSetMinLodEvent Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class GameBotShooterBlargBomberPrius : GameBotShooterPrius, IDDLObjectTyp
 		MinUnhideTargetDist = ddl.GetValue<float>(0x1241083eu, MinUnhideTargetDist);
 	}
 
-	[DDLRegistration(0x035b3544u, description: "Wont re-hide within this time of previous exiting hiding")]
+	[DDLRegistration(0x5fa30a64u, description: "Wont re-hide within this time of previous exiting hiding")]
 	public float MinTimeBetweenHiding { get; set; } = 5.00f;
 
-	[DDLRegistration(0x035b3544u, description: "Minimum time to remain hidden")]
+	[DDLRegistration(0x0c4bc3fcu, description: "Minimum time to remain hidden")]
 	public float MinHideTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x035b3544u, description: "Maximum time to remain hidden")]
+	[DDLRegistration(0xc046b8f3u, description: "Maximum time to remain hidden")]
 	public float MaxHideTime { get; set; } = 5.00f;
 
-	[DDLRegistration(0x035b3544u, description: "Wont unhide while player is this close to his hiding spot, even if max time is up.")]
+	[DDLRegistration(0x1241083eu, description: "Wont unhide while player is this close to his hiding spot, even if max time is up.")]
 	public float MinUnhideTargetDist { get; set; } = 3.00f;
 
 	public new static GameBotShooterBlargBomberPrius Create(DDLObject ddl) => new(ddl);

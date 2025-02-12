@@ -24,25 +24,25 @@ public class AnimGeomDef : DDLObjectType, IDDLObjectType<AnimGeomDef> {
 		IsLooping = ddl.GetValue<bool>(0xd3118ad1u, IsLooping);
 	}
 
-	[DDLRegistration(0xc3727b56u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xc3727b56u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xc3727b56u, "Alembic File")]
+	[DDLRegistration(0x67a294b9u, "Alembic File")]
 	public RivetAssetId AbcFilename { get; set; } = default;
 
-	[DDLRegistration(0xc3727b56u, "Maya Filter Node", "Only consider Maya nodes that are underneath a node with this name.")]
+	[DDLRegistration(0xa8a9ef53u, "Maya Filter Node", "Only consider Maya nodes that are underneath a node with this name.")]
 	public string? FilterNodeName { get; set; } = default;
 
-	[DDLRegistration(0xc3727b56u, description: "The frame of the first sample (using the content file's native sample rate).")]
+	[DDLRegistration(0xcd935029u, description: "The frame of the first sample (using the content file's native sample rate).")]
 	public int StartFrame { get; set; } = 0;
 
-	[DDLRegistration(0xc3727b56u, description: "The frame of the last sample (using the content file's native sample rate).")]
+	[DDLRegistration(0xfddf52e6u, description: "The frame of the last sample (using the content file's native sample rate).")]
 	public int EndFrame { get; set; } = 0;
 
-	[DDLRegistration(0xc3727b56u, description: "Set to true if the clip is looping.")]
+	[DDLRegistration(0xd3118ad1u, description: "Set to true if the clip is looping.")]
 	public bool IsLooping { get; set; } = false;
 
 	public static AnimGeomDef Create(DDLObject ddl) => new(ddl);

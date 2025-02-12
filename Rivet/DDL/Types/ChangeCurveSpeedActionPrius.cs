@@ -19,10 +19,10 @@ public class ChangeCurveSpeedActionPrius : DDLObjectType, IDDLObjectType<ChangeC
 		Speed = ddl.GetValue<float>(0x16753237u, Speed);
 	}
 
-	[DDLRegistration(0x6ca0e73cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.CurveFollower;
 
-	[DDLRegistration(0x6ca0e73cu, description: "The new curve speed for the actor.")]
+	[DDLRegistration(0x16753237u, description: "The new curve speed for the actor.")]
 	public float Speed { get; set; } = 1.00f;
 
 	public static ChangeCurveSpeedActionPrius Create(DDLObject ddl) => new(ddl);

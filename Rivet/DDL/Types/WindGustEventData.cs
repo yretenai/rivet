@@ -29,40 +29,40 @@ public class WindGustEventData : DDLObjectType, IDDLObjectType<WindGustEventData
 		Type = ddl.GetValue<uint>(0xbc4e9799u, Type);
 	}
 
-	[DDLRegistration(0xcb00dec0u, description: "Ramp up duration of wind influence.")]
+	[DDLRegistration(0x79b8635cu, description: "Ramp up duration of wind influence.")]
 	public float Attack { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcb00dec0u, description: "Duration of full strength wind influence.")]
+	[DDLRegistration(0x17e67af0u, description: "Duration of full strength wind influence.")]
 	public float Sustain { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcb00dec0u, description: "Ramp down duration of wind influence.")]
+	[DDLRegistration(0xa0950b67u, description: "Ramp down duration of wind influence.")]
 	public float Decay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcb00dec0u, description: "Source position of wind force.")]
+	[DDLRegistration(0xbc2d5985u, description: "Source position of wind force.")]
 	public DDLVector3? Position { get; set; } = default;
 
-	[DDLRegistration(0xcb00dec0u, description: "Normalized direction of wind force.")]
+	[DDLRegistration(0xbcb74ebfu, description: "Normalized direction of wind force.")]
 	public DDLVector3? Direction { get; set; } = default;
 
-	[DDLRegistration(0xcb00dec0u, description: "Speed (meter/sec) of the wind force.")]
+	[DDLRegistration(0x16753237u, description: "Speed (meter/sec) of the wind force.")]
 	public float Speed { get; set; } = 10.00f;
 
-	[DDLRegistration(0xcb00dec0u, description: "Drag co-efficient of the wind force.")]
+	[DDLRegistration(0x5dd56ddbu, description: "Drag co-efficient of the wind force.")]
 	public float Drag { get; set; } = 10.00f;
 
-	[DDLRegistration(0xcb00dec0u, description: "Max radial distance from wind force line to apply wind.")]
+	[DDLRegistration(0x0504203du, description: "Max radial distance from wind force line to apply wind.")]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcb00dec0u, description: "Max distance from the wind source position to apply wind.")]
+	[DDLRegistration(0xcb35ab68u, description: "Max distance from the wind source position to apply wind.")]
 	public float Height { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcb00dec0u, description: "Radial distance falloff co-efficient.")]
+	[DDLRegistration(0x454d6db6u, description: "Radial distance falloff co-efficient.")]
 	public float RadialFalloff { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcb00dec0u, description: "Source distance falloff co-efficient.")]
+	[DDLRegistration(0x1eb37744u, description: "Source distance falloff co-efficient.")]
 	public float HeightFalloff { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcb00dec0u, description: "Directional (0), Cylinder (1), or Sphere (2).")]
+	[DDLRegistration(0xbc4e9799u, description: "Directional (0), Cylinder (1), or Sphere (2).")]
 	public uint Type { get; set; } = 0x00000002;
 
 	public static WindGustEventData Create(DDLObject ddl) => new(ddl);

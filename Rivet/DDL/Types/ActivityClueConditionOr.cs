@@ -18,7 +18,7 @@ public class ActivityClueConditionOr : DDLObjectType, IDDLObjectType<ActivityClu
 		AnyConditions = ddl.GetObjects<ActivityClueConditionWrapper>(0xffd516a3u);
 	}
 
-	[DDLRegistration(0x9dc5492du, "Any Conditions", "At least one of these conditions must be true for the Or condition to return true")]
+	[DDLRegistration(0xffd516a3u, "Any Conditions", "At least one of these conditions must be true for the Or condition to return true")]
 	public List<ActivityClueConditionWrapper?> AnyConditions { get; set; } = [];
 
 	public static ActivityClueConditionOr Create(DDLObject ddl) => new(ddl);

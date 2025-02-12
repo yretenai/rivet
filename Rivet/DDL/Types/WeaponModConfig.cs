@@ -18,7 +18,7 @@ public class WeaponModConfig : ConfigBase, IDDLObjectType<WeaponModConfig> {
 		Mods = ddl.GetObjects<WeaponModData>(0x538e324au);
 	}
 
-	[DDLRegistration(0x813d86d2u)]
+	[DDLRegistration(0x538e324au)]
 	public List<WeaponModData?> Mods { get; set; } = [];
 
 	public new static WeaponModConfig Create(DDLObject ddl) => new(ddl);

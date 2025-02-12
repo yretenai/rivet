@@ -23,22 +23,22 @@ public class MasterSkinItemList : ConfigBase, IDDLObjectType<MasterSkinItemList>
 		DecalConfigs = ddl.GetValues<RivetAssetId>(0x54b89253u);
 	}
 
-	[DDLRegistration(0xdcbf0fe4u, "Item Category List", "Skin item category list(s)")]
+	[DDLRegistration(0x6bbf2976u, "Item Category List", "Skin item category list(s)")]
 	public List<SkinItemCategoryList?> ItemCategoryList { get; set; } = [];
 
-	[DDLRegistration(0xdcbf0fe4u, "Item Part List", "Skin item part list(s)")]
+	[DDLRegistration(0x2e58f6a8u, "Item Part List", "Skin item part list(s)")]
 	public List<SkinItemPartList?> ItemPartList { get; set; } = [];
 
-	[DDLRegistration(0xdcbf0fe4u, "Main Category List", "Main Category List")]
+	[DDLRegistration(0xf89a4963u, "Main Category List", "Main Category List")]
 	public List<VanityCategoryListItem?> VanityCategoryList { get; set; } = [];
 
-	[DDLRegistration(0xdcbf0fe4u, "Color Configs", "Color config(s)")]
+	[DDLRegistration(0x9277805eu, "Color Configs", "Color config(s)")]
 	public List<RivetAssetId> ColorConfigs { get; set; } = [];
 
-	[DDLRegistration(0xdcbf0fe4u, "Constant Configs", "Constant config(s)")]
+	[DDLRegistration(0x262e5777u, "Constant Configs", "Constant config(s)")]
 	public List<RivetAssetId> ConstantConfigs { get; set; } = [];
 
-	[DDLRegistration(0xdcbf0fe4u, "Decal Configs", "Decal config(s)")]
+	[DDLRegistration(0x54b89253u, "Decal Configs", "Decal config(s)")]
 	public List<RivetAssetId> DecalConfigs { get; set; } = [];
 
 	public new static MasterSkinItemList Create(DDLObject ddl) => new(ddl);

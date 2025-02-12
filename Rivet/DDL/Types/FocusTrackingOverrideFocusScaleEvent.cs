@@ -19,10 +19,10 @@ public class FocusTrackingOverrideFocusScaleEvent : EventBase, IDDLObjectType<Fo
 		TimeToTarget = ddl.GetValue<float>(0xdaf0edabu, TimeToTarget);
 	}
 
-	[DDLRegistration(0xc3f7d8f6u, description: "Focus Scale/Strength to make focus tracking use")]
+	[DDLRegistration(0xeb392887u, description: "Focus Scale/Strength to make focus tracking use")]
 	public float FocusScaleTarget { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc3f7d8f6u, description: "How long it will take from this event to hit the target focus scale")]
+	[DDLRegistration(0xdaf0edabu, description: "How long it will take from this event to hit the target focus scale")]
 	public float TimeToTarget { get; set; } = 0.00f;
 
 	public new static FocusTrackingOverrideFocusScaleEvent Create(DDLObject ddl) => new(ddl);

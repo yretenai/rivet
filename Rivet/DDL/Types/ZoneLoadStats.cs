@@ -24,25 +24,25 @@ public class ZoneLoadStats : DDLObjectType, IDDLObjectType<ZoneLoadStats> {
 		ZoneIds = ddl.GetValues<RivetAssetId>(0xb01078dbu);
 	}
 
-	[DDLRegistration(0x0061c86cu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public List<float> Time { get; set; } = [];
 
-	[DDLRegistration(0x0061c86cu)]
+	[DDLRegistration(0x4b7e549bu)]
 	public List<float> LoadRequested { get; set; } = [];
 
-	[DDLRegistration(0x0061c86cu)]
+	[DDLRegistration(0x539e147du)]
 	public List<float> LoadFinished { get; set; } = [];
 
-	[DDLRegistration(0x0061c86cu)]
+	[DDLRegistration(0x166ff4f5u)]
 	public List<float> Initialized { get; set; } = [];
 
-	[DDLRegistration(0x0061c86cu)]
+	[DDLRegistration(0xfe5d1e35u)]
 	public List<float> Instantiated { get; set; } = [];
 
-	[DDLRegistration(0x0061c86cu)]
+	[DDLRegistration(0xad2699bdu)]
 	public float InitOverhead { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0061c86cu)]
+	[DDLRegistration(0xb01078dbu)]
 	public List<RivetAssetId> ZoneIds { get; set; } = [];
 
 	public static ZoneLoadStats Create(DDLObject ddl) => new(ddl);

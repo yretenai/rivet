@@ -19,10 +19,10 @@ public class SkinItemDecalPrius : DDLObjectType, IDDLObjectType<SkinItemDecalPri
 		Scale = ddl.GetValue<float>(0xf515e945u, Scale);
 	}
 
-	[DDLRegistration(0x7fe3dc4au)]
+	[DDLRegistration(0x45587fd6u)]
 	public uint MaterialNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7fe3dc4au)]
+	[DDLRegistration(0xf515e945u)]
 	public float Scale { get; set; } = 1.00f;
 
 	public static SkinItemDecalPrius Create(DDLObject ddl) => new(ddl);

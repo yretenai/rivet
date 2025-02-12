@@ -19,10 +19,10 @@ public class TargetTypeDamage : DDLObjectType, IDDLObjectType<TargetTypeDamage> 
 		ExplosionInnerDamage = ddl.GetValue<float>(0xaa0ab6c9u, ExplosionInnerDamage);
 	}
 
-	[DDLRegistration(0xe52d1110u)]
+	[DDLRegistration(0x75a19d21u)]
 	public TargetType TargetType { get; set; } = (TargetType) 0x00000000;
 
-	[DDLRegistration(0xe52d1110u)]
+	[DDLRegistration(0xaa0ab6c9u)]
 	public float ExplosionInnerDamage { get; set; } = 30.00f;
 
 	public static TargetTypeDamage Create(DDLObject ddl) => new(ddl);

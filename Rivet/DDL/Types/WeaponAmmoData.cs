@@ -21,16 +21,16 @@ public class WeaponAmmoData : BaseComponentAmmoPrius, IDDLObjectType<WeaponAmmoD
 		MaxAmmo = ddl.GetValue<float>(0x1214e89au, MaxAmmo);
 	}
 
-	[DDLRegistration(0x6ade1ffbu, "Ammo Item")]
+	[DDLRegistration(0x7151e5a4u, "Ammo Item")]
 	public RivetAssetId AmmoItemConfig { get; set; } = default;
 
-	[DDLRegistration(0x6ade1ffbu)]
+	[DDLRegistration(0x252449dau)]
 	public float PickupAmmo { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6ade1ffbu)]
+	[DDLRegistration(0xdf9f4c5fu)]
 	public float SpawnBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6ade1ffbu)]
+	[DDLRegistration(0x1214e89au)]
 	public float MaxAmmo { get; set; } = 0.00f;
 
 	public new static WeaponAmmoData Create(DDLObject ddl) => new(ddl);

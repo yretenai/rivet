@@ -24,25 +24,25 @@ public class HUDMessageActionPrius : DDLObjectType, IDDLObjectType<HUDMessageAct
 		Texture = ddl.GetValue<RivetAssetId>(0x838c6e4au, Texture);
 	}
 
-	[DDLRegistration(0x1cf1ddadu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x1cf1ddadu, description: "Will be replaced with localized text if it exists.")]
+	[DDLRegistration(0x06f8b0e5u, description: "Will be replaced with localized text if it exists.")]
 	public string? LocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x1cf1ddadu, description: "Optional additional text data.")]
+	[DDLRegistration(0x18b1bfc7u, description: "Optional additional text data.")]
 	public string? LocTag2 { get; set; } = "INVALID";
 
-	[DDLRegistration(0x1cf1ddadu, description: "Time in seconds a message stays up. -1 indicates it will stay up until clear is called")]
+	[DDLRegistration(0x7c5e3db0u, description: "Time in seconds a message stays up. -1 indicates it will stay up until clear is called")]
 	public float Duration { get; set; } = 6.00f;
 
-	[DDLRegistration(0x1cf1ddadu, description: "Coherent message type")]
+	[DDLRegistration(0xc56e3adau, description: "Coherent message type")]
 	public xbe0e44ab MessageType { get; set; } = xbe0e44ab.Generic;
 
-	[DDLRegistration(0x1cf1ddadu, description: "Pausing while this message is up will link to this page")]
+	[DDLRegistration(0x4338697au, description: "Pausing while this message is up will link to this page")]
 	public PauseTabs PauseTab { get; set; } = PauseTabs.Map;
 
-	[DDLRegistration(0x1cf1ddadu, description: "Texture to show in this message")]
+	[DDLRegistration(0x838c6e4au, description: "Texture to show in this message")]
 	public RivetAssetId Texture { get; set; } = default;
 
 	public static HUDMessageActionPrius Create(DDLObject ddl) => new(ddl);

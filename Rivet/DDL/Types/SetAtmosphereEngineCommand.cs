@@ -18,7 +18,7 @@ public class SetAtmosphereEngineCommand : DDLObjectType, IDDLObjectType<SetAtmos
 		Path = ddl.GetValue<RivetAssetId>(0x3bc44bbfu, Path);
 	}
 
-	[DDLRegistration(0xaf322e8du)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public RivetAssetId Path { get; set; } = default;
 
 	public static SetAtmosphereEngineCommand Create(DDLObject ddl) => new(ddl);

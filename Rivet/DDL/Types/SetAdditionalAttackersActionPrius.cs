@@ -22,19 +22,19 @@ public class SetAdditionalAttackersActionPrius : DDLObjectType, IDDLObjectType<S
 		LargeRanged = ddl.GetValue<bool>(0x7e653a02u, LargeRanged);
 	}
 
-	[DDLRegistration(0xcd5f9b36u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0xcd5f9b36u, description: "Add to Small Melee Pool")]
+	[DDLRegistration(0x6f8b840au, description: "Add to Small Melee Pool")]
 	public bool SmallMelee { get; set; } = true;
 
-	[DDLRegistration(0xcd5f9b36u, description: "Add to Large Melee Pool")]
+	[DDLRegistration(0x88269e81u, description: "Add to Large Melee Pool")]
 	public bool LargeMelee { get; set; } = true;
 
-	[DDLRegistration(0xcd5f9b36u, description: "Add to Standard Ranged Pool")]
+	[DDLRegistration(0xfd4dca77u, description: "Add to Standard Ranged Pool")]
 	public bool StandardRanged { get; set; } = true;
 
-	[DDLRegistration(0xcd5f9b36u, description: "Add to Large Ranged Pool")]
+	[DDLRegistration(0x7e653a02u, description: "Add to Large Ranged Pool")]
 	public bool LargeRanged { get; set; } = true;
 
 	public static SetAdditionalAttackersActionPrius Create(DDLObject ddl) => new(ddl);

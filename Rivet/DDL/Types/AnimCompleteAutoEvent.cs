@@ -18,7 +18,7 @@ public class AnimCompleteAutoEvent : EventBase, IDDLObjectType<AnimCompleteAutoE
 		AnimDriverNameHash = ddl.GetValue<uint>(0xcbef3f39u, AnimDriverNameHash);
 	}
 
-	[DDLRegistration(0xf3b1e1a6u, description: "Hash of the anim driver's name that has completed.")]
+	[DDLRegistration(0xcbef3f39u, description: "Hash of the anim driver's name that has completed.")]
 	public uint AnimDriverNameHash { get; set; } = 0x00000000;
 
 	public new static AnimCompleteAutoEvent Create(DDLObject ddl) => new(ddl);

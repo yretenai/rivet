@@ -28,37 +28,37 @@ public class MeleeAttackData : DDLObjectType, IDDLObjectType<MeleeAttackData> {
 		OverrideData = ddl.GetObject<DamageKnockbackOverrideData>(0x03f818aau);
 	}
 
-	[DDLRegistration(0xf2a6d993u, description: "Index in the combo.")]
+	[DDLRegistration(0x9920abc0u, description: "Index in the combo.")]
 	public xef932fba Index { get; set; } = xef932fba.None;
 
-	[DDLRegistration(0xf2a6d993u)]
+	[DDLRegistration(0xe1abb220u)]
 	public string? HitAnim { get; set; } = default;
 
-	[DDLRegistration(0xf2a6d993u, description: "Set Damage Type")]
+	[DDLRegistration(0x840c154du, description: "Set Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Melee;
 
-	[DDLRegistration(0xf2a6d993u)]
+	[DDLRegistration(0x2fb01a0bu)]
 	public float Damage { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf2a6d993u)]
+	[DDLRegistration(0xed56b719u)]
 	public float AOE { get; set; } = 0.40f;
 
-	[DDLRegistration(0xf2a6d993u)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0xf2a6d993u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf2a6d993u, description: "if this number is >0.0f, this attack will override the knockback it applies to move this amount of meters")]
+	[DDLRegistration(0xd2a69999u, description: "if this number is >0.0f, this attack will override the knockback it applies to move this amount of meters")]
 	public float OverrideKnockbackDist { get; set; } = -1.00f;
 
-	[DDLRegistration(0xf2a6d993u, description: "Radius to use for the damage bubble around the hero. Less than zero means to use the default value in code.")]
+	[DDLRegistration(0xa8307a9cu, description: "Radius to use for the damage bubble around the hero. Less than zero means to use the default value in code.")]
 	public float DamageBubbleRadiusOverride { get; set; } = -1.00f;
 
-	[DDLRegistration(0xf2a6d993u, description: "True: Do damage bubble around hero the entire damage window. False: Only do damage bubble before we have enough melee swipe points for damage along the swipe arc.")]
+	[DDLRegistration(0x7f4bfc45u, description: "True: Do damage bubble around hero the entire damage window. False: Only do damage bubble before we have enough melee swipe points for damage along the swipe arc.")]
 	public bool IsDamageBubbleFullDuration { get; set; } = false;
 
-	[DDLRegistration(0xf2a6d993u)]
+	[DDLRegistration(0x03f818aau)]
 	public DamageKnockbackOverrideData? OverrideData { get; set; } = default;
 
 	public static MeleeAttackData Create(DDLObject ddl) => new(ddl);

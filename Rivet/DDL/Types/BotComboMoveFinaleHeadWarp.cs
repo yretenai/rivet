@@ -20,13 +20,13 @@ public class BotComboMoveFinaleHeadWarp : BotComboMoveBase, IDDLObjectType<BotCo
 		HeadActorVol = ddl.GetValue<RivetAssetId>(0x53f23acbu, HeadActorVol);
 	}
 
-	[DDLRegistration(0xe1f7cd03u)]
+	[DDLRegistration(0xfec29c86u)]
 	public RivetAssetId PortalActorAsset { get; set; } = default;
 
-	[DDLRegistration(0xe1f7cd03u)]
+	[DDLRegistration(0x7e95e9fau)]
 	public RivetAssetId HeadActorAsset { get; set; } = default;
 
-	[DDLRegistration(0xe1f7cd03u)]
+	[DDLRegistration(0x53f23acbu)]
 	public RivetAssetId HeadActorVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static BotComboMoveFinaleHeadWarp Create(DDLObject ddl) => new(ddl);

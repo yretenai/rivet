@@ -24,25 +24,25 @@ public class HeroMagbootConfig : DDLObjectType, IDDLObjectType<HeroMagbootConfig
 		MagbootDiveMaxSpeed = ddl.GetValue<float>(0xc7dd46b0u, MagbootDiveMaxSpeed);
 	}
 
-	[DDLRegistration(0x37cfc96fu, description: "Min distance to target for a magboot launch")]
+	[DDLRegistration(0xa0eddfadu, description: "Min distance to target for a magboot launch")]
 	public float MagbootLaunchMinDistance { get; set; } = 5.00f;
 
-	[DDLRegistration(0x37cfc96fu, description: "Max distance to target for a magboot launch")]
+	[DDLRegistration(0x6ce0a4a2u, description: "Max distance to target for a magboot launch")]
 	public float MagbootLaunchMaxDistance { get; set; } = 30.00f;
 
-	[DDLRegistration(0x37cfc96fu, description: "How much to accelerate the turn speed towards our desired facing")]
+	[DDLRegistration(0xd8a2e830u, description: "How much to accelerate the turn speed towards our desired facing")]
 	public float MagbootLaunchTurnSpeedGain { get; set; } = -15.00f;
 
-	[DDLRegistration(0x37cfc96fu, description: "How much to damp the turn speed as we near our desired facing")]
+	[DDLRegistration(0x5474bfb9u, description: "How much to damp the turn speed as we near our desired facing")]
 	public float MagbootLaunchTurnSpeedDamp { get; set; } = -8.00f;
 
-	[DDLRegistration(0x37cfc96fu, description: "Max turn speed in degrees/sec")]
+	[DDLRegistration(0xc8e44fe2u, description: "Max turn speed in degrees/sec")]
 	public float MagbootLaunchTurnSpeedMax { get; set; } = 90.00f;
 
-	[DDLRegistration(0x37cfc96fu, description: "Acceleration when diving to target from magboot launch")]
+	[DDLRegistration(0x46ce6346u, description: "Acceleration when diving to target from magboot launch")]
 	public float MagbootDiveAccel { get; set; } = 80.00f;
 
-	[DDLRegistration(0x37cfc96fu, description: "Max speed when diving to target from magboot launch")]
+	[DDLRegistration(0xc7dd46b0u, description: "Max speed when diving to target from magboot launch")]
 	public float MagbootDiveMaxSpeed { get; set; } = 40.00f;
 
 	public static HeroMagbootConfig Create(DDLObject ddl) => new(ddl);

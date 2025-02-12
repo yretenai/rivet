@@ -18,7 +18,7 @@ public class ForwardingShotEffectPrius : ScriptedShotEffectBasePrius, IDDLObject
 		ForwardingIndex = ddl.GetValue<int>(0x00ea1837u, ForwardingIndex);
 	}
 
-	[DDLRegistration(0xa303306au)]
+	[DDLRegistration(0x00ea1837u)]
 	public int ForwardingIndex { get; set; } = 0;
 
 	public new static ForwardingShotEffectPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class FarmExtraTileZoneData : DDLObjectType, IDDLObjectType<FarmExtraTile
 		LightingConditions = ddl.GetObject<LightingConditionBitSet>(0xfda14c35u);
 	}
 
-	[DDLRegistration(0x71eb2382u, "Tile Name", "Example: A22")]
+	[DDLRegistration(0x58a6cd7du, "Tile Name", "Example: A22")]
 	public string? TileName { get; set; } = default;
 
-	[DDLRegistration(0x71eb2382u, "Zones", "Additional zones to load when capturing this tile")]
+	[DDLRegistration(0x9c997da9u, "Zones", "Additional zones to load when capturing this tile")]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
-	[DDLRegistration(0x71eb2382u, "Lighting Conditions", "These zones will only be loaded when capturing these lighting conditions")]
+	[DDLRegistration(0xfda14c35u, "Lighting Conditions", "These zones will only be loaded when capturing these lighting conditions")]
 	public LightingConditionBitSet? LightingConditions { get; set; } = default;
 
 	public static FarmExtraTileZoneData Create(DDLObject ddl) => new(ddl);

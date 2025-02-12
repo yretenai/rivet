@@ -22,19 +22,19 @@ public class BotComboConditionClearSpacePrius : BotComboConditionBasePrius, IDDL
 		CheckNavMesh = ddl.GetValue<bool>(0x13367412u, CheckNavMesh);
 	}
 
-	[DDLRegistration(0xffc626a9u, "Distance Forward")]
+	[DDLRegistration(0x08528ea3u, "Distance Forward")]
 	public float DistanceForward { get; set; } = 10.00f;
 
-	[DDLRegistration(0xffc626a9u, "Height")]
+	[DDLRegistration(0xcb35ab68u, "Height")]
 	public float Height { get; set; } = 5.00f;
 
-	[DDLRegistration(0xffc626a9u, "Radius")]
+	[DDLRegistration(0x0504203du, "Radius")]
 	public float Radius { get; set; } = 3.00f;
 
-	[DDLRegistration(0xffc626a9u, "Check Target Direction")]
+	[DDLRegistration(0x9ddd0fa1u, "Check Target Direction")]
 	public bool CheckTargetDirection { get; set; } = false;
 
-	[DDLRegistration(0xffc626a9u, "Check Nav Mesh")]
+	[DDLRegistration(0x13367412u, "Check Nav Mesh")]
 	public bool CheckNavMesh { get; set; } = false;
 
 	public new static BotComboConditionClearSpacePrius Create(DDLObject ddl) => new(ddl);

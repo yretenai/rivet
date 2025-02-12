@@ -23,22 +23,22 @@ public class EffectRenderOverride : DDLObjectType, IDDLObjectType<EffectRenderOv
 		LightHandle = ddl.GetValue<uint>(0x95a2ec65u, LightHandle);
 	}
 
-	[DDLRegistration(0x2bdf9604u, description: "Name of the node in the materialgraph this is overriding.")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of the node in the materialgraph this is overriding.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x2bdf9604u, description: "What type of node is this overriding?")]
+	[DDLRegistration(0xbc4e9799u, description: "What type of node is this overriding?")]
 	public x039013cd Type { get; set; } = x039013cd.Constant;
 
-	[DDLRegistration(0x2bdf9604u)]
+	[DDLRegistration(0x11306034u)]
 	public DDLVector4? Constants { get; set; } = default;
 
-	[DDLRegistration(0x2bdf9604u)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x2bdf9604u)]
+	[DDLRegistration(0x838c6e4au)]
 	public RivetAssetId Texture { get; set; } = default;
 
-	[DDLRegistration(0x2bdf9604u)]
+	[DDLRegistration(0x95a2ec65u)]
 	public uint LightHandle { get; set; } = 0x00000000;
 
 	public static EffectRenderOverride Create(DDLObject ddl) => new(ddl);

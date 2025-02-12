@@ -18,7 +18,7 @@ public class TurningStopEvent : EventBase, IDDLObjectType<TurningStopEvent> {
 		AxisIndex = ddl.GetValue<byte>(0x44515d21u, AxisIndex);
 	}
 
-	[DDLRegistration(0xc11d7f2eu, "Axis Index")]
+	[DDLRegistration(0x44515d21u, "Axis Index")]
 	public byte AxisIndex { get; set; } = 0x00;
 
 	public new static TurningStopEvent Create(DDLObject ddl) => new(ddl);

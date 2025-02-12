@@ -31,46 +31,46 @@ public class RayTracingSettings : DDLObjectType, IDDLObjectType<RayTracingSettin
 		GlossThreshold = ddl.GetValue<float>(0x51408ba4u, GlossThreshold);
 	}
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0x21907e02u)]
 	public float HibernateBaseDistance { get; set; } = 384.00f;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0x29f5cf54u)]
 	public float NormalBaseDistance { get; set; } = 128.00f;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0x2864ac2eu)]
 	public float ModelRadiusScale { get; set; } = 96.00f;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0xd5efb89eu)]
 	public bool PrioritizeImpostors { get; set; } = true;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0x5c49b496u)]
 	public bool DisableCheckerboard { get; set; } = false;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0x7b513739u)]
 	public float SkinningBaseDistance { get; set; } = 56.00f;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0xaae7611du)]
 	public float SkinningRadiusScale { get; set; } = 8.00f;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0x03f527fcu)]
 	public float LightingCenterBias { get; set; } = 8.00f;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0x0084fbc0u)]
 	public uint MaxUniqueMaterials { get; set; } = 0x00005000;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0x96f8a615u)]
 	public uint MaxRuntimeBVHs { get; set; } = 0x00001000;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0xf0526a67u)]
 	public uint MaxBVHSubsets { get; set; } = 0x00000003;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0x30ecc1c8u)]
 	public uint ScratchSize { get; set; } = 0x00a00000;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0xd8a50b41u)]
 	public float GlossReflInterval { get; set; } = 0.33f;
 
-	[DDLRegistration(0xdb5c9852u)]
+	[DDLRegistration(0x51408ba4u)]
 	public float GlossThreshold { get; set; } = 0.33f;
 
 	public static RayTracingSettings Create(DDLObject ddl) => new(ddl);

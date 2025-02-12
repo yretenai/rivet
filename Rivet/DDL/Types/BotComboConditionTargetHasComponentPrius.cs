@@ -19,10 +19,10 @@ public class BotComboConditionTargetHasComponentPrius : BotComboConditionBasePri
 		MaxRange = ddl.GetValue<float>(0x8a199ddeu, MaxRange);
 	}
 
-	[DDLRegistration(0x6cc26e62u, "Target Component Name", "Name of the component that must exist on the target actor")]
+	[DDLRegistration(0x6b44e129u, "Target Component Name", "Name of the component that must exist on the target actor")]
 	public string? TargetComponentName { get; set; } = default;
 
-	[DDLRegistration(0x6cc26e62u, "Max Search Range", "Target must be within this maximum radius from the search source")]
+	[DDLRegistration(0x8a199ddeu, "Max Search Range", "Target must be within this maximum radius from the search source")]
 	public float MaxRange { get; set; } = 1000.00f;
 
 	public new static BotComboConditionTargetHasComponentPrius Create(DDLObject ddl) => new(ddl);

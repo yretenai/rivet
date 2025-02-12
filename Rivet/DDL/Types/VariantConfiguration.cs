@@ -20,13 +20,13 @@ public class VariantConfiguration : DDLObjectType, IDDLObjectType<VariantConfigu
 		VariantConstantLooks = ddl.GetStrings(0x8729cb27u);
 	}
 
-	[DDLRegistration(0xd360e847u)]
+	[DDLRegistration(0xf0a9dc95u)]
 	public xc3e5efea Variant { get; set; } = xc3e5efea.V1;
 
-	[DDLRegistration(0xd360e847u)]
+	[DDLRegistration(0xe1d6fd5bu)]
 	public List<VariantLookData?> ValidLookGroups { get; set; } = [];
 
-	[DDLRegistration(0xd360e847u, description: "These looks will always be enabled for this variant")]
+	[DDLRegistration(0x8729cb27u, description: "These looks will always be enabled for this variant")]
 	public List<string?> VariantConstantLooks { get; set; } = [];
 
 	public static VariantConfiguration Create(DDLObject ddl) => new(ddl);

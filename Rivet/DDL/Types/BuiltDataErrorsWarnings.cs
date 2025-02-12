@@ -21,16 +21,16 @@ public class BuiltDataErrorsWarnings : DDLObjectType, IDDLObjectType<BuiltDataEr
 		BuildOutput = ddl.GetObject<TargetFileBuildOutput>(0x8c4edbe4u);
 	}
 
-	[DDLRegistration(0xde4b3635u)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xde4b3635u)]
+	[DDLRegistration(0xf22b4107u)]
 	public string? TargetPath { get; set; } = default;
 
-	[DDLRegistration(0xde4b3635u)]
+	[DDLRegistration(0x75a19d21u)]
 	public x8b211a61 TargetType { get; set; } = x8b211a61.Pid;
 
-	[DDLRegistration(0xde4b3635u)]
+	[DDLRegistration(0x8c4edbe4u)]
 	public TargetFileBuildOutput? BuildOutput { get; set; } = default;
 
 	public static BuiltDataErrorsWarnings Create(DDLObject ddl) => new(ddl);

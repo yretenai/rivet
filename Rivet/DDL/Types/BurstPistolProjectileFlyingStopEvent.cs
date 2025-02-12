@@ -18,7 +18,7 @@ public class BurstPistolProjectileFlyingStopEvent : ProjectileFlyingStartEvent, 
 		IsRapidFireMode = ddl.GetValue<bool>(0x8e5cb9e6u, IsRapidFireMode);
 	}
 
-	[DDLRegistration(0xfed23b64u)]
+	[DDLRegistration(0x8e5cb9e6u)]
 	public bool IsRapidFireMode { get; set; } = false;
 
 	public new static BurstPistolProjectileFlyingStopEvent Create(DDLObject ddl) => new(ddl);

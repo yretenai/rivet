@@ -20,13 +20,13 @@ public class MissionGraphBuiltShared : DDLObjectType, IDDLObjectType<MissionGrap
 		SortedMissions = ddl.GetObject<SortedNodeNames>(0x24005951u);
 	}
 
-	[DDLRegistration(0x367d981au)]
+	[DDLRegistration(0x046ec93du)]
 	public GraphNodesBuilt? Nodes { get; set; } = default;
 
-	[DDLRegistration(0x367d981au)]
+	[DDLRegistration(0xcef0690eu)]
 	public Dictionary<uint, MissionNodeBuiltTableEntry?> Missions { get; set; } = [];
 
-	[DDLRegistration(0x367d981au)]
+	[DDLRegistration(0x24005951u)]
 	public SortedNodeNames? SortedMissions { get; set; } = default;
 
 	public static MissionGraphBuiltShared Create(DDLObject ddl) => new(ddl);

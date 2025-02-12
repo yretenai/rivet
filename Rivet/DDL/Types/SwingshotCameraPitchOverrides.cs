@@ -21,16 +21,16 @@ public class SwingshotCameraPitchOverrides : DDLObjectType, IDDLObjectType<Swing
 		OverrideAimContextConfig = ddl.GetValue<RivetAssetId>(0xa6b0ffe6u, OverrideAimContextConfig);
 	}
 
-	[DDLRegistration(0x1139855du, "Default Pitch at Swing Start", "Override the default pitch of the camera at the start of the swing. If this value is too small, the camera may bottom out on the ground during launch.")]
+	[DDLRegistration(0xd1febc0eu, "Default Pitch at Swing Start", "Override the default pitch of the camera at the start of the swing. If this value is too small, the camera may bottom out on the ground during launch.")]
 	public float DefaultPitchStart { get; set; } = 15.00f;
 
-	[DDLRegistration(0x1139855du, "Default Pitch at Swing End", "Override the default pitch of the camera at the end of the swing.")]
+	[DDLRegistration(0xdc4f74c9u, "Default Pitch at Swing End", "Override the default pitch of the camera at the end of the swing.")]
 	public float DefaultPitchEnd { get; set; } = 15.00f;
 
-	[DDLRegistration(0x1139855du, "Override Follow Camera Config", "If provided, use a different camera follow config from the default.")]
+	[DDLRegistration(0xe8468cc0u, "Override Follow Camera Config", "If provided, use a different camera follow config from the default.")]
 	public RivetAssetId OverrideFollowConfig { get; set; } = default;
 
-	[DDLRegistration(0x1139855du, "Override Camera Aim Context", "If provided, use a different aim context config from the default.")]
+	[DDLRegistration(0xa6b0ffe6u, "Override Camera Aim Context", "If provided, use a different aim context config from the default.")]
 	public RivetAssetId OverrideAimContextConfig { get; set; } = default;
 
 	public static SwingshotCameraPitchOverrides Create(DDLObject ddl) => new(ddl);

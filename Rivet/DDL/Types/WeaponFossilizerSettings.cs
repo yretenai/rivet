@@ -21,16 +21,16 @@ public class WeaponFossilizerSettings : DDLObjectType, IDDLObjectType<WeaponFoss
 		AllowSlowWhileReloading = ddl.GetValue<bool>(0x33b7e9b8u, AllowSlowWhileReloading);
 	}
 
-	[DDLRegistration(0xe7fc178bu, description: "Will turn on all additional features: Loading Multiple bullets, creating weakspots, and getting ammo back on misses.")]
+	[DDLRegistration(0x7bb415abu, description: "Will turn on all additional features: Loading Multiple bullets, creating weakspots, and getting ammo back on misses.")]
 	public bool UnlockAllFeatures { get; set; } = false;
 
-	[DDLRegistration(0xe7fc178bu, "Slow Time On Trigger Pull", "When turned on, time will slow down as you get closer to completing the trigger pull.")]
+	[DDLRegistration(0xa7b13641u, "Slow Time On Trigger Pull", "When turned on, time will slow down as you get closer to completing the trigger pull.")]
 	public bool SlowTimeOnTriggerPulls { get; set; } = true;
 
-	[DDLRegistration(0xe7fc178bu)]
+	[DDLRegistration(0xb4de703du)]
 	public bool ShowDebugUI { get; set; } = false;
 
-	[DDLRegistration(0xe7fc178bu, "Allow Slow While Reloading", "When you shoot the gun, and you have to reload, should the slow down continue or not.")]
+	[DDLRegistration(0x33b7e9b8u, "Allow Slow While Reloading", "When you shoot the gun, and you have to reload, should the slow down continue or not.")]
 	public bool AllowSlowWhileReloading { get; set; } = false;
 
 	public static WeaponFossilizerSettings Create(DDLObject ddl) => new(ddl);

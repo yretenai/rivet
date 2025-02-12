@@ -30,43 +30,43 @@ public class ProximitySpawnerConfig : ConfigBase, IDDLObjectType<ProximitySpawne
 		SpawnInfos = ddl.GetObjects<ProximitySpawnInfo>(0x3b38b1dfu);
 	}
 
-	[DDLRegistration(0xd41cfbb3u, description: "Controls default clean-up behavior when prox spawn is Stopped.")]
+	[DDLRegistration(0x1dd72c3cu, description: "Controls default clean-up behavior when prox spawn is Stopped.")]
 	public xd3395131 DefaultCleanUpType { get; set; } = xd3395131.DeleteOffCamera;
 
-	[DDLRegistration(0xd41cfbb3u, description: "Maximum number of AI alive at one time")]
+	[DDLRegistration(0x09a59dc4u, description: "Maximum number of AI alive at one time")]
 	public int MaxAlive { get; set; } = 20;
 
-	[DDLRegistration(0xd41cfbb3u, description: "Optional control for min distance a spawn point can be from the player to spawn (0 means not used)")]
+	[DDLRegistration(0x5cc2d615u, description: "Optional control for min distance a spawn point can be from the player to spawn (0 means not used)")]
 	public float MinSpawnRadius { get; set; } = 3.00f;
 
-	[DDLRegistration(0xd41cfbb3u, description: "Optional control for max distance a spawn point can be from the player to spawn (0 means not used)")]
+	[DDLRegistration(0xe5e44d64u, description: "Optional control for max distance a spawn point can be from the player to spawn (0 means not used)")]
 	public float MaxSpawnRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd41cfbb3u, description: "Minimum distance from the player AI must be to auto-deleted in preference of a better spawn candidate.")]
+	[DDLRegistration(0x0fd9e205u, description: "Minimum distance from the player AI must be to auto-deleted in preference of a better spawn candidate.")]
 	public float MinDeleteRadius { get; set; } = 25.00f;
 
-	[DDLRegistration(0xd41cfbb3u, description: "Used to control the minimum time between spawns")]
+	[DDLRegistration(0xddc34ce5u, description: "Used to control the minimum time between spawns")]
 	public float MinDelayBetweenSpawns { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd41cfbb3u, description: "Used to control the maximum time between spawns")]
+	[DDLRegistration(0xce86aa4eu, description: "Used to control the maximum time between spawns")]
 	public float MaxDelayBetweenSpawns { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd41cfbb3u, description: "Set if you want spawned bots to instantly target the player")]
+	[DDLRegistration(0x11ec3affu, description: "Set if you want spawned bots to instantly target the player")]
 	public bool StartAggressive { get; set; } = true;
 
-	[DDLRegistration(0xd41cfbb3u, description: "Set if you want to encourage bots to wander around when idle")]
+	[DDLRegistration(0x88e10cadu, description: "Set if you want to encourage bots to wander around when idle")]
 	public bool EncourageIdleWandering { get; set; } = true;
 
-	[DDLRegistration(0xd41cfbb3u, description: "Optional override for MinDeleteRadius when the proximity spawner gets shutoff and tells bots to clean up.  -1 means use MinDeleteRadius")]
+	[DDLRegistration(0xa6c5605eu, description: "Optional override for MinDeleteRadius when the proximity spawner gets shutoff and tells bots to clean up.  -1 means use MinDeleteRadius")]
 	public float CleanupDeleteRadius { get; set; } = -1.00f;
 
-	[DDLRegistration(0xd41cfbb3u, description: "How many rewards should an instance of this spawner give in total.  If negative, always give full rewards.")]
+	[DDLRegistration(0x92b81bd8u, description: "How many rewards should an instance of this spawner give in total.  If negative, always give full rewards.")]
 	public float MaxRelativeReward { get; set; } = -1.00f;
 
-	[DDLRegistration(0xd41cfbb3u, description: "Allows overrides based on the percent of MaxAlive that are out of the view frustum of the camera")]
+	[DDLRegistration(0xf7a5b86du, description: "Allows overrides based on the percent of MaxAlive that are out of the view frustum of the camera")]
 	public List<ProximityTieredOverrides?> TieredOverrides { get; set; } = [];
 
-	[DDLRegistration(0xd41cfbb3u)]
+	[DDLRegistration(0x3b38b1dfu)]
 	public List<ProximitySpawnInfo?> SpawnInfos { get; set; } = [];
 
 	public new static ProximitySpawnerConfig Create(DDLObject ddl) => new(ddl);

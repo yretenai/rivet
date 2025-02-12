@@ -22,19 +22,19 @@ public class TrailAgeKeyframe : DDLObjectType, IDDLObjectType<TrailAgeKeyframe> 
 		Custom = ddl.GetValue<bool>(0xcbfc58fcu, Custom);
 	}
 
-	[DDLRegistration(0x7d558cbbu)]
+	[DDLRegistration(0x6b500782u)]
 	public bool Luminance { get; set; } = false;
 
-	[DDLRegistration(0x7d558cbbu)]
+	[DDLRegistration(0x7f058428u)]
 	public bool Color { get; set; } = false;
 
-	[DDLRegistration(0x7d558cbbu)]
+	[DDLRegistration(0xc9b3f5abu)]
 	public bool Alpha { get; set; } = false;
 
-	[DDLRegistration(0x7d558cbbu)]
+	[DDLRegistration(0xcf4f8070u)]
 	public bool Scales { get; set; } = false;
 
-	[DDLRegistration(0x7d558cbbu)]
+	[DDLRegistration(0xcbfc58fcu)]
 	public bool Custom { get; set; } = false;
 
 	public static TrailAgeKeyframe Create(DDLObject ddl) => new(ddl);

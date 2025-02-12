@@ -21,16 +21,16 @@ public class MaterialOverrideOnEventPrius : DDLObjectType, IDDLObjectType<Materi
 		OverrideMaterial = ddl.GetValue<RivetAssetId>(0x21926360u, OverrideMaterial);
 	}
 
-	[DDLRegistration(0x3f4c7c98u, description: "Do the material override when this event is received")]
+	[DDLRegistration(0x22fdc666u, description: "Do the material override when this event is received")]
 	public EventBase? Event { get; set; } = default;
 
-	[DDLRegistration(0x3f4c7c98u)]
+	[DDLRegistration(0x1d937b6du)]
 	public bool ListenToSelfEventsOnly { get; set; } = true;
 
-	[DDLRegistration(0x3f4c7c98u, description: "Override this material mapping with OverrideMaterial")]
+	[DDLRegistration(0x981e6927u, description: "Override this material mapping with OverrideMaterial")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x3f4c7c98u, description: "This overrides the material named MaterialMappingName")]
+	[DDLRegistration(0x21926360u, description: "This overrides the material named MaterialMappingName")]
 	public RivetAssetId OverrideMaterial { get; set; } = default;
 
 	public static MaterialOverrideOnEventPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class DimensionLoadSystemSave : DDLObjectType, IDDLObjectType<DimensionLo
 		DimensionSaves = ddl.GetDictionary<RivetAssetId, DimensionSaveData>(0xf3fda3e5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DimensionSaveData>(mapId));
 	}
 
-	[DDLRegistration(0x752c3800u)]
+	[DDLRegistration(0x0d8554f9u)]
 	public uint DimensionCheckpointHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x752c3800u)]
+	[DDLRegistration(0xf3fda3e5u)]
 	public Dictionary<RivetAssetId, DimensionSaveData?> DimensionSaves { get; set; } = [];
 
 	public static DimensionLoadSystemSave Create(DDLObject ddl) => new(ddl);

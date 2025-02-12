@@ -28,37 +28,37 @@ public class AimModMissTargetGamePrius : AimModifierPrius, IDDLObjectType<AimMod
 		AttacksUntilAccurate_Range = ddl.GetValue<int>(0x95b53851u, AttacksUntilAccurate_Range);
 	}
 
-	[DDLRegistration(0xf53b8822u)]
+	[DDLRegistration(0x0b1fe59au)]
 	public float MissOffsetXZMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0xf53b8822u)]
+	[DDLRegistration(0x3712dac3u)]
 	public float MissOffsetXZMax { get; set; } = 2.50f;
 
-	[DDLRegistration(0xf53b8822u)]
+	[DDLRegistration(0x0a631d34u)]
 	public float MissOffsetYMin { get; set; } = -1.00f;
 
-	[DDLRegistration(0xf53b8822u)]
+	[DDLRegistration(0x366e226du)]
 	public float MissOffsetYMax { get; set; } = 0.50f;
 
-	[DDLRegistration(0xf53b8822u)]
+	[DDLRegistration(0xc6cd6ddau)]
 	public float MissOffsetXZMinFromScreen { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf53b8822u)]
+	[DDLRegistration(0x868215acu)]
 	public float MissOffsetXZMaxFromScreen { get; set; } = 2.00f;
 
-	[DDLRegistration(0xf53b8822u)]
+	[DDLRegistration(0xa6677983u)]
 	public bool MissWhenOffScreen { get; set; } = true;
 
-	[DDLRegistration(0xf53b8822u, description: "Takes this many attacks until shots are made accurate. -1 means the bot will always miss if off screen")]
+	[DDLRegistration(0x09ba01fbu, description: "Takes this many attacks until shots are made accurate. -1 means the bot will always miss if off screen")]
 	public int AttacksUntilAccurate_OffScreen { get; set; } = -1;
 
-	[DDLRegistration(0xf53b8822u)]
+	[DDLRegistration(0x5db3ce9bu)]
 	public bool MissAtRange { get; set; } = true;
 
-	[DDLRegistration(0xf53b8822u, description: "At this range, the bot will miss")]
+	[DDLRegistration(0xc22e6148u, description: "At this range, the bot will miss")]
 	public float MissRange { get; set; } = 50.00f;
 
-	[DDLRegistration(0xf53b8822u, description: "Takes this many attacks until shots are made accurate. -1 means the bot will always miss when out of range")]
+	[DDLRegistration(0x95b53851u, description: "Takes this many attacks until shots are made accurate. -1 means the bot will always miss when out of range")]
 	public int AttacksUntilAccurate_Range { get; set; } = -1;
 
 	public new static AimModMissTargetGamePrius Create(DDLObject ddl) => new(ddl);

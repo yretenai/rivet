@@ -25,28 +25,28 @@ public class PythonFunctionDocumentation : DDLObjectType, IDDLObjectType<PythonF
 		ReturnType = ddl.GetString(0x27fe850a) ?? ReturnType;
 	}
 
-	[DDLRegistration(0x5623c292u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x5623c292u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x5623c292u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x5623c292u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0x5623c292u)]
+	[DDLRegistration(0x9381e4feu)]
 	public List<string?> ParameterNames { get; set; } = [];
 
-	[DDLRegistration(0x5623c292u)]
+	[DDLRegistration(0x17313259u)]
 	public string? ParametersSignature { get; set; } = default;
 
-	[DDLRegistration(0x5623c292u)]
+	[DDLRegistration(0x3882248eu)]
 	public List<string?> ParameterTypes { get; set; } = [];
 
-	[DDLRegistration(0x5623c292u)]
+	[DDLRegistration(0x27fe850au)]
 	public string? ReturnType { get; set; } = default;
 
 	public static PythonFunctionDocumentation Create(DDLObject ddl) => new(ddl);

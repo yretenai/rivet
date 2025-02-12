@@ -23,22 +23,22 @@ public class PhysicsMotionPropertiesParam : DDLObjectType, IDDLObjectType<Physic
 		AngularDamping = ddl.GetValue<float>(0xcdf27098u, AngularDamping);
 	}
 
-	[DDLRegistration(0xb969677au, "Use Aggressive Ragdoll Settling", "Only mark true if this actor is an articulated character that needs to ragdoll.")]
+	[DDLRegistration(0x3dd00e5bu, "Use Aggressive Ragdoll Settling", "Only mark true if this actor is an articulated character that needs to ragdoll.")]
 	public bool UseAggressiveRagdollSettling { get; set; } = false;
 
-	[DDLRegistration(0xb969677au, "Gravity Multiplier", "Multiply gravity by this much when acting on this object.")]
+	[DDLRegistration(0x1b8daea5u, "Gravity Multiplier", "Multiply gravity by this much when acting on this object.")]
 	public float GravityFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb969677au, "Max Linear Speed", "Maximum speed of this object (meters/second).")]
+	[DDLRegistration(0xd7031ecfu, "Max Linear Speed", "Maximum speed of this object (meters/second).")]
 	public float MaxLinearSpeed { get; set; } = 200.00f;
 
-	[DDLRegistration(0xb969677au, "Max Angular Speed", "Maximum rotation rate (degrees/second)")]
+	[DDLRegistration(0x5fec8281u, "Max Angular Speed", "Maximum rotation rate (degrees/second)")]
 	public float MaxAngularSpeed { get; set; } = 3600.00f;
 
-	[DDLRegistration(0xb969677au, "Linear Damping Factor", "units unknown")]
+	[DDLRegistration(0x97613ca3u, "Linear Damping Factor", "units unknown")]
 	public float LinearDamping { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb969677au, "Angular Damping Factor", "units unknown")]
+	[DDLRegistration(0xcdf27098u, "Angular Damping Factor", "units unknown")]
 	public float AngularDamping { get; set; } = 0.00f;
 
 	public static PhysicsMotionPropertiesParam Create(DDLObject ddl) => new(ddl);

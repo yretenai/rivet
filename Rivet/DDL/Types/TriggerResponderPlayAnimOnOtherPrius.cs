@@ -26,31 +26,31 @@ public class TriggerResponderPlayAnimOnOtherPrius : TriggerResponderBasePrius, I
 		UntriggerGroupOnEnd = ddl.GetString(0xdaeeb0d9) ?? UntriggerGroupOnEnd;
 	}
 
-	[DDLRegistration(0xfc3c63c7u, "Actor/group to use", "The actor or actorgroup to play the specified animations on.")]
+	[DDLRegistration(0x2524fffbu, "Actor/group to use", "The actor or actorgroup to play the specified animations on.")]
 	public RivetAssetId AnimActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xfc3c63c7u, "Hide actor(s) on Disable?", "Whether to hide (deactivate) the actor/actorgroup when this component is disabled.")]
+	[DDLRegistration(0xb2bcae25u, "Hide actor(s) on Disable?", "Whether to hide (deactivate) the actor/actorgroup when this component is disabled.")]
 	public bool HideActorsOnDisable { get; set; } = false;
 
-	[DDLRegistration(0xfc3c63c7u, "Init to trigger state?", "In activate, should we set the actor/actorgroup to the animation of our current trigger state.")]
+	[DDLRegistration(0xf8994d60u, "Init to trigger state?", "In activate, should we set the actor/actorgroup to the animation of our current trigger state.")]
 	public bool InitToTriggerState { get; set; } = true;
 
-	[DDLRegistration(0xfc3c63c7u, "Triggered Anim", "Anim to play when triggered.")]
+	[DDLRegistration(0x933bc277u, "Triggered Anim", "Anim to play when triggered.")]
 	public string? TriggeredAnim { get; set; } = default;
 
-	[DDLRegistration(0xfc3c63c7u, "Triggered Idle Anim", "When the triggered anim completes, what anim to play (should be a looping triggered idle animation).")]
+	[DDLRegistration(0xc0827d3du, "Triggered Idle Anim", "When the triggered anim completes, what anim to play (should be a looping triggered idle animation).")]
 	public string? TriggeredIdleAnim { get; set; } = default;
 
-	[DDLRegistration(0xfc3c63c7u, "UnTrigger Anim", "Anim to play when un-triggered.")]
+	[DDLRegistration(0xb3fb754bu, "UnTrigger Anim", "Anim to play when un-triggered.")]
 	public string? UntriggerAnim { get; set; } = default;
 
-	[DDLRegistration(0xfc3c63c7u, "NonTriggered Idle Anim", "When the un-triggered anim completed, what anim to play (should be a looping non-triggered idle animation).")]
+	[DDLRegistration(0x880c09bfu, "NonTriggered Idle Anim", "When the un-triggered anim completed, what anim to play (should be a looping non-triggered idle animation).")]
 	public string? NontriggeredIdleAnim { get; set; } = default;
 
-	[DDLRegistration(0xfc3c63c7u, "Trigger Group on end", "A switchtrigger group name to trigger after the triggered anim")]
+	[DDLRegistration(0xaff1a4cfu, "Trigger Group on end", "A switchtrigger group name to trigger after the triggered anim")]
 	public string? TriggerGroupOnEnd { get; set; } = "";
 
-	[DDLRegistration(0xfc3c63c7u, "Untrigger Group on end", "A switchtrigger group name to trigger after the untriggered anim")]
+	[DDLRegistration(0xdaeeb0d9u, "Untrigger Group on end", "A switchtrigger group name to trigger after the untriggered anim")]
 	public string? UntriggerGroupOnEnd { get; set; } = "";
 
 	public new static TriggerResponderPlayAnimOnOtherPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class InitAnimFilterElement : DDLObjectType, IDDLObjectType<InitAnimFilte
 		FilterId = ddl.GetEnum<xfdd79442>(0xd404a13fu, xfdd79442Values.Lookup);
 	}
 
-	[DDLRegistration(0x6a70d249u, description: "The filter group to set when the actor is activated.")]
+	[DDLRegistration(0x14c22d78u, description: "The filter group to set when the actor is activated.")]
 	public x6571cd70 FilterGroup { get; set; } = x6571cd70.Elevation;
 
-	[DDLRegistration(0x6a70d249u, description: "The filter id (make sure it is for the group above) to set.")]
+	[DDLRegistration(0xd404a13fu, description: "The filter id (make sure it is for the group above) to set.")]
 	public xfdd79442 FilterId { get; set; } = xfdd79442.Any;
 
 	public static InitAnimFilterElement Create(DDLObject ddl) => new(ddl);

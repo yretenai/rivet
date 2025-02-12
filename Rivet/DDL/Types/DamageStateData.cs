@@ -25,28 +25,28 @@ public class DamageStateData : DDLObjectType, IDDLObjectType<DamageStateData> {
 		DestroyOnDeathChunkSpawn = ddl.GetValue<bool>(0x06ff4d60u, DestroyOnDeathChunkSpawn);
 	}
 
-	[DDLRegistration(0x1a41da5eu, "Min Pixelized Size", "Minimum bsphere radius for adding pixelized effects")]
+	[DDLRegistration(0x5e3ab76du, "Min Pixelized Size", "Minimum bsphere radius for adding pixelized effects")]
 	public float MinPixelizedSize { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1a41da5eu)]
+	[DDLRegistration(0xe958e37fu)]
 	public List<DamageStateElement?> DamageStates { get; set; } = [];
 
-	[DDLRegistration(0x1a41da5eu, "Chunkable Looks", "A random number of these will come of on hits as specified by the damage states")]
+	[DDLRegistration(0x8fd2594cu, "Chunkable Looks", "A random number of these will come of on hits as specified by the damage states")]
 	public List<LookChunk?> ChunkableLooks { get; set; } = [];
 
-	[DDLRegistration(0x1a41da5eu, "Generic Chunks", "A random number of these will come of on hits as specified by the damage states")]
+	[DDLRegistration(0x1c9c7798u, "Generic Chunks", "A random number of these will come of on hits as specified by the damage states")]
 	public List<GenericChunk?> GenericChunks { get; set; } = [];
 
-	[DDLRegistration(0x1a41da5eu, "Swappable Looks", "A random number of these looks will be swapped as specified by the damage states once all chunks are spawned.")]
+	[DDLRegistration(0x56c7559eu, "Swappable Looks", "A random number of these looks will be swapped as specified by the damage states once all chunks are spawned.")]
 	public List<LookSwap?> SwappableLooks { get; set; } = [];
 
-	[DDLRegistration(0x1a41da5eu)]
+	[DDLRegistration(0xfc5131b9u)]
 	public RivetAssetId Conduit { get; set; } = default;
 
-	[DDLRegistration(0x1a41da5eu)]
+	[DDLRegistration(0x0ab4b5b8u)]
 	public RivetAssetId AudioConduit { get; set; } = default;
 
-	[DDLRegistration(0x1a41da5eu, description: "If true, the bot will destroy itself and queue events when the death chunks spawn instead of letting the death bot state take care of it")]
+	[DDLRegistration(0x06ff4d60u, description: "If true, the bot will destroy itself and queue events when the death chunks spawn instead of letting the death bot state take care of it")]
 	public bool DestroyOnDeathChunkSpawn { get; set; } = false;
 
 	public static DamageStateData Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class CompatVaultCommandFrame : DDLObjectType, IDDLObjectType<CompatVault
 		CommandData = ddl.GetString(0xb64be7dd) ?? CommandData;
 	}
 
-	[DDLRegistration(0xa2af7325u)]
+	[DDLRegistration(0x97664397u)]
 	public string? CommandType { get; set; } = default;
 
-	[DDLRegistration(0xa2af7325u)]
+	[DDLRegistration(0xb64be7ddu)]
 	public string? CommandData { get; set; } = default;
 
 	public static CompatVaultCommandFrame Create(DDLObject ddl) => new(ddl);

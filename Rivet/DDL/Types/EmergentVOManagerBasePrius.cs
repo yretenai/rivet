@@ -19,10 +19,10 @@ public class EmergentVOManagerBasePrius : EmergentVOBasePrius, IDDLObjectType<Em
 		EnableInMultiplayer = ddl.GetValue<bool>(0xf0fdc3c6u, EnableInMultiplayer);
 	}
 
-	[DDLRegistration(0xd1aba9d9u)]
+	[DDLRegistration(0xfea894fau)]
 	public VoiceGame Voice { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0xd1aba9d9u)]
+	[DDLRegistration(0xf0fdc3c6u)]
 	public bool EnableInMultiplayer { get; set; } = true;
 
 	public new static EmergentVOManagerBasePrius Create(DDLObject ddl) => new(ddl);

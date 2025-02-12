@@ -20,13 +20,13 @@ public class BotImpaleEvent : EventBase, IDDLObjectType<BotImpaleEvent> {
 		ImpaleDuration = ddl.GetValue<float>(0x9a8397ccu, ImpaleDuration);
 	}
 
-	[DDLRegistration(0xad03d79bu)]
+	[DDLRegistration(0x529531ccu)]
 	public uint ImpaleHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xad03d79bu)]
+	[DDLRegistration(0xc55a6018u)]
 	public string? ImpaleLocator { get; set; } = default;
 
-	[DDLRegistration(0xad03d79bu)]
+	[DDLRegistration(0x9a8397ccu)]
 	public float ImpaleDuration { get; set; } = 5.00f;
 
 	public new static BotImpaleEvent Create(DDLObject ddl) => new(ddl);

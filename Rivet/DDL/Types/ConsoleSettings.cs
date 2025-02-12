@@ -21,16 +21,16 @@ public class ConsoleSettings : DDLObjectType, IDDLObjectType<ConsoleSettings> {
 		BackgroundColor = ddl.GetValues<byte>(0x00cbda4au);
 	}
 
-	[DDLRegistration(0x9de11dd4u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = false;
 
-	[DDLRegistration(0x9de11dd4u)]
+	[DDLRegistration(0xe004c862u)]
 	public string? Font { get; set; } = default;
 
-	[DDLRegistration(0x9de11dd4u)]
+	[DDLRegistration(0xc18c46e8u)]
 	public List<byte> ForegroundColor { get; set; } = [];
 
-	[DDLRegistration(0x9de11dd4u)]
+	[DDLRegistration(0x00cbda4au)]
 	public List<byte> BackgroundColor { get; set; } = [];
 
 	public static ConsoleSettings Create(DDLObject ddl) => new(ddl);

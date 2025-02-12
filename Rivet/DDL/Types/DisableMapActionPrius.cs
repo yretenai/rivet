@@ -18,7 +18,7 @@ public class DisableMapActionPrius : DDLObjectType, IDDLObjectType<DisableMapAct
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xc1b9d35cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
 	public static DisableMapActionPrius Create(DDLObject ddl) => new(ddl);

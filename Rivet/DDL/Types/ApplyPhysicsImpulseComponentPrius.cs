@@ -20,13 +20,13 @@ public class ApplyPhysicsImpulseComponentPrius : DDLObjectType, IDDLObjectType<A
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x344ce380u)]
+	[DDLRegistration(0x44d96bd9u)]
 	public DDLVector3? Velocity { get; set; } = default;
 
-	[DDLRegistration(0x344ce380u)]
+	[DDLRegistration(0x5c939bd6u)]
 	public float Mass { get; set; } = 1.00f;
 
-	[DDLRegistration(0x344ce380u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
 	public static ApplyPhysicsImpulseComponentPrius Create(DDLObject ddl) => new(ddl);

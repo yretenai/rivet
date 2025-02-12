@@ -18,7 +18,7 @@ public class ArenaLink : ParentLink, IDDLObjectType<ArenaLink> {
 		Checkpoint = ddl.GetString(0xd436a987) ?? Checkpoint;
 	}
 
-	[DDLRegistration(0x396132eeu, "Game Intent Checkpoint", "Name of the checkpoint to warp to when triggered by game intent.")]
+	[DDLRegistration(0xd436a987u, "Game Intent Checkpoint", "Name of the checkpoint to warp to when triggered by game intent.")]
 	public string? Checkpoint { get; set; } = default;
 
 	public new static ArenaLink Create(DDLObject ddl) => new(ddl);

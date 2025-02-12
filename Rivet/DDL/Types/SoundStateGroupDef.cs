@@ -22,19 +22,19 @@ public class SoundStateGroupDef : DDLObjectType, IDDLObjectType<SoundStateGroupD
 		States = ddl.GetObjects<SoundWwiseMapDef>(0x0fba392au);
 	}
 
-	[DDLRegistration(0x15153136u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x15153136u)]
+	[DDLRegistration(0x6bbe2d12u)]
 	public uint WwiseId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x15153136u)]
+	[DDLRegistration(0xe79ebf67u)]
 	public uint PlatformMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x15153136u)]
+	[DDLRegistration(0x803ee258u)]
 	public uint LanguageMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x15153136u)]
+	[DDLRegistration(0x0fba392au)]
 	public List<SoundWwiseMapDef?> States { get; set; } = [];
 
 	public static SoundStateGroupDef Create(DDLObject ddl) => new(ddl);

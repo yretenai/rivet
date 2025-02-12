@@ -23,22 +23,22 @@ public class EditorDebugOptions : DDLObjectType, IDDLObjectType<EditorDebugOptio
 		ShowGrid = ddl.GetValue<bool>(0x18a3deadu, ShowGrid);
 	}
 
-	[DDLRegistration(0x897a2675u, "DOF Visualization")]
+	[DDLRegistration(0x3b521405u, "DOF Visualization")]
 	public bool DOFVisualization { get; set; } = false;
 
-	[DDLRegistration(0x897a2675u, "LookAt Visualization")]
+	[DDLRegistration(0xdd23ef46u, "LookAt Visualization")]
 	public bool LookAtVisualization { get; set; } = false;
 
-	[DDLRegistration(0x897a2675u, "CameraCone Visualization")]
+	[DDLRegistration(0xe2271685u, "CameraCone Visualization")]
 	public bool CameraConeVisualization { get; set; } = false;
 
-	[DDLRegistration(0x897a2675u, "Ignore JumpToShot")]
+	[DDLRegistration(0x25a7afb0u, "Ignore JumpToShot")]
 	public bool IgnoreJumpToShot { get; set; } = false;
 
-	[DDLRegistration(0x897a2675u, "Toggle Debug Menu")]
+	[DDLRegistration(0x5e1fa050u, "Toggle Debug Menu")]
 	public bool ToggleCineDebugMenu { get; set; } = false;
 
-	[DDLRegistration(0x897a2675u, "Show Grid")]
+	[DDLRegistration(0x18a3deadu, "Show Grid")]
 	public bool ShowGrid { get; set; } = true;
 
 	public static EditorDebugOptions Create(DDLObject ddl) => new(ddl);

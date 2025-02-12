@@ -22,19 +22,19 @@ public class AnimDriverPerformanceNodeDef : DDLObjectType, IDDLObjectType<AnimDr
 		Connection = ddl.GetObject<AnimDriverConnectionDef>(0xf2c12d5fu);
 	}
 
-	[DDLRegistration(0x876d245cu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x876d245cu)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0x876d245cu)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x876d245cu)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x876d245cu)]
+	[DDLRegistration(0xf2c12d5fu)]
 	public AnimDriverConnectionDef? Connection { get; set; } = default;
 
 	public static AnimDriverPerformanceNodeDef Create(DDLObject ddl) => new(ddl);

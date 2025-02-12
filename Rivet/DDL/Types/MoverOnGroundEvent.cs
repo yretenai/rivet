@@ -18,7 +18,7 @@ public class MoverOnGroundEvent : EventBase, IDDLObjectType<MoverOnGroundEvent> 
 		Weight = ddl.GetValue<float>(0x39b51b26u, Weight);
 	}
 
-	[DDLRegistration(0xd5858ef7u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 1.00f;
 
 	public new static MoverOnGroundEvent Create(DDLObject ddl) => new(ddl);

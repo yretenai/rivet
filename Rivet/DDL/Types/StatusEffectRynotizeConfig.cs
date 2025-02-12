@@ -19,10 +19,10 @@ public class StatusEffectRynotizeConfig : StatusEffectConfig, IDDLObjectType<Sta
 		SpeedMultiplier = ddl.GetValue<float>(0x621b85e8u, SpeedMultiplier);
 	}
 
-	[DDLRegistration(0x6cb6e5d5u, description: "Base Type: BotConfigBaseMovement")]
+	[DDLRegistration(0x99a5be38u, description: "Base Type: BotConfigBaseMovement")]
 	public RivetAssetId HealthPackConfig { get; set; } = default;
 
-	[DDLRegistration(0x6cb6e5d5u)]
+	[DDLRegistration(0x621b85e8u)]
 	public float SpeedMultiplier { get; set; } = 0.50f;
 
 	public new static StatusEffectRynotizeConfig Create(DDLObject ddl) => new(ddl);

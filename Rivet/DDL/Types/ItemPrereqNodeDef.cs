@@ -19,10 +19,10 @@ public class ItemPrereqNodeDef : PrereqNodeBaseDef, IDDLObjectType<ItemPrereqNod
 		RequiredItemCount = ddl.GetValue<uint>(0xaf5e9e14u, RequiredItemCount);
 	}
 
-	[DDLRegistration(0xf18cf588u, "Required Item Config", "The ItemConfig/GameItemConfig defining the required item.")]
+	[DDLRegistration(0xbfc49322u, "Required Item Config", "The ItemConfig/GameItemConfig defining the required item.")]
 	public RivetAssetId RequiredItemConfig { get; set; } = default;
 
-	[DDLRegistration(0xf18cf588u, "Required Item Count", "The player must have this number of the required item to satisfy this prerequisite.")]
+	[DDLRegistration(0xaf5e9e14u, "Required Item Count", "The player must have this number of the required item to satisfy this prerequisite.")]
 	public uint RequiredItemCount { get; set; } = 0x00000001;
 
 	public new static ItemPrereqNodeDef Create(DDLObject ddl) => new(ddl);

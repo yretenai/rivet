@@ -38,67 +38,67 @@ public class FogSettingsDef : DDLObjectType, IDDLObjectType<FogSettingsDef> {
 		RemapKeyOpacity = ddl.GetValue<float>(0xa40ba824u, RemapKeyOpacity);
 	}
 
-	[DDLRegistration(0x64f20212u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0x64f20212u, "Color Map")]
+	[DDLRegistration(0xecb24e46u, "Color Map")]
 	public RivetAssetId ColorMapAsset { get; set; } = default;
 
-	[DDLRegistration(0x64f20212u, "Alpha Map")]
+	[DDLRegistration(0x280d1a3cu, "Alpha Map")]
 	public RivetAssetId AlphaMapAsset { get; set; } = default;
 
-	[DDLRegistration(0x64f20212u, "Color Map Depth Range", "Distance at which fog transitions to the highest mip of the color texture")]
+	[DDLRegistration(0x0ecc34efu, "Color Map Depth Range", "Distance at which fog transitions to the highest mip of the color texture")]
 	public float ColorMapDepthRange { get; set; } = 1000.00f;
 
-	[DDLRegistration(0x64f20212u, "Color Map Depth Scale", "Controls rate at which fog color transitions mips")]
+	[DDLRegistration(0x710d4b22u, "Color Map Depth Scale", "Controls rate at which fog color transitions mips")]
 	public float ColorMapDepthScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x64f20212u)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x64f20212u, "Brightness")]
+	[DDLRegistration(0x57e1ba0au, "Brightness")]
 	public float LuminanceScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x64f20212u, "Key Light Influence")]
+	[DDLRegistration(0xf24ff973u, "Key Light Influence")]
 	public float KeyLightInfluence { get; set; } = 1.00f;
 
-	[DDLRegistration(0x64f20212u)]
+	[DDLRegistration(0x0bc26d8fu)]
 	public float NearRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x64f20212u, "Bottom height")]
+	[DDLRegistration(0x657bec6du, "Bottom height")]
 	public float Height0 { get; set; } = -100.00f;
 
-	[DDLRegistration(0x64f20212u, "Opacity at 100m")]
+	[DDLRegistration(0xaa485b51u, "Opacity at 100m")]
 	public float Opacity0 { get; set; } = 0.50f;
 
-	[DDLRegistration(0x64f20212u, "Second height")]
+	[DDLRegistration(0x127cdcfbu, "Second height")]
 	public float Height1 { get; set; } = 100.00f;
 
-	[DDLRegistration(0x64f20212u, "Opacity at 100m")]
+	[DDLRegistration(0xdd4f6bc7u, "Opacity at 100m")]
 	public float Opacity1 { get; set; } = 0.00f;
 
-	[DDLRegistration(0x64f20212u, "Third height")]
+	[DDLRegistration(0x8b758d41u, "Third height")]
 	public float Height2 { get; set; } = 200.00f;
 
-	[DDLRegistration(0x64f20212u, "Opacity at 100m")]
+	[DDLRegistration(0x44463a7du, "Opacity at 100m")]
 	public float Opacity2 { get; set; } = 0.00f;
 
-	[DDLRegistration(0x64f20212u, "Fourth height")]
+	[DDLRegistration(0xfc72bdd7u, "Fourth height")]
 	public float Height3 { get; set; } = 300.00f;
 
-	[DDLRegistration(0x64f20212u, "Opacity at 100m")]
+	[DDLRegistration(0x33410aebu, "Opacity at 100m")]
 	public float Opacity3 { get; set; } = 0.00f;
 
-	[DDLRegistration(0x64f20212u, "Top height")]
+	[DDLRegistration(0x62162874u, "Top height")]
 	public float Height4 { get; set; } = 400.00f;
 
-	[DDLRegistration(0x64f20212u, "Opacity at 100m")]
+	[DDLRegistration(0xad259f48u, "Opacity at 100m")]
 	public float Opacity4 { get; set; } = 0.00f;
 
-	[DDLRegistration(0x64f20212u, "S-Curve Strength")]
+	[DDLRegistration(0x457f5d83u, "S-Curve Strength")]
 	public float RemapStrength { get; set; } = 0.00f;
 
-	[DDLRegistration(0x64f20212u, "S-Curve Center")]
+	[DDLRegistration(0xa40ba824u, "S-Curve Center")]
 	public float RemapKeyOpacity { get; set; } = 0.50f;
 
 	public static FogSettingsDef Create(DDLObject ddl) => new(ddl);

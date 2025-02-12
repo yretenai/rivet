@@ -19,10 +19,10 @@ public class AnimDamageAttackStyleBase : DDLObjectType, IDDLObjectType<AnimDamag
 		WeaponIdHash = ddl.GetValue<uint>(0xc1e51d69u, WeaponIdHash);
 	}
 
-	[DDLRegistration(0xeed69346u)]
+	[DDLRegistration(0x7adfa814u)]
 	public uint DamageIdHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xeed69346u)]
+	[DDLRegistration(0xc1e51d69u)]
 	public uint WeaponIdHash { get; set; } = 0x00000000;
 
 	public static AnimDamageAttackStyleBase Create(DDLObject ddl) => new(ddl);

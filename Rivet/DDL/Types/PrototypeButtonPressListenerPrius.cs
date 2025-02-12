@@ -24,25 +24,25 @@ public class PrototypeButtonPressListenerPrius : DDLObjectType, IDDLObjectType<P
 		TriggerOnHeld = ddl.GetValue<bool>(0x0a4a100cu, TriggerOnHeld);
 	}
 
-	[DDLRegistration(0x9ffbe253u)]
+	[DDLRegistration(0x047ee25au)]
 	public xe10f705b Button { get; set; } = xe10f705b.Any;
 
-	[DDLRegistration(0x9ffbe253u, "Start Enabled?", "Whether this component starts active/enabled.")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled?", "Whether this component starts active/enabled.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0x9ffbe253u, "Trigger Count")]
+	[DDLRegistration(0xebd996d0u, "Trigger Count")]
 	public uint TriggerCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9ffbe253u, "Retrigger Delay")]
+	[DDLRegistration(0xffff3a00u, "Retrigger Delay")]
 	public float RetriggerDelay { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9ffbe253u, "Use Range")]
+	[DDLRegistration(0x6a4e2be2u, "Use Range")]
 	public float UseRange { get; set; } = 3.00f;
 
-	[DDLRegistration(0x9ffbe253u, "Volume As Range")]
+	[DDLRegistration(0xa8fbfba2u, "Volume As Range")]
 	public bool VolumeRange { get; set; } = true;
 
-	[DDLRegistration(0x9ffbe253u, "Trigger on Held", "Trigger when the button is held, otherwise trigger if the button is pressed")]
+	[DDLRegistration(0x0a4a100cu, "Trigger on Held", "Trigger when the button is held, otherwise trigger if the button is pressed")]
 	public bool TriggerOnHeld { get; set; } = true;
 
 	public static PrototypeButtonPressListenerPrius Create(DDLObject ddl) => new(ddl);

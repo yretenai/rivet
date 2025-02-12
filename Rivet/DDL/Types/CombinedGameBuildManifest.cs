@@ -18,7 +18,7 @@ public class CombinedGameBuildManifest : DDLObjectType, IDDLObjectType<CombinedG
 		GameBuilds = ddl.GetObjects<LunaFtpGameBuildConfigFile>(0x6e23aab9u);
 	}
 
-	[DDLRegistration(0xa752961fu)]
+	[DDLRegistration(0x6e23aab9u)]
 	public List<LunaFtpGameBuildConfigFile?> GameBuilds { get; set; } = [];
 
 	public static CombinedGameBuildManifest Create(DDLObject ddl) => new(ddl);

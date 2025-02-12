@@ -46,91 +46,91 @@ public class WeaponConfig : WeaponConfigBase, IDDLObjectType<WeaponConfig> {
 		ForHeroSkipObstructionChecks = ddl.GetValue<bool>(0x929c2b16u, ForHeroSkipObstructionChecks);
 	}
 
-	[DDLRegistration(0xb72a0e33u, "Level Data List")]
+	[DDLRegistration(0x08553e43u, "Level Data List")]
 	public List<WeaponLevelDataListItem?> LevelList { get; set; } = [];
 
-	[DDLRegistration(0xb72a0e33u, "Earned XP List")]
+	[DDLRegistration(0xb611f4fau, "Earned XP List")]
 	public List<WeaponEarnedXPData?> XPSourceList { get; set; } = [];
 
-	[DDLRegistration(0xb72a0e33u)]
+	[DDLRegistration(0x93d195a6u)]
 	public x8c1c9e5c GripStyle { get; set; } = x8c1c9e5c.GripStyleRifle;
 
-	[DDLRegistration(0xb72a0e33u)]
+	[DDLRegistration(0x7a8cd201u)]
 	public xc968d790 HolsterType { get; set; } = xc968d790.None;
 
-	[DDLRegistration(0xb72a0e33u)]
+	[DDLRegistration(0x09b20e70u)]
 	public xc533d93f SlotType { get; set; } = xc533d93f.Held;
 
-	[DDLRegistration(0xb72a0e33u)]
+	[DDLRegistration(0x93b9f784u)]
 	public x597cb7da FireStyle { get; set; } = x597cb7da.FireStyleLight;
 
-	[DDLRegistration(0xb72a0e33u)]
+	[DDLRegistration(0x4ebd6ef8u)]
 	public x0d3dac94 ReloadStyle { get; set; } = x0d3dac94.ReloadStyleNone;
 
-	[DDLRegistration(0xb72a0e33u)]
+	[DDLRegistration(0x894bd445u)]
 	public xb82a951f OffsetStyle { get; set; } = xb82a951f.OffsetStyleNone;
 
-	[DDLRegistration(0xb72a0e33u, "HUD Weapon Enum", "Choose the weapon enum that corresponds with this weapon. The HUD will use this to know what weapon is being used, to do things like use the right reticle.")]
+	[DDLRegistration(0xad66be60u, "HUD Weapon Enum", "Choose the weapon enum that corresponds with this weapon. The HUD will use this to know what weapon is being used, to do things like use the right reticle.")]
 	public HudWeaponEnum HudWeaponTypeEnum { get; set; } = HudWeaponEnum.Blank;
 
-	[DDLRegistration(0xb72a0e33u, "Zoom Config Override")]
+	[DDLRegistration(0xdb4379b0u, "Zoom Config Override")]
 	public RivetAssetId ZoomConfig { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Beam In Config Override")]
+	[DDLRegistration(0x41075a28u, "Beam In Config Override")]
 	public RivetAssetId BeamInConfig { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Aim Trigger Effect Config Override")]
+	[DDLRegistration(0xcc48488au, "Aim Trigger Effect Config Override")]
 	public RivetAssetId AimTriggerEffectConfigOverride { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Light Version of Aim Trigger Effect Config Override")]
+	[DDLRegistration(0x5de7f54eu, "Light Version of Aim Trigger Effect Config Override")]
 	public RivetAssetId LightAimTriggerEffectConfigOverride { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Fire Trigger Effect Config Override")]
+	[DDLRegistration(0x48e6a944u, "Fire Trigger Effect Config Override")]
 	public RivetAssetId FireTriggerEffectConfigOverride { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Light Version of Fire Trigger Effect Config Override")]
+	[DDLRegistration(0xd47e0050u, "Light Version of Fire Trigger Effect Config Override")]
 	public RivetAssetId LightFireTriggerEffectConfigOverride { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Targeting Info")]
+	[DDLRegistration(0x1f11b0ecu, "Targeting Info")]
 	public WeaponTargetingInfo? TargetingInfo { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Reticle Info")]
+	[DDLRegistration(0xcb75cd69u, "Reticle Info")]
 	public WeaponReticleInfo? ReticleInfo { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Mod Config")]
+	[DDLRegistration(0xdd0ebc59u, "Mod Config")]
 	public RivetAssetId ModConfig { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Grid Config")]
+	[DDLRegistration(0x076b9a9au, "Grid Config")]
 	public RivetAssetId GridConfig { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, description: "Look or LookGroup on the User to enable when this weapon is equipped.")]
+	[DDLRegistration(0xebae9e37u, description: "Look or LookGroup on the User to enable when this weapon is equipped.")]
 	public string? EquippedUserLook { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, description: "Look or LookGroup on the User to enable when this weapon is unequipped.")]
+	[DDLRegistration(0x9e1914f5u, description: "Look or LookGroup on the User to enable when this weapon is unequipped.")]
 	public string? UnequippedUserLook { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Glove Model Override")]
+	[DDLRegistration(0x6f9879e4u, "Glove Model Override")]
 	public RivetAssetId GloveModelOverride { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Default LookGroup")]
+	[DDLRegistration(0xcb06870du, "Default LookGroup")]
 	public string? DefaultLookGroup { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Upgraded LookGroup")]
+	[DDLRegistration(0x58b7af1du, "Upgraded LookGroup")]
 	public string? UpgradedLookGroup { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u, "Ammo Cost")]
+	[DDLRegistration(0x5f5bf7dfu, "Ammo Cost")]
 	public int AmmoCost { get; set; } = 0;
 
-	[DDLRegistration(0xb72a0e33u)]
+	[DDLRegistration(0x4f4fae15u)]
 	public WeaponObstructionBase? BarrelObstruction { get; set; } = default;
 
-	[DDLRegistration(0xb72a0e33u)]
+	[DDLRegistration(0x59b794a8u)]
 	public bool WantsTargetLOS { get; set; } = false;
 
-	[DDLRegistration(0xb72a0e33u)]
+	[DDLRegistration(0xf50154a7u)]
 	public bool UseBeamInEquip { get; set; } = true;
 
-	[DDLRegistration(0xb72a0e33u, description: "If this weapon is used by a hero, whether to skip the obstruction check. Should only be marked on things like fist weapons.")]
+	[DDLRegistration(0x929c2b16u, description: "If this weapon is used by a hero, whether to skip the obstruction check. Should only be marked on things like fist weapons.")]
 	public bool ForHeroSkipObstructionChecks { get; set; } = false;
 
 	public new static WeaponConfig Create(DDLObject ddl) => new(ddl);

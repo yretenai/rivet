@@ -18,7 +18,7 @@ public class ScriptVarWatchFloat : DDLObjectType, IDDLObjectType<ScriptVarWatchF
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x2e2ed60cu)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
 	public static ScriptVarWatchFloat Create(DDLObject ddl) => new(ddl);

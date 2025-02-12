@@ -19,10 +19,10 @@ public class MeleeWeaponSkinPrius : DDLObjectType, IDDLObjectType<MeleeWeaponSki
 		IsWrench = ddl.GetValue<bool>(0x5c96a8cau, IsWrench);
 	}
 
-	[DDLRegistration(0xf25ff4adu)]
+	[DDLRegistration(0x55eb8817u)]
 	public RivetAssetId MeleeWeaponSkinConfig { get; set; } = default;
 
-	[DDLRegistration(0xf25ff4adu, description: "True: This is the wrench. False: This is the hammer.")]
+	[DDLRegistration(0x5c96a8cau, description: "True: This is the wrench. False: This is the hammer.")]
 	public bool IsWrench { get; set; } = true;
 
 	public static MeleeWeaponSkinPrius Create(DDLObject ddl) => new(ddl);

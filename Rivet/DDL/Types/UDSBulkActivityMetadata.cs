@@ -27,34 +27,34 @@ public class UDSBulkActivityMetadata : DDLObjectType, IDDLObjectType<UDSBulkActi
 		Rewards = ddl.GetObjects<UDSWebApiReward>(0x27754493u);
 	}
 
-	[DDLRegistration(0x3d09b5c7u)]
+	[DDLRegistration(0x1c7c38a7u)]
 	public x38e4d198 Type { get; set; } = x38e4d198.Activity;
 
-	[DDLRegistration(0x3d09b5c7u)]
+	[DDLRegistration(0x053bc6e7u)]
 	public xca2817ca Category { get; set; } = xca2817ca.Progress;
 
-	[DDLRegistration(0x3d09b5c7u)]
+	[DDLRegistration(0xce811188u)]
 	public Dictionary<string, string?> Name { get; set; } = [];
 
-	[DDLRegistration(0x3d09b5c7u)]
+	[DDLRegistration(0xe03811fdu)]
 	public Dictionary<string, string?> Description { get; set; } = [];
 
-	[DDLRegistration(0x3d09b5c7u)]
+	[DDLRegistration(0xdcbdf284u)]
 	public bool AvailableByDefault { get; set; } = false;
 
-	[DDLRegistration(0x3d09b5c7u)]
+	[DDLRegistration(0x054f0180u)]
 	public bool IsRequiredForCompletion { get; set; } = false;
 
-	[DDLRegistration(0x3d09b5c7u)]
+	[DDLRegistration(0xb189a2ecu)]
 	public bool Hidden { get; set; } = false;
 
-	[DDLRegistration(0x3d09b5c7u)]
+	[DDLRegistration(0x7b5a11beu)]
 	public bool IsOnlineMultiplay { get; set; } = false;
 
-	[DDLRegistration(0x3d09b5c7u)]
+	[DDLRegistration(0xa5884b3eu)]
 	public uint DefaultPlaytimeEstimate { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3d09b5c7u)]
+	[DDLRegistration(0x27754493u)]
 	public List<UDSWebApiReward?> Rewards { get; set; } = [];
 
 	public static UDSBulkActivityMetadata Create(DDLObject ddl) => new(ddl);

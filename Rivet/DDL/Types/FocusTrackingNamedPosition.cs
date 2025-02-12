@@ -18,7 +18,7 @@ public class FocusTrackingNamedPosition : DDLObjectType, IDDLObjectType<FocusTra
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0xbd6c92e1u, description: "Name of a FocusPosition that will be set from code.  Solvers can be told to track a named FocusPosition, instead of the default position.")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of a FocusPosition that will be set from code.  Solvers can be told to track a named FocusPosition, instead of the default position.")]
 	public string? Name { get; set; } = default;
 
 	public static FocusTrackingNamedPosition Create(DDLObject ddl) => new(ddl);

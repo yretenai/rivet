@@ -18,7 +18,7 @@ public class CoverZoneUnloadedEvent : EventBase, IDDLObjectType<CoverZoneUnloade
 		CoverZoneIndexUnloadedBitField = ddl.GetValues<ulong>(0xac6e0740u);
 	}
 
-	[DDLRegistration(0xab9da79fu)]
+	[DDLRegistration(0xac6e0740u)]
 	public List<ulong> CoverZoneIndexUnloadedBitField { get; set; } = [];
 
 	public new static CoverZoneUnloadedEvent Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class DisplayButtonPOIPrius : EnabledComponentBasePrius, IDDLObjectType<D
 		RequiredHeroType = ddl.GetEnum<HeroTypes>(0x02553353u, HeroTypesValues.Lookup);
 	}
 
-	[DDLRegistration(0x5de47d7fu, "Button Icon", "The button to display.")]
+	[DDLRegistration(0x047ee25au, "Button Icon", "The button to display.")]
 	public x89e6bc43 Button { get; set; } = x89e6bc43.Interact;
 
-	[DDLRegistration(0x5de47d7fu, "Require Line of Sight?", "Whether we need line of sight (no collision between the camera and it) to display. Note, invisible collision will still break LOS.")]
+	[DDLRegistration(0x5e4c04afu, "Require Line of Sight?", "Whether we need line of sight (no collision between the camera and it) to display. Note, invisible collision will still break LOS.")]
 	public bool RequireLOS { get; set; } = true;
 
-	[DDLRegistration(0x5de47d7fu, "Auto Disable on Break", "Whether to automatically disable the icon if the actor we are on breaks.")]
+	[DDLRegistration(0x2da41c35u, "Auto Disable on Break", "Whether to automatically disable the icon if the actor we are on breaks.")]
 	public bool AutoDisableOnBreak { get; set; } = true;
 
-	[DDLRegistration(0x5de47d7fu, "POI Offset", "The offset for displaying the POI icon (relative to Actor forward).")]
+	[DDLRegistration(0x5a1dc6d9u, "POI Offset", "The offset for displaying the POI icon (relative to Actor forward).")]
 	public DDLVector3? POIOffset { get; set; } = default;
 
-	[DDLRegistration(0x5de47d7fu, "Range", "The max range from the hero to display our POI.")]
+	[DDLRegistration(0x8ad49688u, "Range", "The max range from the hero to display our POI.")]
 	public float Range { get; set; } = 15.00f;
 
-	[DDLRegistration(0x5de47d7fu, "Preview Range", "If greater than 0, it will display a preview version of this interact at/above this distance.")]
+	[DDLRegistration(0x1a4186b9u, "Preview Range", "If greater than 0, it will display a preview version of this interact at/above this distance.")]
 	public float PreviewRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5de47d7fu, "Hero Type", "Filter for which hero can view this button. None means any hero can see it.")]
+	[DDLRegistration(0x02553353u, "Hero Type", "Filter for which hero can view this button. None means any hero can see it.")]
 	public HeroTypes RequiredHeroType { get; set; } = HeroTypes.None;
 
 	public new static DisplayButtonPOIPrius Create(DDLObject ddl) => new(ddl);

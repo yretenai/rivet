@@ -18,7 +18,7 @@ public class ShotProtoGrenadePrius : GrenadeShotPrius, IDDLObjectType<ShotProtoG
 		ShardDetonationData = ddl.GetObject<ShardDetonationData>(0xec3e5404u);
 	}
 
-	[DDLRegistration(0x52e1a6a9u)]
+	[DDLRegistration(0xec3e5404u)]
 	public ShardDetonationData? ShardDetonationData { get; set; } = default;
 
 	public new static ShotProtoGrenadePrius Create(DDLObject ddl) => new(ddl);

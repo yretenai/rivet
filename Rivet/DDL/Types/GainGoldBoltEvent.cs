@@ -20,13 +20,13 @@ public class GainGoldBoltEvent : EventBase, IDDLObjectType<GainGoldBoltEvent> {
 		TotalBolts = ddl.GetValue<int>(0xbccd088eu, TotalBolts);
 	}
 
-	[DDLRegistration(0x36218d1cu)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x36218d1cu)]
+	[DDLRegistration(0xdc227ed9u)]
 	public string? BoltName { get; set; } = default;
 
-	[DDLRegistration(0x36218d1cu)]
+	[DDLRegistration(0xbccd088eu)]
 	public int TotalBolts { get; set; } = 0;
 
 	public new static GainGoldBoltEvent Create(DDLObject ddl) => new(ddl);

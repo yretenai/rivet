@@ -20,13 +20,13 @@ public class FactionArmorDataElement : DDLObjectType, IDDLObjectType<FactionArmo
 		DamageReductionPercentPiece = ddl.GetValue<float>(0x3662d41au, DamageReductionPercentPiece);
 	}
 
-	[DDLRegistration(0xf1d0b92eu, "Allegiance")]
+	[DDLRegistration(0xd10c0c26u, "Allegiance")]
 	public x6bdf4ba1 Allegiance { get; set; } = x6bdf4ba1.Neutral;
 
-	[DDLRegistration(0xf1d0b92eu, description: "Damage reduction given for having the entire set.")]
+	[DDLRegistration(0x3150cd1au, description: "Damage reduction given for having the entire set.")]
 	public float DamageReductionPercentSet { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf1d0b92eu, description: "Damage reduction given for a piece (bundle) of this armor set.")]
+	[DDLRegistration(0x3662d41au, description: "Damage reduction given for a piece (bundle) of this armor set.")]
 	public float DamageReductionPercentPiece { get; set; } = 0.00f;
 
 	public static FactionArmorDataElement Create(DDLObject ddl) => new(ddl);

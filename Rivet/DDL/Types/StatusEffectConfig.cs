@@ -19,10 +19,10 @@ public class StatusEffectConfig : DDLObjectType, IDDLObjectType<StatusEffectConf
 		StatusEffect = ddl.GetObject<StatusEffectWrapper>(0x0f201128u);
 	}
 
-	[DDLRegistration(0x7ff55a83u)]
+	[DDLRegistration(0x840c154du)]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x7ff55a83u)]
+	[DDLRegistration(0x0f201128u)]
 	public StatusEffectWrapper? StatusEffect { get; set; } = default;
 
 	public static StatusEffectConfig Create(DDLObject ddl) => new(ddl);

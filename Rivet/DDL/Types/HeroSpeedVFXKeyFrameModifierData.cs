@@ -19,10 +19,10 @@ public class HeroSpeedVFXKeyFrameModifierData : DDLObjectType, IDDLObjectType<He
 		SpeedToValueMapping = ddl.GetObject<MapRange>(0xf47fb556u);
 	}
 
-	[DDLRegistration(0xebafaac4u, description: "Name of the KeyFrameModifier.")]
+	[DDLRegistration(0x6926b521u, description: "Name of the KeyFrameModifier.")]
 	public string? KeyFrameModifierName { get; set; } = default;
 
-	[DDLRegistration(0xebafaac4u, description: "X: Hero speed (m/s). Y: Value for modifier.")]
+	[DDLRegistration(0xf47fb556u, description: "X: Hero speed (m/s). Y: Value for modifier.")]
 	public MapRange? SpeedToValueMapping { get; set; } = default;
 
 	public static HeroSpeedVFXKeyFrameModifierData Create(DDLObject ddl) => new(ddl);

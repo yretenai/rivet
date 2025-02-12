@@ -18,7 +18,7 @@ public class MeleeChargeEndEvent : EventBase, IDDLObjectType<MeleeChargeEndEvent
 		ChargeSuccess = ddl.GetValue<byte>(0x53546fceu, ChargeSuccess);
 	}
 
-	[DDLRegistration(0x8a3dae47u, "Charge Success")]
+	[DDLRegistration(0x53546fceu, "Charge Success")]
 	public byte ChargeSuccess { get; set; } = 0x01;
 
 	public new static MeleeChargeEndEvent Create(DDLObject ddl) => new(ddl);

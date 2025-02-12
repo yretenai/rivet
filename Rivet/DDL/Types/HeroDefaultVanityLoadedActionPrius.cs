@@ -18,7 +18,7 @@ public class HeroDefaultVanityLoadedActionPrius : DDLObjectType, IDDLObjectType<
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x083188bau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
 	public static HeroDefaultVanityLoadedActionPrius Create(DDLObject ddl) => new(ddl);

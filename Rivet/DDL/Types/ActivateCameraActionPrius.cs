@@ -26,31 +26,31 @@ public class ActivateCameraActionPrius : DDLObjectType, IDDLObjectType<ActivateC
 		DuplicateCameraOnActivate = ddl.GetValue<bool>(0x00b110f7u, DuplicateCameraOnActivate);
 	}
 
-	[DDLRegistration(0x43b6fb8fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0x43b6fb8fu, "Transition Type")]
+	[DDLRegistration(0x125f2c3bu, "Transition Type")]
 	public x787c02d3 TransitionType { get; set; } = x787c02d3.Slerp;
 
-	[DDLRegistration(0x43b6fb8fu, "Blend time", "The time it will take to transition to the new view.  Setting this to 0 acts as a CutTo.")]
+	[DDLRegistration(0xf805a3f6u, "Blend time", "The time it will take to transition to the new view.  Setting this to 0 acts as a CutTo.")]
 	public float BlendTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x43b6fb8fu, "Blend Ease In")]
+	[DDLRegistration(0xceb44e2cu, "Blend Ease In")]
 	public float BlendEaseIn { get; set; } = 0.20f;
 
-	[DDLRegistration(0x43b6fb8fu, "Blend Ease Out")]
+	[DDLRegistration(0xc8c5daa0u, "Blend Ease Out")]
 	public float BlendEaseOut { get; set; } = 0.20f;
 
-	[DDLRegistration(0x43b6fb8fu, "Prune Type")]
+	[DDLRegistration(0xaaf6900au, "Prune Type")]
 	public x1e271f24 PruneType { get; set; } = x1e271f24.Prune;
 
-	[DDLRegistration(0x43b6fb8fu, "High Priority")]
+	[DDLRegistration(0x97ee1109u, "High Priority")]
 	public bool HighPriority { get; set; } = false;
 
-	[DDLRegistration(0x43b6fb8fu, "Activate Local")]
+	[DDLRegistration(0x8c7e37a5u, "Activate Local")]
 	public bool ActivateLocal { get; set; } = true;
 
-	[DDLRegistration(0x43b6fb8fu, "Duplicate Camera on Activate", "If true, the camera will be duplicated passed out as the CreatedCamera. \nIf false, the camera will be activated directly and passed out as the CreatedCamera.")]
+	[DDLRegistration(0x00b110f7u, "Duplicate Camera on Activate", "If true, the camera will be duplicated passed out as the CreatedCamera. \nIf false, the camera will be activated directly and passed out as the CreatedCamera.")]
 	public bool DuplicateCameraOnActivate { get; set; } = true;
 
 	public static ActivateCameraActionPrius Create(DDLObject ddl) => new(ddl);

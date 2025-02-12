@@ -27,34 +27,34 @@ public class UIOption : DDLObjectType, IDDLObjectType<UIOption> {
 		ForMkb = ddl.GetValue<bool>(0xd6b42783u, ForMkb);
 	}
 
-	[DDLRegistration(0x46e86962u)]
+	[DDLRegistration(0x0f172a74u)]
 	public x33afe7f4 OptionID { get; set; } = x33afe7f4.Resume;
 
-	[DDLRegistration(0x46e86962u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x46e86962u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x46e86962u, "Description (Alternate)")]
+	[DDLRegistration(0x29bf0d94u, "Description (Alternate)")]
 	public string? DescriptionAlt { get; set; } = default;
 
-	[DDLRegistration(0x46e86962u, "Accessibility Icon")]
+	[DDLRegistration(0x7c679f8eu, "Accessibility Icon")]
 	public RivetAssetId AccessibilityIcon { get; set; } = default;
 
-	[DDLRegistration(0x46e86962u, "Input Annotation Icon")]
+	[DDLRegistration(0xd8d7e231u, "Input Annotation Icon")]
 	public RivetAssetId InputAnnotationIcon { get; set; } = default;
 
-	[DDLRegistration(0x46e86962u, "Preview Image")]
+	[DDLRegistration(0x4cfbd8afu, "Preview Image")]
 	public RivetAssetId PreviewImage { get; set; } = default;
 
-	[DDLRegistration(0x46e86962u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public UIOptionTypeBase? Type { get; set; } = default;
 
-	[DDLRegistration(0x46e86962u, description: "Available for Gamepad users")]
+	[DDLRegistration(0xc47c2ed2u, description: "Available for Gamepad users")]
 	public bool ForGamepad { get; set; } = true;
 
-	[DDLRegistration(0x46e86962u, description: "Available for Mouse and Keyboard users")]
+	[DDLRegistration(0xd6b42783u, description: "Available for Mouse and Keyboard users")]
 	public bool ForMkb { get; set; } = true;
 
 	public static UIOption Create(DDLObject ddl) => new(ddl);

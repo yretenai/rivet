@@ -33,52 +33,52 @@ public class BasicRecoilPrius : WeaponRecoilBasePrius, IDDLObjectType<BasicRecoi
 		CameraShake = ddl.GetObject<RecoilCameraShakeItem>(0xefd546cau);
 	}
 
-	[DDLRegistration(0x9775e65cu, "Shots To Min")]
+	[DDLRegistration(0x96821e54u, "Shots To Min")]
 	public float ShotsToMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9775e65cu, "Shots To Max")]
+	[DDLRegistration(0xaa8f210du, "Shots To Max")]
 	public float ShotsToMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9775e65cu, "Bump Ramp")]
+	[DDLRegistration(0x5642c4f0u, "Bump Ramp")]
 	public float BumpRamp { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9775e65cu, "Bump Angle Min")]
+	[DDLRegistration(0x3aff6baau, "Bump Angle Min")]
 	public float BumpAngleMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9775e65cu, "Bump Angle Max")]
+	[DDLRegistration(0x06f254f3u, "Bump Angle Max")]
 	public float BumpAngleMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9775e65cu, "Bump Offset Min")]
+	[DDLRegistration(0x2ec54dcfu, "Bump Offset Min")]
 	public float BumpOffsetMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9775e65cu, "Bump Offset Max")]
+	[DDLRegistration(0x12c87296u, "Bump Offset Max")]
 	public float BumpOffsetMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9775e65cu, "Bump Speed Min")]
+	[DDLRegistration(0xcbe41e70u, "Bump Speed Min")]
 	public float BumpSpeedMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9775e65cu, "Bump Speed Max")]
+	[DDLRegistration(0xf7e92129u, "Bump Speed Max")]
 	public float BumpSpeedMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9775e65cu, "Cooldown Start")]
+	[DDLRegistration(0x5aea0858u, "Cooldown Start")]
 	public float CooldownStart { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9775e65cu, "Cooldown Complete")]
+	[DDLRegistration(0x53f3cba6u, "Cooldown Complete")]
 	public float CooldownComplete { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9775e65cu, "Settle Delay")]
+	[DDLRegistration(0x9256f6b8u, "Settle Delay")]
 	public float SettleDelay { get; set; } = 0.15f;
 
-	[DDLRegistration(0x9775e65cu, "Settle Gain")]
+	[DDLRegistration(0x7c0ccd53u, "Settle Gain")]
 	public float SettleGain { get; set; } = -8.00f;
 
-	[DDLRegistration(0x9775e65cu, "Settle Damp")]
+	[DDLRegistration(0xf0da9adau, "Settle Damp")]
 	public float SettleDamp { get; set; } = -13.00f;
 
-	[DDLRegistration(0x9775e65cu, "Settle Percent")]
+	[DDLRegistration(0x27a01162u, "Settle Percent")]
 	public float SettlePercent { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9775e65cu)]
+	[DDLRegistration(0xefd546cau)]
 	public RecoilCameraShakeItem? CameraShake { get; set; } = default;
 
 	public new static BasicRecoilPrius Create(DDLObject ddl) => new(ddl);

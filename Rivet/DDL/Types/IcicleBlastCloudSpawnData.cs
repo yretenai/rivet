@@ -28,37 +28,37 @@ public class IcicleBlastCloudSpawnData : AttachableShotSpawnData, IDDLObjectType
 		WeaponOwner = ddl.GetValue<uint>(0x66470047u, WeaponOwner);
 	}
 
-	[DDLRegistration(0x691fa399u)]
+	[DDLRegistration(0x66a4f27bu)]
 	public float CloudDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x691fa399u)]
+	[DDLRegistration(0x314b8c0eu)]
 	public float CloudStatus { get; set; } = 0.00f;
 
-	[DDLRegistration(0x691fa399u)]
+	[DDLRegistration(0x90093a3eu)]
 	public float SlideDamage { get; set; } = 0.00f;
 
-	[DDLRegistration(0x691fa399u)]
+	[DDLRegistration(0x74bb49f4u)]
 	public float SpikeDamage { get; set; } = 0.00f;
 
-	[DDLRegistration(0x691fa399u)]
+	[DDLRegistration(0x5f297437u)]
 	public float SpikeRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0x691fa399u)]
+	[DDLRegistration(0x9ad9fc86u)]
 	public float ExplosionRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x691fa399u)]
+	[DDLRegistration(0x26406e37u)]
 	public float DamageMultiplier { get; set; } = 0.00f;
 
-	[DDLRegistration(0x691fa399u)]
+	[DDLRegistration(0x0c9976e3u)]
 	public float FrozenTimeMultiplier { get; set; } = 0.00f;
 
-	[DDLRegistration(0x691fa399u)]
+	[DDLRegistration(0x127b0043u)]
 	public uint IcicleBlastShotNumber { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x691fa399u)]
+	[DDLRegistration(0xe3a0d20eu)]
 	public ulong GasElementActor { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x691fa399u)]
+	[DDLRegistration(0x66470047u)]
 	public uint WeaponOwner { get; set; } = 0x00000000;
 
 	public new static IcicleBlastCloudSpawnData Create(DDLObject ddl) => new(ddl);

@@ -33,52 +33,52 @@ public class HeroLevelConfig : ConfigBase, IDDLObjectType<HeroLevelConfig> {
 		Levels = ddl.GetObjects<HeroLevelData>(0xa1522a7eu);
 	}
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0x740a5076u)]
 	public float ExplosionDelayTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0xe3e6fa68u)]
 	public float DamageRadius { get; set; } = 30.00f;
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0x9b14b8ceu)]
 	public float BaseDamageAmount { get; set; } = 100.00f;
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0x241e8cc0u)]
 	public float BonusPerLevelDamage { get; set; } = 25.00f;
 
-	[DDLRegistration(0x0f437c18u, description: "Knockback level to apply to damage request.")]
+	[DDLRegistration(0x2554a262u, description: "Knockback level to apply to damage request.")]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 100.00f;
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0x38d95575u)]
 	public float SlowDownPercent { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0x8e09fab6u)]
 	public RivetAssetId RatchetCompositeMaterial { get; set; } = default;
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0xf6016f94u)]
 	public RivetAssetId RivetCompositeMaterial { get; set; } = default;
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0x3ea6b81du)]
 	public string? MaterialBuildUpTValue { get; set; } = default;
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0xcb1d38feu)]
 	public string? MaterialFadeOutTValue { get; set; } = default;
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0xadc337beu)]
 	public float MaterialFadeOutTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0f437c18u, description: "The shake that starts when the player first levels up.")]
+	[DDLRegistration(0x4ccb3ecfu, description: "The shake that starts when the player first levels up.")]
 	public RivetAssetId RampUpCameraShake { get; set; } = default;
 
-	[DDLRegistration(0x0f437c18u, description: "The shake that starts when the explosion happens.")]
+	[DDLRegistration(0x97c84958u, description: "The shake that starts when the explosion happens.")]
 	public RivetAssetId ExplosionCameraShake { get; set; } = default;
 
-	[DDLRegistration(0x0f437c18u, "Index of Level Cap in Normal Mode", "The max level for the hero when the game is not in challenge mode. This is just an index into the Levels array below.")]
+	[DDLRegistration(0x487934f5u, "Index of Level Cap in Normal Mode", "The max level for the hero when the game is not in challenge mode. This is just an index into the Levels array below.")]
 	public uint NormalModeLevelCap { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0f437c18u)]
+	[DDLRegistration(0xa1522a7eu)]
 	public List<HeroLevelData?> Levels { get; set; } = [];
 
 	public new static HeroLevelConfig Create(DDLObject ddl) => new(ddl);

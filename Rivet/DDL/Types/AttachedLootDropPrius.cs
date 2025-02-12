@@ -20,13 +20,13 @@ public class AttachedLootDropPrius : DDLObjectType, IDDLObjectType<AttachedLootD
 		DropLootForKillerType = ddl.GetEnum<xa7ea7084>(0xbda9e40eu, xa7ea7084Values.Lookup);
 	}
 
-	[DDLRegistration(0xcdec9be4u)]
+	[DDLRegistration(0xbcec9320u)]
 	public CommonLootData? LootData { get; set; } = default;
 
-	[DDLRegistration(0xcdec9be4u, description: "The locator to attach to")]
+	[DDLRegistration(0x5814524du, description: "The locator to attach to")]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0xcdec9be4u, description: "Drop loot on death only if killer is this type.")]
+	[DDLRegistration(0xbda9e40eu, description: "Drop loot on death only if killer is this type.")]
 	public xa7ea7084 DropLootForKillerType { get; set; } = xa7ea7084.Everybody;
 
 	public static AttachedLootDropPrius Create(DDLObject ddl) => new(ddl);

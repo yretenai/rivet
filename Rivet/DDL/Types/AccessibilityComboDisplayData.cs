@@ -18,7 +18,7 @@ public class AccessibilityComboDisplayData : DDLObjectType, IDDLObjectType<Acces
 		Combo = ddl.GetObject<ComboDisplayDataBase>(0xa86ffc8bu);
 	}
 
-	[DDLRegistration(0x0f05db85u)]
+	[DDLRegistration(0xa86ffc8bu)]
 	public ComboDisplayDataBase? Combo { get; set; } = default;
 
 	public static AccessibilityComboDisplayData Create(DDLObject ddl) => new(ddl);

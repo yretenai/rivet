@@ -23,22 +23,22 @@ public class VisualEffectVelocityKeyFrames : DDLObjectType, IDDLObjectType<Visua
 		Value = ddl.GetObject<DDLVector3>(0x042494f5u);
 	}
 
-	[DDLRegistration(0xe413d936u, "Loop")]
+	[DDLRegistration(0xe15c9369u, "Loop")]
 	public bool EnableLooping { get; set; } = true;
 
-	[DDLRegistration(0xe413d936u, "Use Emitter Age")]
+	[DDLRegistration(0x81d6b7fcu, "Use Emitter Age")]
 	public bool UseEmitterAge { get; set; } = false;
 
-	[DDLRegistration(0xe413d936u, "LifeTime Override")]
+	[DDLRegistration(0x580128bbu, "LifeTime Override")]
 	public float LifeTimeOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe413d936u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x333d0e06 Type { get; set; } = x333d0e06.Scale;
 
-	[DDLRegistration(0xe413d936u)]
+	[DDLRegistration(0x30210dfbu)]
 	public xfe5100b1 Space { get; set; } = xfe5100b1.World;
 
-	[DDLRegistration(0xe413d936u)]
+	[DDLRegistration(0x042494f5u)]
 	public DDLVector3? Value { get; set; } = default;
 
 	public static VisualEffectVelocityKeyFrames Create(DDLObject ddl) => new(ddl);

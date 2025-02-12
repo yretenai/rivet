@@ -18,7 +18,7 @@ public class DebugWarningMessageActionPrius : DebugMessageActionPrius, IDDLObjec
 		WarnFlags = ddl.GetBitset<x184da46c>(0xa998b310u, x184da46cValues.Lookup);
 	}
 
-	[DDLRegistration(0xe7a70095u, "Warn Flags", "Who should see the warning from this node.")]
+	[DDLRegistration(0xa998b310u, "Warn Flags", "Who should see the warning from this node.")]
 	public x184da46c WarnFlags { get; set; } = (x184da46c) 0x00000002;
 
 	public new static DebugWarningMessageActionPrius Create(DDLObject ddl) => new(ddl);

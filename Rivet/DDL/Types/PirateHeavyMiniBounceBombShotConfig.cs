@@ -19,10 +19,10 @@ public class PirateHeavyMiniBounceBombShotConfig : ConfigBase, IDDLObjectType<Pi
 		ShotPrius = ddl.GetObject<PirateHeavyMiniBounceBombShotPrius>(0x66fe4621u);
 	}
 
-	[DDLRegistration(0xe8d16b26u)]
+	[DDLRegistration(0xf61d4e28u)]
 	public RivetAssetId MiniBombActor { get; set; } = default;
 
-	[DDLRegistration(0xe8d16b26u, "Shot Prius")]
+	[DDLRegistration(0x66fe4621u, "Shot Prius")]
 	public PirateHeavyMiniBounceBombShotPrius? ShotPrius { get; set; } = default;
 
 	public new static PirateHeavyMiniBounceBombShotConfig Create(DDLObject ddl) => new(ddl);

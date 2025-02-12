@@ -21,16 +21,16 @@ public class PauseTabClosedDevstatsEvent : EventBase, IDDLObjectType<PauseTabClo
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0xaed4a244u, "Event ID", "Unique event ID for this event instance.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique event ID for this event instance.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xaed4a244u, "Tab Segment ID", "Segment ID that matches with the segment ID in the corresponding PauseTabOpened event.")]
+	[DDLRegistration(0x40478ddeu, "Tab Segment ID", "Segment ID that matches with the segment ID in the corresponding PauseTabOpened event.")]
 	public string? TabSegmentId { get; set; } = default;
 
-	[DDLRegistration(0xaed4a244u, "Closed Tab", "The tab that was closed/hidden.")]
+	[DDLRegistration(0x276f84c3u, "Closed Tab", "The tab that was closed/hidden.")]
 	public PauseTabs ClosedTab { get; set; } = PauseTabs.Map;
 
-	[DDLRegistration(0xaed4a244u, "Duration", "How long (in pause menu devstats time) that the tab was open. This excludes time spent afk.")]
+	[DDLRegistration(0x7c5e3db0u, "Duration", "How long (in pause menu devstats time) that the tab was open. This excludes time spent afk.")]
 	public float Duration { get; set; } = 0.00f;
 
 	public new static PauseTabClosedDevstatsEvent Create(DDLObject ddl) => new(ddl);

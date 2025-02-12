@@ -23,22 +23,22 @@ public class MagShieldSuspendedShotPrius : DDLObjectType, IDDLObjectType<MagShie
 		OriginalShotAsset = ddl.GetValue<RivetAssetId>(0x0261a43au, OriginalShotAsset);
 	}
 
-	[DDLRegistration(0x16015872u)]
+	[DDLRegistration(0xfd0a00e2u)]
 	public uint ReferenceActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x16015872u)]
+	[DDLRegistration(0xa0ed18f8u)]
 	public DDLTransform? ReferenceMatrix { get; set; } = default;
 
-	[DDLRegistration(0x16015872u)]
+	[DDLRegistration(0x6649d42bu)]
 	public float ReferenceActorOffset { get; set; } = -0.50f;
 
-	[DDLRegistration(0x16015872u)]
+	[DDLRegistration(0x043f70a1u)]
 	public float ReferenceActorRadius { get; set; } = 1.50f;
 
-	[DDLRegistration(0x16015872u)]
+	[DDLRegistration(0x289b761fu)]
 	public uint ShotNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x16015872u)]
+	[DDLRegistration(0x0261a43au)]
 	public RivetAssetId OriginalShotAsset { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static MagShieldSuspendedShotPrius Create(DDLObject ddl) => new(ddl);

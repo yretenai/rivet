@@ -20,13 +20,13 @@ public class ItemListElement : DDLObjectType, IDDLObjectType<ItemListElement> {
 		ContainChance = ddl.GetValue<float>(0xe992ff5cu, ContainChance);
 	}
 
-	[DDLRegistration(0xb593c520u)]
+	[DDLRegistration(0x2f8be5aeu)]
 	public RivetAssetId Item { get; set; } = default;
 
-	[DDLRegistration(0xb593c520u)]
+	[DDLRegistration(0x65f2ab46u)]
 	public uint Quantity { get; set; } = 0x00000001;
 
-	[DDLRegistration(0xb593c520u)]
+	[DDLRegistration(0xe992ff5cu)]
 	public float ContainChance { get; set; } = 1.00f;
 
 	public static ItemListElement Create(DDLObject ddl) => new(ddl);

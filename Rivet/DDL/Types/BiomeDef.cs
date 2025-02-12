@@ -18,7 +18,7 @@ public class BiomeDef : DDLObjectType, IDDLObjectType<BiomeDef> {
 		Layers = ddl.GetObjects<BiomeLayer>(0xd8f0a337u);
 	}
 
-	[DDLRegistration(0x4cf3bb38u)]
+	[DDLRegistration(0xd8f0a337u)]
 	public List<BiomeLayer?> Layers { get; set; } = [];
 
 	public static BiomeDef Create(DDLObject ddl) => new(ddl);

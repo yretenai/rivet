@@ -19,10 +19,10 @@ public class BreakableStagesComponentPrius : BreakableBasePrius, IDDLObjectType<
 		Stages = ddl.GetObjects<BreakableStageData>(0x11da2403u);
 	}
 
-	[DDLRegistration(0x6d6f7b2du, "Destroyed chunk conduit", "Conduit that will get added to spawned chunks.")]
+	[DDLRegistration(0x0eda6a09u, "Destroyed chunk conduit", "Conduit that will get added to spawned chunks.")]
 	public RivetAssetId DestroyedChunkConduit { get; set; } = default;
 
-	[DDLRegistration(0x6d6f7b2du, description: "Settings for each stage of destruction")]
+	[DDLRegistration(0x11da2403u, description: "Settings for each stage of destruction")]
 	public List<BreakableStageData?> Stages { get; set; } = [];
 
 	public new static BreakableStagesComponentPrius Create(DDLObject ddl) => new(ddl);

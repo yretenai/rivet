@@ -18,7 +18,7 @@ public class StringOutNodeDef : NodeBaseDef, IDDLObjectType<StringOutNodeDef> {
 		Out = ddl.GetObject<OutputPlugString>(0x93bf4450u);
 	}
 
-	[DDLRegistration(0x565dcd1bu)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugString? Out { get; set; } = default;
 
 	public new static StringOutNodeDef Create(DDLObject ddl) => new(ddl);

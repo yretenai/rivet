@@ -18,7 +18,7 @@ public class AccessibilityPresetData : DDLObjectType, IDDLObjectType<Accessibili
 		Preset = ddl.GetObject<ControlRemapPresetData>(0x1227aa55u);
 	}
 
-	[DDLRegistration(0x03d1dd96u)]
+	[DDLRegistration(0x1227aa55u)]
 	public ControlRemapPresetData? Preset { get; set; } = default;
 
 	public static AccessibilityPresetData Create(DDLObject ddl) => new(ddl);

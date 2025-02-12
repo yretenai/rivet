@@ -19,10 +19,10 @@ public class CheckpointActionPrius : DDLObjectType, IDDLObjectType<CheckpointAct
 		CheckpointName = ddl.GetString(0x71d061f1) ?? CheckpointName;
 	}
 
-	[DDLRegistration(0xf17138ccu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Checkpoint;
 
-	[DDLRegistration(0xf17138ccu)]
+	[DDLRegistration(0x71d061f1u)]
 	public string? CheckpointName { get; set; } = default;
 
 	public static CheckpointActionPrius Create(DDLObject ddl) => new(ddl);

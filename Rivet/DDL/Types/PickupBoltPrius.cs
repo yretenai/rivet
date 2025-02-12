@@ -20,13 +20,13 @@ public class PickupBoltPrius : PickupSimplePrius, IDDLObjectType<PickupBoltPrius
 		RandomOrientation = ddl.GetValue<bool>(0xd9b0529du, RandomOrientation);
 	}
 
-	[DDLRegistration(0x63477686u, description: "If this pickup lands should it autocollect to the nearest hero?")]
+	[DDLRegistration(0xed840fd0u, description: "If this pickup lands should it autocollect to the nearest hero?")]
 	public bool AutoCollectOnLand { get; set; } = false;
 
-	[DDLRegistration(0x63477686u, description: "The value tier this bolt belongs to.")]
+	[DDLRegistration(0xa69f9755u, description: "The value tier this bolt belongs to.")]
 	public x7484f9df BoltTier { get; set; } = x7484f9df.None;
 
-	[DDLRegistration(0x63477686u, description: "Whether to init into a random orientation (y not up). We can't use the RandomOrientation component for this as it will conflict with bolt appearance setting y up on spawn.")]
+	[DDLRegistration(0xd9b0529du, description: "Whether to init into a random orientation (y not up). We can't use the RandomOrientation component for this as it will conflict with bolt appearance setting y up on spawn.")]
 	public bool RandomOrientation { get; set; } = false;
 
 	public new static PickupBoltPrius Create(DDLObject ddl) => new(ddl);

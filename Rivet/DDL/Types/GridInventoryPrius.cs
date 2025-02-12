@@ -19,10 +19,10 @@ public class GridInventoryPrius : DDLObjectType, IDDLObjectType<GridInventoryPri
 		Height = ddl.GetValue<ushort>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0xb55bec48u)]
+	[DDLRegistration(0x954989eeu)]
 	public ushort Width { get; set; } = 0x0000;
 
-	[DDLRegistration(0xb55bec48u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public ushort Height { get; set; } = 0x0000;
 
 	public static GridInventoryPrius Create(DDLObject ddl) => new(ddl);

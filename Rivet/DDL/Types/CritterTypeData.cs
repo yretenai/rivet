@@ -19,10 +19,10 @@ public class CritterTypeData : DDLObjectType, IDDLObjectType<CritterTypeData> {
 		Planets = ddl.GetStrings(0xbc30e83eu);
 	}
 
-	[DDLRegistration(0x5bd9fa4au)]
+	[DDLRegistration(0xeaf2611bu)]
 	public RivetAssetId Config { get; set; } = default;
 
-	[DDLRegistration(0x5bd9fa4au)]
+	[DDLRegistration(0xbc30e83eu)]
 	public List<string?> Planets { get; set; } = [];
 
 	public static CritterTypeData Create(DDLObject ddl) => new(ddl);

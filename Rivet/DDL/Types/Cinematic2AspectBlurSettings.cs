@@ -21,16 +21,16 @@ public class Cinematic2AspectBlurSettings : DDLObjectType, IDDLObjectType<Cinema
 		BlurRadius = ddl.GetValue<float>(0x45ac048bu, BlurRadius);
 	}
 
-	[DDLRegistration(0xe2065739u)]
+	[DDLRegistration(0x1cc545bfu)]
 	public float AspectVisible { get; set; } = 3.67f;
 
-	[DDLRegistration(0xe2065739u)]
+	[DDLRegistration(0xb0a06e67u)]
 	public float AspectStart { get; set; } = 2.78f;
 
-	[DDLRegistration(0xe2065739u)]
+	[DDLRegistration(0x445d50e1u)]
 	public float AspectEnd { get; set; } = 3.56f;
 
-	[DDLRegistration(0xe2065739u)]
+	[DDLRegistration(0x45ac048bu)]
 	public float BlurRadius { get; set; } = 100.00f;
 
 	public static Cinematic2AspectBlurSettings Create(DDLObject ddl) => new(ddl);

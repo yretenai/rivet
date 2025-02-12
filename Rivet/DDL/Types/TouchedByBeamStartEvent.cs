@@ -19,10 +19,10 @@ public class TouchedByBeamStartEvent : EventBase, IDDLObjectType<TouchedByBeamSt
 		BeamComponentHandle = ddl.GetValue<uint>(0x193011f5u, BeamComponentHandle);
 	}
 
-	[DDLRegistration(0xe5cc90f6u, description: "Index of the touched collision's parent joint. -1 if not applicable")]
+	[DDLRegistration(0x7ead9064u, description: "Index of the touched collision's parent joint. -1 if not applicable")]
 	public int JointIndex { get; set; } = 0;
 
-	[DDLRegistration(0xe5cc90f6u)]
+	[DDLRegistration(0x193011f5u)]
 	public uint BeamComponentHandle { get; set; } = 0x00000000;
 
 	public new static TouchedByBeamStartEvent Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class SoundVolumeOffsets71 : DDLObjectType, IDDLObjectType<SoundVolumeOff
 		LFE = ddl.GetValue<float>(0x344c9f03u, LFE);
 	}
 
-	[DDLRegistration(0x308e1c61u, description: "Volume offset in dB")]
+	[DDLRegistration(0x1dbb6602u, description: "Volume offset in dB")]
 	public float FrontLeft { get; set; } = 0.00f;
 
-	[DDLRegistration(0x308e1c61u, description: "Volume offset in dB")]
+	[DDLRegistration(0xcbc8ce5eu, description: "Volume offset in dB")]
 	public float FrontRight { get; set; } = 0.00f;
 
-	[DDLRegistration(0x308e1c61u, description: "Volume offset in dB")]
+	[DDLRegistration(0x7e88a543u, description: "Volume offset in dB")]
 	public float Center { get; set; } = 0.00f;
 
-	[DDLRegistration(0x308e1c61u, description: "Volume offset in dB")]
+	[DDLRegistration(0x13736facu, description: "Volume offset in dB")]
 	public float RearLeft { get; set; } = 0.00f;
 
-	[DDLRegistration(0x308e1c61u, description: "Volume offset in dB")]
+	[DDLRegistration(0xfaa888b8u, description: "Volume offset in dB")]
 	public float RearRight { get; set; } = 0.00f;
 
-	[DDLRegistration(0x308e1c61u, description: "Volume offset in dB")]
+	[DDLRegistration(0x9a74df67u, description: "Volume offset in dB")]
 	public float SideLeft { get; set; } = 0.00f;
 
-	[DDLRegistration(0x308e1c61u, description: "Volume offset in dB")]
+	[DDLRegistration(0xf6979430u, description: "Volume offset in dB")]
 	public float SideRight { get; set; } = 0.00f;
 
-	[DDLRegistration(0x308e1c61u, description: "Volume offset in dB")]
+	[DDLRegistration(0x344c9f03u, description: "Volume offset in dB")]
 	public float LFE { get; set; } = 0.00f;
 
 	public static SoundVolumeOffsets71 Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ClankPuzzleVolumeEndRemoveEntryEvent : EventBase, IDDLObjectType<Cl
 		BotCount = ddl.GetValue<uint>(0x629a2a7fu, BotCount);
 	}
 
-	[DDLRegistration(0x97186300u)]
+	[DDLRegistration(0x629a2a7fu)]
 	public uint BotCount { get; set; } = 0x00000000;
 
 	public new static ClankPuzzleVolumeEndRemoveEntryEvent Create(DDLObject ddl) => new(ddl);

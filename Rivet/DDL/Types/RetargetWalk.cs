@@ -26,31 +26,31 @@ public class RetargetWalk : DDLObjectType, IDDLObjectType<RetargetWalk> {
 		HighCoverOffsetZ = ddl.GetValue<float>(0x64ad15b7u, HighCoverOffsetZ);
 	}
 
-	[DDLRegistration(0x1dfb5decu)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0x1dfb5decu)]
+	[DDLRegistration(0x0c4bc3fcu)]
 	public float MinHideTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1dfb5decu)]
+	[DDLRegistration(0x4acbe5dcu)]
 	public float DelayBeforeWalk { get; set; } = 0.75f;
 
-	[DDLRegistration(0x1dfb5decu)]
+	[DDLRegistration(0x6b41dcdbu)]
 	public float WalkTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x1dfb5decu)]
+	[DDLRegistration(0x1c92d996u)]
 	public float WaitingAimMul { get; set; } = 0.30f;
 
-	[DDLRegistration(0x1dfb5decu)]
+	[DDLRegistration(0x5dd4e668u)]
 	public float LowCoverOffsetY { get; set; } = 0.80f;
 
-	[DDLRegistration(0x1dfb5decu)]
+	[DDLRegistration(0xc4ddb7d2u)]
 	public float LowCoverOffsetZ { get; set; } = 0.50f;
 
-	[DDLRegistration(0x1dfb5decu)]
+	[DDLRegistration(0xfda4440du)]
 	public float HighCoverOffsetY { get; set; } = 1.60f;
 
-	[DDLRegistration(0x1dfb5decu)]
+	[DDLRegistration(0x64ad15b7u)]
 	public float HighCoverOffsetZ { get; set; } = 0.60f;
 
 	public static RetargetWalk Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class UIArenaRewardIcon : DDLObjectType, IDDLObjectType<UIArenaRewardIcon
 		Icon = ddl.GetValue<RivetAssetId>(0x5504e96bu, Icon);
 	}
 
-	[DDLRegistration(0x36c82f86u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x3a1207ee Type { get; set; } = x3a1207ee.Bolts;
 
-	[DDLRegistration(0x36c82f86u)]
+	[DDLRegistration(0x5504e96bu)]
 	public RivetAssetId Icon { get; set; } = default;
 
 	public static UIArenaRewardIcon Create(DDLObject ddl) => new(ddl);

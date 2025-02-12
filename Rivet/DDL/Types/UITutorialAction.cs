@@ -18,7 +18,7 @@ public class UITutorialAction : DDLObjectType, IDDLObjectType<UITutorialAction> 
 		Action = ddl.GetObject<ActionControlBase>(0x79b4c2f5u);
 	}
 
-	[DDLRegistration(0x6a902d05u)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public ActionControlBase? Action { get; set; } = default;
 
 	public static UITutorialAction Create(DDLObject ddl) => new(ddl);

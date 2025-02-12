@@ -22,19 +22,19 @@ public class SystemMemory : DDLObjectType, IDDLObjectType<SystemMemory> {
 		TrackThreadStackSizes = ddl.GetValue<bool>(0xc0945446u, TrackThreadStackSizes);
 	}
 
-	[DDLRegistration(0xf0b87e85u)]
+	[DDLRegistration(0x68bb76dcu)]
 	public List<AllocationLimit?> Limits { get; set; } = [];
 
-	[DDLRegistration(0xf0b87e85u)]
+	[DDLRegistration(0x63ff81b7u)]
 	public ulong SystemMemorySize { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xf0b87e85u)]
+	[DDLRegistration(0xf6794df5u)]
 	public ulong ExtraFlexibleMemory { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xf0b87e85u)]
+	[DDLRegistration(0xc32dc2adu)]
 	public bool EnforceLimits { get; set; } = false;
 
-	[DDLRegistration(0xf0b87e85u)]
+	[DDLRegistration(0xc0945446u)]
 	public bool TrackThreadStackSizes { get; set; } = false;
 
 	public static SystemMemory Create(DDLObject ddl) => new(ddl);

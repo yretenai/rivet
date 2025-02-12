@@ -27,34 +27,34 @@ public class Cinematic2MayaShotExportInfo : DDLObjectType, IDDLObjectType<Cinema
 		MayaShotSplitOrder = ddl.GetValue<ushort>(0x9c98ab2du, MayaShotSplitOrder);
 	}
 
-	[DDLRegistration(0x2870fb49u, description: "This specifies the file from which this object was exported.")]
+	[DDLRegistration(0xbc0ff6a0u, description: "This specifies the file from which this object was exported.")]
 	public RivetAssetId File { get; set; } = default;
 
-	[DDLRegistration(0x2870fb49u, description: "This specifies the last time this object was exported from Maya.")]
+	[DDLRegistration(0xad9de5deu, description: "This specifies the last time this object was exported from Maya.")]
 	public string? LastExportTime { get; set; } = default;
 
-	[DDLRegistration(0x2870fb49u, description: "A string used during the export process that describes where this object came from (used for uniquely identifying the source Maya node, etc.).")]
+	[DDLRegistration(0xc36d614fu, description: "A string used during the export process that describes where this object came from (used for uniquely identifying the source Maya node, etc.).")]
 	public string? ExportedFrom { get; set; } = default;
 
-	[DDLRegistration(0x2870fb49u, description: "This is any additional notes about this object.")]
+	[DDLRegistration(0x18486a4du, description: "This is any additional notes about this object.")]
 	public string? Notes { get; set; } = default;
 
-	[DDLRegistration(0x2870fb49u, description: "If true, exporting a cinematic from Maya will overwrite this object.")]
+	[DDLRegistration(0xeca560d4u, description: "If true, exporting a cinematic from Maya will overwrite this object.")]
 	public bool UpdateFromMaya { get; set; } = false;
 
-	[DDLRegistration(0x2870fb49u, description: "This is the start frame of the shot from the Maya file.")]
+	[DDLRegistration(0xf96ae3e1u, description: "This is the start frame of the shot from the Maya file.")]
 	public int MayaStartFrame { get; set; } = -1;
 
-	[DDLRegistration(0x2870fb49u, description: "This is the end frame of the shot from the Maya file.")]
+	[DDLRegistration(0x4532b3edu, description: "This is the end frame of the shot from the Maya file.")]
 	public int MayaEndFrame { get; set; } = -1;
 
-	[DDLRegistration(0x2870fb49u)]
+	[DDLRegistration(0x827cb62eu)]
 	public RivetAssetId Muid0 { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x2870fb49u)]
+	[DDLRegistration(0xf57b86b8u)]
 	public RivetAssetId Muid1 { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x2870fb49u)]
+	[DDLRegistration(0x9c98ab2du)]
 	public ushort MayaShotSplitOrder { get; set; } = 0xffff;
 
 	public static Cinematic2MayaShotExportInfo Create(DDLObject ddl) => new(ddl);

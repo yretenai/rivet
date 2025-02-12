@@ -18,7 +18,7 @@ public class MotionActionConfig : ConfigBase, IDDLObjectType<MotionActionConfig>
 		Motion = ddl.GetObject<ScriptMotionBasePrius>(0xcb86ef8fu);
 	}
 
-	[DDLRegistration(0xaa2354deu)]
+	[DDLRegistration(0xcb86ef8fu)]
 	public ScriptMotionBasePrius? Motion { get; set; } = default;
 
 	public new static MotionActionConfig Create(DDLObject ddl) => new(ddl);

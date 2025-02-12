@@ -18,7 +18,7 @@ public class RicochetDoneEvent : EventBase, IDDLObjectType<RicochetDoneEvent> {
 		NumKills = ddl.GetValue<uint>(0x78fcd420u, NumKills);
 	}
 
-	[DDLRegistration(0x2b7e35deu)]
+	[DDLRegistration(0x78fcd420u)]
 	public uint NumKills { get; set; } = 0x00000000;
 
 	public new static RicochetDoneEvent Create(DDLObject ddl) => new(ddl);

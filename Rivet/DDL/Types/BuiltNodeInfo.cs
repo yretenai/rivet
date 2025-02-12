@@ -26,31 +26,31 @@ public class BuiltNodeInfo : DDLObjectType, IDDLObjectType<BuiltNodeInfo> {
 		IsDebugMarker = ddl.GetValue<bool>(0x5775422au, IsDebugMarker);
 	}
 
-	[DDLRegistration(0x66e7fbabu)]
+	[DDLRegistration(0x371a59e0u)]
 	public ulong NodeId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x66e7fbabu)]
+	[DDLRegistration(0x55ff52bdu)]
 	public RivetAssetId ObjectiveGraph { get; set; } = default;
 
-	[DDLRegistration(0x66e7fbabu)]
+	[DDLRegistration(0x2a5812deu)]
 	public uint MissionHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x66e7fbabu)]
+	[DDLRegistration(0xd7ef7725u)]
 	public uint ObjectiveHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x66e7fbabu)]
+	[DDLRegistration(0x137b6ccau)]
 	public string? Label1 { get; set; } = default;
 
-	[DDLRegistration(0x66e7fbabu)]
+	[DDLRegistration(0x8a723d70u)]
 	public string? Label2 { get; set; } = default;
 
-	[DDLRegistration(0x66e7fbabu)]
+	[DDLRegistration(0xefdea728u)]
 	public List<ChildInfo?> ChildNodes { get; set; } = [];
 
-	[DDLRegistration(0x66e7fbabu)]
+	[DDLRegistration(0xe33ddbfeu)]
 	public uint MaxDepth { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x66e7fbabu)]
+	[DDLRegistration(0x5775422au)]
 	public bool IsDebugMarker { get; set; } = false;
 
 	public static BuiltNodeInfo Create(DDLObject ddl) => new(ddl);

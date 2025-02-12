@@ -21,16 +21,16 @@ public class UISongLineData : DDLObjectType, IDDLObjectType<UISongLineData> {
 		IsSecondary = ddl.GetValue<bool>(0xaf179409u, IsSecondary);
 	}
 
-	[DDLRegistration(0x87673766u)]
+	[DDLRegistration(0xba3046e8u)]
 	public string? LineName { get; set; } = default;
 
-	[DDLRegistration(0x87673766u, description: "The time (from the start of the song) to start this line.")]
+	[DDLRegistration(0x0c5bae2bu, description: "The time (from the start of the song) to start this line.")]
 	public float StartTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87673766u, description: "OPTIONAL - The time (from the start of the song) to end this line, only needed when a line should end before the next line is shown.")]
+	[DDLRegistration(0xf5a688c4u, description: "OPTIONAL - The time (from the start of the song) to end this line, only needed when a line should end before the next line is shown.")]
 	public float EndTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87673766u)]
+	[DDLRegistration(0xaf179409u)]
 	public bool IsSecondary { get; set; } = false;
 
 	public static UISongLineData Create(DDLObject ddl) => new(ddl);

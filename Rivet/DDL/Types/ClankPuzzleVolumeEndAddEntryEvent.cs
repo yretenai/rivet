@@ -21,16 +21,16 @@ public class ClankPuzzleVolumeEndAddEntryEvent : EventBase, IDDLObjectType<Clank
 		TargetHandle = ddl.GetValue<uint>(0x63316affu, TargetHandle);
 	}
 
-	[DDLRegistration(0xb1d00c91u)]
+	[DDLRegistration(0x629a2a7fu)]
 	public uint BotCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb1d00c91u)]
+	[DDLRegistration(0x3b048d6au)]
 	public DDLTransform? BotOrientation { get; set; } = default;
 
-	[DDLRegistration(0xb1d00c91u)]
+	[DDLRegistration(0x2063e0e3u)]
 	public uint BotHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb1d00c91u)]
+	[DDLRegistration(0x63316affu)]
 	public uint TargetHandle { get; set; } = 0x00000000;
 
 	public new static ClankPuzzleVolumeEndAddEntryEvent Create(DDLObject ddl) => new(ddl);

@@ -42,79 +42,79 @@ public class DamageModifierExplosionPrius : DamageModifierOutgoingPrius, IDDLObj
 		KnockbackData = ddl.GetObjects<ExplosionKnockbackData>(0xcc96e476u);
 	}
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x239eef0du)]
 	public uint RequestId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3ce95f13u, description: "The actor we ignore.")]
+	[DDLRegistration(0x03cb6ea9u, description: "The actor we ignore.")]
 	public uint IgnoreActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x55398538u)]
 	public float DamageStartRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x5626d497u)]
 	public float DamageInnerAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0xe3fbca8fu)]
 	public float DamageInnerRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x5833ac24u)]
 	public float DamageOuterAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0xedeeb23cu)]
 	public float DamageOuterRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ce95f13u, description: "If set > 0 will cause the damage to be shaped like a swept sphere")]
+	[DDLRegistration(0x23df3969u, description: "If set > 0 will cause the damage to be shaped like a swept sphere")]
 	public float DamageOuterHeight { get; set; } = -1.00f;
 
-	[DDLRegistration(0x3ce95f13u, description: "For most cases, having this 0 should be fine. Used for tweaking LOS Sphere collision testing")]
+	[DDLRegistration(0x68dbdd04u, description: "For most cases, having this 0 should be fine. Used for tweaking LOS Sphere collision testing")]
 	public float DamageLOSYPosOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0xbe87918du)]
 	public float DamageFalloffCurve { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x4287460cu)]
 	public int DamageVictimCountMin { get; set; } = -1;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x7e8a7955u)]
 	public int DamageVictimCountMax { get; set; } = -1;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x6e1e23eeu)]
 	public float StatusStartRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x6d017241u)]
 	public float StatusInnerAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0xd8dc6c59u)]
 	public float StatusInnerRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x63140af2u)]
 	public float StatusOuterAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0xd6c914eau)]
 	public float StatusOuterRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ce95f13u, description: "If set > 0 will cause the status to be shaped like a swept sphere")]
+	[DDLRegistration(0x18f89fbfu, description: "If set > 0 will cause the status to be shaped like a swept sphere")]
 	public float StatusOuterHeight { get; set; } = -1.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0xd10cc1cau)]
 	public float StatusFalloffCurve { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x96d4a1b1u)]
 	public int StatusVictimCountMin { get; set; } = -1;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0xaad99ee8u)]
 	public int StatusVictimCountMax { get; set; } = -1;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x51e985cau)]
 	public float StatusDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x827edda5u)]
 	public float VictimExploderRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0x9d3988dbu)]
 	public float VictimExploderChance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ce95f13u)]
+	[DDLRegistration(0xcc96e476u)]
 	public List<ExplosionKnockbackData?> KnockbackData { get; set; } = [];
 
 	public new static DamageModifierExplosionPrius Create(DDLObject ddl) => new(ddl);

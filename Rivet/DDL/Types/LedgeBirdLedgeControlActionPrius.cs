@@ -19,10 +19,10 @@ public class LedgeBirdLedgeControlActionPrius : DDLObjectType, IDDLObjectType<Le
 		ExistingLedgeFlockBehavior = ddl.GetEnum<ExistingLedgeFlockBehavior>(0xc723d92au, ExistingLedgeFlockBehaviorValues.Lookup);
 	}
 
-	[DDLRegistration(0xec258fcau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Ambient;
 
-	[DDLRegistration(0xec258fcau, description: "If these ledges currently have a ledge flock, what should we do with the existing flock?")]
+	[DDLRegistration(0xc723d92au, description: "If these ledges currently have a ledge flock, what should we do with the existing flock?")]
 	public ExistingLedgeFlockBehavior ExistingLedgeFlockBehavior { get; set; } = ExistingLedgeFlockBehavior.ScatterBirds;
 
 	public static LedgeBirdLedgeControlActionPrius Create(DDLObject ddl) => new(ddl);

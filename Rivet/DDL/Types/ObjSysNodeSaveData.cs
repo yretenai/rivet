@@ -18,7 +18,7 @@ public class ObjSysNodeSaveData : DDLObjectType, IDDLObjectType<ObjSysNodeSaveDa
 		SaveHash = ddl.GetValue<uint>(0x4c5ab740u, SaveHash);
 	}
 
-	[DDLRegistration(0xe2e96e1bu)]
+	[DDLRegistration(0x4c5ab740u)]
 	public uint SaveHash { get; set; } = 0x00000000;
 
 	public static ObjSysNodeSaveData Create(DDLObject ddl) => new(ddl);

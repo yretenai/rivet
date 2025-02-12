@@ -20,13 +20,13 @@ public class SceneEditorCreateSceneNodePropertyLinkInput : DDLObjectType, IDDLOb
 		LinkName = ddl.GetString(0x0500f889) ?? LinkName;
 	}
 
-	[DDLRegistration(0x0b55548du)]
+	[DDLRegistration(0x314adfb3u)]
 	public List<RivetAssetId> SourceWorldIds { get; set; } = [];
 
-	[DDLRegistration(0x0b55548du)]
+	[DDLRegistration(0x5fa2ab14u)]
 	public RivetAssetId DestinationWorldId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0b55548du)]
+	[DDLRegistration(0x0500f889u)]
 	public string? LinkName { get; set; } = "";
 
 	public static SceneEditorCreateSceneNodePropertyLinkInput Create(DDLObject ddl) => new(ddl);

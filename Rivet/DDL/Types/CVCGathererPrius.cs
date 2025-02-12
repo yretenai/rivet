@@ -20,13 +20,13 @@ public class CVCGathererPrius : DDLObjectType, IDDLObjectType<CVCGathererPrius> 
 		HeightDown = ddl.GetValue<float>(0x18b154fau, HeightDown);
 	}
 
-	[DDLRegistration(0x91c1dea3u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 3.00f;
 
-	[DDLRegistration(0x91c1dea3u)]
+	[DDLRegistration(0x7be988d7u)]
 	public float HeightUp { get; set; } = 3.00f;
 
-	[DDLRegistration(0x91c1dea3u)]
+	[DDLRegistration(0x18b154fau)]
 	public float HeightDown { get; set; } = 3.00f;
 
 	public static CVCGathererPrius Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class HeapTemplate : DDLObjectType, IDDLObjectType<HeapTemplate> {
 		MaxDeferredFrees = ddl.GetValue<uint>(0x0ef51fb8u, MaxDeferredFrees);
 	}
 
-	[DDLRegistration(0x7234d044u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = "";
 
-	[DDLRegistration(0x7234d044u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x7271a16e Type { get; set; } = x7271a16e.Default;
 
-	[DDLRegistration(0x7234d044u)]
+	[DDLRegistration(0x12568d7bu)]
 	public HeapFlags Flags { get; set; } = (HeapFlags) 0x00000000;
 
-	[DDLRegistration(0x7234d044u)]
+	[DDLRegistration(0xae338150u)]
 	public ulong Alignment { get; set; } = 0x0000000000000008;
 
-	[DDLRegistration(0x7234d044u)]
+	[DDLRegistration(0x6200b6ecu)]
 	public ulong SoftAlignment { get; set; } = 0x0000000000000008;
 
-	[DDLRegistration(0x7234d044u)]
+	[DDLRegistration(0x277f4cf9u)]
 	public int MaxAllocs { get; set; } = 4096;
 
-	[DDLRegistration(0x7234d044u)]
+	[DDLRegistration(0x0660d387u)]
 	public float SmallBlockFraction { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7234d044u)]
+	[DDLRegistration(0x1c0e5bcbu)]
 	public List<ushort> SmallBlockSizes { get; set; } = [];
 
-	[DDLRegistration(0x7234d044u)]
+	[DDLRegistration(0x0ef51fb8u)]
 	public uint MaxDeferredFrees { get; set; } = 0x00000000;
 
 	public static HeapTemplate Create(DDLObject ddl) => new(ddl);

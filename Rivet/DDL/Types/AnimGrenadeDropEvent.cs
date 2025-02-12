@@ -18,7 +18,7 @@ public class AnimGrenadeDropEvent : EventBase, IDDLObjectType<AnimGrenadeDropEve
 		DamageOwner = ddl.GetValue<uint>(0x57b57ef2u, DamageOwner);
 	}
 
-	[DDLRegistration(0x21d6d19cu)]
+	[DDLRegistration(0x57b57ef2u)]
 	public uint DamageOwner { get; set; } = 0x00000000;
 
 	public new static AnimGrenadeDropEvent Create(DDLObject ddl) => new(ddl);

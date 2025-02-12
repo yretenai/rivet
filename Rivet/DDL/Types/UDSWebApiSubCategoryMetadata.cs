@@ -18,7 +18,7 @@ public class UDSWebApiSubCategoryMetadata : DDLObjectType, IDDLObjectType<UDSWeb
 		Name = ddl.GetDictionary<string, string>(0xce811188, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
 	}
 
-	[DDLRegistration(0x9fd50ec2u)]
+	[DDLRegistration(0xce811188u)]
 	public Dictionary<string, string?> Name { get; set; } = [];
 
 	public static UDSWebApiSubCategoryMetadata Create(DDLObject ddl) => new(ddl);

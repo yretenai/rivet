@@ -30,43 +30,43 @@ public class WeaponRYNOPrius : WeaponGamePrius, IDDLObjectType<WeaponRYNOPrius> 
 		LargeShockwaveCameraShake = ddl.GetValue<RivetAssetId>(0xa62ee655u, LargeShockwaveCameraShake);
 	}
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0xb94aeb36u)]
 	public RYNOPortalPrius? PortalPrius { get; set; } = default;
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0x3e9dfaecu)]
 	public RYNOPortalObjectPrius? PortalObjectPrius { get; set; } = default;
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0xf4375d46u)]
 	public float PreFireTime { get; set; } = 0.75f;
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0xdc048c71u)]
 	public float PortalObjectInitialSpeed { get; set; } = 1.50f;
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0x41e5ee56u)]
 	public float PortalObjectAccel { get; set; } = 30.00f;
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0xf64985abu)]
 	public float BeamShotSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0xdfbb9f90u)]
 	public RivetAssetId PortalActor { get; set; } = default;
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0x2798c618u)]
 	public List<AssertPortalInfo?> SmallPortalObjectRefs { get; set; } = [];
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0xd16f0a85u)]
 	public List<AssertPortalInfo?> MediumPortalObjectRefs { get; set; } = [];
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0xdf2a2c21u)]
 	public List<AssertPortalInfo?> LargePortalObjectRefs { get; set; } = [];
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0xeaedb21cu)]
 	public RivetAssetId SmallShockwaveCameraShake { get; set; } = default;
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0x3251c412u)]
 	public RivetAssetId MediumShockwaveCameraShake { get; set; } = default;
 
-	[DDLRegistration(0x63a6fe4cu)]
+	[DDLRegistration(0xa62ee655u)]
 	public RivetAssetId LargeShockwaveCameraShake { get; set; } = default;
 
 	public new static WeaponRYNOPrius Create(DDLObject ddl) => new(ddl);

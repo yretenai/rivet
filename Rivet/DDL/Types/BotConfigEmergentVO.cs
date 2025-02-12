@@ -19,10 +19,10 @@ public class BotConfigEmergentVO : ConfigBase, IDDLObjectType<BotConfigEmergentV
 		EmergentVOConfig = ddl.GetValue<RivetAssetId>(0xde8b92bfu, EmergentVOConfig);
 	}
 
-	[DDLRegistration(0x90e20575u)]
+	[DDLRegistration(0x3bd7ee9eu)]
 	public EmergentVOBasePrius? Prius { get; set; } = default;
 
-	[DDLRegistration(0x90e20575u, description: "Base Type: EmergentVOConfig")]
+	[DDLRegistration(0xde8b92bfu, description: "Base Type: EmergentVOConfig")]
 	public RivetAssetId EmergentVOConfig { get; set; } = "/configs/EmergentVO/bot_EmergentVO.config";
 
 	public new static BotConfigEmergentVO Create(DDLObject ddl) => new(ddl);

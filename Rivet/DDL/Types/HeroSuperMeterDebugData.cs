@@ -23,22 +23,22 @@ public class HeroSuperMeterDebugData : DDLObjectType, IDDLObjectType<HeroSuperMe
 		ControlsSize = ddl.GetObject<DDLVector2>(0x62a32f64u);
 	}
 
-	[DDLRegistration(0xcd306d02u)]
+	[DDLRegistration(0xe90a6378u)]
 	public bool DrawMeter { get; set; } = true;
 
-	[DDLRegistration(0xcd306d02u)]
+	[DDLRegistration(0xf91fb2f8u)]
 	public bool DrawControls { get; set; } = true;
 
-	[DDLRegistration(0xcd306d02u)]
+	[DDLRegistration(0x4ac11292u)]
 	public DDLVector2? MeterPos { get; set; } = default;
 
-	[DDLRegistration(0xcd306d02u)]
+	[DDLRegistration(0xe469ceb8u)]
 	public DDLVector2? MeterSize { get; set; } = default;
 
-	[DDLRegistration(0xcd306d02u)]
+	[DDLRegistration(0x53f21a42u)]
 	public DDLVector2? ControlsPos { get; set; } = default;
 
-	[DDLRegistration(0xcd306d02u)]
+	[DDLRegistration(0x62a32f64u)]
 	public DDLVector2? ControlsSize { get; set; } = default;
 
 	public static HeroSuperMeterDebugData Create(DDLObject ddl) => new(ddl);

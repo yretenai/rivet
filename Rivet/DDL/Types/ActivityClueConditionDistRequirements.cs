@@ -19,10 +19,10 @@ public class ActivityClueConditionDistRequirements : DDLObjectType, IDDLObjectTy
 		MaxDistance = ddl.GetValue<float>(0x88831235u, MaxDistance);
 	}
 
-	[DDLRegistration(0xa556ae2eu, "Min Distance", "The bot can't be any closer to the clue actor than this")]
+	[DDLRegistration(0x448e693au, "Min Distance", "The bot can't be any closer to the clue actor than this")]
 	public float MinDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa556ae2eu, "Max Distance", "The bot can't be any farther from the clue actor than this. -1 = Infinite range")]
+	[DDLRegistration(0x88831235u, "Max Distance", "The bot can't be any farther from the clue actor than this. -1 = Infinite range")]
 	public float MaxDistance { get; set; } = 1.00f;
 
 	public static ActivityClueConditionDistRequirements Create(DDLObject ddl) => new(ddl);

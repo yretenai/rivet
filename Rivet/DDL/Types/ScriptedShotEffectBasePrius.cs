@@ -19,10 +19,10 @@ public class ScriptedShotEffectBasePrius : DDLObjectType, IDDLObjectType<Scripte
 		Condition = ddl.GetObject<ScriptedShotConditionalBasePrius>(0x3f2b174fu);
 	}
 
-	[DDLRegistration(0x00d15cc6u)]
+	[DDLRegistration(0xb266fef4u)]
 	public string? EffectName { get; set; } = default;
 
-	[DDLRegistration(0x00d15cc6u)]
+	[DDLRegistration(0x3f2b174fu)]
 	public ScriptedShotConditionalBasePrius? Condition { get; set; } = default;
 
 	public static ScriptedShotEffectBasePrius Create(DDLObject ddl) => new(ddl);

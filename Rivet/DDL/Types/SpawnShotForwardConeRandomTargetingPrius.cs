@@ -19,10 +19,10 @@ public class SpawnShotForwardConeRandomTargetingPrius : SpawnShotForwardConeTarg
 		FireAtGroundPos = ddl.GetValue<bool>(0xb34e8b73u, FireAtGroundPos);
 	}
 
-	[DDLRegistration(0x688db7c6u, description: "Random amount (in degrees) a shot can vary from the target direction.")]
+	[DDLRegistration(0xbf38d523u, description: "Random amount (in degrees) a shot can vary from the target direction.")]
 	public float RandomAimAngle { get; set; } = 10.00f;
 
-	[DDLRegistration(0x688db7c6u, description: "Do we aim up when target jumps?")]
+	[DDLRegistration(0xb34e8b73u, description: "Do we aim up when target jumps?")]
 	public bool FireAtGroundPos { get; set; } = true;
 
 	public new static SpawnShotForwardConeRandomTargetingPrius Create(DDLObject ddl) => new(ddl);

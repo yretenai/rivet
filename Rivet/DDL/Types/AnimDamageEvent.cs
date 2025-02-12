@@ -20,13 +20,13 @@ public class AnimDamageEvent : EventBase, IDDLObjectType<AnimDamageEvent> {
 		OverrideLocator = ddl.GetString(0x3121f9b3) ?? OverrideLocator;
 	}
 
-	[DDLRegistration(0x949cd751u)]
+	[DDLRegistration(0x6650a828u)]
 	public uint AttackIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x949cd751u)]
+	[DDLRegistration(0xdd944989u)]
 	public float DamageDuration { get; set; } = 0.25f;
 
-	[DDLRegistration(0x949cd751u)]
+	[DDLRegistration(0x3121f9b3u)]
 	public string? OverrideLocator { get; set; } = default;
 
 	public new static AnimDamageEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class UDSWebApiObjectLink : DDLObjectType, IDDLObjectType<UDSWebApiObject
 		Position = ddl.GetValue<int>(0x455b3bd3u, Position);
 	}
 
-	[DDLRegistration(0x55920353u)]
+	[DDLRegistration(0x9a05f2f9u)]
 	public string? ObjectId { get; set; } = default;
 
-	[DDLRegistration(0x55920353u)]
+	[DDLRegistration(0x455b3bd3u)]
 	public int Position { get; set; } = 0;
 
 	public static UDSWebApiObjectLink Create(DDLObject ddl) => new(ddl);

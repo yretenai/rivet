@@ -19,10 +19,10 @@ public class EventStyleSpecified : DDLObjectType, IDDLObjectType<EventStyleSpeci
 		HandlerStyle = ddl.GetEnum<x0c67232c>(0xe5805385u, x0c67232cValues.Lookup);
 	}
 
-	[DDLRegistration(0x17567b92u, "Event", "All event types in the project are shown here")]
+	[DDLRegistration(0x22fdc666u, "Event", "All event types in the project are shown here")]
 	public EventBase? Event { get; set; } = default;
 
-	[DDLRegistration(0x17567b92u, "Handler Style", "Only accept events that are sent in this fashion")]
+	[DDLRegistration(0xe5805385u, "Handler Style", "Only accept events that are sent in this fashion")]
 	public x0c67232c HandlerStyle { get; set; } = x0c67232c.Self;
 
 	public static EventStyleSpecified Create(DDLObject ddl) => new(ddl);

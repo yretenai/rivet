@@ -21,16 +21,16 @@ public class DDLMatrix4 : DDLObjectType, IDDLObjectType<DDLMatrix4> {
 		Pos = ddl.GetObject<DDLVector3>(0xaa8ccf65u);
 	}
 
-	[DDLRegistration(0xb7b80656u)]
+	[DDLRegistration(0x4af727d8u)]
 	public DDLVector3? Left { get; set; } = default;
 
-	[DDLRegistration(0xb7b80656u)]
+	[DDLRegistration(0x76fcc3adu)]
 	public DDLVector3? Up { get; set; } = default;
 
-	[DDLRegistration(0xb7b80656u)]
+	[DDLRegistration(0xe67b4cbeu)]
 	public DDLVector3? Forward { get; set; } = default;
 
-	[DDLRegistration(0xb7b80656u)]
+	[DDLRegistration(0xaa8ccf65u)]
 	public DDLVector3? Pos { get; set; } = default;
 
 	public static DDLMatrix4 Create(DDLObject ddl) => new(ddl);

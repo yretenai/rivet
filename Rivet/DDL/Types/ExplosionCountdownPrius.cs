@@ -18,7 +18,7 @@ public class ExplosionCountdownPrius : DDLObjectType, IDDLObjectType<ExplosionCo
 		StageList = ddl.GetObjects<ExplosionCountdownStage>(0x299ce36cu);
 	}
 
-	[DDLRegistration(0x372e4744u)]
+	[DDLRegistration(0x299ce36cu)]
 	public List<ExplosionCountdownStage?> StageList { get; set; } = [];
 
 	public static ExplosionCountdownPrius Create(DDLObject ddl) => new(ddl);

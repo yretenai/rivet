@@ -18,7 +18,7 @@ public class OutputPlugBoolean : OutputPlugBaseDef, IDDLObjectType<OutputPlugBoo
 		Value = ddl.GetObject<BooleanPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x7d63df51u)]
+	[DDLRegistration(0x042494f5u)]
 	public BooleanPlug? Value { get; set; } = default;
 
 	public new static OutputPlugBoolean Create(DDLObject ddl) => new(ddl);

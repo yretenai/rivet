@@ -27,34 +27,34 @@ public class HeroCVCConfig : DDLObjectType, IDDLObjectType<HeroCVCConfig> {
 		CVCCollLedge = ddl.GetObject<CVCShapeConfig>(0x16a43684u);
 	}
 
-	[DDLRegistration(0x31ff237du, "CVC Move Stand")]
+	[DDLRegistration(0x90dc06c3u, "CVC Move Stand")]
 	public CVCShapeConfig? CVCMoveStand { get; set; } = default;
 
-	[DDLRegistration(0x31ff237du, "CVC Move Crouch")]
+	[DDLRegistration(0x72effc38u, "CVC Move Crouch")]
 	public CVCShapeConfig? CVCMoveCrouch { get; set; } = default;
 
-	[DDLRegistration(0x31ff237du, "CVC Move Low Cover")]
+	[DDLRegistration(0x1a4104cdu, "CVC Move Low Cover")]
 	public CVCShapeConfig? CVCMoveCoverLow { get; set; } = default;
 
-	[DDLRegistration(0x31ff237du, "CVC Move High Cover")]
+	[DDLRegistration(0x678befd7u, "CVC Move High Cover")]
 	public CVCShapeConfig? CVCMoveCoverHigh { get; set; } = default;
 
-	[DDLRegistration(0x31ff237du, "CVC Move Ledge")]
+	[DDLRegistration(0x3ac77f5eu, "CVC Move Ledge")]
 	public CVCShapeConfig? CVCMoveLedge { get; set; } = default;
 
-	[DDLRegistration(0x31ff237du)]
+	[DDLRegistration(0xbcbf4f19u)]
 	public CVCShapeConfig? CVCCollStand { get; set; } = default;
 
-	[DDLRegistration(0x31ff237du)]
+	[DDLRegistration(0x14c5a4bbu)]
 	public CVCShapeConfig? CVCCollCrouch { get; set; } = default;
 
-	[DDLRegistration(0x31ff237du)]
+	[DDLRegistration(0x6f5f70a9u)]
 	public CVCShapeConfig? CVCCollCoverLow { get; set; } = default;
 
-	[DDLRegistration(0x31ff237du)]
+	[DDLRegistration(0x2d2154e2u)]
 	public CVCShapeConfig? CVCCollCoverHigh { get; set; } = default;
 
-	[DDLRegistration(0x31ff237du)]
+	[DDLRegistration(0x16a43684u)]
 	public CVCShapeConfig? CVCCollLedge { get; set; } = default;
 
 	public static HeroCVCConfig Create(DDLObject ddl) => new(ddl);

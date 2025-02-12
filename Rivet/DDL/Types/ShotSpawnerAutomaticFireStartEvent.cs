@@ -20,13 +20,13 @@ public class ShotSpawnerAutomaticFireStartEvent : EventBase, IDDLObjectType<Shot
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x56d39023u)]
+	[DDLRegistration(0xc409037fu)]
 	public uint ShotIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x56d39023u, description: "Used to cycle through multiple shots.")]
+	[DDLRegistration(0xadddfcbbu, description: "Used to cycle through multiple shots.")]
 	public uint LastShotIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x56d39023u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 1.00f;
 
 	public new static ShotSpawnerAutomaticFireStartEvent Create(DDLObject ddl) => new(ddl);

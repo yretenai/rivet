@@ -22,19 +22,19 @@ public class ShotSchrodingerPrius : ShotBasePrius, IDDLObjectType<ShotSchrodinge
 		DisappearData = ddl.GetObject<ShotMotionSchrodingerDisappearPrius>(0xfb1bc4ecu);
 	}
 
-	[DDLRegistration(0x984a2d98u)]
+	[DDLRegistration(0x86c30845u)]
 	public float ModelScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0x984a2d98u)]
+	[DDLRegistration(0xca54c0afu)]
 	public ShotDamageData? ImpactDamage { get; set; } = default;
 
-	[DDLRegistration(0x984a2d98u)]
+	[DDLRegistration(0xc355a942u)]
 	public ShotDamageData? AttachedDamage { get; set; } = default;
 
-	[DDLRegistration(0x984a2d98u)]
+	[DDLRegistration(0x0fde2603u)]
 	public ShotMotionSchrodingerOrbitPrius? AttachedData { get; set; } = default;
 
-	[DDLRegistration(0x984a2d98u)]
+	[DDLRegistration(0xfb1bc4ecu)]
 	public ShotMotionSchrodingerDisappearPrius? DisappearData { get; set; } = default;
 
 	public new static ShotSchrodingerPrius Create(DDLObject ddl) => new(ddl);

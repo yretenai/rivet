@@ -18,7 +18,7 @@ public class DropshipBotLandedEvent : EventBase, IDDLObjectType<DropshipBotLande
 		BotHandle = ddl.GetValue<uint>(0x2063e0e3u, BotHandle);
 	}
 
-	[DDLRegistration(0xd493ba47u)]
+	[DDLRegistration(0x2063e0e3u)]
 	public uint BotHandle { get; set; } = 0x00000000;
 
 	public new static DropshipBotLandedEvent Create(DDLObject ddl) => new(ddl);

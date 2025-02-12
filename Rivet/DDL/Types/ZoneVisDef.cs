@@ -19,10 +19,10 @@ public class ZoneVisDef : DDLObjectType, IDDLObjectType<ZoneVisDef> {
 		Zones = ddl.GetStrings(0x5d5852adu);
 	}
 
-	[DDLRegistration(0xba553397u)]
+	[DDLRegistration(0x42782fd6u)]
 	public string? Level { get; set; } = default;
 
-	[DDLRegistration(0xba553397u)]
+	[DDLRegistration(0x5d5852adu)]
 	public List<string?> Zones { get; set; } = [];
 
 	public static ZoneVisDef Create(DDLObject ddl) => new(ddl);

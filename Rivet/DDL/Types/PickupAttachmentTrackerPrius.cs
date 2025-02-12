@@ -20,13 +20,13 @@ public class PickupAttachmentTrackerPrius : DDLObjectType, IDDLObjectType<Pickup
 		DropLootForKillerType = ddl.GetEnum<xa7ea7084>(0xbda9e40eu, xa7ea7084Values.Lookup);
 	}
 
-	[DDLRegistration(0x00ccb511u, description: "The asset to spawn")]
+	[DDLRegistration(0x17e5bb7bu, description: "The asset to spawn")]
 	public RivetAssetId PickupAssetID { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x00ccb511u, description: "The locator to attach to")]
+	[DDLRegistration(0x5814524du, description: "The locator to attach to")]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0x00ccb511u, description: "Our killer's type - we will drop the attached pickup for on death if our killer matches this type, otherwise the pickup will be destroyed.")]
+	[DDLRegistration(0xbda9e40eu, description: "Our killer's type - we will drop the attached pickup for on death if our killer matches this type, otherwise the pickup will be destroyed.")]
 	public xa7ea7084 DropLootForKillerType { get; set; } = xa7ea7084.Everybody;
 
 	public static PickupAttachmentTrackerPrius Create(DDLObject ddl) => new(ddl);

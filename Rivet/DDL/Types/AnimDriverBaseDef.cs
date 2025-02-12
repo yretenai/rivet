@@ -21,16 +21,16 @@ public class AnimDriverBaseDef : DDLObjectType, IDDLObjectType<AnimDriverBaseDef
 		Y = ddl.GetValue<float>(0x125a51d3u, Y);
 	}
 
-	[DDLRegistration(0x96572ec4u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x96572ec4u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0x96572ec4u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x96572ec4u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
 	public static AnimDriverBaseDef Create(DDLObject ddl) => new(ddl);

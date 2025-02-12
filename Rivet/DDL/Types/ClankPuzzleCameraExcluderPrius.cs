@@ -18,7 +18,7 @@ public class ClankPuzzleCameraExcluderPrius : DDLObjectType, IDDLObjectType<Clan
 		RemoveCameraCollision = ddl.GetValue<bool>(0x490d9fd0u, RemoveCameraCollision);
 	}
 
-	[DDLRegistration(0x09a65849u)]
+	[DDLRegistration(0x490d9fd0u)]
 	public bool RemoveCameraCollision { get; set; } = false;
 
 	public static ClankPuzzleCameraExcluderPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class FinalizeChunkActorEvent : EventBase, IDDLObjectType<FinalizeChunkAc
 		IsDebris = ddl.GetValue<bool>(0xf375d0a6u, IsDebris);
 	}
 
-	[DDLRegistration(0x78113470u)]
+	[DDLRegistration(0xfb4b73b5u)]
 	public uint ChunkActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x78113470u)]
+	[DDLRegistration(0x3f4d424du)]
 	public uint ChunkIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x78113470u)]
+	[DDLRegistration(0xf375d0a6u)]
 	public bool IsDebris { get; set; } = false;
 
 	public new static FinalizeChunkActorEvent Create(DDLObject ddl) => new(ddl);

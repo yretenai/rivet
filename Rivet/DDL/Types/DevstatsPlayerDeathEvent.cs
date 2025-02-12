@@ -21,16 +21,16 @@ public class DevstatsPlayerDeathEvent : EventBase, IDDLObjectType<DevstatsPlayer
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0xd4ec8a36u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xd4ec8a36u)]
+	[DDLRegistration(0x8710eb41u)]
 	public uint DamageSource { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd4ec8a36u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0xd4ec8a36u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static DevstatsPlayerDeathEvent Create(DDLObject ddl) => new(ddl);

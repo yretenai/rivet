@@ -19,10 +19,10 @@ public class GameSpawnerObjectPrius : SpawnerObjectPrius, IDDLObjectType<GameSpa
 		AmmoThreshold = ddl.GetValue<float>(0x61bbf273u, AmmoThreshold);
 	}
 
-	[DDLRegistration(0xd64e0048u, description: "Will not spawn unless the user has less percent health than this value (-1 means do not use this value).")]
+	[DDLRegistration(0xac854076u, description: "Will not spawn unless the user has less percent health than this value (-1 means do not use this value).")]
 	public float HealthThreshold { get; set; } = -1.00f;
 
-	[DDLRegistration(0xd64e0048u, description: "Will not spawn unless the user has less percent ammo than this value (-1 means do not use this value).")]
+	[DDLRegistration(0x61bbf273u, description: "Will not spawn unless the user has less percent ammo than this value (-1 means do not use this value).")]
 	public float AmmoThreshold { get; set; } = -1.00f;
 
 	public new static GameSpawnerObjectPrius Create(DDLObject ddl) => new(ddl);

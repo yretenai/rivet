@@ -18,7 +18,7 @@ public class ProjectPrefs : DDLObjectType, IDDLObjectType<ProjectPrefs> {
 		Project = ddl.GetDictionary<string, ProjectDef>(0x2e59b3d6, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<ProjectDef>(mapId));
 	}
 
-	[DDLRegistration(0x2c8a352eu)]
+	[DDLRegistration(0x2e59b3d6u)]
 	public Dictionary<string, ProjectDef?> Project { get; set; } = [];
 
 	public static ProjectPrefs Create(DDLObject ddl) => new(ddl);

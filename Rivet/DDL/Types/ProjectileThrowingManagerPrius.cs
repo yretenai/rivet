@@ -18,7 +18,7 @@ public class ProjectileThrowingManagerPrius : DDLObjectType, IDDLObjectType<Proj
 		ThrowingComponents = ddl.GetObjects<ProjectileThrowingManagerEntry>(0x22c5407fu);
 	}
 
-	[DDLRegistration(0x1f535382u)]
+	[DDLRegistration(0x22c5407fu)]
 	public List<ProjectileThrowingManagerEntry?> ThrowingComponents { get; set; } = [];
 
 	public static ProjectileThrowingManagerPrius Create(DDLObject ddl) => new(ddl);

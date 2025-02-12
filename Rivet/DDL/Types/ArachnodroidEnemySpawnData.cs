@@ -18,7 +18,7 @@ public class ArachnodroidEnemySpawnData : SimpleSpawnData, IDDLObjectType<Arachn
 		PathIndex = ddl.GetValue<byte>(0xf3062e45u, PathIndex);
 	}
 
-	[DDLRegistration(0x5fc22963u, description: "index of the intro path")]
+	[DDLRegistration(0xf3062e45u, description: "index of the intro path")]
 	public byte PathIndex { get; set; } = 0x00;
 
 	public new static ArachnodroidEnemySpawnData Create(DDLObject ddl) => new(ddl);

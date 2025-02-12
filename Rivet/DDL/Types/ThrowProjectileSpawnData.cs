@@ -19,10 +19,10 @@ public class ThrowProjectileSpawnData : ShotSpawnData, IDDLObjectType<ThrowProje
 		EmitLocatorHash = ddl.GetValue<uint>(0x87c49c5eu, EmitLocatorHash);
 	}
 
-	[DDLRegistration(0x41ff29a6u)]
+	[DDLRegistration(0x7e9e8e66u)]
 	public RivetAssetId SpawnedShotConfig { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x41ff29a6u)]
+	[DDLRegistration(0x87c49c5eu)]
 	public uint EmitLocatorHash { get; set; } = 0x00000000;
 
 	public new static ThrowProjectileSpawnData Create(DDLObject ddl) => new(ddl);

@@ -30,43 +30,43 @@ public class SkirmishAwarenessPrius : AwarenessBasePrius, IDDLObjectType<Skirmis
 		EngagedVision = ddl.GetObject<VisionConfig>(0x429e8ec1u);
 	}
 
-	[DDLRegistration(0x8ac5269fu, description: "Locator we 'see' from. Optional, bounding sphere center will be used otherwise")]
+	[DDLRegistration(0x058c28dbu, description: "Locator we 'see' from. Optional, bounding sphere center will be used otherwise")]
 	public string? SourceLocatorName { get; set; } = "head";
 
-	[DDLRegistration(0x8ac5269fu)]
+	[DDLRegistration(0x42315c03u)]
 	public byte MaxRaycastsPerFrame { get; set; } = 0x04;
 
-	[DDLRegistration(0x8ac5269fu, description: "We instantly acquire a spotted target at this distance (m)")]
+	[DDLRegistration(0x90e39f74u, description: "We instantly acquire a spotted target at this distance (m)")]
 	public float AcquireTimeDistMin { get; set; } = 10.00f;
 
-	[DDLRegistration(0x8ac5269fu, description: "We take ReactionTimeMax to acquire a spotted target at this distance (m)")]
+	[DDLRegistration(0xaceea02du, description: "We take ReactionTimeMax to acquire a spotted target at this distance (m)")]
 	public float AcquireTimeDistMax { get; set; } = 50.00f;
 
-	[DDLRegistration(0x8ac5269fu, description: "The longest time to acquire a target (s)")]
+	[DDLRegistration(0xb57f9330u, description: "The longest time to acquire a target (s)")]
 	public float AcquireTimeMax { get; set; } = 5.00f;
 
-	[DDLRegistration(0x8ac5269fu, description: "Amount of time it takes for a target to go from confirmed to lost los.")]
+	[DDLRegistration(0xeb8cd768u, description: "Amount of time it takes for a target to go from confirmed to lost los.")]
 	public float NoLOSTransitionTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x8ac5269fu, description: "Max time it takes for us to re-confirm a target that has dropped into lost los")]
+	[DDLRegistration(0xb250c6d4u, description: "Max time it takes for us to re-confirm a target that has dropped into lost los")]
 	public float ReacquireTimeMax { get; set; } = 3.00f;
 
-	[DDLRegistration(0x8ac5269fu, description: "Amount of time it takes for a no-los target to go back to hidden.")]
+	[DDLRegistration(0x90169d9au, description: "Amount of time it takes for a no-los target to go back to hidden.")]
 	public float HiddenTransitionTime { get; set; } = 30.00f;
 
-	[DDLRegistration(0x8ac5269fu, description: "Amount of time it takes for a target with no los to be forgotton about.")]
+	[DDLRegistration(0x5ee7b87du, description: "Amount of time it takes for a target with no los to be forgotton about.")]
 	public float DropTime { get; set; } = 60.00f;
 
-	[DDLRegistration(0x8ac5269fu, description: "How far from our collection shapes an active target is dropped")]
+	[DDLRegistration(0x5e00865bu, description: "How far from our collection shapes an active target is dropped")]
 	public float TargetDropDist { get; set; } = 50.00f;
 
-	[DDLRegistration(0x8ac5269fu, description: "How long we wait to use a shared position")]
+	[DDLRegistration(0x8982082bu, description: "How long we wait to use a shared position")]
 	public float SharedPosUseDelay { get; set; } = 3.00f;
 
-	[DDLRegistration(0x8ac5269fu)]
+	[DDLRegistration(0x721d25d7u)]
 	public VisionConfig? IdleVision { get; set; } = default;
 
-	[DDLRegistration(0x8ac5269fu)]
+	[DDLRegistration(0x429e8ec1u)]
 	public VisionConfig? EngagedVision { get; set; } = default;
 
 	public new static SkirmishAwarenessPrius Create(DDLObject ddl) => new(ddl);

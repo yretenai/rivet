@@ -21,16 +21,16 @@ public class SwingshotJumpData : DDLObjectType, IDDLObjectType<SwingshotJumpData
 		TurnSpeedMax = ddl.GetValue<float>(0xa66b2ab3u, TurnSpeedMax);
 	}
 
-	[DDLRegistration(0xc6a3e93du, description: "Min Initial horizontal speed (m/s).")]
+	[DDLRegistration(0x771ee838u, description: "Min Initial horizontal speed (m/s).")]
 	public float MinInitialHorizontalSpeed { get; set; } = 6.00f;
 
-	[DDLRegistration(0xc6a3e93du, description: "How much to accelerate the turn speed towards our desired facing")]
+	[DDLRegistration(0xc4a00637u, description: "How much to accelerate the turn speed towards our desired facing")]
 	public float TurnSpeedGain { get; set; } = -15.00f;
 
-	[DDLRegistration(0xc6a3e93du, description: "How much to damp the turn speed as we near our desired facing")]
+	[DDLRegistration(0x487651beu, description: "How much to damp the turn speed as we near our desired facing")]
 	public float TurnSpeedDamp { get; set; } = -8.00f;
 
-	[DDLRegistration(0xc6a3e93du, description: "Max turn speed in degrees/sec")]
+	[DDLRegistration(0xa66b2ab3u, description: "Max turn speed in degrees/sec")]
 	public float TurnSpeedMax { get; set; } = 90.00f;
 
 	public static SwingshotJumpData Create(DDLObject ddl) => new(ddl);

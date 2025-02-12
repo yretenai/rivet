@@ -19,10 +19,10 @@ public class SimpleMoverPrius : DDLObjectType, IDDLObjectType<SimpleMoverPrius> 
 		MotionType = ddl.GetEnum<MotionTypes>(0x7b43320eu, MotionTypesValues.Lookup);
 	}
 
-	[DDLRegistration(0xdafb124bu, description: "Sync to non-authority clients")]
+	[DDLRegistration(0x1cbb35cau, description: "Sync to non-authority clients")]
 	public bool Sync { get; set; } = false;
 
-	[DDLRegistration(0xdafb124bu, "Motion Type")]
+	[DDLRegistration(0x7b43320eu, "Motion Type")]
 	public MotionTypes MotionType { get; set; } = MotionTypes.SmoothStep;
 
 	public static SimpleMoverPrius Create(DDLObject ddl) => new(ddl);

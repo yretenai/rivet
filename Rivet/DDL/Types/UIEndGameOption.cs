@@ -20,13 +20,13 @@ public class UIEndGameOption : DDLObjectType, IDDLObjectType<UIEndGameOption> {
 		Description = ddl.GetString(0xe03811fd) ?? Description;
 	}
 
-	[DDLRegistration(0xc6363cdbu)]
+	[DDLRegistration(0x0f172a74u)]
 	public x1da9d7a0 OptionID { get; set; } = x1da9d7a0.ZurkonPreFinale;
 
-	[DDLRegistration(0xc6363cdbu)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0xc6363cdbu)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
 	public static UIEndGameOption Create(DDLObject ddl) => new(ddl);

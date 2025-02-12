@@ -19,10 +19,10 @@ public class TestSubstructDefaultType : DDLObjectType, IDDLObjectType<TestSubstr
 		DefaultsToCat = ddl.GetObject<TestAnimal>(0x9797d6cfu);
 	}
 
-	[DDLRegistration(0xfddce9cau)]
+	[DDLRegistration(0x88e5ac1au)]
 	public TestAnimal? DefaultsToDog { get; set; } = default;
 
-	[DDLRegistration(0xfddce9cau)]
+	[DDLRegistration(0x9797d6cfu)]
 	public TestAnimal? DefaultsToCat { get; set; } = default;
 
 	public static TestSubstructDefaultType Create(DDLObject ddl) => new(ddl);

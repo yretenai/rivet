@@ -18,7 +18,7 @@ public class ActionControlMountInputControl : DDLObjectType, IDDLObjectType<Acti
 		Control = ddl.GetEnum<xce61f0ef>(0xec314f73u, xce61f0efValues.Lookup);
 	}
 
-	[DDLRegistration(0xafe32b3bu)]
+	[DDLRegistration(0xec314f73u)]
 	public xce61f0ef Control { get; set; } = xce61f0ef.MountAbilitySquare;
 
 	public static ActionControlMountInputControl Create(DDLObject ddl) => new(ddl);

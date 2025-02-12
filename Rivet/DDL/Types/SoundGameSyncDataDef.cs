@@ -22,19 +22,19 @@ public class SoundGameSyncDataDef : DDLObjectType, IDDLObjectType<SoundGameSyncD
 		Environments = ddl.GetObjects<SoundWwiseMapDef>(0x0da690b1u);
 	}
 
-	[DDLRegistration(0x3d3b3ae9u)]
+	[DDLRegistration(0xf4cf343du)]
 	public List<SoundWwiseMapDef?> Triggers { get; set; } = [];
 
-	[DDLRegistration(0x3d3b3ae9u)]
+	[DDLRegistration(0x82b6050du)]
 	public List<SoundStateGroupDef?> StateGroups { get; set; } = [];
 
-	[DDLRegistration(0x3d3b3ae9u)]
+	[DDLRegistration(0x1c156fc7u)]
 	public List<SoundSwitchGroupDef?> SwitchGroups { get; set; } = [];
 
-	[DDLRegistration(0x3d3b3ae9u)]
+	[DDLRegistration(0x84acda95u)]
 	public List<SoundWwiseMapDef?> GameParameters { get; set; } = [];
 
-	[DDLRegistration(0x3d3b3ae9u)]
+	[DDLRegistration(0x0da690b1u)]
 	public List<SoundWwiseMapDef?> Environments { get; set; } = [];
 
 	public static SoundGameSyncDataDef Create(DDLObject ddl) => new(ddl);

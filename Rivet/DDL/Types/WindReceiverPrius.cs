@@ -18,7 +18,7 @@ public class WindReceiverPrius : DDLObjectType, IDDLObjectType<WindReceiverPrius
 		EventRadius = ddl.GetValue<float>(0x7a2f6707u, EventRadius);
 	}
 
-	[DDLRegistration(0x1dcb84b7u, description: "listen radius for wind events")]
+	[DDLRegistration(0x7a2f6707u, description: "listen radius for wind events")]
 	public float EventRadius { get; set; } = 10.00f;
 
 	public static WindReceiverPrius Create(DDLObject ddl) => new(ddl);

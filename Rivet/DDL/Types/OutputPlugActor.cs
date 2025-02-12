@@ -18,7 +18,7 @@ public class OutputPlugActor : OutputPlugBaseDef, IDDLObjectType<OutputPlugActor
 		Value = ddl.GetObject<ActorPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x9fb37e85u)]
+	[DDLRegistration(0x042494f5u)]
 	public ActorPlug? Value { get; set; } = default;
 
 	public new static OutputPlugActor Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class CameraRotationInputData : DDLObjectType, IDDLObjectType<CameraRotat
 		StickConfig = ddl.GetValue<RivetAssetId>(0x3bc8f276u, StickConfig);
 	}
 
-	[DDLRegistration(0xf73cd0bau, "Yaw Min")]
+	[DDLRegistration(0x975af737u, "Yaw Min")]
 	public float YawMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf73cd0bau, "Yaw Max")]
+	[DDLRegistration(0xab57c86eu, "Yaw Max")]
 	public float YawMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf73cd0bau, "Pitch Min")]
+	[DDLRegistration(0xfb99e53bu, "Pitch Min")]
 	public float PitchMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf73cd0bau, "Pitch Max")]
+	[DDLRegistration(0xc794da62u, "Pitch Max")]
 	public float PitchMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf73cd0bau, "Apply Settle")]
+	[DDLRegistration(0xc455894bu, "Apply Settle")]
 	public bool ZeroSettle { get; set; } = true;
 
-	[DDLRegistration(0xf73cd0bau, "Stick Config")]
+	[DDLRegistration(0x3bc8f276u, "Stick Config")]
 	public RivetAssetId StickConfig { get; set; } = default;
 
 	public static CameraRotationInputData Create(DDLObject ddl) => new(ddl);

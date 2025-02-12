@@ -19,10 +19,10 @@ public class DamageModifierHitDirectionPrius : DamageModifierOutgoingPrius, IDDL
 		EndLocatorName = ddl.GetString(0x6c0fd513) ?? EndLocatorName;
 	}
 
-	[DDLRegistration(0x2afc3fbdu, "Start Locator", "Start of the damage line.")]
+	[DDLRegistration(0x03d82807u, "Start Locator", "Start of the damage line.")]
 	public string? StartLocatorName { get; set; } = "";
 
-	[DDLRegistration(0x2afc3fbdu, "End Locator", "End of the damage line.")]
+	[DDLRegistration(0x6c0fd513u, "End Locator", "End of the damage line.")]
 	public string? EndLocatorName { get; set; } = "";
 
 	public new static DamageModifierHitDirectionPrius Create(DDLObject ddl) => new(ddl);

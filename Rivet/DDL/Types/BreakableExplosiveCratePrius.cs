@@ -19,10 +19,10 @@ public class BreakableExplosiveCratePrius : BreakableComponentPrius, IDDLObjectT
 		BotDamage = ddl.GetObject<ExplosiveCrateDamage>(0xa02b9456u);
 	}
 
-	[DDLRegistration(0xa290239bu, "Hero Damage Info", "If the target is a hero, replace the corresponding damage values above with these.")]
+	[DDLRegistration(0xd855ec38u, "Hero Damage Info", "If the target is a hero, replace the corresponding damage values above with these.")]
 	public ExplosiveCrateDamage? HeroDamage { get; set; } = default;
 
-	[DDLRegistration(0xa290239bu, "Bot Damage Info", "If the target is a bot, replace the corresponding damage values above with these.")]
+	[DDLRegistration(0xa02b9456u, "Bot Damage Info", "If the target is a bot, replace the corresponding damage values above with these.")]
 	public ExplosiveCrateDamage? BotDamage { get; set; } = default;
 
 	public new static BreakableExplosiveCratePrius Create(DDLObject ddl) => new(ddl);

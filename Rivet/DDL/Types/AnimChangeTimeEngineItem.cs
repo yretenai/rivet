@@ -18,7 +18,7 @@ public class AnimChangeTimeEngineItem : DDLObjectType, IDDLObjectType<AnimChange
 		NewTime = ddl.GetValue<double>(0xba26c1afu, NewTime);
 	}
 
-	[DDLRegistration(0x45249c7cu)]
+	[DDLRegistration(0xba26c1afu)]
 	public double NewTime { get; set; } = 0;
 
 	public static AnimChangeTimeEngineItem Create(DDLObject ddl) => new(ddl);

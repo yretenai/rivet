@@ -19,10 +19,10 @@ public class BotGroupMustEngageScriptActionPrius : DDLObjectType, IDDLObjectType
 		KillBotsIfUnableToEngage = ddl.GetValue<bool>(0xc3432f82u, KillBotsIfUnableToEngage);
 	}
 
-	[DDLRegistration(0x12e47b3au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0x12e47b3au)]
+	[DDLRegistration(0xc3432f82u)]
 	public bool KillBotsIfUnableToEngage { get; set; } = true;
 
 	public static BotGroupMustEngageScriptActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class WeaponClankPuzzlePrius : WeaponGamePrius, IDDLObjectType<WeaponClan
 		AmmoPerShot = ddl.GetValue<float>(0x2570ce83u, AmmoPerShot);
 	}
 
-	[DDLRegistration(0x4fd7e80au)]
+	[DDLRegistration(0x15f23e94u)]
 	public x17b935fe PuzzleVolumeType { get; set; } = x17b935fe.None;
 
-	[DDLRegistration(0x4fd7e80au)]
+	[DDLRegistration(0x2570ce83u)]
 	public float AmmoPerShot { get; set; } = 1.00f;
 
 	public new static WeaponClankPuzzlePrius Create(DDLObject ddl) => new(ddl);

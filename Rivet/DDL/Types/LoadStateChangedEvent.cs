@@ -18,7 +18,7 @@ public class LoadStateChangedEvent : EventBase, IDDLObjectType<LoadStateChangedE
 		ChangeType = ddl.GetEnum<x6b4f547f>(0x6b94ddc9u, x6b4f547fValues.Lookup);
 	}
 
-	[DDLRegistration(0x2d776561u)]
+	[DDLRegistration(0x6b94ddc9u)]
 	public x6b4f547f ChangeType { get; set; } = x6b4f547f.InitializedZones;
 
 	public new static LoadStateChangedEvent Create(DDLObject ddl) => new(ddl);

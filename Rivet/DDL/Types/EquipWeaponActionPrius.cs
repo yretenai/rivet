@@ -20,13 +20,13 @@ public class EquipWeaponActionPrius : DDLObjectType, IDDLObjectType<EquipWeaponA
 		SetAsOverride = ddl.GetValue<bool>(0x6f38a660u, SetAsOverride);
 	}
 
-	[DDLRegistration(0x50e6b2a7u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Weapon;
 
-	[DDLRegistration(0x50e6b2a7u)]
+	[DDLRegistration(0x4e4bf8c8u)]
 	public RivetAssetId WeaponPickupConfig { get; set; } = default;
 
-	[DDLRegistration(0x50e6b2a7u)]
+	[DDLRegistration(0x6f38a660u)]
 	public bool SetAsOverride { get; set; } = false;
 
 	public static EquipWeaponActionPrius Create(DDLObject ddl) => new(ddl);

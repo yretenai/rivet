@@ -18,7 +18,7 @@ public class ScriptedShotGenericEvent : EventBase, IDDLObjectType<ScriptedShotGe
 		EventName = ddl.GetString(0x2048921d) ?? EventName;
 	}
 
-	[DDLRegistration(0xae70b39bu)]
+	[DDLRegistration(0x2048921du)]
 	public string? EventName { get; set; } = default;
 
 	public new static ScriptedShotGenericEvent Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class DebugDrawGroundWarningPrius : DDLObjectType, IDDLObjectType<DebugDr
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x63160189u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x63160189u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 0.15f;
 
-	[DDLRegistration(0x63160189u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 2.00f;
 
 	public static DebugDrawGroundWarningPrius Create(DDLObject ddl) => new(ddl);

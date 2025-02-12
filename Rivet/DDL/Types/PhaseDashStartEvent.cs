@@ -18,7 +18,7 @@ public class PhaseDashStartEvent : EventBase, IDDLObjectType<PhaseDashStartEvent
 		TriggerTrail = ddl.GetValue<bool>(0xdc68573du, TriggerTrail);
 	}
 
-	[DDLRegistration(0xb0e29d08u)]
+	[DDLRegistration(0xdc68573du)]
 	public bool TriggerTrail { get; set; } = true;
 
 	public new static PhaseDashStartEvent Create(DDLObject ddl) => new(ddl);

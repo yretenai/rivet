@@ -20,13 +20,13 @@ public class SetActorAnimVarEngineItem : DDLObjectType, IDDLObjectType<SetActorA
 		VarValue = ddl.GetObject<DDLVector4>(0x84a391b8u);
 	}
 
-	[DDLRegistration(0xb7064f67u)]
+	[DDLRegistration(0x8cd13823u)]
 	public string? VarName { get; set; } = default;
 
-	[DDLRegistration(0xb7064f67u)]
+	[DDLRegistration(0x5e2c110cu)]
 	public xdf8f8d7a VarType { get; set; } = xdf8f8d7a.FloatOutput;
 
-	[DDLRegistration(0xb7064f67u)]
+	[DDLRegistration(0x84a391b8u)]
 	public DDLVector4? VarValue { get; set; } = default;
 
 	public static SetActorAnimVarEngineItem Create(DDLObject ddl) => new(ddl);

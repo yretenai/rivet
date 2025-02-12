@@ -18,7 +18,7 @@ public class AssetFileRequest : DDLObjectType, IDDLObjectType<AssetFileRequest> 
 		AssetPath = ddl.GetValue<RivetAssetId>(0x0efa614bu, AssetPath);
 	}
 
-	[DDLRegistration(0xd730100au)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = "";
 
 	public static AssetFileRequest Create(DDLObject ddl) => new(ddl);

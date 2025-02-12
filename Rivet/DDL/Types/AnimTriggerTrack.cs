@@ -20,13 +20,13 @@ public class AnimTriggerTrack : DDLObjectType, IDDLObjectType<AnimTriggerTrack> 
 		Events = ddl.GetStrings(0x6dff192du);
 	}
 
-	[DDLRegistration(0xe60a345fu, description: "The name of the event track.")]
+	[DDLRegistration(0x6eb3beb6u, description: "The name of the event track.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xe60a345fu, description: "Trigger data each event.")]
+	[DDLRegistration(0xf4cf343du, description: "Trigger data each event.")]
 	public List<AnimTriggerDef?> Triggers { get; set; } = [];
 
-	[DDLRegistration(0xe60a345fu, description: "Event data for each event.")]
+	[DDLRegistration(0x6dff192du, description: "Event data for each event.")]
 	public List<string?> Events { get; set; } = [];
 
 	public static AnimTriggerTrack Create(DDLObject ddl) => new(ddl);

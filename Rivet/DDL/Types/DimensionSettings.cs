@@ -20,13 +20,13 @@ public class DimensionSettings : DDLObjectType, IDDLObjectType<DimensionSettings
 		MaxPortals = ddl.GetValue<int>(0xdc61d32bu, MaxPortals);
 	}
 
-	[DDLRegistration(0x9355c42eu)]
+	[DDLRegistration(0xc06e6de5u)]
 	public int MaxDimensions { get; set; } = 16;
 
-	[DDLRegistration(0x9355c42eu)]
+	[DDLRegistration(0x9324ec8cu)]
 	public int MaxCheckpoints { get; set; } = 24;
 
-	[DDLRegistration(0x9355c42eu)]
+	[DDLRegistration(0xdc61d32bu)]
 	public int MaxPortals { get; set; } = 24;
 
 	public static DimensionSettings Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class TargetableOnEventPrius : DDLObjectType, IDDLObjectType<TargetableOn
 		UntargetableEvent = ddl.GetString(0x3d14570f) ?? UntargetableEvent;
 	}
 
-	[DDLRegistration(0x7d000f46u)]
+	[DDLRegistration(0xe03d09cdu)]
 	public string? TargetableEvent { get; set; } = default;
 
-	[DDLRegistration(0x7d000f46u)]
+	[DDLRegistration(0x3d14570fu)]
 	public string? UntargetableEvent { get; set; } = default;
 
 	public static TargetableOnEventPrius Create(DDLObject ddl) => new(ddl);

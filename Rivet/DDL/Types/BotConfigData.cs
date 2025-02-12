@@ -29,40 +29,40 @@ public class BotConfigData : DDLObjectType, IDDLObjectType<BotConfigData> {
 		AccessibilityHighlightConfig = ddl.GetValue<RivetAssetId>(0x3ecbd146u, AccessibilityHighlightConfig);
 	}
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: BotConfigCombo")]
+	[DDLRegistration(0x2f793923u, description: "Base Type: BotConfigCombo")]
 	public RivetAssetId ComboConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: BotConfigEmergentVO")]
+	[DDLRegistration(0xde8b92bfu, description: "Base Type: BotConfigEmergentVO")]
 	public RivetAssetId EmergentVOConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: BotConfigStatusEffects")]
+	[DDLRegistration(0x121ed8c8u, description: "Base Type: BotConfigStatusEffects")]
 	public RivetAssetId StatusEffectsConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: BotConfigShooting")]
+	[DDLRegistration(0x3e01df5fu, description: "Base Type: BotConfigShooting")]
 	public RivetAssetId ShootingConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: GameBotConfigFiring")]
+	[DDLRegistration(0xbf45b6ebu, description: "Base Type: GameBotConfigFiring")]
 	public RivetAssetId FiringConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: BotConfigLookSelector")]
+	[DDLRegistration(0x6149f5efu, description: "Base Type: BotConfigLookSelector")]
 	public RivetAssetId LookSelectorConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: BotConfigAnimFilterSelector")]
+	[DDLRegistration(0x01bf8fadu, description: "Base Type: BotConfigAnimFilterSelector")]
 	public RivetAssetId AnimFilterSelectorConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: WeaponEquipListenerConfig")]
+	[DDLRegistration(0xdb8aa2d3u, description: "Base Type: WeaponEquipListenerConfig")]
 	public RivetAssetId WeaponEquipListenerConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: VariantDifficultyModConfig")]
+	[DDLRegistration(0x4b72f9b2u, description: "Base Type: VariantDifficultyModConfig")]
 	public RivetAssetId DifficultyConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: BotVariantConfig")]
+	[DDLRegistration(0xe6edbb1eu, description: "Base Type: BotVariantConfig")]
 	public RivetAssetId VariantConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: BotConfigWaterFx")]
+	[DDLRegistration(0xb18c2575u, description: "Base Type: BotConfigWaterFx")]
 	public RivetAssetId WaterFxConfig { get; set; } = default;
 
-	[DDLRegistration(0xb9a35604u, description: "Base Type: AccessibilityHighlightConfig")]
+	[DDLRegistration(0x3ecbd146u, description: "Base Type: AccessibilityHighlightConfig")]
 	public RivetAssetId AccessibilityHighlightConfig { get; set; } = default;
 
 	public static BotConfigData Create(DDLObject ddl) => new(ddl);

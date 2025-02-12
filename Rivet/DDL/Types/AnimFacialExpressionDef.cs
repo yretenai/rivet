@@ -21,16 +21,16 @@ public class AnimFacialExpressionDef : DDLObjectType, IDDLObjectType<AnimFacialE
 		Keys = ddl.GetObjects<AnimPerformanceKeyDef>(0x841e845cu);
 	}
 
-	[DDLRegistration(0x18ab434au)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x18ab434au)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x18ab434au)]
+	[DDLRegistration(0x4dbc46f3u)]
 	public string? PoseName { get; set; } = default;
 
-	[DDLRegistration(0x18ab434au)]
+	[DDLRegistration(0x841e845cu)]
 	public List<AnimPerformanceKeyDef?> Keys { get; set; } = [];
 
 	public static AnimFacialExpressionDef Create(DDLObject ddl) => new(ddl);

@@ -30,43 +30,43 @@ public class VelocityFromTarget : GrenadeVelocityMode, IDDLObjectType<VelocityFr
 		UseTargetPosOverAimPos = ddl.GetValue<bool>(0xd8cfdf23u, UseTargetPosOverAimPos);
 	}
 
-	[DDLRegistration(0x8a7e0f48u, "Full Tilt Angle")]
+	[DDLRegistration(0x883ae8cdu, "Full Tilt Angle")]
 	public float FullTiltAngle { get; set; } = 22.00f;
 
-	[DDLRegistration(0x8a7e0f48u, "Full Tilt Speed")]
+	[DDLRegistration(0x879d5332u, "Full Tilt Speed")]
 	public float FullTiltSpeed { get; set; } = 8.00f;
 
-	[DDLRegistration(0x8a7e0f48u, "Max Target Dist")]
+	[DDLRegistration(0x8126a286u, "Max Target Dist")]
 	public float MaxTargetDist { get; set; } = 30.00f;
 
-	[DDLRegistration(0x8a7e0f48u, "Max Arc Height")]
+	[DDLRegistration(0xa48389d6u, "Max Arc Height")]
 	public float MaxArcHeight { get; set; } = -1.00f;
 
-	[DDLRegistration(0x8a7e0f48u, "Max Horizontal Dist")]
+	[DDLRegistration(0x277380d3u, "Max Horizontal Dist")]
 	public float MaxHorizontalDist { get; set; } = -1.00f;
 
-	[DDLRegistration(0x8a7e0f48u)]
+	[DDLRegistration(0x5566f807u)]
 	public float PredictionRangeMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8a7e0f48u)]
+	[DDLRegistration(0x696bc75eu)]
 	public float PredictionRangeMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8a7e0f48u)]
+	[DDLRegistration(0xb37f3521u)]
 	public float PredictionFactorMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8a7e0f48u)]
+	[DDLRegistration(0x8f720a78u)]
 	public float PredictionFactorMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8a7e0f48u)]
+	[DDLRegistration(0x5fed8a5au)]
 	public float PredictionLengthCapMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8a7e0f48u)]
+	[DDLRegistration(0x63e0b503u)]
 	public float PredictionLengthCapMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8a7e0f48u)]
+	[DDLRegistration(0x7d1e5856u)]
 	public bool ForceDetonateAtTarget { get; set; } = false;
 
-	[DDLRegistration(0x8a7e0f48u)]
+	[DDLRegistration(0xd8cfdf23u)]
 	public bool UseTargetPosOverAimPos { get; set; } = false;
 
 	public new static VelocityFromTarget Create(DDLObject ddl) => new(ddl);

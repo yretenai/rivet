@@ -20,13 +20,13 @@ public class ConduitDef : DDLObjectType, IDDLObjectType<ConduitDef> {
 		Events = ddl.GetDictionary<string, ECMEventDef>(0x6dff192d, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<ECMEventDef>(mapId));
 	}
 
-	[DDLRegistration(0xdb76dd20u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xdb76dd20u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xdb76dd20u)]
+	[DDLRegistration(0x6dff192du)]
 	public Dictionary<string, ECMEventDef?> Events { get; set; } = [];
 
 	public static ConduitDef Create(DDLObject ddl) => new(ddl);

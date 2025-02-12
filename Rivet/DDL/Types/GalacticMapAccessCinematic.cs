@@ -20,13 +20,13 @@ public class GalacticMapAccessCinematic : DDLObjectType, IDDLObjectType<Galactic
 		UseGroundOffset = ddl.GetValue<bool>(0x49a0908eu, UseGroundOffset);
 	}
 
-	[DDLRegistration(0x6f832011u, description: "Cinematic asset to be loaded")]
+	[DDLRegistration(0xc8c00481u, description: "Cinematic asset to be loaded")]
 	public RivetAssetId CinematicAsset { get; set; } = default;
 
-	[DDLRegistration(0x6f832011u, description: "Cinematic is world space")]
+	[DDLRegistration(0x54f823bfu, description: "Cinematic is world space")]
 	public bool IsWorldSpaceCinematic { get; set; } = false;
 
-	[DDLRegistration(0x6f832011u, description: "If the cinematic is not worldspace (which will never use the ground offset), use this to specify whether or not to use the ground offset (which is needed if the cinematic's reference position is the ground and not the ship).")]
+	[DDLRegistration(0x49a0908eu, description: "If the cinematic is not worldspace (which will never use the ground offset), use this to specify whether or not to use the ground offset (which is needed if the cinematic's reference position is the ground and not the ship).")]
 	public bool UseGroundOffset { get; set; } = true;
 
 	public static GalacticMapAccessCinematic Create(DDLObject ddl) => new(ddl);

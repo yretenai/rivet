@@ -19,10 +19,10 @@ public class OutputNodeBooleanDef : OutputNodeBaseDef, IDDLObjectType<OutputNode
 		Output = ddl.GetObject<OutputPlugBoolean>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0xab9fce2bu)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugBoolean? Input { get; set; } = default;
 
-	[DDLRegistration(0xab9fce2bu)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugBoolean? Output { get; set; } = default;
 
 	public new static OutputNodeBooleanDef Create(DDLObject ddl) => new(ddl);

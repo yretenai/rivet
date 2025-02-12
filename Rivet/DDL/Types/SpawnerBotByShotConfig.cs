@@ -20,13 +20,13 @@ public class SpawnerBotByShotConfig : SpawnerBotBaseConfig, IDDLObjectType<Spawn
 		EmitLocator = ddl.GetString(0x138c6595) ?? EmitLocator;
 	}
 
-	[DDLRegistration(0x7dbeeb6du, description: "Total number of bots to spawn for the spawner's lifetime. (-1 means unlimited)")]
+	[DDLRegistration(0x1c3e6c60u, description: "Total number of bots to spawn for the spawner's lifetime. (-1 means unlimited)")]
 	public int NumTotalSpawnedBots { get; set; } = -1;
 
-	[DDLRegistration(0x7dbeeb6du, description: "The SpawnedShotConfig to use when firing the bot to spawn.")]
+	[DDLRegistration(0xb171e6aeu, description: "The SpawnedShotConfig to use when firing the bot to spawn.")]
 	public RivetAssetId ShotConfig { get; set; } = default;
 
-	[DDLRegistration(0x7dbeeb6du, description: "Joint/Locator on the bot where the shot should emit from.")]
+	[DDLRegistration(0x138c6595u, description: "Joint/Locator on the bot where the shot should emit from.")]
 	public string? EmitLocator { get; set; } = default;
 
 	public new static SpawnerBotByShotConfig Create(DDLObject ddl) => new(ddl);

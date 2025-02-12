@@ -18,7 +18,7 @@ public class ShipReticleSwitchTargetEvent : EventBase, IDDLObjectType<ShipReticl
 		TargetHandle = ddl.GetValue<uint>(0x63316affu, TargetHandle);
 	}
 
-	[DDLRegistration(0x731b39eeu)]
+	[DDLRegistration(0x63316affu)]
 	public uint TargetHandle { get; set; } = 0x00000000;
 
 	public new static ShipReticleSwitchTargetEvent Create(DDLObject ddl) => new(ddl);

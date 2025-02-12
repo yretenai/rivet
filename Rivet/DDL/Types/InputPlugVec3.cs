@@ -18,7 +18,7 @@ public class InputPlugVec3 : InputPlugBaseDef, IDDLObjectType<InputPlugVec3> {
 		Value = ddl.GetObject<DDLVector3>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x03b2a7feu)]
+	[DDLRegistration(0x042494f5u)]
 	public DDLVector3? Value { get; set; } = default;
 
 	public new static InputPlugVec3 Create(DDLObject ddl) => new(ddl);

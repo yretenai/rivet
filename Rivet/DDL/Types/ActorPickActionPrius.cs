@@ -19,10 +19,10 @@ public class ActorPickActionPrius : DDLObjectType, IDDLObjectType<ActorPickActio
 		PickType = ddl.GetEnum<x2ac46ab8>(0x4077e61cu, x2ac46ab8Values.Lookup);
 	}
 
-	[DDLRegistration(0xe6e6b931u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0xe6e6b931u)]
+	[DDLRegistration(0x4077e61cu)]
 	public x2ac46ab8 PickType { get; set; } = x2ac46ab8.Random;
 
 	public static ActorPickActionPrius Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class LoadedMaterialNode : DDLObjectType, IDDLObjectType<LoadedMaterialNo
 		Node = ddl.GetObject<MaterialNode>(0xb5ef28f5u);
 	}
 
-	[DDLRegistration(0xada5871bu)]
+	[DDLRegistration(0x68c78b02u)]
 	public string? SourceFileFullPath { get; set; } = default;
 
-	[DDLRegistration(0xada5871bu)]
+	[DDLRegistration(0x4d3b93bcu)]
 	public string? LibraryName { get; set; } = default;
 
-	[DDLRegistration(0xada5871bu)]
+	[DDLRegistration(0xdfc3e354u)]
 	public bool FromLibraryFile { get; set; } = false;
 
-	[DDLRegistration(0xada5871bu)]
+	[DDLRegistration(0x8a514a8du)]
 	public uint Id { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xada5871bu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xada5871bu)]
+	[DDLRegistration(0xb5ef28f5u)]
 	public MaterialNode? Node { get; set; } = default;
 
 	public static LoadedMaterialNode Create(DDLObject ddl) => new(ddl);

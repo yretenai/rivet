@@ -18,7 +18,7 @@ public class AssetPathsDragAndDrop : DDLObjectType, IDDLObjectType<AssetPathsDra
 		AssetPathArray = ddl.GetStrings(0x2c861418u);
 	}
 
-	[DDLRegistration(0x049b7927u)]
+	[DDLRegistration(0x2c861418u)]
 	public List<string?> AssetPathArray { get; set; } = [];
 
 	public static AssetPathsDragAndDrop Create(DDLObject ddl) => new(ddl);

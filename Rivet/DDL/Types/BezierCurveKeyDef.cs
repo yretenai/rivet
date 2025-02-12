@@ -27,34 +27,34 @@ public class BezierCurveKeyDef : DDLObjectType, IDDLObjectType<BezierCurveKeyDef
 		TangentValueOut = ddl.GetValue<float>(0x20652527u, TangentValueOut);
 	}
 
-	[DDLRegistration(0x27e050f5u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x27e050f5u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x27e050f5u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0x27e050f5u)]
+	[DDLRegistration(0x5f20de0bu)]
 	public bool TangentLocked { get; set; } = true;
 
-	[DDLRegistration(0x27e050f5u)]
+	[DDLRegistration(0xced36b14u)]
 	public x5eea8b59 TangentTypeIn { get; set; } = x5eea8b59.TypeSmooth;
 
-	[DDLRegistration(0x27e050f5u)]
+	[DDLRegistration(0x0c4073d4u)]
 	public float TangentTimeIn { get; set; } = 0.00f;
 
-	[DDLRegistration(0x27e050f5u)]
+	[DDLRegistration(0xd69ffa6bu)]
 	public float TangentValueIn { get; set; } = 0.00f;
 
-	[DDLRegistration(0x27e050f5u)]
+	[DDLRegistration(0xe0c7051bu)]
 	public x5eea8b59 TangentTypeOut { get; set; } = x5eea8b59.TypeSmooth;
 
-	[DDLRegistration(0x27e050f5u)]
+	[DDLRegistration(0x7b6154b3u)]
 	public float TangentTimeOut { get; set; } = 0.00f;
 
-	[DDLRegistration(0x27e050f5u)]
+	[DDLRegistration(0x20652527u)]
 	public float TangentValueOut { get; set; } = 0.00f;
 
 	public static BezierCurveKeyDef Create(DDLObject ddl) => new(ddl);

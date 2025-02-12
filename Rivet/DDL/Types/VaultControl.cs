@@ -20,13 +20,13 @@ public class VaultControl : DDLObjectType, IDDLObjectType<VaultControl> {
 		ValidExtensions = ddl.GetStrings(0x59d494e2u);
 	}
 
-	[DDLRegistration(0xdf51faacu, description: "Required by mongoDb; there's only one entry in this table, so the id is always the same.")]
+	[DDLRegistration(0x7459aa19u, description: "Required by mongoDb; there's only one entry in this table, so the id is always the same.")]
 	public int _id { get; set; } = 0;
 
-	[DDLRegistration(0xdf51faacu, description: "Version of the vault collections from the last run; if this value does not match the struct's version, the tables need to be rebuilt.")]
+	[DDLRegistration(0x4e678f99u, description: "Version of the vault collections from the last run; if this value does not match the struct's version, the tables need to be rebuilt.")]
 	public uint DatabaseVersion { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdf51faacu, description: "Combination of Extensions.ddl and suffixes from LunaTracker's build rules; used while inspecting strings in asset json files to determine if the string is most likely a file path that we care about, in which case it will be indexed.")]
+	[DDLRegistration(0x59d494e2u, description: "Combination of Extensions.ddl and suffixes from LunaTracker's build rules; used while inspecting strings in asset json files to determine if the string is most likely a file path that we care about, in which case it will be indexed.")]
 	public List<string?> ValidExtensions { get; set; } = [];
 
 	public static VaultControl Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class InputNodeVec3Def : InputNodeBaseDef, IDDLObjectType<InputNodeVec3De
 		Output = ddl.GetObject<OutputPlugVec3>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0x5e92dd45u)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugVec3? Input { get; set; } = default;
 
-	[DDLRegistration(0x5e92dd45u)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugVec3? Output { get; set; } = default;
 
 	public new static InputNodeVec3Def Create(DDLObject ddl) => new(ddl);

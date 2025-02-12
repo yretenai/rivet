@@ -19,10 +19,10 @@ public class BounceScaleData : DDLObjectType, IDDLObjectType<BounceScaleData> {
 		FlatHitBounceScale = ddl.GetValue<float>(0xd781f505u, FlatHitBounceScale);
 	}
 
-	[DDLRegistration(0x46927aacu)]
+	[DDLRegistration(0xc1e53f68u)]
 	public float RollBounceScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0x46927aacu)]
+	[DDLRegistration(0xd781f505u)]
 	public float FlatHitBounceScale { get; set; } = 0.00f;
 
 	public static BounceScaleData Create(DDLObject ddl) => new(ddl);

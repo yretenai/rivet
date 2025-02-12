@@ -28,37 +28,37 @@ public class GameBotMeleeSwarmerGroundFlyerPrius : GameBotMeleeSwarmerPrius, IDD
 		FlyMinionHeightMax = ddl.GetValue<float>(0x7269b657u, FlyMinionHeightMax);
 	}
 
-	[DDLRegistration(0x55a0de33u, "Dist to Land:Min", "The minimum distance from the hero before we land (to attack). Anything smaller and we will not land.")]
+	[DDLRegistration(0x41991993u, "Dist to Land:Min", "The minimum distance from the hero before we land (to attack). Anything smaller and we will not land.")]
 	public float DistToLandMin { get; set; } = 5.00f;
 
-	[DDLRegistration(0x55a0de33u, "Dist to Land:Max", "The maximum distance from the hero before we land (to attack).")]
+	[DDLRegistration(0x7d9426cau, "Dist to Land:Max", "The maximum distance from the hero before we land (to attack).")]
 	public float DistToLandMax { get; set; } = 10.00f;
 
-	[DDLRegistration(0x55a0de33u, "Pre-Fly Delay:Min", "The minimum amount of time after we become idle before we try to return to flying (at this point we'll fly when we meet the distance requirements).")]
+	[DDLRegistration(0x758ef890u, "Pre-Fly Delay:Min", "The minimum amount of time after we become idle before we try to return to flying (at this point we'll fly when we meet the distance requirements).")]
 	public float PreFlyDelayMin { get; set; } = 3.00f;
 
-	[DDLRegistration(0x55a0de33u, "Pre-Fly Delay:Max", "The maximum amount of time after we become idle before we try to return to flying (at this point we'll fly when we meet the distance requirements).")]
+	[DDLRegistration(0x4983c7c9u, "Pre-Fly Delay:Max", "The maximum amount of time after we become idle before we try to return to flying (at this point we'll fly when we meet the distance requirements).")]
 	public float PreFlyDelayMax { get; set; } = 6.00f;
 
-	[DDLRegistration(0x55a0de33u, "Dist To Fly:Min", "In addition to the fly delay, we also must be at least this distance from the hero to return to flying (when idle).")]
+	[DDLRegistration(0xd1a8f192u, "Dist To Fly:Min", "In addition to the fly delay, we also must be at least this distance from the hero to return to flying (when idle).")]
 	public float MinDistToFly { get; set; } = 4.00f;
 
-	[DDLRegistration(0x55a0de33u, "Fly Height:Min", "The minumum height to fly at.")]
+	[DDLRegistration(0xf2502ddbu, "Fly Height:Min", "The minumum height to fly at.")]
 	public float FlyHeightMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0x55a0de33u, "Fly Height:Max", "The maximum height to fly at.")]
+	[DDLRegistration(0xce5d1282u, "Fly Height:Max", "The maximum height to fly at.")]
 	public float FlyHeightMax { get; set; } = 5.00f;
 
-	[DDLRegistration(0x55a0de33u, "Engaged Fly Height:Min", "The minimum height to fly at when engaged.")]
+	[DDLRegistration(0xfcb9a72du, "Engaged Fly Height:Min", "The minimum height to fly at when engaged.")]
 	public float FlyEngagedHeightMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0x55a0de33u, "Engaged Fly Height:Max", "The maxmimum height to fly at when engaged.")]
+	[DDLRegistration(0xc0b49874u, "Engaged Fly Height:Max", "The maxmimum height to fly at when engaged.")]
 	public float FlyEngagedHeightMax { get; set; } = 2.00f;
 
-	[DDLRegistration(0x55a0de33u, "Minion Fly Height:Min", "The minimum height to fly at when we are in minion-follow-master mode.")]
+	[DDLRegistration(0x4e64890eu, "Minion Fly Height:Min", "The minimum height to fly at when we are in minion-follow-master mode.")]
 	public float FlyMinionHeightMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0x55a0de33u, "Minion Fly Height:Max", "The maximum height to fly at when we are in minion-follow-master mode.")]
+	[DDLRegistration(0x7269b657u, "Minion Fly Height:Max", "The maximum height to fly at when we are in minion-follow-master mode.")]
 	public float FlyMinionHeightMax { get; set; } = 3.00f;
 
 	public new static GameBotMeleeSwarmerGroundFlyerPrius Create(DDLObject ddl) => new(ddl);

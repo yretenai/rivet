@@ -19,10 +19,10 @@ public class TerrainSystem03EditingTerrain0314 : DDLObjectType, IDDLObjectType<T
 		Line01 = ddl.GetString(0x787f8fdd) ?? Line01;
 	}
 
-	[DDLRegistration(0x6330322du, description: "This inverts the specified target (i.e. the target is filled with the value")]
+	[DDLRegistration(0x0f78bf4bu, description: "This inverts the specified target (i.e. the target is filled with the value")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x6330322du, description: "<i>1.0 - x</i>, where x is the current value at each pixel position.")]
+	[DDLRegistration(0x787f8fddu, description: "<i>1.0 - x</i>, where x is the current value at each pixel position.")]
 	public string? Line01 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0314 Create(DDLObject ddl) => new(ddl);

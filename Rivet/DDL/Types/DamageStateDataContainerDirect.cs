@@ -18,7 +18,7 @@ public class DamageStateDataContainerDirect : DamageStateDataContainerBase, IDDL
 		Data = ddl.GetObject<DamageStateData>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0x1c8bebdcu)]
+	[DDLRegistration(0x9d6333d3u)]
 	public DamageStateData? Data { get; set; } = default;
 
 	public new static DamageStateDataContainerDirect Create(DDLObject ddl) => new(ddl);

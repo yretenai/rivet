@@ -19,10 +19,10 @@ public class SetEmergentVOTriggerEnabledEvent : EventBase, IDDLObjectType<SetEme
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0x734347cau)]
+	[DDLRegistration(0x1b816c65u)]
 	public DialogTriggerGame Trigger { get; set; } = DialogTriggerGame.None;
 
-	[DDLRegistration(0x734347cau)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
 	public new static SetEmergentVOTriggerEnabledEvent Create(DDLObject ddl) => new(ddl);

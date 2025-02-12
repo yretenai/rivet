@@ -18,7 +18,7 @@ public class InstanceTransitionActionPrius : DDLObjectType, IDDLObjectType<Insta
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xd7c4cf6cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Deprecated;
 
 	public static InstanceTransitionActionPrius Create(DDLObject ddl) => new(ddl);

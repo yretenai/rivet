@@ -20,13 +20,13 @@ public class UIPhotoModeOptionsPage : DDLObjectType, IDDLObjectType<UIPhotoModeO
 		Options = ddl.GetObjects<UIPhotoModeOption>(0xd1df99bfu);
 	}
 
-	[DDLRegistration(0x4cc65e31u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x4cc65e31u)]
+	[DDLRegistration(0x5504e96bu)]
 	public string? Icon { get; set; } = default;
 
-	[DDLRegistration(0x4cc65e31u)]
+	[DDLRegistration(0xd1df99bfu)]
 	public List<UIPhotoModeOption?> Options { get; set; } = [];
 
 	public static UIPhotoModeOptionsPage Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class GameTweakList : DDLObjectType, IDDLObjectType<GameTweakList> {
 		SessionId = ddl.GetString(0xbbad2afa) ?? SessionId;
 	}
 
-	[DDLRegistration(0xe4a5b555u)]
+	[DDLRegistration(0x5e13a800u)]
 	public List<TweakDef?> Tweaks { get; set; } = [];
 
-	[DDLRegistration(0xe4a5b555u)]
+	[DDLRegistration(0xbbad2afau)]
 	public string? SessionId { get; set; } = default;
 
 	public static GameTweakList Create(DDLObject ddl) => new(ddl);

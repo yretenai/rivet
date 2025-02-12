@@ -26,31 +26,31 @@ public class VolumetricCloudsWindDef : DDLObjectType, IDDLObjectType<VolumetricC
 		NoiseFlowIntensity = ddl.GetValue<float>(0x1d70b1d5u, NoiseFlowIntensity);
 	}
 
-	[DDLRegistration(0x13f293b2u, description: "It controls the direction of wind for clouds.")]
+	[DDLRegistration(0x931be921u, description: "It controls the direction of wind for clouds.")]
 	public float WindAzimuth { get; set; } = 0.00f;
 
-	[DDLRegistration(0x13f293b2u, description: "Intensity of the wind for clouds.")]
+	[DDLRegistration(0x1595bff9u, description: "Intensity of the wind for clouds.")]
 	public float WindIntensity { get; set; } = 0.00f;
 
-	[DDLRegistration(0x13f293b2u, description: "Enable Clouds rotation.")]
+	[DDLRegistration(0x2c6c3d4au, description: "Enable Clouds rotation.")]
 	public bool EnabledRotation { get; set; } = false;
 
-	[DDLRegistration(0x13f293b2u, description: "It controls the direction of the offset of the pivot position.")]
+	[DDLRegistration(0x2a4a3014u, description: "It controls the direction of the offset of the pivot position.")]
 	public float RotationPivotAzimuth { get; set; } = 0.00f;
 
-	[DDLRegistration(0x13f293b2u, description: "It determines the distance of the offset of the pivot position.")]
+	[DDLRegistration(0xdb7d6806u, description: "It determines the distance of the offset of the pivot position.")]
 	public float RotationPivotDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x13f293b2u, description: "Intensity of rotation.")]
+	[DDLRegistration(0x54e789cbu, description: "Intensity of rotation.")]
 	public float RotationIntensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x13f293b2u, description: "Intensity of rising vapor, it makes noise flow up/downward.")]
+	[DDLRegistration(0xfdf15711u, description: "Intensity of rising vapor, it makes noise flow up/downward.")]
 	public float RisingVaporIntensity { get; set; } = 0.00f;
 
-	[DDLRegistration(0x13f293b2u, description: "It controls the direction of the offset of noise flow.")]
+	[DDLRegistration(0xa84042f9u, description: "It controls the direction of the offset of noise flow.")]
 	public float NoiseFlowAzimuth { get; set; } = 180.00f;
 
-	[DDLRegistration(0x13f293b2u, description: "Intensity of noise flow, it makes noise flow along the XZ plane.")]
+	[DDLRegistration(0x1d70b1d5u, description: "Intensity of noise flow, it makes noise flow along the XZ plane.")]
 	public float NoiseFlowIntensity { get; set; } = 10.00f;
 
 	public static VolumetricCloudsWindDef Create(DDLObject ddl) => new(ddl);

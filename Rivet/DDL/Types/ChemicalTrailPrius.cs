@@ -18,7 +18,7 @@ public class ChemicalTrailPrius : DDLObjectType, IDDLObjectType<ChemicalTrailPri
 		Curves = ddl.GetObjects<ChemicalCurve>(0x70243e1eu);
 	}
 
-	[DDLRegistration(0xecd8b9c8u)]
+	[DDLRegistration(0x70243e1eu)]
 	public List<ChemicalCurve?> Curves { get; set; } = [];
 
 	public static ChemicalTrailPrius Create(DDLObject ddl) => new(ddl);

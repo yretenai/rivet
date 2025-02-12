@@ -19,10 +19,10 @@ public class Region2DMapOverlayLayer : DDLObjectType, IDDLObjectType<Region2DMap
 		LayerName = ddl.GetString(0xbf6cefad) ?? LayerName;
 	}
 
-	[DDLRegistration(0xf47583e6u, "Map Layer Image")]
+	[DDLRegistration(0x153c871fu, "Map Layer Image")]
 	public string? MapLayerImage { get; set; } = default;
 
-	[DDLRegistration(0xf47583e6u, "Layer Name")]
+	[DDLRegistration(0xbf6cefadu, "Layer Name")]
 	public string? LayerName { get; set; } = default;
 
 	public static Region2DMapOverlayLayer Create(DDLObject ddl) => new(ddl);

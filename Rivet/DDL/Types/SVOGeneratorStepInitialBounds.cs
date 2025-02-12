@@ -18,7 +18,7 @@ public class SVOGeneratorStepInitialBounds : DDLObjectType, IDDLObjectType<SVOGe
 		Mat = ddl.GetObject<DDLTransform>(0xbe95476bu);
 	}
 
-	[DDLRegistration(0x1f95517fu)]
+	[DDLRegistration(0xbe95476bu)]
 	public DDLTransform? Mat { get; set; } = default;
 
 	public static SVOGeneratorStepInitialBounds Create(DDLObject ddl) => new(ddl);

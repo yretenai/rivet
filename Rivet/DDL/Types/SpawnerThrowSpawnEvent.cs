@@ -20,13 +20,13 @@ public class SpawnerThrowSpawnEvent : EventBase, IDDLObjectType<SpawnerThrowSpaw
 		ThrowHeight = ddl.GetValue<float>(0xd7e273b9u, ThrowHeight);
 	}
 
-	[DDLRegistration(0x55cbfb66u)]
+	[DDLRegistration(0x40c8c4ffu)]
 	public uint ThrownByActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x55cbfb66u)]
+	[DDLRegistration(0x59b6b1f1u)]
 	public DDLVector3? ThrowToPosition { get; set; } = default;
 
-	[DDLRegistration(0x55cbfb66u)]
+	[DDLRegistration(0xd7e273b9u)]
 	public float ThrowHeight { get; set; } = 2.00f;
 
 	public new static SpawnerThrowSpawnEvent Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class RenderOverrides : DDLObjectType, IDDLObjectType<RenderOverrides> {
 		Colors = ddl.GetDictionary<RivetAssetId, RenderColorOverride>(0xfcc68df8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RenderColorOverride>(mapId));
 	}
 
-	[DDLRegistration(0xd1f6fba2u, description: "Float constants that have been overridden")]
+	[DDLRegistration(0x11306034u, description: "Float constants that have been overridden")]
 	public Dictionary<RivetAssetId, RenderConstantOverride?> Constants { get; set; } = [];
 
-	[DDLRegistration(0xd1f6fba2u, description: "Texture slots that have been overridden")]
+	[DDLRegistration(0x5f860466u, description: "Texture slots that have been overridden")]
 	public Dictionary<RivetAssetId, RenderTextureOverride?> Textures { get; set; } = [];
 
-	[DDLRegistration(0xd1f6fba2u, description: "Color constants that have been overridden")]
+	[DDLRegistration(0xfcc68df8u, description: "Color constants that have been overridden")]
 	public Dictionary<RivetAssetId, RenderColorOverride?> Colors { get; set; } = [];
 
 	public static RenderOverrides Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class SetRenderConstantActionPrius : DDLObjectType, IDDLObjectType<SetRen
 		WValue = ddl.GetValue<float>(0x83095290u, WValue);
 	}
 
-	[DDLRegistration(0x4f3931e9u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0x4f3931e9u, description: "The name of the render constant to set.")]
+	[DDLRegistration(0xc6991700u, description: "The name of the render constant to set.")]
 	public string? ConstantName { get; set; } = default;
 
-	[DDLRegistration(0x4f3931e9u, description: "The Maya material mapping to apply this setting to.")]
+	[DDLRegistration(0x981e6927u, description: "The Maya material mapping to apply this setting to.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x4f3931e9u)]
+	[DDLRegistration(0x725fe045u)]
 	public float XValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4f3931e9u)]
+	[DDLRegistration(0xb90333e0u)]
 	public float YValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4f3931e9u)]
+	[DDLRegistration(0x3f97414eu)]
 	public float ZValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4f3931e9u)]
+	[DDLRegistration(0x83095290u)]
 	public float WValue { get; set; } = 0.00f;
 
 	public static SetRenderConstantActionPrius Create(DDLObject ddl) => new(ddl);

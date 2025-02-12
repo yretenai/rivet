@@ -18,7 +18,7 @@ public class LootDropBasePrius : DDLObjectType, IDDLObjectType<LootDropBasePrius
 		StartEnabled = ddl.GetValue<bool>(0x6f36ca8bu, StartEnabled);
 	}
 
-	[DDLRegistration(0xf8309d34u, "Start Enabled?", "Whether this component starts enabled.")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled?", "Whether this component starts enabled.")]
 	public bool StartEnabled { get; set; } = true;
 
 	public static LootDropBasePrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class AnimBreakableDamageEvent : EventBase, IDDLObjectType<AnimBreakableD
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0xd11b2d0du)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
-	[DDLRegistration(0xd11b2d0du)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
 	public new static AnimBreakableDamageEvent Create(DDLObject ddl) => new(ddl);

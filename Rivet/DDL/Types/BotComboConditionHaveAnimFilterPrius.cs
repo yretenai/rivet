@@ -18,7 +18,7 @@ public class BotComboConditionHaveAnimFilterPrius : BotComboConditionBasePrius, 
 		FilterPair = ddl.GetObject<FilterPair>(0xd8e17746u);
 	}
 
-	[DDLRegistration(0x20e4f41au)]
+	[DDLRegistration(0xd8e17746u)]
 	public FilterPair? FilterPair { get; set; } = default;
 
 	public new static BotComboConditionHaveAnimFilterPrius Create(DDLObject ddl) => new(ddl);

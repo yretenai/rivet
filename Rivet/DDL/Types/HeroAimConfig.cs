@@ -19,10 +19,10 @@ public class HeroAimConfig : DDLObjectType, IDDLObjectType<HeroAimConfig> {
 		GrenadeAimDelay = ddl.GetValue<float>(0x71119e7au, GrenadeAimDelay);
 	}
 
-	[DDLRegistration(0xdc6608ebu)]
+	[DDLRegistration(0xe5f33d5fu)]
 	public float StandardAimCameraBlend { get; set; } = 0.13f;
 
-	[DDLRegistration(0xdc6608ebu)]
+	[DDLRegistration(0x71119e7au)]
 	public float GrenadeAimDelay { get; set; } = 0.10f;
 
 	public static HeroAimConfig Create(DDLObject ddl) => new(ddl);

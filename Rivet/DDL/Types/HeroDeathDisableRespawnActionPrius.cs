@@ -19,10 +19,10 @@ public class HeroDeathDisableRespawnActionPrius : DDLObjectType, IDDLObjectType<
 		DeathAnimNearlyDoneTime = ddl.GetValue<float>(0x25e915bfu, DeathAnimNearlyDoneTime);
 	}
 
-	[DDLRegistration(0x1e2fe3efu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x1e2fe3efu, description: "The DisabledOnDeathDone will output when the death anim is nearly done - this is the time from the end of the anim that it will output.")]
+	[DDLRegistration(0x25e915bfu, description: "The DisabledOnDeathDone will output when the death anim is nearly done - this is the time from the end of the anim that it will output.")]
 	public float DeathAnimNearlyDoneTime { get; set; } = 0.05f;
 
 	public static HeroDeathDisableRespawnActionPrius Create(DDLObject ddl) => new(ddl);

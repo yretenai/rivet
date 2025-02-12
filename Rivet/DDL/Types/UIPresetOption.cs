@@ -20,13 +20,13 @@ public class UIPresetOption : DDLObjectType, IDDLObjectType<UIPresetOption> {
 		StringValue = ddl.GetString(0xbb242993) ?? StringValue;
 	}
 
-	[DDLRegistration(0xdf26b1d0u)]
+	[DDLRegistration(0x0f172a74u)]
 	public x33afe7f4 OptionID { get; set; } = x33afe7f4.Resume;
 
-	[DDLRegistration(0xdf26b1d0u)]
+	[DDLRegistration(0x4e8b9d45u)]
 	public float NumberValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdf26b1d0u)]
+	[DDLRegistration(0xbb242993u)]
 	public string? StringValue { get; set; } = "";
 
 	public static UIPresetOption Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class AirborneData : DDLObjectType, IDDLObjectType<AirborneData> {
 		TimeToApex = ddl.GetValue<float>(0x18ce69e3u, TimeToApex);
 	}
 
-	[DDLRegistration(0x9d89ecf1u, description: "Angle the initial velocity makes with the ground")]
+	[DDLRegistration(0x47502d4au, description: "Angle the initial velocity makes with the ground")]
 	public float GroundSpeedMin { get; set; } = 10.00f;
 
-	[DDLRegistration(0x9d89ecf1u, description: "Angle the initial velocity makes with the ground")]
+	[DDLRegistration(0x7b5d1213u, description: "Angle the initial velocity makes with the ground")]
 	public float GroundSpeedMax { get; set; } = 10.00f;
 
-	[DDLRegistration(0x9d89ecf1u, description: "How high off the ground the character will arc")]
+	[DDLRegistration(0xdec9695fu, description: "How high off the ground the character will arc")]
 	public float ApexHeightMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0x9d89ecf1u, description: "How high off the ground the character will arc")]
+	[DDLRegistration(0xe2c45606u, description: "How high off the ground the character will arc")]
 	public float ApexHeightMax { get; set; } = 2.00f;
 
-	[DDLRegistration(0x9d89ecf1u, description: "How long will it take to reach the ApexHeight")]
+	[DDLRegistration(0x18ce69e3u, description: "How long will it take to reach the ApexHeight")]
 	public float TimeToApex { get; set; } = 1.00f;
 
 	public static AirborneData Create(DDLObject ddl) => new(ddl);

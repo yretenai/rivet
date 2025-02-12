@@ -18,7 +18,7 @@ public class AttackCooldownDefault : DDLObjectType, IDDLObjectType<AttackCooldow
 		RegisterData = ddl.GetObject<RegisterAttackCooldownData>(0x5f043f44u);
 	}
 
-	[DDLRegistration(0x5afa03c2u)]
+	[DDLRegistration(0x5f043f44u)]
 	public RegisterAttackCooldownData? RegisterData { get; set; } = default;
 
 	public static AttackCooldownDefault Create(DDLObject ddl) => new(ddl);

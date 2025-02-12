@@ -33,52 +33,52 @@ public class DamageActionPrius : DDLObjectType, IDDLObjectType<DamageActionPrius
 		CustomDamageEntries = ddl.GetObjects<CustomDamageContainer>(0x0d53b4d9u);
 	}
 
-	[DDLRegistration(0x5e05de77u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
-	[DDLRegistration(0x5e05de77u, description: "Amount of damage to do (can be overridden with the 'Amount' input variable)")]
+	[DDLRegistration(0xb0d93e25u, description: "Amount of damage to do (can be overridden with the 'Amount' input variable)")]
 	public float Amount { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5e05de77u, description: "If set, Amount will be interpreted as a % of the target's max health (0-100).")]
+	[DDLRegistration(0xe2344c19u, description: "If set, Amount will be interpreted as a % of the target's max health (0-100).")]
 	public bool AmountAsPercentage { get; set; } = false;
 
-	[DDLRegistration(0x5e05de77u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public DamageTypesGame Type { get; set; } = DamageTypesGame.Bullet;
 
-	[DDLRegistration(0x5e05de77u)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x5e05de77u, description: "Amount of knockback to apply. -1 means we'll use the damage as the knockback amount.")]
+	[DDLRegistration(0x7b1e600bu, description: "Amount of knockback to apply. -1 means we'll use the damage as the knockback amount.")]
 	public float KnockbackAmount { get; set; } = -1.00f;
 
-	[DDLRegistration(0x5e05de77u)]
+	[DDLRegistration(0x12568d7bu)]
 	public DamageRequestFlags Flags { get; set; } = (DamageRequestFlags) 0x00000000;
 
-	[DDLRegistration(0x5e05de77u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5e05de77u)]
+	[DDLRegistration(0x06d5955cu)]
 	public float ConditionDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5e05de77u)]
+	[DDLRegistration(0xa39af12eu)]
 	public List<DamageStatusData?> DamageStatus { get; set; } = [];
 
-	[DDLRegistration(0x5e05de77u, "(Opt) Local Hit Pos", "Local hit position (offset from actor's position) we will pretend he was hit at.")]
+	[DDLRegistration(0x7d615348u, "(Opt) Local Hit Pos", "Local hit position (offset from actor's position) we will pretend he was hit at.")]
 	public DDLVector3? LocalHitPos { get; set; } = default;
 
-	[DDLRegistration(0x5e05de77u, "(Opt) Local Hit Dir", "Local hit direction (in the actor's local space) we will pretend the damage came from. For example, <0, 0, -1> would mean straight towards his front.")]
+	[DDLRegistration(0x4713cff4u, "(Opt) Local Hit Dir", "Local hit direction (in the actor's local space) we will pretend the damage came from. For example, <0, 0, -1> would mean straight towards his front.")]
 	public DDLVector3? LocalHitDir { get; set; } = default;
 
-	[DDLRegistration(0x5e05de77u, "Use source pos instead?", "If set, rather than the Local Hit Direction above we will use the Source Pos below to determine the hit direction.")]
+	[DDLRegistration(0x7bad1cddu, "Use source pos instead?", "If set, rather than the Local Hit Direction above we will use the Source Pos below to determine the hit direction.")]
 	public bool UseSourcePos { get; set; } = false;
 
-	[DDLRegistration(0x5e05de77u, "(Opt) Source Pos", "If set to use the source pos, this is the World Space position we will use to determine the hit direction (from source to target).")]
+	[DDLRegistration(0xc914e611u, "(Opt) Source Pos", "If set to use the source pos, this is the World Space position we will use to determine the hit direction (from source to target).")]
 	public DDLVector3? SourcePos { get; set; } = default;
 
-	[DDLRegistration(0x5e05de77u)]
+	[DDLRegistration(0xd96a20dcu)]
 	public string? DamageHash { get; set; } = default;
 
-	[DDLRegistration(0x5e05de77u)]
+	[DDLRegistration(0x0d53b4d9u)]
 	public List<CustomDamageContainer?> CustomDamageEntries { get; set; } = [];
 
 	public static DamageActionPrius Create(DDLObject ddl) => new(ddl);

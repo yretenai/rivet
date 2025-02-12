@@ -22,19 +22,19 @@ public class SpawnerScriptActionPrius : SpawnerPrius, IDDLObjectType<SpawnerScri
 		DoWarpEffects = ddl.GetValue<bool>(0xa3fee0c4u, DoWarpEffects);
 	}
 
-	[DDLRegistration(0x2c3c4fcfu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Spawning;
 
-	[DDLRegistration(0x2c3c4fcfu, "Vert Spawn Offset")]
+	[DDLRegistration(0xcb71251au, "Vert Spawn Offset")]
 	public float VertSpawnOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2c3c4fcfu, "Max Activations")]
+	[DDLRegistration(0x718ffe0fu, "Max Activations")]
 	public int MaxActivations { get; set; } = 1;
 
-	[DDLRegistration(0x2c3c4fcfu, "Num Dead Trigger")]
+	[DDLRegistration(0x280d70feu, "Num Dead Trigger")]
 	public int OnNumDeadTrigger { get; set; } = 0;
 
-	[DDLRegistration(0x2c3c4fcfu, "Do Warp In Effects")]
+	[DDLRegistration(0xa3fee0c4u, "Do Warp In Effects")]
 	public bool DoWarpEffects { get; set; } = false;
 
 	public new static SpawnerScriptActionPrius Create(DDLObject ddl) => new(ddl);

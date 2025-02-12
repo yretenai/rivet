@@ -21,16 +21,16 @@ public class SkinItemDecalConfig : ConfigBase, IDDLObjectType<SkinItemDecalConfi
 		DecalList = ddl.GetObjects<SkinItemDecalListElement>(0x1dfa6d24u);
 	}
 
-	[DDLRegistration(0x6b0843e4u, "Debug Name", "Debug only name string")]
+	[DDLRegistration(0x4ef19112u, "Debug Name", "Debug only name string")]
 	public string? DebugName { get; set; } = default;
 
-	[DDLRegistration(0x6b0843e4u, "Name LocTag", "Localization tag for name")]
+	[DDLRegistration(0xa0041b54u, "Name LocTag", "Localization tag for name")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0x6b0843e4u, "Desc LocTag", "Localization tag for description")]
+	[DDLRegistration(0xe02bccb2u, "Desc LocTag", "Localization tag for description")]
 	public string? DescLocTag { get; set; } = default;
 
-	[DDLRegistration(0x6b0843e4u, "Decal List", "List of decals available to use")]
+	[DDLRegistration(0x1dfa6d24u, "Decal List", "List of decals available to use")]
 	public List<SkinItemDecalListElement?> DecalList { get; set; } = [];
 
 	public new static SkinItemDecalConfig Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class ColorBlindFilterData : DDLObjectType, IDDLObjectType<ColorBlindFilt
 		TritanopiaFilterTexture = ddl.GetValue<RivetAssetId>(0xfcdb0028u, TritanopiaFilterTexture);
 	}
 
-	[DDLRegistration(0xf196ce57u)]
+	[DDLRegistration(0x0abaa47du)]
 	public RivetAssetId ProtanopiaFilterTexture { get; set; } = default;
 
-	[DDLRegistration(0xf196ce57u)]
+	[DDLRegistration(0xcb513f24u)]
 	public RivetAssetId DeuteranopiaFilterTexture { get; set; } = default;
 
-	[DDLRegistration(0xf196ce57u)]
+	[DDLRegistration(0xfcdb0028u)]
 	public RivetAssetId TritanopiaFilterTexture { get; set; } = default;
 
 	public static ColorBlindFilterData Create(DDLObject ddl) => new(ddl);

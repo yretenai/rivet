@@ -19,10 +19,10 @@ public class SimpleCritterLocationPrius : DDLObjectType, IDDLObjectType<SimpleCr
 		MeanderRadius = ddl.GetValue<float>(0xf8360daeu, MeanderRadius);
 	}
 
-	[DDLRegistration(0x40f429c2u)]
+	[DDLRegistration(0xe56b40dfu)]
 	public List<string?> EnabledCritterTypes { get; set; } = [];
 
-	[DDLRegistration(0x40f429c2u, "Meander Radius", "How far from this actor the critter may roam. Set to -1 to use the bounding sphere radius.")]
+	[DDLRegistration(0xf8360daeu, "Meander Radius", "How far from this actor the critter may roam. Set to -1 to use the bounding sphere radius.")]
 	public float MeanderRadius { get; set; } = -1.00f;
 
 	public static SimpleCritterLocationPrius Create(DDLObject ddl) => new(ddl);

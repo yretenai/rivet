@@ -18,7 +18,7 @@ public class VehicleBasePrius : DDLObjectType, IDDLObjectType<VehicleBasePrius> 
 		VehicleMoverConfig = ddl.GetObject<MoverConfig>(0x1283345au);
 	}
 
-	[DDLRegistration(0x18288027u)]
+	[DDLRegistration(0x1283345au)]
 	public MoverConfig? VehicleMoverConfig { get; set; } = default;
 
 	public static VehicleBasePrius Create(DDLObject ddl) => new(ddl);

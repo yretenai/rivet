@@ -23,22 +23,22 @@ public class OnTriggerActionPrius : DDLObjectType, IDDLObjectType<OnTriggerActio
 		ListenForUntrigger = ddl.GetValue<bool>(0x3cbecebfu, ListenForUntrigger);
 	}
 
-	[DDLRegistration(0x810906eeu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x810906eeu, description: "Only switches that have this group-name")]
+	[DDLRegistration(0xb215bfb7u, description: "Only switches that have this group-name")]
 	public string? GroupName { get; set; } = "";
 
-	[DDLRegistration(0x810906eeu, "Init Listening?", "Whether to init listening or not (ie, to wait until 'StartListening' input is used).")]
+	[DDLRegistration(0xf387b27au, "Init Listening?", "Whether to init listening or not (ie, to wait until 'StartListening' input is used).")]
 	public bool InitListening { get; set; } = true;
 
-	[DDLRegistration(0x810906eeu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0x810906eeu, "Listen for trigger?", "If false, this node will not listen for the actor(s) being triggered (so no trigger output will be sent).")]
+	[DDLRegistration(0xef3ddc3cu, "Listen for trigger?", "If false, this node will not listen for the actor(s) being triggered (so no trigger output will be sent).")]
 	public bool ListenForTrigger { get; set; } = true;
 
-	[DDLRegistration(0x810906eeu, "Listen for untrigger?", "If false, this node will not listen for the actor(s) being untriggered (so no untrigger output will be sent).")]
+	[DDLRegistration(0x3cbecebfu, "Listen for untrigger?", "If false, this node will not listen for the actor(s) being untriggered (so no untrigger output will be sent).")]
 	public bool ListenForUntrigger { get; set; } = true;
 
 	public static OnTriggerActionPrius Create(DDLObject ddl) => new(ddl);

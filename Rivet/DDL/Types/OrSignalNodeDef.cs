@@ -19,10 +19,10 @@ public class OrSignalNodeDef : LogicNodeBaseDef, IDDLObjectType<OrSignalNodeDef>
 		Out = ddl.GetObject<OutputPlugSignal>(0x93bf4450u);
 	}
 
-	[DDLRegistration(0xf4bda335u)]
+	[DDLRegistration(0xd747a635u)]
 	public List<InputPlugSignal?> Signals { get; set; } = [];
 
-	[DDLRegistration(0xf4bda335u)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugSignal? Out { get; set; } = default;
 
 	public new static OrSignalNodeDef Create(DDLObject ddl) => new(ddl);

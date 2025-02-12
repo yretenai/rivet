@@ -18,7 +18,7 @@ public class FocusTrackingManagerPrius : DDLObjectType, IDDLObjectType<FocusTrac
 		Config = ddl.GetValue<RivetAssetId>(0xeaf2611bu, Config);
 	}
 
-	[DDLRegistration(0x3c48ed49u, description: "Type: Focus Tracking Config")]
+	[DDLRegistration(0xeaf2611bu, description: "Type: Focus Tracking Config")]
 	public RivetAssetId Config { get; set; } = default;
 
 	public static FocusTrackingManagerPrius Create(DDLObject ddl) => new(ddl);

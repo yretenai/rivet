@@ -24,25 +24,25 @@ public class RecoilCameraShakeAnimated : RecoilCameraShake, IDDLObjectType<Recoi
 		AnimTimeScale = ddl.GetValue<float>(0x946cda1cu, AnimTimeScale);
 	}
 
-	[DDLRegistration(0x66e9f372u, "Anim Driver Name")]
+	[DDLRegistration(0x45f98c1eu, "Anim Driver Name")]
 	public string? AnimDriverName { get; set; } = default;
 
-	[DDLRegistration(0x66e9f372u, "Cam Shake Loop Time")]
+	[DDLRegistration(0x648e7476u, "Cam Shake Loop Time")]
 	public float AnimLoopTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x66e9f372u, "Anim X-Motion Scale")]
+	[DDLRegistration(0xa5a6ebccu, "Anim X-Motion Scale")]
 	public float AnimMotionScaleX { get; set; } = 1.00f;
 
-	[DDLRegistration(0x66e9f372u, "Anim Y-Motion Scale")]
+	[DDLRegistration(0xd2a1db5au, "Anim Y-Motion Scale")]
 	public float AnimMotionScaleY { get; set; } = 1.00f;
 
-	[DDLRegistration(0x66e9f372u, "Anim Z-Motion Scale")]
+	[DDLRegistration(0x4ba88ae0u, "Anim Z-Motion Scale")]
 	public float AnimMotionScaleZ { get; set; } = 1.00f;
 
-	[DDLRegistration(0x66e9f372u, "Anim Rotation Scale")]
+	[DDLRegistration(0xe7a3276au, "Anim Rotation Scale")]
 	public float AnimRotationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x66e9f372u, "Anim Time Scale")]
+	[DDLRegistration(0x946cda1cu, "Anim Time Scale")]
 	public float AnimTimeScale { get; set; } = 1.00f;
 
 	public new static RecoilCameraShakeAnimated Create(DDLObject ddl) => new(ddl);

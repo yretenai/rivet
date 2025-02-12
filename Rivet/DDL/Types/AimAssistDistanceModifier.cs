@@ -27,34 +27,34 @@ public class AimAssistDistanceModifier : DDLObjectType, IDDLObjectType<AimAssist
 		CenterMod = ddl.GetValue<float>(0x9237bce3u, CenterMod);
 	}
 
-	[DDLRegistration(0xbc6167b5u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0xbc6167b5u, "Friction Distance Near")]
+	[DDLRegistration(0xe66f6da4u, "Friction Distance Near")]
 	public float FrictionDistanceNear { get; set; } = 5.00f;
 
-	[DDLRegistration(0xbc6167b5u, "Friction Distance Far")]
+	[DDLRegistration(0xe2f0705fu, "Friction Distance Far")]
 	public float FrictionDistanceFar { get; set; } = 15.00f;
 
-	[DDLRegistration(0xbc6167b5u, "Friction Modifier")]
+	[DDLRegistration(0x259d7ff2u, "Friction Modifier")]
 	public float FrictionMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbc6167b5u, "Magnet Distance Near")]
+	[DDLRegistration(0x793fd2b3u, "Magnet Distance Near")]
 	public float MagnetDistanceNear { get; set; } = 5.00f;
 
-	[DDLRegistration(0xbc6167b5u, "Magnet Distance Far")]
+	[DDLRegistration(0x0dabc219u, "Magnet Distance Far")]
 	public float MagnetDistanceFar { get; set; } = 15.00f;
 
-	[DDLRegistration(0xbc6167b5u, "Magnet Modifier")]
+	[DDLRegistration(0xcc015279u, "Magnet Modifier")]
 	public float MagnetMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbc6167b5u, "Centering Distance Near")]
+	[DDLRegistration(0x4de9d4afu, "Centering Distance Near")]
 	public float CenterDistanceNear { get; set; } = 5.00f;
 
-	[DDLRegistration(0xbc6167b5u, "Centering Distance Far")]
+	[DDLRegistration(0xb5742270u, "Centering Distance Far")]
 	public float CenterDistanceFar { get; set; } = 15.00f;
 
-	[DDLRegistration(0xbc6167b5u, "Centering Modifier")]
+	[DDLRegistration(0x9237bce3u, "Centering Modifier")]
 	public float CenterMod { get; set; } = 1.00f;
 
 	public static AimAssistDistanceModifier Create(DDLObject ddl) => new(ddl);

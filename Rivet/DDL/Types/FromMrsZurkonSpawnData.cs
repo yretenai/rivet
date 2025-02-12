@@ -22,19 +22,19 @@ public class FromMrsZurkonSpawnData : ActorSpawnData, IDDLObjectType<FromMrsZurk
 		WantsIntro = ddl.GetValue<byte>(0x2a2719aeu, WantsIntro);
 	}
 
-	[DDLRegistration(0xa1c093eau, description: "The actor we spawned from.")]
+	[DDLRegistration(0x03f62e28u, description: "The actor we spawned from.")]
 	public uint Parent { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa1c093eau, description: "AssetId for the asset we're spawning, if spawning an instance of an actor file")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning, if spawning an instance of an actor file")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa1c093eau)]
+	[DDLRegistration(0xaa8ccf65u)]
 	public DDLVector3? Pos { get; set; } = default;
 
-	[DDLRegistration(0xa1c093eau)]
+	[DDLRegistration(0xb37847eeu)]
 	public DDLVector3? Facing { get; set; } = default;
 
-	[DDLRegistration(0xa1c093eau)]
+	[DDLRegistration(0x2a2719aeu)]
 	public byte WantsIntro { get; set; } = 0x00;
 
 	public new static FromMrsZurkonSpawnData Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class DDLPoint : DDLObjectType, IDDLObjectType<DDLPoint> {
 		Y = ddl.GetValue<int>(0x2934711bu, Y);
 	}
 
-	[DDLRegistration(0xb31a7c18u)]
+	[DDLRegistration(0x5e33418du)]
 	public int X { get; set; } = 0;
 
-	[DDLRegistration(0xb31a7c18u)]
+	[DDLRegistration(0x2934711bu)]
 	public int Y { get; set; } = 0;
 
 	public static DDLPoint Create(DDLObject ddl) => new(ddl);

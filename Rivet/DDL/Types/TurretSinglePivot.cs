@@ -18,7 +18,7 @@ public class TurretSinglePivot : TurretPivotBase, IDDLObjectType<TurretSinglePiv
 		PivotJoint = ddl.GetString(0x2351cbfa) ?? PivotJoint;
 	}
 
-	[DDLRegistration(0xae42e245u)]
+	[DDLRegistration(0x2351cbfau)]
 	public string? PivotJoint { get; set; } = default;
 
 	public new static TurretSinglePivot Create(DDLObject ddl) => new(ddl);

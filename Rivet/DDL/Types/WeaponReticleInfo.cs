@@ -21,16 +21,16 @@ public class WeaponReticleInfo : DDLObjectType, IDDLObjectType<WeaponReticleInfo
 		SpreadReturnDelay = ddl.GetValue<float>(0x94867d16u, SpreadReturnDelay);
 	}
 
-	[DDLRegistration(0xd50e0968u, "Spread Scale", "Apply a scale (0-1) to the spread size.")]
+	[DDLRegistration(0x648de351u, "Spread Scale", "Apply a scale (0-1) to the spread size.")]
 	public float SpreadScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd50e0968u, "Spread Return", "Auto-return to default spread size after spread is set, using the settings below.")]
+	[DDLRegistration(0x83ad3d1fu, "Spread Return", "Auto-return to default spread size after spread is set, using the settings below.")]
 	public bool SpreadReturn { get; set; } = false;
 
-	[DDLRegistration(0xd50e0968u, "Spread Return Duration", "Duration (in secs) of auto-return to default spread size.")]
+	[DDLRegistration(0x25e01298u, "Spread Return Duration", "Duration (in secs) of auto-return to default spread size.")]
 	public float SpreadReturnDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd50e0968u, "Spread Return Delay", "Delay (in secs) before auto-return to default spread size.")]
+	[DDLRegistration(0x94867d16u, "Spread Return Delay", "Delay (in secs) before auto-return to default spread size.")]
 	public float SpreadReturnDelay { get; set; } = 0.00f;
 
 	public static WeaponReticleInfo Create(DDLObject ddl) => new(ddl);

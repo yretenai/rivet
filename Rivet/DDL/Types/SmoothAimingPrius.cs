@@ -20,13 +20,13 @@ public class SmoothAimingPrius : FocusTrackingAimingPrius, IDDLObjectType<Smooth
 		AimPosMaxSpeed = ddl.GetValue<float>(0x4c3b1f8bu, AimPosMaxSpeed);
 	}
 
-	[DDLRegistration(0xaca2f9fdu)]
+	[DDLRegistration(0x08aebedfu)]
 	public float AimPosAccel { get; set; } = 100.00f;
 
-	[DDLRegistration(0xaca2f9fdu)]
+	[DDLRegistration(0xe5256e73u)]
 	public float AimPosDecel { get; set; } = 100.00f;
 
-	[DDLRegistration(0xaca2f9fdu)]
+	[DDLRegistration(0x4c3b1f8bu)]
 	public float AimPosMaxSpeed { get; set; } = 100.00f;
 
 	public new static SmoothAimingPrius Create(DDLObject ddl) => new(ddl);

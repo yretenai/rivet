@@ -21,16 +21,16 @@ public class ComponentEmitterLocalRandomOffsetPrius : ComponentEmitterBasePrius,
 		MaxOffset = ddl.GetObject<DDLVector3>(0xe57abd7du);
 	}
 
-	[DDLRegistration(0xd62c6fa8u)]
+	[DDLRegistration(0x13b721dbu)]
 	public bool EmitFromUser { get; set; } = false;
 
-	[DDLRegistration(0xd62c6fa8u)]
+	[DDLRegistration(0x4cdc032fu)]
 	public bool UseWorldUp { get; set; } = false;
 
-	[DDLRegistration(0xd62c6fa8u)]
+	[DDLRegistration(0x32910f3cu)]
 	public DDLVector3? MinOffset { get; set; } = default;
 
-	[DDLRegistration(0xd62c6fa8u)]
+	[DDLRegistration(0xe57abd7du)]
 	public DDLVector3? MaxOffset { get; set; } = default;
 
 	public new static ComponentEmitterLocalRandomOffsetPrius Create(DDLObject ddl) => new(ddl);

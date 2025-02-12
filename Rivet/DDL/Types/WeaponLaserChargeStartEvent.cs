@@ -19,10 +19,10 @@ public class WeaponLaserChargeStartEvent : EventBase, IDDLObjectType<WeaponLaser
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0x6a61c9c6u, description: "Hash for differentiating beams")]
+	[DDLRegistration(0x26a7db04u, description: "Hash for differentiating beams")]
 	public uint BeamHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x6a61c9c6u)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
 	public new static WeaponLaserChargeStartEvent Create(DDLObject ddl) => new(ddl);

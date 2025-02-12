@@ -18,7 +18,7 @@ public class NamedLinkGameDataTest2 : NamedLinkGameDataBase, IDDLObjectType<Name
 		TestValue2 = ddl.GetValue<int>(0x295d2fa8u, TestValue2);
 	}
 
-	[DDLRegistration(0x19083369u)]
+	[DDLRegistration(0x295d2fa8u)]
 	public int TestValue2 { get; set; } = 0;
 
 	public new static NamedLinkGameDataTest2 Create(DDLObject ddl) => new(ddl);

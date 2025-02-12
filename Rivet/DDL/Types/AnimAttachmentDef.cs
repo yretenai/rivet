@@ -23,22 +23,22 @@ public class AnimAttachmentDef : DDLObjectType, IDDLObjectType<AnimAttachmentDef
 		Scale = ddl.GetValue<float>(0xf515e945u, Scale);
 	}
 
-	[DDLRegistration(0x888517a9u, description: "The locator to which to attach.")]
+	[DDLRegistration(0x7bac1d57u, description: "The locator to which to attach.")]
 	public xfffc3f38 Locator { get; set; } = xfffc3f38.None;
 
-	[DDLRegistration(0x888517a9u, description: "The asset to attach to the locator.")]
+	[DDLRegistration(0x1bfc969du, description: "The asset to attach to the locator.")]
 	public xc5efdc34 Asset { get; set; } = xc5efdc34.None;
 
-	[DDLRegistration(0x888517a9u, description: "The locator to which to attach.")]
+	[DDLRegistration(0xfe325c4cu, description: "The locator to which to attach.")]
 	public string? LocatorString { get; set; } = default;
 
-	[DDLRegistration(0x888517a9u, description: "The asset to attach to the locator.")]
+	[DDLRegistration(0x0bad249fu, description: "The asset to attach to the locator.")]
 	public string? AssetString { get; set; } = default;
 
-	[DDLRegistration(0x888517a9u, description: "The locator on the asset to set as asset origin")]
+	[DDLRegistration(0xf175f855u, description: "The locator on the asset to set as asset origin")]
 	public string? AssetLocatorString { get; set; } = default;
 
-	[DDLRegistration(0x888517a9u, description: "Attachment scale.")]
+	[DDLRegistration(0xf515e945u, description: "Attachment scale.")]
 	public float Scale { get; set; } = 1.00f;
 
 	public static AnimAttachmentDef Create(DDLObject ddl) => new(ddl);

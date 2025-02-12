@@ -18,7 +18,7 @@ public class SoundMaterialObstructionConfig : ConfigBase, IDDLObjectType<SoundMa
 		ObsValues = ddl.GetObjects<SoundMaterialbstructionValue>(0x24a940d4u);
 	}
 
-	[DDLRegistration(0x9a5fd03bu, "Opacity Values")]
+	[DDLRegistration(0x24a940d4u, "Opacity Values")]
 	public List<SoundMaterialbstructionValue?> ObsValues { get; set; } = [];
 
 	public new static SoundMaterialObstructionConfig Create(DDLObject ddl) => new(ddl);

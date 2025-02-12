@@ -20,13 +20,13 @@ public class HurdleShotSecondaryShotSpawnData : ActorSpawnData, IDDLObjectType<H
 		ParentActorHandleData = ddl.GetValue<uint>(0xf7a33350u, ParentActorHandleData);
 	}
 
-	[DDLRegistration(0x1339557cu)]
+	[DDLRegistration(0x57f499d0u)]
 	public RivetAssetId ShotActorAsset { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x1339557cu)]
+	[DDLRegistration(0x51fbb501u)]
 	public DDLTransform? SpawnMat { get; set; } = default;
 
-	[DDLRegistration(0x1339557cu, description: "The Actor we spawning this secondary shot from")]
+	[DDLRegistration(0xf7a33350u, description: "The Actor we spawning this secondary shot from")]
 	public uint ParentActorHandleData { get; set; } = 0x00000000;
 
 	public new static HurdleShotSecondaryShotSpawnData Create(DDLObject ddl) => new(ddl);

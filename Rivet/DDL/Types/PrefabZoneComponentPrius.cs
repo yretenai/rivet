@@ -19,10 +19,10 @@ public class PrefabZoneComponentPrius : DDLObjectType, IDDLObjectType<PrefabZone
 		Autoload = ddl.GetValue<bool>(0xb2a1a9fau, Autoload);
 	}
 
-	[DDLRegistration(0x93684e8au)]
+	[DDLRegistration(0x610ac773u)]
 	public RivetAssetId PrefabZone { get; set; } = default;
 
-	[DDLRegistration(0x93684e8au)]
+	[DDLRegistration(0xb2a1a9fau)]
 	public bool Autoload { get; set; } = true;
 
 	public static PrefabZoneComponentPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class EngineControlAssetOverride : DDLObjectType, IDDLObjectType<EngineCo
 		Type = ddl.GetEnum<AssetExtensions>(0xbc4e9799u, AssetExtensionsValues.Lookup);
 	}
 
-	[DDLRegistration(0xaab195fbu)]
+	[DDLRegistration(0x5b97e5f5u)]
 	public string? Json { get; set; } = default;
 
-	[DDLRegistration(0xaab195fbu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public AssetExtensions Type { get; set; } = AssetExtensions.Actor;
 
 	public static EngineControlAssetOverride Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class WaterImpulseData : DDLObjectType, IDDLObjectType<WaterImpulseData> 
 		LocatorName = ddl.GetString(0x5814524d) ?? LocatorName;
 	}
 
-	[DDLRegistration(0x7d7ff983u, description: "Radius of the impulse. (meters)")]
+	[DDLRegistration(0x0504203du, description: "Radius of the impulse. (meters)")]
 	public float Radius { get; set; } = 0.25f;
 
-	[DDLRegistration(0x7d7ff983u, description: "Name of the locator/joint that represents the center of the impulse.")]
+	[DDLRegistration(0x5814524du, description: "Name of the locator/joint that represents the center of the impulse.")]
 	public string? LocatorName { get; set; } = "";
 
 	public static WaterImpulseData Create(DDLObject ddl) => new(ddl);

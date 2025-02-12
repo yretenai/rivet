@@ -19,10 +19,10 @@ public class AddStatusEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObjectType
 		Effect = ddl.GetObject<StatusEffectBasePrius>(0x8818df95u);
 	}
 
-	[DDLRegistration(0x4654c08eu)]
+	[DDLRegistration(0x1eb7640eu)]
 	public x684c6439 ActorType { get; set; } = x684c6439.HitActor;
 
-	[DDLRegistration(0x4654c08eu)]
+	[DDLRegistration(0x8818df95u)]
 	public StatusEffectBasePrius? Effect { get; set; } = default;
 
 	public new static AddStatusEffectNodeDef Create(DDLObject ddl) => new(ddl);

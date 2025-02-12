@@ -18,7 +18,7 @@ public class BotRelativeAnimSetInterruptTypeEvent : EventBase, IDDLObjectType<Bo
 		InterruptType = ddl.GetEnum<x1879f53b>(0x8595cb05u, x1879f53bValues.Lookup);
 	}
 
-	[DDLRegistration(0x6177ab82u)]
+	[DDLRegistration(0x8595cb05u)]
 	public x1879f53b InterruptType { get; set; } = x1879f53b.Anything;
 
 	public new static BotRelativeAnimSetInterruptTypeEvent Create(DDLObject ddl) => new(ddl);

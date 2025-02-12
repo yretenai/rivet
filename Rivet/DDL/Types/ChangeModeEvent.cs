@@ -18,7 +18,7 @@ public class ChangeModeEvent : UDSEventBase, IDDLObjectType<ChangeModeEvent> {
 		Mode = ddl.GetEnum<x7080cd4b>(0x07682825u, x7080cd4bValues.Lookup);
 	}
 
-	[DDLRegistration(0x5943ef4bu)]
+	[DDLRegistration(0x07682825u)]
 	public x7080cd4b Mode { get; set; } = x7080cd4b.Full;
 
 	public new static ChangeModeEvent Create(DDLObject ddl) => new(ddl);

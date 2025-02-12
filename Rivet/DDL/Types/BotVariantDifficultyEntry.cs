@@ -19,10 +19,10 @@ public class BotVariantDifficultyEntry : DDLObjectType, IDDLObjectType<BotVarian
 		DifficultyModDefs = ddl.GetObjects<DifficultyModDef>(0xec9d4cb3u);
 	}
 
-	[DDLRegistration(0x1763ff65u)]
+	[DDLRegistration(0xf0a9dc95u)]
 	public xc3e5efea Variant { get; set; } = xc3e5efea.V1;
 
-	[DDLRegistration(0x1763ff65u)]
+	[DDLRegistration(0xec9d4cb3u)]
 	public List<DifficultyModDef?> DifficultyModDefs { get; set; } = [];
 
 	public static BotVariantDifficultyEntry Create(DDLObject ddl) => new(ddl);

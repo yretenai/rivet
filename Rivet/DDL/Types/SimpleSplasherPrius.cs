@@ -18,7 +18,7 @@ public class SimpleSplasherPrius : DDLObjectType, IDDLObjectType<SimpleSplasherP
 		CollisionRadius = ddl.GetValue<float>(0x7d546bbau, CollisionRadius);
 	}
 
-	[DDLRegistration(0xbc6f4b76u, description: "Radius for the collision test. (meters)")]
+	[DDLRegistration(0x7d546bbau, description: "Radius for the collision test. (meters)")]
 	public float CollisionRadius { get; set; } = 0.25f;
 
 	public static SimpleSplasherPrius Create(DDLObject ddl) => new(ddl);

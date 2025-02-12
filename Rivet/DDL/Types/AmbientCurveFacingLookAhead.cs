@@ -18,7 +18,7 @@ public class AmbientCurveFacingLookAhead : AmbientCurveFacingBase, IDDLObjectTyp
 		LookAheadTime = ddl.GetValue<float>(0x463883afu, LookAheadTime);
 	}
 
-	[DDLRegistration(0x6953faffu)]
+	[DDLRegistration(0x463883afu)]
 	public float LookAheadTime { get; set; } = 1.00f;
 
 	public new static AmbientCurveFacingLookAhead Create(DDLObject ddl) => new(ddl);

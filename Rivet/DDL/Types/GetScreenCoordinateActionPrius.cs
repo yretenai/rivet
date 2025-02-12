@@ -19,10 +19,10 @@ public class GetScreenCoordinateActionPrius : DDLObjectType, IDDLObjectType<GetS
 		ScreenSize = ddl.GetObject<DDLVector2>(0x7f5a4397u);
 	}
 
-	[DDLRegistration(0xfc2550c2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0xfc2550c2u, "Screen Size", "Screen size override: 0,0 means auto calculate")]
+	[DDLRegistration(0x7f5a4397u, "Screen Size", "Screen size override: 0,0 means auto calculate")]
 	public DDLVector2? ScreenSize { get; set; } = default;
 
 	public static GetScreenCoordinateActionPrius Create(DDLObject ddl) => new(ddl);

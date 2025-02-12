@@ -40,73 +40,73 @@ public class BloomSettingsDef : DDLObjectType, IDDLObjectType<BloomSettingsDef> 
 		AnamorphicLensFlareSaturationThreshold = ddl.GetValue<float>(0x4b01cc3du, AnamorphicLensFlareSaturationThreshold);
 	}
 
-	[DDLRegistration(0xb7e96926u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0xb7e96926u, "Intensity", "The fraction of the image's light energy that is added back on as bloom")]
+	[DDLRegistration(0x6b4f279eu, "Intensity", "The fraction of the image's light energy that is added back on as bloom")]
 	public float Intensity { get; set; } = 0.10f;
 
-	[DDLRegistration(0xb7e96926u, "Threshold", "The number of times brighter than middle gray a pixel has to be before it starts blooming")]
+	[DDLRegistration(0x6987b59au, "Threshold", "The number of times brighter than middle gray a pixel has to be before it starts blooming")]
 	public float Threshold { get; set; } = 3.00f;
 
-	[DDLRegistration(0xb7e96926u, "Narrowest Strength", "The strength of the narrowest gaussian band")]
+	[DDLRegistration(0x130f8052u, "Narrowest Strength", "The strength of the narrowest gaussian band")]
 	public float GaussianStrength0 { get; set; } = 0.40f;
 
-	[DDLRegistration(0xb7e96926u, "Narrow Strength", "The strength of the second narrowest gaussian band")]
+	[DDLRegistration(0x6408b0c4u, "Narrow Strength", "The strength of the second narrowest gaussian band")]
 	public float GaussianStrength1 { get; set; } = 0.50f;
 
-	[DDLRegistration(0xb7e96926u, "Middle Strength", "The strength of the middle gaussian band")]
+	[DDLRegistration(0xfd01e17eu, "Middle Strength", "The strength of the middle gaussian band")]
 	public float GaussianStrength2 { get; set; } = 0.60f;
 
-	[DDLRegistration(0xb7e96926u, "Wide Strength", "The strength of the second widest gaussian band")]
+	[DDLRegistration(0x8a06d1e8u, "Wide Strength", "The strength of the second widest gaussian band")]
 	public float GaussianStrength3 { get; set; } = 0.80f;
 
-	[DDLRegistration(0xb7e96926u, "Widest Strength", "The strength of the widest gaussian band")]
+	[DDLRegistration(0x1462444bu, "Widest Strength", "The strength of the widest gaussian band")]
 	public float GaussianStrength4 { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb7e96926u, "Dirtiness")]
+	[DDLRegistration(0xacad4f3fu, "Dirtiness")]
 	public float BloomDirtiness { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb7e96926u, "Dirtiness Texture")]
+	[DDLRegistration(0x3658d8afu, "Dirtiness Texture")]
 	public RivetAssetId BloomDirtinessAsset { get; set; } = default;
 
-	[DDLRegistration(0xb7e96926u, "LF Lum Min", "LF bloom starts when a pixel is this many times brighter than the average luminance")]
+	[DDLRegistration(0x131a048du, "LF Lum Min", "LF bloom starts when a pixel is this many times brighter than the average luminance")]
 	public float LensFlareLumMin { get; set; } = 4.00f;
 
-	[DDLRegistration(0xb7e96926u, "LF Lum Max", "LF bloom maxes out when a pixel is this many times brighter than the average luminance")]
+	[DDLRegistration(0x2f173bd4u, "LF Lum Max", "LF bloom maxes out when a pixel is this many times brighter than the average luminance")]
 	public float LensFlareLumMax { get; set; } = 20.00f;
 
-	[DDLRegistration(0xb7e96926u, "LF Lum Intensity", "The overall intensity of the bloom that feeds into the lens flare system")]
+	[DDLRegistration(0xc0d04df3u, "LF Lum Intensity", "The overall intensity of the bloom that feeds into the lens flare system")]
 	public float LensFlareLumIntensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb7e96926u, "LF Ghosts         ")]
+	[DDLRegistration(0xf93ba7a9u, "LF Ghosts         ")]
 	public float LensFlareGhosts { get; set; } = 6.00f;
 
-	[DDLRegistration(0xb7e96926u, "LF FallOff        ")]
+	[DDLRegistration(0xda0b6f86u, "LF FallOff        ")]
 	public float LensFlareFallOff { get; set; } = 8.00f;
 
-	[DDLRegistration(0xb7e96926u, "LF Intensity      ")]
+	[DDLRegistration(0x37c3545du, "LF Intensity      ")]
 	public float LensFlareIntensity { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb7e96926u, "LF Distortion     ")]
+	[DDLRegistration(0xb93d2afbu, "LF Distortion     ")]
 	public float LensFlareDistortion { get; set; } = 1.50f;
 
-	[DDLRegistration(0xb7e96926u, "LF Halo Radius    ")]
+	[DDLRegistration(0xc40dbb62u, "LF Halo Radius    ")]
 	public float LensFlareHaloRadius { get; set; } = 0.65f;
 
-	[DDLRegistration(0xb7e96926u, "LF Halo Intensity ")]
+	[DDLRegistration(0xe7c6a5a7u, "LF Halo Intensity ")]
 	public float LensFlareHaloIntensity { get; set; } = 0.75f;
 
-	[DDLRegistration(0xb7e96926u, "LF Ghost Dispersal")]
+	[DDLRegistration(0xb170344fu, "LF Ghost Dispersal")]
 	public float LensFlareGhostDispersal { get; set; } = 0.30f;
 
-	[DDLRegistration(0xb7e96926u, "AMLF Intensity", "The overall intensity of the flare.  This scales the radiance before it is blurred and stretched to produce the flare.  If this value is set to zero, the system is turned off.")]
+	[DDLRegistration(0xfb8c0403u, "AMLF Intensity", "The overall intensity of the flare.  This scales the radiance before it is blurred and stretched to produce the flare.  If this value is set to zero, the system is turned off.")]
 	public float AnamorphicLensFlareIntensity { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb7e96926u, "AMLF Value Threshold", "This is the pre-tonemap minimum threshold for Value in HSV space for a pixel to get added to the flare.  This is used to ensure that the colors have some high value before being considered for the flare.  Note since this is pre-tonemap the value works off the raw output radiance so the value can easily be over 1.0.")]
+	[DDLRegistration(0x21f39eaeu, "AMLF Value Threshold", "This is the pre-tonemap minimum threshold for Value in HSV space for a pixel to get added to the flare.  This is used to ensure that the colors have some high value before being considered for the flare.  Note since this is pre-tonemap the value works off the raw output radiance so the value can easily be over 1.0.")]
 	public float AnamorphicLensFlareValueThreshold { get; set; } = 2.00f;
 
-	[DDLRegistration(0xb7e96926u, "AMLF Saturation Threshold", "This is the pre-tonemap minimum threshold for Saturation in HSV space for a pixel to get added to the flare.  This is used to ensure that colors are preferred for flares over white hotspots.")]
+	[DDLRegistration(0x4b01cc3du, "AMLF Saturation Threshold", "This is the pre-tonemap minimum threshold for Saturation in HSV space for a pixel to get added to the flare.  This is used to ensure that colors are preferred for flares over white hotspots.")]
 	public float AnamorphicLensFlareSaturationThreshold { get; set; } = 0.80f;
 
 	public static BloomSettingsDef Create(DDLObject ddl) => new(ddl);

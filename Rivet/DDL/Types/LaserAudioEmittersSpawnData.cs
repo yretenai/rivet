@@ -21,16 +21,16 @@ public class LaserAudioEmittersSpawnData : ActorSpawnData, IDDLObjectType<LaserA
 		ParentActorHandleData = ddl.GetValue<uint>(0xf7a33350u, ParentActorHandleData);
 	}
 
-	[DDLRegistration(0x8e83f436u, description: "AssetId for the curve asset we're spawning.")]
+	[DDLRegistration(0xc220d293u, description: "AssetId for the curve asset we're spawning.")]
 	public RivetAssetId LaserAudioCurveAsset { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8e83f436u, description: "AssetId for the emitter we're attaching to the curve.")]
+	[DDLRegistration(0x72ca0660u, description: "AssetId for the emitter we're attaching to the curve.")]
 	public RivetAssetId LaserAudioCurveEmitterAsset { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8e83f436u, description: "AssetId for the emitter we're placing at impact of laser.")]
+	[DDLRegistration(0xff23e223u, description: "AssetId for the emitter we're placing at impact of laser.")]
 	public RivetAssetId LaserAudioImpactEmitterAsset { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8e83f436u, description: "The Actor we spawning laser curves from from.")]
+	[DDLRegistration(0xf7a33350u, description: "The Actor we spawning laser curves from from.")]
 	public uint ParentActorHandleData { get; set; } = 0x00000000;
 
 	public new static LaserAudioEmittersSpawnData Create(DDLObject ddl) => new(ddl);

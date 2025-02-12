@@ -19,10 +19,10 @@ public class KamehamehaImpactPassThroughEvent : EventBase, IDDLObjectType<Kameha
 		HitJointHash = ddl.GetValue<uint>(0x70056141u, HitJointHash);
 	}
 
-	[DDLRegistration(0x3d479275u)]
+	[DDLRegistration(0xa68ca01fu)]
 	public uint TargetActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3d479275u)]
+	[DDLRegistration(0x70056141u)]
 	public uint HitJointHash { get; set; } = 0x00000000;
 
 	public new static KamehamehaImpactPassThroughEvent Create(DDLObject ddl) => new(ddl);

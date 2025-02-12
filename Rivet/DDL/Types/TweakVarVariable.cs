@@ -28,37 +28,37 @@ public class TweakVarVariable : DDLObjectType, IDDLObjectType<TweakVarVariable> 
 		HoudiniSortValue = ddl.GetValue<int>(0x78be4c82u, HoudiniSortValue);
 	}
 
-	[DDLRegistration(0x990019ecu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x990019ecu)]
+	[DDLRegistration(0x0ca40cb9u)]
 	public string? Address { get; set; } = default;
 
-	[DDLRegistration(0x990019ecu)]
+	[DDLRegistration(0x3fb68f44u)]
 	public uint LineNumber { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x990019ecu)]
+	[DDLRegistration(0x8ad49688u)]
 	public DDLVector2? Range { get; set; } = default;
 
-	[DDLRegistration(0x990019ecu)]
+	[DDLRegistration(0xd9b545e0u)]
 	public bool RangeValid { get; set; } = false;
 
-	[DDLRegistration(0x990019ecu)]
+	[DDLRegistration(0xdb0a4ab8u)]
 	public string? TagsJson { get; set; } = default;
 
-	[DDLRegistration(0x990019ecu)]
+	[DDLRegistration(0x981e7a68u)]
 	public string? ToolTip { get; set; } = default;
 
-	[DDLRegistration(0x990019ecu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xb44e71fc Type { get; set; } = xb44e71fc.Boolean;
 
-	[DDLRegistration(0x990019ecu)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
-	[DDLRegistration(0x990019ecu)]
+	[DDLRegistration(0xfe7fac93u)]
 	public List<string?> HoudiniChoiceList { get; set; } = [];
 
-	[DDLRegistration(0x990019ecu)]
+	[DDLRegistration(0x78be4c82u)]
 	public int HoudiniSortValue { get; set; } = 0;
 
 	public static TweakVarVariable Create(DDLObject ddl) => new(ddl);

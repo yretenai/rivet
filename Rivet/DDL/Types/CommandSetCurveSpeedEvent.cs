@@ -20,13 +20,13 @@ public class CommandSetCurveSpeedEvent : CommandEvent, IDDLObjectType<CommandSet
 		MaxSpeed = ddl.GetValue<float>(0x16b83961u, MaxSpeed);
 	}
 
-	[DDLRegistration(0xb8dc52cfu)]
+	[DDLRegistration(0xb9f88dfbu)]
 	public float Acceleration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb8dc52cfu)]
+	[DDLRegistration(0xc9ee30a8u)]
 	public float Deceleration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb8dc52cfu)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 0.00f;
 
 	public new static CommandSetCurveSpeedEvent Create(DDLObject ddl) => new(ddl);

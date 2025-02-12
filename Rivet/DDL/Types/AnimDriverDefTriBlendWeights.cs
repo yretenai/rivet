@@ -19,10 +19,10 @@ public class AnimDriverDefTriBlendWeights : DDLObjectType, IDDLObjectType<AnimDr
 		B = ddl.GetValue<float>(0x983f983fu, B);
 	}
 
-	[DDLRegistration(0x1cf403dbu)]
+	[DDLRegistration(0x0136c985u)]
 	public float A { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1cf403dbu)]
+	[DDLRegistration(0x983f983fu)]
 	public float B { get; set; } = 0.00f;
 
 	public static AnimDriverDefTriBlendWeights Create(DDLObject ddl) => new(ddl);

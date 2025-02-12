@@ -18,7 +18,7 @@ public class ComboDisplayDataPadButtonList : ComboDisplayDataBase, IDDLObjectTyp
 		Buttons = ddl.GetEnums<x7b87880c>(0x42b6e68eu, x7b87880cValues.Lookup);
 	}
 
-	[DDLRegistration(0xf8622f1eu)]
+	[DDLRegistration(0x42b6e68eu)]
 	public List<x7b87880c> Buttons { get; set; } = [];
 
 	public new static ComboDisplayDataPadButtonList Create(DDLObject ddl) => new(ddl);

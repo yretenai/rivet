@@ -22,19 +22,19 @@ public class VehicleNodeParams : DDLObjectType, IDDLObjectType<VehicleNodeParams
 		DensitiesLowPerfMode = ddl.GetValues<float>(0x7d010b11u);
 	}
 
-	[DDLRegistration(0xa7a8b7fcu)]
+	[DDLRegistration(0x6679cfb1u)]
 	public List<float> SpeedLimits { get; set; } = [];
 
-	[DDLRegistration(0xa7a8b7fcu)]
+	[DDLRegistration(0x4db0d03eu)]
 	public List<float> Densities { get; set; } = [];
 
-	[DDLRegistration(0xa7a8b7fcu)]
+	[DDLRegistration(0x4ba144adu)]
 	public List<float> DensitiesPerfMode { get; set; } = [];
 
-	[DDLRegistration(0xa7a8b7fcu)]
+	[DDLRegistration(0x320dbe76u)]
 	public List<float> DensitiesMediumPerfMode { get; set; } = [];
 
-	[DDLRegistration(0xa7a8b7fcu)]
+	[DDLRegistration(0x7d010b11u)]
 	public List<float> DensitiesLowPerfMode { get; set; } = [];
 
 	public static VehicleNodeParams Create(DDLObject ddl) => new(ddl);

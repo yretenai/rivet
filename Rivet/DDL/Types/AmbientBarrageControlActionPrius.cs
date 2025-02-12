@@ -19,10 +19,10 @@ public class AmbientBarrageControlActionPrius : DDLObjectType, IDDLObjectType<Am
 		BarrageConfig = ddl.GetValue<RivetAssetId>(0x93fb811cu, BarrageConfig);
 	}
 
-	[DDLRegistration(0xcc8aca13u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Ambient;
 
-	[DDLRegistration(0xcc8aca13u, description: "Optional config to use to control the barrage.  Will override default config on the AmbientBarrageController")]
+	[DDLRegistration(0x93fb811cu, description: "Optional config to use to control the barrage.  Will override default config on the AmbientBarrageController")]
 	public RivetAssetId BarrageConfig { get; set; } = default;
 
 	public static AmbientBarrageControlActionPrius Create(DDLObject ddl) => new(ddl);

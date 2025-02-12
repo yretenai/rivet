@@ -19,10 +19,10 @@ public class AnimDamageJointEventResponderEvent : EventBase, IDDLObjectType<Anim
 		DamageEventCount = ddl.GetValue<uint>(0x842c90bau, DamageEventCount);
 	}
 
-	[DDLRegistration(0x051644b1u, description: "Name hash of joint or locator that's been hit on the actor.")]
+	[DDLRegistration(0x1022a771u, description: "Name hash of joint or locator that's been hit on the actor.")]
 	public uint HitJointNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x051644b1u, description: "Number of damage events handled.")]
+	[DDLRegistration(0x842c90bau, description: "Number of damage events handled.")]
 	public uint DamageEventCount { get; set; } = 0x00000000;
 
 	public new static AnimDamageJointEventResponderEvent Create(DDLObject ddl) => new(ddl);

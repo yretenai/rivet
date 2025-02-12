@@ -18,7 +18,7 @@ public class TriggerPhysicsLauncherEvent : EventBase, IDDLObjectType<TriggerPhys
 		LaunchTargetId = ddl.GetString(0x30bf69e3) ?? LaunchTargetId;
 	}
 
-	[DDLRegistration(0xed5a01c7u)]
+	[DDLRegistration(0x30bf69e3u)]
 	public string? LaunchTargetId { get; set; } = default;
 
 	public new static TriggerPhysicsLauncherEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class GroovitronShotPrius : GrenadeShotPrius, IDDLObjectType<GroovitronSh
 		DanceDuration = ddl.GetValue<float>(0x793dcfe1u, DanceDuration);
 	}
 
-	[DDLRegistration(0x9a5f38b1u)]
+	[DDLRegistration(0xa62a3e20u)]
 	public float DanceRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9a5f38b1u)]
+	[DDLRegistration(0x793dcfe1u)]
 	public float DanceDuration { get; set; } = 0.00f;
 
 	public new static GroovitronShotPrius Create(DDLObject ddl) => new(ddl);

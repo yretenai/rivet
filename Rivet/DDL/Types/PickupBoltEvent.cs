@@ -18,7 +18,7 @@ public class PickupBoltEvent : EventBase, IDDLObjectType<PickupBoltEvent> {
 		BoltId = ddl.GetValue<byte>(0x98887833u, BoltId);
 	}
 
-	[DDLRegistration(0x7a6d5e7eu)]
+	[DDLRegistration(0x98887833u)]
 	public byte BoltId { get; set; } = 0x00;
 
 	public new static PickupBoltEvent Create(DDLObject ddl) => new(ddl);

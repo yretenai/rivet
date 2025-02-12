@@ -33,52 +33,52 @@ public class PerformWarpEvent : EventBase, IDDLObjectType<PerformWarpEvent> {
 		UniqueLoadScreenHash = ddl.GetValue<uint>(0x245c167fu, UniqueLoadScreenHash);
 	}
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0xb31a6f71u)]
 	public DDLTransform? Destination { get; set; } = default;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0xfe4b7d4fu)]
 	public uint CheckpointHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0x0d8554f9u)]
 	public uint DimensionCheckpointHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0x3a387b17u)]
 	public uint DestinationActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0x816be2b3u)]
 	public uint LookTargetActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0xa6e9fb75u)]
 	public xcf5ccb68 ResetType { get; set; } = xcf5ccb68.Stand;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0x13661705u)]
 	public bool ResetState { get; set; } = true;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0xb3ab2b56u)]
 	public bool ResetCamera { get; set; } = true;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0x169d5d6fu)]
 	public bool RelativeCamera { get; set; } = false;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0x5e0dce4du)]
 	public bool RequireAuthority { get; set; } = true;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0x72e6e3e7u)]
 	public bool ResetWeapons { get; set; } = false;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0xd4eaa99du)]
 	public bool ForceLoadScren { get; set; } = false;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0xd7c14b87u)]
 	public bool Cloaked { get; set; } = false;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0x45cda69fu)]
 	public bool UseDestinationActorMatrix { get; set; } = true;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0x27d0be26u)]
 	public bool ForceMoveZero { get; set; } = true;
 
-	[DDLRegistration(0x38008fe3u)]
+	[DDLRegistration(0x245c167fu)]
 	public uint UniqueLoadScreenHash { get; set; } = 0x00000000;
 
 	public new static PerformWarpEvent Create(DDLObject ddl) => new(ddl);

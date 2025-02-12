@@ -19,10 +19,10 @@ public class DebugDrawSphereActionPrius : DDLObjectType, IDDLObjectType<DebugDra
 		Color = ddl.GetObject<DebugDrawColor>(0x7f058428u);
 	}
 
-	[DDLRegistration(0xe5db8741u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0xe5db8741u)]
+	[DDLRegistration(0x7f058428u)]
 	public DebugDrawColor? Color { get; set; } = default;
 
 	public static DebugDrawSphereActionPrius Create(DDLObject ddl) => new(ddl);

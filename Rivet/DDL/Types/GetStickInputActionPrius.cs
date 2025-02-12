@@ -21,16 +21,16 @@ public class GetStickInputActionPrius : DDLObjectType, IDDLObjectType<GetStickIn
 		ApplyInvertYPreference = ddl.GetValue<bool>(0x8d916c6bu, ApplyInvertYPreference);
 	}
 
-	[DDLRegistration(0xb99a6d1du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0xb99a6d1du)]
+	[DDLRegistration(0x56e8e613u)]
 	public x354c1840 Stick { get; set; } = x354c1840.MoveStick;
 
-	[DDLRegistration(0xb99a6d1du)]
+	[DDLRegistration(0x198de318u)]
 	public bool MapInputToWorld { get; set; } = false;
 
-	[DDLRegistration(0xb99a6d1du)]
+	[DDLRegistration(0x8d916c6bu)]
 	public bool ApplyInvertYPreference { get; set; } = false;
 
 	public static GetStickInputActionPrius Create(DDLObject ddl) => new(ddl);

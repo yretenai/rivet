@@ -26,31 +26,31 @@ public class SkinItemCategoryList : DDLObjectType, IDDLObjectType<SkinItemCatego
 		MenuPriority = ddl.GetValue<uint>(0xa4cd7a32u, MenuPriority);
 	}
 
-	[DDLRegistration(0x756547f1u, "Category", "How is this item categorized")]
+	[DDLRegistration(0xfc4da4b1u, "Category", "How is this item categorized")]
 	public xf28253cd Category { get; set; } = xf28253cd.None;
 
-	[DDLRegistration(0x756547f1u, "Category LocTag", "Localization tag for category")]
+	[DDLRegistration(0x0f7fa9c5u, "Category LocTag", "Localization tag for category")]
 	public string? CategoryLocTag { get; set; } = default;
 
-	[DDLRegistration(0x756547f1u, "Display", "True if displayed in the UI")]
+	[DDLRegistration(0x0d3b119bu, "Display", "True if displayed in the UI")]
 	public bool Display { get; set; } = true;
 
-	[DDLRegistration(0x756547f1u, "UI Type", "How does the UI display this category")]
+	[DDLRegistration(0x8c1e6e85u, "UI Type", "How does the UI display this category")]
 	public xf20c2999 UIType { get; set; } = xf20c2999.None;
 
-	[DDLRegistration(0x756547f1u, "Skin Item Configs", "Skin item config(s)")]
+	[DDLRegistration(0x7fc28238u, "Skin Item Configs", "Skin item config(s)")]
 	public List<RivetAssetId> ItemConfigs { get; set; } = [];
 
-	[DDLRegistration(0x756547f1u, "Is Body Category", "True if this is a body category versus a clothing category")]
+	[DDLRegistration(0xa736d6abu, "Is Body Category", "True if this is a body category versus a clothing category")]
 	public bool IsBodyCategory { get; set; } = false;
 
-	[DDLRegistration(0x756547f1u, "Show On Bootup", "True if displayed during the Bootup version of the Vanity UI")]
+	[DDLRegistration(0xf5805c23u, "Show On Bootup", "True if displayed during the Bootup version of the Vanity UI")]
 	public bool ShowOnBootup { get; set; } = false;
 
-	[DDLRegistration(0x756547f1u, "Category Menu", "Which sub menu does this element belong to")]
+	[DDLRegistration(0x0568841eu, "Category Menu", "Which sub menu does this element belong to")]
 	public xca348341 SubMenu { get; set; } = xca348341.None;
 
-	[DDLRegistration(0x756547f1u, "Menu Priority", "Sets sort priority for the category on its sub menu")]
+	[DDLRegistration(0xa4cd7a32u, "Menu Priority", "Sets sort priority for the category on its sub menu")]
 	public uint MenuPriority { get; set; } = 0x00000000;
 
 	public static SkinItemCategoryList Create(DDLObject ddl) => new(ddl);

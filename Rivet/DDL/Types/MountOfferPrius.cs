@@ -18,7 +18,7 @@ public class MountOfferPrius : GenericOfferPrius, IDDLObjectType<MountOfferPrius
 		MountConfig = ddl.GetValue<RivetAssetId>(0x58612f37u, MountConfig);
 	}
 
-	[DDLRegistration(0x744db65bu)]
+	[DDLRegistration(0x58612f37u)]
 	public RivetAssetId MountConfig { get; set; } = default;
 
 	public new static MountOfferPrius Create(DDLObject ddl) => new(ddl);

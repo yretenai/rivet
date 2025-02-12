@@ -21,16 +21,16 @@ public class BotMountData : DDLObjectType, IDDLObjectType<BotMountData> {
 		TouchDamageData = ddl.GetObject<BotMountDamageData>(0x4291d5f0u);
 	}
 
-	[DDLRegistration(0xcad349cbu, "Locator Attach Point", "Locator Attach point on the bot")]
+	[DDLRegistration(0x34512725u, "Locator Attach Point", "Locator Attach point on the bot")]
 	public string? LocatorAttachName { get; set; } = default;
 
-	[DDLRegistration(0xcad349cbu, description: "Animation that is played once the rider attachs to the mount")]
+	[DDLRegistration(0xd1dc7387u, description: "Animation that is played once the rider attachs to the mount")]
 	public string? RiderAttachAnimName { get; set; } = default;
 
-	[DDLRegistration(0xcad349cbu, description: "Movement type for this mountable bot.")]
+	[DDLRegistration(0x5ee2fadeu, description: "Movement type for this mountable bot.")]
 	public BotMovementBase? MountMovementData { get; set; } = default;
 
-	[DDLRegistration(0xcad349cbu, description: "Data for setting up the passive damage that a mounted bot can perform while a hero controls them.")]
+	[DDLRegistration(0x4291d5f0u, description: "Data for setting up the passive damage that a mounted bot can perform while a hero controls them.")]
 	public BotMountDamageData? TouchDamageData { get; set; } = default;
 
 	public static BotMountData Create(DDLObject ddl) => new(ddl);

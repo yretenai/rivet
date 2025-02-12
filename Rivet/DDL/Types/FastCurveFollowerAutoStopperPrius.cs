@@ -24,25 +24,25 @@ public class FastCurveFollowerAutoStopperPrius : CurveFollowerAutoStopperPrius, 
 		DistDown = ddl.GetValue<float>(0xc9c11c17u, DistDown);
 	}
 
-	[DDLRegistration(0x4acfcaaeu)]
+	[DDLRegistration(0xaa4d5e9fu)]
 	public RivetAssetId AutoStopActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4acfcaaeu)]
+	[DDLRegistration(0xa1e7c97au)]
 	public string? CollJoint { get; set; } = "root";
 
-	[DDLRegistration(0x4acfcaaeu)]
+	[DDLRegistration(0x7fd08329u)]
 	public float DistForward { get; set; } = 5.00f;
 
-	[DDLRegistration(0x4acfcaaeu)]
+	[DDLRegistration(0xb8f04d1bu)]
 	public float DistBack { get; set; } = 3.50f;
 
-	[DDLRegistration(0x4acfcaaeu)]
+	[DDLRegistration(0xf6bf9799u)]
 	public float DistSide { get; set; } = 2.50f;
 
-	[DDLRegistration(0x4acfcaaeu)]
+	[DDLRegistration(0x3546a067u)]
 	public float DistUp { get; set; } = 1.50f;
 
-	[DDLRegistration(0x4acfcaaeu)]
+	[DDLRegistration(0xc9c11c17u)]
 	public float DistDown { get; set; } = 1.00f;
 
 	public new static FastCurveFollowerAutoStopperPrius Create(DDLObject ddl) => new(ddl);

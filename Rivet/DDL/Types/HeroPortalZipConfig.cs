@@ -39,70 +39,70 @@ public class HeroPortalZipConfig : ConfigBase, IDDLObjectType<HeroPortalZipConfi
 		PortalAccel = ddl.GetValue<float>(0xc632ff8cu, PortalAccel);
 	}
 
-	[DDLRegistration(0x7eab862au, description: "Hero's animation for portal zip")]
+	[DDLRegistration(0xfef6e27au, description: "Hero's animation for portal zip")]
 	public string? HeroAnim { get; set; } = "PortalZip";
 
-	[DDLRegistration(0x7eab862au, description: "Min distance a portal target must be from the camera")]
+	[DDLRegistration(0xecff5f76u, description: "Min distance a portal target must be from the camera")]
 	public float MinTargetDistance { get; set; } = 10.00f;
 
-	[DDLRegistration(0x7eab862au, description: "Max distance a portal target can be from the camera")]
+	[DDLRegistration(0xf9748b84u, description: "Max distance a portal target can be from the camera")]
 	public float MaxTargetDistance { get; set; } = 40.00f;
 
-	[DDLRegistration(0x7eab862au, description: "Angle from camera/reticle that target needs to be within to auto target")]
+	[DDLRegistration(0xd02cb593u, description: "Angle from camera/reticle that target needs to be within to auto target")]
 	public float MaxAngleStartAutoTarget { get; set; } = 7.00f;
 
-	[DDLRegistration(0x7eab862au, description: "Angle from camera/reticle that target needs to be away to end auto target")]
+	[DDLRegistration(0x78e2b899u, description: "Angle from camera/reticle that target needs to be away to end auto target")]
 	public float MinAngleEndAutoTarget { get; set; } = 14.00f;
 
-	[DDLRegistration(0x7eab862au, description: "Angle from camera/reticle that target needs to be within to auto target (during combat)")]
+	[DDLRegistration(0xc06661c1u, description: "Angle from camera/reticle that target needs to be within to auto target (during combat)")]
 	public float CombatMaxAngleStartAutoTarget { get; set; } = 7.00f;
 
-	[DDLRegistration(0x7eab862au, description: "Angle from camera/reticle that target needs to be away to end auto target (during combat)")]
+	[DDLRegistration(0x69f7b396u, description: "Angle from camera/reticle that target needs to be away to end auto target (during combat)")]
 	public float CombatMinAngleEndAutoTarget { get; set; } = 14.00f;
 
-	[DDLRegistration(0x7eab862au, description: "Max amount of time it can take for the hero to stop from its initial momentum.")]
+	[DDLRegistration(0xe1645179u, description: "Max amount of time it can take for the hero to stop from its initial momentum.")]
 	public float StopMomentumTime { get; set; } = 0.60f;
 
-	[DDLRegistration(0x7eab862au, description: "Max distance that the hero can move from its initial momentum.")]
+	[DDLRegistration(0x3084f673u, description: "Max distance that the hero can move from its initial momentum.")]
 	public float MaxMomentumDistance { get; set; } = 3.00f;
 
-	[DDLRegistration(0x7eab862au)]
+	[DDLRegistration(0xb306f7fdu)]
 	public float PortalInitialScale { get; set; } = 0.01f;
 
-	[DDLRegistration(0x7eab862au)]
+	[DDLRegistration(0x35619107u)]
 	public float PortalPreReturnScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7eab862au)]
+	[DDLRegistration(0x8f043900u)]
 	public float PortalPostReturnScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7eab862au)]
+	[DDLRegistration(0xe34147ecu)]
 	public float PortalFinalScale { get; set; } = 3.00f;
 
-	[DDLRegistration(0x7eab862au, description: "Time before the player warps in which to fire off the pre warp event")]
+	[DDLRegistration(0xdfc93a66u, description: "Time before the player warps in which to fire off the pre warp event")]
 	public float PreWarpTime { get; set; } = 0.20f;
 
-	[DDLRegistration(0x7eab862au)]
+	[DDLRegistration(0x49e0cb8du)]
 	public HeroPortalZipLineData? LineData { get; set; } = default;
 
-	[DDLRegistration(0x7eab862au, description: "Portal actor used to do a portal zip")]
+	[DDLRegistration(0xdfbb9f90u, description: "Portal actor used to do a portal zip")]
 	public RivetAssetId PortalActor { get; set; } = default;
 
-	[DDLRegistration(0x7eab862au, description: "Actor attached to the portal that isnt scaled to handle VFX properly")]
+	[DDLRegistration(0x552ea9d1u, description: "Actor attached to the portal that isnt scaled to handle VFX properly")]
 	public RivetAssetId PortalVFXActor { get; set; } = default;
 
-	[DDLRegistration(0x7eab862au)]
+	[DDLRegistration(0x4df55ad0u)]
 	public RivetAssetId CameraAimContext { get; set; } = default;
 
-	[DDLRegistration(0x7eab862au, description: "Aim context for looking over the players right (natural) shoulder")]
+	[DDLRegistration(0x6a82f7b9u, description: "Aim context for looking over the players right (natural) shoulder")]
 	public RivetAssetId PortalRightAimContext { get; set; } = default;
 
-	[DDLRegistration(0x7eab862au, description: "Aim context for looking over the players left shoulder")]
+	[DDLRegistration(0x0fa2169bu, description: "Aim context for looking over the players left shoulder")]
 	public RivetAssetId PortalLeftAimContext { get; set; } = default;
 
-	[DDLRegistration(0x7eab862au, description: "DEPRECATED Max speed the portal can have when returning to the player.")]
+	[DDLRegistration(0xbdc8dbbfu, description: "DEPRECATED Max speed the portal can have when returning to the player.")]
 	public float MaxPortalSpeed { get; set; } = 40.00f;
 
-	[DDLRegistration(0x7eab862au, description: "DEPRECATED Acceleration used to move the portal towards the player.")]
+	[DDLRegistration(0xc632ff8cu, description: "DEPRECATED Acceleration used to move the portal towards the player.")]
 	public float PortalAccel { get; set; } = 70.00f;
 
 	public new static HeroPortalZipConfig Create(DDLObject ddl) => new(ddl);

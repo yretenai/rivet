@@ -18,7 +18,7 @@ public class POITypeMapIcon : POIInstanceDataBase, IDDLObjectType<POITypeMapIcon
 		Type = ddl.GetEnum<PauseMapElementType>(0xbc4e9799u, PauseMapElementTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x0f6cee57u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public PauseMapElementType Type { get; set; } = PauseMapElementType.Objective;
 
 	public new static POITypeMapIcon Create(DDLObject ddl) => new(ddl);

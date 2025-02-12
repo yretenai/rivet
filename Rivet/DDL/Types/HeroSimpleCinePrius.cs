@@ -19,10 +19,10 @@ public class HeroSimpleCinePrius : DDLObjectType, IDDLObjectType<HeroSimpleCineP
 		AffectHeroVoice = ddl.GetValue<bool>(0xec9db1d1u, AffectHeroVoice);
 	}
 
-	[DDLRegistration(0x18dc7547u)]
+	[DDLRegistration(0x1583d108u)]
 	public HeroTypes HeroType { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0x18dc7547u)]
+	[DDLRegistration(0xec9db1d1u)]
 	public bool AffectHeroVoice { get; set; } = true;
 
 	public static HeroSimpleCinePrius Create(DDLObject ddl) => new(ddl);

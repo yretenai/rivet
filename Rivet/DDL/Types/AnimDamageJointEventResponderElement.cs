@@ -19,10 +19,10 @@ public class AnimDamageJointEventResponderElement : AnimDamageEventResponderElem
 		HitJointRadius = ddl.GetValue<float>(0x26d2d656u, HitJointRadius);
 	}
 
-	[DDLRegistration(0x8d65ab3eu, description: "Name of the joint or locator hit")]
+	[DDLRegistration(0xff9e7dffu, description: "Name of the joint or locator hit")]
 	public string? HitJointName { get; set; } = "";
 
-	[DDLRegistration(0x8d65ab3eu, description: "Hit impact must be within this radius of the joint or locator to trigger response")]
+	[DDLRegistration(0x26d2d656u, description: "Hit impact must be within this radius of the joint or locator to trigger response")]
 	public float HitJointRadius { get; set; } = 1.00f;
 
 	public new static AnimDamageJointEventResponderElement Create(DDLObject ddl) => new(ddl);

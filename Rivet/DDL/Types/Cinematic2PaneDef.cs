@@ -25,28 +25,28 @@ public class Cinematic2PaneDef : DDLObjectType, IDDLObjectType<Cinematic2PaneDef
 		LightGroupIds = ddl.GetDictionary<RivetAssetId, Cinematic2IdMapDef>(0x4bf984fd, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2IdMapDef>(mapId));
 	}
 
-	[DDLRegistration(0xd9d61f51u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd9d61f51u)]
+	[DDLRegistration(0xde4b640eu)]
 	public xe916d2e3 PaneId { get; set; } = xe916d2e3.ShotPaneA;
 
-	[DDLRegistration(0xd9d61f51u)]
+	[DDLRegistration(0xa4080ee4u)]
 	public float NearClipPlane { get; set; } = 0.10f;
 
-	[DDLRegistration(0xd9d61f51u)]
+	[DDLRegistration(0xafd55002u)]
 	public float FarClipPlane { get; set; } = 1000.00f;
 
-	[DDLRegistration(0xd9d61f51u, description: "This specifies the LOD scale multiplier (it is applied globally).")]
+	[DDLRegistration(0xdcd98a8du, description: "This specifies the LOD scale multiplier (it is applied globally).")]
 	public float LodScaleMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd9d61f51u, description: "HQ impostor cull distance (0 = ignore).")]
+	[DDLRegistration(0x0e0979abu, description: "HQ impostor cull distance (0 = ignore).")]
 	public float ImpostorHQBaseDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd9d61f51u, "Cameras", "This specifies the list of active cameras in the shot.")]
+	[DDLRegistration(0x185d3e89u, "Cameras", "This specifies the list of active cameras in the shot.")]
 	public Dictionary<RivetAssetId, Cinematic2IdMapDef?> CameraIds { get; set; } = [];
 
-	[DDLRegistration(0xd9d61f51u, "Light Groups", "This specifies the list of active light groups in the shot.")]
+	[DDLRegistration(0x4bf984fdu, "Light Groups", "This specifies the list of active light groups in the shot.")]
 	public Dictionary<RivetAssetId, Cinematic2IdMapDef?> LightGroupIds { get; set; } = [];
 
 	public static Cinematic2PaneDef Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class OnLookAtEachActorActionPrius : DDLObjectType, IDDLObjectType<OnLook
 		PercentVisible = ddl.GetValue<float>(0xd803b9eau, PercentVisible);
 	}
 
-	[DDLRegistration(0xc8719305u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0xc8719305u, "Start Active", "Start node as active")]
+	[DDLRegistration(0x3e035e82u, "Start Active", "Start node as active")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0xc8719305u, "Only Fire On Change Event", "The default behavior is to only fire LookAt and LookAway when that event actually happens. Turning this off will fire every frame to let you know if things are looked at or not. Please use sparingly, or make sure to deactivate when done.")]
+	[DDLRegistration(0xb13f3cf8u, "Only Fire On Change Event", "The default behavior is to only fire LookAt and LookAway when that event actually happens. Turning this off will fire every frame to let you know if things are looked at or not. Please use sparingly, or make sure to deactivate when done.")]
 	public bool OnlyFireOnChangeEvent { get; set; } = true;
 
-	[DDLRegistration(0xc8719305u, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0xc8719305u, "Max Distance", "Maximum distance actor can be at to be looked at.")]
+	[DDLRegistration(0x88831235u, "Max Distance", "Maximum distance actor can be at to be looked at.")]
 	public float MaxDistance { get; set; } = 1000.00f;
 
-	[DDLRegistration(0xc8719305u, "Start Actors Looked At", "If the actors start 'looked at' then if they are out of view, the LookedAway will kick off immediately")]
+	[DDLRegistration(0x2d558a17u, "Start Actors Looked At", "If the actors start 'looked at' then if they are out of view, the LookedAway will kick off immediately")]
 	public bool StartActorsLookedAt { get; set; } = false;
 
-	[DDLRegistration(0xc8719305u, "Check Whole Camera View", "Check the whole camera view or just that the object is being directly looked at")]
+	[DDLRegistration(0x34994c99u, "Check Whole Camera View", "Check the whole camera view or just that the object is being directly looked at")]
 	public bool CheckWholeCameraView { get; set; } = false;
 
-	[DDLRegistration(0xc8719305u, "Should Be Visible?", "The original doesn't check for LoS, only that you're facing the object. If true, will check if visible")]
+	[DDLRegistration(0x2b3b203fu, "Should Be Visible?", "The original doesn't check for LoS, only that you're facing the object. If true, will check if visible")]
 	public bool ShouldBeVisible { get; set; } = true;
 
-	[DDLRegistration(0xc8719305u, "Percent Visible", "If the object should be visible, how much should be visible to count. Default = 50%.  May not want 100% if part of the object is embedded in another object.")]
+	[DDLRegistration(0xd803b9eau, "Percent Visible", "If the object should be visible, how much should be visible to count. Default = 50%.  May not want 100% if part of the object is embedded in another object.")]
 	public float PercentVisible { get; set; } = 0.50f;
 
 	public static OnLookAtEachActorActionPrius Create(DDLObject ddl) => new(ddl);

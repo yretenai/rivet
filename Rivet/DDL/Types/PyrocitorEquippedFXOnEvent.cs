@@ -18,7 +18,7 @@ public class PyrocitorEquippedFXOnEvent : EventBase, IDDLObjectType<PyrocitorEqu
 		FXVersion = ddl.GetValue<byte>(0x2083aedeu, FXVersion);
 	}
 
-	[DDLRegistration(0xdd4bae86u)]
+	[DDLRegistration(0x2083aedeu)]
 	public byte FXVersion { get; set; } = 0x00;
 
 	public new static PyrocitorEquippedFXOnEvent Create(DDLObject ddl) => new(ddl);

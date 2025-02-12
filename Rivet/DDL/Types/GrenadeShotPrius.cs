@@ -27,34 +27,34 @@ public class GrenadeShotPrius : LobbedShotPrius, IDDLObjectType<GrenadeShotPrius
 		AlwaysWarnFriendlies = ddl.GetValue<bool>(0x99c7bfb9u, AlwaysWarnFriendlies);
 	}
 
-	[DDLRegistration(0xdf75dc39u)]
+	[DDLRegistration(0x42591e47u)]
 	public GrenadeExplosionMode? ExplosionMode { get; set; } = default;
 
-	[DDLRegistration(0xdf75dc39u, "Pulse Interval Max", "The pulse interval will start at this value")]
+	[DDLRegistration(0xe2c6820cu, "Pulse Interval Max", "The pulse interval will start at this value")]
 	public float PulseInterval { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdf75dc39u, "Pulse Interval Min", "The pulse interval will interpolate to this value over the lifetime of the grenade if it's >= 0")]
+	[DDLRegistration(0x14dfe6e8u, "Pulse Interval Min", "The pulse interval will interpolate to this value over the lifetime of the grenade if it's >= 0")]
 	public float PulseIntervalMin { get; set; } = -1.00f;
 
-	[DDLRegistration(0xdf75dc39u)]
+	[DDLRegistration(0x9eca2505u)]
 	public DamageTypesGame ExplosionDamageType { get; set; } = DamageTypesGame.Explosion;
 
-	[DDLRegistration(0xdf75dc39u, "Explosion Data")]
+	[DDLRegistration(0x7860aa8fu, "Explosion Data")]
 	public DamageModifierExplosionPrius? ExplosionData { get; set; } = default;
 
-	[DDLRegistration(0xdf75dc39u)]
+	[DDLRegistration(0xb7da23ebu)]
 	public float ExplosionImpulse { get; set; } = 22.00f;
 
-	[DDLRegistration(0xdf75dc39u)]
+	[DDLRegistration(0xca54c0afu)]
 	public float ImpactDamage { get; set; } = -1.00f;
 
-	[DDLRegistration(0xdf75dc39u)]
+	[DDLRegistration(0x4762f7dfu)]
 	public DamageLOSTypes DamageLOSType { get; set; } = DamageLOSTypes.LOS;
 
-	[DDLRegistration(0xdf75dc39u, "Explode On Enemy Impact")]
+	[DDLRegistration(0x608e2b7au, "Explode On Enemy Impact")]
 	public bool ExplodeOnEnemyImpact { get; set; } = false;
 
-	[DDLRegistration(0xdf75dc39u, "Always Warn Friendlies ", "Warn friendlies even if we don't do friendly damage")]
+	[DDLRegistration(0x99c7bfb9u, "Always Warn Friendlies ", "Warn friendlies even if we don't do friendly damage")]
 	public bool AlwaysWarnFriendlies { get; set; } = false;
 
 	public new static GrenadeShotPrius Create(DDLObject ddl) => new(ddl);

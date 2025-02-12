@@ -18,7 +18,7 @@ public class VaultViewerTakeScreenshot : DDLObjectType, IDDLObjectType<VaultView
 		OutputPath = ddl.GetValue<RivetAssetId>(0xbb898139u, OutputPath);
 	}
 
-	[DDLRegistration(0xacb6aae5u)]
+	[DDLRegistration(0xbb898139u)]
 	public RivetAssetId OutputPath { get; set; } = default;
 
 	public static VaultViewerTakeScreenshot Create(DDLObject ddl) => new(ddl);

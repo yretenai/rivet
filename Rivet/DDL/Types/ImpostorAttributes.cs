@@ -23,22 +23,22 @@ public class ImpostorAttributes : DDLObjectType, IDDLObjectType<ImpostorAttribut
 		Bottom = ddl.GetValue<bool>(0xb7273cc3u, Bottom);
 	}
 
-	[DDLRegistration(0xfd931cb7u, "Legacy Pixels Per Meter", "Prefer a lower PPM for memory-restricted platforms")]
+	[DDLRegistration(0x2f87985bu, "Legacy Pixels Per Meter", "Prefer a lower PPM for memory-restricted platforms")]
 	public uint LegacyPixelsPerMeter { get; set; } = 0x00000008;
 
-	[DDLRegistration(0xfd931cb7u, "Pixels Per Meter")]
+	[DDLRegistration(0x727ad5f7u, "Pixels Per Meter")]
 	public uint PixelsPerMeter { get; set; } = 0x00000008;
 
-	[DDLRegistration(0xfd931cb7u, "Skip Ray-Tracing", "Do not contribute to ray-traced reflections")]
+	[DDLRegistration(0x81f71340u, "Skip Ray-Tracing", "Do not contribute to ray-traced reflections")]
 	public bool SkipRayTracing { get; set; } = false;
 
-	[DDLRegistration(0xfd931cb7u, "Skip Normals", "Skip the capture of Detail Normals to reduce memory cost")]
+	[DDLRegistration(0x1a9507cdu, "Skip Normals", "Skip the capture of Detail Normals to reduce memory cost")]
 	public bool SkipNormals { get; set; } = false;
 
-	[DDLRegistration(0xfd931cb7u, "Skip Capture")]
+	[DDLRegistration(0xc8e695cdu, "Skip Capture")]
 	public bool Skip { get; set; } = false;
 
-	[DDLRegistration(0xfd931cb7u, "Capture Bottom", "Capture downward-facing triangles")]
+	[DDLRegistration(0xb7273cc3u, "Capture Bottom", "Capture downward-facing triangles")]
 	public bool Bottom { get; set; } = false;
 
 	public static ImpostorAttributes Create(DDLObject ddl) => new(ddl);

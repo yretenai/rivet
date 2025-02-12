@@ -20,13 +20,13 @@ public class AnimLookGroupChangeEvent : EventBase, IDDLObjectType<AnimLookGroupC
 		ApplyLookGroup = ddl.GetString(0x189eacac) ?? ApplyLookGroup;
 	}
 
-	[DDLRegistration(0xd3c8137eu, description: "Look group name to disable.")]
+	[DDLRegistration(0xdc0e924du, description: "Look group name to disable.")]
 	public string? DisableLookGroup { get; set; } = default;
 
-	[DDLRegistration(0xd3c8137eu, description: "Look group name to enable.")]
+	[DDLRegistration(0xdc48d561u, description: "Look group name to enable.")]
 	public string? EnableLookGroup { get; set; } = default;
 
-	[DDLRegistration(0xd3c8137eu, description: "Look group name to apply.")]
+	[DDLRegistration(0x189eacacu, description: "Look group name to apply.")]
 	public string? ApplyLookGroup { get; set; } = default;
 
 	public new static AnimLookGroupChangeEvent Create(DDLObject ddl) => new(ddl);

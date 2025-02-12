@@ -23,22 +23,22 @@ public class HeroPlayScriptedAnimActionPrius : DDLObjectType, IDDLObjectType<Her
 		AllowEarlyTransition = ddl.GetValue<bool>(0x4450f120u, AllowEarlyTransition);
 	}
 
-	[DDLRegistration(0x6a757aaau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x6a757aaau)]
+	[DDLRegistration(0x4aa1c381u)]
 	public bool AllowOffers { get; set; } = false;
 
-	[DDLRegistration(0x6a757aaau)]
+	[DDLRegistration(0xe27ddabdu)]
 	public bool AsOverlapPartial { get; set; } = false;
 
-	[DDLRegistration(0x6a757aaau, description: "Melee, Jump, Aim, Fire, and Movement are the inputs we check.")]
+	[DDLRegistration(0x103b7361u, description: "Melee, Jump, Aim, Fire, and Movement are the inputs we check.")]
 	public bool StopOnPlayerInput { get; set; } = false;
 
-	[DDLRegistration(0x6a757aaau, description: "True: Try to go to Relaxed Idle. False: Try to go to Alerted Idle.")]
+	[DDLRegistration(0xf8d8eeb8u, description: "True: Try to go to Relaxed Idle. False: Try to go to Alerted Idle.")]
 	public bool ExitToRelaxedIdle { get; set; } = false;
 
-	[DDLRegistration(0x6a757aaau, description: "True: Allow exiting the state if the animclip has reached its AllowEarlyTransitionEvent. False: Don't try to exit the state early.")]
+	[DDLRegistration(0x4450f120u, description: "True: Allow exiting the state if the animclip has reached its AllowEarlyTransitionEvent. False: Don't try to exit the state early.")]
 	public bool AllowEarlyTransition { get; set; } = false;
 
 	public static HeroPlayScriptedAnimActionPrius Create(DDLObject ddl) => new(ddl);

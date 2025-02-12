@@ -20,13 +20,13 @@ public class StatusEffectConfuseConfig : StatusEffectConfig, IDDLObjectType<Stat
 		StandardDuration = ddl.GetValue<float>(0x61cc167du, StandardDuration);
 	}
 
-	[DDLRegistration(0xae0cd206u, "Confuse Targeting")]
+	[DDLRegistration(0x4467fef3u, "Confuse Targeting")]
 	public TierData? ConfuseTargetingTiers { get; set; } = default;
 
-	[DDLRegistration(0xae0cd206u)]
+	[DDLRegistration(0xee2f28cbu)]
 	public RivetAssetId VictimMaterialGraph { get; set; } = default;
 
-	[DDLRegistration(0xae0cd206u, "Standard Duration")]
+	[DDLRegistration(0x61cc167du, "Standard Duration")]
 	public float StandardDuration { get; set; } = 12.00f;
 
 	public new static StatusEffectConfuseConfig Create(DDLObject ddl) => new(ddl);

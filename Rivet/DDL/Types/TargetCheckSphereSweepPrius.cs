@@ -19,10 +19,10 @@ public class TargetCheckSphereSweepPrius : TargetCheckBasePrius, IDDLObjectType<
 		OwnerLocator = ddl.GetString(0x2abcb4ae) ?? OwnerLocator;
 	}
 
-	[DDLRegistration(0x42df3fadu)]
+	[DDLRegistration(0x7abba555u)]
 	public string? TargetLocator { get; set; } = default;
 
-	[DDLRegistration(0x42df3fadu)]
+	[DDLRegistration(0x2abcb4aeu)]
 	public string? OwnerLocator { get; set; } = default;
 
 	public new static TargetCheckSphereSweepPrius Create(DDLObject ddl) => new(ddl);

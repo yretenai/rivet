@@ -21,16 +21,16 @@ public class RCSOpenInput : DDLObjectType, IDDLObjectType<RCSOpenInput> {
 		Changelist = ddl.GetValue<uint>(0x03b0ddc6u, Changelist);
 	}
 
-	[DDLRegistration(0xf46319c1u, description: "Can be full paths to files to check out, or paths with wildcards.")]
+	[DDLRegistration(0x08a35046u, description: "Can be full paths to files to check out, or paths with wildcards.")]
 	public List<string?> Views { get; set; } = [];
 
-	[DDLRegistration(0xf46319c1u, description: "Automatically add files that are not in revision control.")]
+	[DDLRegistration(0xbfa92a2au, description: "Automatically add files that are not in revision control.")]
 	public bool AutoAdd { get; set; } = true;
 
-	[DDLRegistration(0xf46319c1u, description: "Automatically sync out of date files before trying to open them for edit.")]
+	[DDLRegistration(0x1bbe17a3u, description: "Automatically sync out of date files before trying to open them for edit.")]
 	public bool AutoSync { get; set; } = false;
 
-	[DDLRegistration(0xf46319c1u, description: "Add files to specified changelist number.")]
+	[DDLRegistration(0x03b0ddc6u, description: "Add files to specified changelist number.")]
 	public uint Changelist { get; set; } = 0x00000000;
 
 	public static RCSOpenInput Create(DDLObject ddl) => new(ddl);

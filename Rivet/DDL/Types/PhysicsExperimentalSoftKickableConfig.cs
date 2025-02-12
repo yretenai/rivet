@@ -21,16 +21,16 @@ public class PhysicsExperimentalSoftKickableConfig : ConfigBase, IDDLObjectType<
 		HighSpeed = ddl.GetValue<float>(0xee98ca3du, HighSpeed);
 	}
 
-	[DDLRegistration(0x72f4bb24u, "Contact Impulse clipping at low speed", "Limit total force that will be applied to a kickable by an animated character traveling at or below the 'low speed threshold'. I think this is probably newtons?")]
+	[DDLRegistration(0xd9b004f2u, "Contact Impulse clipping at low speed", "Limit total force that will be applied to a kickable by an animated character traveling at or below the 'low speed threshold'. I think this is probably newtons?")]
 	public float MaxContactImpulseAtLowSpeed { get; set; } = 100.00f;
 
-	[DDLRegistration(0x72f4bb24u, "Low speed threshold", "Characters traveling at or below this speed will apply no more than 'contact impulse clipping at low speed' newtons to any kickable object.")]
+	[DDLRegistration(0x7b7bf077u, "Low speed threshold", "Characters traveling at or below this speed will apply no more than 'contact impulse clipping at low speed' newtons to any kickable object.")]
 	public float LowSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x72f4bb24u, "Contact Impulse clipping at high speed", "Limit total force that will be applied to a kickable by an animated character traveling at or above the 'high speed threshold'. I think this is probably newtons?")]
+	[DDLRegistration(0x73e87666u, "Contact Impulse clipping at high speed", "Limit total force that will be applied to a kickable by an animated character traveling at or above the 'high speed threshold'. I think this is probably newtons?")]
 	public float MaxContactImpulseAtHighSpeed { get; set; } = 100.00f;
 
-	[DDLRegistration(0x72f4bb24u, "High speed threshold", "Characters traveling at or above this speed will apply no more than 'contact impulse clipping at high speed' newtons to any kickable object.")]
+	[DDLRegistration(0xee98ca3du, "High speed threshold", "Characters traveling at or above this speed will apply no more than 'contact impulse clipping at high speed' newtons to any kickable object.")]
 	public float HighSpeed { get; set; } = 100.00f;
 
 	public new static PhysicsExperimentalSoftKickableConfig Create(DDLObject ddl) => new(ddl);

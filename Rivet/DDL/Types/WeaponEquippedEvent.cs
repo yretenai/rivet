@@ -23,22 +23,22 @@ public class WeaponEquippedEvent : EventBase, IDDLObjectType<WeaponEquippedEvent
 		EquipIndex = ddl.GetValue<uint>(0x9e860af6u, EquipIndex);
 	}
 
-	[DDLRegistration(0x91fe56acu, description: "Handle of the actor.")]
+	[DDLRegistration(0x5d269a38u, description: "Handle of the actor.")]
 	public uint Actor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x91fe56acu, description: "Position of the actor.")]
+	[DDLRegistration(0xd69ed521u, description: "Position of the actor.")]
 	public DDLVector3? ActorPosition { get; set; } = default;
 
-	[DDLRegistration(0x91fe56acu, description: "How long the old weapon was equipped.")]
+	[DDLRegistration(0xd1078cdfu, description: "How long the old weapon was equipped.")]
 	public float OldWeaponDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x91fe56acu)]
+	[DDLRegistration(0xbbc61533u)]
 	public uint OldWeaponType { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x91fe56acu)]
+	[DDLRegistration(0xcced54edu)]
 	public uint NewWeaponType { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x91fe56acu)]
+	[DDLRegistration(0x9e860af6u)]
 	public uint EquipIndex { get; set; } = 0x00000000;
 
 	public new static WeaponEquippedEvent Create(DDLObject ddl) => new(ddl);

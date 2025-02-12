@@ -18,7 +18,7 @@ public class ClankPuzzleVolumeInteractEventBase : EventBase, IDDLObjectType<Clan
 		VolumeType = ddl.GetEnum<x17b935fe>(0x9135042fu, x17b935feValues.Lookup);
 	}
 
-	[DDLRegistration(0x1e1a704fu)]
+	[DDLRegistration(0x9135042fu)]
 	public x17b935fe VolumeType { get; set; } = x17b935fe.None;
 
 	public new static ClankPuzzleVolumeInteractEventBase Create(DDLObject ddl) => new(ddl);

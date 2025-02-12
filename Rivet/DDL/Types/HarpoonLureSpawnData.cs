@@ -22,19 +22,19 @@ public class HarpoonLureSpawnData : ActorSpawnData, IDDLObjectType<HarpoonLureSp
 		Range = ddl.GetValue<float>(0x8ad49688u, Range);
 	}
 
-	[DDLRegistration(0xb41d5065u, description: "The shot owner/root/source. The shooter.")]
+	[DDLRegistration(0x8b1a8202u, description: "The shot owner/root/source. The shooter.")]
 	public uint ShotOwner { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb41d5065u, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning")]
 	public uint AssetId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb41d5065u)]
+	[DDLRegistration(0xbc2d5985u)]
 	public DDLVector3? Position { get; set; } = default;
 
-	[DDLRegistration(0xb41d5065u)]
+	[DDLRegistration(0xc7e68df8u)]
 	public float Lifetime { get; set; } = 10.00f;
 
-	[DDLRegistration(0xb41d5065u)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 8.00f;
 
 	public new static HarpoonLureSpawnData Create(DDLObject ddl) => new(ddl);

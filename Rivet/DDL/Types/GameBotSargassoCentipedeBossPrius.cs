@@ -33,52 +33,52 @@ public class GameBotSargassoCentipedeBossPrius : BotPrius, IDDLObjectType<GameBo
 		DamageStateBotVariantExlusionList = ddl.GetEnums<xc3e5efea>(0x13cd409cu, xc3e5efeaValues.Lookup);
 	}
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0xe827e797u)]
 	public string? IntroAnimName { get; set; } = "Arena_Intro";
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0xcc550a62u)]
 	public string? FlyoverOutroAnimName { get; set; } = "Tail_Reentry";
 
-	[DDLRegistration(0xe6887e26u, description: "The minimum health percent threshold the boss can be at when attempting the flyover attack.")]
+	[DDLRegistration(0x677935c8u, description: "The minimum health percent threshold the boss can be at when attempting the flyover attack.")]
 	public float FlyOverMinHealthPercentThreshold { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0xe4e8e6d4u)]
 	public x2512d89d DeathType { get; set; } = x2512d89d.Retreat;
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0xc4482dceu)]
 	public string? RetreatAnim { get; set; } = "Retract";
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0x0f9dd5a6u)]
 	public string? DeathAnim { get; set; } = "Arena_Death";
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0x17aacce7u)]
 	public RivetAssetId PilotActor { get; set; } = default;
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0xbf99bf9au)]
 	public float PilotScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0x0d1ba870u)]
 	public string? LocatorToAttachPilot { get; set; } = "igLoc_chair_swivel";
 
-	[DDLRegistration(0xe6887e26u, description: "Health percent thresholds in which the centipede will play a damage reaction (assumes these are sorted in descending order)")]
+	[DDLRegistration(0xf746e5f2u, description: "Health percent thresholds in which the centipede will play a damage reaction (assumes these are sorted in descending order)")]
 	public List<float> DamageReactionThresholds { get; set; } = [];
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0x4b34244au)]
 	public string? DamageReactionAnim { get; set; } = "Damage";
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0xcf82d041u)]
 	public bool CanCelebrate { get; set; } = true;
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0xc8581959u)]
 	public string? CelebrateAnim { get; set; } = "Celebrate";
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0xc17a637cu)]
 	public float DefaultCelebrateCooldown { get; set; } = 30.00f;
 
-	[DDLRegistration(0xe6887e26u)]
+	[DDLRegistration(0xcc2476f2u)]
 	public List<CelebrateDifficultyData?> DifficultyCelebrateCooldowns { get; set; } = [];
 
-	[DDLRegistration(0xe6887e26u, description: "The bot variants in this exclusion list will not have damage state changes.")]
+	[DDLRegistration(0x13cd409cu, description: "The bot variants in this exclusion list will not have damage state changes.")]
 	public List<xc3e5efea> DamageStateBotVariantExlusionList { get; set; } = [];
 
 	public new static GameBotSargassoCentipedeBossPrius Create(DDLObject ddl) => new(ddl);

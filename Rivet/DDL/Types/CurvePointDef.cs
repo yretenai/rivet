@@ -22,19 +22,19 @@ public class CurvePointDef : DDLObjectType, IDDLObjectType<CurvePointDef> {
 		TerrainRoadData = ddl.GetObject<TerrainRoadCurvePointData>(0x83d421b5u);
 	}
 
-	[DDLRegistration(0x7a842f49u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x7a842f49u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x7a842f49u, description: "Specifies what additional properties should be available on the curve point (this will be copied from the parent CurveDef)")]
+	[DDLRegistration(0xc9b892b1u, description: "Specifies what additional properties should be available on the curve point (this will be copied from the parent CurveDef)")]
 	public CurveUsage? Usage { get; set; } = default;
 
-	[DDLRegistration(0x7a842f49u, "Houdini Data")]
+	[DDLRegistration(0x5642110du, "Houdini Data")]
 	public CurvePointHoudiniData? HoudiniData { get; set; } = default;
 
-	[DDLRegistration(0x7a842f49u, "Terrain Road Data")]
+	[DDLRegistration(0x83d421b5u, "Terrain Road Data")]
 	public TerrainRoadCurvePointData? TerrainRoadData { get; set; } = default;
 
 	public static CurvePointDef Create(DDLObject ddl) => new(ddl);

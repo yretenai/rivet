@@ -19,10 +19,10 @@ public class LocationChangeEvent : UDSEventBase, IDDLObjectType<LocationChangeEv
 		MapPosition = ddl.GetValues<float>(0xef79418eu);
 	}
 
-	[DDLRegistration(0x0f1f9d24u)]
+	[DDLRegistration(0xc74cfc3fu)]
 	public string? ZoneId { get; set; } = default;
 
-	[DDLRegistration(0x0f1f9d24u)]
+	[DDLRegistration(0xef79418eu)]
 	public List<float> MapPosition { get; set; } = [];
 
 	public new static LocationChangeEvent Create(DDLObject ddl) => new(ddl);

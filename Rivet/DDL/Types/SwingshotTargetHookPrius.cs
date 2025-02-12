@@ -18,7 +18,7 @@ public class SwingshotTargetHookPrius : SwingshotTargetBasePrius, IDDLObjectType
 		CableLengthOverride = ddl.GetValue<float>(0x0367b84au, CableLengthOverride);
 	}
 
-	[DDLRegistration(0xc0169b09u, description: "Override cable length; ignored if negative.")]
+	[DDLRegistration(0x0367b84au, description: "Override cable length; ignored if negative.")]
 	public float CableLengthOverride { get; set; } = -1.00f;
 
 	public new static SwingshotTargetHookPrius Create(DDLObject ddl) => new(ddl);

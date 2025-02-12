@@ -25,28 +25,28 @@ public class GPUProgramDesc : DDLObjectType, IDDLObjectType<GPUProgramDesc> {
 		VSInterpMask = ddl.GetValue<uint>(0xd4cb14bdu, VSInterpMask);
 	}
 
-	[DDLRegistration(0x4769aac6u)]
+	[DDLRegistration(0x0aa5d733u)]
 	public uint PSTextureMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4769aac6u)]
+	[DDLRegistration(0x3bf6b15du)]
 	public uint PSInterpMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4769aac6u)]
+	[DDLRegistration(0x7e1b1b7fu)]
 	public uint DSTextureMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4769aac6u)]
+	[DDLRegistration(0x34e867deu)]
 	public uint DSInterpMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4769aac6u)]
+	[DDLRegistration(0xe4a1a284u)]
 	public uint HSTextureMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4769aac6u)]
+	[DDLRegistration(0x31e22a5fu)]
 	public uint HSInterpMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4769aac6u)]
+	[DDLRegistration(0xaa4008eeu)]
 	public uint VSTextureMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4769aac6u)]
+	[DDLRegistration(0xd4cb14bdu)]
 	public uint VSInterpMask { get; set; } = 0x00000000;
 
 	public static GPUProgramDesc Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class DamageStateElement : DDLObjectType, IDDLObjectType<DamageStateEleme
 		MaxLookSwaps = ddl.GetValue<byte>(0x72bf4b55u, MaxLookSwaps);
 	}
 
-	[DDLRegistration(0xf39bbc14u, "HP Threshhold", "At what HP threshhold should this state activate. A zero-to-one value.")]
+	[DDLRegistration(0x947e58e4u, "HP Threshhold", "At what HP threshhold should this state activate. A zero-to-one value.")]
 	public float HPThreshhold { get; set; } = 0.75f;
 
-	[DDLRegistration(0xf39bbc14u, "Min Look Chunks", "Min Num Attached chunks to come off")]
+	[DDLRegistration(0x388e96e3u, "Min Look Chunks", "Min Num Attached chunks to come off")]
 	public byte MinLookChunks { get; set; } = 0x01;
 
-	[DDLRegistration(0xf39bbc14u, "Max Look Chunks", "Max Num Attached chunks to come off")]
+	[DDLRegistration(0x78c1ee95u, "Max Look Chunks", "Max Num Attached chunks to come off")]
 	public byte MaxLookChunks { get; set; } = 0x02;
 
-	[DDLRegistration(0xf39bbc14u, "Min Generic Chunks", "Min Num Generic chunks to come off")]
+	[DDLRegistration(0x715d6f14u, "Min Generic Chunks", "Min Num Generic chunks to come off")]
 	public byte MinGenericChunks { get; set; } = 0x01;
 
-	[DDLRegistration(0xf39bbc14u, "Max Generic Chunks", "Max Num Generic chunks to come off")]
+	[DDLRegistration(0x20a4d449u, "Max Generic Chunks", "Max Num Generic chunks to come off")]
 	public byte MaxGenericChunks { get; set; } = 0x02;
 
-	[DDLRegistration(0xf39bbc14u, "Min Look Swap", "Min Num Look Swaps to perform")]
+	[DDLRegistration(0xe2cc5bbfu, "Min Look Swap", "Min Num Look Swaps to perform")]
 	public byte MinLookSwaps { get; set; } = 0x00;
 
-	[DDLRegistration(0xf39bbc14u, "Max Look Swap", "Max Num Look Swaps to perform")]
+	[DDLRegistration(0x72bf4b55u, "Max Look Swap", "Max Num Look Swaps to perform")]
 	public byte MaxLookSwaps { get; set; } = 0x00;
 
 	public static DamageStateElement Create(DDLObject ddl) => new(ddl);

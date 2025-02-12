@@ -19,10 +19,10 @@ public class AttackTransitionEvent : EventBase, IDDLObjectType<AttackTransitionE
 		NextAnimRate = ddl.GetValue<float>(0x3e177b88u, NextAnimRate);
 	}
 
-	[DDLRegistration(0x3955bff9u, description: "Animation to play if transition was triggered")]
+	[DDLRegistration(0x8e326e08u, description: "Animation to play if transition was triggered")]
 	public string? NextAnim { get; set; } = default;
 
-	[DDLRegistration(0x3955bff9u, description: "Time scale of next animation")]
+	[DDLRegistration(0x3e177b88u, description: "Time scale of next animation")]
 	public float NextAnimRate { get; set; } = 1.00f;
 
 	public new static AttackTransitionEvent Create(DDLObject ddl) => new(ddl);

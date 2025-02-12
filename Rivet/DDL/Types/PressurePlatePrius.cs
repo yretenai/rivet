@@ -20,13 +20,13 @@ public class PressurePlatePrius : DDLObjectType, IDDLObjectType<PressurePlatePri
 		StayPressed = ddl.GetValue<bool>(0xcfbbb0e3u, StayPressed);
 	}
 
-	[DDLRegistration(0x48d2f28au, description: "The amount of time the hero has to stand on the plate for it to be considered complete.")]
+	[DDLRegistration(0xe46af25fu, description: "The amount of time the hero has to stand on the plate for it to be considered complete.")]
 	public float TimeToPress { get; set; } = 1.00f;
 
-	[DDLRegistration(0x48d2f28au, description: "The amount of it takes for the plate to reset after the hero gets off of it.")]
+	[DDLRegistration(0xc93331afu, description: "The amount of it takes for the plate to reset after the hero gets off of it.")]
 	public float TimeToReset { get; set; } = 1.00f;
 
-	[DDLRegistration(0x48d2f28au, description: "Whether the button will stay pressed after the hero gets off of it.")]
+	[DDLRegistration(0xcfbbb0e3u, description: "Whether the button will stay pressed after the hero gets off of it.")]
 	public bool StayPressed { get; set; } = true;
 
 	public static PressurePlatePrius Create(DDLObject ddl) => new(ddl);

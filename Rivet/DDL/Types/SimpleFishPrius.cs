@@ -23,22 +23,22 @@ public class SimpleFishPrius : FlockablePrius, IDDLObjectType<SimpleFishPrius> {
 		MaxAccelAngle = ddl.GetValue<float>(0x65ecca32u, MaxAccelAngle);
 	}
 
-	[DDLRegistration(0x9f6b9f13u)]
+	[DDLRegistration(0x35391b1du)]
 	public float MaxDesireSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9f6b9f13u)]
+	[DDLRegistration(0x8c1f806cu)]
 	public float MinDesireSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9f6b9f13u)]
+	[DDLRegistration(0xd7a95501u)]
 	public float ArriveRange { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9f6b9f13u)]
+	[DDLRegistration(0x13b84df2u)]
 	public float MinScale { get; set; } = 0.60f;
 
-	[DDLRegistration(0x9f6b9f13u)]
+	[DDLRegistration(0xf5d8e213u)]
 	public float MaxScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9f6b9f13u)]
+	[DDLRegistration(0x65ecca32u)]
 	public float MaxAccelAngle { get; set; } = 90.00f;
 
 	public new static SimpleFishPrius Create(DDLObject ddl) => new(ddl);

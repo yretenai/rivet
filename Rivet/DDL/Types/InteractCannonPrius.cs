@@ -24,25 +24,25 @@ public class InteractCannonPrius : SlottedInteractObjectPrius, IDDLObjectType<In
 		TargetPosition = ddl.GetValue<RivetAssetId>(0x52222f11u, TargetPosition);
 	}
 
-	[DDLRegistration(0x33ad0b2bu)]
+	[DDLRegistration(0xf2b63172u)]
 	public xbb647502 AimType { get; set; } = xbb647502.Gun;
 
-	[DDLRegistration(0x33ad0b2bu, description: "A fixed speed is used if AimType is kGun")]
+	[DDLRegistration(0x2e3acc4bu, description: "A fixed speed is used if AimType is kGun")]
 	public float ShootSpeed { get; set; } = 30.00f;
 
-	[DDLRegistration(0x33ad0b2bu, description: "How much of a preview to show.  Used if AimType is kGun.")]
+	[DDLRegistration(0x029b0611u, description: "How much of a preview to show.  Used if AimType is kGun.")]
 	public float ArcPreviewTime { get; set; } = 10.00f;
 
-	[DDLRegistration(0x33ad0b2bu)]
+	[DDLRegistration(0x6c3151eau)]
 	public float GravityMagnitude { get; set; } = 10.00f;
 
-	[DDLRegistration(0x33ad0b2bu)]
+	[DDLRegistration(0x205f30fau)]
 	public bool CreateFPCamera { get; set; } = false;
 
-	[DDLRegistration(0x33ad0b2bu)]
+	[DDLRegistration(0xaf168880u)]
 	public x072fd960 FireButton { get; set; } = x072fd960.Jump;
 
-	[DDLRegistration(0x33ad0b2bu, description: "Target helper for automatic aiming.")]
+	[DDLRegistration(0x52222f11u, description: "Target helper for automatic aiming.")]
 	public RivetAssetId TargetPosition { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static InteractCannonPrius Create(DDLObject ddl) => new(ddl);

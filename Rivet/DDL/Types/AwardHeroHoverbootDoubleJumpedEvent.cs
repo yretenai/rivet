@@ -18,7 +18,7 @@ public class AwardHeroHoverbootDoubleJumpedEvent : EventBase, IDDLObjectType<Awa
 		HasTriggeredKickHighSpeedStart = ddl.GetValue<bool>(0xf3c62c86u, HasTriggeredKickHighSpeedStart);
 	}
 
-	[DDLRegistration(0xdaf5dac6u)]
+	[DDLRegistration(0xf3c62c86u)]
 	public bool HasTriggeredKickHighSpeedStart { get; set; } = false;
 
 	public new static AwardHeroHoverbootDoubleJumpedEvent Create(DDLObject ddl) => new(ddl);

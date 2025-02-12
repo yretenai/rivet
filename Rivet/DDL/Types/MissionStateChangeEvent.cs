@@ -19,10 +19,10 @@ public class MissionStateChangeEvent : EventBase, IDDLObjectType<MissionStateCha
 		MissionState = ddl.GetValue<int>(0xd5bb196bu, MissionState);
 	}
 
-	[DDLRegistration(0x0504bf5eu)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x0504bf5eu)]
+	[DDLRegistration(0xd5bb196bu)]
 	public int MissionState { get; set; } = 0;
 
 	public new static MissionStateChangeEvent Create(DDLObject ddl) => new(ddl);

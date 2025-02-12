@@ -19,10 +19,10 @@ public class LevelArea : DDLObjectType, IDDLObjectType<LevelArea> {
 		Regions = ddl.GetObjects<RegionData>(0xa38d1acbu);
 	}
 
-	[DDLRegistration(0x9b09fb33u, description: "Name of this area")]
+	[DDLRegistration(0xdbabcd0eu, description: "Name of this area")]
 	public string? AreaName { get; set; } = default;
 
-	[DDLRegistration(0x9b09fb33u, description: "List of hex regions that comprise this area")]
+	[DDLRegistration(0xa38d1acbu, description: "List of hex regions that comprise this area")]
 	public List<RegionData?> Regions { get; set; } = [];
 
 	public static LevelArea Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class Cinematic2CameraDofFollowActionDef : DDLObjectType, IDDLObjectType<
 		FocusWindowFixedSize = ddl.GetValue<float>(0x00ff3e0eu, FocusWindowFixedSize);
 	}
 
-	[DDLRegistration(0xb40d1887u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb40d1887u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb40d1887u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0xb40d1887u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb40d1887u, description: "ActorId of the actor we wish to follow (it can be empty).")]
+	[DDLRegistration(0x6d367288u, description: "ActorId of the actor we wish to follow (it can be empty).")]
 	public RivetAssetId TargetActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb40d1887u, description: "Locator on the specified actor we wish to follow (it can be empty).")]
+	[DDLRegistration(0x4bd4816eu, description: "Locator on the specified actor we wish to follow (it can be empty).")]
 	public string? TargetLocatorName { get; set; } = "igLoc_head";
 
-	[DDLRegistration(0xb40d1887u, description: "Defines how the focus window(distance between near & far focus planes) should be determined.")]
+	[DDLRegistration(0xb3d9cb4au, description: "Defines how the focus window(distance between near & far focus planes) should be determined.")]
 	public xe542f097 FocusWindowMode { get; set; } = xe542f097.DofFollowBSphere;
 
-	[DDLRegistration(0xb40d1887u, description: "Focus window size to use when in 'Fixed Focus Size' mode")]
+	[DDLRegistration(0x00ff3e0eu, description: "Focus window size to use when in 'Fixed Focus Size' mode")]
 	public float FocusWindowFixedSize { get; set; } = 0.00f;
 
 	public static Cinematic2CameraDofFollowActionDef Create(DDLObject ddl) => new(ddl);

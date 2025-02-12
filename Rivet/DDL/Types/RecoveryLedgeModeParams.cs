@@ -32,49 +32,49 @@ public class RecoveryLedgeModeParams : DDLObjectType, IDDLObjectType<RecoveryLed
 		ClearanceQueryRadius = ddl.GetValue<float>(0x966bf187u, ClearanceQueryRadius);
 	}
 
-	[DDLRegistration(0xdab7ecc4u, description: "Use a sphere cast with this radius to search for ledges.")]
+	[DDLRegistration(0xc5f42ee9u, description: "Use a sphere cast with this radius to search for ledges.")]
 	public float QueryRadius { get; set; } = 1.20f;
 
-	[DDLRegistration(0xdab7ecc4u, description: "Use a sphere cast with this radius to search for the ledge for the right hand.")]
+	[DDLRegistration(0x6e19dbf2u, description: "Use a sphere cast with this radius to search for the ledge for the right hand.")]
 	public float RightHandQueryRadius { get; set; } = 0.15f;
 
-	[DDLRegistration(0xdab7ecc4u, description: "Approx Distance between the hero's right and left hands.")]
+	[DDLRegistration(0x97322319u, description: "Approx Distance between the hero's right and left hands.")]
 	public float DistanceBetweenHands { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdab7ecc4u, description: "Mininum distance between the position of the left hand and the approximate position of the right hand for the ledge to be considered valid.")]
+	[DDLRegistration(0x2a38cddcu, description: "Mininum distance between the position of the left hand and the approximate position of the right hand for the ledge to be considered valid.")]
 	public float MinDistanceBetweenHands { get; set; } = 0.25f;
 
-	[DDLRegistration(0xdab7ecc4u, description: "How behind or in front of the hero that the right hand can be placed. This also affects the max curvature of a surface that can be considered valid.")]
+	[DDLRegistration(0x955aebf8u, description: "How behind or in front of the hero that the right hand can be placed. This also affects the max curvature of a surface that can be considered valid.")]
 	public float RightHandQueryDepth { get; set; } = 0.75f;
 
-	[DDLRegistration(0xdab7ecc4u, description: "When finding potential ledges, allow the ledge position to be at most this distance away from the 'lip'. Higher values make it easier to attach to abnormally-shaped ledges (like natural cliffs), but make the hero more likely to place their hands below the 'lip'.")]
+	[DDLRegistration(0xb76b347fu, description: "When finding potential ledges, allow the ledge position to be at most this distance away from the 'lip'. Higher values make it easier to attach to abnormally-shaped ledges (like natural cliffs), but make the hero more likely to place their hands below the 'lip'.")]
 	public float LedgeOffsetTolerance { get; set; } = 0.08f;
 
-	[DDLRegistration(0xdab7ecc4u, description: "Auto recovery ledges may be at most this far above the hero's position to be valid. (negative values are below the hero)")]
+	[DDLRegistration(0x458df8f3u, description: "Auto recovery ledges may be at most this far above the hero's position to be valid. (negative values are below the hero)")]
 	public float MaxLedgeSearchHeight { get; set; } = 0.80f;
 
-	[DDLRegistration(0xdab7ecc4u, description: "Auto recovery ledges must be at least this far above the hero's position to be valid. (negative values are below the hero)")]
+	[DDLRegistration(0x6cf305ebu, description: "Auto recovery ledges must be at least this far above the hero's position to be valid. (negative values are below the hero)")]
 	public float MinLedgeSearchHeight { get; set; } = -1.50f;
 
-	[DDLRegistration(0xdab7ecc4u, description: "Auto recovery ledges may be at most this far above the hero's last good ground position. (negative values are below the hero)")]
+	[DDLRegistration(0xbec7a5ccu, description: "Auto recovery ledges may be at most this far above the hero's last good ground position. (negative values are below the hero)")]
 	public float MaxHeightAboveLastGround { get; set; } = 3.50f;
 
-	[DDLRegistration(0xdab7ecc4u, description: "The ground above an auto recovery ledge may be sloped by at most this angle. (Or else it'll just look weird with the hands attaching to a cylinder, for instance.)")]
+	[DDLRegistration(0x6317a6fau, description: "The ground above an auto recovery ledge may be sloped by at most this angle. (Or else it'll just look weird with the hands attaching to a cylinder, for instance.)")]
 	public float MaxUpperGroundSlope { get; set; } = 30.00f;
 
-	[DDLRegistration(0xdab7ecc4u)]
+	[DDLRegistration(0x0276531bu)]
 	public RecoveryLedgeLowerClearanceParams? GroundClearance { get; set; } = default;
 
-	[DDLRegistration(0xdab7ecc4u, description: "Includes water, lava, and acid.")]
+	[DDLRegistration(0x677d88d1u, description: "Includes water, lava, and acid.")]
 	public RecoveryLedgeLowerClearanceParams? FluidClearance { get; set; } = default;
 
-	[DDLRegistration(0xdab7ecc4u, description: "How far below the ledge should we offset the wall check. This is to ensure that the wall we will be hanging against isn't good ground.")]
+	[DDLRegistration(0x6a2d4f0fu, description: "How far below the ledge should we offset the wall check. This is to ensure that the wall we will be hanging against isn't good ground.")]
 	public float WallCheckVerticalOffset { get; set; } = 0.50f;
 
-	[DDLRegistration(0xdab7ecc4u, description: "Length of the clearance query above the ledge.")]
+	[DDLRegistration(0x7b005bd8u, description: "Length of the clearance query above the ledge.")]
 	public float UpperClearanceHorizDist { get; set; } = 1.25f;
 
-	[DDLRegistration(0xdab7ecc4u, description: "Use this radius for the clearance queries. Should be slightly smaller than the hero's bounding sphere radius probably.")]
+	[DDLRegistration(0x966bf187u, description: "Use this radius for the clearance queries. Should be slightly smaller than the hero's bounding sphere radius probably.")]
 	public float ClearanceQueryRadius { get; set; } = 0.50f;
 
 	public static RecoveryLedgeModeParams Create(DDLObject ddl) => new(ddl);

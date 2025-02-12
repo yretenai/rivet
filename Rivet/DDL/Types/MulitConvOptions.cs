@@ -18,7 +18,7 @@ public class MulitConvOptions : DDLObjectType, IDDLObjectType<MulitConvOptions> 
 		ConverationConfig = ddl.GetValue<RivetAssetId>(0x5fcfb4acu, ConverationConfig);
 	}
 
-	[DDLRegistration(0xb35d9102u)]
+	[DDLRegistration(0x5fcfb4acu)]
 	public RivetAssetId ConverationConfig { get; set; } = default;
 
 	public static MulitConvOptions Create(DDLObject ddl) => new(ddl);

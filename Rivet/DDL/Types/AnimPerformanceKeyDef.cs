@@ -19,10 +19,10 @@ public class AnimPerformanceKeyDef : DDLObjectType, IDDLObjectType<AnimPerforman
 		Weight = ddl.GetValue<float>(0x39b51b26u, Weight);
 	}
 
-	[DDLRegistration(0xde219e70u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xde219e70u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 0.00f;
 
 	public static AnimPerformanceKeyDef Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class OnLookAtActorByAngleActionPrius : DDLObjectType, IDDLObjectType<OnL
 		PercentVisible = ddl.GetValue<float>(0xd803b9eau, PercentVisible);
 	}
 
-	[DDLRegistration(0xe049c33du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0xe049c33du, "Start Active", "Start node as active")]
+	[DDLRegistration(0x3e035e82u, "Start Active", "Start node as active")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0xe049c33du, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0xe049c33du, "Max Distance", "Maximum distance actor can be at to be looked at.")]
+	[DDLRegistration(0x88831235u, "Max Distance", "Maximum distance actor can be at to be looked at.")]
 	public float MaxDistance { get; set; } = 1000.00f;
 
-	[DDLRegistration(0xe049c33du, "Should Be Visible?", "Object must be rendered to be considered a valid look at target.")]
+	[DDLRegistration(0x2b3b203fu, "Should Be Visible?", "Object must be rendered to be considered a valid look at target.")]
 	public bool ShouldBeVisible { get; set; } = true;
 
-	[DDLRegistration(0xe049c33du, "Percent Visible", "How much of the object must be rendered to be a valid look at target; applies only if Should Be Visible is used. Default = 50%.  May not want 100% if part of the object is embedded in another object.")]
+	[DDLRegistration(0xd803b9eau, "Percent Visible", "How much of the object must be rendered to be a valid look at target; applies only if Should Be Visible is used. Default = 50%.  May not want 100% if part of the object is embedded in another object.")]
 	public float PercentVisible { get; set; } = 0.50f;
 
 	public static OnLookAtActorByAngleActionPrius Create(DDLObject ddl) => new(ddl);

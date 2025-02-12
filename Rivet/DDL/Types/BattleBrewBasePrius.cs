@@ -20,13 +20,13 @@ public class BattleBrewBasePrius : StatusEffectBasePrius, IDDLObjectType<BattleB
 		DelayBeforeActivation = ddl.GetValue<float>(0xf7135b06u, DelayBeforeActivation);
 	}
 
-	[DDLRegistration(0x25c77588u)]
+	[DDLRegistration(0xb3f16e63u)]
 	public float ActivationDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x25c77588u)]
+	[DDLRegistration(0x34dbe9f0u)]
 	public float DeactivationWarningDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x25c77588u)]
+	[DDLRegistration(0xf7135b06u)]
 	public float DelayBeforeActivation { get; set; } = 0.00f;
 
 	public new static BattleBrewBasePrius Create(DDLObject ddl) => new(ddl);

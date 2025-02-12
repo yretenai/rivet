@@ -18,7 +18,7 @@ public class PreviewModelContainer : DDLObjectType, IDDLObjectType<PreviewModelC
 		PreviewModel = ddl.GetObject<PreviewModel>(0x5e53ae29u);
 	}
 
-	[DDLRegistration(0x167621fdu)]
+	[DDLRegistration(0x5e53ae29u)]
 	public PreviewModel? PreviewModel { get; set; } = default;
 
 	public static PreviewModelContainer Create(DDLObject ddl) => new(ddl);

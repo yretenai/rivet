@@ -18,7 +18,7 @@ public class ShipHitCollisionEvent : EventBase, IDDLObjectType<ShipHitCollisionE
 		HitActorHandle = ddl.GetValue<uint>(0x47c66f9du, HitActorHandle);
 	}
 
-	[DDLRegistration(0xad3a2c5eu)]
+	[DDLRegistration(0x47c66f9du)]
 	public uint HitActorHandle { get; set; } = 0x00000000;
 
 	public new static ShipHitCollisionEvent Create(DDLObject ddl) => new(ddl);

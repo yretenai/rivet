@@ -18,7 +18,7 @@ public class NoPortalRespawnSystemVolumePrius : DDLObjectType, IDDLObjectType<No
 		CanLavaBounce = ddl.GetValue<bool>(0x8e53729du, CanLavaBounce);
 	}
 
-	[DDLRegistration(0x3523b7eeu, description: "Whether the hero can perform a lava bounce when they fall into acid or lava while in this volume.")]
+	[DDLRegistration(0x8e53729du, description: "Whether the hero can perform a lava bounce when they fall into acid or lava while in this volume.")]
 	public bool CanLavaBounce { get; set; } = false;
 
 	public static NoPortalRespawnSystemVolumePrius Create(DDLObject ddl) => new(ddl);

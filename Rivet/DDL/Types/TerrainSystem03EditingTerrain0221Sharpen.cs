@@ -23,22 +23,22 @@ public class TerrainSystem03EditingTerrain0221Sharpen : DDLObjectType, IDDLObjec
 		Line05 = ddl.GetString(0x7f124bc4) ?? Line05;
 	}
 
-	[DDLRegistration(0x844ab414u, description: "This brush will sharpen the heightfield or splatmask.  When sharpening a,")]
+	[DDLRegistration(0x0f78bf4bu, description: "This brush will sharpen the heightfield or splatmask.  When sharpening a,")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x844ab414u, description: "heightfield, heights lower than the clicked point will be decreased and")]
+	[DDLRegistration(0x787f8fddu, description: "heightfield, heights lower than the clicked point will be decreased and")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x844ab414u, description: "heights greater than the clicked point will be increased, thus making the")]
+	[DDLRegistration(0xe176de67u, description: "heights greater than the clicked point will be increased, thus making the")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x844ab414u, description: "heightfield more 'pointy'.  When sharpening a splatmask, the sharpen function")]
+	[DDLRegistration(0x9671eef1u, description: "heightfield more 'pointy'.  When sharpening a splatmask, the sharpen function")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x844ab414u, description: "is much more similar to something found in a DCC paint tool; it uses the")]
+	[DDLRegistration(0x08157b52u, description: "is much more similar to something found in a DCC paint tool; it uses the")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x844ab414u, description: "function 'saturate( lerp( 0.5 - contrast, 0.5 + contrast, color )'.")]
+	[DDLRegistration(0x7f124bc4u, description: "function 'saturate( lerp( 0.5 - contrast, 0.5 + contrast, color )'.")]
 	public string? Line05 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0221Sharpen Create(DDLObject ddl) => new(ddl);

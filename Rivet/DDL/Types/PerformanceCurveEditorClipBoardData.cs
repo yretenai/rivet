@@ -20,13 +20,13 @@ public class PerformanceCurveEditorClipBoardData : DDLObjectType, IDDLObjectType
 		Value = ddl.GetObjects<PerformanceCurveEditorClipBoardValue>(0x042494f5u);
 	}
 
-	[DDLRegistration(0xa3de5644u)]
+	[DDLRegistration(0x02d31803u)]
 	public string? ClipboardType { get; set; } = default;
 
-	[DDLRegistration(0xa3de5644u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0xa3de5644u)]
+	[DDLRegistration(0x042494f5u)]
 	public List<PerformanceCurveEditorClipBoardValue?> Value { get; set; } = [];
 
 	public static PerformanceCurveEditorClipBoardData Create(DDLObject ddl) => new(ddl);

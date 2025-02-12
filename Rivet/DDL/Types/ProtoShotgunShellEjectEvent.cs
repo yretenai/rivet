@@ -18,7 +18,7 @@ public class ProtoShotgunShellEjectEvent : EventBase, IDDLObjectType<ProtoShotgu
 		NumShells = ddl.GetValue<uint>(0x90ad14c8u, NumShells);
 	}
 
-	[DDLRegistration(0xae6a3b1bu, description: "The total number of shells to eject, distributed one per barrel.")]
+	[DDLRegistration(0x90ad14c8u, description: "The total number of shells to eject, distributed one per barrel.")]
 	public uint NumShells { get; set; } = 0x00000001;
 
 	public new static ProtoShotgunShellEjectEvent Create(DDLObject ddl) => new(ddl);

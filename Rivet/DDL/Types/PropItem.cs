@@ -19,10 +19,10 @@ public class PropItem : DDLObjectType, IDDLObjectType<PropItem> {
 		PropAsset = ddl.GetValue<RivetAssetId>(0x09b26d12u, PropAsset);
 	}
 
-	[DDLRegistration(0xd6993af7u, "Prop Name")]
+	[DDLRegistration(0x97a161efu, "Prop Name")]
 	public string? PropName { get; set; } = default;
 
-	[DDLRegistration(0xd6993af7u, "Prop Asset")]
+	[DDLRegistration(0x09b26d12u, "Prop Asset")]
 	public RivetAssetId PropAsset { get; set; } = default;
 
 	public static PropItem Create(DDLObject ddl) => new(ddl);

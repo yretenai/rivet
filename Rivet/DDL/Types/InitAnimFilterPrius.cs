@@ -18,7 +18,7 @@ public class InitAnimFilterPrius : DDLObjectType, IDDLObjectType<InitAnimFilterP
 		FilterList = ddl.GetObjects<InitAnimFilterElement>(0x95739137u);
 	}
 
-	[DDLRegistration(0x2fc42423u)]
+	[DDLRegistration(0x95739137u)]
 	public List<InitAnimFilterElement?> FilterList { get; set; } = [];
 
 	public static InitAnimFilterPrius Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class SpawnShotElement : DDLObjectType, IDDLObjectType<SpawnShotElement> 
 		MaxShotsPerSecond = ddl.GetValue<float>(0x2869baebu, MaxShotsPerSecond);
 	}
 
-	[DDLRegistration(0xd14a5022u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0xd14a5022u, description: "This is a SpawnedShotConfig.")]
+	[DDLRegistration(0xb171e6aeu, description: "This is a SpawnedShotConfig.")]
 	public RivetAssetId ShotConfig { get; set; } = default;
 
-	[DDLRegistration(0xd14a5022u, description: "This is a SpawnedShotEmitterConfig")]
+	[DDLRegistration(0x6d405b0eu, description: "This is a SpawnedShotEmitterConfig")]
 	public RivetAssetId EmitterConfig { get; set; } = default;
 
-	[DDLRegistration(0xd14a5022u, description: "This is a SpawnedShotTargetingConfig")]
+	[DDLRegistration(0x08dd2ddeu, description: "This is a SpawnedShotTargetingConfig")]
 	public RivetAssetId TargetingConfig { get; set; } = default;
 
-	[DDLRegistration(0xd14a5022u, description: "If this attack will be triggered with ShotSpawnerAutomaticFireStartEvent, this is the number of shots to fire per second.")]
+	[DDLRegistration(0x2869baebu, description: "If this attack will be triggered with ShotSpawnerAutomaticFireStartEvent, this is the number of shots to fire per second.")]
 	public float MaxShotsPerSecond { get; set; } = 10.00f;
 
 	public static SpawnShotElement Create(DDLObject ddl) => new(ddl);

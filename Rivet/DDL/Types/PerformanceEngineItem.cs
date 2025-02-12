@@ -34,55 +34,55 @@ public class PerformanceEngineItem : DDLObjectType, IDDLObjectType<PerformanceEn
 		Time = ddl.GetValue<double>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0x0b92d34fu)]
 	public AnimPerformanceClipDef? ActivePerformanceClipDef { get; set; } = default;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0xd933bd4au)]
 	public string? ActivePerformanceClipGroupPath { get; set; } = default;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0x05873f7fu)]
 	public string? ActivePerformanceClipPath { get; set; } = default;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0x5d0f513cu)]
 	public List<string?> AnimSetStack { get; set; } = [];
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0x55e4c38fu)]
 	public RivetAssetId BodyId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0x9def3859u)]
 	public RivetAssetId HeadId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0xde20145au)]
 	public AnimPerformanceSetDef? PerformanceSetDef { get; set; } = default;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0xa09e267cu)]
 	public string? PreviewAnimDriverName { get; set; } = default;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0xc64b0fa8u)]
 	public DDLMatrix4? Matrix { get; set; } = default;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0xd21350dau)]
 	public bool Playing { get; set; } = false;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0xf32678e9u)]
 	public bool RequestPlay { get; set; } = false;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0xf757d288u)]
 	public bool RequestPause { get; set; } = false;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0xc23b3e16u)]
 	public double RequestTime { get; set; } = 0;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0x40f112b1u)]
 	public x5907f033 ShowAnimControllerHud { get; set; } = x5907f033.None;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0x2266257au)]
 	public bool ShowAnimDebugHud { get; set; } = false;
 
-	[DDLRegistration(0x0cc1e1d2u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public double Time { get; set; } = 0;
 
 	public static PerformanceEngineItem Create(DDLObject ddl) => new(ddl);

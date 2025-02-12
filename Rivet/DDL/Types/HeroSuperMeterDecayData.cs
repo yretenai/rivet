@@ -19,10 +19,10 @@ public class HeroSuperMeterDecayData : DDLObjectType, IDDLObjectType<HeroSuperMe
 		Delay = ddl.GetValue<float>(0xabc94c5au, Delay);
 	}
 
-	[DDLRegistration(0x2cd00fd8u, description: "How many points are lost per second when this decay is active.")]
+	[DDLRegistration(0xef7cff89u, description: "How many points are lost per second when this decay is active.")]
 	public float Rate { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2cd00fd8u, description: "How long we must be in this state to begin this decay.")]
+	[DDLRegistration(0xabc94c5au, description: "How long we must be in this state to begin this decay.")]
 	public float Delay { get; set; } = -1.00f;
 
 	public static HeroSuperMeterDecayData Create(DDLObject ddl) => new(ddl);

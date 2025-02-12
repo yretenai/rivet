@@ -22,19 +22,19 @@ public class HazardLaserNodePrius : DDLObjectType, IDDLObjectType<HazardLaserNod
 		TimeOffset = ddl.GetValue<float>(0x4ada9c3fu, TimeOffset);
 	}
 
-	[DDLRegistration(0xbc2ab514u, description: "Move along this path instead")]
+	[DDLRegistration(0x3bc44bbfu, description: "Move along this path instead")]
 	public RivetAssetId Path { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xbc2ab514u, description: "SpeedMax")]
+	[DDLRegistration(0xb6419fbau, description: "SpeedMax")]
 	public float SpeedMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbc2ab514u, description: "SpeedAccel")]
+	[DDLRegistration(0x5d9ea52cu, description: "SpeedAccel")]
 	public float SpeedAccel { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbc2ab514u, description: "PauseTime")]
+	[DDLRegistration(0x04c078ebu, description: "PauseTime")]
 	public float PauseTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbc2ab514u, description: "TimeOffset")]
+	[DDLRegistration(0x4ada9c3fu, description: "TimeOffset")]
 	public float TimeOffset { get; set; } = 0.00f;
 
 	public static HazardLaserNodePrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class AwarenessLevelChangedEvent : EventBase, IDDLObjectType<AwarenessLev
 		AwarenessEnum = ddl.GetValue<byte>(0x664bfdc9u, AwarenessEnum);
 	}
 
-	[DDLRegistration(0x4f2671afu)]
+	[DDLRegistration(0x3a2cc0bbu)]
 	public float TimeInPreviousAwareness { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4f2671afu)]
+	[DDLRegistration(0x84e3d5d1u)]
 	public byte PreviousAwarenessEnum { get; set; } = 0x00;
 
-	[DDLRegistration(0x4f2671afu)]
+	[DDLRegistration(0x664bfdc9u)]
 	public byte AwarenessEnum { get; set; } = 0x00;
 
 	public new static AwarenessLevelChangedEvent Create(DDLObject ddl) => new(ddl);

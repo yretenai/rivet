@@ -21,16 +21,16 @@ public class ClosestPointOnNavDeferredActionPrius : DDLObjectType, IDDLObjectTyp
 		ExcludeFlags = ddl.GetBitset<xd0e37317>(0x035a6bcau, xd0e37317Values.Lookup);
 	}
 
-	[DDLRegistration(0xe50a1725u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Nav;
 
-	[DDLRegistration(0xe50a1725u)]
+	[DDLRegistration(0xff9d6565u)]
 	public xdcbe36a2 NavType { get; set; } = xdcbe36a2.MeshStandard;
 
-	[DDLRegistration(0xe50a1725u)]
+	[DDLRegistration(0x401328c3u)]
 	public xd0e37317 IncludeFlags { get; set; } = (xd0e37317) 0x00000001;
 
-	[DDLRegistration(0xe50a1725u)]
+	[DDLRegistration(0x035a6bcau)]
 	public xd0e37317 ExcludeFlags { get; set; } = (xd0e37317) 0x00000000;
 
 	public static ClosestPointOnNavDeferredActionPrius Create(DDLObject ddl) => new(ddl);

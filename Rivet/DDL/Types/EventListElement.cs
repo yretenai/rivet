@@ -19,10 +19,10 @@ public class EventListElement : DDLObjectType, IDDLObjectType<EventListElement> 
 		PlayOnce = ddl.GetValue<bool>(0xba3988abu, PlayOnce);
 	}
 
-	[DDLRegistration(0x122f1f48u, "Output Event")]
+	[DDLRegistration(0x26a6adb9u, "Output Event")]
 	public EventBase? OutputEvent { get; set; } = default;
 
-	[DDLRegistration(0x122f1f48u, description: "Fire this event only once.")]
+	[DDLRegistration(0xba3988abu, description: "Fire this event only once.")]
 	public bool PlayOnce { get; set; } = false;
 
 	public static EventListElement Create(DDLObject ddl) => new(ddl);

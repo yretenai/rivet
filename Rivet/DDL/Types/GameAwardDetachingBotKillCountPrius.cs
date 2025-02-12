@@ -18,7 +18,7 @@ public class GameAwardDetachingBotKillCountPrius : AwardBasePrius, IDDLObjectTyp
 		DetachingBotAsset = ddl.GetObject<ActorAssetReferenceDef>(0x9ca4cdc0u);
 	}
 
-	[DDLRegistration(0x887e889bu, "Detaching Bot Actor", "Reference to asset for killed detaching bot actor")]
+	[DDLRegistration(0x9ca4cdc0u, "Detaching Bot Actor", "Reference to asset for killed detaching bot actor")]
 	public ActorAssetReferenceDef? DetachingBotAsset { get; set; } = default;
 
 	public new static GameAwardDetachingBotKillCountPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class BotRelativeAnimInvulnerableEvent : EventBase, IDDLObjectType<BotRel
 		SetInvulnerable = ddl.GetValue<bool>(0xe49e46adu, SetInvulnerable);
 	}
 
-	[DDLRegistration(0x44bc3a7au)]
+	[DDLRegistration(0xe49e46adu)]
 	public bool SetInvulnerable { get; set; } = true;
 
 	public new static BotRelativeAnimInvulnerableEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MapDataConfig : ConfigBase, IDDLObjectType<MapDataConfig> {
 		LevelData = ddl.GetObjects<MapElementTypeArray>(0xe16e3538u);
 	}
 
-	[DDLRegistration(0x8f710d4cu)]
+	[DDLRegistration(0xe16e3538u)]
 	public List<MapElementTypeArray?> LevelData { get; set; } = [];
 
 	public new static MapDataConfig Create(DDLObject ddl) => new(ddl);

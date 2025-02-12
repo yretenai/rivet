@@ -22,19 +22,19 @@ public class FastLoadComponentSimplePrius : DDLObjectType, IDDLObjectType<FastLo
 		Foxtrot = ddl.GetValue<int>(0x42c59aa0u, Foxtrot);
 	}
 
-	[DDLRegistration(0x7bd817f0u)]
+	[DDLRegistration(0xc9b3f5abu)]
 	public uint Alpha { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7bd817f0u)]
+	[DDLRegistration(0x10c87448u)]
 	public bool Bravo { get; set; } = false;
 
-	[DDLRegistration(0x7bd817f0u)]
+	[DDLRegistration(0xded4afe3u)]
 	public List<int> Charlies { get; set; } = [];
 
-	[DDLRegistration(0x7bd817f0u)]
+	[DDLRegistration(0x2794f082u)]
 	public RivetAssetId Echo { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x7bd817f0u)]
+	[DDLRegistration(0x42c59aa0u)]
 	public int Foxtrot { get; set; } = 0;
 
 	public static FastLoadComponentSimplePrius Create(DDLObject ddl) => new(ddl);

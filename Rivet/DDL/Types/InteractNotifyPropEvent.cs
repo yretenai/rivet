@@ -18,7 +18,7 @@ public class InteractNotifyPropEvent : EventBase, IDDLObjectType<InteractNotifyP
 		InteractHandle = ddl.GetValue<uint>(0x8bbbb97bu, InteractHandle);
 	}
 
-	[DDLRegistration(0x1d5722afu)]
+	[DDLRegistration(0x8bbbb97bu)]
 	public uint InteractHandle { get; set; } = 0x00000000;
 
 	public new static InteractNotifyPropEvent Create(DDLObject ddl) => new(ddl);

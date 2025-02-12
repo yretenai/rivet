@@ -19,10 +19,10 @@ public class HealthPackSpawnData : ActorSpawnData, IDDLObjectType<HealthPackSpaw
 		ActorAsset = ddl.GetValue<RivetAssetId>(0x75356989u, ActorAsset);
 	}
 
-	[DDLRegistration(0xf94f302au)]
+	[DDLRegistration(0xd86fe14cu)]
 	public DDLVector3? SpawnPosition { get; set; } = default;
 
-	[DDLRegistration(0xf94f302au, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0x75356989u, description: "AssetId for the asset we're spawning")]
 	public RivetAssetId ActorAsset { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static HealthPackSpawnData Create(DDLObject ddl) => new(ddl);

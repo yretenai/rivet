@@ -27,34 +27,34 @@ public class RobotestLookState : DDLObjectType, IDDLObjectType<RobotestLookState
 		ActiveClothJointsRemap = ddl.GetValues<ushort>(0xa2a1dad2u);
 	}
 
-	[DDLRegistration(0x6f1438b6u, description: "Info on all looks on this model.")]
+	[DDLRegistration(0x69a18facu, description: "Info on all looks on this model.")]
 	public List<RobotestLookId?> LookIds { get; set; } = [];
 
-	[DDLRegistration(0x6f1438b6u, description: "List of currently active Looks. Each element is an index into LookIds")]
+	[DDLRegistration(0x79df49b5u, description: "List of currently active Looks. Each element is an index into LookIds")]
 	public List<ushort> EnabledLooks { get; set; } = [];
 
-	[DDLRegistration(0x6f1438b6u, description: "List of currently inactive Looks. Each element is an index into LookIds")]
+	[DDLRegistration(0x5fab67c8u, description: "List of currently inactive Looks. Each element is an index into LookIds")]
 	public List<ushort> DisabledLooks { get; set; } = [];
 
-	[DDLRegistration(0x6f1438b6u, description: "Info on all looks on this model.")]
+	[DDLRegistration(0xb6c4ab29u, description: "Info on all looks on this model.")]
 	public List<RobotestLookId?> LookGroups { get; set; } = [];
 
-	[DDLRegistration(0x6f1438b6u, description: "List of currently active Looks. Each element is an index into LookIds")]
+	[DDLRegistration(0x8da6c2ebu, description: "List of currently active Looks. Each element is an index into LookIds")]
 	public List<ushort> EnabledLookGroups { get; set; } = [];
 
-	[DDLRegistration(0x6f1438b6u, description: "Per-LOD information")]
+	[DDLRegistration(0x46fb376du, description: "Per-LOD information")]
 	public List<RobotestLookLOD?> LODs { get; set; } = [];
 
-	[DDLRegistration(0x6f1438b6u, description: "Indexes of active joint spheres.")]
+	[DDLRegistration(0x92ca2d75u, description: "Indexes of active joint spheres.")]
 	public List<ushort> ActiveJointBspheresRemap { get; set; } = [];
 
-	[DDLRegistration(0x6f1438b6u)]
+	[DDLRegistration(0xefcbb882u)]
 	public List<ushort> ActiveRigidBodyRemap { get; set; } = [];
 
-	[DDLRegistration(0x6f1438b6u)]
+	[DDLRegistration(0xe1de9ca7u)]
 	public List<ushort> ActiveClothRemap { get; set; } = [];
 
-	[DDLRegistration(0x6f1438b6u)]
+	[DDLRegistration(0xa2a1dad2u)]
 	public List<ushort> ActiveClothJointsRemap { get; set; } = [];
 
 	public static RobotestLookState Create(DDLObject ddl) => new(ddl);

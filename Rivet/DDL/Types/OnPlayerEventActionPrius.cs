@@ -20,13 +20,13 @@ public class OnPlayerEventActionPrius : DDLObjectType, IDDLObjectType<OnPlayerEv
 		SignalMax = ddl.GetValue<sbyte>(0x9149785eu, SignalMax);
 	}
 
-	[DDLRegistration(0x644fb80cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Player;
 
-	[DDLRegistration(0x644fb80cu, "Init listening?", "Whether to start listening on load.")]
+	[DDLRegistration(0xf387b27au, "Init listening?", "Whether to start listening on load.")]
 	public bool InitListening { get; set; } = false;
 
-	[DDLRegistration(0x644fb80cu, "Max Times to Fire", "The maximum number of times this script node will fire (-1 for infinite)")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The maximum number of times this script node will fire (-1 for infinite)")]
 	public sbyte SignalMax { get; set; } = 1;
 
 	public static OnPlayerEventActionPrius Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class TendrilControllerSpawnData : ActorSpawnData, IDDLObjectType<Tendril
 		TendrilCount = ddl.GetValue<byte>(0x7d6256f4u, TendrilCount);
 	}
 
-	[DDLRegistration(0xdc3cc11eu)]
+	[DDLRegistration(0x46e92197u)]
 	public DDLVector3? StartPos { get; set; } = default;
 
-	[DDLRegistration(0xdc3cc11eu)]
+	[DDLRegistration(0x0f2b0b75u)]
 	public DDLVector3? BiasDir { get; set; } = default;
 
-	[DDLRegistration(0xdc3cc11eu)]
+	[DDLRegistration(0x24febd9au)]
 	public float MinAngleFromBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdc3cc11eu)]
+	[DDLRegistration(0x750706c7u)]
 	public float MaxAngleFromBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdc3cc11eu)]
+	[DDLRegistration(0xd533c312u)]
 	public float DamagePerTendril { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdc3cc11eu)]
+	[DDLRegistration(0xe72b6cf8u)]
 	public float TargetingRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdc3cc11eu)]
+	[DDLRegistration(0x65d7dac2u)]
 	public uint DamageRequestFlags { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdc3cc11eu)]
+	[DDLRegistration(0xd6332abdu)]
 	public uint Owner { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdc3cc11eu)]
+	[DDLRegistration(0xc72a9f26u)]
 	public uint RandSeed { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdc3cc11eu)]
+	[DDLRegistration(0x7d6256f4u)]
 	public byte TendrilCount { get; set; } = 0x00;
 
 	public new static TendrilControllerSpawnData Create(DDLObject ddl) => new(ddl);

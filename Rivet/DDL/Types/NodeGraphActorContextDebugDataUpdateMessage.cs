@@ -19,10 +19,10 @@ public class NodeGraphActorContextDebugDataUpdateMessage : DDLObjectType, IDDLOb
 		Data = ddl.GetString(0x9d6333d3) ?? Data;
 	}
 
-	[DDLRegistration(0x6ec0d7f3u)]
+	[DDLRegistration(0x8a514a8du)]
 	public uint Id { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x6ec0d7f3u)]
+	[DDLRegistration(0x9d6333d3u)]
 	public string? Data { get; set; } = default;
 
 	public static NodeGraphActorContextDebugDataUpdateMessage Create(DDLObject ddl) => new(ddl);

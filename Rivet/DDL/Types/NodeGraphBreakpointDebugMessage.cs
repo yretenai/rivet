@@ -19,10 +19,10 @@ public class NodeGraphBreakpointDebugMessage : DDLObjectType, IDDLObjectType<Nod
 		NodeId = ddl.GetValue<RivetAssetId>(0x371a59e0u, NodeId);
 	}
 
-	[DDLRegistration(0xf2439c56u)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf2439c56u)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static NodeGraphBreakpointDebugMessage Create(DDLObject ddl) => new(ddl);

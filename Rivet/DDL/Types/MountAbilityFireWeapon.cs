@@ -24,25 +24,25 @@ public class MountAbilityFireWeapon : MountAbilityBase, IDDLObjectType<MountAbil
 		IDString = ddl.GetString(0xc8139edf) ?? IDString;
 	}
 
-	[DDLRegistration(0x93b799f7u, "Equip Index")]
+	[DDLRegistration(0x9e860af6u, "Equip Index")]
 	public uint EquipIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x93b799f7u, "Trigger Index")]
+	[DDLRegistration(0xee73b5b3u, "Trigger Index")]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x93b799f7u, description: "Forwards offset of the reticle with respect to the camera while mounted.")]
+	[DDLRegistration(0xb185aa3au, description: "Forwards offset of the reticle with respect to the camera while mounted.")]
 	public float ReticleForwardOffsetFromCamera { get; set; } = 6.00f;
 
-	[DDLRegistration(0x93b799f7u, description: "Upwards offset of the reticle with respect to the camera while mounted.")]
+	[DDLRegistration(0x303a78e4u, description: "Upwards offset of the reticle with respect to the camera while mounted.")]
 	public float ReticleUpOffsetFromCamera { get; set; } = 0.00f;
 
-	[DDLRegistration(0x93b799f7u, "Reticle Test Dist")]
+	[DDLRegistration(0x203fce7fu, "Reticle Test Dist")]
 	public float ReticleTestDist { get; set; } = 50.00f;
 
-	[DDLRegistration(0x93b799f7u)]
+	[DDLRegistration(0x29e337fcu)]
 	public bool ReticleOn { get; set; } = true;
 
-	[DDLRegistration(0x93b799f7u)]
+	[DDLRegistration(0xc8139edfu)]
 	public string? IDString { get; set; } = default;
 
 	public new static MountAbilityFireWeapon Create(DDLObject ddl) => new(ddl);

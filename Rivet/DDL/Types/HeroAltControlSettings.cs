@@ -22,19 +22,19 @@ public class HeroAltControlSettings : DDLObjectType, IDDLObjectType<HeroAltContr
 		FlyerCameraResponsivenessOption = ddl.GetEnum<x8b42b541>(0x2cb69e5fu, x8b42b541Values.Lookup);
 	}
 
-	[DDLRegistration(0x948b6296u, description: "Allow pressing X after a double jump to air dash.")]
+	[DDLRegistration(0xa7b92c93u, description: "Allow pressing X after a double jump to air dash.")]
 	public bool JumpToAirDash { get; set; } = false;
 
-	[DDLRegistration(0x948b6296u, description: "Allows for different rift tether activation angles when the player is in combat.")]
+	[DDLRegistration(0x8543519au, description: "Allows for different rift tether activation angles when the player is in combat.")]
 	public bool RiftTetherCombatTargeting { get; set; } = true;
 
-	[DDLRegistration(0x948b6296u, "Hoverboot Input Mode", "Options for alternate hoverboot inputs.")]
+	[DDLRegistration(0x663bd5e0u, "Hoverboot Input Mode", "Options for alternate hoverboot inputs.")]
 	public x47a6f45d HoverbootInputMode { get; set; } = x47a6f45d.L2_Kick;
 
-	[DDLRegistration(0x948b6296u, "Hoverboot No Kick Input Grace Period", "If hoverboot kick control is the same as the hoverboot control (R1 and R1), wait this long with no input before leaving the hoverboot state. (seconds)")]
+	[DDLRegistration(0xc922da4cu, "Hoverboot No Kick Input Grace Period", "If hoverboot kick control is the same as the hoverboot control (R1 and R1), wait this long with no input before leaving the hoverboot state. (seconds)")]
 	public float HoverbootNoKickInputGracePeriod { get; set; } = 0.35f;
 
-	[DDLRegistration(0x948b6296u)]
+	[DDLRegistration(0x2cb69e5fu)]
 	public x8b42b541 FlyerCameraResponsivenessOption { get; set; } = x8b42b541.Slow;
 
 	public static HeroAltControlSettings Create(DDLObject ddl) => new(ddl);

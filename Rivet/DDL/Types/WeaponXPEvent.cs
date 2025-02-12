@@ -23,22 +23,22 @@ public class WeaponXPEvent : EventBase, IDDLObjectType<WeaponXPEvent> {
 		PlayerPosInfo = ddl.GetObject<DevstatsPlayerPositionInfo>(0xeadcc3e4u);
 	}
 
-	[DDLRegistration(0x462a88d6u, "Weapon Name", "Name of the weapon that received XP.")]
+	[DDLRegistration(0xca0166ccu, "Weapon Name", "Name of the weapon that received XP.")]
 	public string? WeaponName { get; set; } = default;
 
-	[DDLRegistration(0x462a88d6u, "Amount by Reason", "How much xp was gained broken down by reason.")]
+	[DDLRegistration(0xf3a28b3fu, "Amount by Reason", "How much xp was gained broken down by reason.")]
 	public string? AmountByReason { get; set; } = default;
 
-	[DDLRegistration(0x462a88d6u, "Amount", "How much total XP a weapon was given regardless of reason.")]
+	[DDLRegistration(0xb0d93e25u, "Amount", "How much total XP a weapon was given regardless of reason.")]
 	public uint Amount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x462a88d6u, "Career Amount", "Total amount of XP the weapon has after this award.")]
+	[DDLRegistration(0x49b623abu, "Career Amount", "Total amount of XP the weapon has after this award.")]
 	public uint CareerAmount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x462a88d6u, "Primary Segment", "What mission/objective the hero was on when they leveled up.")]
+	[DDLRegistration(0x9e8725dbu, "Primary Segment", "What mission/objective the hero was on when they leveled up.")]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
-	[DDLRegistration(0x462a88d6u, "Player Pos", "Where the player was when they leveled up.")]
+	[DDLRegistration(0xeadcc3e4u, "Player Pos", "Where the player was when they leveled up.")]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
 	public new static WeaponXPEvent Create(DDLObject ddl) => new(ddl);

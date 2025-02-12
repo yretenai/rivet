@@ -21,16 +21,16 @@ public class SpaceshipPaintManagerPrius : DDLObjectType, IDDLObjectType<Spaceshi
 		FlamesModel = ddl.GetValue<RivetAssetId>(0x1159ced2u, FlamesModel);
 	}
 
-	[DDLRegistration(0xe21f891cu)]
+	[DDLRegistration(0x7e7da465u)]
 	public RivetAssetId OriginalModel { get; set; } = default;
 
-	[DDLRegistration(0xe21f891cu)]
+	[DDLRegistration(0x43a333b6u)]
 	public RivetAssetId BlackModel { get; set; } = default;
 
-	[DDLRegistration(0xe21f891cu)]
+	[DDLRegistration(0x58ed14c2u)]
 	public RivetAssetId ChromeModel { get; set; } = default;
 
-	[DDLRegistration(0xe21f891cu)]
+	[DDLRegistration(0x1159ced2u)]
 	public RivetAssetId FlamesModel { get; set; } = default;
 
 	public static SpaceshipPaintManagerPrius Create(DDLObject ddl) => new(ddl);

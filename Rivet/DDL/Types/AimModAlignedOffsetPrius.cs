@@ -22,19 +22,19 @@ public class AimModAlignedOffsetPrius : AimModifierPrius, IDDLObjectType<AimModA
 		ClampFrontOffset = ddl.GetValue<float>(0xbb0fd0e4u, ClampFrontOffset);
 	}
 
-	[DDLRegistration(0xa23e5382u, description: "forward/positive number is offset from the SOURCE to TARGET")]
+	[DDLRegistration(0x20856b16u, description: "forward/positive number is offset from the SOURCE to TARGET")]
 	public float OffsetAmountForward { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa23e5382u, description: "left/positive number is left defined from forward used in OffsetForward")]
+	[DDLRegistration(0x5985dd1cu, description: "left/positive number is left defined from forward used in OffsetForward")]
 	public float OffsetAmountLeft { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa23e5382u, description: "Up/positive number is up defined from forward used in OffsetForward")]
+	[DDLRegistration(0x159cb33fu, description: "Up/positive number is up defined from forward used in OffsetForward")]
 	public float OffsetAmountUp { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa23e5382u, description: "if the offset aim position is not in front of shooter, clamp it")]
+	[DDLRegistration(0x523adf77u, description: "if the offset aim position is not in front of shooter, clamp it")]
 	public bool ClampToFrontOfShooter { get; set; } = false;
 
-	[DDLRegistration(0xa23e5382u, description: "How far in front of shooter to clamp the aim pos")]
+	[DDLRegistration(0xbb0fd0e4u, description: "How far in front of shooter to clamp the aim pos")]
 	public float ClampFrontOffset { get; set; } = 2.00f;
 
 	public new static AimModAlignedOffsetPrius Create(DDLObject ddl) => new(ddl);

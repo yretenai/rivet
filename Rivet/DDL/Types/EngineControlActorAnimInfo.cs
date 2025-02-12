@@ -21,16 +21,16 @@ public class EngineControlActorAnimInfo : DDLObjectType, IDDLObjectType<EngineCo
 		AnimPlaying = ddl.GetValue<bool>(0x8229ca99u, AnimPlaying);
 	}
 
-	[DDLRegistration(0xcfe566cdu)]
+	[DDLRegistration(0x13d5b73du)]
 	public float AnimationDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcfe566cdu)]
+	[DDLRegistration(0x61e5a0d8u)]
 	public float AnimationTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcfe566cdu)]
+	[DDLRegistration(0xe71bdc47u)]
 	public Dictionary<int, string?> AnimLayers { get; set; } = [];
 
-	[DDLRegistration(0xcfe566cdu)]
+	[DDLRegistration(0x8229ca99u)]
 	public bool AnimPlaying { get; set; } = false;
 
 	public static EngineControlActorAnimInfo Create(DDLObject ddl) => new(ddl);

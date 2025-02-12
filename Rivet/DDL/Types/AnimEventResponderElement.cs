@@ -20,13 +20,13 @@ public class AnimEventResponderElement : DDLObjectType, IDDLObjectType<AnimEvent
 		Animations = ddl.GetObjects<AnimListElement>(0x4fd05d49u);
 	}
 
-	[DDLRegistration(0x2d1aa170u)]
+	[DDLRegistration(0x2048921du)]
 	public string? EventName { get; set; } = default;
 
-	[DDLRegistration(0x2d1aa170u, description: "Play animations on this event or events derived from this event")]
+	[DDLRegistration(0x6cd8ad82u, description: "Play animations on this event or events derived from this event")]
 	public bool OnDerivedEvent { get; set; } = true;
 
-	[DDLRegistration(0x2d1aa170u)]
+	[DDLRegistration(0x4fd05d49u)]
 	public List<AnimListElement?> Animations { get; set; } = [];
 
 	public static AnimEventResponderElement Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ActivityClueModuleSkipGotoOutro : DDLObjectType, IDDLObjectType<Act
 		OnlySkipWhenEngaged = ddl.GetValue<bool>(0x5de51bceu, OnlySkipWhenEngaged);
 	}
 
-	[DDLRegistration(0xeac214a0u, "Only Skip When Engaged", "Only apply the outro skip when our awareness is Engaged")]
+	[DDLRegistration(0x5de51bceu, "Only Skip When Engaged", "Only apply the outro skip when our awareness is Engaged")]
 	public bool OnlySkipWhenEngaged { get; set; } = false;
 
 	public static ActivityClueModuleSkipGotoOutro Create(DDLObject ddl) => new(ddl);

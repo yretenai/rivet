@@ -18,7 +18,7 @@ public class SphereTargeting : SpawnShotTargetingMode, IDDLObjectType<SphereTarg
 		SphereRadius = ddl.GetValue<float>(0x7b804017u, SphereRadius);
 	}
 
-	[DDLRegistration(0xdb2f25e3u)]
+	[DDLRegistration(0x7b804017u)]
 	public float SphereRadius { get; set; } = 5.00f;
 
 	public new static SphereTargeting Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class VendorMenuClosedDevstatsEvent : EventBase, IDDLObjectType<VendorMen
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x35088ea8u, "Event ID", "Unique ID for this particular Devstats event.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique ID for this particular Devstats event.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x35088ea8u, "Segment ID", "ID for this segment of time during which the player had the weapon vendor window open. Matches the segment id in the corresponding Vendor Menu Opened event.")]
+	[DDLRegistration(0x40f9a2c2u, "Segment ID", "ID for this segment of time during which the player had the weapon vendor window open. Matches the segment id in the corresponding Vendor Menu Opened event.")]
 	public string? MenuSegmentId { get; set; } = default;
 
-	[DDLRegistration(0x35088ea8u, "Final Tab", "The tab that the menu was on when the menu was closed.")]
+	[DDLRegistration(0xc43a6681u, "Final Tab", "The tab that the menu was on when the menu was closed.")]
 	public VendorTabs FinalTab { get; set; } = VendorTabs.Purchase;
 
-	[DDLRegistration(0x35088ea8u, "Duration", "How long (in pause menu devstats time) that the menu was open. This excludes time spent afk.")]
+	[DDLRegistration(0x7c5e3db0u, "Duration", "How long (in pause menu devstats time) that the menu was open. This excludes time spent afk.")]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x35088ea8u, "Player Pos Info", "Where the player was when they closed the weapon vendor UI.")]
+	[DDLRegistration(0xeadcc3e4u, "Player Pos Info", "Where the player was when they closed the weapon vendor UI.")]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x35088ea8u, "Primary Segment Info", "The primary segment during which this event was sent. I.e. the primary mission or objective.")]
+	[DDLRegistration(0x9e8725dbu, "Primary Segment Info", "The primary segment during which this event was sent. I.e. the primary mission or objective.")]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static VendorMenuClosedDevstatsEvent Create(DDLObject ddl) => new(ddl);

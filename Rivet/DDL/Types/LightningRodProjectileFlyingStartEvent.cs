@@ -18,7 +18,7 @@ public class LightningRodProjectileFlyingStartEvent : ProjectileFlyingStartEvent
 		IsChargeShot = ddl.GetValue<bool>(0xf1b25dfau, IsChargeShot);
 	}
 
-	[DDLRegistration(0x598480eeu)]
+	[DDLRegistration(0xf1b25dfau)]
 	public bool IsChargeShot { get; set; } = false;
 
 	public new static LightningRodProjectileFlyingStartEvent Create(DDLObject ddl) => new(ddl);

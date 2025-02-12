@@ -18,7 +18,7 @@ public class StatusEffectPreExplodeEvent : EventBase, IDDLObjectType<StatusEffec
 		TimeUntilExplosion = ddl.GetValue<float>(0xd3aab68cu, TimeUntilExplosion);
 	}
 
-	[DDLRegistration(0x592613d8u)]
+	[DDLRegistration(0xd3aab68cu)]
 	public float TimeUntilExplosion { get; set; } = 0.00f;
 
 	public new static StatusEffectPreExplodeEvent Create(DDLObject ddl) => new(ddl);

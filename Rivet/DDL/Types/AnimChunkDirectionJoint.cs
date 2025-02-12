@@ -21,16 +21,16 @@ public class AnimChunkDirectionJoint : AnimChunkDirection, IDDLObjectType<AnimCh
 		HalfConeAngle = ddl.GetValue<float>(0x3b3b441fu, HalfConeAngle);
 	}
 
-	[DDLRegistration(0xa44c8427u, description: "Name of joint to base direction on.")]
+	[DDLRegistration(0x5ba51db8u, description: "Name of joint to base direction on.")]
 	public string? JointName { get; set; } = default;
 
-	[DDLRegistration(0xa44c8427u, description: "Axis of joint to use.")]
+	[DDLRegistration(0xb59f464au, description: "Axis of joint to use.")]
 	public x302e143f Axis { get; set; } = x302e143f.Z;
 
-	[DDLRegistration(0xa44c8427u, description: "Mirror selected axis")]
+	[DDLRegistration(0x072e2167u, description: "Mirror selected axis")]
 	public bool MirrorAxis { get; set; } = false;
 
-	[DDLRegistration(0xa44c8427u, description: "Cone half-angle to randomize direction.")]
+	[DDLRegistration(0x3b3b441fu, description: "Cone half-angle to randomize direction.")]
 	public float HalfConeAngle { get; set; } = 0.00f;
 
 	public new static AnimChunkDirectionJoint Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class EventExplosionEventBase : EventBase, IDDLObjectType<EventExplosionE
 		Distance = ddl.GetValue<float>(0xe69327f1u, Distance);
 	}
 
-	[DDLRegistration(0x3bf10144u, "Angle of Incidence")]
+	[DDLRegistration(0xb2c8a745u, "Angle of Incidence")]
 	public float AngleOfIncidence { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3bf10144u)]
+	[DDLRegistration(0xe69327f1u)]
 	public float Distance { get; set; } = 0.00f;
 
 	public new static EventExplosionEventBase Create(DDLObject ddl) => new(ddl);

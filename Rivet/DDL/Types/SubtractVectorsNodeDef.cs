@@ -19,10 +19,10 @@ public class SubtractVectorsNodeDef : MathNodeBaseDef, IDDLObjectType<SubtractVe
 		Difference = ddl.GetObject<OutputPlugVec3>(0x080014b7u);
 	}
 
-	[DDLRegistration(0x63d18b89u)]
+	[DDLRegistration(0x49594b39u)]
 	public List<InputPlugVec3?> Vec { get; set; } = [];
 
-	[DDLRegistration(0x63d18b89u)]
+	[DDLRegistration(0x080014b7u)]
 	public OutputPlugVec3? Difference { get; set; } = default;
 
 	public new static SubtractVectorsNodeDef Create(DDLObject ddl) => new(ddl);

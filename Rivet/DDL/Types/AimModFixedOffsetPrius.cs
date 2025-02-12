@@ -18,7 +18,7 @@ public class AimModFixedOffsetPrius : AimModifierPrius, IDDLObjectType<AimModFix
 		Offset = ddl.GetObject<DDLVector3>(0x677284b7u);
 	}
 
-	[DDLRegistration(0xad747eb3u)]
+	[DDLRegistration(0x677284b7u)]
 	public DDLVector3? Offset { get; set; } = default;
 
 	public new static AimModFixedOffsetPrius Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class ECMFieldOpNodeDef : DDLObjectType, IDDLObjectType<ECMFieldOpNodeDef
 		Connections = ddl.GetObjects<ECMNodeConnection>(0x322aadceu);
 	}
 
-	[DDLRegistration(0xdf81b55eu)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdf81b55eu)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0xdf81b55eu)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0xdf81b55eu)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = false;
 
-	[DDLRegistration(0xdf81b55eu, "Operator")]
+	[DDLRegistration(0xbc4e9799u, "Operator")]
 	public xd224b8de Type { get; set; } = xd224b8de.OpMul;
 
-	[DDLRegistration(0xdf81b55eu)]
+	[DDLRegistration(0x322aadceu)]
 	public List<ECMNodeConnection?> Connections { get; set; } = [];
 
 	public static ECMFieldOpNodeDef Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class CommandResult : DDLObjectType, IDDLObjectType<CommandResult> {
 		Content = ddl.GetString(0xff2f5391) ?? Content;
 	}
 
-	[DDLRegistration(0x322f9f1fu)]
+	[DDLRegistration(0x9f1588c7u)]
 	public int StatusCode { get; set; } = 500;
 
-	[DDLRegistration(0x322f9f1fu)]
+	[DDLRegistration(0x0200a4b8u)]
 	public string? StatusMessage { get; set; } = "";
 
-	[DDLRegistration(0x322f9f1fu)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public RivetAssetId Path { get; set; } = "";
 
-	[DDLRegistration(0x322f9f1fu)]
+	[DDLRegistration(0xff2f5391u)]
 	public string? Content { get; set; } = default;
 
 	public static CommandResult Create(DDLObject ddl) => new(ddl);

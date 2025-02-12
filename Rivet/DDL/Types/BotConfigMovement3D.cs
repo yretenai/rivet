@@ -18,7 +18,7 @@ public class BotConfigMovement3D : ConfigBase, IDDLObjectType<BotConfigMovement3
 		Steering = ddl.GetObject<Steering3DPrius>(0x02a84cecu);
 	}
 
-	[DDLRegistration(0xd34d9c83u)]
+	[DDLRegistration(0x02a84cecu)]
 	public Steering3DPrius? Steering { get; set; } = default;
 
 	public new static BotConfigMovement3D Create(DDLObject ddl) => new(ddl);

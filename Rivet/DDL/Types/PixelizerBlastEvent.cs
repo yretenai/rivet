@@ -20,13 +20,13 @@ public class PixelizerBlastEvent : EventBase, IDDLObjectType<PixelizerBlastEvent
 		AOE = ddl.GetValue<float>(0xed56b719u, AOE);
 	}
 
-	[DDLRegistration(0x15bcb2feu)]
+	[DDLRegistration(0x6e091c9au)]
 	public uint VersionIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x15bcb2feu)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 0.00f;
 
-	[DDLRegistration(0x15bcb2feu)]
+	[DDLRegistration(0xed56b719u)]
 	public float AOE { get; set; } = 0.00f;
 
 	public new static PixelizerBlastEvent Create(DDLObject ddl) => new(ddl);

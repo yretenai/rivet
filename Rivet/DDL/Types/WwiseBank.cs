@@ -18,7 +18,7 @@ public class WwiseBank : DDLObjectType, IDDLObjectType<WwiseBank> {
 		SoundBankId = ddl.GetValue<RivetAssetId>(0xb306d7bbu, SoundBankId);
 	}
 
-	[DDLRegistration(0xcdfffc0bu, description: "Sound Bank Names.")]
+	[DDLRegistration(0xb306d7bbu, description: "Sound Bank Names.")]
 	public RivetAssetId SoundBankId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static WwiseBank Create(DDLObject ddl) => new(ddl);

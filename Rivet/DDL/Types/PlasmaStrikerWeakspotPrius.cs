@@ -19,10 +19,10 @@ public class PlasmaStrikerWeakspotPrius : DDLObjectType, IDDLObjectType<PlasmaSt
 		WeakspotList = ddl.GetObjects<PlasmaStrikerWeakspotData>(0xd7e0e93bu);
 	}
 
-	[DDLRegistration(0xb489b7c7u)]
+	[DDLRegistration(0xcb75629fu)]
 	public bool WeakspotDisabledOnDamageState { get; set; } = false;
 
-	[DDLRegistration(0xb489b7c7u)]
+	[DDLRegistration(0xd7e0e93bu)]
 	public List<PlasmaStrikerWeakspotData?> WeakspotList { get; set; } = [];
 
 	public static PlasmaStrikerWeakspotPrius Create(DDLObject ddl) => new(ddl);

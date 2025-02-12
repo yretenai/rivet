@@ -18,7 +18,7 @@ public class WeaponPredatorPrius : WeaponGamePrius, IDDLObjectType<WeaponPredato
 		TargetMaterialGraph = ddl.GetValue<RivetAssetId>(0x5fc332acu, TargetMaterialGraph);
 	}
 
-	[DDLRegistration(0x43641016u)]
+	[DDLRegistration(0x5fc332acu)]
 	public RivetAssetId TargetMaterialGraph { get; set; } = default;
 
 	public new static WeaponPredatorPrius Create(DDLObject ddl) => new(ddl);

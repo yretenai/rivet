@@ -18,7 +18,7 @@ public class AwardSettings : DDLObjectType, IDDLObjectType<AwardSettings> {
 		MaxAwardsPerPlatform = ddl.GetValue<int>(0x724b607bu, MaxAwardsPerPlatform);
 	}
 
-	[DDLRegistration(0xa8c21eb8u)]
+	[DDLRegistration(0x724b607bu)]
 	public int MaxAwardsPerPlatform { get; set; } = 64;
 
 	public static AwardSettings Create(DDLObject ddl) => new(ddl);

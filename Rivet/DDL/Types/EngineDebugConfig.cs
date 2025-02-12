@@ -30,43 +30,43 @@ public class EngineDebugConfig : DDLObjectType, IDDLObjectType<EngineDebugConfig
 		MarketingFarApertureScale = ddl.GetValue<float>(0x0771d7aeu, MarketingFarApertureScale);
 	}
 
-	[DDLRegistration(0x4a9f89beu, "Field of View")]
+	[DDLRegistration(0xb346c0ddu, "Field of View")]
 	public float MarketingFov { get; set; } = 82.00f;
 
-	[DDLRegistration(0x4a9f89beu, "Camera Roll")]
+	[DDLRegistration(0x9847de9eu, "Camera Roll")]
 	public float MarketingCameraRoll { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a9f89beu, "Camera Pitch")]
+	[DDLRegistration(0x9e40f24cu, "Camera Pitch")]
 	public float MarketingCameraPitch { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a9f89beu, "Camera Yaw")]
+	[DDLRegistration(0x8d4d29adu, "Camera Yaw")]
 	public float MarketingCameraYaw { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a9f89beu, "Camera X Offset")]
+	[DDLRegistration(0x9f0af7b3u, "Camera X Offset")]
 	public float MarketingCameraXOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a9f89beu, "Camera Y Offset")]
+	[DDLRegistration(0x397dfc07u, "Camera Y Offset")]
 	public float MarketingCameraYOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a9f89beu, "Camera Z Offset")]
+	[DDLRegistration(0x0895e69au, "Camera Z Offset")]
 	public float MarketingCameraZOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a9f89beu, "Camera Shake Intensity")]
+	[DDLRegistration(0x6716a029u, "Camera Shake Intensity")]
 	public float MarketingShakeIntensity { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a9f89beu, "Camera Shake Frequency")]
+	[DDLRegistration(0xa8dba0a8u, "Camera Shake Frequency")]
 	public float MarketingShakeFrequency { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a9f89beu)]
+	[DDLRegistration(0x06832341u)]
 	public float MarketingNearFocusDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a9f89beu)]
+	[DDLRegistration(0xc769f15bu)]
 	public float MarketingNearApertureScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a9f89beu)]
+	[DDLRegistration(0xc69b05b4u)]
 	public float MarketingFarFocusDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a9f89beu)]
+	[DDLRegistration(0x0771d7aeu)]
 	public float MarketingFarApertureScale { get; set; } = 0.00f;
 
 	public static EngineDebugConfig Create(DDLObject ddl) => new(ddl);

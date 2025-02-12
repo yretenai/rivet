@@ -18,7 +18,7 @@ public class GroundResponseElement : DDLObjectType, IDDLObjectType<GroundRespons
 		Response = ddl.GetObject<HeroGroundResponseBasePrius>(0xc47ab68bu);
 	}
 
-	[DDLRegistration(0x4e74aa67u)]
+	[DDLRegistration(0xc47ab68bu)]
 	public HeroGroundResponseBasePrius? Response { get; set; } = default;
 
 	public static GroundResponseElement Create(DDLObject ddl) => new(ddl);

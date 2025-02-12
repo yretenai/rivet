@@ -21,16 +21,16 @@ public class BotCommandQueueScriptActionPrius : DDLObjectType, IDDLObjectType<Bo
 		CanInvestigate = ddl.GetValue<bool>(0x58be4ea0u, CanInvestigate);
 	}
 
-	[DDLRegistration(0x25603c59u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0x25603c59u)]
+	[DDLRegistration(0x5e976e4au)]
 	public bool ClearTargetsOnExit { get; set; } = false;
 
-	[DDLRegistration(0x25603c59u)]
+	[DDLRegistration(0x6520449cu)]
 	public bool EndOnAwarenessOfHero { get; set; } = false;
 
-	[DDLRegistration(0x25603c59u)]
+	[DDLRegistration(0x58be4ea0u)]
 	public bool CanInvestigate { get; set; } = false;
 
 	public static BotCommandQueueScriptActionPrius Create(DDLObject ddl) => new(ddl);

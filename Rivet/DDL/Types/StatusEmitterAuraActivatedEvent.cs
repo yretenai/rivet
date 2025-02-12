@@ -18,7 +18,7 @@ public class StatusEmitterAuraActivatedEvent : EventBase, IDDLObjectType<StatusE
 		Range = ddl.GetValue<float>(0x8ad49688u, Range);
 	}
 
-	[DDLRegistration(0x4ce64aebu)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 0.00f;
 
 	public new static StatusEmitterAuraActivatedEvent Create(DDLObject ddl) => new(ddl);

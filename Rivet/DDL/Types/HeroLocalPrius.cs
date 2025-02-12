@@ -18,7 +18,7 @@ public class HeroLocalPrius : HeroCharacterPrius, IDDLObjectType<HeroLocalPrius>
 		UserIndex = ddl.GetValue<int>(0xe4ebebdbu, UserIndex);
 	}
 
-	[DDLRegistration(0x0a4e7191u)]
+	[DDLRegistration(0xe4ebebdbu)]
 	public int UserIndex { get; set; } = 0;
 
 	public new static HeroLocalPrius Create(DDLObject ddl) => new(ddl);

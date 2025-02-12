@@ -19,10 +19,10 @@ public class ConeTargeting : SpawnShotTargetingMode, IDDLObjectType<ConeTargetin
 		ConeDistance = ddl.GetValue<float>(0x7da7f57fu, ConeDistance);
 	}
 
-	[DDLRegistration(0x6b4650c0u)]
+	[DDLRegistration(0x8c03b095u)]
 	public float ConeAngle { get; set; } = 90.00f;
 
-	[DDLRegistration(0x6b4650c0u)]
+	[DDLRegistration(0x7da7f57fu)]
 	public float ConeDistance { get; set; } = 10.00f;
 
 	public new static ConeTargeting Create(DDLObject ddl) => new(ddl);

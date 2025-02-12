@@ -18,7 +18,7 @@ public class DamageStateChangedEvent : EventBase, IDDLObjectType<DamageStateChan
 		Stage = ddl.GetValue<byte>(0xdb2f5fa8u, Stage);
 	}
 
-	[DDLRegistration(0x1c28ec70u)]
+	[DDLRegistration(0xdb2f5fa8u)]
 	public byte Stage { get; set; } = 0x00;
 
 	public new static DamageStateChangedEvent Create(DDLObject ddl) => new(ddl);

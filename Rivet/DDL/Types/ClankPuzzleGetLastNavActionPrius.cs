@@ -18,7 +18,7 @@ public class ClankPuzzleGetLastNavActionPrius : DDLObjectType, IDDLObjectType<Cl
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x8405f703u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Puzzle;
 
 	public static ClankPuzzleGetLastNavActionPrius Create(DDLObject ddl) => new(ddl);

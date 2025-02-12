@@ -19,10 +19,10 @@ public class Faction : DDLObjectType, IDDLObjectType<Faction> {
 		Spawnable = ddl.GetValues<RivetAssetId>(0x20376872u);
 	}
 
-	[DDLRegistration(0x82eee8a8u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x82eee8a8u, "Spawnable Botz", "Collection of bots that can be spawned via the debug menu")]
+	[DDLRegistration(0x20376872u, "Spawnable Botz", "Collection of bots that can be spawned via the debug menu")]
 	public List<RivetAssetId> Spawnable { get; set; } = [];
 
 	public static Faction Create(DDLObject ddl) => new(ddl);

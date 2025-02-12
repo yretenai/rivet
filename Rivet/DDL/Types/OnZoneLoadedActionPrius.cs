@@ -19,10 +19,10 @@ public class OnZoneLoadedActionPrius : DDLObjectType, IDDLObjectType<OnZoneLoade
 		Zone = ddl.GetValue<RivetAssetId>(0x907b00b7u, Zone);
 	}
 
-	[DDLRegistration(0x6a2bb70fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x6a2bb70fu, description: "The zone in question (if blank, it fires when your own zone is loaded).")]
+	[DDLRegistration(0x907b00b7u, description: "The zone in question (if blank, it fires when your own zone is loaded).")]
 	public RivetAssetId Zone { get; set; } = default;
 
 	public static OnZoneLoadedActionPrius Create(DDLObject ddl) => new(ddl);

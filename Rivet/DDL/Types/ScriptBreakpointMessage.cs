@@ -19,10 +19,10 @@ public class ScriptBreakpointMessage : DDLObjectType, IDDLObjectType<ScriptBreak
 		ScriptId = ddl.GetValue<RivetAssetId>(0x86c92af9u, ScriptId);
 	}
 
-	[DDLRegistration(0x2f5c87b4u)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public xb379a82e Action { get; set; } = xb379a82e.DebugNothing;
 
-	[DDLRegistration(0x2f5c87b4u)]
+	[DDLRegistration(0x86c92af9u)]
 	public RivetAssetId ScriptId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ScriptBreakpointMessage Create(DDLObject ddl) => new(ddl);

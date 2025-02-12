@@ -20,13 +20,13 @@ public class SetModelInstAssetEngineCommand : DDLObjectType, IDDLObjectType<SetM
 		Type = ddl.GetEnum<ModelInstType>(0xbc4e9799u, ModelInstTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x58de387eu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x58de387eu)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public RivetAssetId Path { get; set; } = default;
 
-	[DDLRegistration(0x58de387eu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public ModelInstType Type { get; set; } = ModelInstType.Model;
 
 	public static SetModelInstAssetEngineCommand Create(DDLObject ddl) => new(ddl);

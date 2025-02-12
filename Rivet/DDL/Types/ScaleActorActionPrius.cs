@@ -18,7 +18,7 @@ public class ScaleActorActionPrius : DDLObjectType, IDDLObjectType<ScaleActorAct
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x2fb2ad80u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
 	public static ScaleActorActionPrius Create(DDLObject ddl) => new(ddl);

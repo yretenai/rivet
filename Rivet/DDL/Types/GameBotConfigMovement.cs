@@ -27,34 +27,34 @@ public class GameBotConfigMovement : BotConfigMovement, IDDLObjectType<GameBotCo
 		HasNorthTurnAnim = ddl.GetValue<bool>(0xc0d95ae9u, HasNorthTurnAnim);
 	}
 
-	[DDLRegistration(0x65cf97fbu, "Zigzag Chance", "Random chance (0-1) of using zigzag angles")]
+	[DDLRegistration(0xcb0c247au, "Zigzag Chance", "Random chance (0-1) of using zigzag angles")]
 	public float ZigzagChance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x65cf97fbu, "Zigzag Angle", "Zigzag angle added to arc angle in alternating directions")]
+	[DDLRegistration(0xede4416cu, "Zigzag Angle", "Zigzag angle added to arc angle in alternating directions")]
 	public float ZigzagAngle { get; set; } = 40.00f;
 
-	[DDLRegistration(0x65cf97fbu, "Zigzag Duration Min", "Minimum duration of zigzag alternation")]
+	[DDLRegistration(0x5be3763bu, "Zigzag Duration Min", "Minimum duration of zigzag alternation")]
 	public float ZigzagDurMin { get; set; } = 0.40f;
 
-	[DDLRegistration(0x65cf97fbu, "Zigzag Duration Max", "Maximum duration of zigzag alternation")]
+	[DDLRegistration(0x67ee4962u, "Zigzag Duration Max", "Maximum duration of zigzag alternation")]
 	public float ZigzagDurMax { get; set; } = 0.70f;
 
-	[DDLRegistration(0x65cf97fbu, "Flanking Approach Max Dist")]
+	[DDLRegistration(0xbf907953u, "Flanking Approach Max Dist")]
 	public float FlankingApproachMaxDist { get; set; } = 10.00f;
 
-	[DDLRegistration(0x65cf97fbu, description: "if true, this bot will find further-apart flank entry angles")]
+	[DDLRegistration(0x16a581fcu, description: "if true, this bot will find further-apart flank entry angles")]
 	public bool DoWideFlank { get; set; } = false;
 
-	[DDLRegistration(0x65cf97fbu, description: "If true, scale the motion from the animation without changing the animation rate")]
+	[DDLRegistration(0x6f977405u, description: "If true, scale the motion from the animation without changing the animation rate")]
 	public bool ScaleAnimMotion { get; set; } = false;
 
-	[DDLRegistration(0x65cf97fbu, description: "If true, patrol behavior uses the DestFacing from the animclue")]
+	[DDLRegistration(0x509220a7u, description: "If true, patrol behavior uses the DestFacing from the animclue")]
 	public bool SetFaceDir { get; set; } = true;
 
-	[DDLRegistration(0x65cf97fbu, description: "If true, the jump takeoff animation is skipped when using jump clues")]
+	[DDLRegistration(0xaafeaa8au, description: "If true, the jump takeoff animation is skipped when using jump clues")]
 	public bool SkipJumpTakeoff { get; set; } = false;
 
-	[DDLRegistration(0x65cf97fbu, description: "If true, the bot has a turn animation clip for kDirectionNorth")]
+	[DDLRegistration(0xc0d95ae9u, description: "If true, the bot has a turn animation clip for kDirectionNorth")]
 	public bool HasNorthTurnAnim { get; set; } = true;
 
 	public new static GameBotConfigMovement Create(DDLObject ddl) => new(ddl);

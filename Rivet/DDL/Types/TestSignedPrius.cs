@@ -29,40 +29,40 @@ public class TestSignedPrius : DDLObjectType, IDDLObjectType<TestSignedPrius> {
 		Signed9c = ddl.GetValue<long>(0x0938d207u, Signed9c);
 	}
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0x20c396a4u)]
 	public float Signed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0x194cf5e7u)]
 	public int Signed2 { get; set; } = 0;
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0x6e4bc571u)]
 	public int Signed3 { get; set; } = 0;
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0xf02f50d2u)]
 	public float Signed4 { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0x87286044u)]
 	public long Signed5 { get; set; } = 0;
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0x1e2131feu)]
 	public long Signed6 { get; set; } = 0;
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0x69260168u)]
 	public long Signed7 { get; set; } = 0;
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0xf9991cf9u)]
 	public long Signed8 { get; set; } = 0;
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0x8e9e2c6fu)]
 	public long Signed9 { get; set; } = 0;
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0xe736b32bu)]
 	public long Signed9a { get; set; } = 0;
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0x7e3fe291u)]
 	public long Signed9b { get; set; } = 0;
 
-	[DDLRegistration(0x2e553913u)]
+	[DDLRegistration(0x0938d207u)]
 	public long Signed9c { get; set; } = 0;
 
 	public static TestSignedPrius Create(DDLObject ddl) => new(ddl);

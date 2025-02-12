@@ -32,49 +32,49 @@ public class SplineSurfaceGenerator : SplineGenerator, IDDLObjectType<SplineSurf
 		GeomLodDist2 = ddl.GetValue<float>(0xe615a385u, GeomLodDist2);
 	}
 
-	[DDLRegistration(0xdbccbfe2u, "Curve", "Surface created from source curve across consecutive curves.")]
+	[DDLRegistration(0x4eca9176u, "Curve", "Surface created from source curve across consecutive curves.")]
 	public List<RivetAssetId> Curve { get; set; } = [];
 
-	[DDLRegistration(0xdbccbfe2u, description: "vertex color for entire model")]
+	[DDLRegistration(0x6e07bf94u, description: "vertex color for entire model")]
 	public DDLVector3? VertexColor { get; set; } = default;
 
-	[DDLRegistration(0xdbccbfe2u, description: "vertex alpha for entire model")]
+	[DDLRegistration(0xd8b1ce17u, description: "vertex alpha for entire model")]
 	public float VertexAlpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdbccbfe2u, description: "Vertex spacing along curve and around cross-section")]
+	[DDLRegistration(0x513026ceu, description: "Vertex spacing along curve and around cross-section")]
 	public DDLVector2? VertexSpacing { get; set; } = default;
 
-	[DDLRegistration(0xdbccbfe2u, description: "Reverse U")]
+	[DDLRegistration(0xb07b05d0u, description: "Reverse U")]
 	public bool ReverseU { get; set; } = false;
 
-	[DDLRegistration(0xdbccbfe2u, description: "Reverse V")]
+	[DDLRegistration(0x2972546au, description: "Reverse V")]
 	public bool ReverseV { get; set; } = false;
 
-	[DDLRegistration(0xdbccbfe2u, "UV Tiling Distance meters/UV")]
+	[DDLRegistration(0x62050c4eu, "UV Tiling Distance meters/UV")]
 	public DDLVector2? UVTilingDistance { get; set; } = default;
 
-	[DDLRegistration(0xdbccbfe2u, "UV Offset")]
+	[DDLRegistration(0xd4f24f25u, "UV Offset")]
 	public DDLVector2? UVOffset { get; set; } = default;
 
-	[DDLRegistration(0xdbccbfe2u, description: "Material")]
+	[DDLRegistration(0x86bfc8e5u, description: "Material")]
 	public RivetAssetId Material { get; set; } = default;
 
-	[DDLRegistration(0xdbccbfe2u, description: "Output Collision")]
+	[DDLRegistration(0xd930bcb2u, description: "Output Collision")]
 	public bool Collision { get; set; } = true;
 
-	[DDLRegistration(0xdbccbfe2u, description: "Model Collision Flags")]
+	[DDLRegistration(0x45d4a833u, description: "Model Collision Flags")]
 	public PhysicsCollFlags CollisionFlags { get; set; } = (PhysicsCollFlags) 0x0000043f;
 
-	[DDLRegistration(0xdbccbfe2u, description: "Output LOD1")]
+	[DDLRegistration(0xde2917d1u, description: "Output LOD1")]
 	public bool LOD1 { get; set; } = false;
 
-	[DDLRegistration(0xdbccbfe2u, description: "First LOD distance")]
+	[DDLRegistration(0x7f1cf23fu, description: "First LOD distance")]
 	public float GeomLodDist1 { get; set; } = 10.00f;
 
-	[DDLRegistration(0xdbccbfe2u, description: "Output LOD2")]
+	[DDLRegistration(0x4720466bu, description: "Output LOD2")]
 	public bool LOD2 { get; set; } = false;
 
-	[DDLRegistration(0xdbccbfe2u, description: "Second LOD distance")]
+	[DDLRegistration(0xe615a385u, description: "Second LOD distance")]
 	public float GeomLodDist2 { get; set; } = 10.00f;
 
 	public new static SplineSurfaceGenerator Create(DDLObject ddl) => new(ddl);

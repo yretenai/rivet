@@ -19,10 +19,10 @@ public class PlanetLightingCondition : DDLObjectType, IDDLObjectType<PlanetLight
 		UnlockCondition = ddl.GetObject<ObjSysUnlockSequence>(0x5135ecc8u);
 	}
 
-	[DDLRegistration(0xde25c3ffu, "Lighting Mode", "The lighting mode to use if the condition is satisfied.")]
+	[DDLRegistration(0x537e2fccu, "Lighting Mode", "The lighting mode to use if the condition is satisfied.")]
 	public LightingModeGame LightingMode { get; set; } = LightingModeGame.Day;
 
-	[DDLRegistration(0xde25c3ffu, "Unlock Condition", "The unlock sequence to use to determine if we should use this lighting mode on planetary travel.")]
+	[DDLRegistration(0x5135ecc8u, "Unlock Condition", "The unlock sequence to use to determine if we should use this lighting mode on planetary travel.")]
 	public ObjSysUnlockSequence? UnlockCondition { get; set; } = default;
 
 	public static PlanetLightingCondition Create(DDLObject ddl) => new(ddl);

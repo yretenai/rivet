@@ -26,31 +26,31 @@ public class BotMoverManagerPrius : MoverManagerPrius, IDDLObjectType<BotMoverMa
 		SoftCVCOuter = ddl.GetValue<float>(0x44f598f2u, SoftCVCOuter);
 	}
 
-	[DDLRegistration(0xf2f8cca5u)]
+	[DDLRegistration(0xd25d46cfu)]
 	public CVCShapeConfig? CVCShape { get; set; } = default;
 
-	[DDLRegistration(0xf2f8cca5u)]
+	[DDLRegistration(0x4a6496d9u)]
 	public bool UseNavAsGround { get; set; } = false;
 
-	[DDLRegistration(0xf2f8cca5u)]
+	[DDLRegistration(0x981cd1bdu)]
 	public bool UseSingleMoveSweep { get; set; } = true;
 
-	[DDLRegistration(0xf2f8cca5u)]
+	[DDLRegistration(0x62f26d8du)]
 	public bool EnableSpeculativeCollision { get; set; } = false;
 
-	[DDLRegistration(0xf2f8cca5u)]
+	[DDLRegistration(0x6bcc1e52u)]
 	public bool PushOnEqual { get; set; } = true;
 
-	[DDLRegistration(0xf2f8cca5u)]
+	[DDLRegistration(0x71222edcu)]
 	public bool UseFullSpeedDeflection { get; set; } = false;
 
-	[DDLRegistration(0xf2f8cca5u)]
+	[DDLRegistration(0xf7e3f4b6u)]
 	public bool UseSoftCollisions { get; set; } = false;
 
-	[DDLRegistration(0xf2f8cca5u)]
+	[DDLRegistration(0x5d1c9b6au)]
 	public float SoftCVCInner { get; set; } = 0.25f;
 
-	[DDLRegistration(0xf2f8cca5u)]
+	[DDLRegistration(0x44f598f2u)]
 	public float SoftCVCOuter { get; set; } = 0.75f;
 
 	public new static BotMoverManagerPrius Create(DDLObject ddl) => new(ddl);

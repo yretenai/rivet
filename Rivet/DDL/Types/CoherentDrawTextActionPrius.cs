@@ -25,28 +25,28 @@ public class CoherentDrawTextActionPrius : DDLObjectType, IDDLObjectType<Coheren
 		FontSize = ddl.GetValue<uint>(0xbc438b44u, FontSize);
 	}
 
-	[DDLRegistration(0x99eda668u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x99eda668u)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
-	[DDLRegistration(0x99eda668u, "Text Color")]
+	[DDLRegistration(0x7f31f6cfu, "Text Color")]
 	public DDLVector3? TextColor { get; set; } = default;
 
-	[DDLRegistration(0x99eda668u, "Text Alpha")]
+	[DDLRegistration(0xc987874cu, "Text Alpha")]
 	public float TextAlpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0x99eda668u, "Background Color")]
+	[DDLRegistration(0x00cbda4au, "Background Color")]
 	public DDLVector3? BackgroundColor { get; set; } = default;
 
-	[DDLRegistration(0x99eda668u, "Background Alpha")]
+	[DDLRegistration(0xb67dabc9u, "Background Alpha")]
 	public float BackgroundAlpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0x99eda668u, "Text Alignment")]
+	[DDLRegistration(0xae338150u, "Text Alignment")]
 	public x84bbe706 Alignment { get; set; } = x84bbe706.Center;
 
-	[DDLRegistration(0x99eda668u, "Font Size")]
+	[DDLRegistration(0xbc438b44u, "Font Size")]
 	public uint FontSize { get; set; } = 0x00000020;
 
 	public static CoherentDrawTextActionPrius Create(DDLObject ddl) => new(ddl);

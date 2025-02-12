@@ -18,7 +18,7 @@ public class CustomOverlayRegionData_Tools : DDLObjectType, IDDLObjectType<Custo
 		OverlayTrigger = ddl.GetObject<OverlayTrigger_Tools>(0x2e62f2d2u);
 	}
 
-	[DDLRegistration(0xde1c79e2u)]
+	[DDLRegistration(0x2e62f2d2u)]
 	public OverlayTrigger_Tools? OverlayTrigger { get; set; } = default;
 
 	public static CustomOverlayRegionData_Tools Create(DDLObject ddl) => new(ddl);

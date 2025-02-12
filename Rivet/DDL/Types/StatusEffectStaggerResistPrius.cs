@@ -19,10 +19,10 @@ public class StatusEffectStaggerResistPrius : StatusEffectBasePrius, IDDLObjectT
 		IsPercent = ddl.GetValue<bool>(0x858c4cf5u, IsPercent);
 	}
 
-	[DDLRegistration(0xf52a7112u)]
+	[DDLRegistration(0xb0d93e25u)]
 	public float Amount { get; set; } = 50.00f;
 
-	[DDLRegistration(0xf52a7112u)]
+	[DDLRegistration(0x858c4cf5u)]
 	public bool IsPercent { get; set; } = true;
 
 	public new static StatusEffectStaggerResistPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SetMaterialLiveUpdateEngineCommand : DDLObjectType, IDDLObjectType<
 		LiveUpdate = ddl.GetValue<bool>(0x9e5d8ff6u, LiveUpdate);
 	}
 
-	[DDLRegistration(0xdbefa338u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdbefa338u)]
+	[DDLRegistration(0x9e5d8ff6u)]
 	public bool LiveUpdate { get; set; } = false;
 
 	public static SetMaterialLiveUpdateEngineCommand Create(DDLObject ddl) => new(ddl);

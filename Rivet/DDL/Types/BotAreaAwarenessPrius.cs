@@ -21,16 +21,16 @@ public class BotAreaAwarenessPrius : AwarenessBasePrius, IDDLObjectType<BotAreaA
 		UseRandomConfirmTime = ddl.GetValue<bool>(0x8209aaa8u, UseRandomConfirmTime);
 	}
 
-	[DDLRegistration(0x80c2a448u)]
+	[DDLRegistration(0x058c28dbu)]
 	public string? SourceLocatorName { get; set; } = "head";
 
-	[DDLRegistration(0x80c2a448u, description: "Alert if target is within this range even outside of the inner awareness area")]
+	[DDLRegistration(0x63b1b5d4u, description: "Alert if target is within this range even outside of the inner awareness area")]
 	public float NearbyAlertRange { get; set; } = 3.00f;
 
-	[DDLRegistration(0x80c2a448u, description: "Alert if a shot from an enemy allegiance hits within this range even outside of the inner awareness area")]
+	[DDLRegistration(0x0ac8ad7fu, description: "Alert if a shot from an enemy allegiance hits within this range even outside of the inner awareness area")]
 	public float NearbyShotAlertRange { get; set; } = 10.00f;
 
-	[DDLRegistration(0x80c2a448u, description: "If true, we set random timers for confirm time.  If false, we use the stagger logic.")]
+	[DDLRegistration(0x8209aaa8u, description: "If true, we set random timers for confirm time.  If false, we use the stagger logic.")]
 	public bool UseRandomConfirmTime { get; set; } = false;
 
 	public new static BotAreaAwarenessPrius Create(DDLObject ddl) => new(ddl);

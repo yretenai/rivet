@@ -20,13 +20,13 @@ public class TargetAttackShapeCone : TargetedAttackShape, IDDLObjectType<TargetA
 		HalfAngle = ddl.GetValue<float>(0x0ad75ffdu, HalfAngle);
 	}
 
-	[DDLRegistration(0xb4d589fdu, description: "Locator used as the start point of the cone. The cone will point down the locator's z-axis.")]
+	[DDLRegistration(0x7bac1d57u, description: "Locator used as the start point of the cone. The cone will point down the locator's z-axis.")]
 	public string? Locator { get; set; } = "";
 
-	[DDLRegistration(0xb4d589fdu, description: "Length of the cone.")]
+	[DDLRegistration(0x3f05d0d5u, description: "Length of the cone.")]
 	public float Length { get; set; } = 15.00f;
 
-	[DDLRegistration(0xb4d589fdu, description: "Half-angle of the cone. A 45-degree half angle, would make a 90-degree cone")]
+	[DDLRegistration(0x0ad75ffdu, description: "Half-angle of the cone. A 45-degree half angle, would make a 90-degree cone")]
 	public float HalfAngle { get; set; } = 45.00f;
 
 	public new static TargetAttackShapeCone Create(DDLObject ddl) => new(ddl);

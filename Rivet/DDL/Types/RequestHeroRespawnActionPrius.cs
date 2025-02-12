@@ -22,19 +22,19 @@ public class RequestHeroRespawnActionPrius : DDLObjectType, IDDLObjectType<Reque
 		RefillAmmo = ddl.GetValue<bool>(0x99535c6eu, RefillAmmo);
 	}
 
-	[DDLRegistration(0x918da7a7u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x918da7a7u, "Old Character", "only respawn hero with this character id (-1 = respawn all input heroes)")]
+	[DDLRegistration(0x97dd8b5au, "Old Character", "only respawn hero with this character id (-1 = respawn all input heroes)")]
 	public HeroTypes OldCharacter { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0x918da7a7u, "New Character", "switch hero to this character id (-1 = leave as current character)")]
+	[DDLRegistration(0xbbacc35bu, "New Character", "switch hero to this character id (-1 = leave as current character)")]
 	public HeroTypes NewCharacter { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0x918da7a7u, "Delay", "delay before initiating respawn")]
+	[DDLRegistration(0xabc94c5au, "Delay", "delay before initiating respawn")]
 	public float Delay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x918da7a7u, "Refill Ammo", "refill ammo on respawn?")]
+	[DDLRegistration(0x99535c6eu, "Refill Ammo", "refill ammo on respawn?")]
 	public bool RefillAmmo { get; set; } = false;
 
 	public static RequestHeroRespawnActionPrius Create(DDLObject ddl) => new(ddl);

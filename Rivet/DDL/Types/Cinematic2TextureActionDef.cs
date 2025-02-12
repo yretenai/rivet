@@ -23,22 +23,22 @@ public class Cinematic2TextureActionDef : DDLObjectType, IDDLObjectType<Cinemati
 		PriorityBias = ddl.GetValue<float>(0xc3acbd2du, PriorityBias);
 	}
 
-	[DDLRegistration(0xdc4838e2u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdc4838e2u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdc4838e2u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0xdc4838e2u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdc4838e2u, description: "When True, all textures referenced by this actor will be ignored by the texture streamer. Useful to give room for other textures, if we know this actor is in-frame but completely occluded.")]
+	[DDLRegistration(0x0d3c6c83u, description: "When True, all textures referenced by this actor will be ignored by the texture streamer. Useful to give room for other textures, if we know this actor is in-frame but completely occluded.")]
 	public bool IgnoreTextures { get; set; } = false;
 
-	[DDLRegistration(0xdc4838e2u, description: "Increases the priority of the textures on this actor.")]
+	[DDLRegistration(0xc3acbd2du, description: "Increases the priority of the textures on this actor.")]
 	public float PriorityBias { get; set; } = 0.00f;
 
 	public static Cinematic2TextureActionDef Create(DDLObject ddl) => new(ddl);

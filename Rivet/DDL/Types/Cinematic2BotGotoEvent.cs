@@ -20,13 +20,13 @@ public class Cinematic2BotGotoEvent : EventBase, IDDLObjectType<Cinematic2BotGot
 		Spline = ddl.GetValue<RivetAssetId>(0x0b8e1b8eu, Spline);
 	}
 
-	[DDLRegistration(0x84de1f0bu)]
+	[DDLRegistration(0x0a820be9u)]
 	public DDLTransform? TargetMatrix { get; set; } = default;
 
-	[DDLRegistration(0x84de1f0bu)]
+	[DDLRegistration(0x1eb84093u)]
 	public float ArrivalWorldTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x84de1f0bu)]
+	[DDLRegistration(0x0b8e1b8eu)]
 	public RivetAssetId Spline { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static Cinematic2BotGotoEvent Create(DDLObject ddl) => new(ddl);

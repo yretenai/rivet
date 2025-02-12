@@ -20,13 +20,13 @@ public class RandomizedSpawnPointTargetArcPrius : RandomizedSpawnPointBasePrius,
 		TargetArcAngle = ddl.GetValue<float>(0x9f98954eu, TargetArcAngle);
 	}
 
-	[DDLRegistration(0x9f177d1du)]
+	[DDLRegistration(0x50e7abb6u)]
 	public float MinRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9f177d1du)]
+	[DDLRegistration(0x870c19f7u)]
 	public float MaxRadius { get; set; } = 4.00f;
 
-	[DDLRegistration(0x9f177d1du)]
+	[DDLRegistration(0x9f98954eu)]
 	public float TargetArcAngle { get; set; } = 90.00f;
 
 	public new static RandomizedSpawnPointTargetArcPrius Create(DDLObject ddl) => new(ddl);

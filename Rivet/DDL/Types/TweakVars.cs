@@ -18,7 +18,7 @@ public class TweakVars : DDLObjectType, IDDLObjectType<TweakVars> {
 		Files = ddl.GetDictionary<int, TweakVarFile>(0x1f668c98, DDLMapTypeHandler.VisitInt, (mapId, mapDDL) => mapDDL.GetObject<TweakVarFile>(mapId));
 	}
 
-	[DDLRegistration(0xe89cb288u)]
+	[DDLRegistration(0x1f668c98u)]
 	public Dictionary<int, TweakVarFile?> Files { get; set; } = [];
 
 	public static TweakVars Create(DDLObject ddl) => new(ddl);

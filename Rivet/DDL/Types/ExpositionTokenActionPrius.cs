@@ -19,10 +19,10 @@ public class ExpositionTokenActionPrius : DDLObjectType, IDDLObjectType<Expositi
 		ReleaseBlockerOnUnload = ddl.GetValue<bool>(0x00afc03du, ReleaseBlockerOnUnload);
 	}
 
-	[DDLRegistration(0x1ce08bbcu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
-	[DDLRegistration(0x1ce08bbcu, description: "Don't set this false! Unless you really know what you are doing and can be certain you'll release the blocker later.")]
+	[DDLRegistration(0x00afc03du, description: "Don't set this false! Unless you really know what you are doing and can be certain you'll release the blocker later.")]
 	public bool ReleaseBlockerOnUnload { get; set; } = true;
 
 	public static ExpositionTokenActionPrius Create(DDLObject ddl) => new(ddl);

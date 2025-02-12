@@ -25,28 +25,28 @@ public class VisualEffectPostRenderNode : DDLObjectType, IDDLObjectType<VisualEf
 		BlendStyle = ddl.GetEnum<BlendStyle>(0xb34024eau, BlendStyleValues.Lookup);
 	}
 
-	[DDLRegistration(0xe94a3eccu)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xe94a3eccu)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0xe94a3eccu)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0xe94a3eccu, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0xe94a3eccu)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<VisualEffectNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0xe94a3eccu)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<VisualEffectNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
-	[DDLRegistration(0xe94a3eccu, "Render Type")]
+	[DDLRegistration(0xb0ef7733u, "Render Type")]
 	public x9a2e0494 RenderType { get; set; } = x9a2e0494.OffscreenHalf;
 
-	[DDLRegistration(0xe94a3eccu, "Blend Style")]
+	[DDLRegistration(0xb34024eau, "Blend Style")]
 	public BlendStyle BlendStyle { get; set; } = BlendStyle.Alpha;
 
 	public static VisualEffectPostRenderNode Create(DDLObject ddl) => new(ddl);

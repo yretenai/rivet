@@ -18,7 +18,7 @@ public class ShotPredatorLauncherPrius : ExplosiveBulletPrius, IDDLObjectType<Sh
 		MiniMissileConfig = ddl.GetValue<RivetAssetId>(0x71654944u, MiniMissileConfig);
 	}
 
-	[DDLRegistration(0xa10a450fu)]
+	[DDLRegistration(0x71654944u)]
 	public RivetAssetId MiniMissileConfig { get; set; } = default;
 
 	public new static ShotPredatorLauncherPrius Create(DDLObject ddl) => new(ddl);

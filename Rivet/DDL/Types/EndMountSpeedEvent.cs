@@ -18,7 +18,7 @@ public class EndMountSpeedEvent : EventBase, IDDLObjectType<EndMountSpeedEvent> 
 		SpeedType = ddl.GetString(0xe127ee0f) ?? SpeedType;
 	}
 
-	[DDLRegistration(0x930568e0u)]
+	[DDLRegistration(0xe127ee0fu)]
 	public string? SpeedType { get; set; } = default;
 
 	public new static EndMountSpeedEvent Create(DDLObject ddl) => new(ddl);

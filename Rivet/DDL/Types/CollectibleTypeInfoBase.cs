@@ -19,10 +19,10 @@ public class CollectibleTypeInfoBase : DDLObjectType, IDDLObjectType<Collectible
 		MissionLocks = ddl.GetObject<ObjSysUnlockSequence>(0x8a19a607u);
 	}
 
-	[DDLRegistration(0xcfb51fcbu)]
+	[DDLRegistration(0xa2fe6498u)]
 	public CollectibleTypeDenum? CollectibleType { get; set; } = default;
 
-	[DDLRegistration(0xcfb51fcbu)]
+	[DDLRegistration(0x8a19a607u)]
 	public ObjSysUnlockSequence? MissionLocks { get; set; } = default;
 
 	public static CollectibleTypeInfoBase Create(DDLObject ddl) => new(ddl);

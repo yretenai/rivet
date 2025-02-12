@@ -32,49 +32,49 @@ public class BotMovementBase : DDLObjectType, IDDLObjectType<BotMovementBase> {
 		UseStrafeMove = ddl.GetValue<bool>(0x386e2ff0u, UseStrafeMove);
 	}
 
-	[DDLRegistration(0xf3c99f4fu, description: "Base speed while moving.")]
+	[DDLRegistration(0x1f570251u, description: "Base speed while moving.")]
 	public float MoveSpeed { get; set; } = 6.00f;
 
-	[DDLRegistration(0xf3c99f4fu, "Move Anim Driver", "Move Anim during Mounting")]
+	[DDLRegistration(0x8f9bd642u, "Move Anim Driver", "Move Anim during Mounting")]
 	public string? MoveAnimName { get; set; } = default;
 
-	[DDLRegistration(0xf3c99f4fu, description: "The max turn speed supplied to the mover stanadard. Used for interpolating a bot's facing as it turns.")]
+	[DDLRegistration(0x03cd35f8u, description: "The max turn speed supplied to the mover stanadard. Used for interpolating a bot's facing as it turns.")]
 	public float MoverTurnSpeed { get; set; } = 570.00f;
 
-	[DDLRegistration(0xf3c99f4fu, "Turn Rate", "The rate at which the actor turns in degrees per second (implemented differently for EACH bot movement type)")]
+	[DDLRegistration(0x371b2802u, "Turn Rate", "The rate at which the actor turns in degrees per second (implemented differently for EACH bot movement type)")]
 	public float TurnRate { get; set; } = 26.00f;
 
-	[DDLRegistration(0xf3c99f4fu, "Turn Gain", "The gain coefficient for turning.")]
+	[DDLRegistration(0x38623a3bu, "Turn Gain", "The gain coefficient for turning.")]
 	public float TurnGain { get; set; } = -8.00f;
 
-	[DDLRegistration(0xf3c99f4fu, "Turn Damp", "The dampening coefficient for turning.")]
+	[DDLRegistration(0xb4b46db2u, "Turn Damp", "The dampening coefficient for turning.")]
 	public float TurnDamp { get; set; } = -6.50f;
 
-	[DDLRegistration(0xf3c99f4fu, description: "Ignore the translation built into the moving anim and juse play the anim at the default rate(1.0.)")]
+	[DDLRegistration(0x0c77553fu, description: "Ignore the translation built into the moving anim and juse play the anim at the default rate(1.0.)")]
 	public bool UseDefaultAnimRate { get; set; } = false;
 
-	[DDLRegistration(0xf3c99f4fu, description: "Should the mounted bot stay level with the ground's normal as the bot moves around.")]
+	[DDLRegistration(0x39b19ffbu, description: "Should the mounted bot stay level with the ground's normal as the bot moves around.")]
 	public bool IsLevelWithGround { get; set; } = false;
 
-	[DDLRegistration(0xf3c99f4fu, description: "The rate (in radians per second) at which the bot rotates in order keep level with the ground.")]
+	[DDLRegistration(0xe603c296u, description: "The rate (in radians per second) at which the bot rotates in order keep level with the ground.")]
 	public float LevelWithGroundRotSpeed { get; set; } = 2.50f;
 
-	[DDLRegistration(0xf3c99f4fu, description: "This is the max height the Actor's position can be to recognize Ground Events/Results")]
+	[DDLRegistration(0x2d1dfcbcu, description: "This is the max height the Actor's position can be to recognize Ground Events/Results")]
 	public float MaxHeightForGroundContact { get; set; } = 0.20f;
 
-	[DDLRegistration(0xf3c99f4fu, description: "This controls if the hero goes into a falling death state.")]
+	[DDLRegistration(0xa5e9e530u, description: "This controls if the hero goes into a falling death state.")]
 	public bool UseHeroStateFallDeath { get; set; } = false;
 
-	[DDLRegistration(0xf3c99f4fu, description: "Hero's custom death anim.")]
+	[DDLRegistration(0xa38899a9u, description: "Hero's custom death anim.")]
 	public string? HeroFallDeathCustomAnim { get; set; } = default;
 
-	[DDLRegistration(0xf3c99f4fu, description: "Mount's Death Animation")]
+	[DDLRegistration(0x0f9dd5a6u, description: "Mount's Death Animation")]
 	public string? DeathAnim { get; set; } = default;
 
-	[DDLRegistration(0xf3c99f4fu, description: "Mount's Animated Dismount")]
+	[DDLRegistration(0xf9375130u, description: "Mount's Animated Dismount")]
 	public string? AnimatedDismountAnim { get; set; } = default;
 
-	[DDLRegistration(0xf3c99f4fu, description: "This mount strafes while moving")]
+	[DDLRegistration(0x386e2ff0u, description: "This mount strafes while moving")]
 	public bool UseStrafeMove { get; set; } = false;
 
 	public static BotMovementBase Create(DDLObject ddl) => new(ddl);

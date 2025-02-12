@@ -21,16 +21,16 @@ public class PlayerDeathEvent : EventBase, IDDLObjectType<PlayerDeathEvent> {
 		CombatDeath = ddl.GetValue<bool>(0x6db58b77u, CombatDeath);
 	}
 
-	[DDLRegistration(0x123b6f37u)]
+	[DDLRegistration(0x40d7aaa7u)]
 	public int ClientIndex { get; set; } = 0;
 
-	[DDLRegistration(0x123b6f37u)]
+	[DDLRegistration(0xf47066afu)]
 	public xc115d639 Team { get; set; } = xc115d639.None;
 
-	[DDLRegistration(0x123b6f37u)]
+	[DDLRegistration(0xe4c61613u)]
 	public bool AnimatedDeath { get; set; } = false;
 
-	[DDLRegistration(0x123b6f37u)]
+	[DDLRegistration(0x6db58b77u)]
 	public bool CombatDeath { get; set; } = false;
 
 	public new static PlayerDeathEvent Create(DDLObject ddl) => new(ddl);

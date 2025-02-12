@@ -18,7 +18,7 @@ public class SoundPropagation2PortalPrius : DDLObjectType, IDDLObjectType<SoundP
 		Params = ddl.GetObject<SoundPropagation2PortalParamsDef>(0xb1b64094u);
 	}
 
-	[DDLRegistration(0x19aab458u)]
+	[DDLRegistration(0xb1b64094u)]
 	public SoundPropagation2PortalParamsDef? Params { get; set; } = default;
 
 	public static SoundPropagation2PortalPrius Create(DDLObject ddl) => new(ddl);

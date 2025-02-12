@@ -27,34 +27,34 @@ public class WeaponItemPrius : GameItemPrius, IDDLObjectType<WeaponItemPrius> {
 		Omega = ddl.GetValue<bool>(0x534a51fbu, Omega);
 	}
 
-	[DDLRegistration(0xa89e9c3cu)]
+	[DDLRegistration(0xf83c9d28u)]
 	public uint XP { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa89e9c3cu)]
+	[DDLRegistration(0x3c536435u)]
 	public float LastCheckpointAmmo { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa89e9c3cu)]
+	[DDLRegistration(0x4977157bu)]
 	public float LoadedAmmo { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa89e9c3cu)]
+	[DDLRegistration(0x0d66824fu)]
 	public ulong SyncedExternalWeaponActor { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xa89e9c3cu)]
+	[DDLRegistration(0x538e324au)]
 	public ulong Mods { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xa89e9c3cu)]
+	[DDLRegistration(0x4ca15474u)]
 	public List<ushort> ModGrid { get; set; } = [];
 
-	[DDLRegistration(0xa89e9c3cu)]
+	[DDLRegistration(0xb86c3a48u)]
 	public List<byte> ModCount { get; set; } = [];
 
-	[DDLRegistration(0xa89e9c3cu)]
+	[DDLRegistration(0x2f1a5c40u)]
 	public byte SelectedCell { get; set; } = 0x00;
 
-	[DDLRegistration(0xa89e9c3cu)]
+	[DDLRegistration(0xe8efbebcu)]
 	public List<uint> Test { get; set; } = [];
 
-	[DDLRegistration(0xa89e9c3cu)]
+	[DDLRegistration(0x534a51fbu)]
 	public bool Omega { get; set; } = false;
 
 	public new static WeaponItemPrius Create(DDLObject ddl) => new(ddl);

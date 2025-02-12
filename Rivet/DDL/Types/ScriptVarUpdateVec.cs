@@ -18,7 +18,7 @@ public class ScriptVarUpdateVec : DDLObjectType, IDDLObjectType<ScriptVarUpdateV
 		Value = ddl.GetObject<DDLVector3>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x04a03a4cu)]
+	[DDLRegistration(0x042494f5u)]
 	public DDLVector3? Value { get; set; } = default;
 
 	public static ScriptVarUpdateVec Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class WeaponBurstCompleteEvent : EventBase, IDDLObjectType<WeaponBurstCom
 		TriggerIndex = ddl.GetValue<uint>(0xee73b5b3u, TriggerIndex);
 	}
 
-	[DDLRegistration(0x723b6962u)]
+	[DDLRegistration(0xee73b5b3u)]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
 	public new static WeaponBurstCompleteEvent Create(DDLObject ddl) => new(ddl);

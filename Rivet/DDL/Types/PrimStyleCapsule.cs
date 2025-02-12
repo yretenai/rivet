@@ -20,13 +20,13 @@ public class PrimStyleCapsule : PrimStyleBase, IDDLObjectType<PrimStyleCapsule> 
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x0afc3e29u)]
+	[DDLRegistration(0xf4af194cu)]
 	public string? LocatorA { get; set; } = default;
 
-	[DDLRegistration(0x0afc3e29u)]
+	[DDLRegistration(0x6da648f6u)]
 	public string? LocatorB { get; set; } = default;
 
-	[DDLRegistration(0x0afc3e29u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
 	public new static PrimStyleCapsule Create(DDLObject ddl) => new(ddl);

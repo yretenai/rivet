@@ -19,10 +19,10 @@ public class SetAllowShaderHighlightsInCinematicsActionPrius : DDLObjectType, ID
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xcb2ef1ecu, description: "Allow the high-contrast background when allowing the shader highlights, and revoke that permission when the flag is cleared.")]
+	[DDLRegistration(0x2836c2f5u, description: "Allow the high-contrast background when allowing the shader highlights, and revoke that permission when the flag is cleared.")]
 	public bool ApplyToHighContrastBackground { get; set; } = true;
 
-	[DDLRegistration(0xcb2ef1ecu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Accessibility;
 
 	public static SetAllowShaderHighlightsInCinematicsActionPrius Create(DDLObject ddl) => new(ddl);

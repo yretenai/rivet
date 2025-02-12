@@ -19,10 +19,10 @@ public class ObjSysGraphSaveData : DDLObjectType, IDDLObjectType<ObjSysGraphSave
 		NodeDataTable = ddl.GetDictionary<uint, ObjSysNodeSaveDataTableEntry>(0xfc6726b8, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<ObjSysNodeSaveDataTableEntry>(mapId));
 	}
 
-	[DDLRegistration(0x1f627715u)]
+	[DDLRegistration(0xc410bd69u)]
 	public ulong GraphAsset { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x1f627715u)]
+	[DDLRegistration(0xfc6726b8u)]
 	public Dictionary<uint, ObjSysNodeSaveDataTableEntry?> NodeDataTable { get; set; } = [];
 
 	public static ObjSysGraphSaveData Create(DDLObject ddl) => new(ddl);

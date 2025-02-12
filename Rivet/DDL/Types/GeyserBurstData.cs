@@ -23,22 +23,22 @@ public class GeyserBurstData : DDLObjectType, IDDLObjectType<GeyserBurstData> {
 		KnockbackAmount = ddl.GetValue<float>(0x7b1e600bu, KnockbackAmount);
 	}
 
-	[DDLRegistration(0x7ab1fd36u, "Height")]
+	[DDLRegistration(0xcb35ab68u, "Height")]
 	public float Height { get; set; } = 5.00f;
 
-	[DDLRegistration(0x7ab1fd36u, "Rise Time")]
+	[DDLRegistration(0x5dfe92f7u, "Rise Time")]
 	public float RiseTime { get; set; } = 0.10f;
 
-	[DDLRegistration(0x7ab1fd36u, "Hold Time")]
+	[DDLRegistration(0x1cb513d0u, "Hold Time")]
 	public float HoldTime { get; set; } = 0.10f;
 
-	[DDLRegistration(0x7ab1fd36u, "Damage")]
+	[DDLRegistration(0x2fb01a0bu, "Damage")]
 	public float Damage { get; set; } = 10.00f;
 
-	[DDLRegistration(0x7ab1fd36u, "Knockback")]
+	[DDLRegistration(0x2e553fddu, "Knockback")]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.Three;
 
-	[DDLRegistration(0x7ab1fd36u, "Knockback Amount")]
+	[DDLRegistration(0x7b1e600bu, "Knockback Amount")]
 	public float KnockbackAmount { get; set; } = 10.00f;
 
 	public static GeyserBurstData Create(DDLObject ddl) => new(ddl);

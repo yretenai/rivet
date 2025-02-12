@@ -19,10 +19,10 @@ public class StatusEffectFireConfig : StatusEffectConfig, IDDLObjectType<StatusE
 		PostCompositeShader = ddl.GetValue<RivetAssetId>(0xe2b72d5fu, PostCompositeShader);
 	}
 
-	[DDLRegistration(0xde7439f7u)]
+	[DDLRegistration(0xd213ce3du)]
 	public float DPS { get; set; } = 10.00f;
 
-	[DDLRegistration(0xde7439f7u)]
+	[DDLRegistration(0xe2b72d5fu)]
 	public RivetAssetId PostCompositeShader { get; set; } = "";
 
 	public new static StatusEffectFireConfig Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class StatusEmitterDamagePrius : StatusEmitterBasePrius, IDDLObjectType<S
 		ApplyToVictim = ddl.GetValue<bool>(0xb1eb8f37u, ApplyToVictim);
 	}
 
-	[DDLRegistration(0x5f516e22u)]
+	[DDLRegistration(0x041c6897u)]
 	public float ProcPercent { get; set; } = 100.00f;
 
-	[DDLRegistration(0x5f516e22u)]
+	[DDLRegistration(0xf91f2cb2u)]
 	public bool ApplyToSelf { get; set; } = false;
 
-	[DDLRegistration(0x5f516e22u)]
+	[DDLRegistration(0xb1eb8f37u)]
 	public bool ApplyToVictim { get; set; } = true;
 
 	public new static StatusEmitterDamagePrius Create(DDLObject ddl) => new(ddl);

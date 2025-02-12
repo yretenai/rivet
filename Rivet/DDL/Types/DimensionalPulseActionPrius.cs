@@ -18,7 +18,7 @@ public class DimensionalPulseActionPrius : DDLObjectType, IDDLObjectType<Dimensi
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xc3c2ed91u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
 	public static DimensionalPulseActionPrius Create(DDLObject ddl) => new(ddl);

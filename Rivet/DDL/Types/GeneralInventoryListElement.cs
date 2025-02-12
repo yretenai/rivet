@@ -18,7 +18,7 @@ public class GeneralInventoryListElement : DDLObjectType, IDDLObjectType<General
 		ItemConfigFile = ddl.GetValue<RivetAssetId>(0x22c4a442u, ItemConfigFile);
 	}
 
-	[DDLRegistration(0xe7ea02c4u)]
+	[DDLRegistration(0x22c4a442u)]
 	public RivetAssetId ItemConfigFile { get; set; } = default;
 
 	public static GeneralInventoryListElement Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class TerrainSystem03EditingTerrain0313 : DDLObjectType, IDDLObjectType<T
 		Line00 = ddl.GetString(0x0f78bf4b) ?? Line00;
 	}
 
-	[DDLRegistration(0xfd54a78eu, description: "This fills a given splatmask layer with a value of 1.")]
+	[DDLRegistration(0x0f78bf4bu, description: "This fills a given splatmask layer with a value of 1.")]
 	public string? Line00 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0313 Create(DDLObject ddl) => new(ddl);

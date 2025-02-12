@@ -18,7 +18,7 @@ public class SimpleSpawnActorAsset : DDLObjectType, IDDLObjectType<SimpleSpawnAc
 		ActorFile = ddl.GetValue<RivetAssetId>(0x1ef60537u, ActorFile);
 	}
 
-	[DDLRegistration(0x9a2ec7dbu, "Actor To Spawn", "Actor from the vault to spawn.")]
+	[DDLRegistration(0x1ef60537u, "Actor To Spawn", "Actor from the vault to spawn.")]
 	public RivetAssetId ActorFile { get; set; } = default;
 
 	public static SimpleSpawnActorAsset Create(DDLObject ddl) => new(ddl);

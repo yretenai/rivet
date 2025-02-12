@@ -18,7 +18,7 @@ public class AnimRateKeyEvent : EventBase, IDDLObjectType<AnimRateKeyEvent> {
 		Rate = ddl.GetValue<float>(0xef7cff89u, Rate);
 	}
 
-	[DDLRegistration(0xebd66470u, "Rate")]
+	[DDLRegistration(0xef7cff89u, "Rate")]
 	public float Rate { get; set; } = 0.00f;
 
 	public new static AnimRateKeyEvent Create(DDLObject ddl) => new(ddl);

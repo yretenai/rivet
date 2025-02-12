@@ -19,10 +19,10 @@ public class ModelSplineEnvelopeColorDef : DDLObjectType, IDDLObjectType<ModelSp
 		Envelope = ddl.GetObject<EnvelopeColorDef>(0x7094c518u);
 	}
 
-	[DDLRegistration(0xb662a5d3u)]
+	[DDLRegistration(0x950d56d7u)]
 	public DDLVector3? BaseValue { get; set; } = default;
 
-	[DDLRegistration(0xb662a5d3u)]
+	[DDLRegistration(0x7094c518u)]
 	public EnvelopeColorDef? Envelope { get; set; } = default;
 
 	public static ModelSplineEnvelopeColorDef Create(DDLObject ddl) => new(ddl);

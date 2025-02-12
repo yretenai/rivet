@@ -18,7 +18,7 @@ public class OnCloseEvent : EventBase, IDDLObjectType<OnCloseEvent> {
 		SourceSyncId = ddl.GetValue<ulong>(0xe5a8f223u, SourceSyncId);
 	}
 
-	[DDLRegistration(0x9fda4a4du)]
+	[DDLRegistration(0xe5a8f223u)]
 	public ulong SourceSyncId { get; set; } = 0x0000000000000000;
 
 	public new static OnCloseEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class BreakableDeactivateGroupPrius : DDLObjectType, IDDLObjectType<Break
 		ActorList = ddl.GetValues<RivetAssetId>(0xd6a1cb3fu);
 	}
 
-	[DDLRegistration(0x52125a76u, "Actors")]
+	[DDLRegistration(0xd6a1cb3fu, "Actors")]
 	public List<RivetAssetId> ActorList { get; set; } = [];
 
 	public static BreakableDeactivateGroupPrius Create(DDLObject ddl) => new(ddl);

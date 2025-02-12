@@ -18,7 +18,7 @@ public class PyrocitorShotPrius : BeamShotPrius, IDDLObjectType<PyrocitorShotPri
 		DamagePerSecond = ddl.GetValue<float>(0x287ed02au, DamagePerSecond);
 	}
 
-	[DDLRegistration(0xaab01636u)]
+	[DDLRegistration(0x287ed02au)]
 	public float DamagePerSecond { get; set; } = 1.00f;
 
 	public new static PyrocitorShotPrius Create(DDLObject ddl) => new(ddl);

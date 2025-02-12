@@ -18,7 +18,7 @@ public class FormationMotionConfig : ConfigBase, IDDLObjectType<FormationMotionC
 		MotionType = ddl.GetObject<FormationMotionBase>(0x7b43320eu);
 	}
 
-	[DDLRegistration(0x31903d6du)]
+	[DDLRegistration(0x7b43320eu)]
 	public FormationMotionBase? MotionType { get; set; } = default;
 
 	public new static FormationMotionConfig Create(DDLObject ddl) => new(ddl);

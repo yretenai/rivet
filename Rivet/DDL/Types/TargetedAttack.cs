@@ -22,19 +22,19 @@ public class TargetedAttack : DDLObjectType, IDDLObjectType<TargetedAttack> {
 		LastPlayedTime = ddl.GetValue<float>(0x571a81efu, LastPlayedTime);
 	}
 
-	[DDLRegistration(0x9e06395cu, description: "Name of the anim driver to play this attack")]
+	[DDLRegistration(0x28523c32u, description: "Name of the anim driver to play this attack")]
 	public string? AttackAnim { get; set; } = default;
 
-	[DDLRegistration(0x9e06395cu)]
+	[DDLRegistration(0xc4633319u)]
 	public TargetedAttackShape? Shape { get; set; } = default;
 
-	[DDLRegistration(0x9e06395cu, description: "We need to wait this amount of time before we can trigger this attack again.")]
+	[DDLRegistration(0x246291a9u, description: "We need to wait this amount of time before we can trigger this attack again.")]
 	public float Cooldown { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9e06395cu, description: "This is the layer this anim plays on. 0 = full body and will be started via a botstate. Otherwise the AttackTargeter will start the animation automatically.")]
+	[DDLRegistration(0xfd88eddbu, description: "This is the layer this anim plays on. 0 = full body and will be started via a botstate. Otherwise the AttackTargeter will start the animation automatically.")]
 	public uint Layer { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9e06395cu)]
+	[DDLRegistration(0x571a81efu)]
 	public float LastPlayedTime { get; set; } = -1000.00f;
 
 	public static TargetedAttack Create(DDLObject ddl) => new(ddl);

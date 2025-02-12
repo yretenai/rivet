@@ -32,49 +32,49 @@ public class AnimLookAtPrius : LookAtPrius, IDDLObjectType<AnimLookAtPrius> {
 		LookAtMaxSpeed = ddl.GetValue<float>(0x89a1bc60u, LookAtMaxSpeed);
 	}
 
-	[DDLRegistration(0xf26dc789u, "Head Joint Name", "The name of the head joint (used for determining look angle).")]
+	[DDLRegistration(0x20fa4f77u, "Head Joint Name", "The name of the head joint (used for determining look angle).")]
 	public string? HeadJointName { get; set; } = "joint_head";
 
-	[DDLRegistration(0xf26dc789u, "Head Joint Offset", "Offset position of the head joint (in object space) in order to make our look position be better (generally, at eye-level, between the eyes).")]
+	[DDLRegistration(0x7f29ee7bu, "Head Joint Offset", "Offset position of the head joint (in object space) in order to make our look position be better (generally, at eye-level, between the eyes).")]
 	public DDLVector3? HeadJointOffset { get; set; } = default;
 
-	[DDLRegistration(0xf26dc789u, "(Opt) Look Anim", "Optional anim driver to switch to when we a target is in range and we are looking at them. Will switch back to whatever anim was playing when out of range.")]
+	[DDLRegistration(0x6dad3e32u, "(Opt) Look Anim", "Optional anim driver to switch to when we a target is in range and we are looking at them. Will switch back to whatever anim was playing when out of range.")]
 	public string? LookActiveAnim { get; set; } = default;
 
-	[DDLRegistration(0xf26dc789u, "(Opt) No Look Anim", "Animation to play when we've lost all targets and aren't looking at anything anymore.")]
+	[DDLRegistration(0xbef64032u, "(Opt) No Look Anim", "Animation to play when we've lost all targets and aren't looking at anything anymore.")]
 	public string? LookInactiveAnim { get; set; } = default;
 
-	[DDLRegistration(0xf26dc789u, "Normalized angles?", "Whether or not to normalize angles (0-1) so that the Head_Aim_Horizontal/Vertical ranges are 0-1 (useful for aim animations and not pose blends).")]
+	[DDLRegistration(0x3680922fu, "Normalized angles?", "Whether or not to normalize angles (0-1) so that the Head_Aim_Horizontal/Vertical ranges are 0-1 (useful for aim animations and not pose blends).")]
 	public bool UseNormAngles { get; set; } = false;
 
-	[DDLRegistration(0xf26dc789u, "Norm. Horiz. Aim  Var Angle", "If normalizing the angles, we need to know the horizontal aim angle (we are assuming that the min and max horizontal aim angles are the same).")]
+	[DDLRegistration(0xad7be7c4u, "Norm. Horiz. Aim  Var Angle", "If normalizing the angles, we need to know the horizontal aim angle (we are assuming that the min and max horizontal aim angles are the same).")]
 	public float NormAimAngleHoriz { get; set; } = 60.00f;
 
-	[DDLRegistration(0xf26dc789u, "Norm. Vert. Aim Var Angle", "If normalizing the angles, we need to know the vertical aim angle (we are assuming that the min and max vertical aim angles are the same).")]
+	[DDLRegistration(0xc2384bb3u, "Norm. Vert. Aim Var Angle", "If normalizing the angles, we need to know the vertical aim angle (we are assuming that the min and max vertical aim angles are the same).")]
 	public float NormAimAngleVert { get; set; } = 45.00f;
 
-	[DDLRegistration(0xf26dc789u, "Horiz. Max Aim Angle", "The max horizontal aim angle (in degrees) to use (how far to the left the character can look).")]
+	[DDLRegistration(0x826faee6u, "Horiz. Max Aim Angle", "The max horizontal aim angle (in degrees) to use (how far to the left the character can look).")]
 	public float MaxAimAngleHoriz { get; set; } = 90.00f;
 
-	[DDLRegistration(0xf26dc789u, "Horiz. Min Aim Angle", "The min horizontal aim angle (in degrees) to use (how far to the right the character can look).")]
+	[DDLRegistration(0xd39615bbu, "Horiz. Min Aim Angle", "The min horizontal aim angle (in degrees) to use (how far to the right the character can look).")]
 	public float MinAimAngleHoriz { get; set; } = -90.00f;
 
-	[DDLRegistration(0xf26dc789u, "Vert. Max Aim Angle", "The max vertical aim angle (in degrees) to use (how far up the character can look).")]
+	[DDLRegistration(0xb90dee8fu, "Vert. Max Aim Angle", "The max vertical aim angle (in degrees) to use (how far up the character can look).")]
 	public float MaxAimAngleVert { get; set; } = 90.00f;
 
-	[DDLRegistration(0xf26dc789u, "Vert. Min Aim Angle", "The min vertical aim angle (in degrees) to use (how far down the character can look).")]
+	[DDLRegistration(0x9eb689beu, "Vert. Min Aim Angle", "The min vertical aim angle (in degrees) to use (how far down the character can look).")]
 	public float MinAimAngleVert { get; set; } = -90.00f;
 
-	[DDLRegistration(0xf26dc789u, "Ignore Past Angle", "Ignore looking at targets that are further than this angle (0-180) away from the default head joint's forward.")]
+	[DDLRegistration(0x473f7d59u, "Ignore Past Angle", "Ignore looking at targets that are further than this angle (0-180) away from the default head joint's forward.")]
 	public float IgnoreAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf26dc789u, "Look At Accel", "The speed at which we will start turning to look at our target")]
+	[DDLRegistration(0xbaf2964bu, "Look At Accel", "The speed at which we will start turning to look at our target")]
 	public float LookAtAccel { get; set; } = 2.50f;
 
-	[DDLRegistration(0xf26dc789u, "Look At Decel", "The speed at which we will slow down when turning and close to looking at our target")]
+	[DDLRegistration(0x577946e7u, "Look At Decel", "The speed at which we will slow down when turning and close to looking at our target")]
 	public float LookAtDecel { get; set; } = 2.50f;
 
-	[DDLRegistration(0xf26dc789u, "Look At Max Speed", "The max speed at which we will turn to look at our target")]
+	[DDLRegistration(0x89a1bc60u, "Look At Max Speed", "The max speed at which we will turn to look at our target")]
 	public float LookAtMaxSpeed { get; set; } = 5.00f;
 
 	public new static AnimLookAtPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MeshUColorDef : DDLObjectType, IDDLObjectType<MeshUColorDef> {
 		Color = ddl.GetValues<float>(0x7f058428u);
 	}
 
-	[DDLRegistration(0xe050b15bu)]
+	[DDLRegistration(0x7f058428u)]
 	public List<float> Color { get; set; } = [];
 
 	public static MeshUColorDef Create(DDLObject ddl) => new(ddl);

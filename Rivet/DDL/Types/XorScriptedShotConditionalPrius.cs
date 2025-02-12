@@ -19,10 +19,10 @@ public class XorScriptedShotConditionalPrius : ScriptedShotConditionalBasePrius,
 		Cond2 = ddl.GetObject<ScriptedShotConditionalBasePrius>(0xe9a9c81du);
 	}
 
-	[DDLRegistration(0xff72affdu)]
+	[DDLRegistration(0x70a099a7u)]
 	public ScriptedShotConditionalBasePrius? Cond1 { get; set; } = default;
 
-	[DDLRegistration(0xff72affdu)]
+	[DDLRegistration(0xe9a9c81du)]
 	public ScriptedShotConditionalBasePrius? Cond2 { get; set; } = default;
 
 	public new static XorScriptedShotConditionalPrius Create(DDLObject ddl) => new(ddl);

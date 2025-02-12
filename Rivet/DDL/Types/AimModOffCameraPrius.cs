@@ -19,10 +19,10 @@ public class AimModOffCameraPrius : AimModifierPrius, IDDLObjectType<AimModOffCa
 		MissDist = ddl.GetValue<float>(0xf92d9be0u, MissDist);
 	}
 
-	[DDLRegistration(0x5456ba29u, description: "How long to miss each new target.")]
+	[DDLRegistration(0x17c5d352u, description: "How long to miss each new target.")]
 	public float MissTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x5456ba29u, description: "How far to miss.")]
+	[DDLRegistration(0xf92d9be0u, description: "How far to miss.")]
 	public float MissDist { get; set; } = 2.00f;
 
 	public new static AimModOffCameraPrius Create(DDLObject ddl) => new(ddl);

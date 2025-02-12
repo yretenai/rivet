@@ -19,10 +19,10 @@ public class ShuffleStartEvent : EventBase, IDDLObjectType<ShuffleStartEvent> {
 		Range = ddl.GetValue<byte>(0x8ad49688u, Range);
 	}
 
-	[DDLRegistration(0x2a99be50u)]
+	[DDLRegistration(0xbcb74ebfu)]
 	public byte Direction { get; set; } = 0x00;
 
-	[DDLRegistration(0x2a99be50u)]
+	[DDLRegistration(0x8ad49688u)]
 	public byte Range { get; set; } = 0x00;
 
 	public new static ShuffleStartEvent Create(DDLObject ddl) => new(ddl);

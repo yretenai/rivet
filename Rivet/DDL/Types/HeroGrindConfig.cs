@@ -33,52 +33,52 @@ public class HeroGrindConfig : ConfigBase, IDDLObjectType<HeroGrindConfig> {
 		FastSpeedThresholdPercent = ddl.GetValue<float>(0x8c9c0696u, FastSpeedThresholdPercent);
 	}
 
-	[DDLRegistration(0xf4ecbe5cu)]
+	[DDLRegistration(0x091f7edfu)]
 	public GrindMoveData? MoveData { get; set; } = default;
 
-	[DDLRegistration(0xf4ecbe5cu)]
+	[DDLRegistration(0x21158bf7u)]
 	public GrindSlopeData? SlopeData { get; set; } = default;
 
-	[DDLRegistration(0xf4ecbe5cu)]
+	[DDLRegistration(0xf4747b90u)]
 	public GrindVolumeApproachData? GapApproachData { get; set; } = default;
 
-	[DDLRegistration(0xf4ecbe5cu)]
+	[DDLRegistration(0x84803ab7u)]
 	public GrindVolumeApproachData? HazardApproachData { get; set; } = default;
 
-	[DDLRegistration(0xf4ecbe5cu, description: "Minimum time slow scale to apply for accessibility while approaching a gap/hazard.")]
+	[DDLRegistration(0xeb4be193u, description: "Minimum time slow scale to apply for accessibility while approaching a gap/hazard.")]
 	public float MinAccessibilityTimeSlowScale { get; set; } = 0.25f;
 
-	[DDLRegistration(0xf4ecbe5cu)]
+	[DDLRegistration(0xb610c5e4u)]
 	public RivetAssetId CameraShakeConfig { get; set; } = default;
 
-	[DDLRegistration(0xf4ecbe5cu, description: "Horizontal distance you can be from a grindrail to detect as landing on it")]
+	[DDLRegistration(0x5c6e5f5eu, description: "Horizontal distance you can be from a grindrail to detect as landing on it")]
 	public float GrindHorizontalTolerance { get; set; } = 0.65f;
 
-	[DDLRegistration(0xf4ecbe5cu, description: "Vertical distance you can be from a grindrail to detect as landing on it")]
+	[DDLRegistration(0xd0ba2734u, description: "Vertical distance you can be from a grindrail to detect as landing on it")]
 	public float GrindVerticalTolerance { get; set; } = 0.65f;
 
-	[DDLRegistration(0xf4ecbe5cu, description: "If the angle between the camera the grind is at most this, then the grind will prefer the camera angle over the player facing")]
+	[DDLRegistration(0xa8141602u, description: "If the angle between the camera the grind is at most this, then the grind will prefer the camera angle over the player facing")]
 	public float GrindPreferCameraAngleTol { get; set; } = 70.00f;
 
-	[DDLRegistration(0xf4ecbe5cu, description: "If you are preferring the camera angle to the player angle, you will prefer it by this amount")]
+	[DDLRegistration(0x04329063u, description: "If you are preferring the camera angle to the player angle, you will prefer it by this amount")]
 	public float GrindPreferPlayerAngleTol { get; set; } = 45.00f;
 
-	[DDLRegistration(0xf4ecbe5cu)]
+	[DDLRegistration(0x9e7be45au)]
 	public float GrindForwardToleranceJump { get; set; } = 8.50f;
 
-	[DDLRegistration(0xf4ecbe5cu)]
+	[DDLRegistration(0xfc77dd41u)]
 	public float GrindVerticalToleranceJump { get; set; } = 2.00f;
 
-	[DDLRegistration(0xf4ecbe5cu)]
+	[DDLRegistration(0x712b2679u)]
 	public float GrindHorizontalMinimumJump { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf4ecbe5cu)]
+	[DDLRegistration(0xbd265d76u)]
 	public float GrindHorizontalMaximumJump { get; set; } = 4.50f;
 
-	[DDLRegistration(0xf4ecbe5cu, description: "How far into the future to look for wall jump transfers. (seconds)")]
+	[DDLRegistration(0x9b62e55cu, description: "How far into the future to look for wall jump transfers. (seconds)")]
 	public float WallRunTransferLookAheadTime { get; set; } = 0.30f;
 
-	[DDLRegistration(0xf4ecbe5cu, description: "The percent of SpeedMax to treat as a threshold for GrindWooshOn/Off events. Range [0,1].")]
+	[DDLRegistration(0x8c9c0696u, description: "The percent of SpeedMax to treat as a threshold for GrindWooshOn/Off events. Range [0,1].")]
 	public float FastSpeedThresholdPercent { get; set; } = 0.80f;
 
 	public new static HeroGrindConfig Create(DDLObject ddl) => new(ddl);

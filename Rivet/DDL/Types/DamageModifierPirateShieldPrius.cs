@@ -23,22 +23,22 @@ public class DamageModifierPirateShieldPrius : DDLObjectType, IDDLObjectType<Dam
 		StartEnabled = ddl.GetValue<bool>(0x6f36ca8bu, StartEnabled);
 	}
 
-	[DDLRegistration(0x99471af4u)]
+	[DDLRegistration(0x946e89deu)]
 	public List<ShieldSectionData?> ShieldSection { get; set; } = [];
 
-	[DDLRegistration(0x99471af4u)]
+	[DDLRegistration(0xc7cde2a9u)]
 	public string? FrameLook { get; set; } = default;
 
-	[DDLRegistration(0x99471af4u)]
+	[DDLRegistration(0xcd95b826u)]
 	public float ShieldSectionHealth { get; set; } = 1.00f;
 
-	[DDLRegistration(0x99471af4u)]
+	[DDLRegistration(0x1124259au)]
 	public RivetAssetId ShieldedAnimset { get; set; } = default;
 
-	[DDLRegistration(0x99471af4u)]
+	[DDLRegistration(0x175c672du)]
 	public List<string?> ShieldChunkLooks { get; set; } = [];
 
-	[DDLRegistration(0x99471af4u)]
+	[DDLRegistration(0x6f36ca8bu)]
 	public bool StartEnabled { get; set; } = true;
 
 	public static DamageModifierPirateShieldPrius Create(DDLObject ddl) => new(ddl);

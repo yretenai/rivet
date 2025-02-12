@@ -35,58 +35,58 @@ public class MaterialNode : DDLObjectType, IDDLObjectType<MaterialNode> {
 		Hidden = ddl.GetValue<bool>(0xb625a7dau, Hidden);
 	}
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x3d19ee29u)]
 	public List<MaterialNodeInputPort?> Inputs { get; set; } = [];
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x0d9fcc64u)]
 	public List<MaterialNodeOutputPort?> Outputs { get; set; } = [];
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0xac154eb9u)]
 	public string? ShaderGBufferEntry { get; set; } = default;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x7948822au)]
 	public string? ShaderColorEntry { get; set; } = default;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x038a0410u)]
 	public string? ShaderGlobalDecl { get; set; } = default;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x7ff1de5eu)]
 	public bool ForceVelocityPass { get; set; } = false;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0xf7526973u)]
 	public bool ForceForwardPass { get; set; } = false;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0xe629d494u)]
 	public bool ForceHQFrameGrab { get; set; } = false;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x1837e13bu)]
 	public bool TestingOnly { get; set; } = false;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x12caaa51u)]
 	public bool NoPreview { get; set; } = false;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x4f2f6752u)]
 	public string? CustomBRDF { get; set; } = default;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x6ac0d3ceu)]
 	public uint ShaderLoD { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x4785f028u)]
 	public string? Code { get; set; } = default;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x4cac4baeu)]
 	public string? Documentation { get; set; } = default;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0x02129664u)]
 	public byte TexturePriority { get; set; } = 0x00;
 
-	[DDLRegistration(0x1d927af7u)]
+	[DDLRegistration(0xb625a7dau)]
 	public bool Hidden { get; set; } = false;
 
 	public static MaterialNode Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class HeroBreakableHaloPrius : DDLObjectType, IDDLObjectType<HeroBreakabl
 		TargetTypeMask = ddl.GetValue<uint>(0x842f58f1u, TargetTypeMask);
 	}
 
-	[DDLRegistration(0x5cb19c01u)]
+	[DDLRegistration(0xefbd9dd0u)]
 	public float MaxValidRange { get; set; } = 8.00f;
 
-	[DDLRegistration(0x5cb19c01u)]
+	[DDLRegistration(0x842f58f1u)]
 	public uint TargetTypeMask { get; set; } = 0xffffffff;
 
 	public static HeroBreakableHaloPrius Create(DDLObject ddl) => new(ddl);

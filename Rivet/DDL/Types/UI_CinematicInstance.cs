@@ -20,13 +20,13 @@ public class UI_CinematicInstance : DDLObjectType, IDDLObjectType<UI_CinematicIn
 		Zone = ddl.GetObject<UI_CinematicInstanceZone>(0x907b00b7u);
 	}
 
-	[DDLRegistration(0x52639b9du)]
+	[DDLRegistration(0xcb033e5bu)]
 	public UI_Cinematic2ComponentPrius? Component { get; set; } = default;
 
-	[DDLRegistration(0x52639b9du)]
+	[DDLRegistration(0x311abf11u)]
 	public UI_CinematicInstanceRegion? Region { get; set; } = default;
 
-	[DDLRegistration(0x52639b9du)]
+	[DDLRegistration(0x907b00b7u)]
 	public UI_CinematicInstanceZone? Zone { get; set; } = default;
 
 	public static UI_CinematicInstance Create(DDLObject ddl) => new(ddl);

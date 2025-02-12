@@ -25,28 +25,28 @@ public class LedgeBirdTypeConfig : ConfigBase, IDDLObjectType<LedgeBirdTypeConfi
 		FlockSoundSource = ddl.GetObject<SoundSourceComponentPrius>(0xd8e09e63u);
 	}
 
-	[DDLRegistration(0x8ae5d833u, "Bird Asset", "This is the bird actor asset to spawn on ledge paths in front of the hero.")]
+	[DDLRegistration(0x341b971bu, "Bird Asset", "This is the bird actor asset to spawn on ledge paths in front of the hero.")]
 	public RivetAssetId BirdAsset { get; set; } = default;
 
-	[DDLRegistration(0x8ae5d833u, "Bird Physics Size", "A ledge bird may only spawn somewhere that has enough clearance. The static sphere check will have this radius.")]
+	[DDLRegistration(0x712c0901u, "Bird Physics Size", "A ledge bird may only spawn somewhere that has enough clearance. The static sphere check will have this radius.")]
 	public float BirdPhysicsSize { get; set; } = 0.20f;
 
-	[DDLRegistration(0x8ae5d833u, "Bird Physics Offset Y", "A ledge bird may only spawn somewhere that has enough clearance. The center of the static sphere check will be this much higher than the curve position.")]
+	[DDLRegistration(0x746ad72au, "Bird Physics Offset Y", "A ledge bird may only spawn somewhere that has enough clearance. The center of the static sphere check will be this much higher than the curve position.")]
 	public float BirdPhysicsOffsetY { get; set; } = 0.25f;
 
-	[DDLRegistration(0x8ae5d833u, "Min Bird Spacing", "There must be at least this much space between birds on a ledge path.")]
+	[DDLRegistration(0x229368b1u, "Min Bird Spacing", "There must be at least this much space between birds on a ledge path.")]
 	public float MinBirdSpacing { get; set; } = 0.30f;
 
-	[DDLRegistration(0x8ae5d833u, "Max Bird Spacing", "There may be at most this much space between birds on a ledge path.")]
+	[DDLRegistration(0x9bb5f3c0u, "Max Bird Spacing", "There may be at most this much space between birds on a ledge path.")]
 	public float MaxBirdSpacing { get; set; } = 0.65f;
 
-	[DDLRegistration(0x8ae5d833u, "Flock Radius", "Each chosen ledge flock of this type must be at least this distance away from other chosen ledge flocks.")]
+	[DDLRegistration(0x4cfc634fu, "Flock Radius", "Each chosen ledge flock of this type must be at least this distance away from other chosen ledge flocks.")]
 	public float FlockRadius { get; set; } = 4.00f;
 
-	[DDLRegistration(0x8ae5d833u, "Max Birds Per Ledge", "Don't spawn more than this many birds on each ledge, even if the ledge can support more.")]
+	[DDLRegistration(0x630e0b1eu, "Max Birds Per Ledge", "Don't spawn more than this many birds on each ledge, even if the ledge can support more.")]
 	public int MaxBirdsPerLedge { get; set; } = 5;
 
-	[DDLRegistration(0x8ae5d833u, "SoundSourceComponentPrius", "This is the sound source component used for the flock. Only one sound source is created (at the average position of the flock).")]
+	[DDLRegistration(0xd8e09e63u, "SoundSourceComponentPrius", "This is the sound source component used for the flock. Only one sound source is created (at the average position of the flock).")]
 	public SoundSourceComponentPrius? FlockSoundSource { get; set; } = default;
 
 	public new static LedgeBirdTypeConfig Create(DDLObject ddl) => new(ddl);

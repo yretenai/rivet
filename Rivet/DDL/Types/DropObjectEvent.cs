@@ -19,10 +19,10 @@ public class DropObjectEvent : EventBase, IDDLObjectType<DropObjectEvent> {
 		Dropper = ddl.GetValue<uint>(0x27b8dfd8u, Dropper);
 	}
 
-	[DDLRegistration(0xcdf65d0du)]
+	[DDLRegistration(0x5bb9a511u)]
 	public uint ObjectHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcdf65d0du)]
+	[DDLRegistration(0x27b8dfd8u)]
 	public uint Dropper { get; set; } = 0x00000000;
 
 	public new static DropObjectEvent Create(DDLObject ddl) => new(ddl);

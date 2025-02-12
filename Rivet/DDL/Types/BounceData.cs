@@ -25,28 +25,28 @@ public class BounceData : DDLObjectType, IDDLObjectType<BounceData> {
 		MinBounceSpeed = ddl.GetValue<float>(0xcbfe3d0fu, MinBounceSpeed);
 	}
 
-	[DDLRegistration(0xa27a02b3u, "Env Roll Bounce Scale")]
+	[DDLRegistration(0xc1e53f68u, "Env Roll Bounce Scale")]
 	public float RollBounceScale { get; set; } = 0.70f;
 
-	[DDLRegistration(0xa27a02b3u, "Env Flat Bounce Scale")]
+	[DDLRegistration(0xd781f505u, "Env Flat Bounce Scale")]
 	public float FlatHitBounceScale { get; set; } = 0.70f;
 
-	[DDLRegistration(0xa27a02b3u, "Env Bounce Gravity")]
+	[DDLRegistration(0xa87f87bau, "Env Bounce Gravity")]
 	public float EnvironmentHitGravity { get; set; } = 10.00f;
 
-	[DDLRegistration(0xa27a02b3u, "Actor Roll Bounce Scale")]
+	[DDLRegistration(0x188f7915u, "Actor Roll Bounce Scale")]
 	public float ActorRollBounceScale { get; set; } = 0.70f;
 
-	[DDLRegistration(0xa27a02b3u, "Actor Flat Bounce Scale")]
+	[DDLRegistration(0x80ec6e1au, "Actor Flat Bounce Scale")]
 	public float ActorFlatHitBounceScale { get; set; } = 0.70f;
 
-	[DDLRegistration(0xa27a02b3u, "Actor Bounce Gravity")]
+	[DDLRegistration(0xcb34d143u, "Actor Bounce Gravity")]
 	public float ActorBounceGravity { get; set; } = 10.00f;
 
-	[DDLRegistration(0xa27a02b3u, "Rotation Scale")]
+	[DDLRegistration(0x06f3566cu, "Rotation Scale")]
 	public float RotationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa27a02b3u, "Min Bounce Speed")]
+	[DDLRegistration(0xcbfe3d0fu, "Min Bounce Speed")]
 	public float MinBounceSpeed { get; set; } = 0.00f;
 
 	public static BounceData Create(DDLObject ddl) => new(ddl);

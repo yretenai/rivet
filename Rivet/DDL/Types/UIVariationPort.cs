@@ -19,10 +19,10 @@ public class UIVariationPort : DDLObjectType, IDDLObjectType<UIVariationPort> {
 		Conditions = ddl.GetValues<uint>(0x2f505790u);
 	}
 
-	[DDLRegistration(0xff43e949u)]
+	[DDLRegistration(0x80850167u)]
 	public List<string?> Variations { get; set; } = [];
 
-	[DDLRegistration(0xff43e949u)]
+	[DDLRegistration(0x2f505790u)]
 	public List<uint> Conditions { get; set; } = [];
 
 	public static UIVariationPort Create(DDLObject ddl) => new(ddl);

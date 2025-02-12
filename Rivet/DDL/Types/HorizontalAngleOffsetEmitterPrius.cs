@@ -19,10 +19,10 @@ public class HorizontalAngleOffsetEmitterPrius : LocalOffsetEmitterPrius, IDDLOb
 		OffsetDegrees = ddl.GetValue<float>(0xd8d3e193u, OffsetDegrees);
 	}
 
-	[DDLRegistration(0x218e3a54u, description: "If TRUE, instead of modifying the emit direction, we set the auxiliary direction for the shot")]
+	[DDLRegistration(0x7f43ee2cu, description: "If TRUE, instead of modifying the emit direction, we set the auxiliary direction for the shot")]
 	public bool UseAuxiliaryDirection { get; set; } = false;
 
-	[DDLRegistration(0x218e3a54u, description: "How far of an angular offset to fire relative to our target")]
+	[DDLRegistration(0xd8d3e193u, description: "How far of an angular offset to fire relative to our target")]
 	public float OffsetDegrees { get; set; } = 90.00f;
 
 	public new static HorizontalAngleOffsetEmitterPrius Create(DDLObject ddl) => new(ddl);

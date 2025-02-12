@@ -18,7 +18,7 @@ public class TimeScaleChannelStartEvent : EventBase, IDDLObjectType<TimeScaleCha
 		ChannelHash = ddl.GetValue<uint>(0xec985263u, ChannelHash);
 	}
 
-	[DDLRegistration(0x746f85e0u)]
+	[DDLRegistration(0xec985263u)]
 	public uint ChannelHash { get; set; } = 0x00000000;
 
 	public new static TimeScaleChannelStartEvent Create(DDLObject ddl) => new(ddl);

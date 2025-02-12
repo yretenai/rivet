@@ -19,10 +19,10 @@ public class ObjSysUnlockSequenceOverride : DDLObjectType, IDDLObjectType<ObjSys
 		Unlocks = ddl.GetObject<ObjSysUnlockArray>(0x2a3bb76au);
 	}
 
-	[DDLRegistration(0x54c5c89cu)]
+	[DDLRegistration(0x28a0e6d3u)]
 	public List<ObjSysUnlockOverrideConditionEntry?> OverrideConditions { get; set; } = [];
 
-	[DDLRegistration(0x54c5c89cu)]
+	[DDLRegistration(0x2a3bb76au)]
 	public ObjSysUnlockArray? Unlocks { get; set; } = default;
 
 	public static ObjSysUnlockSequenceOverride Create(DDLObject ddl) => new(ddl);

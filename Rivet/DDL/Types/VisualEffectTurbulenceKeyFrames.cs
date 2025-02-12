@@ -22,19 +22,19 @@ public class VisualEffectTurbulenceKeyFrames : DDLObjectType, IDDLObjectType<Vis
 		Frequency = ddl.GetValue<float>(0xa482271fu, Frequency);
 	}
 
-	[DDLRegistration(0x79321cacu, "Loop")]
+	[DDLRegistration(0xe15c9369u, "Loop")]
 	public bool EnableLooping { get; set; } = true;
 
-	[DDLRegistration(0x79321cacu, "Use Emitter Age")]
+	[DDLRegistration(0x81d6b7fcu, "Use Emitter Age")]
 	public bool UseEmitterAge { get; set; } = false;
 
-	[DDLRegistration(0x79321cacu, "LifeTime Override")]
+	[DDLRegistration(0x580128bbu, "LifeTime Override")]
 	public float LifeTimeOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0x79321cacu, "Scales")]
+	[DDLRegistration(0x042494f5u, "Scales")]
 	public DDLVector3? Value { get; set; } = default;
 
-	[DDLRegistration(0x79321cacu, "Frequency")]
+	[DDLRegistration(0xa482271fu, "Frequency")]
 	public float Frequency { get; set; } = 1.00f;
 
 	public static VisualEffectTurbulenceKeyFrames Create(DDLObject ddl) => new(ddl);

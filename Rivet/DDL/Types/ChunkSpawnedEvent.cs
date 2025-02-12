@@ -20,13 +20,13 @@ public class ChunkSpawnedEvent : EventBase, IDDLObjectType<ChunkSpawnedEvent> {
 		IsSourceActor = ddl.GetValue<bool>(0xdebf957bu, IsSourceActor);
 	}
 
-	[DDLRegistration(0xdda5442eu)]
+	[DDLRegistration(0xad8c1e16u)]
 	public string? LookName { get; set; } = default;
 
-	[DDLRegistration(0xdda5442eu)]
+	[DDLRegistration(0x943f6b5cu)]
 	public bool IsLookGroup { get; set; } = false;
 
-	[DDLRegistration(0xdda5442eu)]
+	[DDLRegistration(0xdebf957bu)]
 	public bool IsSourceActor { get; set; } = false;
 
 	public new static ChunkSpawnedEvent Create(DDLObject ddl) => new(ddl);

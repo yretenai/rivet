@@ -21,16 +21,16 @@ public class ScatteringSettingsDef : DDLObjectType, IDDLObjectType<ScatteringSet
 		MieAlbedo = ddl.GetObject<DDLVector3>(0x449b922fu);
 	}
 
-	[DDLRegistration(0xe3984ddeu)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0xe3984ddeu)]
+	[DDLRegistration(0xde0d4f56u)]
 	public float RayleighDensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe3984ddeu)]
+	[DDLRegistration(0xe617acb7u)]
 	public float MieDensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe3984ddeu)]
+	[DDLRegistration(0x449b922fu)]
 	public DDLVector3? MieAlbedo { get; set; } = default;
 
 	public static ScatteringSettingsDef Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class DialogEvent : SoundEvent, IDDLObjectType<DialogEvent> {
 		PlayOnlyOnAuthority = ddl.GetValue<bool>(0x68d7984cu, PlayOnlyOnAuthority);
 	}
 
-	[DDLRegistration(0xb3badb74u, description: "Unique ID for matching up with callbacks")]
+	[DDLRegistration(0x32ca55d0u, description: "Unique ID for matching up with callbacks")]
 	public uint UniqueId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb3badb74u, description: "Localization enum used by Emergent VO system")]
+	[DDLRegistration(0x152754cbu, description: "Localization enum used by Emergent VO system")]
 	public uint LineIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb3badb74u)]
+	[DDLRegistration(0x3446b219u)]
 	public uint LocalizationTag { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb3badb74u, description: "Hash of the local hero name if this dialog is to be played only when a specific hero is local authority.")]
+	[DDLRegistration(0xc56ca2f0u, description: "Hash of the local hero name if this dialog is to be played only when a specific hero is local authority.")]
 	public uint LocalHeroNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb3badb74u, description: "Log the frame when the event was queued(for runtime control - not external use).")]
+	[DDLRegistration(0x7b25bd34u, description: "Log the frame when the event was queued(for runtime control - not external use).")]
 	public uint QueuedFrameNum { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb3badb74u, description: "The start offset of the dialog line to play (for scrubbing cinematics - not external use).")]
+	[DDLRegistration(0xcde814bau, description: "The start offset of the dialog line to play (for scrubbing cinematics - not external use).")]
 	public float SeekOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb3badb74u, description: "Dialog start time.")]
+	[DDLRegistration(0x0c5bae2bu, description: "Dialog start time.")]
 	public float StartTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb3badb74u, description: "If pause event doesn't stop sound, keep subtitles in sync")]
+	[DDLRegistration(0x400d89e9u, description: "If pause event doesn't stop sound, keep subtitles in sync")]
 	public bool TickSubtitlesOnPause { get; set; } = false;
 
-	[DDLRegistration(0xb3badb74u, description: "Don't trigger the auto generated anim performance")]
+	[DDLRegistration(0xb6a05139u, description: "Don't trigger the auto generated anim performance")]
 	public bool IgnoreAnimPerformance { get; set; } = false;
 
-	[DDLRegistration(0xb3badb74u, description: "Only play this sound on the actor's authority machine.")]
+	[DDLRegistration(0x68d7984cu, description: "Only play this sound on the actor's authority machine.")]
 	public bool PlayOnlyOnAuthority { get; set; } = false;
 
 	public new static DialogEvent Create(DDLObject ddl) => new(ddl);

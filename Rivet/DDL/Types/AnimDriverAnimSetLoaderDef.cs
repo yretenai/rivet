@@ -18,7 +18,7 @@ public class AnimDriverAnimSetLoaderDef : DDLObjectType, IDDLObjectType<AnimDriv
 		AnimDrivers = ddl.GetObjects<AnimDriverDef>(0xb5c03a7cu);
 	}
 
-	[DDLRegistration(0x3862b1b4u)]
+	[DDLRegistration(0xb5c03a7cu)]
 	public List<AnimDriverDef?> AnimDrivers { get; set; } = [];
 
 	public static AnimDriverAnimSetLoaderDef Create(DDLObject ddl) => new(ddl);

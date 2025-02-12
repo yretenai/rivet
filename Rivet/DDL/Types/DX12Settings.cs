@@ -59,130 +59,130 @@ public class DX12Settings : DDLObjectType, IDDLObjectType<DX12Settings> {
 		DX12UseCPUBufferOptimize = ddl.GetValue<bool>(0x5a4036c5u, DX12UseCPUBufferOptimize);
 	}
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x6bbb358au)]
 	public bool DX12ShowPipelineHitchMessage { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xe30ddcdau)]
 	public bool DX12RemoveDuplicateResourceBarriers { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xedc49e21u)]
 	public bool DX12UnrollResourceBarrierSubmission { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xb1bedba2u)]
 	public bool DX12EnableAsyncResourceCreation { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xdc4d0b8au)]
 	public bool DX12EnableAsyncPipelineCreation { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xb9ac1f09u)]
 	public uint DX12MaxPipelineCreateThreads { get; set; } = 0x00000006;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x1cdb84aeu)]
 	public bool DX12UseCopyQueueForUploadPool { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x6cd82657u)]
 	public bool DX12EnableAutomaticMemoryMoving { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xaf769b88u)]
 	public bool DX12EnableSmallReadbackBufferAllocators { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xe30bbde0u)]
 	public bool DX12EnableSmallUploadBufferAllocators { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xa981ac01u)]
 	public bool DX12EnableRayTracingBufferAllocators { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xbec2bd57u)]
 	public bool DX12EnableRenderTargetAllocators { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x91979c43u)]
 	public bool DX12EnableAutomaticMemoryMovingStressTest { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x6c184c40u)]
 	public ulong DX12AutomaticMemoryMovingMinFreeVideoMemory { get; set; } = 0x0000000010000000;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x3fbe54a4u)]
 	public ulong DX12AutomaticMemoryMovingMaxFreeVideoMemory { get; set; } = 0x0000000028000000;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xcf042791u)]
 	public ulong DX12AutomaticMemoryMovingMinFreeSystemMemory { get; set; } = 0x0000000020000000;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x0b8593bcu)]
 	public ulong DX12AutomaticMemoryMovingMaxResourceSize { get; set; } = 0x0000000040000000;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x6faf00c8u)]
 	public float DX12AutomaticMemoryMovingMaxSecondsPerFrame { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x6d8b9869u)]
 	public ulong DX12AutomaticMemoryMovingSizePriorityMaxSize { get; set; } = 0x000000000c800000;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x160cc11bu)]
 	public ulong DX12AutomaticMemoryMovingDebugVideoBudget { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xce1c2293u)]
 	public bool DX12DisplayAutomaticMemoryMovingStats { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x30c612b4u)]
 	public xd8ef7ea5 DX12EnableAutomaticMovingThread { get; set; } = xd8ef7ea5.MemoryThread;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x265f8075u)]
 	public xd8ef7ea5 DX12EnableDeferredReleaseThread { get; set; } = xd8ef7ea5.MemoryThread;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xb5a4b98au)]
 	public bool DX12AllowMultipleFrames { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xb85f8bb8u)]
 	public bool DX12EnableTimers { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xd2431028u)]
 	public bool DX12DisplayTimers { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xee6823b9u)]
 	public bool DX12EnableUsageTracking { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xf45fccafu)]
 	public bool DX12DisplayUsageShort { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x58833c50u)]
 	public bool DX12DisplayUsageGeneral { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x77b4877eu)]
 	public bool DX12DisplayUsageFine { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xed34a2d4u)]
 	public bool DX12DisplayUsageDelta { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xb7c968cau)]
 	public bool DX12DisplayUsageHeaps { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x5edac785u)]
 	public bool DX12RaytracingSerializeBVHBuilds { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x0a96043du)]
 	public bool DX12RaytracingRefitSkinnedBVHes { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x0d82b928u)]
 	public bool DX12RaytracingRefitSkinnedBVHesFromBindPose { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x30e064c1u)]
 	public bool DX12RaytracingKeepAllPSOsAlive { get; set; } = false;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xeab33131u)]
 	public bool DX12RaytracingEnableAMDHacks { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x9c2934a1u)]
 	public bool DX12CompactZoneBVHs { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xaa23ef39u)]
 	public bool DX12MinimizeZoneBVHs { get; set; } = true;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x3c8b6d2bu)]
 	public uint DX12RaytracingMaxModelsPerFrame { get; set; } = 0x00000020;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0xd4bcf923u)]
 	public uint DX12RaytracingMaxZonesPerFrame { get; set; } = 0x00000010;
 
-	[DDLRegistration(0xaf958951u)]
+	[DDLRegistration(0x5a4036c5u)]
 	public bool DX12UseCPUBufferOptimize { get; set; } = false;
 
 	public static DX12Settings Create(DDLObject ddl) => new(ddl);

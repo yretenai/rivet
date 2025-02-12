@@ -19,10 +19,10 @@ public class ContainerShipSpawnData : ActorSpawnData, IDDLObjectType<ContainerSh
 		AssetId = ddl.GetValue<RivetAssetId>(0xb6e788d7u, AssetId);
 	}
 
-	[DDLRegistration(0x9855a68au, description: "The actor we spawned from.")]
+	[DDLRegistration(0xfc56d431u, description: "The actor we spawned from.")]
 	public uint Spawner { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9855a68au, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static ContainerShipSpawnData Create(DDLObject ddl) => new(ddl);

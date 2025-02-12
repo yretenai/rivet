@@ -18,7 +18,7 @@ public class MissionDeactivatedEvent : EventBase, IDDLObjectType<MissionDeactiva
 		MissionName = ddl.GetString(0xa5c30e60) ?? MissionName;
 	}
 
-	[DDLRegistration(0x5166b564u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
 	public new static MissionDeactivatedEvent Create(DDLObject ddl) => new(ddl);

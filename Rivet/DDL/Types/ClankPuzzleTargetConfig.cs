@@ -25,28 +25,28 @@ public class ClankPuzzleTargetConfig : ClankPuzzleTargetBaseConfig, IDDLObjectTy
 		SpeedShieldEffect = ddl.GetValue<RivetAssetId>(0xbd4aa4c4u, SpeedShieldEffect);
 	}
 
-	[DDLRegistration(0xefc617b2u, description: "What timescale do we set this actor to when we slow them down.")]
+	[DDLRegistration(0x4007e76eu, description: "What timescale do we set this actor to when we slow them down.")]
 	public float SlowDownMult { get; set; } = 0.25f;
 
-	[DDLRegistration(0xefc617b2u, description: "How low can the slow down stack.")]
+	[DDLRegistration(0xb0238676u, description: "How low can the slow down stack.")]
 	public float MaxSlowDown { get; set; } = 0.16f;
 
-	[DDLRegistration(0xefc617b2u, description: "What timescale do we set this actor to when we speed them up.")]
+	[DDLRegistration(0x862191c1u, description: "What timescale do we set this actor to when we speed them up.")]
 	public float SpeedUpMult { get; set; } = 4.00f;
 
-	[DDLRegistration(0xefc617b2u, description: "How high can the speed up stack.")]
+	[DDLRegistration(0xb42a1c7bu, description: "How high can the speed up stack.")]
 	public float MaxSpeedUp { get; set; } = 64.00f;
 
-	[DDLRegistration(0xefc617b2u, description: "If this config is on the hero, how much time dilation do we apply to the world (so not all the effect is on the actor)")]
+	[DDLRegistration(0xd26ad13cu, description: "If this config is on the hero, how much time dilation do we apply to the world (so not all the effect is on the actor)")]
 	public float WorldTimeManipulationPercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0xefc617b2u)]
+	[DDLRegistration(0x1e7e3814u)]
 	public x10b3c4cf HeavyDangerMaterial { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0xefc617b2u)]
+	[DDLRegistration(0xa1596b53u)]
 	public RivetAssetId HeavyDangerBridgeActor { get; set; } = default;
 
-	[DDLRegistration(0xefc617b2u)]
+	[DDLRegistration(0xbd4aa4c4u)]
 	public RivetAssetId SpeedShieldEffect { get; set; } = default;
 
 	public new static ClankPuzzleTargetConfig Create(DDLObject ddl) => new(ddl);

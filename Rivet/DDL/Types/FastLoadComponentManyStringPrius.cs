@@ -19,10 +19,10 @@ public class FastLoadComponentManyStringPrius : DDLObjectType, IDDLObjectType<Fa
 		Strings = ddl.GetStrings(0xb57009cdu);
 	}
 
-	[DDLRegistration(0x4596a4b1u)]
+	[DDLRegistration(0x7674a9c1u)]
 	public List<uint> Numbers { get; set; } = [];
 
-	[DDLRegistration(0x4596a4b1u)]
+	[DDLRegistration(0xb57009cdu)]
 	public List<string?> Strings { get; set; } = [];
 
 	public static FastLoadComponentManyStringPrius Create(DDLObject ddl) => new(ddl);

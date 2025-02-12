@@ -20,13 +20,13 @@ public class GadgetItemRemovedEvent : EventBase, IDDLObjectType<GadgetItemRemove
 		InventoryHandle = ddl.GetValue<uint>(0xc363b2feu, InventoryHandle);
 	}
 
-	[DDLRegistration(0x783bc91cu)]
+	[DDLRegistration(0x948c82e2u)]
 	public uint ConfigTypeHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x783bc91cu)]
+	[DDLRegistration(0xed858c9au)]
 	public uint ItemHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x783bc91cu)]
+	[DDLRegistration(0xc363b2feu)]
 	public uint InventoryHandle { get; set; } = 0x00000000;
 
 	public new static GadgetItemRemovedEvent Create(DDLObject ddl) => new(ddl);

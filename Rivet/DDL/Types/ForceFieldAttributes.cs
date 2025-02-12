@@ -32,49 +32,49 @@ public class ForceFieldAttributes : DDLObjectType, IDDLObjectType<ForceFieldAttr
 		Debug = ddl.GetValue<bool>(0x75f68b66u, Debug);
 	}
 
-	[DDLRegistration(0x8def880cu, "Vector-Field Texture", "Vector-Field texture in the FGA format")]
+	[DDLRegistration(0xe608c57du, "Vector-Field Texture", "Vector-Field texture in the FGA format")]
 	public RivetAssetId VectorFieldTexture { get; set; } = default;
 
-	[DDLRegistration(0x8def880cu, "Surface Velocity Override", "Particle velocity override on the outer bounds of the shape")]
+	[DDLRegistration(0x62774b7eu, "Surface Velocity Override", "Particle velocity override on the outer bounds of the shape")]
 	public float SurfaceVelocityOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8def880cu, "Center Velocity Override", "Particle velocity override on the center of the shape")]
+	[DDLRegistration(0xae310532u, "Center Velocity Override", "Particle velocity override on the center of the shape")]
 	public float CenterVelocityOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8def880cu, "Surface Strength Scale", "Strength multiplier on the outer bounds of the shape")]
+	[DDLRegistration(0x813f88e7u, "Surface Strength Scale", "Strength multiplier on the outer bounds of the shape")]
 	public float SurfaceStrengthScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8def880cu, "Center Strength Scale", "Strength multiplier on the center of the shape")]
+	[DDLRegistration(0x9e96eda8u, "Center Strength Scale", "Strength multiplier on the center of the shape")]
 	public float CenterStrengthScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8def880cu, "Surface Life Scale", "Particle life scale on the outer bounds of the shape")]
+	[DDLRegistration(0x2a26ef70u, "Surface Life Scale", "Particle life scale on the outer bounds of the shape")]
 	public float SurfaceLifeScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8def880cu, "Center Life Scale", "Particle life scale on the center of the shape")]
+	[DDLRegistration(0x239b4f26u, "Center Life Scale", "Particle life scale on the center of the shape")]
 	public float CenterLifeScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8def880cu, "Center Bias", "Center distance from the local origin of the force-field")]
+	[DDLRegistration(0xd1043c59u, "Center Bias", "Center distance from the local origin of the force-field")]
 	public float CenterBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8def880cu, "Density", "Curl Noise Density; the higher the number the more 'vortices' we get")]
+	[DDLRegistration(0xc14209c2u, "Density", "Curl Noise Density; the higher the number the more 'vortices' we get")]
 	public float Density { get; set; } = 2.00f;
 
-	[DDLRegistration(0x8def880cu, "Scope", "Scope: local affects elements within the current VFX only")]
+	[DDLRegistration(0x19fc9912u, "Scope", "Scope: local affects elements within the current VFX only")]
 	public xe9023c39 Scope { get; set; } = xe9023c39.Local;
 
-	[DDLRegistration(0x8def880cu, "Shape", "Geometric shape: Spheres can only be uniformly scaled")]
+	[DDLRegistration(0xc4633319u, "Shape", "Geometric shape: Spheres can only be uniformly scaled")]
 	public x349d9632 Shape { get; set; } = x349d9632.Sphere;
 
-	[DDLRegistration(0x8def880cu, "Type", "Type")]
+	[DDLRegistration(0xbc4e9799u, "Type", "Type")]
 	public x4d78f809 Type { get; set; } = x4d78f809.Radial;
 
-	[DDLRegistration(0x8def880cu, "GPU Displacement", "Contribute to GPU Force-Fields for grass and leaves displacement")]
+	[DDLRegistration(0x95f9ad65u, "GPU Displacement", "Contribute to GPU Force-Fields for grass and leaves displacement")]
 	public bool GPUDisplacement { get; set; } = false;
 
-	[DDLRegistration(0x8def880cu, "Display Vector Field", "Display Vector Field")]
+	[DDLRegistration(0x880820c7u, "Display Vector Field", "Display Vector Field")]
 	public bool DisplayVectorField { get; set; } = false;
 
-	[DDLRegistration(0x8def880cu, "Display Bounds", "Display Bounds")]
+	[DDLRegistration(0x75f68b66u, "Display Bounds", "Display Bounds")]
 	public bool Debug { get; set; } = true;
 
 	public static ForceFieldAttributes Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class LightCaptureSettings : DDLObjectType, IDDLObjectType<LightCaptureSe
 		IrradianceAdjustmentHack = ddl.GetValue<float>(0x45cadbd8u, IrradianceAdjustmentHack);
 	}
 
-	[DDLRegistration(0xbc35e9d4u)]
+	[DDLRegistration(0x44190e58u)]
 	public float PullBackDist { get; set; } = 0.20f;
 
-	[DDLRegistration(0xbc35e9d4u)]
+	[DDLRegistration(0xb5e0822eu)]
 	public float MaxResampleDist { get; set; } = 0.60f;
 
-	[DDLRegistration(0xbc35e9d4u)]
+	[DDLRegistration(0xdb2c423au)]
 	public float ResampleUseClosestThreshold { get; set; } = 0.60f;
 
-	[DDLRegistration(0xbc35e9d4u)]
+	[DDLRegistration(0x31cde061u)]
 	public int GBufferReadMax { get; set; } = 134217728;
 
-	[DDLRegistration(0xbc35e9d4u)]
+	[DDLRegistration(0x7a3b18c8u)]
 	public int EmbeddedModelInstQuerys { get; set; } = 16000;
 
-	[DDLRegistration(0xbc35e9d4u)]
+	[DDLRegistration(0xd4c5777eu)]
 	public bool EmbeddedSampleDebugging { get; set; } = false;
 
-	[DDLRegistration(0xbc35e9d4u)]
+	[DDLRegistration(0x44bb063bu)]
 	public bool AvoidEmbeddedSamples { get; set; } = false;
 
-	[DDLRegistration(0xbc35e9d4u)]
+	[DDLRegistration(0x45cadbd8u)]
 	public float IrradianceAdjustmentHack { get; set; } = 1.00f;
 
 	public static LightCaptureSettings Create(DDLObject ddl) => new(ddl);

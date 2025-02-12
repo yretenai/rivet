@@ -40,73 +40,73 @@ public class GameSettings : DDLObjectType, IDDLObjectType<GameSettings> {
 		ContinueGameLoad = ddl.GetValue<bool>(0x681b5e96u, ContinueGameLoad);
 	}
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x5d76de9au)]
 	public bool ServerCamEnable { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x352d245cu)]
 	public bool UseLobby { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x32e14755u)]
 	public bool UseFrontend { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x129306c4u)]
 	public bool AutoLoad { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x2386b88du)]
 	public bool LanMode { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0xabc02cdeu)]
 	public bool LateJoinEnable { get; set; } = true;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x966e01f8u)]
 	public bool UnlockMultiplayer { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x74126edbu)]
 	public bool UnlockMultiplayerSave { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x3c43b479u)]
 	public bool UnlockAllMultiplayer { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x60b4b71fu)]
 	public bool UnlockAll { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0xfe5c7176u)]
 	public bool DoLegal { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x802ad5c4u)]
 	public bool AllowPause { get; set; } = true;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x5d53a672u)]
 	public bool MemorySyncCapture { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x0fb0a82cu)]
 	public bool JJJEnabled { get; set; } = true;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x97ae1c10u)]
 	public bool JJJOptional { get; set; } = true;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0xdfa2c3cau)]
 	public bool JJJDebugUI { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x14050deeu)]
 	public bool JJJTestConfig { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x24b7100cu)]
 	public bool NewspaperDebugUI { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x56e45c3cu)]
 	public RivetAssetId NewspaperConfig { get; set; } = "configs/system/system_newspaper.config";
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0xb99ea887u)]
 	public bool UnlockTechWeb { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u, "Disconnect AFK Players", "Turns on the timeout for idle players")]
+	[DDLRegistration(0xc421d800u, "Disconnect AFK Players", "Turns on the timeout for idle players")]
 	public bool AFKDisconnectEnable { get; set; } = false;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x92880656u)]
 	public float AFKDisconnectTime { get; set; } = 300.00f;
 
-	[DDLRegistration(0x3e376441u)]
+	[DDLRegistration(0x681b5e96u)]
 	public bool ContinueGameLoad { get; set; } = false;
 
 	public static GameSettings Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class HeroSwimConfig : DDLObjectType, IDDLObjectType<HeroSwimConfig> {
 		SwimHydropackSpeed = ddl.GetValue<float>(0x24a8bf29u, SwimHydropackSpeed);
 	}
 
-	[DDLRegistration(0xa52683afu)]
+	[DDLRegistration(0x42a23d1cu)]
 	public float SwimSurfaceSpeed { get; set; } = 3.50f;
 
-	[DDLRegistration(0xa52683afu)]
+	[DDLRegistration(0x24a8bf29u)]
 	public float SwimHydropackSpeed { get; set; } = 8.00f;
 
 	public static HeroSwimConfig Create(DDLObject ddl) => new(ddl);

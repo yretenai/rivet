@@ -22,19 +22,19 @@ public class Cinematic2MayaExportInfo : DDLObjectType, IDDLObjectType<Cinematic2
 		UpdateFromMaya = ddl.GetValue<bool>(0xeca560d4u, UpdateFromMaya);
 	}
 
-	[DDLRegistration(0x46fa7469u, description: "This specifies the file from which this object was exported.")]
+	[DDLRegistration(0xbc0ff6a0u, description: "This specifies the file from which this object was exported.")]
 	public RivetAssetId File { get; set; } = default;
 
-	[DDLRegistration(0x46fa7469u, description: "This specifies the last time this object was exported from Maya.")]
+	[DDLRegistration(0xad9de5deu, description: "This specifies the last time this object was exported from Maya.")]
 	public string? LastExportTime { get; set; } = default;
 
-	[DDLRegistration(0x46fa7469u, description: "A string used during the export process that describes where this object came from (used for uniquely identifying the source Maya node, etc.).")]
+	[DDLRegistration(0xc36d614fu, description: "A string used during the export process that describes where this object came from (used for uniquely identifying the source Maya node, etc.).")]
 	public string? ExportedFrom { get; set; } = default;
 
-	[DDLRegistration(0x46fa7469u, description: "This is any additional notes about this object.")]
+	[DDLRegistration(0x18486a4du, description: "This is any additional notes about this object.")]
 	public string? Notes { get; set; } = default;
 
-	[DDLRegistration(0x46fa7469u, description: "If true, exporting a cinematic from Maya will overwrite this object.")]
+	[DDLRegistration(0xeca560d4u, description: "If true, exporting a cinematic from Maya will overwrite this object.")]
 	public bool UpdateFromMaya { get; set; } = false;
 
 	public static Cinematic2MayaExportInfo Create(DDLObject ddl) => new(ddl);

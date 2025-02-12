@@ -19,10 +19,10 @@ public class SkinItemConstantOverrideListElement : DDLObjectType, IDDLObjectType
 		ConstantOverrides = ddl.GetObjects<SkinItemConstantOverride>(0xb5f11b1au);
 	}
 
-	[DDLRegistration(0x24b05301u, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0x24b05301u, "Constant Overrides", "List of constant name/value settings")]
+	[DDLRegistration(0xb5f11b1au, "Constant Overrides", "List of constant name/value settings")]
 	public List<SkinItemConstantOverride?> ConstantOverrides { get; set; } = [];
 
 	public static SkinItemConstantOverrideListElement Create(DDLObject ddl) => new(ddl);

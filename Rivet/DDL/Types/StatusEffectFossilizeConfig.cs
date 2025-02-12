@@ -21,16 +21,16 @@ public class StatusEffectFossilizeConfig : StatusEffectConfig, IDDLObjectType<St
 		GraveActor = ddl.GetValue<RivetAssetId>(0x5d849728u, GraveActor);
 	}
 
-	[DDLRegistration(0x8dc132d6u)]
+	[DDLRegistration(0x4c1f8462u)]
 	public RivetAssetId BeardActor { get; set; } = default;
 
-	[DDLRegistration(0x8dc132d6u)]
+	[DDLRegistration(0x8e20da2cu)]
 	public RivetAssetId BowTieActor { get; set; } = default;
 
-	[DDLRegistration(0x8dc132d6u)]
+	[DDLRegistration(0x7c25eb77u)]
 	public RivetAssetId GlassesActor { get; set; } = default;
 
-	[DDLRegistration(0x8dc132d6u)]
+	[DDLRegistration(0x5d849728u)]
 	public RivetAssetId GraveActor { get; set; } = default;
 
 	public new static StatusEffectFossilizeConfig Create(DDLObject ddl) => new(ddl);

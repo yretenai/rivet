@@ -19,10 +19,10 @@ public class CinematicEquipWeaponEvent : EventBase, IDDLObjectType<CinematicEqui
 		NewWeapon = ddl.GetValue<RivetAssetId>(0x9ecc929du, NewWeapon);
 	}
 
-	[DDLRegistration(0x4187a2b7u)]
+	[DDLRegistration(0xa1ab03f7u)]
 	public bool RestoreCurrentWeapon { get; set; } = false;
 
-	[DDLRegistration(0x4187a2b7u)]
+	[DDLRegistration(0x9ecc929du)]
 	public RivetAssetId NewWeapon { get; set; } = default;
 
 	public new static CinematicEquipWeaponEvent Create(DDLObject ddl) => new(ddl);

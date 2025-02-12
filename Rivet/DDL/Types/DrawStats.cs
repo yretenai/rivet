@@ -24,25 +24,25 @@ public class DrawStats : DDLObjectType, IDDLObjectType<DrawStats> {
 		DrawCount = ddl.GetValue<uint>(0x32d22bb4u, DrawCount);
 	}
 
-	[DDLRegistration(0xe04c087cu, description: "Hints at sampling count in material and thus the workload per-pixel being sent through the texture addressing unit to the sampler, which can stall if filled and thus cause shaders to stall.")]
+	[DDLRegistration(0xb30175cfu, description: "Hints at sampling count in material and thus the workload per-pixel being sent through the texture addressing unit to the sampler, which can stall if filled and thus cause shaders to stall.")]
 	public uint TextureCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe04c087cu, description: "Indicates scene complexity and liklihood of context rolling.")]
+	[DDLRegistration(0x722c94ddu, description: "Indicates scene complexity and liklihood of context rolling.")]
 	public uint MaterialCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe04c087cu, description: "Affects CPU dependencies and might indicate stalls (i.e. waiting for sorting). Relating this to vertex count alludes to vertex cache hit rate, which hints at reuse and efficient cache utilization and thus better shader scheduling.")]
+	[DDLRegistration(0x698b9d17u, description: "Affects CPU dependencies and might indicate stalls (i.e. waiting for sorting). Relating this to vertex count alludes to vertex cache hit rate, which hints at reuse and efficient cache utilization and thus better shader scheduling.")]
 	public uint IndexCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe04c087cu, description: "Affects CPU dependencies and might indicate stalls (i.e. waiting for skinning). This also indicates how likely GPU vertex cache will be filling which limits shader scheduling.")]
+	[DDLRegistration(0x7a666a9bu, description: "Affects CPU dependencies and might indicate stalls (i.e. waiting for skinning). This also indicates how likely GPU vertex cache will be filling which limits shader scheduling.")]
 	public uint IndexedVertexCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe04c087cu, description: "Either from trilists or tristrips")]
+	[DDLRegistration(0x8ec7c0deu, description: "Either from trilists or tristrips")]
 	public uint UnindexedVertexCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe04c087cu, description: "Unique instance for consideration on the CPU (i.e. not instance-collapsed). This affects RenderThread time and thus contributes to GPU starvation.")]
+	[DDLRegistration(0x0e4ea923u, description: "Unique instance for consideration on the CPU (i.e. not instance-collapsed). This affects RenderThread time and thus contributes to GPU starvation.")]
 	public uint InstanceCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe04c087cu, description: "Single submission to GPU (the instance-collapsed value). This affects context rolls, scheduling and is a hint of scene complexity.")]
+	[DDLRegistration(0x32d22bb4u, description: "Single submission to GPU (the instance-collapsed value). This affects context rolls, scheduling and is a hint of scene complexity.")]
 	public uint DrawCount { get; set; } = 0x00000000;
 
 	public static DrawStats Create(DDLObject ddl) => new(ddl);

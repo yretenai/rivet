@@ -19,10 +19,10 @@ public class CameraCollisionLinePrius : CameraCollisionBasePrius, IDDLObjectType
 		CollRadiusBroad = ddl.GetValue<float>(0x91ae75f7u, CollRadiusBroad);
 	}
 
-	[DDLRegistration(0x199a26c8u)]
+	[DDLRegistration(0xe24c4bdcu)]
 	public float CollRadiusNarrow { get; set; } = 0.00f;
 
-	[DDLRegistration(0x199a26c8u)]
+	[DDLRegistration(0x91ae75f7u)]
 	public float CollRadiusBroad { get; set; } = 0.00f;
 
 	public new static CameraCollisionLinePrius Create(DDLObject ddl) => new(ddl);

@@ -40,73 +40,73 @@ public class UIBootGameConfig : ConfigBase, IDDLObjectType<UIBootGameConfig> {
 		ScopeActor = ddl.GetValue<RivetAssetId>(0xbe20c780u, ScopeActor);
 	}
 
-	[DDLRegistration(0xee968848u, "Dynamic Icon path", "Path to dynamic icon folder (relative to exported HTML)")]
+	[DDLRegistration(0x15f300b2u, "Dynamic Icon path", "Path to dynamic icon folder (relative to exported HTML)")]
 	public string? DynamicIconPath { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "Dynamic Texture path", "Path to dynamic texture folder (relative to exported HTML)")]
+	[DDLRegistration(0x9e3f8ee0u, "Dynamic Texture path", "Path to dynamic texture folder (relative to exported HTML)")]
 	public string? DynamicTexturePath { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI View Info Config")]
+	[DDLRegistration(0x7ad2d6f8u, "UI View Info Config")]
 	public RivetAssetId UIViewInfoConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Font Map Config")]
+	[DDLRegistration(0x09b28598u, "UI Font Map Config")]
 	public RivetAssetId UIFontMapConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Icons Config")]
+	[DDLRegistration(0x5416c35bu, "UI Icons Config")]
 	public RivetAssetId UIIconsConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Markup Config")]
+	[DDLRegistration(0xae17bf04u, "UI Markup Config")]
 	public RivetAssetId UIMarkupConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Model Config")]
+	[DDLRegistration(0xb05a3efbu, "UI Model Config")]
 	public RivetAssetId UIModelConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "Coherent Debug Menu Config")]
+	[DDLRegistration(0x5360080fu, "Coherent Debug Menu Config")]
 	public RivetAssetId CoherentDebugMenuConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "POI Config")]
+	[DDLRegistration(0xd79d2375u, "POI Config")]
 	public RivetAssetId POIConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Options Config")]
+	[DDLRegistration(0x2a6dc9feu, "UI Options Config")]
 	public RivetAssetId UIOptionsConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Difficulty Config")]
+	[DDLRegistration(0x27cb46bcu, "UI Difficulty Config")]
 	public RivetAssetId UIDifficultyConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Photo Mode Config")]
+	[DDLRegistration(0x187c281cu, "UI Photo Mode Config")]
 	public RivetAssetId UIPhotoModeConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Arena Config")]
+	[DDLRegistration(0x43d6cfb1u, "UI Arena Config")]
 	public RivetAssetId UIArenaConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Jukebox Config")]
+	[DDLRegistration(0xb7316e4du, "UI Jukebox Config")]
 	public RivetAssetId UIJukeboxConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Collectibles Config")]
+	[DDLRegistration(0xdc304074u, "UI Collectibles Config")]
 	public RivetAssetId UICollectiblesConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Gallery Config")]
+	[DDLRegistration(0x0f85a47eu, "UI Gallery Config")]
 	public RivetAssetId UIGalleryConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Tutorials Config")]
+	[DDLRegistration(0x51f11276u, "UI Tutorials Config")]
 	public RivetAssetId UITutorialsConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI End Game Options Config")]
+	[DDLRegistration(0x3eae7f0du, "UI End Game Options Config")]
 	public RivetAssetId UIEndGameOptionConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Credits Config")]
+	[DDLRegistration(0x580b2a48u, "UI Credits Config")]
 	public RivetAssetId UICreditsConfig { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "UI Sounds Actor")]
+	[DDLRegistration(0x49d22d41u, "UI Sounds Actor")]
 	public RivetAssetId SoundActor { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "PlayerHUD RTT Actor")]
+	[DDLRegistration(0xba96fadcu, "PlayerHUD RTT Actor")]
 	public RivetAssetId PlayerHUDRTTActor { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "PauseMenuScreen RTT Actor")]
+	[DDLRegistration(0xd8d04d9fu, "PauseMenuScreen RTT Actor")]
 	public RivetAssetId PauseMenuScreenRTTActor { get; set; } = default;
 
-	[DDLRegistration(0xee968848u, "Scope Actor")]
+	[DDLRegistration(0xbe20c780u, "Scope Actor")]
 	public RivetAssetId ScopeActor { get; set; } = default;
 
 	public new static UIBootGameConfig Create(DDLObject ddl) => new(ddl);

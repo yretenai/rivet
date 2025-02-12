@@ -20,13 +20,13 @@ public class ExampleRegionData : RegionGameDataBase, IDDLObjectType<ExampleRegio
 		BoolValue = ddl.GetValue<bool>(0x85076134u, BoolValue);
 	}
 
-	[DDLRegistration(0x410b8049u)]
+	[DDLRegistration(0x3db8a644u)]
 	public string? StringValue { get; set; } = default;
 
-	[DDLRegistration(0x410b8049u)]
+	[DDLRegistration(0xf85f439du)]
 	public int IntValue { get; set; } = 0;
 
-	[DDLRegistration(0x410b8049u)]
+	[DDLRegistration(0x85076134u)]
 	public bool BoolValue { get; set; } = false;
 
 	public new static ExampleRegionData Create(DDLObject ddl) => new(ddl);

@@ -39,70 +39,70 @@ public class LunaFtpGameBuildConfigFile : DDLObjectType, IDDLObjectType<LunaFtpG
 		CompatibleMaya2020Version = ddl.GetString(0xc6ef53c5) ?? CompatibleMaya2020Version;
 	}
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x202ea4cau)]
 	public string? BuildName { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0xee6efffbu)]
 	public string? ProjectId { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x85fe5578u)]
 	public string? Branch { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0xd34e8692u)]
 	public int VersionMajor { get; set; } = 0;
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x11f306a1u)]
 	public int VersionMinor { get; set; } = 0;
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x0c51edadu)]
 	public int VersionPatch { get; set; } = 0;
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x2d78cbbdu)]
 	public string? NameTag { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x51abd94eu)]
 	public string? CreatedBy { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0xff735451u)]
 	public string? CreationDate { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0xf2d38de5u)]
 	public string? BuildType { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x91acd35au)]
 	public string? SyncedToCL { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x9605031au)]
 	public bool IsFastBuild { get; set; } = false;
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x277f4438u)]
 	public bool HasDebugInfo { get; set; } = false;
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x72e917efu)]
 	public bool IsInSymStore { get; set; } = false;
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x957c19efu)]
 	public x5753f3c8 Platforms { get; set; } = (x5753f3c8) 0x00000007;
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x615df743u)]
 	public List<string?> PlatformBuildDates { get; set; } = [];
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x8be65385u)]
 	public x5753f3c8 FailedPlatforms { get; set; } = (x5753f3c8) 0x00000007;
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0xffa3e6edu)]
 	public string? CompatibleUpdaterVersion { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x2da22199u)]
 	public string? CompatibleHavokVersion { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x4cd133d3u)]
 	public string? CompatibleWinExtVersion { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0x2c8774b5u)]
 	public string? CompatibleMaya2018Version { get; set; } = "";
 
-	[DDLRegistration(0xf46259abu)]
+	[DDLRegistration(0xc6ef53c5u)]
 	public string? CompatibleMaya2020Version { get; set; } = "";
 
 	public static LunaFtpGameBuildConfigFile Create(DDLObject ddl) => new(ddl);

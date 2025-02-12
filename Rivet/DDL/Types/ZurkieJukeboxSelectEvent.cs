@@ -18,7 +18,7 @@ public class ZurkieJukeboxSelectEvent : EventBase, IDDLObjectType<ZurkieJukeboxS
 		SongIndex = ddl.GetValue<float>(0xedf971e7u, SongIndex);
 	}
 
-	[DDLRegistration(0xb6fd5df7u)]
+	[DDLRegistration(0xedf971e7u)]
 	public float SongIndex { get; set; } = 0.00f;
 
 	public new static ZurkieJukeboxSelectEvent Create(DDLObject ddl) => new(ddl);

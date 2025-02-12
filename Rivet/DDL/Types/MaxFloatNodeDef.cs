@@ -20,13 +20,13 @@ public class MaxFloatNodeDef : MathNodeBaseDef, IDDLObjectType<MaxFloatNodeDef> 
 		Max = ddl.GetObject<OutputPlugFloat>(0xb7230b40u);
 	}
 
-	[DDLRegistration(0x1b477d28u)]
+	[DDLRegistration(0x3a58e94du)]
 	public InputPlugFloat? A { get; set; } = default;
 
-	[DDLRegistration(0x1b477d28u)]
+	[DDLRegistration(0xa351b8f7u)]
 	public InputPlugFloat? B { get; set; } = default;
 
-	[DDLRegistration(0x1b477d28u)]
+	[DDLRegistration(0xb7230b40u)]
 	public OutputPlugFloat? Max { get; set; } = default;
 
 	public new static MaxFloatNodeDef Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class WwiseAudioEvent : EventBase, IDDLObjectType<WwiseAudioEvent> {
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x4c4ab960u)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public x0038ca42 Action { get; set; } = x0038ca42.Trigger;
 
-	[DDLRegistration(0x4c4ab960u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x4c4ab960u)]
+	[DDLRegistration(0x6272dd22u)]
 	public string? ValueName { get; set; } = default;
 
-	[DDLRegistration(0x4c4ab960u)]
+	[DDLRegistration(0x8a514a8du)]
 	public uint Id { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4c4ab960u)]
+	[DDLRegistration(0xf5cd178cu)]
 	public uint ValueId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4c4ab960u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
 	public new static WwiseAudioEvent Create(DDLObject ddl) => new(ddl);

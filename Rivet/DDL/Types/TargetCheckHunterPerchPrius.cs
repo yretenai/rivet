@@ -18,7 +18,7 @@ public class TargetCheckHunterPerchPrius : TargetCheckBasePrius, IDDLObjectType<
 		MinDistance = ddl.GetValue<float>(0x448e693au, MinDistance);
 	}
 
-	[DDLRegistration(0x309029ddu)]
+	[DDLRegistration(0x448e693au)]
 	public float MinDistance { get; set; } = 0.00f;
 
 	public new static TargetCheckHunterPerchPrius Create(DDLObject ddl) => new(ddl);

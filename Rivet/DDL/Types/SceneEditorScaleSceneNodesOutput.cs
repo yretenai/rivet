@@ -18,7 +18,7 @@ public class SceneEditorScaleSceneNodesOutput : DDLObjectType, IDDLObjectType<Sc
 		NumScaled = ddl.GetValue<int>(0x3a0e8c00u, NumScaled);
 	}
 
-	[DDLRegistration(0xe101cac0u)]
+	[DDLRegistration(0x3a0e8c00u)]
 	public int NumScaled { get; set; } = 0;
 
 	public static SceneEditorScaleSceneNodesOutput Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class HeroSuperMeterPrius : DDLObjectType, IDDLObjectType<HeroSuperMeterP
 		DebugData = ddl.GetObject<HeroSuperMeterDebugData>(0xbd211c77u);
 	}
 
-	[DDLRegistration(0x998091adu, "Meter")]
+	[DDLRegistration(0xbe5a19b1u, "Meter")]
 	public HeroSuperMeterData? MeterData { get; set; } = default;
 
-	[DDLRegistration(0x998091adu, "Build Up")]
+	[DDLRegistration(0x7fea9125u, "Build Up")]
 	public HeroSuperMeterBuildUpData? BuildUpData { get; set; } = default;
 
-	[DDLRegistration(0x998091adu, "Debug")]
+	[DDLRegistration(0xbd211c77u, "Debug")]
 	public HeroSuperMeterDebugData? DebugData { get; set; } = default;
 
 	public static HeroSuperMeterPrius Create(DDLObject ddl) => new(ddl);

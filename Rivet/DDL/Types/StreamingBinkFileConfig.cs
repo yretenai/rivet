@@ -20,13 +20,13 @@ public class StreamingBinkFileConfig : StreamingBinkConfig, IDDLObjectType<Strea
 		SubtitleConfigFilePath = ddl.GetValue<RivetAssetId>(0x4aca4eb3u, SubtitleConfigFilePath);
 	}
 
-	[DDLRegistration(0xfe28cfcau)]
+	[DDLRegistration(0x36c12525u)]
 	public bool Looping { get; set; } = false;
 
-	[DDLRegistration(0xfe28cfcau)]
+	[DDLRegistration(0x334f0e22u)]
 	public RivetAssetId FilePath { get; set; } = default;
 
-	[DDLRegistration(0xfe28cfcau)]
+	[DDLRegistration(0x4aca4eb3u)]
 	public RivetAssetId SubtitleConfigFilePath { get; set; } = default;
 
 	public new static StreamingBinkFileConfig Create(DDLObject ddl) => new(ddl);

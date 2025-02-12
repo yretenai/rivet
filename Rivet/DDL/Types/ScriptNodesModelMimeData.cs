@@ -22,19 +22,19 @@ public class ScriptNodesModelMimeData : DDLObjectType, IDDLObjectType<ScriptNode
 		ScriptVariableNames = ddl.GetStrings(0x938028c9u);
 	}
 
-	[DDLRegistration(0x2b225fcau)]
+	[DDLRegistration(0x959e3154u)]
 	public bool Comment { get; set; } = false;
 
-	[DDLRegistration(0x2b225fcau)]
+	[DDLRegistration(0xed9fa78du)]
 	public List<RivetAssetId> EmbeddedScriptGraphIds { get; set; } = [];
 
-	[DDLRegistration(0x2b225fcau)]
+	[DDLRegistration(0x43ab36c8u)]
 	public List<string?> ScriptActionNames { get; set; } = [];
 
-	[DDLRegistration(0x2b225fcau)]
+	[DDLRegistration(0xa9f79b03u)]
 	public List<string?> ScriptGlobalVariableNames { get; set; } = [];
 
-	[DDLRegistration(0x2b225fcau)]
+	[DDLRegistration(0x938028c9u)]
 	public List<string?> ScriptVariableNames { get; set; } = [];
 
 	public static ScriptNodesModelMimeData Create(DDLObject ddl) => new(ddl);

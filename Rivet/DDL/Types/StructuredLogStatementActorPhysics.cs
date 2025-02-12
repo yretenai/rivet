@@ -21,16 +21,16 @@ public class StructuredLogStatementActorPhysics : StructuredLogStatement, IDDLOb
 		Physics = ddl.GetObject<RobotestActorPhysicsInfo>(0xd9db84dbu);
 	}
 
-	[DDLRegistration(0xdf71dbadu)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
-	[DDLRegistration(0xdf71dbadu)]
+	[DDLRegistration(0xcc4a4d21u)]
 	public string? ActorName { get; set; } = default;
 
-	[DDLRegistration(0xdf71dbadu)]
+	[DDLRegistration(0x64443d31u)]
 	public string? ModelName { get; set; } = default;
 
-	[DDLRegistration(0xdf71dbadu)]
+	[DDLRegistration(0xd9db84dbu)]
 	public RobotestActorPhysicsInfo? Physics { get; set; } = default;
 
 	public new static StructuredLogStatementActorPhysics Create(DDLObject ddl) => new(ddl);

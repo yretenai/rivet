@@ -20,13 +20,13 @@ public class BlendAtmospheresActionPrius : DDLObjectType, IDDLObjectType<BlendAt
 		MakeActiveOnBlendComplete = ddl.GetValue<bool>(0x471ca035u, MakeActiveOnBlendComplete);
 	}
 
-	[DDLRegistration(0x3dbdb63bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0x3dbdb63bu, description: "The atmosphere to blend to")]
+	[DDLRegistration(0x0ca327f3u, description: "The atmosphere to blend to")]
 	public RivetAssetId EndAtmosphere { get; set; } = default;
 
-	[DDLRegistration(0x3dbdb63bu, description: "If enabled, the active atmosphere will be set when the blend completes")]
+	[DDLRegistration(0x471ca035u, description: "If enabled, the active atmosphere will be set when the blend completes")]
 	public bool MakeActiveOnBlendComplete { get; set; } = false;
 
 	public static BlendAtmospheresActionPrius Create(DDLObject ddl) => new(ddl);

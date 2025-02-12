@@ -21,16 +21,16 @@ public class SessionDocument : DDLObjectType, IDDLObjectType<SessionDocument> {
 		Session = ddl.GetString(0xd1aeb6ec) ?? Session;
 	}
 
-	[DDLRegistration(0x44645b8au)]
+	[DDLRegistration(0x7459aa19u)]
 	public RivetAssetId _id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x44645b8au, description: "Timestamp when this session was last modified through the web interface.")]
+	[DDLRegistration(0x92a630e4u, description: "Timestamp when this session was last modified through the web interface.")]
 	public string? LastChanged { get; set; } = default;
 
-	[DDLRegistration(0x44645b8au, description: "Changelog token at the time that this session was created (clients can ignore any changelog items that happen before this time for their session).")]
+	[DDLRegistration(0x275ccddfu, description: "Changelog token at the time that this session was created (clients can ignore any changelog items that happen before this time for their session).")]
 	public long StartToken { get; set; } = 0;
 
-	[DDLRegistration(0x44645b8au)]
+	[DDLRegistration(0xd1aeb6ecu)]
 	public string? Session { get; set; } = default;
 
 	public static SessionDocument Create(DDLObject ddl) => new(ddl);

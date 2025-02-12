@@ -18,7 +18,7 @@ public class DamageModifierCordelionNefariousShieldPrius : DamageModifierIncomin
 		DamageReductionMultiplier = ddl.GetValue<float>(0x79a857f1u, DamageReductionMultiplier);
 	}
 
-	[DDLRegistration(0x0d0ff5d1u)]
+	[DDLRegistration(0x79a857f1u)]
 	public float DamageReductionMultiplier { get; set; } = 0.10f;
 
 	public new static DamageModifierCordelionNefariousShieldPrius Create(DDLObject ddl) => new(ddl);

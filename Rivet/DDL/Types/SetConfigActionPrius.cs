@@ -19,10 +19,10 @@ public class SetConfigActionPrius : DDLObjectType, IDDLObjectType<SetConfigActio
 		ConfigAsset = ddl.GetValue<RivetAssetId>(0x83370868u, ConfigAsset);
 	}
 
-	[DDLRegistration(0x4df16f12u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Config;
 
-	[DDLRegistration(0x4df16f12u)]
+	[DDLRegistration(0x83370868u)]
 	public RivetAssetId ConfigAsset { get; set; } = default;
 
 	public static SetConfigActionPrius Create(DDLObject ddl) => new(ddl);

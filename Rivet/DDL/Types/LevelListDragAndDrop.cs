@@ -19,10 +19,10 @@ public class LevelListDragAndDrop : DDLObjectType, IDDLObjectType<LevelListDragA
 		ParentItemId = ddl.GetValue<ulong>(0x37d3f2f8u, ParentItemId);
 	}
 
-	[DDLRegistration(0x9af8650eu)]
+	[DDLRegistration(0x8b80f916u)]
 	public ulong ItemId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x9af8650eu)]
+	[DDLRegistration(0x37d3f2f8u)]
 	public ulong ParentItemId { get; set; } = 0x0000000000000000;
 
 	public static LevelListDragAndDrop Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class TriggerEffectSequenceCustom : TriggerEffectSequenceBase, IDDLObject
 		KeyFrameData = ddl.GetObjects<TriggerEffectKeyFrameDataCustom>(0x6d456e08u);
 	}
 
-	[DDLRegistration(0x691d88a2u)]
+	[DDLRegistration(0x6d456e08u)]
 	public List<TriggerEffectKeyFrameDataCustom?> KeyFrameData { get; set; } = [];
 
 	public new static TriggerEffectSequenceCustom Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class GlobalSaveTableNodeDef : PrereqNodeBaseDef, IDDLObjectType<GlobalSa
 		CheckType = ddl.GetEnum<x70316bbe>(0xb6b0f22cu, x70316bbeValues.Lookup);
 	}
 
-	[DDLRegistration(0x56be5f12u)]
+	[DDLRegistration(0xa0c58260u)]
 	public string? Key { get; set; } = default;
 
-	[DDLRegistration(0x56be5f12u, description: "The value to compare to the Saved Value. (Test order is: SavedValue <CheckType> QueryValue, eg kValueLess will set this prereq done if saved value is less than this query value")]
+	[DDLRegistration(0x4e46ed8au, description: "The value to compare to the Saved Value. (Test order is: SavedValue <CheckType> QueryValue, eg kValueLess will set this prereq done if saved value is less than this query value")]
 	public float QueryValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0x56be5f12u)]
+	[DDLRegistration(0xb6b0f22cu)]
 	public x70316bbe CheckType { get; set; } = x70316bbe.KeyExists;
 
 	public new static GlobalSaveTableNodeDef Create(DDLObject ddl) => new(ddl);

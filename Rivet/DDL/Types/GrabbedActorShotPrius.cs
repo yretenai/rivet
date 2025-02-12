@@ -18,7 +18,7 @@ public class GrabbedActorShotPrius : LobbedShotPrius, IDDLObjectType<GrabbedActo
 		MatchShotOrientation = ddl.GetValue<bool>(0x50ad2da9u, MatchShotOrientation);
 	}
 
-	[DDLRegistration(0x5cbdcb5au, description: "Always snap the grabbed actor's orientation based on the shot's. Otherwise glue them together at whatever orientation they happen to have")]
+	[DDLRegistration(0x50ad2da9u, description: "Always snap the grabbed actor's orientation based on the shot's. Otherwise glue them together at whatever orientation they happen to have")]
 	public bool MatchShotOrientation { get; set; } = true;
 
 	public new static GrabbedActorShotPrius Create(DDLObject ddl) => new(ddl);

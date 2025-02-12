@@ -18,7 +18,7 @@ public class BotComboMoveMeleeAirDashCharge : BotComboMove, IDDLObjectType<BotCo
 		AirDashChargeData = ddl.GetObject<AirDashChargeData>(0x91fe45bcu);
 	}
 
-	[DDLRegistration(0xec9324aau, "Air Dash Charge Attack Data")]
+	[DDLRegistration(0x91fe45bcu, "Air Dash Charge Attack Data")]
 	public AirDashChargeData? AirDashChargeData { get; set; } = default;
 
 	public new static BotComboMoveMeleeAirDashCharge Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class DamageStatusData : DDLObjectType, IDDLObjectType<DamageStatusData> 
 		StatusActionCount = ddl.GetValue<float>(0xc27f1e9cu, StatusActionCount);
 	}
 
-	[DDLRegistration(0x1c1fd269u)]
+	[DDLRegistration(0x64deef76u)]
 	public DamageTypesGame StatusType { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x1c1fd269u)]
+	[DDLRegistration(0x37e1f098u)]
 	public float StatusAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1c1fd269u)]
+	[DDLRegistration(0x51e985cau)]
 	public float StatusDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1c1fd269u)]
+	[DDLRegistration(0xc27f1e9cu)]
 	public float StatusActionCount { get; set; } = -1.00f;
 
 	public static DamageStatusData Create(DDLObject ddl) => new(ddl);

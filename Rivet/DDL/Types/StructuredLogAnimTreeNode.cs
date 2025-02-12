@@ -21,16 +21,16 @@ public class StructuredLogAnimTreeNode : StructuredLogStatement, IDDLObjectType<
 		Flags = ddl.GetBitset<x41912c18>(0x12568d7bu, x41912c18Values.Lookup);
 	}
 
-	[DDLRegistration(0xd0ce60adu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xc87cc46b Type { get; set; } = xc87cc46b.TypeBindPose;
 
-	[DDLRegistration(0xd0ce60adu)]
+	[DDLRegistration(0xd7132e94u)]
 	public byte LayerId { get; set; } = 0x00;
 
-	[DDLRegistration(0xd0ce60adu)]
+	[DDLRegistration(0xc3cda8a5u)]
 	public xedfe550a DebugFlags { get; set; } = (xedfe550a) 0x00000000;
 
-	[DDLRegistration(0xd0ce60adu)]
+	[DDLRegistration(0x12568d7bu)]
 	public x41912c18 Flags { get; set; } = (x41912c18) 0x00000000;
 
 	public new static StructuredLogAnimTreeNode Create(DDLObject ddl) => new(ddl);

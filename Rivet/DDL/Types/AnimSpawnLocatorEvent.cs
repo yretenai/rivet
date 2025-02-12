@@ -18,7 +18,7 @@ public class AnimSpawnLocatorEvent : AnimSpawnEvent, IDDLObjectType<AnimSpawnLoc
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0x5dd21efdu)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
 	public new static AnimSpawnLocatorEvent Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class SoundResponseEvent : ResponseEvent, IDDLObjectType<SoundResponseEve
 		StopOnSourceDestroyed = ddl.GetValue<bool>(0x023e87b1u, StopOnSourceDestroyed);
 	}
 
-	[DDLRegistration(0x793c2c6fu)]
+	[DDLRegistration(0x9c64655au)]
 	public string? SoundEventName { get; set; } = default;
 
-	[DDLRegistration(0x793c2c6fu)]
+	[DDLRegistration(0x813c2830u)]
 	public uint SoundEventId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x793c2c6fu, "Attach Locator")]
+	[DDLRegistration(0xfa8dcd9au, "Attach Locator")]
 	public string? AttachLocator { get; set; } = default;
 
-	[DDLRegistration(0x793c2c6fu, "Material")]
+	[DDLRegistration(0x86bfc8e5u, "Material")]
 	public string? Material { get; set; } = default;
 
-	[DDLRegistration(0x793c2c6fu, "Stop On Source Destroyed")]
+	[DDLRegistration(0x023e87b1u, "Stop On Source Destroyed")]
 	public bool StopOnSourceDestroyed { get; set; } = false;
 
 	public new static SoundResponseEvent Create(DDLObject ddl) => new(ddl);

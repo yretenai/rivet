@@ -19,10 +19,10 @@ public class WasRynoPlanCollectedActionPrius : DDLObjectType, IDDLObjectType<Was
 		SaveID = ddl.GetEnum<x81d3e717>(0xf61c4918u, x81d3e717Values.Lookup);
 	}
 
-	[DDLRegistration(0xde4cb2cau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0xde4cb2cau, description: "Unique identifier of this ryno plan for saving the game")]
+	[DDLRegistration(0xf61c4918u, description: "Unique identifier of this ryno plan for saving the game")]
 	public x81d3e717 SaveID { get; set; } = x81d3e717.None;
 
 	public static WasRynoPlanCollectedActionPrius Create(DDLObject ddl) => new(ddl);

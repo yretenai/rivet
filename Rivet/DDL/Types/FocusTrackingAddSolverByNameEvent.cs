@@ -19,10 +19,10 @@ public class FocusTrackingAddSolverByNameEvent : EventBase, IDDLObjectType<Focus
 		ReferencePoseTime = ddl.GetValue<float>(0x45631e85u, ReferencePoseTime);
 	}
 
-	[DDLRegistration(0x35b8dac1u, description: "Name of a solver in our configs NamedSolverDefinitions array")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of a solver in our configs NamedSolverDefinitions array")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x35b8dac1u, description: "Time of clip to use to generate an Reference Pose to create additives from (in seconds)")]
+	[DDLRegistration(0x45631e85u, description: "Time of clip to use to generate an Reference Pose to create additives from (in seconds)")]
 	public float ReferencePoseTime { get; set; } = 0.00f;
 
 	public new static FocusTrackingAddSolverByNameEvent Create(DDLObject ddl) => new(ddl);

@@ -34,55 +34,55 @@ public class DamageEmitterPrius : DDLObjectType, IDDLObjectType<DamageEmitterPri
 		DebugDraw = ddl.GetValue<bool>(0x6020521bu, DebugDraw);
 	}
 
-	[DDLRegistration(0xcf51f212u, "Damage Hash")]
+	[DDLRegistration(0xd96a20dcu, "Damage Hash")]
 	public string? DamageHash { get; set; } = "";
 
-	[DDLRegistration(0xcf51f212u, "Start Active")]
+	[DDLRegistration(0x3e035e82u, "Start Active")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0xcf51f212u, "Damage Per Second")]
+	[DDLRegistration(0x287ed02au, "Damage Per Second")]
 	public float DamagePerSecond { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcf51f212u, "Damage Type")]
+	[DDLRegistration(0xbc4e9799u, "Damage Type")]
 	public DamageTypesGame Type { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0xcf51f212u, "Status Amount")]
+	[DDLRegistration(0x37e1f098u, "Status Amount")]
 	public float StatusAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcf51f212u, "Knockback Level")]
+	[DDLRegistration(0x2e553fddu, "Knockback Level")]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0xcf51f212u, "Knockback Amount")]
+	[DDLRegistration(0x7b1e600bu, "Knockback Amount")]
 	public float KnockbackAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcf51f212u, "Radius")]
+	[DDLRegistration(0x0504203du, "Radius")]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcf51f212u, "Damage Friends")]
+	[DDLRegistration(0x3be354f0u, "Damage Friends")]
 	public bool DamageFriends { get; set; } = false;
 
-	[DDLRegistration(0xcf51f212u, "Single Shot Damage")]
+	[DDLRegistration(0x549e508fu, "Single Shot Damage")]
 	public bool SingleShotDamage { get; set; } = false;
 
-	[DDLRegistration(0xcf51f212u, "Exclude heroes")]
+	[DDLRegistration(0xd5834e5cu, "Exclude heroes")]
 	public bool ExcludeHeroes { get; set; } = false;
 
-	[DDLRegistration(0xcf51f212u, "Exclude Attachments")]
+	[DDLRegistration(0xeb282f5du, "Exclude Attachments")]
 	public bool ExcludeAttachments { get; set; } = false;
 
-	[DDLRegistration(0xcf51f212u, "No Ignore")]
+	[DDLRegistration(0x9c5a9eebu, "No Ignore")]
 	public bool NoIgnore { get; set; } = false;
 
-	[DDLRegistration(0xcf51f212u, "Use Swept Sphere")]
+	[DDLRegistration(0xee3d188cu, "Use Swept Sphere")]
 	public bool UseSweptSphere { get; set; } = false;
 
-	[DDLRegistration(0xcf51f212u, "Locator of Swept start")]
+	[DDLRegistration(0x45890f60u, "Locator of Swept start")]
 	public string? StartLocator { get; set; } = "";
 
-	[DDLRegistration(0xcf51f212u, "Swept Sphere Range")]
+	[DDLRegistration(0x8c892be6u, "Swept Sphere Range")]
 	public float SweptSphereRange { get; set; } = 5.00f;
 
-	[DDLRegistration(0xcf51f212u, "Debug Draw Damage", "Visualize the damage via debug prims.")]
+	[DDLRegistration(0x6020521bu, "Debug Draw Damage", "Visualize the damage via debug prims.")]
 	public bool DebugDraw { get; set; } = false;
 
 	public static DamageEmitterPrius Create(DDLObject ddl) => new(ddl);

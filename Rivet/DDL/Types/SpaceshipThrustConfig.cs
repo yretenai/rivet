@@ -22,19 +22,19 @@ public class SpaceshipThrustConfig : ConfigBase, IDDLObjectType<SpaceshipThrustC
 		ThrustCameraShake = ddl.GetObject<CameraShakingData>(0xb2501af1u);
 	}
 
-	[DDLRegistration(0x54c4dd2cu)]
+	[DDLRegistration(0x317c04a8u)]
 	public float ThrustFOV { get; set; } = 85.00f;
 
-	[DDLRegistration(0x54c4dd2cu, description: "How far to offset the camera when thrusting.  Value is relative to default offset.  Positive values are closer to ship")]
+	[DDLRegistration(0xd9a69145u, description: "How far to offset the camera when thrusting.  Value is relative to default offset.  Positive values are closer to ship")]
 	public float ThrustCameraOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x54c4dd2cu, description: "How long the thrust offset curve lasts")]
+	[DDLRegistration(0x747b44ecu, description: "How long the thrust offset curve lasts")]
 	public float ThrustOffsetDuration { get; set; } = 2.00f;
 
-	[DDLRegistration(0x54c4dd2cu)]
+	[DDLRegistration(0xb0ea6da3u)]
 	public RivetAssetId ThrustOffsetCurve { get; set; } = default;
 
-	[DDLRegistration(0x54c4dd2cu)]
+	[DDLRegistration(0xb2501af1u)]
 	public CameraShakingData? ThrustCameraShake { get; set; } = default;
 
 	public new static SpaceshipThrustConfig Create(DDLObject ddl) => new(ddl);

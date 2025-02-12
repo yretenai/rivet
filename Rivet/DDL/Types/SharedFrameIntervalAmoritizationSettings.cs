@@ -29,40 +29,40 @@ public class SharedFrameIntervalAmoritizationSettings : DDLObjectType, IDDLObjec
 		FirepointHunterUpdateInterval = ddl.GetValue<uint>(0xf8f9a070u, FirepointHunterUpdateInterval);
 	}
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0x720690d6u)]
 	public uint PerchHunterUpdateInterval { get; set; } = 0x0000001e;
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0xbc9c79efu)]
 	public uint AwarenessBaseUpdateInterval { get; set; } = 0x00000010;
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0x975f4d9bu)]
 	public uint OmniAwarenessUpdateInterval { get; set; } = 0x00000010;
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0x454c590bu)]
 	public uint FlightAreaFirepointHunterUpdateInterval { get; set; } = 0x00000010;
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0xa12e01efu)]
 	public uint MultiHeuristicTargetingUpdateInterval { get; set; } = 0x00000010;
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0x27490263u)]
 	public uint TargetingBaseUpdateInterval { get; set; } = 0x00000010;
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0x3520d3f3u)]
 	public uint TieredAggroTargetingUpdateInterval { get; set; } = 0x00000010;
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0x3862faf3u)]
 	public uint BreakableBusterUpdateInterval { get; set; } = 0x00000003;
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0xc2a05beau)]
 	public uint LosBlockerHunterUpdateInterval { get; set; } = 0x0000000a;
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0x843dc319u)]
 	public uint NavMeshObstructionUpdateInterval { get; set; } = 0x00000008;
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0x32833762u)]
 	public uint TriggerByDistanceUpdateInterval { get; set; } = 0x0000000a;
 
-	[DDLRegistration(0x5dca882du)]
+	[DDLRegistration(0xf8f9a070u)]
 	public uint FirepointHunterUpdateInterval { get; set; } = 0x00000004;
 
 	public static SharedFrameIntervalAmoritizationSettings Create(DDLObject ddl) => new(ddl);

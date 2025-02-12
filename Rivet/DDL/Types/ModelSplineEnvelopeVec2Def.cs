@@ -19,10 +19,10 @@ public class ModelSplineEnvelopeVec2Def : DDLObjectType, IDDLObjectType<ModelSpl
 		Envelope = ddl.GetObject<EnvelopeVec2Def>(0x7094c518u);
 	}
 
-	[DDLRegistration(0x1eb2e383u)]
+	[DDLRegistration(0x950d56d7u)]
 	public DDLVector2? BaseValue { get; set; } = default;
 
-	[DDLRegistration(0x1eb2e383u)]
+	[DDLRegistration(0x7094c518u)]
 	public EnvelopeVec2Def? Envelope { get; set; } = default;
 
 	public static ModelSplineEnvelopeVec2Def Create(DDLObject ddl) => new(ddl);

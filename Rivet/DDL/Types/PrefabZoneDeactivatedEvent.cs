@@ -19,10 +19,10 @@ public class PrefabZoneDeactivatedEvent : EventBase, IDDLObjectType<PrefabZoneDe
 		PrefabActor = ddl.GetValue<uint>(0xc1deed56u, PrefabActor);
 	}
 
-	[DDLRegistration(0x23bad279u)]
+	[DDLRegistration(0xc0e0f909u)]
 	public RivetAssetId ZoneId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x23bad279u)]
+	[DDLRegistration(0xc1deed56u)]
 	public uint PrefabActor { get; set; } = 0x00000000;
 
 	public new static PrefabZoneDeactivatedEvent Create(DDLObject ddl) => new(ddl);

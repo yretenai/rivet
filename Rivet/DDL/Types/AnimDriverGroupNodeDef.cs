@@ -22,19 +22,19 @@ public class AnimDriverGroupNodeDef : DDLObjectType, IDDLObjectType<AnimDriverGr
 		NodeNames = ddl.GetStrings(0x2b8e04c5u);
 	}
 
-	[DDLRegistration(0x6cc5bc74u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x6cc5bc74u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0x6cc5bc74u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6cc5bc74u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6cc5bc74u)]
+	[DDLRegistration(0x2b8e04c5u)]
 	public List<string?> NodeNames { get; set; } = [];
 
 	public static AnimDriverGroupNodeDef Create(DDLObject ddl) => new(ddl);

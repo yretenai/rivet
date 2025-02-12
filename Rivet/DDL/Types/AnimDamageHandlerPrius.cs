@@ -21,16 +21,16 @@ public class AnimDamageHandlerPrius : DDLObjectType, IDDLObjectType<AnimDamageHa
 		AttackIndices = ddl.GetObjects<AnimDamageAttack>(0x0e73af6du);
 	}
 
-	[DDLRegistration(0xcdbccce9u)]
+	[DDLRegistration(0x5494c7f6u)]
 	public string? DeferAnimDamageWarning { get; set; } = "Must Use Multi Prim To Defer Anim Damage";
 
-	[DDLRegistration(0xcdbccce9u, "DeferAnimDamage", "Only Multi Prim is supported. Anim damage will be deferred until the end of the damage duration or until AnimDamageIdealFrameEvent.")]
+	[DDLRegistration(0xcb17b7e3u, "DeferAnimDamage", "Only Multi Prim is supported. Anim damage will be deferred until the end of the damage duration or until AnimDamageIdealFrameEvent.")]
 	public bool DeferAnimDamage { get; set; } = false;
 
-	[DDLRegistration(0xcdbccce9u, description: "Damage Prims will take into account the actor's scale and size up/down accordingly.")]
+	[DDLRegistration(0x3b6cec91u, description: "Damage Prims will take into account the actor's scale and size up/down accordingly.")]
 	public bool ApplyActorScale { get; set; } = true;
 
-	[DDLRegistration(0xcdbccce9u)]
+	[DDLRegistration(0x0e73af6du)]
 	public List<AnimDamageAttack?> AttackIndices { get; set; } = [];
 
 	public static AnimDamageHandlerPrius Create(DDLObject ddl) => new(ddl);

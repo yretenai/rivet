@@ -33,52 +33,52 @@ public class UI_MaterialNodeInputPortSelect : DDLObjectType, IDDLObjectType<UI_M
 		Select = ddl.GetObject<UI_MaterialNodeSelect>(0x758aa4a7u);
 	}
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0x04df0281u)]
 	public string? Values { get; set; } = default;
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0x1837e13bu)]
 	public bool TestingOnly { get; set; } = false;
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0xaef3f8a9u)]
 	public bool IsConnected { get; set; } = false;
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0x15d6f320u)]
 	public int InternalSortOrder { get; set; } = 0;
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0xb47ed490u)]
 	public bool UserDefinedLabels { get; set; } = false;
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0xc95c1d5cu)]
 	public bool LinearFilter { get; set; } = false;
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0x3c0cbb98u)]
 	public bool Exposed { get; set; } = false;
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0xd67dc5e4u)]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0x2ac19a4du, description: "Controls the grouping of exposed inputs when viewed in the Material Editor.\nNested groups can be specified via comma separated list.")]
+	[DDLRegistration(0x74938804u, description: "Controls the grouping of exposed inputs when viewed in the Material Editor.\nNested groups can be specified via comma separated list.")]
 	public string? Group { get; set; } = default;
 
-	[DDLRegistration(0x2ac19a4du, "Sort Order", "Controls the relative order of exposed inputs when viewed in the Material Editor.")]
+	[DDLRegistration(0xbd9f03f1u, "Sort Order", "Controls the relative order of exposed inputs when viewed in the Material Editor.")]
 	public int SortOrder { get; set; } = 0;
 
-	[DDLRegistration(0x2ac19a4du, description: "This text will be displayed as a tool tip for this input in the Material/MaterialGraph Editors.")]
+	[DDLRegistration(0xe03811fdu, description: "This text will be displayed as a tool tip for this input in the Material/MaterialGraph Editors.")]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x2ac19a4du, description: "Labels to use for the components of this input port (instead of XYZW). Format is 'Label_1, Label_2, Label_3, Label_4'.\nUnnecessary values may be omitted (e.g. if fewer than 4 components are used).")]
+	[DDLRegistration(0x8ba94c76u, description: "Labels to use for the components of this input port (instead of XYZW). Format is 'Label_1, Label_2, Label_3, Label_4'.\nUnnecessary values may be omitted (e.g. if fewer than 4 components are used).")]
 	public string? Labels { get; set; } = default;
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0x09d378ffu)]
 	public bool ShowExposed { get; set; } = true;
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0xbc1658ccu)]
 	public bool ShowGlobal { get; set; } = true;
 
-	[DDLRegistration(0x2ac19a4du)]
+	[DDLRegistration(0x758aa4a7u)]
 	public UI_MaterialNodeSelect? Select { get; set; } = default;
 
 	public static UI_MaterialNodeInputPortSelect Create(DDLObject ddl) => new(ddl);

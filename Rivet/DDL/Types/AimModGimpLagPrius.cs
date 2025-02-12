@@ -18,7 +18,7 @@ public class AimModGimpLagPrius : AimModGimpPrius, IDDLObjectType<AimModGimpLagP
 		AimSpeed = ddl.GetValue<float>(0x21e3f161u, AimSpeed);
 	}
 
-	[DDLRegistration(0x17dd6f3au, description: "in range [0, 1] - higher number -> faster aim")]
+	[DDLRegistration(0x21e3f161u, description: "in range [0, 1] - higher number -> faster aim")]
 	public float AimSpeed { get; set; } = 0.50f;
 
 	public new static AimModGimpLagPrius Create(DDLObject ddl) => new(ddl);

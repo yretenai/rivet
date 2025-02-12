@@ -20,13 +20,13 @@ public class PickupSimplePrius : PickupSimpleBasePrius, IDDLObjectType<PickupSim
 		SavePickedUpState = ddl.GetValue<bool>(0xccbd774fu, SavePickedUpState);
 	}
 
-	[DDLRegistration(0xefeb6daeu)]
+	[DDLRegistration(0xa88f833fu)]
 	public RivetAssetId ItemConfig { get; set; } = default;
 
-	[DDLRegistration(0xefeb6daeu)]
+	[DDLRegistration(0x9c8a88a3u)]
 	public uint Count { get; set; } = 0x00000001;
 
-	[DDLRegistration(0xefeb6daeu)]
+	[DDLRegistration(0xccbd774fu)]
 	public bool SavePickedUpState { get; set; } = false;
 
 	public new static PickupSimplePrius Create(DDLObject ddl) => new(ddl);

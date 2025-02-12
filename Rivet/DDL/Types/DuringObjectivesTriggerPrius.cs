@@ -23,22 +23,22 @@ public class DuringObjectivesTriggerPrius : BaseCustomOverlayTriggerPrius, IDDLO
 		EndObjectiveName = ddl.GetString(0x0f9039d9) ?? EndObjectiveName;
 	}
 
-	[DDLRegistration(0xf1ec5e41u, description: "This mission must be active or complete (or available if StartAtAvailable is true) for the overlay to load")]
+	[DDLRegistration(0xfe0f742au, description: "This mission must be active or complete (or available if StartAtAvailable is true) for the overlay to load")]
 	public string? StartMissionName { get; set; } = default;
 
-	[DDLRegistration(0xf1ec5e41u, description: "The above mission should be in available state or beyond for the overlay to load")]
+	[DDLRegistration(0x1218c4efu, description: "The above mission should be in available state or beyond for the overlay to load")]
 	public bool StartAtAvailable { get; set; } = false;
 
-	[DDLRegistration(0xf1ec5e41u, description: "This objective in Start Mission must be active or complete for the overlay to load")]
+	[DDLRegistration(0xe2320ffau, description: "This objective in Start Mission must be active or complete for the overlay to load")]
 	public string? StartObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0xf1ec5e41u, description: "This mission or (StartMission if left blank) must be not yet be complete for the overlay to load")]
+	[DDLRegistration(0x91d8893eu, description: "This mission or (StartMission if left blank) must be not yet be complete for the overlay to load")]
 	public string? EndMissionName { get; set; } = default;
 
-	[DDLRegistration(0xf1ec5e41u, description: "The the overlay to load will stay loaded until the above mission has completed cleanup")]
+	[DDLRegistration(0xa0904058u, description: "The the overlay to load will stay loaded until the above mission has completed cleanup")]
 	public bool EndAfterCleanup { get; set; } = false;
 
-	[DDLRegistration(0xf1ec5e41u, description: "This objective in End Mission (or Start Mission if End Mission left blank) must not yet be complete for the overlay to load")]
+	[DDLRegistration(0x0f9039d9u, description: "This objective in End Mission (or Start Mission if End Mission left blank) must not yet be complete for the overlay to load")]
 	public string? EndObjectiveName { get; set; } = default;
 
 	public new static DuringObjectivesTriggerPrius Create(DDLObject ddl) => new(ddl);

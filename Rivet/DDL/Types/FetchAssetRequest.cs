@@ -18,7 +18,7 @@ public class FetchAssetRequest : DDLObjectType, IDDLObjectType<FetchAssetRequest
 		Revision = ddl.GetValue<int>(0x9762a8bcu, Revision);
 	}
 
-	[DDLRegistration(0xb9bdbbe8u, description: "Perforce revision number of the file to fetch; < 0 means to just get the asset as it exists in the database and not to query perforce at all; = 0 means return an empty object")]
+	[DDLRegistration(0x9762a8bcu, description: "Perforce revision number of the file to fetch; < 0 means to just get the asset as it exists in the database and not to query perforce at all; = 0 means return an empty object")]
 	public int Revision { get; set; } = -1;
 
 	public static FetchAssetRequest Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class MissionObjectiveDeactivatedEvent : EventBase, IDDLObjectType<Missio
 		ObjectiveInstanceID = ddl.GetValue<uint>(0x5863bde4u, ObjectiveInstanceID);
 	}
 
-	[DDLRegistration(0x35d6494au)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x35d6494au)]
+	[DDLRegistration(0x58746b9bu)]
 	public string? ObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0x35d6494au)]
+	[DDLRegistration(0x5863bde4u)]
 	public uint ObjectiveInstanceID { get; set; } = 0x00000000;
 
 	public new static MissionObjectiveDeactivatedEvent Create(DDLObject ddl) => new(ddl);

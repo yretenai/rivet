@@ -18,7 +18,7 @@ public class AlarmEvent : EventBase, IDDLObjectType<AlarmEvent> {
 		Who = ddl.GetValue<uint>(0xf4831368u, Who);
 	}
 
-	[DDLRegistration(0x535f84acu)]
+	[DDLRegistration(0xf4831368u)]
 	public uint Who { get; set; } = 0x00000000;
 
 	public new static AlarmEvent Create(DDLObject ddl) => new(ddl);

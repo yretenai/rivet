@@ -21,16 +21,16 @@ public class CameraPrius : DDLObjectType, IDDLObjectType<CameraPrius> {
 		HorizontalLength = ddl.GetValue<float>(0xfb44929fu, HorizontalLength);
 	}
 
-	[DDLRegistration(0xb95750d7u, "Field Of View")]
+	[DDLRegistration(0xc6a759d9u, "Field Of View")]
 	public float HorizontalFOV { get; set; } = 65.00f;
 
-	[DDLRegistration(0xb95750d7u, "Near Clip Distance")]
+	[DDLRegistration(0xef20b8c7u, "Near Clip Distance")]
 	public float NearClip { get; set; } = 0.10f;
 
-	[DDLRegistration(0xb95750d7u, "Far Clip Distance")]
+	[DDLRegistration(0x180cce8cu, "Far Clip Distance")]
 	public float FarClip { get; set; } = 1000.00f;
 
-	[DDLRegistration(0xb95750d7u, "Horizontal Length")]
+	[DDLRegistration(0xfb44929fu, "Horizontal Length")]
 	public float HorizontalLength { get; set; } = 64.00f;
 
 	public static CameraPrius Create(DDLObject ddl) => new(ddl);

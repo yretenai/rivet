@@ -19,10 +19,10 @@ public class BeetleTrailScriptActionPrius : DDLObjectType, IDDLObjectType<Beetle
 		Enable = ddl.GetValue<bool>(0xcdd88655u, Enable);
 	}
 
-	[DDLRegistration(0x8927ad4du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x8927ad4du)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
 	public static BeetleTrailScriptActionPrius Create(DDLObject ddl) => new(ddl);

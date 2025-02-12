@@ -20,13 +20,13 @@ public class DebugMenuSpawnData : ActorSpawnData, IDDLObjectType<DebugMenuSpawnD
 		Facing = ddl.GetObject<DDLVector3>(0xb37847eeu);
 	}
 
-	[DDLRegistration(0x4029e8d7u, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4029e8d7u)]
+	[DDLRegistration(0xaa8ccf65u)]
 	public DDLVector3? Pos { get; set; } = default;
 
-	[DDLRegistration(0x4029e8d7u)]
+	[DDLRegistration(0xb37847eeu)]
 	public DDLVector3? Facing { get; set; } = default;
 
 	public new static DebugMenuSpawnData Create(DDLObject ddl) => new(ddl);

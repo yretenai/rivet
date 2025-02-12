@@ -22,19 +22,19 @@ public class NumberGenActionPrius : DDLObjectType, IDDLObjectType<NumberGenActio
 		Speed = ddl.GetValue<float>(0x16753237u, Speed);
 	}
 
-	[DDLRegistration(0xd5ddd29fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
-	[DDLRegistration(0xd5ddd29fu, description: "Wave Form Type")]
+	[DDLRegistration(0xbc4e9799u, description: "Wave Form Type")]
 	public x3c1de250 Type { get; set; } = x3c1de250.Sine;
 
-	[DDLRegistration(0xd5ddd29fu, description: "Wave Minimum Value")]
+	[DDLRegistration(0x8b2e3419u, description: "Wave Minimum Value")]
 	public float Min { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd5ddd29fu, description: "Wave Maximum Value")]
+	[DDLRegistration(0xb7230b40u, description: "Wave Maximum Value")]
 	public float Max { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd5ddd29fu, description: "Wave Speed (seconds between peak values)")]
+	[DDLRegistration(0x16753237u, description: "Wave Speed (seconds between peak values)")]
 	public float Speed { get; set; } = 1.00f;
 
 	public static NumberGenActionPrius Create(DDLObject ddl) => new(ddl);

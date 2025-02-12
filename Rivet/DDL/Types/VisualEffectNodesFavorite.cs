@@ -21,16 +21,16 @@ public class VisualEffectNodesFavorite : DDLObjectType, IDDLObjectType<VisualEff
 		TransformDirection = ddl.GetValue<int>(0x37407f32u, TransformDirection);
 	}
 
-	[DDLRegistration(0xdb7dfb73u)]
+	[DDLRegistration(0x4c68ca42u)]
 	public KeyFrameType KeyFrameType { get; set; } = KeyFrameType.Float;
 
-	[DDLRegistration(0xdb7dfb73u)]
+	[DDLRegistration(0x1ce19fbdu)]
 	public RenderStyle RenderStyle { get; set; } = RenderStyle.SingleQuad;
 
-	[DDLRegistration(0xdb7dfb73u)]
+	[DDLRegistration(0x5430bc1bu)]
 	public string? SymbolName { get; set; } = default;
 
-	[DDLRegistration(0xdb7dfb73u)]
+	[DDLRegistration(0x37407f32u)]
 	public int TransformDirection { get; set; } = 0;
 
 	public static VisualEffectNodesFavorite Create(DDLObject ddl) => new(ddl);

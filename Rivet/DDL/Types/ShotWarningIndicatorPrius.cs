@@ -21,16 +21,16 @@ public class ShotWarningIndicatorPrius : DDLObjectType, IDDLObjectType<ShotWarni
 		WarnFromActivate = ddl.GetValue<bool>(0x551fbd4au, WarnFromActivate);
 	}
 
-	[DDLRegistration(0xa8992f3au, description: "Where to set initial position of Shot Warning Event")]
+	[DDLRegistration(0x49a6f116u, description: "Where to set initial position of Shot Warning Event")]
 	public DDLVector3? TargetPos { get; set; } = default;
 
-	[DDLRegistration(0xa8992f3au)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa8992f3au)]
+	[DDLRegistration(0x738312dbu)]
 	public float Timer { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa8992f3au)]
+	[DDLRegistration(0x551fbd4au)]
 	public bool WarnFromActivate { get; set; } = true;
 
 	public static ShotWarningIndicatorPrius Create(DDLObject ddl) => new(ddl);

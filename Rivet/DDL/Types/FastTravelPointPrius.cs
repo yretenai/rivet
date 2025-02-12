@@ -20,13 +20,13 @@ public class FastTravelPointPrius : DDLObjectType, IDDLObjectType<FastTravelPoin
 		Props = ddl.GetObjects<FastTravelPointPropElement>(0x422d6669u);
 	}
 
-	[DDLRegistration(0xc32dd629u)]
+	[DDLRegistration(0xedfb833fu)]
 	public string? MapPointName { get; set; } = default;
 
-	[DDLRegistration(0xc32dd629u)]
+	[DDLRegistration(0x71d061f1u)]
 	public string? CheckpointName { get; set; } = default;
 
-	[DDLRegistration(0xc32dd629u)]
+	[DDLRegistration(0x422d6669u)]
 	public List<FastTravelPointPropElement?> Props { get; set; } = [];
 
 	public static FastTravelPointPrius Create(DDLObject ddl) => new(ddl);

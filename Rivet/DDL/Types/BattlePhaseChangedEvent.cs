@@ -18,7 +18,7 @@ public class BattlePhaseChangedEvent : EventBase, IDDLObjectType<BattlePhaseChan
 		Phase = ddl.GetValue<uint>(0xa8ee1a0au, Phase);
 	}
 
-	[DDLRegistration(0x16c7fa0au, description: "New phase. 0 based")]
+	[DDLRegistration(0xa8ee1a0au, description: "New phase. 0 based")]
 	public uint Phase { get; set; } = 0x00000000;
 
 	public new static BattlePhaseChangedEvent Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class AnimTriggerDef : DDLObjectType, IDDLObjectType<AnimTriggerDef> {
 		BroadcastRadius = ddl.GetValue<float>(0x89da1856u, BroadcastRadius);
 	}
 
-	[DDLRegistration(0xe95d68b5u)]
+	[DDLRegistration(0x12568d7bu)]
 	public x3bec8d43 Flags { get; set; } = (x3bec8d43) 0x00000000;
 
-	[DDLRegistration(0xe95d68b5u, description: "Event display name")]
+	[DDLRegistration(0x6eb3beb6u, description: "Event display name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xe95d68b5u, description: "Event trigger time")]
+	[DDLRegistration(0x5f0458f5u, description: "Event trigger time")]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe95d68b5u, "Broadcast Event")]
+	[DDLRegistration(0xc8964ba0u, "Broadcast Event")]
 	public bool BroadcastFlag { get; set; } = false;
 
-	[DDLRegistration(0xe95d68b5u, "Receiving Actor")]
+	[DDLRegistration(0xcc4a4d21u, "Receiving Actor")]
 	public string? ActorName { get; set; } = default;
 
-	[DDLRegistration(0xe95d68b5u, "Locator on Actor")]
+	[DDLRegistration(0x5814524du, "Locator on Actor")]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0xe95d68b5u, "Broadcast Radius", "Maximum distance this event should be broadcast to")]
+	[DDLRegistration(0x89da1856u, "Broadcast Radius", "Maximum distance this event should be broadcast to")]
 	public float BroadcastRadius { get; set; } = 10.00f;
 
 	public static AnimTriggerDef Create(DDLObject ddl) => new(ddl);

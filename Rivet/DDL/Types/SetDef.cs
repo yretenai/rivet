@@ -25,28 +25,28 @@ public class SetDef : DDLObjectType, IDDLObjectType<SetDef> {
 		BonusAmount = ddl.GetValue<float>(0x5b514b90u, BonusAmount);
 	}
 
-	[DDLRegistration(0x7c4b21ceu, "Set ID", "Set ID")]
+	[DDLRegistration(0x6e0917bbu, "Set ID", "Set ID")]
 	public xa57aac73 SetID { get; set; } = xa57aac73.Veldin;
 
-	[DDLRegistration(0x7c4b21ceu, "Set Name loc tag")]
+	[DDLRegistration(0x1edca0ffu, "Set Name loc tag")]
 	public string? SetNameLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x7c4b21ceu, "Temp set name", "Temp non-localized set name text for non-final only.")]
+	[DDLRegistration(0x0711dcf9u, "Temp set name", "Temp non-localized set name text for non-final only.")]
 	public string? TempSetName { get; set; } = "temp name";
 
-	[DDLRegistration(0x7c4b21ceu, "Set Description loc tag")]
+	[DDLRegistration(0x5ef37719u, "Set Description loc tag")]
 	public string? SetDescLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x7c4b21ceu, "Temp set description", "Temp non-localized set description text for non-final only.")]
+	[DDLRegistration(0x52870eabu, "Temp set description", "Temp non-localized set description text for non-final only.")]
 	public string? TempSetDesc { get; set; } = "temp desc";
 
-	[DDLRegistration(0x7c4b21ceu, "Cards", "Cards belonging to this set")]
+	[DDLRegistration(0xf074f9f2u, "Cards", "Cards belonging to this set")]
 	public List<x507460e6> CardIDs { get; set; } = [];
 
-	[DDLRegistration(0x7c4b21ceu, "Bonus Type")]
+	[DDLRegistration(0x86cbb3bbu, "Bonus Type")]
 	public BonusType Bonus { get; set; } = BonusType.BonusNone;
 
-	[DDLRegistration(0x7c4b21ceu, "Bonus Amount", "Bonus amount (percentage)")]
+	[DDLRegistration(0x5b514b90u, "Bonus Amount", "Bonus amount (percentage)")]
 	public float BonusAmount { get; set; } = 0.00f;
 
 	public static SetDef Create(DDLObject ddl) => new(ddl);

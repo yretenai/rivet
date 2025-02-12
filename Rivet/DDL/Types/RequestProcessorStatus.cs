@@ -19,10 +19,10 @@ public class RequestProcessorStatus : DDLObjectType, IDDLObjectType<RequestProce
 		CountLoadListSessions = ddl.GetValue<int>(0xd410b271u, CountLoadListSessions);
 	}
 
-	[DDLRegistration(0xc2889962u)]
+	[DDLRegistration(0x30102044u)]
 	public int CountFileSessions { get; set; } = 0;
 
-	[DDLRegistration(0xc2889962u)]
+	[DDLRegistration(0xd410b271u)]
 	public int CountLoadListSessions { get; set; } = 0;
 
 	public static RequestProcessorStatus Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SkinItemModelVariantOverridePrius : DDLObjectType, IDDLObjectType<S
 		VariantNameHash = ddl.GetValue<uint>(0xd984a272u, VariantNameHash);
 	}
 
-	[DDLRegistration(0x07ba114bu)]
+	[DDLRegistration(0xdc87e4c7u)]
 	public RivetAssetId ModelVariantHash { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x07ba114bu)]
+	[DDLRegistration(0xd984a272u)]
 	public uint VariantNameHash { get; set; } = 0x00000000;
 
 	public static SkinItemModelVariantOverridePrius Create(DDLObject ddl) => new(ddl);

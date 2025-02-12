@@ -20,13 +20,13 @@ public class TargetShapeOBB : DDLObjectType, IDDLObjectType<TargetShapeOBB> {
 		SizeZ = ddl.GetValue<float>(0xed7fd3c4u, SizeZ);
 	}
 
-	[DDLRegistration(0xfc737cbbu, description: "Length the box extends along the locator's x-axis in both directions.")]
+	[DDLRegistration(0x0371b2e8u, description: "Length the box extends along the locator's x-axis in both directions.")]
 	public float SizeX { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfc737cbbu, description: "Length the box extends along the locator's y-axis in both directions.")]
+	[DDLRegistration(0x7476827eu, description: "Length the box extends along the locator's y-axis in both directions.")]
 	public float SizeY { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfc737cbbu, description: "Length the box extends along the locator's z-axis in both directions.")]
+	[DDLRegistration(0xed7fd3c4u, description: "Length the box extends along the locator's z-axis in both directions.")]
 	public float SizeZ { get; set; } = 1.00f;
 
 	public static TargetShapeOBB Create(DDLObject ddl) => new(ddl);

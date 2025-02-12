@@ -18,7 +18,7 @@ public class SharedHighQualityAlphaSortPrius : DDLObjectType, IDDLObjectType<Sha
 		Extent = ddl.GetValue<float>(0x1876172fu, Extent);
 	}
 
-	[DDLRegistration(0x6105963cu)]
+	[DDLRegistration(0x1876172fu)]
 	public float Extent { get; set; } = 2.00f;
 
 	public static SharedHighQualityAlphaSortPrius Create(DDLObject ddl) => new(ddl);

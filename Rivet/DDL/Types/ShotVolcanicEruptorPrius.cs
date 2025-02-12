@@ -19,10 +19,10 @@ public class ShotVolcanicEruptorPrius : LobbedShotPrius, IDDLObjectType<ShotVolc
 		DamageToBreakables = ddl.GetValue<float>(0x24f13b0bu, DamageToBreakables);
 	}
 
-	[DDLRegistration(0xdcdb6f2bu, "Geyser Actor")]
+	[DDLRegistration(0x0a570e2du, "Geyser Actor")]
 	public RivetAssetId GeyserActor { get; set; } = default;
 
-	[DDLRegistration(0xdcdb6f2bu, "Damage To Breakables")]
+	[DDLRegistration(0x24f13b0bu, "Damage To Breakables")]
 	public float DamageToBreakables { get; set; } = 10.00f;
 
 	public new static ShotVolcanicEruptorPrius Create(DDLObject ddl) => new(ddl);

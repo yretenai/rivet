@@ -23,22 +23,22 @@ public class LastResolvedFile : DDLObjectType, IDDLObjectType<LastResolvedFile> 
 		MergedResult = ddl.GetString(0xa76db314) ?? MergedResult;
 	}
 
-	[DDLRegistration(0x7aaf27e9u)]
+	[DDLRegistration(0x54a1fc75u)]
 	public RivetAssetId FileToResolve { get; set; } = default;
 
-	[DDLRegistration(0x7aaf27e9u)]
+	[DDLRegistration(0x7c497ea3u)]
 	public int BaseRevisionNumber { get; set; } = 0;
 
-	[DDLRegistration(0x7aaf27e9u)]
+	[DDLRegistration(0x7d43870cu)]
 	public int LatestRevisionNumber { get; set; } = 0;
 
-	[DDLRegistration(0x7aaf27e9u)]
+	[DDLRegistration(0x2e8a03e0u)]
 	public string? TheirChanges { get; set; } = default;
 
-	[DDLRegistration(0x7aaf27e9u)]
+	[DDLRegistration(0x65689d14u)]
 	public string? YourChanges { get; set; } = default;
 
-	[DDLRegistration(0x7aaf27e9u)]
+	[DDLRegistration(0xa76db314u)]
 	public string? MergedResult { get; set; } = default;
 
 	public static LastResolvedFile Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class UICollectible : DDLObjectType, IDDLObjectType<UICollectible> {
 		DisplayImage = ddl.GetValue<RivetAssetId>(0x113d8e81u, DisplayImage);
 	}
 
-	[DDLRegistration(0xca184fb4u, "Type", "Collectible type.")]
+	[DDLRegistration(0xbc4e9799u, "Type", "Collectible type.")]
 	public UICollectibleTypeBase? Type { get; set; } = default;
 
-	[DDLRegistration(0xca184fb4u, "Display Name", "Name loctag for this collectible.")]
+	[DDLRegistration(0xeaf33243u, "Display Name", "Name loctag for this collectible.")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0xca184fb4u, "Display Desc", "Description loctag for this collectible.")]
+	[DDLRegistration(0xbf65e011u, "Display Desc", "Description loctag for this collectible.")]
 	public string? DisplayDesc { get; set; } = default;
 
-	[DDLRegistration(0xca184fb4u, "Display Image", "Display image for this collectible.")]
+	[DDLRegistration(0x113d8e81u, "Display Image", "Display image for this collectible.")]
 	public RivetAssetId DisplayImage { get; set; } = default;
 
 	public static UICollectible Create(DDLObject ddl) => new(ddl);

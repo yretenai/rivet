@@ -19,10 +19,10 @@ public class AimModLeadTargetPriusModDef : DDLObjectType, IDDLObjectType<AimModL
 		ModList = ddl.GetObjects<ConfigModListElement>(0x2649755bu);
 	}
 
-	[DDLRegistration(0x3ba61dc6u, "Variable", "Variable to modify")]
+	[DDLRegistration(0x364c3afdu, "Variable", "Variable to modify")]
 	public x68870183 Variable { get; set; } = x68870183.None;
 
-	[DDLRegistration(0x3ba61dc6u, "Config Mod List", "List of config mods to apply")]
+	[DDLRegistration(0x2649755bu, "Config Mod List", "List of config mods to apply")]
 	public List<ConfigModListElement?> ModList { get; set; } = [];
 
 	public static AimModLeadTargetPriusModDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class AnimChunkDirectionLocalOffset : AnimChunkDirection, IDDLObjectType<
 		LocalOffset = ddl.GetObject<DDLVector3>(0x46a4eea5u);
 	}
 
-	[DDLRegistration(0x4e92df78u, description: "Cone half-angle to randomize direction.")]
+	[DDLRegistration(0x3b3b441fu, description: "Cone half-angle to randomize direction.")]
 	public float HalfConeAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4e92df78u, description: "Actor relative offset to use as chunk direction.")]
+	[DDLRegistration(0x46a4eea5u, description: "Actor relative offset to use as chunk direction.")]
 	public DDLVector3? LocalOffset { get; set; } = default;
 
 	public new static AnimChunkDirectionLocalOffset Create(DDLObject ddl) => new(ddl);

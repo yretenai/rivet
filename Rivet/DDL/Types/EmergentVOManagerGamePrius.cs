@@ -18,7 +18,7 @@ public class EmergentVOManagerGamePrius : EmergentVOManagerBasePrius, IDDLObject
 		StopAllLinesOnDeath = ddl.GetValue<bool>(0xfaa10a05u, StopAllLinesOnDeath);
 	}
 
-	[DDLRegistration(0xacdd0b05u, description: "Should we stop all lines when this bot dies.")]
+	[DDLRegistration(0xfaa10a05u, description: "Should we stop all lines when this bot dies.")]
 	public bool StopAllLinesOnDeath { get; set; } = true;
 
 	public new static EmergentVOManagerGamePrius Create(DDLObject ddl) => new(ddl);

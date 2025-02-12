@@ -19,10 +19,10 @@ public class SoundPropagation2RangeDef : DDLObjectType, IDDLObjectType<SoundProp
 		Max = ddl.GetValue<float>(0xb7230b40u, Max);
 	}
 
-	[DDLRegistration(0x0e2173a2u)]
+	[DDLRegistration(0x8b2e3419u)]
 	public float Min { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0e2173a2u)]
+	[DDLRegistration(0xb7230b40u)]
 	public float Max { get; set; } = 0.00f;
 
 	public static SoundPropagation2RangeDef Create(DDLObject ddl) => new(ddl);

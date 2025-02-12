@@ -24,25 +24,25 @@ public class ObjectiveLoadInfo : DDLObjectType, IDDLObjectType<ObjectiveLoadInfo
 		BackpackLoadout = ddl.GetValue<RivetAssetId>(0xc1772340u, BackpackLoadout);
 	}
 
-	[DDLRegistration(0x1267f3ceu, "Primary Spawn Checkpoint", "Checkpoint to be spawned into when loading directly into this mission/objective state.")]
+	[DDLRegistration(0x0bb49a7cu, "Primary Spawn Checkpoint", "Checkpoint to be spawned into when loading directly into this mission/objective state.")]
 	public string? SpawnCheckpoint { get; set; } = default;
 
-	[DDLRegistration(0x1267f3ceu, "(Optional) Dimension Checkpoint", "If the player should spawn in an alterate dimension overlay, specify an overlay \"checkpoint\" where the player will really spawn.")]
+	[DDLRegistration(0xb98c1c37u, "(Optional) Dimension Checkpoint", "If the player should spawn in an alterate dimension overlay, specify an overlay \"checkpoint\" where the player will really spawn.")]
 	public string? DimensionCheckpoint { get; set; } = default;
 
-	[DDLRegistration(0x1267f3ceu, "Spawn as Hero", "Hero type to be spawned in as when loading directly into this mission/objective state.")]
+	[DDLRegistration(0xeb1836f9u, "Spawn as Hero", "Hero type to be spawned in as when loading directly into this mission/objective state.")]
 	public HeroTypes SpawnAsHero { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0x1267f3ceu, "Lighting Mode", "Lighting mode of the game to load in when debug loading to this objective.")]
+	[DDLRegistration(0x537e2fccu, "Lighting Mode", "Lighting mode of the game to load in when debug loading to this objective.")]
 	public LightingModeGame LightingMode { get; set; } = LightingModeGame.Day;
 
-	[DDLRegistration(0x1267f3ceu, "Spawn Loadout", "What loadout the hero should be spawned with when loading directly into this mission/objective state.")]
+	[DDLRegistration(0x569fa463u, "Spawn Loadout", "What loadout the hero should be spawned with when loading directly into this mission/objective state.")]
 	public RivetAssetId SpawnLoadout { get; set; } = default;
 
-	[DDLRegistration(0x1267f3ceu, "Spawn Loadout (Challenge Mode)", "What loadout the hero should be spawned with when debug loading directly into this mission/objective state in challenge mode.")]
+	[DDLRegistration(0x3300fcc4u, "Spawn Loadout (Challenge Mode)", "What loadout the hero should be spawned with when debug loading directly into this mission/objective state in challenge mode.")]
 	public RivetAssetId ChallengeSpawnLoadout { get; set; } = default;
 
-	[DDLRegistration(0x1267f3ceu, "Clank Pack Loadout", "A config of type ClankPackLoadoutConfig that defines what type of clank pack each character should have saved.")]
+	[DDLRegistration(0xc1772340u, "Clank Pack Loadout", "A config of type ClankPackLoadoutConfig that defines what type of clank pack each character should have saved.")]
 	public RivetAssetId BackpackLoadout { get; set; } = default;
 
 	public static ObjectiveLoadInfo Create(DDLObject ddl) => new(ddl);

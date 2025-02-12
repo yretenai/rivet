@@ -24,25 +24,25 @@ public class AnimDriverPoseNodeDef : DDLObjectType, IDDLObjectType<AnimDriverPos
 		IsAdditive = ddl.GetValue<bool>(0xa60f98d3u, IsAdditive);
 	}
 
-	[DDLRegistration(0x7722f40au)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x7722f40au)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0x7722f40au)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7722f40au)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7722f40au, "Name")]
+	[DDLRegistration(0x842d53a9u, "Name")]
 	public string? ClipName { get; set; } = default;
 
-	[DDLRegistration(0x7722f40au)]
+	[DDLRegistration(0xd996bda5u)]
 	public List<int> PoseFrameIds { get; set; } = [];
 
-	[DDLRegistration(0x7722f40au)]
+	[DDLRegistration(0xa60f98d3u)]
 	public bool IsAdditive { get; set; } = false;
 
 	public static AnimDriverPoseNodeDef Create(DDLObject ddl) => new(ddl);

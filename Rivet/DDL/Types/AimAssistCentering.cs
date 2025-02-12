@@ -25,28 +25,28 @@ public class AimAssistCentering : DDLObjectType, IDDLObjectType<AimAssistCenteri
 		MaxBoxValue = ddl.GetValue<float>(0xe3e6c396u, MaxBoxValue);
 	}
 
-	[DDLRegistration(0xe95b5831u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0xe95b5831u, "Stick Min")]
+	[DDLRegistration(0xdee2a17du, "Stick Min")]
 	public float StickMin { get; set; } = 0.20f;
 
-	[DDLRegistration(0xe95b5831u, "Stick Max")]
+	[DDLRegistration(0xe2ef9e24u, "Stick Max")]
 	public float StickMax { get; set; } = 0.85f;
 
-	[DDLRegistration(0xe95b5831u, "Factor Min")]
+	[DDLRegistration(0xc102c0afu, "Factor Min")]
 	public float FactorMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe95b5831u, "Factor Max")]
+	[DDLRegistration(0xfd0ffff6u, "Factor Max")]
 	public float FactorMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe95b5831u, "Factor Curve")]
+	[DDLRegistration(0x4685e461u, "Factor Curve")]
 	public float FactorCurve { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe95b5831u, "Min Box Value")]
+	[DDLRegistration(0x2febb899u, "Min Box Value")]
 	public float MinBoxValue { get; set; } = 0.50f;
 
-	[DDLRegistration(0xe95b5831u, "Max Box Value")]
+	[DDLRegistration(0xe3e6c396u, "Max Box Value")]
 	public float MaxBoxValue { get; set; } = 1.00f;
 
 	public static AimAssistCentering Create(DDLObject ddl) => new(ddl);

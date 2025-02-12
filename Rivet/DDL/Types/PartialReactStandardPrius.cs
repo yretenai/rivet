@@ -19,10 +19,10 @@ public class PartialReactStandardPrius : PartialReactBasePrius, IDDLObjectType<P
 		PartialReactCooldown = ddl.GetValue<float>(0xa4e1f543u, PartialReactCooldown);
 	}
 
-	[DDLRegistration(0x90e0f7d0u)]
+	[DDLRegistration(0x4f63a6f1u)]
 	public string? PartialReactDriver { get; set; } = "React_Twitch";
 
-	[DDLRegistration(0x90e0f7d0u)]
+	[DDLRegistration(0xa4e1f543u)]
 	public float PartialReactCooldown { get; set; } = 0.25f;
 
 	public new static PartialReactStandardPrius Create(DDLObject ddl) => new(ddl);

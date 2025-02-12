@@ -18,7 +18,7 @@ public class RecoveryLedgeRightHandDetachIKEvent : EventBase, IDDLObjectType<Rec
 		BlendOutDuration = ddl.GetValue<float>(0x21329878u, BlendOutDuration);
 	}
 
-	[DDLRegistration(0xf012ccfeu)]
+	[DDLRegistration(0x21329878u)]
 	public float BlendOutDuration { get; set; } = 0.25f;
 
 	public new static RecoveryLedgeRightHandDetachIKEvent Create(DDLObject ddl) => new(ddl);

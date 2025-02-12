@@ -18,7 +18,7 @@ public class AssetProfileDataReferenceArray : DDLObjectType, IDDLObjectType<Asse
 		References = ddl.GetStrings(0x442873a5u);
 	}
 
-	[DDLRegistration(0x6e55017eu)]
+	[DDLRegistration(0x442873a5u)]
 	public List<string?> References { get; set; } = [];
 
 	public static AssetProfileDataReferenceArray Create(DDLObject ddl) => new(ddl);

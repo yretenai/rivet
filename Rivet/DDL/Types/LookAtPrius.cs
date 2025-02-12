@@ -25,28 +25,28 @@ public class LookAtPrius : EnabledComponentBasePrius, IDDLObjectType<LookAtPrius
 		TargetLocUpOffset = ddl.GetValue<float>(0xf49d96bbu, TargetLocUpOffset);
 	}
 
-	[DDLRegistration(0xc58a82f1u, "Look at Awareness", "A target must be in this volume/area for us to look at them.")]
+	[DDLRegistration(0x9ce33f31u, "Look at Awareness", "A target must be in this volume/area for us to look at them.")]
 	public RivetAssetId LookAtAwareness { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc58a82f1u, "Look at Range", "If no awareness volume/area is given, we'll use this range value.")]
+	[DDLRegistration(0x7489fae7u, "Look at Range", "If no awareness volume/area is given, we'll use this range value.")]
 	public float LookAtRange { get; set; } = 10.00f;
 
-	[DDLRegistration(0xc58a82f1u, "Target Type", "What sort of targets are valid for us to look at.")]
+	[DDLRegistration(0x75a19d21u, "Target Type", "What sort of targets are valid for us to look at.")]
 	public xf16844d6 TargetType { get; set; } = xf16844d6.LookAtHero;
 
-	[DDLRegistration(0xc58a82f1u, "Target Priority", "When we have more than one valid target, how do we select the one to look at.")]
+	[DDLRegistration(0x76a817c3u, "Target Priority", "When we have more than one valid target, how do we select the one to look at.")]
 	public x07bee456 TargetPriority { get; set; } = x07bee456.KeepTarget;
 
-	[DDLRegistration(0xc58a82f1u, "Opt. Specific Target", "When using Target Type of LookAtSpecificTarget, this is what we should be looking at.")]
+	[DDLRegistration(0x51ae384du, "Opt. Specific Target", "When using Target Type of LookAtSpecificTarget, this is what we should be looking at.")]
 	public RivetAssetId SpecificTarget { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc58a82f1u, "Target Location Type", "What we should aim at on our target.")]
+	[DDLRegistration(0x61afe359u, "Target Location Type", "What we should aim at on our target.")]
 	public x6729cb3b TargetLocationType { get; set; } = x6729cb3b.BSphere;
 
-	[DDLRegistration(0xc58a82f1u, "Opt. Target Locator", "When using the LocationType kLocator, we will use this locator if possible and the bsphere otherwise.")]
+	[DDLRegistration(0x4bd4816eu, "Opt. Target Locator", "When using the LocationType kLocator, we will use this locator if possible and the bsphere otherwise.")]
 	public string? TargetLocatorName { get; set; } = default;
 
-	[DDLRegistration(0xc58a82f1u, "Target Local-Y Offset", "A local (object space of the target) y ('up') offset for the target location.")]
+	[DDLRegistration(0xf49d96bbu, "Target Local-Y Offset", "A local (object space of the target) y ('up') offset for the target location.")]
 	public float TargetLocUpOffset { get; set; } = 0.00f;
 
 	public new static LookAtPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PollChangesResult : DDLObjectType, IDDLObjectType<PollChangesResult
 		Changes = ddl.GetObjects<ChangeLogResult>(0x21cadb05u);
 	}
 
-	[DDLRegistration(0x5ad4759cu)]
+	[DDLRegistration(0x21cadb05u)]
 	public List<ChangeLogResult?> Changes { get; set; } = [];
 
 	public static PollChangesResult Create(DDLObject ddl) => new(ddl);

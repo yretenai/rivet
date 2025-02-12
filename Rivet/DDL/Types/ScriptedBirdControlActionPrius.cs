@@ -18,7 +18,7 @@ public class ScriptedBirdControlActionPrius : DDLObjectType, IDDLObjectType<Scri
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x58c34926u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
 	public static ScriptedBirdControlActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class WwiseAuxSend : DDLObjectType, IDDLObjectType<WwiseAuxSend> {
 		AuxSendId = ddl.GetValue<uint>(0x30502f58u, AuxSendId);
 	}
 
-	[DDLRegistration(0x1573accfu)]
+	[DDLRegistration(0xaf24a03au)]
 	public string? AuxSendName { get; set; } = default;
 
-	[DDLRegistration(0x1573accfu)]
+	[DDLRegistration(0x30502f58u)]
 	public uint AuxSendId { get; set; } = 0x00000000;
 
 	public static WwiseAuxSend Create(DDLObject ddl) => new(ddl);

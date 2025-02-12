@@ -19,10 +19,10 @@ public class StaticMaterialOverridePrius : DDLObjectType, IDDLObjectType<StaticM
 		NewMaterial = ddl.GetValue<RivetAssetId>(0xa71ff48bu, NewMaterial);
 	}
 
-	[DDLRegistration(0xc5afba18u, "Material to Replace", "The material we will be replacing.  If none is provided, we will replace the base material.")]
+	[DDLRegistration(0xbf0f3060u, "Material to Replace", "The material we will be replacing.  If none is provided, we will replace the base material.")]
 	public RivetAssetId MaterialToReplace { get; set; } = default;
 
-	[DDLRegistration(0xc5afba18u, "Replacement Material", "The material that will replace the above material.")]
+	[DDLRegistration(0xa71ff48bu, "Replacement Material", "The material that will replace the above material.")]
 	public RivetAssetId NewMaterial { get; set; } = default;
 
 	public static StaticMaterialOverridePrius Create(DDLObject ddl) => new(ddl);

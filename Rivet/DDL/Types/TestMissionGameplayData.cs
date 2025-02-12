@@ -18,7 +18,7 @@ public class TestMissionGameplayData : DDLObjectType, IDDLObjectType<TestMission
 		Objective = ddl.GetObject<TestMissionObjective>(0x3b6b6e0du);
 	}
 
-	[DDLRegistration(0x306772a0u)]
+	[DDLRegistration(0x3b6b6e0du)]
 	public TestMissionObjective? Objective { get; set; } = default;
 
 	public static TestMissionGameplayData Create(DDLObject ddl) => new(ddl);

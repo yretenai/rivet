@@ -18,7 +18,7 @@ public class RootNodeSaveDataShared : ObjSysNodeSaveData, IDDLObjectType<RootNod
 		WasStarted = ddl.GetValue<bool>(0xa3a9db02u, WasStarted);
 	}
 
-	[DDLRegistration(0x3ff92c08u)]
+	[DDLRegistration(0xa3a9db02u)]
 	public bool WasStarted { get; set; } = false;
 
 	public new static RootNodeSaveDataShared Create(DDLObject ddl) => new(ddl);

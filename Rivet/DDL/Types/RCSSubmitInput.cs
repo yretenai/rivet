@@ -20,13 +20,13 @@ public class RCSSubmitInput : DDLObjectType, IDDLObjectType<RCSSubmitInput> {
 		Reopen = ddl.GetValue<bool>(0x1db6e78bu, Reopen);
 	}
 
-	[DDLRegistration(0x5a51cf8cu, description: "Changelist to submit; 0 (or unspecified) means submit files in the default changelist.")]
+	[DDLRegistration(0x03b0ddc6u, description: "Changelist to submit; 0 (or unspecified) means submit files in the default changelist.")]
 	public uint Changelist { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5a51cf8cu, description: "Comment describing the change that is being submitted; Required if submitting the default changelist, otherwise this parameter is ignored.")]
+	[DDLRegistration(0xe03811fdu, description: "Comment describing the change that is being submitted; Required if submitting the default changelist, otherwise this parameter is ignored.")]
 	public string? Description { get; set; } = "";
 
-	[DDLRegistration(0x5a51cf8cu, description: "If true, the submitted files will be immediately checked back out.")]
+	[DDLRegistration(0x1db6e78bu, description: "If true, the submitted files will be immediately checked back out.")]
 	public bool Reopen { get; set; } = false;
 
 	public static RCSSubmitInput Create(DDLObject ddl) => new(ddl);

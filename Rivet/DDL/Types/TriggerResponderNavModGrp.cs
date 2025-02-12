@@ -20,13 +20,13 @@ public class TriggerResponderNavModGrp : DDLObjectType, IDDLObjectType<TriggerRe
 		NavLayer = ddl.GetValue<uint>(0x49c0801eu, NavLayer);
 	}
 
-	[DDLRegistration(0x1c2bd24du, description: "Actor or actor group")]
+	[DDLRegistration(0xe153be82u, description: "Actor or actor group")]
 	public RivetAssetId Actors { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x1c2bd24du, description: "Set the actors to this state")]
+	[DDLRegistration(0x79b4c2f5u, description: "Set the actors to this state")]
 	public xc9b0923d Action { get; set; } = xc9b0923d.AllowNav;
 
-	[DDLRegistration(0x1c2bd24du, description: "The nav layer to modify")]
+	[DDLRegistration(0x49c0801eu, description: "The nav layer to modify")]
 	public uint NavLayer { get; set; } = 0x00000000;
 
 	public static TriggerResponderNavModGrp Create(DDLObject ddl) => new(ddl);

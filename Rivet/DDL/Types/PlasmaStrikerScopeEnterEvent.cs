@@ -18,7 +18,7 @@ public class PlasmaStrikerScopeEnterEvent : EventBase, IDDLObjectType<PlasmaStri
 		TimeScale = ddl.GetValue<float>(0x5fe2ecbau, TimeScale);
 	}
 
-	[DDLRegistration(0xa3ec20dfu)]
+	[DDLRegistration(0x5fe2ecbau)]
 	public float TimeScale { get; set; } = 0.00f;
 
 	public new static PlasmaStrikerScopeEnterEvent Create(DDLObject ddl) => new(ddl);

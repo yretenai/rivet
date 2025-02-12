@@ -19,10 +19,10 @@ public class DoorAutomaticPrius : DDLObjectType, IDDLObjectType<DoorAutomaticPri
 		StartActive = ddl.GetValue<bool>(0x3e035e82u, StartActive);
 	}
 
-	[DDLRegistration(0xea1d90c1u, description: "The distance the hero must be within to cause the door to open.")]
+	[DDLRegistration(0x293c7422u, description: "The distance the hero must be within to cause the door to open.")]
 	public float ActivationDistance { get; set; } = 4.00f;
 
-	[DDLRegistration(0xea1d90c1u, description: "Whether or not the door will automatically open/close by default (without script intervention).")]
+	[DDLRegistration(0x3e035e82u, description: "Whether or not the door will automatically open/close by default (without script intervention).")]
 	public bool StartActive { get; set; } = true;
 
 	public static DoorAutomaticPrius Create(DDLObject ddl) => new(ddl);

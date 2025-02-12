@@ -18,7 +18,7 @@ public class MasterGeneralInventoryList : ConfigBase, IDDLObjectType<MasterGener
 		GeneralInventoryItems = ddl.GetObjects<GeneralInventoryListElement>(0x214c59bfu);
 	}
 
-	[DDLRegistration(0xc126f8a5u, "General Inventory Items")]
+	[DDLRegistration(0x214c59bfu, "General Inventory Items")]
 	public List<GeneralInventoryListElement?> GeneralInventoryItems { get; set; } = [];
 
 	public new static MasterGeneralInventoryList Create(DDLObject ddl) => new(ddl);

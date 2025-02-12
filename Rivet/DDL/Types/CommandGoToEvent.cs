@@ -23,22 +23,22 @@ public class CommandGoToEvent : CommandEvent, IDDLObjectType<CommandGoToEvent> {
 		KeepTryingTimeOut = ddl.GetValue<float>(0x92e4a897u, KeepTryingTimeOut);
 	}
 
-	[DDLRegistration(0x11600dd3u)]
+	[DDLRegistration(0x3a387b17u)]
 	public uint DestinationActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x11600dd3u, description: "Continue to attack during go to")]
+	[DDLRegistration(0x79b8635cu, description: "Continue to attack during go to")]
 	public bool Attack { get; set; } = false;
 
-	[DDLRegistration(0x11600dd3u, description: "Run towards target.")]
+	[DDLRegistration(0x7a238d09u, description: "Run towards target.")]
 	public bool Run { get; set; } = false;
 
-	[DDLRegistration(0x11600dd3u, description: "FaceDestinationDirectionOnArrival")]
+	[DDLRegistration(0x570340fbu, description: "FaceDestinationDirectionOnArrival")]
 	public bool FaceDestinationDirectionOnArrival { get; set; } = false;
 
-	[DDLRegistration(0x11600dd3u, description: "If fails to do go to, keep trying until stopped")]
+	[DDLRegistration(0x1eb827f2u, description: "If fails to do go to, keep trying until stopped")]
 	public bool KeepTrying { get; set; } = true;
 
-	[DDLRegistration(0x11600dd3u, description: "If KeepTrying is set, how long to keep trying for? Negative = infinite.")]
+	[DDLRegistration(0x92e4a897u, description: "If KeepTrying is set, how long to keep trying for? Negative = infinite.")]
 	public float KeepTryingTimeOut { get; set; } = -1.00f;
 
 	public new static CommandGoToEvent Create(DDLObject ddl) => new(ddl);

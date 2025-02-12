@@ -20,13 +20,13 @@ public class TrapGunkSpawnData : ActorSpawnData, IDDLObjectType<TrapGunkSpawnDat
 		Trap = ddl.GetValue<uint>(0x8e1fbf83u, Trap);
 	}
 
-	[DDLRegistration(0x5f44793bu, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5f44793bu)]
+	[DDLRegistration(0xd86fe14cu)]
 	public DDLVector3? SpawnPosition { get; set; } = default;
 
-	[DDLRegistration(0x5f44793bu, description: "The trap.")]
+	[DDLRegistration(0x8e1fbf83u, description: "The trap.")]
 	public uint Trap { get; set; } = 0x00000000;
 
 	public new static TrapGunkSpawnData Create(DDLObject ddl) => new(ddl);

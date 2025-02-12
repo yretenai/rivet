@@ -27,34 +27,34 @@ public class SceneObjectCollectorPrius : DDLObjectType, IDDLObjectType<SceneObje
 		IncludeZones = ddl.GetValues<RivetAssetId>(0xcedcd811u);
 	}
 
-	[DDLRegistration(0x401810d6u, "Encompassing Volume", "Volume or actor group of volumes that encompasses scene objects to query")]
+	[DDLRegistration(0xcc46eeeau, "Encompassing Volume", "Volume or actor group of volumes that encompasses scene objects to query")]
 	public RivetAssetId EncompassingVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x401810d6u, "Max Models", "Max models to collect")]
+	[DDLRegistration(0x58a647a4u, "Max Models", "Max models to collect")]
 	public uint MaxModels { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x401810d6u, "Max Lights", "Max lights to collect")]
+	[DDLRegistration(0x84ccc545u, "Max Lights", "Max lights to collect")]
 	public uint MaxLights { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x401810d6u, "Max Volumes", "Max volumes to collect")]
+	[DDLRegistration(0x0005eabau, "Max Volumes", "Max volumes to collect")]
 	public uint MaxVolumes { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x401810d6u, "Max Decals", "Max decals to collect")]
+	[DDLRegistration(0xafc79ea8u, "Max Decals", "Max decals to collect")]
 	public uint MaxDecals { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x401810d6u, "Max Curves", "Max curves to collect")]
+	[DDLRegistration(0xf22c07d4u, "Max Curves", "Max curves to collect")]
 	public uint MaxCurves { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x401810d6u, "Max Visual Effects", "Max visual effects to collect")]
+	[DDLRegistration(0x02f97273u, "Max Visual Effects", "Max visual effects to collect")]
 	public uint MaxVisualEffects { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x401810d6u, "Include Env Probes", "Optionally collect environment probes")]
+	[DDLRegistration(0x41cb9690u, "Include Env Probes", "Optionally collect environment probes")]
 	public bool IncludeEnvProbes { get; set; } = true;
 
-	[DDLRegistration(0x401810d6u, "Exclude Collectors", "Collectors that we may overlap with whose objects we should exclude from our set")]
+	[DDLRegistration(0x3beca248u, "Exclude Collectors", "Collectors that we may overlap with whose objects we should exclude from our set")]
 	public List<RivetAssetId> ExcludeCollectors { get; set; } = [];
 
-	[DDLRegistration(0x401810d6u, "Include Zones", "Additional zones to collect objects from (other than the zone that this actor is placed in)")]
+	[DDLRegistration(0xcedcd811u, "Include Zones", "Additional zones to collect objects from (other than the zone that this actor is placed in)")]
 	public List<RivetAssetId> IncludeZones { get; set; } = [];
 
 	public static SceneObjectCollectorPrius Create(DDLObject ddl) => new(ddl);

@@ -28,37 +28,37 @@ public class SoundEnvironmentControllerPrius : DDLObjectType, IDDLObjectType<Sou
 		Volumes = ddl.GetValues<RivetAssetId>(0x7b36c92du);
 	}
 
-	[DDLRegistration(0xf54b371au, description: "Position to test for activating and deactivating thethis environment")]
+	[DDLRegistration(0xccb9b06au, description: "Position to test for activating and deactivating thethis environment")]
 	public xb62b6a7f TriggerPosition { get; set; } = xb62b6a7f.Listener;
 
-	[DDLRegistration(0xf54b371au)]
+	[DDLRegistration(0x84ac8cf2u)]
 	public float FadeIn { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf54b371au)]
+	[DDLRegistration(0xa9e43db1u)]
 	public float FadeOut { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf54b371au, description: "Priority for initial triggering. Larger numbers are 'most inner'")]
+	[DDLRegistration(0x98a76157u, description: "Priority for initial triggering. Larger numbers are 'most inner'")]
 	public uint Priority { get; set; } = 0x00000005;
 
-	[DDLRegistration(0xf54b371au, "Additive Aux Sends")]
+	[DDLRegistration(0xa60f98d3u, "Additive Aux Sends")]
 	public bool IsAdditive { get; set; } = false;
 
-	[DDLRegistration(0xf54b371au, "Aux Sends")]
+	[DDLRegistration(0xc2c28c0bu, "Aux Sends")]
 	public List<WwiseAuxSend?> WwiseAuxSends { get; set; } = [];
 
-	[DDLRegistration(0xf54b371au, "States")]
+	[DDLRegistration(0xa9ea28b0u, "States")]
 	public List<WwiseState?> WwiseStates { get; set; } = [];
 
-	[DDLRegistration(0xf54b371au)]
+	[DDLRegistration(0x03cbb22cu)]
 	public List<DuckTarget?> DuckTargets { get; set; } = [];
 
-	[DDLRegistration(0xf54b371au)]
+	[DDLRegistration(0x9a566859u)]
 	public List<RivetAssetId> ChildEmitters { get; set; } = [];
 
-	[DDLRegistration(0xf54b371au)]
+	[DDLRegistration(0x79a1e898u)]
 	public List<RivetAssetId> SateliteEmitters { get; set; } = [];
 
-	[DDLRegistration(0xf54b371au)]
+	[DDLRegistration(0x7b36c92du)]
 	public List<RivetAssetId> Volumes { get; set; } = [];
 
 	public static SoundEnvironmentControllerPrius Create(DDLObject ddl) => new(ddl);

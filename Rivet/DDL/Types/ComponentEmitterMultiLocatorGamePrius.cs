@@ -19,10 +19,10 @@ public class ComponentEmitterMultiLocatorGamePrius : ComponentEmitterBasePrius, 
 		UpgradedLocators = ddl.GetStrings(0x02fe7ad2u);
 	}
 
-	[DDLRegistration(0x1ff647bau)]
+	[DDLRegistration(0xba29f75fu)]
 	public List<string?> DefaultLocators { get; set; } = [];
 
-	[DDLRegistration(0x1ff647bau)]
+	[DDLRegistration(0x02fe7ad2u)]
 	public List<string?> UpgradedLocators { get; set; } = [];
 
 	public new static ComponentEmitterMultiLocatorGamePrius Create(DDLObject ddl) => new(ddl);

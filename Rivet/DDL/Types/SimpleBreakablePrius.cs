@@ -23,22 +23,22 @@ public class SimpleBreakablePrius : DDLObjectType, IDDLObjectType<SimpleBreakabl
 		StumpCollision = ddl.GetValue<bool>(0x8175151fu, StumpCollision);
 	}
 
-	[DDLRegistration(0xf8a897bfu, "Save Destroyed?", "Whether we should save that this actor's destroyed state (aka, destroyed or not destroyed) and return to it on load. This will use the Deleted flag so don't have more than one component set to save with this flag.")]
+	[DDLRegistration(0x97b042c7u, "Save Destroyed?", "Whether we should save that this actor's destroyed state (aka, destroyed or not destroyed) and return to it on load. This will use the Deleted flag so don't have more than one component set to save with this flag.")]
 	public bool SaveDestroyedState { get; set; } = false;
 
-	[DDLRegistration(0xf8a897bfu, description: "How much damage this object can take before death")]
+	[DDLRegistration(0x72aa54beu, description: "How much damage this object can take before death")]
 	public float MaxHealth { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf8a897bfu, description: "After death, how long before the object self-destroys, -1 is never")]
+	[DDLRegistration(0x086291cau, description: "After death, how long before the object self-destroys, -1 is never")]
 	public float DestroyDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf8a897bfu, description: "Whether this object should hide itself immediately on death")]
+	[DDLRegistration(0xd823a00au, description: "Whether this object should hide itself immediately on death")]
 	public bool HideOnDeath { get; set; } = true;
 
-	[DDLRegistration(0xf8a897bfu, description: "Stump left behind after death, disables objects self destruction")]
+	[DDLRegistration(0x5d088fddu, description: "Stump left behind after death, disables objects self destruction")]
 	public RivetAssetId StumpModel { get; set; } = default;
 
-	[DDLRegistration(0xf8a897bfu, description: "Whether collision is turned on for the stump left behind")]
+	[DDLRegistration(0x8175151fu, description: "Whether collision is turned on for the stump left behind")]
 	public bool StumpCollision { get; set; } = true;
 
 	public static SimpleBreakablePrius Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class RenderData : DDLObjectType, IDDLObjectType<RenderData> {
 		ZBias = ddl.GetValue<float>(0xafe2d9cbu, ZBias);
 	}
 
-	[DDLRegistration(0x91c2d379u, "Custom Input")]
+	[DDLRegistration(0xc866f4eeu, "Custom Input")]
 	public DDLVector3? CustomInput { get; set; } = default;
 
-	[DDLRegistration(0x91c2d379u, "Color")]
+	[DDLRegistration(0x7f058428u, "Color")]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x91c2d379u, "Alpha")]
+	[DDLRegistration(0x71fbe471u, "Alpha")]
 	public float AlphaValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0x91c2d379u, "Alpha Sort Bias", "Corrects the issue where one or more blended instances are rendering in the incorrect order.")]
+	[DDLRegistration(0x96243d40u, "Alpha Sort Bias", "Corrects the issue where one or more blended instances are rendering in the incorrect order.")]
 	public float AlphaSortBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0x91c2d379u, "Z Bias", "Helps separating overlapping model instance: Negative values moves the instance closer to the camera")]
+	[DDLRegistration(0xafe2d9cbu, "Z Bias", "Helps separating overlapping model instance: Negative values moves the instance closer to the camera")]
 	public float ZBias { get; set; } = 0.00f;
 
 	public static RenderData Create(DDLObject ddl) => new(ddl);

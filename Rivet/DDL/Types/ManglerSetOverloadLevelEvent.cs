@@ -18,7 +18,7 @@ public class ManglerSetOverloadLevelEvent : EventBase, IDDLObjectType<ManglerSet
 		OverloadLevel = ddl.GetValue<uint>(0x91f73e07u, OverloadLevel);
 	}
 
-	[DDLRegistration(0xa9a02fcdu)]
+	[DDLRegistration(0x91f73e07u)]
 	public uint OverloadLevel { get; set; } = 0x00000000;
 
 	public new static ManglerSetOverloadLevelEvent Create(DDLObject ddl) => new(ddl);

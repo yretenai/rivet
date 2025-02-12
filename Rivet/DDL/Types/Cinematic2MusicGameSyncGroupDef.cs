@@ -19,10 +19,10 @@ public class Cinematic2MusicGameSyncGroupDef : DDLObjectType, IDDLObjectType<Cin
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0xe2b8f3a1u)]
+	[DDLRegistration(0xb215bfb7u)]
 	public string? GroupName { get; set; } = default;
 
-	[DDLRegistration(0xe2b8f3a1u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
 	public static Cinematic2MusicGameSyncGroupDef Create(DDLObject ddl) => new(ddl);

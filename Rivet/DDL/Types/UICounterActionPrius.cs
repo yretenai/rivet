@@ -20,13 +20,13 @@ public class UICounterActionPrius : DDLObjectType, IDDLObjectType<UICounterActio
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0xbda67f37u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0xbda67f37u, "Text Message", "Text to appear")]
+	[DDLRegistration(0x723bca34u, "Text Message", "Text to appear")]
 	public string? MessageText { get; set; } = default;
 
-	[DDLRegistration(0xbda67f37u, "Duration", "Show duration (0 = infinite)")]
+	[DDLRegistration(0x7c5e3db0u, "Duration", "Show duration (0 = infinite)")]
 	public float Duration { get; set; } = 3.00f;
 
 	public static UICounterActionPrius Create(DDLObject ddl) => new(ddl);

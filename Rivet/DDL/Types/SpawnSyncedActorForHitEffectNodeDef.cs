@@ -18,7 +18,7 @@ public class SpawnSyncedActorForHitEffectNodeDef : NodalShotEffectNodeBaseDef, I
 		ActorAsset = ddl.GetValue<RivetAssetId>(0x75356989u, ActorAsset);
 	}
 
-	[DDLRegistration(0x8fb0c72bu)]
+	[DDLRegistration(0x75356989u)]
 	public RivetAssetId ActorAsset { get; set; } = default;
 
 	public new static SpawnSyncedActorForHitEffectNodeDef Create(DDLObject ddl) => new(ddl);

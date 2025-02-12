@@ -44,85 +44,85 @@ public class TerrainSystem03EditingTerrain05 : DDLObjectType, IDDLObjectType<Ter
 		Line26 = ddl.GetString(0xd42d78fc) ?? Line26;
 	}
 
-	[DDLRegistration(0xb4dd7aaeu, description: "The terrain editor supports a variety of debug modes: <i>Gray</i>,")]
+	[DDLRegistration(0x0f78bf4bu, description: "The terrain editor supports a variety of debug modes: <i>Gray</i>,")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "<i>HeightField</i>, <i>Selection Mask</i>, <i>Splatmask RGBA</i>,")]
+	[DDLRegistration(0x787f8fddu, description: "<i>HeightField</i>, <i>Selection Mask</i>, <i>Splatmask RGBA</i>,")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "<i>Splatmask R</i>, <i>Splatmask G</i>, <i>Splatmask B</i>,")]
+	[DDLRegistration(0xe176de67u, description: "<i>Splatmask R</i>, <i>Splatmask G</i>, <i>Splatmask B</i>,")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "<i>Splatmask A</i>, and <i>Splatmask UVs</i>.  The <i>HeightField</i>")]
+	[DDLRegistration(0x9671eef1u, description: "<i>Splatmask A</i>, and <i>Splatmask UVs</i>.  The <i>HeightField</i>")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "display mode will render the heightfield on the terrain instead of the")]
+	[DDLRegistration(0x08157b52u, description: "display mode will render the heightfield on the terrain instead of the")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "normal terrain materials.  Likewise, the various <i>SplatMask</i> modes will")]
+	[DDLRegistration(0x7f124bc4u, description: "normal terrain materials.  Likewise, the various <i>SplatMask</i> modes will")]
 	public string? Line05 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "render the splatmask (or individual splatmask channels) onto the terrain instead")]
+	[DDLRegistration(0xe61b1a7eu, description: "render the splatmask (or individual splatmask channels) onto the terrain instead")]
 	public string? Line06 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "of the normal terrain materials.  The <i>SplatMask UVs</i> mode will render")]
+	[DDLRegistration(0x911c2ae8u, description: "of the normal terrain materials.  The <i>SplatMask UVs</i> mode will render")]
 	public string? Line07 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "arrows in the direction of the positive u- and v-axes.  The")]
+	[DDLRegistration(0x01a33779u, description: "arrows in the direction of the positive u- and v-axes.  The")]
 	public string? Line08 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "<i>Selection Mask</i> will render a translucent Insomniac blue over the areas")]
+	[DDLRegistration(0x76a407efu, description: "<i>Selection Mask</i> will render a translucent Insomniac blue over the areas")]
 	public string? Line09 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "that are selected.  Note that the selection mask will render if the selection")]
+	[DDLRegistration(0x16638e0au, description: "that are selected.  Note that the selection mask will render if the selection")]
 	public string? Line10 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "mask is the target even if this mode isn't selected.")]
+	[DDLRegistration(0x6164be9cu, description: "mask is the target even if this mode isn't selected.")]
 	public string? Line11 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "<br><br>")]
+	[DDLRegistration(0xf86def26u, description: "<br><br>")]
 	public string? Line12 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "There are also a few ways to view the terrain wireframe. <i>Show")]
+	[DDLRegistration(0x8f6adfb0u, description: "There are also a few ways to view the terrain wireframe. <i>Show")]
 	public string? Line13 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "LoD</i> will render the various levels of detail of the terrain in different")]
+	[DDLRegistration(0x110e4a13u, description: "LoD</i> will render the various levels of detail of the terrain in different")]
 	public string? Line14 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "colors.  This helps indicate which sections of the terrain are rendering at")]
+	[DDLRegistration(0x66097a85u, description: "colors.  This helps indicate which sections of the terrain are rendering at")]
 	public string? Line15 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "highter vertex counts.  The <i>Show Tiles</i> option will render the wireframe")]
+	[DDLRegistration(0xff002b3fu, description: "highter vertex counts.  The <i>Show Tiles</i> option will render the wireframe")]
 	public string? Line16 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "for each tile in a different color, making it easier to distinguish where")]
+	[DDLRegistration(0x88071ba9u, description: "for each tile in a different color, making it easier to distinguish where")]
 	public string? Line17 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "invidiually-rendered terrain tiles are.")]
+	[DDLRegistration(0x18b80638u, description: "invidiually-rendered terrain tiles are.")]
 	public string? Line18 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "<br><br>")]
+	[DDLRegistration(0x6fbf36aeu, description: "<br><br>")]
 	public string? Line19 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "The heightfield can be enabled or disabled using the <i>Apply HeightField</i>")]
+	[DDLRegistration(0x3d4eddc9u, description: "The heightfield can be enabled or disabled using the <i>Apply HeightField</i>")]
 	public string? Line20 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "deug option.  The <i>Lock Radius Axes</i> button, when checked, will make the")]
+	[DDLRegistration(0x4a49ed5fu, description: "deug option.  The <i>Lock Radius Axes</i> button, when checked, will make the")]
 	public string? Line21 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "brushes use a single value for the brush radius.  When unchecked, the various")]
+	[DDLRegistration(0xd340bce5u, description: "brushes use a single value for the brush radius.  When unchecked, the various")]
 	public string? Line22 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "axis sizes can be specified individually.")]
+	[DDLRegistration(0xa4478c73u, description: "axis sizes can be specified individually.")]
 	public string? Line23 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "<br><br>")]
+	[DDLRegistration(0x3a2319d0u, description: "<br><br>")]
 	public string? Line24 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "The <i>Show Debug Grid</i> option will enable or disable a debug grid that")]
+	[DDLRegistration(0x4d242946u, description: "The <i>Show Debug Grid</i> option will enable or disable a debug grid that")]
 	public string? Line25 { get; set; } = default;
 
-	[DDLRegistration(0xb4dd7aaeu, description: "renders on top of the terrain.")]
+	[DDLRegistration(0xd42d78fcu, description: "renders on top of the terrain.")]
 	public string? Line26 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain05 Create(DDLObject ddl) => new(ddl);

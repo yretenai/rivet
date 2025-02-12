@@ -19,10 +19,10 @@ public class BlobDef : DDLObjectType, IDDLObjectType<BlobDef> {
 		Blob = ddl.GetString(0x80ef657c) ?? Blob;
 	}
 
-	[DDLRegistration(0xbe1c8f2cu, "Type Name")]
+	[DDLRegistration(0x4b6c9353u, "Type Name")]
 	public string? TypeName { get; set; } = default;
 
-	[DDLRegistration(0xbe1c8f2cu)]
+	[DDLRegistration(0x80ef657cu)]
 	public string? Blob { get; set; } = default;
 
 	public static BlobDef Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class TrigRespSelfEnableCompEntry : DDLObjectType, IDDLObjectType<TrigRes
 		ComponentName = ddl.GetString(0xca3706e6) ?? ComponentName;
 	}
 
-	[DDLRegistration(0x31ea80ebu, "Enable on trigger?", "Whether to enable or disable when triggered.")]
+	[DDLRegistration(0x143b5fccu, "Enable on trigger?", "Whether to enable or disable when triggered.")]
 	public bool EnableOnTrigger { get; set; } = true;
 
-	[DDLRegistration(0x31ea80ebu, "Do opposite on untrigger?", "If false, don't do anything when the switch is untriggered. If true, will do the opposite of the trigger (disable or enable).")]
+	[DDLRegistration(0x24cfed7cu, "Do opposite on untrigger?", "If false, don't do anything when the switch is untriggered. If true, will do the opposite of the trigger (disable or enable).")]
 	public bool RespondToUnTrigger { get; set; } = true;
 
-	[DDLRegistration(0x31ea80ebu, "Component Name", "The name of the component (t is the prius name minus 'Prius' at the end). Component must be derived from EnabledComponentBase.")]
+	[DDLRegistration(0xca3706e6u, "Component Name", "The name of the component (t is the prius name minus 'Prius' at the end). Component must be derived from EnabledComponentBase.")]
 	public string? ComponentName { get; set; } = "INVALID";
 
 	public static TrigRespSelfEnableCompEntry Create(DDLObject ddl) => new(ddl);

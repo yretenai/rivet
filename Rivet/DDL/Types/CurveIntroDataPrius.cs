@@ -22,19 +22,19 @@ public class CurveIntroDataPrius : IntroDataPrius, IDDLObjectType<CurveIntroData
 		MaintainYUp = ddl.GetValue<bool>(0x166fa1e9u, MaintainYUp);
 	}
 
-	[DDLRegistration(0x3e385097u)]
+	[DDLRegistration(0xdb4401a2u)]
 	public string? IntroDriverName { get; set; } = default;
 
-	[DDLRegistration(0x3e385097u)]
+	[DDLRegistration(0x7a8704f5u)]
 	public string? DriverName { get; set; } = "Move";
 
-	[DDLRegistration(0x3e385097u)]
+	[DDLRegistration(0xd034d2d1u)]
 	public string? OutroDriverName { get; set; } = default;
 
-	[DDLRegistration(0x3e385097u, description: "Set to negative to get speed from movement speed.")]
+	[DDLRegistration(0x16753237u, description: "Set to negative to get speed from movement speed.")]
 	public float Speed { get; set; } = -1.00f;
 
-	[DDLRegistration(0x3e385097u, description: "Should the actor stay aligned with world up while following this curve?")]
+	[DDLRegistration(0x166fa1e9u, description: "Should the actor stay aligned with world up while following this curve?")]
 	public bool MaintainYUp { get; set; } = false;
 
 	public new static CurveIntroDataPrius Create(DDLObject ddl) => new(ddl);

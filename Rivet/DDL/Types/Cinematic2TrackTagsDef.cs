@@ -18,7 +18,7 @@ public class Cinematic2TrackTagsDef : DDLObjectType, IDDLObjectType<Cinematic2Tr
 		Tags = ddl.GetStrings(0x5f2c5496u);
 	}
 
-	[DDLRegistration(0xc8e319ccu)]
+	[DDLRegistration(0x5f2c5496u)]
 	public List<string?> Tags { get; set; } = [];
 
 	public static Cinematic2TrackTagsDef Create(DDLObject ddl) => new(ddl);

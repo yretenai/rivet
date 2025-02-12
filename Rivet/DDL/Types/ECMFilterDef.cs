@@ -27,34 +27,34 @@ public class ECMFilterDef : DDLObjectType, IDDLObjectType<ECMFilterDef> {
 		Responses = ddl.GetDictionary<RivetAssetId, ECMResponseDef>(0xb3a20098, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMResponseDef>(mapId));
 	}
 
-	[DDLRegistration(0xc9e150ebu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc9e150ebu)]
+	[DDLRegistration(0x9920abc0u)]
 	public int Index { get; set; } = 0;
 
-	[DDLRegistration(0xc9e150ebu, "Enabled")]
+	[DDLRegistration(0x5113d8bcu, "Enabled")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0xc9e150ebu, "Filter Name")]
+	[DDLRegistration(0x6eb3beb6u, "Filter Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xc9e150ebu, "Continue Type")]
+	[DDLRegistration(0x55624b9fu, "Continue Type")]
 	public x97f06575 ContinueType { get; set; } = x97f06575.Unresponded;
 
-	[DDLRegistration(0xc9e150ebu, "Event Scope")]
+	[DDLRegistration(0x19fc9912u, "Event Scope")]
 	public x3c7c71d2 Scope { get; set; } = x3c7c71d2.SelfOnly;
 
-	[DDLRegistration(0xc9e150ebu)]
+	[DDLRegistration(0x86fc0ba6u)]
 	public Dictionary<RivetAssetId, ECMSelectorNodeDef?> SelectorNodes { get; set; } = [];
 
-	[DDLRegistration(0xc9e150ebu)]
+	[DDLRegistration(0x1982bfedu)]
 	public Dictionary<RivetAssetId, ECMInputNodeDef?> InputNodes { get; set; } = [];
 
-	[DDLRegistration(0xc9e150ebu)]
+	[DDLRegistration(0x6461c08fu)]
 	public Dictionary<RivetAssetId, ECMCommentNodeDef?> CommentNodes { get; set; } = [];
 
-	[DDLRegistration(0xc9e150ebu)]
+	[DDLRegistration(0xb3a20098u)]
 	public Dictionary<RivetAssetId, ECMResponseDef?> Responses { get; set; } = [];
 
 	public static ECMFilterDef Create(DDLObject ddl) => new(ddl);

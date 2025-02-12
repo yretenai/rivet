@@ -20,13 +20,13 @@ public class StickersCategoryData : DDLObjectType, IDDLObjectType<StickersCatego
 		Stickers = ddl.GetObjects<StickersData>(0x228c1166u);
 	}
 
-	[DDLRegistration(0xfea56423u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0xfea56423u)]
+	[DDLRegistration(0x5504e96bu)]
 	public string? Icon { get; set; } = default;
 
-	[DDLRegistration(0xfea56423u)]
+	[DDLRegistration(0x228c1166u)]
 	public List<StickersData?> Stickers { get; set; } = [];
 
 	public static StickersCategoryData Create(DDLObject ddl) => new(ddl);

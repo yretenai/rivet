@@ -20,13 +20,13 @@ public class ArachnodroidWeaponActionPrius : DDLObjectType, IDDLObjectType<Arach
 		Slot = ddl.GetEnum<x1d491c7a>(0x9c9ee0d7u, x1d491c7aValues.Lookup);
 	}
 
-	[DDLRegistration(0x6f418e4eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Weapon;
 
-	[DDLRegistration(0x6f418e4eu, "Weapon Item Config")]
+	[DDLRegistration(0xb72a0e33u, "Weapon Item Config")]
 	public RivetAssetId WeaponConfig { get; set; } = default;
 
-	[DDLRegistration(0x6f418e4eu)]
+	[DDLRegistration(0x9c9ee0d7u)]
 	public x1d491c7a Slot { get; set; } = x1d491c7a.Right;
 
 	public static ArachnodroidWeaponActionPrius Create(DDLObject ddl) => new(ddl);

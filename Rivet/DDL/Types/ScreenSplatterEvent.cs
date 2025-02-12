@@ -18,7 +18,7 @@ public class ScreenSplatterEvent : EventBase, IDDLObjectType<ScreenSplatterEvent
 		ViewContextIndex = ddl.GetValue<int>(0x6ceec2c4u, ViewContextIndex);
 	}
 
-	[DDLRegistration(0x8c528a0eu)]
+	[DDLRegistration(0x6ceec2c4u)]
 	public int ViewContextIndex { get; set; } = 0;
 
 	public new static ScreenSplatterEvent Create(DDLObject ddl) => new(ddl);

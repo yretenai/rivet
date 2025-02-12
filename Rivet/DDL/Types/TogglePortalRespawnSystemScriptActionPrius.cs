@@ -19,10 +19,10 @@ public class TogglePortalRespawnSystemScriptActionPrius : DDLObjectType, IDDLObj
 		DisableLavaBounceWhenPortalRespawnIsDisabled = ddl.GetValue<bool>(0xf58cb0a3u, DisableLavaBounceWhenPortalRespawnIsDisabled);
 	}
 
-	[DDLRegistration(0x9774cc6bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x9774cc6bu, "Disable lava bounce when the portal respawn system is disabled?", "While the portal respawn system is disabled, this determines whether lava bouncing will be allowed.")]
+	[DDLRegistration(0xf58cb0a3u, "Disable lava bounce when the portal respawn system is disabled?", "While the portal respawn system is disabled, this determines whether lava bouncing will be allowed.")]
 	public bool DisableLavaBounceWhenPortalRespawnIsDisabled { get; set; } = true;
 
 	public static TogglePortalRespawnSystemScriptActionPrius Create(DDLObject ddl) => new(ddl);

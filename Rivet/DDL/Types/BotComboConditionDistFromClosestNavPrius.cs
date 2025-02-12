@@ -20,13 +20,13 @@ public class BotComboConditionDistFromClosestNavPrius : BotComboConditionBasePri
 		CheckFromLastGoodGround = ddl.GetValue<bool>(0x5a23e669u, CheckFromLastGoodGround);
 	}
 
-	[DDLRegistration(0x50c447e1u, "Dist from Nav", "Combo is only valid if the target is within this amount of meter away from closest nav")]
+	[DDLRegistration(0xd9a3afa6u, "Dist from Nav", "Combo is only valid if the target is within this amount of meter away from closest nav")]
 	public float NavDistance { get; set; } = 6.00f;
 
-	[DDLRegistration(0x50c447e1u, "Flip Logic", "If true, the combo will now only be valid when the target is FURTHER than Dist-From-Nav away")]
+	[DDLRegistration(0x42e5c0adu, "Flip Logic", "If true, the combo will now only be valid when the target is FURTHER than Dist-From-Nav away")]
 	public bool FlipLogicToCheckOutsideOfDist { get; set; } = false;
 
-	[DDLRegistration(0x50c447e1u, "From Last Ground")]
+	[DDLRegistration(0x5a23e669u, "From Last Ground")]
 	public bool CheckFromLastGoodGround { get; set; } = true;
 
 	public new static BotComboConditionDistFromClosestNavPrius Create(DDLObject ddl) => new(ddl);

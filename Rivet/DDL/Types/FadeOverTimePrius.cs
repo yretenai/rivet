@@ -20,13 +20,13 @@ public class FadeOverTimePrius : DDLObjectType, IDDLObjectType<FadeOverTimePrius
 		FadeTime = ddl.GetValue<float>(0x8833d162u, FadeTime);
 	}
 
-	[DDLRegistration(0xf69c049au, description: "What slot to count this type of component to, and compare to guideline of number of allowed for that type.")]
+	[DDLRegistration(0x40430d85u, description: "What slot to count this type of component to, and compare to guideline of number of allowed for that type.")]
 	public byte SlotIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0xf69c049au, description: "How long before we start fading")]
+	[DDLRegistration(0x67d422c6u, description: "How long before we start fading")]
 	public float LifeTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf69c049au, description: "How long does the fade last")]
+	[DDLRegistration(0x8833d162u, description: "How long does the fade last")]
 	public float FadeTime { get; set; } = 0.00f;
 
 	public static FadeOverTimePrius Create(DDLObject ddl) => new(ddl);

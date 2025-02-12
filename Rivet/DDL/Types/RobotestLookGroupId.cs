@@ -19,10 +19,10 @@ public class RobotestLookGroupId : DDLObjectType, IDDLObjectType<RobotestLookGro
 		Hash = ddl.GetValue<uint>(0xe128a208u, Hash);
 	}
 
-	[DDLRegistration(0xa9506ce6u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xa9506ce6u)]
+	[DDLRegistration(0xe128a208u)]
 	public uint Hash { get; set; } = 0x00000000;
 
 	public static RobotestLookGroupId Create(DDLObject ddl) => new(ddl);

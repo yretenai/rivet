@@ -20,13 +20,13 @@ public class ObjectiveSystemBuiltData : DDLObjectType, IDDLObjectType<ObjectiveS
 		AllMissions = ddl.GetObjects<BuiltMissionEntry>(0xae2856c0u);
 	}
 
-	[DDLRegistration(0x9ce7354bu)]
+	[DDLRegistration(0x7c8910e5u)]
 	public Dictionary<RivetAssetId, ObjectiveGraphBuiltTableEntry?> ObjectiveGraphs { get; set; } = [];
 
-	[DDLRegistration(0x9ce7354bu)]
+	[DDLRegistration(0xb61940f3u)]
 	public Dictionary<RivetAssetId, MissionGraphBuiltTableEntry?> MissionGraphs { get; set; } = [];
 
-	[DDLRegistration(0x9ce7354bu)]
+	[DDLRegistration(0xae2856c0u)]
 	public List<BuiltMissionEntry?> AllMissions { get; set; } = [];
 
 	public static ObjectiveSystemBuiltData Create(DDLObject ddl) => new(ddl);

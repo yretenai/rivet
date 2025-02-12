@@ -18,7 +18,7 @@ public class CinematicTrackState : DDLObjectType, IDDLObjectType<CinematicTrackS
 		State = ddl.GetEnum<CinematicTrackStateSelect>(0xbac01e3au, CinematicTrackStateSelectValues.Lookup);
 	}
 
-	[DDLRegistration(0x4c2a225cu)]
+	[DDLRegistration(0xbac01e3au)]
 	public CinematicTrackStateSelect State { get; set; } = CinematicTrackStateSelect.Active;
 
 	public static CinematicTrackState Create(DDLObject ddl) => new(ddl);

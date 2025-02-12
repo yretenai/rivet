@@ -19,10 +19,10 @@ public class ECMEventDef : DDLObjectType, IDDLObjectType<ECMEventDef> {
 		Filters = ddl.GetDictionary<RivetAssetId, ECMFilterDef>(0x799d04b5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMFilterDef>(mapId));
 	}
 
-	[DDLRegistration(0x22e3b5bbu)]
+	[DDLRegistration(0x2048921du)]
 	public string? EventName { get; set; } = default;
 
-	[DDLRegistration(0x22e3b5bbu)]
+	[DDLRegistration(0x799d04b5u)]
 	public Dictionary<RivetAssetId, ECMFilterDef?> Filters { get; set; } = [];
 
 	public static ECMEventDef Create(DDLObject ddl) => new(ddl);

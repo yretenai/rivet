@@ -24,25 +24,25 @@ public class AutoDoorTrigger : DDLObjectType, IDDLObjectType<AutoDoorTrigger> {
 		AllowBots = ddl.GetValue<bool>(0xa6278cafu, AllowBots);
 	}
 
-	[DDLRegistration(0x02d27195u, "Open Volume")]
+	[DDLRegistration(0xa4855a4bu, "Open Volume")]
 	public RivetAssetId OpenVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x02d27195u, "Close Volume")]
+	[DDLRegistration(0x93c926ffu, "Close Volume")]
 	public RivetAssetId CloseVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x02d27195u, "Open Range")]
+	[DDLRegistration(0x346adb7fu, "Open Range")]
 	public float OpenRange { get; set; } = 3.00f;
 
-	[DDLRegistration(0x02d27195u, "Close Range")]
+	[DDLRegistration(0xa02d9f94u, "Close Range")]
 	public float CloseRange { get; set; } = 4.50f;
 
-	[DDLRegistration(0x02d27195u, "Allegiance Specific")]
+	[DDLRegistration(0xa55d1592u, "Allegiance Specific")]
 	public x6bdf4ba1 AllegianceChoice { get; set; } = x6bdf4ba1.Neutral;
 
-	[DDLRegistration(0x02d27195u, "Allegiance Relation")]
+	[DDLRegistration(0x245f06f6u, "Allegiance Relation")]
 	public AllegianceRelation AlleginaceRelation { get; set; } = AllegianceRelation.Any;
 
-	[DDLRegistration(0x02d27195u, "Allow Bot Trigger")]
+	[DDLRegistration(0xa6278cafu, "Allow Bot Trigger")]
 	public bool AllowBots { get; set; } = false;
 
 	public static AutoDoorTrigger Create(DDLObject ddl) => new(ddl);

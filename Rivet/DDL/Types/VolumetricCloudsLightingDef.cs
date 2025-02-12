@@ -58,127 +58,127 @@ public class VolumetricCloudsLightingDef : DDLObjectType, IDDLObjectType<Volumet
 		LocalLight3_AttenRadius = ddl.GetValue<float>(0x7ec07030u, LocalLight3_AttenRadius);
 	}
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x76188ed0u)]
 	public DDLVector3? CustomColor { get; set; } = default;
 
-	[DDLRegistration(0x1e293d03u, description: "Intensity of custom color.")]
+	[DDLRegistration(0x56b6c43bu, description: "Intensity of custom color.")]
 	public float CustomColorIntensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1e293d03u, description: "It interpolates the custom color with key light's color. (0.0: Show key light color only / 1.0: Show custom color only)")]
+	[DDLRegistration(0x3871bba6u, description: "It interpolates the custom color with key light's color. (0.0: Show key light color only / 1.0: Show custom color only)")]
 	public float CustomColorBlendFactor { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1e293d03u, description: "Contrast of the color of clouds.")]
+	[DDLRegistration(0x594c8778u, description: "Contrast of the color of clouds.")]
 	public float Contrast { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1e293d03u, description: "It determines the step size of the energy sampling. Using larger value makes the raymarching from the light source can penetrate the clouds more.")]
+	[DDLRegistration(0x01b80536u, description: "It determines the step size of the energy sampling. Using larger value makes the raymarching from the light source can penetrate the clouds more.")]
 	public float TransStepSize { get; set; } = 1536.00f;
 
-	[DDLRegistration(0x1e293d03u, description: "Blend clouds with the background, more background will be shown if this value is close to 0.0.")]
+	[DDLRegistration(0xd9221492u, description: "Blend clouds with the background, more background will be shown if this value is close to 0.0.")]
 	public float BackgroundBlendFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1e293d03u, description: "The higher the value, the darker the inside of the cloud. Extremely high value (5.0) can make the bading artifact worse.")]
+	[DDLRegistration(0xc4b000d1u, description: "The higher the value, the darker the inside of the cloud. Extremely high value (5.0) can make the bading artifact worse.")]
 	public float Precipitation { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1e293d03u, description: "Intensity of silver-lining.")]
+	[DDLRegistration(0xe0d91527u, description: "Intensity of silver-lining.")]
 	public float SilverIntensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1e293d03u, description: "It determines how much silver-lining is going to be spread. Using bigger value spreads more silver-lining, but the intensity will be reduced.")]
+	[DDLRegistration(0xa15330c7u, description: "It determines how much silver-lining is going to be spread. Using bigger value spreads more silver-lining, but the intensity will be reduced.")]
 	public float SilverSpread { get; set; } = 0.70f;
 
-	[DDLRegistration(0x1e293d03u, description: "The bright highlights around the sun that the user needs at sunset.")]
+	[DDLRegistration(0xee294c39u, description: "The bright highlights around the sun that the user needs at sunset.")]
 	public float Eccentricity { get; set; } = 0.65f;
 
-	[DDLRegistration(0x1e293d03u, description: "The brightness for clouds.")]
+	[DDLRegistration(0x21954384u, description: "The brightness for clouds.")]
 	public float CloudBrightness { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1e293d03u, description: "It blends clouds with current fog color.")]
+	[DDLRegistration(0x3070d4c1u, description: "It blends clouds with current fog color.")]
 	public float FogBlendFactor { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1e293d03u, description: "Cubemap used for background color blending")]
+	[DDLRegistration(0x330c42dcu, description: "Cubemap used for background color blending")]
 	public RivetAssetId BackgroundBlendCubemap { get; set; } = default;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x6c53316cu)]
 	public bool LocalLight0_Enabled { get; set; } = false;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x33a1851du)]
 	public float LocalLight0_Intensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0xd1225d6au)]
 	public DDLVector3? LocalLight0_Color { get; set; } = default;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0xa03021b3u)]
 	public float LocalLight0_PositionX { get; set; } = 100000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0xd7371125u)]
 	public float LocalLight0_PositionY { get; set; } = 15000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x4e3e409fu)]
 	public float LocalLight0_PositionZ { get; set; } = 100000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0xc30a1cfeu)]
 	public float LocalLight0_AttenRadius { get; set; } = 50000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x7b28252fu)]
 	public bool LocalLight1_Enabled { get; set; } = false;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0xf22f5addu)]
 	public float LocalLight1_Intensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x775556deu)]
 	public DDLVector3? LocalLight1_Color { get; set; } = default;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x61befe73u)]
 	public float LocalLight1_PositionX { get; set; } = -100000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x16b9cee5u)]
 	public float LocalLight1_PositionY { get; set; } = 15000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x8fb09f5fu)]
 	public float LocalLight1_PositionZ { get; set; } = 100000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x1e9cc57bu)]
 	public float LocalLight1_AttenRadius { get; set; } = 50000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x42a519eau)]
 	public bool LocalLight2_Enabled { get; set; } = false;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x6bcd3cdcu)]
 	public float LocalLight2_Intensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x46bd4c43u)]
 	public DDLVector3? LocalLight2_Color { get; set; } = default;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0xf85c9872u)]
 	public float LocalLight2_PositionX { get; set; } = 100000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x8f5ba8e4u)]
 	public float LocalLight2_PositionY { get; set; } = 15000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x1652f95eu)]
 	public float LocalLight2_PositionZ { get; set; } = -100000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0xa356a9b5u)]
 	public float LocalLight2_AttenRadius { get; set; } = 50000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x55de0da9u)]
 	public bool LocalLight3_Enabled { get; set; } = false;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0xaa43e31cu)]
 	public float LocalLight3_Intensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0xe0ca47f7u)]
 	public DDLVector3? LocalLight3_Color { get; set; } = default;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x39d247b2u)]
 	public float LocalLight3_PositionX { get; set; } = -100000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x4ed57724u)]
 	public float LocalLight3_PositionY { get; set; } = 15000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0xd7dc269eu)]
 	public float LocalLight3_PositionZ { get; set; } = -100000.00f;
 
-	[DDLRegistration(0x1e293d03u)]
+	[DDLRegistration(0x7ec07030u)]
 	public float LocalLight3_AttenRadius { get; set; } = 50000.00f;
 
 	public static VolumetricCloudsLightingDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class BeamHitEvent : EventBase, IDDLObjectType<BeamHitEvent> {
 		SourceIsLocalHero = ddl.GetValue<byte>(0x49c540ecu, SourceIsLocalHero);
 	}
 
-	[DDLRegistration(0x861072b8u)]
+	[DDLRegistration(0x86edb4bdu)]
 	public uint BeamActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x861072b8u)]
+	[DDLRegistration(0x49c540ecu)]
 	public byte SourceIsLocalHero { get; set; } = 0x00;
 
 	public new static BeamHitEvent Create(DDLObject ddl) => new(ddl);

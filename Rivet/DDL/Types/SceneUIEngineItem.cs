@@ -33,52 +33,52 @@ public class SceneUIEngineItem : DDLObjectType, IDDLObjectType<SceneUIEngineItem
 		SelectableNodes = ddl.GetDictionary<RivetAssetId, bool>(0x0e6c7821, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
 	}
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0x791bd135u)]
 	public ToolMode ToolMode { get; set; } = ToolMode.Selection;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0x6a9652f6u)]
 	public bool EnableSelection { get; set; } = false;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0xb33b8260u)]
 	public bool EnableManipulator { get; set; } = false;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0x452b2f08u)]
 	public bool EnableMarquee { get; set; } = false;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0x9cbcd07au)]
 	public bool RenderHud { get; set; } = false;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0xf2264635u)]
 	public bool RenderLights { get; set; } = false;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0x50767105u)]
 	public bool RenderVolumes { get; set; } = false;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0x41f5fc7au)]
 	public bool RenderCameras { get; set; } = false;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0x93193e3bu)]
 	public float PointVolumeSize { get; set; } = 0.20f;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0xc155af99u)]
 	public float LightSize { get; set; } = 0.05f;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0x4f1a6c8cu)]
 	public float CameraSize { get; set; } = 0.20f;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0x4c528d45u)]
 	public RivetAssetId ActiveCameraId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0xe2407c64u)]
 	public RivetAssetId DebugCameraId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0xe84ddf61u)]
 	public CameraControlType CameraControlType { get; set; } = CameraControlType.Orbit;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0xcfd4e774u)]
 	public GamepadEnableMode GamepadEnableMode { get; set; } = GamepadEnableMode.Always;
 
-	[DDLRegistration(0x5ee2cf6eu)]
+	[DDLRegistration(0x0e6c7821u)]
 	public Dictionary<RivetAssetId, bool> SelectableNodes { get; set; } = [];
 
 	public static SceneUIEngineItem Create(DDLObject ddl) => new(ddl);

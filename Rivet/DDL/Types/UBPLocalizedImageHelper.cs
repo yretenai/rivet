@@ -18,7 +18,7 @@ public class UBPLocalizedImageHelper : DDLObjectType, IDDLObjectType<UBPLocalize
 		Image_elements = ddl.GetDictionary<string, UBPImage>(0x54860089, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<UBPImage>(mapId));
 	}
 
-	[DDLRegistration(0xe4e4ffd4u)]
+	[DDLRegistration(0x54860089u)]
 	public Dictionary<string, UBPImage?> Image_elements { get; set; } = [];
 
 	public static UBPLocalizedImageHelper Create(DDLObject ddl) => new(ddl);

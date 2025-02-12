@@ -25,28 +25,28 @@ public class DestroyActorNodeDef : DDLObjectType, IDDLObjectType<DestroyActorNod
 		ActorPathToSpawn = ddl.GetObject<ActorAssetReferenceDef>(0x2ae7532fu);
 	}
 
-	[DDLRegistration(0x0fc2a9eeu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0fc2a9eeu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x577f103e Type { get; set; } = x577f103e.Invalid;
 
-	[DDLRegistration(0x0fc2a9eeu)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = false;
 
-	[DDLRegistration(0x0fc2a9eeu)]
+	[DDLRegistration(0x7effd393u)]
 	public bool Disabled { get; set; } = false;
 
-	[DDLRegistration(0x0fc2a9eeu)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0fc2a9eeu)]
+	[DDLRegistration(0x2934711bu)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0fc2a9eeu)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugSignal? Input { get; set; } = default;
 
-	[DDLRegistration(0x0fc2a9eeu)]
+	[DDLRegistration(0x2ae7532fu)]
 	public ActorAssetReferenceDef? ActorPathToSpawn { get; set; } = default;
 
 	public static DestroyActorNodeDef Create(DDLObject ddl) => new(ddl);

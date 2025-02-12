@@ -23,22 +23,22 @@ public class VisualEffectLensFlare : DDLObjectType, IDDLObjectType<VisualEffectL
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0xd142001bu, "Enable")]
+	[DDLRegistration(0xcdd88655u, "Enable")]
 	public bool Enable { get; set; } = false;
 
-	[DDLRegistration(0xd142001bu, "Ignore Z")]
+	[DDLRegistration(0x165f3fddu, "Ignore Z")]
 	public bool IgnoreZ { get; set; } = true;
 
-	[DDLRegistration(0xd142001bu, "Camera Angle Fade")]
+	[DDLRegistration(0x415b7439u, "Camera Angle Fade")]
 	public float AngleFade { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd142001bu, "Camera Fade Power")]
+	[DDLRegistration(0xdc65fc0fu, "Camera Fade Power")]
 	public float FadePower { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd142001bu, "Scale Fade Power")]
+	[DDLRegistration(0xe42b7451u, "Scale Fade Power")]
 	public float ScalePower { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd142001bu, "Radius")]
+	[DDLRegistration(0x0504203du, "Radius")]
 	public float Radius { get; set; } = 0.10f;
 
 	public static VisualEffectLensFlare Create(DDLObject ddl) => new(ddl);

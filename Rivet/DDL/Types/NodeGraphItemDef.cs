@@ -19,10 +19,10 @@ public class NodeGraphItemDef : DDLObjectType, IDDLObjectType<NodeGraphItemDef> 
 		Type = ddl.GetEnum<x577f103e>(0xbc4e9799u, x577f103eValues.Lookup);
 	}
 
-	[DDLRegistration(0x1920506du)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x1920506du)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x577f103e Type { get; set; } = x577f103e.Invalid;
 
 	public static NodeGraphItemDef Create(DDLObject ddl) => new(ddl);

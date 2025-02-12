@@ -21,16 +21,16 @@ public class PickupGeneralPrius : PickupSharedPrius, IDDLObjectType<PickupGenera
 		PickupTempText = ddl.GetString(0xd3b77ccd) ?? PickupTempText;
 	}
 
-	[DDLRegistration(0x61502cc9u, "Auto Pickup", "Auto pick this actor up when within range.")]
+	[DDLRegistration(0x1eb9e195u, "Auto Pickup", "Auto pick this actor up when within range.")]
 	public bool AutoPickup { get; set; } = false;
 
-	[DDLRegistration(0x61502cc9u, "Pickup Tag", "The localization tag to display for the pickup if we aren't auto-picked up.")]
+	[DDLRegistration(0xd5586264u, "Pickup Tag", "The localization tag to display for the pickup if we aren't auto-picked up.")]
 	public string? PickupLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x61502cc9u, "Use temp text?", "For testing purposes, use temp text instead of the Loc tag.")]
+	[DDLRegistration(0x9d035126u, "Use temp text?", "For testing purposes, use temp text instead of the Loc tag.")]
 	public bool UseTempText { get; set; } = false;
 
-	[DDLRegistration(0x61502cc9u, "Temp Text", "The text to display when using temp text (64 char limit).")]
+	[DDLRegistration(0xd3b77ccdu, "Temp Text", "The text to display when using temp text (64 char limit).")]
 	public string? PickupTempText { get; set; } = "[Temp Text] Pick Up";
 
 	public new static PickupGeneralPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class DebugLogMsg : DDLObjectType, IDDLObjectType<DebugLogMsg> {
 		Data = ddl.GetObjects<LogInfo>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0x8323ab68u, description: "Actor handle associated with this data")]
+	[DDLRegistration(0xb54c733cu, description: "Actor handle associated with this data")]
 	public uint ActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8323ab68u, description: "Info about what frame this occured on")]
+	[DDLRegistration(0xacabf00cu, description: "Info about what frame this occured on")]
 	public uint Frame { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8323ab68u, description: "System name associated with this data")]
+	[DDLRegistration(0xa5f43c20u, description: "System name associated with this data")]
 	public x5578becf SystemName { get; set; } = x5578becf.LogSystemUnknown;
 
-	[DDLRegistration(0x8323ab68u, description: "The data")]
+	[DDLRegistration(0x9d6333d3u, description: "The data")]
 	public List<LogInfo?> Data { get; set; } = [];
 
 	public static DebugLogMsg Create(DDLObject ddl) => new(ddl);

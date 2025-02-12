@@ -32,49 +32,49 @@ public class SoundEarlyReflectionsConfig : ConfigBase, IDDLObjectType<SoundEarly
 		ReflectionProperties = ddl.GetObjects<ReflectionProperty>(0x6e813bd5u);
 	}
 
-	[DDLRegistration(0xec3c1742u, description: "Will use this number of samples in the x and y directions.")]
+	[DDLRegistration(0x6731fdaeu, description: "Will use this number of samples in the x and y directions.")]
 	public byte NumSamplesSqrt { get; set; } = 0x03;
 
-	[DDLRegistration(0xec3c1742u, description: "Sampling radius at 1M from listener")]
+	[DDLRegistration(0xb32efb1fu, description: "Sampling radius at 1M from listener")]
 	public float SamplingRadius { get; set; } = 0.20f;
 
-	[DDLRegistration(0xec3c1742u, description: "Angle to offset rays by in degrees")]
+	[DDLRegistration(0x54dd1e10u, description: "Angle to offset rays by in degrees")]
 	public float RayYawAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0xec3c1742u, description: "Position from which our sampling rays originate")]
+	[DDLRegistration(0x0a9ea2d3u, description: "Position from which our sampling rays originate")]
 	public xfc5a3cb7 SamplingPosition { get; set; } = xfc5a3cb7.Listener;
 
-	[DDLRegistration(0xec3c1742u, description: "Rotate the raycasts according to this frame of reference.")]
+	[DDLRegistration(0xbb5c948du, description: "Rotate the raycasts according to this frame of reference.")]
 	public x5d0fe319 Orientation { get; set; } = x5d0fe319.Listener;
 
-	[DDLRegistration(0xec3c1742u, description: "If Orientation is set to Ground, we follow the ground if within this distance. Otherwise we fall back to XZ Plane.")]
+	[DDLRegistration(0x2b8faa58u, description: "If Orientation is set to Ground, we follow the ground if within this distance. Otherwise we fall back to XZ Plane.")]
 	public float GroundDistance { get; set; } = 3.00f;
 
-	[DDLRegistration(0xec3c1742u, description: "Orientation of the vertical ray used in the average distance calculation")]
+	[DDLRegistration(0xb8510fcfu, description: "Orientation of the vertical ray used in the average distance calculation")]
 	public x5d0fe319 VerticalRayOrientation { get; set; } = x5d0fe319.Listener;
 
-	[DDLRegistration(0xec3c1742u, description: "Length of the vertical ray used in the average distance calculation")]
+	[DDLRegistration(0xe8751737u, description: "Length of the vertical ray used in the average distance calculation")]
 	public float VerticalRayDistance { get; set; } = 500.00f;
 
-	[DDLRegistration(0xec3c1742u, description: "The vertical ray swivels about within this angle to get an average distance over time. This is to avoid small overhangs drastically changing the sound. Defined as radius@1M from frame of reference")]
+	[DDLRegistration(0xf5059842u, description: "The vertical ray swivels about within this angle to get an average distance over time. This is to avoid small overhangs drastically changing the sound. Defined as radius@1M from frame of reference")]
 	public float VerticalRayMaxRadius { get; set; } = 0.20f;
 
-	[DDLRegistration(0xec3c1742u, description: "The vertical ray's values are averaged over time - this is the number of samples of historical data we use to calculate the average. Smaller values mean more jumpy, faster response. Larger values are smoother with more delay. Default value of 30 = 1s under 30fps.")]
+	[DDLRegistration(0x9d0203c7u, description: "The vertical ray's values are averaged over time - this is the number of samples of historical data we use to calculate the average. Smaller values mean more jumpy, faster response. Larger values are smoother with more delay. Default value of 30 = 1s under 30fps.")]
 	public ushort VerticalRayFilterSize { get; set; } = 0x001e;
 
-	[DDLRegistration(0xec3c1742u, description: "To be used as prefix for distance RTPC. For example, a value of 'A' would result in 4 RTPCS: 'A_0', 'A_1', etc. Corresponding tap numbers will be labeled in ER Debug Visualization.")]
+	[DDLRegistration(0x881edc9cu, description: "To be used as prefix for distance RTPC. For example, a value of 'A' would result in 4 RTPCS: 'A_0', 'A_1', etc. Corresponding tap numbers will be labeled in ER Debug Visualization.")]
 	public string? WwiseDistanceRTPCPrefix { get; set; } = "ER_Distance_RTPC";
 
-	[DDLRegistration(0xec3c1742u, description: "To be used as prefix for reflection coefficient RTPC. For example, a value of 'A' would result in 4 RTPCS: 'A_0', 'A_1', etc. Corresponding tap numbers will be labeled in ER Debug Visualization.")]
+	[DDLRegistration(0xdb12e221u, description: "To be used as prefix for reflection coefficient RTPC. For example, a value of 'A' would result in 4 RTPCS: 'A_0', 'A_1', etc. Corresponding tap numbers will be labeled in ER Debug Visualization.")]
 	public string? WwiseRefCoeffRTPCPrefix { get; set; } = "ER_Reflection_RTPC";
 
-	[DDLRegistration(0xec3c1742u, description: "How we calculate the reflection coefficient we send to Wwise.")]
+	[DDLRegistration(0x6032a2fbu, description: "How we calculate the reflection coefficient we send to Wwise.")]
 	public x47d78dec CoefficientPolicy { get; set; } = x47d78dec.Average;
 
-	[DDLRegistration(0xec3c1742u, description: "If no properties are provided for a material, this will be used")]
+	[DDLRegistration(0xe3a2959au, description: "If no properties are provided for a material, this will be used")]
 	public float DefaultReflectionCoefficient { get; set; } = 0.00f;
 
-	[DDLRegistration(0xec3c1742u, description: "Reflection Properties")]
+	[DDLRegistration(0x6e813bd5u, description: "Reflection Properties")]
 	public List<ReflectionProperty?> ReflectionProperties { get; set; } = [];
 
 	public new static SoundEarlyReflectionsConfig Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class HeroAttackerConfig : DDLObjectType, IDDLObjectType<HeroAttackerConf
 		SpecialAttackManagerPrius = ddl.GetObject<JobManagerAttackPrius>(0xac071b52u);
 	}
 
-	[DDLRegistration(0x8be51a62u, "Swarmer")]
+	[DDLRegistration(0x6bbdd051u, "Swarmer")]
 	public JobManagerAttackPrius? SmallMeleeManagerPrius { get; set; } = default;
 
-	[DDLRegistration(0x8be51a62u, "Melee")]
+	[DDLRegistration(0x3440eab3u, "Melee")]
 	public JobManagerAttackPrius? LargeMeleeManagerPrius { get; set; } = default;
 
-	[DDLRegistration(0x8be51a62u, "Shooter")]
+	[DDLRegistration(0xc4a476fcu, "Shooter")]
 	public JobManagerAttackPrius? StandardRangedManagerPrius { get; set; } = default;
 
-	[DDLRegistration(0x8be51a62u, "Heavy")]
+	[DDLRegistration(0xf2dc98dau, "Heavy")]
 	public JobManagerAttackPrius? LargeRangedManagerPrius { get; set; } = default;
 
-	[DDLRegistration(0x8be51a62u, "Special")]
+	[DDLRegistration(0xac071b52u, "Special")]
 	public JobManagerAttackPrius? SpecialAttackManagerPrius { get; set; } = default;
 
 	public static HeroAttackerConfig Create(DDLObject ddl) => new(ddl);

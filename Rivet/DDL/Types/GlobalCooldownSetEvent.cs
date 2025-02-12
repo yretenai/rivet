@@ -19,10 +19,10 @@ public class GlobalCooldownSetEvent : EventBase, IDDLObjectType<GlobalCooldownSe
 		CooldownDuration = ddl.GetValue<float>(0x97cb9b45u, CooldownDuration);
 	}
 
-	[DDLRegistration(0xcb737040u)]
+	[DDLRegistration(0xaad24eb7u)]
 	public x942b54f2 CooldownType { get; set; } = x942b54f2.Leap;
 
-	[DDLRegistration(0xcb737040u)]
+	[DDLRegistration(0x97cb9b45u)]
 	public float CooldownDuration { get; set; } = 0.00f;
 
 	public new static GlobalCooldownSetEvent Create(DDLObject ddl) => new(ddl);

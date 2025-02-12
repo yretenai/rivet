@@ -20,13 +20,13 @@ public class SessionAssetError : DDLObjectType, IDDLObjectType<SessionAssetError
 		ShouldReload = ddl.GetValue<bool>(0x772bb433u, ShouldReload);
 	}
 
-	[DDLRegistration(0x2d59e4a7u)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public RivetAssetId Path { get; set; } = "";
 
-	[DDLRegistration(0x2d59e4a7u)]
+	[DDLRegistration(0xb7575347u)]
 	public string? Message { get; set; } = "";
 
-	[DDLRegistration(0x2d59e4a7u)]
+	[DDLRegistration(0x772bb433u)]
 	public bool ShouldReload { get; set; } = true;
 
 	public static SessionAssetError Create(DDLObject ddl) => new(ddl);

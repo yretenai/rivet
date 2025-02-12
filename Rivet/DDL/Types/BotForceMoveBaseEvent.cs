@@ -18,7 +18,7 @@ public class BotForceMoveBaseEvent : EventBase, IDDLObjectType<BotForceMoveBaseE
 		Direction = ddl.GetObject<DDLVector3>(0xbcb74ebfu);
 	}
 
-	[DDLRegistration(0x4b77895cu, description: "If this is not set it means we will fling away from the source.")]
+	[DDLRegistration(0xbcb74ebfu, description: "If this is not set it means we will fling away from the source.")]
 	public DDLVector3? Direction { get; set; } = default;
 
 	public new static BotForceMoveBaseEvent Create(DDLObject ddl) => new(ddl);

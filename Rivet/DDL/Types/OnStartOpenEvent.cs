@@ -18,7 +18,7 @@ public class OnStartOpenEvent : EventBase, IDDLObjectType<OnStartOpenEvent> {
 		SourceSyncId = ddl.GetValue<ulong>(0xe5a8f223u, SourceSyncId);
 	}
 
-	[DDLRegistration(0x042f93cdu)]
+	[DDLRegistration(0xe5a8f223u)]
 	public ulong SourceSyncId { get; set; } = 0x0000000000000000;
 
 	public new static OnStartOpenEvent Create(DDLObject ddl) => new(ddl);

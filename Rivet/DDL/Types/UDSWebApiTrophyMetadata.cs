@@ -26,31 +26,31 @@ public class UDSWebApiTrophyMetadata : DDLObjectType, IDDLObjectType<UDSWebApiTr
 		UnlockCondition = ddl.GetObject<UBPTrophyUnlock>(0xd9f0d256u);
 	}
 
-	[DDLRegistration(0x3fe88e5du)]
+	[DDLRegistration(0xce811188u)]
 	public Dictionary<string, string?> Name { get; set; } = [];
 
-	[DDLRegistration(0x3fe88e5du)]
+	[DDLRegistration(0xe03811fdu)]
 	public Dictionary<string, string?> Description { get; set; } = [];
 
-	[DDLRegistration(0x3fe88e5du)]
+	[DDLRegistration(0x81c84df1u)]
 	public xfb81cf7c Grade { get; set; } = xfb81cf7c.Bronze;
 
-	[DDLRegistration(0x3fe88e5du)]
+	[DDLRegistration(0xb189a2ecu)]
 	public bool Hidden { get; set; } = false;
 
-	[DDLRegistration(0x3fe88e5du)]
+	[DDLRegistration(0x5dca42dcu)]
 	public string? SortKey { get; set; } = default;
 
-	[DDLRegistration(0x3fe88e5du)]
+	[DDLRegistration(0x82ae60a2u)]
 	public string? PlatinumTrophyObjectId { get; set; } = default;
 
-	[DDLRegistration(0x3fe88e5du)]
+	[DDLRegistration(0x38c096e8u)]
 	public bool HasReward { get; set; } = false;
 
-	[DDLRegistration(0x3fe88e5du)]
+	[DDLRegistration(0x77053902u)]
 	public UDSWebApiReward? Reward { get; set; } = default;
 
-	[DDLRegistration(0x3fe88e5du)]
+	[DDLRegistration(0xd9f0d256u)]
 	public UBPTrophyUnlock? UnlockCondition { get; set; } = default;
 
 	public static UDSWebApiTrophyMetadata Create(DDLObject ddl) => new(ddl);

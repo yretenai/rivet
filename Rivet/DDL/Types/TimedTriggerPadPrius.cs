@@ -19,10 +19,10 @@ public class TimedTriggerPadPrius : ToggleTriggerPadPrius, IDDLObjectType<TimedT
 		ResetTime = ddl.GetValue<float>(0x45a33419u, ResetTime);
 	}
 
-	[DDLRegistration(0xe62d00d8u, "Start timer on stand?", "Whether we start our timer when stood on (true) or when they get off us (false).")]
+	[DDLRegistration(0x1da3fefeu, "Start timer on stand?", "Whether we start our timer when stood on (true) or when they get off us (false).")]
 	public bool StartTimerOnStand { get; set; } = true;
 
-	[DDLRegistration(0xe62d00d8u, "Reset Time", "How long, once one button in the group is triggered, until this button resets.")]
+	[DDLRegistration(0x45a33419u, "Reset Time", "How long, once one button in the group is triggered, until this button resets.")]
 	public float ResetTime { get; set; } = 10.00f;
 
 	public new static TimedTriggerPadPrius Create(DDLObject ddl) => new(ddl);

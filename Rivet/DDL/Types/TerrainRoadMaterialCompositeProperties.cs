@@ -19,10 +19,10 @@ public class TerrainRoadMaterialCompositeProperties : DDLObjectType, IDDLObjectT
 		CompositeProperties = ddl.GetObject<TerrainRoadCompositeProperties>(0x0e231b56u);
 	}
 
-	[DDLRegistration(0xf0e65375u, description: "The layer on which the road will be applied.")]
+	[DDLRegistration(0xfd88eddbu, description: "The layer on which the road will be applied.")]
 	public TerrainPaintingTarget? Layer { get; set; } = default;
 
-	[DDLRegistration(0xf0e65375u, description: "These are compositing properties for the material.")]
+	[DDLRegistration(0x0e231b56u, description: "These are compositing properties for the material.")]
 	public TerrainRoadCompositeProperties? CompositeProperties { get; set; } = default;
 
 	public static TerrainRoadMaterialCompositeProperties Create(DDLObject ddl) => new(ddl);

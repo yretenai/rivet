@@ -22,19 +22,19 @@ public class PortalPrius : DDLObjectType, IDDLObjectType<PortalPrius> {
 		PortalLoad = ddl.GetObject<PortalLoadPrius>(0x80674dfbu);
 	}
 
-	[DDLRegistration(0xb94aeb36u, description: "Other end of this portal")]
+	[DDLRegistration(0xf91fd9d6u, description: "Other end of this portal")]
 	public RivetAssetId TargetPortal { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb94aeb36u, description: "Starts this portal when activated")]
+	[DDLRegistration(0x3e035e82u, description: "Starts this portal when activated")]
 	public bool StartActive { get; set; } = false;
 
-	[DDLRegistration(0xb94aeb36u, description: "If the PortalLoad overlay/etc. is loaded when we Init, start the portal as activated.")]
+	[DDLRegistration(0xd92c27afu, description: "If the PortalLoad overlay/etc. is loaded when we Init, start the portal as activated.")]
 	public bool StartActiveIfLoaded { get; set; } = false;
 
-	[DDLRegistration(0xb94aeb36u, description: "Activates/deactivates target portal in tandem with this portal")]
+	[DDLRegistration(0xcf9a9ad3u, description: "Activates/deactivates target portal in tandem with this portal")]
 	public bool SyncWithTargetPortal { get; set; } = true;
 
-	[DDLRegistration(0xb94aeb36u)]
+	[DDLRegistration(0x80674dfbu)]
 	public PortalLoadPrius? PortalLoad { get; set; } = default;
 
 	public static PortalPrius Create(DDLObject ddl) => new(ddl);

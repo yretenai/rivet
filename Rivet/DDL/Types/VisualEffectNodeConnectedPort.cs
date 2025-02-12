@@ -19,10 +19,10 @@ public class VisualEffectNodeConnectedPort : DDLObjectType, IDDLObjectType<Visua
 		NodePortId = ddl.GetString(0x17219007) ?? NodePortId;
 	}
 
-	[DDLRegistration(0x7ad0357du)]
+	[DDLRegistration(0x55b34350u)]
 	public string? NodeDisplayName { get; set; } = default;
 
-	[DDLRegistration(0x7ad0357du)]
+	[DDLRegistration(0x17219007u)]
 	public string? NodePortId { get; set; } = default;
 
 	public static VisualEffectNodeConnectedPort Create(DDLObject ddl) => new(ddl);

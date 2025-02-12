@@ -25,28 +25,28 @@ public class AttachToActorEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObject
 		HideOnAutoDestroy = ddl.GetValue<bool>(0xe71cbd5au, HideOnAutoDestroy);
 	}
 
-	[DDLRegistration(0x491327aeu)]
+	[DDLRegistration(0x1eb7640eu)]
 	public x684c6439 ActorType { get; set; } = x684c6439.HitActor;
 
-	[DDLRegistration(0x491327aeu)]
+	[DDLRegistration(0xfd42c180u)]
 	public string? AttachJoint { get; set; } = default;
 
-	[DDLRegistration(0x491327aeu)]
+	[DDLRegistration(0x9ba822cfu)]
 	public bool ResetShotLifetime { get; set; } = true;
 
-	[DDLRegistration(0x491327aeu)]
+	[DDLRegistration(0xe646b196u)]
 	public float NewLifetime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x491327aeu)]
+	[DDLRegistration(0xbf9f9307u)]
 	public bool DestroyOnBotDeath { get; set; } = false;
 
-	[DDLRegistration(0x491327aeu)]
+	[DDLRegistration(0x2f074a2bu)]
 	public bool DestroyOnNonBotDeath { get; set; } = false;
 
-	[DDLRegistration(0x491327aeu)]
+	[DDLRegistration(0x282599e5u)]
 	public bool MatchDestroy { get; set; } = true;
 
-	[DDLRegistration(0x491327aeu)]
+	[DDLRegistration(0xe71cbd5au)]
 	public bool HideOnAutoDestroy { get; set; } = false;
 
 	public new static AttachToActorEffectNodeDef Create(DDLObject ddl) => new(ddl);

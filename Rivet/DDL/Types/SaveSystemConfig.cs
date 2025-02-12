@@ -23,22 +23,22 @@ public class SaveSystemConfig : ConfigBase, IDDLObjectType<SaveSystemConfig> {
 		VanityBundleWeights = ddl.GetObjects<VanityBundleSaveWeight>(0x6fd5bf42u);
 	}
 
-	[DDLRegistration(0xcf9cf810u, "(Category) Golden Path Completion Weight", "The golden path category contributes this much towards the overall save file completion, regardless of each mission's weight relative to individual weights in other categories.")]
+	[DDLRegistration(0x7e65c21du, "(Category) Golden Path Completion Weight", "The golden path category contributes this much towards the overall save file completion, regardless of each mission's weight relative to individual weights in other categories.")]
 	public float GoldenPathCategoryWeight { get; set; } = 60.00f;
 
-	[DDLRegistration(0xcf9cf810u, "(Category) Optional Missions Completion Weight", "The optional missions category contributes this much towards the overall save file completion, regardless of each optional mission's weight relative to individual weights in other categories.")]
+	[DDLRegistration(0xeca047a4u, "(Category) Optional Missions Completion Weight", "The optional missions category contributes this much towards the overall save file completion, regardless of each optional mission's weight relative to individual weights in other categories.")]
 	public float OptionalMissionCategoryWeight { get; set; } = 25.00f;
 
-	[DDLRegistration(0xcf9cf810u, "(Category) Collectibles Completion Weight", "The collectibles category contributes this much towards the overall save file completion, regardless of each collectible's weight relative to individual weights in other categories.")]
+	[DDLRegistration(0x2ec9a442u, "(Category) Collectibles Completion Weight", "The collectibles category contributes this much towards the overall save file completion, regardless of each collectible's weight relative to individual weights in other categories.")]
 	public float CollectiblesCategoryWeight { get; set; } = 15.00f;
 
-	[DDLRegistration(0xcf9cf810u)]
+	[DDLRegistration(0x1cd5112du)]
 	public List<GoldBoltSaveWeight?> GoldBoltWeights { get; set; } = [];
 
-	[DDLRegistration(0xcf9cf810u)]
+	[DDLRegistration(0x833cb21eu)]
 	public List<RYNOPlanSaveWeight?> RYNOPlanWeights { get; set; } = [];
 
-	[DDLRegistration(0xcf9cf810u)]
+	[DDLRegistration(0x6fd5bf42u)]
 	public List<VanityBundleSaveWeight?> VanityBundleWeights { get; set; } = [];
 
 	public new static SaveSystemConfig Create(DDLObject ddl) => new(ddl);

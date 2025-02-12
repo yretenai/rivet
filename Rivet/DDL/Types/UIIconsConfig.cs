@@ -26,31 +26,31 @@ public class UIIconsConfig : ConfigBase, IDDLObjectType<UIIconsConfig> {
 		CustomLogos = ddl.GetObjects<LogoCustomData>(0x8f1ac676u);
 	}
 
-	[DDLRegistration(0x5416c35bu)]
+	[DDLRegistration(0x53e4d8d9u)]
 	public List<WeaponIconData?> Weapons { get; set; } = [];
 
-	[DDLRegistration(0x5416c35bu)]
+	[DDLRegistration(0x173f995au)]
 	public List<GadgetIconData?> Gadgets { get; set; } = [];
 
-	[DDLRegistration(0x5416c35bu)]
+	[DDLRegistration(0x60647757u)]
 	public List<ShortcutIconData?> Shortcuts { get; set; } = [];
 
-	[DDLRegistration(0x5416c35bu)]
+	[DDLRegistration(0xffa71584u)]
 	public List<PauseMapIconData?> MapIcons { get; set; } = [];
 
-	[DDLRegistration(0x5416c35bu)]
+	[DDLRegistration(0xac6fd639u)]
 	public List<VanityIconData?> VanityIcons { get; set; } = [];
 
-	[DDLRegistration(0x5416c35bu)]
+	[DDLRegistration(0x83bf9f25u)]
 	public List<WeaponImageData?> WeaponImages { get; set; } = [];
 
-	[DDLRegistration(0x5416c35bu)]
+	[DDLRegistration(0xe3c87c5au)]
 	public List<CollectibleImageData?> CollectibleImages { get; set; } = [];
 
-	[DDLRegistration(0x5416c35bu, description: "The game logo image.")]
+	[DDLRegistration(0xa20558a7u, description: "The game logo image.")]
 	public RivetAssetId LogoImage { get; set; } = "";
 
-	[DDLRegistration(0x5416c35bu)]
+	[DDLRegistration(0x8f1ac676u)]
 	public List<LogoCustomData?> CustomLogos { get; set; } = [];
 
 	public new static UIIconsConfig Create(DDLObject ddl) => new(ddl);

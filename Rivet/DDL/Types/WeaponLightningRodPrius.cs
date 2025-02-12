@@ -23,22 +23,22 @@ public class WeaponLightningRodPrius : WeaponGamePrius, IDDLObjectType<WeaponLig
 		PostChargedShotFiringDelay = ddl.GetValue<float>(0x28e25becu, PostChargedShotFiringDelay);
 	}
 
-	[DDLRegistration(0x229f2168u, "Miss Angle Min")]
+	[DDLRegistration(0xec6d2f49u, "Miss Angle Min")]
 	public float MissAngleMin { get; set; } = 5.00f;
 
-	[DDLRegistration(0x229f2168u, "Miss Angle Max")]
+	[DDLRegistration(0xd0601010u, "Miss Angle Max")]
 	public float MissAngleMax { get; set; } = 7.50f;
 
-	[DDLRegistration(0x229f2168u, "Soft Lock Break Angle Yaw")]
+	[DDLRegistration(0x7d013ffeu, "Soft Lock Break Angle Yaw")]
 	public float SoftLockBreakAngleYaw { get; set; } = 11.00f;
 
-	[DDLRegistration(0x229f2168u, "Soft Lock Break Angle Pitch")]
+	[DDLRegistration(0xfb02b9c6u, "Soft Lock Break Angle Pitch")]
 	public float SoftLockBreakAnglePitch { get; set; } = 8.00f;
 
-	[DDLRegistration(0x229f2168u, "Min Charge For Firing Delay")]
+	[DDLRegistration(0x5ba3e7d6u, "Min Charge For Firing Delay")]
 	public float MinChargeForFiringDelay { get; set; } = 0.40f;
 
-	[DDLRegistration(0x229f2168u, "Post Charged Shot Firing Delay")]
+	[DDLRegistration(0x28e25becu, "Post Charged Shot Firing Delay")]
 	public float PostChargedShotFiringDelay { get; set; } = 1.00f;
 
 	public new static WeaponLightningRodPrius Create(DDLObject ddl) => new(ddl);

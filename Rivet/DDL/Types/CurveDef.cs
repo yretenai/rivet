@@ -27,34 +27,34 @@ public class CurveDef : DDLObjectType, IDDLObjectType<CurveDef> {
 		TerrainRoadData = ddl.GetObject<TerrainRoadCurveData>(0x83d421b5u);
 	}
 
-	[DDLRegistration(0x885ffacau)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x885ffacau)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x885ffacau)]
+	[DDLRegistration(0x19c2c04eu)]
 	public Dictionary<RivetAssetId, SceneNode?> Points { get; set; } = [];
 
-	[DDLRegistration(0x885ffacau, "Loop", "If checked, this is a closed loop instead of a curve")]
+	[DDLRegistration(0x8b1e8c12u, "Loop", "If checked, this is a closed loop instead of a curve")]
 	public bool IsLooped { get; set; } = false;
 
-	[DDLRegistration(0x885ffacau, "Loop End Point")]
+	[DDLRegistration(0xbd8d3c97u, "Loop End Point")]
 	public ushort LoopStartPointIndex { get; set; } = 0x0000;
 
-	[DDLRegistration(0x885ffacau, "Reverse", "Reverses the curve direction if checked")]
+	[DDLRegistration(0x5b90e340u, "Reverse", "Reverses the curve direction if checked")]
 	public bool IsReversed { get; set; } = false;
 
-	[DDLRegistration(0x885ffacau, "Spline Type")]
+	[DDLRegistration(0x228fc6dfu, "Spline Type")]
 	public SplineTypes SplineType { get; set; } = SplineTypes.Centripetal;
 
-	[DDLRegistration(0x885ffacau, description: "Specifies what additional properties should be available on the curve.")]
+	[DDLRegistration(0xc9b892b1u, description: "Specifies what additional properties should be available on the curve.")]
 	public CurveUsage? Usage { get; set; } = default;
 
-	[DDLRegistration(0x885ffacau, "Houdini Data")]
+	[DDLRegistration(0x5642110du, "Houdini Data")]
 	public CurveHoudiniData? HoudiniData { get; set; } = default;
 
-	[DDLRegistration(0x885ffacau, "Terrain Road Data")]
+	[DDLRegistration(0x83d421b5u, "Terrain Road Data")]
 	public TerrainRoadCurveData? TerrainRoadData { get; set; } = default;
 
 	public static CurveDef Create(DDLObject ddl) => new(ddl);

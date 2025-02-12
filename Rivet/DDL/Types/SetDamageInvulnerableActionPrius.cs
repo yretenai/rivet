@@ -22,19 +22,19 @@ public class SetDamageInvulnerableActionPrius : DDLObjectType, IDDLObjectType<Se
 		AllowReacts = ddl.GetValue<bool>(0x7d494b99u, AllowReacts);
 	}
 
-	[DDLRegistration(0x7d3296d4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
-	[DDLRegistration(0x7d3296d4u, "Damage Filters")]
+	[DDLRegistration(0x2032e08du, "Damage Filters")]
 	public List<DamageTypesGame> FilterTypes { get; set; } = [];
 
-	[DDLRegistration(0x7d3296d4u, "Allegiance Types")]
+	[DDLRegistration(0xcbbd390fu, "Allegiance Types")]
 	public List<x6bdf4ba1> AllegianceTypes { get; set; } = [];
 
-	[DDLRegistration(0x7d3296d4u, "Filters Is Exclude", "If true, the bot is immune to everything EXCEPT the Damage/Allegiance filters above. Unchecked means the bot is ONLY immune to the above.")]
+	[DDLRegistration(0x96f0a657u, "Filters Is Exclude", "If true, the bot is immune to everything EXCEPT the Damage/Allegiance filters above. Unchecked means the bot is ONLY immune to the above.")]
 	public bool FilterIsExclude { get; set; } = false;
 
-	[DDLRegistration(0x7d3296d4u, "Allow Reacts", "Instead of ignoring damage completely, just set the amount to 0")]
+	[DDLRegistration(0x7d494b99u, "Allow Reacts", "Instead of ignoring damage completely, just set the amount to 0")]
 	public bool AllowReacts { get; set; } = false;
 
 	public static SetDamageInvulnerableActionPrius Create(DDLObject ddl) => new(ddl);

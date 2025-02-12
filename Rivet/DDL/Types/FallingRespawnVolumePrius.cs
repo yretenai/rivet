@@ -18,7 +18,7 @@ public class FallingRespawnVolumePrius : DDLObjectType, IDDLObjectType<FallingRe
 		RespawnLocation = ddl.GetValue<RivetAssetId>(0x824c7176u, RespawnLocation);
 	}
 
-	[DDLRegistration(0x3de0839au, description: "The actor (probably a volume) that marks the location where the hero should respawn.")]
+	[DDLRegistration(0x824c7176u, description: "The actor (probably a volume) that marks the location where the hero should respawn.")]
 	public RivetAssetId RespawnLocation { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static FallingRespawnVolumePrius Create(DDLObject ddl) => new(ddl);

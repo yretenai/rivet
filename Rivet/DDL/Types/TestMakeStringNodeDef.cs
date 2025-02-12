@@ -21,16 +21,16 @@ public class TestMakeStringNodeDef : NodeBaseDef, IDDLObjectType<TestMakeStringN
 		PossibleValues = ddl.GetStrings(0xf97febe6u);
 	}
 
-	[DDLRegistration(0xa3894bbfu)]
+	[DDLRegistration(0x9920abc0u)]
 	public InputPlugInt? Index { get; set; } = default;
 
-	[DDLRegistration(0xa3894bbfu)]
+	[DDLRegistration(0xa0c6fcceu)]
 	public OutputPlugString? String { get; set; } = default;
 
-	[DDLRegistration(0xa3894bbfu)]
+	[DDLRegistration(0x4ef19112u)]
 	public string? DebugName { get; set; } = default;
 
-	[DDLRegistration(0xa3894bbfu)]
+	[DDLRegistration(0xf97febe6u)]
 	public List<string?> PossibleValues { get; set; } = [];
 
 	public new static TestMakeStringNodeDef Create(DDLObject ddl) => new(ddl);

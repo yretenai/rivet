@@ -18,7 +18,7 @@ public class BotVariantDifficultyModConfig : ConfigBase, IDDLObjectType<BotVaria
 		DifficultyVariants = ddl.GetObjects<BotVariantDifficultyEntry>(0xc88853c7u);
 	}
 
-	[DDLRegistration(0xbf0315aau)]
+	[DDLRegistration(0xc88853c7u)]
 	public List<BotVariantDifficultyEntry?> DifficultyVariants { get; set; } = [];
 
 	public new static BotVariantDifficultyModConfig Create(DDLObject ddl) => new(ddl);

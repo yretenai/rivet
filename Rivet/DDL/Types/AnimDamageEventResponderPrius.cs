@@ -20,13 +20,13 @@ public class AnimDamageEventResponderPrius : DDLObjectType, IDDLObjectType<AnimD
 		IgnoreSelfDamage = ddl.GetValue<bool>(0x9bd24c94u, IgnoreSelfDamage);
 	}
 
-	[DDLRegistration(0x4c2c8a50u)]
+	[DDLRegistration(0x4ffc4ac1u)]
 	public List<AnimDamageEventResponderElement?> DamageMaps { get; set; } = [];
 
-	[DDLRegistration(0x4c2c8a50u)]
+	[DDLRegistration(0xbcc26c97u)]
 	public uint EventLayer { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4c2c8a50u)]
+	[DDLRegistration(0x9bd24c94u)]
 	public bool IgnoreSelfDamage { get; set; } = false;
 
 	public static AnimDamageEventResponderPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class GameBotConfigFiring : ConfigBase, IDDLObjectType<GameBotConfigFirin
 		WeaponItem = ddl.GetValue<RivetAssetId>(0x8b393dd4u, WeaponItem);
 	}
 
-	[DDLRegistration(0x82ecce9du)]
+	[DDLRegistration(0x8b393dd4u)]
 	public RivetAssetId WeaponItem { get; set; } = "Base:  WeaponItemConfig";
 
 	public new static GameBotConfigFiring Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class BotTrappedInBoxEvent : EventBase, IDDLObjectType<BotTrappedInBoxEve
 		BoxLength = ddl.GetValue<float>(0x773e34fcu, BoxLength);
 	}
 
-	[DDLRegistration(0x86593403u, description: "X")]
+	[DDLRegistration(0x1c9beb49u, description: "X")]
 	public float BoxWidth { get; set; } = 1.00f;
 
-	[DDLRegistration(0x86593403u, description: "Y")]
+	[DDLRegistration(0x830e4f41u, description: "Y")]
 	public float BoxHeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x86593403u, description: "Z")]
+	[DDLRegistration(0x773e34fcu, description: "Z")]
 	public float BoxLength { get; set; } = 1.00f;
 
 	public new static BotTrappedInBoxEvent Create(DDLObject ddl) => new(ddl);

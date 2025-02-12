@@ -18,7 +18,7 @@ public class BotComboMoveReferenceIndex : BotComboMoveBase, IDDLObjectType<BotCo
 		Index = ddl.GetValue<uint>(0x9920abc0u, Index);
 	}
 
-	[DDLRegistration(0xf558fd84u)]
+	[DDLRegistration(0x9920abc0u)]
 	public uint Index { get; set; } = 0x00000000;
 
 	public new static BotComboMoveReferenceIndex Create(DDLObject ddl) => new(ddl);

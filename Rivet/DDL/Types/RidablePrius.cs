@@ -26,31 +26,31 @@ public class RidablePrius : DDLObjectType, IDDLObjectType<RidablePrius> {
 		JumpData = ddl.GetObject<RidableJumpData>(0x01655eecu);
 	}
 
-	[DDLRegistration(0x6b219d2cu, description: "Should the first half of seats be used?")]
+	[DDLRegistration(0x34c51440u, description: "Should the first half of seats be used?")]
 	public bool UseLeftSeats { get; set; } = true;
 
-	[DDLRegistration(0x6b219d2cu, description: "Should the second half of seats be used? ")]
+	[DDLRegistration(0xe26508cau, description: "Should the second half of seats be used? ")]
 	public bool UseRightSeats { get; set; } = true;
 
-	[DDLRegistration(0x6b219d2cu, description: "Should the passengers be dropped off once the ridable reaches the end of its curve?")]
+	[DDLRegistration(0x91ebfe2cu, description: "Should the passengers be dropped off once the ridable reaches the end of its curve?")]
 	public bool AutoDropoff { get; set; } = true;
 
-	[DDLRegistration(0x6b219d2cu, description: "The min amount of time between bots jumping out of the vehicle.")]
+	[DDLRegistration(0x97d021a0u, description: "The min amount of time between bots jumping out of the vehicle.")]
 	public float MinTimeBetweenDropoffs { get; set; } = 0.25f;
 
-	[DDLRegistration(0x6b219d2cu, description: "The max amount of time between bots jumping out of the vehicle.")]
+	[DDLRegistration(0xd6c71e26u, description: "The max amount of time between bots jumping out of the vehicle.")]
 	public float MaxTimeBetweenDropoffs { get; set; } = 0.25f;
 
-	[DDLRegistration(0x6b219d2cu, "Bot Anim Set", "The anim set the riders need for this ridable.")]
+	[DDLRegistration(0xea9aa336u, "Bot Anim Set", "The anim set the riders need for this ridable.")]
 	public RivetAssetId BotAnimSet { get; set; } = default;
 
-	[DDLRegistration(0x6b219d2cu)]
+	[DDLRegistration(0xa6b19b91u)]
 	public List<Seat?> Seats { get; set; } = [];
 
-	[DDLRegistration(0x6b219d2cu, "Ground Search Parameters")]
+	[DDLRegistration(0xb3eb5a00u, "Ground Search Parameters")]
 	public RidableGroundSearchData? GroundSearchData { get; set; } = default;
 
-	[DDLRegistration(0x6b219d2cu, "Rider Jump Parameters")]
+	[DDLRegistration(0x01655eecu, "Rider Jump Parameters")]
 	public RidableJumpData? JumpData { get; set; } = default;
 
 	public static RidablePrius Create(DDLObject ddl) => new(ddl);

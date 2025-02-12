@@ -20,13 +20,13 @@ public class HeroTeamSpawnPointPrius : DDLObjectType, IDDLObjectType<HeroTeamSpa
 		HeroSpawnLocations = ddl.GetObjects<HeroSpawnLocationData>(0xc7b6b01bu);
 	}
 
-	[DDLRegistration(0xc1f228ccu)]
+	[DDLRegistration(0xf47066afu)]
 	public xc115d639 Team { get; set; } = xc115d639.None;
 
-	[DDLRegistration(0xc1f228ccu, "Start Enabled")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0xc1f228ccu)]
+	[DDLRegistration(0xc7b6b01bu)]
 	public List<HeroSpawnLocationData?> HeroSpawnLocations { get; set; } = [];
 
 	public static HeroTeamSpawnPointPrius Create(DDLObject ddl) => new(ddl);

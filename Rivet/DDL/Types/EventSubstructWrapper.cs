@@ -18,7 +18,7 @@ public class EventSubstructWrapper : DDLObjectType, IDDLObjectType<EventSubstruc
 		Event = ddl.GetObject<EventBase>(0x22fdc666u);
 	}
 
-	[DDLRegistration(0x3e467534u, "Event", "All event types in the project are shown here")]
+	[DDLRegistration(0x22fdc666u, "Event", "All event types in the project are shown here")]
 	public EventBase? Event { get; set; } = default;
 
 	public static EventSubstructWrapper Create(DDLObject ddl) => new(ddl);

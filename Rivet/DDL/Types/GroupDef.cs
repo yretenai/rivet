@@ -22,19 +22,19 @@ public class GroupDef : DDLObjectType, IDDLObjectType<GroupDef> {
 		HoudiniPluginName = ddl.GetString(0x1eee05a3) ?? HoudiniPluginName;
 	}
 
-	[DDLRegistration(0x569d0686u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x569d0686u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x569d0686u, description: "You cannot directly inspect or edit children of a locked group")]
+	[DDLRegistration(0xb71f5bbeu, description: "You cannot directly inspect or edit children of a locked group")]
 	public bool Lock { get; set; } = false;
 
-	[DDLRegistration(0x569d0686u, description: "If true, the contents of this group are generated from the Level Editor Houdini integration")]
+	[DDLRegistration(0x3e2ad3bau, description: "If true, the contents of this group are generated from the Level Editor Houdini integration")]
 	public bool IsHoudiniGenerated { get; set; } = false;
 
-	[DDLRegistration(0x569d0686u, description: "The name of the Houdini plugin used to generate the data beneath inside group.  If this is empty, it won't contain plugin-generated data, but will serve more as a root Houdini generated group.")]
+	[DDLRegistration(0x1eee05a3u, description: "The name of the Houdini plugin used to generate the data beneath inside group.  If this is empty, it won't contain plugin-generated data, but will serve more as a root Houdini generated group.")]
 	public string? HoudiniPluginName { get; set; } = default;
 
 	public static GroupDef Create(DDLObject ddl) => new(ddl);

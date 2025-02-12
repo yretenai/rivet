@@ -19,10 +19,10 @@ public class CommandGoToActionPrius : DDLObjectType, IDDLObjectType<CommandGoToA
 		Attack = ddl.GetValue<bool>(0x79b8635cu, Attack);
 	}
 
-	[DDLRegistration(0xf898ae29u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0xf898ae29u, description: "Continue to attack during go to")]
+	[DDLRegistration(0x79b8635cu, description: "Continue to attack during go to")]
 	public bool Attack { get; set; } = false;
 
 	public static CommandGoToActionPrius Create(DDLObject ddl) => new(ddl);

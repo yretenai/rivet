@@ -21,16 +21,16 @@ public class RenderModeEngineItem : DDLObjectType, IDDLObjectType<RenderModeEngi
 		EngineAlwaysActive = ddl.GetValue<bool>(0x6fa31e29u, EngineAlwaysActive);
 	}
 
-	[DDLRegistration(0x6be8768fu)]
+	[DDLRegistration(0x42a1ebf3u)]
 	public float BrightnessScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6be8768fu)]
+	[DDLRegistration(0x5ebdec9au)]
 	public EditorRenderMode EditorRenderMode { get; set; } = EditorRenderMode.FullLighting;
 
-	[DDLRegistration(0x6be8768fu)]
+	[DDLRegistration(0x0cc4b35au)]
 	public PhysicsCollFlags PhysicsCollFlags { get; set; } = (PhysicsCollFlags) 0x0000043f;
 
-	[DDLRegistration(0x6be8768fu)]
+	[DDLRegistration(0x6fa31e29u)]
 	public bool EngineAlwaysActive { get; set; } = true;
 
 	public static RenderModeEngineItem Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DialogListItem : DDLObjectType, IDDLObjectType<DialogListItem> {
 		Dialog = ddl.GetObject<DialogList>(0x7b199605u);
 	}
 
-	[DDLRegistration(0x11b67d27u)]
+	[DDLRegistration(0x7b199605u)]
 	public DialogList? Dialog { get; set; } = default;
 
 	public static DialogListItem Create(DDLObject ddl) => new(ddl);

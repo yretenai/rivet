@@ -18,7 +18,7 @@ public class RCSChangelistInput : DDLObjectType, IDDLObjectType<RCSChangelistInp
 		Description = ddl.GetString(0xe03811fd) ?? Description;
 	}
 
-	[DDLRegistration(0x3b880b9bu, description: "Changelist description.")]
+	[DDLRegistration(0xe03811fdu, description: "Changelist description.")]
 	public string? Description { get; set; } = default;
 
 	public static RCSChangelistInput Create(DDLObject ddl) => new(ddl);

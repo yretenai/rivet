@@ -18,7 +18,7 @@ public class JointMoveSequencerPrius : JointMoverBasePrius, IDDLObjectType<Joint
 		Sequence = ddl.GetObjects<JointMoveSequenceEntry>(0xa8876a5bu);
 	}
 
-	[DDLRegistration(0x7b6769ceu)]
+	[DDLRegistration(0xa8876a5bu)]
 	public List<JointMoveSequenceEntry?> Sequence { get; set; } = [];
 
 	public new static JointMoveSequencerPrius Create(DDLObject ddl) => new(ddl);

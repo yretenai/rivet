@@ -19,10 +19,10 @@ public class BattleBrewArmorPrius : BattleBrewBasePrius, IDDLObjectType<BattleBr
 		DamageModifiers = ddl.GetObject<DamageModifierBattleBrewArmorPrius>(0x05f02303u);
 	}
 
-	[DDLRegistration(0xac6aa054u)]
+	[DDLRegistration(0xb785ec5cu)]
 	public RivetAssetId ShieldActor { get; set; } = default;
 
-	[DDLRegistration(0xac6aa054u, "Damage Modifier (Battle Brew Armor)")]
+	[DDLRegistration(0x05f02303u, "Damage Modifier (Battle Brew Armor)")]
 	public DamageModifierBattleBrewArmorPrius? DamageModifiers { get; set; } = default;
 
 	public new static BattleBrewArmorPrius Create(DDLObject ddl) => new(ddl);

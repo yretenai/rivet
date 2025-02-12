@@ -18,7 +18,7 @@ public class PortalZipStartEvent : EventBase, IDDLObjectType<PortalZipStartEvent
 		Target = ddl.GetValue<uint>(0x7817619bu, Target);
 	}
 
-	[DDLRegistration(0x8e15dcf2u)]
+	[DDLRegistration(0x7817619bu)]
 	public uint Target { get; set; } = 0x00000000;
 
 	public new static PortalZipStartEvent Create(DDLObject ddl) => new(ddl);

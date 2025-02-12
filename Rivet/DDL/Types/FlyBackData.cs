@@ -20,13 +20,13 @@ public class FlyBackData : DDLObjectType, IDDLObjectType<FlyBackData> {
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0xc39f1714u)]
+	[DDLRegistration(0x8a4ca0e3u)]
 	public float SpeedMin { get; set; } = 20.00f;
 
-	[DDLRegistration(0xc39f1714u)]
+	[DDLRegistration(0xb6419fbau)]
 	public float SpeedMax { get; set; } = 20.00f;
 
-	[DDLRegistration(0xc39f1714u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.50f;
 
 	public static FlyBackData Create(DDLObject ddl) => new(ddl);

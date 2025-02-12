@@ -19,10 +19,10 @@ public class UIOptionTypeSettingBase : UIOptionTypeBase, IDDLObjectType<UIOption
 		PresetValues = ddl.GetValues<float>(0xc85a1699u);
 	}
 
-	[DDLRegistration(0xbce92b47u, description: "List of child options. All child settings values are overriden by parents values.")]
+	[DDLRegistration(0x4c60d844u, description: "List of child options. All child settings values are overriden by parents values.")]
 	public List<UIOption?> ChildOptions { get; set; } = [];
 
-	[DDLRegistration(0xbce92b47u, description: "Size of this array must match the number of presets of the top-most parent that is a preset. For string based settings (colors, lists) this will be an index into that list.")]
+	[DDLRegistration(0xc85a1699u, description: "Size of this array must match the number of presets of the top-most parent that is a preset. For string based settings (colors, lists) this will be an index into that list.")]
 	public List<float> PresetValues { get; set; } = [];
 
 	public new static UIOptionTypeSettingBase Create(DDLObject ddl) => new(ddl);

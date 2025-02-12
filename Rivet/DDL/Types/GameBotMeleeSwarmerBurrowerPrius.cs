@@ -22,19 +22,19 @@ public class GameBotMeleeSwarmerBurrowerPrius : GameBotMeleeSwarmerPrius, IDDLOb
 		UseWaitGoto = ddl.GetValue<bool>(0xe0396d47u, UseWaitGoto);
 	}
 
-	[DDLRegistration(0x89f838c1u, "Start underground?", "Whether we init underground already or not (so we skip the burrow animation).")]
+	[DDLRegistration(0x0982cdb1u, "Start underground?", "Whether we init underground already or not (so we skip the burrow animation).")]
 	public bool StartUnderground { get; set; } = false;
 
-	[DDLRegistration(0x89f838c1u, "Chance to Burrow", "The chance (0-1) that the swarmer will burrow when idle.")]
+	[DDLRegistration(0xdfa98f55u, "Chance to Burrow", "The chance (0-1) that the swarmer will burrow when idle.")]
 	public float ChanceToBurrow { get; set; } = 1.00f;
 
-	[DDLRegistration(0x89f838c1u, "Pre-Burrow Delay:Min", "The minimum time this swarmer will do an above ground idle before burrowing.")]
+	[DDLRegistration(0xcf63ddd4u, "Pre-Burrow Delay:Min", "The minimum time this swarmer will do an above ground idle before burrowing.")]
 	public float PreBurrowDelayMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0x89f838c1u, "Pre-Burrow Delay:Max", "The maxmimum time this swarmer will do an above ground idle before burrowing.")]
+	[DDLRegistration(0xf36ee28du, "Pre-Burrow Delay:Max", "The maxmimum time this swarmer will do an above ground idle before burrowing.")]
 	public float PreBurrowDelayMax { get; set; } = 3.00f;
 
-	[DDLRegistration(0x89f838c1u, "Use Wait Goto", "Use a wait state to limit random nav queries when burrowing.")]
+	[DDLRegistration(0xe0396d47u, "Use Wait Goto", "Use a wait state to limit random nav queries when burrowing.")]
 	public bool UseWaitGoto { get; set; } = false;
 
 	public new static GameBotMeleeSwarmerBurrowerPrius Create(DDLObject ddl) => new(ddl);

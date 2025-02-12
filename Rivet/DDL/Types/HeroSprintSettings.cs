@@ -20,13 +20,13 @@ public class HeroSprintSettings : DDLObjectType, IDDLObjectType<HeroSprintSettin
 		AutoSprintStartTime = ddl.GetValue<float>(0x7118475cu, AutoSprintStartTime);
 	}
 
-	[DDLRegistration(0xe7f0334eu)]
+	[DDLRegistration(0x58f39616u)]
 	public float SprintMultiplier { get; set; } = 1.30f;
 
-	[DDLRegistration(0xe7f0334eu)]
+	[DDLRegistration(0x7cefddd6u)]
 	public float SprintAccelTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0xe7f0334eu)]
+	[DDLRegistration(0x7118475cu)]
 	public float AutoSprintStartTime { get; set; } = 1.00f;
 
 	public static HeroSprintSettings Create(DDLObject ddl) => new(ddl);

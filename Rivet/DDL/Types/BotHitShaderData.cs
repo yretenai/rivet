@@ -20,13 +20,13 @@ public class BotHitShaderData : DDLObjectType, IDDLObjectType<BotHitShaderData> 
 		UseHitShaderEvenWhenNotTakingDamage = ddl.GetValue<bool>(0x954340f5u, UseHitShaderEvenWhenNotTakingDamage);
 	}
 
-	[DDLRegistration(0xcb27ef5cu)]
+	[DDLRegistration(0xc18bd04fu)]
 	public RivetAssetId Shader { get; set; } = default;
 
-	[DDLRegistration(0xcb27ef5cu)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.50f;
 
-	[DDLRegistration(0xcb27ef5cu, "Use Hit Shader Even When Not Taking Damage")]
+	[DDLRegistration(0x954340f5u, "Use Hit Shader Even When Not Taking Damage")]
 	public bool UseHitShaderEvenWhenNotTakingDamage { get; set; } = false;
 
 	public static BotHitShaderData Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DamageMultiPrimConfig : ConfigBase, IDDLObjectType<DamageMultiPrimC
 		Prims = ddl.GetObjects<DamagePrimContainer>(0xb9cc76c7u);
 	}
 
-	[DDLRegistration(0x47021935u)]
+	[DDLRegistration(0xb9cc76c7u)]
 	public List<DamagePrimContainer?> Prims { get; set; } = [];
 
 	public new static DamageMultiPrimConfig Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class RenamePathObj : DDLObjectType, IDDLObjectType<RenamePathObj> {
 		NewPath = ddl.GetValue<RivetAssetId>(0xdee6d2e5u, NewPath);
 	}
 
-	[DDLRegistration(0xc0238ba9u)]
+	[DDLRegistration(0x05da8b02u)]
 	public RivetAssetId ResourcePath { get; set; } = default;
 
-	[DDLRegistration(0xc0238ba9u)]
+	[DDLRegistration(0x78de65cbu)]
 	public RivetAssetId OldPath { get; set; } = default;
 
-	[DDLRegistration(0xc0238ba9u)]
+	[DDLRegistration(0xdee6d2e5u)]
 	public RivetAssetId NewPath { get; set; } = default;
 
 	public static RenamePathObj Create(DDLObject ddl) => new(ddl);

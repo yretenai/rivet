@@ -19,10 +19,10 @@ public class RuinTokenPrius : DDLObjectType, IDDLObjectType<RuinTokenPrius> {
 		RuinPickupActor = ddl.GetValue<RivetAssetId>(0x17ec8560u, RuinPickupActor);
 	}
 
-	[DDLRegistration(0xe8d3f83fu, description: "Unique identifier of this Ruin Token for saving the game.")]
+	[DDLRegistration(0xf61c4918u, description: "Unique identifier of this Ruin Token for saving the game.")]
 	public xeccc3486 SaveID { get; set; } = xeccc3486.None;
 
-	[DDLRegistration(0xe8d3f83fu, description: "Ruin pickup actor spawned on destroy.")]
+	[DDLRegistration(0x17ec8560u, description: "Ruin pickup actor spawned on destroy.")]
 	public RivetAssetId RuinPickupActor { get; set; } = default;
 
 	public static RuinTokenPrius Create(DDLObject ddl) => new(ddl);

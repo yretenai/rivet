@@ -19,10 +19,10 @@ public class ScriptActionTypeProperties : DDLObjectType, IDDLObjectType<ScriptAc
 		Color = ddl.GetValue<uint>(0x7f058428u, Color);
 	}
 
-	[DDLRegistration(0x72811f54u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x10228b34 Type { get; set; } = x10228b34.Unsorted;
 
-	[DDLRegistration(0x72811f54u)]
+	[DDLRegistration(0x7f058428u)]
 	public uint Color { get; set; } = 0x00000000;
 
 	public static ScriptActionTypeProperties Create(DDLObject ddl) => new(ddl);

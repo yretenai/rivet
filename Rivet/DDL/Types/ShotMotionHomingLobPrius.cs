@@ -26,31 +26,31 @@ public class ShotMotionHomingLobPrius : BasicShotMotionPrius, IDDLObjectType<Sho
 		IgnoreBots = ddl.GetValue<bool>(0x7222af35u, IgnoreBots);
 	}
 
-	[DDLRegistration(0x3e1955b8u)]
+	[DDLRegistration(0xff0f447du)]
 	public float ArcVariancePitchMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3e1955b8u)]
+	[DDLRegistration(0xc3027b24u)]
 	public float ArcVariancePitchMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3e1955b8u)]
+	[DDLRegistration(0xa2682957u)]
 	public float ArcVarianceYawMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3e1955b8u)]
+	[DDLRegistration(0x9e65160eu)]
 	public float ArcVarianceYawMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3e1955b8u)]
+	[DDLRegistration(0x9339e359u)]
 	public float DesiredHeightFromEmit { get; set; } = 10.00f;
 
-	[DDLRegistration(0x3e1955b8u)]
+	[DDLRegistration(0xd292ec09u)]
 	public float DesiredFlightTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x3e1955b8u, description: "at what percent of flight time to hit desired height")]
+	[DDLRegistration(0xcfedd8d6u, description: "at what percent of flight time to hit desired height")]
 	public float DesiredTimeToApexNorm { get; set; } = 0.50f;
 
-	[DDLRegistration(0x3e1955b8u, description: "if true, this shotmotion will not collide with breakables")]
+	[DDLRegistration(0x21544f6au, description: "if true, this shotmotion will not collide with breakables")]
 	public bool IgnoreBreakables { get; set; } = false;
 
-	[DDLRegistration(0x3e1955b8u, description: "if true, this shotmotion will not collide with bots")]
+	[DDLRegistration(0x7222af35u, description: "if true, this shotmotion will not collide with bots")]
 	public bool IgnoreBots { get; set; } = false;
 
 	public new static ShotMotionHomingLobPrius Create(DDLObject ddl) => new(ddl);

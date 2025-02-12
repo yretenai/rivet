@@ -18,7 +18,7 @@ public class SceneEditorCurrentEditingAsset : DDLObjectType, IDDLObjectType<Scen
 		Path = ddl.GetValue<RivetAssetId>(0x3bc44bbfu, Path);
 	}
 
-	[DDLRegistration(0x73c5a732u, description: "Path of the current editing asset in scene editor")]
+	[DDLRegistration(0x3bc44bbfu, description: "Path of the current editing asset in scene editor")]
 	public RivetAssetId Path { get; set; } = "";
 
 	public static SceneEditorCurrentEditingAsset Create(DDLObject ddl) => new(ddl);

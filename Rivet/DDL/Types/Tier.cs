@@ -26,31 +26,31 @@ public class Tier : DDLObjectType, IDDLObjectType<Tier> {
 		IgnoreIfUnreachable = ddl.GetValue<bool>(0x96c5564eu, IgnoreIfUnreachable);
 	}
 
-	[DDLRegistration(0x140e573au)]
+	[DDLRegistration(0x85109145u)]
 	public TargetType TargetTypes { get; set; } = (TargetType) 0x00000000;
 
-	[DDLRegistration(0x140e573au)]
+	[DDLRegistration(0x6c79323fu)]
 	public ProxAggroRange? MinRange { get; set; } = default;
 
-	[DDLRegistration(0x140e573au)]
+	[DDLRegistration(0xa4f3d83eu)]
 	public List<ProxAggroRange?> AdditionalRanges { get; set; } = [];
 
-	[DDLRegistration(0x140e573au)]
+	[DDLRegistration(0x8a199ddeu)]
 	public ProxAggroRange? MaxRange { get; set; } = default;
 
-	[DDLRegistration(0x140e573au, description: "This is the fastest we will get mad at a target for just being near us. They will accrue aggro at this rate inside of ProximityAggroRangeMax")]
+	[DDLRegistration(0x04058a39u, description: "This is the fastest we will get mad at a target for just being near us. They will accrue aggro at this rate inside of ProximityAggroRangeMax")]
 	public float ProximityAggroRate { get; set; } = 25.00f;
 
-	[DDLRegistration(0x140e573au, description: "This is the rate proximity aggro decays.")]
+	[DDLRegistration(0x8836d50bu, description: "This is the rate proximity aggro decays.")]
 	public float ProximityAggroBleedRate { get; set; } = 5.00f;
 
-	[DDLRegistration(0x140e573au, description: "If target is outside combat area, we will continue shooting normally for this distance outside.")]
+	[DDLRegistration(0xf8e82f4fu, description: "If target is outside combat area, we will continue shooting normally for this distance outside.")]
 	public float RangedAreaBufferDistance { get; set; } = 30.00f;
 
-	[DDLRegistration(0x140e573au, description: "If target is outside combat area, we will stop shooting at this distance outside.")]
+	[DDLRegistration(0x8a1076c2u, description: "If target is outside combat area, we will stop shooting at this distance outside.")]
 	public float RangedAreaDropoffDistance { get; set; } = 40.00f;
 
-	[DDLRegistration(0x140e573au, description: "Do you want to ignore a target that is unreachable (by nav, that is).")]
+	[DDLRegistration(0x96c5564eu, description: "Do you want to ignore a target that is unreachable (by nav, that is).")]
 	public bool IgnoreIfUnreachable { get; set; } = false;
 
 	public static Tier Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class POITypeInteract : POIInstanceDataBase, IDDLObjectType<POITypeIntera
 		Text = ddl.GetString(0x0b1b6777) ?? Text;
 	}
 
-	[DDLRegistration(0x185f8021u)]
+	[DDLRegistration(0x3d637ef4u)]
 	public uint ControlHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x185f8021u)]
+	[DDLRegistration(0x047ee25au)]
 	public x7b87880c Button { get; set; } = x7b87880c.NoPadButton;
 
-	[DDLRegistration(0x185f8021u)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
 	public new static POITypeInteract Create(DDLObject ddl) => new(ddl);

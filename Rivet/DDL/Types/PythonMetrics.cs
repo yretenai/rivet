@@ -22,19 +22,19 @@ public class PythonMetrics : DDLObjectType, IDDLObjectType<PythonMetrics> {
 		TotalMicros = ddl.GetValue<uint>(0x073f3565u, TotalMicros);
 	}
 
-	[DDLRegistration(0x8931b6fau, description: "Use this to access low-level stats returned from the renderer.")]
+	[DDLRegistration(0x781b407du, description: "Use this to access low-level stats returned from the renderer.")]
 	public RenderStats? RenderStats { get; set; } = default;
 
-	[DDLRegistration(0x8931b6fau, description: "The frames per second for the last frame rendered")]
+	[DDLRegistration(0x7747c418u, description: "The frames per second for the last frame rendered")]
 	public float FramesPerSecond { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8931b6fau, description: "Wall clock time (1000 per millisecond) for the following GPU layers: kGBufferImpostor, kGBufferStatic, kGBufferStaticSkin, kGBufferDecal, kGBufferStaticHQ, kOverlapColor, kGBufferOverlapNormal, kApplyLighting, kForward, kPlacedDecals, and kSpawnedDecals.")]
+	[DDLRegistration(0xb581f1e5u, description: "Wall clock time (1000 per millisecond) for the following GPU layers: kGBufferImpostor, kGBufferStatic, kGBufferStaticSkin, kGBufferDecal, kGBufferStaticHQ, kOverlapColor, kGBufferOverlapNormal, kApplyLighting, kForward, kPlacedDecals, and kSpawnedDecals.")]
 	public uint ColorMicros { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8931b6fau, description: "Wall clock time (1000 per millisecond) for the following GPU layers: kCreateShadowMaps and kCreateCSM.")]
+	[DDLRegistration(0x6c5d8671u, description: "Wall clock time (1000 per millisecond) for the following GPU layers: kCreateShadowMaps and kCreateCSM.")]
 	public uint ShadowMicros { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8931b6fau, description: "Wall clock time (1000 per millisecond) for all the GPU layers.")]
+	[DDLRegistration(0x073f3565u, description: "Wall clock time (1000 per millisecond) for all the GPU layers.")]
 	public uint TotalMicros { get; set; } = 0x00000000;
 
 	public static PythonMetrics Create(DDLObject ddl) => new(ddl);

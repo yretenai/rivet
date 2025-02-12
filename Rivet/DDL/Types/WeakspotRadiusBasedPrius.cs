@@ -19,10 +19,10 @@ public class WeakspotRadiusBasedPrius : WeakspotPrius, IDDLObjectType<WeakspotRa
 		WeakspotRadius = ddl.GetValue<float>(0xaebcb81eu, WeakspotRadius);
 	}
 
-	[DDLRegistration(0xc012b844u)]
+	[DDLRegistration(0xfd0ee199u)]
 	public DDLVector3? LocalJointOffset { get; set; } = default;
 
-	[DDLRegistration(0xc012b844u)]
+	[DDLRegistration(0xaebcb81eu)]
 	public float WeakspotRadius { get; set; } = 1.00f;
 
 	public new static WeakspotRadiusBasedPrius Create(DDLObject ddl) => new(ddl);

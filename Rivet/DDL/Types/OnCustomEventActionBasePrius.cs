@@ -19,10 +19,10 @@ public class OnCustomEventActionBasePrius : DDLObjectType, IDDLObjectType<OnCust
 		RefireMax = ddl.GetValue<int>(0x30a7e086u, RefireMax);
 	}
 
-	[DDLRegistration(0xb37c40a0u, description: "Start listening for the event at zone start time")]
+	[DDLRegistration(0xed20bc43u, description: "Start listening for the event at zone start time")]
 	public bool StartListeningOnInit { get; set; } = true;
 
-	[DDLRegistration(0xb37c40a0u, "Max Times to Fire", "The number of times the output can fire (values <= 0 are infinite).")]
+	[DDLRegistration(0x30a7e086u, "Max Times to Fire", "The number of times the output can fire (values <= 0 are infinite).")]
 	public int RefireMax { get; set; } = -1;
 
 	public static OnCustomEventActionBasePrius Create(DDLObject ddl) => new(ddl);

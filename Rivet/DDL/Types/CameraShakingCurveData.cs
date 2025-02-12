@@ -20,13 +20,13 @@ public class CameraShakingCurveData : DDLObjectType, IDDLObjectType<CameraShakin
 		Offset = ddl.GetValue<float>(0x677284b7u, Offset);
 	}
 
-	[DDLRegistration(0x38252b8au, "Magnitude Degrees", "How much does the camera rotate in degrees")]
+	[DDLRegistration(0xb77ae20du, "Magnitude Degrees", "How much does the camera rotate in degrees")]
 	public float Magnitude { get; set; } = 1.00f;
 
-	[DDLRegistration(0x38252b8au, "Shake Frequency", "How long does it take to move from 0 to 'MagnitudeDegrees' to '-MagnitudeDegrees' and back to 0")]
+	[DDLRegistration(0xa482271fu, "Shake Frequency", "How long does it take to move from 0 to 'MagnitudeDegrees' to '-MagnitudeDegrees' and back to 0")]
 	public float Frequency { get; set; } = 1.00f;
 
-	[DDLRegistration(0x38252b8au, "Time Offset")]
+	[DDLRegistration(0x677284b7u, "Time Offset")]
 	public float Offset { get; set; } = 0.00f;
 
 	public static CameraShakingCurveData Create(DDLObject ddl) => new(ddl);

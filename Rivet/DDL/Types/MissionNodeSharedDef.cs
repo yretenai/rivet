@@ -22,19 +22,19 @@ public class MissionNodeSharedDef : MissionSystemDefaultNodeBaseDef, IDDLObjectT
 		SyncOutput = ddl.GetObjects<SyncOutputPlugBoolean>(0x7c4d29a0u);
 	}
 
-	[DDLRegistration(0x6215b09au)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x6215b09au, description: "Objective graph for this mission")]
+	[DDLRegistration(0x55ff52bdu, description: "Objective graph for this mission")]
 	public ObjectiveGraphContainer? ObjectiveGraph { get; set; } = default;
 
-	[DDLRegistration(0x6215b09au)]
+	[DDLRegistration(0x26e8b36eu)]
 	public MissionSaveOptions? SaveOptions { get; set; } = default;
 
-	[DDLRegistration(0x6215b09au)]
+	[DDLRegistration(0xb4577d57u)]
 	public xcc761825 UnlockBehavior { get; set; } = xcc761825.Available;
 
-	[DDLRegistration(0x6215b09au)]
+	[DDLRegistration(0x7c4d29a0u)]
 	public List<SyncOutputPlugBoolean?> SyncOutput { get; set; } = [];
 
 	public new static MissionNodeSharedDef Create(DDLObject ddl) => new(ddl);

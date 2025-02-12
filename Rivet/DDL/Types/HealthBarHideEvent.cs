@@ -18,7 +18,7 @@ public class HealthBarHideEvent : EventBase, IDDLObjectType<HealthBarHideEvent> 
 		IsFriendly = ddl.GetValue<bool>(0x42fa44ddu, IsFriendly);
 	}
 
-	[DDLRegistration(0x898a73deu)]
+	[DDLRegistration(0x42fa44ddu)]
 	public bool IsFriendly { get; set; } = false;
 
 	public new static HealthBarHideEvent Create(DDLObject ddl) => new(ddl);

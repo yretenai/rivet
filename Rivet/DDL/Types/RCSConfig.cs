@@ -19,10 +19,10 @@ public class RCSConfig : DDLObjectType, IDDLObjectType<RCSConfig> {
 		SyncRevision = ddl.GetObject<RCSRevisionOptions>(0x3517e0ccu);
 	}
 
-	[DDLRegistration(0x6d6add3cu, description: "Current state of the revision control system.")]
+	[DDLRegistration(0x45782b7bu, description: "Current state of the revision control system.")]
 	public xc2e0975c Status { get; set; } = xc2e0975c.Unknown;
 
-	[DDLRegistration(0x6d6add3cu, description: "Settings to use for all calls to Sync.")]
+	[DDLRegistration(0x3517e0ccu, description: "Settings to use for all calls to Sync.")]
 	public RCSRevisionOptions? SyncRevision { get; set; } = default;
 
 	public static RCSConfig Create(DDLObject ddl) => new(ddl);

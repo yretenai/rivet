@@ -35,58 +35,58 @@ public class PerformanceSessionData : DDLObjectType, IDDLObjectType<PerformanceS
 		SoloNameList = ddl.GetStrings(0x51729e93u);
 	}
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0xebb9cd11u)]
 	public byte SaveRequired { get; set; } = 0x00;
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x36c12525u)]
 	public byte Looping { get; set; } = 0x00;
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0xd21350dau)]
 	public byte Playing { get; set; } = 0x00;
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x86c8bc3cu)]
 	public uint PerformanceClipId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x46eb0bb6u)]
 	public uint BodyActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0xf4cbd9f9u)]
 	public string? MuteAnimSet { get; set; } = default;
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x3434f051u)]
 	public string? MuteAnimClip { get; set; } = default;
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x5615394cu)]
 	public Dictionary<string, string?> SoloExpressions { get; set; } = [];
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x4fb2c557u)]
 	public Dictionary<string, string?> MuteExpressions { get; set; } = [];
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0xf8587858u)]
 	public Dictionary<string, string?> SoloBodyGestures { get; set; } = [];
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x72241648u)]
 	public Dictionary<string, string?> MuteBodyGestures { get; set; } = [];
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x4a3db851u)]
 	public PerformanceSelectionData? SelectionData { get; set; } = default;
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x9878f47cu)]
 	public List<PerformanceAnimClipData?> AnimClipData { get; set; } = [];
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x03492d19u)]
 	public List<string?> AnimSets { get; set; } = [];
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x145893dbu)]
 	public Dictionary<RivetAssetId, RivetAssetId> Selection { get; set; } = [];
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x595577bcu)]
 	public List<string?> MuteNameList { get; set; } = [];
 
-	[DDLRegistration(0x8b6fffafu)]
+	[DDLRegistration(0x51729e93u)]
 	public List<string?> SoloNameList { get; set; } = [];
 
 	public static PerformanceSessionData Create(DDLObject ddl) => new(ddl);

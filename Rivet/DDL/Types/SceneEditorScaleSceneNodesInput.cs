@@ -18,7 +18,7 @@ public class SceneEditorScaleSceneNodesInput : DDLObjectType, IDDLObjectType<Sce
 		NodeWorldIdToScale = ddl.GetDictionary<RivetAssetId, SceneEditorScaleFactor>(0xd2e4a309, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SceneEditorScaleFactor>(mapId));
 	}
 
-	[DDLRegistration(0x0a73910eu)]
+	[DDLRegistration(0xd2e4a309u)]
 	public Dictionary<RivetAssetId, SceneEditorScaleFactor?> NodeWorldIdToScale { get; set; } = [];
 
 	public static SceneEditorScaleSceneNodesInput Create(DDLObject ddl) => new(ddl);

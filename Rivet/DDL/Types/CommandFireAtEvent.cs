@@ -20,13 +20,13 @@ public class CommandFireAtEvent : CommandEvent, IDDLObjectType<CommandFireAtEven
 		AltFire = ddl.GetValue<bool>(0x1b8b0bd4u, AltFire);
 	}
 
-	[DDLRegistration(0x24065c40u)]
+	[DDLRegistration(0x98554e8cu)]
 	public uint TargetActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x24065c40u, description: "Fire for this amount of time. Neg is infinite")]
+	[DDLRegistration(0x7c5e3db0u, description: "Fire for this amount of time. Neg is infinite")]
 	public float Duration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x24065c40u, description: "Use the weapon's secondary firing mode.")]
+	[DDLRegistration(0x1b8b0bd4u, description: "Use the weapon's secondary firing mode.")]
 	public bool AltFire { get; set; } = false;
 
 	public new static CommandFireAtEvent Create(DDLObject ddl) => new(ddl);

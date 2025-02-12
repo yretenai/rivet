@@ -43,82 +43,82 @@ public class EnvLightingDef : DDLObjectType, IDDLObjectType<EnvLightingDef> {
 		AmbientFillIntensity = ddl.GetValue<float>(0x659d9bd8u, AmbientFillIntensity);
 	}
 
-	[DDLRegistration(0x02b4ba83u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x02b4ba83u)]
+	[DDLRegistration(0x0b9e1252u)]
 	public DDLVector3? KeyLightColor { get; set; } = default;
 
-	[DDLRegistration(0x02b4ba83u)]
+	[DDLRegistration(0x538e45d0u)]
 	public float KeyLightIntensity { get; set; } = 6.00f;
 
-	[DDLRegistration(0x02b4ba83u, description: "The azimuthal direction of the keylight in degrees (0 to 360)")]
+	[DDLRegistration(0xd02cc3e7u, description: "The azimuthal direction of the keylight in degrees (0 to 360)")]
 	public float KeyLightAzimuth { get; set; } = 135.00f;
 
-	[DDLRegistration(0x02b4ba83u, description: "The elevation direction of the keylight in degrees (0 = horizon, 90 = straight down)")]
+	[DDLRegistration(0x8616b7c3u, description: "The elevation direction of the keylight in degrees (0 = horizon, 90 = straight down)")]
 	public float KeyLightElevation { get; set; } = 55.00f;
 
-	[DDLRegistration(0x02b4ba83u, description: "An azimuthal offset from the keylight direction for where the sun will be drawn in the sky (-180 to 180)")]
+	[DDLRegistration(0x67fec9c0u, description: "An azimuthal offset from the keylight direction for where the sun will be drawn in the sky (-180 to 180)")]
 	public float SunDiskOffsetAzimuth { get; set; } = 0.00f;
 
-	[DDLRegistration(0x02b4ba83u, description: "An elevation offset from the keylight direction for where the sun will be drawn in the sky (-90 to 90)")]
+	[DDLRegistration(0xbc065b6au, description: "An elevation offset from the keylight direction for where the sun will be drawn in the sky (-90 to 90)")]
 	public float SunDiskOffsetElevation { get; set; } = 0.00f;
 
-	[DDLRegistration(0x02b4ba83u)]
+	[DDLRegistration(0xf8b96e12u)]
 	public float ShadowDrawDist { get; set; } = 240.00f;
 
-	[DDLRegistration(0x02b4ba83u)]
+	[DDLRegistration(0x8dac72ffu)]
 	public sbyte CsmLodCount { get; set; } = 6;
 
-	[DDLRegistration(0x02b4ba83u, "Far Lod Caching", "If enabled, the far csm lod will contain only static casters and update only when necessary")]
+	[DDLRegistration(0x21ba4eccu, "Far Lod Caching", "If enabled, the far csm lod will contain only static casters and update only when necessary")]
 	public bool FarLodCaching { get; set; } = true;
 
-	[DDLRegistration(0x02b4ba83u, "Far Lod Transition Dist", "If non-zero, the csm shadow will transition to the far lod cache at this distance. If zero, it will use Render.CsmFarLodTransitionDist from the project settings instead")]
+	[DDLRegistration(0x1577d909u, "Far Lod Transition Dist", "If non-zero, the csm shadow will transition to the far lod cache at this distance. If zero, it will use Render.CsmFarLodTransitionDist from the project settings instead")]
 	public float FarLodTransitionDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x02b4ba83u, "Far Lod Perf Mode Opts", "If enabled, in Performance mode the far lod transition will be pulled closer and one csm lod will be removed.")]
+	[DDLRegistration(0xc15d68ffu, "Far Lod Perf Mode Opts", "If enabled, in Performance mode the far lod transition will be pulled closer and one csm lod will be removed.")]
 	public bool FarLodPerfModeOpts { get; set; } = false;
 
-	[DDLRegistration(0x02b4ba83u, description: "Normalized time of day. 0=blackout, 0.25=Overcast, 0.5=Day, 0.75=Sunset, 1=Night")]
+	[DDLRegistration(0x5205c002u, description: "Normalized time of day. 0=blackout, 0.25=Overcast, 0.5=Day, 0.75=Sunset, 1=Night")]
 	public float TimeOfDay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x02b4ba83u, description: "Apparent angular diameter of solar disk in degrees (it's 0.5 in real life)")]
+	[DDLRegistration(0xed282242u, description: "Apparent angular diameter of solar disk in degrees (it's 0.5 in real life)")]
 	public float SunDiameter { get; set; } = 0.50f;
 
-	[DDLRegistration(0x02b4ba83u, "DefaultEnvProbe")]
+	[DDLRegistration(0xb6836f0bu, "DefaultEnvProbe")]
 	public RivetAssetId FillLightCubeMap { get; set; } = default;
 
-	[DDLRegistration(0x02b4ba83u, description: "Scales the intensity of the light grid GI lighting (DOES NOT REQUIRE RECAPTURING)")]
+	[DDLRegistration(0xe2aa6891u, description: "Scales the intensity of the light grid GI lighting (DOES NOT REQUIRE RECAPTURING)")]
 	public float LightGridIntensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x02b4ba83u, description: "Scales the sky contribution to light grid GI lighting (REQUIRED RECAPTURING)")]
+	[DDLRegistration(0x77193456u, description: "Scales the sky contribution to light grid GI lighting (REQUIRED RECAPTURING)")]
 	public float LightGridSkyMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x02b4ba83u, description: "Sets the radius of light grid ambient occlusion kernel (REQUIRED RECAPTURING)")]
+	[DDLRegistration(0x8a57e2fau, description: "Sets the radius of light grid ambient occlusion kernel (REQUIRED RECAPTURING)")]
 	public float LightGridAORadius { get; set; } = 15.00f;
 
-	[DDLRegistration(0x02b4ba83u, description: "Attach a LightGridMod config asset to control AO Strength and Color Modulation")]
+	[DDLRegistration(0x54ebf356u, description: "Attach a LightGridMod config asset to control AO Strength and Color Modulation")]
 	public RivetAssetId LightGridModConfig { get; set; } = default;
 
-	[DDLRegistration(0x02b4ba83u)]
+	[DDLRegistration(0x2c6109b2u)]
 	public RivetAssetId KeylightMaterial { get; set; } = default;
 
-	[DDLRegistration(0x02b4ba83u, description: "The world-space scale in meters for the keylight material")]
+	[DDLRegistration(0x8c8e23dau, description: "The world-space scale in meters for the keylight material")]
 	public float KeylightMaterialScale { get; set; } = 100.00f;
 
-	[DDLRegistration(0x02b4ba83u, description: "The Y height in meters below which nothing needs to cast or receive shadows")]
+	[DDLRegistration(0x90ca59eeu, description: "The Y height in meters below which nothing needs to cast or receive shadows")]
 	public float CasterRangeLower { get; set; } = -10.00f;
 
-	[DDLRegistration(0x02b4ba83u, description: "The Y height in meters above which nothing needs to cast or receive shadows")]
+	[DDLRegistration(0xf00ffd51u, description: "The Y height in meters above which nothing needs to cast or receive shadows")]
 	public float CasterRangeUpper { get; set; } = 400.00f;
 
-	[DDLRegistration(0x02b4ba83u, description: "Multiplier applied to lights spawned by VFX lights")]
+	[DDLRegistration(0xf7964af6u, description: "Multiplier applied to lights spawned by VFX lights")]
 	public float VFXLightMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x02b4ba83u)]
+	[DDLRegistration(0x1d373bc7u)]
 	public DDLVector3? AmbientFillColor { get; set; } = default;
 
-	[DDLRegistration(0x02b4ba83u)]
+	[DDLRegistration(0x659d9bd8u)]
 	public float AmbientFillIntensity { get; set; } = 0.00f;
 
 	public static EnvLightingDef Create(DDLObject ddl) => new(ddl);

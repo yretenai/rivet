@@ -26,31 +26,31 @@ public class SyncSettings : DDLObjectType, IDDLObjectType<SyncSettings> {
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0xbd3155c5u)]
+	[DDLRegistration(0xcc5b13bdu)]
 	public uint MaxComponents { get; set; } = 0x000055f0;
 
-	[DDLRegistration(0xbd3155c5u)]
+	[DDLRegistration(0x096fd22du)]
 	public uint HeapSize { get; set; } = 0x00020000;
 
-	[DDLRegistration(0xbd3155c5u)]
+	[DDLRegistration(0xff699a38u)]
 	public float HeapFixedBlockFraction { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbd3155c5u)]
+	[DDLRegistration(0xd6cdb316u)]
 	public uint HeapFixedBlockSize { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbd3155c5u)]
+	[DDLRegistration(0xa60e5d0du)]
 	public uint OutputQueueSize { get; set; } = 0x00008000;
 
-	[DDLRegistration(0xbd3155c5u)]
+	[DDLRegistration(0xf0eff7e0u)]
 	public uint BroadcastQueueSize { get; set; } = 0x00008000;
 
-	[DDLRegistration(0xbd3155c5u)]
+	[DDLRegistration(0x5e76066eu)]
 	public uint ServerHeapSize { get; set; } = 0x00100000;
 
-	[DDLRegistration(0xbd3155c5u)]
+	[DDLRegistration(0xf20f554bu)]
 	public uint ServerMessageQueueSize { get; set; } = 0x00040000;
 
-	[DDLRegistration(0xbd3155c5u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
 	public static SyncSettings Create(DDLObject ddl) => new(ddl);

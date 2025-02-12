@@ -19,10 +19,10 @@ public class HeroClankPackSystemSaveData : DDLObjectType, IDDLObjectType<HeroCla
 		DebugSourceInfo = ddl.GetStrings(0x645ee190u);
 	}
 
-	[DDLRegistration(0x40f0b511u)]
+	[DDLRegistration(0xfd7b9531u)]
 	public List<RivetAssetId> BackpackConfigs { get; set; } = [];
 
-	[DDLRegistration(0x40f0b511u)]
+	[DDLRegistration(0x645ee190u)]
 	public List<string?> DebugSourceInfo { get; set; } = [];
 
 	public static HeroClankPackSystemSaveData Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class HoudiniConfigDataString : HoudiniConfigData, IDDLObjectType<Houdini
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0x8efadc33u, description: "The string value that will be imported into Houdini.  It will be accessible as a detail attribute using the tag name.")]
+	[DDLRegistration(0x042494f5u, description: "The string value that will be imported into Houdini.  It will be accessible as a detail attribute using the tag name.")]
 	public string? Value { get; set; } = default;
 
 	public new static HoudiniConfigDataString Create(DDLObject ddl) => new(ddl);

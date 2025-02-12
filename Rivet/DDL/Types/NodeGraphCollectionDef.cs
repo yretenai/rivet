@@ -20,13 +20,13 @@ public class NodeGraphCollectionDef : DDLObjectType, IDDLObjectType<NodeGraphCol
 		Type = ddl.GetString(0xbc4e9799) ?? Type;
 	}
 
-	[DDLRegistration(0x6beaccccu)]
+	[DDLRegistration(0xf7eff7adu)]
 	public string? MainGraph { get; set; } = default;
 
-	[DDLRegistration(0x6beaccccu)]
+	[DDLRegistration(0x774f06eeu)]
 	public string? SubGraphs { get; set; } = default;
 
-	[DDLRegistration(0x6beaccccu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
 	public static NodeGraphCollectionDef Create(DDLObject ddl) => new(ddl);

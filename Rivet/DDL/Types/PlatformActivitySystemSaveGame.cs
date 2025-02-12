@@ -18,7 +18,7 @@ public class PlatformActivitySystemSaveGame : DDLObjectType, IDDLObjectType<Plat
 		ScriptedGameIntentDisabled = ddl.GetValue<bool>(0x006c2269u, ScriptedGameIntentDisabled);
 	}
 
-	[DDLRegistration(0x4d4b74f2u)]
+	[DDLRegistration(0x006c2269u)]
 	public bool ScriptedGameIntentDisabled { get; set; } = false;
 
 	public static PlatformActivitySystemSaveGame Create(DDLObject ddl) => new(ddl);

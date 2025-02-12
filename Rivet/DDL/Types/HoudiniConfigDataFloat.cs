@@ -18,7 +18,7 @@ public class HoudiniConfigDataFloat : HoudiniConfigData, IDDLObjectType<HoudiniC
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x58dbee29u, description: "The floating point value that will be imported into Houdini.  It will be accessible as a detail attribute using the tag name.")]
+	[DDLRegistration(0x042494f5u, description: "The floating point value that will be imported into Houdini.  It will be accessible as a detail attribute using the tag name.")]
 	public float Value { get; set; } = 0.00f;
 
 	public new static HoudiniConfigDataFloat Create(DDLObject ddl) => new(ddl);

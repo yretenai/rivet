@@ -18,7 +18,7 @@ public class TestAnimalSubstructInArray : DDLObjectType, IDDLObjectType<TestAnim
 		Pets = ddl.GetObjects<TestAnimalSubstruct>(0xb6a82a8fu);
 	}
 
-	[DDLRegistration(0x59497636u)]
+	[DDLRegistration(0xb6a82a8fu)]
 	public List<TestAnimalSubstruct?> Pets { get; set; } = [];
 
 	public static TestAnimalSubstructInArray Create(DDLObject ddl) => new(ddl);

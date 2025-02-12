@@ -18,7 +18,7 @@ public class ScriptVarWatchList : DDLObjectType, IDDLObjectType<ScriptVarWatchLi
 		Variables = ddl.GetDictionary<RivetAssetId, ScriptVarWatch>(0x0a36e21d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ScriptVarWatch>(mapId));
 	}
 
-	[DDLRegistration(0x78071630u)]
+	[DDLRegistration(0x0a36e21du)]
 	public Dictionary<RivetAssetId, ScriptVarWatch?> Variables { get; set; } = [];
 
 	public static ScriptVarWatchList Create(DDLObject ddl) => new(ddl);

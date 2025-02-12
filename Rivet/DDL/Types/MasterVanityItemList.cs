@@ -21,16 +21,16 @@ public class MasterVanityItemList : MasterSkinItemList, IDDLObjectType<MasterVan
 		CineHelmetTransData = ddl.GetObject<VanityCineHelmetTransData>(0x5624f4ceu);
 	}
 
-	[DDLRegistration(0x43c0f6a0u, "Vanity Set Configs")]
+	[DDLRegistration(0x22361552u, "Vanity Set Configs")]
 	public List<RivetAssetId> VanitySets { get; set; } = [];
 
-	[DDLRegistration(0x43c0f6a0u)]
+	[DDLRegistration(0x4afede63u)]
 	public List<VanityAccessoryData?> AccessoryData { get; set; } = [];
 
-	[DDLRegistration(0x43c0f6a0u, "UI Colors")]
+	[DDLRegistration(0xded0aa4du, "UI Colors")]
 	public List<VanityUIColor?> UIColors { get; set; } = [];
 
-	[DDLRegistration(0x43c0f6a0u)]
+	[DDLRegistration(0x5624f4ceu)]
 	public VanityCineHelmetTransData? CineHelmetTransData { get; set; } = default;
 
 	public new static MasterVanityItemList Create(DDLObject ddl) => new(ddl);

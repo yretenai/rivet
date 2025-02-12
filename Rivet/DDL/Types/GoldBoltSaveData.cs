@@ -34,55 +34,55 @@ public class GoldBoltSaveData : DDLObjectType, IDDLObjectType<GoldBoltSaveData> 
 		HammerSkin = ddl.GetEnum<x387422ea>(0x483f4a19u, x387422eaValues.Lookup);
 	}
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0x6856baf9u)]
 	public List<uint> CollectedBoltHashes { get; set; } = [];
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0x2d728e1du)]
 	public bool InfiniteHealthEnabled { get; set; } = false;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0xe4dd68c7u)]
 	public bool InfiniteAmmoEnabled { get; set; } = false;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0x9922b40eu)]
 	public bool RPGEnabled { get; set; } = false;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0x2679b542u)]
 	public bool ConfettiHeadshotEnabled { get; set; } = false;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0xe71c87efu)]
 	public bool MirrorModeEnabled { get; set; } = false;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0xaa810c1au)]
 	public bool GoldWeaponsEnabled { get; set; } = false;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0x054917e9u)]
 	public bool HomeRunHitterEnabled { get; set; } = false;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0x0b840480u)]
 	public BoltReplacementType BoltReplacementType { get; set; } = BoltReplacementType.Default;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0xf8a4a815u)]
 	public uint RenderModeIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0x884f82a2u)]
 	public uint RenderModeNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0x8e903379u)]
 	public int HeadSizeIndex { get; set; } = 0;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0xf488307au)]
 	public int WrenchModelSwapIndex { get; set; } = -1;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0xecf228e8u)]
 	public int HammerModelSwapIndex { get; set; } = -1;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0x50835089u)]
 	public x8a806a76 ShipSkin { get; set; } = x8a806a76.Default;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0x15d383deu)]
 	public x387422ea WrenchSkin { get; set; } = x387422ea.Default;
 
-	[DDLRegistration(0x387bf6b7u)]
+	[DDLRegistration(0x483f4a19u)]
 	public x387422ea HammerSkin { get; set; } = x387422ea.Default;
 
 	public static GoldBoltSaveData Create(DDLObject ddl) => new(ddl);

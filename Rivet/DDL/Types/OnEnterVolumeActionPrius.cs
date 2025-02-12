@@ -23,22 +23,22 @@ public class OnEnterVolumeActionPrius : DDLObjectType, IDDLObjectType<OnEnterVol
 		SignalEmptyOnActivate = ddl.GetValue<bool>(0xe294a700u, SignalEmptyOnActivate);
 	}
 
-	[DDLRegistration(0x4430c5d7u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x4430c5d7u, description: "Start node as active")]
+	[DDLRegistration(0x3e035e82u, description: "Start node as active")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0x4430c5d7u, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0x4430c5d7u, "Reset Signal Count On Activate", "If true, the internal signal count will reset when Activate is signaled.")]
+	[DDLRegistration(0x5a8accb9u, "Reset Signal Count On Activate", "If true, the internal signal count will reset when Activate is signaled.")]
 	public bool ResetOnActivate { get; set; } = false;
 
-	[DDLRegistration(0x4430c5d7u, "Include Dead Actors", "If unchecked, Actors with zero health become treated as 'outside'.")]
+	[DDLRegistration(0xf0f20727u, "Include Dead Actors", "If unchecked, Actors with zero health become treated as 'outside'.")]
 	public bool IncludeDead { get; set; } = true;
 
-	[DDLRegistration(0x4430c5d7u, description: "If set to true, the node will fire OnEmpty on the first frame activated if no targets are in it")]
+	[DDLRegistration(0xe294a700u, description: "If set to true, the node will fire OnEmpty on the first frame activated if no targets are in it")]
 	public bool SignalEmptyOnActivate { get; set; } = true;
 
 	public static OnEnterVolumeActionPrius Create(DDLObject ddl) => new(ddl);

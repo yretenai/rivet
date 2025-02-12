@@ -18,7 +18,7 @@ public class BotConfigAnimFilterSelector : ConfigBase, IDDLObjectType<BotConfigA
 		Data = ddl.GetObject<BotAnimFilterSelectorData>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0xa36ed144u)]
+	[DDLRegistration(0x9d6333d3u)]
 	public BotAnimFilterSelectorData? Data { get; set; } = default;
 
 	public new static BotConfigAnimFilterSelector Create(DDLObject ddl) => new(ddl);

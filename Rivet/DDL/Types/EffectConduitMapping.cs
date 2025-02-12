@@ -20,13 +20,13 @@ public class EffectConduitMapping : DDLObjectType, IDDLObjectType<EffectConduitM
 		Events = ddl.GetDictionary<string, ECMEvent>(0x6dff192d, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<ECMEvent>(mapId));
 	}
 
-	[DDLRegistration(0xce7c9ea4u)]
+	[DDLRegistration(0xbeb0349du)]
 	public int BuiltValueStackSize { get; set; } = 0;
 
-	[DDLRegistration(0xce7c9ea4u)]
+	[DDLRegistration(0x85b28bedu)]
 	public ulong AssetId64 { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xce7c9ea4u, "Event List")]
+	[DDLRegistration(0x6dff192du, "Event List")]
 	public Dictionary<string, ECMEvent?> Events { get; set; } = [];
 
 	public static EffectConduitMapping Create(DDLObject ddl) => new(ddl);

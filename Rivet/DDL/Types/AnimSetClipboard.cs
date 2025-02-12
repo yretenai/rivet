@@ -26,31 +26,31 @@ public class AnimSetClipboard : DDLObjectType, IDDLObjectType<AnimSetClipboard> 
 		AnimTriggers = ddl.GetObjects<AnimTriggerEventDef>(0x1b4a1e8du);
 	}
 
-	[DDLRegistration(0x8064fea3u)]
+	[DDLRegistration(0xdb9a291fu)]
 	public List<string?> AnimClipAssetPathArray { get; set; } = [];
 
-	[DDLRegistration(0x8064fea3u)]
+	[DDLRegistration(0xfd283164u)]
 	public List<AnimClipGroupDef?> AnimClipGroupArray { get; set; } = [];
 
-	[DDLRegistration(0x8064fea3u)]
+	[DDLRegistration(0xbcf76bc6u)]
 	public List<AnimClipGroupElemDef?> AnimClipGroupElemArray { get; set; } = [];
 
-	[DDLRegistration(0x8064fea3u)]
+	[DDLRegistration(0xc6c06e84u)]
 	public List<AnimClipGroupEntryDef?> AnimClipGroupEntryArray { get; set; } = [];
 
-	[DDLRegistration(0x8064fea3u)]
+	[DDLRegistration(0x6079439eu)]
 	public List<AnimDriverDef?> AnimDriverArray { get; set; } = [];
 
-	[DDLRegistration(0x8064fea3u)]
+	[DDLRegistration(0x1552f444u)]
 	public List<AnimDriverDef?> AnimDriverDataArray { get; set; } = [];
 
-	[DDLRegistration(0x8064fea3u)]
+	[DDLRegistration(0xef37e745u)]
 	public List<AnimSetCommentDef?> AnimSetComments { get; set; } = [];
 
-	[DDLRegistration(0x8064fea3u)]
+	[DDLRegistration(0x323e66d7u)]
 	public List<AnimTriggerTrack?> AnimTriggerTracks { get; set; } = [];
 
-	[DDLRegistration(0x8064fea3u)]
+	[DDLRegistration(0x1b4a1e8du)]
 	public List<AnimTriggerEventDef?> AnimTriggers { get; set; } = [];
 
 	public static AnimSetClipboard Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class AnimPartialChain : DDLObjectType, IDDLObjectType<AnimPartialChain> 
 		IncludeChildren = ddl.GetValue<bool>(0x451d5e83u, IncludeChildren);
 	}
 
-	[DDLRegistration(0x27e31ce7u, description: "For partial clips, only joints underneath this node are built into the clip.")]
+	[DDLRegistration(0xd1e19c8du, description: "For partial clips, only joints underneath this node are built into the clip.")]
 	public string? PartialRootName { get; set; } = default;
 
-	[DDLRegistration(0x27e31ce7u, description: "Controls how quickly the partial weights blend in underneath the specified partial root node.")]
+	[DDLRegistration(0xf910e4deu, description: "Controls how quickly the partial weights blend in underneath the specified partial root node.")]
 	public xcef7a1a6 PartialRamp { get; set; } = xcef7a1a6.PartialRampNone;
 
-	[DDLRegistration(0x27e31ce7u)]
+	[DDLRegistration(0x451d5e83u)]
 	public bool IncludeChildren { get; set; } = true;
 
 	public static AnimPartialChain Create(DDLObject ddl) => new(ddl);

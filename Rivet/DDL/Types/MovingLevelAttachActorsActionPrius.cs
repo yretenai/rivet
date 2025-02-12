@@ -20,13 +20,13 @@ public class MovingLevelAttachActorsActionPrius : DDLObjectType, IDDLObjectType<
 		UseEnd = ddl.GetValue<bool>(0xa12f42dbu, UseEnd);
 	}
 
-	[DDLRegistration(0x260fcb83u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MovingLevel;
 
-	[DDLRegistration(0x260fcb83u)]
+	[DDLRegistration(0x66b02424u)]
 	public bool UseStart { get; set; } = false;
 
-	[DDLRegistration(0x260fcb83u)]
+	[DDLRegistration(0xa12f42dbu)]
 	public bool UseEnd { get; set; } = false;
 
 	public static MovingLevelAttachActorsActionPrius Create(DDLObject ddl) => new(ddl);

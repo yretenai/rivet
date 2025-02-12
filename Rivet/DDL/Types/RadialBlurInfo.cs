@@ -20,13 +20,13 @@ public class RadialBlurInfo : DDLObjectType, IDDLObjectType<RadialBlurInfo> {
 		MaxRadius = ddl.GetValue<float>(0x870c19f7u, MaxRadius);
 	}
 
-	[DDLRegistration(0x6a9493cdu)]
+	[DDLRegistration(0xa9000da9u)]
 	public bool UseWorldPos { get; set; } = true;
 
-	[DDLRegistration(0x6a9493cdu)]
+	[DDLRegistration(0x50e7abb6u)]
 	public float MinRadius { get; set; } = 0.10f;
 
-	[DDLRegistration(0x6a9493cdu)]
+	[DDLRegistration(0x870c19f7u)]
 	public float MaxRadius { get; set; } = 1.00f;
 
 	public static RadialBlurInfo Create(DDLObject ddl) => new(ddl);

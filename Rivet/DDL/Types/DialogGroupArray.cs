@@ -19,10 +19,10 @@ public class DialogGroupArray : DDLObjectType, IDDLObjectType<DialogGroupArray> 
 		Lists = ddl.GetObjects<DialogListItem>(0x11755364u);
 	}
 
-	[DDLRegistration(0x6a58df5fu)]
+	[DDLRegistration(0xa0213181u)]
 	public xd3ac14c9 OrderType { get; set; } = xd3ac14c9.Random;
 
-	[DDLRegistration(0x6a58df5fu)]
+	[DDLRegistration(0x11755364u)]
 	public List<DialogListItem?> Lists { get; set; } = [];
 
 	public static DialogGroupArray Create(DDLObject ddl) => new(ddl);

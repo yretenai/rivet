@@ -18,7 +18,7 @@ public class TriggerResponderSelfEnableComponentPrius : TriggerResponderBasePriu
 		CompArray = ddl.GetObjects<TrigRespSelfEnableCompEntry>(0x4f7d929eu);
 	}
 
-	[DDLRegistration(0xc62b04b2u, "Component Info", "List of components to enable/disable on trigger.")]
+	[DDLRegistration(0x4f7d929eu, "Component Info", "List of components to enable/disable on trigger.")]
 	public List<TrigRespSelfEnableCompEntry?> CompArray { get; set; } = [];
 
 	public new static TriggerResponderSelfEnableComponentPrius Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class JobManagerAttackPrius : DDLObjectType, IDDLObjectType<JobManagerAtt
 		AttackCycleColdChance = ddl.GetValue<float>(0xc3c10713u, AttackCycleColdChance);
 	}
 
-	[DDLRegistration(0xff270f7cu)]
+	[DDLRegistration(0x885938c5u)]
 	public x53ecdc9c AttackJobPool { get; set; } = x53ecdc9c.None;
 
-	[DDLRegistration(0xff270f7cu)]
+	[DDLRegistration(0xcd45dc8bu)]
 	public uint ConfigModHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xff270f7cu)]
+	[DDLRegistration(0xe8b2f0d2u)]
 	public uint MaxAttackers { get; set; } = 0x00000002;
 
-	[DDLRegistration(0xff270f7cu, description: "Minimum amount of time before a quit job can be accepted")]
+	[DDLRegistration(0x43622aeau, description: "Minimum amount of time before a quit job can be accepted")]
 	public float JobRepostTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0xff270f7cu)]
+	[DDLRegistration(0x878e1b64u)]
 	public float AttackCycleHotTime { get; set; } = 6.00f;
 
-	[DDLRegistration(0xff270f7cu)]
+	[DDLRegistration(0xd4a3ec5fu)]
 	public uint AttackCycleHotMaxRepeat { get; set; } = 0x00000002;
 
-	[DDLRegistration(0xff270f7cu)]
+	[DDLRegistration(0xa9df9803u)]
 	public float AttackCycleColdTime { get; set; } = 6.00f;
 
-	[DDLRegistration(0xff270f7cu)]
+	[DDLRegistration(0xc3c10713u)]
 	public float AttackCycleColdChance { get; set; } = 0.50f;
 
 	public static JobManagerAttackPrius Create(DDLObject ddl) => new(ddl);

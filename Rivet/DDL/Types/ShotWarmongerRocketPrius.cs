@@ -18,7 +18,7 @@ public class ShotWarmongerRocketPrius : ExplosiveBulletPrius, IDDLObjectType<Sho
 		MicroRocketConfig = ddl.GetValue<RivetAssetId>(0x612a234eu, MicroRocketConfig);
 	}
 
-	[DDLRegistration(0x84c92817u)]
+	[DDLRegistration(0x612a234eu)]
 	public RivetAssetId MicroRocketConfig { get; set; } = default;
 
 	public new static ShotWarmongerRocketPrius Create(DDLObject ddl) => new(ddl);

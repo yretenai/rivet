@@ -19,10 +19,10 @@ public class PropAssetElement : DDLObjectType, IDDLObjectType<PropAssetElement> 
 		DeleteOnFinish = ddl.GetValue<bool>(0x5d50b392u, DeleteOnFinish);
 	}
 
-	[DDLRegistration(0x40b53d46u)]
+	[DDLRegistration(0x09b26d12u)]
 	public RivetAssetId PropAsset { get; set; } = default;
 
-	[DDLRegistration(0x40b53d46u)]
+	[DDLRegistration(0x5d50b392u)]
 	public bool DeleteOnFinish { get; set; } = true;
 
 	public static PropAssetElement Create(DDLObject ddl) => new(ddl);

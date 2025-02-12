@@ -21,16 +21,16 @@ public class DoorScriptActionPrius : DDLObjectType, IDDLObjectType<DoorScriptAct
 		OutputRequiresInput = ddl.GetValue<bool>(0x259bc085u, OutputRequiresInput);
 	}
 
-	[DDLRegistration(0x23b6c0d6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0x23b6c0d6u, "Max Open Triggers")]
+	[DDLRegistration(0x617d7f37u, "Max Open Triggers")]
 	public uint OpenTriggerMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x23b6c0d6u, "Max Close Triggers")]
+	[DDLRegistration(0x4af792c8u, "Max Close Triggers")]
 	public uint CloseTriggerMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x23b6c0d6u, "Output Requires Input", "Output signals will only fire if this script node received an input signal for it.")]
+	[DDLRegistration(0x259bc085u, "Output Requires Input", "Output signals will only fire if this script node received an input signal for it.")]
 	public bool OutputRequiresInput { get; set; } = false;
 
 	public static DoorScriptActionPrius Create(DDLObject ddl) => new(ddl);

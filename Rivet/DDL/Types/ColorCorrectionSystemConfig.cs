@@ -18,7 +18,7 @@ public class ColorCorrectionSystemConfig : ConfigBase, IDDLObjectType<ColorCorre
 		ColorCorrections = ddl.GetObjects<ColorCorrectionItem>(0xdf5b56b5u);
 	}
 
-	[DDLRegistration(0x880d8c0au)]
+	[DDLRegistration(0xdf5b56b5u)]
 	public List<ColorCorrectionItem?> ColorCorrections { get; set; } = [];
 
 	public new static ColorCorrectionSystemConfig Create(DDLObject ddl) => new(ddl);

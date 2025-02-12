@@ -49,100 +49,100 @@ public class UITutorialMessageActionPrius : DDLObjectType, IDDLObjectType<UITuto
 		PauseSubScreen = ddl.GetValue<uint>(0x8c6a4ff1u, PauseSubScreen);
 	}
 
-	[DDLRegistration(0x61715e38u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x61715e38u, "Temp Text", "Shows this text but will be stripped in final mode and show loc tag instead.")]
+	[DDLRegistration(0x99f2b59fu, "Temp Text", "Shows this text but will be stripped in final mode and show loc tag instead.")]
 	public string? TempText { get; set; } = default;
 
-	[DDLRegistration(0x61715e38u)]
+	[DDLRegistration(0x06f8b0e5u)]
 	public string? LocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x61715e38u)]
+	[DDLRegistration(0x500ae6a6u)]
 	public string? Header { get; set; } = "";
 
-	[DDLRegistration(0x61715e38u, description: "Use this list to chain messages together.  Single message field will be ignored")]
+	[DDLRegistration(0x1dcb4c5bu, description: "Use this list to chain messages together.  Single message field will be ignored")]
 	public List<QueuedMessage?> QueuedMessages { get; set; } = [];
 
-	[DDLRegistration(0x61715e38u, description: "Suppress other hud messages during tutorial")]
+	[DDLRegistration(0x63fbaf6bu, description: "Suppress other hud messages during tutorial")]
 	public bool DisableOtherMessages { get; set; } = true;
 
-	[DDLRegistration(0x61715e38u)]
+	[DDLRegistration(0xc56e3adau)]
 	public x8693007e MessageType { get; set; } = x8693007e.HelpCentered;
 
-	[DDLRegistration(0x61715e38u, description: "-1 means infinite until explicitly cleared")]
+	[DDLRegistration(0x7c5e3db0u, description: "-1 means infinite until explicitly cleared")]
 	public float Duration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x61715e38u, description: "If no duration is specified, message will appear for at least the minimum duration, unless manually cleared.")]
+	[DDLRegistration(0x356ada74u, description: "If no duration is specified, message will appear for at least the minimum duration, unless manually cleared.")]
 	public float MinimumDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61715e38u, description: "Delay to show confirmation prompt for confirmation type messages")]
+	[DDLRegistration(0xb0aef304u, description: "Delay to show confirmation prompt for confirmation type messages")]
 	public float ConfirmationDelay { get; set; } = 2.00f;
 
-	[DDLRegistration(0x61715e38u, description: "Disable message auto clearing - must be cleared manually")]
+	[DDLRegistration(0x9c3653d6u, description: "Disable message auto clearing - must be cleared manually")]
 	public bool DisableMessageClear { get; set; } = false;
 
-	[DDLRegistration(0x61715e38u, description: "If this is Checked, skip showing Tutorial Messages in Challege Mode and just signal OnSkipped and OnClear immediately")]
+	[DDLRegistration(0x65d92dfcu, description: "If this is Checked, skip showing Tutorial Messages in Challege Mode and just signal OnSkipped and OnClear immediately")]
 	public bool SkipInChallengeMode { get; set; } = true;
 
-	[DDLRegistration(0x61715e38u, "Input Type", "Choose the method of specifying input")]
+	[DDLRegistration(0x00622a1cu, "Input Type", "Choose the method of specifying input")]
 	public xb7095bb8 ButtonInputType { get; set; } = xb7095bb8.Button;
 
-	[DDLRegistration(0x61715e38u, description: "Listen for control action - *Only the first control will be listened for currently*")]
+	[DDLRegistration(0x04a292d7u, description: "Listen for control action - *Only the first control will be listened for currently*")]
 	public List<UITutorialAction?> Actions { get; set; } = [];
 
-	[DDLRegistration(0x61715e38u, description: "Listen for these button presses at once to clear message")]
+	[DDLRegistration(0x42b6e68eu, description: "Listen for these button presses at once to clear message")]
 	public List<xe50c3252> Buttons { get; set; } = [];
 
-	[DDLRegistration(0x61715e38u, "Trigger on All Buttons", "Should we check all the buttons (true) or any button (false)?  Uncheck this for Stick X/Y.")]
+	[DDLRegistration(0xd0defc45u, "Trigger on All Buttons", "Should we check all the buttons (true) or any button (false)?  Uncheck this for Stick X/Y.")]
 	public bool TriggerOnAllButtons { get; set; } = true;
 
-	[DDLRegistration(0x61715e38u, "Trigger on Button Hold Time", "Trigger when the button(s) are held for this long.  Nonzero time overrides Trigger on Button Held and InputPassThroughHoldTime.")]
+	[DDLRegistration(0xf621e570u, "Trigger on Button Hold Time", "Trigger when the button(s) are held for this long.  Nonzero time overrides Trigger on Button Held and InputPassThroughHoldTime.")]
 	public float TriggerOnHoldTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61715e38u, "Trigger on Button Held", "Trigger when the button(s) are held(true), or when the button is pressed (false)")]
+	[DDLRegistration(0x0a4a100cu, "Trigger on Button Held", "Trigger when the button(s) are held(true), or when the button is pressed (false)")]
 	public bool TriggerOnHeld { get; set; } = true;
 
-	[DDLRegistration(0x61715e38u, description: "Pass input through to the game")]
+	[DDLRegistration(0xc9d3d9d2u, description: "Pass input through to the game")]
 	public bool InputPassThrough { get; set; } = true;
 
-	[DDLRegistration(0x61715e38u, description: "Pass button hold time through to the game")]
+	[DDLRegistration(0x702cc043u, description: "Pass button hold time through to the game")]
 	public float InputPassThroughHoldTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61715e38u, description: "Some multi-button controls may need to be sent individually")]
+	[DDLRegistration(0x9cccaff8u, description: "Some multi-button controls may need to be sent individually")]
 	public bool SendButtonsIndividally { get; set; } = false;
 
-	[DDLRegistration(0x61715e38u, description: "When waiting for a button press, disable hero buttoncache")]
+	[DDLRegistration(0x237b9813u, description: "When waiting for a button press, disable hero buttoncache")]
 	public bool LockHeroMoves { get; set; } = true;
 
-	[DDLRegistration(0x61715e38u, description: "Lock hero moves and abilities regardless of input")]
+	[DDLRegistration(0x589f01a8u, description: "Lock hero moves and abilities regardless of input")]
 	public bool LockHeroMoveAbility { get; set; } = false;
 
-	[DDLRegistration(0x61715e38u, "Slomo Timescale", "Global time scale during tutorial.  0.0 means pause completely")]
+	[DDLRegistration(0x18e8c05cu, "Slomo Timescale", "Global time scale during tutorial.  0.0 means pause completely")]
 	public float SlomoTimescale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x61715e38u, "Slomo Delay", "Delay time before slomo begins")]
+	[DDLRegistration(0x30e4005bu, "Slomo Delay", "Delay time before slomo begins")]
 	public float SlomoDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61715e38u, "Slomo Time In", "Ramp time into slomo")]
+	[DDLRegistration(0xf05636f3u, "Slomo Time In", "Ramp time into slomo")]
 	public float SlomoTimeIn { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61715e38u, "Slomo Time Out", "Ramp time out of slomo")]
+	[DDLRegistration(0xde97f79du, "Slomo Time Out", "Ramp time out of slomo")]
 	public float SlomoTimeOut { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61715e38u, "Force Pause Delay", "Time will pause after this time, overriding other slomo timers")]
+	[DDLRegistration(0xec2eb46fu, "Force Pause Delay", "Time will pause after this time, overriding other slomo timers")]
 	public float ForcePauseDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61715e38u, "Slomo End Delay", "Slomo will end after this time, overriding other slomo timers")]
+	[DDLRegistration(0xe26cd860u, "Slomo End Delay", "Slomo will end after this time, overriding other slomo timers")]
 	public float SlomoEndDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61715e38u, description: "Should we change the default pause page that comes up")]
+	[DDLRegistration(0xfd83c222u, description: "Should we change the default pause page that comes up")]
 	public bool ChangePausePage { get; set; } = false;
 
-	[DDLRegistration(0x61715e38u)]
+	[DDLRegistration(0x0e1b6b84u)]
 	public PauseTabs PauseScreen { get; set; } = PauseTabs.Map;
 
-	[DDLRegistration(0x61715e38u)]
+	[DDLRegistration(0x8c6a4ff1u)]
 	public uint PauseSubScreen { get; set; } = 0x00000000;
 
 	public static UITutorialMessageActionPrius Create(DDLObject ddl) => new(ddl);

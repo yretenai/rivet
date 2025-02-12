@@ -28,37 +28,37 @@ public class HeroSlingshotConfig : HeroHookshotConfig, IDDLObjectType<HeroSlings
 		FlightCameraLeftOffset = ddl.GetValue<float>(0x0833a196u, FlightCameraLeftOffset);
 	}
 
-	[DDLRegistration(0xaaa1008au)]
+	[DDLRegistration(0xcfb47918u)]
 	public HeroSlingshotSpinData? StandardSpin { get; set; } = default;
 
-	[DDLRegistration(0xaaa1008au)]
+	[DDLRegistration(0x8e46b9d5u)]
 	public HeroSlingshotSpinData? TraversalChainSpin { get; set; } = default;
 
-	[DDLRegistration(0xaaa1008au)]
+	[DDLRegistration(0x88529592u)]
 	public float MinRotationSpeed { get; set; } = 720.00f;
 
-	[DDLRegistration(0xaaa1008au)]
+	[DDLRegistration(0xd9ab2ecfu)]
 	public float MaxRotationSpeed { get; set; } = 2160.00f;
 
-	[DDLRegistration(0xaaa1008au)]
+	[DDLRegistration(0x7555c1c4u)]
 	public float TimeToReachMaxRotationSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0xaaa1008au)]
+	[DDLRegistration(0xf1aa8894u)]
 	public float FlightStartSpeed { get; set; } = 23.00f;
 
-	[DDLRegistration(0xaaa1008au)]
+	[DDLRegistration(0xe18abcb4u)]
 	public float FlightEndSpeed { get; set; } = 18.00f;
 
-	[DDLRegistration(0xaaa1008au)]
+	[DDLRegistration(0x2071b5eau)]
 	public float FlightDecel { get; set; } = 0.50f;
 
-	[DDLRegistration(0xaaa1008au)]
+	[DDLRegistration(0xc44c43a4u)]
 	public float FlightFlailDuration { get; set; } = 2.25f;
 
-	[DDLRegistration(0xaaa1008au)]
+	[DDLRegistration(0xc2411d55u)]
 	public float FlightCameraDistance { get; set; } = 8.00f;
 
-	[DDLRegistration(0xaaa1008au)]
+	[DDLRegistration(0x0833a196u)]
 	public float FlightCameraLeftOffset { get; set; } = 2.00f;
 
 	public new static HeroSlingshotConfig Create(DDLObject ddl) => new(ddl);

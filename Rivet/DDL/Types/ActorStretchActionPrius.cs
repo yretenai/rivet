@@ -22,19 +22,19 @@ public class ActorStretchActionPrius : DDLObjectType, IDDLObjectType<ActorStretc
 		StretchDirection = ddl.GetEnum<x726217e6>(0xb9185f9cu, x726217e6Values.Lookup);
 	}
 
-	[DDLRegistration(0xc6295eb6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0xc6295eb6u, description: "If false, just does the positioning once, if the actors are moving, setting this to true will update every frame")]
+	[DDLRegistration(0x0678540du, description: "If false, just does the positioning once, if the actors are moving, setting this to true will update every frame")]
 	public bool ContinuousMode { get; set; } = false;
 
-	[DDLRegistration(0xc6295eb6u, description: "If true, scale takes the object size (from bounds) into account, false means set the scale exactly to the distance between the objects, regardless of the objects size.")]
+	[DDLRegistration(0x988cb041u, description: "If true, scale takes the object size (from bounds) into account, false means set the scale exactly to the distance between the objects, regardless of the objects size.")]
 	public bool UseBoundsSize { get; set; } = true;
 
-	[DDLRegistration(0xc6295eb6u, description: "Whether the stretch actor has the pivot at the center of the object or the end of the object")]
+	[DDLRegistration(0x58f5eb2du, description: "Whether the stretch actor has the pivot at the center of the object or the end of the object")]
 	public xfa97354e OriginMode { get; set; } = xfa97354e.PivotCentered;
 
-	[DDLRegistration(0xc6295eb6u)]
+	[DDLRegistration(0xb9185f9cu)]
 	public x726217e6 StretchDirection { get; set; } = x726217e6.ZAxis;
 
 	public static ActorStretchActionPrius Create(DDLObject ddl) => new(ddl);

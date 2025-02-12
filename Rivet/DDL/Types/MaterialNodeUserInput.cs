@@ -26,31 +26,31 @@ public class MaterialNodeUserInput : DDLObjectType, IDDLObjectType<MaterialNodeU
 		Labels = ddl.GetString(0x8ba94c76) ?? Labels;
 	}
 
-	[DDLRegistration(0x52ade257u)]
+	[DDLRegistration(0x8a514a8du)]
 	public string? Id { get; set; } = default;
 
-	[DDLRegistration(0x52ade257u)]
+	[DDLRegistration(0x04df0281u)]
 	public string? Values { get; set; } = default;
 
-	[DDLRegistration(0x52ade257u)]
+	[DDLRegistration(0xee16155au)]
 	public string? Minimums { get; set; } = default;
 
-	[DDLRegistration(0x52ade257u)]
+	[DDLRegistration(0x0876babbu)]
 	public string? Maximums { get; set; } = default;
 
-	[DDLRegistration(0x52ade257u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x52ade257u)]
+	[DDLRegistration(0x74938804u)]
 	public string? Group { get; set; } = default;
 
-	[DDLRegistration(0x52ade257u)]
+	[DDLRegistration(0xbd9f03f1u)]
 	public string? SortOrder { get; set; } = default;
 
-	[DDLRegistration(0x52ade257u)]
+	[DDLRegistration(0xaa160e78u)]
 	public string? SubGraphAncestors { get; set; } = default;
 
-	[DDLRegistration(0x52ade257u)]
+	[DDLRegistration(0x8ba94c76u)]
 	public string? Labels { get; set; } = default;
 
 	public static MaterialNodeUserInput Create(DDLObject ddl) => new(ddl);

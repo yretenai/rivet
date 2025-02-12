@@ -18,7 +18,7 @@ public class DimensionalPulseTargetFlockFleeEvent : EventBase, IDDLObjectType<Di
 		OverrideFleeReactionTime = ddl.GetValue<float>(0x51364fe2u, OverrideFleeReactionTime);
 	}
 
-	[DDLRegistration(0xf41bb270u)]
+	[DDLRegistration(0x51364fe2u)]
 	public float OverrideFleeReactionTime { get; set; } = -1.00f;
 
 	public new static DimensionalPulseTargetFlockFleeEvent Create(DDLObject ddl) => new(ddl);

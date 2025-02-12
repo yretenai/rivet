@@ -25,28 +25,28 @@ public class VanityOverrideEvent : EventBase, IDDLObjectType<VanityOverrideEvent
 		GloveOverrideReset = ddl.GetValue<bool>(0x5fc65671u, GloveOverrideReset);
 	}
 
-	[DDLRegistration(0x36d54690u, "Helmet Override")]
+	[DDLRegistration(0x537019f1u, "Helmet Override")]
 	public RivetAssetId HelmetModel { get; set; } = default;
 
-	[DDLRegistration(0x36d54690u, "Head Override")]
+	[DDLRegistration(0x7596a61cu, "Head Override")]
 	public RivetAssetId HeadModel { get; set; } = default;
 
-	[DDLRegistration(0x36d54690u, "Torso Override")]
+	[DDLRegistration(0x5ee516ccu, "Torso Override")]
 	public RivetAssetId TorsoModel { get; set; } = default;
 
-	[DDLRegistration(0x36d54690u, "Left Glove Override")]
+	[DDLRegistration(0x778e1af5u, "Left Glove Override")]
 	public RivetAssetId LeftGloveModel { get; set; } = default;
 
-	[DDLRegistration(0x36d54690u, "Right Glove Override")]
+	[DDLRegistration(0x834122f9u, "Right Glove Override")]
 	public RivetAssetId RightGloveModel { get; set; } = default;
 
-	[DDLRegistration(0x36d54690u, "Legs Override")]
+	[DDLRegistration(0x5579f009u, "Legs Override")]
 	public RivetAssetId LegsModel { get; set; } = default;
 
-	[DDLRegistration(0x36d54690u, "Boots Override")]
+	[DDLRegistration(0x22583ff7u, "Boots Override")]
 	public RivetAssetId BootsModel { get; set; } = default;
 
-	[DDLRegistration(0x36d54690u)]
+	[DDLRegistration(0x5fc65671u)]
 	public bool GloveOverrideReset { get; set; } = false;
 
 	public new static VanityOverrideEvent Create(DDLObject ddl) => new(ddl);

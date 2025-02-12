@@ -21,16 +21,16 @@ public class TranslucentShadowDef : DDLObjectType, IDDLObjectType<TranslucentSha
 		OrientToLight = ddl.GetValue<bool>(0x33d2e207u, OrientToLight);
 	}
 
-	[DDLRegistration(0x2e14c23du, "Gobo Asset", "The texture or material asset that defines how light is tinted when it passes through the volume")]
+	[DDLRegistration(0xb5fab7deu, "Gobo Asset", "The texture or material asset that defines how light is tinted when it passes through the volume")]
 	public RivetAssetId GoboAsset { get; set; } = default;
 
-	[DDLRegistration(0x2e14c23du, "Ramp In Distance", "The ramp in distance (in meters) for the tinting effect to reach full strength. This can smooth out artifacts right at the edge of the volume")]
+	[DDLRegistration(0x659092a7u, "Ramp In Distance", "The ramp in distance (in meters) for the tinting effect to reach full strength. This can smooth out artifacts right at the edge of the volume")]
 	public float RampInDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2e14c23du, "Fade Out Distance", "The effect fades out and disappears when it is more than this many meters from the camera (0 = no fade out)")]
+	[DDLRegistration(0xa3cc9166u, "Fade Out Distance", "The effect fades out and disappears when it is more than this many meters from the camera (0 = no fade out)")]
 	public float FadeOutDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2e14c23du, "Orient To Light", "If checked, the volume will orient itself to face each light source. This can be useful when simulating light passing through a thick medium like smoke")]
+	[DDLRegistration(0x33d2e207u, "Orient To Light", "If checked, the volume will orient itself to face each light source. This can be useful when simulating light passing through a thick medium like smoke")]
 	public bool OrientToLight { get; set; } = false;
 
 	public static TranslucentShadowDef Create(DDLObject ddl) => new(ddl);

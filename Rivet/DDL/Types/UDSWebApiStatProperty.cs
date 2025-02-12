@@ -20,13 +20,13 @@ public class UDSWebApiStatProperty : DDLObjectType, IDDLObjectType<UDSWebApiStat
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0x26b380d4u)]
+	[DDLRegistration(0x9bf6e481u)]
 	public string? Path { get; set; } = default;
 
-	[DDLRegistration(0x26b380d4u)]
+	[DDLRegistration(0xa5dbf91au)]
 	public string? Comparator { get; set; } = default;
 
-	[DDLRegistration(0x26b380d4u)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
 	public static UDSWebApiStatProperty Create(DDLObject ddl) => new(ddl);

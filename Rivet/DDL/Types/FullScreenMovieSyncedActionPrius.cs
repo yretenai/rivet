@@ -22,19 +22,19 @@ public class FullScreenMovieSyncedActionPrius : DDLObjectType, IDDLObjectType<Fu
 		FadeAudio = ddl.GetValue<bool>(0x6f92cb3au, FadeAudio);
 	}
 
-	[DDLRegistration(0xeff9d16cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Cinematic;
 
-	[DDLRegistration(0xeff9d16cu, "Movie File", "Movie File to play full screen")]
+	[DDLRegistration(0x3c6b5acau, "Movie File", "Movie File to play full screen")]
 	public RivetAssetId MovieFile { get; set; } = default;
 
-	[DDLRegistration(0xeff9d16cu, "Subtitle Config", "Config File for subtitles")]
+	[DDLRegistration(0x8437e2b0u, "Subtitle Config", "Config File for subtitles")]
 	public RivetAssetId SubtitleConfig { get; set; } = default;
 
-	[DDLRegistration(0xeff9d16cu, "Pause Game", "Pause the game while the movie is playing")]
+	[DDLRegistration(0x487fd122u, "Pause Game", "Pause the game while the movie is playing")]
 	public bool PauseGame { get; set; } = true;
 
-	[DDLRegistration(0xeff9d16cu, "Fade Audio", "Fade out game audio while the movie is playing")]
+	[DDLRegistration(0x6f92cb3au, "Fade Audio", "Fade out game audio while the movie is playing")]
 	public bool FadeAudio { get; set; } = true;
 
 	public static FullScreenMovieSyncedActionPrius Create(DDLObject ddl) => new(ddl);

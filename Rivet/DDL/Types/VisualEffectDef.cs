@@ -56,121 +56,121 @@ public class VisualEffectDef : DDLObjectType, IDDLObjectType<VisualEffectDef> {
 		WindMultiplier = ddl.GetValue<float>(0xac04d901u, WindMultiplier);
 	}
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x5e53ae29u)]
 	public RivetAssetId PreviewModel { get; set; } = default;
 
-	[DDLRegistration(0xf09aaa72u, "Show Preview Model")]
+	[DDLRegistration(0x355df427u, "Show Preview Model")]
 	public bool ShowPreviewModel { get; set; } = true;
 
-	[DDLRegistration(0xf09aaa72u, "Pre-Simulation")]
+	[DDLRegistration(0x0406d05fu, "Pre-Simulation")]
 	public VisualEffectPreSim? PreSimulation { get; set; } = default;
 
-	[DDLRegistration(0xf09aaa72u, "Update Time Scale")]
+	[DDLRegistration(0xb6e39f59u, "Update Time Scale")]
 	public VisualEffectUpdateTimeScale? UpdateTimeScale { get; set; } = default;
 
-	[DDLRegistration(0xf09aaa72u, "Performance Attributes")]
+	[DDLRegistration(0x970ce4adu, "Performance Attributes")]
 	public VisualEffectPerformanceAttr? PerfAttributes { get; set; } = default;
 
-	[DDLRegistration(0xf09aaa72u, "Unlit Lighting Controls")]
+	[DDLRegistration(0xc74aaafau, "Unlit Lighting Controls")]
 	public VisualEffectLumAttr? LuminanceAttributes { get; set; } = default;
 
-	[DDLRegistration(0xf09aaa72u, "Camera Attributes")]
+	[DDLRegistration(0xaa632291u, "Camera Attributes")]
 	public VisualEffectCamGlobalAttr? CameraAttributes { get; set; } = default;
 
-	[DDLRegistration(0xf09aaa72u, "Sort Distance Bias")]
+	[DDLRegistration(0x4fa1d0a7u, "Sort Distance Bias")]
 	public float SortDistanceBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf09aaa72u, "Lighting Conditions")]
+	[DDLRegistration(0xfda14c35u, "Lighting Conditions")]
 	public LightingConditionBitSet? LightingConditions { get; set; } = default;
 
-	[DDLRegistration(0xf09aaa72u, "Rendering Order")]
+	[DDLRegistration(0xda75b44fu, "Rendering Order")]
 	public List<VisualEffectRenderOrder?> RenderOrder { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x7bf595b0u)]
 	public List<string?> PreviewNames { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u, description: "This is used exclusively by the builder to discard EditorOnly nodes")]
+	[DDLRegistration(0x9dbbff92u, description: "This is used exclusively by the builder to discard EditorOnly nodes")]
 	public bool CullEditorOnlyNodes { get; set; } = false;
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0xb22388b9u)]
 	public bool OverrideLightingCondition { get; set; } = false;
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0xc9a541b9u)]
 	public List<VisualEffectSharedAssetNode?> SharedAssets { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x19ea89b9u)]
 	public List<VisualEffectMaterialNode?> Materials { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0xce157717u)]
 	public List<VisualEffectGroupNode?> Groups { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0xb56a23a7u)]
 	public List<VisualEffectKeyFrameModifierNode?> KeyFrameModifiers { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x13398253u)]
 	public List<VisualEffectKeyFrameNode?> KeyFrames { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x719ff452u)]
 	public List<VisualEffectMinMaxNode?> MinMaxs { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0xa5da43f9u)]
 	public List<VisualEffectFloatNode?> Floats { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x29a52fbdu)]
 	public List<VisualEffectPerfAttrOverrideNode?> PerfAttrOverrides { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0xf750bcf5u)]
 	public List<VisualEffectLightAttrNode?> LightAttrs { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x146e89a9u)]
 	public List<VisualEffectLumAttrNode?> LumAttrs { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x5edf23d8u)]
 	public List<VisualEffectCamAttrNode?> CamAttrs { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x7dd88e64u)]
 	public List<VisualEffectLensFlareNode?> LensFlares { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x6828fce6u)]
 	public List<VisualEffectTransformNode?> Transforms { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0xa59f2b5au)]
 	public List<VisualEffectCommentNode?> Comments { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x3d8d7075u)]
 	public List<VisualEffectPostRenderNode?> PostRenders { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0xb0a4fc8cu)]
 	public List<VisualEffectEmitterNode?> Emitters { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0xb71778ecu)]
 	public List<VisualEffectRenderNode?> Renders { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x41e235ebu)]
 	public List<VisualEffectSpawnStyleNode?> SpawnStyles { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x763260ffu)]
 	public List<VisualEffectPhysicsParamNode?> PhysicsParams { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u)]
+	[DDLRegistration(0x7b6447adu)]
 	public List<VisualEffectOnCollisionNode?> OnCollisions { get; set; } = [];
 
-	[DDLRegistration(0xf09aaa72u, "Instance Color")]
+	[DDLRegistration(0x1e992bc4u, "Instance Color")]
 	public DDLVector3? Tint { get; set; } = default;
 
-	[DDLRegistration(0xf09aaa72u, description: "Used to deactivate the visual effect instance in the distance and bring it back to life when nearby")]
+	[DDLRegistration(0x6f8e6b06u, description: "Used to deactivate the visual effect instance in the distance and bring it back to life when nearby")]
 	public bool Hibernate { get; set; } = false;
 
-	[DDLRegistration(0xf09aaa72u, "Alpha")]
+	[DDLRegistration(0xc9b3f5abu, "Alpha")]
 	public float Alpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf09aaa72u, "Wind Multiplier")]
+	[DDLRegistration(0xac04d901u, "Wind Multiplier")]
 	public float WindMultiplier { get; set; } = 1.00f;
 
 	public static VisualEffectDef Create(DDLObject ddl) => new(ddl);

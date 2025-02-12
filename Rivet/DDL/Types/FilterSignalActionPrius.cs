@@ -20,13 +20,13 @@ public class FilterSignalActionPrius : DDLObjectType, IDDLObjectType<FilterSigna
 		FilterTime = ddl.GetValue<float>(0xbe2ff16au, FilterTime);
 	}
 
-	[DDLRegistration(0xbddd3e0fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
-	[DDLRegistration(0xbddd3e0fu)]
+	[DDLRegistration(0x535da55au)]
 	public xb1e939f4 FilterBehavior { get; set; } = xb1e939f4.FilterByTime;
 
-	[DDLRegistration(0xbddd3e0fu, "Filter Period", "Don't allow a signal to pass through through more than once per this period. If 'Filter By Frame' is checked, this value is ignored.")]
+	[DDLRegistration(0xbe2ff16au, "Filter Period", "Don't allow a signal to pass through through more than once per this period. If 'Filter By Frame' is checked, this value is ignored.")]
 	public float FilterTime { get; set; } = 1.00f;
 
 	public static FilterSignalActionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PrimCollisionAreaData : DDLObjectType, IDDLObjectType<PrimCollision
 		PrimStyle = ddl.GetObject<PrimStyleBase>(0xe438ab5bu);
 	}
 
-	[DDLRegistration(0x47977b12u)]
+	[DDLRegistration(0xe438ab5bu)]
 	public PrimStyleBase? PrimStyle { get; set; } = default;
 
 	public static PrimCollisionAreaData Create(DDLObject ddl) => new(ddl);

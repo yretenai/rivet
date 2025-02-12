@@ -20,13 +20,13 @@ public class AASettingsDef : DDLObjectType, IDDLObjectType<AASettingsDef> {
 		TemporalSharpenStrength = ddl.GetValue<float>(0xe66499cau, TemporalSharpenStrength);
 	}
 
-	[DDLRegistration(0xaee99851u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0xaee99851u)]
+	[DDLRegistration(0x965a5111u)]
 	public float TemporalBlendStrength { get; set; } = 0.04f;
 
-	[DDLRegistration(0xaee99851u)]
+	[DDLRegistration(0xe66499cau)]
 	public float TemporalSharpenStrength { get; set; } = 1.00f;
 
 	public static AASettingsDef Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class BossBotNefariousFinalePrius : BotPrius, IDDLObjectType<BossBotNefar
 		DamageStates_Arm_RT = ddl.GetValue<RivetAssetId>(0xf1485c06u, DamageStates_Arm_RT);
 	}
 
-	[DDLRegistration(0x3a9c2ad0u)]
+	[DDLRegistration(0x6a3ad847u)]
 	public bool AllowCelebrates { get; set; } = true;
 
-	[DDLRegistration(0x3a9c2ad0u)]
+	[DDLRegistration(0x5d8cb773u)]
 	public HoverShuffleData? HoverShuffleData { get; set; } = default;
 
-	[DDLRegistration(0x3a9c2ad0u)]
+	[DDLRegistration(0xafd04b08u)]
 	public bool UseFirepointFacingForShuffle { get; set; } = false;
 
-	[DDLRegistration(0x3a9c2ad0u)]
+	[DDLRegistration(0x4fbfd7c8u)]
 	public RivetAssetId EmpNefariousPilotAsset { get; set; } = default;
 
-	[DDLRegistration(0x3a9c2ad0u)]
+	[DDLRegistration(0xf33c549au)]
 	public RivetAssetId DocNefariousPilotAsset { get; set; } = default;
 
-	[DDLRegistration(0x3a9c2ad0u, description: "Type: Damage State Manager Config")]
+	[DDLRegistration(0xff454979u, description: "Type: Damage State Manager Config")]
 	public RivetAssetId DamageStates_Eye_LF { get; set; } = default;
 
-	[DDLRegistration(0x3a9c2ad0u, description: "Type: Damage State Manager Config")]
+	[DDLRegistration(0xd8bd07eeu, description: "Type: Damage State Manager Config")]
 	public RivetAssetId DamageStates_Eye_RT { get; set; } = default;
 
-	[DDLRegistration(0x3a9c2ad0u, description: "Type: Damage State Manager Config")]
+	[DDLRegistration(0xd6b01291u, description: "Type: Damage State Manager Config")]
 	public RivetAssetId DamageStates_Arm_LF { get; set; } = default;
 
-	[DDLRegistration(0x3a9c2ad0u, description: "Type: Damage State Manager Config")]
+	[DDLRegistration(0xf1485c06u, description: "Type: Damage State Manager Config")]
 	public RivetAssetId DamageStates_Arm_RT { get; set; } = default;
 
 	public new static BossBotNefariousFinalePrius Create(DDLObject ddl) => new(ddl);

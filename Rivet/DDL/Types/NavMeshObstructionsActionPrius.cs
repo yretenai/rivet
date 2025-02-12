@@ -19,10 +19,10 @@ public class NavMeshObstructionsActionPrius : DDLObjectType, IDDLObjectType<NavM
 		ZoneOptional = ddl.GetValue<RivetAssetId>(0x6d7a29c7u, ZoneOptional);
 	}
 
-	[DDLRegistration(0x1f0dc2d8u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x1f0dc2d8u, description: "The zone in question to check (if blank, it uses the zone the script is in).")]
+	[DDLRegistration(0x6d7a29c7u, description: "The zone in question to check (if blank, it uses the zone the script is in).")]
 	public RivetAssetId ZoneOptional { get; set; } = default;
 
 	public static NavMeshObstructionsActionPrius Create(DDLObject ddl) => new(ddl);

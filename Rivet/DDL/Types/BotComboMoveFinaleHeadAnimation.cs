@@ -23,22 +23,22 @@ public class BotComboMoveFinaleHeadAnimation : BotComboMoveBase, IDDLObjectType<
 		RemainAfterAttack = ddl.GetValue<bool>(0xe09d2afcu, RemainAfterAttack);
 	}
 
-	[DDLRegistration(0xa764b97bu)]
+	[DDLRegistration(0xfec29c86u)]
 	public RivetAssetId PortalActorAsset { get; set; } = default;
 
-	[DDLRegistration(0xa764b97bu)]
+	[DDLRegistration(0x7e95e9fau)]
 	public RivetAssetId HeadActorAsset { get; set; } = default;
 
-	[DDLRegistration(0xa764b97bu)]
+	[DDLRegistration(0x53f23acbu)]
 	public RivetAssetId HeadActorVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa764b97bu)]
+	[DDLRegistration(0xa37bf657u)]
 	public RivetAssetId LookAtActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa764b97bu)]
+	[DDLRegistration(0x10f54dceu)]
 	public string? AnimDriver { get; set; } = default;
 
-	[DDLRegistration(0xa764b97bu)]
+	[DDLRegistration(0xe09d2afcu)]
 	public bool RemainAfterAttack { get; set; } = false;
 
 	public new static BotComboMoveFinaleHeadAnimation Create(DDLObject ddl) => new(ddl);

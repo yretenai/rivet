@@ -21,16 +21,16 @@ public class ItemPrius : DDLObjectType, IDDLObjectType<ItemPrius> {
 		ItemId = ddl.GetValue<ushort>(0x8b80f916u, ItemId);
 	}
 
-	[DDLRegistration(0xf4ada6b7u)]
+	[DDLRegistration(0xdb22bf34u)]
 	public ulong ItemGuid { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xf4ada6b7u)]
+	[DDLRegistration(0x7fe3f0eau)]
 	public RivetAssetId ItemConfigHash { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf4ada6b7u)]
+	[DDLRegistration(0x53f0c08au)]
 	public uint ItemCount { get; set; } = 0x00000001;
 
-	[DDLRegistration(0xf4ada6b7u)]
+	[DDLRegistration(0x8b80f916u)]
 	public ushort ItemId { get; set; } = 0x0000;
 
 	public static ItemPrius Create(DDLObject ddl) => new(ddl);

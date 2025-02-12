@@ -19,10 +19,10 @@ public class ObjSysSaveDataShared : DDLObjectType, IDDLObjectType<ObjSysSaveData
 		PrimaryObjective = ddl.GetObject<ActiveObjective>(0x75d0a0f3u);
 	}
 
-	[DDLRegistration(0x83983f42u)]
+	[DDLRegistration(0xfd5bea83u)]
 	public List<ulong> RequestedGraphs { get; set; } = [];
 
-	[DDLRegistration(0x83983f42u)]
+	[DDLRegistration(0x75d0a0f3u)]
 	public ActiveObjective? PrimaryObjective { get; set; } = default;
 
 	public static ObjSysSaveDataShared Create(DDLObject ddl) => new(ddl);

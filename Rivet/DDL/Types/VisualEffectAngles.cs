@@ -20,13 +20,13 @@ public class VisualEffectAngles : DDLObjectType, IDDLObjectType<VisualEffectAngl
 		Yaw = ddl.GetValue<float>(0x3cb31d7du, Yaw);
 	}
 
-	[DDLRegistration(0x1cadd810u)]
+	[DDLRegistration(0x1e25f27eu)]
 	public float Roll { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1cadd810u)]
+	[DDLRegistration(0x3ecc7218u)]
 	public float Pitch { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1cadd810u)]
+	[DDLRegistration(0x3cb31d7du)]
 	public float Yaw { get; set; } = 0.00f;
 
 	public static VisualEffectAngles Create(DDLObject ddl) => new(ddl);

@@ -34,55 +34,55 @@ public class Cinematic2WindActionDef : DDLObjectType, IDDLObjectType<Cinematic2W
 		AttachmentPoint = ddl.GetObject<Cinematic2AttachmentDef>(0xd0d96889u);
 	}
 
-	[DDLRegistration(0x68a9a9e1u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x68a9a9e1u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x68a9a9e1u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x68a9a9e1u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Ramp-up duration of wind influence.")]
+	[DDLRegistration(0x79b8635cu, description: "Ramp-up duration of wind influence.")]
 	public float Attack { get; set; } = 0.12f;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Ramp-down duration of wind influence.")]
+	[DDLRegistration(0xa0950b67u, description: "Ramp-down duration of wind influence.")]
 	public float Decay { get; set; } = 0.40f;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Speed (meter/sec) of the wind force.")]
+	[DDLRegistration(0x16753237u, description: "Speed (meter/sec) of the wind force.")]
 	public float Speed { get; set; } = 50.00f;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Drag co-efficient of the wind force.")]
+	[DDLRegistration(0x5dd56ddbu, description: "Drag co-efficient of the wind force.")]
 	public float Drag { get; set; } = 5.00f;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Max radial distance (meters) from wind force line to apply wind (Cylinder, Sphere).")]
+	[DDLRegistration(0x0504203du, description: "Max radial distance (meters) from wind force line to apply wind (Cylinder, Sphere).")]
 	public float Radius { get; set; } = 10.00f;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Max distance (meters) from the wind source position to apply wind (Cylinder).")]
+	[DDLRegistration(0xcb35ab68u, description: "Max distance (meters) from the wind source position to apply wind (Cylinder).")]
 	public float Height { get; set; } = 10.00f;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Radial distance falloff co-efficient (Cylinder, Sphere).")]
+	[DDLRegistration(0x454d6db6u, description: "Radial distance falloff co-efficient (Cylinder, Sphere).")]
 	public float RadialFalloff { get; set; } = 10.00f;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Source distance falloff co-efficient (Cylinder).")]
+	[DDLRegistration(0x1eb37744u, description: "Source distance falloff co-efficient (Cylinder).")]
 	public float HeightFalloff { get; set; } = 10.00f;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Shape or wind influence")]
+	[DDLRegistration(0xbc4e9799u, description: "Shape or wind influence")]
 	public x81ba9424 Type { get; set; } = x81ba9424.TypeDirectional;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Offset from world space position (meter)")]
+	[DDLRegistration(0x6620dcf3u, description: "Offset from world space position (meter)")]
 	public DDLVector3? OffsetPos { get; set; } = default;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Angle offset from normalized direction (degrees)")]
+	[DDLRegistration(0xfbc09d3eu, description: "Angle offset from normalized direction (degrees)")]
 	public DDLVector3? OffsetRot { get; set; } = default;
 
-	[DDLRegistration(0x68a9a9e1u, description: "Attach wind origin to locator/joint")]
+	[DDLRegistration(0x4c640e01u, description: "Attach wind origin to locator/joint")]
 	public bool AttachToPoint { get; set; } = false;
 
-	[DDLRegistration(0x68a9a9e1u)]
+	[DDLRegistration(0xd0d96889u)]
 	public Cinematic2AttachmentDef? AttachmentPoint { get; set; } = default;
 
 	public static Cinematic2WindActionDef Create(DDLObject ddl) => new(ddl);

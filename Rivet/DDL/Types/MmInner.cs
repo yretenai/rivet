@@ -20,13 +20,13 @@ public class MmInner : DDLObjectType, IDDLObjectType<MmInner> {
 		Hash = ddl.GetDictionary<string, MmLeaf>(0xe128a208, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<MmLeaf>(mapId));
 	}
 
-	[DDLRegistration(0xa85f5e37u)]
+	[DDLRegistration(0xdc2475e2u)]
 	public string? Scalar { get; set; } = default;
 
-	[DDLRegistration(0xa85f5e37u)]
+	[DDLRegistration(0xb85f2276u)]
 	public List<string?> Array { get; set; } = [];
 
-	[DDLRegistration(0xa85f5e37u)]
+	[DDLRegistration(0xe128a208u)]
 	public Dictionary<string, MmLeaf?> Hash { get; set; } = [];
 
 	public static MmInner Create(DDLObject ddl) => new(ddl);

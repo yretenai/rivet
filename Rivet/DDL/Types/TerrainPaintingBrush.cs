@@ -18,7 +18,7 @@ public class TerrainPaintingBrush : DDLObjectType, IDDLObjectType<TerrainPaintin
 		BrushPath = ddl.GetValue<RivetAssetId>(0xe892f32fu, BrushPath);
 	}
 
-	[DDLRegistration(0x606cffa2u, "Brush Path")]
+	[DDLRegistration(0xe892f32fu, "Brush Path")]
 	public RivetAssetId BrushPath { get; set; } = default;
 
 	public static TerrainPaintingBrush Create(DDLObject ddl) => new(ddl);

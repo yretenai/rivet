@@ -19,10 +19,10 @@ public class HarpoonStreamSprayEvent : EventBase, IDDLObjectType<HarpoonStreamSp
 		DistanceFail = ddl.GetValue<bool>(0x178ce458u, DistanceFail);
 	}
 
-	[DDLRegistration(0x3911125bu)]
+	[DDLRegistration(0x36302d6du)]
 	public bool ShortSpray { get; set; } = false;
 
-	[DDLRegistration(0x3911125bu)]
+	[DDLRegistration(0x178ce458u)]
 	public bool DistanceFail { get; set; } = false;
 
 	public new static HarpoonStreamSprayEvent Create(DDLObject ddl) => new(ddl);

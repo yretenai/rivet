@@ -20,13 +20,13 @@ public class MacroModeData : DDLObjectType, IDDLObjectType<MacroModeData> {
 		Levels = ddl.GetObjects<MacroLevelDataListItem>(0xa1522a7eu);
 	}
 
-	[DDLRegistration(0x532108b9u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x532108b9u)]
+	[DDLRegistration(0x8071908au)]
 	public AssetReferenceDef? DefaultLevel { get; set; } = default;
 
-	[DDLRegistration(0x532108b9u)]
+	[DDLRegistration(0xa1522a7eu)]
 	public List<MacroLevelDataListItem?> Levels { get; set; } = [];
 
 	public static MacroModeData Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class GameBotPufferFishPrius : GameBotMeleeSwarmerPrius, IDDLObjectType<G
 		EngagedSwimSpeedMult = ddl.GetValue<float>(0x451adeb8u, EngagedSwimSpeedMult);
 	}
 
-	[DDLRegistration(0xb1b543b4u, description: "If spawned inside one of these volumes, they will start in swim mode and jump out onto the land")]
+	[DDLRegistration(0x062d8446u, description: "If spawned inside one of these volumes, they will start in swim mode and jump out onto the land")]
 	public RivetAssetId SwimVolumes { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb1b543b4u, description: "Clues for where a fish can jump onto the land from the water")]
+	[DDLRegistration(0xd57f62e5u, description: "Clues for where a fish can jump onto the land from the water")]
 	public RivetAssetId BreachAnimClues { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb1b543b4u, description: "Swim Speed multiplier for when swimming to breach clues")]
+	[DDLRegistration(0x451adeb8u, description: "Swim Speed multiplier for when swimming to breach clues")]
 	public float EngagedSwimSpeedMult { get; set; } = 2.00f;
 
 	public new static GameBotPufferFishPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class PortalOverrideVolumePrius : DDLObjectType, IDDLObjectType<PortalOve
 		ExitPortals = ddl.GetValues<RivetAssetId>(0x0ef5c2d2u);
 	}
 
-	[DDLRegistration(0x4bb6569cu)]
+	[DDLRegistration(0x79fd859au)]
 	public RivetAssetId Atmosphere { get; set; } = default;
 
-	[DDLRegistration(0x4bb6569cu, description: "When inside the volume, clip geo beyond the +/-z planes defined by this volume.")]
+	[DDLRegistration(0x31613cd2u, description: "When inside the volume, clip geo beyond the +/-z planes defined by this volume.")]
 	public bool ClipExteriorGeometry { get; set; } = true;
 
-	[DDLRegistration(0x4bb6569cu, description: "Optional list of portals to use to exit this volume.")]
+	[DDLRegistration(0x0ef5c2d2u, description: "Optional list of portals to use to exit this volume.")]
 	public List<RivetAssetId> ExitPortals { get; set; } = [];
 
 	public static PortalOverrideVolumePrius Create(DDLObject ddl) => new(ddl);

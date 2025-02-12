@@ -18,7 +18,7 @@ public class ClankPuzzleHeavyGroundPrius : DDLObjectType, IDDLObjectType<ClankPu
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x244217a1u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
 	public static ClankPuzzleHeavyGroundPrius Create(DDLObject ddl) => new(ddl);

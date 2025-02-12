@@ -20,13 +20,13 @@ public class HealEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObjectType<Heal
 		ContinuousMode = ddl.GetValue<bool>(0x0678540du, ContinuousMode);
 	}
 
-	[DDLRegistration(0xe84a5de5u)]
+	[DDLRegistration(0x84e0e443u)]
 	public InputPlugFloat? HealAmount { get; set; } = default;
 
-	[DDLRegistration(0xe84a5de5u)]
+	[DDLRegistration(0x1eb7640eu)]
 	public x684c6439 ActorType { get; set; } = x684c6439.HitActor;
 
-	[DDLRegistration(0xe84a5de5u)]
+	[DDLRegistration(0x0678540du)]
 	public bool ContinuousMode { get; set; } = false;
 
 	public new static HealEffectNodeDef Create(DDLObject ddl) => new(ddl);

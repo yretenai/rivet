@@ -24,25 +24,25 @@ public class ClipboardScriptGraphCopyObject : DDLObjectType, IDDLObjectType<Clip
 		Nodes = ddl.GetObjects<GraphNode>(0x046ec93du);
 	}
 
-	[DDLRegistration(0x55ce8c47u)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x55ce8c47u)]
+	[DDLRegistration(0x7e88a543u)]
 	public ClipboardScriptGraphCenter? Center { get; set; } = default;
 
-	[DDLRegistration(0x55ce8c47u)]
+	[DDLRegistration(0x1c73b6c7u)]
 	public RivetAssetId ClipboardId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x55ce8c47u)]
+	[DDLRegistration(0x322aadceu)]
 	public List<GraphConnection?> Connections { get; set; } = [];
 
-	[DDLRegistration(0x55ce8c47u)]
+	[DDLRegistration(0x5895c331u)]
 	public Dictionary<RivetAssetId, NodeGraphContents?> EmbeddedSubGraphs { get; set; } = [];
 
-	[DDLRegistration(0x55ce8c47u)]
+	[DDLRegistration(0x76b05713u)]
 	public RivetAssetId GraphId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x55ce8c47u)]
+	[DDLRegistration(0x046ec93du)]
 	public List<GraphNode?> Nodes { get; set; } = [];
 
 	public static ClipboardScriptGraphCopyObject Create(DDLObject ddl) => new(ddl);

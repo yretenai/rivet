@@ -24,25 +24,25 @@ public class HazardTurretPrius : DDLObjectType, IDDLObjectType<HazardTurretPrius
 		HazardTurretConfig = ddl.GetValue<RivetAssetId>(0xa8fc3a55u, HazardTurretConfig);
 	}
 
-	[DDLRegistration(0x8714ccb7u, description: "Where the bullets come from.")]
+	[DDLRegistration(0xac7ec2b4u, description: "Where the bullets come from.")]
 	public string? FiringLocatorName { get; set; } = "igLoc_bulletEmit";
 
-	[DDLRegistration(0x8714ccb7u, description: "Where the empty casings come from.")]
+	[DDLRegistration(0xa9aa7434u, description: "Where the empty casings come from.")]
 	public string? CasingEjectLocatorName { get; set; } = "igLoc_bulletEmit";
 
-	[DDLRegistration(0x8714ccb7u, description: "Yaw joint name.")]
+	[DDLRegistration(0x39d7862au, description: "Yaw joint name.")]
 	public string? YawJointName { get; set; } = "yaw";
 
-	[DDLRegistration(0x8714ccb7u, description: "Pitch joint name.")]
+	[DDLRegistration(0x7100f11fu, description: "Pitch joint name.")]
 	public string? PitchJointName { get; set; } = "pitch";
 
-	[DDLRegistration(0x8714ccb7u)]
+	[DDLRegistration(0x3ac2d0d4u)]
 	public bool StartOn { get; set; } = true;
 
-	[DDLRegistration(0x8714ccb7u, description: "Slerp rotation or spherical rotation")]
+	[DDLRegistration(0x8cdf1c10u, description: "Slerp rotation or spherical rotation")]
 	public bool SlerpRotation { get; set; } = false;
 
-	[DDLRegistration(0x8714ccb7u, "Hazard Turret Config")]
+	[DDLRegistration(0xa8fc3a55u, "Hazard Turret Config")]
 	public RivetAssetId HazardTurretConfig { get; set; } = default;
 
 	public static HazardTurretPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class CameraFocusOnNodesEngineItem : DDLObjectType, IDDLObjectType<Camera
 		DistanceFactor = ddl.GetValue<float>(0xf4e39365u, DistanceFactor);
 	}
 
-	[DDLRegistration(0x57d30fa5u)]
+	[DDLRegistration(0x046ec93du)]
 	public Dictionary<RivetAssetId, bool> Nodes { get; set; } = [];
 
-	[DDLRegistration(0x57d30fa5u)]
+	[DDLRegistration(0x127904f6u)]
 	public bool UseClusters { get; set; } = false;
 
-	[DDLRegistration(0x57d30fa5u)]
+	[DDLRegistration(0xf4e39365u)]
 	public float DistanceFactor { get; set; } = 1.00f;
 
 	public static CameraFocusOnNodesEngineItem Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class AnimMultiLookChunkData : AnimChunkData, IDDLObjectType<AnimMultiLoo
 		Direction = ddl.GetObject<AnimChunkDirection>(0xbcb74ebfu);
 	}
 
-	[DDLRegistration(0x39fd9caeu)]
+	[DDLRegistration(0xec785832u)]
 	public List<LookChunkData?> Looks { get; set; } = [];
 
-	[DDLRegistration(0x39fd9caeu, description: "Hide the look/look group on the source actor.")]
+	[DDLRegistration(0x8496a8e6u, description: "Hide the look/look group on the source actor.")]
 	public bool HideSourceLook { get; set; } = true;
 
-	[DDLRegistration(0x39fd9caeu, description: "Lifetime of spawned chunk.")]
+	[DDLRegistration(0xc7e68df8u, description: "Lifetime of spawned chunk.")]
 	public float Lifetime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x39fd9caeu, description: "Min speed of spawned chunk.")]
+	[DDLRegistration(0xf0d89680u, description: "Min speed of spawned chunk.")]
 	public float MinSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0x39fd9caeu, description: "Min speed of spawned chunk.")]
+	[DDLRegistration(0x16b83961u, description: "Min speed of spawned chunk.")]
 	public float MaxSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0x39fd9caeu, description: "Optional conduit asset to place on chunk actor.")]
+	[DDLRegistration(0x857b9dd2u, description: "Optional conduit asset to place on chunk actor.")]
 	public RivetAssetId ConduitAsset { get; set; } = default;
 
-	[DDLRegistration(0x39fd9caeu, description: "Range of rotation speeds about x-axis in degrees/sec.")]
+	[DDLRegistration(0x7ea7ed54u, description: "Range of rotation speeds about x-axis in degrees/sec.")]
 	public AnimChunkRange? RotationalSpeedX { get; set; } = default;
 
-	[DDLRegistration(0x39fd9caeu, description: "Range of rotation speeds about y-axis in degrees/sec.")]
+	[DDLRegistration(0x09a0ddc2u, description: "Range of rotation speeds about y-axis in degrees/sec.")]
 	public AnimChunkRange? RotationalSpeedY { get; set; } = default;
 
-	[DDLRegistration(0x39fd9caeu, description: "Range of rotation speeds about z-axis in degrees/sec.")]
+	[DDLRegistration(0x90a98c78u, description: "Range of rotation speeds about z-axis in degrees/sec.")]
 	public AnimChunkRange? RotationalSpeedZ { get; set; } = default;
 
-	[DDLRegistration(0x39fd9caeu)]
+	[DDLRegistration(0xbcb74ebfu)]
 	public AnimChunkDirection? Direction { get; set; } = default;
 
 	public new static AnimMultiLookChunkData Create(DDLObject ddl) => new(ddl);

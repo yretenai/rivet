@@ -18,7 +18,7 @@ public class OrOverlayOperatorPrius_Tools : DDLObjectType, IDDLObjectType<OrOver
 		Triggers = ddl.GetObjects<BaseOverlayOperatorPrius_Tools>(0xf4cf343du);
 	}
 
-	[DDLRegistration(0x708b2fdfu)]
+	[DDLRegistration(0xf4cf343du)]
 	public List<BaseOverlayOperatorPrius_Tools?> Triggers { get; set; } = [];
 
 	public static OrOverlayOperatorPrius_Tools Create(DDLObject ddl) => new(ddl);

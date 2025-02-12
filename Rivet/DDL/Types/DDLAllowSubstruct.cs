@@ -19,10 +19,10 @@ public class DDLAllowSubstruct : DDLObjectType, IDDLObjectType<DDLAllowSubstruct
 		Obj = ddl.GetString(0x6c33fda5) ?? Obj;
 	}
 
-	[DDLRegistration(0xff6cadecu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0xff6cadecu)]
+	[DDLRegistration(0x6c33fda5u)]
 	public string? Obj { get; set; } = default;
 
 	public static DDLAllowSubstruct Create(DDLObject ddl) => new(ddl);

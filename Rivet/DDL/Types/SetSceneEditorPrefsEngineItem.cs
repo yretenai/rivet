@@ -18,7 +18,7 @@ public class SetSceneEditorPrefsEngineItem : DDLObjectType, IDDLObjectType<SetSc
 		SceneEditorPrefs = ddl.GetObject<SceneEditorPrefs>(0x958bdf12u);
 	}
 
-	[DDLRegistration(0x092e5e26u)]
+	[DDLRegistration(0x958bdf12u)]
 	public SceneEditorPrefs? SceneEditorPrefs { get; set; } = default;
 
 	public static SetSceneEditorPrefsEngineItem Create(DDLObject ddl) => new(ddl);

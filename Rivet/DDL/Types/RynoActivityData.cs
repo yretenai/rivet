@@ -24,25 +24,25 @@ public class RynoActivityData : DDLObjectType, IDDLObjectType<RynoActivityData> 
 		Reward = ddl.GetObject<ActivityReward>(0x70a93c34u);
 	}
 
-	[DDLRegistration(0xbae9f85cu, "Enabled in OS?", "Whether or not this activity card should exist in the OS.")]
+	[DDLRegistration(0x5113d8bcu, "Enabled in OS?", "Whether or not this activity card should exist in the OS.")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0xbae9f85cu, "Card Name Tag", "Loctag for the name to put on the RYNO plans activity card. Localized text can be at most 128 characters.")]
+	[DDLRegistration(0xe5ff7435u, "Card Name Tag", "Loctag for the name to put on the RYNO plans activity card. Localized text can be at most 128 characters.")]
 	public string? CardNameTag { get; set; } = default;
 
-	[DDLRegistration(0xbae9f85cu, "Card Desc Tag", "Loctag for the description to put on the RYNO plans activity card. Localized text can be at most 1024 characters.")]
+	[DDLRegistration(0x20a51f52u, "Card Desc Tag", "Loctag for the description to put on the RYNO plans activity card. Localized text can be at most 1024 characters.")]
 	public string? CardDescTag { get; set; } = default;
 
-	[DDLRegistration(0xbae9f85cu, "Card Small Image", "Path to a small image of size 864 x 1040 PNG 24-bit non-interlaced. This image will be shown on the card itself.")]
+	[DDLRegistration(0x9af615f0u, "Card Small Image", "Path to a small image of size 864 x 1040 PNG 24-bit non-interlaced. This image will be shown on the card itself.")]
 	public RivetAssetId CardSmallImage { get; set; } = default;
 
-	[DDLRegistration(0xbae9f85cu, "Card Large Image", "Path to a large image of size 3840 x 2160 PNG 24-bit non-interlaced. This image will be shown when the card is 'maximized'.")]
+	[DDLRegistration(0x7d5b0f7bu, "Card Large Image", "Path to a large image of size 3840 x 2160 PNG 24-bit non-interlaced. This image will be shown when the card is 'maximized'.")]
 	public RivetAssetId CardLargeImage { get; set; } = default;
 
-	[DDLRegistration(0xbae9f85cu, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
+	[DDLRegistration(0x292b559du, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
 	public uint PlaytimeEstimate { get; set; } = 0x0000003c;
 
-	[DDLRegistration(0xbae9f85cu)]
+	[DDLRegistration(0x70a93c34u)]
 	public ActivityReward? Reward { get; set; } = default;
 
 	public static RynoActivityData Create(DDLObject ddl) => new(ddl);

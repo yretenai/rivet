@@ -25,28 +25,28 @@ public class CameraLookTargetActionPrius : DDLObjectType, IDDLObjectType<CameraL
 		SettleInputDelay = ddl.GetValue<float>(0x6e3572bcu, SettleInputDelay);
 	}
 
-	[DDLRegistration(0xca765ab1u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0xca765ab1u, "Field Of View")]
+	[DDLRegistration(0x0a766be7u, "Field Of View")]
 	public float FieldOfView { get; set; } = 65.00f;
 
-	[DDLRegistration(0xca765ab1u, "Target Offset")]
+	[DDLRegistration(0xabbb80f6u, "Target Offset")]
 	public DDLVector3? TargetOffset { get; set; } = default;
 
-	[DDLRegistration(0xca765ab1u)]
+	[DDLRegistration(0x7c0ccd53u)]
 	public float SettleGain { get; set; } = -30.00f;
 
-	[DDLRegistration(0xca765ab1u)]
+	[DDLRegistration(0xf0da9adau)]
 	public float SettleDamp { get; set; } = -300.00f;
 
-	[DDLRegistration(0xca765ab1u)]
+	[DDLRegistration(0x2143b234u)]
 	public float SettleSpeedMaxYaw { get; set; } = 90.00f;
 
-	[DDLRegistration(0xca765ab1u)]
+	[DDLRegistration(0x591e25ddu)]
 	public float SettleSpeedMaxPitch { get; set; } = 45.00f;
 
-	[DDLRegistration(0xca765ab1u)]
+	[DDLRegistration(0x6e3572bcu)]
 	public float SettleInputDelay { get; set; } = 1.00f;
 
 	public static CameraLookTargetActionPrius Create(DDLObject ddl) => new(ddl);

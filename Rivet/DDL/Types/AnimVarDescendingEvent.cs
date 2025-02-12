@@ -18,7 +18,7 @@ public class AnimVarDescendingEvent : EventBase, IDDLObjectType<AnimVarDescendin
 		VarName = ddl.GetValue<uint>(0x8cd13823u, VarName);
 	}
 
-	[DDLRegistration(0x19647253u)]
+	[DDLRegistration(0x8cd13823u)]
 	public uint VarName { get; set; } = 0x00000000;
 
 	public new static AnimVarDescendingEvent Create(DDLObject ddl) => new(ddl);

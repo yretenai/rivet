@@ -18,7 +18,7 @@ public class ShotRYNOSniperPrius : BasicBulletPrius, IDDLObjectType<ShotRYNOSnip
 		RYNOShot = ddl.GetObject<WeaponShotData>(0x029b048du);
 	}
 
-	[DDLRegistration(0xba78241du)]
+	[DDLRegistration(0x029b048du)]
 	public WeaponShotData? RYNOShot { get; set; } = default;
 
 	public new static ShotRYNOSniperPrius Create(DDLObject ddl) => new(ddl);

@@ -51,106 +51,106 @@ public class ChargeAttackData : DDLObjectType, IDDLObjectType<ChargeAttackData> 
 		RequestFlags = ddl.GetBitset<DamageRequestFlags>(0x2bc801dfu, DamageRequestFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0x1355867cu, description: "Attack Name")]
+	[DDLRegistration(0x6eb3beb6u, description: "Attack Name")]
 	public string? Name { get; set; } = "Charge";
 
-	[DDLRegistration(0x1355867cu, description: "If tell loops, how long to play it.")]
+	[DDLRegistration(0xa3a1233bu, description: "If tell loops, how long to play it.")]
 	public float TellTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x1355867cu, description: "We can turn at this rate during our charge.")]
+	[DDLRegistration(0x371b2802u, description: "We can turn at this rate during our charge.")]
 	public float TurnRate { get; set; } = 45.00f;
 
-	[DDLRegistration(0x1355867cu, description: "We can turn at this rate during our tell. -1 means to use the normal TurnRate here as well.")]
+	[DDLRegistration(0x0ae329a0u, description: "We can turn at this rate during our tell. -1 means to use the normal TurnRate here as well.")]
 	public float TurnRateTell { get; set; } = -1.00f;
 
-	[DDLRegistration(0x1355867cu, description: "We need to be at least this far from our target to turn.")]
+	[DDLRegistration(0xbec9c8e6u, description: "We need to be at least this far from our target to turn.")]
 	public float MinDistToTurn { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1355867cu, description: "How fast we move during our charge.")]
+	[DDLRegistration(0x1f570251u, description: "How fast we move during our charge.")]
 	public float MoveSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x1355867cu, description: "How far to keep running")]
+	[DDLRegistration(0x7ded2b99u, description: "How far to keep running")]
 	public float RunPastDistance { get; set; } = 8.00f;
 
-	[DDLRegistration(0x1355867cu, description: "How long to stay stunned if he slammed into a wall?")]
+	[DDLRegistration(0x3bbea58fu, description: "How long to stay stunned if he slammed into a wall?")]
 	public float StunDuration { get; set; } = 2.00f;
 
-	[DDLRegistration(0x1355867cu, description: "If you hit your target how long should the hit outro last?")]
+	[DDLRegistration(0x96fa17d6u, description: "If you hit your target how long should the hit outro last?")]
 	public float HitDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1355867cu, description: "If you miss your target how long should your miss outro last?")]
+	[DDLRegistration(0xeb64c7c0u, description: "If you miss your target how long should your miss outro last?")]
 	public float MissDuration { get; set; } = 2.00f;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0xa81f5003u)]
 	public float TargetLeftOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1355867cu, description: "If false, just charge toward the target position at the time of charge start.")]
+	[DDLRegistration(0x36d0352au, description: "If false, just charge toward the target position at the time of charge start.")]
 	public bool TrackTarget { get; set; } = false;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0xf3929ecbu)]
 	public bool FaceTargetDuringMiss { get; set; } = false;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0xb340d429u)]
 	public bool FaceTargetDuringHit { get; set; } = false;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0xfbb2197cu)]
 	public bool TriggerHitOutroOnClose { get; set; } = false;
 
-	[DDLRegistration(0x1355867cu, description: "Keep doing charge damage during the outro anim.")]
+	[DDLRegistration(0x7c341799u, description: "Keep doing charge damage during the outro anim.")]
 	public bool AlsoDamageInHitOutro { get; set; } = false;
 
-	[DDLRegistration(0x1355867cu, description: "Don't bounce off of things and go in odd directions")]
+	[DDLRegistration(0xf542fb78u, description: "Don't bounce off of things and go in odd directions")]
 	public bool PreventDeflection { get; set; } = false;
 
-	[DDLRegistration(0x1355867cu, "Tell Driver")]
+	[DDLRegistration(0xbdb09c6fu, "Tell Driver")]
 	public string? TellDriver { get; set; } = "ChargeAttack_Tell";
 
-	[DDLRegistration(0x1355867cu, "Intro Driver")]
+	[DDLRegistration(0x9b209c3du, "Intro Driver")]
 	public string? IntroDriver { get; set; } = "ChargeAttack_Intro";
 
-	[DDLRegistration(0x1355867cu, "Move Driver")]
+	[DDLRegistration(0x8bc6d4e3u, "Move Driver")]
 	public string? MoveDriver { get; set; } = "ChargeAttack_Loop";
 
-	[DDLRegistration(0x1355867cu, "Hit Outro Driver")]
+	[DDLRegistration(0x5e5130c0u, "Hit Outro Driver")]
 	public string? HitOutroDriver { get; set; } = "ChargeAttack_Hit";
 
-	[DDLRegistration(0x1355867cu, "Miss Outro Driver")]
+	[DDLRegistration(0xd0759423u, "Miss Outro Driver")]
 	public string? MissOutroDriver { get; set; } = "ChargeAttack_Miss";
 
-	[DDLRegistration(0x1355867cu, "Stun Outro Driver")]
+	[DDLRegistration(0x9a7e6ce1u, "Stun Outro Driver")]
 	public string? StunOutroDriver { get; set; } = "ChargeAttack_Stun";
 
-	[DDLRegistration(0x1355867cu, "Stun Compress Partial", "Play this partial between when the bot hits a nav edge, and when they either start their stun outro or slide around a corner")]
+	[DDLRegistration(0x33096146u, "Stun Compress Partial", "Play this partial between when the bot hits a nav edge, and when they either start their stun outro or slide around a corner")]
 	public string? StunCompressPartial { get; set; } = "";
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0x840c154du)]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Melee;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 100.00f;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0x28d6ed59u)]
 	public float KnockbackForce { get; set; } = -1.00f;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0xa0fb18acu)]
 	public float HitPauseTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0x604b5af6u)]
 	public string? DamageLocator { get; set; } = default;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0x46a4eea5u)]
 	public DDLVector3? LocalOffset { get; set; } = default;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0xe3e6fa68u)]
 	public float DamageRadius { get; set; } = 0.50f;
 
-	[DDLRegistration(0x1355867cu)]
+	[DDLRegistration(0x2bc801dfu)]
 	public DamageRequestFlags RequestFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
 	public static ChargeAttackData Create(DDLObject ddl) => new(ddl);

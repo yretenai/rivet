@@ -18,7 +18,7 @@ public class MissionStartedEvent : EventBase, IDDLObjectType<MissionStartedEvent
 		MissionName = ddl.GetString(0xa5c30e60) ?? MissionName;
 	}
 
-	[DDLRegistration(0x6e588f6du)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
 	public new static MissionStartedEvent Create(DDLObject ddl) => new(ddl);

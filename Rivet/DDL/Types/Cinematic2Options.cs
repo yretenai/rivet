@@ -19,10 +19,10 @@ public class Cinematic2Options : DDLObjectType, IDDLObjectType<Cinematic2Options
 		Options = ddl.GetObjects<Cinematic2Option>(0xd1df99bfu);
 	}
 
-	[DDLRegistration(0x5a7d86f2u)]
+	[DDLRegistration(0xf34a033au)]
 	public RivetAssetId ComponentId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5a7d86f2u)]
+	[DDLRegistration(0xd1df99bfu)]
 	public List<Cinematic2Option?> Options { get; set; } = [];
 
 	public static Cinematic2Options Create(DDLObject ddl) => new(ddl);

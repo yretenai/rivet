@@ -18,7 +18,7 @@ public class MovieDoneEvent : EventBase, IDDLObjectType<MovieDoneEvent> {
 		MovieHandle = ddl.GetValue<ushort>(0xef8a8234u, MovieHandle);
 	}
 
-	[DDLRegistration(0x732fa014u)]
+	[DDLRegistration(0xef8a8234u)]
 	public ushort MovieHandle { get; set; } = 0x0000;
 
 	public new static MovieDoneEvent Create(DDLObject ddl) => new(ddl);

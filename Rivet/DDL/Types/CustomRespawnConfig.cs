@@ -18,7 +18,7 @@ public class CustomRespawnConfig : ConfigBase, IDDLObjectType<CustomRespawnConfi
 		CustomRespawns = ddl.GetObjects<CustomRespawn>(0x1ed42638u);
 	}
 
-	[DDLRegistration(0xa59b5510u)]
+	[DDLRegistration(0x1ed42638u)]
 	public List<CustomRespawn?> CustomRespawns { get; set; } = [];
 
 	public new static CustomRespawnConfig Create(DDLObject ddl) => new(ddl);

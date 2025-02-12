@@ -21,16 +21,16 @@ public class InteractStartedEvent : EventBase, IDDLObjectType<InteractStartedEve
 		UserFour = ddl.GetValue<uint>(0x6c8f0c42u, UserFour);
 	}
 
-	[DDLRegistration(0xd7ad5efcu)]
+	[DDLRegistration(0x82e4b58cu)]
 	public uint UserOne { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd7ad5efcu)]
+	[DDLRegistration(0xe942b91bu)]
 	public uint UserTwo { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd7ad5efcu)]
+	[DDLRegistration(0x225d542fu)]
 	public uint UserThree { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd7ad5efcu)]
+	[DDLRegistration(0x6c8f0c42u)]
 	public uint UserFour { get; set; } = 0x00000000;
 
 	public new static InteractStartedEvent Create(DDLObject ddl) => new(ddl);

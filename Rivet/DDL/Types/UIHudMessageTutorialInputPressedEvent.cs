@@ -18,7 +18,7 @@ public class UIHudMessageTutorialInputPressedEvent : EventBase, IDDLObjectType<U
 		RequestId = ddl.GetValue<uint>(0x239eef0du, RequestId);
 	}
 
-	[DDLRegistration(0x471b0709u)]
+	[DDLRegistration(0x239eef0du)]
 	public uint RequestId { get; set; } = 0x00000000;
 
 	public new static UIHudMessageTutorialInputPressedEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class GameEventDragData : DDLObjectType, IDDLObjectType<GameEventDragData
 		GameEventNames = ddl.GetStrings(0xf323c89fu);
 	}
 
-	[DDLRegistration(0xc8f056b9u)]
+	[DDLRegistration(0xf323c89fu)]
 	public List<string?> GameEventNames { get; set; } = [];
 
 	public static GameEventDragData Create(DDLObject ddl) => new(ddl);

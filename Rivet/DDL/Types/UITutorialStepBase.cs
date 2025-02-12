@@ -22,19 +22,19 @@ public class UITutorialStepBase : DDLObjectType, IDDLObjectType<UITutorialStepBa
 		ElementPosition = ddl.GetObject<DDLVector2>(0x3f12f707u);
 	}
 
-	[DDLRegistration(0x61fbfd47u)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
-	[DDLRegistration(0x61fbfd47u, "Post Step VO", "Optionally Dialog VO that plays upon step completion.")]
+	[DDLRegistration(0xa3146a0du, "Post Step VO", "Optionally Dialog VO that plays upon step completion.")]
 	public string? PostStepVO { get; set; } = default;
 
-	[DDLRegistration(0x61fbfd47u)]
+	[DDLRegistration(0x373690c8u)]
 	public List<UITutorialAllowableInput?> AllowableInputs { get; set; } = [];
 
-	[DDLRegistration(0x61fbfd47u, description: "An optional button to display on the popup window indicating user interacts with it rather than other UI (e.g. '(X) CONTINUE' steps).")]
+	[DDLRegistration(0x80473a41u, description: "An optional button to display on the popup window indicating user interacts with it rather than other UI (e.g. '(X) CONTINUE' steps).")]
 	public UITutorialModalButton? ModalButton { get; set; } = default;
 
-	[DDLRegistration(0x61fbfd47u, "UIElement Position", "Normalized location of the tutorial box on screen.")]
+	[DDLRegistration(0x3f12f707u, "UIElement Position", "Normalized location of the tutorial box on screen.")]
 	public DDLVector2? ElementPosition { get; set; } = default;
 
 	public static UITutorialStepBase Create(DDLObject ddl) => new(ddl);

@@ -29,40 +29,40 @@ public class TerrainSystem03EditingTerrain0221Ramp : DDLObjectType, IDDLObjectTy
 		Line11 = ddl.GetString(0x6164be9c) ?? Line11;
 	}
 
-	[DDLRegistration(0x3e0eb48eu, description: "This brush will paint a ramp between the starting point and ending point on the")]
+	[DDLRegistration(0x0f78bf4bu, description: "This brush will paint a ramp between the starting point and ending point on the")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x3e0eb48eu, description: "given target.  A ramp is simply an interpolation of the values from the start to")]
+	[DDLRegistration(0x787f8fddu, description: "given target.  A ramp is simply an interpolation of the values from the start to")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x3e0eb48eu, description: "the end.  To paint a ramp, click a location on the terrain and drag the mouse;")]
+	[DDLRegistration(0xe176de67u, description: "the end.  To paint a ramp, click a location on the terrain and drag the mouse;")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x3e0eb48eu, description: "the ramp will be previewed.  Release the mouse to actually paint the ramp.")]
+	[DDLRegistration(0x9671eef1u, description: "the ramp will be previewed.  Release the mouse to actually paint the ramp.")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x3e0eb48eu, description: "<br><br>")]
+	[DDLRegistration(0x08157b52u, description: "<br><br>")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x3e0eb48eu, description: "When painting a ramp on a heightfield, the result is that the height will change")]
+	[DDLRegistration(0x7f124bc4u, description: "When painting a ramp on a heightfield, the result is that the height will change")]
 	public string? Line05 { get; set; } = default;
 
-	[DDLRegistration(0x3e0eb48eu, description: "from the starting point linearly to the ending point.  When painting a ramp on a")]
+	[DDLRegistration(0xe61b1a7eu, description: "from the starting point linearly to the ending point.  When painting a ramp on a")]
 	public string? Line06 { get; set; } = default;
 
-	[DDLRegistration(0x3e0eb48eu, description: "splatmask, the result is a gradient from the starting color to the ending color.")]
+	[DDLRegistration(0x911c2ae8u, description: "splatmask, the result is a gradient from the starting color to the ending color.")]
 	public string? Line07 { get; set; } = default;
 
-	[DDLRegistration(0x3e0eb48eu, description: "<br><br>")]
+	[DDLRegistration(0x01a33779u, description: "<br><br>")]
 	public string? Line08 { get; set; } = default;
 
-	[DDLRegistration(0x3e0eb48eu, description: "The brush parameter <i>Amount</i> indicates how much the ramp will be applied; it")]
+	[DDLRegistration(0x76a407efu, description: "The brush parameter <i>Amount</i> indicates how much the ramp will be applied; it")]
 	public string? Line09 { get; set; } = default;
 
-	[DDLRegistration(0x3e0eb48eu, description: "basically represents the interpolation from the target's original value to the")]
+	[DDLRegistration(0x16638e0au, description: "basically represents the interpolation from the target's original value to the")]
 	public string? Line10 { get; set; } = default;
 
-	[DDLRegistration(0x3e0eb48eu, description: "ramp value.")]
+	[DDLRegistration(0x6164be9cu, description: "ramp value.")]
 	public string? Line11 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0221Ramp Create(DDLObject ddl) => new(ddl);

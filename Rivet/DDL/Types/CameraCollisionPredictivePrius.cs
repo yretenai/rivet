@@ -22,19 +22,19 @@ public class CameraCollisionPredictivePrius : CameraCollisionBasePrius, IDDLObje
 		UseTargetUpVector = ddl.GetValue<bool>(0x0db64d20u, UseTargetUpVector);
 	}
 
-	[DDLRegistration(0xe4f748a1u)]
+	[DDLRegistration(0xe24c4bdcu)]
 	public float CollRadiusNarrow { get; set; } = 0.01f;
 
-	[DDLRegistration(0xe4f748a1u)]
+	[DDLRegistration(0x91ae75f7u)]
 	public float CollRadiusBroad { get; set; } = 0.25f;
 
-	[DDLRegistration(0xe4f748a1u)]
+	[DDLRegistration(0x5f75b0ceu)]
 	public uint PredictionCount { get; set; } = 0x00000006;
 
-	[DDLRegistration(0xe4f748a1u)]
+	[DDLRegistration(0xe08040bau)]
 	public float PredictionFactor { get; set; } = 0.50f;
 
-	[DDLRegistration(0xe4f748a1u)]
+	[DDLRegistration(0x0db64d20u)]
 	public bool UseTargetUpVector { get; set; } = false;
 
 	public new static CameraCollisionPredictivePrius Create(DDLObject ddl) => new(ddl);

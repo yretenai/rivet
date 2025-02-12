@@ -18,7 +18,7 @@ public class StructuredLogAnimTreeTriBlendNode : StructuredLogAnimTreeNode, IDDL
 		Weights = ddl.GetObject<DDLVector2>(0x1b381060u);
 	}
 
-	[DDLRegistration(0x8c45a7d8u)]
+	[DDLRegistration(0x1b381060u)]
 	public DDLVector2? Weights { get; set; } = default;
 
 	public new static StructuredLogAnimTreeTriBlendNode Create(DDLObject ddl) => new(ddl);

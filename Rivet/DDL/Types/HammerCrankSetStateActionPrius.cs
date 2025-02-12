@@ -18,7 +18,7 @@ public class HammerCrankSetStateActionPrius : DDLObjectType, IDDLObjectType<Hamm
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x2d998fb8u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
 	public static HammerCrankSetStateActionPrius Create(DDLObject ddl) => new(ddl);

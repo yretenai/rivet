@@ -18,7 +18,7 @@ public class WeaponSettingsGame : DDLObjectType, IDDLObjectType<WeaponSettingsGa
 		XpGainMultiplier = ddl.GetValue<float>(0x4f9f31dfu, XpGainMultiplier);
 	}
 
-	[DDLRegistration(0xf20b0383u, "Weapon XP Multiplier", "Multiplier applied to all XP earned by weapons.")]
+	[DDLRegistration(0x4f9f31dfu, "Weapon XP Multiplier", "Multiplier applied to all XP earned by weapons.")]
 	public float XpGainMultiplier { get; set; } = 1.00f;
 
 	public static WeaponSettingsGame Create(DDLObject ddl) => new(ddl);

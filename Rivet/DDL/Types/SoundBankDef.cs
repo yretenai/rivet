@@ -24,25 +24,25 @@ public class SoundBankDef : DDLObjectType, IDDLObjectType<SoundBankDef> {
 		AutoLoadOnRef = ddl.GetValue<bool>(0x6c668944u, AutoLoadOnRef);
 	}
 
-	[DDLRegistration(0xe9120aacu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xe9120aacu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xe9120aacu)]
+	[DDLRegistration(0xe8f07fcau)]
 	public SoundWwiseMapDef? Bank { get; set; } = default;
 
-	[DDLRegistration(0xe9120aacu)]
+	[DDLRegistration(0x0e1519c2u)]
 	public List<SoundWwiseMapDef?> Streams { get; set; } = [];
 
-	[DDLRegistration(0xe9120aacu)]
+	[DDLRegistration(0x6dff192du)]
 	public List<SoundEventDef?> Events { get; set; } = [];
 
-	[DDLRegistration(0xe9120aacu)]
+	[DDLRegistration(0x2596f890u)]
 	public SoundGameSyncDataDef? GameSyncData { get; set; } = default;
 
-	[DDLRegistration(0xe9120aacu, description: "If true, this bank will be auto-loaded when any of the events it contains is referenced. Enable setting in Wwise.")]
+	[DDLRegistration(0x6c668944u, description: "If true, this bank will be auto-loaded when any of the events it contains is referenced. Enable setting in Wwise.")]
 	public bool AutoLoadOnRef { get; set; } = false;
 
 	public static SoundBankDef Create(DDLObject ddl) => new(ddl);

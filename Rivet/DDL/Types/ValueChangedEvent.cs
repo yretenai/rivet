@@ -18,7 +18,7 @@ public class ValueChangedEvent : EventBase, IDDLObjectType<ValueChangedEvent> {
 		NewValue = ddl.GetValue<float>(0x8f7f0e86u, NewValue);
 	}
 
-	[DDLRegistration(0x055c9b63u)]
+	[DDLRegistration(0x8f7f0e86u)]
 	public float NewValue { get; set; } = 0.00f;
 
 	public new static ValueChangedEvent Create(DDLObject ddl) => new(ddl);

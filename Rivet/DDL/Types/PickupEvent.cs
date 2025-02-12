@@ -22,19 +22,19 @@ public class PickupEvent : EventBase, IDDLObjectType<PickupEvent> {
 		LocalCollector = ddl.GetValue<bool>(0xa326e9b3u, LocalCollector);
 	}
 
-	[DDLRegistration(0x54dbbc01u, description: "Actor who picked up the object")]
+	[DDLRegistration(0x33f2e3d5u, description: "Actor who picked up the object")]
 	public uint Instigator { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x54dbbc01u, description: "Actor that was picked up.  Will be deleted this frame")]
+	[DDLRegistration(0x7fe6779au, description: "Actor that was picked up.  Will be deleted this frame")]
 	public uint Pickup { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x54dbbc01u)]
+	[DDLRegistration(0x154708c9u)]
 	public float PickupRate { get; set; } = 0.00f;
 
-	[DDLRegistration(0x54dbbc01u, description: "Optional config of the item that was picked up")]
+	[DDLRegistration(0xa88f833fu, description: "Optional config of the item that was picked up")]
 	public RivetAssetId ItemConfig { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x54dbbc01u)]
+	[DDLRegistration(0xa326e9b3u)]
 	public bool LocalCollector { get; set; } = true;
 
 	public new static PickupEvent Create(DDLObject ddl) => new(ddl);

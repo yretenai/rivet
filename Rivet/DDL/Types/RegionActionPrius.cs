@@ -19,10 +19,10 @@ public class RegionActionPrius : DDLObjectType, IDDLObjectType<RegionActionPrius
 		RegionName = ddl.GetValue<RivetAssetId>(0x18017d12u, RegionName);
 	}
 
-	[DDLRegistration(0x4596a8c6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x4596a8c6u, "Region")]
+	[DDLRegistration(0x18017d12u, "Region")]
 	public RivetAssetId RegionName { get; set; } = default;
 
 	public static RegionActionPrius Create(DDLObject ddl) => new(ddl);

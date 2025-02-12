@@ -21,16 +21,16 @@ public class FarmInstanceRegionData : DDLObjectType, IDDLObjectType<FarmInstance
 		ExtraZones = ddl.GetValues<RivetAssetId>(0x56657350u);
 	}
 
-	[DDLRegistration(0x1b0a01cdu, "Atmosphere Zone", "specifies atmospheres to use for capture.")]
+	[DDLRegistration(0x9c553ee6u, "Atmosphere Zone", "specifies atmospheres to use for capture.")]
 	public RivetAssetId AtmosphereZone { get; set; } = default;
 
-	[DDLRegistration(0x1b0a01cdu, "Region", ".region file")]
+	[DDLRegistration(0xcabd3504u, "Region", ".region file")]
 	public RivetAssetId RegionFile { get; set; } = default;
 
-	[DDLRegistration(0x1b0a01cdu, "Level", ".level file for this region. If not specified, the default level is used.")]
+	[DDLRegistration(0xc002f04bu, "Level", ".level file for this region. If not specified, the default level is used.")]
 	public RivetAssetId LevelFile { get; set; } = default;
 
-	[DDLRegistration(0x1b0a01cdu, "Extra Zones", "Additional zones to load when capturing this region")]
+	[DDLRegistration(0x56657350u, "Extra Zones", "Additional zones to load when capturing this region")]
 	public List<RivetAssetId> ExtraZones { get; set; } = [];
 
 	public static FarmInstanceRegionData Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ToggleLightsEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObjectT
 		Duration = ddl.GetObject<InputPlugFloat>(0x7c5e3db0u);
 	}
 
-	[DDLRegistration(0x25ef0b77u)]
+	[DDLRegistration(0xe69327f1u)]
 	public InputPlugFloat? Distance { get; set; } = default;
 
-	[DDLRegistration(0x25ef0b77u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public InputPlugFloat? Duration { get; set; } = default;
 
 	public new static ToggleLightsEffectNodeDef Create(DDLObject ddl) => new(ddl);

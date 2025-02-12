@@ -18,7 +18,7 @@ public class ChestKeyList : DDLObjectType, IDDLObjectType<ChestKeyList> {
 		KeyList = ddl.GetObjects<RequiredChestKey>(0x7c723034u);
 	}
 
-	[DDLRegistration(0xf4332dcau, "Key List", "List of required items to open chest, all items in a single list must be present")]
+	[DDLRegistration(0x7c723034u, "Key List", "List of required items to open chest, all items in a single list must be present")]
 	public List<RequiredChestKey?> KeyList { get; set; } = [];
 
 	public static ChestKeyList Create(DDLObject ddl) => new(ddl);

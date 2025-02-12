@@ -19,10 +19,10 @@ public class StatusEffectStopEvent : EventBase, IDDLObjectType<StatusEffectStopE
 		SourceActorHandle = ddl.GetValue<uint>(0xe8d409aau, SourceActorHandle);
 	}
 
-	[DDLRegistration(0x9e879bedu)]
+	[DDLRegistration(0xb266fef4u)]
 	public string? EffectName { get; set; } = default;
 
-	[DDLRegistration(0x9e879bedu)]
+	[DDLRegistration(0xe8d409aau)]
 	public uint SourceActorHandle { get; set; } = 0x00000000;
 
 	public new static StatusEffectStopEvent Create(DDLObject ddl) => new(ddl);

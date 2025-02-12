@@ -24,25 +24,25 @@ public class MusicIntensityTrackerConfig : ConfigBase, IDDLObjectType<MusicInten
 		OtherValues = ddl.GetObjects<BotMusicValue>(0x525b0339u);
 	}
 
-	[DDLRegistration(0x1530d8edu, "Low Intensity Threshold")]
+	[DDLRegistration(0xd96bc793u, "Low Intensity Threshold")]
 	public float LowIntensityThreshold { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1530d8edu, "High Intensity Threshold")]
+	[DDLRegistration(0x39f26870u, "High Intensity Threshold")]
 	public float HighIntensityThreshold { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1530d8edu, description: "0 or less means no max")]
+	[DDLRegistration(0xb7230b40u, description: "0 or less means no max")]
 	public float Max { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1530d8edu, "Slew Rate")]
+	[DDLRegistration(0xbcbb3fd6u, "Slew Rate")]
 	public float SlewRate { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1530d8edu, "Default Bot Value")]
+	[DDLRegistration(0x7c6589bau, "Default Bot Value")]
 	public float DefaultBotValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1530d8edu, "Default Bot Radius")]
+	[DDLRegistration(0xe31f3d21u, "Default Bot Radius")]
 	public float DefaultBotRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1530d8edu, "Other Values")]
+	[DDLRegistration(0x525b0339u, "Other Values")]
 	public List<BotMusicValue?> OtherValues { get; set; } = [];
 
 	public new static MusicIntensityTrackerConfig Create(DDLObject ddl) => new(ddl);

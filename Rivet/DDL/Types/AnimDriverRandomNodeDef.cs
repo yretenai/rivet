@@ -24,25 +24,25 @@ public class AnimDriverRandomNodeDef : DDLObjectType, IDDLObjectType<AnimDriverR
 		Elems = ddl.GetObjects<AnimDriverRandomElemDef>(0xa810b7fdu);
 	}
 
-	[DDLRegistration(0x18581f26u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x18581f26u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0x18581f26u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x18581f26u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x18581f26u)]
+	[DDLRegistration(0x12568d7bu)]
 	public x9829f4d8 Flags { get; set; } = (x9829f4d8) 0x00000001;
 
-	[DDLRegistration(0x18581f26u)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
-	[DDLRegistration(0x18581f26u)]
+	[DDLRegistration(0xa810b7fdu)]
 	public List<AnimDriverRandomElemDef?> Elems { get; set; } = [];
 
 	public static AnimDriverRandomNodeDef Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class ShieldSectionData : DDLObjectType, IDDLObjectType<ShieldSectionData
 		DamagedLookV3 = ddl.GetString(0x202bd856) ?? DamagedLookV3;
 	}
 
-	[DDLRegistration(0x08f67c90u)]
+	[DDLRegistration(0x0520e489u)]
 	public string? DamageJoint { get; set; } = default;
 
-	[DDLRegistration(0x08f67c90u)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
-	[DDLRegistration(0x08f67c90u)]
+	[DDLRegistration(0xe926019bu)]
 	public string? UndamagedLook { get; set; } = default;
 
-	[DDLRegistration(0x08f67c90u)]
+	[DDLRegistration(0x59c8353au)]
 	public string? DamagedLook { get; set; } = default;
 
-	[DDLRegistration(0x08f67c90u)]
+	[DDLRegistration(0xb68311a5u)]
 	public string? UndamagedLookV3 { get; set; } = default;
 
-	[DDLRegistration(0x08f67c90u)]
+	[DDLRegistration(0x202bd856u)]
 	public string? DamagedLookV3 { get; set; } = default;
 
 	public static ShieldSectionData Create(DDLObject ddl) => new(ddl);

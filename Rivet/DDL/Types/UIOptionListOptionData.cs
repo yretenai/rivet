@@ -23,22 +23,22 @@ public class UIOptionListOptionData : DDLObjectType, IDDLObjectType<UIOptionList
 		EnumValue = ddl.GetString(0xa7cf9ee5) ?? EnumValue;
 	}
 
-	[DDLRegistration(0x31b707d1u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x31b707d1u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x31b707d1u, "Description (Alternate)")]
+	[DDLRegistration(0x29bf0d94u, "Description (Alternate)")]
 	public string? DescriptionAlt { get; set; } = default;
 
-	[DDLRegistration(0x31b707d1u, "Accessibility Icon")]
+	[DDLRegistration(0x7c679f8eu, "Accessibility Icon")]
 	public RivetAssetId AccessibilityIcon { get; set; } = default;
 
-	[DDLRegistration(0x31b707d1u, "Preview Image")]
+	[DDLRegistration(0x4cfbd8afu, "Preview Image")]
 	public RivetAssetId PreviewImage { get; set; } = default;
 
-	[DDLRegistration(0x31b707d1u)]
+	[DDLRegistration(0xa7cf9ee5u)]
 	public string? EnumValue { get; set; } = "";
 
 	public static UIOptionListOptionData Create(DDLObject ddl) => new(ddl);

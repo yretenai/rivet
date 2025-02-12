@@ -27,34 +27,34 @@ public class ShotMotionTunnelerPrius : MoveAlongGroundShotMotionPrius, IDDLObjec
 		LockedOnMaxUpgradedTimeToTarget = ddl.GetValue<float>(0x0ace77c7u, LockedOnMaxUpgradedTimeToTarget);
 	}
 
-	[DDLRegistration(0x3061d37bu)]
+	[DDLRegistration(0x478b5d99u)]
 	public float ModelOffsetDistance { get; set; } = -0.80f;
 
-	[DDLRegistration(0x3061d37bu)]
+	[DDLRegistration(0xc42a737du)]
 	public float MaxHomingAngularSpeed { get; set; } = 0.50f;
 
-	[DDLRegistration(0x3061d37bu)]
+	[DDLRegistration(0x166dbb6au)]
 	public float NoHomingTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0x3061d37bu)]
+	[DDLRegistration(0x455fab52u)]
 	public float TargetSearchDistance { get; set; } = 20.00f;
 
-	[DDLRegistration(0x3061d37bu)]
+	[DDLRegistration(0xe327cd38u)]
 	public float TargetSearchRadius { get; set; } = 35.00f;
 
-	[DDLRegistration(0x3061d37bu)]
+	[DDLRegistration(0x076004bau)]
 	public float MaxFallTime { get; set; } = 1.50f;
 
-	[DDLRegistration(0x3061d37bu)]
+	[DDLRegistration(0x51db2670u)]
 	public float NoLockOnBaseSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0x3061d37bu)]
+	[DDLRegistration(0x4470ba4bu)]
 	public float NoLockOnMaxUpgradedSpeed { get; set; } = 25.00f;
 
-	[DDLRegistration(0x3061d37bu)]
+	[DDLRegistration(0x52b4ee8eu)]
 	public float LockedOnBaseTimeToTarget { get; set; } = 2.25f;
 
-	[DDLRegistration(0x3061d37bu)]
+	[DDLRegistration(0x0ace77c7u)]
 	public float LockedOnMaxUpgradedTimeToTarget { get; set; } = 1.00f;
 
 	public new static ShotMotionTunnelerPrius Create(DDLObject ddl) => new(ddl);

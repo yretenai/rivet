@@ -20,13 +20,13 @@ public class LoggerLevelMissionCheckpointInfo : DDLObjectType, IDDLObjectType<Lo
 		CheckpointName = ddl.GetString(0x71d061f1) ?? CheckpointName;
 	}
 
-	[DDLRegistration(0x06094463u)]
+	[DDLRegistration(0x12beb85du)]
 	public string? LevelName { get; set; } = default;
 
-	[DDLRegistration(0x06094463u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x06094463u)]
+	[DDLRegistration(0x71d061f1u)]
 	public string? CheckpointName { get; set; } = default;
 
 	public static LoggerLevelMissionCheckpointInfo Create(DDLObject ddl) => new(ddl);

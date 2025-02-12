@@ -20,13 +20,13 @@ public class CaptureGridInfo2 : DDLObjectType, IDDLObjectType<CaptureGridInfo2> 
 		Position = ddl.GetObject<DDLVector3>(0xbc2d5985u);
 	}
 
-	[DDLRegistration(0xca8bf775u)]
+	[DDLRegistration(0xd4afead4u)]
 	public RivetAssetId LightbinFullPath { get; set; } = default;
 
-	[DDLRegistration(0xca8bf775u)]
+	[DDLRegistration(0x10243403u)]
 	public RivetAssetId GBufferPath { get; set; } = default;
 
-	[DDLRegistration(0xca8bf775u)]
+	[DDLRegistration(0xbc2d5985u)]
 	public DDLVector3? Position { get; set; } = default;
 
 	public static CaptureGridInfo2 Create(DDLObject ddl) => new(ddl);

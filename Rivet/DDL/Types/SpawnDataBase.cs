@@ -23,22 +23,22 @@ public class SpawnDataBase : ActorSpawnData, IDDLObjectType<SpawnDataBase> {
 		Up = ddl.GetObject<DDLVector3>(0x76fcc3adu);
 	}
 
-	[DDLRegistration(0xf722aca9u, description: "The actor we spawned from.")]
+	[DDLRegistration(0x13ab6550u, description: "The actor we spawned from.")]
 	public uint ParentHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf722aca9u, description: "AssetId for the asset we're spawning, if spawning an instance of an actor file")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning, if spawning an instance of an actor file")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf722aca9u, description: "The zone index we should put the spawned guy into.")]
+	[DDLRegistration(0x0c9266b7u, description: "The zone index we should put the spawned guy into.")]
 	public int ZoneIndex { get; set; } = 0;
 
-	[DDLRegistration(0xf722aca9u)]
+	[DDLRegistration(0xbc2d5985u)]
 	public DDLVector3? Position { get; set; } = default;
 
-	[DDLRegistration(0xf722aca9u)]
+	[DDLRegistration(0xb37847eeu)]
 	public DDLVector3? Facing { get; set; } = default;
 
-	[DDLRegistration(0xf722aca9u)]
+	[DDLRegistration(0x76fcc3adu)]
 	public DDLVector3? Up { get; set; } = default;
 
 	public new static SpawnDataBase Create(DDLObject ddl) => new(ddl);

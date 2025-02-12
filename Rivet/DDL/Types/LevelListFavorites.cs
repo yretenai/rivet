@@ -18,7 +18,7 @@ public class LevelListFavorites : DDLObjectType, IDDLObjectType<LevelListFavorit
 		Levels = ddl.GetDictionary<RivetAssetId, LevelListFavoriteZones>(0xa1522a7e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<LevelListFavoriteZones>(mapId));
 	}
 
-	[DDLRegistration(0x6a77cc08u)]
+	[DDLRegistration(0xa1522a7eu)]
 	public Dictionary<RivetAssetId, LevelListFavoriteZones?> Levels { get; set; } = [];
 
 	public static LevelListFavorites Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class SaveImage : DDLObjectType, IDDLObjectType<SaveImage> {
 		Systems = ddl.GetObjects<SystemSaveDataContainer>(0x6047bb8au);
 	}
 
-	[DDLRegistration(0xa4c47329u)]
+	[DDLRegistration(0x6047bb8au)]
 	public List<SystemSaveDataContainer?> Systems { get; set; } = [];
 
 	public static SaveImage Create(DDLObject ddl) => new(ddl);

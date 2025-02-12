@@ -19,10 +19,10 @@ public class WeaponRefireBurstBeginEvent : EventBase, IDDLObjectType<WeaponRefir
 		OwnerIsLocal = ddl.GetValue<bool>(0xd23b3317u, OwnerIsLocal);
 	}
 
-	[DDLRegistration(0x4ba6803du)]
+	[DDLRegistration(0x0022f6dcu)]
 	public bool OwnerIsHero { get; set; } = false;
 
-	[DDLRegistration(0x4ba6803du)]
+	[DDLRegistration(0xd23b3317u)]
 	public bool OwnerIsLocal { get; set; } = false;
 
 	public new static WeaponRefireBurstBeginEvent Create(DDLObject ddl) => new(ddl);

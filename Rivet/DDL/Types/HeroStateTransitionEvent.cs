@@ -19,10 +19,10 @@ public class HeroStateTransitionEvent : EventBase, IDDLObjectType<HeroStateTrans
 		NextState = ddl.GetString(0x831aa432) ?? NextState;
 	}
 
-	[DDLRegistration(0xdecba9c9u)]
+	[DDLRegistration(0xf6c107b4u)]
 	public string? PreviousState { get; set; } = default;
 
-	[DDLRegistration(0xdecba9c9u)]
+	[DDLRegistration(0x831aa432u)]
 	public string? NextState { get; set; } = default;
 
 	public new static HeroStateTransitionEvent Create(DDLObject ddl) => new(ddl);

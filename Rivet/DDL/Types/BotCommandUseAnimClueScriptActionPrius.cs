@@ -21,16 +21,16 @@ public class BotCommandUseAnimClueScriptActionPrius : DDLObjectType, IDDLObjectT
 		GotoStopForHero = ddl.GetValue<bool>(0x4b6256c2u, GotoStopForHero);
 	}
 
-	[DDLRegistration(0x2943bcc2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0x2943bcc2u)]
+	[DDLRegistration(0x23cc44cdu)]
 	public MovementStyleGame MoveStyle { get; set; } = MovementStyleGame.Walk;
 
-	[DDLRegistration(0x2943bcc2u)]
+	[DDLRegistration(0x82a27e45u)]
 	public bool GotoIgnoreHero { get; set; } = false;
 
-	[DDLRegistration(0x2943bcc2u)]
+	[DDLRegistration(0x4b6256c2u)]
 	public bool GotoStopForHero { get; set; } = false;
 
 	public static BotCommandUseAnimClueScriptActionPrius Create(DDLObject ddl) => new(ddl);

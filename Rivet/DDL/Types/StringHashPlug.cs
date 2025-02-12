@@ -18,7 +18,7 @@ public class StringHashPlug : DDLObjectType, IDDLObjectType<StringHashPlug> {
 		Value = ddl.GetValue<uint>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x8377fed3u)]
+	[DDLRegistration(0x042494f5u)]
 	public uint Value { get; set; } = 0x00000000;
 
 	public static StringHashPlug Create(DDLObject ddl) => new(ddl);

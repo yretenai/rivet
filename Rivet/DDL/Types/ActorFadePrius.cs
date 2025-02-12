@@ -23,22 +23,22 @@ public class ActorFadePrius : DDLObjectType, IDDLObjectType<ActorFadePrius> {
 		FadeEffect = ddl.GetEnum<x0c19f3ae>(0x227c2ffbu, x0c19f3aeValues.Lookup);
 	}
 
-	[DDLRegistration(0x84ba0b8du)]
+	[DDLRegistration(0xc2c56073u)]
 	public float FadeInTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x84ba0b8du)]
+	[DDLRegistration(0xf2879affu)]
 	public float FadeOutTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x84ba0b8du)]
+	[DDLRegistration(0x7296be3fu)]
 	public bool DestroyWhenFadedOut { get; set; } = true;
 
-	[DDLRegistration(0x84ba0b8du)]
+	[DDLRegistration(0x87186102u)]
 	public bool SkipWhenOccluded { get; set; } = true;
 
-	[DDLRegistration(0x84ba0b8du)]
+	[DDLRegistration(0x9d571f5au)]
 	public float MaxVisiblePixelPercent { get; set; } = 0.05f;
 
-	[DDLRegistration(0x84ba0b8du)]
+	[DDLRegistration(0x227c2ffbu)]
 	public x0c19f3ae FadeEffect { get; set; } = x0c19f3ae.Alpha;
 
 	public static ActorFadePrius Create(DDLObject ddl) => new(ddl);

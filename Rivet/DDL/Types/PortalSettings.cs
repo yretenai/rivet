@@ -23,22 +23,22 @@ public class PortalSettings : DDLObjectType, IDDLObjectType<PortalSettings> {
 		MaxPortalsToWarn = ddl.GetValue<uint>(0x8086c714u, MaxPortalsToWarn);
 	}
 
-	[DDLRegistration(0x3be60a53u, description: "Enable system debug draw.")]
+	[DDLRegistration(0x6020521bu, description: "Enable system debug draw.")]
 	public bool DebugDraw { get; set; } = false;
 
-	[DDLRegistration(0x3be60a53u, description: "Enable offscreen texture rendering for portals.")]
+	[DDLRegistration(0x8c124894u, description: "Enable offscreen texture rendering for portals.")]
 	public bool RenderPortals { get; set; } = true;
 
-	[DDLRegistration(0x3be60a53u, description: "Update view for offscreen texture rendering for portals.")]
+	[DDLRegistration(0xec6cfcaeu, description: "Update view for offscreen texture rendering for portals.")]
 	public bool UpdatePortalRendering { get; set; } = true;
 
-	[DDLRegistration(0x3be60a53u, description: "Debug only - multiplier for portal resolution.")]
+	[DDLRegistration(0x6ff88051u, description: "Debug only - multiplier for portal resolution.")]
 	public float ResolutionMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3be60a53u, description: "Number of phys query user datas per frame for casting through portals")]
+	[DDLRegistration(0x81b8b647u, description: "Number of phys query user datas per frame for casting through portals")]
 	public uint CastUserDataCount { get; set; } = 0x00000400;
 
-	[DDLRegistration(0x3be60a53u, description: "Show a performance warning if more than this many portals are activated (0 = no maximum)")]
+	[DDLRegistration(0x8086c714u, description: "Show a performance warning if more than this many portals are activated (0 = no maximum)")]
 	public uint MaxPortalsToWarn { get; set; } = 0x00000000;
 
 	public static PortalSettings Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class WeaponLevelDataListItem : DDLObjectType, IDDLObjectType<WeaponLevel
 		UpgradeList = ddl.GetObjects<WeaponUpgradeListItem>(0x63d89b84u);
 	}
 
-	[DDLRegistration(0x89e3c4e9u, "XP Required")]
+	[DDLRegistration(0xd3bfaa63u, "XP Required")]
 	public uint XPRequired { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x89e3c4e9u, "Upgrade List")]
+	[DDLRegistration(0x63d89b84u, "Upgrade List")]
 	public List<WeaponUpgradeListItem?> UpgradeList { get; set; } = [];
 
 	public static WeaponLevelDataListItem Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class AnimateShaderConstantActionPrius : DDLObjectType, IDDLObjectType<An
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x7a80862fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0x7a80862fu, description: "The material/materialgraph asset whose constant should be animated. The composite material/materialgraph must already be present on the target actor.")]
+	[DDLRegistration(0xc18bd04fu, description: "The material/materialgraph asset whose constant should be animated. The composite material/materialgraph must already be present on the target actor.")]
 	public RivetAssetId Shader { get; set; } = default;
 
-	[DDLRegistration(0x7a80862fu)]
+	[DDLRegistration(0xc6991700u)]
 	public string? ConstantName { get; set; } = default;
 
-	[DDLRegistration(0x7a80862fu)]
+	[DDLRegistration(0x651c34d0u)]
 	public float StartValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7a80862fu)]
+	[DDLRegistration(0x5550361fu)]
 	public float EndValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7a80862fu)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 1.00f;
 
 	public static AnimateShaderConstantActionPrius Create(DDLObject ddl) => new(ddl);

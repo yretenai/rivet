@@ -19,10 +19,10 @@ public class VisualEffectTransform : DDLObjectType, IDDLObjectType<VisualEffectT
 		Offset = ddl.GetObject<VisualEffectOffset>(0x677284b7u);
 	}
 
-	[DDLRegistration(0xfb1dcb46u)]
+	[DDLRegistration(0x5caab88du)]
 	public VisualEffectAngles? Angles { get; set; } = default;
 
-	[DDLRegistration(0xfb1dcb46u)]
+	[DDLRegistration(0x677284b7u)]
 	public VisualEffectOffset? Offset { get; set; } = default;
 
 	public static VisualEffectTransform Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class StatusEffectsData : DDLObjectType, IDDLObjectType<StatusEffectsData
 		Effects = ddl.GetObjects<StatusEffectWrapper>(0x49e15f92u);
 	}
 
-	[DDLRegistration(0x3436174eu, description: "This name will get passed to the conduit so you can filter and do effects for this emitter.")]
+	[DDLRegistration(0x27422a42u, description: "This name will get passed to the conduit so you can filter and do effects for this emitter.")]
 	public string? EmitterName { get; set; } = default;
 
-	[DDLRegistration(0x3436174eu, description: "Optional. Apply this shader to the actor that's emitting.")]
+	[DDLRegistration(0xc18bd04fu, description: "Optional. Apply this shader to the actor that's emitting.")]
 	public RivetAssetId Shader { get; set; } = default;
 
-	[DDLRegistration(0x3436174eu)]
+	[DDLRegistration(0x49e15f92u)]
 	public List<StatusEffectWrapper?> Effects { get; set; } = [];
 
 	public static StatusEffectsData Create(DDLObject ddl) => new(ddl);

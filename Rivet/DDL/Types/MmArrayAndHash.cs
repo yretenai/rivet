@@ -19,10 +19,10 @@ public class MmArrayAndHash : DDLObjectType, IDDLObjectType<MmArrayAndHash> {
 		Array = ddl.GetObjects<MmLeaf>(0xb85f2276u);
 	}
 
-	[DDLRegistration(0x1ad64495u)]
+	[DDLRegistration(0xe128a208u)]
 	public Dictionary<RivetAssetId, MmLeaf?> Hash { get; set; } = [];
 
-	[DDLRegistration(0x1ad64495u)]
+	[DDLRegistration(0xb85f2276u)]
 	public List<MmLeaf?> Array { get; set; } = [];
 
 	public static MmArrayAndHash Create(DDLObject ddl) => new(ddl);

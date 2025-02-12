@@ -20,13 +20,13 @@ public class HeroSingleSpawnPointPrius : DDLObjectType, IDDLObjectType<HeroSingl
 		HasOpenSpace = ddl.GetValue<bool>(0x72bbda77u, HasOpenSpace);
 	}
 
-	[DDLRegistration(0xa0b12de4u, description: "Auto-saved as the last position")]
+	[DDLRegistration(0x725d6dc6u, description: "Auto-saved as the last position")]
 	public bool AutoCheckpoint { get; set; } = false;
 
-	[DDLRegistration(0xa0b12de4u, description: "Minimum distance from spawn point for auto-checkpointing (-1 means infinite distance)")]
+	[DDLRegistration(0x4513efdbu, description: "Minimum distance from spawn point for auto-checkpointing (-1 means infinite distance)")]
 	public float AutoCheckpointRadius { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa0b12de4u, description: "Allow player to play respawns that require a lot of open space")]
+	[DDLRegistration(0x72bbda77u, description: "Allow player to play respawns that require a lot of open space")]
 	public bool HasOpenSpace { get; set; } = true;
 
 	public static HeroSingleSpawnPointPrius Create(DDLObject ddl) => new(ddl);

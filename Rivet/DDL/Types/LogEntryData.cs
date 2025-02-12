@@ -21,16 +21,16 @@ public class LogEntryData : DDLObjectType, IDDLObjectType<LogEntryData> {
 		Data = ddl.GetObjects<LogInfo>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0xb2fa0f5du, description: "Raw actor handle information")]
+	[DDLRegistration(0x8bb67f68u, description: "Raw actor handle information")]
 	public uint ActorHandleRaw { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb2fa0f5du, description: "Name of the system that spawned this message")]
+	[DDLRegistration(0xa5f43c20u, description: "Name of the system that spawned this message")]
 	public x5578becf SystemName { get; set; } = x5578becf.LogSystemUnknown;
 
-	[DDLRegistration(0xb2fa0f5du)]
+	[DDLRegistration(0xbac01e3au)]
 	public xb0ef2921 State { get; set; } = xb0ef2921.NotInitialized;
 
-	[DDLRegistration(0xb2fa0f5du)]
+	[DDLRegistration(0x9d6333d3u)]
 	public List<LogInfo?> Data { get; set; } = [];
 
 	public static LogEntryData Create(DDLObject ddl) => new(ddl);

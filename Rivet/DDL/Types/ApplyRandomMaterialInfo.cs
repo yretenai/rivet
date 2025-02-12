@@ -18,7 +18,7 @@ public class ApplyRandomMaterialInfo : DDLObjectType, IDDLObjectType<ApplyRandom
 		Material = ddl.GetValue<RivetAssetId>(0x86bfc8e5u, Material);
 	}
 
-	[DDLRegistration(0x9ef4f104u)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public RivetAssetId Material { get; set; } = default;
 
 	public static ApplyRandomMaterialInfo Create(DDLObject ddl) => new(ddl);

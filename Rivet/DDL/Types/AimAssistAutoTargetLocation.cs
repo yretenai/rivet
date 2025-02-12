@@ -25,28 +25,28 @@ public class AimAssistAutoTargetLocation : DDLObjectType, IDDLObjectType<AimAssi
 		LocationType = ddl.GetEnum<x80286938>(0xc3db52f8u, x80286938Values.Lookup);
 	}
 
-	[DDLRegistration(0x6734eaa9u, "Parent Assist Zone")]
+	[DDLRegistration(0x951f65eeu, "Parent Assist Zone")]
 	public int AssistZoneParent { get; set; } = -1;
 
-	[DDLRegistration(0x6734eaa9u, "Facing Angle")]
+	[DDLRegistration(0xb2c98628u, "Facing Angle")]
 	public float FaceAngle { get; set; } = 180.00f;
 
-	[DDLRegistration(0x6734eaa9u, "Override Range")]
+	[DDLRegistration(0xa393c43bu, "Override Range")]
 	public float OverrideRange { get; set; } = -1.00f;
 
-	[DDLRegistration(0x6734eaa9u, "Override Angle")]
+	[DDLRegistration(0x3095db7bu, "Override Angle")]
 	public float OverrideAngle { get; set; } = -1.00f;
 
-	[DDLRegistration(0x6734eaa9u, "Require Body LOS")]
+	[DDLRegistration(0xb49e6b43u, "Require Body LOS")]
 	public bool RequireBodyVisible { get; set; } = false;
 
-	[DDLRegistration(0x6734eaa9u, "Require Head LOS")]
+	[DDLRegistration(0xec3ac2bbu, "Require Head LOS")]
 	public bool RequireHeadVisible { get; set; } = false;
 
-	[DDLRegistration(0x6734eaa9u, "Fallback Only")]
+	[DDLRegistration(0x10937c5eu, "Fallback Only")]
 	public bool OnlyAsFallback { get; set; } = false;
 
-	[DDLRegistration(0x6734eaa9u, "Location Type")]
+	[DDLRegistration(0xc3db52f8u, "Location Type")]
 	public x80286938 LocationType { get; set; } = x80286938.CenterOfMass;
 
 	public static AimAssistAutoTargetLocation Create(DDLObject ddl) => new(ddl);

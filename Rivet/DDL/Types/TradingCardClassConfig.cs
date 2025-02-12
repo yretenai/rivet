@@ -20,13 +20,13 @@ public class TradingCardClassConfig : ConfigBase, IDDLObjectType<TradingCardClas
 		ClassC = ddl.GetObject<ClassModifierDef>(0x63f2740cu);
 	}
 
-	[DDLRegistration(0xb0c9dd34u, "Modifiers for player class A")]
+	[DDLRegistration(0x8dfc1520u, "Modifiers for player class A")]
 	public ClassModifierDef? ClassA { get; set; } = default;
 
-	[DDLRegistration(0xb0c9dd34u, "Modifiers for player class B")]
+	[DDLRegistration(0x14f5449au, "Modifiers for player class B")]
 	public ClassModifierDef? ClassB { get; set; } = default;
 
-	[DDLRegistration(0xb0c9dd34u, "Modifiers for player class C")]
+	[DDLRegistration(0x63f2740cu, "Modifiers for player class C")]
 	public ClassModifierDef? ClassC { get; set; } = default;
 
 	public new static TradingCardClassConfig Create(DDLObject ddl) => new(ddl);

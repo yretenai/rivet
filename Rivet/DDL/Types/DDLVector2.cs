@@ -19,10 +19,10 @@ public class DDLVector2 : DDLObjectType, IDDLObjectType<DDLVector2> {
 		Y = ddl.GetValue<float>(0x2934711bu, Y);
 	}
 
-	[DDLRegistration(0xa95aa937u)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa95aa937u)]
+	[DDLRegistration(0x2934711bu)]
 	public float Y { get; set; } = 0.00f;
 
 	public static DDLVector2 Create(DDLObject ddl) => new(ddl);

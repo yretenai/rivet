@@ -18,7 +18,7 @@ public class OutputPlugFloat : OutputPlugBaseDef, IDDLObjectType<OutputPlugFloat
 		Value = ddl.GetObject<FloatPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x126376e9u)]
+	[DDLRegistration(0x042494f5u)]
 	public FloatPlug? Value { get; set; } = default;
 
 	public new static OutputPlugFloat Create(DDLObject ddl) => new(ddl);

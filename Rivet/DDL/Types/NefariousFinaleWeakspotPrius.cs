@@ -19,10 +19,10 @@ public class NefariousFinaleWeakspotPrius : WeakspotPrius, IDDLObjectType<Nefari
 		OtherWeakspotJoints = ddl.GetStrings(0x8121d393u);
 	}
 
-	[DDLRegistration(0x4ee1a512u, "Require Hero")]
+	[DDLRegistration(0xad1dcf36u, "Require Hero")]
 	public bool RequireHero { get; set; } = true;
 
-	[DDLRegistration(0x4ee1a512u)]
+	[DDLRegistration(0x8121d393u)]
 	public List<string?> OtherWeakspotJoints { get; set; } = [];
 
 	public new static NefariousFinaleWeakspotPrius Create(DDLObject ddl) => new(ddl);

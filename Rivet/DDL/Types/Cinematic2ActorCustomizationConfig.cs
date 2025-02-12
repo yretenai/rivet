@@ -25,28 +25,28 @@ public class Cinematic2ActorCustomizationConfig : ConfigBase, IDDLObjectType<Cin
 		AnimSkeletonInfos = ddl.GetObjects<AnimSkeletonInfo>(0xfd3c800au);
 	}
 
-	[DDLRegistration(0xd8b57470u, description: "List of actor names which are customized and auto taken over at runtime")]
+	[DDLRegistration(0xe8913841u, description: "List of actor names which are customized and auto taken over at runtime")]
 	public List<string?> CineActorNames { get; set; } = [];
 
-	[DDLRegistration(0xd8b57470u, description: "A gameplay-defined set of tags used to determine cinematic behavior at runtime. like hide all weapon shots...etc")]
+	[DDLRegistration(0x835700bau, description: "A gameplay-defined set of tags used to determine cinematic behavior at runtime. like hide all weapon shots...etc")]
 	public List<string?> CineTagsDef { get; set; } = [];
 
-	[DDLRegistration(0xd8b57470u, description: "A gameplay-defined set of tags used to determine actor behavior at runtime.")]
+	[DDLRegistration(0xa07355b3u, description: "A gameplay-defined set of tags used to determine actor behavior at runtime.")]
 	public List<string?> CineActorTagsDef { get; set; } = [];
 
-	[DDLRegistration(0xd8b57470u, description: "A gameplay-defined set of tags used to determine which tracks play at runtime.")]
+	[DDLRegistration(0x1ff747ecu, description: "A gameplay-defined set of tags used to determine which tracks play at runtime.")]
 	public List<string?> CineTrackTagsDef { get; set; } = [];
 
-	[DDLRegistration(0xd8b57470u, description: "A gameplay-defined set of tags used to determine behavior at runtime.")]
+	[DDLRegistration(0x74b9287cu, description: "A gameplay-defined set of tags used to determine behavior at runtime.")]
 	public List<string?> CineActionTagsDef { get; set; } = [];
 
-	[DDLRegistration(0xd8b57470u, description: "A gameplay-defined list of items to add to the menu in the cinematic editor; these will be displayed and selecting a menu item will be forwarded to the game.")]
+	[DDLRegistration(0x3d07821fu, description: "A gameplay-defined list of items to add to the menu in the cinematic editor; these will be displayed and selecting a menu item will be forwarded to the game.")]
 	public List<CineMenuOption?> CineOptionsMenu { get; set; } = [];
 
-	[DDLRegistration(0xd8b57470u, description: "A set of data that defines given maya name and the track tags associated with it. most customized to least customized order")]
+	[DDLRegistration(0x2d1628f0u, description: "A set of data that defines given maya name and the track tags associated with it. most customized to least customized order")]
 	public List<MayaNameTrackTags?> MayaNameTrackTags { get; set; } = [];
 
-	[DDLRegistration(0xd8b57470u, description: "A set of data that defines which skeleton is used in maya for a customized actor.")]
+	[DDLRegistration(0xfd3c800au, description: "A set of data that defines which skeleton is used in maya for a customized actor.")]
 	public List<AnimSkeletonInfo?> AnimSkeletonInfos { get; set; } = [];
 
 	public new static Cinematic2ActorCustomizationConfig Create(DDLObject ddl) => new(ddl);

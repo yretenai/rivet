@@ -18,7 +18,7 @@ public class ArachnodroidDamageEvent : EventBase, IDDLObjectType<ArachnodroidDam
 		Damager = ddl.GetValue<uint>(0x29f67982u, Damager);
 	}
 
-	[DDLRegistration(0xbbe9b07au)]
+	[DDLRegistration(0x29f67982u)]
 	public uint Damager { get; set; } = 0x00000000;
 
 	public new static ArachnodroidDamageEvent Create(DDLObject ddl) => new(ddl);

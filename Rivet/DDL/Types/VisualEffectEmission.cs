@@ -29,40 +29,40 @@ public class VisualEffectEmission : DDLObjectType, IDDLObjectType<VisualEffectEm
 		InputPort_SpawnDelay = ddl.GetObject<VisualEffectMinMax>(0x00d8163fu);
 	}
 
-	[DDLRegistration(0x837e348cu, "Transform", "Set/keyframe properties of the emitter itself, relative to the owning actor's frame-of-reference.<br><b>Angles:</b> roll, pitch, yaw rotations<br><b>Offset:</b> X, Y, Z translation")]
+	[DDLRegistration(0x98a0c43au, "Transform", "Set/keyframe properties of the emitter itself, relative to the owning actor's frame-of-reference.<br><b>Angles:</b> roll, pitch, yaw rotations<br><b>Offset:</b> X, Y, Z translation")]
 	public VisualEffectTransform? InputPort_Transform { get; set; } = default;
 
-	[DDLRegistration(0x837e348cu, "Random Seed", "Each number represents a dice roll of different results for randomized attributes.<br>Try different seeds when you aren't getting the behavior/distribution you want.<br>Especially useful for guaranteeing a certain performances, when Randomize Instance is turned OFF.")]
+	[DDLRegistration(0x01c11433u, "Random Seed", "Each number represents a dice roll of different results for randomized attributes.<br>Try different seeds when you aren't getting the behavior/distribution you want.<br>Especially useful for guaranteeing a certain performances, when Randomize Instance is turned OFF.")]
 	public VisualEffectFloat? InputPort_RandomSeed { get; set; } = default;
 
-	[DDLRegistration(0x837e348cu, "Emitter Spawn Scales", "Scales the particles inside the emitter. Can be animated over emitter lifetime with the curve editor.")]
+	[DDLRegistration(0xe7821d9eu, "Emitter Spawn Scales", "Scales the particles inside the emitter. Can be animated over emitter lifetime with the curve editor.")]
 	public VisualEffectFloat3KeyFrames? Float3KeyFrames_EmissionSpawnScales { get; set; } = default;
 
-	[DDLRegistration(0x837e348cu, "Emitter Rotation")]
+	[DDLRegistration(0x665644adu, "Emitter Rotation")]
 	public VisualEffectFloat3KeyFrames? Float3KeyFrames_EmissionRotation { get; set; } = default;
 
-	[DDLRegistration(0x837e348cu, "Emitter Position")]
+	[DDLRegistration(0x090638a9u, "Emitter Position")]
 	public VisualEffectFloat3KeyFrames? Float3KeyFrames_EmissionPosition { get; set; } = default;
 
-	[DDLRegistration(0x837e348cu, "Emitter LifeTime")]
+	[DDLRegistration(0x55ea52d3u, "Emitter LifeTime")]
 	public VisualEffectMinMax? InputPort_LifeTime { get; set; } = default;
 
-	[DDLRegistration(0x837e348cu, "Particle Spawn Per-Meter")]
+	[DDLRegistration(0x46f2a012u, "Particle Spawn Per-Meter")]
 	public VisualEffectFloatKeyFrames? FloatKeyFrames_DistanceSpawnRate { get; set; } = default;
 
-	[DDLRegistration(0x837e348cu, "Particle Spawn Burst")]
+	[DDLRegistration(0xca528638u, "Particle Spawn Burst")]
 	public VisualEffectFloatKeyFrames? FloatKeyFrames_EmissionSpawnBurst { get; set; } = default;
 
-	[DDLRegistration(0x837e348cu, "Particle Spawn Rate")]
+	[DDLRegistration(0x01fcfc61u, "Particle Spawn Rate")]
 	public VisualEffectFloatKeyFrames? FloatKeyFrames_EmissionSpawnRate { get; set; } = default;
 
-	[DDLRegistration(0x837e348cu, "Particle Spawn Gap")]
+	[DDLRegistration(0x3a0dc2a6u, "Particle Spawn Gap")]
 	public VisualEffectFloatKeyFrames? FloatKeyFrames_EmissionSpawnGap { get; set; } = default;
 
-	[DDLRegistration(0x837e348cu, "Spawn Style Scales")]
+	[DDLRegistration(0x7b4ab9e3u, "Spawn Style Scales")]
 	public VisualEffectFloat3KeyFrames? Float3KeyFrames_SpawnStyleScales { get; set; } = default;
 
-	[DDLRegistration(0x837e348cu, "Spawn Delay")]
+	[DDLRegistration(0x00d8163fu, "Spawn Delay")]
 	public VisualEffectMinMax? InputPort_SpawnDelay { get; set; } = default;
 
 	public static VisualEffectEmission Create(DDLObject ddl) => new(ddl);

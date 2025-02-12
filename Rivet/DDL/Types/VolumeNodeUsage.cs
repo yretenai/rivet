@@ -38,67 +38,67 @@ public class VolumeNodeUsage : DDLObjectType, IDDLObjectType<VolumeNodeUsage> {
 		RayTracingBlocker = ddl.GetValue<bool>(0x56a46210u, RayTracingBlocker);
 	}
 
-	[DDLRegistration(0x41aa7d55u, "Indoor - Lighting", "Optimization for keylight shadow casting. Any models that are all or mostly inside an Indoor volume will not cast shadows, and instead the volume itself will render as a (much cheaper) shadow caster.")]
+	[DDLRegistration(0x2de2f34bu, "Indoor - Lighting", "Optimization for keylight shadow casting. Any models that are all or mostly inside an Indoor volume will not cast shadows, and instead the volume itself will render as a (much cheaper) shadow caster.")]
 	public bool Indoor { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, "Fully Indoor - Lighting", "Optimization for keylight shadow casting. When the camera is inside a FullyIndoor volume, the keylight and its csm shadows are fully disabled.")]
+	[DDLRegistration(0xaf4db995u, "Fully Indoor - Lighting", "Optimization for keylight shadow casting. When the camera is inside a FullyIndoor volume, the keylight and its csm shadows are fully disabled.")]
 	public bool FullyIndoor { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "This defines an area where the keylight can enter a kIndoor volume. Any model that intersects the region of light coming through this window will not be flagged as indoors.")]
+	[DDLRegistration(0x1b62d16au, description: "This defines an area where the keylight can enter a kIndoor volume. Any model that intersects the region of light coming through this window will not be flagged as indoors.")]
 	public bool IndoorWindow { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u)]
+	[DDLRegistration(0x2ce58827u)]
 	public bool NavMeshGen { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "Weather particles and wetness effects are blocked within WeatherBlocker volumes, with a small fadeout zone around the edges.")]
+	[DDLRegistration(0xa470570cu, description: "Weather particles and wetness effects are blocked within WeatherBlocker volumes, with a small fadeout zone around the edges.")]
 	public bool WeatherBlocker { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "Emissive blocker volumes can be used to block material emissive output, in conjunction with the material node Emissive Blockers")]
+	[DDLRegistration(0x69c4e339u, description: "Emissive blocker volumes can be used to block material emissive output, in conjunction with the material node Emissive Blockers")]
 	public bool EmissiveBlocker { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "A PostEffects volume allows many of the Atmosphere attributes to be overridden locally.")]
+	[DDLRegistration(0xc37b570bu, description: "A PostEffects volume allows many of the Atmosphere attributes to be overridden locally.")]
 	public bool PostEffects { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "Using the attached material or texture, this volumes tints the color of light that passes through it.")]
+	[DDLRegistration(0xe4583bfcu, description: "Using the attached material or texture, this volumes tints the color of light that passes through it.")]
 	public bool TranslucentShadow { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "For LightGridCapture - any samples inside a ForceEmbeddedSamples volume will be flagged as embedded regardless of the results of the automatic embedded determination.")]
+	[DDLRegistration(0x29b2db44u, description: "For LightGridCapture - any samples inside a ForceEmbeddedSamples volume will be flagged as embedded regardless of the results of the automatic embedded determination.")]
 	public bool ForceEmbeddedSamples { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "For LightGridCapture - any samples inside an AvoidEmbeddedSamples volume will not be flagged as embedded regardless of the results of the automatic embedded determination.")]
+	[DDLRegistration(0x44bb063bu, description: "For LightGridCapture - any samples inside an AvoidEmbeddedSamples volume will not be flagged as embedded regardless of the results of the automatic embedded determination.")]
 	public bool AvoidEmbeddedSamples { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "For LightGridCapture - Indicates an area that should be avoided when choosing a sample location. Use to push samples away from an area.")]
+	[DDLRegistration(0x5dba4ab0u, description: "For LightGridCapture - Indicates an area that should be avoided when choosing a sample location. Use to push samples away from an area.")]
 	public bool LightGridSampleAvoid { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "For LightGridCapture - when samples determine which of their neighbors are visible, this volume will block their line of sight. This can reduce light leaks around windows by keeping samples from blending with their neighbors on the other side of the volume.")]
+	[DDLRegistration(0x95b68545u, description: "For LightGridCapture - when samples determine which of their neighbors are visible, this volume will block their line of sight. This can reduce light leaks around windows by keeping samples from blending with their neighbors on the other side of the volume.")]
 	public bool LightGridPathBlocker { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "For LightGridCapture - when a sample computes its occlusion plane, if one of these volumes is nearby it will ignore all the nearby geometry and instead align itself to the volume's largest side.")]
+	[DDLRegistration(0xaf220791u, description: "For LightGridCapture - when a sample computes its occlusion plane, if one of these volumes is nearby it will ignore all the nearby geometry and instead align itself to the volume's largest side.")]
 	public bool LightGridForceOccluderPlane { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "Select a volume with this attribute and hit 'Alt + L' to create new LightGrids from all potential grids that intersects the volume, if they do not already exist.")]
+	[DDLRegistration(0xda49e6f1u, description: "Select a volume with this attribute and hit 'Alt + L' to create new LightGrids from all potential grids that intersects the volume, if they do not already exist.")]
 	public bool LightGridCreator { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "Select a volume with this attribute and hit 'Shift + Alt + L' to select all LightGrids that intersects the volume.")]
+	[DDLRegistration(0x5af7b0b4u, description: "Select a volume with this attribute and hit 'Shift + Alt + L' to select all LightGrids that intersects the volume.")]
 	public bool LightGridSelector { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u)]
+	[DDLRegistration(0xe260d81bu)]
 	public bool Water { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "Base of volume will set the ground level for distant lighting calculations within the volume.")]
+	[DDLRegistration(0xc7c19881u, description: "Base of volume will set the ground level for distant lighting calculations within the volume.")]
 	public bool DistantLightingGround { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "Base of volume will set the mid level for distant lighting calculations within the volume.")]
+	[DDLRegistration(0x7a43220au, description: "Base of volume will set the mid level for distant lighting calculations within the volume.")]
 	public bool DistantLightingMid { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "Top of volume will set the roof level for distant lighting calculations within the volume.")]
+	[DDLRegistration(0xab7d8ce1u, description: "Top of volume will set the roof level for distant lighting calculations within the volume.")]
 	public bool DistantLightingRoof { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "Samples in this volume will be treated as embedded and will not contribute to distant lighting.")]
+	[DDLRegistration(0x0081911fu, description: "Samples in this volume will be treated as embedded and will not contribute to distant lighting.")]
 	public bool DistantLightingForceEmbedded { get; set; } = false;
 
-	[DDLRegistration(0x41aa7d55u, description: "If set, this volume can be used to block ray-tracing.")]
+	[DDLRegistration(0x56a46210u, description: "If set, this volume can be used to block ray-tracing.")]
 	public bool RayTracingBlocker { get; set; } = false;
 
 	public static VolumeNodeUsage Create(DDLObject ddl) => new(ddl);

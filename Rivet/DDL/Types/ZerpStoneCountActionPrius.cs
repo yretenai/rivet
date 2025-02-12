@@ -18,7 +18,7 @@ public class ZerpStoneCountActionPrius : DDLObjectType, IDDLObjectType<ZerpStone
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xa0d308fdu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
 	public static ZerpStoneCountActionPrius Create(DDLObject ddl) => new(ddl);

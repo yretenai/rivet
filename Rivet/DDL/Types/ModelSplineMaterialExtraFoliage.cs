@@ -20,13 +20,13 @@ public class ModelSplineMaterialExtraFoliage : DDLObjectType, IDDLObjectType<Mod
 		AverageColor = ddl.GetObject<DDLVector3>(0x9f7cbe08u);
 	}
 
-	[DDLRegistration(0x4aa50b37u, "Transmittance")]
+	[DDLRegistration(0x6e91413eu, "Transmittance")]
 	public float Transmittance { get; set; } = 0.50f;
 
-	[DDLRegistration(0x4aa50b37u, "LightWrap")]
+	[DDLRegistration(0x9aaf5b2eu, "LightWrap")]
 	public float LightWrap { get; set; } = 0.50f;
 
-	[DDLRegistration(0x4aa50b37u, "Average Color")]
+	[DDLRegistration(0x9f7cbe08u, "Average Color")]
 	public DDLVector3? AverageColor { get; set; } = default;
 
 	public static ModelSplineMaterialExtraFoliage Create(DDLObject ddl) => new(ddl);

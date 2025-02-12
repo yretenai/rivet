@@ -29,40 +29,40 @@ public class CurveFollowerAutoPrius : DDLObjectType, IDDLObjectType<CurveFollowe
 		DeleteAtEnd = ddl.GetValue<bool>(0x15e49676u, DeleteAtEnd);
 	}
 
-	[DDLRegistration(0x118c96edu, description: "Curve to follow")]
+	[DDLRegistration(0x4eca9176u, description: "Curve to follow")]
 	public RivetAssetId Curve { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x118c96edu, description: "If following a curve that doesn't loop, what do you want to do when an endpoint is reached")]
+	[DDLRegistration(0xc850698fu, description: "If following a curve that doesn't loop, what do you want to do when an endpoint is reached")]
 	public OpenCurveFollowMode OpenCurveFollowMode { get; set; } = OpenCurveFollowMode.OneShot;
 
-	[DDLRegistration(0x118c96edu)]
+	[DDLRegistration(0x16753237u)]
 	public float Speed { get; set; } = 5.00f;
 
-	[DDLRegistration(0x118c96edu, description: "How long to wait at endpoints")]
+	[DDLRegistration(0xe3655ff0u, description: "How long to wait at endpoints")]
 	public float WaitDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x118c96edu, description: "Min dist percentage the transition curve's control points can be from their respective curves (0-1)")]
+	[DDLRegistration(0x6bc5c814u, description: "Min dist percentage the transition curve's control points can be from their respective curves (0-1)")]
 	public float TransitionMinDistFactor { get; set; } = 0.20f;
 
-	[DDLRegistration(0x118c96edu, description: "Max dist percentage the transition curve's control points can be from their respective curves (0-1)")]
+	[DDLRegistration(0x2b8ab062u, description: "Max dist percentage the transition curve's control points can be from their respective curves (0-1)")]
 	public float TransitionMaxDistFactor { get; set; } = 0.50f;
 
-	[DDLRegistration(0x118c96edu, description: "Sharpness angle percentage for entering and exiting the transition curve (0-1)")]
+	[DDLRegistration(0xd5bc1eb7u, description: "Sharpness angle percentage for entering and exiting the transition curve (0-1)")]
 	public float TransitionAngleFactor { get; set; } = 0.25f;
 
-	[DDLRegistration(0x118c96edu, description: "Max turn rate to turn when transitioning between curves (deg/sec)")]
+	[DDLRegistration(0x0906ec33u, description: "Max turn rate to turn when transitioning between curves (deg/sec)")]
 	public float TransitionMaxTurnRate { get; set; } = 45.00f;
 
-	[DDLRegistration(0x118c96edu)]
+	[DDLRegistration(0x5c7de3d6u)]
 	public bool StartOnInit { get; set; } = true;
 
-	[DDLRegistration(0x118c96edu, description: "Start at end point and go back toward start point")]
+	[DDLRegistration(0x592685f7u, description: "Start at end point and go back toward start point")]
 	public bool StartReversed { get; set; } = false;
 
-	[DDLRegistration(0x118c96edu, description: "Start at the closest point on the curve rather than the start of the path.")]
+	[DDLRegistration(0x063fb369u, description: "Start at the closest point on the curve rather than the start of the path.")]
 	public bool StartOnClosestPoint { get; set; } = false;
 
-	[DDLRegistration(0x118c96edu, description: "Delete the actor when it reaches the end of the path.")]
+	[DDLRegistration(0x15e49676u, description: "Delete the actor when it reaches the end of the path.")]
 	public bool DeleteAtEnd { get; set; } = false;
 
 	public static CurveFollowerAutoPrius Create(DDLObject ddl) => new(ddl);

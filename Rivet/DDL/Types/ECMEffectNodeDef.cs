@@ -25,28 +25,28 @@ public class ECMEffectNodeDef : DDLObjectType, IDDLObjectType<ECMEffectNodeDef> 
 		ResponseEventFields = ddl.GetString(0x1338cc16) ?? ResponseEventFields;
 	}
 
-	[DDLRegistration(0x20ec373au)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x20ec373au)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x20ec373au)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x20ec373au)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = false;
 
-	[DDLRegistration(0x20ec373au)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x7d682dac Type { get; set; } = x7d682dac.KeyFrameMod;
 
-	[DDLRegistration(0x20ec373au)]
+	[DDLRegistration(0x322aadceu)]
 	public List<ECMNodeConnection?> Connections { get; set; } = [];
 
-	[DDLRegistration(0x20ec373au, "Enabled")]
+	[DDLRegistration(0x5113d8bcu, "Enabled")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x20ec373au)]
+	[DDLRegistration(0x1338cc16u)]
 	public string? ResponseEventFields { get; set; } = default;
 
 	public static ECMEffectNodeDef Create(DDLObject ddl) => new(ddl);

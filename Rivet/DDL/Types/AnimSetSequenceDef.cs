@@ -29,40 +29,40 @@ public class AnimSetSequenceDef : DDLObjectType, IDDLObjectType<AnimSetSequenceD
 		Transforms = ddl.GetDictionary<RivetAssetId, AnimSetSequenceTransformDef>(0x6828fce6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimSetSequenceTransformDef>(mapId));
 	}
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0x0c5bae2bu)]
 	public float StartTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0xf5a688c4u)]
 	public float EndTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0x078c1b58u)]
 	public List<uint> InitialRandSeed { get; set; } = [];
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0x280451c2u)]
 	public List<AnimSetSequenceVarDef?> InitialVars { get; set; } = [];
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0x6575d7cau)]
 	public List<AnimSetSequenceFilterDef?> InitialFilters { get; set; } = [];
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0xf9127340u)]
 	public List<string?> InitialDrivers { get; set; } = [];
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0xc2907a09u)]
 	public Dictionary<RivetAssetId, AnimSetSequenceVarDef?> Vars { get; set; } = [];
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0x799d04b5u)]
 	public Dictionary<RivetAssetId, AnimSetSequenceFilterDef?> Filters { get; set; } = [];
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0xe5faa03fu)]
 	public Dictionary<RivetAssetId, AnimSetSequenceDriverDef?> Drivers { get; set; } = [];
 
-	[DDLRegistration(0xefd77d5bu)]
+	[DDLRegistration(0x6828fce6u)]
 	public Dictionary<RivetAssetId, AnimSetSequenceTransformDef?> Transforms { get; set; } = [];
 
 	public static AnimSetSequenceDef Create(DDLObject ddl) => new(ddl);

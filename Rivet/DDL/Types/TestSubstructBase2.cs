@@ -18,7 +18,7 @@ public class TestSubstructBase2 : DDLObjectType, IDDLObjectType<TestSubstructBas
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0x6fa30cf2u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
 	public static TestSubstructBase2 Create(DDLObject ddl) => new(ddl);

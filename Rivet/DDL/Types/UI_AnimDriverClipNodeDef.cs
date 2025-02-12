@@ -24,25 +24,25 @@ public class UI_AnimDriverClipNodeDef : DDLObjectType, IDDLObjectType<UI_AnimDri
 		Rate = ddl.GetValue<float>(0xef7cff89u, Rate);
 	}
 
-	[DDLRegistration(0xd4c4d5ebu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xd4c4d5ebu)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd4c4d5ebu)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd4c4d5ebu)]
+	[DDLRegistration(0x12568d7bu)]
 	public x06d701b9 Flags { get; set; } = (x06d701b9) 0x00000000;
 
-	[DDLRegistration(0xd4c4d5ebu, "Name")]
+	[DDLRegistration(0x842d53a9u, "Name")]
 	public string? ClipName { get; set; } = default;
 
-	[DDLRegistration(0xd4c4d5ebu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd4c4d5ebu)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
 	public static UI_AnimDriverClipNodeDef Create(DDLObject ddl) => new(ddl);

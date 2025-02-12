@@ -18,7 +18,7 @@ public class TopiarySprinklerChangeDirectionEvent : EventBase, IDDLObjectType<To
 		IsClockwise = ddl.GetValue<bool>(0x25bf2cebu, IsClockwise);
 	}
 
-	[DDLRegistration(0xe51101dbu)]
+	[DDLRegistration(0x25bf2cebu)]
 	public bool IsClockwise { get; set; } = false;
 
 	public new static TopiarySprinklerChangeDirectionEvent Create(DDLObject ddl) => new(ddl);

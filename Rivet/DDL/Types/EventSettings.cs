@@ -22,19 +22,19 @@ public class EventSettings : DDLObjectType, IDDLObjectType<EventSettings> {
 		ThreadEventHeapSize = ddl.GetValue<int>(0xf6602402u, ThreadEventHeapSize);
 	}
 
-	[DDLRegistration(0xd25568d4u)]
+	[DDLRegistration(0x74f7829fu)]
 	public int InstanceMax { get; set; } = 5120;
 
-	[DDLRegistration(0xd25568d4u)]
+	[DDLRegistration(0xe9e4c138u)]
 	public int DelayInstanceMax { get; set; } = 1024;
 
-	[DDLRegistration(0xd25568d4u)]
+	[DDLRegistration(0x92f8e199u)]
 	public int BucketedInstanceMax { get; set; } = 1024;
 
-	[DDLRegistration(0xd25568d4u)]
+	[DDLRegistration(0x97831ca5u)]
 	public int ThreadInstanceMax { get; set; } = 512;
 
-	[DDLRegistration(0xd25568d4u)]
+	[DDLRegistration(0xf6602402u)]
 	public int ThreadEventHeapSize { get; set; } = 65536;
 
 	public static EventSettings Create(DDLObject ddl) => new(ddl);

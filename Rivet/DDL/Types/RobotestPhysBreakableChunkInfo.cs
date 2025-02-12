@@ -24,25 +24,25 @@ public class RobotestPhysBreakableChunkInfo : DDLObjectType, IDDLObjectType<Robo
 		SpawnStatus = ddl.GetEnum<x8f1591df>(0x8cb8aa02u, x8f1591dfValues.Lookup);
 	}
 
-	[DDLRegistration(0xc8c09b3bu, description: "model_inst ? model_inst->GetModel()->GetAssetName() : '(null)' ")]
+	[DDLRegistration(0x64443d31u, description: "model_inst ? model_inst->GetModel()->GetAssetName() : '(null)' ")]
 	public string? ModelName { get; set; } = default;
 
-	[DDLRegistration(0xc8c09b3bu, description: "actor ? actor->GetAssetName() : '(null)' ")]
+	[DDLRegistration(0xcc4a4d21u, description: "actor ? actor->GetAssetName() : '(null)' ")]
 	public string? ActorName { get; set; } = default;
 
-	[DDLRegistration(0xc8c09b3bu, description: "asset id of the actor spawned, or invalid if spawned from a model instead.")]
+	[DDLRegistration(0xb54bdec6u, description: "asset id of the actor spawned, or invalid if spawned from a model instead.")]
 	public RivetAssetId ActorAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc8c09b3bu, description: "asset id of the model spawned, or invalid if spawned from an actor instead.")]
+	[DDLRegistration(0x61ea29efu, description: "asset id of the model spawned, or invalid if spawned from an actor instead.")]
 	public RivetAssetId ModelAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc8c09b3bu, description: "Whether this is a 'chunk' or 'debris' within the context of the breakable system")]
+	[DDLRegistration(0xf375d0a6u, description: "Whether this is a 'chunk' or 'debris' within the context of the breakable system")]
 	public bool IsDebris { get; set; } = false;
 
-	[DDLRegistration(0xc8c09b3bu, description: "Chunk's bsphere radius.")]
+	[DDLRegistration(0x0504203du, description: "Chunk's bsphere radius.")]
 	public float Radius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc8c09b3bu, description: "Did this chunk spawn or not?")]
+	[DDLRegistration(0x8cb8aa02u, description: "Did this chunk spawn or not?")]
 	public x8f1591df SpawnStatus { get; set; } = x8f1591df.Spawned;
 
 	public static RobotestPhysBreakableChunkInfo Create(DDLObject ddl) => new(ddl);

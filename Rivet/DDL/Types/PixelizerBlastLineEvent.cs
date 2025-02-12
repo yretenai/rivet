@@ -18,7 +18,7 @@ public class PixelizerBlastLineEvent : EventBase, IDDLObjectType<PixelizerBlastL
 		VersionIndex = ddl.GetValue<uint>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0xd429ebe1u)]
+	[DDLRegistration(0x6e091c9au)]
 	public uint VersionIndex { get; set; } = 0x00000000;
 
 	public new static PixelizerBlastLineEvent Create(DDLObject ddl) => new(ddl);

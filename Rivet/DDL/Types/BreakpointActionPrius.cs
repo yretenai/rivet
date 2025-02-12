@@ -22,19 +22,19 @@ public class BreakpointActionPrius : DDLObjectType, IDDLObjectType<BreakpointAct
 		EnableBreakpoint = ddl.GetValue<bool>(0xd02489cbu, EnableBreakpoint);
 	}
 
-	[DDLRegistration(0xdcacdbcau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Deprecated;
 
-	[DDLRegistration(0xdcacdbcau, "Name of breakpoint (displays with breakpoint output)")]
+	[DDLRegistration(0x3aebf9bau, "Name of breakpoint (displays with breakpoint output)")]
 	public string? BreakpointName { get; set; } = default;
 
-	[DDLRegistration(0xdcacdbcau, "Maximum number of times to break, 0 = no limit.")]
+	[DDLRegistration(0x9f1d3b44u, "Maximum number of times to break, 0 = no limit.")]
 	public uint MaxBreakCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdcacdbcau, "Number of initial breaks to ignore before stopping")]
+	[DDLRegistration(0x06583f44u, "Number of initial breaks to ignore before stopping")]
 	public uint IgnoreBreakCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdcacdbcau, description: "If disabled, will simply pass through")]
+	[DDLRegistration(0xd02489cbu, description: "If disabled, will simply pass through")]
 	public bool EnableBreakpoint { get; set; } = true;
 
 	public static BreakpointActionPrius Create(DDLObject ddl) => new(ddl);

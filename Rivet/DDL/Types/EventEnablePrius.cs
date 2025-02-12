@@ -23,22 +23,22 @@ public class EventEnablePrius : DDLObjectType, IDDLObjectType<EventEnablePrius> 
 		ActorList = ddl.GetObjects<IndActorList>(0xd6a1cb3fu);
 	}
 
-	[DDLRegistration(0x9185920au)]
+	[DDLRegistration(0x22fdc666u)]
 	public EventBase? Event { get; set; } = default;
 
-	[DDLRegistration(0x9185920au, "Is a self event?", "Whether the event is sent by us. To help not respond to events broadcast near us.")]
+	[DDLRegistration(0xad9ebd15u, "Is a self event?", "Whether the event is sent by us. To help not respond to events broadcast near us.")]
 	public bool IsSelfEvent { get; set; } = true;
 
-	[DDLRegistration(0x9185920au, "Actor(group) to Enable", "The actor(s) to enable using the Toggle Event when we receive the specified event.")]
+	[DDLRegistration(0x5ffbe5a4u, "Actor(group) to Enable", "The actor(s) to enable using the Toggle Event when we receive the specified event.")]
 	public RivetAssetId EnableActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9185920au, "Actor(group) to Disable", "The actor(s) to disable using the Toggle Event when we receive the specified event.")]
+	[DDLRegistration(0x6d23cf00u, "Actor(group) to Disable", "The actor(s) to disable using the Toggle Event when we receive the specified event.")]
 	public RivetAssetId DisableActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9185920au, "Actor(group) to Toggle", "The actor(s) to toggle using the Toggle Event when we receive the specified event.")]
+	[DDLRegistration(0x4ba269e6u, "Actor(group) to Toggle", "The actor(s) to toggle using the Toggle Event when we receive the specified event.")]
 	public RivetAssetId ToggleActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9185920au, "Alt Individual Actor List (for Prefabs)", "Prefabs don't support actor groups, so if you have more than one actor you will have to use this.")]
+	[DDLRegistration(0xd6a1cb3fu, "Alt Individual Actor List (for Prefabs)", "Prefabs don't support actor groups, so if you have more than one actor you will have to use this.")]
 	public List<IndActorList?> ActorList { get; set; } = [];
 
 	public static EventEnablePrius Create(DDLObject ddl) => new(ddl);

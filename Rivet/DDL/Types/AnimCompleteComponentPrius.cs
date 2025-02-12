@@ -18,7 +18,7 @@ public class AnimCompleteComponentPrius : DDLObjectType, IDDLObjectType<AnimComp
 		AnimCompleteMaps = ddl.GetObjects<AnimCompleteComponentElement>(0xf71b696cu);
 	}
 
-	[DDLRegistration(0xc3200035u)]
+	[DDLRegistration(0xf71b696cu)]
 	public List<AnimCompleteComponentElement?> AnimCompleteMaps { get; set; } = [];
 
 	public static AnimCompleteComponentPrius Create(DDLObject ddl) => new(ddl);

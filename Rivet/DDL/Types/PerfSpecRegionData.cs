@@ -18,7 +18,7 @@ public class PerfSpecRegionData : RegionGameDataBase, IDDLObjectType<PerfSpecReg
 		ImpostorDrawDistance30Hz = ddl.GetValue<float>(0xac7eaba9u, ImpostorDrawDistance30Hz);
 	}
 
-	[DDLRegistration(0xb51ff4cau, "Impostor Draw Distance", "Impostor draw distance (-1.0 indicates default draw distance).")]
+	[DDLRegistration(0xac7eaba9u, "Impostor Draw Distance", "Impostor draw distance (-1.0 indicates default draw distance).")]
 	public float ImpostorDrawDistance30Hz { get; set; } = -1.00f;
 
 	public new static PerfSpecRegionData Create(DDLObject ddl) => new(ddl);

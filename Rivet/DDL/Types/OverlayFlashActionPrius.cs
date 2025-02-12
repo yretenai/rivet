@@ -22,19 +22,19 @@ public class OverlayFlashActionPrius : DDLObjectType, IDDLObjectType<OverlayFlas
 		OutDuration = ddl.GetValue<float>(0x82536333u, OutDuration);
 	}
 
-	[DDLRegistration(0xad700564u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0xad700564u, description: "Time to wait before starting")]
+	[DDLRegistration(0x68ee6562u, description: "Time to wait before starting")]
 	public float DelayTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xad700564u, description: "Time to pure white")]
+	[DDLRegistration(0x9be47e3cu, description: "Time to pure white")]
 	public float InDuration { get; set; } = 0.50f;
 
-	[DDLRegistration(0xad700564u, description: "Time that screen is white before fading back to normal. Do not set to -1.")]
+	[DDLRegistration(0x85768f4eu, description: "Time that screen is white before fading back to normal. Do not set to -1.")]
 	public float HoldDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xad700564u, description: "Time back to normal")]
+	[DDLRegistration(0x82536333u, description: "Time back to normal")]
 	public float OutDuration { get; set; } = 0.50f;
 
 	public static OverlayFlashActionPrius Create(DDLObject ddl) => new(ddl);

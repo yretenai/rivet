@@ -23,22 +23,22 @@ public class BotConfigDeath : ConfigBase, IDDLObjectType<BotConfigDeath> {
 		DeathReactionMods = ddl.GetObjects<DeathReactionModifier>(0x3e3f13acu);
 	}
 
-	[DDLRegistration(0xe6879efdu)]
+	[DDLRegistration(0x40490ca0u)]
 	public bool CorpseCleanup { get; set; } = true;
 
-	[DDLRegistration(0xe6879efdu)]
+	[DDLRegistration(0x76eb9e87u)]
 	public bool DeleteOnDeath { get; set; } = false;
 
-	[DDLRegistration(0xe6879efdu)]
+	[DDLRegistration(0xaa66c4ffu)]
 	public bool CanRagdoll { get; set; } = true;
 
-	[DDLRegistration(0xe6879efdu)]
+	[DDLRegistration(0x572c1edeu)]
 	public BloodPoolPrius? BloodPool { get; set; } = default;
 
-	[DDLRegistration(0xe6879efdu)]
+	[DDLRegistration(0xb6d32598u)]
 	public RivetAssetId SkeletonActor { get; set; } = default;
 
-	[DDLRegistration(0xe6879efdu)]
+	[DDLRegistration(0x3e3f13acu)]
 	public List<DeathReactionModifier?> DeathReactionMods { get; set; } = [];
 
 	public new static BotConfigDeath Create(DDLObject ddl) => new(ddl);

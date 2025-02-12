@@ -18,7 +18,7 @@ public class StructuredLogAnimTreeMirrorNode : StructuredLogAnimTreeNode, IDDLOb
 		Axis = ddl.GetEnum<x1c49d08a>(0xb59f464au, x1c49d08aValues.Lookup);
 	}
 
-	[DDLRegistration(0xd992175au)]
+	[DDLRegistration(0xb59f464au)]
 	public x1c49d08a Axis { get; set; } = x1c49d08a.AnimMirrorYZ;
 
 	public new static StructuredLogAnimTreeMirrorNode Create(DDLObject ddl) => new(ddl);

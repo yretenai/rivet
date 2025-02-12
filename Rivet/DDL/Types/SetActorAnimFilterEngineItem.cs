@@ -19,10 +19,10 @@ public class SetActorAnimFilterEngineItem : DDLObjectType, IDDLObjectType<SetAct
 		FilterId = ddl.GetString(0xd404a13f) ?? FilterId;
 	}
 
-	[DDLRegistration(0x0ed4ce95u)]
+	[DDLRegistration(0x14c22d78u)]
 	public string? FilterGroup { get; set; } = default;
 
-	[DDLRegistration(0x0ed4ce95u)]
+	[DDLRegistration(0xd404a13fu)]
 	public string? FilterId { get; set; } = default;
 
 	public static SetActorAnimFilterEngineItem Create(DDLObject ddl) => new(ddl);

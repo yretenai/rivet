@@ -19,10 +19,10 @@ public class EventInitializationOutputNodeDef : OutputNodeBaseDef, IDDLObjectTyp
 		Output = ddl.GetObject<OutputPlugEventInitialization>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0x6ca3efe7u)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugEventInitialization? Input { get; set; } = default;
 
-	[DDLRegistration(0x6ca3efe7u)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugEventInitialization? Output { get; set; } = default;
 
 	public new static EventInitializationOutputNodeDef Create(DDLObject ddl) => new(ddl);

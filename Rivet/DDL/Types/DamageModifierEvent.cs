@@ -19,10 +19,10 @@ public class DamageModifierEvent : EventBase, IDDLObjectType<DamageModifierEvent
 		DamageMultiplier = ddl.GetValue<float>(0x26406e37u, DamageMultiplier);
 	}
 
-	[DDLRegistration(0xce570ac4u, description: "Duration in seconds")]
+	[DDLRegistration(0x7c5e3db0u, description: "Duration in seconds")]
 	public float Duration { get; set; } = -1.00f;
 
-	[DDLRegistration(0xce570ac4u, description: "Multiply damage taken while this event is in effect")]
+	[DDLRegistration(0x26406e37u, description: "Multiply damage taken while this event is in effect")]
 	public float DamageMultiplier { get; set; } = 1.00f;
 
 	public new static DamageModifierEvent Create(DDLObject ddl) => new(ddl);

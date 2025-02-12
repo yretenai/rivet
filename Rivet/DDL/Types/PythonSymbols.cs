@@ -21,16 +21,16 @@ public class PythonSymbols : DDLObjectType, IDDLObjectType<PythonSymbols> {
 		Type = ddl.GetString(0xbc4e9799) ?? Type;
 	}
 
-	[DDLRegistration(0x74385198u)]
+	[DDLRegistration(0xc151b200u)]
 	public List<string?> Functions { get; set; } = [];
 
-	[DDLRegistration(0x74385198u)]
+	[DDLRegistration(0x81cb9c69u)]
 	public List<string?> Selects { get; set; } = [];
 
-	[DDLRegistration(0x74385198u)]
+	[DDLRegistration(0xc688332bu)]
 	public List<string?> Structs { get; set; } = [];
 
-	[DDLRegistration(0x74385198u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
 	public static PythonSymbols Create(DDLObject ddl) => new(ddl);

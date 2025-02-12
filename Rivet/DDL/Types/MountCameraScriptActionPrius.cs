@@ -19,10 +19,10 @@ public class MountCameraScriptActionPrius : DDLObjectType, IDDLObjectType<MountC
 		MountCameraConfig = ddl.GetValue<RivetAssetId>(0x1bf25fc0u, MountCameraConfig);
 	}
 
-	[DDLRegistration(0xfa999477u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0xfa999477u)]
+	[DDLRegistration(0x1bf25fc0u)]
 	public RivetAssetId MountCameraConfig { get; set; } = default;
 
 	public static MountCameraScriptActionPrius Create(DDLObject ddl) => new(ddl);

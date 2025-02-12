@@ -18,7 +18,7 @@ public class ClankPuzzleWireRideEndEvent : EventBase, IDDLObjectType<ClankPuzzle
 		LedgePathHandle = ddl.GetValue<uint>(0x2d2fdb17u, LedgePathHandle);
 	}
 
-	[DDLRegistration(0x8454efd1u)]
+	[DDLRegistration(0x2d2fdb17u)]
 	public uint LedgePathHandle { get; set; } = 0x00000000;
 
 	public new static ClankPuzzleWireRideEndEvent Create(DDLObject ddl) => new(ddl);

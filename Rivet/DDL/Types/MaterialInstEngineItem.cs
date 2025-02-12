@@ -22,19 +22,19 @@ public class MaterialInstEngineItem : DDLObjectType, IDDLObjectType<MaterialInst
 		PreviewModelOverride = ddl.GetEnum<ModelInstType>(0xe2c36167u, ModelInstTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x86610979u)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x86610979u)]
+	[DDLRegistration(0x3c1c9f05u)]
 	public MaterialDef? MaterialDef { get; set; } = default;
 
-	[DDLRegistration(0x86610979u)]
+	[DDLRegistration(0xc64b0fa8u)]
 	public DDLMatrix4? Matrix { get; set; } = default;
 
-	[DDLRegistration(0x86610979u)]
+	[DDLRegistration(0x9e5d8ff6u)]
 	public bool LiveUpdate { get; set; } = false;
 
-	[DDLRegistration(0x86610979u)]
+	[DDLRegistration(0xe2c36167u)]
 	public ModelInstType PreviewModelOverride { get; set; } = ModelInstType.Model;
 
 	public static MaterialInstEngineItem Create(DDLObject ddl) => new(ddl);

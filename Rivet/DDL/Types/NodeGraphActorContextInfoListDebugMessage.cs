@@ -18,7 +18,7 @@ public class NodeGraphActorContextInfoListDebugMessage : DDLObjectType, IDDLObje
 		ActorContexts = ddl.GetObjects<NodeGraphActorContextInfo>(0x3ce3ff61u);
 	}
 
-	[DDLRegistration(0x1a27209bu)]
+	[DDLRegistration(0x3ce3ff61u)]
 	public List<NodeGraphActorContextInfo?> ActorContexts { get; set; } = [];
 
 	public static NodeGraphActorContextInfoListDebugMessage Create(DDLObject ddl) => new(ddl);

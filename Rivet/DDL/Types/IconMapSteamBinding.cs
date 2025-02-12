@@ -20,13 +20,13 @@ public class IconMapSteamBinding : IconMapBase, IDDLObjectType<IconMapSteamBindi
 		AnalogDirection = ddl.GetEnum<x483aa079>(0x3c238fd3u, x483aa079Values.Lookup);
 	}
 
-	[DDLRegistration(0xf721b745u)]
+	[DDLRegistration(0x047ee25au)]
 	public x7b87880c Button { get; set; } = x7b87880c.NoPadButton;
 
-	[DDLRegistration(0xf721b745u)]
+	[DDLRegistration(0xa7d7c935u)]
 	public xf4ca865e ActionSet { get; set; } = xf4ca865e.Active;
 
-	[DDLRegistration(0xf721b745u, description: "Force a directional icon if button resolves to an analog input")]
+	[DDLRegistration(0x3c238fd3u, description: "Force a directional icon if button resolves to an analog input")]
 	public x483aa079 AnalogDirection { get; set; } = x483aa079.None;
 
 	public new static IconMapSteamBinding Create(DDLObject ddl) => new(ddl);

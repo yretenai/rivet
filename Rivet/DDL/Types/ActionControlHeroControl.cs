@@ -18,7 +18,7 @@ public class ActionControlHeroControl : DDLObjectType, IDDLObjectType<ActionCont
 		Control = ddl.GetEnum<HeroControl>(0xec314f73u, HeroControlValues.Lookup);
 	}
 
-	[DDLRegistration(0xf571f4e5u)]
+	[DDLRegistration(0xec314f73u)]
 	public HeroControl Control { get; set; } = HeroControl.Jump;
 
 	public static ActionControlHeroControl Create(DDLObject ddl) => new(ddl);

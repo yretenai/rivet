@@ -18,7 +18,7 @@ public class UI_AnimDriverFilterVarGroup : DDLObjectType, IDDLObjectType<UI_Anim
 		Group = ddl.GetString(0x74938804) ?? Group;
 	}
 
-	[DDLRegistration(0x5a0dd416u)]
+	[DDLRegistration(0x74938804u)]
 	public string? Group { get; set; } = default;
 
 	public static UI_AnimDriverFilterVarGroup Create(DDLObject ddl) => new(ddl);

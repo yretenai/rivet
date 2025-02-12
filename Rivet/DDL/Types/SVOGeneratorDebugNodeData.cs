@@ -20,13 +20,13 @@ public class SVOGeneratorDebugNodeData : DDLObjectType, IDDLObjectType<SVOGenera
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 	}
 
-	[DDLRegistration(0x50ee53d4u)]
+	[DDLRegistration(0x7e88a543u)]
 	public DDLVector3? Center { get; set; } = default;
 
-	[DDLRegistration(0x50ee53d4u)]
+	[DDLRegistration(0x107672fbu)]
 	public DDLVector3? Radii { get; set; } = default;
 
-	[DDLRegistration(0x50ee53d4u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static SVOGeneratorDebugNodeData Create(DDLObject ddl) => new(ddl);

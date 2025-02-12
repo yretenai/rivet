@@ -20,13 +20,13 @@ public class TriggerConduitEventEffectNodeDef : NodalShotEffectNodeBaseDef, IDDL
 		Broadcast = ddl.GetValue<bool>(0x190ce3f9u, Broadcast);
 	}
 
-	[DDLRegistration(0x4cffc0ffu)]
+	[DDLRegistration(0x1eb7640eu)]
 	public x684c6439 ActorType { get; set; } = x684c6439.ShotActor;
 
-	[DDLRegistration(0x4cffc0ffu)]
+	[DDLRegistration(0x7978ab85u)]
 	public InputPlugString? ConduitFilterLabel { get; set; } = default;
 
-	[DDLRegistration(0x4cffc0ffu)]
+	[DDLRegistration(0x190ce3f9u)]
 	public bool Broadcast { get; set; } = false;
 
 	public new static TriggerConduitEventEffectNodeDef Create(DDLObject ddl) => new(ddl);

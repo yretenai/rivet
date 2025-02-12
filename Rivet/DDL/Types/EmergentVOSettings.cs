@@ -19,10 +19,10 @@ public class EmergentVOSettings : DDLObjectType, IDDLObjectType<EmergentVOSettin
 		EnableEVODevstats = ddl.GetValue<bool>(0x86f7e7adu, EnableEVODevstats);
 	}
 
-	[DDLRegistration(0xf19bf387u, "New Emergent VO plays the dialog", "When true, the new VO system handles playing dialog. When false, we run the new and old systems side-by-side to compare results, but leave the playing to the old system.")]
+	[DDLRegistration(0xbaa5e9fbu, "New Emergent VO plays the dialog", "When true, the new VO system handles playing dialog. When false, we run the new and old systems side-by-side to compare results, but leave the playing to the old system.")]
 	public bool DEVOIsDriving { get; set; } = false;
 
-	[DDLRegistration(0xf19bf387u, description: "Enable Emergent VO Devstats events")]
+	[DDLRegistration(0x86f7e7adu, description: "Enable Emergent VO Devstats events")]
 	public bool EnableEVODevstats { get; set; } = true;
 
 	public static EmergentVOSettings Create(DDLObject ddl) => new(ddl);

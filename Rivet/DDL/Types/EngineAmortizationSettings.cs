@@ -25,28 +25,28 @@ public class EngineAmortizationSettings : DDLObjectType, IDDLObjectType<EngineAm
 		BatchSoundBankVirtualFrees = ddl.GetValue<bool>(0xeecdba58u, BatchSoundBankVirtualFrees);
 	}
 
-	[DDLRegistration(0x7183ee90u)]
+	[DDLRegistration(0x20b091c8u)]
 	public float ZoneInstantiationBudgetMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7183ee90u)]
+	[DDLRegistration(0x1cbdae91u)]
 	public float ZoneInstantiationBudgetMax { get; set; } = 0.01f;
 
-	[DDLRegistration(0x7183ee90u)]
+	[DDLRegistration(0x99f80348u)]
 	public bool ZoneInstantiationUseLeftoverFrameTime { get; set; } = false;
 
-	[DDLRegistration(0x7183ee90u)]
+	[DDLRegistration(0x0a05c3c1u)]
 	public float AssetInstantiationBudgetMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7183ee90u)]
+	[DDLRegistration(0x3608fc98u)]
 	public float AssetInstantiationBudgetMax { get; set; } = 0.01f;
 
-	[DDLRegistration(0x7183ee90u)]
+	[DDLRegistration(0x7eff6891u)]
 	public float AssetDeletionBudgetMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7183ee90u)]
+	[DDLRegistration(0x42f257c8u)]
 	public float AssetDeletionBudgetMax { get; set; } = 0.01f;
 
-	[DDLRegistration(0x7183ee90u)]
+	[DDLRegistration(0xeecdba58u)]
 	public bool BatchSoundBankVirtualFrees { get; set; } = true;
 
 	public static EngineAmortizationSettings Create(DDLObject ddl) => new(ddl);

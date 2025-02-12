@@ -31,46 +31,46 @@ public class ChangeLogResult : DDLObjectType, IDDLObjectType<ChangeLogResult> {
 		MergeJson = ddl.GetString(0x84761034) ?? MergeJson;
 	}
 
-	[DDLRegistration(0xbea0c844u, description: "Unique, incrementing token.")]
+	[DDLRegistration(0x7459aa19u, description: "Unique, incrementing token.")]
 	public long _id { get; set; } = 0;
 
-	[DDLRegistration(0xbea0c844u, description: "Id of the session that made the change.")]
+	[DDLRegistration(0xbbad2afau, description: "Id of the session that made the change.")]
 	public RivetAssetId SessionId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xbea0c844u)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public xea0685c5 Action { get; set; } = xea0685c5.Modify;
 
-	[DDLRegistration(0xbea0c844u, description: "If the change was made to an asset, this is the id of that asset.")]
+	[DDLRegistration(0xb6e788d7u, description: "If the change was made to an asset, this is the id of that asset.")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xbea0c844u, description: "If the change was made to an asset, this is the type of that asset.")]
+	[DDLRegistration(0x8970bd6du, description: "If the change was made to an asset, this is the type of that asset.")]
 	public AssetExtensions AssetType { get; set; } = AssetExtensions.Zone;
 
-	[DDLRegistration(0xbea0c844u, description: "If the change was made to an asset, *and* Action == ( kUpload or kStateChange ), this will indicate whether the backing file can be written to or not.")]
+	[DDLRegistration(0x83107859u, description: "If the change was made to an asset, *and* Action == ( kUpload or kStateChange ), this will indicate whether the backing file can be written to or not.")]
 	public bool IsAssetWritable { get; set; } = false;
 
-	[DDLRegistration(0xbea0c844u, description: "If the change was made to a binary asset, this is the type of that binary asset.")]
+	[DDLRegistration(0xeb45ba95u, description: "If the change was made to a binary asset, this is the type of that binary asset.")]
 	public xfea7566a SourceType { get; set; } = xfea7566a.AbcInfo;
 
-	[DDLRegistration(0xbea0c844u, description: "If the change was made to a binary asset, this will be true")]
+	[DDLRegistration(0x931f4d6cu, description: "If the change was made to a binary asset, this will be true")]
 	public bool IsBinaryAsset { get; set; } = false;
 
-	[DDLRegistration(0xbea0c844u, description: "Any data that was assigned by the client when the modification was made.")]
+	[DDLRegistration(0xbc38883au, description: "Any data that was assigned by the client when the modification was made.")]
 	public string? ClientData { get; set; } = default;
 
-	[DDLRegistration(0xbea0c844u)]
+	[DDLRegistration(0xe1589e15u)]
 	public ChangeBatch? Batch { get; set; } = default;
 
-	[DDLRegistration(0xbea0c844u, description: "Flag to determine if this action is undo/redoable.")]
+	[DDLRegistration(0x37817015u, description: "Flag to determine if this action is undo/redoable.")]
 	public bool Replayable { get; set; } = false;
 
-	[DDLRegistration(0xbea0c844u, description: "Source UI that made this change (useful for debugging).")]
+	[DDLRegistration(0x61f23114u, description: "Source UI that made this change (useful for debugging).")]
 	public string? Source { get; set; } = "";
 
-	[DDLRegistration(0xbea0c844u)]
+	[DDLRegistration(0x6b94ddc9u)]
 	public ChangeType ChangeType { get; set; } = ChangeType.Other;
 
-	[DDLRegistration(0xbea0c844u)]
+	[DDLRegistration(0x84761034u)]
 	public string? MergeJson { get; set; } = default;
 
 	public static ChangeLogResult Create(DDLObject ddl) => new(ddl);

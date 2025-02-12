@@ -25,28 +25,28 @@ public class VisualEffectCamGlobalAttr : DDLObjectType, IDDLObjectType<VisualEff
 		NearClip = ddl.GetValue<float>(0xef20b8c7u, NearClip);
 	}
 
-	[DDLRegistration(0xcdede163u, "Kill Out of View")]
+	[DDLRegistration(0xf0bf3a73u, "Kill Out of View")]
 	public bool KillCulled { get; set; } = false;
 
-	[DDLRegistration(0xcdede163u, "Spawn Out of View")]
+	[DDLRegistration(0x9b403caau, "Spawn Out of View")]
 	public bool SpawnCulled { get; set; } = true;
 
-	[DDLRegistration(0xcdede163u)]
+	[DDLRegistration(0x61f23114u)]
 	public x21f55189 Source { get; set; } = x21f55189.Self;
 
-	[DDLRegistration(0xcdede163u, "Material LoD Dist")]
+	[DDLRegistration(0xc08563c1u, "Material LoD Dist")]
 	public float MaterialLoDDistance { get; set; } = 40.00f;
 
-	[DDLRegistration(0xcdede163u, "Far Clip")]
+	[DDLRegistration(0x180cce8cu, "Far Clip")]
 	public float FarClip { get; set; } = 60.00f;
 
-	[DDLRegistration(0xcdede163u, "Far Fade Start")]
+	[DDLRegistration(0x12418a7bu, "Far Fade Start")]
 	public float FarFadeStart { get; set; } = 40.00f;
 
-	[DDLRegistration(0xcdede163u, "Near Fade Start")]
+	[DDLRegistration(0x199cd49du, "Near Fade Start")]
 	public float NearFadeStart { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcdede163u, "Near Clip")]
+	[DDLRegistration(0xef20b8c7u, "Near Clip")]
 	public float NearClip { get; set; } = 0.00f;
 
 	public static VisualEffectCamGlobalAttr Create(DDLObject ddl) => new(ddl);

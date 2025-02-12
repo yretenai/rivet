@@ -19,10 +19,10 @@ public class CinePortalZipLineStart : EventBase, IDDLObjectType<CinePortalZipLin
 		RecoilDelay = ddl.GetValue<float>(0xcf9f55d2u, RecoilDelay);
 	}
 
-	[DDLRegistration(0xd5d96e3au)]
+	[DDLRegistration(0x6d185da4u)]
 	public string? PortalLocator { get; set; } = default;
 
-	[DDLRegistration(0xd5d96e3au)]
+	[DDLRegistration(0xcf9f55d2u)]
 	public float RecoilDelay { get; set; } = 0.30f;
 
 	public new static CinePortalZipLineStart Create(DDLObject ddl) => new(ddl);

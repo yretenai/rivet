@@ -19,10 +19,10 @@ public class MechanicLoadoutChangeEvent : ChangeModeEvent, IDDLObjectType<Mechan
 		UnequippedMechanics = ddl.GetStrings(0x0329ff7du);
 	}
 
-	[DDLRegistration(0xd5a653f9u)]
+	[DDLRegistration(0x7e11af85u)]
 	public List<string?> EquippedMechanics { get; set; } = [];
 
-	[DDLRegistration(0xd5a653f9u)]
+	[DDLRegistration(0x0329ff7du)]
 	public List<string?> UnequippedMechanics { get; set; } = [];
 
 	public new static MechanicLoadoutChangeEvent Create(DDLObject ddl) => new(ddl);

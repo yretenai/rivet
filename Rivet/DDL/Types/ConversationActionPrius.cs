@@ -30,43 +30,43 @@ public class ConversationActionPrius : DDLObjectType, IDDLObjectType<Conversatio
 		InhibitEmergentVO = ddl.GetValue<bool>(0x4128790eu, InhibitEmergentVO);
 	}
 
-	[DDLRegistration(0x01b63855u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
-	[DDLRegistration(0x01b63855u)]
+	[DDLRegistration(0xea118791u)]
 	public MultiConversationOption MultiConversationOption { get; set; } = MultiConversationOption.SingleConversation;
 
-	[DDLRegistration(0x01b63855u)]
+	[DDLRegistration(0x5fcfb4acu)]
 	public RivetAssetId ConverationConfig { get; set; } = default;
 
-	[DDLRegistration(0x01b63855u)]
+	[DDLRegistration(0xad4d5049u)]
 	public MulitConvData? MulitConvData { get; set; } = default;
 
-	[DDLRegistration(0x01b63855u, description: "Priority of this line.")]
+	[DDLRegistration(0x98a76157u, description: "Priority of this line.")]
 	public x90d1aef7 Priority { get; set; } = x90d1aef7.Medium;
 
-	[DDLRegistration(0x01b63855u, description: "Interrupt lines of the same priority.")]
+	[DDLRegistration(0x3e2813a0u, description: "Interrupt lines of the same priority.")]
 	public bool InterruptSamePriorityLines { get; set; } = true;
 
-	[DDLRegistration(0x01b63855u, description: "Queue this line up if it can't play right now.")]
+	[DDLRegistration(0x66aeb3a2u, description: "Queue this line up if it can't play right now.")]
 	public bool Queue { get; set; } = false;
 
-	[DDLRegistration(0x01b63855u, description: "Delete from queue if it the line hasn't been able to play for this long.  Negative = infinite.")]
+	[DDLRegistration(0xc6aa3a36u, description: "Delete from queue if it the line hasn't been able to play for this long.  Negative = infinite.")]
 	public float MaxQueueTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x01b63855u, description: "Stops when the hero dies, regardless of who is saying the line.")]
+	[DDLRegistration(0x283d76eeu, description: "Stops when the hero dies, regardless of who is saying the line.")]
 	public bool StopOnHeroDeath { get; set; } = true;
 
-	[DDLRegistration(0x01b63855u, description: "If this actor is dead we will stop and prevent lines from playing on them")]
+	[DDLRegistration(0x10e90931u, description: "If this actor is dead we will stop and prevent lines from playing on them")]
 	public bool StopOnActorDeath { get; set; } = true;
 
-	[DDLRegistration(0x01b63855u, description: "This line can't be interrupted based on priority.")]
+	[DDLRegistration(0x37e2edbcu, description: "This line can't be interrupted based on priority.")]
 	public bool CantBeInterrupted { get; set; } = false;
 
-	[DDLRegistration(0x01b63855u, description: "If true, script node will signal both interrupted and finshed on interrupted signal.")]
+	[DDLRegistration(0xee25be21u, description: "If true, script node will signal both interrupted and finshed on interrupted signal.")]
 	public bool SignalFinishedOnInterrupted { get; set; } = true;
 
-	[DDLRegistration(0x01b63855u, description: "Blocks Emergent VO while playing")]
+	[DDLRegistration(0x4128790eu, description: "Blocks Emergent VO while playing")]
 	public bool InhibitEmergentVO { get; set; } = true;
 
 	public static ConversationActionPrius Create(DDLObject ddl) => new(ddl);

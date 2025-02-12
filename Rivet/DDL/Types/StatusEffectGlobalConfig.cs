@@ -29,40 +29,40 @@ public class StatusEffectGlobalConfig : ConfigBase, IDDLObjectType<StatusEffectG
 		RynotizeConfig = ddl.GetObject<StatusEffectRynotizeConfig>(0x3e5423e1u);
 	}
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0x419a0bc1u)]
 	public StatusEffectFireConfig? FireConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0x7ebab219u)]
 	public StatusEffectFreezeConfig? FreezeConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0x0b47c309u)]
 	public StatusEffectPoisonConfig? PoisonConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0x2428d0b5u)]
 	public StatusEffectConfuseConfig? ConfuseConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0x374ee290u)]
 	public StatusEffectPixelizedConfig? PixelizedConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0xac2724a5u)]
 	public StatusEffectFossilizeConfig? FossilizeConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0x24e37a28u)]
 	public StatusEffectShrubberyConfig? ShrubberyConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0xa4597a28u)]
 	public StatusEffectMagnaMissileConfig? MagnaMissileConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0xacffd899u)]
 	public StatusEffectLightningRodConfig? LightningRodConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0x1d84911du)]
 	public StatusEffectProtoGrenadeConfig? ProtoGrenadeConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0xdc39fec4u)]
 	public StatusEffectWarpRifleImplosionConfig? WarpRifleImplosionConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f5edb0eu)]
+	[DDLRegistration(0x3e5423e1u)]
 	public StatusEffectRynotizeConfig? RynotizeConfig { get; set; } = default;
 
 	public new static StatusEffectGlobalConfig Create(DDLObject ddl) => new(ddl);

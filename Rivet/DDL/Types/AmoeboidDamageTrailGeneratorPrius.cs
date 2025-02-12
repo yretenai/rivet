@@ -23,22 +23,22 @@ public class AmoeboidDamageTrailGeneratorPrius : DDLObjectType, IDDLObjectType<A
 		SpawnLifetime = ddl.GetValue<float>(0xa3a43531u, SpawnLifetime);
 	}
 
-	[DDLRegistration(0x5379f7b8u)]
+	[DDLRegistration(0x2784102cu)]
 	public RivetAssetId TrailActor { get; set; } = default;
 
-	[DDLRegistration(0x5379f7b8u, "Time Delay Initial DamageActor Spawn")]
+	[DDLRegistration(0x097aeb88u, "Time Delay Initial DamageActor Spawn")]
 	public float TimeDelayInitialSpawn { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5379f7b8u, "Distance For Initial DamageActor Spawn")]
+	[DDLRegistration(0x9a0d9e51u, "Distance For Initial DamageActor Spawn")]
 	public float DistanceForInitialSpawn { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5379f7b8u, "Time Between Spawns")]
+	[DDLRegistration(0x34a6a75bu, "Time Between Spawns")]
 	public float TimeBetweenSpawns { get; set; } = 0.25f;
 
-	[DDLRegistration(0x5379f7b8u, "Distance Between Spawns")]
+	[DDLRegistration(0x200e976cu, "Distance Between Spawns")]
 	public float DistanceBetweenSpawns { get; set; } = 0.50f;
 
-	[DDLRegistration(0x5379f7b8u, description: "If greater than 0, the spawned trail actor will live for this many seconds")]
+	[DDLRegistration(0xa3a43531u, description: "If greater than 0, the spawned trail actor will live for this many seconds")]
 	public float SpawnLifetime { get; set; } = -1.00f;
 
 	public static AmoeboidDamageTrailGeneratorPrius Create(DDLObject ddl) => new(ddl);

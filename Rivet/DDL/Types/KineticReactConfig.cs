@@ -25,28 +25,28 @@ public class KineticReactConfig : ConfigBase, IDDLObjectType<KineticReactConfig>
 		AutoTargetCone = ddl.GetValue<float>(0xd2eed65bu, AutoTargetCone);
 	}
 
-	[DDLRegistration(0xfaa83c66u)]
+	[DDLRegistration(0x048dda44u)]
 	public DazeData? Daze { get; set; } = default;
 
-	[DDLRegistration(0xfaa83c66u)]
+	[DDLRegistration(0x13ac3913u)]
 	public FlyBackData? FlyBack { get; set; } = default;
 
-	[DDLRegistration(0xfaa83c66u)]
+	[DDLRegistration(0xcac2cb78u)]
 	public AirborneData? Airborne { get; set; } = default;
 
-	[DDLRegistration(0xfaa83c66u)]
+	[DDLRegistration(0x86de8c3bu)]
 	public AirborneData? PopUp { get; set; } = default;
 
-	[DDLRegistration(0xfaa83c66u, description: "Damage per meters per second")]
+	[DDLRegistration(0x25ffad5au, description: "Damage per meters per second")]
 	public float BaseCollisionDamage { get; set; } = 5.00f;
 
-	[DDLRegistration(0xfaa83c66u, description: "Must be going this fast to take collision damage")]
+	[DDLRegistration(0xa594196cu, description: "Must be going this fast to take collision damage")]
 	public float MinCollisionSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0xfaa83c66u, description: "Once a bot has fallen this far in one of these react states he dies.")]
+	[DDLRegistration(0x9e091598u, description: "Once a bot has fallen this far in one of these react states he dies.")]
 	public float AutoKillFallDistance { get; set; } = 25.00f;
 
-	[DDLRegistration(0xfaa83c66u, description: "Auto-target 'kKinetic' targets inside this angle")]
+	[DDLRegistration(0xd2eed65bu, description: "Auto-target 'kKinetic' targets inside this angle")]
 	public float AutoTargetCone { get; set; } = 20.00f;
 
 	public new static KineticReactConfig Create(DDLObject ddl) => new(ddl);

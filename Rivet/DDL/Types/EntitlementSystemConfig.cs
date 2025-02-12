@@ -21,16 +21,16 @@ public class EntitlementSystemConfig : ConfigBase, IDDLObjectType<EntitlementSys
 		ArmorPatchSets = ddl.GetValues<RivetAssetId>(0x8b1914aeu);
 	}
 
-	[DDLRegistration(0x48e017d4u, "CarbonoxArmorSet")]
+	[DDLRegistration(0xc1445231u, "CarbonoxArmorSet")]
 	public RivetAssetId CarbonoxArmorSet { get; set; } = default;
 
-	[DDLRegistration(0x48e017d4u, "FiveArmorsSets")]
+	[DDLRegistration(0xe0308fa9u, "FiveArmorsSets")]
 	public List<RivetAssetId> FiveArmorsSets { get; set; } = [];
 
-	[DDLRegistration(0x48e017d4u, "PixelizerItem")]
+	[DDLRegistration(0x3480ccb7u, "PixelizerItem")]
 	public RivetAssetId PixelizerItem { get; set; } = default;
 
-	[DDLRegistration(0x48e017d4u, "ArmorPatchSets")]
+	[DDLRegistration(0x8b1914aeu, "ArmorPatchSets")]
 	public List<RivetAssetId> ArmorPatchSets { get; set; } = [];
 
 	public new static EntitlementSystemConfig Create(DDLObject ddl) => new(ddl);

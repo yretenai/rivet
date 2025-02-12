@@ -23,22 +23,22 @@ public class StartObjectiveDevstatsEvent : EventBase, IDDLObjectType<StartObject
 		PlayerPosInfo = ddl.GetObject<DevstatsPlayerPositionInfo>(0xeadcc3e4u);
 	}
 
-	[DDLRegistration(0x3864d136u, "Event ID", "Unique ID for this event instance.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique ID for this event instance.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x3864d136u, "Mission Segment ID", "Unique ID for the mission segment that this objective is a part of. Corresponds to the Mission Segment ID in the Start Mission Event.")]
+	[DDLRegistration(0x1a25ffb8u, "Mission Segment ID", "Unique ID for the mission segment that this objective is a part of. Corresponds to the Mission Segment ID in the Start Mission Event.")]
 	public string? MissionSegmentId { get; set; } = default;
 
-	[DDLRegistration(0x3864d136u, "Objective Segment ID", "Unique ID for this particular objective segment. Corresponds to the Objective Segment ID in the End Objective Event.")]
+	[DDLRegistration(0x483aeea0u, "Objective Segment ID", "Unique ID for this particular objective segment. Corresponds to the Objective Segment ID in the End Objective Event.")]
 	public string? ObjectiveSegmentId { get; set; } = default;
 
-	[DDLRegistration(0x3864d136u, "Mission Name", "Name of the mission (in code) that this objective is a part of.")]
+	[DDLRegistration(0xa5c30e60u, "Mission Name", "Name of the mission (in code) that this objective is a part of.")]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x3864d136u, "Objective Name", "Name of this objective in code.")]
+	[DDLRegistration(0x58746b9bu, "Objective Name", "Name of this objective in code.")]
 	public string? ObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0x3864d136u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
 	public new static StartObjectiveDevstatsEvent Create(DDLObject ddl) => new(ddl);

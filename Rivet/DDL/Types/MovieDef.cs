@@ -22,19 +22,19 @@ public class MovieDef : DDLObjectType, IDDLObjectType<MovieDef> {
 		LocalizedTracks = ddl.GetObjects<AudioChannelsLoc>(0x6e34b8d9u);
 	}
 
-	[DDLRegistration(0x275a693du)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x275a693du)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x275a693du, "Bink Filename", "The path to the source content (Bink) file.")]
+	[DDLRegistration(0xbd78ab57u, "Bink Filename", "The path to the source content (Bink) file.")]
 	public RivetAssetId BikFilename { get; set; } = default;
 
-	[DDLRegistration(0x275a693du, "Music and Effects", "Audio channels for music and effects.")]
+	[DDLRegistration(0x7b9c358bu, "Music and Effects", "Audio channels for music and effects.")]
 	public AudioChannelsNonLoc? UnlocalizedTrack { get; set; } = default;
 
-	[DDLRegistration(0x275a693du, "Dialogue", "Audio channels for localized dialogue.")]
+	[DDLRegistration(0x6e34b8d9u, "Dialogue", "Audio channels for localized dialogue.")]
 	public List<AudioChannelsLoc?> LocalizedTracks { get; set; } = [];
 
 	public static MovieDef Create(DDLObject ddl) => new(ddl);

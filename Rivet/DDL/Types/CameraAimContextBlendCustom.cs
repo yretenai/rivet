@@ -21,16 +21,16 @@ public class CameraAimContextBlendCustom : CameraAimContextBlend, IDDLObjectType
 		Priority = ddl.GetEnum<x0d255d55>(0x98a76157u, x0d255d55Values.Lookup);
 	}
 
-	[DDLRegistration(0x65e94799u)]
+	[DDLRegistration(0xe005edb0u)]
 	public float Gain { get; set; } = -5.00f;
 
-	[DDLRegistration(0x65e94799u)]
+	[DDLRegistration(0x6cd3ba39u)]
 	public float Damp { get; set; } = -150.00f;
 
-	[DDLRegistration(0x65e94799u)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 3.60f;
 
-	[DDLRegistration(0x65e94799u)]
+	[DDLRegistration(0x98a76157u)]
 	public x0d255d55 Priority { get; set; } = x0d255d55.Low;
 
 	public new static CameraAimContextBlendCustom Create(DDLObject ddl) => new(ddl);

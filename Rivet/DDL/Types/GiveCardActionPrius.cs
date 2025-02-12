@@ -19,10 +19,10 @@ public class GiveCardActionPrius : DDLObjectType, IDDLObjectType<GiveCardActionP
 		CardID = ddl.GetEnum<x507460e6>(0x7b6ab6e3u, x507460e6Values.Lookup);
 	}
 
-	[DDLRegistration(0xeda5c78eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0xeda5c78eu, description: "Card ID")]
+	[DDLRegistration(0x7b6ab6e3u, description: "Card ID")]
 	public x507460e6 CardID { get; set; } = x507460e6.Random;
 
 	public static GiveCardActionPrius Create(DDLObject ddl) => new(ddl);

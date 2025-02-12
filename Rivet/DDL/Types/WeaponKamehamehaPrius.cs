@@ -20,13 +20,13 @@ public class WeaponKamehamehaPrius : WeaponGamePrius, IDDLObjectType<WeaponKameh
 		FiringAllowedKnockbacks = ddl.GetBitset<KnockbackLevelFlags>(0xe37d083au, KnockbackLevelFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0x0753cf93u)]
+	[DDLRegistration(0x9a9a5e03u)]
 	public List<BasicRecoilPrius?> AimedRecoil { get; set; } = [];
 
-	[DDLRegistration(0x0753cf93u)]
+	[DDLRegistration(0xc714b91bu)]
 	public List<KamehamehaChargeLevel?> ChargeLevels { get; set; } = [];
 
-	[DDLRegistration(0x0753cf93u)]
+	[DDLRegistration(0xe37d083au)]
 	public KnockbackLevelFlags FiringAllowedKnockbacks { get; set; } = (KnockbackLevelFlags) 0x00000001;
 
 	public new static WeaponKamehamehaPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class StackableCrateSystemConfig : ConfigBase, IDDLObjectType<StackableCr
 		ContainerRegionVariants = ddl.GetObjects<RegionCrateVariants>(0xd4da5664u);
 	}
 
-	[DDLRegistration(0xf2f72342u)]
+	[DDLRegistration(0xd4da5664u)]
 	public List<RegionCrateVariants?> ContainerRegionVariants { get; set; } = [];
 
 	public new static StackableCrateSystemConfig Create(DDLObject ddl) => new(ddl);

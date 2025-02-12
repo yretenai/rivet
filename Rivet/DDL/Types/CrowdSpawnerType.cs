@@ -20,13 +20,13 @@ public class CrowdSpawnerType : DDLObjectType, IDDLObjectType<CrowdSpawnerType> 
 		MissionUnlocks = ddl.GetObject<ObjSysUnlockSequence>(0x17ff21a7u);
 	}
 
-	[DDLRegistration(0xd2e8fa8fu)]
+	[DDLRegistration(0x8c241f18u)]
 	public RivetAssetId TypeConfig { get; set; } = default;
 
-	[DDLRegistration(0xd2e8fa8fu, description: "Use this type while these container regions are loaded.")]
+	[DDLRegistration(0xb8e32d51u, description: "Use this type while these container regions are loaded.")]
 	public List<RivetAssetId> EnabledContainerRegions { get; set; } = [];
 
-	[DDLRegistration(0xd2e8fa8fu)]
+	[DDLRegistration(0x17ff21a7u)]
 	public ObjSysUnlockSequence? MissionUnlocks { get; set; } = default;
 
 	public static CrowdSpawnerType Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class HoverbootKickPreReadyEvent : EventBase, IDDLObjectType<HoverbootKic
 		FootIndex = ddl.GetEnum<x49df4fee>(0x289b0d58u, x49df4feeValues.Lookup);
 	}
 
-	[DDLRegistration(0x32f7ece1u, description: "The index for the foot that isn't ready yet. (kLeft or kRight)")]
+	[DDLRegistration(0x289b0d58u, description: "The index for the foot that isn't ready yet. (kLeft or kRight)")]
 	public x49df4fee FootIndex { get; set; } = x49df4fee.Left;
 
 	public new static HoverbootKickPreReadyEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class InteractLocationVolumeOfferPrius : HoldOfferPrius, IDDLObjectType<I
 		VolumeActor = ddl.GetValue<RivetAssetId>(0x7f09f712u, VolumeActor);
 	}
 
-	[DDLRegistration(0x03bb18cdu)]
+	[DDLRegistration(0x7f09f712u)]
 	public RivetAssetId VolumeActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static InteractLocationVolumeOfferPrius Create(DDLObject ddl) => new(ddl);

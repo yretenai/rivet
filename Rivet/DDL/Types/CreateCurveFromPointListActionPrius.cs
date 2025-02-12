@@ -20,13 +20,13 @@ public class CreateCurveFromPointListActionPrius : DDLObjectType, IDDLObjectType
 		DynamicCurve = ddl.GetValue<bool>(0x198c20ccu, DynamicCurve);
 	}
 
-	[DDLRegistration(0x63421362u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x63421362u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public SplineTypes Type { get; set; } = SplineTypes.Linear;
 
-	[DDLRegistration(0x63421362u, description: "If true, and the passed in list used the 'StoreByVarName' option, the curve will be refreshed from the list values every frame (or until the list no longer exists).")]
+	[DDLRegistration(0x198c20ccu, description: "If true, and the passed in list used the 'StoreByVarName' option, the curve will be refreshed from the list values every frame (or until the list no longer exists).")]
 	public bool DynamicCurve { get; set; } = false;
 
 	public static CreateCurveFromPointListActionPrius Create(DDLObject ddl) => new(ddl);

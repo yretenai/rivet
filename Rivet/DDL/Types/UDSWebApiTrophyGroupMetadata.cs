@@ -19,10 +19,10 @@ public class UDSWebApiTrophyGroupMetadata : DDLObjectType, IDDLObjectType<UDSWeb
 		SortKey = ddl.GetString(0x5dca42dc) ?? SortKey;
 	}
 
-	[DDLRegistration(0x36c573aau)]
+	[DDLRegistration(0xce811188u)]
 	public Dictionary<string, string?> Name { get; set; } = [];
 
-	[DDLRegistration(0x36c573aau)]
+	[DDLRegistration(0x5dca42dcu)]
 	public string? SortKey { get; set; } = default;
 
 	public static UDSWebApiTrophyGroupMetadata Create(DDLObject ddl) => new(ddl);

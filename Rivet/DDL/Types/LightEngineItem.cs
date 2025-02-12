@@ -19,10 +19,10 @@ public class LightEngineItem : DDLObjectType, IDDLObjectType<LightEngineItem> {
 		LightType = ddl.GetEnum<LightType>(0xba4bdcdau, LightTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x372e5de8u)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x372e5de8u)]
+	[DDLRegistration(0xba4bdcdau)]
 	public LightType LightType { get; set; } = LightType.Point;
 
 	public static LightEngineItem Create(DDLObject ddl) => new(ddl);

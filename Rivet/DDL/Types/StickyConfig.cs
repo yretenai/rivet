@@ -22,19 +22,19 @@ public class StickyConfig : DDLObjectType, IDDLObjectType<StickyConfig> {
 		WindowMaximized = ddl.GetValue<bool>(0x8c4953c8u, WindowMaximized);
 	}
 
-	[DDLRegistration(0x7bfdbcbdu)]
+	[DDLRegistration(0x4eb11fe3u)]
 	public int WindowX { get; set; } = -1;
 
-	[DDLRegistration(0x7bfdbcbdu)]
+	[DDLRegistration(0x39b62f75u)]
 	public int WindowY { get; set; } = -1;
 
-	[DDLRegistration(0x7bfdbcbdu)]
+	[DDLRegistration(0x3c90e0c9u)]
 	public int WindowWidth { get; set; } = 0;
 
-	[DDLRegistration(0x7bfdbcbdu)]
+	[DDLRegistration(0x6e96c76au)]
 	public int WindowHeight { get; set; } = 0;
 
-	[DDLRegistration(0x7bfdbcbdu)]
+	[DDLRegistration(0x8c4953c8u)]
 	public bool WindowMaximized { get; set; } = false;
 
 	public static StickyConfig Create(DDLObject ddl) => new(ddl);

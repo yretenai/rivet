@@ -18,7 +18,7 @@ public class BiomeConfig : ConfigBase, IDDLObjectType<BiomeConfig> {
 		Biome = ddl.GetObject<BiomeDef>(0xd4adab58u);
 	}
 
-	[DDLRegistration(0xb04ff3c0u)]
+	[DDLRegistration(0xd4adab58u)]
 	public BiomeDef? Biome { get; set; } = default;
 
 	public new static BiomeConfig Create(DDLObject ddl) => new(ddl);

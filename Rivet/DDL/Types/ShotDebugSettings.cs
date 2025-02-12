@@ -31,46 +31,46 @@ public class ShotDebugSettings : DDLObjectType, IDDLObjectType<ShotDebugSettings
 		ShotDisplay = ddl.GetBitset<x0bb69786>(0xb66bd51fu, x0bb69786Values.Lookup);
 	}
 
-	[DDLRegistration(0x8ccf99f3u, "Display ShotDebug Menu", "Display the ShotDebug ImGui window")]
+	[DDLRegistration(0xc9d576d6u, "Display ShotDebug Menu", "Display the ShotDebug ImGui window")]
 	public bool DisplayMenu { get; set; } = false;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0x2dc04f61u)]
 	public bool EnableTracking { get; set; } = false;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0xde4a9520u)]
 	public uint MaxTrackedShots { get; set; } = 0x00000032;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0x39b5b5e6u)]
 	public uint MaxFramesPerShot { get; set; } = 0x00000078;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0x9b219cb3u)]
 	public uint MaxLifetimeAfterDestroy { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0x690b57b5u)]
 	public bool DrawShotHistory { get; set; } = false;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0xbee94c15u)]
 	public bool DrawSelectedShotHistoryOnly { get; set; } = false;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0xf075f451u)]
 	public bool DrawProjectedForward { get; set; } = true;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0x08832b3bu)]
 	public bool DrawCollRadiusImpact { get; set; } = false;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0xdd42bf50u)]
 	public bool DrawCollRadiusDamage { get; set; } = false;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0x49f58c4du)]
 	public xd2478acb ShotListSortOrder { get; set; } = xd2478acb.Descending;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0xee3be595u)]
 	public xd2478acb FrameListSortOrder { get; set; } = xd2478acb.Descending;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0xe578649au)]
 	public x8f57801d DisplayedAllegiance { get; set; } = (x8f57801d) 0x00000007;
 
-	[DDLRegistration(0x8ccf99f3u)]
+	[DDLRegistration(0xb66bd51fu)]
 	public x0bb69786 ShotDisplay { get; set; } = (x0bb69786) 0x0000000f;
 
 	public static ShotDebugSettings Create(DDLObject ddl) => new(ddl);

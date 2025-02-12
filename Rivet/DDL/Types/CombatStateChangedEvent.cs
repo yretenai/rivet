@@ -19,10 +19,10 @@ public class CombatStateChangedEvent : EventBase, IDDLObjectType<CombatStateChan
 		NextState = ddl.GetEnum<xba3c7381>(0x831aa432u, xba3c7381Values.Lookup);
 	}
 
-	[DDLRegistration(0x52a7a47eu)]
+	[DDLRegistration(0xf6c107b4u)]
 	public xba3c7381 PreviousState { get; set; } = xba3c7381.Inactive;
 
-	[DDLRegistration(0x52a7a47eu)]
+	[DDLRegistration(0x831aa432u)]
 	public xba3c7381 NextState { get; set; } = xba3c7381.Inactive;
 
 	public new static CombatStateChangedEvent Create(DDLObject ddl) => new(ddl);

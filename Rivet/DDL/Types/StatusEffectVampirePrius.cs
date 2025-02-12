@@ -19,10 +19,10 @@ public class StatusEffectVampirePrius : StatusEffectBasePrius, IDDLObjectType<St
 		IsPercent = ddl.GetValue<bool>(0x858c4cf5u, IsPercent);
 	}
 
-	[DDLRegistration(0xbe0a9e30u, description: "The amount of health each hit restores.")]
+	[DDLRegistration(0xb0d93e25u, description: "The amount of health each hit restores.")]
 	public float Amount { get; set; } = 50.00f;
 
-	[DDLRegistration(0xbe0a9e30u, "Is Percent", "Is 'Amount' a fixed value or is it a percentage of the damage you inflicted?")]
+	[DDLRegistration(0x858c4cf5u, "Is Percent", "Is 'Amount' a fixed value or is it a percentage of the damage you inflicted?")]
 	public bool IsPercent { get; set; } = true;
 
 	public new static StatusEffectVampirePrius Create(DDLObject ddl) => new(ddl);

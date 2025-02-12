@@ -20,13 +20,13 @@ public class NodalShotEffectNodeBaseDef : NodeBaseDef, IDDLObjectType<NodalShotE
 		EffectName = ddl.GetString(0xb266fef4) ?? EffectName;
 	}
 
-	[DDLRegistration(0xa4e8f15eu)]
+	[DDLRegistration(0xc17bfe16u)]
 	public List<InputPlugSignal?> Input { get; set; } = [];
 
-	[DDLRegistration(0xa4e8f15eu)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugSignal? Output { get; set; } = default;
 
-	[DDLRegistration(0xa4e8f15eu)]
+	[DDLRegistration(0xb266fef4u)]
 	public string? EffectName { get; set; } = default;
 
 	public new static NodalShotEffectNodeBaseDef Create(DDLObject ddl) => new(ddl);

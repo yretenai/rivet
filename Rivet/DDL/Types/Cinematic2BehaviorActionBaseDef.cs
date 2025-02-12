@@ -22,19 +22,19 @@ public class Cinematic2BehaviorActionBaseDef : DDLObjectType, IDDLObjectType<Cin
 		BlendInDuration = ddl.GetValue<float>(0x461f415eu, BlendInDuration);
 	}
 
-	[DDLRegistration(0xddddec17u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xddddec17u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xddddec17u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0xddddec17u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xddddec17u)]
+	[DDLRegistration(0x461f415eu)]
 	public float BlendInDuration { get; set; } = 0.00f;
 
 	public static Cinematic2BehaviorActionBaseDef Create(DDLObject ddl) => new(ddl);

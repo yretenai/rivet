@@ -45,88 +45,88 @@ public class HeroSlideConfig : ConfigBase, IDDLObjectType<HeroSlideConfig> {
 		CameraForwardHorizontalBlendT = ddl.GetValue<float>(0x58c5f09du, CameraForwardHorizontalBlendT);
 	}
 
-	[DDLRegistration(0xe413af32u, description: "Min angle between surface normal and inverse gravity. (degrees)")]
+	[DDLRegistration(0x8a5d7a5eu, description: "Min angle between surface normal and inverse gravity. (degrees)")]
 	public float SlopeMinDegrees { get; set; } = 0.50f;
 
-	[DDLRegistration(0xe413af32u, description: "Max angle between surface normal and inverse gravity. (degrees)")]
+	[DDLRegistration(0x8b51e0eau, description: "Max angle between surface normal and inverse gravity. (degrees)")]
 	public float SlopeMaxDegrees { get; set; } = 59.00f;
 
-	[DDLRegistration(0xe413af32u, description: "How fast the player accelerates due to gravity on the ground")]
+	[DDLRegistration(0x0dfb3b9cu, description: "How fast the player accelerates due to gravity on the ground")]
 	public float SlideGravity { get; set; } = 50.00f;
 
-	[DDLRegistration(0xe413af32u, description: "How fast the player accelerates due to gravity in the air")]
+	[DDLRegistration(0x8181cec9u, description: "How fast the player accelerates due to gravity in the air")]
 	public float SlideAirGravity { get; set; } = 30.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Amount of friction when sliding")]
+	[DDLRegistration(0x7152f8bcu, description: "Amount of friction when sliding")]
 	public float SlideFriction { get; set; } = 0.05f;
 
-	[DDLRegistration(0xe413af32u, description: "Amount of friction when sliding on a non-slide surface")]
+	[DDLRegistration(0x388e44c4u, description: "Amount of friction when sliding on a non-slide surface")]
 	public float SlideOffFriction { get; set; } = 0.25f;
 
-	[DDLRegistration(0xe413af32u, description: "Max speed of player while sliding")]
+	[DDLRegistration(0xb2445d6cu, description: "Max speed of player while sliding")]
 	public float SlideTerminalSpeed { get; set; } = 30.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Amount of lateral speed to apply as brake for the sliding speed.")]
+	[DDLRegistration(0x2e29ed6cu, description: "Amount of lateral speed to apply as brake for the sliding speed.")]
 	public float LateralSpeedBrakeFactor { get; set; } = 0.75f;
 
-	[DDLRegistration(0xe413af32u, description: "Min sliding speed of player after adjusting for lateral motion braking. (m/s)")]
+	[DDLRegistration(0xc65ed10bu, description: "Min sliding speed of player after adjusting for lateral motion braking. (m/s)")]
 	public float MinSlideSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Ideal lateral input speed. (m/s)")]
+	[DDLRegistration(0x60a707e0u, description: "Ideal lateral input speed. (m/s)")]
 	public float InputLateralSpeed { get; set; } = 4.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Acceleration for lateral input speed. (m/s^2)")]
+	[DDLRegistration(0x327dcff3u, description: "Acceleration for lateral input speed. (m/s^2)")]
 	public float InputLateralAccel { get; set; } = 8.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Ideal lateral pull speed toward path. Used for pulling the hero back toward the path when drifting too far away. (m/s)")]
+	[DDLRegistration(0x3a176c3au, description: "Ideal lateral pull speed toward path. Used for pulling the hero back toward the path when drifting too far away. (m/s)")]
 	public float PathPullLateralSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Acceleration for lateral path pull speed. (m/s^2)")]
+	[DDLRegistration(0x68cda429u, description: "Acceleration for lateral path pull speed. (m/s^2)")]
 	public float PathPullLateralAccel { get; set; } = 8.00f;
 
-	[DDLRegistration(0xe413af32u)]
+	[DDLRegistration(0x6d3f64eau)]
 	public float SlidePathDistanceForward { get; set; } = 3.00f;
 
-	[DDLRegistration(0xe413af32u)]
+	[DDLRegistration(0x2fcc6043u)]
 	public float SlidePathDistanceSide { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe413af32u)]
+	[DDLRegistration(0xcd02961au)]
 	public float SlidePathHeightMin { get; set; } = 3.00f;
 
-	[DDLRegistration(0xe413af32u)]
+	[DDLRegistration(0xf10fa943u)]
 	public float SlidePathHeightMax { get; set; } = 3.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Launch speed for the slide hop.")]
+	[DDLRegistration(0xfab0ba36u, description: "Launch speed for the slide hop.")]
 	public float HopLaunchSpeed { get; set; } = 1.50f;
 
-	[DDLRegistration(0xe413af32u, description: "Gravity to apply to the slide hop.")]
+	[DDLRegistration(0xddca6e6bu, description: "Gravity to apply to the slide hop.")]
 	public float HopGravity { get; set; } = 10.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Blend speed for the Lean_Direction anim var that is driven by input.")]
+	[DDLRegistration(0x477ce4cbu, description: "Blend speed for the Lean_Direction anim var that is driven by input.")]
 	public float AnimVarLeanDirBlendSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Blend speed for the Slide_Direction anim var that is driven by lateral motion.")]
+	[DDLRegistration(0xff6edeafu, description: "Blend speed for the Slide_Direction anim var that is driven by lateral motion.")]
 	public float AnimVarSlideDirBlendSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Blend speed for the Slide_Slope anim var that is driven by slope of the surface.")]
+	[DDLRegistration(0x675f00a8u, description: "Blend speed for the Slide_Slope anim var that is driven by slope of the surface.")]
 	public float AnimVarSlideSlopeBlendSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Min pitch of hero for SlideSlope var. (degrees)")]
+	[DDLRegistration(0x78841d50u, description: "Min pitch of hero for SlideSlope var. (degrees)")]
 	public float AnimVarSlideSlopeMinPitchDegrees { get; set; } = 10.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Max pitch of hero for SlideSlope var. (degrees)")]
+	[DDLRegistration(0x5f3f7a61u, description: "Max pitch of hero for SlideSlope var. (degrees)")]
 	public float AnimVarSlideSlopeMaxPitchDegrees { get; set; } = 50.00f;
 
-	[DDLRegistration(0xe413af32u, description: "Min surface normal angle difference to cause the Slide_Impact driver to play. (degrees)")]
+	[DDLRegistration(0x90730e1au, description: "Min surface normal angle difference to cause the Slide_Impact driver to play. (degrees)")]
 	public float AnimImpactDriverMinAngleDiffDegrees { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe413af32u)]
+	[DDLRegistration(0x1c7381f7u)]
 	public List<x10b3c4cf> SlideMaterials { get; set; } = [];
 
-	[DDLRegistration(0xe413af32u)]
+	[DDLRegistration(0xb610c5e4u)]
 	public RivetAssetId CameraShakeConfig { get; set; } = default;
 
-	[DDLRegistration(0xe413af32u, description: "T value for slerp between slope direction and horizontal direction when determining the ideal camera forward. 0 = Slope direciton. 1 = Horizontal.")]
+	[DDLRegistration(0x58c5f09du, description: "T value for slerp between slope direction and horizontal direction when determining the ideal camera forward. 0 = Slope direciton. 1 = Horizontal.")]
 	public float CameraForwardHorizontalBlendT { get; set; } = 0.00f;
 
 	public new static HeroSlideConfig Create(DDLObject ddl) => new(ddl);

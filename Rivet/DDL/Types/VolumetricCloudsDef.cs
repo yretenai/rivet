@@ -25,28 +25,28 @@ public class VolumetricCloudsDef : DDLObjectType, IDDLObjectType<VolumetricCloud
 		VolumetricCloudsShadow = ddl.GetObject<VolumetricCloudsShadowDef>(0xe55013afu);
 	}
 
-	[DDLRegistration(0x7790e34du)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0x7790e34du, description: "It controls the radius of cloud layers. Like in a planet, smaller radius will make cloud layers be curved, and bigger radius will make cloud layers be flatten.")]
+	[DDLRegistration(0x42e318eeu, description: "It controls the radius of cloud layers. Like in a planet, smaller radius will make cloud layers be curved, and bigger radius will make cloud layers be flatten.")]
 	public float EarthRadiusScale { get; set; } = 10.00f;
 
-	[DDLRegistration(0x7790e34du)]
+	[DDLRegistration(0x7c88ced3u)]
 	public VolumetricCloudsRayMarchingDef? VolumetricCloudsRayMarching { get; set; } = default;
 
-	[DDLRegistration(0x7790e34du)]
+	[DDLRegistration(0x40bf327au)]
 	public VolumetricCloudsModelingDef? VolumetricCloudsModeling { get; set; } = default;
 
-	[DDLRegistration(0x7790e34du)]
+	[DDLRegistration(0xc1aa8392u)]
 	public VolumetricCloudsWindDef? VolumetricCloudsWind { get; set; } = default;
 
-	[DDLRegistration(0x7790e34du)]
+	[DDLRegistration(0xcbf8c8f0u)]
 	public VolumetricClouds2DLayerDef? VolumetricClouds2DLayer { get; set; } = default;
 
-	[DDLRegistration(0x7790e34du)]
+	[DDLRegistration(0x046cceb1u)]
 	public VolumetricCloudsLightingDef? VolumetricCloudsLighting { get; set; } = default;
 
-	[DDLRegistration(0x7790e34du)]
+	[DDLRegistration(0xe55013afu)]
 	public VolumetricCloudsShadowDef? VolumetricCloudsShadow { get; set; } = default;
 
 	public static VolumetricCloudsDef Create(DDLObject ddl) => new(ddl);

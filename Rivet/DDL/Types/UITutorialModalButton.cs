@@ -21,16 +21,16 @@ public class UITutorialModalButton : DDLObjectType, IDDLObjectType<UITutorialMod
 		PassthroughInput = ddl.GetValue<bool>(0x35d04713u, PassthroughInput);
 	}
 
-	[DDLRegistration(0x18c494dcu)]
+	[DDLRegistration(0xe54cc011u)]
 	public bool ShowModalButton { get; set; } = false;
 
-	[DDLRegistration(0x18c494dcu)]
+	[DDLRegistration(0x047ee25au)]
 	public xba9a3e10 Button { get; set; } = xba9a3e10.GUIKeyStart;
 
-	[DDLRegistration(0x18c494dcu)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
-	[DDLRegistration(0x18c494dcu)]
+	[DDLRegistration(0x35d04713u)]
 	public bool PassthroughInput { get; set; } = false;
 
 	public static UITutorialModalButton Create(DDLObject ddl) => new(ddl);

@@ -28,37 +28,37 @@ public class ThemeDef : DDLObjectType, IDDLObjectType<ThemeDef> {
 		WidgetPalettes = ddl.GetObjects<ThemeWidgetPalette>(0x7d3d03d9u);
 	}
 
-	[DDLRegistration(0xf1cbab46u)]
+	[DDLRegistration(0x15a0d128u)]
 	public string? FontName { get; set; } = default;
 
-	[DDLRegistration(0xf1cbab46u)]
+	[DDLRegistration(0xbc438b44u)]
 	public float FontSize { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf1cbab46u)]
+	[DDLRegistration(0xe4a3e6fbu)]
 	public bool UseSingleIconColor { get; set; } = false;
 
-	[DDLRegistration(0xf1cbab46u)]
+	[DDLRegistration(0xd745e209u)]
 	public bool RemapIconColors { get; set; } = false;
 
-	[DDLRegistration(0xf1cbab46u)]
+	[DDLRegistration(0x73af5e1cu)]
 	public string? IconColorSpec { get; set; } = default;
 
-	[DDLRegistration(0xf1cbab46u)]
+	[DDLRegistration(0x14d7b0d3u)]
 	public ThemeBasePalette? BasePalette { get; set; } = default;
 
-	[DDLRegistration(0xf1cbab46u)]
+	[DDLRegistration(0x4fa9eadcu)]
 	public List<ThemeCustomColor?> CustomColors { get; set; } = [];
 
-	[DDLRegistration(0xf1cbab46u)]
+	[DDLRegistration(0xfabf4ff0u)]
 	public List<ThemeCustomColor?> CustomPalette { get; set; } = [];
 
-	[DDLRegistration(0xf1cbab46u)]
+	[DDLRegistration(0x9eb68663u)]
 	public List<ThemeColorDef?> ColorDefs { get; set; } = [];
 
-	[DDLRegistration(0xf1cbab46u)]
+	[DDLRegistration(0x50393a71u)]
 	public bool IsHighContrast { get; set; } = false;
 
-	[DDLRegistration(0xf1cbab46u)]
+	[DDLRegistration(0x7d3d03d9u)]
 	public List<ThemeWidgetPalette?> WidgetPalettes { get; set; } = [];
 
 	public static ThemeDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class SetTeamEvent : EventBase, IDDLObjectType<SetTeamEvent> {
 		Team = ddl.GetEnum<xc115d639>(0xf47066afu, xc115d639Values.Lookup);
 	}
 
-	[DDLRegistration(0x27fd85bdu)]
+	[DDLRegistration(0xf47066afu)]
 	public xc115d639 Team { get; set; } = xc115d639.None;
 
 	public new static SetTeamEvent Create(DDLObject ddl) => new(ddl);

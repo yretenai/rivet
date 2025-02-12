@@ -19,10 +19,10 @@ public class BotIntroDataDropship : BotIntroData, IDDLObjectType<BotIntroDataDro
 		ShootAfterDropoff = ddl.GetValue<bool>(0x0d8c1106u, ShootAfterDropoff);
 	}
 
-	[DDLRegistration(0xb76648d3u, description: "For dropships, if they should shoot while bots are unloading.")]
+	[DDLRegistration(0x75726273u, description: "For dropships, if they should shoot while bots are unloading.")]
 	public bool ShootDuringDropoff { get; set; } = true;
 
-	[DDLRegistration(0xb76648d3u, description: "For dropships, if they should shoot after all bots are unloaded.")]
+	[DDLRegistration(0x0d8c1106u, description: "For dropships, if they should shoot after all bots are unloaded.")]
 	public bool ShootAfterDropoff { get; set; } = true;
 
 	public new static BotIntroDataDropship Create(DDLObject ddl) => new(ddl);

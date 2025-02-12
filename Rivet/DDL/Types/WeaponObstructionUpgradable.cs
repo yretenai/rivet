@@ -19,10 +19,10 @@ public class WeaponObstructionUpgradable : WeaponObstructionBase, IDDLObjectType
 		WeaponV5 = ddl.GetObject<BarrelObstructionBase>(0x411c9a6cu);
 	}
 
-	[DDLRegistration(0x3e885aaeu)]
+	[DDLRegistration(0x46715e75u)]
 	public BarrelObstructionBase? WeaponV1 { get; set; } = default;
 
-	[DDLRegistration(0x3e885aaeu)]
+	[DDLRegistration(0x411c9a6cu)]
 	public BarrelObstructionBase? WeaponV5 { get; set; } = default;
 
 	public new static WeaponObstructionUpgradable Create(DDLObject ddl) => new(ddl);

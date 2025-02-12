@@ -19,10 +19,10 @@ public class BotConfigAiming : ConfigBase, IDDLObjectType<BotConfigAiming> {
 		AimMods = ddl.GetObjects<AimModWrapper>(0x1d7694a1u);
 	}
 
-	[DDLRegistration(0x8d73a96bu)]
+	[DDLRegistration(0x7ed24ba4u)]
 	public AimingBasePrius? Aiming { get; set; } = default;
 
-	[DDLRegistration(0x8d73a96bu)]
+	[DDLRegistration(0x1d7694a1u)]
 	public List<AimModWrapper?> AimMods { get; set; } = [];
 
 	public new static BotConfigAiming Create(DDLObject ddl) => new(ddl);

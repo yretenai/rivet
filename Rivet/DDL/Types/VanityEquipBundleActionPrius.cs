@@ -19,10 +19,10 @@ public class VanityEquipBundleActionPrius : DDLObjectType, IDDLObjectType<Vanity
 		VanityBundleConfig = ddl.GetValue<RivetAssetId>(0xb68fd998u, VanityBundleConfig);
 	}
 
-	[DDLRegistration(0xa7d75eb4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0xa7d75eb4u, "Vanity Bundle Config", "Config File to equip hero with")]
+	[DDLRegistration(0xb68fd998u, "Vanity Bundle Config", "Config File to equip hero with")]
 	public RivetAssetId VanityBundleConfig { get; set; } = default;
 
 	public static VanityEquipBundleActionPrius Create(DDLObject ddl) => new(ddl);

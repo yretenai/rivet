@@ -25,28 +25,28 @@ public class ToggleTriggerPadPrius : TriggerPadPrius, IDDLObjectType<ToggleTrigg
 		MatConstValueDisabled = ddl.GetValue<float>(0x8e3d4e43u, MatConstValueDisabled);
 	}
 
-	[DDLRegistration(0xb7e12111u, "Saved Used?", "Whether to save that this trigger pad was used - if saved used we will init into the disabled state. Note if the pad is multiuse we will clear that we were used if the pad is used again and restores us to our init state.")]
+	[DDLRegistration(0xe4a5b6e0u, "Saved Used?", "Whether to save that this trigger pad was used - if saved used we will init into the disabled state. Note if the pad is multiuse we will clear that we were used if the pad is used again and restores us to our init state.")]
 	public bool SaveUsed { get; set; } = false;
 
-	[DDLRegistration(0xb7e12111u, "One Use?", "Whether this button should only be used once.")]
+	[DDLRegistration(0x0f5fcfefu, "One Use?", "Whether this button should only be used once.")]
 	public bool OneUse { get; set; } = false;
 
-	[DDLRegistration(0xb7e12111u, "Start in On State?", "Whether this button starts in its 'on' or 'off' state. Note, we will always go to the other state when triggered ('off' to 'on' or 'on' to 'off').")]
+	[DDLRegistration(0x3ac2d0d4u, "Start in On State?", "Whether this button starts in its 'on' or 'off' state. Note, we will always go to the other state when triggered ('off' to 'on' or 'on' to 'off').")]
 	public bool StartOn { get; set; } = false;
 
-	[DDLRegistration(0xb7e12111u, "Toggle state on step off?", "Whether the pad toggles its state on stepping on the pad as well as when stepping on (so it's only in the other state when being stood on).")]
+	[DDLRegistration(0xde6cf3ebu, "Toggle state on step off?", "Whether the pad toggles its state on stepping on the pad as well as when stepping on (so it's only in the other state when being stood on).")]
 	public bool ToggleOnTriggerOff { get; set; } = false;
 
-	[DDLRegistration(0xb7e12111u, "Material Constant", "Material constant to set when on/off.")]
+	[DDLRegistration(0xb6c6769cu, "Material Constant", "Material constant to set when on/off.")]
 	public string? MaterialConstant { get; set; } = "Button_State";
 
-	[DDLRegistration(0xb7e12111u, "Material Constant: On", "Value for the material constant for the on state.")]
+	[DDLRegistration(0xbb251341u, "Material Constant: On", "Value for the material constant for the on state.")]
 	public float MatConstValueOn { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb7e12111u, "Material Constant: Off", "Value for the material constant for the off state.")]
+	[DDLRegistration(0x6d681a70u, "Material Constant: Off", "Value for the material constant for the off state.")]
 	public float MatConstValueOff { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb7e12111u, "Material Constant: Disabled", "Value for the material constant for when the triggered pad is disabled.")]
+	[DDLRegistration(0x8e3d4e43u, "Material Constant: Disabled", "Value for the material constant for when the triggered pad is disabled.")]
 	public float MatConstValueDisabled { get; set; } = 0.00f;
 
 	public new static ToggleTriggerPadPrius Create(DDLObject ddl) => new(ddl);

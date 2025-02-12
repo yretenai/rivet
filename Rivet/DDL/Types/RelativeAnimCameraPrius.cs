@@ -20,13 +20,13 @@ public class RelativeAnimCameraPrius : CameraPrius, IDDLObjectType<RelativeAnimC
 		DoCollision = ddl.GetValue<bool>(0x198fefc3u, DoCollision);
 	}
 
-	[DDLRegistration(0x6f35fc5cu, "Relative Actor")]
+	[DDLRegistration(0xc843c120u, "Relative Actor")]
 	public RivetAssetId RelativeActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6f35fc5cu, "Anim Name List")]
+	[DDLRegistration(0x3bb9260bu, "Anim Name List")]
 	public List<string?> CameraAnimList { get; set; } = [];
 
-	[DDLRegistration(0x6f35fc5cu, "Do Collision")]
+	[DDLRegistration(0x198fefc3u, "Do Collision")]
 	public bool DoCollision { get; set; } = false;
 
 	public new static RelativeAnimCameraPrius Create(DDLObject ddl) => new(ddl);

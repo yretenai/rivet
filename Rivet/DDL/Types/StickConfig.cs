@@ -36,61 +36,61 @@ public class StickConfig : DDLObjectType, IDDLObjectType<StickConfig> {
 		DeadZoneHigh = ddl.GetValue<float>(0x2761fd66u, DeadZoneHigh);
 	}
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0x3a8c5369u)]
 	public float YawSpeedSlow { get; set; } = 30.00f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0xc51f04a1u)]
 	public float YawSpeedMid { get; set; } = 135.00f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0x2aed6b70u)]
 	public float YawSpeedFast { get; set; } = 250.00f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0xef49aadeu)]
 	public float YawRangeSlow { get; set; } = 0.45f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0xff2892c7u)]
 	public float YawRangeFast { get; set; } = 0.70f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0x4dc57c76u)]
 	public float YawAccel { get; set; } = 720.00f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0xa04eacdau)]
 	public float YawDecel { get; set; } = 1080.00f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0x725b245cu)]
 	public float PitchSpeedSlow { get; set; } = 20.00f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0xa05e7a06u)]
 	public float PitchSpeedMid { get; set; } = 80.00f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0x623a1c45u)]
 	public float PitchSpeedFast { get; set; } = 180.00f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0xa79eddebu)]
 	public float PitchRangeSlow { get; set; } = 0.45f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0xb7ffe5f2u)]
 	public float PitchRangeFast { get; set; } = 0.70f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0x12c92ef1u)]
 	public float PitchAccel { get; set; } = 500.00f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0xff42fe5du)]
 	public float PitchDecel { get; set; } = 1080.00f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0xade04108u)]
 	public float NudgeFactor { get; set; } = 0.30f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0xaeddd3e7u)]
 	public float YawBias { get; set; } = 1.25f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0xcd485c00u)]
 	public float CardinalBias { get; set; } = 0.10f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0x2f58d327u)]
 	public float DeadZoneLow { get; set; } = 0.15f;
 
-	[DDLRegistration(0x3bc8f276u)]
+	[DDLRegistration(0x2761fd66u)]
 	public float DeadZoneHigh { get; set; } = 0.85f;
 
 	public static StickConfig Create(DDLObject ddl) => new(ddl);

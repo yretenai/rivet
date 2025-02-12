@@ -20,13 +20,13 @@ public class ConduitVFXEvent : EventBase, IDDLObjectType<ConduitVFXEvent> {
 		Param = ddl.GetValue<uint>(0xbda9b048u, Param);
 	}
 
-	[DDLRegistration(0xe5b9e742u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0xe5b9e742u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe5b9e742u)]
+	[DDLRegistration(0xbda9b048u)]
 	public uint Param { get; set; } = 0x00000000;
 
 	public new static ConduitVFXEvent Create(DDLObject ddl) => new(ddl);

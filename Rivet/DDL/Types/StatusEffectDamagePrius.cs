@@ -31,46 +31,46 @@ public class StatusEffectDamagePrius : StatusEffectBasePrius, IDDLObjectType<Sta
 		IgnoreActor = ddl.GetValue<RivetAssetId>(0x03cb6ea9u, IgnoreActor);
 	}
 
-	[DDLRegistration(0x7574c17au, "DPS", "Damage done per second.")]
+	[DDLRegistration(0xb0d93e25u, "DPS", "Damage done per second.")]
 	public float Amount { get; set; } = 10.00f;
 
-	[DDLRegistration(0x7574c17au)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 3.00f;
 
-	[DDLRegistration(0x7574c17au)]
+	[DDLRegistration(0x73997b07u)]
 	public bool DamageSelf { get; set; } = true;
 
-	[DDLRegistration(0x7574c17au)]
+	[DDLRegistration(0x3be354f0u)]
 	public bool DamageFriends { get; set; } = true;
 
-	[DDLRegistration(0x7574c17au)]
+	[DDLRegistration(0x84deb5b9u)]
 	public bool LoS { get; set; } = true;
 
-	[DDLRegistration(0x7574c17au, description: "Level of knockback applied.")]
+	[DDLRegistration(0x2e553fddu, description: "Level of knockback applied.")]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x7574c17au, description: "Amount of knockback applied.")]
+	[DDLRegistration(0x7b1e600bu, description: "Amount of knockback applied.")]
 	public float KnockbackAmount { get; set; } = -1.00f;
 
-	[DDLRegistration(0x7574c17au, description: "If different from 1 this causes Kinetic React in bots to be more/less extreme.")]
+	[DDLRegistration(0x0b63daabu, description: "If different from 1 this causes Kinetic React in bots to be more/less extreme.")]
 	public float KineticMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7574c17au, description: "Type of damage.")]
+	[DDLRegistration(0xbc4e9799u, description: "Type of damage.")]
 	public DamageTypesGame Type { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x7574c17au, description: "The amount of status this packet will do. The type of status will be derived from the damage type.")]
+	[DDLRegistration(0x37e1f098u, description: "The amount of status this packet will do. The type of status will be derived from the damage type.")]
 	public float StatusAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7574c17au, description: "If true, the damage start time will be randomized")]
+	[DDLRegistration(0xec05fac9u, description: "If true, the damage start time will be randomized")]
 	public bool DamageStartTimeRandom { get; set; } = true;
 
-	[DDLRegistration(0x7574c17au, description: "How frequently the damage will be applied")]
+	[DDLRegistration(0x420d2682u, description: "How frequently the damage will be applied")]
 	public float DamageInterval { get; set; } = 0.25f;
 
-	[DDLRegistration(0x7574c17au, description: "If set, damage will be positioned at this locator, otherwise it uses the actor's bsphere center")]
+	[DDLRegistration(0x604b5af6u, description: "If set, damage will be positioned at this locator, otherwise it uses the actor's bsphere center")]
 	public string? DamageLocator { get; set; } = default;
 
-	[DDLRegistration(0x7574c17au, description: "If set, damage will not be done to this actor")]
+	[DDLRegistration(0x03cb6ea9u, description: "If set, damage will not be done to this actor")]
 	public RivetAssetId IgnoreActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static StatusEffectDamagePrius Create(DDLObject ddl) => new(ddl);

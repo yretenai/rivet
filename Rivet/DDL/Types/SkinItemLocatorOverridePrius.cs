@@ -18,7 +18,7 @@ public class SkinItemLocatorOverridePrius : DDLObjectType, IDDLObjectType<SkinIt
 		LocatorNameHash = ddl.GetValue<uint>(0x1d966637u, LocatorNameHash);
 	}
 
-	[DDLRegistration(0x42ade830u)]
+	[DDLRegistration(0x1d966637u)]
 	public uint LocatorNameHash { get; set; } = 0x00000000;
 
 	public static SkinItemLocatorOverridePrius Create(DDLObject ddl) => new(ddl);

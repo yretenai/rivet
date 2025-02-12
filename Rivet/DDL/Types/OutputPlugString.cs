@@ -18,7 +18,7 @@ public class OutputPlugString : OutputPlugBaseDef, IDDLObjectType<OutputPlugStri
 		Value = ddl.GetObject<StringPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x15d4a61bu)]
+	[DDLRegistration(0x042494f5u)]
 	public StringPlug? Value { get; set; } = default;
 
 	public new static OutputPlugString Create(DDLObject ddl) => new(ddl);

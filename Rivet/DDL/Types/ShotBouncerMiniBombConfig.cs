@@ -19,10 +19,10 @@ public class ShotBouncerMiniBombConfig : ConfigBase, IDDLObjectType<ShotBouncerM
 		ShotPrius = ddl.GetObject<ShotBouncerMiniBombPrius>(0x66fe4621u);
 	}
 
-	[DDLRegistration(0xc775eb04u)]
+	[DDLRegistration(0xf61d4e28u)]
 	public RivetAssetId MiniBombActor { get; set; } = default;
 
-	[DDLRegistration(0xc775eb04u, "Shot Prius")]
+	[DDLRegistration(0x66fe4621u, "Shot Prius")]
 	public ShotBouncerMiniBombPrius? ShotPrius { get; set; } = default;
 
 	public new static ShotBouncerMiniBombConfig Create(DDLObject ddl) => new(ddl);

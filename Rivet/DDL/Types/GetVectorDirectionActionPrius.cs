@@ -18,7 +18,7 @@ public class GetVectorDirectionActionPrius : DDLObjectType, IDDLObjectType<GetVe
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xeec81eb4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
 	public static GetVectorDirectionActionPrius Create(DDLObject ddl) => new(ddl);

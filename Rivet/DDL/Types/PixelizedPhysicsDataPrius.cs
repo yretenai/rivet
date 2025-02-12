@@ -19,10 +19,10 @@ public class PixelizedPhysicsDataPrius : DDLObjectType, IDDLObjectType<Pixelized
 		MaxPhysics = ddl.GetValue<uint>(0xa2e8a74cu, MaxPhysics);
 	}
 
-	[DDLRegistration(0xb6710122u)]
+	[DDLRegistration(0xd07576c7u)]
 	public uint MaxDebrisPhysics { get; set; } = 0x00000040;
 
-	[DDLRegistration(0xb6710122u)]
+	[DDLRegistration(0xa2e8a74cu)]
 	public uint MaxPhysics { get; set; } = 0x00000200;
 
 	public static PixelizedPhysicsDataPrius Create(DDLObject ddl) => new(ddl);

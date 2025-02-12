@@ -19,10 +19,10 @@ public class PhotoFrameUnlock : DDLObjectType, IDDLObjectType<PhotoFrameUnlock> 
 		UnlockId = ddl.GetString(0xc23bc8c9) ?? UnlockId;
 	}
 
-	[DDLRegistration(0xcc1385e0u)]
+	[DDLRegistration(0x2bedb7feu)]
 	public xfc0fcda6 UnlockType { get; set; } = xfc0fcda6.None;
 
-	[DDLRegistration(0xcc1385e0u)]
+	[DDLRegistration(0xc23bc8c9u)]
 	public string? UnlockId { get; set; } = "";
 
 	public static PhotoFrameUnlock Create(DDLObject ddl) => new(ddl);

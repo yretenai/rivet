@@ -19,10 +19,10 @@ public class PerfProfileLodMax : DDLObjectType, IDDLObjectType<PerfProfileLodMax
 		PS5_60_Spec = ddl.GetEnum<x04a11042>(0x960843bbu, x04a11042Values.Lookup);
 	}
 
-	[DDLRegistration(0x8043cd05u, "PS5 30-FPS Spec")]
+	[DDLRegistration(0xc4306c1cu, "PS5 30-FPS Spec")]
 	public x04a11042 PS5_30_Spec { get; set; } = x04a11042.Lod0;
 
-	[DDLRegistration(0x8043cd05u, "PS5 60-FPS Spec")]
+	[DDLRegistration(0x960843bbu, "PS5 60-FPS Spec")]
 	public x04a11042 PS5_60_Spec { get; set; } = x04a11042.Lod0;
 
 	public static PerfProfileLodMax Create(DDLObject ddl) => new(ddl);

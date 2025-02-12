@@ -18,7 +18,7 @@ public class VehicleHeadLightsOnEvent : EventBase, IDDLObjectType<VehicleHeadLig
 		VehicleId = ddl.GetValue<uint>(0x62feded2u, VehicleId);
 	}
 
-	[DDLRegistration(0x7e63b3e0u)]
+	[DDLRegistration(0x62feded2u)]
 	public uint VehicleId { get; set; } = 0x00000000;
 
 	public new static VehicleHeadLightsOnEvent Create(DDLObject ddl) => new(ddl);

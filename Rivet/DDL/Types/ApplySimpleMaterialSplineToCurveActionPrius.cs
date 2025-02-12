@@ -19,10 +19,10 @@ public class ApplySimpleMaterialSplineToCurveActionPrius : DDLObjectType, IDDLOb
 		Spline = ddl.GetObject<SimpleMaterialSplinePrius>(0x0b8e1b8eu);
 	}
 
-	[DDLRegistration(0x0e30a3d3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x0e30a3d3u)]
+	[DDLRegistration(0x0b8e1b8eu)]
 	public SimpleMaterialSplinePrius? Spline { get; set; } = default;
 
 	public static ApplySimpleMaterialSplineToCurveActionPrius Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class GameBotShooterJetPackPrius : GameBotShooterPrius, IDDLObjectType<Ga
 		HoverShuffleData = ddl.GetObject<HoverShuffleData>(0x5d8cb773u);
 	}
 
-	[DDLRegistration(0xde5ef58au, description: "True to start in having behavior, false to start as ground guy")]
+	[DDLRegistration(0x7b61598du, description: "True to start in having behavior, false to start as ground guy")]
 	public bool StartHovering { get; set; } = true;
 
-	[DDLRegistration(0xde5ef58au, description: "True to allow a melee attack while hovering.")]
+	[DDLRegistration(0x5527b76cu, description: "True to allow a melee attack while hovering.")]
 	public bool AllowAirMelee { get; set; } = false;
 
-	[DDLRegistration(0xde5ef58au, description: "Die if knocked into the water")]
+	[DDLRegistration(0x97c69926u, description: "Die if knocked into the water")]
 	public bool DieInWater { get; set; } = false;
 
-	[DDLRegistration(0xde5ef58au, description: "When Killed, Do not do Hover Death Sequence and just play single death anim like non-hovering bots")]
+	[DDLRegistration(0x13940fdeu, description: "When Killed, Do not do Hover Death Sequence and just play single death anim like non-hovering bots")]
 	public bool UseNonHoverDeath { get; set; } = false;
 
-	[DDLRegistration(0xde5ef58au, description: "When moving to a point, check for obstacles in the way and attempt to fly above them")]
+	[DDLRegistration(0xaf48be54u, description: "When moving to a point, check for obstacles in the way and attempt to fly above them")]
 	public bool CheckForObstacles { get; set; } = false;
 
-	[DDLRegistration(0xde5ef58au, description: "If true, the bot will always try to use a Hover_Shuffle driver even when not engaged")]
+	[DDLRegistration(0xc77278c6u, description: "If true, the bot will always try to use a Hover_Shuffle driver even when not engaged")]
 	public bool IgnoreAwarenessForShuffles { get; set; } = false;
 
-	[DDLRegistration(0xde5ef58au, description: "Multiplier to affect the lean vars.")]
+	[DDLRegistration(0x06a00692u, description: "Multiplier to affect the lean vars.")]
 	public float HoverLeanVarMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xde5ef58au, description: "Speed at which leanvars will blend from current to target lean value")]
+	[DDLRegistration(0x21515a4fu, description: "Speed at which leanvars will blend from current to target lean value")]
 	public float HoverLeanBlendSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0xde5ef58au, description: "When bot is passive, it will scale its min/max/ideal speeds by this number")]
+	[DDLRegistration(0x161209f2u, description: "When bot is passive, it will scale its min/max/ideal speeds by this number")]
 	public float HoverSpeedScaleWhenPassive { get; set; } = 1.00f;
 
-	[DDLRegistration(0xde5ef58au)]
+	[DDLRegistration(0x5d8cb773u)]
 	public HoverShuffleData? HoverShuffleData { get; set; } = default;
 
 	public new static GameBotShooterJetPackPrius Create(DDLObject ddl) => new(ddl);

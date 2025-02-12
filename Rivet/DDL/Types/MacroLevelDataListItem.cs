@@ -18,7 +18,7 @@ public class MacroLevelDataListItem : DDLObjectType, IDDLObjectType<MacroLevelDa
 		LevelData = ddl.GetObject<MacroLevelData>(0xe16e3538u);
 	}
 
-	[DDLRegistration(0x08474bc9u)]
+	[DDLRegistration(0xe16e3538u)]
 	public MacroLevelData? LevelData { get; set; } = default;
 
 	public static MacroLevelDataListItem Create(DDLObject ddl) => new(ddl);

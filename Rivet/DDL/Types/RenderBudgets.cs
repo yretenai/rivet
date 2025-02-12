@@ -28,37 +28,37 @@ public class RenderBudgets : DDLObjectType, IDDLObjectType<RenderBudgets> {
 		XMemShaderHeapTemplate = ddl.GetObject<HeapTemplate>(0x61c99c81u);
 	}
 
-	[DDLRegistration(0xf6004e58u)]
+	[DDLRegistration(0xbf8f2dd9u)]
 	public uint ManagedBufferSmallHeapSize { get; set; } = 0x08000000;
 
-	[DDLRegistration(0xf6004e58u)]
+	[DDLRegistration(0x5e22c3f0u)]
 	public uint ManagedBufferMaxAllocs { get; set; } = 0x00006000;
 
-	[DDLRegistration(0xf6004e58u)]
+	[DDLRegistration(0x6c097ac9u)]
 	public ulong SkinningBufferSize { get; set; } = 0x0000000002000000;
 
-	[DDLRegistration(0xf6004e58u)]
+	[DDLRegistration(0xaad70ce0u)]
 	public ulong FrozenSkinningBufferSize { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xf6004e58u)]
+	[DDLRegistration(0x1a63167du)]
 	public ulong DynamicD3DBufferSize { get; set; } = 0x0000000000400000;
 
-	[DDLRegistration(0xf6004e58u)]
+	[DDLRegistration(0x94d335abu)]
 	public ulong LightGridBufferSize { get; set; } = 0x0000000010800000;
 
-	[DDLRegistration(0xf6004e58u)]
+	[DDLRegistration(0x6e74fd68u)]
 	public ulong ConstantBufferRingSize { get; set; } = 0x0000000000800000;
 
-	[DDLRegistration(0xf6004e58u)]
+	[DDLRegistration(0x4a7449d9u)]
 	public uint DebugDynamicD3DBufferSize { get; set; } = 0x00c00000;
 
-	[DDLRegistration(0xf6004e58u)]
+	[DDLRegistration(0xa4cc3b85u)]
 	public HeapTemplate? XMemHeapTemplate { get; set; } = default;
 
-	[DDLRegistration(0xf6004e58u)]
+	[DDLRegistration(0x106306c8u)]
 	public HeapTemplate? XMemGpuWCHeapTemplate { get; set; } = default;
 
-	[DDLRegistration(0xf6004e58u)]
+	[DDLRegistration(0x61c99c81u)]
 	public HeapTemplate? XMemShaderHeapTemplate { get; set; } = default;
 
 	public static RenderBudgets Create(DDLObject ddl) => new(ddl);

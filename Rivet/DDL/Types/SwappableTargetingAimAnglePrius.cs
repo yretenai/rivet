@@ -18,7 +18,7 @@ public class SwappableTargetingAimAnglePrius : TargetingAimAnglePrius, IDDLObjec
 		TargetingAimAngleOptions = ddl.GetObjects<TargetingAimAnglePrius>(0x90557cd3u);
 	}
 
-	[DDLRegistration(0x3e738c23u)]
+	[DDLRegistration(0x90557cd3u)]
 	public List<TargetingAimAnglePrius?> TargetingAimAngleOptions { get; set; } = [];
 
 	public new static SwappableTargetingAimAnglePrius Create(DDLObject ddl) => new(ddl);

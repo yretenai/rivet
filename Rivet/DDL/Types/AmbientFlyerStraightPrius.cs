@@ -27,34 +27,34 @@ public class AmbientFlyerStraightPrius : DDLObjectType, IDDLObjectType<AmbientFl
 		DistToDelete = ddl.GetValue<float>(0x2849b445u, DistToDelete);
 	}
 
-	[DDLRegistration(0xe7b94325u, "Start Height: Min", "The minimum height we can start at.")]
+	[DDLRegistration(0x584d5629u, "Start Height: Min", "The minimum height we can start at.")]
 	public float StartHeightMin { get; set; } = 50.00f;
 
-	[DDLRegistration(0xe7b94325u, "Start Height: Max", "The maximum height we can start at.")]
+	[DDLRegistration(0x64406970u, "Start Height: Max", "The maximum height we can start at.")]
 	public float StartHeightMax { get; set; } = 75.00f;
 
-	[DDLRegistration(0xe7b94325u, "Use cam forward?", "Use the hero's camera forward direction as our base direction (the following angles offset us from that). If not set, we'll use the +Z axis as our base direction")]
+	[DDLRegistration(0x13ca4dbfu, "Use cam forward?", "Use the hero's camera forward direction as our base direction (the following angles offset us from that). If not set, we'll use the +Z axis as our base direction")]
 	public bool AngleOffCamForward { get; set; } = false;
 
-	[DDLRegistration(0xe7b94325u, "Angle: Yaw Min", "Min yaw angle (in degrees) for the actor's trajectory off of our base direction.")]
+	[DDLRegistration(0xd4d19865u, "Angle: Yaw Min", "Min yaw angle (in degrees) for the actor's trajectory off of our base direction.")]
 	public float YawAngleMin { get; set; } = -60.00f;
 
-	[DDLRegistration(0xe7b94325u, "Angle: Yaw Max", "Max yaw angle (in degrees) for the actor's trajectory off of our base direction.")]
+	[DDLRegistration(0xe8dca73cu, "Angle: Yaw Max", "Max yaw angle (in degrees) for the actor's trajectory off of our base direction.")]
 	public float YawAngleMax { get; set; } = 60.00f;
 
-	[DDLRegistration(0xe7b94325u, "Angle: Pitch Min", "Min pitch angle (in degrees) for the actor's trajectory based off the XZ plane.")]
+	[DDLRegistration(0xb190e6c2u, "Angle: Pitch Min", "Min pitch angle (in degrees) for the actor's trajectory based off the XZ plane.")]
 	public float PitchAngleMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe7b94325u, "Angle: Pitch Max", "Max pitch angle (in degrees) for the actor's trajectory based off the XZ plane.")]
+	[DDLRegistration(0x8d9dd99bu, "Angle: Pitch Max", "Max pitch angle (in degrees) for the actor's trajectory based off the XZ plane.")]
 	public float PitchAngleMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe7b94325u, "Speed: Min", "We travel at a constant speed, but will pick a random speed value for some variance. This is the range's min speed.")]
+	[DDLRegistration(0x8a4ca0e3u, "Speed: Min", "We travel at a constant speed, but will pick a random speed value for some variance. This is the range's min speed.")]
 	public float SpeedMin { get; set; } = 6.00f;
 
-	[DDLRegistration(0xe7b94325u, "Speed: Max", "Max value for our constant speed value.")]
+	[DDLRegistration(0xb6419fbau, "Speed: Max", "Max value for our constant speed value.")]
 	public float SpeedMax { get; set; } = 12.00f;
 
-	[DDLRegistration(0xe7b94325u, "Dist to Delete at", "Distance for us to auto delete at when not being drawn. Note: You should make sure this value is greater than the distance to the hero when activated, otherwise we'll delete immediately. Uses a failsafe distance of 1,000m (will always autodelete at 1,000m from the local hero).")]
+	[DDLRegistration(0x2849b445u, "Dist to Delete at", "Distance for us to auto delete at when not being drawn. Note: You should make sure this value is greater than the distance to the hero when activated, otherwise we'll delete immediately. Uses a failsafe distance of 1,000m (will always autodelete at 1,000m from the local hero).")]
 	public float DistToDelete { get; set; } = 500.00f;
 
 	public static AmbientFlyerStraightPrius Create(DDLObject ddl) => new(ddl);

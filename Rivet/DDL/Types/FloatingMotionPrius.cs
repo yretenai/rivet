@@ -33,52 +33,52 @@ public class FloatingMotionPrius : DDLObjectType, IDDLObjectType<FloatingMotionP
 		UpdateAsync = ddl.GetValue<bool>(0xaa4bdaddu, UpdateAsync);
 	}
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x12d5bf01u)]
 	public float RockFrequency { get; set; } = 0.30f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x5f079f03u)]
 	public float RockAmplitude { get; set; } = 0.50f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x4ddee51du)]
 	public float RockFrequencyTurning { get; set; } = 0.40f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x47a65ddbu)]
 	public float RockAmplitudeTurning { get; set; } = 1.00f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x63f150beu)]
 	public float RollFrequency { get; set; } = 0.50f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x2e2370bcu)]
 	public float RollAmplitude { get; set; } = 1.50f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x9b333d3eu)]
 	public float RollFrequencyTurning { get; set; } = 0.60f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x914b85f8u)]
 	public float RollAmplitudeTurning { get; set; } = 4.00f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0xb13095e6u)]
 	public float BankFactor { get; set; } = 0.04f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0xdd7f8415u)]
 	public float BankAngleMax { get; set; } = 5.00f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x8c8f1b49u)]
 	public float SmoothTurnRate { get; set; } = 1.00f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x72c909b1u)]
 	public float SmoothTurnInertia { get; set; } = 1.50f;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0xf41ca8a6u)]
 	public bool TweakSortBias { get; set; } = false;
 
-	[DDLRegistration(0x51917873u)]
+	[DDLRegistration(0x777fed5bu)]
 	public bool SmoothTurning { get; set; } = false;
 
-	[DDLRegistration(0x51917873u, description: "Set if you need UpdateAsync; otherwise UpdateMiddle is used")]
+	[DDLRegistration(0xaa4bdaddu, description: "Set if you need UpdateAsync; otherwise UpdateMiddle is used")]
 	public bool UpdateAsync { get; set; } = true;
 
 	public static FloatingMotionPrius Create(DDLObject ddl) => new(ddl);

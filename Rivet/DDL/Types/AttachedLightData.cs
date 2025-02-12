@@ -21,16 +21,16 @@ public class AttachedLightData : DDLObjectType, IDDLObjectType<AttachedLightData
 		InitialLightIntensity = ddl.GetValue<float>(0xe479152cu, InitialLightIntensity);
 	}
 
-	[DDLRegistration(0xfba525bfu)]
+	[DDLRegistration(0x72499036u)]
 	public RivetAssetId Light { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xfba525bfu)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
-	[DDLRegistration(0xfba525bfu)]
+	[DDLRegistration(0xcbbf42aeu)]
 	public DDLVector3? InitialLightColor { get; set; } = default;
 
-	[DDLRegistration(0xfba525bfu)]
+	[DDLRegistration(0xe479152cu)]
 	public float InitialLightIntensity { get; set; } = 0.00f;
 
 	public static AttachedLightData Create(DDLObject ddl) => new(ddl);

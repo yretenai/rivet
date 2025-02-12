@@ -26,31 +26,31 @@ public class SkinItemOverride : DDLObjectType, IDDLObjectType<SkinItemOverride> 
 		ModelVariantOverrideList = ddl.GetObjects<SkinItemModelVariantOverride>(0xdf65d905u);
 	}
 
-	[DDLRegistration(0x76cd4ce9u, "Locator Overrides", "Locator override(s) for this item")]
+	[DDLRegistration(0xa6babbdeu, "Locator Overrides", "Locator override(s) for this item")]
 	public List<SkinItemLocatorOverride?> LocatorOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x76cd4ce9u, "Texture Overrides", "Texture override(s) for this item")]
+	[DDLRegistration(0x31be016cu, "Texture Overrides", "Texture override(s) for this item")]
 	public List<SkinItemTextureOverride?> TextureOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x76cd4ce9u, "Material Overrides", "Material override(s) for this item")]
+	[DDLRegistration(0xeb47267au, "Material Overrides", "Material override(s) for this item")]
 	public List<SkinItemMaterialOverride?> MaterialOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x76cd4ce9u, "Composite Material Overrides", "Composite material override(s) for this item")]
+	[DDLRegistration(0x88bf7983u, "Composite Material Overrides", "Composite material override(s) for this item")]
 	public List<SkinItemCompositeMaterialOverride?> CompositeMaterialOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x76cd4ce9u, "Color Overrides", "Color override(s) for this item")]
+	[DDLRegistration(0x5a9f1a9du, "Color Overrides", "Color override(s) for this item")]
 	public List<SkinItemColorOverride?> ColorOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x76cd4ce9u, "Constant Overrides", "Constant override(s) for this item")]
+	[DDLRegistration(0xce09a84bu, "Constant Overrides", "Constant override(s) for this item")]
 	public List<SkinItemConstantOverride?> ConstantOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x76cd4ce9u, "Conduit Overrides", "Conduit override(s) for this item")]
+	[DDLRegistration(0x6c1e1c97u, "Conduit Overrides", "Conduit override(s) for this item")]
 	public List<SkinItemConduitOverride?> ConduitOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x76cd4ce9u, "Decals", "Decal(s) for this item")]
+	[DDLRegistration(0x1dfa6d24u, "Decals", "Decal(s) for this item")]
 	public List<SkinItemDecal?> DecalList { get; set; } = [];
 
-	[DDLRegistration(0x76cd4ce9u, "Model Variant Overrides", "Model Variant override(s) for this item")]
+	[DDLRegistration(0xdf65d905u, "Model Variant Overrides", "Model Variant override(s) for this item")]
 	public List<SkinItemModelVariantOverride?> ModelVariantOverrideList { get; set; } = [];
 
 	public static SkinItemOverride Create(DDLObject ddl) => new(ddl);

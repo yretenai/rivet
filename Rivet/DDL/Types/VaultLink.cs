@@ -21,16 +21,16 @@ public class VaultLink : DDLObjectType, IDDLObjectType<VaultLink> {
 		M = ddl.GetString(0x33eea566) ?? M;
 	}
 
-	[DDLRegistration(0x81e20ea9u, description: "Required by mongoDB, but not used by the server.")]
+	[DDLRegistration(0x7459aa19u, description: "Required by mongoDB, but not used by the server.")]
 	public long _id { get; set; } = 0;
 
-	[DDLRegistration(0x81e20ea9u, description: "File that contains a reference to B (can be indexed in the db)")]
+	[DDLRegistration(0x3a58e94du, description: "File that contains a reference to B (can be indexed in the db)")]
 	public RivetAssetId A { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x81e20ea9u, description: "File that is referenced by A (can be indexed in the db). Combination of A and B determine unique key.")]
+	[DDLRegistration(0xa351b8f7u, description: "File that is referenced by A (can be indexed in the db). Combination of A and B determine unique key.")]
 	public RivetAssetId B { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x81e20ea9u, "Metadata", "Metadata about the link (tbd - example: {Autoload:1, Count:15})")]
+	[DDLRegistration(0x33eea566u, "Metadata", "Metadata about the link (tbd - example: {Autoload:1, Count:15})")]
 	public string? M { get; set; } = default;
 
 	public static VaultLink Create(DDLObject ddl) => new(ddl);

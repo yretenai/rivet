@@ -21,16 +21,16 @@ public class ShotIcicleBlastPrius : SimpleShotPrius, IDDLObjectType<ShotIcicleBl
 		DamageHashString = ddl.GetString(0x5a2efcb4) ?? DamageHashString;
 	}
 
-	[DDLRegistration(0x4523a9fcu, "Close Range damage")]
+	[DDLRegistration(0xf9273eeeu, "Close Range damage")]
 	public IcicleDamageRange? CloseRangeDamage { get; set; } = default;
 
-	[DDLRegistration(0x4523a9fcu, "Mid Range Damage")]
+	[DDLRegistration(0x34a69b54u, "Mid Range Damage")]
 	public IcicleDamageRange? MidRangeDamage { get; set; } = default;
 
-	[DDLRegistration(0x4523a9fcu, "Long Range Damage")]
+	[DDLRegistration(0x8f353c5fu, "Long Range Damage")]
 	public IcicleDamageRange? LongRangeDamage { get; set; } = default;
 
-	[DDLRegistration(0x4523a9fcu, "Damage Hash String")]
+	[DDLRegistration(0x5a2efcb4u, "Damage Hash String")]
 	public string? DamageHashString { get; set; } = default;
 
 	public new static ShotIcicleBlastPrius Create(DDLObject ddl) => new(ddl);

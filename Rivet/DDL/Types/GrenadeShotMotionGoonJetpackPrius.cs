@@ -20,13 +20,13 @@ public class GrenadeShotMotionGoonJetpackPrius : GrenadeShotMotionGamePrius, IDD
 		DesiredFlightTime = ddl.GetValue<float>(0xd292ec09u, DesiredFlightTime);
 	}
 
-	[DDLRegistration(0x4f8a3363u)]
+	[DDLRegistration(0x0f26da04u)]
 	public float MinFlightSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4f8a3363u)]
+	[DDLRegistration(0xb6004175u)]
 	public float MaxFlightSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4f8a3363u)]
+	[DDLRegistration(0xd292ec09u)]
 	public float DesiredFlightTime { get; set; } = 0.00f;
 
 	public new static GrenadeShotMotionGoonJetpackPrius Create(DDLObject ddl) => new(ddl);

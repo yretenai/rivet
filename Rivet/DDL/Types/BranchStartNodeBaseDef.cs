@@ -18,7 +18,7 @@ public class BranchStartNodeBaseDef : MissionSystemNodeBaseDef, IDDLObjectType<B
 		Inputs = ddl.GetObjects<InputPlugBoolean>(0x3d19ee29u);
 	}
 
-	[DDLRegistration(0xdb067fffu)]
+	[DDLRegistration(0x3d19ee29u)]
 	public List<InputPlugBoolean?> Inputs { get; set; } = [];
 
 	public new static BranchStartNodeBaseDef Create(DDLObject ddl) => new(ddl);

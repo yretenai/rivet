@@ -25,28 +25,28 @@ public class WeaponTriggeredEvent : EventBase, IDDLObjectType<WeaponTriggeredEve
 		OwnerIsLocal = ddl.GetValue<bool>(0xd23b3317u, OwnerIsLocal);
 	}
 
-	[DDLRegistration(0xb203c9b8u)]
+	[DDLRegistration(0x902af590u)]
 	public uint WeaponId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb203c9b8u)]
+	[DDLRegistration(0xee73b5b3u)]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb203c9b8u)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0xb203c9b8u)]
+	[DDLRegistration(0x5c2f447cu)]
 	public sbyte ZoomLevel { get; set; } = 0;
 
-	[DDLRegistration(0xb203c9b8u)]
+	[DDLRegistration(0x9e2021f1u)]
 	public float SoundRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb203c9b8u)]
+	[DDLRegistration(0x627b8fb6u)]
 	public bool FiredFromMovingSurface { get; set; } = false;
 
-	[DDLRegistration(0xb203c9b8u)]
+	[DDLRegistration(0x0022f6dcu)]
 	public bool OwnerIsHero { get; set; } = false;
 
-	[DDLRegistration(0xb203c9b8u)]
+	[DDLRegistration(0xd23b3317u)]
 	public bool OwnerIsLocal { get; set; } = false;
 
 	public new static WeaponTriggeredEvent Create(DDLObject ddl) => new(ddl);

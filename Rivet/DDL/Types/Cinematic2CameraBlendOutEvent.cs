@@ -19,10 +19,10 @@ public class Cinematic2CameraBlendOutEvent : EventBase, IDDLObjectType<Cinematic
 		PruneFollowTransition = ddl.GetValue<bool>(0x45286285u, PruneFollowTransition);
 	}
 
-	[DDLRegistration(0x37aa5e42u)]
+	[DDLRegistration(0x15dd1374u)]
 	public float CameraBlendDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x37aa5e42u)]
+	[DDLRegistration(0x45286285u)]
 	public bool PruneFollowTransition { get; set; } = true;
 
 	public new static Cinematic2CameraBlendOutEvent Create(DDLObject ddl) => new(ddl);

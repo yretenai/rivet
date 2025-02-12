@@ -18,7 +18,7 @@ public class StreakConfig : ConfigBase, IDDLObjectType<StreakConfig> {
 		DefaultStreakSet = ddl.GetObject<StreakSet>(0xa6e3b3a3u);
 	}
 
-	[DDLRegistration(0xb6282e07u, "Default Set")]
+	[DDLRegistration(0xa6e3b3a3u, "Default Set")]
 	public StreakSet? DefaultStreakSet { get; set; } = default;
 
 	public new static StreakConfig Create(DDLObject ddl) => new(ddl);

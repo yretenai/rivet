@@ -27,34 +27,34 @@ public class HeroHoverbootConfig : ConfigBase, IDDLObjectType<HeroHoverbootConfi
 		HoverbootFastCameraShakeConfig = ddl.GetValue<RivetAssetId>(0x4d9198ccu, HoverbootFastCameraShakeConfig);
 	}
 
-	[DDLRegistration(0xdd1f2497u)]
+	[DDLRegistration(0x091f7edfu)]
 	public HoverbootMoveData? MoveData { get; set; } = default;
 
-	[DDLRegistration(0xdd1f2497u)]
+	[DDLRegistration(0x18338857u)]
 	public HoverbootMoveData? BoostMoveData { get; set; } = default;
 
-	[DDLRegistration(0xdd1f2497u)]
+	[DDLRegistration(0x38ab808au)]
 	public HoverbootMeleeData? MeleeData { get; set; } = default;
 
-	[DDLRegistration(0xdd1f2497u)]
+	[DDLRegistration(0x01655eecu)]
 	public HoverbootJumpData? JumpData { get; set; } = default;
 
-	[DDLRegistration(0xdd1f2497u)]
+	[DDLRegistration(0xdc6e0c7cu)]
 	public HoverbootSurfaceDeformationData? SurfaceDeformationData { get; set; } = default;
 
-	[DDLRegistration(0xdd1f2497u)]
+	[DDLRegistration(0x408b6f2bu)]
 	public HoverbootKickData? KickData { get; set; } = default;
 
-	[DDLRegistration(0xdd1f2497u)]
+	[DDLRegistration(0xab175a58u)]
 	public HoverbootFallData? FallData { get; set; } = default;
 
-	[DDLRegistration(0xdd1f2497u)]
+	[DDLRegistration(0xb93f74acu)]
 	public HoverbootHoverEffectData? HoverEffectData { get; set; } = default;
 
-	[DDLRegistration(0xdd1f2497u)]
+	[DDLRegistration(0x26ab9e82u)]
 	public HeroSpeedConfig? BoostJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0xdd1f2497u)]
+	[DDLRegistration(0x4d9198ccu)]
 	public RivetAssetId HoverbootFastCameraShakeConfig { get; set; } = default;
 
 	public new static HeroHoverbootConfig Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class Burst : DDLObjectType, IDDLObjectType<Burst> {
 		BurstTimeBetweenShots = ddl.GetValue<float>(0x264280a7u, BurstTimeBetweenShots);
 	}
 
-	[DDLRegistration(0x646d6c71u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xba90f6fd Type { get; set; } = xba90f6fd.Shots;
 
-	[DDLRegistration(0x646d6c71u)]
+	[DDLRegistration(0x7dc9fae1u)]
 	public int BurstShotsMin { get; set; } = 3;
 
-	[DDLRegistration(0x646d6c71u)]
+	[DDLRegistration(0x41c4c5b8u)]
 	public int BurstShotsMax { get; set; } = 5;
 
-	[DDLRegistration(0x646d6c71u)]
+	[DDLRegistration(0xb4290d8au)]
 	public int BurstShots { get; set; } = 0;
 
-	[DDLRegistration(0x646d6c71u)]
+	[DDLRegistration(0x282f869cu)]
 	public float BurstDurationMin { get; set; } = 0.50f;
 
-	[DDLRegistration(0x646d6c71u)]
+	[DDLRegistration(0x1422b9c5u)]
 	public float BurstDurationMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0x646d6c71u)]
+	[DDLRegistration(0xee3f4769u)]
 	public float BurstDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x646d6c71u, description: "Number of shots to fire per second.  If this is 0, then it will fire a shot every frame, regardless of frame rate.")]
+	[DDLRegistration(0xa1723d89u, description: "Number of shots to fire per second.  If this is 0, then it will fire a shot every frame, regardless of frame rate.")]
 	public float BurstRateOfFire { get; set; } = 30.00f;
 
-	[DDLRegistration(0x646d6c71u)]
+	[DDLRegistration(0x264280a7u)]
 	public float BurstTimeBetweenShots { get; set; } = 0.00f;
 
 	public static Burst Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class Cinematic2MaterialReplaceInfo : DDLObjectType, IDDLObjectType<Cinem
 		MaterialAsset = ddl.GetValue<RivetAssetId>(0xf55a8ae3u, MaterialAsset);
 	}
 
-	[DDLRegistration(0x3d9b5ed1u, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model.")]
+	[DDLRegistration(0x981e6927u, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x3d9b5ed1u)]
+	[DDLRegistration(0xf55a8ae3u)]
 	public RivetAssetId MaterialAsset { get; set; } = default;
 
 	public static Cinematic2MaterialReplaceInfo Create(DDLObject ddl) => new(ddl);

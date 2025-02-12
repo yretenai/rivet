@@ -19,10 +19,10 @@ public class SoundPortalComponentPrius : DDLObjectType, IDDLObjectType<SoundPort
 		VolumeB = ddl.GetValue<RivetAssetId>(0x2ae8c917u, VolumeB);
 	}
 
-	[DDLRegistration(0x729c9ebeu)]
+	[DDLRegistration(0xb3e198adu)]
 	public RivetAssetId VolumeA { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x729c9ebeu)]
+	[DDLRegistration(0x2ae8c917u)]
 	public RivetAssetId VolumeB { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static SoundPortalComponentPrius Create(DDLObject ddl) => new(ddl);

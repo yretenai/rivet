@@ -27,34 +27,34 @@ public class IKchain : DDLObjectType, IDDLObjectType<IKchain> {
 		CurvePreConditioningDir = ddl.GetObject<DDLVector3>(0xd1f178c7u);
 	}
 
-	[DDLRegistration(0x9017a008u)]
+	[DDLRegistration(0x5037d62au)]
 	public string? IKName { get; set; } = "PleaseNameMeForInGameUSage";
 
-	[DDLRegistration(0x9017a008u)]
+	[DDLRegistration(0x381bf2e1u)]
 	public string? StartJointName { get; set; } = default;
 
-	[DDLRegistration(0x9017a008u)]
+	[DDLRegistration(0x6fa4e87au)]
 	public string? EndJointName { get; set; } = default;
 
-	[DDLRegistration(0x9017a008u)]
+	[DDLRegistration(0x11a0bdb3u)]
 	public string? GoalLocatorName { get; set; } = default;
 
-	[DDLRegistration(0x9017a008u, description: "amount of stretch/compression allowed")]
+	[DDLRegistration(0xa030db61u, description: "amount of stretch/compression allowed")]
 	public float SolverErrorPercentage { get; set; } = 0.50f;
 
-	[DDLRegistration(0x9017a008u, description: "max solver iterations")]
+	[DDLRegistration(0x127f6d5du, description: "max solver iterations")]
 	public byte MaxSolverIterations { get; set; } = 0x28;
 
-	[DDLRegistration(0x9017a008u, "Use Anim Pose for Preconditioning", "If set, ik will use anim pose instead of bind pose for preconditioning.")]
+	[DDLRegistration(0xaa868beeu, "Use Anim Pose for Preconditioning", "If set, ik will use anim pose instead of bind pose for preconditioning.")]
 	public bool AnimPosePreConditioning { get; set; } = true;
 
-	[DDLRegistration(0x9017a008u, "Restriant Joint bending along bind bending direction", "while bending the joint it picking bending direction in bind pose")]
+	[DDLRegistration(0x54380390u, "Restriant Joint bending along bind bending direction", "while bending the joint it picking bending direction in bind pose")]
 	public bool AnimStickSolverBendConstraint { get; set; } = true;
 
-	[DDLRegistration(0x9017a008u, "Restriant Joint bending along smooth curve", "while bending the joint allow it to bend only outward curve from anim pose to destination")]
+	[DDLRegistration(0x29fba03bu, "Restriant Joint bending along smooth curve", "while bending the joint allow it to bend only outward curve from anim pose to destination")]
 	public bool CurvePreConditioning { get; set; } = false;
 
-	[DDLRegistration(0x9017a008u, "Restriant Joint bending along direction", "while bending the joint allow it to bend only outward curve along this direction in chain start space")]
+	[DDLRegistration(0xd1f178c7u, "Restriant Joint bending along direction", "while bending the joint allow it to bend only outward curve along this direction in chain start space")]
 	public DDLVector3? CurvePreConditioningDir { get; set; } = default;
 
 	public static IKchain Create(DDLObject ddl) => new(ddl);

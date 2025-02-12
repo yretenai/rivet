@@ -18,7 +18,7 @@ public class PerfSpecLooksPrius : DDLObjectType, IDDLObjectType<PerfSpecLooksPri
 		LooksPerSpec = ddl.GetObjects<PerfSpecLookData>(0x33acc882u);
 	}
 
-	[DDLRegistration(0x06d8b758u)]
+	[DDLRegistration(0x33acc882u)]
 	public List<PerfSpecLookData?> LooksPerSpec { get; set; } = [];
 
 	public static PerfSpecLooksPrius Create(DDLObject ddl) => new(ddl);

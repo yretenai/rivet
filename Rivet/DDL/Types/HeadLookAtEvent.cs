@@ -20,13 +20,13 @@ public class HeadLookAtEvent : EventBase, IDDLObjectType<HeadLookAtEvent> {
 		TargetLocator = ddl.GetValue<uint>(0x7abba555u, TargetLocator);
 	}
 
-	[DDLRegistration(0x15a72a0fu)]
+	[DDLRegistration(0x5a416fa5u)]
 	public RivetAssetId ActorToLookAt { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x15a72a0fu)]
+	[DDLRegistration(0x0cacfb55u)]
 	public uint HeadLocator { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x15a72a0fu)]
+	[DDLRegistration(0x7abba555u)]
 	public uint TargetLocator { get; set; } = 0x00000000;
 
 	public new static HeadLookAtEvent Create(DDLObject ddl) => new(ddl);

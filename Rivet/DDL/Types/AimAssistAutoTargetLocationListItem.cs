@@ -18,7 +18,7 @@ public class AimAssistAutoTargetLocationListItem : DDLObjectType, IDDLObjectType
 		AutoTargetLocation = ddl.GetObject<AimAssistAutoTargetLocation>(0x4622f75au);
 	}
 
-	[DDLRegistration(0xd9be59d0u)]
+	[DDLRegistration(0x4622f75au)]
 	public AimAssistAutoTargetLocation? AutoTargetLocation { get; set; } = default;
 
 	public static AimAssistAutoTargetLocationListItem Create(DDLObject ddl) => new(ddl);

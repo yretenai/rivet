@@ -21,16 +21,16 @@ public class WeaponEquipListenerData : DDLObjectType, IDDLObjectType<WeaponEquip
 		EquipLooksPairs = ddl.GetObjects<EquipLooksPair>(0x1cf95900u);
 	}
 
-	[DDLRegistration(0xbc8bd80cu, "Unarmed Animset", "Animset to push onto bot on unequip and pop on equip")]
+	[DDLRegistration(0xc7825311u, "Unarmed Animset", "Animset to push onto bot on unequip and pop on equip")]
 	public RivetAssetId Animset { get; set; } = default;
 
-	[DDLRegistration(0xbc8bd80cu, "Chance to Start Unarmed", "Assuming no other factors determining equipped state(being on ridable, starting engaged, etc). The bot has this chance to start with weapons not equipped")]
+	[DDLRegistration(0x579e93c1u, "Chance to Start Unarmed", "Assuming no other factors determining equipped state(being on ridable, starting engaged, etc). The bot has this chance to start with weapons not equipped")]
 	public float StartUnarmedChance { get; set; } = 0.50f;
 
-	[DDLRegistration(0xbc8bd80cu, description: "If true, the bot will try to play equip partials automatically if anims exist when engaged")]
+	[DDLRegistration(0xa1871282u, description: "If true, the bot will try to play equip partials automatically if anims exist when engaged")]
 	public bool EnableAutoEquip { get; set; } = true;
 
-	[DDLRegistration(0xbc8bd80cu, "Equip Looks", "List of Equip/Unequip looks that are to be used for this bot. Bots use the first valid Pairs on this list")]
+	[DDLRegistration(0x1cf95900u, "Equip Looks", "List of Equip/Unequip looks that are to be used for this bot. Bots use the first valid Pairs on this list")]
 	public List<EquipLooksPair?> EquipLooksPairs { get; set; } = [];
 
 	public static WeaponEquipListenerData Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class LevelListFavoriteZones : DDLObjectType, IDDLObjectType<LevelListFav
 		Other = ddl.GetDictionary<RivetAssetId, bool>(0xc00bf9e1, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
 	}
 
-	[DDLRegistration(0xac43d3d2u)]
+	[DDLRegistration(0x9c997da9u)]
 	public Dictionary<RivetAssetId, bool> Zones { get; set; } = [];
 
-	[DDLRegistration(0xac43d3d2u)]
+	[DDLRegistration(0xc00bf9e1u)]
 	public Dictionary<RivetAssetId, bool> Other { get; set; } = [];
 
 	public static LevelListFavoriteZones Create(DDLObject ddl) => new(ddl);

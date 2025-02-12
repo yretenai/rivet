@@ -20,13 +20,13 @@ public class ShootAtCurveFiringEmitData : DDLObjectType, IDDLObjectType<ShootAtC
 		IsFullBodyAnim = ddl.GetValue<bool>(0x10cdb0b8u, IsFullBodyAnim);
 	}
 
-	[DDLRegistration(0x1ca189c1u, "Firing Partial Anim", "Partial Anim to play for firing a shot")]
+	[DDLRegistration(0x677d5f23u, "Firing Partial Anim", "Partial Anim to play for firing a shot")]
 	public string? PartialDriver { get; set; } = default;
 
-	[DDLRegistration(0x1ca189c1u, "Firing Emit Locator", "Firing emit locator associated with FiringPartialDriver")]
+	[DDLRegistration(0x138c6595u, "Firing Emit Locator", "Firing emit locator associated with FiringPartialDriver")]
 	public string? EmitLocator { get; set; } = default;
 
-	[DDLRegistration(0x1ca189c1u)]
+	[DDLRegistration(0x10cdb0b8u)]
 	public bool IsFullBodyAnim { get; set; } = false;
 
 	public static ShootAtCurveFiringEmitData Create(DDLObject ddl) => new(ddl);

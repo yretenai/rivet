@@ -21,16 +21,16 @@ public class WeaponLevelConfig : ConfigBase, IDDLObjectType<WeaponLevelConfig> {
 		LevelUpCameraShake = ddl.GetValue<RivetAssetId>(0x5fb57995u, LevelUpCameraShake);
 	}
 
-	[DDLRegistration(0xa0605605u)]
+	[DDLRegistration(0x5fe2ecbau)]
 	public float TimeScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa0605605u)]
+	[DDLRegistration(0x78f2d960u)]
 	public float TimeScaleDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa0605605u)]
+	[DDLRegistration(0xb4193c80u)]
 	public RivetAssetId StartCameraShake { get; set; } = default;
 
-	[DDLRegistration(0xa0605605u)]
+	[DDLRegistration(0x5fb57995u)]
 	public RivetAssetId LevelUpCameraShake { get; set; } = default;
 
 	public new static WeaponLevelConfig Create(DDLObject ddl) => new(ddl);

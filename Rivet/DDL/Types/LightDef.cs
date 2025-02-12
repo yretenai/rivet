@@ -63,142 +63,142 @@ public class LightDef : DDLObjectType, IDDLObjectType<LightDef> {
 		LightingConditions = ddl.GetObject<LightingConditionBitSet>(0xfda14c35u);
 	}
 
-	[DDLRegistration(0x956f94edu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x956f94edu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x956f94edu, description: "Disabling this will disable the light and any shadowing from it.")]
+	[DDLRegistration(0x7566b265u, description: "Disabling this will disable the light and any shadowing from it.")]
 	public bool Active { get; set; } = true;
 
-	[DDLRegistration(0x956f94edu, description: "Target specific platforms and/or frame rates")]
+	[DDLRegistration(0x957c19efu, description: "Target specific platforms and/or frame rates")]
 	public LightPlatforms? Platforms { get; set; } = default;
 
-	[DDLRegistration(0x956f94edu, description: "Select the light model:<br>LightGridMod are modulates lights that apply only during lightgrid capture<br>Modulate: A non-realistic flat multiplier on luminance<br>Point (aka Omni) <i><b>Performance Note</b> This casts 6x the shadows of a spot light, and incurs 6x the draw-call and vertex-related costs</i>, use with care.<br>Pyramid is a square-type (frustum) spotlight, useful for gobo projections<br>Shaft (aka Directional) Scale of light impacts quality of shadow resolution. Useful for emulating key lighting coming through windows.<br>Spot <i><b>Note</b></i> the shadow map must cover the entire base of the cone, so defining wide inner and outer cone values will reduce shadow quality because it is stretched over a larger area.")]
+	[DDLRegistration(0xba4bdcdau, description: "Select the light model:<br>LightGridMod are modulates lights that apply only during lightgrid capture<br>Modulate: A non-realistic flat multiplier on luminance<br>Point (aka Omni) <i><b>Performance Note</b> This casts 6x the shadows of a spot light, and incurs 6x the draw-call and vertex-related costs</i>, use with care.<br>Pyramid is a square-type (frustum) spotlight, useful for gobo projections<br>Shaft (aka Directional) Scale of light impacts quality of shadow resolution. Useful for emulating key lighting coming through windows.<br>Spot <i><b>Note</b></i> the shadow map must cover the entire base of the cone, so defining wide inner and outer cone values will reduce shadow quality because it is stretched over a larger area.")]
 	public LightType LightType { get; set; } = LightType.Point;
 
-	[DDLRegistration(0x956f94edu, "Use Color Temp.", "When active, the Color Temperature value is used instead of the color picker's value.")]
+	[DDLRegistration(0xaa1b3639u, "Use Color Temp.", "When active, the Color Temperature value is used instead of the color picker's value.")]
 	public bool UseColorTemperature { get; set; } = false;
 
-	[DDLRegistration(0x956f94edu, description: "This sRGB color is converted to linear and set to <i>Intensity</i>'s luminance for the final linear HDR color of the light.")]
+	[DDLRegistration(0x7f058428u, description: "This sRGB color is converted to linear and set to <i>Intensity</i>'s luminance for the final linear HDR color of the light.")]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x956f94edu, "Color Temp.", "Correlated Color Temperature (CCT). Limits are 1000k to 15000k with default white (D65) at 6500k.")]
+	[DDLRegistration(0xbf0315cdu, "Color Temp.", "Correlated Color Temperature (CCT). Limits are 1000k to 15000k with default white (D65) at 6500k.")]
 	public float ColorTemperature { get; set; } = 6500.00f;
 
-	[DDLRegistration(0x956f94edu, description: "The linear value converted from the above sRGB <i>Color</i> is set to this intensity (luminance) for the final linear HDR color of the light. This luminance falls off according to 1 / (1 + distance^2)")]
+	[DDLRegistration(0x6b4f279eu, description: "The linear value converted from the above sRGB <i>Color</i> is set to this intensity (luminance) for the final linear HDR color of the light. This luminance falls off according to 1 / (1 + distance^2)")]
 	public float Intensity { get; set; } = 10.00f;
 
-	[DDLRegistration(0x956f94edu, "Attenuation Radius", "<b><i>Optimization:</i></b> The radius of a theoretical bounding sphere after which the light cuts off. This is a quick cutoff but not a sharp one to prevent being confused with a bug. This further attenuates physically-correct intensity falloff. The intent is to allow tight bounds on lights that otherwise would cover a great area with minimal contribution. In general a light should be authored with this at zero (default value) or a very large number so it does not influence the physically-correct falloff, then radius should be walked back to the smallest value where no difference is practically noticed. See  <i>Cutoff Dist</i>, which is a hard end-of-influence bound that by-design causes lighting to stop with no graceful falloff. If <i>Attenuation Radius</i> is larger than <i>Cutoff Dist</i>, this continuity will become evident.")]
+	[DDLRegistration(0x7216ddacu, "Attenuation Radius", "<b><i>Optimization:</i></b> The radius of a theoretical bounding sphere after which the light cuts off. This is a quick cutoff but not a sharp one to prevent being confused with a bug. This further attenuates physically-correct intensity falloff. The intent is to allow tight bounds on lights that otherwise would cover a great area with minimal contribution. In general a light should be authored with this at zero (default value) or a very large number so it does not influence the physically-correct falloff, then radius should be walked back to the smallest value where no difference is practically noticed. See  <i>Cutoff Dist</i>, which is a hard end-of-influence bound that by-design causes lighting to stop with no graceful falloff. If <i>Attenuation Radius</i> is larger than <i>Cutoff Dist</i>, this continuity will become evident.")]
 	public float AttenuationRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, "Volumetric Fog Intensity", "How much this specific light contributes to volumetric fog")]
+	[DDLRegistration(0x8a81a800u, "Volumetric Fog Intensity", "How much this specific light contributes to volumetric fog")]
 	public float VolumetricFogIntensity { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, description: "Control the saturation of a capture-only modulate light. This is a linear interpolation value, thus at the limits 0 means luminance-only and 1 means use the color as-is.")]
+	[DDLRegistration(0xf11cf3b1u, description: "Control the saturation of a capture-only modulate light. This is a linear interpolation value, thus at the limits 0 means luminance-only and 1 means use the color as-is.")]
 	public float Saturation { get; set; } = 1.00f;
 
-	[DDLRegistration(0x956f94edu, description: "A modulate light can be one of several volumes. Falloffs are adjusted on the 6 cardinal axes (+-X, +-Y, +-Z) of the volume.")]
+	[DDLRegistration(0xe64c5e33u, description: "A modulate light can be one of several volumes. Falloffs are adjusted on the 6 cardinal axes (+-X, +-Y, +-Z) of the volume.")]
 	public VolumeShapes VolumeShape { get; set; } = VolumeShapes.Cuboid;
 
-	[DDLRegistration(0x956f94edu, "Modulate local lights", "If checked, local lights will be influenced by the modulate light. Otherwise only the key light and indirect light will be changed.")]
+	[DDLRegistration(0x3ec438e2u, "Modulate local lights", "If checked, local lights will be influenced by the modulate light. Otherwise only the key light and indirect light will be changed.")]
 	public bool ModulateLocalLights { get; set; } = true;
 
-	[DDLRegistration(0x956f94edu, "Skip Light Capture", "If checked, this light will not be active during lightgrid or envprobe capture - particularly useful for disabling emissive materials")]
+	[DDLRegistration(0x64ede99au, "Skip Light Capture", "If checked, this light will not be active during lightgrid or envprobe capture - particularly useful for disabling emissive materials")]
 	public bool SkipLightCapture { get; set; } = false;
 
-	[DDLRegistration(0x956f94edu, "Only Light Capture", "If checked, this light will only be active during lightgrid and envprobe capture.")]
+	[DDLRegistration(0x1559dec2u, "Only Light Capture", "If checked, this light will only be active during lightgrid and envprobe capture.")]
 	public bool OnlyLightCapture { get; set; } = false;
 
-	[DDLRegistration(0x956f94edu, "Cast Shadows", "<b><i>Optimization:</i></b> Casting shadows incurs the draw-call & vertex expense of all models shadowed by the light. Turning off shadows eliminates this cost, but also no geometry will occlude the effects from this light.")]
+	[DDLRegistration(0xfc091c24u, "Cast Shadows", "<b><i>Optimization:</i></b> Casting shadows incurs the draw-call & vertex expense of all models shadowed by the light. Turning off shadows eliminates this cost, but also no geometry will occlude the effects from this light.")]
 	public bool CastShadows { get; set; } = false;
 
-	[DDLRegistration(0x956f94edu, "Shadow Platforms", "Target specific platforms and/or frame rates for shadow casting")]
+	[DDLRegistration(0x206c4afdu, "Shadow Platforms", "Target specific platforms and/or frame rates for shadow casting")]
 	public LightPlatforms? ShadowPlatforms { get; set; } = default;
 
-	[DDLRegistration(0x956f94edu, "Shadow Cast Type", "<b>No Shadows</b>: The light casts no shadows, no geometry will occlude this light.<br><b>Cache Static Models</b>: Default behavior. When the light isn't animating, all static casters are cached for performance.<br><b>Only Static Models</b>: Cheap option for placed lights. Static models will cast shadows but dynamic ones won't. On most frames no work needs to be done to render the shadow map.<br><b>Only Dynamic Models</b>: Useful for optimizing cinematic lighting when you only care about the shadows from the actors in the shot.")]
+	[DDLRegistration(0xa056bfc6u, "Shadow Cast Type", "<b>No Shadows</b>: The light casts no shadows, no geometry will occlude this light.<br><b>Cache Static Models</b>: Default behavior. When the light isn't animating, all static casters are cached for performance.<br><b>Only Static Models</b>: Cheap option for placed lights. Static models will cast shadows but dynamic ones won't. On most frames no work needs to be done to render the shadow map.<br><b>Only Dynamic Models</b>: Useful for optimizing cinematic lighting when you only care about the shadows from the actors in the shot.")]
 	public ShadowCastType ShadowCastType { get; set; } = ShadowCastType.CacheStaticModels;
 
-	[DDLRegistration(0x956f94edu, description: "<b><i>Optimization:</i></b> Higher resolutions gain detail, however have a higher fill-rate performance cost. Regardless of the setting, shadow res reduces further into the distance. If this setting is insufficient, check the following:<br><b>Scene Light Count</b> If there are more shadowing lights than memory can bear, all shadows will be downres'ed until all fit.<br><b>Light Angle</b> A shadow map must cover the entirety of the lit area, so wide angles on spot lights, or point lights that affect a great area will see their effective shadow resolution decrease as it's spread thinner over a greater area.<br><b>Note:</b> Point lights actually generate 6 shadow maps, one for each cardinal axis direction/face of a cube, so they are 6x the cost of a spot light in terms of shadow cost.")]
+	[DDLRegistration(0x4344f8a2u, description: "<b><i>Optimization:</i></b> Higher resolutions gain detail, however have a higher fill-rate performance cost. Regardless of the setting, shadow res reduces further into the distance. If this setting is insufficient, check the following:<br><b>Scene Light Count</b> If there are more shadowing lights than memory can bear, all shadows will be downres'ed until all fit.<br><b>Light Angle</b> A shadow map must cover the entirety of the lit area, so wide angles on spot lights, or point lights that affect a great area will see their effective shadow resolution decrease as it's spread thinner over a greater area.<br><b>Note:</b> Point lights actually generate 6 shadow maps, one for each cardinal axis direction/face of a cube, so they are 6x the cost of a spot light in terms of shadow cost.")]
 	public ShadowRes ShadowRes { get; set; } = ShadowRes.Normal;
 
-	[DDLRegistration(0x956f94edu, description: "<b><i>Non-PBR aesthetic tweak</i></b> This is intended to allow for fine control of spec response, especially in cinematics. This is an attenuation on top of the specular result, e.g. 1 is identity/do nothing, 0 means no specular, and 2 would mean twice as much specular response as is physically correct.")]
+	[DDLRegistration(0x85609e3fu, description: "<b><i>Non-PBR aesthetic tweak</i></b> This is intended to allow for fine control of spec response, especially in cinematics. This is an attenuation on top of the specular result, e.g. 1 is identity/do nothing, 0 means no specular, and 2 would mean twice as much specular response as is physically correct.")]
 	public float SpecIntensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x956f94edu, description: "<b><i>Non-PBR aesthetic tweak</i></b> Allow light to contributed only diffuse, only specular. Normally lights should contribute both.")]
+	[DDLRegistration(0xda97903eu, description: "<b><i>Non-PBR aesthetic tweak</i></b> Allow light to contributed only diffuse, only specular. Normally lights should contribute both.")]
 	public SpecType SpecType { get; set; } = SpecType.Both;
 
-	[DDLRegistration(0x956f94edu, "Bulb Radius", "<b>For Sphere/Capsule Area Lights</b> this is the radius of the light source.<br><b>For Rectangle Area Lights</b> this is the radial extent (i.e. half width) of the light source along the light's X axis.")]
+	[DDLRegistration(0x41e5466fu, "Bulb Radius", "<b>For Sphere/Capsule Area Lights</b> this is the radius of the light source.<br><b>For Rectangle Area Lights</b> this is the radial extent (i.e. half width) of the light source along the light's X axis.")]
 	public float BulbRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, "Bulb Length", "<b>For Capsule Area Lights</b> this is the length of the capsule along the light's Z axis.<br><b>For Rectangle Area Lights</b> this is the radial extent (i.e. half width) of the light source along the light's Z axis.")]
+	[DDLRegistration(0x7be4b687u, "Bulb Length", "<b>For Capsule Area Lights</b> this is the length of the capsule along the light's Z axis.<br><b>For Rectangle Area Lights</b> this is the radial extent (i.e. half width) of the light source along the light's Z axis.")]
 	public float BulbLength { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, "Bulb Push Forward", "<b>For Spot/Pyramid Area Lights</b><br>The bulb's shape is pushed forward along the light direction by this many meters. The purpose is to allow the light to be recessed into the ceiling/wall so that its cone is roughly the size of the bulb when it emerges. Then this push forward attribute allows the bulb to appear where it's meant to be, not at the recessed location.")]
+	[DDLRegistration(0x17d27580u, "Bulb Push Forward", "<b>For Spot/Pyramid Area Lights</b><br>The bulb's shape is pushed forward along the light direction by this many meters. The purpose is to allow the light to be recessed into the ceiling/wall so that its cone is roughly the size of the bulb when it emerges. Then this push forward attribute allows the bulb to appear where it's meant to be, not at the recessed location.")]
 	public float BulbPushForward { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, "Bulb Is Rectangle", "<b>Checked:</b> a rectangular area light. <b>Unchecked:</b> a circular area light.")]
+	[DDLRegistration(0x98f61e67u, "Bulb Is Rectangle", "<b>Checked:</b> a rectangular area light. <b>Unchecked:</b> a circular area light.")]
 	public bool BulbIsRectangle { get; set; } = false;
 
-	[DDLRegistration(0x956f94edu, "Inner Cone", "The radius of a spotlight's hot spot (aka umbra).")]
+	[DDLRegistration(0x5d7bbc1au, "Inner Cone", "The radius of a spotlight's hot spot (aka umbra).")]
 	public float InnerCone { get; set; } = 15.00f;
 
-	[DDLRegistration(0x956f94edu, "Outer Cone", "The radius of a spotlight's angular falloff. (aka penumbra).")]
+	[DDLRegistration(0xcc1e2b6du, "Outer Cone", "The radius of a spotlight's angular falloff. (aka penumbra).")]
 	public float OuterCone { get; set; } = 45.00f;
 
-	[DDLRegistration(0x956f94edu, "CutOff Dist", "A very-gross approximation for a shadowmap when a full shadowmap is overkill or is too expensive - useful for cases where it's known a light will not penetrate a surface, like a wall.")]
+	[DDLRegistration(0x676acf1du, "CutOff Dist", "A very-gross approximation for a shadowmap when a full shadowmap is overkill or is too expensive - useful for cases where it's known a light will not penetrate a surface, like a wall.")]
 	public float CutoffRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, "CutOn Dist", "Normally light emanates from a single point however it can be useful to ignore the micro-occlusions of light fixture geometry.<br>To support this, the cut on distance defines when lighting starts. The volume between the light's origin and this dead zone has no lighting. e.g. for a spot light, this would truncate the cone's tip. The transition between not-lit and lit is sharp and abrupt - there is no graceful fade-in.")]
+	[DDLRegistration(0x258b8c4fu, "CutOn Dist", "Normally light emanates from a single point however it can be useful to ignore the micro-occlusions of light fixture geometry.<br>To support this, the cut on distance defines when lighting starts. The volume between the light's origin and this dead zone has no lighting. e.g. for a spot light, this would truncate the cone's tip. The transition between not-lit and lit is sharp and abrupt - there is no graceful fade-in.")]
 	public float CutOnDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, "Shadow CutOn Dist", "Defines where the light's shadow starts. Geometry closer to the light will not cast a shadow.<br>Shadows will start at the light cut on distance if that is further than the shadow cut on distance so geometry that is not lit cannot cast shadows.")]
+	[DDLRegistration(0x909bdf5du, "Shadow CutOn Dist", "Defines where the light's shadow starts. Geometry closer to the light will not cast a shadow.<br>Shadows will start at the light cut on distance if that is further than the shadow cut on distance so geometry that is not lit cannot cast shadows.")]
 	public float ShadowCutOnDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, "Falloff Dist Neg X", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
+	[DDLRegistration(0x33eb3a03u, "Falloff Dist Neg X", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
 	public float FalloffDistX { get; set; } = 1.00f;
 
-	[DDLRegistration(0x956f94edu, "Falloff Dist Pos X", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
+	[DDLRegistration(0xf7aa0ce2u, "Falloff Dist Pos X", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
 	public float FalloffDistPosX { get; set; } = 1.00f;
 
-	[DDLRegistration(0x956f94edu, "Falloff Dist Neg Y", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
+	[DDLRegistration(0x44ec0a95u, "Falloff Dist Neg Y", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
 	public float FalloffDistY { get; set; } = 1.00f;
 
-	[DDLRegistration(0x956f94edu, "Falloff Dist Pos Y", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
+	[DDLRegistration(0x80ad3c74u, "Falloff Dist Pos Y", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
 	public float FalloffDistPosY { get; set; } = 1.00f;
 
-	[DDLRegistration(0x956f94edu, "Falloff Dist Neg Z", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
+	[DDLRegistration(0xdde55b2fu, "Falloff Dist Neg Z", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
 	public float FalloffDistZ { get; set; } = 1.00f;
 
-	[DDLRegistration(0x956f94edu, "Falloff Dist Pos Z", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
+	[DDLRegistration(0x19a46dceu, "Falloff Dist Pos Z", "Light luminance is at 100% inside the green volume and fades to 0% towards the white volume.")]
 	public float FalloffDistPosZ { get; set; } = 1.00f;
 
-	[DDLRegistration(0x956f94edu, "Fade Out Dist", "<b><i>Optimization:</i></b> The distance to the front of the light's bounding sphere when the light will fade out and then be culled/not drawn.")]
+	[DDLRegistration(0x1c6fd24du, "Fade Out Dist", "<b><i>Optimization:</i></b> The distance to the front of the light's bounding sphere when the light will fade out and then be culled/not drawn.")]
 	public float FadeOutDist { get; set; } = 70.00f;
 
-	[DDLRegistration(0x956f94edu, "Near Fade Clip Dist", "When the light's center is this distance from the camera, the light's intensity will be fully faded to zero. This can be set to a negative distance to make the light dim when you're close to it, but not fully disappear.")]
+	[DDLRegistration(0xb368515fu, "Near Fade Clip Dist", "When the light's center is this distance from the camera, the light's intensity will be fully faded to zero. This can be set to a negative distance to make the light dim when you're close to it, but not fully disappear.")]
 	public float NearFadeClipDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, "Near Fade Start Dist", "When the light's center is this distance from the camera, the light's intensity will start to fade down toward zero. A value of 0 (the default) disables near fading.")]
+	[DDLRegistration(0x7c3f6996u, "Near Fade Start Dist", "When the light's center is this distance from the camera, the light's intensity will start to fade down toward zero. A value of 0 (the default) disables near fading.")]
 	public float NearFadeStartDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, "Shadow Fade Out Dist", "<b><i>Optimization:</i></b> After this distance, the light's shadows will fade out and no longer be evaluated.")]
+	[DDLRegistration(0x96f917c0u, "Shadow Fade Out Dist", "<b><i>Optimization:</i></b> After this distance, the light's shadows will fade out and no longer be evaluated.")]
 	public float ShadowFadeOutDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, "Spec Fade Out Dist", "<b><i>Optimization:</i></b> After this distance, the light will behave as a diffuse-only light.")]
+	[DDLRegistration(0x19cebae2u, "Spec Fade Out Dist", "<b><i>Optimization:</i></b> After this distance, the light will behave as a diffuse-only light.")]
 	public float SpecFadeOutDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x956f94edu, "IES or Gobo Asset", "Add an IES profile, texture, material or material graph to affect light falloff in complex ways.")]
+	[DDLRegistration(0x34776bf1u, "IES or Gobo Asset", "Add an IES profile, texture, material or material graph to affect light falloff in complex ways.")]
 	public RivetAssetId TextureAsset { get; set; } = default;
 
-	[DDLRegistration(0x956f94edu, "Custom Gobo Input", "Values are passed to the gobo shader")]
+	[DDLRegistration(0xa788b073u, "Custom Gobo Input", "Values are passed to the gobo shader")]
 	public DDLVector3? CustomGoboInput { get; set; } = default;
 
-	[DDLRegistration(0x956f94edu, description: "<b><i>Optimization:</i></b> Link to a volume to more accurately clip lighting to local geometry, especially in cases when <i>Skip Shadows is checked</i>. Define a separate volume instance that covers all surfaces that might be appropriately lit by this light. Name it appropriately, then return to the light's <i>VolumeLink</i>. Select the well-named volume from the pull-down. <b><i>Note:</i></b> Currently only one volume is supported.")]
+	[DDLRegistration(0xeafe00f3u, description: "<b><i>Optimization:</i></b> Link to a volume to more accurately clip lighting to local geometry, especially in cases when <i>Skip Shadows is checked</i>. Define a separate volume instance that covers all surfaces that might be appropriately lit by this light. Name it appropriately, then return to the light's <i>VolumeLink</i>. Select the well-named volume from the pull-down. <b><i>Note:</i></b> Currently only one volume is supported.")]
 	public List<RivetAssetId> VolumeLinks { get; set; } = [];
 
-	[DDLRegistration(0x956f94edu, "Lighting Conditions")]
+	[DDLRegistration(0xfda14c35u, "Lighting Conditions")]
 	public LightingConditionBitSet? LightingConditions { get; set; } = default;
 
 	public static LightDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class StatusEffectVampireDrainEvent : EventBase, IDDLObjectType<StatusEff
 		Amount = ddl.GetValue<float>(0xb0d93e25u, Amount);
 	}
 
-	[DDLRegistration(0x55b42797u)]
+	[DDLRegistration(0xb0d93e25u)]
 	public float Amount { get; set; } = 0.00f;
 
 	public new static StatusEffectVampireDrainEvent Create(DDLObject ddl) => new(ddl);

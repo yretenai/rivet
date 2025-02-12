@@ -21,16 +21,16 @@ public class ProximityTieredOverrides : DDLObjectType, IDDLObjectType<ProximityT
 		OverrideMaxDelay = ddl.GetValue<float>(0x0c29ec89u, OverrideMaxDelay);
 	}
 
-	[DDLRegistration(0xa60ce874u, description: "Percent of our MaxAlive that out of the view frustum of the camera")]
+	[DDLRegistration(0x1ab9744cu, description: "Percent of our MaxAlive that out of the view frustum of the camera")]
 	public float MinPercentOutOfView { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa60ce874u, description: "Percent of our MaxAlive that out of the view frustum of the camera")]
+	[DDLRegistration(0xbd8df435u, description: "Percent of our MaxAlive that out of the view frustum of the camera")]
 	public float MaxPercentOutOfView { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa60ce874u, description: "New value for the MinDelayBetweenSpawns.  -1 means to ignore override value")]
+	[DDLRegistration(0xea494368u, description: "New value for the MinDelayBetweenSpawns.  -1 means to ignore override value")]
 	public float OverrideMinDelay { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa60ce874u, description: "New value for the MaxDelayBetweenSpawns.  -1 means to ignore override value")]
+	[DDLRegistration(0x0c29ec89u, description: "New value for the MaxDelayBetweenSpawns.  -1 means to ignore override value")]
 	public float OverrideMaxDelay { get; set; } = -1.00f;
 
 	public static ProximityTieredOverrides Create(DDLObject ddl) => new(ddl);

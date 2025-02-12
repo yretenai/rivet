@@ -20,13 +20,13 @@ public class MaterialNodeConnectedInputPort : DDLObjectType, IDDLObjectType<Mate
 		Source = ddl.GetObject<MaterialNodeConnectedPort>(0x61f23114u);
 	}
 
-	[DDLRegistration(0xada7ceecu)]
+	[DDLRegistration(0x8a514a8du)]
 	public string? Id { get; set; } = default;
 
-	[DDLRegistration(0xada7ceecu)]
+	[DDLRegistration(0x0f9f2930u)]
 	public List<DDLVector2?> Pins { get; set; } = [];
 
-	[DDLRegistration(0xada7ceecu)]
+	[DDLRegistration(0x61f23114u)]
 	public MaterialNodeConnectedPort? Source { get; set; } = default;
 
 	public static MaterialNodeConnectedInputPort Create(DDLObject ddl) => new(ddl);

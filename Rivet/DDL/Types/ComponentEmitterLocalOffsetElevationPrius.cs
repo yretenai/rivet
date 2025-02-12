@@ -20,13 +20,13 @@ public class ComponentEmitterLocalOffsetElevationPrius : ComponentEmitterBasePri
 		ElevationData = ddl.GetObjects<LocalOffsetElevationData>(0x5a54d72fu);
 	}
 
-	[DDLRegistration(0xf655356eu)]
+	[DDLRegistration(0x13b721dbu)]
 	public bool EmitFromUser { get; set; } = false;
 
-	[DDLRegistration(0xf655356eu)]
+	[DDLRegistration(0x4cdc032fu)]
 	public bool UseWorldUp { get; set; } = false;
 
-	[DDLRegistration(0xf655356eu)]
+	[DDLRegistration(0x5a54d72fu)]
 	public List<LocalOffsetElevationData?> ElevationData { get; set; } = [];
 
 	public new static ComponentEmitterLocalOffsetElevationPrius Create(DDLObject ddl) => new(ddl);

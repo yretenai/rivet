@@ -19,10 +19,10 @@ public class SetPoolIdResponseMessage : DDLObjectType, IDDLObjectType<SetPoolIdR
 		PoolId = ddl.GetValue<ushort>(0xd6168685u, PoolId);
 	}
 
-	[DDLRegistration(0xdd659d2fu)]
+	[DDLRegistration(0x637390afu)]
 	public ushort ObjectId { get; set; } = 0x0000;
 
-	[DDLRegistration(0xdd659d2fu)]
+	[DDLRegistration(0xd6168685u)]
 	public ushort PoolId { get; set; } = 0x0000;
 
 	public static SetPoolIdResponseMessage Create(DDLObject ddl) => new(ddl);

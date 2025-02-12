@@ -23,22 +23,22 @@ public class AimModLosTimeContractingSpreadPrius : AimModifierPrius, IDDLObjectT
 		LeashTime = ddl.GetValue<float>(0xa17fbb18u, LeashTime);
 	}
 
-	[DDLRegistration(0x32617495u)]
+	[DDLRegistration(0x445162fdu)]
 	public float InaccuracyMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x32617495u)]
+	[DDLRegistration(0x785c5da4u)]
 	public float InaccuracyMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x32617495u)]
+	[DDLRegistration(0x72fbf1e8u)]
 	public float LosTimeToMinInaccuracy { get; set; } = 0.00f;
 
-	[DDLRegistration(0x32617495u)]
+	[DDLRegistration(0x45a33419u)]
 	public float ResetTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x32617495u)]
+	[DDLRegistration(0x4f97f3aau)]
 	public float LeashDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x32617495u)]
+	[DDLRegistration(0xa17fbb18u)]
 	public float LeashTime { get; set; } = 0.00f;
 
 	public new static AimModLosTimeContractingSpreadPrius Create(DDLObject ddl) => new(ddl);

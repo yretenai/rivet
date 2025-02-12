@@ -20,13 +20,13 @@ public class POILibraryEntry : DDLObjectType, IDDLObjectType<POILibraryEntry> {
 		POIPriusType = ddl.GetObject<POIPriusBase>(0xd1324193u);
 	}
 
-	[DDLRegistration(0x8dbfc417u, "POI Type", "Choose POI enum type to define")]
+	[DDLRegistration(0xd6abc9e7u, "POI Type", "Choose POI enum type to define")]
 	public POITypeSelect POIType { get; set; } = POITypeSelect.POITypeNone;
 
-	[DDLRegistration(0x8dbfc417u, "Config Data", "Choose a POI config data type and select attributes")]
+	[DDLRegistration(0x96379876u, "Config Data", "Choose a POI config data type and select attributes")]
 	public POIConfigData? POIConfigData { get; set; } = default;
 
-	[DDLRegistration(0x8dbfc417u, "Prius Type", "Choose which POI component to spawn")]
+	[DDLRegistration(0xd1324193u, "Prius Type", "Choose which POI component to spawn")]
 	public POIPriusBase? POIPriusType { get; set; } = default;
 
 	public static POILibraryEntry Create(DDLObject ddl) => new(ddl);

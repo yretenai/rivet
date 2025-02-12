@@ -25,28 +25,28 @@ public class AnimDriverCommentDef : DDLObjectType, IDDLObjectType<AnimDriverComm
 		Height = ddl.GetValue<float>(0xcc99ae5eu, Height);
 	}
 
-	[DDLRegistration(0x9f8828a6u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x9f8828a6u)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
-	[DDLRegistration(0x9f8828a6u)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x9f8828a6u)]
+	[DDLRegistration(0xc9b3f5abu)]
 	public float Alpha { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9f8828a6u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9f8828a6u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9f8828a6u)]
+	[DDLRegistration(0x5488a6eau)]
 	public float Width { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9f8828a6u)]
+	[DDLRegistration(0xcc99ae5eu)]
 	public float Height { get; set; } = 0.00f;
 
 	public static AnimDriverCommentDef Create(DDLObject ddl) => new(ddl);

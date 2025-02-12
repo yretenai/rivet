@@ -19,10 +19,10 @@ public class ItemLoadoutConfig : ConfigBase, IDDLObjectType<ItemLoadoutConfig> {
 		Loadout = ddl.GetObject<ItemLoadout>(0x7f8fad7au);
 	}
 
-	[DDLRegistration(0xfa5c64a7u, "Preload Assets", "Preload the item assets in the loadout")]
+	[DDLRegistration(0x6394039bu, "Preload Assets", "Preload the item assets in the loadout")]
 	public bool Preload { get; set; } = false;
 
-	[DDLRegistration(0xfa5c64a7u, "Item Loadout", "Item loadout")]
+	[DDLRegistration(0x7f8fad7au, "Item Loadout", "Item loadout")]
 	public ItemLoadout? Loadout { get; set; } = default;
 
 	public new static ItemLoadoutConfig Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class SpaceDebrisMotionPrius : DDLObjectType, IDDLObjectType<SpaceDebrisM
 		UseRandomMoveDir = ddl.GetValue<bool>(0x04db91f7u, UseRandomMoveDir);
 	}
 
-	[DDLRegistration(0x9bf16aa4u)]
+	[DDLRegistration(0xac4ef98eu)]
 	public float MinRotationRate { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9bf16aa4u)]
+	[DDLRegistration(0x8bf59ebfu)]
 	public float MaxRotationRate { get; set; } = 360.00f;
 
-	[DDLRegistration(0x9bf16aa4u)]
+	[DDLRegistration(0x8919b496u)]
 	public DDLVector3? RotateAxis { get; set; } = default;
 
-	[DDLRegistration(0x9bf16aa4u)]
+	[DDLRegistration(0xadda583eu)]
 	public bool UseRandomRotateAxis { get; set; } = true;
 
-	[DDLRegistration(0x9bf16aa4u)]
+	[DDLRegistration(0xf0d89680u)]
 	public float MinSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9bf16aa4u)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9bf16aa4u)]
+	[DDLRegistration(0x8888db50u)]
 	public DDLVector3? MoveDir { get; set; } = default;
 
-	[DDLRegistration(0x9bf16aa4u)]
+	[DDLRegistration(0x04db91f7u)]
 	public bool UseRandomMoveDir { get; set; } = true;
 
 	public static SpaceDebrisMotionPrius Create(DDLObject ddl) => new(ddl);

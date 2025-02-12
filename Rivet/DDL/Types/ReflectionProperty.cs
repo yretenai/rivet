@@ -19,10 +19,10 @@ public class ReflectionProperty : DDLObjectType, IDDLObjectType<ReflectionProper
 		ReflectionCoefficient = ddl.GetValue<float>(0x1e54c7aeu, ReflectionCoefficient);
 	}
 
-	[DDLRegistration(0xf5c2cd85u)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0xf5c2cd85u)]
+	[DDLRegistration(0x1e54c7aeu)]
 	public float ReflectionCoefficient { get; set; } = 0.00f;
 
 	public static ReflectionProperty Create(DDLObject ddl) => new(ddl);

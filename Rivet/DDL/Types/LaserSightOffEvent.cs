@@ -19,10 +19,10 @@ public class LaserSightOffEvent : EventBase, IDDLObjectType<LaserSightOffEvent> 
 		IsTargetingPlayer = ddl.GetValue<uint>(0x7c869570u, IsTargetingPlayer);
 	}
 
-	[DDLRegistration(0xa92009bbu, description: "Hash to identify the beam type")]
+	[DDLRegistration(0x26a7db04u, description: "Hash to identify the beam type")]
 	public uint BeamHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa92009bbu, description: "1 if the laser sights are on to target a player")]
+	[DDLRegistration(0x7c869570u, description: "1 if the laser sights are on to target a player")]
 	public uint IsTargetingPlayer { get; set; } = 0x00000000;
 
 	public new static LaserSightOffEvent Create(DDLObject ddl) => new(ddl);

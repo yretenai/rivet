@@ -25,28 +25,28 @@ public class UIDisplayObjectData : DDLObjectType, IDDLObjectType<UIDisplayObject
 		Look = ddl.GetString(0x1baa14b2) ?? Look;
 	}
 
-	[DDLRegistration(0xf7620dfbu)]
+	[DDLRegistration(0x7dfa0351u)]
 	public UIDisplayObjectType ObjectType { get; set; } = UIDisplayObjectType.None;
 
-	[DDLRegistration(0xf7620dfbu, description: "The actor to use for display.")]
+	[DDLRegistration(0xc858642eu, description: "The actor to use for display.")]
 	public RivetAssetId ObjectActor { get; set; } = default;
 
-	[DDLRegistration(0xf7620dfbu, description: "Actor scale.")]
+	[DDLRegistration(0xf515e945u, description: "Actor scale.")]
 	public float Scale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf7620dfbu, description: "Actor yaw rotation speed (degrees per second).")]
+	[DDLRegistration(0xe5938d1eu, description: "Actor yaw rotation speed (degrees per second).")]
 	public float RotationSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0xf7620dfbu, description: "Actor starting yaw (degrees).")]
+	[DDLRegistration(0x7ddfeff9u, description: "Actor starting yaw (degrees).")]
 	public float InitialYaw { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf7620dfbu, description: "Actor static roll (degrees).")]
+	[DDLRegistration(0xd241dff3u, description: "Actor static roll (degrees).")]
 	public float StaticRoll { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf7620dfbu, description: "Force bounding center to the origin.")]
+	[DDLRegistration(0xc28dc267u, description: "Force bounding center to the origin.")]
 	public bool CenterToOrigin { get; set; } = false;
 
-	[DDLRegistration(0xf7620dfbu, description: "Look to toggle by default.")]
+	[DDLRegistration(0x1baa14b2u, description: "Look to toggle by default.")]
 	public string? Look { get; set; } = "";
 
 	public static UIDisplayObjectData Create(DDLObject ddl) => new(ddl);

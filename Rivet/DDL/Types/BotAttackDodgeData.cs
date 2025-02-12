@@ -18,7 +18,7 @@ public class BotAttackDodgeData : DDLObjectType, IDDLObjectType<BotAttackDodgeDa
 		Properties = ddl.GetBitset<xa672d722>(0x5cf56ffeu, xa672d722Values.Lookup);
 	}
 
-	[DDLRegistration(0xafda3182u)]
+	[DDLRegistration(0x5cf56ffeu)]
 	public xa672d722 Properties { get; set; } = (xa672d722) 0x00000000;
 
 	public static BotAttackDodgeData Create(DDLObject ddl) => new(ddl);

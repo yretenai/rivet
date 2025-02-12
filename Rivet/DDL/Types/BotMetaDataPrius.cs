@@ -18,7 +18,7 @@ public class BotMetaDataPrius : DDLObjectType, IDDLObjectType<BotMetaDataPrius> 
 		BotMetaData = ddl.GetValues<RivetAssetId>(0x103224ffu);
 	}
 
-	[DDLRegistration(0xad7e260cu, description: "Any Actor or Group a particular bot class might need as extra info, specific to the intro object this lives on.")]
+	[DDLRegistration(0x103224ffu, description: "Any Actor or Group a particular bot class might need as extra info, specific to the intro object this lives on.")]
 	public List<RivetAssetId> BotMetaData { get; set; } = [];
 
 	public static BotMetaDataPrius Create(DDLObject ddl) => new(ddl);

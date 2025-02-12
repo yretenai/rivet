@@ -31,46 +31,46 @@ public class DialogRule : DDLObjectType, IDDLObjectType<DialogRule> {
 		Lines = ddl.GetObject<Line>(0x56524057u);
 	}
 
-	[DDLRegistration(0x5539e932u, "OnEvent", "Trigger Event")]
+	[DDLRegistration(0x55aed815u, "OnEvent", "Trigger Event")]
 	public DialogTriggerGame TriggerEvent { get; set; } = DialogTriggerGame.None;
 
-	[DDLRegistration(0x5539e932u)]
+	[DDLRegistration(0x813e6fbdu)]
 	public string? DialogTag { get; set; } = default;
 
-	[DDLRegistration(0x5539e932u, description: "Rule cooldown in seconds.")]
+	[DDLRegistration(0x246291a9u, description: "Rule cooldown in seconds.")]
 	public float Cooldown { get; set; } = 30.00f;
 
-	[DDLRegistration(0x5539e932u)]
+	[DDLRegistration(0xa8531912u)]
 	public string? CooldownGroup { get; set; } = default;
 
-	[DDLRegistration(0x5539e932u)]
+	[DDLRegistration(0xa005ea5au)]
 	public float GroupCooldownTime { get; set; } = 5.00f;
 
-	[DDLRegistration(0x5539e932u)]
+	[DDLRegistration(0x7ab408d8u)]
 	public string? AnswerTagStart { get; set; } = default;
 
-	[DDLRegistration(0x5539e932u)]
+	[DDLRegistration(0x3102eb09u)]
 	public string? AnswerTagEnd { get; set; } = default;
 
-	[DDLRegistration(0x5539e932u, "OnObservedEvent", "Observed Trigger Event")]
+	[DDLRegistration(0x8fd9175bu, "OnObservedEvent", "Observed Trigger Event")]
 	public DialogTriggerGame ObservedTriggerEvent { get; set; } = DialogTriggerGame.None;
 
-	[DDLRegistration(0x5539e932u, description: "Current target type of the target actor.")]
+	[DDLRegistration(0x75a19d21u, description: "Current target type of the target actor.")]
 	public string? TargetType { get; set; } = default;
 
-	[DDLRegistration(0x5539e932u, description: "Name of any EmergentVORegionVolume the hero is presently in.")]
+	[DDLRegistration(0x92b77e2eu, description: "Name of any EmergentVORegionVolume the hero is presently in.")]
 	public string? HeroInRegion { get; set; } = default;
 
-	[DDLRegistration(0x5539e932u)]
+	[DDLRegistration(0x68ee6562u)]
 	public float DelayTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5539e932u)]
+	[DDLRegistration(0xbf65bbf1u)]
 	public bool NoRepeatsUntilAllPlayed { get; set; } = false;
 
-	[DDLRegistration(0x5539e932u)]
+	[DDLRegistration(0x17056453u)]
 	public List<DEVOFlexibleCriterion?> OtherCriteria { get; set; } = [];
 
-	[DDLRegistration(0x5539e932u)]
+	[DDLRegistration(0x56524057u)]
 	public Line? Lines { get; set; } = default;
 
 	public static DialogRule Create(DDLObject ddl) => new(ddl);

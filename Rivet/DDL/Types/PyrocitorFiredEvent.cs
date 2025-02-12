@@ -18,7 +18,7 @@ public class PyrocitorFiredEvent : EventBase, IDDLObjectType<PyrocitorFiredEvent
 		FXVersion = ddl.GetValue<byte>(0x2083aedeu, FXVersion);
 	}
 
-	[DDLRegistration(0x0f49d44du)]
+	[DDLRegistration(0x2083aedeu)]
 	public byte FXVersion { get; set; } = 0x00;
 
 	public new static PyrocitorFiredEvent Create(DDLObject ddl) => new(ddl);

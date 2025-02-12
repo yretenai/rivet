@@ -18,7 +18,7 @@ public class TopiaryBlasterSprinklerSpawnData : AttachableShotSpawnData, IDDLObj
 		SprinklerPrius = ddl.GetObject<TopiarySprinklerPrius>(0x60ae7e2fu);
 	}
 
-	[DDLRegistration(0x82e95a1cu)]
+	[DDLRegistration(0x60ae7e2fu)]
 	public TopiarySprinklerPrius? SprinklerPrius { get; set; } = default;
 
 	public new static TopiaryBlasterSprinklerSpawnData Create(DDLObject ddl) => new(ddl);

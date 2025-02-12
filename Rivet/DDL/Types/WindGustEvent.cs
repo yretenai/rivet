@@ -18,7 +18,7 @@ public class WindGustEvent : EventBase, IDDLObjectType<WindGustEvent> {
 		GustData = ddl.GetObject<WindGustEventData>(0x563c8e16u);
 	}
 
-	[DDLRegistration(0xb7e23783u, description: "Gust parameters")]
+	[DDLRegistration(0x563c8e16u, description: "Gust parameters")]
 	public WindGustEventData? GustData { get; set; } = default;
 
 	public new static WindGustEvent Create(DDLObject ddl) => new(ddl);

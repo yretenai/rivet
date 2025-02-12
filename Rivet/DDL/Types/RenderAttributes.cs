@@ -47,94 +47,94 @@ public class RenderAttributes : DDLObjectType, IDDLObjectType<RenderAttributes> 
 		AssetName = ddl.GetValue<RivetAssetId>(0x5b8d9442u, AssetName);
 	}
 
-	[DDLRegistration(0x8633b21au, "Activation Chance")]
+	[DDLRegistration(0x06240a1eu, "Activation Chance")]
 	public float ActivationChance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8633b21au, "Photo Mode Status", "Controls if a render node is enabled, disabled or only active during Photo Mode")]
+	[DDLRegistration(0x08dc8128u, "Photo Mode Status", "Controls if a render node is enabled, disabled or only active during Photo Mode")]
 	public PhotoModeStatus PhotoModeStatus { get; set; } = PhotoModeStatus.Enabled;
 
-	[DDLRegistration(0x8633b21au, "Tube Roundness", "Controls how many vertices to generate per tube cross-section")]
+	[DDLRegistration(0x0b8d1185u, "Tube Roundness", "Controls how many vertices to generate per tube cross-section")]
 	public uint Roundness { get; set; } = 0x00000008;
 
-	[DDLRegistration(0x8633b21au, "Randomize Instance")]
+	[DDLRegistration(0x0049dc16u, "Randomize Instance")]
 	public bool RandomizeInstance { get; set; } = true;
 
-	[DDLRegistration(0x8633b21au, "Randomize Geom")]
+	[DDLRegistration(0x89a7e355u, "Randomize Geom")]
 	public bool RandomizeSubsets { get; set; } = false;
 
-	[DDLRegistration(0x8633b21au, "Orient Velocity", "When checked, the asset will orient itself along the particle velocity")]
+	[DDLRegistration(0x6b4c0b50u, "Orient Velocity", "When checked, the asset will orient itself along the particle velocity")]
 	public bool OrientOverride { get; set; } = false;
 
-	[DDLRegistration(0x8633b21au, "Track Particle", "When checked, the asset will follow the particle")]
+	[DDLRegistration(0x3dfd6642u, "Track Particle", "When checked, the asset will follow the particle")]
 	public bool TrackParticle { get; set; } = true;
 
-	[DDLRegistration(0x8633b21au, "Sun Distance 2D")]
+	[DDLRegistration(0xcaf598e4u, "Sun Distance 2D")]
 	public float SunDistance2D { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8633b21au, "Temporal AA Style")]
+	[DDLRegistration(0xd219660au, "Temporal AA Style")]
 	public TemporalAAStyle TemporalAAStyle { get; set; } = TemporalAAStyle.InheritMaterial;
 
-	[DDLRegistration(0x8633b21au, "FrameGrab Style")]
+	[DDLRegistration(0x3a08c00fu, "FrameGrab Style")]
 	public FrameGrabStyle FrameGrabStyle { get; set; } = FrameGrabStyle.Standard;
 
-	[DDLRegistration(0x8633b21au, "Composite Style")]
+	[DDLRegistration(0x40250330u, "Composite Style")]
 	public CompositeStyle CompositeStyle { get; set; } = CompositeStyle.FullResolution;
 
-	[DDLRegistration(0x8633b21au, "Blend Style")]
+	[DDLRegistration(0xb34024eau, "Blend Style")]
 	public BlendStyle BlendStyle { get; set; } = BlendStyle.Alpha;
 
-	[DDLRegistration(0x8633b21au, "Quad Style")]
+	[DDLRegistration(0xed66a9aeu, "Quad Style")]
 	public QuadStyle QuadStyle { get; set; } = QuadStyle.Quad;
 
-	[DDLRegistration(0x8633b21au, "Sort Style")]
+	[DDLRegistration(0x7b0b2803u, "Sort Style")]
 	public SortStyle SortStyle { get; set; } = SortStyle.None;
 
-	[DDLRegistration(0x8633b21au, "Orient Style")]
+	[DDLRegistration(0xe1e68a34u, "Orient Style")]
 	public FFOrientStyle FFOrientStyle { get; set; } = FFOrientStyle.Local;
 
-	[DDLRegistration(0x8633b21au, "Orient Style")]
+	[DDLRegistration(0xc0645650u, "Orient Style")]
 	public OrientStyle OrientStyle { get; set; } = OrientStyle.Camera;
 
-	[DDLRegistration(0x8633b21au, "Offset Style")]
+	[DDLRegistration(0x894bd445u, "Offset Style")]
 	public xfe5100b1 OffsetStyle { get; set; } = xfe5100b1.World;
 
-	[DDLRegistration(0x8633b21au, "Shadow Casting Distance", "Controls how far away from the camera this emitter can cast a shadow. A value of zero means no shadow casting")]
+	[DDLRegistration(0x4889122cu, "Shadow Casting Distance", "Controls how far away from the camera this emitter can cast a shadow. A value of zero means no shadow casting")]
 	public float ShadowCastingDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8633b21au, "Sun Lens Flare Occluder")]
+	[DDLRegistration(0x2a5ed15bu, "Sun Lens Flare Occluder")]
 	public bool SunLensFlareOccluder { get; set; } = false;
 
-	[DDLRegistration(0x8633b21au, "Size as Screen Ratios")]
+	[DDLRegistration(0x1debc24au, "Size as Screen Ratios")]
 	public bool DimensionsAsRatios { get; set; } = false;
 
-	[DDLRegistration(0x8633b21au, "Allow Attachments")]
+	[DDLRegistration(0xb5239643u, "Allow Attachments")]
 	public bool AttachBeamEnds { get; set; } = false;
 
-	[DDLRegistration(0x8633b21au, "Dynamic Scaling")]
+	[DDLRegistration(0xd726cd51u, "Dynamic Scaling")]
 	public bool DynamicScaling { get; set; } = false;
 
-	[DDLRegistration(0x8633b21au, "Ignore High-Contrast Mode", "When set to true on a non-post vfx, the render nodes will ignore high-contrast mode and render in full color")]
+	[DDLRegistration(0x6a2faa5eu, "Ignore High-Contrast Mode", "When set to true on a non-post vfx, the render nodes will ignore high-contrast mode and render in full color")]
 	public bool IgnoreHighContrast { get; set; } = false;
 
-	[DDLRegistration(0x8633b21au, "Ignore Post", "When set to true on a non-post vfx, the render nodes will render after Post VFX. When set to true on a post vfx, it will render after all post and after temporal aa and tone-mapping. This comes with the limitation that the graph cannot use frame grabs, and any use of the depth buffer will be jittery")]
+	[DDLRegistration(0x59173345u, "Ignore Post", "When set to true on a non-post vfx, the render nodes will render after Post VFX. When set to true on a post vfx, it will render after all post and after temporal aa and tone-mapping. This comes with the limitation that the graph cannot use frame grabs, and any use of the depth buffer will be jittery")]
 	public bool IgnorePost { get; set; } = false;
 
-	[DDLRegistration(0x8633b21au, "Water Foam", "When set to true this node will render to the water simulation and contribute to foam. Use for splashes and boat wakes")]
+	[DDLRegistration(0x9d6a901au, "Water Foam", "When set to true this node will render to the water simulation and contribute to foam. Use for splashes and boat wakes")]
 	public bool WaterFoam { get; set; } = false;
 
-	[DDLRegistration(0x8633b21au, "Apply Instance Alpha")]
+	[DDLRegistration(0xed5290afu, "Apply Instance Alpha")]
 	public bool ApplyAlpha { get; set; } = true;
 
-	[DDLRegistration(0x8633b21au, "Apply Instance Tint")]
+	[DDLRegistration(0x4b5f8937u, "Apply Instance Tint")]
 	public bool ApplyTint { get; set; } = true;
 
-	[DDLRegistration(0x8633b21au, "Apply Lighting")]
+	[DDLRegistration(0x778ea754u, "Apply Lighting")]
 	public bool Lit { get; set; } = false;
 
-	[DDLRegistration(0x8633b21au, "Base Scale")]
+	[DDLRegistration(0x643c2b67u, "Base Scale")]
 	public float BaseScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8633b21au, "Asset")]
+	[DDLRegistration(0x5b8d9442u, "Asset")]
 	public RivetAssetId AssetName { get; set; } = default;
 
 	public static RenderAttributes Create(DDLObject ddl) => new(ddl);

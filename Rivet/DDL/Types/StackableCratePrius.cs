@@ -21,16 +21,16 @@ public class StackableCratePrius : DDLObjectType, IDDLObjectType<StackableCrateP
 		CrateMaterialType = ddl.GetEnum<x66e403a6>(0x57f2651fu, x66e403a6Values.Lookup);
 	}
 
-	[DDLRegistration(0x8d6b6937u, description: "Radius of the crate")]
+	[DDLRegistration(0x0504203du, description: "Radius of the crate")]
 	public float Radius { get; set; } = 0.50f;
 
-	[DDLRegistration(0x8d6b6937u, description: "Whether or not to save that this crate is destroyed when it is broken (so it won't be there on reload). Uses the Deleted Flag.")]
+	[DDLRegistration(0x8a97cf92u, description: "Whether or not to save that this crate is destroyed when it is broken (so it won't be there on reload). Uses the Deleted Flag.")]
 	public bool SaveDestroy { get; set; } = true;
 
-	[DDLRegistration(0x8d6b6937u, description: "Whether or not this crate is indestructible.")]
+	[DDLRegistration(0xc461ab8au, description: "Whether or not this crate is indestructible.")]
 	public bool Indestructible { get; set; } = false;
 
-	[DDLRegistration(0x8d6b6937u, description: "What type of crate this is for per-region material overrides.")]
+	[DDLRegistration(0x57f2651fu, description: "What type of crate this is for per-region material overrides.")]
 	public x66e403a6 CrateMaterialType { get; set; } = x66e403a6.None;
 
 	public static StackableCratePrius Create(DDLObject ddl) => new(ddl);

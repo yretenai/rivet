@@ -18,7 +18,7 @@ public class ObjectiveSystemSettingsGame : DDLObjectType, IDDLObjectType<Objecti
 		MaxObjectiveVolumes = ddl.GetValue<int>(0x938f726eu, MaxObjectiveVolumes);
 	}
 
-	[DDLRegistration(0xd55ef454u)]
+	[DDLRegistration(0x938f726eu)]
 	public int MaxObjectiveVolumes { get; set; } = 64;
 
 	public static ObjectiveSystemSettingsGame Create(DDLObject ddl) => new(ddl);

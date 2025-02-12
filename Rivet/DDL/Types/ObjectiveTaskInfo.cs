@@ -21,16 +21,16 @@ public class ObjectiveTaskInfo : DDLObjectType, IDDLObjectType<ObjectiveTaskInfo
 		Hints = ddl.GetObjects<ActivityHint>(0xf00bc587u);
 	}
 
-	[DDLRegistration(0x2148964cu, description: "Leave blank to just use the objective name. However, if the name is more than 32 characters, an AlternateId must be provided. Must have no spaces and not start with '_'.")]
+	[DDLRegistration(0x9e8ecf27u, description: "Leave blank to just use the objective name. However, if the name is more than 32 characters, an AlternateId must be provided. Must have no spaces and not start with '_'.")]
 	public string? AlternateID { get; set; } = default;
 
-	[DDLRegistration(0x2148964cu, "Task Name Tag Override", "Loctag to use as an override for the task instead of the objective name. If blank, just use the UI's name loctag. Localized text can be at most 128 characters.")]
+	[DDLRegistration(0x439ed7c4u, "Task Name Tag Override", "Loctag to use as an override for the task instead of the objective name. If blank, just use the UI's name loctag. Localized text can be at most 128 characters.")]
 	public string? NameTagOverride { get; set; } = default;
 
-	[DDLRegistration(0x2148964cu, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
+	[DDLRegistration(0x292b559du, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
 	public uint PlaytimeEstimate { get; set; } = 0x00000005;
 
-	[DDLRegistration(0x2148964cu)]
+	[DDLRegistration(0xf00bc587u)]
 	public List<ActivityHint?> Hints { get; set; } = [];
 
 	public static ObjectiveTaskInfo Create(DDLObject ddl) => new(ddl);

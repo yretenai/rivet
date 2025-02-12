@@ -18,7 +18,7 @@ public class FuseExplosion : GrenadeExplosionMode, IDDLObjectType<FuseExplosion>
 		FuseTime = ddl.GetValue<float>(0x05715b9cu, FuseTime);
 	}
 
-	[DDLRegistration(0x67935ba7u)]
+	[DDLRegistration(0x05715b9cu)]
 	public float FuseTime { get; set; } = 0.00f;
 
 	public new static FuseExplosion Create(DDLObject ddl) => new(ddl);

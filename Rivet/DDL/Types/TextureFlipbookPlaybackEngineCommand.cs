@@ -18,7 +18,7 @@ public class TextureFlipbookPlaybackEngineCommand : DDLObjectType, IDDLObjectTyp
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 	}
 
-	[DDLRegistration(0xac11ac4du)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static TextureFlipbookPlaybackEngineCommand Create(DDLObject ddl) => new(ddl);

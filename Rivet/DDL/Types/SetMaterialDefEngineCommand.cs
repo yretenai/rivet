@@ -19,10 +19,10 @@ public class SetMaterialDefEngineCommand : DDLObjectType, IDDLObjectType<SetMate
 		Def = ddl.GetObject<MaterialDef>(0x2691c8a8u);
 	}
 
-	[DDLRegistration(0x26929e6fu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x26929e6fu)]
+	[DDLRegistration(0x2691c8a8u)]
 	public MaterialDef? Def { get; set; } = default;
 
 	public static SetMaterialDefEngineCommand Create(DDLObject ddl) => new(ddl);

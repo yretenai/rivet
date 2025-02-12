@@ -20,13 +20,13 @@ public class HealthDropConfig : ConfigBase, IDDLObjectType<HealthDropConfig> {
 		DropTiers = ddl.GetObjects<HealthDropTier>(0xec761f91u);
 	}
 
-	[DDLRegistration(0x10db3c65u)]
+	[DDLRegistration(0x7b468726u)]
 	public RivetAssetId HealthDropActor { get; set; } = default;
 
-	[DDLRegistration(0x10db3c65u)]
+	[DDLRegistration(0x8b878e97u)]
 	public float InWorldHealthDropScale { get; set; } = 0.50f;
 
-	[DDLRegistration(0x10db3c65u)]
+	[DDLRegistration(0xec761f91u)]
 	public List<HealthDropTier?> DropTiers { get; set; } = [];
 
 	public new static HealthDropConfig Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class TweakDef : DDLObjectType, IDDLObjectType<TweakDef> {
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0x4572dd53u, "Name")]
+	[DDLRegistration(0x76fb8a30u, "Name")]
 	public string? Str { get; set; } = default;
 
-	[DDLRegistration(0x4572dd53u, "Source File")]
+	[DDLRegistration(0xbc0ff6a0u, "Source File")]
 	public RivetAssetId File { get; set; } = default;
 
-	[DDLRegistration(0x4572dd53u, "Line")]
+	[DDLRegistration(0xe1847446u, "Line")]
 	public uint Line { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4572dd53u, "Address", "64 bit address encoded with format specifier 0x%I64X")]
+	[DDLRegistration(0x620a5285u, "Address", "64 bit address encoded with format specifier 0x%I64X")]
 	public string? Addr { get; set; } = default;
 
-	[DDLRegistration(0x4572dd53u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0x4572dd53u, description: "Initial Value")]
+	[DDLRegistration(0x042494f5u, description: "Initial Value")]
 	public string? Value { get; set; } = default;
 
 	public static TweakDef Create(DDLObject ddl) => new(ddl);

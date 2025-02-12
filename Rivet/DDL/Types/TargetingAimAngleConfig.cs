@@ -18,7 +18,7 @@ public class TargetingAimAngleConfig : ConfigBase, IDDLObjectType<TargetingAimAn
 		TargetingAimAngle = ddl.GetObject<TargetingAimAnglePrius>(0xe7a38601u);
 	}
 
-	[DDLRegistration(0x646d6db0u, "Target Aim Angle")]
+	[DDLRegistration(0xe7a38601u, "Target Aim Angle")]
 	public TargetingAimAnglePrius? TargetingAimAngle { get; set; } = default;
 
 	public new static TargetingAimAngleConfig Create(DDLObject ddl) => new(ddl);

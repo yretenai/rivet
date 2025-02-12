@@ -19,10 +19,10 @@ public class MissionObjectiveCompleteTriggerPrius : BaseCustomOverlayTriggerPriu
 		ObjectiveName = ddl.GetString(0x58746b9b) ?? ObjectiveName;
 	}
 
-	[DDLRegistration(0x14736c8fu)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x14736c8fu)]
+	[DDLRegistration(0x58746b9bu)]
 	public string? ObjectiveName { get; set; } = default;
 
 	public new static MissionObjectiveCompleteTriggerPrius Create(DDLObject ddl) => new(ddl);

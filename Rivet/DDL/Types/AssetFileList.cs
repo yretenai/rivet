@@ -19,10 +19,10 @@ public class AssetFileList : DDLObjectType, IDDLObjectType<AssetFileList> {
 		Force = ddl.GetValue<bool>(0x8e3b4fe9u, Force);
 	}
 
-	[DDLRegistration(0x577be0adu)]
+	[DDLRegistration(0x280c42ffu)]
 	public List<RivetAssetId> AssetPaths { get; set; } = [];
 
-	[DDLRegistration(0x577be0adu)]
+	[DDLRegistration(0x8e3b4fe9u)]
 	public bool Force { get; set; } = true;
 
 	public static AssetFileList Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class FootstepEvent : GroundEvent, IDDLObjectType<FootstepEvent> {
 		AutoGenFrame = ddl.GetValue<uint>(0x829269e6u, AutoGenFrame);
 	}
 
-	[DDLRegistration(0xf786c9b6u, description: "Which foot is this")]
+	[DDLRegistration(0xf91ff923u, description: "Which foot is this")]
 	public x94d69111 Foot { get; set; } = x94d69111.Left;
 
-	[DDLRegistration(0xf786c9b6u, description: "Optional index, counts from 0, per-side")]
+	[DDLRegistration(0x289b0d58u, description: "Optional index, counts from 0, per-side")]
 	public int FootIndex { get; set; } = 0;
 
-	[DDLRegistration(0xf786c9b6u, description: "How strong")]
+	[DDLRegistration(0x2cb85ca8u, description: "How strong")]
 	public x94fdc626 Strength { get; set; } = x94fdc626.Soft;
 
-	[DDLRegistration(0xf786c9b6u, description: "How fast is the character moving")]
+	[DDLRegistration(0x16753237u, description: "How fast is the character moving")]
 	public x59a8f068 Speed { get; set; } = x59a8f068.Walk;
 
-	[DDLRegistration(0xf786c9b6u)]
+	[DDLRegistration(0x2660e2d4u)]
 	public ulong AnimPoseKey { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xf786c9b6u)]
+	[DDLRegistration(0x829269e6u)]
 	public uint AutoGenFrame { get; set; } = 0xffffffff;
 
 	public new static FootstepEvent Create(DDLObject ddl) => new(ddl);

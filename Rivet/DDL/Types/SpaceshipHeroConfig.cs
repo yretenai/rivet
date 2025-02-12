@@ -22,19 +22,19 @@ public class SpaceshipHeroConfig : UniqueHeroConfig, IDDLObjectType<SpaceshipHer
 		ThrustConfig = ddl.GetValue<RivetAssetId>(0x65940984u, ThrustConfig);
 	}
 
-	[DDLRegistration(0x2927e2cfu)]
+	[DDLRegistration(0x3605141du)]
 	public RivetAssetId NormalMoveCurve { get; set; } = default;
 
-	[DDLRegistration(0x2927e2cfu)]
+	[DDLRegistration(0xf89eaa9bu)]
 	public RivetAssetId MachineGunActor { get; set; } = default;
 
-	[DDLRegistration(0x2927e2cfu)]
+	[DDLRegistration(0x69727737u)]
 	public RivetAssetId MissileActor { get; set; } = default;
 
-	[DDLRegistration(0x2927e2cfu, description: "Config for things that need to be changed per level")]
+	[DDLRegistration(0x8f4b8997u, description: "Config for things that need to be changed per level")]
 	public RivetAssetId DefaultFlightConfig { get; set; } = default;
 
-	[DDLRegistration(0x2927e2cfu)]
+	[DDLRegistration(0x65940984u)]
 	public RivetAssetId ThrustConfig { get; set; } = default;
 
 	public new static SpaceshipHeroConfig Create(DDLObject ddl) => new(ddl);

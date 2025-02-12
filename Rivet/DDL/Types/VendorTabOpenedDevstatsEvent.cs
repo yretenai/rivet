@@ -20,13 +20,13 @@ public class VendorTabOpenedDevstatsEvent : EventBase, IDDLObjectType<VendorTabO
 		OpenedTab = ddl.GetEnum<VendorTabs>(0xf1771db8u, VendorTabsValues.Lookup);
 	}
 
-	[DDLRegistration(0xcb8bf060u, "Event ID", "Unique event ID for this event instance.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique event ID for this event instance.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xcb8bf060u, "Tab Segment ID", "Segment ID that matches with the segment ID in the corresponding Vendor Tab Closed event.")]
+	[DDLRegistration(0x40478ddeu, "Tab Segment ID", "Segment ID that matches with the segment ID in the corresponding Vendor Tab Closed event.")]
 	public string? TabSegmentId { get; set; } = default;
 
-	[DDLRegistration(0xcb8bf060u, "Opened Tab", "The tab that was opened.")]
+	[DDLRegistration(0xf1771db8u, "Opened Tab", "The tab that was opened.")]
 	public VendorTabs OpenedTab { get; set; } = VendorTabs.Purchase;
 
 	public new static VendorTabOpenedDevstatsEvent Create(DDLObject ddl) => new(ddl);

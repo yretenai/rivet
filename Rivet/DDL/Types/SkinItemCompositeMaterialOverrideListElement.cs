@@ -19,10 +19,10 @@ public class SkinItemCompositeMaterialOverrideListElement : DDLObjectType, IDDLO
 		CompositeMaterialOverride = ddl.GetObject<SkinItemCompositeMaterialOverride>(0x6ab56cb6u);
 	}
 
-	[DDLRegistration(0x27277aa8u, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0x27277aa8u, "Composite Material Override", "Composite material override parameters")]
+	[DDLRegistration(0x6ab56cb6u, "Composite Material Override", "Composite material override parameters")]
 	public SkinItemCompositeMaterialOverride? CompositeMaterialOverride { get; set; } = default;
 
 	public static SkinItemCompositeMaterialOverrideListElement Create(DDLObject ddl) => new(ddl);

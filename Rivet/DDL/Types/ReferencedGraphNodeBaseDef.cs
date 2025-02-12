@@ -18,7 +18,7 @@ public class ReferencedGraphNodeBaseDef : EmbeddedGraphNodeBaseDef, IDDLObjectTy
 		AssetPath = ddl.GetValue<RivetAssetId>(0x0efa614bu, AssetPath);
 	}
 
-	[DDLRegistration(0x3e7da641u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
 	public new static ReferencedGraphNodeBaseDef Create(DDLObject ddl) => new(ddl);

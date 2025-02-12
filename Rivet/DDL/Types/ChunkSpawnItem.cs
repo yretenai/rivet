@@ -19,10 +19,10 @@ public class ChunkSpawnItem : DDLObjectType, IDDLObjectType<ChunkSpawnItem> {
 		CustomLocator = ddl.GetString(0x471c96e1) ?? CustomLocator;
 	}
 
-	[DDLRegistration(0xd4e595e4u)]
+	[DDLRegistration(0x0267416bu)]
 	public RivetAssetId SpawnModel { get; set; } = default;
 
-	[DDLRegistration(0xd4e595e4u, description: "If using Locators position mode, the override locator to spawn from")]
+	[DDLRegistration(0x471c96e1u, description: "If using Locators position mode, the override locator to spawn from")]
 	public string? CustomLocator { get; set; } = default;
 
 	public static ChunkSpawnItem Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class RecoilCameraShakeProcedural : RecoilCameraShake, IDDLObjectType<Rec
 		CameraShakeData = ddl.GetValue<RivetAssetId>(0x8d98b2e2u, CameraShakeData);
 	}
 
-	[DDLRegistration(0xa654dd0eu, "Cam Shake Attack")]
+	[DDLRegistration(0xd2983d81u, "Cam Shake Attack")]
 	public float CamShakeAttackTime { get; set; } = 0.05f;
 
-	[DDLRegistration(0xa654dd0eu, "Cam Shake Sustain")]
+	[DDLRegistration(0x1280e843u, "Cam Shake Sustain")]
 	public float CamShakeSustainTime { get; set; } = 0.15f;
 
-	[DDLRegistration(0xa654dd0eu, "Cam Shake Decay")]
+	[DDLRegistration(0x095bf6d8u, "Cam Shake Decay")]
 	public float CamShakeDecayTime { get; set; } = 0.05f;
 
-	[DDLRegistration(0xa654dd0eu, "Cam Shake Strength")]
+	[DDLRegistration(0x038287a3u, "Cam Shake Strength")]
 	public float CamShakeStrength { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa654dd0eu, "Cam Shake Frequency")]
+	[DDLRegistration(0x337fc44cu, "Cam Shake Frequency")]
 	public float CamShakeFrequency { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa654dd0eu)]
+	[DDLRegistration(0x8d98b2e2u)]
 	public RivetAssetId CameraShakeData { get; set; } = default;
 
 	public new static RecoilCameraShakeProcedural Create(DDLObject ddl) => new(ddl);

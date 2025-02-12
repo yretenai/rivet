@@ -18,7 +18,7 @@ public class POIAttributeEdgeModeRing : POIAttributeEdgeModeBase, IDDLObjectType
 		RingRadius = ddl.GetObject<DDLVector2>(0x3ca25e38u);
 	}
 
-	[DDLRegistration(0x4373553bu)]
+	[DDLRegistration(0x3ca25e38u)]
 	public DDLVector2? RingRadius { get; set; } = default;
 
 	public new static POIAttributeEdgeModeRing Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class TouchedEvent : EventBase, IDDLObjectType<TouchedEvent> {
 		AllInside = ddl.GetValue<bool>(0xe82edb01u, AllInside);
 	}
 
-	[DDLRegistration(0x5c1d9299u)]
+	[DDLRegistration(0x54aa3293u)]
 	public TouchType TouchType { get; set; } = TouchType.Touched;
 
-	[DDLRegistration(0x5c1d9299u)]
+	[DDLRegistration(0xf4831368u)]
 	public uint Who { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5c1d9299u)]
+	[DDLRegistration(0xc17e0cb3u)]
 	public int TouchingCount { get; set; } = 0;
 
-	[DDLRegistration(0x5c1d9299u)]
+	[DDLRegistration(0xe82edb01u)]
 	public bool AllInside { get; set; } = false;
 
 	public new static TouchedEvent Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class DevstatsSegmentSaveData : DDLObjectType, IDDLObjectType<DevstatsSeg
 		SegmentFlags = ddl.GetBitset<xc353b5be>(0x8bcca178u, xc353b5beValues.Lookup);
 	}
 
-	[DDLRegistration(0xc0803a95u)]
+	[DDLRegistration(0x7d1d5d0eu)]
 	public string? SegmentId { get; set; } = default;
 
-	[DDLRegistration(0xc0803a95u)]
+	[DDLRegistration(0xfdce07b5u)]
 	public string? SegmentName { get; set; } = default;
 
-	[DDLRegistration(0xc0803a95u)]
+	[DDLRegistration(0x9ba18857u)]
 	public string? ParentSegmentName { get; set; } = default;
 
-	[DDLRegistration(0xc0803a95u)]
+	[DDLRegistration(0xcff7799du)]
 	public uint ParentSegmentId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc0803a95u)]
+	[DDLRegistration(0xb6798227u)]
 	public bool UsePauseTime { get; set; } = false;
 
-	[DDLRegistration(0xc0803a95u)]
+	[DDLRegistration(0x0c5bae2bu)]
 	public double StartTime { get; set; } = -1;
 
-	[DDLRegistration(0xc0803a95u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc0803a95u)]
+	[DDLRegistration(0x2f332e9au)]
 	public xc6f5c0d7 SegmentType { get; set; } = xc6f5c0d7.Playthrough;
 
-	[DDLRegistration(0xc0803a95u)]
+	[DDLRegistration(0x8bcca178u)]
 	public xc353b5be SegmentFlags { get; set; } = (xc353b5be) 0x00000000;
 
 	public static DevstatsSegmentSaveData Create(DDLObject ddl) => new(ddl);

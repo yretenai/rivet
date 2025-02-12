@@ -19,10 +19,10 @@ public class ChangeOpenCurveFollowModeActionPrius : DDLObjectType, IDDLObjectTyp
 		OpenCurveFollowMode = ddl.GetEnum<OpenCurveFollowMode>(0xc850698fu, OpenCurveFollowModeValues.Lookup);
 	}
 
-	[DDLRegistration(0x3805accbu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.CurveFollower;
 
-	[DDLRegistration(0x3805accbu)]
+	[DDLRegistration(0xc850698fu)]
 	public OpenCurveFollowMode OpenCurveFollowMode { get; set; } = OpenCurveFollowMode.OneShot;
 
 	public static ChangeOpenCurveFollowModeActionPrius Create(DDLObject ddl) => new(ddl);

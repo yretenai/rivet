@@ -21,16 +21,16 @@ public class IMGuiConnectionData : DDLObjectType, IDDLObjectType<IMGuiConnection
 		UniqueId = ddl.GetValue<uint>(0x32ca55d0u, UniqueId);
 	}
 
-	[DDLRegistration(0x1d9067ecu)]
+	[DDLRegistration(0xc056147du)]
 	public uint DrawColumn { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1d9067ecu)]
+	[DDLRegistration(0xb413d78bu)]
 	public uint DrawRow { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1d9067ecu)]
+	[DDLRegistration(0x1398be22u)]
 	public ulong ConnectionId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x1d9067ecu)]
+	[DDLRegistration(0x32ca55d0u)]
 	public uint UniqueId { get; set; } = 0x00000000;
 
 	public static IMGuiConnectionData Create(DDLObject ddl) => new(ddl);

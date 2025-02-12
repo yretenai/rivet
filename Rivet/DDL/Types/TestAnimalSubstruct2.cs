@@ -21,16 +21,16 @@ public class TestAnimalSubstruct2 : DDLObjectType, IDDLObjectType<TestAnimalSubs
 		Proof = ddl.GetObject<Proof4>(0xe2aa8c1cu);
 	}
 
-	[DDLRegistration(0x440efc89u)]
+	[DDLRegistration(0xc3f65630u)]
 	public string? HiddenField { get; set; } = default;
 
-	[DDLRegistration(0x440efc89u)]
+	[DDLRegistration(0xd6332abdu)]
 	public string? Owner { get; set; } = default;
 
-	[DDLRegistration(0x440efc89u)]
+	[DDLRegistration(0xce07b24cu)]
 	public TestAnimal? Pet { get; set; } = default;
 
-	[DDLRegistration(0x440efc89u)]
+	[DDLRegistration(0xe2aa8c1cu)]
 	public Proof4? Proof { get; set; } = default;
 
 	public static TestAnimalSubstruct2 Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class BotComboConditionHealthCheckPrius : BotComboConditionBasePrius, IDD
 		HPThreshhold = ddl.GetValue<float>(0x947e58e4u, HPThreshhold);
 	}
 
-	[DDLRegistration(0x6bbc5238u, "HP Threshhold", "At what HP threshhold should this combo be allowed. A zero-to-one value. Defaults to 1.0f meaning the combos will always be available")]
+	[DDLRegistration(0x947e58e4u, "HP Threshhold", "At what HP threshhold should this combo be allowed. A zero-to-one value. Defaults to 1.0f meaning the combos will always be available")]
 	public float HPThreshhold { get; set; } = 1.00f;
 
 	public new static BotComboConditionHealthCheckPrius Create(DDLObject ddl) => new(ddl);

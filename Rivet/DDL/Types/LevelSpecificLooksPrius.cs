@@ -19,10 +19,10 @@ public class LevelSpecificLooksPrius : DDLObjectType, IDDLObjectType<LevelSpecif
 		DefaultLookGroupName = ddl.GetString(0x93a96742) ?? DefaultLookGroupName;
 	}
 
-	[DDLRegistration(0xc5158823u, description: "Allow some levels to optionally force a look group")]
+	[DDLRegistration(0xdbdc6ec4u, description: "Allow some levels to optionally force a look group")]
 	public List<LevelLookPair?> LevelLooks { get; set; } = [];
 
-	[DDLRegistration(0xc5158823u, description: "Look to enable when there are no level-specific looks found")]
+	[DDLRegistration(0x93a96742u, description: "Look to enable when there are no level-specific looks found")]
 	public string? DefaultLookGroupName { get; set; } = default;
 
 	public static LevelSpecificLooksPrius Create(DDLObject ddl) => new(ddl);

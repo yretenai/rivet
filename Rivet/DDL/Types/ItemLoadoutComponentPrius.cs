@@ -24,25 +24,25 @@ public class ItemLoadoutComponentPrius : DDLObjectType, IDDLObjectType<ItemLoado
 		LoadoutOverrideList = ddl.GetObjects<ItemLoadoutComponentOverrideListElement>(0x8629f694u);
 	}
 
-	[DDLRegistration(0xc08f3081u, "Item Loadout Config", "Item loadout config to apply")]
+	[DDLRegistration(0xfa5c64a7u, "Item Loadout Config", "Item loadout config to apply")]
 	public RivetAssetId ItemLoadoutConfig { get; set; } = default;
 
-	[DDLRegistration(0xc08f3081u, "Apply On Start", "Should the loadout be applied immediately when the component is added?")]
+	[DDLRegistration(0x12a817c4u, "Apply On Start", "Should the loadout be applied immediately when the component is added?")]
 	public bool ApplyOnStart { get; set; } = false;
 
-	[DDLRegistration(0xc08f3081u, "Can Defer Loadout", "Allows applying the loadout to delay a few frames for performance reasons.")]
+	[DDLRegistration(0x7896fc25u, "Can Defer Loadout", "Allows applying the loadout to delay a few frames for performance reasons.")]
 	public bool CanDeferLoadout { get; set; } = false;
 
-	[DDLRegistration(0xc08f3081u, "Check Save File", "Check save file flag before applying loadout?")]
+	[DDLRegistration(0x1f2771a6u, "Check Save File", "Check save file flag before applying loadout?")]
 	public bool CheckSaveFile { get; set; } = true;
 
-	[DDLRegistration(0xc08f3081u, "Reset Inventory", "Before we apply this loadout should we reset the inventory?")]
+	[DDLRegistration(0xc31e0661u, "Reset Inventory", "Before we apply this loadout should we reset the inventory?")]
 	public bool ResetInventory { get; set; } = false;
 
-	[DDLRegistration(0xc08f3081u, "Random Config Array", "Provide a list of configs to select one of..")]
+	[DDLRegistration(0x42787a93u, "Random Config Array", "Provide a list of configs to select one of..")]
 	public List<RivetAssetId> RandomConfigArray { get; set; } = [];
 
-	[DDLRegistration(0xc08f3081u, "Loadout Override List", "Loadout overrides for this actor (optional)")]
+	[DDLRegistration(0x8629f694u, "Loadout Override List", "Loadout overrides for this actor (optional)")]
 	public List<ItemLoadoutComponentOverrideListElement?> LoadoutOverrideList { get; set; } = [];
 
 	public static ItemLoadoutComponentPrius Create(DDLObject ddl) => new(ddl);

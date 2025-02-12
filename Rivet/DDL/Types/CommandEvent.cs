@@ -18,7 +18,7 @@ public class CommandEvent : EventBase, IDDLObjectType<CommandEvent> {
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0xc56ec3b5u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
 	public new static CommandEvent Create(DDLObject ddl) => new(ddl);

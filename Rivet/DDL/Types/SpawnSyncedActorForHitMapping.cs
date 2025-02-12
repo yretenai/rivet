@@ -19,10 +19,10 @@ public class SpawnSyncedActorForHitMapping : DDLObjectType, IDDLObjectType<Spawn
 		SpawnInfo = ddl.GetObject<ActorSpawnOnHitInfo>(0x56911753u);
 	}
 
-	[DDLRegistration(0x66c60ba9u)]
+	[DDLRegistration(0x264fbabfu)]
 	public HittingShotInfo? HittingShotInfo { get; set; } = default;
 
-	[DDLRegistration(0x66c60ba9u)]
+	[DDLRegistration(0x56911753u)]
 	public ActorSpawnOnHitInfo? SpawnInfo { get; set; } = default;
 
 	public static SpawnSyncedActorForHitMapping Create(DDLObject ddl) => new(ddl);

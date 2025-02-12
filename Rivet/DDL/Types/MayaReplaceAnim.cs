@@ -21,16 +21,16 @@ public class MayaReplaceAnim : DDLObjectType, IDDLObjectType<MayaReplaceAnim> {
 		AnimClipData = ddl.GetObjects<MayaAnimClipData>(0x9878f47cu);
 	}
 
-	[DDLRegistration(0x8119d7c0u)]
+	[DDLRegistration(0xfb5169fbu)]
 	public string? MayaPath { get; set; } = default;
 
-	[DDLRegistration(0x8119d7c0u)]
+	[DDLRegistration(0x166db0a0u)]
 	public string? OldReferencePath { get; set; } = default;
 
-	[DDLRegistration(0x8119d7c0u)]
+	[DDLRegistration(0xd4a42fe9u)]
 	public string? NewReferencePath { get; set; } = default;
 
-	[DDLRegistration(0x8119d7c0u)]
+	[DDLRegistration(0x9878f47cu)]
 	public List<MayaAnimClipData?> AnimClipData { get; set; } = [];
 
 	public static MayaReplaceAnim Create(DDLObject ddl) => new(ddl);

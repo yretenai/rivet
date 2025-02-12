@@ -19,10 +19,10 @@ public class SelfieModeData : DDLObjectType, IDDLObjectType<SelfieModeData> {
 		WeaponDatas = ddl.GetObjects<SelfieWeaponData>(0x663fea21u);
 	}
 
-	[DDLRegistration(0x895a3c13u)]
+	[DDLRegistration(0x308e3123u)]
 	public AssetReferenceDef? DoppelgangerActor { get; set; } = default;
 
-	[DDLRegistration(0x895a3c13u)]
+	[DDLRegistration(0x663fea21u)]
 	public List<SelfieWeaponData?> WeaponDatas { get; set; } = [];
 
 	public static SelfieModeData Create(DDLObject ddl) => new(ddl);

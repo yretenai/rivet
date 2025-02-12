@@ -18,7 +18,7 @@ public class PlanetLink : ActivityLinkBase, IDDLObjectType<PlanetLink> {
 		PlanetName = ddl.GetString(0x38548038) ?? PlanetName;
 	}
 
-	[DDLRegistration(0x50db67cfu, "Planet Name (in code)")]
+	[DDLRegistration(0x38548038u, "Planet Name (in code)")]
 	public string? PlanetName { get; set; } = default;
 
 	public new static PlanetLink Create(DDLObject ddl) => new(ddl);

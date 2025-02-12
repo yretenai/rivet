@@ -22,19 +22,19 @@ public class CompareIntsInlineNodeDef : MathNodeBaseDef, IDDLObjectType<CompareI
 		GreaterThan = ddl.GetObject<OutputPlugBoolean>(0x70f69f4du);
 	}
 
-	[DDLRegistration(0x86dd200du)]
+	[DDLRegistration(0x3a58e94du)]
 	public InputPlugInt? A { get; set; } = default;
 
-	[DDLRegistration(0x86dd200du)]
+	[DDLRegistration(0xa351b8f7u)]
 	public InputPlugInt? B { get; set; } = default;
 
-	[DDLRegistration(0x86dd200du, "A < B?")]
+	[DDLRegistration(0x266a450bu, "A < B?")]
 	public OutputPlugBoolean? LessThan { get; set; } = default;
 
-	[DDLRegistration(0x86dd200du, "A = B?")]
+	[DDLRegistration(0x75c92864u, "A = B?")]
 	public OutputPlugBoolean? EqualTo { get; set; } = default;
 
-	[DDLRegistration(0x86dd200du, "A > B?")]
+	[DDLRegistration(0x70f69f4du, "A > B?")]
 	public OutputPlugBoolean? GreaterThan { get; set; } = default;
 
 	public new static CompareIntsInlineNodeDef Create(DDLObject ddl) => new(ddl);

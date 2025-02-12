@@ -19,10 +19,10 @@ public class IsSwitchTriggeredActionPrius : DDLObjectType, IDDLObjectType<IsSwit
 		GroupName = ddl.GetString(0xb215bfb7) ?? GroupName;
 	}
 
-	[DDLRegistration(0xb6631a20u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0xb6631a20u, description: "Test the switch with this group-name")]
+	[DDLRegistration(0xb215bfb7u, description: "Test the switch with this group-name")]
 	public string? GroupName { get; set; } = "";
 
 	public static IsSwitchTriggeredActionPrius Create(DDLObject ddl) => new(ddl);

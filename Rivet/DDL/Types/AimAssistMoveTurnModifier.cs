@@ -22,19 +22,19 @@ public class AimAssistMoveTurnModifier : DDLObjectType, IDDLObjectType<AimAssist
 		CenterMod = ddl.GetValue<float>(0x9237bce3u, CenterMod);
 	}
 
-	[DDLRegistration(0xe5b6da3bu)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0xe5b6da3bu, "Max Move Speed")]
+	[DDLRegistration(0x833014cdu, "Max Move Speed")]
 	public float MaxMoveSpeed { get; set; } = 3.00f;
 
-	[DDLRegistration(0xe5b6da3bu, "Friction Modifier")]
+	[DDLRegistration(0x259d7ff2u, "Friction Modifier")]
 	public float FrictionMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe5b6da3bu, "Magnet Modifier")]
+	[DDLRegistration(0xcc015279u, "Magnet Modifier")]
 	public float MagnetMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe5b6da3bu, "Centering Modifier")]
+	[DDLRegistration(0x9237bce3u, "Centering Modifier")]
 	public float CenterMod { get; set; } = 1.00f;
 
 	public static AimAssistMoveTurnModifier Create(DDLObject ddl) => new(ddl);

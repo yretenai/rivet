@@ -18,7 +18,7 @@ public class DeviceSpecificLocalizationConfig : ConfigBase, IDDLObjectType<Devic
 		Entries = ddl.GetObjects<DeviceSpecificLocalization>(0x2c12d0fdu);
 	}
 
-	[DDLRegistration(0xbb5c33a2u)]
+	[DDLRegistration(0x2c12d0fdu)]
 	public List<DeviceSpecificLocalization?> Entries { get; set; } = [];
 
 	public new static DeviceSpecificLocalizationConfig Create(DDLObject ddl) => new(ddl);

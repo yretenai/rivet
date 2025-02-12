@@ -19,10 +19,10 @@ public class DebugPlaytestMissionInfo : DDLObjectType, IDDLObjectType<DebugPlayt
 		Objective = ddl.GetString(0x3b6b6e0d) ?? Objective;
 	}
 
-	[DDLRegistration(0xde7b4535u, "Mission Name", "Name of the mission to load into. Leave blank if using an objective graph.")]
+	[DDLRegistration(0x918d9104u, "Mission Name", "Name of the mission to load into. Leave blank if using an objective graph.")]
 	public string? Mission { get; set; } = default;
 
-	[DDLRegistration(0xde7b4535u, "Objective Name", "Name of the objective to load into (or 'AVAILABLE' if it should load into the available state of the mission.)")]
+	[DDLRegistration(0x3b6b6e0du, "Objective Name", "Name of the objective to load into (or 'AVAILABLE' if it should load into the available state of the mission.)")]
 	public string? Objective { get; set; } = default;
 
 	public static DebugPlaytestMissionInfo Create(DDLObject ddl) => new(ddl);

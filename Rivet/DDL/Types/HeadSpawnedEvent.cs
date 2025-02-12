@@ -18,7 +18,7 @@ public class HeadSpawnedEvent : EventBase, IDDLObjectType<HeadSpawnedEvent> {
 		HeadActorHandle = ddl.GetValue<uint>(0x7c4bf33au, HeadActorHandle);
 	}
 
-	[DDLRegistration(0xe527d2c6u)]
+	[DDLRegistration(0x7c4bf33au)]
 	public uint HeadActorHandle { get; set; } = 0x00000000;
 
 	public new static HeadSpawnedEvent Create(DDLObject ddl) => new(ddl);

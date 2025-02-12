@@ -19,10 +19,10 @@ public class OutputNodeStringDef : OutputNodeBaseDef, IDDLObjectType<OutputNodeS
 		Output = ddl.GetObject<OutputPlugString>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0xf0aa8c19u)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugString? Input { get; set; } = default;
 
-	[DDLRegistration(0xf0aa8c19u)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugString? Output { get; set; } = default;
 
 	public new static OutputNodeStringDef Create(DDLObject ddl) => new(ddl);

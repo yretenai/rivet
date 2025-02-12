@@ -19,10 +19,10 @@ public class DynamicAnimsetListPrius : DDLObjectType, IDDLObjectType<DynamicAnim
 		AcquireRange = ddl.GetValue<float>(0x192b20a6u, AcquireRange);
 	}
 
-	[DDLRegistration(0xc25b0536u, "Animset List")]
+	[DDLRegistration(0xb485889eu, "Animset List")]
 	public List<DynamicAnimsetItem?> ItemList { get; set; } = [];
 
-	[DDLRegistration(0xc25b0536u, "Acquire Range")]
+	[DDLRegistration(0x192b20a6u, "Acquire Range")]
 	public float AcquireRange { get; set; } = 8.00f;
 
 	public static DynamicAnimsetListPrius Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class DebugPlaytestLoadInfo : DDLObjectType, IDDLObjectType<DebugPlaytest
 		LightingMode = ddl.GetEnum<LightingModeGame>(0x537e2fccu, LightingModeGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x7f50ddeau, "(Optional) Level", "Level asset to load into.")]
+	[DDLRegistration(0x83b900d2u, "(Optional) Level", "Level asset to load into.")]
 	public RivetAssetId Level { get; set; } = default;
 
-	[DDLRegistration(0x7f50ddeau, "Wants Challenge Mode?", "Should this playtest spawn in challenge mode?")]
+	[DDLRegistration(0xc801de1fu, "Wants Challenge Mode?", "Should this playtest spawn in challenge mode?")]
 	public bool UseChallengeMode { get; set; } = false;
 
-	[DDLRegistration(0x7f50ddeau, "Override Checkpoint?", "Check this to specify a different checkpoint and dimension checkpoint to load into from what is in the mission data.")]
+	[DDLRegistration(0x55d6e037u, "Override Checkpoint?", "Check this to specify a different checkpoint and dimension checkpoint to load into from what is in the mission data.")]
 	public bool OverrideCheckpoints { get; set; } = false;
 
-	[DDLRegistration(0x7f50ddeau, "Checkpoint", "Name of the checkpoint to load into.")]
+	[DDLRegistration(0xd436a987u, "Checkpoint", "Name of the checkpoint to load into.")]
 	public string? Checkpoint { get; set; } = default;
 
-	[DDLRegistration(0x7f50ddeau, "Dimension Checkpoint", "Name of the dimension checkpoint to load into.")]
+	[DDLRegistration(0xb98c1c37u, "Dimension Checkpoint", "Name of the dimension checkpoint to load into.")]
 	public string? DimensionCheckpoint { get; set; } = default;
 
-	[DDLRegistration(0x7f50ddeau, "Use Lighting Mode Override?", "Check this to specify a different lighting mode than the default from the mission system.")]
+	[DDLRegistration(0x344cb7e0u, "Use Lighting Mode Override?", "Check this to specify a different lighting mode than the default from the mission system.")]
 	public bool OverrideLightingMode { get; set; } = false;
 
-	[DDLRegistration(0x7f50ddeau, "Lighting Mode", "Lighting mode to load into with.")]
+	[DDLRegistration(0x537e2fccu, "Lighting Mode", "Lighting mode to load into with.")]
 	public LightingModeGame LightingMode { get; set; } = LightingModeGame.Day;
 
 	public static DebugPlaytestLoadInfo Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class BotComboMoveLunge : BotComboMove, IDDLObjectType<BotComboMoveLunge>
 		LungeAttackData = ddl.GetObject<LungeAttackData>(0xa18815c3u);
 	}
 
-	[DDLRegistration(0xf330c0a7u, "Tell Driver")]
+	[DDLRegistration(0xbdb09c6fu, "Tell Driver")]
 	public string? TellDriver { get; set; } = "Lunge_Tell";
 
-	[DDLRegistration(0xf330c0a7u, "Lunge Driver")]
+	[DDLRegistration(0x9cfce28eu, "Lunge Driver")]
 	public string? LungeDriver { get; set; } = "Lunge_Attack";
 
-	[DDLRegistration(0xf330c0a7u, "Recover Driver")]
+	[DDLRegistration(0x74c3d4cau, "Recover Driver")]
 	public string? RecoverDriver { get; set; } = "Lunge_Recover";
 
-	[DDLRegistration(0xf330c0a7u, "Lunge Attack Data")]
+	[DDLRegistration(0xa18815c3u, "Lunge Attack Data")]
 	public LungeAttackData? LungeAttackData { get; set; } = default;
 
 	public new static BotComboMoveLunge Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ChompBarPrius : DDLObjectType, IDDLObjectType<ChompBarPrius> {
 		ChompDistance = ddl.GetValue<float>(0x3a3a0124u, ChompDistance);
 	}
 
-	[DDLRegistration(0x9f08f2d7u, description: "How close clank bots must be to make a bridge.")]
+	[DDLRegistration(0x3a3a0124u, description: "How close clank bots must be to make a bridge.")]
 	public float ChompDistance { get; set; } = 15.00f;
 
 	public static ChompBarPrius Create(DDLObject ddl) => new(ddl);

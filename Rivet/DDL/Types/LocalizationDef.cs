@@ -21,16 +21,16 @@ public class LocalizationDef : DDLObjectType, IDDLObjectType<LocalizationDef> {
 		TagTable = ddl.GetObjects<LocTagTableDef>(0x7ec3d29fu);
 	}
 
-	[DDLRegistration(0x3b0be4fbu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x3b0be4fbu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x3b0be4fbu, description: "Description of the localization data file.")]
+	[DDLRegistration(0x3b256ce4u, description: "Description of the localization data file.")]
 	public string? Desc { get; set; } = default;
 
-	[DDLRegistration(0x3b0be4fbu, description: "Table of loc tag names and text strings per language.")]
+	[DDLRegistration(0x7ec3d29fu, description: "Table of loc tag names and text strings per language.")]
 	public List<LocTagTableDef?> TagTable { get; set; } = [];
 
 	public static LocalizationDef Create(DDLObject ddl) => new(ddl);

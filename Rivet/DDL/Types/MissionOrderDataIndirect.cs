@@ -18,7 +18,7 @@ public class MissionOrderDataIndirect : DDLObjectType, IDDLObjectType<MissionOrd
 		MissionOrderData = ddl.GetObject<MissionOrderDataBase>(0xe634377du);
 	}
 
-	[DDLRegistration(0x1e6032cau)]
+	[DDLRegistration(0xe634377du)]
 	public MissionOrderDataBase? MissionOrderData { get; set; } = default;
 
 	public static MissionOrderDataIndirect Create(DDLObject ddl) => new(ddl);

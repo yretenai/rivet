@@ -20,13 +20,13 @@ public class AssertPortalInfo : DDLObjectType, IDDLObjectType<AssertPortalInfo> 
 		WasUsed = ddl.GetValue<bool>(0x30a20739u, WasUsed);
 	}
 
-	[DDLRegistration(0x37ea70b1u)]
+	[DDLRegistration(0x586c8e4au)]
 	public AssetReferenceDef? PortalObjectActor { get; set; } = default;
 
-	[DDLRegistration(0x37ea70b1u)]
+	[DDLRegistration(0x2c044252u)]
 	public bool IsOtherIP { get; set; } = false;
 
-	[DDLRegistration(0x37ea70b1u)]
+	[DDLRegistration(0x30a20739u)]
 	public bool WasUsed { get; set; } = false;
 
 	public static AssertPortalInfo Create(DDLObject ddl) => new(ddl);

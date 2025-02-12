@@ -19,10 +19,10 @@ public class StructuredLoggingSetTraceAnimControllerActionPrius : DDLObjectType,
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0xcb2e8bfeu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0xcb2e8bfeu, "Enable/Disable", "True enables tracing, false disables it")]
+	[DDLRegistration(0x5113d8bcu, "Enable/Disable", "True enables tracing, false disables it")]
 	public bool Enabled { get; set; } = true;
 
 	public static StructuredLoggingSetTraceAnimControllerActionPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class GrindLandEvent : EventBase, IDDLObjectType<GrindLandEvent> {
 		IsTransferLand = ddl.GetValue<bool>(0xad053069u, IsTransferLand);
 	}
 
-	[DDLRegistration(0x8f48d394u)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0x8f48d394u)]
+	[DDLRegistration(0x110c8d91u)]
 	public uint GrindActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8f48d394u)]
+	[DDLRegistration(0x24837588u)]
 	public bool IsDoubleJumpLand { get; set; } = false;
 
-	[DDLRegistration(0x8f48d394u)]
+	[DDLRegistration(0xad053069u)]
 	public bool IsTransferLand { get; set; } = false;
 
 	public new static GrindLandEvent Create(DDLObject ddl) => new(ddl);

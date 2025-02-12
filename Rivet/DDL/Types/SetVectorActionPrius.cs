@@ -22,19 +22,19 @@ public class SetVectorActionPrius : DDLObjectType, IDDLObjectType<SetVectorActio
 		UseDefaultsForUnconnectedInputs = ddl.GetValue<bool>(0xc1801c0eu, UseDefaultsForUnconnectedInputs);
 	}
 
-	[DDLRegistration(0x15316f33u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
-	[DDLRegistration(0x15316f33u, description: "Constant number value, used IF input X variable is not set")]
+	[DDLRegistration(0x5e33418du, description: "Constant number value, used IF input X variable is not set")]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x15316f33u, description: "Constant number value, used IF input X variable is not set")]
+	[DDLRegistration(0x2934711bu, description: "Constant number value, used IF input X variable is not set")]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x15316f33u, description: "Constant number value, used IF input X variable is not set")]
+	[DDLRegistration(0xb03d20a1u, description: "Constant number value, used IF input X variable is not set")]
 	public float Z { get; set; } = 0.00f;
 
-	[DDLRegistration(0x15316f33u, description: "If true, unconnected inputs will use the X, Y, Z from the properties panel.  If false, unconnected inputs will just use whatever was in the vector already")]
+	[DDLRegistration(0xc1801c0eu, description: "If true, unconnected inputs will use the X, Y, Z from the properties panel.  If false, unconnected inputs will just use whatever was in the vector already")]
 	public bool UseDefaultsForUnconnectedInputs { get; set; } = true;
 
 	public static SetVectorActionPrius Create(DDLObject ddl) => new(ddl);

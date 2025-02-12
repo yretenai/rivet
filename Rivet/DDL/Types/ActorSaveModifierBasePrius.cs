@@ -19,10 +19,10 @@ public class ActorSaveModifierBasePrius : DDLObjectType, IDDLObjectType<ActorSav
 		Priority = ddl.GetValue<byte>(0x98a76157u, Priority);
 	}
 
-	[DDLRegistration(0x07c99b1cu, "Is Enabled?", "Whether this component is enabled or not.")]
+	[DDLRegistration(0xb4c37748u, "Is Enabled?", "Whether this component is enabled or not.")]
 	public bool IsEnabled { get; set; } = false;
 
-	[DDLRegistration(0x07c99b1cu, "Priority", "The priority of the component, higher numbers will take priority.")]
+	[DDLRegistration(0x98a76157u, "Priority", "The priority of the component, higher numbers will take priority.")]
 	public byte Priority { get; set; } = 0x00;
 
 	public static ActorSaveModifierBasePrius Create(DDLObject ddl) => new(ddl);

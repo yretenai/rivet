@@ -18,7 +18,7 @@ public class StackableCrateLandEvent : EventBase, IDDLObjectType<StackableCrateL
 		FinalFallSpeed = ddl.GetValue<float>(0x6f549badu, FinalFallSpeed);
 	}
 
-	[DDLRegistration(0x08285dfau)]
+	[DDLRegistration(0x6f549badu)]
 	public float FinalFallSpeed { get; set; } = 0.00f;
 
 	public new static StackableCrateLandEvent Create(DDLObject ddl) => new(ddl);

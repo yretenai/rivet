@@ -18,7 +18,7 @@ public class BattleBrewItemConfig : GameItemConfig, IDDLObjectType<BattleBrewIte
 		Brew = ddl.GetObject<BattleBrewEffectData>(0x0165e767u);
 	}
 
-	[DDLRegistration(0x89b44ed3u)]
+	[DDLRegistration(0x0165e767u)]
 	public BattleBrewEffectData? Brew { get; set; } = default;
 
 	public new static BattleBrewItemConfig Create(DDLObject ddl) => new(ddl);

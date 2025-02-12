@@ -31,46 +31,46 @@ public class CameraTargetTrackData : DDLObjectType, IDDLObjectType<CameraTargetT
 		SafeZoneForwardDistMax = ddl.GetValue<float>(0xac9ab40bu, SafeZoneForwardDistMax);
 	}
 
-	[DDLRegistration(0x1f3f6161u, "Track Forward Gain")]
+	[DDLRegistration(0xc3beac40u, "Track Forward Gain")]
 	public float TrackForwardGain { get; set; } = -7.00f;
 
-	[DDLRegistration(0x1f3f6161u, "Track Forward Damp ")]
+	[DDLRegistration(0x4f68fbc9u, "Track Forward Damp ")]
 	public float TrackForwardDamp { get; set; } = -11.00f;
 
-	[DDLRegistration(0x1f3f6161u, "Track Back Gain")]
+	[DDLRegistration(0x8095a0d7u, "Track Back Gain")]
 	public float TrackBackGain { get; set; } = -80.00f;
 
-	[DDLRegistration(0x1f3f6161u, "Track Back Damp")]
+	[DDLRegistration(0x0c43f75eu, "Track Back Damp")]
 	public float TrackBackDamp { get; set; } = -45.00f;
 
-	[DDLRegistration(0x1f3f6161u, "Track Left Gain")]
+	[DDLRegistration(0xd32d0716u, "Track Left Gain")]
 	public float TrackLeftGain { get; set; } = -50.00f;
 
-	[DDLRegistration(0x1f3f6161u, "Track Left Damp")]
+	[DDLRegistration(0x5ffb509fu, "Track Left Damp")]
 	public float TrackLeftDamp { get; set; } = -30.00f;
 
-	[DDLRegistration(0x1f3f6161u, "Track Up Gain")]
+	[DDLRegistration(0x32a39aeau, "Track Up Gain")]
 	public float TrackUpGain { get; set; } = -5.00f;
 
-	[DDLRegistration(0x1f3f6161u, "Track Up Damp")]
+	[DDLRegistration(0xbe75cd63u, "Track Up Damp")]
 	public float TrackUpDamp { get; set; } = -3.00f;
 
-	[DDLRegistration(0x1f3f6161u, "Safe Zone Left Enabled")]
+	[DDLRegistration(0x9051ceb2u, "Safe Zone Left Enabled")]
 	public bool SafeZoneLeftEnabled { get; set; } = false;
 
-	[DDLRegistration(0x1f3f6161u, "Safe Zone Left Angle Min")]
+	[DDLRegistration(0x9c2eba28u, "Safe Zone Left Angle Min")]
 	public float SafeZoneLeftAngleMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f3f6161u, "Safe Zone Left Angle Max")]
+	[DDLRegistration(0xa0238571u, "Safe Zone Left Angle Max")]
 	public float SafeZoneLeftAngleMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f3f6161u, "Safe Zone Forward Enabled")]
+	[DDLRegistration(0x3158f63au, "Safe Zone Forward Enabled")]
 	public bool SafeZoneForwardEnabled { get; set; } = false;
 
-	[DDLRegistration(0x1f3f6161u, "Safe Zone Forward Distance Min")]
+	[DDLRegistration(0x90978b52u, "Safe Zone Forward Distance Min")]
 	public float SafeZoneForwardDistMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f3f6161u, "Safe Zone Forward Distance Max")]
+	[DDLRegistration(0xac9ab40bu, "Safe Zone Forward Distance Max")]
 	public float SafeZoneForwardDistMax { get; set; } = 0.00f;
 
 	public static CameraTargetTrackData Create(DDLObject ddl) => new(ddl);

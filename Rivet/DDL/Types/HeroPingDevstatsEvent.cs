@@ -22,19 +22,19 @@ public class HeroPingDevstatsEvent : EventBase, IDDLObjectType<HeroPingDevstatsE
 		InCombat = ddl.GetValue<bool>(0xb031a93cu, InCombat);
 	}
 
-	[DDLRegistration(0xb130c401u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0xb130c401u, "Current Health")]
+	[DDLRegistration(0xd8295f28u, "Current Health")]
 	public float CurrentHealth { get; set; } = -1.00f;
 
-	[DDLRegistration(0xb130c401u, "Max Health")]
+	[DDLRegistration(0x72aa54beu, "Max Health")]
 	public float MaxHealth { get; set; } = -1.00f;
 
-	[DDLRegistration(0xb130c401u, "Player State", "Name of the hero state that the player was in at the time of this ping.")]
+	[DDLRegistration(0x10b18c0cu, "Player State", "Name of the hero state that the player was in at the time of this ping.")]
 	public string? PlayerState { get; set; } = default;
 
-	[DDLRegistration(0xb130c401u, "In Combat")]
+	[DDLRegistration(0xb031a93cu, "In Combat")]
 	public bool InCombat { get; set; } = false;
 
 	public new static HeroPingDevstatsEvent Create(DDLObject ddl) => new(ddl);

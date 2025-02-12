@@ -21,16 +21,16 @@ public class TriggerSwitchBasePrius : EnabledComponentBasePrius, IDDLObjectType<
 		Responses = ddl.GetObjects<TriggerSwitchResponseEntry>(0xb3a20098u);
 	}
 
-	[DDLRegistration(0x2e763cffu, "Start triggered?", "Whether to start already triggered.")]
+	[DDLRegistration(0x6d657ceau, "Start triggered?", "Whether to start already triggered.")]
 	public bool StartTriggered { get; set; } = false;
 
-	[DDLRegistration(0x2e763cffu, "Make Trig Comps Enable Match", "Make all trigger components (TriggerBy*, TriggerResponder*) match our enabled state. I.E, make them disabled when we are disabled, enabled when we are enabled.")]
+	[DDLRegistration(0x879bb20bu, "Make Trig Comps Enable Match", "Make all trigger components (TriggerBy*, TriggerResponder*) match our enabled state. I.E, make them disabled when we are disabled, enabled when we are enabled.")]
 	public bool TrigCompMatchEnable { get; set; } = true;
 
-	[DDLRegistration(0x2e763cffu, "Group Name", "Triggers, switches and responses with a matching name act as a separate group")]
+	[DDLRegistration(0xb215bfb7u, "Group Name", "Triggers, switches and responses with a matching name act as a separate group")]
 	public string? GroupName { get; set; } = default;
 
-	[DDLRegistration(0x2e763cffu, description: "Responses for this switch (the group-name is automatically set to the switch's)")]
+	[DDLRegistration(0xb3a20098u, description: "Responses for this switch (the group-name is automatically set to the switch's)")]
 	public List<TriggerSwitchResponseEntry?> Responses { get; set; } = [];
 
 	public new static TriggerSwitchBasePrius Create(DDLObject ddl) => new(ddl);

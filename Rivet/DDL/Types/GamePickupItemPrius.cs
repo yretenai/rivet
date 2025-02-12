@@ -35,58 +35,58 @@ public class GamePickupItemPrius : PickupItemPrius, IDDLObjectType<GamePickupIte
 		AutoCollectOnFallOut = ddl.GetValue<bool>(0x8526b881u, AutoCollectOnFallOut);
 	}
 
-	[DDLRegistration(0x6b62c321u, description: "Range that a thrown wrench/hammer can collect this item. -1 disables pickup by thrown weapons.")]
+	[DDLRegistration(0xada999ceu, description: "Range that a thrown wrench/hammer can collect this item. -1 disables pickup by thrown weapons.")]
 	public float ThrownWeaponPickupRange { get; set; } = -1.00f;
 
-	[DDLRegistration(0x6b62c321u, description: "Max time before this pickup snaps to the wrench/hammer that is collecting it.")]
+	[DDLRegistration(0x8da65760u, description: "Max time before this pickup snaps to the wrench/hammer that is collecting it.")]
 	public float ThrownWeaponMaxSnapTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x6b62c321u, description: "The camera to use for the collection scene.")]
+	[DDLRegistration(0xdfa62471u, description: "The camera to use for the collection scene.")]
 	public RivetAssetId CameraActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6b62c321u, description: "Optional volume to warp the pickup and the hero to for the scene. Will leave them there when the scene completes.")]
+	[DDLRegistration(0x91be1ebau, description: "Optional volume to warp the pickup and the hero to for the scene. Will leave them there when the scene completes.")]
 	public RivetAssetId OptSceneLocVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6b62c321u, description: "If checked, hero will face the forward direction of the warp-to volume. If unchecked, the hero will face toward the camera.")]
+	[DDLRegistration(0xff7f1430u, description: "If checked, hero will face the forward direction of the warp-to volume. If unchecked, the hero will face toward the camera.")]
 	public bool UseVolForwardForHero { get; set; } = false;
 
-	[DDLRegistration(0x6b62c321u, description: "The animation to play on the collector and the pickup.")]
+	[DDLRegistration(0xad0053abu, description: "The animation to play on the collector and the pickup.")]
 	public string? PickupAnim { get; set; } = "";
 
-	[DDLRegistration(0x6b62c321u, description: "Override anims for specific heroes.")]
+	[DDLRegistration(0xb7cea6d3u, description: "Override anims for specific heroes.")]
 	public List<HeroPickupAnimOverrideData?> PickupAnimOverrides { get; set; } = [];
 
-	[DDLRegistration(0x6b62c321u, "Pickup scene scale?", "The scale to set the pickup when we start the pickup scene. A value <= 0 will mean to not change scale.")]
+	[DDLRegistration(0xb0324fa6u, "Pickup scene scale?", "The scale to set the pickup when we start the pickup scene. A value <= 0 will mean to not change scale.")]
 	public float SceneScale { get; set; } = -1.00f;
 
-	[DDLRegistration(0x6b62c321u, "Ground Offset", "If the pickup isn't placed on the ground, this is the distance from the pickup to the ground so the anim will play on the ground and not in the air.")]
+	[DDLRegistration(0x802e762fu, "Ground Offset", "If the pickup isn't placed on the ground, this is the distance from the pickup to the ground so the anim will play on the ground and not in the air.")]
 	public float GrndOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6b62c321u, "Scene Offset", "Offset (relative to the attach joint) for the pickup during the pickup scene.")]
+	[DDLRegistration(0x5e3410d3u, "Scene Offset", "Offset (relative to the attach joint) for the pickup during the pickup scene.")]
 	public DDLVector3? SceneOffset { get; set; } = default;
 
-	[DDLRegistration(0x6b62c321u, description: "Whether or not to save that this pickup item is picked up (so it won't be there on reload).")]
+	[DDLRegistration(0x6813a89fu, description: "Whether or not to save that this pickup item is picked up (so it won't be there on reload).")]
 	public bool SavePickedUp { get; set; } = false;
 
-	[DDLRegistration(0x6b62c321u, "Equip Melee Weapon?", "Whether the hero should equip their melee weapon during the scene.")]
+	[DDLRegistration(0xd1121656u, "Equip Melee Weapon?", "Whether the hero should equip their melee weapon during the scene.")]
 	public bool EquipMelee { get; set; } = false;
 
-	[DDLRegistration(0x6b62c321u)]
+	[DDLRegistration(0x9e12e8cdu)]
 	public x28fee0a4 Boots { get; set; } = x28fee0a4.Default;
 
-	[DDLRegistration(0x6b62c321u, description: "Leave this scene-object rendering during the animated pickup sequence?")]
+	[DDLRegistration(0x92ef15b1u, description: "Leave this scene-object rendering during the animated pickup sequence?")]
 	public bool DrawDuringPickupSequence { get; set; } = true;
 
-	[DDLRegistration(0x6b62c321u, "Disable Bob on pickup?", "Whether to disable bobbing when doing the pickup scene.")]
+	[DDLRegistration(0x7d9e2a5cu, "Disable Bob on pickup?", "Whether to disable bobbing when doing the pickup scene.")]
 	public bool DisableBobOnPickup { get; set; } = false;
 
-	[DDLRegistration(0x6b62c321u, "Disable Spin on pickup?", "Whether to disable spinning when doing the pickup scene.")]
+	[DDLRegistration(0xff42ae93u, "Disable Spin on pickup?", "Whether to disable spinning when doing the pickup scene.")]
 	public bool DisableSpinOnPickup { get; set; } = false;
 
-	[DDLRegistration(0x6b62c321u, "Play Pickup Unattached?", "Play pickup animation not attached but at same world pos and orientation.")]
+	[DDLRegistration(0x001273ffu, "Play Pickup Unattached?", "Play pickup animation not attached but at same world pos and orientation.")]
 	public bool PlayPickupUnattached { get; set; } = false;
 
-	[DDLRegistration(0x6b62c321u, description: "If this pickup falls out of the world should it autocollect to the nearest hero?")]
+	[DDLRegistration(0x8526b881u, description: "If this pickup falls out of the world should it autocollect to the nearest hero?")]
 	public bool AutoCollectOnFallOut { get; set; } = false;
 
 	public new static GamePickupItemPrius Create(DDLObject ddl) => new(ddl);

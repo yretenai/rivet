@@ -21,16 +21,16 @@ public class PickupSpawnerPrius : DDLObjectType, IDDLObjectType<PickupSpawnerPri
 		SpawnOffset = ddl.GetObject<DDLVector3>(0xaeb205ceu);
 	}
 
-	[DDLRegistration(0x2455c025u, "Drop Sets")]
+	[DDLRegistration(0x58882c3bu, "Drop Sets")]
 	public List<DropSet?> DropSetList { get; set; } = [];
 
-	[DDLRegistration(0x2455c025u, "Overall Drop Chance")]
+	[DDLRegistration(0x4913849bu, "Overall Drop Chance")]
 	public float DropChance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2455c025u, "Item Fixed on Spawn", "Spawning an item that does not fall to ground")]
+	[DDLRegistration(0xb636c652u, "Item Fixed on Spawn", "Spawning an item that does not fall to ground")]
 	public bool FixedSpawn { get; set; } = false;
 
-	[DDLRegistration(0x2455c025u, "Spawn Offset", "Local space spawn offset from actor position.")]
+	[DDLRegistration(0xaeb205ceu, "Spawn Offset", "Local space spawn offset from actor position.")]
 	public DDLVector3? SpawnOffset { get; set; } = default;
 
 	public static PickupSpawnerPrius Create(DDLObject ddl) => new(ddl);

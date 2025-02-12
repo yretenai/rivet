@@ -18,7 +18,7 @@ public class ShrubberyRampDownStartEvent : EventBase, IDDLObjectType<ShrubberyRa
 		ShrubActor = ddl.GetValue<uint>(0x94f662b8u, ShrubActor);
 	}
 
-	[DDLRegistration(0x883472fbu)]
+	[DDLRegistration(0x94f662b8u)]
 	public uint ShrubActor { get; set; } = 0x00000000;
 
 	public new static ShrubberyRampDownStartEvent Create(DDLObject ddl) => new(ddl);

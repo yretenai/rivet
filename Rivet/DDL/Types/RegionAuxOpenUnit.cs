@@ -26,31 +26,31 @@ public class RegionAuxOpenUnit : DDLObjectType, IDDLObjectType<RegionAuxOpenUnit
 		NamedLinks = ddl.GetDictionary<RivetAssetId, RegionNamedLink>(0x6bee750e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionNamedLink>(mapId));
 	}
 
-	[DDLRegistration(0x13f29253u)]
+	[DDLRegistration(0xd7340387u)]
 	public RivetAssetId FolderId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x13f29253u)]
+	[DDLRegistration(0x478e3257u)]
 	public DDLVector3? LodPosition { get; set; } = default;
 
-	[DDLRegistration(0x13f29253u, "Tile Radius")]
+	[DDLRegistration(0xe406382bu, "Tile Radius")]
 	public uint TileRadius { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x13f29253u, "Custom Load Distance")]
+	[DDLRegistration(0xe94325c0u, "Custom Load Distance")]
 	public uint LoadDistance { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x13f29253u, "Custom Unload Distance")]
+	[DDLRegistration(0x4822588au, "Custom Unload Distance")]
 	public uint UnloadDistance { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x13f29253u)]
+	[DDLRegistration(0x9c997da9u)]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
-	[DDLRegistration(0x13f29253u)]
+	[DDLRegistration(0xfaaad4d2u)]
 	public List<RivetAssetId> NavExclusionZones { get; set; } = [];
 
-	[DDLRegistration(0x13f29253u)]
+	[DDLRegistration(0xc4bd3cf8u)]
 	public List<RivetAssetId> NavInclusionZones { get; set; } = [];
 
-	[DDLRegistration(0x13f29253u)]
+	[DDLRegistration(0x6bee750eu)]
 	public Dictionary<RivetAssetId, RegionNamedLink?> NamedLinks { get; set; } = [];
 
 	public static RegionAuxOpenUnit Create(DDLObject ddl) => new(ddl);

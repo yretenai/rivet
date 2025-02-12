@@ -18,7 +18,7 @@ public class NodeGraphBreakpointList : DDLObjectType, IDDLObjectType<NodeGraphBr
 		Breakpoints = ddl.GetObjects<NodeGraphBreakpoint>(0x8fbf46e7u);
 	}
 
-	[DDLRegistration(0x4d8a8955u)]
+	[DDLRegistration(0x8fbf46e7u)]
 	public List<NodeGraphBreakpoint?> Breakpoints { get; set; } = [];
 
 	public static NodeGraphBreakpointList Create(DDLObject ddl) => new(ddl);

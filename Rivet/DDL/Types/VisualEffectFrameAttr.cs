@@ -20,13 +20,13 @@ public class VisualEffectFrameAttr : DDLObjectType, IDDLObjectType<VisualEffectF
 		SpawnRateScale = ddl.GetValue<float>(0xef876f34u, SpawnRateScale);
 	}
 
-	[DDLRegistration(0xe6dbc058u, "FPS Percentage High")]
+	[DDLRegistration(0xa4d02141u, "FPS Percentage High")]
 	public float FPSPercentageHigh { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe6dbc058u, "FPS Percentage Low")]
+	[DDLRegistration(0x4d013330u, "FPS Percentage Low")]
 	public float FPSPercentageLow { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe6dbc058u, "Spawn Rate Scale")]
+	[DDLRegistration(0xef876f34u, "Spawn Rate Scale")]
 	public float SpawnRateScale { get; set; } = 0.50f;
 
 	public static VisualEffectFrameAttr Create(DDLObject ddl) => new(ddl);

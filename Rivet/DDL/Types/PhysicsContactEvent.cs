@@ -20,13 +20,13 @@ public class PhysicsContactEvent : EventBase, IDDLObjectType<PhysicsContactEvent
 		HitActor = ddl.GetValue<uint>(0x51261116u, HitActor);
 	}
 
-	[DDLRegistration(0x19129ef3u, description: "Contact hit material")]
+	[DDLRegistration(0x86bfc8e5u, description: "Contact hit material")]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0x19129ef3u, description: "Bodies relative speed at given point along separating normal")]
+	[DDLRegistration(0x44d96bd9u, description: "Bodies relative speed at given point along separating normal")]
 	public float Velocity { get; set; } = 0.00f;
 
-	[DDLRegistration(0x19129ef3u, description: "Actor handle of the hit object")]
+	[DDLRegistration(0x51261116u, description: "Actor handle of the hit object")]
 	public uint HitActor { get; set; } = 0x00000000;
 
 	public new static PhysicsContactEvent Create(DDLObject ddl) => new(ddl);

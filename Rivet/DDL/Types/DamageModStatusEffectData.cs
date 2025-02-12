@@ -18,7 +18,7 @@ public class DamageModStatusEffectData : DDLObjectType, IDDLObjectType<DamageMod
 		Effect = ddl.GetObject<StatusEffectBasePrius>(0x8818df95u);
 	}
 
-	[DDLRegistration(0x0c502171u)]
+	[DDLRegistration(0x8818df95u)]
 	public StatusEffectBasePrius? Effect { get; set; } = default;
 
 	public static DamageModStatusEffectData Create(DDLObject ddl) => new(ddl);

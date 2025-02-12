@@ -18,7 +18,7 @@ public class AutoDestroyLifetimePrius : DDLObjectType, IDDLObjectType<AutoDestro
 		Lifetime = ddl.GetValue<float>(0xc7e68df8u, Lifetime);
 	}
 
-	[DDLRegistration(0xf7a5d4dbu)]
+	[DDLRegistration(0xc7e68df8u)]
 	public float Lifetime { get; set; } = 0.00f;
 
 	public static AutoDestroyLifetimePrius Create(DDLObject ddl) => new(ddl);

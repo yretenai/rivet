@@ -20,13 +20,13 @@ public class MoverBumpEvent : EventBase, IDDLObjectType<MoverBumpEvent> {
 		Magnitude = ddl.GetValue<float>(0xb77ae20du, Magnitude);
 	}
 
-	[DDLRegistration(0x40d5759eu)]
+	[DDLRegistration(0xc0301644u)]
 	public DDLVector3? ContactPoint { get; set; } = default;
 
-	[DDLRegistration(0x40d5759eu)]
+	[DDLRegistration(0xbcb74ebfu)]
 	public DDLVector3? Direction { get; set; } = default;
 
-	[DDLRegistration(0x40d5759eu)]
+	[DDLRegistration(0xb77ae20du)]
 	public float Magnitude { get; set; } = 0.00f;
 
 	public new static MoverBumpEvent Create(DDLObject ddl) => new(ddl);

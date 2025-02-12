@@ -21,16 +21,16 @@ public class RCSPrintOutput : DDLObjectType, IDDLObjectType<RCSPrintOutput> {
 		Output = ddl.GetString(0xf2a65af9) ?? Output;
 	}
 
-	[DDLRegistration(0x1e74c3d6u, description: "Warnings encountered while running a command.")]
+	[DDLRegistration(0x93485b62u, description: "Warnings encountered while running a command.")]
 	public RCSMessage? Warnings { get; set; } = default;
 
-	[DDLRegistration(0x1e74c3d6u, description: "Errors encountered while running a command.")]
+	[DDLRegistration(0x02291d7au, description: "Errors encountered while running a command.")]
 	public RCSMessage? Errors { get; set; } = default;
 
-	[DDLRegistration(0x1e74c3d6u, description: "Array of key/value pairs for each file returned by the command.")]
+	[DDLRegistration(0x4e14ab6bu, description: "Array of key/value pairs for each file returned by the command.")]
 	public List<RCSDictionary?> Stats { get; set; } = [];
 
-	[DDLRegistration(0x1e74c3d6u)]
+	[DDLRegistration(0xf2a65af9u)]
 	public string? Output { get; set; } = default;
 
 	public static RCSPrintOutput Create(DDLObject ddl) => new(ddl);

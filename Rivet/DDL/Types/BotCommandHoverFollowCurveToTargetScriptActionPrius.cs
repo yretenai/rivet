@@ -21,16 +21,16 @@ public class BotCommandHoverFollowCurveToTargetScriptActionPrius : DDLObjectType
 		SetDestActorAsOverrideParentIfMovingSurface = ddl.GetValue<bool>(0xeb3d0d94u, SetDestActorAsOverrideParentIfMovingSurface);
 	}
 
-	[DDLRegistration(0xb822e69cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0xb822e69cu, description: "The maximum distance the bot can be from the target volume in order to break off of the curve and b-line towards it.")]
+	[DDLRegistration(0x155bcad6u, description: "The maximum distance the bot can be from the target volume in order to break off of the curve and b-line towards it.")]
 	public float BLineDist { get; set; } = 30.00f;
 
-	[DDLRegistration(0xb822e69cu, description: "If true, the bot will try to shoot while going to target or using curve")]
+	[DDLRegistration(0xe959204au, description: "If true, the bot will try to shoot while going to target or using curve")]
 	public bool AllowShootingWhileGoto { get; set; } = false;
 
-	[DDLRegistration(0xb822e69cu, description: "If the StopVolume or Curve Actor is on a moving surface, override this bot's update parent/moving surface to the same surface")]
+	[DDLRegistration(0xeb3d0d94u, description: "If the StopVolume or Curve Actor is on a moving surface, override this bot's update parent/moving surface to the same surface")]
 	public bool SetDestActorAsOverrideParentIfMovingSurface { get; set; } = false;
 
 	public static BotCommandHoverFollowCurveToTargetScriptActionPrius Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class VanitySetConfig : ConfigBase, IDDLObjectType<VanitySetConfig> {
 		Perk = ddl.GetObject<VanityPerkBase>(0xf39e155fu);
 	}
 
-	[DDLRegistration(0x4d121082u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x4d121082u, "Vanity Bundle Configs")]
+	[DDLRegistration(0x229d71b5u, "Vanity Bundle Configs")]
 	public List<RivetAssetId> VanityBundles { get; set; } = [];
 
-	[DDLRegistration(0x4d121082u, "Default Vanity Color")]
+	[DDLRegistration(0x7ccd1470u, "Default Vanity Color")]
 	public byte DefaultColor { get; set; } = 0x00;
 
-	[DDLRegistration(0x4d121082u, "Is Duplicate")]
+	[DDLRegistration(0xa6036107u, "Is Duplicate")]
 	public bool IsDuplicate { get; set; } = false;
 
-	[DDLRegistration(0x4d121082u, "Original Set", "Since this is a duplicate")]
+	[DDLRegistration(0x254f8245u, "Original Set", "Since this is a duplicate")]
 	public RivetAssetId OriginalSet { get; set; } = default;
 
-	[DDLRegistration(0x4d121082u)]
+	[DDLRegistration(0xf39e155fu)]
 	public VanityPerkBase? Perk { get; set; } = default;
 
 	public new static VanitySetConfig Create(DDLObject ddl) => new(ddl);

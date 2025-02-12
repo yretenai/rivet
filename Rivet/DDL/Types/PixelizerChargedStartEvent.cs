@@ -18,7 +18,7 @@ public class PixelizerChargedStartEvent : EventBase, IDDLObjectType<PixelizerCha
 		VersionIndex = ddl.GetValue<uint>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0x471ce2a2u)]
+	[DDLRegistration(0x6e091c9au)]
 	public uint VersionIndex { get; set; } = 0x00000000;
 
 	public new static PixelizerChargedStartEvent Create(DDLObject ddl) => new(ddl);

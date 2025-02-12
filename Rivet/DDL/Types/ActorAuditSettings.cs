@@ -18,7 +18,7 @@ public class ActorAuditSettings : DDLObjectType, IDDLObjectType<ActorAuditSettin
 		InstantiationAuditPairs = ddl.GetObjects<ActorInstantiationAuditPair>(0xd9d6c0c3u);
 	}
 
-	[DDLRegistration(0x3c02e7bau)]
+	[DDLRegistration(0xd9d6c0c3u)]
 	public List<ActorInstantiationAuditPair?> InstantiationAuditPairs { get; set; } = [];
 
 	public static ActorAuditSettings Create(DDLObject ddl) => new(ddl);

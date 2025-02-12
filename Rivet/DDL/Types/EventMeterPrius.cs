@@ -23,22 +23,22 @@ public class EventMeterPrius : DDLObjectType, IDDLObjectType<EventMeterPrius> {
 		OnlyFromSenderHandle = ddl.GetValue<uint>(0x5a63f26au, OnlyFromSenderHandle);
 	}
 
-	[DDLRegistration(0xc4c1c584u)]
+	[DDLRegistration(0x22fdc666u)]
 	public EventBase? Event { get; set; } = default;
 
-	[DDLRegistration(0xc4c1c584u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc4c1c584u)]
+	[DDLRegistration(0xc3d652cdu)]
 	public float IncrementPerEvent { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc4c1c584u)]
+	[DDLRegistration(0x505b2319u)]
 	public float DecayPerSecond { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc4c1c584u)]
+	[DDLRegistration(0x64ce7324u)]
 	public bool SelfEventsOnly { get; set; } = false;
 
-	[DDLRegistration(0xc4c1c584u, description: "Only get events from this sender.")]
+	[DDLRegistration(0x5a63f26au, description: "Only get events from this sender.")]
 	public uint OnlyFromSenderHandle { get; set; } = 0x00000000;
 
 	public static EventMeterPrius Create(DDLObject ddl) => new(ddl);

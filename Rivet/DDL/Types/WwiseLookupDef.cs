@@ -21,16 +21,16 @@ public class WwiseLookupDef : DDLObjectType, IDDLObjectType<WwiseLookupDef> {
 		Banks = ddl.GetObjects<WwiseLookupBankDef>(0xb255fb57u);
 	}
 
-	[DDLRegistration(0x91567644u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x91567644u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x91567644u)]
+	[DDLRegistration(0xfb19f1e7u)]
 	public string? Info { get; set; } = default;
 
-	[DDLRegistration(0x91567644u)]
+	[DDLRegistration(0xb255fb57u)]
 	public List<WwiseLookupBankDef?> Banks { get; set; } = [];
 
 	public static WwiseLookupDef Create(DDLObject ddl) => new(ddl);

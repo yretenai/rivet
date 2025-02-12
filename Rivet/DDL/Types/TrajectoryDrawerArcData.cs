@@ -20,13 +20,13 @@ public class TrajectoryDrawerArcData : DDLObjectType, IDDLObjectType<TrajectoryD
 		Color = ddl.GetObject<DDLVector3>(0x7f058428u);
 	}
 
-	[DDLRegistration(0x84fc59cbu, "Material", "Material for the trajectory arc")]
+	[DDLRegistration(0x86bfc8e5u, "Material", "Material for the trajectory arc")]
 	public RivetAssetId Material { get; set; } = default;
 
-	[DDLRegistration(0x84fc59cbu, "Material Color Name", "Name of the render constant in the arc material to use for setting color.")]
+	[DDLRegistration(0xc011fbeau, "Material Color Name", "Name of the render constant in the arc material to use for setting color.")]
 	public string? MaterialColorName { get; set; } = default;
 
-	[DDLRegistration(0x84fc59cbu, "Color", "Arc color in default state.")]
+	[DDLRegistration(0x7f058428u, "Color", "Arc color in default state.")]
 	public DDLVector3? Color { get; set; } = default;
 
 	public static TrajectoryDrawerArcData Create(DDLObject ddl) => new(ddl);

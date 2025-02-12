@@ -22,19 +22,19 @@ public class StatusEmitterAuraPrius : StatusEmitterBasePrius, IDDLObjectType<Sta
 		ValidTargetTypes = ddl.GetBitset<TargetType>(0x3b4c9303u, TargetTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x5cdb4f28u)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5cdb4f28u)]
+	[DDLRegistration(0x4bdbf9d3u)]
 	public bool Self { get; set; } = false;
 
-	[DDLRegistration(0x5cdb4f28u)]
+	[DDLRegistration(0x20041351u)]
 	public bool Friends { get; set; } = false;
 
-	[DDLRegistration(0x5cdb4f28u)]
+	[DDLRegistration(0x79e82906u)]
 	public bool Enemies { get; set; } = false;
 
-	[DDLRegistration(0x5cdb4f28u, description: "This is the types of target that can receive the effect of this aura. If this is left unchanged, then all targets are valid.")]
+	[DDLRegistration(0x3b4c9303u, description: "This is the types of target that can receive the effect of this aura. If this is left unchanged, then all targets are valid.")]
 	public TargetType ValidTargetTypes { get; set; } = (TargetType) 0x00000000;
 
 	public new static StatusEmitterAuraPrius Create(DDLObject ddl) => new(ddl);

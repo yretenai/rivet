@@ -20,13 +20,13 @@ public class FirepointCluePrius : DDLObjectType, IDDLObjectType<FirepointCluePri
 		SearchAreas = ddl.GetValue<RivetAssetId>(0x1292a9f1u, SearchAreas);
 	}
 
-	[DDLRegistration(0x3d8ec90au)]
+	[DDLRegistration(0xdcba26dbu)]
 	public xec8eef95 CoverProvided { get; set; } = (xec8eef95) 0x00000020;
 
-	[DDLRegistration(0x3d8ec90au)]
+	[DDLRegistration(0x37a8306du)]
 	public BotUsage BotUsage { get; set; } = BotUsage.EnemyGround;
 
-	[DDLRegistration(0x3d8ec90au, description: "Where the snipers searches when passive.")]
+	[DDLRegistration(0x1292a9f1u, description: "Where the snipers searches when passive.")]
 	public RivetAssetId SearchAreas { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static FirepointCluePrius Create(DDLObject ddl) => new(ddl);

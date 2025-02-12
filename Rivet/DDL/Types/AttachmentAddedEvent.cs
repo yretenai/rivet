@@ -18,7 +18,7 @@ public class AttachmentAddedEvent : EventBase, IDDLObjectType<AttachmentAddedEve
 		ActorHandle = ddl.GetValue<uint>(0xb54c733cu, ActorHandle);
 	}
 
-	[DDLRegistration(0xada423aau)]
+	[DDLRegistration(0xb54c733cu)]
 	public uint ActorHandle { get; set; } = 0x00000000;
 
 	public new static AttachmentAddedEvent Create(DDLObject ddl) => new(ddl);

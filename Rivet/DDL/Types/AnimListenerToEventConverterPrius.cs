@@ -18,7 +18,7 @@ public class AnimListenerToEventConverterPrius : DDLObjectType, IDDLObjectType<A
 		EnabledEvents = ddl.GetBitset<x481aa65a>(0x1eb6a8bfu, x481aa65aValues.Lookup);
 	}
 
-	[DDLRegistration(0x3f06f094u, "Enabled Events", "A list of the events to send.")]
+	[DDLRegistration(0x1eb6a8bfu, "Enabled Events", "A list of the events to send.")]
 	public x481aa65a EnabledEvents { get; set; } = (x481aa65a) 0x00000001;
 
 	public static AnimListenerToEventConverterPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class AnimMatchEntry : DDLObjectType, IDDLObjectType<AnimMatchEntry> {
 		Actor = ddl.GetValue<RivetAssetId>(0x5d269a38u, Actor);
 	}
 
-	[DDLRegistration(0x32e2a5cfu, description: "Actor OR ActorGroup. Make this/these actor's anims match the actor this component is on")]
+	[DDLRegistration(0x5d269a38u, description: "Actor OR ActorGroup. Make this/these actor's anims match the actor this component is on")]
 	public RivetAssetId Actor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static AnimMatchEntry Create(DDLObject ddl) => new(ddl);

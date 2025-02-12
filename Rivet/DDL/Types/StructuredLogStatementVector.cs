@@ -19,10 +19,10 @@ public class StructuredLogStatementVector : StructuredLogStatement, IDDLObjectTy
 		Vec = ddl.GetObject<DDLVector3>(0x49594b39u);
 	}
 
-	[DDLRegistration(0x0182a9d4u)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
-	[DDLRegistration(0x0182a9d4u)]
+	[DDLRegistration(0x49594b39u)]
 	public DDLVector3? Vec { get; set; } = default;
 
 	public new static StructuredLogStatementVector Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class CustomDesignEvent : EventBase, IDDLObjectType<CustomDesignEvent> {
 		Bool = ddl.GetValue<bool>(0x6511f622u, Bool);
 	}
 
-	[DDLRegistration(0x696377deu, "Event Name")]
+	[DDLRegistration(0x2048921du, "Event Name")]
 	public string? EventName { get; set; } = default;
 
-	[DDLRegistration(0x696377deu, "Number Var")]
+	[DDLRegistration(0xa8e85133u, "Number Var")]
 	public float Number { get; set; } = 0.00f;
 
-	[DDLRegistration(0x696377deu, "Vector Var")]
+	[DDLRegistration(0x2516063cu, "Vector Var")]
 	public DDLVector3? Vector { get; set; } = default;
 
-	[DDLRegistration(0x696377deu, "String Var")]
+	[DDLRegistration(0xa0c6fcceu, "String Var")]
 	public string? String { get; set; } = default;
 
-	[DDLRegistration(0x696377deu, "Actor Var")]
+	[DDLRegistration(0x5d269a38u, "Actor Var")]
 	public RivetAssetId Actor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x696377deu, "Bool Var")]
+	[DDLRegistration(0x6511f622u, "Bool Var")]
 	public bool Bool { get; set; } = false;
 
 	public new static CustomDesignEvent Create(DDLObject ddl) => new(ddl);

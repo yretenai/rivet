@@ -21,16 +21,16 @@ public class FreezeShatterData : DDLObjectType, IDDLObjectType<FreezeShatterData
 		KnockbackAmount = ddl.GetValue<float>(0x7b1e600bu, KnockbackAmount);
 	}
 
-	[DDLRegistration(0xeaa51682u, "Shot Config")]
+	[DDLRegistration(0xb171e6aeu, "Shot Config")]
 	public RivetAssetId ShotConfig { get; set; } = "";
 
-	[DDLRegistration(0xeaa51682u, "Damage Range")]
+	[DDLRegistration(0x0b52c2c7u, "Damage Range")]
 	public float DamageRange { get; set; } = 8.00f;
 
-	[DDLRegistration(0xeaa51682u, "Knockback")]
+	[DDLRegistration(0x2e553fddu, "Knockback")]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.Three;
 
-	[DDLRegistration(0xeaa51682u, "Knockback Amount")]
+	[DDLRegistration(0x7b1e600bu, "Knockback Amount")]
 	public float KnockbackAmount { get; set; } = 100.00f;
 
 	public static FreezeShatterData Create(DDLObject ddl) => new(ddl);

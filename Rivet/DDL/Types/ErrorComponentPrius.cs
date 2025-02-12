@@ -18,7 +18,7 @@ public class ErrorComponentPrius : DDLObjectType, IDDLObjectType<ErrorComponentP
 		ErrorText = ddl.GetStrings(0x27cfc163u);
 	}
 
-	[DDLRegistration(0x63a9ca28u)]
+	[DDLRegistration(0x27cfc163u)]
 	public List<string?> ErrorText { get; set; } = [];
 
 	public static ErrorComponentPrius Create(DDLObject ddl) => new(ddl);

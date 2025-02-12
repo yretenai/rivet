@@ -32,49 +32,49 @@ public class BotMeleeAttackData : DDLObjectType, IDDLObjectType<BotMeleeAttackDa
 		YAdjustType = ddl.GetEnum<x9e94da32>(0x60f46de3u, x9e94da32Values.Lookup);
 	}
 
-	[DDLRegistration(0x35236c91u, "Anim Driver", "Name of anim driver to play")]
+	[DDLRegistration(0x10f54dceu, "Anim Driver", "Name of anim driver to play")]
 	public string? AnimDriver { get; set; } = "Melee_Attack";
 
-	[DDLRegistration(0x35236c91u, "WindUp Duration", "Wind up time, in anim clip between start and MeleeActiveBeginEvent")]
+	[DDLRegistration(0x11dca8dau, "WindUp Duration", "Wind up time, in anim clip between start and MeleeActiveBeginEvent")]
 	public float WindUpDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x35236c91u, "Active Duration", "Active time, in anim clip between MeleeActiveBeginEvent and MeleeActiveEndEvent")]
+	[DDLRegistration(0xda754e51u, "Active Duration", "Active time, in anim clip between MeleeActiveBeginEvent and MeleeActiveEndEvent")]
 	public float ActiveDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x35236c91u, "Recovery Duration", "Recovery time, in anim clip between MeleeActiveEndEvent and end of clip")]
+	[DDLRegistration(0x03b07ba4u, "Recovery Duration", "Recovery time, in anim clip between MeleeActiveEndEvent and end of clip")]
 	public float RecoveryDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x35236c91u, "Ideal Distance", "How close do we want to be to the target when our damage happens?")]
+	[DDLRegistration(0xb70823ecu, "Ideal Distance", "How close do we want to be to the target when our damage happens?")]
 	public float IdealDistance { get; set; } = 0.30f;
 
-	[DDLRegistration(0x35236c91u, "Suck Distance", "Additional distance on top of how far the clips motion moves we can scale.")]
+	[DDLRegistration(0x00dad4eeu, "Suck Distance", "Additional distance on top of how far the clips motion moves we can scale.")]
 	public float SuckDistance { get; set; } = 2.00f;
 
-	[DDLRegistration(0x35236c91u, "Pushback Distance", "If closer than this, bot will pushback to this distance while attacking.")]
+	[DDLRegistration(0xb4e3c4ddu, "Pushback Distance", "If closer than this, bot will pushback to this distance while attacking.")]
 	public float PushbackDistance { get; set; } = 0.10f;
 
-	[DDLRegistration(0x35236c91u, "Max Translation Scale", "What is the max amount we can scale our translation rate per local-space axis over what the animation does. -1 = No limit.")]
+	[DDLRegistration(0x3deb2a4fu, "Max Translation Scale", "What is the max amount we can scale our translation rate per local-space axis over what the animation does. -1 = No limit.")]
 	public DDLVector3? MaxTranslationScale { get; set; } = default;
 
-	[DDLRegistration(0x35236c91u, "Max Translation Rate", "What is the max amount we can translate per local-space axis in meters per second. -1 = No limit.")]
+	[DDLRegistration(0xc6ee75bbu, "Max Translation Rate", "What is the max amount we can translate per local-space axis in meters per second. -1 = No limit.")]
 	public DDLVector3? MaxTranslationRate { get; set; } = default;
 
-	[DDLRegistration(0x35236c91u, "Max Turn Scale", "What is the max amount we can scale our turn rate over what the animation does. -1 = No limit.")]
+	[DDLRegistration(0x13c0c2a6u, "Max Turn Scale", "What is the max amount we can scale our turn rate over what the animation does. -1 = No limit.")]
 	public float MaxTurnScale { get; set; } = -1.00f;
 
-	[DDLRegistration(0x35236c91u, "Max Turn Rate", "What is the max amount we can turn in degrees per second. -1 = No limit.")]
+	[DDLRegistration(0x590b1dc6u, "Max Turn Rate", "What is the max amount we can turn in degrees per second. -1 = No limit.")]
 	public float MaxTurnRate { get; set; } = -1.00f;
 
-	[DDLRegistration(0x35236c91u, "Max Turn Adjust", "What is the max amount we can rotate in order to stay on target.")]
+	[DDLRegistration(0x4c9ea693u, "Max Turn Adjust", "What is the max amount we can rotate in order to stay on target.")]
 	public float MaxTurnAdjust { get; set; } = 180.00f;
 
-	[DDLRegistration(0x35236c91u, "Disable Friendly CVC", "Should we be able to move through friends while doing this attack?")]
+	[DDLRegistration(0xaa7ccfdau, "Disable Friendly CVC", "Should we be able to move through friends while doing this attack?")]
 	public bool DisableFriendlyCVC { get; set; } = false;
 
-	[DDLRegistration(0x35236c91u, "Enable Gravity")]
+	[DDLRegistration(0x8c6af0d3u, "Enable Gravity")]
 	public bool EnableGravity { get; set; } = true;
 
-	[DDLRegistration(0x35236c91u, "Y Adjust Type")]
+	[DDLRegistration(0x60f46de3u, "Y Adjust Type")]
 	public x9e94da32 YAdjustType { get; set; } = x9e94da32.Default;
 
 	public static BotMeleeAttackData Create(DDLObject ddl) => new(ddl);

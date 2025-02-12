@@ -19,10 +19,10 @@ public class ModelAssetReferenceDef : DDLObjectType, IDDLObjectType<ModelAssetRe
 		Autoload = ddl.GetValue<bool>(0xb2a1a9fau, Autoload);
 	}
 
-	[DDLRegistration(0xbdc4d5a8u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xbdc4d5a8u)]
+	[DDLRegistration(0xb2a1a9fau)]
 	public bool Autoload { get; set; } = true;
 
 	public static ModelAssetReferenceDef Create(DDLObject ddl) => new(ddl);

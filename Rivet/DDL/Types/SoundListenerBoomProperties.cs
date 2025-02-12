@@ -22,19 +22,19 @@ public class SoundListenerBoomProperties : DDLObjectType, IDDLObjectType<SoundLi
 		TargetLocator = ddl.GetString(0x7abba555) ?? TargetLocator;
 	}
 
-	[DDLRegistration(0x5ba7691cu, description: "Preferred distance to the camera target (hero) if it exists")]
+	[DDLRegistration(0x2ff4f3c1u, description: "Preferred distance to the camera target (hero) if it exists")]
 	public float RangeMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5ba7691cu, description: "Clamp distance to the camera target (hero) if it exists")]
+	[DDLRegistration(0x13f9cc98u, description: "Clamp distance to the camera target (hero) if it exists")]
 	public float RangeMax { get; set; } = 1024.00f;
 
-	[DDLRegistration(0x5ba7691cu, description: "Amount the listener is extended towards the target (hero) if it exists")]
+	[DDLRegistration(0x3acd0962u, description: "Amount the listener is extended towards the target (hero) if it exists")]
 	public float BoomLength { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5ba7691cu, description: "Distance to offset the target listener position in the up direction of the camera target (hero)")]
+	[DDLRegistration(0x96903517u, description: "Distance to offset the target listener position in the up direction of the camera target (hero)")]
 	public float TargetUpOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5ba7691cu, description: "Locator on camera target for boom to point at")]
+	[DDLRegistration(0x7abba555u, description: "Locator on camera target for boom to point at")]
 	public string? TargetLocator { get; set; } = "";
 
 	public static SoundListenerBoomProperties Create(DDLObject ddl) => new(ddl);

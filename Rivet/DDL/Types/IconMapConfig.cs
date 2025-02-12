@@ -18,7 +18,7 @@ public class IconMapConfig : ConfigBase, IDDLObjectType<IconMapConfig> {
 		Mappings = ddl.GetObjects<IconMapData>(0xec2bfe69u);
 	}
 
-	[DDLRegistration(0x57b583d3u)]
+	[DDLRegistration(0xec2bfe69u)]
 	public List<IconMapData?> Mappings { get; set; } = [];
 
 	public new static IconMapConfig Create(DDLObject ddl) => new(ddl);

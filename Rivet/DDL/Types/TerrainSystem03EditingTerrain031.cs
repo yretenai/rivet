@@ -18,7 +18,7 @@ public class TerrainSystem03EditingTerrain031 : DDLObjectType, IDDLObjectType<Te
 		Line00 = ddl.GetString(0x0f78bf4b) ?? Line00;
 	}
 
-	[DDLRegistration(0x365ef429u, description: "This clears the desired paint target.")]
+	[DDLRegistration(0x0f78bf4bu, description: "This clears the desired paint target.")]
 	public string? Line00 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain031 Create(DDLObject ddl) => new(ddl);

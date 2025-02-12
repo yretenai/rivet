@@ -18,7 +18,7 @@ public class JobManagerUseTurretPrius : DDLObjectType, IDDLObjectType<JobManager
 		Broadcast = ddl.GetValue<bool>(0x190ce3f9u, Broadcast);
 	}
 
-	[DDLRegistration(0x52fa82adu)]
+	[DDLRegistration(0x190ce3f9u)]
 	public bool Broadcast { get; set; } = false;
 
 	public static JobManagerUseTurretPrius Create(DDLObject ddl) => new(ddl);

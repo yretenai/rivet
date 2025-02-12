@@ -20,13 +20,13 @@ public class AnimDamageIdealFrameVictimEvent : EventBase, IDDLObjectType<AnimDam
 		DamageModApplied = ddl.GetValue<bool>(0xe61dd19au, DamageModApplied);
 	}
 
-	[DDLRegistration(0x613eadefu)]
+	[DDLRegistration(0x08f29378u)]
 	public x80ca62e9 ImpactLocation { get; set; } = x80ca62e9.Impact_Torso;
 
-	[DDLRegistration(0x613eadefu)]
+	[DDLRegistration(0xb2dda91fu)]
 	public x3b1e2e8d ImpactLevel { get; set; } = x3b1e2e8d.Impact_Light;
 
-	[DDLRegistration(0x613eadefu)]
+	[DDLRegistration(0xe61dd19au)]
 	public bool DamageModApplied { get; set; } = false;
 
 	public new static AnimDamageIdealFrameVictimEvent Create(DDLObject ddl) => new(ddl);

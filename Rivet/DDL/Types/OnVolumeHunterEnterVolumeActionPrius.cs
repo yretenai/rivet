@@ -22,19 +22,19 @@ public class OnVolumeHunterEnterVolumeActionPrius : DDLObjectType, IDDLObjectTyp
 		SignalEmptyOnActivate = ddl.GetValue<bool>(0xe294a700u, SignalEmptyOnActivate);
 	}
 
-	[DDLRegistration(0xd50b17bau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0xd50b17bau, description: "Start node as active")]
+	[DDLRegistration(0x3e035e82u, description: "Start node as active")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0xd50b17bau, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0xd50b17bau, "Include Dead Actors", "If unchecked, Actors with zero health become treated as 'outside'.")]
+	[DDLRegistration(0xf0f20727u, "Include Dead Actors", "If unchecked, Actors with zero health become treated as 'outside'.")]
 	public bool IncludeDead { get; set; } = true;
 
-	[DDLRegistration(0xd50b17bau, description: "If set to true, the node will fire OnEmpty on the first frame activated if no targets are in it")]
+	[DDLRegistration(0xe294a700u, description: "If set to true, the node will fire OnEmpty on the first frame activated if no targets are in it")]
 	public bool SignalEmptyOnActivate { get; set; } = true;
 
 	public static OnVolumeHunterEnterVolumeActionPrius Create(DDLObject ddl) => new(ddl);

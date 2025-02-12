@@ -18,7 +18,7 @@ public class CreateThumbnailOutput : DDLObjectType, IDDLObjectType<CreateThumbna
 		Success = ddl.GetValue<bool>(0x6eeabc8au, Success);
 	}
 
-	[DDLRegistration(0x13ee629bu)]
+	[DDLRegistration(0x6eeabc8au)]
 	public bool Success { get; set; } = false;
 
 	public static CreateThumbnailOutput Create(DDLObject ddl) => new(ddl);

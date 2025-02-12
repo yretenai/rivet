@@ -18,7 +18,7 @@ public class SolveQuadraticEquationActionPrius : DDLObjectType, IDDLObjectType<S
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x3883bd6cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
 	public static SolveQuadraticEquationActionPrius Create(DDLObject ddl) => new(ddl);

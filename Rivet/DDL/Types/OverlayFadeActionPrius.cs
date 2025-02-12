@@ -24,25 +24,25 @@ public class OverlayFadeActionPrius : DDLObjectType, IDDLObjectType<OverlayFadeA
 		ShowLoadIcon = ddl.GetValue<bool>(0xfd829452u, ShowLoadIcon);
 	}
 
-	[DDLRegistration(0x64daf384u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x64daf384u, description: "Time in fade takes")]
+	[DDLRegistration(0x7c5e3db0u, description: "Time in fade takes")]
 	public float Duration { get; set; } = 3.00f;
 
-	[DDLRegistration(0x64daf384u, description: "Time before fade starts")]
+	[DDLRegistration(0xabc94c5au, description: "Time before fade starts")]
 	public float Delay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x64daf384u, description: "Fade into black or out of black")]
+	[DDLRegistration(0x7ac52d10u, description: "Fade into black or out of black")]
 	public x6b791e0e Fade { get; set; } = x6b791e0e.FadeIn;
 
-	[DDLRegistration(0x64daf384u, description: "True for white, false for black")]
+	[DDLRegistration(0x4a32dfa2u, description: "True for white, false for black")]
 	public bool IsWhite { get; set; } = false;
 
-	[DDLRegistration(0x64daf384u, description: "Should the scripted fade state be cleared when zone is unloaded? (the screen will still remain black until loading is finished)")]
+	[DDLRegistration(0x8b42adafu, description: "Should the scripted fade state be cleared when zone is unloaded? (the screen will still remain black until loading is finished)")]
 	public bool ClearOnZoneUnload { get; set; } = false;
 
-	[DDLRegistration(0x64daf384u, description: "Should we also show the loading icon while faded out?")]
+	[DDLRegistration(0xfd829452u, description: "Should we also show the loading icon while faded out?")]
 	public bool ShowLoadIcon { get; set; } = false;
 
 	public static OverlayFadeActionPrius Create(DDLObject ddl) => new(ddl);

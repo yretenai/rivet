@@ -25,28 +25,28 @@ public class SwapDataEntry : DDLObjectType, IDDLObjectType<SwapDataEntry> {
 		PlatinumSettings = ddl.GetObject<DenomSettings>(0x6d8549b4u);
 	}
 
-	[DDLRegistration(0x68808fc6u)]
+	[DDLRegistration(0xcadf612au)]
 	public BoltReplacementType BoltModelId { get; set; } = BoltReplacementType.Default;
 
-	[DDLRegistration(0x68808fc6u)]
+	[DDLRegistration(0x5fef7c3au)]
 	public RivetAssetId BaseModel { get; set; } = default;
 
-	[DDLRegistration(0x68808fc6u, description: "Randomly pick one of the set models - they will be treated as having the same value.")]
+	[DDLRegistration(0xd2a40a13u, description: "Randomly pick one of the set models - they will be treated as having the same value.")]
 	public List<RivetAssetId> RndOptModel { get; set; } = [];
 
-	[DDLRegistration(0x68808fc6u, description: "Whether we will force Y up when we replace the bolt and only rotate around the Y axis.")]
+	[DDLRegistration(0x4bdef177u, description: "Whether we will force Y up when we replace the bolt and only rotate around the Y axis.")]
 	public bool ForceYUpAndRot { get; set; } = false;
 
-	[DDLRegistration(0x68808fc6u)]
+	[DDLRegistration(0xe212882fu)]
 	public DenomSettings? BronzeSettings { get; set; } = default;
 
-	[DDLRegistration(0x68808fc6u)]
+	[DDLRegistration(0x37ce4eefu)]
 	public DenomSettings? SilverSettings { get; set; } = default;
 
-	[DDLRegistration(0x68808fc6u)]
+	[DDLRegistration(0x94f8303au)]
 	public DenomSettings? GoldSettings { get; set; } = default;
 
-	[DDLRegistration(0x68808fc6u)]
+	[DDLRegistration(0x6d8549b4u)]
 	public DenomSettings? PlatinumSettings { get; set; } = default;
 
 	public static SwapDataEntry Create(DDLObject ddl) => new(ddl);

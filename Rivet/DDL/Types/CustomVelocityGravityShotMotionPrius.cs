@@ -20,13 +20,13 @@ public class CustomVelocityGravityShotMotionPrius : BasicShotMotionPrius, IDDLOb
 		IgnoreBotsAndHeroes = ddl.GetValue<bool>(0x9b9012abu, IgnoreBotsAndHeroes);
 	}
 
-	[DDLRegistration(0x6df00108u, description: "Do no collisions for until the shot has been around for this amount of time")]
+	[DDLRegistration(0x97db6f40u, description: "Do no collisions for until the shot has been around for this amount of time")]
 	public float NoCollisionTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6df00108u, description: "If true we'll create a fake collision at our aim pos.")]
+	[DDLRegistration(0xbb45ce30u, description: "If true we'll create a fake collision at our aim pos.")]
 	public bool FakeCollisionAtAimPos { get; set; } = false;
 
-	[DDLRegistration(0x6df00108u)]
+	[DDLRegistration(0x9b9012abu)]
 	public bool IgnoreBotsAndHeroes { get; set; } = false;
 
 	public new static CustomVelocityGravityShotMotionPrius Create(DDLObject ddl) => new(ddl);

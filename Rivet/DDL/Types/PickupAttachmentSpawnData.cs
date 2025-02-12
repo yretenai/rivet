@@ -21,16 +21,16 @@ public class PickupAttachmentSpawnData : ActorSpawnData, IDDLObjectType<PickupAt
 		LocatorHash = ddl.GetValue<uint>(0xd78f4ef3u, LocatorHash);
 	}
 
-	[DDLRegistration(0x0569185cu, description: "Pickup to spawn")]
+	[DDLRegistration(0x6ddaecfau, description: "Pickup to spawn")]
 	public RivetAssetId PickupAsset { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0569185cu, description: "Actor to attach it to")]
+	[DDLRegistration(0x24c2eb7eu, description: "Actor to attach it to")]
 	public uint AttachActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0569185cu, description: "The PpickupAttachmentTracker component handle")]
+	[DDLRegistration(0x0d2c6c7au, description: "The PpickupAttachmentTracker component handle")]
 	public uint TrackerComponent { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0569185cu, description: "Where to attach it to")]
+	[DDLRegistration(0xd78f4ef3u, description: "Where to attach it to")]
 	public uint LocatorHash { get; set; } = 0x00000000;
 
 	public new static PickupAttachmentSpawnData Create(DDLObject ddl) => new(ddl);

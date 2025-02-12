@@ -19,10 +19,10 @@ public class VanityPerkWrenchDamage : VanityPerkBase, IDDLObjectType<VanityPerkW
 		WrenchDamageMultPiece = ddl.GetValue<float>(0xec730172u, WrenchDamageMultPiece);
 	}
 
-	[DDLRegistration(0xf55ce623u, description: "Total wrench damage = (1 + WrenchDamageMultSet) * wrench damage. Applied if player has the whole set.")]
+	[DDLRegistration(0xed6d2f5eu, description: "Total wrench damage = (1 + WrenchDamageMultSet) * wrench damage. Applied if player has the whole set.")]
 	public float WrenchDamageMultSet { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf55ce623u, description: "Total wrench damage = (1 + WrenchDamageMultPiece * piece_count) * wrench_damage. Applied if player has an incomplete set.")]
+	[DDLRegistration(0xec730172u, description: "Total wrench damage = (1 + WrenchDamageMultPiece * piece_count) * wrench_damage. Applied if player has an incomplete set.")]
 	public float WrenchDamageMultPiece { get; set; } = 0.00f;
 
 	public new static VanityPerkWrenchDamage Create(DDLObject ddl) => new(ddl);

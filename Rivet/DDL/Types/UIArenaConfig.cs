@@ -19,10 +19,10 @@ public class UIArenaConfig : ConfigBase, IDDLObjectType<UIArenaConfig> {
 		RewardIcons = ddl.GetObjects<UIArenaRewardIcon>(0x1a43ce21u);
 	}
 
-	[DDLRegistration(0x43d6cfb1u, "Cups")]
+	[DDLRegistration(0x8c4eb48au, "Cups")]
 	public List<UIArenaCup?> Cups { get; set; } = [];
 
-	[DDLRegistration(0x43d6cfb1u, "Reward Icons")]
+	[DDLRegistration(0x1a43ce21u, "Reward Icons")]
 	public List<UIArenaRewardIcon?> RewardIcons { get; set; } = [];
 
 	public new static UIArenaConfig Create(DDLObject ddl) => new(ddl);

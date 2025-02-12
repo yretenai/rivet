@@ -19,10 +19,10 @@ public class AutoUpdateStreamingSourceByProximityActionPrius : DDLObjectType, ID
 		StartActive = ddl.GetValue<bool>(0x3e035e82u, StartActive);
 	}
 
-	[DDLRegistration(0x49d5cea3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x49d5cea3u, description: "Start Active?")]
+	[DDLRegistration(0x3e035e82u, description: "Start Active?")]
 	public bool StartActive { get; set; } = false;
 
 	public static AutoUpdateStreamingSourceByProximityActionPrius Create(DDLObject ddl) => new(ddl);

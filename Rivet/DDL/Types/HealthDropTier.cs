@@ -19,10 +19,10 @@ public class HealthDropTier : DDLObjectType, IDDLObjectType<HealthDropTier> {
 		DropPercentage = ddl.GetValue<float>(0x5702cb8cu, DropPercentage);
 	}
 
-	[DDLRegistration(0xad23e50au)]
+	[DDLRegistration(0x5f9ba52bu)]
 	public float HealthPrecentage { get; set; } = 60.00f;
 
-	[DDLRegistration(0xad23e50au)]
+	[DDLRegistration(0x5702cb8cu)]
 	public float DropPercentage { get; set; } = 20.00f;
 
 	public static HealthDropTier Create(DDLObject ddl) => new(ddl);

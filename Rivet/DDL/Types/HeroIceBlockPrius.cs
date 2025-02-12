@@ -18,7 +18,7 @@ public class HeroIceBlockPrius : DDLObjectType, IDDLObjectType<HeroIceBlockPrius
 		Flags = ddl.GetBitset<FreezeFlags>(0x12568d7bu, FreezeFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0xb23897c4u)]
+	[DDLRegistration(0x12568d7bu)]
 	public FreezeFlags Flags { get; set; } = (FreezeFlags) 0x00000000;
 
 	public static HeroIceBlockPrius Create(DDLObject ddl) => new(ddl);

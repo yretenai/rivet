@@ -18,7 +18,7 @@ public class IntroActorDataPrius : IntroDataPrius, IDDLObjectType<IntroActorData
 		IntroActor = ddl.GetValue<RivetAssetId>(0x68362ec4u, IntroActor);
 	}
 
-	[DDLRegistration(0x47141fd0u)]
+	[DDLRegistration(0x68362ec4u)]
 	public RivetAssetId IntroActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static IntroActorDataPrius Create(DDLObject ddl) => new(ddl);

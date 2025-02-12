@@ -20,13 +20,13 @@ public class DimensionFXPrius : DDLObjectType, IDDLObjectType<DimensionFXPrius> 
 		MaterialConstantBlendTime = ddl.GetValue<float>(0x3bc0d913u, MaterialConstantBlendTime);
 	}
 
-	[DDLRegistration(0x73ffdd1bu, "Linked Dimension Portal", "Sync the FX for this actor to the FX state of the linked dimension portal. Leave blank if we are the dimension portal.")]
+	[DDLRegistration(0xcfd598d3u, "Linked Dimension Portal", "Sync the FX for this actor to the FX state of the linked dimension portal. Leave blank if we are the dimension portal.")]
 	public RivetAssetId LinkedDimensionPortal { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x73ffdd1bu, "Material Constant Name", "Name of the materialgraph constant to modify on this actor and all spawned FX. Should be some sort of T value from 0 to 1. (1 being fully blended to complete)")]
+	[DDLRegistration(0xc71d22abu, "Material Constant Name", "Name of the materialgraph constant to modify on this actor and all spawned FX. Should be some sort of T value from 0 to 1. (1 being fully blended to complete)")]
 	public string? MaterialConstantName { get; set; } = default;
 
-	[DDLRegistration(0x73ffdd1bu, "Material Constant Blend Time", "When script triggers the linked portal to be completed, blend the material constant to 1 over this time.")]
+	[DDLRegistration(0x3bc0d913u, "Material Constant Blend Time", "When script triggers the linked portal to be completed, blend the material constant to 1 over this time.")]
 	public float MaterialConstantBlendTime { get; set; } = 1.00f;
 
 	public static DimensionFXPrius Create(DDLObject ddl) => new(ddl);

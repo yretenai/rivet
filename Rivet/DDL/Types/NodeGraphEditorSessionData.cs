@@ -18,7 +18,7 @@ public class NodeGraphEditorSessionData : DDLObjectType, IDDLObjectType<NodeGrap
 		Selection = ddl.GetValues<RivetAssetId>(0x145893dbu);
 	}
 
-	[DDLRegistration(0xe76b0602u)]
+	[DDLRegistration(0x145893dbu)]
 	public List<RivetAssetId> Selection { get; set; } = [];
 
 	public static NodeGraphEditorSessionData Create(DDLObject ddl) => new(ddl);

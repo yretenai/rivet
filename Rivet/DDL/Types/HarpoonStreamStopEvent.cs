@@ -18,7 +18,7 @@ public class HarpoonStreamStopEvent : EventBase, IDDLObjectType<HarpoonStreamSto
 		StreamLength = ddl.GetValue<float>(0x000faaf3u, StreamLength);
 	}
 
-	[DDLRegistration(0xded1840du, "Stream Length")]
+	[DDLRegistration(0x000faaf3u, "Stream Length")]
 	public float StreamLength { get; set; } = 1.00f;
 
 	public new static HarpoonStreamStopEvent Create(DDLObject ddl) => new(ddl);

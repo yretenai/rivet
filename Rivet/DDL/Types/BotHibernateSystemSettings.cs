@@ -22,19 +22,19 @@ public class BotHibernateSystemSettings : DDLObjectType, IDDLObjectType<BotHiber
 		MaxCountDistantBots = ddl.GetValue<int>(0x7e897c5au, MaxCountDistantBots);
 	}
 
-	[DDLRegistration(0xe6d578f3u, description: "Enable system debug interface")]
+	[DDLRegistration(0x2d6588e3u, description: "Enable system debug interface")]
 	public bool DebugInterface { get; set; } = false;
 
-	[DDLRegistration(0xe6d578f3u, description: "Enable the logic that makes distant bots more performant.")]
+	[DDLRegistration(0xc7c54bc4u, description: "Enable the logic that makes distant bots more performant.")]
 	public bool EnableDistantBotPerf { get; set; } = true;
 
-	[DDLRegistration(0xe6d578f3u, description: "Distance to consider an enemy bot as far enough away to turn off some things (like physics).")]
+	[DDLRegistration(0x8f3ac731u, description: "Distance to consider an enemy bot as far enough away to turn off some things (like physics).")]
 	public float FarEnemyDistance { get; set; } = 220.00f;
 
-	[DDLRegistration(0xe6d578f3u, description: "Distance to consider an NPC bot as far enough away to turn off some things (like physics).")]
+	[DDLRegistration(0xb61bfc91u, description: "Distance to consider an NPC bot as far enough away to turn off some things (like physics).")]
 	public float FarNPCDistance { get; set; } = 100.00f;
 
-	[DDLRegistration(0xe6d578f3u, description: "Max number of distant bots to make more performant.")]
+	[DDLRegistration(0x7e897c5au, description: "Max number of distant bots to make more performant.")]
 	public int MaxCountDistantBots { get; set; } = 200;
 
 	public static BotHibernateSystemSettings Create(DDLObject ddl) => new(ddl);

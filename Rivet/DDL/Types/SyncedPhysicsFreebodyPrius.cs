@@ -22,19 +22,19 @@ public class SyncedPhysicsFreebodyPrius : DDLObjectType, IDDLObjectType<SyncedPh
 		AngularDamp = ddl.GetValue<float>(0xb504adffu, AngularDamp);
 	}
 
-	[DDLRegistration(0x359dc282u)]
+	[DDLRegistration(0x7411c715u)]
 	public DDLVector3? InitialLinearVel { get; set; } = default;
 
-	[DDLRegistration(0x359dc282u)]
+	[DDLRegistration(0x83c29fa6u)]
 	public DDLVector3? InitialAngularVel { get; set; } = default;
 
-	[DDLRegistration(0x359dc282u)]
+	[DDLRegistration(0x5bf7469fu)]
 	public float Gravity { get; set; } = 9.80f;
 
-	[DDLRegistration(0x359dc282u)]
+	[DDLRegistration(0x82c7517eu)]
 	public float LinearDamp { get; set; } = 0.00f;
 
-	[DDLRegistration(0x359dc282u)]
+	[DDLRegistration(0xb504adffu)]
 	public float AngularDamp { get; set; } = 0.10f;
 
 	public static SyncedPhysicsFreebodyPrius Create(DDLObject ddl) => new(ddl);

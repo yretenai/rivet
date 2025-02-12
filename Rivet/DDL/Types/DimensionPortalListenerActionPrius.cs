@@ -19,10 +19,10 @@ public class DimensionPortalListenerActionPrius : DDLObjectType, IDDLObjectType<
 		InitiallyListening = ddl.GetValue<bool>(0x51d42fd7u, InitiallyListening);
 	}
 
-	[DDLRegistration(0x9542cb3fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x9542cb3fu)]
+	[DDLRegistration(0x51d42fd7u)]
 	public bool InitiallyListening { get; set; } = true;
 
 	public static DimensionPortalListenerActionPrius Create(DDLObject ddl) => new(ddl);

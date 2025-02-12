@@ -18,7 +18,7 @@ public class BattleBrewEvent : EventBase, IDDLObjectType<BattleBrewEvent> {
 		BrewName = ddl.GetString(0xba84a8cf) ?? BrewName;
 	}
 
-	[DDLRegistration(0xf2a61ffcu)]
+	[DDLRegistration(0xba84a8cfu)]
 	public string? BrewName { get; set; } = default;
 
 	public new static BattleBrewEvent Create(DDLObject ddl) => new(ddl);

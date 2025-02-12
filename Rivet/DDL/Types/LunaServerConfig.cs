@@ -19,10 +19,10 @@ public class LunaServerConfig : DDLObjectType, IDDLObjectType<LunaServerConfig> 
 		SlowDbProfilingThreshold = ddl.GetValue<int>(0x5eee3accu, SlowDbProfilingThreshold);
 	}
 
-	[DDLRegistration(0x0853eac7u)]
+	[DDLRegistration(0xbe0fd27du)]
 	public xedfa7304 DbProfilingLevel { get; set; } = xedfa7304.None;
 
-	[DDLRegistration(0x0853eac7u)]
+	[DDLRegistration(0x5eee3accu)]
 	public int SlowDbProfilingThreshold { get; set; } = 100;
 
 	public static LunaServerConfig Create(DDLObject ddl) => new(ddl);

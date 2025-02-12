@@ -19,10 +19,10 @@ public class Cinematic2UserZoneDef : DDLObjectType, IDDLObjectType<Cinematic2Use
 		ZonePath = ddl.GetValue<RivetAssetId>(0x3643be77u, ZonePath);
 	}
 
-	[DDLRegistration(0x8bbb298du)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8bbb298du)]
+	[DDLRegistration(0x3643be77u)]
 	public RivetAssetId ZonePath { get; set; } = default;
 
 	public static Cinematic2UserZoneDef Create(DDLObject ddl) => new(ddl);

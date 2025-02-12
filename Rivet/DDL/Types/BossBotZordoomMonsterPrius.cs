@@ -21,16 +21,16 @@ public class BossBotZordoomMonsterPrius : BotPrius, IDDLObjectType<BossBotZordoo
 		ChaseMoveIntroAnim = ddl.GetString(0x4285deaf) ?? ChaseMoveIntroAnim;
 	}
 
-	[DDLRegistration(0x70fe8ef3u, description: "If the player is too close to the boss, the boss will use a special 'push' attack designed to knock the player forward.")]
+	[DDLRegistration(0xec11f7d8u, description: "If the player is too close to the boss, the boss will use a special 'push' attack designed to knock the player forward.")]
 	public float ChaseMeleeMinRange { get; set; } = 6.00f;
 
-	[DDLRegistration(0x70fe8ef3u, description: "If the player is too far in front of the boss, the boss will not make melee attacks.")]
+	[DDLRegistration(0x0a715839u, description: "If the player is too far in front of the boss, the boss will not make melee attacks.")]
 	public float ChaseMeleeMaxRange { get; set; } = 15.00f;
 
-	[DDLRegistration(0x70fe8ef3u, description: "Name of the move driver used while the boss is running after the hero.")]
+	[DDLRegistration(0x92a85251u, description: "Name of the move driver used while the boss is running after the hero.")]
 	public string? ChaseMoveAnim { get; set; } = "Chase_Move";
 
-	[DDLRegistration(0x70fe8ef3u, description: "Name of the move driver used while the boss is accelerating to chase speed.")]
+	[DDLRegistration(0x4285deafu, description: "Name of the move driver used while the boss is accelerating to chase speed.")]
 	public string? ChaseMoveIntroAnim { get; set; } = "Chase_Move_Intro";
 
 	public new static BossBotZordoomMonsterPrius Create(DDLObject ddl) => new(ddl);

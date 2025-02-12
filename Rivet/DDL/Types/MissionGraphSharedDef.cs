@@ -31,46 +31,46 @@ public class MissionGraphSharedDef : GameplayNodeGraphBaseDef, IDDLObjectType<Mi
 		OutputNodes = ddl.GetDictionary<RivetAssetId, OutputNodeBooleanDef>(0x0035a2e2, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeBooleanDef>(mapId));
 	}
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0xbd4cf165u)]
 	public Dictionary<RivetAssetId, OrMissionSystemNodeDef?> OrNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0xd150652du)]
 	public Dictionary<RivetAssetId, AndMissionSystemNodeDef?> AndNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0xacd738f6u)]
 	public Dictionary<RivetAssetId, InputCountMissionSystemNodeDef?> InputCountNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0xadd17eaeu)]
 	public Dictionary<RivetAssetId, NotMissionSystemNodeDef?> NotNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0xdaf1af95u)]
 	public Dictionary<RivetAssetId, GlobalSaveTableNodeDef?> GSTNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0x3ec54f32u)]
 	public Dictionary<RivetAssetId, XOrStartGroupNodeDef?> XorStartNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0x6f4c8cb7u)]
 	public Dictionary<RivetAssetId, XOrEndGroupNodeDef?> XorEndNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0xb8940154u)]
 	public Dictionary<RivetAssetId, DebugChainStartNodeDef?> DebugChainStartNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0xfb0a9de1u)]
 	public Dictionary<RivetAssetId, DebugChainEndNodeDef?> DebugChainEndNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0x6228b283u)]
 	public Dictionary<RivetAssetId, DemoBranchStartNodeDef?> DemoStartNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0x260039cfu)]
 	public Dictionary<RivetAssetId, DemoBranchEndNodeDef?> DemoEndNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0x524ff51cu)]
 	public Dictionary<RivetAssetId, DebugMarkerNodeDef?> DebugMarkerNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0x1982bfedu)]
 	public Dictionary<RivetAssetId, InputNodeBooleanDef?> InputNodes { get; set; } = [];
 
-	[DDLRegistration(0x4a3bfcfbu)]
+	[DDLRegistration(0x0035a2e2u)]
 	public Dictionary<RivetAssetId, OutputNodeBooleanDef?> OutputNodes { get; set; } = [];
 
 	public new static MissionGraphSharedDef Create(DDLObject ddl) => new(ddl);

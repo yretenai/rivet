@@ -19,10 +19,10 @@ public class ActorToggleLookGroupActionPrius : DDLObjectType, IDDLObjectType<Act
 		LookGroup = ddl.GetString(0xa286144c) ?? LookGroup;
 	}
 
-	[DDLRegistration(0x8cdb4d24u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x8cdb4d24u, description: "Name of the LookGroup to Enable/Disable.")]
+	[DDLRegistration(0xa286144cu, description: "Name of the LookGroup to Enable/Disable.")]
 	public string? LookGroup { get; set; } = "Default";
 
 	public static ActorToggleLookGroupActionPrius Create(DDLObject ddl) => new(ddl);

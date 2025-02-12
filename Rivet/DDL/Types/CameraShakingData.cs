@@ -26,31 +26,31 @@ public class CameraShakingData : DDLObjectType, IDDLObjectType<CameraShakingData
 		CurveDataZ = ddl.GetObject<CameraShakingAxisData>(0x0be5aedcu);
 	}
 
-	[DDLRegistration(0x263d624fu, "Fade In Duration", "Duration to fade in shaking")]
+	[DDLRegistration(0x8d166a59u, "Fade In Duration", "Duration to fade in shaking")]
 	public float FadeinDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x263d624fu, "Duration", "Duration to shake")]
+	[DDLRegistration(0x7c5e3db0u, "Duration", "Duration to shake")]
 	public float Duration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x263d624fu, "Fade Out Duration", "Duration to fade out shaking")]
+	[DDLRegistration(0xbf9d04f0u, "Fade Out Duration", "Duration to fade out shaking")]
 	public float FadeoutDuration { get; set; } = 2.00f;
 
-	[DDLRegistration(0x263d624fu, "Use Random Base Offset")]
+	[DDLRegistration(0x96400039u, "Use Random Base Offset")]
 	public bool UseRandomBaseOffset { get; set; } = true;
 
-	[DDLRegistration(0x263d624fu, "Override Viewport Blocking", "If set, shaking will occur even for viewports that are setup to block shaking")]
+	[DDLRegistration(0xc631bf22u, "Override Viewport Blocking", "If set, shaking will occur even for viewports that are setup to block shaking")]
 	public bool OverrideViewportBlocking { get; set; } = false;
 
-	[DDLRegistration(0x263d624fu, "Filter Types", "Filters for whether this camera type uses real time or game time")]
+	[DDLRegistration(0x5d653e06u, "Filter Types", "Filters for whether this camera type uses real time or game time")]
 	public x82d89fa6 FilterType { get; set; } = x82d89fa6.None;
 
-	[DDLRegistration(0x263d624fu, "Pitch")]
+	[DDLRegistration(0xe5ebcff0u, "Pitch")]
 	public CameraShakingAxisData? CurveDataX { get; set; } = default;
 
-	[DDLRegistration(0x263d624fu, "Yaw")]
+	[DDLRegistration(0x92ecff66u, "Yaw")]
 	public CameraShakingAxisData? CurveDataY { get; set; } = default;
 
-	[DDLRegistration(0x263d624fu, "Roll")]
+	[DDLRegistration(0x0be5aedcu, "Roll")]
 	public CameraShakingAxisData? CurveDataZ { get; set; } = default;
 
 	public static CameraShakingData Create(DDLObject ddl) => new(ddl);

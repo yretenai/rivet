@@ -19,10 +19,10 @@ public class SetHeroMaskActionPrius : DDLObjectType, IDDLObjectType<SetHeroMaskA
 		ForceMask = ddl.GetValue<bool>(0x181a3642u, ForceMask);
 	}
 
-	[DDLRegistration(0x228802cfu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x228802cfu)]
+	[DDLRegistration(0x181a3642u)]
 	public bool ForceMask { get; set; } = true;
 
 	public static SetHeroMaskActionPrius Create(DDLObject ddl) => new(ddl);

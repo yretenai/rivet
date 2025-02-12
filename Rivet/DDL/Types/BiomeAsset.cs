@@ -21,16 +21,16 @@ public class BiomeAsset : DDLObjectType, IDDLObjectType<BiomeAsset> {
 		HoudiniDebugColor = ddl.GetObject<DDLVector3>(0xb8df1137u);
 	}
 
-	[DDLRegistration(0xa3b15663u, "Model Asset Path", "This is the relative path to the asset that will be placed on the terrain.")]
+	[DDLRegistration(0xb8b499c3u, "Model Asset Path", "This is the relative path to the asset that will be placed on the terrain.")]
 	public RivetAssetId ModelAssetPath { get; set; } = default;
 
-	[DDLRegistration(0xa3b15663u, "Weight", "This is the proportion of how much this asset should be placed in comparison to other assets in this layer.")]
+	[DDLRegistration(0x39b51b26u, "Weight", "This is the proportion of how much this asset should be placed in comparison to other assets in this layer.")]
 	public float Weight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa3b15663u, "Houdini Debug Primitive", "The debug primitive to use in Houdini for this asset")]
+	[DDLRegistration(0x2ed71583u, "Houdini Debug Primitive", "The debug primitive to use in Houdini for this asset")]
 	public x8eddd608 HoudiniDebugPrimitive { get; set; } = x8eddd608.Cylinder;
 
-	[DDLRegistration(0xa3b15663u, "Houdini Debug Color", "The debug color to use in Houdini for this asset")]
+	[DDLRegistration(0xb8df1137u, "Houdini Debug Color", "The debug color to use in Houdini for this asset")]
 	public DDLVector3? HoudiniDebugColor { get; set; } = default;
 
 	public static BiomeAsset Create(DDLObject ddl) => new(ddl);

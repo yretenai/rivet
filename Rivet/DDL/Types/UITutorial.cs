@@ -23,22 +23,22 @@ public class UITutorial : DDLObjectType, IDDLObjectType<UITutorial> {
 		TutorialSteps = ddl.GetObjects<UITutorialStep>(0xe87930b5u);
 	}
 
-	[DDLRegistration(0x00d28f19u)]
+	[DDLRegistration(0x685b5c40u)]
 	public xb60d46be TutorialID { get; set; } = xb60d46be.VendorPurchase;
 
-	[DDLRegistration(0x00d28f19u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x00d28f19u)]
+	[DDLRegistration(0x918d9104u)]
 	public string? Mission { get; set; } = default;
 
-	[DDLRegistration(0x00d28f19u)]
+	[DDLRegistration(0x3b6b6e0du)]
 	public string? Objective { get; set; } = default;
 
-	[DDLRegistration(0x00d28f19u, description: "If true, this tutorial will run in challenge mode ONLY")]
+	[DDLRegistration(0x5ca1bef6u, description: "If true, this tutorial will run in challenge mode ONLY")]
 	public bool ChallengeMode { get; set; } = false;
 
-	[DDLRegistration(0x00d28f19u, "Tutorial Steps")]
+	[DDLRegistration(0xe87930b5u, "Tutorial Steps")]
 	public List<UITutorialStep?> TutorialSteps { get; set; } = [];
 
 	public static UITutorial Create(DDLObject ddl) => new(ddl);

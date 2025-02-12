@@ -19,10 +19,10 @@ public class TrapezoidCrossSection : CrossSectionChoice, IDDLObjectType<Trapezoi
 		Height = ddl.GetValue<float>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0x91fe6938u, description: "Width of Top and Bottom.")]
+	[DDLRegistration(0x954989eeu, description: "Width of Top and Bottom.")]
 	public DDLVector2? Width { get; set; } = default;
 
-	[DDLRegistration(0x91fe6938u, description: "Height of Shape")]
+	[DDLRegistration(0xcb35ab68u, description: "Height of Shape")]
 	public float Height { get; set; } = 0.50f;
 
 	public new static TrapezoidCrossSection Create(DDLObject ddl) => new(ddl);

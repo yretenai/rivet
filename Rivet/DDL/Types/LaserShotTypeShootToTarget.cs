@@ -28,37 +28,37 @@ public class LaserShotTypeShootToTarget : BotComboLaserShotType, IDDLObjectType<
 		AimMods = ddl.GetObjects<AimModWrapper>(0x1d7694a1u);
 	}
 
-	[DDLRegistration(0x0ce53abfu, description: "If we have a Targeting Anim, how long should we aim before shooting?")]
+	[DDLRegistration(0x7c4f3000u, description: "If we have a Targeting Anim, how long should we aim before shooting?")]
 	public float LaserTargetingTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0ce53abfu, description: "If we have Targeting Anim, how long after TargetingTime to warn before shooting?")]
+	[DDLRegistration(0x18024a7cu, description: "If we have Targeting Anim, how long after TargetingTime to warn before shooting?")]
 	public float LaserWarningTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x0ce53abfu, description: "How long to shoot the laser for")]
+	[DDLRegistration(0x58784031u, description: "How long to shoot the laser for")]
 	public float LaserShootTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0ce53abfu)]
+	[DDLRegistration(0xf9a907b2u)]
 	public bool StopOnDamage { get; set; } = false;
 
-	[DDLRegistration(0x0ce53abfu, description: "If true, the bot will try to tweak heading towards aim position rather than the target")]
+	[DDLRegistration(0x6b0f75c4u, description: "If true, the bot will try to tweak heading towards aim position rather than the target")]
 	public bool FaceTowardsAimPos { get; set; } = false;
 
-	[DDLRegistration(0x0ce53abfu, description: "If true, the laser fires at a position based on what AimingComponent wants. AimMods can be optionally added to modify the firing pattern")]
+	[DDLRegistration(0x2fc3f981u, description: "If true, the laser fires at a position based on what AimingComponent wants. AimMods can be optionally added to modify the firing pattern")]
 	public bool UseAimingComponent { get; set; } = false;
 
-	[DDLRegistration(0x0ce53abfu, description: "If true, AimMods kick in during Targeting stage instead of just the Shooting phase of this combo")]
+	[DDLRegistration(0x96807863u, description: "If true, AimMods kick in during Targeting stage instead of just the Shooting phase of this combo")]
 	public bool StartAimModOnTargeting { get; set; } = false;
 
-	[DDLRegistration(0x0ce53abfu, description: "If true, AimMods turn off after the Shooting phase of this combo")]
+	[DDLRegistration(0x7560b934u, description: "If true, AimMods turn off after the Shooting phase of this combo")]
 	public bool EndAimModsOnShootEnd { get; set; } = false;
 
-	[DDLRegistration(0x0ce53abfu, description: "If true, lock the aim at the target while the bot is firing.")]
+	[DDLRegistration(0x38687f13u, description: "If true, lock the aim at the target while the bot is firing.")]
 	public bool LockAimWhileFiring { get; set; } = false;
 
-	[DDLRegistration(0x0ce53abfu, description: "Mimics a shot every this amount of seconds once lasers start shooting by queuing WeaponBurstShotCountedEvent")]
+	[DDLRegistration(0xd7ef4376u, description: "Mimics a shot every this amount of seconds once lasers start shooting by queuing WeaponBurstShotCountedEvent")]
 	public float MimicShotRate { get; set; } = 0.25f;
 
-	[DDLRegistration(0x0ce53abfu)]
+	[DDLRegistration(0x1d7694a1u)]
 	public List<AimModWrapper?> AimMods { get; set; } = [];
 
 	public new static LaserShotTypeShootToTarget Create(DDLObject ddl) => new(ddl);

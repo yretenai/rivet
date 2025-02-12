@@ -21,16 +21,16 @@ public class SpawnShotEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObjectType
 		FiringPrius = ddl.GetObject<WeaponFiringBasePrius>(0x89263129u);
 	}
 
-	[DDLRegistration(0xaac5f9e9u)]
+	[DDLRegistration(0xcd2673a5u)]
 	public x684c6439 SpawnFromActor { get; set; } = x684c6439.ShotActor;
 
-	[DDLRegistration(0xaac5f9e9u)]
+	[DDLRegistration(0x6eb58da3u)]
 	public SpawnShotTargetingMode? TargetMode { get; set; } = default;
 
-	[DDLRegistration(0xaac5f9e9u)]
+	[DDLRegistration(0x14f21c90u)]
 	public WeaponAccuracyBasePrius? AccuracyPrius { get; set; } = default;
 
-	[DDLRegistration(0xaac5f9e9u)]
+	[DDLRegistration(0x89263129u)]
 	public WeaponFiringBasePrius? FiringPrius { get; set; } = default;
 
 	public new static SpawnShotEffectNodeDef Create(DDLObject ddl) => new(ddl);

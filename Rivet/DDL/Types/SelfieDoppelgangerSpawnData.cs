@@ -19,10 +19,10 @@ public class SelfieDoppelgangerSpawnData : ActorSpawnData, IDDLObjectType<Selfie
 		SpawnTransform = ddl.GetObject<DDLTransform>(0x1793260du);
 	}
 
-	[DDLRegistration(0x4aea3903u)]
+	[DDLRegistration(0xb54bdec6u)]
 	public RivetAssetId ActorAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4aea3903u)]
+	[DDLRegistration(0x1793260du)]
 	public DDLTransform? SpawnTransform { get; set; } = default;
 
 	public new static SelfieDoppelgangerSpawnData Create(DDLObject ddl) => new(ddl);

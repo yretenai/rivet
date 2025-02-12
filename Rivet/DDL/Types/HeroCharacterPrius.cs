@@ -24,25 +24,25 @@ public class HeroCharacterPrius : DDLObjectType, IDDLObjectType<HeroCharacterPri
 		OrientGravityToUp = ddl.GetValue<bool>(0x4498a5d4u, OrientGravityToUp);
 	}
 
-	[DDLRegistration(0x4bb5c57du)]
+	[DDLRegistration(0x1583d108u)]
 	public HeroTypes HeroType { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0x4bb5c57du)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x4bb5c57du)]
+	[DDLRegistration(0xfea894fau)]
 	public VoiceGame Voice { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0x4bb5c57du)]
+	[DDLRegistration(0xde8da163u)]
 	public HeroMoveAbilities? MoveAbilities { get; set; } = default;
 
-	[DDLRegistration(0x4bb5c57du)]
+	[DDLRegistration(0xdd693ad4u)]
 	public int StartElevation { get; set; } = -1;
 
-	[DDLRegistration(0x4bb5c57du)]
+	[DDLRegistration(0x202e71f5u)]
 	public bool FirstSpawn { get; set; } = true;
 
-	[DDLRegistration(0x4bb5c57du)]
+	[DDLRegistration(0x4498a5d4u)]
 	public bool OrientGravityToUp { get; set; } = false;
 
 	public static HeroCharacterPrius Create(DDLObject ddl) => new(ddl);

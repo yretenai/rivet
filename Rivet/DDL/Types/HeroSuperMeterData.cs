@@ -19,10 +19,10 @@ public class HeroSuperMeterData : DDLObjectType, IDDLObjectType<HeroSuperMeterDa
 		TotalSize = ddl.GetValue<float>(0x318b4dafu, TotalSize);
 	}
 
-	[DDLRegistration(0xad6d72f0u, "Num Segments", "How many segments is the meter broken into.")]
+	[DDLRegistration(0xe32f1330u, "Num Segments", "How many segments is the meter broken into.")]
 	public float NumSegments { get; set; } = 3.00f;
 
-	[DDLRegistration(0xad6d72f0u, "Total Size", "What is the total capacity of the meter.")]
+	[DDLRegistration(0x318b4dafu, "Total Size", "What is the total capacity of the meter.")]
 	public float TotalSize { get; set; } = 100.00f;
 
 	public static HeroSuperMeterData Create(DDLObject ddl) => new(ddl);

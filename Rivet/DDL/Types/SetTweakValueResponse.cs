@@ -18,7 +18,7 @@ public class SetTweakValueResponse : DDLObjectType, IDDLObjectType<SetTweakValue
 		Error = ddl.GetString(0x448e70b0) ?? Error;
 	}
 
-	[DDLRegistration(0x5aabd338u)]
+	[DDLRegistration(0x448e70b0u)]
 	public string? Error { get; set; } = default;
 
 	public static SetTweakValueResponse Create(DDLObject ddl) => new(ddl);

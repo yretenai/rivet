@@ -21,16 +21,16 @@ public class RCSRevisionOptions : DDLObjectType, IDDLObjectType<RCSRevisionOptio
 		Label = ddl.GetString(0x17f49c29) ?? Label;
 	}
 
-	[DDLRegistration(0xeb4067bbu)]
+	[DDLRegistration(0x9762a8bcu)]
 	public x8f7062e6 Revision { get; set; } = x8f7062e6.Latest;
 
-	[DDLRegistration(0xeb4067bbu)]
+	[DDLRegistration(0x9a0ef7cau)]
 	public RCSDate? Date { get; set; } = default;
 
-	[DDLRegistration(0xeb4067bbu)]
+	[DDLRegistration(0x03b0ddc6u)]
 	public uint Changelist { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xeb4067bbu)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = "";
 
 	public static RCSRevisionOptions Create(DDLObject ddl) => new(ddl);

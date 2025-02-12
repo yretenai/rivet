@@ -25,28 +25,28 @@ public class LevelEconomyDataConfig : ConfigBase, IDDLObjectType<LevelEconomyDat
 		ChallengeRaritaniumMultiplier = ddl.GetValue<float>(0x53c44722u, ChallengeRaritaniumMultiplier);
 	}
 
-	[DDLRegistration(0x6611a854u, "Bolt Multiplier", "Conversion rate from relative value to Bolts for this level")]
+	[DDLRegistration(0xac3d0e89u, "Bolt Multiplier", "Conversion rate from relative value to Bolts for this level")]
 	public float BoltMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6611a854u, "Hero XP Multiplier", "Conversion rate from relative value to Hero XP for this level")]
+	[DDLRegistration(0xfe5e129du, "Hero XP Multiplier", "Conversion rate from relative value to Hero XP for this level")]
 	public float HeroXPMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6611a854u, "Wpn XP Multiplier", "Conversion rate from relative value to Wpn XP for this level")]
+	[DDLRegistration(0x1d9b505cu, "Wpn XP Multiplier", "Conversion rate from relative value to Wpn XP for this level")]
 	public float WpnXPMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6611a854u, "Raritanium Multiplier", "Conversion rate from relative value to Raritanium for this level")]
+	[DDLRegistration(0x5e9452ccu, "Raritanium Multiplier", "Conversion rate from relative value to Raritanium for this level")]
 	public float RaritaniumMultiplier { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6611a854u, "Challenge Bolt Multiplier", "Conversion rate from relative value to Bolts for this level in challenge mode")]
+	[DDLRegistration(0x28cb98feu, "Challenge Bolt Multiplier", "Conversion rate from relative value to Bolts for this level in challenge mode")]
 	public float ChallengeBoltMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6611a854u, "Challenge Hero XP Multiplier", "Conversion rate from relative value to Hero XP for this level in challenge mode")]
+	[DDLRegistration(0x874c4f2bu, "Challenge Hero XP Multiplier", "Conversion rate from relative value to Hero XP for this level in challenge mode")]
 	public float ChallengeHeroXPMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6611a854u, "Challenge Wpn XP Multiplier", "Conversion rate from relative value to Wpn XP for this level in challenge mode")]
+	[DDLRegistration(0xd37e4255u, "Challenge Wpn XP Multiplier", "Conversion rate from relative value to Wpn XP for this level in challenge mode")]
 	public float ChallengeWpnXPMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6611a854u, "Challenge Raritanium Multiplier", "Conversion rate from relative value to Raritanium for this level in challenge mode")]
+	[DDLRegistration(0x53c44722u, "Challenge Raritanium Multiplier", "Conversion rate from relative value to Raritanium for this level in challenge mode")]
 	public float ChallengeRaritaniumMultiplier { get; set; } = 0.00f;
 
 	public new static LevelEconomyDataConfig Create(DDLObject ddl) => new(ddl);

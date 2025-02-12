@@ -25,28 +25,28 @@ public class SkinItemColor : DDLObjectType, IDDLObjectType<SkinItemColor> {
 		MaterialOverrideList = ddl.GetObjects<SkinItemMaterialOverride>(0xeb47267au);
 	}
 
-	[DDLRegistration(0xdc3e2525u, "Color Name", "Color name string")]
+	[DDLRegistration(0xe122a241u, "Color Name", "Color name string")]
 	public string? ColorName { get; set; } = default;
 
-	[DDLRegistration(0xdc3e2525u, "Name LocTag", "Localization tag for name")]
+	[DDLRegistration(0xa0041b54u, "Name LocTag", "Localization tag for name")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0xdc3e2525u, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0xdc3e2525u, "Red", "Red value in range 0 to 255")]
+	[DDLRegistration(0xbee6a893u, "Red", "Red value in range 0 to 255")]
 	public byte R { get; set; } = 0x00;
 
-	[DDLRegistration(0xdc3e2525u, "Green", "Green value in range 0 to 255")]
+	[DDLRegistration(0xd33b4c78u, "Green", "Green value in range 0 to 255")]
 	public byte G { get; set; } = 0x00;
 
-	[DDLRegistration(0xdc3e2525u, "Blue", "Blue value in range 0 to 255")]
+	[DDLRegistration(0xa351b8f7u, "Blue", "Blue value in range 0 to 255")]
 	public byte B { get; set; } = 0x00;
 
-	[DDLRegistration(0xdc3e2525u, "Texture Override List", "Texture override parameters")]
+	[DDLRegistration(0x31be016cu, "Texture Override List", "Texture override parameters")]
 	public List<SkinItemTextureOverride?> TextureOverrideList { get; set; } = [];
 
-	[DDLRegistration(0xdc3e2525u, "Material Override List", "Material override parameters")]
+	[DDLRegistration(0xeb47267au, "Material Override List", "Material override parameters")]
 	public List<SkinItemMaterialOverride?> MaterialOverrideList { get; set; } = [];
 
 	public static SkinItemColor Create(DDLObject ddl) => new(ddl);

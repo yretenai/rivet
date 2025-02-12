@@ -20,13 +20,13 @@ public class TargetingLocationWeightData : DDLObjectType, IDDLObjectType<Targeti
 		Weight = ddl.GetValue<float>(0x39b51b26u, Weight);
 	}
 
-	[DDLRegistration(0xf6b5bd70u, "Body Part")]
+	[DDLRegistration(0xdfcd36c5u, "Body Part")]
 	public x457f748b BodyPart { get; set; } = x457f748b.Unknown;
 
-	[DDLRegistration(0xf6b5bd70u, "Body Part Name", "Name of the body part, used if BodyPart is kLocationNamed")]
+	[DDLRegistration(0xd618ef74u, "Body Part Name", "Name of the body part, used if BodyPart is kLocationNamed")]
 	public string? BodyPartName { get; set; } = "";
 
-	[DDLRegistration(0xf6b5bd70u, "Weight", "Weight value when choosing a random location")]
+	[DDLRegistration(0x39b51b26u, "Weight", "Weight value when choosing a random location")]
 	public float Weight { get; set; } = 1.00f;
 
 	public static TargetingLocationWeightData Create(DDLObject ddl) => new(ddl);

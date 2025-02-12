@@ -20,13 +20,13 @@ public class ShotMotionLightningRodPrius : BasicShotMotionPrius, IDDLObjectType<
 		FlightSpeedAccel = ddl.GetValue<float>(0xdb79bfaau, FlightSpeedAccel);
 	}
 
-	[DDLRegistration(0x6671f8a3u, "No Homing Time")]
+	[DDLRegistration(0x166dbb6au, "No Homing Time")]
 	public float NoHomingTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6671f8a3u, "Flight Speed Max")]
+	[DDLRegistration(0x10cab3d3u, "Flight Speed Max")]
 	public float FlightSpeedMax { get; set; } = 40.00f;
 
-	[DDLRegistration(0x6671f8a3u, "Flight Speed Accel")]
+	[DDLRegistration(0xdb79bfaau, "Flight Speed Accel")]
 	public float FlightSpeedAccel { get; set; } = 40.00f;
 
 	public new static ShotMotionLightningRodPrius Create(DDLObject ddl) => new(ddl);

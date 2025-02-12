@@ -75,178 +75,178 @@ public class StandardNodesDef : GameplayNodeGraphBaseDef, IDDLObjectType<Standar
 		UIntOutNodes = ddl.GetDictionary<RivetAssetId, UIntOutNodeDef>(0x0f563484, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<UIntOutNodeDef>(mapId));
 	}
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xc026bc83u)]
 	public Dictionary<RivetAssetId, AssetReferenceNodeDef?> AssetReferenceNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xb647a649u)]
 	public Dictionary<RivetAssetId, ActorValidNodeDef?> ActorValidNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xd71a6599u)]
 	public Dictionary<RivetAssetId, ActorPositionNodeDef?> ActorPositionNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xc1ae98e0u)]
 	public Dictionary<RivetAssetId, RandomFloatGeneratorNodeDef?> RandomFloatNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xd75337c3u)]
 	public Dictionary<RivetAssetId, CompareFloatsNodeDef?> CompareFloatsNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xbb63fc9du)]
 	public Dictionary<RivetAssetId, CompareFloatsInlineNodeDef?> CompareFloatsInlineNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x491f97b3u)]
 	public Dictionary<RivetAssetId, MinFloatNodeDef?> MinFloatNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x0950efc5u)]
 	public Dictionary<RivetAssetId, MaxFloatNodeDef?> MaxFloatNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x3d7dbc19u)]
 	public Dictionary<RivetAssetId, ClampFloatNodeDef?> ClampFloatNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x92dd8e33u)]
 	public Dictionary<RivetAssetId, AddFloatsNodeDef?> AddFloatsNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xd97e5a96u)]
 	public Dictionary<RivetAssetId, SubtractFloatsNodeDef?> SubtractFloatsNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xc791bfecu)]
 	public Dictionary<RivetAssetId, MultiplyFloatsNodeDef?> MultiplyFloatsNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xf97b7db4u)]
 	public Dictionary<RivetAssetId, DivideFloatsNodeDef?> DivideFloatsNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x3037d96eu)]
 	public Dictionary<RivetAssetId, CompareIntsNodeDef?> CompareIntsNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x91ec2162u)]
 	public Dictionary<RivetAssetId, CompareIntsInlineNodeDef?> CompareIntsInlineNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xd23d9e7eu)]
 	public Dictionary<RivetAssetId, RandomIntGeneratorNodeDef?> RandomIntGeneratorNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x64545fd9u)]
 	public Dictionary<RivetAssetId, FloatsToVecNodeDef?> FloatsToVecNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x9f5226b5u)]
 	public Dictionary<RivetAssetId, NormalizeFloatNodeDef?> NormalizeFloatNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xd6461adcu)]
 	public Dictionary<RivetAssetId, VecToFloatsNodeDef?> VecToFloatsNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x862cb55cu)]
 	public Dictionary<RivetAssetId, VecDistanceNodeDef?> VecDistanceNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xf4c8c438u)]
 	public Dictionary<RivetAssetId, AddVectorsNodeDef?> AddVectorsNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x523f308bu)]
 	public Dictionary<RivetAssetId, SubtractVectorsNodeDef?> SubtractVectorsNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x38bbb5a5u)]
 	public Dictionary<RivetAssetId, NegateVectorNodeDef?> NegateVectorNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x6ba4b8f1u)]
 	public Dictionary<RivetAssetId, MultiplyVectorByScalarNodeDef?> MultiplyVectorByScalarNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xd28f474eu)]
 	public Dictionary<RivetAssetId, NormalizeVectorNodeDef?> NormalizeVectorNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x026fed37u)]
 	public Dictionary<RivetAssetId, VectorLengthNodeDef?> VectorLengthNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x9b1776f8u)]
 	public Dictionary<RivetAssetId, RandomBoolGeneratorNodeDef?> RandomBoolGeneratorNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xa81b2bf9u)]
 	public Dictionary<RivetAssetId, OrSignalNodeDef?> OrSignalNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xbd4cf165u)]
 	public Dictionary<RivetAssetId, OrNodeDef?> OrNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xd150652du)]
 	public Dictionary<RivetAssetId, AndNodeDef?> AndNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x96d6885au)]
 	public Dictionary<RivetAssetId, CheckBoolNodeDef?> CheckBoolNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x2b6ab791u)]
 	public Dictionary<RivetAssetId, SubstringNodeDef?> SubstringNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x9f0571b8u)]
 	public Dictionary<RivetAssetId, CompareStringHashesNodeDef?> CompareStringHashesNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x0817104bu)]
 	public Dictionary<RivetAssetId, InputNodeActorDef?> InputNodeActors { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x89ba1535u)]
 	public Dictionary<RivetAssetId, InputNodeBooleanDef?> InputNodeBooleans { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x4c9eed30u)]
 	public Dictionary<RivetAssetId, InputNodeFloatDef?> InputNodeFloats { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x3516988fu)]
 	public Dictionary<RivetAssetId, InputNodeSignalDef?> InputNodeSignals { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x57213777u)]
 	public Dictionary<RivetAssetId, InputNodeStringDef?> InputNodeStrings { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xf5e6e54bu)]
 	public Dictionary<RivetAssetId, InputNodeVec3Def?> InputNodeVec3s { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xce5c989eu)]
 	public Dictionary<RivetAssetId, InputNodeStringHashDef?> InputNodeStringHashes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xef42c58cu)]
 	public Dictionary<RivetAssetId, InputNodeUIntDef?> InputNodeUInts { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x9e51710au)]
 	public Dictionary<RivetAssetId, InputNodeIntDef?> InputNodeInts { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x73254955u)]
 	public Dictionary<RivetAssetId, OutputNodeActorDef?> OutputNodeActors { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x4f4cb888u)]
 	public Dictionary<RivetAssetId, OutputNodeBooleanDef?> OutputNodeBooleans { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x37acb42eu)]
 	public Dictionary<RivetAssetId, OutputNodeFloatDef?> OutputNodeFloats { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xcf6297b5u)]
 	public Dictionary<RivetAssetId, OutputNodeSignalDef?> OutputNodeSignals { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xad55384du)]
 	public Dictionary<RivetAssetId, OutputNodeStringDef?> OutputNodeStrings { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x76945581u)]
 	public Dictionary<RivetAssetId, OutputNodeVec3Def?> OutputNodeVec3s { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xc005e154u)]
 	public Dictionary<RivetAssetId, OutputNodeStringHashDef?> OutputNodeStringHashes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x6c307546u)]
 	public Dictionary<RivetAssetId, OutputNodeUIntDef?> OutputNodeUInts { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x3f647c1du)]
 	public Dictionary<RivetAssetId, OutputNodeIntDef?> OutputNodeInts { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xaf9580d8u)]
 	public Dictionary<RivetAssetId, BooleanOutNodeDef?> BooleanOutNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x2785a28bu)]
 	public Dictionary<RivetAssetId, FloatOutNodeDef?> FloatOutNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xbfe4da68u)]
 	public Dictionary<RivetAssetId, StringOutNodeDef?> StringOutNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0xbb431e1au)]
 	public Dictionary<RivetAssetId, Vec3OutNodeDef?> Vec3OutNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x32392a81u)]
 	public Dictionary<RivetAssetId, StringHashOutNodeDef?> StringHashOutNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x6b23536fu)]
 	public Dictionary<RivetAssetId, IntOutNodeDef?> IntOutNodes { get; set; } = [];
 
-	[DDLRegistration(0x4adb03c1u)]
+	[DDLRegistration(0x0f563484u)]
 	public Dictionary<RivetAssetId, UIntOutNodeDef?> UIntOutNodes { get; set; } = [];
 
 	public new static StandardNodesDef Create(DDLObject ddl) => new(ddl);

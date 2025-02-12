@@ -19,10 +19,10 @@ public class BreakableBlockSetData : DDLObjectType, IDDLObjectType<BreakableBloc
 		CollectionAssetPath = ddl.GetValue<RivetAssetId>(0x46cb08e3u, CollectionAssetPath);
 	}
 
-	[DDLRegistration(0x2d974e95u)]
+	[DDLRegistration(0xf095db1fu)]
 	public List<BreakableBlockData?> Blocks { get; set; } = [];
 
-	[DDLRegistration(0x2d974e95u)]
+	[DDLRegistration(0x46cb08e3u)]
 	public RivetAssetId CollectionAssetPath { get; set; } = default;
 
 	public static BreakableBlockSetData Create(DDLObject ddl) => new(ddl);

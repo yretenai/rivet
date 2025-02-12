@@ -32,49 +32,49 @@ public class SessionData : DDLObjectType, IDDLObjectType<SessionData> {
 		EngineControlData = ddl.GetObject<EngineControlSessionData>(0x80ff637cu);
 	}
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0xd280fe14u)]
 	public SessionPersistentData? PersistentData { get; set; } = default;
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0x11685cf3u)]
 	public SessionTransientData? TransientData { get; set; } = default;
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0xa2979036u)]
 	public SessionWindowSize? WindowSize { get; set; } = default;
 
-	[DDLRegistration(0xb0af8c46u, description: "Files open by this session, indexed by the asset type string (see AssetExtensions enum).")]
+	[DDLRegistration(0x64ceea1bu, description: "Files open by this session, indexed by the asset type string (see AssetExtensions enum).")]
 	public Dictionary<string, SessionFilesByType?> OpenAssets { get; set; } = [];
 
-	[DDLRegistration(0xb0af8c46u, description: "Files that are in the process of being open by this session, indexed by asset type string (see AssetExtensions enum).")]
+	[DDLRegistration(0x09df25f7u, description: "Files that are in the process of being open by this session, indexed by asset type string (see AssetExtensions enum).")]
 	public Dictionary<string, SessionFilesByType?> RequestOpen { get; set; } = [];
 
-	[DDLRegistration(0xb0af8c46u, description: "File errors that should be reported in the UI, and optionally, acted on. Indexed by AssetId.")]
+	[DDLRegistration(0xa942c52bu, description: "File errors that should be reported in the UI, and optionally, acted on. Indexed by AssetId.")]
 	public Dictionary<RivetAssetId, SessionAssetError?> AssetErrors { get; set; } = [];
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0x90e4c61bu)]
 	public ZoneSessionData? ZoneData { get; set; } = default;
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0x9b82e2e1u)]
 	public NodeGraphSessionData? ScriptData { get; set; } = default;
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0x30945dd4u)]
 	public MaterialGraphSessionData? MaterialGraphData { get; set; } = default;
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0x5facdea2u)]
 	public NodeGraphEditorSessionData? NodeGraphEditorData { get; set; } = default;
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0x6f9e2818u)]
 	public PerformanceSessionData? PerformanceData { get; set; } = default;
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0x7705d4b4u)]
 	public CinematicSessionData? CinematicData { get; set; } = default;
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0x3ae8ee63u)]
 	public Cinematic2SessionData? Cinematic2Data { get; set; } = default;
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0x69d2b714u)]
 	public AnimSetSessionData? AnimSetData { get; set; } = default;
 
-	[DDLRegistration(0xb0af8c46u)]
+	[DDLRegistration(0x80ff637cu)]
 	public EngineControlSessionData? EngineControlData { get; set; } = default;
 
 	public static SessionData Create(DDLObject ddl) => new(ddl);

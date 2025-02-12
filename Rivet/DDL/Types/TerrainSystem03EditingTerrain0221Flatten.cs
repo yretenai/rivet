@@ -24,25 +24,25 @@ public class TerrainSystem03EditingTerrain0221Flatten : DDLObjectType, IDDLObjec
 		Line06 = ddl.GetString(0xe61b1a7e) ?? Line06;
 	}
 
-	[DDLRegistration(0x085fb26bu, description: "This brush flattens the target.  The initial position where the mouse is clicked")]
+	[DDLRegistration(0x0f78bf4bu, description: "This brush flattens the target.  The initial position where the mouse is clicked")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x085fb26bu, description: "indicates the flatten value.  For example, when flattening a heightfield, the")]
+	[DDLRegistration(0x787f8fddu, description: "indicates the flatten value.  For example, when flattening a heightfield, the")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x085fb26bu, description: "initial point clicked indicates the height at which the heightfield will be")]
+	[DDLRegistration(0xe176de67u, description: "initial point clicked indicates the height at which the heightfield will be")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x085fb26bu, description: "painted until the mouse is released.  When flattening a splatmask, the color")]
+	[DDLRegistration(0x9671eef1u, description: "painted until the mouse is released.  When flattening a splatmask, the color")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x085fb26bu, description: "clicked will be the color that is applied until the mouse is released.")]
+	[DDLRegistration(0x08157b52u, description: "clicked will be the color that is applied until the mouse is released.")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x085fb26bu, description: "<br><br>")]
+	[DDLRegistration(0x7f124bc4u, description: "<br><br>")]
 	public string? Line05 { get; set; } = default;
 
-	[DDLRegistration(0x085fb26bu, description: "There is no parameter associated with this brush.")]
+	[DDLRegistration(0xe61b1a7eu, description: "There is no parameter associated with this brush.")]
 	public string? Line06 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0221Flatten Create(DDLObject ddl) => new(ddl);

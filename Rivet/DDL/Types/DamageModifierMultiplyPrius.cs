@@ -26,31 +26,31 @@ public class DamageModifierMultiplyPrius : DamageModifierIncomingPrius, IDDLObje
 		ModifiedTag = ddl.GetValue<uint>(0x75529898u, ModifiedTag);
 	}
 
-	[DDLRegistration(0xcfede227u, "Multiplier")]
+	[DDLRegistration(0x7facf762u, "Multiplier")]
 	public float Multiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcfede227u, "Status Multiplier")]
+	[DDLRegistration(0x6fc67017u, "Status Multiplier")]
 	public float StatusMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcfede227u, "Lifetime")]
+	[DDLRegistration(0xc7e68df8u, "Lifetime")]
 	public float Lifetime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xcfede227u, "Apply Heal")]
+	[DDLRegistration(0xcc7e1cedu, "Apply Heal")]
 	public bool ApplyHeal { get; set; } = false;
 
-	[DDLRegistration(0xcfede227u, "Affect Knockdown")]
+	[DDLRegistration(0xaae98b21u, "Affect Knockdown")]
 	public bool ApplyToKnockdown { get; set; } = false;
 
-	[DDLRegistration(0xcfede227u, "Damage Filters Are Exclude", "If checked, the below damage filters are excluded instead of included")]
+	[DDLRegistration(0xef96e64du, "Damage Filters Are Exclude", "If checked, the below damage filters are excluded instead of included")]
 	public bool DamageFiltersAreExclude { get; set; } = false;
 
-	[DDLRegistration(0xcfede227u, "Damage Type Filter")]
+	[DDLRegistration(0xa75ecb2fu, "Damage Type Filter")]
 	public List<DamageTypesGame> DamageFilter { get; set; } = [];
 
-	[DDLRegistration(0xcfede227u)]
+	[DDLRegistration(0x1b32101du)]
 	public uint AllegianceFilter { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcfede227u)]
+	[DDLRegistration(0x75529898u)]
 	public uint ModifiedTag { get; set; } = 0x00000000;
 
 	public new static DamageModifierMultiplyPrius Create(DDLObject ddl) => new(ddl);

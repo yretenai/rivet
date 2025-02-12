@@ -18,7 +18,7 @@ public class WeaponAmmoDataListItem : DDLObjectType, IDDLObjectType<WeaponAmmoDa
 		Ammo = ddl.GetObject<BaseComponentAmmoPrius>(0xdf1fbe9au);
 	}
 
-	[DDLRegistration(0xb7b44440u)]
+	[DDLRegistration(0xdf1fbe9au)]
 	public BaseComponentAmmoPrius? Ammo { get; set; } = default;
 
 	public static WeaponAmmoDataListItem Create(DDLObject ddl) => new(ddl);

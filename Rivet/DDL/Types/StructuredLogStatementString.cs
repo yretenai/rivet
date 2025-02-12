@@ -21,16 +21,16 @@ public class StructuredLogStatementString : StructuredLogStatement, IDDLObjectTy
 		Text4 = ddl.GetString(0xefde0b4d) ?? Text4;
 	}
 
-	[DDLRegistration(0x84525326u)]
+	[DDLRegistration(0x9fb4ffc2u)]
 	public string? Text1 { get; set; } = default;
 
-	[DDLRegistration(0x84525326u)]
+	[DDLRegistration(0x06bdae78u)]
 	public string? Text2 { get; set; } = default;
 
-	[DDLRegistration(0x84525326u)]
+	[DDLRegistration(0x71ba9eeeu)]
 	public string? Text3 { get; set; } = default;
 
-	[DDLRegistration(0x84525326u)]
+	[DDLRegistration(0xefde0b4du)]
 	public string? Text4 { get; set; } = default;
 
 	public new static StructuredLogStatementString Create(DDLObject ddl) => new(ddl);

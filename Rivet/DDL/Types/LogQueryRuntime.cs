@@ -19,10 +19,10 @@ public class LogQueryRuntime : DDLObjectType, IDDLObjectType<LogQueryRuntime> {
 		Data = ddl.GetString(0x9d6333d3) ?? Data;
 	}
 
-	[DDLRegistration(0x8f627423u, description: "Operation we want to perform")]
+	[DDLRegistration(0x9b7c3961u, description: "Operation we want to perform")]
 	public xc61b70c3 Operation { get; set; } = xc61b70c3.QueryLoggers;
 
-	[DDLRegistration(0x8f627423u, description: "any data passed from the page to the query")]
+	[DDLRegistration(0x9d6333d3u, description: "any data passed from the page to the query")]
 	public string? Data { get; set; } = default;
 
 	public static LogQueryRuntime Create(DDLObject ddl) => new(ddl);

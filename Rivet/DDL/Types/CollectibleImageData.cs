@@ -20,13 +20,13 @@ public class CollectibleImageData : DDLObjectType, IDDLObjectType<CollectibleIma
 		Label = ddl.GetString(0x17f49c29) ?? Label;
 	}
 
-	[DDLRegistration(0x22115bceu, description: "HUDCollectibleMessageType value.")]
+	[DDLRegistration(0xbc4e9799u, description: "HUDCollectibleMessageType value.")]
 	public HUDCollectibleMessageType Type { get; set; } = HUDCollectibleMessageType.GoldBolt;
 
-	[DDLRegistration(0x22115bceu, description: "Texture to display.")]
+	[DDLRegistration(0x838c6e4au, description: "Texture to display.")]
 	public RivetAssetId Texture { get; set; } = "";
 
-	[DDLRegistration(0x22115bceu, description: "Player-facing name.")]
+	[DDLRegistration(0x17f49c29u, description: "Player-facing name.")]
 	public string? Label { get; set; } = default;
 
 	public static CollectibleImageData Create(DDLObject ddl) => new(ddl);

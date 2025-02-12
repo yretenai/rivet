@@ -19,10 +19,10 @@ public class SetObjToWorldMatrixEngineCommand : DDLObjectType, IDDLObjectType<Se
 		Matrix = ddl.GetObject<DDLMatrix4>(0xc64b0fa8u);
 	}
 
-	[DDLRegistration(0x9e8a1431u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9e8a1431u)]
+	[DDLRegistration(0xc64b0fa8u)]
 	public DDLMatrix4? Matrix { get; set; } = default;
 
 	public static SetObjToWorldMatrixEngineCommand Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class IncinerateEffectPrius : DDLObjectType, IDDLObjectType<IncinerateEff
 		IncinerateConfig = ddl.GetValue<RivetAssetId>(0x552a26f1u, IncinerateConfig);
 	}
 
-	[DDLRegistration(0x27b97267u, description: "Config that controls how the dissolve happens")]
+	[DDLRegistration(0x552a26f1u, description: "Config that controls how the dissolve happens")]
 	public RivetAssetId IncinerateConfig { get; set; } = default;
 
 	public static IncinerateEffectPrius Create(DDLObject ddl) => new(ddl);

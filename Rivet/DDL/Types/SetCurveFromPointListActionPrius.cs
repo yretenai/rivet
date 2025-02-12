@@ -19,10 +19,10 @@ public class SetCurveFromPointListActionPrius : DDLObjectType, IDDLObjectType<Se
 		Type = ddl.GetEnum<SplineTypes>(0xbc4e9799u, SplineTypesValues.Lookup);
 	}
 
-	[DDLRegistration(0x45070997u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x45070997u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public SplineTypes Type { get; set; } = SplineTypes.Linear;
 
 	public static SetCurveFromPointListActionPrius Create(DDLObject ddl) => new(ddl);

@@ -29,40 +29,40 @@ public class AnimDriverGridNodeDef : DDLObjectType, IDDLObjectType<AnimDriverGri
 		Connections = ddl.GetObjects<AnimDriverConnectionDef>(0x322aadceu);
 	}
 
-	[DDLRegistration(0xd7fbe76bu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xd7fbe76bu)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0xd7fbe76bu)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd7fbe76bu)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd7fbe76bu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x3234dd4a Type { get; set; } = x3234dd4a.GridNodeTypeDefault;
 
-	[DDLRegistration(0xd7fbe76bu)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd7fbe76bu)]
+	[DDLRegistration(0x2af3a11cu)]
 	public uint CountX { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd7fbe76bu)]
+	[DDLRegistration(0x5df4918au)]
 	public uint CountY { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd7fbe76bu)]
+	[DDLRegistration(0xd26c95adu)]
 	public DDLVector2? GridMin { get; set; } = default;
 
-	[DDLRegistration(0xd7fbe76bu)]
+	[DDLRegistration(0xee61aaf4u)]
 	public DDLVector2? GridMax { get; set; } = default;
 
-	[DDLRegistration(0xd7fbe76bu, "Value")]
+	[DDLRegistration(0x277cfdddu, "Value")]
 	public DDLVector2? CurrentPoint { get; set; } = default;
 
-	[DDLRegistration(0xd7fbe76bu)]
+	[DDLRegistration(0x322aadceu)]
 	public List<AnimDriverConnectionDef?> Connections { get; set; } = [];
 
 	public static AnimDriverGridNodeDef Create(DDLObject ddl) => new(ddl);

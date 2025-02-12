@@ -23,22 +23,22 @@ public class PickupBobData : DDLObjectType, IDDLObjectType<PickupBobData> {
 		SpinAxis = ddl.GetEnum<xe09c5937>(0x5c144527u, xe09c5937Values.Lookup);
 	}
 
-	[DDLRegistration(0x2c16e80du)]
+	[DDLRegistration(0xa482271fu)]
 	public float Frequency { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2c16e80du)]
+	[DDLRegistration(0xe950071du)]
 	public float Amplitude { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2c16e80du)]
+	[DDLRegistration(0x229ae43fu)]
 	public float Spin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2c16e80du)]
+	[DDLRegistration(0xa192426cu)]
 	public bool BumpHeightByAmp { get; set; } = false;
 
-	[DDLRegistration(0x2c16e80du)]
+	[DDLRegistration(0x2218f1d2u)]
 	public bool AllowLOD { get; set; } = true;
 
-	[DDLRegistration(0x2c16e80du)]
+	[DDLRegistration(0x5c144527u)]
 	public xe09c5937 SpinAxis { get; set; } = xe09c5937.YAxisWorld;
 
 	public static PickupBobData Create(DDLObject ddl) => new(ddl);

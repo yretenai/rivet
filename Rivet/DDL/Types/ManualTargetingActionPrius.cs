@@ -19,10 +19,10 @@ public class ManualTargetingActionPrius : DDLObjectType, IDDLObjectType<ManualTa
 		Aggro = ddl.GetValue<float>(0x504e1083u, Aggro);
 	}
 
-	[DDLRegistration(0x92d7779fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0x92d7779fu, description: "Targets are added with this aggro value")]
+	[DDLRegistration(0x504e1083u, description: "Targets are added with this aggro value")]
 	public float Aggro { get; set; } = 100.00f;
 
 	public static ManualTargetingActionPrius Create(DDLObject ddl) => new(ddl);

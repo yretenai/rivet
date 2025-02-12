@@ -24,25 +24,25 @@ public class OverrideHeroSpaceshipTurnRateActionPrius : DDLObjectType, IDDLObjec
 		FireTurnSpeed = ddl.GetValue<float>(0x30a2d542u, FireTurnSpeed);
 	}
 
-	[DDLRegistration(0x523d25d7u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x523d25d7u)]
+	[DDLRegistration(0x048b65ddu)]
 	public float NonFireTurnAccel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x523d25d7u)]
+	[DDLRegistration(0xe900b571u)]
 	public float NonFireTurnDecel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x523d25d7u)]
+	[DDLRegistration(0x5651adceu)]
 	public float NonFireTurnSpeed { get; set; } = 1.50f;
 
-	[DDLRegistration(0x523d25d7u)]
+	[DDLRegistration(0x62781d51u)]
 	public float FireTurnAccel { get; set; } = 2.00f;
 
-	[DDLRegistration(0x523d25d7u)]
+	[DDLRegistration(0x8ff3cdfdu)]
 	public float FireTurnDecel { get; set; } = 3.00f;
 
-	[DDLRegistration(0x523d25d7u)]
+	[DDLRegistration(0x30a2d542u)]
 	public float FireTurnSpeed { get; set; } = 1.25f;
 
 	public static OverrideHeroSpaceshipTurnRateActionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class AnimAwarenessChangedEvent : EventBase, IDDLObjectType<AnimAwareness
 		IsEngaged = ddl.GetValue<bool>(0x2563c2e7u, IsEngaged);
 	}
 
-	[DDLRegistration(0x3a2f6c21u)]
+	[DDLRegistration(0x2563c2e7u)]
 	public bool IsEngaged { get; set; } = false;
 
 	public new static AnimAwarenessChangedEvent Create(DDLObject ddl) => new(ddl);

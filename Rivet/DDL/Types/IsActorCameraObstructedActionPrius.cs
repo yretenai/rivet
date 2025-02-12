@@ -19,10 +19,10 @@ public class IsActorCameraObstructedActionPrius : DDLObjectType, IDDLObjectType<
 		CollisionRadius = ddl.GetValue<float>(0x7d546bbau, CollisionRadius);
 	}
 
-	[DDLRegistration(0x9aa45945u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0x9aa45945u, description: "Radius of collision swept sphere check.")]
+	[DDLRegistration(0x7d546bbau, description: "Radius of collision swept sphere check.")]
 	public float CollisionRadius { get; set; } = 0.10f;
 
 	public static IsActorCameraObstructedActionPrius Create(DDLObject ddl) => new(ddl);

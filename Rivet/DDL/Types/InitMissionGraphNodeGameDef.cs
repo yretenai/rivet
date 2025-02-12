@@ -18,7 +18,7 @@ public class InitMissionGraphNodeGameDef : InitMissionGraphNodeSharedDef, IDDLOb
 		NewGameLoadInfo = ddl.GetObject<ObjectiveLoadInfo>(0xb5e9ee61u);
 	}
 
-	[DDLRegistration(0x4f4e175au)]
+	[DDLRegistration(0xb5e9ee61u)]
 	public ObjectiveLoadInfo? NewGameLoadInfo { get; set; } = default;
 
 	public new static InitMissionGraphNodeGameDef Create(DDLObject ddl) => new(ddl);

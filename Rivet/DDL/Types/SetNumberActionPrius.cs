@@ -19,10 +19,10 @@ public class SetNumberActionPrius : DDLObjectType, IDDLObjectType<SetNumberActio
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x4b0b8ec7u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
-	[DDLRegistration(0x4b0b8ec7u, description: "Constant number value, used IF input variable is not set")]
+	[DDLRegistration(0x042494f5u, description: "Constant number value, used IF input variable is not set")]
 	public float Value { get; set; } = 0.00f;
 
 	public static SetNumberActionPrius Create(DDLObject ddl) => new(ddl);

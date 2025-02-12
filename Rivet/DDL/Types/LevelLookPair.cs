@@ -19,10 +19,10 @@ public class LevelLookPair : DDLObjectType, IDDLObjectType<LevelLookPair> {
 		LookGroupName = ddl.GetString(0x40b91f04) ?? LookGroupName;
 	}
 
-	[DDLRegistration(0x131b87a8u, description: "level to link to a specific look")]
+	[DDLRegistration(0x83b900d2u, description: "level to link to a specific look")]
 	public RivetAssetId Level { get; set; } = default;
 
-	[DDLRegistration(0x131b87a8u, description: "name of a look to show when in the linked level")]
+	[DDLRegistration(0x40b91f04u, description: "name of a look to show when in the linked level")]
 	public string? LookGroupName { get; set; } = default;
 
 	public static LevelLookPair Create(DDLObject ddl) => new(ddl);

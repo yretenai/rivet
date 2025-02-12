@@ -19,10 +19,10 @@ public class DamageModifierConditionDamageHashListPrius : DamageModifierConditio
 		CheckType = ddl.GetEnum<x8423053f>(0xb6b0f22cu, x8423053fValues.Lookup);
 	}
 
-	[DDLRegistration(0xb7fcd5afu)]
+	[DDLRegistration(0x9c38a0dfu)]
 	public List<DamageHashEntry?> DamageHashEntries { get; set; } = [];
 
-	[DDLRegistration(0xb7fcd5afu)]
+	[DDLRegistration(0xb6b0f22cu)]
 	public x8423053f CheckType { get; set; } = x8423053f.Any;
 
 	public new static DamageModifierConditionDamageHashListPrius Create(DDLObject ddl) => new(ddl);

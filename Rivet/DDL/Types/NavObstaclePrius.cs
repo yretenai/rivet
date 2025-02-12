@@ -21,16 +21,16 @@ public class NavObstaclePrius : DDLObjectType, IDDLObjectType<NavObstaclePrius> 
 		UseBoundingSpherePosition = ddl.GetValue<bool>(0xb292af07u, UseBoundingSpherePosition);
 	}
 
-	[DDLRegistration(0xbfda7ad9u)]
+	[DDLRegistration(0xba73c46bu)]
 	public float CapsuleRadius { get; set; } = 0.35f;
 
-	[DDLRegistration(0xbfda7ad9u)]
+	[DDLRegistration(0x74424f3eu)]
 	public float CapsuleHeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbfda7ad9u, description: "Large enemies will see this")]
+	[DDLRegistration(0xaa492958u, description: "Large enemies will see this")]
 	public bool SetLarge { get; set; } = false;
 
-	[DDLRegistration(0xbfda7ad9u)]
+	[DDLRegistration(0xb292af07u)]
 	public bool UseBoundingSpherePosition { get; set; } = false;
 
 	public static NavObstaclePrius Create(DDLObject ddl) => new(ddl);

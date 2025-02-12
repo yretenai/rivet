@@ -22,19 +22,19 @@ public class FocusTrackingManagerData : DDLObjectType, IDDLObjectType<FocusTrack
 		NamedSolverDefinitions = ddl.GetObjects<FocusTrackingNamedSolver>(0xc833cc6bu);
 	}
 
-	[DDLRegistration(0x6fa4fdd7u, description: "All JointChains adjustable by the FocusTrackingManager using this config")]
+	[DDLRegistration(0x8f2a4210u, description: "All JointChains adjustable by the FocusTrackingManager using this config")]
 	public List<FocusJointChainDef?> JointChains { get; set; } = [];
 
-	[DDLRegistration(0x6fa4fdd7u, description: "List of named positions we expect code to update.  Used for focus tracking to multiple target positions at once")]
+	[DDLRegistration(0xbf44fea1u, description: "List of named positions we expect code to update.  Used for focus tracking to multiple target positions at once")]
 	public List<FocusTrackingNamedPosition?> NamedFocusPositions { get; set; } = [];
 
-	[DDLRegistration(0x6fa4fdd7u, description: "FocusTrackingManager will utilize these defaults for FocusTracking Instances unless overridden by clip")]
+	[DDLRegistration(0xd42c60ffu, description: "FocusTrackingManager will utilize these defaults for FocusTracking Instances unless overridden by clip")]
 	public FocusTrackingInstData? DefaultTracking { get; set; } = default;
 
-	[DDLRegistration(0x6fa4fdd7u, description: "Default Solvers always to be added to the FocusTrackingInstance unless overriden by clip")]
+	[DDLRegistration(0x0176fd2cu, description: "Default Solvers always to be added to the FocusTrackingInstance unless overriden by clip")]
 	public List<FocusTrackingSolverData?> DefaultSolverDefinitions { get; set; } = [];
 
-	[DDLRegistration(0x6fa4fdd7u, description: "Library of solvers that can be actived on drivers using a FocusTrackingAddNamedSolverEvent.")]
+	[DDLRegistration(0xc833cc6bu, description: "Library of solvers that can be actived on drivers using a FocusTrackingAddNamedSolverEvent.")]
 	public List<FocusTrackingNamedSolver?> NamedSolverDefinitions { get; set; } = [];
 
 	public static FocusTrackingManagerData Create(DDLObject ddl) => new(ddl);

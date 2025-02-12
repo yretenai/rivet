@@ -19,10 +19,10 @@ public class FollowCurveControlActionPrius : DDLObjectType, IDDLObjectType<Follo
 		SyncedStop = ddl.GetValue<bool>(0x0a56b05bu, SyncedStop);
 	}
 
-	[DDLRegistration(0x298e0da6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.CurveFollower;
 
-	[DDLRegistration(0x298e0da6u, description: "Sync the position of the follower when stop")]
+	[DDLRegistration(0x0a56b05bu, description: "Sync the position of the follower when stop")]
 	public bool SyncedStop { get; set; } = false;
 
 	public static FollowCurveControlActionPrius Create(DDLObject ddl) => new(ddl);

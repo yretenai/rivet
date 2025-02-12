@@ -22,19 +22,19 @@ public class MissionGraphGameDef_Tools : GameplayNodeGraphBaseDef, IDDLObjectTyp
 		MissionNodes = ddl.GetDictionary<RivetAssetId, MissionNodeGameDef_Tools>(0x6b15ce6c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<MissionNodeGameDef_Tools>(mapId));
 	}
 
-	[DDLRegistration(0x3ef5bcacu)]
+	[DDLRegistration(0xacae6ecbu)]
 	public InitMissionGraphNodeGameDef_Tools? InitNode { get; set; } = default;
 
-	[DDLRegistration(0x3ef5bcacu)]
+	[DDLRegistration(0xbd4cf165u)]
 	public Dictionary<RivetAssetId, OrMissionSystemNodeDef_Tools?> OrNodes { get; set; } = [];
 
-	[DDLRegistration(0x3ef5bcacu)]
+	[DDLRegistration(0xd150652du)]
 	public Dictionary<RivetAssetId, AndMissionSystemNodeDef_Tools?> AndNodes { get; set; } = [];
 
-	[DDLRegistration(0x3ef5bcacu)]
+	[DDLRegistration(0xadd17eaeu)]
 	public Dictionary<RivetAssetId, NotMissionSystemNodeDef_Tools?> NotNodes { get; set; } = [];
 
-	[DDLRegistration(0x3ef5bcacu)]
+	[DDLRegistration(0x6b15ce6cu)]
 	public Dictionary<RivetAssetId, MissionNodeGameDef_Tools?> MissionNodes { get; set; } = [];
 
 	public new static MissionGraphGameDef_Tools Create(DDLObject ddl) => new(ddl);

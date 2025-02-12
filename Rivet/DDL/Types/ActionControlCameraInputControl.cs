@@ -18,7 +18,7 @@ public class ActionControlCameraInputControl : DDLObjectType, IDDLObjectType<Act
 		Control = ddl.GetEnum<xd38acf04>(0xec314f73u, xd38acf04Values.Lookup);
 	}
 
-	[DDLRegistration(0xea0c72e9u)]
+	[DDLRegistration(0xec314f73u)]
 	public xd38acf04 Control { get; set; } = xd38acf04.CameraInputX;
 
 	public static ActionControlCameraInputControl Create(DDLObject ddl) => new(ddl);

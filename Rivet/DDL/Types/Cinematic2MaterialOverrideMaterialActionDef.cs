@@ -23,22 +23,22 @@ public class Cinematic2MaterialOverrideMaterialActionDef : DDLObjectType, IDDLOb
 		MaterialAsset = ddl.GetValue<RivetAssetId>(0xf55a8ae3u, MaterialAsset);
 	}
 
-	[DDLRegistration(0xbca59346u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xbca59346u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbca59346u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0xbca59346u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbca59346u, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model.")]
+	[DDLRegistration(0x981e6927u, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0xbca59346u)]
+	[DDLRegistration(0xf55a8ae3u)]
 	public RivetAssetId MaterialAsset { get; set; } = default;
 
 	public static Cinematic2MaterialOverrideMaterialActionDef Create(DDLObject ddl) => new(ddl);

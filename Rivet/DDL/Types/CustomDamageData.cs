@@ -19,10 +19,10 @@ public class CustomDamageData : DDLObjectType, IDDLObjectType<CustomDamageData> 
 		DataBuffer = ddl.GetValues<byte>(0x29478bfeu);
 	}
 
-	[DDLRegistration(0x77e4c195u)]
+	[DDLRegistration(0x124f31c8u)]
 	public uint DataNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x77e4c195u)]
+	[DDLRegistration(0x29478bfeu)]
 	public List<byte> DataBuffer { get; set; } = [];
 
 	public static CustomDamageData Create(DDLObject ddl) => new(ddl);

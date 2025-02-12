@@ -22,19 +22,19 @@ public class BotLaserShotPrius : ShotBasePrius, IDDLObjectType<BotLaserShotPrius
 		DamageIgnoreDuration = ddl.GetValue<float>(0xc0897c0au, DamageIgnoreDuration);
 	}
 
-	[DDLRegistration(0xa4a3503cu)]
+	[DDLRegistration(0xa521b107u)]
 	public ShotDamageData? DamageData { get; set; } = default;
 
-	[DDLRegistration(0xa4a3503cu, "Audio Follower Type")]
+	[DDLRegistration(0x8987c9e4u, "Audio Follower Type")]
 	public x06f69eca AudioFollowerType { get; set; } = x06f69eca.SoundListenerPos;
 
-	[DDLRegistration(0xa4a3503cu, "Audio Follower Joint", "Joint that will be repositioned to be closest to the audio listener for SFX.")]
+	[DDLRegistration(0xaa277419u, "Audio Follower Joint", "Joint that will be repositioned to be closest to the audio listener for SFX.")]
 	public string? AudioFollowerJoint { get; set; } = "follower";
 
-	[DDLRegistration(0xa4a3503cu, "Impact Joint", "Joint that will be repositioned to the impact location for VFX/SFX.")]
+	[DDLRegistration(0xb5c2190bu, "Impact Joint", "Joint that will be repositioned to the impact location for VFX/SFX.")]
 	public string? ImpactJoint { get; set; } = "impact";
 
-	[DDLRegistration(0xa4a3503cu, "Damage Ignore Duration", "Ignore duration for damage from beam")]
+	[DDLRegistration(0xc0897c0au, "Damage Ignore Duration", "Ignore duration for damage from beam")]
 	public float DamageIgnoreDuration { get; set; } = 1.00f;
 
 	public new static BotLaserShotPrius Create(DDLObject ddl) => new(ddl);

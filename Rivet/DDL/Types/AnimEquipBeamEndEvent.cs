@@ -18,7 +18,7 @@ public class AnimEquipBeamEndEvent : EventBase, IDDLObjectType<AnimEquipBeamEndE
 		Weapon = ddl.GetEnum<WeaponMacroType>(0x574be981u, WeaponMacroTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0xbdc989d1u)]
+	[DDLRegistration(0x574be981u)]
 	public WeaponMacroType Weapon { get; set; } = WeaponMacroType.None;
 
 	public new static AnimEquipBeamEndEvent Create(DDLObject ddl) => new(ddl);

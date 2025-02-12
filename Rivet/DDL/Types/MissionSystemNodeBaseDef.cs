@@ -18,7 +18,7 @@ public class MissionSystemNodeBaseDef : NodeBaseDef, IDDLObjectType<MissionSyste
 		DebugName = ddl.GetString(0x4ef19112) ?? DebugName;
 	}
 
-	[DDLRegistration(0xa3860fe0u, description: "Should be a unique name per node, for use in debug printing etc. One is generated if not provided here")]
+	[DDLRegistration(0x4ef19112u, description: "Should be a unique name per node, for use in debug printing etc. One is generated if not provided here")]
 	public string? DebugName { get; set; } = default;
 
 	public new static MissionSystemNodeBaseDef Create(DDLObject ddl) => new(ddl);

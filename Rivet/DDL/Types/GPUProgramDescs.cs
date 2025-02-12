@@ -18,7 +18,7 @@ public class GPUProgramDescs : DDLObjectType, IDDLObjectType<GPUProgramDescs> {
 		Descs = ddl.GetObjects<GPUProgramDesc>(0x6e50238bu);
 	}
 
-	[DDLRegistration(0xbb4c2ea9u)]
+	[DDLRegistration(0x6e50238bu)]
 	public List<GPUProgramDesc?> Descs { get; set; } = [];
 
 	public static GPUProgramDescs Create(DDLObject ddl) => new(ddl);

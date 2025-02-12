@@ -21,16 +21,16 @@ public class AnimMaterialComponentPrius : DDLObjectType, IDDLObjectType<AnimMate
 		AlwaysUpdate = ddl.GetValue<bool>(0x4e3b0091u, AlwaysUpdate);
 	}
 
-	[DDLRegistration(0xa6755243u)]
+	[DDLRegistration(0x2c9ec3f8u)]
 	public List<AnimMaterialComponentMapDef?> MaterialMapList { get; set; } = [];
 
-	[DDLRegistration(0xa6755243u)]
+	[DDLRegistration(0xca303d91u)]
 	public List<AnimMaterialComponentMorphOverrideDef?> MorphOverrides { get; set; } = [];
 
-	[DDLRegistration(0xa6755243u, description: "Specifies the render-from-texture settings")]
+	[DDLRegistration(0x7bfa1243u, description: "Specifies the render-from-texture settings")]
 	public AnimMaterialComponentCineTextureDef? CinematicTexture { get; set; } = default;
 
-	[DDLRegistration(0xa6755243u, description: "Always update the materials, event when offscreen")]
+	[DDLRegistration(0x4e3b0091u, description: "Always update the materials, event when offscreen")]
 	public bool AlwaysUpdate { get; set; } = false;
 
 	public static AnimMaterialComponentPrius Create(DDLObject ddl) => new(ddl);

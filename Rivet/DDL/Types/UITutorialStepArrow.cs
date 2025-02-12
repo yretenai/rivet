@@ -19,10 +19,10 @@ public class UITutorialStepArrow : UITutorialStepBase, IDDLObjectType<UITutorial
 		ArrowDirection = ddl.GetEnum<xbc1de3ff>(0x0de38b39u, xbc1de3ffValues.Lookup);
 	}
 
-	[DDLRegistration(0xd899cb4du, "Arrow Position", "Normalized location of the arrow's point on screen.")]
+	[DDLRegistration(0xe301fbbeu, "Arrow Position", "Normalized location of the arrow's point on screen.")]
 	public DDLVector2? ArrowPosition { get; set; } = default;
 
-	[DDLRegistration(0xd899cb4du, "Arrow Direction")]
+	[DDLRegistration(0x0de38b39u, "Arrow Direction")]
 	public xbc1de3ff ArrowDirection { get; set; } = xbc1de3ff.Right;
 
 	public new static UITutorialStepArrow Create(DDLObject ddl) => new(ddl);

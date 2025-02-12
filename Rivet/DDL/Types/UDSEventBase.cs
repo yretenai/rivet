@@ -18,7 +18,7 @@ public class UDSEventBase : EventBase, IDDLObjectType<UDSEventBase> {
 		Critical = ddl.GetValue<bool>(0xad44a6bbu, Critical);
 	}
 
-	[DDLRegistration(0x68da4456u)]
+	[DDLRegistration(0xad44a6bbu)]
 	public bool Critical { get; set; } = false;
 
 	public new static UDSEventBase Create(DDLObject ddl) => new(ddl);

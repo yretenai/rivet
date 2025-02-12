@@ -20,13 +20,13 @@ public class SetPoolIdRequestMessage : DDLObjectType, IDDLObjectType<SetPoolIdRe
 		PoolId = ddl.GetValue<ushort>(0xd6168685u, PoolId);
 	}
 
-	[DDLRegistration(0xea1ecb17u)]
+	[DDLRegistration(0x637390afu)]
 	public ushort ObjectId { get; set; } = 0x0000;
 
-	[DDLRegistration(0xea1ecb17u)]
+	[DDLRegistration(0xd3500ab1u)]
 	public byte ObjectGeneration { get; set; } = 0x00;
 
-	[DDLRegistration(0xea1ecb17u)]
+	[DDLRegistration(0xd6168685u)]
 	public ushort PoolId { get; set; } = 0x0000;
 
 	public static SetPoolIdRequestMessage Create(DDLObject ddl) => new(ddl);

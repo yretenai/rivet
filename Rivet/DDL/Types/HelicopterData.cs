@@ -22,19 +22,19 @@ public class HelicopterData : DDLObjectType, IDDLObjectType<HelicopterData> {
 		MoveToBestFirepoint = ddl.GetValue<bool>(0x9b757740u, MoveToBestFirepoint);
 	}
 
-	[DDLRegistration(0xd3a9c3acu, description: "Set of volumes for the helicopter to fly in.")]
+	[DDLRegistration(0x61b07f41u, description: "Set of volumes for the helicopter to fly in.")]
 	public RivetAssetId FlightArea { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd3a9c3acu, description: "Set of volumes for the helicopter to fly to on death.")]
+	[DDLRegistration(0xbfa28c95u, description: "Set of volumes for the helicopter to fly to on death.")]
 	public RivetAssetId DeathArea { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd3a9c3acu, description: "Select a random point in DeathArea to fly to.")]
+	[DDLRegistration(0x6d90febfu, description: "Select a random point in DeathArea to fly to.")]
 	public bool RandomizeDeathPosition { get; set; } = false;
 
-	[DDLRegistration(0xd3a9c3acu, description: "When crashing into your killer, land this high above them.")]
+	[DDLRegistration(0xdc4f6d3cu, description: "When crashing into your killer, land this high above them.")]
 	public float DamagerOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd3a9c3acu, description: "Helicopter automatically moves in the perfect position to shoot at targets.")]
+	[DDLRegistration(0x9b757740u, description: "Helicopter automatically moves in the perfect position to shoot at targets.")]
 	public bool MoveToBestFirepoint { get; set; } = false;
 
 	public static HelicopterData Create(DDLObject ddl) => new(ddl);

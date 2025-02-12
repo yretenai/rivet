@@ -22,19 +22,19 @@ public class DepthOfFieldActionPrius : DDLObjectType, IDDLObjectType<DepthOfFiel
 		FarApertureScale = ddl.GetValue<float>(0x215db44bu, FarApertureScale);
 	}
 
-	[DDLRegistration(0xc9c1926fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0xc9c1926fu, "Near Focus Distance")]
+	[DDLRegistration(0xd6c519d5u, "Near Focus Distance")]
 	public float NearFocusDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc9c1926fu, "Near Aperture Scale")]
+	[DDLRegistration(0x172fcbcfu, "Near Aperture Scale")]
 	public float NearApertureScale { get; set; } = 10.00f;
 
-	[DDLRegistration(0xc9c1926fu, "Far Focus Distance")]
+	[DDLRegistration(0xe0b76651u, "Far Focus Distance")]
 	public float FarFocusDistance { get; set; } = 5.00f;
 
-	[DDLRegistration(0xc9c1926fu, "Far Aperture Scale")]
+	[DDLRegistration(0x215db44bu, "Far Aperture Scale")]
 	public float FarApertureScale { get; set; } = 10.00f;
 
 	public static DepthOfFieldActionPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class SkinItemModel : DDLObjectType, IDDLObjectType<SkinItemModel> {
 		ModelInnerLayer = ddl.GetObject<AssetReferenceDef>(0xdb07822bu);
 	}
 
-	[DDLRegistration(0x6dfd1f15u, "Body Type", "Body Type")]
+	[DDLRegistration(0x1a1c112au, "Body Type", "Body Type")]
 	public x5d60d87e BodyType { get; set; } = x5d60d87e.All;
 
-	[DDLRegistration(0x6dfd1f15u, "Head Type", "Head Type")]
+	[DDLRegistration(0xe711902cu, "Head Type", "Head Type")]
 	public xa06d5978 HeadType { get; set; } = xa06d5978.All;
 
-	[DDLRegistration(0x6dfd1f15u, "Model Outer Layer", "Model for this body type (outer layer)")]
+	[DDLRegistration(0xcec6be18u, "Model Outer Layer", "Model for this body type (outer layer)")]
 	public AssetReferenceDef? Model { get; set; } = default;
 
-	[DDLRegistration(0x6dfd1f15u, "Model Inner Layer", "Model for this body type (inner layer)")]
+	[DDLRegistration(0xdb07822bu, "Model Inner Layer", "Model for this body type (inner layer)")]
 	public AssetReferenceDef? ModelInnerLayer { get; set; } = default;
 
 	public static SkinItemModel Create(DDLObject ddl) => new(ddl);

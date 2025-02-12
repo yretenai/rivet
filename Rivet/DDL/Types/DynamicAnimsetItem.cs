@@ -19,10 +19,10 @@ public class DynamicAnimsetItem : DDLObjectType, IDDLObjectType<DynamicAnimsetIt
 		UserMask = ddl.GetBitset<x805e39ba>(0x8321a90fu, x805e39baValues.Lookup);
 	}
 
-	[DDLRegistration(0x55fd7696u, "Animset")]
+	[DDLRegistration(0xffcf15f1u, "Animset")]
 	public RivetAssetId AnimSet { get; set; } = default;
 
-	[DDLRegistration(0x55fd7696u, "User Mask")]
+	[DDLRegistration(0x8321a90fu, "User Mask")]
 	public x805e39ba UserMask { get; set; } = (x805e39ba) 0x00000001;
 
 	public static DynamicAnimsetItem Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class StatusEffectCloningEvent : EventBase, IDDLObjectType<StatusEffectCl
 		IsOriginal = ddl.GetValue<bool>(0x6f462b5fu, IsOriginal);
 	}
 
-	[DDLRegistration(0x754e7f4cu)]
+	[DDLRegistration(0x6f462b5fu)]
 	public bool IsOriginal { get; set; } = false;
 
 	public new static StatusEffectCloningEvent Create(DDLObject ddl) => new(ddl);

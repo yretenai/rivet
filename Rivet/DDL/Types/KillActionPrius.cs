@@ -19,10 +19,10 @@ public class KillActionPrius : DDLObjectType, IDDLObjectType<KillActionPrius> {
 		SkipDeathAnim = ddl.GetValue<bool>(0x5abb8dd9u, SkipDeathAnim);
 	}
 
-	[DDLRegistration(0xf6f2fa47u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
-	[DDLRegistration(0xf6f2fa47u, description: "Go straight to ragdoll")]
+	[DDLRegistration(0x5abb8dd9u, description: "Go straight to ragdoll")]
 	public bool SkipDeathAnim { get; set; } = false;
 
 	public static KillActionPrius Create(DDLObject ddl) => new(ddl);

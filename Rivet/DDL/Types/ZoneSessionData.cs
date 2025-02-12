@@ -29,40 +29,40 @@ public class ZoneSessionData : DDLObjectType, IDDLObjectType<ZoneSessionData> {
 		CameraRotation = ddl.GetObject<DDLVector3>(0x3bc8935au);
 	}
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0xe6e44afeu)]
 	public x2eab60c7 CurrentSelection { get; set; } = x2eab60c7.SceneNode;
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0x8e102acbu)]
 	public SelectionData3D? Selection3D { get; set; } = default;
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0x83ff85dfu)]
 	public SelectionDataActorGroups? SelectionActorGroups { get; set; } = default;
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0x9be77afbu)]
 	public Dictionary<RivetAssetId, SelectionDataActorGroups?> SelectionActorGroupActors { get; set; } = [];
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0x5170bce9u)]
 	public SelectionDataLevelList? SelectionLevelList { get; set; } = default;
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0xb6bf4d42u)]
 	public HiddenData3D? Hidden3D { get; set; } = default;
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0x56235257u)]
 	public List<TargetSceneNode?> TargetSceneNodeStack { get; set; } = [];
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0xa38d1acbu)]
 	public Dictionary<RivetAssetId, RegionDefTemp?> Regions { get; set; } = [];
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0xf877d4f8u)]
 	public RivetAssetId ActiveZone { get; set; } = default;
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0xff5f46b4u)]
 	public List<RivetAssetId> ReferenceableZones { get; set; } = [];
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0x5498ef5eu)]
 	public DDLVector3? CameraPosition { get; set; } = default;
 
-	[DDLRegistration(0xfbae615fu)]
+	[DDLRegistration(0x3bc8935au)]
 	public DDLVector3? CameraRotation { get; set; } = default;
 
 	public static ZoneSessionData Create(DDLObject ddl) => new(ddl);

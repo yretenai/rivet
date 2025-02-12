@@ -19,10 +19,10 @@ public class RobotestActorPhysicsInfo : DDLObjectType, IDDLObjectType<RobotestAc
 		Bodies = ddl.GetObjects<RobotestPhysBodyInfo>(0xf3208e96u);
 	}
 
-	[DDLRegistration(0x9eb99fbcu)]
+	[DDLRegistration(0x7aa1aee8u)]
 	public DDLTransform? ModelInstPos { get; set; } = default;
 
-	[DDLRegistration(0x9eb99fbcu)]
+	[DDLRegistration(0xf3208e96u)]
 	public List<RobotestPhysBodyInfo?> Bodies { get; set; } = [];
 
 	public static RobotestActorPhysicsInfo Create(DDLObject ddl) => new(ddl);

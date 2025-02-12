@@ -21,16 +21,16 @@ public class OverlayActionPrius : DDLObjectType, IDDLObjectType<OverlayActionPri
 		UseAsListener = ddl.GetValue<bool>(0x541f186du, UseAsListener);
 	}
 
-	[DDLRegistration(0x11951040u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x11951040u)]
+	[DDLRegistration(0xb8155f86u)]
 	public RivetAssetId Overlay { get; set; } = default;
 
-	[DDLRegistration(0x11951040u, description: "Will also unload overlay when this scriptnode unloads")]
+	[DDLRegistration(0x974a1794u, description: "Will also unload overlay when this scriptnode unloads")]
 	public bool AutoUnload { get; set; } = false;
 
-	[DDLRegistration(0x11951040u, description: "Node will always listen for loads/unloads and fire corresponding outputs for the specified overlay, regardless of whether it itself has requested a load or unload.")]
+	[DDLRegistration(0x541f186du, description: "Node will always listen for loads/unloads and fire corresponding outputs for the specified overlay, regardless of whether it itself has requested a load or unload.")]
 	public bool UseAsListener { get; set; } = true;
 
 	public static OverlayActionPrius Create(DDLObject ddl) => new(ddl);

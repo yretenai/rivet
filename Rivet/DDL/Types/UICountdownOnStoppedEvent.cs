@@ -18,7 +18,7 @@ public class UICountdownOnStoppedEvent : EventBase, IDDLObjectType<UICountdownOn
 		StopRequesterHandle = ddl.GetValue<uint>(0x9e661f80u, StopRequesterHandle);
 	}
 
-	[DDLRegistration(0x4da4ce55u)]
+	[DDLRegistration(0x9e661f80u)]
 	public uint StopRequesterHandle { get; set; } = 0x00000000;
 
 	public new static UICountdownOnStoppedEvent Create(DDLObject ddl) => new(ddl);

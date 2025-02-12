@@ -20,13 +20,13 @@ public class BotConfigFiring : ConfigBase, IDDLObjectType<BotConfigFiring> {
 		CanAggressorRush = ddl.GetValue<bool>(0x5165ee36u, CanAggressorRush);
 	}
 
-	[DDLRegistration(0x980cde1au)]
+	[DDLRegistration(0x8b393dd4u)]
 	public RivetAssetId WeaponItem { get; set; } = "";
 
-	[DDLRegistration(0x980cde1au)]
+	[DDLRegistration(0x6bad3cd5u)]
 	public FiringPrius? Firing { get; set; } = default;
 
-	[DDLRegistration(0x980cde1au)]
+	[DDLRegistration(0x5165ee36u)]
 	public bool CanAggressorRush { get; set; } = false;
 
 	public new static BotConfigFiring Create(DDLObject ddl) => new(ddl);

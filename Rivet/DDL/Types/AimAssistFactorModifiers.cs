@@ -23,22 +23,22 @@ public class AimAssistFactorModifiers : DDLObjectType, IDDLObjectType<AimAssistF
 		TraversalMod = ddl.GetObject<AimAssistTraversalModifier>(0xefd5b009u);
 	}
 
-	[DDLRegistration(0x3533a587u, "Distance Modifier")]
+	[DDLRegistration(0xd73da520u, "Distance Modifier")]
 	public AimAssistDistanceModifier? DistanceMod { get; set; } = default;
 
-	[DDLRegistration(0x3533a587u, "Relative Speed Modifier")]
+	[DDLRegistration(0x3cc3ee7bu, "Relative Speed Modifier")]
 	public AimAssistRelativeSpeedModifier? SpeedMod { get; set; } = default;
 
-	[DDLRegistration(0x3533a587u, "Move And Turn Modifier")]
+	[DDLRegistration(0x4223de86u, "Move And Turn Modifier")]
 	public AimAssistMoveTurnModifier? MoveTurnMod { get; set; } = default;
 
-	[DDLRegistration(0x3533a587u, "Turn Match Modifier")]
+	[DDLRegistration(0x896d7437u, "Turn Match Modifier")]
 	public AimAssistTurnMatchModifier? TurnMatchMod { get; set; } = default;
 
-	[DDLRegistration(0x3533a587u, "Many Target Modifier")]
+	[DDLRegistration(0xfa5560cfu, "Many Target Modifier")]
 	public AimAssistMultiTargetModifier? ManyTargetMod { get; set; } = default;
 
-	[DDLRegistration(0x3533a587u, "Traversal Modifier")]
+	[DDLRegistration(0xefd5b009u, "Traversal Modifier")]
 	public AimAssistTraversalModifier? TraversalMod { get; set; } = default;
 
 	public static AimAssistFactorModifiers Create(DDLObject ddl) => new(ddl);

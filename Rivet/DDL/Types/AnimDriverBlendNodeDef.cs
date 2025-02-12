@@ -25,28 +25,28 @@ public class AnimDriverBlendNodeDef : DDLObjectType, IDDLObjectType<AnimDriverBl
 		Intervals = ddl.GetObjects<AnimDriverBlendElemDef>(0x955c8dd0u);
 	}
 
-	[DDLRegistration(0xc9a0571du)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xc9a0571du)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0xc9a0571du)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc9a0571du)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc9a0571du)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x53f8509f Type { get; set; } = x53f8509f.BlendNodeTypeDefault;
 
-	[DDLRegistration(0xc9a0571du)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc9a0571du, "Value")]
+	[DDLRegistration(0x8dae56cdu, "Value")]
 	public float CurrentValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc9a0571du)]
+	[DDLRegistration(0x955c8dd0u)]
 	public List<AnimDriverBlendElemDef?> Intervals { get; set; } = [];
 
 	public static AnimDriverBlendNodeDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ActionControlHeroTravelMapControl : DDLObjectType, IDDLObjectType<A
 		Control = ddl.GetEnum<xd6051860>(0xec314f73u, xd6051860Values.Lookup);
 	}
 
-	[DDLRegistration(0x88056376u)]
+	[DDLRegistration(0xec314f73u)]
 	public xd6051860 Control { get; set; } = xd6051860.TravelMapSelect;
 
 	public static ActionControlHeroTravelMapControl Create(DDLObject ddl) => new(ddl);

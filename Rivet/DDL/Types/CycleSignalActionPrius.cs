@@ -22,19 +22,19 @@ public class CycleSignalActionPrius : DDLObjectType, IDDLObjectType<CycleSignalA
 		ForceOutNewLoc = ddl.GetValue<bool>(0xc87cfcc1u, ForceOutNewLoc);
 	}
 
-	[DDLRegistration(0xdaf7bcd2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
-	[DDLRegistration(0xdaf7bcd2u, "After last signal")]
+	[DDLRegistration(0x684191aau, "After last signal")]
 	public x4d26e880 LoopType { get; set; } = x4d26e880.Loop;
 
-	[DDLRegistration(0xdaf7bcd2u, "Randomness")]
+	[DDLRegistration(0xec7a5f59u, "Randomness")]
 	public x88e09fe6 Order { get; set; } = x88e09fe6.Ordered;
 
-	[DDLRegistration(0xdaf7bcd2u, "Allow repeat on cycle?", "On cycle, whether to allow the last output to be the first.")]
+	[DDLRegistration(0x38b07466u, "Allow repeat on cycle?", "On cycle, whether to allow the last output to be the first.")]
 	public bool AllowRepeat { get; set; } = false;
 
-	[DDLRegistration(0xdaf7bcd2u, "Force outputs to new locations?", "On cycle, whether to make each output change its location (so it can't remain in the same position).")]
+	[DDLRegistration(0xc87cfcc1u, "Force outputs to new locations?", "On cycle, whether to make each output change its location (so it can't remain in the same position).")]
 	public bool ForceOutNewLoc { get; set; } = false;
 
 	public static CycleSignalActionPrius Create(DDLObject ddl) => new(ddl);

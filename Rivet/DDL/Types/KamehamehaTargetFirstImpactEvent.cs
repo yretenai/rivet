@@ -20,13 +20,13 @@ public class KamehamehaTargetFirstImpactEvent : EventBase, IDDLObjectType<Kameha
 		HitJointHash = ddl.GetValue<uint>(0x70056141u, HitJointHash);
 	}
 
-	[DDLRegistration(0x6d7abaa0u)]
+	[DDLRegistration(0x86edb4bdu)]
 	public uint BeamActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x6d7abaa0u)]
+	[DDLRegistration(0xa68ca01fu)]
 	public uint TargetActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x6d7abaa0u)]
+	[DDLRegistration(0x70056141u)]
 	public uint HitJointHash { get; set; } = 0x00000000;
 
 	public new static KamehamehaTargetFirstImpactEvent Create(DDLObject ddl) => new(ddl);

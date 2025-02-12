@@ -18,7 +18,7 @@ public class NailGunPlantedShotImpactEvent : EventBase, IDDLObjectType<NailGunPl
 		HitCount = ddl.GetValue<int>(0x908a038du, HitCount);
 	}
 
-	[DDLRegistration(0x036c9988u)]
+	[DDLRegistration(0x908a038du)]
 	public int HitCount { get; set; } = 1;
 
 	public new static NailGunPlantedShotImpactEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class GameFrameIntervalAmoritizationSettings : DDLObjectType, IDDLObjectT
 		AnimClueHunterFramesBetweenUpdates = ddl.GetValue<uint>(0x52b67a5fu, AnimClueHunterFramesBetweenUpdates);
 	}
 
-	[DDLRegistration(0x06fa1c42u)]
+	[DDLRegistration(0xfb52392bu)]
 	public uint BotDiveRollCheckerUpdatesPerFrame { get; set; } = 0x00000003;
 
-	[DDLRegistration(0x06fa1c42u)]
+	[DDLRegistration(0x52b67a5fu)]
 	public uint AnimClueHunterFramesBetweenUpdates { get; set; } = 0x00000020;
 
 	public static GameFrameIntervalAmoritizationSettings Create(DDLObject ddl) => new(ddl);

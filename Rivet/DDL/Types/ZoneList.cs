@@ -19,10 +19,10 @@ public class ZoneList : DDLObjectType, IDDLObjectType<ZoneList> {
 		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
 	}
 
-	[DDLRegistration(0x79dfcd60u, description: "Platform to which the list of zones will be restricted.")]
+	[DDLRegistration(0xc3536dbbu, description: "Platform to which the list of zones will be restricted.")]
 	public x104b06bd Platform { get; set; } = x104b06bd.PS5;
 
-	[DDLRegistration(0x79dfcd60u, description: "List of .zone files to restrict to this platform.")]
+	[DDLRegistration(0x9c997da9u, description: "List of .zone files to restrict to this platform.")]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
 	public static ZoneList Create(DDLObject ddl) => new(ddl);

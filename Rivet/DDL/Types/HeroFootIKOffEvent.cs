@@ -19,10 +19,10 @@ public class HeroFootIKOffEvent : EventBase, IDDLObjectType<HeroFootIKOffEvent> 
 		DisableGroundOffset = ddl.GetValue<bool>(0x0283a391u, DisableGroundOffset);
 	}
 
-	[DDLRegistration(0xbe60ea49u)]
+	[DDLRegistration(0xa851d40bu)]
 	public string? Chain { get; set; } = default;
 
-	[DDLRegistration(0xbe60ea49u)]
+	[DDLRegistration(0x0283a391u)]
 	public bool DisableGroundOffset { get; set; } = true;
 
 	public new static HeroFootIKOffEvent Create(DDLObject ddl) => new(ddl);

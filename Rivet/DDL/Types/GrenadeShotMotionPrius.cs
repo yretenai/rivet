@@ -22,19 +22,19 @@ public class GrenadeShotMotionPrius : BasicShotMotionPrius, IDDLObjectType<Grena
 		SetLandPosToGround = ddl.GetValue<bool>(0x0547cb0du, SetLandPosToGround);
 	}
 
-	[DDLRegistration(0xc30a869eu)]
+	[DDLRegistration(0x7d561892u)]
 	public GrenadeLandMode? LandMode { get; set; } = default;
 
-	[DDLRegistration(0xc30a869eu)]
+	[DDLRegistration(0x28291e84u)]
 	public GrenadeVelocityMode? VelocityMode { get; set; } = default;
 
-	[DDLRegistration(0xc30a869eu, "Pos From Curve")]
+	[DDLRegistration(0xc2487731u, "Pos From Curve")]
 	public bool CurveSimPos { get; set; } = true;
 
-	[DDLRegistration(0xc30a869eu)]
+	[DDLRegistration(0x80bee3dbu)]
 	public bool GroundReticle { get; set; } = false;
 
-	[DDLRegistration(0xc30a869eu)]
+	[DDLRegistration(0x0547cb0du)]
 	public bool SetLandPosToGround { get; set; } = false;
 
 	public new static GrenadeShotMotionPrius Create(DDLObject ddl) => new(ddl);

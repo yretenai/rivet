@@ -21,16 +21,16 @@ public class CinematicCameraOutOptionsEvent : EventBase, IDDLObjectType<Cinemati
 		FreezeOptions = ddl.GetObject<CameraFreezeOptions>(0x3f45b040u);
 	}
 
-	[DDLRegistration(0xded50f59u, description: "Set on to use a standard RelativeSlerp blend")]
+	[DDLRegistration(0xb30b8618u, description: "Set on to use a standard RelativeSlerp blend")]
 	public bool UseRelativeBlend { get; set; } = false;
 
-	[DDLRegistration(0xded50f59u, description: "Set on to use a context-snap blend")]
+	[DDLRegistration(0x8c0e4106u, description: "Set on to use a context-snap blend")]
 	public bool UseContextSnapBlend { get; set; } = false;
 
-	[DDLRegistration(0xded50f59u, description: "Update the gameplay camera's reference matrix to the camera target's current matrix upon activation.")]
+	[DDLRegistration(0x90c06781u, description: "Update the gameplay camera's reference matrix to the camera target's current matrix upon activation.")]
 	public bool UpdateReferenceMatrix { get; set; } = false;
 
-	[DDLRegistration(0xded50f59u, "Freeze Options")]
+	[DDLRegistration(0x3f45b040u, "Freeze Options")]
 	public CameraFreezeOptions? FreezeOptions { get; set; } = default;
 
 	public new static CinematicCameraOutOptionsEvent Create(DDLObject ddl) => new(ddl);

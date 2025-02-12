@@ -19,10 +19,10 @@ public class OutputNodeStringHashDef : OutputNodeBaseDef, IDDLObjectType<OutputN
 		Out = ddl.GetObject<OutputPlugStringHash>(0x93bf4450u);
 	}
 
-	[DDLRegistration(0xed00cd61u)]
+	[DDLRegistration(0x6a84a393u)]
 	public InputPlugStringHash? In { get; set; } = default;
 
-	[DDLRegistration(0xed00cd61u)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugStringHash? Out { get; set; } = default;
 
 	public new static OutputNodeStringHashDef Create(DDLObject ddl) => new(ddl);

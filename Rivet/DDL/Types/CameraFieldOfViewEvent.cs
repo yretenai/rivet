@@ -18,7 +18,7 @@ public class CameraFieldOfViewEvent : EventBase, IDDLObjectType<CameraFieldOfVie
 		FieldOfView = ddl.GetValue<float>(0x0a766be7u, FieldOfView);
 	}
 
-	[DDLRegistration(0xaa7c5b13u, "Field Of View")]
+	[DDLRegistration(0x0a766be7u, "Field Of View")]
 	public float FieldOfView { get; set; } = 0.00f;
 
 	public new static CameraFieldOfViewEvent Create(DDLObject ddl) => new(ddl);

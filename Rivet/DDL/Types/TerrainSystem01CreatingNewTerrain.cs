@@ -74,175 +74,175 @@ public class TerrainSystem01CreatingNewTerrain : DDLObjectType, IDDLObjectType<T
 		Line58 = ddl.GetString(0x7cd4c33c) ?? Line58;
 	}
 
-	[DDLRegistration(0x41cce5ebu, description: "To create a new piece of terrain, simply open the Asset Wizard, select")]
+	[DDLRegistration(0x787f8fddu, description: "To create a new piece of terrain, simply open the Asset Wizard, select")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<i>Terrain</i>, then fill out the options.  Note that while a terrain instance can")]
+	[DDLRegistration(0xe176de67u, description: "<i>Terrain</i>, then fill out the options.  Note that while a terrain instance can")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "be scaled in the Level Editor, the <i>Height</i> field represents the default height")]
+	[DDLRegistration(0x9671eef1u, description: "be scaled in the Level Editor, the <i>Height</i> field represents the default height")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "for placed instances.  Viewing a piece of terrain in the Asset Editor will also")]
+	[DDLRegistration(0x08157b52u, description: "for placed instances.  Viewing a piece of terrain in the Asset Editor will also")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "use this height.")]
+	[DDLRegistration(0x7f124bc4u, description: "use this height.")]
 	public string? Line05 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br><br>")]
+	[DDLRegistration(0xe61b1a7eu, description: "<br><br>")]
 	public string? Line06 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "Creating a piece of terrain will create 9 assets.  Assuming the new terrain is")]
+	[DDLRegistration(0x911c2ae8u, description: "Creating a piece of terrain will create 9 assets.  Assuming the new terrain is")]
 	public string? Line07 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "called <i>my_terrain</i>, the following assets will be created:")]
+	[DDLRegistration(0x01a33779u, description: "called <i>my_terrain</i>, the following assets will be created:")]
 	public string? Line08 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br><br>")]
+	[DDLRegistration(0x76a407efu, description: "<br><br>")]
 	public string? Line09 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<b>my_terrain.terrain</b>")]
+	[DDLRegistration(0x16638e0au, description: "<b>my_terrain.terrain</b>")]
 	public string? Line10 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br><br>")]
+	[DDLRegistration(0x6164be9cu, description: "<br><br>")]
 	public string? Line11 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "This is the actual terrain asset.  A terrain asset is basically just a")]
+	[DDLRegistration(0xf86def26u, description: "This is the actual terrain asset.  A terrain asset is basically just a")]
 	public string? Line12 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "container asset that points to a texture for the heightfield, a texture for the")]
+	[DDLRegistration(0x8f6adfb0u, description: "container asset that points to a texture for the heightfield, a texture for the")]
 	public string? Line13 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "splatmask, and a material.  It also contains a few extra textures that are only")]
+	[DDLRegistration(0x110e4a13u, description: "splatmask, and a material.  It also contains a few extra textures that are only")]
 	public string? Line14 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "used when painting in the editor.")]
+	[DDLRegistration(0x66097a85u, description: "used when painting in the editor.")]
 	public string? Line15 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br><br>")]
+	[DDLRegistration(0xff002b3fu, description: "<br><br>")]
 	public string? Line16 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<b>my_terrain_heightfield.png</b>")]
+	[DDLRegistration(0x88071ba9u, description: "<b>my_terrain_heightfield.png</b>")]
 	public string? Line17 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br>")]
+	[DDLRegistration(0x18b80638u, description: "<br>")]
 	public string? Line18 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<b>my_terrain_heightfield.texture</b>")]
+	[DDLRegistration(0x6fbf36aeu, description: "<b>my_terrain_heightfield.texture</b>")]
 	public string? Line19 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br><br>")]
+	[DDLRegistration(0x3d4eddc9u, description: "<br><br>")]
 	public string? Line20 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "This is the heightfield that will be rendered in the game.  This a simple 2D")]
+	[DDLRegistration(0x4a49ed5fu, description: "This is the heightfield that will be rendered in the game.  This a simple 2D")]
 	public string? Line21 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "texture that has a 16-bit grayscale .png file for the source path.  This should")]
+	[DDLRegistration(0xd340bce5u, description: "texture that has a 16-bit grayscale .png file for the source path.  This should")]
 	public string? Line22 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "not be edited outside the terrain editor.")]
+	[DDLRegistration(0xa4478c73u, description: "not be edited outside the terrain editor.")]
 	public string? Line23 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br><br>")]
+	[DDLRegistration(0x3a2319d0u, description: "<br><br>")]
 	public string? Line24 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<b>my_terrain_heightfield_paint.png</b>")]
+	[DDLRegistration(0x4d242946u, description: "<b>my_terrain_heightfield_paint.png</b>")]
 	public string? Line25 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br>")]
+	[DDLRegistration(0xd42d78fcu, description: "<br>")]
 	public string? Line26 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<b>my_terrain_heightfield_paint.texture</b>")]
+	[DDLRegistration(0xa32a486au, description: "<b>my_terrain_heightfield_paint.texture</b>")]
 	public string? Line27 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br><br>")]
+	[DDLRegistration(0x339555fbu, description: "<br><br>")]
 	public string? Line28 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "This is the heightfield that can be painted in the tool.  This is a 2D texture")]
+	[DDLRegistration(0x4492656du, description: "This is the heightfield that can be painted in the tool.  This is a 2D texture")]
 	public string? Line29 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "array.  Each image in the array should be a 16-bit grayscale .png.  The .png")]
+	[DDLRegistration(0x2455ec88u, description: "array.  Each image in the array should be a 16-bit grayscale .png.  The .png")]
 	public string? Line30 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "specified by the source path in the texture is the user-painted layer of the")]
+	[DDLRegistration(0x5352dc1eu, description: "specified by the source path in the texture is the user-painted layer of the")]
 	public string? Line31 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "heightfield (there is only one).  The remaining images in the array are images")]
+	[DDLRegistration(0xca5b8da4u, description: "heightfield (there is only one).  The remaining images in the array are images")]
 	public string? Line32 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "that can be generated by DCC tools.  These images should also all be 16-bit")]
+	[DDLRegistration(0xbd5cbd32u, description: "that can be generated by DCC tools.  These images should also all be 16-bit")]
 	public string? Line33 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "grayscale .png files.  The DCC-generated images and the paint layer are summed")]
+	[DDLRegistration(0x23382891u, description: "grayscale .png files.  The DCC-generated images and the paint layer are summed")]
 	public string? Line34 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "up to form the final composite layer (along with any procedurally-generated")]
+	[DDLRegistration(0x543f1807u, description: "up to form the final composite layer (along with any procedurally-generated")]
 	public string? Line35 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "things like roads).")]
+	[DDLRegistration(0xcd3649bdu, description: "things like roads).")]
 	public string? Line36 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br><br>")]
+	[DDLRegistration(0xba31792bu, description: "<br><br>")]
 	public string? Line37 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<b>my_terrain_splatmask.png</b>")]
+	[DDLRegistration(0x2a8e64bau, description: "<b>my_terrain_splatmask.png</b>")]
 	public string? Line38 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br>")]
+	[DDLRegistration(0x5d89542cu, description: "<br>")]
 	public string? Line39 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<b>my_terrain_splatmask.texture</b>")]
+	[DDLRegistration(0x6b147a4fu, description: "<b>my_terrain_splatmask.texture</b>")]
 	public string? Line40 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br><br>")]
+	[DDLRegistration(0x1c134ad9u, description: "<br><br>")]
 	public string? Line41 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "This is the splatmask that will be rendered in the game.  This is a simple 2D")]
+	[DDLRegistration(0x851a1b63u, description: "This is the splatmask that will be rendered in the game.  This is a simple 2D")]
 	public string? Line42 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "texture that has an 8-bit RGBA .png file for the source path.  This should not")]
+	[DDLRegistration(0xf21d2bf5u, description: "texture that has an 8-bit RGBA .png file for the source path.  This should not")]
 	public string? Line43 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "be edited outside the terrain editor.")]
+	[DDLRegistration(0x6c79be56u, description: "be edited outside the terrain editor.")]
 	public string? Line44 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br><br>")]
+	[DDLRegistration(0x1b7e8ec0u, description: "<br><br>")]
 	public string? Line45 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<b>my_terrain_splatmask_paint.png</b>")]
+	[DDLRegistration(0x8277df7au, description: "<b>my_terrain_splatmask_paint.png</b>")]
 	public string? Line46 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br>")]
+	[DDLRegistration(0xf570efecu, description: "<br>")]
 	public string? Line47 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<b>my_terrain_splatmask_paint.texture</b>")]
+	[DDLRegistration(0x65cff27du, description: "<b>my_terrain_splatmask_paint.texture</b>")]
 	public string? Line48 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "<br><br>")]
+	[DDLRegistration(0x12c8c2ebu, description: "<br><br>")]
 	public string? Line49 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "This is the splatmask that can be paintd by the tool.  This is a 2D texture")]
+	[DDLRegistration(0x05087b98u, description: "This is the splatmask that can be paintd by the tool.  This is a 2D texture")]
 	public string? Line51 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "array.  Each image in the a rray should be an 8-bit RGBA .png.  The .png")]
+	[DDLRegistration(0x9c012a22u, description: "array.  Each image in the a rray should be an 8-bit RGBA .png.  The .png")]
 	public string? Line52 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "specified by the source path in the texture is the user-painted layer of the")]
+	[DDLRegistration(0xeb061ab4u, description: "specified by the source path in the texture is the user-painted layer of the")]
 	public string? Line53 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "splatmask (there is only one).  The remaining images in the array are images")]
+	[DDLRegistration(0x75628f17u, description: "splatmask (there is only one).  The remaining images in the array are images")]
 	public string? Line54 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "that can be generated by DCC tools.  These images should laso be 8-bit RGBA")]
+	[DDLRegistration(0x0265bf81u, description: "that can be generated by DCC tools.  These images should laso be 8-bit RGBA")]
 	public string? Line55 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: ".png files.  The DCC-generated images and the paint layer are summed up to form")]
+	[DDLRegistration(0x9b6cee3bu, description: ".png files.  The DCC-generated images and the paint layer are summed up to form")]
 	public string? Line56 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "the final composite layer (along with any procedurally-generated things like")]
+	[DDLRegistration(0xec6bdeadu, description: "the final composite layer (along with any procedurally-generated things like")]
 	public string? Line57 { get; set; } = default;
 
-	[DDLRegistration(0x41cce5ebu, description: "roads).")]
+	[DDLRegistration(0x7cd4c33cu, description: "roads).")]
 	public string? Line58 { get; set; } = default;
 
 	public static TerrainSystem01CreatingNewTerrain Create(DDLObject ddl) => new(ddl);

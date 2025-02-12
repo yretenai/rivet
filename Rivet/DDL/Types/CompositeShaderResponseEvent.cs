@@ -27,34 +27,34 @@ public class CompositeShaderResponseEvent : ResponseEvent, IDDLObjectType<Compos
 		Remove = ddl.GetValue<bool>(0x56f85357u, Remove);
 	}
 
-	[DDLRegistration(0x4c2ed47eu, description: "The material/materialgraph asset to add/remove as a pre-applied composite shader on the actor.")]
+	[DDLRegistration(0xea318765u, description: "The material/materialgraph asset to add/remove as a pre-applied composite shader on the actor.")]
 	public RivetAssetId PreShader { get; set; } = default;
 
-	[DDLRegistration(0x4c2ed47eu, description: "The material/materialgraph asset to add/remove as a post-applied composite shader on the actor.")]
+	[DDLRegistration(0x3e4aa554u, description: "The material/materialgraph asset to add/remove as a post-applied composite shader on the actor.")]
 	public RivetAssetId PostShader { get; set; } = default;
 
-	[DDLRegistration(0x4c2ed47eu)]
+	[DDLRegistration(0x9ee519ebu)]
 	public bool AffectSelf { get; set; } = true;
 
-	[DDLRegistration(0x4c2ed47eu)]
+	[DDLRegistration(0x484b14f6u)]
 	public bool AffectAttachments { get; set; } = false;
 
-	[DDLRegistration(0x4c2ed47eu)]
+	[DDLRegistration(0x425dd614u)]
 	public bool AffectHead { get; set; } = false;
 
-	[DDLRegistration(0x4c2ed47eu)]
+	[DDLRegistration(0x79594191u)]
 	public bool AffectHair { get; set; } = false;
 
-	[DDLRegistration(0x4c2ed47eu, description: "Attempts to use the head model assetname as the material mapping name")]
+	[DDLRegistration(0x7dcc2f62u, description: "Attempts to use the head model assetname as the material mapping name")]
 	public bool UseHeadAsMaterialMapping { get; set; } = false;
 
-	[DDLRegistration(0x4c2ed47eu, description: "Should we always cast shadows, never cast shadows, or dissolve shadows normally using the pre-shader?<br>Whether or not shadows are cast is based on these rules:<br><br>1. If a shader wants to disable shadows completely, shadows will be disabled regardless of the other shaders' values.<br><br>2. If no shader wants shadows disabled completely, but a shader wants to always cast shadows, complete shadows will be cast.<br><br>3. Finally, if no shader wants shadows to always be enabled or disabled, shadows will dissolve normally using the preshader transparency.")]
+	[DDLRegistration(0xae681791u, description: "Should we always cast shadows, never cast shadows, or dissolve shadows normally using the pre-shader?<br>Whether or not shadows are cast is based on these rules:<br><br>1. If a shader wants to disable shadows completely, shadows will be disabled regardless of the other shaders' values.<br><br>2. If no shader wants shadows disabled completely, but a shader wants to always cast shadows, complete shadows will be cast.<br><br>3. Finally, if no shader wants shadows to always be enabled or disabled, shadows will dissolve normally using the preshader transparency.")]
 	public x32cc2d2c DesiredShadowState { get; set; } = x32cc2d2c.CanDissolveShadows;
 
-	[DDLRegistration(0x4c2ed47eu, description: "The Maya material mapping to add this composite shader to.")]
+	[DDLRegistration(0x981e6927u, description: "The Maya material mapping to add this composite shader to.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x4c2ed47eu, description: "Remove the specified composite shader from the actor.")]
+	[DDLRegistration(0x56f85357u, description: "Remove the specified composite shader from the actor.")]
 	public bool Remove { get; set; } = false;
 
 	public new static CompositeShaderResponseEvent Create(DDLObject ddl) => new(ddl);

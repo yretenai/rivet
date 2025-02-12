@@ -19,10 +19,10 @@ public class GetAmmoActionPrius : DDLObjectType, IDDLObjectType<GetAmmoActionPri
 		AmmoItemConfig = ddl.GetValue<RivetAssetId>(0x7151e5a4u, AmmoItemConfig);
 	}
 
-	[DDLRegistration(0x330a0883u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Weapon;
 
-	[DDLRegistration(0x330a0883u, description: "The item config for the ammo to get - NOT the weapon config.")]
+	[DDLRegistration(0x7151e5a4u, description: "The item config for the ammo to get - NOT the weapon config.")]
 	public RivetAssetId AmmoItemConfig { get; set; } = default;
 
 	public static GetAmmoActionPrius Create(DDLObject ddl) => new(ddl);

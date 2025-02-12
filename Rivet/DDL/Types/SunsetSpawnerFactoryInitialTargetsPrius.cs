@@ -23,22 +23,22 @@ public class SunsetSpawnerFactoryInitialTargetsPrius : DDLObjectType, IDDLObject
 		TargetsUnlosable = ddl.GetValue<bool>(0x0ceff7f9u, TargetsUnlosable);
 	}
 
-	[DDLRegistration(0xd0680923u, description: "Target group to engage")]
+	[DDLRegistration(0xd22460ecu, description: "Target group to engage")]
 	public uint TargetGroupHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd0680923u, description: "Time to keep the forcing the engagement")]
+	[DDLRegistration(0x96eb524du, description: "Time to keep the forcing the engagement")]
 	public float TargetTime { get; set; } = 5.00f;
 
-	[DDLRegistration(0xd0680923u, description: "Amount of aggro to force on the engagement")]
+	[DDLRegistration(0x504e1083u, description: "Amount of aggro to force on the engagement")]
 	public float Aggro { get; set; } = 100.00f;
 
-	[DDLRegistration(0xd0680923u, description: "True to wait for the bot intro to finish before starting the timer")]
+	[DDLRegistration(0x306e249au, description: "True to wait for the bot intro to finish before starting the timer")]
 	public bool WaitForIntro { get; set; } = true;
 
-	[DDLRegistration(0xd0680923u, description: "True to wait for the targets to become targetable before starting the timer")]
+	[DDLRegistration(0x533ee021u, description: "True to wait for the targets to become targetable before starting the timer")]
 	public bool WaitForTargetsTargetable { get; set; } = true;
 
-	[DDLRegistration(0xd0680923u, description: "Targets will be marked as unlosable")]
+	[DDLRegistration(0x0ceff7f9u, description: "Targets will be marked as unlosable")]
 	public bool TargetsUnlosable { get; set; } = false;
 
 	public static SunsetSpawnerFactoryInitialTargetsPrius Create(DDLObject ddl) => new(ddl);

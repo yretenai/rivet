@@ -18,7 +18,7 @@ public class EllipseCrossSection : CrossSectionChoice, IDDLObjectType<EllipseCro
 		Dimensons = ddl.GetObject<DDLVector2>(0x36f67fbau);
 	}
 
-	[DDLRegistration(0x37042d3cu, description: "Width and Height of Ellipse.")]
+	[DDLRegistration(0x36f67fbau, description: "Width and Height of Ellipse.")]
 	public DDLVector2? Dimensons { get; set; } = default;
 
 	public new static EllipseCrossSection Create(DDLObject ddl) => new(ddl);

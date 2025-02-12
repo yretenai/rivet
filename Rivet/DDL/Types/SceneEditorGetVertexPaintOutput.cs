@@ -18,7 +18,7 @@ public class SceneEditorGetVertexPaintOutput : DDLObjectType, IDDLObjectType<Sce
 		VertexPaintNodes = ddl.GetDictionary<RivetAssetId, VertexPaintNode>(0xb9ed55e1, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VertexPaintNode>(mapId));
 	}
 
-	[DDLRegistration(0xc5b2c017u)]
+	[DDLRegistration(0xb9ed55e1u)]
 	public Dictionary<RivetAssetId, VertexPaintNode?> VertexPaintNodes { get; set; } = [];
 
 	public static SceneEditorGetVertexPaintOutput Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class MissionStateTriggerPrius_Tools : AbstractTriggerPrius_Tools, IDDLOb
 		Failed = ddl.GetValue<bool>(0xa0f3ed10u, Failed);
 	}
 
-	[DDLRegistration(0x1bd9e6e3u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x1bd9e6e3u, description: "Load this overlay if this mission is inactive.")]
+	[DDLRegistration(0x71d2b390u, description: "Load this overlay if this mission is inactive.")]
 	public bool Inactive { get; set; } = false;
 
-	[DDLRegistration(0x1bd9e6e3u, description: "Load this overlay if this mission is available.")]
+	[DDLRegistration(0x27723b89u, description: "Load this overlay if this mission is available.")]
 	public bool Available { get; set; } = false;
 
-	[DDLRegistration(0x1bd9e6e3u, description: "Load this overlay if this mission is active.")]
+	[DDLRegistration(0x7566b265u, description: "Load this overlay if this mission is active.")]
 	public bool Active { get; set; } = false;
 
-	[DDLRegistration(0x1bd9e6e3u, description: "Load this overlay if this mission is cleaning up.")]
+	[DDLRegistration(0xcba257e1u, description: "Load this overlay if this mission is cleaning up.")]
 	public bool Cleanup { get; set; } = false;
 
-	[DDLRegistration(0x1bd9e6e3u, description: "Load this overlay if this mission is complete.")]
+	[DDLRegistration(0xb8666d53u, description: "Load this overlay if this mission is complete.")]
 	public bool Complete { get; set; } = false;
 
-	[DDLRegistration(0x1bd9e6e3u, description: "Load this overlay if this mission is failed.")]
+	[DDLRegistration(0xa0f3ed10u, description: "Load this overlay if this mission is failed.")]
 	public bool Failed { get; set; } = false;
 
 	public new static MissionStateTriggerPrius_Tools Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class VignetteSettingsDef : DDLObjectType, IDDLObjectType<VignetteSetting
 		CenterClear = ddl.GetValue<float>(0xd92efcf1u, CenterClear);
 	}
 
-	[DDLRegistration(0x539a12f7u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0x539a12f7u, description: "The intensity of the darkening effect")]
+	[DDLRegistration(0x6b4f279eu, description: "The intensity of the darkening effect")]
 	public float Intensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x539a12f7u, description: "The radius of the undarkened circle in the center of the screen (0.5 means half the distance from the center to the farther screen edge)")]
+	[DDLRegistration(0xd92efcf1u, description: "The radius of the undarkened circle in the center of the screen (0.5 means half the distance from the center to the farther screen edge)")]
 	public float CenterClear { get; set; } = 0.50f;
 
 	public static VignetteSettingsDef Create(DDLObject ddl) => new(ddl);

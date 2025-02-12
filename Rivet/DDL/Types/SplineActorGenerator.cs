@@ -19,10 +19,10 @@ public class SplineActorGenerator : SplineGenerator, IDDLObjectType<SplineActorG
 		Actor = ddl.GetValue<RivetAssetId>(0x5d269a38u, Actor);
 	}
 
-	[DDLRegistration(0x66f4581bu, "Actor Options", "Choose actor type to generate")]
+	[DDLRegistration(0xedeb4833u, "Actor Options", "Choose actor type to generate")]
 	public ActorOption GenActor { get; set; } = ActorOption.None;
 
-	[DDLRegistration(0x66f4581bu, "Template Actor", "Actor Template for Curve or Model")]
+	[DDLRegistration(0x5d269a38u, "Template Actor", "Actor Template for Curve or Model")]
 	public RivetAssetId Actor { get; set; } = default;
 
 	public new static SplineActorGenerator Create(DDLObject ddl) => new(ddl);

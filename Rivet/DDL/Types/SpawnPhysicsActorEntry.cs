@@ -24,25 +24,25 @@ public class SpawnPhysicsActorEntry : DDLObjectType, IDDLObjectType<SpawnPhysics
 		FadeTime = ddl.GetValue<float>(0x8833d162u, FadeTime);
 	}
 
-	[DDLRegistration(0x83b8c306u, description: "The actor to spawn for this index.")]
+	[DDLRegistration(0x9187654bu, description: "The actor to spawn for this index.")]
 	public RivetAssetId SpawnActor { get; set; } = default;
 
-	[DDLRegistration(0x83b8c306u, description: "Locator to spawn the object at and take the orientation of.")]
+	[DDLRegistration(0x52bc144eu, description: "Locator to spawn the object at and take the orientation of.")]
 	public string? SpawnLocator { get; set; } = "locatorName";
 
-	[DDLRegistration(0x83b8c306u, description: "Offset from the above locator for our spawn position.")]
+	[DDLRegistration(0xaeb205ceu, description: "Offset from the above locator for our spawn position.")]
 	public DDLVector3? SpawnOffset { get; set; } = default;
 
-	[DDLRegistration(0x83b8c306u, description: "Force to apply on the object when we spawn it.")]
+	[DDLRegistration(0x429ab09au, description: "Force to apply on the object when we spawn it.")]
 	public DDLVector3? SpawnForce { get; set; } = default;
 
-	[DDLRegistration(0x83b8c306u, description: "Min time until we start fading out.")]
+	[DDLRegistration(0xffeb4da3u, description: "Min time until we start fading out.")]
 	public float FadeDelayMin { get; set; } = 3.00f;
 
-	[DDLRegistration(0x83b8c306u, description: "Max time until we start fading out.")]
+	[DDLRegistration(0xc3e672fau, description: "Max time until we start fading out.")]
 	public float FadeDelayMax { get; set; } = 6.00f;
 
-	[DDLRegistration(0x83b8c306u, description: "How long we take to fade out.")]
+	[DDLRegistration(0x8833d162u, description: "How long we take to fade out.")]
 	public float FadeTime { get; set; } = 0.50f;
 
 	public static SpawnPhysicsActorEntry Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class AimAssistTargetConfig : ConfigBase, IDDLObjectType<AimAssistTargetC
 		BSphereInclusion = ddl.GetValue<bool>(0x26b1268bu, BSphereInclusion);
 	}
 
-	[DDLRegistration(0x65c85e9au, "Assist Zones")]
+	[DDLRegistration(0xa3ef3fc4u, "Assist Zones")]
 	public List<AimAssistTargetZoneListItem?> AssistZones { get; set; } = [];
 
-	[DDLRegistration(0x65c85e9au, "Snap Locations")]
+	[DDLRegistration(0xe25d1b9cu, "Snap Locations")]
 	public List<AimAssistSnapLocationListItem?> SnapLocations { get; set; } = [];
 
-	[DDLRegistration(0x65c85e9au, "Auto Target Locations")]
+	[DDLRegistration(0x42f4ba9bu, "Auto Target Locations")]
 	public List<AimAssistAutoTargetLocationListItem?> AutoTargetLocations { get; set; } = [];
 
-	[DDLRegistration(0x65c85e9au, description: "How much this object takes priority over other targets, default = 1")]
+	[DDLRegistration(0x76a817c3u, description: "How much this object takes priority over other targets, default = 1")]
 	public float TargetPriority { get; set; } = 1.00f;
 
-	[DDLRegistration(0x65c85e9au, description: "How much to scale the centering factor on this target")]
+	[DDLRegistration(0x586a4433u, description: "How much to scale the centering factor on this target")]
 	public float StrafeCenteringScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x65c85e9au, description: "Enable or disable existing config.")]
+	[DDLRegistration(0x5113d8bcu, description: "Enable or disable existing config.")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x65c85e9au)]
+	[DDLRegistration(0x26b1268bu)]
 	public bool BSphereInclusion { get; set; } = true;
 
 	public new static AimAssistTargetConfig Create(DDLObject ddl) => new(ddl);

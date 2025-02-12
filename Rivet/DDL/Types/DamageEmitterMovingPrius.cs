@@ -20,13 +20,13 @@ public class DamageEmitterMovingPrius : DamageEmitterPrius, IDDLObjectType<Damag
 		PlayerDistanceCheck = ddl.GetValue<float>(0x45b1ac1fu, PlayerDistanceCheck);
 	}
 
-	[DDLRegistration(0x4c680bedu, "Damaging Speed Min")]
+	[DDLRegistration(0x3f22460fu, "Damaging Speed Min")]
 	public float DamagingSpeedMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4c680bedu)]
+	[DDLRegistration(0x2e1a60eau)]
 	public bool AddDepenetrationHelper { get; set; } = false;
 
-	[DDLRegistration(0x4c680bedu, description: "If non-negative, doesn't do anything (against ANY target) if the player is not with this range")]
+	[DDLRegistration(0x45b1ac1fu, description: "If non-negative, doesn't do anything (against ANY target) if the player is not with this range")]
 	public float PlayerDistanceCheck { get; set; } = -1.00f;
 
 	public new static DamageEmitterMovingPrius Create(DDLObject ddl) => new(ddl);

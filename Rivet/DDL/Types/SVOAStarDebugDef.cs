@@ -24,25 +24,25 @@ public class SVOAStarDebugDef : DDLObjectType, IDDLObjectType<SVOAStarDebugDef> 
 		SmoothPathSteps = ddl.GetObjects<Nav3DSmoothPathStepElement>(0xa6e24f1du);
 	}
 
-	[DDLRegistration(0x08487e95u)]
+	[DDLRegistration(0x862a994eu)]
 	public DDLVector3? Start { get; set; } = default;
 
-	[DDLRegistration(0x08487e95u)]
+	[DDLRegistration(0x2d71c6b3u)]
 	public List<SVOAStarDebugStepElement?> Steps { get; set; } = [];
 
-	[DDLRegistration(0x08487e95u)]
+	[DDLRegistration(0x2aa91a78u)]
 	public DDLVector3? End { get; set; } = default;
 
-	[DDLRegistration(0x08487e95u)]
+	[DDLRegistration(0x847a9164u)]
 	public List<DDLVector3?> PathPoints { get; set; } = [];
 
-	[DDLRegistration(0x08487e95u)]
+	[DDLRegistration(0x3e5c37e4u)]
 	public List<ulong> PathHandles { get; set; } = [];
 
-	[DDLRegistration(0x08487e95u)]
+	[DDLRegistration(0xac341ebdu)]
 	public Dictionary<ulong, bool> SmoothingConsideredNeighbors { get; set; } = [];
 
-	[DDLRegistration(0x08487e95u)]
+	[DDLRegistration(0xa6e24f1du)]
 	public List<Nav3DSmoothPathStepElement?> SmoothPathSteps { get; set; } = [];
 
 	public static SVOAStarDebugDef Create(DDLObject ddl) => new(ddl);

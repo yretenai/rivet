@@ -18,7 +18,7 @@ public class UDSWebApiTrophyLinks : DDLObjectType, IDDLObjectType<UDSWebApiTroph
 		ParentTrophyGroup = ddl.GetObject<UDSWebApiObjectLink>(0xc30d3449u);
 	}
 
-	[DDLRegistration(0x51174d88u)]
+	[DDLRegistration(0xc30d3449u)]
 	public UDSWebApiObjectLink? ParentTrophyGroup { get; set; } = default;
 
 	public static UDSWebApiTrophyLinks Create(DDLObject ddl) => new(ddl);

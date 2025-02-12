@@ -19,10 +19,10 @@ public class WwiseEvent : DDLObjectType, IDDLObjectType<WwiseEvent> {
 		SoundEventId = ddl.GetValue<uint>(0x813c2830u, SoundEventId);
 	}
 
-	[DDLRegistration(0xcebb3bc3u)]
+	[DDLRegistration(0x9c64655au)]
 	public string? SoundEventName { get; set; } = default;
 
-	[DDLRegistration(0xcebb3bc3u, description: "Sound Event Names.")]
+	[DDLRegistration(0x813c2830u, description: "Sound Event Names.")]
 	public uint SoundEventId { get; set; } = 0x00000000;
 
 	public static WwiseEvent Create(DDLObject ddl) => new(ddl);

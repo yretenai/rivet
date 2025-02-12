@@ -23,22 +23,22 @@ public class HazardNestPrius : NestBotSpawnerPrius, IDDLObjectType<HazardNestPri
 		ShotDelay = ddl.GetValue<float>(0xf6e0e4e5u, ShotDelay);
 	}
 
-	[DDLRegistration(0xe34c48c1u)]
+	[DDLRegistration(0x5457596au)]
 	public RivetAssetId BeamActor { get; set; } = default;
 
-	[DDLRegistration(0xe34c48c1u)]
+	[DDLRegistration(0x99034ff1u)]
 	public float AcquireTargetCooldown { get; set; } = 2.00f;
 
-	[DDLRegistration(0xe34c48c1u)]
+	[DDLRegistration(0x286962d4u)]
 	public float FiringCooldown { get; set; } = 2.00f;
 
-	[DDLRegistration(0xe34c48c1u)]
+	[DDLRegistration(0x4fa7423cu)]
 	public float TargetRange { get; set; } = 60.00f;
 
-	[DDLRegistration(0xe34c48c1u)]
+	[DDLRegistration(0xb5b9f12fu)]
 	public float TargetingDuration { get; set; } = 1.50f;
 
-	[DDLRegistration(0xe34c48c1u)]
+	[DDLRegistration(0xf6e0e4e5u)]
 	public float ShotDelay { get; set; } = 0.50f;
 
 	public new static HazardNestPrius Create(DDLObject ddl) => new(ddl);

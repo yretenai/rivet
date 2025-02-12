@@ -18,7 +18,7 @@ public class AlphaSortPrius : DDLObjectType, IDDLObjectType<AlphaSortPrius> {
 		AlphaSortBias = ddl.GetValue<float>(0x96243d40u, AlphaSortBias);
 	}
 
-	[DDLRegistration(0x7a37a769u)]
+	[DDLRegistration(0x96243d40u)]
 	public float AlphaSortBias { get; set; } = 0.00f;
 
 	public static AlphaSortPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class DimensionalPulseTargetBasePrius : DDLObjectType, IDDLObjectType<Dim
 		EffectChance = ddl.GetValue<float>(0xaed0c581u, EffectChance);
 	}
 
-	[DDLRegistration(0x7974be86u, description: "Whether this pulse target should be enabled and can be chosen.")]
+	[DDLRegistration(0x6f36ca8bu, description: "Whether this pulse target should be enabled and can be chosen.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0x7974be86u, description: "Does this object want to override the chance of being affected by any given pulse? If not, the chance will be taken from the config.")]
+	[DDLRegistration(0xc9e25dadu, description: "Does this object want to override the chance of being affected by any given pulse? If not, the chance will be taken from the config.")]
 	public bool OverrideEffectChance { get; set; } = false;
 
-	[DDLRegistration(0x7974be86u, description: "Chance that a pulse affects this actor.")]
+	[DDLRegistration(0xaed0c581u, description: "Chance that a pulse affects this actor.")]
 	public float EffectChance { get; set; } = 0.50f;
 
 	public static DimensionalPulseTargetBasePrius Create(DDLObject ddl) => new(ddl);

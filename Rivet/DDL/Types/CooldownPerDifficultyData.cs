@@ -19,10 +19,10 @@ public class CooldownPerDifficultyData : DDLObjectType, IDDLObjectType<CooldownP
 		MaxCooldown = ddl.GetValue<float>(0x4a72a46du, MaxCooldown);
 	}
 
-	[DDLRegistration(0x7ebda3f9u)]
+	[DDLRegistration(0x867fdf62u)]
 	public float MinCooldown { get; set; } = -1.00f;
 
-	[DDLRegistration(0x7ebda3f9u)]
+	[DDLRegistration(0x4a72a46du)]
 	public float MaxCooldown { get; set; } = -1.00f;
 
 	public static CooldownPerDifficultyData Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class ComponentEmitterLocalOffsetPrius : ComponentEmitterBasePrius, IDDLO
 		Offset = ddl.GetObject<DDLVector3>(0x677284b7u);
 	}
 
-	[DDLRegistration(0xb24a897cu)]
+	[DDLRegistration(0x13b721dbu)]
 	public bool EmitFromUser { get; set; } = false;
 
-	[DDLRegistration(0xb24a897cu)]
+	[DDLRegistration(0x4cdc032fu)]
 	public bool UseWorldUp { get; set; } = false;
 
-	[DDLRegistration(0xb24a897cu)]
+	[DDLRegistration(0x677284b7u)]
 	public DDLVector3? Offset { get; set; } = default;
 
 	public new static ComponentEmitterLocalOffsetPrius Create(DDLObject ddl) => new(ddl);

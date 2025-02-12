@@ -18,7 +18,7 @@ public class SelectionDataLevelList : DDLObjectType, IDDLObjectType<SelectionDat
 		Items = ddl.GetObjects<LevelListSelectionElement>(0xf84d258cu);
 	}
 
-	[DDLRegistration(0xe91d42fdu)]
+	[DDLRegistration(0xf84d258cu)]
 	public List<LevelListSelectionElement?> Items { get; set; } = [];
 
 	public static SelectionDataLevelList Create(DDLObject ddl) => new(ddl);

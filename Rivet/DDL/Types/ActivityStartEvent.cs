@@ -24,25 +24,25 @@ public class ActivityStartEvent : UDSEventBase, IDDLObjectType<ActivityStartEven
 		DifficultySetting = ddl.GetValue<int>(0x1f96728eu, DifficultySetting);
 	}
 
-	[DDLRegistration(0xdd66122du)]
+	[DDLRegistration(0x875ebf15u)]
 	public string? ActivityId { get; set; } = default;
 
-	[DDLRegistration(0xdd66122du)]
+	[DDLRegistration(0xaabdb556u)]
 	public string? PrimaryActor { get; set; } = default;
 
-	[DDLRegistration(0xdd66122du)]
+	[DDLRegistration(0xc52b223au)]
 	public List<string?> SecondaryActors { get; set; } = [];
 
-	[DDLRegistration(0xdd66122du)]
+	[DDLRegistration(0x7e11af85u)]
 	public List<string?> EquippedMechanics { get; set; } = [];
 
-	[DDLRegistration(0xdd66122du)]
+	[DDLRegistration(0xc74cfc3fu)]
 	public string? ZoneId { get; set; } = default;
 
-	[DDLRegistration(0xdd66122du)]
+	[DDLRegistration(0xef79418eu)]
 	public List<float> MapPosition { get; set; } = [];
 
-	[DDLRegistration(0xdd66122du)]
+	[DDLRegistration(0x1f96728eu)]
 	public int DifficultySetting { get; set; } = 0;
 
 	public new static ActivityStartEvent Create(DDLObject ddl) => new(ddl);

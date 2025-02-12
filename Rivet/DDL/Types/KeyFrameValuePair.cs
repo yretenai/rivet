@@ -19,10 +19,10 @@ public class KeyFrameValuePair : DDLObjectType, IDDLObjectType<KeyFrameValuePair
 		Second = ddl.GetValues<float>(0x88675f0eu);
 	}
 
-	[DDLRegistration(0xda35ff95u)]
+	[DDLRegistration(0x8b222296u)]
 	public List<float> First { get; set; } = [];
 
-	[DDLRegistration(0xda35ff95u)]
+	[DDLRegistration(0x88675f0eu)]
 	public List<float> Second { get; set; } = [];
 
 	public static KeyFrameValuePair Create(DDLObject ddl) => new(ddl);

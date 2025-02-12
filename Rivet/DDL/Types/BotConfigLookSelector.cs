@@ -18,7 +18,7 @@ public class BotConfigLookSelector : ConfigBase, IDDLObjectType<BotConfigLookSel
 		Data = ddl.GetObject<BotLookSelectorData>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0x52cc2949u)]
+	[DDLRegistration(0x9d6333d3u)]
 	public BotLookSelectorData? Data { get; set; } = default;
 
 	public new static BotConfigLookSelector Create(DDLObject ddl) => new(ddl);

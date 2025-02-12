@@ -21,16 +21,16 @@ public class Bounce : GrenadeLandMode, IDDLObjectType<Bounce> {
 		IgnoreSpeedIfOnStopSlope = ddl.GetValue<bool>(0xdf0e5e43u, IgnoreSpeedIfOnStopSlope);
 	}
 
-	[DDLRegistration(0xbc44ba3eu, "Bounce Data")]
+	[DDLRegistration(0x9b9c4c11u, "Bounce Data")]
 	public List<BounceData?> BounceCoefs { get; set; } = [];
 
-	[DDLRegistration(0xbc44ba3eu, "Stop Speed")]
+	[DDLRegistration(0xfbd9fcfau, "Stop Speed")]
 	public float StopSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0xbc44ba3eu, "Stop Slope (cosine of angle)")]
+	[DDLRegistration(0xac334789u, "Stop Slope (cosine of angle)")]
 	public float StopSlope { get; set; } = 0.80f;
 
-	[DDLRegistration(0xbc44ba3eu, "Ignore speed if on a stopping slope")]
+	[DDLRegistration(0xdf0e5e43u, "Ignore speed if on a stopping slope")]
 	public bool IgnoreSpeedIfOnStopSlope { get; set; } = false;
 
 	public new static Bounce Create(DDLObject ddl) => new(ddl);

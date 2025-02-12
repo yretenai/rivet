@@ -19,10 +19,10 @@ public class POIInstanceDataBase : DDLObjectType, IDDLObjectType<POIInstanceData
 		LOSChecks = ddl.GetValue<bool>(0x15c17e95u, LOSChecks);
 	}
 
-	[DDLRegistration(0x9df675ffu, description: "POI offset relative to Actor forward")]
+	[DDLRegistration(0x677284b7u, description: "POI offset relative to Actor forward")]
 	public DDLVector3? Offset { get; set; } = default;
 
-	[DDLRegistration(0x9df675ffu, description: "Determine if POI should do (expensive) Line of Sight checks and disappear when occluded")]
+	[DDLRegistration(0x15c17e95u, description: "Determine if POI should do (expensive) Line of Sight checks and disappear when occluded")]
 	public bool LOSChecks { get; set; } = false;
 
 	public static POIInstanceDataBase Create(DDLObject ddl) => new(ddl);

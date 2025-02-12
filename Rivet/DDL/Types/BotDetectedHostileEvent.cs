@@ -18,7 +18,7 @@ public class BotDetectedHostileEvent : EventBase, IDDLObjectType<BotDetectedHost
 		HostileActor = ddl.GetValue<uint>(0x7d05a7adu, HostileActor);
 	}
 
-	[DDLRegistration(0x922b455eu)]
+	[DDLRegistration(0x7d05a7adu)]
 	public uint HostileActor { get; set; } = 0x00000000;
 
 	public new static BotDetectedHostileEvent Create(DDLObject ddl) => new(ddl);

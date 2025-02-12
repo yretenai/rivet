@@ -21,16 +21,16 @@ public class SkinItemMaterialOverrideListElement : DDLObjectType, IDDLObjectType
 		OverrideList = ddl.GetObjects<SkinItemMaterialOverrideListEntry>(0xeac313d1u);
 	}
 
-	[DDLRegistration(0x7e31316bu, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0x7e31316bu, "Original Material", "Original material that can be overridden")]
+	[DDLRegistration(0x3608a389u, "Original Material", "Original material that can be overridden")]
 	public AssetReferenceDef? OriginalMaterial { get; set; } = default;
 
-	[DDLRegistration(0x7e31316bu, "Secondary Original Material", "Secondary original material that can be overridden")]
+	[DDLRegistration(0x73e10018u, "Secondary Original Material", "Secondary original material that can be overridden")]
 	public AssetReferenceDef? SecondaryOriginalMaterial { get; set; } = default;
 
-	[DDLRegistration(0x7e31316bu, "Override List", "List of material overrides")]
+	[DDLRegistration(0xeac313d1u, "Override List", "List of material overrides")]
 	public List<SkinItemMaterialOverrideListEntry?> OverrideList { get; set; } = [];
 
 	public static SkinItemMaterialOverrideListElement Create(DDLObject ddl) => new(ddl);

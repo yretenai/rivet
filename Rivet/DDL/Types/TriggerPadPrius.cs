@@ -20,13 +20,13 @@ public class TriggerPadPrius : DDLObjectType, IDDLObjectType<TriggerPadPrius> {
 		TriggerTime = ddl.GetValue<float>(0x0b2abdf4u, TriggerTime);
 	}
 
-	[DDLRegistration(0xd824ea3du)]
+	[DDLRegistration(0x6f36ca8bu)]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0xd824ea3du, "Hero use only?", "Whether heroes are the only ones who can trigger this pad.")]
+	[DDLRegistration(0x203a030au, "Hero use only?", "Whether heroes are the only ones who can trigger this pad.")]
 	public bool HeroUseOnly { get; set; } = false;
 
-	[DDLRegistration(0xd824ea3du)]
+	[DDLRegistration(0x0b2abdf4u)]
 	public float TriggerTime { get; set; } = 0.00f;
 
 	public static TriggerPadPrius Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class SkinItemModelVariantOverrideListElement : DDLObjectType, IDDLObject
 		ModelVariantOverride = ddl.GetObject<SkinItemModelVariantOverride>(0x53cc5880u);
 	}
 
-	[DDLRegistration(0x0f686ae9u, "Debug Name", "Debug only name string")]
+	[DDLRegistration(0x4ef19112u, "Debug Name", "Debug only name string")]
 	public string? DebugName { get; set; } = default;
 
-	[DDLRegistration(0x0f686ae9u, "Name LocTag", "Localization tag for name")]
+	[DDLRegistration(0xa0041b54u, "Name LocTag", "Localization tag for name")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0x0f686ae9u, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0x0f686ae9u, "Body Type", "Body Type")]
+	[DDLRegistration(0x1a1c112au, "Body Type", "Body Type")]
 	public x5d60d87e BodyType { get; set; } = x5d60d87e.All;
 
-	[DDLRegistration(0x0f686ae9u, "Model Variant Override", "Model Variant override parameters")]
+	[DDLRegistration(0x53cc5880u, "Model Variant Override", "Model Variant override parameters")]
 	public SkinItemModelVariantOverride? ModelVariantOverride { get; set; } = default;
 
 	public static SkinItemModelVariantOverrideListElement Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PukeEndEvent : EventBase, IDDLObjectType<PukeEndEvent> {
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0x394bde05u)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
 	public new static PukeEndEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class CharacterOptionData : DDLObjectType, IDDLObjectType<CharacterOption
 		MoveAbilities = ddl.GetObject<HeroMoveAbilities>(0xde8da163u);
 	}
 
-	[DDLRegistration(0xe4386a41u)]
+	[DDLRegistration(0xde8da163u)]
 	public HeroMoveAbilities? MoveAbilities { get; set; } = default;
 
 	public static CharacterOptionData Create(DDLObject ddl) => new(ddl);

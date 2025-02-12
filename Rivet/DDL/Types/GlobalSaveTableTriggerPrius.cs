@@ -20,13 +20,13 @@ public class GlobalSaveTableTriggerPrius : BaseCustomOverlayTriggerPrius, IDDLOb
 		CheckType = ddl.GetEnum<x70316bbe>(0xb6b0f22cu, x70316bbeValues.Lookup);
 	}
 
-	[DDLRegistration(0x38f302c7u)]
+	[DDLRegistration(0xa0c58260u)]
 	public string? Key { get; set; } = default;
 
-	[DDLRegistration(0x38f302c7u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 1.00f;
 
-	[DDLRegistration(0x38f302c7u)]
+	[DDLRegistration(0xb6b0f22cu)]
 	public x70316bbe CheckType { get; set; } = x70316bbe.KeyExists;
 
 	public new static GlobalSaveTableTriggerPrius Create(DDLObject ddl) => new(ddl);

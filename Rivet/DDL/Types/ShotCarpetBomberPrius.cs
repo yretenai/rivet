@@ -20,13 +20,13 @@ public class ShotCarpetBomberPrius : GrenadeShotPrius, IDDLObjectType<ShotCarpet
 		ShotData = ddl.GetObject<ShotCarpetBomberData>(0xdcd08e29u);
 	}
 
-	[DDLRegistration(0x1103d7d2u)]
+	[DDLRegistration(0xc8e9910eu)]
 	public WeaponShotData? BomberShot { get; set; } = default;
 
-	[DDLRegistration(0x1103d7d2u)]
+	[DDLRegistration(0x54894358u)]
 	public WeaponShotData? LastBomberShot { get; set; } = default;
 
-	[DDLRegistration(0x1103d7d2u)]
+	[DDLRegistration(0xdcd08e29u)]
 	public ShotCarpetBomberData? ShotData { get; set; } = default;
 
 	public new static ShotCarpetBomberPrius Create(DDLObject ddl) => new(ddl);

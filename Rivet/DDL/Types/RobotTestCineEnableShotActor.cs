@@ -21,16 +21,16 @@ public class RobotTestCineEnableShotActor : DDLObjectType, IDDLObjectType<RobotT
 		ActorName = ddl.GetString(0xcc4a4d21) ?? ActorName;
 	}
 
-	[DDLRegistration(0x927dd4dau, description: "Cinematic shot tuid")]
+	[DDLRegistration(0x18e04a89u, description: "Cinematic shot tuid")]
 	public ulong ShotTuid { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x927dd4dau, description: "Shot Name")]
+	[DDLRegistration(0x2f00034cu, description: "Shot Name")]
 	public string? ShotName { get; set; } = default;
 
-	[DDLRegistration(0x927dd4dau, description: "Cinematic Actor")]
+	[DDLRegistration(0xfbaa04e4u, description: "Cinematic Actor")]
 	public ulong ActorTuid { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x927dd4dau, description: "Actor Name")]
+	[DDLRegistration(0xcc4a4d21u, description: "Actor Name")]
 	public string? ActorName { get; set; } = default;
 
 	public static RobotTestCineEnableShotActor Create(DDLObject ddl) => new(ddl);

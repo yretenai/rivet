@@ -26,31 +26,31 @@ public class VisualEffectParticleMotion : DDLObjectType, IDDLObjectType<VisualEf
 		GlobalForceFields = ddl.GetValue<bool>(0x47c1aadcu, GlobalForceFields);
 	}
 
-	[DDLRegistration(0x13e0c2c3u, "Particle Parent Influence", "Allows World Space particles to inherit parent attachment motion")]
+	[DDLRegistration(0xaa14f6d2u, "Particle Parent Influence", "Allows World Space particles to inherit parent attachment motion")]
 	public VisualEffectFloatKeyFrames? FloatKeyFrames_ParticleParentInfluence { get; set; } = default;
 
-	[DDLRegistration(0x13e0c2c3u, "Particle Spawn Speed")]
+	[DDLRegistration(0xb84ad87eu, "Particle Spawn Speed")]
 	public VisualEffectFloatKeyFrames? FloatKeyFrames_EmissionSpawnSpeed { get; set; } = default;
 
-	[DDLRegistration(0x13e0c2c3u, "Particle Velocity")]
+	[DDLRegistration(0x11623987u, "Particle Velocity")]
 	public VisualEffectVelocityKeyFrames? Float3KeyFrames_ParticleVelocity { get; set; } = default;
 
-	[DDLRegistration(0x13e0c2c3u, "Particle Turbulence")]
+	[DDLRegistration(0x14bf0139u, "Particle Turbulence")]
 	public VisualEffectTurbulenceKeyFrames? Float3KeyFrames_ParticleTurbulence { get; set; } = default;
 
-	[DDLRegistration(0x13e0c2c3u, "Particle Acceleration")]
+	[DDLRegistration(0xc7dc8e4bu, "Particle Acceleration")]
 	public VisualEffectAccelerationKeyFrames? FloatKeyFrames_ParticleAcceleration { get; set; } = default;
 
-	[DDLRegistration(0x13e0c2c3u, "External Forces")]
+	[DDLRegistration(0xc3ad64ffu, "External Forces")]
 	public VisualEffectExternalForces? ExternalForces { get; set; } = default;
 
-	[DDLRegistration(0x13e0c2c3u, "Speed LifeTime Modifier")]
+	[DDLRegistration(0xd9df35b2u, "Speed LifeTime Modifier")]
 	public SpeedLifeTimeModifier? SpeedLifeTimeModifier { get; set; } = default;
 
-	[DDLRegistration(0x13e0c2c3u, "Physics Params")]
+	[DDLRegistration(0x5405ea33u, "Physics Params")]
 	public VisualEffectPhysicsParam? InputPort_PhysicsParam { get; set; } = default;
 
-	[DDLRegistration(0x13e0c2c3u, "Global Force-Fields", "If checked, the emitter will accept force-fields produced by other visual effects")]
+	[DDLRegistration(0x47c1aadcu, "Global Force-Fields", "If checked, the emitter will accept force-fields produced by other visual effects")]
 	public bool GlobalForceFields { get; set; } = true;
 
 	public static VisualEffectParticleMotion Create(DDLObject ddl) => new(ddl);

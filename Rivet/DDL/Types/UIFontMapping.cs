@@ -20,13 +20,13 @@ public class UIFontMapping : DDLObjectType, IDDLObjectType<UIFontMapping> {
 		FontsToReplace = ddl.GetStrings(0x34a083a1u);
 	}
 
-	[DDLRegistration(0x83816584u, description: "The language for which to do the swap.")]
+	[DDLRegistration(0x2edaccc5u, description: "The language for which to do the swap.")]
 	public x0572515d Language { get; set; } = x0572515d.LanguageEnglish;
 
-	[DDLRegistration(0x83816584u, description: "Asset path of font to use for this language.")]
+	[DDLRegistration(0xe004c862u, description: "Asset path of font to use for this language.")]
 	public string? Font { get; set; } = "ui/MyPath/MyFont.ttf";
 
-	[DDLRegistration(0x83816584u, description: "Asset path of font(s) to be replaced.")]
+	[DDLRegistration(0x34a083a1u, description: "Asset path of font(s) to be replaced.")]
 	public List<string?> FontsToReplace { get; set; } = [];
 
 	public static UIFontMapping Create(DDLObject ddl) => new(ddl);

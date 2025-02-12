@@ -23,22 +23,22 @@ public class MeshTriDef : DDLObjectType, IDDLObjectType<MeshTriDef> {
 		SkinIds = ddl.GetValues<ushort>(0xdb38240fu);
 	}
 
-	[DDLRegistration(0x093cd6c1u)]
+	[DDLRegistration(0x7e8e5bd5u)]
 	public List<ushort> PositionIds { get; set; } = [];
 
-	[DDLRegistration(0x093cd6c1u)]
+	[DDLRegistration(0x54779029u)]
 	public List<ushort> NormalIds { get; set; } = [];
 
-	[DDLRegistration(0x093cd6c1u)]
+	[DDLRegistration(0x17c19349u)]
 	public List<ushort> UvIds { get; set; } = [];
 
-	[DDLRegistration(0x093cd6c1u)]
+	[DDLRegistration(0x4f336e99u)]
 	public List<ushort> Uv2Ids { get; set; } = [];
 
-	[DDLRegistration(0x093cd6c1u)]
+	[DDLRegistration(0xae0d868du)]
 	public List<ushort> ColorIds { get; set; } = [];
 
-	[DDLRegistration(0x093cd6c1u)]
+	[DDLRegistration(0xdb38240fu)]
 	public List<ushort> SkinIds { get; set; } = [];
 
 	public static MeshTriDef Create(DDLObject ddl) => new(ddl);

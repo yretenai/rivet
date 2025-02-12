@@ -20,13 +20,13 @@ public class BotConfigHitReact : ConfigBase, IDDLObjectType<BotConfigHitReact> {
 		BodyPartToFilterConfig = ddl.GetValue<RivetAssetId>(0xb736e25cu, BodyPartToFilterConfig);
 	}
 
-	[DDLRegistration(0x0e50934eu)]
+	[DDLRegistration(0x0c36283au)]
 	public HitReactPrius? HitReact { get; set; } = default;
 
-	[DDLRegistration(0x0e50934eu)]
+	[DDLRegistration(0xd16d75b3u)]
 	public PartialReactNonePrius? PartialReact { get; set; } = default;
 
-	[DDLRegistration(0x0e50934eu)]
+	[DDLRegistration(0xb736e25cu)]
 	public RivetAssetId BodyPartToFilterConfig { get; set; } = default;
 
 	public new static BotConfigHitReact Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DamageModifierConditionDamageTypePrius : DamageModifierConditionBas
 		DamageTypeMask = ddl.GetValue<uint>(0xcbea5a5cu, DamageTypeMask);
 	}
 
-	[DDLRegistration(0xe36e290du)]
+	[DDLRegistration(0xcbea5a5cu)]
 	public uint DamageTypeMask { get; set; } = 0x00000000;
 
 	public new static DamageModifierConditionDamageTypePrius Create(DDLObject ddl) => new(ddl);

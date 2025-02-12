@@ -18,7 +18,7 @@ public class Nav3DSmoothPathStepCheckNode : DDLObjectType, IDDLObjectType<Nav3DS
 		Handle = ddl.GetValue<ulong>(0xaff86ebeu, Handle);
 	}
 
-	[DDLRegistration(0x98d06f08u)]
+	[DDLRegistration(0xaff86ebeu)]
 	public ulong Handle { get; set; } = 0x0000000000000000;
 
 	public static Nav3DSmoothPathStepCheckNode Create(DDLObject ddl) => new(ddl);

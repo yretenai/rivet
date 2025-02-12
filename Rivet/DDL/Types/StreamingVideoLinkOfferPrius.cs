@@ -20,13 +20,13 @@ public class StreamingVideoLinkOfferPrius : ProximityOfferPrius, IDDLObjectType<
 		DisableVideoActors = ddl.GetValue<RivetAssetId>(0x4dc128eau, DisableVideoActors);
 	}
 
-	[DDLRegistration(0x7ba52e42u)]
+	[DDLRegistration(0x0fa2be5du)]
 	public string? EnableText { get; set; } = "[BTN_Y] Enable Video";
 
-	[DDLRegistration(0x7ba52e42u, description: "Time to wait to re-enable offer after video stops.")]
+	[DDLRegistration(0x6ccaf00au, description: "Time to wait to re-enable offer after video stops.")]
 	public float ReEnableWaitTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7ba52e42u, description: "Group of actors to disable streaming video on when this one is activated.")]
+	[DDLRegistration(0x4dc128eau, description: "Group of actors to disable streaming video on when this one is activated.")]
 	public RivetAssetId DisableVideoActors { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static StreamingVideoLinkOfferPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class UIIconMarkupConfig : ConfigBase, IDDLObjectType<UIIconMarkupConfig>
 		Markups = ddl.GetObjects<Markup>(0x6e737dfau);
 	}
 
-	[DDLRegistration(0x210f3f65u)]
+	[DDLRegistration(0x13399cbfu)]
 	public List<Icon?> Icons { get; set; } = [];
 
-	[DDLRegistration(0x210f3f65u)]
+	[DDLRegistration(0x6e737dfau)]
 	public List<Markup?> Markups { get; set; } = [];
 
 	public new static UIIconMarkupConfig Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class TerrainSystem03EditingTerrain0221Blur : DDLObjectType, IDDLObjectTy
 		Line02 = ddl.GetString(0xe176de67) ?? Line02;
 	}
 
-	[DDLRegistration(0x0ada8937u, description: "This brush blurs the current target.  The blur accumulates over time.  The")]
+	[DDLRegistration(0x0f78bf4bu, description: "This brush blurs the current target.  The blur accumulates over time.  The")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x0ada8937u, description: "brush parameter <i>Speed</i> indicates how fast the target is blurred as the")]
+	[DDLRegistration(0x787f8fddu, description: "brush parameter <i>Speed</i> indicates how fast the target is blurred as the")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x0ada8937u, description: "target is being painted.")]
+	[DDLRegistration(0xe176de67u, description: "target is being painted.")]
 	public string? Line02 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0221Blur Create(DDLObject ddl) => new(ddl);

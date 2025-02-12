@@ -18,7 +18,7 @@ public class GrenadeShotFiringPrius : LobbedShotFiringPrius, IDDLObjectType<Gren
 		UseTrajectoryComponent = ddl.GetValue<bool>(0x164c3c24u, UseTrajectoryComponent);
 	}
 
-	[DDLRegistration(0x1f57526bu, description: "Use an external component to adjust trajectory to hit a specific aim position.")]
+	[DDLRegistration(0x164c3c24u, description: "Use an external component to adjust trajectory to hit a specific aim position.")]
 	public bool UseTrajectoryComponent { get; set; } = false;
 
 	public new static GrenadeShotFiringPrius Create(DDLObject ddl) => new(ddl);

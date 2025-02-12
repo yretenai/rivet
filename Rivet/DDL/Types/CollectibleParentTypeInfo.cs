@@ -18,7 +18,7 @@ public class CollectibleParentTypeInfo : CollectibleTypeInfoBase, IDDLObjectType
 		Types = ddl.GetObjects<CollectibleTypeEntry>(0x406345f1u);
 	}
 
-	[DDLRegistration(0x2847c2eeu)]
+	[DDLRegistration(0x406345f1u)]
 	public List<CollectibleTypeEntry?> Types { get; set; } = [];
 
 	public new static CollectibleParentTypeInfo Create(DDLObject ddl) => new(ddl);

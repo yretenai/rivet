@@ -21,16 +21,16 @@ public class OnAwarenessChangedActionPrius : DDLObjectType, IDDLObjectType<OnAwa
 		FireIdleOnAwarenessLevelChanged = ddl.GetValue<bool>(0x3ffa91aau, FireIdleOnAwarenessLevelChanged);
 	}
 
-	[DDLRegistration(0x243af3ecu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x243af3ecu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0x243af3ecu, "Start listening on load?", "TRUE if we want to start listening right away")]
+	[DDLRegistration(0xf387b27au, "Start listening on load?", "TRUE if we want to start listening right away")]
 	public bool InitListening { get; set; } = true;
 
-	[DDLRegistration(0x243af3ecu, description: "Doesn't have to go engaged to get the idle plug to fire.")]
+	[DDLRegistration(0x3ffa91aau, description: "Doesn't have to go engaged to get the idle plug to fire.")]
 	public bool FireIdleOnAwarenessLevelChanged { get; set; } = false;
 
 	public static OnAwarenessChangedActionPrius Create(DDLObject ddl) => new(ddl);

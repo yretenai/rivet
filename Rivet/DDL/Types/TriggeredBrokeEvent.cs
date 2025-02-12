@@ -18,7 +18,7 @@ public class TriggeredBrokeEvent : EventBase, IDDLObjectType<TriggeredBrokeEvent
 		Destroyed = ddl.GetValue<bool>(0x59614d32u, Destroyed);
 	}
 
-	[DDLRegistration(0x3d858547u)]
+	[DDLRegistration(0x59614d32u)]
 	public bool Destroyed { get; set; } = false;
 
 	public new static TriggeredBrokeEvent Create(DDLObject ddl) => new(ddl);

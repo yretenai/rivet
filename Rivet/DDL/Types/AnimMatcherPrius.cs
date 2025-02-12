@@ -19,10 +19,10 @@ public class AnimMatcherPrius : DDLObjectType, IDDLObjectType<AnimMatcherPrius> 
 		FallbackDriver = ddl.GetString(0xbdd84cf0) ?? FallbackDriver;
 	}
 
-	[DDLRegistration(0xe254d2f9u)]
+	[DDLRegistration(0x7997ac5bu)]
 	public List<AnimMatchEntry?> MatchEntries { get; set; } = [];
 
-	[DDLRegistration(0xe254d2f9u)]
+	[DDLRegistration(0xbdd84cf0u)]
 	public string? FallbackDriver { get; set; } = default;
 
 	public static AnimMatcherPrius Create(DDLObject ddl) => new(ddl);

@@ -29,40 +29,40 @@ public class RenderFlags : DDLObjectType, IDDLObjectType<RenderFlags> {
 		RenderAsWireframe = ddl.GetValue<bool>(0x11f20a7cu, RenderAsWireframe);
 	}
 
-	[DDLRegistration(0x2459666du, description: "Allows a model to render beyond the streaming distance")]
+	[DDLRegistration(0x6f8e6b06u, description: "Allows a model to render beyond the streaming distance")]
 	public bool Hibernate { get; set; } = false;
 
-	[DDLRegistration(0x2459666du, "Skip Decals")]
+	[DDLRegistration(0x7de13186u, "Skip Decals")]
 	public bool SkipDecals { get; set; } = false;
 
-	[DDLRegistration(0x2459666du, "Skip Static Decals", "If set, the model will not receive static decals.")]
+	[DDLRegistration(0x19ffacecu, "Skip Static Decals", "If set, the model will not receive static decals.")]
 	public bool SkipStaticDecals { get; set; } = false;
 
-	[DDLRegistration(0x2459666du, "Skip Light Capture")]
+	[DDLRegistration(0xf219f226u, "Skip Light Capture")]
 	public bool SkipEnvProbe { get; set; } = false;
 
-	[DDLRegistration(0x2459666du, "Only Light Capture")]
+	[DDLRegistration(0x1559dec2u, "Only Light Capture")]
 	public bool OnlyLightCapture { get; set; } = false;
 
-	[DDLRegistration(0x2459666du, "No Embedded Samples")]
+	[DDLRegistration(0x28b04558u, "No Embedded Samples")]
 	public bool NoEmbeddedSamples { get; set; } = false;
 
-	[DDLRegistration(0x2459666du, "Skip Impostor")]
+	[DDLRegistration(0xffc4e1c0u, "Skip Impostor")]
 	public bool SkipImpostor { get; set; } = false;
 
-	[DDLRegistration(0x2459666du, "Skip Shadow Cast")]
+	[DDLRegistration(0x40b0e1cau, "Skip Shadow Cast")]
 	public bool SkipShadowCast { get; set; } = false;
 
-	[DDLRegistration(0x2459666du, "Ignore Depth When Blended", "If set and the model is blended, the model will neither test nor write depth.")]
+	[DDLRegistration(0xbd1d2439u, "Ignore Depth When Blended", "If set and the model is blended, the model will neither test nor write depth.")]
 	public bool IgnoreDepth { get; set; } = false;
 
-	[DDLRegistration(0x2459666du, "Flip Indoor Status")]
+	[DDLRegistration(0xa242edf0u, "Flip Indoor Status")]
 	public bool ReverseIndoorStatus { get; set; } = false;
 
-	[DDLRegistration(0x2459666du, "Never Occlude")]
+	[DDLRegistration(0xa65f70d7u, "Never Occlude")]
 	public bool NeverOcclude { get; set; } = false;
 
-	[DDLRegistration(0x2459666du, "Always render as wireframe")]
+	[DDLRegistration(0x11f20a7cu, "Always render as wireframe")]
 	public bool RenderAsWireframe { get; set; } = false;
 
 	public static RenderFlags Create(DDLObject ddl) => new(ddl);

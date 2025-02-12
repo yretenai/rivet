@@ -22,19 +22,19 @@ public class PickupRestrictedPrius : PickupSharedPrius, IDDLObjectType<PickupRes
 		VertDistOffset = ddl.GetValue<float>(0xb615bbecu, VertDistOffset);
 	}
 
-	[DDLRegistration(0x1d3d199bu, "Auto Pickup", "Auto pick this actor up when within range.")]
+	[DDLRegistration(0x1eb9e195u, "Auto Pickup", "Auto pick this actor up when within range.")]
 	public bool AutoPickup { get; set; } = false;
 
-	[DDLRegistration(0x1d3d199bu, "Vertical Pickup Range", "The vertical distance to allow pickup. Horizontal will be the Pickup Range. ")]
+	[DDLRegistration(0xab364801u, "Vertical Pickup Range", "The vertical distance to allow pickup. Horizontal will be the Pickup Range. ")]
 	public float VerticalRange { get; set; } = 3.00f;
 
-	[DDLRegistration(0x1d3d199bu, "Pickup only from Above", "Whether to limit picking this up only from above the placed actor.")]
+	[DDLRegistration(0x4e242359u, "Pickup only from Above", "Whether to limit picking this up only from above the placed actor.")]
 	public bool LimitPickupToAbove { get; set; } = false;
 
-	[DDLRegistration(0x1d3d199bu, "Pickup only from Below", "Whether to limit picking this up only from below the placed actor.")]
+	[DDLRegistration(0xfeac0739u, "Pickup only from Below", "Whether to limit picking this up only from below the placed actor.")]
 	public bool LimitPickupToBelow { get; set; } = false;
 
-	[DDLRegistration(0x1d3d199bu, "Above/Below Dist Offset", "When limiting picking it up from only above or only below, use this value to offset what we should consider as above or below.")]
+	[DDLRegistration(0xb615bbecu, "Above/Below Dist Offset", "When limiting picking it up from only above or only below, use this value to offset what we should consider as above or below.")]
 	public float VertDistOffset { get; set; } = 0.00f;
 
 	public new static PickupRestrictedPrius Create(DDLObject ddl) => new(ddl);

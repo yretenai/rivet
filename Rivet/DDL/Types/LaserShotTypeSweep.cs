@@ -20,13 +20,13 @@ public class LaserShotTypeSweep : BotComboLaserShotType, IDDLObjectType<LaserSho
 		CurveFollowsTarget = ddl.GetValue<bool>(0xf06be4e0u, CurveFollowsTarget);
 	}
 
-	[DDLRegistration(0x4598de61u, description: "How long to hold laser before sweeping")]
+	[DDLRegistration(0x5c1cd434u, description: "How long to hold laser before sweeping")]
 	public float LaserTellTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x4598de61u, description: "How long it takes for laser to fully sweep")]
+	[DDLRegistration(0x0d88b95eu, description: "How long it takes for laser to fully sweep")]
 	public float LaserSweepTime { get; set; } = 1.50f;
 
-	[DDLRegistration(0x4598de61u, description: "If true, the curve will follow the target")]
+	[DDLRegistration(0xf06be4e0u, description: "If true, the curve will follow the target")]
 	public bool CurveFollowsTarget { get; set; } = false;
 
 	public new static LaserShotTypeSweep Create(DDLObject ddl) => new(ddl);

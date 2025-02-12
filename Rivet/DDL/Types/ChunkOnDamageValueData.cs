@@ -20,13 +20,13 @@ public class ChunkOnDamageValueData : DDLObjectType, IDDLObjectType<ChunkOnDamag
 		HideLookGroup = ddl.GetString(0x4246cc7e) ?? HideLookGroup;
 	}
 
-	[DDLRegistration(0xaf20b3c9u, description: "When health is at or below this value, do chunking. Value is in range [0.0, 1.0] by default.")]
+	[DDLRegistration(0xac854076u, description: "When health is at or below this value, do chunking. Value is in range [0.0, 1.0] by default.")]
 	public float HealthThreshold { get; set; } = 0.50f;
 
-	[DDLRegistration(0xaf20b3c9u, description: "The name of the LookChunking Configuration you want to use for chunks.")]
+	[DDLRegistration(0x19f22c5cu, description: "The name of the LookChunking Configuration you want to use for chunks.")]
 	public string? ConfigurationName { get; set; } = default;
 
-	[DDLRegistration(0xaf20b3c9u, description: "Look group to hide on the base actor.")]
+	[DDLRegistration(0x4246cc7eu, description: "Look group to hide on the base actor.")]
 	public string? HideLookGroup { get; set; } = default;
 
 	public static ChunkOnDamageValueData Create(DDLObject ddl) => new(ddl);

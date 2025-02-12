@@ -18,7 +18,7 @@ public class ShotMotionFusionGrenadeSubShotPrius : GrenadeShotMotionPrius, IDDLO
 		MaxBounces = ddl.GetValue<uint>(0x73e25a00u, MaxBounces);
 	}
 
-	[DDLRegistration(0x80039407u)]
+	[DDLRegistration(0x73e25a00u)]
 	public uint MaxBounces { get; set; } = 0x00000005;
 
 	public new static ShotMotionFusionGrenadeSubShotPrius Create(DDLObject ddl) => new(ddl);

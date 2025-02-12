@@ -18,7 +18,7 @@ public class RegionUnloadedEvent : EventBase, IDDLObjectType<RegionUnloadedEvent
 		RegionIndex = ddl.GetValue<int>(0x48ed7ef2u, RegionIndex);
 	}
 
-	[DDLRegistration(0x62786be3u)]
+	[DDLRegistration(0x48ed7ef2u)]
 	public int RegionIndex { get; set; } = -1;
 
 	public new static RegionUnloadedEvent Create(DDLObject ddl) => new(ddl);

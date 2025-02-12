@@ -21,16 +21,16 @@ public class GainBoltEvent : EventBase, IDDLObjectType<GainBoltEvent> {
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x0d8ae666u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x0d8ae666u)]
+	[DDLRegistration(0x170fcce7u)]
 	public int NewBolts { get; set; } = 0;
 
-	[DDLRegistration(0x0d8ae666u)]
+	[DDLRegistration(0xbccd088eu)]
 	public int TotalBolts { get; set; } = 0;
 
-	[DDLRegistration(0x0d8ae666u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static GainBoltEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class StoryMissionData : RegionGameDataBase, IDDLObjectType<StoryMissionD
 		Description = ddl.GetString(0xe03811fd) ?? Description;
 	}
 
-	[DDLRegistration(0x58ebad21u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x58ebad21u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
 	public new static StoryMissionData Create(DDLObject ddl) => new(ddl);

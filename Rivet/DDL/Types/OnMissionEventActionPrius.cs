@@ -20,13 +20,13 @@ public class OnMissionEventActionPrius : DDLObjectType, IDDLObjectType<OnMission
 		OnlyTriggerOnRegionLoad = ddl.GetValue<bool>(0x26408f0fu, OnlyTriggerOnRegionLoad);
 	}
 
-	[DDLRegistration(0xe851ce26u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
-	[DDLRegistration(0xe851ce26u)]
+	[DDLRegistration(0x99fde65du)]
 	public bool TriggerOnRegionLoad { get; set; } = true;
 
-	[DDLRegistration(0xe851ce26u, description: "Only trigger on region load")]
+	[DDLRegistration(0x26408f0fu, description: "Only trigger on region load")]
 	public bool OnlyTriggerOnRegionLoad { get; set; } = false;
 
 	public static OnMissionEventActionPrius Create(DDLObject ddl) => new(ddl);

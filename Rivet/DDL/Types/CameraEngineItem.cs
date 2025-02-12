@@ -22,19 +22,19 @@ public class CameraEngineItem : DDLObjectType, IDDLObjectType<CameraEngineItem> 
 		Projection = ddl.GetEnum<CameraProjectionType>(0x5b32961fu, CameraProjectionTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0xe25c222au)]
+	[DDLRegistration(0xc76842ccu)]
 	public float CamLodScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe25c222au)]
+	[DDLRegistration(0x4e173d6fu)]
 	public float NearClipDistance { get; set; } = 0.01f;
 
-	[DDLRegistration(0xe25c222au)]
+	[DDLRegistration(0x3f224fc5u)]
 	public float FarClipDistance { get; set; } = 10000.00f;
 
-	[DDLRegistration(0xe25c222au)]
+	[DDLRegistration(0x20d8286du)]
 	public float FieldOfViewDegrees { get; set; } = 90.00f;
 
-	[DDLRegistration(0xe25c222au)]
+	[DDLRegistration(0x5b32961fu)]
 	public CameraProjectionType Projection { get; set; } = CameraProjectionType.Perspective;
 
 	public static CameraEngineItem Create(DDLObject ddl) => new(ddl);

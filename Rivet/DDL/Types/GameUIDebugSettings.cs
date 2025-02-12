@@ -22,19 +22,19 @@ public class GameUIDebugSettings : DDLObjectType, IDDLObjectType<GameUIDebugSett
 		UnlockAudioLogs = ddl.GetValue<bool>(0x9fdb1ab0u, UnlockAudioLogs);
 	}
 
-	[DDLRegistration(0x80e2dfecu, "Allow Pause", "Can you pause the game and bring up the in-game pause menu when pressing the Options button?")]
+	[DDLRegistration(0x802ad5c4u, "Allow Pause", "Can you pause the game and bring up the in-game pause menu when pressing the Options button?")]
 	public bool AllowPause { get; set; } = true;
 
-	[DDLRegistration(0x80e2dfecu, "Allow HUD", "Are HUD elements allowed to show?")]
+	[DDLRegistration(0x953ca3d5u, "Allow HUD", "Are HUD elements allowed to show?")]
 	public bool AllowHUD { get; set; } = true;
 
-	[DDLRegistration(0x80e2dfecu, "Unlock Vendor Weapons", "Bypass progression requirements to unlock all Vendor weapons for purchase?")]
+	[DDLRegistration(0x9a67e1cau, "Unlock Vendor Weapons", "Bypass progression requirements to unlock all Vendor weapons for purchase?")]
 	public bool UnlockVendorWeapons { get; set; } = false;
 
-	[DDLRegistration(0x80e2dfecu, "Unlock Gallery Entries", "Bypass progression requirements to unlock all Gallery entries?")]
+	[DDLRegistration(0x54ca45abu, "Unlock Gallery Entries", "Bypass progression requirements to unlock all Gallery entries?")]
 	public bool UnlockGalleryEntries { get; set; } = false;
 
-	[DDLRegistration(0x80e2dfecu, "Unlock Audio Logs", "Bypass requirements to unlock all audio logs?")]
+	[DDLRegistration(0x9fdb1ab0u, "Unlock Audio Logs", "Bypass requirements to unlock all audio logs?")]
 	public bool UnlockAudioLogs { get; set; } = false;
 
 	public static GameUIDebugSettings Create(DDLObject ddl) => new(ddl);

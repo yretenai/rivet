@@ -18,7 +18,7 @@ public class TriggerEvent : EventBase, IDDLObjectType<TriggerEvent> {
 		UserData = ddl.GetValue<uint>(0x51bd995cu, UserData);
 	}
 
-	[DDLRegistration(0x55aed815u, description: "User specified payload")]
+	[DDLRegistration(0x51bd995cu, description: "User specified payload")]
 	public uint UserData { get; set; } = 0x00000000;
 
 	public new static TriggerEvent Create(DDLObject ddl) => new(ddl);

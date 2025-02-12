@@ -19,10 +19,10 @@ public class SceneEditorCreatePrefabOutput : DDLObjectType, IDDLObjectType<Scene
 		PrefabInstance = ddl.GetObject<SceneNode>(0x29607f07u);
 	}
 
-	[DDLRegistration(0x585ece51u)]
+	[DDLRegistration(0xb6192522u)]
 	public RivetAssetId UndoBatchId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x585ece51u)]
+	[DDLRegistration(0x29607f07u)]
 	public SceneNode? PrefabInstance { get; set; } = default;
 
 	public static SceneEditorCreatePrefabOutput Create(DDLObject ddl) => new(ddl);

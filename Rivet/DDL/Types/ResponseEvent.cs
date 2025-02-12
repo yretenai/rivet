@@ -20,13 +20,13 @@ public class ResponseEvent : EventBase, IDDLObjectType<ResponseEvent> {
 		AttachHandle = ddl.GetValue<uint>(0x303e6e6au, AttachHandle);
 	}
 
-	[DDLRegistration(0x3492bdb7u)]
+	[DDLRegistration(0x2791ab3cu)]
 	public uint TriggeringEventNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3492bdb7u)]
+	[DDLRegistration(0x1b6bde7cu)]
 	public uint EffectHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3492bdb7u, "Attach Actor")]
+	[DDLRegistration(0x303e6e6au, "Attach Actor")]
 	public uint AttachHandle { get; set; } = 0x00000000;
 
 	public new static ResponseEvent Create(DDLObject ddl) => new(ddl);

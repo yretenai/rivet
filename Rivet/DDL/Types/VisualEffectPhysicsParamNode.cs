@@ -24,25 +24,25 @@ public class VisualEffectPhysicsParamNode : DDLObjectType, IDDLObjectType<Visual
 		OutputPort_Output = ddl.GetObject<VisualEffectPhysicsParam>(0x7778788cu);
 	}
 
-	[DDLRegistration(0x48c96734u)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x48c96734u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x48c96734u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x48c96734u, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x48c96734u)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<VisualEffectNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0x48c96734u)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<VisualEffectNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
-	[DDLRegistration(0x48c96734u, "Output")]
+	[DDLRegistration(0x7778788cu, "Output")]
 	public VisualEffectPhysicsParam? OutputPort_Output { get; set; } = default;
 
 	public static VisualEffectPhysicsParamNode Create(DDLObject ddl) => new(ddl);

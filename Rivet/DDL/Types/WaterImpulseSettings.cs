@@ -18,7 +18,7 @@ public class WaterImpulseSettings : DDLObjectType, IDDLObjectType<WaterImpulseSe
 		MaxDist = ddl.GetValue<float>(0x7ce74647u, MaxDist);
 	}
 
-	[DDLRegistration(0x0e0cbea4u)]
+	[DDLRegistration(0x7ce74647u)]
 	public float MaxDist { get; set; } = 100.00f;
 
 	public static WaterImpulseSettings Create(DDLObject ddl) => new(ddl);

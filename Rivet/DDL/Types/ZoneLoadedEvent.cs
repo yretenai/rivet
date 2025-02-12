@@ -18,7 +18,7 @@ public class ZoneLoadedEvent : EventBase, IDDLObjectType<ZoneLoadedEvent> {
 		AssetId = ddl.GetValue<RivetAssetId>(0xb6e788d7u, AssetId);
 	}
 
-	[DDLRegistration(0xbe67913au)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static ZoneLoadedEvent Create(DDLObject ddl) => new(ddl);

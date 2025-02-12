@@ -18,7 +18,7 @@ public class HealthPickedUpEvent : EventBase, IDDLObjectType<HealthPickedUpEvent
 		HealthReceived = ddl.GetValue<float>(0x8ba3d60fu, HealthReceived);
 	}
 
-	[DDLRegistration(0x2d7ae977u)]
+	[DDLRegistration(0x8ba3d60fu)]
 	public float HealthReceived { get; set; } = 0.00f;
 
 	public new static HealthPickedUpEvent Create(DDLObject ddl) => new(ddl);

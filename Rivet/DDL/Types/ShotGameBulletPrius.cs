@@ -19,10 +19,10 @@ public class ShotGameBulletPrius : BasicBulletPrius, IDDLObjectType<ShotGameBull
 		DamageRequestIdFromFiring = ddl.GetValue<bool>(0x7e45ab56u, DamageRequestIdFromFiring);
 	}
 
-	[DDLRegistration(0xae4ca8dbu)]
+	[DDLRegistration(0xc0897c0au)]
 	public float DamageIgnoreDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xae4ca8dbu)]
+	[DDLRegistration(0x7e45ab56u)]
 	public bool DamageRequestIdFromFiring { get; set; } = true;
 
 	public new static ShotGameBulletPrius Create(DDLObject ddl) => new(ddl);

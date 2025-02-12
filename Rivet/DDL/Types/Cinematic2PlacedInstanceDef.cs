@@ -24,25 +24,25 @@ public class Cinematic2PlacedInstanceDef : DDLObjectType, IDDLObjectType<Cinemat
 		OrphanTracks = ddl.GetDictionary<RivetAssetId, Cinematic2PlacedInstanceOrphanTrackDef>(0x00ea59a6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PlacedInstanceOrphanTrackDef>(mapId));
 	}
 
-	[DDLRegistration(0xb6283f5au)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb6283f5au)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xb6283f5au)]
+	[DDLRegistration(0x96f1f1f8u)]
 	public DDLTransform? StartTransform { get; set; } = default;
 
-	[DDLRegistration(0xb6283f5au)]
+	[DDLRegistration(0x653e2373u)]
 	public Dictionary<RivetAssetId, Cinematic2PlacedInstanceEventTrackDef?> EventTracks { get; set; } = [];
 
-	[DDLRegistration(0xb6283f5au)]
+	[DDLRegistration(0xba2bc52eu)]
 	public Cinematic2PlacedInstanceHideTrackDef? HideTrack { get; set; } = default;
 
-	[DDLRegistration(0xb6283f5au)]
+	[DDLRegistration(0x6125fb96u)]
 	public Cinematic2PlacedInstancePosRotScaleTrackDef? PosRotScaleTrack { get; set; } = default;
 
-	[DDLRegistration(0xb6283f5au)]
+	[DDLRegistration(0x00ea59a6u)]
 	public Dictionary<RivetAssetId, Cinematic2PlacedInstanceOrphanTrackDef?> OrphanTracks { get; set; } = [];
 
 	public static Cinematic2PlacedInstanceDef Create(DDLObject ddl) => new(ddl);

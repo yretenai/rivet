@@ -20,13 +20,13 @@ public class LookAtHeroPrius : TargetingAimAnglePrius, IDDLObjectType<LookAtHero
 		HeroLookAtMaxSpeed = ddl.GetValue<float>(0x39d0e161u, HeroLookAtMaxSpeed);
 	}
 
-	[DDLRegistration(0xcbeea919u, description: "Distance from hero to start looking at the hero")]
+	[DDLRegistration(0xe29c8e41u, description: "Distance from hero to start looking at the hero")]
 	public float HeroLookAtStartDist { get; set; } = 10.00f;
 
-	[DDLRegistration(0xcbeea919u, description: "Distance from hero to stop looking at the hero")]
+	[DDLRegistration(0x8ac925c7u, description: "Distance from hero to stop looking at the hero")]
 	public float HeroLookAtStopDist { get; set; } = 12.00f;
 
-	[DDLRegistration(0xcbeea919u, description: "Maximum speed for looking at the hero")]
+	[DDLRegistration(0x39d0e161u, description: "Maximum speed for looking at the hero")]
 	public float HeroLookAtMaxSpeed { get; set; } = 1.00f;
 
 	public new static LookAtHeroPrius Create(DDLObject ddl) => new(ddl);

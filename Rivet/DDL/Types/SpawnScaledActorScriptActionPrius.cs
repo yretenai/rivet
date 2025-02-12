@@ -19,10 +19,10 @@ public class SpawnScaledActorScriptActionPrius : DDLObjectType, IDDLObjectType<S
 		ActorToSpawn = ddl.GetValue<RivetAssetId>(0xe942b41eu, ActorToSpawn);
 	}
 
-	[DDLRegistration(0x516eb161u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x516eb161u, description: "The actor that we want to spawn.")]
+	[DDLRegistration(0xe942b41eu, description: "The actor that we want to spawn.")]
 	public RivetAssetId ActorToSpawn { get; set; } = default;
 
 	public static SpawnScaledActorScriptActionPrius Create(DDLObject ddl) => new(ddl);

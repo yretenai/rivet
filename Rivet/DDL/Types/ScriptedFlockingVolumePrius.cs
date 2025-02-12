@@ -22,19 +22,19 @@ public class ScriptedFlockingVolumePrius : DDLObjectType, IDDLObjectType<Scripte
 		OverrideData = ddl.GetObject<FlockOverrideData>(0x03f818aau);
 	}
 
-	[DDLRegistration(0xbb253846u)]
+	[DDLRegistration(0xb1d5e2ecu)]
 	public string? CreatureType { get; set; } = default;
 
-	[DDLRegistration(0xbb253846u)]
+	[DDLRegistration(0xa7039594u)]
 	public int FlockSize { get; set; } = 16;
 
-	[DDLRegistration(0xbb253846u, description: "If false, the destination will be picked automatically, and the flock will use volume boundaries.")]
+	[DDLRegistration(0x9adb9e0cu, description: "If false, the destination will be picked automatically, and the flock will use volume boundaries.")]
 	public bool ManualDestination { get; set; } = true;
 
-	[DDLRegistration(0xbb253846u)]
+	[DDLRegistration(0x1f91b5b3u)]
 	public bool OverrideTypeData { get; set; } = false;
 
-	[DDLRegistration(0xbb253846u)]
+	[DDLRegistration(0x03f818aau)]
 	public FlockOverrideData? OverrideData { get; set; } = default;
 
 	public static ScriptedFlockingVolumePrius Create(DDLObject ddl) => new(ddl);

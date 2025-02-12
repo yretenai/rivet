@@ -23,22 +23,22 @@ public class JobManagerPatrolPrius : DDLObjectType, IDDLObjectType<JobManagerPat
 		HoveringPatrol = ddl.GetValue<bool>(0xcb892d25u, HoveringPatrol);
 	}
 
-	[DDLRegistration(0x794932dfu)]
+	[DDLRegistration(0x190ce3f9u)]
 	public bool Broadcast { get; set; } = false;
 
-	[DDLRegistration(0x794932dfu)]
+	[DDLRegistration(0x480e6afau)]
 	public MovementStyleGame MovementStyle { get; set; } = MovementStyleGame.Walk;
 
-	[DDLRegistration(0x794932dfu)]
+	[DDLRegistration(0x16e6303du)]
 	public bool UsableByLargeEnemies { get; set; } = false;
 
-	[DDLRegistration(0x794932dfu)]
+	[DDLRegistration(0x86601155u)]
 	public bool StartAtBeginningOfCurve { get; set; } = false;
 
-	[DDLRegistration(0x794932dfu)]
+	[DDLRegistration(0xeadb4e80u)]
 	public bool DisableBroadcastOnUse { get; set; } = false;
 
-	[DDLRegistration(0x794932dfu)]
+	[DDLRegistration(0xcb892d25u)]
 	public bool HoveringPatrol { get; set; } = false;
 
 	public static JobManagerPatrolPrius Create(DDLObject ddl) => new(ddl);

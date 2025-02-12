@@ -19,10 +19,10 @@ public class DamageEventResponderDamageIdentifier : DDLObjectType, IDDLObjectTyp
 		DamageDescription = ddl.GetString(0xfb60581f) ?? DamageDescription;
 	}
 
-	[DDLRegistration(0xe3421b21u, description: "Use kNone if you want to trigger on any damage type")]
+	[DDLRegistration(0x45b83006u, description: "Use kNone if you want to trigger on any damage type")]
 	public DamageTypesGame TypeOfDamage { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0xe3421b21u, description: "Match this description with an attack description in the AnimDamageHandler, otherwise leave blank!")]
+	[DDLRegistration(0xfb60581fu, description: "Match this description with an attack description in the AnimDamageHandler, otherwise leave blank!")]
 	public string? DamageDescription { get; set; } = default;
 
 	public static DamageEventResponderDamageIdentifier Create(DDLObject ddl) => new(ddl);

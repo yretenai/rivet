@@ -21,16 +21,16 @@ public class WeaponHexapodChargingPrius : WeaponBlasterPrius, IDDLObjectType<Wea
 		BeamActor = ddl.GetValue<RivetAssetId>(0x5457596au, BeamActor);
 	}
 
-	[DDLRegistration(0xd62f8b46u)]
+	[DDLRegistration(0xa1c4cc1eu)]
 	public float ChargeTimeMax { get; set; } = 2.00f;
 
-	[DDLRegistration(0xd62f8b46u)]
+	[DDLRegistration(0x8259e9beu)]
 	public float ChargedDamageMultiplier { get; set; } = 5.00f;
 
-	[DDLRegistration(0xd62f8b46u, "Charging Trigger Data")]
+	[DDLRegistration(0x2351960du, "Charging Trigger Data")]
 	public HexapodWeaponTriggerData? ChargingTriggerData { get; set; } = default;
 
-	[DDLRegistration(0xd62f8b46u)]
+	[DDLRegistration(0x5457596au)]
 	public RivetAssetId BeamActor { get; set; } = default;
 
 	public new static WeaponHexapodChargingPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class MaterialNodeConnectedOutputPort : DDLObjectType, IDDLObjectType<Mat
 		Targets = ddl.GetObjects<MaterialNodeConnectedPort>(0xaea97d2bu);
 	}
 
-	[DDLRegistration(0x1e71143du)]
+	[DDLRegistration(0x8a514a8du)]
 	public string? Id { get; set; } = default;
 
-	[DDLRegistration(0x1e71143du)]
+	[DDLRegistration(0xaea97d2bu)]
 	public List<MaterialNodeConnectedPort?> Targets { get; set; } = [];
 
 	public static MaterialNodeConnectedOutputPort Create(DDLObject ddl) => new(ddl);

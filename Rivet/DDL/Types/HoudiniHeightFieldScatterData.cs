@@ -33,52 +33,52 @@ public class HoudiniHeightFieldScatterData : DDLObjectType, IDDLObjectType<Houdi
 		RandomizeUp = ddl.GetValue<float>(0x3ed13496u, RandomizeUp);
 	}
 
-	[DDLRegistration(0x1450aaacu, "Scatter Method", "How to scatter the points.")]
+	[DDLRegistration(0xa083054eu, "Scatter Method", "How to scatter the points.")]
 	public x4155b3ed ScatterMethod { get; set; } = x4155b3ed.CoverageUsingMaskLayer;
 
-	[DDLRegistration(0x1450aaacu, "Coverage", "The ratio of area of the painted mask on the input height field that should be covered with the points about to be scattered given their size from the Variability section.")]
+	[DDLRegistration(0xc54b542fu, "Coverage", "The ratio of area of the painted mask on the input height field that should be covered with the points about to be scattered given their size from the Variability section.")]
 	public float ParamCoverage { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1450aaacu, "Density", "The number of points per square meter to generate on the painted mask on the input height field.")]
+	[DDLRegistration(0x6d78cfd3u, "Density", "The number of points per square meter to generate on the painted mask on the input height field.")]
 	public float ParamDensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1450aaacu, "Per-Point Data", "The data used when scattering per-point.")]
+	[DDLRegistration(0x1d58ddbcu, "Per-Point Data", "The data used when scattering per-point.")]
 	public HoudiniHeightFieldScatterPerPointData? ParamPerPointData { get; set; } = default;
 
-	[DDLRegistration(0x1450aaacu, "Total Point Count", "The exact number of points to be scattered on the painted mask on the input height field.")]
+	[DDLRegistration(0x22a53f11u, "Total Point Count", "The exact number of points to be scattered on the painted mask on the input height field.")]
 	public int ParamTotalPointCount { get; set; } = 100;
 
-	[DDLRegistration(0x1450aaacu, "Outer Radius")]
+	[DDLRegistration(0xf6b6fbdeu, "Outer Radius")]
 	public float OuterRadius { get; set; } = 10.00f;
 
-	[DDLRegistration(0x1450aaacu)]
+	[DDLRegistration(0x4e874fc0u)]
 	public float Falloff { get; set; } = 0.15f;
 
-	[DDLRegistration(0x1450aaacu, "Scale Range", "How to scale the generated points.")]
+	[DDLRegistration(0xdc262fb8u, "Scale Range", "How to scale the generated points.")]
 	public DDLVector2? ScaleRange { get; set; } = default;
 
-	[DDLRegistration(0x1450aaacu)]
+	[DDLRegistration(0x9f9ea254u)]
 	public bool RelaxPoints { get; set; } = true;
 
-	[DDLRegistration(0x1450aaacu, "Iterations", "The number of iterations of relaxation to do. More iterations will more evenly distribute the points, but can be slower, and after a certain number of iterations that evenly distribute the points, more iterations is wasted effort.")]
+	[DDLRegistration(0x62245784u, "Iterations", "The number of iterations of relaxation to do. More iterations will more evenly distribute the points, but can be slower, and after a certain number of iterations that evenly distribute the points, more iterations is wasted effort.")]
 	public int RelaxParamIterations { get; set; } = 5;
 
-	[DDLRegistration(0x1450aaacu, "Avoid Layer", "The name of the layer of the points that relaxation will take place on.")]
+	[DDLRegistration(0x41a03480u, "Avoid Layer", "The name of the layer of the points that relaxation will take place on.")]
 	public string? RelaxParamAvoidLayerName { get; set; } = default;
 
-	[DDLRegistration(0x1450aaacu, "Self Overlap", "Whether to apply relaxation between the newly generated points or not.")]
+	[DDLRegistration(0x8874a285u, "Self Overlap", "Whether to apply relaxation between the newly generated points or not.")]
 	public bool SelfOverlap { get; set; } = false;
 
-	[DDLRegistration(0x1450aaacu, "Match Direction with Slope", "If true, the direction of the scattered points will match the terrain slope.")]
+	[DDLRegistration(0x9d91a3b0u, "Match Direction with Slope", "If true, the direction of the scattered points will match the terrain slope.")]
 	public bool MatchDirectionWithSlope { get; set; } = true;
 
-	[DDLRegistration(0x1450aaacu, "Match Normals with Slope", "If true, the normals of the scattered points will match the terrain slope.")]
+	[DDLRegistration(0x3047f72fu, "Match Normals with Slope", "If true, the normals of the scattered points will match the terrain slope.")]
 	public bool MatchNormalsWithTerrain { get; set; } = true;
 
-	[DDLRegistration(0x1450aaacu, "Randomize Yaw", "Specify the number of degrees to rotate around the normal. 180 will provide completely random directions.")]
+	[DDLRegistration(0x8df0d9aeu, "Randomize Yaw", "Specify the number of degrees to rotate around the normal. 180 will provide completely random directions.")]
 	public float RandomizeYaw { get; set; } = 180.00f;
 
-	[DDLRegistration(0x1450aaacu, "Randomize Up", "Specify the number of degrees to jitter the computed normal direction of the instance.")]
+	[DDLRegistration(0x3ed13496u, "Randomize Up", "Specify the number of degrees to jitter the computed normal direction of the instance.")]
 	public float RandomizeUp { get; set; } = 0.00f;
 
 	public static HoudiniHeightFieldScatterData Create(DDLObject ddl) => new(ddl);

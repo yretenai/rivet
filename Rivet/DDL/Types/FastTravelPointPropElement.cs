@@ -18,7 +18,7 @@ public class FastTravelPointPropElement : DDLObjectType, IDDLObjectType<FastTrav
 		Prop = ddl.GetValue<RivetAssetId>(0x9ffe055au, Prop);
 	}
 
-	[DDLRegistration(0x124c847eu)]
+	[DDLRegistration(0x9ffe055au)]
 	public RivetAssetId Prop { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static FastTravelPointPropElement Create(DDLObject ddl) => new(ddl);

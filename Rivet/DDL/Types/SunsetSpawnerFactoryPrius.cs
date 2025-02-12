@@ -20,13 +20,13 @@ public class SunsetSpawnerFactoryPrius : SpawnerFactoryPrius, IDDLObjectType<Sun
 		SetupControllerData = ddl.GetObject<SetUpControllerData>(0xf75a809bu);
 	}
 
-	[DDLRegistration(0xa1a9ab32u, "Forced Health Drops", "-1 for none")]
+	[DDLRegistration(0xc5c4b720u, "Forced Health Drops", "-1 for none")]
 	public int NumForcedHealthDrops { get; set; } = -1;
 
-	[DDLRegistration(0xa1a9ab32u)]
+	[DDLRegistration(0x05f793ccu)]
 	public BotSetupData? BotSetupData { get; set; } = default;
 
-	[DDLRegistration(0xa1a9ab32u, "Bot Setup Persistance Data")]
+	[DDLRegistration(0xf75a809bu, "Bot Setup Persistance Data")]
 	public SetUpControllerData? SetupControllerData { get; set; } = default;
 
 	public new static SunsetSpawnerFactoryPrius Create(DDLObject ddl) => new(ddl);

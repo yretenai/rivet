@@ -24,25 +24,25 @@ public class BurstSequence : DDLObjectType, IDDLObjectType<BurstSequence> {
 		WaitDuration = ddl.GetValue<float>(0xe3655ff0u, WaitDuration);
 	}
 
-	[DDLRegistration(0x3ae61082u)]
+	[DDLRegistration(0x8bc798e7u)]
 	public Burst? PrimaryBurst { get; set; } = default;
 
-	[DDLRegistration(0x3ae61082u)]
+	[DDLRegistration(0x333f5038u)]
 	public List<SubBurst?> SubBursts { get; set; } = [];
 
-	[DDLRegistration(0x3ae61082u)]
+	[DDLRegistration(0xc004400cu)]
 	public float TotalDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3ae61082u)]
+	[DDLRegistration(0xd2ed5de5u)]
 	public int TotalBurstShots { get; set; } = 0;
 
-	[DDLRegistration(0x3ae61082u)]
+	[DDLRegistration(0xd348255du)]
 	public float WaitDurationMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ae61082u)]
+	[DDLRegistration(0xef451a04u)]
 	public float WaitDurationMax { get; set; } = 2.00f;
 
-	[DDLRegistration(0x3ae61082u)]
+	[DDLRegistration(0xe3655ff0u)]
 	public float WaitDuration { get; set; } = 0.00f;
 
 	public static BurstSequence Create(DDLObject ddl) => new(ddl);

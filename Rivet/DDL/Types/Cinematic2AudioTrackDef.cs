@@ -26,31 +26,31 @@ public class Cinematic2AudioTrackDef : DDLObjectType, IDDLObjectType<Cinematic2A
 		TriggerActions = ddl.GetDictionary<RivetAssetId, Cinematic2AudioGameSyncActionDef>(0xfabff2d2, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2AudioGameSyncActionDef>(mapId));
 	}
 
-	[DDLRegistration(0xda9e0a9eu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xda9e0a9eu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xda9e0a9eu, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0xda9e0a9eu, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0xda9e0a9eu, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0xda9e0a9eu)]
+	[DDLRegistration(0xf24716d6u)]
 	public Dictionary<RivetAssetId, Cinematic2AudioActionDef?> AudioActions { get; set; } = [];
 
-	[DDLRegistration(0xda9e0a9eu)]
+	[DDLRegistration(0x6d0f9919u)]
 	public Dictionary<RivetAssetId, Cinematic2AudioRtpcTrackDef?> AudioRtpcTracks { get; set; } = [];
 
-	[DDLRegistration(0xda9e0a9eu)]
+	[DDLRegistration(0xef6dee92u)]
 	public Dictionary<RivetAssetId, Cinematic2AudioGameSyncGroupActionDef?> SwitchGroupActions { get; set; } = [];
 
-	[DDLRegistration(0xda9e0a9eu)]
+	[DDLRegistration(0xfabff2d2u)]
 	public Dictionary<RivetAssetId, Cinematic2AudioGameSyncActionDef?> TriggerActions { get; set; } = [];
 
 	public static Cinematic2AudioTrackDef Create(DDLObject ddl) => new(ddl);

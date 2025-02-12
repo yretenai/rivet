@@ -19,10 +19,10 @@ public class VolumeCameraClipDef : DDLObjectType, IDDLObjectType<VolumeCameraCli
 		Far = ddl.GetValue<float>(0x5ba30dbfu, Far);
 	}
 
-	[DDLRegistration(0xaf759e57u, description: "Set to 0 to disable")]
+	[DDLRegistration(0x46dcdca1u, description: "Set to 0 to disable")]
 	public float Near { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaf759e57u, description: "Set to 0 to disable")]
+	[DDLRegistration(0x5ba30dbfu, description: "Set to 0 to disable")]
 	public float Far { get; set; } = 0.00f;
 
 	public static VolumeCameraClipDef Create(DDLObject ddl) => new(ddl);

@@ -29,40 +29,40 @@ public class ConstantResponseEvent : ResponseEvent, IDDLObjectType<ConstantRespo
 		Reset = ddl.GetValue<bool>(0x49ce738cu, Reset);
 	}
 
-	[DDLRegistration(0x246c0d56u, description: "The name of the render constant to set.")]
+	[DDLRegistration(0xc6991700u, description: "The name of the render constant to set.")]
 	public string? ConstantName { get; set; } = default;
 
-	[DDLRegistration(0x246c0d56u, description: "The Maya material mapping to apply this setting to.")]
+	[DDLRegistration(0x981e6927u, description: "The Maya material mapping to apply this setting to.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x246c0d56u)]
+	[DDLRegistration(0xb04752ceu)]
 	public float XStartValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x246c0d56u)]
+	[DDLRegistration(0x71c98d0eu)]
 	public float YStartValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x246c0d56u)]
+	[DDLRegistration(0xe82beb0fu)]
 	public float ZStartValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x246c0d56u)]
+	[DDLRegistration(0x23bfa608u)]
 	public float WStartValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x246c0d56u)]
+	[DDLRegistration(0x1c8adc3fu)]
 	public float XEndValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x246c0d56u)]
+	[DDLRegistration(0x0bf1c87cu)]
 	public float YEndValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x246c0d56u)]
+	[DDLRegistration(0x327cf4b9u)]
 	public float ZEndValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x246c0d56u)]
+	[DDLRegistration(0xc33313eeu)]
 	public float WEndValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x246c0d56u)]
+	[DDLRegistration(0xf115e357u)]
 	public float TransitionTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x246c0d56u, description: "Reset the Constant to its original value(s)")]
+	[DDLRegistration(0x49ce738cu, description: "Reset the Constant to its original value(s)")]
 	public bool Reset { get; set; } = false;
 
 	public new static ConstantResponseEvent Create(DDLObject ddl) => new(ddl);

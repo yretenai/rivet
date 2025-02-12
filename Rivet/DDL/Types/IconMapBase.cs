@@ -18,7 +18,7 @@ public class IconMapBase : DDLObjectType, IDDLObjectType<IconMapBase> {
 		MaxHeight = ddl.GetValue<int>(0x493d92a2u, MaxHeight);
 	}
 
-	[DDLRegistration(0xefcdadcfu)]
+	[DDLRegistration(0x493d92a2u)]
 	public int MaxHeight { get; set; } = 0;
 
 	public static IconMapBase Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class ECMFilter : DDLObjectType, IDDLObjectType<ECMFilter> {
 		IsValid = ddl.GetValue<bool>(0x84fa27f9u, IsValid);
 	}
 
-	[DDLRegistration(0x39646576u, "Filter Name")]
+	[DDLRegistration(0x6eb3beb6u, "Filter Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x39646576u, "Continue Type")]
+	[DDLRegistration(0x55624b9fu, "Continue Type")]
 	public x97f06575 ContinueType { get; set; } = x97f06575.Unresponded;
 
-	[DDLRegistration(0x39646576u, "Event Scope")]
+	[DDLRegistration(0x19fc9912u, "Event Scope")]
 	public x3c7c71d2 Scope { get; set; } = x3c7c71d2.SelfOnly;
 
-	[DDLRegistration(0x39646576u, "Selectors")]
+	[DDLRegistration(0x6c935f2du, "Selectors")]
 	public List<ECMSelector?> Selector { get; set; } = [];
 
-	[DDLRegistration(0x39646576u, "Responses")]
+	[DDLRegistration(0xc47ab68bu, "Responses")]
 	public List<ECMResponse?> Response { get; set; } = [];
 
-	[DDLRegistration(0x39646576u)]
+	[DDLRegistration(0x84fa27f9u)]
 	public bool IsValid { get; set; } = true;
 
 	public static ECMFilter Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class HeroRunSpeedSettings : DDLObjectType, IDDLObjectType<HeroRunSpeedSe
 		DoJumpScaling = ddl.GetValue<bool>(0xa72bc597u, DoJumpScaling);
 	}
 
-	[DDLRegistration(0x75f0d64fu)]
+	[DDLRegistration(0xbcd4ae64u)]
 	public float RunSpeedMultiplier { get; set; } = 1.20f;
 
-	[DDLRegistration(0x75f0d64fu)]
+	[DDLRegistration(0xaddd1644u)]
 	public float RunAnimSpeedMultiplier { get; set; } = 1.15f;
 
-	[DDLRegistration(0x75f0d64fu)]
+	[DDLRegistration(0xa72bc597u)]
 	public bool DoJumpScaling { get; set; } = true;
 
 	public static HeroRunSpeedSettings Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class CheckInventoryArrayElement : DDLObjectType, IDDLObjectType<CheckInv
 		Equipped = ddl.GetValue<bool>(0xef616c78u, Equipped);
 	}
 
-	[DDLRegistration(0x9f4e3fc6u)]
+	[DDLRegistration(0xa88f833fu)]
 	public RivetAssetId ItemConfig { get; set; } = default;
 
-	[DDLRegistration(0x9f4e3fc6u)]
+	[DDLRegistration(0x9c8a88a3u)]
 	public uint Count { get; set; } = 0x00000001;
 
-	[DDLRegistration(0x9f4e3fc6u, "Must Be Equipped")]
+	[DDLRegistration(0xef616c78u, "Must Be Equipped")]
 	public bool Equipped { get; set; } = false;
 
 	public static CheckInventoryArrayElement Create(DDLObject ddl) => new(ddl);

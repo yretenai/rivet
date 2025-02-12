@@ -20,13 +20,13 @@ public class RicochetData : DDLObjectType, IDDLObjectType<RicochetData> {
 		FailTime = ddl.GetValue<float>(0x39bda0cdu, FailTime);
 	}
 
-	[DDLRegistration(0x7c6a4642u)]
+	[DDLRegistration(0xbd8dfa03u)]
 	public float BuildUpTime { get; set; } = 0.70f;
 
-	[DDLRegistration(0x7c6a4642u)]
+	[DDLRegistration(0xaed9ee75u)]
 	public float SuccessTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0x7c6a4642u)]
+	[DDLRegistration(0x39bda0cdu)]
 	public float FailTime { get; set; } = 1.00f;
 
 	public static RicochetData Create(DDLObject ddl) => new(ddl);

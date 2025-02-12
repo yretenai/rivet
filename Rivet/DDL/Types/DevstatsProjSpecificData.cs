@@ -18,7 +18,7 @@ public class DevstatsProjSpecificData : DevstatsProjSpecificBase, IDDLObjectType
 		Difficulty = ddl.GetString(0x605d31d6) ?? Difficulty;
 	}
 
-	[DDLRegistration(0xe9f4b04cu)]
+	[DDLRegistration(0x605d31d6u)]
 	public string? Difficulty { get; set; } = default;
 
 	public new static DevstatsProjSpecificData Create(DDLObject ddl) => new(ddl);

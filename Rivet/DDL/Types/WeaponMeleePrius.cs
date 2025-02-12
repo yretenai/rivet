@@ -25,28 +25,28 @@ public class WeaponMeleePrius : WeaponGamePrius, IDDLObjectType<WeaponMeleePrius
 		UpgradeEmissiveIDValue = ddl.GetValue<float>(0x94983748u, UpgradeEmissiveIDValue);
 	}
 
-	[DDLRegistration(0x53f3a6efu)]
+	[DDLRegistration(0x75e1a5aeu)]
 	public float SnapRangeEnemy { get; set; } = 7.00f;
 
-	[DDLRegistration(0x53f3a6efu)]
+	[DDLRegistration(0x8202afddu)]
 	public float SnapRangeBreak { get; set; } = 6.00f;
 
-	[DDLRegistration(0x53f3a6efu)]
+	[DDLRegistration(0xa1a7becdu)]
 	public string? EmissiveColorConstantName { get; set; } = "";
 
-	[DDLRegistration(0x53f3a6efu)]
+	[DDLRegistration(0x6c50b4a7u)]
 	public string? EmissiveMaterialMappingName { get; set; } = "";
 
-	[DDLRegistration(0x53f3a6efu)]
+	[DDLRegistration(0xc065e154u)]
 	public DDLVector3? DefaultEmissiveColor { get; set; } = default;
 
-	[DDLRegistration(0x53f3a6efu)]
+	[DDLRegistration(0xc5b7d01bu)]
 	public DDLVector3? UpgradeEmissiveColor { get; set; } = default;
 
-	[DDLRegistration(0x53f3a6efu)]
+	[DDLRegistration(0xb2a7616au)]
 	public float DefaultEmissiveIDValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0x53f3a6efu)]
+	[DDLRegistration(0x94983748u)]
 	public float UpgradeEmissiveIDValue { get; set; } = 2.00f;
 
 	public new static WeaponMeleePrius Create(DDLObject ddl) => new(ddl);

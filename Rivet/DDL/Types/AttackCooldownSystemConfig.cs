@@ -18,7 +18,7 @@ public class AttackCooldownSystemConfig : ConfigBase, IDDLObjectType<AttackCoold
 		AttackCooldownDefaults = ddl.GetObjects<AttackCooldownDefault>(0xbc3c7919u);
 	}
 
-	[DDLRegistration(0xaa40b6c1u)]
+	[DDLRegistration(0xbc3c7919u)]
 	public List<AttackCooldownDefault?> AttackCooldownDefaults { get; set; } = [];
 
 	public new static AttackCooldownSystemConfig Create(DDLObject ddl) => new(ddl);

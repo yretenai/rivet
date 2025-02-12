@@ -19,10 +19,10 @@ public class AlembicCineActor : DDLObjectType, IDDLObjectType<AlembicCineActor> 
 		Clips = ddl.GetObjects<AlembicClip>(0xd126d725u);
 	}
 
-	[DDLRegistration(0x414d5d5au, description: "Reports an error message, if applicablegroup node name much like model files.")]
+	[DDLRegistration(0xa8a9ef53u, description: "Reports an error message, if applicablegroup node name much like model files.")]
 	public string? FilterNodeName { get; set; } = default;
 
-	[DDLRegistration(0x414d5d5au, description: "destruction stages.key of the map is teh clip name to be used ")]
+	[DDLRegistration(0xd126d725u, description: "destruction stages.key of the map is teh clip name to be used ")]
 	public List<AlembicClip?> Clips { get; set; } = [];
 
 	public static AlembicCineActor Create(DDLObject ddl) => new(ddl);

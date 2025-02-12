@@ -20,13 +20,13 @@ public class NodeGraphLibraryMimeData : DDLObjectType, IDDLObjectType<NodeGraphL
 		NodeGraphSymbolName = ddl.GetString(0x84d789a3) ?? NodeGraphSymbolName;
 	}
 
-	[DDLRegistration(0xc71ca727u)]
+	[DDLRegistration(0xa62d21dcu)]
 	public List<string?> FieldNames { get; set; } = [];
 
-	[DDLRegistration(0xc71ca727u)]
+	[DDLRegistration(0x11a7047fu)]
 	public List<NodeGraphLibrarySubGraphData?> GraphData { get; set; } = [];
 
-	[DDLRegistration(0xc71ca727u)]
+	[DDLRegistration(0x84d789a3u)]
 	public string? NodeGraphSymbolName { get; set; } = default;
 
 	public static NodeGraphLibraryMimeData Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class OnReceiveEventActionPrius : OnBaseEventActionPrius, IDDLObjectType<
 		ListenEvent = ddl.GetObject<EventBase>(0xa76e74deu);
 	}
 
-	[DDLRegistration(0x36ea5211u, "Event Type", "The event that we should listen for. Ignore the parameters of the selected event, they aren't used. ")]
+	[DDLRegistration(0xa76e74deu, "Event Type", "The event that we should listen for. Ignore the parameters of the selected event, they aren't used. ")]
 	public EventBase? ListenEvent { get; set; } = default;
 
 	public new static OnReceiveEventActionPrius Create(DDLObject ddl) => new(ddl);

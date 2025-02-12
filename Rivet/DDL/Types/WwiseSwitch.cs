@@ -21,16 +21,16 @@ public class WwiseSwitch : DDLObjectType, IDDLObjectType<WwiseSwitch> {
 		SwitchId = ddl.GetValue<uint>(0xb3a9912au, SwitchId);
 	}
 
-	[DDLRegistration(0xf7c114e5u)]
+	[DDLRegistration(0xbd87120cu)]
 	public string? SwitchGroupName { get; set; } = default;
 
-	[DDLRegistration(0xf7c114e5u)]
+	[DDLRegistration(0x9ef4a63cu)]
 	public string? SwitchName { get; set; } = default;
 
-	[DDLRegistration(0xf7c114e5u, description: "Our Materials use Switch Groups. These are the switch group names located in the Wwise Game Syncs tab - Switches.")]
+	[DDLRegistration(0x6a6a3944u, description: "Our Materials use Switch Groups. These are the switch group names located in the Wwise Game Syncs tab - Switches.")]
 	public uint SwitchGroupId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf7c114e5u, description: "These are the individual switches (think Materials) from the specified Switch Group. Cannot be set without a SwitchGroupId.")]
+	[DDLRegistration(0xb3a9912au, description: "These are the individual switches (think Materials) from the specified Switch Group. Cannot be set without a SwitchGroupId.")]
 	public uint SwitchId { get; set; } = 0x00000000;
 
 	public static WwiseSwitch Create(DDLObject ddl) => new(ddl);

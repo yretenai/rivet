@@ -21,16 +21,16 @@ public class PythonDdlDocumentation : DDLObjectType, IDDLObjectType<PythonDdlDoc
 		Type = ddl.GetString(0xbc4e9799) ?? Type;
 	}
 
-	[DDLRegistration(0x61457f06u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x61457f06u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x61457f06u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x61457f06u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
 	public static PythonDdlDocumentation Create(DDLObject ddl) => new(ddl);

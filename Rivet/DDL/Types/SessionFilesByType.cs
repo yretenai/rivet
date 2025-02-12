@@ -18,7 +18,7 @@ public class SessionFilesByType : DDLObjectType, IDDLObjectType<SessionFilesByTy
 		Files = ddl.GetDictionary<RivetAssetId, SessionFileInfo>(0x1f668c98, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SessionFileInfo>(mapId));
 	}
 
-	[DDLRegistration(0x1f3f01ffu, description: "File information, indexed by the asset id (hash of the file path)")]
+	[DDLRegistration(0x1f668c98u, description: "File information, indexed by the asset id (hash of the file path)")]
 	public Dictionary<RivetAssetId, SessionFileInfo?> Files { get; set; } = [];
 
 	public static SessionFilesByType Create(DDLObject ddl) => new(ddl);

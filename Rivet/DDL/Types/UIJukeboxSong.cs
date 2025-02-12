@@ -22,19 +22,19 @@ public class UIJukeboxSong : DDLObjectType, IDDLObjectType<UIJukeboxSong> {
 		MissionUnlock = ddl.GetString(0x489fe4ed) ?? MissionUnlock;
 	}
 
-	[DDLRegistration(0xc6148d3eu)]
+	[DDLRegistration(0x5686e39fu)]
 	public WwiseState? WwiseState { get; set; } = default;
 
-	[DDLRegistration(0xc6148d3eu)]
+	[DDLRegistration(0x3265b4aau)]
 	public string? Title { get; set; } = default;
 
-	[DDLRegistration(0xc6148d3eu)]
+	[DDLRegistration(0x3f21d8e0u)]
 	public string? Artist { get; set; } = default;
 
-	[DDLRegistration(0xc6148d3eu)]
+	[DDLRegistration(0xd459aa8cu)]
 	public GoldBoltReward GoldBoltUnlock { get; set; } = GoldBoltReward.None;
 
-	[DDLRegistration(0xc6148d3eu)]
+	[DDLRegistration(0x489fe4edu)]
 	public string? MissionUnlock { get; set; } = default;
 
 	public static UIJukeboxSong Create(DDLObject ddl) => new(ddl);

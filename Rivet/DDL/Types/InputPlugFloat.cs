@@ -18,7 +18,7 @@ public class InputPlugFloat : InputPlugBaseDef, IDDLObjectType<InputPlugFloat> {
 		Value = ddl.GetObject<FloatPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x9111c623u)]
+	[DDLRegistration(0x042494f5u)]
 	public FloatPlug? Value { get; set; } = default;
 
 	public new static InputPlugFloat Create(DDLObject ddl) => new(ddl);

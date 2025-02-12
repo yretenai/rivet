@@ -18,7 +18,7 @@ public class EmergentVOActionPrius : DDLObjectType, IDDLObjectType<EmergentVOAct
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xb423b7a2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
 	public static EmergentVOActionPrius Create(DDLObject ddl) => new(ddl);

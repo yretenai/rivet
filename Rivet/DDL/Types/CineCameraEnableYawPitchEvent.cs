@@ -24,25 +24,25 @@ public class CineCameraEnableYawPitchEvent : EventBase, IDDLObjectType<CineCamer
 		StickConfig = ddl.GetValue<RivetAssetId>(0x3bc8f276u, StickConfig);
 	}
 
-	[DDLRegistration(0xb66b81bau, description: "Degrees you can turn the camera right")]
+	[DDLRegistration(0x975af737u, description: "Degrees you can turn the camera right")]
 	public float YawMin { get; set; } = -10.00f;
 
-	[DDLRegistration(0xb66b81bau, description: "Degrees you can turn the camera left")]
+	[DDLRegistration(0xab57c86eu, description: "Degrees you can turn the camera left")]
 	public float YawMax { get; set; } = 10.00f;
 
-	[DDLRegistration(0xb66b81bau, description: "Degrees near yaw-limit to ramp-down turn speed")]
+	[DDLRegistration(0x9ce69f57u, description: "Degrees near yaw-limit to ramp-down turn speed")]
 	public float YawSoftZone { get; set; } = 3.00f;
 
-	[DDLRegistration(0xb66b81bau, description: "Degrees you can tilt the camera up")]
+	[DDLRegistration(0xfb99e53bu, description: "Degrees you can tilt the camera up")]
 	public float PitchMin { get; set; } = -5.00f;
 
-	[DDLRegistration(0xb66b81bau, description: "Degrees you can tilt the camera down")]
+	[DDLRegistration(0xc794da62u, description: "Degrees you can tilt the camera down")]
 	public float PitchMax { get; set; } = 5.00f;
 
-	[DDLRegistration(0xb66b81bau, description: "Degrees near pitch-limit to ramp down turn speed")]
+	[DDLRegistration(0xf9a7e1f0u, description: "Degrees near pitch-limit to ramp down turn speed")]
 	public float PitchSoftZone { get; set; } = 3.00f;
 
-	[DDLRegistration(0xb66b81bau)]
+	[DDLRegistration(0x3bc8f276u)]
 	public RivetAssetId StickConfig { get; set; } = default;
 
 	public new static CineCameraEnableYawPitchEvent Create(DDLObject ddl) => new(ddl);

@@ -38,67 +38,67 @@ public class WeaponItemConfig : GameItemConfig, IDDLObjectType<WeaponItemConfig>
 		IsPreorder = ddl.GetValue<bool>(0x99832e4du, IsPreorder);
 	}
 
-	[DDLRegistration(0xd2b9eaadu, description: "The name tag to display when upgraded")]
+	[DDLRegistration(0x7b6745a5u, description: "The name tag to display when upgraded")]
 	public string? UpgradedDisplayNameTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "The uppercase name tag to display when upgraded")]
+	[DDLRegistration(0xd2efd8edu, description: "The uppercase name tag to display when upgraded")]
 	public string? UpgradedDisplayNameUpperTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "The description tag to display when upgraded")]
+	[DDLRegistration(0x7e1fa4b0u, description: "The description tag to display when upgraded")]
 	public string? UpgradedDisplayDescriptionTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "The name tag to display when omega")]
+	[DDLRegistration(0xf82a7164u, description: "The name tag to display when omega")]
 	public string? OmegaDisplayNameTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "The uppercase name tag to display when omega")]
+	[DDLRegistration(0x113fa36bu, description: "The uppercase name tag to display when omega")]
 	public string? OmegaDisplayNameUpperTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "The description tag to display when omega")]
+	[DDLRegistration(0xd411f019u, description: "The description tag to display when omega")]
 	public string? OmegaDisplayDescriptionTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "Loc tag for help text")]
+	[DDLRegistration(0x4b5c5ca7u, description: "Loc tag for help text")]
 	public string? HelpTextTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "Loc tag for help text (hold)")]
+	[DDLRegistration(0xdca6010du, description: "Loc tag for help text (hold)")]
 	public string? HelpTextTagHold { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "Loc tag for help text (toggle)")]
+	[DDLRegistration(0x976ad8b9u, description: "Loc tag for help text (toggle)")]
 	public string? HelpTextTagToggle { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "Loc tag for V5 help text")]
+	[DDLRegistration(0x39c9425cu, description: "Loc tag for V5 help text")]
 	public string? HelpTextTagV5 { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "Loc tag for V5 help text (hold)")]
+	[DDLRegistration(0x78fbac8cu, description: "Loc tag for V5 help text (hold)")]
 	public string? HelpTextTagHoldV5 { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "Loc tag for V5 help text (toggle)")]
+	[DDLRegistration(0x075de68cu, description: "Loc tag for V5 help text (toggle)")]
 	public string? HelpTextTagToggleV5 { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "The short (functional) description tag to display")]
+	[DDLRegistration(0x50341ca4u, description: "The short (functional) description tag to display")]
 	public string? DisplayDescriptionShortTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "The short (functional) description tag to display when upgraded")]
+	[DDLRegistration(0xa4cc54c1u, description: "The short (functional) description tag to display when upgraded")]
 	public string? UpgradedDisplayDescriptionShortTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "The short (functional) description tag to display when omega")]
+	[DDLRegistration(0xc3e248bau, description: "The short (functional) description tag to display when omega")]
 	public string? OmegaDisplayDescriptionShortTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "The vague description tag to display when weapon is coming soon")]
+	[DDLRegistration(0xa411af58u, description: "The vague description tag to display when weapon is coming soon")]
 	public string? DisplayDescriptionComingSoonTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu, description: "The vague description tag to display when omega weapon is coming soon")]
+	[DDLRegistration(0xecc68e15u, description: "The vague description tag to display when omega weapon is coming soon")]
 	public string? OmegaDisplayDescriptionComingSoonTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0xd2b9eaadu)]
+	[DDLRegistration(0x5571ebd8u)]
 	public bool UsePreferredHeldSlot { get; set; } = false;
 
-	[DDLRegistration(0xd2b9eaadu)]
+	[DDLRegistration(0xefb4c5feu)]
 	public x5793ba5e PreferredHeldSlot { get; set; } = x5793ba5e.Slot01;
 
-	[DDLRegistration(0xd2b9eaadu)]
+	[DDLRegistration(0xb72a0e33u)]
 	public RivetAssetId WeaponConfig { get; set; } = default;
 
-	[DDLRegistration(0xd2b9eaadu)]
+	[DDLRegistration(0x99832e4du)]
 	public bool IsPreorder { get; set; } = false;
 
 	public new static WeaponItemConfig Create(DDLObject ddl) => new(ddl);

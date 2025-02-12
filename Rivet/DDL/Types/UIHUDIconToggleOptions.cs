@@ -18,7 +18,7 @@ public class UIHUDIconToggleOptions : DDLObjectType, IDDLObjectType<UIHUDIconTog
 		ToggleOptions = ddl.GetObjects<UIHUDIconToggleOption>(0xfaea1dc4u);
 	}
 
-	[DDLRegistration(0x10bb96c8u, description: "Array of options which toggle HUD icons on/off.")]
+	[DDLRegistration(0xfaea1dc4u, description: "Array of options which toggle HUD icons on/off.")]
 	public List<UIHUDIconToggleOption?> ToggleOptions { get; set; } = [];
 
 	public static UIHUDIconToggleOptions Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SpawnerBotPrius : SpawnerBotBasePrius, IDDLObjectType<SpawnerBotPri
 		StaticSpawner = ddl.GetValue<bool>(0x7f4ea380u, StaticSpawner);
 	}
 
-	[DDLRegistration(0xe26a6e0eu, description: "Spawner will try and run away when the target gets this close")]
+	[DDLRegistration(0xdf7987fbu, description: "Spawner will try and run away when the target gets this close")]
 	public float MinDistanceToTarget { get; set; } = 12.00f;
 
-	[DDLRegistration(0xe26a6e0eu, description: "Whether the Spawner moves around(false) or if the spawner is an unmoving static spawner(true)")]
+	[DDLRegistration(0x7f4ea380u, description: "Whether the Spawner moves around(false) or if the spawner is an unmoving static spawner(true)")]
 	public bool StaticSpawner { get; set; } = false;
 
 	public new static SpawnerBotPrius Create(DDLObject ddl) => new(ddl);

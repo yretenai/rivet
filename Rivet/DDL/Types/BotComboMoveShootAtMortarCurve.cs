@@ -18,7 +18,7 @@ public class BotComboMoveShootAtMortarCurve : BotComboMove, IDDLObjectType<BotCo
 		ShootAtMortarCurveData = ddl.GetObject<ShootAtMortarCurveData>(0xd5bba073u);
 	}
 
-	[DDLRegistration(0x1dc46d83u, "Shoot Mortar Curve Data")]
+	[DDLRegistration(0xd5bba073u, "Shoot Mortar Curve Data")]
 	public ShootAtMortarCurveData? ShootAtMortarCurveData { get; set; } = default;
 
 	public new static BotComboMoveShootAtMortarCurve Create(DDLObject ddl) => new(ddl);

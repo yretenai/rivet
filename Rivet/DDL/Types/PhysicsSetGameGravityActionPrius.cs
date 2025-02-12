@@ -20,13 +20,13 @@ public class PhysicsSetGameGravityActionPrius : DDLObjectType, IDDLObjectType<Ph
 		Gravity = ddl.GetObject<DDLVector3>(0x5bf7469fu);
 	}
 
-	[DDLRegistration(0x6bd5bdeau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.World;
 
-	[DDLRegistration(0x6bd5bdeau, description: "If TRUE, gravity will change immediately... no need to do anything else")]
+	[DDLRegistration(0xac87105au, description: "If TRUE, gravity will change immediately... no need to do anything else")]
 	public bool AutoEnable { get; set; } = true;
 
-	[DDLRegistration(0x6bd5bdeau, description: "New physics gravity for the level.")]
+	[DDLRegistration(0x5bf7469fu, description: "New physics gravity for the level.")]
 	public DDLVector3? Gravity { get; set; } = default;
 
 	public static PhysicsSetGameGravityActionPrius Create(DDLObject ddl) => new(ddl);

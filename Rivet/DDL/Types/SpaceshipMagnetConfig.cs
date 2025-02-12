@@ -51,106 +51,106 @@ public class SpaceshipMagnetConfig : ConfigBase, IDDLObjectType<SpaceshipMagnetC
 		TowCamMaxOffset = ddl.GetValue<float>(0xb4173ae2u, TowCamMaxOffset);
 	}
 
-	[DDLRegistration(0xebfe9a68u, "Allow bullets?", "If true, magnet use will be on Y/Triangle (replacing non-directional dodgeroll) rather than R2.")]
+	[DDLRegistration(0xd6fc571fu, "Allow bullets?", "If true, magnet use will be on Y/Triangle (replacing non-directional dodgeroll) rather than R2.")]
 	public bool AllowBullets { get; set; } = false;
 
-	[DDLRegistration(0xebfe9a68u, "Restrict target?", "Whether we restrict the towed actor target to the target specified in the script node (the warship) or not.")]
+	[DDLRegistration(0x322f5ee0u, "Restrict target?", "Whether we restrict the towed actor target to the target specified in the script node (the warship) or not.")]
 	public bool RestrictTarget { get; set; } = false;
 
-	[DDLRegistration(0xebfe9a68u, "Fire only on valid targets?", "Whether to allow firing towed actors at valid targets only or to allow firing them whenever the fire button is pressed.")]
+	[DDLRegistration(0x9952dd84u, "Fire only on valid targets?", "Whether to allow firing towed actors at valid targets only or to allow firing them whenever the fire button is pressed.")]
 	public bool FireOnlyOnValidTargets { get; set; } = false;
 
-	[DDLRegistration(0xebfe9a68u, "Towed Actor Damage", "Damage of our towed actor missiles.")]
+	[DDLRegistration(0x52bb86a3u, "Towed Actor Damage", "Damage of our towed actor missiles.")]
 	public float TowedActorDamage { get; set; } = 10.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Warship Firing Range", "If this value is > 0 we will use it for the valid range for the warship. Must be shorter than the normal firing range to have any effect.")]
+	[DDLRegistration(0x1effa22cu, "Warship Firing Range", "If this value is > 0 we will use it for the valid range for the warship. Must be shorter than the normal firing range to have any effect.")]
 	public WarshipFiringRangeDiffValue? WarshipFiringRange { get; set; } = default;
 
-	[DDLRegistration(0xebfe9a68u, "Magnet Ship Speed", "The desired ship speed when using the magnet.")]
+	[DDLRegistration(0x420012f7u, "Magnet Ship Speed", "The desired ship speed when using the magnet.")]
 	public float MagnetShipSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Magnet Locator", "Name of the locator the magnet should be located at. If none or invalid, will use the actor position for the magnet position.")]
+	[DDLRegistration(0x423ab7e4u, "Magnet Locator", "Name of the locator the magnet should be located at. If none or invalid, will use the actor position for the magnet position.")]
 	public string? MagnetAttachLoc { get; set; } = "";
 
-	[DDLRegistration(0xebfe9a68u, "Magnet Locator Parent Joint", "The name of the locator's parent joint - we will rotate it to point down the magnet cone for FX uses so make sure it is an unskinned joint specifically for this purpose.")]
+	[DDLRegistration(0x41d6d187u, "Magnet Locator Parent Joint", "The name of the locator's parent joint - we will rotate it to point down the magnet cone for FX uses so make sure it is an unskinned joint specifically for this purpose.")]
 	public string? MagnetAttachJoint { get; set; } = "";
 
-	[DDLRegistration(0xebfe9a68u, "Magnet Pitch", "Angle (off of Y-down) in degrees for the magnet orientation in the relative z-plane (aka, pitch). + value is towards the front of the ship.")]
+	[DDLRegistration(0xd71c40f7u, "Magnet Pitch", "Angle (off of Y-down) in degrees for the magnet orientation in the relative z-plane (aka, pitch). + value is towards the front of the ship.")]
 	public float MagnetPitch { get; set; } = 0.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Magnet Fixed?", "Whether the magnet orientation is fixed (does not consider the orientation of the ship) or not.")]
+	[DDLRegistration(0x6e4a301cu, "Magnet Fixed?", "Whether the magnet orientation is fixed (does not consider the orientation of the ship) or not.")]
 	public bool MagnetFixed { get; set; } = false;
 
-	[DDLRegistration(0xebfe9a68u, "Magnet Range:Easy", "The range of the magnet. Check with FX before changing, the FX are hand-setup to use the same values.")]
+	[DDLRegistration(0x00432555u, "Magnet Range:Easy", "The range of the magnet. Check with FX before changing, the FX are hand-setup to use the same values.")]
 	public float MagnetRangeEasy { get; set; } = 35.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Magnet Radius:Easy", "The radius of the magnet effect. Check with FX before changing, the FX are hand-setup to use the same values.")]
+	[DDLRegistration(0x148da013u, "Magnet Radius:Easy", "The radius of the magnet effect. Check with FX before changing, the FX are hand-setup to use the same values.")]
 	public float MagnetRadiusEasy { get; set; } = 10.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Magnet Range:Normal", "The range of the magnet. Check with FX before changing, the FX are hand-setup to use the same values.")]
+	[DDLRegistration(0x6304a467u, "Magnet Range:Normal", "The range of the magnet. Check with FX before changing, the FX are hand-setup to use the same values.")]
 	public float MagnetRange { get; set; } = 20.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Magnet Radius:Normal", "The radius of the magnet effect. Check with FX before changing, the FX are hand-setup to use the same values.")]
+	[DDLRegistration(0x35580fe6u, "Magnet Radius:Normal", "The radius of the magnet effect. Check with FX before changing, the FX are hand-setup to use the same values.")]
 	public float MagnetRadius { get; set; } = 6.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Magnet Range:Hard", "The range of the magnet. Check with FX before changing, the FX are hand-setup to use the same values.")]
+	[DDLRegistration(0x8834a010u, "Magnet Range:Hard", "The range of the magnet. Check with FX before changing, the FX are hand-setup to use the same values.")]
 	public float MagnetRangeHard { get; set; } = 20.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Magnet Radius:Hard", "The radius of the magnet effect. Check with FX before changing, the FX are hand-setup to use the same values.")]
+	[DDLRegistration(0x9cfa2556u, "Magnet Radius:Hard", "The radius of the magnet effect. Check with FX before changing, the FX are hand-setup to use the same values.")]
 	public float MagnetRadiusHard { get; set; } = 4.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Starting Energy (percent)", "How much energy we start with (percent of full, so 0-1).")]
+	[DDLRegistration(0xde1ee59au, "Starting Energy (percent)", "How much energy we start with (percent of full, so 0-1).")]
 	public float EnergyInit { get; set; } = 0.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Min Energy for Magnet (percent)", "Energy threshold to enable magnet use (value <= 0 will mean there is no threshold that must be met to use the magnet) (percentage, so value should be 0-1).")]
+	[DDLRegistration(0x0aed989du, "Min Energy for Magnet (percent)", "Energy threshold to enable magnet use (value <= 0 will mean there is no threshold that must be met to use the magnet) (percentage, so value should be 0-1).")]
 	public float EnergyMinThreshold { get; set; } = 0.25f;
 
-	[DDLRegistration(0xebfe9a68u, "Max energy to regen to (percent)", "The maximum energy we can auto regen to (percent of full, so value is 0-1, with valyes <= 0 meaning to not auto regen).")]
+	[DDLRegistration(0xcf17af27u, "Max energy to regen to (percent)", "The maximum energy we can auto regen to (percent of full, so value is 0-1, with valyes <= 0 meaning to not auto regen).")]
 	public float EnergyMaxRegen { get; set; } = 0.50f;
 
-	[DDLRegistration(0xebfe9a68u, "Regen Time", "Time to regen from 0 to max regen time above.")]
+	[DDLRegistration(0xfc6203e7u, "Regen Time", "Time to regen from 0 to max regen time above.")]
 	public float RegenTime { get; set; } = 10.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Full Tow Max", "The maximum we can tow with the magnet at full energy.")]
+	[DDLRegistration(0xa8f965d1u, "Full Tow Max", "The maximum we can tow with the magnet at full energy.")]
 	public byte TowMax { get; set; } = 0x14;
 
-	[DDLRegistration(0xebfe9a68u, "Max Attack Runs", "Max attack runs, to make sure the magnet gameplay sequence doesn't take too long.")]
+	[DDLRegistration(0x36e69b0fu, "Max Attack Runs", "Max attack runs, to make sure the magnet gameplay sequence doesn't take too long.")]
 	public byte MaxAttackRuns { get; set; } = 0x05;
 
-	[DDLRegistration(0xebfe9a68u, "Auto destroy on max runs?", "Whether to automatically destroy the target ship (set in the script node) when the max runs is done.")]
+	[DDLRegistration(0xdfab099eu, "Auto destroy on max runs?", "Whether to automatically destroy the target ship (set in the script node) when the max runs is done.")]
 	public bool AutoDestroyOnMaxRuns { get; set; } = true;
 
-	[DDLRegistration(0xebfe9a68u, "Target Locator", "Locator on the target ship that the magnet-actor projectiles will use as the center of their goto location. If none or invalid, will use the actor position.")]
+	[DDLRegistration(0x7abba555u, "Target Locator", "Locator on the target ship that the magnet-actor projectiles will use as the center of their goto location. If none or invalid, will use the actor position.")]
 	public string? TargetLocator { get; set; } = "";
 
-	[DDLRegistration(0xebfe9a68u, "Target Radius", "Radius from the target-locator to randomly select each projectiles desired location.")]
+	[DDLRegistration(0xc9cd247cu, "Target Radius", "Radius from the target-locator to randomly select each projectiles desired location.")]
 	public float TargetRadius { get; set; } = 12.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Use Magnet Camera: Easy")]
+	[DDLRegistration(0xd20a75b2u, "Use Magnet Camera: Easy")]
 	public UseMagCamInfo? UseMagCamInfoEasy { get; set; } = default;
 
-	[DDLRegistration(0xebfe9a68u, "Use Magnet Camera: Normal")]
+	[DDLRegistration(0xb81ace7du, "Use Magnet Camera: Normal")]
 	public UseMagCamInfo? UseMagCamInfoNormal { get; set; } = default;
 
-	[DDLRegistration(0xebfe9a68u, "Use Magnet Camera: Hard")]
+	[DDLRegistration(0x5a7df0f7u, "Use Magnet Camera: Hard")]
 	public UseMagCamInfo? UseMagCamInfoHard { get; set; } = default;
 
-	[DDLRegistration(0xebfe9a68u, "Using Mag Cam: Trans to Min Time", "The time for the camera transition when using the magnet with no towed actors.")]
+	[DDLRegistration(0x2463f6cfu, "Using Mag Cam: Trans to Min Time", "The time for the camera transition when using the magnet with no towed actors.")]
 	public float UseMagTransInCamTimeMin { get; set; } = 0.50f;
 
-	[DDLRegistration(0xebfe9a68u, "Using Mag Cam: Trans to Max Time", "The time for the camera transition when using the magnet with full max towed actors.")]
+	[DDLRegistration(0x186ec996u, "Using Mag Cam: Trans to Max Time", "The time for the camera transition when using the magnet with full max towed actors.")]
 	public float UseMagTransInCamTimeMax { get; set; } = 0.75f;
 
-	[DDLRegistration(0xebfe9a68u, "Using Mag Cam: Trans from Min Time", "The time for the camera to transition when stop using the magnet with no towed actors.")]
+	[DDLRegistration(0x3d0362f8u, "Using Mag Cam: Trans from Min Time", "The time for the camera to transition when stop using the magnet with no towed actors.")]
 	public float UseMagTransOutCamTimeMin { get; set; } = 0.60f;
 
-	[DDLRegistration(0xebfe9a68u, "Using Mag Cam: Trans from Max Time", "The time for the camera to transition when stop using the magnet with full mac towed actors.")]
+	[DDLRegistration(0x010e5da1u, "Using Mag Cam: Trans from Max Time", "The time for the camera to transition when stop using the magnet with full mac towed actors.")]
 	public float UseMagTransOutCamTimeMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0xebfe9a68u, "Towing Camera Curve", "The camera curve defining the additional offset factor from towing.")]
+	[DDLRegistration(0xb5081406u, "Towing Camera Curve", "The camera curve defining the additional offset factor from towing.")]
 	public RivetAssetId TowCamCurveConfig { get; set; } = default;
 
-	[DDLRegistration(0xebfe9a68u, "Towing Camera Max Offset", "The max offset for the tow camera.")]
+	[DDLRegistration(0xb4173ae2u, "Towing Camera Max Offset", "The max offset for the tow camera.")]
 	public float TowCamMaxOffset { get; set; } = -30.00f;
 
 	public new static SpaceshipMagnetConfig Create(DDLObject ddl) => new(ddl);

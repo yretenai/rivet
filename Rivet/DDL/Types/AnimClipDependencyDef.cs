@@ -21,16 +21,16 @@ public class AnimClipDependencyDef : DDLObjectType, IDDLObjectType<AnimClipDepen
 		AnimClipSourceTimeStamp = ddl.GetValue<ulong>(0x167e6138u, AnimClipSourceTimeStamp);
 	}
 
-	[DDLRegistration(0xd12dad93u)]
+	[DDLRegistration(0x02f0f203u)]
 	public uint AnimSetVersionHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd12dad93u)]
+	[DDLRegistration(0x99360878u)]
 	public uint AnimClipContentHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd12dad93u)]
+	[DDLRegistration(0xa8eb44b2u)]
 	public string? AnimClipSourceFilePath { get; set; } = default;
 
-	[DDLRegistration(0xd12dad93u)]
+	[DDLRegistration(0x167e6138u)]
 	public ulong AnimClipSourceTimeStamp { get; set; } = 0x0000000000000000;
 
 	public static AnimClipDependencyDef Create(DDLObject ddl) => new(ddl);

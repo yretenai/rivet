@@ -20,13 +20,13 @@ public class BotFlungStartEvent : EventBase, IDDLObjectType<BotFlungStartEvent> 
 		ByHero = ddl.GetValue<bool>(0xeefcdd8fu, ByHero);
 	}
 
-	[DDLRegistration(0xfe22499bu)]
+	[DDLRegistration(0xa20c7981u)]
 	public string? StatusEffectName { get; set; } = default;
 
-	[DDLRegistration(0xfe22499bu)]
+	[DDLRegistration(0xe69327f1u)]
 	public float Distance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfe22499bu)]
+	[DDLRegistration(0xeefcdd8fu)]
 	public bool ByHero { get; set; } = false;
 
 	public new static BotFlungStartEvent Create(DDLObject ddl) => new(ddl);

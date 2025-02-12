@@ -18,7 +18,7 @@ public class StatusEffectPixelizedConfig : StatusEffectConfig, IDDLObjectType<St
 		OverrideAtmosphere = ddl.GetValue<RivetAssetId>(0x7e0d34d9u, OverrideAtmosphere);
 	}
 
-	[DDLRegistration(0x16a8f4e3u)]
+	[DDLRegistration(0x7e0d34d9u)]
 	public RivetAssetId OverrideAtmosphere { get; set; } = default;
 
 	public new static StatusEffectPixelizedConfig Create(DDLObject ddl) => new(ddl);

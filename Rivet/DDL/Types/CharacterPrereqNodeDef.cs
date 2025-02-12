@@ -18,7 +18,7 @@ public class CharacterPrereqNodeDef : PrereqNodeBaseDef, IDDLObjectType<Characte
 		RequiredHeroType = ddl.GetEnum<HeroTypes>(0x02553353u, HeroTypesValues.Lookup);
 	}
 
-	[DDLRegistration(0x83b7b9a5u, "Required Hero Type", "What character will fulfill this prerequisite?")]
+	[DDLRegistration(0x02553353u, "Required Hero Type", "What character will fulfill this prerequisite?")]
 	public HeroTypes RequiredHeroType { get; set; } = HeroTypes.Ratchet;
 
 	public new static CharacterPrereqNodeDef Create(DDLObject ddl) => new(ddl);

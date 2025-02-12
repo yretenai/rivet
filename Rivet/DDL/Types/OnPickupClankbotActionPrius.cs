@@ -20,13 +20,13 @@ public class OnPickupClankbotActionPrius : DDLObjectType, IDDLObjectType<OnPicku
 		InitListening = ddl.GetValue<bool>(0xf387b27au, InitListening);
 	}
 
-	[DDLRegistration(0xda261a78u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0xda261a78u)]
+	[DDLRegistration(0x67f94adau)]
 	public x190611d9 Role { get; set; } = x190611d9.Base;
 
-	[DDLRegistration(0xda261a78u, "Init Listening?", "Whether to, on load, start listening for the pickup or not.")]
+	[DDLRegistration(0xf387b27au, "Init Listening?", "Whether to, on load, start listening for the pickup or not.")]
 	public bool InitListening { get; set; } = true;
 
 	public static OnPickupClankbotActionPrius Create(DDLObject ddl) => new(ddl);

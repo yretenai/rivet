@@ -22,19 +22,19 @@ public class BotHexapodPrius : BotPrius, IDDLObjectType<BotHexapodPrius> {
 		CameraPitchAdjustmentDown = ddl.GetValue<float>(0x83395f58u, CameraPitchAdjustmentDown);
 	}
 
-	[DDLRegistration(0x4042bbbcu)]
+	[DDLRegistration(0xbc92ccf0u)]
 	public RivetAssetId GunWeapon { get; set; } = default;
 
-	[DDLRegistration(0x4042bbbcu)]
+	[DDLRegistration(0x141c15bau)]
 	public RivetAssetId LobWeapon { get; set; } = default;
 
-	[DDLRegistration(0x4042bbbcu)]
+	[DDLRegistration(0xefd546cau)]
 	public RivetAssetId CameraShake { get; set; } = default;
 
-	[DDLRegistration(0x4042bbbcu, description: "Adjustment of camera pitch when moving up over edges (range 0.0 - 1.0)")]
+	[DDLRegistration(0xd1096e16u, description: "Adjustment of camera pitch when moving up over edges (range 0.0 - 1.0)")]
 	public float CameraPitchAdjustmentUp { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4042bbbcu, description: "Adjustment of camera pitch when moving down over edges (range 0.0 - 1.0)")]
+	[DDLRegistration(0x83395f58u, description: "Adjustment of camera pitch when moving down over edges (range 0.0 - 1.0)")]
 	public float CameraPitchAdjustmentDown { get; set; } = 1.00f;
 
 	public new static BotHexapodPrius Create(DDLObject ddl) => new(ddl);

@@ -28,37 +28,37 @@ public class PhysicsComponentPrius : DDLObjectType, IDDLObjectType<PhysicsCompon
 		CustomProperties = ddl.GetObject<PhysicsCustomizationProperties>(0x8e301f6cu);
 	}
 
-	[DDLRegistration(0xcc30dca6u, "Collision On")]
+	[DDLRegistration(0xc9cff538u, "Collision On")]
 	public bool CollisionOn { get; set; } = true;
 
-	[DDLRegistration(0xcc30dca6u, "Spawn As ")]
+	[DDLRegistration(0x7ab90501u, "Spawn As ")]
 	public x11c6712d SpawnAs { get; set; } = x11c6712d.KeyFramedNonInteract;
 
-	[DDLRegistration(0xcc30dca6u, "Remove From All Domains")]
+	[DDLRegistration(0x14981a04u, "Remove From All Domains")]
 	public bool RemoveFromAllDomains { get; set; } = false;
 
-	[DDLRegistration(0xcc30dca6u, "Wants Contact Event", "Only mark true if this object needs to respond to contact.")]
+	[DDLRegistration(0xe426c107u, "Wants Contact Event", "Only mark true if this object needs to respond to contact.")]
 	public bool WantsContactEvent { get; set; } = false;
 
-	[DDLRegistration(0xcc30dca6u)]
+	[DDLRegistration(0x61875ae9u)]
 	public bool MatchJointsOnSpawn { get; set; } = false;
 
-	[DDLRegistration(0xcc30dca6u, "Cloth Teleport Distance", "If actor moves beyond this distance in a frame we teleport cloth")]
+	[DDLRegistration(0xa3701f0du, "Cloth Teleport Distance", "If actor moves beyond this distance in a frame we teleport cloth")]
 	public float ClothTeleportDistance { get; set; } = 16.00f;
 
-	[DDLRegistration(0xcc30dca6u, "Cloth Settle Iterations", "number of iterations cloth sim is run to settle in a frame where it is flagged to settle")]
+	[DDLRegistration(0x824abbe3u, "Cloth Settle Iterations", "number of iterations cloth sim is run to settle in a frame where it is flagged to settle")]
 	public byte ClothSettleIterations { get; set; } = 0x08;
 
-	[DDLRegistration(0xcc30dca6u, "Cloth Frames to Settle")]
+	[DDLRegistration(0xdd1fea4cu, "Cloth Frames to Settle")]
 	public byte ClothSettlingFrameCount { get; set; } = 0x01;
 
-	[DDLRegistration(0xcc30dca6u, "Cloth Settle on Spawn")]
+	[DDLRegistration(0x280c6a7fu, "Cloth Settle on Spawn")]
 	public bool ClothSettleOnSpawn { get; set; } = false;
 
-	[DDLRegistration(0xcc30dca6u, description: "If true, this actor will listen for PhysicsStateActionEvents")]
+	[DDLRegistration(0x1771dac9u, description: "If true, this actor will listen for PhysicsStateActionEvents")]
 	public bool HandleStateActionEvents { get; set; } = false;
 
-	[DDLRegistration(0xcc30dca6u, "Custom Physics Properties", "Adjust physical behavior of this object. These numbers override Maya, so you must opt-in explicitly.")]
+	[DDLRegistration(0x8e301f6cu, "Custom Physics Properties", "Adjust physical behavior of this object. These numbers override Maya, so you must opt-in explicitly.")]
 	public PhysicsCustomizationProperties? CustomProperties { get; set; } = default;
 
 	public static PhysicsComponentPrius Create(DDLObject ddl) => new(ddl);

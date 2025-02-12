@@ -22,19 +22,19 @@ public class AnimFootstepConfigDef : DDLObjectType, IDDLObjectType<AnimFootstepC
 		AnimPoseKeyVersion = ddl.GetString(0xf5a62f51) ?? AnimPoseKeyVersion;
 	}
 
-	[DDLRegistration(0xfe7a51fdu)]
+	[DDLRegistration(0x2cb85ca8u)]
 	public x94fdc626 Strength { get; set; } = x94fdc626.Normal;
 
-	[DDLRegistration(0xfe7a51fdu)]
+	[DDLRegistration(0x16753237u)]
 	public x59a8f068 Speed { get; set; } = x59a8f068.Walk;
 
-	[DDLRegistration(0xfe7a51fdu, description: "A list of joint name to footstep side pairings. Used for automated footstep generation.")]
+	[DDLRegistration(0x72d44bb8u, description: "A list of joint name to footstep side pairings. Used for automated footstep generation.")]
 	public List<AnimFootstepJoint?> FootStepJoints { get; set; } = [];
 
-	[DDLRegistration(0xfe7a51fdu)]
+	[DDLRegistration(0x605a7dabu)]
 	public List<AnimFootstepRemovedEventKey?> RemovedEvents { get; set; } = [];
 
-	[DDLRegistration(0xfe7a51fdu)]
+	[DDLRegistration(0xf5a62f51u)]
 	public string? AnimPoseKeyVersion { get; set; } = "1.0";
 
 	public static AnimFootstepConfigDef Create(DDLObject ddl) => new(ddl);

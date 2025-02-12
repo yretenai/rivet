@@ -21,16 +21,16 @@ public class PlanetRYNOPlan : DDLObjectType, IDDLObjectType<PlanetRYNOPlan> {
 		Hints = ddl.GetObjects<ActivityHint>(0xf00bc587u);
 	}
 
-	[DDLRegistration(0xc4824f33u)]
+	[DDLRegistration(0xcd7269d0u)]
 	public x81d3e717 SaveId { get; set; } = x81d3e717.NefCity_01;
 
-	[DDLRegistration(0xc4824f33u, description: "Loctag of the name of this RYNO plan to show in the task. Localized text can be at most 128 characters.")]
+	[DDLRegistration(0x2d78cbbdu, description: "Loctag of the name of this RYNO plan to show in the task. Localized text can be at most 128 characters.")]
 	public string? NameTag { get; set; } = default;
 
-	[DDLRegistration(0xc4824f33u, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
+	[DDLRegistration(0xa76d47a6u, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
 	public uint DefaultPlaytimeEstimate { get; set; } = 0x00000005;
 
-	[DDLRegistration(0xc4824f33u)]
+	[DDLRegistration(0xf00bc587u)]
 	public List<ActivityHint?> Hints { get; set; } = [];
 
 	public static PlanetRYNOPlan Create(DDLObject ddl) => new(ddl);

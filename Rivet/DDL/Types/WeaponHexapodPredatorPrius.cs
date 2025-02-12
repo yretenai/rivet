@@ -23,22 +23,22 @@ public class WeaponHexapodPredatorPrius : WeaponPredatorPrius, IDDLObjectType<We
 		RocketDelay = ddl.GetValue<float>(0x74d22163u, RocketDelay);
 	}
 
-	[DDLRegistration(0xc26c030eu)]
+	[DDLRegistration(0x618fd93au)]
 	public float TargetScoreSwarmer { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc26c030eu)]
+	[DDLRegistration(0x9d80142eu)]
 	public float TargetScoreFlyer { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc26c030eu)]
+	[DDLRegistration(0x08595aefu)]
 	public float TargetScoreNest { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc26c030eu)]
+	[DDLRegistration(0xd7b9d34fu)]
 	public float LaunchCooldown { get; set; } = 3.00f;
 
-	[DDLRegistration(0xc26c030eu)]
+	[DDLRegistration(0x5b587935u)]
 	public float InitialLaunchCooldown { get; set; } = 2.00f;
 
-	[DDLRegistration(0xc26c030eu)]
+	[DDLRegistration(0x74d22163u)]
 	public float RocketDelay { get; set; } = 0.10f;
 
 	public new static WeaponHexapodPredatorPrius Create(DDLObject ddl) => new(ddl);

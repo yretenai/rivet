@@ -22,19 +22,19 @@ public class RegionFolderNode : DDLObjectType, IDDLObjectType<RegionFolderNode> 
 		ChildIds = ddl.GetValues<RivetAssetId>(0x09b55b23u);
 	}
 
-	[DDLRegistration(0x8b3f372eu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8b3f372eu)]
+	[DDLRegistration(0xeaeff19eu)]
 	public RivetAssetId ParentId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8b3f372eu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x8b3f372eu)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x8b3f372eu)]
+	[DDLRegistration(0x09b55b23u)]
 	public List<RivetAssetId> ChildIds { get; set; } = [];
 
 	public static RegionFolderNode Create(DDLObject ddl) => new(ddl);

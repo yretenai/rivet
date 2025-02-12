@@ -18,7 +18,7 @@ public class StreamingVideoSoundStartStreamEvent : EventBase, IDDLObjectType<Str
 		StreamIndex = ddl.GetValue<uint>(0x265c5066u, StreamIndex);
 	}
 
-	[DDLRegistration(0x24508fadu)]
+	[DDLRegistration(0x265c5066u)]
 	public uint StreamIndex { get; set; } = 0x00000000;
 
 	public new static StreamingVideoSoundStartStreamEvent Create(DDLObject ddl) => new(ddl);

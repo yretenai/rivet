@@ -19,10 +19,10 @@ public class VanityIsSetEquippedActionPrius : DDLObjectType, IDDLObjectType<Vani
 		VanitySetConfig = ddl.GetValue<RivetAssetId>(0x4d121082u, VanitySetConfig);
 	}
 
-	[DDLRegistration(0x2cd20cd6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0x2cd20cd6u, "Vanity Set Config", "Config File to check if hero has a vanity set")]
+	[DDLRegistration(0x4d121082u, "Vanity Set Config", "Config File to check if hero has a vanity set")]
 	public RivetAssetId VanitySetConfig { get; set; } = default;
 
 	public static VanityIsSetEquippedActionPrius Create(DDLObject ddl) => new(ddl);

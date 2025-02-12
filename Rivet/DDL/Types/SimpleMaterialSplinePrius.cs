@@ -23,22 +23,22 @@ public class SimpleMaterialSplinePrius : DDLObjectType, IDDLObjectType<SimpleMat
 		SkipShadowCast = ddl.GetValue<bool>(0x40b0e1cau, SkipShadowCast);
 	}
 
-	[DDLRegistration(0xb8401af8u)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public RivetAssetId Material { get; set; } = default;
 
-	[DDLRegistration(0xb8401af8u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.50f;
 
-	[DDLRegistration(0xb8401af8u)]
+	[DDLRegistration(0x886d12afu)]
 	public float TilingDistance { get; set; } = -1.00f;
 
-	[DDLRegistration(0xb8401af8u)]
+	[DDLRegistration(0x228fc6dfu)]
 	public SplineTypes SplineType { get; set; } = SplineTypes.CatmullRom;
 
-	[DDLRegistration(0xb8401af8u)]
+	[DDLRegistration(0xad3ab8b7u)]
 	public bool CanMove { get; set; } = false;
 
-	[DDLRegistration(0xb8401af8u)]
+	[DDLRegistration(0x40b0e1cau)]
 	public bool SkipShadowCast { get; set; } = false;
 
 	public static SimpleMaterialSplinePrius Create(DDLObject ddl) => new(ddl);

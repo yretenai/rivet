@@ -20,13 +20,13 @@ public class RandomBoolGeneratorNodeDef : LogicNodeBaseDef, IDDLObjectType<Rando
 		Next = ddl.GetObject<OutputPlugBoolean>(0x34bfd08cu);
 	}
 
-	[DDLRegistration(0xf87c8c31u)]
+	[DDLRegistration(0x9b44b772u)]
 	public InputPlugSignal? GenerateNext { get; set; } = default;
 
-	[DDLRegistration(0xf87c8c31u)]
+	[DDLRegistration(0x9691f737u)]
 	public OutputPlugSignal? OnGenerateNext { get; set; } = default;
 
-	[DDLRegistration(0xf87c8c31u)]
+	[DDLRegistration(0x34bfd08cu)]
 	public OutputPlugBoolean? Next { get; set; } = default;
 
 	public new static RandomBoolGeneratorNodeDef Create(DDLObject ddl) => new(ddl);

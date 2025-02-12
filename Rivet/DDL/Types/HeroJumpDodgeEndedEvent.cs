@@ -18,7 +18,7 @@ public class HeroJumpDodgeEndedEvent : EventBase, IDDLObjectType<HeroJumpDodgeEn
 		JumpingActorHandle = ddl.GetValue<uint>(0xcb8b65eeu, JumpingActorHandle);
 	}
 
-	[DDLRegistration(0x9a4ab91du)]
+	[DDLRegistration(0xcb8b65eeu)]
 	public uint JumpingActorHandle { get; set; } = 0x00000000;
 
 	public new static HeroJumpDodgeEndedEvent Create(DDLObject ddl) => new(ddl);

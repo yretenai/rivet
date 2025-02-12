@@ -18,7 +18,7 @@ public class ModeUnavailableData : DDLObjectType, IDDLObjectType<ModeUnavailable
 		Objectives = ddl.GetStrings(0xb7863755u);
 	}
 
-	[DDLRegistration(0xa52f8acau)]
+	[DDLRegistration(0xb7863755u)]
 	public List<string?> Objectives { get; set; } = [];
 
 	public static ModeUnavailableData Create(DDLObject ddl) => new(ddl);

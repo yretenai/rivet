@@ -29,40 +29,40 @@ public class MovementConfig : DDLObjectType, IDDLObjectType<MovementConfig> {
 		MaxTurnSpeed = ddl.GetValue<float>(0xf0a019d4u, MaxTurnSpeed);
 	}
 
-	[DDLRegistration(0xf6fce067u)]
+	[DDLRegistration(0x2aee74abu)]
 	public MovementStyleGame Style { get; set; } = MovementStyleGame.Run;
 
-	[DDLRegistration(0xf6fce067u, "No Rate Scaling", "If true the bot's ideal speed will be equal to the speed of the move animation.")]
+	[DDLRegistration(0xfe750a77u, "No Rate Scaling", "If true the bot's ideal speed will be equal to the speed of the move animation.")]
 	public bool UseAnimNormalSpeed { get; set; } = false;
 
-	[DDLRegistration(0xf6fce067u, description: "Adds a random speed value from the range RandomizeSpeedMin to RandomizeSpeedMax to both NormalSpeed and MaxSpeed for this MovementConfig Style.")]
+	[DDLRegistration(0x20691301u, description: "Adds a random speed value from the range RandomizeSpeedMin to RandomizeSpeedMax to both NormalSpeed and MaxSpeed for this MovementConfig Style.")]
 	public bool RandomizeSpeed { get; set; } = false;
 
-	[DDLRegistration(0xf6fce067u, description: "See RandomizeSpeed for more info.")]
+	[DDLRegistration(0x3234705bu, description: "See RandomizeSpeed for more info.")]
 	public float RandomizeSpeedMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf6fce067u, description: "See RandomizeSpeed for more info.")]
+	[DDLRegistration(0x0e394f02u, description: "See RandomizeSpeed for more info.")]
 	public float RandomizeSpeedMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf6fce067u, description: "This is the slowest a character can move to avoid obstacles and navigate turns")]
+	[DDLRegistration(0xf0d89680u, description: "This is the slowest a character can move to avoid obstacles and navigate turns")]
 	public float MinSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0xf6fce067u, description: "This is the standard speed the character will try to move. If he is not avoiding obstacles or cornering, he will being going this speed.")]
+	[DDLRegistration(0x0b9cf252u, description: "This is the standard speed the character will try to move. If he is not avoiding obstacles or cornering, he will being going this speed.")]
 	public float NormalSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0xf6fce067u, description: "This is the fastest a character can move to avoid obstacles and navigate turns")]
+	[DDLRegistration(0x16b83961u, description: "This is the fastest a character can move to avoid obstacles and navigate turns")]
 	public float MaxSpeed { get; set; } = 7.00f;
 
-	[DDLRegistration(0xf6fce067u, description: "How fast a character can accelerate to their max speed.")]
+	[DDLRegistration(0x44affa24u, description: "How fast a character can accelerate to their max speed.")]
 	public float Accel { get; set; } = 7.00f;
 
-	[DDLRegistration(0xf6fce067u, description: "How fast a character can decelerate to their min speed.")]
+	[DDLRegistration(0xa9242a88u, description: "How fast a character can decelerate to their min speed.")]
 	public float Decel { get; set; } = 4.00f;
 
-	[DDLRegistration(0xf6fce067u, description: "This is the rotation speed the character will try to use while going around corners.")]
+	[DDLRegistration(0x1d2aba45u, description: "This is the rotation speed the character will try to use while going around corners.")]
 	public float NormalTurnSpeed { get; set; } = 300.00f;
 
-	[DDLRegistration(0xf6fce067u, description: "This is the max rotation speed a character can use to avoid collisions.")]
+	[DDLRegistration(0xf0a019d4u, description: "This is the max rotation speed a character can use to avoid collisions.")]
 	public float MaxTurnSpeed { get; set; } = 500.00f;
 
 	public static MovementConfig Create(DDLObject ddl) => new(ddl);

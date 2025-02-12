@@ -20,13 +20,13 @@ public class LookRandomizerPrius : DDLObjectType, IDDLObjectType<LookRandomizerP
 		MaxLooks = ddl.GetValue<int>(0xecb55364u, MaxLooks);
 	}
 
-	[DDLRegistration(0x7993ca88u)]
+	[DDLRegistration(0x5e5c9373u)]
 	public List<LookRandomizerLookData?> LookData { get; set; } = [];
 
-	[DDLRegistration(0x7993ca88u)]
+	[DDLRegistration(0x0ad5fc85u)]
 	public int MinLooks { get; set; } = 0;
 
-	[DDLRegistration(0x7993ca88u, description: "Negative = LookData count")]
+	[DDLRegistration(0xecb55364u, description: "Negative = LookData count")]
 	public int MaxLooks { get; set; } = -1;
 
 	public static LookRandomizerPrius Create(DDLObject ddl) => new(ddl);

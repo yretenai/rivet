@@ -19,10 +19,10 @@ public class EngageEvent : EventBase, IDDLObjectType<EngageEvent> {
 		Unlosable = ddl.GetValue<bool>(0x2c3e80e4u, Unlosable);
 	}
 
-	[DDLRegistration(0x06d09cfau)]
+	[DDLRegistration(0xb1e05cb0u)]
 	public uint TargetGroup { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x06d09cfau)]
+	[DDLRegistration(0x2c3e80e4u)]
 	public bool Unlosable { get; set; } = false;
 
 	public new static EngageEvent Create(DDLObject ddl) => new(ddl);

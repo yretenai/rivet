@@ -18,7 +18,7 @@ public class SetBooleanActionPrius : DDLObjectType, IDDLObjectType<SetBooleanAct
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x9b62cc99u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
 	public static SetBooleanActionPrius Create(DDLObject ddl) => new(ddl);

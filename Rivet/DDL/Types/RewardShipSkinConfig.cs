@@ -18,7 +18,7 @@ public class RewardShipSkinConfig : ConfigBase, IDDLObjectType<RewardShipSkinCon
 		Skins = ddl.GetObjects<ShipSkinMaterialGroup>(0xf85047c1u);
 	}
 
-	[DDLRegistration(0x8a5b85edu)]
+	[DDLRegistration(0xf85047c1u)]
 	public List<ShipSkinMaterialGroup?> Skins { get; set; } = [];
 
 	public new static RewardShipSkinConfig Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class LightGridDef : DDLObjectType, IDDLObjectType<LightGridDef> {
 		ExcludeFromPS4 = ddl.GetValue<bool>(0x880dbb3bu, ExcludeFromPS4);
 	}
 
-	[DDLRegistration(0x6ee838c2u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x6ee838c2u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x6ee838c2u, "Exclude From PS4", "If checked, this light grid will not be used on the PS4. Distant lighting will be used in its place.")]
+	[DDLRegistration(0x880dbb3bu, "Exclude From PS4", "If checked, this light grid will not be used on the PS4. Distant lighting will be used in its place.")]
 	public bool ExcludeFromPS4 { get; set; } = false;
 
 	public static LightGridDef Create(DDLObject ddl) => new(ddl);

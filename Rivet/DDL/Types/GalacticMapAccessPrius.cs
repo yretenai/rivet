@@ -33,52 +33,52 @@ public class GalacticMapAccessPrius : DDLObjectType, IDDLObjectType<GalacticMapA
 		LocTextDelay = ddl.GetValue<float>(0x21073557u, LocTextDelay);
 	}
 
-	[DDLRegistration(0x11ea6377u, "Start Enabled?", "Whether this component loads enabled.")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled?", "Whether this component loads enabled.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0x11ea6377u, "Manual Level Switch?", "Whether to not automatically load the selected level after the take off cinematic. If manual is selected, use the GalacticMap:SwitchToSetLevel script node (under Macro).")]
+	[DDLRegistration(0x7349997au, "Manual Level Switch?", "Whether to not automatically load the selected level after the take off cinematic. If manual is selected, use the GalacticMap:SwitchToSetLevel script node (under Macro).")]
 	public bool DoManualLevelChange { get; set; } = false;
 
-	[DDLRegistration(0x11ea6377u, "Ship Type", "Most galactic map access is done via the player's ship, so specify which ship this one is. If it isn't a ship, use kShip_None.")]
+	[DDLRegistration(0xde246fbeu, "Ship Type", "Most galactic map access is done via the player's ship, so specify which ship this one is. If it isn't a ship, use kShip_None.")]
 	public ShipEnum ShipType { get; set; } = ShipEnum.Ship_None;
 
-	[DDLRegistration(0x11ea6377u, "Interact Offer Info", "Information for the offer (placement, range, facing, etc).")]
+	[DDLRegistration(0xb5acc8f8u, "Interact Offer Info", "Information for the offer (placement, range, facing, etc).")]
 	public InteractGeneralOfferPrius? InteractOfferPrius { get; set; } = default;
 
-	[DDLRegistration(0x11ea6377u, "Use as Cine ActorA?", "Whether to use this actor as Actor A in the cinematic.")]
+	[DDLRegistration(0x0163e137u, "Use as Cine ActorA?", "Whether to use this actor as Actor A in the cinematic.")]
 	public bool UseActorAsActorA { get; set; } = false;
 
-	[DDLRegistration(0x11ea6377u, description: "Spaceship landing cinematic.")]
+	[DDLRegistration(0xb752d0f8u, description: "Spaceship landing cinematic.")]
 	public GalacticMapAccessCinematic? LandCinematic { get; set; } = default;
 
-	[DDLRegistration(0x11ea6377u, description: "Heroes get out of the spaceship cinematic.")]
+	[DDLRegistration(0xac2102f5u, description: "Heroes get out of the spaceship cinematic.")]
 	public GalacticMapAccessCinematic? AccessMapCinematic { get; set; } = default;
 
-	[DDLRegistration(0x11ea6377u, description: "Heroes get into the spaceship cinematic.")]
+	[DDLRegistration(0xcc28c433u, description: "Heroes get into the spaceship cinematic.")]
 	public GalacticMapAccessCinematic? ExitMapCinematic { get; set; } = default;
 
-	[DDLRegistration(0x11ea6377u, description: "Spaceship taking off cinematic.")]
+	[DDLRegistration(0xd138225du, description: "Spaceship taking off cinematic.")]
 	public GalacticMapAccessCinematic? TakeOffCinematic { get; set; } = default;
 
-	[DDLRegistration(0x11ea6377u, "Ground Offset", "The cinematic reference position offset from our position (world space). Should be the difference between us and the ground (so if ground was at 1.5m and we are at 3m, then this should be -1.5).")]
+	[DDLRegistration(0x0127014du, "Ground Offset", "The cinematic reference position offset from our position (world space). Should be the difference between us and the ground (so if ground was at 1.5m and we are at 3m, then this should be -1.5).")]
 	public DDLVector3? CineOffset { get; set; } = default;
 
-	[DDLRegistration(0x11ea6377u, "GetOut Hero Offset", "Warp position (relative to this actor) to warp the hero to. If y offset is >= 0, we will use the ground offset's y above.")]
+	[DDLRegistration(0x64e8d641u, "GetOut Hero Offset", "Warp position (relative to this actor) to warp the hero to. If y offset is >= 0, we will use the ground offset's y above.")]
 	public DDLVector3? GetOutHeroOffset { get; set; } = default;
 
-	[DDLRegistration(0x11ea6377u, "(Opt)Door Actor", "Actor to play open and close animations on via events in the land and takeoff cinematics.")]
+	[DDLRegistration(0x1432f73bu, "(Opt)Door Actor", "Actor to play open and close animations on via events in the land and takeoff cinematics.")]
 	public RivetAssetId DoorActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x11ea6377u, "(Opt)Hero Warp To pos", "Where to warp the hero on landing.")]
+	[DDLRegistration(0x921cae9du, "(Opt)Hero Warp To pos", "Where to warp the hero on landing.")]
 	public RivetAssetId LandHeroWarpVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x11ea6377u, "Location Tag", "Tag for the planet location to display when landing.")]
+	[DDLRegistration(0x748ea216u, "Location Tag", "Tag for the planet location to display when landing.")]
 	public string? LocationText { get; set; } = "INVALID";
 
-	[DDLRegistration(0x11ea6377u, "Location Display Time", "The amount of time to display the location text.")]
+	[DDLRegistration(0xf6a78361u, "Location Display Time", "The amount of time to display the location text.")]
 	public float LocTextDuration { get; set; } = 3.00f;
 
-	[DDLRegistration(0x11ea6377u, "Location Display Delay", "Time from the get-out cinematic starting to display the location text.")]
+	[DDLRegistration(0x21073557u, "Location Display Delay", "Time from the get-out cinematic starting to display the location text.")]
 	public float LocTextDelay { get; set; } = 0.00f;
 
 	public static GalacticMapAccessPrius Create(DDLObject ddl) => new(ddl);

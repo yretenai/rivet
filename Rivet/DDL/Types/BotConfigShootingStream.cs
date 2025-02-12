@@ -27,34 +27,34 @@ public class BotConfigShootingStream : BotConfigShooting, IDDLObjectType<BotConf
 		SweepAngle = ddl.GetValue<float>(0xfcc5fb84u, SweepAngle);
 	}
 
-	[DDLRegistration(0xf00f445cu, description: "Whether to allow the bot to attack while moving.")]
+	[DDLRegistration(0xbc3631d7u, description: "Whether to allow the bot to attack while moving.")]
 	public bool AttackWhileMoving { get; set; } = false;
 
-	[DDLRegistration(0xf00f445cu, description: "The duration of 1 stream attack (in seconds). <= 0 for always doing the stream attack (when valid).")]
+	[DDLRegistration(0x206dc02cu, description: "The duration of 1 stream attack (in seconds). <= 0 for always doing the stream attack (when valid).")]
 	public float AttackTime { get; set; } = 5.00f;
 
-	[DDLRegistration(0xf00f445cu, description: "The min duration of 1 stream attack (in seconds).")]
+	[DDLRegistration(0x9e523994u, description: "The min duration of 1 stream attack (in seconds).")]
 	public float AttackMinTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0xf00f445cu, description: "After our stream attack ends, how long to wait before we allow another stream attack.")]
+	[DDLRegistration(0x499881dbu, description: "After our stream attack ends, how long to wait before we allow another stream attack.")]
 	public float CooldownTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0xf00f445cu, description: "How fast to turn to face the player.")]
+	[DDLRegistration(0x043f79bcu, description: "How fast to turn to face the player.")]
 	public float FullbodyTurnSpeed { get; set; } = 40.00f;
 
-	[DDLRegistration(0xf00f445cu, description: "Whether to do a random start delay to help guys not start attacking in sync.")]
+	[DDLRegistration(0xdf0b784cu, description: "Whether to do a random start delay to help guys not start attacking in sync.")]
 	public bool DoRandStartDelay { get; set; } = true;
 
-	[DDLRegistration(0xf00f445cu, description: "Whether to reload before an attack or after.")]
+	[DDLRegistration(0xe36f3278u, description: "Whether to reload before an attack or after.")]
 	public bool ReloadBeforeAtk { get; set; } = false;
 
-	[DDLRegistration(0xf00f445cu, description: "Whether to sweep the stream back and forth while attacking or to have a straight attack.")]
+	[DDLRegistration(0xb11eeab2u, description: "Whether to sweep the stream back and forth while attacking or to have a straight attack.")]
 	public bool SweepStream { get; set; } = false;
 
-	[DDLRegistration(0xf00f445cu, description: "How fast to sweep, in degrees per second.")]
+	[DDLRegistration(0xf362407bu, description: "How fast to sweep, in degrees per second.")]
 	public float SweepSpeed { get; set; } = 40.00f;
 
-	[DDLRegistration(0xf00f445cu, description: "The angle from the bot's forward to sweep, in degrees (full arc is 2*SweepAngle).")]
+	[DDLRegistration(0xfcc5fb84u, description: "The angle from the bot's forward to sweep, in degrees (full arc is 2*SweepAngle).")]
 	public float SweepAngle { get; set; } = 45.00f;
 
 	public new static BotConfigShootingStream Create(DDLObject ddl) => new(ddl);

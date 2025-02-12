@@ -21,16 +21,16 @@ public class GameplayNodeGraphBaseDef : NodeGraphBaseDef, IDDLObjectType<Gamepla
 		Comments = ddl.GetDictionary<RivetAssetId, CommentBaseDef>(0xa59f2b5a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CommentBaseDef>(mapId));
 	}
 
-	[DDLRegistration(0xe91b7f23u)]
+	[DDLRegistration(0x5895c331u)]
 	public Dictionary<RivetAssetId, EmbeddedGraphNodeBaseDef?> EmbeddedSubGraphs { get; set; } = [];
 
-	[DDLRegistration(0xe91b7f23u)]
+	[DDLRegistration(0x774f06eeu)]
 	public Dictionary<RivetAssetId, ReferencedGraphNodeBaseDef?> SubGraphs { get; set; } = [];
 
-	[DDLRegistration(0xe91b7f23u)]
+	[DDLRegistration(0x322aadceu)]
 	public Dictionary<RivetAssetId, ConnectionTuidDef?> Connections { get; set; } = [];
 
-	[DDLRegistration(0xe91b7f23u, "Comment")]
+	[DDLRegistration(0xa59f2b5au, "Comment")]
 	public Dictionary<RivetAssetId, CommentBaseDef?> Comments { get; set; } = [];
 
 	public new static GameplayNodeGraphBaseDef Create(DDLObject ddl) => new(ddl);

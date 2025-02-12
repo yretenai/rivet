@@ -18,7 +18,7 @@ public class InputPlugEventInitialization : InputPlugBaseDef, IDDLObjectType<Inp
 		Value = ddl.GetObject<EventInitializationPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x5a303d19u)]
+	[DDLRegistration(0x042494f5u)]
 	public EventInitializationPlug? Value { get; set; } = default;
 
 	public new static InputPlugEventInitialization Create(DDLObject ddl) => new(ddl);

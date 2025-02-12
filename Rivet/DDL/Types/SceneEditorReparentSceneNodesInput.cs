@@ -19,10 +19,10 @@ public class SceneEditorReparentSceneNodesInput : DDLObjectType, IDDLObjectType<
 		Children = ddl.GetValues<RivetAssetId>(0x5b960ccau);
 	}
 
-	[DDLRegistration(0x89cb201eu)]
+	[DDLRegistration(0xca715534u)]
 	public RivetAssetId NewParent { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x89cb201eu)]
+	[DDLRegistration(0x5b960ccau)]
 	public List<RivetAssetId> Children { get; set; } = [];
 
 	public static SceneEditorReparentSceneNodesInput Create(DDLObject ddl) => new(ddl);

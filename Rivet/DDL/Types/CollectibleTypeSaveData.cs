@@ -19,10 +19,10 @@ public class CollectibleTypeSaveData : DDLObjectType, IDDLObjectType<Collectible
 		NumCompleted = ddl.GetValue<uint>(0x8c54faebu, NumCompleted);
 	}
 
-	[DDLRegistration(0xf0a755f9u)]
+	[DDLRegistration(0xc1b22ec3u)]
 	public Dictionary<ulong, CollectibleInstanceSaveData?> InstanceSaveData { get; set; } = [];
 
-	[DDLRegistration(0xf0a755f9u)]
+	[DDLRegistration(0x8c54faebu)]
 	public uint NumCompleted { get; set; } = 0x00000000;
 
 	public static CollectibleTypeSaveData Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class VaultSearchHistory : DDLObjectType, IDDLObjectType<VaultSearchHisto
 		HistoryOrder = ddl.GetObjects<VaultHistoryEntry>(0xa176847bu);
 	}
 
-	[DDLRegistration(0xd1eba68au)]
+	[DDLRegistration(0x4c880bd3u)]
 	public Dictionary<uint, VaultSearchRecord?> SearchRecords { get; set; } = [];
 
-	[DDLRegistration(0xd1eba68au)]
+	[DDLRegistration(0xa176847bu)]
 	public List<VaultHistoryEntry?> HistoryOrder { get; set; } = [];
 
 	public static VaultSearchHistory Create(DDLObject ddl) => new(ddl);

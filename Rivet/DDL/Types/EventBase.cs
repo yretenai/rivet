@@ -25,28 +25,28 @@ public class EventBase : DDLObjectType, IDDLObjectType<EventBase> {
 		RequireActivated = ddl.GetValue<byte>(0x24f8572cu, RequireActivated);
 	}
 
-	[DDLRegistration(0xbedf127au)]
+	[DDLRegistration(0xacabf00cu)]
 	public uint Frame { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbedf127au)]
+	[DDLRegistration(0xc0bf986bu)]
 	public uint SenderHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbedf127au)]
+	[DDLRegistration(0x3ea4c923u)]
 	public uint TrackedNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbedf127au)]
+	[DDLRegistration(0xa6624268u)]
 	public uint EventLocatorHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbedf127au)]
+	[DDLRegistration(0x355fe936u)]
 	public uint SourceAnimDriverNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbedf127au)]
+	[DDLRegistration(0xa7207a8cu)]
 	public uint SourceAnimDriverHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbedf127au)]
+	[DDLRegistration(0xbb5c948du)]
 	public DDLTransform? Orientation { get; set; } = default;
 
-	[DDLRegistration(0xbedf127au)]
+	[DDLRegistration(0x24f8572cu)]
 	public byte RequireActivated { get; set; } = 0x01;
 
 	public static EventBase Create(DDLObject ddl) => new(ddl);

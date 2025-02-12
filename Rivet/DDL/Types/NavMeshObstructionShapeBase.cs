@@ -19,10 +19,10 @@ public class NavMeshObstructionShapeBase : DDLObjectType, IDDLObjectType<NavMesh
 		UseBoundingBoxInfo = ddl.GetValue<bool>(0x6a64db2bu, UseBoundingBoxInfo);
 	}
 
-	[DDLRegistration(0xc4164dd0u)]
+	[DDLRegistration(0xa8edddefu)]
 	public DDLVector3? CenterOffset { get; set; } = default;
 
-	[DDLRegistration(0xc4164dd0u, description: "If true uses bounding box info for shape, if false uses values set below")]
+	[DDLRegistration(0x6a64db2bu, description: "If true uses bounding box info for shape, if false uses values set below")]
 	public bool UseBoundingBoxInfo { get; set; } = true;
 
 	public static NavMeshObstructionShapeBase Create(DDLObject ddl) => new(ddl);

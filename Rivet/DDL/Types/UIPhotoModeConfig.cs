@@ -21,16 +21,16 @@ public class UIPhotoModeConfig : ConfigBase, IDDLObjectType<UIPhotoModeConfig> {
 		CharacterControls = ddl.GetObjects<UIPhotoModeOption>(0x5751aaefu);
 	}
 
-	[DDLRegistration(0x187c281cu)]
+	[DDLRegistration(0x6bbe8ad4u)]
 	public List<UIPhotoModeOptionsPage?> OptionsPages { get; set; } = [];
 
-	[DDLRegistration(0x187c281cu, "Lights")]
+	[DDLRegistration(0x06c4fc8fu, "Lights")]
 	public UIPhotoModeLights? Lights { get; set; } = default;
 
-	[DDLRegistration(0x187c281cu, "Edit Modes")]
+	[DDLRegistration(0xf54200dcu, "Edit Modes")]
 	public List<UIPhotoModeEditMode?> EditModes { get; set; } = [];
 
-	[DDLRegistration(0x187c281cu, "Character Controls")]
+	[DDLRegistration(0x5751aaefu, "Character Controls")]
 	public List<UIPhotoModeOption?> CharacterControls { get; set; } = [];
 
 	public new static UIPhotoModeConfig Create(DDLObject ddl) => new(ddl);

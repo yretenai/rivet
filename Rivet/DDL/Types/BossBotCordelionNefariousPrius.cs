@@ -27,34 +27,34 @@ public class BossBotCordelionNefariousPrius : BotPrius, IDDLObjectType<BossBotCo
 		MaterialSwapsToDo = ddl.GetObjects<BossBotCordelionNefMaterialSwaps>(0xfc11873fu);
 	}
 
-	[DDLRegistration(0xf3675feeu)]
+	[DDLRegistration(0xeed87c3bu)]
 	public bool DimensionatorPropOnByDefault { get; set; } = false;
 
-	[DDLRegistration(0xf3675feeu, description: "Strength of Lean")]
+	[DDLRegistration(0xa065a917u, description: "Strength of Lean")]
 	public float HoverLeanStrength { get; set; } = 10.00f;
 
-	[DDLRegistration(0xf3675feeu, description: "Multiplier to affect the lean vars.")]
+	[DDLRegistration(0x06a00692u, description: "Multiplier to affect the lean vars.")]
 	public float HoverLeanVarMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf3675feeu, description: "Speed at which leanvars will blend from current to target lean value")]
+	[DDLRegistration(0x21515a4fu, description: "Speed at which leanvars will blend from current to target lean value")]
 	public float HoverLeanBlendSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0xf3675feeu)]
+	[DDLRegistration(0x5d8cb773u)]
 	public HoverShuffleData? HoverShuffleData { get; set; } = default;
 
-	[DDLRegistration(0xf3675feeu)]
+	[DDLRegistration(0xeb526e57u)]
 	public BossBotCordelionNefariousShieldManagerPrius? ShieldData { get; set; } = default;
 
-	[DDLRegistration(0xf3675feeu)]
+	[DDLRegistration(0xae210eeau)]
 	public bool DoHologramDeath { get; set; } = false;
 
-	[DDLRegistration(0xf3675feeu)]
+	[DDLRegistration(0x94f4058cu)]
 	public bool DoMaterialSwapsAtHealth { get; set; } = false;
 
-	[DDLRegistration(0xf3675feeu)]
+	[DDLRegistration(0x07d5cd02u)]
 	public float HealthThresholdForSwap { get; set; } = 0.50f;
 
-	[DDLRegistration(0xf3675feeu)]
+	[DDLRegistration(0xfc11873fu)]
 	public List<BossBotCordelionNefMaterialSwaps?> MaterialSwapsToDo { get; set; } = [];
 
 	public new static BossBotCordelionNefariousPrius Create(DDLObject ddl) => new(ddl);

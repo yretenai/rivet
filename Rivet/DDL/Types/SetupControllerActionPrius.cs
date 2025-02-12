@@ -18,7 +18,7 @@ public class SetupControllerActionPrius : DDLObjectType, IDDLObjectType<SetupCon
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x564d00c0u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
 	public static SetupControllerActionPrius Create(DDLObject ddl) => new(ddl);

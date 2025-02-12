@@ -21,16 +21,16 @@ public class MountAbilityFlyPickup : MountAbilityFlyGoto, IDDLObjectType<MountAb
 		CarryDropShotIndex = ddl.GetValue<uint>(0x2e505113u, CarryDropShotIndex);
 	}
 
-	[DDLRegistration(0x66a4833eu, description: "Anim Driver name for the partial anim used to carry pickups.")]
+	[DDLRegistration(0xd905a1d9u, description: "Anim Driver name for the partial anim used to carry pickups.")]
 	public string? FlyerCarryPartial { get; set; } = default;
 
-	[DDLRegistration(0x66a4833eu, description: "Anim Driver name for when the flyer drops a pickup.")]
+	[DDLRegistration(0xef3a8c20u, description: "Anim Driver name for when the flyer drops a pickup.")]
 	public string? FlyerDropAnim { get; set; } = default;
 
-	[DDLRegistration(0x66a4833eu, description: "Amount of time that the flyer is forced to pitch upwards immediately after grabbing a pickup.")]
+	[DDLRegistration(0x97403ffbu, description: "Amount of time that the flyer is forced to pitch upwards immediately after grabbing a pickup.")]
 	public float FlyerPickupTiltUpTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x66a4833eu, description: "The index into the mount's ShotSpawnerHandler that is used to drive a dropped pickup's motion.")]
+	[DDLRegistration(0x2e505113u, description: "The index into the mount's ShotSpawnerHandler that is used to drive a dropped pickup's motion.")]
 	public uint CarryDropShotIndex { get; set; } = 0x00000001;
 
 	public new static MountAbilityFlyPickup Create(DDLObject ddl) => new(ddl);

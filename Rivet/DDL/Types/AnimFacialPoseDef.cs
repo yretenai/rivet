@@ -20,13 +20,13 @@ public class AnimFacialPoseDef : DDLObjectType, IDDLObjectType<AnimFacialPoseDef
 		PoseName = ddl.GetString(0x4dbc46f3) ?? PoseName;
 	}
 
-	[DDLRegistration(0x4711b8e0u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4711b8e0u)]
+	[DDLRegistration(0xaa3e4aebu)]
 	public int PoseFrame { get; set; } = 0;
 
-	[DDLRegistration(0x4711b8e0u)]
+	[DDLRegistration(0x4dbc46f3u)]
 	public string? PoseName { get; set; } = default;
 
 	public static AnimFacialPoseDef Create(DDLObject ddl) => new(ddl);

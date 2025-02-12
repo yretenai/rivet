@@ -20,13 +20,13 @@ public class Cinematic2RunGameOptions : DDLObjectType, IDDLObjectType<Cinematic2
 		Checkpoint = ddl.GetString(0xd436a987) ?? Checkpoint;
 	}
 
-	[DDLRegistration(0x7f2c615au, description: "Specifies the level to run.")]
+	[DDLRegistration(0x47c94d54u, description: "Specifies the level to run.")]
 	public RivetAssetId LevelPath { get; set; } = default;
 
-	[DDLRegistration(0x7f2c615au, description: "Specifies the exact text that will be populated into the Additional Cine Arguments field on the Tools Hub's Run Game panel.")]
+	[DDLRegistration(0xfdd14662u, description: "Specifies the exact text that will be populated into the Additional Cine Arguments field on the Tools Hub's Run Game panel.")]
 	public string? AdditionalCineArgs { get; set; } = default;
 
-	[DDLRegistration(0x7f2c615au, description: "Adds any Checkpoint to be populated into the Checkpoint field on the Tools Hub's Run Game panel.")]
+	[DDLRegistration(0xd436a987u, description: "Adds any Checkpoint to be populated into the Checkpoint field on the Tools Hub's Run Game panel.")]
 	public string? Checkpoint { get; set; } = default;
 
 	public static Cinematic2RunGameOptions Create(DDLObject ddl) => new(ddl);

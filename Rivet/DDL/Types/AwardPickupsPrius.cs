@@ -18,7 +18,7 @@ public class AwardPickupsPrius : AwardBasePrius, IDDLObjectType<AwardPickupsPriu
 		PickupConfigAsset = ddl.GetObject<ActorAssetReferenceDef>(0xf0812be4u);
 	}
 
-	[DDLRegistration(0x3b97c23cu, "Pickup Actor", "Reference to Pickup actor asset to be acquired to unlock the Award")]
+	[DDLRegistration(0xf0812be4u, "Pickup Actor", "Reference to Pickup actor asset to be acquired to unlock the Award")]
 	public ActorAssetReferenceDef? PickupConfigAsset { get; set; } = default;
 
 	public new static AwardPickupsPrius Create(DDLObject ddl) => new(ddl);

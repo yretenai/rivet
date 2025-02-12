@@ -20,13 +20,13 @@ public class AccessibilityMaterial : DDLObjectType, IDDLObjectType<Accessibility
 		Material = ddl.GetValue<RivetAssetId>(0x86bfc8e5u, Material);
 	}
 
-	[DDLRegistration(0x3b00cd05u, "Display Name", "Name to associate with this material.")]
+	[DDLRegistration(0x6eb3beb6u, "Display Name", "Name to associate with this material.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x3b00cd05u, "Lookup Name", "Name that other config data will use to reference this color.")]
+	[DDLRegistration(0x8daf4455u, "Lookup Name", "Name that other config data will use to reference this color.")]
 	public string? LookupName { get; set; } = "-NotSet-";
 
-	[DDLRegistration(0x3b00cd05u, description: "Material to apply to the models.")]
+	[DDLRegistration(0x86bfc8e5u, description: "Material to apply to the models.")]
 	public RivetAssetId Material { get; set; } = default;
 
 	public static AccessibilityMaterial Create(DDLObject ddl) => new(ddl);

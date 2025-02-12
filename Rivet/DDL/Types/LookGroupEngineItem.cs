@@ -19,10 +19,10 @@ public class LookGroupEngineItem : DDLObjectType, IDDLObjectType<LookGroupEngine
 		Looks = ddl.GetStrings(0xec785832u);
 	}
 
-	[DDLRegistration(0xe5b94f24u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xe5b94f24u)]
+	[DDLRegistration(0xec785832u)]
 	public List<string?> Looks { get; set; } = [];
 
 	public static LookGroupEngineItem Create(DDLObject ddl) => new(ddl);

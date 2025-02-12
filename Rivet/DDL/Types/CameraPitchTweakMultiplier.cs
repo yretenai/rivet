@@ -18,7 +18,7 @@ public class CameraPitchTweakMultiplier : CameraPitchTweak, IDDLObjectType<Camer
 		Multiplier = ddl.GetValue<float>(0x7facf762u, Multiplier);
 	}
 
-	[DDLRegistration(0xd95a88aeu)]
+	[DDLRegistration(0x7facf762u)]
 	public float Multiplier { get; set; } = 1.00f;
 
 	public new static CameraPitchTweakMultiplier Create(DDLObject ddl) => new(ddl);

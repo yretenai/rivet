@@ -20,13 +20,13 @@ public class BoltCrankPathListenerPrius : DDLObjectType, IDDLObjectType<BoltCran
 		UsePathOrientation = ddl.GetValue<bool>(0x8e302d4du, UsePathOrientation);
 	}
 
-	[DDLRegistration(0xdeedb98eu, description: "If this is blank we'll look at the actor that we are on.")]
+	[DDLRegistration(0xa8de01b8u, description: "If this is blank we'll look at the actor that we are on.")]
 	public RivetAssetId Crank { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdeedb98eu, description: "The path we follow")]
+	[DDLRegistration(0x3bc44bbfu, description: "The path we follow")]
 	public RivetAssetId Path { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdeedb98eu, description: "Whether to set our orientation to the tangent of the path.")]
+	[DDLRegistration(0x8e302d4du, description: "Whether to set our orientation to the tangent of the path.")]
 	public bool UsePathOrientation { get; set; } = true;
 
 	public static BoltCrankPathListenerPrius Create(DDLObject ddl) => new(ddl);

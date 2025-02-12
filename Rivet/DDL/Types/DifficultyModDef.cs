@@ -20,13 +20,13 @@ public class DifficultyModDef : DDLObjectType, IDDLObjectType<DifficultyModDef> 
 		ModList = ddl.GetObjects<ConfigModListElement>(0x2649755bu);
 	}
 
-	[DDLRegistration(0xfebe95b2u, "Name Filter", "The name filter for the variable")]
+	[DDLRegistration(0xe740bacbu, "Name Filter", "The name filter for the variable")]
 	public string? NameFilter { get; set; } = default;
 
-	[DDLRegistration(0xfebe95b2u, "Variable", "Variable to modify")]
+	[DDLRegistration(0x364c3afdu, "Variable", "Variable to modify")]
 	public x3f2aac2e Variable { get; set; } = x3f2aac2e.None;
 
-	[DDLRegistration(0xfebe95b2u, "Config Mod List", "List of config mods to apply")]
+	[DDLRegistration(0x2649755bu, "Config Mod List", "List of config mods to apply")]
 	public List<ConfigModListElement?> ModList { get; set; } = [];
 
 	public static DifficultyModDef Create(DDLObject ddl) => new(ddl);

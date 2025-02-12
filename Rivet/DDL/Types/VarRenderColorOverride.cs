@@ -19,10 +19,10 @@ public class VarRenderColorOverride : DDLObjectType, IDDLObjectType<VarRenderCol
 		Value = ddl.GetObject<RenderColorOverride>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x8f44588eu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x8f44588eu)]
+	[DDLRegistration(0x042494f5u)]
 	public RenderColorOverride? Value { get; set; } = default;
 
 	public static VarRenderColorOverride Create(DDLObject ddl) => new(ddl);

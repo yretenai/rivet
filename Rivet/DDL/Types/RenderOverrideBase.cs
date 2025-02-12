@@ -19,10 +19,10 @@ public class RenderOverrideBase : DDLObjectType, IDDLObjectType<RenderOverrideBa
 		MaterialMappingName = ddl.GetString(0x981e6927) ?? MaterialMappingName;
 	}
 
-	[DDLRegistration(0x412267b1u, description: "Name of the node in the material graph this is being overridden")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of the node in the material graph this is being overridden")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x412267b1u, description: "Name of the Maya material mapping the override is restricted to")]
+	[DDLRegistration(0x981e6927u, description: "Name of the Maya material mapping the override is restricted to")]
 	public string? MaterialMappingName { get; set; } = default;
 
 	public static RenderOverrideBase Create(DDLObject ddl) => new(ddl);

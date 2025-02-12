@@ -19,10 +19,10 @@ public class CustomOverlayRegisteredEvent : EventBase, IDDLObjectType<CustomOver
 		ProcessNavMeshObstacles = ddl.GetValue<bool>(0xa948500bu, ProcessNavMeshObstacles);
 	}
 
-	[DDLRegistration(0xe2d60205u)]
+	[DDLRegistration(0xad2e2b30u)]
 	public RivetAssetId RegionAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xe2d60205u)]
+	[DDLRegistration(0xa948500bu)]
 	public bool ProcessNavMeshObstacles { get; set; } = false;
 
 	public new static CustomOverlayRegisteredEvent Create(DDLObject ddl) => new(ddl);

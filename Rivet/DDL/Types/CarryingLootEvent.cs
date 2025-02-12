@@ -18,7 +18,7 @@ public class CarryingLootEvent : EventBase, IDDLObjectType<CarryingLootEvent> {
 		IdNum = ddl.GetValue<byte>(0xe4587e28u, IdNum);
 	}
 
-	[DDLRegistration(0xcb2bb991u, description: "Any number as an identifier, whatever (the conduit) is listening for this event will just need to use the same identifiers.")]
+	[DDLRegistration(0xe4587e28u, description: "Any number as an identifier, whatever (the conduit) is listening for this event will just need to use the same identifiers.")]
 	public byte IdNum { get; set; } = 0x00;
 
 	public new static CarryingLootEvent Create(DDLObject ddl) => new(ddl);

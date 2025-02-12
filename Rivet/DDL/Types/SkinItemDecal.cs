@@ -19,10 +19,10 @@ public class SkinItemDecal : DDLObjectType, IDDLObjectType<SkinItemDecal> {
 		Scale = ddl.GetValue<float>(0xf515e945u, Scale);
 	}
 
-	[DDLRegistration(0x6e734e81u, "Decal Material", "Decal material file")]
+	[DDLRegistration(0x86bfc8e5u, "Decal Material", "Decal material file")]
 	public AssetReferenceDef? Material { get; set; } = default;
 
-	[DDLRegistration(0x6e734e81u, "Decal Scale", "Decal scale")]
+	[DDLRegistration(0xf515e945u, "Decal Scale", "Decal scale")]
 	public float Scale { get; set; } = 1.00f;
 
 	public static SkinItemDecal Create(DDLObject ddl) => new(ddl);

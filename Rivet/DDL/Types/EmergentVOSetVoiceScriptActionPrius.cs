@@ -19,10 +19,10 @@ public class EmergentVOSetVoiceScriptActionPrius : DDLObjectType, IDDLObjectType
 		Voice = ddl.GetEnum<VoiceGame>(0xfea894fau, VoiceGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x55398758u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
-	[DDLRegistration(0x55398758u, "Voice", "The voice the bot should use. This must be within their normal emergent vo config range")]
+	[DDLRegistration(0xfea894fau, "Voice", "The voice the bot should use. This must be within their normal emergent vo config range")]
 	public VoiceGame Voice { get; set; } = VoiceGame.Unused;
 
 	public static EmergentVOSetVoiceScriptActionPrius Create(DDLObject ddl) => new(ddl);

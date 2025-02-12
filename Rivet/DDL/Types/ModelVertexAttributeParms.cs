@@ -24,25 +24,25 @@ public class ModelVertexAttributeParms : DDLObjectType, IDDLObjectType<ModelVert
 		UVOffset = ddl.GetObject<DDLVector2>(0xd4f24f25u);
 	}
 
-	[DDLRegistration(0x8686a762u, description: "vertex color for entire model")]
+	[DDLRegistration(0x6e07bf94u, description: "vertex color for entire model")]
 	public DDLVector3? VertexColor { get; set; } = default;
 
-	[DDLRegistration(0x8686a762u, description: "vertex alpha for entire model")]
+	[DDLRegistration(0xd8b1ce17u, description: "vertex alpha for entire model")]
 	public float VertexAlpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8686a762u, description: "Vertex spacing along curve and around cross-section")]
+	[DDLRegistration(0x513026ceu, description: "Vertex spacing along curve and around cross-section")]
 	public DDLVector2? VertexSpacing { get; set; } = default;
 
-	[DDLRegistration(0x8686a762u, description: "Reverse U")]
+	[DDLRegistration(0xb07b05d0u, description: "Reverse U")]
 	public bool ReverseU { get; set; } = false;
 
-	[DDLRegistration(0x8686a762u, description: "Reverse V")]
+	[DDLRegistration(0x2972546au, description: "Reverse V")]
 	public bool ReverseV { get; set; } = false;
 
-	[DDLRegistration(0x8686a762u, "UV Tiling Distance meters/UV")]
+	[DDLRegistration(0x62050c4eu, "UV Tiling Distance meters/UV")]
 	public DDLVector2? UVTilingDistance { get; set; } = default;
 
-	[DDLRegistration(0x8686a762u, "UV Offset")]
+	[DDLRegistration(0xd4f24f25u, "UV Offset")]
 	public DDLVector2? UVOffset { get; set; } = default;
 
 	public static ModelVertexAttributeParms Create(DDLObject ddl) => new(ddl);

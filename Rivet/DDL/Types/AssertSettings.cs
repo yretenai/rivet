@@ -29,40 +29,40 @@ public class AssertSettings : DDLObjectType, IDDLObjectType<AssertSettings> {
 		EveryAssertIsFatal = ddl.GetValue<bool>(0x58859683u, EveryAssertIsFatal);
 	}
 
-	[DDLRegistration(0xc1ba458eu, "Enable Callstacks", "Enable callstacks in assert dialogs")]
+	[DDLRegistration(0xe8450843u, "Enable Callstacks", "Enable callstacks in assert dialogs")]
 	public bool CallStackEnable { get; set; } = true;
 
-	[DDLRegistration(0xc1ba458eu, "Enable Profiler Stacks", "Show the current profiler stack in assert dialogs")]
+	[DDLRegistration(0xa8840a13u, "Enable Profiler Stacks", "Show the current profiler stack in assert dialogs")]
 	public bool ProfilerStackEnable { get; set; } = true;
 
-	[DDLRegistration(0xc1ba458eu, "Defer Enabling Callstacks", "Enable callstacks only when required in code")]
+	[DDLRegistration(0x6ab3012du, "Defer Enabling Callstacks", "Enable callstacks only when required in code")]
 	public bool CallStackDeferredInitialization { get; set; } = false;
 
-	[DDLRegistration(0xc1ba458eu)]
+	[DDLRegistration(0x6ac40765u)]
 	public xd839f866 UnhandledExceptionMode { get; set; } = xd839f866.TTY;
 
-	[DDLRegistration(0xc1ba458eu)]
+	[DDLRegistration(0x2959a55du)]
 	public xd839f866 FatalAssertMode { get; set; } = xd839f866.TTY;
 
-	[DDLRegistration(0xc1ba458eu)]
+	[DDLRegistration(0x68e28e6cu)]
 	public xd839f866 AssertMode { get; set; } = xd839f866.TTY;
 
-	[DDLRegistration(0xc1ba458eu)]
+	[DDLRegistration(0x9f072dc8u)]
 	public string? WarningFilter { get; set; } = "";
 
-	[DDLRegistration(0xc1ba458eu)]
+	[DDLRegistration(0x0fc9ca37u)]
 	public string? LogFile { get; set; } = "";
 
-	[DDLRegistration(0xc1ba458eu)]
+	[DDLRegistration(0x6fbe6d0cu)]
 	public bool AppendToLogFile { get; set; } = false;
 
-	[DDLRegistration(0xc1ba458eu)]
+	[DDLRegistration(0x6859a16au)]
 	public xb022b3f7 CrashDumpMode { get; set; } = xb022b3f7.Minidump;
 
-	[DDLRegistration(0xc1ba458eu)]
+	[DDLRegistration(0x1ccaa313u)]
 	public bool UseToolTransmitter { get; set; } = false;
 
-	[DDLRegistration(0xc1ba458eu)]
+	[DDLRegistration(0x58859683u)]
 	public bool EveryAssertIsFatal { get; set; } = false;
 
 	public static AssertSettings Create(DDLObject ddl) => new(ddl);

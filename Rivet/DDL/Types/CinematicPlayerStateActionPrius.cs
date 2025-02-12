@@ -21,16 +21,16 @@ public class CinematicPlayerStateActionPrius : DDLObjectType, IDDLObjectType<Cin
 		DeactivateOnDestroy = ddl.GetValue<bool>(0xbcc31172u, DeactivateOnDestroy);
 	}
 
-	[DDLRegistration(0x1e65687cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x1e65687cu)]
+	[DDLRegistration(0x12568d7bu)]
 	public xc1e2b7b6 Flags { get; set; } = (xc1e2b7b6) 0x0000067b;
 
-	[DDLRegistration(0x1e65687cu, description: "If kCollectCurrency is set, any currency within this range of the hero will be collected. (meters)")]
+	[DDLRegistration(0x75b524c3u, description: "If kCollectCurrency is set, any currency within this range of the hero will be collected. (meters)")]
 	public float CurrencyCollectDist { get; set; } = 20.00f;
 
-	[DDLRegistration(0x1e65687cu, description: "Set to FALSE for special cases where we unload script during the cinematic and don't want to deactivate prematurely.  Should normally be TRUE")]
+	[DDLRegistration(0xbcc31172u, description: "Set to FALSE for special cases where we unload script during the cinematic and don't want to deactivate prematurely.  Should normally be TRUE")]
 	public bool DeactivateOnDestroy { get; set; } = true;
 
 	public static CinematicPlayerStateActionPrius Create(DDLObject ddl) => new(ddl);

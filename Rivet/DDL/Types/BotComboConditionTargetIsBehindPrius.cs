@@ -18,7 +18,7 @@ public class BotComboConditionTargetIsBehindPrius : BotComboConditionBasePrius, 
 		BehindDotTolerance = ddl.GetValue<float>(0x5969ebc2u, BehindDotTolerance);
 	}
 
-	[DDLRegistration(0x00934640u, "Behind Dot Tolerance", "The amount that target needs to be from perfectly behind user to be considered behind ( 0.0f would mean anywhere behind user and 1.0f is directly behind[do not use 1.0f] )")]
+	[DDLRegistration(0x5969ebc2u, "Behind Dot Tolerance", "The amount that target needs to be from perfectly behind user to be considered behind ( 0.0f would mean anywhere behind user and 1.0f is directly behind[do not use 1.0f] )")]
 	public float BehindDotTolerance { get; set; } = 0.50f;
 
 	public new static BotComboConditionTargetIsBehindPrius Create(DDLObject ddl) => new(ddl);

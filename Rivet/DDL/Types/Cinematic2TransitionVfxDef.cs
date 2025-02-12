@@ -22,19 +22,19 @@ public class Cinematic2TransitionVfxDef : DDLObjectType, IDDLObjectType<Cinemati
 		SmoothingType = ddl.GetEnum<x53914cb6>(0xc6252625u, x53914cb6Values.Lookup);
 	}
 
-	[DDLRegistration(0xcf778ee0u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xcf778ee0u, description: "This specifies the shot where the transition occurs (the DurationBefore happens before this shot's start time; the DurationAfter happens after this shot's start time).")]
+	[DDLRegistration(0xf097daf3u, description: "This specifies the shot where the transition occurs (the DurationBefore happens before this shot's start time; the DurationAfter happens after this shot's start time).")]
 	public RivetAssetId ShotId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xcf778ee0u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.50f;
 
-	[DDLRegistration(0xcf778ee0u)]
+	[DDLRegistration(0xef116147u)]
 	public x010205e3 StartType { get; set; } = x010205e3.BeginningOfShot;
 
-	[DDLRegistration(0xcf778ee0u)]
+	[DDLRegistration(0xc6252625u)]
 	public x53914cb6 SmoothingType { get; set; } = x53914cb6.SmoothingLinear;
 
 	public static Cinematic2TransitionVfxDef Create(DDLObject ddl) => new(ddl);

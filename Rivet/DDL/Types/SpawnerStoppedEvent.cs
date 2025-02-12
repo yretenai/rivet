@@ -18,7 +18,7 @@ public class SpawnerStoppedEvent : EventBase, IDDLObjectType<SpawnerStoppedEvent
 		SpawnerComponentHandle = ddl.GetValue<uint>(0xac64db40u, SpawnerComponentHandle);
 	}
 
-	[DDLRegistration(0xfb657f56u)]
+	[DDLRegistration(0xac64db40u)]
 	public uint SpawnerComponentHandle { get; set; } = 0x00000000;
 
 	public new static SpawnerStoppedEvent Create(DDLObject ddl) => new(ddl);

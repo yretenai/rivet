@@ -24,25 +24,25 @@ public class UIOptionsConfig : ConfigBase, IDDLObjectType<UIOptionsConfig> {
 		MotorPresetOptions = ddl.GetObject<UIOptionsPresetData>(0x31bc6617u);
 	}
 
-	[DDLRegistration(0x2a6dc9feu)]
+	[DDLRegistration(0x392729b4u)]
 	public List<UIOptionsPage?> Pages { get; set; } = [];
 
-	[DDLRegistration(0x2a6dc9feu, description: "Colors used by UI settings, referenced by name.")]
+	[DDLRegistration(0xfcc68df8u, description: "Colors used by UI settings, referenced by name.")]
 	public List<UIOptionColorData?> Colors { get; set; } = [];
 
-	[DDLRegistration(0x2a6dc9feu)]
+	[DDLRegistration(0x4f656054u)]
 	public UIHUDIconToggleOptions? HUDIconToggleOptions { get; set; } = default;
 
-	[DDLRegistration(0x2a6dc9feu)]
+	[DDLRegistration(0x223c7a8au)]
 	public UIOptionsPresetData? SimpleControlsOptions { get; set; } = default;
 
-	[DDLRegistration(0x2a6dc9feu)]
+	[DDLRegistration(0x395f5c48u)]
 	public UIOptionsPresetData? VisualPresetOptions { get; set; } = default;
 
-	[DDLRegistration(0x2a6dc9feu)]
+	[DDLRegistration(0x94ec4cbdu)]
 	public UIOptionsPresetData? HearingPresetOptions { get; set; } = default;
 
-	[DDLRegistration(0x2a6dc9feu)]
+	[DDLRegistration(0x31bc6617u)]
 	public UIOptionsPresetData? MotorPresetOptions { get; set; } = default;
 
 	public new static UIOptionsConfig Create(DDLObject ddl) => new(ddl);

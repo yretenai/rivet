@@ -18,7 +18,7 @@ public class OutputPlugWeaponMacroType : OutputPlugBaseDef, IDDLObjectType<Outpu
 		Value = ddl.GetObject<WeaponMacroTypePlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x43e4ae83u)]
+	[DDLRegistration(0x042494f5u)]
 	public WeaponMacroTypePlug? Value { get; set; } = default;
 
 	public new static OutputPlugWeaponMacroType Create(DDLObject ddl) => new(ddl);

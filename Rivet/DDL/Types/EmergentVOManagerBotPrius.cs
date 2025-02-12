@@ -24,25 +24,25 @@ public class EmergentVOManagerBotPrius : EmergentVOManagerGamePrius, IDDLObjectT
 		OffScreenFiringTaunt = ddl.GetValue<bool>(0x658f6e61u, OffScreenFiringTaunt);
 	}
 
-	[DDLRegistration(0x21698788u, "Default Voice Min")]
+	[DDLRegistration(0x1304101eu, "Default Voice Min")]
 	public VoiceGame VoiceMin { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0x21698788u, "Default Voice Max")]
+	[DDLRegistration(0x2f092f47u, "Default Voice Max")]
 	public VoiceGame VoiceMax { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0x21698788u)]
+	[DDLRegistration(0x177a05d0u)]
 	public LookGroupVoiceOverrideData? LookGroupVoiceOverrideData { get; set; } = default;
 
-	[DDLRegistration(0x21698788u, "Voice Switches", "Voice specific wwise switch toggles. Should not have multiple entries with the same voice")]
+	[DDLRegistration(0x1879581eu, "Voice Switches", "Voice specific wwise switch toggles. Should not have multiple entries with the same voice")]
 	public List<EmergentVOManagerVoiceSwitches?> VoiceSwitches { get; set; } = [];
 
-	[DDLRegistration(0x21698788u, description: "Don't play lines if the hero is beyond this distance from bot.")]
+	[DDLRegistration(0x88831235u, description: "Don't play lines if the hero is beyond this distance from bot.")]
 	public float MaxDistance { get; set; } = 70.00f;
 
-	[DDLRegistration(0x21698788u, description: "When off screen and approaching the hero within this distance for the first time, trigger a taunt line.")]
+	[DDLRegistration(0xbbeeedaeu, description: "When off screen and approaching the hero within this distance for the first time, trigger a taunt line.")]
 	public float OffScreenApproachingTaunt { get; set; } = 0.00f;
 
-	[DDLRegistration(0x21698788u, description: "When off screen and shooting at the hero for the first time, trigger a taunt line.")]
+	[DDLRegistration(0x658f6e61u, description: "When off screen and shooting at the hero for the first time, trigger a taunt line.")]
 	public bool OffScreenFiringTaunt { get; set; } = false;
 
 	public new static EmergentVOManagerBotPrius Create(DDLObject ddl) => new(ddl);

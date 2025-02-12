@@ -20,13 +20,13 @@ public class PlanetChangedEvent : EventBase, IDDLObjectType<PlanetChangedEvent> 
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x09730fb6u, "Old Planet Name", "The name of the planet that the hero was on previously.")]
+	[DDLRegistration(0x9b6edae8u, "Old Planet Name", "The name of the planet that the hero was on previously.")]
 	public string? OldPlanetName { get; set; } = default;
 
-	[DDLRegistration(0x09730fb6u, "New Planet Name", "The name of the planet that the hero will be on next.")]
+	[DDLRegistration(0xec459b36u, "New Planet Name", "The name of the planet that the hero will be on next.")]
 	public string? NewPlanetName { get; set; } = default;
 
-	[DDLRegistration(0x09730fb6u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static PlanetChangedEvent Create(DDLObject ddl) => new(ddl);

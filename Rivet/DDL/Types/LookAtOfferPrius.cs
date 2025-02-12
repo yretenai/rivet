@@ -25,28 +25,28 @@ public class LookAtOfferPrius : OfferPrius, IDDLObjectType<LookAtOfferPrius> {
 		OfferOffset = ddl.GetObject<DDLVector3>(0xda6f0f48u);
 	}
 
-	[DDLRegistration(0x1f67d499u)]
+	[DDLRegistration(0x191f829eu)]
 	public float MaxAngle { get; set; } = 10.00f;
 
-	[DDLRegistration(0x1f67d499u)]
+	[DDLRegistration(0x88831235u)]
 	public float MaxDistance { get; set; } = 50.00f;
 
-	[DDLRegistration(0x1f67d499u)]
+	[DDLRegistration(0x1cb513d0u)]
 	public float HoldTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f67d499u, "Accumulate Time")]
+	[DDLRegistration(0xea9ab497u, "Accumulate Time")]
 	public bool AccumulateTime { get; set; } = false;
 
-	[DDLRegistration(0x1f67d499u)]
+	[DDLRegistration(0xd803b9eau)]
 	public float PercentVisible { get; set; } = 10.00f;
 
-	[DDLRegistration(0x1f67d499u, "Stop On Timeout")]
+	[DDLRegistration(0x32c0049fu, "Stop On Timeout")]
 	public bool StopOnTimeout { get; set; } = true;
 
-	[DDLRegistration(0x1f67d499u)]
+	[DDLRegistration(0x5613ef51u)]
 	public string? OfferLocator { get; set; } = default;
 
-	[DDLRegistration(0x1f67d499u, "Offer Offset", "Offset position for the offer from the locator or actor position.")]
+	[DDLRegistration(0xda6f0f48u, "Offer Offset", "Offset position for the offer from the locator or actor position.")]
 	public DDLVector3? OfferOffset { get; set; } = default;
 
 	public new static LookAtOfferPrius Create(DDLObject ddl) => new(ddl);

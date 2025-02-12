@@ -20,13 +20,13 @@ public class WwiseParameter : DDLObjectType, IDDLObjectType<WwiseParameter> {
 		ParameterValue = ddl.GetValue<float>(0x7cc5f58au, ParameterValue);
 	}
 
-	[DDLRegistration(0x605c4178u)]
+	[DDLRegistration(0x881b63feu)]
 	public string? ParameterName { get; set; } = default;
 
-	[DDLRegistration(0x605c4178u, description: "These are Game Sync and RTPC Parameters (like Speed or Distance).")]
+	[DDLRegistration(0x6aab893du, description: "These are Game Sync and RTPC Parameters (like Speed or Distance).")]
 	public uint ParameterId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x605c4178u, description: "These are the values used in conjunction with ParameterId.")]
+	[DDLRegistration(0x7cc5f58au, description: "These are the values used in conjunction with ParameterId.")]
 	public float ParameterValue { get; set; } = 0.00f;
 
 	public static WwiseParameter Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MountAbilityBase : DDLObjectType, IDDLObjectType<MountAbilityBase> 
 		InputControls = ddl.GetEnums<xce61f0ef>(0x5dbc7441u, xce61f0efValues.Lookup);
 	}
 
-	[DDLRegistration(0xb856920du)]
+	[DDLRegistration(0x5dbc7441u)]
 	public List<xce61f0ef> InputControls { get; set; } = [];
 
 	public static MountAbilityBase Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MoverTakeOffEvent : EventBase, IDDLObjectType<MoverTakeOffEvent> {
 		GroundMaterial = ddl.GetEnum<x10b3c4cf>(0x4ba3454cu, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0xcba7688fu)]
+	[DDLRegistration(0x4ba3454cu)]
 	public x10b3c4cf GroundMaterial { get; set; } = x10b3c4cf.None;
 
 	public new static MoverTakeOffEvent Create(DDLObject ddl) => new(ddl);

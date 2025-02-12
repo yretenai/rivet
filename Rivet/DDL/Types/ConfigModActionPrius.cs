@@ -20,13 +20,13 @@ public class ConfigModActionPrius : DDLObjectType, IDDLObjectType<ConfigModActio
 		ModType = ddl.GetEnum<x2f0b644b>(0xee5fda6au, x2f0b644bValues.Lookup);
 	}
 
-	[DDLRegistration(0x46cda831u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Config;
 
-	[DDLRegistration(0x46cda831u)]
+	[DDLRegistration(0x83370868u)]
 	public RivetAssetId ConfigAsset { get; set; } = default;
 
-	[DDLRegistration(0x46cda831u)]
+	[DDLRegistration(0xee5fda6au)]
 	public x2f0b644b ModType { get; set; } = x2f0b644b.Replace;
 
 	public static ConfigModActionPrius Create(DDLObject ddl) => new(ddl);

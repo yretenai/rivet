@@ -19,10 +19,10 @@ public class StopAllOscillatingMotionActionPrius : DDLObjectType, IDDLObjectType
 		BlendOutTime = ddl.GetValue<float>(0xda2e044eu, BlendOutTime);
 	}
 
-	[DDLRegistration(0x509a9625u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Movement;
 
-	[DDLRegistration(0x509a9625u, "Blend Out Time", "Any oscillating motion on the any of the actors blends out over this time. This will stomp whatever blend out time they might have had before. -1 = instantaneous")]
+	[DDLRegistration(0xda2e044eu, "Blend Out Time", "Any oscillating motion on the any of the actors blends out over this time. This will stomp whatever blend out time they might have had before. -1 = instantaneous")]
 	public float BlendOutTime { get; set; } = 0.00f;
 
 	public static StopAllOscillatingMotionActionPrius Create(DDLObject ddl) => new(ddl);

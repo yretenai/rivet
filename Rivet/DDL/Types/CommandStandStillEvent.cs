@@ -19,10 +19,10 @@ public class CommandStandStillEvent : CommandEvent, IDDLObjectType<CommandStandS
 		AimAtPrimaryTarget = ddl.GetValue<bool>(0x8fb28cebu, AimAtPrimaryTarget);
 	}
 
-	[DDLRegistration(0x64cd7314u, description: "Optional.  Face toward this actor")]
+	[DDLRegistration(0x6dea7c60u, description: "Optional.  Face toward this actor")]
 	public uint FaceTowardActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x64cd7314u)]
+	[DDLRegistration(0x8fb28cebu)]
 	public bool AimAtPrimaryTarget { get; set; } = false;
 
 	public new static CommandStandStillEvent Create(DDLObject ddl) => new(ddl);

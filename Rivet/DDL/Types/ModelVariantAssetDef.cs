@@ -20,13 +20,13 @@ public class ModelVariantAssetDef : DDLObjectType, IDDLObjectType<ModelVariantAs
 		Gamedata = ddl.GetObject<ModelVariantDef>(0xf8b5267au);
 	}
 
-	[DDLRegistration(0x86dd2595u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x86dd2595u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x86dd2595u)]
+	[DDLRegistration(0xf8b5267au)]
 	public ModelVariantDef? Gamedata { get; set; } = default;
 
 	public static ModelVariantAssetDef Create(DDLObject ddl) => new(ddl);

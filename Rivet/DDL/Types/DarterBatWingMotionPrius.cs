@@ -20,13 +20,13 @@ public class DarterBatWingMotionPrius : DDLObjectType, IDDLObjectType<DarterBatW
 		BankingMax = ddl.GetValue<float>(0x1f14380cu, BankingMax);
 	}
 
-	[DDLRegistration(0x63275b7fu)]
+	[DDLRegistration(0xe6161654u)]
 	public float BankingFactor { get; set; } = 100.00f;
 
-	[DDLRegistration(0x63275b7fu)]
+	[DDLRegistration(0x23190755u)]
 	public float BankingMin { get; set; } = -50.00f;
 
-	[DDLRegistration(0x63275b7fu)]
+	[DDLRegistration(0x1f14380cu)]
 	public float BankingMax { get; set; } = 50.00f;
 
 	public static DarterBatWingMotionPrius Create(DDLObject ddl) => new(ddl);

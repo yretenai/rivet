@@ -19,10 +19,10 @@ public class Proof5 : DDLObjectType, IDDLObjectType<Proof5> {
 		StrAsSelOverride = ddl.GetString(0x9d61d908) ?? StrAsSelOverride;
 	}
 
-	[DDLRegistration(0x425032e0u)]
+	[DDLRegistration(0xcd5cf06bu)]
 	public string? StrAsSel { get; set; } = default;
 
-	[DDLRegistration(0x425032e0u)]
+	[DDLRegistration(0x9d61d908u)]
 	public string? StrAsSelOverride { get; set; } = "kC";
 
 	public static Proof5 Create(DDLObject ddl) => new(ddl);

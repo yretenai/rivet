@@ -22,19 +22,19 @@ public class FormationSpawnData : ActorSpawnData, IDDLObjectType<FormationSpawnD
 		Facing = ddl.GetObject<DDLVector3>(0xb37847eeu);
 	}
 
-	[DDLRegistration(0x79f97574u, description: "The FormationCoordinator doing the spawning")]
+	[DDLRegistration(0x2f1bf4d9u, description: "The FormationCoordinator doing the spawning")]
 	public uint FormationCoordinator { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x79f97574u, description: "Template of the actor we want to spawn")]
+	[DDLRegistration(0x3226c11eu, description: "Template of the actor we want to spawn")]
 	public uint TemplateActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x79f97574u, description: "Index of the formation.")]
+	[DDLRegistration(0x19102cfau, description: "Index of the formation.")]
 	public uint FormationIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x79f97574u)]
+	[DDLRegistration(0xbc2d5985u)]
 	public DDLVector3? Position { get; set; } = default;
 
-	[DDLRegistration(0x79f97574u)]
+	[DDLRegistration(0xb37847eeu)]
 	public DDLVector3? Facing { get; set; } = default;
 
 	public new static FormationSpawnData Create(DDLObject ddl) => new(ddl);

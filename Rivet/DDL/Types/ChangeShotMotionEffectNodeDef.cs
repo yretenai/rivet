@@ -18,7 +18,7 @@ public class ChangeShotMotionEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObj
 		Motion = ddl.GetObject<ShotMotionBasePrius>(0xcb86ef8fu);
 	}
 
-	[DDLRegistration(0x1daea3d4u)]
+	[DDLRegistration(0xcb86ef8fu)]
 	public ShotMotionBasePrius? Motion { get; set; } = default;
 
 	public new static ChangeShotMotionEffectNodeDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class TriggerSwitchResponseEntry : DDLObjectType, IDDLObjectType<TriggerS
 		Delay = ddl.GetValue<float>(0xabc94c5au, Delay);
 	}
 
-	[DDLRegistration(0xa8152bb9u, description: "Add responses for this switch")]
+	[DDLRegistration(0xc47ab68bu, description: "Add responses for this switch")]
 	public TriggerResponderBasePrius? Response { get; set; } = default;
 
-	[DDLRegistration(0xa8152bb9u, "Delay", "Delay before triggering")]
+	[DDLRegistration(0xabc94c5au, "Delay", "Delay before triggering")]
 	public float Delay { get; set; } = 0.00f;
 
 	public static TriggerSwitchResponseEntry Create(DDLObject ddl) => new(ddl);

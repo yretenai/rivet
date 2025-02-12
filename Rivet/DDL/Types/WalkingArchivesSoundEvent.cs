@@ -19,10 +19,10 @@ public class WalkingArchivesSoundEvent : EventBase, IDDLObjectType<WalkingArchiv
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0xfbc5fc3bu)]
+	[DDLRegistration(0x9920abc0u)]
 	public uint Index { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfbc5fc3bu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
 	public new static WalkingArchivesSoundEvent Create(DDLObject ddl) => new(ddl);

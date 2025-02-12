@@ -19,10 +19,10 @@ public class RaritaniumShowerPrius : DDLObjectType, IDDLObjectType<RaritaniumSho
 		SpawnCount = ddl.GetValue<uint>(0x502b77d0u, SpawnCount);
 	}
 
-	[DDLRegistration(0xeda8c539u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 3.00f;
 
-	[DDLRegistration(0xeda8c539u)]
+	[DDLRegistration(0x502b77d0u)]
 	public uint SpawnCount { get; set; } = 0x00000005;
 
 	public static RaritaniumShowerPrius Create(DDLObject ddl) => new(ddl);

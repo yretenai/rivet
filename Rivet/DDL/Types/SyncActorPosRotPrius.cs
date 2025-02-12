@@ -19,10 +19,10 @@ public class SyncActorPosRotPrius : DDLObjectType, IDDLObjectType<SyncActorPosRo
 		SyncRot = ddl.GetValue<bool>(0xb88f83abu, SyncRot);
 	}
 
-	[DDLRegistration(0xbf0155a2u)]
+	[DDLRegistration(0xc7c112deu)]
 	public float MaxUpdateRate { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbf0155a2u)]
+	[DDLRegistration(0xb88f83abu)]
 	public bool SyncRot { get; set; } = true;
 
 	public static SyncActorPosRotPrius Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class TerrainSystem03EditingTerrain0221SculptSpray : DDLObjectType, IDDLO
 		Line05 = ddl.GetString(0x7f124bc4) ?? Line05;
 	}
 
-	[DDLRegistration(0x65dc9ff4u, description: "This brush will either sculpt a heightfield or spray paint onto a splatmask,")]
+	[DDLRegistration(0x0f78bf4bu, description: "This brush will either sculpt a heightfield or spray paint onto a splatmask,")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x65dc9ff4u, description: "depending on the selected target.  This brush will be accumulate over time while")]
+	[DDLRegistration(0x787f8fddu, description: "depending on the selected target.  This brush will be accumulate over time while")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x65dc9ff4u, description: "the mouse is pressed.  When sculpting a heightfield, the brush parameter")]
+	[DDLRegistration(0xe176de67u, description: "the mouse is pressed.  When sculpting a heightfield, the brush parameter")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x65dc9ff4u, description: "specifies the meters per second by which the heightfield will change.  When")]
+	[DDLRegistration(0x9671eef1u, description: "specifies the meters per second by which the heightfield will change.  When")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x65dc9ff4u, description: "spraying a splatmask, the brush parameter indicates how much alpha will be")]
+	[DDLRegistration(0x08157b52u, description: "spraying a splatmask, the brush parameter indicates how much alpha will be")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x65dc9ff4u, description: "applied per second.")]
+	[DDLRegistration(0x7f124bc4u, description: "applied per second.")]
 	public string? Line05 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0221SculptSpray Create(DDLObject ddl) => new(ddl);

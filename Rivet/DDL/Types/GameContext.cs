@@ -26,31 +26,31 @@ public class GameContext : DDLObjectType, IDDLObjectType<GameContext> {
 		InfoString = ddl.GetString(0xc245c0cf) ?? InfoString;
 	}
 
-	[DDLRegistration(0x243aa772u)]
+	[DDLRegistration(0x73019d7cu)]
 	public int Port { get; set; } = 0;
 
-	[DDLRegistration(0x243aa772u)]
+	[DDLRegistration(0x908b9ef0u)]
 	public string? Ip { get; set; } = default;
 
-	[DDLRegistration(0x243aa772u)]
+	[DDLRegistration(0xbf62d25fu)]
 	public string? HostName { get; set; } = default;
 
-	[DDLRegistration(0x243aa772u)]
+	[DDLRegistration(0x9ce2183du)]
 	public string? AppName { get; set; } = default;
 
-	[DDLRegistration(0x243aa772u)]
+	[DDLRegistration(0xc3536dbbu)]
 	public string? Platform { get; set; } = default;
 
-	[DDLRegistration(0x243aa772u)]
+	[DDLRegistration(0xbfb665bau)]
 	public bool IsTool { get; set; } = false;
 
-	[DDLRegistration(0x243aa772u)]
+	[DDLRegistration(0x93383ddau)]
 	public bool DebugMem { get; set; } = false;
 
-	[DDLRegistration(0x243aa772u)]
+	[DDLRegistration(0xffb7d34du)]
 	public string? Host { get; set; } = default;
 
-	[DDLRegistration(0x243aa772u)]
+	[DDLRegistration(0xc245c0cfu)]
 	public string? InfoString { get; set; } = default;
 
 	public static GameContext Create(DDLObject ddl) => new(ddl);

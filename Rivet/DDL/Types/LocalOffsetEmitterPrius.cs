@@ -19,10 +19,10 @@ public class LocalOffsetEmitterPrius : WeaponEmitterBasePrius, IDDLObjectType<Lo
 		Offset = ddl.GetObject<DDLVector3>(0x677284b7u);
 	}
 
-	[DDLRegistration(0xb9099797u)]
+	[DDLRegistration(0x13b721dbu)]
 	public bool EmitFromUser { get; set; } = false;
 
-	[DDLRegistration(0xb9099797u)]
+	[DDLRegistration(0x677284b7u)]
 	public DDLVector3? Offset { get; set; } = default;
 
 	public new static LocalOffsetEmitterPrius Create(DDLObject ddl) => new(ddl);

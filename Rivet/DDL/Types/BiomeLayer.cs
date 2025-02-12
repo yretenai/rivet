@@ -21,16 +21,16 @@ public class BiomeLayer : DDLObjectType, IDDLObjectType<BiomeLayer> {
 		MaskData = ddl.GetObject<HoudiniHeightFieldMaskByFeatureData>(0xb6dd2a50u);
 	}
 
-	[DDLRegistration(0x45c52d25u, description: "The name of the biome layer.")]
+	[DDLRegistration(0x6eb3beb6u, description: "The name of the biome layer.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x45c52d25u, description: "The assets that will be placed in this layer.")]
+	[DDLRegistration(0x47a933e9u, description: "The assets that will be placed in this layer.")]
 	public List<BiomeAsset?> Assets { get; set; } = [];
 
-	[DDLRegistration(0x45c52d25u, "Scatter", "This is the data used by Houdini heightfield scattering.")]
+	[DDLRegistration(0x37c03b04u, "Scatter", "This is the data used by Houdini heightfield scattering.")]
 	public HoudiniHeightFieldScatterData? ScatterData { get; set; } = default;
 
-	[DDLRegistration(0x45c52d25u, "Mask", "This is the data used by Houdini when masking terrain heightfields by feature.")]
+	[DDLRegistration(0xb6dd2a50u, "Mask", "This is the data used by Houdini when masking terrain heightfields by feature.")]
 	public HoudiniHeightFieldMaskByFeatureData? MaskData { get; set; } = default;
 
 	public static BiomeLayer Create(DDLObject ddl) => new(ddl);

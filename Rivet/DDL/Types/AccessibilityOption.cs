@@ -23,22 +23,22 @@ public class AccessibilityOption : DDLObjectType, IDDLObjectType<AccessibilityOp
 		Icon = ddl.GetValue<RivetAssetId>(0x5504e96bu, Icon);
 	}
 
-	[DDLRegistration(0xfe91b414u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public AccessibilityOptionTypeBase? Type { get; set; } = default;
 
-	[DDLRegistration(0xfe91b414u, "ID", "Shortcut ID.")]
+	[DDLRegistration(0xb13f6a45u, "ID", "Shortcut ID.")]
 	public AccessibilityButtonAction ID { get; set; } = AccessibilityButtonAction.None;
 
-	[DDLRegistration(0xfe91b414u, "Name", "Name to associate with this shortcut.")]
+	[DDLRegistration(0x6eb3beb6u, "Name", "Name to associate with this shortcut.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xfe91b414u, "ButtonCombo", "The button combo icon sequence, if applicable.")]
+	[DDLRegistration(0x820936d4u, "ButtonCombo", "The button combo icon sequence, if applicable.")]
 	public string? ButtonCombo { get; set; } = default;
 
-	[DDLRegistration(0xfe91b414u, "Description", "How would you describe this to someone who's never seen one before?")]
+	[DDLRegistration(0xe03811fdu, "Description", "How would you describe this to someone who's never seen one before?")]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0xfe91b414u, "Icon")]
+	[DDLRegistration(0x5504e96bu, "Icon")]
 	public RivetAssetId Icon { get; set; } = default;
 
 	public static AccessibilityOption Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class PickupBaseSpawnData : ActorSpawnData, IDDLObjectType<PickupBaseSpaw
 		LocationIndex = ddl.GetValue<sbyte>(0xa3ea6fcbu, LocationIndex);
 	}
 
-	[DDLRegistration(0x5ee41946u)]
+	[DDLRegistration(0xd86fe14cu)]
 	public DDLVector3? SpawnPosition { get; set; } = default;
 
-	[DDLRegistration(0x5ee41946u)]
+	[DDLRegistration(0x209bd310u)]
 	public DDLVector3? SpawnVelocity { get; set; } = default;
 
-	[DDLRegistration(0x5ee41946u, description: "The actor we spawned from.")]
+	[DDLRegistration(0x54c7dd3eu, description: "The actor we spawned from.")]
 	public uint SourceActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5ee41946u, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0x75356989u, description: "AssetId for the asset we're spawning")]
 	public uint ActorAsset { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5ee41946u)]
+	[DDLRegistration(0xa3ea6fcbu)]
 	public sbyte LocationIndex { get; set; } = -1;
 
 	public new static PickupBaseSpawnData Create(DDLObject ddl) => new(ddl);

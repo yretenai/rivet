@@ -19,10 +19,10 @@ public class FormationStartAttackEvent : EventBase, IDDLObjectType<FormationStar
 		AttackDuration = ddl.GetValue<float>(0xa0879ea8u, AttackDuration);
 	}
 
-	[DDLRegistration(0x3557fb2cu)]
+	[DDLRegistration(0x85c253b6u)]
 	public float WarningDuration { get; set; } = 0.80f;
 
-	[DDLRegistration(0x3557fb2cu)]
+	[DDLRegistration(0xa0879ea8u)]
 	public float AttackDuration { get; set; } = 1.00f;
 
 	public new static FormationStartAttackEvent Create(DDLObject ddl) => new(ddl);

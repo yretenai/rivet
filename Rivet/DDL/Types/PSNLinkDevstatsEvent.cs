@@ -20,13 +20,13 @@ public class PSNLinkDevstatsEvent : EventBase, IDDLObjectType<PSNLinkDevstatsEve
 		Otg_id = ddl.GetString(0x4217c2ea) ?? Otg_id;
 	}
 
-	[DDLRegistration(0x2703ef47u)]
+	[DDLRegistration(0x7e18c7c3u)]
 	public string? Action { get; set; } = default;
 
-	[DDLRegistration(0x2703ef47u)]
+	[DDLRegistration(0xc08ba6d6u)]
 	public string? Np_account_id { get; set; } = default;
 
-	[DDLRegistration(0x2703ef47u)]
+	[DDLRegistration(0x4217c2eau)]
 	public string? Otg_id { get; set; } = default;
 
 	public new static PSNLinkDevstatsEvent Create(DDLObject ddl) => new(ddl);

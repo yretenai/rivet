@@ -18,7 +18,7 @@ public class BotComboMoveCharge : BotComboMove, IDDLObjectType<BotComboMoveCharg
 		ChargeAttackData = ddl.GetObject<ChargeAttackData>(0x1355867cu);
 	}
 
-	[DDLRegistration(0x6c0761f5u, "Charge Attack Data")]
+	[DDLRegistration(0x1355867cu, "Charge Attack Data")]
 	public ChargeAttackData? ChargeAttackData { get; set; } = default;
 
 	public new static BotComboMoveCharge Create(DDLObject ddl) => new(ddl);

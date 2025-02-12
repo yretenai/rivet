@@ -22,19 +22,19 @@ public class PostEffect : DDLObjectType, IDDLObjectType<PostEffect> {
 		Fade = ddl.GetValue<bool>(0x7ac52d10u, Fade);
 	}
 
-	[DDLRegistration(0x77d9aa8eu, "Sort Offset")]
+	[DDLRegistration(0xbf2e4a31u, "Sort Offset")]
 	public sbyte SortOffset { get; set; } = 0;
 
-	[DDLRegistration(0x77d9aa8eu, "Style")]
+	[DDLRegistration(0x2aee74abu, "Style")]
 	public xfa78766f Style { get; set; } = xfa78766f.None;
 
-	[DDLRegistration(0x77d9aa8eu, "Accessibility", "If checked and Style is set to Screen or Screen Fit, do not hide the effect in Accessibility Mode")]
+	[DDLRegistration(0x32e1307fu, "Accessibility", "If checked and Style is set to Screen or Screen Fit, do not hide the effect in Accessibility Mode")]
 	public bool Accessibility { get; set; } = false;
 
-	[DDLRegistration(0x77d9aa8eu, "Link To Fov")]
+	[DDLRegistration(0x297f56eeu, "Link To Fov")]
 	public bool LinkToFov { get; set; } = false;
 
-	[DDLRegistration(0x77d9aa8eu, "Fade")]
+	[DDLRegistration(0x7ac52d10u, "Fade")]
 	public bool Fade { get; set; } = false;
 
 	public static PostEffect Create(DDLObject ddl) => new(ddl);

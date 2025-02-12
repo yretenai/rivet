@@ -18,7 +18,7 @@ public class LoadedZonesEngineItem : DDLObjectType, IDDLObjectType<LoadedZonesEn
 		ZoneList = ddl.GetStrings(0x79dfcd60u);
 	}
 
-	[DDLRegistration(0x202250edu)]
+	[DDLRegistration(0x79dfcd60u)]
 	public List<string?> ZoneList { get; set; } = [];
 
 	public static LoadedZonesEngineItem Create(DDLObject ddl) => new(ddl);

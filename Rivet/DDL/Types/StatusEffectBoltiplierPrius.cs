@@ -18,7 +18,7 @@ public class StatusEffectBoltiplierPrius : StatusEffectBasePrius, IDDLObjectType
 		DamageToBoltsRate = ddl.GetValue<float>(0x56f6f28du, DamageToBoltsRate);
 	}
 
-	[DDLRegistration(0x640a0251u, "Amount Per Hit")]
+	[DDLRegistration(0x56f6f28du, "Amount Per Hit")]
 	public float DamageToBoltsRate { get; set; } = 1.00f;
 
 	public new static StatusEffectBoltiplierPrius Create(DDLObject ddl) => new(ddl);

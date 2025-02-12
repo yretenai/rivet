@@ -18,7 +18,7 @@ public class SceneEditorScaleFactor : DDLObjectType, IDDLObjectType<SceneEditorS
 		Scale = ddl.GetObject<DDLVector3>(0xf515e945u);
 	}
 
-	[DDLRegistration(0x46c1204bu, description: "Scale factor for each axis")]
+	[DDLRegistration(0xf515e945u, description: "Scale factor for each axis")]
 	public DDLVector3? Scale { get; set; } = default;
 
 	public static SceneEditorScaleFactor Create(DDLObject ddl) => new(ddl);

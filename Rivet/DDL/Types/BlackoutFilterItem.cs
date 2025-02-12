@@ -19,10 +19,10 @@ public class BlackoutFilterItem : DDLObjectType, IDDLObjectType<BlackoutFilterIt
 		FilterAsset = ddl.GetObject<AssetReferenceDef>(0x7bad33e1u);
 	}
 
-	[DDLRegistration(0xa6eadaf4u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xa6eadaf4u)]
+	[DDLRegistration(0x7bad33e1u)]
 	public AssetReferenceDef? FilterAsset { get; set; } = default;
 
 	public static BlackoutFilterItem Create(DDLObject ddl) => new(ddl);

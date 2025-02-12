@@ -19,10 +19,10 @@ public class GameAudioStateChangedEvent : EventBase, IDDLObjectType<GameAudioSta
 		NewState = ddl.GetEnum<xf2f903d3>(0x319b8449u, xf2f903d3Values.Lookup);
 	}
 
-	[DDLRegistration(0x4d7fbf45u)]
+	[DDLRegistration(0xedebb131u)]
 	public xf2f903d3 OldState { get; set; } = xf2f903d3.None;
 
-	[DDLRegistration(0x4d7fbf45u)]
+	[DDLRegistration(0x319b8449u)]
 	public xf2f903d3 NewState { get; set; } = xf2f903d3.None;
 
 	public new static GameAudioStateChangedEvent Create(DDLObject ddl) => new(ddl);

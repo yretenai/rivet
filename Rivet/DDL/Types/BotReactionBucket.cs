@@ -26,31 +26,31 @@ public class BotReactionBucket : DDLObjectType, IDDLObjectType<BotReactionBucket
 		Reaction = ddl.GetEnum<xf7b2e7be>(0x5ed6ba87u, xf7b2e7beValues.Lookup);
 	}
 
-	[DDLRegistration(0x3f93f562u)]
+	[DDLRegistration(0x959e3154u)]
 	public string? Comment { get; set; } = default;
 
-	[DDLRegistration(0x3f93f562u, "Min Knockback Level")]
+	[DDLRegistration(0xc137ac71u, "Min Knockback Level")]
 	public KnockbackLevels MinKnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x3f93f562u, "Max Knockback Level")]
+	[DDLRegistration(0xd4bc7883u, "Max Knockback Level")]
 	public KnockbackLevels MaxKnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x3f93f562u, "Knockback Fill Threshhold", "Once a bot receives this much knockback he'll stagger")]
+	[DDLRegistration(0x7ef7cdadu, "Knockback Fill Threshhold", "Once a bot receives this much knockback he'll stagger")]
 	public float KnockbackFillThreshhold { get; set; } = 100.00f;
 
-	[DDLRegistration(0x3f93f562u, "Initial Fill")]
+	[DDLRegistration(0x2f4765cfu, "Initial Fill")]
 	public float InitialFill { get; set; } = 99.00f;
 
-	[DDLRegistration(0x3f93f562u, "React Cooldown", "How long before this bucket can start filling again after reacting. By default, this is -1.0f which means no cooldown")]
+	[DDLRegistration(0x1ea68374u, "React Cooldown", "How long before this bucket can start filling again after reacting. By default, this is -1.0f which means no cooldown")]
 	public float ReactCooldown { get; set; } = -1.00f;
 
-	[DDLRegistration(0x3f93f562u, "Refill Rate")]
+	[DDLRegistration(0xa9301d7du, "Refill Rate")]
 	public float RefillRate { get; set; } = 6.25f;
 
-	[DDLRegistration(0x3f93f562u, "Empty Lower Buckets On React")]
+	[DDLRegistration(0x01c14304u, "Empty Lower Buckets On React")]
 	public bool EmptyLowerBucketsOnReact { get; set; } = true;
 
-	[DDLRegistration(0x3f93f562u)]
+	[DDLRegistration(0x5ed6ba87u)]
 	public xf7b2e7be Reaction { get; set; } = xf7b2e7be.Knockback;
 
 	public static BotReactionBucket Create(DDLObject ddl) => new(ddl);

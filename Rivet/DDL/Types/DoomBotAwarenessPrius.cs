@@ -18,7 +18,7 @@ public class DoomBotAwarenessPrius : OmniAwarenessPrius, IDDLObjectType<DoomBotA
 		MaxHeightAboveNav = ddl.GetValue<float>(0xb86ab7e4u, MaxHeightAboveNav);
 	}
 
-	[DDLRegistration(0x3451f0fdu, "Max Height Above Nav", "The max height an enemy can be above nav mesh and still be a valid target for doom bots. Should be kept in sync with the 'Select Height Max' in the Doom Bot's combo config.")]
+	[DDLRegistration(0xb86ab7e4u, "Max Height Above Nav", "The max height an enemy can be above nav mesh and still be a valid target for doom bots. Should be kept in sync with the 'Select Height Max' in the Doom Bot's combo config.")]
 	public float MaxHeightAboveNav { get; set; } = 1.50f;
 
 	public new static DoomBotAwarenessPrius Create(DDLObject ddl) => new(ddl);

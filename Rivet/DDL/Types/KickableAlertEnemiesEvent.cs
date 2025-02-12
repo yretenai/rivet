@@ -18,7 +18,7 @@ public class KickableAlertEnemiesEvent : EventBase, IDDLObjectType<KickableAlert
 		KickerCharacter = ddl.GetValue<uint>(0xa43d776eu, KickerCharacter);
 	}
 
-	[DDLRegistration(0x8a66b827u)]
+	[DDLRegistration(0xa43d776eu)]
 	public uint KickerCharacter { get; set; } = 0x00000000;
 
 	public new static KickableAlertEnemiesEvent Create(DDLObject ddl) => new(ddl);

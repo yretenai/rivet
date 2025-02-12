@@ -20,13 +20,13 @@ public class RobotestPhysBodyInfoWrapper : DDLObjectType, IDDLObjectType<Robotes
 		Body = ddl.GetObject<RobotestPhysBodyInfo>(0xeb38cb02u);
 	}
 
-	[DDLRegistration(0x0bf6c4c5u, description: "A body dump consists of a long run of these in the log, all sharing the same batch ID. I'll just use the frame number for now.")]
+	[DDLRegistration(0x4b66e802u, description: "A body dump consists of a long run of these in the log, all sharing the same batch ID. I'll just use the frame number for now.")]
 	public ulong BatchId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x0bf6c4c5u)]
+	[DDLRegistration(0x5d269a38u)]
 	public RobotestBasicActorInfo? Actor { get; set; } = default;
 
-	[DDLRegistration(0x0bf6c4c5u)]
+	[DDLRegistration(0xeb38cb02u)]
 	public RobotestPhysBodyInfo? Body { get; set; } = default;
 
 	public static RobotestPhysBodyInfoWrapper Create(DDLObject ddl) => new(ddl);

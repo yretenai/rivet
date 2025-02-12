@@ -18,7 +18,7 @@ public class UDSWebApiTaskLinks : DDLObjectType, IDDLObjectType<UDSWebApiTaskLin
 		SubTasks = ddl.GetObjects<UDSWebApiObjectLink>(0xe85d7a6fu);
 	}
 
-	[DDLRegistration(0x7468b4bcu)]
+	[DDLRegistration(0xe85d7a6fu)]
 	public List<UDSWebApiObjectLink?> SubTasks { get; set; } = [];
 
 	public static UDSWebApiTaskLinks Create(DDLObject ddl) => new(ddl);

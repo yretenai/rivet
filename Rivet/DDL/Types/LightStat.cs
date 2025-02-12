@@ -19,10 +19,10 @@ public class LightStat : DDLObjectType, IDDLObjectType<LightStat> {
 		ShadowCount = ddl.GetValue<uint>(0xb5f136e9u, ShadowCount);
 	}
 
-	[DDLRegistration(0x162d74d2u, description: "Hints at internal pass time. See heat-map: the frame must wait for the slowest pixel onscreen to finish (though there is /some/ overlapped scheduling, but still any red is bad)")]
+	[DDLRegistration(0x73599dc2u, description: "Hints at internal pass time. See heat-map: the frame must wait for the slowest pixel onscreen to finish (though there is /some/ overlapped scheduling, but still any red is bad)")]
 	public uint LightCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x162d74d2u, description: "Indicates how many single-view shadows (point lights currently create 6 of these) and thus full-geometry passes are requires for the light.")]
+	[DDLRegistration(0xb5f136e9u, description: "Indicates how many single-view shadows (point lights currently create 6 of these) and thus full-geometry passes are requires for the light.")]
 	public uint ShadowCount { get; set; } = 0x00000000;
 
 	public static LightStat Create(DDLObject ddl) => new(ddl);

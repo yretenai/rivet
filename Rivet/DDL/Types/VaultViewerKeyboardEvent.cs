@@ -22,19 +22,19 @@ public class VaultViewerKeyboardEvent : DDLObjectType, IDDLObjectType<VaultViewe
 		ShiftKey = ddl.GetValue<bool>(0x95ed2907u, ShiftKey);
 	}
 
-	[DDLRegistration(0x5fe08d7eu)]
+	[DDLRegistration(0xa0c58260u)]
 	public uint Key { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5fe08d7eu)]
+	[DDLRegistration(0x2c6f508bu)]
 	public bool Down { get; set; } = false;
 
-	[DDLRegistration(0x5fe08d7eu)]
+	[DDLRegistration(0xb911aae7u)]
 	public bool AltKey { get; set; } = false;
 
-	[DDLRegistration(0x5fe08d7eu)]
+	[DDLRegistration(0x09156aa6u)]
 	public bool CtrlKey { get; set; } = false;
 
-	[DDLRegistration(0x5fe08d7eu)]
+	[DDLRegistration(0x95ed2907u)]
 	public bool ShiftKey { get; set; } = false;
 
 	public static VaultViewerKeyboardEvent Create(DDLObject ddl) => new(ddl);

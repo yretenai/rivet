@@ -19,10 +19,10 @@ public class ModelAnimZivaLookDef : DDLObjectType, IDDLObjectType<ModelAnimZivaL
 		ZrtPath = ddl.GetValue<RivetAssetId>(0x140422cbu, ZrtPath);
 	}
 
-	[DDLRegistration(0x0900f6f2u)]
+	[DDLRegistration(0xad8c1e16u)]
 	public string? LookName { get; set; } = default;
 
-	[DDLRegistration(0x0900f6f2u, "Zrt File", "The path to the zrt file")]
+	[DDLRegistration(0x140422cbu, "Zrt File", "The path to the zrt file")]
 	public RivetAssetId ZrtPath { get; set; } = default;
 
 	public static ModelAnimZivaLookDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class DamageModifierIncomingBattleBrewScalePrius : DamageModifierIncoming
 		KnockbackLevelModifier = ddl.GetValue<byte>(0xeb2febd6u, KnockbackLevelModifier);
 	}
 
-	[DDLRegistration(0x487f854du)]
+	[DDLRegistration(0x7bd0e83au)]
 	public float IncomingDamageMultiplier { get; set; } = 2.00f;
 
-	[DDLRegistration(0x487f854du, description: "The number of levels of knockback that should be changed by for incoming attacks (to the enemy) while the enemy is shrunk.")]
+	[DDLRegistration(0xeb2febd6u, description: "The number of levels of knockback that should be changed by for incoming attacks (to the enemy) while the enemy is shrunk.")]
 	public byte KnockbackLevelModifier { get; set; } = 0x02;
 
 	public new static DamageModifierIncomingBattleBrewScalePrius Create(DDLObject ddl) => new(ddl);

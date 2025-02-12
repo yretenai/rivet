@@ -21,16 +21,16 @@ public class OnLightingModeChangedActionPrius : DDLObjectType, IDDLObjectType<On
 		MaxTimesToFire = ddl.GetValue<int>(0x1100d3d6u, MaxTimesToFire);
 	}
 
-	[DDLRegistration(0x9864cc70u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x9864cc70u, description: "Whether or not to start listening for lighting changes on activation.")]
+	[DDLRegistration(0x3e035e82u, description: "Whether or not to start listening for lighting changes on activation.")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0x9864cc70u, description: "Automatically fire once when this node is first loaded (Or fire on StartListening if StartActive is disabled).")]
+	[DDLRegistration(0x99fde65du, description: "Automatically fire once when this node is first loaded (Or fire on StartListening if StartActive is disabled).")]
 	public bool TriggerOnRegionLoad { get; set; } = true;
 
-	[DDLRegistration(0x9864cc70u, description: "Max times this node can fire (-1 for infinite times).")]
+	[DDLRegistration(0x1100d3d6u, description: "Max times this node can fire (-1 for infinite times).")]
 	public int MaxTimesToFire { get; set; } = -1;
 
 	public static OnLightingModeChangedActionPrius Create(DDLObject ddl) => new(ddl);

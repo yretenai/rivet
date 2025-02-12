@@ -28,37 +28,37 @@ public class HoudiniHeightFieldMaskByFeatureData : DDLObjectType, IDDLObjectType
 		ParamSlopeRange = ddl.GetObject<DDLVector2>(0xf0236470u);
 	}
 
-	[DDLRegistration(0xb7f21df4u, "Mask by Curvature", "If selected, the mask is created based on the minimum and maximum curvature values.")]
+	[DDLRegistration(0x369b9e2cu, "Mask by Curvature", "If selected, the mask is created based on the minimum and maximum curvature values.")]
 	public bool MaskByCurvature { get; set; } = false;
 
-	[DDLRegistration(0xb7f21df4u, "Curvature Max", "Add areas with curvature greater than this value to the mask.")]
+	[DDLRegistration(0xb6160c9du, "Curvature Max", "Add areas with curvature greater than this value to the mask.")]
 	public float ParamCurvatureMax { get; set; } = 20.00f;
 
-	[DDLRegistration(0xb7f21df4u, "Mask by Direction", "If selected, the mask is created based on the direction.")]
+	[DDLRegistration(0xfbee1b54u, "Mask by Direction", "If selected, the mask is created based on the direction.")]
 	public bool MaskByDirection { get; set; } = false;
 
-	[DDLRegistration(0xb7f21df4u, "Goal Angle", "The goal angle for the mask.")]
+	[DDLRegistration(0x8c6b48b3u, "Goal Angle", "The goal angle for the mask.")]
 	public float ParamDirectionAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb7f21df4u, "Angle Spread", "Amount of variance allowed around the goal angle.")]
+	[DDLRegistration(0x858fff6au, "Angle Spread", "Amount of variance allowed around the goal angle.")]
 	public float ParamDirectionSpread { get; set; } = 30.00f;
 
-	[DDLRegistration(0xb7f21df4u, "Mask by Height", "If selected, the mask is created based on the height.")]
+	[DDLRegistration(0x0ddfeae1u, "Mask by Height", "If selected, the mask is created based on the height.")]
 	public bool MaskByHeight { get; set; } = false;
 
-	[DDLRegistration(0xb7f21df4u, "Height Range", "Add areas within this range to the mask.")]
+	[DDLRegistration(0x2aace294u, "Height Range", "Add areas within this range to the mask.")]
 	public DDLVector2? ParamHeightRange { get; set; } = default;
 
-	[DDLRegistration(0xb7f21df4u, "Mask by Occlusion", "If selected, the mask is created based on occlusion.")]
+	[DDLRegistration(0x7caa0568u, "Mask by Occlusion", "If selected, the mask is created based on occlusion.")]
 	public bool MaskByOcclusion { get; set; } = false;
 
-	[DDLRegistration(0xb7f21df4u, "Occlusion Range", "Add areas within this occlusion range to the mask.")]
+	[DDLRegistration(0xc82b0948u, "Occlusion Range", "Add areas within this occlusion range to the mask.")]
 	public DDLVector2? ParamOcclusionRange { get; set; } = default;
 
-	[DDLRegistration(0xb7f21df4u, "Mask by Slope", "If selected, the mask is created based on the slope.")]
+	[DDLRegistration(0xa707b27eu, "Mask by Slope", "If selected, the mask is created based on the slope.")]
 	public bool MaskBySlope { get; set; } = false;
 
-	[DDLRegistration(0xb7f21df4u, "Slope Range", "Add areas within this slope range to the mask.")]
+	[DDLRegistration(0xf0236470u, "Slope Range", "Add areas within this slope range to the mask.")]
 	public DDLVector2? ParamSlopeRange { get; set; } = default;
 
 	public static HoudiniHeightFieldMaskByFeatureData Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class KnockbackTierData : DDLObjectType, IDDLObjectType<KnockbackTierData
 		StartAtRange = ddl.GetValue<float>(0x8bb524a7u, StartAtRange);
 	}
 
-	[DDLRegistration(0xd96de45au)]
+	[DDLRegistration(0x2554a262u)]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0xd96de45au)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd96de45au)]
+	[DDLRegistration(0x8bb524a7u)]
 	public float StartAtRange { get; set; } = 0.00f;
 
 	public static KnockbackTierData Create(DDLObject ddl) => new(ddl);

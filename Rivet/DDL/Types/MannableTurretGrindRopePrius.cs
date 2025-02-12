@@ -19,10 +19,10 @@ public class MannableTurretGrindRopePrius : DDLObjectType, IDDLObjectType<Mannab
 		Damage = ddl.GetValue<float>(0x2fb01a0bu, Damage);
 	}
 
-	[DDLRegistration(0x56d94a6cu)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 100.00f;
 
-	[DDLRegistration(0x56d94a6cu)]
+	[DDLRegistration(0x2fb01a0bu)]
 	public float Damage { get; set; } = 250.00f;
 
 	public static MannableTurretGrindRopePrius Create(DDLObject ddl) => new(ddl);

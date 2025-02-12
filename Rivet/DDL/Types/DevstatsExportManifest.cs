@@ -19,10 +19,10 @@ public class DevstatsExportManifest : DDLObjectType, IDDLObjectType<DevstatsExpo
 		Files = ddl.GetObjects<DevstatsExport>(0x1f668c98u);
 	}
 
-	[DDLRegistration(0x6e2bdbedu)]
+	[DDLRegistration(0xe077f9eau)]
 	public string? Service { get; set; } = "generic";
 
-	[DDLRegistration(0x6e2bdbedu)]
+	[DDLRegistration(0x1f668c98u)]
 	public List<DevstatsExport?> Files { get; set; } = [];
 
 	public static DevstatsExportManifest Create(DDLObject ddl) => new(ddl);

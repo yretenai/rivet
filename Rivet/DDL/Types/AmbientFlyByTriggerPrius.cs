@@ -18,7 +18,7 @@ public class AmbientFlyByTriggerPrius : DDLObjectType, IDDLObjectType<AmbientFly
 		NearbyRadius = ddl.GetValue<float>(0xdee7076fu, NearbyRadius);
 	}
 
-	[DDLRegistration(0x7f3217f1u, "Nearby Radius", "Radius by which the trigger fires flew by events")]
+	[DDLRegistration(0xdee7076fu, "Nearby Radius", "Radius by which the trigger fires flew by events")]
 	public float NearbyRadius { get; set; } = 200.00f;
 
 	public static AmbientFlyByTriggerPrius Create(DDLObject ddl) => new(ddl);

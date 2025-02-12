@@ -19,10 +19,10 @@ public class RCPS4EconSharedPoolPrius : DDLObjectType, IDDLObjectType<RCPS4EconS
 		MinRelativeValue = ddl.GetValue<float>(0xfc80d761u, MinRelativeValue);
 	}
 
-	[DDLRegistration(0x015af0ffu, "Relative Value", "How large is the reward compared to a contemporary swarmer")]
+	[DDLRegistration(0x9141cfedu, "Relative Value", "How large is the reward compared to a contemporary swarmer")]
 	public float RelativeValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0x015af0ffu, "Min Relative Value", "Smallest possible reward compared to a contemporary swarmer")]
+	[DDLRegistration(0xfc80d761u, "Min Relative Value", "Smallest possible reward compared to a contemporary swarmer")]
 	public float MinRelativeValue { get; set; } = 0.10f;
 
 	public static RCPS4EconSharedPoolPrius Create(DDLObject ddl) => new(ddl);

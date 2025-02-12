@@ -22,19 +22,19 @@ public class StatusEmitterOnDamagedPrius : StatusEmitterBasePrius, IDDLObjectTyp
 		DamageTypes = ddl.GetEnums<DamageTypesGame>(0xc1e511beu, DamageTypesGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x87f50a9fu, description: "Effects emitted when damaged by this much since the last time effects were finished emitting. Set to 0 or negative to emit effects on any damage.")]
+	[DDLRegistration(0x3623f7e6u, description: "Effects emitted when damaged by this much since the last time effects were finished emitting. Set to 0 or negative to emit effects on any damage.")]
 	public float DamageThreshold { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87f50a9fu)]
+	[DDLRegistration(0x041c6897u)]
 	public float ProcPercent { get; set; } = 100.00f;
 
-	[DDLRegistration(0x87f50a9fu)]
+	[DDLRegistration(0xf91f2cb2u)]
 	public bool ApplyToSelf { get; set; } = false;
 
-	[DDLRegistration(0x87f50a9fu)]
+	[DDLRegistration(0x00a5efd4u)]
 	public bool ApplyToDamager { get; set; } = true;
 
-	[DDLRegistration(0x87f50a9fu, description: "only damage of these type will trigger this emitter. Empty means 'any'.")]
+	[DDLRegistration(0xc1e511beu, description: "only damage of these type will trigger this emitter. Empty means 'any'.")]
 	public List<DamageTypesGame> DamageTypes { get; set; } = [];
 
 	public new static StatusEmitterOnDamagedPrius Create(DDLObject ddl) => new(ddl);

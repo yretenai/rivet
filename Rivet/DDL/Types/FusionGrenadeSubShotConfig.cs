@@ -19,10 +19,10 @@ public class FusionGrenadeSubShotConfig : ConfigBase, IDDLObjectType<FusionGrena
 		ShotPrius = ddl.GetObject<FusionGrenadeSubShotPrius>(0x66fe4621u);
 	}
 
-	[DDLRegistration(0x5d854a36u)]
+	[DDLRegistration(0x57e2bc91u)]
 	public RivetAssetId SubShotActor { get; set; } = default;
 
-	[DDLRegistration(0x5d854a36u, "Shot Prius")]
+	[DDLRegistration(0x66fe4621u, "Shot Prius")]
 	public FusionGrenadeSubShotPrius? ShotPrius { get; set; } = default;
 
 	public new static FusionGrenadeSubShotConfig Create(DDLObject ddl) => new(ddl);

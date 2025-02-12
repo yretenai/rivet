@@ -19,10 +19,10 @@ public class LocTagLanguageDef : DDLObjectType, IDDLObjectType<LocTagLanguageDef
 		Text = ddl.GetString(0x0b1b6777) ?? Text;
 	}
 
-	[DDLRegistration(0x0ef70aa7u, "Language", "Loc Tag Language")]
+	[DDLRegistration(0x2edaccc5u, "Language", "Loc Tag Language")]
 	public xb4653862 Language { get; set; } = xb4653862.LanguageDanish;
 
-	[DDLRegistration(0x0ef70aa7u, "Text", "Loc Tag Text")]
+	[DDLRegistration(0x0b1b6777u, "Text", "Loc Tag Text")]
 	public string? Text { get; set; } = default;
 
 	public static LocTagLanguageDef Create(DDLObject ddl) => new(ddl);

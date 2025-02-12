@@ -18,7 +18,7 @@ public class AssetMigrationResults : DDLObjectType, IDDLObjectType<AssetMigratio
 		Results = ddl.GetObjects<AssetMigrationResult>(0x9e49872cu);
 	}
 
-	[DDLRegistration(0xf05f2469u)]
+	[DDLRegistration(0x9e49872cu)]
 	public List<AssetMigrationResult?> Results { get; set; } = [];
 
 	public static AssetMigrationResults Create(DDLObject ddl) => new(ddl);

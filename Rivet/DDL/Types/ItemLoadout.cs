@@ -20,13 +20,13 @@ public class ItemLoadout : DDLObjectType, IDDLObjectType<ItemLoadout> {
 		ItemLoadoutLists = ddl.GetObjects<ItemLoadoutList>(0x650ab5feu);
 	}
 
-	[DDLRegistration(0x43ce3449u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = "Loadout";
 
-	[DDLRegistration(0x43ce3449u, "Fill All Weapon Ammo", "Fill all owned weapon ammo after giving loadout")]
+	[DDLRegistration(0xddd842ceu, "Fill All Weapon Ammo", "Fill all owned weapon ammo after giving loadout")]
 	public bool FillAllOwnedAmmo { get; set; } = false;
 
-	[DDLRegistration(0x43ce3449u, "Item Loadout List", "Item Loadout List")]
+	[DDLRegistration(0x650ab5feu, "Item Loadout List", "Item Loadout List")]
 	public List<ItemLoadoutList?> ItemLoadoutLists { get; set; } = [];
 
 	public static ItemLoadout Create(DDLObject ddl) => new(ddl);

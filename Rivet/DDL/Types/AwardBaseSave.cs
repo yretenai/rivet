@@ -19,10 +19,10 @@ public class AwardBaseSave : DDLObjectType, IDDLObjectType<AwardBaseSave> {
 		PrizeGiven = ddl.GetValue<bool>(0x81240917u, PrizeGiven);
 	}
 
-	[DDLRegistration(0x9fde4c2du)]
+	[DDLRegistration(0x8dae56cdu)]
 	public uint CurrentValue { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9fde4c2du)]
+	[DDLRegistration(0x81240917u)]
 	public bool PrizeGiven { get; set; } = false;
 
 	public static AwardBaseSave Create(DDLObject ddl) => new(ddl);

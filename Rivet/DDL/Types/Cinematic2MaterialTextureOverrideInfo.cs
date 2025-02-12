@@ -20,13 +20,13 @@ public class Cinematic2MaterialTextureOverrideInfo : DDLObjectType, IDDLObjectTy
 		TextureAsset = ddl.GetValue<RivetAssetId>(0x34776bf1u, TextureAsset);
 	}
 
-	[DDLRegistration(0x79b54921u, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model.")]
+	[DDLRegistration(0x981e6927u, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x79b54921u, description: "This specifies the name of texture sampler.")]
+	[DDLRegistration(0x30712231u, description: "This specifies the name of texture sampler.")]
 	public string? TextureSamplerName { get; set; } = default;
 
-	[DDLRegistration(0x79b54921u)]
+	[DDLRegistration(0x34776bf1u)]
 	public RivetAssetId TextureAsset { get; set; } = default;
 
 	public static Cinematic2MaterialTextureOverrideInfo Create(DDLObject ddl) => new(ddl);

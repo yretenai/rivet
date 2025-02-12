@@ -19,10 +19,10 @@ public class Nav3DSmoothPathStepStartSweep : DDLObjectType, IDDLObjectType<Nav3D
 		End = ddl.GetObject<DDLVector3>(0x2aa91a78u);
 	}
 
-	[DDLRegistration(0x88607656u)]
+	[DDLRegistration(0x862a994eu)]
 	public DDLVector3? Start { get; set; } = default;
 
-	[DDLRegistration(0x88607656u)]
+	[DDLRegistration(0x2aa91a78u)]
 	public DDLVector3? End { get; set; } = default;
 
 	public static Nav3DSmoothPathStepStartSweep Create(DDLObject ddl) => new(ddl);

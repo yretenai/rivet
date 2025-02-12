@@ -19,10 +19,10 @@ public class TieredAggroTargetingGamePrius : TieredAggroTargetingPrius, IDDLObje
 		FavorHeroSystemDefaultHero = ddl.GetValue<bool>(0x8554d251u, FavorHeroSystemDefaultHero);
 	}
 
-	[DDLRegistration(0x73679f44u)]
+	[DDLRegistration(0xb45a7345u)]
 	public bool HideSelfAsTargeter { get; set; } = false;
 
-	[DDLRegistration(0x73679f44u)]
+	[DDLRegistration(0x8554d251u)]
 	public bool FavorHeroSystemDefaultHero { get; set; } = false;
 
 	public new static TieredAggroTargetingGamePrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SignalOutputNodeDef : OutputNodeBaseDef, IDDLObjectType<SignalOutpu
 		Output = ddl.GetObject<OutputPlugSignal>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0xd4e0059bu)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugSignal? Input { get; set; } = default;
 
-	[DDLRegistration(0xd4e0059bu)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugSignal? Output { get; set; } = default;
 
 	public new static SignalOutputNodeDef Create(DDLObject ddl) => new(ddl);

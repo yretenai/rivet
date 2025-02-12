@@ -18,7 +18,7 @@ public class WeaponAccuracyDataListItem : DDLObjectType, IDDLObjectType<WeaponAc
 		Accuracy = ddl.GetObject<WeaponAccuracyData>(0x6944bef3u);
 	}
 
-	[DDLRegistration(0x0e4b844au)]
+	[DDLRegistration(0x6944bef3u)]
 	public WeaponAccuracyData? Accuracy { get; set; } = default;
 
 	public static WeaponAccuracyDataListItem Create(DDLObject ddl) => new(ddl);

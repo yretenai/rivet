@@ -18,7 +18,7 @@ public class WeaponReloadedEvent : EventBase, IDDLObjectType<WeaponReloadedEvent
 		TriggerIndex = ddl.GetValue<uint>(0xee73b5b3u, TriggerIndex);
 	}
 
-	[DDLRegistration(0xcc7bc347u)]
+	[DDLRegistration(0xee73b5b3u)]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
 	public new static WeaponReloadedEvent Create(DDLObject ddl) => new(ddl);

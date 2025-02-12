@@ -30,43 +30,43 @@ public class VehicleSystemConfig : ConfigBase, IDDLObjectType<VehicleSystemConfi
 		LightingModesToUseHeadlights = ddl.GetEnums<LightingModeGame>(0xa3f780e1u, LightingModeGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x521bb66bu, description: "Full width of a lane. Should be large enough to accomodate the largest vehicle.")]
+	[DDLRegistration(0xcaab6d50u, description: "Full width of a lane. Should be large enough to accomodate the largest vehicle.")]
 	public float LaneWidth { get; set; } = 14.00f;
 
-	[DDLRegistration(0x521bb66bu, description: "Max distance between lanes. Vehicles will not look any further away than this for finding adjacent lanes.")]
+	[DDLRegistration(0x5c4a29c9u, description: "Max distance between lanes. Vehicles will not look any further away than this for finding adjacent lanes.")]
 	public float MaxLaneSpacing { get; set; } = 5.00f;
 
-	[DDLRegistration(0x521bb66bu, description: "How long after a successful lane switch before anyone is allowed to try another.")]
+	[DDLRegistration(0x1525ae5bu, description: "How long after a successful lane switch before anyone is allowed to try another.")]
 	public float LaneSwitchPeriod { get; set; } = 3.00f;
 
-	[DDLRegistration(0x521bb66bu)]
+	[DDLRegistration(0x81012037u)]
 	public VehicleCurveGeneratorInfo? CurveGeneratorInfo { get; set; } = default;
 
-	[DDLRegistration(0x521bb66bu)]
+	[DDLRegistration(0x557be5dcu)]
 	public VehicleCurveFollowerPrius? MotionPrius { get; set; } = default;
 
-	[DDLRegistration(0x521bb66bu)]
+	[DDLRegistration(0x11899c93u)]
 	public VehicleCollisionInfo? CollisionInfo { get; set; } = default;
 
-	[DDLRegistration(0x521bb66bu, description: "Update render constants only if the vehicle is within this distance.")]
+	[DDLRegistration(0xe5174b1eu, description: "Update render constants only if the vehicle is within this distance.")]
 	public float MaxFxUpdateDistance { get; set; } = 120.00f;
 
-	[DDLRegistration(0x521bb66bu, description: "If a vheicle is culled from drawing, only enable fx if it is within this distance of the camera.")]
+	[DDLRegistration(0x930657dfu, description: "If a vheicle is culled from drawing, only enable fx if it is within this distance of the camera.")]
 	public float MaxCulledFxDistance { get; set; } = 40.00f;
 
-	[DDLRegistration(0x521bb66bu, description: "Update vehicle fx only if the vehicle is within this distance.")]
+	[DDLRegistration(0xd6ddbc72u, description: "Update vehicle fx only if the vehicle is within this distance.")]
 	public float MaxFxDistance { get; set; } = 200.00f;
 
-	[DDLRegistration(0x521bb66bu, description: "If a vehicle is culled from drawing, only enable lights if it is within this distance of the camera.")]
+	[DDLRegistration(0xc6faafafu, description: "If a vehicle is culled from drawing, only enable lights if it is within this distance of the camera.")]
 	public float MaxCulledLightDistance { get; set; } = 40.00f;
 
-	[DDLRegistration(0x521bb66bu, description: "If a vehicle was drawn last frame, only enable lights if it is within this distance of the camera.")]
+	[DDLRegistration(0xbbd140a2u, description: "If a vehicle was drawn last frame, only enable lights if it is within this distance of the camera.")]
 	public float MaxLightDistance { get; set; } = 300.00f;
 
-	[DDLRegistration(0x521bb66bu, description: "Only slow a vehicle that is approaching a light if the vehicle could decel at this rate or faster and still reach the light.")]
+	[DDLRegistration(0x6b17dac5u, description: "Only slow a vehicle that is approaching a light if the vehicle could decel at this rate or faster and still reach the light.")]
 	public float SlowSignalDecelCoeff { get; set; } = 0.50f;
 
-	[DDLRegistration(0x521bb66bu, "Lighting Modes to Use Headlights", "Only enable headlights on all vehicles in these lighting modes.")]
+	[DDLRegistration(0xa3f780e1u, "Lighting Modes to Use Headlights", "Only enable headlights on all vehicles in these lighting modes.")]
 	public List<LightingModeGame> LightingModesToUseHeadlights { get; set; } = [];
 
 	public new static VehicleSystemConfig Create(DDLObject ddl) => new(ddl);

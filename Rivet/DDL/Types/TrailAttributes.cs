@@ -24,25 +24,25 @@ public class TrailAttributes : DDLObjectType, IDDLObjectType<TrailAttributes> {
 		UV1Tiling = ddl.GetValue<float>(0x5efe0c84u, UV1Tiling);
 	}
 
-	[DDLRegistration(0xf205bf26u, "Distance Threshold")]
+	[DDLRegistration(0xe3819433u, "Distance Threshold")]
 	public float DistanceThreshold { get; set; } = 0.10f;
 
-	[DDLRegistration(0xf205bf26u, "New Point Lifetime", "Lifetime of the points spawned by trails/swipes/splines")]
+	[DDLRegistration(0xf80df77fu, "New Point Lifetime", "Lifetime of the points spawned by trails/swipes/splines")]
 	public float ParticleLifetime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf205bf26u, "Crease Fading", "Fades the trails creases at steep camera angles")]
+	[DDLRegistration(0x60e79162u, "Crease Fading", "Fades the trails creases at steep camera angles")]
 	public bool CreaseFading { get; set; } = true;
 
-	[DDLRegistration(0xf205bf26u, "Subdivision", "Trails/Swipes/Splines subdivision")]
+	[DDLRegistration(0x965bab46u, "Subdivision", "Trails/Swipes/Splines subdivision")]
 	public float Subdivision { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf205bf26u, "Max Length", "Trails/Swipes maximum length")]
+	[DDLRegistration(0xbd0de91fu, "Max Length", "Trails/Swipes maximum length")]
 	public float MaxLength { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf205bf26u, "UV0 Tiling", "UV 0 Tiling based on the length of the trails/swipes")]
+	[DDLRegistration(0xf8890730u, "UV0 Tiling", "UV 0 Tiling based on the length of the trails/swipes")]
 	public float UV0Tiling { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf205bf26u, "UV1 Tiling", "UV 1 Tiling based on the length of the trails/swipes")]
+	[DDLRegistration(0x5efe0c84u, "UV1 Tiling", "UV 1 Tiling based on the length of the trails/swipes")]
 	public float UV1Tiling { get; set; } = 0.00f;
 
 	public static TrailAttributes Create(DDLObject ddl) => new(ddl);

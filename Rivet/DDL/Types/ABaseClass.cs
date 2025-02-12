@@ -18,7 +18,7 @@ public class ABaseClass : DDLObjectType, IDDLObjectType<ABaseClass> {
 		BaseField = ddl.GetValue<int>(0xd38f4bbbu, BaseField);
 	}
 
-	[DDLRegistration(0x85ad477cu)]
+	[DDLRegistration(0xd38f4bbbu)]
 	public int BaseField { get; set; } = 0;
 
 	public static ABaseClass Create(DDLObject ddl) => new(ddl);

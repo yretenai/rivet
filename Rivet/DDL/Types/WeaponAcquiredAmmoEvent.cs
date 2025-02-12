@@ -22,19 +22,19 @@ public class WeaponAcquiredAmmoEvent : EventBase, IDDLObjectType<WeaponAcquiredA
 		OwnerIsHero = ddl.GetValue<bool>(0x0022f6dcu, OwnerIsHero);
 	}
 
-	[DDLRegistration(0xdd3728e1u)]
+	[DDLRegistration(0xca0166ccu)]
 	public string? WeaponName { get; set; } = default;
 
-	[DDLRegistration(0xdd3728e1u)]
+	[DDLRegistration(0x9e860af6u)]
 	public uint EquipIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdd3728e1u)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0xdd3728e1u)]
+	[DDLRegistration(0xd23b3317u)]
 	public bool OwnerIsLocal { get; set; } = false;
 
-	[DDLRegistration(0xdd3728e1u)]
+	[DDLRegistration(0x0022f6dcu)]
 	public bool OwnerIsHero { get; set; } = false;
 
 	public new static WeaponAcquiredAmmoEvent Create(DDLObject ddl) => new(ddl);

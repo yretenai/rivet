@@ -20,13 +20,13 @@ public class DevstatsLimits : DDLObjectType, IDDLObjectType<DevstatsLimits> {
 		BatchWaitSeconds = ddl.GetValue<float>(0x4c4ef63au, BatchWaitSeconds);
 	}
 
-	[DDLRegistration(0x0874880du)]
+	[DDLRegistration(0x94b1ea1bu)]
 	public ulong CommandQueueSize { get; set; } = 0x0000000000001f9c;
 
-	[DDLRegistration(0x0874880du)]
+	[DDLRegistration(0x734f6e19u)]
 	public ulong MaxRequestSize { get; set; } = 0x0000000000001000;
 
-	[DDLRegistration(0x0874880du)]
+	[DDLRegistration(0x4c4ef63au)]
 	public float BatchWaitSeconds { get; set; } = 1.00f;
 
 	public static DevstatsLimits Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SkeletonDef : DDLObjectType, IDDLObjectType<SkeletonDef> {
 		Joints = ddl.GetObjects<JointDef>(0xbb8fe1b3u);
 	}
 
-	[DDLRegistration(0x7b4268f7u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x7b4268f7u)]
+	[DDLRegistration(0xbb8fe1b3u)]
 	public List<JointDef?> Joints { get; set; } = [];
 
 	public static SkeletonDef Create(DDLObject ddl) => new(ddl);

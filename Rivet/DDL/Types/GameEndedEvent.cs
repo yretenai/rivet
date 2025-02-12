@@ -18,7 +18,7 @@ public class GameEndedEvent : EventBase, IDDLObjectType<GameEndedEvent> {
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0xe0dd3deeu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
 	public new static GameEndedEvent Create(DDLObject ddl) => new(ddl);

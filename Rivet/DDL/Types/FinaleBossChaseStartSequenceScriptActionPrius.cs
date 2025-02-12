@@ -19,10 +19,10 @@ public class FinaleBossChaseStartSequenceScriptActionPrius : DDLObjectType, IDDL
 		LaserShotConfig = ddl.GetValue<RivetAssetId>(0x15306263u, LaserShotConfig);
 	}
 
-	[DDLRegistration(0x145faf6au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0x145faf6au)]
+	[DDLRegistration(0x15306263u)]
 	public RivetAssetId LaserShotConfig { get; set; } = default;
 
 	public static FinaleBossChaseStartSequenceScriptActionPrius Create(DDLObject ddl) => new(ddl);

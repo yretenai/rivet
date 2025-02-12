@@ -24,25 +24,25 @@ public class DamageModifierShockwaveExpandingRingSheepPrius : DamageModifierShoc
 		ResheepExplosionAOE = ddl.GetValue<float>(0x676a1a1cu, ResheepExplosionAOE);
 	}
 
-	[DDLRegistration(0x6eaff3c0u)]
+	[DDLRegistration(0xe0de891du)]
 	public RivetAssetId RingActorAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6eaff3c0u)]
+	[DDLRegistration(0x2ba6ce3du)]
 	public RivetAssetId SheepActorAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6eaff3c0u)]
+	[DDLRegistration(0x90d6a54au)]
 	public RivetAssetId SheepStatusMaterialGraphAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6eaff3c0u)]
+	[DDLRegistration(0xd9788ac6u)]
 	public float ConversionRate { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6eaff3c0u)]
+	[DDLRegistration(0x419d8a0au)]
 	public float ResheepHP { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6eaff3c0u)]
+	[DDLRegistration(0x1dbd6649u)]
 	public float ResheepExplosionDamage { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6eaff3c0u)]
+	[DDLRegistration(0x676a1a1cu)]
 	public float ResheepExplosionAOE { get; set; } = 0.00f;
 
 	public new static DamageModifierShockwaveExpandingRingSheepPrius Create(DDLObject ddl) => new(ddl);

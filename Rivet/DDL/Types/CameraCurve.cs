@@ -18,7 +18,7 @@ public class CameraCurve : ConfigBase, IDDLObjectType<CameraCurve> {
 		Points = ddl.GetObjects<CameraCurveElement>(0x19c2c04eu);
 	}
 
-	[DDLRegistration(0xcc4a2f3fu)]
+	[DDLRegistration(0x19c2c04eu)]
 	public List<CameraCurveElement?> Points { get; set; } = [];
 
 	public new static CameraCurve Create(DDLObject ddl) => new(ddl);

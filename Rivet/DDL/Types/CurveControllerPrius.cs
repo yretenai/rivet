@@ -20,13 +20,13 @@ public class CurveControllerPrius : DDLObjectType, IDDLObjectType<CurveControlle
 		RotationType = ddl.GetEnum<x603b1ec6>(0xe380f68bu, x603b1ec6Values.Lookup);
 	}
 
-	[DDLRegistration(0x71a68a29u, description: "Enable rotation")]
+	[DDLRegistration(0xacc0b58cu, description: "Enable rotation")]
 	public bool EnableRotation { get; set; } = true;
 
-	[DDLRegistration(0x71a68a29u, description: "Enable stretch")]
+	[DDLRegistration(0xd7832a77u, description: "Enable stretch")]
 	public bool EnableStretch { get; set; } = true;
 
-	[DDLRegistration(0x71a68a29u, description: "RotationType")]
+	[DDLRegistration(0xe380f68bu, description: "RotationType")]
 	public x603b1ec6 RotationType { get; set; } = x603b1ec6.YAxis;
 
 	public static CurveControllerPrius Create(DDLObject ddl) => new(ddl);

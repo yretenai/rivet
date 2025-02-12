@@ -18,7 +18,7 @@ public class VanityItemData : GameItemData, IDDLObjectType<VanityItemData> {
 		SkinType = ddl.GetEnum<x036ceb0b>(0x301c5cc0u, x036ceb0bValues.Lookup);
 	}
 
-	[DDLRegistration(0x3098b726u, description: "Defines where on the model this skin item will be placed.")]
+	[DDLRegistration(0x301c5cc0u, description: "Defines where on the model this skin item will be placed.")]
 	public x036ceb0b SkinType { get; set; } = x036ceb0b.Body;
 
 	public new static VanityItemData Create(DDLObject ddl) => new(ddl);

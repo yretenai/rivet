@@ -19,10 +19,10 @@ public class SetXPActionPrius : DDLObjectType, IDDLObjectType<SetXPActionPrius> 
 		XPValue = ddl.GetValue<float>(0x551baad0u, XPValue);
 	}
 
-	[DDLRegistration(0x930f362du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x930f362du, description: "XP Value")]
+	[DDLRegistration(0x551baad0u, description: "XP Value")]
 	public float XPValue { get; set; } = 1.00f;
 
 	public static SetXPActionPrius Create(DDLObject ddl) => new(ddl);

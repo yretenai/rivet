@@ -20,13 +20,13 @@ public class NodeGraphDebuggerMessage : DDLObjectType, IDDLObjectType<NodeGraphD
 		WantsAutoAttach = ddl.GetValue<bool>(0x1a21a162u, WantsAutoAttach);
 	}
 
-	[DDLRegistration(0x5aacdb0au)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5aacdb0au)]
+	[DDLRegistration(0xdc9faba7u)]
 	public List<RivetAssetId> BreakpointIds { get; set; } = [];
 
-	[DDLRegistration(0x5aacdb0au)]
+	[DDLRegistration(0x1a21a162u)]
 	public bool WantsAutoAttach { get; set; } = false;
 
 	public static NodeGraphDebuggerMessage Create(DDLObject ddl) => new(ddl);

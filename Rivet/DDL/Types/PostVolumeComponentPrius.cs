@@ -18,7 +18,7 @@ public class PostVolumeComponentPrius : DDLObjectType, IDDLObjectType<PostVolume
 		FadeInTime = ddl.GetValue<float>(0xc2c56073u, FadeInTime);
 	}
 
-	[DDLRegistration(0x20d3a40eu, description: "Amount of time to fade in the post volume after the actor is activated")]
+	[DDLRegistration(0xc2c56073u, description: "Amount of time to fade in the post volume after the actor is activated")]
 	public float FadeInTime { get; set; } = 0.00f;
 
 	public static PostVolumeComponentPrius Create(DDLObject ddl) => new(ddl);

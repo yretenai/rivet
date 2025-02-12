@@ -18,7 +18,7 @@ public class HoudiniConfigData : DDLObjectType, IDDLObjectType<HoudiniConfigData
 		Tag = ddl.GetString(0x29dc9e4a) ?? Tag;
 	}
 
-	[DDLRegistration(0x929cca50u, description: "This tag can be used to access data in Houdini.  If the data associated with this element is geometry, that geometry will be grouped by this tag for easy access in Houdini.  The scalar value for this tag will be added as a detail attribute as well, so things like floating point values can also be accessed.  Tags can only contain letters, numbers, and underscores.")]
+	[DDLRegistration(0x29dc9e4au, description: "This tag can be used to access data in Houdini.  If the data associated with this element is geometry, that geometry will be grouped by this tag for easy access in Houdini.  The scalar value for this tag will be added as a detail attribute as well, so things like floating point values can also be accessed.  Tags can only contain letters, numbers, and underscores.")]
 	public string? Tag { get; set; } = "(unnamed)";
 
 	public static HoudiniConfigData Create(DDLObject ddl) => new(ddl);

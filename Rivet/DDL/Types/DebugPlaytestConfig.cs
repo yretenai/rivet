@@ -19,10 +19,10 @@ public class DebugPlaytestConfig : ConfigBase, IDDLObjectType<DebugPlaytestConfi
 		Playtests = ddl.GetObjects<DebugPlaytest>(0xc6bded98u);
 	}
 
-	[DDLRegistration(0x23e907ecu, "New Game With Survey Screens Info")]
+	[DDLRegistration(0xc26e5bf0u, "New Game With Survey Screens Info")]
 	public DebugNewGamePlaytest? NewGameDemoInfo { get; set; } = default;
 
-	[DDLRegistration(0x23e907ecu)]
+	[DDLRegistration(0xc6bded98u)]
 	public List<DebugPlaytest?> Playtests { get; set; } = [];
 
 	public new static DebugPlaytestConfig Create(DDLObject ddl) => new(ddl);

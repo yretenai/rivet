@@ -19,10 +19,10 @@ public class AimModStrafeTargetPrius : AimModifierPrius, IDDLObjectType<AimModSt
 		StrafeWidthMax = ddl.GetValue<float>(0x8694749du, StrafeWidthMax);
 	}
 
-	[DDLRegistration(0x9ecdb08fu, description: "meters")]
+	[DDLRegistration(0xba994bc4u, description: "meters")]
 	public float StrafeWidthMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9ecdb08fu, description: "meters")]
+	[DDLRegistration(0x8694749du, description: "meters")]
 	public float StrafeWidthMax { get; set; } = 0.00f;
 
 	public new static AimModStrafeTargetPrius Create(DDLObject ddl) => new(ddl);

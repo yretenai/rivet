@@ -21,16 +21,16 @@ public class EventFilter : DDLObjectType, IDDLObjectType<EventFilter> {
 		FilterActor = ddl.GetValue<RivetAssetId>(0x3d773f44u, FilterActor);
 	}
 
-	[DDLRegistration(0x3e975640u, "Filter Name")]
+	[DDLRegistration(0x8f981729u, "Filter Name")]
 	public string? FilterName { get; set; } = default;
 
-	[DDLRegistration(0x3e975640u, "Compare Type")]
+	[DDLRegistration(0x99156aa9u, "Compare Type")]
 	public x021604be FilterCompare { get; set; } = x021604be.Equals;
 
-	[DDLRegistration(0x3e975640u, "Value")]
+	[DDLRegistration(0xec246f81u, "Value")]
 	public string? FilterOnValue { get; set; } = default;
 
-	[DDLRegistration(0x3e975640u, "ActorValue")]
+	[DDLRegistration(0x3d773f44u, "ActorValue")]
 	public RivetAssetId FilterActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static EventFilter Create(DDLObject ddl) => new(ddl);

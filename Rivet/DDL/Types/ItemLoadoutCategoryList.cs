@@ -19,10 +19,10 @@ public class ItemLoadoutCategoryList : DDLObjectType, IDDLObjectType<ItemLoadout
 		ItemLoadoutConfigs = ddl.GetValues<RivetAssetId>(0x81444aa9u);
 	}
 
-	[DDLRegistration(0x5ba74a3eu, "Category", "How is this loadout categorized")]
+	[DDLRegistration(0xfc4da4b1u, "Category", "How is this loadout categorized")]
 	public xc457a124 Category { get; set; } = xc457a124.None;
 
-	[DDLRegistration(0x5ba74a3eu, "Item Loadout Configs", "Item loadout config(s)")]
+	[DDLRegistration(0x81444aa9u, "Item Loadout Configs", "Item loadout config(s)")]
 	public List<RivetAssetId> ItemLoadoutConfigs { get; set; } = [];
 
 	public static ItemLoadoutCategoryList Create(DDLObject ddl) => new(ddl);

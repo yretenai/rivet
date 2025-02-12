@@ -21,16 +21,16 @@ public class BossFocusCameraManagerPrius : DDLObjectType, IDDLObjectType<BossFoc
 		BossFocusRTCameraAimContextConfig_Far = ddl.GetValue<RivetAssetId>(0x01640aebu, BossFocusRTCameraAimContextConfig_Far);
 	}
 
-	[DDLRegistration(0x4d9933c5u)]
+	[DDLRegistration(0xcbfe4d4fu)]
 	public RivetAssetId BossFocusLFCameraAimContextConfig_Close { get; set; } = default;
 
-	[DDLRegistration(0x4d9933c5u)]
+	[DDLRegistration(0x4ae11a31u)]
 	public RivetAssetId BossFocusRTCameraAimContextConfig_Close { get; set; } = default;
 
-	[DDLRegistration(0x4d9933c5u)]
+	[DDLRegistration(0x9144a04au)]
 	public RivetAssetId BossFocusLFCameraAimContextConfig_Far { get; set; } = default;
 
-	[DDLRegistration(0x4d9933c5u)]
+	[DDLRegistration(0x01640aebu)]
 	public RivetAssetId BossFocusRTCameraAimContextConfig_Far { get; set; } = default;
 
 	public static BossFocusCameraManagerPrius Create(DDLObject ddl) => new(ddl);

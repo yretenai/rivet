@@ -24,25 +24,25 @@ public class Cinematic2LookAtDataDef : DDLObjectType, IDDLObjectType<Cinematic2L
 		FocusSpeed = ddl.GetValue<float>(0x02d80d59u, FocusSpeed);
 	}
 
-	[DDLRegistration(0x99c238fdu, "Focus on Hero/Camera", "Sets focus to the active hero character's camera. If no hero is present, it defaults to the active viewport's camera")]
+	[DDLRegistration(0x76488fa6u, "Focus on Hero/Camera", "Sets focus to the active hero character's camera. If no hero is present, it defaults to the active viewport's camera")]
 	public bool LookAtHeroCamera { get; set; } = false;
 
-	[DDLRegistration(0x99c238fdu, description: "This specifies the ActorId of the actor we wish to look at (it can be empty).")]
+	[DDLRegistration(0x6d367288u, description: "This specifies the ActorId of the actor we wish to look at (it can be empty).")]
 	public RivetAssetId TargetActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x99c238fdu, description: "This specifies the locator on the specified actor we wish to look at (it can be empty).")]
+	[DDLRegistration(0x4bd4816eu, description: "This specifies the locator on the specified actor we wish to look at (it can be empty).")]
 	public string? TargetLocatorName { get; set; } = "igLoc_head";
 
-	[DDLRegistration(0x99c238fdu, description: "This specifies the locator on the source actor they will be looking from (it can be empty). Typically their head.")]
+	[DDLRegistration(0x058c28dbu, description: "This specifies the locator on the source actor they will be looking from (it can be empty). Typically their head.")]
 	public string? SourceLocatorName { get; set; } = "igLoc_head";
 
-	[DDLRegistration(0x99c238fdu, description: "This specifies the desired horizontal focus angle (degrees), if no target actor is set.")]
+	[DDLRegistration(0xf97162cau, description: "This specifies the desired horizontal focus angle (degrees), if no target actor is set.")]
 	public float FocusHorizontal { get; set; } = 0.00f;
 
-	[DDLRegistration(0x99c238fdu, description: "This specifies the desired vertical focus angle (degrees), if no target actor is set.")]
+	[DDLRegistration(0xe087dabbu, description: "This specifies the desired vertical focus angle (degrees), if no target actor is set.")]
 	public float FocusVertical { get; set; } = 0.00f;
 
-	[DDLRegistration(0x99c238fdu, description: "This specifies the turn speed in degrees per second (0 means infinite).")]
+	[DDLRegistration(0x02d80d59u, description: "This specifies the turn speed in degrees per second (0 means infinite).")]
 	public float FocusSpeed { get; set; } = 90.00f;
 
 	public static Cinematic2LookAtDataDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class BotAttackSelectEvent : EventBase, IDDLObjectType<BotAttackSelectEve
 		ShotIndex = ddl.GetValue<uint>(0xc409037fu, ShotIndex);
 	}
 
-	[DDLRegistration(0x638499c5u)]
+	[DDLRegistration(0xc409037fu)]
 	public uint ShotIndex { get; set; } = 0x00000000;
 
 	public new static BotAttackSelectEvent Create(DDLObject ddl) => new(ddl);

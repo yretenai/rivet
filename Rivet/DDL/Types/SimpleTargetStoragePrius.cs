@@ -18,7 +18,7 @@ public class SimpleTargetStoragePrius : DDLObjectType, IDDLObjectType<SimpleTarg
 		MaxItems = ddl.GetValue<uint>(0xf8802edau, MaxItems);
 	}
 
-	[DDLRegistration(0x4d22861cu)]
+	[DDLRegistration(0xf8802edau)]
 	public uint MaxItems { get; set; } = 0x00000020;
 
 	public static SimpleTargetStoragePrius Create(DDLObject ddl) => new(ddl);

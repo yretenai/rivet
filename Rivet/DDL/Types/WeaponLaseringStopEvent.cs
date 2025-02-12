@@ -20,13 +20,13 @@ public class WeaponLaseringStopEvent : EventBase, IDDLObjectType<WeaponLaseringS
 		EndLocator = ddl.GetString(0xe7e59581) ?? EndLocator;
 	}
 
-	[DDLRegistration(0xe492ae31u, description: "Hash for differentiating beams")]
+	[DDLRegistration(0x26a7db04u, description: "Hash for differentiating beams")]
 	public uint BeamHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe492ae31u, description: "Locator name in model where the beam starts.")]
+	[DDLRegistration(0x45890f60u, description: "Locator name in model where the beam starts.")]
 	public string? StartLocator { get; set; } = default;
 
-	[DDLRegistration(0xe492ae31u, description: "Locator name in model where the beam ends.")]
+	[DDLRegistration(0xe7e59581u, description: "Locator name in model where the beam ends.")]
 	public string? EndLocator { get; set; } = default;
 
 	public new static WeaponLaseringStopEvent Create(DDLObject ddl) => new(ddl);

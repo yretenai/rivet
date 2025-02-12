@@ -24,25 +24,25 @@ public class PirateChallengeSquence : DDLObjectType, IDDLObjectType<PirateChalle
 		Failure = ddl.GetObject<PirateChallengeElement>(0x207160f9u);
 	}
 
-	[DDLRegistration(0xff6bd376u)]
+	[DDLRegistration(0x3621028bu)]
 	public List<PirateChallengeWelcomeElement?> Welcome { get; set; } = [];
 
-	[DDLRegistration(0xff6bd376u)]
+	[DDLRegistration(0x419f8c41u)]
 	public float PostWelcomeDelay { get; set; } = 3.00f;
 
-	[DDLRegistration(0xff6bd376u)]
+	[DDLRegistration(0x05f8e2d5u)]
 	public PirateChallengeElement? Explanation { get; set; } = default;
 
-	[DDLRegistration(0xff6bd376u)]
+	[DDLRegistration(0x0ffa0629u)]
 	public float PostExplanationDelay { get; set; } = 3.00f;
 
-	[DDLRegistration(0xff6bd376u)]
+	[DDLRegistration(0x56524057u)]
 	public List<PirateChallengeSongElement?> Lines { get; set; } = [];
 
-	[DDLRegistration(0xff6bd376u)]
+	[DDLRegistration(0x6eeabc8au)]
 	public PirateChallengeElement? Success { get; set; } = default;
 
-	[DDLRegistration(0xff6bd376u)]
+	[DDLRegistration(0x207160f9u)]
 	public PirateChallengeElement? Failure { get; set; } = default;
 
 	public static PirateChallengeSquence Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class TrigonometryInverseActionPrius : DDLObjectType, IDDLObjectType<Trig
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x5565924bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
 	public static TrigonometryInverseActionPrius Create(DDLObject ddl) => new(ddl);

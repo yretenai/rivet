@@ -25,28 +25,28 @@ public class AmbientBarrageConfig : ConfigBase, IDDLObjectType<AmbientBarrageCon
 		MaxCooldownDuration = ddl.GetValue<float>(0xb6a893cau, MaxCooldownDuration);
 	}
 
-	[DDLRegistration(0xc1d92357u, description: "The minimum number of bursts this barrage consists of")]
+	[DDLRegistration(0x94ec8381u, description: "The minimum number of bursts this barrage consists of")]
 	public int MinNumBursts { get; set; } = 1;
 
-	[DDLRegistration(0xc1d92357u, description: "The maximum number of bursts this barrage consists of")]
+	[DDLRegistration(0x049f936bu, description: "The maximum number of bursts this barrage consists of")]
 	public int MaxNumBursts { get; set; } = 1;
 
-	[DDLRegistration(0xc1d92357u, description: "Minimum duration of a burst.  A value of 0 means a single shot")]
+	[DDLRegistration(0x83fe5fe5u, description: "Minimum duration of a burst.  A value of 0 means a single shot")]
 	public float MinBurstDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc1d92357u, description: "Maximum duration of a burst.  A value of 0 means a single shot")]
+	[DDLRegistration(0xd207e4b8u, description: "Maximum duration of a burst.  A value of 0 means a single shot")]
 	public float MaxBurstDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc1d92357u, description: "Minimum delay between triggering bursts.  Note that bursts can overlap using different AmbientShooters.")]
+	[DDLRegistration(0xf8cfef99u, description: "Minimum delay between triggering bursts.  Note that bursts can overlap using different AmbientShooters.")]
 	public float MinBurstDelay { get; set; } = 0.50f;
 
-	[DDLRegistration(0xc1d92357u, description: "Maximum delay between triggering bursts.  Note that bursts can overlap using different AmbientShooters.")]
+	[DDLRegistration(0xb88097efu, description: "Maximum delay between triggering bursts.  Note that bursts can overlap using different AmbientShooters.")]
 	public float MaxBurstDelay { get; set; } = 0.50f;
 
-	[DDLRegistration(0xc1d92357u, description: "Minimum cooldown time after issueing all of our bursts")]
+	[DDLRegistration(0x119c13b3u, description: "Minimum cooldown time after issueing all of our bursts")]
 	public float MinCooldownDuration { get; set; } = 5.00f;
 
-	[DDLRegistration(0xc1d92357u, description: "Minimum cooldown time after issueing all of our bursts")]
+	[DDLRegistration(0xb6a893cau, description: "Minimum cooldown time after issueing all of our bursts")]
 	public float MaxCooldownDuration { get; set; } = 5.00f;
 
 	public new static AmbientBarrageConfig Create(DDLObject ddl) => new(ddl);

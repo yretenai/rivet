@@ -20,13 +20,13 @@ public class TargetFileLog : DDLObjectType, IDDLObjectType<TargetFileLog> {
 		IsTargetFromCache = ddl.GetValue<bool>(0xe58cc38bu, IsTargetFromCache);
 	}
 
-	[DDLRegistration(0x42054943u)]
+	[DDLRegistration(0xc01f06ecu)]
 	public List<TargetFileSessionLog?> Logs { get; set; } = [];
 
-	[DDLRegistration(0x42054943u)]
+	[DDLRegistration(0xa94fd694u)]
 	public List<TargetFileBuildOutput?> BuilderOut { get; set; } = [];
 
-	[DDLRegistration(0x42054943u)]
+	[DDLRegistration(0xe58cc38bu)]
 	public bool IsTargetFromCache { get; set; } = false;
 
 	public static TargetFileLog Create(DDLObject ddl) => new(ddl);

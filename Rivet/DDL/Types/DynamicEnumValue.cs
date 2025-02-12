@@ -19,10 +19,10 @@ public class DynamicEnumValue : DDLObjectType, IDDLObjectType<DynamicEnumValue> 
 		Label = ddl.GetString(0x17f49c29) ?? Label;
 	}
 
-	[DDLRegistration(0x42b088e8u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x42b088e8u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
 	public static DynamicEnumValue Create(DDLObject ddl) => new(ddl);

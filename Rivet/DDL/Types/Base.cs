@@ -18,7 +18,7 @@ public class Base : DDLObjectType, IDDLObjectType<Base> {
 		Pasternak = ddl.GetValue<float>(0xb10ef905u, Pasternak);
 	}
 
-	[DDLRegistration(0xf0243ed1u)]
+	[DDLRegistration(0xb10ef905u)]
 	public float Pasternak { get; set; } = 0.00f;
 
 	public static Base Create(DDLObject ddl) => new(ddl);

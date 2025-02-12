@@ -21,16 +21,16 @@ public class CameraSafeZoneTweakMultiplier : CameraSafeZoneTweak, IDDLObjectType
 		BiDirectionalField = ddl.GetValue<bool>(0x955abfcau, BiDirectionalField);
 	}
 
-	[DDLRegistration(0xd249cab0u, "Left/Right Angle Multiplier")]
+	[DDLRegistration(0x59d77578u, "Left/Right Angle Multiplier")]
 	public float LeftAngleMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd249cab0u, "Forward/Back Distance Multiplier")]
+	[DDLRegistration(0x9a40824cu, "Forward/Back Distance Multiplier")]
 	public float ForwardDistMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd249cab0u)]
+	[DDLRegistration(0x75edc1a7u)]
 	public float BlendFieldCompletePercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd249cab0u)]
+	[DDLRegistration(0x955abfcau)]
 	public bool BiDirectionalField { get; set; } = false;
 
 	public new static CameraSafeZoneTweakMultiplier Create(DDLObject ddl) => new(ddl);

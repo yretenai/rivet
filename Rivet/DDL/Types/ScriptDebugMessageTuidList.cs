@@ -19,10 +19,10 @@ public class ScriptDebugMessageTuidList : DDLObjectType, IDDLObjectType<ScriptDe
 		Tuids = ddl.GetValues<RivetAssetId>(0xc1987cf3u);
 	}
 
-	[DDLRegistration(0xa03bf8c1u)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public xb379a82e Action { get; set; } = xb379a82e.DebugNothing;
 
-	[DDLRegistration(0xa03bf8c1u)]
+	[DDLRegistration(0xc1987cf3u)]
 	public List<RivetAssetId> Tuids { get; set; } = [];
 
 	public static ScriptDebugMessageTuidList Create(DDLObject ddl) => new(ddl);

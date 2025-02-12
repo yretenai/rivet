@@ -21,16 +21,16 @@ public class DispersingShotMotionPrius : HomingShotMotionPrius, IDDLObjectType<D
 		DispersionType = ddl.GetEnum<xfb474e10>(0x3560b19au, xfb474e10Values.Lookup);
 	}
 
-	[DDLRegistration(0xc0d5dab7u, description: "If TRUE, orientation will follow net displacement instead of default velocity direction")]
+	[DDLRegistration(0x25ef50f9u, description: "If TRUE, orientation will follow net displacement instead of default velocity direction")]
 	public bool OrientationFollowsMovement { get; set; } = true;
 
-	[DDLRegistration(0xc0d5dab7u)]
+	[DDLRegistration(0x8ff54dabu)]
 	public float DispersionSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0xc0d5dab7u)]
+	[DDLRegistration(0x30a45514u)]
 	public float DispersionDecel { get; set; } = 9.80f;
 
-	[DDLRegistration(0xc0d5dab7u)]
+	[DDLRegistration(0x3560b19au)]
 	public xfb474e10 DispersionType { get; set; } = xfb474e10.InitialVelocityDir;
 
 	public new static DispersingShotMotionPrius Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class SonicShotPrius : SimpleShotPrius, IDDLObjectType<SonicShotPrius> {
 		ProximityEventDistance = ddl.GetValue<float>(0x7c91f591u, ProximityEventDistance);
 	}
 
-	[DDLRegistration(0x6cbff66eu)]
+	[DDLRegistration(0x2fb01a0bu)]
 	public float Damage { get; set; } = 10.00f;
 
-	[DDLRegistration(0x6cbff66eu)]
+	[DDLRegistration(0x840c154du)]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x6cbff66eu)]
+	[DDLRegistration(0x2554a262u)]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x6cbff66eu)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 100.00f;
 
-	[DDLRegistration(0x6cbff66eu)]
+	[DDLRegistration(0x1c6a0fe4u)]
 	public DDLVector3? StartingSize { get; set; } = default;
 
-	[DDLRegistration(0x6cbff66eu)]
+	[DDLRegistration(0xbe069505u)]
 	public DDLVector3? EndingSize { get; set; } = default;
 
-	[DDLRegistration(0x6cbff66eu)]
+	[DDLRegistration(0xd84bf665u)]
 	public float MaxSizeTime { get; set; } = 10.00f;
 
-	[DDLRegistration(0x6cbff66eu)]
+	[DDLRegistration(0x9f20ad55u)]
 	public float FlightSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0x6cbff66eu)]
+	[DDLRegistration(0x7c91f591u)]
 	public float ProximityEventDistance { get; set; } = 20.00f;
 
 	public new static SonicShotPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class HeatStateData : DDLObjectType, IDDLObjectType<HeatStateData> {
 		NumBulletsToSpray = ddl.GetValue<uint>(0x593c7accu, NumBulletsToSpray);
 	}
 
-	[DDLRegistration(0x19144b05u, description: "The tier that the below values correspond to.\n - Overheated: The gun is temporarily unusable when this state is reached.\n - Low/Medium/HighTemp: Temperature buckets.\n - Cold: The coldest state possible. Only active when weapon is fully cooled down.")]
+	[DDLRegistration(0x024604a5u, description: "The tier that the below values correspond to.\n - Overheated: The gun is temporarily unusable when this state is reached.\n - Low/Medium/HighTemp: Temperature buckets.\n - Cold: The coldest state possible. Only active when weapon is fully cooled down.")]
 	public xa6f8b099 HeatState { get; set; } = xa6f8b099.None;
 
-	[DDLRegistration(0x19144b05u, description: "The lowest temperature this heat level covers")]
+	[DDLRegistration(0x183a4b21u, description: "The lowest temperature this heat level covers")]
 	public float TempThreshold { get; set; } = 0.00f;
 
-	[DDLRegistration(0x19144b05u, description: "How many bullets will be sprayed per shot.")]
+	[DDLRegistration(0x593c7accu, description: "How many bullets will be sprayed per shot.")]
 	public uint NumBulletsToSpray { get; set; } = 0x00000001;
 
 	public static HeatStateData Create(DDLObject ddl) => new(ddl);

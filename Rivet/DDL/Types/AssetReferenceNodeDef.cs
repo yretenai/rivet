@@ -21,16 +21,16 @@ public class AssetReferenceNodeDef : NodeBaseDef, IDDLObjectType<AssetReferenceN
 		ShowThumbnail = ddl.GetValue<bool>(0x697be25fu, ShowThumbnail);
 	}
 
-	[DDLRegistration(0x4f065c93u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x4f065c93u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x4f065c93u)]
+	[DDLRegistration(0xb2a1a9fau)]
 	public bool Autoload { get; set; } = true;
 
-	[DDLRegistration(0x4f065c93u)]
+	[DDLRegistration(0x697be25fu)]
 	public bool ShowThumbnail { get; set; } = true;
 
 	public new static AssetReferenceNodeDef Create(DDLObject ddl) => new(ddl);

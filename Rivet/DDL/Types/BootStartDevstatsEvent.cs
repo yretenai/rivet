@@ -26,31 +26,31 @@ public class BootStartDevstatsEvent : DDLObjectType, IDDLObjectType<BootStartDev
 		Owner_id = ddl.GetString(0x7d4bbedf) ?? Owner_id;
 	}
 
-	[DDLRegistration(0x7f516d00u)]
+	[DDLRegistration(0x077e466bu)]
 	public string? Event_type { get; set; } = "BootStart";
 
-	[DDLRegistration(0x7f516d00u, description: "Name of the game title. Example: 'i31'")]
+	[DDLRegistration(0x8192f990u, description: "Name of the game title. Example: 'i31'")]
 	public string? Title_name { get; set; } = default;
 
-	[DDLRegistration(0x7f516d00u, description: "IssuerId or NP Environment. Use one value from the following list: 'np', 'sp-int', 'prod-qa'")]
+	[DDLRegistration(0xbb917241u, description: "IssuerId or NP Environment. Use one value from the following list: 'np', 'sp-int', 'prod-qa'")]
 	public string? Issuer_id { get; set; } = default;
 
-	[DDLRegistration(0x7f516d00u, description: "Platform using the game, not necessarily hardware as it can also be a digital platform. Example: 'PS4'")]
+	[DDLRegistration(0x3a250fedu, description: "Platform using the game, not necessarily hardware as it can also be a digital platform. Example: 'PS4'")]
 	public string? Platform { get; set; } = default;
 
-	[DDLRegistration(0x7f516d00u, description: "The hardware running the game. Example: 'PS4'")]
+	[DDLRegistration(0x0ea75c1fu, description: "The hardware running the game. Example: 'PS4'")]
 	public string? Device_type { get; set; } = default;
 
-	[DDLRegistration(0x7f516d00u, description: "Technical version for the build.")]
+	[DDLRegistration(0x1e8e072fu, description: "Technical version for the build.")]
 	public string? Build_version { get; set; } = default;
 
-	[DDLRegistration(0x7f516d00u, description: "Canonical name for the build.")]
+	[DDLRegistration(0xcd344e05u, description: "Canonical name for the build.")]
 	public string? Build_name { get; set; } = default;
 
-	[DDLRegistration(0x7f516d00u, description: "How was the game booted?")]
+	[DDLRegistration(0xb87062a0u, description: "How was the game booted?")]
 	public x8b182f8e Launch_method { get; set; } = x8b182f8e.Boot;
 
-	[DDLRegistration(0x7f516d00u, description: "The Owner of the userid. Might be different for parental controlled accounts")]
+	[DDLRegistration(0x7d4bbedfu, description: "The Owner of the userid. Might be different for parental controlled accounts")]
 	public string? Owner_id { get; set; } = default;
 
 	public static BootStartDevstatsEvent Create(DDLObject ddl) => new(ddl);

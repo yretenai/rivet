@@ -19,10 +19,10 @@ public class StatusEffectAppliedEvent : EventBase, IDDLObjectType<StatusEffectAp
 		Weapon = ddl.GetValue<uint>(0x574be981u, Weapon);
 	}
 
-	[DDLRegistration(0x41596368u)]
+	[DDLRegistration(0x7817619bu)]
 	public uint Target { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x41596368u)]
+	[DDLRegistration(0x574be981u)]
 	public uint Weapon { get; set; } = 0x00000000;
 
 	public new static StatusEffectAppliedEvent Create(DDLObject ddl) => new(ddl);

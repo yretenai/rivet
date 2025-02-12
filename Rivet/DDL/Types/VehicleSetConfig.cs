@@ -18,7 +18,7 @@ public class VehicleSetConfig : ConfigBase, IDDLObjectType<VehicleSetConfig> {
 		VehicleSetList = ddl.GetObjects<VehicleSetListEntry>(0x1c316b7cu);
 	}
 
-	[DDLRegistration(0xfdc40927u, description: "Lists of vehicle sets that can be enabled or disabled based on filters")]
+	[DDLRegistration(0x1c316b7cu, description: "Lists of vehicle sets that can be enabled or disabled based on filters")]
 	public List<VehicleSetListEntry?> VehicleSetList { get; set; } = [];
 
 	public new static VehicleSetConfig Create(DDLObject ddl) => new(ddl);

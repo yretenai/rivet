@@ -19,10 +19,10 @@ public class ActorChangeEvent : UDSEventBase, IDDLObjectType<ActorChangeEvent> {
 		SecondaryActors = ddl.GetStrings(0xc52b223au);
 	}
 
-	[DDLRegistration(0x526e8d7fu)]
+	[DDLRegistration(0xaabdb556u)]
 	public string? PrimaryActor { get; set; } = default;
 
-	[DDLRegistration(0x526e8d7fu)]
+	[DDLRegistration(0xc52b223au)]
 	public List<string?> SecondaryActors { get; set; } = [];
 
 	public new static ActorChangeEvent Create(DDLObject ddl) => new(ddl);

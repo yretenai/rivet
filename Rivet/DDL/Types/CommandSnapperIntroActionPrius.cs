@@ -19,10 +19,10 @@ public class CommandSnapperIntroActionPrius : DDLObjectType, IDDLObjectType<Comm
 		AnimName = ddl.GetString(0xc9e716ce) ?? AnimName;
 	}
 
-	[DDLRegistration(0x647905f7u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0x647905f7u)]
+	[DDLRegistration(0xc9e716ceu)]
 	public string? AnimName { get; set; } = "Break_Free";
 
 	public static CommandSnapperIntroActionPrius Create(DDLObject ddl) => new(ddl);

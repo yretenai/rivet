@@ -20,13 +20,13 @@ public class SwingshotSettings : DDLObjectType, IDDLObjectType<SwingshotSettings
 		Los = ddl.GetObject<SwingshotLosSettings>(0xbfb09571u);
 	}
 
-	[DDLRegistration(0xd882aa64u)]
+	[DDLRegistration(0xd59a5ebcu)]
 	public int MaxTargets { get; set; } = 64;
 
-	[DDLRegistration(0xd882aa64u)]
+	[DDLRegistration(0x247061cbu)]
 	public int MaxQueryResults { get; set; } = 16;
 
-	[DDLRegistration(0xd882aa64u)]
+	[DDLRegistration(0xbfb09571u)]
 	public SwingshotLosSettings? Los { get; set; } = default;
 
 	public static SwingshotSettings Create(DDLObject ddl) => new(ddl);

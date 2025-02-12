@@ -18,7 +18,7 @@ public class FixedSizeString : DDLObjectType, IDDLObjectType<FixedSizeString> {
 		Data = ddl.GetValues<byte>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0x485191cbu)]
+	[DDLRegistration(0x9d6333d3u)]
 	public List<byte> Data { get; set; } = [];
 
 	public static FixedSizeString Create(DDLObject ddl) => new(ddl);

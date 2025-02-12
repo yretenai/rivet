@@ -22,19 +22,19 @@ public class RobotestCineFrameActorInfo : DDLObjectType, IDDLObjectType<Robotest
 		Drivers = ddl.GetObjects<RobotestCineActorDriverInfo>(0xe5faa03fu);
 	}
 
-	[DDLRegistration(0x3d9f12eau, description: "Cinematic Actor")]
+	[DDLRegistration(0x5953f773u, description: "Cinematic Actor")]
 	public ulong Tuid { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x3d9f12eau, description: "Actor Name")]
+	[DDLRegistration(0xcc4a4d21u, description: "Actor Name")]
 	public string? ActorName { get; set; } = default;
 
-	[DDLRegistration(0x3d9f12eau, description: "Actor status")]
+	[DDLRegistration(0x5fcc36f9u, description: "Actor status")]
 	public string? ActorStatus { get; set; } = default;
 
-	[DDLRegistration(0x3d9f12eau, description: "Transform at the end of the frame")]
+	[DDLRegistration(0xf54f1ea1u, description: "Transform at the end of the frame")]
 	public DDLTransform? Transform { get; set; } = default;
 
-	[DDLRegistration(0x3d9f12eau, description: " Drivers on this actor this frame")]
+	[DDLRegistration(0xe5faa03fu, description: " Drivers on this actor this frame")]
 	public List<RobotestCineActorDriverInfo?> Drivers { get; set; } = [];
 
 	public static RobotestCineFrameActorInfo Create(DDLObject ddl) => new(ddl);

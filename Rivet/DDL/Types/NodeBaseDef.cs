@@ -21,16 +21,16 @@ public class NodeBaseDef : NodeGraphItemDef, IDDLObjectType<NodeBaseDef> {
 		Y = ddl.GetValue<float>(0x2934711bu, Y);
 	}
 
-	[DDLRegistration(0x34ef2791u)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = false;
 
-	[DDLRegistration(0x34ef2791u)]
+	[DDLRegistration(0x7effd393u)]
 	public bool Disabled { get; set; } = false;
 
-	[DDLRegistration(0x34ef2791u)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x34ef2791u)]
+	[DDLRegistration(0x2934711bu)]
 	public float Y { get; set; } = 0.00f;
 
 	public new static NodeBaseDef Create(DDLObject ddl) => new(ddl);

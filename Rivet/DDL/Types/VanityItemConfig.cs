@@ -18,7 +18,7 @@ public class VanityItemConfig : SkinItemConfig, IDDLObjectType<VanityItemConfig>
 		VanityItemData = ddl.GetObject<VanityItemData>(0x3098b726u);
 	}
 
-	[DDLRegistration(0x69ec9e21u)]
+	[DDLRegistration(0x3098b726u)]
 	public VanityItemData? VanityItemData { get; set; } = default;
 
 	public new static VanityItemConfig Create(DDLObject ddl) => new(ddl);

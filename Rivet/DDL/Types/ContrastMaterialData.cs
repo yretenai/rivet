@@ -19,10 +19,10 @@ public class ContrastMaterialData : DDLObjectType, IDDLObjectType<ContrastMateri
 		FallbackMaterial = ddl.GetValue<RivetAssetId>(0x5ff86493u, FallbackMaterial);
 	}
 
-	[DDLRegistration(0xb39f83d3u)]
+	[DDLRegistration(0x2c12d0fdu)]
 	public List<ContrastMaterialEntry?> Entries { get; set; } = [];
 
-	[DDLRegistration(0xb39f83d3u, description: "Default material to apply during high-contrast mode if there is no other entry.")]
+	[DDLRegistration(0x5ff86493u, description: "Default material to apply during high-contrast mode if there is no other entry.")]
 	public RivetAssetId FallbackMaterial { get; set; } = default;
 
 	public static ContrastMaterialData Create(DDLObject ddl) => new(ddl);

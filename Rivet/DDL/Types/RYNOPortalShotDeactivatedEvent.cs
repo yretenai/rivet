@@ -18,7 +18,7 @@ public class RYNOPortalShotDeactivatedEvent : EventBase, IDDLObjectType<RYNOPort
 		VersionIndex = ddl.GetValue<byte>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0xcf3f3775u)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
 	public new static RYNOPortalShotDeactivatedEvent Create(DDLObject ddl) => new(ddl);

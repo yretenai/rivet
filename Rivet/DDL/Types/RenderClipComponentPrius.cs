@@ -23,22 +23,22 @@ public class RenderClipComponentPrius : DDLObjectType, IDDLObjectType<RenderClip
 		ClipActors = ddl.GetValues<RivetAssetId>(0xf2b2c447u);
 	}
 
-	[DDLRegistration(0x0bee00c9u, description: "Pre-composite material to apply to clipped actors")]
+	[DDLRegistration(0x80e2602du, description: "Pre-composite material to apply to clipped actors")]
 	public RivetAssetId ClipMaterial { get; set; } = default;
 
-	[DDLRegistration(0x0bee00c9u, description: "Variable read by material to get a position on the clipping plane.")]
+	[DDLRegistration(0x5edd5027u, description: "Variable read by material to get a position on the clipping plane.")]
 	public string? PositionVariableName { get; set; } = default;
 
-	[DDLRegistration(0x0bee00c9u, description: "Variable read by material to get the direction of the clipping plane.")]
+	[DDLRegistration(0xf187472au, description: "Variable read by material to get the direction of the clipping plane.")]
 	public string? DirectionVariableName { get; set; } = default;
 
-	[DDLRegistration(0x0bee00c9u, description: "If true, all added actors thru the list below or thru code will get clipped regardless of bounding sphere intersection")]
+	[DDLRegistration(0x4311e5feu, description: "If true, all added actors thru the list below or thru code will get clipped regardless of bounding sphere intersection")]
 	public bool SkipBoundingSphereChecks { get; set; } = false;
 
-	[DDLRegistration(0x0bee00c9u, description: "Local actor axis used to clip (pixels on the side of this actor pointing in this direction will be retained.)")]
+	[DDLRegistration(0x5f01ab55u, description: "Local actor axis used to clip (pixels on the side of this actor pointing in this direction will be retained.)")]
 	public x6a9f4317 ClipAxis { get; set; } = x6a9f4317.ZPositive;
 
-	[DDLRegistration(0x0bee00c9u, description: "Set of actors to clip rendering across portal boundary")]
+	[DDLRegistration(0xf2b2c447u, description: "Set of actors to clip rendering across portal boundary")]
 	public List<RivetAssetId> ClipActors { get; set; } = [];
 
 	public static RenderClipComponentPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class HoverbootFallData : DDLObjectType, IDDLObjectType<HoverbootFallData
 		JumpInputGracePeriod = ddl.GetValue<float>(0xe295a94bu, JumpInputGracePeriod);
 	}
 
-	[DDLRegistration(0x134207d9u, description: "Max time after starting the fall state that it is still okay to jump. (seconds)")]
+	[DDLRegistration(0xe295a94bu, description: "Max time after starting the fall state that it is still okay to jump. (seconds)")]
 	public float JumpInputGracePeriod { get; set; } = 0.20f;
 
 	public static HoverbootFallData Create(DDLObject ddl) => new(ddl);

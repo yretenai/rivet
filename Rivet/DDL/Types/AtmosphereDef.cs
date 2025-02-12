@@ -46,91 +46,91 @@ public class AtmosphereDef : DDLObjectType, IDDLObjectType<AtmosphereDef> {
 		VolumetricClouds = ddl.GetObject<VolumetricCloudsDef>(0xd99e6805u);
 	}
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xbeb4a163u, "Preview Model")]
+	[DDLRegistration(0x5e53ae29u, "Preview Model")]
 	public RivetAssetId PreviewModel { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u, description: "Alternate Atmosphere To Use For light grid capturing")]
+	[DDLRegistration(0xe9cb7d44u, description: "Alternate Atmosphere To Use For light grid capturing")]
 	public RivetAssetId LightGridAtmosphere { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u, description: "Optional directory where light grids are stored for open world hexes")]
+	[DDLRegistration(0xd42b16a3u, description: "Optional directory where light grids are stored for open world hexes")]
 	public string? LightGridSharedDir { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u, description: "Optional light grid directory is only used for zones under this path")]
+	[DDLRegistration(0x636d61a3u, description: "Optional light grid directory is only used for zones under this path")]
 	public string? LightGridSharedFilter { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x8d8d4336u)]
 	public SkySettingsDef? SkySettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x203d6f25u)]
 	public AssetSwap? AssetSwap { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0xdc13fc9du)]
 	public EnvLightingDef? EnvLighting { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x6cfe7f05u)]
 	public ToneMapSettingsDef? ToneMapSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x4407ac81u)]
 	public BloomSettingsDef? BloomSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0xc2a05771u)]
 	public ColorCorrectionSettingsDef? ColorCorrectionSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x66400d79u)]
 	public VignetteSettingsDef? VignetteSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0xa188c9bcu)]
 	public ChromaticAbSettingsDef? ChromaticAbSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u, description: "Height Fog Settings")]
+	[DDLRegistration(0x3fc51226u, description: "Height Fog Settings")]
 	public FogSettingsDef? FogSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u, description: "Volumetric Fog Settings")]
+	[DDLRegistration(0xdf539bfeu, description: "Volumetric Fog Settings")]
 	public VolumetricFogSettingsDef? VolumetricFogSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x46a5d6c6u)]
 	public MotionBlurSettingsDef? MotionBlurSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x581fd910u)]
 	public DepthOfFieldSettingsDef? DepthOfFieldSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0xd5580d47u)]
 	public FilmGrainSettingsDef? FilmGrainSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x5205a188u)]
 	public ScatteringSettingsDef? ScatteringSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x076cb6fdu)]
 	public LightShaftsSettingsDef? LightShaftsSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x1919b57du)]
 	public CameraClipDef? ClipSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0xb7c97c3au)]
 	public ProjectCustomDef? ProjectCustomData { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u, "Ambient Occlusion")]
+	[DDLRegistration(0x7ea3882du, "Ambient Occlusion")]
 	public AOSettingsDef? AOSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u, "Anti-Aliasing")]
+	[DDLRegistration(0xb66153bfu, "Anti-Aliasing")]
 	public AASettingsDef? AASettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u, "Screen Space Refl")]
+	[DDLRegistration(0xf60d9d84u, "Screen Space Refl")]
 	public SSRSettingsDef? SSRSettings { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x4d3ab056u)]
 	public WeatherDef? Weather { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u)]
+	[DDLRegistration(0x75709cdfu)]
 	public OceanDef? Ocean { get; set; } = default;
 
-	[DDLRegistration(0xbeb4a163u, "Volumetric Clouds")]
+	[DDLRegistration(0xd99e6805u, "Volumetric Clouds")]
 	public VolumetricCloudsDef? VolumetricClouds { get; set; } = default;
 
 	public static AtmosphereDef Create(DDLObject ddl) => new(ddl);

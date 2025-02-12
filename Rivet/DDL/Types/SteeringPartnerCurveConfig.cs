@@ -35,58 +35,58 @@ public class SteeringPartnerCurveConfig : DDLObjectType, IDDLObjectType<Steering
 		CurveSwitchDistance = ddl.GetValue<float>(0xdfbbf820u, CurveSwitchDistance);
 	}
 
-	[DDLRegistration(0x75fa7dfbu, description: "Bubble around partner where the bot will try not to enter. Assumed that DistanceFromPairedActor is not shorter than PersonalSpaceRadius")]
+	[DDLRegistration(0x8994bcecu, description: "Bubble around partner where the bot will try not to enter. Assumed that DistanceFromPairedActor is not shorter than PersonalSpaceRadius")]
 	public float PersonalSpaceRadius { get; set; } = 2.00f;
 
-	[DDLRegistration(0x75fa7dfbu)]
+	[DDLRegistration(0x846a2206u)]
 	public float MinRateOfAcceleration { get; set; } = 0.20f;
 
-	[DDLRegistration(0x75fa7dfbu)]
+	[DDLRegistration(0x972fc4adu)]
 	public float MaxRateOfAcceleration { get; set; } = 5.00f;
 
-	[DDLRegistration(0x75fa7dfbu)]
+	[DDLRegistration(0xf47c9f55u)]
 	public float MinRateOfDeceleration { get; set; } = 0.20f;
 
-	[DDLRegistration(0x75fa7dfbu)]
+	[DDLRegistration(0xe73979feu)]
 	public float MaxRateOfDeceleration { get; set; } = 5.00f;
 
-	[DDLRegistration(0x75fa7dfbu, description: "Acceleration for handling going at partner's speed")]
+	[DDLRegistration(0x3827b7a5u, description: "Acceleration for handling going at partner's speed")]
 	public float IdleAccelDecel { get; set; } = 2.00f;
 
-	[DDLRegistration(0x75fa7dfbu, description: "The minimum distance from the ideal point the bot should be in order to start speeding up")]
+	[DDLRegistration(0x450eee72u, description: "The minimum distance from the ideal point the bot should be in order to start speeding up")]
 	public float SpeedUpDistance { get; set; } = 3.00f;
 
-	[DDLRegistration(0x75fa7dfbu, description: "The maximum distance from the ideal point the bot should be in order to start slowing down")]
+	[DDLRegistration(0xb1a31762u, description: "The maximum distance from the ideal point the bot should be in order to start slowing down")]
 	public float SlowDownDistance { get; set; } = 2.00f;
 
-	[DDLRegistration(0x75fa7dfbu, description: "Between [0,1]. If the partner accelerates fast, this is the value at which the bot will detect they are speeding up and will also accelerate")]
+	[DDLRegistration(0xe6186c87u, description: "Between [0,1]. If the partner accelerates fast, this is the value at which the bot will detect they are speeding up and will also accelerate")]
 	public float MaxSpeedVariance { get; set; } = 0.60f;
 
-	[DDLRegistration(0x75fa7dfbu, description: "Between [0,1]. This controls how much she will ignore the bot sharply turning. Mostly to ignore the player spinning in circles and create some natural delay in the turns. The TurnRate is better at delaying turning further")]
+	[DDLRegistration(0xf8cd526au, description: "Between [0,1]. This controls how much she will ignore the bot sharply turning. Mostly to ignore the player spinning in circles and create some natural delay in the turns. The TurnRate is better at delaying turning further")]
 	public float MaxTurningVariance { get; set; } = 0.45f;
 
-	[DDLRegistration(0x75fa7dfbu)]
+	[DDLRegistration(0xa58d6564u)]
 	public float MinTimeTillReachDestAccel { get; set; } = 1.00f;
 
-	[DDLRegistration(0x75fa7dfbu)]
+	[DDLRegistration(0x9b38adecu)]
 	public float MaxTimeTillReachDestAccel { get; set; } = 3.00f;
 
-	[DDLRegistration(0x75fa7dfbu)]
+	[DDLRegistration(0x4806b5c8u)]
 	public float MinTimeTillReachDestDecel { get; set; } = 0.20f;
 
-	[DDLRegistration(0x75fa7dfbu)]
+	[DDLRegistration(0x76b37d40u)]
 	public float MaxTimeTillReachDestDecel { get; set; } = 3.00f;
 
-	[DDLRegistration(0x75fa7dfbu, description: "Will ignore any walkable-area defining curves if set to false")]
+	[DDLRegistration(0x38a47cdcu, description: "Will ignore any walkable-area defining curves if set to false")]
 	public bool UseCurvePathing { get; set; } = false;
 
-	[DDLRegistration(0x75fa7dfbu, description: "A max distance from the waklable-area defining curve, if one exists")]
+	[DDLRegistration(0xa2f9b2edu, description: "A max distance from the waklable-area defining curve, if one exists")]
 	public float MaxDistanceFromPath { get; set; } = 8.00f;
 
-	[DDLRegistration(0x75fa7dfbu, description: "How far away from our partner do we have to be to abandon our current curve and go into non-curve mode?")]
+	[DDLRegistration(0x9172fd37u, description: "How far away from our partner do we have to be to abandon our current curve and go into non-curve mode?")]
 	public float PartnerSwitchDistance { get; set; } = 5.00f;
 
-	[DDLRegistration(0x75fa7dfbu, description: "How far away does our partner have to be from the other curve for us to leave this one? Alternatively, if we're not on a curve, how far away should we be to ")]
+	[DDLRegistration(0xdfbbf820u, description: "How far away does our partner have to be from the other curve for us to leave this one? Alternatively, if we're not on a curve, how far away should we be to ")]
 	public float CurveSwitchDistance { get; set; } = 7.00f;
 
 	public static SteeringPartnerCurveConfig Create(DDLObject ddl) => new(ddl);

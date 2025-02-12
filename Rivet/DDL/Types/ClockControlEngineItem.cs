@@ -19,10 +19,10 @@ public class ClockControlEngineItem : DDLObjectType, IDDLObjectType<ClockControl
 		Rate = ddl.GetValue<float>(0xef7cff89u, Rate);
 	}
 
-	[DDLRegistration(0xc7f780b5u)]
+	[DDLRegistration(0xbac01e3au)]
 	public xcdedea98 State { get; set; } = xcdedea98.Run;
 
-	[DDLRegistration(0xc7f780b5u)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
 	public static ClockControlEngineItem Create(DDLObject ddl) => new(ddl);

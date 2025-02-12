@@ -21,16 +21,16 @@ public class SceneNodePropertyLinkMode : DDLObjectType, IDDLObjectType<SceneNode
 		LinkDestination = ddl.GetValue<RivetAssetId>(0x8f70517du, LinkDestination);
 	}
 
-	[DDLRegistration(0x89cbd53bu)]
+	[DDLRegistration(0x9fbc7928u)]
 	public LinkModeStates LinkModeState { get; set; } = LinkModeStates.ExitAndCancel;
 
-	[DDLRegistration(0x89cbd53bu)]
+	[DDLRegistration(0xc4014edfu)]
 	public string? FieldPath { get; set; } = "";
 
-	[DDLRegistration(0x89cbd53bu)]
+	[DDLRegistration(0x08cbaeb9u)]
 	public List<RivetAssetId> LinkSources { get; set; } = [];
 
-	[DDLRegistration(0x89cbd53bu)]
+	[DDLRegistration(0x8f70517du)]
 	public RivetAssetId LinkDestination { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static SceneNodePropertyLinkMode Create(DDLObject ddl) => new(ddl);

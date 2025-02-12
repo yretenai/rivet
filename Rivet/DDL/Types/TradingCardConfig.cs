@@ -19,10 +19,10 @@ public class TradingCardConfig : ConfigBase, IDDLObjectType<TradingCardConfig> {
 		CardList = ddl.GetObjects<CardDef>(0x0360776du);
 	}
 
-	[DDLRegistration(0x5d118529u, "Duplicate trade count (default)", "How many duplicates to trade for each card (default)")]
+	[DDLRegistration(0xde9fb801u, "Duplicate trade count (default)", "How many duplicates to trade for each card (default)")]
 	public uint DuplicateTradeCount { get; set; } = 0x00000005;
 
-	[DDLRegistration(0x5d118529u, description: "Trading Card list")]
+	[DDLRegistration(0x0360776du, description: "Trading Card list")]
 	public List<CardDef?> CardList { get; set; } = [];
 
 	public new static TradingCardConfig Create(DDLObject ddl) => new(ddl);

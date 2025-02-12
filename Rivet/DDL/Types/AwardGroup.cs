@@ -24,25 +24,25 @@ public class AwardGroup : DDLObjectType, IDDLObjectType<AwardGroup> {
 		Awards = ddl.GetObjects<AwardEntry>(0x1b92ad99u);
 	}
 
-	[DDLRegistration(0x0cab47aau, "Group Type", "The type of this group. See the tooltip for each type for that type's requirements.")]
+	[DDLRegistration(0x60e89698u, "Group Type", "The type of this group. See the tooltip for each type for that type's requirements.")]
 	public x1eee6c26 GroupType { get; set; } = x1eee6c26.MainGame;
 
-	[DDLRegistration(0x0cab47aau, "Code Name", "Code name of this group in the trophy metadata. Must not have spaces.")]
+	[DDLRegistration(0xa15b4218u, "Code Name", "Code name of this group in the trophy metadata. Must not have spaces.")]
 	public string? CodeName { get; set; } = default;
 
-	[DDLRegistration(0x0cab47aau, "Platform", "What platform(s) should these awards be for?")]
+	[DDLRegistration(0xc3536dbbu, "Platform", "What platform(s) should these awards be for?")]
 	public x74d56eb6 Platform { get; set; } = (x74d56eb6) 0x00000003;
 
-	[DDLRegistration(0x0cab47aau, "Name Tag", "Localization tag for the short name of this award group.")]
+	[DDLRegistration(0xa0041b54u, "Name Tag", "Localization tag for the short name of this award group.")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0x0cab47aau, "Desc Tag", "Localization tag for the longer description of this award group.")]
+	[DDLRegistration(0xe02bccb2u, "Desc Tag", "Localization tag for the longer description of this award group.")]
 	public string? DescLocTag { get; set; } = default;
 
-	[DDLRegistration(0x0cab47aau, "Image Path", "Path for the image to display for this award group in the OS. Must be a 512x512 png.")]
+	[DDLRegistration(0x3c1a7294u, "Image Path", "Path for the image to display for this award group in the OS. Must be a 512x512 png.")]
 	public RivetAssetId ImagePath { get; set; } = default;
 
-	[DDLRegistration(0x0cab47aau, description: "A list of awards in this group.")]
+	[DDLRegistration(0x1b92ad99u, description: "A list of awards in this group.")]
 	public List<AwardEntry?> Awards { get; set; } = [];
 
 	public static AwardGroup Create(DDLObject ddl) => new(ddl);

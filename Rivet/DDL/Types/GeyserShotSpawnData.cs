@@ -24,25 +24,25 @@ public class GeyserShotSpawnData : DDLObjectType, IDDLObjectType<GeyserShotSpawn
 		TargetBotCooldownMax = ddl.GetValue<float>(0xcc17d5beu, TargetBotCooldownMax);
 	}
 
-	[DDLRegistration(0x969c950eu, "Shot Config")]
+	[DDLRegistration(0xb171e6aeu, "Shot Config")]
 	public RivetAssetId ShotConfig { get; set; } = default;
 
-	[DDLRegistration(0x969c950eu, "Range Horizontal")]
+	[DDLRegistration(0x1db8d0f3u, "Range Horizontal")]
 	public float RangeHorizontal { get; set; } = 10.00f;
 
-	[DDLRegistration(0x969c950eu, "Range Vertical")]
+	[DDLRegistration(0x4a1de2c0u, "Range Vertical")]
 	public float RangeVertical { get; set; } = 20.00f;
 
-	[DDLRegistration(0x969c950eu, "Interval Min")]
+	[DDLRegistration(0x22f1fbf5u, "Interval Min")]
 	public float IntervalMin { get; set; } = 0.25f;
 
-	[DDLRegistration(0x969c950eu, "Interval Max")]
+	[DDLRegistration(0x1efcc4acu, "Interval Max")]
 	public float IntervalMax { get; set; } = 0.40f;
 
-	[DDLRegistration(0x969c950eu, "Target Bot Cooldown Min")]
+	[DDLRegistration(0xf01aeae7u, "Target Bot Cooldown Min")]
 	public float TargetBotCooldownMin { get; set; } = 0.75f;
 
-	[DDLRegistration(0x969c950eu, "Target Bot Cooldown Max")]
+	[DDLRegistration(0xcc17d5beu, "Target Bot Cooldown Max")]
 	public float TargetBotCooldownMax { get; set; } = 1.05f;
 
 	public static GeyserShotSpawnData Create(DDLObject ddl) => new(ddl);

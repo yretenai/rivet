@@ -19,10 +19,10 @@ public class BossBotCordelionNefMaterialSwaps : DDLObjectType, IDDLObjectType<Bo
 		SwapToMaterial = ddl.GetValue<RivetAssetId>(0x4c70b658u, SwapToMaterial);
 	}
 
-	[DDLRegistration(0x1df07e82u, description: "Material we are going to Swap and Replace")]
+	[DDLRegistration(0x0fc97e35u, description: "Material we are going to Swap and Replace")]
 	public RivetAssetId OldMaterial { get; set; } = default;
 
-	[DDLRegistration(0x1df07e82u, description: "Swap to this material")]
+	[DDLRegistration(0x4c70b658u, description: "Swap to this material")]
 	public RivetAssetId SwapToMaterial { get; set; } = default;
 
 	public static BossBotCordelionNefMaterialSwaps Create(DDLObject ddl) => new(ddl);

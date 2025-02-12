@@ -18,7 +18,7 @@ public class SoundFocusComponentPrius : DDLObjectType, IDDLObjectType<SoundFocus
 		SoundFocusData = ddl.GetObject<SoundFocusComponentData>(0x8d2ce588u);
 	}
 
-	[DDLRegistration(0xe1923251u)]
+	[DDLRegistration(0x8d2ce588u)]
 	public SoundFocusComponentData? SoundFocusData { get; set; } = default;
 
 	public static SoundFocusComponentPrius Create(DDLObject ddl) => new(ddl);

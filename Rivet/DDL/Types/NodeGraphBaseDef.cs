@@ -18,7 +18,7 @@ public class NodeGraphBaseDef : NodeGraphItemDef, IDDLObjectType<NodeGraphBaseDe
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0x6228dd72u, "Graph Name", "Used for various UI purposes, including being shown on subgraph nodes that represent this node graph.")]
+	[DDLRegistration(0x6eb3beb6u, "Graph Name", "Used for various UI purposes, including being shown on subgraph nodes that represent this node graph.")]
 	public string? Name { get; set; } = default;
 
 	public new static NodeGraphBaseDef Create(DDLObject ddl) => new(ddl);

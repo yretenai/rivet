@@ -21,16 +21,16 @@ public class BotMusicValue : DDLObjectType, IDDLObjectType<BotMusicValue> {
 		Bots = ddl.GetValues<RivetAssetId>(0x412f304du);
 	}
 
-	[DDLRegistration(0x33ea711cu)]
+	[DDLRegistration(0xfc4da4b1u)]
 	public string? Category { get; set; } = default;
 
-	[DDLRegistration(0x33ea711cu)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0x33ea711cu)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x33ea711cu)]
+	[DDLRegistration(0x412f304du)]
 	public List<RivetAssetId> Bots { get; set; } = [];
 
 	public static BotMusicValue Create(DDLObject ddl) => new(ddl);

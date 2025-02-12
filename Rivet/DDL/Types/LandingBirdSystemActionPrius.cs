@@ -18,7 +18,7 @@ public class LandingBirdSystemActionPrius : DDLObjectType, IDDLObjectType<Landin
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x34de0d40u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Ambient;
 
 	public static LandingBirdSystemActionPrius Create(DDLObject ddl) => new(ddl);

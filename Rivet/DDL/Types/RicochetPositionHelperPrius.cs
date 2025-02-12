@@ -18,7 +18,7 @@ public class RicochetPositionHelperPrius : DDLObjectType, IDDLObjectType<Ricoche
 		BuildUpOffset = ddl.GetObject<DDLVector3>(0x1d4ce2c1u);
 	}
 
-	[DDLRegistration(0xcf665f68u)]
+	[DDLRegistration(0x1d4ce2c1u)]
 	public DDLVector3? BuildUpOffset { get; set; } = default;
 
 	public static RicochetPositionHelperPrius Create(DDLObject ddl) => new(ddl);

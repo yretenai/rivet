@@ -19,10 +19,10 @@ public class DimensionActorData : DDLObjectType, IDDLObjectType<DimensionActorDa
 		ActorUID = ddl.GetValue<RivetAssetId>(0x49a6ce86u, ActorUID);
 	}
 
-	[DDLRegistration(0x58cb9b51u, "Name", "Name of this dimension actor.")]
+	[DDLRegistration(0x6eb3beb6u, "Name", "Name of this dimension actor.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x58cb9b51u, "Actor", "Actor in this overlay.")]
+	[DDLRegistration(0x49a6ce86u, "Actor", "Actor in this overlay.")]
 	public RivetAssetId ActorUID { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static DimensionActorData Create(DDLObject ddl) => new(ddl);

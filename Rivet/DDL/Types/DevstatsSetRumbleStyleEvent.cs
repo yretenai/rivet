@@ -21,16 +21,16 @@ public class DevstatsSetRumbleStyleEvent : EventBase, IDDLObjectType<DevstatsSet
 		RumbleStyle = ddl.GetString(0x4fe65ce7) ?? RumbleStyle;
 	}
 
-	[DDLRegistration(0xff7c36d8u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xff7c36d8u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0xff7c36d8u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
-	[DDLRegistration(0xff7c36d8u)]
+	[DDLRegistration(0x4fe65ce7u)]
 	public string? RumbleStyle { get; set; } = default;
 
 	public new static DevstatsSetRumbleStyleEvent Create(DDLObject ddl) => new(ddl);

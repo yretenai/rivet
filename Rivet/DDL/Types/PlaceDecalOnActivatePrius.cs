@@ -25,28 +25,28 @@ public class PlaceDecalOnActivatePrius : DDLObjectType, IDDLObjectType<PlaceDeca
 		DecalOffset = ddl.GetObject<DDLVector3>(0xeb459f29u);
 	}
 
-	[DDLRegistration(0xed1545cau, "Delay", "Delay placement this long")]
+	[DDLRegistration(0xabc94c5au, "Delay", "Delay placement this long")]
 	public float Delay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xed1545cau, "Decal Material", "The decal material to apply.")]
+	[DDLRegistration(0xe3182aaau, "Decal Material", "The decal material to apply.")]
 	public RivetAssetId DecalMaterial { get; set; } = default;
 
-	[DDLRegistration(0xed1545cau, "Decal Lifetime", "The decal's lifetime. Anything < 0 will be the max possible. Note: this is pre-fade time, the time before it starts to fade.")]
+	[DDLRegistration(0xa2416fb7u, "Decal Lifetime", "The decal's lifetime. Anything < 0 will be the max possible. Note: this is pre-fade time, the time before it starts to fade.")]
 	public float DecalLifetime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xed1545cau, "Decal Fade Distance", "The decal's fade distance. Anything <= 0 will use the default for decals.")]
+	[DDLRegistration(0x037c7b9fu, "Decal Fade Distance", "The decal's fade distance. Anything <= 0 will use the default for decals.")]
 	public float DecalFadeDist { get; set; } = -1.00f;
 
-	[DDLRegistration(0xed1545cau, "Decal Fade Time", "The decal's fade duration time. Anything < 0 will use the default for decals.")]
+	[DDLRegistration(0xed94332du, "Decal Fade Time", "The decal's fade duration time. Anything < 0 will use the default for decals.")]
 	public float DecalFadeTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xed1545cau, "Decal Alpha", "The decal's alpha (0-1).")]
+	[DDLRegistration(0x2dd498f5u, "Decal Alpha", "The decal's alpha (0-1).")]
 	public float DecalAlpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0xed1545cau, "Skip Bots", "Set the kSkipBots flag on the decal.")]
+	[DDLRegistration(0x12add2f7u, "Skip Bots", "Set the kSkipBots flag on the decal.")]
 	public bool SkipBots { get; set; } = false;
 
-	[DDLRegistration(0xed1545cau, "Decal Offset", "The offset from our actor position (in local space, not world space) to apply the decal.")]
+	[DDLRegistration(0xeb459f29u, "Decal Offset", "The offset from our actor position (in local space, not world space) to apply the decal.")]
 	public DDLVector3? DecalOffset { get; set; } = default;
 
 	public static PlaceDecalOnActivatePrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class CombatMarkupCollectionPrius : DDLObjectType, IDDLObjectType<CombatM
 		ExtraActorGroups = ddl.GetValues<RivetAssetId>(0x098426acu);
 	}
 
-	[DDLRegistration(0xbab0a3f1u, "Combat Areas", "Combat Areas that are part of this collection. Pass in a SINGLE ActorGroup or a list of actors")]
+	[DDLRegistration(0xd0e6d92du, "Combat Areas", "Combat Areas that are part of this collection. Pass in a SINGLE ActorGroup or a list of actors")]
 	public List<RivetAssetId> CombatAreaList { get; set; } = [];
 
-	[DDLRegistration(0xbab0a3f1u, "Defensive Areas", "Defensive Areas that are part of this collection. Pass in a SINGLE ActorGroup or a list of actors")]
+	[DDLRegistration(0x6d69d342u, "Defensive Areas", "Defensive Areas that are part of this collection. Pass in a SINGLE ActorGroup or a list of actors")]
 	public List<RivetAssetId> DefensiveAreaList { get; set; } = [];
 
-	[DDLRegistration(0xbab0a3f1u, "Idle Areas", "Idle Areas that are part of this collection. Pass in a SINGLE ActorGroup or a list of actors")]
+	[DDLRegistration(0x97972686u, "Idle Areas", "Idle Areas that are part of this collection. Pass in a SINGLE ActorGroup or a list of actors")]
 	public List<RivetAssetId> IdleAreaList { get; set; } = [];
 
-	[DDLRegistration(0xbab0a3f1u, "Extra Group Spawn Group", "ActorGroups we want all spawnerbots to spawn new bots in to")]
+	[DDLRegistration(0x098426acu, "Extra Group Spawn Group", "ActorGroups we want all spawnerbots to spawn new bots in to")]
 	public List<RivetAssetId> ExtraActorGroups { get; set; } = [];
 
 	public static CombatMarkupCollectionPrius Create(DDLObject ddl) => new(ddl);

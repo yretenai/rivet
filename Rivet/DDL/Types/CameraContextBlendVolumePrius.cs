@@ -19,10 +19,10 @@ public class CameraContextBlendVolumePrius : CameraContextVolumePrius, IDDLObjec
 		BlendBehavior = ddl.GetEnum<xdbd0b557>(0x3b272915u, xdbd0b557Values.Lookup);
 	}
 
-	[DDLRegistration(0x37aa8318u)]
+	[DDLRegistration(0xf8a3836du)]
 	public float InnerRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x37aa8318u)]
+	[DDLRegistration(0x3b272915u)]
 	public xdbd0b557 BlendBehavior { get; set; } = xdbd0b557.Center;
 
 	public new static CameraContextBlendVolumePrius Create(DDLObject ddl) => new(ddl);

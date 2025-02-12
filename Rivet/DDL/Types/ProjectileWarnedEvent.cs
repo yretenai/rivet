@@ -24,25 +24,25 @@ public class ProjectileWarnedEvent : EventBase, IDDLObjectType<ProjectileWarnedE
 		WarnFriends = ddl.GetValue<bool>(0x676c0758u, WarnFriends);
 	}
 
-	[DDLRegistration(0x375a0524u)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0x375a0524u)]
+	[DDLRegistration(0xf643720au)]
 	public byte HighAlert { get; set; } = 0x00;
 
-	[DDLRegistration(0x375a0524u)]
+	[DDLRegistration(0xb7be87b6u)]
 	public float TimeLeft { get; set; } = 1.00f;
 
-	[DDLRegistration(0x375a0524u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x375a0524u)]
+	[DDLRegistration(0x01ede4bcu)]
 	public bool UseWarnPosition { get; set; } = false;
 
-	[DDLRegistration(0x375a0524u)]
+	[DDLRegistration(0xc5b68935u)]
 	public DDLVector3? WarnPosition { get; set; } = default;
 
-	[DDLRegistration(0x375a0524u)]
+	[DDLRegistration(0x676c0758u)]
 	public bool WarnFriends { get; set; } = true;
 
 	public new static ProjectileWarnedEvent Create(DDLObject ddl) => new(ddl);

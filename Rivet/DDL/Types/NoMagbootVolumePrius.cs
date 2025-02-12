@@ -18,7 +18,7 @@ public class NoMagbootVolumePrius : EnabledComponentBasePrius, IDDLObjectType<No
 		Mode = ddl.GetEnum<x89590188>(0xa75a871bu, x89590188Values.Lookup);
 	}
 
-	[DDLRegistration(0x087cba0du)]
+	[DDLRegistration(0xa75a871bu)]
 	public x89590188 Mode { get; set; } = x89590188.DisableStandAndLaunch;
 
 	public new static NoMagbootVolumePrius Create(DDLObject ddl) => new(ddl);

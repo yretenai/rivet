@@ -25,28 +25,28 @@ public class AnimTriggerEventDef : DDLObjectType, IDDLObjectType<AnimTriggerEven
 		Event = ddl.GetObject<BlobDef>(0x22fdc666u);
 	}
 
-	[DDLRegistration(0xd8f2d9d9u, description: "Event id")]
+	[DDLRegistration(0x8a514a8du, description: "Event id")]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd8f2d9d9u)]
+	[DDLRegistration(0x12568d7bu)]
 	public x3bec8d43 Flags { get; set; } = (x3bec8d43) 0x00000000;
 
-	[DDLRegistration(0xd8f2d9d9u, description: "Event trigger time")]
+	[DDLRegistration(0x5f0458f5u, description: "Event trigger time")]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd8f2d9d9u, "Receiving Actor")]
+	[DDLRegistration(0xcc4a4d21u, "Receiving Actor")]
 	public string? ActorName { get; set; } = default;
 
-	[DDLRegistration(0xd8f2d9d9u, "Locator on Actor")]
+	[DDLRegistration(0x5814524du, "Locator on Actor")]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0xd8f2d9d9u, "Broadcast Event")]
+	[DDLRegistration(0xc8964ba0u, "Broadcast Event")]
 	public bool BroadcastFlag { get; set; } = false;
 
-	[DDLRegistration(0xd8f2d9d9u, "Broadcast Radius", "Maximum distance this event should be broadcast to")]
+	[DDLRegistration(0x89da1856u, "Broadcast Radius", "Maximum distance this event should be broadcast to")]
 	public float BroadcastRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd8f2d9d9u, description: "Game event data")]
+	[DDLRegistration(0x22fdc666u, description: "Game event data")]
 	public BlobDef? Event { get; set; } = default;
 
 	public static AnimTriggerEventDef Create(DDLObject ddl) => new(ddl);

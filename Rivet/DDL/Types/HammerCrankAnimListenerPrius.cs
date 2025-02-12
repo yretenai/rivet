@@ -20,13 +20,13 @@ public class HammerCrankAnimListenerPrius : DDLObjectType, IDDLObjectType<Hammer
 		TriggerAnimEvents = ddl.GetValue<bool>(0x5224a336u, TriggerAnimEvents);
 	}
 
-	[DDLRegistration(0xb3c680a2u, description: "If this is blank we'll look at the actor that we are on.")]
+	[DDLRegistration(0xfda1f175u, description: "If this is blank we'll look at the actor that we are on.")]
 	public RivetAssetId HammerCrank { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb3c680a2u)]
+	[DDLRegistration(0x45f98c1eu)]
 	public string? AnimDriverName { get; set; } = default;
 
-	[DDLRegistration(0xb3c680a2u, description: "Whether we should fire off anim events on the animation when we hit the frame an event is on.")]
+	[DDLRegistration(0x5224a336u, description: "Whether we should fire off anim events on the animation when we hit the frame an event is on.")]
 	public bool TriggerAnimEvents { get; set; } = false;
 
 	public static HammerCrankAnimListenerPrius Create(DDLObject ddl) => new(ddl);

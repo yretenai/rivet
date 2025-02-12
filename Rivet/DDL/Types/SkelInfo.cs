@@ -19,10 +19,10 @@ public class SkelInfo : DDLObjectType, IDDLObjectType<SkelInfo> {
 		Joints = ddl.GetObjects<SkelJointsNode>(0xbb8fe1b3u);
 	}
 
-	[DDLRegistration(0x7a49a9a5u, description: "Names of all locators contained in model")]
+	[DDLRegistration(0x3c7848ccu, description: "Names of all locators contained in model")]
 	public List<SkelLocatorNode?> Locators { get; set; } = [];
 
-	[DDLRegistration(0x7a49a9a5u, description: "Names of all joints contained in model")]
+	[DDLRegistration(0xbb8fe1b3u, description: "Names of all joints contained in model")]
 	public List<SkelJointsNode?> Joints { get; set; } = [];
 
 	public static SkelInfo Create(DDLObject ddl) => new(ddl);

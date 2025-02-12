@@ -57,124 +57,124 @@ public class ModelSplineDescriptionDef : DDLObjectType, IDDLObjectType<ModelSpli
 		SimulationWindTurbulence = ddl.GetValue<float>(0x85770611u, SimulationWindTurbulence);
 	}
 
-	[DDLRegistration(0x3a097266u, "Max Subdivision Amount", "The maximum amount of subdivisions per strand.")]
+	[DDLRegistration(0xbc3ce2b8u, "Max Subdivision Amount", "The maximum amount of subdivisions per strand.")]
 	public uint TessAmountMax { get; set; } = 0x00000010;
 
-	[DDLRegistration(0x3a097266u, "Min Subdivision Amount", "The minimum amount of subdivisions per strand.")]
+	[DDLRegistration(0x8031dde1u, "Min Subdivision Amount", "The minimum amount of subdivisions per strand.")]
 	public uint TessAmountMin { get; set; } = 0x00000004;
 
-	[DDLRegistration(0x3a097266u, "Max Strands Per Clump", "The maximum number of strands that will be generated per clump. A value of 1 or less disables clumping.")]
+	[DDLRegistration(0xfbf7d957u, "Max Strands Per Clump", "The maximum number of strands that will be generated per clump. A value of 1 or less disables clumping.")]
 	public uint StrandsPerClumpMax { get; set; } = 0x00000001;
 
-	[DDLRegistration(0x3a097266u, "Min Strands Per Clump", "The minimum number of strands that will be generated per clump.")]
+	[DDLRegistration(0xc7fae60eu, "Min Strands Per Clump", "The minimum number of strands that will be generated per clump.")]
 	public uint StrandsPerClumpMin { get; set; } = 0x00000001;
 
-	[DDLRegistration(0x3a097266u, "LoD Distance", "The distance at which splines are rendered at lowest lod settings.")]
+	[DDLRegistration(0x1d304c23u, "LoD Distance", "The distance at which splines are rendered at lowest lod settings.")]
 	public float LodDistance { get; set; } = 10.00f;
 
-	[DDLRegistration(0x3a097266u, "LoD Reduction", "The factor of how many splines can be removed at a distance.")]
+	[DDLRegistration(0x5b3cdbf7u, "LoD Reduction", "The factor of how many splines can be removed at a distance.")]
 	public float LodReduction { get; set; } = 8.00f;
 
-	[DDLRegistration(0x3a097266u, "Skip Shadows", "Disables rendering of shadows")]
+	[DDLRegistration(0xf8798e33u, "Skip Shadows", "Disables rendering of shadows")]
 	public bool SkipShadows { get; set; } = false;
 
-	[DDLRegistration(0x3a097266u, "Strand Length Randomness ", "How much the length will randomize per strand.")]
+	[DDLRegistration(0x0ada59ebu, "Strand Length Randomness ", "How much the length will randomize per strand.")]
 	public float StrandLengthRandom { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3a097266u, "Strand Thickness")]
+	[DDLRegistration(0x89ccb5dfu, "Strand Thickness")]
 	public ModelSplineEnvelopeFloatDef? StrandThickness { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Strand Thickness Random", "How much the thickness of a strand will randomize per strand. ")]
+	[DDLRegistration(0x4965266fu, "Strand Thickness Random", "How much the thickness of a strand will randomize per strand. ")]
 	public float StrandThicknessRandom { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3a097266u, "Clump Stray Distribution", "The distribution of the probability strands will stray away from their clump.")]
+	[DDLRegistration(0x72cbe9e8u, "Clump Stray Distribution", "The distribution of the probability strands will stray away from their clump.")]
 	public float ClumpStrayPower { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3a097266u, "Clump Stray Strength", "The magnitude of how far strands will stray from their clump.")]
+	[DDLRegistration(0xc00dec89u, "Clump Stray Strength", "The magnitude of how far strands will stray from their clump.")]
 	public float ClumpStrayStrength { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3a097266u, "Clump Thickness", "Thickness of the clumps in 2D UV space.")]
+	[DDLRegistration(0x3c11f3d5u, "Clump Thickness", "Thickness of the clumps in 2D UV space.")]
 	public ModelSplineEnvelopeVec2Def? ClumpThickness { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Clump Thickness Randomness", "How much the thickness of a clump will randomize per clump in 2D UV space.")]
+	[DDLRegistration(0x28e6f55fu, "Clump Thickness Randomness", "How much the thickness of a clump will randomize per clump in 2D UV space.")]
 	public DDLVector2? ClumpThicknessRandom { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Enable Curls", "Enable curls")]
+	[DDLRegistration(0xfe52a664u, "Enable Curls", "Enable curls")]
 	public bool CurlsEnable { get; set; } = false;
 
-	[DDLRegistration(0x3a097266u, "Curl Randomness", "Random variance of the curls. X = thickness, Y = Frequency")]
+	[DDLRegistration(0xba6ec19au, "Curl Randomness", "Random variance of the curls. X = thickness, Y = Frequency")]
 	public DDLVector2? CurlRandom { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Curl Thickness", "Thickness of the curls in 2D UV space.")]
+	[DDLRegistration(0x58aff10du, "Curl Thickness", "Thickness of the curls in 2D UV space.")]
 	public ModelSplineEnvelopeVec2Def? CurlThickness { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Curl Frequency", "Number of curls")]
+	[DDLRegistration(0x10cfc5b1u, "Curl Frequency", "Number of curls")]
 	public ModelSplineEnvelopeFloatDef? CurlFrequency { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Material Type", "Type of material BRDF")]
+	[DDLRegistration(0x1433c59bu, "Material Type", "Type of material BRDF")]
 	public x2088f5aa MaterialType { get; set; } = x2088f5aa.Standard;
 
-	[DDLRegistration(0x3a097266u, "Foliage Properties")]
+	[DDLRegistration(0xea9d1bd7u, "Foliage Properties")]
 	public ModelSplineMaterialExtraFoliage? MaterialExtraFoliage { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Hair Properties")]
+	[DDLRegistration(0xcb988bf3u, "Hair Properties")]
 	public ModelSplineMaterialExtraHair? MaterialExtraHair { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Alpha Opacity", "Applies dithered alpha")]
+	[DDLRegistration(0x4dfd57f2u, "Alpha Opacity", "Applies dithered alpha")]
 	public ModelSplineEnvelopeFloatDef? AlphaOpacity { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Diffuse Reflectance", "The diffuse reflectance envelope is blended using Overlay where 50% gray is nuetral")]
+	[DDLRegistration(0xbc366aa0u, "Diffuse Reflectance", "The diffuse reflectance envelope is blended using Overlay where 50% gray is nuetral")]
 	public ModelSplineEnvelopeColorDef? DiffuseReflectance { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Diffuse Reflectance Randomness", "How much luninance and color randomness is applied per strand.")]
+	[DDLRegistration(0x73cfa04bu, "Diffuse Reflectance Randomness", "How much luninance and color randomness is applied per strand.")]
 	public ModelSplineColorRandomness? DiffuseReflectanceRandom { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Ambient Occlusion")]
+	[DDLRegistration(0xf078da18u, "Ambient Occlusion")]
 	public ModelSplineEnvelopeFloatDef? AmbientOcclusion { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Specular Reflectance")]
+	[DDLRegistration(0x33206202u, "Specular Reflectance")]
 	public DDLVector3? SpecReflectance { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Strand Normal Roundness", "How much to factor in the tube shape of the strand into the generated normals.")]
+	[DDLRegistration(0x6ea3b7f9u, "Strand Normal Roundness", "How much to factor in the tube shape of the strand into the generated normals.")]
 	public float StrandRoundness { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3a097266u, "Clump Normal Roundness", "How much to factor in the tube shape of the clump into the generated normals.")]
+	[DDLRegistration(0xdb7ef1f3u, "Clump Normal Roundness", "How much to factor in the tube shape of the clump into the generated normals.")]
 	public float ClumpRoundness { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3a097266u, "Gloss")]
+	[DDLRegistration(0x0b065e94u, "Gloss")]
 	public float Gloss { get; set; } = 0.80f;
 
-	[DDLRegistration(0x3a097266u, "Diffuse Color Tint Texture", "This is blended using Multiply to the base diffuse reflectance color envelope.")]
+	[DDLRegistration(0x47b6a8c6u, "Diffuse Color Tint Texture", "This is blended using Multiply to the base diffuse reflectance color envelope.")]
 	public RivetAssetId DiffuseReflectanceTexture { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Specular Reflectance Texture", "This is blended using Multiply to the base spec reflectance color.")]
+	[DDLRegistration(0x214b2ca3u, "Specular Reflectance Texture", "This is blended using Multiply to the base spec reflectance color.")]
 	public RivetAssetId SpecReflectanceTexture { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Normal Map Texture", "Override diffuse normals using a object-space normal map.")]
+	[DDLRegistration(0x559ac760u, "Normal Map Texture", "Override diffuse normals using a object-space normal map.")]
 	public RivetAssetId NormalMapTexture { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Gloss Map Texture", "This is blended using Multiply to the base gloss value.")]
+	[DDLRegistration(0xea038cfdu, "Gloss Map Texture", "This is blended using Multiply to the base gloss value.")]
 	public RivetAssetId GlossMapTexture { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u, "Thickness Bias Texture", "Bias texture to control thickness parameters where 0.5 is neutral. R - bias strand thickness G - bias clump thickness at root, B - bias clump thickness at tip, A - unused")]
+	[DDLRegistration(0x7b8fe691u, "Thickness Bias Texture", "Bias texture to control thickness parameters where 0.5 is neutral. R - bias strand thickness G - bias clump thickness at root, B - bias clump thickness at tip, A - unused")]
 	public RivetAssetId StrandThicknessTexture { get; set; } = default;
 
-	[DDLRegistration(0x3a097266u)]
+	[DDLRegistration(0xd7414673u)]
 	public bool SimulationEnable { get; set; } = false;
 
-	[DDLRegistration(0x3a097266u)]
+	[DDLRegistration(0x04742202u)]
 	public float SimulationStiffnessLength { get; set; } = 0.05f;
 
-	[DDLRegistration(0x3a097266u)]
+	[DDLRegistration(0xad0bd241u)]
 	public float SimulationStiffnessPower { get; set; } = 2.00f;
 
-	[DDLRegistration(0x3a097266u)]
+	[DDLRegistration(0x206713b3u)]
 	public float SimulationDrag { get; set; } = 0.50f;
 
-	[DDLRegistration(0x3a097266u)]
+	[DDLRegistration(0xae4500ddu)]
 	public float SimulationWindStrength { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3a097266u)]
+	[DDLRegistration(0x85770611u)]
 	public float SimulationWindTurbulence { get; set; } = 0.00f;
 
 	public static ModelSplineDescriptionDef Create(DDLObject ddl) => new(ddl);

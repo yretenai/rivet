@@ -19,10 +19,10 @@ public class CollectibleSystemConfig : ConfigBase, IDDLObjectType<CollectibleSys
 		Types = ddl.GetObjects<CollectibleTypeEntry>(0x406345f1u);
 	}
 
-	[DDLRegistration(0x92797f80u)]
+	[DDLRegistration(0xd650aed9u)]
 	public CollectibleSystemSettingsBase? SystemSettings { get; set; } = default;
 
-	[DDLRegistration(0x92797f80u)]
+	[DDLRegistration(0x406345f1u)]
 	public List<CollectibleTypeEntry?> Types { get; set; } = [];
 
 	public new static CollectibleSystemConfig Create(DDLObject ddl) => new(ddl);

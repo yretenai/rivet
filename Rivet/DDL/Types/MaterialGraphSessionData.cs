@@ -18,7 +18,7 @@ public class MaterialGraphSessionData : DDLObjectType, IDDLObjectType<MaterialGr
 		ReloadLibrary = ddl.GetValue<bool>(0xcc9e683au, ReloadLibrary);
 	}
 
-	[DDLRegistration(0x02e39177u)]
+	[DDLRegistration(0xcc9e683au)]
 	public bool ReloadLibrary { get; set; } = false;
 
 	public static MaterialGraphSessionData Create(DDLObject ddl) => new(ddl);

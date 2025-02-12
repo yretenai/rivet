@@ -21,16 +21,16 @@ public class BuildSettings : DDLObjectType, IDDLObjectType<BuildSettings> {
 		TimeZone = ddl.GetString(0x6d32a0d9) ?? TimeZone;
 	}
 
-	[DDLRegistration(0x7a97bcf7u)]
+	[DDLRegistration(0x2e958d29u)]
 	public string? AssetBranch { get; set; } = "";
 
-	[DDLRegistration(0x7a97bcf7u)]
+	[DDLRegistration(0xcd0f4d6fu)]
 	public string? VersionTag { get; set; } = "";
 
-	[DDLRegistration(0x7a97bcf7u)]
+	[DDLRegistration(0x6f3622cdu)]
 	public int ArchiveAssetsChangelist { get; set; } = -1;
 
-	[DDLRegistration(0x7a97bcf7u)]
+	[DDLRegistration(0x6d32a0d9u)]
 	public string? TimeZone { get; set; } = "";
 
 	public static BuildSettings Create(DDLObject ddl) => new(ddl);

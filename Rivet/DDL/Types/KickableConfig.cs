@@ -20,13 +20,13 @@ public class KickableConfig : DDLObjectType, IDDLObjectType<KickableConfig> {
 		AngularDamping = ddl.GetValue<float>(0xcdf27098u, AngularDamping);
 	}
 
-	[DDLRegistration(0x95c7d8a6u, description: "What is the gravity for the object")]
+	[DDLRegistration(0x5bf7469fu, description: "What is the gravity for the object")]
 	public float Gravity { get; set; } = 24.00f;
 
-	[DDLRegistration(0x95c7d8a6u, description: "What is the linear damping for the object")]
+	[DDLRegistration(0x97613ca3u, description: "What is the linear damping for the object")]
 	public float LinearDamping { get; set; } = 0.25f;
 
-	[DDLRegistration(0x95c7d8a6u, description: "What is the angular damping for the object")]
+	[DDLRegistration(0xcdf27098u, description: "What is the angular damping for the object")]
 	public float AngularDamping { get; set; } = 0.25f;
 
 	public static KickableConfig Create(DDLObject ddl) => new(ddl);

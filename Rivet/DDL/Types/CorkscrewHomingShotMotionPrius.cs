@@ -22,19 +22,19 @@ public class CorkscrewHomingShotMotionPrius : HomingShotMotionPrius, IDDLObjectT
 		CorkscrewTurbulence = ddl.GetValue<float>(0xdfd71084u, CorkscrewTurbulence);
 	}
 
-	[DDLRegistration(0xffdf4f3eu)]
+	[DDLRegistration(0x65c25516u)]
 	public float ExpandTimeStart { get; set; } = 0.25f;
 
-	[DDLRegistration(0xffdf4f3eu)]
+	[DDLRegistration(0x1357e0b0u)]
 	public float ExpandTimeComplete { get; set; } = 1.00f;
 
-	[DDLRegistration(0xffdf4f3eu)]
+	[DDLRegistration(0x61c92c81u)]
 	public float CorkscrewRadius { get; set; } = 0.10f;
 
-	[DDLRegistration(0xffdf4f3eu)]
+	[DDLRegistration(0xb0d14e2eu)]
 	public float CorkscrewSpeed { get; set; } = 360.00f;
 
-	[DDLRegistration(0xffdf4f3eu)]
+	[DDLRegistration(0xdfd71084u)]
 	public float CorkscrewTurbulence { get; set; } = 0.01f;
 
 	public new static CorkscrewHomingShotMotionPrius Create(DDLObject ddl) => new(ddl);

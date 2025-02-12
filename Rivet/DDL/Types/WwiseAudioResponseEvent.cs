@@ -24,25 +24,25 @@ public class WwiseAudioResponseEvent : ResponseEvent, IDDLObjectType<WwiseAudioR
 		SwitchValue = ddl.GetString(0x09b9b9d3) ?? SwitchValue;
 	}
 
-	[DDLRegistration(0xc910fe13u)]
+	[DDLRegistration(0x99411458u)]
 	public x5f40dd5c WwiseType { get; set; } = x5f40dd5c.Parameter;
 
-	[DDLRegistration(0xc910fe13u)]
+	[DDLRegistration(0x96db7aefu)]
 	public uint WwiseActionId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc910fe13u)]
+	[DDLRegistration(0xec6beb88u)]
 	public uint GroupId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc910fe13u)]
+	[DDLRegistration(0x1fa19bb5u)]
 	public string? WwiseActionName { get; set; } = default;
 
-	[DDLRegistration(0xc910fe13u)]
+	[DDLRegistration(0xb215bfb7u)]
 	public string? GroupName { get; set; } = default;
 
-	[DDLRegistration(0xc910fe13u, "Parameter Value")]
+	[DDLRegistration(0x042494f5u, "Parameter Value")]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc910fe13u, "Switch Value")]
+	[DDLRegistration(0x09b9b9d3u, "Switch Value")]
 	public string? SwitchValue { get; set; } = default;
 
 	public new static WwiseAudioResponseEvent Create(DDLObject ddl) => new(ddl);

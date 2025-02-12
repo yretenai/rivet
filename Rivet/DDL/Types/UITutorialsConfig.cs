@@ -18,7 +18,7 @@ public class UITutorialsConfig : ConfigBase, IDDLObjectType<UITutorialsConfig> {
 		Tutorials = ddl.GetObjects<UITutorial>(0x40e36124u);
 	}
 
-	[DDLRegistration(0x51f11276u, "Tutorials")]
+	[DDLRegistration(0x40e36124u, "Tutorials")]
 	public List<UITutorial?> Tutorials { get; set; } = [];
 
 	public new static UITutorialsConfig Create(DDLObject ddl) => new(ddl);

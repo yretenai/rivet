@@ -19,10 +19,10 @@ public class TurretDualPivot : TurretPivotBase, IDDLObjectType<TurretDualPivot> 
 		PitchJoint = ddl.GetString(0xd2c06413) ?? PitchJoint;
 	}
 
-	[DDLRegistration(0x54599cd3u)]
+	[DDLRegistration(0x8dcc3694u)]
 	public string? YawJoint { get; set; } = default;
 
-	[DDLRegistration(0x54599cd3u)]
+	[DDLRegistration(0xd2c06413u)]
 	public string? PitchJoint { get; set; } = default;
 
 	public new static TurretDualPivot Create(DDLObject ddl) => new(ddl);

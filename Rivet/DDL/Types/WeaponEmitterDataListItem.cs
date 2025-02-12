@@ -18,7 +18,7 @@ public class WeaponEmitterDataListItem : DDLObjectType, IDDLObjectType<WeaponEmi
 		Emitter = ddl.GetObject<ComponentEmitterBasePrius>(0x7464ae09u);
 	}
 
-	[DDLRegistration(0x683c3551u)]
+	[DDLRegistration(0x7464ae09u)]
 	public ComponentEmitterBasePrius? Emitter { get; set; } = default;
 
 	public static WeaponEmitterDataListItem Create(DDLObject ddl) => new(ddl);

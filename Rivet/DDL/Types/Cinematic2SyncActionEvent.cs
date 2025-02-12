@@ -18,7 +18,7 @@ public class Cinematic2SyncActionEvent : EventBase, IDDLObjectType<Cinematic2Syn
 		SyncActionOutputNameHash = ddl.GetValue<uint>(0x80677978u, SyncActionOutputNameHash);
 	}
 
-	[DDLRegistration(0xa1a59d5cu)]
+	[DDLRegistration(0x80677978u)]
 	public uint SyncActionOutputNameHash { get; set; } = 0x00000000;
 
 	public new static Cinematic2SyncActionEvent Create(DDLObject ddl) => new(ddl);

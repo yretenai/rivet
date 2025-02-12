@@ -19,10 +19,10 @@ public class SetStreamingVideoConfigActionPrius : DDLObjectType, IDDLObjectType<
 		Config = ddl.GetValue<RivetAssetId>(0xeaf2611bu, Config);
 	}
 
-	[DDLRegistration(0x18f76802u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Video;
 
-	[DDLRegistration(0x18f76802u)]
+	[DDLRegistration(0xeaf2611bu)]
 	public RivetAssetId Config { get; set; } = default;
 
 	public static SetStreamingVideoConfigActionPrius Create(DDLObject ddl) => new(ddl);

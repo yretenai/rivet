@@ -18,7 +18,7 @@ public class AnimLockMoveEvent : EventBase, IDDLObjectType<AnimLockMoveEvent> {
 		MinFollowDist = ddl.GetValue<float>(0xa7fd7ee2u, MinFollowDist);
 	}
 
-	[DDLRegistration(0x3239b572u)]
+	[DDLRegistration(0xa7fd7ee2u)]
 	public float MinFollowDist { get; set; } = 0.00f;
 
 	public new static AnimLockMoveEvent Create(DDLObject ddl) => new(ddl);

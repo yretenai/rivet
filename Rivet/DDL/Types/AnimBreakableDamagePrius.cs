@@ -19,10 +19,10 @@ public class AnimBreakableDamagePrius : DDLObjectType, IDDLObjectType<AnimBreaka
 		DamageRadius = ddl.GetValue<float>(0xe3e6fa68u, DamageRadius);
 	}
 
-	[DDLRegistration(0xc83105f5u)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc83105f5u)]
+	[DDLRegistration(0xe3e6fa68u)]
 	public float DamageRadius { get; set; } = 1.00f;
 
 	public static AnimBreakableDamagePrius Create(DDLObject ddl) => new(ddl);

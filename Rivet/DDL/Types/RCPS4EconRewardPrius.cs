@@ -31,46 +31,46 @@ public class RCPS4EconRewardPrius : DDLObjectType, IDDLObjectType<RCPS4EconRewar
 		GroovitronType = ddl.GetEnum<GroovitronTypeEnum>(0xa3c33a22u, GroovitronTypeEnumValues.Lookup);
 	}
 
-	[DDLRegistration(0xd8dd0415u, "Relative Value", "How large is the reward compared to a contemporary swarmer")]
+	[DDLRegistration(0x9141cfedu, "Relative Value", "How large is the reward compared to a contemporary swarmer")]
 	public float RelativeValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd8dd0415u, "Min Relative Value", "Smallest possible reward compared to a contemporary swarmer")]
+	[DDLRegistration(0xfc80d761u, "Min Relative Value", "Smallest possible reward compared to a contemporary swarmer")]
 	public float MinRelativeValue { get; set; } = 0.10f;
 
-	[DDLRegistration(0xd8dd0415u, "Grants Bolts", "Does this reward bolts?")]
+	[DDLRegistration(0xf404d85cu, "Grants Bolts", "Does this reward bolts?")]
 	public bool GrantsBolts { get; set; } = true;
 
-	[DDLRegistration(0xd8dd0415u, "Grants Hero XP", "Does this reward hero XP?")]
+	[DDLRegistration(0x34ace260u, "Grants Hero XP", "Does this reward hero XP?")]
 	public bool GrantsHeroXP { get; set; } = true;
 
-	[DDLRegistration(0xd8dd0415u, "Grants Wpn XP", "Does this reward weapon XP?")]
+	[DDLRegistration(0xccac49d5u, "Grants Wpn XP", "Does this reward weapon XP?")]
 	public bool GrantsWpnXP { get; set; } = true;
 
-	[DDLRegistration(0xd8dd0415u, "Grants Raritanium", "Does this reward raritanium?")]
+	[DDLRegistration(0xad6d3538u, "Grants Raritanium", "Does this reward raritanium?")]
 	public bool GrantsRaritanium { get; set; } = true;
 
-	[DDLRegistration(0xd8dd0415u, "Can grant a card?", "Whether this has the chance to spawn a card. Use false to never be able to drop a card. We will only spawn a card if this actor is a bot.")]
+	[DDLRegistration(0x696a428au, "Can grant a card?", "Whether this has the chance to spawn a card. Use false to never be able to drop a card. We will only spawn a card if this actor is a bot.")]
 	public bool CanGrantCard { get; set; } = true;
 
-	[DDLRegistration(0xd8dd0415u, "Auto Collect", "Auto flies to hero?")]
+	[DDLRegistration(0x353243cbu, "Auto Collect", "Auto flies to hero?")]
 	public bool AutoCollect { get; set; } = false;
 
-	[DDLRegistration(0xd8dd0415u, "Fixed Reward", "Is this a fixed instead of a relative reward?")]
+	[DDLRegistration(0x27fee2d4u, "Fixed Reward", "Is this a fixed instead of a relative reward?")]
 	public bool FixedReward { get; set; } = false;
 
-	[DDLRegistration(0xd8dd0415u, "No Spawn", "Dont spawn the bolts/rari put directly in inventory.")]
+	[DDLRegistration(0x2940218fu, "No Spawn", "Dont spawn the bolts/rari put directly in inventory.")]
 	public bool NoSpawn { get; set; } = false;
 
-	[DDLRegistration(0xd8dd0415u, "Reward only if killed by hero?", "Whether we only drop the reward if the hero is what killed us (only works if we have a health component).")]
+	[DDLRegistration(0x014a32e7u, "Reward only if killed by hero?", "Whether we only drop the reward if the hero is what killed us (only works if we have a health component).")]
 	public bool OnlyDropForHeroKill { get; set; } = false;
 
-	[DDLRegistration(0xd8dd0415u, "Scraper Skip", "Should the scraper tool skip this entry when scraping through all the level data. (Not used in game).  If this actor has multiple RCPS4EconRewardPriuses, if skip is flagged on any one of the priuses, the whole actor will be skipped.")]
+	[DDLRegistration(0x371cf8f2u, "Scraper Skip", "Should the scraper tool skip this entry when scraping through all the level data. (Not used in game).  If this actor has multiple RCPS4EconRewardPriuses, if skip is flagged on any one of the priuses, the whole actor will be skipped.")]
 	public bool ScraperSkip { get; set; } = false;
 
-	[DDLRegistration(0xd8dd0415u, "Spawn igLoc")]
+	[DDLRegistration(0x4d69777fu, "Spawn igLoc")]
 	public string? SpawnLoc { get; set; } = "";
 
-	[DDLRegistration(0xd8dd0415u, "Groovitron Type", "Type ID for Groovitron trophy")]
+	[DDLRegistration(0xa3c33a22u, "Groovitron Type", "Type ID for Groovitron trophy")]
 	public GroovitronTypeEnum GroovitronType { get; set; } = GroovitronTypeEnum.None;
 
 	public static RCPS4EconRewardPrius Create(DDLObject ddl) => new(ddl);

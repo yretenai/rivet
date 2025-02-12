@@ -18,7 +18,7 @@ public class UBPObjectId : DDLObjectType, IDDLObjectType<UBPObjectId> {
 		ObjectId = ddl.GetString(0x9a05f2f9) ?? ObjectId;
 	}
 
-	[DDLRegistration(0x8415188du)]
+	[DDLRegistration(0x9a05f2f9u)]
 	public string? ObjectId { get; set; } = default;
 
 	public static UBPObjectId Create(DDLObject ddl) => new(ddl);

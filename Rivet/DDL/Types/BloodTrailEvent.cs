@@ -18,7 +18,7 @@ public class BloodTrailEvent : EventBase, IDDLObjectType<BloodTrailEvent> {
 		Moving = ddl.GetValue<bool>(0x0148aee1u, Moving);
 	}
 
-	[DDLRegistration(0x245e5959u)]
+	[DDLRegistration(0x0148aee1u)]
 	public bool Moving { get; set; } = false;
 
 	public new static BloodTrailEvent Create(DDLObject ddl) => new(ddl);

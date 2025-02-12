@@ -20,13 +20,13 @@ public class DialogListArray : DDLObjectType, IDDLObjectType<DialogListArray> {
 		LocTags = ddl.GetStrings(0x196acec1u);
 	}
 
-	[DDLRegistration(0x2c05246au)]
+	[DDLRegistration(0xa0213181u)]
 	public xd3ac14c9 OrderType { get; set; } = xd3ac14c9.Random;
 
-	[DDLRegistration(0x2c05246au)]
+	[DDLRegistration(0x620228abu)]
 	public x39cee5ac CompleteType { get; set; } = x39cee5ac.PlayOne;
 
-	[DDLRegistration(0x2c05246au, "Localization Tag")]
+	[DDLRegistration(0x196acec1u, "Localization Tag")]
 	public List<string?> LocTags { get; set; } = [];
 
 	public static DialogListArray Create(DDLObject ddl) => new(ddl);

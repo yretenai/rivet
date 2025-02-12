@@ -18,7 +18,7 @@ public class OnEnterTurretEvent : EventBase, IDDLObjectType<OnEnterTurretEvent> 
 		UserHandle = ddl.GetValue<uint>(0x25e06c12u, UserHandle);
 	}
 
-	[DDLRegistration(0xaa71fc2du)]
+	[DDLRegistration(0x25e06c12u)]
 	public uint UserHandle { get; set; } = 0x00000000;
 
 	public new static OnEnterTurretEvent Create(DDLObject ddl) => new(ddl);

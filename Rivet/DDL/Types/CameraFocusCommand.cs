@@ -20,13 +20,13 @@ public class CameraFocusCommand : DDLObjectType, IDDLObjectType<CameraFocusComma
 		DistanceFactor = ddl.GetValue<float>(0xf4e39365u, DistanceFactor);
 	}
 
-	[DDLRegistration(0xc5dd7ad8u)]
+	[DDLRegistration(0x5a8f8e51u)]
 	public List<RivetAssetId> Ids { get; set; } = [];
 
-	[DDLRegistration(0xc5dd7ad8u)]
+	[DDLRegistration(0x127904f6u)]
 	public bool UseClusters { get; set; } = false;
 
-	[DDLRegistration(0xc5dd7ad8u)]
+	[DDLRegistration(0xf4e39365u)]
 	public float DistanceFactor { get; set; } = 1.00f;
 
 	public static CameraFocusCommand Create(DDLObject ddl) => new(ddl);

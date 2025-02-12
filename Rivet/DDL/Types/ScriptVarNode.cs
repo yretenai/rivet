@@ -29,40 +29,40 @@ public class ScriptVarNode : DDLObjectType, IDDLObjectType<ScriptVarNode> {
 		ActorValue = ddl.GetValue<RivetAssetId>(0x6aed6be1u, ActorValue);
 	}
 
-	[DDLRegistration(0x3f4cb928u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3f4cb928u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x3f4cb928u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x3f4cb928u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x3f4cb928u)]
+	[DDLRegistration(0x672182f9u)]
 	public bool Editable { get; set; } = true;
 
-	[DDLRegistration(0x3f4cb928u, "Global Name")]
+	[DDLRegistration(0xe40dfcbau, "Global Name")]
 	public string? GlobalName { get; set; } = default;
 
-	[DDLRegistration(0x3f4cb928u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x36ed0644 Type { get; set; } = x36ed0644.Bool;
 
-	[DDLRegistration(0x3f4cb928u, "Boolean Value")]
+	[DDLRegistration(0x07f6e397u, "Boolean Value")]
 	public bool BoolValue { get; set; } = false;
 
-	[DDLRegistration(0x3f4cb928u, "Number Value")]
+	[DDLRegistration(0xf03f0a74u, "Number Value")]
 	public float FloatValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3f4cb928u, "Vector Value")]
+	[DDLRegistration(0xb8666495u, "Vector Value")]
 	public List<float> VecValue { get; set; } = [];
 
-	[DDLRegistration(0x3f4cb928u, "String Value")]
+	[DDLRegistration(0xbb242993u, "String Value")]
 	public string? StringValue { get; set; } = default;
 
-	[DDLRegistration(0x3f4cb928u, "Actor Value")]
+	[DDLRegistration(0x6aed6be1u, "Actor Value")]
 	public RivetAssetId ActorValue { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ScriptVarNode Create(DDLObject ddl) => new(ddl);

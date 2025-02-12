@@ -34,55 +34,55 @@ public class BotComboEntry : DDLObjectType, IDDLObjectType<BotComboEntry> {
 		Moves = ddl.GetObjects<BotComboMoveContainer>(0x5c6cc4f3u);
 	}
 
-	[DDLRegistration(0x3e6ffb9cu, description: "Use to label this combo")]
+	[DDLRegistration(0x6eb3beb6u, description: "Use to label this combo")]
 	public string? Name { get; set; } = "";
 
-	[DDLRegistration(0x3e6ffb9cu, "Random Weighting", "Relative chance of being chosen")]
+	[DDLRegistration(0xf4124721u, "Random Weighting", "Relative chance of being chosen")]
 	public float RandomWeighting { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3e6ffb9cu, "Starting Cooldown", "Initialize the combo with this cooldown")]
+	[DDLRegistration(0xa589f45fu, "Starting Cooldown", "Initialize the combo with this cooldown")]
 	public float StartingCooldown { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3e6ffb9cu, description: "Time until chosen again")]
+	[DDLRegistration(0x246291a9u, description: "Time until chosen again")]
 	public float Cooldown { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3e6ffb9cu, "Select Distance Min", "We need to be at least this far from our target to select this combo")]
+	[DDLRegistration(0x6e4b941du, "Select Distance Min", "We need to be at least this far from our target to select this combo")]
 	public float SelectDistanceMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3e6ffb9cu, "Select Distance Max", "We need to be at least this close to our target to select this combo")]
+	[DDLRegistration(0x5246ab44u, "Select Distance Max", "We need to be at least this close to our target to select this combo")]
 	public float SelectDistanceMax { get; set; } = 1000.00f;
 
-	[DDLRegistration(0x3e6ffb9cu, "Select Height Min", "Target can be a min of this high below nav mesh to select this combo")]
+	[DDLRegistration(0x04bd9fecu, "Select Height Min", "Target can be a min of this high below nav mesh to select this combo")]
 	public float SelectHeightMin { get; set; } = -1000.00f;
 
-	[DDLRegistration(0x3e6ffb9cu, "Select Height Max", "Target can be a max of this high above nav mesh to select this combo")]
+	[DDLRegistration(0x38b0a0b5u, "Select Height Max", "Target can be a max of this high above nav mesh to select this combo")]
 	public float SelectHeightMax { get; set; } = 1000.00f;
 
-	[DDLRegistration(0x3e6ffb9cu, "Select Height Diff Min", "Difference in height of me and Target can be a min of this to select this combo")]
+	[DDLRegistration(0xe132314eu, "Select Height Diff Min", "Difference in height of me and Target can be a min of this to select this combo")]
 	public float SelectHeightDiffMin { get; set; } = -1000.00f;
 
-	[DDLRegistration(0x3e6ffb9cu, "Select Height Diff Max", "Difference in height of me and Target can be a max of this to select this combo")]
+	[DDLRegistration(0xdd3f0e17u, "Select Height Diff Max", "Difference in height of me and Target can be a max of this to select this combo")]
 	public float SelectHeightDiffMax { get; set; } = 1000.00f;
 
-	[DDLRegistration(0x3e6ffb9cu, "Select Nav Distance Max", "The maximum XZ distance the target can be from navmesh for this to be a valid attack.")]
+	[DDLRegistration(0x52ba7e01u, "Select Nav Distance Max", "The maximum XZ distance the target can be from navmesh for this to be a valid attack.")]
 	public float SelectNavDistanceMax { get; set; } = -1.00f;
 
-	[DDLRegistration(0x3e6ffb9cu, description: "Directional attacks don't need to be facing the target in order to begin.")]
+	[DDLRegistration(0xcadb15c2u, description: "Directional attacks don't need to be facing the target in order to begin.")]
 	public bool Directional { get; set; } = false;
 
-	[DDLRegistration(0x3e6ffb9cu, description: "Facing Angle toward the target greater than this makes bot re-orient and steer/turn towards target until within this angle")]
+	[DDLRegistration(0x5f80a8dcu, description: "Facing Angle toward the target greater than this makes bot re-orient and steer/turn towards target until within this angle")]
 	public float FaceTargetAngleTolerance { get; set; } = 45.00f;
 
-	[DDLRegistration(0x3e6ffb9cu, "Can Be Resumed", "Can this combo be continued if it gets interrupted?")]
+	[DDLRegistration(0xcd367664u, "Can Be Resumed", "Can this combo be continued if it gets interrupted?")]
 	public bool CanBeResumed { get; set; } = false;
 
-	[DDLRegistration(0x3e6ffb9cu, "Use for Topiary Retaliate", "If true, this combo will specifically only be used after getting shrubbed from topiary and target the topiary turret")]
+	[DDLRegistration(0xa3d1645cu, "Use for Topiary Retaliate", "If true, this combo will specifically only be used after getting shrubbed from topiary and target the topiary turret")]
 	public bool IsTopiaryRetaliate { get; set; } = false;
 
-	[DDLRegistration(0x3e6ffb9cu)]
+	[DDLRegistration(0x23425be8u)]
 	public List<BotComboConditionListEntry?> ComboConditionList { get; set; } = [];
 
-	[DDLRegistration(0x3e6ffb9cu, description: "A sequence of moves in a combo")]
+	[DDLRegistration(0x5c6cc4f3u, description: "A sequence of moves in a combo")]
 	public List<BotComboMoveContainer?> Moves { get; set; } = [];
 
 	public static BotComboEntry Create(DDLObject ddl) => new(ddl);

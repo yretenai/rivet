@@ -36,61 +36,61 @@ public class BotConfigMovement : ConfigBase, IDDLObjectType<BotConfigMovement> {
 		NavMeshLayer = ddl.GetEnum<xdcbe36a2>(0x7efc09d3u, xdcbe36a2Values.Lookup);
 	}
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x1a2c289du)]
 	public List<MovementConfig?> MovementConfigs { get; set; } = [];
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x5f563a9eu)]
 	public MoverConfig? MoverConfig { get; set; } = default;
 
-	[DDLRegistration(0x0cba93f3u, description: "Is the bot force killed once it's been falling for LethalFallTime?")]
+	[DDLRegistration(0x92564f1cu, description: "Is the bot force killed once it's been falling for LethalFallTime?")]
 	public bool EventuallyDiesWhileFalling { get; set; } = true;
 
-	[DDLRegistration(0x0cba93f3u, description: "How long the bot can fall before it's force killed.")]
+	[DDLRegistration(0x701b1e13u, description: "How long the bot can fall before it's force killed.")]
 	public float LethalFallTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x0cba93f3u, description: "Does the bot take any scaling damage for falls beyond MinDamagingHeight?")]
+	[DDLRegistration(0xc389c971u, description: "Does the bot take any scaling damage for falls beyond MinDamagingHeight?")]
 	public bool TakesFallDamage { get; set; } = false;
 
-	[DDLRegistration(0x0cba93f3u, description: "Falls below this height will not cause damage.")]
+	[DDLRegistration(0x0d9b0809u, description: "Falls below this height will not cause damage.")]
 	public float MinDamagingHeight { get; set; } = 6.00f;
 
-	[DDLRegistration(0x0cba93f3u, description: "Falls at this height will cause 100% of the bot's maximum heath in damage.")]
+	[DDLRegistration(0x1810dcfbu, description: "Falls at this height will cause 100% of the bot's maximum heath in damage.")]
 	public float MaxDamagingHeight { get; set; } = 16.00f;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x153a00dcu)]
 	public SteeringConfig? SteeringConfig { get; set; } = default;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x75fa7dfbu)]
 	public SteeringPartnerCurveConfig? SteeringPartnerCurveConfig { get; set; } = default;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0xd25d46cfu)]
 	public CVCShapeConfig? CVCShape { get; set; } = default;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x981cd1bdu)]
 	public bool UseSingleMoveSweep { get; set; } = true;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x6bcc1e52u)]
 	public bool PushOnEqual { get; set; } = true;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x71222edcu)]
 	public bool UseFullSpeedDeflection { get; set; } = false;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0xf7e3f4b6u)]
 	public bool UseSoftCollisions { get; set; } = false;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x5d1c9b6au)]
 	public float SoftCVCInner { get; set; } = 0.25f;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x44f598f2u)]
 	public float SoftCVCOuter { get; set; } = 0.75f;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x098e6896u)]
 	public NavCapsule? NavObstacle { get; set; } = default;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0cba93f3u)]
+	[DDLRegistration(0x7efc09d3u)]
 	public xdcbe36a2 NavMeshLayer { get; set; } = xdcbe36a2.MeshStandard;
 
 	public new static BotConfigMovement Create(DDLObject ddl) => new(ddl);

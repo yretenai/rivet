@@ -22,19 +22,19 @@ public class AimModLeadTargetPrius : AimModifierPrius, IDDLObjectType<AimModLead
 		ConfigModDefs = ddl.GetObjects<AimModLeadTargetPriusModDef>(0x3d4ae417u);
 	}
 
-	[DDLRegistration(0x5fdab0a1u)]
+	[DDLRegistration(0x9af719b0u)]
 	public float MaxPredictiveSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5fdab0a1u)]
+	[DDLRegistration(0x4e7b8ad3u)]
 	public int LockOnShotCount { get; set; } = 1;
 
-	[DDLRegistration(0x5fdab0a1u, description: "Will try to land shots X seconds in front of targets. Useful for grenades.")]
+	[DDLRegistration(0x56e81338u, description: "Will try to land shots X seconds in front of targets. Useful for grenades.")]
 	public float AdditionalLeadTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5fdab0a1u)]
+	[DDLRegistration(0xee01647eu)]
 	public float MaxLeadTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x5fdab0a1u, "Config Mod Defs")]
+	[DDLRegistration(0x3d4ae417u, "Config Mod Defs")]
 	public List<AimModLeadTargetPriusModDef?> ConfigModDefs { get; set; } = [];
 
 	public new static AimModLeadTargetPrius Create(DDLObject ddl) => new(ddl);

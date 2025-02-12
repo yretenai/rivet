@@ -52,109 +52,109 @@ public class VolumeDef : DDLObjectType, IDDLObjectType<VolumeDef> {
 		LightingConditions = ddl.GetObject<LightingConditionBitSet>(0xfda14c35u);
 	}
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x9135042fu)]
 	public VolumeNodeShape VolumeType { get; set; } = VolumeNodeShape.Cuboid;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0xf5b8509eu)]
 	public float CapsuleEndcapRadius { get; set; } = 0.50f;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0xc9b892b1u)]
 	public VolumeNodeUsage? Usage { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u, "Post Effects Active", "Post effect settings will not be applied if this is not set. This value can be changed in the game.")]
+	[DDLRegistration(0x2209bc16u, "Post Effects Active", "Post effect settings will not be applied if this is not set. This value can be changed in the game.")]
 	public bool PostFxActive { get; set; } = true;
 
-	[DDLRegistration(0x5fedf357u, "Post Effect Atmosphere", "Settings from this atmosphere will be applied to unmodified post volume values.")]
+	[DDLRegistration(0xb7c70257u, "Post Effect Atmosphere", "Settings from this atmosphere will be applied to unmodified post volume values.")]
 	public RivetAssetId PostEffectAtmosphere { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u, "Post Distance Factor")]
+	[DDLRegistration(0x7bb24b09u, "Post Distance Factor")]
 	public float PostDistanceFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5fedf357u, "Post Priority")]
+	[DDLRegistration(0x11fed0bfu, "Post Priority")]
 	public int PostPriority { get; set; } = 1;
 
-	[DDLRegistration(0x5fedf357u, "Post Influence", "Scales the weight of this post volume.")]
+	[DDLRegistration(0x64d6a8c6u, "Post Influence", "Scales the weight of this post volume.")]
 	public float PostInfluence { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5fedf357u, "Skip Light Capture")]
+	[DDLRegistration(0x64ede99au, "Skip Light Capture")]
 	public bool SkipLightCapture { get; set; } = false;
 
-	[DDLRegistration(0x5fedf357u, "Only Light Capture")]
+	[DDLRegistration(0x1559dec2u, "Only Light Capture")]
 	public bool OnlyLightCapture { get; set; } = false;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x8d8d4336u)]
 	public SkySettingsDef? SkySettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0xdc13fc9du)]
 	public EnvLightingDef? EnvLighting { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x6cfe7f05u)]
 	public ToneMapSettingsDef? ToneMapSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x4407ac81u)]
 	public BloomSettingsDef? BloomSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0xc2a05771u)]
 	public ColorCorrectionSettingsDef? ColorCorrectionSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x66400d79u)]
 	public VignetteSettingsDef? VignetteSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0xa188c9bcu)]
 	public ChromaticAbSettingsDef? ChromaticAbSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x3fc51226u)]
 	public FogSettingsDef? FogSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0xdf539bfeu)]
 	public VolumetricFogSettingsDef? VolumetricFogSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x46a5d6c6u)]
 	public MotionBlurSettingsDef? MotionBlurSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x581fd910u)]
 	public DepthOfFieldSettingsDef? DepthOfFieldSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0xd5580d47u)]
 	public FilmGrainSettingsDef? FilmGrainSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x076cb6fdu)]
 	public LightShaftsSettingsDef? LightShaftsSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x1919b57du)]
 	public VolumeCameraClipDef? ClipSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0xb7c97c3au)]
 	public ProjectCustomDef? ProjectCustomData { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u, "Ambient Occlusion")]
+	[DDLRegistration(0x7ea3882du, "Ambient Occlusion")]
 	public AOSettingsDef? AOSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u, "Anti-Aliasing")]
+	[DDLRegistration(0xb66153bfu, "Anti-Aliasing")]
 	public AASettingsDef? AASettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u, "Screen Space Refl")]
+	[DDLRegistration(0xf60d9d84u, "Screen Space Refl")]
 	public SSRSettingsDef? SSRSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x4d3ab056u)]
 	public WeatherDef? Weather { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0x2a217b07u)]
 	public VolumetricCloudsDef? VolumetricCloudsSettings { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u)]
+	[DDLRegistration(0xe260d81bu)]
 	public WaterDef? Water { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u, "Translucent Shadow")]
+	[DDLRegistration(0xe4583bfcu, "Translucent Shadow")]
 	public TranslucentShadowDef? TranslucentShadow { get; set; } = default;
 
-	[DDLRegistration(0x5fedf357u, "Lighting Conditions")]
+	[DDLRegistration(0xfda14c35u, "Lighting Conditions")]
 	public LightingConditionBitSet? LightingConditions { get; set; } = default;
 
 	public static VolumeDef Create(DDLObject ddl) => new(ddl);

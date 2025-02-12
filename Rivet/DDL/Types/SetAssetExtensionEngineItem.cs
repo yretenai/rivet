@@ -18,7 +18,7 @@ public class SetAssetExtensionEngineItem : DDLObjectType, IDDLObjectType<SetAsse
 		AssetExtension = ddl.GetEnum<AssetExtensions>(0xe3b51190u, AssetExtensionsValues.Lookup);
 	}
 
-	[DDLRegistration(0x15858224u)]
+	[DDLRegistration(0xe3b51190u)]
 	public AssetExtensions AssetExtension { get; set; } = AssetExtensions.Actor;
 
 	public static SetAssetExtensionEngineItem Create(DDLObject ddl) => new(ddl);

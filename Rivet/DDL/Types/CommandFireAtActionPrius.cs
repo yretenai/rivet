@@ -20,13 +20,13 @@ public class CommandFireAtActionPrius : DDLObjectType, IDDLObjectType<CommandFir
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x5af4a31bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0x5af4a31bu)]
+	[DDLRegistration(0x1b8b0bd4u)]
 	public bool AltFire { get; set; } = false;
 
-	[DDLRegistration(0x5af4a31bu)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = -1.00f;
 
 	public static CommandFireAtActionPrius Create(DDLObject ddl) => new(ddl);

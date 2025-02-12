@@ -21,16 +21,16 @@ public class ThemeEngineItem : DDLObjectType, IDDLObjectType<ThemeEngineItem> {
 		IsHighContrast = ddl.GetValue<bool>(0x50393a71u, IsHighContrast);
 	}
 
-	[DDLRegistration(0xb64d3606u)]
+	[DDLRegistration(0x7fb52226u)]
 	public uint ColorBase { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb64d3606u)]
+	[DDLRegistration(0xeb747511u)]
 	public uint ColorHighlight { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb64d3606u)]
+	[DDLRegistration(0x848a7b80u)]
 	public uint ColorText { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb64d3606u)]
+	[DDLRegistration(0x50393a71u)]
 	public bool IsHighContrast { get; set; } = false;
 
 	public static ThemeEngineItem Create(DDLObject ddl) => new(ddl);

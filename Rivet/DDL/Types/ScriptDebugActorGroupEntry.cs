@@ -21,16 +21,16 @@ public class ScriptDebugActorGroupEntry : DDLObjectType, IDDLObjectType<ScriptDe
 		Position = ddl.GetObject<DDLVector3>(0xbc2d5985u);
 	}
 
-	[DDLRegistration(0xa03532b2u)]
+	[DDLRegistration(0xfbaa04e4u)]
 	public RivetAssetId ActorTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa03532b2u)]
+	[DDLRegistration(0xe97f30a5u)]
 	public RivetAssetId TemplateTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa03532b2u)]
+	[DDLRegistration(0xcc4a4d21u)]
 	public string? ActorName { get; set; } = default;
 
-	[DDLRegistration(0xa03532b2u)]
+	[DDLRegistration(0xbc2d5985u)]
 	public DDLVector3? Position { get; set; } = default;
 
 	public static ScriptDebugActorGroupEntry Create(DDLObject ddl) => new(ddl);

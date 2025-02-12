@@ -19,10 +19,10 @@ public class DevstatsClientConfig : DDLObjectType, IDDLObjectType<DevstatsClient
 		DisabledEvents = ddl.GetStrings(0xfd40a9c8u);
 	}
 
-	[DDLRegistration(0x71627627u)]
+	[DDLRegistration(0x9e7f6a49u)]
 	public bool DataCollectionEnabled { get; set; } = false;
 
-	[DDLRegistration(0x71627627u)]
+	[DDLRegistration(0xfd40a9c8u)]
 	public List<string?> DisabledEvents { get; set; } = [];
 
 	public static DevstatsClientConfig Create(DDLObject ddl) => new(ddl);

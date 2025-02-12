@@ -22,19 +22,19 @@ public class StructuredLogAnimDriverVar : StructuredLogStatement, IDDLObjectType
 		Type = ddl.GetEnum<x6c25f7e9>(0xbc4e9799u, x6c25f7e9Values.Lookup);
 	}
 
-	[DDLRegistration(0xaf7f3cb8u)]
+	[DDLRegistration(0x12568d7bu)]
 	public x9bcbd6ed Flags { get; set; } = (x9bcbd6ed) 0x00000000;
 
-	[DDLRegistration(0xaf7f3cb8u)]
+	[DDLRegistration(0xd0f69254u)]
 	public float Float { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaf7f3cb8u)]
+	[DDLRegistration(0x979b80c3u)]
 	public DDLVector2? Vec2 { get; set; } = default;
 
-	[DDLRegistration(0xaf7f3cb8u)]
+	[DDLRegistration(0xc2f561e2u)]
 	public uint NameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xaf7f3cb8u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x6c25f7e9 Type { get; set; } = x6c25f7e9.TypeInt;
 
 	public new static StructuredLogAnimDriverVar Create(DDLObject ddl) => new(ddl);

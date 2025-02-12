@@ -20,13 +20,13 @@ public class TriggerResponderModifyNavPrius : TriggerResponderBasePrius, IDDLObj
 		Untriggered = ddl.GetObjects<TriggerResponderNavModGrp>(0xcc2f3254u);
 	}
 
-	[DDLRegistration(0xb56db524u, description: "Nav Poly Flags to Change")]
+	[DDLRegistration(0xf141195bu, description: "Nav Poly Flags to Change")]
 	public xc204b456 PolyFlags { get; set; } = (xc204b456) 0x0000001f;
 
-	[DDLRegistration(0xb56db524u, "Nav changes when Triggered", "Modified when triggered.")]
+	[DDLRegistration(0x0edb93b3u, "Nav changes when Triggered", "Modified when triggered.")]
 	public List<TriggerResponderNavModGrp?> Triggered { get; set; } = [];
 
-	[DDLRegistration(0xb56db524u, "Nav changes when Untriggered", "Modified when untriggered.")]
+	[DDLRegistration(0xcc2f3254u, "Nav changes when Untriggered", "Modified when untriggered.")]
 	public List<TriggerResponderNavModGrp?> Untriggered { get; set; } = [];
 
 	public new static TriggerResponderModifyNavPrius Create(DDLObject ddl) => new(ddl);

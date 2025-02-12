@@ -18,7 +18,7 @@ public class BotVariantConfig : ConfigBase, IDDLObjectType<BotVariantConfig> {
 		Variants = ddl.GetObjects<BotVariantEntry>(0x4999ee91u);
 	}
 
-	[DDLRegistration(0x93b9f6adu)]
+	[DDLRegistration(0x4999ee91u)]
 	public List<BotVariantEntry?> Variants { get; set; } = [];
 
 	public new static BotVariantConfig Create(DDLObject ddl) => new(ddl);

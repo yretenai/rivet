@@ -19,10 +19,10 @@ public class MissionFailPopUpClosedEvent : EventBase, IDDLObjectType<MissionFail
 		Abandon = ddl.GetValue<bool>(0x8c61d340u, Abandon);
 	}
 
-	[DDLRegistration(0xc4dab7cdu)]
+	[DDLRegistration(0x2a5812deu)]
 	public uint MissionHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc4dab7cdu)]
+	[DDLRegistration(0x8c61d340u)]
 	public bool Abandon { get; set; } = false;
 
 	public new static MissionFailPopUpClosedEvent Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class RenderTextureOverride : DDLObjectType, IDDLObjectType<RenderTexture
 		Value = ddl.GetValue<RivetAssetId>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x62f720fbu, description: "Name of the node in the material graph this is being overridden")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of the node in the material graph this is being overridden")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x62f720fbu, description: "Name of the Maya material mapping the override is restricted to")]
+	[DDLRegistration(0x981e6927u, description: "Name of the Maya material mapping the override is restricted to")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x62f720fbu)]
+	[DDLRegistration(0x042494f5u)]
 	public RivetAssetId Value { get; set; } = default;
 
 	public static RenderTextureOverride Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class CurveFollowerAutoAnimPrius : DDLObjectType, IDDLObjectType<CurveFol
 		StopStart = ddl.GetString(0x6b865783) ?? StopStart;
 	}
 
-	[DDLRegistration(0xc43238ebu, "Enabled?", "Whether this component starts enabled.")]
+	[DDLRegistration(0x6f36ca8bu, "Enabled?", "Whether this component starts enabled.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0xc43238ebu, "Anim: Stopped Idle", "The anim driver (or clip if using the SimpleAnimComponent) to play when stopped.")]
+	[DDLRegistration(0xd40274bau, "Anim: Stopped Idle", "The anim driver (or clip if using the SimpleAnimComponent) to play when stopped.")]
 	public string? StoppedIdle { get; set; } = "Idle";
 
-	[DDLRegistration(0xc43238ebu, "Anim: Start", "The anim driver (or clip if using the SimpleAnimComponent) to play going when starting (to move, when stopped)")]
+	[DDLRegistration(0x8f08a928u, "Anim: Start", "The anim driver (or clip if using the SimpleAnimComponent) to play going when starting (to move, when stopped)")]
 	public string? MoveStart { get; set; } = "Idle_to_Move";
 
-	[DDLRegistration(0xc43238ebu, "Anim: Moving Idle", "The anim driver (or clip if using the SimpleAnimComponent) to play when moving.")]
+	[DDLRegistration(0x78c838a9u, "Anim: Moving Idle", "The anim driver (or clip if using the SimpleAnimComponent) to play when moving.")]
 	public string? MoveIdle { get; set; } = "Move";
 
-	[DDLRegistration(0xc43238ebu, "Anim: Stop", "The anim driver (or clip if using the SimpleAnimComponent) to play when stopping (to stopped, when moving).")]
+	[DDLRegistration(0x6b865783u, "Anim: Stop", "The anim driver (or clip if using the SimpleAnimComponent) to play when stopping (to stopped, when moving).")]
 	public string? StopStart { get; set; } = "Move_to_Idle";
 
 	public static CurveFollowerAutoAnimPrius Create(DDLObject ddl) => new(ddl);

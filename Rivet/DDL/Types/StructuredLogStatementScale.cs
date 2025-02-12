@@ -20,13 +20,13 @@ public class StructuredLogStatementScale : DDLObjectType, IDDLObjectType<Structu
 		Scale = ddl.GetObject<DDLVector3>(0xf515e945u);
 	}
 
-	[DDLRegistration(0xd519a7b6u)]
+	[DDLRegistration(0x3006a975u)]
 	public string? TestName { get; set; } = default;
 
-	[DDLRegistration(0xd519a7b6u)]
+	[DDLRegistration(0x11d33588u)]
 	public string? VariableName { get; set; } = default;
 
-	[DDLRegistration(0xd519a7b6u)]
+	[DDLRegistration(0xf515e945u)]
 	public DDLVector3? Scale { get; set; } = default;
 
 	public static StructuredLogStatementScale Create(DDLObject ddl) => new(ddl);

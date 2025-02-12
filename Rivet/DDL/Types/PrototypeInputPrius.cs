@@ -22,19 +22,19 @@ public class PrototypeInputPrius : DDLObjectType, IDDLObjectType<PrototypeInputP
 		VolumeRange = ddl.GetValue<bool>(0xa8fbfba2u, VolumeRange);
 	}
 
-	[DDLRegistration(0xcb302993u)]
+	[DDLRegistration(0x047ee25au)]
 	public x7a3f7920 Button { get; set; } = x7a3f7920.X;
 
-	[DDLRegistration(0xcb302993u, "Trigger Count")]
+	[DDLRegistration(0xebd996d0u, "Trigger Count")]
 	public uint TriggerCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcb302993u, "Retrigger Delay")]
+	[DDLRegistration(0xffff3a00u, "Retrigger Delay")]
 	public float RetriggerDelay { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcb302993u, "Use Range")]
+	[DDLRegistration(0x6a4e2be2u, "Use Range")]
 	public float UseRange { get; set; } = 3.00f;
 
-	[DDLRegistration(0xcb302993u, "Volume As Range")]
+	[DDLRegistration(0xa8fbfba2u, "Volume As Range")]
 	public bool VolumeRange { get; set; } = true;
 
 	public static PrototypeInputPrius Create(DDLObject ddl) => new(ddl);

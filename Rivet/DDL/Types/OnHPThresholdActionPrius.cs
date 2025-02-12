@@ -20,13 +20,13 @@ public class OnHPThresholdActionPrius : DDLObjectType, IDDLObjectType<OnHPThresh
 		EveryHPIndex = ddl.GetValue<bool>(0xb8435f6au, EveryHPIndex);
 	}
 
-	[DDLRegistration(0xc769e48cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0xc769e48cu, "HP Index", "Which HP index you're listening for. Starts at 0.")]
+	[DDLRegistration(0xafc1092bu, "HP Index", "Which HP index you're listening for. Starts at 0.")]
 	public uint HPIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc769e48cu)]
+	[DDLRegistration(0xb8435f6au)]
 	public bool EveryHPIndex { get; set; } = false;
 
 	public static OnHPThresholdActionPrius Create(DDLObject ddl) => new(ddl);

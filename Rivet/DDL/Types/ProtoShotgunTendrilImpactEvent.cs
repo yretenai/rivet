@@ -18,7 +18,7 @@ public class ProtoShotgunTendrilImpactEvent : EventBase, IDDLObjectType<ProtoSho
 		ReflectionDir = ddl.GetObject<DDLTransform>(0xeb9e8212u);
 	}
 
-	[DDLRegistration(0x3d550502u)]
+	[DDLRegistration(0xeb9e8212u)]
 	public DDLTransform? ReflectionDir { get; set; } = default;
 
 	public new static ProtoShotgunTendrilImpactEvent Create(DDLObject ddl) => new(ddl);

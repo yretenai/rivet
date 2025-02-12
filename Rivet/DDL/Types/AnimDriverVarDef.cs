@@ -22,19 +22,19 @@ public class AnimDriverVarDef : DDLObjectType, IDDLObjectType<AnimDriverVarDef> 
 		Connections = ddl.GetObjects<AnimDriverVarConnection>(0x322aadceu);
 	}
 
-	[DDLRegistration(0x5264054au)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x5264054au)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5264054au)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5264054au)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xdf8f8d7a Type { get; set; } = xdf8f8d7a.FloatOutput;
 
-	[DDLRegistration(0x5264054au)]
+	[DDLRegistration(0x322aadceu)]
 	public List<AnimDriverVarConnection?> Connections { get; set; } = [];
 
 	public static AnimDriverVarDef Create(DDLObject ddl) => new(ddl);

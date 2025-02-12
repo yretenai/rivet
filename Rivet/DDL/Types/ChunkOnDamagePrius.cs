@@ -20,13 +20,13 @@ public class ChunkOnDamagePrius : DDLObjectType, IDDLObjectType<ChunkOnDamagePri
 		ValueData = ddl.GetObjects<ChunkOnDamageValueData>(0x91a25047u);
 	}
 
-	[DDLRegistration(0x1770c426u, description: "If true, HealthThreshold in ValueData is a hit point value.")]
+	[DDLRegistration(0x77a137c6u, description: "If true, HealthThreshold in ValueData is a hit point value.")]
 	public bool UseHitPoints { get; set; } = false;
 
-	[DDLRegistration(0x1770c426u, "LookChunking Name", "The name of the LookChunking component you want to use.")]
+	[DDLRegistration(0x6a284e99u, "LookChunking Name", "The name of the LookChunking component you want to use.")]
 	public string? LookChunkingName { get; set; } = default;
 
-	[DDLRegistration(0x1770c426u)]
+	[DDLRegistration(0x91a25047u)]
 	public List<ChunkOnDamageValueData?> ValueData { get; set; } = [];
 
 	public static ChunkOnDamagePrius Create(DDLObject ddl) => new(ddl);

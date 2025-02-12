@@ -35,58 +35,58 @@ public class BreakableNodeGraphDef : DDLObjectType, IDDLObjectType<BreakableNode
 		ToggleLookNodes = ddl.GetDictionary<RivetAssetId, ToggleLookNodeDef>(0xf4659944, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ToggleLookNodeDef>(mapId));
 	}
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x577f103e Type { get; set; } = x577f103e.Invalid;
 
-	[DDLRegistration(0x8a5864b1u, "Graph Name", "Used for various UI purposes, including being shown on subgraph nodes that represent this node graph.")]
+	[DDLRegistration(0x6eb3beb6u, "Graph Name", "Used for various UI purposes, including being shown on subgraph nodes that represent this node graph.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0x9c8156a1u)]
 	public Dictionary<RivetAssetId, BlockNodeDef?> BlockNodes { get; set; } = [];
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0xdc7a2d2au)]
 	public Dictionary<RivetAssetId, BlockSetNodeDef?> BlockSetNodes { get; set; } = [];
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0xa59f2b5au)]
 	public Dictionary<RivetAssetId, CommentBaseDef?> Comments { get; set; } = [];
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0x322aadceu)]
 	public Dictionary<RivetAssetId, ConnectionTuidDef?> Connections { get; set; } = [];
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0xac9ba46cu)]
 	public CreateNodeDef? CreateNode { get; set; } = default;
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0xed4959b8u)]
 	public DeathNodeDef? DeathNode { get; set; } = default;
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0x3f982dd6u)]
 	public Dictionary<RivetAssetId, DestroyActorNodeDef?> DestroyActorNodes { get; set; } = [];
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0xacf3d374u)]
 	public Dictionary<RivetAssetId, DisableLookNodeDef?> DisableLookNodes { get; set; } = [];
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0xacb59458u)]
 	public Dictionary<RivetAssetId, EnableLookNodeDef?> EnableLookNodes { get; set; } = [];
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0x1c2d8423u)]
 	public Dictionary<RivetAssetId, GameEventNodeDef?> GameEventNodes { get; set; } = [];
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0x81d7dba8u)]
 	public HealthNodeDef? HealthNode { get; set; } = default;
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0x8059da88u)]
 	public Dictionary<RivetAssetId, PhysicsPropertyNodeDef?> PhysicsPropertyNodes { get; set; } = [];
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0x80b5732au)]
 	public Dictionary<RivetAssetId, PlayAnimationDriverNodeDef?> PlayAnimNodes { get; set; } = [];
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0xc8cf364eu)]
 	public Dictionary<RivetAssetId, SpawnNodeDef?> SpawnNodes { get; set; } = [];
 
-	[DDLRegistration(0x8a5864b1u)]
+	[DDLRegistration(0xf4659944u)]
 	public Dictionary<RivetAssetId, ToggleLookNodeDef?> ToggleLookNodes { get; set; } = [];
 
 	public static BreakableNodeGraphDef Create(DDLObject ddl) => new(ddl);

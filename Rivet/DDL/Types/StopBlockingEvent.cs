@@ -19,10 +19,10 @@ public class StopBlockingEvent : EventBase, IDDLObjectType<StopBlockingEvent> {
 		DesiredVelocity = ddl.GetObject<DDLVector3>(0x1442cb45u);
 	}
 
-	[DDLRegistration(0xaaba2dc0u)]
+	[DDLRegistration(0x8887fd09u)]
 	public uint MovingDude { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xaaba2dc0u)]
+	[DDLRegistration(0x1442cb45u)]
 	public DDLVector3? DesiredVelocity { get; set; } = default;
 
 	public new static StopBlockingEvent Create(DDLObject ddl) => new(ddl);

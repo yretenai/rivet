@@ -33,52 +33,52 @@ public class GameBotMrFunGuyPrius : GameBotMeleeBasePrius, IDDLObjectType<GameBo
 		GasTargetingRadius = ddl.GetValue<float>(0x7889b8feu, GasTargetingRadius);
 	}
 
-	[DDLRegistration(0x994fef0du, "Gas Element Actor")]
+	[DDLRegistration(0xe3a0d20eu, "Gas Element Actor")]
 	public RivetAssetId GasElementActor { get; set; } = default;
 
-	[DDLRegistration(0x994fef0du, "Turret Shot Config", "The shot config for the turret shots.")]
+	[DDLRegistration(0x7a0c7c53u, "Turret Shot Config", "The shot config for the turret shots.")]
 	public RivetAssetId TurretShotConfig { get; set; } = default;
 
-	[DDLRegistration(0x994fef0du, "Mr FunGuy Intro Anim", "Animation that Mr FunGuy plays when the bot is created.")]
+	[DDLRegistration(0xf227a2c3u, "Mr FunGuy Intro Anim", "Animation that Mr FunGuy plays when the bot is created.")]
 	public string? IntroAnim { get; set; } = default;
 
-	[DDLRegistration(0x994fef0du, "Mr FunGuy Left Hand Throw Anim", "Animation that Mr FunGuy plays when the he throws a projectile with his left hand.")]
+	[DDLRegistration(0x3b379230u, "Mr FunGuy Left Hand Throw Anim", "Animation that Mr FunGuy plays when the he throws a projectile with his left hand.")]
 	public string? LeftHandThrowAnim { get; set; } = default;
 
-	[DDLRegistration(0x994fef0du, "Mr FunGuy Right Hand Throw Anim", "Animation that Mr FunGuy plays when the he throws a projectile with his right hand.")]
+	[DDLRegistration(0x2e69087au, "Mr FunGuy Right Hand Throw Anim", "Animation that Mr FunGuy plays when the he throws a projectile with his right hand.")]
 	public string? RightHandThrowAnim { get; set; } = default;
 
-	[DDLRegistration(0x994fef0du, "Mr FunGuy Throwing Loop Anim", "Animation that Mr FunGuy plays when the he throws a projectile with his right hand.")]
+	[DDLRegistration(0x60d70413u, "Mr FunGuy Throwing Loop Anim", "Animation that Mr FunGuy plays when the he throws a projectile with his right hand.")]
 	public string? ThrowingLoopAnim { get; set; } = default;
 
-	[DDLRegistration(0x994fef0du, "Mr FunGuy Death Anim", "Animation that Mr FunGuy plays when the bot is killed.")]
+	[DDLRegistration(0x0f9dd5a6u, "Mr FunGuy Death Anim", "Animation that Mr FunGuy plays when the bot is killed.")]
 	public string? DeathAnim { get; set; } = default;
 
-	[DDLRegistration(0x994fef0du, "Mr FunGuy Idle Anim", "Animation that Mr FunGuy plays when he is idle.")]
+	[DDLRegistration(0x10ab67e6u, "Mr FunGuy Idle Anim", "Animation that Mr FunGuy plays when he is idle.")]
 	public string? IdleAnimHash { get; set; } = default;
 
-	[DDLRegistration(0x994fef0du, "Mr FunGuy Dance Anim", "Animation that Mr FunGuy plays when he is dancing.")]
+	[DDLRegistration(0x431ff821u, "Mr FunGuy Dance Anim", "Animation that Mr FunGuy plays when he is dancing.")]
 	public string? DanceAnimHash { get; set; } = default;
 
-	[DDLRegistration(0x994fef0du, "Mr FunGuy Left Emit Locator", "The locator that is used for the position of where his projectiles spawn from in his left hand.")]
+	[DDLRegistration(0x219c6b54u, "Mr FunGuy Left Emit Locator", "The locator that is used for the position of where his projectiles spawn from in his left hand.")]
 	public string? LeftEmitLocator { get; set; } = default;
 
-	[DDLRegistration(0x994fef0du, "Mr FunGuy Right Emit Locator", "The locator that is used for the position of where his projectiles spawn from in his right hand.")]
+	[DDLRegistration(0x28dee847u, "Mr FunGuy Right Emit Locator", "The locator that is used for the position of where his projectiles spawn from in his right hand.")]
 	public string? RightEmitLocator { get; set; } = default;
 
-	[DDLRegistration(0x994fef0du, description: "The amount of time that Mr FunGuy will exist in the world before destroying itself.")]
+	[DDLRegistration(0xa9f6b83cu, description: "The amount of time that Mr FunGuy will exist in the world before destroying itself.")]
 	public float MaxLifetime { get; set; } = 8.00f;
 
-	[DDLRegistration(0x994fef0du, description: "The amount of time that Mr FunGuy's gas will exist in the world before destroying itself.")]
+	[DDLRegistration(0xc90c7e65u, description: "The amount of time that Mr FunGuy's gas will exist in the world before destroying itself.")]
 	public float GasLifetime { get; set; } = 5.00f;
 
-	[DDLRegistration(0x994fef0du, description: "The height at which Mr FunGuy will hover at above the ground.")]
+	[DDLRegistration(0x0fc65cafu, description: "The height at which Mr FunGuy will hover at above the ground.")]
 	public float HoverHeight { get; set; } = 0.85f;
 
-	[DDLRegistration(0x994fef0du, description: "The scale applied to Mr FunGuy's model.")]
+	[DDLRegistration(0x86c30845u, description: "The scale applied to Mr FunGuy's model.")]
 	public float ModelScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x994fef0du, description: "The radius that is used to check to see if enemies should be affected by the gas cloud.")]
+	[DDLRegistration(0x7889b8feu, description: "The radius that is used to check to see if enemies should be affected by the gas cloud.")]
 	public float GasTargetingRadius { get; set; } = 10.00f;
 
 	public new static GameBotMrFunGuyPrius Create(DDLObject ddl) => new(ddl);

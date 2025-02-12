@@ -21,16 +21,16 @@ public class ActivityHintWithId : DDLObjectType, IDDLObjectType<ActivityHintWith
 		HintId = ddl.GetString(0x1c5a667e) ?? HintId;
 	}
 
-	[DDLRegistration(0x05fda6c6u, description: "Loctag for the name to show on the hint in the OS. Localized text can be at most 64 characters.")]
+	[DDLRegistration(0x2d78cbbdu, description: "Loctag for the name to show on the hint in the OS. Localized text can be at most 64 characters.")]
 	public string? NameTag { get; set; } = default;
 
-	[DDLRegistration(0x05fda6c6u, description: "Loctag for the description show upon expanding the hint in the OS. Localized text can be at most 400 characters.")]
+	[DDLRegistration(0xe822a0dau, description: "Loctag for the description show upon expanding the hint in the OS. Localized text can be at most 400 characters.")]
 	public string? DescTag { get; set; } = default;
 
-	[DDLRegistration(0x05fda6c6u, description: "Path of the video or image file to display with this hint. Videos must be either .mp4 or .webm at 2160p, 1080p, or 720p. Images must be either .png or .jpg at 2160p or 1080p.")]
+	[DDLRegistration(0xa86a6d25u, description: "Path of the video or image file to display with this hint. Videos must be either .mp4 or .webm at 2160p, 1080p, or 720p. Images must be either .png or .jpg at 2160p or 1080p.")]
 	public RivetAssetId MediaFile { get; set; } = default;
 
-	[DDLRegistration(0x05fda6c6u, description: "Code name for this hint. Can be up to 32 letters, must not contain spaces.")]
+	[DDLRegistration(0x1c5a667eu, description: "Code name for this hint. Can be up to 32 letters, must not contain spaces.")]
 	public string? HintId { get; set; } = default;
 
 	public static ActivityHintWithId Create(DDLObject ddl) => new(ddl);

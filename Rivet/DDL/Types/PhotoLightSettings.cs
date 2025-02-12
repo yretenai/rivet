@@ -24,25 +24,25 @@ public class PhotoLightSettings : DDLObjectType, IDDLObjectType<PhotoLightSettin
 		RigModel = ddl.GetValue<RivetAssetId>(0xaaff68e0u, RigModel);
 	}
 
-	[DDLRegistration(0x8745b4c0u, description: "The maximum number of custom lights.")]
+	[DDLRegistration(0xec3163a4u, description: "The maximum number of custom lights.")]
 	public byte MaxNumLights { get; set; } = 0x03;
 
-	[DDLRegistration(0x8745b4c0u)]
+	[DDLRegistration(0x7e3ed937u)]
 	public PhotoLightData? LightSettings { get; set; } = default;
 
-	[DDLRegistration(0x8745b4c0u)]
+	[DDLRegistration(0xad21c9d2u)]
 	public PhotoLightMoveOrbitData? Orbit { get; set; } = default;
 
-	[DDLRegistration(0x8745b4c0u, description: "Model to represent a spotlight during editing")]
+	[DDLRegistration(0xf06caaf6u, description: "Model to represent a spotlight during editing")]
 	public RivetAssetId SpotlightCone { get; set; } = default;
 
-	[DDLRegistration(0x8745b4c0u, description: "Model to represent a point-light during editing")]
+	[DDLRegistration(0x5827e22eu, description: "Model to represent a point-light during editing")]
 	public RivetAssetId PointLightModel { get; set; } = default;
 
-	[DDLRegistration(0x8745b4c0u, description: "Will use a Debug version of the light rig if True")]
+	[DDLRegistration(0xcaefd69cu, description: "Will use a Debug version of the light rig if True")]
 	public bool UseDebugLightRig { get; set; } = true;
 
-	[DDLRegistration(0x8745b4c0u, description: "Model for displaying the light rig.")]
+	[DDLRegistration(0xaaff68e0u, description: "Model for displaying the light rig.")]
 	public RivetAssetId RigModel { get; set; } = default;
 
 	public static PhotoLightSettings Create(DDLObject ddl) => new(ddl);

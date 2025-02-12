@@ -22,19 +22,19 @@ public class TiltingPlatformPrius : DDLObjectType, IDDLObjectType<TiltingPlatfor
 		MaxRotSpeed = ddl.GetValue<float>(0xface9404u, MaxRotSpeed);
 	}
 
-	[DDLRegistration(0xd424cef3u)]
+	[DDLRegistration(0x07447643u)]
 	public float ResetRotAccel { get; set; } = 2.00f;
 
-	[DDLRegistration(0xd424cef3u)]
+	[DDLRegistration(0xa8145c17u)]
 	public float MaxRotAccel { get; set; } = 20.00f;
 
-	[DDLRegistration(0xd424cef3u)]
+	[DDLRegistration(0x191f829eu)]
 	public float MaxAngle { get; set; } = 5.00f;
 
-	[DDLRegistration(0xd424cef3u, description: "Radius of the platform for the purposes of calculations.")]
+	[DDLRegistration(0xd6ec12d0u, description: "Radius of the platform for the purposes of calculations.")]
 	public float PlatformRadius { get; set; } = 15.00f;
 
-	[DDLRegistration(0xd424cef3u)]
+	[DDLRegistration(0xface9404u)]
 	public float MaxRotSpeed { get; set; } = 10.00f;
 
 	public static TiltingPlatformPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class InputSettingsData : DDLObjectType, IDDLObjectType<InputSettingsData
 		SelectionDoubleSpeed = ddl.GetValue<float>(0x45f40af1u, SelectionDoubleSpeed);
 	}
 
-	[DDLRegistration(0x3225c23bu, description: "Time to ignore held input after 1st press for selection based inputs")]
+	[DDLRegistration(0xeb4b14ddu, description: "Time to ignore held input after 1st press for selection based inputs")]
 	public float SelectionHeldInputIgnoreDuration { get; set; } = 0.30f;
 
-	[DDLRegistration(0x3225c23bu, description: "Time for help inputs to double selection - i.e 2x faster on scrolls")]
+	[DDLRegistration(0x45f40af1u, description: "Time for help inputs to double selection - i.e 2x faster on scrolls")]
 	public float SelectionDoubleSpeed { get; set; } = 0.60f;
 
 	public static InputSettingsData Create(DDLObject ddl) => new(ddl);

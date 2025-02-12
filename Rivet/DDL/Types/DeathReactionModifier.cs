@@ -26,31 +26,31 @@ public class DeathReactionModifier : DDLObjectType, IDDLObjectType<DeathReaction
 		DeleteOnImpact = ddl.GetValue<bool>(0xb990988du, DeleteOnImpact);
 	}
 
-	[DDLRegistration(0x55f8d4a2u, description: "Driver name that needs modification of behavior.  Leave blank to apply to all")]
+	[DDLRegistration(0x075cede9u, description: "Driver name that needs modification of behavior.  Leave blank to apply to all")]
 	public string? DeathDriverName { get; set; } = default;
 
-	[DDLRegistration(0x55f8d4a2u, description: "Minimum scale applied to vertical translation")]
+	[DDLRegistration(0x7796775cu, description: "Minimum scale applied to vertical translation")]
 	public float MinYTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x55f8d4a2u, description: "Maximum scale applied to vertical translation")]
+	[DDLRegistration(0x5ee88a44u, description: "Maximum scale applied to vertical translation")]
 	public float MaxYTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x55f8d4a2u, description: "Minimum scale applied to horizontal translation")]
+	[DDLRegistration(0x66d45ba2u, description: "Minimum scale applied to horizontal translation")]
 	public float MinXZTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x55f8d4a2u, description: "Maximum scale applied to horizontal translation")]
+	[DDLRegistration(0x7591bd09u, description: "Maximum scale applied to horizontal translation")]
 	public float MaxXZTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x55f8d4a2u)]
+	[DDLRegistration(0x53f6eaccu)]
 	public float MinTimeScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x55f8d4a2u)]
+	[DDLRegistration(0xc385fa26u)]
 	public float MaxTimeScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x55f8d4a2u, description: "Will pop the bot facing direction so that animated motion will match the hit direction")]
+	[DDLRegistration(0x338a746au, description: "Will pop the bot facing direction so that animated motion will match the hit direction")]
 	public bool PopMotionToHitDirection { get; set; } = false;
 
-	[DDLRegistration(0x55f8d4a2u, description: "Bot will delete if it impacts something during the death animation")]
+	[DDLRegistration(0xb990988du, description: "Bot will delete if it impacts something during the death animation")]
 	public bool DeleteOnImpact { get; set; } = false;
 
 	public static DeathReactionModifier Create(DDLObject ddl) => new(ddl);

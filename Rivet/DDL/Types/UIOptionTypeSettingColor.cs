@@ -18,7 +18,7 @@ public class UIOptionTypeSettingColor : UIOptionTypeSettingBase, IDDLObjectType<
 		ColorList = ddl.GetStrings(0xfbc9245fu);
 	}
 
-	[DDLRegistration(0x66257f4cu, description: "List of the color options for this setting, each value should match a color in the main color list for this file.")]
+	[DDLRegistration(0xfbc9245fu, description: "List of the color options for this setting, each value should match a color in the main color list for this file.")]
 	public List<string?> ColorList { get; set; } = [];
 
 	public new static UIOptionTypeSettingColor Create(DDLObject ddl) => new(ddl);

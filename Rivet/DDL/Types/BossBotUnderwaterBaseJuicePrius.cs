@@ -18,7 +18,7 @@ public class BossBotUnderwaterBaseJuicePrius : BotPrius, IDDLObjectType<BossBotU
 		MaterialEmissiveTimeToFull = ddl.GetValue<float>(0xe572029bu, MaterialEmissiveTimeToFull);
 	}
 
-	[DDLRegistration(0x083208b8u)]
+	[DDLRegistration(0xe572029bu)]
 	public float MaterialEmissiveTimeToFull { get; set; } = 0.50f;
 
 	public new static BossBotUnderwaterBaseJuicePrius Create(DDLObject ddl) => new(ddl);

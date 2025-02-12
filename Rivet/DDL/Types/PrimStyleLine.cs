@@ -19,10 +19,10 @@ public class PrimStyleLine : PrimStyleBase, IDDLObjectType<PrimStyleLine> {
 		LocatorB = ddl.GetString(0x6da648f6) ?? LocatorB;
 	}
 
-	[DDLRegistration(0x29bb646cu)]
+	[DDLRegistration(0xf4af194cu)]
 	public string? LocatorA { get; set; } = default;
 
-	[DDLRegistration(0x29bb646cu)]
+	[DDLRegistration(0x6da648f6u)]
 	public string? LocatorB { get; set; } = default;
 
 	public new static PrimStyleLine Create(DDLObject ddl) => new(ddl);

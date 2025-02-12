@@ -19,10 +19,10 @@ public class OrderedListInitializer : DDLObjectType, IDDLObjectType<OrderedListI
 		List = ddl.GetObjects<OrderedListInitEntry>(0x745838a8u);
 	}
 
-	[DDLRegistration(0x4caadda1u, description: "Include these types from the list")]
+	[DDLRegistration(0x811b191cu, description: "Include these types from the list")]
 	public xcd385c63 InitTypes { get; set; } = (xcd385c63) 0x0000001f;
 
-	[DDLRegistration(0x4caadda1u)]
+	[DDLRegistration(0x745838a8u)]
 	public List<OrderedListInitEntry?> List { get; set; } = [];
 
 	public static OrderedListInitializer Create(DDLObject ddl) => new(ddl);

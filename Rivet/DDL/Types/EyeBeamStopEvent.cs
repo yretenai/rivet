@@ -18,7 +18,7 @@ public class EyeBeamStopEvent : EventBase, IDDLObjectType<EyeBeamStopEvent> {
 		EyeIndex = ddl.GetValue<byte>(0xa17178cfu, EyeIndex);
 	}
 
-	[DDLRegistration(0x67cc34e9u)]
+	[DDLRegistration(0xa17178cfu)]
 	public byte EyeIndex { get; set; } = 0x00;
 
 	public new static EyeBeamStopEvent Create(DDLObject ddl) => new(ddl);

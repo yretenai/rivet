@@ -40,73 +40,73 @@ public class WeaponTrajectoryDrawerPrius : DDLObjectType, IDDLObjectType<WeaponT
 		IgnoreCollDist = ddl.GetValue<float>(0xcdfd6410u, IgnoreCollDist);
 	}
 
-	[DDLRegistration(0x034c006cu)]
+	[DDLRegistration(0x42ab1eb9u)]
 	public x399b7397 ArcStyle { get; set; } = x399b7397.MaterialSpline;
 
-	[DDLRegistration(0x034c006cu)]
+	[DDLRegistration(0x105e918du)]
 	public TrajectorDrawerKnotData? KnotData { get; set; } = default;
 
-	[DDLRegistration(0x034c006cu, "Arc Material", "Material for the trajectory arc")]
+	[DDLRegistration(0x55b37a5au, "Arc Material", "Material for the trajectory arc")]
 	public TrajectoryDrawerArcData? Arc { get; set; } = default;
 
-	[DDLRegistration(0x034c006cu, "Aim Arc Material", "Aim material for the trajectory arc")]
+	[DDLRegistration(0xa996c5b8u, "Aim Arc Material", "Aim material for the trajectory arc")]
 	public TrajectoryDrawerArcData? AimArc { get; set; } = default;
 
-	[DDLRegistration(0x034c006cu, "Highlight Arc Material", "Highlight material for the trajectory arc")]
+	[DDLRegistration(0x10723417u, "Highlight Arc Material", "Highlight material for the trajectory arc")]
 	public TrajectoryDrawerArcData? HighlightArc { get; set; } = default;
 
-	[DDLRegistration(0x034c006cu, "Arc Width", "Width for MaterialSplines, Radius for ModelSplines")]
+	[DDLRegistration(0xfd0ce3fcu, "Arc Width", "Width for MaterialSplines, Radius for ModelSplines")]
 	public float ArcWidth { get; set; } = 0.10f;
 
-	[DDLRegistration(0x034c006cu, "Only Draw Arc On Collision", "Only draw arc when valid collision is detected.")]
+	[DDLRegistration(0x10b9a1f8u, "Only Draw Arc On Collision", "Only draw arc when valid collision is detected.")]
 	public bool OnlyDrawArcOnCollision { get; set; } = false;
 
-	[DDLRegistration(0x034c006cu, "Decal Texture", "Texture for the decal at the end of the trajectory arc")]
+	[DDLRegistration(0x94b7e712u, "Decal Texture", "Texture for the decal at the end of the trajectory arc")]
 	public RivetAssetId DecalTexture { get; set; } = default;
 
-	[DDLRegistration(0x034c006cu, "Decal Material", "Material for the decal at the end of the trajectory arc")]
+	[DDLRegistration(0xe3182aaau, "Decal Material", "Material for the decal at the end of the trajectory arc")]
 	public RivetAssetId DecalMaterial { get; set; } = default;
 
-	[DDLRegistration(0x034c006cu, "Decal Size")]
+	[DDLRegistration(0xaef2b156u, "Decal Size")]
 	public float DecalSize { get; set; } = 1.00f;
 
-	[DDLRegistration(0x034c006cu, "Decal Alpha", "The alpha of the decal.")]
+	[DDLRegistration(0x2dd498f5u, "Decal Alpha", "The alpha of the decal.")]
 	public float DecalAlpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0x034c006cu, "Camera Orient", "Orient point of impact texture to the camera instead of the actor.")]
+	[DDLRegistration(0x5eacda20u, "Camera Orient", "Orient point of impact texture to the camera instead of the actor.")]
 	public bool CameraOrient { get; set; } = false;
 
-	[DDLRegistration(0x034c006cu, "Point Of Impact Actor", "Actor for indicating the point of impact")]
+	[DDLRegistration(0x52fba301u, "Point Of Impact Actor", "Actor for indicating the point of impact")]
 	public RivetAssetId PointOfImpactActor { get; set; } = default;
 
-	[DDLRegistration(0x034c006cu, "Scale Point Of Impact Actor", "If true we'll scale the size of the impact actor to take up a percentage of the screen.")]
+	[DDLRegistration(0xd96005f9u, "Scale Point Of Impact Actor", "If true we'll scale the size of the impact actor to take up a percentage of the screen.")]
 	public bool ScalePointOfImpactActor { get; set; } = true;
 
-	[DDLRegistration(0x034c006cu, "Point Of Impact Size", "Scale of the POI actor relative to the screen")]
+	[DDLRegistration(0x1a90e993u, "Point Of Impact Size", "Scale of the POI actor relative to the screen")]
 	public float PointOfImpactSize { get; set; } = 0.05f;
 
-	[DDLRegistration(0x034c006cu, "Impact Actor Skip Depth", "Draw the impact actor in front of everything")]
+	[DDLRegistration(0x559378e3u, "Impact Actor Skip Depth", "Draw the impact actor in front of everything")]
 	public bool ImpactActorSkipDepth { get; set; } = true;
 
-	[DDLRegistration(0x034c006cu, "Apply Material To Impact Actor", "Use the arc material to render the impact actor")]
+	[DDLRegistration(0x19e8f40du, "Apply Material To Impact Actor", "Use the arc material to render the impact actor")]
 	public bool ApplyMaterialToImpactActor { get; set; } = false;
 
-	[DDLRegistration(0x034c006cu, "Actor Orientation", "Determines how the orientation matrix for the Point Of Impact Actor is calculated.")]
+	[DDLRegistration(0xa073542au, "Actor Orientation", "Determines how the orientation matrix for the Point Of Impact Actor is calculated.")]
 	public ActorOrientation ActorOrientation { get; set; } = ActorOrientation.CameraToHitIsZAxis;
 
-	[DDLRegistration(0x034c006cu)]
+	[DDLRegistration(0x6723e31bu)]
 	public PointOfImpactActorData? AimPointOfImpactActor { get; set; } = default;
 
-	[DDLRegistration(0x034c006cu)]
+	[DDLRegistration(0xd6570b7du)]
 	public List<PointOfImpactActorData?> AltPointOfImpactActors { get; set; } = [];
 
-	[DDLRegistration(0x034c006cu, "Trigger Index", "The trigger for to draw from.")]
+	[DDLRegistration(0xee73b5b3u, "Trigger Index", "The trigger for to draw from.")]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x034c006cu, "Shot Index", "The index of the shot that should have its trajectory drawn.")]
+	[DDLRegistration(0xc409037fu, "Shot Index", "The index of the shot that should have its trajectory drawn.")]
 	public uint ShotIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x034c006cu, "Ignore Coll Dist", "Ignore collision for the first x meters of the trajectory.")]
+	[DDLRegistration(0xcdfd6410u, "Ignore Coll Dist", "Ignore collision for the first x meters of the trajectory.")]
 	public float IgnoreCollDist { get; set; } = 0.00f;
 
 	public static WeaponTrajectoryDrawerPrius Create(DDLObject ddl) => new(ddl);

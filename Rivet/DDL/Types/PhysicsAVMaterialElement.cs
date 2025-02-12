@@ -18,7 +18,7 @@ public class PhysicsAVMaterialElement : DDLObjectType, IDDLObjectType<PhysicsAVM
 		MaterialType = ddl.GetEnum<x10b3c4cf>(0x1433c59bu, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0x21dbd213u)]
+	[DDLRegistration(0x1433c59bu)]
 	public x10b3c4cf MaterialType { get; set; } = x10b3c4cf.None;
 
 	public static PhysicsAVMaterialElement Create(DDLObject ddl) => new(ddl);

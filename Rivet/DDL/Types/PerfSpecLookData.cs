@@ -19,10 +19,10 @@ public class PerfSpecLookData : DDLObjectType, IDDLObjectType<PerfSpecLookData> 
 		Look = ddl.GetString(0x1baa14b2) ?? Look;
 	}
 
-	[DDLRegistration(0x7995b1e9u)]
+	[DDLRegistration(0xf09ed78eu)]
 	public PerfSpecTypeGame Spec { get; set; } = PerfSpecTypeGame.None;
 
-	[DDLRegistration(0x7995b1e9u)]
+	[DDLRegistration(0x1baa14b2u)]
 	public string? Look { get; set; } = default;
 
 	public static PerfSpecLookData Create(DDLObject ddl) => new(ddl);

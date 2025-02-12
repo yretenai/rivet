@@ -26,31 +26,31 @@ public class MoverRequestActionPrius : DDLObjectType, IDDLObjectType<MoverReques
 		DisableGround = ddl.GetValue<bool>(0x2f974193u, DisableGround);
 	}
 
-	[DDLRegistration(0xc458bc9fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0xc458bc9fu, description: "Height above actor position for move pill to start")]
+	[DDLRegistration(0x40e4ca53u, description: "Height above actor position for move pill to start")]
 	public float BodyBottomHeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc458bc9fu, description: "Height above actor position to cap move pill")]
+	[DDLRegistration(0x670b404fu, description: "Height above actor position to cap move pill")]
 	public float BodyTopHeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc458bc9fu, description: "If actor already has a mover, use the previously set up body size")]
+	[DDLRegistration(0xeb7d1d46u, description: "If actor already has a mover, use the previously set up body size")]
 	public bool UseExistingBodySize { get; set; } = true;
 
-	[DDLRegistration(0xc458bc9fu, description: "If true, deflection is forced into XZ plane")]
+	[DDLRegistration(0x33c81fd4u, description: "If true, deflection is forced into XZ plane")]
 	public bool PlanarDeflection { get; set; } = false;
 
-	[DDLRegistration(0xc458bc9fu, description: "If true, request values are treated as an offset from current")]
+	[DDLRegistration(0x3c93e1fbu, description: "If true, request values are treated as an offset from current")]
 	public bool RequestIsOffset { get; set; } = false;
 
-	[DDLRegistration(0xc458bc9fu, description: "If true, automatic gravity is disabled from the mover")]
+	[DDLRegistration(0xa2f8897cu, description: "If true, automatic gravity is disabled from the mover")]
 	public bool DisableGravity { get; set; } = true;
 
-	[DDLRegistration(0xc458bc9fu, description: "If true, automatic gravity is disabled from the mover even when no script requests are sent")]
+	[DDLRegistration(0xd1f209c3u, description: "If true, automatic gravity is disabled from the mover even when no script requests are sent")]
 	public bool DisableGravityPersistent { get; set; } = false;
 
-	[DDLRegistration(0xc458bc9fu, description: "If true, ground processing is disabled from the mover")]
+	[DDLRegistration(0x2f974193u, description: "If true, ground processing is disabled from the mover")]
 	public bool DisableGround { get; set; } = true;
 
 	public static MoverRequestActionPrius Create(DDLObject ddl) => new(ddl);

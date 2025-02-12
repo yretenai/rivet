@@ -20,13 +20,13 @@ public class MoverBumpBreakerPrius : DDLObjectType, IDDLObjectType<MoverBumpBrea
 		BreakFromStanding = ddl.GetValue<bool>(0xff9882c9u, BreakFromStanding);
 	}
 
-	[DDLRegistration(0x3a797a92u)]
+	[DDLRegistration(0xab8f1ae0u)]
 	public bool BreakFromBots { get; set; } = true;
 
-	[DDLRegistration(0x3a797a92u)]
+	[DDLRegistration(0xa9e62072u)]
 	public bool BreakFromHeroes { get; set; } = false;
 
-	[DDLRegistration(0x3a797a92u, description: "Also respond to the MoverOnGroundEvent when stood upon")]
+	[DDLRegistration(0xff9882c9u, description: "Also respond to the MoverOnGroundEvent when stood upon")]
 	public bool BreakFromStanding { get; set; } = false;
 
 	public static MoverBumpBreakerPrius Create(DDLObject ddl) => new(ddl);

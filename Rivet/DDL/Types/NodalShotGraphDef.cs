@@ -18,7 +18,7 @@ public class NodalShotGraphDef : NodalShotBaseGraphDef, IDDLObjectType<NodalShot
 		SpawnHazardDamageAreaEffectNodes = ddl.GetDictionary<RivetAssetId, SpawnHazardDamageAreaEffectNodeDef>(0x3e08b768, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SpawnHazardDamageAreaEffectNodeDef>(mapId));
 	}
 
-	[DDLRegistration(0x33a51938u)]
+	[DDLRegistration(0x3e08b768u)]
 	public Dictionary<RivetAssetId, SpawnHazardDamageAreaEffectNodeDef?> SpawnHazardDamageAreaEffectNodes { get; set; } = [];
 
 	public new static NodalShotGraphDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class VisualEffectPreSim : DDLObjectType, IDDLObjectType<VisualEffectPreS
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0xa2b36be4u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
 	public static VisualEffectPreSim Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class DamageModifierConditionOrPrius : DamageModifierConditionBasePrius, 
 		Rhs = ddl.GetObject<DamageModifierConditionEntry>(0xe6498dccu);
 	}
 
-	[DDLRegistration(0x0d6047b7u)]
+	[DDLRegistration(0xf0f103b6u)]
 	public DamageModifierConditionEntry? Lhs { get; set; } = default;
 
-	[DDLRegistration(0x0d6047b7u)]
+	[DDLRegistration(0xe6498dccu)]
 	public DamageModifierConditionEntry? Rhs { get; set; } = default;
 
 	public new static DamageModifierConditionOrPrius Create(DDLObject ddl) => new(ddl);

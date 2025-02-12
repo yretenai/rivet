@@ -18,7 +18,7 @@ public class TierData : DDLObjectType, IDDLObjectType<TierData> {
 		Tiers = ddl.GetObjects<Tier>(0x0f14f763u);
 	}
 
-	[DDLRegistration(0x5eb95a42u)]
+	[DDLRegistration(0x0f14f763u)]
 	public List<Tier?> Tiers { get; set; } = [];
 
 	public static TierData Create(DDLObject ddl) => new(ddl);

@@ -30,43 +30,43 @@ public class VehicleSetListEntry : DDLObjectType, IDDLObjectType<VehicleSetListE
 		VehicleTypeList = ddl.GetObjects<VehicleTypeListEntry>(0x3a20a6f4u);
 	}
 
-	[DDLRegistration(0x3f19ea5fu, description: "Name of the set")]
+	[DDLRegistration(0xca38a032u, description: "Name of the set")]
 	public string? SetName { get; set; } = default;
 
-	[DDLRegistration(0x3f19ea5fu, description: "Set is enabled only in these lighting modes. No entries means lighting modes will not be checked.")]
+	[DDLRegistration(0xe4bf6a4fu, description: "Set is enabled only in these lighting modes. No entries means lighting modes will not be checked.")]
 	public List<LightingModeGame> RequiredLightingModes { get; set; } = [];
 
-	[DDLRegistration(0x3f19ea5fu, description: "Set is enabled only under these conditions.")]
+	[DDLRegistration(0x39f41e9cu, description: "Set is enabled only under these conditions.")]
 	public ObjSysUnlockSequence? RequiredMissionUnlocks { get; set; } = default;
 
-	[DDLRegistration(0x3f19ea5fu, description: "Set is enabled only in these container regions. No entries means the current container region will not be checked.")]
+	[DDLRegistration(0x43245e25u, description: "Set is enabled only in these container regions. No entries means the current container region will not be checked.")]
 	public List<RivetAssetId> RequiredContainerRegions { get; set; } = [];
 
-	[DDLRegistration(0x3f19ea5fu)]
+	[DDLRegistration(0x56911753u)]
 	public VehicleSpawnInfo? SpawnInfo { get; set; } = default;
 
-	[DDLRegistration(0x3f19ea5fu)]
+	[DDLRegistration(0xc0c72b9cu)]
 	public VehicleNodeParams? NodeParams { get; set; } = default;
 
-	[DDLRegistration(0x3f19ea5fu, description: "Maximum number of vehicles allowed to be spawned while this set is active.")]
+	[DDLRegistration(0x8bdfe14eu, description: "Maximum number of vehicles allowed to be spawned while this set is active.")]
 	public int MaxVehicles { get; set; } = 0;
 
-	[DDLRegistration(0x3f19ea5fu, description: "Maximum number of vehicles allowed to be spawned while this set is active and the game is in 60 FPS (perf mode) or medium vehicle density setting on PC.")]
+	[DDLRegistration(0x7612db2fu, description: "Maximum number of vehicles allowed to be spawned while this set is active and the game is in 60 FPS (perf mode) or medium vehicle density setting on PC.")]
 	public int MaxVehiclesPerfMode { get; set; } = 0;
 
-	[DDLRegistration(0x3f19ea5fu, description: "Maximum number of vehicles allowed to be spawned while this set is active and the game is using medium vehicle density setting on PC.")]
+	[DDLRegistration(0x11572cd3u, description: "Maximum number of vehicles allowed to be spawned while this set is active and the game is using medium vehicle density setting on PC.")]
 	public int MaxVehiclesMediumPerfMode { get; set; } = 0;
 
-	[DDLRegistration(0x3f19ea5fu, description: "Maximum number of vehicles allowed to be spawned while this set is active and the game is using low vehicle density setting on PC.")]
+	[DDLRegistration(0x3b01b021u, description: "Maximum number of vehicles allowed to be spawned while this set is active and the game is using low vehicle density setting on PC.")]
 	public int MaxVehiclesLowPerfMode { get; set; } = 0;
 
-	[DDLRegistration(0x3f19ea5fu, description: "Vehicles that come within this XZ range of the camera will have sound enabled.")]
+	[DDLRegistration(0xcd8ae4d6u, description: "Vehicles that come within this XZ range of the camera will have sound enabled.")]
 	public float SoundEnableRange { get; set; } = 30.00f;
 
-	[DDLRegistration(0x3f19ea5fu, description: "Vehicles that had sound enabled but are beyond this XZ range of the camera will have sound disabled.")]
+	[DDLRegistration(0xe085b7d7u, description: "Vehicles that had sound enabled but are beyond this XZ range of the camera will have sound disabled.")]
 	public float SoundDisableRange { get; set; } = 38.00f;
 
-	[DDLRegistration(0x3f19ea5fu)]
+	[DDLRegistration(0x3a20a6f4u)]
 	public List<VehicleTypeListEntry?> VehicleTypeList { get; set; } = [];
 
 	public static VehicleSetListEntry Create(DDLObject ddl) => new(ddl);

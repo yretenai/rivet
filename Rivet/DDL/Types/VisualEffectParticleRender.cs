@@ -26,31 +26,31 @@ public class VisualEffectParticleRender : DDLObjectType, IDDLObjectType<VisualEf
 		UVFlips = ddl.GetObject<SeparateUVFlips>(0xff77e4adu);
 	}
 
-	[DDLRegistration(0x7242fa41u, "Particle LifeTime")]
+	[DDLRegistration(0x06d814aeu, "Particle LifeTime")]
 	public VisualEffectFloatKeyFrames? FloatKeyFrames_EmissionLifeTime { get; set; } = default;
 
-	[DDLRegistration(0x7242fa41u, "Particle Color")]
+	[DDLRegistration(0x0e2f0ae0u, "Particle Color")]
 	public VisualEffectColorKeyFrames? ColorKeyFrames_ParticleColor { get; set; } = default;
 
-	[DDLRegistration(0x7242fa41u, "Particle Alpha")]
+	[DDLRegistration(0x433c59c0u, "Particle Alpha")]
 	public VisualEffectFloat2KeyFrames? Float2KeyFrames_ParticleAlpha { get; set; } = default;
 
-	[DDLRegistration(0x7242fa41u, "Particle Luminance")]
+	[DDLRegistration(0x96b362fdu, "Particle Luminance")]
 	public VisualEffectFloatKeyFrames? FloatKeyFrames_ParticleLuminance { get; set; } = default;
 
-	[DDLRegistration(0x7242fa41u, "Particle Custom")]
+	[DDLRegistration(0xb49dff8eu, "Particle Custom")]
 	public VisualEffectFloat3KeyFrames? Float3KeyFrames_ParticleCustom { get; set; } = default;
 
-	[DDLRegistration(0x7242fa41u, "Particle Scales")]
+	[DDLRegistration(0xb02e2702u, "Particle Scales")]
 	public VisualEffectFloat3KeyFrames? Float3KeyFrames_ParticleScales { get; set; } = default;
 
-	[DDLRegistration(0x7242fa41u, "Particle Length")]
+	[DDLRegistration(0x0074b526u, "Particle Length")]
 	public VisualEffectMinMax? InputPort_ParticleLength { get; set; } = default;
 
-	[DDLRegistration(0x7242fa41u, "Particle Rotation")]
+	[DDLRegistration(0x86c677dfu, "Particle Rotation")]
 	public VisualEffectRotationKeyFrames? Float3KeyFrames_ParticleRotation { get; set; } = default;
 
-	[DDLRegistration(0x7242fa41u, "UV Flips")]
+	[DDLRegistration(0xff77e4adu, "UV Flips")]
 	public SeparateUVFlips? UVFlips { get; set; } = default;
 
 	public static VisualEffectParticleRender Create(DDLObject ddl) => new(ddl);

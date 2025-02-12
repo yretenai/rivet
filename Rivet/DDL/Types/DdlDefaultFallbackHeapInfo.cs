@@ -19,10 +19,10 @@ public class DdlDefaultFallbackHeapInfo : DDLObjectType, IDDLObjectType<DdlDefau
 		InitialMaxAllocs = ddl.GetValue<ulong>(0x9002b646u, InitialMaxAllocs);
 	}
 
-	[DDLRegistration(0xcc591451u)]
+	[DDLRegistration(0x6ab15eb3u)]
 	public bool AllowHeap { get; set; } = true;
 
-	[DDLRegistration(0xcc591451u)]
+	[DDLRegistration(0x9002b646u)]
 	public ulong InitialMaxAllocs { get; set; } = 0x0000000000001000;
 
 	public static DdlDefaultFallbackHeapInfo Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class MovingSurfaceCollectionPrius : DDLObjectType, IDDLObjectType<Moving
 		AutoAddCollision = ddl.GetValue<bool>(0x79f3f40du, AutoAddCollision);
 	}
 
-	[DDLRegistration(0xdfed1dfcu)]
+	[DDLRegistration(0x627e6c23u)]
 	public MovingSurfacePrius? SurfacePrius { get; set; } = default;
 
-	[DDLRegistration(0xdfed1dfcu, description: "Max distance from the camera at which collision is enabled (0 = always enabled).")]
+	[DDLRegistration(0x0e79348cu, description: "Max distance from the camera at which collision is enabled (0 = always enabled).")]
 	public float MaxCollisionDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdfed1dfcu, description: "Automatically add collision to placed model instances (does not apply to collected actors).")]
+	[DDLRegistration(0x79f3f40du, description: "Automatically add collision to placed model instances (does not apply to collected actors).")]
 	public bool AutoAddCollision { get; set; } = true;
 
 	public static MovingSurfaceCollectionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class HeroCharacterConfig : ConfigBase, IDDLObjectType<HeroCharacterConfi
 		CharacterList = ddl.GetObjects<HeroCharacterData>(0xdd4277d7u);
 	}
 
-	[DDLRegistration(0xd381b0f2u)]
+	[DDLRegistration(0xdd4277d7u)]
 	public List<HeroCharacterData?> CharacterList { get; set; } = [];
 
 	public new static HeroCharacterConfig Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ObjectiveSystemConfig : ConfigBase, IDDLObjectType<ObjectiveSystemC
 		DebugGraphList = ddl.GetObject<DebugGraphList>(0x63f0f436u);
 	}
 
-	[DDLRegistration(0x775b5d83u)]
+	[DDLRegistration(0x5624b145u)]
 	public ObjectiveSystemDataShared? SystemData { get; set; } = default;
 
-	[DDLRegistration(0x775b5d83u)]
+	[DDLRegistration(0x63f0f436u)]
 	public DebugGraphList? DebugGraphList { get; set; } = default;
 
 	public new static ObjectiveSystemConfig Create(DDLObject ddl) => new(ddl);

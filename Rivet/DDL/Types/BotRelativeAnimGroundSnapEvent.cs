@@ -18,7 +18,7 @@ public class BotRelativeAnimGroundSnapEvent : EventBase, IDDLObjectType<BotRelat
 		GroundSnapOn = ddl.GetValue<bool>(0xc407c794u, GroundSnapOn);
 	}
 
-	[DDLRegistration(0x11fe52b4u)]
+	[DDLRegistration(0xc407c794u)]
 	public bool GroundSnapOn { get; set; } = true;
 
 	public new static BotRelativeAnimGroundSnapEvent Create(DDLObject ddl) => new(ddl);

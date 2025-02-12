@@ -40,73 +40,73 @@ public class SpawnerObjectPrius : DDLObjectType, IDDLObjectType<SpawnerObjectPri
 		MinDistanceFromPlayers = ddl.GetValue<float>(0x949df3bau, MinDistanceFromPlayers);
 	}
 
-	[DDLRegistration(0xd8fcfd7eu, "Start Enabled?", "Whether this component starts enabled or not.")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled?", "Whether this component starts enabled or not.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0xd8fcfd7eu, "Obj Spawn Anim", "The spawn driver (or clip name for SimpleAnimated) for the spawn animation of this object (i.e., the animation to play on this actor when it is spawning a guy).")]
+	[DDLRegistration(0x3056fd88u, "Obj Spawn Anim", "The spawn driver (or clip name for SimpleAnimated) for the spawn animation of this object (i.e., the animation to play on this actor when it is spawning a guy).")]
 	public string? ObjSpawnAnim { get; set; } = "Spawn";
 
-	[DDLRegistration(0xd8fcfd7eu, "Num Active", "The maximum spawned guys active at once (max alive to maintain).")]
+	[DDLRegistration(0x03f43bd2u, "Num Active", "The maximum spawned guys active at once (max alive to maintain).")]
 	public byte NumActive { get; set; } = 0x02;
 
-	[DDLRegistration(0xd8fcfd7eu, "Num to Spawn", "The number we want to spawn before we auto-stop. <= 0 will be an infinite spawn.")]
+	[DDLRegistration(0xbf9d56a9u, "Num to Spawn", "The number we want to spawn before we auto-stop. <= 0 will be an infinite spawn.")]
 	public int NumToSpawn { get; set; } = -1;
 
-	[DDLRegistration(0xd8fcfd7eu, "Auto Spawn Delete Dist", "What distance to delete what we've spawned. If set to something <= 0, then we won't auto delete.")]
+	[DDLRegistration(0xcf8e5366u, "Auto Spawn Delete Dist", "What distance to delete what we've spawned. If set to something <= 0, then we won't auto delete.")]
 	public float AutoDeleteDist { get; set; } = -1.00f;
 
-	[DDLRegistration(0xd8fcfd7eu, "Trigger Delay", "The delay to start spawning when triggered (aka, spawning start.")]
+	[DDLRegistration(0xdc9a5229u, "Trigger Delay", "The delay to start spawning when triggered (aka, spawning start.")]
 	public float TriggerDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd8fcfd7eu, "Spawn Delay", "The minimum delay between spawns.")]
+	[DDLRegistration(0x6768b329u, "Spawn Delay", "The minimum delay between spawns.")]
 	public float SpawnDelay { get; set; } = 0.25f;
 
-	[DDLRegistration(0xd8fcfd7eu, "Trigger Awareness", "We spawn only when target is in this area. If none is given, we will use distance to hero.")]
+	[DDLRegistration(0xb32a18d9u, "Trigger Awareness", "We spawn only when target is in this area. If none is given, we will use distance to hero.")]
 	public RivetAssetId TriggerArea { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd8fcfd7eu, "Trigger Range", "If no trigger awareness is given, we will use this trigger distance instead.")]
+	[DDLRegistration(0xfd8788fbu, "Trigger Range", "If no trigger awareness is given, we will use this trigger distance instead.")]
 	public float TriggerRange { get; set; } = 50.00f;
 
-	[DDLRegistration(0xd8fcfd7eu, "Spawn Area", "Area we spawn our guys into.")]
+	[DDLRegistration(0x4a8c1b6cu, "Spawn Area", "Area we spawn our guys into.")]
 	public RivetAssetId SpawnArea { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd8fcfd7eu, "Random Nav Spawn?", "Whether to pick a random point on nav inside the spawn area to spawn at/throw towards. If false, we will use the volume origin.")]
+	[DDLRegistration(0x056aaa75u, "Random Nav Spawn?", "Whether to pick a random point on nav inside the spawn area to spawn at/throw towards. If false, we will use the volume origin.")]
 	public bool RandSpawnNavLoc { get; set; } = false;
 
-	[DDLRegistration(0xd8fcfd7eu, "Throw spawn?", "Throw our spawnee to their spawn position. Otherwise they will spawn in place.")]
+	[DDLRegistration(0x32e4b077u, "Throw spawn?", "Throw our spawnee to their spawn position. Otherwise they will spawn in place.")]
 	public bool ThrowSpawn { get; set; } = true;
 
-	[DDLRegistration(0xd8fcfd7eu, "Send beam event on spawn?", "Whether to send the beam-in event (BeamInStartEvent) when spawning so another component/conduit on the spawnee so it can apply some beam in effects.")]
+	[DDLRegistration(0xad5b6909u, "Send beam event on spawn?", "Whether to send the beam-in event (BeamInStartEvent) when spawning so another component/conduit on the spawnee so it can apply some beam in effects.")]
 	public bool BeamInSpawn { get; set; } = false;
 
-	[DDLRegistration(0xd8fcfd7eu, "Spawn Actor Template", "The actor template to spawn. If set, we will not use the Spawn Vault Actor below.")]
+	[DDLRegistration(0x826daf07u, "Spawn Actor Template", "The actor template to spawn. If set, we will not use the Spawn Vault Actor below.")]
 	public RivetAssetId SpawneeTemplate { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd8fcfd7eu, "Vault Actor to Spawn", "The actor (from the vault) to spawn. Will not use if a template is specified.")]
+	[DDLRegistration(0xfd11992du, "Vault Actor to Spawn", "The actor (from the vault) to spawn. Will not use if a template is specified.")]
 	public RivetAssetId SpawneeVaultActor { get; set; } = default;
 
-	[DDLRegistration(0xd8fcfd7eu, "(Opt) Spawn Joint", "Joint to spawn from when doing a throw spawn. If none (or invalid) given, we'll use our actor position.")]
+	[DDLRegistration(0x48074fb5u, "(Opt) Spawn Joint", "Joint to spawn from when doing a throw spawn. If none (or invalid) given, we'll use our actor position.")]
 	public string? SpawnJoint { get; set; } = "";
 
-	[DDLRegistration(0xd8fcfd7eu, "Spawn Offset", "For a thrown spawn or when spawning on the actor, offset from the spawn joint (or actor position) to spawn at. Note that this is offset in local space, x == obj left, y == obj up, z == obj forward.")]
+	[DDLRegistration(0xaeb205ceu, "Spawn Offset", "For a thrown spawn or when spawning on the actor, offset from the spawn joint (or actor position) to spawn at. Note that this is offset in local space, x == obj left, y == obj up, z == obj forward.")]
 	public DDLVector3? SpawnOffset { get; set; } = default;
 
-	[DDLRegistration(0xd8fcfd7eu, "(Opt) Spawned Actor Group", "Optional spawner-setup actor group to put all the spawned guys into. If this actor group current has actors in it, it will count against our max active (so you can set up the initial setup that the spawner will maintain).")]
+	[DDLRegistration(0x5ae33e11u, "(Opt) Spawned Actor Group", "Optional spawner-setup actor group to put all the spawned guys into. If this actor group current has actors in it, it will count against our max active (so you can set up the initial setup that the spawner will maintain).")]
 	public RivetAssetId SpawnedGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd8fcfd7eu, "(Opt) Extra Actor Group", "Optional additional actor group to add the spawned guys into. Not used for any spawner logic.")]
+	[DDLRegistration(0x3f9c3b70u, "(Opt) Extra Actor Group", "Optional additional actor group to add the spawned guys into. Not used for any spawner logic.")]
 	public RivetAssetId ExtraAddToGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd8fcfd7eu, "Check for hero too close?", "Check for spawning on top of hero?")]
+	[DDLRegistration(0xa5823b98u, "Check for hero too close?", "Check for spawning on top of hero?")]
 	public bool CheckHeroTooClose { get; set; } = false;
 
-	[DDLRegistration(0xd8fcfd7eu, description: "If TRUE, a navigation obstacle will be generated around the actor")]
+	[DDLRegistration(0x3befd1c0u, description: "If TRUE, a navigation obstacle will be generated around the actor")]
 	public bool CreateNavObstacle { get; set; } = true;
 
-	[DDLRegistration(0xd8fcfd7eu, "Attach Spawned Objects", "If TRUE, attach spawned objects to this actor.")]
+	[DDLRegistration(0xc54a2953u, "Attach Spawned Objects", "If TRUE, attach spawned objects to this actor.")]
 	public bool AttachOnSpawn { get; set; } = false;
 
-	[DDLRegistration(0xd8fcfd7eu, "Min Dist From Players", "Wait to spawn until players are this far away.")]
+	[DDLRegistration(0x949df3bau, "Min Dist From Players", "Wait to spawn until players are this far away.")]
 	public float MinDistanceFromPlayers { get; set; } = 1.00f;
 
 	public static SpawnerObjectPrius Create(DDLObject ddl) => new(ddl);

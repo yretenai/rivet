@@ -20,13 +20,13 @@ public class AnimControllerStructuredTrace : DDLObjectType, IDDLObjectType<AnimC
 		Message = ddl.GetString(0xb7575347) ?? Message;
 	}
 
-	[DDLRegistration(0xda811b70u)]
+	[DDLRegistration(0xcc5fa3efu)]
 	public int WorldTimeFrameIndex { get; set; } = 0;
 
-	[DDLRegistration(0xda811b70u)]
+	[DDLRegistration(0x4ef19112u)]
 	public string? DebugName { get; set; } = default;
 
-	[DDLRegistration(0xda811b70u)]
+	[DDLRegistration(0xb7575347u)]
 	public string? Message { get; set; } = default;
 
 	public static AnimControllerStructuredTrace Create(DDLObject ddl) => new(ddl);

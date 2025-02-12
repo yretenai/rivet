@@ -26,31 +26,31 @@ public class UIPhotoModeOption : DDLObjectType, IDDLObjectType<UIPhotoModeOption
 		Settings = ddl.GetStrings(0x1f441db5u);
 	}
 
-	[DDLRegistration(0x967007d0u)]
+	[DDLRegistration(0xb13f6a45u)]
 	public x4f56b709 ID { get; set; } = x4f56b709.FOV;
 
-	[DDLRegistration(0x967007d0u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x967007d0u)]
+	[DDLRegistration(0xfc5698d2u)]
 	public float ValueMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x967007d0u)]
+	[DDLRegistration(0xc05ba78bu)]
 	public float ValueMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0x967007d0u)]
+	[DDLRegistration(0x0142ba1cu)]
 	public int Fidelity { get; set; } = 100;
 
-	[DDLRegistration(0x967007d0u, description: "How big to step when the slider is fast.")]
+	[DDLRegistration(0x394868eeu, description: "How big to step when the slider is fast.")]
 	public int FastFidelity { get; set; } = 25;
 
-	[DDLRegistration(0x967007d0u)]
+	[DDLRegistration(0xf94ba34fu)]
 	public xed640b4c SliderType { get; set; } = xed640b4c.Default;
 
-	[DDLRegistration(0x967007d0u)]
+	[DDLRegistration(0xeb8f1f26u)]
 	public xc57b533a ClampType { get; set; } = xc57b533a.Clamp;
 
-	[DDLRegistration(0x967007d0u)]
+	[DDLRegistration(0x1f441db5u)]
 	public List<string?> Settings { get; set; } = [];
 
 	public static UIPhotoModeOption Create(DDLObject ddl) => new(ddl);

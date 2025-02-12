@@ -26,31 +26,31 @@ public class TunnelerBombSpawnData : ActorSpawnData, IDDLObjectType<TunnelerBomb
 		BombPrius = ddl.GetObject<TunnelerBombPrius>(0x9590e9a5u);
 	}
 
-	[DDLRegistration(0x7b75aafdu)]
+	[DDLRegistration(0x8e49d787u)]
 	public ulong FiredByHandle { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x7b75aafdu)]
+	[DDLRegistration(0x087ddaeeu)]
 	public ulong AttachToHandle { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x7b75aafdu)]
+	[DDLRegistration(0x469d6eb1u)]
 	public uint UnsyncedAttachToHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7b75aafdu)]
+	[DDLRegistration(0x66348122u)]
 	public int AttachToJoint { get; set; } = 0;
 
-	[DDLRegistration(0x7b75aafdu)]
+	[DDLRegistration(0x51fbb501u)]
 	public DDLTransform? SpawnMat { get; set; } = default;
 
-	[DDLRegistration(0x7b75aafdu)]
+	[DDLRegistration(0x75356989u)]
 	public RivetAssetId ActorAsset { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x7b75aafdu)]
+	[DDLRegistration(0xb4bf48cau)]
 	public bool HasParentActor { get; set; } = false;
 
-	[DDLRegistration(0x7b75aafdu)]
+	[DDLRegistration(0xcc6e3cecu)]
 	public bool InstantExplode { get; set; } = false;
 
-	[DDLRegistration(0x7b75aafdu)]
+	[DDLRegistration(0x9590e9a5u)]
 	public TunnelerBombPrius? BombPrius { get; set; } = default;
 
 	public new static TunnelerBombSpawnData Create(DDLObject ddl) => new(ddl);

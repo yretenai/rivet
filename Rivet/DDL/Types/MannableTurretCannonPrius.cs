@@ -33,52 +33,52 @@ public class MannableTurretCannonPrius : DDLObjectType, IDDLObjectType<MannableT
 		TurretOfferPrius = ddl.GetObject<UseTurretOfferPrius>(0x50d39793u);
 	}
 
-	[DDLRegistration(0x77cbf6cbu, description: "Joint on the model to adjust pitch on")]
+	[DDLRegistration(0xd2c06413u, description: "Joint on the model to adjust pitch on")]
 	public string? PitchJoint { get; set; } = "pitch_pivot";
 
-	[DDLRegistration(0x77cbf6cbu, "FreeYaw")]
+	[DDLRegistration(0xbeca3d19u, "FreeYaw")]
 	public bool FreeYaw { get; set; } = false;
 
-	[DDLRegistration(0x77cbf6cbu, "Right Limit")]
+	[DDLRegistration(0x0bad2fd6u, "Right Limit")]
 	public float YawLimitMin { get; set; } = 90.00f;
 
-	[DDLRegistration(0x77cbf6cbu, "Left  Limit")]
+	[DDLRegistration(0x37a0108fu, "Left  Limit")]
 	public float YawLimitMax { get; set; } = 90.00f;
 
-	[DDLRegistration(0x77cbf6cbu, "Up Limit")]
+	[DDLRegistration(0x6eec5171u, "Up Limit")]
 	public float PitchLimitMin { get; set; } = 45.00f;
 
-	[DDLRegistration(0x77cbf6cbu, "Down Limit")]
+	[DDLRegistration(0x52e16e28u, "Down Limit")]
 	public float PitchLimitMax { get; set; } = 30.00f;
 
-	[DDLRegistration(0x77cbf6cbu, "Only Heroes")]
+	[DDLRegistration(0x93a738dau, "Only Heroes")]
 	public bool OnlyHeroes { get; set; } = false;
 
-	[DDLRegistration(0x77cbf6cbu, "Max Yaw Speed")]
+	[DDLRegistration(0x710f81a1u, "Max Yaw Speed")]
 	public float MaxYawSpeed { get; set; } = 720.00f;
 
-	[DDLRegistration(0x77cbf6cbu, "Max Pitch Speed")]
+	[DDLRegistration(0xb9365e9bu, "Max Pitch Speed")]
 	public float MaxPitchSpeed { get; set; } = 360.00f;
 
-	[DDLRegistration(0x77cbf6cbu)]
+	[DDLRegistration(0xd5fef922u)]
 	public RivetAssetId FPTurret { get; set; } = default;
 
-	[DDLRegistration(0x77cbf6cbu, description: "This is a SpawnedShotConfig.")]
+	[DDLRegistration(0xb171e6aeu, description: "This is a SpawnedShotConfig.")]
 	public RivetAssetId ShotConfig { get; set; } = default;
 
-	[DDLRegistration(0x77cbf6cbu, description: "Emitter igLoc_???")]
+	[DDLRegistration(0x751316ddu, description: "Emitter igLoc_???")]
 	public string? ShotEmitLoc { get; set; } = "";
 
-	[DDLRegistration(0x77cbf6cbu, description: "Time between shots")]
+	[DDLRegistration(0xf6e0e4e5u, description: "Time between shots")]
 	public float ShotDelay { get; set; } = 0.50f;
 
-	[DDLRegistration(0x77cbf6cbu, description: "The locator for where we should pin the UI reticle.")]
+	[DDLRegistration(0xa7f07f61u, description: "The locator for where we should pin the UI reticle.")]
 	public string? ReticleLocator { get; set; } = "";
 
-	[DDLRegistration(0x77cbf6cbu, "Idle Look at Actor", "If no one is using the turret, we will auto face this actor (XZ only) if valid.")]
+	[DDLRegistration(0xb03e3d95u, "Idle Look at Actor", "If no one is using the turret, we will auto face this actor (XZ only) if valid.")]
 	public RivetAssetId IdleLookAt { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x77cbf6cbu, "Turret Offer Info", "Information for the offer (placement, range, facing, etc).")]
+	[DDLRegistration(0x50d39793u, "Turret Offer Info", "Information for the offer (placement, range, facing, etc).")]
 	public UseTurretOfferPrius? TurretOfferPrius { get; set; } = default;
 
 	public static MannableTurretCannonPrius Create(DDLObject ddl) => new(ddl);

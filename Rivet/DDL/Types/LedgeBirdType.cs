@@ -20,13 +20,13 @@ public class LedgeBirdType : DDLObjectType, IDDLObjectType<LedgeBirdType> {
 		Planets = ddl.GetStrings(0xbc30e83eu);
 	}
 
-	[DDLRegistration(0x83117418u)]
+	[DDLRegistration(0x4b6c9353u)]
 	public string? TypeName { get; set; } = default;
 
-	[DDLRegistration(0x83117418u)]
+	[DDLRegistration(0xeaf2611bu)]
 	public RivetAssetId Config { get; set; } = default;
 
-	[DDLRegistration(0x83117418u)]
+	[DDLRegistration(0xbc30e83eu)]
 	public List<string?> Planets { get; set; } = [];
 
 	public static LedgeBirdType Create(DDLObject ddl) => new(ddl);

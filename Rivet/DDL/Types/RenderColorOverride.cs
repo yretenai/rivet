@@ -20,13 +20,13 @@ public class RenderColorOverride : DDLObjectType, IDDLObjectType<RenderColorOver
 		Value = ddl.GetObject<DDLVector3>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x0796dfc7u, description: "Name of the node in the material graph this is being overridden")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of the node in the material graph this is being overridden")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x0796dfc7u, description: "Name of the Maya material mapping the override is restricted to")]
+	[DDLRegistration(0x981e6927u, description: "Name of the Maya material mapping the override is restricted to")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x0796dfc7u)]
+	[DDLRegistration(0x042494f5u)]
 	public DDLVector3? Value { get; set; } = default;
 
 	public static RenderColorOverride Create(DDLObject ddl) => new(ddl);

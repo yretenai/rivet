@@ -20,13 +20,13 @@ public class StatusEffectTrackerLightningRodPrius : StatusEffectTrackerBasePrius
 		FillOnDeath = ddl.GetValue<bool>(0x2ec2323fu, FillOnDeath);
 	}
 
-	[DDLRegistration(0x9193a7fdu, "Death Status Multiplier")]
+	[DDLRegistration(0x936ad2c2u, "Death Status Multiplier")]
 	public float DeathStatusMultiplier { get; set; } = 2.00f;
 
-	[DDLRegistration(0x9193a7fdu, "Skeleton Model")]
+	[DDLRegistration(0x253301b8u, "Skeleton Model")]
 	public RivetAssetId SkeletonModel { get; set; } = default;
 
-	[DDLRegistration(0x9193a7fdu)]
+	[DDLRegistration(0x2ec2323fu)]
 	public bool FillOnDeath { get; set; } = true;
 
 	public new static StatusEffectTrackerLightningRodPrius Create(DDLObject ddl) => new(ddl);

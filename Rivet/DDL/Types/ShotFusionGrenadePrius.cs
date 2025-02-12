@@ -18,7 +18,7 @@ public class ShotFusionGrenadePrius : GrenadeShotPrius, IDDLObjectType<ShotFusio
 		SubShotConfig = ddl.GetValue<RivetAssetId>(0x45f2be71u, SubShotConfig);
 	}
 
-	[DDLRegistration(0x42da616eu)]
+	[DDLRegistration(0x45f2be71u)]
 	public RivetAssetId SubShotConfig { get; set; } = default;
 
 	public new static ShotFusionGrenadePrius Create(DDLObject ddl) => new(ddl);

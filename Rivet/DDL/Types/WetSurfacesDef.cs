@@ -25,28 +25,28 @@ public class WetSurfacesDef : DDLObjectType, IDDLObjectType<WetSurfacesDef> {
 		VFXSplashRate = ddl.GetValue<float>(0x455429fcu, VFXSplashRate);
 	}
 
-	[DDLRegistration(0x410d46cfu)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0x410d46cfu, "Porosity Texture")]
+	[DDLRegistration(0x0c96e015u, "Porosity Texture")]
 	public RivetAssetId PorosityTexture { get; set; } = default;
 
-	[DDLRegistration(0x410d46cfu, "Streak Texture")]
+	[DDLRegistration(0x97d1e84au, "Streak Texture")]
 	public RivetAssetId StreakTexture { get; set; } = default;
 
-	[DDLRegistration(0x410d46cfu, "Splash Texture")]
+	[DDLRegistration(0x6d05f196u, "Splash Texture")]
 	public RivetAssetId SplashTexture { get; set; } = default;
 
-	[DDLRegistration(0x410d46cfu, "Wetness")]
+	[DDLRegistration(0xb9d9094du, "Wetness")]
 	public float Wetness { get; set; } = 1.00f;
 
-	[DDLRegistration(0x410d46cfu, "Gloss Limit")]
+	[DDLRegistration(0x90586c41u, "Gloss Limit")]
 	public float GlossLimit { get; set; } = 0.80f;
 
-	[DDLRegistration(0x410d46cfu, "VFX Splash Range")]
+	[DDLRegistration(0xaa113bedu, "VFX Splash Range")]
 	public float VFXSplashRange { get; set; } = 12.00f;
 
-	[DDLRegistration(0x410d46cfu, "VFX Splash Rate")]
+	[DDLRegistration(0x455429fcu, "VFX Splash Rate")]
 	public float VFXSplashRate { get; set; } = 0.00f;
 
 	public static WetSurfacesDef Create(DDLObject ddl) => new(ddl);

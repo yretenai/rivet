@@ -18,7 +18,7 @@ public class ActionControlHeroOfferControl : DDLObjectType, IDDLObjectType<Actio
 		Control = ddl.GetEnum<xd53eb9d4>(0xec314f73u, xd53eb9d4Values.Lookup);
 	}
 
-	[DDLRegistration(0xbe218286u)]
+	[DDLRegistration(0xec314f73u)]
 	public xd53eb9d4 Control { get; set; } = xd53eb9d4.AcceptOffer;
 
 	public static ActionControlHeroOfferControl Create(DDLObject ddl) => new(ddl);

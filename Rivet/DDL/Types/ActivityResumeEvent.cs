@@ -20,13 +20,13 @@ public class ActivityResumeEvent : UDSEventBase, IDDLObjectType<ActivityResumeEv
 		CompletedActivities = ddl.GetStrings(0x30805634u);
 	}
 
-	[DDLRegistration(0x7ec42a8cu)]
+	[DDLRegistration(0x875ebf15u)]
 	public string? ActivityId { get; set; } = default;
 
-	[DDLRegistration(0x7ec42a8cu)]
+	[DDLRegistration(0x65276378u)]
 	public List<string?> InProgressActivities { get; set; } = [];
 
-	[DDLRegistration(0x7ec42a8cu)]
+	[DDLRegistration(0x30805634u)]
 	public List<string?> CompletedActivities { get; set; } = [];
 
 	public new static ActivityResumeEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class UI_AnimDriverBlendNodeIntervals : DDLObjectType, IDDLObjectType<UI_
 		Intervals = ddl.GetObjects<AnimDriverBlendElemDef>(0x955c8dd0u);
 	}
 
-	[DDLRegistration(0x058737a2u)]
+	[DDLRegistration(0xdafdfffbu)]
 	public UI_AnimDriverBlendElemDefList? IntervalsUI { get; set; } = default;
 
-	[DDLRegistration(0x058737a2u)]
+	[DDLRegistration(0x955c8dd0u)]
 	public List<AnimDriverBlendElemDef?> Intervals { get; set; } = [];
 
 	public static UI_AnimDriverBlendNodeIntervals Create(DDLObject ddl) => new(ddl);

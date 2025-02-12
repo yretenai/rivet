@@ -18,7 +18,7 @@ public class BotComboConditionVariantCheckPrius : BotComboConditionBasePrius, ID
 		AllowedVariants = ddl.GetEnums<xc3e5efea>(0x89ce758bu, xc3e5efeaValues.Lookup);
 	}
 
-	[DDLRegistration(0x5769825du, description: "Bot needs to be one of these Variants to trigger the combo")]
+	[DDLRegistration(0x89ce758bu, description: "Bot needs to be one of these Variants to trigger the combo")]
 	public List<xc3e5efea> AllowedVariants { get; set; } = [];
 
 	public new static BotComboConditionVariantCheckPrius Create(DDLObject ddl) => new(ddl);

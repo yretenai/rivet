@@ -18,7 +18,7 @@ public class ShotClankPuzzlePrius : LobbedShotPrius, IDDLObjectType<ShotClankPuz
 		PuzzleVolume = ddl.GetValue<RivetAssetId>(0xc6bc624du, PuzzleVolume);
 	}
 
-	[DDLRegistration(0x91f0120au)]
+	[DDLRegistration(0xc6bc624du)]
 	public RivetAssetId PuzzleVolume { get; set; } = default;
 
 	public new static ShotClankPuzzlePrius Create(DDLObject ddl) => new(ddl);

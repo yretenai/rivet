@@ -21,16 +21,16 @@ public class VecToFloatsNodeDef : MathNodeBaseDef, IDDLObjectType<VecToFloatsNod
 		OutZ = ddl.GetObject<OutputPlugFloat>(0xe046565au);
 	}
 
-	[DDLRegistration(0x4d900db5u)]
+	[DDLRegistration(0x49594b39u)]
 	public InputPlugVec3? Vec { get; set; } = default;
 
-	[DDLRegistration(0x4d900db5u, "X")]
+	[DDLRegistration(0x0e483776u, "X")]
 	public OutputPlugFloat? OutX { get; set; } = default;
 
-	[DDLRegistration(0x4d900db5u, "Y")]
+	[DDLRegistration(0x794f07e0u, "Y")]
 	public OutputPlugFloat? OutY { get; set; } = default;
 
-	[DDLRegistration(0x4d900db5u, "Z")]
+	[DDLRegistration(0xe046565au, "Z")]
 	public OutputPlugFloat? OutZ { get; set; } = default;
 
 	public new static VecToFloatsNodeDef Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class InteractLocationAreaPrius : InteractLocationPrius, IDDLObjectType<I
 		NeedsClearPath = ddl.GetValue<bool>(0xe9b686b7u, NeedsClearPath);
 	}
 
-	[DDLRegistration(0xbf76d5d4u, "Area Shape")]
+	[DDLRegistration(0x016c10d4u, "Area Shape")]
 	public xb7a407a9 AreaShape { get; set; } = xb7a407a9.Square;
 
-	[DDLRegistration(0xbf76d5d4u, "Inner Radius")]
+	[DDLRegistration(0xf8a3836du, "Inner Radius")]
 	public float InnerRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbf76d5d4u, "Outer Radius")]
+	[DDLRegistration(0xf6b6fbdeu, "Outer Radius")]
 	public float OuterRadius { get; set; } = 2.00f;
 
-	[DDLRegistration(0xbf76d5d4u, "Approach Inner")]
+	[DDLRegistration(0x600cc7a1u, "Approach Inner")]
 	public float ApproachInner { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbf76d5d4u, "Approach Outer")]
+	[DDLRegistration(0x79e5c439u, "Approach Outer")]
 	public float ApproachOuter { get; set; } = 99.00f;
 
-	[DDLRegistration(0xbf76d5d4u, "User Facing Max")]
+	[DDLRegistration(0xe9d83ef4u, "User Facing Max")]
 	public float UserFacingMax { get; set; } = 75.00f;
 
-	[DDLRegistration(0xbf76d5d4u, "Ignore Facing Radius")]
+	[DDLRegistration(0x1e36a126u, "Ignore Facing Radius")]
 	public float IgnoreFacingRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbf76d5d4u, "Max vertical distance")]
+	[DDLRegistration(0xfa73da25u, "Max vertical distance")]
 	public float MaxDistY { get; set; } = 0.35f;
 
-	[DDLRegistration(0xbf76d5d4u, "Force To Outer Ring")]
+	[DDLRegistration(0x19aaf6bbu, "Force To Outer Ring")]
 	public bool ForceToOuterRing { get; set; } = false;
 
-	[DDLRegistration(0xbf76d5d4u, "Need Clear Path", "Whether use of this position requires a clear path free of other characters")]
+	[DDLRegistration(0xe9b686b7u, "Need Clear Path", "Whether use of this position requires a clear path free of other characters")]
 	public bool NeedsClearPath { get; set; } = true;
 
 	public new static InteractLocationAreaPrius Create(DDLObject ddl) => new(ddl);

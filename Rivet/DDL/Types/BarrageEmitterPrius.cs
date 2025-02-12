@@ -19,10 +19,10 @@ public class BarrageEmitterPrius : WeaponEmitterBasePrius, IDDLObjectType<Barrag
 		EmitterLocatorPrefix = ddl.GetString(0x79b32a3f) ?? EmitterLocatorPrefix;
 	}
 
-	[DDLRegistration(0x92b7c23du)]
+	[DDLRegistration(0x13b721dbu)]
 	public bool EmitFromUser { get; set; } = false;
 
-	[DDLRegistration(0x92b7c23du)]
+	[DDLRegistration(0x79b32a3fu)]
 	public string? EmitterLocatorPrefix { get; set; } = "igLoc_bulletEmit";
 
 	public new static BarrageEmitterPrius Create(DDLObject ddl) => new(ddl);

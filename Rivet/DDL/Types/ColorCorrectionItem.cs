@@ -19,10 +19,10 @@ public class ColorCorrectionItem : DDLObjectType, IDDLObjectType<ColorCorrection
 		ColorCorrectionTexture = ddl.GetValue<RivetAssetId>(0x6aba6325u, ColorCorrectionTexture);
 	}
 
-	[DDLRegistration(0x342a14c4u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xa7ef66f3 Type { get; set; } = xa7ef66f3.None;
 
-	[DDLRegistration(0x342a14c4u)]
+	[DDLRegistration(0x6aba6325u)]
 	public RivetAssetId ColorCorrectionTexture { get; set; } = default;
 
 	public static ColorCorrectionItem Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class DEVOFollowup : DDLObjectType, IDDLObjectType<DEVOFollowup> {
 		FollowupTrigger = ddl.GetEnum<DialogTriggerGame>(0x5ec33922u, DialogTriggerGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x007fe1e8u, description: "Where this followup should be sent.")]
+	[DDLRegistration(0xc5138781u, description: "Where this followup should be sent.")]
 	public xb3a943f0 ToWhom { get; set; } = xb3a943f0.Any;
 
-	[DDLRegistration(0x007fe1e8u, "Specific Target Voice", "If 'whom' is SpecificPerson, then find an actor with this voice and send to it.")]
+	[DDLRegistration(0x05a2d0ebu, "Specific Target Voice", "If 'whom' is SpecificPerson, then find an actor with this voice and send to it.")]
 	public VoiceGame SpecificTargetVoice { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0x007fe1e8u, description: "Look only within this radius for people to send a followup event to. 0 means \"infinity\", which is the default.")]
+	[DDLRegistration(0x0504203du, description: "Look only within this radius for people to send a followup event to. 0 means \"infinity\", which is the default.")]
 	public float Radius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x007fe1e8u, description: "DialogTrigger to send the other character as a prompt for its next line.")]
+	[DDLRegistration(0x5ec33922u, description: "DialogTrigger to send the other character as a prompt for its next line.")]
 	public DialogTriggerGame FollowupTrigger { get; set; } = DialogTriggerGame.OnAnswer;
 
 	public static DEVOFollowup Create(DDLObject ddl) => new(ddl);

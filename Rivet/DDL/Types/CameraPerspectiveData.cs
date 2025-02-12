@@ -21,16 +21,16 @@ public class CameraPerspectiveData : DDLObjectType, IDDLObjectType<CameraPerspec
 		Fov = ddl.GetValue<float>(0xc24de428u, Fov);
 	}
 
-	[DDLRegistration(0xc7c71877u, "Aspect Ratio", "Aspect Ratio: 800x600 = 1.3333 1024x768 = 1.3333")]
+	[DDLRegistration(0xcefb8d32u, "Aspect Ratio", "Aspect Ratio: 800x600 = 1.3333 1024x768 = 1.3333")]
 	public float Aspect { get; set; } = 1.33f;
 
-	[DDLRegistration(0xc7c71877u, "Near Clip Distance", "Distance to near clip plane")]
+	[DDLRegistration(0x46dcdca1u, "Near Clip Distance", "Distance to near clip plane")]
 	public float Near { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc7c71877u, "Far Clip Distance", "Distance to far clip plane")]
+	[DDLRegistration(0x5a616788u, "Far Clip Distance", "Distance to far clip plane")]
 	public float Gar { get; set; } = 100.00f;
 
-	[DDLRegistration(0xc7c71877u, "FOV", "Camera Field of view in degrees")]
+	[DDLRegistration(0xc24de428u, "FOV", "Camera Field of view in degrees")]
 	public float Fov { get; set; } = 60.00f;
 
 	public static CameraPerspectiveData Create(DDLObject ddl) => new(ddl);

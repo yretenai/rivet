@@ -19,10 +19,10 @@ public class WeaponPixelizerPrius : WeaponGamePrius, IDDLObjectType<WeaponPixeli
 		HealthLootData = ddl.GetObject<CommonLootData>(0x0422c198u);
 	}
 
-	[DDLRegistration(0x36249da0u)]
+	[DDLRegistration(0xed96576du)]
 	public CommonLootData? AmmoLootData { get; set; } = default;
 
-	[DDLRegistration(0x36249da0u)]
+	[DDLRegistration(0x0422c198u)]
 	public CommonLootData? HealthLootData { get; set; } = default;
 
 	public new static WeaponPixelizerPrius Create(DDLObject ddl) => new(ddl);

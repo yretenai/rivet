@@ -18,7 +18,7 @@ public class MoveableJointCollSnappedPrius : MoveableJointPrius, IDDLObjectType<
 		CollSnappedPriusData = ddl.GetObject<MoveableJointCollSnappedData>(0xee108556u);
 	}
 
-	[DDLRegistration(0x098e1799u)]
+	[DDLRegistration(0xee108556u)]
 	public MoveableJointCollSnappedData? CollSnappedPriusData { get; set; } = default;
 
 	public new static MoveableJointCollSnappedPrius Create(DDLObject ddl) => new(ddl);

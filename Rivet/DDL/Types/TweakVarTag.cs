@@ -19,10 +19,10 @@ public class TweakVarTag : DDLObjectType, IDDLObjectType<TweakVarTag> {
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0x4407d607u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x4407d607u)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
 	public static TweakVarTag Create(DDLObject ddl) => new(ddl);

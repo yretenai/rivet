@@ -18,7 +18,7 @@ public class PassiveShiftTransitionActionPrius : DDLObjectType, IDDLObjectType<P
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x765bc46au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
 	public static PassiveShiftTransitionActionPrius Create(DDLObject ddl) => new(ddl);

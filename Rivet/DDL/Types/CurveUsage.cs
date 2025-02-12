@@ -19,10 +19,10 @@ public class CurveUsage : DDLObjectType, IDDLObjectType<CurveUsage> {
 		TerrainRoad = ddl.GetValue<bool>(0x9fc017b0u, TerrainRoad);
 	}
 
-	[DDLRegistration(0x56a464dau, "Houdini", "Show properties for generating rivers with Houdini")]
+	[DDLRegistration(0xd01d63dau, "Houdini", "Show properties for generating rivers with Houdini")]
 	public bool Houdini { get; set; } = false;
 
-	[DDLRegistration(0x56a464dau, "Terrain Road", "Show properties that can be used with roads on terrain.")]
+	[DDLRegistration(0x9fc017b0u, "Terrain Road", "Show properties that can be used with roads on terrain.")]
 	public bool TerrainRoad { get; set; } = false;
 
 	public static CurveUsage Create(DDLObject ddl) => new(ddl);

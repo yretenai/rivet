@@ -19,10 +19,10 @@ public class ManglerControlScriptActionPrius : DDLObjectType, IDDLObjectType<Man
 		ManglerConfig = ddl.GetObject<ManglerConfig>(0xc0f30ae3u);
 	}
 
-	[DDLRegistration(0x0d557976u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0x0d557976u)]
+	[DDLRegistration(0xc0f30ae3u)]
 	public ManglerConfig? ManglerConfig { get; set; } = default;
 
 	public static ManglerControlScriptActionPrius Create(DDLObject ddl) => new(ddl);

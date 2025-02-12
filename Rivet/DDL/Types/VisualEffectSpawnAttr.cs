@@ -20,13 +20,13 @@ public class VisualEffectSpawnAttr : DDLObjectType, IDDLObjectType<VisualEffectS
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x9734d0f7u, "Spawn Condition")]
+	[DDLRegistration(0xddf72fe3u, "Spawn Condition")]
 	public SpawnCondition SpawnCondition { get; set; } = SpawnCondition.Always;
 
-	[DDLRegistration(0x9734d0f7u, "CoolOff Time")]
+	[DDLRegistration(0x9f61372fu, "CoolOff Time")]
 	public float CoolOffTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9734d0f7u, "Radius")]
+	[DDLRegistration(0x0504203du, "Radius")]
 	public float Radius { get; set; } = 0.00f;
 
 	public static VisualEffectSpawnAttr Create(DDLObject ddl) => new(ddl);

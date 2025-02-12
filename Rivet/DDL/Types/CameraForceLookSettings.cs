@@ -20,13 +20,13 @@ public class CameraForceLookSettings : DDLObjectType, IDDLObjectType<CameraForce
 		SpeedDecel = ddl.GetValue<float>(0xb0157580u, SpeedDecel);
 	}
 
-	[DDLRegistration(0xd1174a9fu)]
+	[DDLRegistration(0xb6419fbau)]
 	public float SpeedMax { get; set; } = 480.00f;
 
-	[DDLRegistration(0xd1174a9fu)]
+	[DDLRegistration(0x5d9ea52cu)]
 	public float SpeedAccel { get; set; } = 9000.00f;
 
-	[DDLRegistration(0xd1174a9fu)]
+	[DDLRegistration(0xb0157580u)]
 	public float SpeedDecel { get; set; } = 9000.00f;
 
 	public static CameraForceLookSettings Create(DDLObject ddl) => new(ddl);

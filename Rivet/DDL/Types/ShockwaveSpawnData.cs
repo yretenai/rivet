@@ -18,7 +18,7 @@ public class ShockwaveSpawnData : AttachableShotSpawnData, IDDLObjectType<Shockw
 		ShockwaveSpawnPrius = ddl.GetObject<ShockwavePrius>(0x69f7e90au);
 	}
 
-	[DDLRegistration(0xd5869160u)]
+	[DDLRegistration(0x69f7e90au)]
 	public ShockwavePrius? ShockwaveSpawnPrius { get; set; } = default;
 
 	public new static ShockwaveSpawnData Create(DDLObject ddl) => new(ddl);

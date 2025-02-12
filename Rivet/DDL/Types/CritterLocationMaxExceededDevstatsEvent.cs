@@ -22,19 +22,19 @@ public class CritterLocationMaxExceededDevstatsEvent : EventBase, IDDLObjectType
 		RequiredMax = ddl.GetValue<uint>(0x939b0cbdu, RequiredMax);
 	}
 
-	[DDLRegistration(0x99794ae2u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x99794ae2u)]
+	[DDLRegistration(0x83b900d2u)]
 	public string? Level { get; set; } = default;
 
-	[DDLRegistration(0x99794ae2u)]
+	[DDLRegistration(0xc3db52f8u)]
 	public x6d501980 LocationType { get; set; } = x6d501980.CritterLocation;
 
-	[DDLRegistration(0x99794ae2u)]
+	[DDLRegistration(0xedc6853cu)]
 	public uint CurrentMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x99794ae2u)]
+	[DDLRegistration(0x939b0cbdu)]
 	public uint RequiredMax { get; set; } = 0x00000000;
 
 	public new static CritterLocationMaxExceededDevstatsEvent Create(DDLObject ddl) => new(ddl);

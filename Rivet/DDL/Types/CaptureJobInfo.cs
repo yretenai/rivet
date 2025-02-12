@@ -21,16 +21,16 @@ public class CaptureJobInfo : DDLObjectType, IDDLObjectType<CaptureJobInfo> {
 		Bounce = ddl.GetValue<uint>(0xbc44ba3eu, Bounce);
 	}
 
-	[DDLRegistration(0x2c61787fu)]
+	[DDLRegistration(0xcdb1ccbbu)]
 	public string? LightingZoneFullPath { get; set; } = default;
 
-	[DDLRegistration(0x2c61787fu)]
+	[DDLRegistration(0xde56c03au)]
 	public string? LightbinSrcDir { get; set; } = default;
 
-	[DDLRegistration(0x2c61787fu)]
+	[DDLRegistration(0x8f057a3bu)]
 	public string? ZoneLightbinFullPath { get; set; } = default;
 
-	[DDLRegistration(0x2c61787fu)]
+	[DDLRegistration(0xbc44ba3eu)]
 	public uint Bounce { get; set; } = 0x00000001;
 
 	public static CaptureJobInfo Create(DDLObject ddl) => new(ddl);

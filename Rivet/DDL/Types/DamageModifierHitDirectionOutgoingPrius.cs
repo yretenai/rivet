@@ -19,10 +19,10 @@ public class DamageModifierHitDirectionOutgoingPrius : DamageModifierOutgoingPri
 		KeepHitsInCone = ddl.GetValue<bool>(0x97e703ceu, KeepHitsInCone);
 	}
 
-	[DDLRegistration(0x3560429au, description: "Angle of cone relative to forward vector.")]
+	[DDLRegistration(0x8c03b095u, description: "Angle of cone relative to forward vector.")]
 	public float ConeAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3560429au, description: "If TRUE, hit directions will be kept inside the ConeAngle.  If FALSE, hit directions will get pushed outside of ConeAngle")]
+	[DDLRegistration(0x97e703ceu, description: "If TRUE, hit directions will be kept inside the ConeAngle.  If FALSE, hit directions will get pushed outside of ConeAngle")]
 	public bool KeepHitsInCone { get; set; } = false;
 
 	public new static DamageModifierHitDirectionOutgoingPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class StatusEffectApplyDamageModifiersPrius : StatusEffectBasePrius, IDDL
 		StatusEffectDamageModifierData = ddl.GetObject<StatusEffectDamageModifierData>(0x571b93a0u);
 	}
 
-	[DDLRegistration(0x1c185e11u)]
+	[DDLRegistration(0x571b93a0u)]
 	public StatusEffectDamageModifierData? StatusEffectDamageModifierData { get; set; } = default;
 
 	public new static StatusEffectApplyDamageModifiersPrius Create(DDLObject ddl) => new(ddl);

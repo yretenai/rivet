@@ -18,7 +18,7 @@ public class PhysicsStateActionEvent : EventBase, IDDLObjectType<PhysicsStateAct
 		StateAction = ddl.GetEnum<x1940ab58>(0x3517b0efu, x1940ab58Values.Lookup);
 	}
 
-	[DDLRegistration(0x45deec68u)]
+	[DDLRegistration(0x3517b0efu)]
 	public x1940ab58 StateAction { get; set; } = x1940ab58.CollisionOff;
 
 	public new static PhysicsStateActionEvent Create(DDLObject ddl) => new(ddl);

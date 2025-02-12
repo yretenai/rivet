@@ -18,7 +18,7 @@ public class AnimDynamicsDef : DDLObjectType, IDDLObjectType<AnimDynamicsDef> {
 		AnimDynamicsChains = ddl.GetObjects<AnimDynamicsChainDef>(0x13156a6eu);
 	}
 
-	[DDLRegistration(0x1a471b7fu)]
+	[DDLRegistration(0x13156a6eu)]
 	public List<AnimDynamicsChainDef?> AnimDynamicsChains { get; set; } = [];
 
 	public static AnimDynamicsDef Create(DDLObject ddl) => new(ddl);

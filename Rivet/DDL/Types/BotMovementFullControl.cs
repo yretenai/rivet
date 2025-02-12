@@ -18,7 +18,7 @@ public class BotMovementFullControl : BotMovementBase, IDDLObjectType<BotMovemen
 		IdleAnimName = ddl.GetString(0x9f307b58) ?? IdleAnimName;
 	}
 
-	[DDLRegistration(0x63059cd7u, "Idle Anim during Mounting")]
+	[DDLRegistration(0x9f307b58u, "Idle Anim during Mounting")]
 	public string? IdleAnimName { get; set; } = default;
 
 	public new static BotMovementFullControl Create(DDLObject ddl) => new(ddl);

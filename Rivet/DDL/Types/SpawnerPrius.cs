@@ -40,73 +40,73 @@ public class SpawnerPrius : DDLObjectType, IDDLObjectType<SpawnerPrius> {
 		MinDistanceFromPlayers = ddl.GetValue<float>(0x949df3bau, MinDistanceFromPlayers);
 	}
 
-	[DDLRegistration(0xc028b90du, "Factories")]
+	[DDLRegistration(0x4dc3e095u, "Factories")]
 	public List<RivetAssetId> FactoryGroup { get; set; } = [];
 
-	[DDLRegistration(0xc028b90du)]
+	[DDLRegistration(0xb2f1d014u)]
 	public FactorySelectionMethod FactorySelectionMethod { get; set; } = FactorySelectionMethod.RoundRobin;
 
-	[DDLRegistration(0xc028b90du, "Templates")]
+	[DDLRegistration(0xedd5e282u, "Templates")]
 	public List<RivetAssetId> Templates { get; set; } = [];
 
-	[DDLRegistration(0xc028b90du, "Spawn Template Selection", "How The Spawner Chooses The Next Spawn Template.")]
+	[DDLRegistration(0xdc449308u, "Spawn Template Selection", "How The Spawner Chooses The Next Spawn Template.")]
 	public x59f4ecd6 TemplateSelectionMethod { get; set; } = x59f4ecd6.InOrder;
 
-	[DDLRegistration(0xc028b90du, "Spawn Locations")]
+	[DDLRegistration(0x77c7ed1au, "Spawn Locations")]
 	public List<RivetAssetId> SpawnLocations { get; set; } = [];
 
-	[DDLRegistration(0xc028b90du, "Spawn Loc Selection", "How The Spawner Chooses The Next Spawn Location.")]
+	[DDLRegistration(0xe9400b68u, "Spawn Loc Selection", "How The Spawner Chooses The Next Spawn Location.")]
 	public x14738916 LocationSelectionMethod { get; set; } = x14738916.InOrder;
 
-	[DDLRegistration(0xc028b90du, "Spawn In View", "Only spawn with LoS")]
+	[DDLRegistration(0xd0e897f6u, "Spawn In View", "Only spawn with LoS")]
 	public bool InViewValidate { get; set; } = false;
 
-	[DDLRegistration(0xc028b90du, "Use No LOS Spots", "Never spawn with LoS")]
+	[DDLRegistration(0xdd348be3u, "Use No LOS Spots", "Never spawn with LoS")]
 	public bool CheckNoLOS { get; set; } = false;
 
-	[DDLRegistration(0xc028b90du, "Snap to NAV", "Moves the spawn position to closest navmesh (if not too far)")]
+	[DDLRegistration(0x5f0a2cd0u, "Snap to NAV", "Moves the spawn position to closest navmesh (if not too far)")]
 	public bool SnapToNav { get; set; } = false;
 
-	[DDLRegistration(0xc028b90du, "Force Spawn")]
+	[DDLRegistration(0xfc60458fu, "Force Spawn")]
 	public bool ForceSpawn { get; set; } = false;
 
-	[DDLRegistration(0xc028b90du, "Randomize X Pos", "Volumes Only")]
+	[DDLRegistration(0xc1f2312au, "Randomize X Pos", "Volumes Only")]
 	public bool RandomizeX { get; set; } = false;
 
-	[DDLRegistration(0xc028b90du, "Randomize Y Pos", "Volumes Only")]
+	[DDLRegistration(0xb6f501bcu, "Randomize Y Pos", "Volumes Only")]
 	public bool RandomizeY { get; set; } = false;
 
-	[DDLRegistration(0xc028b90du, "Randomize Z Pos", "Volumes Only")]
+	[DDLRegistration(0x2ffc5006u, "Randomize Z Pos", "Volumes Only")]
 	public bool RandomizeZ { get; set; } = false;
 
-	[DDLRegistration(0xc028b90du, "Randomize Curve T", "Curves Only")]
+	[DDLRegistration(0xc8447d01u, "Randomize Curve T", "Curves Only")]
 	public bool RandomizeT { get; set; } = false;
 
-	[DDLRegistration(0xc028b90du, "Start Delay Min", "Time between activate and first spawn")]
+	[DDLRegistration(0xefbc6265u, "Start Delay Min", "Time between activate and first spawn")]
 	public float InitialSpawnDelayMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc028b90du, "Start Delay Max", "Time between activate and first spawn")]
+	[DDLRegistration(0xd3b15d3cu, "Start Delay Max", "Time between activate and first spawn")]
 	public float InitialSpawnDelayMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc028b90du, "Between Delay Min", "Time between each spawn and the next")]
+	[DDLRegistration(0x08415252u, "Between Delay Min", "Time between each spawn and the next")]
 	public float SpawnIntervalMin { get; set; } = 0.04f;
 
-	[DDLRegistration(0xc028b90du, "Between Delay Max", "Time between each spawn and the next")]
+	[DDLRegistration(0x344c6d0bu, "Between Delay Max", "Time between each spawn and the next")]
 	public float SpawnIntervalMax { get; set; } = 0.04f;
 
-	[DDLRegistration(0xc028b90du, "Respawn Delay Min", "Used to delay new spawns when 'Max Alive At Once' has been reached.")]
+	[DDLRegistration(0x9ffb163fu, "Respawn Delay Min", "Used to delay new spawns when 'Max Alive At Once' has been reached.")]
 	public float RespawnDelayMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc028b90du, "Respawn Delay Max", "Used to delay new spawns when 'Max Alive At Once' has been reached.")]
+	[DDLRegistration(0xa3f62966u, "Respawn Delay Max", "Used to delay new spawns when 'Max Alive At Once' has been reached.")]
 	public float RespawnDelayMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc028b90du, "Num Spawns", "-1 for infinite, 0 to spawn each template once, >0 to spawn a specific number.")]
+	[DDLRegistration(0x6d1a71cfu, "Num Spawns", "-1 for infinite, 0 to spawn each template once, >0 to spawn a specific number.")]
 	public int NumSpawns { get; set; } = 0;
 
-	[DDLRegistration(0xc028b90du, "Max Alive At Once", "-1 for infinite")]
+	[DDLRegistration(0x32702f73u, "Max Alive At Once", "-1 for infinite")]
 	public int MaxSimultaneousSpawns { get; set; } = -1;
 
-	[DDLRegistration(0xc028b90du, "Min Dist From Players", "Pick spawn points at least this far from the players.")]
+	[DDLRegistration(0x949df3bau, "Min Dist From Players", "Pick spawn points at least this far from the players.")]
 	public float MinDistanceFromPlayers { get; set; } = -1.00f;
 
 	public static SpawnerPrius Create(DDLObject ddl) => new(ddl);

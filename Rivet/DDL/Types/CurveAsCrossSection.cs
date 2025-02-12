@@ -18,7 +18,7 @@ public class CurveAsCrossSection : CrossSectionChoice, IDDLObjectType<CurveAsCro
 		CurveXSection = ddl.GetValue<RivetAssetId>(0x8d514a1bu, CurveXSection);
 	}
 
-	[DDLRegistration(0x6b7f824fu)]
+	[DDLRegistration(0x8d514a1bu)]
 	public RivetAssetId CurveXSection { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static CurveAsCrossSection Create(DDLObject ddl) => new(ddl);

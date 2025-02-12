@@ -20,13 +20,13 @@ public class OmniAwarenessPrius : AwarenessBasePrius, IDDLObjectType<OmniAwarene
 		SourceLocatorName = ddl.GetString(0x058c28db) ?? SourceLocatorName;
 	}
 
-	[DDLRegistration(0xda8a02a8u)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 100.00f;
 
-	[DDLRegistration(0xda8a02a8u)]
+	[DDLRegistration(0x780dee83u)]
 	public OmniAwarenessLos OmniAwarenessLos { get; set; } = OmniAwarenessLos.BestTarget;
 
-	[DDLRegistration(0xda8a02a8u)]
+	[DDLRegistration(0x058c28dbu)]
 	public string? SourceLocatorName { get; set; } = "head";
 
 	public new static OmniAwarenessPrius Create(DDLObject ddl) => new(ddl);

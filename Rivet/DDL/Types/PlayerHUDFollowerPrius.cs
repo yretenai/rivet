@@ -24,25 +24,25 @@ public class PlayerHUDFollowerPrius : DDLObjectType, IDDLObjectType<PlayerHUDFol
 		LevelUpLerpTime = ddl.GetValue<float>(0x725bfcccu, LevelUpLerpTime);
 	}
 
-	[DDLRegistration(0x92c9cb6bu, "Distance", "Actor distance from the camera")]
+	[DDLRegistration(0xe69327f1u, "Distance", "Actor distance from the camera")]
 	public float Distance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x92c9cb6bu, "Z Scale", "Actor Z scale")]
+	[DDLRegistration(0xcea63cfeu, "Z Scale", "Actor Z scale")]
 	public float ZScale { get; set; } = 0.10f;
 
-	[DDLRegistration(0x92c9cb6bu, "Model Height", "Actor height in the world (used to help scale the model in front of the camera)")]
+	[DDLRegistration(0xcb467d89u, "Model Height", "Actor height in the world (used to help scale the model in front of the camera)")]
 	public float ModelHeight { get; set; } = 100.00f;
 
-	[DDLRegistration(0x92c9cb6bu, "X Rotation Distance", "How far the Actor can rotate in the X direction")]
+	[DDLRegistration(0x43db3129u, "X Rotation Distance", "How far the Actor can rotate in the X direction")]
 	public float XRotationDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x92c9cb6bu, "Y Rotation Distance", "How far the Actor can rotate in the Y direction")]
+	[DDLRegistration(0xc47dfa6au, "Y Rotation Distance", "How far the Actor can rotate in the Y direction")]
 	public float YRotationDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x92c9cb6bu, "Tween Speed", "Speed scale for Actor rotation")]
+	[DDLRegistration(0x286238e9u, "Tween Speed", "Speed scale for Actor rotation")]
 	public float TweenSpeed { get; set; } = 0.50f;
 
-	[DDLRegistration(0x92c9cb6bu, "Level Up Lerp Time", "Time over which to lerp intro/outro for Hero level up VFX")]
+	[DDLRegistration(0x725bfcccu, "Level Up Lerp Time", "Time over which to lerp intro/outro for Hero level up VFX")]
 	public float LevelUpLerpTime { get; set; } = 1.00f;
 
 	public static PlayerHUDFollowerPrius Create(DDLObject ddl) => new(ddl);

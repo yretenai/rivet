@@ -19,10 +19,10 @@ public class BossBotCordelionNefariousPlasmaShotPrius : BasicBulletPrius, IDDLOb
 		ShockwaveImpact = ddl.GetObject<ShockwavePrius>(0xe77cc68eu);
 	}
 
-	[DDLRegistration(0x5131ea41u, "Impact Actor")]
+	[DDLRegistration(0x6c4233f5u, "Impact Actor")]
 	public RivetAssetId ImpactActor { get; set; } = default;
 
-	[DDLRegistration(0x5131ea41u)]
+	[DDLRegistration(0xe77cc68eu)]
 	public ShockwavePrius? ShockwaveImpact { get; set; } = default;
 
 	public new static BossBotCordelionNefariousPlasmaShotPrius Create(DDLObject ddl) => new(ddl);

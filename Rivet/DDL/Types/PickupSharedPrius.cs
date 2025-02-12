@@ -19,10 +19,10 @@ public class PickupSharedPrius : PickupBasePrius, IDDLObjectType<PickupSharedPri
 		DeleteEvent = ddl.GetObject<EventBase>(0x6f97aeb9u);
 	}
 
-	[DDLRegistration(0xfafc648fu, "Defer Delete Pickup till a Specific Event")]
+	[DDLRegistration(0xaa02410eu, "Defer Delete Pickup till a Specific Event")]
 	public x993e7bef DeleteOnEvent { get; set; } = x993e7bef.DoNotUseEvent;
 
-	[DDLRegistration(0xfafc648fu)]
+	[DDLRegistration(0x6f97aeb9u)]
 	public EventBase? DeleteEvent { get; set; } = default;
 
 	public new static PickupSharedPrius Create(DDLObject ddl) => new(ddl);

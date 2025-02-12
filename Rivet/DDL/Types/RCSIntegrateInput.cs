@@ -21,16 +21,16 @@ public class RCSIntegrateInput : DDLObjectType, IDDLObjectType<RCSIntegrateInput
 		Preview = ddl.GetValue<bool>(0xb86f4c08u, Preview);
 	}
 
-	[DDLRegistration(0xdbddcc42u, description: "Full path of original file in Rcs")]
+	[DDLRegistration(0x67b94266u, description: "Full path of original file in Rcs")]
 	public string? FromFile { get; set; } = default;
 
-	[DDLRegistration(0xdbddcc42u, description: "Full path of file destination in Rcs")]
+	[DDLRegistration(0x098206bdu, description: "Full path of file destination in Rcs")]
 	public string? ToFile { get; set; } = default;
 
-	[DDLRegistration(0xdbddcc42u, description: "Changelist to use; 0 (or unspecified) means use the default changelist.")]
+	[DDLRegistration(0x03b0ddc6u, description: "Changelist to use; 0 (or unspecified) means use the default changelist.")]
 	public uint Changelist { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdbddcc42u, description: "If true, previews the operation without integrating files.")]
+	[DDLRegistration(0xb86f4c08u, description: "If true, previews the operation without integrating files.")]
 	public bool Preview { get; set; } = false;
 
 	public static RCSIntegrateInput Create(DDLObject ddl) => new(ddl);

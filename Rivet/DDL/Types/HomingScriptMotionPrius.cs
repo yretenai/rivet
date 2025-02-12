@@ -33,52 +33,52 @@ public class HomingScriptMotionPrius : ScriptMotionBasePrius, IDDLObjectType<Hom
 		StopHomingOnReachDest = ddl.GetValue<bool>(0x9ef9218fu, StopHomingOnReachDest);
 	}
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x1a29bd24u)]
 	public float InitialSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x9f20ad55u)]
 	public float FlightSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x2943cdabu)]
 	public float FlightAcceleration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x88953b61u)]
 	public float HomingSpeed { get; set; } = 45.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x6f2124bbu)]
 	public float BreakoffAngle { get; set; } = 30.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x949da6bbu)]
 	public float HomingSpeedScaleFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x34403bcfu)]
 	public float HomingSpeedScaleTimeStart { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x0746bda9u)]
 	public float HomingSpeedScaleTimeFull { get; set; } = -1.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x67eb4f13u)]
 	public float HomingSpeedScaleDistStart { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x1fa1515bu)]
 	public float HomingSpeedScaleDistFull { get; set; } = -1.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x43aaba77u)]
 	public float InitialArcPitchMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x7fa7852eu)]
 	public float InitialArcPitchMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0xd3f639aau)]
 	public float InitialArcYawMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0xeffb06f3u)]
 	public float InitialArcYawMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x49c77e38u)]
 	public bool ScaleHomingRange { get; set; } = false;
 
-	[DDLRegistration(0x1e847a2au)]
+	[DDLRegistration(0x9ef9218fu)]
 	public bool StopHomingOnReachDest { get; set; } = true;
 
 	public new static HomingScriptMotionPrius Create(DDLObject ddl) => new(ddl);

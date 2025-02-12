@@ -28,37 +28,37 @@ public class SimpleAmbientSpawnerPrius : DDLObjectType, IDDLObjectType<SimpleAmb
 		SpawnActorList = ddl.GetObjects<SimpleSpawnActorAsset>(0x347df393u);
 	}
 
-	[DDLRegistration(0xc99ab86du, "Start Enabled?", "Whether this component starts active/enabled.")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled?", "Whether this component starts active/enabled.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0xc99ab86du, "Number to Spawn", "The number to spawn (<= 0 for infinite). We will deactivate when complete.")]
+	[DDLRegistration(0xbf9d56a9u, "Number to Spawn", "The number to spawn (<= 0 for infinite). We will deactivate when complete.")]
 	public float NumToSpawn { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc99ab86du, "Num Immed Spawns", "Number to spawn immediately when we become active.")]
+	[DDLRegistration(0x8b32437bu, "Num Immed Spawns", "Number to spawn immediately when we become active.")]
 	public byte NumToSpawnImmed { get; set; } = 0x00;
 
-	[DDLRegistration(0xc99ab86du, "Spawn Time: Min", "Min time between spawns (in seconds).")]
+	[DDLRegistration(0x8967291au, "Spawn Time: Min", "Min time between spawns (in seconds).")]
 	public float SpawnTimeMin { get; set; } = 60.00f;
 
-	[DDLRegistration(0xc99ab86du, "Spawn Time: Max", "Max time between spawns (in seconds).")]
+	[DDLRegistration(0xb56a1643u, "Spawn Time: Max", "Max time between spawns (in seconds).")]
 	public float SpawnTimeMax { get; set; } = 180.00f;
 
-	[DDLRegistration(0xc99ab86du, "Use player cam forward?", "If true, the angle range for our spawn position will be from the player's camera forward direction. If false, will be off the 'backwards' (opposite of the forward) direction.")]
+	[DDLRegistration(0xe5c6e53bu, "Use player cam forward?", "If true, the angle range for our spawn position will be from the player's camera forward direction. If false, will be off the 'backwards' (opposite of the forward) direction.")]
 	public bool UsePlayerForward { get; set; } = false;
 
-	[DDLRegistration(0xc99ab86du, "Angle: Min", "Min angle from the camera's forward or backwards direction to spawn at (in degrees).")]
+	[DDLRegistration(0x06478809u, "Angle: Min", "Min angle from the camera's forward or backwards direction to spawn at (in degrees).")]
 	public float AngleFromPlayerMin { get; set; } = -60.00f;
 
-	[DDLRegistration(0xc99ab86du, "Angle: Max", "Max angle from the player's forward or backwards direction to spawn at (in degrees).")]
+	[DDLRegistration(0x3a4ab750u, "Angle: Max", "Max angle from the player's forward or backwards direction to spawn at (in degrees).")]
 	public float AngleFromPlayerMax { get; set; } = 60.00f;
 
-	[DDLRegistration(0xc99ab86du, "Distance: Min", "Min distance from the player to spawn at.")]
+	[DDLRegistration(0xb0b8ea99u, "Distance: Min", "Min distance from the player to spawn at.")]
 	public float DistFromPlayerMin { get; set; } = 50.00f;
 
-	[DDLRegistration(0xc99ab86du, "Distance: Max", "Max distance from the player to spawn at.")]
+	[DDLRegistration(0x8cb5d5c0u, "Distance: Max", "Max distance from the player to spawn at.")]
 	public float DistFromPlayerMax { get; set; } = 100.00f;
 
-	[DDLRegistration(0xc99ab86du, "Actors to Spawn", "List of all the actors we can spawn. We will pick one to spawn randomly.")]
+	[DDLRegistration(0x347df393u, "Actors to Spawn", "List of all the actors we can spawn. We will pick one to spawn randomly.")]
 	public List<SimpleSpawnActorAsset?> SpawnActorList { get; set; } = [];
 
 	public static SimpleAmbientSpawnerPrius Create(DDLObject ddl) => new(ddl);

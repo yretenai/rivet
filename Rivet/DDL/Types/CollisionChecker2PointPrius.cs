@@ -19,10 +19,10 @@ public class CollisionChecker2PointPrius : DDLObjectType, IDDLObjectType<Collisi
 		EndLocator = ddl.GetString(0xe7e59581) ?? EndLocator;
 	}
 
-	[DDLRegistration(0xaf942c33u, description: "Leave blank to use object position")]
+	[DDLRegistration(0x45890f60u, description: "Leave blank to use object position")]
 	public string? StartLocator { get; set; } = default;
 
-	[DDLRegistration(0xaf942c33u, description: "Leave blank to use object position")]
+	[DDLRegistration(0xe7e59581u, description: "Leave blank to use object position")]
 	public string? EndLocator { get; set; } = default;
 
 	public static CollisionChecker2PointPrius Create(DDLObject ddl) => new(ddl);

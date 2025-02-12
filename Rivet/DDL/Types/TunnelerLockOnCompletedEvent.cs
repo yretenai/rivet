@@ -18,7 +18,7 @@ public class TunnelerLockOnCompletedEvent : EventBase, IDDLObjectType<TunnelerLo
 		LockOnDuration = ddl.GetValue<float>(0xc16a0d6cu, LockOnDuration);
 	}
 
-	[DDLRegistration(0x98ceab3du)]
+	[DDLRegistration(0xc16a0d6cu)]
 	public float LockOnDuration { get; set; } = 0.00f;
 
 	public new static TunnelerLockOnCompletedEvent Create(DDLObject ddl) => new(ddl);

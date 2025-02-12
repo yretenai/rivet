@@ -19,10 +19,10 @@ public class SkinItemSwitchGroup : DDLObjectType, IDDLObjectType<SkinItemSwitchG
 		SwitchGroupValue = ddl.GetString(0x2f43facb) ?? SwitchGroupValue;
 	}
 
-	[DDLRegistration(0x74c39c43u, "Switch Group Name", "Switch group name string")]
+	[DDLRegistration(0xbd87120cu, "Switch Group Name", "Switch group name string")]
 	public string? SwitchGroupName { get; set; } = default;
 
-	[DDLRegistration(0x74c39c43u, "Switch Group Value", "Switch group value to set")]
+	[DDLRegistration(0x2f43facbu, "Switch Group Value", "Switch group value to set")]
 	public string? SwitchGroupValue { get; set; } = default;
 
 	public static SkinItemSwitchGroup Create(DDLObject ddl) => new(ddl);

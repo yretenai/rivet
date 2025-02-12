@@ -18,7 +18,7 @@ public class AssetSwap : DDLObjectType, IDDLObjectType<AssetSwap> {
 		PlatformSwaps = ddl.GetObjects<AssetSwapEntry>(0x060bd7e6u);
 	}
 
-	[DDLRegistration(0x203d6f25u, "Swap by Platform")]
+	[DDLRegistration(0x060bd7e6u, "Swap by Platform")]
 	public List<AssetSwapEntry?> PlatformSwaps { get; set; } = [];
 
 	public static AssetSwap Create(DDLObject ddl) => new(ddl);

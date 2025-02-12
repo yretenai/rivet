@@ -27,34 +27,34 @@ public class AimAssistRelativeSpeedModifier : DDLObjectType, IDDLObjectType<AimA
 		CenterMod = ddl.GetValue<float>(0x9237bce3u, CenterMod);
 	}
 
-	[DDLRegistration(0x4039c132u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0x4039c132u, "Friction Speed Min")]
+	[DDLRegistration(0xac8a4e63u, "Friction Speed Min")]
 	public float FrictionSpeedMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4039c132u, "Friction Speed Max")]
+	[DDLRegistration(0x9087713au, "Friction Speed Max")]
 	public float FrictionSpeedMax { get; set; } = 20.00f;
 
-	[DDLRegistration(0x4039c132u, "Friction Modifier")]
+	[DDLRegistration(0x259d7ff2u, "Friction Modifier")]
 	public float FrictionMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4039c132u, "Magnet Speed Min")]
+	[DDLRegistration(0x4351b132u, "Magnet Speed Min")]
 	public float MagnetSpeedMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4039c132u, "Magnet Speed Max")]
+	[DDLRegistration(0x7f5c8e6bu, "Magnet Speed Max")]
 	public float MagnetSpeedMax { get; set; } = 10.00f;
 
-	[DDLRegistration(0x4039c132u, "Magnet Modifier")]
+	[DDLRegistration(0xcc015279u, "Magnet Modifier")]
 	public float MagnetMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4039c132u, "Centering Speed Min")]
+	[DDLRegistration(0xea995170u, "Centering Speed Min")]
 	public float CenterSpeedMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4039c132u, "Centering Speed Max")]
+	[DDLRegistration(0xd6946e29u, "Centering Speed Max")]
 	public float CenterSpeedMax { get; set; } = 10.00f;
 
-	[DDLRegistration(0x4039c132u, "Centering Modifier")]
+	[DDLRegistration(0x9237bce3u, "Centering Modifier")]
 	public float CenterMod { get; set; } = 1.00f;
 
 	public static AimAssistRelativeSpeedModifier Create(DDLObject ddl) => new(ddl);

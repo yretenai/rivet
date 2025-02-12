@@ -20,13 +20,13 @@ public class TargetShapeCylinder : DDLObjectType, IDDLObjectType<TargetShapeCyli
 		HeightDown = ddl.GetValue<float>(0x18b154fau, HeightDown);
 	}
 
-	[DDLRegistration(0xcea9a73au, description: "Radius of the cylinder")]
+	[DDLRegistration(0x0504203du, description: "Radius of the cylinder")]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcea9a73au, description: "Height the cylinder goes up (should be positive)")]
+	[DDLRegistration(0x7be988d7u, description: "Height the cylinder goes up (should be positive)")]
 	public float HeightUp { get; set; } = 2.00f;
 
-	[DDLRegistration(0xcea9a73au, description: "Distance the cylinder extends down (should generally be negative)")]
+	[DDLRegistration(0x18b154fau, description: "Distance the cylinder extends down (should generally be negative)")]
 	public float HeightDown { get; set; } = -1.00f;
 
 	public static TargetShapeCylinder Create(DDLObject ddl) => new(ddl);

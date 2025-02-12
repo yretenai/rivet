@@ -20,13 +20,13 @@ public class EquipLooksPair : DDLObjectType, IDDLObjectType<EquipLooksPair> {
 		SoundSwitchGroupName = ddl.GetString(0x736eb367) ?? SoundSwitchGroupName;
 	}
 
-	[DDLRegistration(0x95386222u, "Equipped Looks", "Looks to Enable when weapons are equipped. And disable when unequipped/holstered")]
+	[DDLRegistration(0xda69e16bu, "Equipped Looks", "Looks to Enable when weapons are equipped. And disable when unequipped/holstered")]
 	public List<string?> EquippedLooks { get; set; } = [];
 
-	[DDLRegistration(0x95386222u, "Unequipped Looks", "Looks to Enable when weapons are NOT equipped. And disable when equipped")]
+	[DDLRegistration(0x4cc12898u, "Unequipped Looks", "Looks to Enable when weapons are NOT equipped. And disable when equipped")]
 	public List<string?> UnequippedLooks { get; set; } = [];
 
-	[DDLRegistration(0x95386222u, "BotWeaponType_SWITCH Name", "Switch Name to set \"BotWeaponType_SWITCH\" switch type to for this actor when using this EquipPair")]
+	[DDLRegistration(0x736eb367u, "BotWeaponType_SWITCH Name", "Switch Name to set \"BotWeaponType_SWITCH\" switch type to for this actor when using this EquipPair")]
 	public string? SoundSwitchGroupName { get; set; } = default;
 
 	public static EquipLooksPair Create(DDLObject ddl) => new(ddl);

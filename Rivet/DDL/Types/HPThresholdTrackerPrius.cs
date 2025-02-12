@@ -18,7 +18,7 @@ public class HPThresholdTrackerPrius : DDLObjectType, IDDLObjectType<HPThreshold
 		Thresholds = ddl.GetValues<float>(0xd9bfdd69u);
 	}
 
-	[DDLRegistration(0xcdc9cb43u, "HP Thresholds", "Fractions of health, eg. 0.5 for <= 50% of max health remaining")]
+	[DDLRegistration(0xd9bfdd69u, "HP Thresholds", "Fractions of health, eg. 0.5 for <= 50% of max health remaining")]
 	public List<float> Thresholds { get; set; } = [];
 
 	public static HPThresholdTrackerPrius Create(DDLObject ddl) => new(ddl);

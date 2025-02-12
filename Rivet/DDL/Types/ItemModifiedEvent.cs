@@ -25,28 +25,28 @@ public class ItemModifiedEvent : EventBase, IDDLObjectType<ItemModifiedEvent> {
 		PreviousInventoryCount = ddl.GetValue<uint>(0x124d1589u, PreviousInventoryCount);
 	}
 
-	[DDLRegistration(0x28b18b8eu)]
+	[DDLRegistration(0x7b9076c1u)]
 	public x5ff284b1 ModifyAction { get; set; } = x5ff284b1.None;
 
-	[DDLRegistration(0x28b18b8eu)]
+	[DDLRegistration(0x5d269a38u)]
 	public uint Actor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x28b18b8eu)]
+	[DDLRegistration(0xcb033e5bu)]
 	public uint Component { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x28b18b8eu)]
+	[DDLRegistration(0x7c9327afu)]
 	public uint ItemType { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x28b18b8eu)]
+	[DDLRegistration(0x21f5123eu)]
 	public RivetAssetId ItemHash { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x28b18b8eu)]
+	[DDLRegistration(0x8b80f916u)]
 	public ushort ItemId { get; set; } = 0x0000;
 
-	[DDLRegistration(0x28b18b8eu)]
+	[DDLRegistration(0xb970f7dbu)]
 	public uint CurrentInventoryCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x28b18b8eu)]
+	[DDLRegistration(0x124d1589u)]
 	public uint PreviousInventoryCount { get; set; } = 0x00000000;
 
 	public new static ItemModifiedEvent Create(DDLObject ddl) => new(ddl);

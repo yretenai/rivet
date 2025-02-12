@@ -22,19 +22,19 @@ public class ActivateVendorScriptActionPrius : DDLObjectType, IDDLObjectType<Act
 		PhotoText = ddl.GetString(0xdb8bb7db) ?? PhotoText;
 	}
 
-	[DDLRegistration(0x50a9910cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Conversation;
 
-	[DDLRegistration(0x50a9910cu)]
+	[DDLRegistration(0x957f28a3u)]
 	public string? BuyText { get; set; } = "Buy Items.";
 
-	[DDLRegistration(0x50a9910cu)]
+	[DDLRegistration(0xfd7b15a0u)]
 	public string? SellText { get; set; } = "Sell Items.";
 
-	[DDLRegistration(0x50a9910cu)]
+	[DDLRegistration(0xaaac9ad2u)]
 	public string? CraftText { get; set; } = "Craft Items.";
 
-	[DDLRegistration(0x50a9910cu)]
+	[DDLRegistration(0xdb8bb7dbu)]
 	public string? PhotoText { get; set; } = "Sell Photos.";
 
 	public static ActivateVendorScriptActionPrius Create(DDLObject ddl) => new(ddl);

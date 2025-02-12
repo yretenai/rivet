@@ -19,10 +19,10 @@ public class VisualFxKillEvent : EventBase, IDDLObjectType<VisualFxKillEvent> {
 		KillImmediate = ddl.GetValue<bool>(0x635c25beu, KillImmediate);
 	}
 
-	[DDLRegistration(0x67cf6a72u, "TrackedEventName")]
+	[DDLRegistration(0xccd73193u, "TrackedEventName")]
 	public string? TrackedEventName { get; set; } = default;
 
-	[DDLRegistration(0x67cf6a72u)]
+	[DDLRegistration(0x635c25beu)]
 	public bool KillImmediate { get; set; } = true;
 
 	public new static VisualFxKillEvent Create(DDLObject ddl) => new(ddl);

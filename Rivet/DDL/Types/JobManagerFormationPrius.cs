@@ -25,28 +25,28 @@ public class JobManagerFormationPrius : DDLObjectType, IDDLObjectType<JobManager
 		EdgeAngle = ddl.GetValue<float>(0x37eb909au, EdgeAngle);
 	}
 
-	[DDLRegistration(0x3780fe07u)]
+	[DDLRegistration(0xf810ef74u)]
 	public RivetAssetId ExclusionVolumeGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3780fe07u)]
+	[DDLRegistration(0x924c39feu)]
 	public RivetAssetId MasterBoundsVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3780fe07u)]
+	[DDLRegistration(0x2a56c4ffu)]
 	public RivetAssetId OverrideTarget { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3780fe07u)]
+	[DDLRegistration(0xb3039531u)]
 	public bool IsCameraBased { get; set; } = false;
 
-	[DDLRegistration(0x3780fe07u)]
+	[DDLRegistration(0x05a41ef7u)]
 	public float MinTimeBetweenFormations { get; set; } = 5.00f;
 
-	[DDLRegistration(0x3780fe07u)]
+	[DDLRegistration(0xeeeee111u)]
 	public bool IsTurretBased { get; set; } = false;
 
-	[DDLRegistration(0x3780fe07u)]
+	[DDLRegistration(0x824b5051u)]
 	public RivetAssetId TurretActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3780fe07u)]
+	[DDLRegistration(0x37eb909au)]
 	public float EdgeAngle { get; set; } = 20.00f;
 
 	public static JobManagerFormationPrius Create(DDLObject ddl) => new(ddl);

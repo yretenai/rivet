@@ -19,10 +19,10 @@ public class ScriptGraphLibraryData : DDLObjectType, IDDLObjectType<ScriptGraphL
 		Tuid = ddl.GetValue<RivetAssetId>(0x5953f773u, Tuid);
 	}
 
-	[DDLRegistration(0x017c576bu)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x017c576bu)]
+	[DDLRegistration(0x5953f773u)]
 	public RivetAssetId Tuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ScriptGraphLibraryData Create(DDLObject ddl) => new(ddl);

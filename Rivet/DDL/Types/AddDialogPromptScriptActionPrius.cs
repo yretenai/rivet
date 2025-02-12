@@ -19,10 +19,10 @@ public class AddDialogPromptScriptActionPrius : DDLObjectType, IDDLObjectType<Ad
 		DialogPromptPrius = ddl.GetObject<DialogPromptPrius>(0x57313b24u);
 	}
 
-	[DDLRegistration(0x052672eeu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0x052672eeu)]
+	[DDLRegistration(0x57313b24u)]
 	public DialogPromptPrius? DialogPromptPrius { get; set; } = default;
 
 	public static AddDialogPromptScriptActionPrius Create(DDLObject ddl) => new(ddl);

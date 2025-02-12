@@ -21,16 +21,16 @@ public class SetModelCustomInputActionPrius : DDLObjectType, IDDLObjectType<SetM
 		ZValue = ddl.GetValue<float>(0x3f97414eu, ZValue);
 	}
 
-	[DDLRegistration(0x4a4817e6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0x4a4817e6u)]
+	[DDLRegistration(0x725fe045u)]
 	public float XValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a4817e6u)]
+	[DDLRegistration(0xb90333e0u)]
 	public float YValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a4817e6u)]
+	[DDLRegistration(0x3f97414eu)]
 	public float ZValue { get; set; } = 0.00f;
 
 	public static SetModelCustomInputActionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PerfSpecConfig : ConfigBase, IDDLObjectType<PerfSpecConfig> {
 		PerfSpecs = ddl.GetObjects<PerfSpecData>(0x744acf43u);
 	}
 
-	[DDLRegistration(0xe8719cabu)]
+	[DDLRegistration(0x744acf43u)]
 	public List<PerfSpecData?> PerfSpecs { get; set; } = [];
 
 	public new static PerfSpecConfig Create(DDLObject ddl) => new(ddl);

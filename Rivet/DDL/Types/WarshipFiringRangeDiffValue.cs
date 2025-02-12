@@ -20,13 +20,13 @@ public class WarshipFiringRangeDiffValue : DDLObjectType, IDDLObjectType<Warship
 		RangeHard = ddl.GetValue<float>(0x79295f43u, RangeHard);
 	}
 
-	[DDLRegistration(0x47c244b3u, "Warship Firing Range:Easy", "If this value is > 0 we will use it for the valid range for the warship. Must be shorter than the normal firing range to have any effect.")]
+	[DDLRegistration(0xf15eda06u, "Warship Firing Range:Easy", "If this value is > 0 we will use it for the valid range for the warship. Must be shorter than the normal firing range to have any effect.")]
 	public float RangeEasy { get; set; } = -1.00f;
 
-	[DDLRegistration(0x47c244b3u, "Warship Firing Range:Normal", "If this value is > 0 we will use it for the valid range for the warship. Must be shorter than the normal firing range to have any effect.")]
+	[DDLRegistration(0x7eda38ecu, "Warship Firing Range:Normal", "If this value is > 0 we will use it for the valid range for the warship. Must be shorter than the normal firing range to have any effect.")]
 	public float RangeNormal { get; set; } = -1.00f;
 
-	[DDLRegistration(0x47c244b3u, "Warship Firing Range:Hard", "If this value is > 0 we will use it for the valid range for the warship. Must be shorter than the normal firing range to have any effect.")]
+	[DDLRegistration(0x79295f43u, "Warship Firing Range:Hard", "If this value is > 0 we will use it for the valid range for the warship. Must be shorter than the normal firing range to have any effect.")]
 	public float RangeHard { get; set; } = -1.00f;
 
 	public static WarshipFiringRangeDiffValue Create(DDLObject ddl) => new(ddl);

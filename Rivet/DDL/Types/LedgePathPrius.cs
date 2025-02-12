@@ -34,55 +34,55 @@ public class LedgePathPrius : DDLObjectType, IDDLObjectType<LedgePathPrius> {
 		ModelActor = ddl.GetValue<RivetAssetId>(0x2ef07b38u, ModelActor);
 	}
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0x8efbd385u)]
 	public bool Hang { get; set; } = true;
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0xfb7145aau)]
 	public bool Grapple { get; set; } = true;
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0x3e799799u)]
 	public bool DoubleSided { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0xc3f2eb51u)]
 	public bool Grind { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0xaafabce5u)]
 	public bool UnderGrind { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0x6bbc22a3u)]
 	public bool Slide { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u, description: "Check if ledgepath connections on the front of this path can change")]
+	[DDLRegistration(0xe6edfc98u, description: "Check if ledgepath connections on the front of this path can change")]
 	public bool DynamicConnectionsFront { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u, description: "Check if ledgepath connections on the back of this path can change")]
+	[DDLRegistration(0xc37da8c6u, description: "Check if ledgepath connections on the back of this path can change")]
 	public bool DynamicConnectionsBack { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0x2b966d32u)]
 	public bool DisableLedgeBirds { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0xc8e3880fu)]
 	public bool DisableBodyCollision { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0x551b97fdu)]
 	public bool DisableMount { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0x3d656ad2u)]
 	public bool DisableDrop { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u, description: "Do not allow the hero using this ledge path to jump to another ledge path.")]
+	[DDLRegistration(0x4d4d8320u, description: "Do not allow the hero using this ledge path to jump to another ledge path.")]
 	public bool DisableToLedge { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u, description: "Use curve normal as up vector.")]
+	[DDLRegistration(0x032211a4u, description: "Use curve normal as up vector.")]
 	public bool UseCurveNormalsAsUp { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u, description: "Enforce curve direction regardless of hero facing/input direction as they attach to this grind path.")]
+	[DDLRegistration(0x1f164333u, description: "Enforce curve direction regardless of hero facing/input direction as they attach to this grind path.")]
 	public bool EnforceCurveDirection { get; set; } = false;
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0xe49686c8u)]
+	[DDLRegistration(0x2ef07b38u)]
 	public RivetAssetId ModelActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static LedgePathPrius Create(DDLObject ddl) => new(ddl);

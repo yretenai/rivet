@@ -18,7 +18,7 @@ public class AnimSetSequencerFavorites : DDLObjectType, IDDLObjectType<AnimSetSe
 		Favorites = ddl.GetObjects<AnimSetSequencerFavorite>(0x6694fff9u);
 	}
 
-	[DDLRegistration(0xc6ab3825u)]
+	[DDLRegistration(0x6694fff9u)]
 	public List<AnimSetSequencerFavorite?> Favorites { get; set; } = [];
 
 	public static AnimSetSequencerFavorites Create(DDLObject ddl) => new(ddl);

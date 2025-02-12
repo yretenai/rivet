@@ -19,10 +19,10 @@ public class HexEnableActionPrius : DDLObjectType, IDDLObjectType<HexEnableActio
 		HexList = ddl.GetValues<RivetAssetId>(0x70fa0319u);
 	}
 
-	[DDLRegistration(0x36d061d6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x36d061d6u, "Hex List")]
+	[DDLRegistration(0x70fa0319u, "Hex List")]
 	public List<RivetAssetId> HexList { get; set; } = [];
 
 	public static HexEnableActionPrius Create(DDLObject ddl) => new(ddl);

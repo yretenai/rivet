@@ -18,7 +18,7 @@ public class FocusTrackingOverrideInstanceEvent : EventBase, IDDLObjectType<Focu
 		Data = ddl.GetObject<FocusTrackingInstData>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0x260eff9cu)]
+	[DDLRegistration(0x9d6333d3u)]
 	public FocusTrackingInstData? Data { get; set; } = default;
 
 	public new static FocusTrackingOverrideInstanceEvent Create(DDLObject ddl) => new(ddl);

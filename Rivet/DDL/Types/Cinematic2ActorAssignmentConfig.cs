@@ -18,7 +18,7 @@ public class Cinematic2ActorAssignmentConfig : ConfigBase, IDDLObjectType<Cinema
 		Assignments = ddl.GetObjects<Cinematic2NamespaceActor>(0xbd560106u);
 	}
 
-	[DDLRegistration(0x6aa0ef6au, description: "Mapping of MayaNamespaces to actor files.")]
+	[DDLRegistration(0xbd560106u, description: "Mapping of MayaNamespaces to actor files.")]
 	public List<Cinematic2NamespaceActor?> Assignments { get; set; } = [];
 
 	public new static Cinematic2ActorAssignmentConfig Create(DDLObject ddl) => new(ddl);

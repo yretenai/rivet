@@ -18,7 +18,7 @@ public class HittingShotInfo : DDLObjectType, IDDLObjectType<HittingShotInfo> {
 		ShotConfig = ddl.GetValue<RivetAssetId>(0xb171e6aeu, ShotConfig);
 	}
 
-	[DDLRegistration(0x264fbabfu, description: "If hit by a shot with this config, spawn something using this entry's SpawnInfo. If empty, any actor will map to this entry.")]
+	[DDLRegistration(0xb171e6aeu, description: "If hit by a shot with this config, spawn something using this entry's SpawnInfo. If empty, any actor will map to this entry.")]
 	public RivetAssetId ShotConfig { get; set; } = default;
 
 	public static HittingShotInfo Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class DelayActionPrius : DDLObjectType, IDDLObjectType<DelayActionPrius> 
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0xd84ed432u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
-	[DDLRegistration(0xd84ed432u, description: "The duration of the delay in seconds.")]
+	[DDLRegistration(0x7c5e3db0u, description: "The duration of the delay in seconds.")]
 	public float Duration { get; set; } = 1.00f;
 
 	public static DelayActionPrius Create(DDLObject ddl) => new(ddl);

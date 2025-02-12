@@ -24,25 +24,25 @@ public class HealthNodeDef : DDLObjectType, IDDLObjectType<HealthNodeDef> {
 		Outputs = ddl.GetObjects<HealthOutputPlugSignal>(0x0d9fcc64u);
 	}
 
-	[DDLRegistration(0x66d82969u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x66d82969u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x577f103e Type { get; set; } = x577f103e.Invalid;
 
-	[DDLRegistration(0x66d82969u)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = false;
 
-	[DDLRegistration(0x66d82969u)]
+	[DDLRegistration(0x7effd393u)]
 	public bool Disabled { get; set; } = false;
 
-	[DDLRegistration(0x66d82969u)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x66d82969u)]
+	[DDLRegistration(0x2934711bu)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x66d82969u)]
+	[DDLRegistration(0x0d9fcc64u)]
 	public List<HealthOutputPlugSignal?> Outputs { get; set; } = [];
 
 	public static HealthNodeDef Create(DDLObject ddl) => new(ddl);

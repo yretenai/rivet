@@ -19,10 +19,10 @@ public class AnimLookChunkingComponentData : AnimChunkData, IDDLObjectType<AnimL
 		ConfigurationName = ddl.GetString(0x19f22c5c) ?? ConfigurationName;
 	}
 
-	[DDLRegistration(0xa9528958u)]
+	[DDLRegistration(0xe7230f11u)]
 	public string? ChunkingComponentName { get; set; } = default;
 
-	[DDLRegistration(0xa9528958u)]
+	[DDLRegistration(0x19f22c5cu)]
 	public string? ConfigurationName { get; set; } = default;
 
 	public new static AnimLookChunkingComponentData Create(DDLObject ddl) => new(ddl);

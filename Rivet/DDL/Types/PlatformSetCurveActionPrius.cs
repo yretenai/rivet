@@ -20,13 +20,13 @@ public class PlatformSetCurveActionPrius : DDLObjectType, IDDLObjectType<Platfor
 		UseClosestPt = ddl.GetValue<bool>(0x52dce52au, UseClosestPt);
 	}
 
-	[DDLRegistration(0x0c01015bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0x0c01015bu)]
+	[DDLRegistration(0xb08c74edu)]
 	public PlatformMovingPrius? NewPrius { get; set; } = default;
 
-	[DDLRegistration(0x0c01015bu, "Use closest point?", "Whether to go to the closest point on the curve rather than the start of the curve when not doing a smooth transition.")]
+	[DDLRegistration(0x52dce52au, "Use closest point?", "Whether to go to the closest point on the curve rather than the start of the curve when not doing a smooth transition.")]
 	public bool UseClosestPt { get; set; } = false;
 
 	public static PlatformSetCurveActionPrius Create(DDLObject ddl) => new(ddl);

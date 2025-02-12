@@ -20,13 +20,13 @@ public class PickupSpawnerPlacedPrius : PickupSpawnerPrius, IDDLObjectType<Picku
 		StartWithPickup = ddl.GetValue<bool>(0xa98ec86eu, StartWithPickup);
 	}
 
-	[DDLRegistration(0xf78458e3u, "Respawn Time Min")]
+	[DDLRegistration(0xcd3dbf04u, "Respawn Time Min")]
 	public float RespawnTimerMin { get; set; } = -1.00f;
 
-	[DDLRegistration(0xf78458e3u, "Respawn Time Max")]
+	[DDLRegistration(0xf130805du, "Respawn Time Max")]
 	public float RespawnTimerMax { get; set; } = -1.00f;
 
-	[DDLRegistration(0xf78458e3u, "Start With Pickup")]
+	[DDLRegistration(0xa98ec86eu, "Start With Pickup")]
 	public bool StartWithPickup { get; set; } = true;
 
 	public new static PickupSpawnerPlacedPrius Create(DDLObject ddl) => new(ddl);

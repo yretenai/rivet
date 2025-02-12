@@ -21,16 +21,16 @@ public class SetVelocityScriptMotionActionPrius : DDLObjectType, IDDLObjectType<
 		Decel = ddl.GetValue<float>(0xa9242a88u, Decel);
 	}
 
-	[DDLRegistration(0x7839b929u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x7839b929u, "Ideal Speed", "If >= 0, velocity will be blended to this speed")]
+	[DDLRegistration(0xd6f8c91du, "Ideal Speed", "If >= 0, velocity will be blended to this speed")]
 	public float IdealSpeed { get; set; } = -1.00f;
 
-	[DDLRegistration(0x7839b929u, description: "Acceleration when Ideal Speed is set")]
+	[DDLRegistration(0x44affa24u, description: "Acceleration when Ideal Speed is set")]
 	public float Accel { get; set; } = 10.00f;
 
-	[DDLRegistration(0x7839b929u, description: "Deceleration when Ideal Speed is set")]
+	[DDLRegistration(0xa9242a88u, description: "Deceleration when Ideal Speed is set")]
 	public float Decel { get; set; } = 10.00f;
 
 	public static SetVelocityScriptMotionActionPrius Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class Cinematic2DefaultCameraValuesDef : DDLObjectType, IDDLObjectType<Ci
 		CameraLensSqueezeRatio = ddl.GetValue<float>(0x49149194u, CameraLensSqueezeRatio);
 	}
 
-	[DDLRegistration(0x82bf4f3cu)]
+	[DDLRegistration(0x809f54f0u)]
 	public float CameraFov { get; set; } = 65.00f;
 
-	[DDLRegistration(0x82bf4f3cu)]
+	[DDLRegistration(0x838d1733u)]
 	public float CameraDofNearFocusDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x82bf4f3cu)]
+	[DDLRegistration(0x41d58a0eu)]
 	public float CameraDofNearBlurStrength { get; set; } = 0.00f;
 
-	[DDLRegistration(0x82bf4f3cu)]
+	[DDLRegistration(0xad9fafe6u)]
 	public float CameraDofFarFocusDistance { get; set; } = 100.00f;
 
-	[DDLRegistration(0x82bf4f3cu)]
+	[DDLRegistration(0xe760de73u)]
 	public float CameraDofFarBlurStrength { get; set; } = 0.00f;
 
-	[DDLRegistration(0x82bf4f3cu, description: "Aperture in cms")]
+	[DDLRegistration(0xc925801cu, description: "Aperture in cms")]
 	public float CameraFilmApertureHorizontal { get; set; } = 1.00f;
 
-	[DDLRegistration(0x82bf4f3cu)]
+	[DDLRegistration(0x49149194u)]
 	public float CameraLensSqueezeRatio { get; set; } = 1.00f;
 
 	public static Cinematic2DefaultCameraValuesDef Create(DDLObject ddl) => new(ddl);

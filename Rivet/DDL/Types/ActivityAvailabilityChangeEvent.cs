@@ -19,10 +19,10 @@ public class ActivityAvailabilityChangeEvent : ChangeModeEvent, IDDLObjectType<A
 		UnavailableActivities = ddl.GetStrings(0xdab71815u);
 	}
 
-	[DDLRegistration(0x0a6ffa38u)]
+	[DDLRegistration(0x6db95f6cu)]
 	public List<string?> AvailableActivities { get; set; } = [];
 
-	[DDLRegistration(0x0a6ffa38u)]
+	[DDLRegistration(0xdab71815u)]
 	public List<string?> UnavailableActivities { get; set; } = [];
 
 	public new static ActivityAvailabilityChangeEvent Create(DDLObject ddl) => new(ddl);

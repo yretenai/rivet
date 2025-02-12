@@ -24,25 +24,25 @@ public class AttachedHealthBarPrius : DDLObjectType, IDDLObjectType<AttachedHeal
 		AttachWorldOffset = ddl.GetValue<bool>(0xc7ac0510u, AttachWorldOffset);
 	}
 
-	[DDLRegistration(0x778daaaeu)]
+	[DDLRegistration(0x9d9ef21cu)]
 	public RivetAssetId HealthBarActor { get; set; } = default;
 
-	[DDLRegistration(0x778daaaeu, description: "The joint/locator to attach the healthbar to.")]
+	[DDLRegistration(0x66348122u, description: "The joint/locator to attach the healthbar to.")]
 	public string? AttachToJoint { get; set; } = "";
 
-	[DDLRegistration(0x778daaaeu, description: "Attach offset.")]
+	[DDLRegistration(0xf8b48463u, description: "Attach offset.")]
 	public DDLVector3? AttachOffset { get; set; } = default;
 
-	[DDLRegistration(0x778daaaeu)]
+	[DDLRegistration(0xf515e945u)]
 	public float Scale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x778daaaeu)]
+	[DDLRegistration(0xf4465e52u)]
 	public bool HideAfterTime { get; set; } = true;
 
-	[DDLRegistration(0x778daaaeu)]
+	[DDLRegistration(0x28edc1d4u)]
 	public bool ShowOnHealthGain { get; set; } = true;
 
-	[DDLRegistration(0x778daaaeu)]
+	[DDLRegistration(0xc7ac0510u)]
 	public bool AttachWorldOffset { get; set; } = true;
 
 	public static AttachedHealthBarPrius Create(DDLObject ddl) => new(ddl);

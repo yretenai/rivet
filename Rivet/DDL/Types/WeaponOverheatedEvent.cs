@@ -18,7 +18,7 @@ public class WeaponOverheatedEvent : EventBase, IDDLObjectType<WeaponOverheatedE
 		BarrelIndex = ddl.GetValue<uint>(0xc1cece45u, BarrelIndex);
 	}
 
-	[DDLRegistration(0xdb2d5112u)]
+	[DDLRegistration(0xc1cece45u)]
 	public uint BarrelIndex { get; set; } = 0x00000000;
 
 	public new static WeaponOverheatedEvent Create(DDLObject ddl) => new(ddl);

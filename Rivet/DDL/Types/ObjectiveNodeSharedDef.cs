@@ -19,10 +19,10 @@ public class ObjectiveNodeSharedDef : MissionSystemDefaultNodeBaseDef, IDDLObjec
 		SaveOptions = ddl.GetObject<ObjectiveSaveOptions>(0x26e8b36eu);
 	}
 
-	[DDLRegistration(0xa26338ebu)]
+	[DDLRegistration(0x58746b9bu)]
 	public string? ObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0xa26338ebu)]
+	[DDLRegistration(0x26e8b36eu)]
 	public ObjectiveSaveOptions? SaveOptions { get; set; } = default;
 
 	public new static ObjectiveNodeSharedDef Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class AssetTagDef : DDLObjectType, IDDLObjectType<AssetTagDef> {
 		Assets = ddl.GetDictionary<RivetAssetId, AssetTagEntry>(0x47a933e9, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AssetTagEntry>(mapId));
 	}
 
-	[DDLRegistration(0x7d099796u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x7d099796u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x7d099796u, description: "Collection of assets with this tag.")]
+	[DDLRegistration(0x47a933e9u, description: "Collection of assets with this tag.")]
 	public Dictionary<RivetAssetId, AssetTagEntry?> Assets { get; set; } = [];
 
 	public static AssetTagDef Create(DDLObject ddl) => new(ddl);

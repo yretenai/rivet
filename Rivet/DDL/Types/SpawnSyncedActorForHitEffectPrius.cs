@@ -18,7 +18,7 @@ public class SpawnSyncedActorForHitEffectPrius : ScriptedShotEffectBasePrius, ID
 		DefaultActorAsset = ddl.GetValue<RivetAssetId>(0x7487981cu, DefaultActorAsset);
 	}
 
-	[DDLRegistration(0xbe91dcebu, description: "Spawn this if the hit actor couldn't provide a spawn actor, or it just hit the environment.")]
+	[DDLRegistration(0x7487981cu, description: "Spawn this if the hit actor couldn't provide a spawn actor, or it just hit the environment.")]
 	public RivetAssetId DefaultActorAsset { get; set; } = default;
 
 	public new static SpawnSyncedActorForHitEffectPrius Create(DDLObject ddl) => new(ddl);

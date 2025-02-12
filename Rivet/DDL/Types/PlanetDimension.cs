@@ -29,40 +29,40 @@ public class PlanetDimension : DDLObjectType, IDDLObjectType<PlanetDimension> {
 		UnlockCondition = ddl.GetObject<ObjSysUnlockSequence>(0x5135ecc8u);
 	}
 
-	[DDLRegistration(0x1608e306u, "Enabled in OS?", "Whether or not this activity card should exist in the OS.")]
+	[DDLRegistration(0x5113d8bcu, "Enabled in OS?", "Whether or not this activity card should exist in the OS.")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x1608e306u, description: "Code name for this pocket dimension for the activity card. Must be at most 32 characters, contain no spaces, and cannot start with '_'.")]
+	[DDLRegistration(0xa15b4218u, description: "Code name for this pocket dimension for the activity card. Must be at most 32 characters, contain no spaces, and cannot start with '_'.")]
 	public string? CodeName { get; set; } = default;
 
-	[DDLRegistration(0x1608e306u, description: "Loctag of the name of this pocket dimension to show in the card. Localized text can be at most 128 characters.")]
+	[DDLRegistration(0x2d78cbbdu, description: "Loctag of the name of this pocket dimension to show in the card. Localized text can be at most 128 characters.")]
 	public string? NameTag { get; set; } = default;
 
-	[DDLRegistration(0x1608e306u, description: "Loctag of the description of this pocket dimension to show in the card. Localized text can be at most 1024 characters.")]
+	[DDLRegistration(0xe822a0dau, description: "Loctag of the description of this pocket dimension to show in the card. Localized text can be at most 1024 characters.")]
 	public string? DescTag { get; set; } = default;
 
-	[DDLRegistration(0x1608e306u, "Card Small Image", "Path to a small image of size 864 x 1040 PNG 24-bit non-interlaced. This image will be shown on the card itself.")]
+	[DDLRegistration(0x9af615f0u, "Card Small Image", "Path to a small image of size 864 x 1040 PNG 24-bit non-interlaced. This image will be shown on the card itself.")]
 	public RivetAssetId CardSmallImage { get; set; } = default;
 
-	[DDLRegistration(0x1608e306u, "Card Large Image", "Path to a large image of size 3840 x 2160 PNG 24-bit non-interlaced. This image will be shown when the card is 'maximized'.")]
+	[DDLRegistration(0x7d5b0f7bu, "Card Large Image", "Path to a large image of size 3840 x 2160 PNG 24-bit non-interlaced. This image will be shown when the card is 'maximized'.")]
 	public RivetAssetId CardLargeImage { get; set; } = default;
 
-	[DDLRegistration(0x1608e306u, "Card Unlock Sequence", "The Unlock Sequence to use to determine if this card is locked or not.")]
+	[DDLRegistration(0xdd7a0accu, "Card Unlock Sequence", "The Unlock Sequence to use to determine if this card is locked or not.")]
 	public ObjSysUnlockSequence? UnlockSequence { get; set; } = default;
 
-	[DDLRegistration(0x1608e306u, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
+	[DDLRegistration(0xa76d47a6u, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
 	public uint DefaultPlaytimeEstimate { get; set; } = 0x00000005;
 
-	[DDLRegistration(0x1608e306u)]
+	[DDLRegistration(0x5952cfa5u)]
 	public string? GameIntentCheckpoint { get; set; } = default;
 
-	[DDLRegistration(0x1608e306u)]
+	[DDLRegistration(0x70a93c34u)]
 	public ActivityReward? Reward { get; set; } = default;
 
-	[DDLRegistration(0x1608e306u)]
+	[DDLRegistration(0xf00bc587u)]
 	public List<ActivityHint?> Hints { get; set; } = [];
 
-	[DDLRegistration(0x1608e306u, "Unlock Condition", "The unlock sequence to use to determine if this pocket dimension is even accessible.")]
+	[DDLRegistration(0x5135ecc8u, "Unlock Condition", "The unlock sequence to use to determine if this pocket dimension is even accessible.")]
 	public ObjSysUnlockSequence? UnlockCondition { get; set; } = default;
 
 	public static PlanetDimension Create(DDLObject ddl) => new(ddl);

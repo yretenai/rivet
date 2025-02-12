@@ -18,7 +18,7 @@ public class MagbootModifierVolumePrius : DDLObjectType, IDDLObjectType<MagbootM
 		MagbootLaunchSpeedModifier = ddl.GetValue<float>(0x2f529a8au, MagbootLaunchSpeedModifier);
 	}
 
-	[DDLRegistration(0x30aafcf0u, "Magboot Launch Speed Modifier")]
+	[DDLRegistration(0x2f529a8au, "Magboot Launch Speed Modifier")]
 	public float MagbootLaunchSpeedModifier { get; set; } = 1.00f;
 
 	public static MagbootModifierVolumePrius Create(DDLObject ddl) => new(ddl);

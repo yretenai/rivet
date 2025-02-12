@@ -21,16 +21,16 @@ public class RaycastActionPrius : DDLObjectType, IDDLObjectType<RaycastActionPri
 		CollFlags = ddl.GetBitset<PhysicsCollFlags>(0x3717f4c7u, PhysicsCollFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0xbaccad50u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Deprecated;
 
-	[DDLRegistration(0xbaccad50u, description: "<b>Optional</b> If blank, bounding sphere center is used.")]
+	[DDLRegistration(0xc54e6703u, description: "<b>Optional</b> If blank, bounding sphere center is used.")]
 	public string? SourceLocator { get; set; } = default;
 
-	[DDLRegistration(0xbaccad50u, description: "<b>Optional</b> If blank, bounding sphere center is used.")]
+	[DDLRegistration(0x7abba555u, description: "<b>Optional</b> If blank, bounding sphere center is used.")]
 	public string? TargetLocator { get; set; } = default;
 
-	[DDLRegistration(0xbaccad50u)]
+	[DDLRegistration(0x3717f4c7u)]
 	public PhysicsCollFlags CollFlags { get; set; } = (PhysicsCollFlags) 0x00000008;
 
 	public static RaycastActionPrius Create(DDLObject ddl) => new(ddl);

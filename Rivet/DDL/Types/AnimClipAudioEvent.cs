@@ -18,7 +18,7 @@ public class AnimClipAudioEvent : DDLObjectType, IDDLObjectType<AnimClipAudioEve
 		SoundEvent = ddl.GetObject<AnimClipSoundEvent>(0x3609711fu);
 	}
 
-	[DDLRegistration(0x01619258u)]
+	[DDLRegistration(0x3609711fu)]
 	public AnimClipSoundEvent? SoundEvent { get; set; } = default;
 
 	public static AnimClipAudioEvent Create(DDLObject ddl) => new(ddl);

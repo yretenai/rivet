@@ -24,25 +24,25 @@ public class WeaponLevelUpEvent : EventBase, IDDLObjectType<WeaponLevelUpEvent> 
 		PlayerPosInfo = ddl.GetObject<DevstatsPlayerPositionInfo>(0xeadcc3e4u);
 	}
 
-	[DDLRegistration(0xeffc33e1u, "Weapon Name", "Name of the weapon that leveled up.")]
+	[DDLRegistration(0xca0166ccu, "Weapon Name", "Name of the weapon that leveled up.")]
 	public string? WeaponName { get; set; } = default;
 
-	[DDLRegistration(0xeffc33e1u)]
+	[DDLRegistration(0xed858c9au)]
 	public uint ItemHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xeffc33e1u)]
+	[DDLRegistration(0xe3de470eu)]
 	public uint PrevLevel { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xeffc33e1u, "New Level", "The new weapon level following this level up.")]
+	[DDLRegistration(0x08e29aa1u, "New Level", "The new weapon level following this level up.")]
 	public uint NewLevel { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xeffc33e1u)]
+	[DDLRegistration(0x186dfad6u)]
 	public uint CurrentXP { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xeffc33e1u, "Primary Segment", "What mission/objective the hero was on when they leveled up.")]
+	[DDLRegistration(0x9e8725dbu, "Primary Segment", "What mission/objective the hero was on when they leveled up.")]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
-	[DDLRegistration(0xeffc33e1u, "Player Pos", "Where the player was when they leveled up.")]
+	[DDLRegistration(0xeadcc3e4u, "Player Pos", "Where the player was when they leveled up.")]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
 	public new static WeaponLevelUpEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MoveableJointCollSnappedData : DDLObjectType, IDDLObjectType<Moveab
 		CollCheckStartLocator = ddl.GetString(0x2aac0748) ?? CollCheckStartLocator;
 	}
 
-	[DDLRegistration(0x1cf6d7ffu, description: "Do coll checks from here to the desired joint position.")]
+	[DDLRegistration(0x2aac0748u, description: "Do coll checks from here to the desired joint position.")]
 	public string? CollCheckStartLocator { get; set; } = default;
 
 	public static MoveableJointCollSnappedData Create(DDLObject ddl) => new(ddl);

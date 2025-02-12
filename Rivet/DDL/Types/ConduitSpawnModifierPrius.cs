@@ -19,10 +19,10 @@ public class ConduitSpawnModifierPrius : DDLObjectType, IDDLObjectType<ConduitSp
 		AttachToChildren = ddl.GetValue<bool>(0x2d21818eu, AttachToChildren);
 	}
 
-	[DDLRegistration(0x90ae323au)]
+	[DDLRegistration(0x56d49c12u)]
 	public RivetAssetId ConduitAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x90ae323au)]
+	[DDLRegistration(0x2d21818eu)]
 	public bool AttachToChildren { get; set; } = false;
 
 	public static ConduitSpawnModifierPrius Create(DDLObject ddl) => new(ddl);

@@ -32,49 +32,49 @@ public class CardDef : DDLObjectType, IDDLObjectType<CardDef> {
 		DuplicateTradeCount = ddl.GetValue<uint>(0xde9fb801u, DuplicateTradeCount);
 	}
 
-	[DDLRegistration(0x19ee9ba9u, "Card ID", "Card ID")]
+	[DDLRegistration(0x7b6ab6e3u, "Card ID", "Card ID")]
 	public x507460e6 CardID { get; set; } = x507460e6.Workshop;
 
-	[DDLRegistration(0x19ee9ba9u, "Card Name loc tag")]
+	[DDLRegistration(0x5fa3f550u, "Card Name loc tag")]
 	public string? CardNameLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x19ee9ba9u, "Temp card name", "Temp non-localized card name text for non-final only.")]
+	[DDLRegistration(0x15f0c337u, "Temp card name", "Temp non-localized card name text for non-final only.")]
 	public string? TempCardName { get; set; } = "temp name";
 
-	[DDLRegistration(0x19ee9ba9u, "Image Texture", "Image Texture")]
+	[DDLRegistration(0xd87bb525u, "Image Texture", "Image Texture")]
 	public RivetAssetId ImageTexture { get; set; } = default;
 
-	[DDLRegistration(0x19ee9ba9u, "HLM loc tag")]
+	[DDLRegistration(0x564f3112u, "HLM loc tag")]
 	public string? HLMLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x19ee9ba9u, "JSC loc tag")]
+	[DDLRegistration(0x8d1d414eu, "JSC loc tag")]
 	public string? JSCLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x19ee9ba9u, "First appearance loc tag")]
+	[DDLRegistration(0x29b69ed9u, "First appearance loc tag")]
 	public string? FirstAppLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x19ee9ba9u, "Bio loc tag")]
+	[DDLRegistration(0x2ad5ff0bu, "Bio loc tag")]
 	public string? BioLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x19ee9ba9u, "Level")]
+	[DDLRegistration(0x83b900d2u, "Level")]
 	public LevelEnum Level { get; set; } = LevelEnum.None;
 
-	[DDLRegistration(0x19ee9ba9u, "Class")]
+	[DDLRegistration(0xf418d55eu, "Class")]
 	public x1f61db2e Class { get; set; } = x1f61db2e.ClassA;
 
-	[DDLRegistration(0x19ee9ba9u, "Tradeable")]
+	[DDLRegistration(0xf4e143e2u, "Tradeable")]
 	public bool Tradeable { get; set; } = true;
 
-	[DDLRegistration(0x19ee9ba9u)]
+	[DDLRegistration(0xf18ecf20u)]
 	public HLMEnum HLMType { get; set; } = HLMEnum.Homeworld;
 
-	[DDLRegistration(0x19ee9ba9u)]
+	[DDLRegistration(0x2ba1d026u)]
 	public JSCEnum JSCType { get; set; } = JSCEnum.System;
 
-	[DDLRegistration(0x19ee9ba9u, "Override duplicate trade count")]
+	[DDLRegistration(0x5aa75b9bu, "Override duplicate trade count")]
 	public bool OverrideDuplicateTradeCount { get; set; } = false;
 
-	[DDLRegistration(0x19ee9ba9u, "Duplicate trade count", "How many duplicates to trade for each card (override)")]
+	[DDLRegistration(0xde9fb801u, "Duplicate trade count", "How many duplicates to trade for each card (override)")]
 	public uint DuplicateTradeCount { get; set; } = 0x0000000a;
 
 	public static CardDef Create(DDLObject ddl) => new(ddl);

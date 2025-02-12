@@ -20,13 +20,13 @@ public class ShotSpawnedEvent : EventBase, IDDLObjectType<ShotSpawnedEvent> {
 		ShowReticle = ddl.GetValue<bool>(0x7eea1a49u, ShowReticle);
 	}
 
-	[DDLRegistration(0xda4946b3u)]
+	[DDLRegistration(0xa7d95b9cu)]
 	public uint ShotActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xda4946b3u)]
+	[DDLRegistration(0xa9d10a0fu)]
 	public uint AttackId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xda4946b3u)]
+	[DDLRegistration(0x7eea1a49u)]
 	public bool ShowReticle { get; set; } = true;
 
 	public new static ShotSpawnedEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class StartPlaythroughDevstatsEvent : EventBase, IDDLObjectType<StartPlay
 		IsNewGamePlus = ddl.GetValue<bool>(0x37288cabu, IsNewGamePlus);
 	}
 
-	[DDLRegistration(0x10000fe5u, "Playthrough Segment ID", "Unique ID for this playthrough. This segment ID is persistent across save/loads for a particular save file.")]
+	[DDLRegistration(0x591f4379u, "Playthrough Segment ID", "Unique ID for this playthrough. This segment ID is persistent across save/loads for a particular save file.")]
 	public string? PlaythroughSegmentId { get; set; } = default;
 
-	[DDLRegistration(0x10000fe5u, "Is New Game Plus", "Is this playthrough an NG+ playthrough?")]
+	[DDLRegistration(0x37288cabu, "Is New Game Plus", "Is this playthrough an NG+ playthrough?")]
 	public bool IsNewGamePlus { get; set; } = false;
 
 	public new static StartPlaythroughDevstatsEvent Create(DDLObject ddl) => new(ddl);

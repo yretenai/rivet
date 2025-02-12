@@ -19,10 +19,10 @@ public class UI_MaterialNodeSelect : DDLObjectType, IDDLObjectType<UI_MaterialNo
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0x7295cb3fu)]
+	[DDLRegistration(0xf84d258cu)]
 	public List<MaterialNodeInputSelectItem?> Items { get; set; } = [];
 
-	[DDLRegistration(0x7295cb3fu)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
 	public static UI_MaterialNodeSelect Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DestroyAfterTimePrius : DDLObjectType, IDDLObjectType<DestroyAfterT
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0x32d811acu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
 	public static DestroyAfterTimePrius Create(DDLObject ddl) => new(ddl);

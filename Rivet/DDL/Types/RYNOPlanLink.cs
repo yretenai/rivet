@@ -19,10 +19,10 @@ public class RYNOPlanLink : ActivityLinkBase, IDDLObjectType<RYNOPlanLink> {
 		SaveID = ddl.GetEnum<x81d3e717>(0xf61c4918u, x81d3e717Values.Lookup);
 	}
 
-	[DDLRegistration(0xb9c1d0b7u, "Planet Name (in code)")]
+	[DDLRegistration(0x38548038u, "Planet Name (in code)")]
 	public string? PlanetName { get; set; } = default;
 
-	[DDLRegistration(0xb9c1d0b7u, "Save ID", "Unique identifier of this RYNO plan for saving the game.")]
+	[DDLRegistration(0xf61c4918u, "Save ID", "Unique identifier of this RYNO plan for saving the game.")]
 	public x81d3e717 SaveID { get; set; } = x81d3e717.None;
 
 	public new static RYNOPlanLink Create(DDLObject ddl) => new(ddl);

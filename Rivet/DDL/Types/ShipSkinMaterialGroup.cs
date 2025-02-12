@@ -20,13 +20,13 @@ public class ShipSkinMaterialGroup : DDLObjectType, IDDLObjectType<ShipSkinMater
 		Material = ddl.GetValues<RivetAssetId>(0x86bfc8e5u);
 	}
 
-	[DDLRegistration(0x55d5dbbdu, description: "The enum value to identify this ship skin.")]
+	[DDLRegistration(0x301c5cc0u, description: "The enum value to identify this ship skin.")]
 	public x8a806a76 SkinType { get; set; } = x8a806a76.Default;
 
-	[DDLRegistration(0x55d5dbbdu, description: "The unlock pack this item belongs to.")]
+	[DDLRegistration(0xa74e9e93u, description: "The unlock pack this item belongs to.")]
 	public x84053194 Pack { get; set; } = x84053194.One;
 
-	[DDLRegistration(0x55d5dbbdu, description: "The material asset to use.")]
+	[DDLRegistration(0x86bfc8e5u, description: "The material asset to use.")]
 	public List<RivetAssetId> Material { get; set; } = [];
 
 	public static ShipSkinMaterialGroup Create(DDLObject ddl) => new(ddl);

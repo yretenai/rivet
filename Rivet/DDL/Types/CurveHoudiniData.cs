@@ -18,7 +18,7 @@ public class CurveHoudiniData : DDLObjectType, IDDLObjectType<CurveHoudiniData> 
 		Width = ddl.GetValue<float>(0x954989eeu, Width);
 	}
 
-	[DDLRegistration(0x1f855c83u, description: "This is the general width of the river.  Individual curve points can override this.  Curve points that do not override this will use this value.")]
+	[DDLRegistration(0x954989eeu, description: "This is the general width of the river.  Individual curve points can override this.  Curve points that do not override this will use this value.")]
 	public float Width { get; set; } = 5.00f;
 
 	public static CurveHoudiniData Create(DDLObject ddl) => new(ddl);

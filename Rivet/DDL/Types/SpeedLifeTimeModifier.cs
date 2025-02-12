@@ -20,13 +20,13 @@ public class SpeedLifeTimeModifier : DDLObjectType, IDDLObjectType<SpeedLifeTime
 		Scale = ddl.GetValue<float>(0xf515e945u, Scale);
 	}
 
-	[DDLRegistration(0xd9df35b2u, "Speed Minimum")]
+	[DDLRegistration(0x8a4ca0e3u, "Speed Minimum")]
 	public float SpeedMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd9df35b2u, "Speed Maximum")]
+	[DDLRegistration(0xb6419fbau, "Speed Maximum")]
 	public float SpeedMax { get; set; } = 2.00f;
 
-	[DDLRegistration(0xd9df35b2u, "Life-Time Scale")]
+	[DDLRegistration(0xf515e945u, "Life-Time Scale")]
 	public float Scale { get; set; } = 1.00f;
 
 	public static SpeedLifeTimeModifier Create(DDLObject ddl) => new(ddl);

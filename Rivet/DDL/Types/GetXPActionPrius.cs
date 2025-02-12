@@ -20,13 +20,13 @@ public class GetXPActionPrius : DDLObjectType, IDDLObjectType<GetXPActionPrius> 
 		UseNeededXp = ddl.GetValue<bool>(0xd2f7daa2u, UseNeededXp);
 	}
 
-	[DDLRegistration(0xa1194434u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0xa1194434u, description: "Level Value")]
+	[DDLRegistration(0x3380a203u, description: "Level Value")]
 	public float LevelValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa1194434u, description: "If true, it is the amount of xp needed.  If false, its the amount of total xp.")]
+	[DDLRegistration(0xd2f7daa2u, description: "If true, it is the amount of xp needed.  If false, its the amount of total xp.")]
 	public bool UseNeededXp { get; set; } = true;
 
 	public static GetXPActionPrius Create(DDLObject ddl) => new(ddl);

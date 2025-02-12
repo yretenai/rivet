@@ -21,16 +21,16 @@ public class CustomRespawn : DDLObjectType, IDDLObjectType<CustomRespawn> {
 		UseCameraAnimation = ddl.GetValue<bool>(0xdc481867u, UseCameraAnimation);
 	}
 
-	[DDLRegistration(0xd5d450e1u)]
+	[DDLRegistration(0xa9e33982u)]
 	public float FrequencyWeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd5d450e1u)]
+	[DDLRegistration(0x45f98c1eu)]
 	public string? AnimDriverName { get; set; } = default;
 
-	[DDLRegistration(0xd5d450e1u)]
+	[DDLRegistration(0x3abce3a3u)]
 	public List<PropAssetElement?> PropAssets { get; set; } = [];
 
-	[DDLRegistration(0xd5d450e1u)]
+	[DDLRegistration(0xdc481867u)]
 	public bool UseCameraAnimation { get; set; } = true;
 
 	public static CustomRespawn Create(DDLObject ddl) => new(ddl);

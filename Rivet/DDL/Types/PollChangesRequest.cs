@@ -19,10 +19,10 @@ public class PollChangesRequest : DDLObjectType, IDDLObjectType<PollChangesReque
 		Limit = ddl.GetValue<int>(0x66c524a1u, Limit);
 	}
 
-	[DDLRegistration(0x94db4017u, description: "Id of last change that the client knows about (only items after this value will be returned).")]
+	[DDLRegistration(0x46646dfau, description: "Id of last change that the client knows about (only items after this value will be returned).")]
 	public long Token { get; set; } = 0;
 
-	[DDLRegistration(0x94db4017u, description: "Maximum number of changes to fetch at one time.")]
+	[DDLRegistration(0x66c524a1u, description: "Maximum number of changes to fetch at one time.")]
 	public int Limit { get; set; } = 50;
 
 	public static PollChangesRequest Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class UIntPlug : DDLObjectType, IDDLObjectType<UIntPlug> {
 		Value = ddl.GetValue<uint>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x9ff2a1ccu)]
+	[DDLRegistration(0x042494f5u)]
 	public uint Value { get; set; } = 0x00000000;
 
 	public static UIntPlug Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class IsLevelUnlockedActionPrius : DDLObjectType, IDDLObjectType<IsLevelU
 		LevelEnum = ddl.GetEnum<LevelEnum>(0x4223680au, LevelEnumValues.Lookup);
 	}
 
-	[DDLRegistration(0x46dd754du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
-	[DDLRegistration(0x46dd754du, "Level Enum", "The level to check.")]
+	[DDLRegistration(0x4223680au, "Level Enum", "The level to check.")]
 	public LevelEnum LevelEnum { get; set; } = LevelEnum.None;
 
 	public static IsLevelUnlockedActionPrius Create(DDLObject ddl) => new(ddl);

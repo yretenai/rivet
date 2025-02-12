@@ -19,10 +19,10 @@ public class AssetField : DDLObjectType, IDDLObjectType<AssetField> {
 		Value = ddl.GetValue<int>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0xf84381b6u)]
+	[DDLRegistration(0x438b92f9u)]
 	public xe4016569 FieldType { get; set; } = xe4016569.TriCount;
 
-	[DDLRegistration(0xf84381b6u)]
+	[DDLRegistration(0x042494f5u)]
 	public int Value { get; set; } = 0;
 
 	public static AssetField Create(DDLObject ddl) => new(ddl);

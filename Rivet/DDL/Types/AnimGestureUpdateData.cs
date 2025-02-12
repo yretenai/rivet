@@ -18,7 +18,7 @@ public class AnimGestureUpdateData : DDLObjectType, IDDLObjectType<AnimGestureUp
 		Elems = ddl.GetDictionary<RivetAssetId, AnimGestureDef>(0xa810b7fd, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimGestureDef>(mapId));
 	}
 
-	[DDLRegistration(0x1c9848c1u)]
+	[DDLRegistration(0xa810b7fdu)]
 	public Dictionary<RivetAssetId, AnimGestureDef?> Elems { get; set; } = [];
 
 	public static AnimGestureUpdateData Create(DDLObject ddl) => new(ddl);

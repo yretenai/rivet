@@ -19,10 +19,10 @@ public class AwardThrownWeaponHitEvent : EventBase, IDDLObjectType<AwardThrownWe
 		HitActorHandle = ddl.GetValue<uint>(0x47c66f9du, HitActorHandle);
 	}
 
-	[DDLRegistration(0x1f3df62fu)]
+	[DDLRegistration(0x79cb4b29u)]
 	public uint UserActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1f3df62fu)]
+	[DDLRegistration(0x47c66f9du)]
 	public uint HitActorHandle { get; set; } = 0x00000000;
 
 	public new static AwardThrownWeaponHitEvent Create(DDLObject ddl) => new(ddl);

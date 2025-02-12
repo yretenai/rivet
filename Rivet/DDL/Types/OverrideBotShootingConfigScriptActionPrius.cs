@@ -19,10 +19,10 @@ public class OverrideBotShootingConfigScriptActionPrius : DDLObjectType, IDDLObj
 		OverrideShootingConfig = ddl.GetValue<RivetAssetId>(0xf9e4c8b5u, OverrideShootingConfig);
 	}
 
-	[DDLRegistration(0x03c738bau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0x03c738bau, description: "Base Type: BotConfigShooting")]
+	[DDLRegistration(0xf9e4c8b5u, description: "Base Type: BotConfigShooting")]
 	public RivetAssetId OverrideShootingConfig { get; set; } = default;
 
 	public static OverrideBotShootingConfigScriptActionPrius Create(DDLObject ddl) => new(ddl);

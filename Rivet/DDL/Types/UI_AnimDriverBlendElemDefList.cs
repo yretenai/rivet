@@ -18,7 +18,7 @@ public class UI_AnimDriverBlendElemDefList : DDLObjectType, IDDLObjectType<UI_An
 		Intervals = ddl.GetObjects<AnimDriverBlendElemDef>(0x955c8dd0u);
 	}
 
-	[DDLRegistration(0xa849bc26u)]
+	[DDLRegistration(0x955c8dd0u)]
 	public List<AnimDriverBlendElemDef?> Intervals { get; set; } = [];
 
 	public static UI_AnimDriverBlendElemDefList Create(DDLObject ddl) => new(ddl);

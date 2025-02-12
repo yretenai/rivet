@@ -19,10 +19,10 @@ public class AllocationLimit : DDLObjectType, IDDLObjectType<AllocationLimit> {
 		Size = ddl.GetValue<ulong>(0xc750e4dau, Size);
 	}
 
-	[DDLRegistration(0xe5d717d8u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xe5d717d8u)]
+	[DDLRegistration(0xc750e4dau)]
 	public ulong Size { get; set; } = 0x0000000000000000;
 
 	public static AllocationLimit Create(DDLObject ddl) => new(ddl);

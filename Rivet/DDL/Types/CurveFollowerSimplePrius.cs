@@ -20,13 +20,13 @@ public class CurveFollowerSimplePrius : DDLObjectType, IDDLObjectType<CurveFollo
 		WaitDuration = ddl.GetValue<float>(0xe3655ff0u, WaitDuration);
 	}
 
-	[DDLRegistration(0x564ff545u, description: "If following a curve that doesn't loop, what do you want to do when an endpoint is reached")]
+	[DDLRegistration(0xa62bea57u, description: "If following a curve that doesn't loop, what do you want to do when an endpoint is reached")]
 	public x96b277fe CurveFollowMode { get; set; } = x96b277fe.Loop;
 
-	[DDLRegistration(0x564ff545u)]
+	[DDLRegistration(0x16753237u)]
 	public float Speed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x564ff545u, description: "How long to wait at endpoints")]
+	[DDLRegistration(0xe3655ff0u, description: "How long to wait at endpoints")]
 	public float WaitDuration { get; set; } = 1.00f;
 
 	public static CurveFollowerSimplePrius Create(DDLObject ddl) => new(ddl);

@@ -29,40 +29,40 @@ public class Region2DMapOverlay : DDLObjectType, IDDLObjectType<Region2DMapOverl
 		AutoMapMaxZ = ddl.GetValue<float>(0x907085b7u, AutoMapMaxZ);
 	}
 
-	[DDLRegistration(0xaba97eabu, "Map Image")]
+	[DDLRegistration(0x30f041a5u, "Map Image")]
 	public string? MapImage { get; set; } = default;
 
-	[DDLRegistration(0xaba97eabu, "Optional Map Layers")]
+	[DDLRegistration(0x79110cffu, "Optional Map Layers")]
 	public List<Region2DMapOverlayLayer?> OptionalMapLayers { get; set; } = [];
 
-	[DDLRegistration(0xaba97eabu, description: "X position of the center of the world (pixel offset from the lower right corner of the image)")]
+	[DDLRegistration(0x4af727d8u, description: "X position of the center of the world (pixel offset from the lower right corner of the image)")]
 	public float Left { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaba97eabu, description: "Y position of the center of the world (pixel offset from the lower right corner of the image)")]
+	[DDLRegistration(0x348c3603u, description: "Y position of the center of the world (pixel offset from the lower right corner of the image)")]
 	public float Top { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaba97eabu, description: "Width of the image in pixels")]
+	[DDLRegistration(0x954989eeu, description: "Width of the image in pixels")]
 	public float Width { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaba97eabu, description: "Height of the image in pixels")]
+	[DDLRegistration(0xcb35ab68u, description: "Height of the image in pixels")]
 	public float Height { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaba97eabu, "Auto Generate Map?")]
+	[DDLRegistration(0x49f92b19u, "Auto Generate Map?")]
 	public bool AutoGenerateMap { get; set; } = false;
 
-	[DDLRegistration(0xaba97eabu, "Auto Map Ortho Camera Height")]
+	[DDLRegistration(0xbfb371e7u, "Auto Map Ortho Camera Height")]
 	public float AutoMapCameraY { get; set; } = 500.00f;
 
-	[DDLRegistration(0xaba97eabu, "Auto Map Min X")]
+	[DDLRegistration(0x6cf500f4u, "Auto Map Min X")]
 	public float AutoMapMinX { get; set; } = -1000.00f;
 
-	[DDLRegistration(0xaba97eabu, "Auto Map Max X")]
+	[DDLRegistration(0x7e7ee49bu, "Auto Map Max X")]
 	public float AutoMapMaxX { get; set; } = 1000.00f;
 
-	[DDLRegistration(0xaba97eabu, "Auto Map Min Z")]
+	[DDLRegistration(0x82fb61d8u, "Auto Map Min Z")]
 	public float AutoMapMinZ { get; set; } = -1000.00f;
 
-	[DDLRegistration(0xaba97eabu, "Auto Map Max Z")]
+	[DDLRegistration(0x907085b7u, "Auto Map Max Z")]
 	public float AutoMapMaxZ { get; set; } = 1000.00f;
 
 	public static Region2DMapOverlay Create(DDLObject ddl) => new(ddl);

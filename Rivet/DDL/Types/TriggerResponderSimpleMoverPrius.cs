@@ -26,31 +26,31 @@ public class TriggerResponderSimpleMoverPrius : TriggerResponderBasePrius, IDDLO
 		ScaleDurationForActualDistance = ddl.GetValue<bool>(0xfc07959du, ScaleDurationForActualDistance);
 	}
 
-	[DDLRegistration(0x1f1e61a9u, "Position Offset")]
+	[DDLRegistration(0x0a063603u, "Position Offset")]
 	public DDLVector3? PositionOffset { get; set; } = default;
 
-	[DDLRegistration(0x1f1e61a9u, "Yaw Offset")]
+	[DDLRegistration(0xe21edee9u, "Yaw Offset")]
 	public float YawOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f1e61a9u, "Pitch Offset")]
+	[DDLRegistration(0x919dc438u, "Pitch Offset")]
 	public float PitchOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f1e61a9u, description: "The time in seconds to travel from the start to the end.")]
+	[DDLRegistration(0x7c5e3db0u, description: "The time in seconds to travel from the start to the end.")]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f1e61a9u, "Optional position actor", "An actor to get target matrix from")]
+	[DDLRegistration(0xf470c52du, "Optional position actor", "An actor to get target matrix from")]
 	public RivetAssetId PositionActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x1f1e61a9u, "Use Override Motion Type")]
+	[DDLRegistration(0xae04c39eu, "Use Override Motion Type")]
 	public bool UseOverrideMotionType { get; set; } = false;
 
-	[DDLRegistration(0x1f1e61a9u, "Accumulate triggers", "Apply to current orientation instead of the original starting location/rotation")]
+	[DDLRegistration(0x35f1fd67u, "Accumulate triggers", "Apply to current orientation instead of the original starting location/rotation")]
 	public bool AccumulateMotion { get; set; } = false;
 
-	[DDLRegistration(0x1f1e61a9u, "Override Motion Type")]
+	[DDLRegistration(0x7cb3834du, "Override Motion Type")]
 	public MotionTypes OverrideMotionType { get; set; } = MotionTypes.SmoothStep;
 
-	[DDLRegistration(0x1f1e61a9u, description: "On retrigger, scale duration according to actual distance being moved")]
+	[DDLRegistration(0xfc07959du, description: "On retrigger, scale duration according to actual distance being moved")]
 	public bool ScaleDurationForActualDistance { get; set; } = true;
 
 	public new static TriggerResponderSimpleMoverPrius Create(DDLObject ddl) => new(ddl);

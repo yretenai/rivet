@@ -19,10 +19,10 @@ public class UDSWebApiActivityLinks : DDLObjectType, IDDLObjectType<UDSWebApiAct
 		SubCategory = ddl.GetObjects<UDSWebApiObjectLink>(0xffea1812u);
 	}
 
-	[DDLRegistration(0x59de74ceu)]
+	[DDLRegistration(0x88ca8652u)]
 	public List<UDSWebApiObjectLink?> Tasks { get; set; } = [];
 
-	[DDLRegistration(0x59de74ceu)]
+	[DDLRegistration(0xffea1812u)]
 	public List<UDSWebApiObjectLink?> SubCategory { get; set; } = [];
 
 	public static UDSWebApiActivityLinks Create(DDLObject ddl) => new(ddl);

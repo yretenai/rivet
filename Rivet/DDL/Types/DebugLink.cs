@@ -18,7 +18,7 @@ public class DebugLink : ActivityLinkBase, IDDLObjectType<DebugLink> {
 		ActivityState = ddl.GetEnum<DebugLinkState>(0x03cab4e3u, DebugLinkStateValues.Lookup);
 	}
 
-	[DDLRegistration(0x267e76e5u)]
+	[DDLRegistration(0x03cab4e3u)]
 	public DebugLinkState ActivityState { get; set; } = DebugLinkState.ActiveAndAvailable;
 
 	public new static DebugLink Create(DDLObject ddl) => new(ddl);

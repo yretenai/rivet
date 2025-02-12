@@ -21,16 +21,16 @@ public class Markup : DDLObjectType, IDDLObjectType<Markup> {
 		SourceMarkup = ddl.GetString(0xf1115996) ?? SourceMarkup;
 	}
 
-	[DDLRegistration(0x187b1de4u)]
+	[DDLRegistration(0x28b909c2u)]
 	public string? MarkupText { get; set; } = "";
 
-	[DDLRegistration(0x187b1de4u)]
+	[DDLRegistration(0xaa9ec16du)]
 	public IconMapBase? IconMapping { get; set; } = default;
 
-	[DDLRegistration(0x187b1de4u, description: "True if this markup is a copy of another one")]
+	[DDLRegistration(0xf53e2119u, description: "True if this markup is a copy of another one")]
 	public bool Clone { get; set; } = false;
 
-	[DDLRegistration(0x187b1de4u)]
+	[DDLRegistration(0xf1115996u)]
 	public string? SourceMarkup { get; set; } = default;
 
 	public static Markup Create(DDLObject ddl) => new(ddl);

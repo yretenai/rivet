@@ -19,10 +19,10 @@ public class DodgeEndEvent : EventBase, IDDLObjectType<DodgeEndEvent> {
 		IsPhaseDash = ddl.GetValue<bool>(0x4a5de148u, IsPhaseDash);
 	}
 
-	[DDLRegistration(0x749fbd3du)]
+	[DDLRegistration(0xd5fe2c1bu)]
 	public uint DodgeActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x749fbd3du)]
+	[DDLRegistration(0x4a5de148u)]
 	public bool IsPhaseDash { get; set; } = false;
 
 	public new static DodgeEndEvent Create(DDLObject ddl) => new(ddl);

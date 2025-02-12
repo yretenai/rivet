@@ -20,13 +20,13 @@ public class EngineState : DDLObjectType, IDDLObjectType<EngineState> {
 		Atmosphere = ddl.GetValue<RivetAssetId>(0x79fd859au, Atmosphere);
 	}
 
-	[DDLRegistration(0xd8901ac0u)]
+	[DDLRegistration(0xf9164c1eu)]
 	public Dictionary<RivetAssetId, EngineSceneObject?> SceneObjects { get; set; } = [];
 
-	[DDLRegistration(0xd8901ac0u)]
+	[DDLRegistration(0x379405adu)]
 	public Dictionary<RivetAssetId, EngineModelInst?> ModelInsts { get; set; } = [];
 
-	[DDLRegistration(0xd8901ac0u)]
+	[DDLRegistration(0x79fd859au)]
 	public RivetAssetId Atmosphere { get; set; } = default;
 
 	public static EngineState Create(DDLObject ddl) => new(ddl);

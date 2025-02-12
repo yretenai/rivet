@@ -18,7 +18,7 @@ public class ScriptVarWatchBool : DDLObjectType, IDDLObjectType<ScriptVarWatchBo
 		Value = ddl.GetValue<bool>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x694ed8bau)]
+	[DDLRegistration(0x042494f5u)]
 	public bool Value { get; set; } = false;
 
 	public static ScriptVarWatchBool Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class CentipedeClearShotsActionPrius : DDLObjectType, IDDLObjectType<Cent
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x145fe1c6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
 	public static CentipedeClearShotsActionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class LookGroupVoiceOverrideData : DDLObjectType, IDDLObjectType<LookGrou
 		LookGroupVoiceOverrides = ddl.GetObjects<LookGroupVoiceOverride>(0x2b44c93au);
 	}
 
-	[DDLRegistration(0x177a05d0u, "Look Group Voice Overrides")]
+	[DDLRegistration(0x2b44c93au, "Look Group Voice Overrides")]
 	public List<LookGroupVoiceOverride?> LookGroupVoiceOverrides { get; set; } = [];
 
 	public static LookGroupVoiceOverrideData Create(DDLObject ddl) => new(ddl);

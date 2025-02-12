@@ -20,13 +20,13 @@ public class UIJukeboxConfig : ConfigBase, IDDLObjectType<UIJukeboxConfig> {
 		Songs = ddl.GetObjects<UIJukeboxSong>(0xa3bf7d5au);
 	}
 
-	[DDLRegistration(0xb7316e4du)]
+	[DDLRegistration(0x7c6fdc58u)]
 	public WwiseState? WwiseStateZurkies { get; set; } = default;
 
-	[DDLRegistration(0xb7316e4du)]
+	[DDLRegistration(0xf7f61cb5u)]
 	public WwiseState? WwiseStateJukebox { get; set; } = default;
 
-	[DDLRegistration(0xb7316e4du, "Songs")]
+	[DDLRegistration(0xa3bf7d5au, "Songs")]
 	public List<UIJukeboxSong?> Songs { get; set; } = [];
 
 	public new static UIJukeboxConfig Create(DDLObject ddl) => new(ddl);

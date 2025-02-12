@@ -18,7 +18,7 @@ public class PlatformMovingElevatorPrius : PlatformMovingPrius, IDDLObjectType<P
 		ActivationRadius = ddl.GetValue<float>(0x19635f60u, ActivationRadius);
 	}
 
-	[DDLRegistration(0x73a93fc3u)]
+	[DDLRegistration(0x19635f60u)]
 	public float ActivationRadius { get; set; } = 2.00f;
 
 	public new static PlatformMovingElevatorPrius Create(DDLObject ddl) => new(ddl);

@@ -33,52 +33,52 @@ public class EngineAllocatorSettings : DDLObjectType, IDDLObjectType<EngineAlloc
 		TextureHeapErrorThresholdPercentage = ddl.GetValue<int>(0x3531bcbdu, TextureHeapErrorThresholdPercentage);
 	}
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0xa6ce9a88u)]
 	public HeapTemplate? DynamicHeapTemplate { get; set; } = default;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0xb1065603u)]
 	public HeapTemplate? DDLHeapTemplate { get; set; } = default;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0x3569fd0du)]
 	public HeapTemplate? AssetHeapTemplate { get; set; } = default;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0x271da170u)]
 	public HeapTemplate? PhysicsHeapTemplate { get; set; } = default;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0x340e4dddu)]
 	public HeapTemplate? ComponentHeapTemplate { get; set; } = default;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0x2e28ec14u)]
 	public HeapTemplate? SoundBanksHeapTemplate { get; set; } = default;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0x6ec45024u)]
 	public HeapTemplate? SoundHeapTemplate { get; set; } = default;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0x0587a874u)]
 	public HeapTemplate? ZoneAssetHeapTemplate { get; set; } = default;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0xc510d402u)]
 	public bool DebugScratch { get; set; } = false;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0x2a868b05u)]
 	public bool PrintAllocSummaryAfterInit { get; set; } = true;
 
-	[DDLRegistration(0x2b1585eeu, "Show live stats for Engine allocators")]
+	[DDLRegistration(0xbef3dd7cu, "Show live stats for Engine allocators")]
 	public xba58b2b9 ShowLiveStats { get; set; } = xba58b2b9.None;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0x450bd185u)]
 	public int ManagedHeapWarningThresholdPercentage { get; set; } = 75;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0x4a8c0abeu)]
 	public int ManagedHeapErrorThresholdPercentage { get; set; } = 90;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0x87d06bb2u)]
 	public int AssetHeapWarningThresholdPercentage { get; set; } = 75;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0xb9078e75u)]
 	public int AssetHeapErrorThresholdPercentage { get; set; } = 92;
 
-	[DDLRegistration(0x2b1585eeu)]
+	[DDLRegistration(0x3531bcbdu)]
 	public int TextureHeapErrorThresholdPercentage { get; set; } = 85;
 
 	public static EngineAllocatorSettings Create(DDLObject ddl) => new(ddl);

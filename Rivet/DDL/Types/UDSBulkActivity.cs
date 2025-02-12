@@ -20,13 +20,13 @@ public class UDSBulkActivity : DDLObjectType, IDDLObjectType<UDSBulkActivity> {
 		Links = ddl.GetString(0x091042dd) ?? Links;
 	}
 
-	[DDLRegistration(0x7b560c24u)]
+	[DDLRegistration(0x9a05f2f9u)]
 	public string? ObjectId { get; set; } = default;
 
-	[DDLRegistration(0x7b560c24u)]
+	[DDLRegistration(0x4c63eb32u)]
 	public string? Metadata { get; set; } = default;
 
-	[DDLRegistration(0x7b560c24u)]
+	[DDLRegistration(0x091042ddu)]
 	public string? Links { get; set; } = default;
 
 	public static UDSBulkActivity Create(DDLObject ddl) => new(ddl);

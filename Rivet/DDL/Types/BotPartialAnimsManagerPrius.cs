@@ -19,10 +19,10 @@ public class BotPartialAnimsManagerPrius : DDLObjectType, IDDLObjectType<BotPart
 		PartialAnimsToActivate = ddl.GetStrings(0x009601c5u);
 	}
 
-	[DDLRegistration(0x71bf00b6u)]
+	[DDLRegistration(0x6f36ca8bu)]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0x71bf00b6u)]
+	[DDLRegistration(0x009601c5u)]
 	public List<string?> PartialAnimsToActivate { get; set; } = [];
 
 	public static BotPartialAnimsManagerPrius Create(DDLObject ddl) => new(ddl);

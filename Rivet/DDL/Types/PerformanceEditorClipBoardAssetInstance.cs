@@ -19,10 +19,10 @@ public class PerformanceEditorClipBoardAssetInstance : DDLObjectType, IDDLObject
 		Type = ddl.GetString(0xbc4e9799) ?? Type;
 	}
 
-	[DDLRegistration(0xf9e5c479u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xf9e5c479u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
 	public static PerformanceEditorClipBoardAssetInstance Create(DDLObject ddl) => new(ddl);

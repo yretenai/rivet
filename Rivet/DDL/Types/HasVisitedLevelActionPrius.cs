@@ -19,10 +19,10 @@ public class HasVisitedLevelActionPrius : DDLObjectType, IDDLObjectType<HasVisit
 		LoadLevelEnum = ddl.GetEnum<LevelEnum>(0x13f2b832u, LevelEnumValues.Lookup);
 	}
 
-	[DDLRegistration(0xbcbd95b2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
-	[DDLRegistration(0xbcbd95b2u, "Level", "The level to check that we visited. If None is given, will use current level.")]
+	[DDLRegistration(0x13f2b832u, "Level", "The level to check that we visited. If None is given, will use current level.")]
 	public LevelEnum LoadLevelEnum { get; set; } = LevelEnum.None;
 
 	public static HasVisitedLevelActionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class WeakspotHPThresholdEvent : HPThresholdEvent, IDDLObjectType<Weakspo
 		LocatorName = ddl.GetString(0x5814524d) ?? LocatorName;
 	}
 
-	[DDLRegistration(0x6f752aebu, description: "This will only be valid if the weakspot was attached to a locator")]
+	[DDLRegistration(0x5814524du, description: "This will only be valid if the weakspot was attached to a locator")]
 	public string? LocatorName { get; set; } = default;
 
 	public new static WeakspotHPThresholdEvent Create(DDLObject ddl) => new(ddl);

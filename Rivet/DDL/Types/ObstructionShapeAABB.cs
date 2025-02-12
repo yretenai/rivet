@@ -18,7 +18,7 @@ public class ObstructionShapeAABB : NavMeshObstructionShapeBase, IDDLObjectType<
 		Extents = ddl.GetObject<DDLVector3>(0x62c56bc8u);
 	}
 
-	[DDLRegistration(0x39269e52u)]
+	[DDLRegistration(0x62c56bc8u)]
 	public DDLVector3? Extents { get; set; } = default;
 
 	public new static ObstructionShapeAABB Create(DDLObject ddl) => new(ddl);

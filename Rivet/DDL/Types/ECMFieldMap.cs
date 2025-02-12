@@ -20,13 +20,13 @@ public class ECMFieldMap : DDLObjectType, IDDLObjectType<ECMFieldMap> {
 		Op = ddl.GetEnum<x48fb1e07>(0xc6d13976u, x48fb1e07Values.Lookup);
 	}
 
-	[DDLRegistration(0x884a115au, "Source")]
+	[DDLRegistration(0x61f23114u, "Source")]
 	public ECMField? Source { get; set; } = default;
 
-	[DDLRegistration(0x884a115au, "Destination")]
+	[DDLRegistration(0xb8f6e923u, "Destination")]
 	public ECMField? Dest { get; set; } = default;
 
-	[DDLRegistration(0x884a115au, "Operator")]
+	[DDLRegistration(0xc6d13976u, "Operator")]
 	public x48fb1e07 Op { get; set; } = x48fb1e07.MapOpAssign;
 
 	public static ECMFieldMap Create(DDLObject ddl) => new(ddl);

@@ -33,52 +33,52 @@ public class AnimSetDef : DDLObjectType, IDDLObjectType<AnimSetDef> {
 		Comments = ddl.GetDictionary<RivetAssetId, AnimSetCommentDef>(0xa59f2b5a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimSetCommentDef>(mapId));
 	}
 
-	[DDLRegistration(0x43a05ebeu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x43a05ebeu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x43a05ebeu, description: "The animation clips for the anim set")]
+	[DDLRegistration(0x8f5f7a83u, description: "The animation clips for the anim set")]
 	public List<RivetAssetId> AnimClips { get; set; } = [];
 
-	[DDLRegistration(0x43a05ebeu, description: "Model file for animation retargetng")]
+	[DDLRegistration(0xb8b499c3u, description: "Model file for animation retargetng")]
 	public RivetAssetId ModelAssetPath { get; set; } = default;
 
-	[DDLRegistration(0x43a05ebeu)]
+	[DDLRegistration(0xb76e93dcu)]
 	public AnimSetPreviewData? PreviewData { get; set; } = default;
 
-	[DDLRegistration(0x43a05ebeu)]
+	[DDLRegistration(0xeaa97a2bu)]
 	public xb521b086 PruneLevel { get; set; } = xb521b086.PruneLevelFull;
 
-	[DDLRegistration(0x43a05ebeu, description: "Whether to stream the animation data")]
+	[DDLRegistration(0x31f983e0u, description: "Whether to stream the animation data")]
 	public bool StreamData { get; set; } = false;
 
-	[DDLRegistration(0x43a05ebeu, description: "Animation clip groups")]
+	[DDLRegistration(0xe28a8539u, description: "Animation clip groups")]
 	public List<AnimClipGroupDef?> AnimClipGroups { get; set; } = [];
 
-	[DDLRegistration(0x43a05ebeu, description: "The animation drivers for the anim set.")]
+	[DDLRegistration(0xb5c03a7cu, description: "The animation drivers for the anim set.")]
 	public List<AnimDriverDef?> AnimDrivers { get; set; } = [];
 
-	[DDLRegistration(0x43a05ebeu, description: "The default transitions for drivers in this AnimSet.")]
+	[DDLRegistration(0x2d9108f6u, description: "The default transitions for drivers in this AnimSet.")]
 	public AnimDriverTransitionDataDef? DefaultTransition { get; set; } = default;
 
-	[DDLRegistration(0x43a05ebeu, description: "Transition data for transitiosn between drivers.")]
+	[DDLRegistration(0x1d9b339du, description: "Transition data for transitiosn between drivers.")]
 	public List<AnimDriverTransitionDef?> Transitions { get; set; } = [];
 
-	[DDLRegistration(0x43a05ebeu, description: "The collection of assets that can be attached")]
+	[DDLRegistration(0xafcec3f9u, description: "The collection of assets that can be attached")]
 	public RivetAssetId AttachmentCollection { get; set; } = default;
 
-	[DDLRegistration(0x43a05ebeu, description: "A list of locators/assets to attach")]
+	[DDLRegistration(0xca18ab0du, description: "A list of locators/assets to attach")]
 	public List<AnimAttachmentDef?> Attachments { get; set; } = [];
 
-	[DDLRegistration(0x43a05ebeu)]
+	[DDLRegistration(0x351d2f90u)]
 	public Dictionary<RivetAssetId, AnimSetSequenceDef?> Sequences { get; set; } = [];
 
-	[DDLRegistration(0x43a05ebeu, description: "TimeStamp to indicate when the changes were made - for UI purposes only.")]
+	[DDLRegistration(0x44336e0bu, description: "TimeStamp to indicate when the changes were made - for UI purposes only.")]
 	public string? UiTimeStamp { get; set; } = default;
 
-	[DDLRegistration(0x43a05ebeu)]
+	[DDLRegistration(0xa59f2b5au)]
 	public Dictionary<RivetAssetId, AnimSetCommentDef?> Comments { get; set; } = [];
 
 	public static AnimSetDef Create(DDLObject ddl) => new(ddl);

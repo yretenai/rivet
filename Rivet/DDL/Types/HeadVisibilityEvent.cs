@@ -19,10 +19,10 @@ public class HeadVisibilityEvent : EventBase, IDDLObjectType<HeadVisibilityEvent
 		FromCine = ddl.GetValue<bool>(0x6251d0d6u, FromCine);
 	}
 
-	[DDLRegistration(0x5189f0edu)]
+	[DDLRegistration(0x94090b9bu)]
 	public bool Hide { get; set; } = false;
 
-	[DDLRegistration(0x5189f0edu)]
+	[DDLRegistration(0x6251d0d6u)]
 	public bool FromCine { get; set; } = false;
 
 	public new static HeadVisibilityEvent Create(DDLObject ddl) => new(ddl);

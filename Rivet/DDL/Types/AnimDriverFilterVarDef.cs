@@ -23,22 +23,22 @@ public class AnimDriverFilterVarDef : DDLObjectType, IDDLObjectType<AnimDriverFi
 		Connections = ddl.GetObjects<AnimDriverVarConnection>(0x322aadceu);
 	}
 
-	[DDLRegistration(0xfb385a8eu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xfb385a8eu)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfb385a8eu)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfb385a8eu)]
+	[DDLRegistration(0x74938804u)]
 	public string? Group { get; set; } = default;
 
-	[DDLRegistration(0xfb385a8eu)]
+	[DDLRegistration(0x5a8f8e51u)]
 	public List<string?> Ids { get; set; } = [];
 
-	[DDLRegistration(0xfb385a8eu)]
+	[DDLRegistration(0x322aadceu)]
 	public List<AnimDriverVarConnection?> Connections { get; set; } = [];
 
 	public static AnimDriverFilterVarDef Create(DDLObject ddl) => new(ddl);

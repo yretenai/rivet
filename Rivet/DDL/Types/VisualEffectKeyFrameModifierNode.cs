@@ -31,46 +31,46 @@ public class VisualEffectKeyFrameModifierNode : DDLObjectType, IDDLObjectType<Vi
 		ValueRGB = ddl.GetObject<DDLVector3>(0xd2f31950u);
 	}
 
-	[DDLRegistration(0x4c62aa89u)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4c62aa89u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x4c62aa89u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x4c62aa89u, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x4c62aa89u)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<VisualEffectNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0x4c62aa89u)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<VisualEffectNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
-	[DDLRegistration(0x4c62aa89u, "Operation")]
+	[DDLRegistration(0x6bf154abu, "Operation")]
 	public KeyFrameModifierOp KeyFrameModifierOp { get; set; } = KeyFrameModifierOp.Multiply;
 
-	[DDLRegistration(0x4c62aa89u)]
+	[DDLRegistration(0x4c68ca42u)]
 	public KeyFrameType KeyFrameType { get; set; } = KeyFrameType.Float;
 
-	[DDLRegistration(0x4c62aa89u, description: "if set to parent, the visual effect will look for a matching override from the assets that spawned it")]
+	[DDLRegistration(0x61f23114u, description: "if set to parent, the visual effect will look for a matching override from the assets that spawned it")]
 	public x21f55189 Source { get; set; } = x21f55189.Self;
 
-	[DDLRegistration(0x4c62aa89u, description: "Mdifier can listen for global variables broadcasted from anywhere in the engine or gameplay code")]
+	[DDLRegistration(0xd67dc5e4u, description: "Mdifier can listen for global variables broadcasted from anywhere in the engine or gameplay code")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0x4c62aa89u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4c62aa89u, "Values")]
+	[DDLRegistration(0x05047387u, "Values")]
 	public DDLVector2? Value2 { get; set; } = default;
 
-	[DDLRegistration(0x4c62aa89u, "Values")]
+	[DDLRegistration(0x72034311u, "Values")]
 	public DDLVector3? Value3 { get; set; } = default;
 
-	[DDLRegistration(0x4c62aa89u, "Color")]
+	[DDLRegistration(0xd2f31950u, "Color")]
 	public DDLVector3? ValueRGB { get; set; } = default;
 
 	public static VisualEffectKeyFrameModifierNode Create(DDLObject ddl) => new(ddl);

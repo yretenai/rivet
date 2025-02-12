@@ -18,7 +18,7 @@ public class TriggerEffectKeyFrameDataTime : TriggerEffectKeyFrameDataBase, IDDL
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0x77c48cabu, description: "Value in Seconds.")]
+	[DDLRegistration(0x5f0458f5u, description: "Value in Seconds.")]
 	public float Time { get; set; } = 0.00f;
 
 	public new static TriggerEffectKeyFrameDataTime Create(DDLObject ddl) => new(ddl);

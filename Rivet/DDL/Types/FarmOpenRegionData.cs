@@ -22,19 +22,19 @@ public class FarmOpenRegionData : DDLObjectType, IDDLObjectType<FarmOpenRegionDa
 		ExtraZonesPerTile = ddl.GetObjects<FarmExtraTileZoneData>(0x1ed0234cu);
 	}
 
-	[DDLRegistration(0xbfef7520u, "Atmosphere Zone", "specifies atmospheres to use for capture.")]
+	[DDLRegistration(0x9c553ee6u, "Atmosphere Zone", "specifies atmospheres to use for capture.")]
 	public RivetAssetId AtmosphereZone { get; set; } = default;
 
-	[DDLRegistration(0xbfef7520u, "Region", ".region file")]
+	[DDLRegistration(0xcabd3504u, "Region", ".region file")]
 	public RivetAssetId RegionFile { get; set; } = default;
 
-	[DDLRegistration(0xbfef7520u, "Level", ".level file for this region. If not specified, the default level is used.")]
+	[DDLRegistration(0xc002f04bu, "Level", ".level file for this region. If not specified, the default level is used.")]
 	public RivetAssetId LevelFile { get; set; } = default;
 
-	[DDLRegistration(0xbfef7520u, "Region", "regions that should be checked for zones that are always loaded when capturing tiles")]
+	[DDLRegistration(0x44015029u, "Region", "regions that should be checked for zones that are always loaded when capturing tiles")]
 	public List<RivetAssetId> GlobalRegions { get; set; } = [];
 
-	[DDLRegistration(0xbfef7520u, "Extra Zones Per Tile", "Extra zones to load for various tiles. Use for zones that do not match the naming convention")]
+	[DDLRegistration(0x1ed0234cu, "Extra Zones Per Tile", "Extra zones to load for various tiles. Use for zones that do not match the naming convention")]
 	public List<FarmExtraTileZoneData?> ExtraZonesPerTile { get; set; } = [];
 
 	public static FarmOpenRegionData Create(DDLObject ddl) => new(ddl);

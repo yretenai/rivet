@@ -19,10 +19,10 @@ public class ChangeShotTargetEvent : EventBase, IDDLObjectType<ChangeShotTargetE
 		TargetPosition = ddl.GetObject<DDLVector3>(0x52222f11u);
 	}
 
-	[DDLRegistration(0x89ccc49du)]
+	[DDLRegistration(0x63316affu)]
 	public uint TargetHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x89ccc49du)]
+	[DDLRegistration(0x52222f11u)]
 	public DDLVector3? TargetPosition { get; set; } = default;
 
 	public new static ChangeShotTargetEvent Create(DDLObject ddl) => new(ddl);

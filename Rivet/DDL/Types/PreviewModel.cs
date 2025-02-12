@@ -20,13 +20,13 @@ public class PreviewModel : DDLObjectType, IDDLObjectType<PreviewModel> {
 		MaterialMappings = ddl.GetObjects<PreviewMaterialMapping>(0x6b86e05du);
 	}
 
-	[DDLRegistration(0x5e53ae29u)]
+	[DDLRegistration(0xcec6be18u)]
 	public RivetAssetId Model { get; set; } = "Sphere";
 
-	[DDLRegistration(0x5e53ae29u)]
+	[DDLRegistration(0xb2fb9e19u)]
 	public bool Outlined { get; set; } = false;
 
-	[DDLRegistration(0x5e53ae29u)]
+	[DDLRegistration(0x6b86e05du)]
 	public List<PreviewMaterialMapping?> MaterialMappings { get; set; } = [];
 
 	public static PreviewModel Create(DDLObject ddl) => new(ddl);

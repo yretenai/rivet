@@ -21,16 +21,16 @@ public class SSAOSettings : DDLObjectType, IDDLObjectType<SSAOSettings> {
 		MinRadius = ddl.GetValue<float>(0x50e7abb6u, MinRadius);
 	}
 
-	[DDLRegistration(0x0391ab7cu)]
+	[DDLRegistration(0xc800a1eeu)]
 	public float RTContribution { get; set; } = 0.70f;
 
-	[DDLRegistration(0x0391ab7cu)]
+	[DDLRegistration(0xdd471146u)]
 	public float RTRadiusScale { get; set; } = 0.50f;
 
-	[DDLRegistration(0x0391ab7cu)]
+	[DDLRegistration(0x76c91ca4u)]
 	public float ThinOcclAdjust { get; set; } = 1.25f;
 
-	[DDLRegistration(0x0391ab7cu)]
+	[DDLRegistration(0x50e7abb6u)]
 	public float MinRadius { get; set; } = 1.50f;
 
 	public static SSAOSettings Create(DDLObject ddl) => new(ddl);

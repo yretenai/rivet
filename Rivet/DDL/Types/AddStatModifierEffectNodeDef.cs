@@ -20,13 +20,13 @@ public class AddStatModifierEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObje
 		Value = ddl.GetObject<InputPlugFloat>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x9705c2a7u)]
+	[DDLRegistration(0x10283f91u)]
 	public xac99cbe7 Stat { get; set; } = xac99cbe7.Damage;
 
-	[DDLRegistration(0x9705c2a7u)]
+	[DDLRegistration(0xc6d13976u)]
 	public x2d67b08a Op { get; set; } = x2d67b08a.Multiply;
 
-	[DDLRegistration(0x9705c2a7u)]
+	[DDLRegistration(0x042494f5u)]
 	public InputPlugFloat? Value { get; set; } = default;
 
 	public new static AddStatModifierEffectNodeDef Create(DDLObject ddl) => new(ddl);

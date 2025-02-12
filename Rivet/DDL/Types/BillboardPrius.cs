@@ -19,10 +19,10 @@ public class BillboardPrius : DDLObjectType, IDDLObjectType<BillboardPrius> {
 		PreserveScale = ddl.GetValue<bool>(0xbad0177au, PreserveScale);
 	}
 
-	[DDLRegistration(0x97dc7a32u, description: "Axis to keep fixed and rotate around")]
+	[DDLRegistration(0xe27cd0cbu, description: "Axis to keep fixed and rotate around")]
 	public x6b6ec8ab Constraint { get; set; } = x6b6ec8ab.AxisUp;
 
-	[DDLRegistration(0x97dc7a32u, description: "Preserve the scale of the actor.")]
+	[DDLRegistration(0xbad0177au, description: "Preserve the scale of the actor.")]
 	public bool PreserveScale { get; set; } = false;
 
 	public static BillboardPrius Create(DDLObject ddl) => new(ddl);

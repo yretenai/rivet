@@ -21,16 +21,16 @@ public class SwingshotTargetSlingPrius : SwingshotTargetBasePrius, IDDLObjectTyp
 		AutoLaunch = ddl.GetValue<bool>(0x26908f9du, AutoLaunch);
 	}
 
-	[DDLRegistration(0xa484883eu)]
+	[DDLRegistration(0x98554e8cu)]
 	public RivetAssetId TargetActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa484883eu, description: "Hint for when the player will land, only used if set to a positive value")]
+	[DDLRegistration(0x4442bb4cu, description: "Hint for when the player will land, only used if set to a positive value")]
 	public float OverrideLandingTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa484883eu, description: "Use reduced spin times for traversal chains")]
+	[DDLRegistration(0x1ee632c7u, description: "Use reduced spin times for traversal chains")]
 	public bool UseTraversalChainSpinTime { get; set; } = false;
 
-	[DDLRegistration(0xa484883eu, description: "Automatically launch the player when up to speed")]
+	[DDLRegistration(0x26908f9du, description: "Automatically launch the player when up to speed")]
 	public bool AutoLaunch { get; set; } = false;
 
 	public new static SwingshotTargetSlingPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class MultiplyFloatsNodeDef : MathNodeBaseDef, IDDLObjectType<MultiplyFlo
 		Product = ddl.GetObject<OutputPlugFloat>(0xd2a06795u);
 	}
 
-	[DDLRegistration(0x346a7df6u)]
+	[DDLRegistration(0xd340a267u)]
 	public List<InputPlugFloat?> Factor { get; set; } = [];
 
-	[DDLRegistration(0x346a7df6u)]
+	[DDLRegistration(0xd2a06795u)]
 	public OutputPlugFloat? Product { get; set; } = default;
 
 	public new static MultiplyFloatsNodeDef Create(DDLObject ddl) => new(ddl);

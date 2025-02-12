@@ -20,13 +20,13 @@ public class ShotSpawnerAttachArtEvent : EventBase, IDDLObjectType<ShotSpawnerAt
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0xf7f73b5cu)]
+	[DDLRegistration(0xc409037fu)]
 	public uint ShotIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf7f73b5cu)]
+	[DDLRegistration(0x80ab16aau)]
 	public float Timeout { get; set; } = 10.00f;
 
-	[DDLRegistration(0xf7f73b5cu, description: "Attach to this locator.")]
+	[DDLRegistration(0x7bac1d57u, description: "Attach to this locator.")]
 	public string? Locator { get; set; } = default;
 
 	public new static ShotSpawnerAttachArtEvent Create(DDLObject ddl) => new(ddl);

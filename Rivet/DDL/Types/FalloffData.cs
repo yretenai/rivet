@@ -22,19 +22,19 @@ public class FalloffData : DDLObjectType, IDDLObjectType<FalloffData> {
 		ApplyToStatus = ddl.GetValue<bool>(0xcf27e502u, ApplyToStatus);
 	}
 
-	[DDLRegistration(0xc4a8c5a1u)]
+	[DDLRegistration(0x387842a8u)]
 	public float FalloffStart { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc4a8c5a1u)]
+	[DDLRegistration(0x52627f04u)]
 	public float FalloffEnd { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc4a8c5a1u)]
+	[DDLRegistration(0xf0984a90u)]
 	public float FalloffCurve { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc4a8c5a1u)]
+	[DDLRegistration(0x9a97b7f1u)]
 	public float FalloffFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc4a8c5a1u)]
+	[DDLRegistration(0xcf27e502u)]
 	public bool ApplyToStatus { get; set; } = false;
 
 	public static FalloffData Create(DDLObject ddl) => new(ddl);

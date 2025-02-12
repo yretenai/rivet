@@ -19,10 +19,10 @@ public class MissionCompleteObjectiveNodeSharedDef : MissionSystemNodeBaseDef, I
 		GotoCleanupState = ddl.GetValue<bool>(0x107b0126u, GotoCleanupState);
 	}
 
-	[DDLRegistration(0xac7c9661u)]
+	[DDLRegistration(0xb8666d53u)]
 	public List<InputPlugBoolean?> Complete { get; set; } = [];
 
-	[DDLRegistration(0xac7c9661u)]
+	[DDLRegistration(0x107b0126u)]
 	public bool GotoCleanupState { get; set; } = false;
 
 	public new static MissionCompleteObjectiveNodeSharedDef Create(DDLObject ddl) => new(ddl);

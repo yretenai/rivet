@@ -18,7 +18,7 @@ public class BoltCrankSetStateActionPrius : DDLObjectType, IDDLObjectType<BoltCr
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x06c4f976u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
 	public static BoltCrankSetStateActionPrius Create(DDLObject ddl) => new(ddl);

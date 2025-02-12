@@ -20,13 +20,13 @@ public class SVOGeneratorStepDone : DDLObjectType, IDDLObjectType<SVOGeneratorSt
 		Clear = ddl.GetValues<bool>(0xfce23dc7u);
 	}
 
-	[DDLRegistration(0x749cb45au)]
+	[DDLRegistration(0x26a7b809u)]
 	public List<DDLVector3?> Centers { get; set; } = [];
 
-	[DDLRegistration(0x749cb45au)]
+	[DDLRegistration(0x107672fbu)]
 	public List<DDLVector3?> Radii { get; set; } = [];
 
-	[DDLRegistration(0x749cb45au)]
+	[DDLRegistration(0xfce23dc7u)]
 	public List<bool> Clear { get; set; } = [];
 
 	public static SVOGeneratorStepDone Create(DDLObject ddl) => new(ddl);

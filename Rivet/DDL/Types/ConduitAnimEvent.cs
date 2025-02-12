@@ -21,16 +21,16 @@ public class ConduitAnimEvent : EventBase, IDDLObjectType<ConduitAnimEvent> {
 		TriggerLocator = ddl.GetString(0x85b17d52) ?? TriggerLocator;
 	}
 
-	[DDLRegistration(0xd0d37c85u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0xd0d37c85u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd0d37c85u)]
+	[DDLRegistration(0xbda9b048u)]
 	public uint Param { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd0d37c85u, description: "Locator set from the Anim Trigger")]
+	[DDLRegistration(0x85b17d52u, description: "Locator set from the Anim Trigger")]
 	public string? TriggerLocator { get; set; } = default;
 
 	public new static ConduitAnimEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class WeaponEquipListenerPrius : DDLObjectType, IDDLObjectType<WeaponEqui
 		WeaponEquipListenerConfigAssetId = ddl.GetValue<RivetAssetId>(0x2120329bu, WeaponEquipListenerConfigAssetId);
 	}
 
-	[DDLRegistration(0x2d9ac930u)]
+	[DDLRegistration(0x2120329bu)]
 	public RivetAssetId WeaponEquipListenerConfigAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static WeaponEquipListenerPrius Create(DDLObject ddl) => new(ddl);

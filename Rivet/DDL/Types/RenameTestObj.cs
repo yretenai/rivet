@@ -19,10 +19,10 @@ public class RenameTestObj : DDLObjectType, IDDLObjectType<RenameTestObj> {
 		ExpectedGatherResults = ddl.GetObjects<RenamePathObj>(0x1a1884cfu);
 	}
 
-	[DDLRegistration(0x0712d99bu)]
+	[DDLRegistration(0x37d9bed9u)]
 	public RenamePathObj? PrimaryRenamePaths { get; set; } = default;
 
-	[DDLRegistration(0x0712d99bu)]
+	[DDLRegistration(0x1a1884cfu)]
 	public List<RenamePathObj?> ExpectedGatherResults { get; set; } = [];
 
 	public static RenameTestObj Create(DDLObject ddl) => new(ddl);

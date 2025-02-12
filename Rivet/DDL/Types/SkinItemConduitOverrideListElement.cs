@@ -19,10 +19,10 @@ public class SkinItemConduitOverrideListElement : DDLObjectType, IDDLObjectType<
 		ConduitOverride = ddl.GetObject<SkinItemConduitOverride>(0x93ecbebeu);
 	}
 
-	[DDLRegistration(0xd9eba302u, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0xd9eba302u, "Conduit Override", "Conduit override parameters")]
+	[DDLRegistration(0x93ecbebeu, "Conduit Override", "Conduit override parameters")]
 	public SkinItemConduitOverride? ConduitOverride { get; set; } = default;
 
 	public static SkinItemConduitOverrideListElement Create(DDLObject ddl) => new(ddl);

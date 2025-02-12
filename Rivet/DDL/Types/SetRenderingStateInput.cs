@@ -18,7 +18,7 @@ public class SetRenderingStateInput : DDLObjectType, IDDLObjectType<SetRendering
 		RenderingState = ddl.GetValue<byte>(0xf6675125u, RenderingState);
 	}
 
-	[DDLRegistration(0xffa45004u)]
+	[DDLRegistration(0xf6675125u)]
 	public byte RenderingState { get; set; } = 0x01;
 
 	public static SetRenderingStateInput Create(DDLObject ddl) => new(ddl);

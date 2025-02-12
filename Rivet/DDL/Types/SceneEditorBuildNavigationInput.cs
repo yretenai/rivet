@@ -18,7 +18,7 @@ public class SceneEditorBuildNavigationInput : DDLObjectType, IDDLObjectType<Sce
 		ZonePath = ddl.GetValue<RivetAssetId>(0x3643be77u, ZonePath);
 	}
 
-	[DDLRegistration(0xd4b06276u, description: "Path of the zone we build navigation for")]
+	[DDLRegistration(0x3643be77u, description: "Path of the zone we build navigation for")]
 	public RivetAssetId ZonePath { get; set; } = default;
 
 	public static SceneEditorBuildNavigationInput Create(DDLObject ddl) => new(ddl);

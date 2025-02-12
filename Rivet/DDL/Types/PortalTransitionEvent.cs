@@ -20,13 +20,13 @@ public class PortalTransitionEvent : EventBase, IDDLObjectType<PortalTransitionE
 		Destination = ddl.GetObject<DDLTransform>(0xb31a6f71u);
 	}
 
-	[DDLRegistration(0x419f4088u)]
+	[DDLRegistration(0x54c7dd3eu)]
 	public uint SourceActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x419f4088u)]
+	[DDLRegistration(0x3a387b17u)]
 	public uint DestinationActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x419f4088u)]
+	[DDLRegistration(0xb31a6f71u)]
 	public DDLTransform? Destination { get; set; } = default;
 
 	public new static PortalTransitionEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class LinearDistanceEvent : EventBase, IDDLObjectType<LinearDistanceEvent
 		ComponentHandle = ddl.GetValue<uint>(0xd0f9acd0u, ComponentHandle);
 	}
 
-	[DDLRegistration(0x581bfbc1u)]
+	[DDLRegistration(0xd0f9acd0u)]
 	public uint ComponentHandle { get; set; } = 0x00000000;
 
 	public new static LinearDistanceEvent Create(DDLObject ddl) => new(ddl);

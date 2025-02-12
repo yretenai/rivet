@@ -18,7 +18,7 @@ public class QueryError : DDLObjectType, IDDLObjectType<QueryError> {
 		Message = ddl.GetString(0xb7575347) ?? Message;
 	}
 
-	[DDLRegistration(0x0eec09cfu)]
+	[DDLRegistration(0xb7575347u)]
 	public string? Message { get; set; } = "";
 
 	public static QueryError Create(DDLObject ddl) => new(ddl);

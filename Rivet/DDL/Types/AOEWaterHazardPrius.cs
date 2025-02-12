@@ -26,31 +26,31 @@ public class AOEWaterHazardPrius : DDLObjectType, IDDLObjectType<AOEWaterHazardP
 		DamageString = ddl.GetString(0x4624269b) ?? DamageString;
 	}
 
-	[DDLRegistration(0x149d9dccu)]
+	[DDLRegistration(0x97aa8eecu)]
 	public float TellRadius { get; set; } = 30.00f;
 
-	[DDLRegistration(0x149d9dccu)]
+	[DDLRegistration(0xcc7f53a5u)]
 	public float TriggerRadius { get; set; } = 5.00f;
 
-	[DDLRegistration(0x149d9dccu)]
+	[DDLRegistration(0xe3e6fa68u)]
 	public float DamageRadius { get; set; } = 5.00f;
 
-	[DDLRegistration(0x149d9dccu)]
+	[DDLRegistration(0xdd944989u)]
 	public float DamageDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x149d9dccu)]
+	[DDLRegistration(0x499881dbu)]
 	public float CooldownTime { get; set; } = 5.00f;
 
-	[DDLRegistration(0x149d9dccu)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 30.00f;
 
-	[DDLRegistration(0x149d9dccu)]
+	[DDLRegistration(0xc0897c0au)]
 	public float DamageIgnoreDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x149d9dccu, "Damage Type")]
+	[DDLRegistration(0x840c154du, "Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Explosion;
 
-	[DDLRegistration(0x149d9dccu)]
+	[DDLRegistration(0x4624269bu)]
 	public string? DamageString { get; set; } = default;
 
 	public static AOEWaterHazardPrius Create(DDLObject ddl) => new(ddl);

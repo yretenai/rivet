@@ -20,13 +20,13 @@ public class FaceVelocityOrientation : OrientationMode, IDDLObjectType<FaceVeloc
 		SmoothRotation = ddl.GetValue<bool>(0x68e916cau, SmoothRotation);
 	}
 
-	[DDLRegistration(0x14f528a1u)]
+	[DDLRegistration(0xbe4e01d1u)]
 	public bool StayPlanar { get; set; } = false;
 
-	[DDLRegistration(0x14f528a1u)]
+	[DDLRegistration(0x9248e64eu)]
 	public bool UpdateOnce { get; set; } = false;
 
-	[DDLRegistration(0x14f528a1u)]
+	[DDLRegistration(0x68e916cau)]
 	public bool SmoothRotation { get; set; } = false;
 
 	public new static FaceVelocityOrientation Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class ArcShotMotionGamePrius : ArcShotMotionPrius, IDDLObjectType<ArcShot
 		FlightTime = ddl.GetValue<float>(0xd9b0da6cu, FlightTime);
 	}
 
-	[DDLRegistration(0x3765bce3u)]
+	[DDLRegistration(0xf0d89680u)]
 	public float MinSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0x3765bce3u)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 50.00f;
 
-	[DDLRegistration(0x3765bce3u)]
+	[DDLRegistration(0xd9b0da6cu)]
 	public float FlightTime { get; set; } = 1.00f;
 
 	public new static ArcShotMotionGamePrius Create(DDLObject ddl) => new(ddl);

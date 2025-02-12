@@ -19,10 +19,10 @@ public class QueryVolumeShapeCylinder : QueryVolumeShape, IDDLObjectType<QueryVo
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0xd1e21aeau, description: "Length of the cylinder")]
+	[DDLRegistration(0x3f05d0d5u, description: "Length of the cylinder")]
 	public float Length { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd1e21aeau, description: "Radius of the cylinder")]
+	[DDLRegistration(0x0504203du, description: "Radius of the cylinder")]
 	public float Radius { get; set; } = 1.00f;
 
 	public new static QueryVolumeShapeCylinder Create(DDLObject ddl) => new(ddl);

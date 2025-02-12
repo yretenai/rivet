@@ -19,10 +19,10 @@ public class VendorWeaponStat : DDLObjectType, IDDLObjectType<VendorWeaponStat> 
 		Val = ddl.GetValue<uint>(0xbd8a93acu, Val);
 	}
 
-	[DDLRegistration(0xe602315eu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x788cf5f2 Type { get; set; } = x788cf5f2.Power;
 
-	[DDLRegistration(0xe602315eu, description: "Value for the stat on a 0-10 scale")]
+	[DDLRegistration(0xbd8a93acu, description: "Value for the stat on a 0-10 scale")]
 	public uint Val { get; set; } = 0x0000000a;
 
 	public static VendorWeaponStat Create(DDLObject ddl) => new(ddl);

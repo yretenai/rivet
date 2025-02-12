@@ -21,16 +21,16 @@ public class OverrideHeroSpaceshipSpeedActionPrius : DDLObjectType, IDDLObjectTy
 		ThrustSpeed = ddl.GetValue<float>(0x158352ebu, ThrustSpeed);
 	}
 
-	[DDLRegistration(0xe21e4b9fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0xe21e4b9fu)]
+	[DDLRegistration(0x3c1dafddu)]
 	public float NonFireSpeed { get; set; } = 28.00f;
 
-	[DDLRegistration(0xe21e4b9fu)]
+	[DDLRegistration(0xaf22b118u)]
 	public float FireSpeed { get; set; } = -1.00f;
 
-	[DDLRegistration(0xe21e4b9fu)]
+	[DDLRegistration(0x158352ebu)]
 	public float ThrustSpeed { get; set; } = 40.00f;
 
 	public static OverrideHeroSpaceshipSpeedActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class Nav3DSmoothPathStepElement : DDLObjectType, IDDLObjectType<Nav3DSmo
 		Step = ddl.GetObject<Nav3DSmoothPathStepBase>(0x73293e8cu);
 	}
 
-	[DDLRegistration(0x2fc6edfcu)]
+	[DDLRegistration(0xd0fc3a43u)]
 	public ulong StepIndex { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x2fc6edfcu)]
+	[DDLRegistration(0x73293e8cu)]
 	public Nav3DSmoothPathStepBase? Step { get; set; } = default;
 
 	public static Nav3DSmoothPathStepElement Create(DDLObject ddl) => new(ddl);

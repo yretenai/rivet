@@ -18,7 +18,7 @@ public class MeshNormalDef : DDLObjectType, IDDLObjectType<MeshNormalDef> {
 		Normal = ddl.GetValues<float>(0x1ffd2683u);
 	}
 
-	[DDLRegistration(0xa2bfaa88u)]
+	[DDLRegistration(0x1ffd2683u)]
 	public List<float> Normal { get; set; } = [];
 
 	public static MeshNormalDef Create(DDLObject ddl) => new(ddl);

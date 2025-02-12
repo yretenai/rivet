@@ -18,7 +18,7 @@ public class FocusTrackingConfig : ConfigBase, IDDLObjectType<FocusTrackingConfi
 		FocusTrackingData = ddl.GetObject<FocusTrackingManagerData>(0xbd3d97bbu);
 	}
 
-	[DDLRegistration(0x966dc71bu)]
+	[DDLRegistration(0xbd3d97bbu)]
 	public FocusTrackingManagerData? FocusTrackingData { get; set; } = default;
 
 	public new static FocusTrackingConfig Create(DDLObject ddl) => new(ddl);

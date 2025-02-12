@@ -25,28 +25,28 @@ public class TestPerson : DDLObjectType, IDDLObjectType<TestPerson> {
 		Id = ddl.GetValue<int>(0x8a514a8du, Id);
 	}
 
-	[DDLRegistration(0x69a0c0eeu, "First")]
+	[DDLRegistration(0xa16f3e5au, "First")]
 	public string? FirstName { get; set; } = default;
 
-	[DDLRegistration(0x69a0c0eeu, "Last")]
+	[DDLRegistration(0x6b17a7f8u, "Last")]
 	public string? LastName { get; set; } = default;
 
-	[DDLRegistration(0x69a0c0eeu)]
+	[DDLRegistration(0x8b65397bu)]
 	public int Age { get; set; } = 0;
 
-	[DDLRegistration(0x69a0c0eeu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public int Height { get; set; } = 0;
 
-	[DDLRegistration(0x69a0c0eeu, "Eye Color")]
+	[DDLRegistration(0x47545727u, "Eye Color")]
 	public string? EyeColor { get; set; } = default;
 
-	[DDLRegistration(0x69a0c0eeu)]
+	[DDLRegistration(0x0ca40cb9u)]
 	public string? Address { get; set; } = default;
 
-	[DDLRegistration(0x69a0c0eeu)]
+	[DDLRegistration(0x5d1c5b1cu)]
 	public string? Phone { get; set; } = default;
 
-	[DDLRegistration(0x69a0c0eeu)]
+	[DDLRegistration(0x8a514a8du)]
 	public int Id { get; set; } = 0;
 
 	public static TestPerson Create(DDLObject ddl) => new(ddl);

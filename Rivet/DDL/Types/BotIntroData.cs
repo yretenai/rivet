@@ -18,7 +18,7 @@ public class BotIntroData : DDLObjectType, IDDLObjectType<BotIntroData> {
 		ShootDuringIntro = ddl.GetValue<bool>(0xb6b2d134u, ShootDuringIntro);
 	}
 
-	[DDLRegistration(0x9ec6779eu, description: "For ranged bots, if they should shoot while introing.")]
+	[DDLRegistration(0xb6b2d134u, description: "For ranged bots, if they should shoot while introing.")]
 	public bool ShootDuringIntro { get; set; } = false;
 
 	public static BotIntroData Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class RegionAuxTemp : DDLObjectType, IDDLObjectType<RegionAuxTemp> {
 		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
 	}
 
-	[DDLRegistration(0xb2e69a64u)]
+	[DDLRegistration(0x0f9e326au)]
 	public RivetAssetId HighLod { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb2e69a64u)]
+	[DDLRegistration(0xcc3cfed1u)]
 	public RivetAssetId LowLod { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb2e69a64u)]
+	[DDLRegistration(0xf0e3b888u)]
 	public RivetAssetId Units { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb2e69a64u)]
+	[DDLRegistration(0x9c997da9u)]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
 	public static RegionAuxTemp Create(DDLObject ddl) => new(ddl);

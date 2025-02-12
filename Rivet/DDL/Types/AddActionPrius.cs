@@ -19,10 +19,10 @@ public class AddActionPrius : DDLObjectType, IDDLObjectType<AddActionPrius> {
 		Integer = ddl.GetValue<bool>(0x5be5c833u, Integer);
 	}
 
-	[DDLRegistration(0x52b5f9f6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
-	[DDLRegistration(0x52b5f9f6u, description: "Integers Only")]
+	[DDLRegistration(0x5be5c833u, description: "Integers Only")]
 	public bool Integer { get; set; } = false;
 
 	public static AddActionPrius Create(DDLObject ddl) => new(ddl);

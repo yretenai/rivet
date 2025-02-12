@@ -23,22 +23,22 @@ public class WindDef : DDLObjectType, IDDLObjectType<WindDef> {
 		WindGustsDuration = ddl.GetObject<WindMinMax>(0x2db80a56u);
 	}
 
-	[DDLRegistration(0xc33cdb9au)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0xc33cdb9au)]
+	[DDLRegistration(0x6b4f279eu)]
 	public float Intensity { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc33cdb9au)]
+	[DDLRegistration(0x1c901071u)]
 	public float Azimuth { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc33cdb9au, "Gusts Intensity", "Wind gust intensity in meter per second")]
+	[DDLRegistration(0x227786e4u, "Gusts Intensity", "Wind gust intensity in meter per second")]
 	public WindMinMax? WindGustsIntensity { get; set; } = default;
 
-	[DDLRegistration(0xc33cdb9au, "Gusts Interval", "The gap in seconds between two consecutive gusts")]
+	[DDLRegistration(0xedba8665u, "Gusts Interval", "The gap in seconds between two consecutive gusts")]
 	public WindMinMax? WindGustsFrequency { get; set; } = default;
 
-	[DDLRegistration(0xc33cdb9au, "Gusts Duration", "The duration of each wind gust in seconds")]
+	[DDLRegistration(0x2db80a56u, "Gusts Duration", "The duration of each wind gust in seconds")]
 	public WindMinMax? WindGustsDuration { get; set; } = default;
 
 	public static WindDef Create(DDLObject ddl) => new(ddl);

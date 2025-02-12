@@ -25,28 +25,28 @@ public class HeroGroovitronConfig : DDLObjectType, IDDLObjectType<HeroGroovitron
 		JumpPeakTime = ddl.GetValue<float>(0x6ef12a62u, JumpPeakTime);
 	}
 
-	[DDLRegistration(0x49657ac9u)]
+	[DDLRegistration(0x50c4f9edu)]
 	public float MoveMaxSpeed { get; set; } = 4.00f;
 
-	[DDLRegistration(0x49657ac9u)]
+	[DDLRegistration(0x4d8dca42u)]
 	public float MoveAccel { get; set; } = 8.00f;
 
-	[DDLRegistration(0x49657ac9u)]
+	[DDLRegistration(0xa0061aeeu)]
 	public float MoveDecel { get; set; } = 1.00f;
 
-	[DDLRegistration(0x49657ac9u)]
+	[DDLRegistration(0xad9299ceu)]
 	public float JumpMinHeight { get; set; } = 1.50f;
 
-	[DDLRegistration(0x49657ac9u)]
+	[DDLRegistration(0x7a792b8fu)]
 	public float JumpMaxHeight { get; set; } = 2.50f;
 
-	[DDLRegistration(0x49657ac9u)]
+	[DDLRegistration(0xe0324497u)]
 	public float JumpMaxHoldTime { get; set; } = 0.20f;
 
-	[DDLRegistration(0x49657ac9u)]
+	[DDLRegistration(0x58665743u)]
 	public float JumpTerminalVelocity { get; set; } = 50.00f;
 
-	[DDLRegistration(0x49657ac9u)]
+	[DDLRegistration(0x6ef12a62u)]
 	public float JumpPeakTime { get; set; } = 0.30f;
 
 	public static HeroGroovitronConfig Create(DDLObject ddl) => new(ddl);

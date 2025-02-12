@@ -18,7 +18,7 @@ public class PirateHeavyBounceBombShotPrius : GrenadeShotGamePrius, IDDLObjectTy
 		MiniBombConfig = ddl.GetValue<RivetAssetId>(0xf7ee4aabu, MiniBombConfig);
 	}
 
-	[DDLRegistration(0xd1adbb0du)]
+	[DDLRegistration(0xf7ee4aabu)]
 	public RivetAssetId MiniBombConfig { get; set; } = default;
 
 	public new static PirateHeavyBounceBombShotPrius Create(DDLObject ddl) => new(ddl);

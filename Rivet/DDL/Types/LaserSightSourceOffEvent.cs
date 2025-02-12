@@ -18,7 +18,7 @@ public class LaserSightSourceOffEvent : EventBase, IDDLObjectType<LaserSightSour
 		BeamHash = ddl.GetValue<uint>(0x26a7db04u, BeamHash);
 	}
 
-	[DDLRegistration(0x5c791556u, description: "Hash to identify the beam type")]
+	[DDLRegistration(0x26a7db04u, description: "Hash to identify the beam type")]
 	public uint BeamHash { get; set; } = 0x00000000;
 
 	public new static LaserSightSourceOffEvent Create(DDLObject ddl) => new(ddl);

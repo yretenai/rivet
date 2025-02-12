@@ -19,10 +19,10 @@ public class DropEvent : EventBase, IDDLObjectType<DropEvent> {
 		Dropped = ddl.GetValue<uint>(0xd36c6a89u, Dropped);
 	}
 
-	[DDLRegistration(0xc19f2e94u, description: "Actor who dropped the object")]
+	[DDLRegistration(0x33f2e3d5u, description: "Actor who dropped the object")]
 	public uint Instigator { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc19f2e94u, description: "Actor that was dropped.")]
+	[DDLRegistration(0xd36c6a89u, description: "Actor that was dropped.")]
 	public uint Dropped { get; set; } = 0x00000000;
 
 	public new static DropEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class SetExtentsPrius : DDLObjectType, IDDLObjectType<SetExtentsPrius> {
 		Extents = ddl.GetObject<DDLVector3>(0x62c56bc8u);
 	}
 
-	[DDLRegistration(0xc1cac52eu)]
+	[DDLRegistration(0x62c56bc8u)]
 	public DDLVector3? Extents { get; set; } = default;
 
 	public static SetExtentsPrius Create(DDLObject ddl) => new(ddl);

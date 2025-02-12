@@ -19,10 +19,10 @@ public class AssetSaveRequest : DDLObjectType, IDDLObjectType<AssetSaveRequest> 
 		SessionId = ddl.GetValue<RivetAssetId>(0xbbad2afau, SessionId);
 	}
 
-	[DDLRegistration(0x22a8f098u, description: "Saves the asset to the relative path specified here.")]
+	[DDLRegistration(0x0efa614bu, description: "Saves the asset to the relative path specified here.")]
 	public RivetAssetId AssetPath { get; set; } = "";
 
-	[DDLRegistration(0x22a8f098u, description: "Session initiating the save.")]
+	[DDLRegistration(0xbbad2afau, description: "Session initiating the save.")]
 	public RivetAssetId SessionId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static AssetSaveRequest Create(DDLObject ddl) => new(ddl);

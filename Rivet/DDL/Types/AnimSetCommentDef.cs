@@ -24,25 +24,25 @@ public class AnimSetCommentDef : DDLObjectType, IDDLObjectType<AnimSetCommentDef
 		Y = ddl.GetValue<float>(0x2934711bu, Y);
 	}
 
-	[DDLRegistration(0x2e1f8b36u)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
-	[DDLRegistration(0x2e1f8b36u)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x2e1f8b36u)]
+	[DDLRegistration(0xc9b3f5abu)]
 	public float Alpha { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2e1f8b36u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2e1f8b36u)]
+	[DDLRegistration(0x954989eeu)]
 	public float Width { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2e1f8b36u)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2e1f8b36u)]
+	[DDLRegistration(0x2934711bu)]
 	public float Y { get; set; } = 0.00f;
 
 	public static AnimSetCommentDef Create(DDLObject ddl) => new(ddl);

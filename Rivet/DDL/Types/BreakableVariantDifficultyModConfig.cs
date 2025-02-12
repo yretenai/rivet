@@ -18,7 +18,7 @@ public class BreakableVariantDifficultyModConfig : ConfigBase, IDDLObjectType<Br
 		VariantMods = ddl.GetObjects<BreakableVariantDifficultyEntry>(0x2e1daaa6u);
 	}
 
-	[DDLRegistration(0x5fbc0c8cu)]
+	[DDLRegistration(0x2e1daaa6u)]
 	public List<BreakableVariantDifficultyEntry?> VariantMods { get; set; } = [];
 
 	public new static BreakableVariantDifficultyModConfig Create(DDLObject ddl) => new(ddl);

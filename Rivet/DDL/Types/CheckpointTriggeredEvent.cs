@@ -18,7 +18,7 @@ public class CheckpointTriggeredEvent : CheckpointEventBase, IDDLObjectType<Chec
 		Loaded = ddl.GetValue<bool>(0x75ff0940u, Loaded);
 	}
 
-	[DDLRegistration(0xa3aac021u, description: "True if checkpoint has been loaded")]
+	[DDLRegistration(0x75ff0940u, description: "True if checkpoint has been loaded")]
 	public bool Loaded { get; set; } = true;
 
 	public new static CheckpointTriggeredEvent Create(DDLObject ddl) => new(ddl);

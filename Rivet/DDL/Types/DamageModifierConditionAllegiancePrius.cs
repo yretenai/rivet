@@ -18,7 +18,7 @@ public class DamageModifierConditionAllegiancePrius : DamageModifierConditionBas
 		AllegianceMask = ddl.GetValue<uint>(0x2f3b17dau, AllegianceMask);
 	}
 
-	[DDLRegistration(0xe751de55u)]
+	[DDLRegistration(0x2f3b17dau)]
 	public uint AllegianceMask { get; set; } = 0x00000000;
 
 	public new static DamageModifierConditionAllegiancePrius Create(DDLObject ddl) => new(ddl);

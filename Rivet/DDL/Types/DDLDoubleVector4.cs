@@ -21,16 +21,16 @@ public class DDLDoubleVector4 : DDLObjectType, IDDLObjectType<DDLDoubleVector4> 
 		W = ddl.GetValue<double>(0xce8c5c1cu, W);
 	}
 
-	[DDLRegistration(0x6904ec6eu)]
+	[DDLRegistration(0x5e33418du)]
 	public double X { get; set; } = 0;
 
-	[DDLRegistration(0x6904ec6eu)]
+	[DDLRegistration(0x2934711bu)]
 	public double Y { get; set; } = 0;
 
-	[DDLRegistration(0x6904ec6eu)]
+	[DDLRegistration(0xb03d20a1u)]
 	public double Z { get; set; } = 0;
 
-	[DDLRegistration(0x6904ec6eu)]
+	[DDLRegistration(0xce8c5c1cu)]
 	public double W { get; set; } = 1;
 
 	public static DDLDoubleVector4 Create(DDLObject ddl) => new(ddl);

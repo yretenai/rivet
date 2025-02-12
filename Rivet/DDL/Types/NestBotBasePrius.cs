@@ -32,49 +32,49 @@ public class NestBotBasePrius : BotPrius, IDDLObjectType<NestBotBasePrius> {
 		SaveDestroyed = ddl.GetValue<bool>(0x1af9878du, SaveDestroyed);
 	}
 
-	[DDLRegistration(0x85a7fb93u, "Shield Asset", "Shield actor asset for spawning shields")]
+	[DDLRegistration(0xb785ec5cu, "Shield Asset", "Shield actor asset for spawning shields")]
 	public RivetAssetId ShieldActor { get; set; } = default;
 
-	[DDLRegistration(0x85a7fb93u)]
+	[DDLRegistration(0x9ad9fc86u)]
 	public float ExplosionRadius { get; set; } = 6.00f;
 
-	[DDLRegistration(0x85a7fb93u)]
+	[DDLRegistration(0xb06dc6b0u)]
 	public float ExplosionDamage { get; set; } = 2.00f;
 
-	[DDLRegistration(0x85a7fb93u)]
+	[DDLRegistration(0xba976b43u)]
 	public float ShieldHealth { get; set; } = 100.00f;
 
-	[DDLRegistration(0x85a7fb93u)]
+	[DDLRegistration(0x22ba9ca8u)]
 	public float ShieldRespawnDelay { get; set; } = 2.00f;
 
-	[DDLRegistration(0x85a7fb93u, "POI Instance Data")]
+	[DDLRegistration(0x8bcc281fu, "POI Instance Data")]
 	public POIInstanceDataBase? InstanceData { get; set; } = default;
 
-	[DDLRegistration(0x85a7fb93u, "Shield Link", "Link to shield actor placed in the level in front of the nest")]
+	[DDLRegistration(0x700d04c5u, "Shield Link", "Link to shield actor placed in the level in front of the nest")]
 	public RivetAssetId ShieldLink { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x85a7fb93u)]
+	[DDLRegistration(0x767f5d19u)]
 	public RivetAssetId WireGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x85a7fb93u)]
+	[DDLRegistration(0xdb0eab01u)]
 	public RivetAssetId RedWireMaterial { get; set; } = "materials/gl_default_grid/gl_default_red_glow.material";
 
-	[DDLRegistration(0x85a7fb93u)]
+	[DDLRegistration(0x6173e75cu)]
 	public RivetAssetId GreenWireMaterial { get; set; } = "materials/gl_default_grid/gbl_gp_pressure_pad_cable_on.material";
 
-	[DDLRegistration(0x85a7fb93u, description: "(temporary) look for temp asset testing")]
+	[DDLRegistration(0x2bd01e1cu, description: "(temporary) look for temp asset testing")]
 	public string? LookTest { get; set; } = "Default";
 
-	[DDLRegistration(0x85a7fb93u)]
+	[DDLRegistration(0x3519f74bu)]
 	public bool DoesHaveShield { get; set; } = true;
 
-	[DDLRegistration(0x85a7fb93u)]
+	[DDLRegistration(0xd74f31f7u)]
 	public bool DoesAttack { get; set; } = true;
 
-	[DDLRegistration(0x85a7fb93u)]
+	[DDLRegistration(0xa9a703edu)]
 	public bool DoesSpawnEnemies { get; set; } = true;
 
-	[DDLRegistration(0x85a7fb93u, description: "save whether the nest has been destroyed")]
+	[DDLRegistration(0x1af9878du, description: "save whether the nest has been destroyed")]
 	public bool SaveDestroyed { get; set; } = true;
 
 	public new static NestBotBasePrius Create(DDLObject ddl) => new(ddl);

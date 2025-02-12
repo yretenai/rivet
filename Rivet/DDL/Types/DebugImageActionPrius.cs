@@ -28,37 +28,37 @@ public class DebugImageActionPrius : DDLObjectType, IDDLObjectType<DebugImageAct
 		RenderLayer = ddl.GetEnum<xf8706507>(0xcb8706cdu, xf8706507Values.Lookup);
 	}
 
-	[DDLRegistration(0x76aaf45fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x76aaf45fu, description: "The image to show")]
+	[DDLRegistration(0xdc6ec89eu, description: "The image to show")]
 	public RivetAssetId Image { get; set; } = default;
 
-	[DDLRegistration(0x76aaf45fu, "Size", "Image Size:(x=width, y=height) 0 in either dimension means auto size")]
+	[DDLRegistration(0xc750e4dau, "Size", "Image Size:(x=width, y=height) 0 in either dimension means auto size")]
 	public DDLVector2? Size { get; set; } = default;
 
-	[DDLRegistration(0x76aaf45fu, "UV 0", "UV min coordinate")]
+	[DDLRegistration(0x6652863fu, "UV 0", "UV min coordinate")]
 	public DDLVector2? UVMin { get; set; } = default;
 
-	[DDLRegistration(0x76aaf45fu, "UV 1", "UV max coordinate")]
+	[DDLRegistration(0x5a5fb966u, "UV 1", "UV max coordinate")]
 	public DDLVector2? UVMax { get; set; } = default;
 
-	[DDLRegistration(0x76aaf45fu, "Tint Color", "Image tint color (rgba 0-255)")]
+	[DDLRegistration(0x2c904a74u, "Tint Color", "Image tint color (rgba 0-255)")]
 	public DDLVector4? TintColor { get; set; } = default;
 
-	[DDLRegistration(0x76aaf45fu, "Position", "Image Position")]
+	[DDLRegistration(0xbc2d5985u, "Position", "Image Position")]
 	public DDLVector2? Position { get; set; } = default;
 
-	[DDLRegistration(0x76aaf45fu, "Position is 3D", "Image Position is a 3D World coordinate")]
+	[DDLRegistration(0xd199d9cau, "Position is 3D", "Image Position is a 3D World coordinate")]
 	public bool Position3D { get; set; } = false;
 
-	[DDLRegistration(0x76aaf45fu, description: "If true, center the image on the defined point")]
+	[DDLRegistration(0x06bf83c2u, description: "If true, center the image on the defined point")]
 	public bool CenterOnPoint { get; set; } = false;
 
-	[DDLRegistration(0x76aaf45fu, "Show Window BG", "Show the debug window background")]
+	[DDLRegistration(0xb23b070du, "Show Window BG", "Show the debug window background")]
 	public bool ShowWindowBG { get; set; } = false;
 
-	[DDLRegistration(0x76aaf45fu, description: "Which render layer this image belongs in.")]
+	[DDLRegistration(0xcb8706cdu, description: "Which render layer this image belongs in.")]
 	public xf8706507 RenderLayer { get; set; } = xf8706507.Debug;
 
 	public static DebugImageActionPrius Create(DDLObject ddl) => new(ddl);

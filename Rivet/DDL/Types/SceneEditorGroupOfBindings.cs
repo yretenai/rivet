@@ -19,10 +19,10 @@ public class SceneEditorGroupOfBindings : DDLObjectType, IDDLObjectType<SceneEdi
 		HotKeys = ddl.GetObjects<SceneEditorHotkey>(0xe4d7718au);
 	}
 
-	[DDLRegistration(0xd0d9e413u)]
+	[DDLRegistration(0xb215bfb7u)]
 	public string? GroupName { get; set; } = default;
 
-	[DDLRegistration(0xd0d9e413u)]
+	[DDLRegistration(0xe4d7718au)]
 	public List<SceneEditorHotkey?> HotKeys { get; set; } = [];
 
 	public static SceneEditorGroupOfBindings Create(DDLObject ddl) => new(ddl);

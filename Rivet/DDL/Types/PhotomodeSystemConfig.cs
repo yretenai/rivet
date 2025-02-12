@@ -42,79 +42,79 @@ public class PhotomodeSystemConfig : PhotomodeSystemSharedConfig, IDDLObjectType
 		BlackoutFilterData = ddl.GetObject<BlackoutData>(0x14020c89u);
 	}
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x4bbb8104u)]
 	public ModeUnavailableData? ModeUnavailable { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0xab87ad0fu)]
 	public ModeUnavailableData? SelfieModeUnavailable { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x3b89fd7du)]
 	public float CamCollisRad { get; set; } = 0.20f;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x4758b254u)]
 	public float SavePauseTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0xa4afead0u)]
 	public float DofRangeNear { get; set; } = 0.20f;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0xaf7db4d1u)]
 	public int FacePoseMax { get; set; } = 5;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0xd28c99e0u)]
 	public int BodyPoseNeutralMax { get; set; } = 5;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x4a5913fbu)]
 	public int BodyPoseMeleeMax { get; set; } = 5;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0xdfaec09fu)]
 	public int BodyPosePistolMax { get; set; } = 5;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x84e91b1fu)]
 	public int BodyPoseRifleMax { get; set; } = 5;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x7b177c29u)]
 	public int BodyPoseThrownMax { get; set; } = 5;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x83a80b34u)]
 	public int BodyPoseHeavyMax { get; set; } = 5;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0xaa7d7769u)]
 	public RivetAssetId LoadoutConfig { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu, "Selfie-mode Data")]
+	[DDLRegistration(0x34819132u, "Selfie-mode Data")]
 	public SelfieModeData? SelfieMode { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu, "Rivet Selfie-mode Data")]
+	[DDLRegistration(0x9ea3f560u, "Rivet Selfie-mode Data")]
 	public SelfieModeData? SelfieModeRivet { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu, "Clank Selfie-mode Data")]
+	[DDLRegistration(0x8368daabu, "Clank Selfie-mode Data")]
 	public SelfieModeData? SelfieModeClank { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu, "Kit Selfie-mode Data")]
+	[DDLRegistration(0x4a923ecdu, "Kit Selfie-mode Data")]
 	public SelfieModeData? SelfieModeKit { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0xd9fd1df8u)]
 	public IntersectionFadeData? IntersectionFade { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x95f32ba9u)]
 	public FreeMoveCamData? FreeMove { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0xe565e930u)]
 	public OrbitCamData? OrbitCam { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x15d76f0du)]
 	public FirstPersonCamData? FirstPerson { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x96fa27bcu)]
 	public DefaultPhotoLightSettings? LightDefaults { get; set; } = default;
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0xec3f85c7u)]
 	public List<GoldBoltRewardItem?> GoldBoltRewardItems { get; set; } = [];
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x737afc59u)]
 	public List<BlackoutFilterItem?> BlackoutFilterItems { get; set; } = [];
 
-	[DDLRegistration(0xd3a6731eu)]
+	[DDLRegistration(0x14020c89u)]
 	public BlackoutData? BlackoutFilterData { get; set; } = default;
 
 	public new static PhotomodeSystemConfig Create(DDLObject ddl) => new(ddl);

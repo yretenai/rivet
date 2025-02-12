@@ -22,19 +22,19 @@ public class SoundEngineConfig : ConfigBase, IDDLObjectType<SoundEngineConfig> {
 		MonoDownmixBuses = ddl.GetStrings(0xdee4074bu);
 	}
 
-	[DDLRegistration(0xab08aa7du, description: "The Wwise Init bank. Shouldn't change basically ever, but exists here to insert a reference into the dependency graph")]
+	[DDLRegistration(0xf1b139f4u, description: "The Wwise Init bank. Shouldn't change basically ever, but exists here to insert a reference into the dependency graph")]
 	public RivetAssetId InitBank { get; set; } = default;
 
-	[DDLRegistration(0xab08aa7du, description: "Optional--The bank containing the External Source Event, for Robovoice. The event may be in another global bank. Offered for convenience.")]
+	[DDLRegistration(0xe21bae0bu, description: "Optional--The bank containing the External Source Event, for Robovoice. The event may be in another global bank. Offered for convenience.")]
 	public RivetAssetId ExternalSourceBank { get; set; } = default;
 
-	[DDLRegistration(0xab08aa7du)]
+	[DDLRegistration(0xfe67bd0au)]
 	public SoundVolumeOffsets71? VolumeOffsets71 { get; set; } = default;
 
-	[DDLRegistration(0xab08aa7du, description: "Name of RTPC to be used when midnight mode is toggled")]
+	[DDLRegistration(0x8db26bceu, description: "Name of RTPC to be used when midnight mode is toggled")]
 	public string? MidnightModeRTPCName { get; set; } = "Midnight_Mode";
 
-	[DDLRegistration(0xab08aa7du, description: "List of buses to downmix to 1 channel when mono mode is enabled")]
+	[DDLRegistration(0xdee4074bu, description: "List of buses to downmix to 1 channel when mono mode is enabled")]
 	public List<string?> MonoDownmixBuses { get; set; } = [];
 
 	public new static SoundEngineConfig Create(DDLObject ddl) => new(ddl);

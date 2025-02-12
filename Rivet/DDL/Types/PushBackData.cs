@@ -20,13 +20,13 @@ public class PushBackData : DDLObjectType, IDDLObjectType<PushBackData> {
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0xe3dfa6a5u)]
+	[DDLRegistration(0x8a4ca0e3u)]
 	public float SpeedMin { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe3dfa6a5u)]
+	[DDLRegistration(0xb6419fbau)]
 	public float SpeedMax { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe3dfa6a5u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 1.00f;
 
 	public static PushBackData Create(DDLObject ddl) => new(ddl);

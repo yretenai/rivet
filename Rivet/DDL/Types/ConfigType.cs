@@ -18,7 +18,7 @@ public class ConfigType : DDLObjectType, IDDLObjectType<ConfigType> {
 		Type = ddl.GetString(0xbc4e9799) ?? Type;
 	}
 
-	[DDLRegistration(0xa5f0dedbu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
 	public static ConfigType Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class LightingConditionEngineItem : DDLObjectType, IDDLObjectType<Lightin
 		LightingCondition = ddl.GetEnum<LightingConditions>(0xc3b54f69u, LightingConditionsValues.Lookup);
 	}
 
-	[DDLRegistration(0x9a494bd4u)]
+	[DDLRegistration(0xc3b54f69u)]
 	public LightingConditions LightingCondition { get; set; } = LightingConditions.Day;
 
 	public static LightingConditionEngineItem Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class OnInventoryChangedActionPrius : DDLObjectType, IDDLObjectType<OnInv
 		InitListening = ddl.GetValue<bool>(0xf387b27au, InitListening);
 	}
 
-	[DDLRegistration(0xb716915au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0xb716915au)]
+	[DDLRegistration(0xa88f833fu)]
 	public RivetAssetId ItemConfig { get; set; } = default;
 
-	[DDLRegistration(0xb716915au, description: "Whether to start listening immediately when the script it loaded.")]
+	[DDLRegistration(0xf387b27au, description: "Whether to start listening immediately when the script it loaded.")]
 	public bool InitListening { get; set; } = true;
 
 	public static OnInventoryChangedActionPrius Create(DDLObject ddl) => new(ddl);

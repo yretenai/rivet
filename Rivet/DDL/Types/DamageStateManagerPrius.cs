@@ -18,7 +18,7 @@ public class DamageStateManagerPrius : DDLObjectType, IDDLObjectType<DamageState
 		DataSource = ddl.GetObject<DamageStateDataContainerBase>(0x4797047fu);
 	}
 
-	[DDLRegistration(0x6c435cc9u, "Data Source")]
+	[DDLRegistration(0x4797047fu, "Data Source")]
 	public DamageStateDataContainerBase? DataSource { get; set; } = default;
 
 	public static DamageStateManagerPrius Create(DDLObject ddl) => new(ddl);

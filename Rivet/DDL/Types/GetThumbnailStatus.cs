@@ -19,10 +19,10 @@ public class GetThumbnailStatus : DDLObjectType, IDDLObjectType<GetThumbnailStat
 		IsReady = ddl.GetValue<bool>(0x206897a9u, IsReady);
 	}
 
-	[DDLRegistration(0x25bb8622u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = "";
 
-	[DDLRegistration(0x25bb8622u)]
+	[DDLRegistration(0x206897a9u)]
 	public bool IsReady { get; set; } = false;
 
 	public static GetThumbnailStatus Create(DDLObject ddl) => new(ddl);

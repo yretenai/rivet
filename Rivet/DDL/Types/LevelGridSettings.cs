@@ -20,13 +20,13 @@ public class LevelGridSettings : DDLObjectType, IDDLObjectType<LevelGridSettings
 		Height = ddl.GetValue<int>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0x2a6560afu)]
+	[DDLRegistration(0x701ba2adu)]
 	public x99f55b7c GridType { get; set; } = x99f55b7c.Hex;
 
-	[DDLRegistration(0x2a6560afu)]
+	[DDLRegistration(0x954989eeu)]
 	public int Width { get; set; } = 97;
 
-	[DDLRegistration(0x2a6560afu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public int Height { get; set; } = 112;
 
 	public static LevelGridSettings Create(DDLObject ddl) => new(ddl);

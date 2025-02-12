@@ -26,31 +26,31 @@ public class ChunkManagerConfig : ConfigBase, IDDLObjectType<ChunkManagerConfig>
 		AutoDeleteFrameDelay = ddl.GetValue<uint>(0x3d936c98u, AutoDeleteFrameDelay);
 	}
 
-	[DDLRegistration(0x5ab3e104u, description: "When the chunk array is more than this full, clean up the spawned chunks.")]
+	[DDLRegistration(0xd0ab700bu, description: "When the chunk array is more than this full, clean up the spawned chunks.")]
 	public float CleanUpThreshold { get; set; } = 0.75f;
 
-	[DDLRegistration(0x5ab3e104u, description: "When cleaning up existing chunks, try to reduce the amount of the chunk array that is filled to below this percentage.")]
+	[DDLRegistration(0x24c49aecu, description: "When cleaning up existing chunks, try to reduce the amount of the chunk array that is filled to below this percentage.")]
 	public float CleanUpTarget { get; set; } = 0.50f;
 
-	[DDLRegistration(0x5ab3e104u, description: "How long do chunks last by default? Use -1 for 'infinite'")]
+	[DDLRegistration(0xe1859d55u, description: "How long do chunks last by default? Use -1 for 'infinite'")]
 	public float DefaultLifeTime { get; set; } = 7.00f;
 
-	[DDLRegistration(0x5ab3e104u, description: "How long do chunks take to fade out by default?")]
+	[DDLRegistration(0x0e626ef1u, description: "How long do chunks take to fade out by default?")]
 	public float DefaultFadeTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5ab3e104u, description: "When cleaning up chunks, keep around this many high priority chunks. If the ratio of high priority chunks to max chunks exceeds this value, treat those extra high priority chunks as low priority chunks.")]
+	[DDLRegistration(0x40de1050u, description: "When cleaning up chunks, keep around this many high priority chunks. If the ratio of high priority chunks to max chunks exceeds this value, treat those extra high priority chunks as low priority chunks.")]
 	public float DesiredHighPriority { get; set; } = 0.15f;
 
-	[DDLRegistration(0x5ab3e104u, description: "Chunks beyond this distance are immediately cleaned up (-1.0 = infinite distance)")]
+	[DDLRegistration(0x6cb7892du, description: "Chunks beyond this distance are immediately cleaned up (-1.0 = infinite distance)")]
 	public float AutoDeleteDistance { get; set; } = -1.00f;
 
-	[DDLRegistration(0x5ab3e104u, description: "Chunks that have fallen farther than this distance are immediately cleaned up (-1.0 = infinite distance)")]
+	[DDLRegistration(0x5cc532dcu, description: "Chunks that have fallen farther than this distance are immediately cleaned up (-1.0 = infinite distance)")]
 	public float AutoDeleteFallDistance { get; set; } = -1.00f;
 
-	[DDLRegistration(0x5ab3e104u, description: "Can we auto delete chunks that have no collision?")]
+	[DDLRegistration(0x4458e4b7u, description: "Can we auto delete chunks that have no collision?")]
 	public bool AutoDeleteWithNoPhysics { get; set; } = false;
 
-	[DDLRegistration(0x5ab3e104u, description: "If a chunk has just had collision turned off, how long should we wait for collision to be turned back on before allowing the chunk to delete itself?")]
+	[DDLRegistration(0x3d936c98u, description: "If a chunk has just had collision turned off, how long should we wait for collision to be turned back on before allowing the chunk to delete itself?")]
 	public uint AutoDeleteFrameDelay { get; set; } = 0x00000004;
 
 	public new static ChunkManagerConfig Create(DDLObject ddl) => new(ddl);

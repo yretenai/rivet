@@ -20,13 +20,13 @@ public class MaterialLodSettings : DDLObjectType, IDDLObjectType<MaterialLodSett
 		DefaultDist = ddl.GetValue<float>(0xcf9e44c5u, DefaultDist);
 	}
 
-	[DDLRegistration(0xbba3db26u)]
+	[DDLRegistration(0xc50f1e63u)]
 	public float TessellationDist { get; set; } = 10.00f;
 
-	[DDLRegistration(0xbba3db26u)]
+	[DDLRegistration(0x64958432u)]
 	public float DisplacementDist { get; set; } = 20.00f;
 
-	[DDLRegistration(0xbba3db26u)]
+	[DDLRegistration(0xcf9e44c5u)]
 	public float DefaultDist { get; set; } = 20.00f;
 
 	public static MaterialLodSettings Create(DDLObject ddl) => new(ddl);

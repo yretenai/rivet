@@ -19,10 +19,10 @@ public class ScriptDebugActionProperty : DDLObjectType, IDDLObjectType<ScriptDeb
 		Type = ddl.GetString(0xbc4e9799) ?? Type;
 	}
 
-	[DDLRegistration(0x16acab00u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x16acab00u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
 	public static ScriptDebugActionProperty Create(DDLObject ddl) => new(ddl);

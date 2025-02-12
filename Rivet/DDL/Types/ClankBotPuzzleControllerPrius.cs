@@ -19,10 +19,10 @@ public class ClankBotPuzzleControllerPrius : DDLObjectType, IDDLObjectType<Clank
 		ValidRespawnGroup = ddl.GetValue<RivetAssetId>(0x4e262261u, ValidRespawnGroup);
 	}
 
-	[DDLRegistration(0x3bacb0a0u, "Only respawn on empty pad?", "Whether we only alow respawn on an empty pad or if we will let one with a bot already on it spawn another.")]
+	[DDLRegistration(0xe16d453du, "Only respawn on empty pad?", "Whether we only alow respawn on an empty pad or if we will let one with a bot already on it spawn another.")]
 	public bool OnlyRespawnOnEmptyPad { get; set; } = false;
 
-	[DDLRegistration(0x3bacb0a0u, "Valid Respawn Group", "We will respawn the clankbot spawned from one of these pads at the closest empty spawner pad in this group.")]
+	[DDLRegistration(0x4e262261u, "Valid Respawn Group", "We will respawn the clankbot spawned from one of these pads at the closest empty spawner pad in this group.")]
 	public RivetAssetId ValidRespawnGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ClankBotPuzzleControllerPrius Create(DDLObject ddl) => new(ddl);

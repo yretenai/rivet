@@ -61,136 +61,136 @@ public class Cinematic2Def : DDLObjectType, IDDLObjectType<Cinematic2Def> {
 		OrphanTracks = ddl.GetDictionary<RivetAssetId, Cinematic2GlobalOrphanTrackDef>(0x00ea59a6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2GlobalOrphanTrackDef>(mapId));
 	}
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xca6a194cu, description: "Specifies the atmosphere to use during the cinematic.")]
+	[DDLRegistration(0x37ea75eeu, description: "Specifies the atmosphere to use during the cinematic.")]
 	public RivetAssetId AtmospherePath { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu, description: "Zone used for previewing lighting conditions in the cine-editor (if different from the lighting zone used in project.set). This field has no impact in game.")]
+	[DDLRegistration(0x705b4298u, description: "Zone used for previewing lighting conditions in the cine-editor (if different from the lighting zone used in project.set). This field has no impact in game.")]
 	public RivetAssetId PreviewLightingZonePath { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu, description: "Default lighting condition used by the cine-editor. This field has no impact in game.")]
+	[DDLRegistration(0x0fd8f05au, description: "Default lighting condition used by the cine-editor. This field has no impact in game.")]
 	public LightingConditions PreviewLightingCondition { get; set; } = LightingConditions.Day;
 
-	[DDLRegistration(0xca6a194cu, description: "Specifies whether or not the cinematic loops.")]
+	[DDLRegistration(0x36c12525u, description: "Specifies whether or not the cinematic loops.")]
 	public bool Looping { get; set; } = false;
 
-	[DDLRegistration(0xca6a194cu, description: "Specifies whether or not the cinematic is letterboxed at 2.4 aspect ratio.")]
+	[DDLRegistration(0x196a29f4u, description: "Specifies whether or not the cinematic is letterboxed at 2.4 aspect ratio.")]
 	public bool Letterboxed { get; set; } = false;
 
-	[DDLRegistration(0xca6a194cu, description: "Specifies whether to stream the animation data.")]
+	[DDLRegistration(0xda704640u, description: "Specifies whether to stream the animation data.")]
 	public bool EnableStreaming { get; set; } = false;
 
-	[DDLRegistration(0xca6a194cu, description: "Specifies this is a QTE (gameplay driven) cinematic.")]
+	[DDLRegistration(0x292c4c30u, description: "Specifies this is a QTE (gameplay driven) cinematic.")]
 	public bool IsQte { get; set; } = false;
 
-	[DDLRegistration(0xca6a194cu, description: "Allows cinematic to be skipped in game.")]
+	[DDLRegistration(0xf0dc1233u, description: "Allows cinematic to be skipped in game.")]
 	public bool Skippable { get; set; } = false;
 
-	[DDLRegistration(0xca6a194cu, description: "When cinematic finishes, reinitialize to ready state. Enable this if want a cine to get back to ready state after finishing.")]
+	[DDLRegistration(0x4aa36328u, description: "When cinematic finishes, reinitialize to ready state. Enable this if want a cine to get back to ready state after finishing.")]
 	public bool ResetOnFinished { get; set; } = true;
 
-	[DDLRegistration(0xca6a194cu, description: "When music is scored with maya play back for i29 and i31")]
+	[DDLRegistration(0xe7529d9bu, description: "When music is scored with maya play back for i29 and i31")]
 	public bool MayaPlayBackCompensate { get; set; } = false;
 
-	[DDLRegistration(0xca6a194cu, description: "Specifies the transition from the game camera to the cinematic camera when the cinematic starts.")]
+	[DDLRegistration(0x288a5cd6u, description: "Specifies the transition from the game camera to the cinematic camera when the cinematic starts.")]
 	public float OnEnterCameraTransitionDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xca6a194cu, description: "Specifies the transition from the cinematic camera to the game camera when the cinematic ends.")]
+	[DDLRegistration(0x0206b18au, description: "Specifies the transition from the cinematic camera to the game camera when the cinematic ends.")]
 	public float OnExitCameraTransitionDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xca6a194cu, description: "Aspect Blur Settings")]
+	[DDLRegistration(0xa4c85069u, description: "Aspect Blur Settings")]
 	public Cinematic2AspectBlurDef? AspectBlur { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu, description: "A set of gameplay-defined values used when processing this cine.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values used when processing this cine.")]
 	public Cinematic2TagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu, description: "Options to automatically populate in the Tools Hub's Run Game panel when clicking Run Game from the Cinematic Editor or from the Asset Editor with a Cinematic open.")]
+	[DDLRegistration(0x98cf3861u, description: "Options to automatically populate in the Tools Hub's Run Game panel when clicking Run Game from the Cinematic Editor or from the Asset Editor with a Cinematic open.")]
 	public Cinematic2RunGameOptions? RunGameOptions { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu, description: "Specifies the render-to-texture settings")]
+	[DDLRegistration(0x10c740fcu, description: "Specifies the render-to-texture settings")]
 	public Cinematic2ToTextureDef? ToTexture { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu, description: "Specified the render-from-texture settings ")]
+	[DDLRegistration(0xb405f966u, description: "Specified the render-from-texture settings ")]
 	public Cinematic2FromTextureDef? FromTexture { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu, description: "This specifies the Hero customization config file.")]
+	[DDLRegistration(0x5d0f4089u, description: "This specifies the Hero customization config file.")]
 	public RivetAssetId ActorCustomizationConfig { get; set; } = "configs/Cinematic2ActorCustomization/Cinematic2ActorCustomization.config";
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x78679d88u)]
 	public Dictionary<RivetAssetId, RivetAssetId> PreviewRegions { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x7c67ed0au)]
 	public Dictionary<RivetAssetId, Cinematic2UserRegionDef?> UserRegions { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x6ab54452u)]
 	public Dictionary<RivetAssetId, Cinematic2CameraTrackDef?> Cameras { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0xf44ff5ccu)]
 	public Dictionary<RivetAssetId, Cinematic2LightGroupDef?> LightGroups { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0xb153f7e6u)]
 	public List<RivetAssetId> ShotOrder { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x5e456e46u)]
 	public Dictionary<RivetAssetId, Cinematic2ShotDef?> Shots { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0xe153be82u)]
 	public Dictionary<RivetAssetId, Cinematic2ActorDef?> Actors { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x06c4fc8fu)]
 	public Dictionary<RivetAssetId, Cinematic2LightDef?> Lights { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x3c7848ccu)]
 	public Dictionary<RivetAssetId, Cinematic2LocatorDef?> Locators { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0xd3d07b3bu)]
 	public Cinematic2GlobalAtmosphereTrackDef? AtmosphereTrack { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0xcbfe62f1u)]
 	public Cinematic2GlobalAudioListenerTrackDef? AudioListenerTrack { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x4ac451ebu)]
 	public Dictionary<RivetAssetId, Cinematic2GlobalAudioGameSyncGroupTrackDef?> AudioStateGroupTracks { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x653e2373u)]
 	public Dictionary<RivetAssetId, Cinematic2GlobalEventTrackDef?> EventTracks { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x5a6788c3u)]
 	public Dictionary<RivetAssetId, Cinematic2GlobalMovieTrackDef?> MovieTracks { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x5ef83290u)]
 	public Cinematic2GlobalAudioFaderTrackDef? MasterFaderTrack { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0xc500fd1bu)]
 	public Cinematic2GlobalMusicTrackDef? MusicTrack { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x37fe8abau)]
 	public Cinematic2GlobalRateTrackDef? RateTrack { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x9a2c94fau)]
 	public Cinematic2GlobalSyncTrackDef? SyncTrack { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0xf7c6e718u)]
 	public Cinematic2GlobalTransitionTrackDef? TransitionTrack { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x5b97322fu)]
 	public Cinematic2GlobalVfxModifierTrackDef? VfxModifierTrack { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x5a02f910u)]
 	public Cinematic2GlobalZoneTrackDef? ZoneTrack { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x5e09a57fu)]
 	public Cinematic2GlobalTagTrackDef? TagTrack { get; set; } = default;
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0xffddb037u)]
 	public Dictionary<RivetAssetId, Cinematic2FolderDef?> Folders { get; set; } = [];
 
-	[DDLRegistration(0xca6a194cu)]
+	[DDLRegistration(0x00ea59a6u)]
 	public Dictionary<RivetAssetId, Cinematic2GlobalOrphanTrackDef?> OrphanTracks { get; set; } = [];
 
 	public static Cinematic2Def Create(DDLObject ddl) => new(ddl);

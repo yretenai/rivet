@@ -22,19 +22,19 @@ public class HazardTurretTargeting : DDLObjectType, IDDLObjectType<HazardTurretT
 		TurnSpeed = ddl.GetValue<float>(0x6cc70f48u, TurnSpeed);
 	}
 
-	[DDLRegistration(0xa52ec325u)]
+	[DDLRegistration(0xe651b84fu)]
 	public float FOVAngle { get; set; } = 15.00f;
 
-	[DDLRegistration(0xa52ec325u)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 15.00f;
 
-	[DDLRegistration(0xa52ec325u)]
+	[DDLRegistration(0xfd73b5f5u)]
 	public float WarningTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa52ec325u)]
+	[DDLRegistration(0x499881dbu)]
 	public float CooldownTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa52ec325u, description: "Degrees per second")]
+	[DDLRegistration(0x6cc70f48u, description: "Degrees per second")]
 	public float TurnSpeed { get; set; } = 90.00f;
 
 	public static HazardTurretTargeting Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class CinematicClipboardLightGroupData : DDLObjectType, IDDLObjectType<Ci
 		Lights = ddl.GetObjects<Cinematic2LightDef>(0x06c4fc8fu);
 	}
 
-	[DDLRegistration(0x255ae7e2u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x255ae7e2u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x255ae7e2u)]
+	[DDLRegistration(0x7566b265u)]
 	public bool Active { get; set; } = false;
 
-	[DDLRegistration(0x255ae7e2u)]
+	[DDLRegistration(0x06c4fc8fu)]
 	public List<Cinematic2LightDef?> Lights { get; set; } = [];
 
 	public static CinematicClipboardLightGroupData Create(DDLObject ddl) => new(ddl);

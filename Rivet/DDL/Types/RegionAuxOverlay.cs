@@ -22,19 +22,19 @@ public class RegionAuxOverlay : DDLObjectType, IDDLObjectType<RegionAuxOverlay> 
 		NamedLinkRegions = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x542c49a2, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 	}
 
-	[DDLRegistration(0xe309dce2u)]
+	[DDLRegistration(0x8204c636u)]
 	public RivetAssetId OverlayFolderId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xe309dce2u)]
+	[DDLRegistration(0x50757acbu)]
 	public string? OverlayType { get; set; } = default;
 
-	[DDLRegistration(0xe309dce2u)]
+	[DDLRegistration(0x253cf949u)]
 	public List<RegionShadowingZone?> ShadowingZones { get; set; } = [];
 
-	[DDLRegistration(0xe309dce2u)]
+	[DDLRegistration(0x6bee750eu)]
 	public Dictionary<RivetAssetId, RegionNamedLink?> NamedLinks { get; set; } = [];
 
-	[DDLRegistration(0xe309dce2u)]
+	[DDLRegistration(0x542c49a2u)]
 	public Dictionary<RivetAssetId, RivetAssetId> NamedLinkRegions { get; set; } = [];
 
 	public static RegionAuxOverlay Create(DDLObject ddl) => new(ddl);

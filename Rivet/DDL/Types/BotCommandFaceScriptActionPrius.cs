@@ -22,19 +22,19 @@ public class BotCommandFaceScriptActionPrius : DDLObjectType, IDDLObjectType<Bot
 		ContinuousFacing = ddl.GetValue<bool>(0xb03ad075u, ContinuousFacing);
 	}
 
-	[DDLRegistration(0x25abfbc0u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0x25abfbc0u, description: "When the bot needs to turn their body, they'll use this driver to do it")]
+	[DDLRegistration(0x8f5c7360u, description: "When the bot needs to turn their body, they'll use this driver to do it")]
 	public string? TurnAnim { get; set; } = "Turn";
 
-	[DDLRegistration(0x25abfbc0u, description: "When the bot has finished turning, they'll play this idle driver. Relevant for ContinuousFacing")]
+	[DDLRegistration(0xe747921au, description: "When the bot has finished turning, they'll play this idle driver. Relevant for ContinuousFacing")]
 	public string? IdleAnim { get; set; } = "Idle";
 
-	[DDLRegistration(0x25abfbc0u, description: "Should the standard TargetingAimAngle continue setting anim vars")]
+	[DDLRegistration(0xf0d8929eu, description: "Should the standard TargetingAimAngle continue setting anim vars")]
 	public bool UseAimPartials { get; set; } = true;
 
-	[DDLRegistration(0x25abfbc0u, description: "False for one off turns. True for longer sequences where we want the bot to maintain facing with a moving target")]
+	[DDLRegistration(0xb03ad075u, description: "False for one off turns. True for longer sequences where we want the bot to maintain facing with a moving target")]
 	public bool ContinuousFacing { get; set; } = false;
 
 	public static BotCommandFaceScriptActionPrius Create(DDLObject ddl) => new(ddl);

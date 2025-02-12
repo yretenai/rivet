@@ -19,10 +19,10 @@ public class ModelRandomizerItem : DDLObjectType, IDDLObjectType<ModelRandomizer
 		ChooseWeight = ddl.GetValue<float>(0xe4442207u, ChooseWeight);
 	}
 
-	[DDLRegistration(0x3f0cbf92u)]
+	[DDLRegistration(0x257c6629u)]
 	public RivetAssetId ModelItem { get; set; } = default;
 
-	[DDLRegistration(0x3f0cbf92u)]
+	[DDLRegistration(0xe4442207u)]
 	public float ChooseWeight { get; set; } = 1.00f;
 
 	public static ModelRandomizerItem Create(DDLObject ddl) => new(ddl);

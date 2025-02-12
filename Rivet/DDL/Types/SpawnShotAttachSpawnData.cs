@@ -18,7 +18,7 @@ public class SpawnShotAttachSpawnData : SimpleSpawnData, IDDLObjectType<SpawnSho
 		ShotId = ddl.GetValue<uint>(0xf097daf3u, ShotId);
 	}
 
-	[DDLRegistration(0xafd67223u, description: "the shot we want to attach to")]
+	[DDLRegistration(0xf097daf3u, description: "the shot we want to attach to")]
 	public uint ShotId { get; set; } = 0x00000000;
 
 	public new static SpawnShotAttachSpawnData Create(DDLObject ddl) => new(ddl);

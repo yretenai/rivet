@@ -21,16 +21,16 @@ public class DevstatsHighContrastMaterialsEnabledEvent : EventBase, IDDLObjectTy
 		HighlightType = ddl.GetEnum<xf2109875>(0xb4666bfau, xf2109875Values.Lookup);
 	}
 
-	[DDLRegistration(0xe49b0c0au)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xe49b0c0au)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0xe49b0c0au)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
-	[DDLRegistration(0xe49b0c0au)]
+	[DDLRegistration(0xb4666bfau)]
 	public xf2109875 HighlightType { get; set; } = xf2109875.Enemy;
 
 	public new static DevstatsHighContrastMaterialsEnabledEvent Create(DDLObject ddl) => new(ddl);

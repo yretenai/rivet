@@ -20,13 +20,13 @@ public class LookStateEngineItem : DDLObjectType, IDDLObjectType<LookStateEngine
 		LookGroups = ddl.GetObjects<LookGroupEngineItem>(0xb6c4ab29u);
 	}
 
-	[DDLRegistration(0x6d87d6e8u)]
+	[DDLRegistration(0xb8b499c3u)]
 	public RivetAssetId ModelAssetPath { get; set; } = default;
 
-	[DDLRegistration(0x6d87d6e8u)]
+	[DDLRegistration(0xec785832u)]
 	public List<LookEngineItem?> Looks { get; set; } = [];
 
-	[DDLRegistration(0x6d87d6e8u)]
+	[DDLRegistration(0xb6c4ab29u)]
 	public List<LookGroupEngineItem?> LookGroups { get; set; } = [];
 
 	public static LookStateEngineItem Create(DDLObject ddl) => new(ddl);

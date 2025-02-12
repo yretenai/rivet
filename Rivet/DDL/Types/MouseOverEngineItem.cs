@@ -23,22 +23,22 @@ public class MouseOverEngineItem : DDLObjectType, IDDLObjectType<MouseOverEngine
 		TriangleIndex = ddl.GetValue<int>(0x4abd9e69u, TriangleIndex);
 	}
 
-	[DDLRegistration(0xd99b6b66u)]
+	[DDLRegistration(0x9554f93eu)]
 	public bool Valid { get; set; } = false;
 
-	[DDLRegistration(0xd99b6b66u)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd99b6b66u)]
+	[DDLRegistration(0x1b2eab1cu)]
 	public DDLVector3? WorldPosition { get; set; } = default;
 
-	[DDLRegistration(0xd99b6b66u)]
+	[DDLRegistration(0xa0ad029au)]
 	public DDLVector3? WorldNormal { get; set; } = default;
 
-	[DDLRegistration(0xd99b6b66u)]
+	[DDLRegistration(0x0f1c36c5u)]
 	public int SubsetIndex { get; set; } = 0;
 
-	[DDLRegistration(0xd99b6b66u)]
+	[DDLRegistration(0x4abd9e69u)]
 	public int TriangleIndex { get; set; } = 0;
 
 	public static MouseOverEngineItem Create(DDLObject ddl) => new(ddl);

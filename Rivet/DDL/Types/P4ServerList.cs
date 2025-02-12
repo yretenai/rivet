@@ -18,7 +18,7 @@ public class P4ServerList : DDLObjectType, IDDLObjectType<P4ServerList> {
 		Servers = ddl.GetStrings(0x4e6096cfu);
 	}
 
-	[DDLRegistration(0x3f2d68a5u)]
+	[DDLRegistration(0x4e6096cfu)]
 	public List<string?> Servers { get; set; } = [];
 
 	public static P4ServerList Create(DDLObject ddl) => new(ddl);

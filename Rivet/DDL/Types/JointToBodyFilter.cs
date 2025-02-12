@@ -19,10 +19,10 @@ public class JointToBodyFilter : DDLObjectType, IDDLObjectType<JointToBodyFilter
 		BodyPartFilter = ddl.GetEnum<xfdd79442>(0xa41c7d7fu, xfdd79442Values.Lookup);
 	}
 
-	[DDLRegistration(0x7ed272f2u)]
+	[DDLRegistration(0x5ba51db8u)]
 	public string? JointName { get; set; } = "head";
 
-	[DDLRegistration(0x7ed272f2u)]
+	[DDLRegistration(0xa41c7d7fu)]
 	public xfdd79442 BodyPartFilter { get; set; } = xfdd79442.HitLocationHead;
 
 	public static JointToBodyFilter Create(DDLObject ddl) => new(ddl);

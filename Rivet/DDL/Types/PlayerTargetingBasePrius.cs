@@ -18,7 +18,7 @@ public class PlayerTargetingBasePrius : DDLObjectType, IDDLObjectType<PlayerTarg
 		AttackIndex = ddl.GetValue<int>(0x6650a828u, AttackIndex);
 	}
 
-	[DDLRegistration(0x6c297cffu)]
+	[DDLRegistration(0x6650a828u)]
 	public int AttackIndex { get; set; } = 0;
 
 	public static PlayerTargetingBasePrius Create(DDLObject ddl) => new(ddl);

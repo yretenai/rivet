@@ -18,7 +18,7 @@ public class HoverbootEndEvent : EventBase, IDDLObjectType<HoverbootEndEvent> {
 		IsForHoverbootState = ddl.GetValue<bool>(0x491fe4e4u, IsForHoverbootState);
 	}
 
-	[DDLRegistration(0xcbdc390du)]
+	[DDLRegistration(0x491fe4e4u)]
 	public bool IsForHoverbootState { get; set; } = false;
 
 	public new static HoverbootEndEvent Create(DDLObject ddl) => new(ddl);

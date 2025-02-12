@@ -18,7 +18,7 @@ public class SceneEditorQueryModelLooks : DDLObjectType, IDDLObjectType<SceneEdi
 		NameHashes = ddl.GetValues<uint>(0x877bbd31u);
 	}
 
-	[DDLRegistration(0x828c6ca8u)]
+	[DDLRegistration(0x877bbd31u)]
 	public List<uint> NameHashes { get; set; } = [];
 
 	public static SceneEditorQueryModelLooks Create(DDLObject ddl) => new(ddl);

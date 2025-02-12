@@ -20,13 +20,13 @@ public class DoorSlidePrius : DoorPrius, IDDLObjectType<DoorSlidePrius> {
 		SlideTime = ddl.GetValue<float>(0x18e59566u, SlideTime);
 	}
 
-	[DDLRegistration(0xe6ee6743u, "Open Offset")]
+	[DDLRegistration(0x44155d45u, "Open Offset")]
 	public DDLVector3? OpenOffset { get; set; } = default;
 
-	[DDLRegistration(0xe6ee6743u, "Open Position")]
+	[DDLRegistration(0x65a893adu, "Open Position")]
 	public RivetAssetId OpenPosition { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xe6ee6743u, "Open Time")]
+	[DDLRegistration(0x18e59566u, "Open Time")]
 	public float SlideTime { get; set; } = 1.00f;
 
 	public new static DoorSlidePrius Create(DDLObject ddl) => new(ddl);

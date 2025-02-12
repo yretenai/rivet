@@ -18,7 +18,7 @@ public class UIGoldBoltOptionTypeList : UIGoldBoltOptionTypeBase, IDDLObjectType
 		Options = ddl.GetStrings(0xd1df99bfu);
 	}
 
-	[DDLRegistration(0x462dfcedu)]
+	[DDLRegistration(0xd1df99bfu)]
 	public List<string?> Options { get; set; } = [];
 
 	public new static UIGoldBoltOptionTypeList Create(DDLObject ddl) => new(ddl);

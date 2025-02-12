@@ -21,16 +21,16 @@ public class Cinematic2ActivationEvent : EventBase, IDDLObjectType<Cinematic2Act
 		LoopedShot = ddl.GetValue<uint>(0x8be44905u, LoopedShot);
 	}
 
-	[DDLRegistration(0x980ff34au)]
+	[DDLRegistration(0xb2f16c91u)]
 	public uint Activated { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x980ff34au)]
+	[DDLRegistration(0x544bc8e7u)]
 	public uint FirstShot { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x980ff34au)]
+	[DDLRegistration(0x89bde680u)]
 	public uint HasHero { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x980ff34au)]
+	[DDLRegistration(0x8be44905u)]
 	public uint LoopedShot { get; set; } = 0x00000000;
 
 	public new static Cinematic2ActivationEvent Create(DDLObject ddl) => new(ddl);

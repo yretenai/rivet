@@ -24,25 +24,25 @@ public class SetMaterialGlobalActionPrius : DDLObjectType, IDDLObjectType<SetMat
 		Synced = ddl.GetValue<bool>(0x35f3ddffu, Synced);
 	}
 
-	[DDLRegistration(0xc34c2134u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0xc34c2134u, description: "The name of the material global to set.")]
+	[DDLRegistration(0x612e3fc3u, description: "The name of the material global to set.")]
 	public string? MaterialGlobal { get; set; } = default;
 
-	[DDLRegistration(0xc34c2134u)]
+	[DDLRegistration(0x725fe045u)]
 	public float XValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc34c2134u)]
+	[DDLRegistration(0xb90333e0u)]
 	public float YValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc34c2134u)]
+	[DDLRegistration(0x3f97414eu)]
 	public float ZValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc34c2134u)]
+	[DDLRegistration(0x83095290u)]
 	public float WValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc34c2134u, description: "True to sync to client machines.")]
+	[DDLRegistration(0x35f3ddffu, description: "True to sync to client machines.")]
 	public bool Synced { get; set; } = false;
 
 	public static SetMaterialGlobalActionPrius Create(DDLObject ddl) => new(ddl);

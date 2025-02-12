@@ -20,13 +20,13 @@ public class PerformanceEditorClipBoardAccessor : DDLObjectType, IDDLObjectType<
 		ValuePath = ddl.GetString(0x3705282b) ?? ValuePath;
 	}
 
-	[DDLRegistration(0x4fe04cfeu)]
+	[DDLRegistration(0x5b97e5f5u)]
 	public string? Json { get; set; } = default;
 
-	[DDLRegistration(0x4fe04cfeu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0x4fe04cfeu)]
+	[DDLRegistration(0x3705282bu)]
 	public string? ValuePath { get; set; } = default;
 
 	public static PerformanceEditorClipBoardAccessor Create(DDLObject ddl) => new(ddl);

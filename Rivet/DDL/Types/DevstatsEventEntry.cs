@@ -19,10 +19,10 @@ public class DevstatsEventEntry : DDLObjectType, IDDLObjectType<DevstatsEventEnt
 		EnabledConfigurations = ddl.GetBitset<xe5616699>(0x2cc6ad5eu, xe5616699Values.Lookup);
 	}
 
-	[DDLRegistration(0x535afa02u, "Event Name in Code", "Name of the event struct in code.")]
+	[DDLRegistration(0x6c4a3779u, "Event Name in Code", "Name of the event struct in code.")]
 	public string? EventCodeName { get; set; } = default;
 
-	[DDLRegistration(0x535afa02u, "Enabled Configurations", "In which build configurations should this devstats event be enabled?")]
+	[DDLRegistration(0x2cc6ad5eu, "Enabled Configurations", "In which build configurations should this devstats event be enabled?")]
 	public xe5616699 EnabledConfigurations { get; set; } = (xe5616699) 0x00000007;
 
 	public static DevstatsEventEntry Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class HitReactSettings : DDLObjectType, IDDLObjectType<HitReactSettings> 
 		RangeFilterLong = ddl.GetValue<float>(0x7fa14ac3u, RangeFilterLong);
 	}
 
-	[DDLRegistration(0x869d2c05u, "Mirror Var", "The hit react system will use this anim var to see if a character is mirrored")]
+	[DDLRegistration(0x4be9ab76u, "Mirror Var", "The hit react system will use this anim var to see if a character is mirrored")]
 	public string? MirrorVar { get; set; } = "Grip_Hand";
 
-	[DDLRegistration(0x869d2c05u, "Range Filter Short", "The max distance at which the range filter will be set to kRangeShortHash")]
+	[DDLRegistration(0x1c6a33acu, "Range Filter Short", "The max distance at which the range filter will be set to kRangeShortHash")]
 	public float RangeFilterShort { get; set; } = 2.00f;
 
-	[DDLRegistration(0x869d2c05u, "Range Filter Long", "The distance after which the range filter will be set to kRangeLongHash")]
+	[DDLRegistration(0x7fa14ac3u, "Range Filter Long", "The distance after which the range filter will be set to kRangeLongHash")]
 	public float RangeFilterLong { get; set; } = 10.00f;
 
 	public static HitReactSettings Create(DDLObject ddl) => new(ddl);

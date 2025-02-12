@@ -20,13 +20,13 @@ public class RegisterUserControlSetActionPrius : DDLObjectType, IDDLObjectType<R
 		Priority = ddl.GetValue<int>(0x98a76157u, Priority);
 	}
 
-	[DDLRegistration(0x111bd54du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Input;
 
-	[DDLRegistration(0x111bd54du)]
+	[DDLRegistration(0xb2f8624au)]
 	public string? ControlName { get; set; } = default;
 
-	[DDLRegistration(0x111bd54du, description: "Be sure to use one of the value from GameControlsUtil.h")]
+	[DDLRegistration(0x98a76157u, description: "Be sure to use one of the value from GameControlsUtil.h")]
 	public int Priority { get; set; } = 0;
 
 	public static RegisterUserControlSetActionPrius Create(DDLObject ddl) => new(ddl);

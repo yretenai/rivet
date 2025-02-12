@@ -30,43 +30,43 @@ public class AimModFollowTargetFromOffsetPrius : AimModifierPrius, IDDLObjectTyp
 		ClampFrontOffset = ddl.GetValue<float>(0xbb0fd0e4u, ClampFrontOffset);
 	}
 
-	[DDLRegistration(0x3733a271u, description: "Min local space offset of the Starting Laser position in X direction.")]
+	[DDLRegistration(0x0a2492efu, description: "Min local space offset of the Starting Laser position in X direction.")]
 	public float StartOffsetMinX { get; set; } = -4.00f;
 
-	[DDLRegistration(0x3733a271u, description: "Max local space offset of the Starting Laser position in X direction.")]
+	[DDLRegistration(0x18af7680u, description: "Max local space offset of the Starting Laser position in X direction.")]
 	public float StartOffsetMaxX { get; set; } = 4.00f;
 
-	[DDLRegistration(0x3733a271u, description: "Min local space offset of the Starting Laser position in Y direction.")]
+	[DDLRegistration(0x7d23a279u, description: "Min local space offset of the Starting Laser position in Y direction.")]
 	public float StartOffsetMinY { get; set; } = -2.00f;
 
-	[DDLRegistration(0x3733a271u, description: "Max local space offset of the Starting Laser position in Y direction.")]
+	[DDLRegistration(0x6fa84616u, description: "Max local space offset of the Starting Laser position in Y direction.")]
 	public float StartOffsetMaxY { get; set; } = -2.00f;
 
-	[DDLRegistration(0x3733a271u, description: "Min local space offset of the Starting Laser position in Z direction.")]
+	[DDLRegistration(0xe42af3c3u, description: "Min local space offset of the Starting Laser position in Z direction.")]
 	public float StartOffsetMinZ { get; set; } = 4.00f;
 
-	[DDLRegistration(0x3733a271u, description: "Max local space offset of the Starting Laser position in Z direction.")]
+	[DDLRegistration(0xf6a117acu, description: "Max local space offset of the Starting Laser position in Z direction.")]
 	public float StartOffsetMaxZ { get; set; } = 6.00f;
 
-	[DDLRegistration(0x3733a271u)]
+	[DDLRegistration(0xbec2a89eu)]
 	public float StartingFollowSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0x3733a271u)]
+	[DDLRegistration(0x09f9ef4fu)]
 	public float MaxFollowSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x3733a271u)]
+	[DDLRegistration(0x7203cb7cu)]
 	public float FollowAccel { get; set; } = 4.00f;
 
-	[DDLRegistration(0x3733a271u)]
+	[DDLRegistration(0x9f881bd0u)]
 	public float FollowDecel { get; set; } = 2.00f;
 
-	[DDLRegistration(0x3733a271u, description: "If target is moving, aim to follow this far from the target")]
+	[DDLRegistration(0xadfeb358u, description: "If target is moving, aim to follow this far from the target")]
 	public float MovingTargetFollowOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3733a271u, description: "if the offset aim position is not in front of shooter, clamp it")]
+	[DDLRegistration(0x523adf77u, description: "if the offset aim position is not in front of shooter, clamp it")]
 	public bool ClampToFrontOfShooter { get; set; } = false;
 
-	[DDLRegistration(0x3733a271u, description: "How far in front of shooter to clamp the aim pos")]
+	[DDLRegistration(0xbb0fd0e4u, description: "How far in front of shooter to clamp the aim pos")]
 	public float ClampFrontOffset { get; set; } = 2.00f;
 
 	public new static AimModFollowTargetFromOffsetPrius Create(DDLObject ddl) => new(ddl);

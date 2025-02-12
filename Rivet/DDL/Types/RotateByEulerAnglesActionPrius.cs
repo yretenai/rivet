@@ -19,10 +19,10 @@ public class RotateByEulerAnglesActionPrius : DDLObjectType, IDDLObjectType<Rota
 		Order = ddl.GetEnum<x95ca39fb>(0xec7a5f59u, x95ca39fbValues.Lookup);
 	}
 
-	[DDLRegistration(0xa032e2a8u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
-	[DDLRegistration(0xa032e2a8u)]
+	[DDLRegistration(0xec7a5f59u)]
 	public x95ca39fb Order { get; set; } = x95ca39fb.XYZ;
 
 	public static RotateByEulerAnglesActionPrius Create(DDLObject ddl) => new(ddl);

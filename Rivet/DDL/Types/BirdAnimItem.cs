@@ -19,10 +19,10 @@ public class BirdAnimItem : DDLObjectType, IDDLObjectType<BirdAnimItem> {
 		AnimWeight = ddl.GetValue<float>(0x065e6456u, AnimWeight);
 	}
 
-	[DDLRegistration(0x4a126c51u, description: "If using a SimpleAnimComponent, this is the CLIP name. If using an AnimControllerComponent, this is the DRIVER name.")]
+	[DDLRegistration(0x573ba4ebu, description: "If using a SimpleAnimComponent, this is the CLIP name. If using an AnimControllerComponent, this is the DRIVER name.")]
 	public string? Anim { get; set; } = default;
 
-	[DDLRegistration(0x4a126c51u, description: "How likely is this anim to play compared to the other anims?")]
+	[DDLRegistration(0x065e6456u, description: "How likely is this anim to play compared to the other anims?")]
 	public float AnimWeight { get; set; } = 1.00f;
 
 	public static BirdAnimItem Create(DDLObject ddl) => new(ddl);

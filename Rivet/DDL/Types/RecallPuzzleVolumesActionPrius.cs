@@ -18,7 +18,7 @@ public class RecallPuzzleVolumesActionPrius : DDLObjectType, IDDLObjectType<Reca
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x793c9346u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Puzzle;
 
 	public static RecallPuzzleVolumesActionPrius Create(DDLObject ddl) => new(ddl);

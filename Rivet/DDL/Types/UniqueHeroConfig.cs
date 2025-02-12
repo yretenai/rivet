@@ -34,55 +34,55 @@ public class UniqueHeroConfig : ConfigBase, IDDLObjectType<UniqueHeroConfig> {
 		BombBotTossDist = ddl.GetValue<float>(0xf5a4bdefu, BombBotTossDist);
 	}
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0xa7db59f5u)]
 	public float BodyScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0x6adb62fau)]
 	public DDLVector3? AimSourceOffset { get; set; } = default;
 
-	[DDLRegistration(0x15b4384du, "Item Loadout Config")]
+	[DDLRegistration(0xfa5c64a7u, "Item Loadout Config")]
 	public RivetAssetId ItemLoadoutConfig { get; set; } = default;
 
-	[DDLRegistration(0x15b4384du, "Hero Skin Config")]
+	[DDLRegistration(0xde3a2857u, "Hero Skin Config")]
 	public RivetAssetId HeroSkinConfig { get; set; } = default;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0x0f437c18u)]
 	public RivetAssetId HeroLevelConfig { get; set; } = default;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0xa0605605u)]
 	public RivetAssetId WeaponLevelConfig { get; set; } = default;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0xde8b92bfu)]
 	public RivetAssetId EmergentVOConfig { get; set; } = default;
 
-	[DDLRegistration(0x15b4384du, description: "Need this so we can check values in EmergentVOmanagerHero")]
+	[DDLRegistration(0x8cd6fc16u, description: "Need this so we can check values in EmergentVOmanagerHero")]
 	public RivetAssetId VendorConfig { get; set; } = default;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0x63a9a110u)]
 	public RivetAssetId TraversalConfig { get; set; } = default;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0x582768e9u)]
 	public float LavaDamage { get; set; } = 1.00f;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0x846a56e5u)]
 	public float TurretDamageFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0x8a2b7191u)]
 	public float QuicksandDeathTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0x9a2dfccfu)]
 	public float ClankBotTossDist { get; set; } = 4.00f;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0xacb703ceu)]
 	public float PowerBotTossDist { get; set; } = 4.00f;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0xd0d55337u)]
 	public float SpringBotTossDist { get; set; } = 4.00f;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0x2805d443u)]
 	public float StretchBotTossDist { get; set; } = 4.00f;
 
-	[DDLRegistration(0x15b4384du)]
+	[DDLRegistration(0xf5a4bdefu)]
 	public float BombBotTossDist { get; set; } = 4.00f;
 
 	public new static UniqueHeroConfig Create(DDLObject ddl) => new(ddl);

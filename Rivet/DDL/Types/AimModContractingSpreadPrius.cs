@@ -20,13 +20,13 @@ public class AimModContractingSpreadPrius : AimModifierPrius, IDDLObjectType<Aim
 		ShotsToMinAccuracy = ddl.GetValue<float>(0xe4a2c370u, ShotsToMinAccuracy);
 	}
 
-	[DDLRegistration(0x8ae5671eu)]
+	[DDLRegistration(0x445162fdu)]
 	public float InaccuracyMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8ae5671eu)]
+	[DDLRegistration(0x785c5da4u)]
 	public float InaccuracyMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8ae5671eu)]
+	[DDLRegistration(0xe4a2c370u)]
 	public float ShotsToMinAccuracy { get; set; } = 0.00f;
 
 	public new static AimModContractingSpreadPrius Create(DDLObject ddl) => new(ddl);

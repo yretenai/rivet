@@ -21,16 +21,16 @@ public class GameUnpausedEvent : EventBase, IDDLObjectType<GameUnpausedEvent> {
 		RequestId = ddl.GetValue<uint>(0x239eef0du, RequestId);
 	}
 
-	[DDLRegistration(0x0954df13u)]
+	[DDLRegistration(0xe4ebebdbu)]
 	public int UserIndex { get; set; } = 0;
 
-	[DDLRegistration(0x0954df13u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0954df13u)]
+	[DDLRegistration(0xeca25771u)]
 	public float ElapsedTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0954df13u)]
+	[DDLRegistration(0x239eef0du)]
 	public uint RequestId { get; set; } = 0x00000000;
 
 	public new static GameUnpausedEvent Create(DDLObject ddl) => new(ddl);

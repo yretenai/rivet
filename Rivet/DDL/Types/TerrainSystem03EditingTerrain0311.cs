@@ -23,22 +23,22 @@ public class TerrainSystem03EditingTerrain0311 : DDLObjectType, IDDLObjectType<T
 		Line05 = ddl.GetString(0x7f124bc4) ?? Line05;
 	}
 
-	[DDLRegistration(0x135ac6a2u, description: "This re-composites the terrain.  This is useful for when a DCC input layer")]
+	[DDLRegistration(0x0f78bf4bu, description: "This re-composites the terrain.  This is useful for when a DCC input layer")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x135ac6a2u, description: "of the terrain has changed and that needs to propagate to the rest of the")]
+	[DDLRegistration(0x787f8fddu, description: "of the terrain has changed and that needs to propagate to the rest of the")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x135ac6a2u, description: "layers.  The tools explicitly <i>do not</i> automatically update if they detect")]
+	[DDLRegistration(0xe176de67u, description: "layers.  The tools explicitly <i>do not</i> automatically update if they detect")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x135ac6a2u, description: "a DCC input layer changing because that can lead to situations where just")]
+	[DDLRegistration(0x9671eef1u, description: "a DCC input layer changing because that can lead to situations where just")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x135ac6a2u, description: "opening a piece of terrain in the editor will cause it to get composited and")]
+	[DDLRegistration(0x08157b52u, description: "opening a piece of terrain in the editor will cause it to get composited and")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x135ac6a2u, description: "checked out.")]
+	[DDLRegistration(0x7f124bc4u, description: "checked out.")]
 	public string? Line05 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0311 Create(DDLObject ddl) => new(ddl);

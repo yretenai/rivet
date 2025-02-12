@@ -23,22 +23,22 @@ public class CreatePersistantAOEPrius : ScriptedShotEffectBasePrius, IDDLObjectT
 		AOEEffects = ddl.GetObjects<ScriptedShotEffectListElement>(0x7c158316u);
 	}
 
-	[DDLRegistration(0x99670ad2u)]
+	[DDLRegistration(0x88322744u)]
 	public float RepeatTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x99670ad2u)]
+	[DDLRegistration(0x67d422c6u)]
 	public float LifeTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x99670ad2u)]
+	[DDLRegistration(0x811184bdu)]
 	public float UpdateInterval { get; set; } = 0.50f;
 
-	[DDLRegistration(0x99670ad2u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x99670ad2u)]
+	[DDLRegistration(0x115a911bu)]
 	public bool LOS { get; set; } = true;
 
-	[DDLRegistration(0x99670ad2u)]
+	[DDLRegistration(0x7c158316u)]
 	public List<ScriptedShotEffectListElement?> AOEEffects { get; set; } = [];
 
 	public new static CreatePersistantAOEPrius Create(DDLObject ddl) => new(ddl);

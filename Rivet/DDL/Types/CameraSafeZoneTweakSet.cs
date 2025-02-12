@@ -23,22 +23,22 @@ public class CameraSafeZoneTweakSet : CameraSafeZoneTweak, IDDLObjectType<Camera
 		BiDirectionalField = ddl.GetValue<bool>(0x955abfcau, BiDirectionalField);
 	}
 
-	[DDLRegistration(0x8827a3b5u, "Left/Right Angle Min")]
+	[DDLRegistration(0xd834d684u, "Left/Right Angle Min")]
 	public float LeftAngleMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8827a3b5u, "Left/Right Angle Max")]
+	[DDLRegistration(0xe439e9ddu, "Left/Right Angle Max")]
 	public float LeftAngleMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8827a3b5u, "Forward/Back Distance Min")]
+	[DDLRegistration(0xd62111deu, "Forward/Back Distance Min")]
 	public float ForwardDistMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8827a3b5u, "Forward/Back Distance Max")]
+	[DDLRegistration(0xea2c2e87u, "Forward/Back Distance Max")]
 	public float ForwardDistMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8827a3b5u)]
+	[DDLRegistration(0x75edc1a7u)]
 	public float BlendFieldCompletePercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8827a3b5u)]
+	[DDLRegistration(0x955abfcau)]
 	public bool BiDirectionalField { get; set; } = false;
 
 	public new static CameraSafeZoneTweakSet Create(DDLObject ddl) => new(ddl);

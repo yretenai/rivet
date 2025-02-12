@@ -25,28 +25,28 @@ public class LoopSignalActionPrius : DDLObjectType, IDDLObjectType<LoopSignalAct
 		PollVarsContinuously = ddl.GetValue<bool>(0xe6b476f8u, PollVarsContinuously);
 	}
 
-	[DDLRegistration(0x868e7756u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
-	[DDLRegistration(0x868e7756u, description: "The amount of time to wait in seconds inbetween loops (will be overriden by script node input 'LoopDelay'). If UseMinFrameDelay is set, will use a minimum of 1 frame. Be wary of setting this too small, could cause unforeseen issues with triggering something repeatedly in the same frame if UseMinFrameDelay is off.")]
+	[DDLRegistration(0x14cd224au, description: "The amount of time to wait in seconds inbetween loops (will be overriden by script node input 'LoopDelay'). If UseMinFrameDelay is set, will use a minimum of 1 frame. Be wary of setting this too small, could cause unforeseen issues with triggering something repeatedly in the same frame if UseMinFrameDelay is off.")]
 	public float LoopDelay { get; set; } = 0.25f;
 
-	[DDLRegistration(0x868e7756u, description: "The number of times to send the signal out (aka, the repeat count), < 0 will be infinite (will be overridden by script node input 'LoopCount').")]
+	[DDLRegistration(0x238ee6b3u, description: "The number of times to send the signal out (aka, the repeat count), < 0 will be infinite (will be overridden by script node input 'LoopCount').")]
 	public int LoopCount { get; set; } = -1;
 
-	[DDLRegistration(0x868e7756u, description: "Whether we do the first loop when started or wait LoopDelay before hand.")]
+	[DDLRegistration(0x3790e64au, description: "Whether we do the first loop when started or wait LoopDelay before hand.")]
 	public bool DoFirstLoopOnStart { get; set; } = true;
 
-	[DDLRegistration(0x868e7756u, description: "Whether we use a minimum loop delay of 1 frame. If you turn this off, you may break or get unexpected results from the script node(s) triggered more than once in a frame. Max of 100 signals per frame (note: the script will only support 512 signals per frame).")]
+	[DDLRegistration(0x0cba42a6u, description: "Whether we use a minimum loop delay of 1 frame. If you turn this off, you may break or get unexpected results from the script node(s) triggered more than once in a frame. Max of 100 signals per frame (note: the script will only support 512 signals per frame).")]
 	public bool UseMinFrameDelay { get; set; } = true;
 
-	[DDLRegistration(0x868e7756u, description: "Whether we reset the loop count when StartLoop is used when we are already going. We will always reset the loop count when the loop stops. Note: the first signal out of a restarted loop will be in LoopDelay seconds.")]
+	[DDLRegistration(0xed00dfa8u, description: "Whether we reset the loop count when StartLoop is used when we are already going. We will always reset the loop count when the loop stops. Note: the first signal out of a restarted loop will be in LoopDelay seconds.")]
 	public bool ResetLoopCountOnRestart { get; set; } = true;
 
-	[DDLRegistration(0x868e7756u, description: "Whether the count is outputed before or after the current loop is done (aka, whether the CurrentLoopCount's first output would be 0 (true) or 1 (false)).")]
+	[DDLRegistration(0xa23fbb3bu, description: "Whether the count is outputed before or after the current loop is done (aka, whether the CurrentLoopCount's first output would be 0 (true) or 1 (false)).")]
 	public bool OutputLoopCountBeforeLoop { get; set; } = false;
 
-	[DDLRegistration(0x868e7756u, description: "Use the delay and loop count vars as they are changed")]
+	[DDLRegistration(0xe6b476f8u, description: "Use the delay and loop count vars as they are changed")]
 	public bool PollVarsContinuously { get; set; } = false;
 
 	public static LoopSignalActionPrius Create(DDLObject ddl) => new(ddl);

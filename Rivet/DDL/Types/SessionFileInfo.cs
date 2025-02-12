@@ -22,19 +22,19 @@ public class SessionFileInfo : DDLObjectType, IDDLObjectType<SessionFileInfo> {
 		PromptForWarnings = ddl.GetValue<bool>(0x39ca0f5eu, PromptForWarnings);
 	}
 
-	[DDLRegistration(0x959ed8f6u)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public RivetAssetId Path { get; set; } = "";
 
-	[DDLRegistration(0x959ed8f6u)]
+	[DDLRegistration(0x5db11d5bu)]
 	public bool Writable { get; set; } = false;
 
-	[DDLRegistration(0x959ed8f6u)]
+	[DDLRegistration(0xf37f264au)]
 	public bool IsPrimary { get; set; } = false;
 
-	[DDLRegistration(0x959ed8f6u)]
+	[DDLRegistration(0xffbbc402u)]
 	public bool PromptForCheckout { get; set; } = true;
 
-	[DDLRegistration(0x959ed8f6u)]
+	[DDLRegistration(0x39ca0f5eu)]
 	public bool PromptForWarnings { get; set; } = false;
 
 	public static SessionFileInfo Create(DDLObject ddl) => new(ddl);

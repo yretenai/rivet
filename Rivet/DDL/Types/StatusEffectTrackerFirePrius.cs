@@ -20,13 +20,13 @@ public class StatusEffectTrackerFirePrius : StatusEffectTrackerBasePrius, IDDLOb
 		FireEffectLarge = ddl.GetValue<bool>(0x44df9fa6u, FireEffectLarge);
 	}
 
-	[DDLRegistration(0x8d82f900u)]
+	[DDLRegistration(0x120ceffcu)]
 	public bool DeleteOnBurnComplete { get; set; } = false;
 
-	[DDLRegistration(0x8d82f900u)]
+	[DDLRegistration(0xa5f91efau)]
 	public bool CanReignite { get; set; } = true;
 
-	[DDLRegistration(0x8d82f900u)]
+	[DDLRegistration(0x44df9fa6u)]
 	public bool FireEffectLarge { get; set; } = false;
 
 	public new static StatusEffectTrackerFirePrius Create(DDLObject ddl) => new(ddl);

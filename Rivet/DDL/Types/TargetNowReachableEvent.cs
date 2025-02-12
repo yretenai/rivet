@@ -18,7 +18,7 @@ public class TargetNowReachableEvent : EventBase, IDDLObjectType<TargetNowReacha
 		TargetActorHandle = ddl.GetValue<uint>(0xa68ca01fu, TargetActorHandle);
 	}
 
-	[DDLRegistration(0x23436f96u)]
+	[DDLRegistration(0xa68ca01fu)]
 	public uint TargetActorHandle { get; set; } = 0x00000000;
 
 	public new static TargetNowReachableEvent Create(DDLObject ddl) => new(ddl);

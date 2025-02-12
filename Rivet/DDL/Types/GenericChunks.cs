@@ -20,13 +20,13 @@ public class GenericChunks : DDLObjectType, IDDLObjectType<GenericChunks> {
 		Max = ddl.GetValue<uint>(0xb7230b40u, Max);
 	}
 
-	[DDLRegistration(0x1c9c7798u)]
+	[DDLRegistration(0xf9358ad2u)]
 	public List<RivetAssetId> Chunks { get; set; } = [];
 
-	[DDLRegistration(0x1c9c7798u)]
+	[DDLRegistration(0x8b2e3419u)]
 	public uint Min { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1c9c7798u)]
+	[DDLRegistration(0xb7230b40u)]
 	public uint Max { get; set; } = 0x00000000;
 
 	public static GenericChunks Create(DDLObject ddl) => new(ddl);

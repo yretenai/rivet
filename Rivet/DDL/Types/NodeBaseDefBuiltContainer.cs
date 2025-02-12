@@ -19,10 +19,10 @@ public class NodeBaseDefBuiltContainer : DDLObjectType, IDDLObjectType<NodeBaseD
 		FieldNameHash = ddl.GetValue<uint>(0x6497988cu, FieldNameHash);
 	}
 
-	[DDLRegistration(0xa0b02a0bu)]
+	[DDLRegistration(0xf4f02fdfu)]
 	public uint BuiltNodeDataBufferNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa0b02a0bu)]
+	[DDLRegistration(0x6497988cu)]
 	public uint FieldNameHash { get; set; } = 0x00000000;
 
 	public static NodeBaseDefBuiltContainer Create(DDLObject ddl) => new(ddl);

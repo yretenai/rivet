@@ -29,40 +29,40 @@ public class SlottedInteractAnimData : DDLObjectType, IDDLObjectType<SlottedInte
 		UserReleaseFail = ddl.GetString(0x6ff4bb23) ?? UserReleaseFail;
 	}
 
-	[DDLRegistration(0x8a3f6597u, description: "Animation to play prior to interaction")]
+	[DDLRegistration(0x7c19021fu, description: "Animation to play prior to interaction")]
 	public string? ObjectPreIdle { get; set; } = default;
 
-	[DDLRegistration(0x8a3f6597u, description: "Animation to play while user intro's into position")]
+	[DDLRegistration(0x9628f7f7u, description: "Animation to play while user intro's into position")]
 	public string? ObjectIntro { get; set; } = default;
 
-	[DDLRegistration(0x8a3f6597u, description: "Animation to play while object is in use")]
+	[DDLRegistration(0x6b6d86bcu, description: "Animation to play while object is in use")]
 	public string? ObjectUse { get; set; } = default;
 
-	[DDLRegistration(0x8a3f6597u, description: "Animation to play when interaction completes")]
+	[DDLRegistration(0x9e70d2c9u, description: "Animation to play when interaction completes")]
 	public string? ObjectOutro { get; set; } = default;
 
-	[DDLRegistration(0x8a3f6597u, description: "Animation to play when interaction stops before completion")]
+	[DDLRegistration(0xba91dc0cu, description: "Animation to play when interaction stops before completion")]
 	public string? ObjectOutroFail { get; set; } = default;
 
-	[DDLRegistration(0x8a3f6597u, description: "Animation to play after successful interaction")]
+	[DDLRegistration(0xb7127c8du, description: "Animation to play after successful interaction")]
 	public string? ObjectPostIdle { get; set; } = default;
 
-	[DDLRegistration(0x8a3f6597u, description: "User animation to move into position")]
+	[DDLRegistration(0x7e9d49fau, description: "User animation to move into position")]
 	public string? UserIntro { get; set; } = default;
 
-	[DDLRegistration(0x8a3f6597u, description: "User animation to play while in position, wait to start")]
+	[DDLRegistration(0x206adf2au, description: "User animation to play while in position, wait to start")]
 	public string? UserIdle { get; set; } = default;
 
-	[DDLRegistration(0x8a3f6597u, description: "User animation for flavor during idle")]
+	[DDLRegistration(0xf9138325u, description: "User animation for flavor during idle")]
 	public string? UserFidget { get; set; } = default;
 
-	[DDLRegistration(0x8a3f6597u, description: "User animation for executing the interaction")]
+	[DDLRegistration(0x6c39ff36u, description: "User animation for executing the interaction")]
 	public string? UserUse { get; set; } = default;
 
-	[DDLRegistration(0x8a3f6597u, description: "User animation played when moving away from interact for any reason")]
+	[DDLRegistration(0x404797e4u, description: "User animation played when moving away from interact for any reason")]
 	public string? UserRelease { get; set; } = default;
 
-	[DDLRegistration(0x8a3f6597u, description: "User animation played when leaving interact prematurely")]
+	[DDLRegistration(0x6ff4bb23u, description: "User animation played when leaving interact prematurely")]
 	public string? UserReleaseFail { get; set; } = default;
 
 	public static SlottedInteractAnimData Create(DDLObject ddl) => new(ddl);

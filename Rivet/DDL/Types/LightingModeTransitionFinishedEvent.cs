@@ -19,10 +19,10 @@ public class LightingModeTransitionFinishedEvent : EventBase, IDDLObjectType<Lig
 		CurrMode = ddl.GetEnum<LightingModeGame>(0xac531221u, LightingModeGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x8dd5dcd8u)]
+	[DDLRegistration(0x70938e84u)]
 	public LightingModeGame PrevMode { get; set; } = LightingModeGame.Day;
 
-	[DDLRegistration(0x8dd5dcd8u)]
+	[DDLRegistration(0xac531221u)]
 	public LightingModeGame CurrMode { get; set; } = LightingModeGame.Day;
 
 	public new static LightingModeTransitionFinishedEvent Create(DDLObject ddl) => new(ddl);

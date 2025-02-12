@@ -23,22 +23,22 @@ public class VolcanicEruptorGeyserSpawnData : AttachableShotSpawnData, IDDLObjec
 		AutoTargetHandle = ddl.GetValue<uint>(0x165ab479u, AutoTargetHandle);
 	}
 
-	[DDLRegistration(0x28322a3du)]
+	[DDLRegistration(0x4d8c8666u)]
 	public bool ShotSpawningEnabled { get; set; } = false;
 
-	[DDLRegistration(0x28322a3du)]
+	[DDLRegistration(0xbd88f8f3u)]
 	public float BurstDamage { get; set; } = 5.00f;
 
-	[DDLRegistration(0x28322a3du)]
+	[DDLRegistration(0x8bdfffe6u)]
 	public float FlowDuration { get; set; } = 4.00f;
 
-	[DDLRegistration(0x28322a3du)]
+	[DDLRegistration(0xd9b09c83u)]
 	public float FlowDamage { get; set; } = 2.00f;
 
-	[DDLRegistration(0x28322a3du)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.50f;
 
-	[DDLRegistration(0x28322a3du)]
+	[DDLRegistration(0x165ab479u)]
 	public uint AutoTargetHandle { get; set; } = 0x00000000;
 
 	public new static VolcanicEruptorGeyserSpawnData Create(DDLObject ddl) => new(ddl);

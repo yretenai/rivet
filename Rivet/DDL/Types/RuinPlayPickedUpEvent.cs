@@ -18,7 +18,7 @@ public class RuinPlayPickedUpEvent : EventBase, IDDLObjectType<RuinPlayPickedUpE
 		RuinId = ddl.GetEnum<xeccc3486>(0x9761231fu, xeccc3486Values.Lookup);
 	}
 
-	[DDLRegistration(0x885224ebu, description: "Unique identifier of this Ruin Token.")]
+	[DDLRegistration(0x9761231fu, description: "Unique identifier of this Ruin Token.")]
 	public xeccc3486 RuinId { get; set; } = xeccc3486.None;
 
 	public new static RuinPlayPickedUpEvent Create(DDLObject ddl) => new(ddl);

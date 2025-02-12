@@ -30,43 +30,43 @@ public class AnimDriverBiBlendNodeDef : DDLObjectType, IDDLObjectType<AnimDriver
 		ConnectionB = ddl.GetObject<AnimDriverConnectionDef>(0x63f4adf4u);
 	}
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x7286b9e9 Type { get; set; } = x7286b9e9.BiBlendNodeTypeDefault;
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x60fa38f8 DurationType { get; set; } = x60fa38f8.BlendDurationTypeBranchA;
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0xec202880u)]
 	public x7ecb91d5 EventsType { get; set; } = x7ecb91d5.BlendAuxTypeBranchA;
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0xbc783cbcu)]
 	public x7ecb91d5 CustomTracksType { get; set; } = x7ecb91d5.BlendAuxTypeBranchA;
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0x142c8802u)]
 	public x7ecb91d5 MorphType { get; set; } = x7ecb91d5.BlendAuxTypeBranchA;
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0xd340a267u)]
 	public float Factor { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0xfafdfc4eu)]
 	public AnimDriverConnectionDef? ConnectionA { get; set; } = default;
 
-	[DDLRegistration(0x9fd50f34u)]
+	[DDLRegistration(0x63f4adf4u)]
 	public AnimDriverConnectionDef? ConnectionB { get; set; } = default;
 
 	public static AnimDriverBiBlendNodeDef Create(DDLObject ddl) => new(ddl);

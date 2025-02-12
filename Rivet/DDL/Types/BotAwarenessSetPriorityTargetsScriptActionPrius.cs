@@ -21,16 +21,16 @@ public class BotAwarenessSetPriorityTargetsScriptActionPrius : DDLObjectType, ID
 		RoundRobinSwitchTimer = ddl.GetValue<float>(0x9dd80647u, RoundRobinSwitchTimer);
 	}
 
-	[DDLRegistration(0x7e03fcb4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0x7e03fcb4u, description: "If true, the Priority Targets will stomp the Bot Combat Markup/Area checks and allow all Priority Targets to be valid regardless of areas")]
+	[DDLRegistration(0xf57c54dbu, description: "If true, the Priority Targets will stomp the Bot Combat Markup/Area checks and allow all Priority Targets to be valid regardless of areas")]
 	public bool IgnoreBotAreaLimitations { get; set; } = false;
 
-	[DDLRegistration(0x7e03fcb4u, description: "If true, the Priority Targets will be iterated thru instead of letting targeting pick best target")]
+	[DDLRegistration(0x186b6daeu, description: "If true, the Priority Targets will be iterated thru instead of letting targeting pick best target")]
 	public bool RoundRobinTargetVictims { get; set; } = false;
 
-	[DDLRegistration(0x7e03fcb4u, description: "We switch victim target every this amount of seconds")]
+	[DDLRegistration(0x9dd80647u, description: "We switch victim target every this amount of seconds")]
 	public float RoundRobinSwitchTimer { get; set; } = 2.00f;
 
 	public static BotAwarenessSetPriorityTargetsScriptActionPrius Create(DDLObject ddl) => new(ddl);

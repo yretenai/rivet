@@ -22,19 +22,19 @@ public class UDSBulkTaskMetadata : DDLObjectType, IDDLObjectType<UDSBulkTaskMeta
 		Hidden = ddl.GetValue<bool>(0xb189a2ecu, Hidden);
 	}
 
-	[DDLRegistration(0xcea156dau)]
+	[DDLRegistration(0x1c7c38a7u)]
 	public x38e4d198 Type { get; set; } = x38e4d198.Activity;
 
-	[DDLRegistration(0xcea156dau)]
+	[DDLRegistration(0xce811188u)]
 	public Dictionary<string, string?> Name { get; set; } = [];
 
-	[DDLRegistration(0xcea156dau)]
+	[DDLRegistration(0xa5884b3eu)]
 	public uint DefaultPlaytimeEstimate { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcea156dau)]
+	[DDLRegistration(0x054f0180u)]
 	public bool IsRequiredForCompletion { get; set; } = false;
 
-	[DDLRegistration(0xcea156dau)]
+	[DDLRegistration(0xb189a2ecu)]
 	public bool Hidden { get; set; } = false;
 
 	public static UDSBulkTaskMetadata Create(DDLObject ddl) => new(ddl);

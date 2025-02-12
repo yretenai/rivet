@@ -26,31 +26,31 @@ public class HeroSpeedConfig : DDLObjectType, IDDLObjectType<HeroSpeedConfig> {
 		RunSpeedSideMax = ddl.GetValue<float>(0x27910a7fu, RunSpeedSideMax);
 	}
 
-	[DDLRegistration(0x5568366au)]
+	[DDLRegistration(0x2d03208bu)]
 	public float WalkRunStickThreshold { get; set; } = 0.98f;
 
-	[DDLRegistration(0x5568366au)]
+	[DDLRegistration(0x80278447u)]
 	public float WalkSpeedMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0x5568366au)]
+	[DDLRegistration(0xbc2abb1eu)]
 	public float WalkSpeedMax { get; set; } = 2.00f;
 
-	[DDLRegistration(0x5568366au)]
+	[DDLRegistration(0x28cdbf43u)]
 	public float RunSpeedMin { get; set; } = 4.50f;
 
-	[DDLRegistration(0x5568366au)]
+	[DDLRegistration(0x14c0801au)]
 	public float RunSpeedMax { get; set; } = 5.00f;
 
-	[DDLRegistration(0x5568366au)]
+	[DDLRegistration(0x6a4f1fe3u)]
 	public float RunSpeedBackwardMin { get; set; } = 3.00f;
 
-	[DDLRegistration(0x5568366au)]
+	[DDLRegistration(0x564220bau)]
 	public float RunSpeedBackwardMax { get; set; } = 3.00f;
 
-	[DDLRegistration(0x5568366au)]
+	[DDLRegistration(0x1b9c3526u)]
 	public float RunSpeedSideMin { get; set; } = 4.00f;
 
-	[DDLRegistration(0x5568366au)]
+	[DDLRegistration(0x27910a7fu)]
 	public float RunSpeedSideMax { get; set; } = 4.50f;
 
 	public static HeroSpeedConfig Create(DDLObject ddl) => new(ddl);

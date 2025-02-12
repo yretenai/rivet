@@ -24,25 +24,25 @@ public class StatusEffectWarpRifleImplodePrius : StatusEffectBasePrius, IDDLObje
 		OwnerHandle = ddl.GetValue<uint>(0x6151ad8fu, OwnerHandle);
 	}
 
-	[DDLRegistration(0x602a5957u, description: "The size of the implosion if the bot's TargetCategory is small.")]
+	[DDLRegistration(0x972c859du, description: "The size of the implosion if the bot's TargetCategory is small.")]
 	public float SmallImplosionSizeMultiplier { get; set; } = 1.50f;
 
-	[DDLRegistration(0x602a5957u, description: "The size of the implosion if the bot's TargetCategory is medium, or their size isn't specified.")]
+	[DDLRegistration(0x26008998u, description: "The size of the implosion if the bot's TargetCategory is medium, or their size isn't specified.")]
 	public float MediumImplosionSizeMultiplier { get; set; } = 3.30f;
 
-	[DDLRegistration(0x602a5957u, description: "The size of the implosion if the bot's TargetCategory is large, tank, boss, or transport.")]
+	[DDLRegistration(0x34dd38c4u, description: "The size of the implosion if the bot's TargetCategory is large, tank, boss, or transport.")]
 	public float LargeImplosionSizeMultiplier { get; set; } = 8.00f;
 
-	[DDLRegistration(0x602a5957u, description: "The amount of time the enemy will be sucked into the singularity")]
+	[DDLRegistration(0xfd6cc038u, description: "The amount of time the enemy will be sucked into the singularity")]
 	public float ImplosionDuration { get; set; } = 0.70f;
 
-	[DDLRegistration(0x602a5957u, description: "The AOE of the implosion.\nDO NOT MODIFY. This is set in the stats sheet.")]
+	[DDLRegistration(0xed56b719u, description: "The AOE of the implosion.\nDO NOT MODIFY. This is set in the stats sheet.")]
 	public float AOE { get; set; } = 0.00f;
 
-	[DDLRegistration(0x602a5957u, description: "The damage the implosion does.\nDO NOT MODIFY. This is set in the stats sheet.")]
+	[DDLRegistration(0x2fb01a0bu, description: "The damage the implosion does.\nDO NOT MODIFY. This is set in the stats sheet.")]
 	public float Damage { get; set; } = 0.00f;
 
-	[DDLRegistration(0x602a5957u, description: "The owner of the implosion.\nDO NOT MODIFY. This is set in the stats sheet.")]
+	[DDLRegistration(0x6151ad8fu, description: "The owner of the implosion.\nDO NOT MODIFY. This is set in the stats sheet.")]
 	public uint OwnerHandle { get; set; } = 0x00000000;
 
 	public new static StatusEffectWarpRifleImplodePrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class UIViewInfo : DDLObjectType, IDDLObjectType<UIViewInfo> {
 		ViewScale = ddl.GetValue<float>(0x0ce529cbu, ViewScale);
 	}
 
-	[DDLRegistration(0x8ebeddfbu, description: "CPP view name.")]
+	[DDLRegistration(0x6eb3beb6u, description: "CPP view name.")]
 	public string? Name { get; set; } = "MyView";
 
-	[DDLRegistration(0x8ebeddfbu, description: "HTML file path in assets/source.")]
+	[DDLRegistration(0x70c9680du, description: "HTML file path in assets/source.")]
 	public string? URL { get; set; } = "coui://ui/MyPath/MyView.html";
 
-	[DDLRegistration(0x8ebeddfbu, description: "Adobe Animate stage size, or RTT texture size")]
+	[DDLRegistration(0x9a943f1eu, description: "Adobe Animate stage size, or RTT texture size")]
 	public DDLVector2? StageSize { get; set; } = default;
 
-	[DDLRegistration(0x8ebeddfbu, description: "View size as a scale of the stage size (0 = window size)")]
+	[DDLRegistration(0x0ce529cbu, description: "View size as a scale of the stage size (0 = window size)")]
 	public float ViewScale { get; set; } = 0.00f;
 
 	public static UIViewInfo Create(DDLObject ddl) => new(ddl);

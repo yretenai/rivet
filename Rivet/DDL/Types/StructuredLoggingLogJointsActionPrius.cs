@@ -18,7 +18,7 @@ public class StructuredLoggingLogJointsActionPrius : StructuredLoggingActionBase
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xba85d28fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
 	public new static StructuredLoggingLogJointsActionPrius Create(DDLObject ddl) => new(ddl);

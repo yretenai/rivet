@@ -25,28 +25,28 @@ public class EngineControlCamera : DDLObjectType, IDDLObjectType<EngineControlCa
 		FarClipDistance = ddl.GetValue<float>(0x3f224fc5u, FarClipDistance);
 	}
 
-	[DDLRegistration(0x47904c2cu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x47904c2cu)]
+	[DDLRegistration(0x7e88a543u)]
 	public DDLVector3? Center { get; set; } = default;
 
-	[DDLRegistration(0x47904c2cu)]
+	[DDLRegistration(0x42ae2f15u)]
 	public float YawDegrees { get; set; } = -150.00f;
 
-	[DDLRegistration(0x47904c2cu)]
+	[DDLRegistration(0xb3094e4du)]
 	public float PitchDegrees { get; set; } = 30.00f;
 
-	[DDLRegistration(0x47904c2cu)]
+	[DDLRegistration(0x80a464c5u)]
 	public float DistanceFromCenter { get; set; } = 10.00f;
 
-	[DDLRegistration(0x47904c2cu)]
+	[DDLRegistration(0x20d8286du)]
 	public float FieldOfViewDegrees { get; set; } = 90.00f;
 
-	[DDLRegistration(0x47904c2cu)]
+	[DDLRegistration(0x4e173d6fu)]
 	public float NearClipDistance { get; set; } = 0.01f;
 
-	[DDLRegistration(0x47904c2cu)]
+	[DDLRegistration(0x3f224fc5u)]
 	public float FarClipDistance { get; set; } = 1000.00f;
 
 	public static EngineControlCamera Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class TerrainRoadCurvePointData : DDLObjectType, IDDLObjectType<TerrainRo
 		WidthScale = ddl.GetValue<float>(0x9f6db582u, WidthScale);
 	}
 
-	[DDLRegistration(0xff2fd237u, "Width Scale", "The amount to scale the road with at this control point")]
+	[DDLRegistration(0x9f6db582u, "Width Scale", "The amount to scale the road with at this control point")]
 	public float WidthScale { get; set; } = 1.00f;
 
 	public static TerrainRoadCurvePointData Create(DDLObject ddl) => new(ddl);

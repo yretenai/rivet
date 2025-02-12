@@ -19,10 +19,10 @@ public class FinaleLaserCurve : DDLObjectType, IDDLObjectType<FinaleLaserCurve> 
 		GroundBlastTriggerVolume = ddl.GetValue<RivetAssetId>(0x391d6f9eu, GroundBlastTriggerVolume);
 	}
 
-	[DDLRegistration(0x49886a67u)]
+	[DDLRegistration(0xc23a6c53u)]
 	public RivetAssetId CurveActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x49886a67u)]
+	[DDLRegistration(0x391d6f9eu)]
 	public RivetAssetId GroundBlastTriggerVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static FinaleLaserCurve Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class TestUIElementLabel6 : DDLObjectType, IDDLObjectType<TestUIElementLa
 		Pets11 = ddl.GetObjects<TestAnimalSubstruct2>(0xf023fc72u);
 	}
 
-	[DDLRegistration(0xf7b12c70u)]
+	[DDLRegistration(0x2c6f36a1u)]
 	public List<TestAnimalSubstruct2?> Pets1 { get; set; } = [];
 
-	[DDLRegistration(0xf7b12c70u)]
+	[DDLRegistration(0xb566671bu)]
 	public List<TestAnimalSubstruct2?> Pets2 { get; set; } = [];
 
-	[DDLRegistration(0xf7b12c70u)]
+	[DDLRegistration(0x2b02f2b8u)]
 	public List<TestAnimalSubstruct2?> Pets5 { get; set; } = [];
 
-	[DDLRegistration(0xf7b12c70u)]
+	[DDLRegistration(0xc50c9394u)]
 	public List<TestAnimalSubstruct2?> Pets7 { get; set; } = [];
 
-	[DDLRegistration(0xf7b12c70u)]
+	[DDLRegistration(0x22b4be93u)]
 	public List<TestAnimalSubstruct2?> Pets9 { get; set; } = [];
 
-	[DDLRegistration(0xf7b12c70u)]
+	[DDLRegistration(0x8724cce4u)]
 	public List<TestAnimalSubstruct2?> Pets10 { get; set; } = [];
 
-	[DDLRegistration(0xf7b12c70u)]
+	[DDLRegistration(0xf023fc72u)]
 	public List<TestAnimalSubstruct2?> Pets11 { get; set; } = [];
 
 	public static TestUIElementLabel6 Create(DDLObject ddl) => new(ddl);

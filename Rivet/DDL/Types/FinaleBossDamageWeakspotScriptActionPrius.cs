@@ -18,7 +18,7 @@ public class FinaleBossDamageWeakspotScriptActionPrius : DDLObjectType, IDDLObje
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x501b58d4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
 	public static FinaleBossDamageWeakspotScriptActionPrius Create(DDLObject ddl) => new(ddl);

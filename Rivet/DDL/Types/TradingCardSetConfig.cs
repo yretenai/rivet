@@ -18,7 +18,7 @@ public class TradingCardSetConfig : ConfigBase, IDDLObjectType<TradingCardSetCon
 		SetList = ddl.GetObjects<SetDef>(0xd0d3262cu);
 	}
 
-	[DDLRegistration(0x6bec11dfu, description: "Trading Card Set list")]
+	[DDLRegistration(0xd0d3262cu, description: "Trading Card Set list")]
 	public List<SetDef?> SetList { get; set; } = [];
 
 	public new static TradingCardSetConfig Create(DDLObject ddl) => new(ddl);

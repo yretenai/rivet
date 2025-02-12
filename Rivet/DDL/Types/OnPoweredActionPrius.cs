@@ -21,16 +21,16 @@ public class OnPoweredActionPrius : DDLObjectType, IDDLObjectType<OnPoweredActio
 		ListenForUnPowered = ddl.GetValue<bool>(0x23e4f7d7u, ListenForUnPowered);
 	}
 
-	[DDLRegistration(0xe059883eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0xe059883eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = -1;
 
-	[DDLRegistration(0xe059883eu, "Listen for Powered?", "If false, this node will not listen for the actor(s) being Powered (so no Powered output will be sent).")]
+	[DDLRegistration(0x3fdadcc8u, "Listen for Powered?", "If false, this node will not listen for the actor(s) being Powered (so no Powered output will be sent).")]
 	public bool ListenForPowered { get; set; } = true;
 
-	[DDLRegistration(0xe059883eu, "Listen for unPowered?", "If false, this node will not listen for the actor(s) being unPowered (so no unPowered output will be sent).")]
+	[DDLRegistration(0x23e4f7d7u, "Listen for unPowered?", "If false, this node will not listen for the actor(s) being unPowered (so no unPowered output will be sent).")]
 	public bool ListenForUnPowered { get; set; } = true;
 
 	public static OnPoweredActionPrius Create(DDLObject ddl) => new(ddl);

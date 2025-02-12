@@ -19,10 +19,10 @@ public class UI_BezierCurveValue : DDLObjectType, IDDLObjectType<UI_BezierCurveV
 		NumDimensions = ddl.GetValue<short>(0xad1bbf21u, NumDimensions);
 	}
 
-	[DDLRegistration(0x56158bd7u)]
+	[DDLRegistration(0x8dae56cdu)]
 	public DDLVector4? CurrentValue { get; set; } = default;
 
-	[DDLRegistration(0x56158bd7u)]
+	[DDLRegistration(0xad1bbf21u)]
 	public short NumDimensions { get; set; } = 0;
 
 	public static UI_BezierCurveValue Create(DDLObject ddl) => new(ddl);

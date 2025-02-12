@@ -20,13 +20,13 @@ public class ProjectileBeamStopEvent : EventBase, IDDLObjectType<ProjectileBeamS
 		FXVersion = ddl.GetValue<byte>(0x2083aedeu, FXVersion);
 	}
 
-	[DDLRegistration(0x8e15728fu, description: "Optional.  Locator in model where the beam Starts.")]
+	[DDLRegistration(0xc78e2943u, description: "Optional.  Locator in model where the beam Starts.")]
 	public uint BeamStartLocatorHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8e15728fu, description: "Hash to identify the beam type")]
+	[DDLRegistration(0x26a7db04u, description: "Hash to identify the beam type")]
 	public uint BeamHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8e15728fu)]
+	[DDLRegistration(0x2083aedeu)]
 	public byte FXVersion { get; set; } = 0x00;
 
 	public new static ProjectileBeamStopEvent Create(DDLObject ddl) => new(ddl);

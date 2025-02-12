@@ -18,7 +18,7 @@ public class BeetleTrailEndEvent : EventBase, IDDLObjectType<BeetleTrailEndEvent
 		AVMaterialType = ddl.GetEnum<x10b3c4cf>(0x8f07ee1cu, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0xc0b478a0u)]
+	[DDLRegistration(0x8f07ee1cu)]
 	public x10b3c4cf AVMaterialType { get; set; } = x10b3c4cf.None;
 
 	public new static BeetleTrailEndEvent Create(DDLObject ddl) => new(ddl);

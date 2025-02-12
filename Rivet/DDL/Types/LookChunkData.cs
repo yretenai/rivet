@@ -21,16 +21,16 @@ public class LookChunkData : DDLObjectType, IDDLObjectType<LookChunkData> {
 		HideOnSource = ddl.GetValue<bool>(0xb1b4105au, HideOnSource);
 	}
 
-	[DDLRegistration(0xbe7179c5u, description: "Look or look group name.")]
+	[DDLRegistration(0xad8c1e16u, description: "Look or look group name.")]
 	public string? LookName { get; set; } = default;
 
-	[DDLRegistration(0xbe7179c5u, description: "This chunk must be enabled on the source actor for this chunk to spawn.")]
+	[DDLRegistration(0x1a9a1879u, description: "This chunk must be enabled on the source actor for this chunk to spawn.")]
 	public bool Required { get; set; } = false;
 
-	[DDLRegistration(0xbe7179c5u, description: "Only spawn this look if it is enabled on the source actor.")]
+	[DDLRegistration(0x67ff2c24u, description: "Only spawn this look if it is enabled on the source actor.")]
 	public bool Optional { get; set; } = false;
 
-	[DDLRegistration(0xbe7179c5u, description: "Should this look be disabled on the source actor")]
+	[DDLRegistration(0xb1b4105au, description: "Should this look be disabled on the source actor")]
 	public bool HideOnSource { get; set; } = true;
 
 	public static LookChunkData Create(DDLObject ddl) => new(ddl);

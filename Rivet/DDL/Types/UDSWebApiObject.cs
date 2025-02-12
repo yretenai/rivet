@@ -21,16 +21,16 @@ public class UDSWebApiObject : DDLObjectType, IDDLObjectType<UDSWebApiObject> {
 		Links = ddl.GetString(0x091042dd) ?? Links;
 	}
 
-	[DDLRegistration(0xd4904937u)]
+	[DDLRegistration(0x9a05f2f9u)]
 	public string? ObjectId { get; set; } = default;
 
-	[DDLRegistration(0xd4904937u)]
+	[DDLRegistration(0x32a70081u)]
 	public xefe0cd8b ObjectType { get; set; } = xefe0cd8b.SubCategory;
 
-	[DDLRegistration(0xd4904937u)]
+	[DDLRegistration(0x4c63eb32u)]
 	public string? Metadata { get; set; } = default;
 
-	[DDLRegistration(0xd4904937u)]
+	[DDLRegistration(0x091042ddu)]
 	public string? Links { get; set; } = default;
 
 	public static UDSWebApiObject Create(DDLObject ddl) => new(ddl);

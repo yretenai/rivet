@@ -19,10 +19,10 @@ public class MissionFailedEvent : EventBase, IDDLObjectType<MissionFailedEvent> 
 		Reason = ddl.GetString(0x05c0c66b) ?? Reason;
 	}
 
-	[DDLRegistration(0xeb7a017bu)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0xeb7a017bu)]
+	[DDLRegistration(0x05c0c66bu)]
 	public string? Reason { get; set; } = default;
 
 	public new static MissionFailedEvent Create(DDLObject ddl) => new(ddl);

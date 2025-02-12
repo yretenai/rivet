@@ -18,7 +18,7 @@ public class VehicleThrustersOnEvent : EventBase, IDDLObjectType<VehicleThruster
 		VehicleId = ddl.GetValue<uint>(0x62feded2u, VehicleId);
 	}
 
-	[DDLRegistration(0xdfcdf8ceu)]
+	[DDLRegistration(0x62feded2u)]
 	public uint VehicleId { get; set; } = 0x00000000;
 
 	public new static VehicleThrustersOnEvent Create(DDLObject ddl) => new(ddl);

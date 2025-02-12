@@ -19,10 +19,10 @@ public class OnRynoPlanPickupActionPrius : DDLObjectType, IDDLObjectType<OnRynoP
 		FirstPickupOnly = ddl.GetValue<bool>(0x0c63b897u, FirstPickupOnly);
 	}
 
-	[DDLRegistration(0x23cfa7d9u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x23cfa7d9u)]
+	[DDLRegistration(0x0c63b897u)]
 	public bool FirstPickupOnly { get; set; } = true;
 
 	public static OnRynoPlanPickupActionPrius Create(DDLObject ddl) => new(ddl);

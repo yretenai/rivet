@@ -18,7 +18,7 @@ public class TelepathipusShotMotionPrius : ShotMotionPredatorLauncherPrius, IDDL
 		HomingSpeedJetPack = ddl.GetValue<float>(0xd0cf5a5bu, HomingSpeedJetPack);
 	}
 
-	[DDLRegistration(0xf73d7944u)]
+	[DDLRegistration(0xd0cf5a5bu)]
 	public float HomingSpeedJetPack { get; set; } = 55.00f;
 
 	public new static TelepathipusShotMotionPrius Create(DDLObject ddl) => new(ddl);

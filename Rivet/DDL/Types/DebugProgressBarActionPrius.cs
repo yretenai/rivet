@@ -26,31 +26,31 @@ public class DebugProgressBarActionPrius : DDLObjectType, IDDLObjectType<DebugPr
 		DisplayCurMax = ddl.GetValue<bool>(0x26617650u, DisplayCurMax);
 	}
 
-	[DDLRegistration(0xd393f064u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0xd393f064u, description: "Bar label: will be replaced with localized text if string is valid loc tag.")]
+	[DDLRegistration(0x17f49c29u, description: "Bar label: will be replaced with localized text if string is valid loc tag.")]
 	public string? Label { get; set; } = "";
 
-	[DDLRegistration(0xd393f064u, "Position", "Bar Position")]
+	[DDLRegistration(0xbc2d5985u, "Position", "Bar Position")]
 	public DDLVector2? Position { get; set; } = default;
 
-	[DDLRegistration(0xd393f064u, "Position is 3D", "Bar Position is a 3D World coordinate")]
+	[DDLRegistration(0xd199d9cau, "Position is 3D", "Bar Position is a 3D World coordinate")]
 	public bool Position3D { get; set; } = false;
 
-	[DDLRegistration(0xd393f064u, "Size", "Bar Size:(x=width, y=height) 0,0 means auto size")]
+	[DDLRegistration(0xc750e4dau, "Size", "Bar Size:(x=width, y=height) 0,0 means auto size")]
 	public DDLVector2? Size { get; set; } = default;
 
-	[DDLRegistration(0xd393f064u, "Min/Max value", "Bar Min value(x) / Max value(y)")]
+	[DDLRegistration(0xa6f4d168u, "Min/Max value", "Bar Min value(x) / Max value(y)")]
 	public DDLVector2? MinMaxValue { get; set; } = default;
 
-	[DDLRegistration(0xd393f064u, "Current value", "Bar current value")]
+	[DDLRegistration(0x2369162au, "Current value", "Bar current value")]
 	public float CurValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd393f064u, "Display Percent", "Display bar percent text")]
+	[DDLRegistration(0x32b9c469u, "Display Percent", "Display bar percent text")]
 	public bool DisplayPercent { get; set; } = true;
 
-	[DDLRegistration(0xd393f064u, "Display Cur/Max", "Display Cur/Max text")]
+	[DDLRegistration(0x26617650u, "Display Cur/Max", "Display Cur/Max text")]
 	public bool DisplayCurMax { get; set; } = false;
 
 	public static DebugProgressBarActionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class TestGroundSwarmerPrius : BotPrius, IDDLObjectType<TestGroundSwarmer
 		TestGroundSwarmerData = ddl.GetObject<TestGroundSwarmerData>(0x3085ae5cu);
 	}
 
-	[DDLRegistration(0x467d96b2u)]
+	[DDLRegistration(0x3085ae5cu)]
 	public TestGroundSwarmerData? TestGroundSwarmerData { get; set; } = default;
 
 	public new static TestGroundSwarmerPrius Create(DDLObject ddl) => new(ddl);

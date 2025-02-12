@@ -19,10 +19,10 @@ public class TerrainSystem03EditingTerrain0421 : DDLObjectType, IDDLObjectType<T
 		Line01 = ddl.GetString(0x787f8fdd) ?? Line01;
 	}
 
-	[DDLRegistration(0x3d3883e4u, description: "The <b>IG_HEIGHTFIELD_OUTPUT</b> output should receive a Houdini HeightField")]
+	[DDLRegistration(0x0f78bf4bu, description: "The <b>IG_HEIGHTFIELD_OUTPUT</b> output should receive a Houdini HeightField")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x3d3883e4u, description: "node and will send that heightfield back to the editor.")]
+	[DDLRegistration(0x787f8fddu, description: "node and will send that heightfield back to the editor.")]
 	public string? Line01 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0421 Create(DDLObject ddl) => new(ddl);

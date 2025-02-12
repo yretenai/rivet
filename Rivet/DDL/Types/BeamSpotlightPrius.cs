@@ -20,13 +20,13 @@ public class BeamSpotlightPrius : DDLObjectType, IDDLObjectType<BeamSpotlightPri
 		RotationTime = ddl.GetValue<float>(0x00ca39e7u, RotationTime);
 	}
 
-	[DDLRegistration(0x9201deb2u, description: "Half-angle in degrees")]
+	[DDLRegistration(0x19d289c8u, description: "Half-angle in degrees")]
 	public float Angle { get; set; } = 15.00f;
 
-	[DDLRegistration(0x9201deb2u, description: "Range in meters")]
+	[DDLRegistration(0x8ad49688u, description: "Range in meters")]
 	public float Range { get; set; } = 15.00f;
 
-	[DDLRegistration(0x9201deb2u, description: "Time to complete one full revolution of the beams")]
+	[DDLRegistration(0x00ca39e7u, description: "Time to complete one full revolution of the beams")]
 	public float RotationTime { get; set; } = 3.00f;
 
 	public static BeamSpotlightPrius Create(DDLObject ddl) => new(ddl);

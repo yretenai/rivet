@@ -21,16 +21,16 @@ public class OnLookAtActorActionPrius : DDLObjectType, IDDLObjectType<OnLookAtAc
 		MaxDistance = ddl.GetValue<float>(0x88831235u, MaxDistance);
 	}
 
-	[DDLRegistration(0xb652a730u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0xb652a730u, "Start Active", "This determines whether or not the node should default to checkign without needing to use the <i>Acivate</i> input.  This is on by default.")]
+	[DDLRegistration(0x3e035e82u, "Start Active", "This determines whether or not the node should default to checkign without needing to use the <i>Acivate</i> input.  This is on by default.")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0xb652a730u, "Max Times to Fire", "How many times the node will signal before auto-deactivation; setting this to -1 will cause it to signal unfinitely until it is deactivated.")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "How many times the node will signal before auto-deactivation; setting this to -1 will cause it to signal unfinitely until it is deactivated.")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0xb652a730u, "Max Distance", "How far to check (in meters) before the player will no longer be considered to be looking at the supplied Actor.")]
+	[DDLRegistration(0x88831235u, "Max Distance", "How far to check (in meters) before the player will no longer be considered to be looking at the supplied Actor.")]
 	public float MaxDistance { get; set; } = 1000.00f;
 
 	public static OnLookAtActorActionPrius Create(DDLObject ddl) => new(ddl);

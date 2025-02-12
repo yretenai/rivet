@@ -18,7 +18,7 @@ public class ShellCasingDataMultiEmit : ShellCasingData, IDDLObjectType<ShellCas
 		SpawnLocator = ddl.GetStrings(0x52bc144eu);
 	}
 
-	[DDLRegistration(0x4bb6d8a6u)]
+	[DDLRegistration(0x52bc144eu)]
 	public List<string?> SpawnLocator { get; set; } = [];
 
 	public new static ShellCasingDataMultiEmit Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class FinaleBossSpawnData : SimpleSpawnData, IDDLObjectType<FinaleBossSpa
 		PortalIndex = ddl.GetValue<byte>(0x1bbdae68u, PortalIndex);
 	}
 
-	[DDLRegistration(0x25f7c8f1u, description: "index of the attached portal")]
+	[DDLRegistration(0x1bbdae68u, description: "index of the attached portal")]
 	public byte PortalIndex { get; set; } = 0x00;
 
 	public new static FinaleBossSpawnData Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class Nav3DSmoothPathStepCollision : DDLObjectType, IDDLObjectType<Nav3DS
 		Handle = ddl.GetValue<ulong>(0xaff86ebeu, Handle);
 	}
 
-	[DDLRegistration(0xfef19efau)]
+	[DDLRegistration(0xaff86ebeu)]
 	public ulong Handle { get; set; } = 0x0000000000000000;
 
 	public static Nav3DSmoothPathStepCollision Create(DDLObject ddl) => new(ddl);

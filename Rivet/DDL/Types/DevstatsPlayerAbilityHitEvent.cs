@@ -23,22 +23,22 @@ public class DevstatsPlayerAbilityHitEvent : EventBase, IDDLObjectType<DevstatsP
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0xedeb0c22u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xedeb0c22u)]
+	[DDLRegistration(0x74ba9afau)]
 	public string? DevstatsName { get; set; } = default;
 
-	[DDLRegistration(0xedeb0c22u)]
+	[DDLRegistration(0x3bb4414eu)]
 	public uint Victim { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xedeb0c22u)]
+	[DDLRegistration(0x4ecc3248u)]
 	public bool WasKill { get; set; } = false;
 
-	[DDLRegistration(0xedeb0c22u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0xedeb0c22u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static DevstatsPlayerAbilityHitEvent Create(DDLObject ddl) => new(ddl);

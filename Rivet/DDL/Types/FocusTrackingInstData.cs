@@ -18,7 +18,7 @@ public class FocusTrackingInstData : DDLObjectType, IDDLObjectType<FocusTracking
 		StartingFocusScale = ddl.GetValue<float>(0x9e86842cu, StartingFocusScale);
 	}
 
-	[DDLRegistration(0x19da2e52u, description: "The starting strength of Focus Tracking. Will need to use FocusTrackingOverrideFocusScaleEvent to mutate the strength during an animation")]
+	[DDLRegistration(0x9e86842cu, description: "The starting strength of Focus Tracking. Will need to use FocusTrackingOverrideFocusScaleEvent to mutate the strength during an animation")]
 	public float StartingFocusScale { get; set; } = 1.00f;
 
 	public static FocusTrackingInstData Create(DDLObject ddl) => new(ddl);

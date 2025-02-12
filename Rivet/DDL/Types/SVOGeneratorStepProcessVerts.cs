@@ -18,7 +18,7 @@ public class SVOGeneratorStepProcessVerts : DDLObjectType, IDDLObjectType<SVOGen
 		Entries = ddl.GetObjects<SVOGeneratorStepProcessVertsEntry>(0x2c12d0fdu);
 	}
 
-	[DDLRegistration(0x26325f67u)]
+	[DDLRegistration(0x2c12d0fdu)]
 	public List<SVOGeneratorStepProcessVertsEntry?> Entries { get; set; } = [];
 
 	public static SVOGeneratorStepProcessVerts Create(DDLObject ddl) => new(ddl);

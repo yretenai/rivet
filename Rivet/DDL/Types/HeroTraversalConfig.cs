@@ -59,130 +59,130 @@ public class HeroTraversalConfig : ConfigBase, IDDLObjectType<HeroTraversalConfi
 		SlideConfig = ddl.GetValue<RivetAssetId>(0x554b412eu, SlideConfig);
 	}
 
-	[DDLRegistration(0x141ee0dbu, description: "Used for wall jump")]
+	[DDLRegistration(0x352eb983u, description: "Used for wall jump")]
 	public float WallInteractionMinHeight { get; set; } = 0.80f;
 
-	[DDLRegistration(0x141ee0dbu, description: "Minimum height above a bounce before you will stick to a wall")]
+	[DDLRegistration(0x14f052ecu, description: "Minimum height above a bounce before you will stick to a wall")]
 	public float BounceInteractMinWallHeight { get; set; } = 2.00f;
 
-	[DDLRegistration(0x141ee0dbu, description: "The modifier for the time scale when the game gravity is zeroed out. Bigger number = faster. Smaller number = slower.")]
+	[DDLRegistration(0xfa235723u, description: "The modifier for the time scale when the game gravity is zeroed out. Bigger number = faster. Smaller number = slower.")]
 	public float ZeroGJumpTimeScaleModifier { get; set; } = 0.75f;
 
-	[DDLRegistration(0x141ee0dbu, description: "A multiplier for the minimum jump height when the game gravity is zeroed out.")]
+	[DDLRegistration(0xf069cee1u, description: "A multiplier for the minimum jump height when the game gravity is zeroed out.")]
 	public float ZeroGJumpMinHeightModifier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x141ee0dbu, description: "A multiplier for the maximum jump height when the game gravity is zeroed out.")]
+	[DDLRegistration(0xe5e21a13u, description: "A multiplier for the maximum jump height when the game gravity is zeroed out.")]
 	public float ZeroGJumpMaxHeightModifier { get; set; } = 1.50f;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xc529d9b0u)]
 	public HeroSpeedConfig? WallJumpSpeeds { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xbaa9b739u)]
 	public HeroWallStickConfig? WallStickConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xd41154f8u)]
 	public HeroWallRunConfig? WallRunConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x48222f4du)]
 	public HeroSpeedConfig? WallRunJumpSpeeds { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xd03167c7u)]
 	public HeroSpeedConfig? GlideSpeeds { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xded1359fu)]
 	public HeroBounceConfig? BounceConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xeb90ba5du)]
 	public HeroLedgeConfig? LedgeConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x0515bfe7u)]
 	public HeroSpeedConfig? LedgeJumpSpeeds { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x48af12ffu)]
 	public HeroSpeedConfig? VaultJumpSpeeds { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xf49c46c0u)]
 	public HeroSwingshotConfig? SwingshotConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xb51a24f3u)]
 	public HeroHookshotConfig? HookshotConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xdd164141u)]
 	public HeroSlingshotConfig? SlingshotConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x27959c74u)]
 	public HeroTetherConfig? TetherConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xf621bb94u)]
 	public HeroSwimConfig? SwimConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x53ca18bau)]
 	public HeroDashConfig? DashConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x960aea15u)]
 	public HeroMagbootConfig? MagbootConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x5d58f0b4u)]
 	public HeroSkyDiveConfig? SkyDiveConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x90c207d4u)]
 	public HeroGroovitronConfig? GroovyConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x9f3d7695u)]
 	public HeroRespawnConfig? RespawnConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x091cc7e1u)]
 	public RivetAssetId PortalZipConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x96d19f98u)]
 	public RivetAssetId OpenPocketDimConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x3a44e548u)]
 	public HeroShadowDimensionConfig? ShadowDimensionConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x9c590faau)]
 	public float DropoffForwardTol { get; set; } = 0.33f;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x9e92f7bcu)]
 	public float DropoffBackTol { get; set; } = -0.50f;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x5cd8fd37u)]
 	public float DropoffLeftRightTol { get; set; } = 0.40f;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xbb5881aau)]
 	public float DropoffInitiatedForwardTol { get; set; } = 1.25f;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x56d87411u)]
 	public float DropoffInitiatedLeftRightTol { get; set; } = 1.20f;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x8c16c55du)]
 	public float DropoffUpTol { get; set; } = 0.20f;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x65f66286u)]
 	public float DropoffDownTol { get; set; } = -0.20f;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xaea5ec20u)]
 	public float DropoffDropDistanceMax { get; set; } = 2.10f;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x92a8d379u)]
 	public float DropoffDropDistanceMin { get; set; } = 1.60f;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x08f66729u)]
 	public uint MaximumMidairJumps { get; set; } = 0x00000001;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x558409e5u)]
 	public HeroJumpConfigCollection? JumpConfigs { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x09663b22u)]
 	public List<GroundResponseElement?> GroundResponse { get; set; } = [];
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x45b45040u)]
 	public RivetAssetId GrindConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0xaaa8655cu)]
 	public RivetAssetId HoverbootConfig { get; set; } = default;
 
-	[DDLRegistration(0x141ee0dbu)]
+	[DDLRegistration(0x554b412eu)]
 	public RivetAssetId SlideConfig { get; set; } = default;
 
 	public new static HeroTraversalConfig Create(DDLObject ddl) => new(ddl);

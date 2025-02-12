@@ -19,10 +19,10 @@ public class VarMaterialOverride : DDLObjectType, IDDLObjectType<VarMaterialOver
 		Value = ddl.GetObject<MaterialOverrideMap>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x5555d251u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x5555d251u)]
+	[DDLRegistration(0x042494f5u)]
 	public MaterialOverrideMap? Value { get; set; } = default;
 
 	public static VarMaterialOverride Create(DDLObject ddl) => new(ddl);

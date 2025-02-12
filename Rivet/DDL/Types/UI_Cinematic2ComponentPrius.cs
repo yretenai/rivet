@@ -25,28 +25,28 @@ public class UI_Cinematic2ComponentPrius : DDLObjectType, IDDLObjectType<UI_Cine
 		ViewerSpawned = ddl.GetValue<bool>(0x09c943f0u, ViewerSpawned);
 	}
 
-	[DDLRegistration(0x44ba921eu, description: "Cinematic asset to be loaded")]
+	[DDLRegistration(0xc8c00481u, description: "Cinematic asset to be loaded")]
 	public RivetAssetId CinematicAsset { get; set; } = default;
 
-	[DDLRegistration(0x44ba921eu)]
+	[DDLRegistration(0x4e91f4deu)]
 	public RivetAssetId CinematicAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x44ba921eu, description: "ask runtime to only play selected shot")]
+	[DDLRegistration(0xa87020d4u, description: "ask runtime to only play selected shot")]
 	public string? PlayBackShot { get; set; } = default;
 
-	[DDLRegistration(0x44ba921eu, description: "Triggered by script so dont play on load")]
+	[DDLRegistration(0x27bbde23u, description: "Triggered by script so dont play on load")]
 	public bool ScriptDriven { get; set; } = true;
 
-	[DDLRegistration(0x44ba921eu, description: "Triggered by code so don't create the manager automatically")]
+	[DDLRegistration(0xbf908e49u, description: "Triggered by code so don't create the manager automatically")]
 	public bool CodeDriven { get; set; } = false;
 
-	[DDLRegistration(0x44ba921eu, description: "cine is world space")]
+	[DDLRegistration(0x54f823bfu, description: "cine is world space")]
 	public bool IsWorldSpaceCinematic { get; set; } = false;
 
-	[DDLRegistration(0x44ba921eu, description: "flag to indicate this is editor spawned cine")]
+	[DDLRegistration(0xeaa82b50u, description: "flag to indicate this is editor spawned cine")]
 	public bool EditorSpawned { get; set; } = false;
 
-	[DDLRegistration(0x44ba921eu, description: "flag to indicate this is viewer spawned cine")]
+	[DDLRegistration(0x09c943f0u, description: "flag to indicate this is viewer spawned cine")]
 	public bool ViewerSpawned { get; set; } = false;
 
 	public static UI_Cinematic2ComponentPrius Create(DDLObject ddl) => new(ddl);

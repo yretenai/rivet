@@ -24,25 +24,25 @@ public class NavAStarSettings : DDLObjectType, IDDLObjectType<NavAStarSettings> 
 		NodeExpandMax = ddl.GetValue<ushort>(0x45517fb4u, NodeExpandMax);
 	}
 
-	[DDLRegistration(0xa17cd505u)]
+	[DDLRegistration(0xabfd835fu)]
 	public ushort EdgeMax { get; set; } = 0x2000;
 
-	[DDLRegistration(0xa17cd505u)]
+	[DDLRegistration(0x7e004787u)]
 	public ushort QueueMax { get; set; } = 0x0800;
 
-	[DDLRegistration(0xa17cd505u)]
+	[DDLRegistration(0x6f34c010u)]
 	public ushort LinkMax { get; set; } = 0x3000;
 
-	[DDLRegistration(0xa17cd505u)]
+	[DDLRegistration(0x76b05498u)]
 	public int LocalStoreSize { get; set; } = 1048576;
 
-	[DDLRegistration(0xa17cd505u)]
+	[DDLRegistration(0x6ebe5680u)]
 	public float MaxFindPathDistance { get; set; } = 100000.00f;
 
-	[DDLRegistration(0xa17cd505u)]
+	[DDLRegistration(0x46208816u)]
 	public ushort ResultMax { get; set; } = 0x0200;
 
-	[DDLRegistration(0xa17cd505u)]
+	[DDLRegistration(0x45517fb4u)]
 	public ushort NodeExpandMax { get; set; } = 0x0800;
 
 	public static NavAStarSettings Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class StructuredLogStatement : DDLObjectType, IDDLObjectType<StructuredLo
 		VariableName = ddl.GetString(0x11d33588) ?? VariableName;
 	}
 
-	[DDLRegistration(0x9e54612du)]
+	[DDLRegistration(0x3006a975u)]
 	public string? TestName { get; set; } = default;
 
-	[DDLRegistration(0x9e54612du)]
+	[DDLRegistration(0x11d33588u)]
 	public string? VariableName { get; set; } = default;
 
 	public static StructuredLogStatement Create(DDLObject ddl) => new(ddl);

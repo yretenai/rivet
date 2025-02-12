@@ -19,10 +19,10 @@ public class ScriptVarUpdateRequest : DDLObjectType, IDDLObjectType<ScriptVarUpd
 		ValueString = ddl.GetString(0x61508ff3) ?? ValueString;
 	}
 
-	[DDLRegistration(0xfebcd9b7u)]
+	[DDLRegistration(0xbb3171e6u)]
 	public RivetAssetId VarTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xfebcd9b7u)]
+	[DDLRegistration(0x61508ff3u)]
 	public string? ValueString { get; set; } = default;
 
 	public static ScriptVarUpdateRequest Create(DDLObject ddl) => new(ddl);

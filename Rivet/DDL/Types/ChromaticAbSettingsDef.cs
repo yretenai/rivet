@@ -22,19 +22,19 @@ public class ChromaticAbSettingsDef : DDLObjectType, IDDLObjectType<ChromaticAbS
 		BlurInPixels = ddl.GetValue<float>(0x7deddb28u, BlurInPixels);
 	}
 
-	[DDLRegistration(0xfed71e53u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0xfed71e53u, description: "The radius of the circle in the center of the screen where there is no effect (0.5 means half the distance from the center to farther screen edge)")]
+	[DDLRegistration(0xf8a3836du, description: "The radius of the circle in the center of the screen where there is no effect (0.5 means half the distance from the center to farther screen edge)")]
 	public float InnerRadius { get; set; } = 0.30f;
 
-	[DDLRegistration(0xfed71e53u, description: "The radius of the circle where the effect reaches full strength (1.0 means the distance from the center to the farther screen edge)")]
+	[DDLRegistration(0xf6b6fbdeu, description: "The radius of the circle where the effect reaches full strength (1.0 means the distance from the center to the farther screen edge)")]
 	public float OuterRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfed71e53u, description: "The distance in pixels (relative to a 1080P screen) that the red channel is offset from the blue channel when the effect is at full strength")]
+	[DDLRegistration(0x5dced209u, description: "The distance in pixels (relative to a 1080P screen) that the red channel is offset from the blue channel when the effect is at full strength")]
 	public float DisplacementInPixels { get; set; } = 5.00f;
 
-	[DDLRegistration(0xfed71e53u, description: "The size of the blur kernel when the effect is at full strength")]
+	[DDLRegistration(0x7deddb28u, description: "The size of the blur kernel when the effect is at full strength")]
 	public float BlurInPixels { get; set; } = 2.50f;
 
 	public static ChromaticAbSettingsDef Create(DDLObject ddl) => new(ddl);

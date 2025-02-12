@@ -18,7 +18,7 @@ public class GameManagerCreateData : ActorSpawnData, IDDLObjectType<GameManagerC
 		GameType = ddl.GetValue<byte>(0x80dc4f58u, GameType);
 	}
 
-	[DDLRegistration(0x3799ad49u)]
+	[DDLRegistration(0x80dc4f58u)]
 	public byte GameType { get; set; } = 0x00;
 
 	public new static GameManagerCreateData Create(DDLObject ddl) => new(ddl);

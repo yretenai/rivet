@@ -18,7 +18,7 @@ public class IsDemoActionPrius : DDLObjectType, IDDLObjectType<IsDemoActionPrius
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x1a4f4e35u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Game;
 
 	public static IsDemoActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class UICollectibleTypeGoldBolt : UICollectibleTypeBase, IDDLObjectType<U
 		Type = ddl.GetObject<UIGoldBoltOptionTypeBase>(0xbc4e9799u);
 	}
 
-	[DDLRegistration(0xd0f3ef7fu, "Reward ID", "GoldBoltReward ID tied to this entry.")]
+	[DDLRegistration(0xc44f8e1cu, "Reward ID", "GoldBoltReward ID tied to this entry.")]
 	public GoldBoltReward RewardID { get; set; } = GoldBoltReward.None;
 
-	[DDLRegistration(0xd0f3ef7fu, "Type", "Reward type.")]
+	[DDLRegistration(0xbc4e9799u, "Type", "Reward type.")]
 	public UIGoldBoltOptionTypeBase? Type { get; set; } = default;
 
 	public new static UICollectibleTypeGoldBolt Create(DDLObject ddl) => new(ddl);

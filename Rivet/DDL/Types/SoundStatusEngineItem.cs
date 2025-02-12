@@ -18,7 +18,7 @@ public class SoundStatusEngineItem : DDLObjectType, IDDLObjectType<SoundStatusEn
 		ActiveSoundEventIds = ddl.GetDictionary<uint, uint>(0x4f2f7f71, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetValue<uint>(mapId));
 	}
 
-	[DDLRegistration(0x685616f6u)]
+	[DDLRegistration(0x4f2f7f71u)]
 	public Dictionary<uint, uint> ActiveSoundEventIds { get; set; } = [];
 
 	public static SoundStatusEngineItem Create(DDLObject ddl) => new(ddl);

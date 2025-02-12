@@ -22,19 +22,19 @@ public class EnvelopePointFloat : DDLObjectType, IDDLObjectType<EnvelopePointFlo
 		Y = ddl.GetValue<float>(0x2934711bu, Y);
 	}
 
-	[DDLRegistration(0xf19d6075u)]
+	[DDLRegistration(0xade0c28bu)]
 	public bool CanModifyX { get; set; } = true;
 
-	[DDLRegistration(0xf19d6075u)]
+	[DDLRegistration(0xdae7f21du)]
 	public bool CanModifyY { get; set; } = true;
 
-	[DDLRegistration(0xf19d6075u)]
+	[DDLRegistration(0x367642d7u)]
 	public int HoudiniInterpolationType { get; set; } = 0;
 
-	[DDLRegistration(0xf19d6075u)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf19d6075u)]
+	[DDLRegistration(0x2934711bu)]
 	public float Y { get; set; } = 1.00f;
 
 	public static EnvelopePointFloat Create(DDLObject ddl) => new(ddl);

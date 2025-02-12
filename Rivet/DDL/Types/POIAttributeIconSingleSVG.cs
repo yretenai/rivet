@@ -20,13 +20,13 @@ public class POIAttributeIconSingleSVG : POIAttributeIconBase, IDDLObjectType<PO
 		Height = ddl.GetValue<float>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0x000da28bu)]
+	[DDLRegistration(0x87fa0833u)]
 	public RivetAssetId SVG { get; set; } = "";
 
-	[DDLRegistration(0x000da28bu)]
+	[DDLRegistration(0x954989eeu)]
 	public float Width { get; set; } = 32.00f;
 
-	[DDLRegistration(0x000da28bu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 32.00f;
 
 	public new static POIAttributeIconSingleSVG Create(DDLObject ddl) => new(ddl);

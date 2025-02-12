@@ -33,52 +33,52 @@ public class ProtonSeekerFiringPattern : DDLObjectType, IDDLObjectType<ProtonSee
 		AttachCurveTargetVol = ddl.GetValue<RivetAssetId>(0x0d3a1937u, AttachCurveTargetVol);
 	}
 
-	[DDLRegistration(0xec4465eeu)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xec4465eeu)]
+	[DDLRegistration(0x54b94fb2u)]
 	public float AttackDelay { get; set; } = 1.00f;
 
-	[DDLRegistration(0xec4465eeu)]
+	[DDLRegistration(0xf6e0e4e5u)]
 	public float ShotDelay { get; set; } = 0.20f;
 
-	[DDLRegistration(0xec4465eeu)]
+	[DDLRegistration(0x63fa8b4bu)]
 	public byte AttackCount { get; set; } = 0x01;
 
-	[DDLRegistration(0xec4465eeu)]
+	[DDLRegistration(0xc1a3201cu)]
 	public byte ShotCount { get; set; } = 0x01;
 
-	[DDLRegistration(0xec4465eeu)]
+	[DDLRegistration(0xf3ebd124u)]
 	public byte ExtraShotCount { get; set; } = 0x00;
 
-	[DDLRegistration(0xec4465eeu)]
+	[DDLRegistration(0xf01c14b1u)]
 	public byte ExplosiveShotCount { get; set; } = 0x00;
 
-	[DDLRegistration(0xec4465eeu)]
+	[DDLRegistration(0x7a102d4cu)]
 	public bool Scatter { get; set; } = false;
 
-	[DDLRegistration(0xec4465eeu, description: "DEPRECATED/UNUSED IN FAVOR OF MULTI ATTACK VOLUME")]
+	[DDLRegistration(0x05489eb5u, description: "DEPRECATED/UNUSED IN FAVOR OF MULTI ATTACK VOLUME")]
 	public bool Concurrent { get; set; } = false;
 
-	[DDLRegistration(0xec4465eeu, description: "If normal targeted shot along curve and greater than 0, this is how long it will take for the shots to get to the center of the curve")]
+	[DDLRegistration(0xb657148cu, description: "If normal targeted shot along curve and greater than 0, this is how long it will take for the shots to get to the center of the curve")]
 	public float TimeToCenterOfCurve { get; set; } = -1.00f;
 
-	[DDLRegistration(0xec4465eeu, description: "If greater than 0, the attack will shoot for this long instead of based on shot count")]
+	[DDLRegistration(0x96302a4du, description: "If greater than 0, the attack will shoot for this long instead of based on shot count")]
 	public float ShotDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0xec4465eeu, description: "If explosive shot, its fuse will be a random number from Min to Max")]
+	[DDLRegistration(0x7abf85cdu, description: "If explosive shot, its fuse will be a random number from Min to Max")]
 	public float ExplosiveShotFuseMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0xec4465eeu, description: "If explosive shot, its fuse will be a random number from Min to Max")]
+	[DDLRegistration(0x46b2ba94u, description: "If explosive shot, its fuse will be a random number from Min to Max")]
 	public float ExplosiveShotFuseMax { get; set; } = 5.00f;
 
-	[DDLRegistration(0xec4465eeu)]
+	[DDLRegistration(0xc23a6c53u)]
 	public RivetAssetId CurveActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xec4465eeu)]
+	[DDLRegistration(0xf459bfe3u)]
 	public bool AttachCurveToTarget { get; set; } = false;
 
-	[DDLRegistration(0xec4465eeu)]
+	[DDLRegistration(0x0d3a1937u)]
 	public RivetAssetId AttachCurveTargetVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ProtonSeekerFiringPattern Create(DDLObject ddl) => new(ddl);

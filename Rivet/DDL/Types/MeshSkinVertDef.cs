@@ -19,10 +19,10 @@ public class MeshSkinVertDef : DDLObjectType, IDDLObjectType<MeshSkinVertDef> {
 		JointWeights = ddl.GetValues<float>(0x60586724u);
 	}
 
-	[DDLRegistration(0x0257763au)]
+	[DDLRegistration(0xf9847a79u)]
 	public List<ushort> JointIds { get; set; } = [];
 
-	[DDLRegistration(0x0257763au)]
+	[DDLRegistration(0x60586724u)]
 	public List<float> JointWeights { get; set; } = [];
 
 	public static MeshSkinVertDef Create(DDLObject ddl) => new(ddl);

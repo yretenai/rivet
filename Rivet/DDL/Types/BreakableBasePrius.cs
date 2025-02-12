@@ -68,157 +68,157 @@ public class BreakableBasePrius : DDLObjectType, IDDLObjectType<BreakableBasePri
 		LocatorsInPrev = ddl.GetValue<bool>(0xbe92333fu, LocatorsInPrev);
 	}
 
-	[DDLRegistration(0xd80ff863u, "Save Destroyed?", "Whether we should save that this actor's destroyed state (aka, destroyed or not destroyed) and return to it on load. This will use the Deleted flag so don't have more than one component set to save with this flag.")]
+	[DDLRegistration(0x97b042c7u, "Save Destroyed?", "Whether we should save that this actor's destroyed state (aka, destroyed or not destroyed) and return to it on load. This will use the Deleted flag so don't have more than one component set to save with this flag.")]
 	public bool SaveDestroyedState { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Start Destroyed?", "Whether to load into our destroyed state.")]
+	[DDLRegistration(0x3adfa26bu, "Start Destroyed?", "Whether to load into our destroyed state.")]
 	public bool StartDestroyed { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, description: "Breakable builder and spawn system flag. If true, this breakable only spawns during when breakables system is told to spawn the extra props")]
+	[DDLRegistration(0xd93276abu, description: "Breakable builder and spawn system flag. If true, this breakable only spawns during when breakables system is told to spawn the extra props")]
 	public bool ExtraProp { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Max Health", "Set to negative on objects that manage their own health.")]
+	[DDLRegistration(0x72aa54beu, "Max Health", "Set to negative on objects that manage their own health.")]
 	public float MaxHealth { get; set; } = 100.00f;
 
-	[DDLRegistration(0xd80ff863u, "Manual damage", "Does not get damaged based on health.  Must be damaged manually")]
+	[DDLRegistration(0x6a479137u, "Manual damage", "Does not get damaged based on health.  Must be damaged manually")]
 	public bool ManualBreak { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Chunk exit velocity")]
+	[DDLRegistration(0x3f52b4e9u, "Chunk exit velocity")]
 	public float ChunkExitVelocity { get; set; } = 5.00f;
 
-	[DDLRegistration(0xd80ff863u, "Randomize chunk exit velocity")]
+	[DDLRegistration(0x294ea1d4u, "Randomize chunk exit velocity")]
 	public bool RandomChunkVelocity { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Prevent chunk velocity from being downwards (legacy behavior)")]
+	[DDLRegistration(0x1d83e4c9u, "Prevent chunk velocity from being downwards (legacy behavior)")]
 	public bool ChunkVelocityUpOnly { get; set; } = true;
 
-	[DDLRegistration(0xd80ff863u)]
+	[DDLRegistration(0x460a94feu)]
 	public float ChunkLifeTimeMin { get; set; } = 4.00f;
 
-	[DDLRegistration(0xd80ff863u)]
+	[DDLRegistration(0x7a07aba7u)]
 	public float ChunkLifeTimeMax { get; set; } = 8.00f;
 
-	[DDLRegistration(0xd80ff863u, description: "Remove chunks when offscreen instead of fading")]
+	[DDLRegistration(0x2dd5bdc9u, description: "Remove chunks when offscreen instead of fading")]
 	public bool CullChunksOffscreen { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Chunk collision start delay", "Wait this many seconds before enabling collision on spawned chunks. Useful to avoid collision interpenetration on spawn.")]
+	[DDLRegistration(0x9065d373u, "Chunk collision start delay", "Wait this many seconds before enabling collision on spawned chunks. Useful to avoid collision interpenetration on spawn.")]
 	public float ChunkCollisionStartDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd80ff863u, "Chunks Fall Forward", "Spawned chunks will always fall out along positive-z.")]
+	[DDLRegistration(0xaa1df08cu, "Chunks Fall Forward", "Spawned chunks will always fall out along positive-z.")]
 	public bool ChunksFallForward { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Chunk positions", "How to generate debris and chunk positions")]
+	[DDLRegistration(0x45e23d0fu, "Chunk positions", "How to generate debris and chunk positions")]
 	public x65c63950 SpawnPos { get; set; } = x65c63950.Locators;
 
-	[DDLRegistration(0xd80ff863u, "spawn chunks with offsets")]
+	[DDLRegistration(0x01ab01a5u, "spawn chunks with offsets")]
 	public bool SpawnChunksAtOffsetPositions { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Debris exit velocity")]
+	[DDLRegistration(0xd7e1c2edu, "Debris exit velocity")]
 	public float DebrisExitVelocity { get; set; } = 10.00f;
 
-	[DDLRegistration(0xd80ff863u, "Debris angular velocity", "Maximum magnitude in any direction for the angular velocity")]
+	[DDLRegistration(0xfb101303u, "Debris angular velocity", "Maximum magnitude in any direction for the angular velocity")]
 	public float DebrisAngularVel { get; set; } = 3.00f;
 
-	[DDLRegistration(0xd80ff863u, "Debris angular direction", "Chose whether chunks spin randomly, towards the z-axis specified for that chunk in Maya, or away from the center of the breakable actor.")]
+	[DDLRegistration(0xc7bba35eu, "Debris angular direction", "Chose whether chunks spin randomly, towards the z-axis specified for that chunk in Maya, or away from the center of the breakable actor.")]
 	public x29cc5733 DebrisAngularDirection { get; set; } = x29cc5733.Random;
 
-	[DDLRegistration(0xd80ff863u, "Debris per chunk")]
+	[DDLRegistration(0xdb12bd6au, "Debris per chunk")]
 	public uint DebrisPerChunk { get; set; } = 0x00000003;
 
-	[DDLRegistration(0xd80ff863u, "Chunk disable collision", "Chunks will not collide with anything, improving framerate.")]
+	[DDLRegistration(0x8abb2550u, "Chunk disable collision", "Chunks will not collide with anything, improving framerate.")]
 	public bool FastCollision { get; set; } = true;
 
-	[DDLRegistration(0xd80ff863u, "Debris disable collision", "Debris will not collide with anything, improving framerate.")]
+	[DDLRegistration(0x98355742u, "Debris disable collision", "Debris will not collide with anything, improving framerate.")]
 	public bool DebrisFastCollision { get; set; } = true;
 
-	[DDLRegistration(0xd80ff863u, "Cull by Size", "When we are running out of chunks, prefer spawning larger ones over smaller ones.")]
+	[DDLRegistration(0xb3eee152u, "Cull by Size", "When we are running out of chunks, prefer spawning larger ones over smaller ones.")]
 	public bool CullBySize { get; set; } = true;
 
-	[DDLRegistration(0xd80ff863u, "Blend from HitDir", "How much to blend from hit direction with direction from center of explosion")]
+	[DDLRegistration(0xf0b20318u, "Blend from HitDir", "How much to blend from hit direction with direction from center of explosion")]
 	public float BlendFromHitDirection { get; set; } = 0.50f;
 
-	[DDLRegistration(0xd80ff863u, "Chunk Physics Properties Overrides", "Optionally apply physics motion or material properties on every chunk spawned by this breakable.")]
+	[DDLRegistration(0x0078fee0u, "Chunk Physics Properties Overrides", "Optionally apply physics motion or material properties on every chunk spawned by this breakable.")]
 	public PhysicsCustomizationProperties? ChunkPhysicsCustomizations { get; set; } = default;
 
-	[DDLRegistration(0xd80ff863u, "Use Contact Events", "Enable chunks to queue PhysicsContactEvent (e.g. for conduit responses)")]
+	[DDLRegistration(0x58e02c93u, "Use Contact Events", "Enable chunks to queue PhysicsContactEvent (e.g. for conduit responses)")]
 	public bool UseContactEvents { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, description: "The momentum (= speed x weight) of an impact with ground or other object at which the breakable breaks apart")]
+	[DDLRegistration(0xfd4ce7c0u, description: "The momentum (= speed x weight) of an impact with ground or other object at which the breakable breaks apart")]
 	public float BreaksAtImpactMomentum { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd80ff863u, "Damage on impact", "Impacts will cause damage")]
+	[DDLRegistration(0xe726e931u, "Damage on impact", "Impacts will cause damage")]
 	public bool TakeImpactDamage { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Script Damage Only")]
+	[DDLRegistration(0x7f62db94u, "Script Damage Only")]
 	public bool ScriptDamageOnly { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Expl Damage", "Damaged cause when breakable is destroyed")]
+	[DDLRegistration(0xcaa0ab25u, "Expl Damage", "Damaged cause when breakable is destroyed")]
 	public float AreaDamage { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd80ff863u, "Expl Damage Type", "Damaged type caused when breakable is destroyed")]
+	[DDLRegistration(0x9adf5dc1u, "Expl Damage Type", "Damaged type caused when breakable is destroyed")]
 	public DamageTypesGame AreaDamageType { get; set; } = DamageTypesGame.Explosion;
 
-	[DDLRegistration(0xd80ff863u, "Expl Radius", "Radius of damage when breakable is destroyed")]
+	[DDLRegistration(0x0cd7fa5eu, "Expl Radius", "Radius of damage when breakable is destroyed")]
 	public float AreaDamageRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd80ff863u, "Expl Knockback", "Knockback level")]
+	[DDLRegistration(0x00c9e456u, "Expl Knockback", "Knockback level")]
 	public KnockbackLevels AreaDamageKnockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0xd80ff863u, "Expl Status Type", "Status type caused when breakable is destroyed")]
+	[DDLRegistration(0x7a0da7fau, "Expl Status Type", "Status type caused when breakable is destroyed")]
 	public DamageTypesGame AreaStatusType { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0xd80ff863u, "Expl Status Amount", "Amount of Status type caused when breakable is destroyed")]
+	[DDLRegistration(0xd8d0f0aeu, "Expl Status Amount", "Amount of Status type caused when breakable is destroyed")]
 	public float AreaStatusAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd80ff863u, "Explosion hurts damager")]
+	[DDLRegistration(0xc5fea0c9u, "Explosion hurts damager")]
 	public bool DamageAttacker { get; set; } = true;
 
-	[DDLRegistration(0xd80ff863u, "Damage Is Percent", "Is the damage in AreaDamage a percent?")]
+	[DDLRegistration(0xda280e89u, "Damage Is Percent", "Is the damage in AreaDamage a percent?")]
 	public bool DamageIsPercent { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Destroyed Anim", "Animation played when actor switch to destroyed model, on the destroyed model.")]
+	[DDLRegistration(0x43812ab9u, "Destroyed Anim", "Animation played when actor switch to destroyed model, on the destroyed model.")]
 	public string? OnDestroyedAnimation { get; set; } = "";
 
-	[DDLRegistration(0xd80ff863u, "Start Destroyed Anim", "If skipping into the destroyed state (eg., not through being destroyed but being loaded already destroyed), what anim to play.")]
+	[DDLRegistration(0x279eba3eu, "Start Destroyed Anim", "If skipping into the destroyed state (eg., not through being destroyed but being loaded already destroyed), what anim to play.")]
 	public string? StartDestroyedAnimation { get; set; } = "";
 
-	[DDLRegistration(0xd80ff863u, "Damage React Anim", "Animation played whenever actor takes damage.")]
+	[DDLRegistration(0x199a58f4u, "Damage React Anim", "Animation played whenever actor takes damage.")]
 	public string? DamageReactAnimation { get; set; } = "";
 
-	[DDLRegistration(0xd80ff863u, description: "Should jump to end of animation on destroy?")]
+	[DDLRegistration(0xbb9e7665u, description: "Should jump to end of animation on destroy?")]
 	public bool SnapToEndOfAnimation { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Spawn Debris and FX", "If playing explosion-effect and spawn debris when changing state.")]
+	[DDLRegistration(0x44f46c9bu, "Spawn Debris and FX", "If playing explosion-effect and spawn debris when changing state.")]
 	public bool DoExplosionOnSwitchState { get; set; } = true;
 
-	[DDLRegistration(0xd80ff863u, "Delete On Destroy", "Delete this object after it's health reaches zero.")]
+	[DDLRegistration(0xa3589a90u, "Delete On Destroy", "Delete this object after it's health reaches zero.")]
 	public bool DeleteOnDestroy { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Remove Collision On Destroy")]
+	[DDLRegistration(0x7fe9f27du, "Remove Collision On Destroy")]
 	public bool RemoveCollision { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Remove AnimClues OnDestroy")]
+	[DDLRegistration(0x0b0f884cu, "Remove AnimClues OnDestroy")]
 	public bool RemoveAnimClues { get; set; } = false;
 
-	[DDLRegistration(0xd80ff863u, "Stump lifetime", "Stump object will delete itself this many seconds after the object is fully broken. 0 means 'do not self-destruct'.")]
+	[DDLRegistration(0x4a319efbu, "Stump lifetime", "Stump object will delete itself this many seconds after the object is fully broken. 0 means 'do not self-destruct'.")]
 	public float StumpLifeTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd80ff863u, "Shed Attachments On Death")]
+	[DDLRegistration(0x3080cc34u, "Shed Attachments On Death")]
 	public bool ShedAttachmentsOnDeath { get; set; } = true;
 
-	[DDLRegistration(0xd80ff863u, description: "Destroy these breakables when this one is destroyed")]
+	[DDLRegistration(0x7ba1fab1u, description: "Destroy these breakables when this one is destroyed")]
 	public List<RivetAssetId> DependentBreakables { get; set; } = [];
 
-	[DDLRegistration(0xd80ff863u, description: "Optional delay before destroying dependents")]
+	[DDLRegistration(0xa86e30cbu, description: "Optional delay before destroying dependents")]
 	public float DependentDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd80ff863u, "Nav Flag Volume List", "Volume list used when destroyed")]
+	[DDLRegistration(0x3aca5839u, "Nav Flag Volume List", "Volume list used when destroyed")]
 	public List<RivetAssetId> VolumeActors { get; set; } = [];
 
-	[DDLRegistration(0xd80ff863u, description: "List of actors to deactivate when destroyed")]
+	[DDLRegistration(0xb7da8864u, description: "List of actors to deactivate when destroyed")]
 	public List<RivetAssetId> DeactivateActors { get; set; } = [];
 
-	[DDLRegistration(0xd80ff863u, description: "Temp use for backward compability, should be false for all newly constructed breakables.")]
+	[DDLRegistration(0xbe92333fu, description: "Temp use for backward compability, should be false for all newly constructed breakables.")]
 	public bool LocatorsInPrev { get; set; } = false;
 
 	public static BreakableBasePrius Create(DDLObject ddl) => new(ddl);

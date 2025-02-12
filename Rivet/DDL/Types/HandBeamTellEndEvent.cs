@@ -18,7 +18,7 @@ public class HandBeamTellEndEvent : EventBase, IDDLObjectType<HandBeamTellEndEve
 		Is_Right_Hand = ddl.GetValue<bool>(0xa24be18du, Is_Right_Hand);
 	}
 
-	[DDLRegistration(0x22310e71u)]
+	[DDLRegistration(0xa24be18du)]
 	public bool Is_Right_Hand { get; set; } = true;
 
 	public new static HandBeamTellEndEvent Create(DDLObject ddl) => new(ddl);

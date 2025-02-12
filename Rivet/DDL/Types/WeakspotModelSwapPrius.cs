@@ -21,16 +21,16 @@ public class WeakspotModelSwapPrius : WeakspotDestructiblePrius, IDDLObjectType<
 		IntermediateModels = ddl.GetObjects<WeakspotModelData>(0x4754fa30u);
 	}
 
-	[DDLRegistration(0xe435c614u)]
+	[DDLRegistration(0xfa8dcd9au)]
 	public string? AttachLocator { get; set; } = default;
 
-	[DDLRegistration(0xe435c614u)]
+	[DDLRegistration(0xcd0e2e40u)]
 	public RivetAssetId DefaultModel { get; set; } = default;
 
-	[DDLRegistration(0xe435c614u)]
+	[DDLRegistration(0x408586ccu)]
 	public RivetAssetId DestroyedModel { get; set; } = default;
 
-	[DDLRegistration(0xe435c614u)]
+	[DDLRegistration(0x4754fa30u)]
 	public List<WeakspotModelData?> IntermediateModels { get; set; } = [];
 
 	public new static WeakspotModelSwapPrius Create(DDLObject ddl) => new(ddl);

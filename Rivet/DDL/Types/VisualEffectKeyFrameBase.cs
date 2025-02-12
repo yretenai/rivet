@@ -20,13 +20,13 @@ public class VisualEffectKeyFrameBase : DDLObjectType, IDDLObjectType<VisualEffe
 		LifeTimeOverride = ddl.GetValue<float>(0x580128bbu, LifeTimeOverride);
 	}
 
-	[DDLRegistration(0xd585a4a3u, "Loop")]
+	[DDLRegistration(0xe15c9369u, "Loop")]
 	public bool EnableLooping { get; set; } = true;
 
-	[DDLRegistration(0xd585a4a3u, "Use Emitter Age")]
+	[DDLRegistration(0x81d6b7fcu, "Use Emitter Age")]
 	public bool UseEmitterAge { get; set; } = false;
 
-	[DDLRegistration(0xd585a4a3u, "LifeTime Override")]
+	[DDLRegistration(0x580128bbu, "LifeTime Override")]
 	public float LifeTimeOverride { get; set; } = 0.00f;
 
 	public static VisualEffectKeyFrameBase Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class BotRange : DDLObjectType, IDDLObjectType<BotRange> {
 		Range = ddl.GetValue<float>(0x8ad49688u, Range);
 	}
 
-	[DDLRegistration(0x74c43454u)]
+	[DDLRegistration(0xbee4e582u)]
 	public bool Use { get; set; } = false;
 
-	[DDLRegistration(0x74c43454u)]
+	[DDLRegistration(0xe704fdd8u)]
 	public RivetAssetId Area { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x74c43454u)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 30.00f;
 
 	public static BotRange Create(DDLObject ddl) => new(ddl);

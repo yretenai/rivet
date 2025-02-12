@@ -21,16 +21,16 @@ public class LunaFtpUserConfigFile : DDLObjectType, IDDLObjectType<LunaFtpUserCo
 		Locations = ddl.GetObjects<LunaFtpUserLocation>(0x951bd5b6u);
 	}
 
-	[DDLRegistration(0x082740ecu)]
+	[DDLRegistration(0xa26d1439u)]
 	public string? UserName { get; set; } = "";
 
-	[DDLRegistration(0x082740ecu)]
+	[DDLRegistration(0x22ce8b28u)]
 	public string? DefaultLocation { get; set; } = "";
 
-	[DDLRegistration(0x082740ecu)]
+	[DDLRegistration(0x87ee6cbau)]
 	public string? DefaultProjectId { get; set; } = "";
 
-	[DDLRegistration(0x082740ecu)]
+	[DDLRegistration(0x951bd5b6u)]
 	public List<LunaFtpUserLocation?> Locations { get; set; } = [];
 
 	public static LunaFtpUserConfigFile Create(DDLObject ddl) => new(ddl);

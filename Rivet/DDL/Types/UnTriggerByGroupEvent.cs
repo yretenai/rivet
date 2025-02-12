@@ -18,7 +18,7 @@ public class UnTriggerByGroupEvent : EventBase, IDDLObjectType<UnTriggerByGroupE
 		GroupHash = ddl.GetValue<uint>(0x3d8ea309u, GroupHash);
 	}
 
-	[DDLRegistration(0x965be3a2u)]
+	[DDLRegistration(0x3d8ea309u)]
 	public uint GroupHash { get; set; } = 0x00000000;
 
 	public new static UnTriggerByGroupEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class EmbeddedGraphNodeBaseDef : NodeBaseDef, IDDLObjectType<EmbeddedGrap
 		GraphId = ddl.GetValue<RivetAssetId>(0x76b05713u, GraphId);
 	}
 
-	[DDLRegistration(0x313bca3du)]
+	[DDLRegistration(0x76b05713u)]
 	public RivetAssetId GraphId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static EmbeddedGraphNodeBaseDef Create(DDLObject ddl) => new(ddl);

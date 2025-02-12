@@ -18,7 +18,7 @@ public class ExportModelInstancesDef : DDLObjectType, IDDLObjectType<ExportModel
 		Instances = ddl.GetObjects<ExportModelInstanceData>(0xf8da9f65u);
 	}
 
-	[DDLRegistration(0x2d9215bau)]
+	[DDLRegistration(0xf8da9f65u)]
 	public List<ExportModelInstanceData?> Instances { get; set; } = [];
 
 	public static ExportModelInstancesDef Create(DDLObject ddl) => new(ddl);

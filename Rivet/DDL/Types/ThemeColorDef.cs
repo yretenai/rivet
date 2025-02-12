@@ -20,13 +20,13 @@ public class ThemeColorDef : DDLObjectType, IDDLObjectType<ThemeColorDef> {
 		Groups = ddl.GetBitset<x3b2d3a40>(0xce157717u, x3b2d3a40Values.Lookup);
 	}
 
-	[DDLRegistration(0xc3361999u)]
+	[DDLRegistration(0xd2b0789eu)]
 	public x278835c9 Symbol { get; set; } = x278835c9.AlternateBase;
 
-	[DDLRegistration(0xc3361999u)]
+	[DDLRegistration(0x7f0fcb79u)]
 	public string? ColorSpec { get; set; } = default;
 
-	[DDLRegistration(0xc3361999u)]
+	[DDLRegistration(0xce157717u)]
 	public x3b2d3a40 Groups { get; set; } = (x3b2d3a40) 0x00000007;
 
 	public static ThemeColorDef Create(DDLObject ddl) => new(ddl);

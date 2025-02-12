@@ -18,7 +18,7 @@ public class TargetEmitterPrius : WeaponEmitterBasePrius, IDDLObjectType<TargetE
 		PreserveFacing = ddl.GetValue<bool>(0x0551af2du, PreserveFacing);
 	}
 
-	[DDLRegistration(0x233a98aeu)]
+	[DDLRegistration(0x0551af2du)]
 	public bool PreserveFacing { get; set; } = true;
 
 	public new static TargetEmitterPrius Create(DDLObject ddl) => new(ddl);

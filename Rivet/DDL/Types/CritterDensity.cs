@@ -18,7 +18,7 @@ public class CritterDensity : DDLObjectType, IDDLObjectType<CritterDensity> {
 		MaxActive = ddl.GetValue<int>(0xf76e8bafu, MaxActive);
 	}
 
-	[DDLRegistration(0xc7ad674au)]
+	[DDLRegistration(0xf76e8bafu)]
 	public int MaxActive { get; set; } = 4;
 
 	public static CritterDensity Create(DDLObject ddl) => new(ddl);

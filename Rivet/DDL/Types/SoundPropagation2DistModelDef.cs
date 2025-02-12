@@ -23,22 +23,22 @@ public class SoundPropagation2DistModelDef : DDLObjectType, IDDLObjectType<Sound
 		PropertiesInvSq = ddl.GetObject<SoundPropagation2InvSqDef>(0x59b24bddu);
 	}
 
-	[DDLRegistration(0x15e4690eu, description: "Level of the sound (0 to MaxGain in dB)")]
+	[DDLRegistration(0xd8f5ce96u, description: "Level of the sound (0 to MaxGain in dB)")]
 	public float VolumedB { get; set; } = 80.00f;
 
-	[DDLRegistration(0x15e4690eu, description: "distance the sound must be from the listener before atteuation starts")]
+	[DDLRegistration(0xc257f3ecu, description: "distance the sound must be from the listener before atteuation starts")]
 	public float NearFieldDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x15e4690eu, description: "distance-based attenuation model")]
+	[DDLRegistration(0xb6b9141eu, description: "distance-based attenuation model")]
 	public xcb4c1031 ModelType { get; set; } = xcb4c1031.InvSqDb;
 
-	[DDLRegistration(0x15e4690eu, description: "defines behavior when distance model is linear")]
+	[DDLRegistration(0x5b54b592u, description: "defines behavior when distance model is linear")]
 	public SoundPropagation2LinearDef? PropertiesLinear { get; set; } = default;
 
-	[DDLRegistration(0x15e4690eu, description: "defines behavior when distance model is bezier")]
+	[DDLRegistration(0x16a3c54bu, description: "defines behavior when distance model is bezier")]
 	public SoundPropagation2BezierDef? PropertiesBezier { get; set; } = default;
 
-	[DDLRegistration(0x15e4690eu, description: "defines behavior when distance model is InvSq ")]
+	[DDLRegistration(0x59b24bddu, description: "defines behavior when distance model is InvSq ")]
 	public SoundPropagation2InvSqDef? PropertiesInvSq { get; set; } = default;
 
 	public static SoundPropagation2DistModelDef Create(DDLObject ddl) => new(ddl);

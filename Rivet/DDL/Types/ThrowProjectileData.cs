@@ -46,91 +46,91 @@ public class ThrowProjectileData : DDLObjectType, IDDLObjectType<ThrowProjectile
 		TargetPredictionMaxTime = ddl.GetValue<float>(0x4d1ee140u, TargetPredictionMaxTime);
 	}
 
-	[DDLRegistration(0xc55cf2ccu, "Shot Config")]
+	[DDLRegistration(0xb171e6aeu, "Shot Config")]
 	public RivetAssetId ShotConfig { get; set; } = default;
 
-	[DDLRegistration(0xc55cf2ccu, "Damage Request Id")]
+	[DDLRegistration(0x7c3aad71u, "Damage Request Id")]
 	public string? DamageRequestId { get; set; } = default;
 
-	[DDLRegistration(0xc55cf2ccu, "Intro Driver")]
+	[DDLRegistration(0x9b209c3du, "Intro Driver")]
 	public string? IntroDriver { get; set; } = default;
 
-	[DDLRegistration(0xc55cf2ccu, "Throw Driver")]
+	[DDLRegistration(0x33c9ea6fu, "Throw Driver")]
 	public string? ThrowDriver { get; set; } = default;
 
-	[DDLRegistration(0xc55cf2ccu, "Emit Locator")]
+	[DDLRegistration(0x138c6595u, "Emit Locator")]
 	public string? EmitLocator { get; set; } = default;
 
-	[DDLRegistration(0xc55cf2ccu, "Intro Duration", "How long the Intro Driver will last.")]
+	[DDLRegistration(0x5d9ecce9u, "Intro Duration", "How long the Intro Driver will last.")]
 	public float IntroDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc55cf2ccu, "Wind Up Duration", "Wind up time, in anim clip between start and MeleeActiveBeginEvent")]
+	[DDLRegistration(0x11dca8dau, "Wind Up Duration", "Wind up time, in anim clip between start and MeleeActiveBeginEvent")]
 	public float WindUpDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc55cf2ccu, "Active Duration", "Active time, in anim clip between MeleeActiveBeginEvent and MeleeActiveEndEvent")]
+	[DDLRegistration(0xda754e51u, "Active Duration", "Active time, in anim clip between MeleeActiveBeginEvent and MeleeActiveEndEvent")]
 	public float ActiveDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc55cf2ccu, "Recovery Duration", "Recovery time, in anim clip between MeleeActiveEndEvent and end of clip")]
+	[DDLRegistration(0x03b07ba4u, "Recovery Duration", "Recovery time, in anim clip between MeleeActiveEndEvent and end of clip")]
 	public float RecoveryDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc55cf2ccu, "Enable Tracking During Throw", "If false we will lock the position we are throwing to as soon as we exit the intro clip")]
+	[DDLRegistration(0xc557841cu, "Enable Tracking During Throw", "If false we will lock the position we are throwing to as soon as we exit the intro clip")]
 	public bool EnableTrackingDuringThrow { get; set; } = true;
 
-	[DDLRegistration(0xc55cf2ccu, "Enable Tracking When Rotation Is Disabled", "Is a AnimScaleRotationOffEvent is placed on the throw clip, should we be able to update our target position after that point?")]
+	[DDLRegistration(0x5c8a6b87u, "Enable Tracking When Rotation Is Disabled", "Is a AnimScaleRotationOffEvent is placed on the throw clip, should we be able to update our target position after that point?")]
 	public bool EnableTrackingWhenRotationIsDisabled { get; set; } = true;
 
-	[DDLRegistration(0xc55cf2ccu, "Aim In XZ", "If true our aim vector will be computed to be flat in the xz plane.")]
+	[DDLRegistration(0xa2978852u, "Aim In XZ", "If true our aim vector will be computed to be flat in the xz plane.")]
 	public bool AimInXZ { get; set; } = true;
 
-	[DDLRegistration(0xc55cf2ccu, "Can Drop Projectile", "If true and the bot is interruptedduring their throw once the projectile has been attached, they will drop the projectile instead of delete it.")]
+	[DDLRegistration(0x2ea6a015u, "Can Drop Projectile", "If true and the bot is interruptedduring their throw once the projectile has been attached, they will drop the projectile instead of delete it.")]
 	public bool CanDropProjectile { get; set; } = true;
 
-	[DDLRegistration(0xc55cf2ccu, "Use Target Data", "If true, the bot will aim for the target actor's targetdata location instead of their bsphere")]
+	[DDLRegistration(0xe211c273u, "Use Target Data", "If true, the bot will aim for the target actor's targetdata location instead of their bsphere")]
 	public bool UseTargetDataForAim { get; set; } = false;
 
-	[DDLRegistration(0xc55cf2ccu, "Shoot in Emit Dir", "If true, the bot will setup the shot such that its aim is the emit mat's forward")]
+	[DDLRegistration(0xb2a192a6u, "Shoot in Emit Dir", "If true, the bot will setup the shot such that its aim is the emit mat's forward")]
 	public bool AimIsEmitForward { get; set; } = false;
 
-	[DDLRegistration(0xc55cf2ccu, "Use Last Nav Position", "If true, the bot will aim the shot at the target's last position on nav mesh")]
+	[DDLRegistration(0xc387f89cu, "Use Last Nav Position", "If true, the bot will aim the shot at the target's last position on nav mesh")]
 	public bool UseLastNavPosition { get; set; } = true;
 
-	[DDLRegistration(0xc55cf2ccu, "Require Clear Arc", "If true, require a clear arc for the projectile trajectory")]
+	[DDLRegistration(0x0875b4f8u, "Require Clear Arc", "If true, require a clear arc for the projectile trajectory")]
 	public bool RequireClearArc { get; set; } = true;
 
-	[DDLRegistration(0xc55cf2ccu, "Drop Offset", "When the bot drops their projectile, where should it go relative to their current actor transform")]
+	[DDLRegistration(0x3422756fu, "Drop Offset", "When the bot drops their projectile, where should it go relative to their current actor transform")]
 	public DDLVector3? DropOffset { get; set; } = default;
 
-	[DDLRegistration(0xc55cf2ccu, "On Dodge Wind Up Mult", "If we get dodged during the Wind Up how much should we speed up the windup so that the attack launches faster.")]
+	[DDLRegistration(0x14c45397u, "On Dodge Wind Up Mult", "If we get dodged during the Wind Up how much should we speed up the windup so that the attack launches faster.")]
 	public float OnDodgeWindUpMult { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc55cf2ccu, "Desired Land Z Offset", "The bot will aim projectile this many meters in front of target")]
+	[DDLRegistration(0xe6a1c509u, "Desired Land Z Offset", "The bot will aim projectile this many meters in front of target")]
 	public float DesiredLandOffset { get; set; } = 2.50f;
 
-	[DDLRegistration(0xc55cf2ccu, "Off Screen Land Z Offset", "Offset from target if attacker is off screen")]
+	[DDLRegistration(0xda3e8365u, "Off Screen Land Z Offset", "Offset from target if attacker is off screen")]
 	public float OffScreenLandOffset { get; set; } = 3.50f;
 
-	[DDLRegistration(0xc55cf2ccu, "Max Rotation", "How far are we allowed to rotate from our inital facing?")]
+	[DDLRegistration(0xbd6d1045u, "Max Rotation", "How far are we allowed to rotate from our inital facing?")]
 	public float MaxRotation { get; set; } = 180.00f;
 
-	[DDLRegistration(0xc55cf2ccu, "Collision Ignore Distance", "How far we want shot to ignore collision from the start of the shot trajectory")]
+	[DDLRegistration(0xd84ab22cu, "Collision Ignore Distance", "How far we want shot to ignore collision from the start of the shot trajectory")]
 	public float CollIgnoreDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc55cf2ccu, "Shot Count", "How many shots to throw")]
+	[DDLRegistration(0xc1a3201cu, "Shot Count", "How many shots to throw")]
 	public int ShotCount { get; set; } = 1;
 
-	[DDLRegistration(0xc55cf2ccu, "Shot Offset Side", "Offset to each side of the target position for multiple shots")]
+	[DDLRegistration(0x2870b13eu, "Shot Offset Side", "Offset to each side of the target position for multiple shots")]
 	public float ShotOffsetSide { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc55cf2ccu)]
+	[DDLRegistration(0xf4f4686fu)]
 	public RivetAssetId ShotWarningActorAsset { get; set; } = default;
 
-	[DDLRegistration(0xc55cf2ccu)]
+	[DDLRegistration(0x9ee13df7u)]
 	public float ShotWarningInterval { get; set; } = 0.38f;
 
-	[DDLRegistration(0xc55cf2ccu, "Target Prediction Add Time")]
+	[DDLRegistration(0x7f636004u, "Target Prediction Add Time")]
 	public float TargetPredictionAddTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc55cf2ccu, "Target Prediction Max Time")]
+	[DDLRegistration(0x4d1ee140u, "Target Prediction Max Time")]
 	public float TargetPredictionMaxTime { get; set; } = 0.00f;
 
 	public static ThrowProjectileData Create(DDLObject ddl) => new(ddl);

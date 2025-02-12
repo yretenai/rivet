@@ -19,10 +19,10 @@ public class DebugSetFilterStateActionPrius : DDLObjectType, IDDLObjectType<Debu
 		OverrideActiveDrivers = ddl.GetValue<bool>(0x406178e1u, OverrideActiveDrivers);
 	}
 
-	[DDLRegistration(0x2bf794deu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0x2bf794deu, "Override Active Drivers", "If true we'll open up the currently playing drivers to change in response to all filter changes. If false this just sets up the filter for upcoming drivers and drivers that were already open to filter changes")]
+	[DDLRegistration(0x406178e1u, "Override Active Drivers", "If true we'll open up the currently playing drivers to change in response to all filter changes. If false this just sets up the filter for upcoming drivers and drivers that were already open to filter changes")]
 	public bool OverrideActiveDrivers { get; set; } = true;
 
 	public static DebugSetFilterStateActionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ModelDisplayOptionsEngineItem : DDLObjectType, IDDLObjectType<Model
 		Options = ddl.GetObject<ModelDisplayOptions>(0xd1df99bfu);
 	}
 
-	[DDLRegistration(0x4218da3au)]
+	[DDLRegistration(0xd1df99bfu)]
 	public ModelDisplayOptions? Options { get; set; } = default;
 
 	public static ModelDisplayOptionsEngineItem Create(DDLObject ddl) => new(ddl);

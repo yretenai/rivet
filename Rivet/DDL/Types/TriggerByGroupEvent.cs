@@ -18,7 +18,7 @@ public class TriggerByGroupEvent : EventBase, IDDLObjectType<TriggerByGroupEvent
 		GroupHash = ddl.GetValue<uint>(0x3d8ea309u, GroupHash);
 	}
 
-	[DDLRegistration(0xb69d8103u)]
+	[DDLRegistration(0x3d8ea309u)]
 	public uint GroupHash { get; set; } = 0x00000000;
 
 	public new static TriggerByGroupEvent Create(DDLObject ddl) => new(ddl);

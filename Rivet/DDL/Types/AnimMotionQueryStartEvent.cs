@@ -18,7 +18,7 @@ public class AnimMotionQueryStartEvent : EventBase, IDDLObjectType<AnimMotionQue
 		QueryName = ddl.GetString(0xd36f80d2) ?? QueryName;
 	}
 
-	[DDLRegistration(0xc48efe31u, description: "If named, query end event's name needs to match")]
+	[DDLRegistration(0xd36f80d2u, description: "If named, query end event's name needs to match")]
 	public string? QueryName { get; set; } = default;
 
 	public new static AnimMotionQueryStartEvent Create(DDLObject ddl) => new(ddl);

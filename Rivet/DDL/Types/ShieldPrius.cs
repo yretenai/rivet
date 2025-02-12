@@ -19,10 +19,10 @@ public class ShieldPrius : DDLObjectType, IDDLObjectType<ShieldPrius> {
 		MaxAngle = ddl.GetValue<float>(0x191f829eu, MaxAngle);
 	}
 
-	[DDLRegistration(0xd17498fau, "Damage Passthrough Percent", "Percentage of damage that shield allows through [0 - 100%]")]
+	[DDLRegistration(0x9c8550c9u, "Damage Passthrough Percent", "Percentage of damage that shield allows through [0 - 100%]")]
 	public float DamagePassthroughPercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd17498fau, "Max Angle", "Maximum valid shield angle (degrees) from forward [0 - 180]")]
+	[DDLRegistration(0x191f829eu, "Max Angle", "Maximum valid shield angle (degrees) from forward [0 - 180]")]
 	public float MaxAngle { get; set; } = 90.00f;
 
 	public static ShieldPrius Create(DDLObject ddl) => new(ddl);

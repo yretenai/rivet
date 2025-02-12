@@ -18,7 +18,7 @@ public class CinematicStateExitEventBase : EventBase, IDDLObjectType<CinematicSt
 		CurrentShotOnly = ddl.GetValue<bool>(0x4f232549u, CurrentShotOnly);
 	}
 
-	[DDLRegistration(0xd6782fceu)]
+	[DDLRegistration(0x4f232549u)]
 	public bool CurrentShotOnly { get; set; } = false;
 
 	public new static CinematicStateExitEventBase Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class TestSubstructDerivedG : DDLObjectType, IDDLObjectType<TestSubstruct
 		Foo = ddl.GetString(0xa6264ce8) ?? Foo;
 	}
 
-	[DDLRegistration(0xdae5b58eu)]
+	[DDLRegistration(0xa6264ce8u)]
 	public string? Foo { get; set; } = default;
 
 	public static TestSubstructDerivedG Create(DDLObject ddl) => new(ddl);

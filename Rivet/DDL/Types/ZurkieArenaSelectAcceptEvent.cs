@@ -18,7 +18,7 @@ public class ZurkieArenaSelectAcceptEvent : EventBase, IDDLObjectType<ZurkieAren
 		ChallengeMissionName = ddl.GetString(0x8a426f38) ?? ChallengeMissionName;
 	}
 
-	[DDLRegistration(0x981cd43du)]
+	[DDLRegistration(0x8a426f38u)]
 	public string? ChallengeMissionName { get; set; } = default;
 
 	public new static ZurkieArenaSelectAcceptEvent Create(DDLObject ddl) => new(ddl);

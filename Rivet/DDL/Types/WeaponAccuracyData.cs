@@ -18,7 +18,7 @@ public class WeaponAccuracyData : DDLObjectType, IDDLObjectType<WeaponAccuracyDa
 		AccuracyPrius = ddl.GetObject<WeaponAccuracyBasePrius>(0x14f21c90u);
 	}
 
-	[DDLRegistration(0xa0f4f1bdu)]
+	[DDLRegistration(0x14f21c90u)]
 	public WeaponAccuracyBasePrius? AccuracyPrius { get; set; } = default;
 
 	public static WeaponAccuracyData Create(DDLObject ddl) => new(ddl);

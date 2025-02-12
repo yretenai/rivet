@@ -18,7 +18,7 @@ public class ClothChangeDampingEvent : EventBase, IDDLObjectType<ClothChangeDamp
 		Damping = ddl.GetValue<float>(0x45e45952u, Damping);
 	}
 
-	[DDLRegistration(0x19d9511cu)]
+	[DDLRegistration(0x45e45952u)]
 	public float Damping { get; set; } = 0.20f;
 
 	public new static ClothChangeDampingEvent Create(DDLObject ddl) => new(ddl);

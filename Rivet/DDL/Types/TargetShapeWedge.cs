@@ -21,16 +21,16 @@ public class TargetShapeWedge : DDLObjectType, IDDLObjectType<TargetShapeWedge> 
 		HeightDown = ddl.GetValue<float>(0x18b154fau, HeightDown);
 	}
 
-	[DDLRegistration(0x1853af36u, description: "Radius (length) of the wedge.")]
+	[DDLRegistration(0x0504203du, description: "Radius (length) of the wedge.")]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1853af36u, description: "Half-angle of the wedge. A 45-degree half angle, would make a 90-degree wedge")]
+	[DDLRegistration(0x0ad75ffdu, description: "Half-angle of the wedge. A 45-degree half angle, would make a 90-degree wedge")]
 	public float HalfAngle { get; set; } = 45.00f;
 
-	[DDLRegistration(0x1853af36u, description: "Distance the cone extends upwards along the locator's y-axis")]
+	[DDLRegistration(0x7be988d7u, description: "Distance the cone extends upwards along the locator's y-axis")]
 	public float HeightUp { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1853af36u, description: "Distance the cone extends downwards along the locator's y-axis")]
+	[DDLRegistration(0x18b154fau, description: "Distance the cone extends downwards along the locator's y-axis")]
 	public float HeightDown { get; set; } = 1.00f;
 
 	public static TargetShapeWedge Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class AccessibilityHighlightComponentPrius : DDLObjectType, IDDLObjectTyp
 		MaterialConstantList = ddl.GetObjects<AccessibilityHighlightMaterialConstant>(0xddf6a4b5u);
 	}
 
-	[DDLRegistration(0xe14e1d99u, description: "Which material type (from the AccessibilitySystemConfig) this actor belongs to?")]
+	[DDLRegistration(0xbc4e9799u, description: "Which material type (from the AccessibilitySystemConfig) this actor belongs to?")]
 	public xf2109875 Type { get; set; } = xf2109875.Enemy;
 
-	[DDLRegistration(0xe14e1d99u, description: "If true, remove any highlighting when this actor recieves a DeathEvent.")]
+	[DDLRegistration(0x17ed4fe2u, description: "If true, remove any highlighting when this actor recieves a DeathEvent.")]
 	public bool RemoveHighlightOnDeath { get; set; } = true;
 
-	[DDLRegistration(0xe14e1d99u, description: "If true, disable highlights by default on this character")]
+	[DDLRegistration(0x963c454fu, description: "If true, disable highlights by default on this character")]
 	public bool DisableHighlights { get; set; } = false;
 
-	[DDLRegistration(0xe14e1d99u, description: "If true, will toggle hair mode on StrandState component")]
+	[DDLRegistration(0xe39ea036u, description: "If true, will toggle hair mode on StrandState component")]
 	public bool ToggleHair { get; set; } = false;
 
-	[DDLRegistration(0xe14e1d99u, description: "Orbis highlights do not typically benefit from the look toggles.")]
+	[DDLRegistration(0x16b47c0fu, description: "Orbis highlights do not typically benefit from the look toggles.")]
 	public bool SkipLookToggleOnOrbis { get; set; } = true;
 
-	[DDLRegistration(0xe14e1d99u, description: "Normally we remove from non-interactable npc bots, keep for this one.")]
+	[DDLRegistration(0x60d07c39u, description: "Normally we remove from non-interactable npc bots, keep for this one.")]
 	public bool ForceKeepOnNPCBot { get; set; } = false;
 
-	[DDLRegistration(0xe14e1d99u, description: "List of looks to enable when accessibility is turned on")]
+	[DDLRegistration(0x227baf14u, description: "List of looks to enable when accessibility is turned on")]
 	public List<string?> LookEnableList { get; set; } = [];
 
-	[DDLRegistration(0xe14e1d99u, description: "List of looks to disable when accessibility is turned on")]
+	[DDLRegistration(0x10863bd7u, description: "List of looks to disable when accessibility is turned on")]
 	public List<string?> LookDisableList { get; set; } = [];
 
-	[DDLRegistration(0xe14e1d99u, description: "List of materials to not apply accessibility shaders to for this actor")]
+	[DDLRegistration(0x23e71733u, description: "List of materials to not apply accessibility shaders to for this actor")]
 	public List<string?> SkipMaterialList { get; set; } = [];
 
-	[DDLRegistration(0xe14e1d99u, description: "List of material constants, with optional mapping name, to be set to 1 when accessibility is turned on")]
+	[DDLRegistration(0xddf6a4b5u, description: "List of material constants, with optional mapping name, to be set to 1 when accessibility is turned on")]
 	public List<AccessibilityHighlightMaterialConstant?> MaterialConstantList { get; set; } = [];
 
 	public static AccessibilityHighlightComponentPrius Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class AnimVisSizeInfo : DDLObjectType, IDDLObjectType<AnimVisSizeInfo> {
 		DriverCount = ddl.GetValue<uint>(0x734bac33u, DriverCount);
 	}
 
-	[DDLRegistration(0x57e487a9u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x57e487a9u)]
+	[DDLRegistration(0xe421daecu)]
 	public uint BuiltAnimSetSize { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x57e487a9u)]
+	[DDLRegistration(0xe48f3b62u)]
 	public uint BuiltClipsSize { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x57e487a9u)]
+	[DDLRegistration(0x4bc9a16bu)]
 	public uint BuiltClipGroupsSize { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x57e487a9u)]
+	[DDLRegistration(0xee7544eeu)]
 	public uint BuiltDriversSize { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x57e487a9u)]
+	[DDLRegistration(0x11681bbbu)]
 	public uint ClipCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x57e487a9u)]
+	[DDLRegistration(0x307f6ef5u)]
 	public uint ClipGroupCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x57e487a9u)]
+	[DDLRegistration(0x734bac33u)]
 	public uint DriverCount { get; set; } = 0x00000000;
 
 	public static AnimVisSizeInfo Create(DDLObject ddl) => new(ddl);

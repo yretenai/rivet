@@ -30,43 +30,43 @@ public class MoverConfig : ConfigBase, IDDLObjectType<MoverConfig> {
 		DefaultBodySize = ddl.GetObject<MoverBodySize>(0xe753ddfau);
 	}
 
-	[DDLRegistration(0x5f563a9eu, "Gravity")]
+	[DDLRegistration(0x5bf7469fu, "Gravity")]
 	public float Gravity { get; set; } = -10.00f;
 
-	[DDLRegistration(0x5f563a9eu, "Terminal Velocity")]
+	[DDLRegistration(0x8424e464u, "Terminal Velocity")]
 	public float TerminalVelocity { get; set; } = -15.00f;
 
-	[DDLRegistration(0x5f563a9eu, "Turn Gain")]
+	[DDLRegistration(0x38623a3bu, "Turn Gain")]
 	public float TurnGain { get; set; } = -8.00f;
 
-	[DDLRegistration(0x5f563a9eu, "Turn Damp")]
+	[DDLRegistration(0xb4b46db2u, "Turn Damp")]
 	public float TurnDamp { get; set; } = -6.50f;
 
-	[DDLRegistration(0x5f563a9eu, "Turn Speed")]
+	[DDLRegistration(0x6cc70f48u, "Turn Speed")]
 	public float TurnSpeed { get; set; } = 1500.00f;
 
-	[DDLRegistration(0x5f563a9eu, "Step Up Height", "User will pop up onto things up to this high. Must be positive.")]
+	[DDLRegistration(0xd094ec68u, "Step Up Height", "User will pop up onto things up to this high. Must be positive.")]
 	public float StepUpHeight { get; set; } = 0.50f;
 
-	[DDLRegistration(0x5f563a9eu, "Step Down Height", "User will pop down onto things this far below. Must be negative.")]
+	[DDLRegistration(0x0bc74600u, "Step Down Height", "User will pop down onto things this far below. Must be negative.")]
 	public float StepDownHeight { get; set; } = -0.50f;
 
-	[DDLRegistration(0x5f563a9eu, "Good Ground Slope")]
+	[DDLRegistration(0xa8ff9570u, "Good Ground Slope")]
 	public float GoodGroundSlope { get; set; } = 50.00f;
 
-	[DDLRegistration(0x5f563a9eu, "Ext Motion Extra Ground Time", "The amount of time off good ground to still consider us on ground for applying external motion (from moving surfaces).")]
+	[DDLRegistration(0x50fece86u, "Ext Motion Extra Ground Time", "The amount of time off good ground to still consider us on ground for applying external motion (from moving surfaces).")]
 	public float ExternalMotionExtraGroundTime { get; set; } = 0.15f;
 
-	[DDLRegistration(0x5f563a9eu, "Max Height Fail")]
+	[DDLRegistration(0x7b4c57f1u, "Max Height Fail")]
 	public float MaxHeightFail { get; set; } = 0.10f;
 
-	[DDLRegistration(0x5f563a9eu, "Orient Gain")]
+	[DDLRegistration(0xbf602f34u, "Orient Gain")]
 	public float OrientGain { get; set; } = -3.00f;
 
-	[DDLRegistration(0x5f563a9eu, "Orient Damp")]
+	[DDLRegistration(0x33b678bdu, "Orient Damp")]
 	public float OrientDamp { get; set; } = -1.50f;
 
-	[DDLRegistration(0x5f563a9eu, "Default Body Size")]
+	[DDLRegistration(0xe753ddfau, "Default Body Size")]
 	public MoverBodySize? DefaultBodySize { get; set; } = default;
 
 	public new static MoverConfig Create(DDLObject ddl) => new(ddl);

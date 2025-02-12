@@ -18,7 +18,7 @@ public class OutputPlugSignal : OutputPlugBaseDef, IDDLObjectType<OutputPlugSign
 		Value = ddl.GetObject<SignalPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0xff668147u)]
+	[DDLRegistration(0x042494f5u)]
 	public SignalPlug? Value { get; set; } = default;
 
 	public new static OutputPlugSignal Create(DDLObject ddl) => new(ddl);

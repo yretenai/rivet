@@ -18,7 +18,7 @@ public class CameraShakingConfig : ConfigBase, IDDLObjectType<CameraShakingConfi
 		Data = ddl.GetObject<CameraShakingData>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0x2b6a7e31u)]
+	[DDLRegistration(0x9d6333d3u)]
 	public CameraShakingData? Data { get; set; } = default;
 
 	public new static CameraShakingConfig Create(DDLObject ddl) => new(ddl);

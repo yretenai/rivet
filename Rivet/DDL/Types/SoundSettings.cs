@@ -104,265 +104,265 @@ public class SoundSettings : DDLObjectType, IDDLObjectType<SoundSettings> {
 		EarlyReflectionsConfig = ddl.GetValue<RivetAssetId>(0x049bf18du, EarlyReflectionsConfig);
 	}
 
-	[DDLRegistration(0x55304004u, description: "Turn sound on and off")]
+	[DDLRegistration(0x5113d8bcu, description: "Turn sound on and off")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x55304004u, description: "Size of the Default Wwise memory pool")]
+	[DDLRegistration(0x1b0a039du, description: "Size of the Default Wwise memory pool")]
 	public uint DefaultPoolSize { get; set; } = 0x00a00000;
 
-	[DDLRegistration(0x55304004u, description: "Size of the Lower Engine Wwise memory pool")]
+	[DDLRegistration(0x1ae877eeu, description: "Size of the Lower Engine Wwise memory pool")]
 	public uint LowerEnginePoolSize { get; set; } = 0x00a00000;
 
-	[DDLRegistration(0x55304004u, description: "Size of the Monitor Wwise memory pool")]
+	[DDLRegistration(0xbae376b3u, description: "Size of the Monitor Wwise memory pool")]
 	public uint MonitorPoolSize { get; set; } = 0x00080000;
 
-	[DDLRegistration(0x55304004u, description: "Size of the Communication Wwise memory pool")]
+	[DDLRegistration(0x06940a93u, description: "Size of the Communication Wwise memory pool")]
 	public uint CommunicationPoolSize { get; set; } = 0x00080000;
 
-	[DDLRegistration(0x55304004u, description: "Size of the Playing Items Wwise memory pool")]
+	[DDLRegistration(0xba80ea6bu, description: "Size of the Playing Items Wwise memory pool")]
 	public uint PlayingItemPoolSize { get; set; } = 0x00080000;
 
-	[DDLRegistration(0x55304004u, description: "Total memory available for streaming data from disk")]
+	[DDLRegistration(0x25b12944u, description: "Total memory available for streaming data from disk")]
 	public uint StreamingBufferSize { get; set; } = 0x00200000;
 
-	[DDLRegistration(0x55304004u, description: "Memory available for the runtime component of the Wwise Profiler to queue up info in")]
+	[DDLRegistration(0xd7b024f4u, description: "Memory available for the runtime component of the Wwise Profiler to queue up info in")]
 	public uint MonitorQueuePoolSize { get; set; } = 0x00080000;
 
-	[DDLRegistration(0x55304004u, description: "Memory available for the Wwise command queue. If this fills up, Wwise will render audio in the main thread, stalling gameplay.")]
+	[DDLRegistration(0x94b1ea1bu, description: "Memory available for the Wwise command queue. If this fills up, Wwise will render audio in the main thread, stalling gameplay.")]
 	public uint CommandQueueSize { get; set; } = 0x00080000;
 
-	[DDLRegistration(0x55304004u, description: "Enable/disable sound streaming.")]
+	[DDLRegistration(0xc5bffdceu, description: "Enable/disable sound streaming.")]
 	public bool EnableSoundStreaming { get; set; } = true;
 
-	[DDLRegistration(0x55304004u, description: "The maximum number of memory pools we allow Wwise to allocate from our budget. ~8 on init, then one per loaded bank containing media.")]
+	[DDLRegistration(0xcb10baa0u, description: "The maximum number of memory pools we allow Wwise to allocate from our budget. ~8 on init, then one per loaded bank containing media.")]
 	public uint MaxMemPoolCount { get; set; } = 0x00000060;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of IO requests we can process simultaneously")]
+	[DDLRegistration(0x729a499fu, description: "Maximum number of IO requests we can process simultaneously")]
 	public uint MaxConcurrentIO { get; set; } = 0x00000180;
 
-	[DDLRegistration(0x55304004u, description: "Minimum bytes to request from a file when streaming audio")]
+	[DDLRegistration(0x7db5a773u, description: "Minimum bytes to request from a file when streaming audio")]
 	public uint StreamGranularity { get; set; } = 0x00020000;
 
-	[DDLRegistration(0x55304004u, description: "Wwise will try to keep this many milliseconds worth of a every streaming sound in memory")]
+	[DDLRegistration(0x34094b88u, description: "Wwise will try to keep this many milliseconds worth of a every streaming sound in memory")]
 	public float StreamBufferDurationTarget { get; set; } = 220.00f;
 
-	[DDLRegistration(0x55304004u, description: "The port to listen on for connections from the Wwise profiler. Set to 0xffff to use the internal Wwise default.")]
+	[DDLRegistration(0x56087f7du, description: "The port to listen on for connections from the Wwise profiler. Set to 0xffff to use the internal Wwise default.")]
 	public ushort DiscoveryPort { get; set; } = 0xffff;
 
-	[DDLRegistration(0x55304004u, description: "The port to listen on to receive commands from the Wwise profiler. Set to 0xffff to use +1 the discovery port. Set to 0 to pick a random (allowed) port.")]
+	[DDLRegistration(0x58294972u, description: "The port to listen on to receive commands from the Wwise profiler. Set to 0xffff to use +1 the discovery port. Set to 0 to pick a random (allowed) port.")]
 	public ushort CommandPort { get; set; } = 0x0000;
 
-	[DDLRegistration(0x55304004u, description: "The port to listen on for notifications from the Wwise profiler. Set to 0xffff to use +2 the discovery port. Set to 0 to pick a random (allowed) port.")]
+	[DDLRegistration(0x6e2e25ffu, description: "The port to listen on for notifications from the Wwise profiler. Set to 0xffff to use +2 the discovery port. Set to 0 to pick a random (allowed) port.")]
 	public ushort NotificationPort { get; set; } = 0x0000;
 
-	[DDLRegistration(0x55304004u, description: "The app name to show in the profiler and disambiguate instances of the Wwise runtime")]
+	[DDLRegistration(0x9ce2183du, description: "The app name to show in the profiler and disambiguate instances of the Wwise runtime")]
 	public string? AppName { get; set; } = "Unknown (NAME ME!)";
 
-	[DDLRegistration(0x55304004u, description: "Master motion bus name")]
+	[DDLRegistration(0xeffa7360u, description: "Master motion bus name")]
 	public string? MotionBusName { get; set; } = "MASTER_MOTION_BUS";
 
-	[DDLRegistration(0x55304004u, description: "Master controller speaker bus name")]
+	[DDLRegistration(0x346d8aa1u, description: "Master controller speaker bus name")]
 	public string? ControllerSpeakerBusName { get; set; } = "Master Controller Speaker Bus";
 
-	[DDLRegistration(0x55304004u, description: "Master bus for PS5 controller haptics and controller speaker on Windows")]
+	[DDLRegistration(0x4b34b72cu, description: "Master bus for PS5 controller haptics and controller speaker on Windows")]
 	public string? ControllerBusName { get; set; } = "MASTER_PCW_BUS";
 
-	[DDLRegistration(0x55304004u, description: "System shareset for PS5 controller output on Windows")]
+	[DDLRegistration(0xcd5684aau, description: "System shareset for PS5 controller output on Windows")]
 	public string? ControllerSharesetName { get; set; } = "PPR_Controller_Win";
 
-	[DDLRegistration(0x55304004u, description: "SCE 3D output for use with headphones")]
+	[DDLRegistration(0x2d418332u, description: "SCE 3D output for use with headphones")]
 	public string? SceAudio3DSharesetName { get; set; } = "SCE_Audio3d_Bed_Output";
 
-	[DDLRegistration(0x55304004u, description: "SCE 3D output for use with 7.1/surround")]
+	[DDLRegistration(0x02e5c192u, description: "SCE 3D output for use with 7.1/surround")]
 	public string? SceChannelSharesetName { get; set; } = "SCE_Audio3d_Bed_Output_71";
 
-	[DDLRegistration(0x55304004u, description: "Wwise State name for when headphones are plugged in or removed")]
+	[DDLRegistration(0x0bf545fcu, description: "Wwise State name for when headphones are plugged in or removed")]
 	public string? HeadphonesWwiseStateName { get; set; } = "Headphones_PluggedIn_STATE";
 
-	[DDLRegistration(0x55304004u, description: "Wwise string value for when HeadphonesWwiseStateName is true")]
+	[DDLRegistration(0x6de15418u, description: "Wwise string value for when HeadphonesWwiseStateName is true")]
 	public string? HeadphonesWwiseStateTrueString { get; set; } = "Headphones_PluggedIn_STATE_True";
 
-	[DDLRegistration(0x55304004u, description: "Wwise string value for when HeadphonesWwiseStateName is false")]
+	[DDLRegistration(0x4dac2b8au, description: "Wwise string value for when HeadphonesWwiseStateName is false")]
 	public string? HeadphonesWwiseStateFalseString { get; set; } = "Headphones_PluggedIn_STATE_False";
 
-	[DDLRegistration(0x55304004u, description: "Wwise RTPC name for when headphones are plugged in or removed")]
+	[DDLRegistration(0x60e667ebu, description: "Wwise RTPC name for when headphones are plugged in or removed")]
 	public string? HeadphonesPluggedInRTPCName { get; set; } = "Headphones_PluggedIn_RTPC";
 
-	[DDLRegistration(0x55304004u, description: "Wwise State name for when 3D audio is enabled")]
+	[DDLRegistration(0x400662a8u, description: "Wwise State name for when 3D audio is enabled")]
 	public string? Audio3DWwiseStateName { get; set; } = "OUTPUT_3D";
 
-	[DDLRegistration(0x55304004u, description: "Wwise string value for when 3D audio is on")]
+	[DDLRegistration(0x36307f54u, description: "Wwise string value for when 3D audio is on")]
 	public string? Audio3DWwiseStateOn { get; set; } = "ON";
 
-	[DDLRegistration(0x55304004u, description: "Wwise string value for when 3D audio is off")]
+	[DDLRegistration(0x0038ebf7u, description: "Wwise string value for when 3D audio is off")]
 	public string? Audio3DWwiseStateOff { get; set; } = "OFF";
 
-	[DDLRegistration(0x55304004u, description: "Wwise RTPC name for when audio is enabled or disabled")]
+	[DDLRegistration(0xe9c5ba61u, description: "Wwise RTPC name for when audio is enabled or disabled")]
 	public string? Audio3DWwiseRtpcName { get; set; } = "OUTPUT_3D";
 
-	[DDLRegistration(0x55304004u, description: "RTPC to identify when mono mode is enabled")]
+	[DDLRegistration(0x4ca4fd03u, description: "RTPC to identify when mono mode is enabled")]
 	public string? MonoEnabledRTPCName { get; set; } = "Mono_Mode";
 
-	[DDLRegistration(0x55304004u, description: "State group to identify when mono mode is enabled")]
+	[DDLRegistration(0x17c09f9du, description: "State group to identify when mono mode is enabled")]
 	public string? MonoEnabledStateGroupName { get; set; } = "Mono_Mode";
 
-	[DDLRegistration(0x55304004u, description: "State when MonoEnabledStateGroup is true")]
+	[DDLRegistration(0x7ad1b15fu, description: "State when MonoEnabledStateGroup is true")]
 	public string? MonoEnabledStateGroupTrueName { get; set; } = "Mono_Mode_True";
 
-	[DDLRegistration(0x55304004u, description: "State when MonoEnabledStateGroup is false")]
+	[DDLRegistration(0x1e3ebeb6u, description: "State when MonoEnabledStateGroup is false")]
 	public string? MonoEnabledStateGroupFalseName { get; set; } = "Mono_Mode_False";
 
-	[DDLRegistration(0x55304004u, description: "The maximum number of simultaneously allocated slots supported by the Sound Heap")]
+	[DDLRegistration(0x6415ff05u, description: "The maximum number of simultaneously allocated slots supported by the Sound Heap")]
 	public uint MaxAllocations { get; set; } = 0x00000080;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of sources that can exist at any one time, active or not")]
+	[DDLRegistration(0xa884255du, description: "Maximum number of sources that can exist at any one time, active or not")]
 	public uint MaxSources { get; set; } = 0x00001000;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of sources that can be playing an event (even virtual ones)")]
+	[DDLRegistration(0x78ab23beu, description: "Maximum number of sources that can be playing an event (even virtual ones)")]
 	public uint MaxActiveSources { get; set; } = 0x00000800;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of SoundSourceComponents that can queue to have its sound sources unregistered/freed before forcing a flush")]
+	[DDLRegistration(0x6cf18955u, description: "Maximum number of SoundSourceComponents that can queue to have its sound sources unregistered/freed before forcing a flush")]
 	public uint MaxQueuedSoundSourcesToUnregisterCount { get; set; } = 0x00000100;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of Events that can be playing at any one time (even virtual ones). Should this be less than MaxActiveSources, you'll simply be wasting memory, since an active source is a source that is playing at least one event")]
+	[DDLRegistration(0xeff720e7u, description: "Maximum number of Events that can be playing at any one time (even virtual ones). Should this be less than MaxActiveSources, you'll simply be wasting memory, since an active source is a source that is playing at least one event")]
 	public uint MaxEvents { get; set; } = 0x00000800;
 
-	[DDLRegistration(0x55304004u, description: "Essentially the number of events at any one time that gameplay can respond to in a custom way.")]
+	[DDLRegistration(0xd7e03a12u, description: "Essentially the number of events at any one time that gameplay can respond to in a custom way.")]
 	public uint MaxCallbacks { get; set; } = 0x00000100;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of simultaneous events we can defer while their banks load.")]
+	[DDLRegistration(0x15b57e2au, description: "Maximum number of simultaneous events we can defer while their banks load.")]
 	public uint MaxLoadingEvents { get; set; } = 0x00000400;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of StopEvent requests we can handle for events waiting on their banks to finish loading")]
+	[DDLRegistration(0x262612bau, description: "Maximum number of StopEvent requests we can handle for events waiting on their banks to finish loading")]
 	public uint MaxStopsForLoadingEvents { get; set; } = 0x00000008;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of music cues we can handle in a single frame")]
+	[DDLRegistration(0x97fb1f8cu, description: "Maximum number of music cues we can handle in a single frame")]
 	public uint MaxMusicCues { get; set; } = 0x00000040;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of active music events we can track at any one time")]
+	[DDLRegistration(0x49ee000eu, description: "Maximum number of active music events we can track at any one time")]
 	public uint MaxActiveMusicEvents { get; set; } = 0x00000004;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number music cus that may be subscribed to at any one time")]
+	[DDLRegistration(0xd5b714a9u, description: "Maximum number music cus that may be subscribed to at any one time")]
 	public uint MaxSubscribableMusicCues { get; set; } = 0x00000008;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of Environments that can exist at any one time")]
+	[DDLRegistration(0x36e19095u, description: "Maximum number of Environments that can exist at any one time")]
 	public uint MaxEnvironments { get; set; } = 0x00000400;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of environments that may be simultaneously active")]
+	[DDLRegistration(0xced7b684u, description: "Maximum number of environments that may be simultaneously active")]
 	public uint MaxActiveEnvironments { get; set; } = 0x00000010;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of Wwise errors we can report to TTY/asserts in a single frame")]
+	[DDLRegistration(0x8d59e0c0u, description: "Maximum number of Wwise errors we can report to TTY/asserts in a single frame")]
 	public uint MaxWwiseErrors { get; set; } = 0x00000100;
 
-	[DDLRegistration(0x55304004u, description: "Maximum number of events that wait for the timeout if they're still playing on an Actor that wasn't flagged to kill its sounds when it died")]
+	[DDLRegistration(0x937043dau, description: "Maximum number of events that wait for the timeout if they're still playing on an Actor that wasn't flagged to kill its sounds when it died")]
 	public uint MaxOrpahnedEvents { get; set; } = 0x00000100;
 
-	[DDLRegistration(0x55304004u, description: "How many seconds an orphaned event may linger for before being forcibly killed")]
+	[DDLRegistration(0x33d1b7cfu, description: "How many seconds an orphaned event may linger for before being forcibly killed")]
 	public float OrphanedEventTimeout { get; set; } = 10.00f;
 
-	[DDLRegistration(0x55304004u, description: "Enable the use of external voice events, usually used for Robovoice")]
+	[DDLRegistration(0x3401ff65u, description: "Enable the use of external voice events, usually used for Robovoice")]
 	public bool EnableExternalSources { get; set; } = true;
 
-	[DDLRegistration(0x55304004u, description: "The name of the event in Wwise that plays the external source audio object")]
+	[DDLRegistration(0x358d5a41u, description: "The name of the event in Wwise that plays the external source audio object")]
 	public string? ExternalSourceEventName { get; set; } = "Play_ExternalSound";
 
-	[DDLRegistration(0x55304004u, description: "The name of the external source on the external source audio object in Wwise to use")]
+	[DDLRegistration(0x5b704badu, description: "The name of the external source on the external source audio object in Wwise to use")]
 	public string? ExternalSourceSourceName { get; set; } = "ExternalSoundSource";
 
-	[DDLRegistration(0x55304004u, description: "Soundbank containing the AudioSync event. Used for syncing cinematics to audio.")]
+	[DDLRegistration(0x0687186fu, description: "Soundbank containing the AudioSync event. Used for syncing cinematics to audio.")]
 	public RivetAssetId AudioSyncBank { get; set; } = "sound/banks/cinematic_framelock.soundbank";
 
-	[DDLRegistration(0x55304004u, description: "Name of the Wwise Event AudioSync event. Used for syncing cinematics to audio.")]
+	[DDLRegistration(0xaf3dedf6u, description: "Name of the Wwise Event AudioSync event. Used for syncing cinematics to audio.")]
 	public string? AudioSyncEventName { get; set; } = "Play_CIN_Framelock_Loop_10Sec";
 
-	[DDLRegistration(0x55304004u, description: "Duration (in seconds) of the Wwise AudioSync event. Needed to keep track of total time as event loops.")]
+	[DDLRegistration(0xc0d3b287u, description: "Duration (in seconds) of the Wwise AudioSync event. Needed to keep track of total time as event loops.")]
 	public float AudioSyncEventDuration { get; set; } = 10.00f;
 
-	[DDLRegistration(0x55304004u, description: "Fire an error marker and warning when any sound source has more than this many instances playing on it simultaneously. 0 disables.")]
+	[DDLRegistration(0x5e70a2d6u, description: "Fire an error marker and warning when any sound source has more than this many instances playing on it simultaneously. 0 disables.")]
 	public ushort PerSourceInstanceWarningThreshold { get; set; } = 0x000a;
 
-	[DDLRegistration(0x55304004u, description: "Fire an error marker and warning when more than this many sounds instances are playing globally. 0 disables.")]
+	[DDLRegistration(0x7964e3dbu, description: "Fire an error marker and warning when more than this many sounds instances are playing globally. 0 disables.")]
 	public ushort GlobalInstanceWarningThreshold { get; set; } = 0x00c8;
 
-	[DDLRegistration(0x55304004u, description: "Fire an error marker and warning when more than this many sound sources are active globally. 0 disables.")]
+	[DDLRegistration(0xc3384ad2u, description: "Fire an error marker and warning when more than this many sound sources are active globally. 0 disables.")]
 	public ushort ActiveSourceWarningThreshold { get; set; } = 0x00c8;
 
-	[DDLRegistration(0x55304004u)]
+	[DDLRegistration(0x4b360d91u)]
 	public ListeningMode ListeningMode { get; set; } = ListeningMode.ListeningModeSpeakers;
 
-	[DDLRegistration(0x55304004u, description: " If set, do not load the setting from the save file")]
+	[DDLRegistration(0x5039cab9u, description: " If set, do not load the setting from the save file")]
 	public bool ForceListeningMode { get; set; } = false;
 
-	[DDLRegistration(0x55304004u, description: "If set, delays all loads until save file is loaded")]
+	[DDLRegistration(0xc262a687u, description: "If set, delays all loads until save file is loaded")]
 	public bool DelayLoadForVOSwap { get; set; } = false;
 
-	[DDLRegistration(0x55304004u, description: "The maximum number of persistent state groups that aren't reset on level reload.")]
+	[DDLRegistration(0xba753330u, description: "The maximum number of persistent state groups that aren't reset on level reload.")]
 	public uint MaxPersistentStateGroups { get; set; } = 0x00000008;
 
-	[DDLRegistration(0x55304004u)]
+	[DDLRegistration(0xb2ab0fd9u)]
 	public string? DopplerRTPC { get; set; } = "DopplerShift";
 
-	[DDLRegistration(0x55304004u)]
+	[DDLRegistration(0x0281854eu)]
 	public float SoundSpeed { get; set; } = 343.22f;
 
-	[DDLRegistration(0x55304004u, description: "How much the current frame's doppler value impacts the value sent to Wwise. 0 will result in no Doppler effect, while 1 results in instantaneous values sent to Wwise without any filtering")]
+	[DDLRegistration(0x3cebd628u, description: "How much the current frame's doppler value impacts the value sent to Wwise. 0 will result in no Doppler effect, while 1 results in instantaneous values sent to Wwise without any filtering")]
 	public float DopplerFilter { get; set; } = 0.10f;
 
-	[DDLRegistration(0x55304004u)]
+	[DDLRegistration(0x2fee19a5u)]
 	public bool Propagation2Enabled { get; set; } = false;
 
-	[DDLRegistration(0x55304004u)]
+	[DDLRegistration(0xfb06ec0bu)]
 	public bool EnableDirectPathPropagation { get; set; } = false;
 
-	[DDLRegistration(0x55304004u)]
+	[DDLRegistration(0x74d52340u)]
 	public bool EnableSourceDependentReverb { get; set; } = false;
 
-	[DDLRegistration(0x55304004u)]
+	[DDLRegistration(0xb61c90afu)]
 	public SoundPortalingSettings? PortalingConfig { get; set; } = default;
 
-	[DDLRegistration(0x55304004u, description: "Should all types of sound be disabled?  They can be reenabled in-game via DEBUG > Engine > Sound > Playing.")]
+	[DDLRegistration(0x2dcf1230u, description: "Should all types of sound be disabled?  They can be reenabled in-game via DEBUG > Engine > Sound > Playing.")]
 	public bool DebugDeactivateSound { get; set; } = false;
 
-	[DDLRegistration(0x55304004u, description: "Display the debug stats hud")]
+	[DDLRegistration(0x9a5fc0c7u, description: "Display the debug stats hud")]
 	public bool ShowDebugStatsHud { get; set; } = false;
 
-	[DDLRegistration(0x55304004u, description: "Emit source warnings to these targets")]
+	[DDLRegistration(0x57da0a80u, description: "Emit source warnings to these targets")]
 	public SoundLogChannels SoundLogChannels { get; set; } = SoundLogChannels.SoundLogChannelWwise;
 
-	[DDLRegistration(0x55304004u, description: "How much RTPC logging detail do you want?")]
+	[DDLRegistration(0x05dec472u, description: "How much RTPC logging detail do you want?")]
 	public x620d9719 RTPCLoggingMode { get; set; } = x620d9719.RTPCLogModeOff;
 
-	[DDLRegistration(0x55304004u, description: "Whether a Wwise profiler error message should manifest on our side as an audio assert. Affects non-Final builds only. Note that internal Wwise asserts will always cause us to assert.")]
+	[DDLRegistration(0xa4200e08u, description: "Whether a Wwise profiler error message should manifest on our side as an audio assert. Affects non-Final builds only. Note that internal Wwise asserts will always cause us to assert.")]
 	public bool AssertWwiseErrors { get; set; } = true;
 
-	[DDLRegistration(0x55304004u, description: "If the above setting isn't set, whether we should at least print Wwise error to the TTY. Affects non-Final builds only. Note that internal Wwise asserts always print to TTY. ")]
+	[DDLRegistration(0xe96317bdu, description: "If the above setting isn't set, whether we should at least print Wwise error to the TTY. Affects non-Final builds only. Note that internal Wwise asserts always print to TTY. ")]
 	public bool PrintWwiseErrors { get; set; } = true;
 
-	[DDLRegistration(0x55304004u, description: "Apply the above two settings to 'No Error' messages from Wwise. If false, these messages will be completely ignored and appear only in the Wwise log.")]
+	[DDLRegistration(0xd2fe9af0u, description: "Apply the above two settings to 'No Error' messages from Wwise. If false, these messages will be completely ignored and appear only in the Wwise log.")]
 	public bool ShowWwiseNoErrorErrors { get; set; } = false;
 
-	[DDLRegistration(0x55304004u, "Sound Debug View Sound Sources", "Show debug sound source visualization")]
+	[DDLRegistration(0x6bcc2dcau, "Sound Debug View Sound Sources", "Show debug sound source visualization")]
 	public bool SoundDebugViewSoundSources { get; set; } = false;
 
-	[DDLRegistration(0x55304004u, "Sound Debug View Listener Position", "Show the listener position in game")]
+	[DDLRegistration(0x410a51e8u, "Sound Debug View Listener Position", "Show the listener position in game")]
 	public bool SoundDebugViewListener { get; set; } = false;
 
-	[DDLRegistration(0x55304004u, description: "The time needed to display the 'Soundbank delayed' debug message in seconds")]
+	[DDLRegistration(0xa50bd7c7u, description: "The time needed to display the 'Soundbank delayed' debug message in seconds")]
 	public float DelayThresholdDisplaySoundbankMessage { get; set; } = 0.50f;
 
-	[DDLRegistration(0x55304004u, description: "Enable 'Out of Range' check in Wwise profiler")]
+	[DDLRegistration(0xc3fecf03u, description: "Enable 'Out of Range' check in Wwise profiler")]
 	public bool DebugOutOfRangeCheckEnabled { get; set; } = false;
 
-	[DDLRegistration(0x55304004u, description: "Enable the Wwise profile capture when the game boots.")]
+	[DDLRegistration(0x9ea1196bu, description: "Enable the Wwise profile capture when the game boots.")]
 	public bool WwiseProfileCaptureOnBoot { get; set; } = false;
 
-	[DDLRegistration(0x55304004u, description: "The sound root asset--holds refs to other assets")]
+	[DDLRegistration(0xab08aa7du, description: "The sound root asset--holds refs to other assets")]
 	public RivetAssetId SoundEngineConfig { get; set; } = "configs/SoundConfig/SoundEngineConfig.config";
 
-	[DDLRegistration(0x55304004u, description: "Properties for the listener")]
+	[DDLRegistration(0x1bb0b1e5u, description: "Properties for the listener")]
 	public RivetAssetId SoundListenerConfig { get; set; } = "configs/SoundConfig/SoundListenerConfig.config";
 
-	[DDLRegistration(0x55304004u, description: "Properties for early reflection system")]
+	[DDLRegistration(0x049bf18du, description: "Properties for early reflection system")]
 	public RivetAssetId EarlyReflectionsConfig { get; set; } = "configs/SoundConfig/EarlyReflections.config";
 
 	public static SoundSettings Create(DDLObject ddl) => new(ddl);

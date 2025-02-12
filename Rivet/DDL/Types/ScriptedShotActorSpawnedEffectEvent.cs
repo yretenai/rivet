@@ -19,10 +19,10 @@ public class ScriptedShotActorSpawnedEffectEvent : EventBase, IDDLObjectType<Scr
 		OwnerActorHandle = ddl.GetValue<uint>(0xce253fcdu, OwnerActorHandle);
 	}
 
-	[DDLRegistration(0xb3ecd8e6u)]
+	[DDLRegistration(0x47c66f9du)]
 	public uint HitActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb3ecd8e6u)]
+	[DDLRegistration(0xce253fcdu)]
 	public uint OwnerActorHandle { get; set; } = 0x00000000;
 
 	public new static ScriptedShotActorSpawnedEffectEvent Create(DDLObject ddl) => new(ddl);

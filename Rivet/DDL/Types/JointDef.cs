@@ -23,22 +23,22 @@ public class JointDef : DDLObjectType, IDDLObjectType<JointDef> {
 		Translation = ddl.GetObject<DDLVector3>(0x39b514b4u);
 	}
 
-	[DDLRegistration(0x859a3c80u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x859a3c80u)]
+	[DDLRegistration(0x53eff59eu)]
 	public string? ParentName { get; set; } = default;
 
-	[DDLRegistration(0x859a3c80u)]
+	[DDLRegistration(0x554ef07cu)]
 	public bool ParentScaleCompensate { get; set; } = false;
 
-	[DDLRegistration(0x859a3c80u)]
+	[DDLRegistration(0x9e7cb2a3u)]
 	public bool IsLocator { get; set; } = false;
 
-	[DDLRegistration(0x859a3c80u)]
+	[DDLRegistration(0xbb5c948du)]
 	public DDLQuaternion? Orientation { get; set; } = default;
 
-	[DDLRegistration(0x859a3c80u)]
+	[DDLRegistration(0x39b514b4u)]
 	public DDLVector3? Translation { get; set; } = default;
 
 	public static JointDef Create(DDLObject ddl) => new(ddl);

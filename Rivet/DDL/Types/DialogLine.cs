@@ -25,28 +25,28 @@ public class DialogLine : DDLObjectType, IDDLObjectType<DialogLine> {
 		ConversationCommunicatorData = ddl.GetObject<ConversationCommunicatorBasePrius>(0xb0cf1e79u);
 	}
 
-	[DDLRegistration(0xc2f5f108u)]
+	[DDLRegistration(0x3446b219u)]
 	public string? LocalizationTag { get; set; } = default;
 
-	[DDLRegistration(0xc2f5f108u)]
+	[DDLRegistration(0x7a6fb859u)]
 	public Speakers Speaker { get; set; } = Speakers.Speaker1;
 
-	[DDLRegistration(0xc2f5f108u, description: "Delay after or before this line starts, negative value will make this line start before the last line ends")]
+	[DDLRegistration(0xcc5ae14du, description: "Delay after or before this line starts, negative value will make this line start before the last line ends")]
 	public float PreLineDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc2f5f108u)]
+	[DDLRegistration(0x3349a51bu)]
 	public bool InterruptRestorePoint { get; set; } = false;
 
-	[DDLRegistration(0xc2f5f108u)]
+	[DDLRegistration(0xe2127a80u)]
 	public string? InterruptLineTag { get; set; } = default;
 
-	[DDLRegistration(0xc2f5f108u)]
+	[DDLRegistration(0x5afc6331u)]
 	public string? ResumeLineTag { get; set; } = default;
 
-	[DDLRegistration(0xc2f5f108u, description: "If true, if this or any line following is playing and the conversation gets interrupted, the conversation will count as complete.")]
+	[DDLRegistration(0xfab608e7u, description: "If true, if this or any line following is playing and the conversation gets interrupted, the conversation will count as complete.")]
 	public bool CompleteOnInterrupt { get; set; } = false;
 
-	[DDLRegistration(0xc2f5f108u)]
+	[DDLRegistration(0xb0cf1e79u)]
 	public ConversationCommunicatorBasePrius? ConversationCommunicatorData { get; set; } = default;
 
 	public static DialogLine Create(DDLObject ddl) => new(ddl);

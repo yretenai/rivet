@@ -19,10 +19,10 @@ public class DimensionalPulseTargetFlockPrius : DimensionalPulseTargetBasePrius,
 		FleeReactionLeadTime = ddl.GetValue<float>(0x4e20b0a6u, FleeReactionLeadTime);
 	}
 
-	[DDLRegistration(0x6c0c8258u, description: "How long in advance of being hit by the pulse should the birds start performing flee queries?")]
+	[DDLRegistration(0xb23323aau, description: "How long in advance of being hit by the pulse should the birds start performing flee queries?")]
 	public float FleeQueryLeadTime { get; set; } = 0.35f;
 
-	[DDLRegistration(0x6c0c8258u, description: "How long in advance of being hit by the pulse should the birds start flying away?")]
+	[DDLRegistration(0x4e20b0a6u, description: "How long in advance of being hit by the pulse should the birds start flying away?")]
 	public float FleeReactionLeadTime { get; set; } = 0.15f;
 
 	public new static DimensionalPulseTargetFlockPrius Create(DDLObject ddl) => new(ddl);

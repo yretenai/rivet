@@ -34,55 +34,55 @@ public class FlightAreaFirepointHunterPrius : DDLObjectType, IDDLObjectType<Flig
 		RatingVolumeWeight = ddl.GetValue<float>(0xb63370d1u, RatingVolumeWeight);
 	}
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0xc845686au)]
 	public float MinPlanarDistance { get; set; } = 10.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0xddcebc98u)]
 	public float MaxPlanarDistance { get; set; } = 40.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0x175453feu)]
 	public float MinVerticalOffset { get; set; } = 3.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0xd1ea2ea7u)]
 	public float MaxElevationDegrees { get; set; } = 20.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0xf9748b84u)]
 	public float MaxTargetDistance { get; set; } = 80.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0xf086d8e1u)]
 	public float MinPosDelta { get; set; } = 5.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0x3c8ba3eeu)]
 	public float MaxPosDelta { get; set; } = 25.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0x65df8544u)]
 	public bool PreferVolumeSwitch { get; set; } = false;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0x43264fa2u)]
 	public float RatingLos { get; set; } = 8.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0x743ac661u)]
 	public float RatingLosError { get; set; } = 4.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0x20b81176u)]
 	public float RatingDistance { get; set; } = 4.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0x9ac0caf7u)]
 	public float RatingDistanceError { get; set; } = 2.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0xc759faeeu)]
 	public float RatingTargetDistance { get; set; } = 4.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0xe22b7486u)]
 	public float RatingElev { get; set; } = 2.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0xd8952efeu)]
 	public float RatingElevError { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0x59787f3bu)]
 	public float RatingPositionDelta { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4fb123a8u)]
+	[DDLRegistration(0xb63370d1u)]
 	public float RatingVolumeWeight { get; set; } = -3.00f;
 
 	public static FlightAreaFirepointHunterPrius Create(DDLObject ddl) => new(ddl);

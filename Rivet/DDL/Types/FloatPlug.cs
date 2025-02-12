@@ -18,7 +18,7 @@ public class FloatPlug : DDLObjectType, IDDLObjectType<FloatPlug> {
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x7593242au)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
 	public static FloatPlug Create(DDLObject ddl) => new(ddl);

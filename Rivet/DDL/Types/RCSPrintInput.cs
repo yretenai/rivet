@@ -21,16 +21,16 @@ public class RCSPrintInput : DDLObjectType, IDDLObjectType<RCSPrintInput> {
 		OutputPath = ddl.GetString(0xbb898139) ?? OutputPath;
 	}
 
-	[DDLRegistration(0x7010f7d7u, description: "Sets the keep alive timeout in seconds.")]
+	[DDLRegistration(0x19c2272du, description: "Sets the keep alive timeout in seconds.")]
 	public float KeepAliveTimeout { get; set; } = 600.00f;
 
-	[DDLRegistration(0x7010f7d7u, description: "Revision will be used if >= 0")]
+	[DDLRegistration(0x9762a8bcu, description: "Revision will be used if >= 0")]
 	public int Revision { get; set; } = -1;
 
-	[DDLRegistration(0x7010f7d7u)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public string? Path { get; set; } = default;
 
-	[DDLRegistration(0x7010f7d7u, description: "If defined, output will be written to a file rather than the Output in RCSPrintOutput")]
+	[DDLRegistration(0xbb898139u, description: "If defined, output will be written to a file rather than the Output in RCSPrintOutput")]
 	public string? OutputPath { get; set; } = default;
 
 	public static RCSPrintInput Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class SubstringNodeDef : LogicNodeBaseDef, IDDLObjectType<SubstringNodeDe
 		Result = ddl.GetObject<OutputPlugString>(0x2d128f74u);
 	}
 
-	[DDLRegistration(0xa0201e84u)]
+	[DDLRegistration(0x61f23114u)]
 	public InputPlugString? Source { get; set; } = default;
 
-	[DDLRegistration(0xa0201e84u)]
+	[DDLRegistration(0xf8180be5u)]
 	public InputPlugInt? StartIndex { get; set; } = default;
 
-	[DDLRegistration(0xa0201e84u)]
+	[DDLRegistration(0x8a3003d2u)]
 	public InputPlugInt? DesiredLength { get; set; } = default;
 
-	[DDLRegistration(0xa0201e84u)]
+	[DDLRegistration(0x2d128f74u)]
 	public OutputPlugString? Result { get; set; } = default;
 
 	public new static SubstringNodeDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class UIOptionTypePresetList : UIOptionTypeSettingList, IDDLObjectType<UI
 		DisableChildrenIndex = ddl.GetValue<int>(0xd7d1fe28u, DisableChildrenIndex);
 	}
 
-	[DDLRegistration(0x21a1ed42u, description: "When a valid index, if the preset is set to this index all child options will become unavailable to edit.")]
+	[DDLRegistration(0xd7d1fe28u, description: "When a valid index, if the preset is set to this index all child options will become unavailable to edit.")]
 	public int DisableChildrenIndex { get; set; } = -1;
 
 	public new static UIOptionTypePresetList Create(DDLObject ddl) => new(ddl);

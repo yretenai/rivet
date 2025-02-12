@@ -20,13 +20,13 @@ public class IntersectionFadeData : DDLObjectType, IDDLObjectType<IntersectionFa
 		FadeTime = ddl.GetValue<float>(0x8833d162u, FadeTime);
 	}
 
-	[DDLRegistration(0x25b478aau)]
+	[DDLRegistration(0xa3cc9166u)]
 	public float FadeOutDistance { get; set; } = 0.90f;
 
-	[DDLRegistration(0x25b478aau)]
+	[DDLRegistration(0xca6b39e9u)]
 	public float HeadFadeOutDistance { get; set; } = 0.50f;
 
-	[DDLRegistration(0x25b478aau)]
+	[DDLRegistration(0x8833d162u)]
 	public float FadeTime { get; set; } = 0.50f;
 
 	public static IntersectionFadeData Create(DDLObject ddl) => new(ddl);

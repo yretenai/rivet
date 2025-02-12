@@ -23,22 +23,22 @@ public class ReqList : ConfigBase, IDDLObjectType<ReqList> {
 		Misc = ddl.GetValues<RivetAssetId>(0x4f37da0au);
 	}
 
-	[DDLRegistration(0xbe44a2e8u, "Zones")]
+	[DDLRegistration(0x9c997da9u, "Zones")]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
-	[DDLRegistration(0xbe44a2e8u, "Actors")]
+	[DDLRegistration(0xe153be82u, "Actors")]
 	public List<RivetAssetId> Actors { get; set; } = [];
 
-	[DDLRegistration(0xbe44a2e8u, "Conduits")]
+	[DDLRegistration(0x7b4d7a9fu, "Conduits")]
 	public List<RivetAssetId> Conduits { get; set; } = [];
 
-	[DDLRegistration(0xbe44a2e8u, "Configs")]
+	[DDLRegistration(0x43831b0bu, "Configs")]
 	public List<RivetAssetId> Configs { get; set; } = [];
 
-	[DDLRegistration(0xbe44a2e8u, "Soundbanks")]
+	[DDLRegistration(0x6760632au, "Soundbanks")]
 	public List<RivetAssetId> Soundbanks { get; set; } = [];
 
-	[DDLRegistration(0xbe44a2e8u, "Misc")]
+	[DDLRegistration(0x4f37da0au, "Misc")]
 	public List<RivetAssetId> Misc { get; set; } = [];
 
 	public new static ReqList Create(DDLObject ddl) => new(ddl);

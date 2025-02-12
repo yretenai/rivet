@@ -18,7 +18,7 @@ public class NodeGraphBuiltNodesDef : DDLObjectType, IDDLObjectType<NodeGraphBui
 		Nodes = ddl.GetObjects<NodeBaseDefBuiltContainer>(0x046ec93du);
 	}
 
-	[DDLRegistration(0xc948d12au)]
+	[DDLRegistration(0x046ec93du)]
 	public List<NodeBaseDefBuiltContainer?> Nodes { get; set; } = [];
 
 	public static NodeGraphBuiltNodesDef Create(DDLObject ddl) => new(ddl);

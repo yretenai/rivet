@@ -19,10 +19,10 @@ public class AnimVisDumpJointDef : DDLObjectType, IDDLObjectType<AnimVisDumpJoin
 		Transforms = ddl.GetObjects<AnimVisDumpJointTransformDef>(0x6828fce6u);
 	}
 
-	[DDLRegistration(0x2f16b88fu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x2f16b88fu)]
+	[DDLRegistration(0x6828fce6u)]
 	public List<AnimVisDumpJointTransformDef?> Transforms { get; set; } = [];
 
 	public static AnimVisDumpJointDef Create(DDLObject ddl) => new(ddl);

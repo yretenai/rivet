@@ -19,10 +19,10 @@ public class HeroWaterImpulseSource : DDLObjectType, IDDLObjectType<HeroWaterImp
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x8165864fu)]
+	[DDLRegistration(0x5814524du)]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0x8165864fu)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
 	public static HeroWaterImpulseSource Create(DDLObject ddl) => new(ddl);

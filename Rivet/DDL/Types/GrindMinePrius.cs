@@ -33,52 +33,52 @@ public class GrindMinePrius : DDLObjectType, IDDLObjectType<GrindMinePrius> {
 		BobAmplitudeMax = ddl.GetValue<float>(0x40a21c47u, BobAmplitudeMax);
 	}
 
-	[DDLRegistration(0x99a0273fu, description: "Move into position once Ratchet enters this volume.")]
+	[DDLRegistration(0x63f2b7c1u, description: "Move into position once Ratchet enters this volume.")]
 	public RivetAssetId ActivateVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x99a0273fu, description: "The volume we intro to or the curve we intro along.")]
+	[DDLRegistration(0x7bda258au, description: "The volume we intro to or the curve we intro along.")]
 	public RivetAssetId IntroCurve { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x99a0273fu, description: "The length of time it takes to complete our intro.")]
+	[DDLRegistration(0xfa185eddu, description: "The length of time it takes to complete our intro.")]
 	public float IntroTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x99a0273fu, description: "Start transitioning to the oscillation curve this percent through our intro.")]
+	[DDLRegistration(0xd7213d20u, description: "Start transitioning to the oscillation curve this percent through our intro.")]
 	public float TransitionPercent { get; set; } = 0.50f;
 
-	[DDLRegistration(0x99a0273fu, description: "This is the curve the mine will move along once its intro is done.")]
+	[DDLRegistration(0x57686ca7u, description: "This is the curve the mine will move along once its intro is done.")]
 	public RivetAssetId OscillateCurve { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x99a0273fu, description: "The time it takes to move from one end of the path to the other.")]
+	[DDLRegistration(0x3f41fb81u, description: "The time it takes to move from one end of the path to the other.")]
 	public float OscillationRate { get; set; } = 1.00f;
 
-	[DDLRegistration(0x99a0273fu)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 2.00f;
 
-	[DDLRegistration(0x99a0273fu)]
+	[DDLRegistration(0x7bbba4a0u)]
 	public float DamagePercent { get; set; } = 0.20f;
 
-	[DDLRegistration(0x99a0273fu)]
+	[DDLRegistration(0x840c154du)]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Explosion;
 
-	[DDLRegistration(0x99a0273fu)]
+	[DDLRegistration(0xaf8109bcu)]
 	public bool SingleUse { get; set; } = true;
 
-	[DDLRegistration(0x99a0273fu)]
+	[DDLRegistration(0xb9a6f9ffu)]
 	public bool ExplodeWhenHit { get; set; } = false;
 
-	[DDLRegistration(0x99a0273fu, description: "When hit fly towards this actor")]
+	[DDLRegistration(0x87fe775cu, description: "When hit fly towards this actor")]
 	public RivetAssetId HitReactVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x99a0273fu)]
+	[DDLRegistration(0x82726067u)]
 	public float BobFrequencyMin { get; set; } = 2.00f;
 
-	[DDLRegistration(0x99a0273fu)]
+	[DDLRegistration(0xbe7f5f3eu)]
 	public float BobFrequencyMax { get; set; } = 3.00f;
 
-	[DDLRegistration(0x99a0273fu)]
+	[DDLRegistration(0x7caf231eu)]
 	public float BobAmplitudeMin { get; set; } = 0.10f;
 
-	[DDLRegistration(0x99a0273fu)]
+	[DDLRegistration(0x40a21c47u)]
 	public float BobAmplitudeMax { get; set; } = 0.25f;
 
 	public static GrindMinePrius Create(DDLObject ddl) => new(ddl);

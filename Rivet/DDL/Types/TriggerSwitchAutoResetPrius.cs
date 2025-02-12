@@ -18,7 +18,7 @@ public class TriggerSwitchAutoResetPrius : TriggerSwitchBasePrius, IDDLObjectTyp
 		ResetTime = ddl.GetValue<float>(0x45a33419u, ResetTime);
 	}
 
-	[DDLRegistration(0xcb994191u, "Reset Time", "Time to reset when triggered out of its init state (aka, when triggered if we start untriggered or untriggered is start triggered). Use value < 0 for manual reset.")]
+	[DDLRegistration(0x45a33419u, "Reset Time", "Time to reset when triggered out of its init state (aka, when triggered if we start untriggered or untriggered is start triggered). Use value < 0 for manual reset.")]
 	public float ResetTime { get; set; } = 10.00f;
 
 	public new static TriggerSwitchAutoResetPrius Create(DDLObject ddl) => new(ddl);

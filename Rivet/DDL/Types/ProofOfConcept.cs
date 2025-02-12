@@ -19,10 +19,10 @@ public class ProofOfConcept : DDLObjectType, IDDLObjectType<ProofOfConcept> {
 		S = ddl.GetString(0xc9e19805) ?? S;
 	}
 
-	[DDLRegistration(0x5403f401u)]
+	[DDLRegistration(0xebd5fb4au)]
 	public int FirstField { get; set; } = 9;
 
-	[DDLRegistration(0x5403f401u)]
+	[DDLRegistration(0xc9e19805u)]
 	public string? S { get; set; } = default;
 
 	public static ProofOfConcept Create(DDLObject ddl) => new(ddl);

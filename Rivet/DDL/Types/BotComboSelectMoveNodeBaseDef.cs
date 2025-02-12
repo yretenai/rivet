@@ -22,19 +22,19 @@ public class BotComboSelectMoveNodeBaseDef : ComboNodeBaseDef, IDDLObjectType<Bo
 		ExcludeFromDebugMenu = ddl.GetValue<bool>(0x6ae3b41au, ExcludeFromDebugMenu);
 	}
 
-	[DDLRegistration(0xca9ad18eu)]
+	[DDLRegistration(0x66aeb3a2u)]
 	public InputPlugSignal? Queue { get; set; } = default;
 
-	[DDLRegistration(0xca9ad18eu)]
+	[DDLRegistration(0x39b51b26u)]
 	public InputPlugFloat? Weight { get; set; } = default;
 
-	[DDLRegistration(0xca9ad18eu)]
+	[DDLRegistration(0x62a802f6u)]
 	public OutputPlugSignal? Selected { get; set; } = default;
 
-	[DDLRegistration(0xca9ad18eu, "Move Name")]
+	[DDLRegistration(0xfacff3bau, "Move Name")]
 	public string? MoveName { get; set; } = default;
 
-	[DDLRegistration(0xca9ad18eu, "Exclude From Debug Menu")]
+	[DDLRegistration(0x6ae3b41au, "Exclude From Debug Menu")]
 	public bool ExcludeFromDebugMenu { get; set; } = false;
 
 	public new static BotComboSelectMoveNodeBaseDef Create(DDLObject ddl) => new(ddl);

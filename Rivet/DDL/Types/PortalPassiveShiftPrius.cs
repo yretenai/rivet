@@ -22,19 +22,19 @@ public class PortalPassiveShiftPrius : PortalPrius, IDDLObjectType<PortalPassive
 		GravityWellTargetingAngle = ddl.GetValue<float>(0x094aaf35u, GravityWellTargetingAngle);
 	}
 
-	[DDLRegistration(0xc53dc290u)]
+	[DDLRegistration(0xa3fac88eu)]
 	public bool GravityWell { get; set; } = false;
 
-	[DDLRegistration(0xc53dc290u)]
+	[DDLRegistration(0xc3e741f5u)]
 	public bool FollowPlayer { get; set; } = false;
 
-	[DDLRegistration(0xc53dc290u)]
+	[DDLRegistration(0xc834b5ecu)]
 	public DDLVector3? GrindOffset { get; set; } = default;
 
-	[DDLRegistration(0xc53dc290u, description: "Player must be positioned within this many meters of the portal to trigger gravity well.")]
+	[DDLRegistration(0x14325366u, description: "Player must be positioned within this many meters of the portal to trigger gravity well.")]
 	public float GravityWellRange { get; set; } = 10.00f;
 
-	[DDLRegistration(0xc53dc290u, description: "Player must positioned be no more than this many degrees away from forward of portal to trigger gravity well.")]
+	[DDLRegistration(0x094aaf35u, description: "Player must positioned be no more than this many degrees away from forward of portal to trigger gravity well.")]
 	public float GravityWellTargetingAngle { get; set; } = 180.00f;
 
 	public new static PortalPassiveShiftPrius Create(DDLObject ddl) => new(ddl);

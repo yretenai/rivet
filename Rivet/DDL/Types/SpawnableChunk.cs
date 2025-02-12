@@ -20,13 +20,13 @@ public class SpawnableChunk : DDLObjectType, IDDLObjectType<SpawnableChunk> {
 		HasCollision = ddl.GetValue<bool>(0x251426c9u, HasCollision);
 	}
 
-	[DDLRegistration(0x5bc512c3u, "ModelOrActor", "Model or actor to spawn")]
+	[DDLRegistration(0x0267416bu, "ModelOrActor", "Model or actor to spawn")]
 	public RivetAssetId SpawnModel { get; set; } = default;
 
-	[DDLRegistration(0x5bc512c3u, "Locator", "Locator to spawn from. If blank, will use igLoc_ncchunk01, igLoc_ncchunk02, ... depending this chunk's index in the array.")]
+	[DDLRegistration(0x471c96e1u, "Locator", "Locator to spawn from. If blank, will use igLoc_ncchunk01, igLoc_ncchunk02, ... depending this chunk's index in the array.")]
 	public string? CustomLocator { get; set; } = default;
 
-	[DDLRegistration(0x5bc512c3u)]
+	[DDLRegistration(0x251426c9u)]
 	public bool HasCollision { get; set; } = false;
 
 	public static SpawnableChunk Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MaterialHighlightEngineItem : DDLObjectType, IDDLObjectType<Materia
 		MaterialMappingName = ddl.GetStrings(0x981e6927u);
 	}
 
-	[DDLRegistration(0x2762b68eu)]
+	[DDLRegistration(0x981e6927u)]
 	public List<string?> MaterialMappingName { get; set; } = [];
 
 	public static MaterialHighlightEngineItem Create(DDLObject ddl) => new(ddl);

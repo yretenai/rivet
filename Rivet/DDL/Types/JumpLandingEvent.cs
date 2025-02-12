@@ -18,7 +18,7 @@ public class JumpLandingEvent : EventBase, IDDLObjectType<JumpLandingEvent> {
 		Material = ddl.GetEnum<x10b3c4cf>(0x86bfc8e5u, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0x834a5679u, description: "Collision hit material (output)")]
+	[DDLRegistration(0x86bfc8e5u, description: "Collision hit material (output)")]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
 	public new static JumpLandingEvent Create(DDLObject ddl) => new(ddl);

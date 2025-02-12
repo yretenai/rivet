@@ -19,10 +19,10 @@ public class BossMortarTargetCurvePrius : DDLObjectType, IDDLObjectType<BossMort
 		Stride = ddl.GetValue<int>(0xb4277568u, Stride);
 	}
 
-	[DDLRegistration(0xa036ac7eu)]
+	[DDLRegistration(0x48fda6deu)]
 	public float TimeBetweenFires { get; set; } = 0.10f;
 
-	[DDLRegistration(0xa036ac7eu)]
+	[DDLRegistration(0xb4277568u)]
 	public int Stride { get; set; } = 1;
 
 	public static BossMortarTargetCurvePrius Create(DDLObject ddl) => new(ddl);

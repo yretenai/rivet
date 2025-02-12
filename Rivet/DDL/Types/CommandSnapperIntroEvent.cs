@@ -19,10 +19,10 @@ public class CommandSnapperIntroEvent : CommandEvent, IDDLObjectType<CommandSnap
 		AnimHash = ddl.GetValue<uint>(0x467c0a70u, AnimHash);
 	}
 
-	[DDLRegistration(0x5d7648d3u)]
+	[DDLRegistration(0x3a387b17u)]
 	public uint DestinationActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5d7648d3u)]
+	[DDLRegistration(0x467c0a70u)]
 	public uint AnimHash { get; set; } = 0x00000000;
 
 	public new static CommandSnapperIntroEvent Create(DDLObject ddl) => new(ddl);

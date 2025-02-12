@@ -18,7 +18,7 @@ public class BooleanPlug : DDLObjectType, IDDLObjectType<BooleanPlug> {
 		Value = ddl.GetValue<bool>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0xfdeb598du)]
+	[DDLRegistration(0x042494f5u)]
 	public bool Value { get; set; } = false;
 
 	public static BooleanPlug Create(DDLObject ddl) => new(ddl);

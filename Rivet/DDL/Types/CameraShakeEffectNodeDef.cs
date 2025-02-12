@@ -18,7 +18,7 @@ public class CameraShakeEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObjectTy
 		ShakeData = ddl.GetObject<CameraShakingWithFallOffData>(0x9c710c08u);
 	}
 
-	[DDLRegistration(0xa385931fu)]
+	[DDLRegistration(0x9c710c08u)]
 	public CameraShakingWithFallOffData? ShakeData { get; set; } = default;
 
 	public new static CameraShakeEffectNodeDef Create(DDLObject ddl) => new(ddl);

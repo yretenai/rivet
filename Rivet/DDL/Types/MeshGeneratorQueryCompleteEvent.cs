@@ -19,10 +19,10 @@ public class MeshGeneratorQueryCompleteEvent : EventBase, IDDLObjectType<MeshGen
 		GroupPositions = ddl.GetValues<uint>(0x21c69f64u);
 	}
 
-	[DDLRegistration(0x3c6783fcu)]
+	[DDLRegistration(0x9c8a88a3u)]
 	public int Count { get; set; } = 0;
 
-	[DDLRegistration(0x3c6783fcu)]
+	[DDLRegistration(0x21c69f64u)]
 	public List<uint> GroupPositions { get; set; } = [];
 
 	public new static MeshGeneratorQueryCompleteEvent Create(DDLObject ddl) => new(ddl);

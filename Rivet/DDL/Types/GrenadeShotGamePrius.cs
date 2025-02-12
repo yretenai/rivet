@@ -19,10 +19,10 @@ public class GrenadeShotGamePrius : GrenadeShotPrius, IDDLObjectType<GrenadeShot
 		LaunchedFromShotSpawner = ddl.GetValue<bool>(0x87b95845u, LaunchedFromShotSpawner);
 	}
 
-	[DDLRegistration(0x1b8d6628u, description: "If true, shot will never collide with intended target(if grenade, the shot will always land on some collision instead)")]
+	[DDLRegistration(0xa0f03782u, description: "If true, shot will never collide with intended target(if grenade, the shot will always land on some collision instead)")]
 	public bool IgnoreTargetCollision { get; set; } = false;
 
-	[DDLRegistration(0x1b8d6628u, description: "If true, trigger an OnThrowProjectile emergent dialogue event.")]
+	[DDLRegistration(0x87b95845u, description: "If true, trigger an OnThrowProjectile emergent dialogue event.")]
 	public bool LaunchedFromShotSpawner { get; set; } = false;
 
 	public new static GrenadeShotGamePrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class BotMoveCueEvent : EventBase, IDDLObjectType<BotMoveCueEvent> {
 		MoveStyle = ddl.GetEnum<MovementStyleGame>(0x23cc44cdu, MovementStyleGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x63f199d4u)]
+	[DDLRegistration(0x23cc44cdu)]
 	public MovementStyleGame MoveStyle { get; set; } = MovementStyleGame.Run;
 
 	public new static BotMoveCueEvent Create(DDLObject ddl) => new(ddl);

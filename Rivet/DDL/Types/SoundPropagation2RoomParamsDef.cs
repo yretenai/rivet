@@ -22,19 +22,19 @@ public class SoundPropagation2RoomParamsDef : DDLObjectType, IDDLObjectType<Soun
 		RoomPathOcclusion = ddl.GetObject<SoundPropagation2OcclParamsDef>(0x413a321fu);
 	}
 
-	[DDLRegistration(0x5250e780u, description: "Gain of reverb in room (0 to MaxGain in dB)")]
+	[DDLRegistration(0xa21f1868u, description: "Gain of reverb in room (0 to MaxGain in dB)")]
 	public float DesignerOutputBusLeveldB { get; set; } = 80.00f;
 
-	[DDLRegistration(0x5250e780u, description: "Scalar by which we multiply DesignerOutputBusLeveldB.")]
+	[DDLRegistration(0xb11d5e51u, description: "Scalar by which we multiply DesignerOutputBusLeveldB.")]
 	public float AuxSendScalar { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5250e780u, description: "Distance Model settings.")]
+	[DDLRegistration(0x6fb61669u, description: "Distance Model settings.")]
 	public SoundPropagation2DistModelDef? DistanceModel { get; set; } = default;
 
-	[DDLRegistration(0x5250e780u, description: "Settings for direct path (raycast) occlusion.")]
+	[DDLRegistration(0x680947dbu, description: "Settings for direct path (raycast) occlusion.")]
 	public SoundPropagation2OcclParamsDef? DirectPathOcclusion { get; set; } = default;
 
-	[DDLRegistration(0x5250e780u, description: "Settings for room path (markup) occlusion.")]
+	[DDLRegistration(0x413a321fu, description: "Settings for room path (markup) occlusion.")]
 	public SoundPropagation2OcclParamsDef? RoomPathOcclusion { get; set; } = default;
 
 	public static SoundPropagation2RoomParamsDef Create(DDLObject ddl) => new(ddl);

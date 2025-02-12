@@ -20,13 +20,13 @@ public class FallRespawnActionPrius : DDLObjectType, IDDLObjectType<FallRespawnA
 		RespawnType = ddl.GetEnum<x7e113f56>(0x02e93ebeu, x7e113f56Values.Lookup);
 	}
 
-	[DDLRegistration(0xec4095e3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0xec4095e3u)]
+	[DDLRegistration(0x1f24cf0fu)]
 	public float FallDistance { get; set; } = 20.00f;
 
-	[DDLRegistration(0xec4095e3u)]
+	[DDLRegistration(0x02e93ebeu)]
 	public x7e113f56 RespawnType { get; set; } = x7e113f56.Kill;
 
 	public static FallRespawnActionPrius Create(DDLObject ddl) => new(ddl);

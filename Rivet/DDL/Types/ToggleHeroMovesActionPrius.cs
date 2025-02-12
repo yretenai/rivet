@@ -20,13 +20,13 @@ public class ToggleHeroMovesActionPrius : DDLObjectType, IDDLObjectType<ToggleHe
 		SetToDefaultsOnDestroy = ddl.GetValue<bool>(0xb7711de5u, SetToDefaultsOnDestroy);
 	}
 
-	[DDLRegistration(0x208ce742u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x208ce742u)]
+	[DDLRegistration(0xa75a871bu)]
 	public ToggleHeroMovesListBase? Mode { get; set; } = default;
 
-	[DDLRegistration(0x208ce742u, description: "Set abilities to default when this script node unloads.")]
+	[DDLRegistration(0xb7711de5u, description: "Set abilities to default when this script node unloads.")]
 	public bool SetToDefaultsOnDestroy { get; set; } = false;
 
 	public static ToggleHeroMovesActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class GraphNodeNotesDef : DDLObjectType, IDDLObjectType<GraphNodeNotesDef
 		NodeNotes = ddl.GetString(0xd8a6eb09) ?? NodeNotes;
 	}
 
-	[DDLRegistration(0x286f0110u, "Global Notes")]
+	[DDLRegistration(0x11749824u, "Global Notes")]
 	public string? GlobalNotes { get; set; } = default;
 
-	[DDLRegistration(0x286f0110u, "Notes")]
+	[DDLRegistration(0xd8a6eb09u, "Notes")]
 	public string? NodeNotes { get; set; } = default;
 
 	public static GraphNodeNotesDef Create(DDLObject ddl) => new(ddl);

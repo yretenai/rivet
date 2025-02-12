@@ -22,19 +22,19 @@ public class NodeGraphPausedDebugMessage : DDLObjectType, IDDLObjectType<NodeGra
 		ActorContextId = ddl.GetValue<uint>(0x55ffc909u, ActorContextId);
 	}
 
-	[DDLRegistration(0xb0286faau)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb0286faau)]
+	[DDLRegistration(0x1398be22u)]
 	public RivetAssetId ConnectionId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb0286faau)]
+	[DDLRegistration(0x76b05713u)]
 	public RivetAssetId GraphId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb0286faau)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb0286faau)]
+	[DDLRegistration(0x55ffc909u)]
 	public uint ActorContextId { get; set; } = 0x00000000;
 
 	public static NodeGraphPausedDebugMessage Create(DDLObject ddl) => new(ddl);

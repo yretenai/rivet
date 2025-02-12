@@ -22,19 +22,19 @@ public class ProtoGrenadeShardPrius : DDLObjectType, IDDLObjectType<ProtoGrenade
 		DisappearTimeMax = ddl.GetValue<float>(0xb66e33e5u, DisappearTimeMax);
 	}
 
-	[DDLRegistration(0xd9de6886u, "Knockback Level", "This is the knockback level of a shard detonation.")]
+	[DDLRegistration(0x2554a262u, "Knockback Level", "This is the knockback level of a shard detonation.")]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.Two;
 
-	[DDLRegistration(0xd9de6886u, "Knockback Amount", "This is the amount of knockback shards will deal to a character when they detonate.")]
+	[DDLRegistration(0x7b1e600bu, "Knockback Amount", "This is the amount of knockback shards will deal to a character when they detonate.")]
 	public float KnockbackAmount { get; set; } = 4.00f;
 
-	[DDLRegistration(0xd9de6886u, "Detonation Time", "Shards will detonate after this duration.")]
+	[DDLRegistration(0x626e92d5u, "Detonation Time", "Shards will detonate after this duration.")]
 	public float DetonationTime { get; set; } = 3.50f;
 
-	[DDLRegistration(0xd9de6886u, "Disappear Time Min", "Shards that are not detonating will disappear at least after this duration.")]
+	[DDLRegistration(0x8a630cbcu, "Disappear Time Min", "Shards that are not detonating will disappear at least after this duration.")]
 	public float DisappearTimeMin { get; set; } = 3.00f;
 
-	[DDLRegistration(0xd9de6886u, "Disappear Time Max", "Shards that are not detonating will disappear at most after this duration.")]
+	[DDLRegistration(0xb66e33e5u, "Disappear Time Max", "Shards that are not detonating will disappear at most after this duration.")]
 	public float DisappearTimeMax { get; set; } = 4.00f;
 
 	public static ProtoGrenadeShardPrius Create(DDLObject ddl) => new(ddl);

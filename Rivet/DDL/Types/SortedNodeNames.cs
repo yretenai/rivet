@@ -20,13 +20,13 @@ public class SortedNodeNames : DDLObjectType, IDDLObjectType<SortedNodeNames> {
 		SortedByDFT = ddl.GetStrings(0x94616d42u);
 	}
 
-	[DDLRegistration(0xd0b0b890u)]
+	[DDLRegistration(0x263e7c0bu)]
 	public List<string?> SortedByAlphabet { get; set; } = [];
 
-	[DDLRegistration(0xd0b0b890u)]
+	[DDLRegistration(0x90ec11f0u)]
 	public List<string?> SortedByBFT { get; set; } = [];
 
-	[DDLRegistration(0xd0b0b890u)]
+	[DDLRegistration(0x94616d42u)]
 	public List<string?> SortedByDFT { get; set; } = [];
 
 	public static SortedNodeNames Create(DDLObject ddl) => new(ddl);

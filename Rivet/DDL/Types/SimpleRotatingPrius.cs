@@ -19,10 +19,10 @@ public class SimpleRotatingPrius : DDLObjectType, IDDLObjectType<SimpleRotatingP
 		RotationSpeed = ddl.GetValue<float>(0xe5938d1eu, RotationSpeed);
 	}
 
-	[DDLRegistration(0xf2976f75u, description: "The axis to rotate about.")]
+	[DDLRegistration(0xea512758u, description: "The axis to rotate about.")]
 	public xf93e2b39 RotationAxis { get; set; } = xf93e2b39.ZAxisLocal;
 
-	[DDLRegistration(0xf2976f75u, description: "Speed of rotation (in degrees).")]
+	[DDLRegistration(0xe5938d1eu, description: "Speed of rotation (in degrees).")]
 	public float RotationSpeed { get; set; } = 360.00f;
 
 	public static SimpleRotatingPrius Create(DDLObject ddl) => new(ddl);

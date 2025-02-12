@@ -23,22 +23,22 @@ public class MissionSaveDataShared : ObjSysNodeSaveData, IDDLObjectType<MissionS
 		SyncOutputState = ddl.GetDictionary<uint, SyncOutputData>(0xf2a55da9, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<SyncOutputData>(mapId));
 	}
 
-	[DDLRegistration(0x282ddc12u)]
+	[DDLRegistration(0xd5bb196bu)]
 	public MissionStates MissionState { get; set; } = MissionStates.Inactive;
 
-	[DDLRegistration(0x282ddc12u)]
+	[DDLRegistration(0xf6f252adu)]
 	public MissionFlagsSharedBitfield MissionFlagsShared { get; set; } = (MissionFlagsSharedBitfield) 0x00000000;
 
-	[DDLRegistration(0x282ddc12u)]
+	[DDLRegistration(0x3d39f130u)]
 	public Dictionary<ulong, bool> MissionDataStore { get; set; } = [];
 
-	[DDLRegistration(0x282ddc12u)]
+	[DDLRegistration(0x2fe71fe5u)]
 	public uint CompletedCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x282ddc12u)]
+	[DDLRegistration(0x70b2117bu)]
 	public uint DevstatsSegmentId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x282ddc12u)]
+	[DDLRegistration(0xf2a55da9u)]
 	public Dictionary<uint, SyncOutputData?> SyncOutputState { get; set; } = [];
 
 	public new static MissionSaveDataShared Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class BloodHitEffectsPrius : DDLObjectType, IDDLObjectType<BloodHitEffect
 		UsableJoints = ddl.GetStrings(0x42912762u);
 	}
 
-	[DDLRegistration(0x66e9230eu, description: "Impacts to other joints will not produce any effects. If the list is empty, all joints are usable.")]
+	[DDLRegistration(0x42912762u, description: "Impacts to other joints will not produce any effects. If the list is empty, all joints are usable.")]
 	public List<string?> UsableJoints { get; set; } = [];
 
 	public static BloodHitEffectsPrius Create(DDLObject ddl) => new(ddl);

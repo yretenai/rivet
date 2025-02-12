@@ -19,10 +19,10 @@ public class ActorInstantiationAuditPair : DDLObjectType, IDDLObjectType<ActorIn
 		Count = ddl.GetValue<int>(0x9c8a88a3u, Count);
 	}
 
-	[DDLRegistration(0xdcfadeffu)]
+	[DDLRegistration(0x5d269a38u)]
 	public string? Actor { get; set; } = default;
 
-	[DDLRegistration(0xdcfadeffu)]
+	[DDLRegistration(0x9c8a88a3u)]
 	public int Count { get; set; } = 0;
 
 	public static ActorInstantiationAuditPair Create(DDLObject ddl) => new(ddl);

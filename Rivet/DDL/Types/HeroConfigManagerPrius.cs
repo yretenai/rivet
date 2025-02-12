@@ -19,10 +19,10 @@ public class HeroConfigManagerPrius : DDLObjectType, IDDLObjectType<HeroConfigMa
 		UniqueConfig = ddl.GetValue<RivetAssetId>(0x93e03a46u, UniqueConfig);
 	}
 
-	[DDLRegistration(0xad61b4c8u, "Shared Hero Config")]
+	[DDLRegistration(0x64fe134bu, "Shared Hero Config")]
 	public RivetAssetId SharedConfig { get; set; } = default;
 
-	[DDLRegistration(0xad61b4c8u, "Unique Hero Config")]
+	[DDLRegistration(0x93e03a46u, "Unique Hero Config")]
 	public RivetAssetId UniqueConfig { get; set; } = default;
 
 	public static HeroConfigManagerPrius Create(DDLObject ddl) => new(ddl);

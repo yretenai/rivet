@@ -22,19 +22,19 @@ public class AimAssistTargetZoneJoint : AimAssistTargetZone, IDDLObjectType<AimA
 		OuterRadius = ddl.GetValue<float>(0xf6b6fbdeu, OuterRadius);
 	}
 
-	[DDLRegistration(0x6f31ff07u, "Aim Box Joint Bottom")]
+	[DDLRegistration(0x832f8e54u, "Aim Box Joint Bottom")]
 	public string? AimBoxJointBottom { get; set; } = "";
 
-	[DDLRegistration(0x6f31ff07u, "Aim Box Joint Top")]
+	[DDLRegistration(0xb9cb0716u, "Aim Box Joint Top")]
 	public string? AimBoxJointTop { get; set; } = "";
 
-	[DDLRegistration(0x6f31ff07u, "Aim Box Bottom Offset")]
+	[DDLRegistration(0xe13d28cau, "Aim Box Bottom Offset")]
 	public float BottomOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6f31ff07u, "Inner Capsule Radius")]
+	[DDLRegistration(0xf8a3836du, "Inner Capsule Radius")]
 	public float InnerRadius { get; set; } = 3.00f;
 
-	[DDLRegistration(0x6f31ff07u, "Outer Capsule Radius")]
+	[DDLRegistration(0xf6b6fbdeu, "Outer Capsule Radius")]
 	public float OuterRadius { get; set; } = 5.00f;
 
 	public new static AimAssistTargetZoneJoint Create(DDLObject ddl) => new(ddl);

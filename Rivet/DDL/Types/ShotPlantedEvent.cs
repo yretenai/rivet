@@ -19,10 +19,10 @@ public class ShotPlantedEvent : EventBase, IDDLObjectType<ShotPlantedEvent> {
 		VersionIndex = ddl.GetValue<byte>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0xe4231b86u, description: "Collision hit material")]
+	[DDLRegistration(0x86bfc8e5u, description: "Collision hit material")]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0xe4231b86u)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
 	public new static ShotPlantedEvent Create(DDLObject ddl) => new(ddl);

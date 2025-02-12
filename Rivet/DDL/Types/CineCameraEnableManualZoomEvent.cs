@@ -22,19 +22,19 @@ public class CineCameraEnableManualZoomEvent : EventBase, IDDLObjectType<CineCam
 		FOVSpeedSoftZone = ddl.GetValue<float>(0x542441d4u, FOVSpeedSoftZone);
 	}
 
-	[DDLRegistration(0x18241865u)]
+	[DDLRegistration(0x03a51e47u)]
 	public float FOVMin { get; set; } = 10.00f;
 
-	[DDLRegistration(0x18241865u)]
+	[DDLRegistration(0x3fa8211eu)]
 	public float FOVMax { get; set; } = 90.00f;
 
-	[DDLRegistration(0x18241865u)]
+	[DDLRegistration(0x66980ec1u)]
 	public float FOVSpeedAccel { get; set; } = 300.00f;
 
-	[DDLRegistration(0x18241865u)]
+	[DDLRegistration(0xe0d74768u)]
 	public float FOVSpeedMax { get; set; } = 30.00f;
 
-	[DDLRegistration(0x18241865u)]
+	[DDLRegistration(0x542441d4u)]
 	public float FOVSpeedSoftZone { get; set; } = 10.00f;
 
 	public new static CineCameraEnableManualZoomEvent Create(DDLObject ddl) => new(ddl);

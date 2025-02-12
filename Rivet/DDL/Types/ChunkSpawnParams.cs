@@ -31,46 +31,46 @@ public class ChunkSpawnParams : DDLObjectType, IDDLObjectType<ChunkSpawnParams> 
 		EnforceBiasVectorPlane = ddl.GetValue<bool>(0xc1683549u, EnforceBiasVectorPlane);
 	}
 
-	[DDLRegistration(0xeb256d49u)]
+	[DDLRegistration(0x21827c74u)]
 	public x1484c09f PosMode { get; set; } = x1484c09f.Locators;
 
-	[DDLRegistration(0xeb256d49u)]
+	[DDLRegistration(0x6df07d3cu)]
 	public ChunkType ChunkType { get; set; } = ChunkType.Misc;
 
-	[DDLRegistration(0xeb256d49u, description: "Minimum outgoing flight speed in m/s")]
+	[DDLRegistration(0xc3c6f33au, description: "Minimum outgoing flight speed in m/s")]
 	public float LinearVelocityMin { get; set; } = 5.00f;
 
-	[DDLRegistration(0xeb256d49u, description: "Maximum outgoing flight speed in m/s")]
+	[DDLRegistration(0xffcbcc63u, description: "Maximum outgoing flight speed in m/s")]
 	public float LinearVelocityMax { get; set; } = 10.00f;
 
-	[DDLRegistration(0xeb256d49u, description: "Make sure all outgoing chunks fly upwards")]
+	[DDLRegistration(0x724241eau, description: "Make sure all outgoing chunks fly upwards")]
 	public bool ForceUpwardVelocity { get; set; } = true;
 
-	[DDLRegistration(0xeb256d49u, description: "Bias outgoing velocity towards up")]
+	[DDLRegistration(0xba8203a0u, description: "Bias outgoing velocity towards up")]
 	public float UpwardBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0xeb256d49u, description: "Minimum outgoing rotational speed in deg/s")]
+	[DDLRegistration(0x4cbe990du, description: "Minimum outgoing rotational speed in deg/s")]
 	public float AngularVelocityMin { get; set; } = 30.00f;
 
-	[DDLRegistration(0xeb256d49u, description: "Maximum outgoing rotational speed in deg/s")]
+	[DDLRegistration(0x70b3a654u, description: "Maximum outgoing rotational speed in deg/s")]
 	public float AngularVelocityMax { get; set; } = 90.00f;
 
-	[DDLRegistration(0xeb256d49u, description: "Minimum chunk lifetime")]
+	[DDLRegistration(0x1ae401c6u, description: "Minimum chunk lifetime")]
 	public float LifetimeMin { get; set; } = 4.00f;
 
-	[DDLRegistration(0xeb256d49u, description: "Maximum chunk lifetime")]
+	[DDLRegistration(0x26e93e9fu, description: "Maximum chunk lifetime")]
 	public float LifetimeMax { get; set; } = 8.00f;
 
-	[DDLRegistration(0xeb256d49u, description: "Fast debris does not collide with anything")]
+	[DDLRegistration(0xf16bf9ceu, description: "Fast debris does not collide with anything")]
 	public float FastDebrisPercent { get; set; } = 0.70f;
 
-	[DDLRegistration(0xeb256d49u)]
+	[DDLRegistration(0x71af53a0u)]
 	public DDLVector3? BiasVector { get; set; } = default;
 
-	[DDLRegistration(0xeb256d49u)]
+	[DDLRegistration(0xde652205u)]
 	public float BiasVectorStrength { get; set; } = 0.00f;
 
-	[DDLRegistration(0xeb256d49u)]
+	[DDLRegistration(0xc1683549u)]
 	public bool EnforceBiasVectorPlane { get; set; } = false;
 
 	public static ChunkSpawnParams Create(DDLObject ddl) => new(ddl);

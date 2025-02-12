@@ -20,13 +20,13 @@ public class MeleeActivatedButtonPrius : DDLObjectType, IDDLObjectType<MeleeActi
 		ButtonPositionOffset = ddl.GetObject<DDLVector3>(0x02dabcd4u);
 	}
 
-	[DDLRegistration(0xcebda135u, description: "This determines what melee behavior activates the button. When the button is activated, it sends ButtonPressedEvent.")]
+	[DDLRegistration(0x6f23ba2eu, description: "This determines what melee behavior activates the button. When the button is activated, it sends ButtonPressedEvent.")]
 	public xc2d17b4c InteractionMode { get; set; } = xc2d17b4c.Slam;
 
-	[DDLRegistration(0xcebda135u, description: "This is how long the hero has to wait to hit this button again for anything to happen.")]
+	[DDLRegistration(0xffff3a00u, description: "This is how long the hero has to wait to hit this button again for anything to happen.")]
 	public float RetriggerDelay { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcebda135u, description: "Local offset of button position, used for assist/magnetism if button is not exactly at actor position.")]
+	[DDLRegistration(0x02dabcd4u, description: "Local offset of button position, used for assist/magnetism if button is not exactly at actor position.")]
 	public DDLVector3? ButtonPositionOffset { get; set; } = default;
 
 	public static MeleeActivatedButtonPrius Create(DDLObject ddl) => new(ddl);

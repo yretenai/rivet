@@ -18,7 +18,7 @@ public class SetDimensionCompleteActionPrius : DDLObjectType, IDDLObjectType<Set
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x9c4247f2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
 	public static SetDimensionCompleteActionPrius Create(DDLObject ddl) => new(ddl);

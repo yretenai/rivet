@@ -20,13 +20,13 @@ public class ActorBotData : DDLObjectType, IDDLObjectType<ActorBotData> {
 		Use180PatrolMoveIntro = ddl.GetValue<bool>(0x331a5e22u, Use180PatrolMoveIntro);
 	}
 
-	[DDLRegistration(0x5a76cf5au, description: "Set true to face during alert animations")]
+	[DDLRegistration(0x74583334u, description: "Set true to face during alert animations")]
 	public bool ShouldFaceDuringAlert { get; set; } = true;
 
-	[DDLRegistration(0x5a76cf5au, description: "Set true to allow using Turn_180 as an alert animation")]
+	[DDLRegistration(0x326fa3e0u, description: "Set true to allow using Turn_180 as an alert animation")]
 	public bool Use180TurnDuringAlert { get; set; } = false;
 
-	[DDLRegistration(0x5a76cf5au, description: "Patrol state uses a 180 degree turn as a move intro instead of using BotStateFace")]
+	[DDLRegistration(0x331a5e22u, description: "Patrol state uses a 180 degree turn as a move intro instead of using BotStateFace")]
 	public bool Use180PatrolMoveIntro { get; set; } = false;
 
 	public static ActorBotData Create(DDLObject ddl) => new(ddl);

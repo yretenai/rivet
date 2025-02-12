@@ -20,13 +20,13 @@ public class BotConfigPhysics : ConfigBase, IDDLObjectType<BotConfigPhysics> {
 		PhysicsComponentPrius = ddl.GetObject<PhysicsComponentPrius>(0xcc30dca6u);
 	}
 
-	[DDLRegistration(0xd2f3fa18u)]
+	[DDLRegistration(0x22b79e74u)]
 	public bool CollisionEnabled { get; set; } = true;
 
-	[DDLRegistration(0xd2f3fa18u, "Disable Character Move Collision.")]
+	[DDLRegistration(0x68ac22eeu, "Disable Character Move Collision.")]
 	public bool DisableCharacterMoveCollision { get; set; } = true;
 
-	[DDLRegistration(0xd2f3fa18u, "Physics Component Prius")]
+	[DDLRegistration(0xcc30dca6u, "Physics Component Prius")]
 	public PhysicsComponentPrius? PhysicsComponentPrius { get; set; } = default;
 
 	public new static BotConfigPhysics Create(DDLObject ddl) => new(ddl);

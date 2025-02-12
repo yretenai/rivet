@@ -19,10 +19,10 @@ public class VanityHasBundleActionPrius : DDLObjectType, IDDLObjectType<VanityHa
 		VanityBundleConfig = ddl.GetValue<RivetAssetId>(0xb68fd998u, VanityBundleConfig);
 	}
 
-	[DDLRegistration(0x42add903u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0x42add903u, "Vanity Bundle Config", "Config File to check if hero has a vanity bundle")]
+	[DDLRegistration(0xb68fd998u, "Vanity Bundle Config", "Config File to check if hero has a vanity bundle")]
 	public RivetAssetId VanityBundleConfig { get; set; } = default;
 
 	public static VanityHasBundleActionPrius Create(DDLObject ddl) => new(ddl);

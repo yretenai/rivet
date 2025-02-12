@@ -19,10 +19,10 @@ public class GalacticMapManualOpenMapActionPrius : DDLObjectType, IDDLObjectType
 		InitialLevel = ddl.GetEnum<LevelEnum>(0x8fe58fc1u, LevelEnumValues.Lookup);
 	}
 
-	[DDLRegistration(0x8377fe38u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
-	[DDLRegistration(0x8377fe38u, "(Opt) Initial level to select", "Optional level to select in the Galactic Map UI. ")]
+	[DDLRegistration(0x8fe58fc1u, "(Opt) Initial level to select", "Optional level to select in the Galactic Map UI. ")]
 	public LevelEnum InitialLevel { get; set; } = LevelEnum.None;
 
 	public static GalacticMapManualOpenMapActionPrius Create(DDLObject ddl) => new(ddl);

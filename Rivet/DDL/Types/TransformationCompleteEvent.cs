@@ -18,7 +18,7 @@ public class TransformationCompleteEvent : BaseTransformationEvent, IDDLObjectTy
 		FXVersionHash = ddl.GetValue<uint>(0x6e63471au, FXVersionHash);
 	}
 
-	[DDLRegistration(0x52aaf0dfu)]
+	[DDLRegistration(0x6e63471au)]
 	public uint FXVersionHash { get; set; } = 0x00000000;
 
 	public new static TransformationCompleteEvent Create(DDLObject ddl) => new(ddl);

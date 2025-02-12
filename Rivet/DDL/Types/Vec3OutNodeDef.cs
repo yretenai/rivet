@@ -18,7 +18,7 @@ public class Vec3OutNodeDef : NodeBaseDef, IDDLObjectType<Vec3OutNodeDef> {
 		Out = ddl.GetObject<OutputPlugVec3>(0x93bf4450u);
 	}
 
-	[DDLRegistration(0xd75dd461u)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugVec3? Out { get; set; } = default;
 
 	public new static Vec3OutNodeDef Create(DDLObject ddl) => new(ddl);

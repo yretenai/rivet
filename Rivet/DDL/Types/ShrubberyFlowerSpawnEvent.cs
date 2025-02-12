@@ -18,7 +18,7 @@ public class ShrubberyFlowerSpawnEvent : EventBase, IDDLObjectType<ShrubberyFlow
 		AppliedLookGroupHash = ddl.GetValue<uint>(0x79d49889u, AppliedLookGroupHash);
 	}
 
-	[DDLRegistration(0xd30635a6u)]
+	[DDLRegistration(0x79d49889u)]
 	public uint AppliedLookGroupHash { get; set; } = 0x00000000;
 
 	public new static ShrubberyFlowerSpawnEvent Create(DDLObject ddl) => new(ddl);

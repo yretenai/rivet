@@ -18,7 +18,7 @@ public class ActiveLooksEngineItem : DDLObjectType, IDDLObjectType<ActiveLooksEn
 		ActiveLookHashes = ddl.GetDictionary<uint, bool>(0xd73f8ebe, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
 	}
 
-	[DDLRegistration(0x3d3a8840u)]
+	[DDLRegistration(0xd73f8ebeu)]
 	public Dictionary<uint, bool> ActiveLookHashes { get; set; } = [];
 
 	public static ActiveLooksEngineItem Create(DDLObject ddl) => new(ddl);

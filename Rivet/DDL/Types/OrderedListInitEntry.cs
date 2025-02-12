@@ -22,19 +22,19 @@ public class OrderedListInitEntry : DDLObjectType, IDDLObjectType<OrderedListIni
 		Boolean = ddl.GetValue<bool>(0x8b6feb50u, Boolean);
 	}
 
-	[DDLRegistration(0xbf294823u)]
+	[DDLRegistration(0xa8e85133u)]
 	public float Number { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbf294823u)]
+	[DDLRegistration(0xa0c6fcceu)]
 	public string? String { get; set; } = default;
 
-	[DDLRegistration(0xbf294823u)]
+	[DDLRegistration(0x5d269a38u)]
 	public RivetAssetId Actor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xbf294823u)]
+	[DDLRegistration(0x2516063cu)]
 	public DDLVector3? Vector { get; set; } = default;
 
-	[DDLRegistration(0xbf294823u)]
+	[DDLRegistration(0x8b6feb50u)]
 	public bool Boolean { get; set; } = false;
 
 	public static OrderedListInitEntry Create(DDLObject ddl) => new(ddl);

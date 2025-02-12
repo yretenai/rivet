@@ -21,16 +21,16 @@ public class BattleBrewTimeDilationPrius : BattleBrewBasePrius, IDDLObjectType<B
 		HitSlowdownDelay = ddl.GetValue<float>(0xc8c3f014u, HitSlowdownDelay);
 	}
 
-	[DDLRegistration(0xc6a1afccu)]
+	[DDLRegistration(0xf9664c38u)]
 	public float DilatedWorldTimeScale { get; set; } = 0.50f;
 
-	[DDLRegistration(0xc6a1afccu)]
+	[DDLRegistration(0x74bdf074u)]
 	public float DilatedHeroTimeScale { get; set; } = 0.90f;
 
-	[DDLRegistration(0xc6a1afccu)]
+	[DDLRegistration(0xaeff95b3u)]
 	public float HitSlowdownDuration { get; set; } = 0.50f;
 
-	[DDLRegistration(0xc6a1afccu, description: "When the player hits an enemy and their time scale is matched to the player's, this represents how long the hit enemy will stay at the player's speed before blending back to the dilated time scale.")]
+	[DDLRegistration(0xc8c3f014u, description: "When the player hits an enemy and their time scale is matched to the player's, this represents how long the hit enemy will stay at the player's speed before blending back to the dilated time scale.")]
 	public float HitSlowdownDelay { get; set; } = 0.02f;
 
 	public new static BattleBrewTimeDilationPrius Create(DDLObject ddl) => new(ddl);

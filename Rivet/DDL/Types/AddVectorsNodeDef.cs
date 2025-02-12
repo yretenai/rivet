@@ -19,10 +19,10 @@ public class AddVectorsNodeDef : MathNodeBaseDef, IDDLObjectType<AddVectorsNodeD
 		Sum = ddl.GetObject<OutputPlugVec3>(0xe2e8b684u);
 	}
 
-	[DDLRegistration(0x16e9e600u)]
+	[DDLRegistration(0x6b596841u)]
 	public List<InputPlugVec3?> Addend { get; set; } = [];
 
-	[DDLRegistration(0x16e9e600u)]
+	[DDLRegistration(0xe2e8b684u)]
 	public OutputPlugVec3? Sum { get; set; } = default;
 
 	public new static AddVectorsNodeDef Create(DDLObject ddl) => new(ddl);

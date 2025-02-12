@@ -23,22 +23,22 @@ public class ShotMotionSchrodingerPrius : BasicShotMotionPrius, IDDLObjectType<S
 		DebugDraw = ddl.GetValue<bool>(0x6020521bu, DebugDraw);
 	}
 
-	[DDLRegistration(0xac996ff4u, "Max Arc Range")]
+	[DDLRegistration(0x8c81c95eu, "Max Arc Range")]
 	public float MaxArcRange { get; set; } = 30.00f;
 
-	[DDLRegistration(0xac996ff4u, "Arc Height Per Meter")]
+	[DDLRegistration(0x2ef99adau, "Arc Height Per Meter")]
 	public float ArcHeightPerMeter { get; set; } = 0.10f;
 
-	[DDLRegistration(0xac996ff4u, "Intro Anim")]
+	[DDLRegistration(0xf227a2c3u, "Intro Anim")]
 	public string? IntroAnim { get; set; } = "Intro";
 
-	[DDLRegistration(0xac996ff4u, "In Air Anim")]
+	[DDLRegistration(0xf91d895du, "In Air Anim")]
 	public string? InAirAnim { get; set; } = "InAir";
 
-	[DDLRegistration(0xac996ff4u, "Attack Anim")]
+	[DDLRegistration(0x28523c32u, "Attack Anim")]
 	public string? AttackAnim { get; set; } = "Attack";
 
-	[DDLRegistration(0xac996ff4u, "Debug Draw")]
+	[DDLRegistration(0x6020521bu, "Debug Draw")]
 	public bool DebugDraw { get; set; } = false;
 
 	public new static ShotMotionSchrodingerPrius Create(DDLObject ddl) => new(ddl);

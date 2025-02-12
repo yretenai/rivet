@@ -19,10 +19,10 @@ public class AnimPerformanceClipUpdateData : DDLObjectType, IDDLObjectType<AnimP
 		FacialExpressions = ddl.GetDictionary<RivetAssetId, AnimFacialExpressionUpdateData>(0xcd0fa43a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimFacialExpressionUpdateData>(mapId));
 	}
 
-	[DDLRegistration(0xea582e9eu)]
+	[DDLRegistration(0x9a327d20u)]
 	public Dictionary<RivetAssetId, AnimGestureUpdateData?> BodyGestures { get; set; } = [];
 
-	[DDLRegistration(0xea582e9eu)]
+	[DDLRegistration(0xcd0fa43au)]
 	public Dictionary<RivetAssetId, AnimFacialExpressionUpdateData?> FacialExpressions { get; set; } = [];
 
 	public static AnimPerformanceClipUpdateData Create(DDLObject ddl) => new(ddl);

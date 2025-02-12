@@ -23,22 +23,22 @@ public class ScaleData : DDLObjectType, IDDLObjectType<ScaleData> {
 		MaxTimeScale = ddl.GetValue<float>(0xc385fa26u, MaxTimeScale);
 	}
 
-	[DDLRegistration(0xdc1e20e6u, "Min Y Translation Scale", "Minimum scale applied to vertical translation")]
+	[DDLRegistration(0x7796775cu, "Min Y Translation Scale", "Minimum scale applied to vertical translation")]
 	public float MinYTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdc1e20e6u, "Max Y Translation Scale", "Maximum scale applied to vertical translation")]
+	[DDLRegistration(0x5ee88a44u, "Max Y Translation Scale", "Maximum scale applied to vertical translation")]
 	public float MaxYTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdc1e20e6u, "Min XZ Translation Scale", "Minimum scale applied to horizontal translation")]
+	[DDLRegistration(0x66d45ba2u, "Min XZ Translation Scale", "Minimum scale applied to horizontal translation")]
 	public float MinXZTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdc1e20e6u, "Max XZ Translation Scale", "Maximum scale applied to horizontal translation")]
+	[DDLRegistration(0x7591bd09u, "Max XZ Translation Scale", "Maximum scale applied to horizontal translation")]
 	public float MaxXZTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdc1e20e6u, "Min Time Scale", "Minimum scale applied to the animation rate.")]
+	[DDLRegistration(0x53f6eaccu, "Min Time Scale", "Minimum scale applied to the animation rate.")]
 	public float MinTimeScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdc1e20e6u, "Max Time Scale", "Maximum scale applied to the animation rate.")]
+	[DDLRegistration(0xc385fa26u, "Max Time Scale", "Maximum scale applied to the animation rate.")]
 	public float MaxTimeScale { get; set; } = 1.00f;
 
 	public static ScaleData Create(DDLObject ddl) => new(ddl);

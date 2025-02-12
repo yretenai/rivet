@@ -19,10 +19,10 @@ public class ContrastMaterialEntry : DDLObjectType, IDDLObjectType<ContrastMater
 		Material = ddl.GetValue<RivetAssetId>(0x86bfc8e5u, Material);
 	}
 
-	[DDLRegistration(0x325cad01u, description: "Catergory of actor to which this material should be applied.")]
+	[DDLRegistration(0xbc4e9799u, description: "Catergory of actor to which this material should be applied.")]
 	public xf2109875 Type { get; set; } = xf2109875.Enemy;
 
-	[DDLRegistration(0x325cad01u, description: "Material to apply.")]
+	[DDLRegistration(0x86bfc8e5u, description: "Material to apply.")]
 	public RivetAssetId Material { get; set; } = default;
 
 	public static ContrastMaterialEntry Create(DDLObject ddl) => new(ddl);

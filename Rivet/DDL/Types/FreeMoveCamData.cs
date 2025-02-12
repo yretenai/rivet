@@ -23,22 +23,22 @@ public class FreeMoveCamData : DDLObjectType, IDDLObjectType<FreeMoveCamData> {
 		StickConfig = ddl.GetValue<RivetAssetId>(0x3bc8f276u, StickConfig);
 	}
 
-	[DDLRegistration(0xc13edbf5u)]
+	[DDLRegistration(0xc7fa135fu)]
 	public float TetherDistance { get; set; } = 15.00f;
 
-	[DDLRegistration(0xc13edbf5u)]
+	[DDLRegistration(0x1f570251u)]
 	public float MoveSpeed { get; set; } = 4.00f;
 
-	[DDLRegistration(0xc13edbf5u)]
+	[DDLRegistration(0xf879a9d1u)]
 	public float RiseSpeed { get; set; } = 3.00f;
 
-	[DDLRegistration(0xc13edbf5u)]
+	[DDLRegistration(0xb9f88dfbu)]
 	public float Acceleration { get; set; } = 20.00f;
 
-	[DDLRegistration(0xc13edbf5u)]
+	[DDLRegistration(0x44749354u)]
 	public YawAndPitchData? YawAndPitch { get; set; } = default;
 
-	[DDLRegistration(0xc13edbf5u, "StickConfig")]
+	[DDLRegistration(0x3bc8f276u, "StickConfig")]
 	public RivetAssetId StickConfig { get; set; } = default;
 
 	public static FreeMoveCamData Create(DDLObject ddl) => new(ddl);

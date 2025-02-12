@@ -22,19 +22,19 @@ public class OverlayTextActionPrius : DDLObjectType, IDDLObjectType<OverlayTextA
 		TextType = ddl.GetEnum<xdd0cb528>(0x883c7099u, xdd0cb528Values.Lookup);
 	}
 
-	[DDLRegistration(0x2892ecf3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x2892ecf3u, description: "Whether to use the LocTag as a text string and not a loc tag. Note: this will not work in non-final builds.")]
+	[DDLRegistration(0x9d035126u, description: "Whether to use the LocTag as a text string and not a loc tag. Note: this will not work in non-final builds.")]
 	public bool UseTempText { get; set; } = false;
 
-	[DDLRegistration(0x2892ecf3u, description: "Will be replaced with localized text if it exists.")]
+	[DDLRegistration(0x06f8b0e5u, description: "Will be replaced with localized text if it exists.")]
 	public string? LocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x2892ecf3u, description: "Time in seconds a message stays up. -1 indicates it will stay up until clear is called")]
+	[DDLRegistration(0x7c5e3db0u, description: "Time in seconds a message stays up. -1 indicates it will stay up until clear is called")]
 	public float Duration { get; set; } = 6.00f;
 
-	[DDLRegistration(0x2892ecf3u, description: "controls where this is displayed on screen")]
+	[DDLRegistration(0x883c7099u, description: "controls where this is displayed on screen")]
 	public xdd0cb528 TextType { get; set; } = xdd0cb528.Location;
 
 	public static OverlayTextActionPrius Create(DDLObject ddl) => new(ddl);

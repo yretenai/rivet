@@ -21,16 +21,16 @@ public class GameBotShooterHeliPrius : GameBotShooterBasePrius, IDDLObjectType<G
 		ExitPathTriggerArea = ddl.GetValue<RivetAssetId>(0xc7fbc607u, ExitPathTriggerArea);
 	}
 
-	[DDLRegistration(0x4ba59182u, description: "Who flies this thing anyway?")]
+	[DDLRegistration(0x944d9393u, description: "Who flies this thing anyway?")]
 	public RivetAssetId Pilot { get; set; } = default;
 
-	[DDLRegistration(0x4ba59182u)]
+	[DDLRegistration(0x3cec5789u)]
 	public bool DoesFlyIntro { get; set; } = true;
 
-	[DDLRegistration(0x4ba59182u)]
+	[DDLRegistration(0x7124b13au)]
 	public RivetAssetId ExitPath { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4ba59182u)]
+	[DDLRegistration(0xc7fbc607u)]
 	public RivetAssetId ExitPathTriggerArea { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static GameBotShooterHeliPrius Create(DDLObject ddl) => new(ddl);

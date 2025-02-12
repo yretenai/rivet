@@ -20,13 +20,13 @@ public class MaterialOverrideMap : DDLObjectType, IDDLObjectType<MaterialOverrid
 		Type = ddl.GetEnum<x2351894b>(0xbc4e9799u, x2351894bValues.Lookup);
 	}
 
-	[DDLRegistration(0x1902f434u, "Material Mapping Name")]
+	[DDLRegistration(0x981e6927u, "Material Mapping Name")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x1902f434u, "Asset")]
+	[DDLRegistration(0x8193c1fdu, "Asset")]
 	public RivetAssetId AssetMaterialName { get; set; } = default;
 
-	[DDLRegistration(0x1902f434u, "Type")]
+	[DDLRegistration(0xbc4e9799u, "Type")]
 	public x2351894b Type { get; set; } = x2351894b.OverrideBase;
 
 	public static MaterialOverrideMap Create(DDLObject ddl) => new(ddl);

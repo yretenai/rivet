@@ -21,16 +21,16 @@ public class DebugDrawArrowActionPrius : DDLObjectType, IDDLObjectType<DebugDraw
 		ArrowheadRadius = ddl.GetValue<float>(0x49e5c53cu, ArrowheadRadius);
 	}
 
-	[DDLRegistration(0x207206ddu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0x207206ddu)]
+	[DDLRegistration(0x7f058428u)]
 	public DebugDrawColor? Color { get; set; } = default;
 
-	[DDLRegistration(0x207206ddu)]
+	[DDLRegistration(0x73e435d4u)]
 	public float ArrowheadLength { get; set; } = 0.75f;
 
-	[DDLRegistration(0x207206ddu)]
+	[DDLRegistration(0x49e5c53cu)]
 	public float ArrowheadRadius { get; set; } = 0.25f;
 
 	public static DebugDrawArrowActionPrius Create(DDLObject ddl) => new(ddl);

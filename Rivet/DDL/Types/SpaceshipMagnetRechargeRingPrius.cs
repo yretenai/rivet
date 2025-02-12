@@ -20,13 +20,13 @@ public class SpaceshipMagnetRechargeRingPrius : DDLObjectType, IDDLObjectType<Sp
 		CooldownTime = ddl.GetValue<float>(0x499881dbu, CooldownTime);
 	}
 
-	[DDLRegistration(0x1747a48eu, "Face ship?", "Whether to auto-orient ourselves towards the ship to make it easier to fly through.")]
+	[DDLRegistration(0x9e66d95au, "Face ship?", "Whether to auto-orient ourselves towards the ship to make it easier to fly through.")]
 	public bool AutoFaceShip { get; set; } = false;
 
-	[DDLRegistration(0x1747a48eu, "Recharge percent", "Percent of max energy to restore if the ship goes through the ring.")]
+	[DDLRegistration(0x36b891bbu, "Recharge percent", "Percent of max energy to restore if the ship goes through the ring.")]
 	public float PercentRecharge { get; set; } = 0.10f;
 
-	[DDLRegistration(0x1747a48eu, "Ring Cooldown Time", "The amount of time it takes the ring to be usable again (<=0 is instant recharge).")]
+	[DDLRegistration(0x499881dbu, "Ring Cooldown Time", "The amount of time it takes the ring to be usable again (<=0 is instant recharge).")]
 	public float CooldownTime { get; set; } = 5.00f;
 
 	public static SpaceshipMagnetRechargeRingPrius Create(DDLObject ddl) => new(ddl);

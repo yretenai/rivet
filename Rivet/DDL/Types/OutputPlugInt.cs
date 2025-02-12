@@ -18,7 +18,7 @@ public class OutputPlugInt : OutputPlugBaseDef, IDDLObjectType<OutputPlugInt> {
 		Value = ddl.GetObject<IntPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x97862351u)]
+	[DDLRegistration(0x042494f5u)]
 	public IntPlug? Value { get; set; } = default;
 
 	public new static OutputPlugInt Create(DDLObject ddl) => new(ddl);

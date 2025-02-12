@@ -23,22 +23,22 @@ public class Cinematic2BlinkActionDef : DDLObjectType, IDDLObjectType<Cinematic2
 		BlendOutDuration = ddl.GetValue<float>(0x21329878u, BlendOutDuration);
 	}
 
-	[DDLRegistration(0xa8a6e9d0u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa8a6e9d0u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa8a6e9d0u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0xa8a6e9d0u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa8a6e9d0u)]
+	[DDLRegistration(0x461f415eu)]
 	public float BlendInDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa8a6e9d0u)]
+	[DDLRegistration(0x21329878u)]
 	public float BlendOutDuration { get; set; } = 0.00f;
 
 	public static Cinematic2BlinkActionDef Create(DDLObject ddl) => new(ddl);

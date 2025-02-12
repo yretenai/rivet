@@ -18,7 +18,7 @@ public class GameMacroLevelData : MacroLevelData, IDDLObjectType<GameMacroLevelD
 		RegionEconomyConfig = ddl.GetValue<RivetAssetId>(0x84cfe3f0u, RegionEconomyConfig);
 	}
 
-	[DDLRegistration(0x8f60b8d0u, description: "Macro economy for regions.")]
+	[DDLRegistration(0x84cfe3f0u, description: "Macro economy for regions.")]
 	public RivetAssetId RegionEconomyConfig { get; set; } = default;
 
 	public new static GameMacroLevelData Create(DDLObject ddl) => new(ddl);

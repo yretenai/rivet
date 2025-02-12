@@ -18,7 +18,7 @@ public class WallRunOnEvent : EventBase, IDDLObjectType<WallRunOnEvent> {
 		Direction = ddl.GetValue<sbyte>(0xbcb74ebfu, Direction);
 	}
 
-	[DDLRegistration(0xd6f66c29u)]
+	[DDLRegistration(0xbcb74ebfu)]
 	public sbyte Direction { get; set; } = 0;
 
 	public new static WallRunOnEvent Create(DDLObject ddl) => new(ddl);

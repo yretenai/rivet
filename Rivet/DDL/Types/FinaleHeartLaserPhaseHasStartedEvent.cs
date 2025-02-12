@@ -18,7 +18,7 @@ public class FinaleHeartLaserPhaseHasStartedEvent : EventBase, IDDLObjectType<Fi
 		CoreLocator = ddl.GetString(0x614892f2) ?? CoreLocator;
 	}
 
-	[DDLRegistration(0xee8c2cffu)]
+	[DDLRegistration(0x614892f2u)]
 	public string? CoreLocator { get; set; } = default;
 
 	public new static FinaleHeartLaserPhaseHasStartedEvent Create(DDLObject ddl) => new(ddl);

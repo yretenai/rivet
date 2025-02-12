@@ -24,25 +24,25 @@ public class TargetHunterTargetTypePrius : TargetHunterBasePrius, IDDLObjectType
 		Shapes = ddl.GetObjects<TargetShapeContainer>(0xada3eb75u);
 	}
 
-	[DDLRegistration(0x7d99faa3u, "Target Types")]
+	[DDLRegistration(0x85109145u, "Target Types")]
 	public TargetType TargetTypes { get; set; } = (TargetType) 0x00000000;
 
-	[DDLRegistration(0x7d99faa3u, "Find Friends")]
+	[DDLRegistration(0xc0f7f10au, "Find Friends")]
 	public bool FindFriends { get; set; } = false;
 
-	[DDLRegistration(0x7d99faa3u, "Find Enemies")]
+	[DDLRegistration(0x991bcb5du, "Find Enemies")]
 	public bool FindEnemies { get; set; } = false;
 
-	[DDLRegistration(0x7d99faa3u, "Orient Query Toward Target", "Should we orient our query towards the guy we are trying to fight?")]
+	[DDLRegistration(0xb9e3c606u, "Orient Query Toward Target", "Should we orient our query towards the guy we are trying to fight?")]
 	public bool OrientQueryTowardsTarget { get; set; } = true;
 
-	[DDLRegistration(0x7d99faa3u, "Clip Query Length To Target", "Should we change our query to not extend past our target?")]
+	[DDLRegistration(0x0069554fu, "Clip Query Length To Target", "Should we change our query to not extend past our target?")]
 	public bool ClipQueryLengthToTarget { get; set; } = true;
 
-	[DDLRegistration(0x7d99faa3u, "Shape Offset", "The hunter relative offset to center the target request shapes")]
+	[DDLRegistration(0x92099931u, "Shape Offset", "The hunter relative offset to center the target request shapes")]
 	public DDLVector3? ShapeOffset { get; set; } = default;
 
-	[DDLRegistration(0x7d99faa3u)]
+	[DDLRegistration(0xada3eb75u)]
 	public List<TargetShapeContainer?> Shapes { get; set; } = [];
 
 	public new static TargetHunterTargetTypePrius Create(DDLObject ddl) => new(ddl);

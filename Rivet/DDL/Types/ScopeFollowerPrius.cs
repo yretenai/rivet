@@ -24,25 +24,25 @@ public class ScopeFollowerPrius : DDLObjectType, IDDLObjectType<ScopeFollowerPri
 		TweenSpeed = ddl.GetValue<float>(0x286238e9u, TweenSpeed);
 	}
 
-	[DDLRegistration(0x34b84aa9u, "Distance", "Actor distance from the camera")]
+	[DDLRegistration(0xe69327f1u, "Distance", "Actor distance from the camera")]
 	public float Distance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x34b84aa9u, "Distance", "Distance from default, per zoom level")]
+	[DDLRegistration(0xb80ceb34u, "Distance", "Distance from default, per zoom level")]
 	public float ZoomDistance { get; set; } = -3.00f;
 
-	[DDLRegistration(0x34b84aa9u, "Z Scale", "Actor Z scale")]
+	[DDLRegistration(0xcea63cfeu, "Z Scale", "Actor Z scale")]
 	public float ZScale { get; set; } = 0.10f;
 
-	[DDLRegistration(0x34b84aa9u, "Model Height", "Actor height in the world (used to help scale the model in front of the camera)")]
+	[DDLRegistration(0xcb467d89u, "Model Height", "Actor height in the world (used to help scale the model in front of the camera)")]
 	public float ModelHeight { get; set; } = 100.00f;
 
-	[DDLRegistration(0x34b84aa9u, "X Rotation Distance", "How far the Actor can rotate in the X direction")]
+	[DDLRegistration(0x43db3129u, "X Rotation Distance", "How far the Actor can rotate in the X direction")]
 	public float XRotationDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x34b84aa9u, "Y Rotation Distance", "How far the Actor can rotate in the Y direction")]
+	[DDLRegistration(0xc47dfa6au, "Y Rotation Distance", "How far the Actor can rotate in the Y direction")]
 	public float YRotationDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x34b84aa9u, "Tween Speed", "Speed scale for Actor rotation")]
+	[DDLRegistration(0x286238e9u, "Tween Speed", "Speed scale for Actor rotation")]
 	public float TweenSpeed { get; set; } = 0.50f;
 
 	public static ScopeFollowerPrius Create(DDLObject ddl) => new(ddl);

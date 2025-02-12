@@ -21,16 +21,16 @@ public class DebugScreenCaptureActionPrius : DDLObjectType, IDDLObjectType<Debug
 		Resolution = ddl.GetEnum<x34a3a095>(0x26e551b3u, x34a3a095Values.Lookup);
 	}
 
-	[DDLRegistration(0x104ab849u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0x104ab849u, "Capture Depth", "Captures separate depth and color images")]
+	[DDLRegistration(0x17f51ac1u, "Capture Depth", "Captures separate depth and color images")]
 	public bool CaptureDepth { get; set; } = false;
 
-	[DDLRegistration(0x104ab849u)]
+	[DDLRegistration(0xd458e08eu)]
 	public x1bcabc6d CaptureFormat { get; set; } = x1bcabc6d.BMP;
 
-	[DDLRegistration(0x104ab849u)]
+	[DDLRegistration(0x26e551b3u)]
 	public x34a3a095 Resolution { get; set; } = x34a3a095.Current;
 
 	public static DebugScreenCaptureActionPrius Create(DDLObject ddl) => new(ddl);

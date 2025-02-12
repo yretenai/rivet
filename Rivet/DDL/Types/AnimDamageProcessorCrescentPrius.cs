@@ -39,70 +39,70 @@ public class AnimDamageProcessorCrescentPrius : AnimDamageAttackStyleBase, IDDLO
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0xfd9d079au, "Damage Type")]
+	[DDLRegistration(0x840c154du, "Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Melee;
 
-	[DDLRegistration(0xfd9d079au, "Damage Max", "Deal this much damage as a maximum")]
+	[DDLRegistration(0x563be470u, "Damage Max", "Deal this much damage as a maximum")]
 	public float DamageAmount { get; set; } = 10.00f;
 
-	[DDLRegistration(0xfd9d079au, "Damage Min", "Optional falloff value")]
+	[DDLRegistration(0x55600861u, "Damage Min", "Optional falloff value")]
 	public float DamageFalloff { get; set; } = -1.00f;
 
-	[DDLRegistration(0xfd9d079au, "Damage Victim Min", "Deal maximum damage up to this many victims")]
+	[DDLRegistration(0x66b9697eu, "Damage Victim Min", "Deal maximum damage up to this many victims")]
 	public float DamageVictimMin { get; set; } = -1.00f;
 
-	[DDLRegistration(0xfd9d079au, "Damage Victim Max", "Falloff to minimum damage at this many victims")]
+	[DDLRegistration(0x5ab45627u, "Damage Victim Max", "Falloff to minimum damage at this many victims")]
 	public float DamageVictimMax { get; set; } = -1.00f;
 
-	[DDLRegistration(0xfd9d079au)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0xfd9d079au)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = -1.00f;
 
-	[DDLRegistration(0xfd9d079au, description: "Maximum number of targets that can recieve knockback")]
+	[DDLRegistration(0x16fb58b3u, description: "Maximum number of targets that can recieve knockback")]
 	public int KnockbackVictimMax { get; set; } = -1;
 
-	[DDLRegistration(0xfd9d079au, "Arc Height")]
+	[DDLRegistration(0x38e49f4au, "Arc Height")]
 	public float ArcHeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfd9d079au, "Arc Height Alt")]
+	[DDLRegistration(0xc3cbcee3u, "Arc Height Alt")]
 	public float ArcHeightAlt { get; set; } = -1.00f;
 
-	[DDLRegistration(0xfd9d079au, "Sweep Angle")]
+	[DDLRegistration(0xfcc5fb84u, "Sweep Angle")]
 	public float SweepAngle { get; set; } = 135.00f;
 
-	[DDLRegistration(0xfd9d079au, "Sweep Range")]
+	[DDLRegistration(0x6fc3e4c4u, "Sweep Range")]
 	public float SweepRange { get; set; } = 2.00f;
 
-	[DDLRegistration(0xfd9d079au, "Sweep Range Side")]
+	[DDLRegistration(0xc8e992feu, "Sweep Range Side")]
 	public float SweepRangeSide { get; set; } = -1.00f;
 
-	[DDLRegistration(0xfd9d079au, "Sweep Range Back")]
+	[DDLRegistration(0x86a6487cu, "Sweep Range Back")]
 	public float SweepRangeBack { get; set; } = -1.00f;
 
-	[DDLRegistration(0xfd9d079au, "Coll Radius")]
+	[DDLRegistration(0xc7f69ee3u, "Coll Radius")]
 	public float CollRadius { get; set; } = 0.50f;
 
-	[DDLRegistration(0xfd9d079au, "Coll Radius Side")]
+	[DDLRegistration(0xd6560193u, "Coll Radius Side")]
 	public float CollRadiusSide { get; set; } = -1.00f;
 
-	[DDLRegistration(0xfd9d079au, "Coll Radius Back")]
+	[DDLRegistration(0x9819db11u, "Coll Radius Back")]
 	public float CollRadiusBack { get; set; } = -1.00f;
 
-	[DDLRegistration(0xfd9d079au, "Max Hits")]
+	[DDLRegistration(0xe714fa9bu, "Max Hits")]
 	public int MaxHits { get; set; } = -1;
 
-	[DDLRegistration(0xfd9d079au, "Pos-Angle Limit")]
+	[DDLRegistration(0xe4520813u, "Pos-Angle Limit")]
 	public float PosAngleLimit { get; set; } = 180.00f;
 
-	[DDLRegistration(0xfd9d079au, "Rotation Rate", "Used to spin the initial crescent direction over time")]
+	[DDLRegistration(0xb0b29e9bu, "Rotation Rate", "Used to spin the initial crescent direction over time")]
 	public float RotationRate { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfd9d079au)]
+	[DDLRegistration(0x63316affu)]
 	public uint TargetHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfd9d079au)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
 	public new static AnimDamageProcessorCrescentPrius Create(DDLObject ddl) => new(ddl);

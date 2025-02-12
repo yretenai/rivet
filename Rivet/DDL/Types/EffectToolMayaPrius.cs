@@ -21,16 +21,16 @@ public class EffectToolMayaPrius : EffectToolBasePrius, IDDLObjectType<EffectToo
 		AllowPivotPush = ddl.GetValue<bool>(0xe56bda3eu, AllowPivotPush);
 	}
 
-	[DDLRegistration(0xf12c2992u)]
+	[DDLRegistration(0xe7986b3cu)]
 	public bool AllowPan { get; set; } = true;
 
-	[DDLRegistration(0xf12c2992u)]
+	[DDLRegistration(0x60b30526u)]
 	public bool AllowZoom { get; set; } = true;
 
-	[DDLRegistration(0xf12c2992u)]
+	[DDLRegistration(0x95f85695u)]
 	public bool AllowRotation { get; set; } = true;
 
-	[DDLRegistration(0xf12c2992u)]
+	[DDLRegistration(0xe56bda3eu)]
 	public bool AllowPivotPush { get; set; } = true;
 
 	public new static EffectToolMayaPrius Create(DDLObject ddl) => new(ddl);

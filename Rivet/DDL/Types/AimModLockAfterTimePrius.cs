@@ -19,10 +19,10 @@ public class AimModLockAfterTimePrius : AimModifierPrius, IDDLObjectType<AimModL
 		LockFromBeginningIfOffScreen = ddl.GetValue<bool>(0x63177930u, LockFromBeginningIfOffScreen);
 	}
 
-	[DDLRegistration(0xc5c43516u, description: "Aim will lock after this amount of time")]
+	[DDLRegistration(0xebf9382eu, description: "Aim will lock after this amount of time")]
 	public float LockTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc5c43516u)]
+	[DDLRegistration(0x63177930u)]
 	public bool LockFromBeginningIfOffScreen { get; set; } = true;
 
 	public new static AimModLockAfterTimePrius Create(DDLObject ddl) => new(ddl);

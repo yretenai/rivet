@@ -20,13 +20,13 @@ public class SkinItemTextureOverridePrius : DDLObjectType, IDDLObjectType<SkinIt
 		ConstantNameHash = ddl.GetValue<uint>(0x9b23f1b9u, ConstantNameHash);
 	}
 
-	[DDLRegistration(0x67553e2au)]
+	[DDLRegistration(0x5ca5f9e4u)]
 	public RivetAssetId OriginalMaterialNameHash { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x67553e2au)]
+	[DDLRegistration(0x185878a0u)]
 	public RivetAssetId OverrideTextureNameHash { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x67553e2au)]
+	[DDLRegistration(0x9b23f1b9u)]
 	public uint ConstantNameHash { get; set; } = 0x00000000;
 
 	public static SkinItemTextureOverridePrius Create(DDLObject ddl) => new(ddl);

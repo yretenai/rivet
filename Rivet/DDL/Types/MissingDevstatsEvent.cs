@@ -19,10 +19,10 @@ public class MissingDevstatsEvent : DDLObjectType, IDDLObjectType<MissingDevstat
 		MissingEventCount = ddl.GetValue<uint>(0x1f4d551eu, MissingEventCount);
 	}
 
-	[DDLRegistration(0x6c8c3619u)]
+	[DDLRegistration(0x077e466bu)]
 	public string? Event_type { get; set; } = "MissingEvents";
 
-	[DDLRegistration(0x6c8c3619u)]
+	[DDLRegistration(0x1f4d551eu)]
 	public uint MissingEventCount { get; set; } = 0x00000000;
 
 	public static MissingDevstatsEvent Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class PhaseTimeSettings : DDLObjectType, IDDLObjectType<PhaseTimeSettings
 		TotalMs = ddl.GetValue<float>(0x3fdd0012u, TotalMs);
 	}
 
-	[DDLRegistration(0x8f21f607u)]
+	[DDLRegistration(0x1f4e11b1u)]
 	public float InitMs { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8f21f607u)]
+	[DDLRegistration(0x537a2eb3u)]
 	public float Phase1Ms { get; set; } = 16.00f;
 
-	[DDLRegistration(0x8f21f607u)]
+	[DDLRegistration(0x513c90eau)]
 	public float Phase2Ms { get; set; } = 5.00f;
 
-	[DDLRegistration(0x8f21f607u)]
+	[DDLRegistration(0x50fefaddu)]
 	public float Phase3Ms { get; set; } = 10.00f;
 
-	[DDLRegistration(0x8f21f607u)]
+	[DDLRegistration(0x3395e1cbu)]
 	public float FinalMs { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8f21f607u)]
+	[DDLRegistration(0x3fdd0012u)]
 	public float TotalMs { get; set; } = 33.33f;
 
 	public static PhaseTimeSettings Create(DDLObject ddl) => new(ddl);

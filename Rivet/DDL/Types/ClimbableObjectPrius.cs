@@ -21,16 +21,16 @@ public class ClimbableObjectPrius : DDLObjectType, IDDLObjectType<ClimbableObjec
 		LockoutLow = ddl.GetValue<bool>(0xde21212bu, LockoutLow);
 	}
 
-	[DDLRegistration(0x9f75a43bu, description: "Type Of Climbable Object")]
+	[DDLRegistration(0xc24095a3u, description: "Type Of Climbable Object")]
 	public xcfc05fff ClimbType { get; set; } = xcfc05fff.Ladder;
 
-	[DDLRegistration(0x9f75a43bu, description: "External Actor To Follow")]
+	[DDLRegistration(0x24c2eb7eu, description: "External Actor To Follow")]
 	public RivetAssetId AttachActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9f75a43bu, description: "Lock The User Exit From The Top")]
+	[DDLRegistration(0x2e26c8bfu, description: "Lock The User Exit From The Top")]
 	public bool LockoutHigh { get; set; } = false;
 
-	[DDLRegistration(0x9f75a43bu, description: "Lock The User Exit From The Bottom")]
+	[DDLRegistration(0xde21212bu, description: "Lock The User Exit From The Bottom")]
 	public bool LockoutLow { get; set; } = false;
 
 	public static ClimbableObjectPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class DamageModifierProcKnockbackLevelOutgoingPrius : DamageModifierProcO
 		AllowKnockbackDowngrade = ddl.GetValue<bool>(0x2079692cu, AllowKnockbackDowngrade);
 	}
 
-	[DDLRegistration(0x5fbae359u, description: "Knockback level to apply to damage requests.")]
+	[DDLRegistration(0x2554a262u, description: "Knockback level to apply to damage requests.")]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x5fbae359u, description: "Should this modifier force the specified knockback level regardless of what value is already set in the damage request?")]
+	[DDLRegistration(0x2079692cu, description: "Should this modifier force the specified knockback level regardless of what value is already set in the damage request?")]
 	public bool AllowKnockbackDowngrade { get; set; } = false;
 
 	public new static DamageModifierProcKnockbackLevelOutgoingPrius Create(DDLObject ddl) => new(ddl);

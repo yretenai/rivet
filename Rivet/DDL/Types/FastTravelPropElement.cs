@@ -19,10 +19,10 @@ public class FastTravelPropElement : DDLObjectType, IDDLObjectType<FastTravelPro
 		Animations = ddl.GetObjects<FastTravelAnimElement>(0x4fd05d49u);
 	}
 
-	[DDLRegistration(0x1e262acdu)]
+	[DDLRegistration(0x09b26d12u)]
 	public RivetAssetId PropAsset { get; set; } = default;
 
-	[DDLRegistration(0x1e262acdu)]
+	[DDLRegistration(0x4fd05d49u)]
 	public List<FastTravelAnimElement?> Animations { get; set; } = [];
 
 	public static FastTravelPropElement Create(DDLObject ddl) => new(ddl);

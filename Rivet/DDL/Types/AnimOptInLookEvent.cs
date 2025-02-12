@@ -18,7 +18,7 @@ public class AnimOptInLookEvent : EventBase, IDDLObjectType<AnimOptInLookEvent> 
 		Looks = ddl.GetStrings(0xec785832u);
 	}
 
-	[DDLRegistration(0x5d56c071u, description: "Looks to enable.")]
+	[DDLRegistration(0xec785832u, description: "Looks to enable.")]
 	public List<string?> Looks { get; set; } = [];
 
 	public new static AnimOptInLookEvent Create(DDLObject ddl) => new(ddl);

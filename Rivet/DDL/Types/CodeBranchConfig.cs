@@ -22,19 +22,19 @@ public class CodeBranchConfig : DDLObjectType, IDDLObjectType<CodeBranchConfig> 
 		GameBuildCacheOrigin = ddl.GetString(0x6ea74978) ?? GameBuildCacheOrigin;
 	}
 
-	[DDLRegistration(0x796abff7u)]
+	[DDLRegistration(0x2d616c1fu)]
 	public List<CodeBranchRef?> Branches { get; set; } = [];
 
-	[DDLRegistration(0x796abff7u)]
+	[DDLRegistration(0x83b94c92u)]
 	public uint SelectedBranchIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x796abff7u, description: "(UTC) Time that the selected branch was last changed")]
+	[DDLRegistration(0x272b7932u, description: "(UTC) Time that the selected branch was last changed")]
 	public ulong Timestamp { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x796abff7u, description: "Cache location for the current (packed) game build")]
+	[DDLRegistration(0xae835a98u, description: "Cache location for the current (packed) game build")]
 	public string? GameBuildCacheDir { get; set; } = "";
 
-	[DDLRegistration(0x796abff7u, description: "Path where the current game build originated from (should match CurrentSymbolRoot for the selected branch index)")]
+	[DDLRegistration(0x6ea74978u, description: "Path where the current game build originated from (should match CurrentSymbolRoot for the selected branch index)")]
 	public string? GameBuildCacheOrigin { get; set; } = "";
 
 	public static CodeBranchConfig Create(DDLObject ddl) => new(ddl);

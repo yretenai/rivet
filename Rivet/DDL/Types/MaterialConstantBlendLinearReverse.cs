@@ -18,7 +18,7 @@ public class MaterialConstantBlendLinearReverse : MaterialConstantBlendBase, IDD
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0x04921c2fu, description: "Duration of blend (in seconds).")]
+	[DDLRegistration(0x5f0458f5u, description: "Duration of blend (in seconds).")]
 	public float Time { get; set; } = 1.00f;
 
 	public new static MaterialConstantBlendLinearReverse Create(DDLObject ddl) => new(ddl);

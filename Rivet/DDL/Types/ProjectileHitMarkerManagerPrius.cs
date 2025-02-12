@@ -19,10 +19,10 @@ public class ProjectileHitMarkerManagerPrius : DDLObjectType, IDDLObjectType<Pro
 		AppearTime = ddl.GetValue<float>(0x2dbcef31u, AppearTime);
 	}
 
-	[DDLRegistration(0x318f04a4u)]
+	[DDLRegistration(0xcc184290u)]
 	public RivetAssetId MarkerActor { get; set; } = default;
 
-	[DDLRegistration(0x318f04a4u, description: "Once the shot has been around for this long we'll fire a HitMarkerAppearEvent")]
+	[DDLRegistration(0x2dbcef31u, description: "Once the shot has been around for this long we'll fire a HitMarkerAppearEvent")]
 	public float AppearTime { get; set; } = 0.50f;
 
 	public static ProjectileHitMarkerManagerPrius Create(DDLObject ddl) => new(ddl);

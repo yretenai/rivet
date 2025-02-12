@@ -21,16 +21,16 @@ public class References : DDLObjectType, IDDLObjectType<References> {
 		ManualLoadWwise = ddl.GetStrings(0xe4798b7cu);
 	}
 
-	[DDLRegistration(0x442873a5u, description: "Use only for assets that will be quickly grabbed once the asset that gets this reference loads. Autoload references will be automatically loaded by the speculative load system once a load of the containing asset is requested.")]
+	[DDLRegistration(0x129306c4u, description: "Use only for assets that will be quickly grabbed once the asset that gets this reference loads. Autoload references will be automatically loaded by the speculative load system once a load of the containing asset is requested.")]
 	public List<string?> AutoLoad { get; set; } = [];
 
-	[DDLRegistration(0x442873a5u, description: "Use to ensure assets get on disc. Manual load references create a link in the dependency graph that the speculative load system ignores, and will only be loaded once something actually requests it.")]
+	[DDLRegistration(0x1796b3e1u, description: "Use to ensure assets get on disc. Manual load references create a link in the dependency graph that the speculative load system ignores, and will only be loaded once something actually requests it.")]
 	public List<string?> ManualLoad { get; set; } = [];
 
-	[DDLRegistration(0x442873a5u, description: "Use to ensure the event's parent soundbank gets loaded when the asset is loaded.")]
+	[DDLRegistration(0xbc48a30eu, description: "Use to ensure the event's parent soundbank gets loaded when the asset is loaded.")]
 	public List<string?> AutoLoadWwise { get; set; } = [];
 
-	[DDLRegistration(0x442873a5u, description: "Use to ensure the event's parent soundbank gets on disc.")]
+	[DDLRegistration(0xe4798b7cu, description: "Use to ensure the event's parent soundbank gets on disc.")]
 	public List<string?> ManualLoadWwise { get; set; } = [];
 
 	public static References Create(DDLObject ddl) => new(ddl);

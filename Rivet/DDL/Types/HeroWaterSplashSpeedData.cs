@@ -25,28 +25,28 @@ public class HeroWaterSplashSpeedData : DDLObjectType, IDDLObjectType<HeroWaterS
 		SplashExitHugeSpeed = ddl.GetValue<float>(0x4f3c2b07u, SplashExitHugeSpeed);
 	}
 
-	[DDLRegistration(0x6b22e819u)]
+	[DDLRegistration(0x496460b6u)]
 	public float SplashSmallSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6b22e819u)]
+	[DDLRegistration(0xb13f4f72u)]
 	public float SplashMediumSpeed { get; set; } = 9.00f;
 
-	[DDLRegistration(0x6b22e819u)]
+	[DDLRegistration(0xaec97a3du)]
 	public float SplashLargeSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0x6b22e819u)]
+	[DDLRegistration(0x342f17c8u)]
 	public float SplashHugeSpeed { get; set; } = 20.00f;
 
-	[DDLRegistration(0x6b22e819u)]
+	[DDLRegistration(0x42c4acabu)]
 	public float SplashExitSmallSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6b22e819u)]
+	[DDLRegistration(0xd2328367u)]
 	public float SplashExitMediumSpeed { get; set; } = 9.00f;
 
-	[DDLRegistration(0x6b22e819u)]
+	[DDLRegistration(0xa569b620u)]
 	public float SplashExitLargeSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0x6b22e819u)]
+	[DDLRegistration(0x4f3c2b07u)]
 	public float SplashExitHugeSpeed { get; set; } = 20.00f;
 
 	public static HeroWaterSplashSpeedData Create(DDLObject ddl) => new(ddl);

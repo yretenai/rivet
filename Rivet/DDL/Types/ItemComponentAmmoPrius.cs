@@ -19,10 +19,10 @@ public class ItemComponentAmmoPrius : BaseComponentAmmoPrius, IDDLObjectType<Ite
 		ClipMax = ddl.GetValue<float>(0xfc892dc4u, ClipMax);
 	}
 
-	[DDLRegistration(0x09997d84u, "Ammo Item")]
+	[DDLRegistration(0x7151e5a4u, "Ammo Item")]
 	public RivetAssetId AmmoItemConfig { get; set; } = default;
 
-	[DDLRegistration(0x09997d84u)]
+	[DDLRegistration(0xfc892dc4u)]
 	public float ClipMax { get; set; } = 0.00f;
 
 	public new static ItemComponentAmmoPrius Create(DDLObject ddl) => new(ddl);

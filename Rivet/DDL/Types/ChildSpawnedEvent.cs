@@ -18,7 +18,7 @@ public class ChildSpawnedEvent : EventBase, IDDLObjectType<ChildSpawnedEvent> {
 		ChildActorHandle = ddl.GetValue<uint>(0x789058e3u, ChildActorHandle);
 	}
 
-	[DDLRegistration(0x1a2c631du)]
+	[DDLRegistration(0x789058e3u)]
 	public uint ChildActorHandle { get; set; } = 0x00000000;
 
 	public new static ChildSpawnedEvent Create(DDLObject ddl) => new(ddl);

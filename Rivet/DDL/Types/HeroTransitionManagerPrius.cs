@@ -18,7 +18,7 @@ public class HeroTransitionManagerPrius : DDLObjectType, IDDLObjectType<HeroTran
 		FirstSpawn = ddl.GetValue<bool>(0x202e71f5u, FirstSpawn);
 	}
 
-	[DDLRegistration(0xe871b242u)]
+	[DDLRegistration(0x202e71f5u)]
 	public bool FirstSpawn { get; set; } = true;
 
 	public static HeroTransitionManagerPrius Create(DDLObject ddl) => new(ddl);

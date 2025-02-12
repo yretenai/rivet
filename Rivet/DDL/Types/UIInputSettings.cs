@@ -19,10 +19,10 @@ public class UIInputSettings : DDLObjectType, IDDLObjectType<UIInputSettings> {
 		KeyRepeatTime = ddl.GetValue<float>(0x137aa45fu, KeyRepeatTime);
 	}
 
-	[DDLRegistration(0xcf6b08a5u)]
+	[DDLRegistration(0x109e962au)]
 	public float FirstKeyRepeatTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0xcf6b08a5u)]
+	[DDLRegistration(0x137aa45fu)]
 	public float KeyRepeatTime { get; set; } = 0.12f;
 
 	public static UIInputSettings Create(DDLObject ddl) => new(ddl);

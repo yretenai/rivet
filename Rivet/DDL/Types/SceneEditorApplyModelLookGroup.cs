@@ -18,7 +18,7 @@ public class SceneEditorApplyModelLookGroup : DDLObjectType, IDDLObjectType<Scen
 		LookGroup = ddl.GetString(0xa286144c) ?? LookGroup;
 	}
 
-	[DDLRegistration(0x5b21d70fu)]
+	[DDLRegistration(0xa286144cu)]
 	public string? LookGroup { get; set; } = default;
 
 	public static SceneEditorApplyModelLookGroup Create(DDLObject ddl) => new(ddl);

@@ -31,46 +31,46 @@ public class HeroMountData : DDLObjectType, IDDLObjectType<HeroMountData> {
 		HeroAnimMap = ddl.GetObjects<HeroAnimMapElement>(0x35511e76u);
 	}
 
-	[DDLRegistration(0xd8c1005cu, description: "Can Ratchet mount the bot related to THIS config.")]
+	[DDLRegistration(0xced3e428u, description: "Can Ratchet mount the bot related to THIS config.")]
 	public bool CanRatchetMount { get; set; } = false;
 
-	[DDLRegistration(0xd8c1005cu, description: "Can Ratchette mount the bot related to THIS config.")]
+	[DDLRegistration(0xe26388e6u, description: "Can Ratchette mount the bot related to THIS config.")]
 	public bool CanRatchetteMount { get; set; } = true;
 
-	[DDLRegistration(0xd8c1005cu, description: "If true we draw the hero while he is mounted")]
+	[DDLRegistration(0xa20e8596u, description: "If true we draw the hero while he is mounted")]
 	public bool DrawWhileMounted { get; set; } = true;
 
-	[DDLRegistration(0xd8c1005cu, description: "The distance the hero must be within to cause an AutoMountFromJump.")]
+	[DDLRegistration(0x97760e9fu, description: "The distance the hero must be within to cause an AutoMountFromJump.")]
 	public float AutoMountDist { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd8c1005cu, description: "The amount of time the hero takes to go from an in-air position to a mounting position.")]
+	[DDLRegistration(0x481ad404u, description: "The amount of time the hero takes to go from an in-air position to a mounting position.")]
 	public float TimeToMountFromAir { get; set; } = 0.45f;
 
-	[DDLRegistration(0xd8c1005cu)]
+	[DDLRegistration(0x3050fe30u)]
 	public string? FallAnimName { get; set; } = default;
 
-	[DDLRegistration(0xd8c1005cu, description: "The amount of time the hero takes to go from the ground to a mounting position.")]
+	[DDLRegistration(0x9fbed2eau, description: "The amount of time the hero takes to go from the ground to a mounting position.")]
 	public float TimeToMountFromGround { get; set; } = 0.80f;
 
-	[DDLRegistration(0xd8c1005cu, "Locator Attach Point", "Locator Attach point on the hero")]
+	[DDLRegistration(0x34512725u, "Locator Attach Point", "Locator Attach point on the hero")]
 	public string? LocatorAttachName { get; set; } = default;
 
-	[DDLRegistration(0xd8c1005cu)]
+	[DDLRegistration(0x678dc908u)]
 	public string? IntroStartAnimName { get; set; } = default;
 
-	[DDLRegistration(0xd8c1005cu)]
+	[DDLRegistration(0x1e252935u)]
 	public string? MiddleStartAnimName { get; set; } = default;
 
-	[DDLRegistration(0xd8c1005cu)]
+	[DDLRegistration(0xcb2af8eau)]
 	public string? OutroStartAnimName { get; set; } = default;
 
-	[DDLRegistration(0xd8c1005cu, description: "Hero side animation for playing out a more animated driver dismount (as opposed to just putting the hero in the jump state)")]
+	[DDLRegistration(0xf9375130u, description: "Hero side animation for playing out a more animated driver dismount (as opposed to just putting the hero in the jump state)")]
 	public string? AnimatedDismountAnim { get; set; } = default;
 
-	[DDLRegistration(0xd8c1005cu, "Idle Anim during Mounting")]
+	[DDLRegistration(0x9f307b58u, "Idle Anim during Mounting")]
 	public string? IdleAnimName { get; set; } = default;
 
-	[DDLRegistration(0xd8c1005cu)]
+	[DDLRegistration(0x35511e76u)]
 	public List<HeroAnimMapElement?> HeroAnimMap { get; set; } = [];
 
 	public static HeroMountData Create(DDLObject ddl) => new(ddl);

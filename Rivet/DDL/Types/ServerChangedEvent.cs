@@ -18,7 +18,7 @@ public class ServerChangedEvent : EventBase, IDDLObjectType<ServerChangedEvent> 
 		IsServer = ddl.GetValue<bool>(0x6104625cu, IsServer);
 	}
 
-	[DDLRegistration(0x66a25070u)]
+	[DDLRegistration(0x6104625cu)]
 	public bool IsServer { get; set; } = false;
 
 	public new static ServerChangedEvent Create(DDLObject ddl) => new(ddl);

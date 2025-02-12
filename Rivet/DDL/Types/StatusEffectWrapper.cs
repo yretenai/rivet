@@ -18,7 +18,7 @@ public class StatusEffectWrapper : DDLObjectType, IDDLObjectType<StatusEffectWra
 		Effect = ddl.GetObject<StatusEffectBasePrius>(0x8818df95u);
 	}
 
-	[DDLRegistration(0x30fffba7u)]
+	[DDLRegistration(0x8818df95u)]
 	public StatusEffectBasePrius? Effect { get; set; } = default;
 
 	public static StatusEffectWrapper Create(DDLObject ddl) => new(ddl);

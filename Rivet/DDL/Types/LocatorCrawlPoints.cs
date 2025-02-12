@@ -20,13 +20,13 @@ public class LocatorCrawlPoints : DDLObjectType, IDDLObjectType<LocatorCrawlPoin
 		TimeToReach = ddl.GetValue<float>(0x94cabd78u, TimeToReach);
 	}
 
-	[DDLRegistration(0xfd2615c9u, description: "Locator to start at")]
+	[DDLRegistration(0x898a61c0u, description: "Locator to start at")]
 	public string? From { get; set; } = default;
 
-	[DDLRegistration(0xfd2615c9u, description: "Locator to end at")]
+	[DDLRegistration(0xe2efff19u, description: "Locator to end at")]
 	public string? To { get; set; } = default;
 
-	[DDLRegistration(0xfd2615c9u, description: "Time taken to crawl")]
+	[DDLRegistration(0x94cabd78u, description: "Time taken to crawl")]
 	public float TimeToReach { get; set; } = 0.50f;
 
 	public static LocatorCrawlPoints Create(DDLObject ddl) => new(ddl);

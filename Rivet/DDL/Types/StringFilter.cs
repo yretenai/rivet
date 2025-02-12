@@ -18,7 +18,7 @@ public class StringFilter : DDLObjectType, IDDLObjectType<StringFilter> {
 		Criteria = ddl.GetObjects<StringFilterCriterion>(0x4c1e26f1u);
 	}
 
-	[DDLRegistration(0xe5d2d5aau, description: "A filter matches if all of its criteria succeed")]
+	[DDLRegistration(0x4c1e26f1u, description: "A filter matches if all of its criteria succeed")]
 	public List<StringFilterCriterion?> Criteria { get; set; } = [];
 
 	public static StringFilter Create(DDLObject ddl) => new(ddl);

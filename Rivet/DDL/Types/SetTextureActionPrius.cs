@@ -21,16 +21,16 @@ public class SetTextureActionPrius : DDLObjectType, IDDLObjectType<SetTextureAct
 		Replacement = ddl.GetValue<RivetAssetId>(0xd909a591u, Replacement);
 	}
 
-	[DDLRegistration(0x07493408u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0x07493408u, description: "The Maya material mapping to apply this setting to.")]
+	[DDLRegistration(0x981e6927u, description: "The Maya material mapping to apply this setting to.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x07493408u, description: "The name of the original texture asset to be replaced.")]
+	[DDLRegistration(0xd573cdf5u, description: "The name of the original texture asset to be replaced.")]
 	public RivetAssetId Original { get; set; } = default;
 
-	[DDLRegistration(0x07493408u, description: "The name of the texture asset to assign to the actor.")]
+	[DDLRegistration(0xd909a591u, description: "The name of the texture asset to assign to the actor.")]
 	public RivetAssetId Replacement { get; set; } = default;
 
 	public static SetTextureActionPrius Create(DDLObject ddl) => new(ddl);

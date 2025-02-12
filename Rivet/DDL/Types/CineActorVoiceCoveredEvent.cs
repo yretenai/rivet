@@ -18,7 +18,7 @@ public class CineActorVoiceCoveredEvent : EventBase, IDDLObjectType<CineActorVoi
 		IsCovered = ddl.GetValue<bool>(0x45e06c86u, IsCovered);
 	}
 
-	[DDLRegistration(0xd0d6baefu)]
+	[DDLRegistration(0x45e06c86u)]
 	public bool IsCovered { get; set; } = false;
 
 	public new static CineActorVoiceCoveredEvent Create(DDLObject ddl) => new(ddl);

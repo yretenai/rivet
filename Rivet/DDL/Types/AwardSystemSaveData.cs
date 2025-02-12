@@ -18,7 +18,7 @@ public class AwardSystemSaveData : DDLObjectType, IDDLObjectType<AwardSystemSave
 		Awards = ddl.GetObjects<AwardSaveEntry>(0x1b92ad99u);
 	}
 
-	[DDLRegistration(0x0a18fd8bu)]
+	[DDLRegistration(0x1b92ad99u)]
 	public List<AwardSaveEntry?> Awards { get; set; } = [];
 
 	public static AwardSystemSaveData Create(DDLObject ddl) => new(ddl);

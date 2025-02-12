@@ -19,10 +19,10 @@ public class ScriptActionVarPlug : DDLObjectType, IDDLObjectType<ScriptActionVar
 		TargetId = ddl.GetValue<RivetAssetId>(0xc3642b05u, TargetId);
 	}
 
-	[DDLRegistration(0x2b09cc18u)]
+	[DDLRegistration(0xd0cdec13u)]
 	public string? PlugName { get; set; } = default;
 
-	[DDLRegistration(0x2b09cc18u)]
+	[DDLRegistration(0xc3642b05u)]
 	public RivetAssetId TargetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ScriptActionVarPlug Create(DDLObject ddl) => new(ddl);

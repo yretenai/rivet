@@ -19,10 +19,10 @@ public class ShotMrFunGuyPrius : LobbedShotPrius, IDDLObjectType<ShotMrFunGuyPri
 		MsFunGalActor = ddl.GetValue<RivetAssetId>(0xa2034711u, MsFunGalActor);
 	}
 
-	[DDLRegistration(0x046f52abu, "MrFunGuy Actor")]
+	[DDLRegistration(0xf92c208bu, "MrFunGuy Actor")]
 	public RivetAssetId MrFunGuyActor { get; set; } = default;
 
-	[DDLRegistration(0x046f52abu, "MsFunGal Actor")]
+	[DDLRegistration(0xa2034711u, "MsFunGal Actor")]
 	public RivetAssetId MsFunGalActor { get; set; } = default;
 
 	public new static ShotMrFunGuyPrius Create(DDLObject ddl) => new(ddl);

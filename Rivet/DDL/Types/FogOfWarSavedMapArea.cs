@@ -23,22 +23,22 @@ public class FogOfWarSavedMapArea : DDLObjectType, IDDLObjectType<FogOfWarSavedM
 		RevealedCellsBitSet = ddl.GetValues<byte>(0x2cc32101u);
 	}
 
-	[DDLRegistration(0xa891abeeu)]
+	[DDLRegistration(0x7fc08274u)]
 	public DDLVector2? TopLeft { get; set; } = default;
 
-	[DDLRegistration(0xa891abeeu)]
+	[DDLRegistration(0x53891b09u)]
 	public DDLVector2? BotRight { get; set; } = default;
 
-	[DDLRegistration(0xa891abeeu)]
+	[DDLRegistration(0x59bf8ea9u)]
 	public DDLVector2? CellDimensions { get; set; } = default;
 
-	[DDLRegistration(0xa891abeeu)]
+	[DDLRegistration(0x0bc37dc3u)]
 	public uint ColumnCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa891abeeu)]
+	[DDLRegistration(0x98b569fau)]
 	public uint RowCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa891abeeu)]
+	[DDLRegistration(0x2cc32101u)]
 	public List<byte> RevealedCellsBitSet { get; set; } = [];
 
 	public static FogOfWarSavedMapArea Create(DDLObject ddl) => new(ddl);

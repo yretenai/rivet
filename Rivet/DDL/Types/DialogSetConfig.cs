@@ -18,7 +18,7 @@ public class DialogSetConfig : ConfigBase, IDDLObjectType<DialogSetConfig> {
 		Set = ddl.GetObject<DialogSet>(0xcc410c15u);
 	}
 
-	[DDLRegistration(0x99cc709bu)]
+	[DDLRegistration(0xcc410c15u)]
 	public DialogSet? Set { get; set; } = default;
 
 	public new static DialogSetConfig Create(DDLObject ddl) => new(ddl);

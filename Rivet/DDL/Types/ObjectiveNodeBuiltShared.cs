@@ -18,7 +18,7 @@ public class ObjectiveNodeBuiltShared : DDLObjectType, IDDLObjectType<ObjectiveN
 		ObjectiveName = ddl.GetString(0x58746b9b) ?? ObjectiveName;
 	}
 
-	[DDLRegistration(0xe0b664bau)]
+	[DDLRegistration(0x58746b9bu)]
 	public string? ObjectiveName { get; set; } = default;
 
 	public static ObjectiveNodeBuiltShared Create(DDLObject ddl) => new(ddl);

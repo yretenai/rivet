@@ -27,34 +27,34 @@ public class MaterialTemplateDef : DDLObjectType, IDDLObjectType<MaterialTemplat
 		VarLinks = ddl.GetObjects<UIVariationLink>(0x48566894u);
 	}
 
-	[DDLRegistration(0x858a9193u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x858a9193u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x858a9193u)]
+	[DDLRegistration(0x6ccf66b3u)]
 	public string? SourcePath { get; set; } = default;
 
-	[DDLRegistration(0x858a9193u)]
+	[DDLRegistration(0x5e53ae29u)]
 	public PreviewModel? PreviewModel { get; set; } = default;
 
-	[DDLRegistration(0x858a9193u)]
+	[DDLRegistration(0x04d6d352u)]
 	public uint ContentHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x858a9193u)]
+	[DDLRegistration(0x80850167u)]
 	public List<ShaderConstant?> Variations { get; set; } = [];
 
-	[DDLRegistration(0x858a9193u)]
+	[DDLRegistration(0x11306034u)]
 	public List<ShaderConstant?> Constants { get; set; } = [];
 
-	[DDLRegistration(0x858a9193u)]
+	[DDLRegistration(0x6ebd7b22u)]
 	public List<ShaderConstant?> Globals { get; set; } = [];
 
-	[DDLRegistration(0x858a9193u)]
+	[DDLRegistration(0x5f860466u)]
 	public List<ShaderSampler?> Textures { get; set; } = [];
 
-	[DDLRegistration(0x858a9193u)]
+	[DDLRegistration(0x48566894u)]
 	public List<UIVariationLink?> VarLinks { get; set; } = [];
 
 	public static MaterialTemplateDef Create(DDLObject ddl) => new(ddl);

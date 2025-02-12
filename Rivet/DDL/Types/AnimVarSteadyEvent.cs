@@ -18,7 +18,7 @@ public class AnimVarSteadyEvent : EventBase, IDDLObjectType<AnimVarSteadyEvent> 
 		VarName = ddl.GetValue<uint>(0x8cd13823u, VarName);
 	}
 
-	[DDLRegistration(0x180a852cu)]
+	[DDLRegistration(0x8cd13823u)]
 	public uint VarName { get; set; } = 0x00000000;
 
 	public new static AnimVarSteadyEvent Create(DDLObject ddl) => new(ddl);

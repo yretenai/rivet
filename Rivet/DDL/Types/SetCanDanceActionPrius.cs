@@ -19,10 +19,10 @@ public class SetCanDanceActionPrius : DDLObjectType, IDDLObjectType<SetCanDanceA
 		CanDance = ddl.GetValue<bool>(0xc1d0c94cu, CanDance);
 	}
 
-	[DDLRegistration(0x8ae8b941u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x8ae8b941u)]
+	[DDLRegistration(0xc1d0c94cu)]
 	public bool CanDance { get; set; } = false;
 
 	public static SetCanDanceActionPrius Create(DDLObject ddl) => new(ddl);

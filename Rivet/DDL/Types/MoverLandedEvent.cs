@@ -18,7 +18,7 @@ public class MoverLandedEvent : EventBase, IDDLObjectType<MoverLandedEvent> {
 		GroundMaterial = ddl.GetEnum<x10b3c4cf>(0x4ba3454cu, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0x16df9b41u)]
+	[DDLRegistration(0x4ba3454cu)]
 	public x10b3c4cf GroundMaterial { get; set; } = x10b3c4cf.None;
 
 	public new static MoverLandedEvent Create(DDLObject ddl) => new(ddl);

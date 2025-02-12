@@ -23,22 +23,22 @@ public class Cinematic2BehaviorPlayDriverActionDef : DDLObjectType, IDDLObjectTy
 		DriverName = ddl.GetString(0x7a8704f5) ?? DriverName;
 	}
 
-	[DDLRegistration(0x78fe5b10u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x78fe5b10u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x78fe5b10u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x78fe5b10u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x78fe5b10u)]
+	[DDLRegistration(0x461f415eu)]
 	public float BlendInDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x78fe5b10u, description: "driver from animset to be played")]
+	[DDLRegistration(0x7a8704f5u, description: "driver from animset to be played")]
 	public string? DriverName { get; set; } = default;
 
 	public static Cinematic2BehaviorPlayDriverActionDef Create(DDLObject ddl) => new(ddl);

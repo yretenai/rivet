@@ -19,10 +19,10 @@ public class GameAwardPurchaseWeaponPrius : AwardBasePrius, IDDLObjectType<GameA
 		HACK_ItemConfigsToAllowTransfer = ddl.GetValues<RivetAssetId>(0x9e7540f3u);
 	}
 
-	[DDLRegistration(0x4e5bc9b5u, "Item Configs")]
+	[DDLRegistration(0x7fc28238u, "Item Configs")]
 	public List<RivetAssetId> ItemConfigs { get; set; } = [];
 
-	[DDLRegistration(0x4e5bc9b5u, "(HACK) Item Configs to Allow Transfer")]
+	[DDLRegistration(0x9e7540f3u, "(HACK) Item Configs to Allow Transfer")]
 	public List<RivetAssetId> HACK_ItemConfigsToAllowTransfer { get; set; } = [];
 
 	public new static GameAwardPurchaseWeaponPrius Create(DDLObject ddl) => new(ddl);

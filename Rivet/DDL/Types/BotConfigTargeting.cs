@@ -18,7 +18,7 @@ public class BotConfigTargeting : ConfigBase, IDDLObjectType<BotConfigTargeting>
 		Targeting = ddl.GetObject<TargetingBasePrius>(0x61ddca35u);
 	}
 
-	[DDLRegistration(0x36b719abu)]
+	[DDLRegistration(0x61ddca35u)]
 	public TargetingBasePrius? Targeting { get; set; } = default;
 
 	public new static BotConfigTargeting Create(DDLObject ddl) => new(ddl);

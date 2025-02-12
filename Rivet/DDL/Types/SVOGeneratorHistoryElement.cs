@@ -18,7 +18,7 @@ public class SVOGeneratorHistoryElement : DDLObjectType, IDDLObjectType<SVOGener
 		Element = ddl.GetObject<SVOGeneratorStepBase>(0x40aa3d01u);
 	}
 
-	[DDLRegistration(0x33325fc4u)]
+	[DDLRegistration(0x40aa3d01u)]
 	public SVOGeneratorStepBase? Element { get; set; } = default;
 
 	public static SVOGeneratorHistoryElement Create(DDLObject ddl) => new(ddl);

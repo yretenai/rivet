@@ -27,34 +27,34 @@ public class MissionConfig : RegionGameDataBase, IDDLObjectType<MissionConfig> {
 		Objectives = ddl.GetObjects<MissionObjectiveArrayData>(0xb7863755u);
 	}
 
-	[DDLRegistration(0xf6f17b7eu)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0xf6f17b7eu)]
+	[DDLRegistration(0x5d1eb3fbu)]
 	public string? MissionTitle { get; set; } = default;
 
-	[DDLRegistration(0xf6f17b7eu)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0xf6f17b7eu, description: "Will overwrite the hardcoded string if set")]
+	[DDLRegistration(0x02482970u, description: "Will overwrite the hardcoded string if set")]
 	public string? LocTagMissionTitle { get; set; } = "INVALID";
 
-	[DDLRegistration(0xf6f17b7eu, description: "Will overwrite the hardcoded string if set")]
+	[DDLRegistration(0xb32a92c4u, description: "Will overwrite the hardcoded string if set")]
 	public string? LocTagDescription { get; set; } = "INVALID";
 
-	[DDLRegistration(0xf6f17b7eu)]
+	[DDLRegistration(0xc99ab322u)]
 	public string? LocTagDescriptionEnd { get; set; } = "INVALID";
 
-	[DDLRegistration(0xf6f17b7eu, description: "Use the specified lighting mode when this mission is active.")]
+	[DDLRegistration(0x344cb7e0u, description: "Use the specified lighting mode when this mission is active.")]
 	public bool OverrideLightingMode { get; set; } = false;
 
-	[DDLRegistration(0xf6f17b7eu, description: "Lighting mode to use when this mission is active.")]
+	[DDLRegistration(0x537e2fccu, description: "Lighting mode to use when this mission is active.")]
 	public LightingModeGame LightingMode { get; set; } = LightingModeGame.Day;
 
-	[DDLRegistration(0xf6f17b7eu)]
+	[DDLRegistration(0x5717c749u)]
 	public bool VisibleInMissionLog { get; set; } = true;
 
-	[DDLRegistration(0xf6f17b7eu)]
+	[DDLRegistration(0xb7863755u)]
 	public List<MissionObjectiveArrayData?> Objectives { get; set; } = [];
 
 	public new static MissionConfig Create(DDLObject ddl) => new(ddl);

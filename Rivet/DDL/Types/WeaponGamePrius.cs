@@ -23,22 +23,22 @@ public class WeaponGamePrius : WeaponBasePrius, IDDLObjectType<WeaponGamePrius> 
 		Recoil = ddl.GetObjects<BasicRecoilPrius>(0x02a1925eu);
 	}
 
-	[DDLRegistration(0x8bbbb4ebu)]
+	[DDLRegistration(0x14446789u)]
 	public bool DebugColorEnabled { get; set; } = false;
 
-	[DDLRegistration(0x8bbbb4ebu)]
+	[DDLRegistration(0xae9ea1f6u)]
 	public DDLVector3? DebugColor { get; set; } = default;
 
-	[DDLRegistration(0x8bbbb4ebu)]
+	[DDLRegistration(0x351c9a6au)]
 	public bool IgnoreCameraContextVolumesForAiming { get; set; } = false;
 
-	[DDLRegistration(0x8bbbb4ebu)]
+	[DDLRegistration(0xbda2e316u)]
 	public bool SupportsToggleFire { get; set; } = true;
 
-	[DDLRegistration(0x8bbbb4ebu)]
+	[DDLRegistration(0xb9f35c34u)]
 	public bool SupportsHoldFire { get; set; } = true;
 
-	[DDLRegistration(0x8bbbb4ebu)]
+	[DDLRegistration(0x02a1925eu)]
 	public List<BasicRecoilPrius?> Recoil { get; set; } = [];
 
 	public new static WeaponGamePrius Create(DDLObject ddl) => new(ddl);

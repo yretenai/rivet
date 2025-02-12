@@ -25,28 +25,28 @@ public class VanityBundleConfig : ConfigBase, IDDLObjectType<VanityBundleConfig>
 		CoversVoice = ddl.GetValue<bool>(0x026a653cu, CoversVoice);
 	}
 
-	[DDLRegistration(0xb68fd998u)]
+	[DDLRegistration(0xce4eaef0u)]
 	public VanityBundleType BundleType { get; set; } = VanityBundleType.Head;
 
-	[DDLRegistration(0xb68fd998u, description: "Unique identifier for this vanity pickup")]
+	[DDLRegistration(0xf61c4918u, description: "Unique identifier for this vanity pickup")]
 	public xd230f155 SaveID { get; set; } = xd230f155.None;
 
-	[DDLRegistration(0xb68fd998u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0xb68fd998u)]
+	[DDLRegistration(0xbf65e011u)]
 	public string? DisplayDesc { get; set; } = default;
 
-	[DDLRegistration(0xb68fd998u)]
+	[DDLRegistration(0x113d8e81u)]
 	public RivetAssetId DisplayImage { get; set; } = default;
 
-	[DDLRegistration(0xb68fd998u, "Vanity Item Configs", "This is the form that vanity is given away to the player.")]
+	[DDLRegistration(0x471b6f0au, "Vanity Item Configs", "This is the form that vanity is given away to the player.")]
 	public List<RivetAssetId> VanityItems { get; set; } = [];
 
-	[DDLRegistration(0xb68fd998u)]
+	[DDLRegistration(0xacd6779bu)]
 	public List<x56bca86c> Accessories { get; set; } = [];
 
-	[DDLRegistration(0xb68fd998u, description: "Set this to true if the voice of the hero should change with this on.")]
+	[DDLRegistration(0x026a653cu, description: "Set this to true if the voice of the hero should change with this on.")]
 	public bool CoversVoice { get; set; } = false;
 
 	public new static VanityBundleConfig Create(DDLObject ddl) => new(ddl);

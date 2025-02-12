@@ -23,22 +23,22 @@ public class OnBaseEventActionPrius : DDLObjectType, IDDLObjectType<OnBaseEventA
 		FieldFilters = ddl.GetObjects<EventFilter>(0xa7330d10u);
 	}
 
-	[DDLRegistration(0xc46703ceu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0xc46703ceu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0xc46703ceu, "Reset on listen?", "Whether to reset our listen if StartListening is triggered while we were already listening. If false, will ignore all StartListening triggers until StopListening is triggered.")]
+	[DDLRegistration(0xf86b3b4eu, "Reset on listen?", "Whether to reset our listen if StartListening is triggered while we were already listening. If false, will ignore all StartListening triggers until StopListening is triggered.")]
 	public bool ResetOnListen { get; set; } = true;
 
-	[DDLRegistration(0xc46703ceu, "Listen to only self events?", "Whether to listen to only self events (the target actor is the sender and the Baser of the event).")]
+	[DDLRegistration(0xcb94eef9u, "Listen to only self events?", "Whether to listen to only self events (the target actor is the sender and the Baser of the event).")]
 	public bool OnlySelfEvents { get; set; } = false;
 
-	[DDLRegistration(0xc46703ceu, "Initially Listening?", "If true, starts listening as soon as it can, otherwise, defaults to not listening upon creation.")]
+	[DDLRegistration(0x78ee34cbu, "Initially Listening?", "If true, starts listening as soon as it can, otherwise, defaults to not listening upon creation.")]
 	public bool InitialListen { get; set; } = false;
 
-	[DDLRegistration(0xc46703ceu)]
+	[DDLRegistration(0xa7330d10u)]
 	public List<EventFilter?> FieldFilters { get; set; } = [];
 
 	public static OnBaseEventActionPrius Create(DDLObject ddl) => new(ddl);

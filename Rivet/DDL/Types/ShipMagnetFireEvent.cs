@@ -18,7 +18,7 @@ public class ShipMagnetFireEvent : EventBase, IDDLObjectType<ShipMagnetFireEvent
 		AmmoCount = ddl.GetValue<byte>(0xf5fba7feu, AmmoCount);
 	}
 
-	[DDLRegistration(0x9d0840dfu, description: "The number of towed objects fired.")]
+	[DDLRegistration(0xf5fba7feu, description: "The number of towed objects fired.")]
 	public byte AmmoCount { get; set; } = 0x00;
 
 	public new static ShipMagnetFireEvent Create(DDLObject ddl) => new(ddl);

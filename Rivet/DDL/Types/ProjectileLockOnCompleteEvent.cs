@@ -18,7 +18,7 @@ public class ProjectileLockOnCompleteEvent : EventBase, IDDLObjectType<Projectil
 		VictimActorHandle = ddl.GetValue<uint>(0xede29c11u, VictimActorHandle);
 	}
 
-	[DDLRegistration(0xa76b06efu)]
+	[DDLRegistration(0xede29c11u)]
 	public uint VictimActorHandle { get; set; } = 0x00000000;
 
 	public new static ProjectileLockOnCompleteEvent Create(DDLObject ddl) => new(ddl);

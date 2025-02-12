@@ -19,10 +19,10 @@ public class AreaLoadedTriggerPrius : BaseCustomOverlayTriggerPrius, IDDLObjectT
 		ExclusivelyLoaded = ddl.GetValue<bool>(0x6ff5b495u, ExclusivelyLoaded);
 	}
 
-	[DDLRegistration(0xc4b9e1e8u)]
+	[DDLRegistration(0xdbabcd0eu)]
 	public string? AreaName { get; set; } = default;
 
-	[DDLRegistration(0xc4b9e1e8u, description: "Trigger if this is the only valid area")]
+	[DDLRegistration(0x6ff5b495u, description: "Trigger if this is the only valid area")]
 	public bool ExclusivelyLoaded { get; set; } = true;
 
 	public new static AreaLoadedTriggerPrius Create(DDLObject ddl) => new(ddl);

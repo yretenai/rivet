@@ -18,7 +18,7 @@ public class ClankPuzzleWireStartPrius : DDLObjectType, IDDLObjectType<ClankPuzz
 		Curve = ddl.GetValue<RivetAssetId>(0x4eca9176u, Curve);
 	}
 
-	[DDLRegistration(0x6977bf6cu, description: "This is the curve we should ride.")]
+	[DDLRegistration(0x4eca9176u, description: "This is the curve we should ride.")]
 	public RivetAssetId Curve { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ClankPuzzleWireStartPrius Create(DDLObject ddl) => new(ddl);

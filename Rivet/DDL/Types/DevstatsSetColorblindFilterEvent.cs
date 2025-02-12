@@ -22,19 +22,19 @@ public class DevstatsSetColorblindFilterEvent : EventBase, IDDLObjectType<Devsta
 		FilterStrength = ddl.GetValue<float>(0xbe4fe432u, FilterStrength);
 	}
 
-	[DDLRegistration(0xe3cedd6bu)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xe3cedd6bu)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0xe3cedd6bu)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
-	[DDLRegistration(0xe3cedd6bu)]
+	[DDLRegistration(0x46712e84u)]
 	public string? FilterMode { get; set; } = default;
 
-	[DDLRegistration(0xe3cedd6bu)]
+	[DDLRegistration(0xbe4fe432u)]
 	public float FilterStrength { get; set; } = 0.00f;
 
 	public new static DevstatsSetColorblindFilterEvent Create(DDLObject ddl) => new(ddl);

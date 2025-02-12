@@ -21,16 +21,16 @@ public class GameBotShooterConstructorBotPrius : GameBotShooterPrius, IDDLObject
 		FiringConfig = ddl.GetValue<RivetAssetId>(0xbf45b6ebu, FiringConfig);
 	}
 
-	[DDLRegistration(0x5e54ec1cu, description: "Whether the bot is stationary (never moves).")]
+	[DDLRegistration(0x03cf2aceu, description: "Whether the bot is stationary (never moves).")]
 	public bool IsStationary { get; set; } = true;
 
-	[DDLRegistration(0x5e54ec1cu, description: "Whether the bot shoots when going toward a firepoint.")]
+	[DDLRegistration(0xac33828au, description: "Whether the bot shoots when going toward a firepoint.")]
 	public bool ShootsWhileMoving { get; set; } = false;
 
-	[DDLRegistration(0x5e54ec1cu, "Gun Locator", "The name of the locator the gun should attach to.")]
+	[DDLRegistration(0xfa8dcd9au, "Gun Locator", "The name of the locator the gun should attach to.")]
 	public string? AttachLocator { get; set; } = "igLoc_bulletEmit";
 
-	[DDLRegistration(0x5e54ec1cu, "Firing (weapon) Config", "Base Type: GameBotConfigFiring")]
+	[DDLRegistration(0xbf45b6ebu, "Firing (weapon) Config", "Base Type: GameBotConfigFiring")]
 	public RivetAssetId FiringConfig { get; set; } = default;
 
 	public new static GameBotShooterConstructorBotPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class EnabledComponentBasePrius : DDLObjectType, IDDLObjectType<EnabledCo
 		SendEnabledEvents = ddl.GetValue<bool>(0x53070be4u, SendEnabledEvents);
 	}
 
-	[DDLRegistration(0xd31c2109u, "Start Enabled?", "Whether this component starts enabled.")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled?", "Whether this component starts enabled.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0xd31c2109u, "Send enabled events?", "Whether this component should send the OnEnabledEvent and OnDisabledEvent when enabling/disabling.")]
+	[DDLRegistration(0x53070be4u, "Send enabled events?", "Whether this component should send the OnEnabledEvent and OnDisabledEvent when enabling/disabling.")]
 	public bool SendEnabledEvents { get; set; } = true;
 
 	public static EnabledComponentBasePrius Create(DDLObject ddl) => new(ddl);

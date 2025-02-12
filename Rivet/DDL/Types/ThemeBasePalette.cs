@@ -19,10 +19,10 @@ public class ThemeBasePalette : DDLObjectType, IDDLObjectType<ThemeBasePalette> 
 		Window = ddl.GetString(0xb59cb7ba) ?? Window;
 	}
 
-	[DDLRegistration(0xae135920u)]
+	[DDLRegistration(0x047ee25au)]
 	public string? Button { get; set; } = default;
 
-	[DDLRegistration(0xae135920u)]
+	[DDLRegistration(0xb59cb7bau)]
 	public string? Window { get; set; } = default;
 
 	public static ThemeBasePalette Create(DDLObject ddl) => new(ddl);

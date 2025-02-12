@@ -19,10 +19,10 @@ public class AccessibilityRemapData : DDLObjectType, IDDLObjectType<Accessibilit
 		Combos = ddl.GetObjects<AccessibilityComboDisplayData>(0xb3ce15d2u);
 	}
 
-	[DDLRegistration(0x7e830107u, description: "Preset control remappings")]
+	[DDLRegistration(0xd21fa257u, description: "Preset control remappings")]
 	public List<AccessibilityPresetData?> Presets { get; set; } = [];
 
-	[DDLRegistration(0x7e830107u, description: "Display information for button combos")]
+	[DDLRegistration(0xb3ce15d2u, description: "Display information for button combos")]
 	public List<AccessibilityComboDisplayData?> Combos { get; set; } = [];
 
 	public static AccessibilityRemapData Create(DDLObject ddl) => new(ddl);

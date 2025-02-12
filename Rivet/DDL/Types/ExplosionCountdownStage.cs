@@ -22,19 +22,19 @@ public class ExplosionCountdownStage : DDLObjectType, IDDLObjectType<ExplosionCo
 		IsLastBeep = ddl.GetValue<bool>(0x39f938d5u, IsLastBeep);
 	}
 
-	[DDLRegistration(0xd7d6f672u)]
+	[DDLRegistration(0xc235ad3cu)]
 	public float TimeUntilNextStage { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd7d6f672u)]
+	[DDLRegistration(0x43819dbdu)]
 	public float FlashFadeInDuration { get; set; } = 0.25f;
 
-	[DDLRegistration(0xd7d6f672u)]
+	[DDLRegistration(0x1834b566u)]
 	public float FlashFadeOutDuration { get; set; } = 0.25f;
 
-	[DDLRegistration(0xd7d6f672u)]
+	[DDLRegistration(0xfe1c6519u)]
 	public bool ShouldPlayBeepAudio { get; set; } = false;
 
-	[DDLRegistration(0xd7d6f672u)]
+	[DDLRegistration(0x39f938d5u)]
 	public bool IsLastBeep { get; set; } = false;
 
 	public static ExplosionCountdownStage Create(DDLObject ddl) => new(ddl);

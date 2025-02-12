@@ -21,16 +21,16 @@ public class DuringObjectivesTriggerPrius_Tools : AbstractTriggerPrius_Tools, ID
 		EndObjectiveName = ddl.GetString(0x0f9039d9) ?? EndObjectiveName;
 	}
 
-	[DDLRegistration(0x7b49f348u, description: "This mission must be active or complete for the overlay to load")]
+	[DDLRegistration(0xfe0f742au, description: "This mission must be active or complete for the overlay to load")]
 	public string? StartMissionName { get; set; } = default;
 
-	[DDLRegistration(0x7b49f348u, description: "This objective in Start Mission must be active or complete for the overlay to load")]
+	[DDLRegistration(0xe2320ffau, description: "This objective in Start Mission must be active or complete for the overlay to load")]
 	public string? StartObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0x7b49f348u, description: "This mission or (StartMission if left blank) must be not yet be complete for the overlay to load")]
+	[DDLRegistration(0x91d8893eu, description: "This mission or (StartMission if left blank) must be not yet be complete for the overlay to load")]
 	public string? EndMissionName { get; set; } = default;
 
-	[DDLRegistration(0x7b49f348u, description: "This objective in End Mission (or Start Mission if End Mission left blank) must not yet be complete for the overlay to load")]
+	[DDLRegistration(0x0f9039d9u, description: "This objective in End Mission (or Start Mission if End Mission left blank) must not yet be complete for the overlay to load")]
 	public string? EndObjectiveName { get; set; } = default;
 
 	public new static DuringObjectivesTriggerPrius_Tools Create(DDLObject ddl) => new(ddl);

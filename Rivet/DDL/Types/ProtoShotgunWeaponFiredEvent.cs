@@ -18,7 +18,7 @@ public class ProtoShotgunWeaponFiredEvent : WeaponTriggeredEvent, IDDLObjectType
 		IsLeftBarrel = ddl.GetValue<bool>(0xdabe7167u, IsLeftBarrel);
 	}
 
-	[DDLRegistration(0x06e62d2bu)]
+	[DDLRegistration(0xdabe7167u)]
 	public bool IsLeftBarrel { get; set; } = false;
 
 	public new static ProtoShotgunWeaponFiredEvent Create(DDLObject ddl) => new(ddl);

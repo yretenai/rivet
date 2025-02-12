@@ -20,13 +20,13 @@ public class DetectChangeActionPrius : DDLObjectType, IDDLObjectType<DetectChang
 		ListenOnInit = ddl.GetValue<bool>(0xd227a73du, ListenOnInit);
 	}
 
-	[DDLRegistration(0x6b315ddbu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x6b315ddbu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0x6b315ddbu, "Active on startup")]
+	[DDLRegistration(0xd227a73du, "Active on startup")]
 	public bool ListenOnInit { get; set; } = true;
 
 	public static DetectChangeActionPrius Create(DDLObject ddl) => new(ddl);

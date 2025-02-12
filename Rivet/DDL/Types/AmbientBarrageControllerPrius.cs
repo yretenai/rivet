@@ -24,25 +24,25 @@ public class AmbientBarrageControllerPrius : DDLObjectType, IDDLObjectType<Ambie
 		MaxDistanceFromTarget = ddl.GetValue<float>(0x34fb8dc8u, MaxDistanceFromTarget);
 	}
 
-	[DDLRegistration(0x7c16401fu, description: "Ambient shooters to control")]
+	[DDLRegistration(0x843c6a98u, description: "Ambient shooters to control")]
 	public RivetAssetId AmbientShooterActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x7c16401fu, description: "Targets to hit (unless overridden by script)")]
+	[DDLRegistration(0x38571033u, description: "Targets to hit (unless overridden by script)")]
 	public RivetAssetId DefaultTargetActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x7c16401fu, description: "Ambient Barrage Config")]
+	[DDLRegistration(0xc1d92357u, description: "Ambient Barrage Config")]
 	public RivetAssetId AmbientBarrageConfig { get; set; } = default;
 
-	[DDLRegistration(0x7c16401fu, description: "If TRUE, we start barraging on Activation.  Otherwise we rely on script to control us")]
+	[DDLRegistration(0xb417dda9u, description: "If TRUE, we start barraging on Activation.  Otherwise we rely on script to control us")]
 	public bool StartOnActivate { get; set; } = false;
 
-	[DDLRegistration(0x7c16401fu, description: "If TRUE, only shooters on screen will be allowed to fire")]
+	[DDLRegistration(0x65810190u, description: "If TRUE, only shooters on screen will be allowed to fire")]
 	public bool OnScreenShootersOnly { get; set; } = true;
 
-	[DDLRegistration(0x7c16401fu, description: "If TRUE, we run extra scoring checks to make sure the best shooter-target pair are engaged")]
+	[DDLRegistration(0xece53a66u, description: "If TRUE, we run extra scoring checks to make sure the best shooter-target pair are engaged")]
 	public bool OnlyBestShooterFires { get; set; } = false;
 
-	[DDLRegistration(0x7c16401fu, description: "Don't fire if targets are further than this distance.")]
+	[DDLRegistration(0x34fb8dc8u, description: "Don't fire if targets are further than this distance.")]
 	public float MaxDistanceFromTarget { get; set; } = -1.00f;
 
 	public static AmbientBarrageControllerPrius Create(DDLObject ddl) => new(ddl);

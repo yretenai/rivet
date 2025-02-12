@@ -19,10 +19,10 @@ public class ActorValidNodeDef : ActorNodeBaseDef, IDDLObjectType<ActorValidNode
 		IsValid = ddl.GetObject<OutputPlugBoolean>(0x84fa27f9u);
 	}
 
-	[DDLRegistration(0x8371ec4cu)]
+	[DDLRegistration(0x5d269a38u)]
 	public InputPlugActor? Actor { get; set; } = default;
 
-	[DDLRegistration(0x8371ec4cu, "Is Valid?")]
+	[DDLRegistration(0x84fa27f9u, "Is Valid?")]
 	public OutputPlugBoolean? IsValid { get; set; } = default;
 
 	public new static ActorValidNodeDef Create(DDLObject ddl) => new(ddl);

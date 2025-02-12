@@ -26,31 +26,31 @@ public class WwiseGameSyncActionPrius : DDLObjectType, IDDLObjectType<WwiseGameS
 		WwiseParameter = ddl.GetObject<WwiseParameter>(0x605c4178u);
 	}
 
-	[DDLRegistration(0x76f44c94u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
-	[DDLRegistration(0x76f44c94u)]
+	[DDLRegistration(0xcebb3bc3u)]
 	public WwiseEvent? WwiseEvent { get; set; } = default;
 
-	[DDLRegistration(0x76f44c94u)]
+	[DDLRegistration(0x5686e39fu)]
 	public WwiseState? WwiseState { get; set; } = default;
 
-	[DDLRegistration(0x76f44c94u)]
+	[DDLRegistration(0x3138080cu)]
 	public WwiseState? WwiseState1 { get; set; } = default;
 
-	[DDLRegistration(0x76f44c94u)]
+	[DDLRegistration(0xa83159b6u)]
 	public WwiseState? WwiseState2 { get; set; } = default;
 
-	[DDLRegistration(0x76f44c94u)]
+	[DDLRegistration(0xdf366920u)]
 	public WwiseState? WwiseState3 { get; set; } = default;
 
-	[DDLRegistration(0x76f44c94u)]
+	[DDLRegistration(0xf7c114e5u)]
 	public WwiseSwitch? WwiseSwitch { get; set; } = default;
 
-	[DDLRegistration(0x76f44c94u)]
+	[DDLRegistration(0x0bfd462eu)]
 	public WwiseTrigger? WwiseTrigger { get; set; } = default;
 
-	[DDLRegistration(0x76f44c94u)]
+	[DDLRegistration(0x605c4178u)]
 	public WwiseParameter? WwiseParameter { get; set; } = default;
 
 	public static WwiseGameSyncActionPrius Create(DDLObject ddl) => new(ddl);

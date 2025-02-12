@@ -21,16 +21,16 @@ public class VehiclePushablePrius : VehicleBasePrius, IDDLObjectType<VehiclePush
 		MaxAutoAccel = ddl.GetValue<float>(0xeca13066u, MaxAutoAccel);
 	}
 
-	[DDLRegistration(0x33505c86u)]
+	[DDLRegistration(0xe80da57bu)]
 	public float Friction { get; set; } = 0.20f;
 
-	[DDLRegistration(0x33505c86u)]
+	[DDLRegistration(0x6eaf9a3cu)]
 	public float TorqueDecay { get; set; } = 0.90f;
 
-	[DDLRegistration(0x33505c86u)]
+	[DDLRegistration(0x5c939bd6u)]
 	public float Mass { get; set; } = 20.00f;
 
-	[DDLRegistration(0x33505c86u)]
+	[DDLRegistration(0xeca13066u)]
 	public float MaxAutoAccel { get; set; } = 0.00f;
 
 	public new static VehiclePushablePrius Create(DDLObject ddl) => new(ddl);

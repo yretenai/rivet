@@ -24,25 +24,25 @@ public class ChargeAttackConfig : DDLObjectType, IDDLObjectType<ChargeAttackConf
 		ChargeAttackData = ddl.GetObject<ChargeAttackData>(0x1355867cu);
 	}
 
-	[DDLRegistration(0x78660808u, description: "Use the charge when bot HP is less than this fraction of full.")]
+	[DDLRegistration(0x70528dd6u, description: "Use the charge when bot HP is less than this fraction of full.")]
 	public float UseBelowHPFraction { get; set; } = 0.00f;
 
-	[DDLRegistration(0x78660808u, description: "How soon can any other bot charge the same actor.")]
+	[DDLRegistration(0xc8e8e65eu, description: "How soon can any other bot charge the same actor.")]
 	public float MinIntervalGlobal { get; set; } = 1.00f;
 
-	[DDLRegistration(0x78660808u, description: "How soon can this bot re-charge any actor.")]
+	[DDLRegistration(0xfe32ef5au, description: "How soon can this bot re-charge any actor.")]
 	public float MinIntervalSelf { get; set; } = 5.00f;
 
-	[DDLRegistration(0x78660808u, description: "We must be at least this far from our target to charge.")]
+	[DDLRegistration(0xeea7e0efu, description: "We must be at least this far from our target to charge.")]
 	public float MinStartDist { get; set; } = 5.00f;
 
-	[DDLRegistration(0x78660808u, description: "We must be at least this close to our target to charge.")]
+	[DDLRegistration(0x7ed4f005u, description: "We must be at least this close to our target to charge.")]
 	public float MaxStartDist { get; set; } = 30.00f;
 
-	[DDLRegistration(0x78660808u, description: "Our target must be within this angle to start our charge.")]
+	[DDLRegistration(0x81cf9194u, description: "Our target must be within this angle to start our charge.")]
 	public float MaxStartAngle { get; set; } = 30.00f;
 
-	[DDLRegistration(0x78660808u)]
+	[DDLRegistration(0x1355867cu)]
 	public ChargeAttackData? ChargeAttackData { get; set; } = default;
 
 	public static ChargeAttackConfig Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class ProximityExplosion : GrenadeExplosionMode, IDDLObjectType<Proximity
 		MaxInFlightSpeed = ddl.GetValue<float>(0xbbd7aad3u, MaxInFlightSpeed);
 	}
 
-	[DDLRegistration(0x4faeb2e8u, "In-Flight Radius", "Test radius in flight")]
+	[DDLRegistration(0x24599452u, "In-Flight Radius", "Test radius in flight")]
 	public float InFlightProximityRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4faeb2e8u, "Landed Radius", "Test radius after landing")]
+	[DDLRegistration(0xf1185690u, "Landed Radius", "Test radius after landing")]
 	public float ProximityRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4faeb2e8u, "Fuse Time", "Explode after this time anyway, -1 is never")]
+	[DDLRegistration(0x05715b9cu, "Fuse Time", "Explode after this time anyway, -1 is never")]
 	public float FuseTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x4faeb2e8u, "Max Speed To Test", "Only test in-flight if below this speed, -1 is always check")]
+	[DDLRegistration(0xbbd7aad3u, "Max Speed To Test", "Only test in-flight if below this speed, -1 is always check")]
 	public float MaxInFlightSpeed { get; set; } = -1.00f;
 
 	public new static ProximityExplosion Create(DDLObject ddl) => new(ddl);

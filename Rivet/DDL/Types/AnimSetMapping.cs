@@ -19,10 +19,10 @@ public class AnimSetMapping : DDLObjectType, IDDLObjectType<AnimSetMapping> {
 		Users = ddl.GetObject<ValidUserList>(0x0dd06928u);
 	}
 
-	[DDLRegistration(0x3f6511d6u, "User Anim Set", "If our user matches the set of Users below then make sure he has this animset.")]
+	[DDLRegistration(0xffcf15f1u, "User Anim Set", "If our user matches the set of Users below then make sure he has this animset.")]
 	public RivetAssetId AnimSet { get; set; } = default;
 
-	[DDLRegistration(0x3f6511d6u)]
+	[DDLRegistration(0x0dd06928u)]
 	public ValidUserList? Users { get; set; } = default;
 
 	public static AnimSetMapping Create(DDLObject ddl) => new(ddl);

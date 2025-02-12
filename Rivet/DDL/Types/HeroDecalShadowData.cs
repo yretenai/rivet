@@ -25,28 +25,28 @@ public class HeroDecalShadowData : DDLObjectType, IDDLObjectType<HeroDecalShadow
 		MaxDistance = ddl.GetValue<float>(0x88831235u, MaxDistance);
 	}
 
-	[DDLRegistration(0x71461558u, description: "Materialgraph asset for the shadow decal. Should evaluate whether shadow exists at a pixel or not based on the alpha channel of the texture material constant.")]
+	[DDLRegistration(0xe224f023u, description: "Materialgraph asset for the shadow decal. Should evaluate whether shadow exists at a pixel or not based on the alpha channel of the texture material constant.")]
 	public RivetAssetId DecalShadowShader { get; set; } = default;
 
-	[DDLRegistration(0x71461558u, description: "Cube model to use for the decal.")]
+	[DDLRegistration(0x2aa1d346u, description: "Cube model to use for the decal.")]
 	public RivetAssetId DecalModel { get; set; } = default;
 
-	[DDLRegistration(0x71461558u, description: "Name of the material mapping to set to the generated material.")]
+	[DDLRegistration(0x981e6927u, description: "Name of the material mapping to set to the generated material.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x71461558u, description: "Name of the materialgraph constant to set as the shadow/alpha texture.")]
+	[DDLRegistration(0x9c924decu, description: "Name of the materialgraph constant to set as the shadow/alpha texture.")]
 	public string? AlphaTextureConstantName { get; set; } = default;
 
-	[DDLRegistration(0x71461558u, description: "Tint color for decal")]
+	[DDLRegistration(0x1e992bc4u, description: "Tint color for decal")]
 	public DDLVector3? Tint { get; set; } = default;
 
-	[DDLRegistration(0x71461558u, description: "How long for the decal to blend from off to on or vice-versa")]
+	[DDLRegistration(0xf805a3f6u, description: "How long for the decal to blend from off to on or vice-versa")]
 	public float BlendTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0x71461558u, description: "Min distance to draw the decal below the player")]
+	[DDLRegistration(0x448e693au, description: "Min distance to draw the decal below the player")]
 	public float MinDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x71461558u, description: "Max distance to draw the decal below the player")]
+	[DDLRegistration(0x88831235u, description: "Max distance to draw the decal below the player")]
 	public float MaxDistance { get; set; } = 20.00f;
 
 	public static HeroDecalShadowData Create(DDLObject ddl) => new(ddl);

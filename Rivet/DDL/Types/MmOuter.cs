@@ -19,10 +19,10 @@ public class MmOuter : DDLObjectType, IDDLObjectType<MmOuter> {
 		InnerArray = ddl.GetObjects<MmArrayAndHash>(0x7d05086cu);
 	}
 
-	[DDLRegistration(0xb1b65dafu)]
+	[DDLRegistration(0x7462c708u)]
 	public MmInner? Inner { get; set; } = default;
 
-	[DDLRegistration(0xb1b65dafu)]
+	[DDLRegistration(0x7d05086cu)]
 	public List<MmArrayAndHash?> InnerArray { get; set; } = [];
 
 	public static MmOuter Create(DDLObject ddl) => new(ddl);

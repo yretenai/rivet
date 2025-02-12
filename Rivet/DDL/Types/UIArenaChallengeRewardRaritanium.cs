@@ -18,7 +18,7 @@ public class UIArenaChallengeRewardRaritanium : UIArenaChallengeReward, IDDLObje
 		Amount = ddl.GetValue<uint>(0xb0d93e25u, Amount);
 	}
 
-	[DDLRegistration(0xa600b97eu)]
+	[DDLRegistration(0xb0d93e25u)]
 	public uint Amount { get; set; } = 0x00000000;
 
 	public new static UIArenaChallengeRewardRaritanium Create(DDLObject ddl) => new(ddl);

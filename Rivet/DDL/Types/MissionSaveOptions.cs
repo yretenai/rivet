@@ -19,10 +19,10 @@ public class MissionSaveOptions : DDLObjectType, IDDLObjectType<MissionSaveOptio
 		SaveReplaySnapshot = ddl.GetValue<bool>(0x94b5c52eu, SaveReplaySnapshot);
 	}
 
-	[DDLRegistration(0xacaf1facu, "Save Snapshot on First Completion?", "Saves a restorable save-file, like a manual save, when this mission gets completed the first time.")]
+	[DDLRegistration(0x276f7d2du, "Save Snapshot on First Completion?", "Saves a restorable save-file, like a manual save, when this mission gets completed the first time.")]
 	public bool SaveSnapshot { get; set; } = false;
 
-	[DDLRegistration(0xacaf1facu, "Save Snapshot on Replay Completion?", "Saves a restorable save-file, like a manual save, when this mission gets completed during replays.")]
+	[DDLRegistration(0x94b5c52eu, "Save Snapshot on Replay Completion?", "Saves a restorable save-file, like a manual save, when this mission gets completed during replays.")]
 	public bool SaveReplaySnapshot { get; set; } = false;
 
 	public static MissionSaveOptions Create(DDLObject ddl) => new(ddl);

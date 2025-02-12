@@ -18,7 +18,7 @@ public class OverrideColorIDConstantsPrius : DDLObjectType, IDDLObjectType<Overr
 		ColorID = ddl.GetValue<float>(0xe782e753u, ColorID);
 	}
 
-	[DDLRegistration(0xcb0a205eu)]
+	[DDLRegistration(0xe782e753u)]
 	public float ColorID { get; set; } = 0.00f;
 
 	public static OverrideColorIDConstantsPrius Create(DDLObject ddl) => new(ddl);

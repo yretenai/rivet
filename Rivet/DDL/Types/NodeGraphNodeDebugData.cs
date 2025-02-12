@@ -22,19 +22,19 @@ public class NodeGraphNodeDebugData : DDLObjectType, IDDLObjectType<NodeGraphNod
 		Data = ddl.GetObject<NodeGraphDebugDataBase>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0x452ba46du)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x452ba46du)]
+	[DDLRegistration(0xb8bdc402u)]
 	public RivetAssetId FlattenedId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x452ba46du)]
+	[DDLRegistration(0x76b05713u)]
 	public RivetAssetId GraphId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x452ba46du)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x452ba46du)]
+	[DDLRegistration(0x9d6333d3u)]
 	public NodeGraphDebugDataBase? Data { get; set; } = default;
 
 	public static NodeGraphNodeDebugData Create(DDLObject ddl) => new(ddl);

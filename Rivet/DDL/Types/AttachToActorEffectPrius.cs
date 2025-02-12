@@ -25,28 +25,28 @@ public class AttachToActorEffectPrius : ScriptedShotEffectBasePrius, IDDLObjectT
 		HideOnAutoDestroy = ddl.GetValue<bool>(0xe71cbd5au, HideOnAutoDestroy);
 	}
 
-	[DDLRegistration(0x8dbdaa42u)]
+	[DDLRegistration(0x1eb7640eu)]
 	public x04891b54 ActorType { get; set; } = x04891b54.HitActor;
 
-	[DDLRegistration(0x8dbdaa42u)]
+	[DDLRegistration(0xfd42c180u)]
 	public string? AttachJoint { get; set; } = default;
 
-	[DDLRegistration(0x8dbdaa42u)]
+	[DDLRegistration(0x8664041bu)]
 	public bool ResetScriptedShotLifeTime { get; set; } = true;
 
-	[DDLRegistration(0x8dbdaa42u)]
+	[DDLRegistration(0x46741ea8u)]
 	public float NewLifeTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x8dbdaa42u)]
+	[DDLRegistration(0xbf9f9307u)]
 	public bool DestroyOnBotDeath { get; set; } = false;
 
-	[DDLRegistration(0x8dbdaa42u)]
+	[DDLRegistration(0x2f074a2bu)]
 	public bool DestroyOnNonBotDeath { get; set; } = false;
 
-	[DDLRegistration(0x8dbdaa42u)]
+	[DDLRegistration(0x282599e5u)]
 	public bool MatchDestroy { get; set; } = true;
 
-	[DDLRegistration(0x8dbdaa42u)]
+	[DDLRegistration(0xe71cbd5au)]
 	public bool HideOnAutoDestroy { get; set; } = false;
 
 	public new static AttachToActorEffectPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class GroovitronDanceTrophyConfig : ConfigBase, IDDLObjectType<Groovitron
 		DancerList = ddl.GetObjects<UniqueDancerData>(0xca02462fu);
 	}
 
-	[DDLRegistration(0xc614f563u)]
+	[DDLRegistration(0xca02462fu)]
 	public List<UniqueDancerData?> DancerList { get; set; } = [];
 
 	public new static GroovitronDanceTrophyConfig Create(DDLObject ddl) => new(ddl);

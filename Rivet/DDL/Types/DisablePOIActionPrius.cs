@@ -19,10 +19,10 @@ public class DisablePOIActionPrius : DDLObjectType, IDDLObjectType<DisablePOIAct
 		Type = ddl.GetEnum<POITypeSelect>(0xbc4e9799u, POITypeSelectValues.Lookup);
 	}
 
-	[DDLRegistration(0xd0e9d4bbu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0xd0e9d4bbu, "POI Type")]
+	[DDLRegistration(0xbc4e9799u, "POI Type")]
 	public POITypeSelect Type { get; set; } = POITypeSelect.POITypeNone;
 
 	public static DisablePOIActionPrius Create(DDLObject ddl) => new(ddl);

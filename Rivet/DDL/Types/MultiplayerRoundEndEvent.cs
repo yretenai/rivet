@@ -19,10 +19,10 @@ public class MultiplayerRoundEndEvent : EventBase, IDDLObjectType<MultiplayerRou
 		Reason = ddl.GetEnum<x33ef665a>(0x05c0c66bu, x33ef665aValues.Lookup);
 	}
 
-	[DDLRegistration(0x0e1701ccu)]
+	[DDLRegistration(0x75940ec4u)]
 	public uint AreaNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0e1701ccu)]
+	[DDLRegistration(0x05c0c66bu)]
 	public x33ef665a Reason { get; set; } = x33ef665a.None;
 
 	public new static MultiplayerRoundEndEvent Create(DDLObject ddl) => new(ddl);

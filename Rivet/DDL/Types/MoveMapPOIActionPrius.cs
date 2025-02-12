@@ -19,10 +19,10 @@ public class MoveMapPOIActionPrius : DDLObjectType, IDDLObjectType<MoveMapPOIAct
 		ObjectTitleLocTag = ddl.GetString(0xaa8a528a) ?? ObjectTitleLocTag;
 	}
 
-	[DDLRegistration(0x4d4efb88u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x4d4efb88u, description: "Objective Title of POI to move.")]
+	[DDLRegistration(0xaa8a528au, description: "Objective Title of POI to move.")]
 	public string? ObjectTitleLocTag { get; set; } = "INVALID";
 
 	public static MoveMapPOIActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class LunaFtpUserLocation : DDLObjectType, IDDLObjectType<LunaFtpUserLoca
 		GameBuildsDir = ddl.GetString(0x41a70502) ?? GameBuildsDir;
 	}
 
-	[DDLRegistration(0x07351c6au)]
+	[DDLRegistration(0x11267bd7u)]
 	public string? LocationName { get; set; } = "";
 
-	[DDLRegistration(0x07351c6au)]
+	[DDLRegistration(0x41a70502u)]
 	public string? GameBuildsDir { get; set; } = "";
 
 	public static LunaFtpUserLocation Create(DDLObject ddl) => new(ddl);

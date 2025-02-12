@@ -19,10 +19,10 @@ public class ConfigBase : DDLObjectType, IDDLObjectType<ConfigBase> {
 		Comment = ddl.GetString(0x959e3154) ?? Comment;
 	}
 
-	[DDLRegistration(0xe99a7793u)]
+	[DDLRegistration(0xb13f6a45u)]
 	public RivetAssetId ID { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xe99a7793u)]
+	[DDLRegistration(0x959e3154u)]
 	public string? Comment { get; set; } = default;
 
 	public static ConfigBase Create(DDLObject ddl) => new(ddl);

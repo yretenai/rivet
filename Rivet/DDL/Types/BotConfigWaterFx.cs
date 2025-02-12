@@ -18,7 +18,7 @@ public class BotConfigWaterFx : ConfigBase, IDDLObjectType<BotConfigWaterFx> {
 		SplashGeneratorData = ddl.GetObjects<SplashGeneratorConfig>(0x4f914ba2u);
 	}
 
-	[DDLRegistration(0xd2eb1c52u)]
+	[DDLRegistration(0x4f914ba2u)]
 	public List<SplashGeneratorConfig?> SplashGeneratorData { get; set; } = [];
 
 	public new static BotConfigWaterFx Create(DDLObject ddl) => new(ddl);

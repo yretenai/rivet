@@ -18,7 +18,7 @@ public class BotConfigModifyMovement : ConfigBase, IDDLObjectType<BotConfigModif
 		SteeringPartnerCurveConfig = ddl.GetObject<SteeringPartnerCurveConfig>(0x75fa7dfbu);
 	}
 
-	[DDLRegistration(0x9397a4a2u)]
+	[DDLRegistration(0x75fa7dfbu)]
 	public SteeringPartnerCurveConfig? SteeringPartnerCurveConfig { get; set; } = default;
 
 	public new static BotConfigModifyMovement Create(DDLObject ddl) => new(ddl);

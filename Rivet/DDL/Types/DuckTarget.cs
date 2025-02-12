@@ -20,13 +20,13 @@ public class DuckTarget : DDLObjectType, IDDLObjectType<DuckTarget> {
 		DuckTime = ddl.GetValue<float>(0xfbb2e01bu, DuckTime);
 	}
 
-	[DDLRegistration(0x7d5020f1u, "Controller", "The selected Actor MUST have a SoundEnvironmentController Prius!")]
+	[DDLRegistration(0xae9f6667u, "Controller", "The selected Actor MUST have a SoundEnvironmentController Prius!")]
 	public RivetAssetId ControllerActorTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x7d5020f1u, description: "0 = 0 dB, 1 = -infinity dB, and .5 = -6 dB")]
+	[DDLRegistration(0xb59e7f4fu, description: "0 = 0 dB, 1 = -infinity dB, and .5 = -6 dB")]
 	public float DuckAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7d5020f1u)]
+	[DDLRegistration(0xfbb2e01bu)]
 	public float DuckTime { get; set; } = 1.00f;
 
 	public static DuckTarget Create(DDLObject ddl) => new(ddl);

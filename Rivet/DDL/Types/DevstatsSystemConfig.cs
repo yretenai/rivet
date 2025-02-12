@@ -19,10 +19,10 @@ public class DevstatsSystemConfig : ConfigBase, IDDLObjectType<DevstatsSystemCon
 		EventTypes = ddl.GetObjects<DevstatsEventEntry>(0x0129c4bdu);
 	}
 
-	[DDLRegistration(0x86c0710au, "Global Enabled Configurations", "Devstats will be completely turned off for configurations that aren't checked.")]
+	[DDLRegistration(0x2cc6ad5eu, "Global Enabled Configurations", "Devstats will be completely turned off for configurations that aren't checked.")]
 	public xe5616699 EnabledConfigurations { get; set; } = (xe5616699) 0x00000007;
 
-	[DDLRegistration(0x86c0710au, "Event Types")]
+	[DDLRegistration(0x0129c4bdu, "Event Types")]
 	public List<DevstatsEventEntry?> EventTypes { get; set; } = [];
 
 	public new static DevstatsSystemConfig Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SwingshotLosSettings : DDLObjectType, IDDLObjectType<SwingshotLosSe
 		TargetRefreshPeriodFrames = ddl.GetValue<byte>(0x87a25018u, TargetRefreshPeriodFrames);
 	}
 
-	[DDLRegistration(0x798e59e5u, description: "Higher value = targets refresh their visible state more frequently at the cost of performance.")]
+	[DDLRegistration(0x6352548cu, description: "Higher value = targets refresh their visible state more frequently at the cost of performance.")]
 	public byte RaycastsPerFrame { get; set; } = 0x04;
 
-	[DDLRegistration(0x798e59e5u, description: "Higher value = newly-instantiated targets can be found valid sooner at the cost of performance.")]
+	[DDLRegistration(0x87a25018u, description: "Higher value = newly-instantiated targets can be found valid sooner at the cost of performance.")]
 	public byte TargetRefreshPeriodFrames { get; set; } = 0x10;
 
 	public static SwingshotLosSettings Create(DDLObject ddl) => new(ddl);

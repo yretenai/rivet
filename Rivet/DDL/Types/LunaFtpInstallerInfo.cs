@@ -23,22 +23,22 @@ public class LunaFtpInstallerInfo : DDLObjectType, IDDLObjectType<LunaFtpInstall
 		CompatabilityVersion = ddl.GetString(0xa50b4749) ?? CompatabilityVersion;
 	}
 
-	[DDLRegistration(0xf1bba626u)]
+	[DDLRegistration(0x6638fb2bu)]
 	public string? FileName { get; set; } = "";
 
-	[DDLRegistration(0xf1bba626u)]
+	[DDLRegistration(0xcfdba147u)]
 	public ulong FileSize { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xf1bba626u)]
+	[DDLRegistration(0xd34e8692u)]
 	public int VersionMajor { get; set; } = 0;
 
-	[DDLRegistration(0xf1bba626u)]
+	[DDLRegistration(0x11f306a1u)]
 	public int VersionMinor { get; set; } = 0;
 
-	[DDLRegistration(0xf1bba626u)]
+	[DDLRegistration(0x0c51edadu)]
 	public int VersionPatch { get; set; } = 0;
 
-	[DDLRegistration(0xf1bba626u)]
+	[DDLRegistration(0xa50b4749u)]
 	public string? CompatabilityVersion { get; set; } = "";
 
 	public static LunaFtpInstallerInfo Create(DDLObject ddl) => new(ddl);

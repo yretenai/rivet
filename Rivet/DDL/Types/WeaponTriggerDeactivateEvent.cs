@@ -20,13 +20,13 @@ public class WeaponTriggerDeactivateEvent : EventBase, IDDLObjectType<WeaponTrig
 		OwnerIsLocal = ddl.GetValue<bool>(0xd23b3317u, OwnerIsLocal);
 	}
 
-	[DDLRegistration(0x3808b1a1u)]
+	[DDLRegistration(0xee73b5b3u)]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3808b1a1u)]
+	[DDLRegistration(0x0022f6dcu)]
 	public bool OwnerIsHero { get; set; } = false;
 
-	[DDLRegistration(0x3808b1a1u)]
+	[DDLRegistration(0xd23b3317u)]
 	public bool OwnerIsLocal { get; set; } = false;
 
 	public new static WeaponTriggerDeactivateEvent Create(DDLObject ddl) => new(ddl);

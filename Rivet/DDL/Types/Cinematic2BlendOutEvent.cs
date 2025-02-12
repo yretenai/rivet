@@ -19,10 +19,10 @@ public class Cinematic2BlendOutEvent : EventBase, IDDLObjectType<Cinematic2Blend
 		CurrentShotOnly = ddl.GetValue<bool>(0x4f232549u, CurrentShotOnly);
 	}
 
-	[DDLRegistration(0x25bfba30u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x25bfba30u)]
+	[DDLRegistration(0x4f232549u)]
 	public bool CurrentShotOnly { get; set; } = false;
 
 	public new static Cinematic2BlendOutEvent Create(DDLObject ddl) => new(ddl);

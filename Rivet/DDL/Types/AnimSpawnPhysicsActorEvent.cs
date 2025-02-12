@@ -18,7 +18,7 @@ public class AnimSpawnPhysicsActorEvent : EventBase, IDDLObjectType<AnimSpawnPhy
 		SpawnIndex = ddl.GetValue<byte>(0x558154b3u, SpawnIndex);
 	}
 
-	[DDLRegistration(0x7e1a9dc5u, "Spawn Index", "The index, on the AnimSpawnPhysicsActorComponent, for the object to spawn.")]
+	[DDLRegistration(0x558154b3u, "Spawn Index", "The index, on the AnimSpawnPhysicsActorComponent, for the object to spawn.")]
 	public byte SpawnIndex { get; set; } = 0x00;
 
 	public new static AnimSpawnPhysicsActorEvent Create(DDLObject ddl) => new(ddl);

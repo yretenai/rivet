@@ -19,10 +19,10 @@ public class CrowdDensityTier : DDLObjectType, IDDLObjectType<CrowdDensityTier> 
 		MaxDistance = ddl.GetValue<float>(0x88831235u, MaxDistance);
 	}
 
-	[DDLRegistration(0x1decbe42u, description: "Percentage of locators that will have members when at this distance.")]
+	[DDLRegistration(0xc14209c2u, description: "Percentage of locators that will have members when at this distance.")]
 	public float Density { get; set; } = 0.50f;
 
-	[DDLRegistration(0x1decbe42u, description: "Don't apply this density more than this distance away.")]
+	[DDLRegistration(0x88831235u, description: "Don't apply this density more than this distance away.")]
 	public float MaxDistance { get; set; } = 250.00f;
 
 	public static CrowdDensityTier Create(DDLObject ddl) => new(ddl);

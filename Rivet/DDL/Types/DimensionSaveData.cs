@@ -18,7 +18,7 @@ public class DimensionSaveData : DDLObjectType, IDDLObjectType<DimensionSaveData
 		Complete = ddl.GetValue<bool>(0xb8666d53u, Complete);
 	}
 
-	[DDLRegistration(0xbc00ff00u)]
+	[DDLRegistration(0xb8666d53u)]
 	public bool Complete { get; set; } = false;
 
 	public static DimensionSaveData Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class TriggerSwitchSimplePrius : TriggerSwitchBasePrius, IDDLObjectType<T
 		AutoDisableType = ddl.GetEnum<x4bc99fe3>(0xc0d3221bu, x4bc99fe3Values.Lookup);
 	}
 
-	[DDLRegistration(0x5abec608u, "Save Disabled?", "Whether to save if we were triggered/untriggered and disabled as a result (so on reload we will be disabled). Note we will not save if our auto disable type is none.")]
+	[DDLRegistration(0x8fdc06fbu, "Save Disabled?", "Whether to save if we were triggered/untriggered and disabled as a result (so on reload we will be disabled). Note we will not save if our auto disable type is none.")]
 	public bool SaveDisabled { get; set; } = false;
 
-	[DDLRegistration(0x5abec608u, "Allow Consecutive Triggers", "Whether to allow consecutive triggers/untriggers (i.e., if we are already triggered and are triggered again, do we actually trigger again).")]
+	[DDLRegistration(0xb4608dd0u, "Allow Consecutive Triggers", "Whether to allow consecutive triggers/untriggers (i.e., if we are already triggered and are triggered again, do we actually trigger again).")]
 	public bool AllowConsecTriggers { get; set; } = false;
 
-	[DDLRegistration(0x5abec608u, "Auto Disable Type", "Whether to auto disable this trigger when triggered or untriggered. Note if we are set to do so and our state starts in that state, we will *not* disable on load. (e.g., if we start triggered and we are set to auto disable on trigger, we won't disable until we are untriggered and triggered again).")]
+	[DDLRegistration(0xc0d3221bu, "Auto Disable Type", "Whether to auto disable this trigger when triggered or untriggered. Note if we are set to do so and our state starts in that state, we will *not* disable on load. (e.g., if we start triggered and we are set to auto disable on trigger, we won't disable until we are untriggered and triggered again).")]
 	public x4bc99fe3 AutoDisableType { get; set; } = x4bc99fe3.DoNotAutoDisable;
 
 	public new static TriggerSwitchSimplePrius Create(DDLObject ddl) => new(ddl);

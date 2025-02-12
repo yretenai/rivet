@@ -19,10 +19,10 @@ public class RespawnableGroupManagerPrius : EnabledComponentBasePrius, IDDLObjec
 		RespawnDelay = ddl.GetValue<float>(0x0e7d5e98u, RespawnDelay);
 	}
 
-	[DDLRegistration(0xc4448cb3u)]
+	[DDLRegistration(0xd1279ac6u)]
 	public List<RespawnGroup?> RespawnGroup { get; set; } = [];
 
-	[DDLRegistration(0xc4448cb3u, description: "Once all of the actors in the respawn group are destroyed, wait this many seconds before respawning")]
+	[DDLRegistration(0x0e7d5e98u, description: "Once all of the actors in the respawn group are destroyed, wait this many seconds before respawning")]
 	public float RespawnDelay { get; set; } = 0.00f;
 
 	public new static RespawnableGroupManagerPrius Create(DDLObject ddl) => new(ddl);

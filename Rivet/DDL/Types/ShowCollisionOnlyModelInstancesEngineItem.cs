@@ -18,7 +18,7 @@ public class ShowCollisionOnlyModelInstancesEngineItem : DDLObjectType, IDDLObje
 		Value = ddl.GetValue<bool>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x24155fa3u)]
+	[DDLRegistration(0x042494f5u)]
 	public bool Value { get; set; } = false;
 
 	public static ShowCollisionOnlyModelInstancesEngineItem Create(DDLObject ddl) => new(ddl);

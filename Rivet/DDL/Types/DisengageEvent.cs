@@ -18,7 +18,7 @@ public class DisengageEvent : EventBase, IDDLObjectType<DisengageEvent> {
 		TargetGroup = ddl.GetValue<uint>(0xb1e05cb0u, TargetGroup);
 	}
 
-	[DDLRegistration(0x2cab772eu)]
+	[DDLRegistration(0xb1e05cb0u)]
 	public uint TargetGroup { get; set; } = 0x00000000;
 
 	public new static DisengageEvent Create(DDLObject ddl) => new(ddl);

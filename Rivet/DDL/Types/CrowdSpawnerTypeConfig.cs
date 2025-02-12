@@ -25,28 +25,28 @@ public class CrowdSpawnerTypeConfig : ConfigBase, IDDLObjectType<CrowdSpawnerTyp
 		DensityTiersPcLow = ddl.GetObjects<CrowdDensityTier>(0xbb4a4862u);
 	}
 
-	[DDLRegistration(0x1240ed91u, description: "Model used for all members. Each member will get a random look group.")]
+	[DDLRegistration(0x3a255041u, description: "Model used for all members. Each member will get a random look group.")]
 	public RivetAssetId MemberModel { get; set; } = default;
 
-	[DDLRegistration(0x1240ed91u, description: "Model has at least this scale.")]
+	[DDLRegistration(0x3fa9c84au, description: "Model has at least this scale.")]
 	public float MinModelScale { get; set; } = 0.90f;
 
-	[DDLRegistration(0x1240ed91u, description: "Model has at most this scale.")]
+	[DDLRegistration(0x7fe6b03cu, description: "Model has at most this scale.")]
 	public float MaxModelScale { get; set; } = 1.10f;
 
-	[DDLRegistration(0x1240ed91u, description: "If spawning/despawning a model that is already on-screen, fade in/out over this time.")]
+	[DDLRegistration(0x8833d162u, description: "If spawning/despawning a model that is already on-screen, fade in/out over this time.")]
 	public float FadeTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1240ed91u)]
+	[DDLRegistration(0x5e86a82bu)]
 	public List<CrowdDensityTier?> DensityTiers { get; set; } = [];
 
-	[DDLRegistration(0x1240ed91u)]
+	[DDLRegistration(0x5ab55a9du)]
 	public List<CrowdDensityTier?> DensityTiersPerfMode60 { get; set; } = [];
 
-	[DDLRegistration(0x1240ed91u)]
+	[DDLRegistration(0x00f721fau)]
 	public List<CrowdDensityTier?> DensityTiersPcMedium { get; set; } = [];
 
-	[DDLRegistration(0x1240ed91u)]
+	[DDLRegistration(0xbb4a4862u)]
 	public List<CrowdDensityTier?> DensityTiersPcLow { get; set; } = [];
 
 	public new static CrowdSpawnerTypeConfig Create(DDLObject ddl) => new(ddl);

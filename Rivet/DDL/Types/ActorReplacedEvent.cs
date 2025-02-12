@@ -18,7 +18,7 @@ public class ActorReplacedEvent : EventBase, IDDLObjectType<ActorReplacedEvent> 
 		ReplacementActorHandle = ddl.GetValue<uint>(0x379228b1u, ReplacementActorHandle);
 	}
 
-	[DDLRegistration(0x7655fd73u)]
+	[DDLRegistration(0x379228b1u)]
 	public uint ReplacementActorHandle { get; set; } = 0x00000000;
 
 	public new static ActorReplacedEvent Create(DDLObject ddl) => new(ddl);

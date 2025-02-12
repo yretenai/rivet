@@ -22,19 +22,19 @@ public class GraphSubGraphNodeAux : DDLObjectType, IDDLObjectType<GraphSubGraphN
 		IOCache = ddl.GetObjects<GraphIOMeta>(0x3a02be37u);
 	}
 
-	[DDLRegistration(0x8ca2f618u, "Name")]
+	[DDLRegistration(0x18e87183u, "Name")]
 	public string? NameCache { get; set; } = default;
 
-	[DDLRegistration(0x8ca2f618u)]
+	[DDLRegistration(0x18486a4du)]
 	public GraphNodeNotesDef? Notes { get; set; } = default;
 
-	[DDLRegistration(0x8ca2f618u)]
+	[DDLRegistration(0x76b05713u)]
 	public RivetAssetId GraphId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8ca2f618u, "Subgraph Asset")]
+	[DDLRegistration(0x1bfc969du, "Subgraph Asset")]
 	public RivetAssetId Asset { get; set; } = default;
 
-	[DDLRegistration(0x8ca2f618u)]
+	[DDLRegistration(0x3a02be37u)]
 	public List<GraphIOMeta?> IOCache { get; set; } = [];
 
 	public static GraphSubGraphNodeAux Create(DDLObject ddl) => new(ddl);

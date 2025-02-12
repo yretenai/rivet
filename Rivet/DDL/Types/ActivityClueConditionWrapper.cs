@@ -18,7 +18,7 @@ public class ActivityClueConditionWrapper : DDLObjectType, IDDLObjectType<Activi
 		Condition = ddl.GetObject<ActivityClueConditionBase>(0x3f2b174fu);
 	}
 
-	[DDLRegistration(0xe5ea9794u, "Condition", "A condition to check whether an ActivityClue can be used")]
+	[DDLRegistration(0x3f2b174fu, "Condition", "A condition to check whether an ActivityClue can be used")]
 	public ActivityClueConditionBase? Condition { get; set; } = default;
 
 	public static ActivityClueConditionWrapper Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SyncOutputNodeSharedDef : MissionSystemNodeBaseDef, IDDLObjectType<
 		SyncLabel = ddl.GetString(0x42683cb4) ?? SyncLabel;
 	}
 
-	[DDLRegistration(0xa0ef3145u)]
+	[DDLRegistration(0x3d19ee29u)]
 	public List<InputPlugBoolean?> Inputs { get; set; } = [];
 
-	[DDLRegistration(0xa0ef3145u)]
+	[DDLRegistration(0x42683cb4u)]
 	public string? SyncLabel { get; set; } = default;
 
 	public new static SyncOutputNodeSharedDef Create(DDLObject ddl) => new(ddl);

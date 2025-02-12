@@ -27,34 +27,34 @@ public class FadeMaterialPrius : DDLObjectType, IDDLObjectType<FadeMaterialPrius
 		FadeOutHidesShadows = ddl.GetValue<bool>(0x871f1613u, FadeOutHidesShadows);
 	}
 
-	[DDLRegistration(0x550ef4adu)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public RivetAssetId Material { get; set; } = default;
 
-	[DDLRegistration(0x550ef4adu)]
+	[DDLRegistration(0x4e6815c7u)]
 	public bool AddMaterial { get; set; } = true;
 
-	[DDLRegistration(0x550ef4adu, description: "FadeInVariableName")]
+	[DDLRegistration(0xec297c50u, description: "FadeInVariableName")]
 	public string? FadeInVariableName { get; set; } = default;
 
-	[DDLRegistration(0x550ef4adu, description: "FadeInDuration")]
+	[DDLRegistration(0xc24b6989u, description: "FadeInDuration")]
 	public float FadeInDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x550ef4adu, description: "FadeOutVariableName")]
+	[DDLRegistration(0xcb029ab3u, description: "FadeOutVariableName")]
 	public string? FadeOutVariableName { get; set; } = default;
 
-	[DDLRegistration(0x550ef4adu, description: "FadeOutDuration")]
+	[DDLRegistration(0x39018b27u, description: "FadeOutDuration")]
 	public float FadeOutDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x550ef4adu)]
+	[DDLRegistration(0x84e8de6fu)]
 	public bool DestroyActorOnFadeOut { get; set; } = false;
 
-	[DDLRegistration(0x550ef4adu)]
+	[DDLRegistration(0x2d480602u)]
 	public bool StartFadedIn { get; set; } = false;
 
-	[DDLRegistration(0x550ef4adu)]
+	[DDLRegistration(0xaa71f864u)]
 	public bool PreApply { get; set; } = false;
 
-	[DDLRegistration(0x550ef4adu)]
+	[DDLRegistration(0x871f1613u)]
 	public bool FadeOutHidesShadows { get; set; } = false;
 
 	public static FadeMaterialPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class FinaleBossHeartNodeSpawnData : SimpleSpawnData, IDDLObjectType<Fina
 		NodeIndex = ddl.GetValue<byte>(0x59ce2a84u, NodeIndex);
 	}
 
-	[DDLRegistration(0xcb62149du)]
+	[DDLRegistration(0x59ce2a84u)]
 	public byte NodeIndex { get; set; } = 0x00;
 
 	public new static FinaleBossHeartNodeSpawnData Create(DDLObject ddl) => new(ddl);

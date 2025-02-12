@@ -18,7 +18,7 @@ public class CollisionCastBaseActionPrius : DDLObjectType, IDDLObjectType<Collis
 		CollisionFlags = ddl.GetBitset<PhysicsCollFlags>(0x45d4a833u, PhysicsCollFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0x517d4118u)]
+	[DDLRegistration(0x45d4a833u)]
 	public PhysicsCollFlags CollisionFlags { get; set; } = (PhysicsCollFlags) 0x00000005;
 
 	public static CollisionCastBaseActionPrius Create(DDLObject ddl) => new(ddl);

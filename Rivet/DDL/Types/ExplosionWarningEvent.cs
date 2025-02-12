@@ -18,7 +18,7 @@ public class ExplosionWarningEvent : EventBase, IDDLObjectType<ExplosionWarningE
 		FuseTime = ddl.GetValue<float>(0x05715b9cu, FuseTime);
 	}
 
-	[DDLRegistration(0x3c265eecu)]
+	[DDLRegistration(0x05715b9cu)]
 	public float FuseTime { get; set; } = 0.00f;
 
 	public new static ExplosionWarningEvent Create(DDLObject ddl) => new(ddl);

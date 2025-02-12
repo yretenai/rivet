@@ -22,19 +22,19 @@ public class TargetLocationData : DDLObjectType, IDDLObjectType<TargetLocationDa
 		BodyPartName = ddl.GetString(0xd618ef74) ?? BodyPartName;
 	}
 
-	[DDLRegistration(0x40824713u, "Location Type")]
+	[DDLRegistration(0xc3db52f8u, "Location Type")]
 	public TargetLocationType LocationType { get; set; } = TargetLocationType.BSphere;
 
-	[DDLRegistration(0x40824713u, "Location Name", "Name of the locator or joint")]
+	[DDLRegistration(0xc2f561e2u, "Location Name", "Name of the locator or joint")]
 	public string? NameHash { get; set; } = "";
 
-	[DDLRegistration(0x40824713u, "Offset Vector")]
+	[DDLRegistration(0xbc2d5985u, "Offset Vector")]
 	public DDLVector3? Position { get; set; } = default;
 
-	[DDLRegistration(0x40824713u, "Body Part")]
+	[DDLRegistration(0xdfcd36c5u, "Body Part")]
 	public x457f748b BodyPart { get; set; } = x457f748b.Unknown;
 
-	[DDLRegistration(0x40824713u, "Body Part Name", "Name of the body part, used if BodyPart is kLocationNamed")]
+	[DDLRegistration(0xd618ef74u, "Body Part Name", "Name of the body part, used if BodyPart is kLocationNamed")]
 	public string? BodyPartName { get; set; } = "";
 
 	public static TargetLocationData Create(DDLObject ddl) => new(ddl);

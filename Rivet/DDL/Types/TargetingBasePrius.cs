@@ -24,25 +24,25 @@ public class TargetingBasePrius : DDLObjectType, IDDLObjectType<TargetingBasePri
 		AttackJobPool = ddl.GetEnum<xee596018>(0x885938c5u, xee596018Values.Lookup);
 	}
 
-	[DDLRegistration(0xca8745a5u)]
+	[DDLRegistration(0x38567476u)]
 	public bool AutoReselectTargets { get; set; } = true;
 
-	[DDLRegistration(0xca8745a5u)]
+	[DDLRegistration(0xe4195ac3u)]
 	public float TimeBetweenReselects { get; set; } = 0.50f;
 
-	[DDLRegistration(0xca8745a5u, description: "How angry we can get towards a single attacker")]
+	[DDLRegistration(0x62af6634u, description: "How angry we can get towards a single attacker")]
 	public float AggroMax { get; set; } = 100.00f;
 
-	[DDLRegistration(0xca8745a5u, description: "Start Alerted Behavior at this distance.")]
+	[DDLRegistration(0x29360c16u, description: "Start Alerted Behavior at this distance.")]
 	public float StartWarningDistance { get; set; } = 40.00f;
 
-	[DDLRegistration(0xca8745a5u, description: "Stop Alerted Behavior at this distance.")]
+	[DDLRegistration(0x7dde2128u, description: "Stop Alerted Behavior at this distance.")]
 	public float StopWarningDistance { get; set; } = 50.00f;
 
-	[DDLRegistration(0xca8745a5u, description: "The length of time our Alert behavior lasts.")]
+	[DDLRegistration(0xfd73b5f5u, description: "The length of time our Alert behavior lasts.")]
 	public float WarningTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xca8745a5u, description: "Which attack job pool to use if any.")]
+	[DDLRegistration(0x885938c5u, description: "Which attack job pool to use if any.")]
 	public xee596018 AttackJobPool { get; set; } = xee596018.None;
 
 	public static TargetingBasePrius Create(DDLObject ddl) => new(ddl);

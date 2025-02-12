@@ -21,16 +21,16 @@ public class FootstepRequestEvent : GroundEvent, IDDLObjectType<FootstepRequestE
 		Speed = ddl.GetEnum<x59a8f068>(0x16753237u, x59a8f068Values.Lookup);
 	}
 
-	[DDLRegistration(0xde7e6327u, description: "Which foot is this")]
+	[DDLRegistration(0xf91ff923u, description: "Which foot is this")]
 	public x94d69111 Foot { get; set; } = x94d69111.Left;
 
-	[DDLRegistration(0xde7e6327u, description: "Optional index, counts from 0, per-side")]
+	[DDLRegistration(0x289b0d58u, description: "Optional index, counts from 0, per-side")]
 	public int FootIndex { get; set; } = 0;
 
-	[DDLRegistration(0xde7e6327u, description: "How strong")]
+	[DDLRegistration(0x2cb85ca8u, description: "How strong")]
 	public x94fdc626 Strength { get; set; } = x94fdc626.Soft;
 
-	[DDLRegistration(0xde7e6327u, description: "How fast is the character moving")]
+	[DDLRegistration(0x16753237u, description: "How fast is the character moving")]
 	public x59a8f068 Speed { get; set; } = x59a8f068.Walk;
 
 	public new static FootstepRequestEvent Create(DDLObject ddl) => new(ddl);

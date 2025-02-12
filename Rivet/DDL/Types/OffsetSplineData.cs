@@ -21,16 +21,16 @@ public class OffsetSplineData : DDLObjectType, IDDLObjectType<OffsetSplineData> 
 		OffsetSpeed = ddl.GetValue<float>(0xb5d092d9u, OffsetSpeed);
 	}
 
-	[DDLRegistration(0x83b4728fu, "Motion Offset Spline")]
+	[DDLRegistration(0x4c9f7151u, "Motion Offset Spline")]
 	public RivetAssetId OffsetSpline { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x83b4728fu, "Offset Accel")]
+	[DDLRegistration(0xe70a5acau, "Offset Accel")]
 	public float OffsetAccel { get; set; } = 10.00f;
 
-	[DDLRegistration(0x83b4728fu, "Offset Decel")]
+	[DDLRegistration(0x0a818a66u, "Offset Decel")]
 	public float OffsetDecel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x83b4728fu, "Offset Max Speed")]
+	[DDLRegistration(0xb5d092d9u, "Offset Max Speed")]
 	public float OffsetSpeed { get; set; } = 5.00f;
 
 	public static OffsetSplineData Create(DDLObject ddl) => new(ddl);

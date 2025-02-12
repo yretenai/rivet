@@ -21,16 +21,16 @@ public class ExplodedEvent : EventBase, IDDLObjectType<ExplodedEvent> {
 		SmokePuff = ddl.GetValue<bool>(0xa66a5725u, SmokePuff);
 	}
 
-	[DDLRegistration(0x95b390d9u)]
+	[DDLRegistration(0x186cc71bu)]
 	public DamageTypesGame LastDamageType { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x95b390d9u)]
+	[DDLRegistration(0xde52bd13u)]
 	public float HideDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x95b390d9u)]
+	[DDLRegistration(0xd1865381u)]
 	public uint HistoryCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x95b390d9u)]
+	[DDLRegistration(0xa66a5725u)]
 	public bool SmokePuff { get; set; } = false;
 
 	public new static ExplodedEvent Create(DDLObject ddl) => new(ddl);

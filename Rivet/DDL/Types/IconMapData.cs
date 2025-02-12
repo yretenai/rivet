@@ -24,25 +24,25 @@ public class IconMapData : DDLObjectType, IDDLObjectType<IconMapData> {
 		Vspace = ddl.GetValue<int>(0xbd91373fu, Vspace);
 	}
 
-	[DDLRegistration(0x828aa0cdu)]
+	[DDLRegistration(0x5504e96bu)]
 	public RivetAssetId Icon { get; set; } = "";
 
-	[DDLRegistration(0x828aa0cdu)]
+	[DDLRegistration(0x28b909c2u)]
 	public string? MarkupText { get; set; } = "";
 
-	[DDLRegistration(0x828aa0cdu)]
+	[DDLRegistration(0x954989eeu)]
 	public int Width { get; set; } = 64;
 
-	[DDLRegistration(0x828aa0cdu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public int Height { get; set; } = 64;
 
-	[DDLRegistration(0x828aa0cdu, description: "If 0 or negative, no minimum height enforced.")]
+	[DDLRegistration(0x9ed620e3u, description: "If 0 or negative, no minimum height enforced.")]
 	public int MinHeight { get; set; } = -1;
 
-	[DDLRegistration(0x828aa0cdu, description: "If 0 or negative, no maximum height enforced.")]
+	[DDLRegistration(0x493d92a2u, description: "If 0 or negative, no maximum height enforced.")]
 	public int MaxHeight { get; set; } = -1;
 
-	[DDLRegistration(0x828aa0cdu, description: "Pixels offset relative to baseline. Positive for above, negative for below.")]
+	[DDLRegistration(0xbd91373fu, description: "Pixels offset relative to baseline. Positive for above, negative for below.")]
 	public int Vspace { get; set; } = -16;
 
 	public static IconMapData Create(DDLObject ddl) => new(ddl);

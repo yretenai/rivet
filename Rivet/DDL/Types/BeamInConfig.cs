@@ -18,7 +18,7 @@ public class BeamInConfig : IncinerateConfig, IDDLObjectType<BeamInConfig> {
 		SourceJoint = ddl.GetString(0x8d47f7c0) ?? SourceJoint;
 	}
 
-	[DDLRegistration(0x41075a28u)]
+	[DDLRegistration(0x8d47f7c0u)]
 	public string? SourceJoint { get; set; } = default;
 
 	public new static BeamInConfig Create(DDLObject ddl) => new(ddl);

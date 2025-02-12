@@ -23,22 +23,22 @@ public class CameraInputFOVPrius : DDLObjectType, IDDLObjectType<CameraInputFOVP
 		FromCinematic = ddl.GetValue<bool>(0xcb107dd8u, FromCinematic);
 	}
 
-	[DDLRegistration(0x0a0a8006u, description: "Minimum FOV allowed")]
+	[DDLRegistration(0x03a51e47u, description: "Minimum FOV allowed")]
 	public float FOVMin { get; set; } = 20.00f;
 
-	[DDLRegistration(0x0a0a8006u, description: "Maximum FOV allowed")]
+	[DDLRegistration(0x3fa8211eu, description: "Maximum FOV allowed")]
 	public float FOVMax { get; set; } = 90.00f;
 
-	[DDLRegistration(0x0a0a8006u, description: "Accleration for change-in-speed")]
+	[DDLRegistration(0x66980ec1u, description: "Accleration for change-in-speed")]
 	public float FOVSpeedAccel { get; set; } = 300.00f;
 
-	[DDLRegistration(0x0a0a8006u, description: "Maximum rate-of-change for FOV in degrees-per-second")]
+	[DDLRegistration(0xe0d74768u, description: "Maximum rate-of-change for FOV in degrees-per-second")]
 	public float FOVSpeedMax { get; set; } = 30.00f;
 
-	[DDLRegistration(0x0a0a8006u, description: "Distance from min and max to start scaling max speed")]
+	[DDLRegistration(0x542441d4u, description: "Distance from min and max to start scaling max speed")]
 	public float FOVSpeedSoftZone { get; set; } = 10.00f;
 
-	[DDLRegistration(0x0a0a8006u)]
+	[DDLRegistration(0xcb107dd8u)]
 	public bool FromCinematic { get; set; } = false;
 
 	public static CameraInputFOVPrius Create(DDLObject ddl) => new(ddl);

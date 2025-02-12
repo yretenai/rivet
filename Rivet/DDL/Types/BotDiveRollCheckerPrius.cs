@@ -23,22 +23,22 @@ public class BotDiveRollCheckerPrius : DDLObjectType, IDDLObjectType<BotDiveRoll
 		OverrideSideStepAnimTime = ddl.GetValue<float>(0x92c88067u, OverrideSideStepAnimTime);
 	}
 
-	[DDLRegistration(0x2c79c8bbu)]
+	[DDLRegistration(0x10f54dceu)]
 	public string? AnimDriver { get; set; } = "Aim_Roll";
 
-	[DDLRegistration(0x2c79c8bbu)]
+	[DDLRegistration(0x448e693au)]
 	public float MinDistance { get; set; } = 5.00f;
 
-	[DDLRegistration(0x2c79c8bbu)]
+	[DDLRegistration(0x5f7d5b08u)]
 	public float OverrideAnimTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x2c79c8bbu)]
+	[DDLRegistration(0x62c3091fu)]
 	public string? SideStepAnimDriver { get; set; } = "Aim_Shuffle";
 
-	[DDLRegistration(0x2c79c8bbu)]
+	[DDLRegistration(0xb528bd3cu)]
 	public float SideStepMinDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2c79c8bbu)]
+	[DDLRegistration(0x92c88067u)]
 	public float OverrideSideStepAnimTime { get; set; } = -1.00f;
 
 	public static BotDiveRollCheckerPrius Create(DDLObject ddl) => new(ddl);

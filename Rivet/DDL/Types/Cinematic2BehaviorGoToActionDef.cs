@@ -26,31 +26,31 @@ public class Cinematic2BehaviorGoToActionDef : DDLObjectType, IDDLObjectType<Cin
 		EndEulerRotation = ddl.GetObject<DDLVector3>(0xcea16caau);
 	}
 
-	[DDLRegistration(0x777722bcu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x777722bcu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x777722bcu)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x777722bcu)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x777722bcu)]
+	[DDLRegistration(0x461f415eu)]
 	public float BlendInDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x777722bcu)]
+	[DDLRegistration(0x04aed998u)]
 	public DDLVector3? StartPosition { get; set; } = default;
 
-	[DDLRegistration(0x777722bcu)]
+	[DDLRegistration(0x23035a89u)]
 	public DDLVector3? StartEulerRotation { get; set; } = default;
 
-	[DDLRegistration(0x777722bcu)]
+	[DDLRegistration(0xd30167ecu)]
 	public DDLVector3? EndPosition { get; set; } = default;
 
-	[DDLRegistration(0x777722bcu)]
+	[DDLRegistration(0xcea16caau)]
 	public DDLVector3? EndEulerRotation { get; set; } = default;
 
 	public static Cinematic2BehaviorGoToActionDef Create(DDLObject ddl) => new(ddl);

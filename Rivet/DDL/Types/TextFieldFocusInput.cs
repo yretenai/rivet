@@ -18,7 +18,7 @@ public class TextFieldFocusInput : DDLObjectType, IDDLObjectType<TextFieldFocusI
 		TextFieldHasFocus = ddl.GetValue<bool>(0x92122276u, TextFieldHasFocus);
 	}
 
-	[DDLRegistration(0xe025cb57u)]
+	[DDLRegistration(0x92122276u)]
 	public bool TextFieldHasFocus { get; set; } = false;
 
 	public static TextFieldFocusInput Create(DDLObject ddl) => new(ddl);

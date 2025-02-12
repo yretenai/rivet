@@ -22,19 +22,19 @@ public class EditorRenderSettings2 : DDLObjectType, IDDLObjectType<EditorRenderS
 		ShowSelectionAABB = ddl.GetValue<bool>(0x8906cdd9u, ShowSelectionAABB);
 	}
 
-	[DDLRegistration(0x7ab1276fu)]
+	[DDLRegistration(0xe6ebeeacu)]
 	public bool DimUnselected { get; set; } = false;
 
-	[DDLRegistration(0x7ab1276fu)]
+	[DDLRegistration(0xf50e97dau)]
 	public LgcToolModes LgcToolMode { get; set; } = LgcToolModes.Lgc2;
 
-	[DDLRegistration(0x7ab1276fu)]
+	[DDLRegistration(0xa0c5c666u)]
 	public bool HighQualityLgCapture { get; set; } = false;
 
-	[DDLRegistration(0x7ab1276fu)]
+	[DDLRegistration(0xb8476bb3u)]
 	public int LgcBounceCount { get; set; } = 1;
 
-	[DDLRegistration(0x7ab1276fu)]
+	[DDLRegistration(0x8906cdd9u)]
 	public bool ShowSelectionAABB { get; set; } = false;
 
 	public static EditorRenderSettings2 Create(DDLObject ddl) => new(ddl);

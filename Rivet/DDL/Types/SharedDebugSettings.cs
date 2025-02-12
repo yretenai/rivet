@@ -27,34 +27,34 @@ public class SharedDebugSettings : DDLObjectType, IDDLObjectType<SharedDebugSett
 		WatermarkString = ddl.GetString(0x14500c52) ?? WatermarkString;
 	}
 
-	[DDLRegistration(0xba34f601u)]
+	[DDLRegistration(0xc33479fdu)]
 	public int PadIdxOffset { get; set; } = 0;
 
-	[DDLRegistration(0xba34f601u)]
+	[DDLRegistration(0xd2aaf673u)]
 	public bool InvertLook { get; set; } = false;
 
-	[DDLRegistration(0xba34f601u, "Debug FPS", "Shows fps")]
+	[DDLRegistration(0xd234e4f5u, "Debug FPS", "Shows fps")]
 	public bool DebugFPSEnable { get; set; } = false;
 
-	[DDLRegistration(0xba34f601u)]
+	[DDLRegistration(0xc75cd3c4u)]
 	public x0aa15dda DebugActorDefaultFilter { get; set; } = x0aa15dda.Any;
 
-	[DDLRegistration(0xba34f601u, "Distance Filter:", "Only list debug actors within this distance")]
+	[DDLRegistration(0xbeb506afu, "Distance Filter:", "Only list debug actors within this distance")]
 	public int DebugActorListDistance { get; set; } = 40;
 
-	[DDLRegistration(0xba34f601u)]
+	[DDLRegistration(0x776ec68au)]
 	public float DebugActorCamDistDrawLineTo { get; set; } = 1.00f;
 
-	[DDLRegistration(0xba34f601u)]
+	[DDLRegistration(0xc856355fu)]
 	public float HugeSingleFrameMoveDist { get; set; } = 1000.00f;
 
-	[DDLRegistration(0xba34f601u)]
+	[DDLRegistration(0x5e5edfc9u)]
 	public bool SimpleAnimatedComplainOnNoDriver { get; set; } = true;
 
-	[DDLRegistration(0xba34f601u)]
+	[DDLRegistration(0xdc2f8777u)]
 	public bool OnEnterWithJustHeroIsError { get; set; } = true;
 
-	[DDLRegistration(0xba34f601u)]
+	[DDLRegistration(0x14500c52u)]
 	public string? WatermarkString { get; set; } = default;
 
 	public static SharedDebugSettings Create(DDLObject ddl) => new(ddl);

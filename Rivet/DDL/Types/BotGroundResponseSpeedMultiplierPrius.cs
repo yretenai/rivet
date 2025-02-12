@@ -18,7 +18,7 @@ public class BotGroundResponseSpeedMultiplierPrius : BotGroundResponseBasePrius,
 		SpeedMultiplier = ddl.GetValue<float>(0x621b85e8u, SpeedMultiplier);
 	}
 
-	[DDLRegistration(0xd9d5495bu)]
+	[DDLRegistration(0x621b85e8u)]
 	public float SpeedMultiplier { get; set; } = 0.00f;
 
 	public new static BotGroundResponseSpeedMultiplierPrius Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class RayTracing : DDLObjectType, IDDLObjectType<RayTracing> {
 		UpdateEveryFrame = ddl.GetValue<bool>(0xc8eb2695u, UpdateEveryFrame);
 	}
 
-	[DDLRegistration(0x411859b5u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x411859b5u, description: "Chooses the model LoD to ray-trace against; the higher the quality, the more memory and GPU time is consumed")]
+	[DDLRegistration(0x7d586828u, description: "Chooses the model LoD to ray-trace against; the higher the quality, the more memory and GPU time is consumed")]
 	public x049737d1 Quality { get; set; } = x049737d1.Low;
 
-	[DDLRegistration(0x411859b5u, "Skip If Impostored", "Do not ray-trace if it's parented to an active impostor")]
+	[DDLRegistration(0xb3af3639u, "Skip If Impostored", "Do not ray-trace if it's parented to an active impostor")]
 	public bool SkipIfImpostored { get; set; } = true;
 
-	[DDLRegistration(0x411859b5u, "Ambient Occlusion", "Improves the quality of Screen-Space Ambient Occlusion by ray-tracing occluded and off-screen instsances")]
+	[DDLRegistration(0xf078da18u, "Ambient Occlusion", "Improves the quality of Screen-Space Ambient Occlusion by ray-tracing occluded and off-screen instsances")]
 	public bool AmbientOcclusion { get; set; } = true;
 
-	[DDLRegistration(0x411859b5u, "Ambient Shadows", "Improves the accuracy of ambient shadows by ray-tracing against the actual geometry instead of simple primitives (spheres/boxes)")]
+	[DDLRegistration(0xb31e0f40u, "Ambient Shadows", "Improves the accuracy of ambient shadows by ray-tracing against the actual geometry instead of simple primitives (spheres/boxes)")]
 	public bool AmbientShadows { get; set; } = true;
 
-	[DDLRegistration(0x411859b5u, "Reflections", "Improves the quality of Screen-Space Reflections by ray-tracing hidden and off-screen details")]
+	[DDLRegistration(0xb38d8369u, "Reflections", "Improves the quality of Screen-Space Reflections by ray-tracing hidden and off-screen details")]
 	public bool Reflections { get; set; } = true;
 
-	[DDLRegistration(0x411859b5u, "Shadows", "Improves the quality of shadows by ray-tracing and adding fine details beyond the limits of shadow-map resolution")]
+	[DDLRegistration(0x5f4e86c4u, "Shadows", "Improves the quality of shadows by ray-tracing and adding fine details beyond the limits of shadow-map resolution")]
 	public bool Shadows { get; set; } = true;
 
-	[DDLRegistration(0x411859b5u, "Blocker", "Prevents ray-traced elements from showing up when blocked by other scene geometries, can be used to improve performance")]
+	[DDLRegistration(0x2f6b3de9u, "Blocker", "Prevents ray-traced elements from showing up when blocked by other scene geometries, can be used to improve performance")]
 	public bool Blocker { get; set; } = false;
 
-	[DDLRegistration(0x411859b5u, "Update every frame", "Ensures this model will be updated every frame in ray tracing effects, instead of the default of every other frame")]
+	[DDLRegistration(0xc8eb2695u, "Update every frame", "Ensures this model will be updated every frame in ray tracing effects, instead of the default of every other frame")]
 	public bool UpdateEveryFrame { get; set; } = false;
 
 	public static RayTracing Create(DDLObject ddl) => new(ddl);

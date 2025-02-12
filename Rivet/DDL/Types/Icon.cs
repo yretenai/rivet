@@ -21,16 +21,16 @@ public class Icon : DDLObjectType, IDDLObjectType<Icon> {
 		Height = ddl.GetValue<int>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0x5504e96bu)]
+	[DDLRegistration(0x34bbecb9u)]
 	public IconIdGame IconId { get; set; } = IconIdGame.None;
 
-	[DDLRegistration(0x5504e96bu)]
+	[DDLRegistration(0x838c6e4au)]
 	public RivetAssetId Texture { get; set; } = "";
 
-	[DDLRegistration(0x5504e96bu)]
+	[DDLRegistration(0x954989eeu)]
 	public int Width { get; set; } = 36;
 
-	[DDLRegistration(0x5504e96bu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public int Height { get; set; } = 36;
 
 	public static Icon Create(DDLObject ddl) => new(ddl);

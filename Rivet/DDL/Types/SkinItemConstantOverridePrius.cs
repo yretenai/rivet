@@ -19,10 +19,10 @@ public class SkinItemConstantOverridePrius : DDLObjectType, IDDLObjectType<SkinI
 		ConstantValue = ddl.GetValue<float>(0x268ea8e5u, ConstantValue);
 	}
 
-	[DDLRegistration(0x3ead262du)]
+	[DDLRegistration(0x9b23f1b9u)]
 	public uint ConstantNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3ead262du)]
+	[DDLRegistration(0x268ea8e5u)]
 	public float ConstantValue { get; set; } = -1.00f;
 
 	public static SkinItemConstantOverridePrius Create(DDLObject ddl) => new(ddl);

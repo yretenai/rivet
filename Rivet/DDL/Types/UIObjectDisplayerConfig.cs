@@ -25,28 +25,28 @@ public class UIObjectDisplayerConfig : ConfigBase, IDDLObjectType<UIObjectDispla
 		UIDisplayObjectData = ddl.GetObjects<UIDisplayObjectData>(0xf7620dfbu);
 	}
 
-	[DDLRegistration(0x2d3eda31u)]
+	[DDLRegistration(0x66510e78u)]
 	public RivetAssetId VendorWeaponZone { get; set; } = default;
 
-	[DDLRegistration(0x2d3eda31u)]
+	[DDLRegistration(0x58b5d7a2u)]
 	public RivetAssetId VendorWeaponAtmosphere { get; set; } = default;
 
-	[DDLRegistration(0x2d3eda31u)]
+	[DDLRegistration(0xf4b6f9fbu)]
 	public RivetAssetId PauseMenuZone { get; set; } = default;
 
-	[DDLRegistration(0x2d3eda31u)]
+	[DDLRegistration(0x8fba2886u)]
 	public RivetAssetId PauseMenuAtmosphere { get; set; } = default;
 
-	[DDLRegistration(0x2d3eda31u)]
+	[DDLRegistration(0x7235b15cu)]
 	public RivetAssetId PauseMapZone { get; set; } = default;
 
-	[DDLRegistration(0x2d3eda31u)]
+	[DDLRegistration(0xf97464bfu)]
 	public RivetAssetId PauseMapAtmosphere { get; set; } = default;
 
-	[DDLRegistration(0x2d3eda31u)]
+	[DDLRegistration(0x27c4ed9au)]
 	public float PauseMenuCameraTransition { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2d3eda31u)]
+	[DDLRegistration(0xf7620dfbu)]
 	public List<UIDisplayObjectData?> UIDisplayObjectData { get; set; } = [];
 
 	public new static UIObjectDisplayerConfig Create(DDLObject ddl) => new(ddl);

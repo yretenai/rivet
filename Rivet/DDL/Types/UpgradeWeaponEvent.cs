@@ -22,19 +22,19 @@ public class UpgradeWeaponEvent : EventBase, IDDLObjectType<UpgradeWeaponEvent> 
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x79340380u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x79340380u)]
+	[DDLRegistration(0xca0166ccu)]
 	public string? WeaponName { get; set; } = default;
 
-	[DDLRegistration(0x79340380u)]
+	[DDLRegistration(0x79331d9au)]
 	public string? UpgradeName { get; set; } = default;
 
-	[DDLRegistration(0x79340380u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x79340380u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static UpgradeWeaponEvent Create(DDLObject ddl) => new(ddl);

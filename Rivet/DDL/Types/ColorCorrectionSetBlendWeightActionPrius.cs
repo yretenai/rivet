@@ -21,16 +21,16 @@ public class ColorCorrectionSetBlendWeightActionPrius : DDLObjectType, IDDLObjec
 		BlendTime = ddl.GetValue<float>(0xf805a3f6u, BlendTime);
 	}
 
-	[DDLRegistration(0x6cb59ebfu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Render;
 
-	[DDLRegistration(0x6cb59ebfu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xa7ef66f3 Type { get; set; } = xa7ef66f3.None;
 
-	[DDLRegistration(0x6cb59ebfu, "Blend Weight")]
+	[DDLRegistration(0x38f7c470u, "Blend Weight")]
 	public float BlendWeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6cb59ebfu, "Blend Time")]
+	[DDLRegistration(0xf805a3f6u, "Blend Time")]
 	public float BlendTime { get; set; } = 0.00f;
 
 	public static ColorCorrectionSetBlendWeightActionPrius Create(DDLObject ddl) => new(ddl);

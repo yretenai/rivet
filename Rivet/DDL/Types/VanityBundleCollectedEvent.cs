@@ -19,10 +19,10 @@ public class VanityBundleCollectedEvent : EventBase, IDDLObjectType<VanityBundle
 		BundleName = ddl.GetString(0x1cb387df) ?? BundleName;
 	}
 
-	[DDLRegistration(0xa5a7a628u, "Event ID", "Unique event ID for this event instance.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique event ID for this event instance.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xa5a7a628u, "Bundle Name", "The name of the bundle that was collected.")]
+	[DDLRegistration(0x1cb387dfu, "Bundle Name", "The name of the bundle that was collected.")]
 	public string? BundleName { get; set; } = default;
 
 	public new static VanityBundleCollectedEvent Create(DDLObject ddl) => new(ddl);

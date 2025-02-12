@@ -19,10 +19,10 @@ public class UI_WwiseVariantGroup : DDLObjectType, IDDLObjectType<UI_WwiseVarian
 		WwiseItem = ddl.GetObject<UI_WwiseVariant>(0x0a84666fu);
 	}
 
-	[DDLRegistration(0xb9a14943u)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public x0038ca42 Action { get; set; } = x0038ca42.Trigger;
 
-	[DDLRegistration(0xb9a14943u)]
+	[DDLRegistration(0x0a84666fu)]
 	public UI_WwiseVariant? WwiseItem { get; set; } = default;
 
 	public static UI_WwiseVariantGroup Create(DDLObject ddl) => new(ddl);

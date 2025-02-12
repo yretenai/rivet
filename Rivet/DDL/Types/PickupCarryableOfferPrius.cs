@@ -19,10 +19,10 @@ public class PickupCarryableOfferPrius : HoldOfferPrius, IDDLObjectType<PickupCa
 		HeightDown = ddl.GetValue<float>(0x18b154fau, HeightDown);
 	}
 
-	[DDLRegistration(0x029faabau, "Height Up")]
+	[DDLRegistration(0x7be988d7u, "Height Up")]
 	public float HeightUp { get; set; } = 1.00f;
 
-	[DDLRegistration(0x029faabau, "Height Down")]
+	[DDLRegistration(0x18b154fau, "Height Down")]
 	public float HeightDown { get; set; } = 0.10f;
 
 	public new static PickupCarryableOfferPrius Create(DDLObject ddl) => new(ddl);

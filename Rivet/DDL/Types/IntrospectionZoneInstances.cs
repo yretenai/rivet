@@ -19,10 +19,10 @@ public class IntrospectionZoneInstances : DDLObjectType, IDDLObjectType<Introspe
 		Instances = ddl.GetObjects<IntrospectionInstanceEntry>(0xf8da9f65u);
 	}
 
-	[DDLRegistration(0x3b604b6bu)]
+	[DDLRegistration(0xc0e0f909u)]
 	public RivetAssetId ZoneId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3b604b6bu)]
+	[DDLRegistration(0xf8da9f65u)]
 	public List<IntrospectionInstanceEntry?> Instances { get; set; } = [];
 
 	public static IntrospectionZoneInstances Create(DDLObject ddl) => new(ddl);

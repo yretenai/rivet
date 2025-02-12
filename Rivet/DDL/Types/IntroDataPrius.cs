@@ -18,7 +18,7 @@ public class IntroDataPrius : DDLObjectType, IDDLObjectType<IntroDataPrius> {
 		ValidUsers = ddl.GetObject<ValidUserList>(0x919cda09u);
 	}
 
-	[DDLRegistration(0x9544000fu)]
+	[DDLRegistration(0x919cda09u)]
 	public ValidUserList? ValidUsers { get; set; } = default;
 
 	public static IntroDataPrius Create(DDLObject ddl) => new(ddl);

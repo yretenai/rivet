@@ -18,7 +18,7 @@ public class ObjSysNodeSaveDataTableEntry : DDLObjectType, IDDLObjectType<ObjSys
 		NodeData = ddl.GetObject<ObjSysNodeSaveData>(0xc98edaacu);
 	}
 
-	[DDLRegistration(0x128b405fu)]
+	[DDLRegistration(0xc98edaacu)]
 	public ObjSysNodeSaveData? NodeData { get; set; } = default;
 
 	public static ObjSysNodeSaveDataTableEntry Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SetHeroCurrentShipActionPrius : DDLObjectType, IDDLObjectType<SetHe
 		CurrentShipEnum = ddl.GetEnum<ShipEnum>(0x829dfd95u, ShipEnumValues.Lookup);
 	}
 
-	[DDLRegistration(0x1f436e5eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
-	[DDLRegistration(0x1f436e5eu, "Ship to Set", "Enum of the ship we should set as the hero's ship when the script node is triggered.")]
+	[DDLRegistration(0x829dfd95u, "Ship to Set", "Enum of the ship we should set as the hero's ship when the script node is triggered.")]
 	public ShipEnum CurrentShipEnum { get; set; } = ShipEnum.Ship_None;
 
 	public static SetHeroCurrentShipActionPrius Create(DDLObject ddl) => new(ddl);

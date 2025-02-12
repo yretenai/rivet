@@ -21,16 +21,16 @@ public class LosCheckerPrius : DDLObjectType, IDDLObjectType<LosCheckerPrius> {
 		InactiveAutoRemoveTime = ddl.GetValue<float>(0x1070b523u, InactiveAutoRemoveTime);
 	}
 
-	[DDLRegistration(0xc6ccfdf3u, description: "Where on each target we raycast towards.")]
+	[DDLRegistration(0xa75a871bu, description: "Where on each target we raycast towards.")]
 	public xfcda154f Mode { get; set; } = xfcda154f.BSphere;
 
-	[DDLRegistration(0xc6ccfdf3u, description: "Max number of per-frame raycasts.")]
+	[DDLRegistration(0x42315c03u, description: "Max number of per-frame raycasts.")]
 	public byte MaxRaycastsPerFrame { get; set; } = 0x01;
 
-	[DDLRegistration(0xc6ccfdf3u, description: "If nobody wants results for a while, we delete ourselves.")]
+	[DDLRegistration(0x26cd546bu, description: "If nobody wants results for a while, we delete ourselves.")]
 	public bool RemoveIfInactive { get; set; } = false;
 
-	[DDLRegistration(0xc6ccfdf3u, description: "How long we wait before removing ourselves.")]
+	[DDLRegistration(0x1070b523u, description: "How long we wait before removing ourselves.")]
 	public float InactiveAutoRemoveTime { get; set; } = 10.00f;
 
 	public static LosCheckerPrius Create(DDLObject ddl) => new(ddl);

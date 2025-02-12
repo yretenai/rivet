@@ -18,7 +18,7 @@ public class GameBotManglerPrius : BotPrius, IDDLObjectType<GameBotManglerPrius>
 		ManglerConfig = ddl.GetObject<ManglerConfig>(0xc0f30ae3u);
 	}
 
-	[DDLRegistration(0x7199bd20u)]
+	[DDLRegistration(0xc0f30ae3u)]
 	public ManglerConfig? ManglerConfig { get; set; } = default;
 
 	public new static GameBotManglerPrius Create(DDLObject ddl) => new(ddl);

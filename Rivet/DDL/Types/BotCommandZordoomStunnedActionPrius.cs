@@ -20,13 +20,13 @@ public class BotCommandZordoomStunnedActionPrius : DDLObjectType, IDDLObjectType
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0xafdae388u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0xafdae388u, "Stunned Anim", "Name of the looping driver that the bot should play while stunned.")]
+	[DDLRegistration(0x08b3a991u, "Stunned Anim", "Name of the looping driver that the bot should play while stunned.")]
 	public string? StunnedAnim { get; set; } = default;
 
-	[DDLRegistration(0xafdae388u, description: "How long the boss will remain stunned.")]
+	[DDLRegistration(0x7c5e3db0u, description: "How long the boss will remain stunned.")]
 	public float Duration { get; set; } = 0.00f;
 
 	public static BotCommandZordoomStunnedActionPrius Create(DDLObject ddl) => new(ddl);

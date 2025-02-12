@@ -20,13 +20,13 @@ public class AssetMigrationResult : DDLObjectType, IDDLObjectType<AssetMigration
 		CreatedBy = ddl.GetString(0x51abd94e) ?? CreatedBy;
 	}
 
-	[DDLRegistration(0x50b72de3u)]
+	[DDLRegistration(0x85fe5578u)]
 	public string? Branch { get; set; } = default;
 
-	[DDLRegistration(0x50b72de3u)]
+	[DDLRegistration(0xe1d5d177u)]
 	public string? RelativePath { get; set; } = default;
 
-	[DDLRegistration(0x50b72de3u)]
+	[DDLRegistration(0x51abd94eu)]
 	public string? CreatedBy { get; set; } = default;
 
 	public static AssetMigrationResult Create(DDLObject ddl) => new(ddl);

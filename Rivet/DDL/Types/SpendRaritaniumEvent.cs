@@ -23,22 +23,22 @@ public class SpendRaritaniumEvent : EventBase, IDDLObjectType<SpendRaritaniumEve
 		UpgradeIndex = ddl.GetValue<uint>(0xabef4780u, UpgradeIndex);
 	}
 
-	[DDLRegistration(0xa95887c6u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xa95887c6u)]
+	[DDLRegistration(0x7ac58a7au)]
 	public float SpentRaritanium { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa95887c6u)]
+	[DDLRegistration(0xded2c85au)]
 	public float TotalRaritanium { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa95887c6u)]
+	[DDLRegistration(0xca0166ccu)]
 	public string? WeaponName { get; set; } = default;
 
-	[DDLRegistration(0xa95887c6u)]
+	[DDLRegistration(0x79331d9au)]
 	public string? UpgradeName { get; set; } = default;
 
-	[DDLRegistration(0xa95887c6u)]
+	[DDLRegistration(0xabef4780u)]
 	public uint UpgradeIndex { get; set; } = 0x00000000;
 
 	public new static SpendRaritaniumEvent Create(DDLObject ddl) => new(ddl);

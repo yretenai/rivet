@@ -19,10 +19,10 @@ public class LogAimAssistStartActionPrius : DDLObjectType, IDDLObjectType<LogAim
 		TaskNumber = ddl.GetValue<uint>(0x0796b3e7u, TaskNumber);
 	}
 
-	[DDLRegistration(0xd4d7848eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0xd4d7848eu)]
+	[DDLRegistration(0x0796b3e7u)]
 	public uint TaskNumber { get; set; } = 0x00000000;
 
 	public static LogAimAssistStartActionPrius Create(DDLObject ddl) => new(ddl);

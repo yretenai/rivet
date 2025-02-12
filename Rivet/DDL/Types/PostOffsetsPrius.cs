@@ -18,7 +18,7 @@ public class PostOffsetsPrius : DDLObjectType, IDDLObjectType<PostOffsetsPrius> 
 		CenterLocatorHash = ddl.GetValue<uint>(0xd3c4be9du, CenterLocatorHash);
 	}
 
-	[DDLRegistration(0x4f9c256du)]
+	[DDLRegistration(0xd3c4be9du)]
 	public uint CenterLocatorHash { get; set; } = 0x00000000;
 
 	public static PostOffsetsPrius Create(DDLObject ddl) => new(ddl);

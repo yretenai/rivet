@@ -21,16 +21,16 @@ public class ActivityClueConditionAwarenessStates : DDLObjectType, IDDLObjectTyp
 		Searching = ddl.GetValue<bool>(0x1154a1fau, Searching);
 	}
 
-	[DDLRegistration(0x4f5d0a66u, "Allow Passive Bots", "This clue can be used with completely neutral behavior bots")]
+	[DDLRegistration(0x77059ef7u, "Allow Passive Bots", "This clue can be used with completely neutral behavior bots")]
 	public bool Passive { get; set; } = false;
 
-	[DDLRegistration(0x4f5d0a66u, "Allow Confirming Bots", "This can be use with bots who think they might see something")]
+	[DDLRegistration(0xa6ba8c81u, "Allow Confirming Bots", "This can be use with bots who think they might see something")]
 	public bool Confirming { get; set; } = false;
 
-	[DDLRegistration(0x4f5d0a66u, "Allow Engaged Bots", "This clue can be used by bots who are actively in combat with a target")]
+	[DDLRegistration(0xc0b36d13u, "Allow Engaged Bots", "This clue can be used by bots who are actively in combat with a target")]
 	public bool Engaged { get; set; } = false;
 
-	[DDLRegistration(0x4f5d0a66u, "Allow Searching Bots", "This clue can be used by bots who have fully lost their target")]
+	[DDLRegistration(0x1154a1fau, "Allow Searching Bots", "This clue can be used by bots who have fully lost their target")]
 	public bool Searching { get; set; } = false;
 
 	public static ActivityClueConditionAwarenessStates Create(DDLObject ddl) => new(ddl);

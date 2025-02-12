@@ -18,7 +18,7 @@ public class TestMissionObjective : DDLObjectType, IDDLObjectType<TestMissionObj
 		Toggle = ddl.GetValue<bool>(0x1b92e3ecu, Toggle);
 	}
 
-	[DDLRegistration(0x2eebcd8au)]
+	[DDLRegistration(0x1b92e3ecu)]
 	public bool Toggle { get; set; } = true;
 
 	public static TestMissionObjective Create(DDLObject ddl) => new(ddl);

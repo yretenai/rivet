@@ -21,16 +21,16 @@ public class AimModWalkToTargetGamePrius : AimModWalkToTargetPrius, IDDLObjectTy
 		WalkPastTime = ddl.GetValue<float>(0x7bdf417bu, WalkPastTime);
 	}
 
-	[DDLRegistration(0x1aec0662u, description: "The way we decide to lock our aim positions while sweeping")]
+	[DDLRegistration(0x9939178bu, description: "The way we decide to lock our aim positions while sweeping")]
 	public x6d09c1a1 AimLockType { get; set; } = x6d09c1a1.NoLock;
 
-	[DDLRegistration(0x1aec0662u, description: "If calculated start walk start position is behind this amount in front of us, just clamp the start position to this offset in front of us")]
+	[DDLRegistration(0x6e6b9de6u, description: "If calculated start walk start position is behind this amount in front of us, just clamp the start position to this offset in front of us")]
 	public float StartPositionBehindOffset { get; set; } = 3.00f;
 
-	[DDLRegistration(0x1aec0662u, description: "We should hold the start walk position for this amount of time before walking")]
+	[DDLRegistration(0x3c997b28u, description: "We should hold the start walk position for this amount of time before walking")]
 	public float WalkStartDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1aec0662u, description: "If we want to walk past target, how long do we walk past?")]
+	[DDLRegistration(0x7bdf417bu, description: "If we want to walk past target, how long do we walk past?")]
 	public float WalkPastTime { get; set; } = 0.25f;
 
 	public new static AimModWalkToTargetGamePrius Create(DDLObject ddl) => new(ddl);

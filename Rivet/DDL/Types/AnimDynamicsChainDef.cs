@@ -35,58 +35,58 @@ public class AnimDynamicsChainDef : DDLObjectType, IDDLObjectType<AnimDynamicsCh
 		LengthElasticity = ddl.GetValue<float>(0xb07f8defu, LengthElasticity);
 	}
 
-	[DDLRegistration(0xcb6675e0u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xcb6675e0u, description: "joint to use for the start of the chain")]
+	[DDLRegistration(0x5ba51db8u, description: "joint to use for the start of the chain")]
 	public string? JointName { get; set; } = default;
 
-	[DDLRegistration(0xcb6675e0u, description: "whether to create the chain through the child joints")]
+	[DDLRegistration(0x451d5e83u, description: "whether to create the chain through the child joints")]
 	public bool IncludeChildren { get; set; } = true;
 
-	[DDLRegistration(0xcb6675e0u, description: "whether to create the chain up to this joint (overrides IncludeChildren)")]
+	[DDLRegistration(0x556d38cbu, description: "whether to create the chain up to this joint (overrides IncludeChildren)")]
 	public string? JointNameEnd { get; set; } = default;
 
-	[DDLRegistration(0xcb6675e0u, description: "if the chain is tethered, the joint that's the parent of the end joint")]
+	[DDLRegistration(0x0a35c795u, description: "if the chain is tethered, the joint that's the parent of the end joint")]
 	public string? JointNameEndTetheredParent { get; set; } = default;
 
-	[DDLRegistration(0xcb6675e0u, description: "Constriant Type")]
+	[DDLRegistration(0xece3ce92u, description: "Constriant Type")]
 	public xcbde7961 ConstraintType { get; set; } = xcbde7961.ConstraintTypeSimple;
 
-	[DDLRegistration(0xcb6675e0u, description: "`Gravity` to apply")]
+	[DDLRegistration(0x5bf7469fu, description: "`Gravity` to apply")]
 	public DDLVector3? Gravity { get; set; } = default;
 
-	[DDLRegistration(0xcb6675e0u, description: "point mass in kgs")]
+	[DDLRegistration(0x5c939bd6u, description: "point mass in kgs")]
 	public float Mass { get; set; } = 0.10f;
 
-	[DDLRegistration(0xcb6675e0u, description: "0.0 = undamped, 1.0 = fully damped")]
+	[DDLRegistration(0x45e45952u, description: "0.0 = undamped, 1.0 = fully damped")]
 	public float Damping { get; set; } = 0.01f;
 
-	[DDLRegistration(0xcb6675e0u, description: "angle at which animation is fully damped")]
+	[DDLRegistration(0xe2df5facu, description: "angle at which animation is fully damped")]
 	public float ConeAngleOuter { get; set; } = 30.00f;
 
-	[DDLRegistration(0xcb6675e0u, description: "'ConeAngleOuter' at the end of the chain")]
+	[DDLRegistration(0x3cdd867bu, description: "'ConeAngleOuter' at the end of the chain")]
 	public float ConeAngleOuterEnd { get; set; } = 20.00f;
 
-	[DDLRegistration(0xcb6675e0u, description: "Negative Y Rot freedom scale when angle for Cone Angle")]
+	[DDLRegistration(0xe48d4adau, description: "Negative Y Rot freedom scale when angle for Cone Angle")]
 	public float ConeAngleNegativeYScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcb6675e0u, description: "Positive Y Rot freedom scale when angle for Cone Angle")]
+	[DDLRegistration(0xc62672d6u, description: "Positive Y Rot freedom scale when angle for Cone Angle")]
 	public float ConeAnglePositiveYScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcb6675e0u, description: "Negative Z Rot freedom scale when angle for Cone Angle")]
+	[DDLRegistration(0x62193874u, description: "Negative Z Rot freedom scale when angle for Cone Angle")]
 	public float ConeAngleNegativeZScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcb6675e0u, description: "Positive Z Rot freedom scale when angle for Cone Angle")]
+	[DDLRegistration(0x40b20078u, description: "Positive Z Rot freedom scale when angle for Cone Angle")]
 	public float ConeAnglePositiveZScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcb6675e0u, description: "'Mass' at the end of the chain")]
+	[DDLRegistration(0xb54774b2u, description: "'Mass' at the end of the chain")]
 	public float MassEnd { get; set; } = 0.06f;
 
-	[DDLRegistration(0xcb6675e0u, description: "'Damping' at the end of the chain")]
+	[DDLRegistration(0x64d696a4u, description: "'Damping' at the end of the chain")]
 	public float DampingEnd { get; set; } = 0.01f;
 
-	[DDLRegistration(0xcb6675e0u, description: "Max joint length stretching/compressiona allowed")]
+	[DDLRegistration(0xb07f8defu, description: "Max joint length stretching/compressiona allowed")]
 	public float LengthElasticity { get; set; } = 0.10f;
 
 	public static AnimDynamicsChainDef Create(DDLObject ddl) => new(ddl);

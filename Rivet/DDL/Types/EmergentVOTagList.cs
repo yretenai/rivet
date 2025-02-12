@@ -18,7 +18,7 @@ public class EmergentVOTagList : DDLObjectType, IDDLObjectType<EmergentVOTagList
 		Tags = ddl.GetStrings(0x5f2c5496u);
 	}
 
-	[DDLRegistration(0x782aa9e4u)]
+	[DDLRegistration(0x5f2c5496u)]
 	public List<string?> Tags { get; set; } = [];
 
 	public static EmergentVOTagList Create(DDLObject ddl) => new(ddl);

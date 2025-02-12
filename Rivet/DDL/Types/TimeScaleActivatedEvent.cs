@@ -18,7 +18,7 @@ public class TimeScaleActivatedEvent : EventBase, IDDLObjectType<TimeScaleActiva
 		Context = ddl.GetString(0xe3b7e646) ?? Context;
 	}
 
-	[DDLRegistration(0x0cf03229u, description: "Why has this timeslow started?")]
+	[DDLRegistration(0xe3b7e646u, description: "Why has this timeslow started?")]
 	public string? Context { get; set; } = default;
 
 	public new static TimeScaleActivatedEvent Create(DDLObject ddl) => new(ddl);

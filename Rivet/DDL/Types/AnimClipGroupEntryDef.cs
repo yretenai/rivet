@@ -21,16 +21,16 @@ public class AnimClipGroupEntryDef : DDLObjectType, IDDLObjectType<AnimClipGroup
 		Clips = ddl.GetObjects<AnimClipGroupElemDef>(0xd126d725u);
 	}
 
-	[DDLRegistration(0xa2d344d5u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa2d344d5u)]
+	[DDLRegistration(0xe2b463e7u)]
 	public bool Default { get; set; } = false;
 
-	[DDLRegistration(0xa2d344d5u)]
+	[DDLRegistration(0x7fbe091au)]
 	public List<AnimClipGroupIdDef?> FilterIds { get; set; } = [];
 
-	[DDLRegistration(0xa2d344d5u)]
+	[DDLRegistration(0xd126d725u)]
 	public List<AnimClipGroupElemDef?> Clips { get; set; } = [];
 
 	public static AnimClipGroupEntryDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class TargetShapeCone : DDLObjectType, IDDLObjectType<TargetShapeCone> {
 		HalfAngle = ddl.GetValue<float>(0x0ad75ffdu, HalfAngle);
 	}
 
-	[DDLRegistration(0x22e58d0au, description: "Length of the cone.")]
+	[DDLRegistration(0x3f05d0d5u, description: "Length of the cone.")]
 	public float Length { get; set; } = 15.00f;
 
-	[DDLRegistration(0x22e58d0au, description: "Half-angle of the cone. A 45-degree half angle, would make a 90-degree cone")]
+	[DDLRegistration(0x0ad75ffdu, description: "Half-angle of the cone. A 45-degree half angle, would make a 90-degree cone")]
 	public float HalfAngle { get; set; } = 45.00f;
 
 	public static TargetShapeCone Create(DDLObject ddl) => new(ddl);

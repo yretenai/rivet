@@ -18,7 +18,7 @@ public class UICollectiblesConfig : ConfigBase, IDDLObjectType<UICollectiblesCon
 		Categories = ddl.GetObjects<UICollectibleCategory>(0xe1c51851u);
 	}
 
-	[DDLRegistration(0xdc304074u, "Categories", "List of collectible categories.")]
+	[DDLRegistration(0xe1c51851u, "Categories", "List of collectible categories.")]
 	public List<UICollectibleCategory?> Categories { get; set; } = [];
 
 	public new static UICollectiblesConfig Create(DDLObject ddl) => new(ddl);

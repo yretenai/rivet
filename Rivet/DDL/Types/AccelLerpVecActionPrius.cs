@@ -18,7 +18,7 @@ public class AccelLerpVecActionPrius : DDLObjectType, IDDLObjectType<AccelLerpVe
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xf6b30b8cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
 	public static AccelLerpVecActionPrius Create(DDLObject ddl) => new(ddl);

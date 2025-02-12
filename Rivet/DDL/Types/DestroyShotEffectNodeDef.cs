@@ -18,7 +18,7 @@ public class DestroyShotEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObjectTy
 		DestroySecondaryActivationActors = ddl.GetValue<bool>(0x09d59943u, DestroySecondaryActivationActors);
 	}
 
-	[DDLRegistration(0xdfc6c05bu)]
+	[DDLRegistration(0x09d59943u)]
 	public bool DestroySecondaryActivationActors { get; set; } = false;
 
 	public new static DestroyShotEffectNodeDef Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class SoundEvent : EventBase, IDDLObjectType<SoundEvent> {
 		TriggerLocator = ddl.GetString(0x85b17d52) ?? TriggerLocator;
 	}
 
-	[DDLRegistration(0x3609711fu)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public x6f4fd950 Action { get; set; } = x6f4fd950.SoundEventActionPlay;
 
-	[DDLRegistration(0x3609711fu)]
+	[DDLRegistration(0x3c660c64u)]
 	public RivetAssetId SoundBankPath { get; set; } = default;
 
-	[DDLRegistration(0x3609711fu)]
+	[DDLRegistration(0x9c64655au)]
 	public string? SoundEventName { get; set; } = default;
 
-	[DDLRegistration(0x3609711fu)]
+	[DDLRegistration(0xfd9e2a20u)]
 	public string? EventInitiator { get; set; } = default;
 
-	[DDLRegistration(0x3609711fu)]
+	[DDLRegistration(0x813c2830u)]
 	public uint SoundEventId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3609711fu, description: "Locator set from the Anim Trigger")]
+	[DDLRegistration(0x85b17d52u, description: "Locator set from the Anim Trigger")]
 	public string? TriggerLocator { get; set; } = default;
 
 	public new static SoundEvent Create(DDLObject ddl) => new(ddl);

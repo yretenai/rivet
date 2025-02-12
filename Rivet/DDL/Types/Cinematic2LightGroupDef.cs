@@ -21,16 +21,16 @@ public class Cinematic2LightGroupDef : DDLObjectType, IDDLObjectType<Cinematic2L
 		LightIds = ddl.GetValues<RivetAssetId>(0xe971d214u);
 	}
 
-	[DDLRegistration(0x6c93fe0au)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6c93fe0au)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x6c93fe0au)]
+	[DDLRegistration(0x7566b265u)]
 	public bool Active { get; set; } = true;
 
-	[DDLRegistration(0x6c93fe0au)]
+	[DDLRegistration(0xe971d214u)]
 	public List<RivetAssetId> LightIds { get; set; } = [];
 
 	public static Cinematic2LightGroupDef Create(DDLObject ddl) => new(ddl);

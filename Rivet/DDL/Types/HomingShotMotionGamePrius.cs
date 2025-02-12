@@ -41,76 +41,76 @@ public class HomingShotMotionGamePrius : VariableSpeedShotMotionGamePrius, IDDLO
 		FlyByDistance = ddl.GetValue<float>(0x70a569c6u, FlyByDistance);
 	}
 
-	[DDLRegistration(0x5d6a1cbeu, "Initial Homing Min Distance", "If >0 and the target is closer than this when we fire we won't do homing")]
+	[DDLRegistration(0xd8fff3c0u, "Initial Homing Min Distance", "If >0 and the target is closer than this when we fire we won't do homing")]
 	public float InitialHomingMinDist { get; set; } = -1.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x392d7cddu)]
 	public float HomingSpeedAutoHit { get; set; } = 45.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x2071ed4au)]
 	public float HomingSpeedAutoTarget { get; set; } = 45.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0xae5e94b3u)]
 	public float HomingSpeedAimPos { get; set; } = 45.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x6af147cdu)]
 	public float BreakoffAngleAutoHit { get; set; } = 10.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x8f803faeu)]
 	public float BreakoffAngleAutoTarget { get; set; } = 30.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0xc1f6b441u)]
 	public float BreakoffAngleAimPos { get; set; } = 30.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x949da6bbu)]
 	public float HomingSpeedScaleFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x34403bcfu)]
 	public float HomingSpeedScaleTimeStart { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x0746bda9u)]
 	public float HomingSpeedScaleTimeFull { get; set; } = -1.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x67eb4f13u)]
 	public float HomingSpeedScaleDistStart { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x1fa1515bu)]
 	public float HomingSpeedScaleDistFull { get; set; } = -1.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x43aaba77u)]
 	public float InitialArcPitchMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x7fa7852eu)]
 	public float InitialArcPitchMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0xd3f639aau)]
 	public float InitialArcYawMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0xeffb06f3u)]
 	public float InitialArcYawMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x6a5da787u)]
 	public bool StopOnBounce { get; set; } = true;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x876e209eu)]
 	public string? DefaultJoint { get; set; } = "igLoc_spine";
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x49c77e38u)]
 	public bool ScaleHomingRange { get; set; } = true;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x1f919c1du)]
 	public bool MustHitTarget { get; set; } = false;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x94adf635u)]
 	public bool ForceFixedSpeed { get; set; } = true;
 
-	[DDLRegistration(0x5d6a1cbeu, "Counter gravity while homing?", "True: As homing takes over, gravity is removed.")]
+	[DDLRegistration(0xeb78d281u, "Counter gravity while homing?", "True: As homing takes over, gravity is removed.")]
 	public bool CounterGravity { get; set; } = false;
 
-	[DDLRegistration(0x5d6a1cbeu)]
+	[DDLRegistration(0x598b3fcbu)]
 	public RivetAssetId NearbyCameraShake { get; set; } = default;
 
-	[DDLRegistration(0x5d6a1cbeu, description: "Min distance for projectile to be flying by.")]
+	[DDLRegistration(0x70a569c6u, description: "Min distance for projectile to be flying by.")]
 	public float FlyByDistance { get; set; } = 8.00f;
 
 	public new static HomingShotMotionGamePrius Create(DDLObject ddl) => new(ddl);

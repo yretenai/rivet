@@ -21,16 +21,16 @@ public class RaycastStateChangedEvent : EventBase, IDDLObjectType<RaycastStateCh
 		HitPos = ddl.GetObject<DDLVector3>(0x5cb7395au);
 	}
 
-	[DDLRegistration(0x1d5d9a11u)]
+	[DDLRegistration(0xd0f9acd0u)]
 	public uint ComponentHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1d5d9a11u)]
+	[DDLRegistration(0xdbbf88b8u)]
 	public bool Blocked { get; set; } = false;
 
-	[DDLRegistration(0x1d5d9a11u)]
+	[DDLRegistration(0x51261116u)]
 	public uint HitActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1d5d9a11u)]
+	[DDLRegistration(0x5cb7395au)]
 	public DDLVector3? HitPos { get; set; } = default;
 
 	public new static RaycastStateChangedEvent Create(DDLObject ddl) => new(ddl);

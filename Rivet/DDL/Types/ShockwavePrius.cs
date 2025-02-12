@@ -32,49 +32,49 @@ public class ShockwavePrius : DDLObjectType, IDDLObjectType<ShockwavePrius> {
 		DamageOwnerHandle = ddl.GetValue<uint>(0x7a09e46du, DamageOwnerHandle);
 	}
 
-	[DDLRegistration(0x818f648eu, description: "Damage done by the shockwave")]
+	[DDLRegistration(0x2fb01a0bu, description: "Damage done by the shockwave")]
 	public float Damage { get; set; } = 1.00f;
 
-	[DDLRegistration(0x818f648eu, description: "The radius the shockwave start at.")]
+	[DDLRegistration(0x4e61ccdau, description: "The radius the shockwave start at.")]
 	public float StartRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x818f648eu, description: "Max radius the shockwave will grow to.")]
+	[DDLRegistration(0x0504203du, description: "Max radius the shockwave will grow to.")]
 	public float Radius { get; set; } = 10.00f;
 
-	[DDLRegistration(0x818f648eu, description: "Height of the shockwave")]
+	[DDLRegistration(0xcb35ab68u, description: "Height of the shockwave")]
 	public float Height { get; set; } = 0.50f;
 
-	[DDLRegistration(0x818f648eu, description: "The thickness between the inner and outer radii.")]
+	[DDLRegistration(0xece213a3u, description: "The thickness between the inner and outer radii.")]
 	public float Thickness { get; set; } = 1.00f;
 
-	[DDLRegistration(0x818f648eu, description: "Time it takes to propagate to full radius. Normally -1 which means to just use Duration instead. ")]
+	[DDLRegistration(0xecfa5c44u, description: "Time it takes to propagate to full radius. Normally -1 which means to just use Duration instead. ")]
 	public float GrowDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x818f648eu, description: "The time is takes for the shockwave to propogate.")]
+	[DDLRegistration(0x7c5e3db0u, description: "The time is takes for the shockwave to propogate.")]
 	public float Duration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x818f648eu, description: "Hit Pause")]
+	[DDLRegistration(0xa0fb18acu, description: "Hit Pause")]
 	public float HitPauseTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x818f648eu, description: "Damage name for the shockwave")]
+	[DDLRegistration(0x56f13c62u, description: "Damage name for the shockwave")]
 	public string? DamageName { get; set; } = default;
 
-	[DDLRegistration(0x818f648eu, description: "Is the Damage field a 0 to 1 precent value?")]
+	[DDLRegistration(0xda280e89u, description: "Is the Damage field a 0 to 1 precent value?")]
 	public bool DamageIsPercent { get; set; } = false;
 
-	[DDLRegistration(0x818f648eu, description: "Allow damage to friendly allegiances.")]
+	[DDLRegistration(0xa63ab0a7u, description: "Allow damage to friendly allegiances.")]
 	public bool AllowFriendlyDamage { get; set; } = true;
 
-	[DDLRegistration(0x818f648eu)]
+	[DDLRegistration(0x7e88a543u)]
 	public DDLVector3? Center { get; set; } = default;
 
-	[DDLRegistration(0x818f648eu)]
+	[DDLRegistration(0xc3272bc7u)]
 	public DDLVector3? HitNormal { get; set; } = default;
 
-	[DDLRegistration(0x818f648eu)]
+	[DDLRegistration(0xd323fcdeu)]
 	public uint ParentActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x818f648eu)]
+	[DDLRegistration(0x7a09e46du)]
 	public uint DamageOwnerHandle { get; set; } = 0x00000000;
 
 	public static ShockwavePrius Create(DDLObject ddl) => new(ddl);

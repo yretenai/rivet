@@ -23,22 +23,22 @@ public class HideOnEventPrius : DDLObjectType, IDDLObjectType<HideOnEventPrius> 
 		MaxUnhideCount = ddl.GetValue<int>(0x02c5342du, MaxUnhideCount);
 	}
 
-	[DDLRegistration(0x1829565cu)]
+	[DDLRegistration(0xfd404b3du)]
 	public bool StartHidden { get; set; } = false;
 
-	[DDLRegistration(0x1829565cu)]
+	[DDLRegistration(0x64ce7324u)]
 	public bool SelfEventsOnly { get; set; } = true;
 
-	[DDLRegistration(0x1829565cu)]
+	[DDLRegistration(0x5766372fu)]
 	public EventBase? HideEvent { get; set; } = default;
 
-	[DDLRegistration(0x1829565cu, description: "Number of times to hide.  Use -1 for infinite")]
+	[DDLRegistration(0x75766f76u, description: "Number of times to hide.  Use -1 for infinite")]
 	public int MaxHideCount { get; set; } = 1;
 
-	[DDLRegistration(0x1829565cu)]
+	[DDLRegistration(0x959296c8u)]
 	public EventBase? UnhideEvent { get; set; } = default;
 
-	[DDLRegistration(0x1829565cu, description: "Number of times to unhide.  Use -1 for infinite")]
+	[DDLRegistration(0x02c5342du, description: "Number of times to unhide.  Use -1 for infinite")]
 	public int MaxUnhideCount { get; set; } = 1;
 
 	public static HideOnEventPrius Create(DDLObject ddl) => new(ddl);

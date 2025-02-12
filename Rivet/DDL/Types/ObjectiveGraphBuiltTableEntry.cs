@@ -18,7 +18,7 @@ public class ObjectiveGraphBuiltTableEntry : DDLObjectType, IDDLObjectType<Objec
 		ObjectiveGraphData = ddl.GetObject<ObjectiveGraphBuiltShared>(0x2480b7d1u);
 	}
 
-	[DDLRegistration(0x96cda364u)]
+	[DDLRegistration(0x2480b7d1u)]
 	public ObjectiveGraphBuiltShared? ObjectiveGraphData { get; set; } = default;
 
 	public static ObjectiveGraphBuiltTableEntry Create(DDLObject ddl) => new(ddl);

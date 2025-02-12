@@ -19,10 +19,10 @@ public class Cinematic2CameraPosessionChangeEvent : EventBase, IDDLObjectType<Ci
 		AcquireCamera = ddl.GetValue<bool>(0xd921521bu, AcquireCamera);
 	}
 
-	[DDLRegistration(0xfeb2508fu)]
+	[DDLRegistration(0x3a4a988au)]
 	public uint Cinematic2ActorComponentHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfeb2508fu)]
+	[DDLRegistration(0xd921521bu)]
 	public bool AcquireCamera { get; set; } = false;
 
 	public new static Cinematic2CameraPosessionChangeEvent Create(DDLObject ddl) => new(ddl);

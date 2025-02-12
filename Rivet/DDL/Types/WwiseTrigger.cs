@@ -19,10 +19,10 @@ public class WwiseTrigger : DDLObjectType, IDDLObjectType<WwiseTrigger> {
 		TriggerId = ddl.GetValue<uint>(0x37eaf81du, TriggerId);
 	}
 
-	[DDLRegistration(0x0bfd462eu)]
+	[DDLRegistration(0x3a9d5bb7u)]
 	public string? TriggerName { get; set; } = default;
 
-	[DDLRegistration(0x0bfd462eu, description: "These are the Trigger names located in the Wwise Game Syncs tab - Triggers.")]
+	[DDLRegistration(0x37eaf81du, description: "These are the Trigger names located in the Wwise Game Syncs tab - Triggers.")]
 	public uint TriggerId { get; set; } = 0x00000000;
 
 	public static WwiseTrigger Create(DDLObject ddl) => new(ddl);

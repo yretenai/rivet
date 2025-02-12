@@ -20,13 +20,13 @@ public class EnterRagdollStateEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLOb
 		Lifetime = ddl.GetObject<InputPlugFloat>(0xc7e68df8u);
 	}
 
-	[DDLRegistration(0x7319bb19u)]
+	[DDLRegistration(0x1eb7640eu)]
 	public x684c6439 ActorType { get; set; } = x684c6439.HitActor;
 
-	[DDLRegistration(0x7319bb19u)]
+	[DDLRegistration(0xebf69433u)]
 	public InputPlugFloat? Impulse { get; set; } = default;
 
-	[DDLRegistration(0x7319bb19u)]
+	[DDLRegistration(0xc7e68df8u)]
 	public InputPlugFloat? Lifetime { get; set; } = default;
 
 	public new static EnterRagdollStateEffectNodeDef Create(DDLObject ddl) => new(ddl);

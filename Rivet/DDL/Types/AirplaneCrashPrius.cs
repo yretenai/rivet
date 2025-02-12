@@ -25,28 +25,28 @@ public class AirplaneCrashPrius : DDLObjectType, IDDLObjectType<AirplaneCrashPri
 		MaxTime = ddl.GetValue<float>(0x920f0ef5u, MaxTime);
 	}
 
-	[DDLRegistration(0xbd735375u, description: "Percent chance to actaully have the motion happen")]
+	[DDLRegistration(0xff718a21u, description: "Percent chance to actaully have the motion happen")]
 	public float PercentChance { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbd735375u, description: "Collision radius to use")]
+	[DDLRegistration(0x7d546bbau, description: "Collision radius to use")]
 	public float CollisionRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbd735375u, description: "How fast we decend")]
+	[DDLRegistration(0x5bf7469fu, description: "How fast we decend")]
 	public float Gravity { get; set; } = -9.80f;
 
-	[DDLRegistration(0xbd735375u, description: "Minimum roll rate to apply")]
+	[DDLRegistration(0xd3db9c45u, description: "Minimum roll rate to apply")]
 	public float MinRollRate { get; set; } = 90.00f;
 
-	[DDLRegistration(0xbd735375u, description: "Maximum roll rate to apply")]
+	[DDLRegistration(0x1fd6e74au, description: "Maximum roll rate to apply")]
 	public float MaxRollRate { get; set; } = 180.00f;
 
-	[DDLRegistration(0xbd735375u, description: "Minimum turn rate to apply")]
+	[DDLRegistration(0x950666c9u, description: "Minimum turn rate to apply")]
 	public float MinTurnRate { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbd735375u, description: "Maximum turn rate to apply")]
+	[DDLRegistration(0x590b1dc6u, description: "Maximum turn rate to apply")]
 	public float MaxTurnRate { get; set; } = 10.00f;
 
-	[DDLRegistration(0xbd735375u, description: "Maximum time to decend")]
+	[DDLRegistration(0x920f0ef5u, description: "Maximum time to decend")]
 	public float MaxTime { get; set; } = 2.00f;
 
 	public static AirplaneCrashPrius Create(DDLObject ddl) => new(ddl);

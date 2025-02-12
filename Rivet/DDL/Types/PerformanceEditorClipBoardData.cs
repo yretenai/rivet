@@ -20,13 +20,13 @@ public class PerformanceEditorClipBoardData : DDLObjectType, IDDLObjectType<Perf
 		ClipboardType = ddl.GetString(0x02d31803) ?? ClipboardType;
 	}
 
-	[DDLRegistration(0x54d951e4u)]
+	[DDLRegistration(0xaeef8ff6u)]
 	public List<PerformanceEditorClipBoardAccessor?> AccessorList { get; set; } = [];
 
-	[DDLRegistration(0x54d951e4u)]
+	[DDLRegistration(0x25aa0e2du)]
 	public List<PerformanceEditorClipBoardAssetInstance?> AssetInstanceList { get; set; } = [];
 
-	[DDLRegistration(0x54d951e4u)]
+	[DDLRegistration(0x02d31803u)]
 	public string? ClipboardType { get; set; } = default;
 
 	public static PerformanceEditorClipBoardData Create(DDLObject ddl) => new(ddl);

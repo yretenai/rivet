@@ -19,10 +19,10 @@ public class UI_CinematicActorJointPicker : DDLObjectType, IDDLObjectType<UI_Cin
 		JointName = ddl.GetString(0x5ba51db8) ?? JointName;
 	}
 
-	[DDLRegistration(0x13564424u)]
+	[DDLRegistration(0x6c21ca8au)]
 	public RivetAssetId ActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x13564424u)]
+	[DDLRegistration(0x5ba51db8u)]
 	public string? JointName { get; set; } = default;
 
 	public static UI_CinematicActorJointPicker Create(DDLObject ddl) => new(ddl);

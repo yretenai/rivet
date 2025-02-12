@@ -19,10 +19,10 @@ public class InputNodeFloatDef : InputNodeBaseDef, IDDLObjectType<InputNodeFloat
 		Output = ddl.GetObject<OutputPlugFloat>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0x9c824c32u)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugFloat? Input { get; set; } = default;
 
-	[DDLRegistration(0x9c824c32u)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugFloat? Output { get; set; } = default;
 
 	public new static InputNodeFloatDef Create(DDLObject ddl) => new(ddl);

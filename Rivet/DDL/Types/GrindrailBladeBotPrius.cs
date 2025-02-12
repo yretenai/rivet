@@ -20,13 +20,13 @@ public class GrindrailBladeBotPrius : DDLObjectType, IDDLObjectType<GrindrailBla
 		DamagePercent = ddl.GetValue<float>(0x7bbba4a0u, DamagePercent);
 	}
 
-	[DDLRegistration(0x155cb41du)]
+	[DDLRegistration(0x7b5183b1u)]
 	public float AnticipateRange { get; set; } = 10.00f;
 
-	[DDLRegistration(0x155cb41du)]
+	[DDLRegistration(0x75a49560u)]
 	public float AttackRange { get; set; } = 3.00f;
 
-	[DDLRegistration(0x155cb41du)]
+	[DDLRegistration(0x7bbba4a0u)]
 	public float DamagePercent { get; set; } = 0.20f;
 
 	public static GrindrailBladeBotPrius Create(DDLObject ddl) => new(ddl);

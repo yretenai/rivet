@@ -20,13 +20,13 @@ public class RidableRiderPrius : DDLObjectType, IDDLObjectType<RidableRiderPrius
 		SeatIndex = ddl.GetValue<int>(0x0f336df3u, SeatIndex);
 	}
 
-	[DDLRegistration(0xcc1dc9aau)]
+	[DDLRegistration(0x8ac74a6du)]
 	public uint RidableHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcc1dc9aau)]
+	[DDLRegistration(0x0b1e9ad5u)]
 	public RivetAssetId AnimSetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xcc1dc9aau)]
+	[DDLRegistration(0x0f336df3u)]
 	public int SeatIndex { get; set; } = 0;
 
 	public static RidableRiderPrius Create(DDLObject ddl) => new(ddl);

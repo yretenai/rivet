@@ -19,10 +19,10 @@ public class DDLSymbolViewSortColumn : DDLObjectType, IDDLObjectType<DDLSymbolVi
 		IsAscending = ddl.GetValue<bool>(0x2405d4b2u, IsAscending);
 	}
 
-	[DDLRegistration(0x1f383f1du)]
+	[DDLRegistration(0x432bc919u)]
 	public string? Column { get; set; } = "Name";
 
-	[DDLRegistration(0x1f383f1du)]
+	[DDLRegistration(0x2405d4b2u)]
 	public bool IsAscending { get; set; } = true;
 
 	public static DDLSymbolViewSortColumn Create(DDLObject ddl) => new(ddl);

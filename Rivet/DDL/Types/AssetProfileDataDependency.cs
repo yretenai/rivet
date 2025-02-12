@@ -20,13 +20,13 @@ public class AssetProfileDataDependency : DDLObjectType, IDDLObjectType<AssetPro
 		RootHash = ddl.GetValue<uint>(0xa99621e2u, RootHash);
 	}
 
-	[DDLRegistration(0x373dfb2cu)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public string? Path { get; set; } = default;
 
-	[DDLRegistration(0x373dfb2cu)]
+	[DDLRegistration(0x5953f773u)]
 	public RivetAssetId Tuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x373dfb2cu)]
+	[DDLRegistration(0xa99621e2u)]
 	public uint RootHash { get; set; } = 0x00000000;
 
 	public static AssetProfileDataDependency Create(DDLObject ddl) => new(ddl);

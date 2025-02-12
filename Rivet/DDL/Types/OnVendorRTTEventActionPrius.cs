@@ -18,7 +18,7 @@ public class OnVendorRTTEventActionPrius : DDLObjectType, IDDLObjectType<OnVendo
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x2d7dd0ceu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
 	public static OnVendorRTTEventActionPrius Create(DDLObject ddl) => new(ddl);

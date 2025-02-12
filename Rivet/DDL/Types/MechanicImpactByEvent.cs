@@ -20,13 +20,13 @@ public class MechanicImpactByEvent : UDSEventBase, IDDLObjectType<MechanicImpact
 		TargetActors = ddl.GetStrings(0x35ab613bu);
 	}
 
-	[DDLRegistration(0xc481c44du)]
+	[DDLRegistration(0xd8ad4a41u)]
 	public List<string?> UsedMechanics { get; set; } = [];
 
-	[DDLRegistration(0xc481c44du)]
+	[DDLRegistration(0x556b1ac5u)]
 	public string? InitiatorActor { get; set; } = default;
 
-	[DDLRegistration(0xc481c44du)]
+	[DDLRegistration(0x35ab613bu)]
 	public List<string?> TargetActors { get; set; } = [];
 
 	public new static MechanicImpactByEvent Create(DDLObject ddl) => new(ddl);

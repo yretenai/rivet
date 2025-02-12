@@ -27,34 +27,34 @@ public class AimAssistUserConfig : ConfigBase, IDDLObjectType<AimAssistUserConfi
 		AimAssistAngle = ddl.GetValue<float>(0xebc9ff29u, AimAssistAngle);
 	}
 
-	[DDLRegistration(0x0df3bd36u, "Friction Setup")]
+	[DDLRegistration(0x54772f50u, "Friction Setup")]
 	public AimAssistFrictionData? FrictionData { get; set; } = default;
 
-	[DDLRegistration(0x0df3bd36u, "Magnet Setup")]
+	[DDLRegistration(0x2ef4e9d5u, "Magnet Setup")]
 	public AimAssistMagnetData? MagnetData { get; set; } = default;
 
-	[DDLRegistration(0x0df3bd36u, "Centering Setup")]
+	[DDLRegistration(0x1d038c45u, "Centering Setup")]
 	public AimAssistCentering? CenteringData { get; set; } = default;
 
-	[DDLRegistration(0x0df3bd36u, "Snag Setup")]
+	[DDLRegistration(0xa24a3731u, "Snag Setup")]
 	public AimAssistSnagData? SnagData { get; set; } = default;
 
-	[DDLRegistration(0x0df3bd36u, "Settle Deceleration")]
+	[DDLRegistration(0x90bb906au, "Settle Deceleration")]
 	public AimAssistSettleDecel? SettleDecel { get; set; } = default;
 
-	[DDLRegistration(0x0df3bd36u, "Assist Box Processing")]
+	[DDLRegistration(0x74e65f59u, "Assist Box Processing")]
 	public AimAssistBoxProcessData? BoxProcessData { get; set; } = default;
 
-	[DDLRegistration(0x0df3bd36u, "Snap Lock Data")]
+	[DDLRegistration(0x6860ef09u, "Snap Lock Data")]
 	public AimAssistSnapLockData? SnapLockData { get; set; } = default;
 
-	[DDLRegistration(0x0df3bd36u, "Target Selection")]
+	[DDLRegistration(0xe3d4cbf0u, "Target Selection")]
 	public AimAssistTargetSelection? TargetSelection { get; set; } = default;
 
-	[DDLRegistration(0x0df3bd36u, "Factor Modifiers")]
+	[DDLRegistration(0xbc9a7f1au, "Factor Modifiers")]
 	public AimAssistFactorModifiers? FactorModifiers { get; set; } = default;
 
-	[DDLRegistration(0x0df3bd36u)]
+	[DDLRegistration(0xebc9ff29u)]
 	public float AimAssistAngle { get; set; } = 5.00f;
 
 	public new static AimAssistUserConfig Create(DDLObject ddl) => new(ddl);

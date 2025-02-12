@@ -22,19 +22,19 @@ public class HurdleShotMotionPrius : BasicShotMotionPrius, IDDLObjectType<Hurdle
 		OrbitWhileMoving = ddl.GetValue<bool>(0xc3ba39d5u, OrbitWhileMoving);
 	}
 
-	[DDLRegistration(0x245979b8u)]
+	[DDLRegistration(0xf0d89680u)]
 	public float MinSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0x245979b8u)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 50.00f;
 
-	[DDLRegistration(0x245979b8u)]
+	[DDLRegistration(0xd9b0da6cu)]
 	public float FlightTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x245979b8u)]
+	[DDLRegistration(0x142c1731u)]
 	public float AimOffsetFromActualAim { get; set; } = 1.00f;
 
-	[DDLRegistration(0x245979b8u)]
+	[DDLRegistration(0xc3ba39d5u)]
 	public bool OrbitWhileMoving { get; set; } = false;
 
 	public new static HurdleShotMotionPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class ChunkedEvent : EventBase, IDDLObjectType<ChunkedEvent> {
 		HitDirection = ddl.GetObject<DDLVector3>(0x188c2ef8u);
 	}
 
-	[DDLRegistration(0x726663ddu)]
+	[DDLRegistration(0xe7230f11u)]
 	public string? ChunkingComponentName { get; set; } = default;
 
-	[DDLRegistration(0x726663ddu)]
+	[DDLRegistration(0x19f22c5cu)]
 	public string? ConfigurationName { get; set; } = default;
 
-	[DDLRegistration(0x726663ddu)]
+	[DDLRegistration(0xd988e134u)]
 	public uint ConfigurationIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x726663ddu)]
+	[DDLRegistration(0x188c2ef8u)]
 	public DDLVector3? HitDirection { get; set; } = default;
 
 	public new static ChunkedEvent Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class MagnaMissileSpawnData : AttachableShotSpawnData, IDDLObjectType<Mag
 		OrbitRange = ddl.GetValue<float>(0x4e32e196u, OrbitRange);
 	}
 
-	[DDLRegistration(0xfef43f1au)]
+	[DDLRegistration(0x611b0138u)]
 	public float MagnaMissileDamage { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfef43f1au, description: "At what range can guys get sucked into the shot.")]
+	[DDLRegistration(0x6b310c2au, description: "At what range can guys get sucked into the shot.")]
 	public float ImplosionRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfef43f1au, description: "How long until ALL guys have reached the point.")]
+	[DDLRegistration(0x5f24dcc7u, description: "How long until ALL guys have reached the point.")]
 	public float PullInTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfef43f1au, description: "How long before the explosion happens. (should be longer than PullInTime.)")]
+	[DDLRegistration(0xb406e2beu, description: "How long before the explosion happens. (should be longer than PullInTime.)")]
 	public float ImplosionTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfef43f1au, description: "What is the range of the damaging explosion.")]
+	[DDLRegistration(0xe8ec88ceu, description: "What is the range of the damaging explosion.")]
 	public float ExplosionRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfef43f1au, description: "How far from the black hole should bots orbit.")]
+	[DDLRegistration(0x4e32e196u, description: "How far from the black hole should bots orbit.")]
 	public float OrbitRange { get; set; } = 0.00f;
 
 	public new static MagnaMissileSpawnData Create(DDLObject ddl) => new(ddl);

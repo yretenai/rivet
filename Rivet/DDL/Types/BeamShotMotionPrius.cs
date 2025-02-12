@@ -19,10 +19,10 @@ public class BeamShotMotionPrius : ShotMotionBasePrius, IDDLObjectType<BeamShotM
 		SimFromLook = ddl.GetValue<bool>(0xa70c3db7u, SimFromLook);
 	}
 
-	[DDLRegistration(0x8e277059u)]
+	[DDLRegistration(0xc7f69ee3u)]
 	public float CollRadius { get; set; } = 0.10f;
 
-	[DDLRegistration(0x8e277059u)]
+	[DDLRegistration(0xa70c3db7u)]
 	public bool SimFromLook { get; set; } = true;
 
 	public new static BeamShotMotionPrius Create(DDLObject ddl) => new(ddl);

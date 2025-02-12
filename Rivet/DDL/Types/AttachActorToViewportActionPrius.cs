@@ -21,16 +21,16 @@ public class AttachActorToViewportActionPrius : DDLObjectType, IDDLObjectType<At
 		AutoChangeOffsets = ddl.GetValue<bool>(0x98ec8bc4u, AutoChangeOffsets);
 	}
 
-	[DDLRegistration(0xfb404d39u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0xfb404d39u, description: "When true, LocalOffset X/Y is interpretted as screen coordinates for the actor position")]
+	[DDLRegistration(0x1d2bf312u, description: "When true, LocalOffset X/Y is interpretted as screen coordinates for the actor position")]
 	public bool OffsetIsScreenSpace { get; set; } = false;
 
-	[DDLRegistration(0xfb404d39u, description: "When true, the attached object will ignore the depth buffer and always draw on top")]
+	[DDLRegistration(0x12a59908u, description: "When true, the attached object will ignore the depth buffer and always draw on top")]
 	public bool ObjectIgnoresZ { get; set; } = false;
 
-	[DDLRegistration(0xfb404d39u, description: "When true, the script node will constantly re-fetch the offset and apply changes")]
+	[DDLRegistration(0x98ec8bc4u, description: "When true, the script node will constantly re-fetch the offset and apply changes")]
 	public bool AutoChangeOffsets { get; set; } = false;
 
 	public static AttachActorToViewportActionPrius Create(DDLObject ddl) => new(ddl);

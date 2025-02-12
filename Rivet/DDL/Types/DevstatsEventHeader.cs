@@ -33,52 +33,52 @@ public class DevstatsEventHeader : DDLObjectType, IDDLObjectType<DevstatsEventHe
 		Auth_status = ddl.GetString(0x50e31cf2) ?? Auth_status;
 	}
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x18c1b68cu)]
 	public ulong Client_timestamp { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x92c96c41u)]
 	public long Client_timezone { get; set; } = 0;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0xf554b136u)]
 	public string? Session_id { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x69398931u)]
 	public string? User_id { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x7b66310eu)]
 	public string? Psn_account { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x1e8e072fu)]
 	public string? Build_version { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x8814777au)]
 	public string? Asset_branch { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0xcf409db1u)]
 	public string? Code_branch { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x42e587e8u)]
 	public string? Executable { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x09e8589bu)]
 	public string? Title_id { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x31e5c71bu)]
 	public x1cc74abc PrivacyMode { get; set; } = x1cc74abc.Unknown;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x3a250fedu)]
 	public string? Platform { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x0ea75c1fu)]
 	public string? Device_type { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0xc08ba6d6u)]
 	public string? Np_account_id { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x62dc06cfu)]
 	public string? Machine_id { get; set; } = default;
 
-	[DDLRegistration(0x02032c3bu)]
+	[DDLRegistration(0x50e31cf2u)]
 	public string? Auth_status { get; set; } = default;
 
 	public static DevstatsEventHeader Create(DDLObject ddl) => new(ddl);

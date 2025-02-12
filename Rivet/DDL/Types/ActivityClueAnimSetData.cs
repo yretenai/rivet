@@ -19,10 +19,10 @@ public class ActivityClueAnimSetData : DDLObjectType, IDDLObjectType<ActivityClu
 		UserFilter = ddl.GetObject<ActivityClueAnimSetFilterBase>(0xcba413d6u);
 	}
 
-	[DDLRegistration(0xc9cf54c5u, "User Anim Set", "The animset for the specified users")]
+	[DDLRegistration(0xffcf15f1u, "User Anim Set", "The animset for the specified users")]
 	public RivetAssetId AnimSet { get; set; } = default;
 
-	[DDLRegistration(0xc9cf54c5u, "User Filter", "Who should use this animset")]
+	[DDLRegistration(0xcba413d6u, "User Filter", "Who should use this animset")]
 	public ActivityClueAnimSetFilterBase? UserFilter { get; set; } = default;
 
 	public static ActivityClueAnimSetData Create(DDLObject ddl) => new(ddl);

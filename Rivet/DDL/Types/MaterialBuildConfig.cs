@@ -18,7 +18,7 @@ public class MaterialBuildConfig : ConfigBase, IDDLObjectType<MaterialBuildConfi
 		Dummy = ddl.GetValue<bool>(0x56a73efeu, Dummy);
 	}
 
-	[DDLRegistration(0xcb5e4d47u, "Dummy (unused)", "This just exists to the config is not completely empty")]
+	[DDLRegistration(0x56a73efeu, "Dummy (unused)", "This just exists to the config is not completely empty")]
 	public bool Dummy { get; set; } = false;
 
 	public new static MaterialBuildConfig Create(DDLObject ddl) => new(ddl);

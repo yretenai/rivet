@@ -18,7 +18,7 @@ public class UISongData : DDLObjectType, IDDLObjectType<UISongData> {
 		Lines = ddl.GetObjects<UISongLineData>(0x56524057u);
 	}
 
-	[DDLRegistration(0xc9d343d0u)]
+	[DDLRegistration(0x56524057u)]
 	public List<UISongLineData?> Lines { get; set; } = [];
 
 	public static UISongData Create(DDLObject ddl) => new(ddl);

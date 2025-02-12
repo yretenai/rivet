@@ -34,55 +34,55 @@ public class ProgressionBonusEntry : DDLObjectType, IDDLObjectType<ProgressionBo
 		ChallengeModeMultiplier = ddl.GetValue<float>(0x172b41fdu, ChallengeModeMultiplier);
 	}
 
-	[DDLRegistration(0xbb7fa5d4u, description: "Variable to modify")]
+	[DDLRegistration(0x364c3afdu, description: "Variable to modify")]
 	public x3f2aac2e Variable { get; set; } = x3f2aac2e.None;
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0xec2613b0u)]
 	public string? MidEarlyStartMission { get; set; } = "";
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0xb8749a16u)]
 	public string? MidEarlyStartObjective { get; set; } = "";
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0x8b75984fu)]
 	public float MidEarlyValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0x93b3d449u)]
 	public string? MidLateStartMission { get; set; } = "";
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0x780ae864u)]
 	public string? MidLateStartObjective { get; set; } = "";
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0x835e2574u)]
 	public float MidLateValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0x27c883e6u)]
 	public string? LateStartMission { get; set; } = "";
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0xa49a386eu)]
 	public string? LateStartObjective { get; set; } = "";
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0x9868b3cbu)]
 	public float LateValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0x860e9773u)]
 	public float EasyMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0xdff2bb81u)]
 	public float MediumMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0xcf33228bu)]
 	public float HardMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0xbf016237u)]
 	public float HardestMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0x79745c95u)]
 	public float ThreeDeathsMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0xd742e16fu)]
 	public float FiveDeathsMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbb7fa5d4u)]
+	[DDLRegistration(0x172b41fdu)]
 	public float ChallengeModeMultiplier { get; set; } = 1.00f;
 
 	public static ProgressionBonusEntry Create(DDLObject ddl) => new(ddl);

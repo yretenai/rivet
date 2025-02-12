@@ -20,13 +20,13 @@ public class AnimFacialVisemeMapDef : DDLObjectType, IDDLObjectType<AnimFacialVi
 		PoseName = ddl.GetString(0x4dbc46f3) ?? PoseName;
 	}
 
-	[DDLRegistration(0xdab1d2f6u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdab1d2f6u)]
+	[DDLRegistration(0x65bf2e7au)]
 	public x9c9e2a0a PhonemeId { get; set; } = x9c9e2a0a.Phoneme_x;
 
-	[DDLRegistration(0xdab1d2f6u)]
+	[DDLRegistration(0x4dbc46f3u)]
 	public string? PoseName { get; set; } = default;
 
 	public static AnimFacialVisemeMapDef Create(DDLObject ddl) => new(ddl);

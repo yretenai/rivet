@@ -18,7 +18,7 @@ public class ModelLodEngineItem : DDLObjectType, IDDLObjectType<ModelLodEngineIt
 		Lod = ddl.GetValue<int>(0x3c6310b6u, Lod);
 	}
 
-	[DDLRegistration(0x143eec92u)]
+	[DDLRegistration(0x3c6310b6u)]
 	public int Lod { get; set; } = 0;
 
 	public static ModelLodEngineItem Create(DDLObject ddl) => new(ddl);

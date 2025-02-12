@@ -24,25 +24,25 @@ public class CameraAutoDeactivatePrius : DDLObjectType, IDDLObjectType<CameraAut
 		ExitOnButtonInput = ddl.GetValue<bool>(0xbc3d8d5cu, ExitOnButtonInput);
 	}
 
-	[DDLRegistration(0xdc16332au, "Blend Out Time")]
+	[DDLRegistration(0xda2e044eu, "Blend Out Time")]
 	public float BlendOutTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdc16332au, "Exit Distance")]
+	[DDLRegistration(0x4c30cc9cu, "Exit Distance")]
 	public float ExitDistance { get; set; } = -1.00f;
 
-	[DDLRegistration(0xdc16332au, "Exit Timeout")]
+	[DDLRegistration(0x290c24c4u, "Exit Timeout")]
 	public float ExitTimeout { get; set; } = -1.00f;
 
-	[DDLRegistration(0xdc16332au, "Test Input Delay")]
+	[DDLRegistration(0xbf17a010u, "Test Input Delay")]
 	public float TestInputDelay { get; set; } = 0.50f;
 
-	[DDLRegistration(0xdc16332au, "Exit On Camera Input")]
+	[DDLRegistration(0x14dbf94au, "Exit On Camera Input")]
 	public bool ExitOnCameraInput { get; set; } = true;
 
-	[DDLRegistration(0xdc16332au, "Exit On Motion Input")]
+	[DDLRegistration(0xf8f74c41u, "Exit On Motion Input")]
 	public bool ExitOnMotionInput { get; set; } = true;
 
-	[DDLRegistration(0xdc16332au, "Exit On Button Input")]
+	[DDLRegistration(0xbc3d8d5cu, "Exit On Button Input")]
 	public bool ExitOnButtonInput { get; set; } = true;
 
 	public static CameraAutoDeactivatePrius Create(DDLObject ddl) => new(ddl);

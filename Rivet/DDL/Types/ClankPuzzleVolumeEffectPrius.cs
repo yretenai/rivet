@@ -20,13 +20,13 @@ public class ClankPuzzleVolumeEffectPrius : DDLObjectType, IDDLObjectType<ClankP
 		ShowOutline = ddl.GetValue<bool>(0x734af2bau, ShowOutline);
 	}
 
-	[DDLRegistration(0xd962cba5u)]
+	[DDLRegistration(0x9135042fu)]
 	public x17b935fe VolumeType { get; set; } = x17b935fe.None;
 
-	[DDLRegistration(0xd962cba5u, description: "Can this volume be recalled by the player")]
+	[DDLRegistration(0x3b8c00bdu, description: "Can this volume be recalled by the player")]
 	public bool CanRecall { get; set; } = true;
 
-	[DDLRegistration(0xd962cba5u, description: "Should we use the ActorOutlineManager.")]
+	[DDLRegistration(0x734af2bau, description: "Should we use the ActorOutlineManager.")]
 	public bool ShowOutline { get; set; } = false;
 
 	public static ClankPuzzleVolumeEffectPrius Create(DDLObject ddl) => new(ddl);

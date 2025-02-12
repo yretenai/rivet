@@ -20,13 +20,13 @@ public class DebugLabelPrius : DDLObjectType, IDDLObjectType<DebugLabelPrius> {
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0x61228bceu, description: "If empty, defaults to the actor's name")]
+	[DDLRegistration(0x17f49c29u, description: "If empty, defaults to the actor's name")]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x61228bceu)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x61228bceu)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
 	public static DebugLabelPrius Create(DDLObject ddl) => new(ddl);

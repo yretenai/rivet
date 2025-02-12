@@ -23,22 +23,22 @@ public class AimModPredictTargetPrius : AimModifierPrius, IDDLObjectType<AimModP
 		FollowGround = ddl.GetValue<bool>(0xfc01b8f8u, FollowGround);
 	}
 
-	[DDLRegistration(0x2c038d9au)]
+	[DDLRegistration(0x6fe44bf5u)]
 	public float TimeToFullAccuracy { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2c038d9au)]
+	[DDLRegistration(0x9af719b0u)]
 	public float MaxPredictiveSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2c038d9au)]
+	[DDLRegistration(0x56e81338u)]
 	public float AdditionalLeadTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2c038d9au)]
+	[DDLRegistration(0x73393972u)]
 	public float AimAccel { get; set; } = 50.00f;
 
-	[DDLRegistration(0x2c038d9au)]
+	[DDLRegistration(0x27cb7f73u)]
 	public float AimSpeedMax { get; set; } = 50.00f;
 
-	[DDLRegistration(0x2c038d9au)]
+	[DDLRegistration(0xfc01b8f8u)]
 	public bool FollowGround { get; set; } = false;
 
 	public new static AimModPredictTargetPrius Create(DDLObject ddl) => new(ddl);

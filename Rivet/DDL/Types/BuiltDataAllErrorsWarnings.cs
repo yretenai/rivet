@@ -18,7 +18,7 @@ public class BuiltDataAllErrorsWarnings : DDLObjectType, IDDLObjectType<BuiltDat
 		AllErrorsWarnings = ddl.GetObjects<BuiltDataErrorsWarnings>(0x37432620u);
 	}
 
-	[DDLRegistration(0xd5870642u)]
+	[DDLRegistration(0x37432620u)]
 	public List<BuiltDataErrorsWarnings?> AllErrorsWarnings { get; set; } = [];
 
 	public static BuiltDataAllErrorsWarnings Create(DDLObject ddl) => new(ddl);

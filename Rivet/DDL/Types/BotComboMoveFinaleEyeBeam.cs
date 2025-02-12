@@ -24,25 +24,25 @@ public class BotComboMoveFinaleEyeBeam : BotComboMoveBase, IDDLObjectType<BotCom
 		FiringPatterns = ddl.GetObjects<EyeBeamFiringPattern>(0xe7a793ddu);
 	}
 
-	[DDLRegistration(0x36a8d232u)]
+	[DDLRegistration(0xfec29c86u)]
 	public RivetAssetId PortalActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x36a8d232u)]
+	[DDLRegistration(0x7e95e9fau)]
 	public RivetAssetId HeadActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x36a8d232u)]
+	[DDLRegistration(0x53f23acbu)]
 	public RivetAssetId HeadActorVol { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x36a8d232u)]
+	[DDLRegistration(0x7e9e8e66u)]
 	public RivetAssetId SpawnedShotConfig { get; set; } = default;
 
-	[DDLRegistration(0x36a8d232u)]
+	[DDLRegistration(0xe09d2afcu)]
 	public bool RemainAfterAttack { get; set; } = false;
 
-	[DDLRegistration(0x36a8d232u)]
+	[DDLRegistration(0xb95b8abeu)]
 	public bool CancelOutOfVolume { get; set; } = false;
 
-	[DDLRegistration(0x36a8d232u)]
+	[DDLRegistration(0xe7a793ddu)]
 	public List<EyeBeamFiringPattern?> FiringPatterns { get; set; } = [];
 
 	public new static BotComboMoveFinaleEyeBeam Create(DDLObject ddl) => new(ddl);

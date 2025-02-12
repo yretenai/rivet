@@ -20,13 +20,13 @@ public class GraphConMeta : DDLObjectType, IDDLObjectType<GraphConMeta> {
 		Dir = ddl.GetEnum<x06e9cd50>(0x90fe53d9u, x06e9cd50Values.Lookup);
 	}
 
-	[DDLRegistration(0x7390f89fu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0x7390f89fu)]
+	[DDLRegistration(0xf4b3e9a4u)]
 	public string? SubType { get; set; } = default;
 
-	[DDLRegistration(0x7390f89fu)]
+	[DDLRegistration(0x90fe53d9u)]
 	public x06e9cd50 Dir { get; set; } = x06e9cd50.Invalid;
 
 	public static GraphConMeta Create(DDLObject ddl) => new(ddl);

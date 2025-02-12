@@ -18,7 +18,7 @@ public class MountFlyerPickupEvent : EventBase, IDDLObjectType<MountFlyerPickupE
 		PickupActor = ddl.GetValue<uint>(0x2b00e05fu, PickupActor);
 	}
 
-	[DDLRegistration(0x3ef48763u)]
+	[DDLRegistration(0x2b00e05fu)]
 	public uint PickupActor { get; set; } = 0x00000000;
 
 	public new static MountFlyerPickupEvent Create(DDLObject ddl) => new(ddl);

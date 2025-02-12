@@ -18,7 +18,7 @@ public class UIFontMapConfig : ConfigBase, IDDLObjectType<UIFontMapConfig> {
 		FontMappings = ddl.GetObjects<UIFontMapping>(0x54070dc5u);
 	}
 
-	[DDLRegistration(0x09b28598u)]
+	[DDLRegistration(0x54070dc5u)]
 	public List<UIFontMapping?> FontMappings { get; set; } = [];
 
 	public new static UIFontMapConfig Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class HeroAnimMapElement : DDLObjectType, IDDLObjectType<HeroAnimMapEleme
 		HeroAnim = ddl.GetString(0xfef6e27a) ?? HeroAnim;
 	}
 
-	[DDLRegistration(0x6773d0c9u)]
+	[DDLRegistration(0xa6329c96u)]
 	public string? MountAnim { get; set; } = default;
 
-	[DDLRegistration(0x6773d0c9u)]
+	[DDLRegistration(0xfef6e27au)]
 	public string? HeroAnim { get; set; } = default;
 
 	public static HeroAnimMapElement Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ChargeAttackStartEvent : EventBase, IDDLObjectType<ChargeAttackStar
 		TargetHandle = ddl.GetValue<uint>(0x63316affu, TargetHandle);
 	}
 
-	[DDLRegistration(0x4d43d3ebu)]
+	[DDLRegistration(0x63316affu)]
 	public uint TargetHandle { get; set; } = 0x00000000;
 
 	public new static ChargeAttackStartEvent Create(DDLObject ddl) => new(ddl);

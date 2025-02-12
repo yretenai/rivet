@@ -20,13 +20,13 @@ public class ActivitySystemConfig : ConfigBase, IDDLObjectType<ActivitySystemCon
 		SubCategories = ddl.GetObjects<ActivitySubCategoryInfo>(0x1546408eu);
 	}
 
-	[DDLRegistration(0x62490863u)]
+	[DDLRegistration(0x6ec7f1dcu)]
 	public List<ActivityDef?> Activities { get; set; } = [];
 
-	[DDLRegistration(0x62490863u)]
+	[DDLRegistration(0x9c997da9u)]
 	public List<UDSZoneData?> Zones { get; set; } = [];
 
-	[DDLRegistration(0x62490863u)]
+	[DDLRegistration(0x1546408eu)]
 	public List<ActivitySubCategoryInfo?> SubCategories { get; set; } = [];
 
 	public new static ActivitySystemConfig Create(DDLObject ddl) => new(ddl);

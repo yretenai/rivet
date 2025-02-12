@@ -21,16 +21,16 @@ public class ConfigModListElement : DDLObjectType, IDDLObjectType<ConfigModListE
 		ClassId = ddl.GetValue<int>(0xb9e5f394u, ClassId);
 	}
 
-	[DDLRegistration(0x60522c77u, "Config Mod Type", "Types to apply config mods to")]
+	[DDLRegistration(0xee5fda6au, "Config Mod Type", "Types to apply config mods to")]
 	public x756cf95f ModType { get; set; } = x756cf95f.Any;
 
-	[DDLRegistration(0x60522c77u, "Operation", "Operation to perform")]
+	[DDLRegistration(0xc6d13976u, "Operation", "Operation to perform")]
 	public x2d67b08a Op { get; set; } = x2d67b08a.Set;
 
-	[DDLRegistration(0x60522c77u, "Value", "Value to use with operation")]
+	[DDLRegistration(0x042494f5u, "Value", "Value to use with operation")]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0x60522c77u, "Class Id", "User-defined identifier")]
+	[DDLRegistration(0xb9e5f394u, "Class Id", "User-defined identifier")]
 	public int ClassId { get; set; } = 0;
 
 	public static ConfigModListElement Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class VanityArmorPerk : VanityPerkBase, IDDLObjectType<VanityArmorPerk> {
 		FactionArmorData = ddl.GetObjects<FactionArmorDataElement>(0x94665754u);
 	}
 
-	[DDLRegistration(0x1130bb5eu, "Faction Armor")]
+	[DDLRegistration(0x94665754u, "Faction Armor")]
 	public List<FactionArmorDataElement?> FactionArmorData { get; set; } = [];
 
 	public new static VanityArmorPerk Create(DDLObject ddl) => new(ddl);

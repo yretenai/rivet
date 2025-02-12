@@ -18,7 +18,7 @@ public class SpawnShotForwardRandomTargetingPrius : SpawnShotTargetingPrius, IDD
 		MaxAimAngle = ddl.GetValue<float>(0x40547f5au, MaxAimAngle);
 	}
 
-	[DDLRegistration(0x4351bf5au, description: "This is the maximum amount (in degrees) a shot can randomly deviate from the forward vector .")]
+	[DDLRegistration(0x40547f5au, description: "This is the maximum amount (in degrees) a shot can randomly deviate from the forward vector .")]
 	public float MaxAimAngle { get; set; } = 20.00f;
 
 	public new static SpawnShotForwardRandomTargetingPrius Create(DDLObject ddl) => new(ddl);

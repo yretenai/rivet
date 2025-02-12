@@ -20,13 +20,13 @@ public class StructuredLogStatementTransform : DDLObjectType, IDDLObjectType<Str
 		Transform = ddl.GetObject<DDLTransform>(0xf54f1ea1u);
 	}
 
-	[DDLRegistration(0x8c4368e6u)]
+	[DDLRegistration(0x3006a975u)]
 	public string? TestName { get; set; } = default;
 
-	[DDLRegistration(0x8c4368e6u)]
+	[DDLRegistration(0x11d33588u)]
 	public string? VariableName { get; set; } = default;
 
-	[DDLRegistration(0x8c4368e6u)]
+	[DDLRegistration(0xf54f1ea1u)]
 	public DDLTransform? Transform { get; set; } = default;
 
 	public static StructuredLogStatementTransform Create(DDLObject ddl) => new(ddl);

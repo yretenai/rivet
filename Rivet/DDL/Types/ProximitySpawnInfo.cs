@@ -19,10 +19,10 @@ public class ProximitySpawnInfo : DDLObjectType, IDDLObjectType<ProximitySpawnIn
 		ActorType = ddl.GetValue<RivetAssetId>(0x1eb7640eu, ActorType);
 	}
 
-	[DDLRegistration(0xea555babu, description: "Optional limit on the max number of this type to spawn.  (0 means not used)")]
+	[DDLRegistration(0x09a59dc4u, description: "Optional limit on the max number of this type to spawn.  (0 means not used)")]
 	public int MaxAlive { get; set; } = 0;
 
-	[DDLRegistration(0xea555babu, description: "The type of actor to spawn")]
+	[DDLRegistration(0x1eb7640eu, description: "The type of actor to spawn")]
 	public RivetAssetId ActorType { get; set; } = default;
 
 	public static ProximitySpawnInfo Create(DDLObject ddl) => new(ddl);

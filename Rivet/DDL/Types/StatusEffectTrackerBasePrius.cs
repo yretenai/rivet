@@ -27,34 +27,34 @@ public class StatusEffectTrackerBasePrius : DDLObjectType, IDDLObjectType<Status
 		OnlyApplyOnDeath = ddl.GetValue<bool>(0xe4e0dda4u, OnlyApplyOnDeath);
 	}
 
-	[DDLRegistration(0xa5fcb80du)]
+	[DDLRegistration(0x0d245446u)]
 	public float Threshhold { get; set; } = 100.00f;
 
-	[DDLRegistration(0xa5fcb80du)]
+	[DDLRegistration(0x2edeb2f7u)]
 	public float DecayRate { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa5fcb80du)]
+	[DDLRegistration(0x1cb5b22cu)]
 	public float DecayDelay { get; set; } = -1.00f;
 
-	[DDLRegistration(0xa5fcb80du)]
+	[DDLRegistration(0x5337a2d2u)]
 	public float Vulnerability { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa5fcb80du)]
+	[DDLRegistration(0xf39d069bu)]
 	public float DurationMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa5fcb80du)]
+	[DDLRegistration(0xcdb7115eu)]
 	public float CooldownMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa5fcb80du)]
+	[DDLRegistration(0x8da6ae6cu)]
 	public bool AllowRefresh { get; set; } = true;
 
-	[DDLRegistration(0xa5fcb80du)]
+	[DDLRegistration(0x73683995u)]
 	public bool AllowProportionalRefresh { get; set; } = false;
 
-	[DDLRegistration(0xa5fcb80du)]
+	[DDLRegistration(0x74ff837cu)]
 	public bool AllowIfDead { get; set; } = true;
 
-	[DDLRegistration(0xa5fcb80du)]
+	[DDLRegistration(0xe4e0dda4u)]
 	public bool OnlyApplyOnDeath { get; set; } = false;
 
 	public static StatusEffectTrackerBasePrius Create(DDLObject ddl) => new(ddl);

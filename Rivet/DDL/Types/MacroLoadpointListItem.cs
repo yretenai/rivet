@@ -18,7 +18,7 @@ public class MacroLoadpointListItem : DDLObjectType, IDDLObjectType<MacroLoadpoi
 		LoadpointData = ddl.GetObject<MacroLoadpointData>(0x42bb0aa9u);
 	}
 
-	[DDLRegistration(0x959e174bu)]
+	[DDLRegistration(0x42bb0aa9u)]
 	public MacroLoadpointData? LoadpointData { get; set; } = default;
 
 	public static MacroLoadpointListItem Create(DDLObject ddl) => new(ddl);

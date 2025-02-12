@@ -19,10 +19,10 @@ public class Cinematic2Option : DDLObjectType, IDDLObjectType<Cinematic2Option> 
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0x7859e98du)]
+	[DDLRegistration(0xa0c58260u)]
 	public string? Key { get; set; } = default;
 
-	[DDLRegistration(0x7859e98du)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
 	public static Cinematic2Option Create(DDLObject ddl) => new(ddl);

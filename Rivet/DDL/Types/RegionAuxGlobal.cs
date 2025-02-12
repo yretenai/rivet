@@ -20,13 +20,13 @@ public class RegionAuxGlobal : DDLObjectType, IDDLObjectType<RegionAuxGlobal> {
 		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
 	}
 
-	[DDLRegistration(0x1450bc5bu)]
+	[DDLRegistration(0xffddb037u)]
 	public Dictionary<RivetAssetId, RegionFolderNode?> Folders { get; set; } = [];
 
-	[DDLRegistration(0x1450bc5bu)]
+	[DDLRegistration(0xa18793c9u)]
 	public Dictionary<RivetAssetId, RivetAssetId> ZoneAssetIdToFolder { get; set; } = [];
 
-	[DDLRegistration(0x1450bc5bu)]
+	[DDLRegistration(0x9c997da9u)]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
 	public static RegionAuxGlobal Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MovingObjectHelperPrius : DDLObjectType, IDDLObjectType<MovingObjec
 		AttachJoint = ddl.GetString(0xfd42c180) ?? AttachJoint;
 	}
 
-	[DDLRegistration(0xd6acab14u, "Attach Joint", "Match the CVC shape orientation to the orientation of this joint or locator")]
+	[DDLRegistration(0xfd42c180u, "Attach Joint", "Match the CVC shape orientation to the orientation of this joint or locator")]
 	public string? AttachJoint { get; set; } = default;
 
 	public static MovingObjectHelperPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class FinaleMechConfigStatusEffects : ConfigBase, IDDLObjectType<FinaleMe
 		LightningRodTrackerPrius = ddl.GetObject<FinaleMechStatusEffectTrackerLightningRodPrius>(0x9dc20243u);
 	}
 
-	[DDLRegistration(0x9918e1b8u, "FinaleMech Pixelized Tracker Prius")]
+	[DDLRegistration(0x05d48d42u, "FinaleMech Pixelized Tracker Prius")]
 	public FinaleMechStatusEffectTrackerPixelizedPrius? PixelizedTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x9918e1b8u, "FinaleMech Freeze Tracker Prius")]
+	[DDLRegistration(0x72373026u, "FinaleMech Freeze Tracker Prius")]
 	public FinaleMechStatusEffectTrackerFreezePrius? FreezeTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x9918e1b8u, "FinaleMech Shrubbery Tracker Prius")]
+	[DDLRegistration(0xb35aac7au, "FinaleMech Shrubbery Tracker Prius")]
 	public FinaleMechStatusEffectTrackerShrubberyPrius? ShrubberyTrackerPrius { get; set; } = default;
 
-	[DDLRegistration(0x9918e1b8u, "FinaleMech Lightning Rod Tracker Prius")]
+	[DDLRegistration(0x9dc20243u, "FinaleMech Lightning Rod Tracker Prius")]
 	public FinaleMechStatusEffectTrackerLightningRodPrius? LightningRodTrackerPrius { get; set; } = default;
 
 	public new static FinaleMechConfigStatusEffects Create(DDLObject ddl) => new(ddl);

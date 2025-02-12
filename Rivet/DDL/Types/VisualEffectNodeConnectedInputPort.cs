@@ -20,13 +20,13 @@ public class VisualEffectNodeConnectedInputPort : DDLObjectType, IDDLObjectType<
 		Id = ddl.GetString(0x8a514a8d) ?? Id;
 	}
 
-	[DDLRegistration(0xc051d578u)]
+	[DDLRegistration(0x61f23114u)]
 	public VisualEffectNodeConnectedPort? Source { get; set; } = default;
 
-	[DDLRegistration(0xc051d578u)]
+	[DDLRegistration(0x0f9f2930u)]
 	public List<DDLVector2?> Pins { get; set; } = [];
 
-	[DDLRegistration(0xc051d578u)]
+	[DDLRegistration(0x8a514a8du)]
 	public string? Id { get; set; } = default;
 
 	public static VisualEffectNodeConnectedInputPort Create(DDLObject ddl) => new(ddl);

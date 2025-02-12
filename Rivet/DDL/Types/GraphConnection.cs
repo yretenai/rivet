@@ -24,25 +24,25 @@ public class GraphConnection : DDLObjectType, IDDLObjectType<GraphConnection> {
 		Pins = ddl.GetObjects<DDLVector2>(0x0f9f2930u);
 	}
 
-	[DDLRegistration(0x9e1e03e9u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9e1e03e9u)]
+	[DDLRegistration(0x7effd393u)]
 	public bool Disabled { get; set; } = false;
 
-	[DDLRegistration(0x9e1e03e9u)]
+	[DDLRegistration(0x1414e790u)]
 	public RivetAssetId SourceId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9e1e03e9u)]
+	[DDLRegistration(0xb47297e1u)]
 	public string? SourceCon { get; set; } = default;
 
-	[DDLRegistration(0x9e1e03e9u)]
+	[DDLRegistration(0xc3642b05u)]
 	public RivetAssetId TargetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9e1e03e9u)]
+	[DDLRegistration(0x34c080e6u)]
 	public string? TargetCon { get; set; } = default;
 
-	[DDLRegistration(0x9e1e03e9u)]
+	[DDLRegistration(0x0f9f2930u)]
 	public List<DDLVector2?> Pins { get; set; } = [];
 
 	public static GraphConnection Create(DDLObject ddl) => new(ddl);

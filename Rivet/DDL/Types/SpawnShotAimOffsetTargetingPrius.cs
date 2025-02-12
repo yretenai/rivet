@@ -20,13 +20,13 @@ public class SpawnShotAimOffsetTargetingPrius : SpawnShotTargetingPrius, IDDLObj
 		AimOffsetLarge = ddl.GetObject<DDLVector3>(0x2ef0711du);
 	}
 
-	[DDLRegistration(0xfe20515bu, "Aim Offset", "The offset to apply to our aim target.")]
+	[DDLRegistration(0xe54de6b5u, "Aim Offset", "The offset to apply to our aim target.")]
 	public DDLVector3? AimOffset { get; set; } = default;
 
-	[DDLRegistration(0xfe20515bu, "Aim Offset Small", "The offset to apply to our aim target.")]
+	[DDLRegistration(0x02deb2b0u, "Aim Offset Small", "The offset to apply to our aim target.")]
 	public DDLVector3? AimOffsetSmall { get; set; } = default;
 
-	[DDLRegistration(0xfe20515bu, "Aim Offset Large", "The offset to apply to our aim target.")]
+	[DDLRegistration(0x2ef0711du, "Aim Offset Large", "The offset to apply to our aim target.")]
 	public DDLVector3? AimOffsetLarge { get; set; } = default;
 
 	public new static SpawnShotAimOffsetTargetingPrius Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class DimensionPortalSourcePrius : DDLObjectType, IDDLObjectType<Dimensio
 		AutoDeactivateRange = ddl.GetValue<float>(0x904564bbu, AutoDeactivateRange);
 	}
 
-	[DDLRegistration(0x5b4bb1f1u, "Possible Target Portals", "Names of the dimension portal targets (in the overlay region data) that this entrance can connect to.")]
+	[DDLRegistration(0x7d822939u, "Possible Target Portals", "Names of the dimension portal targets (in the overlay region data) that this entrance can connect to.")]
 	public List<string?> PossibleTargets { get; set; } = [];
 
-	[DDLRegistration(0x5b4bb1f1u, "Activate When Target Gets Loaded?", "If a possible pocket dimension overlay gets loaded or is loaded when this actor gets instantiated, should we link to the pocket dimension and activate this portal automatically?")]
+	[DDLRegistration(0xfabb8abcu, "Activate When Target Gets Loaded?", "If a possible pocket dimension overlay gets loaded or is loaded when this actor gets instantiated, should we link to the pocket dimension and activate this portal automatically?")]
 	public bool ActivateWhenTargetLoaded { get; set; } = true;
 
-	[DDLRegistration(0x5b4bb1f1u, "Activate On Hit by Thrown Melee Weapon?", "If a melee weapon hits this while thrown, should we link to the current target and activate automatically?")]
+	[DDLRegistration(0x9da82934u, "Activate On Hit by Thrown Melee Weapon?", "If a melee weapon hits this while thrown, should we link to the current target and activate automatically?")]
 	public bool ActivateOnThrownMeleeHit { get; set; } = true;
 
-	[DDLRegistration(0x5b4bb1f1u, "Is Mutually Exclusive Entrance?", "If true, activating this pocket dimension entrance will deactivate all other mutually-exclusive pocket dimension entrances.")]
+	[DDLRegistration(0x6d342a81u, "Is Mutually Exclusive Entrance?", "If true, activating this pocket dimension entrance will deactivate all other mutually-exclusive pocket dimension entrances.")]
 	public bool MutuallyExclusive { get; set; } = true;
 
-	[DDLRegistration(0x5b4bb1f1u, "Use as Hex Streaming Source?", "If true, set this actor as the hex streaming source when the hero enters the pocket dimension, and set the hex streaming source back to the default when they leave.")]
+	[DDLRegistration(0xc2f6e72eu, "Use as Hex Streaming Source?", "If true, set this actor as the hex streaming source when the hero enters the pocket dimension, and set the hex streaming source back to the default when they leave.")]
 	public bool UseAsHexStreamingSource { get; set; } = true;
 
-	[DDLRegistration(0x5b4bb1f1u, "Out of Range Auto Deactivate Delay", "If the player is outside the pocket dimension and has been out of range from the entrance for at least this long, deactivate this entrance. -1 = never deactivate. 0 = wait one frame.")]
+	[DDLRegistration(0xa7108a07u, "Out of Range Auto Deactivate Delay", "If the player is outside the pocket dimension and has been out of range from the entrance for at least this long, deactivate this entrance. -1 = never deactivate. 0 = wait one frame.")]
 	public float AutoDeactivateOutOfRangeDelay { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5b4bb1f1u, "Auto Deactivate Range", "If the player is outside the pocket dimension and has been at least this far away from the entrance for a certain amount of time, deactivate this entrance. Unused if the delay is -1")]
+	[DDLRegistration(0x904564bbu, "Auto Deactivate Range", "If the player is outside the pocket dimension and has been at least this far away from the entrance for a certain amount of time, deactivate this entrance. Unused if the delay is -1")]
 	public float AutoDeactivateRange { get; set; } = 50.00f;
 
 	public static DimensionPortalSourcePrius Create(DDLObject ddl) => new(ddl);

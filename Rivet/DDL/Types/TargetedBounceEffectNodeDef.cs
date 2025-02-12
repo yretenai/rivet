@@ -19,10 +19,10 @@ public class TargetedBounceEffectNodeDef : BounceEffectNodeDef, IDDLObjectType<T
 		TargetAngle = ddl.GetObject<InputPlugFloat>(0xdca15d7cu);
 	}
 
-	[DDLRegistration(0x7c10e1b0u)]
+	[DDLRegistration(0x4fa7423cu)]
 	public InputPlugFloat? TargetRange { get; set; } = default;
 
-	[DDLRegistration(0x7c10e1b0u)]
+	[DDLRegistration(0xdca15d7cu)]
 	public InputPlugFloat? TargetAngle { get; set; } = default;
 
 	public new static TargetedBounceEffectNodeDef Create(DDLObject ddl) => new(ddl);

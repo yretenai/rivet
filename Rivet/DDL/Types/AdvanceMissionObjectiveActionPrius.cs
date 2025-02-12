@@ -20,13 +20,13 @@ public class AdvanceMissionObjectiveActionPrius : DDLObjectType, IDDLObjectType<
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x66870872u, description: "If checked, you will not lose progress from failing")]
+	[DDLRegistration(0x29239a5eu, description: "If checked, you will not lose progress from failing")]
 	public bool SaveProgress { get; set; } = true;
 
-	[DDLRegistration(0x66870872u, description: "If checked will also set the primary mission to this mission")]
+	[DDLRegistration(0x5eb85f31u, description: "If checked will also set the primary mission to this mission")]
 	public bool SetPrimary { get; set; } = true;
 
-	[DDLRegistration(0x66870872u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
 	public static AdvanceMissionObjectiveActionPrius Create(DDLObject ddl) => new(ddl);

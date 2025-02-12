@@ -18,7 +18,7 @@ public class SplineInstanceGenerator : SplineGenerator, IDDLObjectType<SplineIns
 		Instance = ddl.GetObject<DynamicInstanceItem>(0xb8310caeu);
 	}
 
-	[DDLRegistration(0x28e18d4du, "Instance Along Curve", "Instance priority determined by order")]
+	[DDLRegistration(0xb8310caeu, "Instance Along Curve", "Instance priority determined by order")]
 	public DynamicInstanceItem? Instance { get; set; } = default;
 
 	public new static SplineInstanceGenerator Create(DDLObject ddl) => new(ddl);

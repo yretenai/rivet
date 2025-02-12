@@ -18,7 +18,7 @@ public class ActorSpawnOnHitInfo : DDLObjectType, IDDLObjectType<ActorSpawnOnHit
 		ActorAsset = ddl.GetValue<RivetAssetId>(0x75356989u, ActorAsset);
 	}
 
-	[DDLRegistration(0x623d8cedu, description: "Spawn one of these.")]
+	[DDLRegistration(0x75356989u, description: "Spawn one of these.")]
 	public RivetAssetId ActorAsset { get; set; } = default;
 
 	public static ActorSpawnOnHitInfo Create(DDLObject ddl) => new(ddl);

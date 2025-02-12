@@ -18,7 +18,7 @@ public class StatusEffectResurrectingEvent : EventBase, IDDLObjectType<StatusEff
 		TimeUntilResurrect = ddl.GetValue<float>(0x91858f44u, TimeUntilResurrect);
 	}
 
-	[DDLRegistration(0x6327a921u)]
+	[DDLRegistration(0x91858f44u)]
 	public float TimeUntilResurrect { get; set; } = 0.00f;
 
 	public new static StatusEffectResurrectingEvent Create(DDLObject ddl) => new(ddl);

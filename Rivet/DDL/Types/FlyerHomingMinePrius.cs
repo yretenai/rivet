@@ -30,43 +30,43 @@ public class FlyerHomingMinePrius : DDLObjectType, IDDLObjectType<FlyerHomingMin
 		DeactivateWhenOutOfView = ddl.GetValue<bool>(0xbdf17966u, DeactivateWhenOutOfView);
 	}
 
-	[DDLRegistration(0xb2e3451au)]
+	[DDLRegistration(0xe3e6fa68u)]
 	public float DamageRadius { get; set; } = 10.00f;
 
-	[DDLRegistration(0xb2e3451au)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 100.00f;
 
-	[DDLRegistration(0xb2e3451au)]
+	[DDLRegistration(0xcc7f53a5u)]
 	public float TriggerRadius { get; set; } = 8.00f;
 
-	[DDLRegistration(0xb2e3451au)]
+	[DDLRegistration(0x754144e5u)]
 	public float HomingActivationRadius { get; set; } = 50.00f;
 
-	[DDLRegistration(0xb2e3451au, description: "If less than zero, the mine will never deactivate when the hero gets too far away.")]
+	[DDLRegistration(0xd43ee281u, description: "If less than zero, the mine will never deactivate when the hero gets too far away.")]
 	public float HomingDeactivationRadius { get; set; } = -1.00f;
 
-	[DDLRegistration(0xb2e3451au)]
+	[DDLRegistration(0x88953b61u)]
 	public float HomingSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0xb2e3451au)]
+	[DDLRegistration(0xabb951f6u)]
 	public float HomingAcceleration { get; set; } = 40.00f;
 
-	[DDLRegistration(0xb2e3451au)]
+	[DDLRegistration(0xdbafeca5u)]
 	public float HomingDeceleration { get; set; } = 40.00f;
 
-	[DDLRegistration(0xb2e3451au, description: "If less than zero, the mine will never auto destruct.")]
+	[DDLRegistration(0x4b235bdbu, description: "If less than zero, the mine will never auto destruct.")]
 	public float AutoDestructTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xb2e3451au, description: "Minimum distance in front of target in which the mine tries to get in front of said target")]
+	[DDLRegistration(0xd3b58087u, description: "Minimum distance in front of target in which the mine tries to get in front of said target")]
 	public float CutOffMinDistance { get; set; } = 10.00f;
 
-	[DDLRegistration(0xb2e3451au, description: "Maximum distance in front of target in which the mine tries to get in front of said target")]
+	[DDLRegistration(0x1fb8fb88u, description: "Maximum distance in front of target in which the mine tries to get in front of said target")]
 	public float CutOffMaxDistance { get; set; } = 50.00f;
 
-	[DDLRegistration(0xb2e3451au, description: "The mine must be in the cameras view in order to activate/start homing.")]
+	[DDLRegistration(0x2b395f52u, description: "The mine must be in the cameras view in order to activate/start homing.")]
 	public bool MustBeInViewToActivate { get; set; } = true;
 
-	[DDLRegistration(0xb2e3451au, description: "The mine will stop homing if it goes out of the camera's view")]
+	[DDLRegistration(0xbdf17966u, description: "The mine will stop homing if it goes out of the camera's view")]
 	public bool DeactivateWhenOutOfView { get; set; } = true;
 
 	public static FlyerHomingMinePrius Create(DDLObject ddl) => new(ddl);

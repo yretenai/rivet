@@ -28,37 +28,37 @@ public class AttachToHitSurfaceEffectPrius : ScriptedShotEffectBasePrius, IDDLOb
 		TriggerLifetimeOnFail = ddl.GetValue<bool>(0xac1b49d2u, TriggerLifetimeOnFail);
 	}
 
-	[DDLRegistration(0xd1efdc42u)]
+	[DDLRegistration(0x8664041bu)]
 	public bool ResetScriptedShotLifeTime { get; set; } = true;
 
-	[DDLRegistration(0xd1efdc42u)]
+	[DDLRegistration(0xf8b48463u)]
 	public float AttachOffset { get; set; } = 0.10f;
 
-	[DDLRegistration(0xd1efdc42u)]
+	[DDLRegistration(0xf9ae48d0u)]
 	public float AttachOffsetVelocity { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd1efdc42u)]
+	[DDLRegistration(0x46741ea8u)]
 	public float NewLifeTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0xd1efdc42u)]
+	[DDLRegistration(0xf9365e44u)]
 	public float NewLifeTimeEnemy { get; set; } = -1.00f;
 
-	[DDLRegistration(0xd1efdc42u)]
+	[DDLRegistration(0xbf9f9307u)]
 	public bool DestroyOnBotDeath { get; set; } = false;
 
-	[DDLRegistration(0xd1efdc42u)]
+	[DDLRegistration(0x2f074a2bu)]
 	public bool DestroyOnNonBotDeath { get; set; } = false;
 
-	[DDLRegistration(0xd1efdc42u)]
+	[DDLRegistration(0x282599e5u)]
 	public bool MatchDestroy { get; set; } = true;
 
-	[DDLRegistration(0xd1efdc42u)]
+	[DDLRegistration(0xe71cbd5au)]
 	public bool HideOnAutoDestroy { get; set; } = false;
 
-	[DDLRegistration(0xd1efdc42u)]
+	[DDLRegistration(0x4fab2aeau)]
 	public bool OrientToHitNormal { get; set; } = false;
 
-	[DDLRegistration(0xd1efdc42u)]
+	[DDLRegistration(0xac1b49d2u)]
 	public bool TriggerLifetimeOnFail { get; set; } = false;
 
 	public new static AttachToHitSurfaceEffectPrius Create(DDLObject ddl) => new(ddl);

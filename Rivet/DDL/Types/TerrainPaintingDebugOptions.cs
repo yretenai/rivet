@@ -36,61 +36,61 @@ public class TerrainPaintingDebugOptions : DDLObjectType, IDDLObjectType<Terrain
 		ShowDebugGrid = ddl.GetValue<bool>(0x16236d96u, ShowDebugGrid);
 	}
 
-	[DDLRegistration(0xd6489dbeu, "Debug Mode", "The debug mode for rendering terrain; when set to 'Off', the terrain will render using the specified blended materials.")]
+	[DDLRegistration(0x8718a8bfu, "Debug Mode", "The debug mode for rendering terrain; when set to 'Off', the terrain will render using the specified blended materials.")]
 	public x38a8002d DebugMode { get; set; } = x38a8002d.Off;
 
-	[DDLRegistration(0xd6489dbeu, "Wireframe Mode", "The mode used for rendering the terrain wireframe.")]
+	[DDLRegistration(0xcc3856f6u, "Wireframe Mode", "The mode used for rendering the terrain wireframe.")]
 	public x52cca08e WireframeMode { get; set; } = x52cca08e.Normal;
 
-	[DDLRegistration(0xd6489dbeu, "Brush Alpha", "This is the alpha value that will be used when rendering the terrain brush.")]
+	[DDLRegistration(0x396f3057u, "Brush Alpha", "This is the alpha value that will be used when rendering the terrain brush.")]
 	public float BrushAlpha { get; set; } = 0.60f;
 
-	[DDLRegistration(0xd6489dbeu, "Clip Map Fade", "This is the amount by which to fade between clipmap levels")]
+	[DDLRegistration(0x6ca3e794u, "Clip Map Fade", "This is the amount by which to fade between clipmap levels")]
 	public float ClipMapFade { get; set; } = 0.40f;
 
-	[DDLRegistration(0xd6489dbeu, "Detail Displacement Distance", "This is the distance within which the terrain height detail will be displaced along the normal.")]
+	[DDLRegistration(0xb5713c83u, "Detail Displacement Distance", "This is the distance within which the terrain height detail will be displaced along the normal.")]
 	public float DetailDisplacementDistance { get; set; } = 10.00f;
 
-	[DDLRegistration(0xd6489dbeu, "Detail Displacement Falloff", "This is the distance that the terrain height detail will fade out.")]
+	[DDLRegistration(0x1f0f0d32u, "Detail Displacement Falloff", "This is the distance that the terrain height detail will fade out.")]
 	public float DetailDisplacementFalloff { get; set; } = 5.00f;
 
-	[DDLRegistration(0xd6489dbeu, "Detail Displacement Levels", "This is the number of additional detail levels that should be added to the terrain when detail displacement is enabled (for example, if the value is 3, then a 32 x 32 quad tile can go to 64 x 64, then 128 x 128, and finally to 256 x 256 ).")]
+	[DDLRegistration(0xf710e24fu, "Detail Displacement Levels", "This is the number of additional detail levels that should be added to the terrain when detail displacement is enabled (for example, if the value is 3, then a 32 x 32 quad tile can go to 64 x 64, then 128 x 128, and finally to 256 x 256 ).")]
 	public int DetailDisplacementLevels { get; set; } = 3;
 
-	[DDLRegistration(0xd6489dbeu, "LoD Distance Scale", "This is a scale used to tweak level of detail distances.")]
+	[DDLRegistration(0x6701c640u, "LoD Distance Scale", "This is a scale used to tweak level of detail distances.")]
 	public float LodDistanceScale { get; set; } = 5.00f;
 
-	[DDLRegistration(0xd6489dbeu, "Quadtree Min Depth", "This specifies the minimum depth of the quadtree when rendering terrain.")]
+	[DDLRegistration(0xf5ce069bu, "Quadtree Min Depth", "This specifies the minimum depth of the quadtree when rendering terrain.")]
 	public int QuadtreeMinDepth { get; set; } = 0;
 
-	[DDLRegistration(0xd6489dbeu, "Quadtree Max Depth", "This specifies the maximum depth of the quadtree when rendering terrain.")]
+	[DDLRegistration(0x13aea97au, "Quadtree Max Depth", "This specifies the maximum depth of the quadtree when rendering terrain.")]
 	public int QuadtreeMaxDepth { get; set; } = 10;
 
-	[DDLRegistration(0xd6489dbeu, "Tile Vertex Density", "This specifies the density of vertices (basically, the number of grid squares) on a quadtree tile.")]
+	[DDLRegistration(0xc7b14c6fu, "Tile Vertex Density", "This specifies the density of vertices (basically, the number of grid squares) on a quadtree tile.")]
 	public int TileVertexDensity { get; set; } = 5;
 
-	[DDLRegistration(0xd6489dbeu, "Apply HeightField", "If checked, the heightfield will be applied to the terrain; otherwise it will render as a flat plane.")]
+	[DDLRegistration(0xfe54647du, "Apply HeightField", "If checked, the heightfield will be applied to the terrain; otherwise it will render as a flat plane.")]
 	public bool ApplyHeightField { get; set; } = true;
 
-	[DDLRegistration(0xd6489dbeu, "Enable Detail Displacement", "If checked, detail displacement will be applied to the heightfield; otherwise the materials will be layered flatly onto the terrain.")]
+	[DDLRegistration(0x29c767deu, "Enable Detail Displacement", "If checked, detail displacement will be applied to the heightfield; otherwise the materials will be layered flatly onto the terrain.")]
 	public bool EnableDetailDisplacement { get; set; } = true;
 
-	[DDLRegistration(0xd6489dbeu, "Enable Tile Rotation", "If checked, random rotations will be applied to the materials when generating the clipmap.")]
+	[DDLRegistration(0x42213577u, "Enable Tile Rotation", "If checked, random rotations will be applied to the materials when generating the clipmap.")]
 	public bool EnableTileRotation { get; set; } = true;
 
-	[DDLRegistration(0xd6489dbeu, "Force Generated VistaMap", "If checked, the vistamap will be generated at runtime, even if the terrain has a user-specified vistamap.")]
+	[DDLRegistration(0x01527937u, "Force Generated VistaMap", "If checked, the vistamap will be generated at runtime, even if the terrain has a user-specified vistamap.")]
 	public bool ForceGeneratedVistaMap { get; set; } = false;
 
-	[DDLRegistration(0xd6489dbeu, "Fix T-Junctions", "If checked, the terrain will try to fix the seams between quadtree tiles.")]
+	[DDLRegistration(0x1e9e2a9cu, "Fix T-Junctions", "If checked, the terrain will try to fix the seams between quadtree tiles.")]
 	public bool FixTJunctions { get; set; } = true;
 
-	[DDLRegistration(0xd6489dbeu, "Lock Radius Axes", "If checked, the brush radius will have equal values in all axes.")]
+	[DDLRegistration(0xd156edd4u, "Lock Radius Axes", "If checked, the brush radius will have equal values in all axes.")]
 	public bool LockRadiusAxes { get; set; } = true;
 
-	[DDLRegistration(0xd6489dbeu, "LoD Around Origin", "If checked, the terrain LoDs will be centered around the origin.")]
+	[DDLRegistration(0x82a75544u, "LoD Around Origin", "If checked, the terrain LoDs will be centered around the origin.")]
 	public bool LodAroundOrigin { get; set; } = false;
 
-	[DDLRegistration(0xd6489dbeu, "Show Debug Grid", "If checked, the debug terrain grid will be shown.")]
+	[DDLRegistration(0x16236d96u, "Show Debug Grid", "If checked, the debug terrain grid will be shown.")]
 	public bool ShowDebugGrid { get; set; } = false;
 
 	public static TerrainPaintingDebugOptions Create(DDLObject ddl) => new(ddl);

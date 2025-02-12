@@ -19,10 +19,10 @@ public class InputNodeIntDef : InputNodeBaseDef, IDDLObjectType<InputNodeIntDef>
 		Output = ddl.GetObject<OutputPlugInt>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0x40929febu)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugInt? Input { get; set; } = default;
 
-	[DDLRegistration(0x40929febu)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugInt? Output { get; set; } = default;
 
 	public new static InputNodeIntDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ShotWarmongerMicroRocketConfig : ConfigBase, IDDLObjectType<ShotWar
 		ShotPrius = ddl.GetObject<ShotWarmongerMicroRocketPrius>(0x66fe4621u);
 	}
 
-	[DDLRegistration(0x031ea5aeu)]
+	[DDLRegistration(0x3bdc2562u)]
 	public RivetAssetId MicroRocketActor { get; set; } = default;
 
-	[DDLRegistration(0x031ea5aeu, "Shot Prius")]
+	[DDLRegistration(0x66fe4621u, "Shot Prius")]
 	public ShotWarmongerMicroRocketPrius? ShotPrius { get; set; } = default;
 
 	public new static ShotWarmongerMicroRocketConfig Create(DDLObject ddl) => new(ddl);

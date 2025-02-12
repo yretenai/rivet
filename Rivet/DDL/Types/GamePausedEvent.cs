@@ -19,10 +19,10 @@ public class GamePausedEvent : EventBase, IDDLObjectType<GamePausedEvent> {
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0x4d2d08c7u)]
+	[DDLRegistration(0xe4ebebdbu)]
 	public int UserIndex { get; set; } = 0;
 
-	[DDLRegistration(0x4d2d08c7u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
 	public new static GamePausedEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PhysicsCollisionActionPrius : DDLObjectType, IDDLObjectType<Physics
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x1a1c6b38u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
 	public static PhysicsCollisionActionPrius Create(DDLObject ddl) => new(ddl);

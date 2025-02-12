@@ -18,7 +18,7 @@ public class GetCurrentLevelIDActionPrius : DDLObjectType, IDDLObjectType<GetCur
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xae8b1bb8u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
 	public static GetCurrentLevelIDActionPrius Create(DDLObject ddl) => new(ddl);

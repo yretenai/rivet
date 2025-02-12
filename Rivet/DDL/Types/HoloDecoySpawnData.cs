@@ -19,10 +19,10 @@ public class HoloDecoySpawnData : AttachableShotSpawnData, IDDLObjectType<HoloDe
 		Health = ddl.GetValue<float>(0xf0a26d74u, Health);
 	}
 
-	[DDLRegistration(0x01e40543u)]
+	[DDLRegistration(0xc7e68df8u)]
 	public float Lifetime { get; set; } = 20.00f;
 
-	[DDLRegistration(0x01e40543u)]
+	[DDLRegistration(0xf0a26d74u)]
 	public float Health { get; set; } = 200.00f;
 
 	public new static HoloDecoySpawnData Create(DDLObject ddl) => new(ddl);

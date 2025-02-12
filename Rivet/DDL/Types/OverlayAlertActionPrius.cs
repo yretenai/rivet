@@ -24,25 +24,25 @@ public class OverlayAlertActionPrius : DDLObjectType, IDDLObjectType<OverlayAler
 		CancelText = ddl.GetString(0x884d2b6a) ?? CancelText;
 	}
 
-	[DDLRegistration(0x9da10bf2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x9da10bf2u, "Temp Text Header", "Header displays this text but will be stripped in final mode and show loc tag instead.")]
+	[DDLRegistration(0x32a672f5u, "Temp Text Header", "Header displays this text but will be stripped in final mode and show loc tag instead.")]
 	public string? TempTextHeader { get; set; } = default;
 
-	[DDLRegistration(0x9da10bf2u, description: "Alert Header.")]
+	[DDLRegistration(0xc90dcc8bu, description: "Alert Header.")]
 	public string? LocTagHeader { get; set; } = "INVALID";
 
-	[DDLRegistration(0x9da10bf2u, "Temp Text Message", "Message displays this text but will be stripped in final mode and show loc tag instead.")]
+	[DDLRegistration(0x4557ff9du, "Temp Text Message", "Message displays this text but will be stripped in final mode and show loc tag instead.")]
 	public string? TempTextMessage { get; set; } = default;
 
-	[DDLRegistration(0x9da10bf2u, description: "Alert Message.")]
+	[DDLRegistration(0xf2110818u, description: "Alert Message.")]
 	public string? LocTagMessage { get; set; } = "INVALID";
 
-	[DDLRegistration(0x9da10bf2u, description: "Confirm button text.")]
+	[DDLRegistration(0x0e3f7d1cu, description: "Confirm button text.")]
 	public string? ConfirmText { get; set; } = "UI_MENU_CONFIRM";
 
-	[DDLRegistration(0x9da10bf2u, description: "Cancel button text.")]
+	[DDLRegistration(0x884d2b6au, description: "Cancel button text.")]
 	public string? CancelText { get; set; } = "UI_MENU_CANCEL";
 
 	public static OverlayAlertActionPrius Create(DDLObject ddl) => new(ddl);

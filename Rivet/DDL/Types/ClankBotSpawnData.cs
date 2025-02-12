@@ -20,13 +20,13 @@ public class ClankBotSpawnData : ActorSpawnData, IDDLObjectType<ClankBotSpawnDat
 		Role = ddl.GetValue<uint>(0x67f94adau, Role);
 	}
 
-	[DDLRegistration(0x5d5515f4u, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5d5515f4u, description: "The actor we spawned from.")]
+	[DDLRegistration(0xfc56d431u, description: "The actor we spawned from.")]
 	public uint Spawner { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5d5515f4u, description: "My Role.")]
+	[DDLRegistration(0x67f94adau, description: "My Role.")]
 	public uint Role { get; set; } = 0x00000000;
 
 	public new static ClankBotSpawnData Create(DDLObject ddl) => new(ddl);

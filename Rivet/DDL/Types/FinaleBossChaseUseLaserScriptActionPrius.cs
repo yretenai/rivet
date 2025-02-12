@@ -21,16 +21,16 @@ public class FinaleBossChaseUseLaserScriptActionPrius : DDLObjectType, IDDLObjec
 		ShootDuringIntro = ddl.GetValue<bool>(0xb6b2d134u, ShootDuringIntro);
 	}
 
-	[DDLRegistration(0x4a2123b9u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0x4a2123b9u, description: "ShootTime var is prioritized. How long to shoot laser.")]
+	[DDLRegistration(0x58784031u, description: "ShootTime var is prioritized. How long to shoot laser.")]
 	public float LaserShootTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4a2123b9u)]
+	[DDLRegistration(0x77a69e9fu)]
 	public x7487ff22 LaserArm { get; set; } = x7487ff22.LaserLeftArm;
 
-	[DDLRegistration(0x4a2123b9u)]
+	[DDLRegistration(0xb6b2d134u)]
 	public bool ShootDuringIntro { get; set; } = false;
 
 	public static FinaleBossChaseUseLaserScriptActionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class VanityColorData : DDLObjectType, IDDLObjectType<VanityColorData> {
 		ColorId = ddl.GetValue<byte>(0xdcecc79bu, ColorId);
 	}
 
-	[DDLRegistration(0x10f29a1au)]
+	[DDLRegistration(0xdcecc79bu)]
 	public byte ColorId { get; set; } = 0x00;
 
 	public static VanityColorData Create(DDLObject ddl) => new(ddl);

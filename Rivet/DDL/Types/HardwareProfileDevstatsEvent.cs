@@ -43,82 +43,82 @@ public class HardwareProfileDevstatsEvent : EventBase, IDDLObjectType<HardwarePr
 		Si_asset_disk_type = ddl.GetString(0x57be9cbc) ?? Si_asset_disk_type;
 	}
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0xd7acae93u)]
 	public string? Language { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x69b85263u)]
 	public string? Resolution { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0xaef3ce03u)]
 	public float Refresh_rate { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0xbcf2e2b2u)]
 	public bool Hdr_capable { get; set; } = false;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0xe2e65c5bu)]
 	public string? Dsd_card_name { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x8f844b80u)]
 	public string? Dsd_displaymemory { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0xe7676ab8u)]
 	public string? Dsd_displaymode { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x84897be4u)]
 	public string? Dsd_drivermodel { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0xedf1623au)]
 	public string? Dsd_driverversion { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0xeea1893fu)]
 	public int Dsd_monitor_number { get; set; } = 0;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0xcb5baabdu)]
 	public string? Dsd_primary_monitor_model { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0xf3f00871u)]
 	public string? Dsd_primary_monitor_name { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0xe643d12du)]
 	public string? Si_bios { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x98d18927u)]
 	public string? Si_directxversion { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x015e1757u)]
 	public string? Streaming_provider { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x73769486u)]
 	public string? Si_operating_system { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x7d6a3d0fu)]
 	public string? Si_page_file { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x6ebd4149u)]
 	public string? Si_memory { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x5ff15195u)]
 	public string? Si_processor { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0xede51104u)]
 	public string? Si_system_dpi_setting { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x65899a2fu)]
 	public string? Si_user_dpi_setting { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x3110216eu)]
 	public string? Si_pcdx_adapter { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x75888e3fu)]
 	public string? Si_controller { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x3758be4bu)]
 	public string? Si_audio_device { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x85299a54u)]
 	public string? Si_asset_disk_model { get; set; } = default;
 
-	[DDLRegistration(0xf1d48158u)]
+	[DDLRegistration(0x57be9cbcu)]
 	public string? Si_asset_disk_type { get; set; } = default;
 
 	public new static HardwareProfileDevstatsEvent Create(DDLObject ddl) => new(ddl);

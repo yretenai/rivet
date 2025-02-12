@@ -21,16 +21,16 @@ public class MaterialNodePortUI : DDLObjectType, IDDLObjectType<MaterialNodePort
 		LinearFilter = ddl.GetValue<bool>(0xc95c1d5cu, LinearFilter);
 	}
 
-	[DDLRegistration(0xf5acd816u)]
+	[DDLRegistration(0x8a514a8du)]
 	public string? Id { get; set; } = default;
 
-	[DDLRegistration(0xf5acd816u)]
+	[DDLRegistration(0xd67dc5e4u)]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0xf5acd816u)]
+	[DDLRegistration(0x3c0cbb98u)]
 	public bool Exposed { get; set; } = false;
 
-	[DDLRegistration(0xf5acd816u)]
+	[DDLRegistration(0xc95c1d5cu)]
 	public bool LinearFilter { get; set; } = false;
 
 	public static MaterialNodePortUI Create(DDLObject ddl) => new(ddl);

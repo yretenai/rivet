@@ -19,10 +19,10 @@ public class AnimMaterialComponentMorphOverrideDef : DDLObjectType, IDDLObjectTy
 		TargetWeight = ddl.GetValue<float>(0xf57c1f67u, TargetWeight);
 	}
 
-	[DDLRegistration(0x839b50a1u, description: "The name of the morph target")]
+	[DDLRegistration(0xa75cb40eu, description: "The name of the morph target")]
 	public string? TargetName { get; set; } = default;
 
-	[DDLRegistration(0x839b50a1u)]
+	[DDLRegistration(0xf57c1f67u)]
 	public float TargetWeight { get; set; } = 0.00f;
 
 	public static AnimMaterialComponentMorphOverrideDef Create(DDLObject ddl) => new(ddl);

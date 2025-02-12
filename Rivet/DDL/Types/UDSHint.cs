@@ -22,19 +22,19 @@ public class UDSHint : DDLObjectType, IDDLObjectType<UDSHint> {
 		Links = ddl.GetObject<UDSHintLinks>(0x091042ddu);
 	}
 
-	[DDLRegistration(0x7c1ccddau)]
+	[DDLRegistration(0x9a05f2f9u)]
 	public string? ObjectId { get; set; } = default;
 
-	[DDLRegistration(0x7c1ccddau)]
+	[DDLRegistration(0xce811188u)]
 	public Dictionary<string, string?> Name { get; set; } = [];
 
-	[DDLRegistration(0x7c1ccddau)]
+	[DDLRegistration(0xe03811fdu)]
 	public Dictionary<string, string?> Description { get; set; } = [];
 
-	[DDLRegistration(0x7c1ccddau)]
+	[DDLRegistration(0xab16dd88u)]
 	public UDSHintStatus? ActiveStatus { get; set; } = default;
 
-	[DDLRegistration(0x7c1ccddau)]
+	[DDLRegistration(0x091042ddu)]
 	public UDSHintLinks? Links { get; set; } = default;
 
 	public static UDSHint Create(DDLObject ddl) => new(ddl);

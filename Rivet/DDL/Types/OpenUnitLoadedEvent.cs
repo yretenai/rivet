@@ -18,7 +18,7 @@ public class OpenUnitLoadedEvent : RegionLoadedEvent, IDDLObjectType<OpenUnitLoa
 		OpenUnitIndex = ddl.GetValue<int>(0x27c06b78u, OpenUnitIndex);
 	}
 
-	[DDLRegistration(0xf35597c2u)]
+	[DDLRegistration(0x27c06b78u)]
 	public int OpenUnitIndex { get; set; } = -1;
 
 	public new static OpenUnitLoadedEvent Create(DDLObject ddl) => new(ddl);

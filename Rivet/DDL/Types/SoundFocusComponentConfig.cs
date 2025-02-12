@@ -18,7 +18,7 @@ public class SoundFocusComponentConfig : ConfigBase, IDDLObjectType<SoundFocusCo
 		SoundFocusData = ddl.GetObject<SoundFocusComponentData>(0x8d2ce588u);
 	}
 
-	[DDLRegistration(0xe1f3fbe6u)]
+	[DDLRegistration(0x8d2ce588u)]
 	public SoundFocusComponentData? SoundFocusData { get; set; } = default;
 
 	public new static SoundFocusComponentConfig Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class SetCurrencyActionPrius : DDLObjectType, IDDLObjectType<SetCurrencyA
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x0c4d2a6au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
 	public static SetCurrencyActionPrius Create(DDLObject ddl) => new(ddl);

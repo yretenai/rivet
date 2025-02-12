@@ -20,13 +20,13 @@ public class DamageVolumeAttachedPriusData : DDLObjectType, IDDLObjectType<Damag
 		Extents = ddl.GetObject<DDLVector3>(0x62c56bc8u);
 	}
 
-	[DDLRegistration(0x3b3db57cu, description: "Actor origin will be used if blank.")]
+	[DDLRegistration(0xfa8dcd9au, description: "Actor origin will be used if blank.")]
 	public string? AttachLocator { get; set; } = default;
 
-	[DDLRegistration(0x3b3db57cu)]
+	[DDLRegistration(0xc4633319u)]
 	public xe19384e8 Shape { get; set; } = xe19384e8.Cuboid;
 
-	[DDLRegistration(0x3b3db57cu)]
+	[DDLRegistration(0x62c56bc8u)]
 	public DDLVector3? Extents { get; set; } = default;
 
 	public static DamageVolumeAttachedPriusData Create(DDLObject ddl) => new(ddl);

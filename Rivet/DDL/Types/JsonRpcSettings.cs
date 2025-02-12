@@ -18,7 +18,7 @@ public class JsonRpcSettings : DDLObjectType, IDDLObjectType<JsonRpcSettings> {
 		Port = ddl.GetValue<ushort>(0x73019d7cu, Port);
 	}
 
-	[DDLRegistration(0x45838c9au)]
+	[DDLRegistration(0x73019d7cu)]
 	public ushort Port { get; set; } = 0x9472;
 
 	public static JsonRpcSettings Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class UrlDispatch : DDLObjectType, IDDLObjectType<UrlDispatch> {
 		AssetType = ddl.GetEnum<AssetExtensions>(0x8970bd6du, AssetExtensionsValues.Lookup);
 	}
 
-	[DDLRegistration(0x3b83e2f6u)]
+	[DDLRegistration(0xbbad2afau)]
 	public ulong SessionId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x3b83e2f6u)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3b83e2f6u)]
+	[DDLRegistration(0x7ba7ce05u)]
 	public xa5664812 DispatchType { get; set; } = xa5664812.Asset;
 
-	[DDLRegistration(0x3b83e2f6u)]
+	[DDLRegistration(0x49ab9602u)]
 	public string? CollectionName { get; set; } = default;
 
-	[DDLRegistration(0x3b83e2f6u)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public string? Action { get; set; } = default;
 
-	[DDLRegistration(0x3b83e2f6u)]
+	[DDLRegistration(0x8970bd6du)]
 	public AssetExtensions AssetType { get; set; } = AssetExtensions.Actor;
 
 	public static UrlDispatch Create(DDLObject ddl) => new(ddl);

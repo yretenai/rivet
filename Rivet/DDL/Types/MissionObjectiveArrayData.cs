@@ -18,7 +18,7 @@ public class MissionObjectiveArrayData : DDLObjectType, IDDLObjectType<MissionOb
 		Objective = ddl.GetObject<MissionObjective>(0x3b6b6e0du);
 	}
 
-	[DDLRegistration(0xc9cdaa35u)]
+	[DDLRegistration(0x3b6b6e0du)]
 	public MissionObjective? Objective { get; set; } = default;
 
 	public static MissionObjectiveArrayData Create(DDLObject ddl) => new(ddl);

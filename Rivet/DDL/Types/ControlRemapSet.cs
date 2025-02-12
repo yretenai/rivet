@@ -32,49 +32,49 @@ public class ControlRemapSet : DDLObjectType, IDDLObjectType<ControlRemapSet> {
 		SwapSticks = ddl.GetValue<bool>(0x84dbb58au, SwapSticks);
 	}
 
-	[DDLRegistration(0x260ca207u, "D-Pad Up")]
+	[DDLRegistration(0xbe8069f0u, "D-Pad Up")]
 	public x7b87880c DpadUp { get; set; } = x7b87880c.Up;
 
-	[DDLRegistration(0x260ca207u, "D-Pad Down")]
+	[DDLRegistration(0x1579f118u, "D-Pad Down")]
 	public x7b87880c DpadDown { get; set; } = x7b87880c.Down;
 
-	[DDLRegistration(0x260ca207u, "D-Pad Left")]
+	[DDLRegistration(0x73e1864bu, "D-Pad Left")]
 	public x7b87880c DpadLeft { get; set; } = x7b87880c.Left;
 
-	[DDLRegistration(0x260ca207u, "D-Pad Right")]
+	[DDLRegistration(0xc4a66d8au, "D-Pad Right")]
 	public x7b87880c DpadRight { get; set; } = x7b87880c.Right;
 
-	[DDLRegistration(0x260ca207u, "Cross (XB A)")]
+	[DDLRegistration(0x1786c5b4u, "Cross (XB A)")]
 	public x7b87880c FaceBottom { get; set; } = x7b87880c.A;
 
-	[DDLRegistration(0x260ca207u, "Circle (XB B)")]
+	[DDLRegistration(0x0682b635u, "Circle (XB B)")]
 	public x7b87880c FaceRight { get; set; } = x7b87880c.B;
 
-	[DDLRegistration(0x260ca207u, "Square (XB X)")]
+	[DDLRegistration(0x80c59ef7u, "Square (XB X)")]
 	public x7b87880c FaceLeft { get; set; } = x7b87880c.X;
 
-	[DDLRegistration(0x260ca207u, "Triangle (XB Y)")]
+	[DDLRegistration(0xbcf793f2u, "Triangle (XB Y)")]
 	public x7b87880c FaceTop { get; set; } = x7b87880c.Y;
 
-	[DDLRegistration(0x260ca207u, "Left Shoulder")]
+	[DDLRegistration(0x43c764ffu, "Left Shoulder")]
 	public x7b87880c ShoulderLeft { get; set; } = x7b87880c.L1;
 
-	[DDLRegistration(0x260ca207u, "Right Shoulder")]
+	[DDLRegistration(0x089a3cfdu, "Right Shoulder")]
 	public x7b87880c ShoulderRight { get; set; } = x7b87880c.R1;
 
-	[DDLRegistration(0x260ca207u, "Left Trigger")]
+	[DDLRegistration(0x1ed9c2d9u, "Left Trigger")]
 	public x7b87880c TriggerLeft { get; set; } = x7b87880c.L2;
 
-	[DDLRegistration(0x260ca207u, "Right Trigger")]
+	[DDLRegistration(0xdacaa7a6u, "Right Trigger")]
 	public x7b87880c TriggerRight { get; set; } = x7b87880c.R2;
 
-	[DDLRegistration(0x260ca207u, "Left Stick Button")]
+	[DDLRegistration(0x007d4e0cu, "Left Stick Button")]
 	public x7b87880c StickLeft { get; set; } = x7b87880c.L3;
 
-	[DDLRegistration(0x260ca207u, "Right Stick Button")]
+	[DDLRegistration(0x2c6d2571u, "Right Stick Button")]
 	public x7b87880c StickRight { get; set; } = x7b87880c.R3;
 
-	[DDLRegistration(0x260ca207u)]
+	[DDLRegistration(0x84dbb58au)]
 	public bool SwapSticks { get; set; } = false;
 
 	public static ControlRemapSet Create(DDLObject ddl) => new(ddl);

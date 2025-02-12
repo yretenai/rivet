@@ -25,28 +25,28 @@ public class POIConfigData : DDLObjectType, IDDLObjectType<POIConfigData> {
 		DistanceTextMode = ddl.GetObject<POIAttributeDistanceTextBase>(0xf0c02500u);
 	}
 
-	[DDLRegistration(0x96379876u, description: "Uses Coherent to draw")]
+	[DDLRegistration(0x85fde7d2u, description: "Uses Coherent to draw")]
 	public bool CoherentPOI { get; set; } = true;
 
-	[DDLRegistration(0x96379876u, description: "Icon")]
+	[DDLRegistration(0x5504e96bu, description: "Icon")]
 	public POIAttributeIconBase? Icon { get; set; } = default;
 
-	[DDLRegistration(0x96379876u, description: "Priority type for coordination")]
+	[DDLRegistration(0x98a76157u, description: "Priority type for coordination")]
 	public xfb0b3aad Priority { get; set; } = xfb0b3aad.POIPriorityNormal;
 
-	[DDLRegistration(0x96379876u, description: "Determines how the POI behaves when it reaches screen boundaries")]
+	[DDLRegistration(0x2a4e5466u, description: "Determines how the POI behaves when it reaches screen boundaries")]
 	public POIAttributeEdgeModeBase? EdgeMode { get; set; } = default;
 
-	[DDLRegistration(0x96379876u, description: "Shows pointer to offscreen position when clamped")]
+	[DDLRegistration(0xbe47c5cau, description: "Shows pointer to offscreen position when clamped")]
 	public bool OffscreenIndicator { get; set; } = false;
 
-	[DDLRegistration(0x96379876u, description: "Distance Scale behavior")]
+	[DDLRegistration(0x6c21b587u, description: "Distance Scale behavior")]
 	public POIAttributeDistanceScaleBase? DistanceScaleMode { get; set; } = default;
 
-	[DDLRegistration(0x96379876u, description: "Shows distance text")]
+	[DDLRegistration(0xaa2068d6u, description: "Shows distance text")]
 	public bool DistanceText { get; set; } = false;
 
-	[DDLRegistration(0x96379876u, description: "Distance Text behavior")]
+	[DDLRegistration(0xf0c02500u, description: "Distance Text behavior")]
 	public POIAttributeDistanceTextBase? DistanceTextMode { get; set; } = default;
 
 	public static POIConfigData Create(DDLObject ddl) => new(ddl);

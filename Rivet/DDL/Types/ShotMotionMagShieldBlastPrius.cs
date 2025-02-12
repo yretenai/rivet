@@ -20,13 +20,13 @@ public class ShotMotionMagShieldBlastPrius : BasicShotMotionPrius, IDDLObjectTyp
 		DebugDrawEnabled = ddl.GetValue<bool>(0xdc50e4a9u, DebugDrawEnabled);
 	}
 
-	[DDLRegistration(0x13d974f9u, "Cone Half Angle")]
+	[DDLRegistration(0x004cc508u, "Cone Half Angle")]
 	public float ConeHalfAngle { get; set; } = 10.00f;
 
-	[DDLRegistration(0x13d974f9u, "Cone Length")]
+	[DDLRegistration(0x2a4a2ca5u, "Cone Length")]
 	public float ConeLength { get; set; } = 2.00f;
 
-	[DDLRegistration(0x13d974f9u, "Debug Draw Enabled")]
+	[DDLRegistration(0xdc50e4a9u, "Debug Draw Enabled")]
 	public bool DebugDrawEnabled { get; set; } = false;
 
 	public new static ShotMotionMagShieldBlastPrius Create(DDLObject ddl) => new(ddl);

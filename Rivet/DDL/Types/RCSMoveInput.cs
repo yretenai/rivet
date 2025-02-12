@@ -22,19 +22,19 @@ public class RCSMoveInput : DDLObjectType, IDDLObjectType<RCSMoveInput> {
 		Preview = ddl.GetValue<bool>(0xb86f4c08u, Preview);
 	}
 
-	[DDLRegistration(0x43ff6450u, description: "Full path of original file in Rcs")]
+	[DDLRegistration(0x67b94266u, description: "Full path of original file in Rcs")]
 	public string? FromFile { get; set; } = default;
 
-	[DDLRegistration(0x43ff6450u, description: "Full path of file destination in Rcs")]
+	[DDLRegistration(0x098206bdu, description: "Full path of file destination in Rcs")]
 	public string? ToFile { get; set; } = default;
 
-	[DDLRegistration(0x43ff6450u, description: "Changelist to use; 0 (or unspecified) means use the default changelist.")]
+	[DDLRegistration(0x03b0ddc6u, description: "Changelist to use; 0 (or unspecified) means use the default changelist.")]
 	public uint Changelist { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x43ff6450u, description: "forces a move to an existing target file.")]
+	[DDLRegistration(0x8e3b4fe9u, description: "forces a move to an existing target file.")]
 	public bool Force { get; set; } = false;
 
-	[DDLRegistration(0x43ff6450u, description: "If true, previews the operation without moving files.")]
+	[DDLRegistration(0xb86f4c08u, description: "If true, previews the operation without moving files.")]
 	public bool Preview { get; set; } = false;
 
 	public static RCSMoveInput Create(DDLObject ddl) => new(ddl);

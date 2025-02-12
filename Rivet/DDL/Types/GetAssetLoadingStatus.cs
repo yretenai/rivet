@@ -19,10 +19,10 @@ public class GetAssetLoadingStatus : DDLObjectType, IDDLObjectType<GetAssetLoadi
 		IsLoading = ddl.GetValue<bool>(0xb35af478u, IsLoading);
 	}
 
-	[DDLRegistration(0xd39f9554u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = "";
 
-	[DDLRegistration(0xd39f9554u)]
+	[DDLRegistration(0xb35af478u)]
 	public bool IsLoading { get; set; } = false;
 
 	public static GetAssetLoadingStatus Create(DDLObject ddl) => new(ddl);

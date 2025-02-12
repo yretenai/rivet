@@ -18,7 +18,7 @@ public class DamageBlockedByShieldEvent : EventBase, IDDLObjectType<DamageBlocke
 		ConsecutiveBlockCount = ddl.GetValue<byte>(0x0e5afd97u, ConsecutiveBlockCount);
 	}
 
-	[DDLRegistration(0x67cb99f4u)]
+	[DDLRegistration(0x0e5afd97u)]
 	public byte ConsecutiveBlockCount { get; set; } = 0x00;
 
 	public new static DamageBlockedByShieldEvent Create(DDLObject ddl) => new(ddl);

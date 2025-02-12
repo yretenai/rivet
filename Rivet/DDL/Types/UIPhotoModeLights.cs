@@ -20,13 +20,13 @@ public class UIPhotoModeLights : DDLObjectType, IDDLObjectType<UIPhotoModeLights
 		AdditionalOptions = ddl.GetObjects<UIPhotoModeOption>(0xfe3ef31fu);
 	}
 
-	[DDLRegistration(0xf44ab588u, "Light Settings")]
+	[DDLRegistration(0xc0e4c861u, "Light Settings")]
 	public List<UIPhotoModeOption?> LightOptions { get; set; } = [];
 
-	[DDLRegistration(0xf44ab588u, "Environment Light Settings")]
+	[DDLRegistration(0x1d634a29u, "Environment Light Settings")]
 	public List<UIPhotoModeOption?> KeyLightOptions { get; set; } = [];
 
-	[DDLRegistration(0xf44ab588u)]
+	[DDLRegistration(0xfe3ef31fu)]
 	public List<UIPhotoModeOption?> AdditionalOptions { get; set; } = [];
 
 	public static UIPhotoModeLights Create(DDLObject ddl) => new(ddl);

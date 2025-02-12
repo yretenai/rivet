@@ -21,16 +21,16 @@ public class ProximityDamageablePrius : DDLObjectType, IDDLObjectType<ProximityD
 		IsEnabled = ddl.GetValue<bool>(0xb4c37748u, IsEnabled);
 	}
 
-	[DDLRegistration(0x00966b7bu, description: "If true, this proximity damageable will remove itself from database after damaged once")]
+	[DDLRegistration(0x7b9231b4u, description: "If true, this proximity damageable will remove itself from database after damaged once")]
 	public bool DamageOnce { get; set; } = true;
 
-	[DDLRegistration(0x00966b7bu, description: "Allows bots to damage this proximity damageable")]
+	[DDLRegistration(0xbab7c558u, description: "Allows bots to damage this proximity damageable")]
 	public bool AllowBotDamage { get; set; } = true;
 
-	[DDLRegistration(0x00966b7bu, description: "Allows hero to damage this proximity damageable")]
+	[DDLRegistration(0x3ff75d6eu, description: "Allows hero to damage this proximity damageable")]
 	public bool AllowHeroDamage { get; set; } = false;
 
-	[DDLRegistration(0x00966b7bu, description: "true means this actor is fair game to be proximity damaged. If false, this component will be destroyed and can't be toggled back during runtime")]
+	[DDLRegistration(0xb4c37748u, description: "true means this actor is fair game to be proximity damaged. If false, this component will be destroyed and can't be toggled back during runtime")]
 	public bool IsEnabled { get; set; } = true;
 
 	public static ProximityDamageablePrius Create(DDLObject ddl) => new(ddl);

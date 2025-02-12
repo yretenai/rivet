@@ -20,13 +20,13 @@ public class SwingingMotionHitEvent : EventBase, IDDLObjectType<SwingingMotionHi
 		OwnerIsHero = ddl.GetValue<bool>(0x0022f6dcu, OwnerIsHero);
 	}
 
-	[DDLRegistration(0xc38c6971u)]
+	[DDLRegistration(0x2528809fu)]
 	public uint PivotJointHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc38c6971u, description: "Speed of impact")]
+	[DDLRegistration(0x27119bfau, description: "Speed of impact")]
 	public float ImpactSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc38c6971u, description: "Owner is hero")]
+	[DDLRegistration(0x0022f6dcu, description: "Owner is hero")]
 	public bool OwnerIsHero { get; set; } = false;
 
 	public new static SwingingMotionHitEvent Create(DDLObject ddl) => new(ddl);

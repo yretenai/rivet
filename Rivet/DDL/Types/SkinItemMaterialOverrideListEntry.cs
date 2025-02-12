@@ -20,13 +20,13 @@ public class SkinItemMaterialOverrideListEntry : DDLObjectType, IDDLObjectType<S
 		SecondaryOverrideMaterial = ddl.GetObject<AssetReferenceDef>(0x647bc0f1u);
 	}
 
-	[DDLRegistration(0x4607e1e6u, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0x4607e1e6u, "Override Material", "Override material")]
+	[DDLRegistration(0x21926360u, "Override Material", "Override material")]
 	public AssetReferenceDef? OverrideMaterial { get; set; } = default;
 
-	[DDLRegistration(0x4607e1e6u, "Secondary Override Material", "Secondary override material")]
+	[DDLRegistration(0x647bc0f1u, "Secondary Override Material", "Secondary override material")]
 	public AssetReferenceDef? SecondaryOverrideMaterial { get; set; } = default;
 
 	public static SkinItemMaterialOverrideListEntry Create(DDLObject ddl) => new(ddl);

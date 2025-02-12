@@ -20,13 +20,13 @@ public class TessellationSettings : DDLObjectType, IDDLObjectType<TessellationSe
 		TessellationAmount = ddl.GetValue<float>(0xa6898667u, TessellationAmount);
 	}
 
-	[DDLRegistration(0x18b11ddcu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xc8ad99bd Type { get; set; } = xc8ad99bd.None;
 
-	[DDLRegistration(0x18b11ddcu, "Tessellation Fade")]
+	[DDLRegistration(0x0e262334u, "Tessellation Fade")]
 	public bool TessellationFade { get; set; } = true;
 
-	[DDLRegistration(0x18b11ddcu, "Tessellation Amount")]
+	[DDLRegistration(0xa6898667u, "Tessellation Amount")]
 	public float TessellationAmount { get; set; } = 4.00f;
 
 	public static TessellationSettings Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class SoundPropagation2OcclParamsDef : DDLObjectType, IDDLObjectType<Soun
 		FilterMaxAttenuationdB = ddl.GetValue<float>(0x6eacf3e4u, FilterMaxAttenuationdB);
 	}
 
-	[DDLRegistration(0x41a9955cu, description: "whether to apply occlusion")]
+	[DDLRegistration(0x81ebe863u, description: "whether to apply occlusion")]
 	public bool ApplyOcclusion { get; set; } = true;
 
-	[DDLRegistration(0x41a9955cu, description: "max direct attenuation applying to high frequency volume (0 to -100 in dB)")]
+	[DDLRegistration(0xd42a6af9u, description: "max direct attenuation applying to high frequency volume (0 to -100 in dB)")]
 	public float DirectMaxAttenuationdB { get; set; } = -40.00f;
 
-	[DDLRegistration(0x41a9955cu, description: "max filter attenuation applying to overall volume (0 to -100 in dB)")]
+	[DDLRegistration(0x6eacf3e4u, description: "max filter attenuation applying to overall volume (0 to -100 in dB)")]
 	public float FilterMaxAttenuationdB { get; set; } = -30.00f;
 
 	public static SoundPropagation2OcclParamsDef Create(DDLObject ddl) => new(ddl);

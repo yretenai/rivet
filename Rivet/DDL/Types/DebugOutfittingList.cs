@@ -19,10 +19,10 @@ public class DebugOutfittingList : DDLObjectType, IDDLObjectType<DebugOutfitting
 		ItemConfig = ddl.GetValues<RivetAssetId>(0xa88f833fu);
 	}
 
-	[DDLRegistration(0x5279e77cu)]
+	[DDLRegistration(0xfc4da4b1u)]
 	public string? Category { get; set; } = default;
 
-	[DDLRegistration(0x5279e77cu)]
+	[DDLRegistration(0xa88f833fu)]
 	public List<RivetAssetId> ItemConfig { get; set; } = [];
 
 	public static DebugOutfittingList Create(DDLObject ddl) => new(ddl);

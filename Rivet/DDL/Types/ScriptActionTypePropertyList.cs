@@ -18,7 +18,7 @@ public class ScriptActionTypePropertyList : DDLObjectType, IDDLObjectType<Script
 		Properties = ddl.GetObjects<ScriptActionTypeProperties>(0x5cf56ffeu);
 	}
 
-	[DDLRegistration(0xacce29a4u)]
+	[DDLRegistration(0x5cf56ffeu)]
 	public List<ScriptActionTypeProperties?> Properties { get; set; } = [];
 
 	public static ScriptActionTypePropertyList Create(DDLObject ddl) => new(ddl);

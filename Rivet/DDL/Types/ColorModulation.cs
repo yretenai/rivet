@@ -19,10 +19,10 @@ public class ColorModulation : DDLObjectType, IDDLObjectType<ColorModulation> {
 		Height = ddl.GetValue<float>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0x07cc42e6u, description: "The modulation for red, green and blue (1.0f = no change). ")]
+	[DDLRegistration(0x45decbb8u, description: "The modulation for red, green and blue (1.0f = no change). ")]
 	public DDLVector3? Modulation { get; set; } = default;
 
-	[DDLRegistration(0x07cc42e6u, description: "The height of this modulation.")]
+	[DDLRegistration(0xcb35ab68u, description: "The height of this modulation.")]
 	public float Height { get; set; } = 0.00f;
 
 	public static ColorModulation Create(DDLObject ddl) => new(ddl);

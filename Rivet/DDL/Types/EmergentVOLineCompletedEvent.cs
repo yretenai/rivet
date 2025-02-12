@@ -19,10 +19,10 @@ public class EmergentVOLineCompletedEvent : EventBase, IDDLObjectType<EmergentVO
 		LineIndex = ddl.GetValue<uint>(0x152754cbu, LineIndex);
 	}
 
-	[DDLRegistration(0x8b0b92b0u, description: "Component handle of the active line that finished (or was stopped).")]
+	[DDLRegistration(0xad67f1acu, description: "Component handle of the active line that finished (or was stopped).")]
 	public uint EmergentVOActiveLineComponent { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8b0b92b0u)]
+	[DDLRegistration(0x152754cbu)]
 	public uint LineIndex { get; set; } = 0x00000000;
 
 	public new static EmergentVOLineCompletedEvent Create(DDLObject ddl) => new(ddl);

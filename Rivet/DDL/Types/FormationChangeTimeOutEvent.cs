@@ -18,7 +18,7 @@ public class FormationChangeTimeOutEvent : EventBase, IDDLObjectType<FormationCh
 		TimeOut = ddl.GetValue<float>(0xb8e6504au, TimeOut);
 	}
 
-	[DDLRegistration(0xbe4b1fdcu, description: "Desired time between formations")]
+	[DDLRegistration(0xb8e6504au, description: "Desired time between formations")]
 	public float TimeOut { get; set; } = 0.00f;
 
 	public new static FormationChangeTimeOutEvent Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class Cinematic2MaterialConstOverrideInfo : DDLObjectType, IDDLObjectType
 		ConstValue = ddl.GetObject<DDLVector4>(0x1370708cu);
 	}
 
-	[DDLRegistration(0x6a3bc45au, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model. Set to None to override all materials.")]
+	[DDLRegistration(0x981e6927u, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model. Set to None to override all materials.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x6a3bc45au, description: "This specifies the name of the constant to modify.")]
+	[DDLRegistration(0x8de98428u, description: "This specifies the name of the constant to modify.")]
 	public string? ConstName { get; set; } = default;
 
-	[DDLRegistration(0x6a3bc45au)]
+	[DDLRegistration(0x1370708cu)]
 	public DDLVector4? ConstValue { get; set; } = default;
 
 	public static Cinematic2MaterialConstOverrideInfo Create(DDLObject ddl) => new(ddl);

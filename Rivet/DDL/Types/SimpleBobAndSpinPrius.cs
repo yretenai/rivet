@@ -21,16 +21,16 @@ public class SimpleBobAndSpinPrius : DDLObjectType, IDDLObjectType<SimpleBobAndS
 		RandomizeBob = ddl.GetValue<bool>(0x6edd5c5au, RandomizeBob);
 	}
 
-	[DDLRegistration(0x25af7da9u)]
+	[DDLRegistration(0xa482271fu)]
 	public float Frequency { get; set; } = 1.00f;
 
-	[DDLRegistration(0x25af7da9u)]
+	[DDLRegistration(0xe950071du)]
 	public float Amplitude { get; set; } = 0.25f;
 
-	[DDLRegistration(0x25af7da9u)]
+	[DDLRegistration(0x229ae43fu)]
 	public float Spin { get; set; } = 180.00f;
 
-	[DDLRegistration(0x25af7da9u)]
+	[DDLRegistration(0x6edd5c5au)]
 	public bool RandomizeBob { get; set; } = true;
 
 	public static SimpleBobAndSpinPrius Create(DDLObject ddl) => new(ddl);

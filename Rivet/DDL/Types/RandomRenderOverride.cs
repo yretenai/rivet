@@ -20,13 +20,13 @@ public class RandomRenderOverride : DDLObjectType, IDDLObjectType<RandomRenderOv
 		MaxValue = ddl.GetValue<float>(0x04e99fa3u, MaxValue);
 	}
 
-	[DDLRegistration(0x65a62e5eu, description: "Name of the render override to randomize. Type is a float.")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of the render override to randomize. Type is a float.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x65a62e5eu, "Min Value (Inclusive)", "The minimum value for this override.")]
+	[DDLRegistration(0xe2893042u, "Min Value (Inclusive)", "The minimum value for this override.")]
 	public float MinValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x65a62e5eu, "Max Value (Exclusive)", "The maximum value for this override.")]
+	[DDLRegistration(0x04e99fa3u, "Max Value (Exclusive)", "The maximum value for this override.")]
 	public float MaxValue { get; set; } = 1.00f;
 
 	public static RandomRenderOverride Create(DDLObject ddl) => new(ddl);

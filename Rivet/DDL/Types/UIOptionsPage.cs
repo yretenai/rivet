@@ -20,13 +20,13 @@ public class UIOptionsPage : DDLObjectType, IDDLObjectType<UIOptionsPage> {
 		Options = ddl.GetObjects<UIOption>(0xd1df99bfu);
 	}
 
-	[DDLRegistration(0x8f00a922u)]
+	[DDLRegistration(0x982d0b4cu)]
 	public x58b2a3a9 PageID { get; set; } = x58b2a3a9.PageMain;
 
-	[DDLRegistration(0x8f00a922u)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x8f00a922u)]
+	[DDLRegistration(0xd1df99bfu)]
 	public List<UIOption?> Options { get; set; } = [];
 
 	public static UIOptionsPage Create(DDLObject ddl) => new(ddl);

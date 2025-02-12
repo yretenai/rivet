@@ -18,7 +18,7 @@ public class PhaseDashBarrierPrius : DDLObjectType, IDDLObjectType<PhaseDashBarr
 		Range = ddl.GetValue<float>(0x8ad49688u, Range);
 	}
 
-	[DDLRegistration(0x8dc43b55u, description: "Radius to be in range of barrier. A value of -1 will use the actor bounding sphere radius.")]
+	[DDLRegistration(0x8ad49688u, description: "Radius to be in range of barrier. A value of -1 will use the actor bounding sphere radius.")]
 	public float Range { get; set; } = -1.00f;
 
 	public static PhaseDashBarrierPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class DeathEraseStartedEvent : EventBase, IDDLObjectType<DeathEraseStarte
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x6cc55ce8u)]
+	[DDLRegistration(0xabc94c5au)]
 	public float Delay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6cc55ce8u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.50f;
 
 	public new static DeathEraseStartedEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class NotMissionSystemNodeDef_Tools : NodeBaseDef, IDDLObjectType<NotMiss
 		Output = ddl.GetObject<OutputPlugBoolean>(0xf2a65af9u);
 	}
 
-	[DDLRegistration(0x3cfeb08cu)]
+	[DDLRegistration(0xc17bfe16u)]
 	public InputPlugBoolean? Input { get; set; } = default;
 
-	[DDLRegistration(0x3cfeb08cu)]
+	[DDLRegistration(0xf2a65af9u)]
 	public OutputPlugBoolean? Output { get; set; } = default;
 
 	public new static NotMissionSystemNodeDef_Tools Create(DDLObject ddl) => new(ddl);

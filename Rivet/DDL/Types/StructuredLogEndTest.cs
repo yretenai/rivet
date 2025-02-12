@@ -18,7 +18,7 @@ public class StructuredLogEndTest : DDLObjectType, IDDLObjectType<StructuredLogE
 		TestName = ddl.GetString(0x3006a975) ?? TestName;
 	}
 
-	[DDLRegistration(0x31112debu)]
+	[DDLRegistration(0x3006a975u)]
 	public string? TestName { get; set; } = default;
 
 	public static StructuredLogEndTest Create(DDLObject ddl) => new(ddl);

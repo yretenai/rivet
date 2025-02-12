@@ -33,52 +33,52 @@ public class VisualEffectInstEngineItem : DDLObjectType, IDDLObjectType<VisualEf
 		FpsSimulation = ddl.GetValue<float>(0xba9c394fu, FpsSimulation);
 	}
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0x1c901071u)]
 	public double Azimuth { get; set; } = 0;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0xd3eeb0edu)]
 	public bool DisplayDebugStats { get; set; } = false;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0xb999a75cu)]
 	public bool DisplayLightShells { get; set; } = false;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0xd0f67607u)]
 	public bool DisplayOverdraw { get; set; } = false;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0x83f0b16eu)]
 	public double Inclination { get; set; } = 0;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0x91cfdd5eu)]
 	public bool Loop { get; set; } = false;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0x7b43320eu)]
 	public xa8fd47b8 MotionType { get; set; } = xa8fd47b8.None;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0xbac01e3au)]
 	public VisualEffectState State { get; set; } = VisualEffectState.Run;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0xf09aaa72u)]
 	public VisualEffectDef? VisualEffectDef { get; set; } = default;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0xb28edf40u)]
 	public bool VisualEffectEditor { get; set; } = false;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0xc0c8f740u)]
 	public int Counter { get; set; } = 0;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0x16753237u)]
 	public float Speed { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 4.00f;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0xd726cd51u)]
 	public float DynamicScaling { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe7e42cc8u)]
+	[DDLRegistration(0xba9c394fu)]
 	public float FpsSimulation { get; set; } = 1.00f;
 
 	public static VisualEffectInstEngineItem Create(DDLObject ddl) => new(ddl);

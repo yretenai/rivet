@@ -20,13 +20,13 @@ public class HeroCrouchVolumePrius : DDLObjectType, IDDLObjectType<HeroCrouchVol
 		ForceWalk = ddl.GetValue<bool>(0xeae48f27u, ForceWalk);
 	}
 
-	[DDLRegistration(0x4d865ddbu, "Use Low Camera")]
+	[DDLRegistration(0xc2a503b6u, "Use Low Camera")]
 	public bool UseProneCamera { get; set; } = true;
 
-	[DDLRegistration(0x4d865ddbu, "Stand On Exit")]
+	[DDLRegistration(0x42ca3b06u, "Stand On Exit")]
 	public bool StandOnExit { get; set; } = true;
 
-	[DDLRegistration(0x4d865ddbu, "Force Walk")]
+	[DDLRegistration(0xeae48f27u, "Force Walk")]
 	public bool ForceWalk { get; set; } = false;
 
 	public static HeroCrouchVolumePrius Create(DDLObject ddl) => new(ddl);

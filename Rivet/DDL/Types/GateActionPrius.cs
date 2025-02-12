@@ -20,13 +20,13 @@ public class GateActionPrius : DDLObjectType, IDDLObjectType<GateActionPrius> {
 		AutoClose = ddl.GetValue<uint>(0x3e3b91dbu, AutoClose);
 	}
 
-	[DDLRegistration(0xf3f302b3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
-	[DDLRegistration(0xf3f302b3u, "Start Open")]
+	[DDLRegistration(0xc7bfb5cau, "Start Open")]
 	public bool StartOpen { get; set; } = true;
 
-	[DDLRegistration(0xf3f302b3u, "Auto Close Count", "Automatically close gate after this many signals pass through, 0 disables")]
+	[DDLRegistration(0x3e3b91dbu, "Auto Close Count", "Automatically close gate after this many signals pass through, 0 disables")]
 	public uint AutoClose { get; set; } = 0x00000000;
 
 	public static GateActionPrius Create(DDLObject ddl) => new(ddl);

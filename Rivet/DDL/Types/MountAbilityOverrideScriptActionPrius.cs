@@ -26,31 +26,31 @@ public class MountAbilityOverrideScriptActionPrius : DDLObjectType, IDDLObjectTy
 		EnableAbilityL2 = ddl.GetValue<bool>(0x1db09e18u, EnableAbilityL2);
 	}
 
-	[DDLRegistration(0x5baa0113u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0x5baa0113u)]
+	[DDLRegistration(0x3d15c526u)]
 	public bool EnableAbilitySquare { get; set; } = true;
 
-	[DDLRegistration(0x5baa0113u)]
+	[DDLRegistration(0x1d54a85fu)]
 	public bool EnableAbilityX { get; set; } = true;
 
-	[DDLRegistration(0x5baa0113u)]
+	[DDLRegistration(0x8a32d45fu)]
 	public bool EnableAbilityTriangle { get; set; } = true;
 
-	[DDLRegistration(0x5baa0113u)]
+	[DDLRegistration(0x2441c8f6u)]
 	public bool EnableAbilityCircle { get; set; } = true;
 
-	[DDLRegistration(0x5baa0113u)]
+	[DDLRegistration(0x50f8f07du)]
 	public bool EnableAbilityR1 { get; set; } = true;
 
-	[DDLRegistration(0x5baa0113u)]
+	[DDLRegistration(0x84b9cfa2u)]
 	public bool EnableAbilityL1 { get; set; } = true;
 
-	[DDLRegistration(0x5baa0113u)]
+	[DDLRegistration(0xc9f1a1c7u)]
 	public bool EnableAbilityR2 { get; set; } = true;
 
-	[DDLRegistration(0x5baa0113u)]
+	[DDLRegistration(0x1db09e18u)]
 	public bool EnableAbilityL2 { get; set; } = true;
 
 	public static MountAbilityOverrideScriptActionPrius Create(DDLObject ddl) => new(ddl);

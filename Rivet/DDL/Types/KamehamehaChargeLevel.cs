@@ -20,13 +20,13 @@ public class KamehamehaChargeLevel : DDLObjectType, IDDLObjectType<KamehamehaCha
 		BeamRadius = ddl.GetValue<float>(0x80686126u, BeamRadius);
 	}
 
-	[DDLRegistration(0x0056d4d5u)]
+	[DDLRegistration(0x0dd206eau)]
 	public float ChargeDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0056d4d5u)]
+	[DDLRegistration(0xd4b30240u)]
 	public float BeamDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0056d4d5u)]
+	[DDLRegistration(0x80686126u)]
 	public float BeamRadius { get; set; } = 0.00f;
 
 	public static KamehamehaChargeLevel Create(DDLObject ddl) => new(ddl);

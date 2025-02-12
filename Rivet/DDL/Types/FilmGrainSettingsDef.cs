@@ -23,22 +23,22 @@ public class FilmGrainSettingsDef : DDLObjectType, IDDLObjectType<FilmGrainSetti
 		NoiseTexture = ddl.GetValue<RivetAssetId>(0x1674b6e2u, NoiseTexture);
 	}
 
-	[DDLRegistration(0x6e034288u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0x6e034288u)]
+	[DDLRegistration(0xc750e4dau)]
 	public float Size { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6e034288u)]
+	[DDLRegistration(0x2cb85ca8u)]
 	public float Strength { get; set; } = 0.50f;
 
-	[DDLRegistration(0x6e034288u, "Size At 4K", "Size at 4k resolution. If 0, it will automatically derive from Size.")]
+	[DDLRegistration(0x72cdbffdu, "Size At 4K", "Size at 4k resolution. If 0, it will automatically derive from Size.")]
 	public float SizeAt4K { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6e034288u, "Strength At 4K", "Strength at 4k resolution. If 0, it will automatically derive from Strength.")]
+	[DDLRegistration(0xd9c93a56u, "Strength At 4K", "Strength at 4k resolution. If 0, it will automatically derive from Strength.")]
 	public float StrengthAt4K { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6e034288u, "Noise Texture", "Film Grain Noise Tiling Texture")]
+	[DDLRegistration(0x1674b6e2u, "Noise Texture", "Film Grain Noise Tiling Texture")]
 	public RivetAssetId NoiseTexture { get; set; } = "required/textures/Noise.texture";
 
 	public static FilmGrainSettingsDef Create(DDLObject ddl) => new(ddl);

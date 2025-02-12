@@ -27,34 +27,34 @@ public class SimpleAimInterpPrius : DDLObjectType, IDDLObjectType<SimpleAimInter
 		AnimPitchMaxDeg = ddl.GetValue<float>(0x4cce6e3cu, AnimPitchMaxDeg);
 	}
 
-	[DDLRegistration(0x831502a9u)]
+	[DDLRegistration(0xa9dff180u)]
 	public float TotalTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x831502a9u)]
+	[DDLRegistration(0x3ac2d0d4u)]
 	public bool StartOn { get; set; } = true;
 
-	[DDLRegistration(0x831502a9u)]
+	[DDLRegistration(0x9494d50au)]
 	public float ClampedYawMinDeg { get; set; } = -45.00f;
 
-	[DDLRegistration(0x831502a9u)]
+	[DDLRegistration(0xd1969688u)]
 	public float ClampedYawMaxDeg { get; set; } = 45.00f;
 
-	[DDLRegistration(0x831502a9u)]
+	[DDLRegistration(0x89f5ebadu)]
 	public float ClampedPitchMinDeg { get; set; } = 0.00f;
 
-	[DDLRegistration(0x831502a9u)]
+	[DDLRegistration(0xccf7a82fu)]
 	public float ClampedPitchMaxDeg { get; set; } = 0.00f;
 
-	[DDLRegistration(0x831502a9u)]
+	[DDLRegistration(0x862644b1u)]
 	public float AnimYawMinDeg { get; set; } = -90.00f;
 
-	[DDLRegistration(0x831502a9u)]
+	[DDLRegistration(0xc3240733u)]
 	public float AnimYawMaxDeg { get; set; } = 90.00f;
 
-	[DDLRegistration(0x831502a9u)]
+	[DDLRegistration(0x09cc2dbeu)]
 	public float AnimPitchMinDeg { get; set; } = -90.00f;
 
-	[DDLRegistration(0x831502a9u)]
+	[DDLRegistration(0x4cce6e3cu)]
 	public float AnimPitchMaxDeg { get; set; } = 90.00f;
 
 	public static SimpleAimInterpPrius Create(DDLObject ddl) => new(ddl);

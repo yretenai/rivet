@@ -18,7 +18,7 @@ public class SimpleShotPrius : ShotBasePrius, IDDLObjectType<SimpleShotPrius> {
 		LifeTime = ddl.GetValue<float>(0x67d422c6u, LifeTime);
 	}
 
-	[DDLRegistration(0x61fcace9u)]
+	[DDLRegistration(0x67d422c6u)]
 	public float LifeTime { get; set; } = 100.00f;
 
 	public new static SimpleShotPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ClearEmergentVOCooldownOverrideEvent : EventBase, IDDLObjectType<Cl
 		Trigger = ddl.GetEnum<DialogTriggerGame>(0x1b816c65u, DialogTriggerGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x7be12f70u)]
+	[DDLRegistration(0x1b816c65u)]
 	public DialogTriggerGame Trigger { get; set; } = DialogTriggerGame.None;
 
 	public new static ClearEmergentVOCooldownOverrideEvent Create(DDLObject ddl) => new(ddl);

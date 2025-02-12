@@ -23,22 +23,22 @@ public class ExplosiveBulletPrius : SimpleShotPrius, IDDLObjectType<ExplosiveBul
 		DamageLOSType = ddl.GetEnum<DamageLOSTypes>(0x4762f7dfu, DamageLOSTypesValues.Lookup);
 	}
 
-	[DDLRegistration(0x95d7972bu)]
+	[DDLRegistration(0x9eca2505u)]
 	public DamageTypesGame ExplosionDamageType { get; set; } = DamageTypesGame.Explosion;
 
-	[DDLRegistration(0x95d7972bu)]
+	[DDLRegistration(0x93d0d934u)]
 	public DamageRequestFlags DamageFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
-	[DDLRegistration(0x95d7972bu, "Explosion Data")]
+	[DDLRegistration(0x7860aa8fu, "Explosion Data")]
 	public DamageModifierExplosionPrius? ExplosionData { get; set; } = default;
 
-	[DDLRegistration(0x95d7972bu)]
+	[DDLRegistration(0xb7da23ebu)]
 	public float ExplosionImpulse { get; set; } = 22.00f;
 
-	[DDLRegistration(0x95d7972bu)]
+	[DDLRegistration(0x2ee45555u)]
 	public float IgnoreDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x95d7972bu)]
+	[DDLRegistration(0x4762f7dfu)]
 	public DamageLOSTypes DamageLOSType { get; set; } = DamageLOSTypes.LOS;
 
 	public new static ExplosiveBulletPrius Create(DDLObject ddl) => new(ddl);

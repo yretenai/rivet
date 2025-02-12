@@ -19,10 +19,10 @@ public class SkinItemTextureOverrideListElement : DDLObjectType, IDDLObjectType<
 		TextureOverride = ddl.GetObject<SkinItemTextureOverride>(0xe2b74ca6u);
 	}
 
-	[DDLRegistration(0x499a948du, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0x499a948du, "Texture Override", "Texture override parameters")]
+	[DDLRegistration(0xe2b74ca6u, "Texture Override", "Texture override parameters")]
 	public SkinItemTextureOverride? TextureOverride { get; set; } = default;
 
 	public static SkinItemTextureOverrideListElement Create(DDLObject ddl) => new(ddl);

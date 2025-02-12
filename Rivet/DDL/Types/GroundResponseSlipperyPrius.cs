@@ -19,10 +19,10 @@ public class GroundResponseSlipperyPrius : GroundResponseSpeedModifierPrius, IDD
 		MomentumWeightRun = ddl.GetValue<float>(0xc7c185a4u, MomentumWeightRun);
 	}
 
-	[DDLRegistration(0xac304651u, description: "0 == normal movement, 1 == you can't move at all.  Try to put it somewhere in between")]
+	[DDLRegistration(0x15db87b8u, description: "0 == normal movement, 1 == you can't move at all.  Try to put it somewhere in between")]
 	public float MomentumWeightWalk { get; set; } = 0.00f;
 
-	[DDLRegistration(0xac304651u, description: "0 == normal movement, 1 == you can't move at all.  Try to put it somewhere in between")]
+	[DDLRegistration(0xc7c185a4u, description: "0 == normal movement, 1 == you can't move at all.  Try to put it somewhere in between")]
 	public float MomentumWeightRun { get; set; } = 0.00f;
 
 	public new static GroundResponseSlipperyPrius Create(DDLObject ddl) => new(ddl);

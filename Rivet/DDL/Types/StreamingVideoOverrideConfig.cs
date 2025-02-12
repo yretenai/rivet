@@ -18,7 +18,7 @@ public class StreamingVideoOverrideConfig : ConfigBase, IDDLObjectType<Streaming
 		StreamingData = ddl.GetObject<StreamingVideoBaseConfig>(0xaa4e455du);
 	}
 
-	[DDLRegistration(0x31623a77u)]
+	[DDLRegistration(0xaa4e455du)]
 	public StreamingVideoBaseConfig? StreamingData { get; set; } = default;
 
 	public new static StreamingVideoOverrideConfig Create(DDLObject ddl) => new(ddl);

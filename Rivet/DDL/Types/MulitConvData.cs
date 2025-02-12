@@ -20,13 +20,13 @@ public class MulitConvData : DDLObjectType, IDDLObjectType<MulitConvData> {
 		ConversationOptions = ddl.GetObjects<MulitConvOptions>(0x430a610fu);
 	}
 
-	[DDLRegistration(0xad4d5049u, description: "Minimum delay between Loops or Conversation options")]
+	[DDLRegistration(0x4d64e8edu, description: "Minimum delay between Loops or Conversation options")]
 	public float MinDelay { get; set; } = 5.00f;
 
-	[DDLRegistration(0xad4d5049u, description: "Maximum delay between Loops or Conversation options")]
+	[DDLRegistration(0xab04470cu, description: "Maximum delay between Loops or Conversation options")]
 	public float MaxDelay { get; set; } = 7.00f;
 
-	[DDLRegistration(0xad4d5049u)]
+	[DDLRegistration(0x430a610fu)]
 	public List<MulitConvOptions?> ConversationOptions { get; set; } = [];
 
 	public static MulitConvData Create(DDLObject ddl) => new(ddl);

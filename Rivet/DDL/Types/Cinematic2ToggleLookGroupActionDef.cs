@@ -23,22 +23,22 @@ public class Cinematic2ToggleLookGroupActionDef : DDLObjectType, IDDLObjectType<
 		LookGroupsToDisable = ddl.GetStrings(0x16558d0cu);
 	}
 
-	[DDLRegistration(0xa3aa17ceu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa3aa17ceu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa3aa17ceu)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0xa3aa17ceu)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa3aa17ceu)]
+	[DDLRegistration(0x5f37f268u)]
 	public List<string?> LookGroupsToEnable { get; set; } = [];
 
-	[DDLRegistration(0xa3aa17ceu)]
+	[DDLRegistration(0x16558d0cu)]
 	public List<string?> LookGroupsToDisable { get; set; } = [];
 
 	public static Cinematic2ToggleLookGroupActionDef Create(DDLObject ddl) => new(ddl);

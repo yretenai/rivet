@@ -18,7 +18,7 @@ public class IconMapHeroControl : IconMapBase, IDDLObjectType<IconMapHeroControl
 		HeroControl = ddl.GetEnum<HeroControl>(0x5316cb93u, HeroControlValues.Lookup);
 	}
 
-	[DDLRegistration(0xd2bbaa8au)]
+	[DDLRegistration(0x5316cb93u)]
 	public HeroControl HeroControl { get; set; } = HeroControl.Jump;
 
 	public new static IconMapHeroControl Create(DDLObject ddl) => new(ddl);

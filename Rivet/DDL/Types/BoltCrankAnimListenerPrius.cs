@@ -20,13 +20,13 @@ public class BoltCrankAnimListenerPrius : DDLObjectType, IDDLObjectType<BoltCran
 		TriggerAnimEvents = ddl.GetValue<bool>(0x5224a336u, TriggerAnimEvents);
 	}
 
-	[DDLRegistration(0xfc3f0fa4u, description: "If this is blank we'll look at the actor that we are on.")]
+	[DDLRegistration(0xa8de01b8u, description: "If this is blank we'll look at the actor that we are on.")]
 	public RivetAssetId Crank { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xfc3f0fa4u)]
+	[DDLRegistration(0x45f98c1eu)]
 	public string? AnimDriverName { get; set; } = default;
 
-	[DDLRegistration(0xfc3f0fa4u, description: "Whether we should fire off anim events on the animation when we hit the frame an event is on.")]
+	[DDLRegistration(0x5224a336u, description: "Whether we should fire off anim events on the animation when we hit the frame an event is on.")]
 	public bool TriggerAnimEvents { get; set; } = false;
 
 	public static BoltCrankAnimListenerPrius Create(DDLObject ddl) => new(ddl);

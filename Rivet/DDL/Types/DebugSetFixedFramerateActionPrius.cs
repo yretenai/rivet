@@ -19,10 +19,10 @@ public class DebugSetFixedFramerateActionPrius : DDLObjectType, IDDLObjectType<D
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0x7c6516eeu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0x7c6516eeu, "Enable/Disable", "True sets fixed framerate, false floats it")]
+	[DDLRegistration(0x5113d8bcu, "Enable/Disable", "True sets fixed framerate, false floats it")]
 	public bool Enabled { get; set; } = true;
 
 	public static DebugSetFixedFramerateActionPrius Create(DDLObject ddl) => new(ddl);

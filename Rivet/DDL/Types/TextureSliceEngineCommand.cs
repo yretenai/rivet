@@ -19,10 +19,10 @@ public class TextureSliceEngineCommand : DDLObjectType, IDDLObjectType<TextureSl
 		Increment = ddl.GetValue<bool>(0xd775d942u, Increment);
 	}
 
-	[DDLRegistration(0xfcd3f43bu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xfcd3f43bu)]
+	[DDLRegistration(0xd775d942u)]
 	public bool Increment { get; set; } = false;
 
 	public static TextureSliceEngineCommand Create(DDLObject ddl) => new(ddl);

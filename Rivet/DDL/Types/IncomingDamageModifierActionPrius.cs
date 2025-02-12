@@ -19,10 +19,10 @@ public class IncomingDamageModifierActionPrius : DDLObjectType, IDDLObjectType<I
 		DamageModifierPriusType = ddl.GetObject<DamageModifierIncomingPrius>(0x0ebab250u);
 	}
 
-	[DDLRegistration(0x8481f410u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
-	[DDLRegistration(0x8481f410u)]
+	[DDLRegistration(0x0ebab250u)]
 	public DamageModifierIncomingPrius? DamageModifierPriusType { get; set; } = default;
 
 	public static IncomingDamageModifierActionPrius Create(DDLObject ddl) => new(ddl);

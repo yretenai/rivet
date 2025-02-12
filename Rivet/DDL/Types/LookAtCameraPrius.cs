@@ -18,7 +18,7 @@ public class LookAtCameraPrius : TargetingAimAnglePrius, IDDLObjectType<LookAtCa
 		MinCameraDistance = ddl.GetValue<float>(0xea459f39u, MinCameraDistance);
 	}
 
-	[DDLRegistration(0x9a0afeb1u, description: "Camera must be this close to look at (-1 for infinite distance).")]
+	[DDLRegistration(0xea459f39u, description: "Camera must be this close to look at (-1 for infinite distance).")]
 	public float MinCameraDistance { get; set; } = -1.00f;
 
 	public new static LookAtCameraPrius Create(DDLObject ddl) => new(ddl);

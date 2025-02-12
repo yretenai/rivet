@@ -18,7 +18,7 @@ public class LoadSetUnloadedEvent : EventBase, IDDLObjectType<LoadSetUnloadedEve
 		LoadSetIndex = ddl.GetValue<int>(0x7c8165d6u, LoadSetIndex);
 	}
 
-	[DDLRegistration(0x510a1e1cu)]
+	[DDLRegistration(0x7c8165d6u)]
 	public int LoadSetIndex { get; set; } = 0;
 
 	public new static LoadSetUnloadedEvent Create(DDLObject ddl) => new(ddl);

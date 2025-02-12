@@ -20,13 +20,13 @@ public class HierarchicalAssetDefBase : DDLObjectType, IDDLObjectType<Hierarchic
 		HierarchicalAssetParent = ddl.GetValue<RivetAssetId>(0xa71e2658u, HierarchicalAssetParent);
 	}
 
-	[DDLRegistration(0xbc57dfc3u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xbc57dfc3u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xbc57dfc3u, "Parent Asset")]
+	[DDLRegistration(0xa71e2658u, "Parent Asset")]
 	public RivetAssetId HierarchicalAssetParent { get; set; } = default;
 
 	public static HierarchicalAssetDefBase Create(DDLObject ddl) => new(ddl);

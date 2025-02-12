@@ -23,22 +23,22 @@ public class PSNAuthenticationSettings : DDLObjectType, IDDLObjectType<PSNAuthen
 		Namespace = ddl.GetString(0xb11cf45a) ?? Namespace;
 	}
 
-	[DDLRegistration(0x2fdef570u)]
+	[DDLRegistration(0xffb7d34du)]
 	public string? Host { get; set; } = default;
 
-	[DDLRegistration(0x2fdef570u)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public string? Path { get; set; } = default;
 
-	[DDLRegistration(0x2fdef570u)]
+	[DDLRegistration(0x46646dfau)]
 	public string? Token { get; set; } = default;
 
-	[DDLRegistration(0x2fdef570u)]
+	[DDLRegistration(0xc3890163u)]
 	public string? ConfigID { get; set; } = default;
 
-	[DDLRegistration(0x2fdef570u)]
+	[DDLRegistration(0x0a843195u)]
 	public string? LinkPlatform { get; set; } = default;
 
-	[DDLRegistration(0x2fdef570u)]
+	[DDLRegistration(0xb11cf45au)]
 	public string? Namespace { get; set; } = default;
 
 	public static PSNAuthenticationSettings Create(DDLObject ddl) => new(ddl);

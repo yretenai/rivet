@@ -21,16 +21,16 @@ public class DistanceTargetingPrius : TargetingBasePrius, IDDLObjectType<Distanc
 		ValidTargetTypes = ddl.GetBitset<TargetType>(0x3b4c9303u, TargetTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x0cb90698u, description: "Maximum targeting distance when passive")]
+	[DDLRegistration(0x4ed066deu, description: "Maximum targeting distance when passive")]
 	public float MaxDistancePassive { get; set; } = 20.00f;
 
-	[DDLRegistration(0x0cb90698u, description: "Maximum targeting distance when engaged")]
+	[DDLRegistration(0xf966953au, description: "Maximum targeting distance when engaged")]
 	public float MaxDistanceEngaged { get; set; } = 25.00f;
 
-	[DDLRegistration(0x0cb90698u, description: "Targets must be this much closer to the actor to cause a target switch")]
+	[DDLRegistration(0x9808cbd6u, description: "Targets must be this much closer to the actor to cause a target switch")]
 	public float TargetSwitchTolerance { get; set; } = 2.00f;
 
-	[DDLRegistration(0x0cb90698u)]
+	[DDLRegistration(0x3b4c9303u)]
 	public TargetType ValidTargetTypes { get; set; } = (TargetType) 0x7fffffff;
 
 	public new static DistanceTargetingPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ForceUnloadZonesEngineItem : DDLObjectType, IDDLObjectType<ForceUnl
 		ZoneList = ddl.GetStrings(0x79dfcd60u);
 	}
 
-	[DDLRegistration(0xc832fb91u)]
+	[DDLRegistration(0x79dfcd60u)]
 	public List<string?> ZoneList { get; set; } = [];
 
 	public static ForceUnloadZonesEngineItem Create(DDLObject ddl) => new(ddl);

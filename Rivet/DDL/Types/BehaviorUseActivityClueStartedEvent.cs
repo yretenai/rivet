@@ -18,7 +18,7 @@ public class BehaviorUseActivityClueStartedEvent : EventBase, IDDLObjectType<Beh
 		Clue = ddl.GetValue<uint>(0x161a6d61u, Clue);
 	}
 
-	[DDLRegistration(0xb78da647u, "Clue", "The clue that this bot is trying to use")]
+	[DDLRegistration(0x161a6d61u, "Clue", "The clue that this bot is trying to use")]
 	public uint Clue { get; set; } = 0x00000000;
 
 	public new static BehaviorUseActivityClueStartedEvent Create(DDLObject ddl) => new(ddl);

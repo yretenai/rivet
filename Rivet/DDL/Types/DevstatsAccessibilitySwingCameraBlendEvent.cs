@@ -21,16 +21,16 @@ public class DevstatsAccessibilitySwingCameraBlendEvent : EventBase, IDDLObjectT
 		TVal = ddl.GetValue<float>(0xa55a0df0u, TVal);
 	}
 
-	[DDLRegistration(0x60306e3fu)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x60306e3fu)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x60306e3fu)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
-	[DDLRegistration(0x60306e3fu)]
+	[DDLRegistration(0xa55a0df0u)]
 	public float TVal { get; set; } = 0.00f;
 
 	public new static DevstatsAccessibilitySwingCameraBlendEvent Create(DDLObject ddl) => new(ddl);

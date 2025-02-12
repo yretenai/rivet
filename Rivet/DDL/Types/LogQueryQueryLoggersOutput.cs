@@ -20,13 +20,13 @@ public class LogQueryQueryLoggersOutput : DDLObjectType, IDDLObjectType<LogQuery
 		Enabled = ddl.GetValues<bool>(0x5113d8bcu);
 	}
 
-	[DDLRegistration(0x7dfd2239u, description: "Hash of the names for all of the loggers")]
+	[DDLRegistration(0xc2f561e2u, description: "Hash of the names for all of the loggers")]
 	public List<uint> NameHash { get; set; } = [];
 
-	[DDLRegistration(0x7dfd2239u, description: "Reported name of all of the loggers")]
+	[DDLRegistration(0xeb608581u, description: "Reported name of all of the loggers")]
 	public List<string?> Names { get; set; } = [];
 
-	[DDLRegistration(0x7dfd2239u, description: "Current state of the logger")]
+	[DDLRegistration(0x5113d8bcu, description: "Current state of the logger")]
 	public List<bool> Enabled { get; set; } = [];
 
 	public static LogQueryQueryLoggersOutput Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class MaterialGraphDefClipboard : DDLObjectType, IDDLObjectType<MaterialG
 		Data = ddl.GetObject<MaterialGraphDef>(0x3d519cedu);
 	}
 
-	[DDLRegistration(0xd43af969u)]
+	[DDLRegistration(0xffcb8104u)]
 	public string? Compatibility { get; set; } = default;
 
-	[DDLRegistration(0xd43af969u)]
+	[DDLRegistration(0xb1ad53f6u)]
 	public string? ClipboardType { get; set; } = default;
 
-	[DDLRegistration(0xd43af969u)]
+	[DDLRegistration(0x3d519cedu)]
 	public MaterialGraphDef? Data { get; set; } = default;
 
 	public static MaterialGraphDefClipboard Create(DDLObject ddl) => new(ddl);

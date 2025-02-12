@@ -20,13 +20,13 @@ public class AssetBranchConfig : DDLObjectType, IDDLObjectType<AssetBranchConfig
 		BranchName = ddl.GetString(0x0c44d190) ?? BranchName;
 	}
 
-	[DDLRegistration(0xb37cd148u)]
+	[DDLRegistration(0x716f14e7u)]
 	public RivetAssetId SourceRoot { get; set; } = default;
 
-	[DDLRegistration(0xb37cd148u)]
+	[DDLRegistration(0x0819b415u)]
 	public RivetAssetId BuiltRoot { get; set; } = default;
 
-	[DDLRegistration(0xb37cd148u)]
+	[DDLRegistration(0x0c44d190u)]
 	public string? BranchName { get; set; } = default;
 
 	public static AssetBranchConfig Create(DDLObject ddl) => new(ddl);

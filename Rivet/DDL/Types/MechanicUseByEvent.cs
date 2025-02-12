@@ -19,10 +19,10 @@ public class MechanicUseByEvent : UDSEventBase, IDDLObjectType<MechanicUseByEven
 		InitiatorActor = ddl.GetString(0x556b1ac5) ?? InitiatorActor;
 	}
 
-	[DDLRegistration(0x9da4847du)]
+	[DDLRegistration(0xd8ad4a41u)]
 	public List<string?> UsedMechanics { get; set; } = [];
 
-	[DDLRegistration(0x9da4847du)]
+	[DDLRegistration(0x556b1ac5u)]
 	public string? InitiatorActor { get; set; } = default;
 
 	public new static MechanicUseByEvent Create(DDLObject ddl) => new(ddl);

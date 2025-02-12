@@ -18,7 +18,7 @@ public class DamageModifierSlotPercentPrius : DamageModifierIncomingPrius, IDDLO
 		PercentSlot = ddl.GetValues<float>(0x65dc2ad9u);
 	}
 
-	[DDLRegistration(0xee49070au)]
+	[DDLRegistration(0x65dc2ad9u)]
 	public List<float> PercentSlot { get; set; } = [];
 
 	public new static DamageModifierSlotPercentPrius Create(DDLObject ddl) => new(ddl);

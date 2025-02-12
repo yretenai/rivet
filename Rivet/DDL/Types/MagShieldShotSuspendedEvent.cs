@@ -18,7 +18,7 @@ public class MagShieldShotSuspendedEvent : EventBase, IDDLObjectType<MagShieldSh
 		OriginalShotAsset = ddl.GetValue<RivetAssetId>(0x0261a43au, OriginalShotAsset);
 	}
 
-	[DDLRegistration(0xa6f3bc70u)]
+	[DDLRegistration(0x0261a43au)]
 	public RivetAssetId OriginalShotAsset { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static MagShieldShotSuspendedEvent Create(DDLObject ddl) => new(ddl);

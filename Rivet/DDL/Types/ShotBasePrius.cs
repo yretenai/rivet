@@ -22,19 +22,19 @@ public class ShotBasePrius : DDLObjectType, IDDLObjectType<ShotBasePrius> {
 		ShakeData = ddl.GetObjects<ShotShakeData>(0x9c710c08u);
 	}
 
-	[DDLRegistration(0x6918cc0au)]
+	[DDLRegistration(0x4f34f2deu)]
 	public ShotMotionBasePrius? InitialMotion { get; set; } = default;
 
-	[DDLRegistration(0x6918cc0au)]
+	[DDLRegistration(0x857b9dd2u)]
 	public RivetAssetId ConduitAsset { get; set; } = default;
 
-	[DDLRegistration(0x6918cc0au)]
+	[DDLRegistration(0x3154389fu)]
 	public byte FXVariantCount { get; set; } = 0x01;
 
-	[DDLRegistration(0x6918cc0au, description: "Trigger ProjectileFlewBy events when the shot moves within this distance of the camera.")]
+	[DDLRegistration(0x4e5dbed9u, description: "Trigger ProjectileFlewBy events when the shot moves within this distance of the camera.")]
 	public float FlewByRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6918cc0au)]
+	[DDLRegistration(0x9c710c08u)]
 	public List<ShotShakeData?> ShakeData { get; set; } = [];
 
 	public static ShotBasePrius Create(DDLObject ddl) => new(ddl);

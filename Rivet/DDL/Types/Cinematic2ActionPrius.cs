@@ -22,19 +22,19 @@ public class Cinematic2ActionPrius : DDLObjectType, IDDLObjectType<Cinematic2Act
 		SkipIntermediateShotsOnJump = ddl.GetValue<bool>(0x4311320fu, SkipIntermediateShotsOnJump);
 	}
 
-	[DDLRegistration(0xdd0277fbu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Cinematic;
 
-	[DDLRegistration(0xdd0277fbu, description: "Delay the camera release to allow for animation latencies")]
+	[DDLRegistration(0x1d52754du, description: "Delay the camera release to allow for animation latencies")]
 	public int EndCameraDelay { get; set; } = 0;
 
-	[DDLRegistration(0xdd0277fbu, description: "Snaps the followcam direction on completion")]
+	[DDLRegistration(0x511bf753u, description: "Snaps the followcam direction on completion")]
 	public bool ResetFollowCam { get; set; } = true;
 
-	[DDLRegistration(0xdd0277fbu, description: "Apply translation to the previous camera during the intro camera blend.")]
+	[DDLRegistration(0x721951acu, description: "Apply translation to the previous camera during the intro camera blend.")]
 	public bool ApplyCameraTranslationOnEnter { get; set; } = false;
 
-	[DDLRegistration(0xdd0277fbu, description: "When jumping to a shot, skip evaluation of all shots leading up to the destination shot.")]
+	[DDLRegistration(0x4311320fu, description: "When jumping to a shot, skip evaluation of all shots leading up to the destination shot.")]
 	public bool SkipIntermediateShotsOnJump { get; set; } = false;
 
 	public static Cinematic2ActionPrius Create(DDLObject ddl) => new(ddl);

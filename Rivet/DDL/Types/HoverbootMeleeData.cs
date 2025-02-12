@@ -20,13 +20,13 @@ public class HoverbootMeleeData : DDLObjectType, IDDLObjectType<HoverbootMeleeDa
 		MaxAnimRate = ddl.GetValue<float>(0x26386235u, MaxAnimRate);
 	}
 
-	[DDLRegistration(0xa2ac6661u, description: "How fast a hoverboot melee decelerates to a stop player from their current speed.")]
+	[DDLRegistration(0xa9242a88u, description: "How fast a hoverboot melee decelerates to a stop player from their current speed.")]
 	public float Decel { get; set; } = 10.00f;
 
-	[DDLRegistration(0xa2ac6661u, description: "Min animation rate scale, applied when hoverbooting at max speed.")]
+	[DDLRegistration(0xea35193au, description: "Min animation rate scale, applied when hoverbooting at max speed.")]
 	public float MinAnimRate { get; set; } = 0.50f;
 
-	[DDLRegistration(0xa2ac6661u, description: "Max animation rate scale, applied when nearly stopped.")]
+	[DDLRegistration(0x26386235u, description: "Max animation rate scale, applied when nearly stopped.")]
 	public float MaxAnimRate { get; set; } = 1.00f;
 
 	public static HoverbootMeleeData Create(DDLObject ddl) => new(ddl);

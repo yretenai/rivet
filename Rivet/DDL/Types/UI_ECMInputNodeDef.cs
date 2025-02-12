@@ -29,40 +29,40 @@ public class UI_ECMInputNodeDef : DDLObjectType, IDDLObjectType<UI_ECMInputNodeD
 		ShadowState = ddl.GetString(0x93bba070) ?? ShadowState;
 	}
 
-	[DDLRegistration(0x23988a02u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xf5eea2a0 Type { get; set; } = xf5eea2a0.TriggeringEvent;
 
-	[DDLRegistration(0x23988a02u)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
-	[DDLRegistration(0x23988a02u, "Localization Tag")]
+	[DDLRegistration(0x06f8b0e5u, "Localization Tag")]
 	public string? LocTag { get; set; } = default;
 
-	[DDLRegistration(0x23988a02u, "Physics Material")]
+	[DDLRegistration(0x3bd89dc5u, "Physics Material")]
 	public string? PhysicsMaterial { get; set; } = default;
 
-	[DDLRegistration(0x23988a02u, "Physics Materials")]
+	[DDLRegistration(0x2239ce24u, "Physics Materials")]
 	public List<string?> PhysicsMaterials { get; set; } = [];
 
-	[DDLRegistration(0x23988a02u, "Actor Filter Types")]
+	[DDLRegistration(0x3b1d202au, "Actor Filter Types")]
 	public ActorFilterTypes ActorFilterTypes { get; set; } = (ActorFilterTypes) 0x00000000;
 
-	[DDLRegistration(0x23988a02u, "Visual Effect")]
+	[DDLRegistration(0xafa67994u, "Visual Effect")]
 	public RivetAssetId VisualEffect { get; set; } = default;
 
-	[DDLRegistration(0x23988a02u, "Visual Effect Spawn Mesh")]
+	[DDLRegistration(0x7225c9b5u, "Visual Effect Spawn Mesh")]
 	public VisualEffectSpawnMesh? VisualEffectSpawnMesh { get; set; } = default;
 
-	[DDLRegistration(0x23988a02u, "Material Asset")]
+	[DDLRegistration(0xf55a8ae3u, "Material Asset")]
 	public RivetAssetId MaterialAsset { get; set; } = default;
 
-	[DDLRegistration(0x23988a02u, "Wwise Action")]
+	[DDLRegistration(0xe0d5f6deu, "Wwise Action")]
 	public WwiseAudioEvent? WwiseVariant { get; set; } = default;
 
-	[DDLRegistration(0x23988a02u, "Wwise Event")]
+	[DDLRegistration(0xcebb3bc3u, "Wwise Event")]
 	public WwiseEvent? WwiseEvent { get; set; } = default;
 
-	[DDLRegistration(0x23988a02u, "Shadow State")]
+	[DDLRegistration(0x93bba070u, "Shadow State")]
 	public string? ShadowState { get; set; } = default;
 
 	public static UI_ECMInputNodeDef Create(DDLObject ddl) => new(ddl);

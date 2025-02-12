@@ -63,142 +63,142 @@ public class NodalShotBaseGraphDef : GameplayNodeGraphBaseDef, IDDLObjectType<No
 		UIntOutNodes = ddl.GetDictionary<RivetAssetId, UIntOutNodeDef>(0x0f563484, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<UIntOutNodeDef>(mapId));
 	}
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xcd942e2fu)]
 	public Dictionary<RivetAssetId, NodalShotInitFirstStateNodeDef?> NodalShotInitFirstStateNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xb4e5255du)]
 	public Dictionary<RivetAssetId, NodalShotInitNewStateNodeDef?> NodalShotInitNewStateNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x733aa768u)]
 	public Dictionary<RivetAssetId, NodalShotTransitionStateNodeDef?> NodalShotTransitionStateNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x59cc5798u)]
 	public Dictionary<RivetAssetId, OnHitAnythingNodeDef?> OnHitAnythingNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x31ed2e57u)]
 	public Dictionary<RivetAssetId, OnHitEnemyNodeDef?> OnHitEnemyNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x4d298a09u)]
 	public Dictionary<RivetAssetId, OnHitEnvironmentNodeDef?> OnHitEnvironmentNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x0d6bc139u)]
 	public Dictionary<RivetAssetId, OnHitFriendlyNodeDef?> OnHitFriendlyNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xa19fc9deu)]
 	public Dictionary<RivetAssetId, OnHitNonFriendlyNodeDef?> OnHitNonFriendlyNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xd353a72fu)]
 	public Dictionary<RivetAssetId, OnLifetimeExpiredNodeDef?> OnLifetimeExpiredNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x05da2827u)]
 	public Dictionary<RivetAssetId, OnUpdateIntervalNodeDef?> OnUpdateIntervalNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xf54804bfu)]
 	public Dictionary<RivetAssetId, OnPassMaxRangeNodeDef?> OnPassMaxRangeNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x6df5c674u)]
 	public Dictionary<RivetAssetId, OnPostInitNodeDef?> OnPostInitNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xae40268bu)]
 	public Dictionary<RivetAssetId, AddStatModifierEffectNodeDef?> AddStatModifierEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x1edfbb0fu)]
 	public Dictionary<RivetAssetId, AddStatusEffectNodeDef?> AddStatusEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xb2048de1u)]
 	public Dictionary<RivetAssetId, AttachToActorEffectNodeDef?> AttachToActorEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xee56fbe1u)]
 	public Dictionary<RivetAssetId, AttachToHitSurfaceEffectNodeDef?> AttachToHitSurfaceEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x1d48b928u)]
 	public Dictionary<RivetAssetId, BounceEffectNodeDef?> BounceEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x28656389u)]
 	public Dictionary<RivetAssetId, CameraShakeEffectNodeDef?> CameraShakeEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x673ba2fcu)]
 	public Dictionary<RivetAssetId, ChangeShotMotionEffectNodeDef?> ChangeShotMotionEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x693fbc22u)]
 	public Dictionary<RivetAssetId, ContinueShotMotionEffectNodeDef?> ContinueShotMotionEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xc374101bu)]
 	public Dictionary<RivetAssetId, DealDamageEffectNodeDef?> DealDamageEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x2b7208cfu)]
 	public Dictionary<RivetAssetId, DestroyShotEffectNodeDef?> DestroyShotEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x81bb67f8u)]
 	public Dictionary<RivetAssetId, DontDestroyShotAfterCollisionEffectNodeDef?> DontDestroyShotAfterCollisionEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xaf1cfad2u)]
 	public Dictionary<RivetAssetId, EnterRagdollStateEffectNodeDef?> EnterRagdollStateEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xc63ad40au)]
 	public Dictionary<RivetAssetId, ExplodeEffectNodeDef?> ExplodeEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xe55bd9deu)]
 	public Dictionary<RivetAssetId, GiveItemEffectNodeDef?> GiveItemEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x536bca39u)]
 	public Dictionary<RivetAssetId, HealEffectNodeDef?> HealEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xcfad9393u)]
 	public Dictionary<RivetAssetId, PlayAnimEffectNodeDef?> PlayAnimEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xb79e345cu)]
 	public Dictionary<RivetAssetId, SpawnShotEffectNodeDef?> SpawnShotEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xae507f4fu)]
 	public Dictionary<RivetAssetId, SpawnSyncedActorEffectNodeDef?> SpawnSyncedActorEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x8128fb48u)]
 	public Dictionary<RivetAssetId, SpawnSyncedActorForHitEffectNodeDef?> SpawnSyncedActorForHitEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xbacd98deu)]
 	public Dictionary<RivetAssetId, TargetedBounceEffectNodeDef?> TargetedBounceEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x040dbaffu)]
 	public Dictionary<RivetAssetId, ToggleLightsEffectNodeDef?> ToggleLightsEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x61b46c20u)]
 	public Dictionary<RivetAssetId, TriggerConduitEventEffectNodeDef?> TriggerConduitEventEffectNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x98067a6cu)]
 	public Dictionary<RivetAssetId, NodalShotUIntVariableNodeDef?> NodalShotUIntVariableNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xf50eb81fu)]
 	public Dictionary<RivetAssetId, SignalInputNodeDef?> SignalInputNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x536abdd5u)]
 	public Dictionary<RivetAssetId, SignalOutputNodeDef?> SignalOutputNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xf98d90dfu)]
 	public Dictionary<RivetAssetId, EventInitializationInputNodeDef?> EventInitializationInputNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xc802fc4du)]
 	public Dictionary<RivetAssetId, EventInitializationOutputNodeDef?> EventInitializationOutputNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xaf9580d8u)]
 	public Dictionary<RivetAssetId, BooleanOutNodeDef?> BooleanOutNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x2785a28bu)]
 	public Dictionary<RivetAssetId, FloatOutNodeDef?> FloatOutNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xbfe4da68u)]
 	public Dictionary<RivetAssetId, StringOutNodeDef?> StringOutNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0xbb431e1au)]
 	public Dictionary<RivetAssetId, Vec3OutNodeDef?> Vec3OutNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x32392a81u)]
 	public Dictionary<RivetAssetId, StringHashOutNodeDef?> StringHashOutNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x6b23536fu)]
 	public Dictionary<RivetAssetId, IntOutNodeDef?> IntOutNodes { get; set; } = [];
 
-	[DDLRegistration(0x8afd83e3u)]
+	[DDLRegistration(0x0f563484u)]
 	public Dictionary<RivetAssetId, UIntOutNodeDef?> UIntOutNodes { get; set; } = [];
 
 	public new static NodalShotBaseGraphDef Create(DDLObject ddl) => new(ddl);

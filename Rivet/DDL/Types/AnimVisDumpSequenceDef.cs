@@ -25,28 +25,28 @@ public class AnimVisDumpSequenceDef : DDLObjectType, IDDLObjectType<AnimVisDumpS
 		MorphTargets = ddl.GetObjects<AnimVisDumpMorphTargetDef>(0x31092478u);
 	}
 
-	[DDLRegistration(0xf752ff17u)]
+	[DDLRegistration(0x163326b9u)]
 	public uint FrameCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf752ff17u)]
+	[DDLRegistration(0x2cdd9cb1u)]
 	public float TimeStart { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf752ff17u)]
+	[DDLRegistration(0x01f00e62u)]
 	public float TimeEnd { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf752ff17u)]
+	[DDLRegistration(0xb9228075u)]
 	public float SampleRate { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf752ff17u)]
+	[DDLRegistration(0x0cedbe25u)]
 	public List<string?> JointNames { get; set; } = [];
 
-	[DDLRegistration(0xf752ff17u)]
+	[DDLRegistration(0x5a71d67au)]
 	public List<string?> MorphTargetNames { get; set; } = [];
 
-	[DDLRegistration(0xf752ff17u)]
+	[DDLRegistration(0xbb8fe1b3u)]
 	public List<AnimVisDumpJointDef?> Joints { get; set; } = [];
 
-	[DDLRegistration(0xf752ff17u)]
+	[DDLRegistration(0x31092478u)]
 	public List<AnimVisDumpMorphTargetDef?> MorphTargets { get; set; } = [];
 
 	public static AnimVisDumpSequenceDef Create(DDLObject ddl) => new(ddl);

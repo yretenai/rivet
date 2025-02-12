@@ -22,19 +22,19 @@ public class ColorGradeDef : DDLObjectType, IDDLObjectType<ColorGradeDef> {
 		OpOrder = ddl.GetValues<RivetAssetId>(0x1890c60au);
 	}
 
-	[DDLRegistration(0x4d002f89u)]
+	[DDLRegistration(0x02a7e1a2u)]
 	public Dictionary<RivetAssetId, ColorGradeSolidOpDef?> SolidOps { get; set; } = [];
 
-	[DDLRegistration(0x4d002f89u)]
+	[DDLRegistration(0xe991d44au)]
 	public Dictionary<RivetAssetId, ColorGradeHueSatOpDef?> HueSatOps { get; set; } = [];
 
-	[DDLRegistration(0x4d002f89u)]
+	[DDLRegistration(0xf68be22bu)]
 	public Dictionary<RivetAssetId, ColorGradeCurvesOpDef?> CurvesOps { get; set; } = [];
 
-	[DDLRegistration(0x4d002f89u)]
+	[DDLRegistration(0x117ed8a8u)]
 	public Dictionary<RivetAssetId, ColorGradeVibranceOpDef?> VibranceOps { get; set; } = [];
 
-	[DDLRegistration(0x4d002f89u)]
+	[DDLRegistration(0x1890c60au)]
 	public List<RivetAssetId> OpOrder { get; set; } = [];
 
 	public static ColorGradeDef Create(DDLObject ddl) => new(ddl);

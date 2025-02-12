@@ -18,7 +18,7 @@ public class AssetSwapPlatSpec : ConfigBase, IDDLObjectType<AssetSwapPlatSpec> {
 		ZoneLists = ddl.GetObjects<ZoneList>(0x84c79e13u);
 	}
 
-	[DDLRegistration(0x22ff43f2u)]
+	[DDLRegistration(0x84c79e13u)]
 	public List<ZoneList?> ZoneLists { get; set; } = [];
 
 	public new static AssetSwapPlatSpec Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PickupBoltDeactivatedEvent : EventBase, IDDLObjectType<PickupBoltDe
 		BoltId = ddl.GetValue<byte>(0x98887833u, BoltId);
 	}
 
-	[DDLRegistration(0xfba80438u)]
+	[DDLRegistration(0x98887833u)]
 	public byte BoltId { get; set; } = 0x00;
 
 	public new static PickupBoltDeactivatedEvent Create(DDLObject ddl) => new(ddl);

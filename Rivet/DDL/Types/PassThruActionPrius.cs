@@ -18,7 +18,7 @@ public class PassThruActionPrius : DDLObjectType, IDDLObjectType<PassThruActionP
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x0418acb3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
 	public static PassThruActionPrius Create(DDLObject ddl) => new(ddl);

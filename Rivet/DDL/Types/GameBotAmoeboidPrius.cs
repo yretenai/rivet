@@ -21,16 +21,16 @@ public class GameBotAmoeboidPrius : GameBotMeleeSwarmerPrius, IDDLObjectType<Gam
 		MaxCombinesAllowed = ddl.GetValue<uint>(0x76c2f3c9u, MaxCombinesAllowed);
 	}
 
-	[DDLRegistration(0x749779c9u)]
+	[DDLRegistration(0xec9c78e8u)]
 	public AmoeboidDeathSpawnData? DeathSpawnData { get; set; } = default;
 
-	[DDLRegistration(0x749779c9u)]
+	[DDLRegistration(0x0725ad7fu)]
 	public x232b923a AmoeboidType { get; set; } = x232b923a.Large;
 
-	[DDLRegistration(0x749779c9u)]
+	[DDLRegistration(0x4b7f4b29u)]
 	public RivetAssetId CombineSpawnActor { get; set; } = default;
 
-	[DDLRegistration(0x749779c9u, description: "Amoeboids split from this amoeboid share a combine number and once that number hits this, they stop combining")]
+	[DDLRegistration(0x76c2f3c9u, description: "Amoeboids split from this amoeboid share a combine number and once that number hits this, they stop combining")]
 	public uint MaxCombinesAllowed { get; set; } = 0x00000003;
 
 	public new static GameBotAmoeboidPrius Create(DDLObject ddl) => new(ddl);

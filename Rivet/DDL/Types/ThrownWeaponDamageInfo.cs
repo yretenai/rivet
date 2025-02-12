@@ -25,28 +25,28 @@ public class ThrownWeaponDamageInfo : DDLObjectType, IDDLObjectType<ThrownWeapon
 		ThrowDamageHash = ddl.GetString(0x1e60953f) ?? ThrowDamageHash;
 	}
 
-	[DDLRegistration(0x462e6802u, "Damage Radius", "Thrown weapon does damage to any valid targets within this radius.")]
+	[DDLRegistration(0xe3e6fa68u, "Damage Radius", "Thrown weapon does damage to any valid targets within this radius.")]
 	public float DamageRadius { get; set; } = 0.60f;
 
-	[DDLRegistration(0x462e6802u, "Damage Amount")]
+	[DDLRegistration(0x563be470u, "Damage Amount")]
 	public float DamageAmount { get; set; } = 2.00f;
 
-	[DDLRegistration(0x462e6802u, "Knockback Level")]
+	[DDLRegistration(0x2554a262u, "Knockback Level")]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.Two;
 
-	[DDLRegistration(0x462e6802u, "Knockback Amount")]
+	[DDLRegistration(0x7b1e600bu, "Knockback Amount")]
 	public float KnockbackAmount { get; set; } = 50.00f;
 
-	[DDLRegistration(0x462e6802u, "Hit Pause Duration", "Bots will freeze for this amount of time upon a successful hit. Assuming a stable 30 FPS, each frame will be 0.033 seconds long.")]
+	[DDLRegistration(0x04e7e2a7u, "Hit Pause Duration", "Bots will freeze for this amount of time upon a successful hit. Assuming a stable 30 FPS, each frame will be 0.033 seconds long.")]
 	public float HitPauseDuration { get; set; } = 0.03f;
 
-	[DDLRegistration(0x462e6802u, "Hit Pause on Bot?", "When hitting an enemy, should we request hit pause for the bot?")]
+	[DDLRegistration(0xcbb1d683u, "Hit Pause on Bot?", "When hitting an enemy, should we request hit pause for the bot?")]
 	public bool HitPauseOnBot { get; set; } = true;
 
-	[DDLRegistration(0x462e6802u, "Hit Pause on Weapon?", "When hitting an enemy, should we request hit pause for this weapon actor?")]
+	[DDLRegistration(0xea853bd2u, "Hit Pause on Weapon?", "When hitting an enemy, should we request hit pause for this weapon actor?")]
 	public bool HitPauseOnWeapon { get; set; } = true;
 
-	[DDLRegistration(0x462e6802u, "Throw Damage Hash")]
+	[DDLRegistration(0x1e60953fu, "Throw Damage Hash")]
 	public string? ThrowDamageHash { get; set; } = "";
 
 	public static ThrownWeaponDamageInfo Create(DDLObject ddl) => new(ddl);

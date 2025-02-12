@@ -20,13 +20,13 @@ public class MirrorPrius : DDLObjectType, IDDLObjectType<MirrorPrius> {
 		TextureOverride = ddl.GetString(0xe2b74ca6) ?? TextureOverride;
 	}
 
-	[DDLRegistration(0x7eba038cu, description: "The distance of the furthest object that can be reflected in the mirror (Important for optimization -- tune this to be as low as possible).")]
+	[DDLRegistration(0x9007088cu, description: "The distance of the furthest object that can be reflected in the mirror (Important for optimization -- tune this to be as low as possible).")]
 	public float VisibilityRange { get; set; } = 12.00f;
 
-	[DDLRegistration(0x7eba038cu, description: "Name of the material with the texture to override.")]
+	[DDLRegistration(0xffafa5a1u, description: "Name of the material with the texture to override.")]
 	public string? MaterialOverride { get; set; } = "";
 
-	[DDLRegistration(0x7eba038cu, description: "Name of the texture to override.")]
+	[DDLRegistration(0xe2b74ca6u, description: "Name of the texture to override.")]
 	public string? TextureOverride { get; set; } = "";
 
 	public static MirrorPrius Create(DDLObject ddl) => new(ddl);

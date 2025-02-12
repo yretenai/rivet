@@ -20,13 +20,13 @@ public class StatusEffectExplosionEvent : EventBase, IDDLObjectType<StatusEffect
 		ExplosionDamageType = ddl.GetValue<uint>(0x9eca2505u, ExplosionDamageType);
 	}
 
-	[DDLRegistration(0x12271e14u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x12271e14u)]
+	[DDLRegistration(0xe8d409aau)]
 	public uint SourceActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x12271e14u)]
+	[DDLRegistration(0x9eca2505u)]
 	public uint ExplosionDamageType { get; set; } = 0x00000000;
 
 	public new static StatusEffectExplosionEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class UIViewRTTVisibilityActionPrius : DDLObjectType, IDDLObjectType<UIVi
 		Instant = ddl.GetValue<bool>(0x0f7a2495u, Instant);
 	}
 
-	[DDLRegistration(0xbbb90726u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0xbbb90726u, description: "Set visibility instantly (rather than play the intro/outro animation).")]
+	[DDLRegistration(0x0f7a2495u, description: "Set visibility instantly (rather than play the intro/outro animation).")]
 	public bool Instant { get; set; } = false;
 
 	public static UIViewRTTVisibilityActionPrius Create(DDLObject ddl) => new(ddl);

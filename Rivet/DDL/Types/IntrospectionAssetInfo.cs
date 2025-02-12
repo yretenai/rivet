@@ -22,19 +22,19 @@ public class IntrospectionAssetInfo : DDLObjectType, IDDLObjectType<Introspectio
 		ZoneInstances = ddl.GetObjects<IntrospectionZoneInstances>(0xc1d3a9a2u);
 	}
 
-	[DDLRegistration(0xc16dffb0u)]
+	[DDLRegistration(0xc3536dbbu)]
 	public string? Platform { get; set; } = default;
 
-	[DDLRegistration(0xc16dffb0u)]
+	[DDLRegistration(0x30d5da47u)]
 	public List<IntrospectionAssetEntry?> AssetEntries { get; set; } = [];
 
-	[DDLRegistration(0xc16dffb0u)]
+	[DDLRegistration(0x2ef3316du)]
 	public IntrospectionRootSet? AlwaysLoadedSet { get; set; } = default;
 
-	[DDLRegistration(0xc16dffb0u)]
+	[DDLRegistration(0xeca3068bu)]
 	public List<IntrospectionRootSet?> RootSets { get; set; } = [];
 
-	[DDLRegistration(0xc16dffb0u)]
+	[DDLRegistration(0xc1d3a9a2u)]
 	public List<IntrospectionZoneInstances?> ZoneInstances { get; set; } = [];
 
 	public static IntrospectionAssetInfo Create(DDLObject ddl) => new(ddl);

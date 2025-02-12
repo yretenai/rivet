@@ -21,16 +21,16 @@ public class RandomNumberActionPrius : DDLObjectType, IDDLObjectType<RandomNumbe
 		Integer = ddl.GetValue<bool>(0x5be5c833u, Integer);
 	}
 
-	[DDLRegistration(0x88fb19fau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
-	[DDLRegistration(0x88fb19fau, description: "Minimum Value")]
+	[DDLRegistration(0x8b2e3419u, description: "Minimum Value")]
 	public float Min { get; set; } = 0.00f;
 
-	[DDLRegistration(0x88fb19fau, description: "Maximum Value")]
+	[DDLRegistration(0xb7230b40u, description: "Maximum Value")]
 	public float Max { get; set; } = 1.00f;
 
-	[DDLRegistration(0x88fb19fau, description: "Integers Only")]
+	[DDLRegistration(0x5be5c833u, description: "Integers Only")]
 	public bool Integer { get; set; } = false;
 
 	public static RandomNumberActionPrius Create(DDLObject ddl) => new(ddl);

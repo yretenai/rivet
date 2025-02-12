@@ -20,13 +20,13 @@ public class FormationAttackPointPrius : FormationPointBasePrius, IDDLObjectType
 		MotionPivotActor = ddl.GetValue<RivetAssetId>(0x24ff8f01u, MotionPivotActor);
 	}
 
-	[DDLRegistration(0x92043621u)]
+	[DDLRegistration(0x09e14760u)]
 	public bool MotionOverridesCoordinator { get; set; } = true;
 
-	[DDLRegistration(0x92043621u)]
+	[DDLRegistration(0x3c145470u)]
 	public List<FormationMotionInfo?> MotionInfo { get; set; } = [];
 
-	[DDLRegistration(0x92043621u, description: "Pivot actor to move relative to.  NONE means move relative to attack point bounds center")]
+	[DDLRegistration(0x24ff8f01u, description: "Pivot actor to move relative to.  NONE means move relative to attack point bounds center")]
 	public RivetAssetId MotionPivotActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static FormationAttackPointPrius Create(DDLObject ddl) => new(ddl);

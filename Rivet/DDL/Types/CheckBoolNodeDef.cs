@@ -21,16 +21,16 @@ public class CheckBoolNodeDef : LogicNodeBaseDef, IDDLObjectType<CheckBoolNodeDe
 		False = ddl.GetObject<OutputPlugSignal>(0x329ea4f1u);
 	}
 
-	[DDLRegistration(0x3e488080u)]
+	[DDLRegistration(0x25dd60d2u)]
 	public InputPlugSignal? Check { get; set; } = default;
 
-	[DDLRegistration(0x3e488080u)]
+	[DDLRegistration(0x6511f622u)]
 	public InputPlugBoolean? Bool { get; set; } = default;
 
-	[DDLRegistration(0x3e488080u)]
+	[DDLRegistration(0xcd6c8c3du)]
 	public OutputPlugSignal? True { get; set; } = default;
 
-	[DDLRegistration(0x3e488080u)]
+	[DDLRegistration(0x329ea4f1u)]
 	public OutputPlugSignal? False { get; set; } = default;
 
 	public new static CheckBoolNodeDef Create(DDLObject ddl) => new(ddl);

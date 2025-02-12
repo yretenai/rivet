@@ -20,13 +20,13 @@ public class ObjectiveStatesTriggerPrius_Tools : AbstractTriggerPrius_Tools, IDD
 		ObjectiveStates = ddl.GetBitset<x1a0f9cc5>(0xd9297359u, x1a0f9cc5Values.Lookup);
 	}
 
-	[DDLRegistration(0x54aebef2u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x54aebef2u)]
+	[DDLRegistration(0x58746b9bu)]
 	public string? ObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0x54aebef2u)]
+	[DDLRegistration(0xd9297359u)]
 	public x1a0f9cc5 ObjectiveStates { get; set; } = (x1a0f9cc5) 0x00000002;
 
 	public new static ObjectiveStatesTriggerPrius_Tools Create(DDLObject ddl) => new(ddl);

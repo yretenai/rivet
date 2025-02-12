@@ -24,25 +24,25 @@ public class WalkingArchivesJointIKPrius : DDLObjectType, IDDLObjectType<Walking
 		FootDamageRadius = ddl.GetValue<float>(0x325d203au, FootDamageRadius);
 	}
 
-	[DDLRegistration(0xdbd1112au)]
+	[DDLRegistration(0x351d165eu)]
 	public List<string?> FootJoint { get; set; } = [];
 
-	[DDLRegistration(0xdbd1112au)]
+	[DDLRegistration(0x81b8f1aeu)]
 	public List<string?> IKChainID { get; set; } = [];
 
-	[DDLRegistration(0xdbd1112au)]
+	[DDLRegistration(0x8bc6d4e3u)]
 	public string? MoveDriver { get; set; } = default;
 
-	[DDLRegistration(0xdbd1112au)]
+	[DDLRegistration(0xefd546cau)]
 	public RivetAssetId CameraShake { get; set; } = default;
 
-	[DDLRegistration(0xdbd1112au)]
+	[DDLRegistration(0x4ca6dc25u)]
 	public float CameraShakeInnerRadius { get; set; } = 5.00f;
 
-	[DDLRegistration(0xdbd1112au)]
+	[DDLRegistration(0x42b3a496u)]
 	public float CameraShakeOuterRadius { get; set; } = 20.00f;
 
-	[DDLRegistration(0xdbd1112au)]
+	[DDLRegistration(0x325d203au)]
 	public float FootDamageRadius { get; set; } = 3.00f;
 
 	public static WalkingArchivesJointIKPrius Create(DDLObject ddl) => new(ddl);

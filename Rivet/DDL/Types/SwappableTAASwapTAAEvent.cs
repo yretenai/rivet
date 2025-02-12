@@ -19,10 +19,10 @@ public class SwappableTAASwapTAAEvent : EventBase, IDDLObjectType<SwappableTAASw
 		TAAIndex = ddl.GetValue<uint>(0x16d1e56fu, TAAIndex);
 	}
 
-	[DDLRegistration(0xb46e0070u, description: "If true, bot will use default TAA instead of an indexed version defined in the Multi TAA config")]
+	[DDLRegistration(0x91f73313u, description: "If true, bot will use default TAA instead of an indexed version defined in the Multi TAA config")]
 	public bool UseDefaultTaa { get; set; } = false;
 
-	[DDLRegistration(0xb46e0070u)]
+	[DDLRegistration(0x16d1e56fu)]
 	public uint TAAIndex { get; set; } = 0x00000000;
 
 	public new static SwappableTAASwapTAAEvent Create(DDLObject ddl) => new(ddl);

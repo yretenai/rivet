@@ -18,7 +18,7 @@ public class AimAssistSettleDecel : DDLObjectType, IDDLObjectType<AimAssistSettl
 		MaxTimeToStop = ddl.GetValue<float>(0xe8c686eau, MaxTimeToStop);
 	}
 
-	[DDLRegistration(0x0a693a02u, "Max Time To Stop", "The maximum deceleration time required to apply settle decel")]
+	[DDLRegistration(0xe8c686eau, "Max Time To Stop", "The maximum deceleration time required to apply settle decel")]
 	public float MaxTimeToStop { get; set; } = 0.00f;
 
 	public static AimAssistSettleDecel Create(DDLObject ddl) => new(ddl);

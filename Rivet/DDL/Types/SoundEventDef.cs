@@ -28,37 +28,37 @@ public class SoundEventDef : DDLObjectType, IDDLObjectType<SoundEventDef> {
 		MinDuration = ddl.GetValue<float>(0xde43737bu, MinDuration);
 	}
 
-	[DDLRegistration(0x934a6afbu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x934a6afbu)]
+	[DDLRegistration(0x6bbe2d12u)]
 	public uint WwiseId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x934a6afbu)]
+	[DDLRegistration(0xe79ebf67u)]
 	public uint PlatformMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x934a6afbu)]
+	[DDLRegistration(0x803ee258u)]
 	public uint LanguageMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x934a6afbu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x4cedff8f Type { get; set; } = x4cedff8f.TypeSfx;
 
-	[DDLRegistration(0x934a6afbu)]
+	[DDLRegistration(0x48665e90u)]
 	public xf44aa9d7 Dimension { get; set; } = xf44aa9d7.K3d;
 
-	[DDLRegistration(0x934a6afbu, description: "Defines what should happen when end of the event is reached.")]
+	[DDLRegistration(0x04859572u, description: "Defines what should happen when end of the event is reached.")]
 	public x6a2f1d70 Playback { get; set; } = x6a2f1d70.PlaybackTypeOneShot;
 
-	[DDLRegistration(0x934a6afbu, description: "True if this event is using an external source (e.g. generated robot-voice file)")]
+	[DDLRegistration(0xb20b14feu, description: "True if this event is using an external source (e.g. generated robot-voice file)")]
 	public bool ExternalSource { get; set; } = false;
 
-	[DDLRegistration(0x934a6afbu, description: "Max distance this sound can be heard at specified in source tool")]
+	[DDLRegistration(0x5bc7556fu, description: "Max distance this sound can be heard at specified in source tool")]
 	public float MaxAttenuation { get; set; } = 0.00f;
 
-	[DDLRegistration(0x934a6afbu, description: "Maximum play duration for this sound event (in seconds).")]
+	[DDLRegistration(0x124e0874u, description: "Maximum play duration for this sound event (in seconds).")]
 	public float MaxDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x934a6afbu, description: "Minimum play duration for this sound event (in seconds).")]
+	[DDLRegistration(0xde43737bu, description: "Minimum play duration for this sound event (in seconds).")]
 	public float MinDuration { get; set; } = 0.00f;
 
 	public static SoundEventDef Create(DDLObject ddl) => new(ddl);

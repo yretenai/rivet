@@ -18,7 +18,7 @@ public class CurveIntroEndEvent : EventBase, IDDLObjectType<CurveIntroEndEvent> 
 		CurveActorHandle = ddl.GetValue<uint>(0xfc8b3eb2u, CurveActorHandle);
 	}
 
-	[DDLRegistration(0xff2454fau, description: "The curve we introed to.")]
+	[DDLRegistration(0xfc8b3eb2u, description: "The curve we introed to.")]
 	public uint CurveActorHandle { get; set; } = 0x00000000;
 
 	public new static CurveIntroEndEvent Create(DDLObject ddl) => new(ddl);

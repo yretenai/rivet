@@ -19,10 +19,10 @@ public class UIArenaChallengeRewardVanity : UIArenaChallengeReward, IDDLObjectTy
 		Icon = ddl.GetValue<RivetAssetId>(0x5504e96bu, Icon);
 	}
 
-	[DDLRegistration(0xc89e18c5u)]
+	[DDLRegistration(0xb68fd998u)]
 	public RivetAssetId VanityBundleConfig { get; set; } = default;
 
-	[DDLRegistration(0xc89e18c5u)]
+	[DDLRegistration(0x5504e96bu)]
 	public RivetAssetId Icon { get; set; } = default;
 
 	public new static UIArenaChallengeRewardVanity Create(DDLObject ddl) => new(ddl);

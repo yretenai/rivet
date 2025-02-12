@@ -18,7 +18,7 @@ public class HeroCinematicTransitionDataMount : HeroCinematicTransitionDataBase,
 		CanDismount = ddl.GetValue<bool>(0x476d9226u, CanDismount);
 	}
 
-	[DDLRegistration(0xfe6ec726u)]
+	[DDLRegistration(0x476d9226u)]
 	public bool CanDismount { get; set; } = false;
 
 	public new static HeroCinematicTransitionDataMount Create(DDLObject ddl) => new(ddl);

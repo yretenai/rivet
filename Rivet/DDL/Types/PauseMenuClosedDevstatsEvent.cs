@@ -23,22 +23,22 @@ public class PauseMenuClosedDevstatsEvent : EventBase, IDDLObjectType<PauseMenuC
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x3eb9dc4du, "Event ID", "Unique event ID for this event instance.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique event ID for this event instance.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x3eb9dc4du, "Menu Segment ID", "Segment ID that matches with the segment ID in the corresponding PauseMenuOpened event.")]
+	[DDLRegistration(0x40f9a2c2u, "Menu Segment ID", "Segment ID that matches with the segment ID in the corresponding PauseMenuOpened event.")]
 	public string? MenuSegmentId { get; set; } = default;
 
-	[DDLRegistration(0x3eb9dc4du, "Final Tab", "The tab that the menu was on when the menu was closed.")]
+	[DDLRegistration(0xc43a6681u, "Final Tab", "The tab that the menu was on when the menu was closed.")]
 	public PauseTabs FinalTab { get; set; } = PauseTabs.Map;
 
-	[DDLRegistration(0x3eb9dc4du, "Duration", "How long (in pause menu devstats time) that the menu was open. This excludes time spent afk.")]
+	[DDLRegistration(0x7c5e3db0u, "Duration", "How long (in pause menu devstats time) that the menu was open. This excludes time spent afk.")]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3eb9dc4du, "Player Pos Info", "Where the player was when they closed the weapon vendor UI.")]
+	[DDLRegistration(0xeadcc3e4u, "Player Pos Info", "Where the player was when they closed the weapon vendor UI.")]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x3eb9dc4du, "Primary Segment Info", "The primary segment during which this event was sent. I.e. the primary mission or objective.")]
+	[DDLRegistration(0x9e8725dbu, "Primary Segment Info", "The primary segment during which this event was sent. I.e. the primary mission or objective.")]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static PauseMenuClosedDevstatsEvent Create(DDLObject ddl) => new(ddl);

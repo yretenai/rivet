@@ -25,28 +25,28 @@ public class ScriptSignalMessage : DDLObjectType, IDDLObjectType<ScriptSignalMes
 		SourceAction = ddl.GetString(0x88ef5d7f) ?? SourceAction;
 	}
 
-	[DDLRegistration(0xa5c7735au)]
+	[DDLRegistration(0x6c99c7b1u)]
 	public int Fr { get; set; } = 0;
 
-	[DDLRegistration(0xa5c7735au)]
+	[DDLRegistration(0x1fd56e2fu)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa5c7735au)]
+	[DDLRegistration(0x8a0e4f05u)]
 	public uint Pl { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa5c7735au)]
+	[DDLRegistration(0x61f030e3u)]
 	public uint Outpl { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa5c7735au)]
+	[DDLRegistration(0x725c4ba4u)]
 	public RivetAssetId Src { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa5c7735au)]
+	[DDLRegistration(0x8b530069u)]
 	public RivetAssetId Z { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa5c7735au)]
+	[DDLRegistration(0x5a2308c8u)]
 	public string? Comment { get; set; } = default;
 
-	[DDLRegistration(0xa5c7735au)]
+	[DDLRegistration(0x88ef5d7fu)]
 	public string? SourceAction { get; set; } = default;
 
 	public static ScriptSignalMessage Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class ActivityMetadataConfig : ConfigBase, IDDLObjectType<ActivityMetadat
 		FallbackLargeImage = ddl.GetValue<RivetAssetId>(0x24f9098bu, FallbackLargeImage);
 	}
 
-	[DDLRegistration(0xf3b99ec5u)]
+	[DDLRegistration(0x1546408eu)]
 	public List<ActivitySubCategoryInfo?> SubCategories { get; set; } = [];
 
-	[DDLRegistration(0xf3b99ec5u, "Arena Game Intent Checkpoint", "Name of the checkpoint to warp to when triggered by game intent.")]
+	[DDLRegistration(0xc4ce3932u, "Arena Game Intent Checkpoint", "Name of the checkpoint to warp to when triggered by game intent.")]
 	public string? ArenaCheckpoint { get; set; } = default;
 
-	[DDLRegistration(0xf3b99ec5u)]
+	[DDLRegistration(0x781fd602u)]
 	public ArenaCupActivityData? BronzeCup { get; set; } = default;
 
-	[DDLRegistration(0xf3b99ec5u)]
+	[DDLRegistration(0x13665853u)]
 	public ArenaCupActivityData? SilverCup { get; set; } = default;
 
-	[DDLRegistration(0xf3b99ec5u)]
+	[DDLRegistration(0x70f4091eu)]
 	public ArenaCupActivityData? GoldenCup { get; set; } = default;
 
-	[DDLRegistration(0xf3b99ec5u)]
+	[DDLRegistration(0xbae9f85cu)]
 	public RynoActivityData? RynoActivityData { get; set; } = default;
 
-	[DDLRegistration(0xf3b99ec5u, "Fallback Small Image", "Path to a small image of size 864 x 1040 PNG 24-bit non-interlaced. This image will be shown on the card itself when no small image is defined for that card.")]
+	[DDLRegistration(0xc3541300u, "Fallback Small Image", "Path to a small image of size 864 x 1040 PNG 24-bit non-interlaced. This image will be shown on the card itself when no small image is defined for that card.")]
 	public RivetAssetId FallbackSmallImage { get; set; } = default;
 
-	[DDLRegistration(0xf3b99ec5u, "Fallback Large Image", "Path to a large image of size 3840 x 2160 PNG 24-bit non-interlaced. This image will be shown when the card is 'maximized' and no large image is defined for that card.")]
+	[DDLRegistration(0x24f9098bu, "Fallback Large Image", "Path to a large image of size 3840 x 2160 PNG 24-bit non-interlaced. This image will be shown when the card is 'maximized' and no large image is defined for that card.")]
 	public RivetAssetId FallbackLargeImage { get; set; } = default;
 
 	public new static ActivityMetadataConfig Create(DDLObject ddl) => new(ddl);

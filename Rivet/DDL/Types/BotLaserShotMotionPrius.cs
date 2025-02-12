@@ -21,16 +21,16 @@ public class BotLaserShotMotionPrius : ShotMotionBasePrius, IDDLObjectType<BotLa
 		UpdateLastHitPos = ddl.GetValue<bool>(0x6fcc4404u, UpdateLastHitPos);
 	}
 
-	[DDLRegistration(0xbc4a2b4au)]
+	[DDLRegistration(0xc7f69ee3u)]
 	public float CollRadius { get; set; } = 0.10f;
 
-	[DDLRegistration(0xbc4a2b4au, "Laser Collision Type", "kDefault hits everything, kHeroOnly only looks for hero domain physics, kBotOnly in bot domain")]
+	[DDLRegistration(0x180c3197u, "Laser Collision Type", "kDefault hits everything, kHeroOnly only looks for hero domain physics, kBotOnly in bot domain")]
 	public x2056dab2 BotLaserCollType { get; set; } = x2056dab2.Default;
 
-	[DDLRegistration(0xbc4a2b4au, "Use Laser Start Pos", "Use the laser start position from shot motion for beam VFX.")]
+	[DDLRegistration(0x2df4b671u, "Use Laser Start Pos", "Use the laser start position from shot motion for beam VFX.")]
 	public bool UseLaserStartPos { get; set; } = false;
 
-	[DDLRegistration(0xbc4a2b4au, "Update last Hit Pos", "If this is true, the beam VFX will stop/impact at the first hit position. Otherwise the laser will just go thru everything")]
+	[DDLRegistration(0x6fcc4404u, "Update last Hit Pos", "If this is true, the beam VFX will stop/impact at the first hit position. Otherwise the laser will just go thru everything")]
 	public bool UpdateLastHitPos { get; set; } = true;
 
 	public new static BotLaserShotMotionPrius Create(DDLObject ddl) => new(ddl);

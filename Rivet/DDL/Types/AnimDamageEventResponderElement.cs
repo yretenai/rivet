@@ -32,49 +32,49 @@ public class AnimDamageEventResponderElement : DDLObjectType, IDDLObjectType<Ani
 		DamageTotalThresholdMax = ddl.GetValue<float>(0xd93b677fu, DamageTotalThresholdMax);
 	}
 
-	[DDLRegistration(0x5f0c157bu)]
+	[DDLRegistration(0x75f25e0cu)]
 	public List<DamageEventResponderDamageIdentifier?> DamageId { get; set; } = [];
 
-	[DDLRegistration(0x5f0c157bu)]
+	[DDLRegistration(0x5052469bu)]
 	public string? AnimationName { get; set; } = default;
 
-	[DDLRegistration(0x5f0c157bu)]
+	[DDLRegistration(0x98a76157u)]
 	public uint Priority { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5f0c157bu, description: "Play animation once per lifetime.")]
+	[DDLRegistration(0xba3988abu, description: "Play animation once per lifetime.")]
 	public bool PlayOnce { get; set; } = false;
 
-	[DDLRegistration(0x5f0c157bu, description: "Controls the LayerDeactivateMode")]
+	[DDLRegistration(0x3aa780aeu, description: "Controls the LayerDeactivateMode")]
 	public bool RemoveDriverOnDone { get; set; } = true;
 
-	[DDLRegistration(0x5f0c157bu)]
+	[DDLRegistration(0xca9dd718u)]
 	public bool OverrideAlways { get; set; } = false;
 
-	[DDLRegistration(0x5f0c157bu)]
+	[DDLRegistration(0x48ac47d7u)]
 	public bool OverrideByPriority { get; set; } = true;
 
-	[DDLRegistration(0x5f0c157bu)]
+	[DDLRegistration(0x3475e87eu)]
 	public bool OverrideSameAnim { get; set; } = false;
 
-	[DDLRegistration(0x5f0c157bu, description: "Override animations trigger from outside this prius")]
+	[DDLRegistration(0xe5039e96u, description: "Override animations trigger from outside this prius")]
 	public bool OverrideAnimNotInMap { get; set; } = false;
 
-	[DDLRegistration(0x5f0c157bu)]
+	[DDLRegistration(0x7d7f8bc3u)]
 	public bool RespondOnIgnoredDamage { get; set; } = true;
 
-	[DDLRegistration(0x5f0c157bu, description: "Respond if the number of damage events meets or exceeds this threshold")]
+	[DDLRegistration(0xf074474fu, description: "Respond if the number of damage events meets or exceeds this threshold")]
 	public uint DamageEventCountThreshold { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5f0c157bu, description: "Respond if the number of damage events is below or meets this threshold (-1 = infinite)")]
+	[DDLRegistration(0xc9ec1b91u, description: "Respond if the number of damage events is below or meets this threshold (-1 = infinite)")]
 	public int DamageEventCountThresholdMax { get; set; } = -1;
 
-	[DDLRegistration(0x5f0c157bu, description: "Respond if a single damage event amount meets or exceeds this threshold")]
+	[DDLRegistration(0x08084e97u, description: "Respond if a single damage event amount meets or exceeds this threshold")]
 	public float DamageAmountThreshold { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5f0c157bu, description: "Respond if the total damage amount meets or exceeds this threshold")]
+	[DDLRegistration(0x4581391fu, description: "Respond if the total damage amount meets or exceeds this threshold")]
 	public float DamageTotalThreshold { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5f0c157bu, description: "Respond if the total damage amount is below or meets this threshold (0.0 = infinite)")]
+	[DDLRegistration(0xd93b677fu, description: "Respond if the total damage amount is below or meets this threshold (0.0 = infinite)")]
 	public float DamageTotalThresholdMax { get; set; } = 0.00f;
 
 	public static AnimDamageEventResponderElement Create(DDLObject ddl) => new(ddl);

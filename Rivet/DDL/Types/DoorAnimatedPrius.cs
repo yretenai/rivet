@@ -26,31 +26,31 @@ public class DoorAnimatedPrius : DoorPrius, IDDLObjectType<DoorAnimatedPrius> {
 		ReverseCloseAnim = ddl.GetString(0x3ade8d85) ?? ReverseCloseAnim;
 	}
 
-	[DDLRegistration(0x884fb111u, "Anim Rate")]
+	[DDLRegistration(0x482857f1u, "Anim Rate")]
 	public float AnimRate { get; set; } = 1.00f;
 
-	[DDLRegistration(0x884fb111u, description: "If checked, this component will detect the open direction it should use")]
+	[DDLRegistration(0x2ddd78bau, description: "If checked, this component will detect the open direction it should use")]
 	public bool CheckDirection { get; set; } = false;
 
-	[DDLRegistration(0x884fb111u, description: "If checked, this component will run the open anim in reverse to close the door, ignoring the specified close anim")]
+	[DDLRegistration(0x3610684du, description: "If checked, this component will run the open anim in reverse to close the door, ignoring the specified close anim")]
 	public bool ReverseOpenForClose { get; set; } = false;
 
-	[DDLRegistration(0x884fb111u, description: "Open animation")]
+	[DDLRegistration(0xe2664399u, description: "Open animation")]
 	public string? OpenAnim { get; set; } = "Door_Open";
 
-	[DDLRegistration(0x884fb111u, description: "Open idle animation")]
+	[DDLRegistration(0x3ec25832u, description: "Open idle animation")]
 	public string? OpenIdleAnim { get; set; } = "Door_OpenIdle";
 
-	[DDLRegistration(0x884fb111u, description: "Close animation")]
+	[DDLRegistration(0xc1192c10u, description: "Close animation")]
 	public string? CloseAnim { get; set; } = "Door_Close";
 
-	[DDLRegistration(0x884fb111u, description: "Close idle animation")]
+	[DDLRegistration(0xe7d839d5u, description: "Close idle animation")]
 	public string? CloseIdleAnim { get; set; } = "Door_CloseIdle";
 
-	[DDLRegistration(0x884fb111u, description: "If using directional checks, the animation to play when the door is approached from reverse")]
+	[DDLRegistration(0xf18bb3c6u, description: "If using directional checks, the animation to play when the door is approached from reverse")]
 	public string? ReverseOpenAnim { get; set; } = default;
 
-	[DDLRegistration(0x884fb111u, description: "If using directional checks, the animation to play when the door closes after reverse opening")]
+	[DDLRegistration(0x3ade8d85u, description: "If using directional checks, the animation to play when the door closes after reverse opening")]
 	public string? ReverseCloseAnim { get; set; } = default;
 
 	public new static DoorAnimatedPrius Create(DDLObject ddl) => new(ddl);

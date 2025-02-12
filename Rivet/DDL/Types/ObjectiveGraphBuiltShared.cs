@@ -20,13 +20,13 @@ public class ObjectiveGraphBuiltShared : DDLObjectType, IDDLObjectType<Objective
 		Objectives = ddl.GetDictionary<uint, ObjectiveNodeBuiltTableEntry>(0xb7863755, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<ObjectiveNodeBuiltTableEntry>(mapId));
 	}
 
-	[DDLRegistration(0x29725cf7u)]
+	[DDLRegistration(0x046ec93du)]
 	public GraphNodesBuilt? Nodes { get; set; } = default;
 
-	[DDLRegistration(0x29725cf7u)]
+	[DDLRegistration(0xac7cac92u)]
 	public SortedNodeNames? SortedObjectives { get; set; } = default;
 
-	[DDLRegistration(0x29725cf7u)]
+	[DDLRegistration(0xb7863755u)]
 	public Dictionary<uint, ObjectiveNodeBuiltTableEntry?> Objectives { get; set; } = [];
 
 	public static ObjectiveGraphBuiltShared Create(DDLObject ddl) => new(ddl);

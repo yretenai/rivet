@@ -19,10 +19,10 @@ public class BestOfferChangedEvent : EventBase, IDDLObjectType<BestOfferChangedE
 		NewBestOfferComponentHandle = ddl.GetValue<uint>(0x93c05edfu, NewBestOfferComponentHandle);
 	}
 
-	[DDLRegistration(0xaafe305fu, description: "The previous offer.")]
+	[DDLRegistration(0x22825f88u, description: "The previous offer.")]
 	public uint OldBestOfferComponentHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xaafe305fu, description: "The new offer.")]
+	[DDLRegistration(0x93c05edfu, description: "The new offer.")]
 	public uint NewBestOfferComponentHandle { get; set; } = 0x00000000;
 
 	public new static BestOfferChangedEvent Create(DDLObject ddl) => new(ddl);

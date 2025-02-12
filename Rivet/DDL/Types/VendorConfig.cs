@@ -26,31 +26,31 @@ public class VendorConfig : ConfigBase, IDDLObjectType<VendorConfig> {
 		ItemDatas = ddl.GetObjects<VendorItemData>(0x193188f2u);
 	}
 
-	[DDLRegistration(0x8cd6fc16u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x189ff42f Type { get; set; } = x189ff42f.Weapons;
 
-	[DDLRegistration(0x8cd6fc16u, description: "Delay after a tab change is initiated to allow another tab change (blocks tab change input).")]
+	[DDLRegistration(0xe0952624u, description: "Delay after a tab change is initiated to allow another tab change (blocks tab change input).")]
 	public float TabChangeDelayDuration { get; set; } = 0.25f;
 
-	[DDLRegistration(0x8cd6fc16u, description: "Weapon Vendor Only - duration of hold time before a weapon (or ammo refill) is purchased. <= 0 will purchase instantly.")]
+	[DDLRegistration(0x51b9fd65u, description: "Weapon Vendor Only - duration of hold time before a weapon (or ammo refill) is purchased. <= 0 will purchase instantly.")]
 	public float PurchaseWeaponHoldTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8cd6fc16u, description: "Weapon Vendor Only - duration of hold time before a single upgrade cell is purchased. <= 0 will purchase instantly.")]
+	[DDLRegistration(0xd9921e1cu, description: "Weapon Vendor Only - duration of hold time before a single upgrade cell is purchased. <= 0 will purchase instantly.")]
 	public float UpgradeCellHoldTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x8cd6fc16u, description: "For upgrade grid cell positioning.")]
+	[DDLRegistration(0x9e910762u, description: "For upgrade grid cell positioning.")]
 	public float UpgradeCellWidth { get; set; } = 53.00f;
 
-	[DDLRegistration(0x8cd6fc16u, description: "For upgrade grid cell positioning.")]
+	[DDLRegistration(0x2f30bcedu, description: "For upgrade grid cell positioning.")]
 	public float UpgradeCellHeight { get; set; } = 62.00f;
 
-	[DDLRegistration(0x8cd6fc16u, description: "For upgrade grid cell positioning.")]
+	[DDLRegistration(0x97243543u, description: "For upgrade grid cell positioning.")]
 	public float UpgradeCellYOffset { get; set; } = 31.00f;
 
-	[DDLRegistration(0x8cd6fc16u, description: "Idle time before VO is triggered informing the player what they can do. A value of 0 will disable these VO triggers.")]
+	[DDLRegistration(0xf02bd9d2u, description: "Idle time before VO is triggered informing the player what they can do. A value of 0 will disable these VO triggers.")]
 	public float IdleVOTriggerTime { get; set; } = 20.00f;
 
-	[DDLRegistration(0x8cd6fc16u)]
+	[DDLRegistration(0x193188f2u)]
 	public List<VendorItemData?> ItemDatas { get; set; } = [];
 
 	public new static VendorConfig Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class HeroWetnessConfig : DDLObjectType, IDDLObjectType<HeroWetnessConfig
 		MaxCeilingHeight = ddl.GetValue<float>(0xd72c508au, MaxCeilingHeight);
 	}
 
-	[DDLRegistration(0xec24e0dcu)]
+	[DDLRegistration(0xe219904eu)]
 	public string? FurWetnessConstant { get; set; } = "Fur_Wetness";
 
-	[DDLRegistration(0xec24e0dcu)]
+	[DDLRegistration(0x346666acu)]
 	public string? FurWindStrengthConstant { get; set; } = "Fur_WindStrength";
 
-	[DDLRegistration(0xec24e0dcu)]
+	[DDLRegistration(0xaecf9af8u)]
 	public string? StrandStrengthConstant { get; set; } = "ModelStrand_SimulationWindStrength";
 
-	[DDLRegistration(0xec24e0dcu)]
+	[DDLRegistration(0x3c808d8bu)]
 	public float TimeToWet { get; set; } = 2.00f;
 
-	[DDLRegistration(0xec24e0dcu)]
+	[DDLRegistration(0x59d26889u)]
 	public float TimeToDry { get; set; } = 5.00f;
 
-	[DDLRegistration(0xec24e0dcu)]
+	[DDLRegistration(0xd72c508au)]
 	public float MaxCeilingHeight { get; set; } = 15.00f;
 
 	public static HeroWetnessConfig Create(DDLObject ddl) => new(ddl);

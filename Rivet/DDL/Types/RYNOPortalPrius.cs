@@ -31,46 +31,46 @@ public class RYNOPortalPrius : DDLObjectType, IDDLObjectType<RYNOPortalPrius> {
 		OverrideFallRangeForShockwave = ddl.GetValue<float>(0xd9285b65u, OverrideFallRangeForShockwave);
 	}
 
-	[DDLRegistration(0x2faebdc6u, description: "Config of the shot to spawn from the portal.")]
+	[DDLRegistration(0xb171e6aeu, description: "Config of the shot to spawn from the portal.")]
 	public RivetAssetId ShotConfig { get; set; } = default;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0xd6332abdu)]
 	public uint Owner { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0x574be981u)]
 	public uint Weapon { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0x7aa5e1f4u)]
 	public uint ShotRYNO { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0x7817619bu)]
 	public uint Target { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0x902af590u)]
 	public uint WeaponId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0xed56b719u)]
 	public float AOE { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0x2554a262u)]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.One;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0x584bd7e1u)]
 	public float RangeFromShot { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0xf07a7765u)]
 	public RivetAssetId ObjectAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0xc750e4dau)]
 	public xbf5ff3c6 Size { get; set; } = xbf5ff3c6.Small;
 
-	[DDLRegistration(0x2faebdc6u)]
+	[DDLRegistration(0xd9285b65u)]
 	public float OverrideFallRangeForShockwave { get; set; } = -1.00f;
 
 	public static RYNOPortalPrius Create(DDLObject ddl) => new(ddl);

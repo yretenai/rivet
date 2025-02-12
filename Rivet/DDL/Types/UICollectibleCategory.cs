@@ -21,16 +21,16 @@ public class UICollectibleCategory : DDLObjectType, IDDLObjectType<UICollectible
 		Collectibles = ddl.GetObjects<UICollectible>(0x7297a443u);
 	}
 
-	[DDLRegistration(0x36c709bfu, "Display Name", "Name loctag for this category.")]
+	[DDLRegistration(0xeaf33243u, "Display Name", "Name loctag for this category.")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x36c709bfu, "Display Icon", "Icon texture for this category.")]
+	[DDLRegistration(0xd144659eu, "Display Icon", "Icon texture for this category.")]
 	public RivetAssetId DisplayIcon { get; set; } = default;
 
-	[DDLRegistration(0x36c709bfu, "Display Object", "3D model for this category.")]
+	[DDLRegistration(0x1b10bb38u, "Display Object", "3D model for this category.")]
 	public UIDisplayObjectType DisplayObject { get; set; } = UIDisplayObjectType.None;
 
-	[DDLRegistration(0x36c709bfu, "Collectibles", "List of collectibles for this category.")]
+	[DDLRegistration(0x7297a443u, "Collectibles", "List of collectibles for this category.")]
 	public List<UICollectible?> Collectibles { get; set; } = [];
 
 	public static UICollectibleCategory Create(DDLObject ddl) => new(ddl);

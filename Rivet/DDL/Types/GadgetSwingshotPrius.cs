@@ -19,10 +19,10 @@ public class GadgetSwingshotPrius : DDLObjectType, IDDLObjectType<GadgetSwingsho
 		ShotActor = ddl.GetValue<RivetAssetId>(0x000f3287u, ShotActor);
 	}
 
-	[DDLRegistration(0x30c8f7b8u)]
+	[DDLRegistration(0x138c6595u)]
 	public string? EmitLocator { get; set; } = default;
 
-	[DDLRegistration(0x30c8f7b8u)]
+	[DDLRegistration(0x000f3287u)]
 	public RivetAssetId ShotActor { get; set; } = default;
 
 	public static GadgetSwingshotPrius Create(DDLObject ddl) => new(ddl);

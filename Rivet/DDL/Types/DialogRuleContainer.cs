@@ -18,7 +18,7 @@ public class DialogRuleContainer : DDLObjectType, IDDLObjectType<DialogRuleConta
 		Rule = ddl.GetObject<DialogRule>(0x76486c7cu);
 	}
 
-	[DDLRegistration(0x5ebad5cdu)]
+	[DDLRegistration(0x76486c7cu)]
 	public DialogRule? Rule { get; set; } = default;
 
 	public static DialogRuleContainer Create(DDLObject ddl) => new(ddl);

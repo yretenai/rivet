@@ -23,22 +23,22 @@ public class UI_AnimDriverBlendNodeDef : DDLObjectType, IDDLObjectType<UI_AnimDr
 		IntervalsUI = ddl.GetObject<UI_AnimDriverBlendNodeIntervals>(0xdafdfffbu);
 	}
 
-	[DDLRegistration(0x2ab12cc0u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0x2ab12cc0u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x53f8509f Type { get; set; } = x53f8509f.BlendNodeTypeDefault;
 
-	[DDLRegistration(0x2ab12cc0u)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2ab12cc0u, "Value")]
+	[DDLRegistration(0x8dae56cdu, "Value")]
 	public float CurrentValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2ab12cc0u)]
+	[DDLRegistration(0x955c8dd0u)]
 	public List<AnimDriverBlendElemDef?> Intervals { get; set; } = [];
 
-	[DDLRegistration(0x2ab12cc0u, "Intervals")]
+	[DDLRegistration(0xdafdfffbu, "Intervals")]
 	public UI_AnimDriverBlendNodeIntervals? IntervalsUI { get; set; } = default;
 
 	public static UI_AnimDriverBlendNodeDef Create(DDLObject ddl) => new(ddl);

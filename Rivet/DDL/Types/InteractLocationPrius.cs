@@ -25,28 +25,28 @@ public class InteractLocationPrius : DDLObjectType, IDDLObjectType<InteractLocat
 		CameraSettings = ddl.GetObject<InteractLocationCameraSettings>(0xf7f1ab6eu);
 	}
 
-	[DDLRegistration(0xa000acdeu, "Location Index", "Anim filter for Index to use for this location")]
+	[DDLRegistration(0x6c69290du, "Location Index", "Anim filter for Index to use for this location")]
 	public LocationIndex LocIndex { get; set; } = LocationIndex.IndexOne;
 
-	[DDLRegistration(0xa000acdeu, "Require Input Hold", "Whether to require the interact button to be held to start an interaction")]
+	[DDLRegistration(0xe319acb7u, "Require Input Hold", "Whether to require the interact button to be held to start an interaction")]
 	public bool RequireHold { get; set; } = false;
 
-	[DDLRegistration(0xa000acdeu, "Hold Time", "How long the user must hold the interact button to start an interaction")]
+	[DDLRegistration(0x1cb513d0u, "Hold Time", "How long the user must hold the interact button to start an interaction")]
 	public float HoldTime { get; set; } = 0.40f;
 
-	[DDLRegistration(0xa000acdeu, "Base Prompt Data")]
+	[DDLRegistration(0xd8ff0f39u, "Base Prompt Data")]
 	public InteractLocationPromptData? PromptData { get; set; } = default;
 
-	[DDLRegistration(0xa000acdeu, "Approach Data")]
+	[DDLRegistration(0xf23fd5cfu, "Approach Data")]
 	public InteractLocationApproachData? ApproachData { get; set; } = default;
 
-	[DDLRegistration(0xa000acdeu, "Allegiance Specific", "Allegiance to filter usage against")]
+	[DDLRegistration(0xd10c0c26u, "Allegiance Specific", "Allegiance to filter usage against")]
 	public x6bdf4ba1 Allegiance { get; set; } = x6bdf4ba1.Neutral;
 
-	[DDLRegistration(0xa000acdeu, "Allegiance Relation", "Relation to filtering allegiance that is required for use")]
+	[DDLRegistration(0xc5336d41u, "Allegiance Relation", "Relation to filtering allegiance that is required for use")]
 	public AllegianceRelation AllegianceRelation { get; set; } = AllegianceRelation.Any;
 
-	[DDLRegistration(0xa000acdeu, "Camera Settings")]
+	[DDLRegistration(0xf7f1ab6eu, "Camera Settings")]
 	public InteractLocationCameraSettings? CameraSettings { get; set; } = default;
 
 	public static InteractLocationPrius Create(DDLObject ddl) => new(ddl);

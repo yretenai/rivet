@@ -21,16 +21,16 @@ public class ClankPuzzleTargetBasePrius : DDLObjectType, IDDLObjectType<ClankPuz
 		VisualActorGroup = ddl.GetValue<RivetAssetId>(0xa05f07fau, VisualActorGroup);
 	}
 
-	[DDLRegistration(0x24866093u, "Clank Puzzle Target Config")]
+	[DDLRegistration(0x263b655au, "Clank Puzzle Target Config")]
 	public RivetAssetId TargetConfig { get; set; } = default;
 
-	[DDLRegistration(0x24866093u)]
+	[DDLRegistration(0xf020976bu)]
 	public bool ShowHoverTip { get; set; } = false;
 
-	[DDLRegistration(0x24866093u, description: "If this is assigned, we use this whole group instead of just this one actor.")]
+	[DDLRegistration(0x1a5a7710u, description: "If this is assigned, we use this whole group instead of just this one actor.")]
 	public RivetAssetId ActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x24866093u, description: "When applying any visual state, we use this actor group instead.")]
+	[DDLRegistration(0xa05f07fau, description: "When applying any visual state, we use this actor group instead.")]
 	public RivetAssetId VisualActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ClankPuzzleTargetBasePrius Create(DDLObject ddl) => new(ddl);

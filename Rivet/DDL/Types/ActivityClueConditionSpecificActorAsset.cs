@@ -18,7 +18,7 @@ public class ActivityClueConditionSpecificActorAsset : DDLObjectType, IDDLObject
 		BotActor = ddl.GetObject<AssetReferenceDef>(0xa33638e4u);
 	}
 
-	[DDLRegistration(0xb36d8579u, "Bot Actor", "Only return true for this bot. Make sure you uncheck Autoload")]
+	[DDLRegistration(0xa33638e4u, "Bot Actor", "Only return true for this bot. Make sure you uncheck Autoload")]
 	public AssetReferenceDef? BotActor { get; set; } = default;
 
 	public static ActivityClueConditionSpecificActorAsset Create(DDLObject ddl) => new(ddl);

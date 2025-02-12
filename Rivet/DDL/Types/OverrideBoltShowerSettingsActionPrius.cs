@@ -18,7 +18,7 @@ public class OverrideBoltShowerSettingsActionPrius : DDLObjectType, IDDLObjectTy
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x065c0c51u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loot;
 
 	public static OverrideBoltShowerSettingsActionPrius Create(DDLObject ddl) => new(ddl);

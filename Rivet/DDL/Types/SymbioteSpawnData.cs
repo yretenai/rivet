@@ -19,10 +19,10 @@ public class SymbioteSpawnData : ActorSpawnData, IDDLObjectType<SymbioteSpawnDat
 		Leader = ddl.GetValue<uint>(0xcb9ba4b0u, Leader);
 	}
 
-	[DDLRegistration(0x1a0391ccu, description: "The spawn position")]
+	[DDLRegistration(0xd86fe14cu, description: "The spawn position")]
 	public DDLVector3? SpawnPosition { get; set; } = default;
 
-	[DDLRegistration(0x1a0391ccu, description: "The actor we spawned from.")]
+	[DDLRegistration(0xcb9ba4b0u, description: "The actor we spawned from.")]
 	public uint Leader { get; set; } = 0x00000000;
 
 	public new static SymbioteSpawnData Create(DDLObject ddl) => new(ddl);

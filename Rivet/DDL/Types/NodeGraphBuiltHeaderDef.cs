@@ -19,10 +19,10 @@ public class NodeGraphBuiltHeaderDef : DDLObjectType, IDDLObjectType<NodeGraphBu
 		GraphTypeHash = ddl.GetValue<uint>(0xa9f60704u, GraphTypeHash);
 	}
 
-	[DDLRegistration(0x2c5f6661u)]
+	[DDLRegistration(0x60673d53u)]
 	public uint ApproximatePlugCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x2c5f6661u)]
+	[DDLRegistration(0xa9f60704u)]
 	public uint GraphTypeHash { get; set; } = 0x00000000;
 
 	public static NodeGraphBuiltHeaderDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class StatusEffectWarpRifleImplosionConfig : StatusEffectConfig, IDDLObje
 		ImplosionConfig = ddl.GetValue<RivetAssetId>(0xd2cb4645u, ImplosionConfig);
 	}
 
-	[DDLRegistration(0x03437cc6u)]
+	[DDLRegistration(0xd2cb4645u)]
 	public RivetAssetId ImplosionConfig { get; set; } = default;
 
 	public new static StatusEffectWarpRifleImplosionConfig Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class OnValueChangedEventActionPrius : DDLObjectType, IDDLObjectType<OnVa
 		ListenEvent = ddl.GetObject<ValueChangedEvent>(0xa76e74deu);
 	}
 
-	[DDLRegistration(0xf04abda9u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0xf04abda9u, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0xf04abda9u, "Event Type", "The event that we should listen for")]
+	[DDLRegistration(0xa76e74deu, "Event Type", "The event that we should listen for")]
 	public ValueChangedEvent? ListenEvent { get; set; } = default;
 
 	public static OnValueChangedEventActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class AwardPrizeBasePrius : DDLObjectType, IDDLObjectType<AwardPrizeBaseP
 		ImagePath = ddl.GetValue<RivetAssetId>(0x3c1a7294u, ImagePath);
 	}
 
-	[DDLRegistration(0x927a2cf2u, "Name Tag", "Localization tag for the name to display for this prize in the award prize info.")]
+	[DDLRegistration(0xa0041b54u, "Name Tag", "Localization tag for the name to display for this prize in the award prize info.")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0x927a2cf2u, "Image Path", "Path for the image to display for this prize in the award prize info.")]
+	[DDLRegistration(0x3c1a7294u, "Image Path", "Path for the image to display for this prize in the award prize info.")]
 	public RivetAssetId ImagePath { get; set; } = default;
 
 	public static AwardPrizeBasePrius Create(DDLObject ddl) => new(ddl);

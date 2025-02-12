@@ -18,7 +18,7 @@ public class PropConfig : ConfigBase, IDDLObjectType<PropConfig> {
 		PropList = ddl.GetObjects<PropItem>(0x8d4ae7f1u);
 	}
 
-	[DDLRegistration(0x97e7b151u, "Prop List")]
+	[DDLRegistration(0x8d4ae7f1u, "Prop List")]
 	public List<PropItem?> PropList { get; set; } = [];
 
 	public new static PropConfig Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class EyeBeamAimEvent : EventBase, IDDLObjectType<EyeBeamAimEvent> {
 		EyeIndex = ddl.GetValue<byte>(0xa17178cfu, EyeIndex);
 	}
 
-	[DDLRegistration(0xef88129du)]
+	[DDLRegistration(0xa17178cfu)]
 	public byte EyeIndex { get; set; } = 0x00;
 
 	public new static EyeBeamAimEvent Create(DDLObject ddl) => new(ddl);

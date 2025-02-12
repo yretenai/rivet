@@ -81,196 +81,196 @@ public class EditorRenderSettings : DDLObjectType, IDDLObjectType<EditorRenderSe
 		NavMeshLayer = ddl.GetValue<int>(0x7efc09d3u, NavMeshLayer);
 	}
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xd046622au)]
 	public float VisibilitySky { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x1ce5f46bu)]
 	public bool VisibilityToggle { get; set; } = true;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x934a1823u)]
 	public bool ColorPickerToggle { get; set; } = false;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xf4cbd9d2u)]
 	public bool AtmosphereOverrideUIToggle { get; set; } = false;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x2ad354abu)]
 	public x189050c4 OutlinedVolumeType { get; set; } = x189050c4.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x2de134cfu)]
 	public x7ffe9612 VisGrid { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x4fa9e839u)]
 	public x7ffe9612 VisSprites { get; set; } = x7ffe9612.Toggle;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xa909e713u)]
 	public x7ffe9612 VisVolumeBounds { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xa47f3b74u)]
 	public x7ffe9612 VisImpostors { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x0d5b9437u)]
 	public x7ffe9612 VisCurves { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xd74abeafu)]
 	public x7ffe9612 VisPolylines { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xee74d51cu)]
 	public x7ffe9612 VisAnnotations { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xee4284cdu)]
 	public x7ffe9612 VisCollisionOnlyObjects { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x9c2c14abu)]
 	public x7ffe9612 VisActors { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xeb21ff2eu)]
 	public x7ffe9612 VisActorModels { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x0ddb073cu)]
 	public x7ffe9612 VisActorVolumes { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x0e18835fu)]
 	public x7ffe9612 VisAnimClues { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x8c3e4891u)]
 	public x7ffe9612 VisAreaVolumes { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xdcdae96eu)]
 	public x7ffe9612 VisCombatVolumes { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x7bffc71fu)]
 	public x7ffe9612 VisTriggerVolumes { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x99e997cau)]
 	public x7ffe9612 VisSound { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x6d169f17u)]
 	public x7ffe9612 VisSoundEnvironment { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x0b2eb854u)]
 	public x7ffe9612 VisEffects { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x78cd7e4bu)]
 	public x7ffe9612 VisEffectSprites { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xa7d1d447u)]
 	public x7ffe9612 VisModels { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x50b00d4bu)]
 	public x7ffe9612 VisDecals { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x6f1c1ea7u)]
 	public x7ffe9612 VisDecalSprites { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xa0dd1ef4u)]
 	public x7ffe9612 VisDecalBounds { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x434c0061u)]
 	public x7ffe9612 VisLighting { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x16b087b1u)]
 	public x7ffe9612 VisLightBounds { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x82b30bd9u)]
 	public x7ffe9612 VisLightBoundsMouseOver { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x2814ed07u)]
 	public xff5a79fb LightBoundsRenderMode { get; set; } = xff5a79fb.WireOverlay;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xd1ba8539u)]
 	public x7ffe9612 VisLuminanceHistogram { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x2a840fa1u)]
 	public x7ffe9612 VisEnvProbeSpheres { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x0b71ee32u)]
 	public x7ffe9612 VisEnvProbeProxyDist { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xe3d87d83u)]
 	public x7ffe9612 VisLimitToGrid { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xf2e3c85cu)]
 	public x7ffe9612 VisLightGridDiffuse { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xc6dc92fau)]
 	public x7ffe9612 VisEnvProbeSpecular { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x4f2bef07u)]
 	public x7ffe9612 VisEnvProbeDiffuseMip { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xbf1c1ef2u)]
 	public x7ffe9612 VisLightGridDefault { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x262a91f8u)]
 	public x7ffe9612 VisLightGridOccluder { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xb60f8d42u)]
 	public x7ffe9612 VisLightGridEmbeddedSamp { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x6ad8988cu)]
 	public x7ffe9612 VisLightGridSampleLocation { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x3f4deb0du)]
 	public x7ffe9612 VisLightGridEmbeddedGeom { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x269eb438u)]
 	public x7ffe9612 VisLightGridVolumes { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xe238e01au)]
 	public x7ffe9612 VisLightCaptureOnlyObjects { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x3fdfd590u)]
 	public bool CaptureDirectOnly { get; set; } = false;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xc8619e0fu)]
 	public bool ShowEnvProbeProxyDistBounds { get; set; } = false;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x918e4491u)]
 	public bool AutoLoadZonesOnProbeCapture { get; set; } = false;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xc3b54f69u)]
 	public LightingConditions LightingCondition { get; set; } = LightingConditions.Day;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x9c037d33u)]
 	public bool EnableColorCorrection { get; set; } = true;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xa34cdba5u)]
 	public bool TemporalAaEnable { get; set; } = true;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x0d1c7b58u)]
 	public bool EnableSSAO { get; set; } = true;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xf5af271bu)]
 	public bool EnableSSR { get; set; } = true;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xf48dd4e7u)]
 	public bool EnableChromaticAberration { get; set; } = true;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x1fd7b893u)]
 	public bool EnableWeatherEffects { get; set; } = true;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x4c9ea438u)]
 	public bool BypassLightGrids { get; set; } = false;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xdbfc1d42u)]
 	public bool EnableLiveUpdate { get; set; } = true;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x00ed3573u)]
 	public x7ffe9612 VisNav { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x35a2ae82u)]
 	public x7ffe9612 VisNavClues { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x717e1331u)]
 	public x7ffe9612 VisNavVolumes { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xfefbee94u)]
 	public x7ffe9612 VisNavOverridePolys { get; set; } = x7ffe9612.On;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0xd0e3efdcu)]
 	public x7ffe9612 VisNavMesh { get; set; } = x7ffe9612.Off;
 
-	[DDLRegistration(0xdb7dc7b9u)]
+	[DDLRegistration(0x7efc09d3u)]
 	public int NavMeshLayer { get; set; } = 0;
 
 	public static EditorRenderSettings Create(DDLObject ddl) => new(ddl);

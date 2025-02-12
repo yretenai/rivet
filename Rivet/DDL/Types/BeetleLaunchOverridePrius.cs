@@ -18,7 +18,7 @@ public class BeetleLaunchOverridePrius : DDLObjectType, IDDLObjectType<BeetleLau
 		OverrideLaunchSpeed = ddl.GetValue<float>(0x440ba2aeu, OverrideLaunchSpeed);
 	}
 
-	[DDLRegistration(0x6329cf3fu, description: "Vertical override speed that is given to the beetle when launching off a ramp and inside this volume.")]
+	[DDLRegistration(0x440ba2aeu, description: "Vertical override speed that is given to the beetle when launching off a ramp and inside this volume.")]
 	public float OverrideLaunchSpeed { get; set; } = 10.00f;
 
 	public static BeetleLaunchOverridePrius Create(DDLObject ddl) => new(ddl);

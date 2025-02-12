@@ -20,13 +20,13 @@ public class RagdollBodyDropEvent : EventBase, IDDLObjectType<RagdollBodyDropEve
 		IsOutside = ddl.GetValue<bool>(0x51d0316au, IsOutside);
 	}
 
-	[DDLRegistration(0xcbb1ebd7u, description: "Collision hit material")]
+	[DDLRegistration(0x86bfc8e5u, description: "Collision hit material")]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0xcbb1ebd7u, description: "Bodies relative speed at given point along separating normal")]
+	[DDLRegistration(0x44d96bd9u, description: "Bodies relative speed at given point along separating normal")]
 	public float Velocity { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcbb1ebd7u, "Is Outside")]
+	[DDLRegistration(0x51d0316au, "Is Outside")]
 	public bool IsOutside { get; set; } = false;
 
 	public new static RagdollBodyDropEvent Create(DDLObject ddl) => new(ddl);

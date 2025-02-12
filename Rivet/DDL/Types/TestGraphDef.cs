@@ -24,25 +24,25 @@ public class TestGraphDef : GameplayNodeGraphBaseDef, IDDLObjectType<TestGraphDe
 		OutputStringNodes = ddl.GetDictionary<RivetAssetId, OutputNodeStringDef>(0xade1bc82, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeStringDef>(mapId));
 	}
 
-	[DDLRegistration(0x592a45e5u)]
+	[DDLRegistration(0x065def20u)]
 	public Dictionary<RivetAssetId, TestNodeDef?> TestNodes { get; set; } = [];
 
-	[DDLRegistration(0x592a45e5u)]
+	[DDLRegistration(0x733dd74eu)]
 	public Dictionary<RivetAssetId, TestTriggerNodeDef?> TriggerNodes { get; set; } = [];
 
-	[DDLRegistration(0x592a45e5u)]
+	[DDLRegistration(0xf9b8ef84u)]
 	public Dictionary<RivetAssetId, TestMakeStringNodeDef?> MakeStringNodes { get; set; } = [];
 
-	[DDLRegistration(0x592a45e5u)]
+	[DDLRegistration(0x5c33390du)]
 	public Dictionary<RivetAssetId, InputNodeIntDef?> InputIntNodes { get; set; } = [];
 
-	[DDLRegistration(0x592a45e5u)]
+	[DDLRegistration(0x5795b3b8u)]
 	public Dictionary<RivetAssetId, InputNodeStringDef?> InputStringNodes { get; set; } = [];
 
-	[DDLRegistration(0x592a45e5u)]
+	[DDLRegistration(0xfd06341au)]
 	public Dictionary<RivetAssetId, OutputNodeIntDef?> OutputIntNodes { get; set; } = [];
 
-	[DDLRegistration(0x592a45e5u)]
+	[DDLRegistration(0xade1bc82u)]
 	public Dictionary<RivetAssetId, OutputNodeStringDef?> OutputStringNodes { get; set; } = [];
 
 	public new static TestGraphDef Create(DDLObject ddl) => new(ddl);

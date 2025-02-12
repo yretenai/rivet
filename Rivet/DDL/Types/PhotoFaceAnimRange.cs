@@ -20,13 +20,13 @@ public class PhotoFaceAnimRange : DDLObjectType, IDDLObjectType<PhotoFaceAnimRan
 		Speed = ddl.GetValue<float>(0x16753237u, Speed);
 	}
 
-	[DDLRegistration(0x18c7e126u)]
+	[DDLRegistration(0x8b2e3419u)]
 	public float Min { get; set; } = -1.00f;
 
-	[DDLRegistration(0x18c7e126u)]
+	[DDLRegistration(0xb7230b40u)]
 	public float Max { get; set; } = 1.00f;
 
-	[DDLRegistration(0x18c7e126u)]
+	[DDLRegistration(0x16753237u)]
 	public float Speed { get; set; } = 1.00f;
 
 	public static PhotoFaceAnimRange Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class ZurkonPrius : DDLObjectType, IDDLObjectType<ZurkonPrius> {
 		IsRespawn = ddl.GetValue<bool>(0x0cb474a3u, IsRespawn);
 	}
 
-	[DDLRegistration(0xd3055b42u)]
+	[DDLRegistration(0x7cc10157u)]
 	public x02c2b51d FamilyType { get; set; } = x02c2b51d.Dad;
 
-	[DDLRegistration(0xd3055b42u)]
+	[DDLRegistration(0x5329bd21u)]
 	public ulong ShotConfigAssetId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xd3055b42u)]
+	[DDLRegistration(0xac5bca76u)]
 	public ulong VOConfigAssetId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xd3055b42u)]
+	[DDLRegistration(0x6151ad8fu)]
 	public uint OwnerHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd3055b42u)]
+	[DDLRegistration(0xf2200196u)]
 	public uint WeaponHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd3055b42u)]
+	[DDLRegistration(0x108d4906u)]
 	public uint NumShots { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd3055b42u)]
+	[DDLRegistration(0xc518cd0au)]
 	public float HitPoints { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd3055b42u)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd3055b42u)]
+	[DDLRegistration(0xefcca1c6u)]
 	public float FiringInterval { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd3055b42u)]
+	[DDLRegistration(0x0cb474a3u)]
 	public bool IsRespawn { get; set; } = false;
 
 	public static ZurkonPrius Create(DDLObject ddl) => new(ddl);

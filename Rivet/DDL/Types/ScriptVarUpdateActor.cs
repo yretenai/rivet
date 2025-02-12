@@ -18,7 +18,7 @@ public class ScriptVarUpdateActor : DDLObjectType, IDDLObjectType<ScriptVarUpdat
 		Value = ddl.GetValue<RivetAssetId>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x286c1bd8u)]
+	[DDLRegistration(0x042494f5u)]
 	public RivetAssetId Value { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ScriptVarUpdateActor Create(DDLObject ddl) => new(ddl);

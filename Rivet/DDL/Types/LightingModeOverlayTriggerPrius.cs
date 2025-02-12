@@ -18,7 +18,7 @@ public class LightingModeOverlayTriggerPrius : BaseCustomOverlayTriggerPrius, ID
 		LightingModes = ddl.GetEnums<LightingModeGame>(0x5b8dd032u, LightingModeGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x89702c29u, description: "Set of lighting modes to load this overlay for.")]
+	[DDLRegistration(0x5b8dd032u, description: "Set of lighting modes to load this overlay for.")]
 	public List<LightingModeGame> LightingModes { get; set; } = [];
 
 	public new static LightingModeOverlayTriggerPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class OrderedListGetItemActionPrius : DDLObjectType, IDDLObjectType<Order
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x4af76341u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Lists;
 
 	public static OrderedListGetItemActionPrius Create(DDLObject ddl) => new(ddl);

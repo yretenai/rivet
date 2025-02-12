@@ -21,16 +21,16 @@ public class OverrideHeroBackpackActionPrius : DDLObjectType, IDDLObjectType<Ove
 		ClearOnZoneUnload = ddl.GetValue<bool>(0x8b42adafu, ClearOnZoneUnload);
 	}
 
-	[DDLRegistration(0xf03e8a0fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0xf03e8a0fu, "Has Backpack?", "Should the hero even have a backpack at all?")]
+	[DDLRegistration(0x6b263f42u, "Has Backpack?", "Should the hero even have a backpack at all?")]
 	public bool HasBackpack { get; set; } = true;
 
-	[DDLRegistration(0xf03e8a0fu, "Backpack Config", "Backpack config to swap to.")]
+	[DDLRegistration(0xde895c83u, "Backpack Config", "Backpack config to swap to.")]
 	public RivetAssetId OverrideBackpackConfig { get; set; } = default;
 
-	[DDLRegistration(0xf03e8a0fu, "Clear on Zone Unload?", "Should the backpack override be cleared on zone unload? NOTE: override is never saved, so this will get cleared on reload/continue from save.")]
+	[DDLRegistration(0x8b42adafu, "Clear on Zone Unload?", "Should the backpack override be cleared on zone unload? NOTE: override is never saved, so this will get cleared on reload/continue from save.")]
 	public bool ClearOnZoneUnload { get; set; } = true;
 
 	public static OverrideHeroBackpackActionPrius Create(DDLObject ddl) => new(ddl);

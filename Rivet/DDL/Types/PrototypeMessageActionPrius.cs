@@ -30,43 +30,43 @@ public class PrototypeMessageActionPrius : DDLObjectType, IDDLObjectType<Prototy
 		HideFromDemo = ddl.GetValue<bool>(0x285587dcu, HideFromDemo);
 	}
 
-	[DDLRegistration(0xe353ee27u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0xe353ee27u, "Prototype Message", "Message text - values from input variables can be inserted using '{variable name}', for example, {String1} (case-sensitive)")]
+	[DDLRegistration(0x723bca34u, "Prototype Message", "Message text - values from input variables can be inserted using '{variable name}', for example, {String1} (case-sensitive)")]
 	public string? MessageText { get; set; } = "";
 
-	[DDLRegistration(0xe353ee27u, description: "Time in seconds a message stays up. -1 to stay up until cleared.")]
+	[DDLRegistration(0x7c5e3db0u, description: "Time in seconds a message stays up. -1 to stay up until cleared.")]
 	public float Duration { get; set; } = 6.00f;
 
-	[DDLRegistration(0xe353ee27u, "Clear all prototype messages?", "Whether to clear all other prototype messages before displaying this one.")]
+	[DDLRegistration(0x320b2879u, "Clear all prototype messages?", "Whether to clear all other prototype messages before displaying this one.")]
 	public bool ClearAllMsgs { get; set; } = false;
 
-	[DDLRegistration(0xe353ee27u, description: "Xposition in screen coordinates")]
+	[DDLRegistration(0x58c2c0deu, description: "Xposition in screen coordinates")]
 	public uint PosX { get; set; } = 0x000003c0;
 
-	[DDLRegistration(0xe353ee27u, description: "Yposition in screen coordinates")]
+	[DDLRegistration(0x2fc5f048u, description: "Yposition in screen coordinates")]
 	public uint PosY { get; set; } = 0x0000021c;
 
-	[DDLRegistration(0xe353ee27u, "Position is 3D", "Position is a 3D World coordinate")]
+	[DDLRegistration(0xd199d9cau, "Position is 3D", "Position is a 3D World coordinate")]
 	public bool Position3D { get; set; } = false;
 
-	[DDLRegistration(0xe353ee27u, description: "Justification of message. Right now the textbox is 600 pixels wide, so right justification will align the text 600 over from specified X pos (and center 300 over).")]
+	[DDLRegistration(0xcd636c0au, description: "Justification of message. Right now the textbox is 600 pixels wide, so right justification will align the text 600 over from specified X pos (and center 300 over).")]
 	public Justification Align { get; set; } = Justification.Left;
 
-	[DDLRegistration(0xe353ee27u, description: "Font size of message")]
+	[DDLRegistration(0x1c71247au, description: "Font size of message")]
 	public float Fontsize { get; set; } = 24.00f;
 
-	[DDLRegistration(0xe353ee27u, description: "The scripts do not have a color picker type, so this will have to do for now. But really determined by the swf")]
+	[DDLRegistration(0x26ccd3dcu, description: "The scripts do not have a color picker type, so this will have to do for now. But really determined by the swf")]
 	public x1264b76c ColorPick { get; set; } = x1264b76c.Gray;
 
-	[DDLRegistration(0xe353ee27u, "Format As Int")]
+	[DDLRegistration(0x995b8ec6u, "Format As Int")]
 	public bool FormatAsInt { get; set; } = true;
 
-	[DDLRegistration(0xe353ee27u, "Hide on region change")]
+	[DDLRegistration(0x0190de87u, "Hide on region change")]
 	public bool HideOnRegionLoad { get; set; } = false;
 
-	[DDLRegistration(0xe353ee27u, "Hide while in demo mode")]
+	[DDLRegistration(0x285587dcu, "Hide while in demo mode")]
 	public bool HideFromDemo { get; set; } = false;
 
 	public static PrototypeMessageActionPrius Create(DDLObject ddl) => new(ddl);

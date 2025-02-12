@@ -20,13 +20,13 @@ public class CineMenuOption : DDLObjectType, IDDLObjectType<CineMenuOption> {
 		DefaultItem = ddl.GetString(0x51f9b12c) ?? DefaultItem;
 	}
 
-	[DDLRegistration(0xf0b0d690u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xf0b0d690u)]
+	[DDLRegistration(0xf84d258cu)]
 	public List<string?> Items { get; set; } = [];
 
-	[DDLRegistration(0xf0b0d690u)]
+	[DDLRegistration(0x51f9b12cu)]
 	public string? DefaultItem { get; set; } = default;
 
 	public static CineMenuOption Create(DDLObject ddl) => new(ddl);

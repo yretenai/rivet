@@ -33,52 +33,52 @@ public class ClimbCritterPrius : SimpleCritterPrius, IDDLObjectType<ClimbCritter
 		JumpOutroAnim = ddl.GetString(0x93a84f19) ?? JumpOutroAnim;
 	}
 
-	[DDLRegistration(0xac07dda0u, "Jump Prepare Time", "Climb critters need to accelerate for this amount of time before jumping. The higher this value, the faster they will move during the jump.")]
+	[DDLRegistration(0x16ed2b58u, "Jump Prepare Time", "Climb critters need to accelerate for this amount of time before jumping. The higher this value, the faster they will move during the jump.")]
 	public float JumpPrepareTime { get; set; } = 0.30f;
 
-	[DDLRegistration(0xac07dda0u, "Min Jump Up Distance XZ")]
+	[DDLRegistration(0x2e744edbu, "Min Jump Up Distance XZ")]
 	public float MinJumpUpDistanceXZ { get; set; } = 1.00f;
 
-	[DDLRegistration(0xac07dda0u, "Max Jump Up Distance XZ")]
+	[DDLRegistration(0x8940cea2u, "Max Jump Up Distance XZ")]
 	public float MaxJumpUpDistanceXZ { get; set; } = 2.00f;
 
-	[DDLRegistration(0xac07dda0u, "Min Jump Height")]
+	[DDLRegistration(0x1982c0b8u, "Min Jump Height")]
 	public float MinJumpHeight { get; set; } = 0.50f;
 
-	[DDLRegistration(0xac07dda0u, "Max Jump Height")]
+	[DDLRegistration(0x59cdb8ceu, "Max Jump Height")]
 	public float MaxJumpHeight { get; set; } = 2.50f;
 
-	[DDLRegistration(0xac07dda0u, "Jump Up Chance", "When idling near a tree, what is the chance that the climb critter will try to jump up on the tree?")]
+	[DDLRegistration(0x420a7a1au, "Jump Up Chance", "When idling near a tree, what is the chance that the climb critter will try to jump up on the tree?")]
 	public float JumpUpChance { get; set; } = 0.50f;
 
-	[DDLRegistration(0xac07dda0u, "Jump Up Query Radius", "Physics query radius when looking for a tree to jump up on.")]
+	[DDLRegistration(0xa5bdf216u, "Jump Up Query Radius", "Physics query radius when looking for a tree to jump up on.")]
 	public float JumpUpQueryRadius { get; set; } = 0.50f;
 
-	[DDLRegistration(0xac07dda0u, "Jump Gravity", "Higher gravity means a higher arc.")]
+	[DDLRegistration(0x4df05471u, "Jump Gravity", "Higher gravity means a higher arc.")]
 	public float JumpGravity { get; set; } = 10.00f;
 
-	[DDLRegistration(0xac07dda0u, "Jump Down Min Pause Time", "The minimum amount of time the critter idles after turning around, but before jumping down.")]
+	[DDLRegistration(0xb939bc35u, "Jump Down Min Pause Time", "The minimum amount of time the critter idles after turning around, but before jumping down.")]
 	public float MinJumpDownPauseTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0xac07dda0u, "Jump Down Max Pause Time", "The maximum amount of time the critter idles after turning around, but before jumping down.")]
+	[DDLRegistration(0x9047412du, "Jump Down Max Pause Time", "The maximum amount of time the critter idles after turning around, but before jumping down.")]
 	public float MaxJumpDownPauseTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0xac07dda0u, "Jump Down Speed Linear", "The speed at which this critter will jump down from the tree (this speed does not count gravity).")]
+	[DDLRegistration(0x09cac588u, "Jump Down Speed Linear", "The speed at which this critter will jump down from the tree (this speed does not count gravity).")]
 	public float JumpDownSpeedLinear { get; set; } = 3.00f;
 
-	[DDLRegistration(0xac07dda0u, "Min Jump Down Distance XZ", "The minimum horizontal distance the critter must cover when jumping down.")]
+	[DDLRegistration(0x30a7eaa5u, "Min Jump Down Distance XZ", "The minimum horizontal distance the critter must cover when jumping down.")]
 	public float MinJumpDownDistanceXZ { get; set; } = 1.50f;
 
-	[DDLRegistration(0xac07dda0u, "Max Jump Down Distance XZ", "The maximum horizontal distance the critter may cover when jumping down.")]
+	[DDLRegistration(0x23e20c0eu, "Max Jump Down Distance XZ", "The maximum horizontal distance the critter may cover when jumping down.")]
 	public float MaxJumpDownDistanceXZ { get; set; } = 2.50f;
 
-	[DDLRegistration(0xac07dda0u, description: "Non-looping anim clip played at regular speed as the critter is leaving the ground.")]
+	[DDLRegistration(0xc1631beeu, description: "Non-looping anim clip played at regular speed as the critter is leaving the ground.")]
 	public string? JumpIntroAnim { get; set; } = default;
 
-	[DDLRegistration(0xac07dda0u, description: "Non-looping anim clip played at scaled speed while the critter is in the air. If empty, the run anim is frozen and used instead.")]
+	[DDLRegistration(0xcb3dc9d4u, description: "Non-looping anim clip played at scaled speed while the critter is in the air. If empty, the run anim is frozen and used instead.")]
 	public string? JumpAnim { get; set; } = default;
 
-	[DDLRegistration(0xac07dda0u, description: "Non-looping anim clip played at regular speed as the critter is landing on the ground.")]
+	[DDLRegistration(0x93a84f19u, description: "Non-looping anim clip played at regular speed as the critter is landing on the ground.")]
 	public string? JumpOutroAnim { get; set; } = default;
 
 	public new static ClimbCritterPrius Create(DDLObject ddl) => new(ddl);

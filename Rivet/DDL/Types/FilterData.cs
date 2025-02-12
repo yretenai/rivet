@@ -27,34 +27,34 @@ public class FilterData : DDLObjectType, IDDLObjectType<FilterData> {
 		ExcludeInGame = ddl.GetValue<bool>(0x9869b628u, ExcludeInGame);
 	}
 
-	[DDLRegistration(0x7c489a4cu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x7c489a4cu)]
+	[DDLRegistration(0x1b0b9021u)]
 	public AssetReferenceDef? FilterRef { get; set; } = default;
 
-	[DDLRegistration(0x7c489a4cu)]
+	[DDLRegistration(0x09f7e3d0u)]
 	public AssetReferenceDef? FXFilterRef { get; set; } = default;
 
-	[DDLRegistration(0x7c489a4cu)]
+	[DDLRegistration(0x324f4ad3u)]
 	public AssetReferenceDef? FilterActorRef { get; set; } = default;
 
-	[DDLRegistration(0x7c489a4cu)]
+	[DDLRegistration(0x48ecd6d3u)]
 	public bool DisableAaMode { get; set; } = false;
 
-	[DDLRegistration(0x7c489a4cu)]
+	[DDLRegistration(0xba1c17ddu)]
 	public bool ComputeLuminanceEarly { get; set; } = false;
 
-	[DDLRegistration(0x7c489a4cu)]
+	[DDLRegistration(0xedf356fdu)]
 	public float BlendMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7c489a4cu)]
+	[DDLRegistration(0xd1fe69a4u)]
 	public float BlendMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7c489a4cu)]
+	[DDLRegistration(0x9c9893d5u)]
 	public bool ExcludeIndoors { get; set; } = false;
 
-	[DDLRegistration(0x7c489a4cu)]
+	[DDLRegistration(0x9869b628u)]
 	public bool ExcludeInGame { get; set; } = true;
 
 	public static FilterData Create(DDLObject ddl) => new(ddl);

@@ -31,46 +31,46 @@ public class LightGridCaptureInfo : DDLObjectType, IDDLObjectType<LightGridCaptu
 		LogUrl = ddl.GetString(0x7e65d59f) ?? LogUrl;
 	}
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0xe3ef773au)]
 	public CaptureJobInfo? JobInfo { get; set; } = default;
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0x374cc4d3u)]
 	public List<CaptureGridInfo?> GridInfo { get; set; } = [];
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0x9c997da9u)]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0x79fd859au)]
 	public RivetAssetId Atmosphere { get; set; } = default;
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0x3fdfd590u)]
 	public bool CaptureDirectOnly { get; set; } = false;
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0xf2e4098au)]
 	public bool CaptureGBufferOnly { get; set; } = false;
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0x6b6788b0u)]
 	public bool CaptureFromGBuffer { get; set; } = false;
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0x3e34f8aau)]
 	public bool UseGBufferEmissive { get; set; } = false;
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0x870fe1b2u)]
 	public bool DebugEmbeddedSamples { get; set; } = false;
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0x0510bfceu)]
 	public bool WriteLightBinsToServer { get; set; } = true;
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0xc3b54f69u)]
 	public LightingConditions LightingCondition { get; set; } = LightingConditions.Day;
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0xc82e899au)]
 	public string? GBufferServerAddress { get; set; } = default;
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0xbfdaf342u)]
 	public uint GBufferServerPort { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4b9d00dau)]
+	[DDLRegistration(0x7e65d59fu)]
 	public string? LogUrl { get; set; } = default;
 
 	public static LightGridCaptureInfo Create(DDLObject ddl) => new(ddl);

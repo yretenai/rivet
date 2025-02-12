@@ -19,10 +19,10 @@ public class MayaNameTrackTags : DDLObjectType, IDDLObjectType<MayaNameTrackTags
 		TrackTagsDef = ddl.GetStrings(0x62710a73u);
 	}
 
-	[DDLRegistration(0x2d1628f0u, description: "maya name used in name spaces.")]
+	[DDLRegistration(0xae269cf2u, description: "maya name used in name spaces.")]
 	public string? MayaName { get; set; } = default;
 
-	[DDLRegistration(0x2d1628f0u, description: "track tags for the maya name.")]
+	[DDLRegistration(0x62710a73u, description: "track tags for the maya name.")]
 	public List<string?> TrackTagsDef { get; set; } = [];
 
 	public static MayaNameTrackTags Create(DDLObject ddl) => new(ddl);

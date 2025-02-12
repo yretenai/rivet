@@ -18,7 +18,7 @@ public class POITypeMission : POIInstanceDataBase, IDDLObjectType<POITypeMission
 		MissionName = ddl.GetString(0xa5c30e60) ?? MissionName;
 	}
 
-	[DDLRegistration(0x369e8bf9u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
 	public new static POITypeMission Create(DDLObject ddl) => new(ddl);

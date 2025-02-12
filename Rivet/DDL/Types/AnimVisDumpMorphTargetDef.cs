@@ -19,10 +19,10 @@ public class AnimVisDumpMorphTargetDef : DDLObjectType, IDDLObjectType<AnimVisDu
 		Weights = ddl.GetValues<float>(0x1b381060u);
 	}
 
-	[DDLRegistration(0x80cafb0eu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x80cafb0eu)]
+	[DDLRegistration(0x1b381060u)]
 	public List<float> Weights { get; set; } = [];
 
 	public static AnimVisDumpMorphTargetDef Create(DDLObject ddl) => new(ddl);

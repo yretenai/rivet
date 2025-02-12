@@ -18,7 +18,7 @@ public class MasterDebugOutfittingConfig : ConfigBase, IDDLObjectType<MasterDebu
 		Lists = ddl.GetObjects<DebugOutfittingList>(0x11755364u);
 	}
 
-	[DDLRegistration(0xbecff62au)]
+	[DDLRegistration(0x11755364u)]
 	public List<DebugOutfittingList?> Lists { get; set; } = [];
 
 	public new static MasterDebugOutfittingConfig Create(DDLObject ddl) => new(ddl);

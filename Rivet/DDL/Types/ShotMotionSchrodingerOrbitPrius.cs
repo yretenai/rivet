@@ -25,28 +25,28 @@ public class ShotMotionSchrodingerOrbitPrius : ShotMotionBasePrius, IDDLObjectTy
 		DebugDraw = ddl.GetValue<bool>(0x6020521bu, DebugDraw);
 	}
 
-	[DDLRegistration(0x3d529b25u, "Rotation Angle Min")]
+	[DDLRegistration(0x66ff5d9fu, "Rotation Angle Min")]
 	public float RotationAngleMin { get; set; } = 15.00f;
 
-	[DDLRegistration(0x3d529b25u, "Rotation Angle Max")]
+	[DDLRegistration(0x5af262c6u, "Rotation Angle Max")]
 	public float RotationAngleMax { get; set; } = 135.00f;
 
-	[DDLRegistration(0x3d529b25u, "Move Speed Min")]
+	[DDLRegistration(0xcc30606fu, "Move Speed Min")]
 	public float MoveSpeedMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3d529b25u, "Move Speed Max")]
+	[DDLRegistration(0xf03d5f36u, "Move Speed Max")]
 	public float MoveSpeedMax { get; set; } = 3.00f;
 
-	[DDLRegistration(0x3d529b25u, "Max Per Frame Rotation")]
+	[DDLRegistration(0xea88f183u, "Max Per Frame Rotation")]
 	public float MaxPerFrameRotation { get; set; } = 10.00f;
 
-	[DDLRegistration(0x3d529b25u, "Nom Nom Anim")]
+	[DDLRegistration(0x554fedbdu, "Nom Nom Anim")]
 	public string? NomNomAnim { get; set; } = "Melee_Attack";
 
-	[DDLRegistration(0x3d529b25u, "Orbit Time")]
+	[DDLRegistration(0xd839fe0cu, "Orbit Time")]
 	public float OrbitTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x3d529b25u, "Debug Draw")]
+	[DDLRegistration(0x6020521bu, "Debug Draw")]
 	public bool DebugDraw { get; set; } = false;
 
 	public new static ShotMotionSchrodingerOrbitPrius Create(DDLObject ddl) => new(ddl);

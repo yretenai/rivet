@@ -19,10 +19,10 @@ public class AdditionalHibernateZoneData : RegionGameDataBase, IDDLObjectType<Ad
 		ExcludedRegions = ddl.GetValues<RivetAssetId>(0x074cbd68u);
 	}
 
-	[DDLRegistration(0x902d2f99u, description: "Additional regions to pull hibernate instances from.")]
+	[DDLRegistration(0xa38d1acbu, description: "Additional regions to pull hibernate instances from.")]
 	public List<RivetAssetId> Regions { get; set; } = [];
 
-	[DDLRegistration(0x902d2f99u, description: "Regions exclude from the above list (used it a container region is specified).")]
+	[DDLRegistration(0x074cbd68u, description: "Regions exclude from the above list (used it a container region is specified).")]
 	public List<RivetAssetId> ExcludedRegions { get; set; } = [];
 
 	public new static AdditionalHibernateZoneData Create(DDLObject ddl) => new(ddl);

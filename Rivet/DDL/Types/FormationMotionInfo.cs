@@ -19,10 +19,10 @@ public class FormationMotionInfo : DDLObjectType, IDDLObjectType<FormationMotion
 		MotionConfig = ddl.GetValue<RivetAssetId>(0x724eedacu, MotionConfig);
 	}
 
-	[DDLRegistration(0xb8e3070eu)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0xb8e3070eu)]
+	[DDLRegistration(0x724eedacu)]
 	public RivetAssetId MotionConfig { get; set; } = default;
 
 	public static FormationMotionInfo Create(DDLObject ddl) => new(ddl);

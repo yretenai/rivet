@@ -19,10 +19,10 @@ public class LookRandomizerLookData : DDLObjectType, IDDLObjectType<LookRandomiz
 		Weight = ddl.GetValue<float>(0x39b51b26u, Weight);
 	}
 
-	[DDLRegistration(0xc6ae28dcu)]
+	[DDLRegistration(0x1baa14b2u)]
 	public string? Look { get; set; } = default;
 
-	[DDLRegistration(0xc6ae28dcu, description: "Chance (1.0=100%) that this look will be enabled")]
+	[DDLRegistration(0x39b51b26u, description: "Chance (1.0=100%) that this look will be enabled")]
 	public float Weight { get; set; } = 1.00f;
 
 	public static LookRandomizerLookData Create(DDLObject ddl) => new(ddl);

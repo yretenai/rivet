@@ -19,10 +19,10 @@ public class BotMovementEventsPrius : DDLObjectType, IDDLObjectType<BotMovementE
 		DurationThreshold = ddl.GetValue<float>(0xd62465fau, DurationThreshold);
 	}
 
-	[DDLRegistration(0xf0aa4b4bu, description: "Average velocity over this value qualifies as moving")]
+	[DDLRegistration(0x236125e0u, description: "Average velocity over this value qualifies as moving")]
 	public float MovementSpeedThreshold { get; set; } = 0.50f;
 
-	[DDLRegistration(0xf0aa4b4bu, description: "How long we must be above/below threshold before sending Idle/Move event")]
+	[DDLRegistration(0xd62465fau, description: "How long we must be above/below threshold before sending Idle/Move event")]
 	public float DurationThreshold { get; set; } = 0.50f;
 
 	public static BotMovementEventsPrius Create(DDLObject ddl) => new(ddl);

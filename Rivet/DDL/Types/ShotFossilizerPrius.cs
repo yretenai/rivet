@@ -19,10 +19,10 @@ public class ShotFossilizerPrius : BasicBulletPrius, IDDLObjectType<ShotFossiliz
 		HoleTrackerPrius = ddl.GetObject<FossilizeHoleTrackerPrius>(0xb1d98227u);
 	}
 
-	[DDLRegistration(0x29f4f88au, description: "How much duration to add to the status effect")]
+	[DDLRegistration(0x51e985cau, description: "How much duration to add to the status effect")]
 	public float StatusDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x29f4f88au)]
+	[DDLRegistration(0xb1d98227u)]
 	public FossilizeHoleTrackerPrius? HoleTrackerPrius { get; set; } = default;
 
 	public new static ShotFossilizerPrius Create(DDLObject ddl) => new(ddl);

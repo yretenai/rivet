@@ -19,10 +19,10 @@ public class SetVisibilityInput : DDLObjectType, IDDLObjectType<SetVisibilityInp
 		IsViewerHidden = ddl.GetValue<bool>(0x204afcccu, IsViewerHidden);
 	}
 
-	[DDLRegistration(0xeff0e0b0u)]
+	[DDLRegistration(0x244cd9c6u)]
 	public bool IsPageVisible { get; set; } = false;
 
-	[DDLRegistration(0xeff0e0b0u)]
+	[DDLRegistration(0x204afcccu)]
 	public bool IsViewerHidden { get; set; } = false;
 
 	public static SetVisibilityInput Create(DDLObject ddl) => new(ddl);

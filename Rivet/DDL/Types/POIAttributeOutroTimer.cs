@@ -18,7 +18,7 @@ public class POIAttributeOutroTimer : POIAttributeOutroBase, IDDLObjectType<POIA
 		OutroTime = ddl.GetValue<float>(0xa8d30a2au, OutroTime);
 	}
 
-	[DDLRegistration(0xe0dfed1eu)]
+	[DDLRegistration(0xa8d30a2au)]
 	public float OutroTime { get; set; } = 2.00f;
 
 	public new static POIAttributeOutroTimer Create(DDLObject ddl) => new(ddl);

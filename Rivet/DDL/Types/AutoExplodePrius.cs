@@ -25,28 +25,28 @@ public class AutoExplodePrius : DDLObjectType, IDDLObjectType<AutoExplodePrius> 
 		LineOfSight = ddl.GetValue<bool>(0x7f6a52f1u, LineOfSight);
 	}
 
-	[DDLRegistration(0x7e52c1a1u)]
+	[DDLRegistration(0xabc94c5au)]
 	public float Delay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7e52c1a1u)]
+	[DDLRegistration(0xb0d93e25u)]
 	public float Amount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7e52c1a1u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7e52c1a1u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public DamageTypesGame Type { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x7e52c1a1u)]
+	[DDLRegistration(0x2554a262u)]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x7e52c1a1u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7e52c1a1u)]
+	[DDLRegistration(0x1ed06d86u)]
 	public bool DestroyOnExplode { get; set; } = true;
 
-	[DDLRegistration(0x7e52c1a1u)]
+	[DDLRegistration(0x7f6a52f1u)]
 	public bool LineOfSight { get; set; } = false;
 
 	public static AutoExplodePrius Create(DDLObject ddl) => new(ddl);

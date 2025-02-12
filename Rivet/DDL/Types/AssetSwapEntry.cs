@@ -19,10 +19,10 @@ public class AssetSwapEntry : DDLObjectType, IDDLObjectType<AssetSwapEntry> {
 		AssetPath = ddl.GetValue<RivetAssetId>(0x0efa614bu, AssetPath);
 	}
 
-	[DDLRegistration(0xff915029u, description: "Platform where a different asset should be shown in place of this one")]
+	[DDLRegistration(0xc3536dbbu, description: "Platform where a different asset should be shown in place of this one")]
 	public x104b06bd Platform { get; set; } = x104b06bd.PS5;
 
-	[DDLRegistration(0xff915029u, description: "Path to an asset of the same type to exchange for this asset on the specified platform")]
+	[DDLRegistration(0x0efa614bu, description: "Path to an asset of the same type to exchange for this asset on the specified platform")]
 	public RivetAssetId AssetPath { get; set; } = default;
 
 	public static AssetSwapEntry Create(DDLObject ddl) => new(ddl);

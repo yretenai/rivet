@@ -23,22 +23,22 @@ public class ModifyRequest : DDLObjectType, IDDLObjectType<ModifyRequest> {
 		Source = ddl.GetString(0x61f23114) ?? Source;
 	}
 
-	[DDLRegistration(0x1bcb3ca6u, description: "Session ID of the editor that is making this modification.")]
+	[DDLRegistration(0xbbad2afau, description: "Session ID of the editor that is making this modification.")]
 	public RivetAssetId SessionId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x1bcb3ca6u, description: "True if the change can be undone/redone.")]
+	[DDLRegistration(0x37817015u, description: "True if the change can be undone/redone.")]
 	public bool Replayable { get; set; } = true;
 
-	[DDLRegistration(0x1bcb3ca6u, description: "Batch number and description, leave batch _id as 0 if you do not wish to make a batch.")]
+	[DDLRegistration(0xe1589e15u, description: "Batch number and description, leave batch _id as 0 if you do not wish to make a batch.")]
 	public ChangeBatch? Batch { get; set; } = default;
 
-	[DDLRegistration(0x1bcb3ca6u, description: "Partial JSON object describing the changes that you wish to make; use NULL for fields that you wish to set back to their default values.")]
+	[DDLRegistration(0x84761034u, description: "Partial JSON object describing the changes that you wish to make; use NULL for fields that you wish to set back to their default values.")]
 	public string? MergeJson { get; set; } = default;
 
-	[DDLRegistration(0x1bcb3ca6u, description: "[optional] Any other data that the client wants to attach to this change, which will be present when polling the changelog later.")]
+	[DDLRegistration(0xbc38883au, description: "[optional] Any other data that the client wants to attach to this change, which will be present when polling the changelog later.")]
 	public string? ClientData { get; set; } = default;
 
-	[DDLRegistration(0x1bcb3ca6u, description: "Part of the UI that generated this modification request; very useful for debugging.")]
+	[DDLRegistration(0x61f23114u, description: "Part of the UI that generated this modification request; very useful for debugging.")]
 	public string? Source { get; set; } = "";
 
 	public static ModifyRequest Create(DDLObject ddl) => new(ddl);

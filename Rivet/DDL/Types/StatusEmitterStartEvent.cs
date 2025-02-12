@@ -19,10 +19,10 @@ public class StatusEmitterStartEvent : EventBase, IDDLObjectType<StatusEmitterSt
 		EmitterName = ddl.GetString(0x27422a42) ?? EmitterName;
 	}
 
-	[DDLRegistration(0x96af988eu)]
+	[DDLRegistration(0xf5bf036du)]
 	public string? EmitterType { get; set; } = default;
 
-	[DDLRegistration(0x96af988eu)]
+	[DDLRegistration(0x27422a42u)]
 	public string? EmitterName { get; set; } = default;
 
 	public new static StatusEmitterStartEvent Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class HeroMoverConfig : MoverConfig, IDDLObjectType<HeroMoverConfig> {
 		FootIK = ddl.GetObject<MoverIKData>(0xba7da892u);
 	}
 
-	[DDLRegistration(0xee0ed482u, "Crouch Body Size")]
+	[DDLRegistration(0x190d44aeu, "Crouch Body Size")]
 	public MoverBodySize? BodySizeCrouch { get; set; } = default;
 
-	[DDLRegistration(0xee0ed482u, "Ledge Body Size")]
+	[DDLRegistration(0xb32e1d0eu, "Ledge Body Size")]
 	public MoverBodySize? BodySizeLedge { get; set; } = default;
 
-	[DDLRegistration(0xee0ed482u, "Slide Body Size")]
+	[DDLRegistration(0x0f639247u, "Slide Body Size")]
 	public MoverBodySize? BodySizeSlide { get; set; } = default;
 
-	[DDLRegistration(0xee0ed482u, "Swim Body Size")]
+	[DDLRegistration(0x0ac48719u, "Swim Body Size")]
 	public MoverBodySize? BodySizeSwim { get; set; } = default;
 
-	[DDLRegistration(0xee0ed482u, "Fast Travel Body Size")]
+	[DDLRegistration(0x49a289a4u, "Fast Travel Body Size")]
 	public MoverBodySize? BodySizeFastTravel { get; set; } = default;
 
-	[DDLRegistration(0xee0ed482u, "Foot IK")]
+	[DDLRegistration(0xba7da892u, "Foot IK")]
 	public MoverIKData? FootIK { get; set; } = default;
 
 	public new static HeroMoverConfig Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ScreenEffectListConfig : ConfigBase, IDDLObjectType<ScreenEffectLis
 		ScreenEffectList = ddl.GetObjects<ScreenEffectEntry>(0x7dbc6d12u);
 	}
 
-	[DDLRegistration(0x46d591a4u)]
+	[DDLRegistration(0x7dbc6d12u)]
 	public List<ScreenEffectEntry?> ScreenEffectList { get; set; } = [];
 
 	public new static ScreenEffectListConfig Create(DDLObject ddl) => new(ddl);

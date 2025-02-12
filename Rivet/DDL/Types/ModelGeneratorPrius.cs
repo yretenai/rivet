@@ -18,7 +18,7 @@ public class ModelGeneratorPrius : DDLObjectType, IDDLObjectType<ModelGeneratorP
 		ModelGenerator = ddl.GetObjects<ModelGeneratorItem>(0xfe1d1cf4u);
 	}
 
-	[DDLRegistration(0x1cdd18ecu)]
+	[DDLRegistration(0xfe1d1cf4u)]
 	public List<ModelGeneratorItem?> ModelGenerator { get; set; } = [];
 
 	public static ModelGeneratorPrius Create(DDLObject ddl) => new(ddl);

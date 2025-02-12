@@ -20,13 +20,13 @@ public class GridItemPrius : ItemPrius, IDDLObjectType<GridItemPrius> {
 		Rotated = ddl.GetValue<byte>(0x90b6ec8du, Rotated);
 	}
 
-	[DDLRegistration(0x6ac1c47bu)]
+	[DDLRegistration(0xf88aee81u)]
 	public ushort XPos { get; set; } = 0x0000;
 
-	[DDLRegistration(0x6ac1c47bu)]
+	[DDLRegistration(0x403689e4u)]
 	public ushort YPos { get; set; } = 0x0000;
 
-	[DDLRegistration(0x6ac1c47bu)]
+	[DDLRegistration(0x90b6ec8du)]
 	public byte Rotated { get; set; } = 0x00;
 
 	public new static GridItemPrius Create(DDLObject ddl) => new(ddl);

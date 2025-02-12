@@ -20,13 +20,13 @@ public class HeroMeleeBotEvent : EventBase, IDDLObjectType<HeroMeleeBotEvent> {
 		VictimCharacterType = ddl.GetString(0x05cb254e) ?? VictimCharacterType;
 	}
 
-	[DDLRegistration(0xa9aa4d80u, description: "Hit material")]
+	[DDLRegistration(0x692bbe4cu, description: "Hit material")]
 	public x10b3c4cf VictimMaterial { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0xa9aa4d80u)]
+	[DDLRegistration(0x4d871e29u)]
 	public string? VictimSize { get; set; } = default;
 
-	[DDLRegistration(0xa9aa4d80u)]
+	[DDLRegistration(0x05cb254eu)]
 	public string? VictimCharacterType { get; set; } = default;
 
 	public new static HeroMeleeBotEvent Create(DDLObject ddl) => new(ddl);

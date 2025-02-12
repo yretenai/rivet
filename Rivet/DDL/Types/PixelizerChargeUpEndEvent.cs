@@ -18,7 +18,7 @@ public class PixelizerChargeUpEndEvent : EventBase, IDDLObjectType<PixelizerChar
 		VersionIndex = ddl.GetValue<uint>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0x86e9b397u)]
+	[DDLRegistration(0x6e091c9au)]
 	public uint VersionIndex { get; set; } = 0x00000000;
 
 	public new static PixelizerChargeUpEndEvent Create(DDLObject ddl) => new(ddl);

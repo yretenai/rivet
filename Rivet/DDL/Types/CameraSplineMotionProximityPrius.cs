@@ -23,22 +23,22 @@ public class CameraSplineMotionProximityPrius : CameraSplineMotionBasePrius, IDD
 		OffsetSpeed = ddl.GetValue<float>(0xb5d092d9u, OffsetSpeed);
 	}
 
-	[DDLRegistration(0xe078469du, "Proximity Target")]
+	[DDLRegistration(0x8c0b1736u, "Proximity Target")]
 	public RivetAssetId ProximityTarget { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xe078469du, "Offset Distance")]
+	[DDLRegistration(0x4d543176u, "Offset Distance")]
 	public float OffsetDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe078469du, "Offset Path")]
+	[DDLRegistration(0x2264d1ddu, "Offset Path")]
 	public RivetAssetId OffsetPath { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xe078469du, "Offset Accel")]
+	[DDLRegistration(0xe70a5acau, "Offset Accel")]
 	public float OffsetAccel { get; set; } = 10.00f;
 
-	[DDLRegistration(0xe078469du, "Offset Decel")]
+	[DDLRegistration(0x0a818a66u, "Offset Decel")]
 	public float OffsetDecel { get; set; } = 5.00f;
 
-	[DDLRegistration(0xe078469du, "Offset Speed")]
+	[DDLRegistration(0xb5d092d9u, "Offset Speed")]
 	public float OffsetSpeed { get; set; } = 5.00f;
 
 	public new static CameraSplineMotionProximityPrius Create(DDLObject ddl) => new(ddl);

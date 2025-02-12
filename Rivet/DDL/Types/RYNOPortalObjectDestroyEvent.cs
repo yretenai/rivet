@@ -19,10 +19,10 @@ public class RYNOPortalObjectDestroyEvent : EventBase, IDDLObjectType<RYNOPortal
 		VersionIndex = ddl.GetValue<byte>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0xd5faa457u)]
+	[DDLRegistration(0x52a18d8cu)]
 	public xbf5ff3c6 PortalSize { get; set; } = xbf5ff3c6.Small;
 
-	[DDLRegistration(0xd5faa457u)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
 	public new static RYNOPortalObjectDestroyEvent Create(DDLObject ddl) => new(ddl);

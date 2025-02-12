@@ -21,16 +21,16 @@ public class AuthorityChangeMessage : DDLObjectType, IDDLObjectType<AuthorityCha
 		ChangeType = ddl.GetEnum<xabe03d0c>(0x6b94ddc9u, xabe03d0cValues.Lookup);
 	}
 
-	[DDLRegistration(0x2909f3c7u)]
+	[DDLRegistration(0x637390afu)]
 	public ushort ObjectId { get; set; } = 0xffff;
 
-	[DDLRegistration(0x2909f3c7u)]
+	[DDLRegistration(0xc804f5f0u)]
 	public sbyte Authority { get; set; } = -1;
 
-	[DDLRegistration(0x2909f3c7u)]
+	[DDLRegistration(0xc9120f11u)]
 	public AuthorityType AuthorityType { get; set; } = AuthorityType.Invalid;
 
-	[DDLRegistration(0x2909f3c7u)]
+	[DDLRegistration(0x6b94ddc9u)]
 	public xabe03d0c ChangeType { get; set; } = xabe03d0c.None;
 
 	public static AuthorityChangeMessage Create(DDLObject ddl) => new(ddl);

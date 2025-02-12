@@ -19,10 +19,10 @@ public class MeleeWeaponSkinData : DDLObjectType, IDDLObjectType<MeleeWeaponSkin
 		SkinIdValue = ddl.GetValue<float>(0xc55f53ffu, SkinIdValue);
 	}
 
-	[DDLRegistration(0x195986a0u, description: "The enum value to identify this melee weapon skin.")]
+	[DDLRegistration(0x301c5cc0u, description: "The enum value to identify this melee weapon skin.")]
 	public x387422ea SkinType { get; set; } = x387422ea.Default;
 
-	[DDLRegistration(0x195986a0u, description: "The ID value to apply tot he Primary, Secondary, Emissive, and Spec material constants.")]
+	[DDLRegistration(0xc55f53ffu, description: "The ID value to apply tot he Primary, Secondary, Emissive, and Spec material constants.")]
 	public float SkinIdValue { get; set; } = 0.00f;
 
 	public static MeleeWeaponSkinData Create(DDLObject ddl) => new(ddl);

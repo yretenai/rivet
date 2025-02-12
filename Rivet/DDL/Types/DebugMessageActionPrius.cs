@@ -25,28 +25,28 @@ public class DebugMessageActionPrius : DDLObjectType, IDDLObjectType<DebugMessag
 		FormatAsInt = ddl.GetValue<bool>(0x995b8ec6u, FormatAsInt);
 	}
 
-	[DDLRegistration(0xdbbb1a0au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0xdbbb1a0au, "Debug Message", "Message text - values from input variables can be inserted using '{variable name}', for example, {String1} (case-sensitive)")]
+	[DDLRegistration(0x723bca34u, "Debug Message", "Message text - values from input variables can be inserted using '{variable name}', for example, {String1} (case-sensitive)")]
 	public string? MessageText { get; set; } = default;
 
-	[DDLRegistration(0xdbbb1a0au, description: "How long the message will persist on screen in seconds.")]
+	[DDLRegistration(0x7c5e3db0u, description: "How long the message will persist on screen in seconds.")]
 	public float Duration { get; set; } = 6.00f;
 
-	[DDLRegistration(0xdbbb1a0au, "Clear all prototype messages?", "Whether to clear all other debug messages before displaying this one.")]
+	[DDLRegistration(0x320b2879u, "Clear all prototype messages?", "Whether to clear all other debug messages before displaying this one.")]
 	public bool ClearAllMsgs { get; set; } = false;
 
-	[DDLRegistration(0xdbbb1a0au, description: "X on screen. Overlapping messages will create a new queue.")]
+	[DDLRegistration(0x58c2c0deu, description: "X on screen. Overlapping messages will create a new queue.")]
 	public int PosX { get; set; } = 715;
 
-	[DDLRegistration(0xdbbb1a0au, description: "Y on screen. Overlapping messages will create a new queue.")]
+	[DDLRegistration(0x2fc5f048u, description: "Y on screen. Overlapping messages will create a new queue.")]
 	public int PosY { get; set; } = 60;
 
-	[DDLRegistration(0xdbbb1a0au, description: "Message Color")]
+	[DDLRegistration(0x26ccd3dcu, description: "Message Color")]
 	public x3604158a ColorPick { get; set; } = x3604158a.White;
 
-	[DDLRegistration(0xdbbb1a0au, "Format As Int")]
+	[DDLRegistration(0x995b8ec6u, "Format As Int")]
 	public bool FormatAsInt { get; set; } = false;
 
 	public static DebugMessageActionPrius Create(DDLObject ddl) => new(ddl);

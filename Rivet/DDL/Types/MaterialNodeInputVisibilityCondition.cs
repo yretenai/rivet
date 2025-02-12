@@ -19,10 +19,10 @@ public class MaterialNodeInputVisibilityCondition : DDLObjectType, IDDLObjectTyp
 		Values = ddl.GetStrings(0x04df0281u);
 	}
 
-	[DDLRegistration(0x30c0ef01u)]
+	[DDLRegistration(0x93971d83u)]
 	public string? InternalName { get; set; } = default;
 
-	[DDLRegistration(0x30c0ef01u)]
+	[DDLRegistration(0x04df0281u)]
 	public List<string?> Values { get; set; } = [];
 
 	public static MaterialNodeInputVisibilityCondition Create(DDLObject ddl) => new(ddl);

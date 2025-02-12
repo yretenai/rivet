@@ -19,10 +19,10 @@ public class SkinItemSwitchGroupListElement : DDLObjectType, IDDLObjectType<Skin
 		SwitchGroup = ddl.GetObject<SkinItemSwitchGroup>(0x790ea522u);
 	}
 
-	[DDLRegistration(0x3e68cb5du, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0x3e68cb5du, "Switch Group", "Switch group parameters")]
+	[DDLRegistration(0x790ea522u, "Switch Group", "Switch group parameters")]
 	public SkinItemSwitchGroup? SwitchGroup { get; set; } = default;
 
 	public static SkinItemSwitchGroupListElement Create(DDLObject ddl) => new(ddl);

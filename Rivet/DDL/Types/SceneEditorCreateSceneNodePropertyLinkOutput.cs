@@ -18,7 +18,7 @@ public class SceneEditorCreateSceneNodePropertyLinkOutput : DDLObjectType, IDDLO
 		NumVarNodesCreated = ddl.GetValue<int>(0xe80c6110u, NumVarNodesCreated);
 	}
 
-	[DDLRegistration(0x95b13e9fu)]
+	[DDLRegistration(0xe80c6110u)]
 	public int NumVarNodesCreated { get; set; } = 0;
 
 	public static SceneEditorCreateSceneNodePropertyLinkOutput Create(DDLObject ddl) => new(ddl);

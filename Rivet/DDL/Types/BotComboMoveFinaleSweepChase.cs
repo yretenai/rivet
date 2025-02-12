@@ -24,25 +24,25 @@ public class BotComboMoveFinaleSweepChase : BotComboMoveBase, IDDLObjectType<Bot
 		TurnRateMax = ddl.GetValue<float>(0x8ec60e64u, TurnRateMax);
 	}
 
-	[DDLRegistration(0x0b9f912bu)]
+	[DDLRegistration(0x10f54dceu)]
 	public string? AnimDriver { get; set; } = default;
 
-	[DDLRegistration(0x0b9f912bu)]
+	[DDLRegistration(0x451dcd63u)]
 	public RivetAssetId PlaneActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x0b9f912bu)]
+	[DDLRegistration(0xcc967d8au)]
 	public RivetAssetId PlaneSpawnPos { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0b9f912bu)]
+	[DDLRegistration(0xcf9d6112u)]
 	public RivetAssetId PlaneStartPos { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0b9f912bu)]
+	[DDLRegistration(0x0e5359efu)]
 	public RivetAssetId PlaneEndPos { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0b9f912bu)]
+	[DDLRegistration(0xb2cb313du)]
 	public float TurnRateMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0b9f912bu)]
+	[DDLRegistration(0x8ec60e64u)]
 	public float TurnRateMax { get; set; } = 0.00f;
 
 	public new static BotComboMoveFinaleSweepChase Create(DDLObject ddl) => new(ddl);

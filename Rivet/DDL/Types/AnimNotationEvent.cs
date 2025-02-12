@@ -18,7 +18,7 @@ public class AnimNotationEvent : EventBase, IDDLObjectType<AnimNotationEvent> {
 		Comment = ddl.GetString(0x959e3154) ?? Comment;
 	}
 
-	[DDLRegistration(0x1ef61768u)]
+	[DDLRegistration(0x959e3154u)]
 	public string? Comment { get; set; } = default;
 
 	public new static AnimNotationEvent Create(DDLObject ddl) => new(ddl);

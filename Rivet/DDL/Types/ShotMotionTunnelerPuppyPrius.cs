@@ -21,16 +21,16 @@ public class ShotMotionTunnelerPuppyPrius : BasicShotMotionPrius, IDDLObjectType
 		OnLeft = ddl.GetValue<bool>(0xab0b0c2du, OnLeft);
 	}
 
-	[DDLRegistration(0xfde1e103u)]
+	[DDLRegistration(0x0052cadbu)]
 	public uint ParentComponentHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfde1e103u)]
+	[DDLRegistration(0xf3375dedu)]
 	public float VerticalOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfde1e103u)]
+	[DDLRegistration(0xb25fc988u)]
 	public int HistoryOffset { get; set; } = 0;
 
-	[DDLRegistration(0xfde1e103u)]
+	[DDLRegistration(0xab0b0c2du)]
 	public bool OnLeft { get; set; } = false;
 
 	public new static ShotMotionTunnelerPuppyPrius Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class ShotSargassoCentipedeAODPrius : LobbedShotPrius, IDDLObjectType<Sho
 		ScaleUpTime = ddl.GetValue<float>(0xe5eab90bu, ScaleUpTime);
 	}
 
-	[DDLRegistration(0x57012c0bu, "AOD Actor")]
+	[DDLRegistration(0xe67e0136u, "AOD Actor")]
 	public RivetAssetId AODActor { get; set; } = default;
 
-	[DDLRegistration(0x57012c0bu)]
+	[DDLRegistration(0x9a51878fu)]
 	public SargassoCentipedeAODPrius? AOD { get; set; } = default;
 
-	[DDLRegistration(0x57012c0bu)]
+	[DDLRegistration(0x942d4960u)]
 	public float StartScale { get; set; } = 0.40f;
 
-	[DDLRegistration(0x57012c0bu)]
+	[DDLRegistration(0x68b6b2e3u)]
 	public float FinalScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x57012c0bu)]
+	[DDLRegistration(0xe5eab90bu)]
 	public float ScaleUpTime { get; set; } = 0.75f;
 
 	public new static ShotSargassoCentipedeAODPrius Create(DDLObject ddl) => new(ddl);

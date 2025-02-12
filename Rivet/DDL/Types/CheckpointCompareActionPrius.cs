@@ -20,13 +20,13 @@ public class CheckpointCompareActionPrius : DDLObjectType, IDDLObjectType<Checkp
 		CompareToInitialCheckPoint = ddl.GetValue<bool>(0x7e87bb04u, CompareToInitialCheckPoint);
 	}
 
-	[DDLRegistration(0xdf1d5491u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Checkpoint;
 
-	[DDLRegistration(0xdf1d5491u)]
+	[DDLRegistration(0x71d061f1u)]
 	public string? CheckpointName { get; set; } = default;
 
-	[DDLRegistration(0xdf1d5491u, description: "If true, compare to initial checkpoint rather than current checkpoint")]
+	[DDLRegistration(0x7e87bb04u, description: "If true, compare to initial checkpoint rather than current checkpoint")]
 	public bool CompareToInitialCheckPoint { get; set; } = false;
 
 	public static CheckpointCompareActionPrius Create(DDLObject ddl) => new(ddl);

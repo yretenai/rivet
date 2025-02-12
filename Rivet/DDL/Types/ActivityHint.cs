@@ -20,13 +20,13 @@ public class ActivityHint : DDLObjectType, IDDLObjectType<ActivityHint> {
 		MediaFile = ddl.GetValue<RivetAssetId>(0xa86a6d25u, MediaFile);
 	}
 
-	[DDLRegistration(0x68281395u, description: "Loctag for the name to show on the hint in the OS. Localized text can be at most 64 characters.")]
+	[DDLRegistration(0x2d78cbbdu, description: "Loctag for the name to show on the hint in the OS. Localized text can be at most 64 characters.")]
 	public string? NameTag { get; set; } = default;
 
-	[DDLRegistration(0x68281395u, description: "Loctag for the description show upon expanding the hint in the OS. Localized text can be at most 400 characters.")]
+	[DDLRegistration(0xe822a0dau, description: "Loctag for the description show upon expanding the hint in the OS. Localized text can be at most 400 characters.")]
 	public string? DescTag { get; set; } = default;
 
-	[DDLRegistration(0x68281395u, description: "Path of the video or image file to display with this hint. Videos must be either .mp4 or .webm at 2160p, 1080p, or 720p. Images must be either .png or .jpg at 2160p or 1080p.")]
+	[DDLRegistration(0xa86a6d25u, description: "Path of the video or image file to display with this hint. Videos must be either .mp4 or .webm at 2160p, 1080p, or 720p. Images must be either .png or .jpg at 2160p or 1080p.")]
 	public RivetAssetId MediaFile { get; set; } = default;
 
 	public static ActivityHint Create(DDLObject ddl) => new(ddl);

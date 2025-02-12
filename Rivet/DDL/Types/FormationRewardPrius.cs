@@ -20,13 +20,13 @@ public class FormationRewardPrius : DDLObjectType, IDDLObjectType<FormationRewar
 		AmmoPickup = ddl.GetValue<RivetAssetId>(0x6a552bfcu, AmmoPickup);
 	}
 
-	[DDLRegistration(0x85941768u)]
+	[DDLRegistration(0xbdbbc9a9u)]
 	public int NumRewards { get; set; } = 1;
 
-	[DDLRegistration(0x85941768u)]
+	[DDLRegistration(0x5447c31du)]
 	public RivetAssetId HealthPickup { get; set; } = default;
 
-	[DDLRegistration(0x85941768u)]
+	[DDLRegistration(0x6a552bfcu)]
 	public RivetAssetId AmmoPickup { get; set; } = default;
 
 	public static FormationRewardPrius Create(DDLObject ddl) => new(ddl);

@@ -31,46 +31,46 @@ public class VanityCineHelmetTransData : DDLObjectType, IDDLObjectType<VanityCin
 		SwapOnTime = ddl.GetValue<float>(0x77c74f34u, SwapOnTime);
 	}
 
-	[DDLRegistration(0xb572d2beu, "Helmet Dissolve Pre Material")]
+	[DDLRegistration(0x86020212u, "Helmet Dissolve Pre Material")]
 	public RivetAssetId HelmetDissolvePreMat { get; set; } = default;
 
-	[DDLRegistration(0xb572d2beu, "Helmet Dissolve Post Material")]
+	[DDLRegistration(0x7f7e5bb3u, "Helmet Dissolve Post Material")]
 	public RivetAssetId HelmetDissolvePostMat { get; set; } = default;
 
-	[DDLRegistration(0xb572d2beu, "Helmet Grow Anim")]
+	[DDLRegistration(0x5943773au, "Helmet Grow Anim")]
 	public string? GrowAnimName { get; set; } = "Helmet_Dissolve_On";
 
-	[DDLRegistration(0xb572d2beu, "Helmet Shrink Anim")]
+	[DDLRegistration(0x1c5f9d23u, "Helmet Shrink Anim")]
 	public string? ShrinkAnimName { get; set; } = "Helmet_Dissolve_Off";
 
-	[DDLRegistration(0xb572d2beu, "Dissolve Off Duration")]
+	[DDLRegistration(0xa79c9fb3u, "Dissolve Off Duration")]
 	public float DissolveOffDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb572d2beu, "Dissolve Off Start Time")]
+	[DDLRegistration(0x95893d33u, "Dissolve Off Start Time")]
 	public float DissolveOffStartTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb572d2beu, "Helmet Grow Duration")]
+	[DDLRegistration(0x910fd2c9u, "Helmet Grow Duration")]
 	public float ScaleOffDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb572d2beu, "Helmet Grow Start Time")]
+	[DDLRegistration(0x256f365cu, "Helmet Grow Start Time")]
 	public float ScaleOffStartTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb572d2beu, "Defaul Head Swap Start Time")]
+	[DDLRegistration(0xe638cd0eu, "Defaul Head Swap Start Time")]
 	public float SwapOffTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0xb572d2beu, "Dissolve On Duration")]
+	[DDLRegistration(0x9d07662bu, "Dissolve On Duration")]
 	public float DissolveOnDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb572d2beu, "Dissolve On Start Time")]
+	[DDLRegistration(0x6b67bdbcu, "Dissolve On Start Time")]
 	public float DissolveOnStartTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb572d2beu, "Helmet Shrink Duration")]
+	[DDLRegistration(0x0d00ea81u, "Helmet Shrink Duration")]
 	public float ScaleOnDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb572d2beu, "Helmet Shrink Start Time")]
+	[DDLRegistration(0x5df4f0c6u, "Helmet Shrink Start Time")]
 	public float ScaleOnStartTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb572d2beu, "Swap Head Back Start Time")]
+	[DDLRegistration(0x77c74f34u, "Swap Head Back Start Time")]
 	public float SwapOnTime { get; set; } = 2.00f;
 
 	public static VanityCineHelmetTransData Create(DDLObject ddl) => new(ddl);

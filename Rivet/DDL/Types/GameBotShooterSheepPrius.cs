@@ -19,10 +19,10 @@ public class GameBotShooterSheepPrius : GameBotShooterPrius, IDDLObjectType<Game
 		Horns = ddl.GetValue<RivetAssetId>(0x70713a94u, Horns);
 	}
 
-	[DDLRegistration(0x44ccdf52u, description: "Upgraded ally sheep (level 5 Sheepinator)")]
+	[DDLRegistration(0x9f0968b2u, description: "Upgraded ally sheep (level 5 Sheepinator)")]
 	public bool Upgraded { get; set; } = false;
 
-	[DDLRegistration(0x44ccdf52u)]
+	[DDLRegistration(0x70713a94u)]
 	public RivetAssetId Horns { get; set; } = default;
 
 	public new static GameBotShooterSheepPrius Create(DDLObject ddl) => new(ddl);

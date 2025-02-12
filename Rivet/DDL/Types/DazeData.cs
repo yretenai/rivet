@@ -19,10 +19,10 @@ public class DazeData : DDLObjectType, IDDLObjectType<DazeData> {
 		DamageMult = ddl.GetValue<float>(0x2cc08993u, DamageMult);
 	}
 
-	[DDLRegistration(0x31added2u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 5.00f;
 
-	[DDLRegistration(0x31added2u)]
+	[DDLRegistration(0x2cc08993u)]
 	public float DamageMult { get; set; } = 3.00f;
 
 	public static DazeData Create(DDLObject ddl) => new(ddl);

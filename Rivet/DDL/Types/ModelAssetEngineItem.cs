@@ -19,10 +19,10 @@ public class ModelAssetEngineItem : DDLObjectType, IDDLObjectType<ModelAssetEngi
 		ModelDef = ddl.GetObject<ModelDef>(0xd1bc6826u);
 	}
 
-	[DDLRegistration(0xa50b2434u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xa50b2434u)]
+	[DDLRegistration(0xd1bc6826u)]
 	public ModelDef? ModelDef { get; set; } = default;
 
 	public static ModelAssetEngineItem Create(DDLObject ddl) => new(ddl);

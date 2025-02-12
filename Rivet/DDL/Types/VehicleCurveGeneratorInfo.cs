@@ -27,34 +27,34 @@ public class VehicleCurveGeneratorInfo : DDLObjectType, IDDLObjectType<VehicleCu
 		BezierMergeDistances = ddl.GetObjects<VehicleMergeDistance>(0x3a65202eu);
 	}
 
-	[DDLRegistration(0xab328a16u, description: "How many points to include in the position history for each vehicle when regenerating the motion curve.")]
+	[DDLRegistration(0xbac5525bu, description: "How many points to include in the position history for each vehicle when regenerating the motion curve.")]
 	public ushort MaxPositionHistoryPoints { get; set; } = 0x0003;
 
-	[DDLRegistration(0xab328a16u, description: "Each segment of the position history must be at least this long.")]
+	[DDLRegistration(0x29e94ddeu, description: "Each segment of the position history must be at least this long.")]
 	public float PositionHistorySegmentLength { get; set; } = 1.00f;
 
-	[DDLRegistration(0xab328a16u, description: "When generating a new curve, how many future points should be generated from the current curve following the current actor position?")]
+	[DDLRegistration(0x31a0f338u, description: "When generating a new curve, how many future points should be generated from the current curve following the current actor position?")]
 	public ushort MaxBlendPoints { get; set; } = 0x0003;
 
-	[DDLRegistration(0xab328a16u, description: "Each blend segment must be this long. Will cause fewer blend points to be generated if the curve is regenerated when it is close to the next destination.")]
+	[DDLRegistration(0x9f770578u, description: "Each blend segment must be this long. Will cause fewer blend points to be generated if the curve is regenerated when it is close to the next destination.")]
 	public float BlendSegmentLength { get; set; } = 1.00f;
 
-	[DDLRegistration(0xab328a16u, description: "Max number of destination nodes to pick in advance when generating a new path. Higher values will result in longer curves.")]
+	[DDLRegistration(0x4213209du, description: "Max number of destination nodes to pick in advance when generating a new path. Higher values will result in longer curves.")]
 	public ushort MaxDestinationNodes { get; set; } = 0x0008;
 
-	[DDLRegistration(0xab328a16u, description: "Vehicles can pick new destinations and regenerate their paths when past this T value on their previous curve.")]
+	[DDLRegistration(0x7029e4e3u, description: "Vehicles can pick new destinations and regenerate their paths when past this T value on their previous curve.")]
 	public float CurveRegenMinT { get; set; } = 0.50f;
 
-	[DDLRegistration(0xab328a16u, description: "Number of bezier points to generate between one lane and the other while merging.")]
+	[DDLRegistration(0x68c523b5u, description: "Number of bezier points to generate between one lane and the other while merging.")]
 	public ushort MergeBezierPoints { get; set; } = 0x0008;
 
-	[DDLRegistration(0xab328a16u, description: "When constructing the lane merge intermediate bezier points (not the start or end point), project those points this amount of time ahead. A higher value means a sharper curve.")]
+	[DDLRegistration(0x307da7a9u, description: "When constructing the lane merge intermediate bezier points (not the start or end point), project those points this amount of time ahead. A higher value means a sharper curve.")]
 	public float MergeBezierSpeedCoeff { get; set; } = 0.25f;
 
-	[DDLRegistration(0xab328a16u, description: "Minimum distance that must exist between the end of the bezier curve and the merge destination.")]
+	[DDLRegistration(0xaa7a813cu, description: "Minimum distance that must exist between the end of the bezier curve and the merge destination.")]
 	public float MinPostMergeDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0xab328a16u)]
+	[DDLRegistration(0x3a65202eu)]
 	public List<VehicleMergeDistance?> BezierMergeDistances { get; set; } = [];
 
 	public static VehicleCurveGeneratorInfo Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ExitToFrontendActionPrius : DDLObjectType, IDDLObjectType<ExitToFro
 		Mode = ddl.GetEnum<x4dc5b7ae>(0xa75a871bu, x4dc5b7aeValues.Lookup);
 	}
 
-	[DDLRegistration(0xd9fee1a2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0xd9fee1a2u)]
+	[DDLRegistration(0xa75a871bu)]
 	public x4dc5b7ae Mode { get; set; } = x4dc5b7ae.ExitToPreviousFrontend;
 
 	public static ExitToFrontendActionPrius Create(DDLObject ddl) => new(ddl);

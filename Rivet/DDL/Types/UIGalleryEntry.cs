@@ -29,40 +29,40 @@ public class UIGalleryEntry : DDLObjectType, IDDLObjectType<UIGalleryEntry> {
 		Desc2Objective = ddl.GetString(0x2ec47728) ?? Desc2Objective;
 	}
 
-	[DDLRegistration(0x9009397cu, "Display Name", "Name loctag for this entry.")]
+	[DDLRegistration(0xeaf33243u, "Display Name", "Name loctag for this entry.")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x9009397cu, "Display Desc", "Desc loctag for this entry.")]
+	[DDLRegistration(0xbf65e011u, "Display Desc", "Desc loctag for this entry.")]
 	public string? DisplayDesc { get; set; } = default;
 
-	[DDLRegistration(0x9009397cu, "Display Icon", "Icon texture for this entry.")]
+	[DDLRegistration(0xd144659eu, "Display Icon", "Icon texture for this entry.")]
 	public RivetAssetId DisplayIcon { get; set; } = default;
 
-	[DDLRegistration(0x9009397cu, "Display Object", "3D model for this entry.")]
+	[DDLRegistration(0x1b10bb38u, "Display Object", "3D model for this entry.")]
 	public UIDisplayObjectType DisplayObject { get; set; } = UIDisplayObjectType.None;
 
-	[DDLRegistration(0x9009397cu, description: "Mision/objective pair must be active/complete.")]
+	[DDLRegistration(0x489fe4edu, description: "Mision/objective pair must be active/complete.")]
 	public string? MissionUnlock { get; set; } = default;
 
-	[DDLRegistration(0x9009397cu, description: "Mision/objective pair must be active/complete.")]
+	[DDLRegistration(0x820fb4fbu, description: "Mision/objective pair must be active/complete.")]
 	public string? ObjectiveUnlock { get; set; } = default;
 
-	[DDLRegistration(0x9009397cu)]
+	[DDLRegistration(0xd459aa8cu)]
 	public GoldBoltReward GoldBoltUnlock { get; set; } = GoldBoltReward.None;
 
-	[DDLRegistration(0x9009397cu, description: "Has secondary description unlock?")]
+	[DDLRegistration(0x75640ef1u, description: "Has secondary description unlock?")]
 	public bool HasDescUnlock { get; set; } = false;
 
-	[DDLRegistration(0x9009397cu, description: "Loctag for secondary name.")]
+	[DDLRegistration(0xeabbf487u, description: "Loctag for secondary name.")]
 	public string? Name2 { get; set; } = default;
 
-	[DDLRegistration(0x9009397cu, description: "Loctag for secondary description.")]
+	[DDLRegistration(0x6f8b528du, description: "Loctag for secondary description.")]
 	public string? Desc2 { get; set; } = default;
 
-	[DDLRegistration(0x9009397cu, description: "Mision/objective pair must be active/complete.")]
+	[DDLRegistration(0xcf4250c6u, description: "Mision/objective pair must be active/complete.")]
 	public string? Desc2Mission { get; set; } = default;
 
-	[DDLRegistration(0x9009397cu, description: "Mision/objective pair must be active/complete.")]
+	[DDLRegistration(0x2ec47728u, description: "Mision/objective pair must be active/complete.")]
 	public string? Desc2Objective { get; set; } = default;
 
 	public static UIGalleryEntry Create(DDLObject ddl) => new(ddl);

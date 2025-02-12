@@ -22,19 +22,19 @@ public class PolylineDef : DDLObjectType, IDDLObjectType<PolylineDef> {
 		Height = ddl.GetValue<float>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0xb302ddbfu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xb302ddbfu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xb302ddbfu)]
+	[DDLRegistration(0x19c2c04eu)]
 	public Dictionary<RivetAssetId, SceneNode?> Points { get; set; } = [];
 
-	[DDLRegistration(0xb302ddbfu)]
+	[DDLRegistration(0x3f08814bu)]
 	public PolylineType PolylineType { get; set; } = PolylineType.ClosedPlanar;
 
-	[DDLRegistration(0xb302ddbfu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 4.00f;
 
 	public static PolylineDef Create(DDLObject ddl) => new(ddl);

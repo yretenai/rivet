@@ -20,13 +20,13 @@ public class GameplayDataDef : DDLObjectType, IDDLObjectType<GameplayDataDef> {
 		AssetPath = ddl.GetValue<RivetAssetId>(0x0efa614bu, AssetPath);
 	}
 
-	[DDLRegistration(0x1fe9dacau)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x1fe9dacau)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x1fe9dacau)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = "";
 
 	public static GameplayDataDef Create(DDLObject ddl) => new(ddl);

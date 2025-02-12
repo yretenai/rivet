@@ -18,7 +18,7 @@ public class GPUPerformanceBudgets : DDLObjectType, IDDLObjectType<GPUPerformanc
 		Views = ddl.GetObjects<GPUPerformanceBudgetView>(0x08a35046u);
 	}
 
-	[DDLRegistration(0xd784c985u)]
+	[DDLRegistration(0x08a35046u)]
 	public List<GPUPerformanceBudgetView?> Views { get; set; } = [];
 
 	public static GPUPerformanceBudgets Create(DDLObject ddl) => new(ddl);

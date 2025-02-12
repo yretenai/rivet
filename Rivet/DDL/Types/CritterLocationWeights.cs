@@ -21,16 +21,16 @@ public class CritterLocationWeights : DDLObjectType, IDDLObjectType<CritterLocat
 		ActiveBias = ddl.GetValue<float>(0x1a1b7ea4u, ActiveBias);
 	}
 
-	[DDLRegistration(0x57c000e8u, "Distance Factor", "How much distance from the hero factors into the critter spawn location selection.")]
+	[DDLRegistration(0xf4e39365u, "Distance Factor", "How much distance from the hero factors into the critter spawn location selection.")]
 	public float DistanceFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x57c000e8u, "Angle Factor", "How much the angle the location makes to the camera factors into critter spawn location selection.")]
+	[DDLRegistration(0x85b1ef42u, "Angle Factor", "How much the angle the location makes to the camera factors into critter spawn location selection.")]
 	public float AngleFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x57c000e8u, "On-Screen Factor", "How much being on-screen factors into the location selection. This will penalize inactive locations that are on-screen.")]
+	[DDLRegistration(0xa2dc7d9eu, "On-Screen Factor", "How much being on-screen factors into the location selection. This will penalize inactive locations that are on-screen.")]
 	public float VisibleFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x57c000e8u, "Active Location Bias", "Bias towards locations that are already active by this amount to prevent critter spawn thrashing.")]
+	[DDLRegistration(0x1a1b7ea4u, "Active Location Bias", "Bias towards locations that are already active by this amount to prevent critter spawn thrashing.")]
 	public float ActiveBias { get; set; } = 0.25f;
 
 	public static CritterLocationWeights Create(DDLObject ddl) => new(ddl);

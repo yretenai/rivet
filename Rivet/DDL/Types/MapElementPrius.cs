@@ -20,13 +20,13 @@ public class MapElementPrius : DDLObjectType, IDDLObjectType<MapElementPrius> {
 		OverridePosition = ddl.GetObject<DDLVector3>(0x1b00f200u);
 	}
 
-	[DDLRegistration(0x5f94b770u, "Map Element Type")]
+	[DDLRegistration(0xbc4e9799u, "Map Element Type")]
 	public x94bfb980 Type { get; set; } = x94bfb980.Enemy;
 
-	[DDLRegistration(0x5f94b770u, "Radius for kAreaOfInterest")]
+	[DDLRegistration(0x792ca92du, "Radius for kAreaOfInterest")]
 	public float RadiusOfInterest { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5f94b770u)]
+	[DDLRegistration(0x1b00f200u)]
 	public DDLVector3? OverridePosition { get; set; } = default;
 
 	public static MapElementPrius Create(DDLObject ddl) => new(ddl);

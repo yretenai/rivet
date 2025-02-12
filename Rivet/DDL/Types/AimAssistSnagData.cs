@@ -27,34 +27,34 @@ public class AimAssistSnagData : DDLObjectType, IDDLObjectType<AimAssistSnagData
 		SnagMax = ddl.GetValue<float>(0x2b2134e6u, SnagMax);
 	}
 
-	[DDLRegistration(0xf96a9ac8u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0xf96a9ac8u, "On Factor", "How far inside a target's Assist Box before Snag is triggered.")]
+	[DDLRegistration(0x1637af23u, "On Factor", "How far inside a target's Assist Box before Snag is triggered.")]
 	public float OnFactor { get; set; } = 0.90f;
 
-	[DDLRegistration(0xf96a9ac8u, "Off Factor Same", "How far inside the current Snag target's Assist Box before Snag is disabled.")]
+	[DDLRegistration(0xffe900c9u, "Off Factor Same", "How far inside the current Snag target's Assist Box before Snag is disabled.")]
 	public float OffFactorSame { get; set; } = 0.20f;
 
-	[DDLRegistration(0xf96a9ac8u, "Off Factor New", "How far inside a new target's Assist Box before Snag is disabled on the previous target.")]
+	[DDLRegistration(0x6b9ab5e1u, "Off Factor New", "How far inside a new target's Assist Box before Snag is disabled on the previous target.")]
 	public float OffFactorNew { get; set; } = 0.80f;
 
-	[DDLRegistration(0xf96a9ac8u, "Speed Up", "Speed at which the current Snag value is increased when triggered.  Units are in m/s.")]
+	[DDLRegistration(0xcf193fecu, "Speed Up", "Speed at which the current Snag value is increased when triggered.  Units are in m/s.")]
 	public float SpeedUp { get; set; } = 20.00f;
 
-	[DDLRegistration(0xf96a9ac8u, "Speed Down", "Speed at which the current Snag value is decreased after full Snag has been reached.  Units are in m/s.")]
+	[DDLRegistration(0x7106291du, "Speed Down", "Speed at which the current Snag value is decreased after full Snag has been reached.  Units are in m/s.")]
 	public float SpeedDown { get; set; } = 3.00f;
 
-	[DDLRegistration(0xf96a9ac8u, "Stick Min", "Lower bound of the raw stick input, typical range is [0-1].")]
+	[DDLRegistration(0xdee2a17du, "Stick Min", "Lower bound of the raw stick input, typical range is [0-1].")]
 	public float StickMin { get; set; } = 0.70f;
 
-	[DDLRegistration(0xf96a9ac8u, "Stick Max", "Upper bound of the raw stick input, typical range is [0-1].")]
+	[DDLRegistration(0xe2ef9e24u, "Stick Max", "Upper bound of the raw stick input, typical range is [0-1].")]
 	public float StickMax { get; set; } = 0.95f;
 
-	[DDLRegistration(0xf96a9ac8u, "Snag Min", "Lower bound used for lerping the adjusted stick input between.  Gets combined with the result of Magnetism before being passed to the camera.")]
+	[DDLRegistration(0x172c0bbfu, "Snag Min", "Lower bound used for lerping the adjusted stick input between.  Gets combined with the result of Magnetism before being passed to the camera.")]
 	public float SnagMin { get; set; } = 0.90f;
 
-	[DDLRegistration(0xf96a9ac8u, "Snag Max", "Upper bound used for lerping the adjusted stick input between.  Gets combined with the result of Magnetism before being passed to the camera.")]
+	[DDLRegistration(0x2b2134e6u, "Snag Max", "Upper bound used for lerping the adjusted stick input between.  Gets combined with the result of Magnetism before being passed to the camera.")]
 	public float SnagMax { get; set; } = 0.50f;
 
 	public static AimAssistSnagData Create(DDLObject ddl) => new(ddl);

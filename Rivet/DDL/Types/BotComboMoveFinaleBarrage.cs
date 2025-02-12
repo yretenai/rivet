@@ -25,28 +25,28 @@ public class BotComboMoveFinaleBarrage : BotComboMoveBase, IDDLObjectType<BotCom
 		MaxDuration = ddl.GetValue<float>(0x124e0874u, MaxDuration);
 	}
 
-	[DDLRegistration(0x61e95811u)]
+	[DDLRegistration(0xfec29c86u)]
 	public RivetAssetId PortalActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x61e95811u)]
+	[DDLRegistration(0x03c1fe36u)]
 	public RivetAssetId PortalSpawnArea { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x61e95811u)]
+	[DDLRegistration(0x1b3f8e19u)]
 	public RivetAssetId ProjectileShotConfig { get; set; } = default;
 
-	[DDLRegistration(0x61e95811u)]
+	[DDLRegistration(0x1c826ff4u)]
 	public List<RivetAssetId> ProjectileActor { get; set; } = [];
 
-	[DDLRegistration(0x61e95811u)]
+	[DDLRegistration(0x41da1c70u)]
 	public float MinInterval { get; set; } = 0.50f;
 
-	[DDLRegistration(0x61e95811u)]
+	[DDLRegistration(0x8dd7677fu)]
 	public float MaxInterval { get; set; } = 1.00f;
 
-	[DDLRegistration(0x61e95811u)]
+	[DDLRegistration(0xde43737bu)]
 	public float MinDuration { get; set; } = 5.00f;
 
-	[DDLRegistration(0x61e95811u)]
+	[DDLRegistration(0x124e0874u)]
 	public float MaxDuration { get; set; } = 10.00f;
 
 	public new static BotComboMoveFinaleBarrage Create(DDLObject ddl) => new(ddl);

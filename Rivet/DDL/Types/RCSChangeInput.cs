@@ -20,13 +20,13 @@ public class RCSChangeInput : DDLObjectType, IDDLObjectType<RCSChangeInput> {
 		DeleteChangelist = ddl.GetValue<bool>(0xf610951cu, DeleteChangelist);
 	}
 
-	[DDLRegistration(0x0940905au, description: "Sets the keep alive timeout in seconds.")]
+	[DDLRegistration(0x19c2272du, description: "Sets the keep alive timeout in seconds.")]
 	public float KeepAliveTimeout { get; set; } = 600.00f;
 
-	[DDLRegistration(0x0940905au, description: "Changelist to use; 0 (or unspecified) means to use the default changelist.")]
+	[DDLRegistration(0x03b0ddc6u, description: "Changelist to use; 0 (or unspecified) means to use the default changelist.")]
 	public uint Changelist { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0940905au)]
+	[DDLRegistration(0xf610951cu)]
 	public bool DeleteChangelist { get; set; } = false;
 
 	public static RCSChangeInput Create(DDLObject ddl) => new(ddl);

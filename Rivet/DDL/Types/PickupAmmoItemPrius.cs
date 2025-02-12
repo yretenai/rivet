@@ -19,10 +19,10 @@ public class PickupAmmoItemPrius : GamePickupItemPrius, IDDLObjectType<PickupAmm
 		OpenLookGroup = ddl.GetString(0x97ea397c) ?? OpenLookGroup;
 	}
 
-	[DDLRegistration(0xc9c034ddu)]
+	[DDLRegistration(0xe6083da6u)]
 	public string? ClosedLookGroup { get; set; } = "closed";
 
-	[DDLRegistration(0xc9c034ddu)]
+	[DDLRegistration(0x97ea397cu)]
 	public string? OpenLookGroup { get; set; } = "open";
 
 	public new static PickupAmmoItemPrius Create(DDLObject ddl) => new(ddl);

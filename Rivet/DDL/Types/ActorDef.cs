@@ -30,43 +30,43 @@ public class ActorDef : DDLObjectType, IDDLObjectType<ActorDef> {
 		OldAssetData = ddl.GetString(0x2e07bd45) ?? OldAssetData;
 	}
 
-	[DDLRegistration(0xb8132d8bu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xb8132d8bu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xb8132d8bu)]
+	[DDLRegistration(0x8970bd6du)]
 	public AssetExtensions AssetType { get; set; } = AssetExtensions.Volume;
 
-	[DDLRegistration(0xb8132d8bu)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = "";
 
-	[DDLRegistration(0xb8132d8bu, description: "Template actors will never be drawn or updated.")]
+	[DDLRegistration(0x6d61a2f3u, description: "Template actors will never be drawn or updated.")]
 	public bool Template { get; set; } = false;
 
-	[DDLRegistration(0xb8132d8bu, description: "Actor will automatically activate when the zone is loaded.")]
+	[DDLRegistration(0x3e035e82u, description: "Actor will automatically activate when the zone is loaded.")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0xb8132d8bu, description: "Actor is used by builders and is not loaded at runtime.")]
+	[DDLRegistration(0x4c7a05dbu, description: "Actor is used by builders and is not loaded at runtime.")]
 	public bool BuilderOnly { get; set; } = false;
 
-	[DDLRegistration(0xb8132d8bu, description: "Name of the LookGroup to use for this actor.")]
+	[DDLRegistration(0xa286144cu, description: "Name of the LookGroup to use for this actor.")]
 	public string? LookGroup { get; set; } = "Default";
 
-	[DDLRegistration(0xb8132d8bu)]
+	[DDLRegistration(0x6b34889eu)]
 	public x6898de8f UIColor { get; set; } = x6898de8f.Default;
 
-	[DDLRegistration(0xb8132d8bu)]
+	[DDLRegistration(0xf93e5f7au)]
 	public x28ef8b07 UIOpacity { get; set; } = x28ef8b07.Default;
 
-	[DDLRegistration(0xb8132d8bu, description: "The list of components this actor has.")]
+	[DDLRegistration(0x357eabc4u, description: "The list of components this actor has.")]
 	public Dictionary<RivetAssetId, ComponentPrius?> Components { get; set; } = [];
 
-	[DDLRegistration(0xb8132d8bu, description: "Any additional assets that this actor requires.")]
+	[DDLRegistration(0x516bb823u, description: "Any additional assets that this actor requires.")]
 	public List<AssetReferenceDef?> AssetRefs { get; set; } = [];
 
-	[DDLRegistration(0xb8132d8bu, description: "Store settings from the old actor format for backwards compatibility (should not be editable any more)")]
+	[DDLRegistration(0x2e07bd45u, description: "Store settings from the old actor format for backwards compatibility (should not be editable any more)")]
 	public string? OldAssetData { get; set; } = default;
 
 	public static ActorDef Create(DDLObject ddl) => new(ddl);

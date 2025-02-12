@@ -49,100 +49,100 @@ public class RenderThreadStats : DDLObjectType, IDDLObjectType<RenderThreadStats
 		GpuStarvationMicros = ddl.GetValue<uint>(0x6618b0dcu, GpuStarvationMicros);
 	}
 
-	[DDLRegistration(0x30c0ebdcu, description: "Identifies which frame these stats are for. CPU submit and GPU draw stats are always for the same resulting frame.")]
+	[DDLRegistration(0x139905dau, description: "Identifies which frame these stats are for. CPU submit and GPU draw stats are always for the same resulting frame.")]
 	public uint FrameIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Either D3D11_CREATE_DEVICE_DEBUG or GNM-Validate-on-Submit. This means timings are going to be dramatically slower because of validation occuring on the command buffer")]
+	[DDLRegistration(0xb1a1d7afu, description: "Either D3D11_CREATE_DEVICE_DEBUG or GNM-Validate-on-Submit. This means timings are going to be dramatically slower because of validation occuring on the command buffer")]
 	public uint IsDebugMode { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Wall clock time taken for the RenderThread to wake up, process all render layers, wait for vsync, and complete bookkeeping in microseconds (1000 per millisecond)")]
+	[DDLRegistration(0x1210d284u, description: "Wall clock time taken for the RenderThread to wake up, process all render layers, wait for vsync, and complete bookkeeping in microseconds (1000 per millisecond)")]
 	public uint CpuFrameMicros { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Wall clock time taken for the RenderThread to stall on VSync and swap display buffers in microseconds (1000 per millisecond). Subtract this from CpuFrameMicros for true RenderThread busy time.")]
+	[DDLRegistration(0x91759f76u, description: "Wall clock time taken for the RenderThread to stall on VSync and swap display buffers in microseconds (1000 per millisecond). Subtract this from CpuFrameMicros for true RenderThread busy time.")]
 	public uint CpuPresentMicros { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Wall clock time taken for the GPU to execute the frame's command list, including all its stalls and syncs due to CPU side stalls.")]
+	[DDLRegistration(0x0bbc5d9fu, description: "Wall clock time taken for the GPU to execute the frame's command list, including all its stalls and syncs due to CPU side stalls.")]
 	public uint GpuFrameMicros { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Wall clock time taken for the GPU to start, do work, and ends counting before waiting for Vsync, so this represents the best idea of 'how long is the GPU taking'.")]
+	[DDLRegistration(0xe18dea6bu, description: "Wall clock time taken for the GPU to start, do work, and ends counting before waiting for Vsync, so this represents the best idea of 'how long is the GPU taking'.")]
 	public uint GpuBusyMicros { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Wall clock time taken for each of the CPU Render Layers.")]
+	[DDLRegistration(0x5aa2e977u, description: "Wall clock time taken for each of the CPU Render Layers.")]
 	public List<uint> CpuLayerMicros { get; set; } = [];
 
-	[DDLRegistration(0x30c0ebdcu, description: "Wall clock time taken for each of the GPU Render Layers.")]
+	[DDLRegistration(0x430e666cu, description: "Wall clock time taken for each of the GPU Render Layers.")]
 	public List<uint> GpuLayerMicros { get; set; } = [];
 
-	[DDLRegistration(0x30c0ebdcu, description: "Stats for all models submitted to any GBuffer layers")]
+	[DDLRegistration(0x82ae3b72u, description: "Stats for all models submitted to any GBuffer layers")]
 	public DrawStats? ModelGBuffer { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Stats for all models submitted to any Shadow layers")]
+	[DDLRegistration(0x4b7d1aabu, description: "Stats for all models submitted to any Shadow layers")]
 	public DrawStats? ModelShadow { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Stats for all models submitted to the forward layer")]
+	[DDLRegistration(0x3176ed86u, description: "Stats for all models submitted to the forward layer")]
 	public DrawStats? ModelForward { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Stats for all models submitted to the alpha layer")]
+	[DDLRegistration(0xba6514abu, description: "Stats for all models submitted to the alpha layer")]
 	public DrawStats? ModelAlpha { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Stats for all models submitted to the custom velocity (velocity depth pass) layer")]
+	[DDLRegistration(0x5c0de56au, description: "Stats for all models submitted to the custom velocity (velocity depth pass) layer")]
 	public DrawStats? ModelVelocityDepth { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Stats for all models submitted to the debug layer")]
+	[DDLRegistration(0x06206a66u, description: "Stats for all models submitted to the debug layer")]
 	public DrawStats? ModelDebug { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Stats for all decals drawn in any layer")]
+	[DDLRegistration(0x2dcfa762u, description: "Stats for all decals drawn in any layer")]
 	public DrawStats? Decals { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "#Materials with tessellation enabled")]
+	[DDLRegistration(0xd9864c5bu, description: "#Materials with tessellation enabled")]
 	public uint ModelTessMaterialCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Indices are sorted on CPU, potentially delaying CPU drawing and thus starving the GPU")]
+	[DDLRegistration(0xb364f735u, description: "Indices are sorted on CPU, potentially delaying CPU drawing and thus starving the GPU")]
 	public uint ModelSortedTriangleCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Vertices may delay draws while sync'ing on skin jobs")]
+	[DDLRegistration(0xd284df19u, description: "Vertices may delay draws while sync'ing on skin jobs")]
 	public uint ModelSkinnedVertexCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "#Skinning job requests for models")]
+	[DDLRegistration(0x6fcd336eu, description: "#Skinning job requests for models")]
 	public uint ModelSkinnedEntryCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Vertices immediately-skinned on render thread, potentially contributing to starvation")]
+	[DDLRegistration(0xf957f46au, description: "Vertices immediately-skinned on render thread, potentially contributing to starvation")]
 	public uint DecalSkinnedVertexCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "#Skinning operations (per-object, not per-vertex) done on the render thread for decals")]
+	[DDLRegistration(0x08bcd2d4u, description: "#Skinning operations (per-object, not per-vertex) done on the render thread for decals")]
 	public uint DecalSkinnedEntryCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "#Triangles is #Indices / 3")]
+	[DDLRegistration(0x7cf69211u, description: "#Triangles is #Indices / 3")]
 	public DrawStats? VfxModels { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "#Triangles is VertexCount / 6 (TriList, 2 tris/quad)")]
+	[DDLRegistration(0x2211959au, description: "#Triangles is VertexCount / 6 (TriList, 2 tris/quad)")]
 	public DrawStats? VfxQuads { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "#Triangles is UnindexedVertexCount - 2 (TriStrip)")]
+	[DDLRegistration(0xfe9b9b27u, description: "#Triangles is UnindexedVertexCount - 2 (TriStrip)")]
 	public DrawStats? VfxTrails { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "#Triangles is UnindexedVertexCount - 2 (TriStrip)")]
+	[DDLRegistration(0x2cff2fb6u, description: "#Triangles is UnindexedVertexCount - 2 (TriStrip)")]
 	public DrawStats? VfxSwipes { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "#Triangles is UnindexedVertexCount - 2 (TriStrip)")]
+	[DDLRegistration(0x031b34fbu, description: "#Triangles is UnindexedVertexCount - 2 (TriStrip)")]
 	public DrawStats? VfxSplines { get; set; } = default;
 
-	[DDLRegistration(0x30c0ebdcu, description: "#Calls to PB.GrabFrame() by VFX (mainly for distortion/refractive effects)")]
+	[DDLRegistration(0x22a693f4u, description: "#Calls to PB.GrabFrame() by VFX (mainly for distortion/refractive effects)")]
 	public uint VfxFrameGrabCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "#Calls to clearing down-res'ed VFX render targets. A lot of these degrades perf due to pipeline stalls.")]
+	[DDLRegistration(0x7a6e49bdu, description: "#Calls to clearing down-res'ed VFX render targets. A lot of these degrades perf due to pipeline stalls.")]
 	public uint VfxStartCompositeCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Wall clock time taken for UI::RenderUpdate() (currently RenderHandlerScaleform)")]
+	[DDLRegistration(0xab1b66b7u, description: "Wall clock time taken for UI::RenderUpdate() (currently RenderHandlerScaleform)")]
 	public uint UIHandlerMicros { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "GUI::RenderUpdate called explicitly in RenderThreadUpdate")]
+	[DDLRegistration(0x00bbb5bdu, description: "GUI::RenderUpdate called explicitly in RenderThreadUpdate")]
 	public uint UIRenderUpdateMicros { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x30c0ebdcu, description: "Non-idle time taken on GPU for each department. Size of array must match enum in Department.h")]
+	[DDLRegistration(0xaf0bbe7eu, description: "Non-idle time taken on GPU for each department. Size of array must match enum in Department.h")]
 	public List<uint> GpuDeptMicros { get; set; } = [];
 
-	[DDLRegistration(0x30c0ebdcu, description: "Non-idle time taken on GPU for starvation")]
+	[DDLRegistration(0x6618b0dcu, description: "Non-idle time taken on GPU for starvation")]
 	public uint GpuStarvationMicros { get; set; } = 0x00000000;
 
 	public static RenderThreadStats Create(DDLObject ddl) => new(ddl);

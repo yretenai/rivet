@@ -40,73 +40,73 @@ public class MaterialGraphDef : DDLObjectType, IDDLObjectType<MaterialGraphDef> 
 		ModelSlotExclusion = ddl.GetStrings(0x902ee427u);
 	}
 
-	[DDLRegistration(0xb67789c2u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xb67789c2u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xb67789c2u, "MaterialGraph Usage")]
+	[DDLRegistration(0xc9b892b1u, "MaterialGraph Usage")]
 	public MaterialGraphUsage Usage { get; set; } = MaterialGraphUsage.Model3D;
 
-	[DDLRegistration(0xb67789c2u, "MaterialGraph Preview")]
+	[DDLRegistration(0xb86f4c08u, "MaterialGraph Preview")]
 	public x65877bb6 Preview { get; set; } = x65877bb6.Model;
 
-	[DDLRegistration(0xb67789c2u, "FrameGrab Type")]
+	[DDLRegistration(0x7b3f76b6u, "FrameGrab Type")]
 	public FrameGrabQuality FrameGrabQuality { get; set; } = FrameGrabQuality.Low;
 
-	[DDLRegistration(0xb67789c2u, "FrameGrab Scale")]
+	[DDLRegistration(0x034e3a72u, "FrameGrab Scale")]
 	public float FrameGrabOversize { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb67789c2u, "Screen Space Reflection")]
+	[DDLRegistration(0x3ec85273u, "Screen Space Reflection")]
 	public xd958924a ScreenReflection { get; set; } = xd958924a.OpaqueOnly;
 
-	[DDLRegistration(0xb67789c2u, "Light Scattering")]
+	[DDLRegistration(0xbe0fe132u, "Light Scattering")]
 	public bool LightScattering { get; set; } = false;
 
-	[DDLRegistration(0xb67789c2u, "Do Not Ray Trace", "If enabled, this will prevent geometry using this material graph from showing up in reflections; it's free for decals but comes at a cost for models")]
+	[DDLRegistration(0x8d4bfa30u, "Do Not Ray Trace", "If enabled, this will prevent geometry using this material graph from showing up in reflections; it's free for decals but comes at a cost for models")]
 	public bool DoNotRayTrace { get; set; } = false;
 
-	[DDLRegistration(0xb67789c2u, "Custom Shadows", "If enabled, shadow maps will use the material graph's Depth shader which takes into account alpha logic, clip tests, displacement, etc. If not enabled, shadow maps will use built-in shaders that are faster but do not fully account for what the material graph might be doing.")]
+	[DDLRegistration(0x63fe0d72u, "Custom Shadows", "If enabled, shadow maps will use the material graph's Depth shader which takes into account alpha logic, clip tests, displacement, etc. If not enabled, shadow maps will use built-in shaders that are faster but do not fully account for what the material graph might be doing.")]
 	public bool CustomShadows { get; set; } = false;
 
-	[DDLRegistration(0xb67789c2u, "Displacement Fade", "If enabled, all vertex displacement will be faded out for material lod 1.")]
+	[DDLRegistration(0xafbcb965u, "Displacement Fade", "If enabled, all vertex displacement will be faded out for material lod 1.")]
 	public bool DisplacementFade { get; set; } = true;
 
-	[DDLRegistration(0xb67789c2u, "Lod Distance", "The distance at which the material transitions from Lod 0 to Lod 1. If set to 0 (the default) it will be derived from per-project MaterialLod Settings. The value can be overridden by the Lod Distance on the Material asset, and then again by the Material Lod Dist on the Model asset.")]
+	[DDLRegistration(0x458a5600u, "Lod Distance", "The distance at which the material transitions from Lod 0 to Lod 1. If set to 0 (the default) it will be derived from per-project MaterialLod Settings. The value can be overridden by the Lod Distance on the Material asset, and then again by the Material Lod Dist on the Model asset.")]
 	public float LodDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb67789c2u, "Pixel Depth Output", "Allows modified ouput of hyper-depth from pixel shaders. This potentially disables some hardware optimizations.")]
+	[DDLRegistration(0xea24ffd8u, "Pixel Depth Output", "Allows modified ouput of hyper-depth from pixel shaders. This potentially disables some hardware optimizations.")]
 	public bool PixelDepthOutput { get; set; } = false;
 
-	[DDLRegistration(0xb67789c2u, "Override Linear Depth", "If enabled, this render an additional linear-depth only pass to improve lighting artifacts that may occur from noisy hyper depth output by overriding it with the original model's depth.")]
+	[DDLRegistration(0xe474f0ebu, "Override Linear Depth", "If enabled, this render an additional linear-depth only pass to improve lighting artifacts that may occur from noisy hyper depth output by overriding it with the original model's depth.")]
 	public bool OverrideLinearDepth { get; set; } = false;
 
-	[DDLRegistration(0xb67789c2u, "Override Hyper Depth", "If enabled, this will override hyper-depth in addition to linear-depth. This can address depth sorting issues with the linear depth override pass but may cause compatibility issues with forward shaded materials.")]
+	[DDLRegistration(0x6f082c6eu, "Override Hyper Depth", "If enabled, this will override hyper-depth in addition to linear-depth. This can address depth sorting issues with the linear depth override pass but may cause compatibility issues with forward shaded materials.")]
 	public bool OverrideHyperDepth { get; set; } = false;
 
-	[DDLRegistration(0xb67789c2u)]
+	[DDLRegistration(0x3a06b9d6u)]
 	public uint PreviewIdLow { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb67789c2u)]
+	[DDLRegistration(0xedce6186u)]
 	public uint PreviewIdHigh { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb67789c2u)]
+	[DDLRegistration(0x046ec93du)]
 	public List<MaterialGraphNode?> Nodes { get; set; } = [];
 
-	[DDLRegistration(0xb67789c2u)]
+	[DDLRegistration(0xa59f2b5au)]
 	public List<MaterialGraphComment?> Comments { get; set; } = [];
 
-	[DDLRegistration(0xb67789c2u, "Preview Model")]
+	[DDLRegistration(0x5e53ae29u, "Preview Model")]
 	public PreviewModelContainer? PreviewModel { get; set; } = default;
 
-	[DDLRegistration(0xb67789c2u, "Tessellation Settings")]
+	[DDLRegistration(0x13d5a26fu, "Tessellation Settings")]
 	public TessellationSettings? TessSettings { get; set; } = default;
 
-	[DDLRegistration(0xb67789c2u, "Notes")]
+	[DDLRegistration(0x18486a4du, "Notes")]
 	public MaterialGraphNotes? Notes { get; set; } = default;
 
-	[DDLRegistration(0xb67789c2u, "Model Slot Exclusion", "Prevent materials using this asset from getting applied to the following List of model slots (Material Mapping Names)")]
+	[DDLRegistration(0x902ee427u, "Model Slot Exclusion", "Prevent materials using this asset from getting applied to the following List of model slots (Material Mapping Names)")]
 	public List<string?> ModelSlotExclusion { get; set; } = [];
 
 	public static MaterialGraphDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class RandomSignalActionPrius : DDLObjectType, IDDLObjectType<RandomSigna
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xa47b768cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
 	public static RandomSignalActionPrius Create(DDLObject ddl) => new(ddl);

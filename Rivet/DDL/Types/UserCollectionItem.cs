@@ -19,10 +19,10 @@ public class UserCollectionItem : DDLObjectType, IDDLObjectType<UserCollectionIt
 		MRU = ddl.GetValue<ulong>(0x06973205u, MRU);
 	}
 
-	[DDLRegistration(0x763d0635u)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public string? Path { get; set; } = default;
 
-	[DDLRegistration(0x763d0635u)]
+	[DDLRegistration(0x06973205u)]
 	public ulong MRU { get; set; } = 0x0000000000000000;
 
 	public static UserCollectionItem Create(DDLObject ddl) => new(ddl);

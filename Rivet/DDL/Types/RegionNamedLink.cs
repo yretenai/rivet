@@ -22,19 +22,19 @@ public class RegionNamedLink : DDLObjectType, IDDLObjectType<RegionNamedLink> {
 		GameData = ddl.GetDictionary<RivetAssetId, DDLStructInst>(0xa1f1eb12, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DDLStructInst>(mapId));
 	}
 
-	[DDLRegistration(0xdbc47693u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdbc47693u)]
+	[DDLRegistration(0xec7a5f59u)]
 	public float Order { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdbc47693u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xdbc47693u)]
+	[DDLRegistration(0x063c5941u)]
 	public string? Link { get; set; } = default;
 
-	[DDLRegistration(0xdbc47693u)]
+	[DDLRegistration(0xa1f1eb12u)]
 	public Dictionary<RivetAssetId, DDLStructInst?> GameData { get; set; } = [];
 
 	public static RegionNamedLink Create(DDLObject ddl) => new(ddl);

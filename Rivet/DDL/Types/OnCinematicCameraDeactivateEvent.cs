@@ -18,7 +18,7 @@ public class OnCinematicCameraDeactivateEvent : EventBase, IDDLObjectType<OnCine
 		CameraHandle = ddl.GetValue<uint>(0xa07a1734u, CameraHandle);
 	}
 
-	[DDLRegistration(0xd1192cccu)]
+	[DDLRegistration(0xa07a1734u)]
 	public uint CameraHandle { get; set; } = 0x00000000;
 
 	public new static OnCinematicCameraDeactivateEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ResurrectActionPrius : DDLObjectType, IDDLObjectType<ResurrectActio
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x843c7422u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
 	public static ResurrectActionPrius Create(DDLObject ddl) => new(ddl);

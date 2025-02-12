@@ -18,7 +18,7 @@ public class BotIndexMoveContainer : DDLObjectType, IDDLObjectType<BotIndexMoveC
 		Move = ddl.GetObject<BotComboMoveBase>(0xdfaef7c8u);
 	}
 
-	[DDLRegistration(0x8a215e9bu)]
+	[DDLRegistration(0xdfaef7c8u)]
 	public BotComboMoveBase? Move { get; set; } = default;
 
 	public static BotIndexMoveContainer Create(DDLObject ddl) => new(ddl);

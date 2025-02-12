@@ -18,7 +18,7 @@ public class RagdollEnablePrius : DDLObjectType, IDDLObjectType<RagdollEnablePri
 		SettleTol = ddl.GetValue<float>(0x20ab2088u, SettleTol);
 	}
 
-	[DDLRegistration(0x10a5de16u)]
+	[DDLRegistration(0x20ab2088u)]
 	public float SettleTol { get; set; } = 0.00f;
 
 	public static RagdollEnablePrius Create(DDLObject ddl) => new(ddl);

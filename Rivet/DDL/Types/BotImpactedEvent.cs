@@ -21,16 +21,16 @@ public class BotImpactedEvent : EventBase, IDDLObjectType<BotImpactedEvent> {
 		Stationary = ddl.GetValue<bool>(0x1e4e83d5u, Stationary);
 	}
 
-	[DDLRegistration(0x8197b7f2u)]
+	[DDLRegistration(0x4a1cb41au)]
 	public uint ImpactHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8197b7f2u)]
+	[DDLRegistration(0x689a282eu)]
 	public uint ImpactTypeHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8197b7f2u)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0x8197b7f2u)]
+	[DDLRegistration(0x1e4e83d5u)]
 	public bool Stationary { get; set; } = true;
 
 	public new static BotImpactedEvent Create(DDLObject ddl) => new(ddl);

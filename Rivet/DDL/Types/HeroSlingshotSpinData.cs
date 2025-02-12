@@ -20,13 +20,13 @@ public class HeroSlingshotSpinData : DDLObjectType, IDDLObjectType<HeroSlingshot
 		TimeToReachMaxRotationSpeed = ddl.GetValue<float>(0x7555c1c4u, TimeToReachMaxRotationSpeed);
 	}
 
-	[DDLRegistration(0x26079a78u)]
+	[DDLRegistration(0x88529592u)]
 	public float MinRotationSpeed { get; set; } = 720.00f;
 
-	[DDLRegistration(0x26079a78u)]
+	[DDLRegistration(0xd9ab2ecfu)]
 	public float MaxRotationSpeed { get; set; } = 2160.00f;
 
-	[DDLRegistration(0x26079a78u)]
+	[DDLRegistration(0x7555c1c4u)]
 	public float TimeToReachMaxRotationSpeed { get; set; } = 1.00f;
 
 	public static HeroSlingshotSpinData Create(DDLObject ddl) => new(ddl);

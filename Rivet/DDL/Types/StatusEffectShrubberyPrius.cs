@@ -29,40 +29,40 @@ public class StatusEffectShrubberyPrius : StatusEffectBasePrius, IDDLObjectType<
 		RemoveBotOnDeath = ddl.GetValue<bool>(0x2d0a53ffu, RemoveBotOnDeath);
 	}
 
-	[DDLRegistration(0x19ca84ddu, description: "Filled out by code, the model asset id for the topiary model to spawn.")]
+	[DDLRegistration(0xc5a69919u, description: "Filled out by code, the model asset id for the topiary model to spawn.")]
 	public RivetAssetId ModelId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x19ca84ddu, description: "Optional. Apply this shader to the actor with the effect on it.")]
+	[DDLRegistration(0xea318765u, description: "Optional. Apply this shader to the actor with the effect on it.")]
 	public RivetAssetId PreShader { get; set; } = default;
 
-	[DDLRegistration(0x19ca84ddu, description: "New style shader that gets combined with Posed Models.")]
+	[DDLRegistration(0x080cab53u, description: "New style shader that gets combined with Posed Models.")]
 	public RivetAssetId NewShader { get; set; } = default;
 
-	[DDLRegistration(0x19ca84ddu, description: "The actor to spawn for hovering enemies as a stump to stretch between the ground and the actor.")]
+	[DDLRegistration(0xc58f279cu, description: "The actor to spawn for hovering enemies as a stump to stretch between the ground and the actor.")]
 	public RivetAssetId HoverStump { get; set; } = default;
 
-	[DDLRegistration(0x19ca84ddu, description: "The amount of time it takes for the stump to wipe on.")]
+	[DDLRegistration(0xdd1254e5u, description: "The amount of time it takes for the stump to wipe on.")]
 	public float StumpWipeOnDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x19ca84ddu, description: "The amount of time it takes for the stump to wipe off.")]
+	[DDLRegistration(0xdb006536u, description: "The amount of time it takes for the stump to wipe off.")]
 	public float StumpWipeOffDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x19ca84ddu, description: "The amount of time it takes for the bot's animation to slow down to an anim rate of 0 when transitioning into a shrub.")]
+	[DDLRegistration(0x37474622u, description: "The amount of time it takes for the bot's animation to slow down to an anim rate of 0 when transitioning into a shrub.")]
 	public float AnimBlendInDuration { get; set; } = 0.50f;
 
-	[DDLRegistration(0x19ca84ddu, description: "How long after the shader being fully enabled before flowers should spawn.")]
+	[DDLRegistration(0xdb508f6eu, description: "How long after the shader being fully enabled before flowers should spawn.")]
 	public float FlowerSpawnDelay { get; set; } = 0.50f;
 
-	[DDLRegistration(0x19ca84ddu, description: "Render Constant name to adjust when fading the leaves from green to brown.")]
+	[DDLRegistration(0xc7f47fb5u, description: "Render Constant name to adjust when fading the leaves from green to brown.")]
 	public string? ColorFadeConstant { get; set; } = default;
 
-	[DDLRegistration(0x19ca84ddu, description: "How long to fade the colors.  This will happen just before the bot breaks out of Shrubbed status.")]
+	[DDLRegistration(0x8ac12aadu, description: "How long to fade the colors.  This will happen just before the bot breaks out of Shrubbed status.")]
 	public float ColorFadeDuration { get; set; } = 0.50f;
 
-	[DDLRegistration(0x19ca84ddu, description: "How long after playing a shrub react before another react can be played.")]
+	[DDLRegistration(0x1ea68374u, description: "How long after playing a shrub react before another react can be played.")]
 	public float ReactCooldown { get; set; } = 1.00f;
 
-	[DDLRegistration(0x19ca84ddu, description: "If the bot dies while shrubbed, remove the bot so that it doesnt stick around when the status is done.")]
+	[DDLRegistration(0x2d0a53ffu, description: "If the bot dies while shrubbed, remove the bot so that it doesnt stick around when the status is done.")]
 	public bool RemoveBotOnDeath { get; set; } = true;
 
 	public new static StatusEffectShrubberyPrius Create(DDLObject ddl) => new(ddl);

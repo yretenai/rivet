@@ -21,16 +21,16 @@ public class SetWeaponModCountActionPrius : DDLObjectType, IDDLObjectType<SetWea
 		ModCount = ddl.GetValue<uint>(0xb86c3a48u, ModCount);
 	}
 
-	[DDLRegistration(0xd25e71fau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Weapon;
 
-	[DDLRegistration(0xd25e71fau, "Weapon Item Config")]
+	[DDLRegistration(0xb72a0e33u, "Weapon Item Config")]
 	public RivetAssetId WeaponConfig { get; set; } = default;
 
-	[DDLRegistration(0xd25e71fau, "Mod Tile Index", "Tile index of the mod to set. Will use the input index if one is specified on the node.")]
+	[DDLRegistration(0x6623f977u, "Mod Tile Index", "Tile index of the mod to set. Will use the input index if one is specified on the node.")]
 	public x1b1e7614 ModTileIndex { get; set; } = x1b1e7614.Empty;
 
-	[DDLRegistration(0xd25e71fau, "Mod Count", "The count to set the mod to. Will use the input count if one is specified on the node.")]
+	[DDLRegistration(0xb86c3a48u, "Mod Count", "The count to set the mod to. Will use the input count if one is specified on the node.")]
 	public uint ModCount { get; set; } = 0x00000000;
 
 	public static SetWeaponModCountActionPrius Create(DDLObject ddl) => new(ddl);

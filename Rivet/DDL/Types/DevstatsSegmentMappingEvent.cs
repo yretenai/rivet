@@ -21,16 +21,16 @@ public class DevstatsSegmentMappingEvent : EventBase, IDDLObjectType<DevstatsSeg
 		SegmentTime = ddl.GetValue<float>(0xcc79e1f6u, SegmentTime);
 	}
 
-	[DDLRegistration(0x848399a8u, "Event ID", "Event ID of the standalone event this mapping event is sent with.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Event ID of the standalone event this mapping event is sent with.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x848399a8u, "Segment ID", "ID of the segment to which the standalone event should be mapped to, such as the Mission Segment ID.")]
+	[DDLRegistration(0x7d1d5d0eu, "Segment ID", "ID of the segment to which the standalone event should be mapped to, such as the Mission Segment ID.")]
 	public string? SegmentId { get; set; } = default;
 
-	[DDLRegistration(0x848399a8u, "Segment Type", "The type of the segment to which this event is mapped.")]
+	[DDLRegistration(0x2f332e9au, "Segment Type", "The type of the segment to which this event is mapped.")]
 	public xc6f5c0d7 SegmentType { get; set; } = xc6f5c0d7.Playthrough;
 
-	[DDLRegistration(0x848399a8u, "Segment Time", "Time since the segment started that this event was sent.")]
+	[DDLRegistration(0xcc79e1f6u, "Segment Time", "Time since the segment started that this event was sent.")]
 	public float SegmentTime { get; set; } = 0.00f;
 
 	public new static DevstatsSegmentMappingEvent Create(DDLObject ddl) => new(ddl);

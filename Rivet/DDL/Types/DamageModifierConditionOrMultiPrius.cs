@@ -18,7 +18,7 @@ public class DamageModifierConditionOrMultiPrius : DamageModifierConditionBasePr
 		AnyOf = ddl.GetObjects<DamageModifierConditionEntry>(0x28ca2169u);
 	}
 
-	[DDLRegistration(0x86d1b817u)]
+	[DDLRegistration(0x28ca2169u)]
 	public List<DamageModifierConditionEntry?> AnyOf { get; set; } = [];
 
 	public new static DamageModifierConditionOrMultiPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ActorSwapModelActionPrius : DDLObjectType, IDDLObjectType<ActorSwap
 		Model = ddl.GetValue<RivetAssetId>(0xcec6be18u, Model);
 	}
 
-	[DDLRegistration(0x0393d084u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x0393d084u)]
+	[DDLRegistration(0xcec6be18u)]
 	public RivetAssetId Model { get; set; } = default;
 
 	public static ActorSwapModelActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class EmergentDialogTriggerDisableScriptActionPrius : DDLObjectType, IDDL
 		Event = ddl.GetEnum<DialogTriggerGame>(0x22fdc666u, DialogTriggerGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x83e0b957u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
-	[DDLRegistration(0x83e0b957u, "Event", "Any lines tied to this event will no longer play")]
+	[DDLRegistration(0x22fdc666u, "Event", "Any lines tied to this event will no longer play")]
 	public DialogTriggerGame Event { get; set; } = DialogTriggerGame.None;
 
 	public static EmergentDialogTriggerDisableScriptActionPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class AuthoredNodeData : DDLObjectType, IDDLObjectType<AuthoredNodeData> 
 		AllowedVehicleClasses = ddl.GetBitset<VehicleClassFlags>(0x0c0bc60au, VehicleClassFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0xcd6020fdu, "Vehicle Density")]
+	[DDLRegistration(0x0da04492u, "Vehicle Density")]
 	public VehicleDensity VehicleDensity { get; set; } = VehicleDensity.Normal;
 
-	[DDLRegistration(0xcd6020fdu, "Speed Limit", "Speed limit to use when this node is a vehicle's current destination. Limits defined by planet in the vehicle set config.")]
+	[DDLRegistration(0x7ff47ba9u, "Speed Limit", "Speed limit to use when this node is a vehicle's current destination. Limits defined by planet in the vehicle set config.")]
 	public x9aa61c3c SpeedLimit { get; set; } = x9aa61c3c.Normal;
 
-	[DDLRegistration(0xcd6020fdu, "Allowed Vehicle Classes", "Only vehicles of these classes may spawn on or move to this node. Vehicle classes organized by planet in the vehicle set config.")]
+	[DDLRegistration(0x0c0bc60au, "Allowed Vehicle Classes", "Only vehicles of these classes may spawn on or move to this node. Vehicle classes organized by planet in the vehicle set config.")]
 	public VehicleClassFlags AllowedVehicleClasses { get; set; } = (VehicleClassFlags) 0x0000000f;
 
 	public static AuthoredNodeData Create(DDLObject ddl) => new(ddl);

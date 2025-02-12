@@ -30,43 +30,43 @@ public class FireConeData : DDLObjectType, IDDLObjectType<FireConeData> {
 		AutoHitRange = ddl.GetValue<float>(0x18205647u, AutoHitRange);
 	}
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0xb710551fu)]
 	public float SizeMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0x8b1d6a46u)]
 	public float SizeMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0xcae1081fu)]
 	public float MinShotsToBump { get; set; } = 0.00f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0xd716e036u)]
 	public float ShotBumpAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0xd8b15bc9u)]
 	public float ShotBumpSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0x8a6b93dau)]
 	public float ShotBumpAccel { get; set; } = 0.00f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0x67e04376u)]
 	public float ShotBumpDecel { get; set; } = 0.00f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0x9256f6b8u)]
 	public float SettleDelay { get; set; } = 0.15f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0x2fea88d5u)]
 	public float SettleSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0x7d3040c6u)]
 	public float SettleAccel { get; set; } = 0.00f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0x90bb906au)]
 	public float SettleDecel { get; set; } = 0.00f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0x8b264907u)]
 	public float AutoHitAngle { get; set; } = 0.75f;
 
-	[DDLRegistration(0x25a0e2a0u)]
+	[DDLRegistration(0x18205647u)]
 	public float AutoHitRange { get; set; } = 30.00f;
 
 	public static FireConeData Create(DDLObject ddl) => new(ddl);

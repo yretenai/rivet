@@ -20,13 +20,13 @@ public class SpaceshipTargetingModPrius : DDLObjectType, IDDLObjectType<Spaceshi
 		Priority = ddl.GetEnum<x12c07e53>(0x98a76157u, x12c07e53Values.Lookup);
 	}
 
-	[DDLRegistration(0x95564371u, description: "Used to adjust the bounds of the target for validating lock on behavior")]
+	[DDLRegistration(0x7b0d116fu, description: "Used to adjust the bounds of the target for validating lock on behavior")]
 	public float BoundsRadiusMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x95564371u, description: "Targets within this angle of the aim-line will be consider being hit.  Used to address problems hitting small bounding spheres at large distances")]
+	[DDLRegistration(0x8b264907u, description: "Targets within this angle of the aim-line will be consider being hit.  Used to address problems hitting small bounding spheres at large distances")]
 	public float AutoHitAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0x95564371u, description: "Used to resolve situations when multiple hittable targets are found")]
+	[DDLRegistration(0x98a76157u, description: "Used to resolve situations when multiple hittable targets are found")]
 	public x12c07e53 Priority { get; set; } = x12c07e53.Low;
 
 	public static SpaceshipTargetingModPrius Create(DDLObject ddl) => new(ddl);

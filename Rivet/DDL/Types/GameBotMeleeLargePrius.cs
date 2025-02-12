@@ -18,7 +18,7 @@ public class GameBotMeleeLargePrius : GameBotMeleeBasePrius, IDDLObjectType<Game
 		RiposteWrenchImmunityTime = ddl.GetValue<float>(0xc1bd7d21u, RiposteWrenchImmunityTime);
 	}
 
-	[DDLRegistration(0xbcdefdd2u)]
+	[DDLRegistration(0xc1bd7d21u)]
 	public float RiposteWrenchImmunityTime { get; set; } = 2.00f;
 
 	public new static GameBotMeleeLargePrius Create(DDLObject ddl) => new(ddl);

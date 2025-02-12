@@ -22,19 +22,19 @@ public class UBPTrophy : DDLObjectType, IDDLObjectType<UBPTrophy> {
 		Reward_images = ddl.GetObjects<UBPImage>(0x0ea2d68eu);
 	}
 
-	[DDLRegistration(0x31e97f63u)]
+	[DDLRegistration(0xf55ff6dau)]
 	public string? EntityId { get; set; } = default;
 
-	[DDLRegistration(0x31e97f63u)]
+	[DDLRegistration(0x8b63dca3u)]
 	public x80ef7527 EntityType { get; set; } = x80ef7527.PSNObject;
 
-	[DDLRegistration(0x31e97f63u)]
+	[DDLRegistration(0x2b2fec50u)]
 	public x56d897ac EntitySubtype { get; set; } = x56d897ac.Activity;
 
-	[DDLRegistration(0x31e97f63u)]
+	[DDLRegistration(0xd9cbf53bu)]
 	public List<UBPImage?> Images { get; set; } = [];
 
-	[DDLRegistration(0x31e97f63u)]
+	[DDLRegistration(0x0ea2d68eu)]
 	public List<UBPImage?> Reward_images { get; set; } = [];
 
 	public static UBPTrophy Create(DDLObject ddl) => new(ddl);

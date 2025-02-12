@@ -24,25 +24,25 @@ public class MeleeEnvironmentEvent : EventBase, IDDLObjectType<MeleeEnvironmentE
 		IsWater = ddl.GetValue<byte>(0xf3ce06dcu, IsWater);
 	}
 
-	[DDLRegistration(0xfeee4f95u, "Hit Actor")]
+	[DDLRegistration(0x47c66f9du, "Hit Actor")]
 	public uint HitActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfeee4f95u, description: "Collision hit material")]
+	[DDLRegistration(0x86bfc8e5u, description: "Collision hit material")]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0xfeee4f95u, "Attack Hit Index", "The index of this hit for the attack/swing.")]
+	[DDLRegistration(0x49f983f6u, "Attack Hit Index", "The index of this hit for the attack/swing.")]
 	public uint AttackHitIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfeee4f95u, "Attach Actor")]
+	[DDLRegistration(0xaac2d682u, "Attach Actor")]
 	public uint AttachActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfeee4f95u, "Follow Attach Actor?")]
+	[DDLRegistration(0x7f05cf4du, "Follow Attach Actor?")]
 	public byte FollowAttachActor { get; set; } = 0x00;
 
-	[DDLRegistration(0xfeee4f95u, "Is Slam Attack?")]
+	[DDLRegistration(0x859ad7d1u, "Is Slam Attack?")]
 	public byte IsSlamAttack { get; set; } = 0x00;
 
-	[DDLRegistration(0xfeee4f95u, "Is Water?")]
+	[DDLRegistration(0xf3ce06dcu, "Is Water?")]
 	public byte IsWater { get; set; } = 0x00;
 
 	public new static MeleeEnvironmentEvent Create(DDLObject ddl) => new(ddl);

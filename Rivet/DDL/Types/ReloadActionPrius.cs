@@ -19,10 +19,10 @@ public class ReloadActionPrius : DDLObjectType, IDDLObjectType<ReloadActionPrius
 		OverrideCheckpointName = ddl.GetString(0xb635761b) ?? OverrideCheckpointName;
 	}
 
-	[DDLRegistration(0x7371a15fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x7371a15fu, "Override Checkpoint")]
+	[DDLRegistration(0xb635761bu, "Override Checkpoint")]
 	public string? OverrideCheckpointName { get; set; } = default;
 
 	public static ReloadActionPrius Create(DDLObject ddl) => new(ddl);

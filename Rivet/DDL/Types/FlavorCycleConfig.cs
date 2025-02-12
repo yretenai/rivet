@@ -18,7 +18,7 @@ public class FlavorCycleConfig : DDLObjectType, IDDLObjectType<FlavorCycleConfig
 		CycleIndices = ddl.GetObjects<FlavorAnimIndex>(0x2892b2e4u);
 	}
 
-	[DDLRegistration(0xded62d48u)]
+	[DDLRegistration(0x2892b2e4u)]
 	public List<FlavorAnimIndex?> CycleIndices { get; set; } = [];
 
 	public static FlavorCycleConfig Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class DamageStateConfigDataHeartChamber : DDLObjectType, IDDLObjectType<D
 		NodeBConfig = ddl.GetValue<RivetAssetId>(0xece1933au, NodeBConfig);
 	}
 
-	[DDLRegistration(0x04a9e21fu, description: "Type: Damage State Manager Config")]
+	[DDLRegistration(0xeba4835fu, description: "Type: Damage State Manager Config")]
 	public RivetAssetId ChamberConfig { get; set; } = default;
 
-	[DDLRegistration(0x04a9e21fu, description: "Type: Damage State Manager Config")]
+	[DDLRegistration(0xdd0989a7u, description: "Type: Damage State Manager Config")]
 	public RivetAssetId NodeAConfig { get; set; } = default;
 
-	[DDLRegistration(0x04a9e21fu, description: "Type: Damage State Manager Config")]
+	[DDLRegistration(0xece1933au, description: "Type: Damage State Manager Config")]
 	public RivetAssetId NodeBConfig { get; set; } = default;
 
 	public static DamageStateConfigDataHeartChamber Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class BossBasePrius : DDLObjectType, IDDLObjectType<BossBasePrius> {
 		ConfigModDefs = ddl.GetObjects<BotBaseDataModDef>(0x3d4ae417u);
 	}
 
-	[DDLRegistration(0x322117afu)]
+	[DDLRegistration(0x08dd2ddeu)]
 	public RivetAssetId TargetingConfig { get; set; } = default;
 
-	[DDLRegistration(0x322117afu)]
+	[DDLRegistration(0xdea9552au)]
 	public RivetAssetId AwarenessConfig { get; set; } = default;
 
-	[DDLRegistration(0x322117afu, "Config Mod Defs")]
+	[DDLRegistration(0x3d4ae417u, "Config Mod Defs")]
 	public List<BotBaseDataModDef?> ConfigModDefs { get; set; } = [];
 
 	public static BossBasePrius Create(DDLObject ddl) => new(ddl);

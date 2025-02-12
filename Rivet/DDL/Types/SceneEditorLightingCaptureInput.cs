@@ -18,7 +18,7 @@ public class SceneEditorLightingCaptureInput : DDLObjectType, IDDLObjectType<Sce
 		CaptureType = ddl.GetEnum<x78bb2768>(0x6d31af8fu, x78bb2768Values.Lookup);
 	}
 
-	[DDLRegistration(0x0b05c92cu)]
+	[DDLRegistration(0x6d31af8fu)]
 	public x78bb2768 CaptureType { get; set; } = x78bb2768.CaptureAllGrids;
 
 	public static SceneEditorLightingCaptureInput Create(DDLObject ddl) => new(ddl);

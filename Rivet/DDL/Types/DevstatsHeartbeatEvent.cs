@@ -23,22 +23,22 @@ public class DevstatsHeartbeatEvent : EventBase, IDDLObjectType<DevstatsHeartbea
 		Invisible = ddl.GetValue<bool>(0xb68939f3u, Invisible);
 	}
 
-	[DDLRegistration(0x297baf69u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x297baf69u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
-	[DDLRegistration(0x297baf69u)]
+	[DDLRegistration(0x10b18c0cu)]
 	public string? PlayerState { get; set; } = default;
 
-	[DDLRegistration(0x297baf69u)]
+	[DDLRegistration(0x3fb2897fu)]
 	public float PlayerHealth { get; set; } = 0.00f;
 
-	[DDLRegistration(0x297baf69u)]
+	[DDLRegistration(0xb031a93cu)]
 	public bool InCombat { get; set; } = false;
 
-	[DDLRegistration(0x297baf69u)]
+	[DDLRegistration(0xb68939f3u)]
 	public bool Invisible { get; set; } = false;
 
 	public new static DevstatsHeartbeatEvent Create(DDLObject ddl) => new(ddl);

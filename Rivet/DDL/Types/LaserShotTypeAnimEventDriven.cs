@@ -32,49 +32,49 @@ public class LaserShotTypeAnimEventDriven : BotComboLaserShotType, IDDLObjectTyp
 		AimMods = ddl.GetObjects<AimModWrapper>(0x1d7694a1u);
 	}
 
-	[DDLRegistration(0x6ad13650u, description: "Use this combo data to shoot laser while moving?")]
+	[DDLRegistration(0x66a41a89u, description: "Use this combo data to shoot laser while moving?")]
 	public bool AllowUseWhileMoving { get; set; } = false;
 
-	[DDLRegistration(0x6ad13650u)]
+	[DDLRegistration(0xd312963du)]
 	public string? StrafeShootPartialAnim { get; set; } = default;
 
-	[DDLRegistration(0x6ad13650u, description: "If greater than 0, scales time from begining to the start laser to ScaleTellTime")]
+	[DDLRegistration(0xe17e403cu, description: "If greater than 0, scales time from begining to the start laser to ScaleTellTime")]
 	public float ScaleTellTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x6ad13650u, description: "If greater than 0, scales active laser shooting time to ScaleShootTime")]
+	[DDLRegistration(0x561eaa97u, description: "If greater than 0, scales active laser shooting time to ScaleShootTime")]
 	public float ScaleShootTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x6ad13650u, description: "If greater than 0, scales time from laser end to end of anim to ScaleRecoveryTime")]
+	[DDLRegistration(0x4eeca312u, description: "If greater than 0, scales time from laser end to end of anim to ScaleRecoveryTime")]
 	public float ScaleRecoveryTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x6ad13650u, description: "If true, the bot will scale the shooting animations and rotate towards target based on scaling events")]
+	[DDLRegistration(0xa28d0c60u, description: "If true, the bot will scale the shooting animations and rotate towards target based on scaling events")]
 	public bool TweakHeadingTowardsTarget { get; set; } = false;
 
-	[DDLRegistration(0x6ad13650u, description: "If greater than 0, overrides how long the bot will face the target")]
+	[DDLRegistration(0x14be983au, description: "If greater than 0, overrides how long the bot will face the target")]
 	public float TweakHeadingTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x6ad13650u, description: "If true, the laser fires at a position based on what AimingComponent wants. AimMods can be optionally added to modify the firing pattern")]
+	[DDLRegistration(0x2fc3f981u, description: "If true, the laser fires at a position based on what AimingComponent wants. AimMods can be optionally added to modify the firing pattern")]
 	public bool UseAimingComponent { get; set; } = false;
 
-	[DDLRegistration(0x6ad13650u, description: "If true, AimMods kick in during Targeting stage instead of just the Shooting phase of this combo")]
+	[DDLRegistration(0xceb7741cu, description: "If true, AimMods kick in during Targeting stage instead of just the Shooting phase of this combo")]
 	public bool StartAimModOnStateStart { get; set; } = false;
 
-	[DDLRegistration(0x6ad13650u, description: "If true, AimMods turn off after the Shooting phase of this combo")]
+	[DDLRegistration(0x7560b934u, description: "If true, AimMods turn off after the Shooting phase of this combo")]
 	public bool EndAimModsOnShootEnd { get; set; } = false;
 
-	[DDLRegistration(0x6ad13650u, description: "Mimics a shot every this amount of seconds once lasers start shooting by queuing WeaponBurstShotCountedEvent")]
+	[DDLRegistration(0xd7ef4376u, description: "Mimics a shot every this amount of seconds once lasers start shooting by queuing WeaponBurstShotCountedEvent")]
 	public float MimicShotRate { get; set; } = 0.25f;
 
-	[DDLRegistration(0x6ad13650u, description: "If true, aim at the ground to limit the maximum range of the beam")]
+	[DDLRegistration(0x52b09495u, description: "If true, aim at the ground to limit the maximum range of the beam")]
 	public bool LimitRange { get; set; } = false;
 
-	[DDLRegistration(0x6ad13650u)]
+	[DDLRegistration(0x6c79323fu)]
 	public float MinRange { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6ad13650u)]
+	[DDLRegistration(0x8a199ddeu)]
 	public float MaxRange { get; set; } = 10.00f;
 
-	[DDLRegistration(0x6ad13650u)]
+	[DDLRegistration(0x1d7694a1u)]
 	public List<AimModWrapper?> AimMods { get; set; } = [];
 
 	public new static LaserShotTypeAnimEventDriven Create(DDLObject ddl) => new(ddl);

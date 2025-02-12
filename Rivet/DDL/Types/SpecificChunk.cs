@@ -21,16 +21,16 @@ public class SpecificChunk : DDLObjectType, IDDLObjectType<SpecificChunk> {
 		OnlySpawnChunkOnAnimEvent = ddl.GetValue<bool>(0x073906c9u, OnlySpawnChunkOnAnimEvent);
 	}
 
-	[DDLRegistration(0xecc5f396u)]
+	[DDLRegistration(0x84a6b0c6u)]
 	public string? Joint { get; set; } = "";
 
-	[DDLRegistration(0xecc5f396u)]
+	[DDLRegistration(0x8c55bdefu)]
 	public RivetAssetId Chunk { get; set; } = default;
 
-	[DDLRegistration(0xecc5f396u)]
+	[DDLRegistration(0xd383f43au)]
 	public float SpawnChance { get; set; } = 1.00f;
 
-	[DDLRegistration(0xecc5f396u)]
+	[DDLRegistration(0x073906c9u)]
 	public bool OnlySpawnChunkOnAnimEvent { get; set; } = false;
 
 	public static SpecificChunk Create(DDLObject ddl) => new(ddl);

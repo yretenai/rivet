@@ -22,19 +22,19 @@ public class DamageModifierAddPrius : DamageModifierIncomingPrius, IDDLObjectTyp
 		DamageFilter = ddl.GetEnums<DamageTypesGame>(0xa75ecb2fu, DamageTypesGameValues.Lookup);
 	}
 
-	[DDLRegistration(0xc1294696u, "Add")]
+	[DDLRegistration(0xd74f5a2eu, "Add")]
 	public float Add { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc1294696u, "Add Status")]
+	[DDLRegistration(0xc9da197bu, "Add Status")]
 	public float AddStatus { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc1294696u, "Lifetime")]
+	[DDLRegistration(0xc7e68df8u, "Lifetime")]
 	public float Lifetime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc1294696u, "Apply Heal")]
+	[DDLRegistration(0xcc7e1cedu, "Apply Heal")]
 	public bool ApplyHeal { get; set; } = false;
 
-	[DDLRegistration(0xc1294696u, "Damage Type Filter")]
+	[DDLRegistration(0xa75ecb2fu, "Damage Type Filter")]
 	public List<DamageTypesGame> DamageFilter { get; set; } = [];
 
 	public new static DamageModifierAddPrius Create(DDLObject ddl) => new(ddl);

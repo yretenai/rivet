@@ -19,10 +19,10 @@ public class LightPlatforms : DDLObjectType, IDDLObjectType<LightPlatforms> {
 		PC = ddl.GetEnum<x30cc915a>(0xb45b56feu, x30cc915aValues.Lookup);
 	}
 
-	[DDLRegistration(0x96ab8127u, "PS5")]
+	[DDLRegistration(0x46c0523fu, "PS5")]
 	public x30cc915a PS5 { get; set; } = x30cc915a.All;
 
-	[DDLRegistration(0x96ab8127u, "PC")]
+	[DDLRegistration(0xb45b56feu, "PC")]
 	public x30cc915a PC { get; set; } = x30cc915a.All;
 
 	public static LightPlatforms Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class TimerActionPrius : DDLObjectType, IDDLObjectType<TimerActionPrius> 
 		ResetTimeOnTimeOut = ddl.GetValue<bool>(0x07a5504eu, ResetTimeOnTimeOut);
 	}
 
-	[DDLRegistration(0x57b86ca6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
-	[DDLRegistration(0x57b86ca6u, description: "Start Active?")]
+	[DDLRegistration(0x3e035e82u, description: "Start Active?")]
 	public bool StartActive { get; set; } = false;
 
-	[DDLRegistration(0x57b86ca6u, description: "Reset Time on Stop?")]
+	[DDLRegistration(0xb9dba3d4u, description: "Reset Time on Stop?")]
 	public bool ResetTimeOnStop { get; set; } = false;
 
-	[DDLRegistration(0x57b86ca6u, description: "Reset Time on Time Out?")]
+	[DDLRegistration(0x07a5504eu, description: "Reset Time on Time Out?")]
 	public bool ResetTimeOnTimeOut { get; set; } = false;
 
 	public static TimerActionPrius Create(DDLObject ddl) => new(ddl);

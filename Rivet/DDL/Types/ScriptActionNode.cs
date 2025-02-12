@@ -26,31 +26,31 @@ public class ScriptActionNode : DDLObjectType, IDDLObjectType<ScriptActionNode> 
 		PriusOverrides = ddl.GetString(0x3bc028ad) ?? PriusOverrides;
 	}
 
-	[DDLRegistration(0x19833458u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x19833458u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x19833458u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x19833458u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x19833458u)]
+	[DDLRegistration(0x7261c690u)]
 	public string? DefName { get; set; } = default;
 
-	[DDLRegistration(0x19833458u)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = false;
 
-	[DDLRegistration(0x19833458u)]
+	[DDLRegistration(0xfb359225u)]
 	public List<ScriptActionInputPlug?> InputPlugs { get; set; } = [];
 
-	[DDLRegistration(0x19833458u)]
+	[DDLRegistration(0x665ee1b8u)]
 	public List<ScriptActionVarPlug?> VarPlugs { get; set; } = [];
 
-	[DDLRegistration(0x19833458u)]
+	[DDLRegistration(0x3bc028adu)]
 	public string? PriusOverrides { get; set; } = default;
 
 	public static ScriptActionNode Create(DDLObject ddl) => new(ddl);

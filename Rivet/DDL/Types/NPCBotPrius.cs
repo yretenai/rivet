@@ -24,25 +24,25 @@ public class NPCBotPrius : BotPrius, IDDLObjectType<NPCBotPrius> {
 		MrsZurkonPlanetVariant = ddl.GetValue<bool>(0xf4875980u, MrsZurkonPlanetVariant);
 	}
 
-	[DDLRegistration(0x1960a88eu)]
+	[DDLRegistration(0x9db01684u)]
 	public bool InteractWithDimensionalPulses { get; set; } = false;
 
-	[DDLRegistration(0x1960a88eu)]
+	[DDLRegistration(0xc88a2737u)]
 	public DimensionalPulseTargetDamagePrius? PulseTargetPrius { get; set; } = default;
 
-	[DDLRegistration(0x1960a88eu, description: "if true, the npc will try to flee when near combat. This includes Fleeing to an NPCAnimClues")]
+	[DDLRegistration(0xbc953ba1u, description: "if true, the npc will try to flee when near combat. This includes Fleeing to an NPCAnimClues")]
 	public bool AllowFleeBehaviors { get; set; } = true;
 
-	[DDLRegistration(0x1960a88eu, description: "if true, the npc will be setup to in a similar way to hovering enemy bots with HoverStateComponent and using hovering behaviors")]
+	[DDLRegistration(0xaf869697u, description: "if true, the npc will be setup to in a similar way to hovering enemy bots with HoverStateComponent and using hovering behaviors")]
 	public bool IsHoveringBot { get; set; } = false;
 
-	[DDLRegistration(0x1960a88eu, description: "if true, will register will the audio horde tracking system.")]
+	[DDLRegistration(0xb4de3479u, description: "if true, will register will the audio horde tracking system.")]
 	public bool TrackAudioHorde { get; set; } = false;
 
-	[DDLRegistration(0x1960a88eu)]
+	[DDLRegistration(0x173737f9u)]
 	public bool UseCVC { get; set; } = true;
 
-	[DDLRegistration(0x1960a88eu)]
+	[DDLRegistration(0xf4875980u)]
 	public bool MrsZurkonPlanetVariant { get; set; } = false;
 
 	public new static NPCBotPrius Create(DDLObject ddl) => new(ddl);

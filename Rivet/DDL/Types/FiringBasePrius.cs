@@ -36,61 +36,61 @@ public class FiringBasePrius : DDLObjectType, IDDLObjectType<FiringBasePrius> {
 		BotConfigAiming = ddl.GetValue<RivetAssetId>(0x8d73a96bu, BotConfigAiming);
 	}
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0x3ae61082u)]
 	public BurstSequence? BurstSequence { get; set; } = default;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0xee73b5b3u)]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0x9e5cb03du)]
 	public float MinFiringDot { get; set; } = 0.97f;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0xb49295fau)]
 	public float ShortRange { get; set; } = 1.00f;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0x4a596da2u)]
 	public float IdealRange { get; set; } = 20.00f;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0x8d74c10fu)]
 	public float LongRange { get; set; } = 40.00f;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0x8a199ddeu)]
 	public float MaxRange { get; set; } = 100.00f;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0x9c24d08eu)]
 	public bool NeedsLos { get; set; } = true;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0xf2198cceu)]
 	public bool NeedsJob { get; set; } = false;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0xf36caef5u)]
 	public bool RankTargetLocs { get; set; } = false;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0xf2b63172u)]
 	public x4f5e74b9 AimType { get; set; } = x4f5e74b9.BestVisibleLocation;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0xfa0f2332u)]
 	public bool HoldFireForVictimStates { get; set; } = true;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0x64355aafu)]
 	public bool AvoidShootingFriends { get; set; } = true;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0x58a02877u)]
 	public float FireAtUnseenTargetsTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x84462aceu, description: "If AimType is kTargetLocation, target this particular location")]
+	[DDLRegistration(0x4a90422fu, description: "If AimType is kTargetLocation, target this particular location")]
 	public x457f748b TargetLocation { get; set; } = x457f748b.Unknown;
 
-	[DDLRegistration(0x84462aceu, description: "If the body part is kLocationNamed, this identifies the specific part")]
+	[DDLRegistration(0xb352ca76u, description: "If the body part is kLocationNamed, this identifies the specific part")]
 	public string? TargetLocationName { get; set; } = default;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0x7ed24ba4u)]
 	public AimingBasePrius? Aiming { get; set; } = default;
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0x1d7694a1u)]
 	public List<AimModWrapper?> AimMods { get; set; } = [];
 
-	[DDLRegistration(0x84462aceu)]
+	[DDLRegistration(0x8d73a96bu)]
 	public RivetAssetId BotConfigAiming { get; set; } = default;
 
 	public static FiringBasePrius Create(DDLObject ddl) => new(ddl);

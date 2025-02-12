@@ -21,16 +21,16 @@ public class NormalizeFloatNodeDef : MathNodeBaseDef, IDDLObjectType<NormalizeFl
 		Normalized = ddl.GetObject<OutputPlugFloat>(0xa22bde2eu);
 	}
 
-	[DDLRegistration(0xd6c0e8c8u, "Input", "The value we want to transform to fit somewhere in the [0, 1] range")]
+	[DDLRegistration(0xc17bfe16u, "Input", "The value we want to transform to fit somewhere in the [0, 1] range")]
 	public InputPlugFloat? Input { get; set; } = default;
 
-	[DDLRegistration(0xd6c0e8c8u, "Zero Value", "If the given Input is equal to this, the Normalized output will be 0")]
+	[DDLRegistration(0x01b39096u, "Zero Value", "If the given Input is equal to this, the Normalized output will be 0")]
 	public InputPlugFloat? ZeroValue { get; set; } = default;
 
-	[DDLRegistration(0xd6c0e8c8u, "One Value", "If the given Input is equal to this, the Normalized output will be 1")]
+	[DDLRegistration(0x0fccf972u, "One Value", "If the given Input is equal to this, the Normalized output will be 1")]
 	public InputPlugFloat? OneValue { get; set; } = default;
 
-	[DDLRegistration(0xd6c0e8c8u, "Normalized", "The normalized value in the range [0, 1]")]
+	[DDLRegistration(0xa22bde2eu, "Normalized", "The normalized value in the range [0, 1]")]
 	public OutputPlugFloat? Normalized { get; set; } = default;
 
 	public new static NormalizeFloatNodeDef Create(DDLObject ddl) => new(ddl);

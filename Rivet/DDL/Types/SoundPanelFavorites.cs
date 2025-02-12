@@ -19,10 +19,10 @@ public class SoundPanelFavorites : DDLObjectType, IDDLObjectType<SoundPanelFavor
 		FavoriteItems = ddl.GetDictionary<RivetAssetId, bool>(0xac854df8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
 	}
 
-	[DDLRegistration(0x99065be0u)]
+	[DDLRegistration(0xe69d9323u)]
 	public Dictionary<RivetAssetId, bool> FavoriteBanks { get; set; } = [];
 
-	[DDLRegistration(0x99065be0u)]
+	[DDLRegistration(0xac854df8u)]
 	public Dictionary<RivetAssetId, bool> FavoriteItems { get; set; } = [];
 
 	public static SoundPanelFavorites Create(DDLObject ddl) => new(ddl);

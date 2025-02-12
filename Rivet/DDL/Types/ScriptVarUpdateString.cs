@@ -18,7 +18,7 @@ public class ScriptVarUpdateString : DDLObjectType, IDDLObjectType<ScriptVarUpda
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0x00b95437u)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
 	public static ScriptVarUpdateString Create(DDLObject ddl) => new(ddl);

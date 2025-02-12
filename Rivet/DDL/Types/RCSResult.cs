@@ -20,13 +20,13 @@ public class RCSResult : DDLObjectType, IDDLObjectType<RCSResult> {
 		Stats = ddl.GetObjects<RCSDictionary>(0x4e14ab6bu);
 	}
 
-	[DDLRegistration(0xaa8a3353u, description: "Warnings encountered while running a command.")]
+	[DDLRegistration(0x93485b62u, description: "Warnings encountered while running a command.")]
 	public RCSMessage? Warnings { get; set; } = default;
 
-	[DDLRegistration(0xaa8a3353u, description: "Errors encountered while running a command.")]
+	[DDLRegistration(0x02291d7au, description: "Errors encountered while running a command.")]
 	public RCSMessage? Errors { get; set; } = default;
 
-	[DDLRegistration(0xaa8a3353u, description: "Array of key/value pairs for each file returned by the command.")]
+	[DDLRegistration(0x4e14ab6bu, description: "Array of key/value pairs for each file returned by the command.")]
 	public List<RCSDictionary?> Stats { get; set; } = [];
 
 	public static RCSResult Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ToggleStreamingVideoActionPrius : DDLObjectType, IDDLObjectType<Tog
 		RemoveMaterialOverridesOnPause = ddl.GetValue<bool>(0xc0292b0du, RemoveMaterialOverridesOnPause);
 	}
 
-	[DDLRegistration(0xa3205036u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Video;
 
-	[DDLRegistration(0xa3205036u)]
+	[DDLRegistration(0xc0292b0du)]
 	public bool RemoveMaterialOverridesOnPause { get; set; } = false;
 
 	public static ToggleStreamingVideoActionPrius Create(DDLObject ddl) => new(ddl);

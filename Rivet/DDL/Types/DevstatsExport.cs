@@ -19,10 +19,10 @@ public class DevstatsExport : DDLObjectType, IDDLObjectType<DevstatsExport> {
 		Path = ddl.GetValue<RivetAssetId>(0x3bc44bbfu, Path);
 	}
 
-	[DDLRegistration(0x1c3ba622u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x1c3ba622u)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public RivetAssetId Path { get; set; } = default;
 
 	public static DevstatsExport Create(DDLObject ddl) => new(ddl);

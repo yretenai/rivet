@@ -20,13 +20,13 @@ public class UDSWebApiStatRule : DDLObjectType, IDDLObjectType<UDSWebApiStatRule
 		Action = ddl.GetObject<UDSWebApiStatAction>(0x7e18c7c3u);
 	}
 
-	[DDLRegistration(0x3a9f0a7eu)]
+	[DDLRegistration(0xab4639fau)]
 	public int RuleId { get; set; } = 0;
 
-	[DDLRegistration(0x3a9f0a7eu)]
+	[DDLRegistration(0xbdda95ecu)]
 	public UDSWebApiStatCondition? Condition { get; set; } = default;
 
-	[DDLRegistration(0x3a9f0a7eu)]
+	[DDLRegistration(0x7e18c7c3u)]
 	public UDSWebApiStatAction? Action { get; set; } = default;
 
 	public static UDSWebApiStatRule Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PrioritizeTargetsEvent : EventBase, IDDLObjectType<PrioritizeTarget
 		TargetsGroup = ddl.GetValue<uint>(0xa34a0d00u, TargetsGroup);
 	}
 
-	[DDLRegistration(0xc4b1d6a9u)]
+	[DDLRegistration(0xa34a0d00u)]
 	public uint TargetsGroup { get; set; } = 0x00000000;
 
 	public new static PrioritizeTargetsEvent Create(DDLObject ddl) => new(ddl);

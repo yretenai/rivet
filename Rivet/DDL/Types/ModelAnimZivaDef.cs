@@ -20,13 +20,13 @@ public class ModelAnimZivaDef : DDLObjectType, IDDLObjectType<ModelAnimZivaDef> 
 		Looks = ddl.GetObjects<ModelAnimZivaLookDef>(0xec785832u);
 	}
 
-	[DDLRegistration(0xd5a3d24bu, "Zrt File", "The path to the zrt file")]
+	[DDLRegistration(0x140422cbu, "Zrt File", "The path to the zrt file")]
 	public RivetAssetId ZrtPath { get; set; } = default;
 
-	[DDLRegistration(0xd5a3d24bu, description: "The distance within which we consider a model vertex and a ziva vertex to be the same. (in millimeters)")]
+	[DDLRegistration(0xa65a54fau, description: "The distance within which we consider a model vertex and a ziva vertex to be the same. (in millimeters)")]
 	public float PositionTolerance { get; set; } = 0.10f;
 
-	[DDLRegistration(0xd5a3d24bu)]
+	[DDLRegistration(0xec785832u)]
 	public List<ModelAnimZivaLookDef?> Looks { get; set; } = [];
 
 	public static ModelAnimZivaDef Create(DDLObject ddl) => new(ddl);

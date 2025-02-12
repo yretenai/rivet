@@ -22,19 +22,19 @@ public class EnablePoolsResponseMessage : DDLObjectType, IDDLObjectType<EnablePo
 		PoolEnabledMask = ddl.GetValues<byte>(0x3b957553u);
 	}
 
-	[DDLRegistration(0x698dc6efu)]
+	[DDLRegistration(0x239eef0du)]
 	public ushort RequestId { get; set; } = 0x0000;
 
-	[DDLRegistration(0x698dc6efu)]
+	[DDLRegistration(0x87e83d61u)]
 	public byte LastMessage { get; set; } = 0x00;
 
-	[DDLRegistration(0x698dc6efu)]
+	[DDLRegistration(0x540841afu)]
 	public List<ushort> PoolIds { get; set; } = [];
 
-	[DDLRegistration(0x698dc6efu)]
+	[DDLRegistration(0x4b3b2283u)]
 	public List<byte> PoolGenerations { get; set; } = [];
 
-	[DDLRegistration(0x698dc6efu)]
+	[DDLRegistration(0x3b957553u)]
 	public List<byte> PoolEnabledMask { get; set; } = [];
 
 	public static EnablePoolsResponseMessage Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class LoadLevelActionPrius : DDLObjectType, IDDLObjectType<LoadLevelActio
 		DelayTime = ddl.GetValue<float>(0x68ee6562u, DelayTime);
 	}
 
-	[DDLRegistration(0x054c94c4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Game;
 
-	[DDLRegistration(0x054c94c4u, description: "Level asset to load.")]
+	[DDLRegistration(0x83b900d2u, description: "Level asset to load.")]
 	public RivetAssetId Level { get; set; } = default;
 
-	[DDLRegistration(0x054c94c4u, "Checkpoint", "Name of the checkpoint to load.")]
+	[DDLRegistration(0x71d061f1u, "Checkpoint", "Name of the checkpoint to load.")]
 	public string? CheckpointName { get; set; } = default;
 
-	[DDLRegistration(0x054c94c4u, "Delay Time", "Time before load begins.")]
+	[DDLRegistration(0x68ee6562u, "Delay Time", "Time before load begins.")]
 	public float DelayTime { get; set; } = 0.00f;
 
 	public static LoadLevelActionPrius Create(DDLObject ddl) => new(ddl);

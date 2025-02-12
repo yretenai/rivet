@@ -20,13 +20,13 @@ public class PhotomodeCameraDef : DDLObjectType, IDDLObjectType<PhotomodeCameraD
 		CameraType = ddl.GetObject<PhotomodeCameraBasePrius>(0x34041fcfu);
 	}
 
-	[DDLRegistration(0x3c9490b3u, description: "Unique identifier, may be used by code, so try not to change")]
+	[DDLRegistration(0x6eb3beb6u, description: "Unique identifier, may be used by code, so try not to change")]
 	public string? Name { get; set; } = "";
 
-	[DDLRegistration(0x3c9490b3u, description: "For a longer descriptive name or a comment")]
+	[DDLRegistration(0xe03811fdu, description: "For a longer descriptive name or a comment")]
 	public string? Description { get; set; } = "";
 
-	[DDLRegistration(0x3c9490b3u)]
+	[DDLRegistration(0x34041fcfu)]
 	public PhotomodeCameraBasePrius? CameraType { get; set; } = default;
 
 	public static PhotomodeCameraDef Create(DDLObject ddl) => new(ddl);

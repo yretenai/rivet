@@ -19,10 +19,10 @@ public class PhotoModeLightEnabledEvent : EventBase, IDDLObjectType<PhotoModeLig
 		EnableState = ddl.GetValue<bool>(0x617f6e35u, EnableState);
 	}
 
-	[DDLRegistration(0xdd3f729eu)]
+	[DDLRegistration(0x76f3bea1u)]
 	public int LightIndex { get; set; } = 0;
 
-	[DDLRegistration(0xdd3f729eu)]
+	[DDLRegistration(0x617f6e35u)]
 	public bool EnableState { get; set; } = false;
 
 	public new static PhotoModeLightEnabledEvent Create(DDLObject ddl) => new(ddl);

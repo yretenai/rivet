@@ -19,10 +19,10 @@ public class MaterialNodeInputSelectItem : DDLObjectType, IDDLObjectType<Materia
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0xb86fca3cu)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0xb86fca3cu)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
 	public static MaterialNodeInputSelectItem Create(DDLObject ddl) => new(ddl);

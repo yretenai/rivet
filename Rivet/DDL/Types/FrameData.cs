@@ -20,13 +20,13 @@ public class FrameData : DDLObjectType, IDDLObjectType<FrameData> {
 		FrameRef = ddl.GetObject<AssetReferenceDef>(0x8fc1c344u);
 	}
 
-	[DDLRegistration(0x4104c5c8u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x4104c5c8u)]
+	[DDLRegistration(0x2a3bb76au)]
 	public List<PhotoFrameUnlock?> Unlocks { get; set; } = [];
 
-	[DDLRegistration(0x4104c5c8u)]
+	[DDLRegistration(0x8fc1c344u)]
 	public AssetReferenceDef? FrameRef { get; set; } = default;
 
 	public static FrameData Create(DDLObject ddl) => new(ddl);

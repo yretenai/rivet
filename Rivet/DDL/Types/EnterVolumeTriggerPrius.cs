@@ -21,16 +21,16 @@ public class EnterVolumeTriggerPrius : DDLObjectType, IDDLObjectType<EnterVolume
 		OnExitEvent = ddl.GetObject<EventBase>(0xb339ee38u);
 	}
 
-	[DDLRegistration(0x28671ea9u)]
+	[DDLRegistration(0x6e8dac3cu)]
 	public xda924f99 OnEnterMode { get; set; } = xda924f99.OnAnyEnter;
 
-	[DDLRegistration(0x28671ea9u)]
+	[DDLRegistration(0x873ea426u)]
 	public EventBase? OnEnterEvent { get; set; } = default;
 
-	[DDLRegistration(0x28671ea9u)]
+	[DDLRegistration(0x071e4e55u)]
 	public x1343dca9 OnExitMode { get; set; } = x1343dca9.OnAnyExit;
 
-	[DDLRegistration(0x28671ea9u)]
+	[DDLRegistration(0xb339ee38u)]
 	public EventBase? OnExitEvent { get; set; } = default;
 
 	public static EnterVolumeTriggerPrius Create(DDLObject ddl) => new(ddl);

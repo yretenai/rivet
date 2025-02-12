@@ -18,7 +18,7 @@ public class InputPlugWeaponMacroType : InputPlugBaseDef, IDDLObjectType<InputPl
 		Value = ddl.GetObject<WeaponMacroTypePlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x339696f4u)]
+	[DDLRegistration(0x042494f5u)]
 	public WeaponMacroTypePlug? Value { get; set; } = default;
 
 	public new static InputPlugWeaponMacroType Create(DDLObject ddl) => new(ddl);

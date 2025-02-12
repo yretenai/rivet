@@ -20,13 +20,13 @@ public class DifficultyStartEvent : EventBase, IDDLObjectType<DifficultyStartEve
 		Difficulty = ddl.GetString(0x605d31d6) ?? Difficulty;
 	}
 
-	[DDLRegistration(0x1af4d2b1u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x1af4d2b1u)]
+	[DDLRegistration(0x7d1d5d0eu)]
 	public string? SegmentId { get; set; } = default;
 
-	[DDLRegistration(0x1af4d2b1u)]
+	[DDLRegistration(0x605d31d6u)]
 	public string? Difficulty { get; set; } = default;
 
 	public new static DifficultyStartEvent Create(DDLObject ddl) => new(ddl);

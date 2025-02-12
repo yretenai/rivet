@@ -20,13 +20,13 @@ public class AddStatModifierEffectPrius : ScriptedShotEffectBasePrius, IDDLObjec
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x91f90128u)]
+	[DDLRegistration(0x10283f91u)]
 	public x67c7527d Stat { get; set; } = x67c7527d.Damage;
 
-	[DDLRegistration(0x91f90128u)]
+	[DDLRegistration(0xc6d13976u)]
 	public x2d67b08a Op { get; set; } = x2d67b08a.Multiply;
 
-	[DDLRegistration(0x91f90128u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
 	public new static AddStatModifierEffectPrius Create(DDLObject ddl) => new(ddl);

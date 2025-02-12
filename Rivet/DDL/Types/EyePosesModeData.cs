@@ -18,7 +18,7 @@ public class EyePosesModeData : DDLObjectType, IDDLObjectType<EyePosesModeData> 
 		EyePoses = ddl.GetObjects<EyePosesDefaultsData>(0xfa868624u);
 	}
 
-	[DDLRegistration(0x7dc3d15du)]
+	[DDLRegistration(0xfa868624u)]
 	public List<EyePosesDefaultsData?> EyePoses { get; set; } = [];
 
 	public static EyePosesModeData Create(DDLObject ddl) => new(ddl);

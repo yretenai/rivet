@@ -20,13 +20,13 @@ public class DamageModifierDamageHashPrius : DamageModifierIncomingPrius, IDDLOb
 		Exclude = ddl.GetValue<bool>(0x63688441u, Exclude);
 	}
 
-	[DDLRegistration(0xd039ea17u, description: "Compare incoming damage's DamageHash against items in the list.  Both this and HashList are tested if defined")]
+	[DDLRegistration(0xc765ccd5u, description: "Compare incoming damage's DamageHash against items in the list.  Both this and HashList are tested if defined")]
 	public List<string?> DamageHashes { get; set; } = [];
 
-	[DDLRegistration(0xd039ea17u, description: "Type: HashListConfig.  Processed as DamageHashes above, both are tested if defined.  Useful for sharing consistent list across multiple actors.")]
+	[DDLRegistration(0x50a6559fu, description: "Type: HashListConfig.  Processed as DamageHashes above, both are tested if defined.  Useful for sharing consistent list across multiple actors.")]
 	public RivetAssetId HashList { get; set; } = default;
 
-	[DDLRegistration(0xd039ea17u, description: "If true then we don't take damage from things in DamageHashes, if false then we only take damage from things in DamageHashes")]
+	[DDLRegistration(0x63688441u, description: "If true then we don't take damage from things in DamageHashes, if false then we only take damage from things in DamageHashes")]
 	public bool Exclude { get; set; } = false;
 
 	public new static DamageModifierDamageHashPrius Create(DDLObject ddl) => new(ddl);

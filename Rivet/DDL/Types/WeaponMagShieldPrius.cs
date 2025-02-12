@@ -20,13 +20,13 @@ public class WeaponMagShieldPrius : WeaponGamePrius, IDDLObjectType<WeaponMagShi
 		EndColor = ddl.GetObject<DDLVector3>(0x2e7126c2u);
 	}
 
-	[DDLRegistration(0xef5bd680u, description: "How long must the trigger be held in order for a blast wave to fire when the trigger is released.")]
+	[DDLRegistration(0x93ece8e1u, description: "How long must the trigger be held in order for a blast wave to fire when the trigger is released.")]
 	public float BlastWaveMinTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xef5bd680u, description: "Shield color when it has no caught shots (and can catch shots).")]
+	[DDLRegistration(0x1e3d240du, description: "Shield color when it has no caught shots (and can catch shots).")]
 	public DDLVector3? StartColor { get; set; } = default;
 
-	[DDLRegistration(0xef5bd680u, description: "Shield color when it is unable to catch shots (either full or unable to catch).")]
+	[DDLRegistration(0x2e7126c2u, description: "Shield color when it is unable to catch shots (either full or unable to catch).")]
 	public DDLVector3? EndColor { get; set; } = default;
 
 	public new static WeaponMagShieldPrius Create(DDLObject ddl) => new(ddl);

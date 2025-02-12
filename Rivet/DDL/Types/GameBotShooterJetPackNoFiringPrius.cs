@@ -18,7 +18,7 @@ public class GameBotShooterJetPackNoFiringPrius : GameBotShooterJetPackPrius, ID
 		UseGrenadierMovement = ddl.GetValue<bool>(0x55f9961du, UseGrenadierMovement);
 	}
 
-	[DDLRegistration(0x339c2513u)]
+	[DDLRegistration(0x55f9961du)]
 	public bool UseGrenadierMovement { get; set; } = false;
 
 	public new static GameBotShooterJetPackNoFiringPrius Create(DDLObject ddl) => new(ddl);

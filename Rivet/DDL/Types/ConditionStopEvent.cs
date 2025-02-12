@@ -18,7 +18,7 @@ public class ConditionStopEvent : EventBase, IDDLObjectType<ConditionStopEvent> 
 		ConditionEnum = ddl.GetValue<uint>(0x95c0f3b9u, ConditionEnum);
 	}
 
-	[DDLRegistration(0x66972d50u)]
+	[DDLRegistration(0x95c0f3b9u)]
 	public uint ConditionEnum { get; set; } = 0x00000000;
 
 	public new static ConditionStopEvent Create(DDLObject ddl) => new(ddl);

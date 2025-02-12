@@ -18,7 +18,7 @@ public class StreakSet : DDLObjectType, IDDLObjectType<StreakSet> {
 		Streaks = ddl.GetObjects<StreakData>(0x584fbe44u);
 	}
 
-	[DDLRegistration(0xcf6320e2u)]
+	[DDLRegistration(0x584fbe44u)]
 	public List<StreakData?> Streaks { get; set; } = [];
 
 	public static StreakSet Create(DDLObject ddl) => new(ddl);

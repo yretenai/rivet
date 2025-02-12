@@ -21,16 +21,16 @@ public class ShotIcicleBombPrius : SimpleShotPrius, IDDLObjectType<ShotIcicleBom
 		IceCloudElementActor = ddl.GetValue<RivetAssetId>(0xead8db4au, IceCloudElementActor);
 	}
 
-	[DDLRegistration(0x5c4d6f7fu)]
+	[DDLRegistration(0x40a8a60cu)]
 	public ShotMotionIcicleBombPrius? ExplosionMotionData { get; set; } = default;
 
-	[DDLRegistration(0x5c4d6f7fu)]
+	[DDLRegistration(0xb06dc6b0u)]
 	public ShotDamageData? ExplosionDamage { get; set; } = default;
 
-	[DDLRegistration(0x5c4d6f7fu, "Ice Cloud Actor")]
+	[DDLRegistration(0x6f96b007u, "Ice Cloud Actor")]
 	public RivetAssetId IceCloudActor { get; set; } = default;
 
-	[DDLRegistration(0x5c4d6f7fu, "Ice Cloud Element Actor")]
+	[DDLRegistration(0xead8db4au, "Ice Cloud Element Actor")]
 	public RivetAssetId IceCloudElementActor { get; set; } = default;
 
 	public new static ShotIcicleBombPrius Create(DDLObject ddl) => new(ddl);

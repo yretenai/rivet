@@ -19,10 +19,10 @@ public class ActivityClueConditionTimeInCurrentAwarenessState : DDLObjectType, I
 		MaxTime = ddl.GetValue<float>(0x920f0ef5u, MaxTime);
 	}
 
-	[DDLRegistration(0x320f8bedu, "Min Time", "The valid time window starts after the bot has been in their awareness state for this many seconds. -1 includes cases where the bot somehow doesn't have a state")]
+	[DDLRegistration(0x91fceebau, "Min Time", "The valid time window starts after the bot has been in their awareness state for this many seconds. -1 includes cases where the bot somehow doesn't have a state")]
 	public float MinTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x320f8bedu, "Max Time", "The valid time window ends after the bot has been in their awareness state for this many seconds. -1 = no max time")]
+	[DDLRegistration(0x920f0ef5u, "Max Time", "The valid time window ends after the bot has been in their awareness state for this many seconds. -1 = no max time")]
 	public float MaxTime { get; set; } = 5.00f;
 
 	public static ActivityClueConditionTimeInCurrentAwarenessState Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class FilterPair : DDLObjectType, IDDLObjectType<FilterPair> {
 		FilterId = ddl.GetEnum<xfdd79442>(0xd404a13fu, xfdd79442Values.Lookup);
 	}
 
-	[DDLRegistration(0xd8e17746u, "Group ID")]
+	[DDLRegistration(0xec6beb88u, "Group ID")]
 	public x6571cd70 GroupId { get; set; } = x6571cd70.Elevation;
 
-	[DDLRegistration(0xd8e17746u, "Filter ID")]
+	[DDLRegistration(0xd404a13fu, "Filter ID")]
 	public xfdd79442 FilterId { get; set; } = xfdd79442.Any;
 
 	public static FilterPair Create(DDLObject ddl) => new(ddl);

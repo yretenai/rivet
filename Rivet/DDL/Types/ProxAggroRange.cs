@@ -19,10 +19,10 @@ public class ProxAggroRange : DDLObjectType, IDDLObjectType<ProxAggroRange> {
 		AggroAtRange = ddl.GetValue<float>(0x704da834u, AggroAtRange);
 	}
 
-	[DDLRegistration(0x286665aau, description: "Targets at this xz-range and the y-range below will have AggroAtRange prox aggro.")]
+	[DDLRegistration(0x8ad49688u, description: "Targets at this xz-range and the y-range below will have AggroAtRange prox aggro.")]
 	public float Range { get; set; } = 5.00f;
 
-	[DDLRegistration(0x286665aau, description: "Targets at Range will this amount of prox aggro.")]
+	[DDLRegistration(0x704da834u, description: "Targets at Range will this amount of prox aggro.")]
 	public float AggroAtRange { get; set; } = 0.00f;
 
 	public static ProxAggroRange Create(DDLObject ddl) => new(ddl);

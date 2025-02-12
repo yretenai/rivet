@@ -21,16 +21,16 @@ public class EyeBeamFiringPattern : DDLObjectType, IDDLObjectType<EyeBeamFiringP
 		MaxShotDelay = ddl.GetValue<float>(0x6a87f279u, MaxShotDelay);
 	}
 
-	[DDLRegistration(0x1f3089b2u)]
+	[DDLRegistration(0xcdb7266au)]
 	public byte MinShotCount { get; set; } = 0x01;
 
-	[DDLRegistration(0x1f3089b2u)]
+	[DDLRegistration(0x5dc43680u)]
 	public byte MaxShotCount { get; set; } = 0x05;
 
-	[DDLRegistration(0x1f3089b2u)]
+	[DDLRegistration(0xfaf4e293u)]
 	public float MinShotDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f3089b2u)]
+	[DDLRegistration(0x6a87f279u)]
 	public float MaxShotDelay { get; set; } = 0.50f;
 
 	public static EyeBeamFiringPattern Create(DDLObject ddl) => new(ddl);

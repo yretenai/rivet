@@ -18,7 +18,7 @@ public class StringMessageEvent : EventBase, IDDLObjectType<StringMessageEvent> 
 		Message = ddl.GetString(0xb7575347) ?? Message;
 	}
 
-	[DDLRegistration(0xc672d159u)]
+	[DDLRegistration(0xb7575347u)]
 	public string? Message { get; set; } = default;
 
 	public new static StringMessageEvent Create(DDLObject ddl) => new(ddl);

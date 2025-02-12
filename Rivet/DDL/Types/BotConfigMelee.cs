@@ -27,34 +27,34 @@ public class BotConfigMelee : ConfigBase, IDDLObjectType<BotConfigMelee> {
 		AnimDamage = ddl.GetObject<AnimDamageHandlerPrius>(0x105b657bu);
 	}
 
-	[DDLRegistration(0xce273072u, "Dist to start melee", "Trigger the melee when you're this far away.")]
+	[DDLRegistration(0x75a49560u, "Dist to start melee", "Trigger the melee when you're this far away.")]
 	public float AttackRange { get; set; } = 2.00f;
 
-	[DDLRegistration(0xce273072u, "Dist at end of melee", "Try to end the melee animation this far away.")]
+	[DDLRegistration(0x4a596da2u, "Dist at end of melee", "Try to end the melee animation this far away.")]
 	public float IdealRange { get; set; } = 0.30f;
 
-	[DDLRegistration(0xce273072u, "Max Suck Dist", "How far we can error-correct to keep up if we'll falling short.")]
+	[DDLRegistration(0x0d34a55fu, "Max Suck Dist", "How far we can error-correct to keep up if we'll falling short.")]
 	public float MaxSuckDist { get; set; } = 0.50f;
 
-	[DDLRegistration(0xce273072u, "Can Flank")]
+	[DDLRegistration(0x10305686u, "Can Flank")]
 	public bool CanFlank { get; set; } = false;
 
-	[DDLRegistration(0xce273072u, "Flank Percent")]
+	[DDLRegistration(0x3198dcb6u, "Flank Percent")]
 	public float FlankPercent { get; set; } = 50.00f;
 
-	[DDLRegistration(0xce273072u, "Do Delay Attacks", "Whether to delay successive attacks based on the minimum time between attacks value below.")]
+	[DDLRegistration(0xe6b8ca8du, "Do Delay Attacks", "Whether to delay successive attacks based on the minimum time between attacks value below.")]
 	public bool DoDelayAttacks { get; set; } = false;
 
-	[DDLRegistration(0xce273072u, "Min Time Between Attacks", "The minimum time between successive attacks (note: from start of the attack to start of the next attack), used to add a delay between attacks.")]
+	[DDLRegistration(0xa8651169u, "Min Time Between Attacks", "The minimum time between successive attacks (note: from start of the attack to start of the next attack), used to add a delay between attacks.")]
 	public float MinTimeBetweenAttacks { get; set; } = 1.00f;
 
-	[DDLRegistration(0xce273072u, "Pre Melee Duration", "Duration to time-scale the melee 'tell' animation to, if that driver is present")]
+	[DDLRegistration(0xffde51e7u, "Pre Melee Duration", "Duration to time-scale the melee 'tell' animation to, if that driver is present")]
 	public float PreMeleeDuration { get; set; } = 0.50f;
 
-	[DDLRegistration(0xce273072u)]
+	[DDLRegistration(0xf2a6d993u)]
 	public BotMeleeAttackData? MeleeAttackData { get; set; } = default;
 
-	[DDLRegistration(0xce273072u)]
+	[DDLRegistration(0x105b657bu)]
 	public AnimDamageHandlerPrius? AnimDamage { get; set; } = default;
 
 	public new static BotConfigMelee Create(DDLObject ddl) => new(ddl);

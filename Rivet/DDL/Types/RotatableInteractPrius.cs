@@ -20,13 +20,13 @@ public class RotatableInteractPrius : SlottedInteractObjectPrius, IDDLObjectType
 		MaxAngle = ddl.GetValue<float>(0x191f829eu, MaxAngle);
 	}
 
-	[DDLRegistration(0x9c07c74fu, "Rotation Steps")]
+	[DDLRegistration(0xde97799au, "Rotation Steps")]
 	public uint RotationSteps { get; set; } = 0x000000ff;
 
-	[DDLRegistration(0x9c07c74fu, "Speed multiplier")]
+	[DDLRegistration(0xe5938d1eu, "Speed multiplier")]
 	public float RotationSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9c07c74fu, "Max Rotation Angle")]
+	[DDLRegistration(0x191f829eu, "Max Rotation Angle")]
 	public float MaxAngle { get; set; } = 360.00f;
 
 	public new static RotatableInteractPrius Create(DDLObject ddl) => new(ddl);

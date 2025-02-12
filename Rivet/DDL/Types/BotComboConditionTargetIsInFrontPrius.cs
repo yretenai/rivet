@@ -21,16 +21,16 @@ public class BotComboConditionTargetIsInFrontPrius : BotComboConditionBasePrius,
 		ReverseLogic = ddl.GetValue<bool>(0x049c47ccu, ReverseLogic);
 	}
 
-	[DDLRegistration(0x19fa774du, "Front Dot Tolerance", "The amount that target needs to be from perfectly in front of user to be considered in front ( 0.0f would mean anywhere in front of user and 1.0f is directly behind[do not use 1.0f] )")]
+	[DDLRegistration(0x2b1a5114u, "Front Dot Tolerance", "The amount that target needs to be from perfectly in front of user to be considered in front ( 0.0f would mean anywhere in front of user and 1.0f is directly behind[do not use 1.0f] )")]
 	public float FrontDotTolerance { get; set; } = 0.50f;
 
-	[DDLRegistration(0x19fa774du, "Check front in only XZ", "If true, we will check the dot product with respect to xz plane")]
+	[DDLRegistration(0x7bc7f470u, "Check front in only XZ", "If true, we will check the dot product with respect to xz plane")]
 	public bool XZOnly { get; set; } = true;
 
-	[DDLRegistration(0x19fa774du, "Check Left instead of Front", "If true, we will do same check but from the actor's left instead of forward")]
+	[DDLRegistration(0xcfc4c150u, "Check Left instead of Front", "If true, we will do same check but from the actor's left instead of forward")]
 	public bool CheckLeftNotFront { get; set; } = false;
 
-	[DDLRegistration(0x19fa774du, "Reverse logic")]
+	[DDLRegistration(0x049c47ccu, "Reverse logic")]
 	public bool ReverseLogic { get; set; } = false;
 
 	public new static BotComboConditionTargetIsInFrontPrius Create(DDLObject ddl) => new(ddl);

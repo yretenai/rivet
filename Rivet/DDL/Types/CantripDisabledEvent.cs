@@ -18,7 +18,7 @@ public class CantripDisabledEvent : EventBase, IDDLObjectType<CantripDisabledEve
 		TriggerIndex = ddl.GetValue<int>(0xee73b5b3u, TriggerIndex);
 	}
 
-	[DDLRegistration(0x696e38b3u)]
+	[DDLRegistration(0xee73b5b3u)]
 	public int TriggerIndex { get; set; } = 0;
 
 	public new static CantripDisabledEvent Create(DDLObject ddl) => new(ddl);

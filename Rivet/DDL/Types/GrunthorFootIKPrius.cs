@@ -19,10 +19,10 @@ public class GrunthorFootIKPrius : DDLObjectType, IDDLObjectType<GrunthorFootIKP
 		IKChainID = ddl.GetStrings(0x81b8f1aeu);
 	}
 
-	[DDLRegistration(0xdf4ed28au)]
+	[DDLRegistration(0x351d165eu)]
 	public List<string?> FootJoint { get; set; } = [];
 
-	[DDLRegistration(0xdf4ed28au)]
+	[DDLRegistration(0x81b8f1aeu)]
 	public List<string?> IKChainID { get; set; } = [];
 
 	public static GrunthorFootIKPrius Create(DDLObject ddl) => new(ddl);

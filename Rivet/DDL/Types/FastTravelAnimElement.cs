@@ -20,13 +20,13 @@ public class FastTravelAnimElement : DDLObjectType, IDDLObjectType<FastTravelAni
 		UseCameraAnimation = ddl.GetValue<bool>(0xdc481867u, UseCameraAnimation);
 	}
 
-	[DDLRegistration(0xd8680dd0u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd8680dd0u)]
+	[DDLRegistration(0x45f98c1eu)]
 	public string? AnimDriverName { get; set; } = default;
 
-	[DDLRegistration(0xd8680dd0u)]
+	[DDLRegistration(0xdc481867u)]
 	public bool UseCameraAnimation { get; set; } = true;
 
 	public static FastTravelAnimElement Create(DDLObject ddl) => new(ddl);

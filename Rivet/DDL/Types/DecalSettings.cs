@@ -28,37 +28,37 @@ public class DecalSettings : DDLObjectType, IDDLObjectType<DecalSettings> {
 		DecalEnable = ddl.GetValue<bool>(0x41ef9dcbu, DecalEnable);
 	}
 
-	[DDLRegistration(0x7ae3fffau)]
+	[DDLRegistration(0x6b4ff582u)]
 	public bool OptimizedGenerationEnable { get; set; } = true;
 
-	[DDLRegistration(0x7ae3fffau)]
+	[DDLRegistration(0x59fa78fau)]
 	public bool MultiThreadingEnable { get; set; } = true;
 
-	[DDLRegistration(0x7ae3fffau)]
+	[DDLRegistration(0xf2c2e0a4u)]
 	public bool IgnoreFailedAllocations { get; set; } = false;
 
-	[DDLRegistration(0x7ae3fffau)]
+	[DDLRegistration(0x411c50e4u)]
 	public float JobTimeBudget { get; set; } = 0.01f;
 
-	[DDLRegistration(0x7ae3fffau)]
+	[DDLRegistration(0x51298f23u)]
 	public int MaxRuntimeDecalModels { get; set; } = 128;
 
-	[DDLRegistration(0x7ae3fffau)]
+	[DDLRegistration(0x347e7958u)]
 	public int MaxRuntimeDecalVertices { get; set; } = 24576;
 
-	[DDLRegistration(0x7ae3fffau)]
+	[DDLRegistration(0x2fd3d70fu)]
 	public float SkinnedModelBiasMeters { get; set; } = 0.01f;
 
-	[DDLRegistration(0x7ae3fffau)]
+	[DDLRegistration(0x409c0f89u)]
 	public int MaxDecalsPerFrame { get; set; } = 8;
 
-	[DDLRegistration(0x7ae3fffau)]
+	[DDLRegistration(0x7fb989d0u)]
 	public int MaxDecalModels { get; set; } = 256;
 
-	[DDLRegistration(0x7ae3fffau)]
+	[DDLRegistration(0x6dc6ee65u)]
 	public int MaxDecalJobs { get; set; } = 1024;
 
-	[DDLRegistration(0x7ae3fffau)]
+	[DDLRegistration(0x41ef9dcbu)]
 	public bool DecalEnable { get; set; } = true;
 
 	public static DecalSettings Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class CustomChunk : DDLObjectType, IDDLObjectType<CustomChunk> {
 		LookGroup = ddl.GetString(0xa286144c) ?? LookGroup;
 	}
 
-	[DDLRegistration(0x8548b717u)]
+	[DDLRegistration(0xa286144cu)]
 	public string? LookGroup { get; set; } = default;
 
 	public static CustomChunk Create(DDLObject ddl) => new(ddl);

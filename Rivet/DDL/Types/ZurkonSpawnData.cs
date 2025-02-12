@@ -29,40 +29,40 @@ public class ZurkonSpawnData : ActorSpawnData, IDDLObjectType<ZurkonSpawnData> {
 		VOConfigAssetId = ddl.GetValue<RivetAssetId>(0xac5bca76u, VOConfigAssetId);
 	}
 
-	[DDLRegistration(0x8223226au, description: "AssetId for the asset we're spawning, if spawning an instance of an actor file")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning, if spawning an instance of an actor file")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8223226au)]
+	[DDLRegistration(0x6ff81f3eu)]
 	public DDLTransform? SpawnMtx { get; set; } = default;
 
-	[DDLRegistration(0x8223226au)]
+	[DDLRegistration(0x7cc10157u)]
 	public x02c2b51d FamilyType { get; set; } = x02c2b51d.Dad;
 
-	[DDLRegistration(0x8223226au)]
+	[DDLRegistration(0x108d4906u)]
 	public uint NumShots { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8223226au)]
+	[DDLRegistration(0xc518cd0au)]
 	public float HitPoints { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8223226au)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8223226au)]
+	[DDLRegistration(0xefcca1c6u)]
 	public float FiringInterval { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8223226au)]
+	[DDLRegistration(0x0cb474a3u)]
 	public bool IsRespawn { get; set; } = false;
 
-	[DDLRegistration(0x8223226au, description: "ActorHandle data for the hero that spawned Zurkon")]
+	[DDLRegistration(0x6151ad8fu, description: "ActorHandle data for the hero that spawned Zurkon")]
 	public uint OwnerHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8223226au)]
+	[DDLRegistration(0x902af590u)]
 	public uint WeaponId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8223226au)]
+	[DDLRegistration(0x5329bd21u)]
 	public RivetAssetId ShotConfigAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8223226au)]
+	[DDLRegistration(0xac5bca76u)]
 	public RivetAssetId VOConfigAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static ZurkonSpawnData Create(DDLObject ddl) => new(ddl);

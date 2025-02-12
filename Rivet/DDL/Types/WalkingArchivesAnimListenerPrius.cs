@@ -19,10 +19,10 @@ public class WalkingArchivesAnimListenerPrius : DDLObjectType, IDDLObjectType<Wa
 		AnimEventTimes = ddl.GetValues<float>(0x7ab02beau);
 	}
 
-	[DDLRegistration(0x30059b19u, description: "Link to the Walking Archives actor.")]
+	[DDLRegistration(0x18635149u, description: "Link to the Walking Archives actor.")]
 	public RivetAssetId Archives { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x30059b19u)]
+	[DDLRegistration(0x7ab02beau)]
 	public List<float> AnimEventTimes { get; set; } = [];
 
 	public static WalkingArchivesAnimListenerPrius Create(DDLObject ddl) => new(ddl);

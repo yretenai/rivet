@@ -18,7 +18,7 @@ public class TargetChangedEvent : EventBase, IDDLObjectType<TargetChangedEvent> 
 		TargetActorHandle = ddl.GetValue<uint>(0xa68ca01fu, TargetActorHandle);
 	}
 
-	[DDLRegistration(0xa9f8e6a1u)]
+	[DDLRegistration(0xa68ca01fu)]
 	public uint TargetActorHandle { get; set; } = 0x00000000;
 
 	public new static TargetChangedEvent Create(DDLObject ddl) => new(ddl);

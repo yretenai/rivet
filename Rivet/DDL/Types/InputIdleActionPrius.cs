@@ -21,16 +21,16 @@ public class InputIdleActionPrius : DDLObjectType, IDDLObjectType<InputIdleActio
 		AutoStartTimer = ddl.GetValue<bool>(0xb4d076bfu, AutoStartTimer);
 	}
 
-	[DDLRegistration(0x7af9f92au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x7af9f92au, description: "Fire a signal to the OnWarnIdle plug when input has been idle for this long (seconds). -1 means don't fire the OnWarnIdle signal.")]
+	[DDLRegistration(0x96e3beb4u, description: "Fire a signal to the OnWarnIdle plug when input has been idle for this long (seconds). -1 means don't fire the OnWarnIdle signal.")]
 	public float WarnIdleTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x7af9f92au, description: "Fire a signal to the OnMaxIdle plug when input has been idle for this long (seconds). -1 means don't fire the OnMaxIdle signal.")]
+	[DDLRegistration(0x81685bc0u, description: "Fire a signal to the OnMaxIdle plug when input has been idle for this long (seconds). -1 means don't fire the OnMaxIdle signal.")]
 	public float MaxIdleTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x7af9f92au, description: "False: Disable timer when this node is initialized.")]
+	[DDLRegistration(0xb4d076bfu, description: "False: Disable timer when this node is initialized.")]
 	public bool AutoStartTimer { get; set; } = true;
 
 	public static InputIdleActionPrius Create(DDLObject ddl) => new(ddl);

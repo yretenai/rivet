@@ -18,7 +18,7 @@ public class AddressBarDragAndDrop : DDLObjectType, IDDLObjectType<AddressBarDra
 		AssetPath = ddl.GetValue<RivetAssetId>(0x0efa614bu, AssetPath);
 	}
 
-	[DDLRegistration(0x9e286846u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
 	public static AddressBarDragAndDrop Create(DDLObject ddl) => new(ddl);

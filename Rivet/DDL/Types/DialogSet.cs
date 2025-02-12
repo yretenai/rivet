@@ -19,10 +19,10 @@ public class DialogSet : DDLObjectType, IDDLObjectType<DialogSet> {
 		LoopType = ddl.GetEnum<x39725a2d>(0x684191aau, x39725a2dValues.Lookup);
 	}
 
-	[DDLRegistration(0x64a3fde2u, "Dialog Group")]
+	[DDLRegistration(0x74938804u, "Dialog Group")]
 	public DialogGroup? Group { get; set; } = default;
 
-	[DDLRegistration(0x64a3fde2u, "Loop Type")]
+	[DDLRegistration(0x684191aau, "Loop Type")]
 	public x39725a2d LoopType { get; set; } = x39725a2d.Repeat;
 
 	public static DialogSet Create(DDLObject ddl) => new(ddl);

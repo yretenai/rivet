@@ -27,34 +27,34 @@ public class PhotoLightMoveOrbitData : DDLObjectType, IDDLObjectType<PhotoLightM
 		MoveScaleTime = ddl.GetValue<float>(0xfa31f80bu, MoveScaleTime);
 	}
 
-	[DDLRegistration(0x471d75f4u, description: "Closest distance from the center point")]
+	[DDLRegistration(0x448e693au, description: "Closest distance from the center point")]
 	public float MinDistance { get; set; } = 0.20f;
 
-	[DDLRegistration(0x471d75f4u, description: "Furthest distance from the center point")]
+	[DDLRegistration(0x88831235u, description: "Furthest distance from the center point")]
 	public float MaxDistance { get; set; } = 20.00f;
 
-	[DDLRegistration(0x471d75f4u, description: "Lowest position above the origin.")]
+	[DDLRegistration(0x9ed620e3u, description: "Lowest position above the origin.")]
 	public float MinHeight { get; set; } = -20.00f;
 
-	[DDLRegistration(0x471d75f4u, description: "Highest position above the origin.")]
+	[DDLRegistration(0x493d92a2u, description: "Highest position above the origin.")]
 	public float MaxHeight { get; set; } = 20.00f;
 
-	[DDLRegistration(0x471d75f4u, description: "Adjust horizontal orbit rate")]
+	[DDLRegistration(0x780e5b22u, description: "Adjust horizontal orbit rate")]
 	public float OrbitRateScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x471d75f4u, description: "Adjust vertical movement rate")]
+	[DDLRegistration(0xe5460610u, description: "Adjust vertical movement rate")]
 	public float UpDownScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x471d75f4u, description: "Adjust near-far movement rate")]
+	[DDLRegistration(0xd7b722f2u, description: "Adjust near-far movement rate")]
 	public float NearFarScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x471d75f4u, description: "Initial movement rate scale")]
+	[DDLRegistration(0x9f89367au, description: "Initial movement rate scale")]
 	public float StartMoveScale { get; set; } = 0.50f;
 
-	[DDLRegistration(0x471d75f4u, description: "Final movement rate scale")]
+	[DDLRegistration(0xff4a5e78u, description: "Final movement rate scale")]
 	public float FinalMoveScale { get; set; } = 3.00f;
 
-	[DDLRegistration(0x471d75f4u, description: "Time for movement scale to reach final rate")]
+	[DDLRegistration(0xfa31f80bu, description: "Time for movement scale to reach final rate")]
 	public float MoveScaleTime { get; set; } = 1.00f;
 
 	public static PhotoLightMoveOrbitData Create(DDLObject ddl) => new(ddl);

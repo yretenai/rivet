@@ -26,31 +26,31 @@ public class ToneMapSettingsDef : DDLObjectType, IDDLObjectType<ToneMapSettingsD
 		AutoAdjustTime = ddl.GetValue<float>(0x3100df10u, AutoAdjustTime);
 	}
 
-	[DDLRegistration(0x3fa10636u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x3fa10636u)]
+	[DDLRegistration(0xad15935fu)]
 	public float LuminanceKeyValue { get; set; } = 0.50f;
 
-	[DDLRegistration(0x3fa10636u)]
+	[DDLRegistration(0x719ebaddu)]
 	public float ExposureBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3fa10636u)]
+	[DDLRegistration(0x8c85dc35u)]
 	public float AdaptationStrength { get; set; } = 0.50f;
 
-	[DDLRegistration(0x3fa10636u)]
+	[DDLRegistration(0x2ec0ad91u)]
 	public float AdaptationStops { get; set; } = 6.00f;
 
-	[DDLRegistration(0x3fa10636u, "Adaptation Anchor (EVs)")]
+	[DDLRegistration(0xe3f74ff1u, "Adaptation Anchor (EVs)")]
 	public float AdaptationAnchor { get; set; } = 11.00f;
 
-	[DDLRegistration(0x3fa10636u, "Adaptation Range (EVs)")]
+	[DDLRegistration(0x84f2787cu, "Adaptation Range (EVs)")]
 	public float AdaptationRange { get; set; } = 3.00f;
 
-	[DDLRegistration(0x3fa10636u, "Adaptation Bias (EVs)")]
+	[DDLRegistration(0x8f716ce3u, "Adaptation Bias (EVs)")]
 	public float AdaptationBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3fa10636u)]
+	[DDLRegistration(0x3100df10u)]
 	public float AutoAdjustTime { get; set; } = 0.50f;
 
 	public static ToneMapSettingsDef Create(DDLObject ddl) => new(ddl);

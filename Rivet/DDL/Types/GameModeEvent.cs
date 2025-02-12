@@ -18,7 +18,7 @@ public class GameModeEvent : EventBase, IDDLObjectType<GameModeEvent> {
 		Team = ddl.GetEnum<xc115d639>(0xf47066afu, xc115d639Values.Lookup);
 	}
 
-	[DDLRegistration(0x616f3e9bu)]
+	[DDLRegistration(0xf47066afu)]
 	public xc115d639 Team { get; set; } = xc115d639.None;
 
 	public new static GameModeEvent Create(DDLObject ddl) => new(ddl);

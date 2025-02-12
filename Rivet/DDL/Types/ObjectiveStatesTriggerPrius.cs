@@ -20,13 +20,13 @@ public class ObjectiveStatesTriggerPrius : BaseCustomOverlayTriggerPrius, IDDLOb
 		ObjectiveStates = ddl.GetBitset<ObjectiveStatesBitfield>(0xd9297359u, ObjectiveStatesBitfieldValues.Lookup);
 	}
 
-	[DDLRegistration(0x21105eedu)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x21105eedu)]
+	[DDLRegistration(0x58746b9bu)]
 	public string? ObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0x21105eedu)]
+	[DDLRegistration(0xd9297359u)]
 	public ObjectiveStatesBitfield ObjectiveStates { get; set; } = (ObjectiveStatesBitfield) 0x00000002;
 
 	public new static ObjectiveStatesTriggerPrius Create(DDLObject ddl) => new(ddl);

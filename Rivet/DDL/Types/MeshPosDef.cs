@@ -18,7 +18,7 @@ public class MeshPosDef : DDLObjectType, IDDLObjectType<MeshPosDef> {
 		Pos = ddl.GetValues<float>(0xaa8ccf65u);
 	}
 
-	[DDLRegistration(0x3579701fu)]
+	[DDLRegistration(0xaa8ccf65u)]
 	public List<float> Pos { get; set; } = [];
 
 	public static MeshPosDef Create(DDLObject ddl) => new(ddl);

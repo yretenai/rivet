@@ -18,7 +18,7 @@ public class SwitchEditorModeInput : DDLObjectType, IDDLObjectType<SwitchEditorM
 		NewMode = ddl.GetEnum<xb5725fd2>(0x42781e41u, xb5725fd2Values.Lookup);
 	}
 
-	[DDLRegistration(0x95f8e943u)]
+	[DDLRegistration(0x42781e41u)]
 	public xb5725fd2 NewMode { get; set; } = xb5725fd2.SceneMode;
 
 	public static SwitchEditorModeInput Create(DDLObject ddl) => new(ddl);

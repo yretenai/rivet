@@ -19,10 +19,10 @@ public class PortalIntroSourcePrius : DDLObjectType, IDDLObjectType<PortalIntroS
 		AdditionalSpawnOffsets = ddl.GetObjects<DDLVector3>(0x2bfe773fu);
 	}
 
-	[DDLRegistration(0x40cb194du)]
+	[DDLRegistration(0x35d6dd97u)]
 	public RivetAssetId Portal { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x40cb194du)]
+	[DDLRegistration(0x2bfe773fu)]
 	public List<DDLVector3?> AdditionalSpawnOffsets { get; set; } = [];
 
 	public static PortalIntroSourcePrius Create(DDLObject ddl) => new(ddl);

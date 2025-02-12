@@ -19,10 +19,10 @@ public class NodeGraphLibrarySubGraphData : DDLObjectType, IDDLObjectType<NodeGr
 		GraphTuid = ddl.GetValue<RivetAssetId>(0xd597c0dfu, GraphTuid);
 	}
 
-	[DDLRegistration(0xe7cab6b6u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xe7cab6b6u)]
+	[DDLRegistration(0xd597c0dfu)]
 	public RivetAssetId GraphTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static NodeGraphLibrarySubGraphData Create(DDLObject ddl) => new(ddl);

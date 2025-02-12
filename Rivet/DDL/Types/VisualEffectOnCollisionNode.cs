@@ -26,31 +26,31 @@ public class VisualEffectOnCollisionNode : DDLObjectType, IDDLObjectType<VisualE
 		AssetName = ddl.GetValue<RivetAssetId>(0x5b8d9442u, AssetName);
 	}
 
-	[DDLRegistration(0x780a14eeu)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x780a14eeu)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x780a14eeu)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x780a14eeu, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x780a14eeu)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<VisualEffectNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0x780a14eeu)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<VisualEffectNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
-	[DDLRegistration(0x780a14eeu)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x780a14eeu, "Activation Chance")]
+	[DDLRegistration(0x06240a1eu, "Activation Chance")]
 	public float ActivationChance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x780a14eeu, "Conduit Asset")]
+	[DDLRegistration(0x5b8d9442u, "Conduit Asset")]
 	public RivetAssetId AssetName { get; set; } = default;
 
 	public static VisualEffectOnCollisionNode Create(DDLObject ddl) => new(ddl);

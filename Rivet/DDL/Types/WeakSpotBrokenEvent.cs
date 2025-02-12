@@ -19,10 +19,10 @@ public class WeakSpotBrokenEvent : EventBase, IDDLObjectType<WeakSpotBrokenEvent
 		LocatorName = ddl.GetString(0x5814524d) ?? LocatorName;
 	}
 
-	[DDLRegistration(0x35d7dfaeu, description: "Name hash of weakspot.")]
+	[DDLRegistration(0xc2f561e2u, description: "Name hash of weakspot.")]
 	public uint NameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x35d7dfaeu, description: "Name of locator or joint weakspot is attached to.")]
+	[DDLRegistration(0x5814524du, description: "Name of locator or joint weakspot is attached to.")]
 	public string? LocatorName { get; set; } = default;
 
 	public new static WeakSpotBrokenEvent Create(DDLObject ddl) => new(ddl);

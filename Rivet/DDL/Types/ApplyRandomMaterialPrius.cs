@@ -21,16 +21,16 @@ public class ApplyRandomMaterialPrius : DDLObjectType, IDDLObjectType<ApplyRando
 		MaterialIsSynced = ddl.GetValue<bool>(0xb74f3a06u, MaterialIsSynced);
 	}
 
-	[DDLRegistration(0x02b1b05cu, "Replace base material?", "If set, we'll replace the base material with the randomly selected one. Otherwise, please specify the material to replace below.")]
+	[DDLRegistration(0x062ea78du, "Replace base material?", "If set, we'll replace the base material with the randomly selected one. Otherwise, please specify the material to replace below.")]
 	public bool ReplaceBaseMaterial { get; set; } = true;
 
-	[DDLRegistration(0x02b1b05cu, "Material to replace", "The material we will be replacing with our random material if we aren't set to replace the base material (if not set, will just apply new material on the actor without replacing the old one). ")]
+	[DDLRegistration(0xbf0f3060u, "Material to replace", "The material we will be replacing with our random material if we aren't set to replace the base material (if not set, will just apply new material on the actor without replacing the old one). ")]
 	public RivetAssetId MaterialToReplace { get; set; } = default;
 
-	[DDLRegistration(0x02b1b05cu, "Material List", "A list of materials that are eligible for us to pick from to apply to this actor on load.")]
+	[DDLRegistration(0xdc256aaau, "Material List", "A list of materials that are eligible for us to pick from to apply to this actor on load.")]
 	public List<ApplyRandomMaterialInfo?> MaterialList { get; set; } = [];
 
-	[DDLRegistration(0x02b1b05cu, "Sync Material?", "Sync which material to apply?")]
+	[DDLRegistration(0xb74f3a06u, "Sync Material?", "Sync which material to apply?")]
 	public bool MaterialIsSynced { get; set; } = true;
 
 	public static ApplyRandomMaterialPrius Create(DDLObject ddl) => new(ddl);

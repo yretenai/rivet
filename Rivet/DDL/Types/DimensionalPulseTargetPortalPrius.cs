@@ -18,7 +18,7 @@ public class DimensionalPulseTargetPortalPrius : DimensionalPulseTargetPrius, ID
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x82e214adu, description: "How long the portal should remain open after being hit. -1 = stay open until the next hit.")]
+	[DDLRegistration(0x7c5e3db0u, description: "How long the portal should remain open after being hit. -1 = stay open until the next hit.")]
 	public float Duration { get; set; } = -1.00f;
 
 	public new static DimensionalPulseTargetPortalPrius Create(DDLObject ddl) => new(ddl);

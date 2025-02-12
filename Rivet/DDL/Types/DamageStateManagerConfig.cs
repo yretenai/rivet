@@ -18,7 +18,7 @@ public class DamageStateManagerConfig : ConfigBase, IDDLObjectType<DamageStateMa
 		Data = ddl.GetObject<DamageStateData>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0x1faa31feu)]
+	[DDLRegistration(0x9d6333d3u)]
 	public DamageStateData? Data { get; set; } = default;
 
 	public new static DamageStateManagerConfig Create(DDLObject ddl) => new(ddl);

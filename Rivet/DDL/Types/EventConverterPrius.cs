@@ -18,7 +18,7 @@ public class EventConverterPrius : DDLObjectType, IDDLObjectType<EventConverterP
 		EventMappings = ddl.GetObjects<EventConverterElement>(0x213a8b08u);
 	}
 
-	[DDLRegistration(0x75e20236u, "Event maps")]
+	[DDLRegistration(0x213a8b08u, "Event maps")]
 	public List<EventConverterElement?> EventMappings { get; set; } = [];
 
 	public static EventConverterPrius Create(DDLObject ddl) => new(ddl);

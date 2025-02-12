@@ -19,10 +19,10 @@ public class AssetMigrationProject : DDLObjectType, IDDLObjectType<AssetMigratio
 		Root = ddl.GetString(0x266439eb) ?? Root;
 	}
 
-	[DDLRegistration(0x404f1093u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x404f1093u)]
+	[DDLRegistration(0x266439ebu)]
 	public string? Root { get; set; } = default;
 
 	public static AssetMigrationProject Create(DDLObject ddl) => new(ddl);

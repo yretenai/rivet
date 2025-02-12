@@ -25,28 +25,28 @@ public class PlanetMap : DDLObjectType, IDDLObjectType<PlanetMap> {
 		MapCellSize = ddl.GetValue<float>(0x984330fau, MapCellSize);
 	}
 
-	[DDLRegistration(0xed022e47u, "UI Map Display Object", "UIDisplayObjectType to be used for this Map.")]
+	[DDLRegistration(0xb9f88372u, "UI Map Display Object", "UIDisplayObjectType to be used for this Map.")]
 	public UIDisplayObjectType Map { get; set; } = UIDisplayObjectType.None;
 
-	[DDLRegistration(0xed022e47u, "UI Map Texture", "Texture to be used for this Map.")]
+	[DDLRegistration(0x2b5a5668u, "UI Map Texture", "Texture to be used for this Map.")]
 	public RivetAssetId MapTexture { get; set; } = default;
 
-	[DDLRegistration(0xed022e47u, "UI Map Min", "XZ world position of top-left point visible for this Map.")]
+	[DDLRegistration(0x92ca8f03u, "UI Map Min", "XZ world position of top-left point visible for this Map.")]
 	public DDLVector3? MapMin { get; set; } = default;
 
-	[DDLRegistration(0xed022e47u, "UI Map Max", "XZ world position of bottom-right point visible for this Map.")]
+	[DDLRegistration(0xaec7b05au, "UI Map Max", "XZ world position of bottom-right point visible for this Map.")]
 	public DDLVector3? MapMax { get; set; } = default;
 
-	[DDLRegistration(0xed022e47u, "UI Map Zoom Max", "Max zoom out distance for this Map.")]
+	[DDLRegistration(0x0dbec4b7u, "UI Map Zoom Max", "Max zoom out distance for this Map.")]
 	public float MapZoomMax { get; set; } = 500.00f;
 
-	[DDLRegistration(0xed022e47u, "UI Map Zoom Default", "Default zoom out distance for this Map.")]
+	[DDLRegistration(0x8cad3241u, "UI Map Zoom Default", "Default zoom out distance for this Map.")]
 	public float MapZoomDefault { get; set; } = 500.00f;
 
-	[DDLRegistration(0xed022e47u, "UI Map Reveal Size", "Reveal radius for Map fog-of-war.")]
+	[DDLRegistration(0xc57f1793u, "UI Map Reveal Size", "Reveal radius for Map fog-of-war.")]
 	public float MapRevealSize { get; set; } = 20.00f;
 
-	[DDLRegistration(0xed022e47u, "UI Map Cell Size", "Cell size for Map fog-of-war.")]
+	[DDLRegistration(0x984330fau, "UI Map Cell Size", "Cell size for Map fog-of-war.")]
 	public float MapCellSize { get; set; } = 2.00f;
 
 	public static PlanetMap Create(DDLObject ddl) => new(ddl);

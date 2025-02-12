@@ -44,85 +44,85 @@ public class SceneSettings : DDLObjectType, IDDLObjectType<SceneSettings> {
 		IncludeCurvesInSceneDatabase = ddl.GetValue<bool>(0xa4334876u, IncludeCurvesInSceneDatabase);
 	}
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of model instances in the scene")]
+	[DDLRegistration(0x670e6acdu, description: "The maximum number of model instances in the scene")]
 	public int ModelInstMax { get; set; } = 98304;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of skinned model instances in the scene")]
+	[DDLRegistration(0xe1990026u, description: "The maximum number of skinned model instances in the scene")]
 	public int ModelSkinMax { get; set; } = 5120;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of skinned model subsets in the scene")]
+	[DDLRegistration(0x84839ac2u, description: "The maximum number of skinned model subsets in the scene")]
 	public int ModelSkinSubsetMax { get; set; } = 16384;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of model subsets tracked for velocity generation")]
+	[DDLRegistration(0x10c6463cu, description: "The maximum number of model subsets tracked for velocity generation")]
 	public int ModelSkinPrevSubsetMax { get; set; } = 10240;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of static objects registered to the gpu at any time")]
+	[DDLRegistration(0x923f3f55u, description: "The maximum number of static objects registered to the gpu at any time")]
 	public int GpuRegistryStaticObjMax { get; set; } = 204800;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of pre-frame allocated objects registered to the gpu at any time")]
+	[DDLRegistration(0x23ffa7b8u, description: "The maximum number of pre-frame allocated objects registered to the gpu at any time")]
 	public int GpuRegistryPerFrameObjMax { get; set; } = 4096;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of lights in the scene")]
+	[DDLRegistration(0x04dd5705u, description: "The maximum number of lights in the scene")]
 	public int LightMax { get; set; } = 4096;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of volumes in the scene")]
+	[DDLRegistration(0xce5f30bfu, description: "The maximum number of volumes in the scene")]
 	public int VolumeMax { get; set; } = 4096;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of dynamic decals in the scene")]
+	[DDLRegistration(0xb91c791eu, description: "The maximum number of dynamic decals in the scene")]
 	public int DynamicDecalMax { get; set; } = 1024;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of static decals in the scene")]
+	[DDLRegistration(0xaf51e2beu, description: "The maximum number of static decals in the scene")]
 	public int StaticDecalMax { get; set; } = 2048;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of curves in the scene")]
+	[DDLRegistration(0x19ed3922u, description: "The maximum number of curves in the scene")]
 	public int CurveMax { get; set; } = 4096;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of visual effect instances in the scene")]
+	[DDLRegistration(0x3efd236cu, description: "The maximum number of visual effect instances in the scene")]
 	public int VisualEffectInstMax { get; set; } = 4096;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of impostors in the scene")]
+	[DDLRegistration(0xddae0619u, description: "The maximum number of impostors in the scene")]
 	public int ImpostorMax { get; set; } = 4096;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of terrain instances in the scene")]
+	[DDLRegistration(0x92617421u, description: "The maximum number of terrain instances in the scene")]
 	public int TerrainMax { get; set; } = 128;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of components in the scene")]
+	[DDLRegistration(0xe25f3626u, description: "The maximum number of components in the scene")]
 	public int ComponentMax { get; set; } = 16384;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of components entries in the scene")]
+	[DDLRegistration(0x0d59cfdfu, description: "The maximum number of components entries in the scene")]
 	public int ComponentEntryMax { get; set; } = 16384;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum allocation size for a block of components (component size x block count)")]
+	[DDLRegistration(0x706324f3u, description: "The maximum allocation size for a block of components (component size x block count)")]
 	public int ComponentBlockSizeMax { get; set; } = 262144;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of actors in the scene")]
+	[DDLRegistration(0x29a1ee63u, description: "The maximum number of actors in the scene")]
 	public int ActorMax { get; set; } = 16384;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of actor groups in the scene")]
+	[DDLRegistration(0xad9c49cau, description: "The maximum number of actor groups in the scene")]
 	public int ActorGroupMax { get; set; } = 2048;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of script vars in the scene")]
+	[DDLRegistration(0x717b3a5bu, description: "The maximum number of script vars in the scene")]
 	public int ScriptVarMax { get; set; } = 2048;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The maximum number of uniquely named signal relays in the scene")]
+	[DDLRegistration(0x1f35bf44u, description: "The maximum number of uniquely named signal relays in the scene")]
 	public int SignalRelayMax { get; set; } = 512;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The max size of the dynamic decal heap")]
+	[DDLRegistration(0xfecaea6fu, description: "The max size of the dynamic decal heap")]
 	public int DecalHeapMax { get; set; } = 1572864;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The max number of event handlers per-thread that can be added or removed")]
+	[DDLRegistration(0xc4c044fdu, description: "The max number of event handlers per-thread that can be added or removed")]
 	public int DeferredEventHandlerMax { get; set; } = 256;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The fraction of model insts that could require a ModelRenderInfo")]
+	[DDLRegistration(0x134a3433u, description: "The fraction of model insts that could require a ModelRenderInfo")]
 	public float ModelRenderInfoRatio { get; set; } = 0.12f;
 
-	[DDLRegistration(0xe9b7dd0du, description: "The fraction of model insts that could have composite materials assigned")]
+	[DDLRegistration(0x72286098u, description: "The fraction of model insts that could have composite materials assigned")]
 	public float ModelCompositeMatRatio { get; set; } = 0.03f;
 
-	[DDLRegistration(0xe9b7dd0du)]
+	[DDLRegistration(0xc94173adu)]
 	public int ModelSubsetSortJobsMax { get; set; } = 255;
 
-	[DDLRegistration(0xe9b7dd0du, description: "Whether or not curves are automatically included in the scene database")]
+	[DDLRegistration(0xa4334876u, description: "Whether or not curves are automatically included in the scene database")]
 	public bool IncludeCurvesInSceneDatabase { get; set; } = false;
 
 	public static SceneSettings Create(DDLObject ddl) => new(ddl);

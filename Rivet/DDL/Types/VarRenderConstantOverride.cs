@@ -19,10 +19,10 @@ public class VarRenderConstantOverride : DDLObjectType, IDDLObjectType<VarRender
 		Value = ddl.GetObject<RenderConstantOverride>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x57da4d58u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x57da4d58u)]
+	[DDLRegistration(0x042494f5u)]
 	public RenderConstantOverride? Value { get; set; } = default;
 
 	public static VarRenderConstantOverride Create(DDLObject ddl) => new(ddl);

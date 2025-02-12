@@ -21,16 +21,16 @@ public class ObjSysUnlock : DDLObjectType, IDDLObjectType<ObjSysUnlock> {
 		ObjectiveName = ddl.GetString(0x58746b9b) ?? ObjectiveName;
 	}
 
-	[DDLRegistration(0xd52a9f12u)]
+	[DDLRegistration(0x08b3f742u)]
 	public x9aa8a36a LockType { get; set; } = x9aa8a36a.Unlock;
 
-	[DDLRegistration(0xd52a9f12u)]
+	[DDLRegistration(0x1b816c65u)]
 	public x5e401570 Trigger { get; set; } = x5e401570.OnComplete;
 
-	[DDLRegistration(0xd52a9f12u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0xd52a9f12u, "ObjectiveName (Optional)", "Leave blank if this is a mission trigger")]
+	[DDLRegistration(0x58746b9bu, "ObjectiveName (Optional)", "Leave blank if this is a mission trigger")]
 	public string? ObjectiveName { get; set; } = default;
 
 	public static ObjSysUnlock Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class UICollectibleTypeRuinToken : UICollectibleTypeBase, IDDLObjectType<
 		DialogueLine = ddl.GetString(0x21617c3c) ?? DialogueLine;
 	}
 
-	[DDLRegistration(0x2bd9a2b6u, "Dialogue Line", "Dialogue line for this lorb.")]
+	[DDLRegistration(0x21617c3cu, "Dialogue Line", "Dialogue line for this lorb.")]
 	public string? DialogueLine { get; set; } = default;
 
 	public new static UICollectibleTypeRuinToken Create(DDLObject ddl) => new(ddl);

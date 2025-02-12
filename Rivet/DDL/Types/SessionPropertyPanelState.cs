@@ -19,10 +19,10 @@ public class SessionPropertyPanelState : DDLObjectType, IDDLObjectType<SessionPr
 		CollapsedPanels = ddl.GetDictionary<RivetAssetId, string>(0x9091ab86, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetString(mapId));
 	}
 
-	[DDLRegistration(0xb3b794f3u)]
+	[DDLRegistration(0x69cd7022u)]
 	public Dictionary<RivetAssetId, string?> ScrollTo { get; set; } = [];
 
-	[DDLRegistration(0xb3b794f3u)]
+	[DDLRegistration(0x9091ab86u)]
 	public Dictionary<RivetAssetId, string?> CollapsedPanels { get; set; } = [];
 
 	public static SessionPropertyPanelState Create(DDLObject ddl) => new(ddl);

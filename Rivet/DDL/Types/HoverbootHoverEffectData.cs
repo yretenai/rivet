@@ -20,13 +20,13 @@ public class HoverbootHoverEffectData : DDLObjectType, IDDLObjectType<HoverbootH
 		FastSpeedThreshold = ddl.GetValue<float>(0x874f9bedu, FastSpeedThreshold);
 	}
 
-	[DDLRegistration(0x0f7ba80du, description: "Actor to use for hover effects.")]
+	[DDLRegistration(0xc5286fc4u, description: "Actor to use for hover effects.")]
 	public RivetAssetId EffectActor { get; set; } = default;
 
-	[DDLRegistration(0x0f7ba80du, description: "Turn off hover effects above this height. (meters)")]
+	[DDLRegistration(0x36763b4fu, description: "Turn off hover effects above this height. (meters)")]
 	public float HeightAboveGroundMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0f7ba80du, description: "Threshold for fast hover effect. (m/s)")]
+	[DDLRegistration(0x874f9bedu, description: "Threshold for fast hover effect. (m/s)")]
 	public float FastSpeedThreshold { get; set; } = 15.00f;
 
 	public static HoverbootHoverEffectData Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class SpawnInPlacePrius : DDLObjectType, IDDLObjectType<SpawnInPlacePrius
 		LifeTime = ddl.GetValue<float>(0x67d422c6u, LifeTime);
 	}
 
-	[DDLRegistration(0x9f98f5a0u, "Replacement Actor", "Actor that is spawned in place of this actor.")]
+	[DDLRegistration(0x9187654bu, "Replacement Actor", "Actor that is spawned in place of this actor.")]
 	public RivetAssetId SpawnActor { get; set; } = default;
 
-	[DDLRegistration(0x9f98f5a0u)]
+	[DDLRegistration(0xf28cbe41u)]
 	public SpawnTimeSelect SpawnTime { get; set; } = SpawnTimeSelect.OnDestroyedEvent;
 
-	[DDLRegistration(0x9f98f5a0u)]
+	[DDLRegistration(0x67d422c6u)]
 	public float LifeTime { get; set; } = 10.00f;
 
 	public static SpawnInPlacePrius Create(DDLObject ddl) => new(ddl);

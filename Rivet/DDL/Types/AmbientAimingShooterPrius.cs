@@ -28,37 +28,37 @@ public class AmbientAimingShooterPrius : AmbientShooterPrius, IDDLObjectType<Amb
 		GameplayDegPitchMax = ddl.GetValue<float>(0x4473127cu, GameplayDegPitchMax);
 	}
 
-	[DDLRegistration(0x06c407dcu)]
+	[DDLRegistration(0x586df607u)]
 	public string? AimAnimName { get; set; } = "Aim_Move";
 
-	[DDLRegistration(0x06c407dcu)]
+	[DDLRegistration(0x1f571875u)]
 	public string? FireAnimName { get; set; } = "";
 
-	[DDLRegistration(0x06c407dcu, description: "Optional joint/locator to use for aiming.  If not specified, it uses the shot spawners emitter")]
+	[DDLRegistration(0x957966c1u, description: "Optional joint/locator to use for aiming.  If not specified, it uses the shot spawners emitter")]
 	public string? AimLocatorName { get; set; } = "";
 
-	[DDLRegistration(0x06c407dcu, "Animated Yaw Min", "Animated minimum yaw in degrees")]
+	[DDLRegistration(0xac2d9a7bu, "Animated Yaw Min", "Animated minimum yaw in degrees")]
 	public float DegYawMin { get; set; } = -90.00f;
 
-	[DDLRegistration(0x06c407dcu, "Animated Yaw Max", "Animated maximum yaw in degrees")]
+	[DDLRegistration(0x9020a522u, "Animated Yaw Max", "Animated maximum yaw in degrees")]
 	public float DegYawMax { get; set; } = 90.00f;
 
-	[DDLRegistration(0x06c407dcu, "Animated Pitch Min", "Animated minimum pitch in degrees")]
+	[DDLRegistration(0x9456c3a0u, "Animated Pitch Min", "Animated minimum pitch in degrees")]
 	public float DegPitchMin { get; set; } = -90.00f;
 
-	[DDLRegistration(0x06c407dcu, "Animated Pitch Max", "Animated minimum pitch in degrees")]
+	[DDLRegistration(0xa85bfcf9u, "Animated Pitch Max", "Animated minimum pitch in degrees")]
 	public float DegPitchMax { get; set; } = 90.00f;
 
-	[DDLRegistration(0x06c407dcu, "Gameplay Yaw Min", "Optional ability to make yaw range smaller than animated range.")]
+	[DDLRegistration(0xb45a1c5eu, "Gameplay Yaw Min", "Optional ability to make yaw range smaller than animated range.")]
 	public float GameplayDegYawMin { get; set; } = -180.00f;
 
-	[DDLRegistration(0x06c407dcu, "Gameplay Yaw Max", "Optional ability to make yaw range smaller than animated range.")]
+	[DDLRegistration(0x88572307u, "Gameplay Yaw Max", "Optional ability to make yaw range smaller than animated range.")]
 	public float GameplayDegYawMax { get; set; } = 180.00f;
 
-	[DDLRegistration(0x06c407dcu, "Gameplay Pitch Min", "Optional ability to make pitch range smaller than animated range.")]
+	[DDLRegistration(0x787e2d25u, "Gameplay Pitch Min", "Optional ability to make pitch range smaller than animated range.")]
 	public float GameplayDegPitchMin { get; set; } = -180.00f;
 
-	[DDLRegistration(0x06c407dcu, "Gameplay Pitch Max", "Optional ability to make pitch range smaller than animated range.")]
+	[DDLRegistration(0x4473127cu, "Gameplay Pitch Max", "Optional ability to make pitch range smaller than animated range.")]
 	public float GameplayDegPitchMax { get; set; } = 180.00f;
 
 	public new static AmbientAimingShooterPrius Create(DDLObject ddl) => new(ddl);

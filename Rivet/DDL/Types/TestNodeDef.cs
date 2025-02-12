@@ -21,16 +21,16 @@ public class TestNodeDef : NodeBaseDef, IDDLObjectType<TestNodeDef> {
 		DebugName = ddl.GetString(0x4ef19112) ?? DebugName;
 	}
 
-	[DDLRegistration(0x384e758cu)]
+	[DDLRegistration(0x6a84a393u)]
 	public InputPlugInt? In { get; set; } = default;
 
-	[DDLRegistration(0x384e758cu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public InputPlugString? Name { get; set; } = default;
 
-	[DDLRegistration(0x384e758cu)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugInt? Out { get; set; } = default;
 
-	[DDLRegistration(0x384e758cu)]
+	[DDLRegistration(0x4ef19112u)]
 	public string? DebugName { get; set; } = default;
 
 	public new static TestNodeDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class IntrospectionInstanceEntry : DDLObjectType, IDDLObjectType<Introspe
 		BSphere = ddl.GetObject<DDLVector4>(0x63382398u);
 	}
 
-	[DDLRegistration(0x5a0592f8u)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5a0592f8u)]
+	[DDLRegistration(0x63382398u)]
 	public DDLVector4? BSphere { get; set; } = default;
 
 	public static IntrospectionInstanceEntry Create(DDLObject ddl) => new(ddl);

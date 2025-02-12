@@ -18,7 +18,7 @@ public class AnimFacialExpressionUpdateData : DDLObjectType, IDDLObjectType<Anim
 		Elems = ddl.GetDictionary<RivetAssetId, AnimFacialExpressionDef>(0xa810b7fd, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimFacialExpressionDef>(mapId));
 	}
 
-	[DDLRegistration(0x57d61a6du)]
+	[DDLRegistration(0xa810b7fdu)]
 	public Dictionary<RivetAssetId, AnimFacialExpressionDef?> Elems { get; set; } = [];
 
 	public static AnimFacialExpressionUpdateData Create(DDLObject ddl) => new(ddl);

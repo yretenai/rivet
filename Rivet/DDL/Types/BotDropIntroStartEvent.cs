@@ -18,7 +18,7 @@ public class BotDropIntroStartEvent : EventBase, IDDLObjectType<BotDropIntroStar
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0xfdbfc862u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
 	public new static BotDropIntroStartEvent Create(DDLObject ddl) => new(ddl);

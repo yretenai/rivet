@@ -18,7 +18,7 @@ public class PerfSpecGetActionPrius : DDLObjectType, IDDLObjectType<PerfSpecGetA
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x4a423e91u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Game;
 
 	public static PerfSpecGetActionPrius Create(DDLObject ddl) => new(ddl);

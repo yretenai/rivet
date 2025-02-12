@@ -18,7 +18,7 @@ public class ShotMotionBataliaMissilePrius : DispersingShotMotionPrius, IDDLObje
 		OffScreenSpeed = ddl.GetValue<float>(0x4eb4158au, OffScreenSpeed);
 	}
 
-	[DDLRegistration(0x1e41d721u)]
+	[DDLRegistration(0x4eb4158au)]
 	public float OffScreenSpeed { get; set; } = 5.00f;
 
 	public new static ShotMotionBataliaMissilePrius Create(DDLObject ddl) => new(ddl);

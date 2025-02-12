@@ -18,7 +18,7 @@ public class ScriptGraphLibraryMimeData : DDLObjectType, IDDLObjectType<ScriptGr
 		ScriptGraphData = ddl.GetObjects<ScriptGraphLibraryData>(0xaad42c74u);
 	}
 
-	[DDLRegistration(0xa0256dc5u)]
+	[DDLRegistration(0xaad42c74u)]
 	public List<ScriptGraphLibraryData?> ScriptGraphData { get; set; } = [];
 
 	public static ScriptGraphLibraryMimeData Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SetActorAnimDriverEngineItem : DDLObjectType, IDDLObjectType<SetAct
 		AnimDriverName = ddl.GetString(0x45f98c1e) ?? AnimDriverName;
 	}
 
-	[DDLRegistration(0xf71d0961u)]
+	[DDLRegistration(0x8cc61e85u)]
 	public bool AddLayer { get; set; } = false;
 
-	[DDLRegistration(0xf71d0961u)]
+	[DDLRegistration(0x45f98c1eu)]
 	public string? AnimDriverName { get; set; } = default;
 
 	public static SetActorAnimDriverEngineItem Create(DDLObject ddl) => new(ddl);

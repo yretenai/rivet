@@ -24,25 +24,25 @@ public class DepthOfFieldProcessorPrius : DDLObjectType, IDDLObjectType<DepthOfF
 		DeactivateTime = ddl.GetValue<float>(0x1890a394u, DeactivateTime);
 	}
 
-	[DDLRegistration(0xde05e0deu)]
+	[DDLRegistration(0x3f4db543u)]
 	public int ViewportIndex { get; set; } = 0;
 
-	[DDLRegistration(0xde05e0deu, "HUD DOF Distance")]
+	[DDLRegistration(0x3fc97ae2u, "HUD DOF Distance")]
 	public float HUDDOFDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0xde05e0deu, "HUD Aperature Scale")]
+	[DDLRegistration(0x28f69dbbu, "HUD Aperature Scale")]
 	public float HUDAperatureScale { get; set; } = 20.50f;
 
-	[DDLRegistration(0xde05e0deu, "HUD Blend Time")]
+	[DDLRegistration(0x16bd9852u, "HUD Blend Time")]
 	public float HUDBlendTime { get; set; } = 0.01f;
 
-	[DDLRegistration(0xde05e0deu, "Default Blend Time")]
+	[DDLRegistration(0x918530b7u, "Default Blend Time")]
 	public float DefaultBlendTime { get; set; } = 0.01f;
 
-	[DDLRegistration(0xde05e0deu, "Aim Blend Time")]
+	[DDLRegistration(0x1a2c5302u, "Aim Blend Time")]
 	public float AimBlendTime { get; set; } = 0.20f;
 
-	[DDLRegistration(0xde05e0deu, "Deactivate Time")]
+	[DDLRegistration(0x1890a394u, "Deactivate Time")]
 	public float DeactivateTime { get; set; } = 0.25f;
 
 	public static DepthOfFieldProcessorPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class ReferenceRule : DDLObjectType, IDDLObjectType<ReferenceRule> {
 		Refs = ddl.GetObject<References>(0x645592d7u);
 	}
 
-	[DDLRegistration(0x5030ce9cu, "Type Filters", "Filter Prius types according to various criteria. A Prius type is considered to match if it matches any of these filters.")]
+	[DDLRegistration(0xe0f28371u, "Type Filters", "Filter Prius types according to various criteria. A Prius type is considered to match if it matches any of these filters.")]
 	public List<StringFilter?> TypeFilters { get; set; } = [];
 
-	[DDLRegistration(0x5030ce9cu, "Field Filters", "Filter Prius field names according to various criteria. A field is considered to match if it matches any of these filters. Only string and array fields are considered.")]
+	[DDLRegistration(0xa7330d10u, "Field Filters", "Filter Prius field names according to various criteria. A field is considered to match if it matches any of these filters. Only string and array fields are considered.")]
 	public List<StringFilter?> FieldFilters { get; set; } = [];
 
-	[DDLRegistration(0x5030ce9cu, "Value Filters", "Filter field values according to various criteria. A field value is considered to match if it matches any of these filters. Only string values are considered. Either all or no filters should contain a regex criterion; substitution behavior when intermixing regex and basic string filters is undefined. Only the first matched filter will be used for regex substitution.")]
+	[DDLRegistration(0x2134ded7u, "Value Filters", "Filter field values according to various criteria. A field value is considered to match if it matches any of these filters. Only string values are considered. Either all or no filters should contain a regex criterion; substitution behavior when intermixing regex and basic string filters is undefined. Only the first matched filter will be used for regex substitution.")]
 	public List<StringFilter?> ValueFilters { get; set; } = [];
 
-	[DDLRegistration(0x5030ce9cu, "Generate", "References to generate. May include regex substitutions. Beware that substitution will only occur if a Regex criterion matched!")]
+	[DDLRegistration(0x645592d7u, "Generate", "References to generate. May include regex substitutions. Beware that substitution will only occur if a Regex criterion matched!")]
 	public References? Refs { get; set; } = default;
 
 	public static ReferenceRule Create(DDLObject ddl) => new(ddl);

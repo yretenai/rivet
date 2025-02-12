@@ -20,13 +20,13 @@ public class HeroDamageScreenFXEvent : EventBase, IDDLObjectType<HeroDamageScree
 		LargeImpact = ddl.GetValue<byte>(0x2d22cea7u, LargeImpact);
 	}
 
-	[DDLRegistration(0x071861b4u)]
+	[DDLRegistration(0x1107be42u)]
 	public float ScreenAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0x071861b4u)]
+	[DDLRegistration(0x60ba4b46u)]
 	public int ScreenSegment { get; set; } = 0;
 
-	[DDLRegistration(0x071861b4u)]
+	[DDLRegistration(0x2d22cea7u)]
 	public byte LargeImpact { get; set; } = 0x00;
 
 	public new static HeroDamageScreenFXEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class BarrelObstructionOffsetFromEmit : BarrelObstructionBase, IDDLObject
 		LocalSpaceOffset = ddl.GetObject<DDLVector3>(0x1f64e101u);
 	}
 
-	[DDLRegistration(0x8c268224u)]
+	[DDLRegistration(0x23b96c51u)]
 	public x77a4e9ba EmitterIndex { get; set; } = x77a4e9ba.None;
 
-	[DDLRegistration(0x8c268224u)]
+	[DDLRegistration(0x1f64e101u)]
 	public DDLVector3? LocalSpaceOffset { get; set; } = default;
 
 	public new static BarrelObstructionOffsetFromEmit Create(DDLObject ddl) => new(ddl);

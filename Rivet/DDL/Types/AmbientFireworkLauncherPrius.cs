@@ -25,28 +25,28 @@ public class AmbientFireworkLauncherPrius : DDLObjectType, IDDLObjectType<Ambien
 		LaunchLoc = ddl.GetString(0x211229ce) ?? LaunchLoc;
 	}
 
-	[DDLRegistration(0xaf7c4893u, "Min Firework Height", "The min height the fireworks can go before exploding.")]
+	[DDLRegistration(0x9ed620e3u, "Min Firework Height", "The min height the fireworks can go before exploding.")]
 	public float MinHeight { get; set; } = 20.00f;
 
-	[DDLRegistration(0xaf7c4893u, "Max Firework Height", "The max height the fireworks can go before exploding.")]
+	[DDLRegistration(0x493d92a2u, "Max Firework Height", "The max height the fireworks can go before exploding.")]
 	public float MaxHeight { get; set; } = 50.00f;
 
-	[DDLRegistration(0xaf7c4893u, "Fire Angle Delta", "Angle delta (in radians) for our firing angle so all the fireworks don't unnaturally go to the same place.")]
+	[DDLRegistration(0xcd99342du, "Fire Angle Delta", "Angle delta (in radians) for our firing angle so all the fireworks don't unnaturally go to the same place.")]
 	public float AngleDelta { get; set; } = 0.35f;
 
-	[DDLRegistration(0xaf7c4893u, "Number of Fireworks", "The number of fireworks to fire off (0 for infinite).")]
+	[DDLRegistration(0x471625a2u, "Number of Fireworks", "The number of fireworks to fire off (0 for infinite).")]
 	public uint NumFires { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xaf7c4893u, "Min wait between fires", "The minimum time to wait between fires.")]
+	[DDLRegistration(0xde342be8u, "Min wait between fires", "The minimum time to wait between fires.")]
 	public float MinFireWait { get; set; } = 0.50f;
 
-	[DDLRegistration(0xaf7c4893u, "Max wait between fires", "The maximum time to wait between fires.")]
+	[DDLRegistration(0x123950e7u, "Max wait between fires", "The maximum time to wait between fires.")]
 	public float MaxFireWait { get; set; } = 3.00f;
 
-	[DDLRegistration(0xaf7c4893u, "Shot Config", "The shot config of the fireworks.")]
+	[DDLRegistration(0xb171e6aeu, "Shot Config", "The shot config of the fireworks.")]
 	public RivetAssetId ShotConfig { get; set; } = "";
 
-	[DDLRegistration(0xaf7c4893u, "Launch Locator", "The locator the rockets will be launched from.")]
+	[DDLRegistration(0x211229ceu, "Launch Locator", "The locator the rockets will be launched from.")]
 	public string? LaunchLoc { get; set; } = "";
 
 	public static AmbientFireworkLauncherPrius Create(DDLObject ddl) => new(ddl);

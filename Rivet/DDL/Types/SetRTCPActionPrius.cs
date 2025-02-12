@@ -18,7 +18,7 @@ public class SetRTCPActionPrius : DDLObjectType, IDDLObjectType<SetRTCPActionPri
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x69bb236fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
 	public static SetRTCPActionPrius Create(DDLObject ddl) => new(ddl);

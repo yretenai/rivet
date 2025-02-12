@@ -19,10 +19,10 @@ public class MechanicAvailabilityChangeEvent : ChangeModeEvent, IDDLObjectType<M
 		UnavailableMechanics = ddl.GetStrings(0xcb0c50bdu);
 	}
 
-	[DDLRegistration(0xb0835b34u)]
+	[DDLRegistration(0x781712c3u)]
 	public List<string?> AvailableMechanics { get; set; } = [];
 
-	[DDLRegistration(0xb0835b34u)]
+	[DDLRegistration(0xcb0c50bdu)]
 	public List<string?> UnavailableMechanics { get; set; } = [];
 
 	public new static MechanicAvailabilityChangeEvent Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class AimModLeadTargetGamePrius : AimModLeadTargetPrius, IDDLObjectType<A
 		LeadTargetMoverHistoryDuration = ddl.GetValue<float>(0x6b455369u, LeadTargetMoverHistoryDuration);
 	}
 
-	[DDLRegistration(0xe693be21u, description: "If true, the lead target will flatten all y values to 0.0f")]
+	[DDLRegistration(0x49c3e63du, description: "If true, the lead target will flatten all y values to 0.0f")]
 	public bool FlattenY { get; set; } = false;
 
-	[DDLRegistration(0xe693be21u, description: "If true, this will only lead laterally towards target and not do so in direction from us to the target")]
+	[DDLRegistration(0x7423736du, description: "If true, this will only lead laterally towards target and not do so in direction from us to the target")]
 	public bool OnlyLeadLaterally { get; set; } = false;
 
-	[DDLRegistration(0xe693be21u, description: "Duration of target's movement to take into account to calculate lead velocity")]
+	[DDLRegistration(0x6b455369u, description: "Duration of target's movement to take into account to calculate lead velocity")]
 	public float LeadTargetMoverHistoryDuration { get; set; } = 1.00f;
 
 	public new static AimModLeadTargetGamePrius Create(DDLObject ddl) => new(ddl);

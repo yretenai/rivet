@@ -20,13 +20,13 @@ public class MotionActionPrius : DDLObjectType, IDDLObjectType<MotionActionPrius
 		OffsetType = ddl.GetEnum<x2822817a>(0xa5ee0dfbu, x2822817aValues.Lookup);
 	}
 
-	[DDLRegistration(0x35e94d74u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x35e94d74u, "Motion Config", "Config for the motion to use")]
+	[DDLRegistration(0x724eedacu, "Motion Config", "Config for the motion to use")]
 	public RivetAssetId MotionConfig { get; set; } = default;
 
-	[DDLRegistration(0x35e94d74u, "Offset Type", "Which space the OffsetVec is in")]
+	[DDLRegistration(0xa5ee0dfbu, "Offset Type", "Which space the OffsetVec is in")]
 	public x2822817a OffsetType { get; set; } = x2822817a.TargetLocal;
 
 	public static MotionActionPrius Create(DDLObject ddl) => new(ddl);

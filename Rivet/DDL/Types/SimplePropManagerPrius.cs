@@ -19,10 +19,10 @@ public class SimplePropManagerPrius : DDLObjectType, IDDLObjectType<SimplePropMa
 		MatchPropDriverTime = ddl.GetValue<bool>(0xf65f6fd6u, MatchPropDriverTime);
 	}
 
-	[DDLRegistration(0xc8056f95u)]
+	[DDLRegistration(0x97e7b151u)]
 	public RivetAssetId PropConfig { get; set; } = default;
 
-	[DDLRegistration(0xc8056f95u)]
+	[DDLRegistration(0xf65f6fd6u)]
 	public bool MatchPropDriverTime { get; set; } = true;
 
 	public static SimplePropManagerPrius Create(DDLObject ddl) => new(ddl);

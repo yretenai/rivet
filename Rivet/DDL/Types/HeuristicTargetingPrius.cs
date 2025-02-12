@@ -24,25 +24,25 @@ public class HeuristicTargetingPrius : TargetingBasePrius, IDDLObjectType<Heuris
 		Spread = ddl.GetObject<SpreadHeuristics>(0x42cdee1fu);
 	}
 
-	[DDLRegistration(0x35f2fdb4u, description: "How fast we forget about hostile actions from each attacker")]
+	[DDLRegistration(0xff66f63au, description: "How fast we forget about hostile actions from each attacker")]
 	public float AggroBleedRate { get; set; } = 5.00f;
 
-	[DDLRegistration(0x35f2fdb4u, "Distance Score")]
+	[DDLRegistration(0xe69327f1u, "Distance Score")]
 	public DistanceHeuristics? Distance { get; set; } = default;
 
-	[DDLRegistration(0x35f2fdb4u, "Los Score")]
+	[DDLRegistration(0xbfb09571u, "Los Score")]
 	public LosHeuristics? Los { get; set; } = default;
 
-	[DDLRegistration(0x35f2fdb4u, "Human Player Score")]
+	[DDLRegistration(0xa6613402u, "Human Player Score")]
 	public PlayerHeuristics? Player { get; set; } = default;
 
-	[DDLRegistration(0x35f2fdb4u, "Aggro Score")]
+	[DDLRegistration(0x504e1083u, "Aggro Score")]
 	public AggroHeuristics? Aggro { get; set; } = default;
 
-	[DDLRegistration(0x35f2fdb4u, "Direction Score")]
+	[DDLRegistration(0xbcb74ebfu, "Direction Score")]
 	public DirectionHeuristics? Direction { get; set; } = default;
 
-	[DDLRegistration(0x35f2fdb4u, "Spread Factors")]
+	[DDLRegistration(0x42cdee1fu, "Spread Factors")]
 	public SpreadHeuristics? Spread { get; set; } = default;
 
 	public new static HeuristicTargetingPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class TargetingStimulusListenerPrius : DDLObjectType, IDDLObjectType<Targ
 		AddOns = ddl.GetObjects<TargetingStimulusListenerAddOnEntry>(0xdd502eb0u);
 	}
 
-	[DDLRegistration(0x89f5de50u)]
+	[DDLRegistration(0x1cb9421fu)]
 	public List<EventStimulus?> GenericEventHandlers { get; set; } = [];
 
-	[DDLRegistration(0x89f5de50u, description: "Add on support for other events")]
+	[DDLRegistration(0xdd502eb0u, description: "Add on support for other events")]
 	public List<TargetingStimulusListenerAddOnEntry?> AddOns { get; set; } = [];
 
 	public static TargetingStimulusListenerPrius Create(DDLObject ddl) => new(ddl);

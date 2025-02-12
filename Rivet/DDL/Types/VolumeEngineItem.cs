@@ -18,7 +18,7 @@ public class VolumeEngineItem : DDLObjectType, IDDLObjectType<VolumeEngineItem> 
 		VolumeNodeShape = ddl.GetEnum<VolumeNodeShape>(0x4c71dcfdu, VolumeNodeShapeValues.Lookup);
 	}
 
-	[DDLRegistration(0x740c9f74u)]
+	[DDLRegistration(0x4c71dcfdu)]
 	public VolumeNodeShape VolumeNodeShape { get; set; } = VolumeNodeShape.Cuboid;
 
 	public static VolumeEngineItem Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class MovingSurfacePrius : DDLObjectType, IDDLObjectType<MovingSurfacePri
 		SoundEmitterIDs = ddl.GetValues<RivetAssetId>(0xbfdcebd1u);
 	}
 
-	[DDLRegistration(0x2839c4eau, "Motion Style")]
+	[DDLRegistration(0x44427fe9u, "Motion Style")]
 	public x77402cb9 MotionStyle { get; set; } = x77402cb9.ParentMode;
 
-	[DDLRegistration(0x2839c4eau, "Apply Style")]
+	[DDLRegistration(0x0e0f11afu, "Apply Style")]
 	public x0f41a4c2 ApplyStyle { get; set; } = x0f41a4c2.ApplyIfOver;
 
-	[DDLRegistration(0x2839c4eau, "Camera Style")]
+	[DDLRegistration(0xa86ecae2u, "Camera Style")]
 	public x9b6c99b2 CameraStyle { get; set; } = x9b6c99b2.CameraAdjustAll;
 
-	[DDLRegistration(0x2839c4eau, "Reference Joint")]
+	[DDLRegistration(0x248a2a1cu, "Reference Joint")]
 	public string? ReferenceJoint { get; set; } = default;
 
-	[DDLRegistration(0x2839c4eau, "Update Rider Gravity", "Update gravity/up vector on riders as this surface rotates.")]
+	[DDLRegistration(0xab4308c3u, "Update Rider Gravity", "Update gravity/up vector on riders as this surface rotates.")]
 	public bool UpdateRiderGravity { get; set; } = false;
 
-	[DDLRegistration(0x2839c4eau)]
+	[DDLRegistration(0xb1ee35afu)]
 	public RivetAssetId NavDataZoneFile { get; set; } = default;
 
-	[DDLRegistration(0x2839c4eau)]
+	[DDLRegistration(0xbfdcebd1u)]
 	public List<RivetAssetId> SoundEmitterIDs { get; set; } = [];
 
 	public static MovingSurfacePrius Create(DDLObject ddl) => new(ddl);

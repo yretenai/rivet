@@ -19,10 +19,10 @@ public class FieldName : DDLObjectType, IDDLObjectType<FieldName> {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0x9176bbd6u)]
+	[DDLRegistration(0x42a68999u)]
 	public string? Field { get; set; } = default;
 
-	[DDLRegistration(0x9176bbd6u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
 	public static FieldName Create(DDLObject ddl) => new(ddl);

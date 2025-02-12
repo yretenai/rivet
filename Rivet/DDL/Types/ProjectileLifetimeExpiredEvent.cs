@@ -18,7 +18,7 @@ public class ProjectileLifetimeExpiredEvent : EventBase, IDDLObjectType<Projecti
 		DrawWasOn = ddl.GetValue<byte>(0x321dfdeeu, DrawWasOn);
 	}
 
-	[DDLRegistration(0x3e88b7aau, "Draw Was On")]
+	[DDLRegistration(0x321dfdeeu, "Draw Was On")]
 	public byte DrawWasOn { get; set; } = 0x01;
 
 	public new static ProjectileLifetimeExpiredEvent Create(DDLObject ddl) => new(ddl);

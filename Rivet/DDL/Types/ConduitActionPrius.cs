@@ -20,13 +20,13 @@ public class ConduitActionPrius : DDLObjectType, IDDLObjectType<ConduitActionPri
 		Priority = ddl.GetEnum<x5ead2ea5>(0x98a76157u, x5ead2ea5Values.Lookup);
 	}
 
-	[DDLRegistration(0x4b800545u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Conduit;
 
-	[DDLRegistration(0x4b800545u)]
+	[DDLRegistration(0x857b9dd2u)]
 	public RivetAssetId ConduitAsset { get; set; } = default;
 
-	[DDLRegistration(0x4b800545u)]
+	[DDLRegistration(0x98a76157u)]
 	public x5ead2ea5 Priority { get; set; } = x5ead2ea5.First;
 
 	public static ConduitActionPrius Create(DDLObject ddl) => new(ddl);

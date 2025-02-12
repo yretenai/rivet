@@ -19,10 +19,10 @@ public class DDLAABB : DDLObjectType, IDDLObjectType<DDLAABB> {
 		Extents = ddl.GetObject<DDLVector3>(0x62c56bc8u);
 	}
 
-	[DDLRegistration(0xe2d8fc16u)]
+	[DDLRegistration(0x7e88a543u)]
 	public DDLVector3? Center { get; set; } = default;
 
-	[DDLRegistration(0xe2d8fc16u)]
+	[DDLRegistration(0x62c56bc8u)]
 	public DDLVector3? Extents { get; set; } = default;
 
 	public static DDLAABB Create(DDLObject ddl) => new(ddl);

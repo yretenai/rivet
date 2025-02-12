@@ -18,7 +18,7 @@ public class LosBlockerPrius : DDLObjectType, IDDLObjectType<LosBlockerPrius> {
 		GenerateAIPerches = ddl.GetValue<bool>(0x9eea63f2u, GenerateAIPerches);
 	}
 
-	[DDLRegistration(0xfa9252d7u)]
+	[DDLRegistration(0x9eea63f2u)]
 	public bool GenerateAIPerches { get; set; } = true;
 
 	public static LosBlockerPrius Create(DDLObject ddl) => new(ddl);

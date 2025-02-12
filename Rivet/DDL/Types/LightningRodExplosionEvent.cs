@@ -18,7 +18,7 @@ public class LightningRodExplosionEvent : EventBase, IDDLObjectType<LightningRod
 		IsSwarmer = ddl.GetValue<bool>(0x311b0516u, IsSwarmer);
 	}
 
-	[DDLRegistration(0x8f1beec3u)]
+	[DDLRegistration(0x311b0516u)]
 	public bool IsSwarmer { get; set; } = false;
 
 	public new static LightningRodExplosionEvent Create(DDLObject ddl) => new(ddl);

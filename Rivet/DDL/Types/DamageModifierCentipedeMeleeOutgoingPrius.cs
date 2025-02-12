@@ -18,7 +18,7 @@ public class DamageModifierCentipedeMeleeOutgoingPrius : DamageModifierOutgoingP
 		DamageString = ddl.GetString(0x4624269b) ?? DamageString;
 	}
 
-	[DDLRegistration(0x98966a55u, description: "Damage hash that will be used to the damage modding")]
+	[DDLRegistration(0x4624269bu, description: "Damage hash that will be used to the damage modding")]
 	public string? DamageString { get; set; } = default;
 
 	public new static DamageModifierCentipedeMeleeOutgoingPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class FinaleMechRenderClipComponentPrius : RenderClipComponentPrius, IDDL
 		ClipMaterialForShrubbery = ddl.GetValue<RivetAssetId>(0x0d1eef29u, ClipMaterialForShrubbery);
 	}
 
-	[DDLRegistration(0xb520d074u, description: "Pre-composite material to apply to clipped actors when they are shrubbed")]
+	[DDLRegistration(0x0d1eef29u, description: "Pre-composite material to apply to clipped actors when they are shrubbed")]
 	public RivetAssetId ClipMaterialForShrubbery { get; set; } = default;
 
 	public new static FinaleMechRenderClipComponentPrius Create(DDLObject ddl) => new(ddl);

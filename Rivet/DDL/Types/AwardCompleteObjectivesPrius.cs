@@ -18,7 +18,7 @@ public class AwardCompleteObjectivesPrius : AwardBasePrius, IDDLObjectType<Award
 		Objectives = ddl.GetObjects<AwardObjective>(0xb7863755u);
 	}
 
-	[DDLRegistration(0x52088e8au, "Missions/Objectives", "Target value will be the number of these missions/objectives that must be completed.")]
+	[DDLRegistration(0xb7863755u, "Missions/Objectives", "Target value will be the number of these missions/objectives that must be completed.")]
 	public List<AwardObjective?> Objectives { get; set; } = [];
 
 	public new static AwardCompleteObjectivesPrius Create(DDLObject ddl) => new(ddl);

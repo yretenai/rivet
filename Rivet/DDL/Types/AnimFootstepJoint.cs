@@ -20,13 +20,13 @@ public class AnimFootstepJoint : DDLObjectType, IDDLObjectType<AnimFootstepJoint
 		LocatorName = ddl.GetString(0x5814524d) ?? LocatorName;
 	}
 
-	[DDLRegistration(0xb08dce10u)]
+	[DDLRegistration(0x1311db05u)]
 	public x94d69111 Side { get; set; } = x94d69111.Left;
 
-	[DDLRegistration(0xb08dce10u)]
+	[DDLRegistration(0x5ba51db8u)]
 	public string? JointName { get; set; } = "LF_ball";
 
-	[DDLRegistration(0xb08dce10u)]
+	[DDLRegistration(0x5814524du)]
 	public string? LocatorName { get; set; } = "igLoc_ball_l";
 
 	public static AnimFootstepJoint Create(DDLObject ddl) => new(ddl);

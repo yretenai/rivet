@@ -19,10 +19,10 @@ public class HoverbootKickEvent : EventBase, IDDLObjectType<HoverbootKickEvent> 
 		IsGoodKick = ddl.GetValue<bool>(0x8875d238u, IsGoodKick);
 	}
 
-	[DDLRegistration(0x0b41b2ffu, description: "The index for the foot doing the kick. (kLeft or kRight)")]
+	[DDLRegistration(0x289b0d58u, description: "The index for the foot doing the kick. (kLeft or kRight)")]
 	public x49df4fee FootIndex { get; set; } = x49df4fee.Left;
 
-	[DDLRegistration(0x0b41b2ffu, description: "True: Optimal kick. False: non-optimal kick.")]
+	[DDLRegistration(0x8875d238u, description: "True: Optimal kick. False: non-optimal kick.")]
 	public bool IsGoodKick { get; set; } = false;
 
 	public new static HoverbootKickEvent Create(DDLObject ddl) => new(ddl);

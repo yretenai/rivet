@@ -29,40 +29,40 @@ public class Cinematic2LightDef : DDLObjectType, IDDLObjectType<Cinematic2LightD
 		AttachTrack = ddl.GetObject<Cinematic2LightAttachTrackDef>(0xb6544521u);
 	}
 
-	[DDLRegistration(0x9d890bdfu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9d890bdfu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x9d890bdfu)]
+	[DDLRegistration(0x96f1f1f8u)]
 	public DDLTransform? StartTransform { get; set; } = default;
 
-	[DDLRegistration(0x9d890bdfu)]
+	[DDLRegistration(0x653e2373u)]
 	public Dictionary<RivetAssetId, Cinematic2PlacedInstanceEventTrackDef?> EventTracks { get; set; } = [];
 
-	[DDLRegistration(0x9d890bdfu)]
+	[DDLRegistration(0xba2bc52eu)]
 	public Cinematic2PlacedInstanceHideTrackDef? HideTrack { get; set; } = default;
 
-	[DDLRegistration(0x9d890bdfu)]
+	[DDLRegistration(0x6125fb96u)]
 	public Cinematic2PlacedInstancePosRotScaleTrackDef? PosRotScaleTrack { get; set; } = default;
 
-	[DDLRegistration(0x9d890bdfu)]
+	[DDLRegistration(0x00ea59a6u)]
 	public Dictionary<RivetAssetId, Cinematic2PlacedInstanceOrphanTrackDef?> OrphanTracks { get; set; } = [];
 
-	[DDLRegistration(0x9d890bdfu, description: "Light is only enabled on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Light is only enabled on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0x9d890bdfu)]
+	[DDLRegistration(0x72499036u)]
 	public LightDef? Light { get; set; } = default;
 
-	[DDLRegistration(0x9d890bdfu)]
+	[DDLRegistration(0xece6c2c4u)]
 	public Cinematic2LightColorCurveTrackDef? ColorTrack { get; set; } = default;
 
-	[DDLRegistration(0x9d890bdfu)]
+	[DDLRegistration(0x7f1c56d8u)]
 	public Cinematic2LightIntensityCurveTrackDef? IntensityTrack { get; set; } = default;
 
-	[DDLRegistration(0x9d890bdfu)]
+	[DDLRegistration(0xb6544521u)]
 	public Cinematic2LightAttachTrackDef? AttachTrack { get; set; } = default;
 
 	public static Cinematic2LightDef Create(DDLObject ddl) => new(ddl);

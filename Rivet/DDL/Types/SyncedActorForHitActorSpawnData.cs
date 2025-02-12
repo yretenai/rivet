@@ -25,28 +25,28 @@ public class SyncedActorForHitActorSpawnData : ActorSpawnData, IDDLObjectType<Sy
 		MatchCreatorAllegiance = ddl.GetValue<bool>(0x60d5eba5u, MatchCreatorAllegiance);
 	}
 
-	[DDLRegistration(0xc0fcc304u, description: "The shot owner/root/source. The shooter.")]
+	[DDLRegistration(0x8b1a8202u, description: "The shot owner/root/source. The shooter.")]
 	public uint ShotOwner { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc0fcc304u, description: "The actor we hit, if we hit one.")]
+	[DDLRegistration(0x51261116u, description: "The actor we hit, if we hit one.")]
 	public uint HitActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc0fcc304u, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc0fcc304u)]
+	[DDLRegistration(0xaa8ccf65u)]
 	public DDLVector3? Pos { get; set; } = default;
 
-	[DDLRegistration(0xc0fcc304u)]
+	[DDLRegistration(0xb37847eeu)]
 	public DDLVector3? Facing { get; set; } = default;
 
-	[DDLRegistration(0xc0fcc304u)]
+	[DDLRegistration(0x76fcc3adu)]
 	public DDLVector3? Up { get; set; } = default;
 
-	[DDLRegistration(0xc0fcc304u)]
+	[DDLRegistration(0xfc7075c0u)]
 	public bool MatchCreatorZone { get; set; } = true;
 
-	[DDLRegistration(0xc0fcc304u)]
+	[DDLRegistration(0x60d5eba5u)]
 	public bool MatchCreatorAllegiance { get; set; } = true;
 
 	public new static SyncedActorForHitActorSpawnData Create(DDLObject ddl) => new(ddl);

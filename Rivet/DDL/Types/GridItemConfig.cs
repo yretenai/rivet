@@ -19,10 +19,10 @@ public class GridItemConfig : ItemConfig, IDDLObjectType<GridItemConfig> {
 		Height = ddl.GetValue<uint>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0x3ac361c6u)]
+	[DDLRegistration(0x954989eeu)]
 	public uint Width { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3ac361c6u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public uint Height { get; set; } = 0x00000000;
 
 	public new static GridItemConfig Create(DDLObject ddl) => new(ddl);

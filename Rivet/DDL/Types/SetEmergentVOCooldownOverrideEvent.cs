@@ -19,10 +19,10 @@ public class SetEmergentVOCooldownOverrideEvent : EventBase, IDDLObjectType<SetE
 		Cooldown = ddl.GetValue<float>(0x246291a9u, Cooldown);
 	}
 
-	[DDLRegistration(0x8746e573u)]
+	[DDLRegistration(0x1b816c65u)]
 	public DialogTriggerGame Trigger { get; set; } = DialogTriggerGame.None;
 
-	[DDLRegistration(0x8746e573u)]
+	[DDLRegistration(0x246291a9u)]
 	public float Cooldown { get; set; } = 0.00f;
 
 	public new static SetEmergentVOCooldownOverrideEvent Create(DDLObject ddl) => new(ddl);

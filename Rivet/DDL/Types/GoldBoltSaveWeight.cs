@@ -19,10 +19,10 @@ public class GoldBoltSaveWeight : DDLObjectType, IDDLObjectType<GoldBoltSaveWeig
 		Weight = ddl.GetValue<float>(0x39b51b26u, Weight);
 	}
 
-	[DDLRegistration(0xd32a26a2u)]
+	[DDLRegistration(0xcd7269d0u)]
 	public GoldBoltEnum SaveId { get; set; } = GoldBoltEnum.NefCity_1;
 
-	[DDLRegistration(0xd32a26a2u, description: "How much weight to give this gold bolt when calculating the save file completion percentage.")]
+	[DDLRegistration(0x39b51b26u, description: "How much weight to give this gold bolt when calculating the save file completion percentage.")]
 	public float Weight { get; set; } = 1.00f;
 
 	public static GoldBoltSaveWeight Create(DDLObject ddl) => new(ddl);

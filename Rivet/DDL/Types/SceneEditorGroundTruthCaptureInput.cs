@@ -23,22 +23,22 @@ public class SceneEditorGroundTruthCaptureInput : DDLObjectType, IDDLObjectType<
 		CaptureSunDisc = ddl.GetValue<bool>(0x70bc09f9u, CaptureSunDisc);
 	}
 
-	[DDLRegistration(0x75976d62u, description: "Path of the zone to export")]
+	[DDLRegistration(0x3643be77u, description: "Path of the zone to export")]
 	public RivetAssetId ZonePath { get; set; } = "";
 
-	[DDLRegistration(0x75976d62u, description: "Determines the number of rays to trace for each pixel of the ground truth image")]
+	[DDLRegistration(0xa963c29au, description: "Determines the number of rays to trace for each pixel of the ground truth image")]
 	public int SamplesPerPixel { get; set; } = 50;
 
-	[DDLRegistration(0x75976d62u, description: "Determines the number of CPU cores to use for the capture. Higher will capture faster but increase load on your CPU, lower will be much slower but will decrease the load on your CPU.")]
+	[DDLRegistration(0x07d79c1cu, description: "Determines the number of CPU cores to use for the capture. Higher will capture faster but increase load on your CPU, lower will be much slower but will decrease the load on your CPU.")]
 	public int CPUCoresToUse { get; set; } = 20;
 
-	[DDLRegistration(0x75976d62u, description: "Determines the maximum number of bounces the simulated light should have.")]
+	[DDLRegistration(0x73e25a00u, description: "Determines the maximum number of bounces the simulated light should have.")]
 	public int MaxBounces { get; set; } = 1;
 
-	[DDLRegistration(0x75976d62u, description: "Determines whether the raytraced image should use materials or not")]
+	[DDLRegistration(0xab537375u, description: "Determines whether the raytraced image should use materials or not")]
 	public bool UseMaterials { get; set; } = true;
 
-	[DDLRegistration(0x75976d62u, description: "Determines whether the sky will have the sun baked in. If not, the key light will not contribute to the raytraced image.")]
+	[DDLRegistration(0x70bc09f9u, description: "Determines whether the sky will have the sun baked in. If not, the key light will not contribute to the raytraced image.")]
 	public bool CaptureSunDisc { get; set; } = true;
 
 	public static SceneEditorGroundTruthCaptureInput Create(DDLObject ddl) => new(ddl);

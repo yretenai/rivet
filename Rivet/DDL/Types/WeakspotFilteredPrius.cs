@@ -18,7 +18,7 @@ public class WeakspotFilteredPrius : WeakspotPrius, IDDLObjectType<WeakspotFilte
 		RequireHero = ddl.GetValue<bool>(0xad1dcf36u, RequireHero);
 	}
 
-	[DDLRegistration(0xac3c3aa0u, "Require Hero")]
+	[DDLRegistration(0xad1dcf36u, "Require Hero")]
 	public bool RequireHero { get; set; } = true;
 
 	public new static WeakspotFilteredPrius Create(DDLObject ddl) => new(ddl);

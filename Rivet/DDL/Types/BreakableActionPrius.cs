@@ -19,10 +19,10 @@ public class BreakableActionPrius : DDLObjectType, IDDLObjectType<BreakableActio
 		DoExplosionOnSwitchState = ddl.GetValue<bool>(0x44f46c9bu, DoExplosionOnSwitchState);
 	}
 
-	[DDLRegistration(0xc2432a79u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Deprecated;
 
-	[DDLRegistration(0xc2432a79u)]
+	[DDLRegistration(0x44f46c9bu)]
 	public bool DoExplosionOnSwitchState { get; set; } = true;
 
 	public static BreakableActionPrius Create(DDLObject ddl) => new(ddl);

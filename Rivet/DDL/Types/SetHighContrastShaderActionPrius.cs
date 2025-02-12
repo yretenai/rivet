@@ -20,13 +20,13 @@ public class SetHighContrastShaderActionPrius : DDLObjectType, IDDLObjectType<Se
 		HighlightType = ddl.GetEnum<xf2109875>(0xb4666bfau, xf2109875Values.Lookup);
 	}
 
-	[DDLRegistration(0x7530da89u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Accessibility;
 
-	[DDLRegistration(0x7530da89u)]
+	[DDLRegistration(0x1029ef60u)]
 	public RivetAssetId HighlightConfig { get; set; } = default;
 
-	[DDLRegistration(0x7530da89u)]
+	[DDLRegistration(0xb4666bfau)]
 	public xf2109875 HighlightType { get; set; } = xf2109875.Enemy;
 
 	public static SetHighContrastShaderActionPrius Create(DDLObject ddl) => new(ddl);

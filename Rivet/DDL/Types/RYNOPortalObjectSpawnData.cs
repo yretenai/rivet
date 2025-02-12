@@ -19,10 +19,10 @@ public class RYNOPortalObjectSpawnData : SpawnDataBase, IDDLObjectType<RYNOPorta
 		Size = ddl.GetEnum<xbf5ff3c6>(0xc750e4dau, xbf5ff3c6Values.Lookup);
 	}
 
-	[DDLRegistration(0x0a883924u)]
+	[DDLRegistration(0xdfbb9f90u)]
 	public uint PortalActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0a883924u)]
+	[DDLRegistration(0xc750e4dau)]
 	public xbf5ff3c6 Size { get; set; } = xbf5ff3c6.Small;
 
 	public new static RYNOPortalObjectSpawnData Create(DDLObject ddl) => new(ddl);

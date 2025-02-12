@@ -21,16 +21,16 @@ public class ProjectileExplodedEvent : ProjectileHitEvent, IDDLObjectType<Projec
 		CameraPlanarOrient = ddl.GetObject<DDLTransform>(0xd530ea6eu);
 	}
 
-	[DDLRegistration(0x69e2f5deu)]
+	[DDLRegistration(0x5897e7c1u)]
 	public bool Midair { get; set; } = false;
 
-	[DDLRegistration(0x69e2f5deu)]
+	[DDLRegistration(0xb4e35853u)]
 	public bool HitMovable { get; set; } = false;
 
-	[DDLRegistration(0x69e2f5deu)]
+	[DDLRegistration(0xb789c5e4u)]
 	public float ExplodeRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x69e2f5deu)]
+	[DDLRegistration(0xd530ea6eu)]
 	public DDLTransform? CameraPlanarOrient { get; set; } = default;
 
 	public new static ProjectileExplodedEvent Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class WeaponSchrodingerPrius : WeaponGamePrius, IDDLObjectType<WeaponSchr
 		AttachActorScale = ddl.GetValue<float>(0xcffac682u, AttachActorScale);
 	}
 
-	[DDLRegistration(0x466dd798u, "Attach Actor")]
+	[DDLRegistration(0x24c2eb7eu, "Attach Actor")]
 	public RivetAssetId AttachActor { get; set; } = default;
 
-	[DDLRegistration(0x466dd798u, "Attach Locator")]
+	[DDLRegistration(0xfa8dcd9au, "Attach Locator")]
 	public string? AttachLocator { get; set; } = "igLoc_bulletEmit";
 
-	[DDLRegistration(0x466dd798u, "Attach Actor Scale")]
+	[DDLRegistration(0xcffac682u, "Attach Actor Scale")]
 	public float AttachActorScale { get; set; } = 0.50f;
 
 	public new static WeaponSchrodingerPrius Create(DDLObject ddl) => new(ddl);

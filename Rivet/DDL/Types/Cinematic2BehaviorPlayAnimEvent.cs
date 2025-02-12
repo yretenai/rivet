@@ -21,16 +21,16 @@ public class Cinematic2BehaviorPlayAnimEvent : EventBase, IDDLObjectType<Cinemat
 		OriginSceneObjectHandle = ddl.GetValue<uint>(0x70993a92u, OriginSceneObjectHandle);
 	}
 
-	[DDLRegistration(0x8b932077u)]
+	[DDLRegistration(0x226dca7du)]
 	public uint DriverNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8b932077u)]
+	[DDLRegistration(0x5ae5b57eu)]
 	public float TimeNorm { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8b932077u)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8b932077u)]
+	[DDLRegistration(0x70993a92u)]
 	public uint OriginSceneObjectHandle { get; set; } = 0x00000000;
 
 	public new static Cinematic2BehaviorPlayAnimEvent Create(DDLObject ddl) => new(ddl);

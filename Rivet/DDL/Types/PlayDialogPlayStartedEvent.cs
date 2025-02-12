@@ -18,7 +18,7 @@ public class PlayDialogPlayStartedEvent : EventBase, IDDLObjectType<PlayDialogPl
 		ComponentHandle = ddl.GetValue<uint>(0xd0f9acd0u, ComponentHandle);
 	}
 
-	[DDLRegistration(0x7c4b1dc6u, description: "Handle of the PlayDialogComponent that started playing.")]
+	[DDLRegistration(0xd0f9acd0u, description: "Handle of the PlayDialogComponent that started playing.")]
 	public uint ComponentHandle { get; set; } = 0x00000000;
 
 	public new static PlayDialogPlayStartedEvent Create(DDLObject ddl) => new(ddl);

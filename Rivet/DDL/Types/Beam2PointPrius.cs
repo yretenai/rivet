@@ -33,52 +33,52 @@ public class Beam2PointPrius : DDLObjectType, IDDLObjectType<Beam2PointPrius> {
 		DamageIncludeGroupHandle = ddl.GetValue<uint>(0x7f5bd8eeu, DamageIncludeGroupHandle);
 	}
 
-	[DDLRegistration(0xb857ab38u, description: "Locator in model where beam starts")]
+	[DDLRegistration(0x45890f60u, description: "Locator in model where beam starts")]
 	public string? StartLocator { get; set; } = default;
 
-	[DDLRegistration(0xb857ab38u, description: "Locator in model where beam ends")]
+	[DDLRegistration(0xe7e59581u, description: "Locator in model where beam ends")]
 	public string? EndLocator { get; set; } = default;
 
-	[DDLRegistration(0xb857ab38u, description: "If negative, then the beam will just extend from the start to the end specified in code")]
+	[DDLRegistration(0xba6991ceu, description: "If negative, then the beam will just extend from the start to the end specified in code")]
 	public float BeamLength { get; set; } = -1.00f;
 
-	[DDLRegistration(0xb857ab38u, description: "The start locator's joint is fixed, with respect to the model.  Setting its position in code will do nothing.")]
+	[DDLRegistration(0x4eae740du, description: "The start locator's joint is fixed, with respect to the model.  Setting its position in code will do nothing.")]
 	public bool IsStartLocatorFixed { get; set; } = false;
 
-	[DDLRegistration(0xb857ab38u, description: "Put the end point at the first collision?")]
+	[DDLRegistration(0xea428700u, description: "Put the end point at the first collision?")]
 	public bool StopAtCollision { get; set; } = true;
 
-	[DDLRegistration(0xb857ab38u, description: "Send FX events?")]
+	[DDLRegistration(0x22a62ac5u, description: "Send FX events?")]
 	public bool FX { get; set; } = true;
 
-	[DDLRegistration(0xb857ab38u, description: "Turn on immediately once the component is created.")]
+	[DDLRegistration(0x61c16864u, description: "Turn on immediately once the component is created.")]
 	public bool TurnOnWhenActivated { get; set; } = true;
 
-	[DDLRegistration(0xb857ab38u)]
+	[DDLRegistration(0x6dc14e7du)]
 	public bool ForceSweptSphere { get; set; } = false;
 
-	[DDLRegistration(0xb857ab38u)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb857ab38u)]
+	[DDLRegistration(0xe3e6fa68u)]
 	public float DamageRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb857ab38u)]
+	[DDLRegistration(0x80686126u)]
 	public float BeamRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb857ab38u)]
+	[DDLRegistration(0x76ea550cu)]
 	public bool InstantKill { get; set; } = false;
 
-	[DDLRegistration(0xb857ab38u)]
+	[DDLRegistration(0xdb48d8ceu)]
 	public bool ApplyDamageToIncludeGroup { get; set; } = true;
 
-	[DDLRegistration(0xb857ab38u)]
+	[DDLRegistration(0xa6240abau)]
 	public bool TurnTargetInvulnerable { get; set; } = false;
 
-	[DDLRegistration(0xb857ab38u)]
+	[DDLRegistration(0x334d7933u)]
 	public bool OnlyDirectDamage { get; set; } = false;
 
-	[DDLRegistration(0xb857ab38u, description: "Only damage actors in this group")]
+	[DDLRegistration(0x7f5bd8eeu, description: "Only damage actors in this group")]
 	public uint DamageIncludeGroupHandle { get; set; } = 0x00000000;
 
 	public static Beam2PointPrius Create(DDLObject ddl) => new(ddl);

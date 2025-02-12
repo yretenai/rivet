@@ -19,10 +19,10 @@ public class BoxBreakerItemConfig : GadgetItemConfig, IDDLObjectType<BoxBreakerI
 		BoltPickupRange = ddl.GetValue<float>(0xcbf946e6u, BoltPickupRange);
 	}
 
-	[DDLRegistration(0xaa93a886u)]
+	[DDLRegistration(0x47022344u)]
 	public float BoxBreakRange { get; set; } = 10.00f;
 
-	[DDLRegistration(0xaa93a886u)]
+	[DDLRegistration(0xcbf946e6u)]
 	public float BoltPickupRange { get; set; } = 10.00f;
 
 	public new static BoxBreakerItemConfig Create(DDLObject ddl) => new(ddl);

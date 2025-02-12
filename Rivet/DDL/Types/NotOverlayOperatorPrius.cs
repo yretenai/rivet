@@ -18,7 +18,7 @@ public class NotOverlayOperatorPrius : BaseCustomOverlayTriggerPrius, IDDLObject
 		Trig = ddl.GetObject<BaseCustomOverlayTriggerPrius>(0xc515b04cu);
 	}
 
-	[DDLRegistration(0x2fd5c1d4u)]
+	[DDLRegistration(0xc515b04cu)]
 	public BaseCustomOverlayTriggerPrius? Trig { get; set; } = default;
 
 	public new static NotOverlayOperatorPrius Create(DDLObject ddl) => new(ddl);

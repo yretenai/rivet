@@ -18,7 +18,7 @@ public class SVOAStarDebugStepOpenList : DDLObjectType, IDDLObjectType<SVOAStarD
 		OpenListEntries = ddl.GetObjects<SVOAStarOpenListEntry>(0x95e3a1c5u);
 	}
 
-	[DDLRegistration(0x0953859bu)]
+	[DDLRegistration(0x95e3a1c5u)]
 	public List<SVOAStarOpenListEntry?> OpenListEntries { get; set; } = [];
 
 	public static SVOAStarDebugStepOpenList Create(DDLObject ddl) => new(ddl);

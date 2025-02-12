@@ -19,10 +19,10 @@ public class DDLStructInst : DDLObjectType, IDDLObjectType<DDLStructInst> {
 		Overrides = ddl.GetString(0x491145f6) ?? Overrides;
 	}
 
-	[DDLRegistration(0xcb2480fdu, description: "The name of the ddl struct.")]
+	[DDLRegistration(0x7df3b47bu, description: "The name of the ddl struct.")]
 	public string? DdlStructName { get; set; } = default;
 
-	[DDLRegistration(0xcb2480fdu, description: "JSON representing the overrides to the struct defaults.")]
+	[DDLRegistration(0x491145f6u, description: "JSON representing the overrides to the struct defaults.")]
 	public string? Overrides { get; set; } = default;
 
 	public static DDLStructInst Create(DDLObject ddl) => new(ddl);

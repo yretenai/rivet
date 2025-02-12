@@ -29,40 +29,40 @@ public class LookChunkingPrius : DDLObjectType, IDDLObjectType<LookChunkingPrius
 		CustomPhysicsPropertiesToApplyOnSpawnedChunks = ddl.GetObject<PhysicsCustomizationProperties>(0x5d604d0bu);
 	}
 
-	[DDLRegistration(0x90024837u, description: "Optional. Name of this chunking component.")]
+	[DDLRegistration(0x6eb3beb6u, description: "Optional. Name of this chunking component.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x90024837u)]
+	[DDLRegistration(0xf0d89680u)]
 	public float MinSpeed { get; set; } = 7.00f;
 
-	[DDLRegistration(0x90024837u)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x90024837u, description: "How much of the velocity comes from the hit direction. 1 = all of it.")]
+	[DDLRegistration(0xf0b20318u, description: "How much of the velocity comes from the hit direction. 1 = all of it.")]
 	public float BlendFromHitDirection { get; set; } = 1.00f;
 
-	[DDLRegistration(0x90024837u, description: "Make chunk velocity directions completely random.")]
+	[DDLRegistration(0x619651f8u, description: "Make chunk velocity directions completely random.")]
 	public bool RandomizeChunkVelocity { get; set; } = false;
 
-	[DDLRegistration(0x90024837u, description: "True: Spawn as kDebrisFast. False: Spawn as kDebris")]
+	[DDLRegistration(0x631227aeu, description: "True: Spawn as kDebrisFast. False: Spawn as kDebris")]
 	public bool SpawnChunksAsDebrisFast { get; set; } = false;
 
-	[DDLRegistration(0x90024837u)]
+	[DDLRegistration(0x92b450cdu)]
 	public float ChunkLifetime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x90024837u, description: "Optional. Spawn the chunks as this actor.")]
+	[DDLRegistration(0xfb4b73b5u, description: "Optional. Spawn the chunks as this actor.")]
 	public RivetAssetId ChunkActor { get; set; } = default;
 
-	[DDLRegistration(0x90024837u, description: "Optional. Conduit to apply to spawned chunks.")]
+	[DDLRegistration(0xabaa2b0eu, description: "Optional. Conduit to apply to spawned chunks.")]
 	public RivetAssetId ChunkConduit { get; set; } = default;
 
-	[DDLRegistration(0x90024837u)]
+	[DDLRegistration(0x6df07d3cu)]
 	public ChunkType ChunkType { get; set; } = ChunkType.Misc;
 
-	[DDLRegistration(0x90024837u)]
+	[DDLRegistration(0x51449b7du)]
 	public List<ChunkingConfiguration?> Configurations { get; set; } = [];
 
-	[DDLRegistration(0x90024837u)]
+	[DDLRegistration(0x5d604d0bu)]
 	public PhysicsCustomizationProperties? CustomPhysicsPropertiesToApplyOnSpawnedChunks { get; set; } = default;
 
 	public static LookChunkingPrius Create(DDLObject ddl) => new(ddl);

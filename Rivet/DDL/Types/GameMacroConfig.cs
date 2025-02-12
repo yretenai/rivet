@@ -18,7 +18,7 @@ public class GameMacroConfig : ConfigBase, IDDLObjectType<GameMacroConfig> {
 		Modes = ddl.GetObjects<MacroModeData>(0x43ceb3edu);
 	}
 
-	[DDLRegistration(0x5283f13bu)]
+	[DDLRegistration(0x43ceb3edu)]
 	public List<MacroModeData?> Modes { get; set; } = [];
 
 	public new static GameMacroConfig Create(DDLObject ddl) => new(ddl);

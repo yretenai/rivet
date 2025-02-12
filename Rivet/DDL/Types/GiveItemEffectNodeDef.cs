@@ -19,10 +19,10 @@ public class GiveItemEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObjectType<
 		ConfigAsset = ddl.GetValue<RivetAssetId>(0x83370868u, ConfigAsset);
 	}
 
-	[DDLRegistration(0x7dcbcf20u)]
+	[DDLRegistration(0x1eb7640eu)]
 	public x684c6439 ActorType { get; set; } = x684c6439.HitActor;
 
-	[DDLRegistration(0x7dcbcf20u, "Item Config", "Item config to be awarded to the designated actor.")]
+	[DDLRegistration(0x83370868u, "Item Config", "Item config to be awarded to the designated actor.")]
 	public RivetAssetId ConfigAsset { get; set; } = default;
 
 	public new static GiveItemEffectNodeDef Create(DDLObject ddl) => new(ddl);

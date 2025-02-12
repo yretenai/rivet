@@ -18,7 +18,7 @@ public class MissionStartObjectiveNodeSharedDef : MissionSystemRootNodeBaseDef, 
 		FallbackMissionName = ddl.GetString(0x1fb53d8d) ?? FallbackMissionName;
 	}
 
-	[DDLRegistration(0xe98534b1u, description: "If this graph is not loaded through a mission graph, what is the name of the mission we should use?")]
+	[DDLRegistration(0x1fb53d8du, description: "If this graph is not loaded through a mission graph, what is the name of the mission we should use?")]
 	public string? FallbackMissionName { get; set; } = default;
 
 	public new static MissionStartObjectiveNodeSharedDef Create(DDLObject ddl) => new(ddl);

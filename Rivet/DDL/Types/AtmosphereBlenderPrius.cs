@@ -22,19 +22,19 @@ public class AtmosphereBlenderPrius : DDLObjectType, IDDLObjectType<AtmosphereBl
 		ForceSourceAtmosphere = ddl.GetValue<bool>(0xabc65a3bu, ForceSourceAtmosphere);
 	}
 
-	[DDLRegistration(0xf2b7a21au, "Start Active")]
+	[DDLRegistration(0x3e035e82u, "Start Active")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0xf2b7a21au, "Source Atmosphere", "Atmosphere we start with at start of volume")]
+	[DDLRegistration(0x899c1160u, "Source Atmosphere", "Atmosphere we start with at start of volume")]
 	public RivetAssetId SourceAtmosphere { get; set; } = default;
 
-	[DDLRegistration(0xf2b7a21au, "Destination Atmosphere", "Atmosphere we end with at end of volume")]
+	[DDLRegistration(0x68ab6808u, "Destination Atmosphere", "Atmosphere we end with at end of volume")]
 	public RivetAssetId DestinationAtmosphere { get; set; } = default;
 
-	[DDLRegistration(0xf2b7a21au)]
+	[DDLRegistration(0x75edc1a7u)]
 	public float BlendFieldCompletePercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf2b7a21au, description: "Set the atmosphere to source as long as in volume")]
+	[DDLRegistration(0xabc65a3bu, description: "Set the atmosphere to source as long as in volume")]
 	public bool ForceSourceAtmosphere { get; set; } = false;
 
 	public static AtmosphereBlenderPrius Create(DDLObject ddl) => new(ddl);

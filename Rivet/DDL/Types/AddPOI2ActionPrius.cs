@@ -19,10 +19,10 @@ public class AddPOI2ActionPrius : DDLObjectType, IDDLObjectType<AddPOI2ActionPri
 		InstanceData = ddl.GetObject<POIInstanceDataBase>(0x8bcc281fu);
 	}
 
-	[DDLRegistration(0x5c77c388u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x5c77c388u, "POI Instance Data")]
+	[DDLRegistration(0x8bcc281fu, "POI Instance Data")]
 	public POIInstanceDataBase? InstanceData { get; set; } = default;
 
 	public static AddPOI2ActionPrius Create(DDLObject ddl) => new(ddl);

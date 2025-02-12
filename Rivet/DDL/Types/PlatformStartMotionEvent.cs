@@ -18,7 +18,7 @@ public class PlatformStartMotionEvent : EventBase, IDDLObjectType<PlatformStartM
 		StopIndex = ddl.GetValue<uint>(0x748c650du, StopIndex);
 	}
 
-	[DDLRegistration(0x1f58fef7u)]
+	[DDLRegistration(0x748c650du)]
 	public uint StopIndex { get; set; } = 0x00000000;
 
 	public new static PlatformStartMotionEvent Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class BotLootDropPrius : DDLObjectType, IDDLObjectType<BotLootDropPrius> 
 		NoPickupTime = ddl.GetValue<float>(0x68cab92du, NoPickupTime);
 	}
 
-	[DDLRegistration(0x89e83109u, "Enabled?", "Disable if you don't want to spawn loot.")]
+	[DDLRegistration(0x5113d8bcu, "Enabled?", "Disable if you don't want to spawn loot.")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x89e83109u, description: "Drop loot only if killer is this type.")]
+	[DDLRegistration(0xbda9e40eu, description: "Drop loot only if killer is this type.")]
 	public xa7ea7084 DropLootForKillerType { get; set; } = xa7ea7084.Everybody;
 
-	[DDLRegistration(0x89e83109u)]
+	[DDLRegistration(0xbcec9320u)]
 	public CommonLootData? LootData { get; set; } = default;
 
-	[DDLRegistration(0x89e83109u, "Offset Type", "Use for offset")]
+	[DDLRegistration(0x0d7aaebau, "Offset Type", "Use for offset")]
 	public xca7a7360 TypeOfOffset { get; set; } = xca7a7360.NotUsed;
 
-	[DDLRegistration(0x89e83109u)]
+	[DDLRegistration(0x677284b7u)]
 	public DDLVector3? Offset { get; set; } = default;
 
-	[DDLRegistration(0x89e83109u, "Loot to Spawn", "Set max the number of loot to spawn from this config, set to -1 for no max")]
+	[DDLRegistration(0xf17d6753u, "Loot to Spawn", "Set max the number of loot to spawn from this config, set to -1 for no max")]
 	public int MaxNumSpawns { get; set; } = -1;
 
-	[DDLRegistration(0x89e83109u, "Throw Loot", "If set loot will be thrown from the spawn to avoid pileup")]
+	[DDLRegistration(0x7e229231u, "Throw Loot", "If set loot will be thrown from the spawn to avoid pileup")]
 	public bool LootBlossom { get; set; } = true;
 
-	[DDLRegistration(0x89e83109u, "Thrown Min Speed", "Min speed at which the loot is thrown if enabled")]
+	[DDLRegistration(0x3ef41847u, "Thrown Min Speed", "Min speed at which the loot is thrown if enabled")]
 	public float MinLootSpeed { get; set; } = 8.00f;
 
-	[DDLRegistration(0x89e83109u, "Thrown Max Speed", "Max speed at which the loot is thrown if enabled")]
+	[DDLRegistration(0xae8708adu, "Thrown Max Speed", "Max speed at which the loot is thrown if enabled")]
 	public float MaxLootSpeed { get; set; } = 8.00f;
 
-	[DDLRegistration(0x89e83109u, "No Pickup Time", "Time before we allow pickup - a value < 0 means to use the standard no pickup time.")]
+	[DDLRegistration(0x68cab92du, "No Pickup Time", "Time before we allow pickup - a value < 0 means to use the standard no pickup time.")]
 	public float NoPickupTime { get; set; } = -1.00f;
 
 	public static BotLootDropPrius Create(DDLObject ddl) => new(ddl);

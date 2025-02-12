@@ -28,37 +28,37 @@ public class TerrainSystem02PlacingTerrain : DDLObjectType, IDDLObjectType<Terra
 		Line11 = ddl.GetString(0x6164be9c) ?? Line11;
 	}
 
-	[DDLRegistration(0x9212dca2u, description: "Placing a piece of terrain works just like any other asset:")]
+	[DDLRegistration(0x787f8fddu, description: "Placing a piece of terrain works just like any other asset:")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x9212dca2u, description: "<br><br>")]
+	[DDLRegistration(0xe176de67u, description: "<br><br>")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x9212dca2u, description: "1. Open a level in the Level Editor and make a Zone active")]
+	[DDLRegistration(0x9671eef1u, description: "1. Open a level in the Level Editor and make a Zone active")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x9212dca2u, description: "<br>")]
+	[DDLRegistration(0x08157b52u, description: "<br>")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x9212dca2u, description: "2. Search for the newly-created Terrain in the Vault")]
+	[DDLRegistration(0x7f124bc4u, description: "2. Search for the newly-created Terrain in the Vault")]
 	public string? Line05 { get; set; } = default;
 
-	[DDLRegistration(0x9212dca2u, description: "<br>")]
+	[DDLRegistration(0xe61b1a7eu, description: "<br>")]
 	public string? Line06 { get; set; } = default;
 
-	[DDLRegistration(0x9212dca2u, description: "3. Select that Terrain in the Vault, and then click in the Level Editor to place")]
+	[DDLRegistration(0x911c2ae8u, description: "3. Select that Terrain in the Vault, and then click in the Level Editor to place")]
 	public string? Line07 { get; set; } = default;
 
-	[DDLRegistration(0x9212dca2u, description: "the piece of terrain.")]
+	[DDLRegistration(0x01a33779u, description: "the piece of terrain.")]
 	public string? Line08 { get; set; } = default;
 
-	[DDLRegistration(0x9212dca2u, description: "<br><br>")]
+	[DDLRegistration(0x76a407efu, description: "<br><br>")]
 	public string? Line09 { get; set; } = default;
 
-	[DDLRegistration(0x9212dca2u, description: "The terrain's dimensions are 1km x 1km, with a height of 1km (unless the default")]
+	[DDLRegistration(0x16638e0au, description: "The terrain's dimensions are 1km x 1km, with a height of 1km (unless the default")]
 	public string? Line10 { get; set; } = default;
 
-	[DDLRegistration(0x9212dca2u, description: "was overridden in the Asset Wizaard)  The origin is at (500, 0, 500).")]
+	[DDLRegistration(0x6164be9cu, description: "was overridden in the Asset Wizaard)  The origin is at (500, 0, 500).")]
 	public string? Line11 { get; set; } = default;
 
 	public static TerrainSystem02PlacingTerrain Create(DDLObject ddl) => new(ddl);

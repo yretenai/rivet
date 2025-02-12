@@ -19,10 +19,10 @@ public class BrokeEvent : EventBase, IDDLObjectType<BrokeEvent> {
 		Damager = ddl.GetValue<uint>(0x29f67982u, Damager);
 	}
 
-	[DDLRegistration(0xd7f5ef0eu, "Stage that broke")]
+	[DDLRegistration(0xdb2f5fa8u, "Stage that broke")]
 	public uint Stage { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd7f5ef0eu)]
+	[DDLRegistration(0x29f67982u)]
 	public uint Damager { get; set; } = 0x00000000;
 
 	public new static BrokeEvent Create(DDLObject ddl) => new(ddl);

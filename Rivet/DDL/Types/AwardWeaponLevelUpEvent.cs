@@ -18,7 +18,7 @@ public class AwardWeaponLevelUpEvent : EventBase, IDDLObjectType<AwardWeaponLeve
 		NewLevel = ddl.GetValue<uint>(0x08e29aa1u, NewLevel);
 	}
 
-	[DDLRegistration(0x530979e7u)]
+	[DDLRegistration(0x08e29aa1u)]
 	public uint NewLevel { get; set; } = 0x00000000;
 
 	public new static AwardWeaponLevelUpEvent Create(DDLObject ddl) => new(ddl);

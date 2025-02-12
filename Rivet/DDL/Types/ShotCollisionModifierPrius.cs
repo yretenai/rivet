@@ -18,7 +18,7 @@ public class ShotCollisionModifierPrius : DDLObjectType, IDDLObjectType<ShotColl
 		ResultFlags = ddl.GetBitset<xb40c5ac8>(0x8a065430u, xb40c5ac8Values.Lookup);
 	}
 
-	[DDLRegistration(0x19e8f01eu)]
+	[DDLRegistration(0x8a065430u)]
 	public xb40c5ac8 ResultFlags { get; set; } = (xb40c5ac8) 0x00000001;
 
 	public static ShotCollisionModifierPrius Create(DDLObject ddl) => new(ddl);

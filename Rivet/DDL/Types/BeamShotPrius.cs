@@ -18,7 +18,7 @@ public class BeamShotPrius : ShotBasePrius, IDDLObjectType<BeamShotPrius> {
 		ImpactJoint = ddl.GetString(0xb5c2190b) ?? ImpactJoint;
 	}
 
-	[DDLRegistration(0xdbeb5902u, description: "Joint that will be repositioned to the impact location for VFX/SFX.")]
+	[DDLRegistration(0xb5c2190bu, description: "Joint that will be repositioned to the impact location for VFX/SFX.")]
 	public string? ImpactJoint { get; set; } = default;
 
 	public new static BeamShotPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class DimensionRegionData : DDLObjectType, IDDLObjectType<DimensionRegion
 		Portals = ddl.GetObjects<DimensionActorData>(0xa752f0bcu);
 	}
 
-	[DDLRegistration(0x866b45c7u, description: "Code name for this pocket dimension in UDS.")]
+	[DDLRegistration(0xa15b4218u, description: "Code name for this pocket dimension in UDS.")]
 	public string? CodeName { get; set; } = default;
 
-	[DDLRegistration(0x866b45c7u)]
+	[DDLRegistration(0xba0400acu)]
 	public List<DimensionActorData?> Checkpoints { get; set; } = [];
 
-	[DDLRegistration(0x866b45c7u)]
+	[DDLRegistration(0xa752f0bcu)]
 	public List<DimensionActorData?> Portals { get; set; } = [];
 
 	public static DimensionRegionData Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class DropshipAnimVarHelperPrius : DDLObjectType, IDDLObjectType<Dropship
 		OutroSpeed = ddl.GetValue<float>(0x00ee2a20u, OutroSpeed);
 	}
 
-	[DDLRegistration(0xbb33c2a3u)]
+	[DDLRegistration(0x740bb72bu)]
 	public string? AnimVar { get; set; } = "Accel";
 
-	[DDLRegistration(0xbb33c2a3u)]
+	[DDLRegistration(0x5d9ecce9u)]
 	public float IntroDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbb33c2a3u)]
+	[DDLRegistration(0x17d2bf6fu)]
 	public float OutroGain { get; set; } = -4.00f;
 
-	[DDLRegistration(0xbb33c2a3u)]
+	[DDLRegistration(0x9b04e8e6u)]
 	public float OutroDamp { get; set; } = -6.00f;
 
-	[DDLRegistration(0xbb33c2a3u)]
+	[DDLRegistration(0x00ee2a20u)]
 	public float OutroSpeed { get; set; } = 4.00f;
 
 	public static DropshipAnimVarHelperPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class Cinematic2FolderDef : DDLObjectType, IDDLObjectType<Cinematic2Folde
 		SubFolders = ddl.GetValues<RivetAssetId>(0xa1de1c65u);
 	}
 
-	[DDLRegistration(0x0ec6f3e0u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0ec6f3e0u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x0ec6f3e0u)]
+	[DDLRegistration(0xebe93de2u)]
 	public List<RivetAssetId> ChildTuids { get; set; } = [];
 
-	[DDLRegistration(0x0ec6f3e0u)]
+	[DDLRegistration(0xa1de1c65u)]
 	public List<RivetAssetId> SubFolders { get; set; } = [];
 
 	public static Cinematic2FolderDef Create(DDLObject ddl) => new(ddl);

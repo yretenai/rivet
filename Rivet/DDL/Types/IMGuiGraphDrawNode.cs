@@ -25,28 +25,28 @@ public class IMGuiGraphDrawNode : DDLObjectType, IDDLObjectType<IMGuiGraphDrawNo
 		ChildConnections = ddl.GetObjects<IMGuiConnectionData>(0xfff68611u);
 	}
 
-	[DDLRegistration(0x81e47eecu)]
+	[DDLRegistration(0x3587ca71u)]
 	public xb2c512b4 DrawType { get; set; } = xb2c512b4.BuiltNode;
 
-	[DDLRegistration(0x81e47eecu)]
+	[DDLRegistration(0x371a59e0u)]
 	public ulong NodeId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x81e47eecu)]
+	[DDLRegistration(0x5775422au)]
 	public bool IsDebugMarker { get; set; } = false;
 
-	[DDLRegistration(0x81e47eecu)]
+	[DDLRegistration(0x89a26971u)]
 	public int SortPriority { get; set; } = 0;
 
-	[DDLRegistration(0x81e47eecu)]
+	[DDLRegistration(0xad2911ffu)]
 	public float DrawSizeX { get; set; } = 0.00f;
 
-	[DDLRegistration(0x81e47eecu)]
+	[DDLRegistration(0xda2e2169u)]
 	public float DrawSizeY { get; set; } = 0.00f;
 
-	[DDLRegistration(0x81e47eecu)]
+	[DDLRegistration(0x5445222cu)]
 	public List<IMGuiConnectionData?> ParentConnections { get; set; } = [];
 
-	[DDLRegistration(0x81e47eecu)]
+	[DDLRegistration(0xfff68611u)]
 	public List<IMGuiConnectionData?> ChildConnections { get; set; } = [];
 
 	public static IMGuiGraphDrawNode Create(DDLObject ddl) => new(ddl);

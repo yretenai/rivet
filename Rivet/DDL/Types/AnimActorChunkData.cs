@@ -28,37 +28,37 @@ public class AnimActorChunkData : AnimChunkData, IDDLObjectType<AnimActorChunkDa
 		Direction = ddl.GetObject<AnimChunkDirection>(0xbcb74ebfu);
 	}
 
-	[DDLRegistration(0x748ef84fu, description: "Actor asset id to spawn for chunk.")]
+	[DDLRegistration(0x75356989u, description: "Actor asset id to spawn for chunk.")]
 	public RivetAssetId ActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x748ef84fu, description: "Look or look group name. Leave blank for default look.")]
+	[DDLRegistration(0xad8c1e16u, description: "Look or look group name. Leave blank for default look.")]
 	public string? LookName { get; set; } = default;
 
-	[DDLRegistration(0x748ef84fu, description: "Joint or locator name to spawn chunk on.")]
+	[DDLRegistration(0xb9792514u, description: "Joint or locator name to spawn chunk on.")]
 	public string? SpawnJointName { get; set; } = default;
 
-	[DDLRegistration(0x748ef84fu, description: "Lifetime of spawned chunk.")]
+	[DDLRegistration(0xc7e68df8u, description: "Lifetime of spawned chunk.")]
 	public float Lifetime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x748ef84fu, description: "Min speed of spawned chunk.")]
+	[DDLRegistration(0xf0d89680u, description: "Min speed of spawned chunk.")]
 	public float MinSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0x748ef84fu, description: "Min speed of spawned chunk.")]
+	[DDLRegistration(0x16b83961u, description: "Min speed of spawned chunk.")]
 	public float MaxSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0x748ef84fu, description: "Optional conduit asset to place on chunk actor.")]
+	[DDLRegistration(0x857b9dd2u, description: "Optional conduit asset to place on chunk actor.")]
 	public RivetAssetId ConduitAsset { get; set; } = default;
 
-	[DDLRegistration(0x748ef84fu, description: "Range of rotation speeds about x-axis in degrees/sec.")]
+	[DDLRegistration(0x7ea7ed54u, description: "Range of rotation speeds about x-axis in degrees/sec.")]
 	public AnimChunkRange? RotationalSpeedX { get; set; } = default;
 
-	[DDLRegistration(0x748ef84fu, description: "Range of rotation speeds about y-axis in degrees/sec.")]
+	[DDLRegistration(0x09a0ddc2u, description: "Range of rotation speeds about y-axis in degrees/sec.")]
 	public AnimChunkRange? RotationalSpeedY { get; set; } = default;
 
-	[DDLRegistration(0x748ef84fu, description: "Range of rotation speeds about z-axis in degrees/sec.")]
+	[DDLRegistration(0x90a98c78u, description: "Range of rotation speeds about z-axis in degrees/sec.")]
 	public AnimChunkRange? RotationalSpeedZ { get; set; } = default;
 
-	[DDLRegistration(0x748ef84fu)]
+	[DDLRegistration(0xbcb74ebfu)]
 	public AnimChunkDirection? Direction { get; set; } = default;
 
 	public new static AnimActorChunkData Create(DDLObject ddl) => new(ddl);

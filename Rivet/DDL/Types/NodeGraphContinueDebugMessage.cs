@@ -18,7 +18,7 @@ public class NodeGraphContinueDebugMessage : DDLObjectType, IDDLObjectType<NodeG
 		ActorContextId = ddl.GetValue<uint>(0x55ffc909u, ActorContextId);
 	}
 
-	[DDLRegistration(0xc71fdf32u)]
+	[DDLRegistration(0x55ffc909u)]
 	public uint ActorContextId { get; set; } = 0x00000000;
 
 	public static NodeGraphContinueDebugMessage Create(DDLObject ddl) => new(ddl);

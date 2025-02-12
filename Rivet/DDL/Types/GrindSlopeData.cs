@@ -24,25 +24,25 @@ public class GrindSlopeData : DDLObjectType, IDDLObjectType<GrindSlopeData> {
 		SpeedMax = ddl.GetValue<float>(0xb6419fbau, SpeedMax);
 	}
 
-	[DDLRegistration(0x181ea91eu, description: "Gravity to use for adjusting slope speed.")]
+	[DDLRegistration(0x5bf7469fu, description: "Gravity to use for adjusting slope speed.")]
 	public float Gravity { get; set; } = 5.00f;
 
-	[DDLRegistration(0x181ea91eu, description: "Slopes greater than or equal to this will be considered uphill (degrees).")]
+	[DDLRegistration(0x92b96ec5u, description: "Slopes greater than or equal to this will be considered uphill (degrees).")]
 	public float UphillStartDegrees { get; set; } = 10.00f;
 
-	[DDLRegistration(0x181ea91eu, description: "Slopes less than or euqal to this will be considerered downhill (degrees).")]
+	[DDLRegistration(0x67faded3u, description: "Slopes less than or euqal to this will be considerered downhill (degrees).")]
 	public float DownhillStartDegrees { get; set; } = -10.00f;
 
-	[DDLRegistration(0x181ea91eu, description: "Acceleration for slope speed to get up to 0 when on flat slope (m/s^2).")]
+	[DDLRegistration(0x2ba42002u, description: "Acceleration for slope speed to get up to 0 when on flat slope (m/s^2).")]
 	public float FlatAccel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x181ea91eu, description: "Deceleration for slope speed to get down to 0 when on flat slope (m/s^2).")]
+	[DDLRegistration(0xc62ff0aeu, description: "Deceleration for slope speed to get down to 0 when on flat slope (m/s^2).")]
 	public float FlatDecel { get; set; } = 1.00f;
 
-	[DDLRegistration(0x181ea91eu, description: "The minimum value for slope speed (m/s). This is additive on top of the base grind speed.")]
+	[DDLRegistration(0x8a4ca0e3u, description: "The minimum value for slope speed (m/s). This is additive on top of the base grind speed.")]
 	public float SpeedMin { get; set; } = -2.00f;
 
-	[DDLRegistration(0x181ea91eu, description: "The maximum value for slope speed (m/s). This is additive on top of the base grind speed.")]
+	[DDLRegistration(0xb6419fbau, description: "The maximum value for slope speed (m/s). This is additive on top of the base grind speed.")]
 	public float SpeedMax { get; set; } = 15.00f;
 
 	public static GrindSlopeData Create(DDLObject ddl) => new(ddl);

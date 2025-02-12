@@ -19,10 +19,10 @@ public class HeadSizeMapping : DDLObjectType, IDDLObjectType<HeadSizeMapping> {
 		Scale = ddl.GetValue<float>(0xf515e945u, Scale);
 	}
 
-	[DDLRegistration(0x83df5685u)]
+	[DDLRegistration(0x7b1b565fu)]
 	public string? SizeLabel { get; set; } = default;
 
-	[DDLRegistration(0x83df5685u, description: "Scale to apply for this head size.")]
+	[DDLRegistration(0xf515e945u, description: "Scale to apply for this head size.")]
 	public float Scale { get; set; } = 1.00f;
 
 	public static HeadSizeMapping Create(DDLObject ddl) => new(ddl);

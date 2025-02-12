@@ -18,7 +18,7 @@ public class ActorPlug : DDLObjectType, IDDLObjectType<ActorPlug> {
 		Handle = ddl.GetValue<uint>(0xaff86ebeu, Handle);
 	}
 
-	[DDLRegistration(0x184107abu)]
+	[DDLRegistration(0xaff86ebeu)]
 	public uint Handle { get; set; } = 0x00000000;
 
 	public static ActorPlug Create(DDLObject ddl) => new(ddl);

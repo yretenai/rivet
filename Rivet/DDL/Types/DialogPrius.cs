@@ -20,13 +20,13 @@ public class DialogPrius : DDLObjectType, IDDLObjectType<DialogPrius> {
 		LocatorName = ddl.GetString(0x5814524d) ?? LocatorName;
 	}
 
-	[DDLRegistration(0xaa90f38cu, "Pause Subtitles", "Pause subtitles when the game is paused.")]
+	[DDLRegistration(0x95cf6a54u, "Pause Subtitles", "Pause subtitles when the game is paused.")]
 	public bool PauseSubtitles { get; set; } = true;
 
-	[DDLRegistration(0xaa90f38cu)]
+	[DDLRegistration(0xcf1c285bu)]
 	public bool WantsFlashCallbacks { get; set; } = false;
 
-	[DDLRegistration(0xaa90f38cu, description: "Name of the locator from which to emit dialog")]
+	[DDLRegistration(0x5814524du, description: "Name of the locator from which to emit dialog")]
 	public string? LocatorName { get; set; } = default;
 
 	public static DialogPrius Create(DDLObject ddl) => new(ddl);

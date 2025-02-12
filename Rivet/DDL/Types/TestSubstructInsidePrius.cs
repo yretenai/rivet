@@ -18,7 +18,7 @@ public class TestSubstructInsidePrius : DDLObjectType, IDDLObjectType<TestSubstr
 		Pet = ddl.GetObject<TestAnimal>(0xce07b24cu);
 	}
 
-	[DDLRegistration(0x39211e41u)]
+	[DDLRegistration(0xce07b24cu)]
 	public TestAnimal? Pet { get; set; } = default;
 
 	public static TestSubstructInsidePrius Create(DDLObject ddl) => new(ddl);

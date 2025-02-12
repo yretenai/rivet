@@ -22,19 +22,19 @@ public class TerrainSystem03EditingTerrain0221Stamp : DDLObjectType, IDDLObjectT
 		Line04 = ddl.GetString(0x08157b52) ?? Line04;
 	}
 
-	[DDLRegistration(0xf6eacacau, description: "This brush will either add a specific height to the heightfield or paint a")]
+	[DDLRegistration(0x0f78bf4bu, description: "This brush will either add a specific height to the heightfield or paint a")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0xf6eacacau, description: "specific value onto a splatmask.  When painting on a heightfield target, the")]
+	[DDLRegistration(0x787f8fddu, description: "specific value onto a splatmask.  When painting on a heightfield target, the")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0xf6eacacau, description: "brush parameter indicates the number of meters that this brush should add to")]
+	[DDLRegistration(0xe176de67u, description: "brush parameter indicates the number of meters that this brush should add to")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0xf6eacacau, description: "the terrain.  When painting on a splatmask target, the brush parameter")]
+	[DDLRegistration(0x9671eef1u, description: "the terrain.  When painting on a splatmask target, the brush parameter")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0xf6eacacau, description: "indicates the alpha that will be applied on top of the splatmask.")]
+	[DDLRegistration(0x08157b52u, description: "indicates the alpha that will be applied on top of the splatmask.")]
 	public string? Line04 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0221Stamp Create(DDLObject ddl) => new(ddl);

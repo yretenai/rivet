@@ -18,7 +18,7 @@ public class PerfSpecModelSwapPrius : DDLObjectType, IDDLObjectType<PerfSpecMode
 		ModelsPerSpec = ddl.GetObjects<PerfSpecModelData>(0xd5d980eeu);
 	}
 
-	[DDLRegistration(0x8f3e1ccdu)]
+	[DDLRegistration(0xd5d980eeu)]
 	public List<PerfSpecModelData?> ModelsPerSpec { get; set; } = [];
 
 	public static PerfSpecModelSwapPrius Create(DDLObject ddl) => new(ddl);

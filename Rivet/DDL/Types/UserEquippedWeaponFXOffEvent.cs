@@ -23,22 +23,22 @@ public class UserEquippedWeaponFXOffEvent : EventBase, IDDLObjectType<UserEquipp
 		AmmoCount = ddl.GetValue<float>(0xf5fba7feu, AmmoCount);
 	}
 
-	[DDLRegistration(0xa39f8b79u)]
+	[DDLRegistration(0xca0166ccu)]
 	public string? WeaponName { get; set; } = default;
 
-	[DDLRegistration(0xa39f8b79u)]
+	[DDLRegistration(0x9e860af6u)]
 	public uint EquipIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa39f8b79u)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0xa39f8b79u)]
+	[DDLRegistration(0xd23b3317u)]
 	public bool OwnerIsLocal { get; set; } = false;
 
-	[DDLRegistration(0xa39f8b79u)]
+	[DDLRegistration(0x0022f6dcu)]
 	public bool OwnerIsHero { get; set; } = false;
 
-	[DDLRegistration(0xa39f8b79u)]
+	[DDLRegistration(0xf5fba7feu)]
 	public float AmmoCount { get; set; } = 0.00f;
 
 	public new static UserEquippedWeaponFXOffEvent Create(DDLObject ddl) => new(ddl);

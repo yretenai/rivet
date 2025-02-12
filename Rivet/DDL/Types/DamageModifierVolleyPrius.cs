@@ -20,13 +20,13 @@ public class DamageModifierVolleyPrius : DamageModifierIncomingPrius, IDDLObject
 		RechargeRate = ddl.GetValue<float>(0xf1cdaed2u, RechargeRate);
 	}
 
-	[DDLRegistration(0xc7e840a9u)]
+	[DDLRegistration(0x37f9af79u)]
 	public float PerHitReduction { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc7e840a9u)]
+	[DDLRegistration(0x3f0ecd12u)]
 	public float MinReduction { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc7e840a9u)]
+	[DDLRegistration(0xf1cdaed2u)]
 	public float RechargeRate { get; set; } = 0.00f;
 
 	public new static DamageModifierVolleyPrius Create(DDLObject ddl) => new(ddl);

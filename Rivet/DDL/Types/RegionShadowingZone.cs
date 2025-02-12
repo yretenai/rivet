@@ -19,10 +19,10 @@ public class RegionShadowingZone : DDLObjectType, IDDLObjectType<RegionShadowing
 		ShadowZone = ddl.GetValue<RivetAssetId>(0x320cd2ceu, ShadowZone);
 	}
 
-	[DDLRegistration(0x74dbcaa0u)]
+	[DDLRegistration(0x907b00b7u)]
 	public RivetAssetId Zone { get; set; } = default;
 
-	[DDLRegistration(0x74dbcaa0u, description: "If ShadowZone is set, Zone will only be loaded if/when ShadowZone is loaded")]
+	[DDLRegistration(0x320cd2ceu, description: "If ShadowZone is set, Zone will only be loaded if/when ShadowZone is loaded")]
 	public RivetAssetId ShadowZone { get; set; } = default;
 
 	public static RegionShadowingZone Create(DDLObject ddl) => new(ddl);

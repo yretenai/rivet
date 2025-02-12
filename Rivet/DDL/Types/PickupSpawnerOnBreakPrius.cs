@@ -22,19 +22,19 @@ public class PickupSpawnerOnBreakPrius : PickupSpawnerPrius, IDDLObjectType<Pick
 		DecayTimeToApply = ddl.GetValue<float>(0xef06f5acu, DecayTimeToApply);
 	}
 
-	[DDLRegistration(0x8a33bb10u, "Save destroyed on collect?", "Whether to save the collection of the pickup and put us into the broken state on load. Do not have the breakable component save destroyed when using this. Uses the Actor Save System's Deleted flag.")]
+	[DDLRegistration(0x7ce60ddcu, "Save destroyed on collect?", "Whether to save the collection of the pickup and put us into the broken state on load. Do not have the breakable component save destroyed when using this. Uses the Actor Save System's Deleted flag.")]
 	public bool SaveCollection { get; set; } = false;
 
-	[DDLRegistration(0x8a33bb10u, "Prebreak Spawn?", "Whether to spawn the pickup (not collectible) before we are broken (aka, so you can see the pickup inside).")]
+	[DDLRegistration(0xbbabceb5u, "Prebreak Spawn?", "Whether to spawn the pickup (not collectible) before we are broken (aka, so you can see the pickup inside).")]
 	public bool SpawnOnAct { get; set; } = false;
 
-	[DDLRegistration(0x8a33bb10u, "Pickup Range Override", "If set to a value > 0 will push this pickup range on the spawned pickup item overriding the value on the pickup actor.")]
+	[DDLRegistration(0x5539453au, "Pickup Range Override", "If set to a value > 0 will push this pickup range on the spawned pickup item overriding the value on the pickup actor.")]
 	public float PickupRangeOverride { get; set; } = -1.00f;
 
-	[DDLRegistration(0x8a33bb10u, "Override decay time?", "Whether or not to override the pickup's decay time (time for it to be picked up before it auto-destroys itself).")]
+	[DDLRegistration(0x03d34f8fu, "Override decay time?", "Whether or not to override the pickup's decay time (time for it to be picked up before it auto-destroys itself).")]
 	public bool OverrideDecayTime { get; set; } = false;
 
-	[DDLRegistration(0x8a33bb10u, "Decay Time to Apply", "If 'Override decay time' is set, this is the time we will override the default decay time with. < 0 is infinite. ")]
+	[DDLRegistration(0xef06f5acu, "Decay Time to Apply", "If 'Override decay time' is set, this is the time we will override the default decay time with. < 0 is infinite. ")]
 	public float DecayTimeToApply { get; set; } = -1.00f;
 
 	public new static PickupSpawnerOnBreakPrius Create(DDLObject ddl) => new(ddl);

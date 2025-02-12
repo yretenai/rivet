@@ -18,7 +18,7 @@ public class BlockEvent : DamageEventBase, IDDLObjectType<BlockEvent> {
 		Countered = ddl.GetValue<bool>(0x81f5d2d1u, Countered);
 	}
 
-	[DDLRegistration(0xba1259fau, description: "If this block was a counter")]
+	[DDLRegistration(0x81f5d2d1u, description: "If this block was a counter")]
 	public bool Countered { get; set; } = false;
 
 	public new static BlockEvent Create(DDLObject ddl) => new(ddl);

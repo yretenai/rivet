@@ -41,76 +41,76 @@ public class ZoneDef : DDLObjectType, IDDLObjectType<ZoneDef> {
 		GameplayDataReferences = ddl.GetObjects<GameplayDataReferenceDef>(0x529e91dcu);
 	}
 
-	[DDLRegistration(0xcc0e3e22u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xcc0e3e22u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xcc0e3e22u)]
+	[DDLRegistration(0x41496fdeu)]
 	public Dictionary<RivetAssetId, SceneNode?> SceneNodes { get; set; } = [];
 
-	[DDLRegistration(0xcc0e3e22u)]
+	[DDLRegistration(0xd4a16a95u)]
 	public Dictionary<RivetAssetId, ActorGroupNode?> ActorGroups { get; set; } = [];
 
-	[DDLRegistration(0xcc0e3e22u)]
+	[DDLRegistration(0x98b21bedu)]
 	public RivetAssetId MainScriptGraphId { get; set; } = new RivetAssetId(0xffffffffffffffff);
 
-	[DDLRegistration(0xcc0e3e22u)]
+	[DDLRegistration(0xb6beea44u)]
 	public Dictionary<RivetAssetId, NodeGraphContents?> ScriptGraphs { get; set; } = [];
 
-	[DDLRegistration(0xcc0e3e22u)]
+	[DDLRegistration(0x84e9cc70u)]
 	public Dictionary<RivetAssetId, VarNode?> VarNodes { get; set; } = [];
 
-	[DDLRegistration(0xcc0e3e22u)]
+	[DDLRegistration(0xb9ed55e1u)]
 	public Dictionary<RivetAssetId, VertexPaintNode?> VertexPaintNodes { get; set; } = [];
 
-	[DDLRegistration(0xcc0e3e22u, "Default Atmosphere")]
+	[DDLRegistration(0x79fd859au, "Default Atmosphere")]
 	public RivetAssetId Atmosphere { get; set; } = default;
 
-	[DDLRegistration(0xcc0e3e22u, "LC Atmospheres")]
+	[DDLRegistration(0x0b9af92fu, "LC Atmospheres")]
 	public List<LightingConditionAtmosphere?> LightingConditionAtmospheres { get; set; } = [];
 
-	[DDLRegistration(0xcc0e3e22u)]
+	[DDLRegistration(0x522d0f90u)]
 	public List<LightingConditionLL?> LevelLights { get; set; } = [];
 
-	[DDLRegistration(0xcc0e3e22u, "Use Single Lighting Condition")]
+	[DDLRegistration(0x6e0c0a40u, "Use Single Lighting Condition")]
 	public bool UseSingleLightingCondition { get; set; } = false;
 
-	[DDLRegistration(0xcc0e3e22u, "Single Lighting Condition")]
+	[DDLRegistration(0x485218fcu, "Single Lighting Condition")]
 	public LightingConditions SingleLightingCondition { get; set; } = LightingConditions.Day;
 
-	[DDLRegistration(0xcc0e3e22u, "Long Distance Ray Tracing", "If set, model instances tagged with ray tracing will not be culled when far away from the camera.")]
+	[DDLRegistration(0x68c37525u, "Long Distance Ray Tracing", "If set, model instances tagged with ray tracing will not be culled when far away from the camera.")]
 	public bool LongDistanceRayTracing { get; set; } = false;
 
-	[DDLRegistration(0xcc0e3e22u, "Skip Light Capture")]
+	[DDLRegistration(0x64ede99au, "Skip Light Capture")]
 	public bool SkipLightCapture { get; set; } = false;
 
-	[DDLRegistration(0xcc0e3e22u, "Include for Light Capture (if a global zone)", "If set, the lighting farm will automatically load this zone during captures if the zone is in the level�s global region.")]
+	[DDLRegistration(0x9e75d1f1u, "Include for Light Capture (if a global zone)", "If set, the lighting farm will automatically load this zone during captures if the zone is in the level�s global region.")]
 	public bool ImpostorLightCapture { get; set; } = false;
 
-	[DDLRegistration(0xcc0e3e22u, "Skip Hibernation", "If set, the zone will not generate any hibernating objects")]
+	[DDLRegistration(0x00585b52u, "Skip Hibernation", "If set, the zone will not generate any hibernating objects")]
 	public bool SkipHibernation { get; set; } = false;
 
-	[DDLRegistration(0xcc0e3e22u, "Hibernate Distance Override", "Overrides RenderSettings::HibernateDrawDistance if set to anything other than zero")]
+	[DDLRegistration(0x0f560a96u, "Hibernate Distance Override", "Overrides RenderSettings::HibernateDrawDistance if set to anything other than zero")]
 	public float HibernateDistanceOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcc0e3e22u, "Light Grid Priority", "Priority of the grids in this zones in relation to grids in other zones. Higher numbers result in grids from this zones replacing grids from zones with lower priority.")]
+	[DDLRegistration(0xaec38eceu, "Light Grid Priority", "Priority of the grids in this zones in relation to grids in other zones. Higher numbers result in grids from this zones replacing grids from zones with lower priority.")]
 	public byte LightGridPriority { get; set; } = 0x00;
 
-	[DDLRegistration(0xcc0e3e22u, "Light Grid Compression", "Amount of compression applied to the light grid's on disk storage.")]
+	[DDLRegistration(0x845970a5u, "Light Grid Compression", "Amount of compression applied to the light grid's on disk storage.")]
 	public LightGridCompression LightGridCompression { get; set; } = LightGridCompression.LowCompression;
 
-	[DDLRegistration(0xcc0e3e22u, "Light Grid Streaming", "If checked, light grids will be streamed based on view. Otherwise they will all be loaded at zone load time.")]
+	[DDLRegistration(0x2d5bc862u, "Light Grid Streaming", "If checked, light grids will be streamed based on view. Otherwise they will all be loaded at zone load time.")]
 	public bool LightGridStreaming { get; set; } = false;
 
-	[DDLRegistration(0xcc0e3e22u, "Reduce Light Grid Samples For Disk", "Removes light grid samples that are not near geometry in order to reduce the size of the data on disk. Always on in LGC1, optional in LGC2.")]
+	[DDLRegistration(0x1f6a7ba7u, "Reduce Light Grid Samples For Disk", "Removes light grid samples that are not near geometry in order to reduce the size of the data on disk. Always on in LGC1, optional in LGC2.")]
 	public bool RemoveGridSamplesFarFromGeom { get; set; } = true;
 
-	[DDLRegistration(0xcc0e3e22u, description: "Asset References")]
+	[DDLRegistration(0x730eb7e6u, description: "Asset References")]
 	public List<AssetReferenceDef?> AssetReferences { get; set; } = [];
 
-	[DDLRegistration(0xcc0e3e22u)]
+	[DDLRegistration(0x529e91dcu)]
 	public List<GameplayDataReferenceDef?> GameplayDataReferences { get; set; } = [];
 
 	public static ZoneDef Create(DDLObject ddl) => new(ddl);

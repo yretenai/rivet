@@ -19,10 +19,10 @@ public class ClipboardSceneNodes : DDLObjectType, IDDLObjectType<ClipboardSceneN
 		PayloadVertexPaintNodes = ddl.GetDictionary<RivetAssetId, VertexPaintNode>(0x51291e82, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VertexPaintNode>(mapId));
 	}
 
-	[DDLRegistration(0x4ee897dbu)]
+	[DDLRegistration(0xe982452eu)]
 	public Dictionary<RivetAssetId, SceneNode?> PayloadSceneNodes { get; set; } = [];
 
-	[DDLRegistration(0x4ee897dbu)]
+	[DDLRegistration(0x51291e82u)]
 	public Dictionary<RivetAssetId, VertexPaintNode?> PayloadVertexPaintNodes { get; set; } = [];
 
 	public static ClipboardSceneNodes Create(DDLObject ddl) => new(ddl);

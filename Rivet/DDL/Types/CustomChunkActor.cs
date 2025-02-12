@@ -19,10 +19,10 @@ public class CustomChunkActor : DDLObjectType, IDDLObjectType<CustomChunkActor> 
 		Offset = ddl.GetObject<DDLVector3>(0x677284b7u);
 	}
 
-	[DDLRegistration(0x298e0327u, description: "Actor asset to spawn cunks from")]
+	[DDLRegistration(0x5d269a38u, description: "Actor asset to spawn cunks from")]
 	public RivetAssetId Actor { get; set; } = default;
 
-	[DDLRegistration(0x298e0327u, description: "Spawn offset for this actor.")]
+	[DDLRegistration(0x677284b7u, description: "Spawn offset for this actor.")]
 	public DDLVector3? Offset { get; set; } = default;
 
 	public static CustomChunkActor Create(DDLObject ddl) => new(ddl);

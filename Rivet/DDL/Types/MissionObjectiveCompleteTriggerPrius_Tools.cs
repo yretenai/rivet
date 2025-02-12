@@ -19,10 +19,10 @@ public class MissionObjectiveCompleteTriggerPrius_Tools : AbstractTriggerPrius_T
 		ObjectiveName = ddl.GetString(0x58746b9b) ?? ObjectiveName;
 	}
 
-	[DDLRegistration(0xc14084d3u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0xc14084d3u)]
+	[DDLRegistration(0x58746b9bu)]
 	public string? ObjectiveName { get; set; } = default;
 
 	public new static MissionObjectiveCompleteTriggerPrius_Tools Create(DDLObject ddl) => new(ddl);

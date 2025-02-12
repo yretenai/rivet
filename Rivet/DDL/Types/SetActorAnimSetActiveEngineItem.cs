@@ -19,10 +19,10 @@ public class SetActorAnimSetActiveEngineItem : DDLObjectType, IDDLObjectType<Set
 		Active = ddl.GetValue<bool>(0x7566b265u, Active);
 	}
 
-	[DDLRegistration(0xe83fde9du)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xe83fde9du)]
+	[DDLRegistration(0x7566b265u)]
 	public bool Active { get; set; } = false;
 
 	public static SetActorAnimSetActiveEngineItem Create(DDLObject ddl) => new(ddl);

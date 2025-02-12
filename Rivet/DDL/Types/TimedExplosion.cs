@@ -18,7 +18,7 @@ public class TimedExplosion : GrenadeExplosionMode, IDDLObjectType<TimedExplosio
 		ReleasedTime = ddl.GetValue<float>(0x972e367bu, ReleasedTime);
 	}
 
-	[DDLRegistration(0xa35b600cu)]
+	[DDLRegistration(0x972e367bu)]
 	public float ReleasedTime { get; set; } = 0.00f;
 
 	public new static TimedExplosion Create(DDLObject ddl) => new(ddl);

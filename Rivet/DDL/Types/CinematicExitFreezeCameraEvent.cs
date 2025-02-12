@@ -20,13 +20,13 @@ public class CinematicExitFreezeCameraEvent : EventBase, IDDLObjectType<Cinemati
 		AllowInputBreak = ddl.GetValue<bool>(0xef615b9du, AllowInputBreak);
 	}
 
-	[DDLRegistration(0x4ec592e3u, description: "Time to stay in-place before going to gameplay")]
+	[DDLRegistration(0x6e1c5a4bu, description: "Time to stay in-place before going to gameplay")]
 	public float FreezeTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0x4ec592e3u, description: "Distance hero must move before camera blends out")]
+	[DDLRegistration(0x87c82301u, description: "Distance hero must move before camera blends out")]
 	public float FreezeMoveDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4ec592e3u, description: "Allow camera stick input to break the freeze")]
+	[DDLRegistration(0xef615b9du, description: "Allow camera stick input to break the freeze")]
 	public bool AllowInputBreak { get; set; } = false;
 
 	public new static CinematicExitFreezeCameraEvent Create(DDLObject ddl) => new(ddl);

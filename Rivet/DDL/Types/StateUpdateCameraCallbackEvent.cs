@@ -18,7 +18,7 @@ public class StateUpdateCameraCallbackEvent : EventBase, IDDLObjectType<StateUpd
 		DeltaTime = ddl.GetValue<float>(0x6b652a09u, DeltaTime);
 	}
 
-	[DDLRegistration(0x1b474881u)]
+	[DDLRegistration(0x6b652a09u)]
 	public float DeltaTime { get; set; } = 0.00f;
 
 	public new static StateUpdateCameraCallbackEvent Create(DDLObject ddl) => new(ddl);

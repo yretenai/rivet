@@ -18,7 +18,7 @@ public class RecoilCameraShakeItem : DDLObjectType, IDDLObjectType<RecoilCameraS
 		CameraShake = ddl.GetObject<RecoilCameraShake>(0xefd546cau);
 	}
 
-	[DDLRegistration(0x26714bf7u)]
+	[DDLRegistration(0xefd546cau)]
 	public RecoilCameraShake? CameraShake { get; set; } = default;
 
 	public static RecoilCameraShakeItem Create(DDLObject ddl) => new(ddl);

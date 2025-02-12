@@ -18,7 +18,7 @@ public class DbVerifyAssetCollection : DDLObjectType, IDDLObjectType<DbVerifyAss
 		AssetItem = ddl.GetDictionary<ulong, DbVerifyAssetItem>(0x1ab5cf5a, DDLMapTypeHandler.VisitULong, (mapId, mapDDL) => mapDDL.GetObject<DbVerifyAssetItem>(mapId));
 	}
 
-	[DDLRegistration(0xe0c67793u)]
+	[DDLRegistration(0x1ab5cf5au)]
 	public Dictionary<ulong, DbVerifyAssetItem?> AssetItem { get; set; } = [];
 
 	public static DbVerifyAssetCollection Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class UseMagCamInfo : DDLObjectType, IDDLObjectType<UseMagCamInfo> {
 		UseMagCamPitchOffet = ddl.GetValue<float>(0x4ae4eee0u, UseMagCamPitchOffet);
 	}
 
-	[DDLRegistration(0x82e5f339u, "Using Mag Camera: FOV", "When using the magnet (holding right trigger), what FOV the camera should use, <= 0 will mean no change.")]
+	[DDLRegistration(0x4c1d9a4bu, "Using Mag Camera: FOV", "When using the magnet (holding right trigger), what FOV the camera should use, <= 0 will mean no change.")]
 	public float UseMagCamFOV { get; set; } = -90.00f;
 
-	[DDLRegistration(0x82e5f339u, "Using Mag Cam: Height", "Follow camera height when using the magnet (holding right trigger).")]
+	[DDLRegistration(0xbc29f044u, "Using Mag Cam: Height", "Follow camera height when using the magnet (holding right trigger).")]
 	public float UseMagCamFollowHeight { get; set; } = 2.00f;
 
-	[DDLRegistration(0x82e5f339u, "Using Mag Cam: Dist", "Follow camera distance when using the magnet (holding right trigger).")]
+	[DDLRegistration(0xdbf36a12u, "Using Mag Cam: Dist", "Follow camera distance when using the magnet (holding right trigger).")]
 	public float UseMagCamFollowDist { get; set; } = -40.00f;
 
-	[DDLRegistration(0x82e5f339u, "Using Mag Cam: Target Y Offset", "Camera target y-offset when using the magnet (holding right trigger).")]
+	[DDLRegistration(0xe610a581u, "Using Mag Cam: Target Y Offset", "Camera target y-offset when using the magnet (holding right trigger).")]
 	public float UseMagCamTargYOffset { get; set; } = -10.00f;
 
-	[DDLRegistration(0x82e5f339u, "Using Mag Cam: Pitch Offset", "Pitch offset (in degrees) when using the magnet (holding the right-trigger).")]
+	[DDLRegistration(0x4ae4eee0u, "Using Mag Cam: Pitch Offset", "Pitch offset (in degrees) when using the magnet (holding the right-trigger).")]
 	public float UseMagCamPitchOffet { get; set; } = 5.00f;
 
 	public static UseMagCamInfo Create(DDLObject ddl) => new(ddl);

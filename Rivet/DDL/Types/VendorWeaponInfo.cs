@@ -21,16 +21,16 @@ public class VendorWeaponInfo : DDLObjectType, IDDLObjectType<VendorWeaponInfo> 
 		CustomStatName = ddl.GetString(0x974a32b4) ?? CustomStatName;
 	}
 
-	[DDLRegistration(0x0d33ff28u)]
+	[DDLRegistration(0xf418d55eu)]
 	public string? Class { get; set; } = "UI_VENDOR_AUTOMATIC";
 
-	[DDLRegistration(0x0d33ff28u, description: "Text of what the special is")]
+	[DDLRegistration(0x4d815cdbu, description: "Text of what the special is")]
 	public string? Special { get; set; } = "";
 
-	[DDLRegistration(0x0d33ff28u)]
+	[DDLRegistration(0x4e14ab6bu)]
 	public List<VendorWeaponStat?> Stats { get; set; } = [];
 
-	[DDLRegistration(0x0d33ff28u)]
+	[DDLRegistration(0x974a32b4u)]
 	public string? CustomStatName { get; set; } = "UI_VENDOR_KNOCKBACK";
 
 	public static VendorWeaponInfo Create(DDLObject ddl) => new(ddl);

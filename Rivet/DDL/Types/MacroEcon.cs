@@ -26,31 +26,31 @@ public class MacroEcon : DDLObjectType, IDDLObjectType<MacroEcon> {
 		MaxRaritanium = ddl.GetValue<uint>(0x4133204cu, MaxRaritanium);
 	}
 
-	[DDLRegistration(0x9c7bb11bu, description: "Number of Segments completed")]
+	[DDLRegistration(0xc9dca744u, description: "Number of Segments completed")]
 	public uint SegmentsCompleted { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9c7bb11bu, description: "Min bolts expected")]
+	[DDLRegistration(0x7af9f223u, description: "Min bolts expected")]
 	public uint MinBolts { get; set; } = 0x000003e8;
 
-	[DDLRegistration(0x9c7bb11bu, description: "Max bolts expected")]
+	[DDLRegistration(0x9c995dc2u, description: "Max bolts expected")]
 	public uint MaxBolts { get; set; } = 0x000007d0;
 
-	[DDLRegistration(0x9c7bb11bu, description: "Min hero xp expected")]
+	[DDLRegistration(0xf49873e7u, description: "Min hero xp expected")]
 	public uint MinHeroXP { get; set; } = 0x000003e8;
 
-	[DDLRegistration(0x9c7bb11bu, description: "Max hero xp expected")]
+	[DDLRegistration(0x2373c1a6u, description: "Max hero xp expected")]
 	public uint MaxHeroXP { get; set; } = 0x000007d0;
 
-	[DDLRegistration(0x9c7bb11bu, description: "Min wpn xp expected")]
+	[DDLRegistration(0x425163aau, description: "Min wpn xp expected")]
 	public uint MinWpnXP { get; set; } = 0x0000000a;
 
-	[DDLRegistration(0x9c7bb11bu, description: "Max wpn xp expected")]
+	[DDLRegistration(0xa431cc4bu, description: "Max wpn xp expected")]
 	public uint MaxWpnXP { get; set; } = 0x00000014;
 
-	[DDLRegistration(0x9c7bb11bu, description: "Min Raritanium expected")]
+	[DDLRegistration(0x017c583au, description: "Min Raritanium expected")]
 	public uint MinRaritanium { get; set; } = 0x0000000a;
 
-	[DDLRegistration(0x9c7bb11bu, description: "Max Raritanium expected")]
+	[DDLRegistration(0x4133204cu, description: "Max Raritanium expected")]
 	public uint MaxRaritanium { get; set; } = 0x00000014;
 
 	public static MacroEcon Create(DDLObject ddl) => new(ddl);

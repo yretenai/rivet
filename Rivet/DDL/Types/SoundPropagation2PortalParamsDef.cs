@@ -23,22 +23,22 @@ public class SoundPropagation2PortalParamsDef : DDLObjectType, IDDLObjectType<So
 		MaxFullAttenuationAngle = ddl.GetValue<float>(0xd7e09827u, MaxFullAttenuationAngle);
 	}
 
-	[DDLRegistration(0x9e556b51u, description: "scales the portal radius to create a min / max distance for adjusting reverb focus")]
+	[DDLRegistration(0xb993144fu, description: "scales the portal radius to create a min / max distance for adjusting reverb focus")]
 	public SoundPropagation2RangeDef? ReverbFocusDistanceScale { get; set; } = default;
 
-	[DDLRegistration(0x9e556b51u, description: "scales the portal radius to create a min / max distance for adjusting reverb azimuth")]
+	[DDLRegistration(0x135cefe9u, description: "scales the portal radius to create a min / max distance for adjusting reverb azimuth")]
 	public SoundPropagation2RangeDef? ReverbAzimuthDistanceScale { get; set; } = default;
 
-	[DDLRegistration(0x9e556b51u, description: "scales the portal radius to create a min / max distance for adjusting source position")]
+	[DDLRegistration(0x59876124u, description: "scales the portal radius to create a min / max distance for adjusting source position")]
 	public SoundPropagation2RangeDef? VirtualPositionDistanceScale { get; set; } = default;
 
-	[DDLRegistration(0x9e556b51u, description: "idk yet")]
+	[DDLRegistration(0x78357782u, description: "idk yet")]
 	public float AttenuationFadeScalar { get; set; } = 2.00f;
 
-	[DDLRegistration(0x9e556b51u, description: "idk yet")]
+	[DDLRegistration(0x4ca7e6b5u, description: "idk yet")]
 	public float MaxFilteredAttenuationAngle { get; set; } = 80.00f;
 
-	[DDLRegistration(0x9e556b51u, description: "idk yet")]
+	[DDLRegistration(0xd7e09827u, description: "idk yet")]
 	public float MaxFullAttenuationAngle { get; set; } = 170.00f;
 
 	public static SoundPropagation2PortalParamsDef Create(DDLObject ddl) => new(ddl);

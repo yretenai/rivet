@@ -21,16 +21,16 @@ public class TiltAndSinkMotionPrius : DDLObjectType, IDDLObjectType<TiltAndSinkM
 		BobSpeed = ddl.GetValue<float>(0x3dea716du, BobSpeed);
 	}
 
-	[DDLRegistration(0x2f7189eau)]
+	[DDLRegistration(0xd30121ecu)]
 	public float SinkSpeed { get; set; } = 0.50f;
 
-	[DDLRegistration(0x2f7189eau)]
+	[DDLRegistration(0x51c80952u)]
 	public float SinkDistance { get; set; } = 0.10f;
 
-	[DDLRegistration(0x2f7189eau)]
+	[DDLRegistration(0xd0ff94f7u)]
 	public float RiseDistance { get; set; } = 0.10f;
 
-	[DDLRegistration(0x2f7189eau)]
+	[DDLRegistration(0x3dea716du)]
 	public float BobSpeed { get; set; } = 10.00f;
 
 	public static TiltAndSinkMotionPrius Create(DDLObject ddl) => new(ddl);

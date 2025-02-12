@@ -21,16 +21,16 @@ public class TriggerEffectArrayItem : DDLObjectType, IDDLObjectType<TriggerEffec
 		TriggerEffectConfig = ddl.GetValue<RivetAssetId>(0x336655bau, TriggerEffectConfig);
 	}
 
-	[DDLRegistration(0x879bd1f3u)]
+	[DDLRegistration(0x609bd7dbu)]
 	public x60ab12b0 EffectType { get; set; } = x60ab12b0.None;
 
-	[DDLRegistration(0x879bd1f3u)]
+	[DDLRegistration(0xf4cf343du)]
 	public x626794b4 Triggers { get; set; } = x626794b4.TriggerLeft;
 
-	[DDLRegistration(0x879bd1f3u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x879bd1f3u, description: "Trigger effect config for this type")]
+	[DDLRegistration(0x336655bau, description: "Trigger effect config for this type")]
 	public RivetAssetId TriggerEffectConfig { get; set; } = default;
 
 	public static TriggerEffectArrayItem Create(DDLObject ddl) => new(ddl);

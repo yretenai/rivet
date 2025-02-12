@@ -21,16 +21,16 @@ public class ColorGradeOpBaseDef : DDLObjectType, IDDLObjectType<ColorGradeOpBas
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0x357a6009u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x357a6009u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x357a6009u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 100.00f;
 
-	[DDLRegistration(0x357a6009u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
 	public static ColorGradeOpBaseDef Create(DDLObject ddl) => new(ddl);

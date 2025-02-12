@@ -22,19 +22,19 @@ public class HexapodFallData : DDLObjectType, IDDLObjectType<HexapodFallData> {
 		MoveAccel = ddl.GetValue<float>(0x4d8dca42u, MoveAccel);
 	}
 
-	[DDLRegistration(0x10f2b375u, "Max Speed")]
+	[DDLRegistration(0x16b83961u, "Max Speed")]
 	public float MaxSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x10f2b375u, "Gravity Accel")]
+	[DDLRegistration(0x5ef2b816u, "Gravity Accel")]
 	public float GravityAccel { get; set; } = 9.00f;
 
-	[DDLRegistration(0x10f2b375u, "Walk Speed Horizontal")]
+	[DDLRegistration(0x3b043e98u, "Walk Speed Horizontal")]
 	public float WalkSpeedHorizontal { get; set; } = 1.00f;
 
-	[DDLRegistration(0x10f2b375u, "Dash Speed Horizontal")]
+	[DDLRegistration(0x730b9d61u, "Dash Speed Horizontal")]
 	public float DashSpeedHorizontal { get; set; } = 2.00f;
 
-	[DDLRegistration(0x10f2b375u, "Move Accel")]
+	[DDLRegistration(0x4d8dca42u, "Move Accel")]
 	public float MoveAccel { get; set; } = 10.00f;
 
 	public static HexapodFallData Create(DDLObject ddl) => new(ddl);

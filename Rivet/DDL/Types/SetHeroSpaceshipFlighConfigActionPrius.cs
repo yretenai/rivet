@@ -19,10 +19,10 @@ public class SetHeroSpaceshipFlighConfigActionPrius : DDLObjectType, IDDLObjectT
 		FlightConfig = ddl.GetValue<RivetAssetId>(0x49c734f0u, FlightConfig);
 	}
 
-	[DDLRegistration(0xe23cf81au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0xe23cf81au, description: "Overrides default spaceship flight config for level specific behavior")]
+	[DDLRegistration(0x49c734f0u, description: "Overrides default spaceship flight config for level specific behavior")]
 	public RivetAssetId FlightConfig { get; set; } = default;
 
 	public static SetHeroSpaceshipFlighConfigActionPrius Create(DDLObject ddl) => new(ddl);

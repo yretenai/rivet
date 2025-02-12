@@ -18,7 +18,7 @@ public class ActionControlHeroOfferWithPassthroughControl : DDLObjectType, IDDLO
 		Control = ddl.GetEnum<xec7023d4>(0xec314f73u, xec7023d4Values.Lookup);
 	}
 
-	[DDLRegistration(0xe436b2c7u)]
+	[DDLRegistration(0xec314f73u)]
 	public xec7023d4 Control { get; set; } = xec7023d4.AcceptOfferPassthrough;
 
 	public static ActionControlHeroOfferWithPassthroughControl Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class CollectibleTypeDenum : DDLObjectType, IDDLObjectType<CollectibleTyp
 		Denum = ddl.GetObject<DynamicEnumValueRef>(0x9c399b1cu);
 	}
 
-	[DDLRegistration(0xf4d003f0u)]
+	[DDLRegistration(0x9c399b1cu)]
 	public DynamicEnumValueRef? Denum { get; set; } = default;
 
 	public static CollectibleTypeDenum Create(DDLObject ddl) => new(ddl);

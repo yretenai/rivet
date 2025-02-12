@@ -19,10 +19,10 @@ public class AndNodeDef : LogicNodeBaseDef, IDDLObjectType<AndNodeDef> {
 		Out = ddl.GetObject<OutputPlugBoolean>(0x93bf4450u);
 	}
 
-	[DDLRegistration(0x808db6f2u)]
+	[DDLRegistration(0x6a84a393u)]
 	public List<InputPlugBoolean?> In { get; set; } = [];
 
-	[DDLRegistration(0x808db6f2u)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugBoolean? Out { get; set; } = default;
 
 	public new static AndNodeDef Create(DDLObject ddl) => new(ddl);

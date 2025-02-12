@@ -18,7 +18,7 @@ public class Proof6 : DDLObjectType, IDDLObjectType<Proof6> {
 		Array = ddl.GetObjects<Proof2>(0xb85f2276u);
 	}
 
-	[DDLRegistration(0xdb59635au)]
+	[DDLRegistration(0xb85f2276u)]
 	public List<Proof2?> Array { get; set; } = [];
 
 	public static Proof6 Create(DDLObject ddl) => new(ddl);

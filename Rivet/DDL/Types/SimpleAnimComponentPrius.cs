@@ -22,19 +22,19 @@ public class SimpleAnimComponentPrius : DDLObjectType, IDDLObjectType<SimpleAnim
 		PartialCount = ddl.GetEnum<xbc02c29e>(0x4dd15e04u, xbc02c29eValues.Lookup);
 	}
 
-	[DDLRegistration(0x220f77feu, description: "Animset to use with this controller.")]
+	[DDLRegistration(0xffcf15f1u, description: "Animset to use with this controller.")]
 	public RivetAssetId AnimSet { get; set; } = default;
 
-	[DDLRegistration(0x220f77feu, description: "Maxmimum distance to which animation is updated (0.0 always tries to update).")]
+	[DDLRegistration(0x75ad2b16u, description: "Maxmimum distance to which animation is updated (0.0 always tries to update).")]
 	public float MaxUpdateDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x220f77feu, description: "Maximum distance to which animation is updated when the actor was not drawn the previous frame. (0.0 always tries to update).")]
+	[DDLRegistration(0x0b617c44u, description: "Maximum distance to which animation is updated when the actor was not drawn the previous frame. (0.0 always tries to update).")]
 	public float MaxCulledUpdateDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x220f77feu, description: "When true, maximum node depth is 4 rather than 8")]
+	[DDLRegistration(0xc3ecdbf7u, description: "When true, maximum node depth is 4 rather than 8")]
 	public bool SmallTreeDepth { get; set; } = false;
 
-	[DDLRegistration(0x220f77feu)]
+	[DDLRegistration(0x4dd15e04u)]
 	public xbc02c29e PartialCount { get; set; } = xbc02c29e.None;
 
 	public static SimpleAnimComponentPrius Create(DDLObject ddl) => new(ddl);

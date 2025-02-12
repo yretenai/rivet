@@ -18,7 +18,7 @@ public class InputPlugStringHash : InputPlugBaseDef, IDDLObjectType<InputPlugStr
 		Value = ddl.GetObject<StringHashPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x7ba6ce70u)]
+	[DDLRegistration(0x042494f5u)]
 	public StringHashPlug? Value { get; set; } = default;
 
 	public new static InputPlugStringHash Create(DDLObject ddl) => new(ddl);

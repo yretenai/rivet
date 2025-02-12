@@ -18,7 +18,7 @@ public class NavMeshObstructionSystemActionPrius : DDLObjectType, IDDLObjectType
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x8233cc86u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
 	public static NavMeshObstructionSystemActionPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class MissionStatesTriggerPrius : BaseCustomOverlayTriggerPrius, IDDLObje
 		AvailableCoversActiveLoading = ddl.GetValue<bool>(0x9555ef4cu, AvailableCoversActiveLoading);
 	}
 
-	[DDLRegistration(0x56c9caeau)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x56c9caeau)]
+	[DDLRegistration(0x13b9234fu)]
 	public MissionStatesBitfield MissionStates { get; set; } = (MissionStatesBitfield) 0x0000000c;
 
-	[DDLRegistration(0x56c9caeau, description: "If true and Available is true, also count the frames between mission going active and the first objective becoming active as Available")]
+	[DDLRegistration(0x9555ef4cu, description: "If true and Available is true, also count the frames between mission going active and the first objective becoming active as Available")]
 	public bool AvailableCoversActiveLoading { get; set; } = true;
 
 	public new static MissionStatesTriggerPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ClothEnableStateEvent : EventBase, IDDLObjectType<ClothEnableStateE
 		EnableBlending = ddl.GetValue<bool>(0x9b9706afu, EnableBlending);
 	}
 
-	[DDLRegistration(0x54b4cf1cu, description: "state name used in setup. Please note this is case sensitive")]
+	[DDLRegistration(0xb6351547u, description: "state name used in setup. Please note this is case sensitive")]
 	public string? StateName { get; set; } = default;
 
-	[DDLRegistration(0x54b4cf1cu, description: "when checked we use any blending/transition setup in havok else we pop to new cloth state")]
+	[DDLRegistration(0x9b9706afu, description: "when checked we use any blending/transition setup in havok else we pop to new cloth state")]
 	public bool EnableBlending { get; set; } = true;
 
 	public new static ClothEnableStateEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class BotBasePrius : DDLObjectType, IDDLObjectType<BotBasePrius> {
 		BotBaseData = ddl.GetObject<BotBaseData>(0xd5d88438u);
 	}
 
-	[DDLRegistration(0x0c476ed9u)]
+	[DDLRegistration(0xd5d88438u)]
 	public BotBaseData? BotBaseData { get; set; } = default;
 
 	public static BotBasePrius Create(DDLObject ddl) => new(ddl);

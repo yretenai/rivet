@@ -19,10 +19,10 @@ public class DebugMatrixComponentPrius : DDLObjectType, IDDLObjectType<DebugMatr
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0x1c5b3d39u)]
+	[DDLRegistration(0xe8d573cdu)]
 	public float AxisLength { get; set; } = 1.00f;
 
-	[DDLRegistration(0x1c5b3d39u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
 	public static DebugMatrixComponentPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class UDSBulkObjectLink : DDLObjectType, IDDLObjectType<UDSBulkObjectLink
 		Position = ddl.GetValue<int>(0x455b3bd3u, Position);
 	}
 
-	[DDLRegistration(0x9cb1f69au)]
+	[DDLRegistration(0x9179e0bdu)]
 	public UDSBulkObjectId? Object { get; set; } = default;
 
-	[DDLRegistration(0x9cb1f69au)]
+	[DDLRegistration(0x455b3bd3u)]
 	public int Position { get; set; } = 0;
 
 	public static UDSBulkObjectLink Create(DDLObject ddl) => new(ddl);

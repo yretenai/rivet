@@ -21,16 +21,16 @@ public class BotComboMoveMelee : BotComboMove, IDDLObjectType<BotComboMoveMelee>
 		PrioritizeMotionScaling = ddl.GetValue<bool>(0x2c704b31u, PrioritizeMotionScaling);
 	}
 
-	[DDLRegistration(0xaffb0864u, "Melee Attack Data")]
+	[DDLRegistration(0xf2a6d993u, "Melee Attack Data")]
 	public BotMeleeAttackData? MeleeAttackData { get; set; } = default;
 
-	[DDLRegistration(0xaffb0864u, "Attack Dodge Data")]
+	[DDLRegistration(0x685f8480u, "Attack Dodge Data")]
 	public BotAttackDodgeData? AttackDodgeData { get; set; } = default;
 
-	[DDLRegistration(0xaffb0864u)]
+	[DDLRegistration(0x760d56f1u)]
 	public bool DisableHitReactPartialsDuringAttack { get; set; } = false;
 
-	[DDLRegistration(0xaffb0864u, description: "if true, the bot will not stop scaling motion after hitting target and will ignore prevention of backwards tweaking")]
+	[DDLRegistration(0x2c704b31u, description: "if true, the bot will not stop scaling motion after hitting target and will ignore prevention of backwards tweaking")]
 	public bool PrioritizeMotionScaling { get; set; } = false;
 
 	public new static BotComboMoveMelee Create(DDLObject ddl) => new(ddl);

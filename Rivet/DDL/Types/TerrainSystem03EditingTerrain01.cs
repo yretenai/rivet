@@ -36,61 +36,61 @@ public class TerrainSystem03EditingTerrain01 : DDLObjectType, IDDLObjectType<Ter
 		Line19 = ddl.GetString(0x6fbf36ae) ?? Line19;
 	}
 
-	[DDLRegistration(0xb3b0beb7u, description: "The target indicates what will be painted on.  For sculpting terrain, the target")]
+	[DDLRegistration(0x787f8fddu, description: "The target indicates what will be painted on.  For sculpting terrain, the target")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "should be <i>HeightField</i>.  For painting on a splatmask, the target should be")]
+	[DDLRegistration(0xe176de67u, description: "should be <i>HeightField</i>.  For painting on a splatmask, the target should be")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "either <i>SplatMask R</i>, <i>SplatMask G</i>, <i>SplatMask B</i>, or")]
+	[DDLRegistration(0x9671eef1u, description: "either <i>SplatMask R</i>, <i>SplatMask G</i>, <i>SplatMask B</i>, or")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "<i>SplatMask A</i>; this will paint on the corresponding layer of the splatmask.")]
+	[DDLRegistration(0x08157b52u, description: "<i>SplatMask A</i>; this will paint on the corresponding layer of the splatmask.")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "<br><br>")]
+	[DDLRegistration(0x7f124bc4u, description: "<br><br>")]
 	public string? Line05 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "The special target <i>SplatMask RGBA</i> paints on all layers of the splatmask")]
+	[DDLRegistration(0xe61b1a7eu, description: "The special target <i>SplatMask RGBA</i> paints on all layers of the splatmask")]
 	public string? Line06 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "and is primarily used for erasing paint from the other layers (to show the base")]
+	[DDLRegistration(0x911c2ae8u, description: "and is primarily used for erasing paint from the other layers (to show the base")]
 	public string? Line07 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "layer).")]
+	[DDLRegistration(0x01a33779u, description: "layer).")]
 	public string? Line08 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "<br><br>")]
+	[DDLRegistration(0x76a407efu, description: "<br><br>")]
 	public string? Line09 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "The special target <i>Selection Mask</i> can be used to paint the selected areas")]
+	[DDLRegistration(0x16638e0au, description: "The special target <i>Selection Mask</i> can be used to paint the selected areas")]
 	public string? Line10 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "of the terrain.  The selected areas of the terrain are used for copy/paste and")]
+	[DDLRegistration(0x6164be9cu, description: "of the terrain.  The selected areas of the terrain are used for copy/paste and")]
 	public string? Line11 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "Houdini integration.  By default, the entire terrain is selected.  When the")]
+	[DDLRegistration(0xf86def26u, description: "Houdini integration.  By default, the entire terrain is selected.  When the")]
 	public string? Line12 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "<i>Selection Mask</i> is the target, the selection will always show up in the")]
+	[DDLRegistration(0x8f6adfb0u, description: "<i>Selection Mask</i> is the target, the selection will always show up in the")]
 	public string? Line13 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "3D view regardless of what the debug mode is.")]
+	[DDLRegistration(0x110e4a13u, description: "3D view regardless of what the debug mode is.")]
 	public string? Line14 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "<br><br>")]
+	[DDLRegistration(0x66097a85u, description: "<br><br>")]
 	public string? Line15 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "The <i>Terrain</i> special target is a used when pasting clipboard data.  This")]
+	[DDLRegistration(0xff002b3fu, description: "The <i>Terrain</i> special target is a used when pasting clipboard data.  This")]
 	public string? Line16 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "target writes to both the HeightField and SplatMask using the data from the")]
+	[DDLRegistration(0x88071ba9u, description: "target writes to both the HeightField and SplatMask using the data from the")]
 	public string? Line17 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "clipboard.  Some brushes also behave differently when <i>Terrain</i> is the")]
+	[DDLRegistration(0x18b80638u, description: "clipboard.  Some brushes also behave differently when <i>Terrain</i> is the")]
 	public string? Line18 { get; set; } = default;
 
-	[DDLRegistration(0xb3b0beb7u, description: "target.")]
+	[DDLRegistration(0x6fbf36aeu, description: "target.")]
 	public string? Line19 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain01 Create(DDLObject ddl) => new(ddl);

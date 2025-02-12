@@ -51,106 +51,106 @@ public class PickupBasePrius : DDLObjectType, IDDLObjectType<PickupBasePrius> {
 		Offer = ddl.GetObject<OfferPrius>(0x30854bffu);
 	}
 
-	[DDLRegistration(0x2fd159adu)]
+	[DDLRegistration(0x44d96bd9u)]
 	public DDLVector3? Velocity { get; set; } = default;
 
-	[DDLRegistration(0x2fd159adu, "Decay Timer")]
+	[DDLRegistration(0xc4ffecadu, "Decay Timer")]
 	public float DecayTimer { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2fd159adu, "Pickup Delay")]
+	[DDLRegistration(0x68cab92du, "Pickup Delay")]
 	public float NoPickupTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2fd159adu, "Pickup Range")]
+	[DDLRegistration(0xfcf2ecefu, "Pickup Range")]
 	public float PickupRange { get; set; } = 3.00f;
 
-	[DDLRegistration(0x2fd159adu, "Collect Threshold")]
+	[DDLRegistration(0x900a0067u, "Collect Threshold")]
 	public float CollectThreshold { get; set; } = 0.50f;
 
-	[DDLRegistration(0x2fd159adu, "Collision Radius")]
+	[DDLRegistration(0x7d546bbau, "Collision Radius")]
 	public float CollisionRadius { get; set; } = 0.15f;
 
-	[DDLRegistration(0x2fd159adu, "Gravity")]
+	[DDLRegistration(0x5bf7469fu, "Gravity")]
 	public float Gravity { get; set; } = -12.00f;
 
-	[DDLRegistration(0x2fd159adu, "Max angle from Y", "Max random angle for starting orientation from Y up")]
+	[DDLRegistration(0x59e6c184u, "Max angle from Y", "Max random angle for starting orientation from Y up")]
 	public float MaxRandomAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2fd159adu, "Min angular speed (physics)", "Only works with physics movement")]
+	[DDLRegistration(0x7857e5b0u, "Min angular speed (physics)", "Only works with physics movement")]
 	public float MinAngularSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2fd159adu, "Max angular speed (physics)", "Only works with physics movement")]
+	[DDLRegistration(0x5fec8281u, "Max angular speed (physics)", "Only works with physics movement")]
 	public float MaxAngularSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2fd159adu, description: "Low end of random range for auto-collect speed")]
+	[DDLRegistration(0xf3e8422du, description: "Low end of random range for auto-collect speed")]
 	public float MinCollectSpeed { get; set; } = 9.00f;
 
-	[DDLRegistration(0x2fd159adu, description: "High end of random range for auto-collect speed")]
+	[DDLRegistration(0xd453251cu, description: "High end of random range for auto-collect speed")]
 	public float MaxCollectSpeed { get; set; } = 12.00f;
 
-	[DDLRegistration(0x2fd159adu, description: "Deviation from auto-collect beeline as a ratio to current distance")]
+	[DDLRegistration(0x10d960e6u, description: "Deviation from auto-collect beeline as a ratio to current distance")]
 	public float SwarmSpread { get; set; } = 0.85f;
 
-	[DDLRegistration(0x2fd159adu, description: "Max deviation from auto-collect beeline. -1 = no max")]
+	[DDLRegistration(0x1c46e66eu, description: "Max deviation from auto-collect beeline. -1 = no max")]
 	public float MaxSwarmOffset { get; set; } = -1.00f;
 
-	[DDLRegistration(0x2fd159adu)]
+	[DDLRegistration(0xe6a2a2d6u)]
 	public bool StartFixed { get; set; } = true;
 
-	[DDLRegistration(0x2fd159adu, description: "If true, something else will have to enable this (usually script)")]
+	[DDLRegistration(0x41bfe110u, description: "If true, something else will have to enable this (usually script)")]
 	public bool CanBePickedUp { get; set; } = true;
 
-	[DDLRegistration(0x2fd159adu, "Try falling when spawned", "Try falling even if spawned with no velocity")]
+	[DDLRegistration(0xcbf19bdbu, "Try falling when spawned", "Try falling even if spawned with no velocity")]
 	public bool StartFalling { get; set; } = false;
 
-	[DDLRegistration(0x2fd159adu, "Use physics movement", "Use physics movement until landing")]
+	[DDLRegistration(0xb3bb7da7u, "Use physics movement", "Use physics movement until landing")]
 	public bool PhysicsMovement { get; set; } = false;
 
-	[DDLRegistration(0x2fd159adu, "Offset Collision", "Automatically offset the collision point by the coll radius")]
+	[DDLRegistration(0xaa476d27u, "Offset Collision", "Automatically offset the collision point by the coll radius")]
 	public bool OffsetCollision { get; set; } = true;
 
-	[DDLRegistration(0x2fd159adu, "Do automatic settling", "Try to settle with your y facing up")]
+	[DDLRegistration(0xe3f24849u, "Do automatic settling", "Try to settle with your y facing up")]
 	public bool DoSettling { get; set; } = false;
 
-	[DDLRegistration(0x2fd159adu, "Do Shimmer", "Apply shimmer material to pickup")]
+	[DDLRegistration(0x21ca7a63u, "Do Shimmer", "Apply shimmer material to pickup")]
 	public bool DoShimmer { get; set; } = false;
 
-	[DDLRegistration(0x2fd159adu, "Require Path?", "Whether we must have a clear path from the prospective collector and us to display any pickup offer, if used.")]
+	[DDLRegistration(0xf7872abfu, "Require Path?", "Whether we must have a clear path from the prospective collector and us to display any pickup offer, if used.")]
 	public bool RequirePath { get; set; } = true;
 
-	[DDLRegistration(0x2fd159adu, "Allow Range Bonus", "Toggle whether this pickup can be affected by PickupRangeEnhancer components")]
+	[DDLRegistration(0x2d88be33u, "Allow Range Bonus", "Toggle whether this pickup can be affected by PickupRangeEnhancer components")]
 	public bool AllowRangeBonus { get; set; } = true;
 
-	[DDLRegistration(0x2fd159adu, "Delete If Moving Too Long", "Deletes the pickup if it is in motion longer than 15 seconds to prevent items from falling forever")]
+	[DDLRegistration(0xa248eb7cu, "Delete If Moving Too Long", "Deletes the pickup if it is in motion longer than 15 seconds to prevent items from falling forever")]
 	public bool DoSanityChecks { get; set; } = true;
 
-	[DDLRegistration(0x2fd159adu, "In progress death collect?", "Whether to force the collection if we were being collected and our collector died.")]
+	[DDLRegistration(0x214ec46du, "In progress death collect?", "Whether to force the collection if we were being collected and our collector died.")]
 	public bool DeathAutoCollect { get; set; } = true;
 
-	[DDLRegistration(0x2fd159adu, "Rezone To World", "This pickup will update it's zone to the world zone rather than the drop zone")]
+	[DDLRegistration(0x79336ed2u, "Rezone To World", "This pickup will update it's zone to the world zone rather than the drop zone")]
 	public bool RezoneToWorld { get; set; } = false;
 
-	[DDLRegistration(0x2fd159adu)]
+	[DDLRegistration(0xc96313ccu)]
 	public bool StopMovingOnAttach { get; set; } = false;
 
-	[DDLRegistration(0x2fd159adu)]
+	[DDLRegistration(0x8b953a51u)]
 	public bool CanBeBumped { get; set; } = false;
 
-	[DDLRegistration(0x2fd159adu)]
+	[DDLRegistration(0x89c40d2eu)]
 	public bool DoWaterSplash { get; set; } = false;
 
-	[DDLRegistration(0x2fd159adu)]
+	[DDLRegistration(0x3c076177u)]
 	public bool DeleteOnPickup { get; set; } = true;
 
-	[DDLRegistration(0x2fd159adu, "Bob Data")]
+	[DDLRegistration(0xb67afb69u, "Bob Data")]
 	public PickupBobData? BobData { get; set; } = default;
 
-	[DDLRegistration(0x2fd159adu, "Percent Collected Render Constant (optional)")]
+	[DDLRegistration(0xc396df81u, "Percent Collected Render Constant (optional)")]
 	public string? PercentCollectedRenderConstant { get; set; } = default;
 
-	[DDLRegistration(0x2fd159adu)]
+	[DDLRegistration(0x0f0a2f58u)]
 	public bool UseEmbeddedOffer { get; set; } = false;
 
-	[DDLRegistration(0x2fd159adu)]
+	[DDLRegistration(0x30854bffu)]
 	public OfferPrius? Offer { get; set; } = default;
 
 	public static PickupBasePrius Create(DDLObject ddl) => new(ddl);

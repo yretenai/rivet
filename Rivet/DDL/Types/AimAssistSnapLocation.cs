@@ -23,22 +23,22 @@ public class AimAssistSnapLocation : DDLObjectType, IDDLObjectType<AimAssistSnap
 		LocationType = ddl.GetEnum<x80286938>(0xc3db52f8u, x80286938Values.Lookup);
 	}
 
-	[DDLRegistration(0xa692b37au, "Angle Near", "Angle (in degrees) of Snap circle at near distance.")]
+	[DDLRegistration(0x7d428588u, "Angle Near", "Angle (in degrees) of Snap circle at near distance.")]
 	public float AngleNear { get; set; } = 3.00f;
 
-	[DDLRegistration(0xa692b37au, "Angle Far", "Angle (in degrees) of Snap circle at far distance.")]
+	[DDLRegistration(0xabdaec9fu, "Angle Far", "Angle (in degrees) of Snap circle at far distance.")]
 	public float AngleFar { get; set; } = 7.00f;
 
-	[DDLRegistration(0xa692b37au, "Distance Near", "Range from camera to target that Angle Near gets used.")]
+	[DDLRegistration(0xe7e7d300u, "Distance Near", "Range from camera to target that Angle Near gets used.")]
 	public float DistanceNear { get; set; } = 5.00f;
 
-	[DDLRegistration(0xa692b37au, "Distance Far", "Range from camera to target that Angle Far gets used.")]
+	[DDLRegistration(0xb13fd21eu, "Distance Far", "Range from camera to target that Angle Far gets used.")]
 	public float DistanceFar { get; set; } = 15.00f;
 
-	[DDLRegistration(0xa692b37au, "Facing Angle", "Angle (in degrees) that the target must be facing compared to the camera for this location to be valid.")]
+	[DDLRegistration(0xb2c98628u, "Facing Angle", "Angle (in degrees) that the target must be facing compared to the camera for this location to be valid.")]
 	public float FaceAngle { get; set; } = 180.00f;
 
-	[DDLRegistration(0xa692b37au, "Location Type")]
+	[DDLRegistration(0xc3db52f8u, "Location Type")]
 	public x80286938 LocationType { get; set; } = x80286938.CenterOfMass;
 
 	public static AimAssistSnapLocation Create(DDLObject ddl) => new(ddl);

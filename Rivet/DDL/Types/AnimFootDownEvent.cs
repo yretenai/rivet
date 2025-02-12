@@ -18,7 +18,7 @@ public class AnimFootDownEvent : EventBase, IDDLObjectType<AnimFootDownEvent> {
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0xb4cad6dau)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
 	public new static AnimFootDownEvent Create(DDLObject ddl) => new(ddl);

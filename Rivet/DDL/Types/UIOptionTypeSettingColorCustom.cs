@@ -18,7 +18,7 @@ public class UIOptionTypeSettingColorCustom : UIOptionTypeSettingColor, IDDLObje
 		CustomColorOptionID = ddl.GetEnum<x33afe7f4>(0x2e615811u, x33afe7f4Values.Lookup);
 	}
 
-	[DDLRegistration(0x9b44e799u, description: "Custom color option ID for this setting.")]
+	[DDLRegistration(0x2e615811u, description: "Custom color option ID for this setting.")]
 	public x33afe7f4 CustomColorOptionID { get; set; } = x33afe7f4.Resume;
 
 	public new static UIOptionTypeSettingColorCustom Create(DDLObject ddl) => new(ddl);

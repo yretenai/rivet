@@ -23,22 +23,22 @@ public class SkinManagerClothModifyEvent : EventBase, IDDLObjectType<SkinManager
 		Cinematic2ActorComponentHandle = ddl.GetValue<uint>(0x3a4a988au, Cinematic2ActorComponentHandle);
 	}
 
-	[DDLRegistration(0x67648b3au)]
+	[DDLRegistration(0x5b71b3b8u)]
 	public uint ModifyFlags { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x67648b3au)]
+	[DDLRegistration(0x1b5e787bu)]
 	public uint SimFlags { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x67648b3au)]
+	[DDLRegistration(0x223be2eau)]
 	public uint StatusFlags { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x67648b3au)]
+	[DDLRegistration(0x45e45952u)]
 	public float Damping { get; set; } = 0.20f;
 
-	[DDLRegistration(0x67648b3au)]
+	[DDLRegistration(0x5bf7469fu)]
 	public DDLVector3? Gravity { get; set; } = default;
 
-	[DDLRegistration(0x67648b3au)]
+	[DDLRegistration(0x3a4a988au)]
 	public uint Cinematic2ActorComponentHandle { get; set; } = 0x00000000;
 
 	public new static SkinManagerClothModifyEvent Create(DDLObject ddl) => new(ddl);

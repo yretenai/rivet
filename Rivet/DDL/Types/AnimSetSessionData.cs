@@ -18,7 +18,7 @@ public class AnimSetSessionData : DDLObjectType, IDDLObjectType<AnimSetSessionDa
 		Selection = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x145893db, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 	}
 
-	[DDLRegistration(0x1897dbd9u)]
+	[DDLRegistration(0x145893dbu)]
 	public Dictionary<RivetAssetId, RivetAssetId> Selection { get; set; } = [];
 
 	public static AnimSetSessionData Create(DDLObject ddl) => new(ddl);

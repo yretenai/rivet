@@ -36,61 +36,61 @@ public class GPUPerformanceBudgetView : DDLObjectType, IDDLObjectType<GPUPerform
 		Starvation = ddl.GetValue<float>(0x7d26b758u, Starvation);
 	}
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = "DefaultBudget";
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x114d5814u)]
 	public float All { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0xacccc4ffu)]
 	public float Unknown { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x0faf1bd0u)]
 	public float Animation { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x012efa54u)]
 	public float Audio { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x11872f38u)]
 	public float Character { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x5b1d45ffu)]
 	public float Core { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0xa13d4894u)]
 	public float Creative { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0xf3371457u)]
 	public float Design { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0xcbfa8ff9u)]
 	public float Environment { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x22a62ac5u)]
 	public float FX { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0xf2b969f5u)]
 	public float Gameplay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x3109a803u)]
 	public float Lighting { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x2ac7054cu)]
 	public float Rigging { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x33660a72u)]
 	public float UIArt { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x2df4badcu)]
 	public float Shared { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x1c7b778cu)]
 	public float Trash { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0xedbe89d0u)]
 	public float Unowned { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1112265cu)]
+	[DDLRegistration(0x7d26b758u)]
 	public float Starvation { get; set; } = 0.00f;
 
 	public static GPUPerformanceBudgetView Create(DDLObject ddl) => new(ddl);

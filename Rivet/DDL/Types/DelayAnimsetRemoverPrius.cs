@@ -21,16 +21,16 @@ public class DelayAnimsetRemoverPrius : DDLObjectType, IDDLObjectType<DelayAnims
 		DelayTime = ddl.GetValue<float>(0x68ee6562u, DelayTime);
 	}
 
-	[DDLRegistration(0xb7342d6bu)]
+	[DDLRegistration(0xffcf15f1u)]
 	public RivetAssetId AnimSet { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb7342d6bu, description: "The unique id that was given to the animset when it was added. Animsets all default to an id 0 zero unless one is explicitly specified")]
+	[DDLRegistration(0x786299cfu, description: "The unique id that was given to the animset when it was added. Animsets all default to an id 0 zero unless one is explicitly specified")]
 	public uint AnimSetUniqueId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb7342d6bu)]
+	[DDLRegistration(0x226dca7du)]
 	public uint DriverNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb7342d6bu)]
+	[DDLRegistration(0x68ee6562u)]
 	public float DelayTime { get; set; } = 0.10f;
 
 	public static DelayAnimsetRemoverPrius Create(DDLObject ddl) => new(ddl);

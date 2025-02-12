@@ -19,10 +19,10 @@ public class ClankPuzzleVolumePrius : DDLObjectType, IDDLObjectType<ClankPuzzleV
 		TargetTypes = ddl.GetBitset<xf32dacf0>(0x85109145u, xf32dacf0Values.Lookup);
 	}
 
-	[DDLRegistration(0xe8aaedc7u, description: "If the component is not on a volume, what radius should we use for sphere collision.")]
+	[DDLRegistration(0xde9dc686u, description: "If the component is not on a volume, what radius should we use for sphere collision.")]
 	public float VolumeRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe8aaedc7u, description: "What target types should we ignore.")]
+	[DDLRegistration(0x85109145u, description: "What target types should we ignore.")]
 	public xf32dacf0 TargetTypes { get; set; } = (xf32dacf0) 0x00000007;
 
 	public static ClankPuzzleVolumePrius Create(DDLObject ddl) => new(ddl);

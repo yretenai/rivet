@@ -22,19 +22,19 @@ public class StatusEffectClonePrius : StatusEffectBasePrius, IDDLObjectType<Stat
 		IsMaxHPPercent = ddl.GetValue<bool>(0x7f55e6c8u, IsMaxHPPercent);
 	}
 
-	[DDLRegistration(0x88c928bau)]
+	[DDLRegistration(0x8d6a8791u)]
 	public float DamageToClone { get; set; } = 10.00f;
 
-	[DDLRegistration(0x88c928bau)]
+	[DDLRegistration(0x858c4cf5u)]
 	public bool IsPercent { get; set; } = true;
 
-	[DDLRegistration(0x88c928bau)]
+	[DDLRegistration(0x2f9a8fadu)]
 	public int MaxClones { get; set; } = -1;
 
-	[DDLRegistration(0x88c928bau)]
+	[DDLRegistration(0x8bb7f445u)]
 	public float CloneHPPercent { get; set; } = 50.00f;
 
-	[DDLRegistration(0x88c928bau)]
+	[DDLRegistration(0x7f55e6c8u)]
 	public bool IsMaxHPPercent { get; set; } = true;
 
 	public new static StatusEffectClonePrius Create(DDLObject ddl) => new(ddl);

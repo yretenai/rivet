@@ -18,7 +18,7 @@ public class TriggerEffectSequencePosition : TriggerEffectSequenceBase, IDDLObje
 		KeyFrameData = ddl.GetObjects<TriggerEffectKeyFrameDataPosition>(0x6d456e08u);
 	}
 
-	[DDLRegistration(0x1ec6596au)]
+	[DDLRegistration(0x6d456e08u)]
 	public List<TriggerEffectKeyFrameDataPosition?> KeyFrameData { get; set; } = [];
 
 	public new static TriggerEffectSequencePosition Create(DDLObject ddl) => new(ddl);

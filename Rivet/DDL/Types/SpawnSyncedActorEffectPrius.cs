@@ -22,19 +22,19 @@ public class SpawnSyncedActorEffectPrius : ScriptedShotEffectBasePrius, IDDLObje
 		MatchCreatorZone = ddl.GetValue<bool>(0xfc7075c0u, MatchCreatorZone);
 	}
 
-	[DDLRegistration(0x91e958ecu)]
+	[DDLRegistration(0x75356989u)]
 	public RivetAssetId ActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x91e958ecu)]
+	[DDLRegistration(0x67d422c6u)]
 	public float LifeTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x91e958ecu)]
+	[DDLRegistration(0x27919c52u)]
 	public bool AttachToHitActor { get; set; } = false;
 
-	[DDLRegistration(0x91e958ecu)]
+	[DDLRegistration(0x60d5eba5u)]
 	public bool MatchCreatorAllegiance { get; set; } = true;
 
-	[DDLRegistration(0x91e958ecu)]
+	[DDLRegistration(0xfc7075c0u)]
 	public bool MatchCreatorZone { get; set; } = false;
 
 	public new static SpawnSyncedActorEffectPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PlanetMenuViewData : UIViewBaseData, IDDLObjectType<PlanetMenuViewD
 		BackgroundActor = ddl.GetValue<RivetAssetId>(0x22e8c45au, BackgroundActor);
 	}
 
-	[DDLRegistration(0xeae9919cu, "Background Actor")]
+	[DDLRegistration(0x22e8c45au, "Background Actor")]
 	public RivetAssetId BackgroundActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static PlanetMenuViewData Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class WeaponUnsightedEvent : EventBase, IDDLObjectType<WeaponUnsightedEve
 		LocalHero = ddl.GetValue<byte>(0x22e4456au, LocalHero);
 	}
 
-	[DDLRegistration(0x82c8f7a4u)]
+	[DDLRegistration(0x22e4456au)]
 	public byte LocalHero { get; set; } = 0x00;
 
 	public new static WeaponUnsightedEvent Create(DDLObject ddl) => new(ddl);

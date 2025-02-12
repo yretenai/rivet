@@ -19,10 +19,10 @@ public class WeaponPlasmaStrikerPrius : WeaponGamePrius, IDDLObjectType<WeaponPl
 		WeakspotActor = ddl.GetValue<RivetAssetId>(0x3483e017u, WeakspotActor);
 	}
 
-	[DDLRegistration(0xa2a27f8du)]
+	[DDLRegistration(0x30af9095u)]
 	public RivetAssetId ScopeOverlayActor { get; set; } = default;
 
-	[DDLRegistration(0xa2a27f8du)]
+	[DDLRegistration(0x3483e017u)]
 	public RivetAssetId WeakspotActor { get; set; } = default;
 
 	public new static WeaponPlasmaStrikerPrius Create(DDLObject ddl) => new(ddl);

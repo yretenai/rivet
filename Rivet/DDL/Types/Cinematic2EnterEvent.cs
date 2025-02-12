@@ -19,10 +19,10 @@ public class Cinematic2EnterEvent : EventBase, IDDLObjectType<Cinematic2EnterEve
 		Invulnerable = ddl.GetValue<bool>(0xf5def753u, Invulnerable);
 	}
 
-	[DDLRegistration(0x9d20f353u)]
+	[DDLRegistration(0x8d2ee34fu)]
 	public DDLTransform? StartMatrix { get; set; } = default;
 
-	[DDLRegistration(0x9d20f353u)]
+	[DDLRegistration(0xf5def753u)]
 	public bool Invulnerable { get; set; } = false;
 
 	public new static Cinematic2EnterEvent Create(DDLObject ddl) => new(ddl);

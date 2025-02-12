@@ -18,7 +18,7 @@ public class ShotArtSpawnedEvent : EventBase, IDDLObjectType<ShotArtSpawnedEvent
 		ShotActorHandle = ddl.GetValue<uint>(0xa7d95b9cu, ShotActorHandle);
 	}
 
-	[DDLRegistration(0x76ec78b5u)]
+	[DDLRegistration(0xa7d95b9cu)]
 	public uint ShotActorHandle { get; set; } = 0x00000000;
 
 	public new static ShotArtSpawnedEvent Create(DDLObject ddl) => new(ddl);

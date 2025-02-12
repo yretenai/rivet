@@ -18,7 +18,7 @@ public class HiddenData3D : DDLObjectType, IDDLObjectType<HiddenData3D> {
 		HiddenObjects = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0xda59e67e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 	}
 
-	[DDLRegistration(0x3f94c183u)]
+	[DDLRegistration(0xda59e67eu)]
 	public Dictionary<RivetAssetId, RivetAssetId> HiddenObjects { get; set; } = [];
 
 	public static HiddenData3D Create(DDLObject ddl) => new(ddl);

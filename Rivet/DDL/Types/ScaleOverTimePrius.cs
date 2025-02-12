@@ -21,16 +21,16 @@ public class ScaleOverTimePrius : DDLObjectType, IDDLObjectType<ScaleOverTimePri
 		AccountForDynamicPhysics = ddl.GetValue<bool>(0x20e68846u, AccountForDynamicPhysics);
 	}
 
-	[DDLRegistration(0xa9cad9a0u)]
+	[DDLRegistration(0xf9496656u)]
 	public float InitialScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa9cad9a0u)]
+	[DDLRegistration(0x68b6b2e3u)]
 	public float FinalScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa9cad9a0u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa9cad9a0u, description: "Dynamically scaled physics objects are not allowed.  This will preset collision size to final scale size")]
+	[DDLRegistration(0x20e68846u, description: "Dynamically scaled physics objects are not allowed.  This will preset collision size to final scale size")]
 	public bool AccountForDynamicPhysics { get; set; } = false;
 
 	public static ScaleOverTimePrius Create(DDLObject ddl) => new(ddl);

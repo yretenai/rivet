@@ -24,25 +24,25 @@ public class PointCameraAtTargetActionPrius : DDLObjectType, IDDLObjectType<Poin
 		StopOnInput = ddl.GetValue<bool>(0x0ec5afb6u, StopOnInput);
 	}
 
-	[DDLRegistration(0x12cce23au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0x12cce23au, description: "Turn speed acceleration while facing up (deg/s/s)")]
+	[DDLRegistration(0x3e1dc75bu, description: "Turn speed acceleration while facing up (deg/s/s)")]
 	public float TurnAccel { get; set; } = 540.00f;
 
-	[DDLRegistration(0x12cce23au, description: "Turn speed deceleration while facing up (deg/s/s)")]
+	[DDLRegistration(0xd39617f7u, description: "Turn speed deceleration while facing up (deg/s/s)")]
 	public float TurnDecel { get; set; } = 120.00f;
 
-	[DDLRegistration(0x12cce23au, description: "Maximum turn speed while facing up (deg/s)")]
+	[DDLRegistration(0xa66b2ab3u, description: "Maximum turn speed while facing up (deg/s)")]
 	public float TurnSpeedMax { get; set; } = 540.00f;
 
-	[DDLRegistration(0x12cce23au, description: "Local space offset to look at relative to target position")]
+	[DDLRegistration(0x46a4eea5u, description: "Local space offset to look at relative to target position")]
 	public DDLVector3? LocalOffset { get; set; } = default;
 
-	[DDLRegistration(0x12cce23au, description: "Turn off camera following once pointed at target")]
+	[DDLRegistration(0xee67c262u, description: "Turn off camera following once pointed at target")]
 	public bool StopOnComplete { get; set; } = true;
 
-	[DDLRegistration(0x12cce23au, description: "Turn off camera following if player has look stick input")]
+	[DDLRegistration(0x0ec5afb6u, description: "Turn off camera following if player has look stick input")]
 	public bool StopOnInput { get; set; } = false;
 
 	public static PointCameraAtTargetActionPrius Create(DDLObject ddl) => new(ddl);

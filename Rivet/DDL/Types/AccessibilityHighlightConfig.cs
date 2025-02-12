@@ -18,7 +18,7 @@ public class AccessibilityHighlightConfig : ConfigBase, IDDLObjectType<Accessibi
 		HighlightData = ddl.GetObject<AccessibilityHighlightComponentPrius>(0x954bcfb0u);
 	}
 
-	[DDLRegistration(0x3ecbd146u)]
+	[DDLRegistration(0x954bcfb0u)]
 	public AccessibilityHighlightComponentPrius? HighlightData { get; set; } = default;
 
 	public new static AccessibilityHighlightConfig Create(DDLObject ddl) => new(ddl);

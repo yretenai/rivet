@@ -20,13 +20,13 @@ public class PortalManagerPrius : DDLObjectType, IDDLObjectType<PortalManagerPri
 		AllowProjectiles = ddl.GetValue<bool>(0x27022e07u, AllowProjectiles);
 	}
 
-	[DDLRegistration(0x31a87612u)]
+	[DDLRegistration(0xcb694d31u)]
 	public bool AllowPlayers { get; set; } = true;
 
-	[DDLRegistration(0x31a87612u)]
+	[DDLRegistration(0xa6278cafu)]
 	public bool AllowBots { get; set; } = false;
 
-	[DDLRegistration(0x31a87612u)]
+	[DDLRegistration(0x27022e07u)]
 	public bool AllowProjectiles { get; set; } = false;
 
 	public static PortalManagerPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SpawnShotTargetingMode : DDLObjectType, IDDLObjectType<SpawnShotTar
 		VectorSource = ddl.GetString(0x5ee865d8) ?? VectorSource;
 	}
 
-	[DDLRegistration(0x8966918bu, "Target Vector Mode")]
+	[DDLRegistration(0xff506db2u, "Target Vector Mode")]
 	public xfe692fc4 VectorMode { get; set; } = xfe692fc4.HitNormal;
 
-	[DDLRegistration(0x8966918bu, description: "Locator used by kLocatorFacing vector mode")]
+	[DDLRegistration(0x5ee865d8u, description: "Locator used by kLocatorFacing vector mode")]
 	public string? VectorSource { get; set; } = default;
 
 	public static SpawnShotTargetingMode Create(DDLObject ddl) => new(ddl);

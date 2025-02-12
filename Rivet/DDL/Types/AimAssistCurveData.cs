@@ -18,7 +18,7 @@ public class AimAssistCurveData : DDLObjectType, IDDLObjectType<AimAssistCurveDa
 		AimAssistCurve = ddl.GetValue<RivetAssetId>(0xbcd1e797u, AimAssistCurve);
 	}
 
-	[DDLRegistration(0xfa4b9780u)]
+	[DDLRegistration(0xbcd1e797u)]
 	public RivetAssetId AimAssistCurve { get; set; } = default;
 
 	public static AimAssistCurveData Create(DDLObject ddl) => new(ddl);

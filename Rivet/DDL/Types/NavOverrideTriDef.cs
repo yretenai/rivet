@@ -21,16 +21,16 @@ public class NavOverrideTriDef : DDLObjectType, IDDLObjectType<NavOverrideTriDef
 		EditorFlags = ddl.GetEnum<x66a27995>(0xf0fcdfb7u, x66a27995Values.Lookup);
 	}
 
-	[DDLRegistration(0x0cbde9d2u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x0cbde9d2u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x0cbde9d2u)]
+	[DDLRegistration(0x93269de8u)]
 	public List<DDLVector3?> PolyVerts { get; set; } = [];
 
-	[DDLRegistration(0x0cbde9d2u)]
+	[DDLRegistration(0xf0fcdfb7u)]
 	public x66a27995 EditorFlags { get; set; } = x66a27995.Additive;
 
 	public static NavOverrideTriDef Create(DDLObject ddl) => new(ddl);

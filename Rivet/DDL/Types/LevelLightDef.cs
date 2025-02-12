@@ -22,19 +22,19 @@ public class LevelLightDef : DDLObjectType, IDDLObjectType<LevelLightDef> {
 		EnvProbes = ddl.GetDictionary<RivetAssetId, EnvProbeCache>(0x4ed5e4f6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EnvProbeCache>(mapId));
 	}
 
-	[DDLRegistration(0x7c816d3cu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x7c816d3cu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x7c816d3cu)]
+	[DDLRegistration(0x7e20949au)]
 	public RivetAssetId MipData16 { get; set; } = default;
 
-	[DDLRegistration(0x7c816d3cu)]
+	[DDLRegistration(0x4b7b3201u)]
 	public List<RivetAssetId> MipData32 { get; set; } = [];
 
-	[DDLRegistration(0x7c816d3cu)]
+	[DDLRegistration(0x4ed5e4f6u)]
 	public Dictionary<RivetAssetId, EnvProbeCache?> EnvProbes { get; set; } = [];
 
 	public static LevelLightDef Create(DDLObject ddl) => new(ddl);

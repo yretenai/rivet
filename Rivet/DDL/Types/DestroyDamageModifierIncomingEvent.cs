@@ -18,7 +18,7 @@ public class DestroyDamageModifierIncomingEvent : EventBase, IDDLObjectType<Dest
 		DamageModPrius = ddl.GetObject<DamageModifierIncomingPrius>(0xbefb284cu);
 	}
 
-	[DDLRegistration(0x28d88a7du)]
+	[DDLRegistration(0xbefb284cu)]
 	public DamageModifierIncomingPrius? DamageModPrius { get; set; } = default;
 
 	public new static DestroyDamageModifierIncomingEvent Create(DDLObject ddl) => new(ddl);

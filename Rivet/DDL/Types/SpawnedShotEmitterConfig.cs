@@ -18,7 +18,7 @@ public class SpawnedShotEmitterConfig : ConfigBase, IDDLObjectType<SpawnedShotEm
 		EmitterPrius = ddl.GetObject<WeaponEmitterBasePrius>(0x814e290fu);
 	}
 
-	[DDLRegistration(0x690daf0du)]
+	[DDLRegistration(0x814e290fu)]
 	public WeaponEmitterBasePrius? EmitterPrius { get; set; } = default;
 
 	public new static SpawnedShotEmitterConfig Create(DDLObject ddl) => new(ddl);

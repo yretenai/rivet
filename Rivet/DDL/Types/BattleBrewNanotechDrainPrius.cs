@@ -21,16 +21,16 @@ public class BattleBrewNanotechDrainPrius : BattleBrewBasePrius, IDDLObjectType<
 		HealthPercentPerPiece = ddl.GetValue<float>(0x49c87455u, HealthPercentPerPiece);
 	}
 
-	[DDLRegistration(0x20180979u)]
+	[DDLRegistration(0x9f8e8fc6u)]
 	public float CooldownToSpawnMoreNanotech { get; set; } = 0.50f;
 
-	[DDLRegistration(0x20180979u)]
+	[DDLRegistration(0x21b57f70u)]
 	public uint NumNanoTechToSpawn { get; set; } = 0x00000001;
 
-	[DDLRegistration(0x20180979u)]
+	[DDLRegistration(0x7d8ad9f4u)]
 	public RivetAssetId NanotechActor { get; set; } = default;
 
-	[DDLRegistration(0x20180979u)]
+	[DDLRegistration(0x49c87455u)]
 	public float HealthPercentPerPiece { get; set; } = 0.05f;
 
 	public new static BattleBrewNanotechDrainPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class CompatVaultSearchCommand : DDLObjectType, IDDLObjectType<CompatVaul
 		Filters = ddl.GetString(0x799d04b5) ?? Filters;
 	}
 
-	[DDLRegistration(0x035e35c5u)]
+	[DDLRegistration(0xc95f3b85u)]
 	public string? SearchText { get; set; } = default;
 
-	[DDLRegistration(0x035e35c5u)]
+	[DDLRegistration(0x799d04b5u)]
 	public string? Filters { get; set; } = default;
 
 	public static CompatVaultSearchCommand Create(DDLObject ddl) => new(ddl);

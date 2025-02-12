@@ -19,10 +19,10 @@ public class TriggerResponderBasePrius : DDLObjectType, IDDLObjectType<TriggerRe
 		GroupName = ddl.GetString(0xb215bfb7) ?? GroupName;
 	}
 
-	[DDLRegistration(0xf1400226u, "Component Enabled?", "Whether this component is enabled, just in case you ever don't want to use it for an instance.")]
+	[DDLRegistration(0x6f36ca8bu, "Component Enabled?", "Whether this component is enabled, just in case you ever don't want to use it for an instance.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0xf1400226u, "Group Name", "Triggers, switches and responses with a matching name act as a separate group")]
+	[DDLRegistration(0xb215bfb7u, "Group Name", "Triggers, switches and responses with a matching name act as a separate group")]
 	public string? GroupName { get; set; } = default;
 
 	public static TriggerResponderBasePrius Create(DDLObject ddl) => new(ddl);

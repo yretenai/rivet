@@ -25,28 +25,28 @@ public class SpreadFiringPrius : BasicShotFiringPrius, IDDLObjectType<SpreadFiri
 		PerPelletDiminish = ddl.GetValue<float>(0x984b84b6u, PerPelletDiminish);
 	}
 
-	[DDLRegistration(0xdff47289u)]
+	[DDLRegistration(0x884a83dcu)]
 	public float SpreadAngle { get; set; } = 20.00f;
 
-	[DDLRegistration(0xdff47289u)]
+	[DDLRegistration(0x8c1ff881u)]
 	public float SpreadAngleVert { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdff47289u)]
+	[DDLRegistration(0x18b38f7au)]
 	public float SpreadStartRadius { get; set; } = 0.10f;
 
-	[DDLRegistration(0xdff47289u)]
+	[DDLRegistration(0x9cd5016au)]
 	public float NumPellets { get; set; } = 20.00f;
 
-	[DDLRegistration(0xdff47289u)]
+	[DDLRegistration(0x03121786u)]
 	public float NumSpirals { get; set; } = 7.10f;
 
-	[DDLRegistration(0xdff47289u)]
+	[DDLRegistration(0x97f9a186u)]
 	public float SpiralPower { get; set; } = 1.50f;
 
-	[DDLRegistration(0xdff47289u)]
+	[DDLRegistration(0xe47d0602u)]
 	public float RandomnessScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdff47289u)]
+	[DDLRegistration(0x984b84b6u)]
 	public float PerPelletDiminish { get; set; } = 1.00f;
 
 	public new static SpreadFiringPrius Create(DDLObject ddl) => new(ddl);

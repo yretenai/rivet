@@ -19,10 +19,10 @@ public class GetWeaponLevelActionPrius : DDLObjectType, IDDLObjectType<GetWeapon
 		WeaponConfig = ddl.GetValue<RivetAssetId>(0xb72a0e33u, WeaponConfig);
 	}
 
-	[DDLRegistration(0x1974e589u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Weapon;
 
-	[DDLRegistration(0x1974e589u, "Weapon Item Config")]
+	[DDLRegistration(0xb72a0e33u, "Weapon Item Config")]
 	public RivetAssetId WeaponConfig { get; set; } = default;
 
 	public static GetWeaponLevelActionPrius Create(DDLObject ddl) => new(ddl);

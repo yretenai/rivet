@@ -30,43 +30,43 @@ public class VolumetricFogSettingsDef : DDLObjectType, IDDLObjectType<Volumetric
 		NoiseScale = ddl.GetValue<float>(0xd5f05eabu, NoiseScale);
 	}
 
-	[DDLRegistration(0x14457309u, description: "Both Volumetric and conventional fog need to be enabled in order for VFog to work")]
+	[DDLRegistration(0x5113d8bcu, description: "Both Volumetric and conventional fog need to be enabled in order for VFog to work")]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0x14457309u, description: "Volumetric Fog Color")]
+	[DDLRegistration(0x7f058428u, description: "Volumetric Fog Color")]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x14457309u, "Opacity", "0 = No volumetric fog, 1=Thick volumetric fog that completely blocks the background")]
+	[DDLRegistration(0x42170e5eu, "Opacity", "0 = No volumetric fog, 1=Thick volumetric fog that completely blocks the background")]
 	public float Opacity { get; set; } = 0.50f;
 
-	[DDLRegistration(0x14457309u, "Bottom Height")]
+	[DDLRegistration(0x4d7a0715u, "Bottom Height")]
 	public float BottomHeight { get; set; } = -100.00f;
 
-	[DDLRegistration(0x14457309u, "Top Height")]
+	[DDLRegistration(0x6f3b3addu, "Top Height")]
 	public float TopHeight { get; set; } = 100.00f;
 
-	[DDLRegistration(0x14457309u, "Near Distance", "Distance near the camera with no volumetric fog")]
+	[DDLRegistration(0x380dd820u, "Near Distance", "Distance near the camera with no volumetric fog")]
 	public float NearDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x14457309u, "Far Distance", "Replace height fog with volumetric fog up to this distance")]
+	[DDLRegistration(0x3e8c1fefu, "Far Distance", "Replace height fog with volumetric fog up to this distance")]
 	public float FarDistance { get; set; } = 64.00f;
 
-	[DDLRegistration(0x14457309u, "Direct Light Scale", "Contribution of direct light (sun/moon) to volumetric fog")]
+	[DDLRegistration(0xe45f363cu, "Direct Light Scale", "Contribution of direct light (sun/moon) to volumetric fog")]
 	public float SunLightScale { get; set; } = 0.50f;
 
-	[DDLRegistration(0x14457309u, "Lights Scale", "Contribution of dynamic lights to volumetric fog")]
+	[DDLRegistration(0xd45feadbu, "Lights Scale", "Contribution of dynamic lights to volumetric fog")]
 	public float LightsScale { get; set; } = 0.50f;
 
-	[DDLRegistration(0x14457309u, "GI Scale", "Contribution of light grids to volumetric fog")]
+	[DDLRegistration(0x11656814u, "GI Scale", "Contribution of light grids to volumetric fog")]
 	public float GIScale { get; set; } = 0.25f;
 
-	[DDLRegistration(0x14457309u, "Noise Vertical Speed", "How fast noise moves along the vertical axis")]
+	[DDLRegistration(0x1d960d3fu, "Noise Vertical Speed", "How fast noise moves along the vertical axis")]
 	public float NoiseVSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x14457309u, "Noise Wind Speed", "How fast noise moves along the direction of the wind")]
+	[DDLRegistration(0x369085d9u, "Noise Wind Speed", "How fast noise moves along the direction of the wind")]
 	public float NoiseSpeed { get; set; } = 0.50f;
 
-	[DDLRegistration(0x14457309u, "Noise", "Injects Perlin noise to break up the intensity of the fog. The higher the value, the more the noise subtracts from the fog ")]
+	[DDLRegistration(0xd5f05eabu, "Noise", "Injects Perlin noise to break up the intensity of the fog. The higher the value, the more the noise subtracts from the fog ")]
 	public float NoiseScale { get; set; } = 0.50f;
 
 	public static VolumetricFogSettingsDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class UDSBulkTaskLinks : DDLObjectType, IDDLObjectType<UDSBulkTaskLinks> 
 		SubTasks = ddl.GetObjects<UDSBulkObjectLink>(0xe85d7a6fu);
 	}
 
-	[DDLRegistration(0x5bbdfbcfu)]
+	[DDLRegistration(0xe85d7a6fu)]
 	public List<UDSBulkObjectLink?> SubTasks { get; set; } = [];
 
 	public static UDSBulkTaskLinks Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class BreakableConfig : DDLObjectType, IDDLObjectType<BreakableConfig> {
 		SuggestedMaxDebris = ddl.GetValue<uint>(0x2acef8ebu, SuggestedMaxDebris);
 	}
 
-	[DDLRegistration(0x96c19395u, description: "What is the gravity for the object")]
+	[DDLRegistration(0x5bf7469fu, description: "What is the gravity for the object")]
 	public float Gravity { get; set; } = 24.00f;
 
-	[DDLRegistration(0x96c19395u, description: "What is the linear damping for the object")]
+	[DDLRegistration(0x97613ca3u, description: "What is the linear damping for the object")]
 	public float LinearDamping { get; set; } = 0.25f;
 
-	[DDLRegistration(0x96c19395u, description: "What is the angular damping for the object")]
+	[DDLRegistration(0xcdf27098u, description: "What is the angular damping for the object")]
 	public float AngularDamping { get; set; } = 0.25f;
 
-	[DDLRegistration(0x96c19395u, description: "Engine will spawn fewer chunks as we get closer to this value. It's not exact, but a guideline")]
+	[DDLRegistration(0x2acef8ebu, description: "Engine will spawn fewer chunks as we get closer to this value. It's not exact, but a guideline")]
 	public uint SuggestedMaxDebris { get; set; } = 0x000000c8;
 
 	public static BreakableConfig Create(DDLObject ddl) => new(ddl);

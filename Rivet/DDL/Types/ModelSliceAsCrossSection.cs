@@ -20,13 +20,13 @@ public class ModelSliceAsCrossSection : CrossSectionChoice, IDDLObjectType<Model
 		PreTranslate = ddl.GetObject<DDLVector3>(0x2379ae67u);
 	}
 
-	[DDLRegistration(0x3776116du, description: "Model")]
+	[DDLRegistration(0xcec6be18u, description: "Model")]
 	public RivetAssetId Model { get; set; } = default;
 
-	[DDLRegistration(0x3776116du, "PreRotation", "Rotate Model Before XY Slice")]
+	[DDLRegistration(0x49190644u, "PreRotation", "Rotate Model Before XY Slice")]
 	public DDLVector3? PreRotation { get; set; } = default;
 
-	[DDLRegistration(0x3776116du, "PreTranslate", "Translate Model Before XY Slice")]
+	[DDLRegistration(0x2379ae67u, "PreTranslate", "Translate Model Before XY Slice")]
 	public DDLVector3? PreTranslate { get; set; } = default;
 
 	public new static ModelSliceAsCrossSection Create(DDLObject ddl) => new(ddl);

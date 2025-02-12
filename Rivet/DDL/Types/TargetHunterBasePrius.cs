@@ -27,34 +27,34 @@ public class TargetHunterBasePrius : DDLObjectType, IDDLObjectType<TargetHunterB
 		Checks = ddl.GetObjects<TargetHunterCustomCheck>(0xa1f44e1eu);
 	}
 
-	[DDLRegistration(0x09d2bc08u, "Target Hunter Name", "Optional name used to differentiate TargetHunter components with different values")]
+	[DDLRegistration(0x35cbe49au, "Target Hunter Name", "Optional name used to differentiate TargetHunter components with different values")]
 	public string? TargetHunterName { get; set; } = "";
 
-	[DDLRegistration(0x09d2bc08u, "Start On Init")]
+	[DDLRegistration(0x5c7de3d6u, "Start On Init")]
 	public bool StartOnInit { get; set; } = true;
 
-	[DDLRegistration(0x09d2bc08u, "Min Range")]
+	[DDLRegistration(0x6c79323fu, "Min Range")]
 	public float MinRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0x09d2bc08u, "Max Range")]
+	[DDLRegistration(0x8a199ddeu, "Max Range")]
 	public float MaxRange { get; set; } = 1000.00f;
 
-	[DDLRegistration(0x09d2bc08u, "Test Nav")]
+	[DDLRegistration(0x39335566u, "Test Nav")]
 	public bool TestNav { get; set; } = true;
 
-	[DDLRegistration(0x09d2bc08u, "Test Ground")]
+	[DDLRegistration(0xfa8392f0u, "Test Ground")]
 	public bool TestGround { get; set; } = false;
 
-	[DDLRegistration(0x09d2bc08u, "Must Be In Home Area")]
+	[DDLRegistration(0x7b29b20eu, "Must Be In Home Area")]
 	public bool MustBeInHomeArea { get; set; } = true;
 
-	[DDLRegistration(0x09d2bc08u, "Target Timeout", "Invalidate a successful target and check again after this many seconds. Negative is infinite.")]
+	[DDLRegistration(0x81bcaea8u, "Target Timeout", "Invalidate a successful target and check again after this many seconds. Negative is infinite.")]
 	public float TargetTimeout { get; set; } = -1.00f;
 
-	[DDLRegistration(0x09d2bc08u, "Recheck Time", "If a target has been checked or skipped, it won't be checked for this many seconds.")]
+	[DDLRegistration(0x46d572d3u, "Recheck Time", "If a target has been checked or skipped, it won't be checked for this many seconds.")]
 	public float RecheckTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0x09d2bc08u)]
+	[DDLRegistration(0xa1f44e1eu)]
 	public List<TargetHunterCustomCheck?> Checks { get; set; } = [];
 
 	public static TargetHunterBasePrius Create(DDLObject ddl) => new(ddl);

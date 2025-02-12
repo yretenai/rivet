@@ -22,19 +22,19 @@ public class TimeScaleActionPrius : DDLObjectType, IDDLObjectType<TimeScaleActio
 		UseFX = ddl.GetValue<bool>(0x1a46639fu, UseFX);
 	}
 
-	[DDLRegistration(0x2da67b8au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Game;
 
-	[DDLRegistration(0x2da67b8au)]
+	[DDLRegistration(0x5fe2ecbau)]
 	public float TimeScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2da67b8au, description: "Context is provided to the conduit when the time scale activates.")]
+	[DDLRegistration(0xe3b7e646u, description: "Context is provided to the conduit when the time scale activates.")]
 	public string? Context { get; set; } = "Script";
 
-	[DDLRegistration(0x2da67b8au)]
+	[DDLRegistration(0xffcda789u)]
 	public float RampTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x2da67b8au, description: "TRUE to apply various FX associated with going into time dilation")]
+	[DDLRegistration(0x1a46639fu, description: "TRUE to apply various FX associated with going into time dilation")]
 	public bool UseFX { get; set; } = true;
 
 	public static TimeScaleActionPrius Create(DDLObject ddl) => new(ddl);

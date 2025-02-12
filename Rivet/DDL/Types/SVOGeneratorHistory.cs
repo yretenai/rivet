@@ -18,7 +18,7 @@ public class SVOGeneratorHistory : DDLObjectType, IDDLObjectType<SVOGeneratorHis
 		History = ddl.GetObjects<SVOGeneratorHistoryElement>(0x26501373u);
 	}
 
-	[DDLRegistration(0xdf92ac38u)]
+	[DDLRegistration(0x26501373u)]
 	public List<SVOGeneratorHistoryElement?> History { get; set; } = [];
 
 	public static SVOGeneratorHistory Create(DDLObject ddl) => new(ddl);

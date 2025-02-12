@@ -20,13 +20,13 @@ public class HeroPortalTransitionEvent : EventBase, IDDLObjectType<HeroPortalTra
 		Destination = ddl.GetObject<DDLTransform>(0xb31a6f71u);
 	}
 
-	[DDLRegistration(0x8e38d7f0u)]
+	[DDLRegistration(0x54c7dd3eu)]
 	public uint SourceActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8e38d7f0u)]
+	[DDLRegistration(0x3a387b17u)]
 	public uint DestinationActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8e38d7f0u)]
+	[DDLRegistration(0xb31a6f71u)]
 	public DDLTransform? Destination { get; set; } = default;
 
 	public new static HeroPortalTransitionEvent Create(DDLObject ddl) => new(ddl);

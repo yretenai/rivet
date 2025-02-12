@@ -19,10 +19,10 @@ public class SegmentedHealthPrius : HealthPrius, IDDLObjectType<SegmentedHealthP
 		RegenDelay = ddl.GetValue<float>(0x58d35b49u, RegenDelay);
 	}
 
-	[DDLRegistration(0x137c6153u, "Health Segments")]
+	[DDLRegistration(0x640134e1u, "Health Segments")]
 	public List<SegmentedHealthSegment?> HealthSegments { get; set; } = [];
 
-	[DDLRegistration(0x137c6153u)]
+	[DDLRegistration(0x58d35b49u)]
 	public float RegenDelay { get; set; } = 0.00f;
 
 	public new static SegmentedHealthPrius Create(DDLObject ddl) => new(ddl);

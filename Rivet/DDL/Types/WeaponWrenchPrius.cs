@@ -26,31 +26,31 @@ public class WeaponWrenchPrius : WeaponMeleePrius, IDDLObjectType<WeaponWrenchPr
 		ThrowPickupAttachment = ddl.GetObject<WeaponPickupAttachment>(0x7bf606ecu);
 	}
 
-	[DDLRegistration(0x758e6188u)]
+	[DDLRegistration(0x0451c6d0u)]
 	public ThrownWeaponDamageInfo? ThrowDamageInfo { get; set; } = default;
 
-	[DDLRegistration(0x758e6188u)]
+	[DDLRegistration(0xb147ab42u)]
 	public float ThrowMaxDistance { get; set; } = 6.75f;
 
-	[DDLRegistration(0x758e6188u)]
+	[DDLRegistration(0xa0b8c1e5u)]
 	public float ThrowOutInitialSpeed { get; set; } = 22.50f;
 
-	[DDLRegistration(0x758e6188u)]
+	[DDLRegistration(0xdd4789f5u)]
 	public float ThrowReturnMaxSpeed { get; set; } = 25.00f;
 
-	[DDLRegistration(0x758e6188u)]
+	[DDLRegistration(0x908005d4u)]
 	public float ThrowReturnJerk { get; set; } = 30.00f;
 
-	[DDLRegistration(0x758e6188u, description: "Spin speed of the wrench after it is thrown.")]
+	[DDLRegistration(0xf882f3aau, description: "Spin speed of the wrench after it is thrown.")]
 	public float ThrowSpinSpeed { get; set; } = 1440.00f;
 
-	[DDLRegistration(0x758e6188u)]
+	[DDLRegistration(0x30f2bd44u)]
 	public DDLVector3? ThrowSpinCenterOffset { get; set; } = default;
 
-	[DDLRegistration(0x758e6188u)]
+	[DDLRegistration(0x82982dfau)]
 	public x3133560c ThrowOrientation { get; set; } = x3133560c.XUp;
 
-	[DDLRegistration(0x758e6188u, "Throw Pickup Attachment")]
+	[DDLRegistration(0x7bf606ecu, "Throw Pickup Attachment")]
 	public WeaponPickupAttachment? ThrowPickupAttachment { get; set; } = default;
 
 	public new static WeaponWrenchPrius Create(DDLObject ddl) => new(ddl);

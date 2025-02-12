@@ -18,7 +18,7 @@ public class CollisionCheckerCollisionEvent : EventBase, IDDLObjectType<Collisio
 		Material = ddl.GetEnum<x10b3c4cf>(0x86bfc8e5u, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0xca18322du, description: "Collision hit material")]
+	[DDLRegistration(0x86bfc8e5u, description: "Collision hit material")]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
 	public new static CollisionCheckerCollisionEvent Create(DDLObject ddl) => new(ddl);

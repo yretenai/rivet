@@ -19,10 +19,10 @@ public class CompatVaultAddAnimClipsToAnimSet : DDLObjectType, IDDLObjectType<Co
 		AnimClips = ddl.GetValues<RivetAssetId>(0x8f5f7a83u);
 	}
 
-	[DDLRegistration(0x02d0a00cu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x63e8ba6e Type { get; set; } = x63e8ba6e.ReplaceSceneNodes;
 
-	[DDLRegistration(0x02d0a00cu)]
+	[DDLRegistration(0x8f5f7a83u)]
 	public List<RivetAssetId> AnimClips { get; set; } = [];
 
 	public static CompatVaultAddAnimClipsToAnimSet Create(DDLObject ddl) => new(ddl);

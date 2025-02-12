@@ -19,10 +19,10 @@ public class SyncOutputData : DDLObjectType, IDDLObjectType<SyncOutputData> {
 		ActiveState = ddl.GetValue<bool>(0x5ccb4eefu, ActiveState);
 	}
 
-	[DDLRegistration(0x4a16eb74u)]
+	[DDLRegistration(0xf5828c94u)]
 	public bool LastCompletedState { get; set; } = false;
 
-	[DDLRegistration(0x4a16eb74u)]
+	[DDLRegistration(0x5ccb4eefu)]
 	public bool ActiveState { get; set; } = false;
 
 	public static SyncOutputData Create(DDLObject ddl) => new(ddl);

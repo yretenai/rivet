@@ -27,34 +27,34 @@ public class StatusEffectBasePrius : DDLObjectType, IDDLObjectType<StatusEffectB
 		ShaderTValRampDownEndTime = ddl.GetValue<float>(0x4b74497eu, ShaderTValRampDownEndTime);
 	}
 
-	[DDLRegistration(0xfb28bffau, "Decay Time", "How long the effect exists for.  Negative means infinite (until the actor deletes).")]
+	[DDLRegistration(0x9ea6158bu, "Decay Time", "How long the effect exists for.  Negative means infinite (until the actor deletes).")]
 	public float DecayTime { get; set; } = 5.00f;
 
-	[DDLRegistration(0xfb28bffau)]
+	[DDLRegistration(0xa50480cbu)]
 	public uint SourceComponent { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfb28bffau)]
+	[DDLRegistration(0x54c7dd3eu)]
 	public uint SourceActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfb28bffau)]
+	[DDLRegistration(0x290bb426u)]
 	public uint SourceDamageHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfb28bffau)]
+	[DDLRegistration(0xfc928207u)]
 	public ushort SourceWeaponId { get; set; } = 0x0000;
 
-	[DDLRegistration(0xfb28bffau)]
+	[DDLRegistration(0x0edb347fu)]
 	public byte SourceWeaponMacroType { get; set; } = 0x00;
 
-	[DDLRegistration(0xfb28bffau, description: "Optional. Apply this shader to the actor with the effect on it.")]
+	[DDLRegistration(0xc18bd04fu, description: "Optional. Apply this shader to the actor with the effect on it.")]
 	public RivetAssetId Shader { get; set; } = default;
 
-	[DDLRegistration(0xfb28bffau)]
+	[DDLRegistration(0xab42d6b2u)]
 	public float ShaderTValRampUpTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfb28bffau)]
+	[DDLRegistration(0xc26ea8f1u)]
 	public float ShaderTValRampDownTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfb28bffau)]
+	[DDLRegistration(0x4b74497eu)]
 	public float ShaderTValRampDownEndTime { get; set; } = 0.00f;
 
 	public static StatusEffectBasePrius Create(DDLObject ddl) => new(ddl);

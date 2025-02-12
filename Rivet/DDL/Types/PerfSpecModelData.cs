@@ -19,10 +19,10 @@ public class PerfSpecModelData : DDLObjectType, IDDLObjectType<PerfSpecModelData
 		Model = ddl.GetValue<RivetAssetId>(0xcec6be18u, Model);
 	}
 
-	[DDLRegistration(0x8769032cu)]
+	[DDLRegistration(0xf09ed78eu)]
 	public PerfSpecTypeGame Spec { get; set; } = PerfSpecTypeGame.None;
 
-	[DDLRegistration(0x8769032cu)]
+	[DDLRegistration(0xcec6be18u)]
 	public RivetAssetId Model { get; set; } = default;
 
 	public static PerfSpecModelData Create(DDLObject ddl) => new(ddl);

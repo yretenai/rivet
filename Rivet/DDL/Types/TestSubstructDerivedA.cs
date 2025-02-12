@@ -20,13 +20,13 @@ public class TestSubstructDerivedA : DDLObjectType, IDDLObjectType<TestSubstruct
 		ABool = ddl.GetValue<bool>(0xafd42391u, ABool);
 	}
 
-	[DDLRegistration(0x338610bbu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x338610bbu)]
+	[DDLRegistration(0x4113ca89u)]
 	public int AInt { get; set; } = 44;
 
-	[DDLRegistration(0x338610bbu)]
+	[DDLRegistration(0xafd42391u)]
 	public bool ABool { get; set; } = false;
 
 	public static TestSubstructDerivedA Create(DDLObject ddl) => new(ddl);

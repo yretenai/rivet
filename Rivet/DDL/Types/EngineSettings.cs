@@ -64,145 +64,145 @@ public class EngineSettings : DDLObjectType, IDDLObjectType<EngineSettings> {
 		ExitAfterOneFrame = ddl.GetValue<bool>(0xad7b3469u, ExitAfterOneFrame);
 	}
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x6f3251f3u)]
 	public bool SubtitleSystemEnable { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x4b16b8f7u)]
 	public bool InputEnable { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xdc4eaa93u)]
 	public bool DecalsEnable { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x5d4b31e0u)]
 	public bool VFXEnable { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xf4207796u)]
 	public bool WaterSimCreationEnable { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xa0d92346u)]
 	public int MaxUpdateRequestsFromThreads { get; set; } = 2048;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x9cbc9707u)]
 	public int MaxActorParentRequests { get; set; } = 2048;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xb7820e9cu)]
 	public int MaxDefaultBucketRequests { get; set; } = 2048;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xc293af83u)]
 	public int JobWaitTimeoutMs { get; set; } = 5;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x22fdc666u)]
 	public EventSettings? Event { get; set; } = default;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x9b2f9403u)]
 	public LightCaptureSettings? LightCapture { get; set; } = default;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x2a3a5055u)]
 	public int ScriptSignalMax { get; set; } = 512;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x30ecc1c8u)]
 	public ulong ScratchSize { get; set; } = 0x0000000000800000;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xb303db5bu)]
 	public ulong ScratchSizePersistent { get; set; } = 0x0000000000f00000;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x9a96c547u)]
 	public ulong AmmEmuVaddrSpace { get; set; } = 0x0000000800000000;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x549480b5u)]
 	public float GlobalForceClipDistance { get; set; } = 100.00f;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xebbfb405u)]
 	public bool GlobalForceClipEnabled { get; set; } = false;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xb18a5bd7u)]
 	public string? ArchiveTocPath { get; set; } = "toc";
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xccd00003u)]
 	public bool ArchiveLoaderCoalesceAdjacentReads { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xa9f1686eu)]
 	public int MovieCaptureFrameRate { get; set; } = 0;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x13ae87a4u)]
 	public int MovieCaptureOutputWidth { get; set; } = 4096;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x5dbae4e8u)]
 	public int MovieCaptureOutputHeight { get; set; } = 2048;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x58b01774u)]
 	public int MovieCaptureFaceSize { get; set; } = 1024;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xe084b4b1u)]
 	public string? ScreenshotIp { get; set; } = default;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xf7f1ab6eu)]
 	public CameraInputSettings? CameraSettings { get; set; } = default;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x66097a36u)]
 	public List<byte> LightBarColor { get; set; } = [];
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x231e83e5u)]
 	public bool NavMeshValidationEnable { get; set; } = false;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x0ad67a35u)]
 	public bool MovieSystemEnable { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x395cc08au)]
 	public uint MovieMemoryBudget { get; set; } = 0x01500000;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xaae97a48u)]
 	public int JobBatchMax { get; set; } = 512;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x27474d05u)]
 	public bool UseLockedTimeStep { get; set; } = false;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x4a366253u)]
 	public bool TimeSmoothing { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x89a5dcb0u)]
 	public uint TimeSmoothingFrames { get; set; } = 0x00000004;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xb3a4139bu)]
 	public bool RequireDependencyDag { get; set; } = false;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x5a0403c9u)]
 	public bool DDLUseJson { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x5cc55b0bu)]
 	public bool InitDDL { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x7154c9c1u)]
 	public bool DebugFontAlwaysShadowed { get; set; } = false;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xfef481beu)]
 	public float MinCullDist { get; set; } = 36.00f;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x7a76719au)]
 	public float OutlineDrawMaxDist { get; set; } = 36.00f;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x99eb8779u)]
 	public bool InitDebugImGui { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x3c939416u)]
 	public string? ToolWindow { get; set; } = default;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0x12dcffd0u)]
 	public bool EnforcePadFocus { get; set; } = false;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xb221ec03u)]
 	public bool PadEnable { get; set; } = true;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xf7c9b7d1u)]
 	public ulong NoLoadHackAssetId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xde9332b7u)]
 	public bool IsCinematicEditor { get; set; } = false;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xbf92fa7bu)]
 	public bool PlayGoEnable { get; set; } = false;
 
-	[DDLRegistration(0xa8107f21u)]
+	[DDLRegistration(0xad7b3469u)]
 	public bool ExitAfterOneFrame { get; set; } = false;
 
 	public static EngineSettings Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class CameraRotationLimiterBasePrius : DDLObjectType, IDDLObjectType<Came
 		PitchMax = ddl.GetValue<float>(0xc794da62u, PitchMax);
 	}
 
-	[DDLRegistration(0x81888bffu)]
+	[DDLRegistration(0x975af737u)]
 	public float YawMin { get; set; } = -180.00f;
 
-	[DDLRegistration(0x81888bffu)]
+	[DDLRegistration(0xab57c86eu)]
 	public float YawMax { get; set; } = 180.00f;
 
-	[DDLRegistration(0x81888bffu)]
+	[DDLRegistration(0xfb99e53bu)]
 	public float PitchMin { get; set; } = -88.00f;
 
-	[DDLRegistration(0x81888bffu)]
+	[DDLRegistration(0xc794da62u)]
 	public float PitchMax { get; set; } = 88.00f;
 
 	public static CameraRotationLimiterBasePrius Create(DDLObject ddl) => new(ddl);

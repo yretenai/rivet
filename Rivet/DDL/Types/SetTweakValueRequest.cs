@@ -21,16 +21,16 @@ public class SetTweakValueRequest : DDLObjectType, IDDLObjectType<SetTweakValueR
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0x8f8dfca0u)]
+	[DDLRegistration(0xd1aeb6ecu)]
 	public string? Session { get; set; } = default;
 
-	[DDLRegistration(0x8f8dfca0u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0x8f8dfca0u)]
+	[DDLRegistration(0x620a5285u)]
 	public string? Addr { get; set; } = default;
 
-	[DDLRegistration(0x8f8dfca0u)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
 	public static SetTweakValueRequest Create(DDLObject ddl) => new(ddl);

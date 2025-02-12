@@ -18,7 +18,7 @@ public class AimModTargetBestGroundPosPrius : AimModifierPrius, IDDLObjectType<A
 		UseGroundY = ddl.GetValue<bool>(0xa853df8au, UseGroundY);
 	}
 
-	[DDLRegistration(0x8e87d7c1u, description: "Override only the Y value of the aim position")]
+	[DDLRegistration(0xa853df8au, description: "Override only the Y value of the aim position")]
 	public bool UseGroundY { get; set; } = true;
 
 	public new static AimModTargetBestGroundPosPrius Create(DDLObject ddl) => new(ddl);

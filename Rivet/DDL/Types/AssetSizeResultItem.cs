@@ -19,10 +19,10 @@ public class AssetSizeResultItem : DDLObjectType, IDDLObjectType<AssetSizeResult
 		SizeInDb = ddl.GetValue<uint>(0xcb45502eu, SizeInDb);
 	}
 
-	[DDLRegistration(0xcd8255b3u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xcd8255b3u, description: "Size in bytes of this file as stored in the internal database as BSON.")]
+	[DDLRegistration(0xcb45502eu, description: "Size in bytes of this file as stored in the internal database as BSON.")]
 	public uint SizeInDb { get; set; } = 0x00000000;
 
 	public static AssetSizeResultItem Create(DDLObject ddl) => new(ddl);

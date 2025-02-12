@@ -19,10 +19,10 @@ public class ToggleLightsEffectPrius : ScriptedShotEffectBasePrius, IDDLObjectTy
 		OffTime = ddl.GetValue<float>(0xc7450687u, OffTime);
 	}
 
-	[DDLRegistration(0x3bb49d5cu)]
+	[DDLRegistration(0xe69327f1u)]
 	public float Distance { get; set; } = 5.00f;
 
-	[DDLRegistration(0x3bb49d5cu)]
+	[DDLRegistration(0xc7450687u)]
 	public float OffTime { get; set; } = 5.00f;
 
 	public new static ToggleLightsEffectPrius Create(DDLObject ddl) => new(ddl);

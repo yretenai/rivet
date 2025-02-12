@@ -18,7 +18,7 @@ public class ActionControlHeroExternalControl : DDLObjectType, IDDLObjectType<Ac
 		Control = ddl.GetEnum<xdb8afcfb>(0xec314f73u, xdb8afcfbValues.Lookup);
 	}
 
-	[DDLRegistration(0x0508e483u)]
+	[DDLRegistration(0xec314f73u)]
 	public xdb8afcfb Control { get; set; } = xdb8afcfb.DropExternal;
 
 	public static ActionControlHeroExternalControl Create(DDLObject ddl) => new(ddl);

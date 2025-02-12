@@ -18,7 +18,7 @@ public class MaterialVaultTags : DDLObjectType, IDDLObjectType<MaterialVaultTags
 		Slot = ddl.GetEnum<x34e3b2d5>(0x9c9ee0d7u, x34e3b2d5Values.Lookup);
 	}
 
-	[DDLRegistration(0xf9c15ad5u)]
+	[DDLRegistration(0x9c9ee0d7u)]
 	public x34e3b2d5 Slot { get; set; } = x34e3b2d5.Model3D;
 
 	public static MaterialVaultTags Create(DDLObject ddl) => new(ddl);

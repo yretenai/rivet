@@ -19,10 +19,10 @@ public class AwardObjective : DDLObjectType, IDDLObjectType<AwardObjective> {
 		ObjectiveName = ddl.GetString(0x58746b9b) ?? ObjectiveName;
 	}
 
-	[DDLRegistration(0x456d94b3u, "(Required) Mission Name")]
+	[DDLRegistration(0xa5c30e60u, "(Required) Mission Name")]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x456d94b3u, "(Optional) Objective Name", "Name of the objective in the mission that must be completed. If empty, the mission itself must be completed.")]
+	[DDLRegistration(0x58746b9bu, "(Optional) Objective Name", "Name of the objective in the mission that must be completed. If empty, the mission itself must be completed.")]
 	public string? ObjectiveName { get; set; } = default;
 
 	public static AwardObjective Create(DDLObject ddl) => new(ddl);

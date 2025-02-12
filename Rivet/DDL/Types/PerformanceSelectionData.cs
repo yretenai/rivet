@@ -24,25 +24,25 @@ public class PerformanceSelectionData : DDLObjectType, IDDLObjectType<Performanc
 		PerformanceClips = ddl.GetObjects<PerformanceSelectionIndices>(0xdd623106u);
 	}
 
-	[DDLRegistration(0x0c8debb2u)]
+	[DDLRegistration(0x1fc67dfcu)]
 	public List<uint> Visemes { get; set; } = [];
 
-	[DDLRegistration(0x0c8debb2u)]
+	[DDLRegistration(0xe10d9e10u)]
 	public List<uint> Expressions { get; set; } = [];
 
-	[DDLRegistration(0x0c8debb2u)]
+	[DDLRegistration(0x9a327d20u)]
 	public List<uint> BodyGestures { get; set; } = [];
 
-	[DDLRegistration(0x0c8debb2u)]
+	[DDLRegistration(0x9f5d1bffu)]
 	public List<uint> ExpressionEnvelopes { get; set; } = [];
 
-	[DDLRegistration(0x0c8debb2u)]
+	[DDLRegistration(0x53f690aeu)]
 	public List<uint> BodyGestureEnvelopes { get; set; } = [];
 
-	[DDLRegistration(0x0c8debb2u)]
+	[DDLRegistration(0xf1544ddeu)]
 	public List<PerformanceSelectionIndices?> PhonemeEnvelopes { get; set; } = [];
 
-	[DDLRegistration(0x0c8debb2u)]
+	[DDLRegistration(0xdd623106u)]
 	public List<PerformanceSelectionIndices?> PerformanceClips { get; set; } = [];
 
 	public static PerformanceSelectionData Create(DDLObject ddl) => new(ddl);

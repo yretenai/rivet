@@ -21,16 +21,16 @@ public class HoverbootSurfaceDeformationData : DDLObjectType, IDDLObjectType<Hov
 		AttachmentOffset = ddl.GetObject<DDLVector3>(0x23088693u);
 	}
 
-	[DDLRegistration(0xcd24e73du, description: "Actor to attach to feet for surface deformation.")]
+	[DDLRegistration(0xc618c621u, description: "Actor to attach to feet for surface deformation.")]
 	public RivetAssetId SurfaceDeformerActor { get; set; } = default;
 
-	[DDLRegistration(0xcd24e73du, description: "Locator on left foot for attaching surface deformer actor.")]
+	[DDLRegistration(0xcf91a4e2u, description: "Locator on left foot for attaching surface deformer actor.")]
 	public string? LeftFootLocator { get; set; } = default;
 
-	[DDLRegistration(0xcd24e73du, description: "Locator on right foot for attaching surface deformer actor.")]
+	[DDLRegistration(0xc6d327f1u, description: "Locator on right foot for attaching surface deformer actor.")]
 	public string? RightFootLocator { get; set; } = default;
 
-	[DDLRegistration(0xcd24e73du, description: "Offset for attaching surface deformer actor.")]
+	[DDLRegistration(0x23088693u, description: "Offset for attaching surface deformer actor.")]
 	public DDLVector3? AttachmentOffset { get; set; } = default;
 
 	public static HoverbootSurfaceDeformationData Create(DDLObject ddl) => new(ddl);

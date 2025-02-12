@@ -19,10 +19,10 @@ public class AmbientCurveFaderPrius : DDLObjectType, IDDLObjectType<AmbientCurve
 		DeleteOnFade = ddl.GetValue<bool>(0x8d18a3c8u, DeleteOnFade);
 	}
 
-	[DDLRegistration(0xc4a089deu, "Fade Duration", "Percent of the curve that fade in/out occurs over")]
+	[DDLRegistration(0x3a9d23e1u, "Fade Duration", "Percent of the curve that fade in/out occurs over")]
 	public float FadeDuration { get; set; } = 0.05f;
 
-	[DDLRegistration(0xc4a089deu)]
+	[DDLRegistration(0x8d18a3c8u)]
 	public bool DeleteOnFade { get; set; } = true;
 
 	public static AmbientCurveFaderPrius Create(DDLObject ddl) => new(ddl);

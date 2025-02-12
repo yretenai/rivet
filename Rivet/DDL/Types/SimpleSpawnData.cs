@@ -19,10 +19,10 @@ public class SimpleSpawnData : SpawnDataBase, IDDLObjectType<SimpleSpawnData> {
 		Scale = ddl.GetValue<float>(0xf515e945u, Scale);
 	}
 
-	[DDLRegistration(0x37e93fafu, description: "The template actor we're duplicating.  You can specify AssetId if you want to instantiate an actor file instead.")]
+	[DDLRegistration(0x7d9aeb18u, description: "The template actor we're duplicating.  You can specify AssetId if you want to instantiate an actor file instead.")]
 	public uint TemplateHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x37e93fafu)]
+	[DDLRegistration(0xf515e945u)]
 	public float Scale { get; set; } = 1.00f;
 
 	public new static SimpleSpawnData Create(DDLObject ddl) => new(ddl);

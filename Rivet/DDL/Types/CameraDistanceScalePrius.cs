@@ -19,10 +19,10 @@ public class CameraDistanceScalePrius : DDLObjectType, IDDLObjectType<CameraDist
 		MaxScale = ddl.GetValue<float>(0xf5d8e213u, MaxScale);
 	}
 
-	[DDLRegistration(0xf073b7d9u, description: "Minimum distance from camera to begin scaling actor")]
+	[DDLRegistration(0xc98d5c7au, description: "Minimum distance from camera to begin scaling actor")]
 	public float MinScaleDistance { get; set; } = 10.00f;
 
-	[DDLRegistration(0xf073b7d9u, description: "Maximum scale that can be applied to actor")]
+	[DDLRegistration(0xf5d8e213u, description: "Maximum scale that can be applied to actor")]
 	public float MaxScale { get; set; } = 3.00f;
 
 	public static CameraDistanceScalePrius Create(DDLObject ddl) => new(ddl);

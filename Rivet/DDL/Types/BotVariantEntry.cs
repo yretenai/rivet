@@ -20,13 +20,13 @@ public class BotVariantEntry : DDLObjectType, IDDLObjectType<BotVariantEntry> {
 		ObjectiveName = ddl.GetString(0x58746b9b) ?? ObjectiveName;
 	}
 
-	[DDLRegistration(0xa55d43b8u)]
+	[DDLRegistration(0xce905baeu)]
 	public xc3e5efea VariantVersion { get; set; } = xc3e5efea.V1;
 
-	[DDLRegistration(0xa55d43b8u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0xa55d43b8u)]
+	[DDLRegistration(0x58746b9bu)]
 	public string? ObjectiveName { get; set; } = default;
 
 	public static BotVariantEntry Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class CompareNumberActionPrius : DDLObjectType, IDDLObjectType<CompareNum
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xebd07271u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
 	public static CompareNumberActionPrius Create(DDLObject ddl) => new(ddl);

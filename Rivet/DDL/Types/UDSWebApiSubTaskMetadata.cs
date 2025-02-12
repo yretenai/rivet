@@ -19,10 +19,10 @@ public class UDSWebApiSubTaskMetadata : DDLObjectType, IDDLObjectType<UDSWebApiS
 		Hidden = ddl.GetValue<bool>(0xb189a2ecu, Hidden);
 	}
 
-	[DDLRegistration(0x7a446133u)]
+	[DDLRegistration(0x1c7c38a7u)]
 	public x38e4d198 Type { get; set; } = x38e4d198.Activity;
 
-	[DDLRegistration(0x7a446133u)]
+	[DDLRegistration(0xb189a2ecu)]
 	public bool Hidden { get; set; } = false;
 
 	public static UDSWebApiSubTaskMetadata Create(DDLObject ddl) => new(ddl);

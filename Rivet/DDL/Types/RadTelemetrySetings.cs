@@ -23,22 +23,22 @@ public class RadTelemetrySetings : DDLObjectType, IDDLObjectType<RadTelemetrySet
 		EnableCaptureContextSwitches = ddl.GetValue<bool>(0x74e102e2u, EnableCaptureContextSwitches);
 	}
 
-	[DDLRegistration(0x35492c52u, description: "The duration in ms that a profile scope must exceed to be sent to the server.")]
+	[DDLRegistration(0x508e835du, description: "The duration in ms that a profile scope must exceed to be sent to the server.")]
 	public uint ZoneThreshold { get; set; } = 0x00000032;
 
-	[DDLRegistration(0x35492c52u)]
+	[DDLRegistration(0xe1bdad44u)]
 	public bool UseLogging { get; set; } = false;
 
-	[DDLRegistration(0x35492c52u)]
+	[DDLRegistration(0x41e8656du)]
 	public bool UsePrintf { get; set; } = false;
 
-	[DDLRegistration(0x35492c52u)]
+	[DDLRegistration(0xe1b4ebe7u)]
 	public bool UseProfiling { get; set; } = false;
 
-	[DDLRegistration(0x35492c52u)]
+	[DDLRegistration(0xffb7d34du)]
 	public string? Host { get; set; } = "";
 
-	[DDLRegistration(0x35492c52u, "Enable context switch tracking", "Include context switch information in capture. Increases CPU overhead of Telemetry during capture.")]
+	[DDLRegistration(0x74e102e2u, "Enable context switch tracking", "Include context switch information in capture. Increases CPU overhead of Telemetry during capture.")]
 	public bool EnableCaptureContextSwitches { get; set; } = false;
 
 	public static RadTelemetrySetings Create(DDLObject ddl) => new(ddl);

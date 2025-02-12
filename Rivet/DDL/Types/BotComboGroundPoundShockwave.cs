@@ -19,10 +19,10 @@ public class BotComboGroundPoundShockwave : BotComboShockwave, IDDLObjectType<Bo
 		OutroBackToStart = ddl.GetValue<bool>(0xb2a20bb6u, OutroBackToStart);
 	}
 
-	[DDLRegistration(0x62b23b36u)]
+	[DDLRegistration(0xacdb2c61u)]
 	public string? OutroDriver { get; set; } = default;
 
-	[DDLRegistration(0x62b23b36u)]
+	[DDLRegistration(0xb2a20bb6u)]
 	public bool OutroBackToStart { get; set; } = false;
 
 	public new static BotComboGroundPoundShockwave Create(DDLObject ddl) => new(ddl);

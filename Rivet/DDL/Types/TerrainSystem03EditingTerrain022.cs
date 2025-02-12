@@ -20,13 +20,13 @@ public class TerrainSystem03EditingTerrain022 : DDLObjectType, IDDLObjectType<Te
 		Line03 = ddl.GetString(0x9671eef1) ?? Line03;
 	}
 
-	[DDLRegistration(0xb64c94d2u, description: "There are several modes for the brushes.  The brush mode indicates how the paint")]
+	[DDLRegistration(0x787f8fddu, description: "There are several modes for the brushes.  The brush mode indicates how the paint")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0xb64c94d2u, description: "will be applied to the given target.  Some brushes will accumulate while the")]
+	[DDLRegistration(0xe176de67u, description: "will be applied to the given target.  Some brushes will accumulate while the")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0xb64c94d2u, description: "mouse is pressed.")]
+	[DDLRegistration(0x9671eef1u, description: "mouse is pressed.")]
 	public string? Line03 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain022 Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class WeaponZurkonPrius : WeaponGamePrius, IDDLObjectType<WeaponZurkonPri
 		ZurkonVOConfig = ddl.GetValue<RivetAssetId>(0x504751ceu, ZurkonVOConfig);
 	}
 
-	[DDLRegistration(0xcd7e9f43u)]
+	[DDLRegistration(0xb5f42fe4u)]
 	public RivetAssetId ZurkonActor { get; set; } = default;
 
-	[DDLRegistration(0xcd7e9f43u)]
+	[DDLRegistration(0x20baa805u)]
 	public RivetAssetId ZurkonJrActor { get; set; } = default;
 
-	[DDLRegistration(0xcd7e9f43u)]
+	[DDLRegistration(0xcf7252e4u)]
 	public RivetAssetId ZurkonShotConfig { get; set; } = default;
 
-	[DDLRegistration(0xcd7e9f43u, description: "Base Type: BotConfigEmergentVO")]
+	[DDLRegistration(0x504751ceu, description: "Base Type: BotConfigEmergentVO")]
 	public RivetAssetId ZurkonVOConfig { get; set; } = default;
 
 	public new static WeaponZurkonPrius Create(DDLObject ddl) => new(ddl);

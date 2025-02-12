@@ -26,31 +26,31 @@ public class HeroDashConfig : DDLObjectType, IDDLObjectType<HeroDashConfig> {
 		PhaseDash = ddl.GetObject<HeroPhaseDashData>(0x7ce49e58u);
 	}
 
-	[DDLRegistration(0x00cd2081u, description: "How long to lock out dodge after a dodge is complete")]
+	[DDLRegistration(0xa59291a5u, description: "How long to lock out dodge after a dodge is complete")]
 	public float GroundDashLockoutTime { get; set; } = 0.25f;
 
-	[DDLRegistration(0x00cd2081u, description: "How long the player is immune after a dodge is executed")]
+	[DDLRegistration(0x2cd104f8u, description: "How long the player is immune after a dodge is executed")]
 	public float GroundDashImmunityWindow { get; set; } = 0.25f;
 
-	[DDLRegistration(0x00cd2081u)]
+	[DDLRegistration(0xffc915b9u)]
 	public float AirDashMaxSpeed { get; set; } = 12.00f;
 
-	[DDLRegistration(0x00cd2081u)]
+	[DDLRegistration(0x84bdb162u)]
 	public float AirDashAcceleration { get; set; } = 100.00f;
 
-	[DDLRegistration(0x00cd2081u)]
+	[DDLRegistration(0xe69327f1u)]
 	public float Distance { get; set; } = 7.00f;
 
-	[DDLRegistration(0x00cd2081u, description: "How much to accelerate the turn speed towards our desired facing")]
+	[DDLRegistration(0xc4a00637u, description: "How much to accelerate the turn speed towards our desired facing")]
 	public float TurnSpeedGain { get; set; } = -15.00f;
 
-	[DDLRegistration(0x00cd2081u, description: "How much to damp the turn speed as we near our desired facing")]
+	[DDLRegistration(0x487651beu, description: "How much to damp the turn speed as we near our desired facing")]
 	public float TurnSpeedDamp { get; set; } = -8.00f;
 
-	[DDLRegistration(0x00cd2081u, description: "Max turn speed in degrees/sec")]
+	[DDLRegistration(0xa66b2ab3u, description: "Max turn speed in degrees/sec")]
 	public float TurnSpeedMax { get; set; } = 180.00f;
 
-	[DDLRegistration(0x00cd2081u)]
+	[DDLRegistration(0x7ce49e58u)]
 	public HeroPhaseDashData? PhaseDash { get; set; } = default;
 
 	public static HeroDashConfig Create(DDLObject ddl) => new(ddl);

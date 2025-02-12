@@ -26,31 +26,31 @@ public class AutoPlaceCritterSystemConfig : ConfigBase, IDDLObjectType<AutoPlace
 		LocationSelectionHeuristic = ddl.GetObject<CritterLocationWeights>(0xecb3d72au);
 	}
 
-	[DDLRegistration(0xf0d24212u)]
+	[DDLRegistration(0x627514a8u)]
 	public List<string?> CritterTypeNames { get; set; } = [];
 
-	[DDLRegistration(0xf0d24212u)]
+	[DDLRegistration(0x28c9178du)]
 	public List<CritterTypeData?> CritterTypes { get; set; } = [];
 
-	[DDLRegistration(0xf0d24212u, "Min Spawn Distance", "Critters must spawn at least this distance away from the hero.")]
+	[DDLRegistration(0xef1087b4u, "Min Spawn Distance", "Critters must spawn at least this distance away from the hero.")]
 	public float MinSpawnDistance { get; set; } = 10.00f;
 
-	[DDLRegistration(0xf0d24212u, "Ideal Spawn Distance", "Prefer to spawn critters when they are this distance away from the hero. Inactive locations under or over this distance will get penalized, while only active volumes over this distance will get penalized.")]
+	[DDLRegistration(0xc7256058u, "Ideal Spawn Distance", "Prefer to spawn critters when they are this distance away from the hero. Inactive locations under or over this distance will get penalized, while only active volumes over this distance will get penalized.")]
 	public float IdealSpawnDistance { get; set; } = 25.00f;
 
-	[DDLRegistration(0xf0d24212u, "Max Active Distance", "Critter locations more than this distance away from the hero may not be active.")]
+	[DDLRegistration(0xb1508ef1u, "Max Active Distance", "Critter locations more than this distance away from the hero may not be active.")]
 	public float MaxActiveDistance { get; set; } = 50.00f;
 
-	[DDLRegistration(0xf0d24212u, "Panic Radius", "Try to keep at least this much distance between each critter and nearby heroes and bots that are out of combat.")]
+	[DDLRegistration(0x4a15a09bu, "Panic Radius", "Try to keep at least this much distance between each critter and nearby heroes and bots that are out of combat.")]
 	public float PanicRadius { get; set; } = 3.00f;
 
-	[DDLRegistration(0xf0d24212u, "Combat Panic Radius", "Try to keep at least this much distance between each critter and nearby heroes and bots that are in combat.")]
+	[DDLRegistration(0x1a64380cu, "Combat Panic Radius", "Try to keep at least this much distance between each critter and nearby heroes and bots that are in combat.")]
 	public float CombatPanicRadius { get; set; } = 8.00f;
 
-	[DDLRegistration(0xf0d24212u, "Refresh Period", "How often the system should repick which critter locations are active.")]
+	[DDLRegistration(0xef2d955fu, "Refresh Period", "How often the system should repick which critter locations are active.")]
 	public float RefreshPeriod { get; set; } = 0.50f;
 
-	[DDLRegistration(0xf0d24212u, "Location Selection Heuristic")]
+	[DDLRegistration(0xecb3d72au, "Location Selection Heuristic")]
 	public CritterLocationWeights? LocationSelectionHeuristic { get; set; } = default;
 
 	public new static AutoPlaceCritterSystemConfig Create(DDLObject ddl) => new(ddl);

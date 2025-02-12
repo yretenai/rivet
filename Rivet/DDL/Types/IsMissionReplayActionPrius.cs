@@ -19,10 +19,10 @@ public class IsMissionReplayActionPrius : DDLObjectType, IDDLObjectType<IsMissio
 		CheckTypeIfComplete = ddl.GetEnum<x2e831899>(0xebd71d27u, x2e831899Values.Lookup);
 	}
 
-	[DDLRegistration(0xbcada40fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
-	[DDLRegistration(0xbcada40fu, description: "If the mission we are checking is currently Complete or CompleteCleaning, this tells whether to check for the last playthrough's type or the next playthrough's type.")]
+	[DDLRegistration(0xebd71d27u, description: "If the mission we are checking is currently Complete or CompleteCleaning, this tells whether to check for the last playthrough's type or the next playthrough's type.")]
 	public x2e831899 CheckTypeIfComplete { get; set; } = x2e831899.CheckLastPlaythrough;
 
 	public static IsMissionReplayActionPrius Create(DDLObject ddl) => new(ddl);

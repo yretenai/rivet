@@ -25,28 +25,28 @@ public class ProjectDef : DDLObjectType, IDDLObjectType<ProjectDef> {
 		AssetBranchChoices = ddl.GetValues<RivetAssetId>(0xf61f7bffu);
 	}
 
-	[DDLRegistration(0x9f932314u, description: "project id (also the key)")]
+	[DDLRegistration(0x8a514a8du, description: "project id (also the key)")]
 	public string? Id { get; set; } = "";
 
-	[DDLRegistration(0x9f932314u, description: "base name of the game's executable")]
+	[DDLRegistration(0xeb73e785u, description: "base name of the game's executable")]
 	public string? GameExeName { get; set; } = "";
 
-	[DDLRegistration(0x9f932314u)]
+	[DDLRegistration(0xfc7c2c47u)]
 	public CodeBranchRef? CodeBranchRef { get; set; } = default;
 
-	[DDLRegistration(0x9f932314u, description: "(UTC) Time that the selected branch was last changed")]
+	[DDLRegistration(0x272b7932u, description: "(UTC) Time that the selected branch was last changed")]
 	public ulong Timestamp { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x9f932314u, description: "Cache location for the current (packed) game build")]
+	[DDLRegistration(0xae835a98u, description: "Cache location for the current (packed) game build")]
 	public string? GameBuildCacheDir { get; set; } = "";
 
-	[DDLRegistration(0x9f932314u, description: "Path where the current game build originated from (should match CurrentSymbolRoot for the selected branch index)")]
+	[DDLRegistration(0x6ea74978u, description: "Path where the current game build originated from (should match CurrentSymbolRoot for the selected branch index)")]
 	public string? GameBuildCacheOrigin { get; set; } = "";
 
-	[DDLRegistration(0x9f932314u, description: "Path to .luna file")]
+	[DDLRegistration(0x6e15e0dau, description: "Path to .luna file")]
 	public RivetAssetId AssetBranchPath { get; set; } = "";
 
-	[DDLRegistration(0x9f932314u, description: "List of asset branches to choose from for this project")]
+	[DDLRegistration(0xf61f7bffu, description: "List of asset branches to choose from for this project")]
 	public List<RivetAssetId> AssetBranchChoices { get; set; } = [];
 
 	public static ProjectDef Create(DDLObject ddl) => new(ddl);

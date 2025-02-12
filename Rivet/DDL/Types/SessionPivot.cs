@@ -19,10 +19,10 @@ public class SessionPivot : DDLObjectType, IDDLObjectType<SessionPivot> {
 		EulerRotation = ddl.GetObject<DDLDoubleVector3>(0x99453ee8u);
 	}
 
-	[DDLRegistration(0x05b41e41u)]
+	[DDLRegistration(0xbc2d5985u)]
 	public DDLDoubleVector3? Position { get; set; } = default;
 
-	[DDLRegistration(0x05b41e41u)]
+	[DDLRegistration(0x99453ee8u)]
 	public DDLDoubleVector3? EulerRotation { get; set; } = default;
 
 	public static SessionPivot Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class InteractShaderEffectPrius : DDLObjectType, IDDLObjectType<InteractS
 		DeltaSpeed = ddl.GetValue<float>(0xa24aed72u, DeltaSpeed);
 	}
 
-	[DDLRegistration(0x7ca388b5u, "Effect Type")]
+	[DDLRegistration(0x609bd7dbu, "Effect Type")]
 	public x08f7f2e3 EffectType { get; set; } = x08f7f2e3.UseToggle;
 
-	[DDLRegistration(0x7ca388b5u, "Shader Attribute")]
+	[DDLRegistration(0xc911b025u, "Shader Attribute")]
 	public string? ShaderAttribute { get; set; } = "";
 
-	[DDLRegistration(0x7ca388b5u, "Min Value")]
+	[DDLRegistration(0xe2893042u, "Min Value")]
 	public float MinValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7ca388b5u, "Max Value")]
+	[DDLRegistration(0x04e99fa3u, "Max Value")]
 	public float MaxValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7ca388b5u, "Delta Speed")]
+	[DDLRegistration(0xa24aed72u, "Delta Speed")]
 	public float DeltaSpeed { get; set; } = 0.00f;
 
 	public static InteractShaderEffectPrius Create(DDLObject ddl) => new(ddl);

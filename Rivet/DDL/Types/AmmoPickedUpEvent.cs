@@ -19,10 +19,10 @@ public class AmmoPickedUpEvent : EventBase, IDDLObjectType<AmmoPickedUpEvent> {
 		ItemConfig = ddl.GetValue<RivetAssetId>(0xa88f833fu, ItemConfig);
 	}
 
-	[DDLRegistration(0x786e964bu)]
+	[DDLRegistration(0x154708c9u)]
 	public float PickupRate { get; set; } = 0.00f;
 
-	[DDLRegistration(0x786e964bu, description: "Optional config of the item that was picked up")]
+	[DDLRegistration(0xa88f833fu, description: "Optional config of the item that was picked up")]
 	public RivetAssetId ItemConfig { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static AmmoPickedUpEvent Create(DDLObject ddl) => new(ddl);

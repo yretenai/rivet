@@ -19,10 +19,10 @@ public class NodalShotUIntVariableNodeDef : NodalShotVariableNodeBaseDef, IDDLOb
 		Retrieve = ddl.GetObject<OutputPlugUInt>(0xf7f6912bu);
 	}
 
-	[DDLRegistration(0xe4e78c15u)]
+	[DDLRegistration(0xe60494b6u)]
 	public InputPlugUInt? Store { get; set; } = default;
 
-	[DDLRegistration(0xe4e78c15u)]
+	[DDLRegistration(0xf7f6912bu)]
 	public OutputPlugUInt? Retrieve { get; set; } = default;
 
 	public new static NodalShotUIntVariableNodeDef Create(DDLObject ddl) => new(ddl);

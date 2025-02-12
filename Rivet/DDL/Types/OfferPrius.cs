@@ -31,46 +31,46 @@ public class OfferPrius : DDLObjectType, IDDLObjectType<OfferPrius> {
 		UseOfferPosForPOIPos = ddl.GetValue<bool>(0x1dd16508u, UseOfferPosForPOIPos);
 	}
 
-	[DDLRegistration(0x9bae0d6eu, "Priority")]
+	[DDLRegistration(0x98a76157u, "Priority")]
 	public float Priority { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9bae0d6eu, "Team")]
+	[DDLRegistration(0xf47066afu, "Team")]
 	public xc115d639 Team { get; set; } = xc115d639.None;
 
-	[DDLRegistration(0x9bae0d6eu, "Text", "Localization Tag index (NOT HASH!) of label displayed")]
+	[DDLRegistration(0x975b3cc3u, "Text", "Localization Tag index (NOT HASH!) of label displayed")]
 	public uint LocTagIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9bae0d6eu)]
+	[DDLRegistration(0xcf4f1f79u)]
 	public OfferType OfferType { get; set; } = (OfferType) 0x00000001;
 
-	[DDLRegistration(0x9bae0d6eu)]
+	[DDLRegistration(0x4407837cu)]
 	public bool ShouldCreateJob { get; set; } = false;
 
-	[DDLRegistration(0x9bae0d6eu, "Use a POI button icon to display this offer.")]
+	[DDLRegistration(0x6c8e7838u, "Use a POI button icon to display this offer.")]
 	public bool ShouldCreatePOI { get; set; } = false;
 
-	[DDLRegistration(0x9bae0d6eu, "Use an in world prompt")]
+	[DDLRegistration(0x6fa8c2f8u, "Use an in world prompt")]
 	public bool UseInWorldPrompt { get; set; } = false;
 
-	[DDLRegistration(0x9bae0d6eu, "POI subtype")]
+	[DDLRegistration(0xfeb66587u, "POI subtype")]
 	public x275d9b04 POISubtype { get; set; } = x275d9b04.Pickup;
 
-	[DDLRegistration(0x9bae0d6eu, "POI preview subtype")]
+	[DDLRegistration(0x398dd6b8u, "POI preview subtype")]
 	public x8d1d7e8a POIPreviewSubtype { get; set; } = x8d1d7e8a.Preview;
 
-	[DDLRegistration(0x9bae0d6eu, "Enable line of sight checks on POI")]
+	[DDLRegistration(0x78ff87d4u, "Enable line of sight checks on POI")]
 	public bool POILOSCheck { get; set; } = false;
 
-	[DDLRegistration(0x9bae0d6eu, "Preview Range", "If greater than 0, it will display a preview version of this interact at this distance.")]
+	[DDLRegistration(0x1a4186b9u, "Preview Range", "If greater than 0, it will display a preview version of this interact at this distance.")]
 	public float PreviewRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9bae0d6eu, "POI/Prompt Offset", "Offset for the prompt.  Does not affect the offer's position.")]
+	[DDLRegistration(0x5a1dc6d9u, "POI/Prompt Offset", "Offset for the prompt.  Does not affect the offer's position.")]
 	public DDLVector3? POIOffset { get; set; } = default;
 
-	[DDLRegistration(0x9bae0d6eu, "POI Locator", "Uses this locator for the poi if provided, Does not affect the offer's position.")]
+	[DDLRegistration(0xd19b3e4au, "POI Locator", "Uses this locator for the poi if provided, Does not affect the offer's position.")]
 	public string? POILocator { get; set; } = default;
 
-	[DDLRegistration(0x9bae0d6eu, "Offset POI from OfferPos(true) or Actor(false).")]
+	[DDLRegistration(0x1dd16508u, "Offset POI from OfferPos(true) or Actor(false).")]
 	public bool UseOfferPosForPOIPos { get; set; } = true;
 
 	public static OfferPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class CameraShakingAxisData : DDLObjectType, IDDLObjectType<CameraShaking
 		CurveThree = ddl.GetObject<CameraShakingCurveData>(0xc08ae25fu);
 	}
 
-	[DDLRegistration(0x038a1bf9u)]
+	[DDLRegistration(0xfef79d5au)]
 	public CameraShakingCurveData? CurveOne { get; set; } = default;
 
-	[DDLRegistration(0x038a1bf9u)]
+	[DDLRegistration(0x955191cdu)]
 	public CameraShakingCurveData? CurveTwo { get; set; } = default;
 
-	[DDLRegistration(0x038a1bf9u)]
+	[DDLRegistration(0xc08ae25fu)]
 	public CameraShakingCurveData? CurveThree { get; set; } = default;
 
 	public static CameraShakingAxisData Create(DDLObject ddl) => new(ddl);

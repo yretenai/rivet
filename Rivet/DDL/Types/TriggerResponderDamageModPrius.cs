@@ -19,10 +19,10 @@ public class TriggerResponderDamageModPrius : TriggerResponderBasePrius, IDDLObj
 		ModWhenUntriggered = ddl.GetValue<float>(0x5f6b33d8u, ModWhenUntriggered);
 	}
 
-	[DDLRegistration(0xf32f9875u)]
+	[DDLRegistration(0x42ab46d3u)]
 	public float ModWhenTriggered { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf32f9875u)]
+	[DDLRegistration(0x5f6b33d8u)]
 	public float ModWhenUntriggered { get; set; } = 1.00f;
 
 	public new static TriggerResponderDamageModPrius Create(DDLObject ddl) => new(ddl);

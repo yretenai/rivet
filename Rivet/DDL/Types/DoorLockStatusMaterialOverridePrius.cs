@@ -20,13 +20,13 @@ public class DoorLockStatusMaterialOverridePrius : DDLObjectType, IDDLObjectType
 		UnlockedLightMaterial = ddl.GetValue<RivetAssetId>(0x125d7681u, UnlockedLightMaterial);
 	}
 
-	[DDLRegistration(0x38e3ebf2u, description: "This is the material placed on the model, which we'll override with the lights")]
+	[DDLRegistration(0x73f4a004u, description: "This is the material placed on the model, which we'll override with the lights")]
 	public RivetAssetId OriginalLightMaterial { get; set; } = default;
 
-	[DDLRegistration(0x38e3ebf2u)]
+	[DDLRegistration(0x141f6234u)]
 	public RivetAssetId LockedLightMaterial { get; set; } = default;
 
-	[DDLRegistration(0x38e3ebf2u)]
+	[DDLRegistration(0x125d7681u)]
 	public RivetAssetId UnlockedLightMaterial { get; set; } = default;
 
 	public static DoorLockStatusMaterialOverridePrius Create(DDLObject ddl) => new(ddl);

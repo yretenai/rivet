@@ -18,7 +18,7 @@ public class UDSBulkEntities : DDLObjectType, IDDLObjectType<UDSBulkEntities> {
 		Activities = ddl.GetObjects<UDSBulkActivity>(0x219af20cu);
 	}
 
-	[DDLRegistration(0x87ce619bu)]
+	[DDLRegistration(0x219af20cu)]
 	public List<UDSBulkActivity?> Activities { get; set; } = [];
 
 	public static UDSBulkEntities Create(DDLObject ddl) => new(ddl);

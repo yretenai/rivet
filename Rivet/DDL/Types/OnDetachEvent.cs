@@ -18,7 +18,7 @@ public class OnDetachEvent : EventBase, IDDLObjectType<OnDetachEvent> {
 		TriggerActor = ddl.GetValue<uint>(0x2a75844bu, TriggerActor);
 	}
 
-	[DDLRegistration(0x5a088a3eu)]
+	[DDLRegistration(0x2a75844bu)]
 	public uint TriggerActor { get; set; } = 0x00000000;
 
 	public new static OnDetachEvent Create(DDLObject ddl) => new(ddl);

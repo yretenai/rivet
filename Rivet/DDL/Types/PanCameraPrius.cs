@@ -29,40 +29,40 @@ public class PanCameraPrius : PlacedCameraPrius, IDDLObjectType<PanCameraPrius> 
 		CameraOffset = ddl.GetObject<DDLVector3>(0x68f0fd3du);
 	}
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0x7d0f050eu)]
 	public bool SnapOnActivate { get; set; } = true;
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0xad3081c8u)]
 	public bool PanX { get; set; } = false;
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0x433ee0e4u)]
 	public bool PanZ { get; set; } = true;
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0x5c74d2fcu)]
 	public float PanMaxDist_X { get; set; } = 8.00f;
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0xb27ab3d0u)]
 	public float PanMaxDist_Z { get; set; } = 8.00f;
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0xb8060000u)]
 	public float CatchUpGain_X { get; set; } = -0.50f;
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0xa7486b83u)]
 	public float CatchUpDamp_X { get; set; } = -0.50f;
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0x7b705c0bu)]
 	public float MaxSpeed_X { get; set; } = 10.00f;
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0x5608612cu)]
 	public float CatchUpGain_Z { get; set; } = -0.50f;
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0x49460aafu)]
 	public float CatchUpDamp_Z { get; set; } = -0.50f;
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0x957e3d27u)]
 	public float MaxSpeed_Z { get; set; } = 10.00f;
 
-	[DDLRegistration(0xa21ab8dcu)]
+	[DDLRegistration(0x68f0fd3du)]
 	public DDLVector3? CameraOffset { get; set; } = default;
 
 	public new static PanCameraPrius Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class HeroOpenPocketDimConfig : ConfigBase, IDDLObjectType<HeroOpenPocket
 		PortalAimContext = ddl.GetValue<RivetAssetId>(0x86cc4d07u, PortalAimContext);
 	}
 
-	[DDLRegistration(0x2320cd88u, description: "Hero's animation for pocket dimension opening")]
+	[DDLRegistration(0xfef6e27au, description: "Hero's animation for pocket dimension opening")]
 	public string? HeroAnim { get; set; } = "PortalZip";
 
-	[DDLRegistration(0x2320cd88u, description: "Min distance a portal target must be from the camera")]
+	[DDLRegistration(0xecff5f76u, description: "Min distance a portal target must be from the camera")]
 	public float MinTargetDistance { get; set; } = 10.00f;
 
-	[DDLRegistration(0x2320cd88u, description: "Max distance a portal target can be from the camera")]
+	[DDLRegistration(0xf9748b84u, description: "Max distance a portal target can be from the camera")]
 	public float MaxTargetDistance { get; set; } = 40.00f;
 
-	[DDLRegistration(0x2320cd88u, description: "Angle from camera/reticle that target needs to be within to auto target")]
+	[DDLRegistration(0xd02cb593u, description: "Angle from camera/reticle that target needs to be within to auto target")]
 	public float MaxAngleStartAutoTarget { get; set; } = 7.00f;
 
-	[DDLRegistration(0x2320cd88u, description: "Angle from camera/reticle that target needs to be away to end auto target")]
+	[DDLRegistration(0x78e2b899u, description: "Angle from camera/reticle that target needs to be away to end auto target")]
 	public float MinAngleEndAutoTarget { get; set; } = 14.00f;
 
-	[DDLRegistration(0x2320cd88u, description: "Max amount of time it can take for the hero to stop from its initial momentum.")]
+	[DDLRegistration(0xe1645179u, description: "Max amount of time it can take for the hero to stop from its initial momentum.")]
 	public float StopMomentumTime { get; set; } = 0.60f;
 
-	[DDLRegistration(0x2320cd88u, description: "Max distance that the hero can move from its initial momentum.")]
+	[DDLRegistration(0x3084f673u, description: "Max distance that the hero can move from its initial momentum.")]
 	public float MaxMomentumDistance { get; set; } = 3.00f;
 
-	[DDLRegistration(0x2320cd88u)]
+	[DDLRegistration(0x49e0cb8du)]
 	public HeroPortalZipLineData? LineData { get; set; } = default;
 
-	[DDLRegistration(0x2320cd88u)]
+	[DDLRegistration(0x4df55ad0u)]
 	public RivetAssetId CameraAimContext { get; set; } = default;
 
-	[DDLRegistration(0x2320cd88u)]
+	[DDLRegistration(0x86cc4d07u)]
 	public RivetAssetId PortalAimContext { get; set; } = default;
 
 	public new static HeroOpenPocketDimConfig Create(DDLObject ddl) => new(ddl);

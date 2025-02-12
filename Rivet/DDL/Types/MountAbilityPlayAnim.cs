@@ -18,7 +18,7 @@ public class MountAbilityPlayAnim : MountAbilityBase, IDDLObjectType<MountAbilit
 		AttackAnimName = ddl.GetString(0x153eb5d6) ?? AttackAnimName;
 	}
 
-	[DDLRegistration(0x773cefd3u, "Attack Anim during Mounting")]
+	[DDLRegistration(0x153eb5d6u, "Attack Anim during Mounting")]
 	public string? AttackAnimName { get; set; } = default;
 
 	public new static MountAbilityPlayAnim Create(DDLObject ddl) => new(ddl);

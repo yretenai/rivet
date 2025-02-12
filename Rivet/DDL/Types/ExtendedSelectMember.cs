@@ -18,7 +18,7 @@ public class ExtendedSelectMember : DDLObjectType, IDDLObjectType<ExtendedSelect
 		S = ddl.GetEnum<SelB>(0xf28fb8cdu, SelBValues.Lookup);
 	}
 
-	[DDLRegistration(0x38103cebu)]
+	[DDLRegistration(0xf28fb8cdu)]
 	public SelB S { get; set; } = SelB.Q;
 
 	public static ExtendedSelectMember Create(DDLObject ddl) => new(ddl);

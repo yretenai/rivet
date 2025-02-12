@@ -21,16 +21,16 @@ public class CurveFollowerAttachPrius : DDLObjectType, IDDLObjectType<CurveFollo
 		FaceBackOnReverse = ddl.GetValue<bool>(0x2af6e426u, FaceBackOnReverse);
 	}
 
-	[DDLRegistration(0x882124bfu)]
+	[DDLRegistration(0xa3507545u)]
 	public bool ApplyFacingDirection { get; set; } = false;
 
-	[DDLRegistration(0x882124bfu, "Apply XZ Facing only?", "If set to apply the path facing direction, whether to only use the XZ component of the facing (to maintain object's up).")]
+	[DDLRegistration(0x762b2ad2u, "Apply XZ Facing only?", "If set to apply the path facing direction, whether to only use the XZ component of the facing (to maintain object's up).")]
 	public bool ApplyXZFacingOnly { get; set; } = false;
 
-	[DDLRegistration(0x882124bfu, "Blend facing amount", "If set to apply the path facing direction, the amount of blending to the facing direction to use. A number <= 0 or >= 1 means to have no blend on the facing. The lower the number the slowing the blending (actually means percent to go each frame, so 0.1 is to blend 10% to the path facing each frame).")]
+	[DDLRegistration(0x42ba3182u, "Blend facing amount", "If set to apply the path facing direction, the amount of blending to the facing direction to use. A number <= 0 or >= 1 means to have no blend on the facing. The lower the number the slowing the blending (actually means percent to go each frame, so 0.1 is to blend 10% to the path facing each frame).")]
 	public float BlendFacingAmt { get; set; } = 0.00f;
 
-	[DDLRegistration(0x882124bfu, "Face back on reverse?", "If set to apply the path facing direction, whether or not to face backwards (away from the direction of movement) when going in reverse on the path. For a bi-directional path, this means we will face down the path one way and face opposite the path the other way, so the platform does not turn around at the end points")]
+	[DDLRegistration(0x2af6e426u, "Face back on reverse?", "If set to apply the path facing direction, whether or not to face backwards (away from the direction of movement) when going in reverse on the path. For a bi-directional path, this means we will face down the path one way and face opposite the path the other way, so the platform does not turn around at the end points")]
 	public bool FaceBackOnReverse { get; set; } = false;
 
 	public static CurveFollowerAttachPrius Create(DDLObject ddl) => new(ddl);

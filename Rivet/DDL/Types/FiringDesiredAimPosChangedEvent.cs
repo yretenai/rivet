@@ -23,22 +23,22 @@ public class FiringDesiredAimPosChangedEvent : EventBase, IDDLObjectType<FiringD
 		NewPosValid = ddl.GetValue<bool>(0x697f6162u, NewPosValid);
 	}
 
-	[DDLRegistration(0x53caa45au)]
+	[DDLRegistration(0xd94bd10du)]
 	public DDLVector3? OldPos { get; set; } = default;
 
-	[DDLRegistration(0x53caa45au)]
+	[DDLRegistration(0x69b7b430u)]
 	public uint OldTargetHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x53caa45au)]
+	[DDLRegistration(0xc1a9ebdcu)]
 	public bool OldPosValid { get; set; } = false;
 
-	[DDLRegistration(0x53caa45au)]
+	[DDLRegistration(0x5dab98a8u)]
 	public DDLVector3? NewPos { get; set; } = default;
 
-	[DDLRegistration(0x53caa45au)]
+	[DDLRegistration(0x77d75a8cu)]
 	public uint NewTargetHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x53caa45au)]
+	[DDLRegistration(0x697f6162u)]
 	public bool NewPosValid { get; set; } = false;
 
 	public new static FiringDesiredAimPosChangedEvent Create(DDLObject ddl) => new(ddl);

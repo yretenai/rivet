@@ -18,7 +18,7 @@ public class JumpPeakEvent : EventBase, IDDLObjectType<JumpPeakEvent> {
 		AnimGoesToGround = ddl.GetValue<bool>(0x3ab7d134u, AnimGoesToGround);
 	}
 
-	[DDLRegistration(0x4ca735f3u)]
+	[DDLRegistration(0x3ab7d134u)]
 	public bool AnimGoesToGround { get; set; } = true;
 
 	public new static JumpPeakEvent Create(DDLObject ddl) => new(ddl);

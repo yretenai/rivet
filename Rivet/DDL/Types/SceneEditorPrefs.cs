@@ -83,202 +83,202 @@ public class SceneEditorPrefs : DDLObjectType, IDDLObjectType<SceneEditorPrefs> 
 		RandomizationSettings = ddl.GetObject<RandomizationSettings>(0xd649de83u);
 	}
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x92edb778u)]
 	public float SpriteSize { get; set; } = 0.30f;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x09210f2fu)]
 	public float SpriteOffset { get; set; } = 0.80f;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xd1b57feeu)]
 	public string? LastSyncDate { get; set; } = "";
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x2adaf5f7u)]
 	public EditorRenderSettings? RenderSettings { get; set; } = default;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xeb24eccau)]
 	public EditorRenderSettings2? RenderSettings2 { get; set; } = default;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xb4dfde6du)]
 	public bool DeleteUnmovedDuplicated { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xd1ba2d86u)]
 	public bool AutoParenting { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x6c0f7189u)]
 	public bool AutoGrouping { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x9ab45b32u)]
 	public bool ExportToCentimeters { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xcdbda3bbu)]
 	public bool ArcBallManip { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x2195c9c1u)]
 	public bool AltTransManip { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x8ea022f4u)]
 	public bool UseMayaCameraPanSpeed { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x07710496u)]
 	public bool FollowManipUseZ { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xc0ebf2f0u)]
 	public bool AltPrefabOverlay { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x63c803f7u)]
 	public bool StippleEffect { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x6ca8a931u)]
 	public bool MetricAssist { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x12dcffd0u)]
 	public bool EnforcePadFocus { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x32f8e003u)]
 	public bool AllowPadInEditor { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x5ebde4acu)]
 	public bool PreferActiveState { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x3993ebd0u)]
 	public bool RestoreZoneCameraOnLoad { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x8475b398u)]
 	public bool ShowScriptGraphGrid { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xc080b1d2u)]
 	public bool SelectedVolumesHighlight { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xe0ac40e5u)]
 	public bool PlaceFacingCamera { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x7aeb36e3u)]
 	public bool EnableViewerAsserts { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x3707daffu)]
 	public PivotMode PivotMode { get; set; } = PivotMode.Default;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x87a65665u)]
 	public CameraProjectionType CameraProjectionType { get; set; } = CameraProjectionType.Perspective;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x86886d3eu)]
 	public bool GridXYZLock { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x0f32e021u)]
 	public double GridSpacingX { get; set; } = 1;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x7835d0b7u)]
 	public double GridSpacingY { get; set; } = 1;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xe13c810du)]
 	public double GridSpacingZ { get; set; } = 1;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x593abc3cu)]
 	public float RotationSnap { get; set; } = 45.00f;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x85b2cbfcu)]
 	public float PolylineSnap { get; set; } = 2.00f;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xc97433e1u)]
 	public float HFovAsset { get; set; } = 60.00f;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x155b8191u)]
 	public float HFovZone { get; set; } = 72.00f;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x2f68eb77u)]
 	public MarqueeTestMode MarqueeTestMode { get; set; } = MarqueeTestMode.Any;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x5ebdec9au)]
 	public EditorRenderMode EditorRenderMode { get; set; } = EditorRenderMode.FullLighting;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x3e1ae6beu)]
 	public int EditorCollisionMode { get; set; } = 65535;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xa1f73cbfu)]
 	public bool SelectBoundingBox { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x1fd241a9u)]
 	public float FXDynamicScaling { get; set; } = 1.00f;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xc0c447fau)]
 	public float CamLoDScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x836dc546u)]
 	public float FarClipDist { get; set; } = 1000.00f;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x8f6cdeb4u)]
 	public float MatAlphaSim { get; set; } = 1.00f;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x597a31e6u)]
 	public float FPSSim { get; set; } = 1.00f;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x6d94a4b8u)]
 	public bool MatAnimateLoD { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x12533638u)]
 	public bool MatDoubleSided { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xb8fc01e2u)]
 	public bool MatColorPicker { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xb00c505au)]
 	public bool MatPreviewSrgb { get; set; } = true;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xa6933eddu)]
 	public bool CurvesDefaultLinear { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x833b1debu)]
 	public bool SelectVolumesByEdge { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x2e2163e0u)]
 	public bool MatSortTriangles { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x0983e341u)]
 	public bool ScriptCollapse { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xa0ee4977u)]
 	public VertexPaintingPref? VertexPaintingPref { get; set; } = default;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x68f921f3u)]
 	public ShrubbingPref? ShrubbingPref { get; set; } = default;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x7452ffcbu)]
 	public ManipSpaceMode ManipSpaceMode { get; set; } = ManipSpaceMode.World;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xd1964c45u)]
 	public bool ManipSnapToGrid { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x3544e8c3u)]
 	public bool ManipSnapToVertex { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x3a41935bu)]
 	public bool ManipSnapToSurface { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xf05930fcu)]
 	public bool ManipSnapToPivot { get; set; } = false;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xd8e2f149u)]
 	public List<double> WorldGridMatrix { get; set; } = [];
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x1fb654d5u)]
 	public string? CommandLineSwitches { get; set; } = "";
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x93be83b6u)]
 	public int CurrentViewerAtmosphere { get; set; } = -1;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x3bac722bu)]
 	public List<string?> ViewerAtmospheres { get; set; } = [];
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x7d2286c8u)]
 	public ModelDisplayOptions? ModelDisplayFlags { get; set; } = default;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x6feaf664u)]
 	public EventFilterOptions? EventFilterOptions { get; set; } = default;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0x67ce3b19u)]
 	public int AVMaterialOverride { get; set; } = 0;
 
-	[DDLRegistration(0x958bdf12u)]
+	[DDLRegistration(0xd649de83u)]
 	public RandomizationSettings? RandomizationSettings { get; set; } = default;
 
 	public static SceneEditorPrefs Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class RenderOverrideRandomizerPrius : DDLObjectType, IDDLObjectType<Rende
 		RenderOverrides = ddl.GetObjects<RandomRenderOverride>(0xd1f6fba2u);
 	}
 
-	[DDLRegistration(0x5884a1cfu)]
+	[DDLRegistration(0xd1f6fba2u)]
 	public List<RandomRenderOverride?> RenderOverrides { get; set; } = [];
 
 	public static RenderOverrideRandomizerPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class InputPlugActor : InputPlugBaseDef, IDDLObjectType<InputPlugActor> {
 		Value = ddl.GetObject<ActorPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x1cc1ce4fu)]
+	[DDLRegistration(0x042494f5u)]
 	public ActorPlug? Value { get; set; } = default;
 
 	public new static InputPlugActor Create(DDLObject ddl) => new(ddl);

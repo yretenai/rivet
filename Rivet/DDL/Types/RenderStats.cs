@@ -19,10 +19,10 @@ public class RenderStats : DDLObjectType, IDDLObjectType<RenderStats> {
 		RenderThreadStats = ddl.GetObject<RenderThreadStats>(0x30c0ebdcu);
 	}
 
-	[DDLRegistration(0x781b407du, description: "Collected on the renderer frontend, but same frame as RenderThreadStats")]
+	[DDLRegistration(0x84b7e13fu, description: "Collected on the renderer frontend, but same frame as RenderThreadStats")]
 	public RenderSubmitStats? RenderSubmitStats { get; set; } = default;
 
-	[DDLRegistration(0x781b407du, description: "Collected on the renderer backend, but same frame as RenderThreadStats")]
+	[DDLRegistration(0x30c0ebdcu, description: "Collected on the renderer backend, but same frame as RenderThreadStats")]
 	public RenderThreadStats? RenderThreadStats { get; set; } = default;
 
 	public static RenderStats Create(DDLObject ddl) => new(ddl);

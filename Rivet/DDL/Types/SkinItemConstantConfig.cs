@@ -21,16 +21,16 @@ public class SkinItemConstantConfig : ConfigBase, IDDLObjectType<SkinItemConstan
 		ConstantOverrideList = ddl.GetObjects<SkinItemConstantOverrideListElement>(0xce09a84bu);
 	}
 
-	[DDLRegistration(0x552349eeu, "Debug Name", "Debug only name string")]
+	[DDLRegistration(0x4ef19112u, "Debug Name", "Debug only name string")]
 	public string? DebugName { get; set; } = default;
 
-	[DDLRegistration(0x552349eeu, "Name LocTag", "Localization tag for name")]
+	[DDLRegistration(0xa0041b54u, "Name LocTag", "Localization tag for name")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0x552349eeu, "Desc LocTag", "Localization tag for description")]
+	[DDLRegistration(0xe02bccb2u, "Desc LocTag", "Localization tag for description")]
 	public string? DescLocTag { get; set; } = default;
 
-	[DDLRegistration(0x552349eeu, "Constant Override List", "List of constant sets available to use")]
+	[DDLRegistration(0xce09a84bu, "Constant Override List", "List of constant sets available to use")]
 	public List<SkinItemConstantOverrideListElement?> ConstantOverrideList { get; set; } = [];
 
 	public new static SkinItemConstantConfig Create(DDLObject ddl) => new(ddl);

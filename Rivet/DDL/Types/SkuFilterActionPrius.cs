@@ -24,25 +24,25 @@ public class SkuFilterActionPrius : DDLObjectType, IDDLObjectType<SkuFilterActio
 		SkuCN = ddl.GetValue<bool>(0x61bb0a98u, SkuCN);
 	}
 
-	[DDLRegistration(0xb0ba204au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
-	[DDLRegistration(0xb0ba204au)]
+	[DDLRegistration(0x44aa6944u)]
 	public bool SkuNA { get; set; } = false;
 
-	[DDLRegistration(0xb0ba204au)]
+	[DDLRegistration(0x0d494bc0u)]
 	public bool SkuUK { get; set; } = false;
 
-	[DDLRegistration(0xb0ba204au)]
+	[DDLRegistration(0xbd8464f2u)]
 	public bool SkuEU { get; set; } = false;
 
-	[DDLRegistration(0xb0ba204au)]
+	[DDLRegistration(0x4a768cb2u)]
 	public bool SkuJP { get; set; } = false;
 
-	[DDLRegistration(0xb0ba204au)]
+	[DDLRegistration(0x308b04c3u)]
 	public bool SkuAS { get; set; } = false;
 
-	[DDLRegistration(0xb0ba204au)]
+	[DDLRegistration(0x61bb0a98u)]
 	public bool SkuCN { get; set; } = false;
 
 	public static SkuFilterActionPrius Create(DDLObject ddl) => new(ddl);

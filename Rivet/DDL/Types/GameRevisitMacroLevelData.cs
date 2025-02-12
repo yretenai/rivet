@@ -18,7 +18,7 @@ public class GameRevisitMacroLevelData : GameMacroLevelData, IDDLObjectType<Game
 		SecondaryEconConfig = ddl.GetValue<RivetAssetId>(0x0b940c86u, SecondaryEconConfig);
 	}
 
-	[DDLRegistration(0xeaf48a57u, "Secondary Economy Config", "Macro economy settings for this level")]
+	[DDLRegistration(0x0b940c86u, "Secondary Economy Config", "Macro economy settings for this level")]
 	public RivetAssetId SecondaryEconConfig { get; set; } = default;
 
 	public new static GameRevisitMacroLevelData Create(DDLObject ddl) => new(ddl);

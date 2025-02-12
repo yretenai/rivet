@@ -18,7 +18,7 @@ public class NotScriptedShotConditionalPrius : ScriptedShotConditionalBasePrius,
 		Cond = ddl.GetObject<ScriptedShotConditionalBasePrius>(0xca6d2834u);
 	}
 
-	[DDLRegistration(0xa63d8092u)]
+	[DDLRegistration(0xca6d2834u)]
 	public ScriptedShotConditionalBasePrius? Cond { get; set; } = default;
 
 	public new static NotScriptedShotConditionalPrius Create(DDLObject ddl) => new(ddl);

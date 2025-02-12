@@ -34,55 +34,55 @@ public class LunaUpdaterConfigFile : DDLObjectType, IDDLObjectType<LunaUpdaterCo
 		FtpLatestToolsPackage = ddl.GetValue<int>(0xb8c63036u, FtpLatestToolsPackage);
 	}
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x6f99b0a8u)]
 	public bool AutoDownloadLatest { get; set; } = true;
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x34fa76d2u)]
 	public bool AutoStartTools { get; set; } = true;
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0xa260f3f8u)]
 	public bool AllowBetaTools { get; set; } = false;
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x38c88a52u)]
 	public int NumPreviousVersionsToKeep { get; set; } = 3;
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x073b7585u)]
 	public string? UpdaterVersion { get; set; } = "";
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x5d27d594u)]
 	public string? FtpUserId { get; set; } = "";
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x0550e42fu)]
 	public string? FtpUserPass { get; set; } = "";
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0xb76ebb21u)]
 	public List<LunaFtpInstallerInfo?> FtpUpdaterInstallers { get; set; } = [];
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x79cdfecfu)]
 	public List<LunaFtpInstallerInfo?> FtpHavokInstallers { get; set; } = [];
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x2f914efbu)]
 	public List<LunaFtpInstallerInfo?> FtpWinExtInstallers { get; set; } = [];
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x18fc8d87u)]
 	public List<LunaFtpInstallerInfo?> FtpMaya2018Installers { get; set; } = [];
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0xd5a1be32u)]
 	public List<LunaFtpInstallerInfo?> FtpMaya2020Installers { get; set; } = [];
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x507e1fc4u)]
 	public LunaFtpUserConfigFile? FtpUserConfig { get; set; } = default;
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x91fc54e0u)]
 	public List<LunaFtpProjectConfigFile?> FtpProjects { get; set; } = [];
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0x1a0f362bu)]
 	public List<string?> FtpBranches { get; set; } = [];
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0xf4e1f26au)]
 	public List<LunaFtpToolsPackageConfigFile?> FtpToolsPackages { get; set; } = [];
 
-	[DDLRegistration(0x99caf949u)]
+	[DDLRegistration(0xb8c63036u)]
 	public int FtpLatestToolsPackage { get; set; } = -1;
 
 	public static LunaUpdaterConfigFile Create(DDLObject ddl) => new(ddl);

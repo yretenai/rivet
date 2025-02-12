@@ -18,7 +18,7 @@ public class KamehamehaChargeUpCanceledEvent : EventBase, IDDLObjectType<Kameham
 		VersionIndex = ddl.GetValue<uint>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0x2f619a06u)]
+	[DDLRegistration(0x6e091c9au)]
 	public uint VersionIndex { get; set; } = 0x00000000;
 
 	public new static KamehamehaChargeUpCanceledEvent Create(DDLObject ddl) => new(ddl);

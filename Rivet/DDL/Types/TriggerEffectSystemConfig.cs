@@ -18,7 +18,7 @@ public class TriggerEffectSystemConfig : ConfigBase, IDDLObjectType<TriggerEffec
 		TriggerEffectTypeArray = ddl.GetObjects<TriggerEffectArrayItem>(0xfce87888u);
 	}
 
-	[DDLRegistration(0xf8c4c18du)]
+	[DDLRegistration(0xfce87888u)]
 	public List<TriggerEffectArrayItem?> TriggerEffectTypeArray { get; set; } = [];
 
 	public new static TriggerEffectSystemConfig Create(DDLObject ddl) => new(ddl);

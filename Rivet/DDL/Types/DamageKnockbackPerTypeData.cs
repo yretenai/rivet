@@ -20,13 +20,13 @@ public class DamageKnockbackPerTypeData : DDLObjectType, IDDLObjectType<DamageKn
 		KnockbackPercent = ddl.GetValue<float>(0xbc412990u, KnockbackPercent);
 	}
 
-	[DDLRegistration(0x9dffca4du)]
+	[DDLRegistration(0x7bbba4a0u)]
 	public float DamagePercent { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9dffca4du)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.Two;
 
-	[DDLRegistration(0x9dffca4du)]
+	[DDLRegistration(0xbc412990u)]
 	public float KnockbackPercent { get; set; } = 1.00f;
 
 	public static DamageKnockbackPerTypeData Create(DDLObject ddl) => new(ddl);

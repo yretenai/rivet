@@ -22,19 +22,19 @@ public class SkyDiveVolumePrius : DDLObjectType, IDDLObjectType<SkyDiveVolumePri
 		UseDiveCameraOffset = ddl.GetValue<bool>(0xa87c4979u, UseDiveCameraOffset);
 	}
 
-	[DDLRegistration(0x9118edfbu)]
+	[DDLRegistration(0x4b2b87f8u)]
 	public RivetAssetId TargetVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9118edfbu)]
+	[DDLRegistration(0xb7e73be8u)]
 	public float DiveTime { get; set; } = 10.00f;
 
-	[DDLRegistration(0x9118edfbu)]
+	[DDLRegistration(0x0e26912au)]
 	public float CameraDistance { get; set; } = 8.00f;
 
-	[DDLRegistration(0x9118edfbu)]
+	[DDLRegistration(0x33140089u)]
 	public xd2417a1c CameraOrientation { get; set; } = xd2417a1c.FacingDirection;
 
-	[DDLRegistration(0x9118edfbu, description: "Dive camera offsets horizontally from player when nearing the edges of skydive volume.")]
+	[DDLRegistration(0xa87c4979u, description: "Dive camera offsets horizontally from player when nearing the edges of skydive volume.")]
 	public bool UseDiveCameraOffset { get; set; } = true;
 
 	public static SkyDiveVolumePrius Create(DDLObject ddl) => new(ddl);

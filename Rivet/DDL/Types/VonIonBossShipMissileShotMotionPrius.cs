@@ -20,13 +20,13 @@ public class VonIonBossShipMissileShotMotionPrius : BasicShotMotionPrius, IDDLOb
 		EvadeTime = ddl.GetValue<float>(0x19abcd19u, EvadeTime);
 	}
 
-	[DDLRegistration(0xd148a5dfu)]
+	[DDLRegistration(0x88953b61u)]
 	public float HomingSpeed { get; set; } = 360.00f;
 
-	[DDLRegistration(0xd148a5dfu)]
+	[DDLRegistration(0x2a60fd77u)]
 	public float DispersionFactor { get; set; } = 0.75f;
 
-	[DDLRegistration(0xd148a5dfu)]
+	[DDLRegistration(0x19abcd19u)]
 	public float EvadeTime { get; set; } = 1.00f;
 
 	public new static VonIonBossShipMissileShotMotionPrius Create(DDLObject ddl) => new(ddl);

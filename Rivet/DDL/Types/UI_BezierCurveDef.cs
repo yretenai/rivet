@@ -26,31 +26,31 @@ public class UI_BezierCurveDef : DDLObjectType, IDDLObjectType<UI_BezierCurveDef
 		UiCurrentValue = ddl.GetObject<UI_BezierCurveValue>(0x84e98effu);
 	}
 
-	[DDLRegistration(0x68b86cd4u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x68b86cd4u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x68b86cd4u)]
+	[DDLRegistration(0x7ce4669fu)]
 	public List<RivetAssetId> DimensionOrder { get; set; } = [];
 
-	[DDLRegistration(0x68b86cd4u)]
+	[DDLRegistration(0x394bd59cu)]
 	public Dictionary<RivetAssetId, BezierCurveDimensionDef?> Dimensions { get; set; } = [];
 
-	[DDLRegistration(0x68b86cd4u, "Pre Infinity")]
+	[DDLRegistration(0xb0cececau, "Pre Infinity")]
 	public x74a6ffcc ExtrapolateModeIn { get; set; } = x74a6ffcc.ExtrapolateClamp;
 
-	[DDLRegistration(0x68b86cd4u, "Post Infinity")]
+	[DDLRegistration(0x81d2e76du, "Post Infinity")]
 	public x74a6ffcc ExtrapolateModeOut { get; set; } = x74a6ffcc.ExtrapolateClamp;
 
-	[DDLRegistration(0x68b86cd4u)]
+	[DDLRegistration(0x1f9ce070u)]
 	public x4eda4f54 RotationOrder { get; set; } = x4eda4f54.RotOrderXYZ;
 
-	[DDLRegistration(0x68b86cd4u)]
+	[DDLRegistration(0x12568d7bu)]
 	public x3fc1e4d4 Flags { get; set; } = (x3fc1e4d4) 0x00000000;
 
-	[DDLRegistration(0x68b86cd4u)]
+	[DDLRegistration(0x84e98effu)]
 	public UI_BezierCurveValue? UiCurrentValue { get; set; } = default;
 
 	public static UI_BezierCurveDef Create(DDLObject ddl) => new(ddl);

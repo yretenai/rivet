@@ -27,34 +27,34 @@ public class CommandFollowCurveEvent : CommandEvent, IDDLObjectType<CommandFollo
 		FaceTarget = ddl.GetValue<bool>(0xd8b698ecu, FaceTarget);
 	}
 
-	[DDLRegistration(0xaef209cfu)]
+	[DDLRegistration(0x4eca9176u)]
 	public uint Curve { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xaef209cfu)]
+	[DDLRegistration(0xd7001dadu)]
 	public RivetAssetId CurveUid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xaef209cfu)]
+	[DDLRegistration(0xb31a6f71u)]
 	public DDLVector3? Destination { get; set; } = default;
 
-	[DDLRegistration(0xaef209cfu)]
+	[DDLRegistration(0xa4a1652au)]
 	public bool DoSmoothTransition { get; set; } = false;
 
-	[DDLRegistration(0xaef209cfu)]
+	[DDLRegistration(0x6a6873c0u)]
 	public x3376434d SmoothTransitionType { get; set; } = x3376434d.ClosestPoint;
 
-	[DDLRegistration(0xaef209cfu, description: "Min dist percentage the transition curve's control points can be from their respective curves (0-1)")]
+	[DDLRegistration(0x6bc5c814u, description: "Min dist percentage the transition curve's control points can be from their respective curves (0-1)")]
 	public float TransitionMinDistFactor { get; set; } = 0.20f;
 
-	[DDLRegistration(0xaef209cfu, description: "Max dist percentage the transition curve's control points can be from their respective curves (0-1)")]
+	[DDLRegistration(0x2b8ab062u, description: "Max dist percentage the transition curve's control points can be from their respective curves (0-1)")]
 	public float TransitionMaxDistFactor { get; set; } = 0.50f;
 
-	[DDLRegistration(0xaef209cfu, description: "Sharpness angle percentage for entering and exiting the transition curve (0-1)")]
+	[DDLRegistration(0xd5bc1eb7u, description: "Sharpness angle percentage for entering and exiting the transition curve (0-1)")]
 	public float TransitionAngleFactor { get; set; } = 0.25f;
 
-	[DDLRegistration(0xaef209cfu, description: "Max turn rate to turn when transitioning between curves (deg/sec)")]
+	[DDLRegistration(0x0906ec33u, description: "Max turn rate to turn when transitioning between curves (deg/sec)")]
 	public float TransitionMaxTurnRate { get; set; } = 45.00f;
 
-	[DDLRegistration(0xaef209cfu)]
+	[DDLRegistration(0xd8b698ecu)]
 	public bool FaceTarget { get; set; } = false;
 
 	public new static CommandFollowCurveEvent Create(DDLObject ddl) => new(ddl);

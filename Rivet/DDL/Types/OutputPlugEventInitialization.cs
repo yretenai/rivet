@@ -18,7 +18,7 @@ public class OutputPlugEventInitialization : OutputPlugBaseDef, IDDLObjectType<O
 		Value = ddl.GetObject<EventInitializationPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0xcbac7b5cu)]
+	[DDLRegistration(0x042494f5u)]
 	public EventInitializationPlug? Value { get; set; } = default;
 
 	public new static OutputPlugEventInitialization Create(DDLObject ddl) => new(ddl);

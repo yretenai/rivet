@@ -18,7 +18,7 @@ public class DebugMenuOptionActionPrius : DDLObjectType, IDDLObjectType<DebugMen
 		StartEnabled = ddl.GetValue<bool>(0x6f36ca8bu, StartEnabled);
 	}
 
-	[DDLRegistration(0x33a8c952u, description: "If true, will be enabled on zone load")]
+	[DDLRegistration(0x6f36ca8bu, description: "If true, will be enabled on zone load")]
 	public bool StartEnabled { get; set; } = true;
 
 	public static DebugMenuOptionActionPrius Create(DDLObject ddl) => new(ddl);

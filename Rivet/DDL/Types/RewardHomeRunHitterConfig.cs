@@ -19,10 +19,10 @@ public class RewardHomeRunHitterConfig : ConfigBase, IDDLObjectType<RewardHomeRu
 		DeathAnimScaleY = ddl.GetValue<float>(0x56c4dfcau, DeathAnimScaleY);
 	}
 
-	[DDLRegistration(0x9cd64ec9u, description: "The amount to scale the XZ of the death animation for an enemy when killed by the hero with kMelee damage type.")]
+	[DDLRegistration(0xe94266dau, description: "The amount to scale the XZ of the death animation for an enemy when killed by the hero with kMelee damage type.")]
 	public float DeathAnimScaleXZ { get; set; } = 5.00f;
 
-	[DDLRegistration(0x9cd64ec9u, description: "The amount to scale the Y of the death animation for an enemy when killed by the hero with kMelee damage type.")]
+	[DDLRegistration(0x56c4dfcau, description: "The amount to scale the Y of the death animation for an enemy when killed by the hero with kMelee damage type.")]
 	public float DeathAnimScaleY { get; set; } = 2.00f;
 
 	public new static RewardHomeRunHitterConfig Create(DDLObject ddl) => new(ddl);

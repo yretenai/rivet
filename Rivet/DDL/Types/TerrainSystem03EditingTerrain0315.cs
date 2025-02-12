@@ -18,7 +18,7 @@ public class TerrainSystem03EditingTerrain0315 : DDLObjectType, IDDLObjectType<T
 		Line00 = ddl.GetString(0x0f78bf4b) ?? Line00;
 	}
 
-	[DDLRegistration(0x143702bbu, description: "This will select the entire terrain in the <i>Selection Mask</i> target.")]
+	[DDLRegistration(0x0f78bf4bu, description: "This will select the entire terrain in the <i>Selection Mask</i> target.")]
 	public string? Line00 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0315 Create(DDLObject ddl) => new(ddl);

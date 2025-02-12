@@ -18,7 +18,7 @@ public class RefireChargeStopEvent : EventBase, IDDLObjectType<RefireChargeStopE
 		LocalSource = ddl.GetValue<byte>(0x40245b06u, LocalSource);
 	}
 
-	[DDLRegistration(0x12c9a194u)]
+	[DDLRegistration(0x40245b06u)]
 	public byte LocalSource { get; set; } = 0x00;
 
 	public new static RefireChargeStopEvent Create(DDLObject ddl) => new(ddl);

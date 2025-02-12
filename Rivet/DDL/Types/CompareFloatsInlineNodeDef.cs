@@ -22,19 +22,19 @@ public class CompareFloatsInlineNodeDef : MathNodeBaseDef, IDDLObjectType<Compar
 		GreaterThan = ddl.GetObject<OutputPlugBoolean>(0x70f69f4du);
 	}
 
-	[DDLRegistration(0xed9b5999u)]
+	[DDLRegistration(0x3a58e94du)]
 	public InputPlugFloat? A { get; set; } = default;
 
-	[DDLRegistration(0xed9b5999u)]
+	[DDLRegistration(0xa351b8f7u)]
 	public InputPlugFloat? B { get; set; } = default;
 
-	[DDLRegistration(0xed9b5999u, "A < B?")]
+	[DDLRegistration(0x266a450bu, "A < B?")]
 	public OutputPlugBoolean? LessThan { get; set; } = default;
 
-	[DDLRegistration(0xed9b5999u, "A = B?")]
+	[DDLRegistration(0x75c92864u, "A = B?")]
 	public OutputPlugBoolean? EqualTo { get; set; } = default;
 
-	[DDLRegistration(0xed9b5999u, "A > B?")]
+	[DDLRegistration(0x70f69f4du, "A > B?")]
 	public OutputPlugBoolean? GreaterThan { get; set; } = default;
 
 	public new static CompareFloatsInlineNodeDef Create(DDLObject ddl) => new(ddl);

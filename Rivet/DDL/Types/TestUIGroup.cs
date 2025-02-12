@@ -18,7 +18,7 @@ public class TestUIGroup : DDLObjectType, IDDLObjectType<TestUIGroup> {
 		People = ddl.GetObjects<TestPerson>(0x166e2441u);
 	}
 
-	[DDLRegistration(0x4dc36f60u)]
+	[DDLRegistration(0x166e2441u)]
 	public List<TestPerson?> People { get; set; } = [];
 
 	public static TestUIGroup Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class OutputNodeWeaponMacroTypeState : OutputNodeBaseDef, IDDLObjectType<
 		Out = ddl.GetObject<OutputPlugWeaponMacroType>(0x93bf4450u);
 	}
 
-	[DDLRegistration(0xbb98cd3eu)]
+	[DDLRegistration(0x6a84a393u)]
 	public InputPlugWeaponMacroType? In { get; set; } = default;
 
-	[DDLRegistration(0xbb98cd3eu)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugWeaponMacroType? Out { get; set; } = default;
 
 	public new static OutputNodeWeaponMacroTypeState Create(DDLObject ddl) => new(ddl);

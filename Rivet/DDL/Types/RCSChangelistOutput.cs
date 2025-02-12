@@ -21,16 +21,16 @@ public class RCSChangelistOutput : DDLObjectType, IDDLObjectType<RCSChangelistOu
 		Changelist = ddl.GetValue<uint>(0x03b0ddc6u, Changelist);
 	}
 
-	[DDLRegistration(0x61555691u, description: "Warnings encountered while running a command.")]
+	[DDLRegistration(0x93485b62u, description: "Warnings encountered while running a command.")]
 	public RCSMessage? Warnings { get; set; } = default;
 
-	[DDLRegistration(0x61555691u, description: "Errors encountered while running a command.")]
+	[DDLRegistration(0x02291d7au, description: "Errors encountered while running a command.")]
 	public RCSMessage? Errors { get; set; } = default;
 
-	[DDLRegistration(0x61555691u, description: "Array of key/value pairs for each file returned by the command.")]
+	[DDLRegistration(0x4e14ab6bu, description: "Array of key/value pairs for each file returned by the command.")]
 	public List<RCSDictionary?> Stats { get; set; } = [];
 
-	[DDLRegistration(0x61555691u, description: "Changelist number.")]
+	[DDLRegistration(0x03b0ddc6u, description: "Changelist number.")]
 	public uint Changelist { get; set; } = 0x00000000;
 
 	public static RCSChangelistOutput Create(DDLObject ddl) => new(ddl);

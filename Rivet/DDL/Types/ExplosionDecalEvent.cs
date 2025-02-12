@@ -18,7 +18,7 @@ public class ExplosionDecalEvent : EventBase, IDDLObjectType<ExplosionDecalEvent
 		DecalLocation = ddl.GetEnum<x12f05be0>(0xc138d6f4u, x12f05be0Values.Lookup);
 	}
 
-	[DDLRegistration(0xdc5c9b70u)]
+	[DDLRegistration(0xc138d6f4u)]
 	public x12f05be0 DecalLocation { get; set; } = x12f05be0.Forward;
 
 	public new static ExplosionDecalEvent Create(DDLObject ddl) => new(ddl);

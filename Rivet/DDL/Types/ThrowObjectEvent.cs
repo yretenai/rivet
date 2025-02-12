@@ -18,7 +18,7 @@ public class ThrowObjectEvent : EventBase, IDDLObjectType<ThrowObjectEvent> {
 		ObjectHandle = ddl.GetValue<uint>(0x5bb9a511u, ObjectHandle);
 	}
 
-	[DDLRegistration(0x8e478107u)]
+	[DDLRegistration(0x5bb9a511u)]
 	public uint ObjectHandle { get; set; } = 0x00000000;
 
 	public new static ThrowObjectEvent Create(DDLObject ddl) => new(ddl);

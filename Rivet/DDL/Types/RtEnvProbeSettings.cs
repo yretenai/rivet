@@ -24,25 +24,25 @@ public class RtEnvProbeSettings : DDLObjectType, IDDLObjectType<RtEnvProbeSettin
 		LightSourceNightRadiusScale = ddl.GetValue<float>(0x54ba9f98u, LightSourceNightRadiusScale);
 	}
 
-	[DDLRegistration(0x4db0bf26u, "RTEP CSM LoD Count", "If 0, only impostor cache LoD is used")]
+	[DDLRegistration(0x8dac72ffu, "RTEP CSM LoD Count", "If 0, only impostor cache LoD is used")]
 	public int CsmLodCount { get; set; } = 0;
 
-	[DDLRegistration(0x4db0bf26u, "RTEP CSM Draw Distance")]
+	[DDLRegistration(0xe7a0511fu, "RTEP CSM Draw Distance")]
 	public float CsmDrawDistance { get; set; } = 750.00f;
 
-	[DDLRegistration(0x4db0bf26u, "RTEP Default Probe Intensity")]
+	[DDLRegistration(0xc4b23b1fu, "RTEP Default Probe Intensity")]
 	public float DefaultProbeIntensity { get; set; } = 0.25f;
 
-	[DDLRegistration(0x4db0bf26u, "RTEP Far Clip")]
+	[DDLRegistration(0x180cce8cu, "RTEP Far Clip")]
 	public float FarClip { get; set; } = 2048.00f;
 
-	[DDLRegistration(0x4db0bf26u, "RTEP Render Mode")]
+	[DDLRegistration(0xabfb67b1u, "RTEP Render Mode")]
 	public xefbbbac0 RenderMode { get; set; } = xefbbbac0.ImpostorOnly;
 
-	[DDLRegistration(0x4db0bf26u)]
+	[DDLRegistration(0x1bb5ff28u)]
 	public float LightSourceNightIntensityScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4db0bf26u)]
+	[DDLRegistration(0x54ba9f98u)]
 	public float LightSourceNightRadiusScale { get; set; } = 1.00f;
 
 	public static RtEnvProbeSettings Create(DDLObject ddl) => new(ddl);

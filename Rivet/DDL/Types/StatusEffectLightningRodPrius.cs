@@ -20,13 +20,13 @@ public class StatusEffectLightningRodPrius : StatusEffectBasePrius, IDDLObjectTy
 		SkeletonShader = ddl.GetValue<RivetAssetId>(0x17b68618u, SkeletonShader);
 	}
 
-	[DDLRegistration(0xaf16abb3u, "Body Pre Shader", "Apply this pre-composite material to the actor with the effect on it if there is a skeleton.")]
+	[DDLRegistration(0xe201fdf7u, "Body Pre Shader", "Apply this pre-composite material to the actor with the effect on it if there is a skeleton.")]
 	public RivetAssetId BodyPreShader { get; set; } = default;
 
-	[DDLRegistration(0xaf16abb3u, "Body Post Shader", "Apply this post-composite material to the actor with the effect on it if there is a skeleton.")]
+	[DDLRegistration(0x20436746u, "Body Post Shader", "Apply this post-composite material to the actor with the effect on it if there is a skeleton.")]
 	public RivetAssetId BodyPostShader { get; set; } = default;
 
-	[DDLRegistration(0xaf16abb3u, "Skeleton Shader", "Apply this post-composite material to the skeleton model if we spawn one.")]
+	[DDLRegistration(0x17b68618u, "Skeleton Shader", "Apply this post-composite material to the skeleton model if we spawn one.")]
 	public RivetAssetId SkeletonShader { get; set; } = default;
 
 	public new static StatusEffectLightningRodPrius Create(DDLObject ddl) => new(ddl);

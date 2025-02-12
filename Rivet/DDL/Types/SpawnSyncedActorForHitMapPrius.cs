@@ -18,7 +18,7 @@ public class SpawnSyncedActorForHitMapPrius : DDLObjectType, IDDLObjectType<Spaw
 		Map = ddl.GetObjects<SpawnSyncedActorForHitMapping>(0xb9f88372u);
 	}
 
-	[DDLRegistration(0x5d02640du)]
+	[DDLRegistration(0xb9f88372u)]
 	public List<SpawnSyncedActorForHitMapping?> Map { get; set; } = [];
 
 	public static SpawnSyncedActorForHitMapPrius Create(DDLObject ddl) => new(ddl);

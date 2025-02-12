@@ -20,13 +20,13 @@ public class RewardRenderModeData : DDLObjectType, IDDLObjectType<RewardRenderMo
 		EnableIn3DUI = ddl.GetValue<bool>(0x4be6f8edu, EnableIn3DUI);
 	}
 
-	[DDLRegistration(0x08dc86b7u, description: "This must match the name in the FilterData inside PhotomodeSystemSharedConfig.")]
+	[DDLRegistration(0x6eb3beb6u, description: "This must match the name in the FilterData inside PhotomodeSystemSharedConfig.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x08dc86b7u, description: "The unlock pack this item belongs to.")]
+	[DDLRegistration(0xa74e9e93u, description: "The unlock pack this item belongs to.")]
 	public x84053194 Pack { get; set; } = x84053194.One;
 
-	[DDLRegistration(0x08dc86b7u)]
+	[DDLRegistration(0x4be6f8edu)]
 	public bool EnableIn3DUI { get; set; } = true;
 
 	public static RewardRenderModeData Create(DDLObject ddl) => new(ddl);

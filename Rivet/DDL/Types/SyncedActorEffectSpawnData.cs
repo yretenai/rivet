@@ -21,16 +21,16 @@ public class SyncedActorEffectSpawnData : SyncedActorForHitEffectSpawnData, IDDL
 		Index = ddl.GetValue<sbyte>(0x9920abc0u, Index);
 	}
 
-	[DDLRegistration(0xafdf3cbdu)]
+	[DDLRegistration(0xc7e68df8u)]
 	public float Lifetime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xafdf3cbdu)]
+	[DDLRegistration(0x88a63be8u)]
 	public int HitJoint { get; set; } = -1;
 
-	[DDLRegistration(0xafdf3cbdu)]
+	[DDLRegistration(0x9002e001u)]
 	public bool DrawOn { get; set; } = true;
 
-	[DDLRegistration(0xafdf3cbdu)]
+	[DDLRegistration(0x9920abc0u)]
 	public sbyte Index { get; set; } = 0;
 
 	public new static SyncedActorEffectSpawnData Create(DDLObject ddl) => new(ddl);

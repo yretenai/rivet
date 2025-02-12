@@ -20,13 +20,13 @@ public class AnimClueGamePrius : DDLObjectType, IDDLObjectType<AnimClueGamePrius
 		RandomStart = ddl.GetValue<bool>(0xef3e3d22u, RandomStart);
 	}
 
-	[DDLRegistration(0xc60af4ecu, description: "If non-zero, set the anim clue as unusable for this duration")]
+	[DDLRegistration(0x28e62610u, description: "If non-zero, set the anim clue as unusable for this duration")]
 	public float DelayAfterUse { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc60af4ecu, description: "If checked, skip the alert intro anim")]
+	[DDLRegistration(0x88656e30u, description: "If checked, skip the alert intro anim")]
 	public bool SkipAlertAnim { get; set; } = false;
 
-	[DDLRegistration(0xc60af4ecu, description: "If checked, start the animation at a random frame")]
+	[DDLRegistration(0xef3e3d22u, description: "If checked, start the animation at a random frame")]
 	public bool RandomStart { get; set; } = false;
 
 	public static AnimClueGamePrius Create(DDLObject ddl) => new(ddl);

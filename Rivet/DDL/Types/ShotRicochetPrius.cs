@@ -19,10 +19,10 @@ public class ShotRicochetPrius : BasicBulletPrius, IDDLObjectType<ShotRicochetPr
 		V5ExplosionData = ddl.GetObject<ShotDamageData>(0x24f8b280u);
 	}
 
-	[DDLRegistration(0x278c42bfu, "Bonus Damage Per Successful Ricochet")]
+	[DDLRegistration(0xa53360ffu, "Bonus Damage Per Successful Ricochet")]
 	public float BonusDamagePerSuccessfulRicochet { get; set; } = 0.10f;
 
-	[DDLRegistration(0x278c42bfu, "V5 Explosion Data")]
+	[DDLRegistration(0x24f8b280u, "V5 Explosion Data")]
 	public ShotDamageData? V5ExplosionData { get; set; } = default;
 
 	public new static ShotRicochetPrius Create(DDLObject ddl) => new(ddl);

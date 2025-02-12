@@ -19,10 +19,10 @@ public class AttackTargeterPrius : DDLObjectType, IDDLObjectType<AttackTargeterP
 		TargetedLayer = ddl.GetValue<uint>(0xfbffead5u, TargetedLayer);
 	}
 
-	[DDLRegistration(0x48b4e612u)]
+	[DDLRegistration(0xaba8853au)]
 	public List<TargetedAttack?> Attacks { get; set; } = [];
 
-	[DDLRegistration(0x48b4e612u)]
+	[DDLRegistration(0xfbffead5u)]
 	public uint TargetedLayer { get; set; } = 0x00000000;
 
 	public static AttackTargeterPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class HexapodShotMotionPrius : HomingShotMotionPrius, IDDLObjectType<Hexa
 		HomingTargetAngle = ddl.GetValue<float>(0x2a940025u, HomingTargetAngle);
 	}
 
-	[DDLRegistration(0xf2885e5eu)]
+	[DDLRegistration(0x3257a396u)]
 	public float HomingTargetDistance { get; set; } = 75.00f;
 
-	[DDLRegistration(0xf2885e5eu)]
+	[DDLRegistration(0x2a940025u)]
 	public float HomingTargetAngle { get; set; } = 5.00f;
 
 	public new static HexapodShotMotionPrius Create(DDLObject ddl) => new(ddl);

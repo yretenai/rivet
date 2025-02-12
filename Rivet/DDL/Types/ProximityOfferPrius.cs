@@ -34,55 +34,55 @@ public class ProximityOfferPrius : OfferPrius, IDDLObjectType<ProximityOfferPriu
 		OfferOffset = ddl.GetObject<DDLVector3>(0xda6f0f48u);
 	}
 
-	[DDLRegistration(0x2874b30cu, "User Face Mode")]
+	[DDLRegistration(0x81d426e5u, "User Face Mode")]
 	public xccd3eeab UserFaceMode { get; set; } = xccd3eeab.Point;
 
-	[DDLRegistration(0x2874b30cu, "User Facing Min")]
+	[DDLRegistration(0xd5d501adu, "User Facing Min")]
 	public float UserFacingMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2874b30cu, "User Facing Max")]
+	[DDLRegistration(0xe9d83ef4u, "User Facing Max")]
 	public float UserFacingMax { get; set; } = 60.00f;
 
-	[DDLRegistration(0x2874b30cu, "Use Shape")]
+	[DDLRegistration(0x641ad0e9u, "Use Shape")]
 	public xd7c06e8b OfferShape { get; set; } = xd7c06e8b.Box;
 
-	[DDLRegistration(0x2874b30cu, "Use Box Z Min")]
+	[DDLRegistration(0x5fd768e9u, "Use Box Z Min")]
 	public float OfferBoxZMin { get; set; } = -3.00f;
 
-	[DDLRegistration(0x2874b30cu, "Use Box Z Max")]
+	[DDLRegistration(0x63da57b0u, "Use Box Z Max")]
 	public float OfferBoxZMax { get; set; } = 3.00f;
 
-	[DDLRegistration(0x2874b30cu, "Use Box Width")]
+	[DDLRegistration(0xf5d5f18eu, "Use Box Width")]
 	public float OfferBoxWidth { get; set; } = 3.00f;
 
-	[DDLRegistration(0x2874b30cu, "Use Cylinder Radius")]
+	[DDLRegistration(0x13f5f9beu, "Use Cylinder Radius")]
 	public float OfferCylinderRadius { get; set; } = 3.00f;
 
-	[DDLRegistration(0x2874b30cu, "Use Height")]
+	[DDLRegistration(0x86e75648u, "Use Height")]
 	public float OfferBoxHeight { get; set; } = 3.00f;
 
-	[DDLRegistration(0x2874b30cu, "Use Volume", "Optional - use a volume actor instead of the values above")]
+	[DDLRegistration(0x3aff0846u, "Use Volume", "Optional - use a volume actor instead of the values above")]
 	public RivetAssetId OfferVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x2874b30cu, "Prompt Facing Mode")]
+	[DDLRegistration(0xb28ef75bu, "Prompt Facing Mode")]
 	public x11d5b447 PromptFacingMode { get; set; } = x11d5b447.AlwaysFacing;
 
-	[DDLRegistration(0x2874b30cu, "Prompt Snap", "If greater than 0, the prompt will snap at this angle as it's repositioned.")]
+	[DDLRegistration(0xe8a47308u, "Prompt Snap", "If greater than 0, the prompt will snap at this angle as it's repositioned.")]
 	public float PromptSnapAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2874b30cu, "Volume Range")]
+	[DDLRegistration(0xb3d43b05u, "Volume Range")]
 	public bool ActorVolumeRange { get; set; } = false;
 
-	[DDLRegistration(0x2874b30cu, "+ Range To Volume")]
+	[DDLRegistration(0xdd598318u, "+ Range To Volume")]
 	public float RangeToVolume { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2874b30cu, "Require Grounded User", "Can the user accept this offer while jumping?")]
+	[DDLRegistration(0xd2194004u, "Require Grounded User", "Can the user accept this offer while jumping?")]
 	public bool RequireGroundedUser { get; set; } = false;
 
-	[DDLRegistration(0x2874b30cu)]
+	[DDLRegistration(0x5613ef51u)]
 	public string? OfferLocator { get; set; } = default;
 
-	[DDLRegistration(0x2874b30cu, "Offer Offset", "Offset position for the offer from the locator or actor position.")]
+	[DDLRegistration(0xda6f0f48u, "Offer Offset", "Offset position for the offer from the locator or actor position.")]
 	public DDLVector3? OfferOffset { get; set; } = default;
 
 	public new static ProximityOfferPrius Create(DDLObject ddl) => new(ddl);

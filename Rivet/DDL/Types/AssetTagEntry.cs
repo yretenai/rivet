@@ -19,10 +19,10 @@ public class AssetTagEntry : DDLObjectType, IDDLObjectType<AssetTagEntry> {
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0x88635d31u, description: "Paths to assets, relative to the asset source root.")]
+	[DDLRegistration(0x3bc44bbfu, description: "Paths to assets, relative to the asset source root.")]
 	public RivetAssetId Path { get; set; } = default;
 
-	[DDLRegistration(0x88635d31u, description: "An optional sub-tag (value).")]
+	[DDLRegistration(0x042494f5u, description: "An optional sub-tag (value).")]
 	public string? Value { get; set; } = default;
 
 	public static AssetTagEntry Create(DDLObject ddl) => new(ddl);

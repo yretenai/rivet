@@ -18,7 +18,7 @@ public class TriggerEffectDataBase : DDLObjectType, IDDLObjectType<TriggerEffect
 		Strength = ddl.GetValue<uint>(0x2cb85ca8u, Strength);
 	}
 
-	[DDLRegistration(0x05c8b4e9u, description: "0 = No resistance. 8 = Max resistance.")]
+	[DDLRegistration(0x2cb85ca8u, description: "0 = No resistance. 8 = Max resistance.")]
 	public uint Strength { get; set; } = 0x00000000;
 
 	public static TriggerEffectDataBase Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class MaterialGraphComment : DDLObjectType, IDDLObjectType<MaterialGraphC
 		Description = ddl.GetString(0xe03811fd) ?? Description;
 	}
 
-	[DDLRegistration(0x487606eau)]
+	[DDLRegistration(0xe46d5cf9u)]
 	public RivetAssetId CommentId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x487606eau)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x487606eau)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x487606eau)]
+	[DDLRegistration(0x954989eeu)]
 	public uint Width { get; set; } = 0x00000020;
 
-	[DDLRegistration(0x487606eau)]
+	[DDLRegistration(0xcb35ab68u)]
 	public uint Height { get; set; } = 0x00000020;
 
-	[DDLRegistration(0x487606eau)]
+	[DDLRegistration(0x959e3154u)]
 	public string? Comment { get; set; } = default;
 
-	[DDLRegistration(0x487606eau)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
 	public static MaterialGraphComment Create(DDLObject ddl) => new(ddl);

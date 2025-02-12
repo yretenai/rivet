@@ -20,13 +20,13 @@ public class AnimateNumberActionPrius : DDLObjectType, IDDLObjectType<AnimateNum
 		Steps = ddl.GetObjects<AnimatedNumberStep>(0x2d71c6b3u);
 	}
 
-	[DDLRegistration(0x8bd05006u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
-	[DDLRegistration(0x8bd05006u, "Force Integer Values", "If you're doing number comparisons, float can sometimes be off by a very slight decimal, enough to not count as 'equal' when comparing number.  This forces floats to be rounded to the nearest whole number when returned.")]
+	[DDLRegistration(0x4d058919u, "Force Integer Values", "If you're doing number comparisons, float can sometimes be off by a very slight decimal, enough to not count as 'equal' when comparing number.  This forces floats to be rounded to the nearest whole number when returned.")]
 	public bool ForceIntegerValues { get; set; } = false;
 
-	[DDLRegistration(0x8bd05006u)]
+	[DDLRegistration(0x2d71c6b3u)]
 	public List<AnimatedNumberStep?> Steps { get; set; } = [];
 
 	public static AnimateNumberActionPrius Create(DDLObject ddl) => new(ddl);

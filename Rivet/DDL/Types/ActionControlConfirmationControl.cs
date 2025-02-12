@@ -18,7 +18,7 @@ public class ActionControlConfirmationControl : DDLObjectType, IDDLObjectType<Ac
 		Control = ddl.GetEnum<x93d78ad3>(0xec314f73u, x93d78ad3Values.Lookup);
 	}
 
-	[DDLRegistration(0x4d5592abu)]
+	[DDLRegistration(0xec314f73u)]
 	public x93d78ad3 Control { get; set; } = x93d78ad3.ConfirmYes;
 
 	public static ActionControlConfirmationControl Create(DDLObject ddl) => new(ddl);

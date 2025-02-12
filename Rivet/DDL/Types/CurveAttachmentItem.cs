@@ -22,19 +22,19 @@ public class CurveAttachmentItem : DDLObjectType, IDDLObjectType<CurveAttachment
 		AttachPositionOnly = ddl.GetValue<bool>(0x167ea522u, AttachPositionOnly);
 	}
 
-	[DDLRegistration(0x1adc643bu, "Attached Actor")]
+	[DDLRegistration(0xdb67f5f9u, "Attached Actor")]
 	public RivetAssetId AttachedActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x1adc643bu, "Attach Curve T")]
+	[DDLRegistration(0x4ae88ba1u, "Attach Curve T")]
 	public float AttachCurveT { get; set; } = -1.00f;
 
-	[DDLRegistration(0x1adc643bu, "Attach to Closest Curve Position")]
+	[DDLRegistration(0xa2b7cbf9u, "Attach to Closest Curve Position")]
 	public bool AttachClosestCurvePos { get; set; } = false;
 
-	[DDLRegistration(0x1adc643bu, "Attach Relative")]
+	[DDLRegistration(0x710e1574u, "Attach Relative")]
 	public bool AttachRelative { get; set; } = false;
 
-	[DDLRegistration(0x1adc643bu, "No Rotation")]
+	[DDLRegistration(0x167ea522u, "No Rotation")]
 	public bool AttachPositionOnly { get; set; } = false;
 
 	public static CurveAttachmentItem Create(DDLObject ddl) => new(ddl);

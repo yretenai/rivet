@@ -18,7 +18,7 @@ public class SystemDebugMenuEngineItem : DDLObjectType, IDDLObjectType<SystemDeb
 		Active = ddl.GetValue<bool>(0x7566b265u, Active);
 	}
 
-	[DDLRegistration(0xc249cae7u)]
+	[DDLRegistration(0x7566b265u)]
 	public bool Active { get; set; } = false;
 
 	public static SystemDebugMenuEngineItem Create(DDLObject ddl) => new(ddl);

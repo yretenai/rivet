@@ -20,13 +20,13 @@ public class SkinItemPartList : DDLObjectType, IDDLObjectType<SkinItemPartList> 
 		SkipPartTypeList = ddl.GetEnums<x576d8e6a>(0x9aa89904u, x576d8e6aValues.Lookup);
 	}
 
-	[DDLRegistration(0x9f7b215bu, "Part Type", "Part type")]
+	[DDLRegistration(0x59a27916u, "Part Type", "Part type")]
 	public x576d8e6a PartType { get; set; } = x576d8e6a.TypeNone;
 
-	[DDLRegistration(0x9f7b215bu, "Part List", "List of parts (slots/layers) that this type occupies")]
+	[DDLRegistration(0x91b4d627u, "Part List", "List of parts (slots/layers) that this type occupies")]
 	public List<SkinItemPart?> PartList { get; set; } = [];
 
-	[DDLRegistration(0x9f7b215bu, "Skip Part Type List", "List of part types to skip when applying non-model based parts")]
+	[DDLRegistration(0x9aa89904u, "Skip Part Type List", "List of part types to skip when applying non-model based parts")]
 	public List<x576d8e6a> SkipPartTypeList { get; set; } = [];
 
 	public static SkinItemPartList Create(DDLObject ddl) => new(ddl);

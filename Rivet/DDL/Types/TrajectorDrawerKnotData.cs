@@ -27,34 +27,34 @@ public class TrajectorDrawerKnotData : DDLObjectType, IDDLObjectType<TrajectorDr
 		EndOffset = ddl.GetValue<float>(0x27fcfb73u, EndOffset);
 	}
 
-	[DDLRegistration(0x278c4bcbu, description: "The model to spawn at the specified interval along the model spline.")]
+	[DDLRegistration(0x4298ff49u, description: "The model to spawn at the specified interval along the model spline.")]
 	public RivetAssetId KnotModel { get; set; } = default;
 
-	[DDLRegistration(0x278c4bcbu, description: "Minimum line distance between two consecutive knots")]
+	[DDLRegistration(0x41da1c70u, description: "Minimum line distance between two consecutive knots")]
 	public float MinInterval { get; set; } = 0.10f;
 
-	[DDLRegistration(0x278c4bcbu, description: "Maximum line distance between two consecutive knots")]
+	[DDLRegistration(0x8dd7677fu, description: "Maximum line distance between two consecutive knots")]
 	public float MaxInterval { get; set; } = 0.14f;
 
-	[DDLRegistration(0x278c4bcbu, description: "Distance to fade out knots along spline")]
+	[DDLRegistration(0xa05039a0u, description: "Distance to fade out knots along spline")]
 	public float FadeDistance { get; set; } = 35.00f;
 
-	[DDLRegistration(0x278c4bcbu, description: "Minimum model scale of knot model around spline")]
+	[DDLRegistration(0x4e3293a6u, description: "Minimum model scale of knot model around spline")]
 	public float MinScaleXY { get; set; } = 2.25f;
 
-	[DDLRegistration(0x278c4bcbu, description: "Maximum model scale of knot model around spline")]
+	[DDLRegistration(0x4f3e0912u, description: "Maximum model scale of knot model around spline")]
 	public float MaxScaleXY { get; set; } = 3.50f;
 
-	[DDLRegistration(0x278c4bcbu, description: "Minimum model scale of knot model along spline")]
+	[DDLRegistration(0xd81e9397u, description: "Minimum model scale of knot model along spline")]
 	public float MinScaleZ { get; set; } = 1.25f;
 
-	[DDLRegistration(0x278c4bcbu, description: "Maximum model scale of knot model along spline")]
+	[DDLRegistration(0x0ff521d6u, description: "Maximum model scale of knot model along spline")]
 	public float MaxScaleZ { get; set; } = 2.25f;
 
-	[DDLRegistration(0x278c4bcbu, description: "Distance from the start of the spline before the first knot appears.")]
+	[DDLRegistration(0x2c176850u, description: "Distance from the start of the spline before the first knot appears.")]
 	public float StartOffset { get; set; } = 0.50f;
 
-	[DDLRegistration(0x278c4bcbu, description: "Distance from the end of the spline at which knots will stop appearing.")]
+	[DDLRegistration(0x27fcfb73u, description: "Distance from the end of the spline at which knots will stop appearing.")]
 	public float EndOffset { get; set; } = 0.00f;
 
 	public static TrajectorDrawerKnotData Create(DDLObject ddl) => new(ddl);

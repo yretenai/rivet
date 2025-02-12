@@ -21,16 +21,16 @@ public class FireFromLookData : DDLObjectType, IDDLObjectType<FireFromLookData> 
 		CollideWithTargetTypes = ddl.GetBitset<TargetType>(0x7a0385a0u, TargetTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x272b4bcfu, description: "Should additional collision tests be performed from the shot's effect position while it is being blended to the camera line?")]
+	[DDLRegistration(0xd28849ecu, description: "Should additional collision tests be performed from the shot's effect position while it is being blended to the camera line?")]
 	public bool PerformAdditionalTestsAlongEmitPath { get; set; } = false;
 
-	[DDLRegistration(0x272b4bcfu, description: "Models that aren't Actors will trigger collisions from the shot's effect position")]
+	[DDLRegistration(0x59a6bb1au, description: "Models that aren't Actors will trigger collisions from the shot's effect position")]
 	public bool CollideWithNonActors { get; set; } = false;
 
-	[DDLRegistration(0x272b4bcfu, description: "Actors without TargetData will trigger collisions from the shot's effect position")]
+	[DDLRegistration(0x50c59358u, description: "Actors without TargetData will trigger collisions from the shot's effect position")]
 	public bool CollideWithNonTargets { get; set; } = false;
 
-	[DDLRegistration(0x272b4bcfu, description: "Actors that match any of these target types will trigger collisions from the shot's effect position")]
+	[DDLRegistration(0x7a0385a0u, description: "Actors that match any of these target types will trigger collisions from the shot's effect position")]
 	public TargetType CollideWithTargetTypes { get; set; } = (TargetType) 0x00000000;
 
 	public static FireFromLookData Create(DDLObject ddl) => new(ddl);

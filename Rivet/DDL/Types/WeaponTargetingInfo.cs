@@ -20,13 +20,13 @@ public class WeaponTargetingInfo : DDLObjectType, IDDLObjectType<WeaponTargeting
 		UsesAutoTarget = ddl.GetValue<bool>(0x5389a8e0u, UsesAutoTarget);
 	}
 
-	[DDLRegistration(0x9a03997fu, "Targeting Range")]
+	[DDLRegistration(0x1de24741u, "Targeting Range")]
 	public float TargetingRange { get; set; } = 40.00f;
 
-	[DDLRegistration(0x9a03997fu, "Uses Aim Assist")]
+	[DDLRegistration(0x03539e8fu, "Uses Aim Assist")]
 	public bool UsesAimAssist { get; set; } = true;
 
-	[DDLRegistration(0x9a03997fu, "Uses Auto Target")]
+	[DDLRegistration(0x5389a8e0u, "Uses Auto Target")]
 	public bool UsesAutoTarget { get; set; } = true;
 
 	public static WeaponTargetingInfo Create(DDLObject ddl) => new(ddl);

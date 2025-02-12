@@ -22,19 +22,19 @@ public class OverrideHeroShipCamSettings : DDLObjectType, IDDLObjectType<Overrid
 		CamDefaultBasePitchOffset = ddl.GetValue<float>(0x833d80bcu, CamDefaultBasePitchOffset);
 	}
 
-	[DDLRegistration(0x878c6a1au, description: "Default FOV for the camera in free-flight mode.")]
+	[DDLRegistration(0x73ed030fu, description: "Default FOV for the camera in free-flight mode.")]
 	public float CamDefaultFOV { get; set; } = 80.39f;
 
-	[DDLRegistration(0x878c6a1au, description: "Default camera height from the ship in free-flight mode.")]
+	[DDLRegistration(0x9eca8234u, description: "Default camera height from the ship in free-flight mode.")]
 	public float CamDefaultFollowHeight { get; set; } = 6.25f;
 
-	[DDLRegistration(0x878c6a1au, description: "Default follow camera distance for the ship in free-flight mode.")]
+	[DDLRegistration(0xb1a2c459u, description: "Default follow camera distance for the ship in free-flight mode.")]
 	public float CamDefaultFollowDist { get; set; } = -18.50f;
 
-	[DDLRegistration(0x878c6a1au, description: "Default target offset (what the camera is looking at, aka relative-y offset from the ship).")]
+	[DDLRegistration(0x893a1e0fu, description: "Default target offset (what the camera is looking at, aka relative-y offset from the ship).")]
 	public float CamDefaultTargetRelYOffset { get; set; } = -1.00f;
 
-	[DDLRegistration(0x878c6a1au, description: "Default base offset to the pitch (in degrees).")]
+	[DDLRegistration(0x833d80bcu, description: "Default base offset to the pitch (in degrees).")]
 	public float CamDefaultBasePitchOffset { get; set; } = 4.05f;
 
 	public static OverrideHeroShipCamSettings Create(DDLObject ddl) => new(ddl);

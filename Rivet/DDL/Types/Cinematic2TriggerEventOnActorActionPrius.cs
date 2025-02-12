@@ -19,10 +19,10 @@ public class Cinematic2TriggerEventOnActorActionPrius : DDLObjectType, IDDLObjec
 		TriggerEvent = ddl.GetObject<EventBase>(0x55aed815u);
 	}
 
-	[DDLRegistration(0x634cb9d3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Cinematic;
 
-	[DDLRegistration(0x634cb9d3u)]
+	[DDLRegistration(0x55aed815u)]
 	public EventBase? TriggerEvent { get; set; } = default;
 
 	public static Cinematic2TriggerEventOnActorActionPrius Create(DDLObject ddl) => new(ddl);

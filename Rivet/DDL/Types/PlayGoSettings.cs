@@ -19,10 +19,10 @@ public class PlayGoSettings : DDLObjectType, IDDLObjectType<PlayGoSettings> {
 		SKUChunkIndexBase = ddl.GetValue<int>(0x98c97db1u, SKUChunkIndexBase);
 	}
 
-	[DDLRegistration(0x4df05bc4u)]
+	[DDLRegistration(0x3d179983u)]
 	public int LocalizedAudioChunkIndexBase { get; set; } = 0;
 
-	[DDLRegistration(0x4df05bc4u)]
+	[DDLRegistration(0x98c97db1u)]
 	public int SKUChunkIndexBase { get; set; } = 0;
 
 	public static PlayGoSettings Create(DDLObject ddl) => new(ddl);

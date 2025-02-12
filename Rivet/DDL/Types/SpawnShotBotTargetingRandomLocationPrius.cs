@@ -18,7 +18,7 @@ public class SpawnShotBotTargetingRandomLocationPrius : SpawnShotBotTargetingPri
 		LocationWeightData = ddl.GetObjects<TargetingLocationWeightData>(0x48766868u);
 	}
 
-	[DDLRegistration(0xeb0ec715u, description: "These only matter if you ")]
+	[DDLRegistration(0x48766868u, description: "These only matter if you ")]
 	public List<TargetingLocationWeightData?> LocationWeightData { get; set; } = [];
 
 	public new static SpawnShotBotTargetingRandomLocationPrius Create(DDLObject ddl) => new(ddl);

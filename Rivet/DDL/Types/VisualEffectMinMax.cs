@@ -19,10 +19,10 @@ public class VisualEffectMinMax : DDLObjectType, IDDLObjectType<VisualEffectMinM
 		Min = ddl.GetValue<float>(0x8b2e3419u, Min);
 	}
 
-	[DDLRegistration(0x6e76bbaau, "Maximum")]
+	[DDLRegistration(0xb7230b40u, "Maximum")]
 	public float Max { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6e76bbaau, "Minimum")]
+	[DDLRegistration(0x8b2e3419u, "Minimum")]
 	public float Min { get; set; } = 0.00f;
 
 	public static VisualEffectMinMax Create(DDLObject ddl) => new(ddl);

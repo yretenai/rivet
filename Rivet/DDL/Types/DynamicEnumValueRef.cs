@@ -18,7 +18,7 @@ public class DynamicEnumValueRef : DDLObjectType, IDDLObjectType<DynamicEnumValu
 		Dynamic_Enum_Value_Type = ddl.GetObject<DynamicEnumValueType>(0xbfca7e40u);
 	}
 
-	[DDLRegistration(0x4ca981c4u)]
+	[DDLRegistration(0xbfca7e40u)]
 	public DynamicEnumValueType? Dynamic_Enum_Value_Type { get; set; } = default;
 
 	public static DynamicEnumValueRef Create(DDLObject ddl) => new(ddl);

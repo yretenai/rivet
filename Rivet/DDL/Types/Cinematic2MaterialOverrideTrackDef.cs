@@ -27,34 +27,34 @@ public class Cinematic2MaterialOverrideTrackDef : DDLObjectType, IDDLObjectType<
 		PostCompositeMaterialActions = ddl.GetDictionary<RivetAssetId, Cinematic2PostCompositeMaterialActionDef>(0x874a8f12, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PostCompositeMaterialActionDef>(mapId));
 	}
 
-	[DDLRegistration(0x44aea858u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x44aea858u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x44aea858u, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0x44aea858u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0x44aea858u, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0x44aea858u)]
+	[DDLRegistration(0xda8760bfu)]
 	public Dictionary<RivetAssetId, Cinematic2MaterialOverrideConstTrackDef?> ConstOverrideTracks { get; set; } = [];
 
-	[DDLRegistration(0x44aea858u)]
+	[DDLRegistration(0xd5e966f9u)]
 	public Dictionary<RivetAssetId, Cinematic2MaterialOverrideTextureActionDef?> TextureOverrideActions { get; set; } = [];
 
-	[DDLRegistration(0x44aea858u)]
+	[DDLRegistration(0xd3e6413cu)]
 	public Dictionary<RivetAssetId, Cinematic2MaterialOverrideMaterialActionDef?> MaterialOverrideActions { get; set; } = [];
 
-	[DDLRegistration(0x44aea858u)]
+	[DDLRegistration(0x2ebd96a8u)]
 	public Dictionary<RivetAssetId, Cinematic2PreCompositeMaterialActionDef?> PreCompositeMaterialActions { get; set; } = [];
 
-	[DDLRegistration(0x44aea858u)]
+	[DDLRegistration(0x874a8f12u)]
 	public Dictionary<RivetAssetId, Cinematic2PostCompositeMaterialActionDef?> PostCompositeMaterialActions { get; set; } = [];
 
 	public static Cinematic2MaterialOverrideTrackDef Create(DDLObject ddl) => new(ddl);

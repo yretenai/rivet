@@ -25,28 +25,28 @@ public class RegionDef : DDLObjectType, IDDLObjectType<RegionDef> {
 		GameData = ddl.GetDictionary<RivetAssetId, DDLStructInst>(0xa1f1eb12, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DDLStructInst>(mapId));
 	}
 
-	[DDLRegistration(0x4813fce8u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x4813fce8u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x4813fce8u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xcafc543d Type { get; set; } = xcafc543d.Global;
 
-	[DDLRegistration(0x4813fce8u, "Install Group", "-1 means use parent value")]
+	[DDLRegistration(0xfa716c43u, "Install Group", "-1 means use parent value")]
 	public int InstallGroup { get; set; } = -1;
 
-	[DDLRegistration(0x4813fce8u)]
+	[DDLRegistration(0x2e74622cu)]
 	public RivetAssetId ParentAsset { get; set; } = default;
 
-	[DDLRegistration(0x4813fce8u)]
+	[DDLRegistration(0xfa2f5e4cu)]
 	public Dictionary<RivetAssetId, RegionBookmark?> Bookmarks { get; set; } = [];
 
-	[DDLRegistration(0x4813fce8u)]
+	[DDLRegistration(0x90972571u)]
 	public string? Aux { get; set; } = default;
 
-	[DDLRegistration(0x4813fce8u)]
+	[DDLRegistration(0xa1f1eb12u)]
 	public Dictionary<RivetAssetId, DDLStructInst?> GameData { get; set; } = [];
 
 	public static RegionDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ActivityReward : DDLObjectType, IDDLObjectType<ActivityReward> {
 		RewardImagePath = ddl.GetValue<RivetAssetId>(0xa2b13705u, RewardImagePath);
 	}
 
-	[DDLRegistration(0x8f1f5ceeu, description: "Localized text can be at most 128 characters.")]
+	[DDLRegistration(0x3b1e07feu, description: "Localized text can be at most 128 characters.")]
 	public string? RewardTag { get; set; } = default;
 
-	[DDLRegistration(0x8f1f5ceeu, description: "Path to an image of the reward of size 512 x 512 PNG either 32-bit or 24-bit non-interlaced.")]
+	[DDLRegistration(0xa2b13705u, description: "Path to an image of the reward of size 512 x 512 PNG either 32-bit or 24-bit non-interlaced.")]
 	public RivetAssetId RewardImagePath { get; set; } = default;
 
 	public static ActivityReward Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class AnimDriverSequenceNodeDef : DDLObjectType, IDDLObjectType<AnimDrive
 		Connections = ddl.GetObjects<AnimDriverConnectionDef>(0x322aadceu);
 	}
 
-	[DDLRegistration(0x8da8290cu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x8da8290cu)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0x8da8290cu)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8da8290cu)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8da8290cu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xe5615bda Type { get; set; } = xe5615bda.SequenceNodeTypeDefault;
 
-	[DDLRegistration(0x8da8290cu)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8da8290cu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8da8290cu)]
+	[DDLRegistration(0xc1c9e722u)]
 	public float Overlap { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8da8290cu)]
+	[DDLRegistration(0x322aadceu)]
 	public List<AnimDriverConnectionDef?> Connections { get; set; } = [];
 
 	public static AnimDriverSequenceNodeDef Create(DDLObject ddl) => new(ddl);

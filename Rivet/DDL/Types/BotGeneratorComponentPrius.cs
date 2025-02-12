@@ -18,7 +18,7 @@ public class BotGeneratorComponentPrius : SpawnerObjectPrius, IDDLObjectType<Bot
 		SetBotDataFromSpawner = ddl.GetValue<bool>(0x2c40fa88u, SetBotDataFromSpawner);
 	}
 
-	[DDLRegistration(0xb26bda52u)]
+	[DDLRegistration(0x2c40fa88u)]
 	public bool SetBotDataFromSpawner { get; set; } = true;
 
 	public new static BotGeneratorComponentPrius Create(DDLObject ddl) => new(ddl);

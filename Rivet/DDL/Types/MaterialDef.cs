@@ -52,109 +52,109 @@ public class MaterialDef : DDLObjectType, IDDLObjectType<MaterialDef> {
 		Textures = ddl.GetObjects<ShaderSampler>(0x5f860466u);
 	}
 
-	[DDLRegistration(0x3c1c9f05u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x3c1c9f05u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x3c1c9f05u, "Parent Asset")]
+	[DDLRegistration(0xa71e2658u, "Parent Asset")]
 	public RivetAssetId HierarchicalAssetParent { get; set; } = default;
 
-	[DDLRegistration(0x3c1c9f05u, "Approved MaterialGraph", "An approved material graph to use as this material's template.\nIf None, then an unapproved material graph can be assigned directly via the Template Path property\nor a built-in material type can be chosen.")]
+	[DDLRegistration(0xfffdf598u, "Approved MaterialGraph", "An approved material graph to use as this material's template.\nIf None, then an unapproved material graph can be assigned directly via the Template Path property\nor a built-in material type can be chosen.")]
 	public RivetAssetId ApprovedMaterialGraph { get; set; } = default;
 
-	[DDLRegistration(0x3c1c9f05u, "Template Path")]
+	[DDLRegistration(0x8be88c69u, "Template Path")]
 	public RivetAssetId TemplatePath { get; set; } = "required/materials/basic_normal_gloss.materialgraph";
 
-	[DDLRegistration(0x3c1c9f05u, "Overlap Type", "Geometry and decals can be used to alter all of the underlying surface propeties or color only")]
+	[DDLRegistration(0x5d6518bau, "Overlap Type", "Geometry and decals can be used to alter all of the underlying surface propeties or color only")]
 	public OverlapType OverlapType { get; set; } = OverlapType.Full;
 
-	[DDLRegistration(0x3c1c9f05u, "Velocity + Depth Gen", "Determines whether to generate velocity on opaque geometry only, or also on alpha blended geometry")]
+	[DDLRegistration(0xea782a54u, "Velocity + Depth Gen", "Determines whether to generate velocity on opaque geometry only, or also on alpha blended geometry")]
 	public MotionBlur MotionBlur { get; set; } = MotionBlur.Allow;
 
-	[DDLRegistration(0x3c1c9f05u, "A/V Material", "Audio-visual material response for e.g. FX. Returned from collisions and forwarded by events into Conduits.")]
+	[DDLRegistration(0xe73ba957u, "A/V Material", "Audio-visual material response for e.g. FX. Returned from collisions and forwarded by events into Conduits.")]
 	public string? AVMaterial { get; set; } = default;
 
-	[DDLRegistration(0x3c1c9f05u, "Audio Material", "Material for audio propagation. If unset, inherits A/V material")]
+	[DDLRegistration(0xf14e1df7u, "Audio Material", "Material for audio propagation. If unset, inherits A/V material")]
 	public string? AudioMaterial { get; set; } = default;
 
-	[DDLRegistration(0x3c1c9f05u, "Built-In Type")]
+	[DDLRegistration(0xe6db58e0u, "Built-In Type")]
 	public x92dd42a2 BuiltIn { get; set; } = x92dd42a2.None;
 
-	[DDLRegistration(0x3c1c9f05u, "SS Reflection")]
+	[DDLRegistration(0x96cb64dau, "SS Reflection")]
 	public x3afd25fe SSReflection { get; set; } = x3afd25fe.Disable;
 
-	[DDLRegistration(0x3c1c9f05u, "Lod Distance", "The distance at which the material transitions from Lod 0 to Lod 1. If set to 0 (the default) it will use the Lod Distance value from the Material Graph asset. The value can be overridden by the Material Lod Dist property on the Model asset.")]
+	[DDLRegistration(0x458a5600u, "Lod Distance", "The distance at which the material transitions from Lod 0 to Lod 1. If set to 0 (the default) it will use the Lod Distance value from the Material Graph asset. The value can be overridden by the Material Lod Dist property on the Model asset.")]
 	public float LodDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3c1c9f05u, description: "Both sides of geometry with this material will be drawn (no back-face culling)")]
+	[DDLRegistration(0x3e799799u, description: "Both sides of geometry with this material will be drawn (no back-face culling)")]
 	public bool DoubleSided { get; set; } = false;
 
-	[DDLRegistration(0x3c1c9f05u, description: "Geometry with this material is drawn but does not cast a shadow")]
+	[DDLRegistration(0x40b0e1cau, description: "Geometry with this material is drawn but does not cast a shadow")]
 	public bool SkipShadowCast { get; set; } = false;
 
-	[DDLRegistration(0x3c1c9f05u, description: "Geometry with this material is not drawn, but still casts a shadow")]
+	[DDLRegistration(0xcc51dbbfu, description: "Geometry with this material is not drawn, but still casts a shadow")]
 	public bool ShadowCastOnly { get; set; } = false;
 
-	[DDLRegistration(0x3c1c9f05u, description: "Geometry with this material casts shadow as if opaque/alpha tested.")]
+	[DDLRegistration(0x31b28fc3u, description: "Geometry with this material casts shadow as if opaque/alpha tested.")]
 	public bool CastOpaqueShadow { get; set; } = true;
 
-	[DDLRegistration(0x3c1c9f05u, description: "Geometry with this material is ignored for embedded testing.")]
+	[DDLRegistration(0xe914d40au, description: "Geometry with this material is ignored for embedded testing.")]
 	public bool SkipEmbeddedTest { get; set; } = false;
 
-	[DDLRegistration(0x3c1c9f05u, description: "Geometry with this material is not rendered during lightgrid or envprobe capture.")]
+	[DDLRegistration(0x64ede99au, description: "Geometry with this material is not rendered during lightgrid or envprobe capture.")]
 	public bool SkipLightCapture { get; set; } = false;
 
-	[DDLRegistration(0x3c1c9f05u, description: "Geometry with this material is excluded from the ray traced shadows.")]
+	[DDLRegistration(0xe6ce263eu, description: "Geometry with this material is excluded from the ray traced shadows.")]
 	public bool SkipRayTracedShadows { get; set; } = false;
 
-	[DDLRegistration(0x3c1c9f05u, "Use AO on Decals", "Allows forward-lit decals to use ambient occlusion")]
+	[DDLRegistration(0x99ce8a7cu, "Use AO on Decals", "Allows forward-lit decals to use ambient occlusion")]
 	public bool UseAoOnDecals { get; set; } = false;
 
-	[DDLRegistration(0x3c1c9f05u, "Has animated texture", "Used to mark materials that interfere with upscaling technologies (mostly materials with animated textures")]
+	[DDLRegistration(0xc2e7b7d6u, "Has animated texture", "Used to mark materials that interfere with upscaling technologies (mostly materials with animated textures")]
 	public bool HasAnimatedTexture { get; set; } = false;
 
-	[DDLRegistration(0x3c1c9f05u, "Lens-Flare Occlusion", "Determines whether this material will occlude lens flares or not.")]
+	[DDLRegistration(0x677f2340u, "Lens-Flare Occlusion", "Determines whether this material will occlude lens flares or not.")]
 	public bool LensFlareOcclusion { get; set; } = true;
 
-	[DDLRegistration(0x3c1c9f05u, "Sort Triangles", "Sort Triangles back to front when alpha blending is enabled")]
+	[DDLRegistration(0x38ec511cu, "Sort Triangles", "Sort Triangles back to front when alpha blending is enabled")]
 	public bool SortTriangles { get; set; } = false;
 
-	[DDLRegistration(0x3c1c9f05u, "HQ Impostor", "If checked, the material will not be baked into the impostors texture")]
+	[DDLRegistration(0x12ebb90eu, "HQ Impostor", "If checked, the material will not be baked into the impostors texture")]
 	public bool SkipImpostorPojection { get; set; } = false;
 
-	[DDLRegistration(0x3c1c9f05u, "Voxelization Order", "Adjusts order in voxelization which may result in this material being hidden by or covering other materials in the voxel. Larger numbers draw on top of smaller values.")]
+	[DDLRegistration(0x1e9fe88bu, "Voxelization Order", "Adjusts order in voxelization which may result in this material being hidden by or covering other materials in the voxel. Larger numbers draw on top of smaller values.")]
 	public sbyte VoxelizationOrderBias { get; set; } = 0;
 
-	[DDLRegistration(0x3c1c9f05u, "World Map Color")]
+	[DDLRegistration(0x3498ff8au, "World Map Color")]
 	public DDLVector3? WorldMapColor { get; set; } = default;
 
-	[DDLRegistration(0x3c1c9f05u, "Model Slot Exclusion", "Prevent this material from getting applied to the following list of model slots; this is in addition to the exclusion list in the materialgraph")]
+	[DDLRegistration(0x902ee427u, "Model Slot Exclusion", "Prevent this material from getting applied to the following list of model slots; this is in addition to the exclusion list in the materialgraph")]
 	public List<string?> ModelSlotExclusion { get; set; } = [];
 
-	[DDLRegistration(0x3c1c9f05u, "Preview Model")]
+	[DDLRegistration(0x5e53ae29u, "Preview Model")]
 	public PreviewModelContainer? PreviewModel { get; set; } = default;
 
-	[DDLRegistration(0x3c1c9f05u, description: "Notes about this material. These will be displayed in the Vault's General Info panel to aid material selection.")]
+	[DDLRegistration(0x18486a4du, description: "Notes about this material. These will be displayed in the Vault's General Info panel to aid material selection.")]
 	public MaterialNotes? Notes { get; set; } = default;
 
-	[DDLRegistration(0x3c1c9f05u, "Alpha Properties")]
+	[DDLRegistration(0xa731268eu, "Alpha Properties")]
 	public MaterialAlpha? AlphaProperties { get; set; } = default;
 
-	[DDLRegistration(0x3c1c9f05u, "Fur Properies")]
+	[DDLRegistration(0xafa8e623u, "Fur Properies")]
 	public FurProperties? FurProperties { get; set; } = default;
 
-	[DDLRegistration(0x3c1c9f05u, "Water Properies")]
+	[DDLRegistration(0x1f51d4dau, "Water Properies")]
 	public WaterProperties? WaterProperties { get; set; } = default;
 
-	[DDLRegistration(0x3c1c9f05u, description: "Material Variations Overrides")]
+	[DDLRegistration(0x80850167u, description: "Material Variations Overrides")]
 	public List<ShaderConstant?> Variations { get; set; } = [];
 
-	[DDLRegistration(0x3c1c9f05u, description: "Material Constants Overrides")]
+	[DDLRegistration(0x11306034u, description: "Material Constants Overrides")]
 	public List<ShaderConstant?> Constants { get; set; } = [];
 
-	[DDLRegistration(0x3c1c9f05u, description: "Material Textures Overrides")]
+	[DDLRegistration(0x5f860466u, description: "Material Textures Overrides")]
 	public List<ShaderSampler?> Textures { get; set; } = [];
 
 	public static MaterialDef Create(DDLObject ddl) => new(ddl);

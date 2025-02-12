@@ -21,16 +21,16 @@ public class TextureBuildConfig : ConfigBase, IDDLObjectType<TextureBuildConfig>
 		LegacySizeCap = ddl.GetValue<uint>(0x59ed4d21u, LegacySizeCap);
 	}
 
-	[DDLRegistration(0x52c18b2cu, "Prefer DXT1 Over BC7", "If true, medium quality textures will use DXT1 if they can. If false, they will use BC7")]
+	[DDLRegistration(0x42368acau, "Prefer DXT1 Over BC7", "If true, medium quality textures will use DXT1 if they can. If false, they will use BC7")]
 	public bool PreferDXT1 { get; set; } = true;
 
-	[DDLRegistration(0x52c18b2cu, "Size Cap", "The global default maximum size in any dimension")]
+	[DDLRegistration(0x8f58cf7eu, "Size Cap", "The global default maximum size in any dimension")]
 	public uint SizeCap { get; set; } = 0x00000800;
 
-	[DDLRegistration(0x52c18b2cu, "Legacy Prefer DXT1 Over BC7", "Older platforms (PS4): If true, medium quality textures will use DXT1 if they can. If false, they will use BC7")]
+	[DDLRegistration(0x97685e5bu, "Legacy Prefer DXT1 Over BC7", "Older platforms (PS4): If true, medium quality textures will use DXT1 if they can. If false, they will use BC7")]
 	public bool LegacyPreferDXT1 { get; set; } = true;
 
-	[DDLRegistration(0x52c18b2cu, "Legacy Size Cap", "Older platforms (PS4): The global default maximum size in any dimension")]
+	[DDLRegistration(0x59ed4d21u, "Legacy Size Cap", "Older platforms (PS4): The global default maximum size in any dimension")]
 	public uint LegacySizeCap { get; set; } = 0x00000800;
 
 	public new static TextureBuildConfig Create(DDLObject ddl) => new(ddl);

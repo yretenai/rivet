@@ -19,10 +19,10 @@ public class SoundMultiEmitterComponentPrius : DDLObjectType, IDDLObjectType<Sou
 		Positions = ddl.GetObjects<SoundPosition>(0x54627a70u);
 	}
 
-	[DDLRegistration(0xf97b160au)]
+	[DDLRegistration(0xcebb3bc3u)]
 	public WwiseEvent? WwiseEvent { get; set; } = default;
 
-	[DDLRegistration(0xf97b160au)]
+	[DDLRegistration(0x54627a70u)]
 	public List<SoundPosition?> Positions { get; set; } = [];
 
 	public static SoundMultiEmitterComponentPrius Create(DDLObject ddl) => new(ddl);

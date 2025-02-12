@@ -30,43 +30,43 @@ public class PlatformMovingPrius : DDLObjectType, IDDLObjectType<PlatformMovingP
 		ApproachStopTime = ddl.GetValue<float>(0x37ea9fd1u, ApproachStopTime);
 	}
 
-	[DDLRegistration(0x7d77b3a6u, "Initial Position")]
+	[DDLRegistration(0x55c7f1e1u, "Initial Position")]
 	public xb8f8f0e5 InitPosition { get; set; } = xb8f8f0e5.Start;
 
-	[DDLRegistration(0x7d77b3a6u, "Orientation Style")]
+	[DDLRegistration(0xbb5c948du, "Orientation Style")]
 	public x3cdeb00d Orientation { get; set; } = x3cdeb00d.Placed;
 
-	[DDLRegistration(0x7d77b3a6u, "Stop List")]
+	[DDLRegistration(0x6015d528u, "Stop List")]
 	public List<PlatformMovingStopItem?> StopList { get; set; } = [];
 
-	[DDLRegistration(0x7d77b3a6u, "Motion Path")]
+	[DDLRegistration(0xfcc9ee28u, "Motion Path")]
 	public RivetAssetId MotionPath { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x7d77b3a6u, "Acceleration", "Rate of change in current speed when trying to faster")]
+	[DDLRegistration(0x5d9ea52cu, "Acceleration", "Rate of change in current speed when trying to faster")]
 	public float SpeedAccel { get; set; } = 3.00f;
 
-	[DDLRegistration(0x7d77b3a6u, "Deceleration", "Rate of change in current speed when trying to go slower")]
+	[DDLRegistration(0xb0157580u, "Deceleration", "Rate of change in current speed when trying to go slower")]
 	public float SpeedDecel { get; set; } = 3.00f;
 
-	[DDLRegistration(0x7d77b3a6u, "Max Speed", "Maximum speed platform can move")]
+	[DDLRegistration(0xb6419fbau, "Max Speed", "Maximum speed platform can move")]
 	public float SpeedMax { get; set; } = 4.00f;
 
-	[DDLRegistration(0x7d77b3a6u, "Actor to look at")]
+	[DDLRegistration(0xa37bf657u, "Actor to look at")]
 	public RivetAssetId LookAtActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x7d77b3a6u, "Allow calls when moving?", "Allow the platform to be called to a stop (via the stop's call volume) even when it is moving. If false, call will only work when idle (at a stop).")]
+	[DDLRegistration(0x29a60a2cu, "Allow calls when moving?", "Allow the platform to be called to a stop (via the stop's call volume) even when it is moving. If false, call will only work when idle (at a stop).")]
 	public bool AllowCallWhenMoving { get; set; } = false;
 
-	[DDLRegistration(0x7d77b3a6u, "Lock heroes?", "Lock heroes when they are riding this platform.")]
+	[DDLRegistration(0x5c51cd2eu, "Lock heroes?", "Lock heroes when they are riding this platform.")]
 	public bool LockRiders { get; set; } = false;
 
-	[DDLRegistration(0x7d77b3a6u, "(Opt) Offer Locator", "If a stop is set to use interact offer, we'll use this locator as the position (plus any offset) for the offer. Otherwise it will use the actor position. ")]
+	[DDLRegistration(0x5613ef51u, "(Opt) Offer Locator", "If a stop is set to use interact offer, we'll use this locator as the position (plus any offset) for the offer. Otherwise it will use the actor position. ")]
 	public string? OfferLocator { get; set; } = default;
 
-	[DDLRegistration(0x7d77b3a6u, "(Opt) Offer Offset", "If a stop is set to use interact offer, we'll use this offset for the offer position (off of the locator given above or the actor position). ")]
+	[DDLRegistration(0xda6f0f48u, "(Opt) Offer Offset", "If a stop is set to use interact offer, we'll use this offset for the offer position (off of the locator given above or the actor position). ")]
 	public DDLVector3? OfferOffset { get; set; } = default;
 
-	[DDLRegistration(0x7d77b3a6u, "Approach Stop Time", "Time before a stop to consider the start of the approach. We will send the 'PlatformApproachStopEvent' when we are this time away from stopping at a stop.")]
+	[DDLRegistration(0x37ea9fd1u, "Approach Stop Time", "Time before a stop to consider the start of the approach. We will send the 'PlatformApproachStopEvent' when we are this time away from stopping at a stop.")]
 	public float ApproachStopTime { get; set; } = 2.50f;
 
 	public static PlatformMovingPrius Create(DDLObject ddl) => new(ddl);

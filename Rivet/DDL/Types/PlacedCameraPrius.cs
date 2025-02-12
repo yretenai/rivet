@@ -18,7 +18,7 @@ public class PlacedCameraPrius : CameraPrius, IDDLObjectType<PlacedCameraPrius> 
 		ActivationVolume = ddl.GetValue<RivetAssetId>(0x9b85fce4u, ActivationVolume);
 	}
 
-	[DDLRegistration(0x907e71b3u, "Activation Volume (optional)")]
+	[DDLRegistration(0x9b85fce4u, "Activation Volume (optional)")]
 	public RivetAssetId ActivationVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static PlacedCameraPrius Create(DDLObject ddl) => new(ddl);

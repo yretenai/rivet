@@ -18,7 +18,7 @@ public class SkinItemConduitOverride : DDLObjectType, IDDLObjectType<SkinItemCon
 		Conduit = ddl.GetObject<AssetReferenceDef>(0xfc5131b9u);
 	}
 
-	[DDLRegistration(0x3b292579u, "Conduit Override", "Conduit override file")]
+	[DDLRegistration(0xfc5131b9u, "Conduit Override", "Conduit override file")]
 	public AssetReferenceDef? Conduit { get; set; } = default;
 
 	public static SkinItemConduitOverride Create(DDLObject ddl) => new(ddl);

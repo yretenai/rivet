@@ -18,7 +18,7 @@ public class ActivityClueConditionOutroSpeedNatural : DDLObjectType, IDDLObjectT
 		Condition = ddl.GetObject<ActivityClueConditionBase>(0x3f2b174fu);
 	}
 
-	[DDLRegistration(0x12238f07u, "Condition", "Besides the request for natural speed, this Speed condition will behave just like the one you have here")]
+	[DDLRegistration(0x3f2b174fu, "Condition", "Besides the request for natural speed, this Speed condition will behave just like the one you have here")]
 	public ActivityClueConditionBase? Condition { get; set; } = default;
 
 	public static ActivityClueConditionOutroSpeedNatural Create(DDLObject ddl) => new(ddl);

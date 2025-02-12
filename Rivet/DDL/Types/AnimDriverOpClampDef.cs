@@ -26,31 +26,31 @@ public class AnimDriverOpClampDef : DDLObjectType, IDDLObjectType<AnimDriverOpCl
 		Max = ddl.GetValue<float>(0xb7230b40u, Max);
 	}
 
-	[DDLRegistration(0xef1591c9u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xef1591c9u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0xef1591c9u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xef1591c9u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0xef1591c9u)]
+	[DDLRegistration(0x8262958fu)]
 	public x9f234d85 OpType { get; set; } = x9f234d85.AnimDriverOpTypeMultiplyAdd;
 
-	[DDLRegistration(0xef1591c9u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0xef1591c9u)]
+	[DDLRegistration(0x322aadceu)]
 	public List<AnimDriverOpConnection?> Connections { get; set; } = [];
 
-	[DDLRegistration(0xef1591c9u)]
+	[DDLRegistration(0x8b2e3419u)]
 	public float Min { get; set; } = 0.00f;
 
-	[DDLRegistration(0xef1591c9u)]
+	[DDLRegistration(0xb7230b40u)]
 	public float Max { get; set; } = 0.00f;
 
 	public static AnimDriverOpClampDef Create(DDLObject ddl) => new(ddl);

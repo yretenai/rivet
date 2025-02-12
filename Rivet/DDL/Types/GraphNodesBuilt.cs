@@ -21,16 +21,16 @@ public class GraphNodesBuilt : DDLObjectType, IDDLObjectType<GraphNodesBuilt> {
 		MaxDepth = ddl.GetValue<uint>(0xe33ddbfeu, MaxDepth);
 	}
 
-	[DDLRegistration(0xbffaea85u)]
+	[DDLRegistration(0xe277891au)]
 	public string? GraphName { get; set; } = default;
 
-	[DDLRegistration(0xbffaea85u)]
+	[DDLRegistration(0x046ec93du)]
 	public Dictionary<ulong, BuiltNodeInfo?> Nodes { get; set; } = [];
 
-	[DDLRegistration(0xbffaea85u)]
+	[DDLRegistration(0x070d0ceau)]
 	public List<ulong> SortedNodes { get; set; } = [];
 
-	[DDLRegistration(0xbffaea85u)]
+	[DDLRegistration(0xe33ddbfeu)]
 	public uint MaxDepth { get; set; } = 0x00000000;
 
 	public static GraphNodesBuilt Create(DDLObject ddl) => new(ddl);

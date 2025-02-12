@@ -27,34 +27,34 @@ public class Cinematic2CameraDofTrackDef : DDLObjectType, IDDLObjectType<Cinemat
 		Follow = ddl.GetObject<Cinematic2CameraDofFollowTrackDef>(0x564c0a17u);
 	}
 
-	[DDLRegistration(0x6b818adeu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6b818adeu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x6b818adeu, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0x6b818adeu, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0x6b818adeu, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0x6b818adeu)]
+	[DDLRegistration(0xd6c519d5u)]
 	public Cinematic2CameraDofFocusDistanceCurveDef? NearFocusDistance { get; set; } = default;
 
-	[DDLRegistration(0x6b818adeu)]
+	[DDLRegistration(0x0cfd43b9u)]
 	public Cinematic2CameraDofBlurStrengthDef? NearBlurStrength { get; set; } = default;
 
-	[DDLRegistration(0x6b818adeu)]
+	[DDLRegistration(0xe0b76651u)]
 	public Cinematic2CameraDofFocusDistanceCurveDef? FarFocusDistance { get; set; } = default;
 
-	[DDLRegistration(0x6b818adeu)]
+	[DDLRegistration(0x7dc83113u)]
 	public Cinematic2CameraDofBlurStrengthDef? FarBlurStrength { get; set; } = default;
 
-	[DDLRegistration(0x6b818adeu)]
+	[DDLRegistration(0x564c0a17u)]
 	public Cinematic2CameraDofFollowTrackDef? Follow { get; set; } = default;
 
 	public static Cinematic2CameraDofTrackDef Create(DDLObject ddl) => new(ddl);

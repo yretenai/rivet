@@ -27,34 +27,34 @@ public class VaultToC : DDLObjectType, IDDLObjectType<VaultToC> {
 		Err = ddl.GetValue<uint>(0x380af274u, Err);
 	}
 
-	[DDLRegistration(0x5da86d84u, "Vault ID", "Vault ID for this file. Currently equivalent to the AssetId of the file.")]
+	[DDLRegistration(0x7459aa19u, "Vault ID", "Vault ID for this file. Currently equivalent to the AssetId of the file.")]
 	public RivetAssetId _id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5da86d84u, "Path", "Relative path to the file.")]
+	[DDLRegistration(0x3bc44bbfu, "Path", "Relative path to the file.")]
 	public RivetAssetId Path { get; set; } = "";
 
-	[DDLRegistration(0x5da86d84u, "Directory", "Directory, relative to the specified root, where this file can be found.")]
+	[DDLRegistration(0x90fe53d9u, "Directory", "Directory, relative to the specified root, where this file can be found.")]
 	public RivetAssetId Dir { get; set; } = "";
 
-	[DDLRegistration(0x5da86d84u, "File Name", "Name of the file, minus the extension.")]
+	[DDLRegistration(0x6eb3beb6u, "File Name", "Name of the file, minus the extension.")]
 	public string? Name { get; set; } = "";
 
-	[DDLRegistration(0x5da86d84u, "Extension", "File suffix (value after the last dot in the file path).")]
+	[DDLRegistration(0x2b86bfcbu, "Extension", "File suffix (value after the last dot in the file path).")]
 	public string? Ext { get; set; } = "";
 
-	[DDLRegistration(0x5da86d84u, "Created By", "Username of the person who created the file.")]
+	[DDLRegistration(0x6ebee2ccu, "Created By", "Username of the person who created the file.")]
 	public string? Crtd { get; set; } = "";
 
-	[DDLRegistration(0x5da86d84u, "Last Modified By", "Username of the person who last modified the file.")]
+	[DDLRegistration(0x3da17a81u, "Last Modified By", "Username of the person who last modified the file.")]
 	public string? Mod { get; set; } = "";
 
-	[DDLRegistration(0x5da86d84u, "Modified Time", "Timestamp when the file was last modified, not necessarily when it was last saved.")]
+	[DDLRegistration(0x5f0458f5u, "Modified Time", "Timestamp when the file was last modified, not necessarily when it was last saved.")]
 	public string? Time { get; set; } = "";
 
-	[DDLRegistration(0x5da86d84u, "Status", "Indicates current status of this file's dependencies, see enum VaultStatus. This will be the hash of the select value.")]
+	[DDLRegistration(0x10283f91u, "Status", "Indicates current status of this file's dependencies, see enum VaultStatus. This will be the hash of the select value.")]
 	public uint Stat { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5da86d84u, "Error", "Optional; If Stat == kErrorHash, this field will contain the hash of one of the error codes specified in VaultError.")]
+	[DDLRegistration(0x380af274u, "Error", "Optional; If Stat == kErrorHash, this field will contain the hash of one of the error codes specified in VaultError.")]
 	public uint Err { get; set; } = 0x00000000;
 
 	public static VaultToC Create(DDLObject ddl) => new(ddl);

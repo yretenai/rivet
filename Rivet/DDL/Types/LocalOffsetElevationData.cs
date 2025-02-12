@@ -19,10 +19,10 @@ public class LocalOffsetElevationData : DDLObjectType, IDDLObjectType<LocalOffse
 		Offset = ddl.GetObject<DDLVector3>(0x677284b7u);
 	}
 
-	[DDLRegistration(0xa4b88be7u)]
+	[DDLRegistration(0xbed7d58du)]
 	public xfdd79442 Elevation { get; set; } = xfdd79442.Any;
 
-	[DDLRegistration(0xa4b88be7u)]
+	[DDLRegistration(0x677284b7u)]
 	public DDLVector3? Offset { get; set; } = default;
 
 	public static LocalOffsetElevationData Create(DDLObject ddl) => new(ddl);

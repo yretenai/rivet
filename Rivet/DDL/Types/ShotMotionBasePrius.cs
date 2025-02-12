@@ -28,37 +28,37 @@ public class ShotMotionBasePrius : DDLObjectType, IDDLObjectType<ShotMotionBaseP
 		HitCharacterMove = ddl.GetValue<bool>(0xd5a99bdau, HitCharacterMove);
 	}
 
-	[DDLRegistration(0xbbb4ed1bu)]
+	[DDLRegistration(0xbb5c948du)]
 	public OrientationMode? Orientation { get; set; } = default;
 
-	[DDLRegistration(0xbbb4ed1bu)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 60.00f;
 
-	[DDLRegistration(0xbbb4ed1bu, "Falloff Data")]
+	[DDLRegistration(0x4e874fc0u, "Falloff Data")]
 	public FalloffData? Falloff { get; set; } = default;
 
-	[DDLRegistration(0xbbb4ed1bu, "Offset Mode")]
+	[DDLRegistration(0xbefa1d79u, "Offset Mode")]
 	public OffsetReductionMode? OffsetMode { get; set; } = default;
 
-	[DDLRegistration(0xbbb4ed1bu)]
+	[DDLRegistration(0xe4577ed3u)]
 	public bool RespondToProjectiles { get; set; } = false;
 
-	[DDLRegistration(0xbbb4ed1bu)]
+	[DDLRegistration(0x1f654a52u)]
 	public bool IgnoreDeadBots { get; set; } = false;
 
-	[DDLRegistration(0xbbb4ed1bu)]
+	[DDLRegistration(0xd3c00b25u)]
 	public bool SendSyncMotionEvents { get; set; } = false;
 
-	[DDLRegistration(0xbbb4ed1bu)]
+	[DDLRegistration(0x9e652c14u)]
 	public bool HitMoveCollision { get; set; } = false;
 
-	[DDLRegistration(0xbbb4ed1bu)]
+	[DDLRegistration(0x27c2f21cu)]
 	public bool HitWaterCollision { get; set; } = false;
 
-	[DDLRegistration(0xbbb4ed1bu)]
+	[DDLRegistration(0xe823a48fu)]
 	public bool HitThrowables { get; set; } = true;
 
-	[DDLRegistration(0xbbb4ed1bu)]
+	[DDLRegistration(0xd5a99bdau)]
 	public bool HitCharacterMove { get; set; } = true;
 
 	public static ShotMotionBasePrius Create(DDLObject ddl) => new(ddl);

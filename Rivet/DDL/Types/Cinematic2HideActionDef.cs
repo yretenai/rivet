@@ -26,31 +26,31 @@ public class Cinematic2HideActionDef : DDLObjectType, IDDLObjectType<Cinematic2H
 		BlendOutDuration = ddl.GetValue<float>(0x21329878u, BlendOutDuration);
 	}
 
-	[DDLRegistration(0xf6b3e9b4u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf6b3e9b4u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf6b3e9b4u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0xf6b3e9b4u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf6b3e9b4u)]
+	[DDLRegistration(0x1b4f6c9au)]
 	public x2153dc33 BlendType { get; set; } = x2153dc33.BlendNone;
 
-	[DDLRegistration(0xf6b3e9b4u)]
+	[DDLRegistration(0x24d97931u)]
 	public x53914cb6 BlendInSmoothingType { get; set; } = x53914cb6.SmoothingEaseIn;
 
-	[DDLRegistration(0xf6b3e9b4u)]
+	[DDLRegistration(0x461f415eu)]
 	public float BlendInDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf6b3e9b4u)]
+	[DDLRegistration(0x2b2d7d55u)]
 	public x53914cb6 BlendOutSmoothingType { get; set; } = x53914cb6.SmoothingEaseOut;
 
-	[DDLRegistration(0xf6b3e9b4u)]
+	[DDLRegistration(0x21329878u)]
 	public float BlendOutDuration { get; set; } = 0.00f;
 
 	public static Cinematic2HideActionDef Create(DDLObject ddl) => new(ddl);

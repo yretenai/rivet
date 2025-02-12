@@ -18,7 +18,7 @@ public class PhotomodeCameraFirstPersonPrius : PhotomodeCameraBasePrius, IDDLObj
 		CamData = ddl.GetObject<FirstPersonCamData>(0xa857067cu);
 	}
 
-	[DDLRegistration(0x29a394ebu)]
+	[DDLRegistration(0xa857067cu)]
 	public FirstPersonCamData? CamData { get; set; } = default;
 
 	public new static PhotomodeCameraFirstPersonPrius Create(DDLObject ddl) => new(ddl);

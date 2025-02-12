@@ -19,10 +19,10 @@ public class IsGoldBoltCollectedActionPrius : DDLObjectType, IDDLObjectType<IsGo
 		GoldBolt = ddl.GetEnum<GoldBoltEnum>(0xc7c1643eu, GoldBoltEnumValues.Lookup);
 	}
 
-	[DDLRegistration(0x60d9fc6eu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x60d9fc6eu, description: "Gold bolt to check.")]
+	[DDLRegistration(0xc7c1643eu, description: "Gold bolt to check.")]
 	public GoldBoltEnum GoldBolt { get; set; } = GoldBoltEnum.None;
 
 	public static IsGoldBoltCollectedActionPrius Create(DDLObject ddl) => new(ddl);

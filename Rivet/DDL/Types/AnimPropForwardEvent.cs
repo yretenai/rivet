@@ -19,10 +19,10 @@ public class AnimPropForwardEvent : EventBase, IDDLObjectType<AnimPropForwardEve
 		ForwardEvent = ddl.GetObject<EventBase>(0x12f85095u);
 	}
 
-	[DDLRegistration(0x57e23f78u)]
+	[DDLRegistration(0x97a161efu)]
 	public string? PropName { get; set; } = default;
 
-	[DDLRegistration(0x57e23f78u)]
+	[DDLRegistration(0x12f85095u)]
 	public EventBase? ForwardEvent { get; set; } = default;
 
 	public new static AnimPropForwardEvent Create(DDLObject ddl) => new(ddl);

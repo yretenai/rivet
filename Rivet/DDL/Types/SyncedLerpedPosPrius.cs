@@ -18,7 +18,7 @@ public class SyncedLerpedPosPrius : DDLObjectType, IDDLObjectType<SyncedLerpedPo
 		UpdateInterval = ddl.GetValue<float>(0x811184bdu, UpdateInterval);
 	}
 
-	[DDLRegistration(0x43e15685u)]
+	[DDLRegistration(0x811184bdu)]
 	public float UpdateInterval { get; set; } = 0.50f;
 
 	public static SyncedLerpedPosPrius Create(DDLObject ddl) => new(ddl);

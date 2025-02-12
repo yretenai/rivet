@@ -21,16 +21,16 @@ public class EventForwarderPrius : DDLObjectType, IDDLObjectType<EventForwarderP
 		QueueImmediateEvent = ddl.GetValue<bool>(0xe596a2aeu, QueueImmediateEvent);
 	}
 
-	[DDLRegistration(0x4c8d82b7u)]
+	[DDLRegistration(0x98554e8cu)]
 	public RivetAssetId TargetActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4c8d82b7u)]
+	[DDLRegistration(0xa5237249u)]
 	public List<string?> EventsToForward { get; set; } = [];
 
-	[DDLRegistration(0x4c8d82b7u, description: "Which actor should be set as the Sender of the forwarded event.")]
+	[DDLRegistration(0x883a3c96u, description: "Which actor should be set as the Sender of the forwarded event.")]
 	public xc97f8430 ForwardedSender { get; set; } = xc97f8430.Target;
 
-	[DDLRegistration(0x4c8d82b7u, description: "Should this queue as an immediate event? This may make firing the event 1 frame faster, but there may be other performace implications.")]
+	[DDLRegistration(0xe596a2aeu, description: "Should this queue as an immediate event? This may make firing the event 1 frame faster, but there may be other performace implications.")]
 	public bool QueueImmediateEvent { get; set; } = false;
 
 	public static EventForwarderPrius Create(DDLObject ddl) => new(ddl);

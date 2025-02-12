@@ -26,31 +26,31 @@ public class DebugPlotLinesActionPrius : DDLObjectType, IDDLObjectType<DebugPlot
 		Size = ddl.GetObject<DDLVector2>(0xc750e4dau);
 	}
 
-	[DDLRegistration(0xa513a9c0u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0xa513a9c0u, description: "Plot values buffer size")]
+	[DDLRegistration(0x86d73b4bu, description: "Plot values buffer size")]
 	public uint MaxValues { get; set; } = 0x00000010;
 
-	[DDLRegistration(0xa513a9c0u, description: "Plot values Scale(x=min, y=max)")]
+	[DDLRegistration(0x08fe1922u, description: "Plot values Scale(x=min, y=max)")]
 	public DDLVector2? ScaleMinMax { get; set; } = default;
 
-	[DDLRegistration(0xa513a9c0u, description: "Plot values will scroll. Not needed if new values are continuously pumped in")]
+	[DDLRegistration(0xe14927edu, description: "Plot values will scroll. Not needed if new values are continuously pumped in")]
 	public bool Animate { get; set; } = true;
 
-	[DDLRegistration(0xa513a9c0u, description: "Plot label: will be replaced with localized text if string is valid loc tag.")]
+	[DDLRegistration(0x17f49c29u, description: "Plot label: will be replaced with localized text if string is valid loc tag.")]
 	public string? Label { get; set; } = "";
 
-	[DDLRegistration(0xa513a9c0u, description: "Plot overlay text: will be replaced with localized text if string is valid loc tag.")]
+	[DDLRegistration(0xe7208a25u, description: "Plot overlay text: will be replaced with localized text if string is valid loc tag.")]
 	public string? OverlayText { get; set; } = "";
 
-	[DDLRegistration(0xa513a9c0u, "Position", "Plot Position")]
+	[DDLRegistration(0xbc2d5985u, "Position", "Plot Position")]
 	public DDLVector2? Position { get; set; } = default;
 
-	[DDLRegistration(0xa513a9c0u, "Position is 3D", "Plot Position is a 3D World coordinate")]
+	[DDLRegistration(0xd199d9cau, "Position is 3D", "Plot Position is a 3D World coordinate")]
 	public bool Position3D { get; set; } = false;
 
-	[DDLRegistration(0xa513a9c0u, description: "Plot Size:(x=width, y=height) 0,0 means auto size")]
+	[DDLRegistration(0xc750e4dau, description: "Plot Size:(x=width, y=height) 0,0 means auto size")]
 	public DDLVector2? Size { get; set; } = default;
 
 	public static DebugPlotLinesActionPrius Create(DDLObject ddl) => new(ddl);

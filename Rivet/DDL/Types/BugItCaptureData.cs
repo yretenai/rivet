@@ -29,40 +29,40 @@ public class BugItCaptureData : DDLObjectType, IDDLObjectType<BugItCaptureData> 
 		ActiveZoneId = ddl.GetValue<RivetAssetId>(0x2e8e0ffau, ActiveZoneId);
 	}
 
-	[DDLRegistration(0xfe161c52u, description: "level name")]
+	[DDLRegistration(0x91f5777cu, description: "level name")]
 	public string? Lvl { get; set; } = "";
 
-	[DDLRegistration(0xfe161c52u, description: "checkpoint name")]
+	[DDLRegistration(0xd08c9a3du, description: "checkpoint name")]
 	public string? Chk { get; set; } = "";
 
-	[DDLRegistration(0xfe161c52u, description: "region name")]
+	[DDLRegistration(0x36b6ba27u, description: "region name")]
 	public string? Region { get; set; } = "";
 
-	[DDLRegistration(0xfe161c52u)]
+	[DDLRegistration(0x14f0d99bu)]
 	public List<float> Campos { get; set; } = [];
 
-	[DDLRegistration(0xfe161c52u)]
+	[DDLRegistration(0x89109856u)]
 	public List<float> Camrot { get; set; } = [];
 
-	[DDLRegistration(0xfe161c52u)]
+	[DDLRegistration(0x01fa2ddfu)]
 	public List<float> Camup { get; set; } = [];
 
-	[DDLRegistration(0xfe161c52u)]
+	[DDLRegistration(0xd3727ecbu)]
 	public List<float> Camright { get; set; } = [];
 
-	[DDLRegistration(0xfe161c52u)]
+	[DDLRegistration(0x2c9472f5u)]
 	public List<float> Heropos { get; set; } = [];
 
-	[DDLRegistration(0xfe161c52u)]
+	[DDLRegistration(0x35f7b0a9u)]
 	public List<float> Herofwd { get; set; } = [];
 
-	[DDLRegistration(0xfe161c52u)]
+	[DDLRegistration(0x7fad4147u)]
 	public List<RivetAssetId> ZoneIds { get; set; } = [];
 
-	[DDLRegistration(0xfe161c52u, description: "Optional tranform used when zones have a runtime transform. If present, array is parallel to zoneIds.")]
+	[DDLRegistration(0xa075da1bu, description: "Optional tranform used when zones have a runtime transform. If present, array is parallel to zoneIds.")]
 	public List<DDLMatrix4?> ZoneTransforms { get; set; } = [];
 
-	[DDLRegistration(0xfe161c52u)]
+	[DDLRegistration(0x2e8e0ffau)]
 	public RivetAssetId ActiveZoneId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static BugItCaptureData Create(DDLObject ddl) => new(ddl);

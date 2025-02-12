@@ -21,16 +21,16 @@ public class AssetMigrationDef : DDLObjectType, IDDLObjectType<AssetMigrationDef
 		Projects = ddl.GetObjects<AssetMigrationProject>(0xa6920ed4u);
 	}
 
-	[DDLRegistration(0xafc2f617u)]
+	[DDLRegistration(0xffb7d34du)]
 	public string? Host { get; set; } = default;
 
-	[DDLRegistration(0xafc2f617u)]
+	[DDLRegistration(0x73019d7cu)]
 	public string? Port { get; set; } = default;
 
-	[DDLRegistration(0xafc2f617u)]
+	[DDLRegistration(0x0ec6c290u)]
 	public List<string?> Extensions { get; set; } = [];
 
-	[DDLRegistration(0xafc2f617u)]
+	[DDLRegistration(0xa6920ed4u)]
 	public List<AssetMigrationProject?> Projects { get; set; } = [];
 
 	public static AssetMigrationDef Create(DDLObject ddl) => new(ddl);

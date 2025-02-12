@@ -18,7 +18,7 @@ public class ActionControlHeroControlSystemOverride : DDLObjectType, IDDLObjectT
 		Control = ddl.GetEnum<x9e66f631>(0xec314f73u, x9e66f631Values.Lookup);
 	}
 
-	[DDLRegistration(0xe9c0c354u)]
+	[DDLRegistration(0xec314f73u)]
 	public x9e66f631 Control { get; set; } = x9e66f631.Cancel;
 
 	public static ActionControlHeroControlSystemOverride Create(DDLObject ddl) => new(ddl);

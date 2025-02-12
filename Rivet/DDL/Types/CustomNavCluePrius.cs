@@ -21,16 +21,16 @@ public class CustomNavCluePrius : DDLObjectType, IDDLObjectType<CustomNavCluePri
 		RequiredEntityType = ddl.GetBitset<x117c3bf3>(0xd375cf6eu, x117c3bf3Values.Lookup);
 	}
 
-	[DDLRegistration(0xa312a7aau, description: "When we link two nav clues to each other, this is the clue we are linking to.")]
+	[DDLRegistration(0x54de279fu, description: "When we link two nav clues to each other, this is the clue we are linking to.")]
 	public RivetAssetId TargetNavClue { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa312a7aau, description: "Optional (curve) helper actor for traversal hints.")]
+	[DDLRegistration(0x75863196u, description: "Optional (curve) helper actor for traversal hints.")]
 	public RivetAssetId TargetHelper { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa312a7aau, description: "Mark required abilities necessary to traverse this link.")]
+	[DDLRegistration(0xc66b4c36u, description: "Mark required abilities necessary to traverse this link.")]
 	public x729ef36c RequiredAbilities { get; set; } = (x729ef36c) 0x40000000;
 
-	[DDLRegistration(0xa312a7aau, description: "Only the specified entity types are allowed to traverse this link.")]
+	[DDLRegistration(0xd375cf6eu, description: "Only the specified entity types are allowed to traverse this link.")]
 	public x117c3bf3 RequiredEntityType { get; set; } = (x117c3bf3) 0x00000001;
 
 	public static CustomNavCluePrius Create(DDLObject ddl) => new(ddl);

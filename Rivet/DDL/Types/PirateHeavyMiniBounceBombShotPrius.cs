@@ -18,7 +18,7 @@ public class PirateHeavyMiniBounceBombShotPrius : GrenadeShotGamePrius, IDDLObje
 		MiniBombExplodeRadius = ddl.GetValue<float>(0xfdf48a70u, MiniBombExplodeRadius);
 	}
 
-	[DDLRegistration(0x754ed95du)]
+	[DDLRegistration(0xfdf48a70u)]
 	public float MiniBombExplodeRadius { get; set; } = 3.00f;
 
 	public new static PirateHeavyMiniBounceBombShotPrius Create(DDLObject ddl) => new(ddl);

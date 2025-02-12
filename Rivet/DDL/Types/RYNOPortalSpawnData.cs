@@ -20,13 +20,13 @@ public class RYNOPortalSpawnData : SpawnDataBase, IDDLObjectType<RYNOPortalSpawn
 		OtherIp = ddl.GetValue<bool>(0xf2bacd6eu, OtherIp);
 	}
 
-	[DDLRegistration(0xb48f7401u)]
+	[DDLRegistration(0xf515e945u)]
 	public float Scale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb48f7401u)]
+	[DDLRegistration(0xb94aeb36u)]
 	public RYNOPortalPrius? PortalPrius { get; set; } = default;
 
-	[DDLRegistration(0xb48f7401u)]
+	[DDLRegistration(0xf2bacd6eu)]
 	public bool OtherIp { get; set; } = false;
 
 	public new static RYNOPortalSpawnData Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class Cinematic2ActorMovieTrackDef : DDLObjectType, IDDLObjectType<Cinema
 		UseSRGBTexture = ddl.GetValue<bool>(0x07a1f387u, UseSRGBTexture);
 	}
 
-	[DDLRegistration(0xeb9333b8u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xeb9333b8u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xeb9333b8u, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0xeb9333b8u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0xeb9333b8u, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0xeb9333b8u)]
+	[DDLRegistration(0x04a292d7u)]
 	public Dictionary<RivetAssetId, Cinematic2MovieActionDef?> Actions { get; set; } = [];
 
-	[DDLRegistration(0xeb9333b8u, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model.")]
+	[DDLRegistration(0x981e6927u, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0xeb9333b8u, description: "This specifies the name of texture sampler.")]
+	[DDLRegistration(0x30712231u, description: "This specifies the name of texture sampler.")]
 	public string? TextureSamplerName { get; set; } = default;
 
-	[DDLRegistration(0xeb9333b8u, description: "Uncheck this if you want to show the video on the HUD/UI")]
+	[DDLRegistration(0x07a1f387u, description: "Uncheck this if you want to show the video on the HUD/UI")]
 	public bool UseSRGBTexture { get; set; } = true;
 
 	public static Cinematic2ActorMovieTrackDef Create(DDLObject ddl) => new(ddl);

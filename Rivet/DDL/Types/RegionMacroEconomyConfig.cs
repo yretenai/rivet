@@ -19,10 +19,10 @@ public class RegionMacroEconomyConfig : ConfigBase, IDDLObjectType<RegionMacroEc
 		DefaultEconConfig = ddl.GetValue<RivetAssetId>(0xdb88bbc9u, DefaultEconConfig);
 	}
 
-	[DDLRegistration(0x1af622eau, description: "These are all the different economy areas.")]
+	[DDLRegistration(0x21367762u, description: "These are all the different economy areas.")]
 	public List<RegionMacroEconomyEntry?> EconomyEntries { get; set; } = [];
 
-	[DDLRegistration(0x1af622eau, description: "If we dont find our region, this is the default economy to use")]
+	[DDLRegistration(0xdb88bbc9u, description: "If we dont find our region, this is the default economy to use")]
 	public RivetAssetId DefaultEconConfig { get; set; } = default;
 
 	public new static RegionMacroEconomyConfig Create(DDLObject ddl) => new(ddl);

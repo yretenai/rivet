@@ -23,22 +23,22 @@ public class PickupWeaponItemPrius : GamePickupItemPrius, IDDLObjectType<PickupW
 		OfferOffset = ddl.GetObject<DDLVector3>(0xda6f0f48u);
 	}
 
-	[DDLRegistration(0x4e8944beu)]
+	[DDLRegistration(0xd1bab95fu)]
 	public bool ForceAutoEquip { get; set; } = false;
 
-	[DDLRegistration(0x4e8944beu, "Use real weapon in scene?", "If we are playing the pickup anim whether to use the real weapon or the pickup item.")]
+	[DDLRegistration(0xf8b8cdccu, "Use real weapon in scene?", "If we are playing the pickup anim whether to use the real weapon or the pickup item.")]
 	public bool UseRealWpnInScene { get; set; } = false;
 
-	[DDLRegistration(0x4e8944beu, "Equip melee after scene?", "Whether to force equip the melee weapon after the scene.")]
+	[DDLRegistration(0x6f1f00c2u, "Equip melee after scene?", "Whether to force equip the melee weapon after the scene.")]
 	public bool EquipMeleeAfterScene { get; set; } = false;
 
-	[DDLRegistration(0x4e8944beu, description: "Whether to use the 'PickupText' below for the pickup text rather than the item display name.")]
+	[DDLRegistration(0xf6d02174u, description: "Whether to use the 'PickupText' below for the pickup text rather than the item display name.")]
 	public bool OverridePickupText { get; set; } = false;
 
-	[DDLRegistration(0x4e8944beu, description: "The LAMS tag to use for the pickup text if overriding (marked above) the item display name.")]
+	[DDLRegistration(0x1d16bd54u, description: "The LAMS tag to use for the pickup text if overriding (marked above) the item display name.")]
 	public string? PickupTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x4e8944beu, "Offer Offset", "An offset from the actor position for the offer location.")]
+	[DDLRegistration(0xda6f0f48u, "Offer Offset", "An offset from the actor position for the offer location.")]
 	public DDLVector3? OfferOffset { get; set; } = default;
 
 	public new static PickupWeaponItemPrius Create(DDLObject ddl) => new(ddl);

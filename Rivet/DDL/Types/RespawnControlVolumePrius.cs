@@ -18,7 +18,7 @@ public class RespawnControlVolumePrius : DDLObjectType, IDDLObjectType<RespawnCo
 		RespawnPoint = ddl.GetValue<RivetAssetId>(0x0b422d27u, RespawnPoint);
 	}
 
-	[DDLRegistration(0xa1c0de34u)]
+	[DDLRegistration(0x0b422d27u)]
 	public RivetAssetId RespawnPoint { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static RespawnControlVolumePrius Create(DDLObject ddl) => new(ddl);

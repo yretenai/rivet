@@ -20,13 +20,13 @@ public class DebugPlaytestSettings : DDLObjectType, IDDLObjectType<DebugPlaytest
 		ForceEnableSurveyScreens = ddl.GetValue<bool>(0xc4da8518u, ForceEnableSurveyScreens);
 	}
 
-	[DDLRegistration(0xe06867b9u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0xe06867b9u)]
+	[DDLRegistration(0x0bdfaa48u)]
 	public string? PlaytestName { get; set; } = default;
 
-	[DDLRegistration(0xe06867b9u)]
+	[DDLRegistration(0xc4da8518u)]
 	public bool ForceEnableSurveyScreens { get; set; } = false;
 
 	public static DebugPlaytestSettings Create(DDLObject ddl) => new(ddl);

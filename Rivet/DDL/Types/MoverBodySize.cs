@@ -23,22 +23,22 @@ public class MoverBodySize : DDLObjectType, IDDLObjectType<MoverBodySize> {
 		GroundRadius = ddl.GetValue<float>(0xef8d598du, GroundRadius);
 	}
 
-	[DDLRegistration(0xdb4f33bfu, "Body Bottom")]
+	[DDLRegistration(0x7c1441ffu, "Body Bottom")]
 	public float BodyBottom { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdb4f33bfu, "Body Top")]
+	[DDLRegistration(0xda5de2a6u, "Body Top")]
 	public float BodyTop { get; set; } = 1.15f;
 
-	[DDLRegistration(0xdb4f33bfu, "Body Radius")]
+	[DDLRegistration(0xce375d01u, "Body Radius")]
 	public float BodyRadius { get; set; } = 0.45f;
 
-	[DDLRegistration(0xdb4f33bfu, "Ground Up")]
+	[DDLRegistration(0xf584e368u, "Ground Up")]
 	public float GroundUp { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdb4f33bfu, "Ground Down")]
+	[DDLRegistration(0xa18cd030u, "Ground Down")]
 	public float GroundDown { get; set; } = 50.00f;
 
-	[DDLRegistration(0xdb4f33bfu, "Ground Radius")]
+	[DDLRegistration(0xef8d598du, "Ground Radius")]
 	public float GroundRadius { get; set; } = 0.12f;
 
 	public static MoverBodySize Create(DDLObject ddl) => new(ddl);

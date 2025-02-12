@@ -18,7 +18,7 @@ public class SpawnShotBotTargetingPrius : SpawnShotTargetingPrius, IDDLObjectTyp
 		TargetHero = ddl.GetValue<bool>(0xa8b1a48eu, TargetHero);
 	}
 
-	[DDLRegistration(0x3dd50fe5u, "Target Hero", "Target the default hero instead of the best target")]
+	[DDLRegistration(0xa8b1a48eu, "Target Hero", "Target the default hero instead of the best target")]
 	public bool TargetHero { get; set; } = false;
 
 	public new static SpawnShotBotTargetingPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DynamicAnimsetManagerPrius : DDLObjectType, IDDLObjectType<DynamicA
 		UserMask = ddl.GetBitset<x805e39ba>(0x8321a90fu, x805e39baValues.Lookup);
 	}
 
-	[DDLRegistration(0x9df6d562u, "User Mask")]
+	[DDLRegistration(0x8321a90fu, "User Mask")]
 	public x805e39ba UserMask { get; set; } = (x805e39ba) 0x00000001;
 
 	public static DynamicAnimsetManagerPrius Create(DDLObject ddl) => new(ddl);

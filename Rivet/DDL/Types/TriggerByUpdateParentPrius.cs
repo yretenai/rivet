@@ -18,7 +18,7 @@ public class TriggerByUpdateParentPrius : TriggerByBasePrius, IDDLObjectType<Tri
 		AutoDisable = ddl.GetValue<bool>(0xde716c6eu, AutoDisable);
 	}
 
-	[DDLRegistration(0x3b5e402eu, "Auto Disable?", "Whether to disable ourselves once get a valid attachment.")]
+	[DDLRegistration(0xde716c6eu, "Auto Disable?", "Whether to disable ourselves once get a valid attachment.")]
 	public bool AutoDisable { get; set; } = true;
 
 	public new static TriggerByUpdateParentPrius Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class ScriptVarNodeAux : DDLObjectType, IDDLObjectType<ScriptVarNodeAux> 
 		ActorValue = ddl.GetValue<RivetAssetId>(0x6aed6be1u, ActorValue);
 	}
 
-	[DDLRegistration(0x01fd9c67u)]
+	[DDLRegistration(0x5e2c110cu)]
 	public string? VarType { get; set; } = default;
 
-	[DDLRegistration(0x01fd9c67u)]
+	[DDLRegistration(0x666dd9b6u)]
 	public bool ReadOnly { get; set; } = false;
 
-	[DDLRegistration(0x01fd9c67u, "Name")]
+	[DDLRegistration(0xe40dfcbau, "Name")]
 	public string? GlobalName { get; set; } = default;
 
-	[DDLRegistration(0x01fd9c67u)]
+	[DDLRegistration(0x18486a4du)]
 	public GraphNodeNotesDef? Notes { get; set; } = default;
 
-	[DDLRegistration(0x01fd9c67u, "Is Global Name", "A global name is shared across all loaded zones. Otherwise it is only accessible in the same script graph.")]
+	[DDLRegistration(0xd36c3c29u, "Is Global Name", "A global name is shared across all loaded zones. Otherwise it is only accessible in the same script graph.")]
 	public bool IsGlobal { get; set; } = false;
 
-	[DDLRegistration(0x01fd9c67u, "Boolean Value")]
+	[DDLRegistration(0x07f6e397u, "Boolean Value")]
 	public bool BoolValue { get; set; } = false;
 
-	[DDLRegistration(0x01fd9c67u, "Number Value")]
+	[DDLRegistration(0xf03f0a74u, "Number Value")]
 	public float FloatValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x01fd9c67u, "Vector Value")]
+	[DDLRegistration(0xb8666495u, "Vector Value")]
 	public DDLVector3? VecValue { get; set; } = default;
 
-	[DDLRegistration(0x01fd9c67u, "String Value")]
+	[DDLRegistration(0xbb242993u, "String Value")]
 	public string? StringValue { get; set; } = default;
 
-	[DDLRegistration(0x01fd9c67u, "Actor Value")]
+	[DDLRegistration(0x6aed6be1u, "Actor Value")]
 	public RivetAssetId ActorValue { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ScriptVarNodeAux Create(DDLObject ddl) => new(ddl);

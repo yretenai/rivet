@@ -22,19 +22,19 @@ public class ActorLinkExample : DDLObjectType, IDDLObjectType<ActorLinkExample> 
 		AnyKindOfSceneNode = ddl.GetValue<RivetAssetId>(0x248e0e3au, AnyKindOfSceneNode);
 	}
 
-	[DDLRegistration(0xaf559073u, description: "Each tuid should be a reference to a volume")]
+	[DDLRegistration(0x7b36c92du, description: "Each tuid should be a reference to a volume")]
 	public List<RivetAssetId> Volumes { get; set; } = [];
 
-	[DDLRegistration(0xaf559073u, description: "This tuid should specify an actor instance")]
+	[DDLRegistration(0x3750276du, description: "This tuid should specify an actor instance")]
 	public RivetAssetId AnyActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xaf559073u, description: "Link to any model or volume that is also an actor")]
+	[DDLRegistration(0x3f45340au, description: "Link to any model or volume that is also an actor")]
 	public RivetAssetId AnyModelOrVolumeActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xaf559073u, description: "Link to a regular model, or an actor model")]
+	[DDLRegistration(0x7bc48dc6u, description: "Link to a regular model, or an actor model")]
 	public RivetAssetId AnyKindOfModel { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xaf559073u, description: "Link to any supported scene node type including actors and actor groups")]
+	[DDLRegistration(0x248e0e3au, description: "Link to any supported scene node type including actors and actor groups")]
 	public RivetAssetId AnyKindOfSceneNode { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ActorLinkExample Create(DDLObject ddl) => new(ddl);

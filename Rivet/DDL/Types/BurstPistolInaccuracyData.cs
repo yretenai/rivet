@@ -24,25 +24,25 @@ public class BurstPistolInaccuracyData : DDLObjectType, IDDLObjectType<BurstPist
 		DecreaseAnglePerSec = ddl.GetValue<float>(0xe33c63c7u, DecreaseAnglePerSec);
 	}
 
-	[DDLRegistration(0xa5e2adfeu, "Initial Angle")]
+	[DDLRegistration(0x158e06dbu, "Initial Angle")]
 	public float InitialAngle { get; set; } = 0.50f;
 
-	[DDLRegistration(0xa5e2adfeu, "Min Shots To Increase")]
+	[DDLRegistration(0x3ee300c4u, "Min Shots To Increase")]
 	public uint MinShotsToIncrease { get; set; } = 0x00000003;
 
-	[DDLRegistration(0xa5e2adfeu, "Angle Max")]
+	[DDLRegistration(0x475aea60u, "Angle Max")]
 	public float AngleMax { get; set; } = 4.00f;
 
-	[DDLRegistration(0xa5e2adfeu, "Increase Angle Per Shot")]
+	[DDLRegistration(0xea409f8bu, "Increase Angle Per Shot")]
 	public float IncreaseAnglePerShot { get; set; } = 0.10f;
 
-	[DDLRegistration(0xa5e2adfeu, "Increase Angle Max")]
+	[DDLRegistration(0xc7fe4fd8u, "Increase Angle Max")]
 	public float IncreaseAngleMax { get; set; } = 0.50f;
 
-	[DDLRegistration(0xa5e2adfeu, "Decrease Delay")]
+	[DDLRegistration(0x4f49c248u, "Decrease Delay")]
 	public float DecreaseDelay { get; set; } = 0.20f;
 
-	[DDLRegistration(0xa5e2adfeu, "Decrease Angle Per Sec")]
+	[DDLRegistration(0xe33c63c7u, "Decrease Angle Per Sec")]
 	public float DecreaseAnglePerSec { get; set; } = 5.00f;
 
 	public static BurstPistolInaccuracyData Create(DDLObject ddl) => new(ddl);

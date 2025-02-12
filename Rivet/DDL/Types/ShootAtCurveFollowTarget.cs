@@ -27,34 +27,34 @@ public class ShootAtCurveFollowTarget : ShootAtMortarFiringStyle, IDDLObjectType
 		ClampToCombatArea = ddl.GetValue<bool>(0x801b5504u, ClampToCombatArea);
 	}
 
-	[DDLRegistration(0x7ad40106u)]
+	[DDLRegistration(0x49065dfdu)]
 	public float InitFollowSpeed { get; set; } = 4.00f;
 
-	[DDLRegistration(0x7ad40106u)]
+	[DDLRegistration(0x09f9ef4fu)]
 	public float MaxFollowSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x7ad40106u)]
+	[DDLRegistration(0x7203cb7cu)]
 	public float FollowAccel { get; set; } = 3.00f;
 
-	[DDLRegistration(0x7ad40106u)]
+	[DDLRegistration(0x9f881bd0u)]
 	public float FollowDecel { get; set; } = 2.00f;
 
-	[DDLRegistration(0x7ad40106u)]
+	[DDLRegistration(0xe504f09eu)]
 	public bool FollowWhileFiring { get; set; } = false;
 
-	[DDLRegistration(0x7ad40106u, description: "If true, the curve will be oriented toward the target")]
+	[DDLRegistration(0x79a3a5e6u, description: "If true, the curve will be oriented toward the target")]
 	public bool OrientTowardsTarget { get; set; } = false;
 
-	[DDLRegistration(0x7ad40106u)]
+	[DDLRegistration(0x36f74268u)]
 	public bool PredictTargetPos { get; set; } = false;
 
-	[DDLRegistration(0x7ad40106u)]
+	[DDLRegistration(0xdad50f41u)]
 	public float MaxPredictSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0x7ad40106u)]
+	[DDLRegistration(0x8284658eu)]
 	public float ExpectedMortarTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7ad40106u, description: "If true, the curve will stop tracking target if its bounds go outside of our combat area")]
+	[DDLRegistration(0x801b5504u, description: "If true, the curve will stop tracking target if its bounds go outside of our combat area")]
 	public bool ClampToCombatArea { get; set; } = false;
 
 	public new static ShootAtCurveFollowTarget Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class UDSWebApiTrophySetMetadata : DDLObjectType, IDDLObjectType<UDSWebAp
 		DefaultLanguage = ddl.GetString(0x204e4dc8) ?? DefaultLanguage;
 	}
 
-	[DDLRegistration(0x6fadc6f0u)]
+	[DDLRegistration(0xce811188u)]
 	public Dictionary<string, string?> Name { get; set; } = [];
 
-	[DDLRegistration(0x6fadc6f0u)]
+	[DDLRegistration(0x3a250fedu)]
 	public List<xcf5dc143> Platform { get; set; } = [];
 
-	[DDLRegistration(0x6fadc6f0u)]
+	[DDLRegistration(0x558d3d7bu)]
 	public string? TrophySetVersion { get; set; } = default;
 
-	[DDLRegistration(0x6fadc6f0u)]
+	[DDLRegistration(0xff91af69u)]
 	public string? TrophySchemaVersion { get; set; } = default;
 
-	[DDLRegistration(0x6fadc6f0u)]
+	[DDLRegistration(0x204e4dc8u)]
 	public string? DefaultLanguage { get; set; } = default;
 
 	public static UDSWebApiTrophySetMetadata Create(DDLObject ddl) => new(ddl);

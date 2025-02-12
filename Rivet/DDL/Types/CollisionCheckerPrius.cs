@@ -18,7 +18,7 @@ public class CollisionCheckerPrius : DDLObjectType, IDDLObjectType<CollisionChec
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0xd55bb76eu, description: "Leave blank to use object position")]
+	[DDLRegistration(0x7bac1d57u, description: "Leave blank to use object position")]
 	public string? Locator { get; set; } = default;
 
 	public static CollisionCheckerPrius Create(DDLObject ddl) => new(ddl);

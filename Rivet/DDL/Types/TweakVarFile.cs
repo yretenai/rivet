@@ -20,13 +20,13 @@ public class TweakVarFile : DDLObjectType, IDDLObjectType<TweakVarFile> {
 		Variables = ddl.GetDictionary<int, TweakVarVariable>(0x0a36e21d, DDLMapTypeHandler.VisitInt, (mapId, mapDDL) => mapDDL.GetObject<TweakVarVariable>(mapId));
 	}
 
-	[DDLRegistration(0xb40f10c5u)]
+	[DDLRegistration(0x6638fb2bu)]
 	public string? FileName { get; set; } = default;
 
-	[DDLRegistration(0xb40f10c5u)]
+	[DDLRegistration(0x334f0e22u)]
 	public RivetAssetId FilePath { get; set; } = default;
 
-	[DDLRegistration(0xb40f10c5u)]
+	[DDLRegistration(0x0a36e21du)]
 	public Dictionary<int, TweakVarVariable?> Variables { get; set; } = [];
 
 	public static TweakVarFile Create(DDLObject ddl) => new(ddl);

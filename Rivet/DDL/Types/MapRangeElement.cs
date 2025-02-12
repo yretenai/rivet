@@ -19,10 +19,10 @@ public class MapRangeElement : DDLObjectType, IDDLObjectType<MapRangeElement> {
 		Y = ddl.GetValue<float>(0x2934711bu, Y);
 	}
 
-	[DDLRegistration(0xfc82b59fu, description: "Input.")]
+	[DDLRegistration(0x5e33418du, description: "Input.")]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfc82b59fu, description: "Output.")]
+	[DDLRegistration(0x2934711bu, description: "Output.")]
 	public float Y { get; set; } = 0.00f;
 
 	public static MapRangeElement Create(DDLObject ddl) => new(ddl);

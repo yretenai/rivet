@@ -18,7 +18,7 @@ public class TriggerEffectSequenceTime : TriggerEffectSequenceBase, IDDLObjectTy
 		KeyFrameData = ddl.GetObjects<TriggerEffectKeyFrameDataTime>(0x6d456e08u);
 	}
 
-	[DDLRegistration(0x2dfaaf25u)]
+	[DDLRegistration(0x6d456e08u)]
 	public List<TriggerEffectKeyFrameDataTime?> KeyFrameData { get; set; } = [];
 
 	public new static TriggerEffectSequenceTime Create(DDLObject ddl) => new(ddl);

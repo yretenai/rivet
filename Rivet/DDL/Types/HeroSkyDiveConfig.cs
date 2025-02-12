@@ -26,31 +26,31 @@ public class HeroSkyDiveConfig : DDLObjectType, IDDLObjectType<HeroSkyDiveConfig
 		CameraShakeConfig = ddl.GetValue<RivetAssetId>(0xb610c5e4u, CameraShakeConfig);
 	}
 
-	[DDLRegistration(0xfc9dd3ceu)]
+	[DDLRegistration(0xecc0ba32u)]
 	public float MinLeftRightSpeed { get; set; } = 8.00f;
 
-	[DDLRegistration(0xfc9dd3ceu)]
+	[DDLRegistration(0x6a3c3cbfu)]
 	public float MinForwardBackSpeed { get; set; } = 8.00f;
 
-	[DDLRegistration(0xfc9dd3ceu)]
+	[DDLRegistration(0xbe1a7221u)]
 	public float MinLeftRightAccel { get; set; } = 14.00f;
 
-	[DDLRegistration(0xfc9dd3ceu)]
+	[DDLRegistration(0x38e6f4acu)]
 	public float MinForwardBackAccel { get; set; } = 14.00f;
 
-	[DDLRegistration(0xfc9dd3ceu)]
+	[DDLRegistration(0x1a7cac90u)]
 	public float LeftRightTravelTime { get; set; } = 2.50f;
 
-	[DDLRegistration(0xfc9dd3ceu)]
+	[DDLRegistration(0x1690610cu)]
 	public float ForwardBackTravelTime { get; set; } = 2.50f;
 
-	[DDLRegistration(0xfc9dd3ceu)]
+	[DDLRegistration(0x96b1804cu)]
 	public float LeftRightTimeToMaxSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfc9dd3ceu)]
+	[DDLRegistration(0x032d2b88u)]
 	public float ForwardBackTimeToMaxSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfc9dd3ceu)]
+	[DDLRegistration(0xb610c5e4u)]
 	public RivetAssetId CameraShakeConfig { get; set; } = default;
 
 	public static HeroSkyDiveConfig Create(DDLObject ddl) => new(ddl);

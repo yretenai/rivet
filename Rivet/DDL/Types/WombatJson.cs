@@ -18,7 +18,7 @@ public class WombatJson : DDLObjectType, IDDLObjectType<WombatJson> {
 		Elvis = ddl.GetValue<int>(0xd21c6fd0u, Elvis);
 	}
 
-	[DDLRegistration(0xddbfc1eau)]
+	[DDLRegistration(0xd21c6fd0u)]
 	public int Elvis { get; set; } = 0;
 
 	public static WombatJson Create(DDLObject ddl) => new(ddl);

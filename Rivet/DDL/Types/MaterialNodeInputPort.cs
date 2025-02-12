@@ -40,73 +40,73 @@ public class MaterialNodeInputPort : DDLObjectType, IDDLObjectType<MaterialNodeI
 		VisibilityCondition = ddl.GetObject<MaterialNodeInputVisibilityCondition>(0x10b37a44u);
 	}
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x93971d83u)]
 	public string? InternalName { get; set; } = default;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0xee16155au)]
 	public string? Minimums { get; set; } = default;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x0876babbu)]
 	public string? Maximums { get; set; } = default;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x04df0281u)]
 	public string? Values { get; set; } = default;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = "float4";
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x4cac4baeu)]
 	public string? Documentation { get; set; } = default;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x8c1e6e85u)]
 	public string? UIType { get; set; } = default;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x74938804u)]
 	public string? Group { get; set; } = default;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0xbd9f03f1u)]
 	public string? SortOrder { get; set; } = default;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x8ba94c76u)]
 	public string? Labels { get; set; } = default;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0xd67dc5e4u)]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x7b5a8b61u)]
 	public bool Visible { get; set; } = true;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x3c0cbb98u)]
 	public bool Exposed { get; set; } = false;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x1837e13bu)]
 	public bool TestingOnly { get; set; } = false;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0xfa572691u)]
 	public bool InheritName { get; set; } = false;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0xc95c1d5cu)]
 	public bool LinearFilter { get; set; } = false;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x8db08f6fu)]
 	public bool ShowPreview { get; set; } = true;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0xfd8c5200u)]
 	public bool DeveloperMode { get; set; } = false;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0xb47ed490u)]
 	public bool UserDefinedLabels { get; set; } = false;
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x5819ef65u)]
 	public List<MaterialNodeInputSelectItem?> SelectItems { get; set; } = [];
 
-	[DDLRegistration(0xc67a7536u)]
+	[DDLRegistration(0x10b37a44u)]
 	public MaterialNodeInputVisibilityCondition? VisibilityCondition { get; set; } = default;
 
 	public static MaterialNodeInputPort Create(DDLObject ddl) => new(ddl);

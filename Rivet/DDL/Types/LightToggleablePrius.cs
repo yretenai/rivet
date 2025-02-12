@@ -18,7 +18,7 @@ public class LightToggleablePrius : DDLObjectType, IDDLObjectType<LightToggleabl
 		OnByDefault = ddl.GetValue<bool>(0x18adf10du, OnByDefault);
 	}
 
-	[DDLRegistration(0x8d8d7a5eu)]
+	[DDLRegistration(0x18adf10du)]
 	public bool OnByDefault { get; set; } = true;
 
 	public static LightToggleablePrius Create(DDLObject ddl) => new(ddl);

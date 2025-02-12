@@ -18,7 +18,7 @@ public class MountFlyerDropEvent : EventBase, IDDLObjectType<MountFlyerDropEvent
 		DropActor = ddl.GetValue<uint>(0xbe4472cau, DropActor);
 	}
 
-	[DDLRegistration(0x65eb9ad2u)]
+	[DDLRegistration(0xbe4472cau)]
 	public uint DropActor { get; set; } = 0x00000000;
 
 	public new static MountFlyerDropEvent Create(DDLObject ddl) => new(ddl);

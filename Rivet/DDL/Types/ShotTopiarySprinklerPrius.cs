@@ -18,7 +18,7 @@ public class ShotTopiarySprinklerPrius : BasicBulletPrius, IDDLObjectType<ShotTo
 		NoSoundOnReturn = ddl.GetValue<bool>(0x34aa7b5cu, NoSoundOnReturn);
 	}
 
-	[DDLRegistration(0x235ebfa6u)]
+	[DDLRegistration(0x34aa7b5cu)]
 	public bool NoSoundOnReturn { get; set; } = false;
 
 	public new static ShotTopiarySprinklerPrius Create(DDLObject ddl) => new(ddl);

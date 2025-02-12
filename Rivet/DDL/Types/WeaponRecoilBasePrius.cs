@@ -18,7 +18,7 @@ public class WeaponRecoilBasePrius : DDLObjectType, IDDLObjectType<WeaponRecoilB
 		RecoilAnim = ddl.GetString(0x6a8aecf2) ?? RecoilAnim;
 	}
 
-	[DDLRegistration(0x2f04b1a3u)]
+	[DDLRegistration(0x6a8aecf2u)]
 	public string? RecoilAnim { get; set; } = default;
 
 	public static WeaponRecoilBasePrius Create(DDLObject ddl) => new(ddl);

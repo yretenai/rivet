@@ -24,25 +24,25 @@ public class VolcanicEruptorGeyserPrius : DDLObjectType, IDDLObjectType<Volcanic
 		ShotSpawnData = ddl.GetObject<GeyserShotSpawnData>(0xf30d35d1u);
 	}
 
-	[DDLRegistration(0x9d42f384u, "Radius")]
+	[DDLRegistration(0x0504203du, "Radius")]
 	public float Radius { get; set; } = 0.80f;
 
-	[DDLRegistration(0x9d42f384u, "Initial Delay")]
+	[DDLRegistration(0xa795c349u, "Initial Delay")]
 	public float InitialDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9d42f384u, "Damage Type")]
+	[DDLRegistration(0x840c154du, "Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Fire;
 
-	[DDLRegistration(0x9d42f384u, "Debug Draw")]
+	[DDLRegistration(0x6020521bu, "Debug Draw")]
 	public bool DebugDraw { get; set; } = false;
 
-	[DDLRegistration(0x9d42f384u)]
+	[DDLRegistration(0x2447c657u)]
 	public GeyserBurstData? BurstData { get; set; } = default;
 
-	[DDLRegistration(0x9d42f384u)]
+	[DDLRegistration(0x5b64efa5u)]
 	public GeyserFlowData? FlowData { get; set; } = default;
 
-	[DDLRegistration(0x9d42f384u)]
+	[DDLRegistration(0xf30d35d1u)]
 	public GeyserShotSpawnData? ShotSpawnData { get; set; } = default;
 
 	public static VolcanicEruptorGeyserPrius Create(DDLObject ddl) => new(ddl);

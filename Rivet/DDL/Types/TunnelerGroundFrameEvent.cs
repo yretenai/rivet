@@ -20,13 +20,13 @@ public class TunnelerGroundFrameEvent : EventBase, IDDLObjectType<TunnelerGround
 		AudioMaterial = ddl.GetEnum<x10b3c4cf>(0xf14e1df7u, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0xfb1a9035u)]
+	[DDLRegistration(0x39fb8d44u)]
 	public bool IsPuppy { get; set; } = false;
 
-	[DDLRegistration(0xfb1a9035u)]
+	[DDLRegistration(0x4ba3454cu)]
 	public x10b3c4cf GroundMaterial { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0xfb1a9035u)]
+	[DDLRegistration(0xf14e1df7u)]
 	public x10b3c4cf AudioMaterial { get; set; } = x10b3c4cf.None;
 
 	public new static TunnelerGroundFrameEvent Create(DDLObject ddl) => new(ddl);

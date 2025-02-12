@@ -21,16 +21,16 @@ public class CameraShakingWithFallOffData : DDLObjectType, IDDLObjectType<Camera
 		ShakeDataConfig = ddl.GetValue<RivetAssetId>(0x6ccd62e8u, ShakeDataConfig);
 	}
 
-	[DDLRegistration(0xe0f8377cu, description: "Max intensity occurs within this radius of the shake center. Neg = no falloff")]
+	[DDLRegistration(0xf8a3836du, description: "Max intensity occurs within this radius of the shake center. Neg = no falloff")]
 	public float InnerRadius { get; set; } = -1.00f;
 
-	[DDLRegistration(0xe0f8377cu, description: "Min intensity occurs outside this radius of the shake center. Neg = no falloff")]
+	[DDLRegistration(0xf6b6fbdeu, description: "Min intensity occurs outside this radius of the shake center. Neg = no falloff")]
 	public float OuterRadius { get; set; } = -1.00f;
 
-	[DDLRegistration(0xe0f8377cu, description: "True updates position to track actor, false stays at trigger point")]
+	[DDLRegistration(0x6b8aab60u, description: "True updates position to track actor, false stays at trigger point")]
 	public bool FollowActor { get; set; } = false;
 
-	[DDLRegistration(0xe0f8377cu)]
+	[DDLRegistration(0x6ccd62e8u)]
 	public RivetAssetId ShakeDataConfig { get; set; } = default;
 
 	public static CameraShakingWithFallOffData Create(DDLObject ddl) => new(ddl);

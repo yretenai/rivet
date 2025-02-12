@@ -25,28 +25,28 @@ public class TriggerResponderPlayAnimPrius : TriggerResponderBasePrius, IDDLObje
 		AnimSyncMode = ddl.GetEnum<AnimSyncMode>(0xd1591f1cu, AnimSyncModeValues.Lookup);
 	}
 
-	[DDLRegistration(0xd9dd35e9u, "Triggered Anim", "Anim to play when triggered.")]
+	[DDLRegistration(0x933bc277u, "Triggered Anim", "Anim to play when triggered.")]
 	public string? TriggeredAnim { get; set; } = "";
 
-	[DDLRegistration(0xd9dd35e9u, "Triggered Idle Anim", "When the triggered anim completes, what anim to play (should be a looping triggered idle animation).")]
+	[DDLRegistration(0xc0827d3du, "Triggered Idle Anim", "When the triggered anim completes, what anim to play (should be a looping triggered idle animation).")]
 	public string? TriggeredIdleAnim { get; set; } = "";
 
-	[DDLRegistration(0xd9dd35e9u, "UnTrigger Anim", "Anim to play when un-triggered.")]
+	[DDLRegistration(0xb3fb754bu, "UnTrigger Anim", "Anim to play when un-triggered.")]
 	public string? UntriggerAnim { get; set; } = "";
 
-	[DDLRegistration(0xd9dd35e9u, "NonTriggered Idle Anim", "When the un-triggered anim completed, what anim to play (should be a looping non-triggered idle animation).")]
+	[DDLRegistration(0x880c09bfu, "NonTriggered Idle Anim", "When the un-triggered anim completed, what anim to play (should be a looping non-triggered idle animation).")]
 	public string? NontriggeredIdleAnim { get; set; } = "";
 
-	[DDLRegistration(0xd9dd35e9u, "Disabled Idle Anim", "The idle anim to play when disabled.")]
+	[DDLRegistration(0x1810cdfdu, "Disabled Idle Anim", "The idle anim to play when disabled.")]
 	public string? DisabledIdleAnim { get; set; } = "";
 
-	[DDLRegistration(0xd9dd35e9u, "Trigger Group on end", "A switchtrigger group name to trigger after the triggered anim")]
+	[DDLRegistration(0xaff1a4cfu, "Trigger Group on end", "A switchtrigger group name to trigger after the triggered anim")]
 	public string? TriggerGroupOnEnd { get; set; } = "";
 
-	[DDLRegistration(0xd9dd35e9u, "Untrigger Group on end", "A switchtrigger group name to trigger after the untriggered anim")]
+	[DDLRegistration(0xdaeeb0d9u, "Untrigger Group on end", "A switchtrigger group name to trigger after the untriggered anim")]
 	public string? UntriggerGroupOnEnd { get; set; } = "";
 
-	[DDLRegistration(0xd9dd35e9u, "Anim Sync Mode", "If we are untriggered while triggering (or vice versa) where should the new anim start?")]
+	[DDLRegistration(0xd1591f1cu, "Anim Sync Mode", "If we are untriggered while triggering (or vice versa) where should the new anim start?")]
 	public AnimSyncMode AnimSyncMode { get; set; } = AnimSyncMode.OneMinusNormT;
 
 	public new static TriggerResponderPlayAnimPrius Create(DDLObject ddl) => new(ddl);

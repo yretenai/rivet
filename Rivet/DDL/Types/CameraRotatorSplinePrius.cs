@@ -22,19 +22,19 @@ public class CameraRotatorSplinePrius : CameraRotatorBasePrius, IDDLObjectType<C
 		PitchOffset = ddl.GetValue<float>(0x919dc438u, PitchOffset);
 	}
 
-	[DDLRegistration(0xaac8ef2bu, "Guide Spline")]
+	[DDLRegistration(0x71a326d0u, "Guide Spline")]
 	public RivetAssetId GuideSpline { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xaac8ef2bu, "Invert Facing")]
+	[DDLRegistration(0x2f9debb5u, "Invert Facing")]
 	public bool InvertFacing { get; set; } = false;
 
-	[DDLRegistration(0xaac8ef2bu, "Planar Facing")]
+	[DDLRegistration(0x308382a7u, "Planar Facing")]
 	public bool PlanarFacing { get; set; } = false;
 
-	[DDLRegistration(0xaac8ef2bu, "Yaw Offset")]
+	[DDLRegistration(0xe21edee9u, "Yaw Offset")]
 	public float YawOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaac8ef2bu, "Pitch Offset")]
+	[DDLRegistration(0x919dc438u, "Pitch Offset")]
 	public float PitchOffset { get; set; } = 0.00f;
 
 	public new static CameraRotatorSplinePrius Create(DDLObject ddl) => new(ddl);

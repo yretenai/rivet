@@ -18,7 +18,7 @@ public class HeroPhaseDashData : DDLObjectType, IDDLObjectType<HeroPhaseDashData
 		AfterimageData = ddl.GetObject<AfterimageComponentPrius>(0x361db7b1u);
 	}
 
-	[DDLRegistration(0x17d51973u)]
+	[DDLRegistration(0x361db7b1u)]
 	public AfterimageComponentPrius? AfterimageData { get; set; } = default;
 
 	public static HeroPhaseDashData Create(DDLObject ddl) => new(ddl);

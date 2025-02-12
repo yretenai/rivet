@@ -19,10 +19,10 @@ public class DamageModifierInjuredPrius : DDLObjectType, IDDLObjectType<DamageMo
 		OnlyHeroDamage = ddl.GetValue<bool>(0xaa3cf10au, OnlyHeroDamage);
 	}
 
-	[DDLRegistration(0xe22a20f1u, "Damage Scale")]
+	[DDLRegistration(0x7493bd0au, "Damage Scale")]
 	public float DamageScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xe22a20f1u, "Only Hero Damage")]
+	[DDLRegistration(0xaa3cf10au, "Only Hero Damage")]
 	public bool OnlyHeroDamage { get; set; } = true;
 
 	public static DamageModifierInjuredPrius Create(DDLObject ddl) => new(ddl);

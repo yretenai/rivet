@@ -25,28 +25,28 @@ public class MeshDef : DDLObjectType, IDDLObjectType<MeshDef> {
 		Tris = ddl.GetObjects<MeshTriDef>(0xdfcf6431u);
 	}
 
-	[DDLRegistration(0xa5f634eau)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xa5f634eau)]
+	[DDLRegistration(0x54627a70u)]
 	public List<MeshPosDef?> Positions { get; set; } = [];
 
-	[DDLRegistration(0xa5f634eau)]
+	[DDLRegistration(0xbda20f3au)]
 	public List<MeshNormalDef?> Normals { get; set; } = [];
 
-	[DDLRegistration(0xa5f634eau)]
+	[DDLRegistration(0xa2c38034u)]
 	public List<MeshUvDef?> UVs { get; set; } = [];
 
-	[DDLRegistration(0xa5f634eau)]
+	[DDLRegistration(0x017869f7u)]
 	public List<MeshUvDef?> UV2s { get; set; } = [];
 
-	[DDLRegistration(0xa5f634eau)]
+	[DDLRegistration(0xfcc68df8u)]
 	public List<MeshUColorDef?> Colors { get; set; } = [];
 
-	[DDLRegistration(0xa5f634eau)]
+	[DDLRegistration(0x620ab253u)]
 	public List<MeshSkinVertDef?> SkinVerts { get; set; } = [];
 
-	[DDLRegistration(0xa5f634eau)]
+	[DDLRegistration(0xdfcf6431u)]
 	public List<MeshTriDef?> Tris { get; set; } = [];
 
 	public static MeshDef Create(DDLObject ddl) => new(ddl);

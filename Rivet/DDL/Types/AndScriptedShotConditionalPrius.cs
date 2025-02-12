@@ -19,10 +19,10 @@ public class AndScriptedShotConditionalPrius : ScriptedShotConditionalBasePrius,
 		Cond2 = ddl.GetObject<ScriptedShotConditionalBasePrius>(0xe9a9c81du);
 	}
 
-	[DDLRegistration(0x431d3220u)]
+	[DDLRegistration(0x70a099a7u)]
 	public ScriptedShotConditionalBasePrius? Cond1 { get; set; } = default;
 
-	[DDLRegistration(0x431d3220u)]
+	[DDLRegistration(0xe9a9c81du)]
 	public ScriptedShotConditionalBasePrius? Cond2 { get; set; } = default;
 
 	public new static AndScriptedShotConditionalPrius Create(DDLObject ddl) => new(ddl);

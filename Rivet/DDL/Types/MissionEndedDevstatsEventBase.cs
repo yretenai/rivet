@@ -23,22 +23,22 @@ public class MissionEndedDevstatsEventBase : EventBase, IDDLObjectType<MissionEn
 		MissionDeathCount = ddl.GetValue<uint>(0xb6da3de4u, MissionDeathCount);
 	}
 
-	[DDLRegistration(0xcd8ba1d6u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0xcd8ba1d6u)]
+	[DDLRegistration(0x31119511u)]
 	public MissionResult MissionResult { get; set; } = MissionResult.Failed;
 
-	[DDLRegistration(0xcd8ba1d6u)]
+	[DDLRegistration(0x9474e823u)]
 	public float MissionTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xcd8ba1d6u)]
+	[DDLRegistration(0x57982a43u)]
 	public float TimeInMenu { get; set; } = -1.00f;
 
-	[DDLRegistration(0xcd8ba1d6u)]
+	[DDLRegistration(0x496f9ba1u)]
 	public uint MissionFailureCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcd8ba1d6u)]
+	[DDLRegistration(0xb6da3de4u)]
 	public uint MissionDeathCount { get; set; } = 0x00000000;
 
 	public new static MissionEndedDevstatsEventBase Create(DDLObject ddl) => new(ddl);

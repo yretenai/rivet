@@ -20,13 +20,13 @@ public class ECMEvent : DDLObjectType, IDDLObjectType<ECMEvent> {
 		IsValid = ddl.GetValue<bool>(0x84fa27f9u, IsValid);
 	}
 
-	[DDLRegistration(0xfd40682eu, "Event Name")]
+	[DDLRegistration(0x6eb3beb6u, "Event Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xfd40682eu, "Filter List")]
+	[DDLRegistration(0x799d04b5u, "Filter List")]
 	public List<ECMFilter?> Filters { get; set; } = [];
 
-	[DDLRegistration(0xfd40682eu)]
+	[DDLRegistration(0x84fa27f9u)]
 	public bool IsValid { get; set; } = true;
 
 	public static ECMEvent Create(DDLObject ddl) => new(ddl);

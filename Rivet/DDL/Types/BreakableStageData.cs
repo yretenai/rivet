@@ -25,28 +25,28 @@ public class BreakableStageData : DDLObjectType, IDDLObjectType<BreakableStageDa
 		ManualBreak = ddl.GetValue<bool>(0x6a479137u, ManualBreak);
 	}
 
-	[DDLRegistration(0xb2563cc8u, "Damaged model", "Model to switch to when state is switched to damaged.")]
+	[DDLRegistration(0xcec6be18u, "Damaged model", "Model to switch to when state is switched to damaged.")]
 	public RivetAssetId Model { get; set; } = default;
 
-	[DDLRegistration(0xb2563cc8u, "Damaged anim set", "Anim set to switch to when state is switched to damaged.")]
+	[DDLRegistration(0xffcf15f1u, "Damaged anim set", "Anim set to switch to when state is switched to damaged.")]
 	public RivetAssetId AnimSet { get; set; } = default;
 
-	[DDLRegistration(0xb2563cc8u, description: "Activate this driver when switching to this stage")]
+	[DDLRegistration(0x10f54dceu, description: "Activate this driver when switching to this stage")]
 	public string? AnimDriver { get; set; } = default;
 
-	[DDLRegistration(0xb2563cc8u, "DEPRECATED - Damaged chunk models", "Chunk models flying off whole model when switching to damaged model. Placed at Locator igLoc_chunk01, igLoc_chunk02, ... on original model.")]
+	[DDLRegistration(0x4901ec1au, "DEPRECATED - Damaged chunk models", "Chunk models flying off whole model when switching to damaged model. Placed at Locator igLoc_chunk01, igLoc_chunk02, ... on original model.")]
 	public List<RivetAssetId> ChunkModels { get; set; } = [];
 
-	[DDLRegistration(0xb2563cc8u, "Spawnable Damaged chunk models", "Chunk models flying off whole model when switching to damaged model, which can optionally have collision. Specify a locator per chunk, or leave blank for igLoc_ncchunk01, igLoc_ncchunk02, ... on original model.")]
+	[DDLRegistration(0xb1362cd8u, "Spawnable Damaged chunk models", "Chunk models flying off whole model when switching to damaged model, which can optionally have collision. Specify a locator per chunk, or leave blank for igLoc_ncchunk01, igLoc_ncchunk02, ... on original model.")]
 	public List<SpawnableChunk?> NoncollidingChunkModels { get; set; } = [];
 
-	[DDLRegistration(0xb2563cc8u, "DEPRECATED - Damaged debris models", "A number of debris flying off whole model at locator igLoc_chunk01, igLoc_chunk02, ... on original model.")]
+	[DDLRegistration(0xf9574946u, "DEPRECATED - Damaged debris models", "A number of debris flying off whole model at locator igLoc_chunk01, igLoc_chunk02, ... on original model.")]
 	public List<RivetAssetId> DebrisModels { get; set; } = [];
 
-	[DDLRegistration(0xb2563cc8u, "Trigger at this health or less")]
+	[DDLRegistration(0x3b00cce2u, "Trigger at this health or less")]
 	public float BrokenAtHealth { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb2563cc8u, "Trigger stage only manual")]
+	[DDLRegistration(0x6a479137u, "Trigger stage only manual")]
 	public bool ManualBreak { get; set; } = false;
 
 	public static BreakableStageData Create(DDLObject ddl) => new(ddl);

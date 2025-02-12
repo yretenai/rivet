@@ -24,25 +24,25 @@ public class UI_OutsourceModelDef : DDLObjectType, IDDLObjectType<UI_OutsourceMo
 		LookGroups = ddl.GetObjects<LookGroupDef>(0xb6c4ab29u);
 	}
 
-	[DDLRegistration(0xb121af59u, "Geom Lod Dist 1", "Distance that geometry transitions from lod 0 to lod 1")]
+	[DDLRegistration(0x7f1cf23fu, "Geom Lod Dist 1", "Distance that geometry transitions from lod 0 to lod 1")]
 	public ushort GeomLodDist1 { get; set; } = 0x000f;
 
-	[DDLRegistration(0xb121af59u, "Geom Lod Dist 2", "Distance that geometry transitions from lod 1 to lod 2")]
+	[DDLRegistration(0xe615a385u, "Geom Lod Dist 2", "Distance that geometry transitions from lod 1 to lod 2")]
 	public ushort GeomLodDist2 { get; set; } = 0x001e;
 
-	[DDLRegistration(0xb121af59u, "Geom Lod Dist 3", "Distance that geometry transitions from lod 2 to lod 3")]
+	[DDLRegistration(0x91129313u, "Geom Lod Dist 3", "Distance that geometry transitions from lod 2 to lod 3")]
 	public ushort GeomLodDist3 { get; set; } = 0x006e;
 
-	[DDLRegistration(0xb121af59u, "Geom Lod Dist 4", "Distance that geometry transitions from lod 3 to lod 4")]
+	[DDLRegistration(0x0f7606b0u, "Geom Lod Dist 4", "Distance that geometry transitions from lod 3 to lod 4")]
 	public ushort GeomLodDist4 { get; set; } = 0x00a0;
 
-	[DDLRegistration(0xb121af59u, "Geom Lod Dist 5", "Distance that geometry transitions from lod 4 to lod 5")]
+	[DDLRegistration(0x78713626u, "Geom Lod Dist 5", "Distance that geometry transitions from lod 4 to lod 5")]
 	public ushort GeomLodDist5 { get; set; } = 0x00d2;
 
-	[DDLRegistration(0xb121af59u, description: "Materials applied to this model")]
+	[DDLRegistration(0x19ea89b9u, description: "Materials applied to this model")]
 	public List<UI_OutsourceMaterialDef?> Materials { get; set; } = [];
 
-	[DDLRegistration(0xb121af59u, description: "Custom made look groups.")]
+	[DDLRegistration(0xb6c4ab29u, description: "Custom made look groups.")]
 	public List<LookGroupDef?> LookGroups { get; set; } = [];
 
 	public static UI_OutsourceModelDef Create(DDLObject ddl) => new(ddl);

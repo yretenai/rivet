@@ -20,13 +20,13 @@ public class ModifyNavActionPrius : DDLObjectType, IDDLObjectType<ModifyNavActio
 		PolyFlags = ddl.GetBitset<xc204b456>(0xf141195bu, xc204b456Values.Lookup);
 	}
 
-	[DDLRegistration(0xca6daf04u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0xca6daf04u)]
+	[DDLRegistration(0xded416e8u)]
 	public uint MeshTemplate { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xca6daf04u, description: "Nav Poly Flags to Change")]
+	[DDLRegistration(0xf141195bu, description: "Nav Poly Flags to Change")]
 	public xc204b456 PolyFlags { get; set; } = (xc204b456) 0x00000001;
 
 	public static ModifyNavActionPrius Create(DDLObject ddl) => new(ddl);

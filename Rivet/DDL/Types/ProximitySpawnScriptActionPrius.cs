@@ -20,13 +20,13 @@ public class ProximitySpawnScriptActionPrius : DDLObjectType, IDDLObjectType<Pro
 		SpawnConfig = ddl.GetValue<RivetAssetId>(0x2332e062u, SpawnConfig);
 	}
 
-	[DDLRegistration(0x32d44800u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Spawning;
 
-	[DDLRegistration(0x32d44800u, description: "Automatically stop when the script node unloads if the node was enabled")]
+	[DDLRegistration(0xcfcbf776u, description: "Automatically stop when the script node unloads if the node was enabled")]
 	public bool StopOnDestroy { get; set; } = false;
 
-	[DDLRegistration(0x32d44800u, description: "Describes how the Proximity Spawn System should spawn")]
+	[DDLRegistration(0x2332e062u, description: "Describes how the Proximity Spawn System should spawn")]
 	public RivetAssetId SpawnConfig { get; set; } = default;
 
 	public static ProximitySpawnScriptActionPrius Create(DDLObject ddl) => new(ddl);

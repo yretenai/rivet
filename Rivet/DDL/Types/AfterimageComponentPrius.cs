@@ -25,28 +25,28 @@ public class AfterimageComponentPrius : DDLObjectType, IDDLObjectType<Afterimage
 		ExpireDuration = ddl.GetValue<float>(0x9afa4336u, ExpireDuration);
 	}
 
-	[DDLRegistration(0x42c5baeau)]
+	[DDLRegistration(0xec0c4441u)]
 	public RivetAssetId ActorMaterial { get; set; } = default;
 
-	[DDLRegistration(0x42c5baeau)]
+	[DDLRegistration(0x15410949u)]
 	public string? ActorMaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x42c5baeau)]
+	[DDLRegistration(0x01146a29u)]
 	public RivetAssetId AfterimageMaterial { get; set; } = default;
 
-	[DDLRegistration(0x42c5baeau)]
+	[DDLRegistration(0xa10f9d8eu)]
 	public string? AfterimageMaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x42c5baeau)]
+	[DDLRegistration(0xe3c752bbu)]
 	public float Interval { get; set; } = 0.07f;
 
-	[DDLRegistration(0x42c5baeau)]
+	[DDLRegistration(0x01d2a06eu)]
 	public uint NumAfterimages { get; set; } = 0x00000004;
 
-	[DDLRegistration(0x42c5baeau)]
+	[DDLRegistration(0x9e5fe009u)]
 	public uint MinLoD { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x42c5baeau)]
+	[DDLRegistration(0x9afa4336u)]
 	public float ExpireDuration { get; set; } = 0.50f;
 
 	public static AfterimageComponentPrius Create(DDLObject ddl) => new(ddl);

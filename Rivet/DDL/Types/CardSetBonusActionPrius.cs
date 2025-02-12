@@ -19,10 +19,10 @@ public class CardSetBonusActionPrius : DDLObjectType, IDDLObjectType<CardSetBonu
 		BonusType = ddl.GetEnum<BonusType>(0x2c168649u, BonusTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x06a59a77u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0x06a59a77u, description: "Trading card bonus type")]
+	[DDLRegistration(0x2c168649u, description: "Trading card bonus type")]
 	public BonusType BonusType { get; set; } = BonusType.BonusBolts;
 
 	public static CardSetBonusActionPrius Create(DDLObject ddl) => new(ddl);

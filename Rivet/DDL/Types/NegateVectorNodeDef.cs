@@ -19,10 +19,10 @@ public class NegateVectorNodeDef : MathNodeBaseDef, IDDLObjectType<NegateVectorN
 		Negation = ddl.GetObject<OutputPlugVec3>(0xd95b2e9eu);
 	}
 
-	[DDLRegistration(0xf5049f8eu)]
+	[DDLRegistration(0x49594b39u)]
 	public InputPlugVec3? Vec { get; set; } = default;
 
-	[DDLRegistration(0xf5049f8eu)]
+	[DDLRegistration(0xd95b2e9eu)]
 	public OutputPlugVec3? Negation { get; set; } = default;
 
 	public new static NegateVectorNodeDef Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class StatusEmitterVolumePrius : StatusEmitterBasePrius, IDDLObjectType<S
 		ValidTargetTypes = ddl.GetBitset<TargetType>(0x3b4c9303u, TargetTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0xfcf85747u)]
+	[DDLRegistration(0x4bdbf9d3u)]
 	public bool Self { get; set; } = false;
 
-	[DDLRegistration(0xfcf85747u)]
+	[DDLRegistration(0x20041351u)]
 	public bool Friends { get; set; } = false;
 
-	[DDLRegistration(0xfcf85747u)]
+	[DDLRegistration(0x79e82906u)]
 	public bool Enemies { get; set; } = false;
 
-	[DDLRegistration(0xfcf85747u, description: "This is the types of target that can receive the effect of this status effect. If this is left unchanged, then all targets are valid.")]
+	[DDLRegistration(0x3b4c9303u, description: "This is the types of target that can receive the effect of this status effect. If this is left unchanged, then all targets are valid.")]
 	public TargetType ValidTargetTypes { get; set; } = (TargetType) 0x00000000;
 
 	public new static StatusEmitterVolumePrius Create(DDLObject ddl) => new(ddl);

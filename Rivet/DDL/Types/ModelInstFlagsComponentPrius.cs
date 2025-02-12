@@ -20,13 +20,13 @@ public class ModelInstFlagsComponentPrius : DDLObjectType, IDDLObjectType<ModelI
 		ForceOcclusion = ddl.GetValue<bool>(0x35003a73u, ForceOcclusion);
 	}
 
-	[DDLRegistration(0x045eaf0du)]
+	[DDLRegistration(0xf4caba71u)]
 	public bool IsBot { get; set; } = false;
 
-	[DDLRegistration(0x045eaf0du)]
+	[DDLRegistration(0xce8b35edu)]
 	public bool IsHero { get; set; } = false;
 
-	[DDLRegistration(0x045eaf0du)]
+	[DDLRegistration(0x35003a73u)]
 	public bool ForceOcclusion { get; set; } = false;
 
 	public static ModelInstFlagsComponentPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class GrindVolumeApproachData : DDLObjectType, IDDLObjectType<GrindVolume
 		ApproachDoneDistance = ddl.GetValue<float>(0x227583a9u, ApproachDoneDistance);
 	}
 
-	[DDLRegistration(0x688620fdu, description: "Distance from a gap to consider us strating the approach. (meters)")]
+	[DDLRegistration(0x4c8c0423u, description: "Distance from a gap to consider us strating the approach. (meters)")]
 	public float ApproachStartDistance { get; set; } = 30.00f;
 
-	[DDLRegistration(0x688620fdu, description: "Distance from a gap to consider us effectively at the gap. (meters)")]
+	[DDLRegistration(0x227583a9u, description: "Distance from a gap to consider us effectively at the gap. (meters)")]
 	public float ApproachDoneDistance { get; set; } = 5.00f;
 
 	public static GrindVolumeApproachData Create(DDLObject ddl) => new(ddl);

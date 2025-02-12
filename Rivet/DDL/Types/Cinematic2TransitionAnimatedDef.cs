@@ -25,28 +25,28 @@ public class Cinematic2TransitionAnimatedDef : DDLObjectType, IDDLObjectType<Cin
 		TextureName = ddl.GetString(0x8a32558a) ?? TextureName;
 	}
 
-	[DDLRegistration(0x65196c09u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x65196c09u, description: "This specifies the shot where the transition occurs (the DurationBefore happens before this shot's start time; the DurationAfter happens after this shot's start time).")]
+	[DDLRegistration(0xf097daf3u, description: "This specifies the shot where the transition occurs (the DurationBefore happens before this shot's start time; the DurationAfter happens after this shot's start time).")]
 	public RivetAssetId ShotId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x65196c09u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.50f;
 
-	[DDLRegistration(0x65196c09u)]
+	[DDLRegistration(0xef116147u)]
 	public x010205e3 StartType { get; set; } = x010205e3.BeginningOfShot;
 
-	[DDLRegistration(0x65196c09u)]
+	[DDLRegistration(0xc6252625u)]
 	public x53914cb6 SmoothingType { get; set; } = x53914cb6.SmoothingLinear;
 
-	[DDLRegistration(0x65196c09u, description: "This specifies the actor to spawn to play the transition.")]
+	[DDLRegistration(0x993db828u, description: "This specifies the actor to spawn to play the transition.")]
 	public RivetAssetId ActorPath { get; set; } = default;
 
-	[DDLRegistration(0x65196c09u, description: "This specifies the anim clip that the actor will play for the transition.")]
+	[DDLRegistration(0x6ba87919u, description: "This specifies the anim clip that the actor will play for the transition.")]
 	public string? AnimClipName { get; set; } = default;
 
-	[DDLRegistration(0x65196c09u, description: "This specifies the texture that will be replaced with the frame buffer.")]
+	[DDLRegistration(0x8a32558au, description: "This specifies the texture that will be replaced with the frame buffer.")]
 	public string? TextureName { get; set; } = default;
 
 	public static Cinematic2TransitionAnimatedDef Create(DDLObject ddl) => new(ddl);

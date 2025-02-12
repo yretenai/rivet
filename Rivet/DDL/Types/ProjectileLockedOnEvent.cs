@@ -19,10 +19,10 @@ public class ProjectileLockedOnEvent : EventBase, IDDLObjectType<ProjectileLocke
 		VictimLocator = ddl.GetString(0x3aca9e14) ?? VictimLocator;
 	}
 
-	[DDLRegistration(0x1c478ddcu)]
+	[DDLRegistration(0xede29c11u)]
 	public uint VictimActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1c478ddcu)]
+	[DDLRegistration(0x3aca9e14u)]
 	public string? VictimLocator { get; set; } = default;
 
 	public new static ProjectileLockedOnEvent Create(DDLObject ddl) => new(ddl);

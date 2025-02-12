@@ -24,25 +24,25 @@ public class CameraTweakerPrius : DDLObjectType, IDDLObjectType<CameraTweakerPri
 		SafeZoneTweak = ddl.GetObject<CameraSafeZoneTweak>(0xb58dcd08u);
 	}
 
-	[DDLRegistration(0x04bf5c69u, "Start Active")]
+	[DDLRegistration(0x3e035e82u, "Start Active")]
 	public bool StartActive { get; set; } = true;
 
-	[DDLRegistration(0x04bf5c69u, "Casual Mode Only")]
+	[DDLRegistration(0x94978c32u, "Casual Mode Only")]
 	public bool CasualModeOnly { get; set; } = false;
 
-	[DDLRegistration(0x04bf5c69u, "Distance Tweak")]
+	[DDLRegistration(0x6c21a67au, "Distance Tweak")]
 	public CameraDistanceTweak? DistanceTweak { get; set; } = default;
 
-	[DDLRegistration(0x04bf5c69u, "Height Tweak")]
+	[DDLRegistration(0xea6791a5u, "Height Tweak")]
 	public CameraHeightTweak? HeightTweak { get; set; } = default;
 
-	[DDLRegistration(0x04bf5c69u, "Pitch Tweak")]
+	[DDLRegistration(0x9b37dadeu, "Pitch Tweak")]
 	public CameraPitchTweak? PitchTweak { get; set; } = default;
 
-	[DDLRegistration(0x04bf5c69u, "Forward Tweak")]
+	[DDLRegistration(0xfd5498f8u, "Forward Tweak")]
 	public CameraForwardTweak? ForwardTweak { get; set; } = default;
 
-	[DDLRegistration(0x04bf5c69u, "Safe Zone Tweak")]
+	[DDLRegistration(0xb58dcd08u, "Safe Zone Tweak")]
 	public CameraSafeZoneTweak? SafeZoneTweak { get; set; } = default;
 
 	public static CameraTweakerPrius Create(DDLObject ddl) => new(ddl);

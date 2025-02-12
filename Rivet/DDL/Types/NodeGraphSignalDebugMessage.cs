@@ -23,22 +23,22 @@ public class NodeGraphSignalDebugMessage : DDLObjectType, IDDLObjectType<NodeGra
 		WorldFrameIndex = ddl.GetValue<uint>(0xe0a900bau, WorldFrameIndex);
 	}
 
-	[DDLRegistration(0x26fa579eu)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x26fa579eu)]
+	[DDLRegistration(0x1398be22u)]
 	public RivetAssetId ConnectionId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x26fa579eu)]
+	[DDLRegistration(0x76b05713u)]
 	public RivetAssetId GraphId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x26fa579eu)]
+	[DDLRegistration(0x55ffc909u)]
 	public RivetAssetId ActorContextId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x26fa579eu)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x26fa579eu)]
+	[DDLRegistration(0xe0a900bau)]
 	public uint WorldFrameIndex { get; set; } = 0x00000000;
 
 	public static NodeGraphSignalDebugMessage Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class BotComboFinishedEvent : EventBase, IDDLObjectType<BotComboFinishedE
 		ComboHit = ddl.GetValue<bool>(0x15ba9f02u, ComboHit);
 	}
 
-	[DDLRegistration(0x4326dac4u)]
+	[DDLRegistration(0x63bbe918u)]
 	public string? ComboName { get; set; } = default;
 
-	[DDLRegistration(0x4326dac4u)]
+	[DDLRegistration(0x15ba9f02u)]
 	public bool ComboHit { get; set; } = false;
 
 	public new static BotComboFinishedEvent Create(DDLObject ddl) => new(ddl);

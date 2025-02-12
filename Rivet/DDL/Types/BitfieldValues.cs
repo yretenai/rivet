@@ -20,13 +20,13 @@ public class BitfieldValues : DDLObjectType, IDDLObjectType<BitfieldValues> {
 		MultiValue = ddl.GetBitset<x2c9c3cc7>(0x0c9da066u, x2c9c3cc7Values.Lookup);
 	}
 
-	[DDLRegistration(0xb7692b81u)]
+	[DDLRegistration(0x481185beu)]
 	public BitsB NoDefault { get; set; } = (BitsB) 0x00000000;
 
-	[DDLRegistration(0xb7692b81u)]
+	[DDLRegistration(0x20827aa1u)]
 	public x1ea7317b SingleDefault { get; set; } = (x1ea7317b) 0x00000002;
 
-	[DDLRegistration(0xb7692b81u)]
+	[DDLRegistration(0x0c9da066u)]
 	public x2c9c3cc7 MultiValue { get; set; } = (x2c9c3cc7) 0x00000003;
 
 	public static BitfieldValues Create(DDLObject ddl) => new(ddl);

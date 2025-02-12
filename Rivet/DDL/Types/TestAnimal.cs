@@ -18,7 +18,7 @@ public class TestAnimal : DDLObjectType, IDDLObjectType<TestAnimal> {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0x37d73287u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
 	public static TestAnimal Create(DDLObject ddl) => new(ddl);

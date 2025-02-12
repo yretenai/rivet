@@ -18,7 +18,7 @@ public class DimensionPortalTargetAddedEvent : EventBase, IDDLObjectType<Dimensi
 		TargetActorUid = ddl.GetValue<ulong>(0x0943bc78u, TargetActorUid);
 	}
 
-	[DDLRegistration(0x60c3efe1u)]
+	[DDLRegistration(0x0943bc78u)]
 	public ulong TargetActorUid { get; set; } = 0x0000000000000000;
 
 	public new static DimensionPortalTargetAddedEvent Create(DDLObject ddl) => new(ddl);

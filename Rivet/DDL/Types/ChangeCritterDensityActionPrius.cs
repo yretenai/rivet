@@ -20,13 +20,13 @@ public class ChangeCritterDensityActionPrius : DDLObjectType, IDDLObjectType<Cha
 		DensityOverride = ddl.GetObject<CritterDensity>(0x25a9d44fu);
 	}
 
-	[DDLRegistration(0xf803062cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Ambient;
 
-	[DDLRegistration(0xf803062cu)]
+	[DDLRegistration(0x28c9178du)]
 	public List<string?> CritterTypes { get; set; } = [];
 
-	[DDLRegistration(0xf803062cu)]
+	[DDLRegistration(0x25a9d44fu)]
 	public CritterDensity? DensityOverride { get; set; } = default;
 
 	public static ChangeCritterDensityActionPrius Create(DDLObject ddl) => new(ddl);

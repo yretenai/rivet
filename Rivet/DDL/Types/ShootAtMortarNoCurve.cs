@@ -22,19 +22,19 @@ public class ShootAtMortarNoCurve : ShootAtMortarFiringStyle, IDDLObjectType<Sho
 		AimMods = ddl.GetObjects<AimModWrapper>(0x1d7694a1u);
 	}
 
-	[DDLRegistration(0xe444ce26u, description: "If true, the laser fires at a position based on what AimingComponent wants. AimMods can be optionally added to modify the firing pattern")]
+	[DDLRegistration(0x2fc3f981u, description: "If true, the laser fires at a position based on what AimingComponent wants. AimMods can be optionally added to modify the firing pattern")]
 	public bool UseAimingComponent { get; set; } = false;
 
-	[DDLRegistration(0xe444ce26u, description: "If true, AimMods kick in during Targeting stage instead of just the Shooting phase of this combo")]
+	[DDLRegistration(0xceb7741cu, description: "If true, AimMods kick in during Targeting stage instead of just the Shooting phase of this combo")]
 	public bool StartAimModOnStateStart { get; set; } = false;
 
-	[DDLRegistration(0xe444ce26u, description: "If true, AimMods turn off after the Shooting phase of this combo")]
+	[DDLRegistration(0x7560b934u, description: "If true, AimMods turn off after the Shooting phase of this combo")]
 	public bool EndAimModsOnShootEnd { get; set; } = false;
 
-	[DDLRegistration(0xe444ce26u, description: "Mimics a shot every this amount of seconds by queuing WeaponBurstShotCountedEvent while not in firing loop")]
+	[DDLRegistration(0xd7ef4376u, description: "Mimics a shot every this amount of seconds by queuing WeaponBurstShotCountedEvent while not in firing loop")]
 	public float MimicShotRate { get; set; } = 0.25f;
 
-	[DDLRegistration(0xe444ce26u)]
+	[DDLRegistration(0x1d7694a1u)]
 	public List<AimModWrapper?> AimMods { get; set; } = [];
 
 	public new static ShootAtMortarNoCurve Create(DDLObject ddl) => new(ddl);

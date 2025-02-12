@@ -19,10 +19,10 @@ public class DodgeConfig : DDLObjectType, IDDLObjectType<DodgeConfig> {
 		Cooldown = ddl.GetValue<float>(0x246291a9u, Cooldown);
 	}
 
-	[DDLRegistration(0x4671cbd1u, "Damage For Dodge", "A target must receive this much damage to dodge roll.")]
+	[DDLRegistration(0x85f53d4du, "Damage For Dodge", "A target must receive this much damage to dodge roll.")]
 	public float DamageForDodge { get; set; } = 10.00f;
 
-	[DDLRegistration(0x4671cbd1u, "Cooldown", "Must wait at least this long between dodge rolls.")]
+	[DDLRegistration(0x246291a9u, "Cooldown", "Must wait at least this long between dodge rolls.")]
 	public float Cooldown { get; set; } = 1.00f;
 
 	public static DodgeConfig Create(DDLObject ddl) => new(ddl);

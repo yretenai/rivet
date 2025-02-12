@@ -22,19 +22,19 @@ public class MagShieldPrius : DDLObjectType, IDDLObjectType<MagShieldPrius> {
 		DeployDuration = ddl.GetValue<float>(0x1d2d739bu, DeployDuration);
 	}
 
-	[DDLRegistration(0x86d80657u)]
+	[DDLRegistration(0x0a311f7cu)]
 	public RivetAssetId SuspendedShotAsset { get; set; } = default;
 
-	[DDLRegistration(0x86d80657u)]
+	[DDLRegistration(0x8c17043au)]
 	public RivetAssetId SuspendedLaserAsset { get; set; } = default;
 
-	[DDLRegistration(0x86d80657u, description: "Camera Shake config to activate when a projectile is caught by the shield.")]
+	[DDLRegistration(0xa943cf8bu, description: "Camera Shake config to activate when a projectile is caught by the shield.")]
 	public RivetAssetId CameraShakeCollectImpact { get; set; } = default;
 
-	[DDLRegistration(0x86d80657u, description: "Camera Shake config to activate when a projectile impacts the shield and is not caught (because it is full).")]
+	[DDLRegistration(0xe9a54ce9u, description: "Camera Shake config to activate when a projectile impacts the shield and is not caught (because it is full).")]
 	public RivetAssetId CameraShakeFullImpact { get; set; } = default;
 
-	[DDLRegistration(0x86d80657u, description: "How long it takes for the shield to fully deploy and settle into the normal shield scale.")]
+	[DDLRegistration(0x1d2d739bu, description: "How long it takes for the shield to fully deploy and settle into the normal shield scale.")]
 	public float DeployDuration { get; set; } = 0.25f;
 
 	public static MagShieldPrius Create(DDLObject ddl) => new(ddl);

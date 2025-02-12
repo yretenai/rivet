@@ -21,16 +21,16 @@ public class PirateChallengeSongElement : DDLObjectType, IDDLObjectType<PirateCh
 		BackpackLine = ddl.GetString(0xb8ffcc37) ?? BackpackLine;
 	}
 
-	[DDLRegistration(0x28ed49e8u, "Pirate Type")]
+	[DDLRegistration(0x3148c575u, "Pirate Type")]
 	public PirateTypes PirateType { get; set; } = PirateTypes.Green;
 
-	[DDLRegistration(0x28ed49e8u)]
+	[DDLRegistration(0xed6697d6u)]
 	public string? DemoLine { get; set; } = default;
 
-	[DDLRegistration(0x28ed49e8u)]
+	[DDLRegistration(0x484932d7u)]
 	public string? HeroLine { get; set; } = default;
 
-	[DDLRegistration(0x28ed49e8u)]
+	[DDLRegistration(0xb8ffcc37u)]
 	public string? BackpackLine { get; set; } = default;
 
 	public static PirateChallengeSongElement Create(DDLObject ddl) => new(ddl);

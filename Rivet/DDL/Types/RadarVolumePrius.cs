@@ -18,7 +18,7 @@ public class RadarVolumePrius : DDLObjectType, IDDLObjectType<RadarVolumePrius> 
 		RadarTexture = ddl.GetValue<RivetAssetId>(0x4ca6e4ecu, RadarTexture);
 	}
 
-	[DDLRegistration(0xf9ea4832u)]
+	[DDLRegistration(0x4ca6e4ecu)]
 	public RivetAssetId RadarTexture { get; set; } = default;
 
 	public static RadarVolumePrius Create(DDLObject ddl) => new(ddl);

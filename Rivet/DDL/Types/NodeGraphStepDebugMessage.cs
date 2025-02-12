@@ -18,7 +18,7 @@ public class NodeGraphStepDebugMessage : DDLObjectType, IDDLObjectType<NodeGraph
 		ActorContextId = ddl.GetValue<uint>(0x55ffc909u, ActorContextId);
 	}
 
-	[DDLRegistration(0x7f4ce433u)]
+	[DDLRegistration(0x55ffc909u)]
 	public uint ActorContextId { get; set; } = 0x00000000;
 
 	public static NodeGraphStepDebugMessage Create(DDLObject ddl) => new(ddl);

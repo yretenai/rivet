@@ -19,10 +19,10 @@ public class GoldBoltRewardItem : DDLObjectType, IDDLObjectType<GoldBoltRewardIt
 		GoldBoltType = ddl.GetEnum<GoldBoltReward>(0x85637a79u, GoldBoltRewardValues.Lookup);
 	}
 
-	[DDLRegistration(0x5c77e1b2u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x5c77e1b2u, "Gold Bolt Reward Type")]
+	[DDLRegistration(0x85637a79u, "Gold Bolt Reward Type")]
 	public GoldBoltReward GoldBoltType { get; set; } = GoldBoltReward.None;
 
 	public static GoldBoltRewardItem Create(DDLObject ddl) => new(ddl);

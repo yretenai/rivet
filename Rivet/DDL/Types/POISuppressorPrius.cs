@@ -23,22 +23,22 @@ public class POISuppressorPrius : DDLObjectType, IDDLObjectType<POISuppressorPri
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x6d6ad3dbu)]
+	[DDLRegistration(0x98a76157u)]
 	public xfb0b3aad Priority { get; set; } = xfb0b3aad.POIPriorityNormal;
 
-	[DDLRegistration(0x6d6ad3dbu)]
+	[DDLRegistration(0x3f9460c6u)]
 	public float AutoDeleteTimer { get; set; } = 2.00f;
 
-	[DDLRegistration(0x6d6ad3dbu)]
+	[DDLRegistration(0x423eb5c8u)]
 	public bool UseActorPosition { get; set; } = true;
 
-	[DDLRegistration(0x6d6ad3dbu)]
+	[DDLRegistration(0x4a41698cu)]
 	public bool Dynamic { get; set; } = false;
 
-	[DDLRegistration(0x6d6ad3dbu)]
+	[DDLRegistration(0x1b00f200u)]
 	public DDLVector3? OverridePosition { get; set; } = default;
 
-	[DDLRegistration(0x6d6ad3dbu)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
 	public static POISuppressorPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class HitReactPrius : DDLObjectType, IDDLObjectType<HitReactPrius> {
 		SlowDownOnHit = ddl.GetValue<bool>(0xc0d2ff43u, SlowDownOnHit);
 	}
 
-	[DDLRegistration(0x27230b9eu, "React To Friendly Damage")]
+	[DDLRegistration(0x5fc5e135u, "React To Friendly Damage")]
 	public bool ReactToIgnoredDamage { get; set; } = true;
 
-	[DDLRegistration(0x27230b9eu, description: "Slow the bot down each time he gets hit.")]
+	[DDLRegistration(0xc0d2ff43u, description: "Slow the bot down each time he gets hit.")]
 	public bool SlowDownOnHit { get; set; } = false;
 
 	public static HitReactPrius Create(DDLObject ddl) => new(ddl);

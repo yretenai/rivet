@@ -19,10 +19,10 @@ public class GenericOfferPrius : ProximityOfferPrius, IDDLObjectType<GenericOffe
 		OfferText = ddl.GetString(0x781aef97) ?? OfferText;
 	}
 
-	[DDLRegistration(0x7dbe44e3u, "Require the hero to be carrying an object to see this offer.")]
+	[DDLRegistration(0x624863d6u, "Require the hero to be carrying an object to see this offer.")]
 	public bool RequireCarriedObject { get; set; } = false;
 
-	[DDLRegistration(0x7dbe44e3u)]
+	[DDLRegistration(0x781aef97u)]
 	public string? OfferText { get; set; } = "Hold";
 
 	public new static GenericOfferPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class StructuredLogAnimTreeCinematicClipNode : StructuredLogAnimTreeClipN
 		ObjSpaceOriginLocatorMat = ddl.GetObject<StructuredLogMatrix>(0xefe7a873u);
 	}
 
-	[DDLRegistration(0x336fb103u)]
+	[DDLRegistration(0x371e332au)]
 	public StructuredLogAnimTreeCinematicClipNodeFlags CineNodeFlags { get; set; } = (StructuredLogAnimTreeCinematicClipNodeFlags) 0x00000000;
 
-	[DDLRegistration(0x336fb103u)]
+	[DDLRegistration(0xefe7a873u)]
 	public StructuredLogMatrix? ObjSpaceOriginLocatorMat { get; set; } = default;
 
 	public new static StructuredLogAnimTreeCinematicClipNode Create(DDLObject ddl) => new(ddl);

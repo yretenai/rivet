@@ -26,31 +26,31 @@ public class TerrainSystem03EditingTerrain0411 : DDLObjectType, IDDLObjectType<T
 		Line09 = ddl.GetString(0x76a407ef) ?? Line09;
 	}
 
-	[DDLRegistration(0x1615d027u, description: "The <b>IG_HEIGHTFIELD_INPUT</b> input will receive a Houdini HeightField node")]
+	[DDLRegistration(0x0f78bf4bu, description: "The <b>IG_HEIGHTFIELD_INPUT</b> input will receive a Houdini HeightField node")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x1615d027u, description: "placed at the origin that is the terrain from the editor.  This should be used")]
+	[DDLRegistration(0x787f8fddu, description: "placed at the origin that is the terrain from the editor.  This should be used")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x1615d027u, description: "in most cases.")]
+	[DDLRegistration(0x9671eef1u, description: "in most cases.")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x1615d027u, description: "<br><br>")]
+	[DDLRegistration(0x08157b52u, description: "<br><br>")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x1615d027u, description: "The <b>IG_HEIGHTFIELD_WORLD_SPACE_INPUT</b> input will receive a Houdini")]
+	[DDLRegistration(0x7f124bc4u, description: "The <b>IG_HEIGHTFIELD_WORLD_SPACE_INPUT</b> input will receive a Houdini")]
 	public string? Line05 { get; set; } = default;
 
-	[DDLRegistration(0x1615d027u, description: "HeightField node placed at the terrain's final position in the world.  Like")]
+	[DDLRegistration(0xe61b1a7eu, description: "HeightField node placed at the terrain's final position in the world.  Like")]
 	public string? Line06 { get; set; } = default;
 
-	[DDLRegistration(0x1615d027u, description: "<b>IG_HEIGHTFIELD_INPUT</b>, the terrain will come from the editor.  This input")]
+	[DDLRegistration(0x911c2ae8u, description: "<b>IG_HEIGHTFIELD_INPUT</b>, the terrain will come from the editor.  This input")]
 	public string? Line07 { get; set; } = default;
 
-	[DDLRegistration(0x1615d027u, description: "is primarily used for scattering, where the world-space positions of the placed")]
+	[DDLRegistration(0x01a33779u, description: "is primarily used for scattering, where the world-space positions of the placed")]
 	public string? Line08 { get; set; } = default;
 
-	[DDLRegistration(0x1615d027u, description: "instances matter.")]
+	[DDLRegistration(0x76a407efu, description: "instances matter.")]
 	public string? Line09 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain0411 Create(DDLObject ddl) => new(ddl);

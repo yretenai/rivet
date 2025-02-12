@@ -20,13 +20,13 @@ public class ApplyOverrideLoadoutScriptActionPrius : DDLObjectType, IDDLObjectTy
 		OnlyAddMissingItems = ddl.GetValue<bool>(0xe17f2f52u, OnlyAddMissingItems);
 	}
 
-	[DDLRegistration(0xd6cdea1au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Inventory;
 
-	[DDLRegistration(0xd6cdea1au, "Override Loadout")]
+	[DDLRegistration(0x3502499eu, "Override Loadout")]
 	public RivetAssetId OverrideLoadout { get; set; } = default;
 
-	[DDLRegistration(0xd6cdea1au, description: "If true, this loadout will only add missing items to the player's inventory, it will not remove anything.")]
+	[DDLRegistration(0xe17f2f52u, description: "If true, this loadout will only add missing items to the player's inventory, it will not remove anything.")]
 	public bool OnlyAddMissingItems { get; set; } = false;
 
 	public static ApplyOverrideLoadoutScriptActionPrius Create(DDLObject ddl) => new(ddl);

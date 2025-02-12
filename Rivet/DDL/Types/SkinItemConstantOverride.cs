@@ -19,10 +19,10 @@ public class SkinItemConstantOverride : DDLObjectType, IDDLObjectType<SkinItemCo
 		ConstantValue = ddl.GetValue<float>(0x268ea8e5u, ConstantValue);
 	}
 
-	[DDLRegistration(0x247cb946u, "Constant Name", "Name string")]
+	[DDLRegistration(0xc6991700u, "Constant Name", "Name string")]
 	public string? ConstantName { get; set; } = default;
 
-	[DDLRegistration(0x247cb946u, "Constant Value", "Value to set")]
+	[DDLRegistration(0x268ea8e5u, "Constant Value", "Value to set")]
 	public float ConstantValue { get; set; } = 0.00f;
 
 	public static SkinItemConstantOverride Create(DDLObject ddl) => new(ddl);

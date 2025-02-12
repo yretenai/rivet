@@ -19,10 +19,10 @@ public class GameBotConfigDeath : BotConfigDeath, IDDLObjectType<GameBotConfigDe
 		AllowWaterDeath = ddl.GetValue<bool>(0xd749d1cau, AllowWaterDeath);
 	}
 
-	[DDLRegistration(0xdc4364e9u)]
+	[DDLRegistration(0x06fba15eu)]
 	public bool AllowAcidDeath { get; set; } = false;
 
-	[DDLRegistration(0xdc4364e9u)]
+	[DDLRegistration(0xd749d1cau)]
 	public bool AllowWaterDeath { get; set; } = false;
 
 	public new static GameBotConfigDeath Create(DDLObject ddl) => new(ddl);

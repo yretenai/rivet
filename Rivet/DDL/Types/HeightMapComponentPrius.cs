@@ -21,16 +21,16 @@ public class HeightMapComponentPrius : DDLObjectType, IDDLObjectType<HeightMapCo
 		GridHalfSize = ddl.GetValue<uint>(0xa6e9e8c5u, GridHalfSize);
 	}
 
-	[DDLRegistration(0x362c5235u)]
+	[DDLRegistration(0x26e551b3u)]
 	public float Resolution { get; set; } = 1.00f;
 
-	[DDLRegistration(0x362c5235u)]
+	[DDLRegistration(0x394103b1u)]
 	public float HeightCheckUp { get; set; } = 2.00f;
 
-	[DDLRegistration(0x362c5235u)]
+	[DDLRegistration(0x517c80dbu)]
 	public float HeightCheckDown { get; set; } = 10.00f;
 
-	[DDLRegistration(0x362c5235u)]
+	[DDLRegistration(0xa6e9e8c5u)]
 	public uint GridHalfSize { get; set; } = 0x00000005;
 
 	public static HeightMapComponentPrius Create(DDLObject ddl) => new(ddl);

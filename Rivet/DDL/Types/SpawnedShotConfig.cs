@@ -20,13 +20,13 @@ public class SpawnedShotConfig : ConfigBase, IDDLObjectType<SpawnedShotConfig> {
 		MacroWeapon = ddl.GetEnum<WeaponMacroType>(0x6a0640b5u, WeaponMacroTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x7e9e8e66u)]
+	[DDLRegistration(0x46d53e22u)]
 	public RivetAssetId ShotAsset { get; set; } = default;
 
-	[DDLRegistration(0x7e9e8e66u)]
+	[DDLRegistration(0x66fe4621u)]
 	public ShotBasePrius? ShotPrius { get; set; } = default;
 
-	[DDLRegistration(0x7e9e8e66u)]
+	[DDLRegistration(0x6a0640b5u)]
 	public WeaponMacroType MacroWeapon { get; set; } = WeaponMacroType.None;
 
 	public new static SpawnedShotConfig Create(DDLObject ddl) => new(ddl);

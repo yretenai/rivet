@@ -19,10 +19,10 @@ public class AmbientShooterPrius : DDLObjectType, IDDLObjectType<AmbientShooterP
 		OnlyFireForward = ddl.GetValue<bool>(0x48732783u, OnlyFireForward);
 	}
 
-	[DDLRegistration(0x7af71c09u, description: "If TRUE and there are multiple shot types on the shooter, they will cycle")]
+	[DDLRegistration(0xd7be736du, description: "If TRUE and there are multiple shot types on the shooter, they will cycle")]
 	public x632591ba ShotSelection { get; set; } = x632591ba.CycleShots;
 
-	[DDLRegistration(0x7af71c09u)]
+	[DDLRegistration(0x48732783u)]
 	public bool OnlyFireForward { get; set; } = true;
 
 	public static AmbientShooterPrius Create(DDLObject ddl) => new(ddl);

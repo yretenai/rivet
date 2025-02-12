@@ -19,10 +19,10 @@ public class ProjectileBeamImpactOffEvent : EventBase, IDDLObjectType<Projectile
 		FXVersion = ddl.GetValue<byte>(0x2083aedeu, FXVersion);
 	}
 
-	[DDLRegistration(0x9e31a28fu, description: "Hash to identify the beam type")]
+	[DDLRegistration(0x26a7db04u, description: "Hash to identify the beam type")]
 	public uint BeamHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x9e31a28fu)]
+	[DDLRegistration(0x2083aedeu)]
 	public byte FXVersion { get; set; } = 0x00;
 
 	public new static ProjectileBeamImpactOffEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MissionSystemRootNodeBaseDef : MissionSystemNodeBaseDef, IDDLObject
 		Start = ddl.GetObject<OutputPlugBoolean>(0x862a994eu);
 	}
 
-	[DDLRegistration(0xc5c578b1u)]
+	[DDLRegistration(0x862a994eu)]
 	public OutputPlugBoolean? Start { get; set; } = default;
 
 	public new static MissionSystemRootNodeBaseDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class VanityPerkBolts : VanityPerkBase, IDDLObjectType<VanityPerkBolts> {
 		BoltMultPiece = ddl.GetValue<float>(0xf5e9d8beu, BoltMultPiece);
 	}
 
-	[DDLRegistration(0x957c2f41u, description: "Total bolts = (1 + BoltMultSet) * bolts. Applied if player has the whole set.")]
+	[DDLRegistration(0xbbf6e28bu, description: "Total bolts = (1 + BoltMultSet) * bolts. Applied if player has the whole set.")]
 	public float BoltMultSet { get; set; } = 0.00f;
 
-	[DDLRegistration(0x957c2f41u, description: "Total bolts = (1 + BoltMultPiece * piece_count) * bolts. Applied if player has an incomplete set.")]
+	[DDLRegistration(0xf5e9d8beu, description: "Total bolts = (1 + BoltMultPiece * piece_count) * bolts. Applied if player has an incomplete set.")]
 	public float BoltMultPiece { get; set; } = 0.00f;
 
 	public new static VanityPerkBolts Create(DDLObject ddl) => new(ddl);

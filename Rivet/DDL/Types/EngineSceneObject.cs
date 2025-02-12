@@ -20,13 +20,13 @@ public class EngineSceneObject : DDLObjectType, IDDLObjectType<EngineSceneObject
 		EngineId = ddl.GetValue<RivetAssetId>(0xa3f30956u, EngineId);
 	}
 
-	[DDLRegistration(0x6e44fdbcu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xd90ff0f4 Type { get; set; } = xd90ff0f4.Invalid;
 
-	[DDLRegistration(0x6e44fdbcu)]
+	[DDLRegistration(0x791b2bb1u)]
 	public DDLMatrix4? WorldMatrix { get; set; } = default;
 
-	[DDLRegistration(0x6e44fdbcu)]
+	[DDLRegistration(0xa3f30956u)]
 	public RivetAssetId EngineId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static EngineSceneObject Create(DDLObject ddl) => new(ddl);

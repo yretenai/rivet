@@ -20,13 +20,13 @@ public class PreDecideForMaterialChangeLootDropPrius : DDLObjectType, IDDLObject
 		LootList = ddl.GetObjects<PreDecideLootEntry>(0x55d7985bu);
 	}
 
-	[DDLRegistration(0x78aff122u, "Enabled?", "Disable if you don't want to spawn loot.")]
+	[DDLRegistration(0x5113d8bcu, "Enabled?", "Disable if you don't want to spawn loot.")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x78aff122u, description: "Drop loot only if killer is this type.")]
+	[DDLRegistration(0xbda9e40eu, description: "Drop loot only if killer is this type.")]
 	public xa7ea7084 DropLootForKillerType { get; set; } = xa7ea7084.Everybody;
 
-	[DDLRegistration(0x78aff122u, description: "List of things we can spawn.")]
+	[DDLRegistration(0x55d7985bu, description: "List of things we can spawn.")]
 	public List<PreDecideLootEntry?> LootList { get; set; } = [];
 
 	public static PreDecideForMaterialChangeLootDropPrius Create(DDLObject ddl) => new(ddl);

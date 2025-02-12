@@ -19,10 +19,10 @@ public class MaterialGraphDefDragAndDrop : DDLObjectType, IDDLObjectType<Materia
 		NodeIds = ddl.GetValues<uint>(0x6931d8a7u);
 	}
 
-	[DDLRegistration(0x2fc671a1u)]
+	[DDLRegistration(0x046ec93du)]
 	public List<MaterialGraphNode?> Nodes { get; set; } = [];
 
-	[DDLRegistration(0x2fc671a1u)]
+	[DDLRegistration(0x6931d8a7u)]
 	public List<uint> NodeIds { get; set; } = [];
 
 	public static MaterialGraphDefDragAndDrop Create(DDLObject ddl) => new(ddl);

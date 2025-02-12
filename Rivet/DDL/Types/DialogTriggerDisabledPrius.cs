@@ -18,7 +18,7 @@ public class DialogTriggerDisabledPrius : DDLObjectType, IDDLObjectType<DialogTr
 		Trigger = ddl.GetEnum<DialogTriggerGame>(0x1b816c65u, DialogTriggerGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x56fadd6bu)]
+	[DDLRegistration(0x1b816c65u)]
 	public DialogTriggerGame Trigger { get; set; } = DialogTriggerGame.None;
 
 	public static DialogTriggerDisabledPrius Create(DDLObject ddl) => new(ddl);

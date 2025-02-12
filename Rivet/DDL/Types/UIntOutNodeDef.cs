@@ -18,7 +18,7 @@ public class UIntOutNodeDef : NodeBaseDef, IDDLObjectType<UIntOutNodeDef> {
 		Out = ddl.GetObject<OutputPlugUInt>(0x93bf4450u);
 	}
 
-	[DDLRegistration(0xe3240e36u)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugUInt? Out { get; set; } = default;
 
 	public new static UIntOutNodeDef Create(DDLObject ddl) => new(ddl);

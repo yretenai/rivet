@@ -22,19 +22,19 @@ public class AnimSetSequenceVarDef : DDLObjectType, IDDLObjectType<AnimSetSequen
 		VarValue = ddl.GetObject<DDLVector2>(0x84a391b8u);
 	}
 
-	[DDLRegistration(0x4de23a79u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4de23a79u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4de23a79u)]
+	[DDLRegistration(0x8cd13823u)]
 	public string? VarName { get; set; } = default;
 
-	[DDLRegistration(0x4de23a79u)]
+	[DDLRegistration(0x5e2c110cu)]
 	public xdf8f8d7a VarType { get; set; } = xdf8f8d7a.FloatOutput;
 
-	[DDLRegistration(0x4de23a79u)]
+	[DDLRegistration(0x84a391b8u)]
 	public DDLVector2? VarValue { get; set; } = default;
 
 	public static AnimSetSequenceVarDef Create(DDLObject ddl) => new(ddl);

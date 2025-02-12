@@ -19,10 +19,10 @@ public class TargetFileSessionLog : DDLObjectType, IDDLObjectType<TargetFileSess
 		Levels = ddl.GetValues<int>(0xa1522a7eu);
 	}
 
-	[DDLRegistration(0x65e04713u)]
+	[DDLRegistration(0x2103a3e6u)]
 	public List<string?> Messages { get; set; } = [];
 
-	[DDLRegistration(0x65e04713u)]
+	[DDLRegistration(0xa1522a7eu)]
 	public List<int> Levels { get; set; } = [];
 
 	public static TargetFileSessionLog Create(DDLObject ddl) => new(ddl);

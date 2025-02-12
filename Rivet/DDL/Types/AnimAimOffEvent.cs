@@ -18,7 +18,7 @@ public class AnimAimOffEvent : EventBase, IDDLObjectType<AnimAimOffEvent> {
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x3a033299u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.25f;
 
 	public new static AnimAimOffEvent Create(DDLObject ddl) => new(ddl);

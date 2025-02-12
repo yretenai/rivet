@@ -25,28 +25,28 @@ public class DialogFinishedEvent : EventBase, IDDLObjectType<DialogFinishedEvent
 		Status = ddl.GetEnum<x7627517a>(0x45782b7bu, x7627517aValues.Lookup);
 	}
 
-	[DDLRegistration(0x7e9a220bu, description: "Unique ID for matching up with callbacks")]
+	[DDLRegistration(0x32ca55d0u, description: "Unique ID for matching up with callbacks")]
 	public uint UniqueId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7e9a220bu, description: "Localization tag")]
+	[DDLRegistration(0x3446b219u, description: "Localization tag")]
 	public uint LocalizationTag { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7e9a220bu, description: "Unique ID for pieces of dialog per component")]
+	[DDLRegistration(0x75b3e503u, description: "Unique ID for pieces of dialog per component")]
 	public ushort PlayCountId { get; set; } = 0x0000;
 
-	[DDLRegistration(0x7e9a220bu, description: "Component's Id")]
+	[DDLRegistration(0xf34a033au, description: "Component's Id")]
 	public uint ComponentId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7e9a220bu, description: "Localization enum used by Emergent VO system")]
+	[DDLRegistration(0x152754cbu, description: "Localization enum used by Emergent VO system")]
 	public uint LineIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7e9a220bu, description: "WWise event name")]
+	[DDLRegistration(0x9c64655au, description: "WWise event name")]
 	public string? SoundEventName { get; set; } = default;
 
-	[DDLRegistration(0x7e9a220bu, description: "WWise event ID")]
+	[DDLRegistration(0x813c2830u, description: "WWise event ID")]
 	public uint SoundEventId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7e9a220bu, description: "Finished status")]
+	[DDLRegistration(0x45782b7bu, description: "Finished status")]
 	public x7627517a Status { get; set; } = x7627517a.Finished;
 
 	public new static DialogFinishedEvent Create(DDLObject ddl) => new(ddl);

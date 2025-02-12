@@ -49,100 +49,100 @@ public class UI_VisualEffectKeyFrameYValues2 : DDLObjectType, IDDLObjectType<UI_
 		ColorB = ddl.GetObject<DDLVector3>(0xad188dc2u);
 	}
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0xf3b0f387u)]
 	public bool IsX { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0x87f11dc9u)]
 	public bool IsXRanged { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0x61984f20u)]
 	public bool IsXY { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0xcdce32c5u)]
 	public bool IsXYRanged { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0xb0b1006du)]
 	public bool IsXYZ { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0xf5da5b5cu)]
 	public bool IsXYZRanged { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0xf8911e9au)]
 	public bool IsXZ { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0xfc262858u)]
 	public bool IsXZRanged { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0x84b7c311u)]
 	public bool IsY { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0x2186167du)]
 	public bool IsYRanged { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0xe18a2fdbu)]
 	public bool IsYZ { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0x308c28c6u)]
 	public bool IsYZRanged { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0x1dbe92abu)]
 	public bool IsZ { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0x106e0ce0u)]
 	public bool IsZRanged { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0x6eab5aefu)]
 	public bool IsColor { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu)]
+	[DDLRegistration(0x6cb29624u)]
 	public bool IsColorRanged { get; set; } = false;
 
-	[DDLRegistration(0x8362dcbeu, "Value 0")]
+	[DDLRegistration(0xb36f1c94u, "Value 0")]
 	public float FloatXA { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8362dcbeu, "Value 1")]
+	[DDLRegistration(0x2a664d2eu, "Value 1")]
 	public float FloatXB { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8362dcbeu, "Value 0")]
+	[DDLRegistration(0xaa742dd5u, "Value 0")]
 	public float FloatYA { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8362dcbeu, "Value 1")]
+	[DDLRegistration(0x337d7c6fu, "Value 1")]
 	public float FloatYB { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8362dcbeu, "Value 0")]
+	[DDLRegistration(0x81597e16u, "Value 0")]
 	public float FloatZA { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8362dcbeu, "Value 1")]
+	[DDLRegistration(0x18502facu, "Value 1")]
 	public float FloatZB { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8362dcbeu, "Value 0")]
+	[DDLRegistration(0xc7ba121au, "Value 0")]
 	public DDLVector2? Vec2XYA { get; set; } = default;
 
-	[DDLRegistration(0x8362dcbeu, "Value 1")]
+	[DDLRegistration(0x5eb343a0u, "Value 1")]
 	public DDLVector2? Vec2XYB { get; set; } = default;
 
-	[DDLRegistration(0x8362dcbeu, "Value 0")]
+	[DDLRegistration(0xec9741d9u, "Value 0")]
 	public DDLVector2? Vec2XZA { get; set; } = default;
 
-	[DDLRegistration(0x8362dcbeu, "Value 1")]
+	[DDLRegistration(0x759e1063u, "Value 1")]
 	public DDLVector2? Vec2XZB { get; set; } = default;
 
-	[DDLRegistration(0x8362dcbeu, "Value 0")]
+	[DDLRegistration(0xed552beeu, "Value 0")]
 	public DDLVector2? Vec2YZA { get; set; } = default;
 
-	[DDLRegistration(0x8362dcbeu, "Value 1")]
+	[DDLRegistration(0x745c7a54u, "Value 1")]
 	public DDLVector2? Vec2YZB { get; set; } = default;
 
-	[DDLRegistration(0x8362dcbeu, "Value 0")]
+	[DDLRegistration(0x6828d044u, "Value 0")]
 	public DDLVector3? Vec3XYZA { get; set; } = default;
 
-	[DDLRegistration(0x8362dcbeu, "Value 1")]
+	[DDLRegistration(0xf12181feu, "Value 1")]
 	public DDLVector3? Vec3XYZB { get; set; } = default;
 
-	[DDLRegistration(0x8362dcbeu, "Value 0")]
+	[DDLRegistration(0x3411dc78u, "Value 0")]
 	public DDLVector3? ColorA { get; set; } = default;
 
-	[DDLRegistration(0x8362dcbeu, "Value 1")]
+	[DDLRegistration(0xad188dc2u, "Value 1")]
 	public DDLVector3? ColorB { get; set; } = default;
 
 	public static UI_VisualEffectKeyFrameYValues2 Create(DDLObject ddl) => new(ddl);

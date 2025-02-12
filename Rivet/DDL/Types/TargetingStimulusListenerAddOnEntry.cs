@@ -18,7 +18,7 @@ public class TargetingStimulusListenerAddOnEntry : DDLObjectType, IDDLObjectType
 		AddOn = ddl.GetObject<TargetingStimulusListenerAddOnPrius>(0x5d52791cu);
 	}
 
-	[DDLRegistration(0xb4fcf994u)]
+	[DDLRegistration(0x5d52791cu)]
 	public TargetingStimulusListenerAddOnPrius? AddOn { get; set; } = default;
 
 	public static TargetingStimulusListenerAddOnEntry Create(DDLObject ddl) => new(ddl);

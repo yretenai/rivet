@@ -18,7 +18,7 @@ public class NodalShotActorHandleData : NodalShotVariableDataBase, IDDLObjectTyp
 		Value = ddl.GetValue<uint>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x4e1b7bb0u)]
+	[DDLRegistration(0x042494f5u)]
 	public uint Value { get; set; } = 0x00000000;
 
 	public new static NodalShotActorHandleData Create(DDLObject ddl) => new(ddl);

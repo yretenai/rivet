@@ -21,16 +21,16 @@ public class DepthOfFieldBaseSetup : DDLObjectType, IDDLObjectType<DepthOfFieldB
 		AperatureScaleNear = ddl.GetValue<float>(0xe1ea8734u, AperatureScaleNear);
 	}
 
-	[DDLRegistration(0x0b9c5470u)]
+	[DDLRegistration(0xb13fd21eu)]
 	public float DistanceFar { get; set; } = 128.00f;
 
-	[DDLRegistration(0x0b9c5470u)]
+	[DDLRegistration(0xe7e7d300u)]
 	public float DistanceNear { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0b9c5470u)]
+	[DDLRegistration(0x0adef95bu)]
 	public float AperatureScaleFar { get; set; } = 1.35f;
 
-	[DDLRegistration(0x0b9c5470u)]
+	[DDLRegistration(0xe1ea8734u)]
 	public float AperatureScaleNear { get; set; } = 1.00f;
 
 	public static DepthOfFieldBaseSetup Create(DDLObject ddl) => new(ddl);

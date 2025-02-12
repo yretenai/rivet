@@ -25,28 +25,28 @@ public class TargetDataPrius : DDLObjectType, IDDLObjectType<TargetDataPrius> {
 		LocationData = ddl.GetObjects<TargetLocationData>(0xe2f6f6b2u);
 	}
 
-	[DDLRegistration(0x705e7185u, "Allegiance", "Which team does this object play for?")]
+	[DDLRegistration(0xd10c0c26u, "Allegiance", "Which team does this object play for?")]
 	public x6bdf4ba1 Allegiance { get; set; } = x6bdf4ba1.Neutral;
 
-	[DDLRegistration(0x705e7185u, "Target Type", "What type(s) of target is THIS item considered to be?")]
+	[DDLRegistration(0x85109145u, "Target Type", "What type(s) of target is THIS item considered to be?")]
 	public TargetType TargetTypes { get; set; } = (TargetType) 0x00000000;
 
-	[DDLRegistration(0x705e7185u, "Target Category", "What category is the target in?")]
+	[DDLRegistration(0x1242d225u, "Target Category", "What category is the target in?")]
 	public TargetCategory TargetCategory { get; set; } = TargetCategory.None;
 
-	[DDLRegistration(0x705e7185u, "Aim Assist Config")]
+	[DDLRegistration(0x3d0da883u, "Aim Assist Config")]
 	public RivetAssetId AimAssistConfig { get; set; } = default;
 
-	[DDLRegistration(0x705e7185u, "Desired Max Targeters")]
+	[DDLRegistration(0xdf3dadb4u, "Desired Max Targeters")]
 	public int DesiredMaxTargeters { get; set; } = -1;
 
-	[DDLRegistration(0x705e7185u, "Start Static")]
+	[DDLRegistration(0xf5dd8aa5u, "Start Static")]
 	public bool StartStatic { get; set; } = true;
 
-	[DDLRegistration(0x705e7185u, "Start Targetable")]
+	[DDLRegistration(0x5684d3c1u, "Start Targetable")]
 	public bool StartTargetable { get; set; } = true;
 
-	[DDLRegistration(0x705e7185u, "Locations")]
+	[DDLRegistration(0xe2f6f6b2u, "Locations")]
 	public List<TargetLocationData?> LocationData { get; set; } = [];
 
 	public static TargetDataPrius Create(DDLObject ddl) => new(ddl);

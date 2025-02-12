@@ -24,25 +24,25 @@ public class ScriptedShotPrius : ShotBasePrius, IDDLObjectType<ScriptedShotPrius
 		Effects = ddl.GetObjects<ScriptedShotEffectListElement>(0x49e15f92u);
 	}
 
-	[DDLRegistration(0xcff274f2u)]
+	[DDLRegistration(0x67d422c6u)]
 	public float LifeTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0xcff274f2u)]
+	[DDLRegistration(0x811184bdu)]
 	public float UpdateInterval { get; set; } = 0.50f;
 
-	[DDLRegistration(0xcff274f2u)]
+	[DDLRegistration(0xd8c2f7d9u)]
 	public bool DelayFirstUpdateInterval { get; set; } = false;
 
-	[DDLRegistration(0xcff274f2u)]
+	[DDLRegistration(0xd1a39273u)]
 	public bool UseActorCollision { get; set; } = false;
 
-	[DDLRegistration(0xcff274f2u)]
+	[DDLRegistration(0x589995ddu)]
 	public bool LifetimeExpiredOnMaxRange { get; set; } = false;
 
-	[DDLRegistration(0xcff274f2u)]
+	[DDLRegistration(0x7eea1a49u)]
 	public bool ShowReticle { get; set; } = true;
 
-	[DDLRegistration(0xcff274f2u)]
+	[DDLRegistration(0x49e15f92u)]
 	public List<ScriptedShotEffectListElement?> Effects { get; set; } = [];
 
 	public new static ScriptedShotPrius Create(DDLObject ddl) => new(ddl);

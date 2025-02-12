@@ -20,13 +20,13 @@ public class PickupMaterialOverride : DDLObjectType, IDDLObjectType<PickupMateri
 		MaterialType = ddl.GetEnum<x2351894b>(0x1433c59bu, x2351894bValues.Lookup);
 	}
 
-	[DDLRegistration(0xfcff5075u)]
+	[DDLRegistration(0xffafa5a1u)]
 	public RivetAssetId MaterialOverride { get; set; } = default;
 
-	[DDLRegistration(0xfcff5075u)]
+	[DDLRegistration(0x981e6927u)]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0xfcff5075u)]
+	[DDLRegistration(0x1433c59bu)]
 	public x2351894b MaterialType { get; set; } = x2351894b.OverrideBase;
 
 	public static PickupMaterialOverride Create(DDLObject ddl) => new(ddl);

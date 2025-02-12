@@ -18,7 +18,7 @@ public class GameCinematicSettings : DDLObjectType, IDDLObjectType<GameCinematic
 		SkipMovieNode = ddl.GetValue<bool>(0x60addce0u, SkipMovieNode);
 	}
 
-	[DDLRegistration(0x0f15d765u)]
+	[DDLRegistration(0x60addce0u)]
 	public bool SkipMovieNode { get; set; } = false;
 
 	public static GameCinematicSettings Create(DDLObject ddl) => new(ddl);

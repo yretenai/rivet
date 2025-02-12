@@ -18,7 +18,7 @@ public class WeaponMacroTypePlug : DDLObjectType, IDDLObjectType<WeaponMacroType
 		Value = ddl.GetEnum<WeaponMacroType>(0x042494f5u, WeaponMacroTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x0e5525bcu)]
+	[DDLRegistration(0x042494f5u)]
 	public WeaponMacroType Value { get; set; } = WeaponMacroType.None;
 
 	public static WeaponMacroTypePlug Create(DDLObject ddl) => new(ddl);

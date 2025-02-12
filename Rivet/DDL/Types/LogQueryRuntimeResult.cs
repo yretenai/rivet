@@ -20,13 +20,13 @@ public class LogQueryRuntimeResult : DDLObjectType, IDDLObjectType<LogQueryRunti
 		Data = ddl.GetString(0x9d6333d3) ?? Data;
 	}
 
-	[DDLRegistration(0x53283724u, description: "True if we were successful, false if we failed")]
+	[DDLRegistration(0x6eeabc8au, description: "True if we were successful, false if we failed")]
 	public bool Success { get; set; } = false;
 
-	[DDLRegistration(0x53283724u, description: "If we were not successful, you can put an error message here")]
+	[DDLRegistration(0x4fe7e9d8u, description: "If we were not successful, you can put an error message here")]
 	public string? ErrorMsg { get; set; } = default;
 
-	[DDLRegistration(0x53283724u, description: "If we return any information to the page, it goes here")]
+	[DDLRegistration(0x9d6333d3u, description: "If we return any information to the page, it goes here")]
 	public string? Data { get; set; } = default;
 
 	public static LogQueryRuntimeResult Create(DDLObject ddl) => new(ddl);

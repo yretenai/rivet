@@ -21,16 +21,16 @@ public class ExitedVendorEvent : EventBase, IDDLObjectType<ExitedVendorEvent> {
 		AnimName = ddl.GetString(0xc9e716ce) ?? AnimName;
 	}
 
-	[DDLRegistration(0x346d7d1bu)]
+	[DDLRegistration(0x7f09f712u)]
 	public uint VolumeActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x346d7d1bu)]
+	[DDLRegistration(0xdfa62471u)]
 	public uint CameraActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x346d7d1bu)]
+	[DDLRegistration(0x26122941u)]
 	public RivetAssetId PurchasedItem { get; set; } = default;
 
-	[DDLRegistration(0x346d7d1bu)]
+	[DDLRegistration(0xc9e716ceu)]
 	public string? AnimName { get; set; } = "Pickup_Item";
 
 	public new static ExitedVendorEvent Create(DDLObject ddl) => new(ddl);

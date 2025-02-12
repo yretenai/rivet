@@ -19,10 +19,10 @@ public class PickupRYNOPlanPrius : GamePickupItemPrius, IDDLObjectType<PickupRYN
 		PreviouslyCollectedMaterialOverride = ddl.GetObject<PickupMaterialOverride>(0x25f333f6u);
 	}
 
-	[DDLRegistration(0x5ae791bdu, description: "Unique identifier of this RYNO plan for saving the game.")]
+	[DDLRegistration(0xf61c4918u, description: "Unique identifier of this RYNO plan for saving the game.")]
 	public x81d3e717 SaveID { get; set; } = x81d3e717.None;
 
-	[DDLRegistration(0x5ae791bdu, description: "Material override to use when the player collected this RYNO plan in a previous playthrough and now will just get bolts.")]
+	[DDLRegistration(0x25f333f6u, description: "Material override to use when the player collected this RYNO plan in a previous playthrough and now will just get bolts.")]
 	public PickupMaterialOverride? PreviouslyCollectedMaterialOverride { get; set; } = default;
 
 	public new static PickupRYNOPlanPrius Create(DDLObject ddl) => new(ddl);

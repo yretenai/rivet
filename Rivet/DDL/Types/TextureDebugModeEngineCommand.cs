@@ -19,10 +19,10 @@ public class TextureDebugModeEngineCommand : DDLObjectType, IDDLObjectType<Textu
 		Next = ddl.GetValue<bool>(0x34bfd08cu, Next);
 	}
 
-	[DDLRegistration(0x6cb798edu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6cb798edu)]
+	[DDLRegistration(0x34bfd08cu)]
 	public bool Next { get; set; } = false;
 
 	public static TextureDebugModeEngineCommand Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class SharedPlayerSettings : DDLObjectType, IDDLObjectType<SharedPlayerSe
 		DefaultSubtitlesEnabled = ddl.GetValue<bool>(0xf1a6001cu, DefaultSubtitlesEnabled);
 	}
 
-	[DDLRegistration(0x0c12d143u, description: "Whether the game defaults to having subtitles enabled.")]
+	[DDLRegistration(0xf1a6001cu, description: "Whether the game defaults to having subtitles enabled.")]
 	public bool DefaultSubtitlesEnabled { get; set; } = false;
 
 	public static SharedPlayerSettings Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class SetEmergentVOEnabledEvent : EventBase, IDDLObjectType<SetEmergentVO
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0xb6b831adu)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
 	public new static SetEmergentVOEnabledEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DamageModifierPixelizerResistancePrius : DamageModifierIncomingPriu
 		StatusAmountMultiplier = ddl.GetValue<float>(0x6e797759u, StatusAmountMultiplier);
 	}
 
-	[DDLRegistration(0x7096a833u)]
+	[DDLRegistration(0x6e797759u)]
 	public float StatusAmountMultiplier { get; set; } = 1.00f;
 
 	public new static DamageModifierPixelizerResistancePrius Create(DDLObject ddl) => new(ddl);

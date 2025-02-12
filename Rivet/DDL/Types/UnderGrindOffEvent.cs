@@ -18,7 +18,7 @@ public class UnderGrindOffEvent : EventBase, IDDLObjectType<UnderGrindOffEvent> 
 		Material = ddl.GetEnum<x10b3c4cf>(0x86bfc8e5u, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0x584024feu)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
 	public new static UnderGrindOffEvent Create(DDLObject ddl) => new(ddl);

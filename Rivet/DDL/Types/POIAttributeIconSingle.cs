@@ -21,16 +21,16 @@ public class POIAttributeIconSingle : POIAttributeIconBase, IDDLObjectType<POIAt
 		ApplyWidthHeight = ddl.GetValue<bool>(0x559bf66du, ApplyWidthHeight);
 	}
 
-	[DDLRegistration(0x5bec4565u)]
+	[DDLRegistration(0x838c6e4au)]
 	public RivetAssetId Texture { get; set; } = "";
 
-	[DDLRegistration(0x5bec4565u)]
+	[DDLRegistration(0x954989eeu)]
 	public float Width { get; set; } = 32.00f;
 
-	[DDLRegistration(0x5bec4565u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 32.00f;
 
-	[DDLRegistration(0x5bec4565u)]
+	[DDLRegistration(0x559bf66du)]
 	public bool ApplyWidthHeight { get; set; } = true;
 
 	public new static POIAttributeIconSingle Create(DDLObject ddl) => new(ddl);

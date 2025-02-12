@@ -21,16 +21,16 @@ public class DifficultyEndEvent : EventBase, IDDLObjectType<DifficultyEndEvent> 
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0xf298d9dau)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xf298d9dau)]
+	[DDLRegistration(0x7d1d5d0eu)]
 	public string? SegmentId { get; set; } = default;
 
-	[DDLRegistration(0xf298d9dau)]
+	[DDLRegistration(0x605d31d6u)]
 	public string? Difficulty { get; set; } = default;
 
-	[DDLRegistration(0xf298d9dau)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
 	public new static DifficultyEndEvent Create(DDLObject ddl) => new(ddl);

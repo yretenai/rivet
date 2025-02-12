@@ -18,7 +18,7 @@ public class PlanetMapOverrideVolumePrius : DDLObjectType, IDDLObjectType<Planet
 		Map = ddl.GetEnum<UIDisplayObjectType>(0xb9f88372u, UIDisplayObjectTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x664c5c34u, "Map", "Map to show while Hero is in this volume. Only PauseMapElement(s) within this volume will show with the map.")]
+	[DDLRegistration(0xb9f88372u, "Map", "Map to show while Hero is in this volume. Only PauseMapElement(s) within this volume will show with the map.")]
 	public UIDisplayObjectType Map { get; set; } = UIDisplayObjectType.None;
 
 	public static PlanetMapOverrideVolumePrius Create(DDLObject ddl) => new(ddl);

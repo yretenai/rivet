@@ -18,7 +18,7 @@ public class DamageModifierTraversalPrius : DamageModifierIncomingPrius, IDDLObj
 		Lifetime = ddl.GetValue<float>(0xc7e68df8u, Lifetime);
 	}
 
-	[DDLRegistration(0xd63aaaccu)]
+	[DDLRegistration(0xc7e68df8u)]
 	public float Lifetime { get; set; } = 0.00f;
 
 	public new static DamageModifierTraversalPrius Create(DDLObject ddl) => new(ddl);

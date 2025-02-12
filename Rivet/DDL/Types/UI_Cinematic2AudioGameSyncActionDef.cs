@@ -22,19 +22,19 @@ public class UI_Cinematic2AudioGameSyncActionDef : DDLObjectType, IDDLObjectType
 		Trigger = ddl.GetObject<WwiseTrigger>(0x1b816c65u);
 	}
 
-	[DDLRegistration(0x4a608864u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4a608864u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a608864u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x4a608864u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4a608864u)]
+	[DDLRegistration(0x1b816c65u)]
 	public WwiseTrigger? Trigger { get; set; } = default;
 
 	public static UI_Cinematic2AudioGameSyncActionDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class AccessibilityHighlightMaterialConstant : DDLObjectType, IDDLObjectT
 		MappingName = ddl.GetString(0xc75ac466) ?? MappingName;
 	}
 
-	[DDLRegistration(0x7746d4f9u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x7746d4f9u)]
+	[DDLRegistration(0xc75ac466u)]
 	public string? MappingName { get; set; } = default;
 
 	public static AccessibilityHighlightMaterialConstant Create(DDLObject ddl) => new(ddl);

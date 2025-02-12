@@ -21,16 +21,16 @@ public class SimpleActorSpawnData : ActorSpawnData, IDDLObjectType<SimpleActorSp
 		Up = ddl.GetObject<DDLVector3>(0x76fcc3adu);
 	}
 
-	[DDLRegistration(0xcd5841f5u, description: "AssetId for the asset we're spawning")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xcd5841f5u)]
+	[DDLRegistration(0xaa8ccf65u)]
 	public DDLVector3? Pos { get; set; } = default;
 
-	[DDLRegistration(0xcd5841f5u)]
+	[DDLRegistration(0xb37847eeu)]
 	public DDLVector3? Facing { get; set; } = default;
 
-	[DDLRegistration(0xcd5841f5u)]
+	[DDLRegistration(0x76fcc3adu)]
 	public DDLVector3? Up { get; set; } = default;
 
 	public new static SimpleActorSpawnData Create(DDLObject ddl) => new(ddl);

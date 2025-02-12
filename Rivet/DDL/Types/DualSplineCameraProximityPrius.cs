@@ -33,52 +33,52 @@ public class DualSplineCameraProximityPrius : CameraPrius, IDDLObjectType<DualSp
 		RotationInput = ddl.GetObject<CameraRotationInputData>(0x329d413fu);
 	}
 
-	[DDLRegistration(0xfebcfcdbu, "Motion Spline")]
+	[DDLRegistration(0x93329739u, "Motion Spline")]
 	public RivetAssetId MotionSpline { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xfebcfcdbu, "Target Spline")]
+	[DDLRegistration(0xc7471fcfu, "Target Spline")]
 	public RivetAssetId TargetSpline { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xfebcfcdbu, "Target Actor")]
+	[DDLRegistration(0x98554e8cu, "Target Actor")]
 	public RivetAssetId TargetActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xfebcfcdbu, "Motion Mode")]
+	[DDLRegistration(0x6057228cu, "Motion Mode")]
 	public xde534179 MotionMode { get; set; } = xde534179.MatchTargetT;
 
-	[DDLRegistration(0xfebcfcdbu, "Motion Speed Accel")]
+	[DDLRegistration(0x83b0cb29u, "Motion Speed Accel")]
 	public float MotionSpeedAccel { get; set; } = 50.00f;
 
-	[DDLRegistration(0xfebcfcdbu, "Motion Speed Decel")]
+	[DDLRegistration(0x6e3b1b85u, "Motion Speed Decel")]
 	public float MotionSpeedDecel { get; set; } = 40.00f;
 
-	[DDLRegistration(0xfebcfcdbu, "Motion Speed Max")]
+	[DDLRegistration(0xf9cbf072u, "Motion Speed Max")]
 	public float MotionSpeedMax { get; set; } = 20.00f;
 
-	[DDLRegistration(0xfebcfcdbu, "Target Speed Accel")]
+	[DDLRegistration(0xf1d5d034u, "Target Speed Accel")]
 	public float TargetSpeedAccel { get; set; } = 50.00f;
 
-	[DDLRegistration(0xfebcfcdbu, "Target Speed Decel")]
+	[DDLRegistration(0x1c5e0098u, "Target Speed Decel")]
 	public float TargetSpeedDecel { get; set; } = 40.00f;
 
-	[DDLRegistration(0xfebcfcdbu, "Target Speed Max")]
+	[DDLRegistration(0x584ee92eu, "Target Speed Max")]
 	public float TargetSpeedMax { get; set; } = 20.00f;
 
-	[DDLRegistration(0xfebcfcdbu, "Turn Speed Accel")]
+	[DDLRegistration(0x3757494cu, "Turn Speed Accel")]
 	public float TurnSpeedAccel { get; set; } = 720.00f;
 
-	[DDLRegistration(0xfebcfcdbu, "Turn Speed Decel")]
+	[DDLRegistration(0xdadc99e0u, "Turn Speed Decel")]
 	public float TurnSpeedDecel { get; set; } = 540.00f;
 
-	[DDLRegistration(0xfebcfcdbu, "Turn Speed Max")]
+	[DDLRegistration(0xa66b2ab3u, "Turn Speed Max")]
 	public float TurnSpeedMax { get; set; } = 540.00f;
 
-	[DDLRegistration(0xfebcfcdbu, "Motion Path Offset")]
+	[DDLRegistration(0x24e4bb98u, "Motion Path Offset")]
 	public float MotionPathOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfebcfcdbu, "Target Path Offset")]
+	[DDLRegistration(0x5681a085u, "Target Path Offset")]
 	public float TargetPathOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfebcfcdbu, "Rotation Input")]
+	[DDLRegistration(0x329d413fu, "Rotation Input")]
 	public CameraRotationInputData? RotationInput { get; set; } = default;
 
 	public new static DualSplineCameraProximityPrius Create(DDLObject ddl) => new(ddl);

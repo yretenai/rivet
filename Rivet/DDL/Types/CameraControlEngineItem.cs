@@ -23,22 +23,22 @@ public class CameraControlEngineItem : DDLObjectType, IDDLObjectType<CameraContr
 		ChangedBy = ddl.GetEnum<xcc3b3a79>(0x9e898f39u, xcc3b3a79Values.Lookup);
 	}
 
-	[DDLRegistration(0x4ad0618cu)]
+	[DDLRegistration(0x7e88a543u)]
 	public DDLVector3? Center { get; set; } = default;
 
-	[DDLRegistration(0x4ad0618cu)]
+	[DDLRegistration(0xb3094e4du)]
 	public float PitchDegrees { get; set; } = 30.00f;
 
-	[DDLRegistration(0x4ad0618cu)]
+	[DDLRegistration(0x42ae2f15u)]
 	public float YawDegrees { get; set; } = -135.00f;
 
-	[DDLRegistration(0x4ad0618cu)]
+	[DDLRegistration(0xc02929dau)]
 	public float RollDegrees { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4ad0618cu)]
+	[DDLRegistration(0x80a464c5u)]
 	public float DistanceFromCenter { get; set; } = 10.00f;
 
-	[DDLRegistration(0x4ad0618cu)]
+	[DDLRegistration(0x9e898f39u)]
 	public xcc3b3a79 ChangedBy { get; set; } = xcc3b3a79.Editor;
 
 	public static CameraControlEngineItem Create(DDLObject ddl) => new(ddl);

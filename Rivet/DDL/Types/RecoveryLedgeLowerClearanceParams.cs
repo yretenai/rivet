@@ -19,10 +19,10 @@ public class RecoveryLedgeLowerClearanceParams : DDLObjectType, IDDLObjectType<R
 		MinRearHeight = ddl.GetValue<float>(0x410b47b3u, MinRearHeight);
 	}
 
-	[DDLRegistration(0xd292fe83u, description: "Only enable auto recovery ledges when the surface is at least this far below the wall check.")]
+	[DDLRegistration(0x9ed620e3u, description: "Only enable auto recovery ledges when the surface is at least this far below the wall check.")]
 	public float MinHeight { get; set; } = 1.75f;
 
-	[DDLRegistration(0xd292fe83u, description: "Only enable auto recovery ledges when ground is at least this far below the wall check and the ledge is behind us.")]
+	[DDLRegistration(0x410b47b3u, description: "Only enable auto recovery ledges when ground is at least this far below the wall check and the ledge is behind us.")]
 	public float MinRearHeight { get; set; } = 1.75f;
 
 	public static RecoveryLedgeLowerClearanceParams Create(DDLObject ddl) => new(ddl);

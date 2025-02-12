@@ -19,10 +19,10 @@ public class VehicleFXControlActionPrius : DDLObjectType, IDDLObjectType<Vehicle
 		EnabledFX = ddl.GetBitset<x54399bf0>(0x03ebdb04u, x54399bf0Values.Lookup);
 	}
 
-	[DDLRegistration(0x34d0b3a4u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Traffic;
 
-	[DDLRegistration(0x34d0b3a4u, description: "What FX should be enabled after signalling Set. Will be reset either when the Reset plug is signalled or this zone is unloaded.")]
+	[DDLRegistration(0x03ebdb04u, description: "What FX should be enabled after signalling Set. Will be reset either when the Reset plug is signalled or this zone is unloaded.")]
 	public x54399bf0 EnabledFX { get; set; } = (x54399bf0) 0x00000007;
 
 	public static VehicleFXControlActionPrius Create(DDLObject ddl) => new(ddl);

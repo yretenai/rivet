@@ -18,7 +18,7 @@ public class GetDifficultyActionPrius : DDLObjectType, IDDLObjectType<GetDifficu
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xc833be05u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Difficulty;
 
 	public static GetDifficultyActionPrius Create(DDLObject ddl) => new(ddl);

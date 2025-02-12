@@ -19,10 +19,10 @@ public class SetMaterialOverrideData : DDLObjectType, IDDLObjectType<SetMaterial
 		Replacement = ddl.GetValue<RivetAssetId>(0xd909a591u, Replacement);
 	}
 
-	[DDLRegistration(0x3c47db33u, description: "Maya material mapping name")]
+	[DDLRegistration(0x981e6927u, description: "Maya material mapping name")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x3c47db33u, description: "The material/materialgraph asset to assign to the actor.")]
+	[DDLRegistration(0xd909a591u, description: "The material/materialgraph asset to assign to the actor.")]
 	public RivetAssetId Replacement { get; set; } = default;
 
 	public static SetMaterialOverrideData Create(DDLObject ddl) => new(ddl);

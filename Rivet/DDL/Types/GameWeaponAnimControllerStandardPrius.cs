@@ -18,7 +18,7 @@ public class GameWeaponAnimControllerStandardPrius : DDLObjectType, IDDLObjectTy
 		MatchIdleFidget = ddl.GetValue<bool>(0x72bb1442u, MatchIdleFidget);
 	}
 
-	[DDLRegistration(0xdc9347ceu, "Match Idle Fidget?", "Whether to play the Idle_Fidget driver on the weapon when the owner plays Idle_Fidget.")]
+	[DDLRegistration(0x72bb1442u, "Match Idle Fidget?", "Whether to play the Idle_Fidget driver on the weapon when the owner plays Idle_Fidget.")]
 	public bool MatchIdleFidget { get; set; } = false;
 
 	public static GameWeaponAnimControllerStandardPrius Create(DDLObject ddl) => new(ddl);

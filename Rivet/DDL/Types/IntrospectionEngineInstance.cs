@@ -24,25 +24,25 @@ public class IntrospectionEngineInstance : DDLObjectType, IDDLObjectType<Introsp
 		DebugMem = ddl.GetValue<bool>(0x93383ddau, DebugMem);
 	}
 
-	[DDLRegistration(0xed27a7ccu)]
+	[DDLRegistration(0x73019d7cu)]
 	public int Port { get; set; } = 0;
 
-	[DDLRegistration(0xed27a7ccu)]
+	[DDLRegistration(0x908b9ef0u)]
 	public string? Ip { get; set; } = default;
 
-	[DDLRegistration(0xed27a7ccu)]
+	[DDLRegistration(0xbf62d25fu)]
 	public string? HostName { get; set; } = default;
 
-	[DDLRegistration(0xed27a7ccu)]
+	[DDLRegistration(0x9ce2183du)]
 	public string? AppName { get; set; } = default;
 
-	[DDLRegistration(0xed27a7ccu)]
+	[DDLRegistration(0xc3536dbbu)]
 	public string? Platform { get; set; } = default;
 
-	[DDLRegistration(0xed27a7ccu)]
+	[DDLRegistration(0xbfb665bau)]
 	public bool IsTool { get; set; } = false;
 
-	[DDLRegistration(0xed27a7ccu)]
+	[DDLRegistration(0x93383ddau)]
 	public bool DebugMem { get; set; } = false;
 
 	public static IntrospectionEngineInstance Create(DDLObject ddl) => new(ddl);

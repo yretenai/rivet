@@ -19,10 +19,10 @@ public class BotCommandZordoomCisternJumpActionPrius : DDLObjectType, IDDLObject
 		Anim = ddl.GetString(0x573ba4eb) ?? Anim;
 	}
 
-	[DDLRegistration(0x8c4df813u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Boss;
 
-	[DDLRegistration(0x8c4df813u, description: "Name of the driver that the bot should play. This anim will be motion scaled to cover the full distance.")]
+	[DDLRegistration(0x573ba4ebu, description: "Name of the driver that the bot should play. This anim will be motion scaled to cover the full distance.")]
 	public string? Anim { get; set; } = default;
 
 	public static BotCommandZordoomCisternJumpActionPrius Create(DDLObject ddl) => new(ddl);

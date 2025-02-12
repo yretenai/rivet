@@ -20,13 +20,13 @@ public class MissionNodeBuiltShared : DDLObjectType, IDDLObjectType<MissionNodeB
 		ObjectiveGraph = ddl.GetValue<RivetAssetId>(0x55ff52bdu, ObjectiveGraph);
 	}
 
-	[DDLRegistration(0x35f1e769u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x35f1e769u)]
+	[DDLRegistration(0x3dee6a87u)]
 	public bool AllowAvailable { get; set; } = false;
 
-	[DDLRegistration(0x35f1e769u)]
+	[DDLRegistration(0x55ff52bdu)]
 	public RivetAssetId ObjectiveGraph { get; set; } = default;
 
 	public static MissionNodeBuiltShared Create(DDLObject ddl) => new(ddl);

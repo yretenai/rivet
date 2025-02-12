@@ -23,22 +23,22 @@ public class Cinematic2AudioGameSyncGroupActionDef : DDLObjectType, IDDLObjectTy
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0xc2048f43u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc2048f43u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc2048f43u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0xc2048f43u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc2048f43u)]
+	[DDLRegistration(0xb215bfb7u)]
 	public string? GroupName { get; set; } = default;
 
-	[DDLRegistration(0xc2048f43u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
 	public static Cinematic2AudioGameSyncGroupActionDef Create(DDLObject ddl) => new(ddl);

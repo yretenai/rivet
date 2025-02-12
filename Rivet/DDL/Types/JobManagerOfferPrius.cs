@@ -18,7 +18,7 @@ public class JobManagerOfferPrius : DDLObjectType, IDDLObjectType<JobManagerOffe
 		OfferHandle = ddl.GetValue<uint>(0x12e5e541u, OfferHandle);
 	}
 
-	[DDLRegistration(0x756ccf4eu)]
+	[DDLRegistration(0x12e5e541u)]
 	public uint OfferHandle { get; set; } = 0x00000000;
 
 	public static JobManagerOfferPrius Create(DDLObject ddl) => new(ddl);

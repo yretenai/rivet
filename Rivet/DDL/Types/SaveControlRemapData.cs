@@ -20,13 +20,13 @@ public class SaveControlRemapData : DDLObjectType, IDDLObjectType<SaveControlRem
 		CustomRemaps = ddl.GetObjects<CustomRemapData>(0x4d870baeu);
 	}
 
-	[DDLRegistration(0x60a996acu)]
+	[DDLRegistration(0x7f1ceb56u)]
 	public int CurrentPresetID { get; set; } = -1;
 
-	[DDLRegistration(0x60a996acu)]
+	[DDLRegistration(0x255c3f69u)]
 	public int CurrentCustomRemapSlot { get; set; } = -1;
 
-	[DDLRegistration(0x60a996acu)]
+	[DDLRegistration(0x4d870baeu)]
 	public List<CustomRemapData?> CustomRemaps { get; set; } = [];
 
 	public static SaveControlRemapData Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class QuickNavItem : DDLObjectType, IDDLObjectType<QuickNavItem> {
 		Column = ddl.GetValue<uint>(0x432bc919u, Column);
 	}
 
-	[DDLRegistration(0x723f717bu)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0x723f717bu)]
+	[DDLRegistration(0xae65df12u)]
 	public uint Row { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x723f717bu)]
+	[DDLRegistration(0x432bc919u)]
 	public uint Column { get; set; } = 0x00000000;
 
 	public static QuickNavItem Create(DDLObject ddl) => new(ddl);

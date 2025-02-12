@@ -18,7 +18,7 @@ public class CapturableAllegianceChangedEvent : EventBase, IDDLObjectType<Captur
 		Allegiance = ddl.GetEnum<x6bdf4ba1>(0xd10c0c26u, x6bdf4ba1Values.Lookup);
 	}
 
-	[DDLRegistration(0x6c6f3d6au)]
+	[DDLRegistration(0xd10c0c26u)]
 	public x6bdf4ba1 Allegiance { get; set; } = x6bdf4ba1.Neutral;
 
 	public new static CapturableAllegianceChangedEvent Create(DDLObject ddl) => new(ddl);

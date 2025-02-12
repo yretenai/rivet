@@ -20,13 +20,13 @@ public class VisualEffectOffset : DDLObjectType, IDDLObjectType<VisualEffectOffs
 		Z = ddl.GetValue<float>(0xb03d20a1u, Z);
 	}
 
-	[DDLRegistration(0x2775e42au)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2775e42au)]
+	[DDLRegistration(0x2934711bu)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2775e42au)]
+	[DDLRegistration(0xb03d20a1u)]
 	public float Z { get; set; } = 0.00f;
 
 	public static VisualEffectOffset Create(DDLObject ddl) => new(ddl);

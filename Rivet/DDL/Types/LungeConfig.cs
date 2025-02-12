@@ -22,19 +22,19 @@ public class LungeConfig : DDLObjectType, IDDLObjectType<LungeConfig> {
 		StateData = ddl.GetObject<LungeAttackData>(0x45e59822u);
 	}
 
-	[DDLRegistration(0x5910b12bu, description: "The distance to our target needs to be greater than this to lunge")]
+	[DDLRegistration(0xa6759190u, description: "The distance to our target needs to be greater than this to lunge")]
 	public float LungeMinDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5910b12bu, description: "The distance to our target needs to be less than this to lunge")]
+	[DDLRegistration(0xb99e6b5au, description: "The distance to our target needs to be less than this to lunge")]
 	public float LungeStartDistance { get; set; } = 5.00f;
 
-	[DDLRegistration(0x5910b12bu, description: "The angle between us and our target needs to be less than this to initiate a lunge.")]
+	[DDLRegistration(0x3b689724u, description: "The angle between us and our target needs to be less than this to initiate a lunge.")]
 	public float LungeStartAngle { get; set; } = 45.00f;
 
-	[DDLRegistration(0x5910b12bu)]
+	[DDLRegistration(0x246291a9u)]
 	public float Cooldown { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5910b12bu)]
+	[DDLRegistration(0x45e59822u)]
 	public LungeAttackData? StateData { get; set; } = default;
 
 	public static LungeConfig Create(DDLObject ddl) => new(ddl);

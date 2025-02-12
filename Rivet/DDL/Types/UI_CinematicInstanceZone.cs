@@ -21,16 +21,16 @@ public class UI_CinematicInstanceZone : DDLObjectType, IDDLObjectType<UI_Cinemat
 		ZoneAssetPath = ddl.GetValue<RivetAssetId>(0x37f3578cu, ZoneAssetPath);
 	}
 
-	[DDLRegistration(0x5444d6f1u)]
+	[DDLRegistration(0x1520cb03u)]
 	public bool IsCinematicOwner { get; set; } = false;
 
-	[DDLRegistration(0x5444d6f1u)]
+	[DDLRegistration(0x80b18bf0u)]
 	public RivetAssetId ParentRegionAssetPath { get; set; } = default;
 
-	[DDLRegistration(0x5444d6f1u)]
+	[DDLRegistration(0x52d00d23u)]
 	public RivetAssetId ShadowZoneAssetPath { get; set; } = default;
 
-	[DDLRegistration(0x5444d6f1u)]
+	[DDLRegistration(0x37f3578cu)]
 	public RivetAssetId ZoneAssetPath { get; set; } = default;
 
 	public static UI_CinematicInstanceZone Create(DDLObject ddl) => new(ddl);

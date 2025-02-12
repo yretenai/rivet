@@ -20,13 +20,13 @@ public class MinFloatNodeDef : MathNodeBaseDef, IDDLObjectType<MinFloatNodeDef> 
 		Min = ddl.GetObject<OutputPlugFloat>(0x8b2e3419u);
 	}
 
-	[DDLRegistration(0x3cfc1a19u)]
+	[DDLRegistration(0x3a58e94du)]
 	public InputPlugFloat? A { get; set; } = default;
 
-	[DDLRegistration(0x3cfc1a19u)]
+	[DDLRegistration(0xa351b8f7u)]
 	public InputPlugFloat? B { get; set; } = default;
 
-	[DDLRegistration(0x3cfc1a19u)]
+	[DDLRegistration(0x8b2e3419u)]
 	public OutputPlugFloat? Min { get; set; } = default;
 
 	public new static MinFloatNodeDef Create(DDLObject ddl) => new(ddl);

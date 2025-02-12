@@ -18,7 +18,7 @@ public class VisualFxSpawnEvent : VisualResponseEvent, IDDLObjectType<VisualFxSp
 		TrackedEvent = ddl.GetValue<bool>(0x99b53d24u, TrackedEvent);
 	}
 
-	[DDLRegistration(0x56fc5864u, "Is Event Tracked")]
+	[DDLRegistration(0x99b53d24u, "Is Event Tracked")]
 	public bool TrackedEvent { get; set; } = false;
 
 	public new static VisualFxSpawnEvent Create(DDLObject ddl) => new(ddl);

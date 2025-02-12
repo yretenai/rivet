@@ -26,31 +26,31 @@ public class NPCInfobotPrius : DDLObjectType, IDDLObjectType<NPCInfobotPrius> {
 		AutoCollectAtEnd = ddl.GetValue<bool>(0xd4843720u, AutoCollectAtEnd);
 	}
 
-	[DDLRegistration(0xf6969c42u, "Infobot Movie File", "Movie File to play full screen.")]
+	[DDLRegistration(0x6989e4bau, "Infobot Movie File", "Movie File to play full screen.")]
 	public RivetAssetId FullMovieFile { get; set; } = default;
 
-	[DDLRegistration(0xf6969c42u, "Movie Subtitle Config", "Config File for the movie's subtitles.")]
+	[DDLRegistration(0x8437e2b0u, "Movie Subtitle Config", "Config File for the movie's subtitles.")]
 	public RivetAssetId SubtitleConfig { get; set; } = default;
 
-	[DDLRegistration(0xf6969c42u, "Fade Sound At End", "Whether to fade in the sound after the fullscreen movie completes.")]
+	[DDLRegistration(0x15d55e65u, "Fade Sound At End", "Whether to fade in the sound after the fullscreen movie completes.")]
 	public bool FadeSoundAtEnd { get; set; } = true;
 
-	[DDLRegistration(0xf6969c42u, "Fade in to movie", "Whether to apply a fade into the movie or not.")]
+	[DDLRegistration(0x79faf6f5u, "Fade in to movie", "Whether to apply a fade into the movie or not.")]
 	public bool FadeInToMovie { get; set; } = true;
 
-	[DDLRegistration(0xf6969c42u, "Fade out from movie", "Whether to apply a fade out to the movie right before it completes. We will always fade in after the movie.")]
+	[DDLRegistration(0x18ffb6ceu, "Fade out from movie", "Whether to apply a fade out to the movie right before it completes. We will always fade in after the movie.")]
 	public bool FadeOutFromMovie { get; set; } = true;
 
-	[DDLRegistration(0xf6969c42u, "Camera Blend In Time", "The length of time to blend from the game camera to the special infobot camera (<= 0 is a cut).")]
+	[DDLRegistration(0x1fe36c07u, "Camera Blend In Time", "The length of time to blend from the game camera to the special infobot camera (<= 0 is a cut).")]
 	public float CamBlendInTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0xf6969c42u, "Camera Blend Out Time", "The length of time to blend from the special infobot camera back to the game camera (<= 0 is a cut).")]
+	[DDLRegistration(0xa53209d6u, "Camera Blend Out Time", "The length of time to blend from the special infobot camera back to the game camera (<= 0 is a cut).")]
 	public float CamBlendOutTime { get; set; } = 2.00f;
 
-	[DDLRegistration(0xf6969c42u, "Lock out hero control?", "Whether to lockout hero control when the infobot is in use.")]
+	[DDLRegistration(0x41507bf0u, "Lock out hero control?", "Whether to lockout hero control when the infobot is in use.")]
 	public bool LockOutHero { get; set; } = true;
 
-	[DDLRegistration(0xf6969c42u, "Auto Collect?", "Whether to 'collect' (not added to inventory, just visually collected) the infobot when the movie completes.")]
+	[DDLRegistration(0xd4843720u, "Auto Collect?", "Whether to 'collect' (not added to inventory, just visually collected) the infobot when the movie completes.")]
 	public bool AutoCollectAtEnd { get; set; } = true;
 
 	public static NPCInfobotPrius Create(DDLObject ddl) => new(ddl);

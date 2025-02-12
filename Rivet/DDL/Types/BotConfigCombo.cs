@@ -20,13 +20,13 @@ public class BotConfigCombo : ConfigBase, IDDLObjectType<BotConfigCombo> {
 		IndexMoveListProcessed = ddl.GetValue<bool>(0xa8a72066u, IndexMoveListProcessed);
 	}
 
-	[DDLRegistration(0xb0fc7b99u)]
+	[DDLRegistration(0xb3ce15d2u)]
 	public List<BotComboEntry?> Combos { get; set; } = [];
 
-	[DDLRegistration(0xb0fc7b99u, description: "A list of moves that can be referenced by an Index combo move")]
+	[DDLRegistration(0x62c1f51fu, description: "A list of moves that can be referenced by an Index combo move")]
 	public List<BotIndexMoveContainer?> IndexMoveList { get; set; } = [];
 
-	[DDLRegistration(0xb0fc7b99u)]
+	[DDLRegistration(0xa8a72066u)]
 	public bool IndexMoveListProcessed { get; set; } = false;
 
 	public new static BotConfigCombo Create(DDLObject ddl) => new(ddl);

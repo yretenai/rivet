@@ -18,7 +18,7 @@ public class LevelDefAux : DDLObjectType, IDDLObjectType<LevelDefAux> {
 		OverlayFolders = ddl.GetDictionary<RivetAssetId, RegionFolderNode>(0xca3e2e80, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionFolderNode>(mapId));
 	}
 
-	[DDLRegistration(0x7a67923fu)]
+	[DDLRegistration(0xca3e2e80u)]
 	public Dictionary<RivetAssetId, RegionFolderNode?> OverlayFolders { get; set; } = [];
 
 	public static LevelDefAux Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class GoldBoltLink : ActivityLinkBase, IDDLObjectType<GoldBoltLink> {
 		SaveID = ddl.GetEnum<GoldBoltEnum>(0xf61c4918u, GoldBoltEnumValues.Lookup);
 	}
 
-	[DDLRegistration(0x3f11b4a1u, "Save ID", "Unique identifier of this gold bolt for saving the game")]
+	[DDLRegistration(0xf61c4918u, "Save ID", "Unique identifier of this gold bolt for saving the game")]
 	public GoldBoltEnum SaveID { get; set; } = GoldBoltEnum.None;
 
 	public new static GoldBoltLink Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class PickupVanityMaterialPrius : DDLObjectType, IDDLObjectType<PickupVan
 		PreviouslyCollectedMaterialOverride = ddl.GetObject<PickupMaterialOverride>(0x25f333f6u);
 	}
 
-	[DDLRegistration(0x603ef946u)]
+	[DDLRegistration(0xb68fd998u)]
 	public RivetAssetId VanityBundleConfig { get; set; } = default;
 
-	[DDLRegistration(0x603ef946u, description: "Material override to use when the player collected this vanity item in a previous playthrough and now will just get bolts.")]
+	[DDLRegistration(0x25f333f6u, description: "Material override to use when the player collected this vanity item in a previous playthrough and now will just get bolts.")]
 	public PickupMaterialOverride? PreviouslyCollectedMaterialOverride { get; set; } = default;
 
 	public static PickupVanityMaterialPrius Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class SceneObjectEngineItem : DDLObjectType, IDDLObjectType<SceneObjectEn
 		EngineId = ddl.GetValue<RivetAssetId>(0xa3f30956u, EngineId);
 	}
 
-	[DDLRegistration(0xe4ae6492u)]
+	[DDLRegistration(0xca8213a2u)]
 	public xd90ff0f4 SceneObjectType { get; set; } = xd90ff0f4.Invalid;
 
-	[DDLRegistration(0xe4ae6492u)]
+	[DDLRegistration(0x791b2bb1u)]
 	public DDLMatrix4? WorldMatrix { get; set; } = default;
 
-	[DDLRegistration(0xe4ae6492u)]
+	[DDLRegistration(0xa14044dau)]
 	public DDLAABB? ObjSpaceBounds { get; set; } = default;
 
-	[DDLRegistration(0xe4ae6492u)]
+	[DDLRegistration(0x51abd94eu)]
 	public xcc3b3a79 CreatedBy { get; set; } = xcc3b3a79.Editor;
 
-	[DDLRegistration(0xe4ae6492u)]
+	[DDLRegistration(0x9e898f39u)]
 	public xcc3b3a79 ChangedBy { get; set; } = xcc3b3a79.Editor;
 
-	[DDLRegistration(0xe4ae6492u)]
+	[DDLRegistration(0xa3f30956u)]
 	public RivetAssetId EngineId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static SceneObjectEngineItem Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ActivityClueSpawnConditionWrapper : DDLObjectType, IDDLObjectType<A
 		Condition = ddl.GetObject<ActivityClueSpawnConditionBase>(0x3f2b174fu);
 	}
 
-	[DDLRegistration(0x64602a9du, "Condition", "A condition to check whether a bot can spawn into this ActivityClue")]
+	[DDLRegistration(0x3f2b174fu, "Condition", "A condition to check whether a bot can spawn into this ActivityClue")]
 	public ActivityClueSpawnConditionBase? Condition { get; set; } = default;
 
 	public static ActivityClueSpawnConditionWrapper Create(DDLObject ddl) => new(ddl);

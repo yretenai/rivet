@@ -24,25 +24,25 @@ public class Cinematic2ActorModelSettingsDef : DDLObjectType, IDDLObjectType<Cin
 		AlphaSortBias = ddl.GetValue<float>(0x96243d40u, AlphaSortBias);
 	}
 
-	[DDLRegistration(0x4de87e1fu, description: "If non-zero value, this overrides Model GeomLodDist1.")]
+	[DDLRegistration(0x7f1cf23fu, description: "If non-zero value, this overrides Model GeomLodDist1.")]
 	public ushort GeomLodDist1 { get; set; } = 0x0000;
 
-	[DDLRegistration(0x4de87e1fu, description: "If non-zero value, this overrides Model GeomLodDist2.")]
+	[DDLRegistration(0xe615a385u, description: "If non-zero value, this overrides Model GeomLodDist2.")]
 	public ushort GeomLodDist2 { get; set; } = 0x0000;
 
-	[DDLRegistration(0x4de87e1fu, description: "If non-zero value, this overrides Model GeomLodDist3.")]
+	[DDLRegistration(0x91129313u, description: "If non-zero value, this overrides Model GeomLodDist3.")]
 	public ushort GeomLodDist3 { get; set; } = 0x0000;
 
-	[DDLRegistration(0x4de87e1fu, description: "If non-zero value, this overrides Model GeomLodDist4.")]
+	[DDLRegistration(0x0f7606b0u, description: "If non-zero value, this overrides Model GeomLodDist4.")]
 	public ushort GeomLodDist4 { get; set; } = 0x0000;
 
-	[DDLRegistration(0x4de87e1fu, description: "If non-zero value, this overrides Model GeomLodDist5.")]
+	[DDLRegistration(0x78713626u, description: "If non-zero value, this overrides Model GeomLodDist5.")]
 	public ushort GeomLodDist5 { get; set; } = 0x0000;
 
-	[DDLRegistration(0x4de87e1fu, description: "Override the model's alpha sort bias for this actor")]
+	[DDLRegistration(0xb6d5102fu, description: "Override the model's alpha sort bias for this actor")]
 	public bool EnableAlphaSortBias { get; set; } = false;
 
-	[DDLRegistration(0x4de87e1fu, description: "The value we use to override the alpha sort bias")]
+	[DDLRegistration(0x96243d40u, description: "The value we use to override the alpha sort bias")]
 	public float AlphaSortBias { get; set; } = 0.00f;
 
 	public static Cinematic2ActorModelSettingsDef Create(DDLObject ddl) => new(ddl);

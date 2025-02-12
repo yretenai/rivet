@@ -20,13 +20,13 @@ public class VehicleTypeListEntry : DDLObjectType, IDDLObjectType<VehicleTypeLis
 		Frequency = ddl.GetValue<uint>(0xa482271fu, Frequency);
 	}
 
-	[DDLRegistration(0xe4926db4u)]
+	[DDLRegistration(0xc0bc4d5cu)]
 	public VehicleClass VehicleClass { get; set; } = VehicleClass.NormalCar;
 
-	[DDLRegistration(0xe4926db4u)]
+	[DDLRegistration(0x5d269a38u)]
 	public RivetAssetId Actor { get; set; } = default;
 
-	[DDLRegistration(0xe4926db4u)]
+	[DDLRegistration(0xa482271fu)]
 	public uint Frequency { get; set; } = 0x00000001;
 
 	public static VehicleTypeListEntry Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class AimModWrapper : DDLObjectType, IDDLObjectType<AimModWrapper> {
 		AimMod = ddl.GetObject<AimModifierPrius>(0xc184c563u);
 	}
 
-	[DDLRegistration(0xec69247eu)]
+	[DDLRegistration(0xc184c563u)]
 	public AimModifierPrius? AimMod { get; set; } = default;
 
 	public static AimModWrapper Create(DDLObject ddl) => new(ddl);

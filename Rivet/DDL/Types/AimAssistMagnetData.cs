@@ -24,25 +24,25 @@ public class AimAssistMagnetData : DDLObjectType, IDDLObjectType<AimAssistMagnet
 		PitchFactor = ddl.GetValue<float>(0x25afe2e8u, PitchFactor);
 	}
 
-	[DDLRegistration(0x43ed3754u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0x43ed3754u, "Box Curve Data")]
+	[DDLRegistration(0x643e4b40u, "Box Curve Data")]
 	public AimAssistCurveData? BoxProcessing { get; set; } = default;
 
-	[DDLRegistration(0x43ed3754u, "Stick Min", "Lower bound of the raw stick input, typical range is [0-1].")]
+	[DDLRegistration(0xdee2a17du, "Stick Min", "Lower bound of the raw stick input, typical range is [0-1].")]
 	public float StickMin { get; set; } = 0.70f;
 
-	[DDLRegistration(0x43ed3754u, "Stick Max", "Upper bound of the raw stick input, typical range is [0-1].")]
+	[DDLRegistration(0xe2ef9e24u, "Stick Max", "Upper bound of the raw stick input, typical range is [0-1].")]
 	public float StickMax { get; set; } = 0.95f;
 
-	[DDLRegistration(0x43ed3754u, "Factor Min", "Lower bound used for lerping the adjusted stick input between.  Can exceed [0-1], but the final calculated value passed to the camera is clamped to [0, 1].")]
+	[DDLRegistration(0xc102c0afu, "Factor Min", "Lower bound used for lerping the adjusted stick input between.  Can exceed [0-1], but the final calculated value passed to the camera is clamped to [0, 1].")]
 	public float FactorMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x43ed3754u, "Factor Max", "Upper bound used for lerping the adjusted stick input between.  Can exceed [0-1], but the final calculated value passed to the camera is clamped to [0, 1].")]
+	[DDLRegistration(0xfd0ffff6u, "Factor Max", "Upper bound used for lerping the adjusted stick input between.  Can exceed [0-1], but the final calculated value passed to the camera is clamped to [0, 1].")]
 	public float FactorMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x43ed3754u, "Pitch Factor", "Adjusts the amount of magnetism applied to pitch, typical range is [0-1].")]
+	[DDLRegistration(0x25afe2e8u, "Pitch Factor", "Adjusts the amount of magnetism applied to pitch, typical range is [0-1].")]
 	public float PitchFactor { get; set; } = 0.75f;
 
 	public static AimAssistMagnetData Create(DDLObject ddl) => new(ddl);

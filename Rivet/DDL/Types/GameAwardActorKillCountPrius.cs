@@ -18,7 +18,7 @@ public class GameAwardActorKillCountPrius : AwardBasePrius, IDDLObjectType<GameA
 		KillTargetAsset = ddl.GetObject<ActorAssetReferenceDef>(0x6d202ffbu);
 	}
 
-	[DDLRegistration(0x48ed0cbdu, "Kill Target Actor", "Reference to asset for killed actor")]
+	[DDLRegistration(0x6d202ffbu, "Kill Target Actor", "Reference to asset for killed actor")]
 	public ActorAssetReferenceDef? KillTargetAsset { get; set; } = default;
 
 	public new static GameAwardActorKillCountPrius Create(DDLObject ddl) => new(ddl);

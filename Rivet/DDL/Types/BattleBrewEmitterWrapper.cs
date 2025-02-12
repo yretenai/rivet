@@ -18,7 +18,7 @@ public class BattleBrewEmitterWrapper : DDLObjectType, IDDLObjectType<BattleBrew
 		Emitter = ddl.GetObject<BattleBrewEmitterBasePrius>(0x7464ae09u);
 	}
 
-	[DDLRegistration(0xd6e1b5ceu)]
+	[DDLRegistration(0x7464ae09u)]
 	public BattleBrewEmitterBasePrius? Emitter { get; set; } = default;
 
 	public static BattleBrewEmitterWrapper Create(DDLObject ddl) => new(ddl);

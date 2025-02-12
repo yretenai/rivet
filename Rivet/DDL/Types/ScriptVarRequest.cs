@@ -19,10 +19,10 @@ public class ScriptVarRequest : DDLObjectType, IDDLObjectType<ScriptVarRequest> 
 		PropertyId = ddl.GetValue<uint>(0xfa3122e7u, PropertyId);
 	}
 
-	[DDLRegistration(0x98a90347u)]
+	[DDLRegistration(0xbb3171e6u)]
 	public RivetAssetId VarTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x98a90347u)]
+	[DDLRegistration(0xfa3122e7u)]
 	public uint PropertyId { get; set; } = 0x00000000;
 
 	public static ScriptVarRequest Create(DDLObject ddl) => new(ddl);

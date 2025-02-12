@@ -26,31 +26,31 @@ public class SoundPortalingSettings : DDLObjectType, IDDLObjectType<SoundPortali
 		PortalRTPC = ddl.GetString(0x7bc8d5ff) ?? PortalRTPC;
 	}
 
-	[DDLRegistration(0x728f0796u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0x728f0796u)]
+	[DDLRegistration(0xdc61d32bu)]
 	public byte MaxPortals { get; set; } = 0x40;
 
-	[DDLRegistration(0x728f0796u)]
+	[DDLRegistration(0x3e992696u)]
 	public byte MaxPortalsBetweenTwoVolumes { get; set; } = 0x04;
 
-	[DDLRegistration(0x728f0796u)]
+	[DDLRegistration(0xd92a4525u)]
 	public byte MaxPortaledPositionsPerSource { get; set; } = 0x04;
 
-	[DDLRegistration(0x728f0796u)]
+	[DDLRegistration(0x18c3da0eu)]
 	public byte MaxFadingPositionsPerSource { get; set; } = 0x08;
 
-	[DDLRegistration(0x728f0796u)]
+	[DDLRegistration(0x0005eabau)]
 	public uint MaxVolumes { get; set; } = 0x00000080;
 
-	[DDLRegistration(0x728f0796u, description: "The speed at which portals fade in an out, in normalized untis per second")]
+	[DDLRegistration(0x1b817a67u, description: "The speed at which portals fade in an out, in normalized untis per second")]
 	public float PortalInterpolationSpeed { get; set; } = 3.00f;
 
-	[DDLRegistration(0x728f0796u)]
+	[DDLRegistration(0x3e78e991u)]
 	public x652a90fd PortalInterpolationMode { get; set; } = x652a90fd.PortalBendAggregationRuleAverage;
 
-	[DDLRegistration(0x728f0796u)]
+	[DDLRegistration(0x7bc8d5ffu)]
 	public string? PortalRTPC { get; set; } = "PortalPower";
 
 	public static SoundPortalingSettings Create(DDLObject ddl) => new(ddl);

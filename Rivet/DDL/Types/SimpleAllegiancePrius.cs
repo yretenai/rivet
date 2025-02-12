@@ -18,7 +18,7 @@ public class SimpleAllegiancePrius : DDLObjectType, IDDLObjectType<SimpleAllegia
 		Allegiance = ddl.GetEnum<x6bdf4ba1>(0xd10c0c26u, x6bdf4ba1Values.Lookup);
 	}
 
-	[DDLRegistration(0x80900fc9u, "Allegiance")]
+	[DDLRegistration(0xd10c0c26u, "Allegiance")]
 	public x6bdf4ba1 Allegiance { get; set; } = x6bdf4ba1.Neutral;
 
 	public static SimpleAllegiancePrius Create(DDLObject ddl) => new(ddl);

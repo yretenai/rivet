@@ -19,10 +19,10 @@ public class RandomScaleComponentPrius : DDLObjectType, IDDLObjectType<RandomSca
 		MaxScale = ddl.GetValue<float>(0xf5d8e213u, MaxScale);
 	}
 
-	[DDLRegistration(0xcfa492d8u, description: "Minimum scale to give an actor when it is activated.")]
+	[DDLRegistration(0x13b84df2u, description: "Minimum scale to give an actor when it is activated.")]
 	public float MinScale { get; set; } = 0.90f;
 
-	[DDLRegistration(0xcfa492d8u, description: "Maximum scale to give an actor when it is activated.")]
+	[DDLRegistration(0xf5d8e213u, description: "Maximum scale to give an actor when it is activated.")]
 	public float MaxScale { get; set; } = 1.10f;
 
 	public static RandomScaleComponentPrius Create(DDLObject ddl) => new(ddl);

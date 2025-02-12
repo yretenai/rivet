@@ -28,37 +28,37 @@ public class BreakableVariantDifficultyEntry : DDLObjectType, IDDLObjectType<Bre
 		ChallengeModeMultiplier = ddl.GetValue<float>(0x172b41fdu, ChallengeModeMultiplier);
 	}
 
-	[DDLRegistration(0x33bca11eu)]
+	[DDLRegistration(0xf0a9dc95u)]
 	public xc3e5efea Variant { get; set; } = xc3e5efea.V1;
 
-	[DDLRegistration(0x33bca11eu)]
+	[DDLRegistration(0xafa88333u)]
 	public string? StartMission { get; set; } = "";
 
-	[DDLRegistration(0x33bca11eu)]
+	[DDLRegistration(0x58d58154u)]
 	public string? StartObjective { get; set; } = "";
 
-	[DDLRegistration(0x33bca11eu)]
+	[DDLRegistration(0xf0a26d74u)]
 	public float Health { get; set; } = 1.00f;
 
-	[DDLRegistration(0x33bca11eu)]
+	[DDLRegistration(0x860e9773u)]
 	public float EasyMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x33bca11eu)]
+	[DDLRegistration(0xdff2bb81u)]
 	public float MediumMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x33bca11eu)]
+	[DDLRegistration(0xcf33228bu)]
 	public float HardMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x33bca11eu)]
+	[DDLRegistration(0xbf016237u)]
 	public float HardestMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x33bca11eu)]
+	[DDLRegistration(0x79745c95u)]
 	public float ThreeDeathsMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x33bca11eu)]
+	[DDLRegistration(0xd742e16fu)]
 	public float FiveDeathsMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x33bca11eu)]
+	[DDLRegistration(0x172b41fdu)]
 	public float ChallengeModeMultiplier { get; set; } = 1.00f;
 
 	public static BreakableVariantDifficultyEntry Create(DDLObject ddl) => new(ddl);

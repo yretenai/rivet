@@ -18,7 +18,7 @@ public class ActionControlHeroTutorialMessageControl : DDLObjectType, IDDLObject
 		Control = ddl.GetEnum<xd8ef6541>(0xec314f73u, xd8ef6541Values.Lookup);
 	}
 
-	[DDLRegistration(0xe54056a3u)]
+	[DDLRegistration(0xec314f73u)]
 	public xd8ef6541 Control { get; set; } = xd8ef6541.TutorialTouchpadX;
 
 	public static ActionControlHeroTutorialMessageControl Create(DDLObject ddl) => new(ddl);

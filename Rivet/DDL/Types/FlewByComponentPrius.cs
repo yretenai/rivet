@@ -22,19 +22,19 @@ public class FlewByComponentPrius : DDLObjectType, IDDLObjectType<FlewByComponen
 		MinSpeedStop = ddl.GetValue<float>(0xd8bba9e6u, MinSpeedStop);
 	}
 
-	[DDLRegistration(0x8855e487u, "Start Enabled?", "Whether this component is enabled on load.")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled?", "Whether this component is enabled on load.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0x8855e487u, "Start Dist", "The distance from the camera (if the actor is moving towards the camera) to send the flewby start event.")]
+	[DDLRegistration(0x4cd1b259u, "Start Dist", "The distance from the camera (if the actor is moving towards the camera) to send the flewby start event.")]
 	public float FlewByDistStart { get; set; } = 50.00f;
 
-	[DDLRegistration(0x8855e487u, "Stop Dist", "The distance from the camera (if the actor is moving away from the camera) to send the flewby stop event.")]
+	[DDLRegistration(0xc82f4bf7u, "Stop Dist", "The distance from the camera (if the actor is moving away from the camera) to send the flewby stop event.")]
 	public float FlewByDistStop { get; set; } = 50.00f;
 
-	[DDLRegistration(0x8855e487u, "Min Speed: Start", "The min speed allow the flew by event. A value < 0 means to not consider the speed.")]
+	[DDLRegistration(0x26710649u, "Min Speed: Start", "The min speed allow the flew by event. A value < 0 means to not consider the speed.")]
 	public float MinSpeedStart { get; set; } = -1.00f;
 
-	[DDLRegistration(0x8855e487u, "Min Speed: Stop", "If set to a value >= 0, the flewby stop event will trigger before it reaches our distance limit if it falls below this speed.")]
+	[DDLRegistration(0xd8bba9e6u, "Min Speed: Stop", "If set to a value >= 0, the flewby stop event will trigger before it reaches our distance limit if it falls below this speed.")]
 	public float MinSpeedStop { get; set; } = -1.00f;
 
 	public static FlewByComponentPrius Create(DDLObject ddl) => new(ddl);

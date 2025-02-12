@@ -33,52 +33,52 @@ public class LedgeBirdSystemConfig : ConfigBase, IDDLObjectType<LedgeBirdSystemC
 		BirdTypes = ddl.GetObjects<LedgeBirdType>(0x6f844477u);
 	}
 
-	[DDLRegistration(0xbd2fc977u, "Max Hero Speed", "Scales the ideal ledge flock spawn distance by hero speed - the ideal spawn distance will be the min spawn distance when the hero is not moving, and the ideal spawn distance will be the max spawn distance when the hero is moving at or faster than this speed.")]
+	[DDLRegistration(0x0db34a3fu, "Max Hero Speed", "Scales the ideal ledge flock spawn distance by hero speed - the ideal spawn distance will be the min spawn distance when the hero is not moving, and the ideal spawn distance will be the max spawn distance when the hero is moving at or faster than this speed.")]
 	public float MaxHeroSpeed { get; set; } = 30.00f;
 
-	[DDLRegistration(0xbd2fc977u, "Stop Spawn Distance", "Existing ledge flocks will stop spawning once the hero gets within this distance of the ledge path.")]
+	[DDLRegistration(0x41cafbf3u, "Stop Spawn Distance", "Existing ledge flocks will stop spawning once the hero gets within this distance of the ledge path.")]
 	public float StopSpawnDistance { get; set; } = 30.00f;
 
-	[DDLRegistration(0xbd2fc977u, "Min Spawn Distance", "Birds may spawn on ledge paths that are at least this distance away from the hero.")]
+	[DDLRegistration(0xef1087b4u, "Min Spawn Distance", "Birds may spawn on ledge paths that are at least this distance away from the hero.")]
 	public float MinSpawnDistance { get; set; } = 40.00f;
 
-	[DDLRegistration(0xbd2fc977u, "Max Spawn Distance", "Birds may spawn on ledge paths that are at most this distance away from hero.")]
+	[DDLRegistration(0xbee93ce9u, "Max Spawn Distance", "Birds may spawn on ledge paths that are at most this distance away from hero.")]
 	public float MaxSpawnDistance { get; set; } = 90.00f;
 
-	[DDLRegistration(0xbd2fc977u, "Ledge Spawn Cooldown", "Spawn a ledge with birds once per this period.")]
+	[DDLRegistration(0x444cc687u, "Ledge Spawn Cooldown", "Spawn a ledge with birds once per this period.")]
 	public float LedgeSpawnCooldown { get; set; } = 0.50f;
 
-	[DDLRegistration(0xbd2fc977u, "Max Spawned Flocks", "Try to have this many flocks spawned in at any given time.")]
+	[DDLRegistration(0x3acfae85u, "Max Spawned Flocks", "Try to have this many flocks spawned in at any given time.")]
 	public int MaxSpawnedFlocks { get; set; } = 5;
 
-	[DDLRegistration(0xbd2fc977u, "Spawn Query Dimensions", "The size of the ledge path query volume.")]
+	[DDLRegistration(0x2c50d568u, "Spawn Query Dimensions", "The size of the ledge path query volume.")]
 	public DDLVector3? SpawnQueryDimensions { get; set; } = default;
 
-	[DDLRegistration(0xbd2fc977u, "Culled Ledge Despawn Time", "Despawn a ledge flock if none of its members have been within the player's camera frustum for this amount of time.")]
+	[DDLRegistration(0x40255610u, "Culled Ledge Despawn Time", "Despawn a ledge flock if none of its members have been within the player's camera frustum for this amount of time.")]
 	public float CulledLedgeDespawnTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0xbd2fc977u, "Off-Screen Flee Despawn Time", "Despawn a fleeing bird if it has been off-screen for this amount of time.")]
+	[DDLRegistration(0xdab894d2u, "Off-Screen Flee Despawn Time", "Despawn a fleeing bird if it has been off-screen for this amount of time.")]
 	public float OffscreenFleeDespawnTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbd2fc977u, "Flee Distance", "All birds will flee the perch once the hero gets close to any bird in the flock. The delta Y is multiplied by the Y Coefficient below. (to allow for the hero to get closer vertically before birds scatter)")]
+	[DDLRegistration(0x84061f99u, "Flee Distance", "All birds will flee the perch once the hero gets close to any bird in the flock. The delta Y is multiplied by the Y Coefficient below. (to allow for the hero to get closer vertically before birds scatter)")]
 	public float FleeDistance { get; set; } = 15.00f;
 
-	[DDLRegistration(0xbd2fc977u, "Flee Distance Coeff Y", "Height difference counts this much more. (E.g. if this has a value of 2, and if the hero is directly below the ledge by 5 meters, he counts as really being 10 meters away.")]
+	[DDLRegistration(0xe892a6d4u, "Flee Distance Coeff Y", "Height difference counts this much more. (E.g. if this has a value of 2, and if the hero is directly below the ledge by 5 meters, he counts as really being 10 meters away.")]
 	public float FleeDistanceCoeffY { get; set; } = 2.00f;
 
-	[DDLRegistration(0xbd2fc977u, "Initial Load Delay", "How long after the game loads in should the first ledge flock spawn?")]
+	[DDLRegistration(0x6bc8e325u, "Initial Load Delay", "How long after the game loads in should the first ledge flock spawn?")]
 	public float InitialLoadDelay { get; set; } = 10.00f;
 
-	[DDLRegistration(0xbd2fc977u, "Ledge Respawn Cooldown", "If birds flee from a ledge, don't respawn them on that ledge until this much time has passed.")]
+	[DDLRegistration(0x135ac45au, "Ledge Respawn Cooldown", "If birds flee from a ledge, don't respawn them on that ledge until this much time has passed.")]
 	public float MinLedgeRespawnTime { get; set; } = 10.00f;
 
-	[DDLRegistration(0xbd2fc977u, "Flee from Dimensional Pulses?", "Should ledge birds flee from affecting dimensional pulses?")]
+	[DDLRegistration(0x97e14b23u, "Flee from Dimensional Pulses?", "Should ledge birds flee from affecting dimensional pulses?")]
 	public bool FleeFromPulses { get; set; } = true;
 
-	[DDLRegistration(0xbd2fc977u)]
+	[DDLRegistration(0xefb78e9cu)]
 	public DimensionalPulseTargetFlockPrius? PulseFlockTargetPrius { get; set; } = default;
 
-	[DDLRegistration(0xbd2fc977u)]
+	[DDLRegistration(0x6f844477u)]
 	public List<LedgeBirdType?> BirdTypes { get; set; } = [];
 
 	public new static LedgeBirdSystemConfig Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class VecDistanceNodeDef : MathNodeBaseDef, IDDLObjectType<VecDistanceNod
 		Result = ddl.GetObject<OutputPlugFloat>(0x2d128f74u);
 	}
 
-	[DDLRegistration(0x307a7bedu)]
+	[DDLRegistration(0x3a58e94du)]
 	public InputPlugVec3? A { get; set; } = default;
 
-	[DDLRegistration(0x307a7bedu)]
+	[DDLRegistration(0xa351b8f7u)]
 	public InputPlugVec3? B { get; set; } = default;
 
-	[DDLRegistration(0x307a7bedu)]
+	[DDLRegistration(0x2d128f74u)]
 	public OutputPlugFloat? Result { get; set; } = default;
 
 	public new static VecDistanceNodeDef Create(DDLObject ddl) => new(ddl);

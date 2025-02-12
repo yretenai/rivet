@@ -25,28 +25,28 @@ public class AnimDriverOpSmoothDef : DDLObjectType, IDDLObjectType<AnimDriverOpS
 		SmoothType = ddl.GetEnum<xfd5aa1cb>(0xc882b46cu, xfd5aa1cbValues.Lookup);
 	}
 
-	[DDLRegistration(0x36ddfa03u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x36ddfa03u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0x36ddfa03u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x36ddfa03u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x36ddfa03u)]
+	[DDLRegistration(0x8262958fu)]
 	public x9f234d85 OpType { get; set; } = x9f234d85.AnimDriverOpTypeMultiplyAdd;
 
-	[DDLRegistration(0x36ddfa03u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0x36ddfa03u)]
+	[DDLRegistration(0x322aadceu)]
 	public List<AnimDriverOpConnection?> Connections { get; set; } = [];
 
-	[DDLRegistration(0x36ddfa03u)]
+	[DDLRegistration(0xc882b46cu)]
 	public xfd5aa1cb SmoothType { get; set; } = xfd5aa1cb.Linear;
 
 	public static AnimDriverOpSmoothDef Create(DDLObject ddl) => new(ddl);

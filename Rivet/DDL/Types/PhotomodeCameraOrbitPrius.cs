@@ -18,7 +18,7 @@ public class PhotomodeCameraOrbitPrius : PhotomodeCameraBasePrius, IDDLObjectTyp
 		CamData = ddl.GetObject<OrbitCamData>(0xa857067cu);
 	}
 
-	[DDLRegistration(0x8d71e3a5u)]
+	[DDLRegistration(0xa857067cu)]
 	public OrbitCamData? CamData { get; set; } = default;
 
 	public new static PhotomodeCameraOrbitPrius Create(DDLObject ddl) => new(ddl);

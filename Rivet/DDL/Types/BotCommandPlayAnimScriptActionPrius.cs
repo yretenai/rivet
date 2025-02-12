@@ -20,13 +20,13 @@ public class BotCommandPlayAnimScriptActionPrius : DDLObjectType, IDDLObjectType
 		Rate = ddl.GetValue<float>(0xef7cff89u, Rate);
 	}
 
-	[DDLRegistration(0xbf2e4f42u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0xbf2e4f42u)]
+	[DDLRegistration(0x7e08633cu)]
 	public BotCommandPlayAnimFlags BotCommandPlayAnimFlags { get; set; } = (BotCommandPlayAnimFlags) 0x00000001;
 
-	[DDLRegistration(0xbf2e4f42u)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
 	public static BotCommandPlayAnimScriptActionPrius Create(DDLObject ddl) => new(ddl);

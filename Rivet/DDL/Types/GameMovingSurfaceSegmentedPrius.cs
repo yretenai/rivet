@@ -18,7 +18,7 @@ public class GameMovingSurfaceSegmentedPrius : MovingSurfacePrius, IDDLObjectTyp
 		SegmentedJoints = ddl.GetStrings(0x99936213u);
 	}
 
-	[DDLRegistration(0x82c3312au)]
+	[DDLRegistration(0x99936213u)]
 	public List<string?> SegmentedJoints { get; set; } = [];
 
 	public new static GameMovingSurfaceSegmentedPrius Create(DDLObject ddl) => new(ddl);

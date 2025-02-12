@@ -19,10 +19,10 @@ public class CollideAtGroundPositionShotMotionPrius : ShotMotionBasePrius, IDDLO
 		FaceCollisionNormal = ddl.GetValue<bool>(0xeb8b054du, FaceCollisionNormal);
 	}
 
-	[DDLRegistration(0x79832670u)]
+	[DDLRegistration(0xc7f69ee3u)]
 	public float CollRadius { get; set; } = 0.10f;
 
-	[DDLRegistration(0x79832670u)]
+	[DDLRegistration(0xeb8b054du)]
 	public bool FaceCollisionNormal { get; set; } = true;
 
 	public new static CollideAtGroundPositionShotMotionPrius Create(DDLObject ddl) => new(ddl);

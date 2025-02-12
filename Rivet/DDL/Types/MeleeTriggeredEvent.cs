@@ -19,10 +19,10 @@ public class MeleeTriggeredEvent : EventBase, IDDLObjectType<MeleeTriggeredEvent
 		Data = ddl.GetValue<uint>(0x9d6333d3u, Data);
 	}
 
-	[DDLRegistration(0x53b8e8feu)]
+	[DDLRegistration(0x467c0a70u)]
 	public uint AnimHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x53b8e8feu)]
+	[DDLRegistration(0x9d6333d3u)]
 	public uint Data { get; set; } = 0x00000000;
 
 	public new static MeleeTriggeredEvent Create(DDLObject ddl) => new(ddl);

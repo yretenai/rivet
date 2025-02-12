@@ -18,7 +18,7 @@ public class GadgetListElement : DDLObjectType, IDDLObjectType<GadgetListElement
 		ItemConfigFile = ddl.GetValue<RivetAssetId>(0x22c4a442u, ItemConfigFile);
 	}
 
-	[DDLRegistration(0x525149b4u)]
+	[DDLRegistration(0x22c4a442u)]
 	public RivetAssetId ItemConfigFile { get; set; } = default;
 
 	public static GadgetListElement Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class UnlockableSkinData : DDLObjectType, IDDLObjectType<UnlockableSkinDa
 		Skin = ddl.GetObject<SkinData>(0x32e9a8aeu);
 	}
 
-	[DDLRegistration(0x5853fa27u, "Unlock Skin ID", "The unlock skin ID that corresponds to this skin. MUST match what the UI uses for an id for this skin (0 == base(do not use), 1 == captain, 2 == chrome, 3 == flame.")]
+	[DDLRegistration(0xa951b39au, "Unlock Skin ID", "The unlock skin ID that corresponds to this skin. MUST match what the UI uses for an id for this skin (0 == base(do not use), 1 == captain, 2 == chrome, 3 == flame.")]
 	public sbyte UnlockSkinID { get; set; } = -1;
 
-	[DDLRegistration(0x5853fa27u)]
+	[DDLRegistration(0x32e9a8aeu)]
 	public SkinData? Skin { get; set; } = default;
 
 	public static UnlockableSkinData Create(DDLObject ddl) => new(ddl);

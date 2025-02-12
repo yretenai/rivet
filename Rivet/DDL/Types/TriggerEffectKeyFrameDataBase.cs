@@ -19,10 +19,10 @@ public class TriggerEffectKeyFrameDataBase : DDLObjectType, IDDLObjectType<Trigg
 		BlendStyle = ddl.GetObject<TriggerEffectKeyFrameBlendBase>(0xb34024eau);
 	}
 
-	[DDLRegistration(0xd8e4ea8fu)]
+	[DDLRegistration(0x4163ac0du)]
 	public TriggerEffectDataBase? TriggerEffect { get; set; } = default;
 
-	[DDLRegistration(0xd8e4ea8fu)]
+	[DDLRegistration(0xb34024eau)]
 	public TriggerEffectKeyFrameBlendBase? BlendStyle { get; set; } = default;
 
 	public static TriggerEffectKeyFrameDataBase Create(DDLObject ddl) => new(ddl);

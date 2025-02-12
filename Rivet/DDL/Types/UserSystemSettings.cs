@@ -29,40 +29,40 @@ public class UserSystemSettings : DDLObjectType, IDDLObjectType<UserSystemSettin
 		UseDefaultUserName = ddl.GetValue<bool>(0xe63216f7u, UseDefaultUserName);
 	}
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0x287bdb12u)]
 	public int MaxPerUserBindingsConfigCount { get; set; } = 8;
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0x0ec0fc20u)]
 	public int MaxPerUserControlGroupCount { get; set; } = 16;
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0x8fc95308u)]
 	public int MaxPerUserControlCount { get; set; } = 256;
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0x345cdef5u)]
 	public int MaxPerUserFinalizeStepCount { get; set; } = 8;
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0x8d01af3au)]
 	public byte MaxPlayingUsers { get; set; } = 0x02;
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0xf74f691bu)]
 	public bool UsePureUserName { get; set; } = false;
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0x8c914232u)]
 	public bool SetSignedInAsPlaying { get; set; } = true;
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0x4e21d3d8u)]
 	public bool GuestsEnabled { get; set; } = true;
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0xabdb326fu)]
 	public bool AllocInstanceId { get; set; } = false;
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0x5717483du)]
 	public bool FinalUseKeyboard { get; set; } = true;
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0x9d9990c4u)]
 	public bool FinalUseMouse { get; set; } = true;
 
-	[DDLRegistration(0xa8fe65f6u)]
+	[DDLRegistration(0xe63216f7u)]
 	public bool UseDefaultUserName { get; set; } = false;
 
 	public static UserSystemSettings Create(DDLObject ddl) => new(ddl);

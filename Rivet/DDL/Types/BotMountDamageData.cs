@@ -25,28 +25,28 @@ public class BotMountDamageData : DDLObjectType, IDDLObjectType<BotMountDamageDa
 		KnockbackAmount = ddl.GetValue<float>(0x7b1e600bu, KnockbackAmount);
 	}
 
-	[DDLRegistration(0x8d47bf30u)]
+	[DDLRegistration(0xbfaa9b05u)]
 	public bool EnableTouchDamage { get; set; } = false;
 
-	[DDLRegistration(0x8d47bf30u)]
+	[DDLRegistration(0x5814524du)]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0x8d47bf30u)]
+	[DDLRegistration(0x359f9b0au)]
 	public float DamageSphereRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8d47bf30u)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8d47bf30u)]
+	[DDLRegistration(0x840c154du)]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Melee;
 
-	[DDLRegistration(0x8d47bf30u)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.Two;
 
-	[DDLRegistration(0x8d47bf30u, description: "Damage String for the Conduit")]
+	[DDLRegistration(0xecbb9a92u, description: "Damage String for the Conduit")]
 	public string? DamageStr { get; set; } = default;
 
-	[DDLRegistration(0x8d47bf30u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 1.00f;
 
 	public static BotMountDamageData Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class SargassoCentipedeAODSpawnData : AttachableShotSpawnData, IDDLObject
 		AODPrius = ddl.GetObject<SargassoCentipedeAODPrius>(0x808f7590u);
 	}
 
-	[DDLRegistration(0xacc1ca42u)]
+	[DDLRegistration(0x808f7590u)]
 	public SargassoCentipedeAODPrius? AODPrius { get; set; } = default;
 
 	public new static SargassoCentipedeAODSpawnData Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class RobotestCineActorDriverInfo : DDLObjectType, IDDLObjectType<Robotes
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x5df1c6f0u, description: "driver Name")]
+	[DDLRegistration(0x6eb3beb6u, description: "driver Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x5df1c6f0u, description: "layer Name")]
+	[DDLRegistration(0xfd88eddbu, description: "layer Name")]
 	public uint Layer { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5df1c6f0u, description: "TimeNorm")]
+	[DDLRegistration(0x5ae5b57eu, description: "TimeNorm")]
 	public float TimeNorm { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5df1c6f0u, description: "Duration")]
+	[DDLRegistration(0x7c5e3db0u, description: "Duration")]
 	public float Duration { get; set; } = 0.00f;
 
 	public static RobotestCineActorDriverInfo Create(DDLObject ddl) => new(ddl);

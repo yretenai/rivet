@@ -18,7 +18,7 @@ public class WeaponTriggerDataListItem : DDLObjectType, IDDLObjectType<WeaponTri
 		Trigger = ddl.GetObject<WeaponTriggerData>(0x1b816c65u);
 	}
 
-	[DDLRegistration(0xeeb00929u)]
+	[DDLRegistration(0x1b816c65u)]
 	public WeaponTriggerData? Trigger { get; set; } = default;
 
 	public static WeaponTriggerDataListItem Create(DDLObject ddl) => new(ddl);

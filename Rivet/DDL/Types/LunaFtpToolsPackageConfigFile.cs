@@ -37,64 +37,64 @@ public class LunaFtpToolsPackageConfigFile : DDLObjectType, IDDLObjectType<LunaF
 		PythonDir = ddl.GetString(0x66f43e8d) ?? PythonDir;
 	}
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x788452acu)]
 	public string? PackageName { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0xee6efffbu)]
 	public string? ProjectId { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x85fe5578u)]
 	public string? Branch { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0xd34e8692u)]
 	public int VersionMajor { get; set; } = 0;
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x11f306a1u)]
 	public int VersionMinor { get; set; } = 0;
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x0c51edadu)]
 	public int VersionPatch { get; set; } = 0;
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x5d787e79u)]
 	public int BetaId { get; set; } = -1;
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x0144dc66u)]
 	public bool Released { get; set; } = false;
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0xf7d8b562u)]
 	public string? PreReleasePackage { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x51abd94eu)]
 	public string? CreatedBy { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0xff735451u)]
 	public string? CreationDate { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0xf2d38de5u)]
 	public string? BuildType { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0xc4d0622du)]
 	public string? ToolUiType { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x91acd35au)]
 	public string? SyncedToCL { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0xffa3e6edu)]
 	public string? CompatibleUpdaterVersion { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x2da22199u)]
 	public string? CompatibleHavokVersion { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x4cd133d3u)]
 	public string? CompatibleWinExtVersion { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x2c8774b5u)]
 	public string? CompatibleMaya2018Version { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0xc6ef53c5u)]
 	public string? CompatibleMaya2020Version { get; set; } = "";
 
-	[DDLRegistration(0xf7c2dcd8u)]
+	[DDLRegistration(0x66f43e8du)]
 	public string? PythonDir { get; set; } = "";
 
 	public static LunaFtpToolsPackageConfigFile Create(DDLObject ddl) => new(ddl);

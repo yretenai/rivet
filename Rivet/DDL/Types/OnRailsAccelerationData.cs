@@ -23,22 +23,22 @@ public class OnRailsAccelerationData : DDLObjectType, IDDLObjectType<OnRailsAcce
 		MaxVerticalAccel = ddl.GetValue<float>(0x5975877cu, MaxVerticalAccel);
 	}
 
-	[DDLRegistration(0x9f3a7d60u)]
+	[DDLRegistration(0xab4de8d1u)]
 	public float HorizontalJerk { get; set; } = 60.00f;
 
-	[DDLRegistration(0x9f3a7d60u)]
+	[DDLRegistration(0x5e5b67a3u)]
 	public float NegativeHorizontalJerk { get; set; } = 20.00f;
 
-	[DDLRegistration(0x9f3a7d60u)]
+	[DDLRegistration(0xb35b32e9u)]
 	public float MaxHorizontalAccel { get; set; } = 50.00f;
 
-	[DDLRegistration(0x9f3a7d60u)]
+	[DDLRegistration(0x9a109e90u)]
 	public float VerticalJerk { get; set; } = 60.00f;
 
-	[DDLRegistration(0x9f3a7d60u)]
+	[DDLRegistration(0xbd03b806u)]
 	public float NegativeVerticalJerk { get; set; } = 20.00f;
 
-	[DDLRegistration(0x9f3a7d60u)]
+	[DDLRegistration(0x5975877cu)]
 	public float MaxVerticalAccel { get; set; } = 50.00f;
 
 	public static OnRailsAccelerationData Create(DDLObject ddl) => new(ddl);

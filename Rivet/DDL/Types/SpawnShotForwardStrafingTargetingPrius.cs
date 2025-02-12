@@ -27,34 +27,34 @@ public class SpawnShotForwardStrafingTargetingPrius : SpawnShotTargetingPrius, I
 		UseEmitterDir = ddl.GetValue<bool>(0x9a4ddd5eu, UseEmitterDir);
 	}
 
-	[DDLRegistration(0x979ef253u, description: "Yaw offset of first shot in volley")]
+	[DDLRegistration(0x7ddfeff9u, description: "Yaw offset of first shot in volley")]
 	public float InitialYaw { get; set; } = 0.00f;
 
-	[DDLRegistration(0x979ef253u, description: "Yaw change per shot of volley")]
+	[DDLRegistration(0xee3be3ddu, description: "Yaw change per shot of volley")]
 	public float PerShotYaw { get; set; } = 0.00f;
 
-	[DDLRegistration(0x979ef253u, description: "Pitch offset of first shot in volley")]
+	[DDLRegistration(0x3290fd0bu, description: "Pitch offset of first shot in volley")]
 	public float InitialPitch { get; set; } = -20.00f;
 
-	[DDLRegistration(0x979ef253u, description: "Pitch change per shot of volley")]
+	[DDLRegistration(0xcacec362u, description: "Pitch change per shot of volley")]
 	public float PerShotPitch { get; set; } = 5.00f;
 
-	[DDLRegistration(0x979ef253u, "Aim Offset", "The offset to apply to our aim target.")]
+	[DDLRegistration(0xe54de6b5u, "Aim Offset", "The offset to apply to our aim target.")]
 	public DDLVector3? AimOffset { get; set; } = default;
 
-	[DDLRegistration(0x979ef253u, "Aim Offset Small", "The offset to apply to our aim target.")]
+	[DDLRegistration(0x02deb2b0u, "Aim Offset Small", "The offset to apply to our aim target.")]
 	public DDLVector3? AimOffsetSmall { get; set; } = default;
 
-	[DDLRegistration(0x979ef253u, "Aim Offset Large", "The offset to apply to our aim target.")]
+	[DDLRegistration(0x2ef0711du, "Aim Offset Large", "The offset to apply to our aim target.")]
 	public DDLVector3? AimOffsetLarge { get; set; } = default;
 
-	[DDLRegistration(0x979ef253u, description: "After each volley, the intial offsets and offset dir will swap direction.")]
+	[DDLRegistration(0xdc5c0312u, description: "After each volley, the intial offsets and offset dir will swap direction.")]
 	public bool AlternateOffsetDir { get; set; } = false;
 
-	[DDLRegistration(0x979ef253u, description: "Overrides Initial values so the pattern makes the middle shot center on the target.")]
+	[DDLRegistration(0x010a60e6u, description: "Overrides Initial values so the pattern makes the middle shot center on the target.")]
 	public bool CentralisePattern { get; set; } = false;
 
-	[DDLRegistration(0x979ef253u, description: "Fires the bullet where the emitter locator points, rather than where code aims")]
+	[DDLRegistration(0x9a4ddd5eu, description: "Fires the bullet where the emitter locator points, rather than where code aims")]
 	public bool UseEmitterDir { get; set; } = true;
 
 	public new static SpawnShotForwardStrafingTargetingPrius Create(DDLObject ddl) => new(ddl);

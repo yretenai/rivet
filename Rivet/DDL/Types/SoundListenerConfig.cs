@@ -19,10 +19,10 @@ public class SoundListenerConfig : ConfigBase, IDDLObjectType<SoundListenerConfi
 		ListenerPriorities = ddl.GetObjects<SoundListenerPriority>(0xcb62563cu);
 	}
 
-	[DDLRegistration(0x1bb0b1e5u, "Boom Properties", "Properties for adjusting boom behavior")]
+	[DDLRegistration(0x2d41beabu, "Boom Properties", "Properties for adjusting boom behavior")]
 	public SoundListenerBoomProperties? BoomProperties { get; set; } = default;
 
-	[DDLRegistration(0x1bb0b1e5u, "Listener Priorities", "List of client systems and their priority for controlling the listener")]
+	[DDLRegistration(0xcb62563cu, "Listener Priorities", "List of client systems and their priority for controlling the listener")]
 	public List<SoundListenerPriority?> ListenerPriorities { get; set; } = [];
 
 	public new static SoundListenerConfig Create(DDLObject ddl) => new(ddl);

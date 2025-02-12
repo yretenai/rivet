@@ -18,7 +18,7 @@ public class GetCurrentHeroShipActionPrius : DDLObjectType, IDDLObjectType<GetCu
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xb64b9607u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
 	public static GetCurrentHeroShipActionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class EventMeterFullEvent : EventBase, IDDLObjectType<EventMeterFullEvent
 		EventName = ddl.GetString(0x2048921d) ?? EventName;
 	}
 
-	[DDLRegistration(0x9a7693d6u)]
+	[DDLRegistration(0x2048921du)]
 	public string? EventName { get; set; } = default;
 
 	public new static EventMeterFullEvent Create(DDLObject ddl) => new(ddl);

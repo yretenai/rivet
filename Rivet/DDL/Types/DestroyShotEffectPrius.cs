@@ -18,7 +18,7 @@ public class DestroyShotEffectPrius : ScriptedShotEffectBasePrius, IDDLObjectTyp
 		DestroySecondaryActivationActors = ddl.GetValue<bool>(0x09d59943u, DestroySecondaryActivationActors);
 	}
 
-	[DDLRegistration(0x14cb2f6cu)]
+	[DDLRegistration(0x09d59943u)]
 	public bool DestroySecondaryActivationActors { get; set; } = false;
 
 	public new static DestroyShotEffectPrius Create(DDLObject ddl) => new(ddl);

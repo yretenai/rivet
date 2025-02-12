@@ -18,7 +18,7 @@ public class UserAttachPropEvent : EventBase, IDDLObjectType<UserAttachPropEvent
 		UserHandle = ddl.GetValue<uint>(0x25e06c12u, UserHandle);
 	}
 
-	[DDLRegistration(0x639b548du)]
+	[DDLRegistration(0x25e06c12u)]
 	public uint UserHandle { get; set; } = 0x00000000;
 
 	public new static UserAttachPropEvent Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class DevstatsPlayerPositionInfo : DDLObjectType, IDDLObjectType<Devstats
 		ProjSpecificData = ddl.GetObject<DevstatsProjSpecificBase>(0x2f23554du);
 	}
 
-	[DDLRegistration(0xa5ea4154u)]
+	[DDLRegistration(0x92c18985u)]
 	public DDLVector3? Pos { get; set; } = default;
 
-	[DDLRegistration(0xa5ea4154u)]
+	[DDLRegistration(0x83b900d2u)]
 	public string? Level { get; set; } = default;
 
-	[DDLRegistration(0xa5ea4154u)]
+	[DDLRegistration(0x1bbfffa7u)]
 	public string? RegionContainer { get; set; } = default;
 
-	[DDLRegistration(0xa5ea4154u)]
+	[DDLRegistration(0x9a990f47u)]
 	public string? RegionUnit { get; set; } = default;
 
-	[DDLRegistration(0xa5ea4154u)]
+	[DDLRegistration(0xab23ef65u)]
 	public bool IsOpenWorld { get; set; } = false;
 
-	[DDLRegistration(0xa5ea4154u)]
+	[DDLRegistration(0xa99e8748u)]
 	public float PlaythroughTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa5ea4154u)]
+	[DDLRegistration(0x591f4379u)]
 	public string? PlaythroughSegmentId { get; set; } = default;
 
-	[DDLRegistration(0xa5ea4154u)]
+	[DDLRegistration(0x7f2ae876u)]
 	public string? LastGoldenPathMission { get; set; } = default;
 
-	[DDLRegistration(0xa5ea4154u)]
+	[DDLRegistration(0x2f23554du)]
 	public DevstatsProjSpecificBase? ProjSpecificData { get; set; } = default;
 
 	public static DevstatsPlayerPositionInfo Create(DDLObject ddl) => new(ddl);

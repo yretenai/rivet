@@ -26,31 +26,31 @@ public class InteractLocationCameraSettings : DDLObjectType, IDDLObjectType<Inte
 		AnimatedCameraAnchor = ddl.GetString(0xc8b25f2a) ?? AnimatedCameraAnchor;
 	}
 
-	[DDLRegistration(0x5b1eb6b2u, "User Camera", "The camera you want to activate during use")]
+	[DDLRegistration(0x8f7ca2ceu, "User Camera", "The camera you want to activate during use")]
 	public RivetAssetId UserCamera { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5b1eb6b2u, "Camera On Delay", "How long to wait after the hero's interact state begins before triggering the camera")]
+	[DDLRegistration(0x6b9d5ea5u, "Camera On Delay", "How long to wait after the hero's interact state begins before triggering the camera")]
 	public float CameraOnDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5b1eb6b2u, "Camera Off Delay", "Time to wait after the interact is complete before deactivating the camera")]
+	[DDLRegistration(0xfdefabcfu, "Camera Off Delay", "Time to wait after the interact is complete before deactivating the camera")]
 	public float CameraOffDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5b1eb6b2u, "Camera Off Distance", "How far the hero needs to move after the interact is complete before deactivating the camera")]
+	[DDLRegistration(0xde79bd6au, "Camera Off Distance", "How far the hero needs to move after the interact is complete before deactivating the camera")]
 	public float CameraOffDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5b1eb6b2u, "Camera Blend In Time", "Time it takes to blend to the given camera from the game camera")]
+	[DDLRegistration(0xe1abdb4fu, "Camera Blend In Time", "Time it takes to blend to the given camera from the game camera")]
 	public float CameraBlendInTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x5b1eb6b2u, "Camera Blend Out Time", "Time it takes to blend to the game camera from the interact camera")]
+	[DDLRegistration(0xe9ec1d1cu, "Camera Blend Out Time", "Time it takes to blend to the game camera from the interact camera")]
 	public float CameraBlendTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x5b1eb6b2u, "Activate On Start", "Activate the camera when the use animation begins, ignore 'Camera On Delay'")]
+	[DDLRegistration(0x15268accu, "Activate On Start", "Activate the camera when the use animation begins, ignore 'Camera On Delay'")]
 	public bool ActivateOnStart { get; set; } = false;
 
-	[DDLRegistration(0x5b1eb6b2u, "Use Animated Camera", "If true, use an animated camera where the driver played matches the name of the hero use anim")]
+	[DDLRegistration(0x683736e6u, "Use Animated Camera", "If true, use an animated camera where the driver played matches the name of the hero use anim")]
 	public bool UseAnimatedCamera { get; set; } = false;
 
-	[DDLRegistration(0x5b1eb6b2u, "Anim Camera Anchor", "Joint name on the interact object to attach animated camera anchor, if none, use actor matrix")]
+	[DDLRegistration(0xc8b25f2au, "Anim Camera Anchor", "Joint name on the interact object to attach animated camera anchor, if none, use actor matrix")]
 	public string? AnimatedCameraAnchor { get; set; } = default;
 
 	public static InteractLocationCameraSettings Create(DDLObject ddl) => new(ddl);

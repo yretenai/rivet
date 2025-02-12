@@ -25,28 +25,28 @@ public class StreakData : DDLObjectType, IDDLObjectType<StreakData> {
 		SmashOffset = ddl.GetValue<float>(0x9b783456u, SmashOffset);
 	}
 
-	[DDLRegistration(0xbeb97640u, description: "Override material for this streak.")]
+	[DDLRegistration(0xffafa5a1u, description: "Override material for this streak.")]
 	public RivetAssetId MaterialOverride { get; set; } = default;
 
-	[DDLRegistration(0xbeb97640u, description: "The style of the streak.")]
+	[DDLRegistration(0x2aee74abu, description: "The style of the streak.")]
 	public x38953afc Style { get; set; } = x38953afc.Constant;
 
-	[DDLRegistration(0xbeb97640u, description: "The min scale for the melee width.")]
+	[DDLRegistration(0xff2351d3u, description: "The min scale for the melee width.")]
 	public float MeleeWidthMinScale { get; set; } = 0.10f;
 
-	[DDLRegistration(0xbeb97640u, description: "The max scale for the melee width.")]
+	[DDLRegistration(0x1943fe32u, description: "The max scale for the melee width.")]
 	public float MeleeWidthMaxScale { get; set; } = 2.50f;
 
-	[DDLRegistration(0xbeb97640u, description: "Normalized Distance from actor's Damage Location 1. [0 = Damage Location 1, 1 = Damage Location 2]")]
+	[DDLRegistration(0x5e632554u, description: "Normalized Distance from actor's Damage Location 1. [0 = Damage Location 1, 1 = Damage Location 2]")]
 	public float MeleeOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbeb97640u, description: "The min scale for the smash width.")]
+	[DDLRegistration(0xf6952963u, description: "The min scale for the smash width.")]
 	public float SmashWidthMinScale { get; set; } = 0.10f;
 
-	[DDLRegistration(0xbeb97640u, description: "The max scale for the smash width.")]
+	[DDLRegistration(0x10f58682u, description: "The max scale for the smash width.")]
 	public float SmashWidthMaxScale { get; set; } = 2.50f;
 
-	[DDLRegistration(0xbeb97640u, description: "Normalized Distance from actor's Damage Location 1. [0 = Damage Location 1, 1 = Damage Location 2]")]
+	[DDLRegistration(0x9b783456u, description: "Normalized Distance from actor's Damage Location 1. [0 = Damage Location 1, 1 = Damage Location 2]")]
 	public float SmashOffset { get; set; } = 0.00f;
 
 	public static StreakData Create(DDLObject ddl) => new(ddl);

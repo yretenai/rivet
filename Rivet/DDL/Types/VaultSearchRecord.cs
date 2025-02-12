@@ -21,16 +21,16 @@ public class VaultSearchRecord : DDLObjectType, IDDLObjectType<VaultSearchRecord
 		ExtensionFilters = ddl.GetStrings(0x202d7af1u);
 	}
 
-	[DDLRegistration(0x7cae7562u)]
+	[DDLRegistration(0x20a91273u)]
 	public xbd1cea43 SearchOption { get; set; } = xbd1cea43.Name;
 
-	[DDLRegistration(0x7cae7562u)]
+	[DDLRegistration(0xbca28051u)]
 	public xee77c9ca SortOption { get; set; } = xee77c9ca.Name;
 
-	[DDLRegistration(0x7cae7562u)]
+	[DDLRegistration(0xc95f3b85u)]
 	public string? SearchText { get; set; } = default;
 
-	[DDLRegistration(0x7cae7562u)]
+	[DDLRegistration(0x202d7af1u)]
 	public List<string?> ExtensionFilters { get; set; } = [];
 
 	public static VaultSearchRecord Create(DDLObject ddl) => new(ddl);

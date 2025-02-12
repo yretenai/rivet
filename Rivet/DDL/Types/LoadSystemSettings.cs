@@ -39,70 +39,70 @@ public class LoadSystemSettings : DDLObjectType, IDDLObjectType<LoadSystemSettin
 		ThrottleModeNxStorage = ddl.GetEnum<x45c7d9d6>(0x46b46b1cu, x45c7d9d6Values.Lookup);
 	}
 
-	[DDLRegistration(0x4ebed715u, "Display Mode")]
+	[DDLRegistration(0x231a0beeu, "Display Mode")]
 	public x961f7219 DisplayMode { get; set; } = x961f7219.Off;
 
-	[DDLRegistration(0x4ebed715u, "Loading TTY Verbosity")]
+	[DDLRegistration(0x85f831cau, "Loading TTY Verbosity")]
 	public xa694530c LogVerbosity { get; set; } = xa694530c.Low;
 
-	[DDLRegistration(0x4ebed715u, "Display Streaming Unit Distance")]
+	[DDLRegistration(0xe93f3ea3u, "Display Streaming Unit Distance")]
 	public uint DisplayOpenUnitDist { get; set; } = 0x0000012c;
 
-	[DDLRegistration(0x4ebed715u, "Display Streaming Unit Info")]
+	[DDLRegistration(0xa3cadf03u, "Display Streaming Unit Info")]
 	public bool DisplayOpenUnitInfo { get; set; } = false;
 
-	[DDLRegistration(0x4ebed715u, "Display Streaming Unit Map")]
+	[DDLRegistration(0x029a764fu, "Display Streaming Unit Map")]
 	public bool DisplayOpenUnitMap { get; set; } = false;
 
-	[DDLRegistration(0x4ebed715u, "Display Overlay Info")]
+	[DDLRegistration(0x72dea44du, "Display Overlay Info")]
 	public bool DisplayOverlayInfo { get; set; } = false;
 
-	[DDLRegistration(0x4ebed715u, "Display Air Lock Debug Info")]
+	[DDLRegistration(0xc8eb44adu, "Display Air Lock Debug Info")]
 	public bool DisplayAirLockInfo { get; set; } = false;
 
-	[DDLRegistration(0x4ebed715u, "Open World Streaming Enabled", "Allow open units to load and unload.")]
+	[DDLRegistration(0xe2bfb81du, "Open World Streaming Enabled", "Allow open units to load and unload.")]
 	public bool OpenUnitStreamingEnabled { get; set; } = true;
 
-	[DDLRegistration(0x4ebed715u, "Overlay Loading Enabled", "Enable/disable overlay loading.")]
+	[DDLRegistration(0x54d86e18u, "Overlay Loading Enabled", "Enable/disable overlay loading.")]
 	public bool OverlayLoadingEnabled { get; set; } = true;
 
-	[DDLRegistration(0x4ebed715u, "Enable Delayed Streaming")]
+	[DDLRegistration(0x172b312fu, "Enable Delayed Streaming")]
 	public bool DelayStreamingEnabled { get; set; } = true;
 
-	[DDLRegistration(0x4ebed715u, "Pause Delayed Streaming")]
+	[DDLRegistration(0x299eea53u, "Pause Delayed Streaming")]
 	public bool DelayStreamingPaused { get; set; } = false;
 
-	[DDLRegistration(0x4ebed715u, "Lighting Zones Enabled")]
+	[DDLRegistration(0x15329d08u, "Lighting Zones Enabled")]
 	public bool LightingZonesEnabled { get; set; } = true;
 
-	[DDLRegistration(0x4ebed715u, "Default Lighting Mode")]
+	[DDLRegistration(0x95f292abu, "Default Lighting Mode")]
 	public LightingModeGame DefaultLightingMode { get; set; } = LightingModeGame.Day;
 
-	[DDLRegistration(0x4ebed715u, "Default Tile Radius")]
+	[DDLRegistration(0xe5b4c9beu, "Default Tile Radius")]
 	public float DefaultTileRadius { get; set; } = 91.00f;
 
-	[DDLRegistration(0x4ebed715u, "Large Load Threshold (Bytes)", "Log asset load details when load request exceeds this many bytes while streaming (0 = disabled).")]
+	[DDLRegistration(0x1ffa8722u, "Large Load Threshold (Bytes)", "Log asset load details when load request exceeds this many bytes while streaming (0 = disabled).")]
 	public uint LargeLoadThresholdBytes { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4ebed715u, "Instantiation Urgency Start Dist", "When this close (meters) to incomplete regions, start ramping up the time slice for instantiation.")]
+	[DDLRegistration(0x149fe0b8u, "Instantiation Urgency Start Dist", "When this close (meters) to incomplete regions, start ramping up the time slice for instantiation.")]
 	public int InstantiationUrgencyStartDist { get; set; } = 64;
 
-	[DDLRegistration(0x4ebed715u, "Instantiation Urgency End Dist", "When this close (meters) to incomplete regions, stop streaming and start loading. (100% urgent to load)")]
+	[DDLRegistration(0x847e97beu, "Instantiation Urgency End Dist", "When this close (meters) to incomplete regions, stop streaming and start loading. (100% urgent to load)")]
 	public int InstantiationUrgencyEndDist { get; set; } = 16;
 
-	[DDLRegistration(0x4ebed715u)]
+	[DDLRegistration(0x76257263u)]
 	public bool WaitOnLightGridsForInitialLoad { get; set; } = false;
 
-	[DDLRegistration(0x4ebed715u, "Load Time Budget (Seconds)")]
+	[DDLRegistration(0xa7c60204u, "Load Time Budget (Seconds)")]
 	public float LoadTimeDisplayBudget { get; set; } = 2.00f;
 
-	[DDLRegistration(0x4ebed715u, "Load Time Display Mode")]
+	[DDLRegistration(0x522ab918u, "Load Time Display Mode")]
 	public LoadTimeDisplayMode LoadTimeDisplayMode { get; set; } = LoadTimeDisplayMode.None;
 
-	[DDLRegistration(0x4ebed715u, "Display NxStorage Stats")]
+	[DDLRegistration(0xa6f8ab9eu, "Display NxStorage Stats")]
 	public bool DisplayNxStorageStats { get; set; } = false;
 
-	[DDLRegistration(0x4ebed715u, "Throttle NxStorage")]
+	[DDLRegistration(0x46b46b1cu, "Throttle NxStorage")]
 	public x45c7d9d6 ThrottleModeNxStorage { get; set; } = x45c7d9d6.None;
 
 	public static LoadSystemSettings Create(DDLObject ddl) => new(ddl);

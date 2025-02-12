@@ -23,22 +23,22 @@ public class TriggerByEventPrius : TriggerByBasePrius, IDDLObjectType<TriggerByE
 		TriggeringEvent = ddl.GetObject<EventBase>(0x2b5088d4u);
 	}
 
-	[DDLRegistration(0x9926be20u, description: "Include broadcast events as well as those sent to this actor")]
+	[DDLRegistration(0x0c07f5ddu, description: "Include broadcast events as well as those sent to this actor")]
 	public bool ReceiveBroadcast { get; set; } = false;
 
-	[DDLRegistration(0x9926be20u, description: "Only events sent from its own priuses")]
+	[DDLRegistration(0x6c999996u, description: "Only events sent from its own priuses")]
 	public bool SelfOnly { get; set; } = false;
 
-	[DDLRegistration(0x9926be20u, description: "Monitor events from this actor/group (instead of this actor). Overrides the above checkboxes")]
+	[DDLRegistration(0x1e534392u, description: "Monitor events from this actor/group (instead of this actor). Overrides the above checkboxes")]
 	public RivetAssetId EventSender { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9926be20u, description: "if >0 only respond if within this range")]
+	[DDLRegistration(0x8ad49688u, description: "if >0 only respond if within this range")]
 	public float Range { get; set; } = -1.00f;
 
-	[DDLRegistration(0x9926be20u, "Toggle", "Alternate between triggering and untriggering on successive events.")]
+	[DDLRegistration(0x30b4e81eu, "Toggle", "Alternate between triggering and untriggering on successive events.")]
 	public bool ToggleTrigger { get; set; } = false;
 
-	[DDLRegistration(0x9926be20u, "Event Type", "Trigger on this event. Event settings have NO EFFECT, just the event type")]
+	[DDLRegistration(0x2b5088d4u, "Event Type", "Trigger on this event. Event settings have NO EFFECT, just the event type")]
 	public EventBase? TriggeringEvent { get; set; } = default;
 
 	public new static TriggerByEventPrius Create(DDLObject ddl) => new(ddl);

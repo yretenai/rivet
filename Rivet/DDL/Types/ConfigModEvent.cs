@@ -20,13 +20,13 @@ public class ConfigModEvent : EventBase, IDDLObjectType<ConfigModEvent> {
 		Effect = ddl.GetEnum<x2f0b644b>(0x8818df95u, x2f0b644bValues.Lookup);
 	}
 
-	[DDLRegistration(0x56607982u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public uint Type { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x56607982u)]
+	[DDLRegistration(0xeaf2611bu)]
 	public RivetAssetId Config { get; set; } = default;
 
-	[DDLRegistration(0x56607982u)]
+	[DDLRegistration(0x8818df95u)]
 	public x2f0b644b Effect { get; set; } = x2f0b644b.Replace;
 
 	public new static ConfigModEvent Create(DDLObject ddl) => new(ddl);

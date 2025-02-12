@@ -20,13 +20,13 @@ public class GrindMoveData : DDLObjectType, IDDLObjectType<GrindMoveData> {
 		Decel = ddl.GetValue<float>(0xa9242a88u, Decel);
 	}
 
-	[DDLRegistration(0x018e553cu, description: "Default grind speed. When not pressing the speed button. (m/s)")]
+	[DDLRegistration(0xd1b9bcbbu, description: "Default grind speed. When not pressing the speed button. (m/s)")]
 	public float SpeedDefault { get; set; } = 12.00f;
 
-	[DDLRegistration(0x018e553cu, description: "Grind acceleration (m/s^2)")]
+	[DDLRegistration(0x44affa24u, description: "Grind acceleration (m/s^2)")]
 	public float Accel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x018e553cu, description: "Grind deceleration (m/s^2)")]
+	[DDLRegistration(0xa9242a88u, description: "Grind deceleration (m/s^2)")]
 	public float Decel { get; set; } = 5.00f;
 
 	public static GrindMoveData Create(DDLObject ddl) => new(ddl);

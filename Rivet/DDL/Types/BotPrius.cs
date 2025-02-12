@@ -22,19 +22,19 @@ public class BotPrius : BotBasePrius, IDDLObjectType<BotPrius> {
 		AccessibilityMonitorAllegiance = ddl.GetValue<bool>(0xf96960a8u, AccessibilityMonitorAllegiance);
 	}
 
-	[DDLRegistration(0xc5c74c42u)]
+	[DDLRegistration(0xb9a35604u)]
 	public BotConfigData? BotConfigData { get; set; } = default;
 
-	[DDLRegistration(0xc5c74c42u)]
+	[DDLRegistration(0x59da994bu)]
 	public BotData? BotData { get; set; } = default;
 
-	[DDLRegistration(0xc5c74c42u)]
+	[DDLRegistration(0x5a76cf5au)]
 	public ActorBotData? ActorBotData { get; set; } = default;
 
-	[DDLRegistration(0xc5c74c42u, description: "Whether if this bot is set to Neutral Allegiance whether it will display as Ally (true) or whatever shader is applied to this bot (false). In future projects, we will get a Neutral shader.")]
+	[DDLRegistration(0xe35f9ba0u, description: "Whether if this bot is set to Neutral Allegiance whether it will display as Ally (true) or whatever shader is applied to this bot (false). In future projects, we will get a Neutral shader.")]
 	public bool AccessibilityHighlightAllyForNeutralAllegiance { get; set; } = true;
 
-	[DDLRegistration(0xc5c74c42u, description: "Whether we should monitor the allegiance of this bot (as it changes) for accessibility highlight shaders.")]
+	[DDLRegistration(0xf96960a8u, description: "Whether we should monitor the allegiance of this bot (as it changes) for accessibility highlight shaders.")]
 	public bool AccessibilityMonitorAllegiance { get; set; } = false;
 
 	public new static BotPrius Create(DDLObject ddl) => new(ddl);

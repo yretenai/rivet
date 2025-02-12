@@ -19,10 +19,10 @@ public class CustomJointMapEntry : DDLObjectType, IDDLObjectType<CustomJointMapE
 		HeadJoint = ddl.GetString(0x3ff6a8c2) ?? HeadJoint;
 	}
 
-	[DDLRegistration(0x95801ef1u)]
+	[DDLRegistration(0xd6680076u)]
 	public string? BodyJoint { get; set; } = default;
 
-	[DDLRegistration(0x95801ef1u)]
+	[DDLRegistration(0x3ff6a8c2u)]
 	public string? HeadJoint { get; set; } = default;
 
 	public static CustomJointMapEntry Create(DDLObject ddl) => new(ddl);

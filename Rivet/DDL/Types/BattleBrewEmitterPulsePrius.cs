@@ -21,16 +21,16 @@ public class BattleBrewEmitterPulsePrius : BattleBrewEmitterBasePrius, IDDLObjec
 		DebugDraw = ddl.GetValue<bool>(0x6020521bu, DebugDraw);
 	}
 
-	[DDLRegistration(0x1f46b337u)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f46b337u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1f46b337u, description: "This is the types of target that can receive the effect of this aura. If this is left unchanged, then all targets are valid.")]
+	[DDLRegistration(0x3b4c9303u, description: "This is the types of target that can receive the effect of this aura. If this is left unchanged, then all targets are valid.")]
 	public TargetType ValidTargetTypes { get; set; } = (TargetType) 0x00000000;
 
-	[DDLRegistration(0x1f46b337u)]
+	[DDLRegistration(0x6020521bu)]
 	public bool DebugDraw { get; set; } = true;
 
 	public new static BattleBrewEmitterPulsePrius Create(DDLObject ddl) => new(ddl);

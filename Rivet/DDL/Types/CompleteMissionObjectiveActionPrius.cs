@@ -19,10 +19,10 @@ public class CompleteMissionObjectiveActionPrius : DDLObjectType, IDDLObjectType
 		SaveProgress = ddl.GetValue<bool>(0x29239a5eu, SaveProgress);
 	}
 
-	[DDLRegistration(0x4a26ecd3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
-	[DDLRegistration(0x4a26ecd3u)]
+	[DDLRegistration(0x29239a5eu)]
 	public bool SaveProgress { get; set; } = true;
 
 	public static CompleteMissionObjectiveActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SetVisualEffectInstAssetEngineCommand : DDLObjectType, IDDLObjectTy
 		Path = ddl.GetValue<RivetAssetId>(0x3bc44bbfu, Path);
 	}
 
-	[DDLRegistration(0x1b58ccffu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x1b58ccffu)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public RivetAssetId Path { get; set; } = default;
 
 	public static SetVisualEffectInstAssetEngineCommand Create(DDLObject ddl) => new(ddl);

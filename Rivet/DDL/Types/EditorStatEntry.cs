@@ -22,19 +22,19 @@ public class EditorStatEntry : DDLObjectType, IDDLObjectType<EditorStatEntry> {
 		AssetPath = ddl.GetValue<RivetAssetId>(0x0efa614bu, AssetPath);
 	}
 
-	[DDLRegistration(0x5d3fda60u)]
+	[DDLRegistration(0x7459aa19u)]
 	public RivetAssetId _id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x5d3fda60u)]
+	[DDLRegistration(0xc23b3e16u)]
 	public string? RequestTime { get; set; } = default;
 
-	[DDLRegistration(0x5d3fda60u)]
+	[DDLRegistration(0xb070c869u)]
 	public string? RequestSource { get; set; } = default;
 
-	[DDLRegistration(0x5d3fda60u)]
+	[DDLRegistration(0x6d3597e4u)]
 	public string? RequestMarker { get; set; } = default;
 
-	[DDLRegistration(0x5d3fda60u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
 	public static EditorStatEntry Create(DDLObject ddl) => new(ddl);

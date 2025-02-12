@@ -82,199 +82,199 @@ public class ModelDef : DDLObjectType, IDDLObjectType<ModelDef> {
 		AnimZiva = ddl.GetObject<ModelAnimZivaDef>(0xb6d4883du);
 	}
 
-	[DDLRegistration(0xd1bc6826u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xd1bc6826u, "Collada File", "The path to the source content (Collada) file.")]
+	[DDLRegistration(0x8ed8fa72u, "Collada File", "The path to the source content (Collada) file.")]
 	public RivetAssetId DaeFilename { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, "Maya Filter Node", "Only consider Maya nodes that are underneath a node with this name.")]
+	[DDLRegistration(0xa8a9ef53u, "Maya Filter Node", "Only consider Maya nodes that are underneath a node with this name.")]
 	public string? FilterNodeName { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, "Geom Lod Dist 1", "Distance that geometry transitions from lod 0 to lod 1")]
+	[DDLRegistration(0x7f1cf23fu, "Geom Lod Dist 1", "Distance that geometry transitions from lod 0 to lod 1")]
 	public ushort GeomLodDist1 { get; set; } = 0x000f;
 
-	[DDLRegistration(0xd1bc6826u, "Geom Lod Dist 2", "Distance that geometry transitions from lod 1 to lod 2")]
+	[DDLRegistration(0xe615a385u, "Geom Lod Dist 2", "Distance that geometry transitions from lod 1 to lod 2")]
 	public ushort GeomLodDist2 { get; set; } = 0x001e;
 
-	[DDLRegistration(0xd1bc6826u, "Geom Lod Dist 3", "Distance that geometry transitions from lod 2 to lod 3")]
+	[DDLRegistration(0x91129313u, "Geom Lod Dist 3", "Distance that geometry transitions from lod 2 to lod 3")]
 	public ushort GeomLodDist3 { get; set; } = 0x006e;
 
-	[DDLRegistration(0xd1bc6826u, "Geom Lod Dist 4", "Distance that geometry transitions from lod 3 to lod 4")]
+	[DDLRegistration(0x0f7606b0u, "Geom Lod Dist 4", "Distance that geometry transitions from lod 3 to lod 4")]
 	public ushort GeomLodDist4 { get; set; } = 0x00a0;
 
-	[DDLRegistration(0xd1bc6826u, "Geom Lod Dist 5", "Distance that geometry transitions from lod 4 to lod 5")]
+	[DDLRegistration(0x78713626u, "Geom Lod Dist 5", "Distance that geometry transitions from lod 4 to lod 5")]
 	public ushort GeomLodDist5 { get; set; } = 0x00d2;
 
-	[DDLRegistration(0xd1bc6826u, "Max Joint Inf Lod 0", "Maximum number of joint influences per vert for lod 0")]
+	[DDLRegistration(0x67c7d680u, "Max Joint Inf Lod 0", "Maximum number of joint influences per vert for lod 0")]
 	public byte GeomLodMaxJointInfl0 { get; set; } = 0x04;
 
-	[DDLRegistration(0xd1bc6826u, "Max Joint Inf Lod 1", "Maximum number of joint influences per vert for lod 1")]
+	[DDLRegistration(0x10c0e616u, "Max Joint Inf Lod 1", "Maximum number of joint influences per vert for lod 1")]
 	public byte GeomLodMaxJointInfl1 { get; set; } = 0x04;
 
-	[DDLRegistration(0xd1bc6826u, "Max Joint Inf Lod 2", "Maximum number of joint influences per vert for lod 2")]
+	[DDLRegistration(0x89c9b7acu, "Max Joint Inf Lod 2", "Maximum number of joint influences per vert for lod 2")]
 	public byte GeomLodMaxJointInfl2 { get; set; } = 0x04;
 
-	[DDLRegistration(0xd1bc6826u, "Max Joint Inf Lod 3", "Maximum number of joint influences per vert for lod 3")]
+	[DDLRegistration(0xfece873au, "Max Joint Inf Lod 3", "Maximum number of joint influences per vert for lod 3")]
 	public byte GeomLodMaxJointInfl3 { get; set; } = 0x02;
 
-	[DDLRegistration(0xd1bc6826u, "Max Joint Inf Lod 4", "Maximum number of joint influences per vert for lod 4")]
+	[DDLRegistration(0x60aa1299u, "Max Joint Inf Lod 4", "Maximum number of joint influences per vert for lod 4")]
 	public byte GeomLodMaxJointInfl4 { get; set; } = 0x02;
 
-	[DDLRegistration(0xd1bc6826u, "Max Joint Inf Lod 5", "Maximum number of joint influences per vert for lod 5")]
+	[DDLRegistration(0x17ad220fu, "Max Joint Inf Lod 5", "Maximum number of joint influences per vert for lod 5")]
 	public byte GeomLodMaxJointInfl5 { get; set; } = 0x01;
 
-	[DDLRegistration(0xd1bc6826u, "Max Lods", "Limit geometry LoD for this model based on the game's performance spec")]
+	[DDLRegistration(0x65a05310u, "Max Lods", "Limit geometry LoD for this model based on the game's performance spec")]
 	public PerfProfileLodMaxBase? PerfProfileMaxLod { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, "Fade Out Dist", "Distance that the geometry fades out (0 = no fade)")]
+	[DDLRegistration(0x1c6fd24du, "Fade Out Dist", "Distance that the geometry fades out (0 = no fade)")]
 	public short FadeOutDist { get; set; } = 0;
 
-	[DDLRegistration(0xd1bc6826u, "Shadow Fade Out Dist", "Distance beyond which the model no longer casts shadows (0 = no fade)")]
+	[DDLRegistration(0xa647ba6du, "Shadow Fade Out Dist", "Distance beyond which the model no longer casts shadows (0 = no fade)")]
 	public ushort ShadowFadeDist { get; set; } = 0x0000;
 
-	[DDLRegistration(0xd1bc6826u, "Min Shadow Casting LoD", "Specifies the minimum LoD level to be the shadow caster. Default (-1) means disabled and use the same lod as what is currently in view for shadow casting. Setting this to 0 or greater may detach the lod from what is currently in view and may cause self-shadowing artifacts on the models up close but also may reduce shadow lod pop-in artifacts in the distance.")]
+	[DDLRegistration(0xc5dcc1cau, "Min Shadow Casting LoD", "Specifies the minimum LoD level to be the shadow caster. Default (-1) means disabled and use the same lod as what is currently in view for shadow casting. Setting this to 0 or greater may detach the lod from what is currently in view and may cause self-shadowing artifacts on the models up close but also may reduce shadow lod pop-in artifacts in the distance.")]
 	public short ShadowCastingLoD { get; set; } = -1;
 
-	[DDLRegistration(0xd1bc6826u, "Ambient Animation", "Sets the model ambient animation scale.")]
+	[DDLRegistration(0xc424914bu, "Ambient Animation", "Sets the model ambient animation scale.")]
 	public float AmbientAnimation { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd1bc6826u, "Max Displacement", "Maximum displacement when maximum force is reached.")]
+	[DDLRegistration(0x307d5e3au, "Max Displacement", "Maximum displacement when maximum force is reached.")]
 	public float MaxDisplacement { get; set; } = 2.00f;
 
-	[DDLRegistration(0xd1bc6826u, "Max Dynamic Force", "Maximum force exerted on the model before it stops reacting further.")]
+	[DDLRegistration(0xe23afe77u, "Max Dynamic Force", "Maximum force exerted on the model before it stops reacting further.")]
 	public float MaxDynamicForce { get; set; } = 8.00f;
 
-	[DDLRegistration(0xd1bc6826u, "Min Dynamic Force", "Minimum force exerted on the model before it starts reacting.")]
+	[DDLRegistration(0xc5819946u, "Min Dynamic Force", "Minimum force exerted on the model before it starts reacting.")]
 	public float MinDynamicForce { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd1bc6826u, "Skip Shadow Cast", "Disables shadow casting for this model.")]
+	[DDLRegistration(0x40b0e1cau, "Skip Shadow Cast", "Disables shadow casting for this model.")]
 	public bool SkipShadowCast { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "Skip Rain Splashes", "If set, no atmospheric rain splashes will be created on the model")]
+	[DDLRegistration(0xa58c3f35u, "Skip Rain Splashes", "If set, no atmospheric rain splashes will be created on the model")]
 	public bool SkipRainSplashes { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "Skip Light Capture", "If set, the model will not render into env probes or light grid GI.")]
+	[DDLRegistration(0xf219f226u, "Skip Light Capture", "If set, the model will not render into env probes or light grid GI.")]
 	public bool SkipEnvProbe { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "Only Light Capture", "If set, the model will only render into env probes and light grid GI.")]
+	[DDLRegistration(0x1559dec2u, "Only Light Capture", "If set, the model will only render into env probes and light grid GI.")]
 	public bool OnlyLightCapture { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "No Embedded Samples", "If set, the model will not invalidate light grid samples embedded in it.")]
+	[DDLRegistration(0x28b04558u, "No Embedded Samples", "If set, the model will not invalidate light grid samples embedded in it.")]
 	public bool NoEmbeddedSamples { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "Skip Impostor Geometry", "If set, the model will not contribute to the 3D impostor geometry.")]
+	[DDLRegistration(0x966ac22eu, "Skip Impostor Geometry", "If set, the model will not contribute to the 3D impostor geometry.")]
 	public bool SkipImpostorGeometry { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "Skip Impostor", "If set, the model will not render into the 3D impostor geometry or texture.")]
+	[DDLRegistration(0xffc4e1c0u, "Skip Impostor", "If set, the model will not render into the 3D impostor geometry or texture.")]
 	public bool SkipImpostor { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "Skip Decals", "If set, the model will not receive decals.")]
+	[DDLRegistration(0x7de13186u, "Skip Decals", "If set, the model will not receive decals.")]
 	public bool SkipDecals { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "Skip Static Decals", "If set, the model will not receive static decals.")]
+	[DDLRegistration(0x19ffacecu, "Skip Static Decals", "If set, the model will not receive static decals.")]
 	public bool SkipStaticDecals { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "Force CPU skinning", "If set, the model will always use CPU skinning.")]
+	[DDLRegistration(0x357dcdcdu, "Force CPU skinning", "If set, the model will always use CPU skinning.")]
 	public bool ForceCpuSkinning { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, description: "Physics setting")]
+	[DDLRegistration(0xa2234895u, description: "Physics setting")]
 	public ModelPhysicsSettings? PhysicsSettings { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, description: "Indicates this model is for facial anim. This adjusts the vertex encoding and vertex range for increased precision.")]
+	[DDLRegistration(0x8b218220u, description: "Indicates this model is for facial anim. This adjusts the vertex encoding and vertex range for increased precision.")]
 	public bool IsFacialAnim { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "Spline model", "The model is a procedrual spline mesh")]
+	[DDLRegistration(0x51e79becu, "Spline model", "The model is a procedrual spline mesh")]
 	public bool SplineModel { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, description: "Set when placed by shrubbing tool.")]
+	[DDLRegistration(0x28be9111u, description: "Set when placed by shrubbing tool.")]
 	public bool IsShrub { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, description: "Determines whether placed instances of the model will automatically generate hibernate instances to enable them to draw even when their zones are streamed out")]
+	[DDLRegistration(0x0f588598u, description: "Determines whether placed instances of the model will automatically generate hibernate instances to enable them to draw even when their zones are streamed out")]
 	public HibernateMode HibernateMode { get; set; } = HibernateMode.None;
 
-	[DDLRegistration(0xd1bc6826u, description: "Determines how the model behaves as an occluder.")]
+	[DDLRegistration(0xe6e6cd23u, description: "Determines how the model behaves as an occluder.")]
 	public OccluderType OccluderType { get; set; } = OccluderType.OccludeIfStatic;
 
-	[DDLRegistration(0xd1bc6826u, description: "Determines the ambient shadow template for this model.")]
+	[DDLRegistration(0x792f84a6u, description: "Determines the ambient shadow template for this model.")]
 	public AmbientShadowType AmbientShadowType { get; set; } = AmbientShadowType.None;
 
-	[DDLRegistration(0xd1bc6826u, description: "Determines whether this model would like to generate high-res cinematic shadows on lights that support it.")]
+	[DDLRegistration(0x30108ce6u, description: "Determines whether this model would like to generate high-res cinematic shadows on lights that support it.")]
 	public CinematicShadowMode CinematicShadowMode { get; set; } = CinematicShadowMode.Auto;
 
-	[DDLRegistration(0xd1bc6826u, "Optimize UV Mode", "Determines which UV sets can be relocated for better precision.")]
+	[DDLRegistration(0x22e01f8du, "Optimize UV Mode", "Determines which UV sets can be relocated for better precision.")]
 	public OptimizeUVMode OptimizeUVMode { get; set; } = OptimizeUVMode.UV0AndUV1;
 
-	[DDLRegistration(0xd1bc6826u, "A/V Material")]
+	[DDLRegistration(0xe73ba957u, "A/V Material")]
 	public string? AVMaterial { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, "Audio Material")]
+	[DDLRegistration(0xf14e1df7u, "Audio Material")]
 	public string? AudioMaterial { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, "Vertex Range", "The maximum range a vertex can extend from the origin (0 = compute automatically). Higher values result in less vertex precision")]
+	[DDLRegistration(0x9bd6ad34u, "Vertex Range", "The maximum range a vertex can extend from the origin (0 = compute automatically). Higher values result in less vertex precision")]
 	public float VertexRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd1bc6826u, "Vertex Range Anim Multiplier", "For animating models, compute the vertex range by expanding the static vertex range by this multiplier")]
+	[DDLRegistration(0x90c9a56au, "Vertex Range Anim Multiplier", "For animating models, compute the vertex range by expanding the static vertex range by this multiplier")]
 	public float VertexRangeAnimMult { get; set; } = 2.00f;
 
-	[DDLRegistration(0xd1bc6826u, "Ray-Tracing", "Ray-Tracing attributes on platforms that support it")]
+	[DDLRegistration(0x411859b5u, "Ray-Tracing", "Ray-Tracing attributes on platforms that support it")]
 	public RayTracing? RayTracing { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, "Materials")]
+	[DDLRegistration(0xa375d4dfu, "Materials")]
 	public List<MaterialMap?> MaterialMap { get; set; } = [];
 
-	[DDLRegistration(0xd1bc6826u, description: "Skeleton info in the model.")]
+	[DDLRegistration(0x7a49a9a5u, description: "Skeleton info in the model.")]
 	public SkelInfo? SkelInfo { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, description: "Looks imported from the collada.")]
+	[DDLRegistration(0xec785832u, description: "Looks imported from the collada.")]
 	public List<LookDef?> Looks { get; set; } = [];
 
-	[DDLRegistration(0xd1bc6826u, description: "Custom made look groups.")]
+	[DDLRegistration(0xb6c4ab29u, description: "Custom made look groups.")]
 	public List<LookGroupDef?> LookGroups { get; set; } = [];
 
-	[DDLRegistration(0xd1bc6826u, "Render Flags")]
+	[DDLRegistration(0x2459666du, "Render Flags")]
 	public RenderFlags? RenderFlags { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, "Render Settings")]
+	[DDLRegistration(0x91c2d379u, "Render Settings")]
 	public RenderData? RenderData { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, "Ambient Animation Override")]
+	[DDLRegistration(0xa3b711d2u, "Ambient Animation Override")]
 	public AmbientAnimationOverride? AmbientAnimationOverride { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, "Material Overrides")]
+	[DDLRegistration(0x68221c5du, "Material Overrides")]
 	public List<MaterialOverrideMap?> MaterialOverrides { get; set; } = [];
 
-	[DDLRegistration(0xd1bc6826u, "Navigation")]
+	[DDLRegistration(0x4a6c904fu, "Navigation")]
 	public NavigationProperties? NavProperties { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, description: "IKChains")]
+	[DDLRegistration(0xc0ebba22u, description: "IKChains")]
 	public List<IKchain?> IKChains { get; set; } = [];
 
-	[DDLRegistration(0xd1bc6826u, "Render Overrides", "Overrides for material graph elements on this model/model instance")]
+	[DDLRegistration(0xd1f6fba2u, "Render Overrides", "Overrides for material graph elements on this model/model instance")]
 	public RenderOverrides? RenderOverrides { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u, "Exclude From Game")]
+	[DDLRegistration(0x0d03c98du, "Exclude From Game")]
 	public bool ExcludeFromGame { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "Delay Streaming")]
+	[DDLRegistration(0xf1aba953u, "Delay Streaming")]
 	public bool DelayStreaming { get; set; } = false;
 
-	[DDLRegistration(0xd1bc6826u, "Model Spline Subsets")]
+	[DDLRegistration(0xa8c4f333u, "Model Spline Subsets")]
 	public List<ModelSplineSubsetDef?> ModelSplineSubsets { get; set; } = [];
 
-	[DDLRegistration(0xd1bc6826u, "Asset Swaps")]
+	[DDLRegistration(0x8228c9aeu, "Asset Swaps")]
 	public AssetSwap? AssetSwaps { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u)]
+	[DDLRegistration(0xb8ccee71u)]
 	public AnimMorphDef? AnimMorph { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u)]
+	[DDLRegistration(0xc2cd8454u)]
 	public AnimDynamicsDef? AnimDynamics { get; set; } = default;
 
-	[DDLRegistration(0xd1bc6826u)]
+	[DDLRegistration(0xb6d4883du)]
 	public ModelAnimZivaDef? AnimZiva { get; set; } = default;
 
 	public static ModelDef Create(DDLObject ddl) => new(ddl);

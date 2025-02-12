@@ -18,7 +18,7 @@ public class WeaponSightedEvent : EventBase, IDDLObjectType<WeaponSightedEvent> 
 		LocalHero = ddl.GetValue<byte>(0x22e4456au, LocalHero);
 	}
 
-	[DDLRegistration(0x3d33116bu)]
+	[DDLRegistration(0x22e4456au)]
 	public byte LocalHero { get; set; } = 0x00;
 
 	public new static WeaponSightedEvent Create(DDLObject ddl) => new(ddl);

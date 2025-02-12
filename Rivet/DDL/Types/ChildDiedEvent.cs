@@ -18,7 +18,7 @@ public class ChildDiedEvent : EventBase, IDDLObjectType<ChildDiedEvent> {
 		ChildActorHandle = ddl.GetValue<uint>(0x789058e3u, ChildActorHandle);
 	}
 
-	[DDLRegistration(0x2aeac8e5u)]
+	[DDLRegistration(0x789058e3u)]
 	public uint ChildActorHandle { get; set; } = 0x00000000;
 
 	public new static ChildDiedEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class CorpseManagerSettings : DDLObjectType, IDDLObjectType<CorpseManager
 		MaxNumCorpses = ddl.GetValue<int>(0x1c302130u, MaxNumCorpses);
 	}
 
-	[DDLRegistration(0xab0dd389u)]
+	[DDLRegistration(0xee37af2cu)]
 	public int DesiredNumCorpses { get; set; } = 16;
 
-	[DDLRegistration(0xab0dd389u)]
+	[DDLRegistration(0x1c302130u)]
 	public int MaxNumCorpses { get; set; } = 32;
 
 	public static CorpseManagerSettings Create(DDLObject ddl) => new(ddl);

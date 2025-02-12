@@ -21,16 +21,16 @@ public class DamageEmitterVelocityPrius : DamageEmitterPrius, IDDLObjectType<Dam
 		CreateTime = ddl.GetValue<float>(0x4670d46cu, CreateTime);
 	}
 
-	[DDLRegistration(0x8a5f74a5u, "Hero Close Distance", "We'll only do our damage collision checks when a hero is in range. Use <= 0 for infinite range.")]
+	[DDLRegistration(0x9365934eu, "Hero Close Distance", "We'll only do our damage collision checks when a hero is in range. Use <= 0 for infinite range.")]
 	public float HeroCloseDist { get; set; } = 20.00f;
 
-	[DDLRegistration(0x8a5f74a5u)]
+	[DDLRegistration(0x16753237u)]
 	public float Speed { get; set; } = 6.00f;
 
-	[DDLRegistration(0x8a5f74a5u)]
+	[DDLRegistration(0x8ad49688u)]
 	public float Range { get; set; } = 3.00f;
 
-	[DDLRegistration(0x8a5f74a5u)]
+	[DDLRegistration(0x4670d46cu)]
 	public float CreateTime { get; set; } = 0.50f;
 
 	public new static DamageEmitterVelocityPrius Create(DDLObject ddl) => new(ddl);

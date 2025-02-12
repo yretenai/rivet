@@ -24,25 +24,25 @@ public class MacroLevelData : DDLObjectType, IDDLObjectType<MacroLevelData> {
 		Loadpoints = ddl.GetObjects<MacroLoadpointListItem>(0x857d7b9du);
 	}
 
-	[DDLRegistration(0xb5a442c4u)]
+	[DDLRegistration(0xec76065cu)]
 	public AssetReferenceDef? LevelZone { get; set; } = default;
 
-	[DDLRegistration(0xb5a442c4u)]
+	[DDLRegistration(0x53a0873du)]
 	public RivetAssetId LevelAreaConfig { get; set; } = default;
 
-	[DDLRegistration(0xb5a442c4u, "Level Name LocTag", "Localization tag for level name.")]
+	[DDLRegistration(0xfc464c5cu, "Level Name LocTag", "Localization tag for level name.")]
 	public string? LevelNameLocTag { get; set; } = default;
 
-	[DDLRegistration(0xb5a442c4u, "Level Desc LocTag", "Localization tag for level description.")]
+	[DDLRegistration(0xbc699bbau, "Level Desc LocTag", "Localization tag for level description.")]
 	public string? LevelDescLocTag { get; set; } = default;
 
-	[DDLRegistration(0xb5a442c4u, description: "Level number assigned for use with stats, etc.")]
+	[DDLRegistration(0xfc01a22cu, description: "Level number assigned for use with stats, etc.")]
 	public int LevelNumber { get; set; } = -1;
 
-	[DDLRegistration(0xb5a442c4u, "Level Install Group", "Install group for the level.")]
+	[DDLRegistration(0xc7a77e5eu, "Level Install Group", "Install group for the level.")]
 	public int LevelInstallGroup { get; set; } = 0;
 
-	[DDLRegistration(0xb5a442c4u, description: "Loadpoints for the level.")]
+	[DDLRegistration(0x857d7b9du, description: "Loadpoints for the level.")]
 	public List<MacroLoadpointListItem?> Loadpoints { get; set; } = [];
 
 	public static MacroLevelData Create(DDLObject ddl) => new(ddl);

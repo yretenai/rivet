@@ -19,10 +19,10 @@ public class ReplayMissionActionPrius : DDLObjectType, IDDLObjectType<ReplayMiss
 		ForceReload = ddl.GetValue<bool>(0x33bfa638u, ForceReload);
 	}
 
-	[DDLRegistration(0xb747accdu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
-	[DDLRegistration(0xb747accdu, description: "True to Reload into the mission being replayed, False to allow a mission to go active without a reload.")]
+	[DDLRegistration(0x33bfa638u, description: "True to Reload into the mission being replayed, False to allow a mission to go active without a reload.")]
 	public bool ForceReload { get; set; } = true;
 
 	public static ReplayMissionActionPrius Create(DDLObject ddl) => new(ddl);

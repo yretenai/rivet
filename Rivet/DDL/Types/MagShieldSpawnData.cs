@@ -26,31 +26,31 @@ public class MagShieldSpawnData : AttachableShotSpawnData, IDDLObjectType<MagShi
 		EndColor = ddl.GetObject<DDLVector3>(0x2e7126c2u);
 	}
 
-	[DDLRegistration(0xae17260du)]
+	[DDLRegistration(0xed52b0c2u)]
 	public uint WeaponActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xae17260du)]
+	[DDLRegistration(0x000f3287u)]
 	public uint ShotActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xae17260du)]
+	[DDLRegistration(0x5324a2c7u)]
 	public uint MaxCapturedShots { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xae17260du)]
+	[DDLRegistration(0x93ece8e1u)]
 	public float BlastWaveMinTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xae17260du)]
+	[DDLRegistration(0x80ffd2b0u)]
 	public float ShotDamageAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xae17260du)]
+	[DDLRegistration(0x5d6d073bu)]
 	public uint ShotMultiplier { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xae17260du)]
+	[DDLRegistration(0x37d81caau)]
 	public bool ReturnShots { get; set; } = false;
 
-	[DDLRegistration(0xae17260du)]
+	[DDLRegistration(0x1e3d240du)]
 	public DDLVector3? StartColor { get; set; } = default;
 
-	[DDLRegistration(0xae17260du)]
+	[DDLRegistration(0x2e7126c2u)]
 	public DDLVector3? EndColor { get; set; } = default;
 
 	public new static MagShieldSpawnData Create(DDLObject ddl) => new(ddl);

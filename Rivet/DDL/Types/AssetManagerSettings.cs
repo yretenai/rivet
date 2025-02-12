@@ -71,166 +71,166 @@ public class AssetManagerSettings : DDLObjectType, IDDLObjectType<AssetManagerSe
 		DebugTraceAsset = ddl.GetString(0x2a6d2f74) ?? DebugTraceAsset;
 	}
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x83b900d2u)]
 	public AssetTypeSettings? Level { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x907b00b7u)]
 	public AssetTypeSettings? Zone { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xfc5131b9u)]
 	public AssetTypeSettings? Conduit { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xeaf2611bu)]
 	public AssetTypeSettings? Config { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x9c4a2718u)]
 	public AssetTypeSettings? Cinematic { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xdb2783f1u)]
 	public AssetTypeSettings? Cinematic2 { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x3ae47cafu)]
 	public AssetTypeSettings? AnimClip { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xffcf15f1u)]
 	public AssetTypeSettings? AnimSet { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x838c6e4au)]
 	public AssetTypeSettings? Texture { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x79fd859au)]
 	public AssetTypeSettings? Atmosphere { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xafa67994u)]
 	public AssetTypeSettings? VisualEffect { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x1d1b49d6u)]
 	public AssetTypeSettings? SoundBank { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x5b52a7c7u)]
 	public AssetTypeSettings? Localization { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x704c3010u)]
 	public AssetTypeSettings? ZoneStatic { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x5c704055u)]
 	public AssetTypeSettings? ZonePhysics { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x01e98773u)]
 	public AssetTypeSettings? ZoneCover { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x27a47dadu)]
 	public AssetTypeSettings? ModelVariant { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xeaccbcc7u)]
 	public AssetTypeSettings? MaterialTemplate { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x5d269a38u)]
 	public AssetTypeSettings? Actor { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xcec6be18u)]
 	public AssetTypeSettings? Model { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public AssetTypeSettings? Material { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x18b552c4u)]
 	public AssetTypeSettings? LightGrid { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x45eda6c0u)]
 	public AssetTypeSettings? LevelLight { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xd0f84859u)]
 	public AssetTypeSettings? NodeGraph { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x308973d8u)]
 	public AssetTypeSettings? Breakable { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x6834eef8u)]
 	public AssetTypeSettings? WwiseLookup { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xc99c3089u)]
 	public AssetTypeSettings? Terrain { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x4fb7148cu)]
 	public WhitelistAllocatorSettings? ModelManagerWhitelist { get; set; } = default;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x3ff79893u)]
 	public bool AssertOnLoadError { get; set; } = false;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x2fe1583eu)]
 	public bool AssertOnMaxCount { get; set; } = true;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xe36088e6u)]
 	public uint VisualEffectSingleFrameMax { get; set; } = 0x003c0000;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xef79f818u)]
 	public uint TextureStreamBufferSize { get; set; } = 0x01000000;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x457a9243u)]
 	public uint TextureLowMipsMaxSize { get; set; } = 0x03c00000;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x7ccf4980u)]
 	public int ZoneGameplayDataCallbackMax { get; set; } = 32;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x25f4fc80u)]
 	public int ZoneManagerCallbackMax { get; set; } = 4;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xedfa6f28u)]
 	public int ZoneManagerCombinedScriptActionTypeMax { get; set; } = 32;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xae7c0620u)]
 	public uint ZoneLightBinMax { get; set; } = 0x00000040;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xb9d51db2u)]
 	public uint LightGridUnpackBufferSize { get; set; } = 0x01000000;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x0044d7dfu)]
 	public uint MaxEnvProbeEntries { get; set; } = 0x00000200;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x5f183409u)]
 	public uint AssetLoaderTempAllocSize { get; set; } = 0x00bffd30;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xeaed4d14u)]
 	public uint MaxVertexShaders { get; set; } = 0x00000400;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x748a807fu)]
 	public uint MaxHullShaders { get; set; } = 0x00000200;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x74e807fdu)]
 	public uint MaxDomainShaders { get; set; } = 0x00000200;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x8474117cu)]
 	public uint MaxPixelShaders { get; set; } = 0x00001900;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x592b19d7u)]
 	public x0572515d AudioLanguage { get; set; } = x0572515d.LanguageEnglish;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xbecae521u)]
 	public x0572515d TextLanguage { get; set; } = x0572515d.LanguageEnglish;
 
-	[DDLRegistration(0x9fe607dbu, "Debug Localization", "Display the localization tag name instead of text string")]
+	[DDLRegistration(0xcff183a7u, "Debug Localization", "Display the localization tag name instead of text string")]
 	public bool DebugLocalization { get; set; } = false;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x3a7b1796u)]
 	public bool VerboseDiagnostics { get; set; } = true;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x83bc1f5fu)]
 	public bool WarnOnZoneLooseLoads { get; set; } = false;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xa3c0a673u)]
 	public LoadHistoryDetailLevel LoadHistoryDetailLevel { get; set; } = LoadHistoryDetailLevel.None;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0xa3ac72afu)]
 	public bool DisplayLooseLoadDetail { get; set; } = false;
 
-	[DDLRegistration(0x9fe607dbu)]
+	[DDLRegistration(0x2208ecd6u)]
 	public bool DisableDelayedStreaming { get; set; } = false;
 
-	[DDLRegistration(0x9fe607dbu, description: "This is somewhat safe in the viewer and not safe in the game")]
+	[DDLRegistration(0x48a5a30fu, description: "This is somewhat safe in the viewer and not safe in the game")]
 	public bool EnableZoneReloads { get; set; } = false;
 
-	[DDLRegistration(0x9fe607dbu, description: "Name of asset to trace loads for.")]
+	[DDLRegistration(0x2a6d2f74u, description: "Name of asset to trace loads for.")]
 	public string? DebugTraceAsset { get; set; } = default;
 
 	public static AssetManagerSettings Create(DDLObject ddl) => new(ddl);

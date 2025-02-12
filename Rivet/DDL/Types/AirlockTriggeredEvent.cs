@@ -19,10 +19,10 @@ public class AirlockTriggeredEvent : EventBase, IDDLObjectType<AirlockTriggeredE
 		TriggeringActor = ddl.GetValue<uint>(0x548bd48au, TriggeringActor);
 	}
 
-	[DDLRegistration(0xa805d3b3u)]
+	[DDLRegistration(0xfe4b7d4fu)]
 	public uint CheckpointHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa805d3b3u)]
+	[DDLRegistration(0x548bd48au)]
 	public uint TriggeringActor { get; set; } = 0x00000000;
 
 	public new static AirlockTriggeredEvent Create(DDLObject ddl) => new(ddl);

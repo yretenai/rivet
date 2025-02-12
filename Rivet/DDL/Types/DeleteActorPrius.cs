@@ -21,16 +21,16 @@ public class DeleteActorPrius : DDLObjectType, IDDLObjectType<DeleteActorPrius> 
 		DrawOff = ddl.GetValue<bool>(0x1b9f7c13u, DrawOff);
 	}
 
-	[DDLRegistration(0xa0be5950u)]
+	[DDLRegistration(0x3ee97a04u)]
 	public float DeleteTimer { get; set; } = 5.00f;
 
-	[DDLRegistration(0xa0be5950u)]
+	[DDLRegistration(0x231fbd60u)]
 	public float RandomOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa0be5950u)]
+	[DDLRegistration(0x37b996d9u)]
 	public bool Kill { get; set; } = false;
 
-	[DDLRegistration(0xa0be5950u)]
+	[DDLRegistration(0x1b9f7c13u)]
 	public bool DrawOff { get; set; } = false;
 
 	public static DeleteActorPrius Create(DDLObject ddl) => new(ddl);

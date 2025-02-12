@@ -20,13 +20,13 @@ public class EyePosesDefaultsData : DDLObjectType, IDDLObjectType<EyePosesDefaul
 		DefaultStrength = ddl.GetValue<float>(0xaae9e33bu, DefaultStrength);
 	}
 
-	[DDLRegistration(0x434597d0u)]
+	[DDLRegistration(0xe6513782u)]
 	public int PoseSelectIndex { get; set; } = 0;
 
-	[DDLRegistration(0x434597d0u)]
+	[DDLRegistration(0x116126ceu)]
 	public string? PoseLabel { get; set; } = default;
 
-	[DDLRegistration(0x434597d0u)]
+	[DDLRegistration(0xaae9e33bu)]
 	public float DefaultStrength { get; set; } = 1.00f;
 
 	public static EyePosesDefaultsData Create(DDLObject ddl) => new(ddl);

@@ -32,49 +32,49 @@ public class ViewFlagsEngineItem : DDLObjectType, IDDLObjectType<ViewFlagsEngine
 		ScreenFadeEnabled = ddl.GetValue<bool>(0x4800bb28u, ScreenFadeEnabled);
 	}
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0xe9dd3200u)]
 	public bool WorldAxesEnabled { get; set; } = false;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0x8600a3acu)]
 	public bool WorldGridEnabled { get; set; } = false;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0xb995b074u)]
 	public bool KeyLightArrowEnabled { get; set; } = false;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0x1a9dca6du)]
 	public bool UVMapEnabled { get; set; } = false;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0x03e5bcc0u)]
 	public bool MotionBlurEnabled { get; set; } = false;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0xd58f18d9u)]
 	public bool TemporalAntiAliasingEnabled { get; set; } = true;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0xccc42427u)]
 	public bool ScreenSpaceReflectionEnabled { get; set; } = true;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0xa3f27836u)]
 	public bool ScreenSpaceAmbientOcclusionEnabled { get; set; } = true;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0xb825d5d3u)]
 	public bool ColorCorrectionEnabled { get; set; } = true;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0xb8180252u)]
 	public bool DepthOfFieldEnabled { get; set; } = true;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0x21fc54a1u)]
 	public bool DepthOfFieldMarkerEnabled { get; set; } = false;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0xa5ff0014u)]
 	public bool ChromaticAberrationEnabled { get; set; } = true;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0xa1904bacu)]
 	public bool WeatherEffectsEnabled { get; set; } = true;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0x7192d2f4u)]
 	public bool PostProcessEnabled { get; set; } = true;
 
-	[DDLRegistration(0x614e4a06u)]
+	[DDLRegistration(0x4800bb28u)]
 	public bool ScreenFadeEnabled { get; set; } = true;
 
 	public static ViewFlagsEngineItem Create(DDLObject ddl) => new(ddl);

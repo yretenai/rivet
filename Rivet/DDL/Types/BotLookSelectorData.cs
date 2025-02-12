@@ -19,10 +19,10 @@ public class BotLookSelectorData : DDLObjectType, IDDLObjectType<BotLookSelector
 		LockPhysicsOnSpawn = ddl.GetValue<bool>(0xd50a5a5cu, LockPhysicsOnSpawn);
 	}
 
-	[DDLRegistration(0x5fe39e8du)]
+	[DDLRegistration(0x4999ee91u)]
 	public List<VariantConfiguration?> Variants { get; set; } = [];
 
-	[DDLRegistration(0x5fe39e8du, "Lock Physics On Spawn")]
+	[DDLRegistration(0xd50a5a5cu, "Lock Physics On Spawn")]
 	public bool LockPhysicsOnSpawn { get; set; } = true;
 
 	public static BotLookSelectorData Create(DDLObject ddl) => new(ddl);

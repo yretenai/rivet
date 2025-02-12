@@ -20,13 +20,13 @@ public class ScriptDebugActionProperties : DDLObjectType, IDDLObjectType<ScriptD
 		Properties = ddl.GetObjects<ScriptDebugActionProperty>(0x5cf56ffeu);
 	}
 
-	[DDLRegistration(0x8ca470d8u)]
+	[DDLRegistration(0x6256417eu)]
 	public RivetAssetId ActionTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8ca470d8u)]
+	[DDLRegistration(0xc0e0f909u)]
 	public RivetAssetId ZoneId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8ca470d8u)]
+	[DDLRegistration(0x5cf56ffeu)]
 	public List<ScriptDebugActionProperty?> Properties { get; set; } = [];
 
 	public static ScriptDebugActionProperties Create(DDLObject ddl) => new(ddl);

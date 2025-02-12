@@ -21,16 +21,16 @@ public class SimpleLocatorFXCrawlPrius : DDLObjectType, IDDLObjectType<SimpleLoc
 		CancelEvents = ddl.GetObjects<EventStyleSpecified>(0xedf9fbdcu);
 	}
 
-	[DDLRegistration(0x76c5f3adu, description: "Effect to crawl")]
+	[DDLRegistration(0xb0d6832du, description: "Effect to crawl")]
 	public AssetReferenceDef? CrawlFX { get; set; } = default;
 
-	[DDLRegistration(0x76c5f3adu, description: "Controls how time is measured during the crawl")]
+	[DDLRegistration(0x5fe2ecbau, description: "Controls how time is measured during the crawl")]
 	public x48037d3a TimeScale { get; set; } = x48037d3a.GameTime;
 
-	[DDLRegistration(0x76c5f3adu, description: "Locators to crawl, in order listed")]
+	[DDLRegistration(0xed9e44e8u, description: "Locators to crawl, in order listed")]
 	public List<LocatorCrawlPoints?> CrawlPoints { get; set; } = [];
 
-	[DDLRegistration(0x76c5f3adu, description: "Events that will cancel the crawl")]
+	[DDLRegistration(0xedf9fbdcu, description: "Events that will cancel the crawl")]
 	public List<EventStyleSpecified?> CancelEvents { get; set; } = [];
 
 	public static SimpleLocatorFXCrawlPrius Create(DDLObject ddl) => new(ddl);

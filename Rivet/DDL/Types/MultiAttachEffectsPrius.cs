@@ -20,13 +20,13 @@ public class MultiAttachEffectsPrius : DDLObjectType, IDDLObjectType<MultiAttach
 		LastLocatorNumber = ddl.GetValue<uint>(0x609165eau, LastLocatorNumber);
 	}
 
-	[DDLRegistration(0x310b2dbdu, description: "The template for the names of the attach locators. Use hashes (#) to represent the location of the locator number.")]
+	[DDLRegistration(0x9dc24999u, description: "The template for the names of the attach locators. Use hashes (#) to represent the location of the locator number.")]
 	public string? LocatorNameTemplate { get; set; } = default;
 
-	[DDLRegistration(0x310b2dbdu, description: "The first number to use with the locator name template.")]
+	[DDLRegistration(0xf5f8c3c4u, description: "The first number to use with the locator name template.")]
 	public uint FirstLocatorNumber { get; set; } = 0x00000001;
 
-	[DDLRegistration(0x310b2dbdu, description: "The last number to use with the locator name template.")]
+	[DDLRegistration(0x609165eau, description: "The last number to use with the locator name template.")]
 	public uint LastLocatorNumber { get; set; } = 0x0000000a;
 
 	public static MultiAttachEffectsPrius Create(DDLObject ddl) => new(ddl);

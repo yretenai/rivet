@@ -26,31 +26,31 @@ public class DoorPrius : DDLObjectType, IDDLObjectType<DoorPrius> {
 		DoorOfferPrius = ddl.GetObject<DoorOfferPrius>(0x2fd6a780u);
 	}
 
-	[DDLRegistration(0x72c3839du, "Save Open State?", "Whether we should save this actor's opened state (aka, opened or closed) and return to it on load. This will use the Actor flag so don't have more than one component set to save with this flag.")]
+	[DDLRegistration(0xf6dc8f9eu, "Save Open State?", "Whether we should save this actor's opened state (aka, opened or closed) and return to it on load. This will use the Actor flag so don't have more than one component set to save with this flag.")]
 	public bool SaveOpenedState { get; set; } = false;
 
-	[DDLRegistration(0x72c3839du, description: "Optional.  Only unlock the door if this region is loaded.")]
+	[DDLRegistration(0x311abf11u, description: "Optional.  Only unlock the door if this region is loaded.")]
 	public RivetAssetId Region { get; set; } = default;
 
-	[DDLRegistration(0x72c3839du, "Auto Triggers")]
+	[DDLRegistration(0x2076dda9u, "Auto Triggers")]
 	public List<AutoDoorTrigger?> TriggerList { get; set; } = [];
 
-	[DDLRegistration(0x72c3839du, "Required items", "All of these items need to be in the inventory to unlock.")]
+	[DDLRegistration(0xc73b0b67u, "Required items", "All of these items need to be in the inventory to unlock.")]
 	public List<RequiredItemEntry?> RequiredItems { get; set; } = [];
 
-	[DDLRegistration(0x72c3839du, "Start Open")]
+	[DDLRegistration(0xc7bfb5cau, "Start Open")]
 	public bool StartOpen { get; set; } = false;
 
-	[DDLRegistration(0x72c3839du, "Start Locked")]
+	[DDLRegistration(0x9fcf6a11u, "Start Locked")]
 	public bool StartLocked { get; set; } = false;
 
-	[DDLRegistration(0x72c3839du, "Squash Volume")]
+	[DDLRegistration(0x1a290659u, "Squash Volume")]
 	public RivetAssetId SquashVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x72c3839du, "Create Door Offer")]
+	[DDLRegistration(0xcaf0038au, "Create Door Offer")]
 	public bool CreateDoorOffer { get; set; } = false;
 
-	[DDLRegistration(0x72c3839du)]
+	[DDLRegistration(0x2fd6a780u)]
 	public DoorOfferPrius? DoorOfferPrius { get; set; } = default;
 
 	public static DoorPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class ImpactDamageContainerPrius : DDLObjectType, IDDLObjectType<ImpactDa
 		PinDeath = ddl.GetValue<bool>(0xff0799a2u, PinDeath);
 	}
 
-	[DDLRegistration(0x535b1e27u, description: "Amount of damage will be modified when a bot gets flung into this.")]
+	[DDLRegistration(0xb0d93e25u, description: "Amount of damage will be modified when a bot gets flung into this.")]
 	public float Amount { get; set; } = 100.00f;
 
-	[DDLRegistration(0x535b1e27u, description: "Is amount a fixed amount, or should it multiply the current fall damage the bot is going to take?")]
+	[DDLRegistration(0x622d5e79u, description: "Is amount a fixed amount, or should it multiply the current fall damage the bot is going to take?")]
 	public bool IsMultiplier { get; set; } = false;
 
-	[DDLRegistration(0x535b1e27u, description: "Bots who die on this should be pinned to it?")]
+	[DDLRegistration(0xff0799a2u, description: "Bots who die on this should be pinned to it?")]
 	public bool PinDeath { get; set; } = true;
 
 	public static ImpactDamageContainerPrius Create(DDLObject ddl) => new(ddl);

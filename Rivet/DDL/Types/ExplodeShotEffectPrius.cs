@@ -24,25 +24,25 @@ public class ExplodeShotEffectPrius : ScriptedShotEffectBasePrius, IDDLObjectTyp
 		TriggerEvent = ddl.GetValue<bool>(0x55aed815u, TriggerEvent);
 	}
 
-	[DDLRegistration(0x7c1bd6e9u, "Explode Data")]
+	[DDLRegistration(0xc66d633cu, "Explode Data")]
 	public DamageModifierExplosionPrius? ExplodeData { get; set; } = default;
 
-	[DDLRegistration(0x7c1bd6e9u, "Damage Type")]
+	[DDLRegistration(0x840c154du, "Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Explosion;
 
-	[DDLRegistration(0x7c1bd6e9u)]
+	[DDLRegistration(0x93d0d934u)]
 	public DamageRequestFlags DamageFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
-	[DDLRegistration(0x7c1bd6e9u, "Damage Offset")]
+	[DDLRegistration(0x81905ee2u, "Damage Offset")]
 	public DDLVector3? DamageOffset { get; set; } = default;
 
-	[DDLRegistration(0x7c1bd6e9u, "Offset Mode")]
+	[DDLRegistration(0xbefa1d79u, "Offset Mode")]
 	public xe1cdcd87 OffsetMode { get; set; } = xe1cdcd87.Local;
 
-	[DDLRegistration(0x7c1bd6e9u, "Impulse")]
+	[DDLRegistration(0xebf69433u, "Impulse")]
 	public float Impulse { get; set; } = 0.00f;
 
-	[DDLRegistration(0x7c1bd6e9u, "Trigger Event")]
+	[DDLRegistration(0x55aed815u, "Trigger Event")]
 	public bool TriggerEvent { get; set; } = true;
 
 	public new static ExplodeShotEffectPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class CommandDoneEvent : EventBase, IDDLObjectType<CommandDoneEvent> {
 		CurveActorHandle = ddl.GetValue<uint>(0xfc8b3eb2u, CurveActorHandle);
 	}
 
-	[DDLRegistration(0x8565e86cu, description: "The curve, if any, that is finished.")]
+	[DDLRegistration(0xfc8b3eb2u, description: "The curve, if any, that is finished.")]
 	public uint CurveActorHandle { get; set; } = 0x00000000;
 
 	public new static CommandDoneEvent Create(DDLObject ddl) => new(ddl);

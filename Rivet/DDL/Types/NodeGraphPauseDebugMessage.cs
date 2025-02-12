@@ -18,7 +18,7 @@ public class NodeGraphPauseDebugMessage : DDLObjectType, IDDLObjectType<NodeGrap
 		ActorContextId = ddl.GetValue<uint>(0x55ffc909u, ActorContextId);
 	}
 
-	[DDLRegistration(0x7b533378u)]
+	[DDLRegistration(0x55ffc909u)]
 	public uint ActorContextId { get; set; } = 0x00000000;
 
 	public static NodeGraphPauseDebugMessage Create(DDLObject ddl) => new(ddl);

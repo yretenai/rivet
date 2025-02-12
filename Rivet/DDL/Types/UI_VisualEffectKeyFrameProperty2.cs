@@ -20,13 +20,13 @@ public class UI_VisualEffectKeyFrameProperty2 : DDLObjectType, IDDLObjectType<UI
 		Y = ddl.GetObject<UI_VisualEffectKeyFrameYValues2>(0x2934711bu);
 	}
 
-	[DDLRegistration(0xaad5b672u)]
+	[DDLRegistration(0x660fc875u)]
 	public RangeStyle RangeStyle { get; set; } = RangeStyle.Random;
 
-	[DDLRegistration(0xaad5b672u, "Position")]
+	[DDLRegistration(0x5e33418du, "Position")]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaad5b672u, "Value")]
+	[DDLRegistration(0x2934711bu, "Value")]
 	public UI_VisualEffectKeyFrameYValues2? Y { get; set; } = default;
 
 	public static UI_VisualEffectKeyFrameProperty2 Create(DDLObject ddl) => new(ddl);

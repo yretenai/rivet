@@ -21,16 +21,16 @@ public class ConduitLocatorTransformEvent : EventBase, IDDLObjectType<ConduitLoc
 		LocatorName = ddl.GetString(0x5814524d) ?? LocatorName;
 	}
 
-	[DDLRegistration(0xfa011d3cu)]
+	[DDLRegistration(0x17f49c29u)]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0xfa011d3cu)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfa011d3cu)]
+	[DDLRegistration(0xbda9b048u)]
 	public uint Param { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xfa011d3cu, description: "Locator set from the Anim Trigger")]
+	[DDLRegistration(0x5814524du, description: "Locator set from the Anim Trigger")]
 	public string? LocatorName { get; set; } = default;
 
 	public new static ConduitLocatorTransformEvent Create(DDLObject ddl) => new(ddl);

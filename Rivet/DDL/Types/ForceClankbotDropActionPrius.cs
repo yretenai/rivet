@@ -19,10 +19,10 @@ public class ForceClankbotDropActionPrius : DDLObjectType, IDDLObjectType<ForceC
 		DestroyOnDrop = ddl.GetValue<bool>(0x51d5d6feu, DestroyOnDrop);
 	}
 
-	[DDLRegistration(0x91fe5009u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Puzzle;
 
-	[DDLRegistration(0x91fe5009u, description: "Whether to destroy the dropped clank bot or simply drop it on the ground.")]
+	[DDLRegistration(0x51d5d6feu, description: "Whether to destroy the dropped clank bot or simply drop it on the ground.")]
 	public bool DestroyOnDrop { get; set; } = true;
 
 	public static ForceClankbotDropActionPrius Create(DDLObject ddl) => new(ddl);

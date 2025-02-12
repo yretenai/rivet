@@ -18,7 +18,7 @@ public class BotComboStartedEvent : EventBase, IDDLObjectType<BotComboStartedEve
 		ComboName = ddl.GetString(0x63bbe918) ?? ComboName;
 	}
 
-	[DDLRegistration(0xdff3ed02u)]
+	[DDLRegistration(0x63bbe918u)]
 	public string? ComboName { get; set; } = default;
 
 	public new static BotComboStartedEvent Create(DDLObject ddl) => new(ddl);

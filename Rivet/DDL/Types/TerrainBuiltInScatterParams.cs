@@ -18,7 +18,7 @@ public class TerrainBuiltInScatterParams : DDLObjectType, IDDLObjectType<Terrain
 		BiomeConfig = ddl.GetValue<RivetAssetId>(0xb04ff3c0u, BiomeConfig);
 	}
 
-	[DDLRegistration(0xfe7e8b7au, "Biome Config")]
+	[DDLRegistration(0xb04ff3c0u, "Biome Config")]
 	public RivetAssetId BiomeConfig { get; set; } = default;
 
 	public static TerrainBuiltInScatterParams Create(DDLObject ddl) => new(ddl);

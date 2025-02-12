@@ -19,10 +19,10 @@ public class UI_CinematicActorLocatorPicker : DDLObjectType, IDDLObjectType<UI_C
 		LocatorName = ddl.GetString(0x5814524d) ?? LocatorName;
 	}
 
-	[DDLRegistration(0x621f4cfau)]
+	[DDLRegistration(0x6c21ca8au)]
 	public RivetAssetId ActorId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x621f4cfau)]
+	[DDLRegistration(0x5814524du)]
 	public string? LocatorName { get; set; } = default;
 
 	public static UI_CinematicActorLocatorPicker Create(DDLObject ddl) => new(ddl);

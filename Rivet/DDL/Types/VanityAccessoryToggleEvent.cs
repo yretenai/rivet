@@ -18,7 +18,7 @@ public class VanityAccessoryToggleEvent : EventBase, IDDLObjectType<VanityAccess
 		Type = ddl.GetEnum<x56bca86c>(0xbc4e9799u, x56bca86cValues.Lookup);
 	}
 
-	[DDLRegistration(0x0a5eb3d5u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x56bca86c Type { get; set; } = x56bca86c.Rebreather;
 
 	public new static VanityAccessoryToggleEvent Create(DDLObject ddl) => new(ddl);

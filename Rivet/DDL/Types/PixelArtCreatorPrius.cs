@@ -21,16 +21,16 @@ public class PixelArtCreatorPrius : DDLObjectType, IDDLObjectType<PixelArtCreato
 		PixelsPerWorldUnit = ddl.GetValue<float>(0xa5b4f62fu, PixelsPerWorldUnit);
 	}
 
-	[DDLRegistration(0x3c13ae9cu)]
+	[DDLRegistration(0xbac27482u)]
 	public uint TextureWidth { get; set; } = 0x00000040;
 
-	[DDLRegistration(0x3c13ae9cu)]
+	[DDLRegistration(0x8f1e0de6u)]
 	public uint TextureHeight { get; set; } = 0x00000040;
 
-	[DDLRegistration(0x3c13ae9cu)]
+	[DDLRegistration(0x7b62b88au)]
 	public uint PixelShiftUp { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3c13ae9cu)]
+	[DDLRegistration(0xa5b4f62fu)]
 	public float PixelsPerWorldUnit { get; set; } = 8.00f;
 
 	public static PixelArtCreatorPrius Create(DDLObject ddl) => new(ddl);

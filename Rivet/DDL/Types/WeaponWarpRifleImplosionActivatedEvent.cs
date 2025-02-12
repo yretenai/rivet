@@ -18,7 +18,7 @@ public class WeaponWarpRifleImplosionActivatedEvent : EventBase, IDDLObjectType<
 		AOE = ddl.GetValue<float>(0xed56b719u, AOE);
 	}
 
-	[DDLRegistration(0x3a547c3au)]
+	[DDLRegistration(0xed56b719u)]
 	public float AOE { get; set; } = 0.00f;
 
 	public new static WeaponWarpRifleImplosionActivatedEvent Create(DDLObject ddl) => new(ddl);

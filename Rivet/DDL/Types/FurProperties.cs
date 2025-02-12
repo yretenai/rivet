@@ -31,46 +31,46 @@ public class FurProperties : DDLObjectType, IDDLObjectType<FurProperties> {
 		ControlMapPath = ddl.GetValue<RivetAssetId>(0xb6e2ce1du, ControlMapPath);
 	}
 
-	[DDLRegistration(0xafa8e623u, "Layer Count")]
+	[DDLRegistration(0x163e9e1eu, "Layer Count")]
 	public uint LayerCount { get; set; } = 0x00000020;
 
-	[DDLRegistration(0xafa8e623u, "LoD Reduction")]
+	[DDLRegistration(0x1461d827u, "LoD Reduction")]
 	public float LoDReduction { get; set; } = 0.25f;
 
-	[DDLRegistration(0xafa8e623u, "Length")]
+	[DDLRegistration(0x3f05d0d5u, "Length")]
 	public float Length { get; set; } = 0.02f;
 
-	[DDLRegistration(0xafa8e623u, "Density")]
+	[DDLRegistration(0xc14209c2u, "Density")]
 	public float Density { get; set; } = 8.00f;
 
-	[DDLRegistration(0xafa8e623u, "Offset Scale")]
+	[DDLRegistration(0x56b049abu, "Offset Scale")]
 	public float OffsetScale { get; set; } = 2.00f;
 
-	[DDLRegistration(0xafa8e623u, "Gloss Scale")]
+	[DDLRegistration(0x0388a1a5u, "Gloss Scale")]
 	public float GlossScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xafa8e623u, "Specular Scale")]
+	[DDLRegistration(0xb5d495c8u, "Specular Scale")]
 	public float SpecularScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xafa8e623u, "Transmittance Scale")]
+	[DDLRegistration(0xd1b350ccu, "Transmittance Scale")]
 	public float TransmittanceScale { get; set; } = 0.05f;
 
-	[DDLRegistration(0xafa8e623u, "Light Wrap")]
+	[DDLRegistration(0x9aaf5b2eu, "Light Wrap")]
 	public float LightWrap { get; set; } = 0.20f;
 
-	[DDLRegistration(0xafa8e623u, "Wetness")]
+	[DDLRegistration(0xb9d9094du, "Wetness")]
 	public float Wetness { get; set; } = 0.00f;
 
-	[DDLRegistration(0xafa8e623u, "Base Texture")]
+	[DDLRegistration(0x146722ebu, "Base Texture")]
 	public RivetAssetId BaseMapPath { get; set; } = default;
 
-	[DDLRegistration(0xafa8e623u, "Normal Texture")]
+	[DDLRegistration(0x455116c5u, "Normal Texture")]
 	public RivetAssetId NormalMapPath { get; set; } = default;
 
-	[DDLRegistration(0xafa8e623u, "Gloss Texture")]
+	[DDLRegistration(0xe0c69aadu, "Gloss Texture")]
 	public RivetAssetId GlossMapPath { get; set; } = default;
 
-	[DDLRegistration(0xafa8e623u, "Control Texture")]
+	[DDLRegistration(0xb6e2ce1du, "Control Texture")]
 	public RivetAssetId ControlMapPath { get; set; } = default;
 
 	public static FurProperties Create(DDLObject ddl) => new(ddl);

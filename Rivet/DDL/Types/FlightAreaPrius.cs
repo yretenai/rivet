@@ -18,7 +18,7 @@ public class FlightAreaPrius : DDLObjectType, IDDLObjectType<FlightAreaPrius> {
 		ActorGroup = ddl.GetValue<RivetAssetId>(0x1a5a7710u, ActorGroup);
 	}
 
-	[DDLRegistration(0xca109f83u)]
+	[DDLRegistration(0x1a5a7710u)]
 	public RivetAssetId ActorGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static FlightAreaPrius Create(DDLObject ddl) => new(ddl);

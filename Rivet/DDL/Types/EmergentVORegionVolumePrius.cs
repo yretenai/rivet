@@ -18,7 +18,7 @@ public class EmergentVORegionVolumePrius : DDLObjectType, IDDLObjectType<Emergen
 		RegionName = ddl.GetString(0x18017d12) ?? RegionName;
 	}
 
-	[DDLRegistration(0xfe6b6abeu, description: "CASE SENSITIVE! When the hero is in this region, rules with same name in HeroInRegion will match.")]
+	[DDLRegistration(0x18017d12u, description: "CASE SENSITIVE! When the hero is in this region, rules with same name in HeroInRegion will match.")]
 	public string? RegionName { get; set; } = default;
 
 	public static EmergentVORegionVolumePrius Create(DDLObject ddl) => new(ddl);

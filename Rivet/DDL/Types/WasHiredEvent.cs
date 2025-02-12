@@ -18,7 +18,7 @@ public class WasHiredEvent : EventBase, IDDLObjectType<WasHiredEvent> {
 		ActorHandle = ddl.GetValue<uint>(0xb54c733cu, ActorHandle);
 	}
 
-	[DDLRegistration(0xc6c3d0a8u)]
+	[DDLRegistration(0xb54c733cu)]
 	public uint ActorHandle { get; set; } = 0x00000000;
 
 	public new static WasHiredEvent Create(DDLObject ddl) => new(ddl);

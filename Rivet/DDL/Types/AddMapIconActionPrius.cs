@@ -19,10 +19,10 @@ public class AddMapIconActionPrius : DDLObjectType, IDDLObjectType<AddMapIconAct
 		Type = ddl.GetEnum<PauseMapElementType>(0xbc4e9799u, PauseMapElementTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x24971d0du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x24971d0du, "Icon Type", "PauseMapElementType to add.")]
+	[DDLRegistration(0xbc4e9799u, "Icon Type", "PauseMapElementType to add.")]
 	public PauseMapElementType Type { get; set; } = PauseMapElementType.Objective;
 
 	public static AddMapIconActionPrius Create(DDLObject ddl) => new(ddl);

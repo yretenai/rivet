@@ -19,10 +19,10 @@ public class ModelVariantDef : DDLObjectType, IDDLObjectType<ModelVariantDef> {
 		Variants = ddl.GetDictionary<RivetAssetId, ModelVariantSingle>(0x4999ee91, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ModelVariantSingle>(mapId));
 	}
 
-	[DDLRegistration(0x5142d0cdu, description: "The model which this variant modifies.")]
+	[DDLRegistration(0x2c6cecd4u, description: "The model which this variant modifies.")]
 	public RivetAssetId EditorModel { get; set; } = default;
 
-	[DDLRegistration(0x5142d0cdu, description: "all the variants contained in this file.")]
+	[DDLRegistration(0x4999ee91u, description: "all the variants contained in this file.")]
 	public Dictionary<RivetAssetId, ModelVariantSingle?> Variants { get; set; } = [];
 
 	public static ModelVariantDef Create(DDLObject ddl) => new(ddl);

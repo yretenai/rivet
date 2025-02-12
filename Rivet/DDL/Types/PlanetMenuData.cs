@@ -28,37 +28,37 @@ public class PlanetMenuData : DDLObjectType, IDDLObjectType<PlanetMenuData> {
 		FocusDialogs = ddl.GetObjects<PlanetMenuDialog>(0xf405b226u);
 	}
 
-	[DDLRegistration(0x924eae9du, "Name", "Look/locator name in the galaxy map model.")]
+	[DDLRegistration(0x6eb3beb6u, "Name", "Look/locator name in the galaxy map model.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x924eae9du, "Show In Menu", "Should this planet show in the planet menu")]
+	[DDLRegistration(0x105bafe3u, "Show In Menu", "Should this planet show in the planet menu")]
 	public bool ShowInMenu { get; set; } = true;
 
-	[DDLRegistration(0x924eae9du, "Unlock Sequence", "The Unlock Sequence to use to determine if this planet is locked or not.")]
+	[DDLRegistration(0xdd7a0accu, "Unlock Sequence", "The Unlock Sequence to use to determine if this planet is locked or not.")]
 	public ObjSysUnlockSequence? UnlockSequence { get; set; } = default;
 
-	[DDLRegistration(0x924eae9du, "Planet Name Loc Tag", "Loctag of the name of this planet for UI.")]
+	[DDLRegistration(0xa0041b54u, "Planet Name Loc Tag", "Loctag of the name of this planet for UI.")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0x924eae9du, "Planet Desc Loc Tag", "Loctag of the description for this planet for UI. (mainly in the Activity Card)")]
+	[DDLRegistration(0xe02bccb2u, "Planet Desc Loc Tag", "Loctag of the description for this planet for UI. (mainly in the Activity Card)")]
 	public string? DescLocTag { get; set; } = default;
 
-	[DDLRegistration(0x924eae9du, "Planet Location Loc Tag", "Loctag of the specific location in this planet for UI.")]
+	[DDLRegistration(0x9110a3a9u, "Planet Location Loc Tag", "Loctag of the specific location in this planet for UI.")]
 	public string? LocationLocTag { get; set; } = default;
 
-	[DDLRegistration(0x924eae9du, "Preview Image", "Preview image for this planet.")]
+	[DDLRegistration(0x4cfbd8afu, "Preview Image", "Preview image for this planet.")]
 	public RivetAssetId PreviewImage { get; set; } = default;
 
-	[DDLRegistration(0x924eae9du, "Gold Bolts", "Gold bolts on this planet.")]
+	[DDLRegistration(0x08aafc49u, "Gold Bolts", "Gold bolts on this planet.")]
 	public int GoldBolts { get; set; } = 0;
 
-	[DDLRegistration(0x924eae9du, "RYNO Plans", "RYNO Plans on this planet.")]
+	[DDLRegistration(0x28767e49u, "RYNO Plans", "RYNO Plans on this planet.")]
 	public int RYNOPlans { get; set; } = 0;
 
-	[DDLRegistration(0x924eae9du, "Vanity Pickups", "Vanity pickups on this planet.")]
+	[DDLRegistration(0x227994beu, "Vanity Pickups", "Vanity pickups on this planet.")]
 	public int VanityPickups { get; set; } = 0;
 
-	[DDLRegistration(0x924eae9du, "Focus Dialogs", "List of dialogs to trigger on focus. (priority order)")]
+	[DDLRegistration(0xf405b226u, "Focus Dialogs", "List of dialogs to trigger on focus. (priority order)")]
 	public List<PlanetMenuDialog?> FocusDialogs { get; set; } = [];
 
 	public static PlanetMenuData Create(DDLObject ddl) => new(ddl);

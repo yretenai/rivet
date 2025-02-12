@@ -18,7 +18,7 @@ public class VisualEffectNodesFavorites : DDLObjectType, IDDLObjectType<VisualEf
 		Favorites = ddl.GetObjects<VisualEffectNodesFavorite>(0x6694fff9u);
 	}
 
-	[DDLRegistration(0x00db7dfbu)]
+	[DDLRegistration(0x6694fff9u)]
 	public List<VisualEffectNodesFavorite?> Favorites { get; set; } = [];
 
 	public static VisualEffectNodesFavorites Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class WeaponFiringBasePrius : DDLObjectType, IDDLObjectType<WeaponFiringB
 		FireEventFxId = ddl.GetValue<byte>(0x2c812937u, FireEventFxId);
 	}
 
-	[DDLRegistration(0x9c98ee69u)]
+	[DDLRegistration(0x7464ae09u)]
 	public WeaponEmitterBasePrius? Emitter { get; set; } = default;
 
-	[DDLRegistration(0x9c98ee69u)]
+	[DDLRegistration(0x7ea9ad35u)]
 	public float FireSoundRange { get; set; } = 10.00f;
 
-	[DDLRegistration(0x9c98ee69u)]
+	[DDLRegistration(0x5240ce16u)]
 	public float NoiseMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9c98ee69u)]
+	[DDLRegistration(0xa7acfc9au)]
 	public float ScentMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9c98ee69u)]
+	[DDLRegistration(0x2c812937u)]
 	public byte FireEventFxId { get; set; } = 0x00;
 
 	public static WeaponFiringBasePrius Create(DDLObject ddl) => new(ddl);

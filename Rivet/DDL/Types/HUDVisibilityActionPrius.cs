@@ -20,13 +20,13 @@ public class HUDVisibilityActionPrius : DDLObjectType, IDDLObjectType<HUDVisibil
 		OptionFlags = ddl.GetBitset<x9976600e>(0xf233e59du, x9976600eValues.Lookup);
 	}
 
-	[DDLRegistration(0x8ac4aea8u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x8ac4aea8u, "HUD Components Changed", "Which components on the HUD to change")]
+	[DDLRegistration(0x9695d7dfu, "HUD Components Changed", "Which components on the HUD to change")]
 	public x59818fe0 ComponentsChangedFlags { get; set; } = (x59818fe0) 0x00000001;
 
-	[DDLRegistration(0x8ac4aea8u, "Display Flags", "Other Options")]
+	[DDLRegistration(0xf233e59du, "Display Flags", "Other Options")]
 	public x9976600e OptionFlags { get; set; } = (x9976600e) 0x00000000;
 
 	public static HUDVisibilityActionPrius Create(DDLObject ddl) => new(ddl);

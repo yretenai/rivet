@@ -32,49 +32,49 @@ public class TelekinesisData : DDLObjectType, IDDLObjectType<TelekinesisData> {
 		PortalSpawnedShotActor = ddl.GetValue<RivetAssetId>(0xd2a1d436u, PortalSpawnedShotActor);
 	}
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0xf227a2c3u)]
 	public string? IntroAnim { get; set; } = default;
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0x7a1c1026u)]
 	public string? HoldLoopAnim { get; set; } = default;
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0xe5cff65eu)]
 	public string? ThrowAnim { get; set; } = default;
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0x5a90cf4fu)]
 	public string? ThrowWithOutroAnim { get; set; } = default;
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0xeac18ccbu)]
 	public string? HoldLocator { get; set; } = default;
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0x17c4ad9bu)]
 	public int NumTelekinesisObjectsWanted { get; set; } = 1;
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0x48c1167au)]
 	public float TimeToGatherAndOrbit { get; set; } = 1.50f;
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0xca96580fu)]
 	public float TimeToFirstObjectThrow { get; set; } = 2.00f;
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0xb2aae801u)]
 	public float TimeBetweenThrows { get; set; } = 1.00f;
 
-	[DDLRegistration(0x46ffb209u, description: "If false, only readied telekinesis object needs to be destroyed to stun bot")]
+	[DDLRegistration(0xcafb7007u, description: "If false, only readied telekinesis object needs to be destroyed to stun bot")]
 	public bool StunOnAllOrbitDestroyed { get; set; } = true;
 
-	[DDLRegistration(0x46ffb209u, "Shot Config")]
+	[DDLRegistration(0xb171e6aeu, "Shot Config")]
 	public RivetAssetId ShotConfig { get; set; } = default;
 
-	[DDLRegistration(0x46ffb209u, description: "Conduit to add to obejct that is being telekinesised")]
+	[DDLRegistration(0xfc5131b9u, description: "Conduit to add to obejct that is being telekinesised")]
 	public RivetAssetId Conduit { get; set; } = default;
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0x74bd363cu)]
 	public bool PortalInShot { get; set; } = false;
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0xfec29c86u)]
 	public RivetAssetId PortalActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x46ffb209u)]
+	[DDLRegistration(0xd2a1d436u)]
 	public RivetAssetId PortalSpawnedShotActor { get; set; } = default;
 
 	public static TelekinesisData Create(DDLObject ddl) => new(ddl);

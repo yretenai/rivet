@@ -21,16 +21,16 @@ public class AssetSaveResult : DDLObjectType, IDDLObjectType<AssetSaveResult> {
 		SavedSize = ddl.GetValue<uint>(0x7c1e2aaau, SavedSize);
 	}
 
-	[DDLRegistration(0x4f49c7a3u, description: "Relative path of the asset that was saved.")]
+	[DDLRegistration(0x0efa614bu, description: "Relative path of the asset that was saved.")]
 	public RivetAssetId AssetPath { get; set; } = "";
 
-	[DDLRegistration(0x4f49c7a3u, description: "Timestamp of when the file was last saved to disk (not the same as when it was modified in the database).")]
+	[DDLRegistration(0x71d1d76au, description: "Timestamp of when the file was last saved to disk (not the same as when it was modified in the database).")]
 	public string? LastSaved { get; set; } = "";
 
-	[DDLRegistration(0x4f49c7a3u, description: "DEPRECATED: Size in bytes of this file as stored in the internal database as BSON.")]
+	[DDLRegistration(0xcb45502eu, description: "DEPRECATED: Size in bytes of this file as stored in the internal database as BSON.")]
 	public uint SizeInDb { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4f49c7a3u, description: "Size in bytes of the file on disk.")]
+	[DDLRegistration(0x7c1e2aaau, description: "Size in bytes of the file on disk.")]
 	public uint SavedSize { get; set; } = 0x00000000;
 
 	public static AssetSaveResult Create(DDLObject ddl) => new(ddl);

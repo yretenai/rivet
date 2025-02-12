@@ -18,7 +18,7 @@ public class RandomAttachmentConfig : ConfigBase, IDDLObjectType<RandomAttachmen
 		Attachments = ddl.GetObjects<RandomAttachment>(0xca18ab0du);
 	}
 
-	[DDLRegistration(0x6a7d6586u)]
+	[DDLRegistration(0xca18ab0du)]
 	public List<RandomAttachment?> Attachments { get; set; } = [];
 
 	public new static RandomAttachmentConfig Create(DDLObject ddl) => new(ddl);

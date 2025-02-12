@@ -19,10 +19,10 @@ public class ModelBuildConfig : ConfigBase, IDDLObjectType<ModelBuildConfig> {
 		WarnOnMoreThanMaxCollisionPolys = ddl.GetEnum<x9833bb27>(0xb0c6a52au, x9833bb27Values.Lookup);
 	}
 
-	[DDLRegistration(0xd4263e25u, "Max Collision Tris", "Error on models that have mesh collision with more than this many tris, unless they are static-only.")]
+	[DDLRegistration(0x631fe4f3u, "Max Collision Tris", "Error on models that have mesh collision with more than this many tris, unless they are static-only.")]
 	public int MaximumCollisionPolysPerNonstaticMesh { get; set; } = 999;
 
-	[DDLRegistration(0xd4263e25u, "Warn On >Max Collision Poly", "Issue a warning for models with more than polygon limit, even if Physics Performance is set to 'Bad' on them.")]
+	[DDLRegistration(0xb0c6a52au, "Warn On >Max Collision Poly", "Issue a warning for models with more than polygon limit, even if Physics Performance is set to 'Bad' on them.")]
 	public x9833bb27 WarnOnMoreThanMaxCollisionPolys { get; set; } = x9833bb27.DynamicObjects;
 
 	public new static ModelBuildConfig Create(DDLObject ddl) => new(ddl);

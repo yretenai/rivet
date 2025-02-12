@@ -24,25 +24,25 @@ public class StructuredLogAnimTreeClipNode : StructuredLogAnimTreeNode, IDDLObje
 		ModelTo = ddl.GetString(0xad182c8d) ?? ModelTo;
 	}
 
-	[DDLRegistration(0x9e06beebu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9e06beebu)]
+	[DDLRegistration(0xe62ef707u)]
 	public float TimeMotion { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9e06beebu)]
+	[DDLRegistration(0x5d5a10bfu)]
 	public float TimePrevMotion { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9e06beebu)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9e06beebu)]
+	[DDLRegistration(0x842d53a9u)]
 	public string? ClipName { get; set; } = default;
 
-	[DDLRegistration(0x9e06beebu)]
+	[DDLRegistration(0x837de247u)]
 	public string? ModelFrom { get; set; } = default;
 
-	[DDLRegistration(0x9e06beebu)]
+	[DDLRegistration(0xad182c8du)]
 	public string? ModelTo { get; set; } = default;
 
 	public new static StructuredLogAnimTreeClipNode Create(DDLObject ddl) => new(ddl);

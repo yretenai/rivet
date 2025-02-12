@@ -19,10 +19,10 @@ public class LunaTrackerWebSocketInterface : DDLObjectType, IDDLObjectType<LunaT
 		Payload = ddl.GetString(0x43c6092d) ?? Payload;
 	}
 
-	[DDLRegistration(0xec341378u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xd02769e5 Type { get; set; } = xd02769e5.Test;
 
-	[DDLRegistration(0xec341378u)]
+	[DDLRegistration(0x43c6092du)]
 	public string? Payload { get; set; } = default;
 
 	public static LunaTrackerWebSocketInterface Create(DDLObject ddl) => new(ddl);

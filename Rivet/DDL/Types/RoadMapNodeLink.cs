@@ -18,7 +18,7 @@ public class RoadMapNodeLink : DDLObjectType, IDDLObjectType<RoadMapNodeLink> {
 		Target = ddl.GetValue<RivetAssetId>(0x7817619bu, Target);
 	}
 
-	[DDLRegistration(0xbf449f26u)]
+	[DDLRegistration(0x7817619bu)]
 	public RivetAssetId Target { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static RoadMapNodeLink Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class CommandSwitchFlightAreaEvent : CommandEvent, IDDLObjectType<Command
 		DestinationActor = ddl.GetValue<uint>(0x3a387b17u, DestinationActor);
 	}
 
-	[DDLRegistration(0xf3344155u)]
+	[DDLRegistration(0x3a387b17u)]
 	public uint DestinationActor { get; set; } = 0x00000000;
 
 	public new static CommandSwitchFlightAreaEvent Create(DDLObject ddl) => new(ddl);

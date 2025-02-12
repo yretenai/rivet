@@ -19,10 +19,10 @@ public class TriggerBeamOutEffectActionPrius : DDLObjectType, IDDLObjectType<Tri
 		DeleteOnComplete = ddl.GetValue<bool>(0xa7621642u, DeleteOnComplete);
 	}
 
-	[DDLRegistration(0x5046b9e2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x5046b9e2u, description: "When the beam out is complete, whether or not to delete the actor.")]
+	[DDLRegistration(0xa7621642u, description: "When the beam out is complete, whether or not to delete the actor.")]
 	public bool DeleteOnComplete { get; set; } = true;
 
 	public static TriggerBeamOutEffectActionPrius Create(DDLObject ddl) => new(ddl);

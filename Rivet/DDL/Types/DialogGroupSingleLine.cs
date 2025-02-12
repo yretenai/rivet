@@ -18,7 +18,7 @@ public class DialogGroupSingleLine : DDLObjectType, IDDLObjectType<DialogGroupSi
 		LocTag = ddl.GetString(0x06f8b0e5) ?? LocTag;
 	}
 
-	[DDLRegistration(0x2e683e16u, "Localization Tag")]
+	[DDLRegistration(0x06f8b0e5u, "Localization Tag")]
 	public string? LocTag { get; set; } = default;
 
 	public static DialogGroupSingleLine Create(DDLObject ddl) => new(ddl);

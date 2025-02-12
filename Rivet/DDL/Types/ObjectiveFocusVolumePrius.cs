@@ -19,10 +19,10 @@ public class ObjectiveFocusVolumePrius : DDLObjectType, IDDLObjectType<Objective
 		Objectives = ddl.GetStrings(0xb7863755u);
 	}
 
-	[DDLRegistration(0x93873ad2u, description: "Mission that can be pinged while inside this volume.")]
+	[DDLRegistration(0x918d9104u, description: "Mission that can be pinged while inside this volume.")]
 	public string? Mission { get; set; } = default;
 
-	[DDLRegistration(0x93873ad2u, description: "Optionally restrict objectives of the Mission that can be pinged.")]
+	[DDLRegistration(0xb7863755u, description: "Optionally restrict objectives of the Mission that can be pinged.")]
 	public List<string?> Objectives { get; set; } = [];
 
 	public static ObjectiveFocusVolumePrius Create(DDLObject ddl) => new(ddl);

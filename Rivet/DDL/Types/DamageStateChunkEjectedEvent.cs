@@ -18,7 +18,7 @@ public class DamageStateChunkEjectedEvent : EventBase, IDDLObjectType<DamageStat
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0x8f3656e7u)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
 	public new static DamageStateChunkEjectedEvent Create(DDLObject ddl) => new(ddl);

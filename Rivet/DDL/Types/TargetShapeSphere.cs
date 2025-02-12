@@ -18,7 +18,7 @@ public class TargetShapeSphere : DDLObjectType, IDDLObjectType<TargetShapeSphere
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x8d3ae645u, description: "Radius of the sphere")]
+	[DDLRegistration(0x0504203du, description: "Radius of the sphere")]
 	public float Radius { get; set; } = 1.00f;
 
 	public static TargetShapeSphere Create(DDLObject ddl) => new(ddl);

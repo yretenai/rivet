@@ -20,13 +20,13 @@ public class ShotMagShieldPrius : BasicBulletPrius, IDDLObjectType<ShotMagShield
 		BlastWaveMinTime = ddl.GetValue<float>(0x93ece8e1u, BlastWaveMinTime);
 	}
 
-	[DDLRegistration(0x82989244u)]
+	[DDLRegistration(0xe02972f1u)]
 	public RivetAssetId MagShieldActor { get; set; } = default;
 
-	[DDLRegistration(0x82989244u, description: "The maximum number of captured shots.")]
+	[DDLRegistration(0x5324a2c7u, description: "The maximum number of captured shots.")]
 	public uint MaxCapturedShots { get; set; } = 0x0000000c;
 
-	[DDLRegistration(0x82989244u, description: "This is defined on the weapon prius, but both the weapon and shot need to know about it; it is set by the weapon at runtime.")]
+	[DDLRegistration(0x93ece8e1u, description: "This is defined on the weapon prius, but both the weapon and shot need to know about it; it is set by the weapon at runtime.")]
 	public float BlastWaveMinTime { get; set; } = -1.00f;
 
 	public new static ShotMagShieldPrius Create(DDLObject ddl) => new(ddl);

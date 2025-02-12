@@ -23,22 +23,22 @@ public class KeyFrameModResponseEvent : ResponseEvent, IDDLObjectType<KeyFrameMo
 		ApplyModifier = ddl.GetValue<bool>(0x99308179u, ApplyModifier);
 	}
 
-	[DDLRegistration(0xe32f1a9eu, description: "The name of the key frame modifier to set.")]
+	[DDLRegistration(0xe992e16au, description: "The name of the key frame modifier to set.")]
 	public string? ModifierName { get; set; } = default;
 
-	[DDLRegistration(0xe32f1a9eu)]
+	[DDLRegistration(0x725fe045u)]
 	public float XValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe32f1a9eu)]
+	[DDLRegistration(0xb90333e0u)]
 	public float YValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe32f1a9eu)]
+	[DDLRegistration(0x3f97414eu)]
 	public float ZValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe32f1a9eu, description: "Should this set the value globally or just on assets within this Conduit Response.")]
+	[DDLRegistration(0x739d0143u, description: "Should this set the value globally or just on assets within this Conduit Response.")]
 	public bool SetGlobal { get; set; } = false;
 
-	[DDLRegistration(0xe32f1a9eu, description: "Should this modifier be applied or removed.")]
+	[DDLRegistration(0x99308179u, description: "Should this modifier be applied or removed.")]
 	public bool ApplyModifier { get; set; } = true;
 
 	public new static KeyFrameModResponseEvent Create(DDLObject ddl) => new(ddl);

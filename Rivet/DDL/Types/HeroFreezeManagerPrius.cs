@@ -25,28 +25,28 @@ public class HeroFreezeManagerPrius : DDLObjectType, IDDLObjectType<HeroFreezeMa
 		Flags = ddl.GetBitset<FreezeFlags>(0x12568d7bu, FreezeFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0x7d5d0278u, description: "Hero's max freeze points.")]
+	[DDLRegistration(0xb6cd1368u, description: "Hero's max freeze points.")]
 	public float MaxFreezePoints { get; set; } = 100.00f;
 
-	[DDLRegistration(0x7d5d0278u, description: "Freeze Amount to trigger freeze level 1")]
+	[DDLRegistration(0x74670138u, description: "Freeze Amount to trigger freeze level 1")]
 	public float FreezeLevel1Threshold { get; set; } = 40.00f;
 
-	[DDLRegistration(0x7d5d0278u, description: "Freeze Amount to trigger freeze level 2")]
+	[DDLRegistration(0x9f50ba3bu, description: "Freeze Amount to trigger freeze level 2")]
 	public float FreezeLevel2Threshold { get; set; } = 95.00f;
 
-	[DDLRegistration(0x7d5d0278u, description: "Number of seconds a fully frozen Hero has to live.")]
+	[DDLRegistration(0xd634a23cu, description: "Number of seconds a fully frozen Hero has to live.")]
 	public float FreezeDeathTime { get; set; } = 12.00f;
 
-	[DDLRegistration(0x7d5d0278u, description: "Pts/Sec decay of freeze pts when not entirely frozen.")]
+	[DDLRegistration(0xff483973u, description: "Pts/Sec decay of freeze pts when not entirely frozen.")]
 	public float FreezeDecayRate { get; set; } = 2.50f;
 
-	[DDLRegistration(0x7d5d0278u, description: "Freeze Pts accumulated from each ice damage hit")]
+	[DDLRegistration(0xbd95b8e5u, description: "Freeze Pts accumulated from each ice damage hit")]
 	public float FreezeHitAmount { get; set; } = 25.00f;
 
-	[DDLRegistration(0x7d5d0278u, description: "Time immune to freeze damage after being unfroze")]
+	[DDLRegistration(0x7967bc17u, description: "Time immune to freeze damage after being unfroze")]
 	public float ReFreezeLockoutTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x7d5d0278u, description: "Flags.")]
+	[DDLRegistration(0x12568d7bu, description: "Flags.")]
 	public FreezeFlags Flags { get; set; } = (FreezeFlags) 0x00000000;
 
 	public static HeroFreezeManagerPrius Create(DDLObject ddl) => new(ddl);

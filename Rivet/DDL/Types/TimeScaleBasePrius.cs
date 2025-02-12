@@ -22,19 +22,19 @@ public class TimeScaleBasePrius : DDLObjectType, IDDLObjectType<TimeScaleBasePri
 		DurationUnits = ddl.GetEnum<x7d9b794e>(0x197db178u, x7d9b794eValues.Lookup);
 	}
 
-	[DDLRegistration(0x2c29528cu, description: "Channel to run the TimeScale on")]
+	[DDLRegistration(0xa313ed7fu, description: "Channel to run the TimeScale on")]
 	public xd4d128f9 Channel { get; set; } = xd4d128f9.HeroMelee;
 
-	[DDLRegistration(0x2c29528cu, description: "Let audio know why this timescale is starting")]
+	[DDLRegistration(0xe3b7e646u, description: "Let audio know why this timescale is starting")]
 	public string? Context { get; set; } = default;
 
-	[DDLRegistration(0x2c29528cu, description: "How much to scale time by")]
+	[DDLRegistration(0x5fe2ecbau, description: "How much to scale time by")]
 	public float TimeScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2c29528cu, description: "How long the time scale lasts")]
+	[DDLRegistration(0x7c5e3db0u, description: "How long the time scale lasts")]
 	public float Duration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2c29528cu, description: "Controls how Duration is measured (e.g. Real World Time vs Game Time)")]
+	[DDLRegistration(0x197db178u, description: "Controls how Duration is measured (e.g. Real World Time vs Game Time)")]
 	public x7d9b794e DurationUnits { get; set; } = x7d9b794e.GameTime;
 
 	public static TimeScaleBasePrius Create(DDLObject ddl) => new(ddl);

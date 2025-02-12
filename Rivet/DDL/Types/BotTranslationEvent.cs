@@ -20,13 +20,13 @@ public class BotTranslationEvent : EventBase, IDDLObjectType<BotTranslationEvent
 		DestPos = ddl.GetObject<DDLVector3>(0xa6bc9ed3u);
 	}
 
-	[DDLRegistration(0x25a9e97au)]
+	[DDLRegistration(0x63316affu)]
 	public uint TargetHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x25a9e97au)]
+	[DDLRegistration(0x16753237u)]
 	public float Speed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x25a9e97au)]
+	[DDLRegistration(0xa6bc9ed3u)]
 	public DDLVector3? DestPos { get; set; } = default;
 
 	public new static BotTranslationEvent Create(DDLObject ddl) => new(ddl);

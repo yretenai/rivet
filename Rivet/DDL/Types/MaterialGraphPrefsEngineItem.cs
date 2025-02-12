@@ -24,25 +24,25 @@ public class MaterialGraphPrefsEngineItem : DDLObjectType, IDDLObjectType<Materi
 		PreviewSrgb = ddl.GetValue<bool>(0x9c26f1fbu, PreviewSrgb);
 	}
 
-	[DDLRegistration(0x9aaf625au)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x9aaf625au)]
+	[DDLRegistration(0x07481864u)]
 	public double AlphaSim { get; set; } = 1;
 
-	[DDLRegistration(0x9aaf625au)]
+	[DDLRegistration(0xd4672a50u)]
 	public bool AlphaSort { get; set; } = false;
 
-	[DDLRegistration(0x9aaf625au)]
+	[DDLRegistration(0xa5c5aeceu)]
 	public bool AnimateLod { get; set; } = false;
 
-	[DDLRegistration(0x9aaf625au)]
+	[DDLRegistration(0x94d6a043u)]
 	public bool ColorPicker { get; set; } = false;
 
-	[DDLRegistration(0x9aaf625au)]
+	[DDLRegistration(0x3e799799u)]
 	public bool DoubleSided { get; set; } = true;
 
-	[DDLRegistration(0x9aaf625au)]
+	[DDLRegistration(0x9c26f1fbu)]
 	public bool PreviewSrgb { get; set; } = true;
 
 	public static MaterialGraphPrefsEngineItem Create(DDLObject ddl) => new(ddl);

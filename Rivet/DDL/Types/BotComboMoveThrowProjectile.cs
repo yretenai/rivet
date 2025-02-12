@@ -18,7 +18,7 @@ public class BotComboMoveThrowProjectile : BotComboMove, IDDLObjectType<BotCombo
 		ThrowProjectileData = ddl.GetObject<ThrowProjectileData>(0xc55cf2ccu);
 	}
 
-	[DDLRegistration(0x37bc4338u, "Throw Projectile Data")]
+	[DDLRegistration(0xc55cf2ccu, "Throw Projectile Data")]
 	public ThrowProjectileData? ThrowProjectileData { get; set; } = default;
 
 	public new static BotComboMoveThrowProjectile Create(DDLObject ddl) => new(ddl);

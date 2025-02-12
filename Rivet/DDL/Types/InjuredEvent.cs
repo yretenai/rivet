@@ -22,19 +22,19 @@ public class InjuredEvent : EventBase, IDDLObjectType<InjuredEvent> {
 		WeaponMacroType = ddl.GetValue<byte>(0x63d44adau, WeaponMacroType);
 	}
 
-	[DDLRegistration(0xeb206d36u, description: "Handle of actor issuing damage.")]
+	[DDLRegistration(0x29f67982u, description: "Handle of actor issuing damage.")]
 	public uint Damager { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xeb206d36u, description: "Type of damage.")]
+	[DDLRegistration(0xbc4e9799u, description: "Type of damage.")]
 	public DamageTypesGame Type { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0xeb206d36u, description: "Handle of actor receiving damage.")]
+	[DDLRegistration(0x7817619bu, description: "Handle of actor receiving damage.")]
 	public uint Target { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xeb206d36u, description: "Type of weapon.")]
+	[DDLRegistration(0x574be981u, description: "Type of weapon.")]
 	public ushort Weapon { get; set; } = 0x0000;
 
-	[DDLRegistration(0xeb206d36u, description: "Weapon Macro Type")]
+	[DDLRegistration(0x63d44adau, description: "Weapon Macro Type")]
 	public byte WeaponMacroType { get; set; } = 0x00;
 
 	public new static InjuredEvent Create(DDLObject ddl) => new(ddl);

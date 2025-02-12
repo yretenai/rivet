@@ -19,10 +19,10 @@ public class ScriptActionPropertyRequest : DDLObjectType, IDDLObjectType<ScriptA
 		InstanceTuid = ddl.GetValue<RivetAssetId>(0x4ffcecbfu, InstanceTuid);
 	}
 
-	[DDLRegistration(0x304bf82bu)]
+	[DDLRegistration(0xc2dfa21bu)]
 	public string? ScriptActionName { get; set; } = default;
 
-	[DDLRegistration(0x304bf82bu)]
+	[DDLRegistration(0x4ffcecbfu)]
 	public RivetAssetId InstanceTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ScriptActionPropertyRequest Create(DDLObject ddl) => new(ddl);

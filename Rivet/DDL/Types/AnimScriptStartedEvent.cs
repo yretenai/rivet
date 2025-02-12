@@ -18,7 +18,7 @@ public class AnimScriptStartedEvent : EventBase, IDDLObjectType<AnimScriptStarte
 		AnimNameHash = ddl.GetValue<uint>(0x2d704b52u, AnimNameHash);
 	}
 
-	[DDLRegistration(0xf4a6d46fu)]
+	[DDLRegistration(0x2d704b52u)]
 	public uint AnimNameHash { get; set; } = 0x00000000;
 
 	public new static AnimScriptStartedEvent Create(DDLObject ddl) => new(ddl);

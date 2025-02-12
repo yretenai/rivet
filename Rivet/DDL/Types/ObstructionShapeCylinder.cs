@@ -19,10 +19,10 @@ public class ObstructionShapeCylinder : NavMeshObstructionShapeBase, IDDLObjectT
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x6aeaa3dau)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 0.00f;
 
-	[DDLRegistration(0x6aeaa3dau)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
 	public new static ObstructionShapeCylinder Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class InteractArmedEvent : EventBase, IDDLObjectType<InteractArmedEvent> 
 		ArmMode = ddl.GetValue<uint>(0x80b3d3a8u, ArmMode);
 	}
 
-	[DDLRegistration(0xcb863e1eu, "Arm Mode")]
+	[DDLRegistration(0x80b3d3a8u, "Arm Mode")]
 	public uint ArmMode { get; set; } = 0x00000000;
 
 	public new static InteractArmedEvent Create(DDLObject ddl) => new(ddl);

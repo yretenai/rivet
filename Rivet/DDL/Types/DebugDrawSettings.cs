@@ -20,13 +20,13 @@ public class DebugDrawSettings : DDLObjectType, IDDLObjectType<DebugDrawSettings
 		DebugDrawStringMemSize = ddl.GetValue<uint>(0xe83bed81u, DebugDrawStringMemSize);
 	}
 
-	[DDLRegistration(0x7214ba62u, "Debug Draw System", "Enables debug draw system")]
+	[DDLRegistration(0x86e9664au, "Debug Draw System", "Enables debug draw system")]
 	public bool DebugDrawEnable { get; set; } = true;
 
-	[DDLRegistration(0x7214ba62u)]
+	[DDLRegistration(0xe0e23594u)]
 	public uint DebugDrawEntryCount { get; set; } = 0x00002000;
 
-	[DDLRegistration(0x7214ba62u)]
+	[DDLRegistration(0xe83bed81u)]
 	public uint DebugDrawStringMemSize { get; set; } = 0x00003000;
 
 	public static DebugDrawSettings Create(DDLObject ddl) => new(ddl);

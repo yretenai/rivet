@@ -37,64 +37,64 @@ public class ShootAtMortarCurveData : DDLObjectType, IDDLObjectType<ShootAtMorta
 		MortarFiringStyle = ddl.GetObject<ShootAtMortarFiringStyle>(0xe8ed45f5u);
 	}
 
-	[DDLRegistration(0xd5bba073u, "Shot Config")]
+	[DDLRegistration(0xb171e6aeu, "Shot Config")]
 	public RivetAssetId ShotConfig { get; set; } = default;
 
-	[DDLRegistration(0xd5bba073u, "Shot Time To Target", "By default(-1), shots will get to target based on data define in the shot config. Overriding this value will try and force flight time of shot before getting to target")]
+	[DDLRegistration(0x0c34db6bu, "Shot Time To Target", "By default(-1), shots will get to target based on data define in the shot config. Overriding this value will try and force flight time of shot before getting to target")]
 	public float ShotTimeToTarget { get; set; } = -1.00f;
 
-	[DDLRegistration(0xd5bba073u, "Damage Name")]
+	[DDLRegistration(0xd96a20dcu, "Damage Name")]
 	public string? DamageHash { get; set; } = default;
 
-	[DDLRegistration(0xd5bba073u, "Intro Anim", "Anim to play 1st. Plays before ShootingLoopDriver by default, and plays before TargetingLoopAnim if Targeting Duration > 0")]
+	[DDLRegistration(0x9b209c3du, "Intro Anim", "Anim to play 1st. Plays before ShootingLoopDriver by default, and plays before TargetingLoopAnim if Targeting Duration > 0")]
 	public string? IntroDriver { get; set; } = default;
 
-	[DDLRegistration(0xd5bba073u, "Targeting Loop Anim", "Animation to loop while bot is confirming target the target")]
+	[DDLRegistration(0x561df71du, "Targeting Loop Anim", "Animation to loop while bot is confirming target the target")]
 	public string? TargetingLoopDriver { get; set; } = default;
 
-	[DDLRegistration(0xd5bba073u, "Shooting Loop Anim", "Animation to loop while bot is spawning shots")]
+	[DDLRegistration(0x578f9e77u, "Shooting Loop Anim", "Animation to loop while bot is spawning shots")]
 	public string? ShootingLoopDriver { get; set; } = default;
 
-	[DDLRegistration(0xd5bba073u, "Outro Anim", "Anim to play last, Plays after Shooting Loop Anim")]
+	[DDLRegistration(0xacdb2c61u, "Outro Anim", "Anim to play last, Plays after Shooting Loop Anim")]
 	public string? OutroDriver { get; set; } = default;
 
-	[DDLRegistration(0xd5bba073u, "Firing Emit", "When bot fires, it will go thru this list one at a time and fire according to each emitter + partial pair. (loops at end)")]
+	[DDLRegistration(0xee6e8942u, "Firing Emit", "When bot fires, it will go thru this list one at a time and fire according to each emitter + partial pair. (loops at end)")]
 	public List<ShootAtCurveFiringEmitData?> FiringEmitData { get; set; } = [];
 
-	[DDLRegistration(0xd5bba073u, description: "The CurveActor that the bot state will shoot at")]
+	[DDLRegistration(0x7c1fc445u, description: "The CurveActor that the bot state will shoot at")]
 	public RivetAssetId FiringCurveActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd5bba073u, description: "The bot will shoot every this amount of seconds")]
+	[DDLRegistration(0xa3a86030u, description: "The bot will shoot every this amount of seconds")]
 	public float FiringRate { get; set; } = 1.50f;
 
-	[DDLRegistration(0xd5bba073u, description: "The bot shoots at each point along the curve and it shoots FiringCurveStride number of points at a time")]
+	[DDLRegistration(0x9ab241b7u, description: "The bot shoots at each point along the curve and it shoots FiringCurveStride number of points at a time")]
 	public uint FiringCurveStride { get; set; } = 0x00000001;
 
-	[DDLRegistration(0xd5bba073u, description: "When the bot is actively firing, make sure to turn its forward to face the target.")]
+	[DDLRegistration(0xc86c6e16u, description: "When the bot is actively firing, make sure to turn its forward to face the target.")]
 	public bool FaceTargetWhenFiring { get; set; } = false;
 
-	[DDLRegistration(0xd5bba073u, description: "The time it takes to confirm target before starting shots. Default is -1 and if this is less than 0, there is no targeting time")]
+	[DDLRegistration(0xb5b9f12fu, description: "The time it takes to confirm target before starting shots. Default is -1 and if this is less than 0, there is no targeting time")]
 	public float TargetingDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0xd5bba073u, description: "How long, in seconds, to continue firing at curve(loops if we hit end of curve). Default is -1 meaning the bot will shoot from start to end of curve with no looping")]
+	[DDLRegistration(0x7055cecdu, description: "How long, in seconds, to continue firing at curve(loops if we hit end of curve). Default is -1 meaning the bot will shoot from start to end of curve with no looping")]
 	public float FiringDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0xd5bba073u, description: "If this is greater than 0, bot will outro early if the target comes within this range")]
+	[DDLRegistration(0xa62c6966u, description: "If this is greater than 0, bot will outro early if the target comes within this range")]
 	public float EarlyOutroAtRange { get; set; } = -1.00f;
 
-	[DDLRegistration(0xd5bba073u, description: "Radius of warning target reticle that will show as a warning for the shots. Centered relative the CurveActor")]
+	[DDLRegistration(0x7b582825u, description: "Radius of warning target reticle that will show as a warning for the shots. Centered relative the CurveActor")]
 	public float ShotTargetWarningRadius { get; set; } = 5.00f;
 
-	[DDLRegistration(0xd5bba073u, description: "If this is unchecked, the shot will stop showing warnings")]
+	[DDLRegistration(0x2d68f627u, description: "If this is unchecked, the shot will stop showing warnings")]
 	public bool ShowShotWarningIndicators { get; set; } = true;
 
-	[DDLRegistration(0xd5bba073u, description: "If a shot hits while this bot is in the shooting loop, it will stop if this value is checked(true)")]
+	[DDLRegistration(0xeab9e46eu, description: "If a shot hits while this bot is in the shooting loop, it will stop if this value is checked(true)")]
 	public bool StopFiringOnDamage { get; set; } = false;
 
-	[DDLRegistration(0xd5bba073u, description: "If we have a targeting duration, we need this locator to emit the targeting fx")]
+	[DDLRegistration(0xbce27508u, description: "If we have a targeting duration, we need this locator to emit the targeting fx")]
 	public string? TargetingEmitLocator { get; set; } = default;
 
-	[DDLRegistration(0xd5bba073u)]
+	[DDLRegistration(0xe8ed45f5u)]
 	public ShootAtMortarFiringStyle? MortarFiringStyle { get; set; } = default;
 
 	public static ShootAtMortarCurveData Create(DDLObject ddl) => new(ddl);

@@ -52,109 +52,109 @@ public class AssetProfileData : DDLObjectType, IDDLObjectType<AssetProfileData> 
 		Components = ddl.GetStrings(0x357eabc4u);
 	}
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x7459aa19u)]
 	public string? _id { get; set; } = default;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0xc3536dbbu)]
 	public string? Platform { get; set; } = default;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x1d4aa27bu)]
 	public string? Extension { get; set; } = default;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x2edaccc5u)]
 	public string? Language { get; set; } = default;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0xcfdba147u)]
 	public uint FileSize { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x3722d434u)]
 	public List<NamedSize?> BlockSizes { get; set; } = [];
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x5ab4024fu)]
 	public List<AssetProfileDataDependency?> SourceDeps { get; set; } = [];
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0xb14a519eu)]
 	public List<AssetProfileDataDependency?> ManualLoadDeps { get; set; } = [];
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x53add904u)]
 	public List<AssetProfileWwiseEventDependency?> AutoLoadWwiseEventDeps { get; set; } = [];
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x49a26fc8u)]
 	public List<AssetProfileWwiseEventDependency?> ManualLoadWwiseEventDeps { get; set; } = [];
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0xdc3692e8u)]
 	public List<string?> HibernatedAssets { get; set; } = [];
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x308c6cc7u)]
 	public List<string?> DelayStreamAssets { get; set; } = [];
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x7cf3f883u)]
 	public Dictionary<uint, AssetProfileDataReferenceArray?> LightingConditionReferences { get; set; } = [];
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x5a453bf7u)]
 	public uint RuntimeZoneTotalModelInstCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0xdd263255u)]
 	public uint RuntimeZoneDelayModelInstCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0xe9a1ee16u)]
 	public List<NamedSize?> AnimClipSizes { get; set; } = [];
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x77eb2a40u)]
 	public List<NamedSize?> AnimDriverSizes { get; set; } = [];
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x32bbd2c6u)]
 	public uint SoundSize { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x698b9d17u)]
 	public uint IndexCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x6e000a83u)]
 	public uint SkinBatchCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x813a7a38u)]
 	public uint MorphBatchCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x8d88b31fu)]
 	public uint VertexCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x9d8ac838u)]
 	public uint PhysicsAVMaterialsCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0xc96da6f1u)]
 	public uint ClothJointCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0xb6d304dbu)]
 	public uint LocatorCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x7b07b307u)]
 	public uint JointCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0xc159e341u)]
 	public uint ResidentTextureSize { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0xa4e99a36u)]
 	public string? TextureFormat { get; set; } = default;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x58cf7ca5u)]
 	public string? TextureType { get; set; } = default;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x954989eeu)]
 	public uint Width { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0xcb35ab68u)]
 	public uint Height { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x4347d5a5u)]
 	public bool CannotStreamMips { get; set; } = false;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8c368badu)]
+	[DDLRegistration(0x357eabc4u)]
 	public List<string?> Components { get; set; } = [];
 
 	public static AssetProfileData Create(DDLObject ddl) => new(ddl);

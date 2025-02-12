@@ -18,7 +18,7 @@ public class SetRenderHudEngineCommand : DDLObjectType, IDDLObjectType<SetRender
 		Render = ddl.GetValue<bool>(0xaa24d70du, Render);
 	}
 
-	[DDLRegistration(0x0ed25f7eu)]
+	[DDLRegistration(0xaa24d70du)]
 	public bool Render { get; set; } = false;
 
 	public static SetRenderHudEngineCommand Create(DDLObject ddl) => new(ddl);

@@ -31,46 +31,46 @@ public class MaterialGraphNode : DDLObjectType, IDDLObjectType<MaterialGraphNode
 		SortOrder = ddl.GetValue<int>(0xbd9f03f1u, SortOrder);
 	}
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0xaa93a9e7u)]
 	public uint IdLow { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0xbc80f4acu)]
 	public uint IdHigh { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0x11d33588u)]
 	public string? VariableName { get; set; } = default;
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0x6cc36d17u)]
 	public List<MaterialNodePortUI?> PortUIs { get; set; } = [];
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0xb701ec85u)]
 	public List<MaterialNodeUserInput?> UserInputs { get; set; } = [];
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<MaterialNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<MaterialNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0x5dda1f00u)]
 	public bool PrependNodeName { get; set; } = true;
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0xf2039ed8u)]
 	public bool IsSubGraph { get; set; } = false;
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x181846f2u)]
+	[DDLRegistration(0xbd9f03f1u)]
 	public int SortOrder { get; set; } = 0;
 
 	public static MaterialGraphNode Create(DDLObject ddl) => new(ddl);

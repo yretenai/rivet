@@ -24,25 +24,25 @@ public class TriggerResponderChangeMaterialPrius : TriggerResponderBasePrius, ID
 		BlendTimeDisabled = ddl.GetValue<float>(0x7f648dcdu, BlendTimeDisabled);
 	}
 
-	[DDLRegistration(0x61e225e6u, "Material Constant", "Material constant to set when triggered/untriggered.")]
+	[DDLRegistration(0xb6c6769cu, "Material Constant", "Material constant to set when triggered/untriggered.")]
 	public string? MaterialConstant { get; set; } = "Button_State";
 
-	[DDLRegistration(0x61e225e6u, "Material Const: Triggered", "Value for the material constant for the triggered state.")]
+	[DDLRegistration(0x98112a20u, "Material Const: Triggered", "Value for the material constant for the triggered state.")]
 	public float MatConstValueTrig { get; set; } = 1.00f;
 
-	[DDLRegistration(0x61e225e6u, "Material Const: Not Triggered", "Value for the material constant for the untriggered state.")]
+	[DDLRegistration(0x0b02e430u, "Material Const: Not Triggered", "Value for the material constant for the untriggered state.")]
 	public float MatConstValueNotTrig { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61e225e6u, "Material Const: Disabled", "The material constant value to use when we are disabled.")]
+	[DDLRegistration(0x8e3d4e43u, "Material Const: Disabled", "The material constant value to use when we are disabled.")]
 	public float MatConstValueDisabled { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61e225e6u, "Blend Time: Triggered", "Time to blend to the triggered state")]
+	[DDLRegistration(0x8209741eu, "Blend Time: Triggered", "Time to blend to the triggered state")]
 	public float BlendTimeTriggered { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61e225e6u, "Blend Time: Not Triggered", "Time to blend to the untriggered state")]
+	[DDLRegistration(0x052a843bu, "Blend Time: Not Triggered", "Time to blend to the untriggered state")]
 	public float BlendTimeNotTriggered { get; set; } = 0.00f;
 
-	[DDLRegistration(0x61e225e6u, "Blend Time: Disabled", "Time to blend to the disabled state")]
+	[DDLRegistration(0x7f648dcdu, "Blend Time: Disabled", "Time to blend to the disabled state")]
 	public float BlendTimeDisabled { get; set; } = 0.00f;
 
 	public new static TriggerResponderChangeMaterialPrius Create(DDLObject ddl) => new(ddl);

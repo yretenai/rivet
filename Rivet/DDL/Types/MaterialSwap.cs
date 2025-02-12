@@ -19,10 +19,10 @@ public class MaterialSwap : DDLObjectType, IDDLObjectType<MaterialSwap> {
 		Replacement = ddl.GetValue<RivetAssetId>(0xd909a591u, Replacement);
 	}
 
-	[DDLRegistration(0xbd7e17d3u)]
+	[DDLRegistration(0xd573cdf5u)]
 	public RivetAssetId Original { get; set; } = default;
 
-	[DDLRegistration(0xbd7e17d3u)]
+	[DDLRegistration(0xd909a591u)]
 	public RivetAssetId Replacement { get; set; } = default;
 
 	public static MaterialSwap Create(DDLObject ddl) => new(ddl);

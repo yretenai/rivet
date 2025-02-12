@@ -22,19 +22,19 @@ public class PurchaseWeaponEvent : EventBase, IDDLObjectType<PurchaseWeaponEvent
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x61cc6a75u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x61cc6a75u)]
+	[DDLRegistration(0xca0166ccu)]
 	public string? WeaponName { get; set; } = default;
 
-	[DDLRegistration(0x61cc6a75u)]
+	[DDLRegistration(0xb72a0e33u)]
 	public RivetAssetId WeaponConfig { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x61cc6a75u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x61cc6a75u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static PurchaseWeaponEvent Create(DDLObject ddl) => new(ddl);

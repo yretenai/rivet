@@ -24,25 +24,25 @@ public class NestBotSpawnerPrius : NestBotBasePrius, IDDLObjectType<NestBotSpawn
 		KillSpawnedBotsOnDeath = ddl.GetValue<bool>(0xc170b025u, KillSpawnedBotsOnDeath);
 	}
 
-	[DDLRegistration(0x2ff70277u)]
+	[DDLRegistration(0x28933ffbu)]
 	public List<RivetAssetId> SpawnActors { get; set; } = [];
 
-	[DDLRegistration(0x2ff70277u)]
+	[DDLRegistration(0xfd52da1eu)]
 	public float SpawnThrowHeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2ff70277u)]
+	[DDLRegistration(0x1b319e6au)]
 	public uint SpawnCountMax { get; set; } = 0x00000007;
 
-	[DDLRegistration(0x2ff70277u)]
+	[DDLRegistration(0x59dcabadu)]
 	public uint GlobalSpawnCountMax { get; set; } = 0x0000001e;
 
-	[DDLRegistration(0x2ff70277u)]
+	[DDLRegistration(0x5eb1b94bu)]
 	public uint SimultaneousSpawnCount { get; set; } = 0x00000001;
 
-	[DDLRegistration(0x2ff70277u)]
+	[DDLRegistration(0x6768b329u)]
 	public float SpawnDelay { get; set; } = 0.50f;
 
-	[DDLRegistration(0x2ff70277u)]
+	[DDLRegistration(0xc170b025u)]
 	public bool KillSpawnedBotsOnDeath { get; set; } = true;
 
 	public new static NestBotSpawnerPrius Create(DDLObject ddl) => new(ddl);

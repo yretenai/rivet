@@ -19,10 +19,10 @@ public class IceBlockDestroyedEvent : EventBase, IDDLObjectType<IceBlockDestroye
 		IceBlockBreaker = ddl.GetValue<uint>(0xe8343a4au, IceBlockBreaker);
 	}
 
-	[DDLRegistration(0x6a9b7296u, description: "Handle of the ice spinner actor.")]
+	[DDLRegistration(0xb56d7975u, description: "Handle of the ice spinner actor.")]
 	public uint SpinnerActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x6a9b7296u, description: "Actor who broke the Ice Block")]
+	[DDLRegistration(0xe8343a4au, description: "Actor who broke the Ice Block")]
 	public uint IceBlockBreaker { get; set; } = 0x00000000;
 
 	public new static IceBlockDestroyedEvent Create(DDLObject ddl) => new(ddl);

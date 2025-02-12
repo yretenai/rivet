@@ -20,13 +20,13 @@ public class AnimSetSequencerFavorite : DDLObjectType, IDDLObjectType<AnimSetSeq
 		Vars = ddl.GetObjects<AnimSetSequencerFavoriteVar>(0xc2907a09u);
 	}
 
-	[DDLRegistration(0xa7e19749u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xa7e19749u)]
+	[DDLRegistration(0x799d04b5u)]
 	public List<AnimSetSequencerFavoriteFilter?> Filters { get; set; } = [];
 
-	[DDLRegistration(0xa7e19749u)]
+	[DDLRegistration(0xc2907a09u)]
 	public List<AnimSetSequencerFavoriteVar?> Vars { get; set; } = [];
 
 	public static AnimSetSequencerFavorite Create(DDLObject ddl) => new(ddl);

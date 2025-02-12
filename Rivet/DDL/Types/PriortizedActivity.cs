@@ -19,10 +19,10 @@ public class PriortizedActivity : DDLObjectType, IDDLObjectType<PriortizedActivi
 		Priority = ddl.GetValue<int>(0x61d10301u, Priority);
 	}
 
-	[DDLRegistration(0x92603956u)]
+	[DDLRegistration(0x875ebf15u)]
 	public string? ActivityId { get; set; } = default;
 
-	[DDLRegistration(0x92603956u)]
+	[DDLRegistration(0x61d10301u)]
 	public int Priority { get; set; } = 0;
 
 	public static PriortizedActivity Create(DDLObject ddl) => new(ddl);

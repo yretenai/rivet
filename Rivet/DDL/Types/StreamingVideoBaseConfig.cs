@@ -19,10 +19,10 @@ public class StreamingVideoBaseConfig : ConfigBase, IDDLObjectType<StreamingVide
 		UseSRGBTexture = ddl.GetValue<bool>(0x07a1f387u, UseSRGBTexture);
 	}
 
-	[DDLRegistration(0x05168c07u)]
+	[DDLRegistration(0xc473d976u)]
 	public bool PlayWhenPaused { get; set; } = false;
 
-	[DDLRegistration(0x05168c07u, description: "Uncheck this if you want to show the video on the HUD/UI")]
+	[DDLRegistration(0x07a1f387u, description: "Uncheck this if you want to show the video on the HUD/UI")]
 	public bool UseSRGBTexture { get; set; } = true;
 
 	public new static StreamingVideoBaseConfig Create(DDLObject ddl) => new(ddl);

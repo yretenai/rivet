@@ -20,13 +20,13 @@ public class HoverbootBoostVolumePrius : DDLObjectType, IDDLObjectType<Hoverboot
 		JumpTargetActor = ddl.GetValue<RivetAssetId>(0x0ac22c0fu, JumpTargetActor);
 	}
 
-	[DDLRegistration(0x278734e7u, description: "True: Allows all directions. False: Must be moving in volume's forward direction.")]
+	[DDLRegistration(0xac0f3253u, description: "True: Allows all directions. False: Must be moving in volume's forward direction.")]
 	public bool IsOmnidirectional { get; set; } = false;
 
-	[DDLRegistration(0x278734e7u)]
+	[DDLRegistration(0x38f65d7du)]
 	public bool IsJump { get; set; } = false;
 
-	[DDLRegistration(0x278734e7u, description: "Try to jump to this target actor.")]
+	[DDLRegistration(0x0ac22c0fu, description: "Try to jump to this target actor.")]
 	public RivetAssetId JumpTargetActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static HoverbootBoostVolumePrius Create(DDLObject ddl) => new(ddl);

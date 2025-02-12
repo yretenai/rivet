@@ -23,22 +23,22 @@ public class NodeGraphContents : DDLObjectType, IDDLObjectType<NodeGraphContents
 		GlobalNotes = ddl.GetDictionary<RivetAssetId, string>(0x11749824, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetString(mapId));
 	}
 
-	[DDLRegistration(0x65179b96u, " Display Name")]
+	[DDLRegistration(0x6eb3beb6u, " Display Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x65179b96u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x65179b96u)]
+	[DDLRegistration(0x046ec93du)]
 	public Dictionary<RivetAssetId, GraphNode?> Nodes { get; set; } = [];
 
-	[DDLRegistration(0x65179b96u)]
+	[DDLRegistration(0x322aadceu)]
 	public Dictionary<RivetAssetId, GraphConnection?> Connections { get; set; } = [];
 
-	[DDLRegistration(0x65179b96u)]
+	[DDLRegistration(0x26edb3cdu)]
 	public Dictionary<RivetAssetId, GraphIOMeta?> IO { get; set; } = [];
 
-	[DDLRegistration(0x65179b96u)]
+	[DDLRegistration(0x11749824u)]
 	public Dictionary<RivetAssetId, string?> GlobalNotes { get; set; } = [];
 
 	public static NodeGraphContents Create(DDLObject ddl) => new(ddl);

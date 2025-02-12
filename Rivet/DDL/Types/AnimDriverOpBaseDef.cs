@@ -24,25 +24,25 @@ public class AnimDriverOpBaseDef : DDLObjectType, IDDLObjectType<AnimDriverOpBas
 		Connections = ddl.GetObjects<AnimDriverOpConnection>(0x322aadceu);
 	}
 
-	[DDLRegistration(0x33081e57u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x33081e57u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0x33081e57u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x33081e57u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x33081e57u)]
+	[DDLRegistration(0x8262958fu)]
 	public x9f234d85 OpType { get; set; } = x9f234d85.AnimDriverOpTypeMultiplyAdd;
 
-	[DDLRegistration(0x33081e57u)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0x33081e57u)]
+	[DDLRegistration(0x322aadceu)]
 	public List<AnimDriverOpConnection?> Connections { get; set; } = [];
 
 	public static AnimDriverOpBaseDef Create(DDLObject ddl) => new(ddl);

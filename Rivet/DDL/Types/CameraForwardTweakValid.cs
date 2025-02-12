@@ -19,10 +19,10 @@ public class CameraForwardTweakValid : CameraForwardTweak, IDDLObjectType<Camera
 		OnlyApplyOnFollow = ddl.GetValue<bool>(0xb75866cbu, OnlyApplyOnFollow);
 	}
 
-	[DDLRegistration(0x4f62df81u)]
+	[DDLRegistration(0xc677c0c6u)]
 	public bool CancelOnInput { get; set; } = true;
 
-	[DDLRegistration(0x4f62df81u)]
+	[DDLRegistration(0xb75866cbu)]
 	public bool OnlyApplyOnFollow { get; set; } = false;
 
 	public new static CameraForwardTweakValid Create(DDLObject ddl) => new(ddl);

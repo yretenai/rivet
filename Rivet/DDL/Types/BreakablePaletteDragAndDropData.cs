@@ -19,10 +19,10 @@ public class BreakablePaletteDragAndDropData : DDLObjectType, IDDLObjectType<Bre
 		BlockSets = ddl.GetObjects<BreakableBlockSetData>(0x99a2a523u);
 	}
 
-	[DDLRegistration(0x27ceaa71u)]
+	[DDLRegistration(0xf095db1fu)]
 	public List<BreakableBlockData?> Blocks { get; set; } = [];
 
-	[DDLRegistration(0x27ceaa71u)]
+	[DDLRegistration(0x99a2a523u)]
 	public List<BreakableBlockSetData?> BlockSets { get; set; } = [];
 
 	public static BreakablePaletteDragAndDropData Create(DDLObject ddl) => new(ddl);

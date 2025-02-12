@@ -18,7 +18,7 @@ public class ActionControlHeroControlShared : DDLObjectType, IDDLObjectType<Acti
 		Control = ddl.GetEnum<xbb5d75a3>(0xec314f73u, xbb5d75a3Values.Lookup);
 	}
 
-	[DDLRegistration(0x3e535a40u)]
+	[DDLRegistration(0xec314f73u)]
 	public xbb5d75a3 Control { get; set; } = xbb5d75a3.Interact;
 
 	public static ActionControlHeroControlShared Create(DDLObject ddl) => new(ddl);

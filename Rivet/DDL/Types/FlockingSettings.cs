@@ -19,10 +19,10 @@ public class FlockingSettings : DDLObjectType, IDDLObjectType<FlockingSettings> 
 		MaxRegisteredVolumes = ddl.GetValue<uint>(0x6cdffe34u, MaxRegisteredVolumes);
 	}
 
-	[DDLRegistration(0x55bc9051u)]
+	[DDLRegistration(0x73d1dc2fu)]
 	public int MaxDisableVolumes { get; set; } = 8;
 
-	[DDLRegistration(0x55bc9051u)]
+	[DDLRegistration(0x6cdffe34u)]
 	public uint MaxRegisteredVolumes { get; set; } = 0x00000100;
 
 	public static FlockingSettings Create(DDLObject ddl) => new(ddl);

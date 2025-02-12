@@ -20,13 +20,13 @@ public class HealActionPrius : DDLObjectType, IDDLObjectType<HealActionPrius> {
 		Percentage = ddl.GetValue<bool>(0x483d1e07u, Percentage);
 	}
 
-	[DDLRegistration(0x8a56616du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
-	[DDLRegistration(0x8a56616du)]
+	[DDLRegistration(0xb0d93e25u)]
 	public float Amount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8a56616du)]
+	[DDLRegistration(0x483d1e07u)]
 	public bool Percentage { get; set; } = false;
 
 	public static HealActionPrius Create(DDLObject ddl) => new(ddl);

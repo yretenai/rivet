@@ -19,10 +19,10 @@ public class ExplosiveCrateDamage : DDLObjectType, IDDLObjectType<ExplosiveCrate
 		DamageAmount = ddl.GetValue<float>(0x563be470u, DamageAmount);
 	}
 
-	[DDLRegistration(0xfae6db33u, description: "For this target actor type, use this damage radius instead of the one defined above.")]
+	[DDLRegistration(0xe3e6fa68u, description: "For this target actor type, use this damage radius instead of the one defined above.")]
 	public float DamageRadius { get; set; } = 2.80f;
 
-	[DDLRegistration(0xfae6db33u, description: "For this target actor type, use this damage amount instead of the amount defined above.")]
+	[DDLRegistration(0x563be470u, description: "For this target actor type, use this damage amount instead of the amount defined above.")]
 	public float DamageAmount { get; set; } = 0.25f;
 
 	public static ExplosiveCrateDamage Create(DDLObject ddl) => new(ddl);

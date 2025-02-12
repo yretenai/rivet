@@ -24,25 +24,25 @@ public class ShellCasingData : DDLObjectType, IDDLObjectType<ShellCasingData> {
 		EjectSpinMax = ddl.GetObject<DDLVector3>(0xcc5510e8u);
 	}
 
-	[DDLRegistration(0x2fda4eacu)]
+	[DDLRegistration(0x6c1eee42u)]
 	public RivetAssetId ShellAsset { get; set; } = default;
 
-	[DDLRegistration(0x2fda4eacu)]
+	[DDLRegistration(0x1ae401c6u)]
 	public float LifetimeMin { get; set; } = 20.00f;
 
-	[DDLRegistration(0x2fda4eacu)]
+	[DDLRegistration(0x26e93e9fu)]
 	public float LifetimeMax { get; set; } = 40.00f;
 
-	[DDLRegistration(0x2fda4eacu)]
+	[DDLRegistration(0xbbb1fe4fu)]
 	public float EjectSpeedMin { get; set; } = 10.00f;
 
-	[DDLRegistration(0x2fda4eacu)]
+	[DDLRegistration(0x87bcc116u)]
 	public float EjectSpeedMax { get; set; } = 25.00f;
 
-	[DDLRegistration(0x2fda4eacu)]
+	[DDLRegistration(0xf0582fb1u)]
 	public DDLVector3? EjectSpinMin { get; set; } = default;
 
-	[DDLRegistration(0x2fda4eacu)]
+	[DDLRegistration(0xcc5510e8u)]
 	public DDLVector3? EjectSpinMax { get; set; } = default;
 
 	public static ShellCasingData Create(DDLObject ddl) => new(ddl);

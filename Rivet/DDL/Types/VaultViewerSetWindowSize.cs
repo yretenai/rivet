@@ -19,10 +19,10 @@ public class VaultViewerSetWindowSize : DDLObjectType, IDDLObjectType<VaultViewe
 		Height = ddl.GetValue<int>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0x3150748au)]
+	[DDLRegistration(0x954989eeu)]
 	public int Width { get; set; } = 0;
 
-	[DDLRegistration(0x3150748au)]
+	[DDLRegistration(0xcb35ab68u)]
 	public int Height { get; set; } = 0;
 
 	public static VaultViewerSetWindowSize Create(DDLObject ddl) => new(ddl);

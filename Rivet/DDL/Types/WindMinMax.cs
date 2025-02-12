@@ -19,10 +19,10 @@ public class WindMinMax : DDLObjectType, IDDLObjectType<WindMinMax> {
 		Min = ddl.GetValue<float>(0x8b2e3419u, Min);
 	}
 
-	[DDLRegistration(0xc01674ebu, "Maximum")]
+	[DDLRegistration(0xb7230b40u, "Maximum")]
 	public float Max { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc01674ebu, "Minimum")]
+	[DDLRegistration(0x8b2e3419u, "Minimum")]
 	public float Min { get; set; } = 0.00f;
 
 	public static WindMinMax Create(DDLObject ddl) => new(ddl);

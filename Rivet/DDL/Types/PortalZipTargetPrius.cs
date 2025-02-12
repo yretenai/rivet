@@ -21,16 +21,16 @@ public class PortalZipTargetPrius : DDLObjectType, IDDLObjectType<PortalZipTarge
 		TraceTargetNumber = ddl.GetValue<byte>(0x135c866cu, TraceTargetNumber);
 	}
 
-	[DDLRegistration(0x420f698au, description: "This override volume replaces the min activation distance for this portal zip target. The min activation distance is the space that is \"too close\" to the target to use the portal zip mechanic. If you override volume doesnt surround the portal zip target, this is bad and will cause a break/crash. ")]
+	[DDLRegistration(0xff6897a3u, description: "This override volume replaces the min activation distance for this portal zip target. The min activation distance is the space that is \"too close\" to the target to use the portal zip mechanic. If you override volume doesnt surround the portal zip target, this is bad and will cause a break/crash. ")]
 	public RivetAssetId MinActivationVolumeOverride { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x420f698au, description: "This volume will be used to exlude a region in which the hero can initiate a portal zip from.")]
+	[DDLRegistration(0x6959e230u, description: "This volume will be used to exlude a region in which the hero can initiate a portal zip from.")]
 	public RivetAssetId ExcludeActivationVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x420f698au, description: "The overriden distance to cap how far away a hero can start a portal zip from this target.")]
+	[DDLRegistration(0x3384a869u, description: "The overriden distance to cap how far away a hero can start a portal zip from this target.")]
 	public float MaxActivationRadiusOverride { get; set; } = -1.00f;
 
-	[DDLRegistration(0x420f698au, description: "The number of successful traces that are required to target this portal")]
+	[DDLRegistration(0x135c866cu, description: "The number of successful traces that are required to target this portal")]
 	public byte TraceTargetNumber { get; set; } = 0x01;
 
 	public static PortalZipTargetPrius Create(DDLObject ddl) => new(ddl);

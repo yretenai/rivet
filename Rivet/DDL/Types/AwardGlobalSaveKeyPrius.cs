@@ -18,7 +18,7 @@ public class AwardGlobalSaveKeyPrius : AwardBasePrius, IDDLObjectType<AwardGloba
 		SaveKey = ddl.GetString(0xb5588c0a) ?? SaveKey;
 	}
 
-	[DDLRegistration(0xd01d2fbeu, "Save Key", "Global save table key that tracks the progress towards this award. Must be an int.")]
+	[DDLRegistration(0xb5588c0au, "Save Key", "Global save table key that tracks the progress towards this award. Must be an int.")]
 	public string? SaveKey { get; set; } = default;
 
 	public new static AwardGlobalSaveKeyPrius Create(DDLObject ddl) => new(ddl);

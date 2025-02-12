@@ -22,19 +22,19 @@ public class ShotGrenadeHazardPrius : GrenadeShotGamePrius, IDDLObjectType<ShotG
 		CameraShake = ddl.GetValue<RivetAssetId>(0xefd546cau, CameraShake);
 	}
 
-	[DDLRegistration(0x5b335fabu)]
+	[DDLRegistration(0x591d8238u)]
 	public float HazardDuration { get; set; } = 4.00f;
 
-	[DDLRegistration(0x5b335fabu)]
+	[DDLRegistration(0xb1b21983u)]
 	public float HazardRadius { get; set; } = 3.00f;
 
-	[DDLRegistration(0x5b335fabu)]
+	[DDLRegistration(0x20840b08u)]
 	public float HazardDamageAmount { get; set; } = 5.00f;
 
-	[DDLRegistration(0x5b335fabu)]
+	[DDLRegistration(0x955e5c2au)]
 	public float HazardDamageInterval { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5b335fabu)]
+	[DDLRegistration(0xefd546cau)]
 	public RivetAssetId CameraShake { get; set; } = default;
 
 	public new static ShotGrenadeHazardPrius Create(DDLObject ddl) => new(ddl);

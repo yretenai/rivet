@@ -18,7 +18,7 @@ public class ValidUserList : DDLObjectType, IDDLObjectType<ValidUserList> {
 		ValidUsers = ddl.GetObjects<AssetReferenceDef>(0x919cda09u);
 	}
 
-	[DDLRegistration(0x318b4eacu, "Valid Users", "Collection of entities that are allowed to use this spawn point.")]
+	[DDLRegistration(0x919cda09u, "Valid Users", "Collection of entities that are allowed to use this spawn point.")]
 	public List<AssetReferenceDef?> ValidUsers { get; set; } = [];
 
 	public static ValidUserList Create(DDLObject ddl) => new(ddl);

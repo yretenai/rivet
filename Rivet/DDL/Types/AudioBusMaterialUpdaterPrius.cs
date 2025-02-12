@@ -23,22 +23,22 @@ public class AudioBusMaterialUpdaterPrius : DDLObjectType, IDDLObjectType<AudioB
 		RandomBonusValue = ddl.GetValue<float>(0xb3bcd16cu, RandomBonusValue);
 	}
 
-	[DDLRegistration(0xc5d62e08u)]
+	[DDLRegistration(0xc71d22abu)]
 	public string? MaterialConstantName { get; set; } = default;
 
-	[DDLRegistration(0xc5d62e08u)]
+	[DDLRegistration(0x367545e6u)]
 	public string? MaterialMapName { get; set; } = default;
 
-	[DDLRegistration(0xc5d62e08u)]
+	[DDLRegistration(0xb16a760eu)]
 	public string? AudioBus { get; set; } = default;
 
-	[DDLRegistration(0xc5d62e08u)]
+	[DDLRegistration(0x86828bdau)]
 	public float MinBusValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc5d62e08u)]
+	[DDLRegistration(0x4a8ff0d5u)]
 	public float MaxBusValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc5d62e08u)]
+	[DDLRegistration(0xb3bcd16cu)]
 	public float RandomBonusValue { get; set; } = 0.02f;
 
 	public static AudioBusMaterialUpdaterPrius Create(DDLObject ddl) => new(ddl);

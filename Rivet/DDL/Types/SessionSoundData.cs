@@ -19,10 +19,10 @@ public class SessionSoundData : DDLObjectType, IDDLObjectType<SessionSoundData> 
 		SoundEventName = ddl.GetString(0x9c64655a) ?? SoundEventName;
 	}
 
-	[DDLRegistration(0x8ce0c6a8u)]
+	[DDLRegistration(0x3c660c64u)]
 	public RivetAssetId SoundBankPath { get; set; } = default;
 
-	[DDLRegistration(0x8ce0c6a8u)]
+	[DDLRegistration(0x9c64655au)]
 	public string? SoundEventName { get; set; } = default;
 
 	public static SessionSoundData Create(DDLObject ddl) => new(ddl);

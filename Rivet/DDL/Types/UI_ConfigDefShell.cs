@@ -18,7 +18,7 @@ public class UI_ConfigDefShell : DDLObjectType, IDDLObjectType<UI_ConfigDefShell
 		Config = ddl.GetObject<UI_ConfigDef>(0xeaf2611bu);
 	}
 
-	[DDLRegistration(0xa9eafd02u)]
+	[DDLRegistration(0xeaf2611bu)]
 	public UI_ConfigDef? Config { get; set; } = default;
 
 	public static UI_ConfigDefShell Create(DDLObject ddl) => new(ddl);

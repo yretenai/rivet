@@ -21,16 +21,16 @@ public class MeleeHitTakenEvent : EventBase, IDDLObjectType<MeleeHitTakenEvent> 
 		FollowAttachActor = ddl.GetValue<byte>(0x7f05cf4du, FollowAttachActor);
 	}
 
-	[DDLRegistration(0x0e0d7dfau, "Weapon Type")]
+	[DDLRegistration(0x18fc4fe3u, "Weapon Type")]
 	public string? WeaponType { get; set; } = "kNone";
 
-	[DDLRegistration(0x0e0d7dfau, "Health Percent", "Health Percent on damaged target, after damage is applied.")]
+	[DDLRegistration(0x13ab5436u, "Health Percent", "Health Percent on damaged target, after damage is applied.")]
 	public float HealthPercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0x0e0d7dfau, "Attach Actor")]
+	[DDLRegistration(0xaac2d682u, "Attach Actor")]
 	public uint AttachActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x0e0d7dfau, "Follow Attach Actor?")]
+	[DDLRegistration(0x7f05cf4du, "Follow Attach Actor?")]
 	public byte FollowAttachActor { get; set; } = 0x00;
 
 	public new static MeleeHitTakenEvent Create(DDLObject ddl) => new(ddl);

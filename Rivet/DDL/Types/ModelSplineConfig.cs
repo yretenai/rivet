@@ -18,7 +18,7 @@ public class ModelSplineConfig : ConfigBase, IDDLObjectType<ModelSplineConfig> {
 		SplineDescription = ddl.GetObject<ModelSplineDescriptionDef>(0x89dbdd10u);
 	}
 
-	[DDLRegistration(0xf29a3b97u)]
+	[DDLRegistration(0x89dbdd10u)]
 	public ModelSplineDescriptionDef? SplineDescription { get; set; } = default;
 
 	public new static ModelSplineConfig Create(DDLObject ddl) => new(ddl);

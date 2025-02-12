@@ -18,7 +18,7 @@ public class ProtonSeekerShardLandEvent : EventBase, IDDLObjectType<ProtonSeeker
 		ExplosionTime = ddl.GetValue<float>(0xba07c1a9u, ExplosionTime);
 	}
 
-	[DDLRegistration(0xb51bb8acu)]
+	[DDLRegistration(0xba07c1a9u)]
 	public float ExplosionTime { get; set; } = 0.00f;
 
 	public new static ProtonSeekerShardLandEvent Create(DDLObject ddl) => new(ddl);

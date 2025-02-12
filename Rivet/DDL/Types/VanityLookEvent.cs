@@ -24,25 +24,25 @@ public class VanityLookEvent : EventBase, IDDLObjectType<VanityLookEvent> {
 		BootLooks = ddl.GetObjects<VanityLookToggle>(0x002fafa6u);
 	}
 
-	[DDLRegistration(0xf6e8ef10u)]
+	[DDLRegistration(0x71ceffdbu)]
 	public List<VanityLookToggle?> HelmetLooks { get; set; } = [];
 
-	[DDLRegistration(0xf6e8ef10u)]
+	[DDLRegistration(0x57284036u)]
 	public List<VanityLookToggle?> HeadLooks { get; set; } = [];
 
-	[DDLRegistration(0xf6e8ef10u)]
+	[DDLRegistration(0x7c5bf0e6u)]
 	public List<VanityLookToggle?> TorsoLooks { get; set; } = [];
 
-	[DDLRegistration(0xf6e8ef10u)]
+	[DDLRegistration(0x5530fcdfu)]
 	public List<VanityLookToggle?> LeftGloveLooks { get; set; } = [];
 
-	[DDLRegistration(0xf6e8ef10u)]
+	[DDLRegistration(0xa1ffc4d3u)]
 	public List<VanityLookToggle?> RightGloveLooks { get; set; } = [];
 
-	[DDLRegistration(0xf6e8ef10u)]
+	[DDLRegistration(0x26d0c7a7u)]
 	public List<VanityLookToggle?> LegLooks { get; set; } = [];
 
-	[DDLRegistration(0xf6e8ef10u)]
+	[DDLRegistration(0x002fafa6u)]
 	public List<VanityLookToggle?> BootLooks { get; set; } = [];
 
 	public new static VanityLookEvent Create(DDLObject ddl) => new(ddl);

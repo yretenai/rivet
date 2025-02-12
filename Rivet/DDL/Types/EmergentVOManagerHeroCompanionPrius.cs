@@ -20,13 +20,13 @@ public class EmergentVOManagerHeroCompanionPrius : EmergentVOManagerGamePrius, I
 		EmergentVOConfig = ddl.GetValue<RivetAssetId>(0xde8b92bfu, EmergentVOConfig);
 	}
 
-	[DDLRegistration(0xb0121d21u)]
+	[DDLRegistration(0x1304101eu)]
 	public VoiceGame VoiceMin { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0xb0121d21u)]
+	[DDLRegistration(0x2f092f47u)]
 	public VoiceGame VoiceMax { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0xb0121d21u, description: "Base Type: EmergentVOConfig")]
+	[DDLRegistration(0xde8b92bfu, description: "Base Type: EmergentVOConfig")]
 	public RivetAssetId EmergentVOConfig { get; set; } = default;
 
 	public new static EmergentVOManagerHeroCompanionPrius Create(DDLObject ddl) => new(ddl);

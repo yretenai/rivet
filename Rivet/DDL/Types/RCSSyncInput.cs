@@ -22,19 +22,19 @@ public class RCSSyncInput : DDLObjectType, IDDLObjectType<RCSSyncInput> {
 		RevisionOptions = ddl.GetObject<RCSRevisionOptions>(0x531b5702u);
 	}
 
-	[DDLRegistration(0x1f41f4abu, description: "Can be full paths to files to sync, or paths with wildcards.")]
+	[DDLRegistration(0x08a35046u, description: "Can be full paths to files to sync, or paths with wildcards.")]
 	public List<string?> Views { get; set; } = [];
 
-	[DDLRegistration(0x1f41f4abu, description: "Force the sync operation, clobbering writable files.")]
+	[DDLRegistration(0x8e3b4fe9u, description: "Force the sync operation, clobbering writable files.")]
 	public bool Force { get; set; } = false;
 
-	[DDLRegistration(0x1f41f4abu, description: "Preview the sync operation.")]
+	[DDLRegistration(0xb86f4c08u, description: "Preview the sync operation.")]
 	public bool Preview { get; set; } = false;
 
-	[DDLRegistration(0x1f41f4abu, description: "Use the provided revision options instead of the globally active settings.")]
+	[DDLRegistration(0x1303b973u, description: "Use the provided revision options instead of the globally active settings.")]
 	public bool OverrideRevisionOptions { get; set; } = false;
 
-	[DDLRegistration(0x1f41f4abu, description: "Revision options to use when OverrideRevisionOptions is true. ")]
+	[DDLRegistration(0x531b5702u, description: "Revision options to use when OverrideRevisionOptions is true. ")]
 	public RCSRevisionOptions? RevisionOptions { get; set; } = default;
 
 	public static RCSSyncInput Create(DDLObject ddl) => new(ddl);

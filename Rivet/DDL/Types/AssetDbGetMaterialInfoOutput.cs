@@ -22,19 +22,19 @@ public class AssetDbGetMaterialInfoOutput : DDLObjectType, IDDLObjectType<AssetD
 		TimeStampHigh = ddl.GetValue<uint>(0x20fa3d23u, TimeStampHigh);
 	}
 
-	[DDLRegistration(0xd072477cu)]
+	[DDLRegistration(0xd59b5565u)]
 	public string? ErrorMessage { get; set; } = default;
 
-	[DDLRegistration(0xd072477cu)]
+	[DDLRegistration(0x6eeabc8au)]
 	public byte Success { get; set; } = 0x00;
 
-	[DDLRegistration(0xd072477cu)]
+	[DDLRegistration(0x66d5b79au)]
 	public string? JsonText { get; set; } = default;
 
-	[DDLRegistration(0xd072477cu)]
+	[DDLRegistration(0xd95c8f23u)]
 	public uint TimeStampLow { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xd072477cu)]
+	[DDLRegistration(0x20fa3d23u)]
 	public uint TimeStampHigh { get; set; } = 0x00000000;
 
 	public static AssetDbGetMaterialInfoOutput Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class CameraSplineMotionTargetMatchPrius : CameraSplineMotionBasePrius, I
 		SnapActivate = ddl.GetValue<bool>(0x0d9905dcu, SnapActivate);
 	}
 
-	[DDLRegistration(0xf3c18786u, "Match Mode")]
+	[DDLRegistration(0xfc20cfbdu, "Match Mode")]
 	public x944d8042 MatchMode { get; set; } = x944d8042.MatchDistanceT;
 
-	[DDLRegistration(0xf3c18786u, "Target Spline")]
+	[DDLRegistration(0xc7471fcfu, "Target Spline")]
 	public RivetAssetId TargetSpline { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf3c18786u, "Target Actor")]
+	[DDLRegistration(0x98554e8cu, "Target Actor")]
 	public RivetAssetId TargetActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf3c18786u, "Offset Distance")]
+	[DDLRegistration(0x4d543176u, "Offset Distance")]
 	public float OffsetDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf3c18786u, "Snap Follow")]
+	[DDLRegistration(0x9f10c209u, "Snap Follow")]
 	public bool SnapFollow { get; set; } = false;
 
-	[DDLRegistration(0xf3c18786u, "Snap Activate")]
+	[DDLRegistration(0x0d9905dcu, "Snap Activate")]
 	public bool SnapActivate { get; set; } = true;
 
 	public new static CameraSplineMotionTargetMatchPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class DealDamageEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObjectTyp
 		Damage = ddl.GetObject<ShotDamageData>(0x2fb01a0bu);
 	}
 
-	[DDLRegistration(0x29feb010u)]
+	[DDLRegistration(0x1eb7640eu)]
 	public x684c6439 ActorType { get; set; } = x684c6439.HitActor;
 
-	[DDLRegistration(0x29feb010u)]
+	[DDLRegistration(0x2fb01a0bu)]
 	public ShotDamageData? Damage { get; set; } = default;
 
 	public new static DealDamageEffectNodeDef Create(DDLObject ddl) => new(ddl);

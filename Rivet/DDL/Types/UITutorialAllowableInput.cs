@@ -20,13 +20,13 @@ public class UITutorialAllowableInput : DDLObjectType, IDDLObjectType<UITutorial
 		Qualifier = ddl.GetEnum<x08989c8a>(0x5e83890eu, x08989c8aValues.Lookup);
 	}
 
-	[DDLRegistration(0x5f55505eu)]
+	[DDLRegistration(0xc17bfe16u)]
 	public xba9a3e10 Input { get; set; } = xba9a3e10.GUIKeyStart;
 
-	[DDLRegistration(0x5f55505eu)]
+	[DDLRegistration(0xce054b71u)]
 	public xd048db4e Policy { get; set; } = xd048db4e.AdvanceTutorialStep;
 
-	[DDLRegistration(0x5f55505eu)]
+	[DDLRegistration(0x5e83890eu)]
 	public x08989c8a Qualifier { get; set; } = x08989c8a.Pressed;
 
 	public static UITutorialAllowableInput Create(DDLObject ddl) => new(ddl);

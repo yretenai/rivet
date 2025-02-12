@@ -19,10 +19,10 @@ public class ModelInstEngineItem : DDLObjectType, IDDLObjectType<ModelInstEngine
 		ModelInstType = ddl.GetEnum<ModelInstType>(0x2f974565u, ModelInstTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x97fec513u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x97fec513u)]
+	[DDLRegistration(0x2f974565u)]
 	public ModelInstType ModelInstType { get; set; } = ModelInstType.Model;
 
 	public static ModelInstEngineItem Create(DDLObject ddl) => new(ddl);

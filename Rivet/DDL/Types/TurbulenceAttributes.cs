@@ -19,10 +19,10 @@ public class TurbulenceAttributes : DDLObjectType, IDDLObjectType<TurbulenceAttr
 		Freq = ddl.GetValue<float>(0x6764d505u, Freq);
 	}
 
-	[DDLRegistration(0x39ddadb1u, "Scales")]
+	[DDLRegistration(0xcf4f8070u, "Scales")]
 	public DDLVector3? Scales { get; set; } = default;
 
-	[DDLRegistration(0x39ddadb1u, "Freq")]
+	[DDLRegistration(0x6764d505u, "Freq")]
 	public float Freq { get; set; } = 1.00f;
 
 	public static TurbulenceAttributes Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class HarpoonStreamSplatEvent : EventBase, IDDLObjectType<HarpoonStreamSp
 		FromBot = ddl.GetValue<bool>(0x26373df2u, FromBot);
 	}
 
-	[DDLRegistration(0xecbe229cu, "Stream Length")]
+	[DDLRegistration(0x000faaf3u, "Stream Length")]
 	public float StreamLength { get; set; } = 1.00f;
 
-	[DDLRegistration(0xecbe229cu)]
+	[DDLRegistration(0x7e1cd725u)]
 	public bool WithPuddle { get; set; } = false;
 
-	[DDLRegistration(0xecbe229cu)]
+	[DDLRegistration(0x26373df2u)]
 	public bool FromBot { get; set; } = false;
 
 	public new static HarpoonStreamSplatEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class FacingStartEvent : EventBase, IDDLObjectType<FacingStartEvent> {
 		Direction = ddl.GetEnum<xfa020271>(0xbcb74ebfu, xfa020271Values.Lookup);
 	}
 
-	[DDLRegistration(0xc9d4dfc8u, description: "Start turning in this direction to face the target")]
+	[DDLRegistration(0xbcb74ebfu, description: "Start turning in this direction to face the target")]
 	public xfa020271 Direction { get; set; } = xfa020271.Both;
 
 	public new static FacingStartEvent Create(DDLObject ddl) => new(ddl);

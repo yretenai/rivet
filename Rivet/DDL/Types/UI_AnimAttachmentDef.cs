@@ -21,16 +21,16 @@ public class UI_AnimAttachmentDef : DDLObjectType, IDDLObjectType<UI_AnimAttachm
 		Scale = ddl.GetValue<float>(0xf515e945u, Scale);
 	}
 
-	[DDLRegistration(0x1bf34e42u, "Locator", "The locator to which to attach.")]
+	[DDLRegistration(0xfe325c4cu, "Locator", "The locator to which to attach.")]
 	public string? LocatorString { get; set; } = default;
 
-	[DDLRegistration(0x1bf34e42u, "Asset", "The asset to attach to the locator.")]
+	[DDLRegistration(0x0bad249fu, "Asset", "The asset to attach to the locator.")]
 	public string? AssetString { get; set; } = default;
 
-	[DDLRegistration(0x1bf34e42u, "AssetLocator", "The locator on the asset to set as asset origin")]
+	[DDLRegistration(0xf175f855u, "AssetLocator", "The locator on the asset to set as asset origin")]
 	public string? AssetLocatorString { get; set; } = default;
 
-	[DDLRegistration(0x1bf34e42u, description: "Attachment scale.")]
+	[DDLRegistration(0xf515e945u, description: "Attachment scale.")]
 	public float Scale { get; set; } = 1.00f;
 
 	public static UI_AnimAttachmentDef Create(DDLObject ddl) => new(ddl);

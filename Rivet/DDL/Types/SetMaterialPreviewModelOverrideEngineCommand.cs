@@ -19,10 +19,10 @@ public class SetMaterialPreviewModelOverrideEngineCommand : DDLObjectType, IDDLO
 		Type = ddl.GetEnum<ModelInstType>(0xbc4e9799u, ModelInstTypeValues.Lookup);
 	}
 
-	[DDLRegistration(0x754b49bbu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x754b49bbu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public ModelInstType Type { get; set; } = ModelInstType.Model;
 
 	public static SetMaterialPreviewModelOverrideEngineCommand Create(DDLObject ddl) => new(ddl);

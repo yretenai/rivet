@@ -23,22 +23,22 @@ public class ZoomData : DDLObjectType, IDDLObjectType<ZoomData> {
 		DisableViewWidth = ddl.GetValue<bool>(0x1231cf61u, DisableViewWidth);
 	}
 
-	[DDLRegistration(0x6bc85e7fu)]
+	[DDLRegistration(0x8c3d3ed4u)]
 	public FireConeData? FireCone { get; set; } = default;
 
-	[DDLRegistration(0x6bc85e7fu)]
+	[DDLRegistration(0xd1596448u)]
 	public RivetAssetId CamAimContext { get; set; } = default;
 
-	[DDLRegistration(0x6bc85e7fu)]
+	[DDLRegistration(0x3ffcbac0u)]
 	public RivetAssetId CamStickOverride { get; set; } = default;
 
-	[DDLRegistration(0x6bc85e7fu)]
+	[DDLRegistration(0x2322166cu)]
 	public RivetAssetId AimAssistOverride { get; set; } = default;
 
-	[DDLRegistration(0x6bc85e7fu)]
+	[DDLRegistration(0x9e6ac66cu)]
 	public RivetAssetId AimAssistOverrideCasual { get; set; } = default;
 
-	[DDLRegistration(0x6bc85e7fu)]
+	[DDLRegistration(0x1231cf61u)]
 	public bool DisableViewWidth { get; set; } = false;
 
 	public static ZoomData Create(DDLObject ddl) => new(ddl);

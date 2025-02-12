@@ -20,13 +20,13 @@ public class UseLetterboxActionPrius : DDLObjectType, IDDLObjectType<UseLetterbo
 		HideTime = ddl.GetValue<float>(0xae568d37u, HideTime);
 	}
 
-	[DDLRegistration(0x26e0c8edu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x26e0c8edu, description: "If > 0, will use this time as the time to take for the bars to move down into place. Will be overridden by the ShowTime input.")]
+	[DDLRegistration(0x59179fdfu, description: "If > 0, will use this time as the time to take for the bars to move down into place. Will be overridden by the ShowTime input.")]
 	public float ShowTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x26e0c8edu, description: "If > 0, will use this time as the time to take for the bars to move up out of view. Will be overridden by the HideTime input.")]
+	[DDLRegistration(0xae568d37u, description: "If > 0, will use this time as the time to take for the bars to move up out of view. Will be overridden by the HideTime input.")]
 	public float HideTime { get; set; } = -1.00f;
 
 	public static UseLetterboxActionPrius Create(DDLObject ddl) => new(ddl);

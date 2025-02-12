@@ -24,25 +24,25 @@ public class LocationDisplayTriggerPrius : DDLObjectType, IDDLObjectType<Locatio
 		TextDuration = ddl.GetValue<float>(0xec4e1454u, TextDuration);
 	}
 
-	[DDLRegistration(0x1db7b055u, "Start Enabled?", "Whether to be enabled on load (use Toggle or Turn On/Turn Off via script to change its enabled state).")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled?", "Whether to be enabled on load (use Toggle or Turn On/Turn Off via script to change its enabled state).")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0x1db7b055u, "Allow the ship to trigger?", "Whether the hero spaceship can trigger displaying the location.")]
+	[DDLRegistration(0xd56e89e1u, "Allow the ship to trigger?", "Whether the hero spaceship can trigger displaying the location.")]
 	public bool AllowShipTrigger { get; set; } = false;
 
-	[DDLRegistration(0x1db7b055u, "Allow cine trigger?", "Whether to allow this to be triggered when the hero is in a cinematic.")]
+	[DDLRegistration(0xc4607492u, "Allow cine trigger?", "Whether to allow this to be triggered when the hero is in a cinematic.")]
 	public bool AllowCineTrigger { get; set; } = false;
 
-	[DDLRegistration(0x1db7b055u, "Save Used?", "Whether to save that this location text was displayed so we never display it again.")]
+	[DDLRegistration(0xafbb9886u, "Save Used?", "Whether to save that this location text was displayed so we never display it again.")]
 	public bool SaveGaveText { get; set; } = true;
 
-	[DDLRegistration(0x1db7b055u, "Location LAMS Tag", "The location text to display.")]
+	[DDLRegistration(0xd6144406u, "Location LAMS Tag", "The location text to display.")]
 	public string? LocationTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x1db7b055u, "Display Delay", "Delay before showing text.")]
+	[DDLRegistration(0xabfd3ebdu, "Display Delay", "Delay before showing text.")]
 	public float TextDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x1db7b055u, "Display Duration", "How long to display the text.")]
+	[DDLRegistration(0xec4e1454u, "Display Duration", "How long to display the text.")]
 	public float TextDuration { get; set; } = 5.00f;
 
 	public static LocationDisplayTriggerPrius Create(DDLObject ddl) => new(ddl);

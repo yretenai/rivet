@@ -18,7 +18,7 @@ public class ClankPuzzleVolumeTargetEnterEvent : EventBase, IDDLObjectType<Clank
 		TargetHandle = ddl.GetValue<uint>(0x63316affu, TargetHandle);
 	}
 
-	[DDLRegistration(0xdd1159d6u)]
+	[DDLRegistration(0x63316affu)]
 	public uint TargetHandle { get; set; } = 0x00000000;
 
 	public new static ClankPuzzleVolumeTargetEnterEvent Create(DDLObject ddl) => new(ddl);

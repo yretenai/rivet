@@ -18,7 +18,7 @@ public class SVOGeneratorStepTerminalIntersect : DDLObjectType, IDDLObjectType<S
 		NodeData = ddl.GetObject<SVOGeneratorDebugNodeData>(0xc98edaacu);
 	}
 
-	[DDLRegistration(0xf148e984u)]
+	[DDLRegistration(0xc98edaacu)]
 	public SVOGeneratorDebugNodeData? NodeData { get; set; } = default;
 
 	public static SVOGeneratorStepTerminalIntersect Create(DDLObject ddl) => new(ddl);

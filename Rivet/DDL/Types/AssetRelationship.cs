@@ -19,10 +19,10 @@ public class AssetRelationship : DDLObjectType, IDDLObjectType<AssetRelationship
 		Child = ddl.GetValue<uint>(0x3be098e8u, Child);
 	}
 
-	[DDLRegistration(0xa4d75169u)]
+	[DDLRegistration(0x03f62e28u)]
 	public uint Parent { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa4d75169u)]
+	[DDLRegistration(0x3be098e8u)]
 	public uint Child { get; set; } = 0x00000000;
 
 	public static AssetRelationship Create(DDLObject ddl) => new(ddl);

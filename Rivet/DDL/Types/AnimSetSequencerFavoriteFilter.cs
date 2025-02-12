@@ -19,10 +19,10 @@ public class AnimSetSequencerFavoriteFilter : DDLObjectType, IDDLObjectType<Anim
 		Value = ddl.GetString(0x042494f5) ?? Value;
 	}
 
-	[DDLRegistration(0x302f3694u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x302f3694u)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
 	public static AnimSetSequencerFavoriteFilter Create(DDLObject ddl) => new(ddl);

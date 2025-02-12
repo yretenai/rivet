@@ -19,10 +19,10 @@ public class ObjSysSaveDataGame : ObjSysSaveDataShared, IDDLObjectType<ObjSysSav
 		RecentAvailableMissions = ddl.GetValues<uint>(0x59924550u);
 	}
 
-	[DDLRegistration(0x419d05ccu)]
+	[DDLRegistration(0x28538295u)]
 	public List<ActiveObjective?> RecentObjectives { get; set; } = [];
 
-	[DDLRegistration(0x419d05ccu)]
+	[DDLRegistration(0x59924550u)]
 	public List<uint> RecentAvailableMissions { get; set; } = [];
 
 	public new static ObjSysSaveDataGame Create(DDLObject ddl) => new(ddl);

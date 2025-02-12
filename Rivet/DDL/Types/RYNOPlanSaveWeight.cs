@@ -19,10 +19,10 @@ public class RYNOPlanSaveWeight : DDLObjectType, IDDLObjectType<RYNOPlanSaveWeig
 		Weight = ddl.GetValue<float>(0x39b51b26u, Weight);
 	}
 
-	[DDLRegistration(0xa9fbc802u)]
+	[DDLRegistration(0xcd7269d0u)]
 	public x81d3e717 SaveId { get; set; } = x81d3e717.NefCity_01;
 
-	[DDLRegistration(0xa9fbc802u, description: "How much weight to give this RYNO plan when calculating the save file completion percentage.")]
+	[DDLRegistration(0x39b51b26u, description: "How much weight to give this RYNO plan when calculating the save file completion percentage.")]
 	public float Weight { get; set; } = 1.00f;
 
 	public static RYNOPlanSaveWeight Create(DDLObject ddl) => new(ddl);

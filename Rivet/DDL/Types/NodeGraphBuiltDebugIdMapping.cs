@@ -21,16 +21,16 @@ public class NodeGraphBuiltDebugIdMapping : DDLObjectType, IDDLObjectType<NodeGr
 		OriginalEmbeddedGraphId = ddl.GetValue<RivetAssetId>(0x8e971938u, OriginalEmbeddedGraphId);
 	}
 
-	[DDLRegistration(0x9b2e05deu)]
+	[DDLRegistration(0xb8bdc402u)]
 	public RivetAssetId FlattenedId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9b2e05deu)]
+	[DDLRegistration(0xd114c6adu)]
 	public RivetAssetId OriginalAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9b2e05deu)]
+	[DDLRegistration(0xe77a2f8bu)]
 	public RivetAssetId OriginalId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9b2e05deu)]
+	[DDLRegistration(0x8e971938u)]
 	public RivetAssetId OriginalEmbeddedGraphId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static NodeGraphBuiltDebugIdMapping Create(DDLObject ddl) => new(ddl);

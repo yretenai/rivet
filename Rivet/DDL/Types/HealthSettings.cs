@@ -26,31 +26,31 @@ public class HealthSettings : DDLObjectType, IDDLObjectType<HealthSettings> {
 		DisableHitPause = ddl.GetValue<bool>(0xfb33690fu, DisableHitPause);
 	}
 
-	[DDLRegistration(0xa78a4f0du, "Heroes do not take damage", "Heroes do not take any damage.")]
+	[DDLRegistration(0x378da48du, "Heroes do not take damage", "Heroes do not take any damage.")]
 	public bool HeroesDoNotTakeDamage { get; set; } = false;
 
-	[DDLRegistration(0xa78a4f0du, "Heroes do not die", "Hereos do not die.")]
+	[DDLRegistration(0x3e3611f5u, "Heroes do not die", "Hereos do not die.")]
 	public bool HeroesDoNotDie { get; set; } = false;
 
-	[DDLRegistration(0xa78a4f0du, "Enemy Bots do not die", "Bots do not die.")]
+	[DDLRegistration(0xa477dbb5u, "Enemy Bots do not die", "Bots do not die.")]
 	public bool EnemyBotsDoNotDie { get; set; } = false;
 
-	[DDLRegistration(0xa78a4f0du, "Draw Health Values", "Health values are drawn on screen.")]
+	[DDLRegistration(0x9c7d3090u, "Draw Health Values", "Health values are drawn on screen.")]
 	public bool DisplayHealthValues { get; set; } = false;
 
-	[DDLRegistration(0xa78a4f0du, "Draw Hero Health Bar", "Hero health bar is drawn on screen.")]
+	[DDLRegistration(0xa7f43a0fu, "Draw Hero Health Bar", "Hero health bar is drawn on screen.")]
 	public bool DisplayHeroHealthBar { get; set; } = false;
 
-	[DDLRegistration(0xa78a4f0du, "Draw Enemy Health Bars", "Enemy health bars are drawn on screen.")]
+	[DDLRegistration(0x91f54cf3u, "Draw Enemy Health Bars", "Enemy health bars are drawn on screen.")]
 	public bool DisplayEnemyHealthBars { get; set; } = false;
 
-	[DDLRegistration(0xa78a4f0du, "Debug Health Drops", "Print debug information about health drops.")]
+	[DDLRegistration(0x05bca618u, "Debug Health Drops", "Print debug information about health drops.")]
 	public bool DebugHealthDrops { get; set; } = false;
 
-	[DDLRegistration(0xa78a4f0du, "Draw Hazard Areas", "Hazard areas are visualized by debug shapes.")]
+	[DDLRegistration(0x086f7723u, "Draw Hazard Areas", "Hazard areas are visualized by debug shapes.")]
 	public bool DrawHazardAreas { get; set; } = false;
 
-	[DDLRegistration(0xa78a4f0du, "Disable Hit Pause", "Disables hit pause for all damage.")]
+	[DDLRegistration(0xfb33690fu, "Disable Hit Pause", "Disables hit pause for all damage.")]
 	public bool DisableHitPause { get; set; } = false;
 
 	public static HealthSettings Create(DDLObject ddl) => new(ddl);

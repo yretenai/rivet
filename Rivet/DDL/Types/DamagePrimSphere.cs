@@ -18,7 +18,7 @@ public class DamagePrimSphere : DamagePrimBase, IDDLObjectType<DamagePrimSphere>
 		DamageRadius = ddl.GetValue<float>(0xe3e6fa68u, DamageRadius);
 	}
 
-	[DDLRegistration(0x8f1e9576u, "Damage Radius")]
+	[DDLRegistration(0xe3e6fa68u, "Damage Radius")]
 	public float DamageRadius { get; set; } = 1.00f;
 
 	public new static DamagePrimSphere Create(DDLObject ddl) => new(ddl);

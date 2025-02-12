@@ -21,16 +21,16 @@ public class HoverbootCameraAimContextConfig : CameraAimContextVariableFOVConfig
 		MaxSpeedUpOffsetZ = ddl.GetValue<float>(0x0efdc1c2u, MaxSpeedUpOffsetZ);
 	}
 
-	[DDLRegistration(0xdac953ebu)]
+	[DDLRegistration(0xc8eef557u)]
 	public float MaxSpeedPivotHeight { get; set; } = 0.50f;
 
-	[DDLRegistration(0xdac953ebu)]
+	[DDLRegistration(0x51c18898u)]
 	public float MaxSpeedLevelOffsetZ { get; set; } = -1.00f;
 
-	[DDLRegistration(0xdac953ebu)]
+	[DDLRegistration(0xd6edfabdu)]
 	public float MaxSpeedDownOffsetZ { get; set; } = -1.00f;
 
-	[DDLRegistration(0xdac953ebu)]
+	[DDLRegistration(0x0efdc1c2u)]
 	public float MaxSpeedUpOffsetZ { get; set; } = -1.00f;
 
 	public new static HoverbootCameraAimContextConfig Create(DDLObject ddl) => new(ddl);

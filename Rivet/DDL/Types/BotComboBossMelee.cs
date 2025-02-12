@@ -18,7 +18,7 @@ public class BotComboBossMelee : BotComboMoveMelee, IDDLObjectType<BotComboBossM
 		AttackLocatorForQuery = ddl.GetString(0x6d509b24) ?? AttackLocatorForQuery;
 	}
 
-	[DDLRegistration(0xf7f50994u, description: "Locator used to test where the boss should be relative to the hero during the attack.")]
+	[DDLRegistration(0x6d509b24u, description: "Locator used to test where the boss should be relative to the hero during the attack.")]
 	public string? AttackLocatorForQuery { get; set; } = default;
 
 	public new static BotComboBossMelee Create(DDLObject ddl) => new(ddl);

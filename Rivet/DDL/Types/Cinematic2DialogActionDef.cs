@@ -24,25 +24,25 @@ public class Cinematic2DialogActionDef : DDLObjectType, IDDLObjectType<Cinematic
 		PlayOnce = ddl.GetValue<bool>(0xba3988abu, PlayOnce);
 	}
 
-	[DDLRegistration(0x2a35d2d2u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x2a35d2d2u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2a35d2d2u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x2a35d2d2u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2a35d2d2u)]
+	[DDLRegistration(0x92c48ff6u)]
 	public RivetAssetId PerformanceClipPath { get; set; } = default;
 
-	[DDLRegistration(0x2a35d2d2u, description: "Ignore auto generated phonemes.")]
+	[DDLRegistration(0x9b410d6bu, description: "Ignore auto generated phonemes.")]
 	public bool IgnorePhonemes { get; set; } = false;
 
-	[DDLRegistration(0x2a35d2d2u, description: "If true, this action will only be triggered once (useful for looping shots).")]
+	[DDLRegistration(0xba3988abu, description: "If true, this action will only be triggered once (useful for looping shots).")]
 	public bool PlayOnce { get; set; } = false;
 
 	public static Cinematic2DialogActionDef Create(DDLObject ddl) => new(ddl);

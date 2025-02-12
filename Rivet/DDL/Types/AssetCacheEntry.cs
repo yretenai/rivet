@@ -24,25 +24,25 @@ public class AssetCacheEntry : DDLObjectType, IDDLObjectType<AssetCacheEntry> {
 		LastSaved = ddl.GetValue<long>(0x71d1d76au, LastSaved);
 	}
 
-	[DDLRegistration(0xec94a6c2u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xec94a6c2u, description: "Internal error code for this asset: 0 means no error, refer to LastError for more info (comes from AssetDocumentCache::ErrorCode).")]
+	[DDLRegistration(0x6b51563cu, description: "Internal error code for this asset: 0 means no error, refer to LastError for more info (comes from AssetDocumentCache::ErrorCode).")]
 	public int ErrorCode { get; set; } = 0;
 
-	[DDLRegistration(0xec94a6c2u, description: "If there was an error when this asset was cached, a message will be stored here.")]
+	[DDLRegistration(0xd5efb83eu, description: "If there was an error when this asset was cached, a message will be stored here.")]
 	public string? LastError { get; set; } = default;
 
-	[DDLRegistration(0xec94a6c2u, description: "Size in bytes of this asset, as saved on disk (no compression).")]
+	[DDLRegistration(0xc750e4dau, description: "Size in bytes of this asset, as saved on disk (no compression).")]
 	public long Size { get; set; } = 0;
 
-	[DDLRegistration(0xec94a6c2u, description: "Time last accessed (milliseconds since the epoch).")]
+	[DDLRegistration(0x49dbc8c6u, description: "Time last accessed (milliseconds since the epoch).")]
 	public long LastAccessed { get; set; } = 0;
 
-	[DDLRegistration(0xec94a6c2u, description: "Time last modified (milliseconds since the epoch).")]
+	[DDLRegistration(0x7757eb4fu, description: "Time last modified (milliseconds since the epoch).")]
 	public long LastModified { get; set; } = 0;
 
-	[DDLRegistration(0xec94a6c2u, description: "Time last saved, if different from LastModified, this asset needs to be saved (milliseconds since the epoch).")]
+	[DDLRegistration(0x71d1d76au, description: "Time last saved, if different from LastModified, this asset needs to be saved (milliseconds since the epoch).")]
 	public long LastSaved { get; set; } = 0;
 
 	public static AssetCacheEntry Create(DDLObject ddl) => new(ddl);

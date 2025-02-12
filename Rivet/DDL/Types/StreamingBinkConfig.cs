@@ -20,13 +20,13 @@ public class StreamingBinkConfig : StreamingVideoBaseConfig, IDDLObjectType<Stre
 		PauseAtEnd = ddl.GetValue<bool>(0xa2da07eau, PauseAtEnd);
 	}
 
-	[DDLRegistration(0x120e10b3u)]
+	[DDLRegistration(0xdad29c1fu)]
 	public bool UseXAudio { get; set; } = false;
 
-	[DDLRegistration(0x120e10b3u)]
+	[DDLRegistration(0xad7ed2a3u)]
 	public bool DecodeAlpha { get; set; } = false;
 
-	[DDLRegistration(0x120e10b3u)]
+	[DDLRegistration(0xa2da07eau)]
 	public bool PauseAtEnd { get; set; } = false;
 
 	public new static StreamingBinkConfig Create(DDLObject ddl) => new(ddl);

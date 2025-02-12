@@ -28,37 +28,37 @@ public class WeaponWarpRiflePrius : WeaponGamePrius, IDDLObjectType<WeaponWarpRi
 		ShellCasingData = ddl.GetObject<ShellCasingDataSingleEmit>(0x2fda4eacu);
 	}
 
-	[DDLRegistration(0xea1985fau, description: "Whether the warp rifle should adjust aiming speed as it heats up.")]
+	[DDLRegistration(0xc1fec0afu, description: "Whether the warp rifle should adjust aiming speed as it heats up.")]
 	public bool ChangeAimSpeedWithHeat { get; set; } = false;
 
-	[DDLRegistration(0xea1985fau, description: "How much will be added to the spread angle per second that the trigger is held down. The spread angle resets when the player releases the trigger.")]
+	[DDLRegistration(0x314a6826u, description: "How much will be added to the spread angle per second that the trigger is held down. The spread angle resets when the player releases the trigger.")]
 	public float SpreadToAddPerSecond { get; set; } = 2.00f;
 
-	[DDLRegistration(0xea1985fau, description: "The bullet spread when the player first starts shooting")]
+	[DDLRegistration(0x9cb91ef5u, description: "The bullet spread when the player first starts shooting")]
 	public float BaseBulletSpreadAngle { get; set; } = 1.00f;
 
-	[DDLRegistration(0xea1985fau, description: "The largest angle that the bullets will spread to after the player has held the trigger for a while.")]
+	[DDLRegistration(0x82f64dfdu, description: "The largest angle that the bullets will spread to after the player has held the trigger for a while.")]
 	public float MaxBulletSpreadAngle { get; set; } = 10.00f;
 
-	[DDLRegistration(0xea1985fau, description: "The duration that the weapon is spinning up before it can fire.")]
+	[DDLRegistration(0xadd53af8u, description: "The duration that the weapon is spinning up before it can fire.")]
 	public float SpinUpDuration { get; set; } = 0.40f;
 
-	[DDLRegistration(0xea1985fau, description: "The duration that the weapon will spin down for after the trigger has been released.")]
+	[DDLRegistration(0xe1a9dc0cu, description: "The duration that the weapon will spin down for after the trigger has been released.")]
 	public float SpinDownDuration { get; set; } = 1.50f;
 
-	[DDLRegistration(0xea1985fau, description: "The duration that the weapon will stay spun up when the trigger is released, before spinning back down.")]
+	[DDLRegistration(0x8d9a4104u, description: "The duration that the weapon will stay spun up when the trigger is released, before spinning back down.")]
 	public float SpinUpSustainDuration { get; set; } = 0.60f;
 
-	[DDLRegistration(0xea1985fau)]
+	[DDLRegistration(0xe37d083au)]
 	public KnockbackLevelFlags FiringAllowedKnockbacks { get; set; } = (KnockbackLevelFlags) 0x00000001;
 
-	[DDLRegistration(0xea1985fau)]
+	[DDLRegistration(0x3452bbe0u)]
 	public List<x41032d7a> FiringDisabledStates { get; set; } = [];
 
-	[DDLRegistration(0xea1985fau)]
+	[DDLRegistration(0x6fb231e5u)]
 	public List<HeatStateData?> HeatStates { get; set; } = [];
 
-	[DDLRegistration(0xea1985fau, "Shell Casing Data")]
+	[DDLRegistration(0x2fda4eacu, "Shell Casing Data")]
 	public ShellCasingDataSingleEmit? ShellCasingData { get; set; } = default;
 
 	public new static WeaponWarpRiflePrius Create(DDLObject ddl) => new(ddl);

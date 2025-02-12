@@ -18,7 +18,7 @@ public class StaticMaterialOverrideListPrius : DDLObjectType, IDDLObjectType<Sta
 		MaterialList = ddl.GetObjects<MaterialOverrideListEntry>(0xdc256aaau);
 	}
 
-	[DDLRegistration(0x67377ecbu, "Material Replacement List", "A list of materials to replace and the material to replace it with.")]
+	[DDLRegistration(0xdc256aaau, "Material Replacement List", "A list of materials to replace and the material to replace it with.")]
 	public List<MaterialOverrideListEntry?> MaterialList { get; set; } = [];
 
 	public static StaticMaterialOverrideListPrius Create(DDLObject ddl) => new(ddl);

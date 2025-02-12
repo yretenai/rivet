@@ -19,10 +19,10 @@ public class PushFireWeaponEvent : EventBase, IDDLObjectType<PushFireWeaponEvent
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 	}
 
-	[DDLRegistration(0x37c86bd3u, "Trigger Index")]
+	[DDLRegistration(0xee73b5b3u, "Trigger Index")]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x37c86bd3u, "Duration")]
+	[DDLRegistration(0x5f0458f5u, "Duration")]
 	public float Time { get; set; } = 0.00f;
 
 	public new static PushFireWeaponEvent Create(DDLObject ddl) => new(ddl);

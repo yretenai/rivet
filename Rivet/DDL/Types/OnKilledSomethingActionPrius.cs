@@ -21,16 +21,16 @@ public class OnKilledSomethingActionPrius : DDLObjectType, IDDLObjectType<OnKill
 		ResetOnListen = ddl.GetValue<bool>(0xf86b3b4eu, ResetOnListen);
 	}
 
-	[DDLRegistration(0xfccf0684u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0xfccf0684u, "Init Listening?", "Whether or not to start listening when the script it loaded.")]
+	[DDLRegistration(0xf387b27au, "Init Listening?", "Whether or not to start listening when the script it loaded.")]
 	public bool InitListening { get; set; } = false;
 
-	[DDLRegistration(0xfccf0684u, "Max Times to Fire", "The number of times this script node will output (-1 == infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times this script node will output (-1 == infinite).")]
 	public int SignalMax { get; set; } = -1;
 
-	[DDLRegistration(0xfccf0684u, "Reset on listen?", "Whether to reset our signal count (times we've fired) if StartListening is triggered while we were already listening. If false, will ignore all StartListening triggers until StopListening is triggered.")]
+	[DDLRegistration(0xf86b3b4eu, "Reset on listen?", "Whether to reset our signal count (times we've fired) if StartListening is triggered while we were already listening. If false, will ignore all StartListening triggers until StopListening is triggered.")]
 	public bool ResetOnListen { get; set; } = true;
 
 	public static OnKilledSomethingActionPrius Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class SpawnerBotThrowData : DDLObjectType, IDDLObjectType<SpawnerBotThrow
 		ThrowRangeMax = ddl.GetValue<float>(0x03d27ef7u, ThrowRangeMax);
 	}
 
-	[DDLRegistration(0xdd8621c7u, description: "TRUE if we want to throw bots to a destination")]
+	[DDLRegistration(0xbc501d47u, description: "TRUE if we want to throw bots to a destination")]
 	public bool ThrowSpawnedBots { get; set; } = true;
 
-	[DDLRegistration(0xdd8621c7u, description: "Joint to spawn from when doing a throw spawn.")]
+	[DDLRegistration(0x2b67368cu, description: "Joint to spawn from when doing a throw spawn.")]
 	public string? ThrowFromJoint { get; set; } = "kigLoc_spawner";
 
-	[DDLRegistration(0xdd8621c7u, description: "Joint to spawn from when doing a throw spawn.")]
+	[DDLRegistration(0xd7e273b9u, description: "Joint to spawn from when doing a throw spawn.")]
 	public float ThrowHeight { get; set; } = 2.00f;
 
-	[DDLRegistration(0xdd8621c7u, description: "Min distance to throw bots")]
+	[DDLRegistration(0x3fdf41aeu, description: "Min distance to throw bots")]
 	public float ThrowRangeMin { get; set; } = 3.00f;
 
-	[DDLRegistration(0xdd8621c7u, description: "Max distance to throw bots")]
+	[DDLRegistration(0x03d27ef7u, description: "Max distance to throw bots")]
 	public float ThrowRangeMax { get; set; } = 5.00f;
 
 	public static SpawnerBotThrowData Create(DDLObject ddl) => new(ddl);

@@ -28,37 +28,37 @@ public class ClankPuzzleTargetBaseConfig : ConfigBase, IDDLObjectType<ClankPuzzl
 		MaterialGraphColoring = ddl.GetObject<ClankPuzzleTargetColorData>(0x5a718a26u);
 	}
 
-	[DDLRegistration(0x945c4c28u)]
+	[DDLRegistration(0x75a19d21u)]
 	public xf32dacf0 TargetType { get; set; } = (xf32dacf0) 0x00000000;
 
-	[DDLRegistration(0x945c4c28u)]
+	[DDLRegistration(0x6590c4d5u)]
 	public bool CanAbsorb { get; set; } = false;
 
-	[DDLRegistration(0x945c4c28u, description: "The time data for speed up changes.")]
+	[DDLRegistration(0xcda7c273u, description: "The time data for speed up changes.")]
 	public ClankPuzzleTimeData? SpeedUpTime { get; set; } = default;
 
-	[DDLRegistration(0x945c4c28u, description: "The time data for slow down changes.")]
+	[DDLRegistration(0x0b81b4dcu, description: "The time data for slow down changes.")]
 	public ClankPuzzleTimeData? SlowDownTime { get; set; } = default;
 
-	[DDLRegistration(0x945c4c28u, description: "The time data for gravity changes.")]
+	[DDLRegistration(0xd89217e1u, description: "The time data for gravity changes.")]
 	public ClankPuzzleTimeData? GravityTime { get; set; } = default;
 
-	[DDLRegistration(0x945c4c28u, description: "The time data for energy changes.")]
+	[DDLRegistration(0x77fe99abu, description: "The time data for energy changes.")]
 	public ClankPuzzleTimeData? EnergyTime { get; set; } = default;
 
-	[DDLRegistration(0x945c4c28u)]
+	[DDLRegistration(0x25220166u)]
 	public RivetAssetId SpeedUpMaterial { get; set; } = default;
 
-	[DDLRegistration(0x945c4c28u)]
+	[DDLRegistration(0xd18ff876u)]
 	public RivetAssetId SlowDownMaterial { get; set; } = default;
 
-	[DDLRegistration(0x945c4c28u)]
+	[DDLRegistration(0x76c5f9cfu)]
 	public RivetAssetId GravityMaterial { get; set; } = default;
 
-	[DDLRegistration(0x945c4c28u)]
+	[DDLRegistration(0xe6e6edceu)]
 	public RivetAssetId EnergyMaterial { get; set; } = default;
 
-	[DDLRegistration(0x945c4c28u)]
+	[DDLRegistration(0x5a718a26u)]
 	public ClankPuzzleTargetColorData? MaterialGraphColoring { get; set; } = default;
 
 	public new static ClankPuzzleTargetBaseConfig Create(DDLObject ddl) => new(ddl);

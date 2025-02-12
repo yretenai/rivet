@@ -19,10 +19,10 @@ public class RCSDictionary : DDLObjectType, IDDLObjectType<RCSDictionary> {
 		Values = ddl.GetStrings(0x04df0281u);
 	}
 
-	[DDLRegistration(0xff733d7du)]
+	[DDLRegistration(0x841e845cu)]
 	public List<string?> Keys { get; set; } = [];
 
-	[DDLRegistration(0xff733d7du)]
+	[DDLRegistration(0x04df0281u)]
 	public List<string?> Values { get; set; } = [];
 
 	public static RCSDictionary Create(DDLObject ddl) => new(ddl);

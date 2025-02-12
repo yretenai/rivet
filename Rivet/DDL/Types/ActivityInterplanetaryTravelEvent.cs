@@ -19,10 +19,10 @@ public class ActivityInterplanetaryTravelEvent : EventBase, IDDLObjectType<Activ
 		DestinationCheckpointName = ddl.GetString(0x41f2d10d) ?? DestinationCheckpointName;
 	}
 
-	[DDLRegistration(0x2ccb7c44u)]
+	[DDLRegistration(0x136b3eabu)]
 	public string? InterplanetaryCheckpointName { get; set; } = default;
 
-	[DDLRegistration(0x2ccb7c44u)]
+	[DDLRegistration(0x41f2d10du)]
 	public string? DestinationCheckpointName { get; set; } = default;
 
 	public new static ActivityInterplanetaryTravelEvent Create(DDLObject ddl) => new(ddl);

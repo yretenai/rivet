@@ -23,22 +23,22 @@ public class DevstatsOpenWorldTaskCompletedEvent : EventBase, IDDLObjectType<Dev
 		PlayerPosInfo = ddl.GetObject<DevstatsPlayerPositionInfo>(0xeadcc3e4u);
 	}
 
-	[DDLRegistration(0x3a918a6fu)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x3a918a6fu)]
+	[DDLRegistration(0x7f2ae876u)]
 	public string? LastGoldenPathMission { get; set; } = default;
 
-	[DDLRegistration(0x3a918a6fu)]
+	[DDLRegistration(0xf404a41au)]
 	public string? TaskType { get; set; } = default;
 
-	[DDLRegistration(0x3a918a6fu)]
+	[DDLRegistration(0x26f98d35u)]
 	public string? TaskName { get; set; } = default;
 
-	[DDLRegistration(0x3a918a6fu)]
+	[DDLRegistration(0xd70e1181u)]
 	public float TaskDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3a918a6fu)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
 	public new static DevstatsOpenWorldTaskCompletedEvent Create(DDLObject ddl) => new(ddl);

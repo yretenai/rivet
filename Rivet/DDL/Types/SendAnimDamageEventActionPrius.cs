@@ -20,13 +20,13 @@ public class SendAnimDamageEventActionPrius : DDLObjectType, IDDLObjectType<Send
 		DamageDuration = ddl.GetValue<float>(0xdd944989u, DamageDuration);
 	}
 
-	[DDLRegistration(0xb266a6e9u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
-	[DDLRegistration(0xb266a6e9u)]
+	[DDLRegistration(0x6650a828u)]
 	public uint AttackIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb266a6e9u)]
+	[DDLRegistration(0xdd944989u)]
 	public float DamageDuration { get; set; } = 0.00f;
 
 	public static SendAnimDamageEventActionPrius Create(DDLObject ddl) => new(ddl);

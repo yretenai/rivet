@@ -18,7 +18,7 @@ public class MasterLootList : ConfigBase, IDDLObjectType<MasterLootList> {
 		LootSetupConfigs = ddl.GetValues<RivetAssetId>(0x167a5bd6u);
 	}
 
-	[DDLRegistration(0xac97baccu)]
+	[DDLRegistration(0x167a5bd6u)]
 	public List<RivetAssetId> LootSetupConfigs { get; set; } = [];
 
 	public new static MasterLootList Create(DDLObject ddl) => new(ddl);

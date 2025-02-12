@@ -21,16 +21,16 @@ public class AnimVisLinkDataDef : DDLObjectType, IDDLObjectType<AnimVisLinkDataD
 		Data = ddl.GetString(0x9d6333d3) ?? Data;
 	}
 
-	[DDLRegistration(0x7d126140u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public ushort Type { get; set; } = 0x0000;
 
-	[DDLRegistration(0x7d126140u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x7d126140u)]
+	[DDLRegistration(0x1960e5beu)]
 	public uint DataLength { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7d126140u)]
+	[DDLRegistration(0x9d6333d3u)]
 	public string? Data { get; set; } = default;
 
 	public static AnimVisLinkDataDef Create(DDLObject ddl) => new(ddl);

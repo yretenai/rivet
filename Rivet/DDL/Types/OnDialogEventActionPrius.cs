@@ -19,10 +19,10 @@ public class OnDialogEventActionPrius : DDLObjectType, IDDLObjectType<OnDialogEv
 		SignalMax = ddl.GetValue<int>(0x9149785eu, SignalMax);
 	}
 
-	[DDLRegistration(0xc088e0a6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
-	[DDLRegistration(0xc088e0a6u, "Max Times to Fire", "The maximum number of times this script node will fire (-1 for infinite)")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The maximum number of times this script node will fire (-1 for infinite)")]
 	public int SignalMax { get; set; } = 1;
 
 	public static OnDialogEventActionPrius Create(DDLObject ddl) => new(ddl);

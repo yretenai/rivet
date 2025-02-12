@@ -18,7 +18,7 @@ public class LedgeBirdCurvePrius : DDLObjectType, IDDLObjectType<LedgeBirdCurveP
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0xa20adfdeu)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
 	public static LedgeBirdCurvePrius Create(DDLObject ddl) => new(ddl);

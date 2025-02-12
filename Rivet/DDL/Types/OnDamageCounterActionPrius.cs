@@ -19,10 +19,10 @@ public class OnDamageCounterActionPrius : DDLObjectType, IDDLObjectType<OnDamage
 		DamageAmount = ddl.GetValue<float>(0x563be470u, DamageAmount);
 	}
 
-	[DDLRegistration(0x7d175246u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
-	[DDLRegistration(0x7d175246u)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 1.00f;
 
 	public static OnDamageCounterActionPrius Create(DDLObject ddl) => new(ddl);

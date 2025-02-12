@@ -21,16 +21,16 @@ public class PlatformDestinationActionPrius : DDLObjectType, IDDLObjectType<Plat
 		Loop = ddl.GetValue<bool>(0x91cfdd5eu, Loop);
 	}
 
-	[DDLRegistration(0x7b47012fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0x7b47012fu, "Max OnArrive Triggers")]
+	[DDLRegistration(0xcca368a7u, "Max OnArrive Triggers")]
 	public uint ArriveTriggerMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7b47012fu, "Max OnLeave Triggers")]
+	[DDLRegistration(0xd26cd5b5u, "Max OnLeave Triggers")]
 	public uint LeaveTriggerMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7b47012fu)]
+	[DDLRegistration(0x91cfdd5eu)]
 	public bool Loop { get; set; } = false;
 
 	public static PlatformDestinationActionPrius Create(DDLObject ddl) => new(ddl);

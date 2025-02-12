@@ -26,31 +26,31 @@ public class Cinematic2ActorBehaviorTrackDef : DDLObjectType, IDDLObjectType<Cin
 		MayaExportInfo = ddl.GetObject<Cinematic2MayaExportInfo>(0xa1192d52u);
 	}
 
-	[DDLRegistration(0x0b47a1c9u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0b47a1c9u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x0b47a1c9u, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0x0b47a1c9u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0x0b47a1c9u, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0x0b47a1c9u)]
+	[DDLRegistration(0x2a95c808u)]
 	public Dictionary<RivetAssetId, Cinematic2BehaviorPlayAnimClipActionDef?> PlayAnimActions { get; set; } = [];
 
-	[DDLRegistration(0x0b47a1c9u)]
+	[DDLRegistration(0x1a0c8f02u)]
 	public Dictionary<RivetAssetId, Cinematic2BehaviorGoToActionDef?> BehaviorGoToActions { get; set; } = [];
 
-	[DDLRegistration(0x0b47a1c9u)]
+	[DDLRegistration(0x0f706a76u)]
 	public Dictionary<RivetAssetId, Cinematic2BehaviorPlayDriverActionDef?> PlayDriverActions { get; set; } = [];
 
-	[DDLRegistration(0x0b47a1c9u, "Maya Export Info", "This contains information used when the actor is exported from Maya.")]
+	[DDLRegistration(0xa1192d52u, "Maya Export Info", "This contains information used when the actor is exported from Maya.")]
 	public Cinematic2MayaExportInfo? MayaExportInfo { get; set; } = default;
 
 	public static Cinematic2ActorBehaviorTrackDef Create(DDLObject ddl) => new(ddl);

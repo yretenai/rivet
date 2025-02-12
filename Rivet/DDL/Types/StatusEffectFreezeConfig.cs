@@ -20,13 +20,13 @@ public class StatusEffectFreezeConfig : StatusEffectConfig, IDDLObjectType<Statu
 		SlideData = ddl.GetObject<FreezeSlideData>(0xda82fe40u);
 	}
 
-	[DDLRegistration(0x3f71ed02u, "Shader Data")]
+	[DDLRegistration(0x566f4dbcu, "Shader Data")]
 	public FreezeShaderData? ShaderData { get; set; } = default;
 
-	[DDLRegistration(0x3f71ed02u, "Shatter Data")]
+	[DDLRegistration(0xcf20c0f3u, "Shatter Data")]
 	public FreezeShatterData? ShatterData { get; set; } = default;
 
-	[DDLRegistration(0x3f71ed02u, "Slide Data")]
+	[DDLRegistration(0xda82fe40u, "Slide Data")]
 	public FreezeSlideData? SlideData { get; set; } = default;
 
 	public new static StatusEffectFreezeConfig Create(DDLObject ddl) => new(ddl);

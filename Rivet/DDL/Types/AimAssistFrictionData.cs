@@ -25,28 +25,28 @@ public class AimAssistFrictionData : DDLObjectType, IDDLObjectType<AimAssistFric
 		SpeedScale = ddl.GetValue<float>(0xec24b64du, SpeedScale);
 	}
 
-	[DDLRegistration(0x17841490u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0x17841490u, "Box Curve Data")]
+	[DDLRegistration(0x643e4b40u, "Box Curve Data")]
 	public AimAssistCurveData? BoxProcessing { get; set; } = default;
 
-	[DDLRegistration(0x17841490u, "Stick Min", "Lower bound of the raw stick input, typical range is [0-1].")]
+	[DDLRegistration(0xdee2a17du, "Stick Min", "Lower bound of the raw stick input, typical range is [0-1].")]
 	public float StickMin { get; set; } = 0.20f;
 
-	[DDLRegistration(0x17841490u, "Stick Max", "Upper bound of the raw stick input, typical range is [0-1].")]
+	[DDLRegistration(0xe2ef9e24u, "Stick Max", "Upper bound of the raw stick input, typical range is [0-1].")]
 	public float StickMax { get; set; } = 0.85f;
 
-	[DDLRegistration(0x17841490u, "Factor Min", "Lower bound used for determining how much of SpeedScale to apply based on the adjusted stick input.  Can exceed [0-1], but the final value combined with SpeedScale is clamped to [0, 1].")]
+	[DDLRegistration(0xc102c0afu, "Factor Min", "Lower bound used for determining how much of SpeedScale to apply based on the adjusted stick input.  Can exceed [0-1], but the final value combined with SpeedScale is clamped to [0, 1].")]
 	public float FactorMin { get; set; } = 1.00f;
 
-	[DDLRegistration(0x17841490u, "Factor Max", "Upper bound used for determining how much of SpeedScale to apply based on the adjusted stick input.  Can exceed [0-1], but the final value combined with SpeedScale is clamped to [0, 1].")]
+	[DDLRegistration(0xfd0ffff6u, "Factor Max", "Upper bound used for determining how much of SpeedScale to apply based on the adjusted stick input.  Can exceed [0-1], but the final value combined with SpeedScale is clamped to [0, 1].")]
 	public float FactorMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0x17841490u, "Factor Curve", "Exponent used to adjust normalized stick input before passing along to Factor Min/Max.")]
+	[DDLRegistration(0x4685e461u, "Factor Curve", "Exponent used to adjust normalized stick input before passing along to Factor Min/Max.")]
 	public float FactorCurve { get; set; } = 1.00f;
 
-	[DDLRegistration(0x17841490u, "Speed Scale", "Multiplier against the camera's movement speed while the reticle is over a target. Lower numbers means more friction.")]
+	[DDLRegistration(0xec24b64du, "Speed Scale", "Multiplier against the camera's movement speed while the reticle is over a target. Lower numbers means more friction.")]
 	public float SpeedScale { get; set; } = 0.90f;
 
 	public static AimAssistFrictionData Create(DDLObject ddl) => new(ddl);

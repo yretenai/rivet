@@ -23,22 +23,22 @@ public class NPCBotPlayerInteractDataPrius : DDLObjectType, IDDLObjectType<NPCBo
 		ViewRTT = ddl.GetValue<RivetAssetId>(0x461690beu, ViewRTT);
 	}
 
-	[DDLRegistration(0x87fa52ffu)]
+	[DDLRegistration(0xd8134c2fu)]
 	public float MoveForwardRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87fa52ffu)]
+	[DDLRegistration(0x112f857bu)]
 	public float CloseRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87fa52ffu)]
+	[DDLRegistration(0xb6d0e665u)]
 	public float MoveAwayPadding { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87fa52ffu)]
+	[DDLRegistration(0x80ddd932u)]
 	public RivetAssetId MoveForwardPosition { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x87fa52ffu)]
+	[DDLRegistration(0x9ee75758u)]
 	public RivetAssetId SimplePrompt { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x87fa52ffu)]
+	[DDLRegistration(0x461690beu)]
 	public RivetAssetId ViewRTT { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static NPCBotPlayerInteractDataPrius Create(DDLObject ddl) => new(ddl);

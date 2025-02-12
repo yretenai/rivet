@@ -58,127 +58,127 @@ public class TextureDef : DDLObjectType, IDDLObjectType<TextureDef> {
 		Shift = ddl.GetValue<uint>(0xbc58f784u, Shift);
 	}
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xa9b5ff24u, "Source File")]
+	[DDLRegistration(0x6ccf66b3u, "Source File")]
 	public RivetAssetId SourcePath { get; set; } = default;
 
-	[DDLRegistration(0xa9b5ff24u, "DCC Source Files", "Relative paths to DCC source files within the //sourceart/<project> depot. These files will be listed for opening in the asset\'s \"Open\" right-click menu in the Vault.")]
+	[DDLRegistration(0xaae77202u, "DCC Source Files", "Relative paths to DCC source files within the //sourceart/<project> depot. These files will be listed for opening in the asset\'s \"Open\" right-click menu in the Vault.")]
 	public List<string?> DCCSourcePaths { get; set; } = [];
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public TextureType Type { get; set; } = TextureType.K2D;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x59b0e6c3u)]
 	public x9f6b8de9 ContentType { get; set; } = x9f6b8de9.Color;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x7d586828u)]
 	public x771ceda9 Quality { get; set; } = x771ceda9.Medium;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x41bc117au)]
 	public x0597b7f4 Filter { get; set; } = x0597b7f4.Linear;
 
-	[DDLRegistration(0xa9b5ff24u, "Format Override")]
+	[DDLRegistration(0x0073c18eu, "Format Override")]
 	public TextureFormat FormatOverride { get; set; } = TextureFormat.None;
 
-	[DDLRegistration(0xa9b5ff24u, "Depth Override")]
+	[DDLRegistration(0xb6dae0b0u, "Depth Override")]
 	public x0704d6a8 DepthOverride { get; set; } = x0704d6a8.None;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0xaab64da5u)]
 	public x7ada9111 AddressModeU { get; set; } = x7ada9111.Wrap;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x33bf1c1fu)]
 	public x7ada9111 AddressModeV { get; set; } = x7ada9111.Wrap;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x44b82c89u)]
 	public x7ada9111 AddressModeW { get; set; } = x7ada9111.Wrap;
 
-	[DDLRegistration(0xa9b5ff24u, "Use old GPU compressor - programmers only for debugging")]
+	[DDLRegistration(0xd7054ef1u, "Use old GPU compressor - programmers only for debugging")]
 	public bool UseGPUCompressor { get; set; } = false;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x633f3547u)]
 	public float MipBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa9b5ff24u, "Prevent mip bias when using upscalers - use to fix interference patterns")]
+	[DDLRegistration(0x87c1103fu, "Prevent mip bias when using upscalers - use to fix interference patterns")]
 	public bool NoUpscalerBias { get; set; } = false;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x5a5854ddu)]
 	public uint MipMaxCount { get; set; } = 0x0000000b;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x1aa6c8afu)]
 	public uint MipMinSize { get; set; } = 0x00000008;
 
-	[DDLRegistration(0xa9b5ff24u, "Mip Gen")]
+	[DDLRegistration(0x03980e18u, "Mip Gen")]
 	public TextureMipGen? MipGen { get; set; } = default;
 
-	[DDLRegistration(0xa9b5ff24u, "Mip Gen Alpha")]
+	[DDLRegistration(0xbf61f088u, "Mip Gen Alpha")]
 	public TextureMipGenAlpha? MipGenAlpha { get; set; } = default;
 
-	[DDLRegistration(0xa9b5ff24u, "Source File Rotation")]
+	[DDLRegistration(0xb94bbb78u, "Source File Rotation")]
 	public RivetAssetId SourcePathRotation { get; set; } = default;
 
-	[DDLRegistration(0xa9b5ff24u, "Source File Normal")]
+	[DDLRegistration(0x7224e353u, "Source File Normal")]
 	public RivetAssetId SourcePathNormal { get; set; } = default;
 
-	[DDLRegistration(0xa9b5ff24u, "Texture Array")]
+	[DDLRegistration(0x97d4df1au, "Texture Array")]
 	public TextureArray? TextureArray { get; set; } = default;
 
-	[DDLRegistration(0xa9b5ff24u, "Power Of Two Alignment")]
+	[DDLRegistration(0x8d6bd151u, "Power Of Two Alignment")]
 	public x51a4a4a4 NonPowerOfTwo { get; set; } = x51a4a4a4.Smaller;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0xd5bf714du)]
 	public uint SizeClamp { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x7c94e5e2u)]
 	public uint SizeReduction { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa9b5ff24u, "Disable Streaming")]
+	[DDLRegistration(0xda36016cu, "Disable Streaming")]
 	public bool DisableStreaming { get; set; } = false;
 
-	[DDLRegistration(0xa9b5ff24u, "Disable Mid-Mips")]
+	[DDLRegistration(0x04eaf8a0u, "Disable Mid-Mips")]
 	public bool DisableMidMips { get; set; } = false;
 
-	[DDLRegistration(0xa9b5ff24u, "Disable Size Cap")]
+	[DDLRegistration(0x7657009du, "Disable Size Cap")]
 	public bool DisableSizeCap { get; set; } = false;
 
-	[DDLRegistration(0xa9b5ff24u, "HDR Exposure Bias")]
+	[DDLRegistration(0x719ebaddu, "HDR Exposure Bias")]
 	public float ExposureBias { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa9b5ff24u, "Pre-Multiply Alpha", "If set, the alpha channel will be pre-multiplied into the rgb channels.")]
+	[DDLRegistration(0xdcfd925du, "Pre-Multiply Alpha", "If set, the alpha channel will be pre-multiplied into the rgb channels.")]
 	public bool PreMultiplyAlpha { get; set; } = false;
 
-	[DDLRegistration(0xa9b5ff24u, "Deprecated", "If set, the texture will show up in debug views that highlight deprecated assets.")]
+	[DDLRegistration(0x257fff01u, "Deprecated", "If set, the texture will show up in debug views that highlight deprecated assets.")]
 	public bool Deprecated { get; set; } = false;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x3dff7da3u)]
 	public bool FlipNormalsX { get; set; } = false;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x4af84d35u)]
 	public bool FlipNormalsY { get; set; } = false;
 
-	[DDLRegistration(0xa9b5ff24u, "Gloss Normal Map")]
+	[DDLRegistration(0x8fc7a334u, "Gloss Normal Map")]
 	public RivetAssetId GlossNormalMap { get; set; } = default;
 
-	[DDLRegistration(0xa9b5ff24u)]
+	[DDLRegistration(0x36577553u)]
 	public float ToksvigScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa9b5ff24u, "High-Res Default IBL")]
+	[DDLRegistration(0xb2a5135eu, "High-Res Default IBL")]
 	public bool HighResDefaultIBL { get; set; } = false;
 
-	[DDLRegistration(0xa9b5ff24u, "IBL Light Mask", "A lat-long texture showing which texels from the IBL should be converted to run-time lights (white) and which should not (black).")]
+	[DDLRegistration(0xa8fdaeb4u, "IBL Light Mask", "A lat-long texture showing which texels from the IBL should be converted to run-time lights (white) and which should not (black).")]
 	public RivetAssetId IBLLightMask { get; set; } = default;
 
-	[DDLRegistration(0xa9b5ff24u, "Automate IBL Lights", "If set, the run-time lights extracted from the IBL Light Mask will be passed along to the atmosphere and automatically enabled at run-time when viewing single-assets.")]
+	[DDLRegistration(0x1030af97u, "Automate IBL Lights", "If set, the run-time lights extracted from the IBL Light Mask will be passed along to the atmosphere and automatically enabled at run-time when viewing single-assets.")]
 	public bool AutomateIBLLights { get; set; } = true;
 
-	[DDLRegistration(0xa9b5ff24u, "!PC ONLY! Clamp", "!PC ONLY! The minimum texture quality that should be used for this texture.")]
+	[DDLRegistration(0xb950bb3bu, "!PC ONLY! Clamp", "!PC ONLY! The minimum texture quality that should be used for this texture.")]
 	public x96db4657 Clamp { get; set; } = x96db4657.Low;
 
-	[DDLRegistration(0xa9b5ff24u, "!PC ONLY! Shift", "!PC ONLY! The shift that will be applied to the texture quality. E.G.: With a shift of 1, 'Very Low' will become 'Low', 'Medium' will become 'High' and so forth.")]
+	[DDLRegistration(0xbc58f784u, "!PC ONLY! Shift", "!PC ONLY! The shift that will be applied to the texture quality. E.G.: With a shift of 1, 'Very Low' will become 'Low', 'Medium' will become 'High' and so forth.")]
 	public uint Shift { get; set; } = 0x00000000;
 
 	public static TextureDef Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class ClankPuzzleTimeData : DDLObjectType, IDDLObjectType<ClankPuzzleTime
 		HoldTime = ddl.GetValue<float>(0x1cb513d0u, HoldTime);
 	}
 
-	[DDLRegistration(0x86a74b84u, description: "Time to fade in the effect.")]
+	[DDLRegistration(0xc2c56073u, description: "Time to fade in the effect.")]
 	public float FadeInTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x86a74b84u, description: "Time to fade out the effect.")]
+	[DDLRegistration(0xf2879affu, description: "Time to fade out the effect.")]
 	public float FadeOutTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x86a74b84u, description: "How long do we hold the full effect after leaving.")]
+	[DDLRegistration(0x1cb513d0u, description: "How long do we hold the full effect after leaving.")]
 	public float HoldTime { get; set; } = 0.00f;
 
 	public static ClankPuzzleTimeData Create(DDLObject ddl) => new(ddl);

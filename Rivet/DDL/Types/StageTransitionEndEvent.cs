@@ -18,7 +18,7 @@ public class StageTransitionEndEvent : EventBase, IDDLObjectType<StageTransition
 		Stage = ddl.GetValue<byte>(0xdb2f5fa8u, Stage);
 	}
 
-	[DDLRegistration(0x4a90408du)]
+	[DDLRegistration(0xdb2f5fa8u)]
 	public byte Stage { get; set; } = 0x00;
 
 	public new static StageTransitionEndEvent Create(DDLObject ddl) => new(ddl);

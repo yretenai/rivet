@@ -19,10 +19,10 @@ public class AnimChunkRange : DDLObjectType, IDDLObjectType<AnimChunkRange> {
 		Max = ddl.GetValue<float>(0xb7230b40u, Max);
 	}
 
-	[DDLRegistration(0x13c7f7eeu)]
+	[DDLRegistration(0x8b2e3419u)]
 	public float Min { get; set; } = 0.00f;
 
-	[DDLRegistration(0x13c7f7eeu)]
+	[DDLRegistration(0xb7230b40u)]
 	public float Max { get; set; } = 0.00f;
 
 	public static AnimChunkRange Create(DDLObject ddl) => new(ddl);

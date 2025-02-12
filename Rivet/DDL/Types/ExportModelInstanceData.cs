@@ -19,10 +19,10 @@ public class ExportModelInstanceData : DDLObjectType, IDDLObjectType<ExportModel
 		WorldTransform = ddl.GetObject<DDLTransform>(0x7c3b36b3u);
 	}
 
-	[DDLRegistration(0xb355e71au)]
+	[DDLRegistration(0x8ed8fa72u)]
 	public RivetAssetId DaeFilename { get; set; } = default;
 
-	[DDLRegistration(0xb355e71au)]
+	[DDLRegistration(0x7c3b36b3u)]
 	public DDLTransform? WorldTransform { get; set; } = default;
 
 	public static ExportModelInstanceData Create(DDLObject ddl) => new(ddl);

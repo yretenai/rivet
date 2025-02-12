@@ -19,10 +19,10 @@ public class UserSigninCanceledEvent : EventBase, IDDLObjectType<UserSigninCance
 		OnlineSignin = ddl.GetValue<bool>(0x237e6826u, OnlineSignin);
 	}
 
-	[DDLRegistration(0x5cc8be76u)]
+	[DDLRegistration(0xe4ebebdbu)]
 	public int UserIndex { get; set; } = 0;
 
-	[DDLRegistration(0x5cc8be76u)]
+	[DDLRegistration(0x237e6826u)]
 	public bool OnlineSignin { get; set; } = false;
 
 	public new static UserSigninCanceledEvent Create(DDLObject ddl) => new(ddl);

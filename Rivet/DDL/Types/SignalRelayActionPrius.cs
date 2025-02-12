@@ -22,19 +22,19 @@ public class SignalRelayActionPrius : DDLObjectType, IDDLObjectType<SignalRelayA
 		DebugMsg = ddl.GetValue<bool>(0x6f756113u, DebugMsg);
 	}
 
-	[DDLRegistration(0x80f5c70du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
-	[DDLRegistration(0x80f5c70du, "Signal Name")]
+	[DDLRegistration(0x6eb3beb6u, "Signal Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x80f5c70du)]
+	[DDLRegistration(0x18486a4du)]
 	public GraphNodeNotesDef? Notes { get; set; } = default;
 
-	[DDLRegistration(0x80f5c70du, "Is Global Relay")]
+	[DDLRegistration(0xd36c3c29u, "Is Global Relay")]
 	public bool IsGlobal { get; set; } = false;
 
-	[DDLRegistration(0x80f5c70du, "Show Debug Message")]
+	[DDLRegistration(0x6f756113u, "Show Debug Message")]
 	public bool DebugMsg { get; set; } = false;
 
 	public static SignalRelayActionPrius Create(DDLObject ddl) => new(ddl);

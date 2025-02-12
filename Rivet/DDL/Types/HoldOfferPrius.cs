@@ -21,16 +21,16 @@ public class HoldOfferPrius : ProximityOfferPrius, IDDLObjectType<HoldOfferPrius
 		RequirePress = ddl.GetValue<bool>(0x645bf31du, RequirePress);
 	}
 
-	[DDLRegistration(0x34feead5u, "Hold Time")]
+	[DDLRegistration(0x1cb513d0u, "Hold Time")]
 	public float HoldTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x34feead5u, "Accumulate Time")]
+	[DDLRegistration(0xea9ab497u, "Accumulate Time")]
 	public bool AccumulateTime { get; set; } = false;
 
-	[DDLRegistration(0x34feead5u, "Stop On Timeout")]
+	[DDLRegistration(0x32c0049fu, "Stop On Timeout")]
 	public bool StopOnTimeout { get; set; } = true;
 
-	[DDLRegistration(0x34feead5u, "Require Press")]
+	[DDLRegistration(0x645bf31du, "Require Press")]
 	public bool RequirePress { get; set; } = false;
 
 	public new static HoldOfferPrius Create(DDLObject ddl) => new(ddl);

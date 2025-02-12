@@ -19,10 +19,10 @@ public class ReferenceRuleSet : DDLObjectType, IDDLObjectType<ReferenceRuleSet> 
 		Rules = ddl.GetObjects<ReferenceRule>(0x90c955fdu);
 	}
 
-	[DDLRegistration(0xa6b13186u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xa6b13186u, description: "Rules are fired for Prii that make it past the specified type, field, and value filters")]
+	[DDLRegistration(0x90c955fdu, description: "Rules are fired for Prii that make it past the specified type, field, and value filters")]
 	public List<ReferenceRule?> Rules { get; set; } = [];
 
 	public static ReferenceRuleSet Create(DDLObject ddl) => new(ddl);

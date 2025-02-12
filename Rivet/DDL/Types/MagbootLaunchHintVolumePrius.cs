@@ -18,7 +18,7 @@ public class MagbootLaunchHintVolumePrius : DDLObjectType, IDDLObjectType<Magboo
 		DestinationHintVolumes = ddl.GetValues<RivetAssetId>(0xab1895deu);
 	}
 
-	[DDLRegistration(0xd991efecu, description: "The list of hint volumes that can be reached from this one.")]
+	[DDLRegistration(0xab1895deu, description: "The list of hint volumes that can be reached from this one.")]
 	public List<RivetAssetId> DestinationHintVolumes { get; set; } = [];
 
 	public static MagbootLaunchHintVolumePrius Create(DDLObject ddl) => new(ddl);

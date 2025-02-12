@@ -20,13 +20,13 @@ public class MusicIntensityTrackerScriptActionPrius : DDLObjectType, IDDLObjectT
 		SendIntensityOnActivation = ddl.GetValue<bool>(0x64de6c27u, SendIntensityOnActivation);
 	}
 
-	[DDLRegistration(0x30f37d23u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
-	[DDLRegistration(0x30f37d23u, "Start Listening")]
+	[DDLRegistration(0xda0f12cau, "Start Listening")]
 	public bool StartListening { get; set; } = false;
 
-	[DDLRegistration(0x30f37d23u, "Send Intensity On Activation")]
+	[DDLRegistration(0x64de6c27u, "Send Intensity On Activation")]
 	public bool SendIntensityOnActivation { get; set; } = true;
 
 	public static MusicIntensityTrackerScriptActionPrius Create(DDLObject ddl) => new(ddl);

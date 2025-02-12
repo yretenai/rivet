@@ -20,13 +20,13 @@ public class MissionNodeInfoUI : DDLObjectType, IDDLObjectType<MissionNodeInfoUI
 		AvailablePlanetName = ddl.GetString(0x1dae589c) ?? AvailablePlanetName;
 	}
 
-	[DDLRegistration(0x405d498eu, "Mission Name (Ship & Map)", "Loctag for the name of this mission (Ship menu and Pause Map objective list).")]
+	[DDLRegistration(0xa0041b54u, "Mission Name (Ship & Map)", "Loctag for the name of this mission (Ship menu and Pause Map objective list).")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0x405d498eu, "Mission Description (Ship)", "Loctag for the description of this mission (Ship menu).")]
+	[DDLRegistration(0xe61fee0cu, "Mission Description (Ship)", "Loctag for the description of this mission (Ship menu).")]
 	public string? DescriptionLocTag { get; set; } = default;
 
-	[DDLRegistration(0x405d498eu, "Available Planet Name", "Name of the planet that this mission should be associated with while it is available.")]
+	[DDLRegistration(0x1dae589cu, "Available Planet Name", "Name of the planet that this mission should be associated with while it is available.")]
 	public string? AvailablePlanetName { get; set; } = default;
 
 	public static MissionNodeInfoUI Create(DDLObject ddl) => new(ddl);

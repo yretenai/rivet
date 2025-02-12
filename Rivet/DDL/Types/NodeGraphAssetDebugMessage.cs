@@ -18,7 +18,7 @@ public class NodeGraphAssetDebugMessage : DDLObjectType, IDDLObjectType<NodeGrap
 		AssetId = ddl.GetValue<RivetAssetId>(0xb6e788d7u, AssetId);
 	}
 
-	[DDLRegistration(0x5f38a6ccu)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static NodeGraphAssetDebugMessage Create(DDLObject ddl) => new(ddl);

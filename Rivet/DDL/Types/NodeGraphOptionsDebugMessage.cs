@@ -19,10 +19,10 @@ public class NodeGraphOptionsDebugMessage : DDLObjectType, IDDLObjectType<NodeGr
 		WantsAutoAttach = ddl.GetValue<bool>(0x1a21a162u, WantsAutoAttach);
 	}
 
-	[DDLRegistration(0xa06ca8cdu)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa06ca8cdu)]
+	[DDLRegistration(0x1a21a162u)]
 	public bool WantsAutoAttach { get; set; } = false;
 
 	public static NodeGraphOptionsDebugMessage Create(DDLObject ddl) => new(ddl);

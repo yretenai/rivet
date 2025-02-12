@@ -19,10 +19,10 @@ public class CheckActorStatusEffectActionPrius : DDLObjectType, IDDLObjectType<C
 		StatusEffect = ddl.GetObject<StatusEffectBasePrius>(0x0f201128u);
 	}
 
-	[DDLRegistration(0xa1140693u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0xa1140693u)]
+	[DDLRegistration(0x0f201128u)]
 	public StatusEffectBasePrius? StatusEffect { get; set; } = default;
 
 	public static CheckActorStatusEffectActionPrius Create(DDLObject ddl) => new(ddl);

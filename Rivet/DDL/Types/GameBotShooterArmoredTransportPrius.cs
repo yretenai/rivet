@@ -21,16 +21,16 @@ public class GameBotShooterArmoredTransportPrius : SpawnerBotPrius, IDDLObjectTy
 		TurretPivotType = ddl.GetObject<TurretPivotBase>(0x303abbcdu);
 	}
 
-	[DDLRegistration(0xee35c845u)]
+	[DDLRegistration(0x387f35fbu)]
 	public BotIntroDataDropship? IntroData { get; set; } = default;
 
-	[DDLRegistration(0xee35c845u, "Intro Target Group", "Optional Group of actors for transport to fire on while introing")]
+	[DDLRegistration(0x444e5be2u, "Intro Target Group", "Optional Group of actors for transport to fire on while introing")]
 	public RivetAssetId IntroTargetGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xee35c845u, "Stop attack on setting path", "Stop attack behavior when scripted to move on a curve")]
+	[DDLRegistration(0x63fc10feu, "Stop attack on setting path", "Stop attack behavior when scripted to move on a curve")]
 	public bool StopAttackOnPath { get; set; } = false;
 
-	[DDLRegistration(0xee35c845u)]
+	[DDLRegistration(0x303abbcdu)]
 	public TurretPivotBase? TurretPivotType { get; set; } = default;
 
 	public new static GameBotShooterArmoredTransportPrius Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class NodalShotBasePrius : ShotBasePrius, IDDLObjectType<NodalShotBasePri
 		ShowReticle = ddl.GetValue<bool>(0x7eea1a49u, ShowReticle);
 	}
 
-	[DDLRegistration(0xd620bc85u)]
+	[DDLRegistration(0xd0f84859u)]
 	public RivetAssetId NodeGraph { get; set; } = default;
 
-	[DDLRegistration(0xd620bc85u)]
+	[DDLRegistration(0xc7e68df8u)]
 	public float Lifetime { get; set; } = 3.00f;
 
-	[DDLRegistration(0xd620bc85u)]
+	[DDLRegistration(0x811184bdu)]
 	public float UpdateInterval { get; set; } = 0.50f;
 
-	[DDLRegistration(0xd620bc85u)]
+	[DDLRegistration(0xd8c2f7d9u)]
 	public bool DelayFirstUpdateInterval { get; set; } = false;
 
-	[DDLRegistration(0xd620bc85u)]
+	[DDLRegistration(0xd1a39273u)]
 	public bool UseActorCollision { get; set; } = false;
 
-	[DDLRegistration(0xd620bc85u)]
+	[DDLRegistration(0x589995ddu)]
 	public bool LifetimeExpiredOnMaxRange { get; set; } = false;
 
-	[DDLRegistration(0xd620bc85u)]
+	[DDLRegistration(0x7eea1a49u)]
 	public bool ShowReticle { get; set; } = true;
 
 	public new static NodalShotBasePrius Create(DDLObject ddl) => new(ddl);

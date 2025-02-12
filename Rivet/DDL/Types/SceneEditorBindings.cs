@@ -18,7 +18,7 @@ public class SceneEditorBindings : DDLObjectType, IDDLObjectType<SceneEditorBind
 		BindingGroups = ddl.GetObjects<SceneEditorGroupOfBindings>(0x0c44ee57u);
 	}
 
-	[DDLRegistration(0xb6752505u)]
+	[DDLRegistration(0x0c44ee57u)]
 	public List<SceneEditorGroupOfBindings?> BindingGroups { get; set; } = [];
 
 	public static SceneEditorBindings Create(DDLObject ddl) => new(ddl);

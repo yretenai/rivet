@@ -19,10 +19,10 @@ public class DebugActorActionPrius : DDLObjectType, IDDLObjectType<DebugActorAct
 		LockSelection = ddl.GetValue<bool>(0xeceea1afu, LockSelection);
 	}
 
-	[DDLRegistration(0x2858f67au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0x2858f67au)]
+	[DDLRegistration(0xeceea1afu)]
 	public bool LockSelection { get; set; } = true;
 
 	public static DebugActorActionPrius Create(DDLObject ddl) => new(ddl);

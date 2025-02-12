@@ -18,7 +18,7 @@ public class AimAssistSnapLocationListItem : DDLObjectType, IDDLObjectType<AimAs
 		SnapLocation = ddl.GetObject<AimAssistSnapLocation>(0xe56188bau);
 	}
 
-	[DDLRegistration(0xfc51b7d3u)]
+	[DDLRegistration(0xe56188bau)]
 	public AimAssistSnapLocation? SnapLocation { get; set; } = default;
 
 	public static AimAssistSnapLocationListItem Create(DDLObject ddl) => new(ddl);

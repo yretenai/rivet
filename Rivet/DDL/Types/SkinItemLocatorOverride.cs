@@ -18,7 +18,7 @@ public class SkinItemLocatorOverride : DDLObjectType, IDDLObjectType<SkinItemLoc
 		LocatorName = ddl.GetString(0x5814524d) ?? LocatorName;
 	}
 
-	[DDLRegistration(0x0fa42787u, "Locator Name Override", "Locator name override")]
+	[DDLRegistration(0x5814524du, "Locator Name Override", "Locator name override")]
 	public string? LocatorName { get; set; } = default;
 
 	public static SkinItemLocatorOverride Create(DDLObject ddl) => new(ddl);

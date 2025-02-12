@@ -22,19 +22,19 @@ public class WeaponFossilizerPrius : WeaponGamePrius, IDDLObjectType<WeaponFossi
 		ZoomAlphaMod = ddl.GetValue<float>(0x60e945f9u, ZoomAlphaMod);
 	}
 
-	[DDLRegistration(0xb5903d67u, description: "How slow will the game run when the player is holding down the aim trigger.  0.3 will set the game speed to 30%.")]
+	[DDLRegistration(0x38d95575u, description: "How slow will the game run when the player is holding down the aim trigger.  0.3 will set the game speed to 30%.")]
 	public float SlowDownPercent { get; set; } = 0.50f;
 
-	[DDLRegistration(0xb5903d67u, description: "How long can the player slow down time before they run out of slow down.  5 will represent of 5 seconds of time.")]
+	[DDLRegistration(0x2b6e0d23u, description: "How long can the player slow down time before they run out of slow down.  5 will represent of 5 seconds of time.")]
 	public float SlowDownDuration { get; set; } = 5.00f;
 
-	[DDLRegistration(0xb5903d67u, description: "How many bonus bullets can you have loaded up")]
+	[DDLRegistration(0xdefd416du, description: "How many bonus bullets can you have loaded up")]
 	public uint BonusBulletCount { get; set; } = 0x00000002;
 
-	[DDLRegistration(0xb5903d67u, description: "How long between shots")]
+	[DDLRegistration(0xbcbb4b3eu, description: "How long between shots")]
 	public float TimeToShootBonusBullet { get; set; } = 0.05f;
 
-	[DDLRegistration(0xb5903d67u, description: "When zoomed, we apply this alpha keyframe to the effect to make it look better while zoomed")]
+	[DDLRegistration(0x60e945f9u, description: "When zoomed, we apply this alpha keyframe to the effect to make it look better while zoomed")]
 	public float ZoomAlphaMod { get; set; } = 0.70f;
 
 	public new static WeaponFossilizerPrius Create(DDLObject ddl) => new(ddl);

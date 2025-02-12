@@ -18,7 +18,7 @@ public class GroundResponseOnEvent : EventBase, IDDLObjectType<GroundResponseOnE
 		ResponseNameHash = ddl.GetValue<uint>(0x5f78e207u, ResponseNameHash);
 	}
 
-	[DDLRegistration(0xe115abb8u)]
+	[DDLRegistration(0x5f78e207u)]
 	public uint ResponseNameHash { get; set; } = 0x00000000;
 
 	public new static GroundResponseOnEvent Create(DDLObject ddl) => new(ddl);

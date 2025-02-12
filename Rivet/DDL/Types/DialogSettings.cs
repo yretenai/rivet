@@ -20,13 +20,13 @@ public class DialogSettings : DDLObjectType, IDDLObjectType<DialogSettings> {
 		DebugLogSubtitles = ddl.GetValue<bool>(0x3276d97au, DebugLogSubtitles);
 	}
 
-	[DDLRegistration(0x1732d215u, description: "Display the active dialogs")]
+	[DDLRegistration(0x67f12169u, description: "Display the active dialogs")]
 	public bool DebugDisplayActiveDialogs { get; set; } = false;
 
-	[DDLRegistration(0x1732d215u, description: "Highlight speaking actors")]
+	[DDLRegistration(0x86afe5bau, description: "Highlight speaking actors")]
 	public bool DebugHighlightSpeakingActors { get; set; } = false;
 
-	[DDLRegistration(0x1732d215u, description: "Log subtitles to TTY")]
+	[DDLRegistration(0x3276d97au, description: "Log subtitles to TTY")]
 	public bool DebugLogSubtitles { get; set; } = false;
 
 	public static DialogSettings Create(DDLObject ddl) => new(ddl);

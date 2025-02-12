@@ -18,7 +18,7 @@ public class SetHomeAreaEvent : EventBase, IDDLObjectType<SetHomeAreaEvent> {
 		HomeArea = ddl.GetValue<uint>(0x52894ce8u, HomeArea);
 	}
 
-	[DDLRegistration(0xc9563956u, description: "ActorGroup of actors with Volume scene objects.  This is the area the recipient will be confined to.")]
+	[DDLRegistration(0x52894ce8u, description: "ActorGroup of actors with Volume scene objects.  This is the area the recipient will be confined to.")]
 	public uint HomeArea { get; set; } = 0x00000000;
 
 	public new static SetHomeAreaEvent Create(DDLObject ddl) => new(ddl);

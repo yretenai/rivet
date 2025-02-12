@@ -20,13 +20,13 @@ public class DamageStateManagerFinaleHeartPrius : DDLObjectType, IDDLObjectType<
 		Chamber3Configs = ddl.GetObject<DamageStateConfigDataHeartChamber>(0xa7bec203u);
 	}
 
-	[DDLRegistration(0x3130e9bcu)]
+	[DDLRegistration(0xe59bc57eu)]
 	public DamageStateConfigDataHeartChamber? Chamber1Configs { get; set; } = default;
 
-	[DDLRegistration(0x3130e9bcu)]
+	[DDLRegistration(0x6b14c29du)]
 	public DamageStateConfigDataHeartChamber? Chamber2Configs { get; set; } = default;
 
-	[DDLRegistration(0x3130e9bcu)]
+	[DDLRegistration(0xa7bec203u)]
 	public DamageStateConfigDataHeartChamber? Chamber3Configs { get; set; } = default;
 
 	public static DamageStateManagerFinaleHeartPrius Create(DDLObject ddl) => new(ddl);

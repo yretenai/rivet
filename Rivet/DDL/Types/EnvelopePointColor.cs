@@ -22,19 +22,19 @@ public class EnvelopePointColor : DDLObjectType, IDDLObjectType<EnvelopePointCol
 		Y = ddl.GetObject<DDLVector3>(0x2934711bu);
 	}
 
-	[DDLRegistration(0x5e6e7609u)]
+	[DDLRegistration(0xade0c28bu)]
 	public bool CanModifyX { get; set; } = true;
 
-	[DDLRegistration(0x5e6e7609u)]
+	[DDLRegistration(0xdae7f21du)]
 	public bool CanModifyY { get; set; } = true;
 
-	[DDLRegistration(0x5e6e7609u)]
+	[DDLRegistration(0x367642d7u)]
 	public int HoudiniInterpolationType { get; set; } = 0;
 
-	[DDLRegistration(0x5e6e7609u)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x5e6e7609u)]
+	[DDLRegistration(0x2934711bu)]
 	public DDLVector3? Y { get; set; } = default;
 
 	public static EnvelopePointColor Create(DDLObject ddl) => new(ddl);

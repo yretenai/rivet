@@ -20,13 +20,13 @@ public class AmbientSoundCurveFollowPrius : DDLObjectType, IDDLObjectType<Ambien
 		PosOption = ddl.GetEnum<xbb0b7195>(0xacf494f3u, xbb0b7195Values.Lookup);
 	}
 
-	[DDLRegistration(0x3266e753u, description: "Optional SceneObjectHandle to a Curve that is set via code.")]
+	[DDLRegistration(0x51f0cc7bu, description: "Optional SceneObjectHandle to a Curve that is set via code.")]
 	public uint CurveObjectHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3266e753u, "Curve", "Curve to follow")]
+	[DDLRegistration(0x4eca9176u, "Curve", "Curve to follow")]
 	public RivetAssetId Curve { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3266e753u, "Position Type")]
+	[DDLRegistration(0xacf494f3u, "Position Type")]
 	public xbb0b7195 PosOption { get; set; } = xbb0b7195.SoundListenerPos;
 
 	public static AmbientSoundCurveFollowPrius Create(DDLObject ddl) => new(ddl);

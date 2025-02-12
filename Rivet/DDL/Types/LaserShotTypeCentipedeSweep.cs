@@ -20,13 +20,13 @@ public class LaserShotTypeCentipedeSweep : BotComboLaserShotType, IDDLObjectType
 		LaserSweepTime = ddl.GetValue<float>(0x0d88b95eu, LaserSweepTime);
 	}
 
-	[DDLRegistration(0x6c2539a9u, description: "How long to hold laser before sweeping")]
+	[DDLRegistration(0x5c1cd434u, description: "How long to hold laser before sweeping")]
 	public float LaserTellTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6c2539a9u, description: "How long to the laser travels before hitting the heros predicted position")]
+	[DDLRegistration(0x793ca197u, description: "How long to the laser travels before hitting the heros predicted position")]
 	public float LaserHeroCollideTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x6c2539a9u, description: "How long it takes for laser to fully sweep (Must be longer than LaserHeroCollideTime)")]
+	[DDLRegistration(0x0d88b95eu, description: "How long it takes for laser to fully sweep (Must be longer than LaserHeroCollideTime)")]
 	public float LaserSweepTime { get; set; } = 2.00f;
 
 	public new static LaserShotTypeCentipedeSweep Create(DDLObject ddl) => new(ddl);

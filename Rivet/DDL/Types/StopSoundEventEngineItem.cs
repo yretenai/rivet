@@ -18,7 +18,7 @@ public class StopSoundEventEngineItem : DDLObjectType, IDDLObjectType<StopSoundE
 		WwiseEvent = ddl.GetObject<WwiseEvent>(0xcebb3bc3u);
 	}
 
-	[DDLRegistration(0x1e45129bu)]
+	[DDLRegistration(0xcebb3bc3u)]
 	public WwiseEvent? WwiseEvent { get; set; } = default;
 
 	public static StopSoundEventEngineItem Create(DDLObject ddl) => new(ddl);

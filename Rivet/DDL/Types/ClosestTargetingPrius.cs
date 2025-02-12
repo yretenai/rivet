@@ -18,7 +18,7 @@ public class ClosestTargetingPrius : TargetingBasePrius, IDDLObjectType<ClosestT
 		MaxDistance = ddl.GetValue<float>(0x88831235u, MaxDistance);
 	}
 
-	[DDLRegistration(0x287ecab9u)]
+	[DDLRegistration(0x88831235u)]
 	public float MaxDistance { get; set; } = 0.00f;
 
 	public new static ClosestTargetingPrius Create(DDLObject ddl) => new(ddl);

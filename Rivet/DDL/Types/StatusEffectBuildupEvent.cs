@@ -20,13 +20,13 @@ public class StatusEffectBuildupEvent : EventBase, IDDLObjectType<StatusEffectBu
 		StatusAmount = ddl.GetValue<float>(0x37e1f098u, StatusAmount);
 	}
 
-	[DDLRegistration(0xf8b77e6au)]
+	[DDLRegistration(0x840c154du)]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0xf8b77e6au)]
+	[DDLRegistration(0x29adde1eu)]
 	public float PercentFull { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf8b77e6au)]
+	[DDLRegistration(0x37e1f098u)]
 	public float StatusAmount { get; set; } = 0.00f;
 
 	public new static StatusEffectBuildupEvent Create(DDLObject ddl) => new(ddl);

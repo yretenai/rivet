@@ -19,10 +19,10 @@ public class AlphaSyncPrius : DDLObjectType, IDDLObjectType<AlphaSyncPrius> {
 		HighQualityAlpha = ddl.GetValue<bool>(0xee39dbf5u, HighQualityAlpha);
 	}
 
-	[DDLRegistration(0x7e4e5b5cu, description: "Alpha value in [0,1] range")]
+	[DDLRegistration(0xc5ef7ab8u, description: "Alpha value in [0,1] range")]
 	public float InitialAlpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7e4e5b5cu, description: "Use high quality alpha that culls backfacing polys")]
+	[DDLRegistration(0xee39dbf5u, description: "Use high quality alpha that culls backfacing polys")]
 	public bool HighQualityAlpha { get; set; } = false;
 
 	public static AlphaSyncPrius Create(DDLObject ddl) => new(ddl);

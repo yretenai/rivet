@@ -19,10 +19,10 @@ public class OnShotSpawnedEventActionPrius : DDLObjectType, IDDLObjectType<OnSho
 		InitListening = ddl.GetValue<bool>(0xf387b27au, InitListening);
 	}
 
-	[DDLRegistration(0x071eda04u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x071eda04u, "Init Listening?", "Whether to, on load, start listening for the equip or not.")]
+	[DDLRegistration(0xf387b27au, "Init Listening?", "Whether to, on load, start listening for the equip or not.")]
 	public bool InitListening { get; set; } = true;
 
 	public static OnShotSpawnedEventActionPrius Create(DDLObject ddl) => new(ddl);

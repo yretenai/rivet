@@ -25,28 +25,28 @@ public class CinematicCommandEngineItem : DDLObjectType, IDDLObjectType<Cinemati
 		ValueTuidSet = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x8699c128, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 	}
 
-	[DDLRegistration(0x625fa169u)]
+	[DDLRegistration(0x8f2089ecu)]
 	public x7756f5e5 Command { get; set; } = x7756f5e5.ActivateTracks;
 
-	[DDLRegistration(0x625fa169u)]
+	[DDLRegistration(0x69d095b6u)]
 	public bool ValueBool { get; set; } = false;
 
-	[DDLRegistration(0x625fa169u)]
+	[DDLRegistration(0x1edff962u)]
 	public Cinematic2Def? ValueCinematic2Def { get; set; } = default;
 
-	[DDLRegistration(0x625fa169u)]
+	[DDLRegistration(0xab7ec26fu)]
 	public Cinematic2Options? ValueCinematic2Options { get; set; } = default;
 
-	[DDLRegistration(0x625fa169u)]
+	[DDLRegistration(0x2509cfb5u)]
 	public double ValueDouble { get; set; } = 0;
 
-	[DDLRegistration(0x625fa169u)]
+	[DDLRegistration(0x07dd7c95u)]
 	public DDLMatrix4? ValueMatrix { get; set; } = default;
 
-	[DDLRegistration(0x625fa169u)]
+	[DDLRegistration(0x61508ff3u)]
 	public string? ValueString { get; set; } = default;
 
-	[DDLRegistration(0x625fa169u)]
+	[DDLRegistration(0x8699c128u)]
 	public Dictionary<RivetAssetId, RivetAssetId> ValueTuidSet { get; set; } = [];
 
 	public static CinematicCommandEngineItem Create(DDLObject ddl) => new(ddl);

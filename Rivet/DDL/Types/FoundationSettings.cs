@@ -29,40 +29,40 @@ public class FoundationSettings : DDLObjectType, IDDLObjectType<FoundationSettin
 		UnbufferedHttpSend = ddl.GetValue<bool>(0x04f210a9u, UnbufferedHttpSend);
 	}
 
-	[DDLRegistration(0x16684a19u, description: "Controls runtime allocation of memory for profiling purposes")]
+	[DDLRegistration(0xe9b56f54u, description: "Controls runtime allocation of memory for profiling purposes")]
 	public bool ProfilingEnable { get; set; } = false;
 
-	[DDLRegistration(0x16684a19u, description: "If profiling is enabled, this is the amount of memory that will be allocated from the debug heap")]
+	[DDLRegistration(0x0a00f34fu, description: "If profiling is enabled, this is the amount of memory that will be allocated from the debug heap")]
 	public uint ProfilingMemorySize { get; set; } = 0x00400000;
 
-	[DDLRegistration(0x16684a19u, description: "Audit memory operations")]
+	[DDLRegistration(0x898108eeu, description: "Audit memory operations")]
 	public bool MemAuditEnable { get; set; } = false;
 
-	[DDLRegistration(0x16684a19u, description: "Run MemAuditorPrintReport() on shutdown")]
+	[DDLRegistration(0xbe17ccfcu, description: "Run MemAuditorPrintReport() on shutdown")]
 	public bool MemAuditOnShutdown { get; set; } = false;
 
-	[DDLRegistration(0x16684a19u, description: "If set, does not generate warning messages when issues parsing JSON text are encountered")]
+	[DDLRegistration(0x5d748209u, description: "If set, does not generate warning messages when issues parsing JSON text are encountered")]
 	public bool MuteDdlJsonParseWarnings { get; set; } = false;
 
-	[DDLRegistration(0x16684a19u)]
+	[DDLRegistration(0x61eca702u)]
 	public string? DevHttpServerIp { get; set; } = "0.0.0.0";
 
-	[DDLRegistration(0x16684a19u)]
+	[DDLRegistration(0x69f4ea18u)]
 	public ushort DevHttpServerBindPort { get; set; } = 0x0000;
 
-	[DDLRegistration(0x16684a19u, "Enable TTY", "Set to 'off' to disable all Printf")]
+	[DDLRegistration(0xdd9f7f4eu, "Enable TTY", "Set to 'off' to disable all Printf")]
 	public bool TtyEnable { get; set; } = false;
 
-	[DDLRegistration(0x16684a19u)]
+	[DDLRegistration(0xfdcbdf91u)]
 	public uint DdlThreadMax { get; set; } = 0x00000040;
 
-	[DDLRegistration(0x16684a19u)]
+	[DDLRegistration(0xcc591451u)]
 	public DdlDefaultFallbackHeapInfo? DdlDefaultFallbackHeapInfo { get; set; } = default;
 
-	[DDLRegistration(0x16684a19u)]
+	[DDLRegistration(0x202ea4cau)]
 	public string? BuildName { get; set; } = default;
 
-	[DDLRegistration(0x16684a19u)]
+	[DDLRegistration(0x04f210a9u)]
 	public bool UnbufferedHttpSend { get; set; } = true;
 
 	public static FoundationSettings Create(DDLObject ddl) => new(ddl);

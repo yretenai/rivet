@@ -20,13 +20,13 @@ public class WeaponBurstStartedEvent : EventBase, IDDLObjectType<WeaponBurstStar
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x062aec1fu)]
+	[DDLRegistration(0xee73b5b3u)]
 	public uint TriggerIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x062aec1fu)]
+	[DDLRegistration(0x108d4906u)]
 	public int NumShots { get; set; } = 0;
 
-	[DDLRegistration(0x062aec1fu)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
 	public new static WeaponBurstStartedEvent Create(DDLObject ddl) => new(ddl);

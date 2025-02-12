@@ -19,10 +19,10 @@ public class PulseNavObstruction : DDLObjectType, IDDLObjectType<PulseNavObstruc
 		RotationLocator = ddl.GetString(0x6434df47) ?? RotationLocator;
 	}
 
-	[DDLRegistration(0x8fdbd163u)]
+	[DDLRegistration(0xc4633319u)]
 	public NavMeshObstructionShapeBase? Shape { get; set; } = default;
 
-	[DDLRegistration(0x8fdbd163u)]
+	[DDLRegistration(0x6434df47u)]
 	public string? RotationLocator { get; set; } = default;
 
 	public static PulseNavObstruction Create(DDLObject ddl) => new(ddl);

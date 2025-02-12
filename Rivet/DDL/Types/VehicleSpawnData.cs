@@ -21,16 +21,16 @@ public class VehicleSpawnData : ActorSpawnData, IDDLObjectType<VehicleSpawnData>
 		Seed = ddl.GetValue<uint>(0x741723b6u, Seed);
 	}
 
-	[DDLRegistration(0x823d79fcu)]
+	[DDLRegistration(0x45e23d0fu)]
 	public DDLVector3? SpawnPos { get; set; } = default;
 
-	[DDLRegistration(0x823d79fcu)]
+	[DDLRegistration(0x1867ce41u)]
 	public uint SpawnNode { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x823d79fcu)]
+	[DDLRegistration(0x7c00224du)]
 	public uint TargetNode { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x823d79fcu)]
+	[DDLRegistration(0x741723b6u)]
 	public uint Seed { get; set; } = 0x00000000;
 
 	public new static VehicleSpawnData Create(DDLObject ddl) => new(ddl);

@@ -29,40 +29,40 @@ public class WeaponTriggerData : DDLObjectType, IDDLObjectType<WeaponTriggerData
 		FireAnimName = ddl.GetString(0x1f571875) ?? FireAnimName;
 	}
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0x047ee25au)]
 	public x58d054ed Button { get; set; } = x58d054ed.InputFire;
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0xe8607298u)]
 	public xaab5853c TriggerType { get; set; } = xaab5853c.None;
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0xbffa0346u)]
 	public xbcfeb3f2 ResponseType { get; set; } = xbcfeb3f2.Fire;
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0x65059308u)]
 	public xa80df7b6 TriggerFlags { get; set; } = (xa80df7b6) 0x00000000;
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0x23b96c51u)]
 	public x77a4e9ba EmitterIndex { get; set; } = x77a4e9ba.None;
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0xf051849du)]
 	public xa80b028a AmmoIndex { get; set; } = xa80b028a.None;
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0xc409037fu)]
 	public x63d1a5d5 ShotIndex { get; set; } = x63d1a5d5.None;
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0xb60559ceu)]
 	public x4dd7659a AccuracyIndex { get; set; } = x4dd7659a.None;
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0xd80d6f55u)]
 	public x0a26ce77 UserStateIndex { get; set; } = x0a26ce77.None;
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0x7ea9ad35u)]
 	public float FireSoundRange { get; set; } = 10.00f;
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0xaabfb37fu)]
 	public float RoundsPerSecond { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd73612d3u)]
+	[DDLRegistration(0x1f571875u)]
 	public string? FireAnimName { get; set; } = "";
 
 	public static WeaponTriggerData Create(DDLObject ddl) => new(ddl);

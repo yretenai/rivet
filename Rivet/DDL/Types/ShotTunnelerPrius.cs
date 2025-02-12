@@ -20,13 +20,13 @@ public class ShotTunnelerPrius : ExplosiveBulletPrius, IDDLObjectType<ShotTunnel
 		BombData = ddl.GetObject<TunnelerBombPrius>(0x0b0e423bu);
 	}
 
-	[DDLRegistration(0x8b248f4bu)]
+	[DDLRegistration(0x39fb8d44u)]
 	public bool IsPuppy { get; set; } = false;
 
-	[DDLRegistration(0x8b248f4bu)]
+	[DDLRegistration(0x1d98aabau)]
 	public RivetAssetId PuppyAsset { get; set; } = default;
 
-	[DDLRegistration(0x8b248f4bu)]
+	[DDLRegistration(0x0b0e423bu)]
 	public TunnelerBombPrius? BombData { get; set; } = default;
 
 	public new static ShotTunnelerPrius Create(DDLObject ddl) => new(ddl);

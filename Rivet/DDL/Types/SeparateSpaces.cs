@@ -19,10 +19,10 @@ public class SeparateSpaces : DDLObjectType, IDDLObjectType<SeparateSpaces> {
 		Position = ddl.GetEnum<xfe5100b1>(0xbc2d5985u, xfe5100b1Values.Lookup);
 	}
 
-	[DDLRegistration(0x9054433bu)]
+	[DDLRegistration(0xbcb74ebfu)]
 	public xfe5100b1 Direction { get; set; } = xfe5100b1.Local;
 
-	[DDLRegistration(0x9054433bu)]
+	[DDLRegistration(0xbc2d5985u)]
 	public xfe5100b1 Position { get; set; } = xfe5100b1.Local;
 
 	public static SeparateSpaces Create(DDLObject ddl) => new(ddl);

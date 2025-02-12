@@ -19,10 +19,10 @@ public class VisualEffectNodeConnectedOutputPort : DDLObjectType, IDDLObjectType
 		Id = ddl.GetString(0x8a514a8d) ?? Id;
 	}
 
-	[DDLRegistration(0xe97eb57bu)]
+	[DDLRegistration(0xaea97d2bu)]
 	public List<VisualEffectNodeConnectedPort?> Targets { get; set; } = [];
 
-	[DDLRegistration(0xe97eb57bu)]
+	[DDLRegistration(0x8a514a8du)]
 	public string? Id { get; set; } = default;
 
 	public static VisualEffectNodeConnectedOutputPort Create(DDLObject ddl) => new(ddl);

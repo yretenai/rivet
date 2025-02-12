@@ -19,10 +19,10 @@ public class Cinematic2ListenerActionPrius : DDLObjectType, IDDLObjectType<Cinem
 		StartActive = ddl.GetValue<bool>(0x3e035e82u, StartActive);
 	}
 
-	[DDLRegistration(0xf7266b48u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Cinematic;
 
-	[DDLRegistration(0xf7266b48u)]
+	[DDLRegistration(0x3e035e82u)]
 	public bool StartActive { get; set; } = true;
 
 	public static Cinematic2ListenerActionPrius Create(DDLObject ddl) => new(ddl);

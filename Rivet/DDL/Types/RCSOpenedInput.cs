@@ -18,7 +18,7 @@ public class RCSOpenedInput : DDLObjectType, IDDLObjectType<RCSOpenedInput> {
 		Changelist = ddl.GetValue<uint>(0x03b0ddc6u, Changelist);
 	}
 
-	[DDLRegistration(0x360c5001u, description: "Changelist to use; 0 (or unspecified) means to use the default changelist.")]
+	[DDLRegistration(0x03b0ddc6u, description: "Changelist to use; 0 (or unspecified) means to use the default changelist.")]
 	public uint Changelist { get; set; } = 0x00000000;
 
 	public static RCSOpenedInput Create(DDLObject ddl) => new(ddl);

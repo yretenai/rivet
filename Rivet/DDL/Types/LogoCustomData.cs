@@ -19,10 +19,10 @@ public class LogoCustomData : DDLObjectType, IDDLObjectType<LogoCustomData> {
 		Languages = ddl.GetEnums<x0572515d>(0x222ccc75u, x0572515dValues.Lookup);
 	}
 
-	[DDLRegistration(0xd26aab35u, description: "Image to display for the associated language.")]
+	[DDLRegistration(0xa20558a7u, description: "Image to display for the associated language.")]
 	public RivetAssetId LogoImage { get; set; } = "";
 
-	[DDLRegistration(0xd26aab35u, description: "The languages this logo is used for.")]
+	[DDLRegistration(0x222ccc75u, description: "The languages this logo is used for.")]
 	public List<x0572515d> Languages { get; set; } = [];
 
 	public static LogoCustomData Create(DDLObject ddl) => new(ddl);

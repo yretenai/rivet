@@ -21,16 +21,16 @@ public class ModelSplineSubsetDef : DDLObjectType, IDDLObjectType<ModelSplineSub
 		SplineDescription = ddl.GetObject<ModelSplineDescriptionDef>(0x89dbdd10u);
 	}
 
-	[DDLRegistration(0x4da0c6c8u, description: "Name of this spline subset.")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of this spline subset.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x4da0c6c8u)]
+	[DDLRegistration(0xee2290d8u)]
 	public xff284f2a SkinningType { get; set; } = xff284f2a.Disabled;
 
-	[DDLRegistration(0x4da0c6c8u, "Description Config File Path", "The path to config that specifies how the splines are rendered.")]
+	[DDLRegistration(0x844f271au, "Description Config File Path", "The path to config that specifies how the splines are rendered.")]
 	public RivetAssetId SplineDescriptionConfigFilePath { get; set; } = default;
 
-	[DDLRegistration(0x4da0c6c8u, "Description")]
+	[DDLRegistration(0x89dbdd10u, "Description")]
 	public ModelSplineDescriptionDef? SplineDescription { get; set; } = default;
 
 	public static ModelSplineSubsetDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class PredictiveAccuracyPrius : WeaponAccuracyBasePrius, IDDLObjectType<P
 		MaxPredictionTime = ddl.GetValue<float>(0x5d5a4ee9u, MaxPredictionTime);
 	}
 
-	[DDLRegistration(0xf3c9c8c5u)]
+	[DDLRegistration(0x5d5a4ee9u)]
 	public float MaxPredictionTime { get; set; } = 1.00f;
 
 	public new static PredictiveAccuracyPrius Create(DDLObject ddl) => new(ddl);

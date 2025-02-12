@@ -18,7 +18,7 @@ public class DiveEndedEvent : EventBase, IDDLObjectType<DiveEndedEvent> {
 		SuperDive = ddl.GetValue<bool>(0x69e46249u, SuperDive);
 	}
 
-	[DDLRegistration(0xbb3582aau)]
+	[DDLRegistration(0x69e46249u)]
 	public bool SuperDive { get; set; } = false;
 
 	public new static DiveEndedEvent Create(DDLObject ddl) => new(ddl);

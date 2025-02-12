@@ -28,37 +28,37 @@ public class DimensionalPulseTargetStartEvent : EventBase, IDDLObjectType<Dimens
 		NextSizeZ = ddl.GetValue<float>(0xd4a569ccu, NextSizeZ);
 	}
 
-	[DDLRegistration(0x851a3563u)]
+	[DDLRegistration(0x62e9c023u)]
 	public uint PulseSourceActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x851a3563u)]
+	[DDLRegistration(0x874f26cau)]
 	public float TimeToHit { get; set; } = 0.00f;
 
-	[DDLRegistration(0x851a3563u)]
+	[DDLRegistration(0x5137c6ecu)]
 	public xee804118 ExtraBehavior { get; set; } = xee804118.None;
 
-	[DDLRegistration(0x851a3563u)]
+	[DDLRegistration(0x9eb93c43u)]
 	public DDLVector3? CurrentSize { get; set; } = default;
 
-	[DDLRegistration(0x851a3563u)]
+	[DDLRegistration(0x8afb70d0u)]
 	public float CurrentSizeX { get; set; } = 0.00f;
 
-	[DDLRegistration(0x851a3563u)]
+	[DDLRegistration(0xfdfc4046u)]
 	public float CurrentSizeY { get; set; } = 0.00f;
 
-	[DDLRegistration(0x851a3563u)]
+	[DDLRegistration(0x64f511fcu)]
 	public float CurrentSizeZ { get; set; } = 0.00f;
 
-	[DDLRegistration(0x851a3563u)]
+	[DDLRegistration(0x1e592e39u)]
 	public DDLVector3? NextSize { get; set; } = default;
 
-	[DDLRegistration(0x851a3563u)]
+	[DDLRegistration(0x3aab08e0u)]
 	public float NextSizeX { get; set; } = 0.00f;
 
-	[DDLRegistration(0x851a3563u)]
+	[DDLRegistration(0x4dac3876u)]
 	public float NextSizeY { get; set; } = 0.00f;
 
-	[DDLRegistration(0x851a3563u)]
+	[DDLRegistration(0xd4a569ccu)]
 	public float NextSizeZ { get; set; } = 0.00f;
 
 	public new static DimensionalPulseTargetStartEvent Create(DDLObject ddl) => new(ddl);

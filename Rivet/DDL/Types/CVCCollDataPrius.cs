@@ -38,67 +38,67 @@ public class CVCCollDataPrius : DDLObjectType, IDDLObjectType<CVCCollDataPrius> 
 		BoxOBBCenter = ddl.GetObject<DDLVector3>(0x1519894du);
 	}
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x5354102fu)]
 	public float PushValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x6bcc1e52u)]
 	public bool PushOnEqual { get; set; } = false;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0xce87d89fu)]
 	public bool AlwaysPushVertical { get; set; } = false;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0xa60463e3u)]
 	public bool AllowSoftCollisions { get; set; } = false;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x690eb294u)]
 	public bool UpdateExtents { get; set; } = false;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x31a557feu)]
 	public bool ManualUpdateShape { get; set; } = false;
 
-	[DDLRegistration(0x86c2a5b8u, description: "Special class of CVC that really shouldn't be ignored. Primarily used when we're trying to prevent a character from getting trapped inside a large model's collision")]
+	[DDLRegistration(0x0777f69cu, description: "Special class of CVC that really shouldn't be ignored. Primarily used when we're trying to prevent a character from getting trapped inside a large model's collision")]
 	public bool Crucial { get; set; } = false;
 
-	[DDLRegistration(0x86c2a5b8u, description: "If TRUE the actor scale will get applied to the shape")]
+	[DDLRegistration(0x3b6cec91u, description: "If TRUE the actor scale will get applied to the shape")]
 	public bool ApplyActorScale { get; set; } = false;
 
-	[DDLRegistration(0x86c2a5b8u, description: "If TRUE and the shape is a box, then this will sweep its frame motion when resolving collision checks to avoid clipping. Note environment is checked against the move body not the move data shape")]
+	[DDLRegistration(0x53f7079du, description: "If TRUE and the shape is a box, then this will sweep its frame motion when resolving collision checks to avoid clipping. Note environment is checked against the move body not the move data shape")]
 	public bool MovingEnvironment { get; set; } = false;
 
-	[DDLRegistration(0x86c2a5b8u, "Locator Or Joint Name")]
+	[DDLRegistration(0x7ad392f4u, "Locator Or Joint Name")]
 	public string? LocatorOrJointName { get; set; } = default;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x14f7ad69 Type { get; set; } = x14f7ad69.Cylinder;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.50f;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x19e2d4c8u)]
 	public float SoftRadiusInner { get; set; } = 0.25f;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x000bd750u)]
 	public float SoftRadiusOuter { get; set; } = 0.75f;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x7be988d7u)]
 	public float HeightUp { get; set; } = 2.00f;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x18b154fau)]
 	public float HeightDown { get; set; } = 0.00f;
 
-	[DDLRegistration(0x86c2a5b8u, description: "If true, ignores the box extents parameters")]
+	[DDLRegistration(0x3fde35cau, description: "If true, ignores the box extents parameters")]
 	public bool UseModelOBB { get; set; } = true;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x134ca79eu)]
 	public float BoxExtentsX { get; set; } = 1.00f;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x644b9708u)]
 	public float BoxExtentsY { get; set; } = 1.00f;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0xfd42c6b2u)]
 	public float BoxExtentsZ { get; set; } = 1.00f;
 
-	[DDLRegistration(0x86c2a5b8u)]
+	[DDLRegistration(0x1519894du)]
 	public DDLVector3? BoxOBBCenter { get; set; } = default;
 
 	public static CVCCollDataPrius Create(DDLObject ddl) => new(ddl);

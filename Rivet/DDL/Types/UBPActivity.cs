@@ -22,19 +22,19 @@ public class UBPActivity : DDLObjectType, IDDLObjectType<UBPActivity> {
 		Rewards_images = ddl.GetObjects<UBPImage>(0xc27e5a74u);
 	}
 
-	[DDLRegistration(0xb1133c08u)]
+	[DDLRegistration(0xf55ff6dau)]
 	public string? EntityId { get; set; } = default;
 
-	[DDLRegistration(0xb1133c08u)]
+	[DDLRegistration(0x8b63dca3u)]
 	public x80ef7527 EntityType { get; set; } = x80ef7527.PSNObject;
 
-	[DDLRegistration(0xb1133c08u)]
+	[DDLRegistration(0x2b2fec50u)]
 	public x56d897ac EntitySubtype { get; set; } = x56d897ac.Activity;
 
-	[DDLRegistration(0xb1133c08u)]
+	[DDLRegistration(0xd9cbf53bu)]
 	public List<UBPImage?> Images { get; set; } = [];
 
-	[DDLRegistration(0xb1133c08u)]
+	[DDLRegistration(0xc27e5a74u)]
 	public List<UBPImage?> Rewards_images { get; set; } = [];
 
 	public static UBPActivity Create(DDLObject ddl) => new(ddl);

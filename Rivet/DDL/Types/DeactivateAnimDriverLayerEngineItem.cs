@@ -18,7 +18,7 @@ public class DeactivateAnimDriverLayerEngineItem : DDLObjectType, IDDLObjectType
 		AnimDriverName = ddl.GetString(0x45f98c1e) ?? AnimDriverName;
 	}
 
-	[DDLRegistration(0xa5be23efu)]
+	[DDLRegistration(0x45f98c1eu)]
 	public string? AnimDriverName { get; set; } = default;
 
 	public static DeactivateAnimDriverLayerEngineItem Create(DDLObject ddl) => new(ddl);

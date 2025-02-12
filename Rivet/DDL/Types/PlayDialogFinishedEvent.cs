@@ -18,7 +18,7 @@ public class PlayDialogFinishedEvent : EventBase, IDDLObjectType<PlayDialogFinis
 		ComponentHandle = ddl.GetValue<uint>(0xd0f9acd0u, ComponentHandle);
 	}
 
-	[DDLRegistration(0x30d4514eu, description: "Handle of the PlayDialogComponent that finished.")]
+	[DDLRegistration(0xd0f9acd0u, description: "Handle of the PlayDialogComponent that finished.")]
 	public uint ComponentHandle { get; set; } = 0x00000000;
 
 	public new static PlayDialogFinishedEvent Create(DDLObject ddl) => new(ddl);

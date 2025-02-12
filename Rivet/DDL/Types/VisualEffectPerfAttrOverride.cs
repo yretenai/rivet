@@ -21,16 +21,16 @@ public class VisualEffectPerfAttrOverride : DDLObjectType, IDDLObjectType<Visual
 		Frame = ddl.GetObject<VisualEffectFrameAttr>(0xacabf00cu);
 	}
 
-	[DDLRegistration(0x5a1edb97u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = false;
 
-	[DDLRegistration(0x5a1edb97u)]
+	[DDLRegistration(0x61f23114u)]
 	public x21f55189 Source { get; set; } = x21f55189.Self;
 
-	[DDLRegistration(0x5a1edb97u)]
+	[DDLRegistration(0x895d0326u)]
 	public VisualEffectSpawnAttr? Spawn { get; set; } = default;
 
-	[DDLRegistration(0x5a1edb97u)]
+	[DDLRegistration(0xacabf00cu)]
 	public VisualEffectFrameAttr? Frame { get; set; } = default;
 
 	public static VisualEffectPerfAttrOverride Create(DDLObject ddl) => new(ddl);

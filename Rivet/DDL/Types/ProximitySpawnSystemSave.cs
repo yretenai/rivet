@@ -18,7 +18,7 @@ public class ProximitySpawnSystemSave : DDLObjectType, IDDLObjectType<ProximityS
 		ProximitySpawnData = ddl.GetDictionary<ulong, ProximitySpawnSaveData>(0x8c2f999f, DDLMapTypeHandler.VisitULong, (mapId, mapDDL) => mapDDL.GetObject<ProximitySpawnSaveData>(mapId));
 	}
 
-	[DDLRegistration(0x209a1b1au)]
+	[DDLRegistration(0x8c2f999fu)]
 	public Dictionary<ulong, ProximitySpawnSaveData?> ProximitySpawnData { get; set; } = [];
 
 	public static ProximitySpawnSystemSave Create(DDLObject ddl) => new(ddl);

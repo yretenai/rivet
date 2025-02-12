@@ -19,10 +19,10 @@ public class HUDControlActionPrius : DDLObjectType, IDDLObjectType<HUDControlAct
 		LocTag = ddl.GetString(0x06f8b0e5) ?? LocTag;
 	}
 
-	[DDLRegistration(0x9ee593ebu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x9ee593ebu, description: "Will be replaced with localized text if it exists.")]
+	[DDLRegistration(0x06f8b0e5u, description: "Will be replaced with localized text if it exists.")]
 	public string? LocTag { get; set; } = "INVALID";
 
 	public static HUDControlActionPrius Create(DDLObject ddl) => new(ddl);

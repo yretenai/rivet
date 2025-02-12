@@ -21,16 +21,16 @@ public class JointCrawlerEventBase : EventBase, IDDLObjectType<JointCrawlerEvent
 		UseAlternateAttachActor = ddl.GetValue<byte>(0x18cb5db8u, UseAlternateAttachActor);
 	}
 
-	[DDLRegistration(0xacb0d816u)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
-	[DDLRegistration(0xacb0d816u)]
+	[DDLRegistration(0x89c6d606u)]
 	public bool Stop { get; set; } = false;
 
-	[DDLRegistration(0xacb0d816u, "Alternate Attach Actor")]
+	[DDLRegistration(0x558cc001u, "Alternate Attach Actor")]
 	public uint AlternateActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xacb0d816u, "Use Alternate Attach Actor?")]
+	[DDLRegistration(0x18cb5db8u, "Use Alternate Attach Actor?")]
 	public byte UseAlternateAttachActor { get; set; } = 0x00;
 
 	public new static JointCrawlerEventBase Create(DDLObject ddl) => new(ddl);

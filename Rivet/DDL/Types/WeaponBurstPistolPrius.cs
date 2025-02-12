@@ -21,16 +21,16 @@ public class WeaponBurstPistolPrius : WeaponGamePrius, IDDLObjectType<WeaponBurs
 		ShellCasingData = ddl.GetObject<ShellCasingDataSingleEmit>(0x2fda4eacu);
 	}
 
-	[DDLRegistration(0xd687d27fu, "Num Shots Slow To Fast", "If adaptive triggers are disabled this is how many shots we fire slow before moving to fast fire")]
+	[DDLRegistration(0x30d2490cu, "Num Shots Slow To Fast", "If adaptive triggers are disabled this is how many shots we fire slow before moving to fast fire")]
 	public uint NumShotsSlowToFast { get; set; } = 0x00000003;
 
-	[DDLRegistration(0xd687d27fu, "Slow Inaccuracy Data")]
+	[DDLRegistration(0x5cfeb341u, "Slow Inaccuracy Data")]
 	public BurstPistolInaccuracyData? SlowInaccuracyData { get; set; } = default;
 
-	[DDLRegistration(0xd687d27fu, "Inaccuracy Data")]
+	[DDLRegistration(0x3acb6ae4u, "Inaccuracy Data")]
 	public BurstPistolInaccuracyData? InaccuracyData { get; set; } = default;
 
-	[DDLRegistration(0xd687d27fu, "Shell Casing Data")]
+	[DDLRegistration(0x2fda4eacu, "Shell Casing Data")]
 	public ShellCasingDataSingleEmit? ShellCasingData { get; set; } = default;
 
 	public new static WeaponBurstPistolPrius Create(DDLObject ddl) => new(ddl);

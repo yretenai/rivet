@@ -18,7 +18,7 @@ public class TimeScaleConfig : ConfigBase, IDDLObjectType<TimeScaleConfig> {
 		TimeScalePrius = ddl.GetObject<TimeScaleBasePrius>(0x74fc5126u);
 	}
 
-	[DDLRegistration(0x2f07711au)]
+	[DDLRegistration(0x74fc5126u)]
 	public TimeScaleBasePrius? TimeScalePrius { get; set; } = default;
 
 	public new static TimeScaleConfig Create(DDLObject ddl) => new(ddl);

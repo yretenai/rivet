@@ -22,19 +22,19 @@ public class ActivityDefBase : DDLObjectType, IDDLObjectType<ActivityDefBase> {
 		Hints = ddl.GetObjects<ActivityHintWithId>(0xf00bc587u);
 	}
 
-	[DDLRegistration(0x8a0fcb5du)]
+	[DDLRegistration(0xc803bcc5u)]
 	public string? ActivityId { get; set; } = default;
 
-	[DDLRegistration(0x8a0fcb5du)]
+	[DDLRegistration(0x6a428937u)]
 	public ActivityLinkBase? ActivityLink { get; set; } = default;
 
-	[DDLRegistration(0x8a0fcb5du, description: "If this wants location based help, this needs to be true")]
+	[DDLRegistration(0xaf619063u, description: "If this wants location based help, this needs to be true")]
 	public bool SendLocationOnEnd { get; set; } = false;
 
-	[DDLRegistration(0x8a0fcb5du, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
+	[DDLRegistration(0xa76d47a6u, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
 	public uint DefaultPlaytimeEstimate { get; set; } = 0x00000005;
 
-	[DDLRegistration(0x8a0fcb5du)]
+	[DDLRegistration(0xf00bc587u)]
 	public List<ActivityHintWithId?> Hints { get; set; } = [];
 
 	public static ActivityDefBase Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class SwingshotTargetSwingPrius : SwingshotTargetBasePrius, IDDLObjectTyp
 		CameraPitchOverrides = ddl.GetObject<SwingshotCameraPitchOverrides>(0x099787b9u);
 	}
 
-	[DDLRegistration(0x8a115492u, "Ideal Cable Length")]
+	[DDLRegistration(0x9d4b8549u, "Ideal Cable Length")]
 	public float IdealCableLength { get; set; } = 8.00f;
 
-	[DDLRegistration(0x8a115492u, "Override Camera Pitch?", "Should the camera use the default pitch defined in the camera_swingshot_follow.config or should it use overrides specified here?")]
+	[DDLRegistration(0x539e2ccau, "Override Camera Pitch?", "Should the camera use the default pitch defined in the camera_swingshot_follow.config or should it use overrides specified here?")]
 	public bool OverrideCameraPitch { get; set; } = false;
 
-	[DDLRegistration(0x8a115492u, "Camera Pitch Overrides")]
+	[DDLRegistration(0x099787b9u, "Camera Pitch Overrides")]
 	public SwingshotCameraPitchOverrides? CameraPitchOverrides { get; set; } = default;
 
 	public new static SwingshotTargetSwingPrius Create(DDLObject ddl) => new(ddl);

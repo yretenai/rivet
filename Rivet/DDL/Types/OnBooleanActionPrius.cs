@@ -19,10 +19,10 @@ public class OnBooleanActionPrius : DDLObjectType, IDDLObjectType<OnBooleanActio
 		StartActive = ddl.GetValue<bool>(0x3e035e82u, StartActive);
 	}
 
-	[DDLRegistration(0x01991d40u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
-	[DDLRegistration(0x01991d40u)]
+	[DDLRegistration(0x3e035e82u)]
 	public bool StartActive { get; set; } = false;
 
 	public static OnBooleanActionPrius Create(DDLObject ddl) => new(ddl);

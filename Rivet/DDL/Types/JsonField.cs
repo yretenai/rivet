@@ -18,7 +18,7 @@ public class JsonField : DDLObjectType, IDDLObjectType<JsonField> {
 		Wombat = ddl.GetString(0x2b6eed72) ?? Wombat;
 	}
 
-	[DDLRegistration(0x9c70d98cu)]
+	[DDLRegistration(0x2b6eed72u)]
 	public string? Wombat { get; set; } = default;
 
 	public static JsonField Create(DDLObject ddl) => new(ddl);

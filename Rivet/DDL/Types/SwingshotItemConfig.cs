@@ -18,7 +18,7 @@ public class SwingshotItemConfig : GadgetItemConfig, IDDLObjectType<SwingshotIte
 		SwingshotPrius = ddl.GetObject<GadgetSwingshotPrius>(0x54025d0cu);
 	}
 
-	[DDLRegistration(0x65a99688u)]
+	[DDLRegistration(0x54025d0cu)]
 	public GadgetSwingshotPrius? SwingshotPrius { get; set; } = default;
 
 	public new static SwingshotItemConfig Create(DDLObject ddl) => new(ddl);

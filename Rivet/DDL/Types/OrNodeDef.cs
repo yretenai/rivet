@@ -19,10 +19,10 @@ public class OrNodeDef : LogicNodeBaseDef, IDDLObjectType<OrNodeDef> {
 		Out = ddl.GetObject<OutputPlugBoolean>(0x93bf4450u);
 	}
 
-	[DDLRegistration(0x4f4f48beu)]
+	[DDLRegistration(0x6a84a393u)]
 	public List<InputPlugBoolean?> In { get; set; } = [];
 
-	[DDLRegistration(0x4f4f48beu)]
+	[DDLRegistration(0x93bf4450u)]
 	public OutputPlugBoolean? Out { get; set; } = default;
 
 	public new static OrNodeDef Create(DDLObject ddl) => new(ddl);

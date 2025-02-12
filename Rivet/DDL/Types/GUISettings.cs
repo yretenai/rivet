@@ -26,31 +26,31 @@ public class GUISettings : DDLObjectType, IDDLObjectType<GUISettings> {
 		PrototypeMessageDebug = ddl.GetValue<bool>(0x12aa6ea2u, PrototypeMessageDebug);
 	}
 
-	[DDLRegistration(0xcba98626u)]
+	[DDLRegistration(0x393a3cefu)]
 	public bool RenderEnable { get; set; } = true;
 
-	[DDLRegistration(0xcba98626u, "Print error markers")]
+	[DDLRegistration(0x37388d78u, "Print error markers")]
 	public bool PrintErrorMarkers { get; set; } = true;
 
-	[DDLRegistration(0xcba98626u)]
+	[DDLRegistration(0xf4aae66du)]
 	public bool EasyDebug { get; set; } = false;
 
-	[DDLRegistration(0xcba98626u)]
+	[DDLRegistration(0x4c500304u)]
 	public bool UseDebugMenuInput { get; set; } = false;
 
-	[DDLRegistration(0xcba98626u, "Add Additional Debug Menu Inputs", "Turn on additional options for opening the debug menu ([R3 or L3] + [Options or Touchpad])")]
+	[DDLRegistration(0x07988e93u, "Add Additional Debug Menu Inputs", "Turn on additional options for opening the debug menu ([R3 or L3] + [Options or Touchpad])")]
 	public bool UseAltDebugMenuInput { get; set; } = false;
 
-	[DDLRegistration(0xcba98626u)]
+	[DDLRegistration(0x94770b6au)]
 	public bool DebugMenuLeftStickAsDPad { get; set; } = false;
 
-	[DDLRegistration(0xcba98626u)]
+	[DDLRegistration(0x74e98f90u)]
 	public uint UpdatePhase { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcba98626u, description: "When true, we update the ui after the actors are all done updating.  Budget often doesn't permit using this")]
+	[DDLRegistration(0xf47191a5u, description: "When true, we update the ui after the actors are all done updating.  Budget often doesn't permit using this")]
 	public bool PostActorUpdate { get; set; } = false;
 
-	[DDLRegistration(0xcba98626u)]
+	[DDLRegistration(0x12aa6ea2u)]
 	public bool PrototypeMessageDebug { get; set; } = false;
 
 	public static GUISettings Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class RandomAttachment : DDLObjectType, IDDLObjectType<RandomAttachment> 
 		AttachmentChance = ddl.GetValue<float>(0x5e397767u, AttachmentChance);
 	}
 
-	[DDLRegistration(0x93b248deu)]
+	[DDLRegistration(0xa2698782u)]
 	public RivetAssetId Attachment { get; set; } = default;
 
-	[DDLRegistration(0x93b248deu)]
+	[DDLRegistration(0xf3a04cebu)]
 	public string? LocatorOnBot { get; set; } = default;
 
-	[DDLRegistration(0x93b248deu)]
+	[DDLRegistration(0x79ceaabau)]
 	public string? LocatorOnAttachment { get; set; } = default;
 
-	[DDLRegistration(0x93b248deu)]
+	[DDLRegistration(0x5e397767u)]
 	public float AttachmentChance { get; set; } = 0.50f;
 
 	public static RandomAttachment Create(DDLObject ddl) => new(ddl);

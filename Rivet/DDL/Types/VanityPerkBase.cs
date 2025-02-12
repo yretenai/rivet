@@ -19,10 +19,10 @@ public class VanityPerkBase : DDLObjectType, IDDLObjectType<VanityPerkBase> {
 		DisplayIcon = ddl.GetValue<RivetAssetId>(0xd144659eu, DisplayIcon);
 	}
 
-	[DDLRegistration(0x6e11c0ddu, description: "Loc tag for player-facing perk description.")]
+	[DDLRegistration(0x899948c3u, description: "Loc tag for player-facing perk description.")]
 	public string? DescriptionLoc { get; set; } = default;
 
-	[DDLRegistration(0x6e11c0ddu, description: "Texture for player-facing perk icon.")]
+	[DDLRegistration(0xd144659eu, description: "Texture for player-facing perk icon.")]
 	public RivetAssetId DisplayIcon { get; set; } = default;
 
 	public static VanityPerkBase Create(DDLObject ddl) => new(ddl);

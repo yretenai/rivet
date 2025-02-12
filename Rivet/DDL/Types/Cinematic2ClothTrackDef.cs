@@ -24,25 +24,25 @@ public class Cinematic2ClothTrackDef : DDLObjectType, IDDLObjectType<Cinematic2C
 		Influence = ddl.GetEnum<x006fb523>(0xca8e9b3du, x006fb523Values.Lookup);
 	}
 
-	[DDLRegistration(0xbe63886du)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xbe63886du)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xbe63886du, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0xbe63886du, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0xbe63886du, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0xbe63886du, description: "List of wind physics to apply to actor's clothing.")]
+	[DDLRegistration(0x8b296b87u, description: "List of wind physics to apply to actor's clothing.")]
 	public Dictionary<RivetAssetId, Cinematic2WindActionDef?> WindActions { get; set; } = [];
 
-	[DDLRegistration(0xbe63886du, description: "Wind effects only the parented actor vs all actors")]
+	[DDLRegistration(0xca8e9b3du, description: "Wind effects only the parented actor vs all actors")]
 	public x006fb523 Influence { get; set; } = x006fb523.TypeGlobal;
 
 	public static Cinematic2ClothTrackDef Create(DDLObject ddl) => new(ddl);

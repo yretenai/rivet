@@ -19,10 +19,10 @@ public class RegionBookmark : DDLObjectType, IDDLObjectType<RegionBookmark> {
 		Link = ddl.GetString(0x063c5941) ?? Link;
 	}
 
-	[DDLRegistration(0x1e169115u)]
+	[DDLRegistration(0x2c5ed61fu)]
 	public string? Reference { get; set; } = default;
 
-	[DDLRegistration(0x1e169115u)]
+	[DDLRegistration(0x063c5941u)]
 	public string? Link { get; set; } = default;
 
 	public static RegionBookmark Create(DDLObject ddl) => new(ddl);

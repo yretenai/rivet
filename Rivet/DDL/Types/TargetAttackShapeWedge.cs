@@ -22,19 +22,19 @@ public class TargetAttackShapeWedge : TargetedAttackShape, IDDLObjectType<Target
 		HeightDown = ddl.GetValue<float>(0x18b154fau, HeightDown);
 	}
 
-	[DDLRegistration(0x3b1cf88du, description: "Locator used as the start point of the wedge. The wedge will point down the locator's z-axis.")]
+	[DDLRegistration(0x7bac1d57u, description: "Locator used as the start point of the wedge. The wedge will point down the locator's z-axis.")]
 	public string? Locator { get; set; } = "";
 
-	[DDLRegistration(0x3b1cf88du, description: "Radius (length) of the wedge.")]
+	[DDLRegistration(0x0504203du, description: "Radius (length) of the wedge.")]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3b1cf88du, description: "Half-angle of the wedge. A 45-degree half angle, would make a 90-degree wedge")]
+	[DDLRegistration(0x0ad75ffdu, description: "Half-angle of the wedge. A 45-degree half angle, would make a 90-degree wedge")]
 	public float HalfAngle { get; set; } = 45.00f;
 
-	[DDLRegistration(0x3b1cf88du, description: "Distance the cone extends upwards along the locator's y-axis")]
+	[DDLRegistration(0x7be988d7u, description: "Distance the cone extends upwards along the locator's y-axis")]
 	public float HeightUp { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3b1cf88du, description: "Distance the cone extends downwards along the locator's y-axis")]
+	[DDLRegistration(0x18b154fau, description: "Distance the cone extends downwards along the locator's y-axis")]
 	public float HeightDown { get; set; } = 1.00f;
 
 	public new static TargetAttackShapeWedge Create(DDLObject ddl) => new(ddl);

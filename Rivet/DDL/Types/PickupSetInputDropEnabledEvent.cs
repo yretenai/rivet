@@ -18,7 +18,7 @@ public class PickupSetInputDropEnabledEvent : EventBase, IDDLObjectType<PickupSe
 		AllowInputDrop = ddl.GetValue<bool>(0x017f208cu, AllowInputDrop);
 	}
 
-	[DDLRegistration(0x61f691adu)]
+	[DDLRegistration(0x017f208cu)]
 	public bool AllowInputDrop { get; set; } = true;
 
 	public new static PickupSetInputDropEnabledEvent Create(DDLObject ddl) => new(ddl);

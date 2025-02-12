@@ -21,16 +21,16 @@ public class VisualEffectClipboardData : DDLObjectType, IDDLObjectType<VisualEff
 		Data = ddl.GetObject<VisualEffectDef>(0x3d519cedu);
 	}
 
-	[DDLRegistration(0x8c2120c2u)]
+	[DDLRegistration(0x795ab14bu)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8c2120c2u)]
+	[DDLRegistration(0xb1ad53f6u)]
 	public string? ClipboardType { get; set; } = default;
 
-	[DDLRegistration(0x8c2120c2u)]
+	[DDLRegistration(0xffcb8104u)]
 	public string? Compatibility { get; set; } = default;
 
-	[DDLRegistration(0x8c2120c2u)]
+	[DDLRegistration(0x3d519cedu)]
 	public VisualEffectDef? Data { get; set; } = default;
 
 	public static VisualEffectClipboardData Create(DDLObject ddl) => new(ddl);

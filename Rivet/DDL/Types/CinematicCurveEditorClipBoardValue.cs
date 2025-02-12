@@ -20,13 +20,13 @@ public class CinematicCurveEditorClipBoardValue : DDLObjectType, IDDLObjectType<
 		Value = ddl.GetObject<BezierCurveKeyDef>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x9552365cu)]
+	[DDLRegistration(0x48665e90u)]
 	public int Dimension { get; set; } = 0;
 
-	[DDLRegistration(0x9552365cu)]
+	[DDLRegistration(0xc0cda221u)]
 	public string? KeyListName { get; set; } = default;
 
-	[DDLRegistration(0x9552365cu)]
+	[DDLRegistration(0x042494f5u)]
 	public BezierCurveKeyDef? Value { get; set; } = default;
 
 	public static CinematicCurveEditorClipBoardValue Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DimensionPortalTokenStolenEvent : EventBase, IDDLObjectType<Dimensi
 		NewOwnerHandle = ddl.GetValue<uint>(0x863d9193u, NewOwnerHandle);
 	}
 
-	[DDLRegistration(0x85cc50dbu)]
+	[DDLRegistration(0x863d9193u)]
 	public uint NewOwnerHandle { get; set; } = 0x00000000;
 
 	public new static DimensionPortalTokenStolenEvent Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SpawnShotBotTargetingLockablePrius : SpawnShotBotTargetingPrius, ID
 		MissCap = ddl.GetValue<float>(0xc0db42dfu, MissCap);
 	}
 
-	[DDLRegistration(0x60483fa4u, description: "multiplies the targets velocity to determin how much to miss by")]
+	[DDLRegistration(0x179a8ec1u, description: "multiplies the targets velocity to determin how much to miss by")]
 	public float MissVelocityMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x60483fa4u, description: "never miss by a vector greater than this length")]
+	[DDLRegistration(0xc0db42dfu, description: "never miss by a vector greater than this length")]
 	public float MissCap { get; set; } = 3.00f;
 
 	public new static SpawnShotBotTargetingLockablePrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class AutoDestroyIfFarFromHeroPrius : DDLObjectType, IDDLObjectType<AutoD
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x79e06b87u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 100.00f;
 
 	public static AutoDestroyIfFarFromHeroPrius Create(DDLObject ddl) => new(ddl);

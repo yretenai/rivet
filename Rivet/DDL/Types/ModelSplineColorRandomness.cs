@@ -20,13 +20,13 @@ public class ModelSplineColorRandomness : DDLObjectType, IDDLObjectType<ModelSpl
 		Z = ddl.GetValue<float>(0xb03d20a1u, Z);
 	}
 
-	[DDLRegistration(0xaa32b636u, "Lunimance")]
+	[DDLRegistration(0x5e33418du, "Lunimance")]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaa32b636u, "Bias")]
+	[DDLRegistration(0x2934711bu, "Bias")]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0xaa32b636u, "Hue")]
+	[DDLRegistration(0xb03d20a1u, "Hue")]
 	public float Z { get; set; } = 0.00f;
 
 	public static ModelSplineColorRandomness Create(DDLObject ddl) => new(ddl);

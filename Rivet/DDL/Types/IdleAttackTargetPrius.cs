@@ -18,7 +18,7 @@ public class IdleAttackTargetPrius : DDLObjectType, IDDLObjectType<IdleAttackTar
 		DropOnAlert = ddl.GetValue<bool>(0x4bc37aafu, DropOnAlert);
 	}
 
-	[DDLRegistration(0xd066159bu, description: "If true, then if the bot goes alert, he will forget this target so he wont start attacking it if he goes idle again.")]
+	[DDLRegistration(0x4bc37aafu, description: "If true, then if the bot goes alert, he will forget this target so he wont start attacking it if he goes idle again.")]
 	public bool DropOnAlert { get; set; } = false;
 
 	public static IdleAttackTargetPrius Create(DDLObject ddl) => new(ddl);

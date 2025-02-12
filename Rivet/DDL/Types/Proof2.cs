@@ -28,37 +28,37 @@ public class Proof2 : DDLObjectType, IDDLObjectType<Proof2> {
 		FHM = ddl.GetDictionary<RivetAssetId, int>(0xa983bf69, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<int>(mapId));
 	}
 
-	[DDLRegistration(0xdc34a743u)]
+	[DDLRegistration(0x6b86e977u)]
 	public Prims? P { get; set; } = default;
 
-	[DDLRegistration(0xdc34a743u)]
+	[DDLRegistration(0xddc35be0u)]
 	public List<int> FArr { get; set; } = [];
 
-	[DDLRegistration(0xdc34a743u)]
+	[DDLRegistration(0x77ca936bu)]
 	public List<int> DArr { get; set; } = [];
 
-	[DDLRegistration(0xdc34a743u)]
+	[DDLRegistration(0x76fb8a30u)]
 	public string? Str { get; set; } = "asd";
 
-	[DDLRegistration(0xdc34a743u)]
+	[DDLRegistration(0xc9e19805u)]
 	public Select S { get; set; } = Select.C;
 
-	[DDLRegistration(0xdc34a743u)]
+	[DDLRegistration(0xa351b8f7u)]
 	public x1ea7317b B { get; set; } = (x1ea7317b) 0x00000003;
 
-	[DDLRegistration(0xdc34a743u)]
+	[DDLRegistration(0x7689fd86u)]
 	public List<Prims?> PrimArray { get; set; } = [];
 
-	[DDLRegistration(0xdc34a743u)]
+	[DDLRegistration(0x6d4aadd2u)]
 	public List<Prims?> PrimFixedArray { get; set; } = [];
 
-	[DDLRegistration(0xdc34a743u)]
+	[DDLRegistration(0xd1f8e3a0u)]
 	public Dictionary<int, int> HM { get; set; } = [];
 
-	[DDLRegistration(0xdc34a743u)]
+	[DDLRegistration(0xb36edef2u)]
 	public Dictionary<string, string?> SHM { get; set; } = [];
 
-	[DDLRegistration(0xdc34a743u)]
+	[DDLRegistration(0xa983bf69u)]
 	public Dictionary<RivetAssetId, int> FHM { get; set; } = [];
 
 	public static Proof2 Create(DDLObject ddl) => new(ddl);

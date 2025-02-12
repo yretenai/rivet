@@ -19,10 +19,10 @@ public class DamageModifierProcOutgoingPrius : DamageModifierOutgoingPrius, IDDL
 		RequestId = ddl.GetValue<uint>(0x239eef0du, RequestId);
 	}
 
-	[DDLRegistration(0xfb0357d2u, description: "Percent chance that this modifier will be applied to each damage request.")]
+	[DDLRegistration(0x3160235au, description: "Percent chance that this modifier will be applied to each damage request.")]
 	public float ProcChance { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfb0357d2u, description: "Only affect damage requests with this request id, if it is set. (0 to ignore)")]
+	[DDLRegistration(0x239eef0du, description: "Only affect damage requests with this request id, if it is set. (0 to ignore)")]
 	public uint RequestId { get; set; } = 0x00000000;
 
 	public new static DamageModifierProcOutgoingPrius Create(DDLObject ddl) => new(ddl);

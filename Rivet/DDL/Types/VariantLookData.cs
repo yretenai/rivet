@@ -23,22 +23,22 @@ public class VariantLookData : DDLObjectType, IDDLObjectType<VariantLookData> {
 		HSLRangeMax = ddl.GetValue<float>(0x136596c5u, HSLRangeMax);
 	}
 
-	[DDLRegistration(0x452d50e3u)]
+	[DDLRegistration(0x1a437543u)]
 	public float Chance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x452d50e3u, "Look Group")]
+	[DDLRegistration(0xa286144cu, "Look Group")]
 	public string? LookGroup { get; set; } = default;
 
-	[DDLRegistration(0x452d50e3u, "Palette Index Min")]
+	[DDLRegistration(0xa7b38e02u, "Palette Index Min")]
 	public uint PaletteIndexMin { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x452d50e3u, "Palette Index Max")]
+	[DDLRegistration(0x9bbeb15bu, "Palette Index Max")]
 	public uint PaletteIndexMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x452d50e3u, "HSL Range Min")]
+	[DDLRegistration(0x2f68a99cu, "HSL Range Min")]
 	public float HSLRangeMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x452d50e3u, "HSL Range Max")]
+	[DDLRegistration(0x136596c5u, "HSL Range Max")]
 	public float HSLRangeMax { get; set; } = 0.00f;
 
 	public static VariantLookData Create(DDLObject ddl) => new(ddl);

@@ -29,40 +29,40 @@ public class HeroSkinConfig : ConfigBase, IDDLObjectType<HeroSkinConfig> {
 		CustomHeads = ddl.GetObjects<CustomHeadData>(0xf25e25abu);
 	}
 
-	[DDLRegistration(0xde3a2857u, "Base Skin")]
+	[DDLRegistration(0x7f471de0u, "Base Skin")]
 	public SkinData? BaseSkin { get; set; } = default;
 
-	[DDLRegistration(0xde3a2857u, "Upgraded Skin")]
+	[DDLRegistration(0xc3c23129u, "Upgraded Skin")]
 	public SkinData? UpgradedSkin { get; set; } = default;
 
-	[DDLRegistration(0xde3a2857u, "Rebreather Model")]
+	[DDLRegistration(0x2ab730c6u, "Rebreather Model")]
 	public RivetAssetId RebreatherModel { get; set; } = default;
 
-	[DDLRegistration(0xde3a2857u, "Hover Boots Model")]
+	[DDLRegistration(0xdad138cau, "Hover Boots Model")]
 	public RivetAssetId HoverBootsModel { get; set; } = default;
 
-	[DDLRegistration(0xde3a2857u, "Grind Boots Model")]
+	[DDLRegistration(0xfbb76e09u, "Grind Boots Model")]
 	public RivetAssetId GrindBootsModel { get; set; } = default;
 
-	[DDLRegistration(0xde3a2857u, "Mag Boots Model")]
+	[DDLRegistration(0xe673b783u, "Mag Boots Model")]
 	public RivetAssetId MagBootsModel { get; set; } = default;
 
-	[DDLRegistration(0xde3a2857u, "Map-O-Matic Model")]
+	[DDLRegistration(0x42254088u, "Map-O-Matic Model")]
 	public RivetAssetId MapOMaticModel { get; set; } = default;
 
-	[DDLRegistration(0xde3a2857u, "Swingshot Model")]
+	[DDLRegistration(0xa1130d8au, "Swingshot Model")]
 	public RivetAssetId SwingshotModel { get; set; } = default;
 
-	[DDLRegistration(0xde3a2857u, "Versa Glove Model")]
+	[DDLRegistration(0x28cbe205u, "Versa Glove Model")]
 	public RivetAssetId VersaGloveModel { get; set; } = default;
 
-	[DDLRegistration(0xde3a2857u, "Portal Zip Glove Model")]
+	[DDLRegistration(0x723c8268u, "Portal Zip Glove Model")]
 	public RivetAssetId PortalZipGloveModel { get; set; } = default;
 
-	[DDLRegistration(0xde3a2857u, "Unlockable Skins")]
+	[DDLRegistration(0xa3022bc6u, "Unlockable Skins")]
 	public List<UnlockableSkinData?> UnlockableSkins { get; set; } = [];
 
-	[DDLRegistration(0xde3a2857u, "Custom Heads")]
+	[DDLRegistration(0xf25e25abu, "Custom Heads")]
 	public List<CustomHeadData?> CustomHeads { get; set; } = [];
 
 	public new static HeroSkinConfig Create(DDLObject ddl) => new(ddl);

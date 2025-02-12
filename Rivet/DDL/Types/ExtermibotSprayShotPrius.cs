@@ -20,13 +20,13 @@ public class ExtermibotSprayShotPrius : LobbedShotPrius, IDDLObjectType<Extermib
 		FadeTime = ddl.GetValue<float>(0x8833d162u, FadeTime);
 	}
 
-	[DDLRegistration(0xd49f2767u)]
+	[DDLRegistration(0xe3e6fa68u)]
 	public float DamageRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd49f2767u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 2.50f;
 
-	[DDLRegistration(0xd49f2767u)]
+	[DDLRegistration(0x8833d162u)]
 	public float FadeTime { get; set; } = 1.50f;
 
 	public new static ExtermibotSprayShotPrius Create(DDLObject ddl) => new(ddl);

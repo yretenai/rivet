@@ -18,7 +18,7 @@ public class ActionControlSystemControl : DDLObjectType, IDDLObjectType<ActionCo
 		Control = ddl.GetEnum<xf4a2a500>(0xec314f73u, xf4a2a500Values.Lookup);
 	}
 
-	[DDLRegistration(0x3ba1f02au)]
+	[DDLRegistration(0xec314f73u)]
 	public xf4a2a500 Control { get; set; } = xf4a2a500.SystemPause;
 
 	public static ActionControlSystemControl Create(DDLObject ddl) => new(ddl);

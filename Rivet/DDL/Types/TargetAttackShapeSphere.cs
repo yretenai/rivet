@@ -19,10 +19,10 @@ public class TargetAttackShapeSphere : TargetedAttackShape, IDDLObjectType<Targe
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0xd1aac316u, description: "Locator at the center of the sphere")]
+	[DDLRegistration(0x7bac1d57u, description: "Locator at the center of the sphere")]
 	public string? Locator { get; set; } = "";
 
-	[DDLRegistration(0xd1aac316u, description: "Radius of the sphere")]
+	[DDLRegistration(0x0504203du, description: "Radius of the sphere")]
 	public float Radius { get; set; } = 1.00f;
 
 	public new static TargetAttackShapeSphere Create(DDLObject ddl) => new(ddl);

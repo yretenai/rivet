@@ -20,13 +20,13 @@ public class HeroUsedPortalZipStartEvent : EventBase, IDDLObjectType<HeroUsedPor
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0xe3fa257cu, description: "Portal that the Hero is zipping to")]
+	[DDLRegistration(0x35d6dd97u, description: "Portal that the Hero is zipping to")]
 	public uint Portal { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe3fa257cu)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0xe3fa257cu)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static HeroUsedPortalZipStartEvent Create(DDLObject ddl) => new(ddl);

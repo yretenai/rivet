@@ -19,10 +19,10 @@ public class SkinItemCompositeMaterialOverride : DDLObjectType, IDDLObjectType<S
 		PostCompositeMaterial = ddl.GetObject<AssetReferenceDef>(0x0f717729u);
 	}
 
-	[DDLRegistration(0xfe1471d7u, "PreComposite Material", "PreComposite material file")]
+	[DDLRegistration(0x5d9c15f6u, "PreComposite Material", "PreComposite material file")]
 	public AssetReferenceDef? PreCompositeMaterial { get; set; } = default;
 
-	[DDLRegistration(0xfe1471d7u, "PostComposite Material", "PostComposite material file")]
+	[DDLRegistration(0x0f717729u, "PostComposite Material", "PostComposite material file")]
 	public AssetReferenceDef? PostCompositeMaterial { get; set; } = default;
 
 	public static SkinItemCompositeMaterialOverride Create(DDLObject ddl) => new(ddl);

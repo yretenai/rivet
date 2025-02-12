@@ -20,13 +20,13 @@ public class AlembicActor : DDLObjectType, IDDLObjectType<AlembicActor> {
 		MayaPath = ddl.GetValue<RivetAssetId>(0xfb5169fbu, MayaPath);
 	}
 
-	[DDLRegistration(0x8a962e54u, description: "name space chosen for the actor in the reference editor in maya")]
+	[DDLRegistration(0xe7b7ef37u, description: "name space chosen for the actor in the reference editor in maya")]
 	public string? MayaNameSpace { get; set; } = default;
 
-	[DDLRegistration(0x8a962e54u, description: "top most dag name in the maya cinematic file in the maya scene (MayaNameSpace:Skeleton for regular actors, MayaNameSpace:group_node_name_in_model for the animchunk and animvert actors)")]
+	[DDLRegistration(0xa8a9ef53u, description: "top most dag name in the maya cinematic file in the maya scene (MayaNameSpace:Skeleton for regular actors, MayaNameSpace:group_node_name_in_model for the animchunk and animvert actors)")]
 	public string? FilterNodeName { get; set; } = default;
 
-	[DDLRegistration(0x8a962e54u, description: "maya file referenced into the scene for the MayaNameSpace in ref editor")]
+	[DDLRegistration(0xfb5169fbu, description: "maya file referenced into the scene for the MayaNameSpace in ref editor")]
 	public RivetAssetId MayaPath { get; set; } = default;
 
 	public static AlembicActor Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ProjectileIdlingStopEvent : EventBase, IDDLObjectType<ProjectileIdl
 		OnMagshield = ddl.GetValue<bool>(0x3885f35fu, OnMagshield);
 	}
 
-	[DDLRegistration(0x3ee3e834u)]
+	[DDLRegistration(0x3885f35fu)]
 	public bool OnMagshield { get; set; } = false;
 
 	public new static ProjectileIdlingStopEvent Create(DDLObject ddl) => new(ddl);

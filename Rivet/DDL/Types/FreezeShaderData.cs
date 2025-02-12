@@ -19,10 +19,10 @@ public class FreezeShaderData : DDLObjectType, IDDLObjectType<FreezeShaderData> 
 		ShaderDuration = ddl.GetValue<float>(0xe177cb8bu, ShaderDuration);
 	}
 
-	[DDLRegistration(0xbc6b9c0eu, "Post Composite Shader")]
+	[DDLRegistration(0xe2b72d5fu, "Post Composite Shader")]
 	public RivetAssetId PostCompositeShader { get; set; } = "";
 
-	[DDLRegistration(0xbc6b9c0eu, "Shader Duration")]
+	[DDLRegistration(0xe177cb8bu, "Shader Duration")]
 	public float ShaderDuration { get; set; } = 8.00f;
 
 	public static FreezeShaderData Create(DDLObject ddl) => new(ddl);

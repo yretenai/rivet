@@ -23,22 +23,22 @@ public class Cinematic2SyncActionDef : DDLObjectType, IDDLObjectType<Cinematic2S
 		PlugIndex = ddl.GetEnum<x2bd8d9b9>(0x3f2282f5u, x2bd8d9b9Values.Lookup);
 	}
 
-	[DDLRegistration(0x46d435f2u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x46d435f2u)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x46d435f2u)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x46d435f2u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x46d435f2u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x46d435f2u)]
+	[DDLRegistration(0x3f2282f5u)]
 	public x2bd8d9b9 PlugIndex { get; set; } = x2bd8d9b9.Sync0;
 
 	public static Cinematic2SyncActionDef Create(DDLObject ddl) => new(ddl);

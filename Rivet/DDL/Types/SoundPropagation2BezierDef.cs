@@ -18,7 +18,7 @@ public class SoundPropagation2BezierDef : DDLObjectType, IDDLObjectType<SoundPro
 		Slope = ddl.GetValue<float>(0x419f8944u, Slope);
 	}
 
-	[DDLRegistration(0xdaf46a95u, description: "slope to use for the curve. 1 is constant full gain, 0 behaves same as linear, -1 is constant minimum gain.")]
+	[DDLRegistration(0x419f8944u, description: "slope to use for the curve. 1 is constant full gain, 0 behaves same as linear, -1 is constant minimum gain.")]
 	public float Slope { get; set; } = 0.50f;
 
 	public static SoundPropagation2BezierDef Create(DDLObject ddl) => new(ddl);

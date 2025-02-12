@@ -19,10 +19,10 @@ public class ShipEvadeEvent : EventBase, IDDLObjectType<ShipEvadeEvent> {
 		EvasionStartTime = ddl.GetValue<float>(0x8f4637c1u, EvasionStartTime);
 	}
 
-	[DDLRegistration(0xf622e19bu)]
+	[DDLRegistration(0xaf0a8729u)]
 	public DDLVector3? EvadeDirection { get; set; } = default;
 
-	[DDLRegistration(0xf622e19bu)]
+	[DDLRegistration(0x8f4637c1u)]
 	public float EvasionStartTime { get; set; } = 0.00f;
 
 	public new static ShipEvadeEvent Create(DDLObject ddl) => new(ddl);

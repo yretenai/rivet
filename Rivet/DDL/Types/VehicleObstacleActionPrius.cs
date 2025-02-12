@@ -18,7 +18,7 @@ public class VehicleObstacleActionPrius : DDLObjectType, IDDLObjectType<VehicleO
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xfd1864b5u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Traffic;
 
 	public static VehicleObstacleActionPrius Create(DDLObject ddl) => new(ddl);

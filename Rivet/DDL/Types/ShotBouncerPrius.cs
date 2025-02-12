@@ -18,7 +18,7 @@ public class ShotBouncerPrius : GrenadeShotPrius, IDDLObjectType<ShotBouncerPriu
 		MiniBombConfig = ddl.GetValue<RivetAssetId>(0xf7ee4aabu, MiniBombConfig);
 	}
 
-	[DDLRegistration(0x097cde3au)]
+	[DDLRegistration(0xf7ee4aabu)]
 	public RivetAssetId MiniBombConfig { get; set; } = default;
 
 	public new static ShotBouncerPrius Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class KnockbackReactionModifier : DDLObjectType, IDDLObjectType<Knockback
 		PopMotionToHitDirection = ddl.GetValue<bool>(0x338a746au, PopMotionToHitDirection);
 	}
 
-	[DDLRegistration(0xfc295aafu)]
+	[DDLRegistration(0x406345f1u)]
 	public x7f7c56aa Types { get; set; } = (x7f7c56aa) 0x00000001;
 
-	[DDLRegistration(0xfc295aafu, description: "Minimum scale applied to vertical translation")]
+	[DDLRegistration(0x7796775cu, description: "Minimum scale applied to vertical translation")]
 	public float MinYTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfc295aafu, description: "Maximum scale applied to vertical translation")]
+	[DDLRegistration(0x5ee88a44u, description: "Maximum scale applied to vertical translation")]
 	public float MaxYTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfc295aafu, description: "Minimum scale applied to horizontal translation")]
+	[DDLRegistration(0x66d45ba2u, description: "Minimum scale applied to horizontal translation")]
 	public float MinXZTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfc295aafu, description: "Maximum scale applied to horizontal translation")]
+	[DDLRegistration(0x7591bd09u, description: "Maximum scale applied to horizontal translation")]
 	public float MaxXZTranslationScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfc295aafu)]
+	[DDLRegistration(0x53f6eaccu)]
 	public float MinTimeScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfc295aafu)]
+	[DDLRegistration(0xc385fa26u)]
 	public float MaxTimeScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xfc295aafu, description: "Will pop the bot facing direction so that animated motion will match the hit direction")]
+	[DDLRegistration(0x338a746au, description: "Will pop the bot facing direction so that animated motion will match the hit direction")]
 	public bool PopMotionToHitDirection { get; set; } = false;
 
 	public static KnockbackReactionModifier Create(DDLObject ddl) => new(ddl);

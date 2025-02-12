@@ -20,13 +20,13 @@ public class AnimClipGroupElemDef : DDLObjectType, IDDLObjectType<AnimClipGroupE
 		ClipWeight = ddl.GetValue<float>(0x2a5461e3u, ClipWeight);
 	}
 
-	[DDLRegistration(0x9522cd2fu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x9522cd2fu)]
+	[DDLRegistration(0xd15aa6a0u)]
 	public RivetAssetId ClipPath { get; set; } = default;
 
-	[DDLRegistration(0x9522cd2fu)]
+	[DDLRegistration(0x2a5461e3u)]
 	public float ClipWeight { get; set; } = 1.00f;
 
 	public static AnimClipGroupElemDef Create(DDLObject ddl) => new(ddl);

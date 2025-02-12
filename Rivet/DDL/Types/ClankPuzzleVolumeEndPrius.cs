@@ -20,13 +20,13 @@ public class ClankPuzzleVolumeEndPrius : DDLObjectType, IDDLObjectType<ClankPuzz
 		GoalMarkers = ddl.GetValues<RivetAssetId>(0x605c25b0u);
 	}
 
-	[DDLRegistration(0x0c5707dau, description: "The first countdown between bots before you lose your charge up.")]
+	[DDLRegistration(0xd663f6bau, description: "The first countdown between bots before you lose your charge up.")]
 	public float PrimaryBotCountdownTimer { get; set; } = 4.00f;
 
-	[DDLRegistration(0x0c5707dau, description: "The subsequent countdown between bots before you lose your charge up.")]
+	[DDLRegistration(0xb0235bfbu, description: "The subsequent countdown between bots before you lose your charge up.")]
 	public float SecondaryBotCountdownTimer { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0c5707dau, description: "The visual markers that need to complete for the puzzle to be completed.")]
+	[DDLRegistration(0x605c25b0u, description: "The visual markers that need to complete for the puzzle to be completed.")]
 	public List<RivetAssetId> GoalMarkers { get; set; } = [];
 
 	public static ClankPuzzleVolumeEndPrius Create(DDLObject ddl) => new(ddl);

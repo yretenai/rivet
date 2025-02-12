@@ -19,10 +19,10 @@ public class AllegianceShotCollModPrius : ShotCollisionModifierPrius, IDDLObject
 		Relation = ddl.GetEnum<AllegianceRelation>(0x9888fa39u, AllegianceRelationValues.Lookup);
 	}
 
-	[DDLRegistration(0x1fc3f406u)]
+	[DDLRegistration(0xd10c0c26u)]
 	public x6bdf4ba1 Allegiance { get; set; } = x6bdf4ba1.Neutral;
 
-	[DDLRegistration(0x1fc3f406u)]
+	[DDLRegistration(0x9888fa39u)]
 	public AllegianceRelation Relation { get; set; } = AllegianceRelation.Friends;
 
 	public new static AllegianceShotCollModPrius Create(DDLObject ddl) => new(ddl);

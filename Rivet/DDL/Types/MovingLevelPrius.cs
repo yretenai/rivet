@@ -23,22 +23,22 @@ public class MovingLevelPrius : DDLObjectType, IDDLObjectType<MovingLevelPrius> 
 		Decel = ddl.GetValue<float>(0xa9242a88u, Decel);
 	}
 
-	[DDLRegistration(0xd3db002au, "Initial Tile", "Special initial tile for this moving level.")]
+	[DDLRegistration(0xac8b427fu, "Initial Tile", "Special initial tile for this moving level.")]
 	public RivetAssetId InitialTile { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd3db002au, "Final Tile", "Special final tile for this moving level")]
+	[DDLRegistration(0x37336031u, "Final Tile", "Special final tile for this moving level")]
 	public RivetAssetId FinalTile { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd3db002au, "Tile Lists", "Tile lists this moving level can use.")]
+	[DDLRegistration(0x1df55d2fu, "Tile Lists", "Tile lists this moving level can use.")]
 	public List<MovingLevelTileList?> TileLists { get; set; } = [];
 
-	[DDLRegistration(0xd3db002au, "Max Speed", "Max movement speed for this moving level.")]
+	[DDLRegistration(0x16b83961u, "Max Speed", "Max movement speed for this moving level.")]
 	public float MaxSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd3db002au, "Acceleration", "Acceleration for this moving level.")]
+	[DDLRegistration(0x44affa24u, "Acceleration", "Acceleration for this moving level.")]
 	public float Accel { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd3db002au, "Deceleration", "Deceleration for this moving level.")]
+	[DDLRegistration(0xa9242a88u, "Deceleration", "Deceleration for this moving level.")]
 	public float Decel { get; set; } = 0.00f;
 
 	public static MovingLevelPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class CounterActionPrius : DDLObjectType, IDDLObjectType<CounterActionPri
 		Step = ddl.GetValue<float>(0x73293e8cu, Step);
 	}
 
-	[DDLRegistration(0x78fb901du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
-	[DDLRegistration(0x78fb901du, description: "Increment/Decrement Value")]
+	[DDLRegistration(0x73293e8cu, description: "Increment/Decrement Value")]
 	public float Step { get; set; } = 1.00f;
 
 	public static CounterActionPrius Create(DDLObject ddl) => new(ddl);

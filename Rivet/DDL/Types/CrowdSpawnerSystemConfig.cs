@@ -18,7 +18,7 @@ public class CrowdSpawnerSystemConfig : ConfigBase, IDDLObjectType<CrowdSpawnerS
 		Types = ddl.GetObjects<CrowdSpawnerType>(0x406345f1u);
 	}
 
-	[DDLRegistration(0x77ad4b9au)]
+	[DDLRegistration(0x406345f1u)]
 	public List<CrowdSpawnerType?> Types { get; set; } = [];
 
 	public new static CrowdSpawnerSystemConfig Create(DDLObject ddl) => new(ddl);

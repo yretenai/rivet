@@ -20,13 +20,13 @@ public class CritterSettings : DDLObjectType, IDDLObjectType<CritterSettings> {
 		MaxTrackedPanicAreas = ddl.GetValue<int>(0xf85b4603u, MaxTrackedPanicAreas);
 	}
 
-	[DDLRegistration(0xfc21f9c9u)]
+	[DDLRegistration(0x73d1dc2fu)]
 	public int MaxDisableVolumes { get; set; } = 8;
 
-	[DDLRegistration(0xfc21f9c9u)]
+	[DDLRegistration(0x6cdffe34u)]
 	public uint MaxRegisteredVolumes { get; set; } = 0x00000080;
 
-	[DDLRegistration(0xfc21f9c9u)]
+	[DDLRegistration(0xf85b4603u)]
 	public int MaxTrackedPanicAreas { get; set; } = 128;
 
 	public static CritterSettings Create(DDLObject ddl) => new(ddl);

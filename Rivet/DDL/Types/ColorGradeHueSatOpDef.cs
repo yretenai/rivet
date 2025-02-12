@@ -24,25 +24,25 @@ public class ColorGradeHueSatOpDef : DDLObjectType, IDDLObjectType<ColorGradeHue
 		LightnessInc = ddl.GetValue<float>(0x56c628bcu, LightnessInc);
 	}
 
-	[DDLRegistration(0xdd5489a2u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdd5489a2u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xdd5489a2u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 100.00f;
 
-	[DDLRegistration(0xdd5489a2u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0xdd5489a2u)]
+	[DDLRegistration(0x0659caf9u)]
 	public float HueInc { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdd5489a2u)]
+	[DDLRegistration(0xbf82ba63u)]
 	public float SaturationInc { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdd5489a2u)]
+	[DDLRegistration(0x56c628bcu)]
 	public float LightnessInc { get; set; } = 0.00f;
 
 	public static ColorGradeHueSatOpDef Create(DDLObject ddl) => new(ddl);

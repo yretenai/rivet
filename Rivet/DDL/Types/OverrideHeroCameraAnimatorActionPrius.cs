@@ -19,10 +19,10 @@ public class OverrideHeroCameraAnimatorActionPrius : DDLObjectType, IDDLObjectTy
 		DriverName = ddl.GetString(0x7a8704f5) ?? DriverName;
 	}
 
-	[DDLRegistration(0x5f927f01u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0x5f927f01u)]
+	[DDLRegistration(0x7a8704f5u)]
 	public string? DriverName { get; set; } = default;
 
 	public static OverrideHeroCameraAnimatorActionPrius Create(DDLObject ddl) => new(ddl);

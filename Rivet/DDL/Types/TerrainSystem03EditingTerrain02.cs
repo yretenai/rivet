@@ -60,133 +60,133 @@ public class TerrainSystem03EditingTerrain02 : DDLObjectType, IDDLObjectType<Ter
 		Line44 = ddl.GetString(0x6c79be56) ?? Line44;
 	}
 
-	[DDLRegistration(0x2ab9ef0du, description: "The terrain editor supports two types of brushes: bitmap brushes and HLSL")]
+	[DDLRegistration(0x787f8fddu, description: "The terrain editor supports two types of brushes: bitmap brushes and HLSL")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "brushes.  To create a new brush, simply add it to the brush folder in the")]
+	[DDLRegistration(0xe176de67u, description: "brushes.  To create a new brush, simply add it to the brush folder in the")]
 	public string? Line02 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "project's asset branch (<i>tool/Terrain/Brushes</i>).")]
+	[DDLRegistration(0x9671eef1u, description: "project's asset branch (<i>tool/Terrain/Brushes</i>).")]
 	public string? Line03 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<br><Br>")]
+	[DDLRegistration(0x08157b52u, description: "<br><Br>")]
 	public string? Line04 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<b>Bitmap Brushes</b>")]
+	[DDLRegistration(0x7f124bc4u, description: "<b>Bitmap Brushes</b>")]
 	public string? Line05 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<br><br>")]
+	[DDLRegistration(0xe61b1a7eu, description: "<br><br>")]
 	public string? Line06 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "The bitmap brush is the simplest brush.  It is a grayscale image that lives in")]
+	[DDLRegistration(0x911c2ae8u, description: "The bitmap brush is the simplest brush.  It is a grayscale image that lives in")]
 	public string? Line07 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "the brush folder.  While not required, Brushes should be 16-bit to paint")]
+	[DDLRegistration(0x01a33779u, description: "the brush folder.  While not required, Brushes should be 16-bit to paint")]
 	public string? Line08 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "heightfields with higher precision.  Brush values should range from black")]
+	[DDLRegistration(0x76a407efu, description: "heightfields with higher precision.  Brush values should range from black")]
 	public string? Line09 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "to white and represent the strength with which the terrain should be painted.")]
+	[DDLRegistration(0x16638e0au, description: "to white and represent the strength with which the terrain should be painted.")]
 	public string? Line10 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<br><br>")]
+	[DDLRegistration(0xf86def26u, description: "<br><br>")]
 	public string? Line12 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<b>HLSL Brushes</b>")]
+	[DDLRegistration(0x8f6adfb0u, description: "<b>HLSL Brushes</b>")]
 	public string? Line13 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<br><br>")]
+	[DDLRegistration(0x110e4a13u, description: "<br><br>")]
 	public string? Line14 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "An HLSL brush is a brush that uses HLSL code to determine the strength with")]
+	[DDLRegistration(0x66097a85u, description: "An HLSL brush is a brush that uses HLSL code to determine the strength with")]
 	public string? Line15 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "which the terrain should be painted.  An HLSL brush is a file with the <i>.h</i>")]
+	[DDLRegistration(0xff002b3fu, description: "which the terrain should be painted.  An HLSL brush is a file with the <i>.h</i>")]
 	public string? Line16 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "extension.  It is a text file that contains a single function that returns")]
+	[DDLRegistration(0x88071ba9u, description: "extension.  It is a text file that contains a single function that returns")]
 	public string? Line17 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "a single value indicating the brush strength.  Several parameters are passed")]
+	[DDLRegistration(0x18b80638u, description: "a single value indicating the brush strength.  Several parameters are passed")]
 	public string? Line18 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "into that function from the Terrain Editor, including a user-specified float4.")]
+	[DDLRegistration(0x6fbf36aeu, description: "into that function from the Terrain Editor, including a user-specified float4.")]
 	public string? Line19 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<br><br>")]
+	[DDLRegistration(0x3d4eddc9u, description: "<br><br>")]
 	public string? Line20 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "HLSL brushes show up with the <i>HLSL</i> tag in the brush dropdown.  By")]
+	[DDLRegistration(0x4a49ed5fu, description: "HLSL brushes show up with the <i>HLSL</i> tag in the brush dropdown.  By")]
 	public string? Line21 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "default, HLSL brushes show the brush name.  To create a custom thumbnail for")]
+	[DDLRegistration(0xd340bce5u, description: "default, HLSL brushes show the brush name.  To create a custom thumbnail for")]
 	public string? Line22 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "the HLSL brush, simply add a bitmap to the brushes folder with the same name")]
+	[DDLRegistration(0xa4478c73u, description: "the HLSL brush, simply add a bitmap to the brushes folder with the same name")]
 	public string? Line23 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "as the HLSL brush but give it the <i>.h.thumbnail</i> extensions.")]
+	[DDLRegistration(0x3a2319d0u, description: "as the HLSL brush but give it the <i>.h.thumbnail</i> extensions.")]
 	public string? Line24 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<br><br>")]
+	[DDLRegistration(0x4d242946u, description: "<br><br>")]
 	public string? Line25 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "The clipboard brush is a special brush that contains both heightfield and")]
+	[DDLRegistration(0xd42d78fcu, description: "The clipboard brush is a special brush that contains both heightfield and")]
 	public string? Line26 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "splatmask information.  This brush shows up in color (showing the splatmask)")]
+	[DDLRegistration(0xa32a486au, description: "splatmask information.  This brush shows up in color (showing the splatmask)")]
 	public string? Line27 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "and has the <i>Clipboard</i> tag in the brush dropdown.  The data used for")]
+	[DDLRegistration(0x339555fbu, description: "and has the <i>Clipboard</i> tag in the brush dropdown.  The data used for")]
 	public string? Line28 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "painting with this brush differs depending on if the target is the heightfield,")]
+	[DDLRegistration(0x4492656du, description: "painting with this brush differs depending on if the target is the heightfield,")]
 	public string? Line29 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "the splatmask, or the terrain itself.")]
+	[DDLRegistration(0x2455ec88u, description: "the splatmask, or the terrain itself.")]
 	public string? Line30 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<br><br>")]
+	[DDLRegistration(0x5352dc1eu, description: "<br><br>")]
 	public string? Line31 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<b>Inverted Painting</b>")]
+	[DDLRegistration(0xca5b8da4u, description: "<b>Inverted Painting</b>")]
 	public string? Line32 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<br><br>")]
+	[DDLRegistration(0xbd5cbd32u, description: "<br><br>")]
 	public string? Line33 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "Normally, pressing the right mouse button will increase the terrain height or")]
+	[DDLRegistration(0x23382891u, description: "Normally, pressing the right mouse button will increase the terrain height or")]
 	public string? Line34 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "add a color to a splatmask.  However, there are times when height or color")]
+	[DDLRegistration(0x543f1807u, description: "add a color to a splatmask.  However, there are times when height or color")]
 	public string? Line35 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "should be removed.  There are two ways to do this.  The first way is to hold")]
+	[DDLRegistration(0xcd3649bdu, description: "should be removed.  There are two ways to do this.  The first way is to hold")]
 	public string? Line36 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "the <i>Shift</i> key while painting; doing this will cause either height to be")]
+	[DDLRegistration(0xba31792bu, description: "the <i>Shift</i> key while painting; doing this will cause either height to be")]
 	public string? Line37 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "removed from the heightfield or a color to be removed from the splatmask.  An")]
+	[DDLRegistration(0x2a8e64bau, description: "removed from the heightfield or a color to be removed from the splatmask.  An")]
 	public string? Line38 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "alternative method is to paint by pressing the left mouse button; this too will")]
+	[DDLRegistration(0x5d89542cu, description: "alternative method is to paint by pressing the left mouse button; this too will")]
 	public string? Line39 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "remove height from the heightfield and color from the splatmask.  Some modes")]
+	[DDLRegistration(0x6b147a4fu, description: "remove height from the heightfield and color from the splatmask.  Some modes")]
 	public string? Line40 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "(like <i>Ramp</i>) don't have an inverted mode; they will paint the same")]
+	[DDLRegistration(0x1c134ad9u, description: "(like <i>Ramp</i>) don't have an inverted mode; they will paint the same")]
 	public string? Line41 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "regardless of <i>Shift</i> or right mouse button state.  Note that holding")]
+	[DDLRegistration(0x851a1b63u, description: "regardless of <i>Shift</i> or right mouse button state.  Note that holding")]
 	public string? Line42 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "<i>Shift</i> then painting with the right-click button will <i>not</i>")]
+	[DDLRegistration(0xf21d2bf5u, description: "<i>Shift</i> then painting with the right-click button will <i>not</i>")]
 	public string? Line43 { get; set; } = default;
 
-	[DDLRegistration(0x2ab9ef0du, description: "invert the paint (think of this as a double negative, which makes a positive).")]
+	[DDLRegistration(0x6c79be56u, description: "invert the paint (think of this as a double negative, which makes a positive).")]
 	public string? Line44 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain02 Create(DDLObject ddl) => new(ddl);

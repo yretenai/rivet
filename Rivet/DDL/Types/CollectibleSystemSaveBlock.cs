@@ -18,7 +18,7 @@ public class CollectibleSystemSaveBlock : DDLObjectType, IDDLObjectType<Collecti
 		TypeSaveData = ddl.GetDictionary<uint, CollectibleTypeSaveData>(0xac814fb5, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<CollectibleTypeSaveData>(mapId));
 	}
 
-	[DDLRegistration(0xbd8fd24au)]
+	[DDLRegistration(0xac814fb5u)]
 	public Dictionary<uint, CollectibleTypeSaveData?> TypeSaveData { get; set; } = [];
 
 	public static CollectibleSystemSaveBlock Create(DDLObject ddl) => new(ddl);

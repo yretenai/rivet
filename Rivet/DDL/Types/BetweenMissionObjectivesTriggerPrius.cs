@@ -21,16 +21,16 @@ public class BetweenMissionObjectivesTriggerPrius : BaseCustomOverlayTriggerPriu
 		Objective2Name = ddl.GetString(0x5fed6aba) ?? Objective2Name;
 	}
 
-	[DDLRegistration(0xe43e38a0u, description: "This mission/objective pair must be COMPLETE for this overlay to load.")]
+	[DDLRegistration(0x32df8c9bu, description: "This mission/objective pair must be COMPLETE for this overlay to load.")]
 	public string? Mission1Name { get; set; } = default;
 
-	[DDLRegistration(0xe43e38a0u, description: "This mission/objective pair must be COMPLETE for this overlay to load.")]
+	[DDLRegistration(0x184d106au, description: "This mission/objective pair must be COMPLETE for this overlay to load.")]
 	public string? Objective1Name { get; set; } = default;
 
-	[DDLRegistration(0xe43e38a0u, description: "This mission/objective pair must be INCOMPLETE for this overlay to load.")]
+	[DDLRegistration(0x757ff64bu, description: "This mission/objective pair must be INCOMPLETE for this overlay to load.")]
 	public string? Mission2Name { get; set; } = default;
 
-	[DDLRegistration(0xe43e38a0u, description: "This mission/objective pair must be INCOMPLETE for this overlay to load.")]
+	[DDLRegistration(0x5fed6abau, description: "This mission/objective pair must be INCOMPLETE for this overlay to load.")]
 	public string? Objective2Name { get; set; } = default;
 
 	public new static BetweenMissionObjectivesTriggerPrius Create(DDLObject ddl) => new(ddl);

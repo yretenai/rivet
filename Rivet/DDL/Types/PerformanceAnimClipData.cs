@@ -20,13 +20,13 @@ public class PerformanceAnimClipData : DDLObjectType, IDDLObjectType<Performance
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x41956ed3u)]
+	[DDLRegistration(0x3edf8c10u)]
 	public string? AnimClipPath { get; set; } = default;
 
-	[DDLRegistration(0x41956ed3u)]
+	[DDLRegistration(0xc189693cu)]
 	public byte DurationChecked { get; set; } = 0x00;
 
-	[DDLRegistration(0x41956ed3u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
 	public static PerformanceAnimClipData Create(DDLObject ddl) => new(ddl);

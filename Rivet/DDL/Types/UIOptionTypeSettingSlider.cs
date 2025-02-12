@@ -20,13 +20,13 @@ public class UIOptionTypeSettingSlider : UIOptionTypeSettingBase, IDDLObjectType
 		GamePreview = ddl.GetValue<bool>(0x7fe20d3cu, GamePreview);
 	}
 
-	[DDLRegistration(0xbb79dbdau, description: "Min value for slider options")]
+	[DDLRegistration(0x5a3038ceu, description: "Min value for slider options")]
 	public int SliderMinimum { get; set; } = 0;
 
-	[DDLRegistration(0xbb79dbdau, description: "Fidelity for slider options")]
+	[DDLRegistration(0x5ade504fu, description: "Fidelity for slider options")]
 	public int SliderFidelity { get; set; } = 10;
 
-	[DDLRegistration(0xbb79dbdau, description: "Show this slider in-game alone, outside of settings list, with the full game preview (e.g. Brightness)")]
+	[DDLRegistration(0x7fe20d3cu, description: "Show this slider in-game alone, outside of settings list, with the full game preview (e.g. Brightness)")]
 	public bool GamePreview { get; set; } = false;
 
 	public new static UIOptionTypeSettingSlider Create(DDLObject ddl) => new(ddl);

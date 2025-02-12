@@ -19,10 +19,10 @@ public class GameCurveConveyorPrius : MovingSurfacePrius, IDDLObjectType<GameCur
 		Speed = ddl.GetValue<float>(0x16753237u, Speed);
 	}
 
-	[DDLRegistration(0x3840b1d6u, description: "Motion curve that objects will follow.")]
+	[DDLRegistration(0x20669a34u, description: "Motion curve that objects will follow.")]
 	public RivetAssetId MotionCurve { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3840b1d6u, description: "Speed (in m/s) at which objects will move along the curve.")]
+	[DDLRegistration(0x16753237u, description: "Speed (in m/s) at which objects will move along the curve.")]
 	public float Speed { get; set; } = 1.00f;
 
 	public new static GameCurveConveyorPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class HeroSpawnLocationData : DDLObjectType, IDDLObjectType<HeroSpawnLoca
 		StartCrouched = ddl.GetValue<bool>(0xf7a1aeb8u, StartCrouched);
 	}
 
-	[DDLRegistration(0x83bb7864u, "Spawn Location")]
+	[DDLRegistration(0xc0dd8c72u, "Spawn Location")]
 	public RivetAssetId SpawnLocation { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x83bb7864u, "Start Crouched")]
+	[DDLRegistration(0xf7a1aeb8u, "Start Crouched")]
 	public bool StartCrouched { get; set; } = false;
 
 	public static HeroSpawnLocationData Create(DDLObject ddl) => new(ddl);

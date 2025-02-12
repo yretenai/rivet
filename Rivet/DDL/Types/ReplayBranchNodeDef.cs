@@ -20,13 +20,13 @@ public class ReplayBranchNodeDef : BranchStartNodeBaseDef, IDDLObjectType<Replay
 		FullReplayOutput = ddl.GetObject<OutputPlugBoolean>(0x6205c167u);
 	}
 
-	[DDLRegistration(0x6c352121u)]
+	[DDLRegistration(0xdecafe24u)]
 	public OutputPlugBoolean? FirstPlayThroughOutput { get; set; } = default;
 
-	[DDLRegistration(0x6c352121u)]
+	[DDLRegistration(0x9a366745u)]
 	public OutputPlugBoolean? ImmediateReplayOutput { get; set; } = default;
 
-	[DDLRegistration(0x6c352121u)]
+	[DDLRegistration(0x6205c167u)]
 	public OutputPlugBoolean? FullReplayOutput { get; set; } = default;
 
 	public new static ReplayBranchNodeDef Create(DDLObject ddl) => new(ddl);

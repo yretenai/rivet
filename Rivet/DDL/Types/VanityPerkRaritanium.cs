@@ -19,10 +19,10 @@ public class VanityPerkRaritanium : VanityPerkBase, IDDLObjectType<VanityPerkRar
 		RaritaniumMultPiece = ddl.GetValue<float>(0x3eb5d3edu, RaritaniumMultPiece);
 	}
 
-	[DDLRegistration(0x08a82b1bu, description: "Total Raritanium = (1 + RaritaniumMultSet) * Raritanium. Applied if player has the whole set.")]
+	[DDLRegistration(0xdbbc85eeu, description: "Total Raritanium = (1 + RaritaniumMultSet) * Raritanium. Applied if player has the whole set.")]
 	public float RaritaniumMultSet { get; set; } = 0.00f;
 
-	[DDLRegistration(0x08a82b1bu, description: "Total Raritanium = (1 + RaritaniumMultPiece * piece_count) * Raritanium. Applied if player has an incomplete set.")]
+	[DDLRegistration(0x3eb5d3edu, description: "Total Raritanium = (1 + RaritaniumMultPiece * piece_count) * Raritanium. Applied if player has an incomplete set.")]
 	public float RaritaniumMultPiece { get; set; } = 0.00f;
 
 	public new static VanityPerkRaritanium Create(DDLObject ddl) => new(ddl);

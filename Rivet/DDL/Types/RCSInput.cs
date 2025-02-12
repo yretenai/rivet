@@ -18,7 +18,7 @@ public class RCSInput : DDLObjectType, IDDLObjectType<RCSInput> {
 		KeepAliveTimeout = ddl.GetValue<float>(0x19c2272du, KeepAliveTimeout);
 	}
 
-	[DDLRegistration(0x51640b87u, description: "Sets the keep alive timeout in seconds.")]
+	[DDLRegistration(0x19c2272du, description: "Sets the keep alive timeout in seconds.")]
 	public float KeepAliveTimeout { get; set; } = 600.00f;
 
 	public static RCSInput Create(DDLObject ddl) => new(ddl);

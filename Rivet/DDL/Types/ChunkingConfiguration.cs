@@ -25,28 +25,28 @@ public class ChunkingConfiguration : DDLObjectType, IDDLObjectType<ChunkingConfi
 		MaterialData = ddl.GetObject<ChunkingMaterialData>(0x351e61d1u);
 	}
 
-	[DDLRegistration(0xb78f4eb5u, description: "Name to identify this configuration")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name to identify this configuration")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xb78f4eb5u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb78f4eb5u, description: "Each look in this group will become its own chunk")]
+	[DDLRegistration(0xf46082b2u, description: "Each look in this group will become its own chunk")]
 	public string? ChunkLookGroup { get; set; } = default;
 
-	[DDLRegistration(0xb78f4eb5u, description: "Use this for chunks that need to be made from a look group, not just a single look")]
+	[DDLRegistration(0x4a5aedf6u, description: "Use this for chunks that need to be made from a look group, not just a single look")]
 	public List<CustomChunk?> CustomChunks { get; set; } = [];
 
-	[DDLRegistration(0xb78f4eb5u, description: "Optional.  Spawn the chunks specified on this actor.")]
+	[DDLRegistration(0x72fc2cf6u, description: "Optional.  Spawn the chunks specified on this actor.")]
 	public List<CustomChunkActor?> ChunkActors { get; set; } = [];
 
-	[DDLRegistration(0xb78f4eb5u)]
+	[DDLRegistration(0x7b80cf14u)]
 	public x68a523f1 StumpType { get; set; } = x68a523f1.LeaveOriginal;
 
-	[DDLRegistration(0xb78f4eb5u, description: "If StumpType == kToggleStump, apply this look group to the original model upon destruction.")]
+	[DDLRegistration(0xfac3bde1u, description: "If StumpType == kToggleStump, apply this look group to the original model upon destruction.")]
 	public string? StumpLookGroup { get; set; } = default;
 
-	[DDLRegistration(0xb78f4eb5u)]
+	[DDLRegistration(0x351e61d1u)]
 	public ChunkingMaterialData? MaterialData { get; set; } = default;
 
 	public static ChunkingConfiguration Create(DDLObject ddl) => new(ddl);

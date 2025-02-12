@@ -19,10 +19,10 @@ public class MaterialProfilingSettings : DDLObjectType, IDDLObjectType<MaterialP
 		ForwardBaseline = ddl.GetValue<float>(0xeceb7a9cu, ForwardBaseline);
 	}
 
-	[DDLRegistration(0xe0ac764cu)]
+	[DDLRegistration(0xf6d3bad5u)]
 	public float GBufferBaseline { get; set; } = 400.00f;
 
-	[DDLRegistration(0xe0ac764cu)]
+	[DDLRegistration(0xeceb7a9cu)]
 	public float ForwardBaseline { get; set; } = 1600.00f;
 
 	public static MaterialProfilingSettings Create(DDLObject ddl) => new(ddl);

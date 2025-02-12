@@ -18,7 +18,7 @@ public class LightningRodProjectileHitEvent : ProjectileHitEvent, IDDLObjectType
 		IsChargeShot = ddl.GetValue<bool>(0xf1b25dfau, IsChargeShot);
 	}
 
-	[DDLRegistration(0xfe741060u)]
+	[DDLRegistration(0xf1b25dfau)]
 	public bool IsChargeShot { get; set; } = false;
 
 	public new static LightningRodProjectileHitEvent Create(DDLObject ddl) => new(ddl);

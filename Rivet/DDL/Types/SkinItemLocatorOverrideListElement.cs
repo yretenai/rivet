@@ -19,10 +19,10 @@ public class SkinItemLocatorOverrideListElement : DDLObjectType, IDDLObjectType<
 		LocatorOverride = ddl.GetObject<SkinItemLocatorOverride>(0xa761bc40u);
 	}
 
-	[DDLRegistration(0x903685cau, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0x903685cau, "Locator Override", "Locator override parameters")]
+	[DDLRegistration(0xa761bc40u, "Locator Override", "Locator override parameters")]
 	public SkinItemLocatorOverride? LocatorOverride { get; set; } = default;
 
 	public static SkinItemLocatorOverrideListElement Create(DDLObject ddl) => new(ddl);

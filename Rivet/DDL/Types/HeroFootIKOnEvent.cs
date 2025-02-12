@@ -20,13 +20,13 @@ public class HeroFootIKOnEvent : EventBase, IDDLObjectType<HeroFootIKOnEvent> {
 		EnableGroundOffset = ddl.GetValue<bool>(0x13532172u, EnableGroundOffset);
 	}
 
-	[DDLRegistration(0xe3a0e468u)]
+	[DDLRegistration(0xa851d40bu)]
 	public string? Chain { get; set; } = default;
 
-	[DDLRegistration(0xe3a0e468u)]
+	[DDLRegistration(0x5fb79badu)]
 	public bool SlopeMatch { get; set; } = true;
 
-	[DDLRegistration(0xe3a0e468u)]
+	[DDLRegistration(0x13532172u)]
 	public bool EnableGroundOffset { get; set; } = true;
 
 	public new static HeroFootIKOnEvent Create(DDLObject ddl) => new(ddl);

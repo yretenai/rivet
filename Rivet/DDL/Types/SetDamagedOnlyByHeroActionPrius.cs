@@ -19,10 +19,10 @@ public class SetDamagedOnlyByHeroActionPrius : DDLObjectType, IDDLObjectType<Set
 		DisableKnockbacks = ddl.GetValue<bool>(0x463963c0u, DisableKnockbacks);
 	}
 
-	[DDLRegistration(0x471ae1c3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Health;
 
-	[DDLRegistration(0x471ae1c3u, description: "If true, this script will also make knockbacks not happen unless by hero")]
+	[DDLRegistration(0x463963c0u, description: "If true, this script will also make knockbacks not happen unless by hero")]
 	public bool DisableKnockbacks { get; set; } = false;
 
 	public static SetDamagedOnlyByHeroActionPrius Create(DDLObject ddl) => new(ddl);

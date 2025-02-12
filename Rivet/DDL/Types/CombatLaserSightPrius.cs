@@ -19,10 +19,10 @@ public class CombatLaserSightPrius : DDLObjectType, IDDLObjectType<CombatLaserSi
 		AttachLocator = ddl.GetString(0xfa8dcd9a) ?? AttachLocator;
 	}
 
-	[DDLRegistration(0x28388c41u, description: "Should LaserSight Component be enabled from beginning")]
+	[DDLRegistration(0xfe214b47u, description: "Should LaserSight Component be enabled from beginning")]
 	public bool StartsEnabled { get; set; } = false;
 
-	[DDLRegistration(0x28388c41u, "Attach Locator", "Which locator on the actor/weapon to attach the laser to.")]
+	[DDLRegistration(0xfa8dcd9au, "Attach Locator", "Which locator on the actor/weapon to attach the laser to.")]
 	public string? AttachLocator { get; set; } = default;
 
 	public static CombatLaserSightPrius Create(DDLObject ddl) => new(ddl);

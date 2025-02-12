@@ -20,13 +20,13 @@ public class AnimDriverTransitionDef : DDLObjectType, IDDLObjectType<AnimDriverT
 		Destination = ddl.GetString(0xb31a6f71) ?? Destination;
 	}
 
-	[DDLRegistration(0xf3c48b76u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.25f;
 
-	[DDLRegistration(0xf3c48b76u)]
+	[DDLRegistration(0x61f23114u)]
 	public string? Source { get; set; } = default;
 
-	[DDLRegistration(0xf3c48b76u)]
+	[DDLRegistration(0xb31a6f71u)]
 	public string? Destination { get; set; } = default;
 
 	public static AnimDriverTransitionDef Create(DDLObject ddl) => new(ddl);

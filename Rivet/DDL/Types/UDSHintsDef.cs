@@ -21,16 +21,16 @@ public class UDSHintsDef : DDLObjectType, IDDLObjectType<UDSHintsDef> {
 		Entities = ddl.GetObject<UDSHintEntities>(0x539bbbc3u);
 	}
 
-	[DDLRegistration(0xdd184d45u)]
+	[DDLRegistration(0x5af80aeeu)]
 	public string? SchemaVersion { get; set; } = default;
 
-	[DDLRegistration(0xdd184d45u)]
+	[DDLRegistration(0x0aa38892u)]
 	public xe07d4302 ContextType { get; set; } = xe07d4302.NPCommunicationId;
 
-	[DDLRegistration(0xdd184d45u)]
+	[DDLRegistration(0x06df9fd7u)]
 	public string? ContextId { get; set; } = default;
 
-	[DDLRegistration(0xdd184d45u)]
+	[DDLRegistration(0x539bbbc3u)]
 	public UDSHintEntities? Entities { get; set; } = default;
 
 	public static UDSHintsDef Create(DDLObject ddl) => new(ddl);

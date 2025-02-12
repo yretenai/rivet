@@ -19,10 +19,10 @@ public class VarRenderTextureOverride : DDLObjectType, IDDLObjectType<VarRenderT
 		Value = ddl.GetObject<RenderTextureOverride>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x30904ae6u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x30904ae6u)]
+	[DDLRegistration(0x042494f5u)]
 	public RenderTextureOverride? Value { get; set; } = default;
 
 	public static VarRenderTextureOverride Create(DDLObject ddl) => new(ddl);

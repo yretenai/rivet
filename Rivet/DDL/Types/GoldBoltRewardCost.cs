@@ -19,10 +19,10 @@ public class GoldBoltRewardCost : DDLObjectType, IDDLObjectType<GoldBoltRewardCo
 		Cost = ddl.GetValue<uint>(0x28b6544cu, Cost);
 	}
 
-	[DDLRegistration(0x5b4a5050u)]
+	[DDLRegistration(0x70a93c34u)]
 	public GoldBoltReward Reward { get; set; } = GoldBoltReward.None;
 
-	[DDLRegistration(0x5b4a5050u)]
+	[DDLRegistration(0x28b6544cu)]
 	public uint Cost { get; set; } = 0x00000001;
 
 	public static GoldBoltRewardCost Create(DDLObject ddl) => new(ddl);

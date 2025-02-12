@@ -25,28 +25,28 @@ public class DealDamageEffectPrius : ScriptedShotEffectBasePrius, IDDLObjectType
 		DamageFlags = ddl.GetBitset<DamageRequestFlags>(0x93d0d934u, DamageRequestFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0xfccd37b8u)]
+	[DDLRegistration(0x2fb01a0bu)]
 	public float Damage { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfccd37b8u)]
+	[DDLRegistration(0x2554a262u)]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0xfccd37b8u, description: "Amount of knockback to apply. -1 means we'll use the damage as the knockback amount.")]
+	[DDLRegistration(0x7b1e600bu, description: "Amount of knockback to apply. -1 means we'll use the damage as the knockback amount.")]
 	public float KnockbackAmount { get; set; } = -1.00f;
 
-	[DDLRegistration(0xfccd37b8u)]
+	[DDLRegistration(0x37e1f098u)]
 	public float StatusAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfccd37b8u)]
+	[DDLRegistration(0x51e985cau)]
 	public float StatusDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfccd37b8u)]
+	[DDLRegistration(0x45c731dcu)]
 	public float NoRepeatTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfccd37b8u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public DamageTypesGame Type { get; set; } = DamageTypesGame.Bullet;
 
-	[DDLRegistration(0xfccd37b8u)]
+	[DDLRegistration(0x93d0d934u)]
 	public DamageRequestFlags DamageFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
 	public new static DealDamageEffectPrius Create(DDLObject ddl) => new(ddl);

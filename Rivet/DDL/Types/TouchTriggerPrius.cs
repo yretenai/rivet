@@ -18,7 +18,7 @@ public class TouchTriggerPrius : DDLObjectType, IDDLObjectType<TouchTriggerPrius
 		TriggerGroup = ddl.GetValue<RivetAssetId>(0x03c09677u, TriggerGroup);
 	}
 
-	[DDLRegistration(0x5da6c566u, description: "The actors in this group will trigger the volume when they enter and leave it.")]
+	[DDLRegistration(0x03c09677u, description: "The actors in this group will trigger the volume when they enter and leave it.")]
 	public RivetAssetId TriggerGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static TouchTriggerPrius Create(DDLObject ddl) => new(ddl);

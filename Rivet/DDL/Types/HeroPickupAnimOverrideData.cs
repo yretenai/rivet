@@ -19,10 +19,10 @@ public class HeroPickupAnimOverrideData : DDLObjectType, IDDLObjectType<HeroPick
 		OverridePickupAnim = ddl.GetString(0xaaf0e2e8) ?? OverridePickupAnim;
 	}
 
-	[DDLRegistration(0x0050adacu, description: "If the collector is this hero type, we will use the OverridePickupAnim.")]
+	[DDLRegistration(0x1583d108u, description: "If the collector is this hero type, we will use the OverridePickupAnim.")]
 	public HeroTypes HeroType { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0x0050adacu, description: "The animation to play on the collector and the pickup.")]
+	[DDLRegistration(0xaaf0e2e8u, description: "The animation to play on the collector and the pickup.")]
 	public string? OverridePickupAnim { get; set; } = "";
 
 	public static HeroPickupAnimOverrideData Create(DDLObject ddl) => new(ddl);

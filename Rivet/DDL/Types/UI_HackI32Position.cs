@@ -19,10 +19,10 @@ public class UI_HackI32Position : DDLObjectType, IDDLObjectType<UI_HackI32Positi
 		YPos = ddl.GetValue<float>(0x403689e4u, YPos);
 	}
 
-	[DDLRegistration(0x9aa1d344u)]
+	[DDLRegistration(0xf88aee81u)]
 	public float XPos { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9aa1d344u)]
+	[DDLRegistration(0x403689e4u)]
 	public float YPos { get; set; } = 0.00f;
 
 	public static UI_HackI32Position Create(DDLObject ddl) => new(ddl);

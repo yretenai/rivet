@@ -26,31 +26,31 @@ public class ObjectiveSystemSettings : DDLObjectType, IDDLObjectType<ObjectiveSy
 		DebugObjectiveSortOrder = ddl.GetEnum<DebugObjectiveSortOrder>(0x11c99006u, DebugObjectiveSortOrderValues.Lookup);
 	}
 
-	[DDLRegistration(0x89b3fc89u)]
+	[DDLRegistration(0x11499abeu)]
 	public x95fbb203 LogCategories { get; set; } = (x95fbb203) 0x00000019;
 
-	[DDLRegistration(0x89b3fc89u)]
+	[DDLRegistration(0xfcd510aeu)]
 	public int ObjectiveSystemSaveSize { get; set; } = 131072;
 
-	[DDLRegistration(0x89b3fc89u)]
+	[DDLRegistration(0xe3a8a8c2u)]
 	public bool UseObjectiveSystem { get; set; } = false;
 
-	[DDLRegistration(0x89b3fc89u)]
+	[DDLRegistration(0xb9e1732bu)]
 	public string? DefaultMissionGraph { get; set; } = default;
 
-	[DDLRegistration(0x89b3fc89u)]
+	[DDLRegistration(0xe9519e1fu)]
 	public string? MissionStart { get; set; } = default;
 
-	[DDLRegistration(0x89b3fc89u)]
+	[DDLRegistration(0xc3c302eeu)]
 	public string? ObjectiveStart { get; set; } = default;
 
-	[DDLRegistration(0x89b3fc89u)]
+	[DDLRegistration(0x88fef62cu)]
 	public DebugGraphDrawSettings? GraphDrawSettings { get; set; } = default;
 
-	[DDLRegistration(0x89b3fc89u, "Sort Mission List By", "How to sort the mission list in the frontend/reload menu. Alphabetical: self-explanatory. Mission Order: Sort missions roughly by location in the mission flow.")]
+	[DDLRegistration(0xac8d000fu, "Sort Mission List By", "How to sort the mission list in the frontend/reload menu. Alphabetical: self-explanatory. Mission Order: Sort missions roughly by location in the mission flow.")]
 	public DebugMissionSortOrder DebugMissionSortOrder { get; set; } = DebugMissionSortOrder.DepthFirst;
 
-	[DDLRegistration(0x89b3fc89u, "Sort Objective List By", "How to sort the objective list in the frontend/reload menu. Alphabetical: self-explanatory. Objective Order: Sort objectives roughly by location in the objective flow.")]
+	[DDLRegistration(0x11c99006u, "Sort Objective List By", "How to sort the objective list in the frontend/reload menu. Alphabetical: self-explanatory. Objective Order: Sort objectives roughly by location in the objective flow.")]
 	public DebugObjectiveSortOrder DebugObjectiveSortOrder { get; set; } = DebugObjectiveSortOrder.DepthFirst;
 
 	public static ObjectiveSystemSettings Create(DDLObject ddl) => new(ddl);

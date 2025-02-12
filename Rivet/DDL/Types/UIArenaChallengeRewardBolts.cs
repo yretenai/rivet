@@ -18,7 +18,7 @@ public class UIArenaChallengeRewardBolts : UIArenaChallengeReward, IDDLObjectTyp
 		Amount = ddl.GetValue<uint>(0xb0d93e25u, Amount);
 	}
 
-	[DDLRegistration(0x5e7a2eebu)]
+	[DDLRegistration(0xb0d93e25u)]
 	public uint Amount { get; set; } = 0x00000000;
 
 	public new static UIArenaChallengeRewardBolts Create(DDLObject ddl) => new(ddl);

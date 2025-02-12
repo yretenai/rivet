@@ -41,76 +41,76 @@ public class SkinItemConfig : ItemConfig, IDDLObjectType<SkinItemConfig> {
 		ShaderUpdater = ddl.GetObject<SkinShaderUpdaterPrius>(0xc824d41bu);
 	}
 
-	[DDLRegistration(0x94e02607u, "Category", "How is this item categorized")]
+	[DDLRegistration(0xfc4da4b1u, "Category", "How is this item categorized")]
 	public xf28253cd Category { get; set; } = xf28253cd.None;
 
-	[DDLRegistration(0x94e02607u, "Available", "How does this item become available")]
+	[DDLRegistration(0x27723b89u, "Available", "How does this item become available")]
 	public x7ecfc969 Available { get; set; } = x7ecfc969.Always;
 
-	[DDLRegistration(0x94e02607u, "Hidden", "True if hidden until available")]
+	[DDLRegistration(0xb625a7dau, "Hidden", "True if hidden until available")]
 	public bool Hidden { get; set; } = false;
 
-	[DDLRegistration(0x94e02607u, "Part Type", "Type of part (will override slots/layers)")]
+	[DDLRegistration(0x59a27916u, "Part Type", "Type of part (will override slots/layers)")]
 	public x576d8e6a PartType { get; set; } = x576d8e6a.TypeNone;
 
-	[DDLRegistration(0x94e02607u, "Skin to Head", "True if model is skinned to the head skeleton (otherwise skinned to body)")]
+	[DDLRegistration(0x4521b746u, "Skin to Head", "True if model is skinned to the head skeleton (otherwise skinned to body)")]
 	public bool SkinToHead { get; set; } = false;
 
-	[DDLRegistration(0x94e02607u, "Mirror", "True if model should be mirrored on opposite side of the body")]
+	[DDLRegistration(0x65df552du, "Mirror", "True if model should be mirrored on opposite side of the body")]
 	public bool Mirror { get; set; } = false;
 
-	[DDLRegistration(0x94e02607u, "Flip", "True if model should be flipped to the opposite side of the body")]
+	[DDLRegistration(0xaa6e24e5u, "Flip", "True if model should be flipped to the opposite side of the body")]
 	public bool Flip { get; set; } = false;
 
-	[DDLRegistration(0x94e02607u, "Apply Overrides to Head", "Apply the overrides to the head model")]
+	[DDLRegistration(0x0559dbaau, "Apply Overrides to Head", "Apply the overrides to the head model")]
 	public bool ApplyOverridesToHead { get; set; } = false;
 
-	[DDLRegistration(0x94e02607u, "Apply Overrides to Body", "Apply the overrides to all of the body models")]
+	[DDLRegistration(0x79022684u, "Apply Overrides to Body", "Apply the overrides to all of the body models")]
 	public bool ApplyOverridesToBody { get; set; } = false;
 
-	[DDLRegistration(0x94e02607u, "Update Child Joints", "Update joints that are under matched ones (less efficient, so not the default)")]
+	[DDLRegistration(0x6ae6dc9eu, "Update Child Joints", "Update joints that are under matched ones (less efficient, so not the default)")]
 	public bool UpdateChildJoints { get; set; } = false;
 
-	[DDLRegistration(0x94e02607u, "Model List", "List of models to use for each body type")]
+	[DDLRegistration(0x7eafbb2fu, "Model List", "List of models to use for each body type")]
 	public List<SkinItemModel?> ModelList { get; set; } = [];
 
-	[DDLRegistration(0x94e02607u, "Locator Override List", "Locator override(s) this model can be attached to (if not skinned to head/body)")]
+	[DDLRegistration(0xa6babbdeu, "Locator Override List", "Locator override(s) this model can be attached to (if not skinned to head/body)")]
 	public List<SkinItemLocatorOverrideListElement?> LocatorOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x94e02607u, "Texture Override List", "Texture override(s) to use with this model")]
+	[DDLRegistration(0x31be016cu, "Texture Override List", "Texture override(s) to use with this model")]
 	public List<SkinItemTextureOverrideListElement?> TextureOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x94e02607u, "Material Override List", "Material override(s) to use with this model")]
+	[DDLRegistration(0xeb47267au, "Material Override List", "Material override(s) to use with this model")]
 	public List<SkinItemMaterialOverrideListElement?> MaterialOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x94e02607u, "Composite Material Override List", "Composite material override(s) to use with this model")]
+	[DDLRegistration(0x88bf7983u, "Composite Material Override List", "Composite material override(s) to use with this model")]
 	public List<SkinItemCompositeMaterialOverrideListElement?> CompositeMaterialOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x94e02607u, "Conduit Override List", "Conduit override(s) to use with this model")]
+	[DDLRegistration(0x6c1e1c97u, "Conduit Override List", "Conduit override(s) to use with this model")]
 	public List<SkinItemConduitOverrideListElement?> ConduitOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x94e02607u, "Model Variant Override List", "Model Variant override(s) to use with this model")]
+	[DDLRegistration(0xdf65d905u, "Model Variant Override List", "Model Variant override(s) to use with this model")]
 	public List<SkinItemModelVariantOverrideListElement?> ModelVariantOverrideList { get; set; } = [];
 
-	[DDLRegistration(0x94e02607u, "Switch Group List", "Switch group(s) to use with this model")]
+	[DDLRegistration(0xa76c9412u, "Switch Group List", "Switch group(s) to use with this model")]
 	public List<SkinItemSwitchGroupListElement?> SwitchGroupList { get; set; } = [];
 
-	[DDLRegistration(0x94e02607u, "Companion Item List", "Companion SkinItemConfig(s) to equip with this model")]
+	[DDLRegistration(0x1c412f8cu, "Companion Item List", "Companion SkinItemConfig(s) to equip with this model")]
 	public List<SkinItemCompanionItemListElement?> CompanionItemList { get; set; } = [];
 
-	[DDLRegistration(0x94e02607u, "Color Config", "Color config to use with this model")]
+	[DDLRegistration(0xa50ec5bfu, "Color Config", "Color config to use with this model")]
 	public RivetAssetId ColorConfig { get; set; } = default;
 
-	[DDLRegistration(0x94e02607u, "Color Config Name", "Name of the color in the color config")]
+	[DDLRegistration(0x351f7eaau, "Color Config Name", "Name of the color in the color config")]
 	public string? ColorConfigName { get; set; } = default;
 
-	[DDLRegistration(0x94e02607u, "Color Channels", "Color channels to use with this model")]
+	[DDLRegistration(0x12c50e26u, "Color Channels", "Color channels to use with this model")]
 	public x3126d105 ColorChannels { get; set; } = x3126d105.All;
 
-	[DDLRegistration(0x94e02607u, description: "Sounds specific to this vanity item")]
+	[DDLRegistration(0xa6a14c2eu, description: "Sounds specific to this vanity item")]
 	public List<AssetReferenceDef?> SoundBanks { get; set; } = [];
 
-	[DDLRegistration(0x94e02607u)]
+	[DDLRegistration(0xc824d41bu)]
 	public SkinShaderUpdaterPrius? ShaderUpdater { get; set; } = default;
 
 	public new static SkinItemConfig Create(DDLObject ddl) => new(ddl);

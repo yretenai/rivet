@@ -35,58 +35,58 @@ public class SimpleCritterPrius : DDLObjectType, IDDLObjectType<SimpleCritterPri
 		TurnLeftAnim = ddl.GetString(0xe5e1bf97) ?? TurnLeftAnim;
 	}
 
-	[DDLRegistration(0x865e0157u)]
+	[DDLRegistration(0xf0d89680u)]
 	public float MinSpeed { get; set; } = 4.00f;
 
-	[DDLRegistration(0x865e0157u)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 8.00f;
 
-	[DDLRegistration(0x865e0157u)]
+	[DDLRegistration(0x44affa24u)]
 	public float Accel { get; set; } = 8.00f;
 
-	[DDLRegistration(0x865e0157u)]
+	[DDLRegistration(0xa9242a88u)]
 	public float Decel { get; set; } = 6.00f;
 
-	[DDLRegistration(0x865e0157u)]
+	[DDLRegistration(0x6cc70f48u)]
 	public float TurnSpeed { get; set; } = 150.00f;
 
-	[DDLRegistration(0x865e0157u)]
+	[DDLRegistration(0x6f74b2c1u)]
 	public float MinTurnAngle { get; set; } = 30.00f;
 
-	[DDLRegistration(0x865e0157u)]
+	[DDLRegistration(0x4d6520cfu)]
 	public float MinIdleTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x865e0157u)]
+	[DDLRegistration(0x81685bc0u)]
 	public float MaxIdleTime { get; set; } = 3.00f;
 
-	[DDLRegistration(0x865e0157u)]
+	[DDLRegistration(0x704cc9d2u)]
 	public float MaxSurvivableFallDistance { get; set; } = 3.00f;
 
-	[DDLRegistration(0x865e0157u, "Forward Offset for Panic Feelers", "How far in front of the critter the panic feeler queries extend. Higher values result in critters responding to obstructions earlier.")]
+	[DDLRegistration(0xc8fe3371u, "Forward Offset for Panic Feelers", "How far in front of the critter the panic feeler queries extend. Higher values result in critters responding to obstructions earlier.")]
 	public float PanicFeelerForwardOffset { get; set; } = 3.00f;
 
-	[DDLRegistration(0x865e0157u, "Initial Up Offset for Panic Feelers", "How far in above the critter the panic feeler queries start from. These feelers will be angled downwards so that they will end level with the critter. Higher values for this mean that critters may 'climb' over taller objects.")]
+	[DDLRegistration(0x4b14d268u, "Initial Up Offset for Panic Feelers", "How far in above the critter the panic feeler queries start from. These feelers will be angled downwards so that they will end level with the critter. Higher values for this mean that critters may 'climb' over taller objects.")]
 	public float PanicFeelerStartUpOffset { get; set; } = 0.50f;
 
-	[DDLRegistration(0x865e0157u, "Side Offset of Side Panic Feelers", "How far to the side the side feelers extend. Larger values result in critters staying farther from obstructions on their left and right.")]
+	[DDLRegistration(0x3cbb3a5bu, "Side Offset of Side Panic Feelers", "How far to the side the side feelers extend. Larger values result in critters staying farther from obstructions on their left and right.")]
 	public float PanicFeelerSideOffset { get; set; } = 1.50f;
 
-	[DDLRegistration(0x865e0157u, "Panic Max Surface Angle", "The maximum angle of incline that the critter is allowed to walk onto while panicking.")]
+	[DDLRegistration(0x801e5a2eu, "Panic Max Surface Angle", "The maximum angle of incline that the critter is allowed to walk onto while panicking.")]
 	public float PanicMaxSurfaceAngle { get; set; } = 30.00f;
 
-	[DDLRegistration(0x865e0157u, "Min Panic Move Speed for Move Anim", "How fast must the critter be moving while panicking to play the move anim?")]
+	[DDLRegistration(0xda673f2du, "Min Panic Move Speed for Move Anim", "How fast must the critter be moving while panicking to play the move anim?")]
 	public float MinPanicMoveSpeedForAnim { get; set; } = 0.25f;
 
-	[DDLRegistration(0x865e0157u, description: "Looping anim clip to play while standing still either on the ground or on a tree (for climb critters) while waiting for the next destination.")]
+	[DDLRegistration(0xe747921au, description: "Looping anim clip to play while standing still either on the ground or on a tree (for climb critters) while waiting for the next destination.")]
 	public string? IdleAnim { get; set; } = default;
 
-	[DDLRegistration(0x865e0157u, description: "Looping anim clip to play while moving across the ground.")]
+	[DDLRegistration(0xc347e9e7u, description: "Looping anim clip to play while moving across the ground.")]
 	public string? MoveAnim { get; set; } = default;
 
-	[DDLRegistration(0x865e0157u, description: "Non-looping anim clip to play when turning right while stopped. Rotation is scaled to end on the target facing.")]
+	[DDLRegistration(0x4cf0e45au, description: "Non-looping anim clip to play when turning right while stopped. Rotation is scaled to end on the target facing.")]
 	public string? TurnRightAnim { get; set; } = default;
 
-	[DDLRegistration(0x865e0157u, description: "Non-looping anim clip to play when turning left while stopped. Rotation is scaled to end on the target facing.")]
+	[DDLRegistration(0xe5e1bf97u, description: "Non-looping anim clip to play when turning left while stopped. Rotation is scaled to end on the target facing.")]
 	public string? TurnLeftAnim { get; set; } = default;
 
 	public static SimpleCritterPrius Create(DDLObject ddl) => new(ddl);

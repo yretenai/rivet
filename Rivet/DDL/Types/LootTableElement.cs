@@ -19,10 +19,10 @@ public class LootTableElement : DDLObjectType, IDDLObjectType<LootTableElement> 
 		DropChance = ddl.GetValue<float>(0x4913849bu, DropChance);
 	}
 
-	[DDLRegistration(0xcf9add1bu)]
+	[DDLRegistration(0x342f7277u)]
 	public RivetAssetId LootListConfig { get; set; } = default;
 
-	[DDLRegistration(0xcf9add1bu)]
+	[DDLRegistration(0x4913849bu)]
 	public float DropChance { get; set; } = 10.00f;
 
 	public static LootTableElement Create(DDLObject ddl) => new(ddl);

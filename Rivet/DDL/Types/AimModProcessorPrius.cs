@@ -18,7 +18,7 @@ public class AimModProcessorPrius : DDLObjectType, IDDLObjectType<AimModProcesso
 		AimMods = ddl.GetObjects<AimModWrapper>(0x1d7694a1u);
 	}
 
-	[DDLRegistration(0x5f8dc7b7u)]
+	[DDLRegistration(0x1d7694a1u)]
 	public List<AimModWrapper?> AimMods { get; set; } = [];
 
 	public static AimModProcessorPrius Create(DDLObject ddl) => new(ddl);

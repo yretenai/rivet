@@ -18,7 +18,7 @@ public class DamageModifierPassiveWeakspotPrius : DamageModifierIncomingPrius, I
 		PassiveMultiplier = ddl.GetValue<float>(0x99a52c70u, PassiveMultiplier);
 	}
 
-	[DDLRegistration(0xb4eff71eu)]
+	[DDLRegistration(0x99a52c70u)]
 	public float PassiveMultiplier { get; set; } = 5.00f;
 
 	public new static DamageModifierPassiveWeakspotPrius Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class UpdaterGameBuildStateFile : DDLObjectType, IDDLObjectType<UpdaterGa
 		IsPackageUnpacked = ddl.GetValue<bool>(0xf369b90bu, IsPackageUnpacked);
 	}
 
-	[DDLRegistration(0x7409c1dbu)]
+	[DDLRegistration(0x43fc65b1u)]
 	public string? LocalDir { get; set; } = "";
 
-	[DDLRegistration(0x7409c1dbu)]
+	[DDLRegistration(0x4c64fa58u)]
 	public string? RemoteDir { get; set; } = "";
 
-	[DDLRegistration(0x7409c1dbu)]
+	[DDLRegistration(0xa5b1bfe2u)]
 	public string? ConfigFile { get; set; } = "";
 
-	[DDLRegistration(0x7409c1dbu)]
+	[DDLRegistration(0xaa381abau)]
 	public string? PackageFile { get; set; } = "";
 
-	[DDLRegistration(0x7409c1dbu)]
+	[DDLRegistration(0xdbec3035u)]
 	public bool IsLocalBuild { get; set; } = false;
 
-	[DDLRegistration(0x7409c1dbu)]
+	[DDLRegistration(0x48274b4eu)]
 	public bool IsConfigDownloaded { get; set; } = false;
 
-	[DDLRegistration(0x7409c1dbu)]
+	[DDLRegistration(0xab321f0eu)]
 	public bool IsPackageDownloaded { get; set; } = false;
 
-	[DDLRegistration(0x7409c1dbu)]
+	[DDLRegistration(0xf369b90bu)]
 	public bool IsPackageUnpacked { get; set; } = false;
 
 	public static UpdaterGameBuildStateFile Create(DDLObject ddl) => new(ddl);

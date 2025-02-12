@@ -18,7 +18,7 @@ public class HandRetractEvent : EventBase, IDDLObjectType<HandRetractEvent> {
 		HandIndex = ddl.GetValue<uint>(0x5072cdd7u, HandIndex);
 	}
 
-	[DDLRegistration(0x4ffd0d5bu)]
+	[DDLRegistration(0x5072cdd7u)]
 	public uint HandIndex { get; set; } = 0x00000000;
 
 	public new static HandRetractEvent Create(DDLObject ddl) => new(ddl);

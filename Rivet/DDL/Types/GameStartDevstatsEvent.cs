@@ -23,22 +23,22 @@ public class GameStartDevstatsEvent : EventBase, IDDLObjectType<GameStartDevstat
 		Is_online = ddl.GetValue<bool>(0xce772e9au, Is_online);
 	}
 
-	[DDLRegistration(0xe9795baeu)]
+	[DDLRegistration(0x2ad883a1u)]
 	public string? Game_id { get; set; } = default;
 
-	[DDLRegistration(0xe9795baeu)]
+	[DDLRegistration(0x5cc69481u)]
 	public string? Level_id { get; set; } = default;
 
-	[DDLRegistration(0xe9795baeu)]
+	[DDLRegistration(0x07682825u)]
 	public string? Mode { get; set; } = default;
 
-	[DDLRegistration(0xe9795baeu)]
+	[DDLRegistration(0xe114dc5cu)]
 	public int Player_count { get; set; } = 0;
 
-	[DDLRegistration(0xe9795baeu)]
+	[DDLRegistration(0xf03ee55cu)]
 	public int Player_count_local { get; set; } = 0;
 
-	[DDLRegistration(0xe9795baeu)]
+	[DDLRegistration(0xce772e9au)]
 	public bool Is_online { get; set; } = false;
 
 	public new static GameStartDevstatsEvent Create(DDLObject ddl) => new(ddl);

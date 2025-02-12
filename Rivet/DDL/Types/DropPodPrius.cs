@@ -22,19 +22,19 @@ public class DropPodPrius : IntroDataPrius, IDDLObjectType<DropPodPrius> {
 		CamShake = ddl.GetObject<CameraShakingWithFallOffData>(0x2b0972cfu);
 	}
 
-	[DDLRegistration(0x7bd4a642u)]
+	[DDLRegistration(0x98655ab0u)]
 	public float DropHeight { get; set; } = 50.00f;
 
-	[DDLRegistration(0x7bd4a642u)]
+	[DDLRegistration(0xff05e37du)]
 	public float DropDuration { get; set; } = 2.00f;
 
-	[DDLRegistration(0x7bd4a642u)]
+	[DDLRegistration(0xe6f39753u)]
 	public float PostDropDelay { get; set; } = 1.50f;
 
-	[DDLRegistration(0x7bd4a642u)]
+	[DDLRegistration(0x026f4565u)]
 	public float ResetDelay { get; set; } = 10.00f;
 
-	[DDLRegistration(0x7bd4a642u)]
+	[DDLRegistration(0x2b0972cfu)]
 	public CameraShakingWithFallOffData? CamShake { get; set; } = default;
 
 	public new static DropPodPrius Create(DDLObject ddl) => new(ddl);

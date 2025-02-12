@@ -18,7 +18,7 @@ public class MissionOrderConfigBase : ConfigBase, IDDLObjectType<MissionOrderCon
 		MissionOrder = ddl.GetObjects<MissionOrderDataIndirect>(0x83015808u);
 	}
 
-	[DDLRegistration(0x31721167u)]
+	[DDLRegistration(0x83015808u)]
 	public List<MissionOrderDataIndirect?> MissionOrder { get; set; } = [];
 
 	public new static MissionOrderConfigBase Create(DDLObject ddl) => new(ddl);

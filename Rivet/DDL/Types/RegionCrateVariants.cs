@@ -21,16 +21,16 @@ public class RegionCrateVariants : DDLObjectType, IDDLObjectType<RegionCrateVari
 		HealthCrateOverride = ddl.GetObject<CrateMaterialOverride>(0xdb8005c1u);
 	}
 
-	[DDLRegistration(0x3b7568a2u)]
+	[DDLRegistration(0xc9f0b22bu)]
 	public List<RivetAssetId> ContainerRegions { get; set; } = [];
 
-	[DDLRegistration(0x3b7568a2u)]
+	[DDLRegistration(0xcadfd873u)]
 	public CrateMaterialOverride? BoltCrateOverride { get; set; } = default;
 
-	[DDLRegistration(0x3b7568a2u)]
+	[DDLRegistration(0x8e947afdu)]
 	public CrateMaterialOverride? AmmoCrateOverride { get; set; } = default;
 
-	[DDLRegistration(0x3b7568a2u)]
+	[DDLRegistration(0xdb8005c1u)]
 	public CrateMaterialOverride? HealthCrateOverride { get; set; } = default;
 
 	public static RegionCrateVariants Create(DDLObject ddl) => new(ddl);

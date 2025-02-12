@@ -19,10 +19,10 @@ public class HeroSpecificInteractLocationPointPrius : InteractLocationPointPrius
 		ControlBinding = ddl.GetEnum<HeroControl>(0x22e1cc7eu, HeroControlValues.Lookup);
 	}
 
-	[DDLRegistration(0xe674724bu, "Hero Type", "Filter for which hero can interact with this location.")]
+	[DDLRegistration(0x1583d108u, "Hero Type", "Filter for which hero can interact with this location.")]
 	public HeroTypes HeroType { get; set; } = HeroTypes.Ratchet;
 
-	[DDLRegistration(0xe674724bu, "Control Binding", "The control binding that should be pressed to initiate the interaction.")]
+	[DDLRegistration(0x22e1cc7eu, "Control Binding", "The control binding that should be pressed to initiate the interaction.")]
 	public HeroControl ControlBinding { get; set; } = HeroControl.Melee;
 
 	public new static HeroSpecificInteractLocationPointPrius Create(DDLObject ddl) => new(ddl);

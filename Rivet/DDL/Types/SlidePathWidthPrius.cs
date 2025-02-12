@@ -18,7 +18,7 @@ public class SlidePathWidthPrius : DDLObjectType, IDDLObjectType<SlidePathWidthP
 		Width = ddl.GetValue<float>(0x954989eeu, Width);
 	}
 
-	[DDLRegistration(0xfc3ecb30u)]
+	[DDLRegistration(0x954989eeu)]
 	public float Width { get; set; } = 3.00f;
 
 	public static SlidePathWidthPrius Create(DDLObject ddl) => new(ddl);

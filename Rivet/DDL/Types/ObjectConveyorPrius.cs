@@ -28,37 +28,37 @@ public class ObjectConveyorPrius : DDLObjectType, IDDLObjectType<ObjectConveyorP
 		StartMoving = ddl.GetValue<bool>(0x4a2d4206u, StartMoving);
 	}
 
-	[DDLRegistration(0x3dc43036u, "Conveyor Path")]
+	[DDLRegistration(0x7945625fu, "Conveyor Path")]
 	public RivetAssetId ConveyorPath { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3dc43036u, "Start Volume")]
+	[DDLRegistration(0x521f9423u, "Start Volume")]
 	public RivetAssetId ConveyorStartVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3dc43036u, "Stop Volume")]
+	[DDLRegistration(0x9eb44f7du, "Stop Volume")]
 	public RivetAssetId ConveyorStopVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3dc43036u, "Tile List")]
+	[DDLRegistration(0x424d4b63u, "Tile List")]
 	public RivetAssetId TileList { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3dc43036u, "Tile Size")]
+	[DDLRegistration(0xf1459711u, "Tile Size")]
 	public float TileSize { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3dc43036u, "Pack Tiles")]
+	[DDLRegistration(0x4b8d1d11u, "Pack Tiles")]
 	public bool PackTiles { get; set; } = false;
 
-	[DDLRegistration(0x3dc43036u, "Pack End Point")]
+	[DDLRegistration(0xfd24fa1bu, "Pack End Point")]
 	public bool PackEndT { get; set; } = true;
 
-	[DDLRegistration(0x3dc43036u, "Speed Accel")]
+	[DDLRegistration(0x5d9ea52cu, "Speed Accel")]
 	public float SpeedAccel { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3dc43036u, "Speed Decel")]
+	[DDLRegistration(0xb0157580u, "Speed Decel")]
 	public float SpeedDecel { get; set; } = 3.00f;
 
-	[DDLRegistration(0x3dc43036u, "Speed Max")]
+	[DDLRegistration(0xb6419fbau, "Speed Max")]
 	public float SpeedMax { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3dc43036u, "Start Moving")]
+	[DDLRegistration(0x4a2d4206u, "Start Moving")]
 	public bool StartMoving { get; set; } = true;
 
 	public static ObjectConveyorPrius Create(DDLObject ddl) => new(ddl);

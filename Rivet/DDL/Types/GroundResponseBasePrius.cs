@@ -19,10 +19,10 @@ public class GroundResponseBasePrius : DDLObjectType, IDDLObjectType<GroundRespo
 		Material = ddl.GetObjects<PhysicsAVMaterialElement>(0x86bfc8e5u);
 	}
 
-	[DDLRegistration(0xf732e8a4u)]
+	[DDLRegistration(0x6d072a69u)]
 	public string? ResponseName { get; set; } = default;
 
-	[DDLRegistration(0xf732e8a4u)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public List<PhysicsAVMaterialElement?> Material { get; set; } = [];
 
 	public static GroundResponseBasePrius Create(DDLObject ddl) => new(ddl);

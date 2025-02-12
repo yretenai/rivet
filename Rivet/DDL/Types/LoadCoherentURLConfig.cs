@@ -18,7 +18,7 @@ public class LoadCoherentURLConfig : ConfigBase, IDDLObjectType<LoadCoherentURLC
 		URLs = ddl.GetObjects<LoadURLEntry>(0xb7cd9553u);
 	}
 
-	[DDLRegistration(0xeaff167du)]
+	[DDLRegistration(0xb7cd9553u)]
 	public List<LoadURLEntry?> URLs { get; set; } = [];
 
 	public new static LoadCoherentURLConfig Create(DDLObject ddl) => new(ddl);

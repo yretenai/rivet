@@ -26,31 +26,31 @@ public class RobotestPhysBodyInfo : DDLObjectType, IDDLObjectType<RobotestPhysBo
 		Transform = ddl.GetObject<DDLTransform>(0xf54f1ea1u);
 	}
 
-	[DDLRegistration(0xea85a4b4u, description: "Havok's internal body ID for this. Changes from run to run so almost never useful, but included for completeness. ")]
+	[DDLRegistration(0x55e4c38fu, description: "Havok's internal body ID for this. Changes from run to run so almost never useful, but included for completeness. ")]
 	public uint BodyId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xea85a4b4u, description: "Raw contents of body.m_flags")]
+	[DDLRegistration(0x40983dcbu, description: "Raw contents of body.m_flags")]
 	public uint BodyFlags { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xea85a4b4u, description: "Body is in an active (simulated) island")]
+	[DDLRegistration(0x70774ba8u, description: "Body is in an active (simulated) island")]
 	public bool IsActive { get; set; } = false;
 
-	[DDLRegistration(0xea85a4b4u, description: "Body is moving around (not static). May be keyframed as well.")]
+	[DDLRegistration(0xaf91c678u, description: "Body is moving around (not static). May be keyframed as well.")]
 	public bool IsDynamic { get; set; } = false;
 
-	[DDLRegistration(0xea85a4b4u, description: "We tell Havok where to put the body every frame.")]
+	[DDLRegistration(0xa6537884u, description: "We tell Havok where to put the body every frame.")]
 	public bool IsKeyFramed { get; set; } = false;
 
-	[DDLRegistration(0xea85a4b4u, description: "Body is in static layer.")]
+	[DDLRegistration(0xbba99f8fu, description: "Body is in static layer.")]
 	public bool IsStatic { get; set; } = false;
 
-	[DDLRegistration(0xea85a4b4u, description: "Raw contents of body.m_collisionFilterInfo. See our kObjLayerIdMask for how to interpret this.")]
+	[DDLRegistration(0xfa6e54c7u, description: "Raw contents of body.m_collisionFilterInfo. See our kObjLayerIdMask for how to interpret this.")]
 	public uint CollisionFilterWord { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xea85a4b4u, description: "Object's material ID.")]
+	[DDLRegistration(0xddd29a99u, description: "Object's material ID.")]
 	public ushort MaterialId { get; set; } = 0x0000;
 
-	[DDLRegistration(0xea85a4b4u, description: "Body's transform")]
+	[DDLRegistration(0xf54f1ea1u, description: "Body's transform")]
 	public DDLTransform? Transform { get; set; } = default;
 
 	public static RobotestPhysBodyInfo Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class MonitorPlayerIdlingActionPrius : DDLObjectType, IDDLObjectType<Moni
 		CountMeleeAsMove = ddl.GetValue<bool>(0xd3e79eaeu, CountMeleeAsMove);
 	}
 
-	[DDLRegistration(0x3aea04b3u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Player;
 
-	[DDLRegistration(0x3aea04b3u, description: "Whether to count melee as a move.")]
+	[DDLRegistration(0xd3e79eaeu, description: "Whether to count melee as a move.")]
 	public bool CountMeleeAsMove { get; set; } = true;
 
 	public static MonitorPlayerIdlingActionPrius Create(DDLObject ddl) => new(ddl);

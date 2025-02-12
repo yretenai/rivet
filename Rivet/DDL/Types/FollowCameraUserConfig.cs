@@ -23,22 +23,22 @@ public class FollowCameraUserConfig : ConfigBase, IDDLObjectType<FollowCameraUse
 		VelocityFollowData = ddl.GetObject<VelocityFollowerData>(0x91dd2f41u);
 	}
 
-	[DDLRegistration(0x245a7f0au, "Pitch Min")]
+	[DDLRegistration(0xfb99e53bu, "Pitch Min")]
 	public float PitchMin { get; set; } = -70.00f;
 
-	[DDLRegistration(0x245a7f0au, "Pitch Max")]
+	[DDLRegistration(0xc794da62u, "Pitch Max")]
 	public float PitchMax { get; set; } = 70.00f;
 
-	[DDLRegistration(0x245a7f0au, "Near Clip Override", "Allows you to override the atmospheres near clip. When set to -1, the near clip does not get overwritten.")]
+	[DDLRegistration(0xd086a10bu, "Near Clip Override", "Allows you to override the atmospheres near clip. When set to -1, the near clip does not get overwritten.")]
 	public float NearClipOverride { get; set; } = -1.00f;
 
-	[DDLRegistration(0x245a7f0au, "Far Clip Override", "Allows you to override the atmospheres far clip. When set to -1, the far clip does not get overwritten.")]
+	[DDLRegistration(0xa1b3d3a1u, "Far Clip Override", "Allows you to override the atmospheres far clip. When set to -1, the far clip does not get overwritten.")]
 	public float FarClipOverride { get; set; } = -1.00f;
 
-	[DDLRegistration(0x245a7f0au, "Position Tracking")]
+	[DDLRegistration(0x66203f35u, "Position Tracking")]
 	public CameraTargetTrackData? TargetTrackingData { get; set; } = default;
 
-	[DDLRegistration(0x245a7f0au, "Velocity Following")]
+	[DDLRegistration(0x91dd2f41u, "Velocity Following")]
 	public VelocityFollowerData? VelocityFollowData { get; set; } = default;
 
 	public new static FollowCameraUserConfig Create(DDLObject ddl) => new(ddl);

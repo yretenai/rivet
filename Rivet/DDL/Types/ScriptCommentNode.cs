@@ -23,22 +23,22 @@ public class ScriptCommentNode : DDLObjectType, IDDLObjectType<ScriptCommentNode
 		Height = ddl.GetValue<uint>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0xdc298528u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdc298528u, "Comment Text")]
+	[DDLRegistration(0x6eb3beb6u, "Comment Text")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xdc298528u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0xdc298528u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0xdc298528u)]
+	[DDLRegistration(0x954989eeu)]
 	public uint Width { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdc298528u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public uint Height { get; set; } = 0x00000000;
 
 	public static ScriptCommentNode Create(DDLObject ddl) => new(ddl);

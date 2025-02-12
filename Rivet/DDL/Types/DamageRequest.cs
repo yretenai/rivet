@@ -40,73 +40,73 @@ public class DamageRequest : EventBase, IDDLObjectType<DamageRequest> {
 		Breakpoint = ddl.GetValue<byte>(0x95851b7fu, Breakpoint);
 	}
 
-	[DDLRegistration(0x219aab06u, description: "Handle of actor issuing damage.")]
+	[DDLRegistration(0x29f67982u, description: "Handle of actor issuing damage.")]
 	public uint Damager { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x219aab06u, description: "Type of damage.")]
+	[DDLRegistration(0xbc4e9799u, description: "Type of damage.")]
 	public DamageTypesGame Type { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x219aab06u, description: "Category of damage.")]
+	[DDLRegistration(0xfc4da4b1u, description: "Category of damage.")]
 	public DamageTypesGame Category { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x219aab06u, description: "Amount of damage.")]
+	[DDLRegistration(0xb0d93e25u, description: "Amount of damage.")]
 	public float Amount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x219aab06u, description: "If greater than zero, damage amount is spread across this duration in seconds.")]
+	[DDLRegistration(0x7c5e3db0u, description: "If greater than zero, damage amount is spread across this duration in seconds.")]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x219aab06u, description: "How often a damage-over-time ticks")]
+	[DDLRegistration(0xd5fa1e27u, description: "How often a damage-over-time ticks")]
 	public float TickInterval { get; set; } = 0.00f;
 
-	[DDLRegistration(0x219aab06u, description: "Level of knockback applied.")]
+	[DDLRegistration(0x2e553fddu, description: "Level of knockback applied.")]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x219aab06u, description: "Amount of knockback applied.")]
+	[DDLRegistration(0x7b1e600bu, description: "Amount of knockback applied.")]
 	public float KnockbackAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x219aab06u, description: "If different from 1 this causes Kinetic React in bots to be more/less extreme.")]
+	[DDLRegistration(0x0b63daabu, description: "If different from 1 this causes Kinetic React in bots to be more/less extreme.")]
 	public float KineticMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x219aab06u, description: "How long the applied condtion should last.")]
+	[DDLRegistration(0x06d5955cu, description: "How long the applied condtion should last.")]
 	public float ConditionDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x219aab06u, description: "Additional flags to apply to request.")]
+	[DDLRegistration(0x2bc801dfu, description: "Additional flags to apply to request.")]
 	public DamageRequestFlags RequestFlags { get; set; } = (DamageRequestFlags) 0x00004000;
 
-	[DDLRegistration(0x219aab06u, description: "If greater than zero, subsequent damage from this actor is ignored for this many seconds.")]
+	[DDLRegistration(0x2ee45555u, description: "If greater than zero, subsequent damage from this actor is ignored for this many seconds.")]
 	public float IgnoreDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x219aab06u, description: "Unique id for this damage request.")]
+	[DDLRegistration(0x239eef0du, description: "Unique id for this damage request.")]
 	public uint RequestId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x219aab06u)]
+	[DDLRegistration(0x45f34b3cu)]
 	public List<DamageStatusData?> StatusData { get; set; } = [];
 
-	[DDLRegistration(0x219aab06u)]
+	[DDLRegistration(0x3625e0dfu)]
 	public List<CustomDamageData?> CustomData { get; set; } = [];
 
-	[DDLRegistration(0x219aab06u, description: "How much impulse to cause in receiving actor.")]
+	[DDLRegistration(0x3aa81718u, description: "How much impulse to cause in receiving actor.")]
 	public float ImpactImpulse { get; set; } = 0.00f;
 
-	[DDLRegistration(0x219aab06u)]
+	[DDLRegistration(0xe8b4cc1au)]
 	public float ImpactVelocity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x219aab06u, description: "Weapon id")]
+	[DDLRegistration(0x574be981u, description: "Weapon id")]
 	public ushort Weapon { get; set; } = 0x0000;
 
-	[DDLRegistration(0x219aab06u, description: "Hash to identify the damage - frequently will be a WeaponSetupHash but not always")]
+	[DDLRegistration(0xd96a20dcu, description: "Hash to identify the damage - frequently will be a WeaponSetupHash but not always")]
 	public uint DamageHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x219aab06u, description: "Hash to identify the weapon used")]
+	[DDLRegistration(0x42a5ee59u, description: "Hash to identify the weapon used")]
 	public uint WeaponNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x219aab06u, description: "Weapon Macro Type")]
+	[DDLRegistration(0x63d44adau, description: "Weapon Macro Type")]
 	public byte WeaponMacroType { get; set; } = 0x00;
 
-	[DDLRegistration(0x219aab06u, description: "Condition applied.")]
+	[DDLRegistration(0x3f2b174fu, description: "Condition applied.")]
 	public byte Condition { get; set; } = 0x00;
 
-	[DDLRegistration(0x219aab06u)]
+	[DDLRegistration(0x95851b7fu)]
 	public byte Breakpoint { get; set; } = 0x00;
 
 	public new static DamageRequest Create(DDLObject ddl) => new(ddl);

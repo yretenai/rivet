@@ -20,13 +20,13 @@ public class ObjectiveStateChangedEvent : EventBase, IDDLObjectType<ObjectiveSta
 		ObjectiveState = ddl.GetEnum<ObjectiveStates>(0xff29859au, ObjectiveStatesValues.Lookup);
 	}
 
-	[DDLRegistration(0xd1bfa5e6u)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0xd1bfa5e6u)]
+	[DDLRegistration(0x58746b9bu)]
 	public string? ObjectiveName { get; set; } = default;
 
-	[DDLRegistration(0xd1bfa5e6u)]
+	[DDLRegistration(0xff29859au)]
 	public ObjectiveStates ObjectiveState { get; set; } = ObjectiveStates.Inactive;
 
 	public new static ObjectiveStateChangedEvent Create(DDLObject ddl) => new(ddl);

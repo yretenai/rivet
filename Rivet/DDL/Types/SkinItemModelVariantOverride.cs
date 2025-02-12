@@ -19,10 +19,10 @@ public class SkinItemModelVariantOverride : DDLObjectType, IDDLObjectType<SkinIt
 		VariantName = ddl.GetString(0x1320265a) ?? VariantName;
 	}
 
-	[DDLRegistration(0x930268a4u, "Model Variant", "Model Variant file")]
+	[DDLRegistration(0x27a47dadu, "Model Variant", "Model Variant file")]
 	public AssetReferenceDef? ModelVariant { get; set; } = default;
 
-	[DDLRegistration(0x930268a4u, "Named Variant", "Named variant string")]
+	[DDLRegistration(0x1320265au, "Named Variant", "Named variant string")]
 	public string? VariantName { get; set; } = "Default";
 
 	public static SkinItemModelVariantOverride Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class MultiCommandResult : DDLObjectType, IDDLObjectType<MultiCommandResu
 		Results = ddl.GetObjects<CommandResult>(0x9e49872cu);
 	}
 
-	[DDLRegistration(0xc2b9a430u)]
+	[DDLRegistration(0x9e49872cu)]
 	public List<CommandResult?> Results { get; set; } = [];
 
 	public static MultiCommandResult Create(DDLObject ddl) => new(ddl);

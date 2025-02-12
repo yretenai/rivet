@@ -20,13 +20,13 @@ public class AnimMaterialComponentCineTextureDef : DDLObjectType, IDDLObjectType
 		OriginalMaterialName = ddl.GetString(0x93590b3d) ?? OriginalMaterialName;
 	}
 
-	[DDLRegistration(0xd1501facu, description: "Slot to use as the texture source")]
+	[DDLRegistration(0x781f0bebu, description: "Slot to use as the texture source")]
 	public xfc5b2547 TextureSlot { get; set; } = xfc5b2547.RenderTextureSlotNone;
 
-	[DDLRegistration(0xd1501facu, description: "Texture sampler name")]
+	[DDLRegistration(0x30712231u, description: "Texture sampler name")]
 	public string? TextureSamplerName { get; set; } = default;
 
-	[DDLRegistration(0xd1501facu, description: "Subset name (can be empty to apply to all subsets)")]
+	[DDLRegistration(0x93590b3du, description: "Subset name (can be empty to apply to all subsets)")]
 	public string? OriginalMaterialName { get; set; } = default;
 
 	public static AnimMaterialComponentCineTextureDef Create(DDLObject ddl) => new(ddl);

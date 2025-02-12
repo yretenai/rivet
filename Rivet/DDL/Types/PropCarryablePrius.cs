@@ -21,16 +21,16 @@ public class PropCarryablePrius : PropBasePrius, IDDLObjectType<PropCarryablePri
 		AttachPoint = ddl.GetString(0xd7124ea3) ?? AttachPoint;
 	}
 
-	[DDLRegistration(0x6d006168u)]
+	[DDLRegistration(0xb94f1493u)]
 	public bool CreateOffer { get; set; } = true;
 
-	[DDLRegistration(0x6d006168u, description: "Whether we will attempt to play the same drivers as the actor holding us.")]
+	[DDLRegistration(0x99bf3cdfu, description: "Whether we will attempt to play the same drivers as the actor holding us.")]
 	public bool MimicHolderAnims { get; set; } = true;
 
-	[DDLRegistration(0x6d006168u, "Attach Actor")]
+	[DDLRegistration(0x24c2eb7eu, "Attach Actor")]
 	public RivetAssetId AttachActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6d006168u, "Attach Point")]
+	[DDLRegistration(0xd7124ea3u, "Attach Point")]
 	public string? AttachPoint { get; set; } = default;
 
 	public new static PropCarryablePrius Create(DDLObject ddl) => new(ddl);

@@ -29,40 +29,40 @@ public class GrindHazardPrius : DDLObjectType, IDDLObjectType<GrindHazardPrius> 
 		HazardStretchPercent = ddl.GetValue<float>(0xfb241200u, HazardStretchPercent);
 	}
 
-	[DDLRegistration(0xdc8c5728u, description: "If no actor is supplied, this actor's curve will be used.")]
+	[DDLRegistration(0xc23a6c53u, description: "If no actor is supplied, this actor's curve will be used.")]
 	public RivetAssetId CurveActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xdc8c5728u)]
+	[DDLRegistration(0x4ef8ccd9u)]
 	public float StartTValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdc8c5728u)]
+	[DDLRegistration(0x45135ffau)]
 	public float EndTValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdc8c5728u)]
+	[DDLRegistration(0x840c154du)]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Explosion;
 
-	[DDLRegistration(0xdc8c5728u)]
+	[DDLRegistration(0x7bbba4a0u)]
 	public float DamagePercent { get; set; } = 0.10f;
 
-	[DDLRegistration(0xdc8c5728u)]
+	[DDLRegistration(0xe3e6fa68u)]
 	public float DamageRadius { get; set; } = 0.20f;
 
-	[DDLRegistration(0xdc8c5728u)]
+	[DDLRegistration(0x2ee45555u)]
 	public float IgnoreDuration { get; set; } = 0.10f;
 
-	[DDLRegistration(0xdc8c5728u)]
+	[DDLRegistration(0x2554a262u)]
 	public KnockbackLevels KnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0xdc8c5728u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdc8c5728u, description: "The actor to spawn along the curve with the hazard VFX.")]
+	[DDLRegistration(0xe0a113c4u, description: "The actor to spawn along the curve with the hazard VFX.")]
 	public RivetAssetId HazardActor { get; set; } = default;
 
-	[DDLRegistration(0xdc8c5728u, description: "Spacing (in meters) for the hazard actors to be placed.")]
+	[DDLRegistration(0x842617eeu, description: "Spacing (in meters) for the hazard actors to be placed.")]
 	public float HazardSpacing { get; set; } = 2.00f;
 
-	[DDLRegistration(0xdc8c5728u, description: "The maximum percent of distance beyond HazardSpacing that the VFX will stretch before additional VFX actors will be spawned.")]
+	[DDLRegistration(0xfb241200u, description: "The maximum percent of distance beyond HazardSpacing that the VFX will stretch before additional VFX actors will be spawned.")]
 	public float HazardStretchPercent { get; set; } = 0.20f;
 
 	public static GrindHazardPrius Create(DDLObject ddl) => new(ddl);

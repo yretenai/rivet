@@ -20,13 +20,13 @@ public class GetVelocityActionPrius : DDLObjectType, IDDLObjectType<GetVelocityA
 		SubtractExternalMotion = ddl.GetValue<bool>(0x7279fee1u, SubtractExternalMotion);
 	}
 
-	[DDLRegistration(0xcd2bda1fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0xcd2bda1fu, "Use Average Over Time")]
+	[DDLRegistration(0xc9f05706u, "Use Average Over Time")]
 	public float UseAverageTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcd2bda1fu, "Subtract external motion")]
+	[DDLRegistration(0x7279fee1u, "Subtract external motion")]
 	public bool SubtractExternalMotion { get; set; } = false;
 
 	public static GetVelocityActionPrius Create(DDLObject ddl) => new(ddl);

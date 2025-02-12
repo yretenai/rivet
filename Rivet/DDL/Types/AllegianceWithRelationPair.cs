@@ -19,10 +19,10 @@ public class AllegianceWithRelationPair : DDLObjectType, IDDLObjectType<Allegian
 		Relation = ddl.GetEnum<AllegianceRelation>(0x9888fa39u, AllegianceRelationValues.Lookup);
 	}
 
-	[DDLRegistration(0xe9bfb507u)]
+	[DDLRegistration(0xd10c0c26u)]
 	public x6bdf4ba1 Allegiance { get; set; } = x6bdf4ba1.Neutral;
 
-	[DDLRegistration(0xe9bfb507u)]
+	[DDLRegistration(0x9888fa39u)]
 	public AllegianceRelation Relation { get; set; } = AllegianceRelation.Any;
 
 	public static AllegianceWithRelationPair Create(DDLObject ddl) => new(ddl);

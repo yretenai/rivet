@@ -18,7 +18,7 @@ public class RpcMethodMessage : DDLObjectType, IDDLObjectType<RpcMethodMessage> 
 		Method = ddl.GetString(0x678d7131) ?? Method;
 	}
 
-	[DDLRegistration(0xf619ef20u)]
+	[DDLRegistration(0x678d7131u)]
 	public string? Method { get; set; } = default;
 
 	public static RpcMethodMessage Create(DDLObject ddl) => new(ddl);

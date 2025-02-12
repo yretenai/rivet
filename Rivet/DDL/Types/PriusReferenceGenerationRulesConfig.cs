@@ -18,7 +18,7 @@ public class PriusReferenceGenerationRulesConfig : ConfigBase, IDDLObjectType<Pr
 		ReferenceRuleSets = ddl.GetObjects<ReferenceRuleSet>(0xcd71b7a2u);
 	}
 
-	[DDLRegistration(0xb8045d99u, "Rulesets")]
+	[DDLRegistration(0xcd71b7a2u, "Rulesets")]
 	public List<ReferenceRuleSet?> ReferenceRuleSets { get; set; } = [];
 
 	public new static PriusReferenceGenerationRulesConfig Create(DDLObject ddl) => new(ddl);

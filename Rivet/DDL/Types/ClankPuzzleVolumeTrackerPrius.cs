@@ -18,7 +18,7 @@ public class ClankPuzzleVolumeTrackerPrius : DDLObjectType, IDDLObjectType<Clank
 		TargetVolumeType = ddl.GetEnum<x17b935fe>(0x3d7e7137u, x17b935feValues.Lookup);
 	}
 
-	[DDLRegistration(0x506a1899u, description: "What volume type are we checking (none = any)")]
+	[DDLRegistration(0x3d7e7137u, description: "What volume type are we checking (none = any)")]
 	public x17b935fe TargetVolumeType { get; set; } = x17b935fe.None;
 
 	public static ClankPuzzleVolumeTrackerPrius Create(DDLObject ddl) => new(ddl);

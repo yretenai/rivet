@@ -18,7 +18,7 @@ public class SlingshotSpinEndEvent : EventBase, IDDLObjectType<SlingshotSpinEndE
 		Launched = ddl.GetValue<bool>(0x75493d34u, Launched);
 	}
 
-	[DDLRegistration(0xadcfcfb8u)]
+	[DDLRegistration(0x75493d34u)]
 	public bool Launched { get; set; } = false;
 
 	public new static SlingshotSpinEndEvent Create(DDLObject ddl) => new(ddl);

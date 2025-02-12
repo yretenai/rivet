@@ -20,13 +20,13 @@ public class HealthPackDropPrius : DDLObjectType, IDDLObjectType<HealthPackDropP
 		GroundCheckDistance = ddl.GetValue<float>(0xe1a5d5a9u, GroundCheckDistance);
 	}
 
-	[DDLRegistration(0x1111e321u)]
+	[DDLRegistration(0x10db3c65u)]
 	public RivetAssetId HealthDropConfig { get; set; } = default;
 
-	[DDLRegistration(0x1111e321u)]
+	[DDLRegistration(0xbda56110u)]
 	public bool DoGroundCheck { get; set; } = false;
 
-	[DDLRegistration(0x1111e321u)]
+	[DDLRegistration(0xe1a5d5a9u)]
 	public float GroundCheckDistance { get; set; } = 30.00f;
 
 	public static HealthPackDropPrius Create(DDLObject ddl) => new(ddl);

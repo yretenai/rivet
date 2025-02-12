@@ -20,13 +20,13 @@ public class MagShieldDeployingEvent : EventBase, IDDLObjectType<MagShieldDeploy
 		Blue = ddl.GetValue<float>(0xaea60a04u, Blue);
 	}
 
-	[DDLRegistration(0x2efad495u)]
+	[DDLRegistration(0xd0347646u)]
 	public float Red { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2efad495u)]
+	[DDLRegistration(0xc9c922e0u)]
 	public float Green { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2efad495u)]
+	[DDLRegistration(0xaea60a04u)]
 	public float Blue { get; set; } = 0.00f;
 
 	public new static MagShieldDeployingEvent Create(DDLObject ddl) => new(ddl);

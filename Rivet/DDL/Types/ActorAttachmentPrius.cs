@@ -21,16 +21,16 @@ public class ActorAttachmentPrius : DDLObjectType, IDDLObjectType<ActorAttachmen
 		DestroyAttachmentsOnDestroy = ddl.GetValue<bool>(0xea296149u, DestroyAttachmentsOnDestroy);
 	}
 
-	[DDLRegistration(0x9c92ff8fu, "Attached Actors")]
+	[DDLRegistration(0xe6e52d78u, "Attached Actors")]
 	public List<RivetAssetId> AttachedList { get; set; } = [];
 
-	[DDLRegistration(0x9c92ff8fu, "Joint Attached Actors")]
+	[DDLRegistration(0x16ce71afu, "Joint Attached Actors")]
 	public List<JointAttachmentItem?> JointAttachList { get; set; } = [];
 
-	[DDLRegistration(0x9c92ff8fu, "Curve Attached Actors")]
+	[DDLRegistration(0xe29b1947u, "Curve Attached Actors")]
 	public List<CurveAttachmentItem?> CurveAttachList { get; set; } = [];
 
-	[DDLRegistration(0x9c92ff8fu, description: "Destroy all the attached actors when this component is destroyed.")]
+	[DDLRegistration(0xea296149u, description: "Destroy all the attached actors when this component is destroyed.")]
 	public bool DestroyAttachmentsOnDestroy { get; set; } = false;
 
 	public static ActorAttachmentPrius Create(DDLObject ddl) => new(ddl);

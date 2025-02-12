@@ -20,13 +20,13 @@ public class OutsourceToolBuiltAssetMetadata : DDLObjectType, IDDLObjectType<Out
 		Dependencies = ddl.GetObjects<OutsourceToolDependencyInfo>(0x2981480du);
 	}
 
-	[DDLRegistration(0xda11c1e7u)]
+	[DDLRegistration(0xd25b454au)]
 	public bool BuiltSuccessfully { get; set; } = false;
 
-	[DDLRegistration(0xda11c1e7u)]
+	[DDLRegistration(0x7d081f6du)]
 	public uint BuiltVersionHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xda11c1e7u)]
+	[DDLRegistration(0x2981480du)]
 	public List<OutsourceToolDependencyInfo?> Dependencies { get; set; } = [];
 
 	public static OutsourceToolBuiltAssetMetadata Create(DDLObject ddl) => new(ddl);

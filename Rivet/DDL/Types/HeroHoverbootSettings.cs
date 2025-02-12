@@ -23,22 +23,22 @@ public class HeroHoverbootSettings : DDLObjectType, IDDLObjectType<HeroHoverboot
 		UseTriggerResistance = ddl.GetValue<bool>(0x69cf3196u, UseTriggerResistance);
 	}
 
-	[DDLRegistration(0x8ec44800u, "Base Speed Override", "This is the base speed of hoverbooting. Without kicking. (m/s)")]
+	[DDLRegistration(0x1a29aa11u, "Base Speed Override", "This is the base speed of hoverbooting. Without kicking. (m/s)")]
 	public float OverrideBaseSpeed { get; set; } = 12.00f;
 
-	[DDLRegistration(0x8ec44800u, "Kick Extra Speed Max Override", "This is the extra speed from kicking that is added to the base speed. (m/s)")]
+	[DDLRegistration(0xe602e3ccu, "Kick Extra Speed Max Override", "This is the extra speed from kicking that is added to the base speed. (m/s)")]
 	public float OverrideKickExtraSpeedMax { get; set; } = 6.00f;
 
-	[DDLRegistration(0x8ec44800u, "Good Kick Boost Override", "This is the amount we instantly increase the hero's speed for a good kick. (m/s)")]
+	[DDLRegistration(0x2a5d633du, "Good Kick Boost Override", "This is the amount we instantly increase the hero's speed for a good kick. (m/s)")]
 	public float OverrideGoodKickBoost { get; set; } = 3.00f;
 
-	[DDLRegistration(0x8ec44800u, "Bad Kick Boost Override", "This is the amount we instantly increase the hero's speed for a bad kick. (m/s)")]
+	[DDLRegistration(0x48df097cu, "Bad Kick Boost Override", "This is the amount we instantly increase the hero's speed for a bad kick. (m/s)")]
 	public float OverrideBadKickBoost { get; set; } = 0.50f;
 
-	[DDLRegistration(0x8ec44800u, "Use Speed Overrides?", "True: Use the override values in the debug menu. False: Use the value in the hero config.")]
+	[DDLRegistration(0x9031515au, "Use Speed Overrides?", "True: Use the override values in the debug menu. False: Use the value in the hero config.")]
 	public bool UseSpeedOverrides { get; set; } = false;
 
-	[DDLRegistration(0x8ec44800u, "Use Trigger Resistance", "True: Trigger resistance is on. False: No trigger resistance.")]
+	[DDLRegistration(0x69cf3196u, "Use Trigger Resistance", "True: Trigger resistance is on. False: No trigger resistance.")]
 	public bool UseTriggerResistance { get; set; } = true;
 
 	public static HeroHoverbootSettings Create(DDLObject ddl) => new(ddl);

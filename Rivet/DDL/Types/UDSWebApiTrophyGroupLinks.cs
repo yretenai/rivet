@@ -19,10 +19,10 @@ public class UDSWebApiTrophyGroupLinks : DDLObjectType, IDDLObjectType<UDSWebApi
 		TrophySet = ddl.GetObject<UDSWebApiObjectLink>(0x4d8e554cu);
 	}
 
-	[DDLRegistration(0x2fea69aau)]
+	[DDLRegistration(0x5dda9340u)]
 	public List<UDSWebApiObjectLink?> Trophies { get; set; } = [];
 
-	[DDLRegistration(0x2fea69aau)]
+	[DDLRegistration(0x4d8e554cu)]
 	public UDSWebApiObjectLink? TrophySet { get; set; } = default;
 
 	public static UDSWebApiTrophyGroupLinks Create(DDLObject ddl) => new(ddl);

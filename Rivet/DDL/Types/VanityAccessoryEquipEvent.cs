@@ -19,10 +19,10 @@ public class VanityAccessoryEquipEvent : EventBase, IDDLObjectType<VanityAccesso
 		Equip = ddl.GetValue<bool>(0xeb200f71u, Equip);
 	}
 
-	[DDLRegistration(0xcb6f4bf7u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x56bca86c Type { get; set; } = x56bca86c.Rebreather;
 
-	[DDLRegistration(0xcb6f4bf7u, description: "If true, equip. If false, unequip")]
+	[DDLRegistration(0xeb200f71u, description: "If true, equip. If false, unequip")]
 	public bool Equip { get; set; } = true;
 
 	public new static VanityAccessoryEquipEvent Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class DebugNewGamePlaytest : DDLObjectType, IDDLObjectType<DebugNewGamePl
 		DemoName = ddl.GetString(0x62515d26) ?? DemoName;
 	}
 
-	[DDLRegistration(0x7241bb8eu)]
+	[DDLRegistration(0x0bdfaa48u)]
 	public string? PlaytestName { get; set; } = "NewGameWithSurveyScreens";
 
-	[DDLRegistration(0x7241bb8eu, "Wants Challenge Mode?", "Should this playtest spawn in challenge mode?")]
+	[DDLRegistration(0xc801de1fu, "Wants Challenge Mode?", "Should this playtest spawn in challenge mode?")]
 	public bool UseChallengeMode { get; set; } = false;
 
-	[DDLRegistration(0x7241bb8eu, "Is Demo?", "Should we set the demo mode? Checking this would be like setting --demo <name> on the command line.")]
+	[DDLRegistration(0x490784cbu, "Is Demo?", "Should we set the demo mode? Checking this would be like setting --demo <name> on the command line.")]
 	public bool IsDemo { get; set; } = false;
 
-	[DDLRegistration(0x7241bb8eu, "Demo Name", "Name of the demo. Works similarly to adding --demo <name> to the command line.")]
+	[DDLRegistration(0x62515d26u, "Demo Name", "Name of the demo. Works similarly to adding --demo <name> to the command line.")]
 	public string? DemoName { get; set; } = default;
 
 	public static DebugNewGamePlaytest Create(DDLObject ddl) => new(ddl);

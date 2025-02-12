@@ -18,7 +18,7 @@ public class AttachmentRemovedEvent : EventBase, IDDLObjectType<AttachmentRemove
 		ActorHandle = ddl.GetValue<uint>(0xb54c733cu, ActorHandle);
 	}
 
-	[DDLRegistration(0x7f1f0f48u)]
+	[DDLRegistration(0xb54c733cu)]
 	public uint ActorHandle { get; set; } = 0x00000000;
 
 	public new static AttachmentRemovedEvent Create(DDLObject ddl) => new(ddl);

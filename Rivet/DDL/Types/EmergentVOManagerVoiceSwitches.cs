@@ -20,13 +20,13 @@ public class EmergentVOManagerVoiceSwitches : DDLObjectType, IDDLObjectType<Emer
 		RemovalSwitches = ddl.GetObjects<WwiseSwitch>(0x9c7eea08u);
 	}
 
-	[DDLRegistration(0xf36487e1u)]
+	[DDLRegistration(0xfea894fau)]
 	public VoiceGame Voice { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0xf36487e1u, "Switches", "All these switches will be applied when the bot starts using this voice")]
+	[DDLRegistration(0x094b7f43u, "Switches", "All these switches will be applied when the bot starts using this voice")]
 	public List<WwiseSwitch?> Switches { get; set; } = [];
 
-	[DDLRegistration(0xf36487e1u, "Removal Switches", "All these switches will be applied when the bot stops using this voice because e.g. they were scripted to a new voice")]
+	[DDLRegistration(0x9c7eea08u, "Removal Switches", "All these switches will be applied when the bot stops using this voice because e.g. they were scripted to a new voice")]
 	public List<WwiseSwitch?> RemovalSwitches { get; set; } = [];
 
 	public static EmergentVOManagerVoiceSwitches Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class VisualEffectTransformNode : DDLObjectType, IDDLObjectType<VisualEff
 		OutputPort_Output = ddl.GetObject<VisualEffectTransform>(0x7778788cu);
 	}
 
-	[DDLRegistration(0xf28fa1afu)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf28fa1afu)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0xf28fa1afu)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0xf28fa1afu, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0xf28fa1afu)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<VisualEffectNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0xf28fa1afu)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<VisualEffectNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
-	[DDLRegistration(0xf28fa1afu, "Output")]
+	[DDLRegistration(0x7778788cu, "Output")]
 	public VisualEffectTransform? OutputPort_Output { get; set; } = default;
 
 	public static VisualEffectTransformNode Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class DamageModifierLimitOverTimePrius : DamageModifierIncomingPrius, IDD
 		DamageFilter = ddl.GetEnums<DamageTypesGame>(0xa75ecb2fu, DamageTypesGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x34c80fdbu, description: "Maximum percent of health that can be lost over the Interval")]
+	[DDLRegistration(0x47830771u, description: "Maximum percent of health that can be lost over the Interval")]
 	public float MaxDamagePercent { get; set; } = 1.00f;
 
-	[DDLRegistration(0x34c80fdbu, description: "Time Interval")]
+	[DDLRegistration(0xe3c752bbu, description: "Time Interval")]
 	public float Interval { get; set; } = 0.00f;
 
-	[DDLRegistration(0x34c80fdbu, "Damage Type Filter", "Optional damage types to apply to.")]
+	[DDLRegistration(0xa75ecb2fu, "Damage Type Filter", "Optional damage types to apply to.")]
 	public List<DamageTypesGame> DamageFilter { get; set; } = [];
 
 	public new static DamageModifierLimitOverTimePrius Create(DDLObject ddl) => new(ddl);

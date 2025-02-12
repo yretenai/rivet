@@ -19,10 +19,10 @@ public class VanityPerkXP : VanityPerkBase, IDDLObjectType<VanityPerkXP> {
 		XPMultPiece = ddl.GetValue<float>(0x4f4f1411u, XPMultPiece);
 	}
 
-	[DDLRegistration(0x4d93a019u, description: "Total XP = (1 + XPMultSet) * XP. Applied if player has the whole set.")]
+	[DDLRegistration(0x9d1d86cbu, description: "Total XP = (1 + XPMultSet) * XP. Applied if player has the whole set.")]
 	public float XPMultSet { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4d93a019u, description: "Total XP = (1 + XPMultPiece * piece_count) * XP. Applied if player has an incomplete set.")]
+	[DDLRegistration(0x4f4f1411u, description: "Total XP = (1 + XPMultPiece * piece_count) * XP. Applied if player has an incomplete set.")]
 	public float XPMultPiece { get; set; } = 0.00f;
 
 	public new static VanityPerkXP Create(DDLObject ddl) => new(ddl);

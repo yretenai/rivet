@@ -19,10 +19,10 @@ public class DamageModifierOutgoingPrius : DDLObjectType, IDDLObjectType<DamageM
 		Conditions = ddl.GetObjects<DamageModifierConditionEntry>(0x2f505790u);
 	}
 
-	[DDLRegistration(0xc9b06941u)]
+	[DDLRegistration(0xe992e16au)]
 	public string? ModifierName { get; set; } = default;
 
-	[DDLRegistration(0xc9b06941u)]
+	[DDLRegistration(0x2f505790u)]
 	public List<DamageModifierConditionEntry?> Conditions { get; set; } = [];
 
 	public static DamageModifierOutgoingPrius Create(DDLObject ddl) => new(ddl);

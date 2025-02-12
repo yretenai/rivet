@@ -22,19 +22,19 @@ public class TossTrajectoryDrawPrius : DDLObjectType, IDDLObjectType<TossTraject
 		PointOfImpact = ddl.GetValue<RivetAssetId>(0xf37be841u, PointOfImpact);
 	}
 
-	[DDLRegistration(0xd897b7e1u, description: "Material for the trajectory arc")]
+	[DDLRegistration(0x00b989a1u, description: "Material for the trajectory arc")]
 	public RivetAssetId ArcMaterial { get; set; } = default;
 
-	[DDLRegistration(0xd897b7e1u)]
+	[DDLRegistration(0xfd0ce3fcu)]
 	public float ArcWidth { get; set; } = 0.10f;
 
-	[DDLRegistration(0xd897b7e1u, description: "Texture for the decal at the end of the trajectory arc")]
+	[DDLRegistration(0x94b7e712u, description: "Texture for the decal at the end of the trajectory arc")]
 	public RivetAssetId DecalTexture { get; set; } = default;
 
-	[DDLRegistration(0xd897b7e1u)]
+	[DDLRegistration(0xaef2b156u)]
 	public float DecalSize { get; set; } = 1.00f;
 
-	[DDLRegistration(0xd897b7e1u, description: "Actor for indicating the point of impact")]
+	[DDLRegistration(0xf37be841u, description: "Actor for indicating the point of impact")]
 	public RivetAssetId PointOfImpact { get; set; } = default;
 
 	public static TossTrajectoryDrawPrius Create(DDLObject ddl) => new(ddl);

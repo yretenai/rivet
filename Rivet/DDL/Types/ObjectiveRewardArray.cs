@@ -18,7 +18,7 @@ public class ObjectiveRewardArray : DDLObjectType, IDDLObjectType<ObjectiveRewar
 		ObjectiveReward = ddl.GetObject<ObjectiveRewardBase>(0xa63a7647u);
 	}
 
-	[DDLRegistration(0xd3c9369eu)]
+	[DDLRegistration(0xa63a7647u)]
 	public ObjectiveRewardBase? ObjectiveReward { get; set; } = default;
 
 	public static ObjectiveRewardArray Create(DDLObject ddl) => new(ddl);

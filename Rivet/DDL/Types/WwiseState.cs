@@ -21,16 +21,16 @@ public class WwiseState : DDLObjectType, IDDLObjectType<WwiseState> {
 		StateId = ddl.GetValue<uint>(0xb4c208d7u, StateId);
 	}
 
-	[DDLRegistration(0x5686e39fu)]
+	[DDLRegistration(0xf172707bu)]
 	public string? StateGroupName { get; set; } = default;
 
-	[DDLRegistration(0x5686e39fu)]
+	[DDLRegistration(0xb6351547u)]
 	public string? StateName { get; set; } = default;
 
-	[DDLRegistration(0x5686e39fu, description: "The State Work Group for Music States and LiveMixer States.")]
+	[DDLRegistration(0x1145b180u, description: "The State Work Group for Music States and LiveMixer States.")]
 	public uint StateGroupId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5686e39fu, description: "The individual states of a StateWorkGroup. Cannot be set without setting a StateGroupId.")]
+	[DDLRegistration(0xb4c208d7u, description: "The individual states of a StateWorkGroup. Cannot be set without setting a StateGroupId.")]
 	public uint StateId { get; set; } = 0x00000000;
 
 	public static WwiseState Create(DDLObject ddl) => new(ddl);

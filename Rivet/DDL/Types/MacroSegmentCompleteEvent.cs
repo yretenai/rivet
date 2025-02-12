@@ -18,7 +18,7 @@ public class MacroSegmentCompleteEvent : EventBase, IDDLObjectType<MacroSegmentC
 		Segment = ddl.GetEnum<SegmentEnum>(0x196b965du, SegmentEnumValues.Lookup);
 	}
 
-	[DDLRegistration(0x6744e0b6u, description: "The segment enum of the segment completed.")]
+	[DDLRegistration(0x196b965du, description: "The segment enum of the segment completed.")]
 	public SegmentEnum Segment { get; set; } = SegmentEnum.None;
 
 	public new static MacroSegmentCompleteEvent Create(DDLObject ddl) => new(ddl);

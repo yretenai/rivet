@@ -18,7 +18,7 @@ public class IsRiotSquadActionPrius : DDLObjectType, IDDLObjectType<IsRiotSquadA
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x7d0458b8u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Game;
 
 	public static IsRiotSquadActionPrius Create(DDLObject ddl) => new(ddl);

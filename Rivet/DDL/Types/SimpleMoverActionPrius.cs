@@ -23,22 +23,22 @@ public class SimpleMoverActionPrius : DDLObjectType, IDDLObjectType<SimpleMoverA
 		OverrideMotionType = ddl.GetEnum<MotionTypes>(0x7cb3834du, MotionTypesValues.Lookup);
 	}
 
-	[DDLRegistration(0xc8ae0d44u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0xc8ae0d44u)]
+	[DDLRegistration(0x12568d7bu)]
 	public xf37a71ae Flags { get; set; } = (xf37a71ae) 0x00000001;
 
-	[DDLRegistration(0xc8ae0d44u, description: "The time in seconds to travel from the start to the end.")]
+	[DDLRegistration(0x7c5e3db0u, description: "The time in seconds to travel from the start to the end.")]
 	public float Duration { get; set; } = 1.00f;
 
-	[DDLRegistration(0xc8ae0d44u, description: "Maximum number of times to travel from the start to the end (-1 = infinite).")]
+	[DDLRegistration(0x0449291bu, description: "Maximum number of times to travel from the start to the end (-1 = infinite).")]
 	public int MaxTimes { get; set; } = -1;
 
-	[DDLRegistration(0xc8ae0d44u, "Use Override Motion Type")]
+	[DDLRegistration(0xae04c39eu, "Use Override Motion Type")]
 	public bool UseOverrideMotionType { get; set; } = false;
 
-	[DDLRegistration(0xc8ae0d44u, "Override Motion Type")]
+	[DDLRegistration(0x7cb3834du, "Override Motion Type")]
 	public MotionTypes OverrideMotionType { get; set; } = MotionTypes.SmoothStep;
 
 	public static SimpleMoverActionPrius Create(DDLObject ddl) => new(ddl);

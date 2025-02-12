@@ -25,28 +25,28 @@ public class MaterialNodeOutputPort : DDLObjectType, IDDLObjectType<MaterialNode
 		Documentation = ddl.GetString(0x4cac4bae) ?? Documentation;
 	}
 
-	[DDLRegistration(0x781cf24cu)]
+	[DDLRegistration(0x93971d83u)]
 	public string? InternalName { get; set; } = default;
 
-	[DDLRegistration(0x781cf24cu)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x781cf24cu)]
+	[DDLRegistration(0xee16155au)]
 	public string? Minimums { get; set; } = default;
 
-	[DDLRegistration(0x781cf24cu)]
+	[DDLRegistration(0x0876babbu)]
 	public string? Maximums { get; set; } = default;
 
-	[DDLRegistration(0x781cf24cu)]
+	[DDLRegistration(0x04df0281u)]
 	public string? Values { get; set; } = default;
 
-	[DDLRegistration(0x781cf24cu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = "float4";
 
-	[DDLRegistration(0x781cf24cu)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x781cf24cu)]
+	[DDLRegistration(0x4cac4baeu)]
 	public string? Documentation { get; set; } = default;
 
 	public static MaterialNodeOutputPort Create(DDLObject ddl) => new(ddl);

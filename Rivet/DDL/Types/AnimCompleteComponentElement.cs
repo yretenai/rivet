@@ -19,10 +19,10 @@ public class AnimCompleteComponentElement : DDLObjectType, IDDLObjectType<AnimCo
 		GotoAnimDriverName = ddl.GetString(0x624ac3ca) ?? GotoAnimDriverName;
 	}
 
-	[DDLRegistration(0x4aeb6fabu, "Anim driver to go from")]
+	[DDLRegistration(0x3bec7eedu, "Anim driver to go from")]
 	public string? CompleteAnimDriverName { get; set; } = "AnimDriver";
 
-	[DDLRegistration(0x4aeb6fabu, "Anim driver to go to")]
+	[DDLRegistration(0x624ac3cau, "Anim driver to go to")]
 	public string? GotoAnimDriverName { get; set; } = "GotoAnimDriver";
 
 	public static AnimCompleteComponentElement Create(DDLObject ddl) => new(ddl);

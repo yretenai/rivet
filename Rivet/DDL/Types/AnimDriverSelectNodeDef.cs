@@ -24,25 +24,25 @@ public class AnimDriverSelectNodeDef : DDLObjectType, IDDLObjectType<AnimDriverS
 		Connections = ddl.GetObjects<AnimDriverConnectionDef>(0x322aadceu);
 	}
 
-	[DDLRegistration(0xf4a6f637u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xf4a6f637u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = "";
 
-	[DDLRegistration(0xf4a6f637u)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf4a6f637u)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf4a6f637u)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf4a6f637u, "Index")]
+	[DDLRegistration(0xab72f3a1u, "Index")]
 	public uint CurrentNodeIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf4a6f637u)]
+	[DDLRegistration(0x322aadceu)]
 	public List<AnimDriverConnectionDef?> Connections { get; set; } = [];
 
 	public static AnimDriverSelectNodeDef Create(DDLObject ddl) => new(ddl);

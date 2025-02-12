@@ -20,13 +20,13 @@ public class AwardVanityBundleStatusEvent : EventBase, IDDLObjectType<AwardVanit
 		CurrentLegsBundle = ddl.GetValue<RivetAssetId>(0xbade8bb8u, CurrentLegsBundle);
 	}
 
-	[DDLRegistration(0xf6a1f1edu, "Current Head Bundle", "Asset id for currently equipped head bundle.")]
+	[DDLRegistration(0xd7238005u, "Current Head Bundle", "Asset id for currently equipped head bundle.")]
 	public RivetAssetId CurrentHeadBundle { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf6a1f1edu, "Current Torso Bundle", "Asset id for currently equipped torso bundle.")]
+	[DDLRegistration(0x0dd101d4u, "Current Torso Bundle", "Asset id for currently equipped torso bundle.")]
 	public RivetAssetId CurrentTorsoBundle { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf6a1f1edu, "Current Legs Bundle", "Asset id for currently equipped legs bundle.")]
+	[DDLRegistration(0xbade8bb8u, "Current Legs Bundle", "Asset id for currently equipped legs bundle.")]
 	public RivetAssetId CurrentLegsBundle { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static AwardVanityBundleStatusEvent Create(DDLObject ddl) => new(ddl);

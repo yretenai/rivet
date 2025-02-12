@@ -23,22 +23,22 @@ public class UIDifficultyData : DDLObjectType, IDDLObjectType<UIDifficultyData> 
 		EnemyHealth = ddl.GetValue<float>(0x54a88d71u, EnemyHealth);
 	}
 
-	[DDLRegistration(0xb236ead1u, "Difficulty ID")]
+	[DDLRegistration(0xd6b6733bu, "Difficulty ID")]
 	public DifficultyLevel DifficultyID { get; set; } = DifficultyLevel.Easy;
 
-	[DDLRegistration(0xb236ead1u, "Difficulty Name")]
+	[DDLRegistration(0x6eb3beb6u, "Difficulty Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xb236ead1u, "Difficulty Description")]
+	[DDLRegistration(0x3b256ce4u, "Difficulty Description")]
 	public string? Desc { get; set; } = default;
 
-	[DDLRegistration(0xb236ead1u, "Enemy Aggressiveness", "From 0-1, how agressive the enemies are at this difficulty. Only used for display purposes.")]
+	[DDLRegistration(0x620adc04u, "Enemy Aggressiveness", "From 0-1, how agressive the enemies are at this difficulty. Only used for display purposes.")]
 	public float EnemyAggressiveness { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb236ead1u, "Enemy Damage", "From 0-1, how damaging the enemies are at this difficulty. Only used for display purposes.")]
+	[DDLRegistration(0x8bbafa0eu, "Enemy Damage", "From 0-1, how damaging the enemies are at this difficulty. Only used for display purposes.")]
 	public float EnemyDamage { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb236ead1u, "Enemy Health", "From 0-1, how much health the enemies ahve at this difficulty. Only used for display purposes.")]
+	[DDLRegistration(0x54a88d71u, "Enemy Health", "From 0-1, how much health the enemies ahve at this difficulty. Only used for display purposes.")]
 	public float EnemyHealth { get; set; } = 1.00f;
 
 	public static UIDifficultyData Create(DDLObject ddl) => new(ddl);

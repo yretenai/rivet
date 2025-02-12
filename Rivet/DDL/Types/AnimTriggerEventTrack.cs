@@ -19,10 +19,10 @@ public class AnimTriggerEventTrack : DDLObjectType, IDDLObjectType<AnimTriggerEv
 		Triggers = ddl.GetDictionary<RivetAssetId, AnimTriggerEventDef>(0xf4cf343d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimTriggerEventDef>(mapId));
 	}
 
-	[DDLRegistration(0x9324a241u, description: "The name of the event track.")]
+	[DDLRegistration(0x6eb3beb6u, description: "The name of the event track.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x9324a241u, description: "Trigger data each event.")]
+	[DDLRegistration(0xf4cf343du, description: "Trigger data each event.")]
 	public Dictionary<RivetAssetId, AnimTriggerEventDef?> Triggers { get; set; } = [];
 
 	public static AnimTriggerEventTrack Create(DDLObject ddl) => new(ddl);

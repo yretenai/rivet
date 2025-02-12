@@ -43,82 +43,82 @@ public class AirDashChargeData : DDLObjectType, IDDLObjectType<AirDashChargeData
 		RequestFlags = ddl.GetBitset<DamageRequestFlags>(0x2bc801dfu, DamageRequestFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0x91fe45bcu, description: "How long should intro take before we start charge loop. -1 uses anim speed")]
+	[DDLRegistration(0x5d9ecce9u, description: "How long should intro take before we start charge loop. -1 uses anim speed")]
 	public float IntroDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x91fe45bcu, description: "We can turn at this rate during our charge.")]
+	[DDLRegistration(0x46971358u, description: "We can turn at this rate during our charge.")]
 	public float ChargeTurnRate { get; set; } = 45.00f;
 
-	[DDLRegistration(0x91fe45bcu, description: "Minimum speed we move during our charge.")]
+	[DDLRegistration(0xcc30606fu, description: "Minimum speed we move during our charge.")]
 	public float MoveSpeedMin { get; set; } = 10.00f;
 
-	[DDLRegistration(0x91fe45bcu, description: "Maximum speed we move during our charge.")]
+	[DDLRegistration(0xf03d5f36u, description: "Maximum speed we move during our charge.")]
 	public float MoveSpeedMax { get; set; } = 45.00f;
 
-	[DDLRegistration(0x91fe45bcu, description: "How long we'd like the charge to last. We'll pick an actual speed between MoveSpeedMin and MoveSpeedMax to try and make the charge last this long.")]
+	[DDLRegistration(0x9be3b565u, description: "How long we'd like the charge to last. We'll pick an actual speed between MoveSpeedMin and MoveSpeedMax to try and make the charge last this long.")]
 	public float DesiredMoveTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x91fe45bcu, description: "If we miss and run past this distance, just outro out")]
+	[DDLRegistration(0x2d3e8090u, description: "If we miss and run past this distance, just outro out")]
 	public float AllowedChargePastDist { get; set; } = 6.00f;
 
-	[DDLRegistration(0x91fe45bcu, description: "How long to keep charging before we just auto transition to Miss Outro")]
+	[DDLRegistration(0xfc3adc0bu, description: "How long to keep charging before we just auto transition to Miss Outro")]
 	public float MaxChargeDuration { get; set; } = 5.00f;
 
-	[DDLRegistration(0x91fe45bcu, description: "If you hit your target how long should the hit outro last? -1 uses anim speed")]
+	[DDLRegistration(0x23ec79abu, description: "If you hit your target how long should the hit outro last? -1 uses anim speed")]
 	public float HitOutroDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x91fe45bcu, description: "If you miss your target how long should your miss outro last? -1 uses anim speed")]
+	[DDLRegistration(0x87043051u, description: "If you miss your target how long should your miss outro last? -1 uses anim speed")]
 	public float MissOutroDuration { get; set; } = -1.00f;
 
-	[DDLRegistration(0x91fe45bcu, description: "If false, just charge toward the target position at the time of charge start.")]
+	[DDLRegistration(0x36d0352au, description: "If false, just charge toward the target position at the time of charge start.")]
 	public bool TrackTarget { get; set; } = false;
 
-	[DDLRegistration(0x91fe45bcu)]
+	[DDLRegistration(0xf3929ecbu)]
 	public bool FaceTargetDuringMiss { get; set; } = false;
 
-	[DDLRegistration(0x91fe45bcu)]
+	[DDLRegistration(0xb340d429u)]
 	public bool FaceTargetDuringHit { get; set; } = false;
 
-	[DDLRegistration(0x91fe45bcu, description: "If true, the Outro will try to setup the hit target with a sync anim reaction")]
+	[DDLRegistration(0x5521943fu, description: "If true, the Outro will try to setup the hit target with a sync anim reaction")]
 	public bool SyncAnimOutroHit { get; set; } = false;
 
-	[DDLRegistration(0x91fe45bcu, "Intro Driver", "Intro driver to play before charge. Tries to scale rotation toward target during anim")]
+	[DDLRegistration(0x9b209c3du, "Intro Driver", "Intro driver to play before charge. Tries to scale rotation toward target during anim")]
 	public string? IntroDriver { get; set; } = default;
 
-	[DDLRegistration(0x91fe45bcu, "Charge Driver", "Looping charge anim. Uses MoveSpeed and ChargeTurnRate for locomotion")]
+	[DDLRegistration(0x4958a1dbu, "Charge Driver", "Looping charge anim. Uses MoveSpeed and ChargeTurnRate for locomotion")]
 	public string? ChargeDriver { get; set; } = default;
 
-	[DDLRegistration(0x91fe45bcu, "Hit Outro Driver", "Outro anim if the Prehit finds good targeting, needs to be setup with SyncedAnimImpactEvent at expected contact")]
+	[DDLRegistration(0x5e5130c0u, "Hit Outro Driver", "Outro anim if the Prehit finds good targeting, needs to be setup with SyncedAnimImpactEvent at expected contact")]
 	public string? HitOutroDriver { get; set; } = default;
 
-	[DDLRegistration(0x91fe45bcu, "Miss Outro Driver", "Outro anim if the Prehit doesn't find good target and misses")]
+	[DDLRegistration(0xd0759423u, "Miss Outro Driver", "Outro anim if the Prehit doesn't find good target and misses")]
 	public string? MissOutroDriver { get; set; } = default;
 
-	[DDLRegistration(0x91fe45bcu)]
+	[DDLRegistration(0x56f13c62u)]
 	public string? DamageName { get; set; } = default;
 
-	[DDLRegistration(0x91fe45bcu)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x91fe45bcu)]
+	[DDLRegistration(0x840c154du)]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Melee;
 
-	[DDLRegistration(0x91fe45bcu)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x91fe45bcu)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 100.00f;
 
-	[DDLRegistration(0x91fe45bcu)]
+	[DDLRegistration(0x604b5af6u)]
 	public string? DamageLocator { get; set; } = default;
 
-	[DDLRegistration(0x91fe45bcu)]
+	[DDLRegistration(0x46a4eea5u)]
 	public DDLVector3? LocalOffset { get; set; } = default;
 
-	[DDLRegistration(0x91fe45bcu)]
+	[DDLRegistration(0xe3e6fa68u)]
 	public float DamageRadius { get; set; } = 0.50f;
 
-	[DDLRegistration(0x91fe45bcu)]
+	[DDLRegistration(0x2bc801dfu)]
 	public DamageRequestFlags RequestFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
 	public static AirDashChargeData Create(DDLObject ddl) => new(ddl);

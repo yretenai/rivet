@@ -19,10 +19,10 @@ public class CollectibleTypeQueryActionPrius : DDLObjectType, IDDLObjectType<Col
 		CollectibleType = ddl.GetObject<CollectibleTypeDenum>(0xa2fe6498u);
 	}
 
-	[DDLRegistration(0xcd01e862u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0xcd01e862u)]
+	[DDLRegistration(0xa2fe6498u)]
 	public CollectibleTypeDenum? CollectibleType { get; set; } = default;
 
 	public static CollectibleTypeQueryActionPrius Create(DDLObject ddl) => new(ddl);

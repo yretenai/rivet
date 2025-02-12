@@ -19,10 +19,10 @@ public class InteractDetachPropEvent : EventBase, IDDLObjectType<InteractDetachP
 		PropHandle = ddl.GetValue<uint>(0xd2edbef4u, PropHandle);
 	}
 
-	[DDLRegistration(0x1758b548u)]
+	[DDLRegistration(0x8bbbb97bu)]
 	public uint InteractHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x1758b548u)]
+	[DDLRegistration(0xd2edbef4u)]
 	public uint PropHandle { get; set; } = 0x00000000;
 
 	public new static InteractDetachPropEvent Create(DDLObject ddl) => new(ddl);

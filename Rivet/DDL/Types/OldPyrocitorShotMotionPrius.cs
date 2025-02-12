@@ -18,7 +18,7 @@ public class OldPyrocitorShotMotionPrius : BeamShotMotionPrius, IDDLObjectType<O
 		IgnoreHeroes = ddl.GetValue<bool>(0xeea28f86u, IgnoreHeroes);
 	}
 
-	[DDLRegistration(0x837c07bau, "Ignore heroes?", "Whether to ignore colliding with heroes.")]
+	[DDLRegistration(0xeea28f86u, "Ignore heroes?", "Whether to ignore colliding with heroes.")]
 	public bool IgnoreHeroes { get; set; } = true;
 
 	public new static OldPyrocitorShotMotionPrius Create(DDLObject ddl) => new(ddl);

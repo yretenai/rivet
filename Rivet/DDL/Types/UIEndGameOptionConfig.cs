@@ -18,7 +18,7 @@ public class UIEndGameOptionConfig : ConfigBase, IDDLObjectType<UIEndGameOptionC
 		Options = ddl.GetObjects<UIEndGameOption>(0xd1df99bfu);
 	}
 
-	[DDLRegistration(0x3eae7f0du)]
+	[DDLRegistration(0xd1df99bfu)]
 	public List<UIEndGameOption?> Options { get; set; } = [];
 
 	public new static UIEndGameOptionConfig Create(DDLObject ddl) => new(ddl);

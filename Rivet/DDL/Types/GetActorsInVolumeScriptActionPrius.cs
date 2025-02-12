@@ -22,19 +22,19 @@ public class GetActorsInVolumeScriptActionPrius : DDLObjectType, IDDLObjectType<
 		DebugShapeColor = ddl.GetObject<DDLVector3>(0xc3906804u);
 	}
 
-	[DDLRegistration(0x30dc335du)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x30dc335du)]
+	[DDLRegistration(0xc4633319u)]
 	public QueryVolumeShape? Shape { get; set; } = default;
 
-	[DDLRegistration(0x30dc335du, "Debug Draw the Shape", "Whether we should draw the shape for debugging purposes.")]
+	[DDLRegistration(0xf1576b3cu, "Debug Draw the Shape", "Whether we should draw the shape for debugging purposes.")]
 	public bool DebugDrawShape { get; set; } = false;
 
-	[DDLRegistration(0x30dc335du, "Debug Shape Duration", "How long the debug shape will display for")]
+	[DDLRegistration(0x3fa759a3u, "Debug Shape Duration", "How long the debug shape will display for")]
 	public float DebugShapeDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x30dc335du, "Debug Shape Color")]
+	[DDLRegistration(0xc3906804u, "Debug Shape Color")]
 	public DDLVector3? DebugShapeColor { get; set; } = default;
 
 	public static GetActorsInVolumeScriptActionPrius Create(DDLObject ddl) => new(ddl);

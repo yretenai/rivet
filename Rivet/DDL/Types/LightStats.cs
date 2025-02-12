@@ -23,22 +23,22 @@ public class LightStats : DDLObjectType, IDDLObjectType<LightStats> {
 		Modulate = ddl.GetObject<LightStat>(0x450a0905u);
 	}
 
-	[DDLRegistration(0xa1c7be0au, description: "AKA Keylight")]
+	[DDLRegistration(0x7be1e73eu, description: "AKA Keylight")]
 	public LightStat? Sun { get; set; } = default;
 
-	[DDLRegistration(0xa1c7be0au, description: "Each Shadow is actually a sextant light's shadow: A point light uses a cubemap shadow, so there are 6 render passes for each cube face.")]
+	[DDLRegistration(0xaef63fe5u, description: "Each Shadow is actually a sextant light's shadow: A point light uses a cubemap shadow, so there are 6 render passes for each cube face.")]
 	public LightStat? Point { get; set; } = default;
 
-	[DDLRegistration(0xa1c7be0au)]
+	[DDLRegistration(0x89a2bac3u)]
 	public LightStat? Spot { get; set; } = default;
 
-	[DDLRegistration(0xa1c7be0au)]
+	[DDLRegistration(0xb24ba63cu)]
 	public LightStat? Shaft { get; set; } = default;
 
-	[DDLRegistration(0xa1c7be0au)]
+	[DDLRegistration(0xe2a43e71u)]
 	public LightStat? Pyramid { get; set; } = default;
 
-	[DDLRegistration(0xa1c7be0au)]
+	[DDLRegistration(0x450a0905u)]
 	public LightStat? Modulate { get; set; } = default;
 
 	public static LightStats Create(DDLObject ddl) => new(ddl);

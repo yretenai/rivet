@@ -19,10 +19,10 @@ public class ArcShotMotionPrius : BasicShotMotionPrius, IDDLObjectType<ArcShotMo
 		MaxPredictionSpeed = ddl.GetValue<float>(0x0276306eu, MaxPredictionSpeed);
 	}
 
-	[DDLRegistration(0x74dc5998u)]
+	[DDLRegistration(0x7f6f0690u)]
 	public bool UsePrediction { get; set; } = false;
 
-	[DDLRegistration(0x74dc5998u)]
+	[DDLRegistration(0x0276306eu)]
 	public float MaxPredictionSpeed { get; set; } = 4.00f;
 
 	public new static ArcShotMotionPrius Create(DDLObject ddl) => new(ddl);

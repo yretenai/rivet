@@ -20,13 +20,13 @@ public class TerrainSystem03EditingTerrain03 : DDLObjectType, IDDLObjectType<Ter
 		Line02 = ddl.GetString(0xe176de67) ?? Line02;
 	}
 
-	[DDLRegistration(0x5dbedf9bu, description: "The terrain editor can perform specific commands on various targets of the")]
+	[DDLRegistration(0x0f78bf4bu, description: "The terrain editor can perform specific commands on various targets of the")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x5dbedf9bu, description: "terrain, such as invert, clear, and so on.  These commands are accessed via")]
+	[DDLRegistration(0x787f8fddu, description: "terrain, such as invert, clear, and so on.  These commands are accessed via")]
 	public string? Line01 { get; set; } = default;
 
-	[DDLRegistration(0x5dbedf9bu, description: "the <i>Terrain</i> dropdown in the Terrain Paint panel.")]
+	[DDLRegistration(0xe176de67u, description: "the <i>Terrain</i> dropdown in the Terrain Paint panel.")]
 	public string? Line02 { get; set; } = default;
 
 	public static TerrainSystem03EditingTerrain03 Create(DDLObject ddl) => new(ddl);

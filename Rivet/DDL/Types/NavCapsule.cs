@@ -19,10 +19,10 @@ public class NavCapsule : DDLObjectType, IDDLObjectType<NavCapsule> {
 		Height = ddl.GetValue<float>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0x460c481du)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.35f;
 
-	[DDLRegistration(0x460c481du)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 2.00f;
 
 	public static NavCapsule Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class SheepExplodedEvent : EventBase, IDDLObjectType<SheepExplodedEvent> 
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0xbf42565du)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
 	public new static SheepExplodedEvent Create(DDLObject ddl) => new(ddl);

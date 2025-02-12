@@ -19,10 +19,10 @@ public class SharedLoadSettings : DDLObjectType, IDDLObjectType<SharedLoadSettin
 		ExpediteBulkLoader = ddl.GetValue<bool>(0xd576fa31u, ExpediteBulkLoader);
 	}
 
-	[DDLRegistration(0x3e752deeu, description: "When at least 'low', will try to advance through some LoadStates without waiting a whole frame between one PreUpdate and the next.")]
+	[DDLRegistration(0x9b1e3b4cu, description: "When at least 'low', will try to advance through some LoadStates without waiting a whole frame between one PreUpdate and the next.")]
 	public x0d76165e ExpediteLoadStateMachineMode { get; set; } = x0d76165e.No;
 
-	[DDLRegistration(0x3e752deeu, description: "Waste one less frame when bulk-loading assets.")]
+	[DDLRegistration(0xd576fa31u, description: "Waste one less frame when bulk-loading assets.")]
 	public bool ExpediteBulkLoader { get; set; } = false;
 
 	public static SharedLoadSettings Create(DDLObject ddl) => new(ddl);

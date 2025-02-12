@@ -21,16 +21,16 @@ public class DebugActorEventFilter : DDLObjectType, IDDLObjectType<DebugActorEve
 		EventList = ddl.GetObjects<DebugActorEventFilterItem>(0x3aa31403u);
 	}
 
-	[DDLRegistration(0x539237afu, "Filter Name")]
+	[DDLRegistration(0x8f981729u, "Filter Name")]
 	public string? FilterName { get; set; } = default;
 
-	[DDLRegistration(0x539237afu, "Default On")]
+	[DDLRegistration(0x186fa8e8u, "Default On")]
 	public bool DefaultOn { get; set; } = true;
 
-	[DDLRegistration(0x539237afu, "Is Include")]
+	[DDLRegistration(0x9497a047u, "Is Include")]
 	public bool IsInclude { get; set; } = false;
 
-	[DDLRegistration(0x539237afu, "Event List")]
+	[DDLRegistration(0x3aa31403u, "Event List")]
 	public List<DebugActorEventFilterItem?> EventList { get; set; } = [];
 
 	public static DebugActorEventFilter Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class AimAssistTurnMatchModifier : DDLObjectType, IDDLObjectType<AimAssis
 		CenterMod = ddl.GetValue<float>(0x9237bce3u, CenterMod);
 	}
 
-	[DDLRegistration(0x9413aca6u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0x9413aca6u, "Match Tolerance")]
+	[DDLRegistration(0x447808b9u, "Match Tolerance")]
 	public float MatchTolerance { get; set; } = 10.00f;
 
-	[DDLRegistration(0x9413aca6u, "Friction Modifier")]
+	[DDLRegistration(0x259d7ff2u, "Friction Modifier")]
 	public float FrictionMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9413aca6u, "Magnet Modifier")]
+	[DDLRegistration(0xcc015279u, "Magnet Modifier")]
 	public float MagnetMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9413aca6u, "Centering Modifier")]
+	[DDLRegistration(0x9237bce3u, "Centering Modifier")]
 	public float CenterMod { get; set; } = 1.00f;
 
 	public static AimAssistTurnMatchModifier Create(DDLObject ddl) => new(ddl);

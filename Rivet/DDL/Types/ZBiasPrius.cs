@@ -18,7 +18,7 @@ public class ZBiasPrius : DDLObjectType, IDDLObjectType<ZBiasPrius> {
 		ZBias = ddl.GetValue<float>(0xafe2d9cbu, ZBias);
 	}
 
-	[DDLRegistration(0x63077177u)]
+	[DDLRegistration(0xafe2d9cbu)]
 	public float ZBias { get; set; } = 0.00f;
 
 	public static ZBiasPrius Create(DDLObject ddl) => new(ddl);

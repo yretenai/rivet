@@ -18,7 +18,7 @@ public class PingResults : DDLObjectType, IDDLObjectType<PingResults> {
 		LocalFormattedTime = ddl.GetString(0xa0d38cd0) ?? LocalFormattedTime;
 	}
 
-	[DDLRegistration(0xb6766c1cu)]
+	[DDLRegistration(0xa0d38cd0u)]
 	public string? LocalFormattedTime { get; set; } = default;
 
 	public static PingResults Create(DDLObject ddl) => new(ddl);

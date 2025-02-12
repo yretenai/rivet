@@ -18,7 +18,7 @@ public class QueryVolumeShapeSphere : QueryVolumeShape, IDDLObjectType<QueryVolu
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0xd7e8a20bu, description: "Radius of the sphere")]
+	[DDLRegistration(0x0504203du, description: "Radius of the sphere")]
 	public float Radius { get; set; } = 1.00f;
 
 	public new static QueryVolumeShapeSphere Create(DDLObject ddl) => new(ddl);

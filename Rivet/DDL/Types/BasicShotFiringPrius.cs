@@ -19,10 +19,10 @@ public class BasicShotFiringPrius : WeaponFiringBasePrius, IDDLObjectType<BasicS
 		ShotPrius = ddl.GetObject<ShotBasePrius>(0x66fe4621u);
 	}
 
-	[DDLRegistration(0x979106acu)]
+	[DDLRegistration(0x46d53e22u)]
 	public RivetAssetId ShotAsset { get; set; } = default;
 
-	[DDLRegistration(0x979106acu)]
+	[DDLRegistration(0x66fe4621u)]
 	public ShotBasePrius? ShotPrius { get; set; } = default;
 
 	public new static BasicShotFiringPrius Create(DDLObject ddl) => new(ddl);

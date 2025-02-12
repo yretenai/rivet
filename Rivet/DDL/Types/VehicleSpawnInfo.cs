@@ -20,13 +20,13 @@ public class VehicleSpawnInfo : DDLObjectType, IDDLObjectType<VehicleSpawnInfo> 
 		MaxDistanceOffScreen = ddl.GetValue<float>(0x87ce0c81u, MaxDistanceOffScreen);
 	}
 
-	[DDLRegistration(0xe447bbc8u, description: "Vehicles must spawn at least this far from the hero.")]
+	[DDLRegistration(0x448e693au, description: "Vehicles must spawn at least this far from the hero.")]
 	public float MinDistance { get; set; } = 50.00f;
 
-	[DDLRegistration(0xe447bbc8u, description: "Vehicles may spawn at most this far from the hero.")]
+	[DDLRegistration(0x88831235u, description: "Vehicles may spawn at most this far from the hero.")]
 	public float MaxDistance { get; set; } = 2000.00f;
 
-	[DDLRegistration(0xe447bbc8u, description: "Vehicles may spawn at most this far from the hero offscreen.")]
+	[DDLRegistration(0x87ce0c81u, description: "Vehicles may spawn at most this far from the hero offscreen.")]
 	public float MaxDistanceOffScreen { get; set; } = 1000.00f;
 
 	public static VehicleSpawnInfo Create(DDLObject ddl) => new(ddl);

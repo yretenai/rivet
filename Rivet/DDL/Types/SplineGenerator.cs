@@ -18,7 +18,7 @@ public class SplineGenerator : DDLObjectType, IDDLObjectType<SplineGenerator> {
 		CurveFidelity = ddl.GetValue<float>(0x13278436u, CurveFidelity);
 	}
 
-	[DDLRegistration(0x93fe7ab1u, description: ".001 is highest fidelity. common settings .03, .02, .01, .005, .001")]
+	[DDLRegistration(0x13278436u, description: ".001 is highest fidelity. common settings .03, .02, .01, .005, .001")]
 	public float CurveFidelity { get; set; } = 0.01f;
 
 	public static SplineGenerator Create(DDLObject ddl) => new(ddl);

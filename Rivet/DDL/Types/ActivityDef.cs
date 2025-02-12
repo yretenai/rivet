@@ -30,43 +30,43 @@ public class ActivityDef : ActivityDefBase, IDDLObjectType<ActivityDef> {
 		Tasks = ddl.GetObjects<TaskDef>(0x490ba956u);
 	}
 
-	[DDLRegistration(0x5ed453fcu, description: "For activities with the same group Id, only one card will be made available/active from that group")]
+	[DDLRegistration(0xec6beb88u, description: "For activities with the same group Id, only one card will be made available/active from that group")]
 	public string? GroupId { get; set; } = default;
 
-	[DDLRegistration(0x5ed453fcu, description: "Localized text can be at most 128 characters.")]
+	[DDLRegistration(0x2d78cbbdu, description: "Localized text can be at most 128 characters.")]
 	public string? NameTag { get; set; } = default;
 
-	[DDLRegistration(0x5ed453fcu, description: "Localized text can be at most 1024 characters.")]
+	[DDLRegistration(0xe822a0dau, description: "Localized text can be at most 1024 characters.")]
 	public string? DescTag { get; set; } = default;
 
-	[DDLRegistration(0x5ed453fcu)]
+	[DDLRegistration(0xfc4da4b1u)]
 	public xca2817ca Category { get; set; } = xca2817ca.Progress;
 
-	[DDLRegistration(0x5ed453fcu)]
+	[DDLRegistration(0x797697c5u)]
 	public xbd8d5c4d SubCategory { get; set; } = xbd8d5c4d.NULL;
 
-	[DDLRegistration(0x5ed453fcu, description: "Should this activity card exist in the OS?")]
+	[DDLRegistration(0x5113d8bcu, description: "Should this activity card exist in the OS?")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x5ed453fcu, description: "Should this activity card be hidden as a spoiler?")]
+	[DDLRegistration(0xb625a7dau, description: "Should this activity card be hidden as a spoiler?")]
 	public bool Hidden { get; set; } = true;
 
-	[DDLRegistration(0x5ed453fcu, description: "Whether or not to make the activity available to the user without explicitly changing the setting to available. Should pretty much always be false.")]
+	[DDLRegistration(0x81fb4ab4u, description: "Whether or not to make the activity available to the user without explicitly changing the setting to available. Should pretty much always be false.")]
 	public bool AvailableByDefault { get; set; } = false;
 
-	[DDLRegistration(0x5ed453fcu, description: "Whether or not the player must complete the activity to complete the main story.")]
+	[DDLRegistration(0x49a05f7au, description: "Whether or not the player must complete the activity to complete the main story.")]
 	public bool RequiredForCompletion { get; set; } = true;
 
-	[DDLRegistration(0x5ed453fcu, description: "Path to a large image of size 3840 x 2160 PNG 24-bit non-interlaced. This image will be shown when the card is 'maximized'.")]
+	[DDLRegistration(0xaae1bdcdu, description: "Path to a large image of size 3840 x 2160 PNG 24-bit non-interlaced. This image will be shown when the card is 'maximized'.")]
 	public RivetAssetId LargeImagePath { get; set; } = default;
 
-	[DDLRegistration(0x5ed453fcu, description: "Path to a small image of size 864 x 1040 PNG 24-bit non-interlaced. This image will be shown on the card itself.")]
+	[DDLRegistration(0xa4cf1f2eu, description: "Path to a small image of size 864 x 1040 PNG 24-bit non-interlaced. This image will be shown on the card itself.")]
 	public RivetAssetId SmallImagePath { get; set; } = default;
 
-	[DDLRegistration(0x5ed453fcu)]
+	[DDLRegistration(0xe8c87d0fu)]
 	public List<ActivityReward?> Rewards { get; set; } = [];
 
-	[DDLRegistration(0x5ed453fcu)]
+	[DDLRegistration(0x490ba956u)]
 	public List<TaskDef?> Tasks { get; set; } = [];
 
 	public new static ActivityDef Create(DDLObject ddl) => new(ddl);

@@ -28,37 +28,37 @@ public class AOSettingsDef : DDLObjectType, IDDLObjectType<AOSettingsDef> {
 		AmbientShadowIntensity = ddl.GetValue<float>(0xf50a72a4u, AmbientShadowIntensity);
 	}
 
-	[DDLRegistration(0x47d84b4fu)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x47d84b4fu, description: "The strength of the SSAO effect in the foreground")]
+	[DDLRegistration(0xf17bd549u, description: "The strength of the SSAO effect in the foreground")]
 	public float OcclusionStrength { get; set; } = 1.00f;
 
-	[DDLRegistration(0x47d84b4fu, description: "The radius of the SSAO effect in the foreground")]
+	[DDLRegistration(0xf30fb855u, description: "The radius of the SSAO effect in the foreground")]
 	public float RadiusInMeters { get; set; } = 1.25f;
 
-	[DDLRegistration(0x47d84b4fu, description: "The strength of the SSAO effect in the distance")]
+	[DDLRegistration(0x4f5019b3u, description: "The strength of the SSAO effect in the distance")]
 	public float DistanceStrength { get; set; } = 1.00f;
 
-	[DDLRegistration(0x47d84b4fu, description: "The distance at which DistanceStrength takes full effect (0 = no distance-based modification)")]
+	[DDLRegistration(0x74b64f57u, description: "The distance at which DistanceStrength takes full effect (0 = no distance-based modification)")]
 	public float DistanceInMeters { get; set; } = 0.00f;
 
-	[DDLRegistration(0x47d84b4fu, description: "The fraction of SSAO that's applied to direct sunlight")]
+	[DDLRegistration(0x7c14aef7u, description: "The fraction of SSAO that's applied to direct sunlight")]
 	public float SunlightFactor { get; set; } = 0.00f;
 
-	[DDLRegistration(0x47d84b4fu, description: "The fraction of SSAO that's applied to direct local light")]
+	[DDLRegistration(0xa23aaf58u, description: "The fraction of SSAO that's applied to direct local light")]
 	public float LocalLightFactor { get; set; } = 0.00f;
 
-	[DDLRegistration(0x47d84b4fu, description: "The fraction of SSAO that's applied to non-shadowed lights on skin materials")]
+	[DDLRegistration(0x2095c8a6u, description: "The fraction of SSAO that's applied to non-shadowed lights on skin materials")]
 	public float SkinUnshadowedFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x47d84b4fu, description: "The fraction of SSAO that's applied to shadowed lights on skin materials")]
+	[DDLRegistration(0x3d4be964u, description: "The fraction of SSAO that's applied to shadowed lights on skin materials")]
 	public float SkinShadowedFactor { get; set; } = 0.00f;
 
-	[DDLRegistration(0x47d84b4fu, description: "The distance at which ambient shadows fade out")]
+	[DDLRegistration(0x19e5d4a8u, description: "The distance at which ambient shadows fade out")]
 	public float AmbientShadowDrawDist { get; set; } = 150.00f;
 
-	[DDLRegistration(0x47d84b4fu, description: "The strength of the ambient shadow effect")]
+	[DDLRegistration(0xf50a72a4u, description: "The strength of the ambient shadow effect")]
 	public float AmbientShadowIntensity { get; set; } = 0.75f;
 
 	public static AOSettingsDef Create(DDLObject ddl) => new(ddl);

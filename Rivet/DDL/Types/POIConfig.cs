@@ -18,7 +18,7 @@ public class POIConfig : ConfigBase, IDDLObjectType<POIConfig> {
 		POILibrary = ddl.GetObjects<POILibraryEntry>(0x0a5dd899u);
 	}
 
-	[DDLRegistration(0xd79d2375u, "POI Library")]
+	[DDLRegistration(0x0a5dd899u, "POI Library")]
 	public List<POILibraryEntry?> POILibrary { get; set; } = [];
 
 	public new static POIConfig Create(DDLObject ddl) => new(ddl);

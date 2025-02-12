@@ -19,10 +19,10 @@ public class SetAllegianceScriptActionPrius : DDLObjectType, IDDLObjectType<SetA
 		Allegiance = ddl.GetEnum<x6bdf4ba1>(0xd10c0c26u, x6bdf4ba1Values.Lookup);
 	}
 
-	[DDLRegistration(0x5572c9fbu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Gameplay;
 
-	[DDLRegistration(0x5572c9fbu)]
+	[DDLRegistration(0xd10c0c26u)]
 	public x6bdf4ba1 Allegiance { get; set; } = x6bdf4ba1.Neutral;
 
 	public static SetAllegianceScriptActionPrius Create(DDLObject ddl) => new(ddl);

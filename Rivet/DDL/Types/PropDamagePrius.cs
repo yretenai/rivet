@@ -19,10 +19,10 @@ public class PropDamagePrius : DDLObjectType, IDDLObjectType<PropDamagePrius> {
 		DamageLocation2 = ddl.GetString(0xcb64e6cc) ?? DamageLocation2;
 	}
 
-	[DDLRegistration(0x0e3a2580u, "Damage Location 1")]
+	[DDLRegistration(0x526db776u, "Damage Location 1")]
 	public string? DamageLocation1 { get; set; } = default;
 
-	[DDLRegistration(0x0e3a2580u, "Damage Location 2")]
+	[DDLRegistration(0xcb64e6ccu, "Damage Location 2")]
 	public string? DamageLocation2 { get; set; } = default;
 
 	public static PropDamagePrius Create(DDLObject ddl) => new(ddl);

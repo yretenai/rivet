@@ -20,13 +20,13 @@ public class NodeGraphActorContextInfo : DDLObjectType, IDDLObjectType<NodeGraph
 		Assets = ddl.GetValues<RivetAssetId>(0x47a933e9u);
 	}
 
-	[DDLRegistration(0x893e4bc3u)]
+	[DDLRegistration(0x8a514a8du)]
 	public uint Id { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x893e4bc3u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x893e4bc3u)]
+	[DDLRegistration(0x47a933e9u)]
 	public List<RivetAssetId> Assets { get; set; } = [];
 
 	public static NodeGraphActorContextInfo Create(DDLObject ddl) => new(ddl);

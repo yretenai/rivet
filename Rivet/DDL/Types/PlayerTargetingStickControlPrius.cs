@@ -19,10 +19,10 @@ public class PlayerTargetingStickControlPrius : PlayerTargetingBasePrius, IDDLOb
 		UseRightStick = ddl.GetValue<bool>(0x123c7548u, UseRightStick);
 	}
 
-	[DDLRegistration(0x53b800a6u)]
+	[DDLRegistration(0xc49c69c2u)]
 	public bool UseLeftStick { get; set; } = false;
 
-	[DDLRegistration(0x53b800a6u)]
+	[DDLRegistration(0x123c7548u)]
 	public bool UseRightStick { get; set; } = true;
 
 	public new static PlayerTargetingStickControlPrius Create(DDLObject ddl) => new(ddl);

@@ -48,97 +48,97 @@ public class AnimClipDef : DDLObjectType, IDDLObjectType<AnimClipDef> {
 		FootstepGen = ddl.GetObject<AnimFootstepConfigDef>(0x659da796u);
 	}
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xb9555036 Type { get; set; } = xb9555036.TypeStandard;
 
-	[DDLRegistration(0x3d01746fu, description: "The name of this clip within the anim set.")]
+	[DDLRegistration(0x6eb3beb6u, description: "The name of this clip within the anim set.")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x3d01746fu, description: "The path to the source content (Collada) file.")]
+	[DDLRegistration(0x6ccf66b3u, description: "The path to the source content (Collada) file.")]
 	public RivetAssetId SourcePath { get; set; } = default;
 
-	[DDLRegistration(0x3d01746fu, description: "Only consider Maya nodes that are underneath a node with this name.")]
+	[DDLRegistration(0xa8a9ef53u, description: "Only consider Maya nodes that are underneath a node with this name.")]
 	public string? FilterNodeName { get; set; } = default;
 
-	[DDLRegistration(0x3d01746fu, description: "The sample rate for the anim clip.")]
+	[DDLRegistration(0xb9228075u, description: "The sample rate for the anim clip.")]
 	public x865c089e SampleRate { get; set; } = x865c089e.SampleRate10Hz;
 
-	[DDLRegistration(0x3d01746fu, description: "The frame of the first sample ( using the content file's native sample rate ).")]
+	[DDLRegistration(0xcd935029u, description: "The frame of the first sample ( using the content file's native sample rate ).")]
 	public int StartFrame { get; set; } = 0;
 
-	[DDLRegistration(0x3d01746fu, description: "The frame of the last sample ( using the content file's native sample rate ).")]
+	[DDLRegistration(0xfddf52e6u, description: "The frame of the last sample ( using the content file's native sample rate ).")]
 	public int EndFrame { get; set; } = 0;
 
-	[DDLRegistration(0x3d01746fu, description: "Set to true if the clip is looping.")]
+	[DDLRegistration(0xd3118ad1u, description: "Set to true if the clip is looping.")]
 	public bool IsLooping { get; set; } = false;
 
-	[DDLRegistration(0x3d01746fu, description: "Number of cycles in the clip (only relevant for looping clips).")]
+	[DDLRegistration(0x961d7fe9u, description: "Number of cycles in the clip (only relevant for looping clips).")]
 	public byte CycleCount { get; set; } = 0x01;
 
-	[DDLRegistration(0x3d01746fu, description: "Bias the clip's compression to higher or lower quality.")]
+	[DDLRegistration(0x20c9431cu, description: "Bias the clip's compression to higher or lower quality.")]
 	public x57d39d58 CompressionQuality { get; set; } = x57d39d58.CompQualityNormal;
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x63495d0du)]
 	public x3a8b381d TranslationRange { get; set; } = x3a8b381d.TranslationRangeStd;
 
-	[DDLRegistration(0x3d01746fu, description: "Stores data uncompressed - debug only!")]
+	[DDLRegistration(0xe66fb23du, description: "Stores data uncompressed - debug only!")]
 	public bool DebugUncompressed { get; set; } = false;
 
-	[DDLRegistration(0x3d01746fu, description: "Set to true if the clip is an additive ( difference ) clip.")]
+	[DDLRegistration(0xa60f98d3u, description: "Set to true if the clip is an additive ( difference ) clip.")]
 	public bool IsAdditive { get; set; } = false;
 
-	[DDLRegistration(0x3d01746fu, description: "For additive clips, the reference frame to compute the delta from.")]
+	[DDLRegistration(0x01b53fa5u, description: "For additive clips, the reference frame to compute the delta from.")]
 	public uint AdditiveRefSampleIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x1615c547u)]
 	public List<AnimPartialChain?> PartialChains { get; set; } = [];
 
-	[DDLRegistration(0x3d01746fu, description: "For partial clips, indicates that motion data should be respected.")]
+	[DDLRegistration(0x83e58212u, description: "For partial clips, indicates that motion data should be respected.")]
 	public bool PartialMotion { get; set; } = false;
 
-	[DDLRegistration(0x3d01746fu, description: "Motion joint data compression quality.")]
+	[DDLRegistration(0xf1c95fc9u, description: "Motion joint data compression quality.")]
 	public x26111896 MotionJointDataQuality { get; set; } = x26111896.DefaultCompressed;
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x70243e1eu)]
 	public List<BezierCurveDef?> Curves { get; set; } = [];
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0xa97a036du)]
 	public Dictionary<RivetAssetId, BezierCurveDef?> CustomTracks { get; set; } = [];
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0xce26cee7u)]
 	public List<AnimFacialPoseDef?> FacialVisemePoses { get; set; } = [];
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x8bc3379cu)]
 	public List<AnimFacialVisemeMapDef?> FacialVisemeMap { get; set; } = [];
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x41bf9457u)]
 	public List<AnimFacialPoseDef?> FacialExpressionPoses { get; set; } = [];
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x653e2373u)]
 	public List<AnimTriggerTrack?> EventTracks { get; set; } = [];
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x77d633b0u)]
 	public bool CinematicClip { get; set; } = false;
 
-	[DDLRegistration(0x3d01746fu, description: "Frames for which joint data is frozen (motion data is still applied).")]
+	[DDLRegistration(0x7cc71603u, description: "Frames for which joint data is frozen (motion data is still applied).")]
 	public List<FrozenSkeletonRange?> FrozenSkeletonFrames { get; set; } = [];
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x092b8181u)]
 	public x38fb844d GeomType { get; set; } = x38fb844d.AnimClipGeomTypeNone;
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x397deb50u)]
 	public RivetAssetId GeomModelSourcePath { get; set; } = default;
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x543b08f1u)]
 	public x6569d94c PendingReview { get; set; } = (x6569d94c) 0x00000000;
 
-	[DDLRegistration(0x3d01746fu)]
+	[DDLRegistration(0x659da796u)]
 	public AnimFootstepConfigDef? FootstepGen { get; set; } = default;
 
 	public static AnimClipDef Create(DDLObject ddl) => new(ddl);

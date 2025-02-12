@@ -18,7 +18,7 @@ public class MultiplayerRoundStartEvent : EventBase, IDDLObjectType<MultiplayerR
 		AreaNameHash = ddl.GetValue<uint>(0x75940ec4u, AreaNameHash);
 	}
 
-	[DDLRegistration(0x8e64c10fu)]
+	[DDLRegistration(0x75940ec4u)]
 	public uint AreaNameHash { get; set; } = 0x00000000;
 
 	public new static MultiplayerRoundStartEvent Create(DDLObject ddl) => new(ddl);

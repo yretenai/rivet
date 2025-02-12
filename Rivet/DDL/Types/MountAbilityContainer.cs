@@ -18,7 +18,7 @@ public class MountAbilityContainer : DDLObjectType, IDDLObjectType<MountAbilityC
 		MountAbilityData = ddl.GetObject<MountAbilityBase>(0xd5119f0fu);
 	}
 
-	[DDLRegistration(0x61323ec1u)]
+	[DDLRegistration(0xd5119f0fu)]
 	public MountAbilityBase? MountAbilityData { get; set; } = default;
 
 	public static MountAbilityContainer Create(DDLObject ddl) => new(ddl);

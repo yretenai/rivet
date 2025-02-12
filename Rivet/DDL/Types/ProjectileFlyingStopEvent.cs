@@ -20,13 +20,13 @@ public class ProjectileFlyingStopEvent : EventBase, IDDLObjectType<ProjectileFly
 		VersionIndex = ddl.GetValue<byte>(0x6e091c9au, VersionIndex);
 	}
 
-	[DDLRegistration(0xf01a2056u)]
+	[DDLRegistration(0xcb3c1ce8u)]
 	public string? WeaponTypeName { get; set; } = default;
 
-	[DDLRegistration(0xf01a2056u)]
+	[DDLRegistration(0x9da07479u)]
 	public string? PerkName { get; set; } = default;
 
-	[DDLRegistration(0xf01a2056u)]
+	[DDLRegistration(0x6e091c9au)]
 	public byte VersionIndex { get; set; } = 0x00;
 
 	public new static ProjectileFlyingStopEvent Create(DDLObject ddl) => new(ddl);

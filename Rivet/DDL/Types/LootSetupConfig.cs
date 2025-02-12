@@ -18,7 +18,7 @@ public class LootSetupConfig : ConfigBase, IDDLObjectType<LootSetupConfig> {
 		LootTables = ddl.GetObjects<LootSetupElement>(0x53787c5fu);
 	}
 
-	[DDLRegistration(0x169493acu)]
+	[DDLRegistration(0x53787c5fu)]
 	public List<LootSetupElement?> LootTables { get; set; } = [];
 
 	public new static LootSetupConfig Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class CameraAutoDepthOfFieldPrius : DDLObjectType, IDDLObjectType<CameraA
 		ApertureScale = ddl.GetValue<float>(0x9589e6bcu, ApertureScale);
 	}
 
-	[DDLRegistration(0xa84bfc23u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0xa84bfc23u, "Near Focus Distance")]
+	[DDLRegistration(0xd6c519d5u, "Near Focus Distance")]
 	public float NearFocusDistance { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa84bfc23u, "Near Aperture Scale")]
+	[DDLRegistration(0x172fcbcfu, "Near Aperture Scale")]
 	public float NearApertureScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa84bfc23u, "Far Focus Distance")]
+	[DDLRegistration(0x546334a6u, "Far Focus Distance")]
 	public float FocusDistance { get; set; } = 100.00f;
 
-	[DDLRegistration(0xa84bfc23u, "Far Aperture Scale")]
+	[DDLRegistration(0x9589e6bcu, "Far Aperture Scale")]
 	public float ApertureScale { get; set; } = 0.00f;
 
 	public static CameraAutoDepthOfFieldPrius Create(DDLObject ddl) => new(ddl);

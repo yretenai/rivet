@@ -19,10 +19,10 @@ public class MissionOrderDataBase : DDLObjectType, IDDLObjectType<MissionOrderDa
 		LockedByMission = ddl.GetStrings(0x9b0151b0u);
 	}
 
-	[DDLRegistration(0x0bf0b1adu)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x0bf0b1adu)]
+	[DDLRegistration(0x9b0151b0u)]
 	public List<string?> LockedByMission { get; set; } = [];
 
 	public static MissionOrderDataBase Create(DDLObject ddl) => new(ddl);

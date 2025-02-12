@@ -19,10 +19,10 @@ public class VanityLookToggle : DDLObjectType, IDDLObjectType<VanityLookToggle> 
 		Toggle = ddl.GetValue<bool>(0x1b92e3ecu, Toggle);
 	}
 
-	[DDLRegistration(0xa22022ccu, "Look")]
+	[DDLRegistration(0x1baa14b2u, "Look")]
 	public string? Look { get; set; } = default;
 
-	[DDLRegistration(0xa22022ccu, "Toggle")]
+	[DDLRegistration(0x1b92e3ecu, "Toggle")]
 	public bool Toggle { get; set; } = true;
 
 	public static VanityLookToggle Create(DDLObject ddl) => new(ddl);

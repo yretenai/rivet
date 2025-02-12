@@ -19,10 +19,10 @@ public class UDSHintMedia : DDLObjectType, IDDLObjectType<UDSHintMedia> {
 		Type = ddl.GetEnum<xf23aa75c>(0x1c7c38a7u, xf23aa75cValues.Lookup);
 	}
 
-	[DDLRegistration(0xbc1b44d8u)]
+	[DDLRegistration(0x9f4e997du)]
 	public RivetAssetId FileName { get; set; } = default;
 
-	[DDLRegistration(0xbc1b44d8u)]
+	[DDLRegistration(0x1c7c38a7u)]
 	public xf23aa75c Type { get; set; } = xf23aa75c.Image;
 
 	public static UDSHintMedia Create(DDLObject ddl) => new(ddl);

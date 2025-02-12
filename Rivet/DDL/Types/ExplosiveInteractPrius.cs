@@ -19,10 +19,10 @@ public class ExplosiveInteractPrius : SlottedInteractObjectPrius, IDDLObjectType
 		ExplodeAnim = ddl.GetString(0x0c35f404) ?? ExplodeAnim;
 	}
 
-	[DDLRegistration(0x6243b3b4u, "Destroyed Model")]
+	[DDLRegistration(0xb1285dafu, "Destroyed Model")]
 	public RivetAssetId SwapTarget { get; set; } = default;
 
-	[DDLRegistration(0x6243b3b4u, description: "Animation to play when object explodes")]
+	[DDLRegistration(0x0c35f404u, description: "Animation to play when object explodes")]
 	public string? ExplodeAnim { get; set; } = "Interact_ObjectExplode";
 
 	public new static ExplosiveInteractPrius Create(DDLObject ddl) => new(ddl);

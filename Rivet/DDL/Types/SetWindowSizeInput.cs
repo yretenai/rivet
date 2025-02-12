@@ -21,16 +21,16 @@ public class SetWindowSizeInput : DDLObjectType, IDDLObjectType<SetWindowSizeInp
 		Height = ddl.GetValue<int>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0x1cdfb6f0u)]
+	[DDLRegistration(0x5e33418du)]
 	public int X { get; set; } = 0;
 
-	[DDLRegistration(0x1cdfb6f0u)]
+	[DDLRegistration(0x2934711bu)]
 	public int Y { get; set; } = 0;
 
-	[DDLRegistration(0x1cdfb6f0u)]
+	[DDLRegistration(0x954989eeu)]
 	public int Width { get; set; } = 0;
 
-	[DDLRegistration(0x1cdfb6f0u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public int Height { get; set; } = 0;
 
 	public static SetWindowSizeInput Create(DDLObject ddl) => new(ddl);

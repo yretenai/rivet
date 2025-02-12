@@ -23,22 +23,22 @@ public class RegionDefTemp : DDLObjectType, IDDLObjectType<RegionDefTemp> {
 		Aux = ddl.GetString(0x90972571) ?? Aux;
 	}
 
-	[DDLRegistration(0x3cd89ebbu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x3cd89ebbu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x3cd89ebbu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x3cd89ebbu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x2069d6e7 Type { get; set; } = x2069d6e7.InstanceCollection;
 
-	[DDLRegistration(0x3cd89ebbu)]
+	[DDLRegistration(0x2e74622cu)]
 	public RivetAssetId ParentAsset { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3cd89ebbu)]
+	[DDLRegistration(0x90972571u)]
 	public string? Aux { get; set; } = default;
 
 	public static RegionDefTemp Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class UIArenaWaveActionPrius : DDLObjectType, IDDLObjectType<UIArenaWaveA
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x1c6188d2u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
 	public static UIArenaWaveActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class SpawnHazardDamageAreaEffectNodeDef : NodalShotEffectNodeBaseDef, ID
 		ConfigAsset = ddl.GetValue<RivetAssetId>(0x83370868u, ConfigAsset);
 	}
 
-	[DDLRegistration(0x655e5112u)]
+	[DDLRegistration(0x75356989u)]
 	public RivetAssetId ActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x655e5112u)]
+	[DDLRegistration(0x83370868u)]
 	public RivetAssetId ConfigAsset { get; set; } = default;
 
 	public new static SpawnHazardDamageAreaEffectNodeDef Create(DDLObject ddl) => new(ddl);

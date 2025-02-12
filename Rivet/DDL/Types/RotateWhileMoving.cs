@@ -23,22 +23,22 @@ public class RotateWhileMoving : OrientationMode, IDDLObjectType<RotateWhileMovi
 		AxisIsWorld = ddl.GetValue<bool>(0x21314bb0u, AxisIsWorld);
 	}
 
-	[DDLRegistration(0x64449591u)]
+	[DDLRegistration(0xb59f464au)]
 	public RotationAxis Axis { get; set; } = RotationAxis.X;
 
-	[DDLRegistration(0x64449591u)]
+	[DDLRegistration(0x1691e955u)]
 	public float RotationalSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x64449591u)]
+	[DDLRegistration(0x77400fefu)]
 	public string? RotationJoint { get; set; } = default;
 
-	[DDLRegistration(0x64449591u)]
+	[DDLRegistration(0x4213956bu)]
 	public bool LocalToVelocity { get; set; } = true;
 
-	[DDLRegistration(0x64449591u)]
+	[DDLRegistration(0x17226367u)]
 	public bool TiltWithVelocity { get; set; } = false;
 
-	[DDLRegistration(0x64449591u)]
+	[DDLRegistration(0x21314bb0u)]
 	public bool AxisIsWorld { get; set; } = false;
 
 	public new static RotateWhileMoving Create(DDLObject ddl) => new(ddl);

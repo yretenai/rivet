@@ -18,7 +18,7 @@ public class BotDisableFiringEvent : EventBase, IDDLObjectType<BotDisableFiringE
 		DisableAfterCurrentSequence = ddl.GetValue<bool>(0xed5092e5u, DisableAfterCurrentSequence);
 	}
 
-	[DDLRegistration(0x8a2889f6u, description: "If true, the current sequence will finish before firing is disabled.")]
+	[DDLRegistration(0xed5092e5u, description: "If true, the current sequence will finish before firing is disabled.")]
 	public bool DisableAfterCurrentSequence { get; set; } = false;
 
 	public new static BotDisableFiringEvent Create(DDLObject ddl) => new(ddl);

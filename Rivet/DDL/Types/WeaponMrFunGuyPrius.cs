@@ -18,7 +18,7 @@ public class WeaponMrFunGuyPrius : WeaponGamePrius, IDDLObjectType<WeaponMrFunGu
 		TurretShotConfig = ddl.GetValue<RivetAssetId>(0x7a0c7c53u, TurretShotConfig);
 	}
 
-	[DDLRegistration(0x1acf7dbeu, description: "This is a SpawnedShotConfig for the turret shots used by the MrFunGuy bot.")]
+	[DDLRegistration(0x7a0c7c53u, description: "This is a SpawnedShotConfig for the turret shots used by the MrFunGuy bot.")]
 	public RivetAssetId TurretShotConfig { get; set; } = default;
 
 	public new static WeaponMrFunGuyPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class TestDog : DDLObjectType, IDDLObjectType<TestDog> {
 		WalksPerDay = ddl.GetValue<int>(0x5bf7e25du, WalksPerDay);
 	}
 
-	[DDLRegistration(0xc097ddccu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xc097ddccu)]
+	[DDLRegistration(0x5bf7e25du)]
 	public int WalksPerDay { get; set; } = 3;
 
 	public static TestDog Create(DDLObject ddl) => new(ddl);

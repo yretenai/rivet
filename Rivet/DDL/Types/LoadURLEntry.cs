@@ -21,16 +21,16 @@ public class LoadURLEntry : DDLObjectType, IDDLObjectType<LoadURLEntry> {
 		DefaultFontName = ddl.GetString(0x93f16ebb) ?? DefaultFontName;
 	}
 
-	[DDLRegistration(0x9451883cu)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x9451883cu, description: "HTML file path")]
+	[DDLRegistration(0x70c9680du, description: "HTML file path")]
 	public string? URL { get; set; } = default;
 
-	[DDLRegistration(0x9451883cu)]
+	[DDLRegistration(0xe82def0bu)]
 	public string? FontFolderPath { get; set; } = default;
 
-	[DDLRegistration(0x9451883cu)]
+	[DDLRegistration(0x93f16ebbu)]
 	public string? DefaultFontName { get; set; } = default;
 
 	public static LoadURLEntry Create(DDLObject ddl) => new(ddl);

@@ -23,22 +23,22 @@ public class SpawnDirections : DDLObjectType, IDDLObjectType<SpawnDirections> {
 		NegativeZ = ddl.GetValue<bool>(0x6cd31cb3u, NegativeZ);
 	}
 
-	[DDLRegistration(0x4dec0a2eu, "X+")]
+	[DDLRegistration(0x08ddc204u, "X+")]
 	public bool PositiveX { get; set; } = true;
 
-	[DDLRegistration(0x4dec0a2eu, "X-")]
+	[DDLRegistration(0x82dd7d9fu, "X-")]
 	public bool NegativeX { get; set; } = true;
 
-	[DDLRegistration(0x4dec0a2eu, "Y+")]
+	[DDLRegistration(0x7fdaf292u, "Y+")]
 	public bool PositiveY { get; set; } = true;
 
-	[DDLRegistration(0x4dec0a2eu, "Y-")]
+	[DDLRegistration(0xf5da4d09u, "Y-")]
 	public bool NegativeY { get; set; } = true;
 
-	[DDLRegistration(0x4dec0a2eu, "Z+")]
+	[DDLRegistration(0xe6d3a328u, "Z+")]
 	public bool PositiveZ { get; set; } = true;
 
-	[DDLRegistration(0x4dec0a2eu, "Z-")]
+	[DDLRegistration(0x6cd31cb3u, "Z-")]
 	public bool NegativeZ { get; set; } = true;
 
 	public static SpawnDirections Create(DDLObject ddl) => new(ddl);

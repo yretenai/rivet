@@ -20,13 +20,13 @@ public class SSRSettingsDef : DDLObjectType, IDDLObjectType<SSRSettingsDef> {
 		RayTracingDistance = ddl.GetValue<float>(0x228ba216u, RayTracingDistance);
 	}
 
-	[DDLRegistration(0x97aa45d3u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x97aa45d3u)]
+	[DDLRegistration(0x2cb85ca8u)]
 	public float Strength { get; set; } = 1.00f;
 
-	[DDLRegistration(0x97aa45d3u, "Ray-Tracing Distance", "The distance from the camera where we allow ray-traced reflections")]
+	[DDLRegistration(0x228ba216u, "Ray-Tracing Distance", "The distance from the camera where we allow ray-traced reflections")]
 	public float RayTracingDistance { get; set; } = 64.00f;
 
 	public static SSRSettingsDef Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class OnWorldCombatStateChangedActionPrius : DDLObjectType, IDDLObjectTyp
 		InitiallyListening = ddl.GetValue<bool>(0x51d42fd7u, InitiallyListening);
 	}
 
-	[DDLRegistration(0x72f49c52u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x72f49c52u)]
+	[DDLRegistration(0x51d42fd7u)]
 	public bool InitiallyListening { get; set; } = true;
 
 	public static OnWorldCombatStateChangedActionPrius Create(DDLObject ddl) => new(ddl);

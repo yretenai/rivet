@@ -19,10 +19,10 @@ public class UIVariationLink : DDLObjectType, IDDLObjectType<UIVariationLink> {
 		VarPorts = ddl.GetObjects<UIVariationPort>(0x104b1941u);
 	}
 
-	[DDLRegistration(0x8a7e2d74u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x8a7e2d74u)]
+	[DDLRegistration(0x104b1941u)]
 	public List<UIVariationPort?> VarPorts { get; set; } = [];
 
 	public static UIVariationLink Create(DDLObject ddl) => new(ddl);

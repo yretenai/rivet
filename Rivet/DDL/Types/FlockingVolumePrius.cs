@@ -18,7 +18,7 @@ public class FlockingVolumePrius : DDLObjectType, IDDLObjectType<FlockingVolumeP
 		EnabledTypes = ddl.GetStrings(0xd5c45476u);
 	}
 
-	[DDLRegistration(0x8a5867aau)]
+	[DDLRegistration(0xd5c45476u)]
 	public List<string?> EnabledTypes { get; set; } = [];
 
 	public static FlockingVolumePrius Create(DDLObject ddl) => new(ddl);

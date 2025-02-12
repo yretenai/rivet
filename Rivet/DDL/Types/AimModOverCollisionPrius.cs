@@ -21,16 +21,16 @@ public class AimModOverCollisionPrius : AimModifierPrius, IDDLObjectType<AimModO
 		BaseOffset = ddl.GetValue<float>(0xb283ec91u, BaseOffset);
 	}
 
-	[DDLRegistration(0xeb000b4du, description: "Locator for LoS testing")]
+	[DDLRegistration(0xc54e6703u, description: "Locator for LoS testing")]
 	public string? SourceLocator { get; set; } = default;
 
-	[DDLRegistration(0xeb000b4du, description: "Radius for LoS collision")]
+	[DDLRegistration(0xc7f69ee3u, description: "Radius for LoS collision")]
 	public float CollRadius { get; set; } = 0.10f;
 
-	[DDLRegistration(0xeb000b4du, description: "Maximum offset from desired target position")]
+	[DDLRegistration(0x90fc80d2u, description: "Maximum offset from desired target position")]
 	public float MaxTargetOffset { get; set; } = 0.50f;
 
-	[DDLRegistration(0xeb000b4du, description: "Add base offset of this much whenever we are aiming at collision")]
+	[DDLRegistration(0xb283ec91u, description: "Add base offset of this much whenever we are aiming at collision")]
 	public float BaseOffset { get; set; } = 0.00f;
 
 	public new static AimModOverCollisionPrius Create(DDLObject ddl) => new(ddl);

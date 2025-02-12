@@ -19,10 +19,10 @@ public class StatusEmitterBasePrius : DDLObjectType, IDDLObjectType<StatusEmitte
 		ApplyEffectsWhileDead = ddl.GetValue<bool>(0x7b27a8fau, ApplyEffectsWhileDead);
 	}
 
-	[DDLRegistration(0xa041059eu, "Status Effects")]
+	[DDLRegistration(0x3436174eu, "Status Effects")]
 	public StatusEffectsData? StatusEffectsData { get; set; } = default;
 
-	[DDLRegistration(0xa041059eu)]
+	[DDLRegistration(0x7b27a8fau)]
 	public bool ApplyEffectsWhileDead { get; set; } = false;
 
 	public static StatusEmitterBasePrius Create(DDLObject ddl) => new(ddl);

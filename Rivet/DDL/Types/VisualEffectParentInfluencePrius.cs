@@ -20,13 +20,13 @@ public class VisualEffectParentInfluencePrius : DDLObjectType, IDDLObjectType<Vi
 		ParentInfluenceDeath = ddl.GetValue<float>(0xc29ae20eu, ParentInfluenceDeath);
 	}
 
-	[DDLRegistration(0xf9419c94u, description: "The actor which will be used as the parent for parent influence calculations.")]
+	[DDLRegistration(0x68ae6e89u, description: "The actor which will be used as the parent for parent influence calculations.")]
 	public RivetAssetId ParentActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf9419c94u, description: "The amount of parent influence [0 - 1] the VisualEffectInst should have when it is first created.")]
+	[DDLRegistration(0x196cb53fu, description: "The amount of parent influence [0 - 1] the VisualEffectInst should have when it is first created.")]
 	public float ParentInfluenceBirth { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf9419c94u, description: "The amount of parent influence [0 - 1] the VisualEffectInst should have when it is at the end of its lifetime.")]
+	[DDLRegistration(0xc29ae20eu, description: "The amount of parent influence [0 - 1] the VisualEffectInst should have when it is at the end of its lifetime.")]
 	public float ParentInfluenceDeath { get; set; } = 0.00f;
 
 	public static VisualEffectParentInfluencePrius Create(DDLObject ddl) => new(ddl);

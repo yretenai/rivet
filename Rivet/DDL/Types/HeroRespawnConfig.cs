@@ -18,7 +18,7 @@ public class HeroRespawnConfig : DDLObjectType, IDDLObjectType<HeroRespawnConfig
 		RespawnPortal = ddl.GetValue<RivetAssetId>(0x4019ca19u, RespawnPortal);
 	}
 
-	[DDLRegistration(0x3ef855efu)]
+	[DDLRegistration(0x4019ca19u)]
 	public RivetAssetId RespawnPortal { get; set; } = default;
 
 	public static HeroRespawnConfig Create(DDLObject ddl) => new(ddl);

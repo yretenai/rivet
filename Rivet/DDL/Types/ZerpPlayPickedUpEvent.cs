@@ -18,7 +18,7 @@ public class ZerpPlayPickedUpEvent : EventBase, IDDLObjectType<ZerpPlayPickedUpE
 		ZerpId = ddl.GetValue<int>(0x8a726814u, ZerpId);
 	}
 
-	[DDLRegistration(0xc35d680fu, description: "Unique identifier of this Zerp stone.")]
+	[DDLRegistration(0x8a726814u, description: "Unique identifier of this Zerp stone.")]
 	public int ZerpId { get; set; } = -1;
 
 	public new static ZerpPlayPickedUpEvent Create(DDLObject ddl) => new(ddl);

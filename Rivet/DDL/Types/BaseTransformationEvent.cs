@@ -19,10 +19,10 @@ public class BaseTransformationEvent : EventBase, IDDLObjectType<BaseTransformat
 		InAir = ddl.GetValue<bool>(0xebc689d9u, InAir);
 	}
 
-	[DDLRegistration(0x075089d3u)]
+	[DDLRegistration(0x53dd23f0u)]
 	public int TransformationState { get; set; } = -1;
 
-	[DDLRegistration(0x075089d3u)]
+	[DDLRegistration(0xebc689d9u)]
 	public bool InAir { get; set; } = false;
 
 	public new static BaseTransformationEvent Create(DDLObject ddl) => new(ddl);

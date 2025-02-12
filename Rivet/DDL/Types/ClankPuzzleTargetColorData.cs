@@ -25,28 +25,28 @@ public class ClankPuzzleTargetColorData : DDLObjectType, IDDLObjectType<ClankPuz
 		EnergyColor = ddl.GetObject<DDLVector3>(0xf3fe021au);
 	}
 
-	[DDLRegistration(0x9c8a630bu)]
+	[DDLRegistration(0x2abb3948u)]
 	public string? ColorConstant { get; set; } = default;
 
-	[DDLRegistration(0x9c8a630bu)]
+	[DDLRegistration(0x00a78f92u)]
 	public float LerpInValue { get; set; } = 0.10f;
 
-	[DDLRegistration(0x9c8a630bu)]
+	[DDLRegistration(0x7255935bu)]
 	public float LerpOutValue { get; set; } = 0.10f;
 
-	[DDLRegistration(0x9c8a630bu, description: "The default color to use when not under any influence.")]
+	[DDLRegistration(0x7ccd1470u, description: "The default color to use when not under any influence.")]
 	public DDLVector3? DefaultColor { get; set; } = default;
 
-	[DDLRegistration(0x9c8a630bu)]
+	[DDLRegistration(0x7b4c01a7u)]
 	public DDLVector3? SpeedUpColor { get; set; } = default;
 
-	[DDLRegistration(0x9c8a630bu)]
+	[DDLRegistration(0x3de399a8u)]
 	public DDLVector3? SlowDownColor { get; set; } = default;
 
-	[DDLRegistration(0x9c8a630bu)]
+	[DDLRegistration(0x6558c61au)]
 	public DDLVector3? GravityColor { get; set; } = default;
 
-	[DDLRegistration(0x9c8a630bu)]
+	[DDLRegistration(0xf3fe021au)]
 	public DDLVector3? EnergyColor { get; set; } = default;
 
 	public static ClankPuzzleTargetColorData Create(DDLObject ddl) => new(ddl);

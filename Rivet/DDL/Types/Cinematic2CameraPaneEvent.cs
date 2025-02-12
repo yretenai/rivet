@@ -27,34 +27,34 @@ public class Cinematic2CameraPaneEvent : EventBase, IDDLObjectType<Cinematic2Cam
 		DebugTime = ddl.GetValue<float>(0x7f467751u, DebugTime);
 	}
 
-	[DDLRegistration(0x97ee272au)]
+	[DDLRegistration(0xf2b5bb32u)]
 	public x51b3e0b1 EventType { get; set; } = x51b3e0b1.Activate;
 
-	[DDLRegistration(0x97ee272au)]
+	[DDLRegistration(0x8c36fe1bu)]
 	public uint PaneIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x97ee272au)]
+	[DDLRegistration(0x3d04e738u)]
 	public uint CameraActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x97ee272au)]
+	[DDLRegistration(0x30805030u)]
 	public float TransitionDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x97ee272au)]
+	[DDLRegistration(0xc249a120u)]
 	public byte TransitionPruneFollow { get; set; } = 0x00;
 
-	[DDLRegistration(0x97ee272au)]
+	[DDLRegistration(0xbfc056ceu)]
 	public byte TranslatePrevious { get; set; } = 0x00;
 
-	[DDLRegistration(0x97ee272au)]
+	[DDLRegistration(0x27abe6f1u)]
 	public byte RelativeBlend { get; set; } = 0x00;
 
-	[DDLRegistration(0x97ee272au)]
+	[DDLRegistration(0x90c06781u)]
 	public byte UpdateReferenceMatrix { get; set; } = 0x00;
 
-	[DDLRegistration(0x97ee272au)]
+	[DDLRegistration(0x22a9b272u)]
 	public RivetAssetId DebugId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x97ee272au)]
+	[DDLRegistration(0x7f467751u)]
 	public float DebugTime { get; set; } = 0.00f;
 
 	public new static Cinematic2CameraPaneEvent Create(DDLObject ddl) => new(ddl);

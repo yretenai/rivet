@@ -21,16 +21,16 @@ public class WwiseLookupBankDef : DDLObjectType, IDDLObjectType<WwiseLookupBankD
 		Events = ddl.GetObjects<WwiseLookupEventElemDef>(0x6dff192du);
 	}
 
-	[DDLRegistration(0xc03db0f4u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xc03db0f4u)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public RivetAssetId Path { get; set; } = default;
 
-	[DDLRegistration(0xc03db0f4u)]
+	[DDLRegistration(0x6c668944u)]
 	public bool AutoLoadOnRef { get; set; } = false;
 
-	[DDLRegistration(0xc03db0f4u)]
+	[DDLRegistration(0x6dff192du)]
 	public List<WwiseLookupEventElemDef?> Events { get; set; } = [];
 
 	public static WwiseLookupBankDef Create(DDLObject ddl) => new(ddl);

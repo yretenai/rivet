@@ -18,7 +18,7 @@ public class DialogPromptEntry : DDLObjectType, IDDLObjectType<DialogPromptEntry
 		Line = ddl.GetObject<DialogPromptLine>(0xe1847446u);
 	}
 
-	[DDLRegistration(0x5e94840bu)]
+	[DDLRegistration(0xe1847446u)]
 	public DialogPromptLine? Line { get; set; } = default;
 
 	public static DialogPromptEntry Create(DDLObject ddl) => new(ddl);

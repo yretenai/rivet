@@ -18,7 +18,7 @@ public class FogOfWarSystemSave : DDLObjectType, IDDLObjectType<FogOfWarSystemSa
 		MapAreas = ddl.GetDictionary<ulong, FogOfWarSavedMapArea>(0xad7df7a6, DDLMapTypeHandler.VisitULong, (mapId, mapDDL) => mapDDL.GetObject<FogOfWarSavedMapArea>(mapId));
 	}
 
-	[DDLRegistration(0x0d43cef8u)]
+	[DDLRegistration(0xad7df7a6u)]
 	public Dictionary<ulong, FogOfWarSavedMapArea?> MapAreas { get; set; } = [];
 
 	public static FogOfWarSystemSave Create(DDLObject ddl) => new(ddl);

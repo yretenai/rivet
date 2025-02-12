@@ -18,7 +18,7 @@ public class CameraRotatorTargetedPrius : CameraRotatorBasePrius, IDDLObjectType
 		TargetOffset = ddl.GetObject<DDLVector3>(0xabbb80f6u);
 	}
 
-	[DDLRegistration(0xe8c17d3bu, "Target Offset")]
+	[DDLRegistration(0xabbb80f6u, "Target Offset")]
 	public DDLVector3? TargetOffset { get; set; } = default;
 
 	public new static CameraRotatorTargetedPrius Create(DDLObject ddl) => new(ddl);

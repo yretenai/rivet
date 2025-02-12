@@ -20,13 +20,13 @@ public class VaultFindReferencesInput : DDLObjectType, IDDLObjectType<VaultFindR
 		Recursive = ddl.GetValue<bool>(0x3a3803f1u, Recursive);
 	}
 
-	[DDLRegistration(0x5dc31cfeu)]
+	[DDLRegistration(0xbcb74ebfu)]
 	public x49646b18 Direction { get; set; } = x49646b18.ReferencesTo;
 
-	[DDLRegistration(0x5dc31cfeu)]
+	[DDLRegistration(0x8c7bb4c0u)]
 	public List<RivetAssetId> VaultIds { get; set; } = [];
 
-	[DDLRegistration(0x5dc31cfeu)]
+	[DDLRegistration(0x3a3803f1u)]
 	public bool Recursive { get; set; } = false;
 
 	public static VaultFindReferencesInput Create(DDLObject ddl) => new(ddl);

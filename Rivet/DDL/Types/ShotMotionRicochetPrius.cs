@@ -27,34 +27,34 @@ public class ShotMotionRicochetPrius : BasicShotMotionPrius, IDDLObjectType<Shot
 		ScaleDuration = ddl.GetValue<float>(0x3e815eb7u, ScaleDuration);
 	}
 
-	[DDLRegistration(0x9cc91e8fu, description: "Note: the first element is ALWAYS successful so the SuccessTimeSpan value for this element is irrelevant.")]
+	[DDLRegistration(0x461557c4u, description: "Note: the first element is ALWAYS successful so the SuccessTimeSpan value for this element is irrelevant.")]
 	public List<RicochetData?> RicochetDataList { get; set; } = [];
 
-	[DDLRegistration(0x9cc91e8fu, description: "Speed at which the riochet projectile starts with when initiall homing for an enemy.")]
+	[DDLRegistration(0x1a29bd24u, description: "Speed at which the riochet projectile starts with when initiall homing for an enemy.")]
 	public float InitialSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0x9cc91e8fu, description: "Speed at which the riochet projectile returns to the hero.")]
+	[DDLRegistration(0x7fe840dbu, description: "Speed at which the riochet projectile returns to the hero.")]
 	public float ReturnSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0x9cc91e8fu, description: "Speed at which the riochet projectilt changes its target.")]
+	[DDLRegistration(0x26d6c0e6u, description: "Speed at which the riochet projectilt changes its target.")]
 	public float ChangeTargetSpeed { get; set; } = 22.00f;
 
-	[DDLRegistration(0x9cc91e8fu, description: "Amount of time it takes for a successful ricochet shot to hit the targeted enemy after the user inputu.")]
+	[DDLRegistration(0x1eb7e50fu, description: "Amount of time it takes for a successful ricochet shot to hit the targeted enemy after the user inputu.")]
 	public float ShotTime { get; set; } = 0.15f;
 
-	[DDLRegistration(0x9cc91e8fu, description: "Amount of time it takes for to build up when preparing for a ricochet attempt.")]
+	[DDLRegistration(0xba21ff35u, description: "Amount of time it takes for to build up when preparing for a ricochet attempt.")]
 	public float BuildupTime { get; set; } = 0.70f;
 
-	[DDLRegistration(0x9cc91e8fu, description: "Distance away from the enemy that a ricochet attempt will take place.")]
+	[DDLRegistration(0x560297f5u, description: "Distance away from the enemy that a ricochet attempt will take place.")]
 	public float AttemptDistance { get; set; } = 2.00f;
 
-	[DDLRegistration(0x9cc91e8fu)]
+	[DDLRegistration(0xf9496656u)]
 	public float InitialScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x9cc91e8fu)]
+	[DDLRegistration(0x30663df1u)]
 	public float TargetScale { get; set; } = 3.00f;
 
-	[DDLRegistration(0x9cc91e8fu)]
+	[DDLRegistration(0x3e815eb7u)]
 	public float ScaleDuration { get; set; } = 0.20f;
 
 	public new static ShotMotionRicochetPrius Create(DDLObject ddl) => new(ddl);

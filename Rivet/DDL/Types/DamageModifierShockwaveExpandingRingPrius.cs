@@ -20,13 +20,13 @@ public class DamageModifierShockwaveExpandingRingPrius : DamageModifierShockwave
 		DamageAmount = ddl.GetValue<float>(0x563be470u, DamageAmount);
 	}
 
-	[DDLRegistration(0x5d79f850u)]
+	[DDLRegistration(0xce13d050u)]
 	public float ExpandMaxRadius { get; set; } = 4.00f;
 
-	[DDLRegistration(0x5d79f850u)]
+	[DDLRegistration(0xc54ebecbu)]
 	public float ExpandRate { get; set; } = 0.50f;
 
-	[DDLRegistration(0x5d79f850u)]
+	[DDLRegistration(0x563be470u)]
 	public float DamageAmount { get; set; } = 1.00f;
 
 	public new static DamageModifierShockwaveExpandingRingPrius Create(DDLObject ddl) => new(ddl);

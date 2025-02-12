@@ -18,7 +18,7 @@ public class RegionLoadedTriggerPrius : BaseCustomOverlayTriggerPrius, IDDLObjec
 		Region = ddl.GetValue<RivetAssetId>(0x311abf11u, Region);
 	}
 
-	[DDLRegistration(0x85679299u)]
+	[DDLRegistration(0x311abf11u)]
 	public RivetAssetId Region { get; set; } = default;
 
 	public new static RegionLoadedTriggerPrius Create(DDLObject ddl) => new(ddl);

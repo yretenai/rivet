@@ -25,28 +25,28 @@ public class SpawnNodeDef : DDLObjectType, IDDLObjectType<SpawnNodeDef> {
 		BlockInputs = ddl.GetObjects<BlockInputPlugSignal>(0xc438ded9u);
 	}
 
-	[DDLRegistration(0x3c3f9747u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3c3f9747u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x577f103e Type { get; set; } = x577f103e.Invalid;
 
-	[DDLRegistration(0x3c3f9747u)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = false;
 
-	[DDLRegistration(0x3c3f9747u)]
+	[DDLRegistration(0x7effd393u)]
 	public bool Disabled { get; set; } = false;
 
-	[DDLRegistration(0x3c3f9747u)]
+	[DDLRegistration(0x5e33418du)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3c3f9747u)]
+	[DDLRegistration(0x2934711bu)]
 	public float Y { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3c3f9747u)]
+	[DDLRegistration(0xb628e065u)]
 	public InputPlugSignal? TriggerInput { get; set; } = default;
 
-	[DDLRegistration(0x3c3f9747u)]
+	[DDLRegistration(0xc438ded9u)]
 	public List<BlockInputPlugSignal?> BlockInputs { get; set; } = [];
 
 	public static SpawnNodeDef Create(DDLObject ddl) => new(ddl);

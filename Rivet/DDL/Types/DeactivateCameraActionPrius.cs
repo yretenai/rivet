@@ -25,28 +25,28 @@ public class DeactivateCameraActionPrius : DDLObjectType, IDDLObjectType<Deactiv
 		DeactivateLocal = ddl.GetValue<bool>(0xa877811cu, DeactivateLocal);
 	}
 
-	[DDLRegistration(0x3ec7d45fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Camera;
 
-	[DDLRegistration(0x3ec7d45fu, "Transition Type")]
+	[DDLRegistration(0x125f2c3bu, "Transition Type")]
 	public x787c02d3 TransitionType { get; set; } = x787c02d3.Slerp;
 
-	[DDLRegistration(0x3ec7d45fu, "Blend time", "The time it will take to transition to the new view.  Specifying a time of 0 will act as a CutTo.")]
+	[DDLRegistration(0xf805a3f6u, "Blend time", "The time it will take to transition to the new view.  Specifying a time of 0 will act as a CutTo.")]
 	public float BlendTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3ec7d45fu, "Blend Ease In")]
+	[DDLRegistration(0xceb44e2cu, "Blend Ease In")]
 	public float BlendEaseIn { get; set; } = 0.20f;
 
-	[DDLRegistration(0x3ec7d45fu, "Blend Ease Out")]
+	[DDLRegistration(0xc8c5daa0u, "Blend Ease Out")]
 	public float BlendEaseOut { get; set; } = 0.20f;
 
-	[DDLRegistration(0x3ec7d45fu, "Prune Type")]
+	[DDLRegistration(0xaaf6900au, "Prune Type")]
 	public x1e271f24 PruneType { get; set; } = x1e271f24.Prune;
 
-	[DDLRegistration(0x3ec7d45fu, "Reset Next Camera", "Resets the default camera to the default position.")]
+	[DDLRegistration(0x2e18bc60u, "Reset Next Camera", "Resets the default camera to the default position.")]
 	public bool ResetNext { get; set; } = false;
 
-	[DDLRegistration(0x3ec7d45fu, "Deactivate Local")]
+	[DDLRegistration(0xa877811cu, "Deactivate Local")]
 	public bool DeactivateLocal { get; set; } = true;
 
 	public static DeactivateCameraActionPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class PeriodicActionPrius : DDLObjectType, IDDLObjectType<PeriodicActionP
 		Timer = ddl.GetValue<float>(0x738312dbu, Timer);
 	}
 
-	[DDLRegistration(0x12cff323u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Logic;
 
-	[DDLRegistration(0x12cff323u, description: "Start Active?")]
+	[DDLRegistration(0x3e035e82u, description: "Start Active?")]
 	public bool StartActive { get; set; } = false;
 
-	[DDLRegistration(0x12cff323u, description: "Autostop when timer is up")]
+	[DDLRegistration(0x5bc061c3u, description: "Autostop when timer is up")]
 	public bool StopOnTime { get; set; } = false;
 
-	[DDLRegistration(0x12cff323u, description: "Second between signals (unless a variable input is used)")]
+	[DDLRegistration(0x738312dbu, description: "Second between signals (unless a variable input is used)")]
 	public float Timer { get; set; } = 1.00f;
 
 	public static PeriodicActionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class WeaponUserStateDataGame : WeaponUserStateData, IDDLObjectType<Weapo
 		UserState = ddl.GetEnum<xff945214>(0xc70b5e21u, xff945214Values.Lookup);
 	}
 
-	[DDLRegistration(0x1c21dbb1u)]
+	[DDLRegistration(0xc70b5e21u)]
 	public xff945214 UserState { get; set; } = xff945214.None;
 
 	public new static WeaponUserStateDataGame Create(DDLObject ddl) => new(ddl);

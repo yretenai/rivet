@@ -21,16 +21,16 @@ public class HoverEffectManagerPrius : DDLObjectType, IDDLObjectType<HoverEffect
 		StartEnabled = ddl.GetValue<bool>(0x6f36ca8bu, StartEnabled);
 	}
 
-	[DDLRegistration(0xc0366e3au)]
+	[DDLRegistration(0xc5286fc4u)]
 	public RivetAssetId EffectActor { get; set; } = default;
 
-	[DDLRegistration(0xc0366e3au, description: "Height above ground at which the effect stops. -1 = no max height. (meters)")]
+	[DDLRegistration(0x36763b4fu, description: "Height above ground at which the effect stops. -1 = no max height. (meters)")]
 	public float HeightAboveGroundMax { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc0366e3au, description: "Speed at which to set kFast on the effect event. (m/s)")]
+	[DDLRegistration(0x874f9bedu, description: "Speed at which to set kFast on the effect event. (m/s)")]
 	public float FastSpeedThreshold { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc0366e3au, description: "True: Start enabled. False: Start disabled.")]
+	[DDLRegistration(0x6f36ca8bu, description: "True: Start enabled. False: Start disabled.")]
 	public bool StartEnabled { get; set; } = true;
 
 	public static HoverEffectManagerPrius Create(DDLObject ddl) => new(ddl);

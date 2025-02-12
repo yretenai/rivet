@@ -22,19 +22,19 @@ public class DamageModifierConditionHealthThreshholdPrius : DamageModifierCondit
 		TestDamagerHealth = ddl.GetValue<bool>(0xf8628ac0u, TestDamagerHealth);
 	}
 
-	[DDLRegistration(0x4e90fbf1u)]
+	[DDLRegistration(0x9b788aa2u)]
 	public float HealthAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4e90fbf1u)]
+	[DDLRegistration(0x5f86dac3u)]
 	public bool CompareTotalHealth { get; set; } = false;
 
-	[DDLRegistration(0x4e90fbf1u)]
+	[DDLRegistration(0x68a39ce9u)]
 	public bool IsMax { get; set; } = true;
 
-	[DDLRegistration(0x4e90fbf1u)]
+	[DDLRegistration(0x858c4cf5u)]
 	public bool IsPercent { get; set; } = false;
 
-	[DDLRegistration(0x4e90fbf1u)]
+	[DDLRegistration(0xf8628ac0u)]
 	public bool TestDamagerHealth { get; set; } = false;
 
 	public new static DamageModifierConditionHealthThreshholdPrius Create(DDLObject ddl) => new(ddl);

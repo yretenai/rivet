@@ -21,16 +21,16 @@ public class WeaponSettings : DDLObjectType, IDDLObjectType<WeaponSettings> {
 		DrawDebugImguiWindow = ddl.GetValue<bool>(0x623d726eu, DrawDebugImguiWindow);
 	}
 
-	[DDLRegistration(0x9f14920eu, "One Hit Kill", "Should all damage kill the target in one hit?")]
+	[DDLRegistration(0xc6e89893u, "One Hit Kill", "Should all damage kill the target in one hit?")]
 	public bool OneHitKill { get; set; } = false;
 
-	[DDLRegistration(0x9f14920eu, "Infinite Ammo", "Does the player have unlimited ammo for weapons?")]
+	[DDLRegistration(0x57ec54ddu, "Infinite Ammo", "Does the player have unlimited ammo for weapons?")]
 	public xb5e7b894 InfiniteAmmo { get; set; } = xb5e7b894.Off;
 
-	[DDLRegistration(0x9f14920eu, "Tap Max Hold Time", "For trigger type kSingleShotTap, the maximum depress time before release to count as a tap")]
+	[DDLRegistration(0x956d7fe6u, "Tap Max Hold Time", "For trigger type kSingleShotTap, the maximum depress time before release to count as a tap")]
 	public float TapMaxHoldTime { get; set; } = 0.30f;
 
-	[DDLRegistration(0x9f14920eu, "Draw Debug ImGui Window", "Should the Weapon Debug ImGui window be displayed?")]
+	[DDLRegistration(0x623d726eu, "Draw Debug ImGui Window", "Should the Weapon Debug ImGui window be displayed?")]
 	public bool DrawDebugImguiWindow { get; set; } = false;
 
 	public static WeaponSettings Create(DDLObject ddl) => new(ddl);

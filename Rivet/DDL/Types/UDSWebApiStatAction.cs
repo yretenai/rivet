@@ -19,10 +19,10 @@ public class UDSWebApiStatAction : DDLObjectType, IDDLObjectType<UDSWebApiStatAc
 		Output = ddl.GetObject<UDSWebApiStatOutput>(0xf50a5fcfu);
 	}
 
-	[DDLRegistration(0xef5328cdu)]
+	[DDLRegistration(0x00bad112u)]
 	public string? Input { get; set; } = default;
 
-	[DDLRegistration(0xef5328cdu)]
+	[DDLRegistration(0xf50a5fcfu)]
 	public UDSWebApiStatOutput? Output { get; set; } = default;
 
 	public static UDSWebApiStatAction Create(DDLObject ddl) => new(ddl);

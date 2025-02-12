@@ -19,10 +19,10 @@ public class InteractLocationVolumePrius : InteractLocationPrius, IDDLObjectType
 		ExitVolume = ddl.GetValue<RivetAssetId>(0x9c7ebe55u, ExitVolume);
 	}
 
-	[DDLRegistration(0x7e5654c0u, "Interact Volume")]
+	[DDLRegistration(0xa3a1547cu, "Interact Volume")]
 	public RivetAssetId InteractVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x7e5654c0u, "Exit Volume", "Optional exit volume, replaced by InteractVolume if not set.")]
+	[DDLRegistration(0x9c7ebe55u, "Exit Volume", "Optional exit volume, replaced by InteractVolume if not set.")]
 	public RivetAssetId ExitVolume { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static InteractLocationVolumePrius Create(DDLObject ddl) => new(ddl);

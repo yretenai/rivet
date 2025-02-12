@@ -19,10 +19,10 @@ public class EventFilterOptions : DDLObjectType, IDDLObjectType<EventFilterOptio
 		FilterEventsList = ddl.GetStrings(0x6a224c68u);
 	}
 
-	[DDLRegistration(0x6feaf664u)]
+	[DDLRegistration(0x111ff31du)]
 	public bool FilterAllEvents { get; set; } = false;
 
-	[DDLRegistration(0x6feaf664u)]
+	[DDLRegistration(0x6a224c68u)]
 	public List<string?> FilterEventsList { get; set; } = [];
 
 	public static EventFilterOptions Create(DDLObject ddl) => new(ddl);

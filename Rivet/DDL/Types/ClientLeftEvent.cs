@@ -18,7 +18,7 @@ public class ClientLeftEvent : EventBase, IDDLObjectType<ClientLeftEvent> {
 		ClientIndex = ddl.GetValue<uint>(0x40d7aaa7u, ClientIndex);
 	}
 
-	[DDLRegistration(0x01f10bfcu)]
+	[DDLRegistration(0x40d7aaa7u)]
 	public uint ClientIndex { get; set; } = 0x00000000;
 
 	public new static ClientLeftEvent Create(DDLObject ddl) => new(ddl);

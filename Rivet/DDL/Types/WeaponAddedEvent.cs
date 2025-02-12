@@ -18,7 +18,7 @@ public class WeaponAddedEvent : EventBase, IDDLObjectType<WeaponAddedEvent> {
 		WeaponType = ddl.GetValue<uint>(0x18fc4fe3u, WeaponType);
 	}
 
-	[DDLRegistration(0x5f27b2cau)]
+	[DDLRegistration(0x18fc4fe3u)]
 	public uint WeaponType { get; set; } = 0x00000000;
 
 	public new static WeaponAddedEvent Create(DDLObject ddl) => new(ddl);

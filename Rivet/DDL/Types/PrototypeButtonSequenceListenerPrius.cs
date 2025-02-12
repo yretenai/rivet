@@ -25,28 +25,28 @@ public class PrototypeButtonSequenceListenerPrius : DDLObjectType, IDDLObjectTyp
 		ButtonList = ddl.GetEnums<xe10f705b>(0x7db9f353u, xe10f705bValues.Lookup);
 	}
 
-	[DDLRegistration(0x74bde1aeu, "Start Enabled?", "Whether this component starts active/enabled.")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled?", "Whether this component starts active/enabled.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0x74bde1aeu, "Sequence Time Limit", "The amount of time the player has to input the sequence before we reset. <= 0 means no time limit.")]
+	[DDLRegistration(0xcc32215eu, "Sequence Time Limit", "The amount of time the player has to input the sequence before we reset. <= 0 means no time limit.")]
 	public float TimeLimit { get; set; } = -1.00f;
 
-	[DDLRegistration(0x74bde1aeu, "Button Time Limit", "The amount of time the player has to input the next correct button press before decrementing the count of correct presses. <= 0 means no time limit.")]
+	[DDLRegistration(0x2b7828cbu, "Button Time Limit", "The amount of time the player has to input the next correct button press before decrementing the count of correct presses. <= 0 means no time limit.")]
 	public float ButtonTimeLimit { get; set; } = -1.00f;
 
-	[DDLRegistration(0x74bde1aeu, "Trigger Count", "The number of times to trigger, 0 is infinite.")]
+	[DDLRegistration(0xebd996d0u, "Trigger Count", "The number of times to trigger, 0 is infinite.")]
 	public uint TriggerCount { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x74bde1aeu, "Use Range", "The range from this actor to listen for button presses from the local hero.")]
+	[DDLRegistration(0x6a4e2be2u, "Use Range", "The range from this actor to listen for button presses from the local hero.")]
 	public float UseRange { get; set; } = 3.00f;
 
-	[DDLRegistration(0x74bde1aeu, "Volume As Range", "Instead of the above radius range, use the volume for the range. Note: this actor should be a volume actor and not a model actor then.")]
+	[DDLRegistration(0xa8fbfba2u, "Volume As Range", "Instead of the above radius range, use the volume for the range. Note: this actor should be a volume actor and not a model actor then.")]
 	public bool VolumeRange { get; set; } = true;
 
-	[DDLRegistration(0x74bde1aeu, "Ignore Invalid Input", "Any invalid buttons will just be ignored instead of resetting the sequence.")]
+	[DDLRegistration(0x28f9ca0bu, "Ignore Invalid Input", "Any invalid buttons will just be ignored instead of resetting the sequence.")]
 	public bool IgnoreInvalid { get; set; } = false;
 
-	[DDLRegistration(0x74bde1aeu, "Sequence List", "The sequence, in order, of buttons in the desired sequence (max of 10 buttons will be used. See a programmer to increase this number if needed.")]
+	[DDLRegistration(0x7db9f353u, "Sequence List", "The sequence, in order, of buttons in the desired sequence (max of 10 buttons will be used. See a programmer to increase this number if needed.")]
 	public List<xe10f705b> ButtonList { get; set; } = [];
 
 	public static PrototypeButtonSequenceListenerPrius Create(DDLObject ddl) => new(ddl);

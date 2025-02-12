@@ -18,7 +18,7 @@ public class LightningRodWeaponFiredEvent : WeaponTriggeredEvent, IDDLObjectType
 		IsChargeShot = ddl.GetValue<bool>(0xf1b25dfau, IsChargeShot);
 	}
 
-	[DDLRegistration(0x4c898c20u)]
+	[DDLRegistration(0xf1b25dfau)]
 	public bool IsChargeShot { get; set; } = false;
 
 	public new static LightningRodWeaponFiredEvent Create(DDLObject ddl) => new(ddl);

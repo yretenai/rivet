@@ -20,13 +20,13 @@ public class BreakableChunkCleanupActionPrius : DDLObjectType, IDDLObjectType<Br
 		FadeOutChunks = ddl.GetValue<bool>(0x76b06c47u, FadeOutChunks);
 	}
 
-	[DDLRegistration(0x9ad894a1u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Breakable;
 
-	[DDLRegistration(0x9ad894a1u, description: "Clean up the marked chunk types.")]
+	[DDLRegistration(0x798ef893u, description: "Clean up the marked chunk types.")]
 	public ChunkTypeBitfield CleanupChunkTypes { get; set; } = (ChunkTypeBitfield) 0x00000001;
 
-	[DDLRegistration(0x9ad894a1u, description: "Should we fade out the chunks instead of simply deleting them immediately?")]
+	[DDLRegistration(0x76b06c47u, description: "Should we fade out the chunks instead of simply deleting them immediately?")]
 	public bool FadeOutChunks { get; set; } = false;
 
 	public static BreakableChunkCleanupActionPrius Create(DDLObject ddl) => new(ddl);

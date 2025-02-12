@@ -22,19 +22,19 @@ public class ShowMovieLocationTextActionPrius : DDLObjectType, IDDLObjectType<Sh
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x06110c92u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x06110c92u, description: "Will be replaced with localized text if it exists.")]
+	[DDLRegistration(0x06f8b0e5u, description: "Will be replaced with localized text if it exists.")]
 	public string? LocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x06110c92u, description: "Second loc tag - will be appended to the first tag with a line break.")]
+	[DDLRegistration(0x4770e6ffu, description: "Second loc tag - will be appended to the first tag with a line break.")]
 	public string? SecondLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x06110c92u, description: "If > 0, we will delay this amount (in seconds) before showing the text.")]
+	[DDLRegistration(0xabc94c5au, description: "If > 0, we will delay this amount (in seconds) before showing the text.")]
 	public float Delay { get; set; } = -1.00f;
 
-	[DDLRegistration(0x06110c92u, description: "Time in seconds a message stays up.")]
+	[DDLRegistration(0x7c5e3db0u, description: "Time in seconds a message stays up.")]
 	public float Duration { get; set; } = 4.00f;
 
 	public static ShowMovieLocationTextActionPrius Create(DDLObject ddl) => new(ddl);

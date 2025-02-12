@@ -20,13 +20,13 @@ public class RidableGroundSearchData : DDLObjectType, IDDLObjectType<RidableGrou
 		VerticalDownDistance = ddl.GetValue<float>(0x2ff1a695u, VerticalDownDistance);
 	}
 
-	[DDLRegistration(0x19b8ea0fu)]
+	[DDLRegistration(0x74d76483u)]
 	public float HorizontalDistance { get; set; } = 3.00f;
 
-	[DDLRegistration(0x19b8ea0fu)]
+	[DDLRegistration(0x043d919cu)]
 	public float VerticalUpDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0x19b8ea0fu)]
+	[DDLRegistration(0x2ff1a695u)]
 	public float VerticalDownDistance { get; set; } = 25.00f;
 
 	public static RidableGroundSearchData Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ChildInfo : DDLObjectType, IDDLObjectType<ChildInfo> {
 		ConnectionId = ddl.GetValue<ulong>(0x1398be22u, ConnectionId);
 	}
 
-	[DDLRegistration(0x4541db22u)]
+	[DDLRegistration(0x371a59e0u)]
 	public ulong NodeId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x4541db22u)]
+	[DDLRegistration(0x1398be22u)]
 	public ulong ConnectionId { get; set; } = 0x0000000000000000;
 
 	public static ChildInfo Create(DDLObject ddl) => new(ddl);

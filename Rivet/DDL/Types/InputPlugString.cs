@@ -18,7 +18,7 @@ public class InputPlugString : InputPlugBaseDef, IDDLObjectType<InputPlugString>
 		Value = ddl.GetObject<StringPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x6ee6ff05u)]
+	[DDLRegistration(0x042494f5u)]
 	public StringPlug? Value { get; set; } = default;
 
 	public new static InputPlugString Create(DDLObject ddl) => new(ddl);

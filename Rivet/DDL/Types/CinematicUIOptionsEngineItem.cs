@@ -37,64 +37,64 @@ public class CinematicUIOptionsEngineItem : DDLObjectType, IDDLObjectType<Cinema
 		DebugCameraOptions = ddl.GetObject<CameraOptions>(0x919bb384u);
 	}
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x3b521405u)]
 	public bool DOFVisualization { get; set; } = false;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0xdd23ef46u)]
 	public bool LookAtVisualization { get; set; } = false;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0xe2271685u)]
 	public bool CameraConeVisualization { get; set; } = false;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x25a7afb0u)]
 	public bool IgnoreJumpToShot { get; set; } = false;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x98709ed5u)]
 	public RivetAssetId AnimControllerActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x8c857658u)]
 	public RivetAssetId AnimDynamicsActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x0a2f618eu)]
 	public bool AutoKeyframe { get; set; } = false;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x2266257au)]
 	public bool ShowAnimDebugHud { get; set; } = false;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0xe75f043au)]
 	public bool UseFastSeekVFX { get; set; } = false;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0xb39f18beu)]
 	public bool ShowSkeletonHud { get; set; } = false;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x33ce180eu)]
 	public bool ShowClothHud { get; set; } = false;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x75e70013u)]
 	public bool ShowDebugVertHud { get; set; } = false;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0xffbf7f1du)]
 	public bool ShowAudioListener { get; set; } = false;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0xb580e821u)]
 	public bool ShowEmptyTracks { get; set; } = true;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0xe1dd0f45u)]
 	public bool Sound { get; set; } = true;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x25c4568au)]
 	public bool Subtitles { get; set; } = true;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x71f2be5eu)]
 	public xe8324e15 TimecodeMode { get; set; } = xe8324e15.Enabled;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x92542397u)]
 	public xd7e26c97 PlatformFilter { get; set; } = xd7e26c97.None;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x03ac9549u)]
 	public CameraOptions? DebugCinematicCameraOptions { get; set; } = default;
 
-	[DDLRegistration(0x460d47bdu)]
+	[DDLRegistration(0x919bb384u)]
 	public CameraOptions? DebugCameraOptions { get; set; } = default;
 
 	public static CinematicUIOptionsEngineItem Create(DDLObject ddl) => new(ddl);

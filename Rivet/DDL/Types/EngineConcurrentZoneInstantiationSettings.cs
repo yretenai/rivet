@@ -21,16 +21,16 @@ public class EngineConcurrentZoneInstantiationSettings : DDLObjectType, IDDLObje
 		OutboxPerThreadKB = ddl.GetValue<short>(0xd2f5c567u, OutboxPerThreadKB);
 	}
 
-	[DDLRegistration(0xa8062fc9u, description: "Try to initialize actors on multiple threads.")]
+	[DDLRegistration(0x3de1a59eu, description: "Try to initialize actors on multiple threads.")]
 	public bool UseConcurrentInitialization { get; set; } = false;
 
-	[DDLRegistration(0xa8062fc9u)]
+	[DDLRegistration(0xcc023d33u)]
 	public short TasksPerQueue { get; set; } = 6144;
 
-	[DDLRegistration(0xa8062fc9u)]
+	[DDLRegistration(0xbb119b50u)]
 	public short StagingHeapPerThreadKB { get; set; } = 8;
 
-	[DDLRegistration(0xa8062fc9u)]
+	[DDLRegistration(0xd2f5c567u)]
 	public short OutboxPerThreadKB { get; set; } = 1024;
 
 	public static EngineConcurrentZoneInstantiationSettings Create(DDLObject ddl) => new(ddl);

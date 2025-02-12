@@ -18,7 +18,7 @@ public class ShotLockTargetingEvent : EventBase, IDDLObjectType<ShotLockTargetin
 		Target = ddl.GetObject<DDLVector3>(0x7817619bu);
 	}
 
-	[DDLRegistration(0xb1afebdcu, description: "target to lock too")]
+	[DDLRegistration(0x7817619bu, description: "target to lock too")]
 	public DDLVector3? Target { get; set; } = default;
 
 	public new static ShotLockTargetingEvent Create(DDLObject ddl) => new(ddl);

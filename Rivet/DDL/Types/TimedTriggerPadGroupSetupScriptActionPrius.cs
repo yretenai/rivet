@@ -20,13 +20,13 @@ public class TimedTriggerPadGroupSetupScriptActionPrius : DDLObjectType, IDDLObj
 		AutoDisableWhenComplete = ddl.GetValue<bool>(0x814bf304u, AutoDisableWhenComplete);
 	}
 
-	[DDLRegistration(0x43db31e1u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0x43db31e1u, "Reset Time", "The amount of time from 1 pad being used until all pads reset. Will be overridded is the script node input is used.")]
+	[DDLRegistration(0x6129ba8fu, "Reset Time", "The amount of time from 1 pad being used until all pads reset. Will be overridded is the script node input is used.")]
 	public float SetupTime { get; set; } = 10.00f;
 
-	[DDLRegistration(0x43db31e1u, "Auto disable on Complete?", "Disable the group when it is successfully completed.")]
+	[DDLRegistration(0x814bf304u, "Auto disable on Complete?", "Disable the group when it is successfully completed.")]
 	public bool AutoDisableWhenComplete { get; set; } = true;
 
 	public static TimedTriggerPadGroupSetupScriptActionPrius Create(DDLObject ddl) => new(ddl);

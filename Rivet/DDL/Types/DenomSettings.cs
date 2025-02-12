@@ -20,13 +20,13 @@ public class DenomSettings : DDLObjectType, IDDLObjectType<DenomSettings> {
 		Scale = ddl.GetValue<float>(0xf515e945u, Scale);
 	}
 
-	[DDLRegistration(0xb8c5960du, description: "Use a specific model for this tier (random selection if more than 1) - note, this will override the base model/random models.")]
+	[DDLRegistration(0x50d70eaau, description: "Use a specific model for this tier (random selection if more than 1) - note, this will override the base model/random models.")]
 	public List<RivetAssetId> ModelOverride { get; set; } = [];
 
-	[DDLRegistration(0xb8c5960du, description: "Material override - if one is set, we will apply this material to the actor.")]
+	[DDLRegistration(0xffafa5a1u, description: "Material override - if one is set, we will apply this material to the actor.")]
 	public RivetAssetId MaterialOverride { get; set; } = default;
 
-	[DDLRegistration(0xb8c5960du, description: "The scale of the actor.")]
+	[DDLRegistration(0xf515e945u, description: "The scale of the actor.")]
 	public float Scale { get; set; } = 1.00f;
 
 	public static DenomSettings Create(DDLObject ddl) => new(ddl);

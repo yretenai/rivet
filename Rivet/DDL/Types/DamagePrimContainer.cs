@@ -18,7 +18,7 @@ public class DamagePrimContainer : DDLObjectType, IDDLObjectType<DamagePrimConta
 		Prim = ddl.GetObject<DamagePrimBase>(0xaaa2ce05u);
 	}
 
-	[DDLRegistration(0x8d1ae991u)]
+	[DDLRegistration(0xaaa2ce05u)]
 	public DamagePrimBase? Prim { get; set; } = default;
 
 	public static DamagePrimContainer Create(DDLObject ddl) => new(ddl);

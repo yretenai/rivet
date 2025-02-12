@@ -19,10 +19,10 @@ public class GrindHazardVolumePrius : DDLObjectType, IDDLObjectType<GrindHazardV
 		KillPlayerOnCollision = ddl.GetValue<bool>(0x47a1cbf4u, KillPlayerOnCollision);
 	}
 
-	[DDLRegistration(0x781d573fu)]
+	[DDLRegistration(0x7a0536acu)]
 	public bool KillPlayerOnEnter { get; set; } = false;
 
-	[DDLRegistration(0x781d573fu)]
+	[DDLRegistration(0x47a1cbf4u)]
 	public bool KillPlayerOnCollision { get; set; } = false;
 
 	public static GrindHazardVolumePrius Create(DDLObject ddl) => new(ddl);

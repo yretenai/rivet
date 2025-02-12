@@ -21,16 +21,16 @@ public class VisualEffectFloatKeyFrames : DDLObjectType, IDDLObjectType<VisualEf
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0xd872be5cu, "Loop")]
+	[DDLRegistration(0xe15c9369u, "Loop")]
 	public bool EnableLooping { get; set; } = true;
 
-	[DDLRegistration(0xd872be5cu, "Use Emitter Age")]
+	[DDLRegistration(0x81d6b7fcu, "Use Emitter Age")]
 	public bool UseEmitterAge { get; set; } = false;
 
-	[DDLRegistration(0xd872be5cu, "LifeTime Override")]
+	[DDLRegistration(0x580128bbu, "LifeTime Override")]
 	public float LifeTimeOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0xd872be5cu)]
+	[DDLRegistration(0x042494f5u)]
 	public float Value { get; set; } = 1.00f;
 
 	public static VisualEffectFloatKeyFrames Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class VolumeFitToSpaceEvent : EventBase, IDDLObjectType<VolumeFitToSpaceE
 		MaxVolumeSize = ddl.GetObject<DDLVector3>(0x130ecf15u);
 	}
 
-	[DDLRegistration(0xfda7cebcu)]
+	[DDLRegistration(0x130ecf15u)]
 	public DDLVector3? MaxVolumeSize { get; set; } = default;
 
 	public new static VolumeFitToSpaceEvent Create(DDLObject ddl) => new(ddl);

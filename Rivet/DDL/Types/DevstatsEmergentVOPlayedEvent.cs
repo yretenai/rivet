@@ -25,28 +25,28 @@ public class DevstatsEmergentVOPlayedEvent : EventBase, IDDLObjectType<DevstatsE
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x65da5e26u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x65da5e26u)]
+	[DDLRegistration(0x1b816c65u)]
 	public string? Trigger { get; set; } = default;
 
-	[DDLRegistration(0x65da5e26u)]
+	[DDLRegistration(0xe1847446u)]
 	public string? Line { get; set; } = default;
 
-	[DDLRegistration(0x65da5e26u)]
+	[DDLRegistration(0xe8f07fcau)]
 	public string? Bank { get; set; } = default;
 
-	[DDLRegistration(0x65da5e26u)]
+	[DDLRegistration(0x11872f38u)]
 	public string? Character { get; set; } = default;
 
-	[DDLRegistration(0x65da5e26u)]
+	[DDLRegistration(0x5d269a38u)]
 	public uint Actor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x65da5e26u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x65da5e26u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static DevstatsEmergentVOPlayedEvent Create(DDLObject ddl) => new(ddl);

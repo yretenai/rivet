@@ -19,10 +19,10 @@ public class AttachedSpotlightPrius : DDLObjectType, IDDLObjectType<AttachedSpot
 		SpotlightAttachLocator = ddl.GetString(0x91f620b2) ?? SpotlightAttachLocator;
 	}
 
-	[DDLRegistration(0xdb7e51d5u)]
+	[DDLRegistration(0x316d0967u)]
 	public RivetAssetId SpotlightActor { get; set; } = default;
 
-	[DDLRegistration(0xdb7e51d5u)]
+	[DDLRegistration(0x91f620b2u)]
 	public string? SpotlightAttachLocator { get; set; } = "igLoc_Gun";
 
 	public static AttachedSpotlightPrius Create(DDLObject ddl) => new(ddl);

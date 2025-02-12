@@ -18,7 +18,7 @@ public class BotComboMovePlayAnim : BotComboMove, IDDLObjectType<BotComboMovePla
 		PlayAnimData = ddl.GetObject<BotPlayAnimData>(0xf898fac0u);
 	}
 
-	[DDLRegistration(0x2ce5d9f3u, "Play Anim Data")]
+	[DDLRegistration(0xf898fac0u, "Play Anim Data")]
 	public BotPlayAnimData? PlayAnimData { get; set; } = default;
 
 	public new static BotComboMovePlayAnim Create(DDLObject ddl) => new(ddl);

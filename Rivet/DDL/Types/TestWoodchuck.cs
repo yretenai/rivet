@@ -20,13 +20,13 @@ public class TestWoodchuck : DDLObjectType, IDDLObjectType<TestWoodchuck> {
 		AmountOfWoodToChuck = ddl.GetValue<int>(0x5b5e1db2u, AmountOfWoodToChuck);
 	}
 
-	[DDLRegistration(0x753aaf9bu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x753aaf9bu)]
+	[DDLRegistration(0x3ecb14ebu)]
 	public bool CanChuckWood { get; set; } = false;
 
-	[DDLRegistration(0x753aaf9bu)]
+	[DDLRegistration(0x5b5e1db2u)]
 	public int AmountOfWoodToChuck { get; set; } = 0;
 
 	public static TestWoodchuck Create(DDLObject ddl) => new(ddl);

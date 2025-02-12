@@ -24,25 +24,25 @@ public class Cinematic2MaterialOverrideTextureActionDef : DDLObjectType, IDDLObj
 		TextureAsset = ddl.GetValue<RivetAssetId>(0x34776bf1u, TextureAsset);
 	}
 
-	[DDLRegistration(0x039c4b8cu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x039c4b8cu)]
+	[DDLRegistration(0x5f0458f5u)]
 	public float Time { get; set; } = 0.00f;
 
-	[DDLRegistration(0x039c4b8cu)]
+	[DDLRegistration(0x41e2529fu)]
 	public x29c933e2 DurationType { get; set; } = x29c933e2.None;
 
-	[DDLRegistration(0x039c4b8cu)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x039c4b8cu, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model.")]
+	[DDLRegistration(0x981e6927u, "MaterialMappingName", "This specifies the name of the Maya material mapped to this part of the model.")]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0x039c4b8cu, description: "This specifies the name of texture sampler.")]
+	[DDLRegistration(0x30712231u, description: "This specifies the name of texture sampler.")]
 	public string? TextureSamplerName { get; set; } = default;
 
-	[DDLRegistration(0x039c4b8cu)]
+	[DDLRegistration(0x34776bf1u)]
 	public RivetAssetId TextureAsset { get; set; } = default;
 
 	public static Cinematic2MaterialOverrideTextureActionDef Create(DDLObject ddl) => new(ddl);

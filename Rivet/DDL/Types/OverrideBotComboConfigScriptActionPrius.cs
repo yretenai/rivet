@@ -19,10 +19,10 @@ public class OverrideBotComboConfigScriptActionPrius : DDLObjectType, IDDLObject
 		OverrideComboConfig = ddl.GetValue<RivetAssetId>(0xc0abd9b8u, OverrideComboConfig);
 	}
 
-	[DDLRegistration(0xef95b316u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0xef95b316u, description: "Base Type: BotConfigCombo")]
+	[DDLRegistration(0xc0abd9b8u, description: "Base Type: BotConfigCombo")]
 	public RivetAssetId OverrideComboConfig { get; set; } = default;
 
 	public static OverrideBotComboConfigScriptActionPrius Create(DDLObject ddl) => new(ddl);

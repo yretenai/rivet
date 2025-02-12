@@ -20,13 +20,13 @@ public class MapElementData : DDLObjectType, IDDLObjectType<MapElementData> {
 		Position = ddl.GetObject<DDLVector3>(0xbc2d5985u);
 	}
 
-	[DDLRegistration(0xb5921dcau)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xb5921dcau)]
+	[DDLRegistration(0x6c21ca8au)]
 	public ulong ActorId { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xb5921dcau)]
+	[DDLRegistration(0xbc2d5985u)]
 	public DDLVector3? Position { get; set; } = default;
 
 	public static MapElementData Create(DDLObject ddl) => new(ddl);

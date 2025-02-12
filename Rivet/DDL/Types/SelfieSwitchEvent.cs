@@ -18,7 +18,7 @@ public class SelfieSwitchEvent : EventBase, IDDLObjectType<SelfieSwitchEvent> {
 		State = ddl.GetEnum<xa857c0d1>(0xbac01e3au, xa857c0d1Values.Lookup);
 	}
 
-	[DDLRegistration(0xf11a768bu)]
+	[DDLRegistration(0xbac01e3au)]
 	public xa857c0d1 State { get; set; } = xa857c0d1.ActivateState;
 
 	public new static SelfieSwitchEvent Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class Nav3DSettings : DDLObjectType, IDDLObjectType<Nav3DSettings> {
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0x18d3bce4u)]
+	[DDLRegistration(0xe15b974cu)]
 	public uint SVOGridMaxElements { get; set; } = 0x0000000d;
 
-	[DDLRegistration(0x18d3bce4u)]
+	[DDLRegistration(0xf02107ddu)]
 	public uint MaxQueries { get; set; } = 0x00000020;
 
-	[DDLRegistration(0x18d3bce4u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
 	public static Nav3DSettings Create(DDLObject ddl) => new(ddl);

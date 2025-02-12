@@ -19,10 +19,10 @@ public class ShotMotionIcicleBlastPrius : BasicShotMotionPrius, IDDLObjectType<S
 		DebugDrawEnabled = ddl.GetValue<bool>(0xdc50e4a9u, DebugDrawEnabled);
 	}
 
-	[DDLRegistration(0x71f0eb90u, "Cone Half Angle")]
+	[DDLRegistration(0x004cc508u, "Cone Half Angle")]
 	public float ConeHalfAngle { get; set; } = 10.00f;
 
-	[DDLRegistration(0x71f0eb90u, "Debug Draw Enabled")]
+	[DDLRegistration(0xdc50e4a9u, "Debug Draw Enabled")]
 	public bool DebugDrawEnabled { get; set; } = false;
 
 	public new static ShotMotionIcicleBlastPrius Create(DDLObject ddl) => new(ddl);

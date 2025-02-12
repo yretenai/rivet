@@ -22,19 +22,19 @@ public class HeroEconomySnapshotDevstatsEvent : EventBase, IDDLObjectType<HeroEc
 		CurrentLevel = ddl.GetValue<uint>(0x0a33c2eau, CurrentLevel);
 	}
 
-	[DDLRegistration(0xb0a71e40u)]
+	[DDLRegistration(0x6dca4420u)]
 	public string? ParentEventId { get; set; } = default;
 
-	[DDLRegistration(0xb0a71e40u)]
+	[DDLRegistration(0x4a96b708u)]
 	public uint CareerBolts { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb0a71e40u)]
+	[DDLRegistration(0x876a54ceu)]
 	public float CareerRaritanium { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb0a71e40u)]
+	[DDLRegistration(0xb93aeb40u)]
 	public uint CareerXP { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb0a71e40u)]
+	[DDLRegistration(0x0a33c2eau)]
 	public uint CurrentLevel { get; set; } = 0x00000000;
 
 	public new static HeroEconomySnapshotDevstatsEvent Create(DDLObject ddl) => new(ddl);

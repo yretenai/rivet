@@ -21,16 +21,16 @@ public class HazardTurretConfig : ConfigBase, IDDLObjectType<HazardTurretConfig>
 		CooldownDuration = ddl.GetValue<float>(0x97cb9b45u, CooldownDuration);
 	}
 
-	[DDLRegistration(0xa8fc3a55u, "Max HP", "Negative is invincible")]
+	[DDLRegistration(0x3460b557u, "Max HP", "Negative is invincible")]
 	public float MaxHP { get; set; } = 100.00f;
 
-	[DDLRegistration(0xa8fc3a55u, "Targeting")]
+	[DDLRegistration(0x61ddca35u, "Targeting")]
 	public HazardTurretTargeting? Targeting { get; set; } = default;
 
-	[DDLRegistration(0xa8fc3a55u)]
+	[DDLRegistration(0xb4290d8au)]
 	public int BurstShots { get; set; } = 10;
 
-	[DDLRegistration(0xa8fc3a55u)]
+	[DDLRegistration(0x97cb9b45u)]
 	public float CooldownDuration { get; set; } = 3.00f;
 
 	public new static HazardTurretConfig Create(DDLObject ddl) => new(ddl);

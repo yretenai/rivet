@@ -25,28 +25,28 @@ public class ScriptedDevstatsEvent : EventBase, IDDLObjectType<ScriptedDevstatsE
 		PrimarySegmentInfo = ddl.GetObject<DevstatsPrimarySegmentInfo>(0x9e8725dbu);
 	}
 
-	[DDLRegistration(0x4d3cb130u, "Event ID", "Unique ID for this event instance.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique ID for this event instance.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x4d3cb130u, "Scripted Event Type", "Custom event type name specified by the designer.")]
+	[DDLRegistration(0x5bb989e1u, "Scripted Event Type", "Custom event type name specified by the designer.")]
 	public string? ScriptedEventType { get; set; } = default;
 
-	[DDLRegistration(0x4d3cb130u, "String 1", "Custom string value #1. Meaning depends on Scripted Event Type.")]
+	[DDLRegistration(0x2da22971u, "String 1", "Custom string value #1. Meaning depends on Scripted Event Type.")]
 	public string? String1 { get; set; } = default;
 
-	[DDLRegistration(0x4d3cb130u, "String 2", "Custom string value #2. Meaning depends on Scripted Event Type.")]
+	[DDLRegistration(0xb4ab78cbu, "String 2", "Custom string value #2. Meaning depends on Scripted Event Type.")]
 	public string? String2 { get; set; } = default;
 
-	[DDLRegistration(0x4d3cb130u, "Number 1", "Custom float value #1. Meaning depends on Scripted Event Type.")]
+	[DDLRegistration(0x199a20f7u, "Number 1", "Custom float value #1. Meaning depends on Scripted Event Type.")]
 	public float Num1 { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4d3cb130u, "Number 2", "Custom float value #2. Meaning depends on Scripted Event Type.")]
+	[DDLRegistration(0x8093714du, "Number 2", "Custom float value #2. Meaning depends on Scripted Event Type.")]
 	public float Num2 { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4d3cb130u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
-	[DDLRegistration(0x4d3cb130u)]
+	[DDLRegistration(0x9e8725dbu)]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
 	public new static ScriptedDevstatsEvent Create(DDLObject ddl) => new(ddl);

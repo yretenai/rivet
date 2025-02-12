@@ -21,16 +21,16 @@ public class SwitchLevelActionPrius : DDLObjectType, IDDLObjectType<SwitchLevelA
 		SkipShipLand = ddl.GetValue<bool>(0xd984bdf8u, SkipShipLand);
 	}
 
-	[DDLRegistration(0x3f8f20bcu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Macro;
 
-	[DDLRegistration(0x3f8f20bcu, "Level", "The level to load.")]
+	[DDLRegistration(0x13f2b832u, "Level", "The level to load.")]
 	public LevelEnum LoadLevelEnum { get; set; } = LevelEnum.None;
 
-	[DDLRegistration(0x3f8f20bcu, "(Opt) Checkpoint", "The optional checkpoint to load. If none (or invalid) is set, will load the default checkpoint.")]
+	[DDLRegistration(0xfc65c0c9u, "(Opt) Checkpoint", "The optional checkpoint to load. If none (or invalid) is set, will load the default checkpoint.")]
 	public string? LoadCheckpoint { get; set; } = "";
 
-	[DDLRegistration(0x3f8f20bcu, "Skip ship landing scene?", "Whether to skip the ship landing scene when loading into the specified level.")]
+	[DDLRegistration(0xd984bdf8u, "Skip ship landing scene?", "Whether to skip the ship landing scene when loading into the specified level.")]
 	public bool SkipShipLand { get; set; } = false;
 
 	public static SwitchLevelActionPrius Create(DDLObject ddl) => new(ddl);

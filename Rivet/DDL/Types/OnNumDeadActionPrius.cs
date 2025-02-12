@@ -19,10 +19,10 @@ public class OnNumDeadActionPrius : DDLObjectType, IDDLObjectType<OnNumDeadActio
 		Comparison = ddl.GetEnum<Comparison>(0x3e7c98efu, ComparisonValues.Lookup);
 	}
 
-	[DDLRegistration(0x12c61d75u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x12c61d75u, description: "Greater means (num dead in actorgroup) > (NumDead thresh)")]
+	[DDLRegistration(0x3e7c98efu, description: "Greater means (num dead in actorgroup) > (NumDead thresh)")]
 	public Comparison Comparison { get; set; } = Comparison.GreaterOrEqual;
 
 	public static OnNumDeadActionPrius Create(DDLObject ddl) => new(ddl);

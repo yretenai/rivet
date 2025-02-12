@@ -23,22 +23,22 @@ public class DeformableSettings : DDLObjectType, IDDLObjectType<DeformableSettin
 		MinLoD = ddl.GetValue<uint>(0x9e5fe009u, MinLoD);
 	}
 
-	[DDLRegistration(0x8db65910u)]
+	[DDLRegistration(0x1f60a446u)]
 	public float DrawDistance { get; set; } = 28.00f;
 
-	[DDLRegistration(0x8db65910u)]
+	[DDLRegistration(0xa5044ceau)]
 	public float FadeInterval { get; set; } = 2.00f;
 
-	[DDLRegistration(0x8db65910u)]
+	[DDLRegistration(0x1cd44eafu)]
 	public float MinUserBias { get; set; } = 0.17f;
 
-	[DDLRegistration(0x8db65910u)]
+	[DDLRegistration(0x26e551b3u)]
 	public uint Resolution { get; set; } = 0x00000a00;
 
-	[DDLRegistration(0x8db65910u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public float Height { get; set; } = 0.03f;
 
-	[DDLRegistration(0x8db65910u)]
+	[DDLRegistration(0x9e5fe009u)]
 	public uint MinLoD { get; set; } = 0x00000002;
 
 	public static DeformableSettings Create(DDLObject ddl) => new(ddl);

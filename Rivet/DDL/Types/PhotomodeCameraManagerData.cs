@@ -18,7 +18,7 @@ public class PhotomodeCameraManagerData : DDLObjectType, IDDLObjectType<Photomod
 		Cameras = ddl.GetObjects<PhotomodeCameraDef>(0x6ab54452u);
 	}
 
-	[DDLRegistration(0x3917e604u)]
+	[DDLRegistration(0x6ab54452u)]
 	public List<PhotomodeCameraDef?> Cameras { get; set; } = [];
 
 	public static PhotomodeCameraManagerData Create(DDLObject ddl) => new(ddl);

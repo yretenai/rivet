@@ -20,13 +20,13 @@ public class StructuredLogStatementActorLooks : StructuredLogStatement, IDDLObje
 		Looks = ddl.GetObject<RobotestLookState>(0xec785832u);
 	}
 
-	[DDLRegistration(0x6a707f63u)]
+	[DDLRegistration(0x5d269a38u)]
 	public RobotestBasicActorInfo? Actor { get; set; } = default;
 
-	[DDLRegistration(0x6a707f63u)]
+	[DDLRegistration(0xd9db84dbu)]
 	public RobotestActorPhysicsInfo? Physics { get; set; } = default;
 
-	[DDLRegistration(0x6a707f63u)]
+	[DDLRegistration(0xec785832u)]
 	public RobotestLookState? Looks { get; set; } = default;
 
 	public new static StructuredLogStatementActorLooks Create(DDLObject ddl) => new(ddl);

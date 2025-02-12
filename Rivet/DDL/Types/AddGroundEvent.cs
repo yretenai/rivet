@@ -18,7 +18,7 @@ public class AddGroundEvent : GroundEvent, IDDLObjectType<AddGroundEvent> {
 		GroundOrientation = ddl.GetObject<DDLTransform>(0xf7d948e6u);
 	}
 
-	[DDLRegistration(0x692b2181u, "Ground", "Ground collision transform matrix (output)")]
+	[DDLRegistration(0xf7d948e6u, "Ground", "Ground collision transform matrix (output)")]
 	public DDLTransform? GroundOrientation { get; set; } = default;
 
 	public new static AddGroundEvent Create(DDLObject ddl) => new(ddl);

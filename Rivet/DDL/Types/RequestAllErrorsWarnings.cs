@@ -18,7 +18,7 @@ public class RequestAllErrorsWarnings : DDLObjectType, IDDLObjectType<RequestAll
 		AssetPath = ddl.GetString(0x0efa614b) ?? AssetPath;
 	}
 
-	[DDLRegistration(0x6cb8c0ccu)]
+	[DDLRegistration(0x0efa614bu)]
 	public string? AssetPath { get; set; } = default;
 
 	public static RequestAllErrorsWarnings Create(DDLObject ddl) => new(ddl);

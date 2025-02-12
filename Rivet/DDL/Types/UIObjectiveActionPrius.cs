@@ -19,10 +19,10 @@ public class UIObjectiveActionPrius : DDLObjectType, IDDLObjectType<UIObjectiveA
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
 	}
 
-	[DDLRegistration(0x786f277fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x786f277fu, description: "Display duration in seconds.")]
+	[DDLRegistration(0x7c5e3db0u, description: "Display duration in seconds.")]
 	public float Duration { get; set; } = 5.00f;
 
 	public static UIObjectiveActionPrius Create(DDLObject ddl) => new(ddl);

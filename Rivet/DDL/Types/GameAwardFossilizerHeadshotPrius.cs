@@ -18,7 +18,7 @@ public class GameAwardFossilizerHeadshotPrius : AwardBasePrius, IDDLObjectType<G
 		WeaponConfigAsset = ddl.GetObject<ConfigAssetReferenceDef>(0x9d4ccc69u);
 	}
 
-	[DDLRegistration(0x5f842181u, "Weapon Config", "If populated, the config is checked for a match before incrementing current value")]
+	[DDLRegistration(0x9d4ccc69u, "Weapon Config", "If populated, the config is checked for a match before incrementing current value")]
 	public ConfigAssetReferenceDef? WeaponConfigAsset { get; set; } = default;
 
 	public new static GameAwardFossilizerHeadshotPrius Create(DDLObject ddl) => new(ddl);

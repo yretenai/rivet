@@ -21,16 +21,16 @@ public class ChargeAttackParams : DDLObjectType, IDDLObjectType<ChargeAttackPara
 		MaxKnockbackForce = ddl.GetValue<float>(0xd93e37b8u, MaxKnockbackForce);
 	}
 
-	[DDLRegistration(0x23222987u)]
+	[DDLRegistration(0x91ca2410u)]
 	public float MinChargeTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x23222987u)]
+	[DDLRegistration(0xd1855c66u)]
 	public float MaxChargeTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x23222987u)]
+	[DDLRegistration(0xadb823c1u)]
 	public float MaxDamage { get; set; } = -1.00f;
 
-	[DDLRegistration(0x23222987u)]
+	[DDLRegistration(0xd93e37b8u)]
 	public float MaxKnockbackForce { get; set; } = -1.00f;
 
 	public static ChargeAttackParams Create(DDLObject ddl) => new(ddl);

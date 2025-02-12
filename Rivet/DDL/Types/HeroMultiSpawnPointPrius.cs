@@ -18,7 +18,7 @@ public class HeroMultiSpawnPointPrius : HeroSingleSpawnPointPrius, IDDLObjectTyp
 		AdditionalLocationsGroup = ddl.GetValue<RivetAssetId>(0xfb4ab458u, AdditionalLocationsGroup);
 	}
 
-	[DDLRegistration(0x8d413709u, description: "Group of additional spawn locations")]
+	[DDLRegistration(0xfb4ab458u, description: "Group of additional spawn locations")]
 	public RivetAssetId AdditionalLocationsGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static HeroMultiSpawnPointPrius Create(DDLObject ddl) => new(ddl);

@@ -42,79 +42,79 @@ public class VisualEffectSpawnStyleNode : DDLObjectType, IDDLObjectType<VisualEf
 		UDSpace = ddl.GetEnum<x45f5c485>(0x988e1293u, x45f5c485Values.Lookup);
 	}
 
-	[DDLRegistration(0x4ec46cc3u)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x4ec46cc3u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x4ec46cc3u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x4ec46cc3u, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x4ec46cc3u)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<VisualEffectNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0x4ec46cc3u)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<VisualEffectNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
-	[DDLRegistration(0x4ec46cc3u)]
+	[DDLRegistration(0x5563d999u)]
 	public x3df0267a DirectionStyle { get; set; } = x3df0267a.Out;
 
-	[DDLRegistration(0x4ec46cc3u)]
+	[DDLRegistration(0x83b82bbeu)]
 	public xcdf4306c PositionStyle { get; set; } = xcdf4306c.Fill;
 
-	[DDLRegistration(0x4ec46cc3u)]
+	[DDLRegistration(0x5e37a5fcu)]
 	public x81b59607 ShapeStyle { get; set; } = x81b59607.Cone;
 
-	[DDLRegistration(0x4ec46cc3u, description: "If set to a valid model, this will override the shape style")]
+	[DDLRegistration(0xba1f6f4fu, description: "If set to a valid model, this will override the shape style")]
 	public RivetAssetId ShapeModel { get; set; } = default;
 
-	[DDLRegistration(0x4ec46cc3u)]
+	[DDLRegistration(0x3f05d0d5u)]
 	public float Length { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4ec46cc3u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4ec46cc3u, "Width", "Box Width")]
+	[DDLRegistration(0x1c9beb49u, "Width", "Box Width")]
 	public float BoxWidth { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4ec46cc3u, "Height", "Box Height")]
+	[DDLRegistration(0x830e4f41u, "Height", "Box Height")]
 	public float BoxHeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4ec46cc3u, "Depth", "Box Depth")]
+	[DDLRegistration(0x6a22b20fu, "Depth", "Box Depth")]
 	public float BoxDepth { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4ec46cc3u, "Origin Offset", "Offset the spawn style origin and take Width/Height/Length/Radius as well as key-framed scales into consideration")]
+	[DDLRegistration(0xaa6ac71eu, "Origin Offset", "Offset the spawn style origin and take Width/Height/Length/Radius as well as key-framed scales into consideration")]
 	public DDLVector3? OriginOffset { get; set; } = default;
 
-	[DDLRegistration(0x4ec46cc3u, "Max Pitch")]
+	[DDLRegistration(0x191f829eu, "Max Pitch")]
 	public float MaxAngle { get; set; } = 180.00f;
 
-	[DDLRegistration(0x4ec46cc3u, "Min Pitch")]
+	[DDLRegistration(0xff7f2d7fu, "Min Pitch")]
 	public float MinAngle { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4ec46cc3u, "Max Sweep")]
+	[DDLRegistration(0x91b5d5a5u, "Max Sweep")]
 	public float MaxSweep { get; set; } = 180.00f;
 
-	[DDLRegistration(0x4ec46cc3u, "Min Sweep")]
+	[DDLRegistration(0x77d57a44u, "Min Sweep")]
 	public float MinSweep { get; set; } = -180.00f;
 
-	[DDLRegistration(0x4ec46cc3u, "Spherical Pitch")]
+	[DDLRegistration(0x8e576947u, "Spherical Pitch")]
 	public float SphericalPitch { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4ec46cc3u, "Direction Spread")]
+	[DDLRegistration(0x8a653232u, "Direction Spread")]
 	public float DirectionSpread { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4ec46cc3u, "Spawn Directions")]
+	[DDLRegistration(0x4dec0a2eu, "Spawn Directions")]
 	public SpawnDirections? SpawnDirections { get; set; } = default;
 
-	[DDLRegistration(0x4ec46cc3u, "Uniform Direction")]
+	[DDLRegistration(0x1986ab08u, "Uniform Direction")]
 	public VisualEffectTransform? InputPort_UDTransform { get; set; } = default;
 
-	[DDLRegistration(0x4ec46cc3u, "Uniform Direction Space")]
+	[DDLRegistration(0x988e1293u, "Uniform Direction Space")]
 	public x45f5c485 UDSpace { get; set; } = x45f5c485.Off;
 
 	public static VisualEffectSpawnStyleNode Create(DDLObject ddl) => new(ddl);

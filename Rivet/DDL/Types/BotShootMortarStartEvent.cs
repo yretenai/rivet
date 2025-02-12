@@ -18,7 +18,7 @@ public class BotShootMortarStartEvent : EventBase, IDDLObjectType<BotShootMortar
 		DamageNameHash = ddl.GetValue<uint>(0x633f15dbu, DamageNameHash);
 	}
 
-	[DDLRegistration(0xade918e5u)]
+	[DDLRegistration(0x633f15dbu)]
 	public uint DamageNameHash { get; set; } = 0x00000000;
 
 	public new static BotShootMortarStartEvent Create(DDLObject ddl) => new(ddl);

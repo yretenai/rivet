@@ -21,16 +21,16 @@ public class RegionAuxInstanceContainer : DDLObjectType, IDDLObjectType<RegionAu
 		Regions = ddl.GetValues<RivetAssetId>(0xa38d1acbu);
 	}
 
-	[DDLRegistration(0xad0c0870u)]
+	[DDLRegistration(0x9c997da9u)]
 	public List<RivetAssetId> Zones { get; set; } = [];
 
-	[DDLRegistration(0xad0c0870u)]
+	[DDLRegistration(0xfaaad4d2u)]
 	public List<RivetAssetId> NavExclusionZones { get; set; } = [];
 
-	[DDLRegistration(0xad0c0870u)]
+	[DDLRegistration(0xc4bd3cf8u)]
 	public List<RivetAssetId> NavInclusionZones { get; set; } = [];
 
-	[DDLRegistration(0xad0c0870u)]
+	[DDLRegistration(0xa38d1acbu)]
 	public List<RivetAssetId> Regions { get; set; } = [];
 
 	public static RegionAuxInstanceContainer Create(DDLObject ddl) => new(ddl);

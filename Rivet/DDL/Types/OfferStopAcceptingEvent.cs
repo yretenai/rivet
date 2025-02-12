@@ -18,7 +18,7 @@ public class OfferStopAcceptingEvent : EventBase, IDDLObjectType<OfferStopAccept
 		Instigator = ddl.GetValue<uint>(0x33f2e3d5u, Instigator);
 	}
 
-	[DDLRegistration(0x3c074c6bu)]
+	[DDLRegistration(0x33f2e3d5u)]
 	public uint Instigator { get; set; } = 0x00000000;
 
 	public new static OfferStopAcceptingEvent Create(DDLObject ddl) => new(ddl);

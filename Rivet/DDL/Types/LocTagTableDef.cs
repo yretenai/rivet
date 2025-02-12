@@ -21,16 +21,16 @@ public class LocTagTableDef : DDLObjectType, IDDLObjectType<LocTagTableDef> {
 		LanguageText = ddl.GetObjects<LocTagLanguageDef>(0xc4da86afu);
 	}
 
-	[DDLRegistration(0xbfa7fda3u, "Name", "Loc Tag Name")]
+	[DDLRegistration(0x6eb3beb6u, "Name", "Loc Tag Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xbfa7fda3u, "GroupName", "Loc Tag Group Name")]
+	[DDLRegistration(0xb215bfb7u, "GroupName", "Loc Tag Group Name")]
 	public string? GroupName { get; set; } = default;
 
-	[DDLRegistration(0xbfa7fda3u, "Flags", "Loc Tag Flags")]
+	[DDLRegistration(0x12568d7bu, "Flags", "Loc Tag Flags")]
 	public LocalizationFlags Flags { get; set; } = LocalizationFlags.None;
 
-	[DDLRegistration(0xbfa7fda3u, "Language Text", "Table of localized text per language.")]
+	[DDLRegistration(0xc4da86afu, "Language Text", "Table of localized text per language.")]
 	public List<LocTagLanguageDef?> LanguageText { get; set; } = [];
 
 	public static LocTagTableDef Create(DDLObject ddl) => new(ddl);

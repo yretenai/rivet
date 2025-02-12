@@ -20,13 +20,13 @@ public class FocusJointChainDef : DDLObjectType, IDDLObjectType<FocusJointChainD
 		EndJointName = ddl.GetString(0x6fa4e87a) ?? EndJointName;
 	}
 
-	[DDLRegistration(0xe4c7411du, description: "Name to identify this JointChain by")]
+	[DDLRegistration(0xa30d46f8u, description: "Name to identify this JointChain by")]
 	public string? JointChainName { get; set; } = "";
 
-	[DDLRegistration(0xe4c7411du, description: "Name of the starting joint of this JointChain. This is the BaseJoint")]
+	[DDLRegistration(0x381bf2e1u, description: "Name of the starting joint of this JointChain. This is the BaseJoint")]
 	public string? StartJointName { get; set; } = "";
 
-	[DDLRegistration(0xe4c7411du, description: "Name of the ending joint of this JointChain.")]
+	[DDLRegistration(0x6fa4e87au, description: "Name of the ending joint of this JointChain.")]
 	public string? EndJointName { get; set; } = "";
 
 	public static FocusJointChainDef Create(DDLObject ddl) => new(ddl);

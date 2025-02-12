@@ -20,13 +20,13 @@ public class Steering3DPrius : DDLObjectType, IDDLObjectType<Steering3DPrius> {
 		Accel = ddl.GetValue<float>(0x44affa24u, Accel);
 	}
 
-	[DDLRegistration(0x7ee1175bu)]
+	[DDLRegistration(0xd6f8c91du)]
 	public float IdealSpeed { get; set; } = 50.00f;
 
-	[DDLRegistration(0x7ee1175bu)]
+	[DDLRegistration(0xa9242a88u)]
 	public float Decel { get; set; } = 10.00f;
 
-	[DDLRegistration(0x7ee1175bu)]
+	[DDLRegistration(0x44affa24u)]
 	public float Accel { get; set; } = 10.00f;
 
 	public static Steering3DPrius Create(DDLObject ddl) => new(ddl);

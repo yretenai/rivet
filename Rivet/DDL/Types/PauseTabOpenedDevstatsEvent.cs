@@ -20,13 +20,13 @@ public class PauseTabOpenedDevstatsEvent : EventBase, IDDLObjectType<PauseTabOpe
 		OpenedTab = ddl.GetEnum<PauseTabs>(0xf1771db8u, PauseTabsValues.Lookup);
 	}
 
-	[DDLRegistration(0xa10634afu, "Event ID", "Unique event ID for this event instance.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique event ID for this event instance.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0xa10634afu, "Tab Segment ID", "Segment ID that matches with the segment ID in the corresponding PauseTabClosed event.")]
+	[DDLRegistration(0x40478ddeu, "Tab Segment ID", "Segment ID that matches with the segment ID in the corresponding PauseTabClosed event.")]
 	public string? TabSegmentId { get; set; } = default;
 
-	[DDLRegistration(0xa10634afu, "Opened Tab", "The tab that was opened.")]
+	[DDLRegistration(0xf1771db8u, "Opened Tab", "The tab that was opened.")]
 	public PauseTabs OpenedTab { get; set; } = PauseTabs.Map;
 
 	public new static PauseTabOpenedDevstatsEvent Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class ItemContainerPrius : DDLObjectType, IDDLObjectType<ItemContainerPri
 		RespawnItemsTime = ddl.GetValue<float>(0x64a943c1u, RespawnItemsTime);
 	}
 
-	[DDLRegistration(0x184fa2cfu, "Contained Items")]
+	[DDLRegistration(0xf84d258cu, "Contained Items")]
 	public List<ItemListElement?> Items { get; set; } = [];
 
-	[DDLRegistration(0x184fa2cfu)]
+	[DDLRegistration(0x10b17970u)]
 	public bool DeleteOnSalvage { get; set; } = true;
 
-	[DDLRegistration(0x184fa2cfu)]
+	[DDLRegistration(0x64a943c1u)]
 	public float RespawnItemsTime { get; set; } = 300.00f;
 
 	public static ItemContainerPrius Create(DDLObject ddl) => new(ddl);

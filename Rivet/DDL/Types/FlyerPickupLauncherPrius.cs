@@ -23,22 +23,22 @@ public class FlyerPickupLauncherPrius : DDLObjectType, IDDLObjectType<FlyerPicku
 		ShotConfig = ddl.GetValue<RivetAssetId>(0xb171e6aeu, ShotConfig);
 	}
 
-	[DDLRegistration(0x47e19edfu, "Capsule Detection Height")]
+	[DDLRegistration(0x74424f3eu, "Capsule Detection Height")]
 	public float CapsuleHeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0x47e19edfu, "Capsule Detection Radius")]
+	[DDLRegistration(0xba73c46bu, "Capsule Detection Radius")]
 	public float CapsuleRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x47e19edfu, "Capsule Detection Offset")]
+	[DDLRegistration(0x33192047u, "Capsule Detection Offset")]
 	public float CapsuleUpOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x47e19edfu, "Draw Detection Volume")]
+	[DDLRegistration(0xcceb8d61u, "Draw Detection Volume")]
 	public bool DrawDebugDetection { get; set; } = false;
 
-	[DDLRegistration(0x47e19edfu, "Pickup Actor")]
+	[DDLRegistration(0x2b00e05fu, "Pickup Actor")]
 	public RivetAssetId PickupActor { get; set; } = default;
 
-	[DDLRegistration(0x47e19edfu, "Shot Config")]
+	[DDLRegistration(0xb171e6aeu, "Shot Config")]
 	public RivetAssetId ShotConfig { get; set; } = default;
 
 	public static FlyerPickupLauncherPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class ModelDisplayOptions : DDLObjectType, IDDLObjectType<ModelDisplayOpt
 		ShowBounds = ddl.GetValue<bool>(0x6dba0480u, ShowBounds);
 	}
 
-	[DDLRegistration(0x89e5d238u)]
+	[DDLRegistration(0x157b6409u)]
 	public bool ShowModel { get; set; } = true;
 
-	[DDLRegistration(0x89e5d238u)]
+	[DDLRegistration(0xf43a3f62u)]
 	public bool ShowSkeleton { get; set; } = false;
 
-	[DDLRegistration(0x89e5d238u)]
+	[DDLRegistration(0x1ae324deu)]
 	public bool ShowAnimDynamicsHud { get; set; } = false;
 
-	[DDLRegistration(0x89e5d238u)]
+	[DDLRegistration(0x6dba0480u)]
 	public bool ShowBounds { get; set; } = false;
 
 	public static ModelDisplayOptions Create(DDLObject ddl) => new(ddl);

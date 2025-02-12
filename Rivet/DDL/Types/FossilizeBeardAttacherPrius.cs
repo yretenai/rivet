@@ -18,7 +18,7 @@ public class FossilizeBeardAttacherPrius : DDLObjectType, IDDLObjectType<Fossili
 		BeardActor = ddl.GetValue<RivetAssetId>(0x4c1f8462u, BeardActor);
 	}
 
-	[DDLRegistration(0xcb9b81c4u)]
+	[DDLRegistration(0x4c1f8462u)]
 	public RivetAssetId BeardActor { get; set; } = default;
 
 	public static FossilizeBeardAttacherPrius Create(DDLObject ddl) => new(ddl);

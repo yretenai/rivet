@@ -19,10 +19,10 @@ public class StatusEffectPixelizedPrius : StatusEffectBasePrius, IDDLObjectType<
 		OverrideRootJointLocatorHash = ddl.GetValue<uint>(0x99e7dc64u, OverrideRootJointLocatorHash);
 	}
 
-	[DDLRegistration(0xd8ca6ac5u)]
+	[DDLRegistration(0x9a4c4b83u)]
 	public float VoxelExplodeDelay { get; set; } = 12.00f;
 
-	[DDLRegistration(0xd8ca6ac5u, description: "A joint or locator to use as an override for the root position of the pixel wall (instead of the actor position).")]
+	[DDLRegistration(0x99e7dc64u, description: "A joint or locator to use as an override for the root position of the pixel wall (instead of the actor position).")]
 	public uint OverrideRootJointLocatorHash { get; set; } = 0x00000000;
 
 	public new static StatusEffectPixelizedPrius Create(DDLObject ddl) => new(ddl);

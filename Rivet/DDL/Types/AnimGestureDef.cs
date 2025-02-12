@@ -27,34 +27,34 @@ public class AnimGestureDef : DDLObjectType, IDDLObjectType<AnimGestureDef> {
 		Weight = ddl.GetValue<float>(0x39b51b26u, Weight);
 	}
 
-	[DDLRegistration(0x07385172u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x07385172u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x07385172u)]
+	[DDLRegistration(0xd15aa6a0u)]
 	public RivetAssetId ClipPath { get; set; } = default;
 
-	[DDLRegistration(0x07385172u, description: "The local mirror-axis.")]
+	[DDLRegistration(0x072e2167u, description: "The local mirror-axis.")]
 	public x3749ca1b MirrorAxis { get; set; } = x3749ca1b.MirrorAxisNone;
 
-	[DDLRegistration(0x07385172u)]
+	[DDLRegistration(0x0c5bae2bu)]
 	public float StartTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x07385172u)]
+	[DDLRegistration(0x2c176850u)]
 	public float StartOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x07385172u)]
+	[DDLRegistration(0x461f415eu)]
 	public float BlendInDuration { get; set; } = 0.25f;
 
-	[DDLRegistration(0x07385172u)]
+	[DDLRegistration(0x27fcfb73u)]
 	public float EndOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x07385172u)]
+	[DDLRegistration(0x21329878u)]
 	public float BlendOutDuration { get; set; } = 0.25f;
 
-	[DDLRegistration(0x07385172u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 1.00f;
 
 	public static AnimGestureDef Create(DDLObject ddl) => new(ddl);

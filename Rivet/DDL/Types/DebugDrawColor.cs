@@ -19,10 +19,10 @@ public class DebugDrawColor : DDLObjectType, IDDLObjectType<DebugDrawColor> {
 		Alpha = ddl.GetValue<byte>(0xc9b3f5abu, Alpha);
 	}
 
-	[DDLRegistration(0x4a31dc0du)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x4a31dc0du)]
+	[DDLRegistration(0xc9b3f5abu)]
 	public byte Alpha { get; set; } = 0xff;
 
 	public static DebugDrawColor Create(DDLObject ddl) => new(ddl);

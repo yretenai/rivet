@@ -19,10 +19,10 @@ public class StartMissionActionPrius : DDLObjectType, IDDLObjectType<StartMissio
 		SetPrimary = ddl.GetValue<bool>(0x5eb85f31u, SetPrimary);
 	}
 
-	[DDLRegistration(0xb531b2beu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
-	[DDLRegistration(0xb531b2beu)]
+	[DDLRegistration(0x5eb85f31u)]
 	public bool SetPrimary { get; set; } = true;
 
 	public static StartMissionActionPrius Create(DDLObject ddl) => new(ddl);

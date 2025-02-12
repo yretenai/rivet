@@ -19,10 +19,10 @@ public class SkinItemCompositeMaterialOverridePrius : DDLObjectType, IDDLObjectT
 		PostMaterialNameHash = ddl.GetValue<uint>(0x04188ecau, PostMaterialNameHash);
 	}
 
-	[DDLRegistration(0x5c215969u)]
+	[DDLRegistration(0x81986779u)]
 	public uint PreMaterialNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5c215969u)]
+	[DDLRegistration(0x04188ecau)]
 	public uint PostMaterialNameHash { get; set; } = 0x00000000;
 
 	public static SkinItemCompositeMaterialOverridePrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class WeaponGridConfig : ConfigBase, IDDLObjectType<WeaponGridConfig> {
 		TransformOffset = ddl.GetObject<DDLVector2>(0x928c7cbdu);
 	}
 
-	[DDLRegistration(0x7d5df308u)]
+	[DDLRegistration(0xd8f0a337u)]
 	public List<GridLayerData?> Layers { get; set; } = [];
 
-	[DDLRegistration(0x7d5df308u)]
+	[DDLRegistration(0x0429b412u)]
 	public float TransformScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x7d5df308u)]
+	[DDLRegistration(0x928c7cbdu)]
 	public DDLVector2? TransformOffset { get; set; } = default;
 
 	public new static WeaponGridConfig Create(DDLObject ddl) => new(ddl);

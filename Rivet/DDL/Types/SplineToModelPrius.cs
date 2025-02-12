@@ -52,109 +52,109 @@ public class SplineToModelPrius : DDLObjectType, IDDLObjectType<SplineToModelPri
 		InstanceList = ddl.GetObjects<DynamicInstanceItem>(0x62f72364u);
 	}
 
-	[DDLRegistration(0xbd096192u, "Create Prefab")]
+	[DDLRegistration(0xdcff5cb7u, "Create Prefab")]
 	public bool CreatePrefab { get; set; } = true;
 
-	[DDLRegistration(0xbd096192u, description: ".001 is highest fidelity. common settings .03, .02, .01, .005, .001")]
+	[DDLRegistration(0x13278436u, description: ".001 is highest fidelity. common settings .03, .02, .01, .005, .001")]
 	public float CurveFidelity { get; set; } = 0.01f;
 
-	[DDLRegistration(0xbd096192u, description: "Cross Section to sweep along curve")]
+	[DDLRegistration(0xf56601b6u, description: "Cross Section to sweep along curve")]
 	public x8492ce7f CrossSection { get; set; } = x8492ce7f.Ellipse;
 
-	[DDLRegistration(0xbd096192u, description: "Model")]
+	[DDLRegistration(0xcec6be18u, description: "Model")]
 	public RivetAssetId Model { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, "PreRotation", "Rotate Model Before XY Slice")]
+	[DDLRegistration(0x49190644u, "PreRotation", "Rotate Model Before XY Slice")]
 	public DDLVector3? PreRotation { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, "PreTranslate", "Translate Model Before XY Slice")]
+	[DDLRegistration(0x2379ae67u, "PreTranslate", "Translate Model Before XY Slice")]
 	public DDLVector3? PreTranslate { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, description: "Profile Curve")]
+	[DDLRegistration(0x526ab36eu, description: "Profile Curve")]
 	public RivetAssetId CurveProfile { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xbd096192u, description: "Width of Circle. Second with for bottom of Trapezoid")]
+	[DDLRegistration(0x954989eeu, description: "Width of Circle. Second with for bottom of Trapezoid")]
 	public DDLVector2? Width { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, description: "Height of Shape")]
+	[DDLRegistration(0xcb35ab68u, description: "Height of Shape")]
 	public float Height { get; set; } = 0.50f;
 
-	[DDLRegistration(0xbd096192u, description: "Scale Shape")]
+	[DDLRegistration(0xf515e945u, description: "Scale Shape")]
 	public float Scale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbd096192u, description: "XYScale at distal end")]
+	[DDLRegistration(0xa2c90a17u, description: "XYScale at distal end")]
 	public DDLVector2? Taper { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, description: "Placement of model on curve")]
+	[DDLRegistration(0xca26ea02u, description: "Placement of model on curve")]
 	public xb8c27e2a Placement { get; set; } = xb8c27e2a.Center;
 
-	[DDLRegistration(0xbd096192u, "Offset", "Offset from on curve placement")]
+	[DDLRegistration(0x677284b7u, "Offset", "Offset from on curve placement")]
 	public DDLVector3? Offset { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, description: "multiplier for amounnt of natural bank to use.  0.0 results in Y-up model")]
+	[DDLRegistration(0x583fb719u, description: "multiplier for amounnt of natural bank to use.  0.0 results in Y-up model")]
 	public float BankScale { get; set; } = 0.00f;
 
-	[DDLRegistration(0xbd096192u, description: "type of termination on each end of model")]
+	[DDLRegistration(0x1bfac016u, description: "type of termination on each end of model")]
 	public x86f6b8ca EndCap { get; set; } = x86f6b8ca.Round;
 
-	[DDLRegistration(0xbd096192u, "Surface Noise Amplitude and Frequency")]
+	[DDLRegistration(0xbd53d855u, "Surface Noise Amplitude and Frequency")]
 	public DDLVector2? SurfaceNoise { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, "Reverse Faces", "Turn Model Inside Out")]
+	[DDLRegistration(0x18f8dfeau, "Reverse Faces", "Turn Model Inside Out")]
 	public bool ReverseFaces { get; set; } = false;
 
-	[DDLRegistration(0xbd096192u, description: "vertex color for entire model")]
+	[DDLRegistration(0x6e07bf94u, description: "vertex color for entire model")]
 	public DDLVector3? VertexColor { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, description: "vertex alpha for entire model")]
+	[DDLRegistration(0xd8b1ce17u, description: "vertex alpha for entire model")]
 	public float VertexAlpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0xbd096192u, description: "Vertex spacing along curve and around cross-section")]
+	[DDLRegistration(0x513026ceu, description: "Vertex spacing along curve and around cross-section")]
 	public DDLVector2? VertexSpacing { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, description: "Reverse U")]
+	[DDLRegistration(0xb07b05d0u, description: "Reverse U")]
 	public bool ReverseU { get; set; } = false;
 
-	[DDLRegistration(0xbd096192u, description: "Reverse V")]
+	[DDLRegistration(0x2972546au, description: "Reverse V")]
 	public bool ReverseV { get; set; } = false;
 
-	[DDLRegistration(0xbd096192u, "UV Tiling Distance meters/UV")]
+	[DDLRegistration(0x62050c4eu, "UV Tiling Distance meters/UV")]
 	public DDLVector2? UVTilingDistance { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, "UV Offset")]
+	[DDLRegistration(0xd4f24f25u, "UV Offset")]
 	public DDLVector2? UVOffset { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, description: "Add second UV set. Covers main model by default.")]
+	[DDLRegistration(0xa318f132u, description: "Add second UV set. Covers main model by default.")]
 	public bool UV2 { get; set; } = false;
 
-	[DDLRegistration(0xbd096192u, "UV2 Tiling Distance meters/UV")]
+	[DDLRegistration(0x29d1a550u, "UV2 Tiling Distance meters/UV")]
 	public DDLVector2? UV2TilingDistance { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, "UV2 Offset")]
+	[DDLRegistration(0x9d112d47u, "UV2 Offset")]
 	public DDLVector2? UV2Offset { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, description: "Material")]
+	[DDLRegistration(0x86bfc8e5u, description: "Material")]
 	public RivetAssetId Material { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, description: "Output Collision")]
+	[DDLRegistration(0xd930bcb2u, description: "Output Collision")]
 	public bool Collision { get; set; } = true;
 
-	[DDLRegistration(0xbd096192u, description: "Output LOD1")]
+	[DDLRegistration(0xde2917d1u, description: "Output LOD1")]
 	public bool LOD1 { get; set; } = false;
 
-	[DDLRegistration(0xbd096192u, description: "First LOD distance")]
+	[DDLRegistration(0x7f1cf23fu, description: "First LOD distance")]
 	public float GeomLodDist1 { get; set; } = 40.00f;
 
-	[DDLRegistration(0xbd096192u, "Actor Options", "Choose actor type to generate")]
+	[DDLRegistration(0xedeb4833u, "Actor Options", "Choose actor type to generate")]
 	public ActorOption GenActor { get; set; } = ActorOption.None;
 
-	[DDLRegistration(0xbd096192u, "Template Actor", "Actor Template for Curve or Model")]
+	[DDLRegistration(0x5d269a38u, "Template Actor", "Actor Template for Curve or Model")]
 	public RivetAssetId Actor { get; set; } = default;
 
-	[DDLRegistration(0xbd096192u, "Add Instances")]
+	[DDLRegistration(0x22801917u, "Add Instances")]
 	public string? ADDINSTANCES { get; set; } = "Option to add instances along curve";
 
-	[DDLRegistration(0xbd096192u, "Instance List", "Instance priority determined by order")]
+	[DDLRegistration(0x62f72364u, "Instance List", "Instance priority determined by order")]
 	public List<DynamicInstanceItem?> InstanceList { get; set; } = [];
 
 	public static SplineToModelPrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class MissionNodeBuiltGame : MissionNodeBuiltShared, IDDLObjectType<Missi
 		MissionSaveWeight = ddl.GetValue<float>(0x4eadb9a9u, MissionSaveWeight);
 	}
 
-	[DDLRegistration(0xb4720e85u)]
+	[DDLRegistration(0x42bd84aau)]
 	public ObjectiveLoadInfo? AvailableDebugLoadInfo { get; set; } = default;
 
-	[DDLRegistration(0xb4720e85u)]
+	[DDLRegistration(0x773e274fu)]
 	public x1953eb86 MissionType { get; set; } = x1953eb86.GoldenPath;
 
-	[DDLRegistration(0xb4720e85u)]
+	[DDLRegistration(0x4eadb9a9u)]
 	public float MissionSaveWeight { get; set; } = 0.00f;
 
 	public new static MissionNodeBuiltGame Create(DDLObject ddl) => new(ddl);

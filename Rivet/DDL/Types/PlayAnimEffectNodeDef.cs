@@ -19,10 +19,10 @@ public class PlayAnimEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObjectType<
 		AnimName = ddl.GetObject<InputPlugString>(0xc9e716ceu);
 	}
 
-	[DDLRegistration(0xae157c10u)]
+	[DDLRegistration(0x1eb7640eu)]
 	public x684c6439 ActorType { get; set; } = x684c6439.HitActor;
 
-	[DDLRegistration(0xae157c10u)]
+	[DDLRegistration(0xc9e716ceu)]
 	public InputPlugString? AnimName { get; set; } = default;
 
 	public new static PlayAnimEffectNodeDef Create(DDLObject ddl) => new(ddl);

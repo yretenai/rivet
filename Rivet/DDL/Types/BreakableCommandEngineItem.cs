@@ -27,34 +27,34 @@ public class BreakableCommandEngineItem : DDLObjectType, IDDLObjectType<Breakabl
 		ReplaceActorAssetPath = ddl.GetValue<RivetAssetId>(0x9781341cu, ReplaceActorAssetPath);
 	}
 
-	[DDLRegistration(0x681e6c3eu)]
+	[DDLRegistration(0x520a1e16u)]
 	public RivetAssetId ActorInstEngineItemId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x681e6c3eu)]
+	[DDLRegistration(0xce335e20u)]
 	public List<uint> ActorHandleList { get; set; } = [];
 
-	[DDLRegistration(0x681e6c3eu)]
+	[DDLRegistration(0xbc9b1502u)]
 	public RivetAssetId BreakableAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x681e6c3eu)]
+	[DDLRegistration(0x8f2089ecu)]
 	public x855c1439 Command { get; set; } = x855c1439.DestroyActor;
 
-	[DDLRegistration(0x681e6c3eu)]
+	[DDLRegistration(0xf9c7e746u)]
 	public string? AnimationDriverName { get; set; } = default;
 
-	[DDLRegistration(0x681e6c3eu)]
+	[DDLRegistration(0x9ab9d761u)]
 	public string? GameEventName { get; set; } = default;
 
-	[DDLRegistration(0x681e6c3eu)]
+	[DDLRegistration(0x85f9973au)]
 	public float HealthAfter { get; set; } = 0.00f;
 
-	[DDLRegistration(0x681e6c3eu)]
+	[DDLRegistration(0xcde2a74eu)]
 	public float HealthBefore { get; set; } = 0.00f;
 
-	[DDLRegistration(0x681e6c3eu)]
+	[DDLRegistration(0xad8c1e16u)]
 	public string? LookName { get; set; } = default;
 
-	[DDLRegistration(0x681e6c3eu)]
+	[DDLRegistration(0x9781341cu)]
 	public RivetAssetId ReplaceActorAssetPath { get; set; } = default;
 
 	public static BreakableCommandEngineItem Create(DDLObject ddl) => new(ddl);

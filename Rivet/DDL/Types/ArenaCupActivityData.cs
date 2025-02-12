@@ -25,28 +25,28 @@ public class ArenaCupActivityData : DDLObjectType, IDDLObjectType<ArenaCupActivi
 		Reward = ddl.GetObject<ActivityReward>(0x70a93c34u);
 	}
 
-	[DDLRegistration(0x9646cd17u, "Enabled in OS?", "Whether or not this activity card should exist in the OS.")]
+	[DDLRegistration(0x5113d8bcu, "Enabled in OS?", "Whether or not this activity card should exist in the OS.")]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x9646cd17u, "Activity Id", "Activity ID of the UDS Activity for this arena cup. Can be at most 32 characters with no spaces and must not start with '_'.")]
+	[DDLRegistration(0xc803bcc5u, "Activity Id", "Activity ID of the UDS Activity for this arena cup. Can be at most 32 characters with no spaces and must not start with '_'.")]
 	public string? ActivityId { get; set; } = default;
 
-	[DDLRegistration(0x9646cd17u, "Name Loc Tag", "Loctag for the name of this activity card to display. Localized text can be at most 128 characters.")]
+	[DDLRegistration(0xa0041b54u, "Name Loc Tag", "Loctag for the name of this activity card to display. Localized text can be at most 128 characters.")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0x9646cd17u, "Description Loc Tag", "Loctag for the description of this activity card to display. Localized text can be at most 1024 characters.")]
+	[DDLRegistration(0xe02bccb2u, "Description Loc Tag", "Loctag for the description of this activity card to display. Localized text can be at most 1024 characters.")]
 	public string? DescLocTag { get; set; } = default;
 
-	[DDLRegistration(0x9646cd17u, "Small Activity Card Image", "Path to the PNG file to use as the small activity card image for this activity card. Must be 864 x 1040 PNG 24-bit non-interlaced.")]
+	[DDLRegistration(0x6551fbf4u, "Small Activity Card Image", "Path to the PNG file to use as the small activity card image for this activity card. Must be 864 x 1040 PNG 24-bit non-interlaced.")]
 	public RivetAssetId SmallImage { get; set; } = default;
 
-	[DDLRegistration(0x9646cd17u, "Large Activity Card Image", "Path to the PNG file to use as the large activity card image for this activity card. Must be 3840 x 2160 PNG 24-bit non-interlaced.")]
+	[DDLRegistration(0x82fce17fu, "Large Activity Card Image", "Path to the PNG file to use as the large activity card image for this activity card. Must be 3840 x 2160 PNG 24-bit non-interlaced.")]
 	public RivetAssetId LargeImage { get; set; } = default;
 
-	[DDLRegistration(0x9646cd17u, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
+	[DDLRegistration(0x292b559du, description: "How long in minutes the activity/task/etc. should be estimated to take by default.")]
 	public uint PlaytimeEstimate { get; set; } = 0x0000001e;
 
-	[DDLRegistration(0x9646cd17u)]
+	[DDLRegistration(0x70a93c34u)]
 	public ActivityReward? Reward { get; set; } = default;
 
 	public static ArenaCupActivityData Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DifficultyModConfig : ConfigBase, IDDLObjectType<DifficultyModConfi
 		DifficultyModDefs = ddl.GetObjects<DifficultyModDef>(0xec9d4cb3u);
 	}
 
-	[DDLRegistration(0x5f875925u, "Difficulty Mod Defs")]
+	[DDLRegistration(0xec9d4cb3u, "Difficulty Mod Defs")]
 	public List<DifficultyModDef?> DifficultyModDefs { get; set; } = [];
 
 	public new static DifficultyModConfig Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class BodypartToFilterConfig : ConfigBase, IDDLObjectType<BodypartToFilte
 		JointMap = ddl.GetObjects<JointToBodyFilter>(0x1af3775au);
 	}
 
-	[DDLRegistration(0xea705a6cu)]
+	[DDLRegistration(0x3b7089a2u)]
 	public xfdd79442 DefaultBodyPartFilter { get; set; } = xfdd79442.Any;
 
-	[DDLRegistration(0xea705a6cu)]
+	[DDLRegistration(0x1af3775au)]
 	public List<JointToBodyFilter?> JointMap { get; set; } = [];
 
 	public new static BodypartToFilterConfig Create(DDLObject ddl) => new(ddl);

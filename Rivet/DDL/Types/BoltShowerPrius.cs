@@ -19,10 +19,10 @@ public class BoltShowerPrius : DDLObjectType, IDDLObjectType<BoltShowerPrius> {
 		SpawnCount = ddl.GetValue<uint>(0x502b77d0u, SpawnCount);
 	}
 
-	[DDLRegistration(0xebecd97au)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 5.00f;
 
-	[DDLRegistration(0xebecd97au)]
+	[DDLRegistration(0x502b77d0u)]
 	public uint SpawnCount { get; set; } = 0x000000fa;
 
 	public static BoltShowerPrius Create(DDLObject ddl) => new(ddl);

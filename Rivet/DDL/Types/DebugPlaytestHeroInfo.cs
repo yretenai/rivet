@@ -20,13 +20,13 @@ public class DebugPlaytestHeroInfo : DDLObjectType, IDDLObjectType<DebugPlaytest
 		BackpackLoadout = ddl.GetValue<RivetAssetId>(0xc1772340u, BackpackLoadout);
 	}
 
-	[DDLRegistration(0xadf8cd7au, "Spawn as Hero", "Set to something other than kNone to change what hero you load into for this playtest.")]
+	[DDLRegistration(0xeb1836f9u, "Spawn as Hero", "Set to something other than kNone to change what hero you load into for this playtest.")]
 	public HeroTypes SpawnAsHero { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0xadf8cd7au, "Spawn Loadout", "What loadout should the hero spawn with?")]
+	[DDLRegistration(0x569fa463u, "Spawn Loadout", "What loadout should the hero spawn with?")]
 	public RivetAssetId SpawnLoadout { get; set; } = default;
 
-	[DDLRegistration(0xadf8cd7au, "Backpack Loadout", "What backpack loadout should the hero spawn with? Type must be ClankPackLoadoutConfig.")]
+	[DDLRegistration(0xc1772340u, "Backpack Loadout", "What backpack loadout should the hero spawn with? Type must be ClankPackLoadoutConfig.")]
 	public RivetAssetId BackpackLoadout { get; set; } = default;
 
 	public static DebugPlaytestHeroInfo Create(DDLObject ddl) => new(ddl);

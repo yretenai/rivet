@@ -24,25 +24,25 @@ public class CritterQueryMaxExceededDevstatsEvent : EventBase, IDDLObjectType<Cr
 		MaxActiveDistance = ddl.GetValue<float>(0xb1508ef1u, MaxActiveDistance);
 	}
 
-	[DDLRegistration(0x5b0c8851u)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x5b0c8851u)]
+	[DDLRegistration(0x83b900d2u)]
 	public string? Level { get; set; } = default;
 
-	[DDLRegistration(0x5b0c8851u)]
+	[DDLRegistration(0xcbaf134bu)]
 	public string? CritterType { get; set; } = default;
 
-	[DDLRegistration(0x5b0c8851u)]
+	[DDLRegistration(0xedc6853cu)]
 	public uint CurrentMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5b0c8851u)]
+	[DDLRegistration(0x939b0cbdu)]
 	public uint RequiredMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x5b0c8851u)]
+	[DDLRegistration(0x5498ef5eu)]
 	public DDLVector3? CameraPosition { get; set; } = default;
 
-	[DDLRegistration(0x5b0c8851u)]
+	[DDLRegistration(0xb1508ef1u)]
 	public float MaxActiveDistance { get; set; } = 0.00f;
 
 	public new static CritterQueryMaxExceededDevstatsEvent Create(DDLObject ddl) => new(ddl);

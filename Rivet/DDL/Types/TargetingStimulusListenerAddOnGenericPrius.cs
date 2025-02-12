@@ -18,7 +18,7 @@ public class TargetingStimulusListenerAddOnGenericPrius : TargetingStimulusListe
 		Event = ddl.GetObject<EventBase>(0x22fdc666u);
 	}
 
-	[DDLRegistration(0xe9bacbffu)]
+	[DDLRegistration(0x22fdc666u)]
 	public EventBase? Event { get; set; } = default;
 
 	public new static TargetingStimulusListenerAddOnGenericPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class HelicopterPrius : BotPrius, IDDLObjectType<HelicopterPrius> {
 		HelicopterData = ddl.GetObject<HelicopterData>(0xd3a9c3acu);
 	}
 
-	[DDLRegistration(0xfb2348c3u)]
+	[DDLRegistration(0xd3a9c3acu)]
 	public HelicopterData? HelicopterData { get; set; } = default;
 
 	public new static HelicopterPrius Create(DDLObject ddl) => new(ddl);

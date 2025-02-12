@@ -18,7 +18,7 @@ public class WebServerStatus : DDLObjectType, IDDLObjectType<WebServerStatus> {
 		ThreadCount = ddl.GetValue<uint>(0x10505628u, ThreadCount);
 	}
 
-	[DDLRegistration(0x1a457ba5u)]
+	[DDLRegistration(0x10505628u)]
 	public uint ThreadCount { get; set; } = 0x00000000;
 
 	public static WebServerStatus Create(DDLObject ddl) => new(ddl);

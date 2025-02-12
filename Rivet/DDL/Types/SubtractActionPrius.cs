@@ -19,10 +19,10 @@ public class SubtractActionPrius : DDLObjectType, IDDLObjectType<SubtractActionP
 		Integer = ddl.GetValue<bool>(0x5be5c833u, Integer);
 	}
 
-	[DDLRegistration(0x19162d53u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
-	[DDLRegistration(0x19162d53u, description: "Integers Only")]
+	[DDLRegistration(0x5be5c833u, description: "Integers Only")]
 	public bool Integer { get; set; } = false;
 
 	public static SubtractActionPrius Create(DDLObject ddl) => new(ddl);

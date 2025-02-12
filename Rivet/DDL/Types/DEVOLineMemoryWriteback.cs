@@ -23,22 +23,22 @@ public class DEVOLineMemoryWriteback : DDLObjectType, IDDLObjectType<DEVOLineMem
 		IsDelta = ddl.GetValue<bool>(0x9ebeecdfu, IsDelta);
 	}
 
-	[DDLRegistration(0xe0643e70u, "Fact name")]
+	[DDLRegistration(0xc01b176bu, "Fact name")]
 	public string? FactKey { get; set; } = default;
 
-	[DDLRegistration(0xe0643e70u, "Value (string)", "Written values may be strings or numbers. Use this one for strings.")]
+	[DDLRegistration(0x61508ff3u, "Value (string)", "Written values may be strings or numbers. Use this one for strings.")]
 	public string? ValueString { get; set; } = default;
 
-	[DDLRegistration(0xe0643e70u, "Value (number)", "Written values may be strings or numbers. Use this one for numbers.")]
+	[DDLRegistration(0x1ee22511u, "Value (number)", "Written values may be strings or numbers. Use this one for numbers.")]
 	public float ValueNumeric { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe0643e70u, description: "How long the fact remains before expiring. Use a number >100000 for 'forever' ")]
+	[DDLRegistration(0x7c5e3db0u, description: "How long the fact remains before expiring. Use a number >100000 for 'forever' ")]
 	public float Duration { get; set; } = 65536.00f;
 
-	[DDLRegistration(0xe0643e70u, "Whose memory", "Whether to write fact to speaker's memory only, or to world where all characters' dialog will test it.")]
+	[DDLRegistration(0x709e779cu, "Whose memory", "Whether to write fact to speaker's memory only, or to world where all characters' dialog will test it.")]
 	public x9547deb2 Whom { get; set; } = x9547deb2.Character;
 
-	[DDLRegistration(0xe0643e70u, "Add Instead Of Set", "When true, a value of '1' means that 1 is ADDED to the current value, like ticking up a counter. Otherwise the fact is set to whateer the given value is (default).")]
+	[DDLRegistration(0x9ebeecdfu, "Add Instead Of Set", "When true, a value of '1' means that 1 is ADDED to the current value, like ticking up a counter. Otherwise the fact is set to whateer the given value is (default).")]
 	public bool IsDelta { get; set; } = false;
 
 	public static DEVOLineMemoryWriteback Create(DDLObject ddl) => new(ddl);

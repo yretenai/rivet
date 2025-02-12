@@ -33,52 +33,52 @@ public class StatusEffectExplosivePrius : StatusEffectBasePrius, IDDLObjectType<
 		KineticMultiplier = ddl.GetValue<float>(0x0b63daabu, KineticMultiplier);
 	}
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x2fb01a0bu)]
 	public ExplosiveStatusInnerOuterData? Damage { get; set; } = default;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x2780aa8fu)]
 	public string? ExplosionLocator { get; set; } = default;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0xc9f1521cu)]
 	public float ExplosionDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x9304a0ddu)]
 	public bool DamageNeedsLOS { get; set; } = true;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x6a5dcd63u)]
 	public bool ExplodeOnDamage { get; set; } = false;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0xcc9f04c2u)]
 	public bool ExplodeOnDeath { get; set; } = true;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0xce4985ddu)]
 	public bool ExplodeOnProximity { get; set; } = false;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x4310626au)]
 	public bool KillSelfOnExplode { get; set; } = false;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x3be354f0u)]
 	public bool DamageFriends { get; set; } = true;
 
-	[DDLRegistration(0x938c1f32u, description: "The last guy to damage this thing will be the Damager used for the explosion.")]
+	[DDLRegistration(0xb4a5e44du, description: "The last guy to damage this thing will be the Damager used for the explosion.")]
 	public bool LastDamagerIsExplosionDamager { get; set; } = false;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x9eca2505u)]
 	public DamageTypesGame ExplosionDamageType { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x3f5dbe92u)]
 	public KnockbackLevels ExplosionKnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x35cab75au)]
 	public TargetType ProximityTargetMask { get; set; } = (TargetType) 0x00000007;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = 1000.00f;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x37e1f098u)]
 	public float StatusAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x938c1f32u)]
+	[DDLRegistration(0x0b63daabu)]
 	public float KineticMultiplier { get; set; } = 1.00f;
 
 	public new static StatusEffectExplosivePrius Create(DDLObject ddl) => new(ddl);

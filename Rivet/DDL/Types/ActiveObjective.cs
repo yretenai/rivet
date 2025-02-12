@@ -19,10 +19,10 @@ public class ActiveObjective : DDLObjectType, IDDLObjectType<ActiveObjective> {
 		ObjectiveHash = ddl.GetValue<uint>(0xd7ef7725u, ObjectiveHash);
 	}
 
-	[DDLRegistration(0xecc09790u)]
+	[DDLRegistration(0x2a5812deu)]
 	public uint MissionHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xecc09790u)]
+	[DDLRegistration(0xd7ef7725u)]
 	public uint ObjectiveHash { get; set; } = 0x00000000;
 
 	public static ActiveObjective Create(DDLObject ddl) => new(ddl);

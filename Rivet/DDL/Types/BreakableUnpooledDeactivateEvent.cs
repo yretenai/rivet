@@ -18,7 +18,7 @@ public class BreakableUnpooledDeactivateEvent : EventBase, IDDLObjectType<Breaka
 		BreakableAssetId = ddl.GetValue<RivetAssetId>(0xbc9b1502u, BreakableAssetId);
 	}
 
-	[DDLRegistration(0x3f209e91u)]
+	[DDLRegistration(0xbc9b1502u)]
 	public RivetAssetId BreakableAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static BreakableUnpooledDeactivateEvent Create(DDLObject ddl) => new(ddl);

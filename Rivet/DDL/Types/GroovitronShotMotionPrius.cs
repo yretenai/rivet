@@ -18,7 +18,7 @@ public class GroovitronShotMotionPrius : GrenadeShotMotionPrius, IDDLObjectType<
 		HoverOffset = ddl.GetValue<float>(0xa3817370u, HoverOffset);
 	}
 
-	[DDLRegistration(0x55637145u)]
+	[DDLRegistration(0xa3817370u)]
 	public float HoverOffset { get; set; } = 1.00f;
 
 	public new static GroovitronShotMotionPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class ActorGroupNode : DDLObjectType, IDDLObjectType<ActorGroupNode> {
 		Actors = ddl.GetValues<RivetAssetId>(0xe153be82u);
 	}
 
-	[DDLRegistration(0xb898fd89u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xb898fd89u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb898fd89u)]
+	[DDLRegistration(0xd36c3c29u)]
 	public bool IsGlobal { get; set; } = false;
 
-	[DDLRegistration(0xb898fd89u)]
+	[DDLRegistration(0xe153be82u)]
 	public List<RivetAssetId> Actors { get; set; } = [];
 
 	public static ActorGroupNode Create(DDLObject ddl) => new(ddl);

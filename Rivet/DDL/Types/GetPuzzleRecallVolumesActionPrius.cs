@@ -19,10 +19,10 @@ public class GetPuzzleRecallVolumesActionPrius : DDLObjectType, IDDLObjectType<G
 		GetAll = ddl.GetValue<bool>(0xd3d0f1ffu, GetAll);
 	}
 
-	[DDLRegistration(0x891c30fau)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Puzzle;
 
-	[DDLRegistration(0x891c30fau, description: "If not checked, we get the volumes in the players cone.  If checked, we get all volumes.")]
+	[DDLRegistration(0xd3d0f1ffu, description: "If not checked, we get the volumes in the players cone.  If checked, we get all volumes.")]
 	public bool GetAll { get; set; } = false;
 
 	public static GetPuzzleRecallVolumesActionPrius Create(DDLObject ddl) => new(ddl);

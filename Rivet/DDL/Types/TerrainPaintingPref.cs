@@ -44,85 +44,85 @@ public class TerrainPaintingPref : DDLObjectType, IDDLObjectType<TerrainPainting
 		DebugOptions = ddl.GetObject<TerrainPaintingDebugOptions>(0x856074f2u);
 	}
 
-	[DDLRegistration(0x017e1e59u, description: "This determines how the paint is applied to the target bitmap(s).")]
+	[DDLRegistration(0xa75a871bu, description: "This determines how the paint is applied to the target bitmap(s).")]
 	public x37e1c1c3 Mode { get; set; } = x37e1c1c3.SculptSpray;
 
-	[DDLRegistration(0x017e1e59u, "Mode", "This determines how the paint is applied to the target bitmap(s) when using a clipboard brush.")]
+	[DDLRegistration(0x1ff4955bu, "Mode", "This determines how the paint is applied to the target bitmap(s) when using a clipboard brush.")]
 	public x37e1c1c3 ModeClipboard { get; set; } = x37e1c1c3.Stamp;
 
-	[DDLRegistration(0x017e1e59u, description: "This determines the target bitmap(s) on which the Terrain Paint panel will paint.")]
+	[DDLRegistration(0x7817619bu, description: "This determines the target bitmap(s) on which the Terrain Paint panel will paint.")]
 	public TerrainPaintingTarget? Target { get; set; } = default;
 
-	[DDLRegistration(0x017e1e59u, "Target", "This determines the target bitmap(s) on which the Terrain Paint panel will paint when using a clipboard brush.")]
+	[DDLRegistration(0xfaaa03b1u, "Target", "This determines the target bitmap(s) on which the Terrain Paint panel will paint when using a clipboard brush.")]
 	public TerrainPaintingTarget? TargetClipboard { get; set; } = default;
 
-	[DDLRegistration(0x017e1e59u, description: "The brush used to paint onto the terrain.")]
+	[DDLRegistration(0xe8f41e02u, description: "The brush used to paint onto the terrain.")]
 	public TerrainPaintingBrush? Brush { get; set; } = default;
 
-	[DDLRegistration(0x017e1e59u, "Brush Parameter (Alpha)", "This is the alpha value of the brush that will be painted onto the mask.")]
+	[DDLRegistration(0x794884fau, "Brush Parameter (Alpha)", "This is the alpha value of the brush that will be painted onto the mask.")]
 	public float BrushParamAlpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0x017e1e59u, "Brush Parameter (Alpha / Second)", "This is the alpha value of brush that will be accumulated every second as the brush is painted onto the mask.")]
+	[DDLRegistration(0xcd28ef58u, "Brush Parameter (Alpha / Second)", "This is the alpha value of brush that will be accumulated every second as the brush is painted onto the mask.")]
 	public float BrushParamAlphaFlow { get; set; } = 1.00f;
 
-	[DDLRegistration(0x017e1e59u, "Brush Parameter (Speed)", "This is the speed with which the paint target will be blurred.")]
+	[DDLRegistration(0x7bf10387u, "Brush Parameter (Speed)", "This is the speed with which the paint target will be blurred.")]
 	public float BrushParamBlurSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0x017e1e59u, "Brush Parameter (Meters)", "This is the height in meters of the brush that will be applied to the heightfield.")]
+	[DDLRegistration(0xd7e9317bu, "Brush Parameter (Meters)", "This is the height in meters of the brush that will be applied to the heightfield.")]
 	public float BrushParamHeight { get; set; } = 1.00f;
 
-	[DDLRegistration(0x017e1e59u, "Brush Parameter (Meters / Second)", "This is the value in meters per second of the brush that will be applied to the heightfield every second as the brush is painted.")]
+	[DDLRegistration(0xdd2a01bau, "Brush Parameter (Meters / Second)", "This is the value in meters per second of the brush that will be applied to the heightfield every second as the brush is painted.")]
 	public float BrushParamHeightFlow { get; set; } = 1.00f;
 
-	[DDLRegistration(0x017e1e59u, "Brush Parameter (Amount)", "This is the amount by which the paint target will be ramped.")]
+	[DDLRegistration(0x3248c100u, "Brush Parameter (Amount)", "This is the amount by which the paint target will be ramped.")]
 	public float BrushParamRamp { get; set; } = 1.00f;
 
-	[DDLRegistration(0x017e1e59u, "Brush Parameter (Speed)", "This is the speed with which the paint target will be sharpened.")]
+	[DDLRegistration(0xc947f72du, "Brush Parameter (Speed)", "This is the speed with which the paint target will be sharpened.")]
 	public float BrushParamSharpenSpeed { get; set; } = 1.00f;
 
-	[DDLRegistration(0x017e1e59u, "Brush HLSL Parameters", "These values will be passed into the HLSL brush shader as a float4 when using an HLSL brush.")]
+	[DDLRegistration(0xc5748638u, "Brush HLSL Parameters", "These values will be passed into the HLSL brush shader as a float4 when using an HLSL brush.")]
 	public DDLVector4? BrushParamHlsl { get; set; } = default;
 
-	[DDLRegistration(0x017e1e59u, description: "This is the radius of the brush in meters.")]
+	[DDLRegistration(0x0504203du, description: "This is the radius of the brush in meters.")]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x017e1e59u, "Radius", "This is the radius when using a clipboard brush (it scales the clipboard data).")]
+	[DDLRegistration(0x69a9a2e8u, "Radius", "This is the radius when using a clipboard brush (it scales the clipboard data).")]
 	public float RadiusClipboard { get; set; } = 1.00f;
 
-	[DDLRegistration(0x017e1e59u, "Radius", "This is the radius of the brush in meters in the X and Z planes.")]
+	[DDLRegistration(0x1a5a6b7fu, "Radius", "This is the radius of the brush in meters in the X and Z planes.")]
 	public DDLVector2? RadiusVec { get; set; } = default;
 
-	[DDLRegistration(0x017e1e59u, "Radius", "This is the radius when using a clipboard brush (it scales the clipboard data).")]
+	[DDLRegistration(0x6c507576u, "Radius", "This is the radius when using a clipboard brush (it scales the clipboard data).")]
 	public DDLVector3? RadiusVecClipboard { get; set; } = default;
 
-	[DDLRegistration(0x017e1e59u, description: "This is the is the percentage of the radius (starting at the outer edge) that will fade.")]
+	[DDLRegistration(0x4e874fc0u, description: "This is the is the percentage of the radius (starting at the outer edge) that will fade.")]
 	public float Falloff { get; set; } = 0.35f;
 
-	[DDLRegistration(0x017e1e59u, "Falloff", "This is the is the percentage of the radius (starting at the outer edge) that will fade when using a clipboard brush.")]
+	[DDLRegistration(0xdbba3ef2u, "Falloff", "This is the is the percentage of the radius (starting at the outer edge) that will fade when using a clipboard brush.")]
 	public float FalloffClipboard { get; set; } = 0.35f;
 
-	[DDLRegistration(0x017e1e59u, "Falloff Easing Mode", "This determines how the falloff will behave.")]
+	[DDLRegistration(0x34747428u, "Falloff Easing Mode", "This determines how the falloff will behave.")]
 	public x93b1b93c FalloffEasingMode { get; set; } = x93b1b93c.Linear;
 
-	[DDLRegistration(0x017e1e59u, "Falloff Easing Mode", "This determines how the falloff will behave when using a clipboard brush.")]
+	[DDLRegistration(0x7ddc5cc9u, "Falloff Easing Mode", "This determines how the falloff will behave when using a clipboard brush.")]
 	public x93b1b93c FalloffEasingModeClipboard { get; set; } = x93b1b93c.None;
 
-	[DDLRegistration(0x017e1e59u, "Rotation", "This is the rotation of the brush bitmap in degrees.")]
+	[DDLRegistration(0xd160fdacu, "Rotation", "This is the rotation of the brush bitmap in degrees.")]
 	public float RotationDegrees { get; set; } = 0.00f;
 
-	[DDLRegistration(0x017e1e59u, "Rotation", "This is the rotation of the brush bitmap in degrees when using a clipboard brush.")]
+	[DDLRegistration(0xdf09a197u, "Rotation", "This is the rotation of the brush bitmap in degrees when using a clipboard brush.")]
 	public float RotationDegreesClipboard { get; set; } = 0.00f;
 
-	[DDLRegistration(0x017e1e59u, "Height Clamp", "This will clamp the height of certain brushes to the specified value.")]
+	[DDLRegistration(0x9e662495u, "Height Clamp", "This will clamp the height of certain brushes to the specified value.")]
 	public x051c5867 HeightClamp { get; set; } = x051c5867.Off;
 
-	[DDLRegistration(0x017e1e59u, "Height Clamp Value", "This is the value at which certain heights will be clamped.")]
+	[DDLRegistration(0x8fba0022u, "Height Clamp Value", "This is the value at which certain heights will be clamped.")]
 	public float HeightClampValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0x017e1e59u, "Wheel Control", "This determines the behavior when scrolling the mouse wheel.")]
+	[DDLRegistration(0x1bea956bu, "Wheel Control", "This determines the behavior when scrolling the mouse wheel.")]
 	public x48c27c27 WheelControl { get; set; } = x48c27c27.RadiusX;
 
-	[DDLRegistration(0x017e1e59u, "Debug Options", "Debug options for rendering terrain.")]
+	[DDLRegistration(0x856074f2u, "Debug Options", "Debug options for rendering terrain.")]
 	public TerrainPaintingDebugOptions? DebugOptions { get; set; } = default;
 
 	public static TerrainPaintingPref Create(DDLObject ddl) => new(ddl);

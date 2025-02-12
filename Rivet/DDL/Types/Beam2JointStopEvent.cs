@@ -20,13 +20,13 @@ public class Beam2JointStopEvent : EventBase, IDDLObjectType<Beam2JointStopEvent
 		BeamHash = ddl.GetValue<uint>(0x26a7db04u, BeamHash);
 	}
 
-	[DDLRegistration(0x2ab7ad7fu, description: "Optional.  Locator name in model where the beam starts.")]
+	[DDLRegistration(0x45890f60u, description: "Optional.  Locator name in model where the beam starts.")]
 	public string? StartLocator { get; set; } = default;
 
-	[DDLRegistration(0x2ab7ad7fu, description: "Optional.  Locator name in model where the beam ends.")]
+	[DDLRegistration(0xe7e59581u, description: "Optional.  Locator name in model where the beam ends.")]
 	public string? EndLocator { get; set; } = default;
 
-	[DDLRegistration(0x2ab7ad7fu, description: "Hash to identify the beam type")]
+	[DDLRegistration(0x26a7db04u, description: "Hash to identify the beam type")]
 	public uint BeamHash { get; set; } = 0x00000000;
 
 	public new static Beam2JointStopEvent Create(DDLObject ddl) => new(ddl);

@@ -28,37 +28,37 @@ public class CameraAimContextConfig : ConfigBase, IDDLObjectType<CameraAimContex
 		OverridesHeroConfig = ddl.GetValue<bool>(0x8223193eu, OverridesHeroConfig);
 	}
 
-	[DDLRegistration(0xcb83b8aau)]
+	[DDLRegistration(0xbf1a570au)]
 	public float FieldOfViewStand { get; set; } = 75.90f;
 
-	[DDLRegistration(0xcb83b8aau)]
+	[DDLRegistration(0x9d94a803u)]
 	public float StandPivotHeight { get; set; } = 1.60f;
 
-	[DDLRegistration(0xcb83b8aau)]
+	[DDLRegistration(0xfc1f45a9u)]
 	public float TargetSpeedFactorDist { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcb83b8aau)]
+	[DDLRegistration(0x9bf3c383u)]
 	public float TargetSpeedFactorMinSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcb83b8aau)]
+	[DDLRegistration(0x7d936c62u)]
 	public float TargetSpeedFactorMaxSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xcb83b8aau, "Stand Level Offset")]
+	[DDLRegistration(0x597528abu, "Stand Level Offset")]
 	public DDLVector3? StandOffsetLevel { get; set; } = default;
 
-	[DDLRegistration(0xcb83b8aau, "Stand Down  Offset")]
+	[DDLRegistration(0x80fff9e0u, "Stand Down  Offset")]
 	public DDLVector3? StandOffsetDown { get; set; } = default;
 
-	[DDLRegistration(0xcb83b8aau, "Stand Up    Offset")]
+	[DDLRegistration(0xff496313u, "Stand Up    Offset")]
 	public DDLVector3? StandOffsetUp { get; set; } = default;
 
-	[DDLRegistration(0xcb83b8aau)]
+	[DDLRegistration(0xb1dd8d49u)]
 	public CameraAimContextBlend? BlendIn { get; set; } = default;
 
-	[DDLRegistration(0xcb83b8aau)]
+	[DDLRegistration(0xf56226b4u)]
 	public CameraAimContextBlend? BlendOut { get; set; } = default;
 
-	[DDLRegistration(0xcb83b8aau)]
+	[DDLRegistration(0x8223193eu)]
 	public bool OverridesHeroConfig { get; set; } = false;
 
 	public new static CameraAimContextConfig Create(DDLObject ddl) => new(ddl);

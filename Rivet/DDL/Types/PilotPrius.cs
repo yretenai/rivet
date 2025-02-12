@@ -19,10 +19,10 @@ public class PilotPrius : DDLObjectType, IDDLObjectType<PilotPrius> {
 		Horns = ddl.GetValue<RivetAssetId>(0x70713a94u, Horns);
 	}
 
-	[DDLRegistration(0x715bb841u)]
+	[DDLRegistration(0x33103033u)]
 	public bool Dies { get; set; } = false;
 
-	[DDLRegistration(0x715bb841u)]
+	[DDLRegistration(0x70713a94u)]
 	public RivetAssetId Horns { get; set; } = default;
 
 	public static PilotPrius Create(DDLObject ddl) => new(ddl);

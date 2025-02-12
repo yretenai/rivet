@@ -21,16 +21,16 @@ public class HeroSuperMeterBuildUpData : DDLObjectType, IDDLObjectType<HeroSuper
 		OutOfCombat = ddl.GetObject<HeroSuperMeterDecayData>(0xbbbcb05fu);
 	}
 
-	[DDLRegistration(0x0aa02d2du, "Per Damage Rate", "How much meter you gain per point of damage you inflict.")]
+	[DDLRegistration(0x3c99607bu, "Per Damage Rate", "How much meter you gain per point of damage you inflict.")]
 	public float PerDamageRate { get; set; } = 1.00f;
 
-	[DDLRegistration(0x0aa02d2du, "Can Accrue While Using", "If true the super meter can build even while it is being used")]
+	[DDLRegistration(0x5af3ac07u, "Can Accrue While Using", "If true the super meter can build even while it is being used")]
 	public bool CanAccrueWhileUsing { get; set; } = false;
 
-	[DDLRegistration(0x0aa02d2du, "In Combat")]
+	[DDLRegistration(0xb031a93cu, "In Combat")]
 	public HeroSuperMeterDecayData? InCombat { get; set; } = default;
 
-	[DDLRegistration(0x0aa02d2du, "Out Of Combat")]
+	[DDLRegistration(0xbbbcb05fu, "Out Of Combat")]
 	public HeroSuperMeterDecayData? OutOfCombat { get; set; } = default;
 
 	public static HeroSuperMeterBuildUpData Create(DDLObject ddl) => new(ddl);

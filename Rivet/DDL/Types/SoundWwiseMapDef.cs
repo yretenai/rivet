@@ -21,16 +21,16 @@ public class SoundWwiseMapDef : DDLObjectType, IDDLObjectType<SoundWwiseMapDef> 
 		LanguageMask = ddl.GetValue<uint>(0x803ee258u, LanguageMask);
 	}
 
-	[DDLRegistration(0x05c46079u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x05c46079u)]
+	[DDLRegistration(0x6bbe2d12u)]
 	public uint WwiseId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x05c46079u)]
+	[DDLRegistration(0xe79ebf67u)]
 	public uint PlatformMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x05c46079u)]
+	[DDLRegistration(0x803ee258u)]
 	public uint LanguageMask { get; set; } = 0x00000000;
 
 	public static SoundWwiseMapDef Create(DDLObject ddl) => new(ddl);

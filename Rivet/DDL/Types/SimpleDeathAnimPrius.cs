@@ -18,7 +18,7 @@ public class SimpleDeathAnimPrius : DDLObjectType, IDDLObjectType<SimpleDeathAni
 		MaxHealth = ddl.GetValue<float>(0x72aa54beu, MaxHealth);
 	}
 
-	[DDLRegistration(0x95bbae58u)]
+	[DDLRegistration(0x72aa54beu)]
 	public float MaxHealth { get; set; } = 1.00f;
 
 	public static SimpleDeathAnimPrius Create(DDLObject ddl) => new(ddl);

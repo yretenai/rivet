@@ -30,43 +30,43 @@ public class SessionTransientData : DDLObjectType, IDDLObjectType<SessionTransie
 		CurrentAtmosphere = ddl.GetValue<RivetAssetId>(0x320bed04u, CurrentAtmosphere);
 	}
 
-	[DDLRegistration(0x2e337c9eu)]
+	[DDLRegistration(0x5498ef5eu)]
 	public DDLVector3? CameraPosition { get; set; } = default;
 
-	[DDLRegistration(0x2e337c9eu)]
+	[DDLRegistration(0x3bc8935au)]
 	public DDLVector3? CameraRotation { get; set; } = default;
 
-	[DDLRegistration(0x2e337c9eu, description: "Current tool mode setting")]
+	[DDLRegistration(0x791bd135u, description: "Current tool mode setting")]
 	public string? ToolMode { get; set; } = "unknown";
 
-	[DDLRegistration(0x2e337c9eu, description: "Used to show models for a particular platform in the tools as part of asset swapping; should map to an item in AssetSwapPlatform, otherwise it implies no filtering")]
+	[DDLRegistration(0x92542397u, description: "Used to show models for a particular platform in the tools as part of asset swapping; should map to an item in AssetSwapPlatform, otherwise it implies no filtering")]
 	public string? PlatformFilter { get; set; } = default;
 
-	[DDLRegistration(0x2e337c9eu)]
+	[DDLRegistration(0xd961a04fu)]
 	public float RequestBrightness { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2e337c9eu)]
+	[DDLRegistration(0x49b6e044u)]
 	public float CurrentBrightness { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2e337c9eu)]
+	[DDLRegistration(0xcce9c124u)]
 	public SceneNodePropertyLinkMode? LinkMode { get; set; } = default;
 
-	[DDLRegistration(0x2e337c9eu, description: "Growl a message in the 2D UI")]
+	[DDLRegistration(0xcdbfbb37u, description: "Growl a message in the 2D UI")]
 	public Dictionary<RivetAssetId, string?> UserMessages { get; set; } = [];
 
-	[DDLRegistration(0x2e337c9eu, description: "Activity and state changes to help debugging")]
+	[DDLRegistration(0x88c05679u, description: "Activity and state changes to help debugging")]
 	public List<string?> DebugLog { get; set; } = [];
 
-	[DDLRegistration(0x2e337c9eu)]
+	[DDLRegistration(0x4f2f7f71u)]
 	public Dictionary<RivetAssetId, bool> ActiveSoundEventIds { get; set; } = [];
 
-	[DDLRegistration(0x2e337c9eu)]
+	[DDLRegistration(0x1d1cfb2cu)]
 	public Dictionary<RivetAssetId, SessionSoundData?> RequestPlaySoundEvents { get; set; } = [];
 
-	[DDLRegistration(0x2e337c9eu)]
+	[DDLRegistration(0x3ec5852eu)]
 	public Dictionary<RivetAssetId, string?> RequestStopSoundEvents { get; set; } = [];
 
-	[DDLRegistration(0x2e337c9eu)]
+	[DDLRegistration(0x320bed04u)]
 	public RivetAssetId CurrentAtmosphere { get; set; } = default;
 
 	public static SessionTransientData Create(DDLObject ddl) => new(ddl);

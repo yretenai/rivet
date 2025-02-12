@@ -19,10 +19,10 @@ public class FossilizeDeathEvent : EventBase, IDDLObjectType<FossilizeDeathEvent
 		ApplyDuration = ddl.GetValue<float>(0xb4d0d844u, ApplyDuration);
 	}
 
-	[DDLRegistration(0xc2c4fe47u)]
+	[DDLRegistration(0x8f28295eu)]
 	public float ApplyDelay { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc2c4fe47u)]
+	[DDLRegistration(0xb4d0d844u)]
 	public float ApplyDuration { get; set; } = 0.00f;
 
 	public new static FossilizeDeathEvent Create(DDLObject ddl) => new(ddl);

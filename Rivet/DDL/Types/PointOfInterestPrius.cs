@@ -18,7 +18,7 @@ public class PointOfInterestPrius : DDLObjectType, IDDLObjectType<PointOfInteres
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0xafe8961du, "Locator", "Optional locator name.")]
+	[DDLRegistration(0x7bac1d57u, "Locator", "Optional locator name.")]
 	public string? Locator { get; set; } = default;
 
 	public static PointOfInterestPrius Create(DDLObject ddl) => new(ddl);

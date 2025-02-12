@@ -21,16 +21,16 @@ public class IMGuiGraphDraw : DDLObjectType, IDDLObjectType<IMGuiGraphDraw> {
 		MaxRows = ddl.GetValue<uint>(0xf7106211u, MaxRows);
 	}
 
-	[DDLRegistration(0x9716c5b9u)]
+	[DDLRegistration(0xad24a38fu)]
 	public List<IMGuiGraphDrawColumn?> Columns { get; set; } = [];
 
-	[DDLRegistration(0x9716c5b9u)]
+	[DDLRegistration(0x29ecac7du)]
 	public List<QuickNavItem?> QuickNavList { get; set; } = [];
 
-	[DDLRegistration(0x9716c5b9u)]
+	[DDLRegistration(0x8fbefd53u)]
 	public bool FirstDraw { get; set; } = false;
 
-	[DDLRegistration(0x9716c5b9u)]
+	[DDLRegistration(0xf7106211u)]
 	public uint MaxRows { get; set; } = 0x00000000;
 
 	public static IMGuiGraphDraw Create(DDLObject ddl) => new(ddl);

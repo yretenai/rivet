@@ -37,64 +37,64 @@ public class ShotLightningRodPrius : BasicBulletPrius, IDDLObjectType<ShotLightn
 		ArcEndJoint = ddl.GetString(0x53d45368) ?? ArcEndJoint;
 	}
 
-	[DDLRegistration(0x22410692u, "Attached Rod Actor")]
+	[DDLRegistration(0xaf88f1cbu, "Attached Rod Actor")]
 	public RivetAssetId AttachedRodActor { get; set; } = default;
 
-	[DDLRegistration(0x22410692u, "Embed Distance")]
+	[DDLRegistration(0x2b13b767u, "Embed Distance")]
 	public float EmbedDistance { get; set; } = 0.08f;
 
-	[DDLRegistration(0x22410692u, "Percent Full To Explode On Death")]
+	[DDLRegistration(0x386738bau, "Percent Full To Explode On Death")]
 	public float PercentToExplodeOnDeath { get; set; } = 0.75f;
 
-	[DDLRegistration(0x22410692u, "Explosion Actor")]
+	[DDLRegistration(0x3f1e847eu, "Explosion Actor")]
 	public RivetAssetId ExplosionActor { get; set; } = default;
 
-	[DDLRegistration(0x22410692u, "Explosion Arc Radius")]
+	[DDLRegistration(0xf6d5141fu, "Explosion Arc Radius")]
 	public float ArcRadius { get; set; } = 3.00f;
 
-	[DDLRegistration(0x22410692u, "Max Arcs")]
+	[DDLRegistration(0x8fec7d16u, "Max Arcs")]
 	public uint MaxArcs { get; set; } = 0x00000003;
 
-	[DDLRegistration(0x22410692u, "Explosion Damage")]
+	[DDLRegistration(0xb06dc6b0u, "Explosion Damage")]
 	public float ExplosionDamage { get; set; } = 25.00f;
 
-	[DDLRegistration(0x22410692u, "Explosion Status")]
+	[DDLRegistration(0xdaa5f7c0u, "Explosion Status")]
 	public float ExplosionStatus { get; set; } = 30.00f;
 
-	[DDLRegistration(0x22410692u, "Explosion Knockback Level")]
+	[DDLRegistration(0x3f5dbe92u, "Explosion Knockback Level")]
 	public KnockbackLevels ExplosionKnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x22410692u, "Explosion Knockback Amount")]
+	[DDLRegistration(0xc6b99b0bu, "Explosion Knockback Amount")]
 	public float ExplosionKnockbackAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x22410692u, "Explosion Delay")]
+	[DDLRegistration(0xc9f1521cu, "Explosion Delay")]
 	public float ExplosionDelay { get; set; } = 0.50f;
 
-	[DDLRegistration(0x22410692u, "Explosion Post Delay")]
+	[DDLRegistration(0x79321297u, "Explosion Post Delay")]
 	public float ExplosionPostDelay { get; set; } = 0.50f;
 
-	[DDLRegistration(0x22410692u, "Arc Actor")]
+	[DDLRegistration(0x3563f02au, "Arc Actor")]
 	public RivetAssetId ArcActor { get; set; } = default;
 
-	[DDLRegistration(0x22410692u, "Arc Damage")]
+	[DDLRegistration(0xdc612e29u, "Arc Damage")]
 	public float ArcDamage { get; set; } = 25.00f;
 
-	[DDLRegistration(0x22410692u, "Arc Status")]
+	[DDLRegistration(0xb6a91f59u, "Arc Status")]
 	public float ArcStatus { get; set; } = 30.00f;
 
-	[DDLRegistration(0x22410692u, "Arc Knockback Level")]
+	[DDLRegistration(0x14dda30fu, "Arc Knockback Level")]
 	public KnockbackLevels ArcKnockbackLevel { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0x22410692u, "Arc Knockback Amount")]
+	[DDLRegistration(0x482cf4efu, "Arc Knockback Amount")]
 	public float ArcKnockbackAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x22410692u, "Arc Extend Time")]
+	[DDLRegistration(0x90fd4e5fu, "Arc Extend Time")]
 	public float ArcExtendTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0x22410692u, "Arc Lifetime")]
+	[DDLRegistration(0x41e0ccbcu, "Arc Lifetime")]
 	public float ArcLifetime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x22410692u, "Arc End Joint")]
+	[DDLRegistration(0x53d45368u, "Arc End Joint")]
 	public string? ArcEndJoint { get; set; } = "";
 
 	public new static ShotLightningRodPrius Create(DDLObject ddl) => new(ddl);

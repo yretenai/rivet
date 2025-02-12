@@ -35,58 +35,58 @@ public class CoherentSettings : DDLObjectType, IDDLObjectType<CoherentSettings> 
 		ShowUsabilityInputs = ddl.GetValue<bool>(0x39f410d2u, ShowUsabilityInputs);
 	}
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0x393a3cefu)]
 	public bool RenderEnable { get; set; } = true;
 
-	[DDLRegistration(0xf556693du, "Show Memory Graph", "Toggle the coherent memory graph on/off.")]
+	[DDLRegistration(0xd2459a46u, "Show Memory Graph", "Toggle the coherent memory graph on/off.")]
 	public bool ShowMemoryGraph { get; set; } = false;
 
-	[DDLRegistration(0xf556693du, "Show Memory Metrics", "Tottle the memory metrics, this can impact performance.")]
+	[DDLRegistration(0x884d8f5du, "Show Memory Metrics", "Tottle the memory metrics, this can impact performance.")]
 	public bool ShowMemoryMetrics { get; set; } = false;
 
-	[DDLRegistration(0xf556693du, "Show Frame Graph", "Toggle the coherent frame graph on/off.")]
+	[DDLRegistration(0x218cf15fu, "Show Frame Graph", "Toggle the coherent frame graph on/off.")]
 	public bool ShowFrameGraph { get; set; } = false;
 
-	[DDLRegistration(0xf556693du, "Show Graphics Memory Graph", "Toggle the coherent graphics memory graph on/off.")]
+	[DDLRegistration(0xbd3b7a10u, "Show Graphics Memory Graph", "Toggle the coherent graphics memory graph on/off.")]
 	public bool ShowGraphicsMemoryGraph { get; set; } = false;
 
-	[DDLRegistration(0xf556693du, "Show Backend Textures", "Show the Textures allocated by coherent at runtime.")]
+	[DDLRegistration(0xbe285851u, "Show Backend Textures", "Show the Textures allocated by coherent at runtime.")]
 	public bool ShowBackendTextures { get; set; } = false;
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0xd4157a52u)]
 	public uint Memory { get; set; } = 0x01400000;
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0xb1175fe8u)]
 	public bool UseSmallBlock { get; set; } = false;
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0x4328c8ddu)]
 	public uint GraphicsMemoryLarge { get; set; } = 0x0f400000;
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0x6f060b70u)]
 	public uint GraphicsMemorySmall { get; set; } = 0x05600000;
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0xfa8e48d1u)]
 	public bool GraphicsMemoryMetrics { get; set; } = true;
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0x48381e78u)]
 	public bool LoggingEnabled { get; set; } = false;
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0xbf62899au)]
 	public bool DebuggingEnabled { get; set; } = false;
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0xc07dea0fu)]
 	public bool SoundLoggingEnabled { get; set; } = false;
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0x272d0a0eu)]
 	public string? DefaultStyleFontFamily { get; set; } = default;
 
-	[DDLRegistration(0xf556693du)]
+	[DDLRegistration(0xfa68488au)]
 	public bool ReadBuiltFiles { get; set; } = true;
 
-	[DDLRegistration(0xf556693du, "Show Usability Inputs", "Toggle the Usability Inputs UI on/off.")]
+	[DDLRegistration(0x39f410d2u, "Show Usability Inputs", "Toggle the Usability Inputs UI on/off.")]
 	public bool ShowUsabilityInputs { get; set; } = false;
 
 	public static CoherentSettings Create(DDLObject ddl) => new(ddl);

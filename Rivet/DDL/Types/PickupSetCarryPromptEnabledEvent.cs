@@ -18,7 +18,7 @@ public class PickupSetCarryPromptEnabledEvent : EventBase, IDDLObjectType<Pickup
 		SetEnabled = ddl.GetValue<bool>(0x19040e33u, SetEnabled);
 	}
 
-	[DDLRegistration(0x949f4c19u)]
+	[DDLRegistration(0x19040e33u)]
 	public bool SetEnabled { get; set; } = true;
 
 	public new static PickupSetCarryPromptEnabledEvent Create(DDLObject ddl) => new(ddl);

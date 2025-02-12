@@ -19,10 +19,10 @@ public class DebugActorSystemConfig : ConfigBase, IDDLObjectType<DebugActorSyste
 		DebugActor3dViewWhiteList = ddl.GetObjects<DebugActor3dViewWhiteListItem>(0xbb65844eu);
 	}
 
-	[DDLRegistration(0xfe879f44u, "Event Filter List")]
+	[DDLRegistration(0x95739137u, "Event Filter List")]
 	public List<DebugActorEventFilter?> FilterList { get; set; } = [];
 
-	[DDLRegistration(0xfe879f44u, "3D View White List")]
+	[DDLRegistration(0xbb65844eu, "3D View White List")]
 	public List<DebugActor3dViewWhiteListItem?> DebugActor3dViewWhiteList { get; set; } = [];
 
 	public new static DebugActorSystemConfig Create(DDLObject ddl) => new(ddl);

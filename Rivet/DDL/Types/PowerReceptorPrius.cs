@@ -19,10 +19,10 @@ public class PowerReceptorPrius : DDLObjectType, IDDLObjectType<PowerReceptorPri
 		SnapDistance = ddl.GetValue<float>(0xa76d9bf0u, SnapDistance);
 	}
 
-	[DDLRegistration(0x026ac70fu, description: "How close clank bots must be to power.")]
+	[DDLRegistration(0x6e7b6f43u, description: "How close clank bots must be to power.")]
 	public float PowerDistance { get; set; } = 3.00f;
 
-	[DDLRegistration(0x026ac70fu, description: "How close clank throwing will snap to this receptor.")]
+	[DDLRegistration(0xa76d9bf0u, description: "How close clank throwing will snap to this receptor.")]
 	public float SnapDistance { get; set; } = 6.00f;
 
 	public static PowerReceptorPrius Create(DDLObject ddl) => new(ddl);

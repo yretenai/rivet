@@ -25,28 +25,28 @@ public class ECMInputNodeDef : DDLObjectType, IDDLObjectType<ECMInputNodeDef> {
 		ValueArrayAux = ddl.GetStrings(0xd23024fbu);
 	}
 
-	[DDLRegistration(0xefe3bc4eu)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xefe3bc4eu)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0xefe3bc4eu)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0xefe3bc4eu)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = false;
 
-	[DDLRegistration(0xefe3bc4eu)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xf5eea2a0 Type { get; set; } = xf5eea2a0.TriggeringEvent;
 
-	[DDLRegistration(0xefe3bc4eu)]
+	[DDLRegistration(0x042494f5u)]
 	public string? Value { get; set; } = default;
 
-	[DDLRegistration(0xefe3bc4eu)]
+	[DDLRegistration(0x4f31b448u)]
 	public List<string?> ValueArray { get; set; } = [];
 
-	[DDLRegistration(0xefe3bc4eu)]
+	[DDLRegistration(0xd23024fbu)]
 	public List<string?> ValueArrayAux { get; set; } = [];
 
 	public static ECMInputNodeDef Create(DDLObject ddl) => new(ddl);

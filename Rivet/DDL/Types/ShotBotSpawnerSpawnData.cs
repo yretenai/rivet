@@ -26,31 +26,31 @@ public class ShotBotSpawnerSpawnData : ShotSpawnData, IDDLObjectType<ShotBotSpaw
 		Facing = ddl.GetObject<DDLVector3>(0xb37847eeu);
 	}
 
-	[DDLRegistration(0xa0fb4202u)]
+	[DDLRegistration(0x9b97480bu)]
 	public ulong Shot { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0xa0fb4202u)]
+	[DDLRegistration(0xe63ca700u)]
 	public uint CombatMarkup { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa0fb4202u)]
+	[DDLRegistration(0x011813bcu)]
 	public uint GroundActor { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa0fb4202u)]
+	[DDLRegistration(0xc0dd8c72u)]
 	public uint SpawnLocation { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa0fb4202u)]
+	[DDLRegistration(0xd3cc74d8u)]
 	public uint SpawnFactory { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa0fb4202u)]
+	[DDLRegistration(0x0c9266b7u)]
 	public int ZoneIndex { get; set; } = 0;
 
-	[DDLRegistration(0xa0fb4202u)]
+	[DDLRegistration(0xb6e788d7u)]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xa0fb4202u)]
+	[DDLRegistration(0xbc2d5985u)]
 	public DDLVector3? Position { get; set; } = default;
 
-	[DDLRegistration(0xa0fb4202u)]
+	[DDLRegistration(0xb37847eeu)]
 	public DDLVector3? Facing { get; set; } = default;
 
 	public new static ShotBotSpawnerSpawnData Create(DDLObject ddl) => new(ddl);

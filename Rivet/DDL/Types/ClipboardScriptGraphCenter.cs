@@ -19,10 +19,10 @@ public class ClipboardScriptGraphCenter : DDLObjectType, IDDLObjectType<Clipboar
 		Y = ddl.GetValue<float>(0x125a51d3u, Y);
 	}
 
-	[DDLRegistration(0xac1ba78cu)]
+	[DDLRegistration(0x655d6145u)]
 	public float X { get; set; } = 0.00f;
 
-	[DDLRegistration(0xac1ba78cu)]
+	[DDLRegistration(0x125a51d3u)]
 	public float Y { get; set; } = 0.00f;
 
 	public static ClipboardScriptGraphCenter Create(DDLObject ddl) => new(ddl);

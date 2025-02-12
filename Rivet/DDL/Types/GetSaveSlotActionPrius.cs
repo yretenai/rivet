@@ -18,7 +18,7 @@ public class GetSaveSlotActionPrius : DDLObjectType, IDDLObjectType<GetSaveSlotA
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xaca2ab80u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
 	public static GetSaveSlotActionPrius Create(DDLObject ddl) => new(ddl);

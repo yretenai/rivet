@@ -18,7 +18,7 @@ public class ActorGenderActionPrius : DDLObjectType, IDDLObjectType<ActorGenderA
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x5182462cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
 	public static ActorGenderActionPrius Create(DDLObject ddl) => new(ddl);

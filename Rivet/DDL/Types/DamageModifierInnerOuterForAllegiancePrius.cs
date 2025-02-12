@@ -18,7 +18,7 @@ public class DamageModifierInnerOuterForAllegiancePrius : DamageModifierInnerOut
 		AllegianceTest = ddl.GetObject<AllegianceWithRelationPair>(0x882baae6u);
 	}
 
-	[DDLRegistration(0xc528b7beu, description: "This test against the damage target must pass to apply this modifier.")]
+	[DDLRegistration(0x882baae6u, description: "This test against the damage target must pass to apply this modifier.")]
 	public AllegianceWithRelationPair? AllegianceTest { get; set; } = default;
 
 	public new static DamageModifierInnerOuterForAllegiancePrius Create(DDLObject ddl) => new(ddl);

@@ -25,28 +25,28 @@ public class StickersData : DDLObjectType, IDDLObjectType<StickersData> {
 		ThumbnailRef = ddl.GetObject<AssetReferenceDef>(0x7412ab61u);
 	}
 
-	[DDLRegistration(0x6d7a747au)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x6d7a747au)]
+	[DDLRegistration(0x7c6feb68u)]
 	public string? MissionLock { get; set; } = default;
 
-	[DDLRegistration(0x6d7a747au, description: "Unlock sticker when this Objective is complete. (Unlocked by Progression box should be checked)")]
+	[DDLRegistration(0x81d88e93u, description: "Unlock sticker when this Objective is complete. (Unlocked by Progression box should be checked)")]
 	public string? ObjectiveLock { get; set; } = default;
 
-	[DDLRegistration(0x6d7a747au, description: "Unlock sticker when this suit is purchased. (Unlocked by Progression box should be checked)")]
+	[DDLRegistration(0x26fcf857u, description: "Unlock sticker when this suit is purchased. (Unlocked by Progression box should be checked)")]
 	public string? SuitLock { get; set; } = default;
 
-	[DDLRegistration(0x6d7a747au, "Unlocked by Progression", "Don't automatically include this sticker.  It will be included when special conditions are met.")]
+	[DDLRegistration(0x2a7064c9u, "Unlocked by Progression", "Don't automatically include this sticker.  It will be included when special conditions are met.")]
 	public bool UnlockedByProgression { get; set; } = false;
 
-	[DDLRegistration(0x6d7a747au, "Unlocked by an Entitlement", "Don't automatically include this sticker.  It will be included if entitled.")]
+	[DDLRegistration(0x0586b49bu, "Unlocked by an Entitlement", "Don't automatically include this sticker.  It will be included if entitled.")]
 	public bool UnlockedByEntitlement { get; set; } = false;
 
-	[DDLRegistration(0x6d7a747au)]
+	[DDLRegistration(0xdcc3b907u)]
 	public AssetReferenceDef? StickerRef { get; set; } = default;
 
-	[DDLRegistration(0x6d7a747au)]
+	[DDLRegistration(0x7412ab61u)]
 	public AssetReferenceDef? ThumbnailRef { get; set; } = default;
 
 	public static StickersData Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class QueryVolumeShapeCube : QueryVolumeShape, IDDLObjectType<QueryVolume
 		Length = ddl.GetValue<float>(0x3f05d0d5u, Length);
 	}
 
-	[DDLRegistration(0x0966f441u, description: "Length of one side of the cube")]
+	[DDLRegistration(0x3f05d0d5u, description: "Length of one side of the cube")]
 	public float Length { get; set; } = 1.00f;
 
 	public new static QueryVolumeShapeCube Create(DDLObject ddl) => new(ddl);

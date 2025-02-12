@@ -20,13 +20,13 @@ public class CameraCollisionConePrius : CameraCollisionBasePrius, IDDLObjectType
 		CastAngle = ddl.GetValue<float>(0x570a8e97u, CastAngle);
 	}
 
-	[DDLRegistration(0x004ce09eu)]
+	[DDLRegistration(0xe24c4bdcu)]
 	public float CollRadiusNarrow { get; set; } = 0.00f;
 
-	[DDLRegistration(0x004ce09eu)]
+	[DDLRegistration(0x91ae75f7u)]
 	public float CollRadiusBroad { get; set; } = 0.00f;
 
-	[DDLRegistration(0x004ce09eu)]
+	[DDLRegistration(0x570a8e97u)]
 	public float CastAngle { get; set; } = 0.00f;
 
 	public new static CameraCollisionConePrius Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class DistanceHeuristics : DDLObjectType, IDDLObjectType<DistanceHeuristi
 		BoostMul = ddl.GetValue<float>(0xbd9057dbu, BoostMul);
 	}
 
-	[DDLRegistration(0x69b1eeb0u, description: "How much we prioritize the closest guy.")]
+	[DDLRegistration(0x39b51b26u, description: "How much we prioritize the closest guy.")]
 	public float Weight { get; set; } = 3.00f;
 
-	[DDLRegistration(0x69b1eeb0u, description: "Inside of this range Boost Mul will kick in.")]
+	[DDLRegistration(0xbee81951u, description: "Inside of this range Boost Mul will kick in.")]
 	public float BoostRange { get; set; } = 8.00f;
 
-	[DDLRegistration(0x69b1eeb0u, description: "How much more to prioritize very close targets.")]
+	[DDLRegistration(0xbd9057dbu, description: "How much more to prioritize very close targets.")]
 	public float BoostMul { get; set; } = 4.00f;
 
 	public static DistanceHeuristics Create(DDLObject ddl) => new(ddl);

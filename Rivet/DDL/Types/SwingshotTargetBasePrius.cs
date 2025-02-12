@@ -21,16 +21,16 @@ public class SwingshotTargetBasePrius : EnabledComponentBasePrius, IDDLObjectTyp
 		DisallowGroup = ddl.GetValue<RivetAssetId>(0x2eb04317u, DisallowGroup);
 	}
 
-	[DDLRegistration(0xdac6946fu, "Cable Attach Locator", "Name of the locator on this actor to which the cable should attach.")]
+	[DDLRegistration(0xf6f36ec0u, "Cable Attach Locator", "Name of the locator on this actor to which the cable should attach.")]
 	public string? CableAttachLocator { get; set; } = default;
 
-	[DDLRegistration(0xdac6946fu, "Min Range Override", "Min range to use instead (defaults to zero).")]
+	[DDLRegistration(0x0da98835u, "Min Range Override", "Min range to use instead (defaults to zero).")]
 	public float MinRangeOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0xdac6946fu, "Max Range Override", "Max range to use instead of whatever is set in the hero traversal config.")]
+	[DDLRegistration(0x5c503368u, "Max Range Override", "Max range to use instead of whatever is set in the hero traversal config.")]
 	public float MaxRangeOverride { get; set; } = -1.00f;
 
-	[DDLRegistration(0xdac6946fu, "Disallow Volume Actor Group")]
+	[DDLRegistration(0x2eb04317u, "Disallow Volume Actor Group")]
 	public RivetAssetId DisallowGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static SwingshotTargetBasePrius Create(DDLObject ddl) => new(ddl);

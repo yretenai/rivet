@@ -18,7 +18,7 @@ public class CollectibleInstanceSaveData : DDLObjectType, IDDLObjectType<Collect
 		Completed = ddl.GetValue<bool>(0xb805c362u, Completed);
 	}
 
-	[DDLRegistration(0xa0c2711bu)]
+	[DDLRegistration(0xb805c362u)]
 	public bool Completed { get; set; } = false;
 
 	public static CollectibleInstanceSaveData Create(DDLObject ddl) => new(ddl);

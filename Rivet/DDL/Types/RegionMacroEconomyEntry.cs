@@ -19,10 +19,10 @@ public class RegionMacroEconomyEntry : DDLObjectType, IDDLObjectType<RegionMacro
 		EconConfig = ddl.GetValue<RivetAssetId>(0xda3a4a5cu, EconConfig);
 	}
 
-	[DDLRegistration(0x39a2e421u, description: "When guys spawn in these regions, they use these economy values")]
+	[DDLRegistration(0xa38d1acbu, description: "When guys spawn in these regions, they use these economy values")]
 	public List<RivetAssetId> Regions { get; set; } = [];
 
-	[DDLRegistration(0x39a2e421u)]
+	[DDLRegistration(0xda3a4a5cu)]
 	public RivetAssetId EconConfig { get; set; } = default;
 
 	public static RegionMacroEconomyEntry Create(DDLObject ddl) => new(ddl);

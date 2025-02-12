@@ -18,7 +18,7 @@ public class StatusEffectDamageModWrapper : DDLObjectType, IDDLObjectType<Status
 		DamageMod = ddl.GetObject<DamageModifierIncomingPrius>(0xa7e16a23u);
 	}
 
-	[DDLRegistration(0xc69a644eu)]
+	[DDLRegistration(0xa7e16a23u)]
 	public DamageModifierIncomingPrius? DamageMod { get; set; } = default;
 
 	public static StatusEffectDamageModWrapper Create(DDLObject ddl) => new(ddl);

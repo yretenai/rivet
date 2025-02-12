@@ -18,7 +18,7 @@ public class OnCustomDesignEventActionPrius : OnBaseEventActionPrius, IDDLObject
 		ListenEventName = ddl.GetString(0xf9ea7060) ?? ListenEventName;
 	}
 
-	[DDLRegistration(0x3f47d925u, "Listen Event Name", "The event name that we should listen for.")]
+	[DDLRegistration(0xf9ea7060u, "Listen Event Name", "The event name that we should listen for.")]
 	public string? ListenEventName { get; set; } = default;
 
 	public new static OnCustomDesignEventActionPrius Create(DDLObject ddl) => new(ddl);

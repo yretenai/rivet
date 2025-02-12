@@ -19,10 +19,10 @@ public class SwingshotTargetTetherPrius : SwingshotTargetHookPrius, IDDLObjectTy
 		AllowManualDisconnect = ddl.GetValue<bool>(0x7f8b2d34u, AllowManualDisconnect);
 	}
 
-	[DDLRegistration(0xe483cf31u)]
+	[DDLRegistration(0x48059277u)]
 	public RivetAssetId AimContextOverride { get; set; } = default;
 
-	[DDLRegistration(0xe483cf31u)]
+	[DDLRegistration(0x7f8b2d34u)]
 	public bool AllowManualDisconnect { get; set; } = true;
 
 	public new static SwingshotTargetTetherPrius Create(DDLObject ddl) => new(ddl);

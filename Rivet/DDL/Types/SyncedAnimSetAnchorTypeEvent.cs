@@ -22,19 +22,19 @@ public class SyncedAnimSetAnchorTypeEvent : EventBase, IDDLObjectType<SyncedAnim
 		ForceRotBlendTime = ddl.GetValue<float>(0x5cc65f3au, ForceRotBlendTime);
 	}
 
-	[DDLRegistration(0xc5c71e93u, description: "New type for the positional anchor")]
+	[DDLRegistration(0x2d0f9dd3u, description: "New type for the positional anchor")]
 	public x91b33164 AnchorPosType { get; set; } = x91b33164.Guest;
 
-	[DDLRegistration(0xc5c71e93u, description: "New type for the rotational anchor")]
+	[DDLRegistration(0x08b050eau, description: "New type for the rotational anchor")]
 	public xb40cfc5d AnchorRotType { get; set; } = xb40cfc5d.HostToGuest2D;
 
-	[DDLRegistration(0xc5c71e93u, description: "When using a kGuest anchor, this describes which guest to use (only relevant for 3+ way syncing)")]
+	[DDLRegistration(0x72e73e18u, description: "When using a kGuest anchor, this describes which guest to use (only relevant for 3+ way syncing)")]
 	public x19aa8603 GuestAnchor { get; set; } = x19aa8603.Guest1;
 
-	[DDLRegistration(0xc5c71e93u, description: "Optional blend time to use when switching anchors.  We'll default to using the next SyncedAnimImpactEvent")]
+	[DDLRegistration(0x5221dadcu, description: "Optional blend time to use when switching anchors.  We'll default to using the next SyncedAnimImpactEvent")]
 	public float ForcePosBlendTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc5c71e93u, description: "Optional blend time to use when switching anchors.  We'll default to using the next SyncedAnimImpactEvent")]
+	[DDLRegistration(0x5cc65f3au, description: "Optional blend time to use when switching anchors.  We'll default to using the next SyncedAnimImpactEvent")]
 	public float ForceRotBlendTime { get; set; } = -1.00f;
 
 	public new static SyncedAnimSetAnchorTypeEvent Create(DDLObject ddl) => new(ddl);

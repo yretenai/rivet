@@ -18,7 +18,7 @@ public class PlayAnimEffectPrius : ScriptedShotEffectBasePrius, IDDLObjectType<P
 		AnimDriverName = ddl.GetString(0x45f98c1e) ?? AnimDriverName;
 	}
 
-	[DDLRegistration(0xf014b430u)]
+	[DDLRegistration(0x45f98c1eu)]
 	public string? AnimDriverName { get; set; } = default;
 
 	public new static PlayAnimEffectPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DamageVolumeAttachedPrius : DamageVolumePrius, IDDLObjectType<Damag
 		DamageVolumeAttachedPriusData = ddl.GetObject<DamageVolumeAttachedPriusData>(0x3b3db57cu);
 	}
 
-	[DDLRegistration(0x953127dcu)]
+	[DDLRegistration(0x3b3db57cu)]
 	public DamageVolumeAttachedPriusData? DamageVolumeAttachedPriusData { get; set; } = default;
 
 	public new static DamageVolumeAttachedPrius Create(DDLObject ddl) => new(ddl);

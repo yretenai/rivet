@@ -2,6 +2,7 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using System.Text.Json;
@@ -433,7 +434,7 @@ internal class Program {
 				["default"] = defaultValue,
 				["default-prefix"] = defaultPrefix,
 				["attribute"] = DDLTemplate.Format(DDLTemplate.RegistrationAttribute, new() {
-					["hash"] = value.Id,
+					["hash"] = field.Id,
 					["label"] = label,
 				}),
 			}));

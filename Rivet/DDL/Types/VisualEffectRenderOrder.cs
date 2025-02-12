@@ -19,10 +19,10 @@ public class VisualEffectRenderOrder : DDLObjectType, IDDLObjectType<VisualEffec
 		Render = ddl.GetValue<bool>(0xaa24d70du, Render);
 	}
 
-	[DDLRegistration(0x3df3f96du, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x3df3f96du)]
+	[DDLRegistration(0xaa24d70du)]
 	public bool Render { get; set; } = true;
 
 	public static VisualEffectRenderOrder Create(DDLObject ddl) => new(ddl);

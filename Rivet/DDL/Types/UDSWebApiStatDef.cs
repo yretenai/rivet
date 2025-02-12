@@ -25,28 +25,28 @@ public class UDSWebApiStatDef : DDLObjectType, IDDLObjectType<UDSWebApiStatDef> 
 		InitialValue = ddl.GetString(0x1049c01e) ?? InitialValue;
 	}
 
-	[DDLRegistration(0x98e79489u)]
+	[DDLRegistration(0x4c02f6d0u)]
 	public string? StatName { get; set; } = default;
 
-	[DDLRegistration(0x98e79489u)]
+	[DDLRegistration(0xb2f4d275u)]
 	public int StatId { get; set; } = 0;
 
-	[DDLRegistration(0x98e79489u)]
+	[DDLRegistration(0xe7251d4fu)]
 	public x766ef241 Origin { get; set; } = x766ef241.Console;
 
-	[DDLRegistration(0x98e79489u)]
+	[DDLRegistration(0x267cdf7eu)]
 	public x884a9c52 DataType { get; set; } = x884a9c52.Int32;
 
-	[DDLRegistration(0x98e79489u)]
+	[DDLRegistration(0x97c8bd9fu)]
 	public xb2718bea Aggregation { get; set; } = xb2718bea.Latest;
 
-	[DDLRegistration(0x98e79489u)]
+	[DDLRegistration(0x1bff5214u)]
 	public string? MinValue { get; set; } = default;
 
-	[DDLRegistration(0x98e79489u)]
+	[DDLRegistration(0xfd9ffdf5u)]
 	public string? MaxValue { get; set; } = default;
 
-	[DDLRegistration(0x98e79489u)]
+	[DDLRegistration(0x1049c01eu)]
 	public string? InitialValue { get; set; } = default;
 
 	public static UDSWebApiStatDef Create(DDLObject ddl) => new(ddl);

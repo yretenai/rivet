@@ -23,22 +23,22 @@ public class HexapodPathPrius : DDLObjectType, IDDLObjectType<HexapodPathPrius> 
 		Roundness = ddl.GetValue<byte>(0x0b8d1185u, Roundness);
 	}
 
-	[DDLRegistration(0x1495d287u)]
+	[DDLRegistration(0x98bc7117u)]
 	public float PathRadius { get; set; } = 0.50f;
 
-	[DDLRegistration(0x1495d287u)]
+	[DDLRegistration(0x35044d85u)]
 	public float PointSpacing { get; set; } = 2.00f;
 
-	[DDLRegistration(0x1495d287u)]
+	[DDLRegistration(0xf5b8f817u)]
 	public RivetAssetId PathMaterial { get; set; } = default;
 
-	[DDLRegistration(0x1495d287u, "UV0 Tiling")]
+	[DDLRegistration(0xf8890730u, "UV0 Tiling")]
 	public UVTiling? UV0Tiling { get; set; } = default;
 
-	[DDLRegistration(0x1495d287u, "UV1 Tiling")]
+	[DDLRegistration(0x5efe0c84u, "UV1 Tiling")]
 	public UVTiling? UV1Tiling { get; set; } = default;
 
-	[DDLRegistration(0x1495d287u)]
+	[DDLRegistration(0x0b8d1185u)]
 	public byte Roundness { get; set; } = 0x10;
 
 	public static HexapodPathPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ReparentToChromeInput : DDLObjectType, IDDLObjectType<ReparentToChr
 		WindowTitle = ddl.GetString(0x9bbcdd8d) ?? WindowTitle;
 	}
 
-	[DDLRegistration(0x6b891a75u)]
+	[DDLRegistration(0x9bbcdd8du)]
 	public string? WindowTitle { get; set; } = default;
 
 	public static ReparentToChromeInput Create(DDLObject ddl) => new(ddl);

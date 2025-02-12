@@ -18,7 +18,7 @@ public class PerfSpecOverlayTriggerPrius : BaseCustomOverlayTriggerPrius, IDDLOb
 		PerformanceSpec = ddl.GetBitset<PerfSpecTypeBitfield>(0x0263cc45u, PerfSpecTypeBitfieldValues.Lookup);
 	}
 
-	[DDLRegistration(0x2daeba50u)]
+	[DDLRegistration(0x0263cc45u)]
 	public PerfSpecTypeBitfield PerformanceSpec { get; set; } = (PerfSpecTypeBitfield) 0x00000000;
 
 	public new static PerfSpecOverlayTriggerPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class HeroKilledBotEvent : EventBase, IDDLObjectType<HeroKilledBotEvent> 
 		VictimCharacterType = ddl.GetString(0x05cb254e) ?? VictimCharacterType;
 	}
 
-	[DDLRegistration(0x827eef0fu)]
+	[DDLRegistration(0x4d871e29u)]
 	public string? VictimSize { get; set; } = default;
 
-	[DDLRegistration(0x827eef0fu)]
+	[DDLRegistration(0x05cb254eu)]
 	public string? VictimCharacterType { get; set; } = default;
 
 	public new static HeroKilledBotEvent Create(DDLObject ddl) => new(ddl);

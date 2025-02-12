@@ -24,25 +24,25 @@ public class RandomOrientationPrius : DDLObjectType, IDDLObjectType<RandomOrient
 		ZAngleMax = ddl.GetValue<float>(0x207628c6u, ZAngleMax);
 	}
 
-	[DDLRegistration(0xf8515e88u, "Start Enabled?", "Whether this component is enabled on load.")]
+	[DDLRegistration(0x6f36ca8bu, "Start Enabled?", "Whether this component is enabled on load.")]
 	public bool StartEnabled { get; set; } = true;
 
-	[DDLRegistration(0xf8515e88u, "Min X Angle", "The minimum x (local-space) angle change for our random orientation (in degrees).")]
+	[DDLRegistration(0x328d3f19u, "Min X Angle", "The minimum x (local-space) angle change for our random orientation (in degrees).")]
 	public float XAngleMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf8515e88u, "Max X Angle", "The maximum x (local-space) angle change for our random orientation (in degrees).")]
+	[DDLRegistration(0x0e800040u, "Max X Angle", "The maximum x (local-space) angle change for our random orientation (in degrees).")]
 	public float XAngleMax { get; set; } = 360.00f;
 
-	[DDLRegistration(0xf8515e88u, "Min Y Angle", "The minimum y (local-space) angle change for our random orientation (in degrees).")]
+	[DDLRegistration(0x25f62b5au, "Min Y Angle", "The minimum y (local-space) angle change for our random orientation (in degrees).")]
 	public float YAngleMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf8515e88u, "Max Y Angle", "The maximum y (local-space) angle change for our random orientation (in degrees).")]
+	[DDLRegistration(0x19fb1403u, "Max Y Angle", "The maximum y (local-space) angle change for our random orientation (in degrees).")]
 	public float YAngleMax { get; set; } = 360.00f;
 
-	[DDLRegistration(0xf8515e88u, "Min Z Angle", "The minimum z (local-space) angle change for our random orientation (in degrees).")]
+	[DDLRegistration(0x1c7b179fu, "Min Z Angle", "The minimum z (local-space) angle change for our random orientation (in degrees).")]
 	public float ZAngleMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xf8515e88u, "Max Z Angle", "The maximum z (local-space) angle change for our random orientation (in degrees).")]
+	[DDLRegistration(0x207628c6u, "Max Z Angle", "The maximum z (local-space) angle change for our random orientation (in degrees).")]
 	public float ZAngleMax { get; set; } = 360.00f;
 
 	public static RandomOrientationPrius Create(DDLObject ddl) => new(ddl);

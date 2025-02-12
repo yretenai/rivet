@@ -18,7 +18,7 @@ public class BeetleTrailStartEvent : EventBase, IDDLObjectType<BeetleTrailStartE
 		AVMaterialType = ddl.GetEnum<x10b3c4cf>(0x8f07ee1cu, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0x6ef5e29fu)]
+	[DDLRegistration(0x8f07ee1cu)]
 	public x10b3c4cf AVMaterialType { get; set; } = x10b3c4cf.None;
 
 	public new static BeetleTrailStartEvent Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class TriggerByAttackPrius : TriggerByBasePrius, IDDLObjectType<TriggerBy
 		DamageName = ddl.GetString(0x56f13c62) ?? DamageName;
 	}
 
-	[DDLRegistration(0x97f7c597u, "Switch trigger on attack?", "Whether to switch between triggering and untriggering on successive attacks.")]
+	[DDLRegistration(0x447187e4u, "Switch trigger on attack?", "Whether to switch between triggering and untriggering on successive attacks.")]
 	public bool SwitchTriggerOnAtk { get; set; } = false;
 
-	[DDLRegistration(0x97f7c597u, "Auto Disable?", "Whether to disable ourselves once get a valid attack and triggered the switch.")]
+	[DDLRegistration(0xde716c6eu, "Auto Disable?", "Whether to disable ourselves once get a valid attack and triggered the switch.")]
 	public bool AutoDisable { get; set; } = true;
 
-	[DDLRegistration(0x97f7c597u, "Attack Type", "The type of attack to consider.")]
+	[DDLRegistration(0xc3270f40u, "Attack Type", "The type of attack to consider.")]
 	public x209cdeb2 AttackType { get; set; } = x209cdeb2.AnyAttack;
 
-	[DDLRegistration(0x97f7c597u, "Custom Damage Type Filter", "If Attack Type is set to 'Custom Damage Type', only trigger on this damage type.")]
+	[DDLRegistration(0x56c965dfu, "Custom Damage Type Filter", "If Attack Type is set to 'Custom Damage Type', only trigger on this damage type.")]
 	public DamageTypesGame CustomDamageType { get; set; } = DamageTypesGame.None;
 
-	[DDLRegistration(0x97f7c597u, "Damage Name Filter", "If not empty, this will only trigger on damage with this name. This usually corresponds to the WeaponDamageHashString in the weapon configs.")]
+	[DDLRegistration(0x56f13c62u, "Damage Name Filter", "If not empty, this will only trigger on damage with this name. This usually corresponds to the WeaponDamageHashString in the weapon configs.")]
 	public string? DamageName { get; set; } = "";
 
 	public new static TriggerByAttackPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class DamageStateEvent : EventBase, IDDLObjectType<DamageStateEvent> {
 		HealthPercent = ddl.GetValue<float>(0x13ab5436u, HealthPercent);
 	}
 
-	[DDLRegistration(0xb1731b12u, description: "Actor's health percentage")]
+	[DDLRegistration(0x13ab5436u, description: "Actor's health percentage")]
 	public float HealthPercent { get; set; } = 0.00f;
 
 	public new static DamageStateEvent Create(DDLObject ddl) => new(ddl);

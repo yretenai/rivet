@@ -18,7 +18,7 @@ public class CurvePointHoudiniData : DDLObjectType, IDDLObjectType<CurvePointHou
 		Width = ddl.GetValue<float>(0x954989eeu, Width);
 	}
 
-	[DDLRegistration(0x71c71d89u, description: "This is the width of the river at this point only.")]
+	[DDLRegistration(0x954989eeu, description: "This is the width of the river at this point only.")]
 	public float Width { get; set; } = 0.00f;
 
 	public static CurvePointHoudiniData Create(DDLObject ddl) => new(ddl);

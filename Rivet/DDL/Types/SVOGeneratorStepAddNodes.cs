@@ -18,7 +18,7 @@ public class SVOGeneratorStepAddNodes : DDLObjectType, IDDLObjectType<SVOGenerat
 		NodeData = ddl.GetObjects<SVOGeneratorDebugNodeData>(0xc98edaacu);
 	}
 
-	[DDLRegistration(0x4c0b9519u)]
+	[DDLRegistration(0xc98edaacu)]
 	public List<SVOGeneratorDebugNodeData?> NodeData { get; set; } = [];
 
 	public static SVOGeneratorStepAddNodes Create(DDLObject ddl) => new(ddl);

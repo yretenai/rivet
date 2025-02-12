@@ -40,73 +40,73 @@ public class AnimDamageAttackStylePrim : AnimDamageAttackStyleBase, IDDLObjectTy
 		RequestFlags = ddl.GetBitset<DamageRequestFlags>(0x2bc801dfu, DamageRequestFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0xb4506392u, "Prim Type")]
+	[DDLRegistration(0x0b75f8eeu, "Prim Type")]
 	public xaabf8cd7 PrimType { get; set; } = xaabf8cd7.Sphere;
 
-	[DDLRegistration(0xb4506392u, "Primary Locator")]
+	[DDLRegistration(0x0520e489u, "Primary Locator")]
 	public string? DamageJoint { get; set; } = default;
 
-	[DDLRegistration(0xb4506392u, "Local Offset", "This is an offset in model space.")]
+	[DDLRegistration(0x46a4eea5u, "Local Offset", "This is an offset in model space.")]
 	public DDLVector3? LocalOffset { get; set; } = default;
 
-	[DDLRegistration(0xb4506392u, "Secondary Locator")]
+	[DDLRegistration(0x2db7d7b8u, "Secondary Locator")]
 	public string? DamageJointSecondary { get; set; } = default;
 
-	[DDLRegistration(0xb4506392u, "Secondary Local Offset", "This is an offset in model space.")]
+	[DDLRegistration(0x2d270ce4u, "Secondary Local Offset", "This is an offset in model space.")]
 	public DDLVector3? LocalOffsetSecondary { get; set; } = default;
 
-	[DDLRegistration(0xb4506392u, "Sweep From Last Position", "Do line/swept-sphere checks from last damage position to current position, instead of doing it from Primary to Secondary Locators.")]
+	[DDLRegistration(0x192a2205u, "Sweep From Last Position", "Do line/swept-sphere checks from last damage position to current position, instead of doing it from Primary to Secondary Locators.")]
 	public bool SweepFromLastPosition { get; set; } = false;
 
-	[DDLRegistration(0xb4506392u, "Damage Radius")]
+	[DDLRegistration(0xe3e6fa68u, "Damage Radius")]
 	public float DamageRadius { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb4506392u, "Lerp Radius", "Lerp the damage radius from 0 - Damag eRadius based on Primary Locator's z-axis")]
+	[DDLRegistration(0x6a9c9a53u, "Lerp Radius", "Lerp the damage radius from 0 - Damag eRadius based on Primary Locator's z-axis")]
 	public bool LerpRadius { get; set; } = false;
 
-	[DDLRegistration(0xb4506392u, "Prim Length", "How long the line or swept sphere is if there is no Secondary Locator.")]
+	[DDLRegistration(0xdb9a6d43u, "Prim Length", "How long the line or swept sphere is if there is no Secondary Locator.")]
 	public float DamagePrimLength { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb4506392u, "Lerp Length", "Lerp the damage length from 0 - Prim Length based on Primary Locator's x-axis")]
+	[DDLRegistration(0x509d6abbu, "Lerp Length", "Lerp the damage length from 0 - Prim Length based on Primary Locator's x-axis")]
 	public bool LerpLength { get; set; } = false;
 
-	[DDLRegistration(0xb4506392u, "Damage Type")]
+	[DDLRegistration(0x840c154du, "Damage Type")]
 	public DamageTypesGame DamageType { get; set; } = DamageTypesGame.Melee;
 
-	[DDLRegistration(0xb4506392u, "Damage Amount")]
+	[DDLRegistration(0x563be470u, "Damage Amount")]
 	public float DamageAmount { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb4506392u, "Armor Pass-Through")]
+	[DDLRegistration(0x0cea0f4fu, "Armor Pass-Through")]
 	public float ArmorPassThroughPercentage { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb4506392u)]
+	[DDLRegistration(0x2e553fddu)]
 	public KnockbackLevels Knockback { get; set; } = KnockbackLevels.None;
 
-	[DDLRegistration(0xb4506392u)]
+	[DDLRegistration(0x7b1e600bu)]
 	public float KnockbackAmount { get; set; } = -1.00f;
 
-	[DDLRegistration(0xb4506392u)]
+	[DDLRegistration(0x28d6ed59u)]
 	public float KnockbackForce { get; set; } = -1.00f;
 
-	[DDLRegistration(0xb4506392u, description: "Should this attack knock around friendlies even if it doens't hurt them")]
+	[DDLRegistration(0x776e0c27u, description: "Should this attack knock around friendlies even if it doens't hurt them")]
 	public bool FriendlyKnockback { get; set; } = false;
 
-	[DDLRegistration(0xb4506392u)]
+	[DDLRegistration(0x3f2b174fu)]
 	public x257872aa Condition { get; set; } = x257872aa.None;
 
-	[DDLRegistration(0xb4506392u)]
+	[DDLRegistration(0x06d5955cu)]
 	public float ConditionDuration { get; set; } = 2.50f;
 
-	[DDLRegistration(0xb4506392u)]
+	[DDLRegistration(0x37e1f098u)]
 	public float StatusAmount { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb4506392u, "Duration Override")]
+	[DDLRegistration(0x0bb3cda6u, "Duration Override")]
 	public float DurationOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb4506392u, "Hit Pause Time")]
+	[DDLRegistration(0xa0fb18acu, "Hit Pause Time")]
 	public float HitPauseTime { get; set; } = -1.00f;
 
-	[DDLRegistration(0xb4506392u)]
+	[DDLRegistration(0x2bc801dfu)]
 	public DamageRequestFlags RequestFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
 	public new static AnimDamageAttackStylePrim Create(DDLObject ddl) => new(ddl);

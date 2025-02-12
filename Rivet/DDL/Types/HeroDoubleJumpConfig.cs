@@ -18,7 +18,7 @@ public class HeroDoubleJumpConfig : HeroJumpConfig, IDDLObjectType<HeroDoubleJum
 		MaxTotalJump = ddl.GetValue<float>(0xfd9f794fu, MaxTotalJump);
 	}
 
-	[DDLRegistration(0xa0c20d07u)]
+	[DDLRegistration(0xfd9f794fu)]
 	public float MaxTotalJump { get; set; } = 3.00f;
 
 	public new static HeroDoubleJumpConfig Create(DDLObject ddl) => new(ddl);

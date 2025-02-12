@@ -23,22 +23,22 @@ public class CompositeShaderConstantResponseEvent : ResponseEvent, IDDLObjectTyp
 		RemoveShaderAfterward = ddl.GetValue<bool>(0x220db45au, RemoveShaderAfterward);
 	}
 
-	[DDLRegistration(0xfb01207cu, description: "The material/materialgraph whose constant will be set.")]
+	[DDLRegistration(0xc18bd04fu, description: "The material/materialgraph whose constant will be set.")]
 	public RivetAssetId Shader { get; set; } = default;
 
-	[DDLRegistration(0xfb01207cu, description: "The name of the render constant to set.")]
+	[DDLRegistration(0xc6991700u, description: "The name of the render constant to set.")]
 	public string? ConstantName { get; set; } = default;
 
-	[DDLRegistration(0xfb01207cu)]
+	[DDLRegistration(0x651c34d0u)]
 	public float StartValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfb01207cu)]
+	[DDLRegistration(0x5550361fu)]
 	public float EndValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfb01207cu)]
+	[DDLRegistration(0xf115e357u)]
 	public float TransitionTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0xfb01207cu, description: "Removes the shader when the transition ends (enables fade out before removal).")]
+	[DDLRegistration(0x220db45au, description: "Removes the shader when the transition ends (enables fade out before removal).")]
 	public bool RemoveShaderAfterward { get; set; } = false;
 
 	public new static CompositeShaderConstantResponseEvent Create(DDLObject ddl) => new(ddl);

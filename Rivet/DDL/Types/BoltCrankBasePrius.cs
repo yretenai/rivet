@@ -32,49 +32,49 @@ public class BoltCrankBasePrius : DDLObjectType, IDDLObjectType<BoltCrankBasePri
 		DoShimmer = ddl.GetValue<bool>(0x21ca7a63u, DoShimmer);
 	}
 
-	[DDLRegistration(0xb1b51a6eu, "Save Used State?", "Whether we should save that this bolt crank has been used and return to it on load. This will use the Actor flag so don't have more than one component set to save with this flag.")]
+	[DDLRegistration(0x511c7518u, "Save Used State?", "Whether we should save that this bolt crank has been used and return to it on load. This will use the Actor flag so don't have more than one component set to save with this flag.")]
 	public bool SaveUsedState { get; set; } = true;
 
-	[DDLRegistration(0xb1b51a6eu, description: "Type of hero that can use this crank.")]
+	[DDLRegistration(0x1583d108u, description: "Type of hero that can use this crank.")]
 	public HeroTypes HeroType { get; set; } = HeroTypes.Ratchet;
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0x0564a062u)]
 	public RivetAssetId Camera { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0xe1abdb4fu)]
 	public float CameraBlendInTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0xddcb88c3u)]
 	public float CameraBlendOutTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb1b51a6eu, description: "The distance the player must be from the hammer crank in order to display its POI button.")]
+	[DDLRegistration(0xfb94b9acu, description: "The distance the player must be from the hammer crank in order to display its POI button.")]
 	public float ButtonDisplayRange { get; set; } = 5.00f;
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0xa5458b7au)]
 	public string? BoltDynJoint { get; set; } = default;
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0x85fdd6edu)]
 	public string? SecondaryJoint { get; set; } = default;
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0xed03c7a7u)]
 	public string? IdleDriver { get; set; } = default;
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0x6670550du)]
 	public string? InUseDriver { get; set; } = default;
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0x99b0169eu)]
 	public string? CompleteDriver { get; set; } = default;
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0xa99db830u)]
 	public float CrankTimeMax { get; set; } = 5.00f;
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0x7b8909b0u)]
 	public float MemoryResetSpeed { get; set; } = 5.00f;
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0x6ca12f40u)]
 	public float MemoryResetWait { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb1b51a6eu)]
+	[DDLRegistration(0x21ca7a63u)]
 	public bool DoShimmer { get; set; } = true;
 
 	public static BoltCrankBasePrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ObjectiveSaveOptions : DDLObjectType, IDDLObjectType<ObjectiveSaveO
 		SaveReplaySnapshot = ddl.GetValue<bool>(0x94b5c52eu, SaveReplaySnapshot);
 	}
 
-	[DDLRegistration(0x4404f518u, "Save Snapshot on First Playthrough?", "Saves a restorable save-file, like a manual save when this objective becomes active and this mission hasn't yet been completed.")]
+	[DDLRegistration(0x276f7d2du, "Save Snapshot on First Playthrough?", "Saves a restorable save-file, like a manual save when this objective becomes active and this mission hasn't yet been completed.")]
 	public bool SaveSnapshot { get; set; } = false;
 
-	[DDLRegistration(0x4404f518u, "Save Snapshot During Replay?", "Saves a restorable save-file, like a manual save when this objective becomes active and this mission has already been completed at least once.")]
+	[DDLRegistration(0x94b5c52eu, "Save Snapshot During Replay?", "Saves a restorable save-file, like a manual save when this objective becomes active and this mission has already been completed at least once.")]
 	public bool SaveReplaySnapshot { get; set; } = false;
 
 	public static ObjectiveSaveOptions Create(DDLObject ddl) => new(ddl);

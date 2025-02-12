@@ -19,10 +19,10 @@ public class CentipedeChaseMineFiringPrius : DDLObjectType, IDDLObjectType<Centi
 		FireRate = ddl.GetValue<float>(0xde2bd9ffu, FireRate);
 	}
 
-	[DDLRegistration(0x61f03d7au)]
+	[DDLRegistration(0xd1b7ac6au)]
 	public List<MineFiringData?> FiringData { get; set; } = [];
 
-	[DDLRegistration(0x61f03d7au)]
+	[DDLRegistration(0xde2bd9ffu)]
 	public float FireRate { get; set; } = 1.00f;
 
 	public static CentipedeChaseMineFiringPrius Create(DDLObject ddl) => new(ddl);

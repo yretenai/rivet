@@ -19,10 +19,10 @@ public class AnimIKFootUpEvent : EventBase, IDDLObjectType<AnimIKFootUpEvent> {
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0xea995278u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.50f;
 
-	[DDLRegistration(0xea995278u)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
 	public new static AnimIKFootUpEvent Create(DDLObject ddl) => new(ddl);

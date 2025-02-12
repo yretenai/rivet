@@ -22,19 +22,19 @@ public class ShotActionProximityTestPrius : DDLObjectType, IDDLObjectType<ShotAc
 		StartActive = ddl.GetValue<bool>(0x3e035e82u, StartActive);
 	}
 
-	[DDLRegistration(0x20f697aau)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 3.00f;
 
-	[DDLRegistration(0x20f697aau)]
+	[DDLRegistration(0x2f3b17dau)]
 	public uint AllegianceMask { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x20f697aau)]
+	[DDLRegistration(0x9adcc9b8u)]
 	public bool UseLOS { get; set; } = true;
 
-	[DDLRegistration(0x20f697aau)]
+	[DDLRegistration(0xfd4d345bu)]
 	public bool DisableOnBreach { get; set; } = true;
 
-	[DDLRegistration(0x20f697aau)]
+	[DDLRegistration(0x3e035e82u)]
 	public bool StartActive { get; set; } = false;
 
 	public static ShotActionProximityTestPrius Create(DDLObject ddl) => new(ddl);

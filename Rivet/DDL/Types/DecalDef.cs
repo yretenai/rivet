@@ -34,55 +34,55 @@ public class DecalDef : DDLObjectType, IDDLObjectType<DecalDef> {
 		TimeStamp = ddl.GetValue<float>(0xe6ea5636u, TimeStamp);
 	}
 
-	[DDLRegistration(0x8206ba3bu)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x8206ba3bu)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x8206ba3bu)]
+	[DDLRegistration(0x1bfc969du)]
 	public RivetAssetId Asset { get; set; } = default;
 
-	[DDLRegistration(0x8206ba3bu, "Decal Mode")]
+	[DDLRegistration(0xcef8d297u, "Decal Mode")]
 	public DecalMode DecalMode { get; set; } = DecalMode.Mesh;
 
-	[DDLRegistration(0x8206ba3bu, "Overlap Override")]
+	[DDLRegistration(0x8191c87fu, "Overlap Override")]
 	public xa6a133d1 OverlapOverride { get; set; } = xa6a133d1.None;
 
-	[DDLRegistration(0x8206ba3bu, "Blend Override")]
+	[DDLRegistration(0x828f8f40u, "Blend Override")]
 	public xe0e71d6c BlendOverride { get; set; } = xe0e71d6c.None;
 
-	[DDLRegistration(0x8206ba3bu, "Dynamic")]
+	[DDLRegistration(0x4a41698cu, "Dynamic")]
 	public bool Dynamic { get; set; } = false;
 
-	[DDLRegistration(0x8206ba3bu, "Screen Space Targets")]
+	[DDLRegistration(0x9a472176u, "Screen Space Targets")]
 	public x983059e1 ScreenSpaceTargets { get; set; } = x983059e1.TerrainOnly;
 
-	[DDLRegistration(0x8206ba3bu, "Ray Tracing Mode")]
+	[DDLRegistration(0xdcbd7541u, "Ray Tracing Mode")]
 	public xee077130 RayTracingMode { get; set; } = xee077130.Vertical;
 
-	[DDLRegistration(0x8206ba3bu, "Projection Limit")]
+	[DDLRegistration(0x7c4e3b33u, "Projection Limit")]
 	public float ProjectionLimit { get; set; } = 0.30f;
 
-	[DDLRegistration(0x8206ba3bu, "Fade Distance")]
+	[DDLRegistration(0xa05039a0u, "Fade Distance")]
 	public float FadeDistance { get; set; } = 25.00f;
 
-	[DDLRegistration(0x8206ba3bu, "LoD Distance")]
+	[DDLRegistration(0x9fc1ce80u, "LoD Distance")]
 	public float LoDDistance { get; set; } = 15.00f;
 
-	[DDLRegistration(0x8206ba3bu, "Custom Input")]
+	[DDLRegistration(0xc866f4eeu, "Custom Input")]
 	public DDLVector3? CustomInput { get; set; } = default;
 
-	[DDLRegistration(0x8206ba3bu, "Color")]
+	[DDLRegistration(0x7f058428u, "Color")]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x8206ba3bu, "Alpha")]
+	[DDLRegistration(0xc9b3f5abu, "Alpha")]
 	public float Alpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0x8206ba3bu, "Alpha Test")]
+	[DDLRegistration(0x5d3ca67eu, "Alpha Test")]
 	public float AlphaTest { get; set; } = 0.00f;
 
-	[DDLRegistration(0x8206ba3bu, "Sort Order")]
+	[DDLRegistration(0xe6ea5636u, "Sort Order")]
 	public float TimeStamp { get; set; } = 0.00f;
 
 	public static DecalDef Create(DDLObject ddl) => new(ddl);

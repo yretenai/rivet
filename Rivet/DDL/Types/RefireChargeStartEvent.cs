@@ -18,7 +18,7 @@ public class RefireChargeStartEvent : EventBase, IDDLObjectType<RefireChargeStar
 		LocalSource = ddl.GetValue<byte>(0x40245b06u, LocalSource);
 	}
 
-	[DDLRegistration(0xf57ed3d7u)]
+	[DDLRegistration(0x40245b06u)]
 	public byte LocalSource { get; set; } = 0x00;
 
 	public new static RefireChargeStartEvent Create(DDLObject ddl) => new(ddl);

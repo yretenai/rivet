@@ -29,40 +29,40 @@ public class UI_DialogEvent : DDLObjectType, IDDLObjectType<UI_DialogEvent> {
 		PlayOnlyOnAuthority = ddl.GetValue<bool>(0x68d7984cu, PlayOnlyOnAuthority);
 	}
 
-	[DDLRegistration(0x4aa5bfe1u)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public x6f4fd950 Action { get; set; } = x6f4fd950.SoundEventActionPlay;
 
-	[DDLRegistration(0x4aa5bfe1u)]
+	[DDLRegistration(0xcebb3bc3u)]
 	public WwiseEvent? WwiseEvent { get; set; } = default;
 
-	[DDLRegistration(0x4aa5bfe1u)]
+	[DDLRegistration(0xfd9e2a20u)]
 	public string? EventInitiator { get; set; } = default;
 
-	[DDLRegistration(0x4aa5bfe1u, description: "Locator set from the Anim Trigger")]
+	[DDLRegistration(0x85b17d52u, description: "Locator set from the Anim Trigger")]
 	public string? TriggerLocator { get; set; } = default;
 
-	[DDLRegistration(0x4aa5bfe1u, description: "Unique ID for matching up with callbacks")]
+	[DDLRegistration(0x32ca55d0u, description: "Unique ID for matching up with callbacks")]
 	public uint UniqueId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4aa5bfe1u, description: "Localization enum used by Emergent VO system")]
+	[DDLRegistration(0x152754cbu, description: "Localization enum used by Emergent VO system")]
 	public uint LineIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4aa5bfe1u)]
+	[DDLRegistration(0x3446b219u)]
 	public uint LocalizationTag { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4aa5bfe1u, description: "Hash of the local hero name if this dialog is to be played only when a specific hero is local authority.")]
+	[DDLRegistration(0xc56ca2f0u, description: "Hash of the local hero name if this dialog is to be played only when a specific hero is local authority.")]
 	public uint LocalHeroNameHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x4aa5bfe1u, description: "The start offset of the dialog line to play (for scrubbing cinematics - not external use).")]
+	[DDLRegistration(0xcde814bau, description: "The start offset of the dialog line to play (for scrubbing cinematics - not external use).")]
 	public float SeekOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4aa5bfe1u, description: "Dialog start time.")]
+	[DDLRegistration(0x0c5bae2bu, description: "Dialog start time.")]
 	public float StartTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4aa5bfe1u, description: "Don't trigger the auto generated anim performance")]
+	[DDLRegistration(0xb6a05139u, description: "Don't trigger the auto generated anim performance")]
 	public bool IgnoreAnimPerformance { get; set; } = false;
 
-	[DDLRegistration(0x4aa5bfe1u, description: "Only play this sound on the actor's authority machine.")]
+	[DDLRegistration(0x68d7984cu, description: "Only play this sound on the actor's authority machine.")]
 	public bool PlayOnlyOnAuthority { get; set; } = false;
 
 	public static UI_DialogEvent Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class YawAndPitchData : DDLObjectType, IDDLObjectType<YawAndPitchData> {
 		PitchMax = ddl.GetValue<float>(0xc794da62u, PitchMax);
 	}
 
-	[DDLRegistration(0xad5d2466u)]
+	[DDLRegistration(0x975af737u)]
 	public float YawMin { get; set; } = -360.00f;
 
-	[DDLRegistration(0xad5d2466u)]
+	[DDLRegistration(0xab57c86eu)]
 	public float YawMax { get; set; } = 360.00f;
 
-	[DDLRegistration(0xad5d2466u)]
+	[DDLRegistration(0xfb99e53bu)]
 	public float PitchMin { get; set; } = -85.00f;
 
-	[DDLRegistration(0xad5d2466u)]
+	[DDLRegistration(0xc794da62u)]
 	public float PitchMax { get; set; } = 85.00f;
 
 	public static YawAndPitchData Create(DDLObject ddl) => new(ddl);

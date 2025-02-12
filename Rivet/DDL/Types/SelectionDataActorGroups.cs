@@ -18,7 +18,7 @@ public class SelectionDataActorGroups : DDLObjectType, IDDLObjectType<SelectionD
 		SelectedObjects = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x7bd56f26, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 	}
 
-	[DDLRegistration(0xf75435fcu)]
+	[DDLRegistration(0x7bd56f26u)]
 	public Dictionary<RivetAssetId, RivetAssetId> SelectedObjects { get; set; } = [];
 
 	public static SelectionDataActorGroups Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class OnNumAliveActionPrius : DDLObjectType, IDDLObjectType<OnNumAliveAct
 		ListenOnInit = ddl.GetValue<bool>(0xd227a73du, ListenOnInit);
 	}
 
-	[DDLRegistration(0x7e757856u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x7e757856u)]
+	[DDLRegistration(0x3e7c98efu)]
 	public Comparison Comparison { get; set; } = Comparison.LessOrEqual;
 
-	[DDLRegistration(0x7e757856u)]
+	[DDLRegistration(0xd227a73du)]
 	public bool ListenOnInit { get; set; } = false;
 
 	public static OnNumAliveActionPrius Create(DDLObject ddl) => new(ddl);

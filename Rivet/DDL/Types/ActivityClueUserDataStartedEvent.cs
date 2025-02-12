@@ -18,7 +18,7 @@ public class ActivityClueUserDataStartedEvent : EventBase, IDDLObjectType<Activi
 		User = ddl.GetValue<uint>(0xbd0316f9u, User);
 	}
 
-	[DDLRegistration(0x2fee58b2u, "User", "The bot that just started this clue's activity")]
+	[DDLRegistration(0xbd0316f9u, "User", "The bot that just started this clue's activity")]
 	public uint User { get; set; } = 0x00000000;
 
 	public new static ActivityClueUserDataStartedEvent Create(DDLObject ddl) => new(ddl);

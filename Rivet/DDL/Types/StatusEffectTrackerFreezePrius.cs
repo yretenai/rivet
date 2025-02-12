@@ -29,40 +29,40 @@ public class StatusEffectTrackerFreezePrius : StatusEffectTrackerBasePrius, IDDL
 		CanReorient = ddl.GetValue<bool>(0x95f0fee1u, CanReorient);
 	}
 
-	[DDLRegistration(0x1d83afb1u, "Intro Anim", "The animation the bot plays to begin his freeze sequence.")]
+	[DDLRegistration(0xf227a2c3u, "Intro Anim", "The animation the bot plays to begin his freeze sequence.")]
 	public string? IntroAnim { get; set; } = "Frozen_Intro";
 
-	[DDLRegistration(0x1d83afb1u, "Loop Anim", "The animation that the bot plays while encased in ice.")]
+	[DDLRegistration(0x8334a2d8u, "Loop Anim", "The animation that the bot plays while encased in ice.")]
 	public string? LoopAnim { get; set; } = "Frozen_Loop";
 
-	[DDLRegistration(0x1d83afb1u, "Break Out Anim", "The animation driver played when the status effect ends and the bot breaks out to normal behavior.")]
+	[DDLRegistration(0x2808cae0u, "Break Out Anim", "The animation driver played when the status effect ends and the bot breaks out to normal behavior.")]
 	public string? BreakOutAnim { get; set; } = "Frozen_Breakout";
 
-	[DDLRegistration(0x1d83afb1u, "Death Anim", "The animation driver played when the bot encased in ice dies.")]
+	[DDLRegistration(0x0f9dd5a6u, "Death Anim", "The animation driver played when the bot encased in ice dies.")]
 	public string? DeathAnim { get; set; } = "Death_Ice";
 
-	[DDLRegistration(0x1d83afb1u, "Ice Actor", "Link to the ice-cube actor to spawn around the bot")]
+	[DDLRegistration(0xf1769ff8u, "Ice Actor", "Link to the ice-cube actor to spawn around the bot")]
 	public RivetAssetId IceActor { get; set; } = default;
 
-	[DDLRegistration(0x1d83afb1u, "Ice Attach Locator", "The locator that the ice-cube actor will be attached to.")]
+	[DDLRegistration(0x6b4adf6au, "Ice Attach Locator", "The locator that the ice-cube actor will be attached to.")]
 	public string? IceAttachLocator { get; set; } = "igLoc_body_prop";
 
-	[DDLRegistration(0x1d83afb1u, "Ice Scale if No Valid Locators", "If locator checks fail, we will use this scale relative to the bounding sphere")]
+	[DDLRegistration(0xb3f47bd5u, "Ice Scale if No Valid Locators", "If locator checks fail, we will use this scale relative to the bounding sphere")]
 	public float IceScaleIfNoLocator { get; set; } = 1.50f;
 
-	[DDLRegistration(0x1d83afb1u, "EnableGravity", "Should be true for flying bots.")]
+	[DDLRegistration(0x8c6af0d3u, "EnableGravity", "Should be true for flying bots.")]
 	public bool EnableGravity { get; set; } = true;
 
-	[DDLRegistration(0x1d83afb1u, "Disable Gravity During Breakout", "Should be true for bots that have upwards motion data in their breakout.")]
+	[DDLRegistration(0xa1574efeu, "Disable Gravity During Breakout", "Should be true for bots that have upwards motion data in their breakout.")]
 	public bool DisableGravityDuringBreakout { get; set; } = false;
 
-	[DDLRegistration(0x1d83afb1u, "Can Slide", "If true, the bot can slide back and bump into things while frozen.")]
+	[DDLRegistration(0xab74da41u, "Can Slide", "If true, the bot can slide back and bump into things while frozen.")]
 	public bool CanSlide { get; set; } = true;
 
-	[DDLRegistration(0x1d83afb1u, "Delete On Death", "If false, we'll transition to a death anim when killed in the frozen state.")]
+	[DDLRegistration(0xcff9f607u, "Delete On Death", "If false, we'll transition to a death anim when killed in the frozen state.")]
 	public bool CanShatter { get; set; } = true;
 
-	[DDLRegistration(0x1d83afb1u, "Can Reorient", "If true, the hit react will change the actor's facing on impact.")]
+	[DDLRegistration(0x95f0fee1u, "Can Reorient", "If true, the hit react will change the actor's facing on impact.")]
 	public bool CanReorient { get; set; } = true;
 
 	public new static StatusEffectTrackerFreezePrius Create(DDLObject ddl) => new(ddl);

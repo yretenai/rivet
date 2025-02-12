@@ -20,13 +20,13 @@ public class MountAbilityHexapodRewind : MountAbilityBase, IDDLObjectType<MountA
 		Delay = ddl.GetValue<float>(0xabc94c5au, Delay);
 	}
 
-	[DDLRegistration(0xafafa03eu)]
+	[DDLRegistration(0xef7cff89u)]
 	public float Rate { get; set; } = 2.00f;
 
-	[DDLRegistration(0xafafa03eu)]
+	[DDLRegistration(0x44affa24u)]
 	public float Accel { get; set; } = 2.00f;
 
-	[DDLRegistration(0xafafa03eu)]
+	[DDLRegistration(0xabc94c5au)]
 	public float Delay { get; set; } = 0.50f;
 
 	public new static MountAbilityHexapodRewind Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class EndMissionDevstatsEvent : EventBase, IDDLObjectType<EndMissionDevst
 		PlayerPosInfo = ddl.GetObject<DevstatsPlayerPositionInfo>(0xeadcc3e4u);
 	}
 
-	[DDLRegistration(0x627d8919u, "Event ID", "Unique ID for this event instance. Even if you end the same mission multiple times, this each time will have a unique value for Event ID.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique ID for this event instance. Even if you end the same mission multiple times, this each time will have a unique value for Event ID.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x627d8919u, "Mission Segment ID", "Unique ID for this particular mission segment. Corresponds to the Mission Segment ID in the Start Mission Event.")]
+	[DDLRegistration(0x1a25ffb8u, "Mission Segment ID", "Unique ID for this particular mission segment. Corresponds to the Mission Segment ID in the Start Mission Event.")]
 	public string? MissionSegmentId { get; set; } = default;
 
-	[DDLRegistration(0x627d8919u, "Mission Name", "Name of this mission in code.")]
+	[DDLRegistration(0xa5c30e60u, "Mission Name", "Name of this mission in code.")]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x627d8919u, "Is Replay", "Is this mission a replay of a previously-completed mission?")]
+	[DDLRegistration(0xe25e4358u, "Is Replay", "Is this mission a replay of a previously-completed mission?")]
 	public bool IsReplay { get; set; } = false;
 
-	[DDLRegistration(0x627d8919u, "End Reason", "The reason why this mission ended.")]
+	[DDLRegistration(0x454eb9afu, "End Reason", "The reason why this mission ended.")]
 	public x70690a01 EndReason { get; set; } = x70690a01.Complete;
 
-	[DDLRegistration(0x627d8919u, "Mission Duration", "The duration during which this mission was active (excluding failures).")]
+	[DDLRegistration(0x99b6472bu, "Mission Duration", "The duration during which this mission was active (excluding failures).")]
 	public float MissionDuration { get; set; } = 0.00f;
 
-	[DDLRegistration(0x627d8919u)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
 	public new static EndMissionDevstatsEvent Create(DDLObject ddl) => new(ddl);

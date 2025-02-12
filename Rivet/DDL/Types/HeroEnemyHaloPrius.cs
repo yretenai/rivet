@@ -24,25 +24,25 @@ public class HeroEnemyHaloPrius : DDLObjectType, IDDLObjectType<HeroEnemyHaloPri
 		TargetAnyAllegiance = ddl.GetValue<bool>(0xa0faaadau, TargetAnyAllegiance);
 	}
 
-	[DDLRegistration(0x07ccecdfu)]
+	[DDLRegistration(0xefbd9dd0u)]
 	public float MaxValidRange { get; set; } = 8.00f;
 
-	[DDLRegistration(0x07ccecdfu)]
+	[DDLRegistration(0x842f58f1u)]
 	public uint TargetTypeMask { get; set; } = 0xffffffff;
 
-	[DDLRegistration(0x07ccecdfu)]
+	[DDLRegistration(0x43021eddu)]
 	public bool DoStandardLOS { get; set; } = true;
 
-	[DDLRegistration(0x07ccecdfu)]
+	[DDLRegistration(0x7b7515d2u)]
 	public bool DoPathTest { get; set; } = true;
 
-	[DDLRegistration(0x07ccecdfu)]
+	[DDLRegistration(0xa4d93ecau)]
 	public bool TargetNeutral { get; set; } = false;
 
-	[DDLRegistration(0x07ccecdfu)]
+	[DDLRegistration(0x234c312eu)]
 	public bool ForceSmallList { get; set; } = false;
 
-	[DDLRegistration(0x07ccecdfu)]
+	[DDLRegistration(0xa0faaadau)]
 	public bool TargetAnyAllegiance { get; set; } = false;
 
 	public static HeroEnemyHaloPrius Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class OnEventActionPrius : DDLObjectType, IDDLObjectType<OnEventActionPri
 		FieldFilters = ddl.GetObjects<EventFilter>(0xa7330d10u);
 	}
 
-	[DDLRegistration(0x6a1ef326u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Events;
 
-	[DDLRegistration(0x6a1ef326u, "Init Listening?", "Whether we init listening for the event or not.")]
+	[DDLRegistration(0xf387b27au, "Init Listening?", "Whether we init listening for the event or not.")]
 	public bool InitListening { get; set; } = true;
 
-	[DDLRegistration(0x6a1ef326u, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
+	[DDLRegistration(0x9149785eu, "Max Times to Fire", "The number of times connected outputs can be signaled (-1 = infinite).")]
 	public int SignalMax { get; set; } = 1;
 
-	[DDLRegistration(0x6a1ef326u, "Reset Count on Start Listen?", "If true, whenever StartListening is triggered we will reset the signal count.")]
+	[DDLRegistration(0xf5d5d7fcu, "Reset Count on Start Listen?", "If true, whenever StartListening is triggered we will reset the signal count.")]
 	public bool ResetSignalMaxOnListen { get; set; } = true;
 
-	[DDLRegistration(0x6a1ef326u, "Event Type", "The event that we should listen for")]
+	[DDLRegistration(0xa76e74deu, "Event Type", "The event that we should listen for")]
 	public EventBase? ListenEvent { get; set; } = default;
 
-	[DDLRegistration(0x6a1ef326u, "Track Broadcast", "Allows the node to trigger on broadcast events")]
+	[DDLRegistration(0x0647b8d3u, "Track Broadcast", "Allows the node to trigger on broadcast events")]
 	public bool TrackBroadcast { get; set; } = false;
 
-	[DDLRegistration(0x6a1ef326u)]
+	[DDLRegistration(0xa7330d10u)]
 	public List<EventFilter?> FieldFilters { get; set; } = [];
 
 	public static OnEventActionPrius Create(DDLObject ddl) => new(ddl);

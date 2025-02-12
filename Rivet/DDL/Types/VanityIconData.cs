@@ -19,10 +19,10 @@ public class VanityIconData : DDLObjectType, IDDLObjectType<VanityIconData> {
 		Texture = ddl.GetValue<RivetAssetId>(0x838c6e4au, Texture);
 	}
 
-	[DDLRegistration(0x74da4cd0u, description: "VanityBundleType value.")]
+	[DDLRegistration(0xbc4e9799u, description: "VanityBundleType value.")]
 	public VanityBundleType Type { get; set; } = VanityBundleType.Head;
 
-	[DDLRegistration(0x74da4cd0u, description: "Texture to display.")]
+	[DDLRegistration(0x838c6e4au, description: "Texture to display.")]
 	public RivetAssetId Texture { get; set; } = "";
 
 	public static VanityIconData Create(DDLObject ddl) => new(ddl);

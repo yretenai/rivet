@@ -20,13 +20,13 @@ public class ECMNodeConnection : DDLObjectType, IDDLObjectType<ECMNodeConnection
 		TargetPlugName = ddl.GetString(0x3ec29a87) ?? TargetPlugName;
 	}
 
-	[DDLRegistration(0x1a96fc57u)]
+	[DDLRegistration(0xd0cdec13u)]
 	public string? PlugName { get; set; } = default;
 
-	[DDLRegistration(0x1a96fc57u)]
+	[DDLRegistration(0xc3642b05u)]
 	public RivetAssetId TargetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x1a96fc57u)]
+	[DDLRegistration(0x3ec29a87u)]
 	public string? TargetPlugName { get; set; } = default;
 
 	public static ECMNodeConnection Create(DDLObject ddl) => new(ddl);

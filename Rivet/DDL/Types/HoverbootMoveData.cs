@@ -30,43 +30,43 @@ public class HoverbootMoveData : DDLObjectType, IDDLObjectType<HoverbootMoveData
 		DecelToIdealSpeed = ddl.GetValue<float>(0x5101a65fu, DecelToIdealSpeed);
 	}
 
-	[DDLRegistration(0xb14a235eu)]
+	[DDLRegistration(0x307e12feu)]
 	public float InitialMinSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb14a235eu)]
+	[DDLRegistration(0x16b83961u)]
 	public float MaxSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb14a235eu)]
+	[DDLRegistration(0x44affa24u)]
 	public float Accel { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb14a235eu, description: "Decel for the base speed. (m/s^2)")]
+	[DDLRegistration(0xa9242a88u, description: "Decel for the base speed. (m/s^2)")]
 	public float Decel { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb14a235eu, description: "Lateral decel for the base speed. (m/s^2)")]
+	[DDLRegistration(0xe619575au, description: "Lateral decel for the base speed. (m/s^2)")]
 	public float LateralDecel { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb14a235eu, description: "Lateral decel for the base speed with no input. (m/s^2)")]
+	[DDLRegistration(0x3a973cc4u, description: "Lateral decel for the base speed with no input. (m/s^2)")]
 	public float LateralDecelNoInput { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb14a235eu, description: "Turn gain for the base speed.")]
+	[DDLRegistration(0x38623a3bu, description: "Turn gain for the base speed.")]
 	public float TurnGain { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb14a235eu)]
+	[DDLRegistration(0xb4b46db2u)]
 	public float TurnDamp { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb14a235eu)]
+	[DDLRegistration(0xe0f22389u)]
 	public float TurnMinSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb14a235eu)]
+	[DDLRegistration(0x06928c68u)]
 	public float TurnMaxSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb14a235eu)]
+	[DDLRegistration(0x62799f5fu)]
 	public float BreakableSpeedThreshold { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb14a235eu, description: "After being without ground for this long, the hero enters the fall state. (seconds)")]
+	[DDLRegistration(0x482d01abu, description: "After being without ground for this long, the hero enters the fall state. (seconds)")]
 	public float NoGroundFallTime { get; set; } = 0.10f;
 
-	[DDLRegistration(0xb14a235eu, description: "Deceleration for getting down to ideal speed when going too fast. To help preserve momentum. (m/s^2)")]
+	[DDLRegistration(0x5101a65fu, description: "Deceleration for getting down to ideal speed when going too fast. To help preserve momentum. (m/s^2)")]
 	public float DecelToIdealSpeed { get; set; } = 3.00f;
 
 	public static HoverbootMoveData Create(DDLObject ddl) => new(ddl);

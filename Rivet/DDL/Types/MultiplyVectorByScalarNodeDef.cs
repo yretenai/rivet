@@ -20,13 +20,13 @@ public class MultiplyVectorByScalarNodeDef : MathNodeBaseDef, IDDLObjectType<Mul
 		Product = ddl.GetObject<OutputPlugVec3>(0xd2a06795u);
 	}
 
-	[DDLRegistration(0x5562287cu)]
+	[DDLRegistration(0x49594b39u)]
 	public InputPlugVec3? Vec { get; set; } = default;
 
-	[DDLRegistration(0x5562287cu)]
+	[DDLRegistration(0xdc2475e2u)]
 	public InputPlugFloat? Scalar { get; set; } = default;
 
-	[DDLRegistration(0x5562287cu)]
+	[DDLRegistration(0xd2a06795u)]
 	public OutputPlugVec3? Product { get; set; } = default;
 
 	public new static MultiplyVectorByScalarNodeDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class BotComboConditionGoonBikeBolaCheckPrius : BotComboConditionDistFrom
 		FeetLocatorForLoS = ddl.GetString(0xaa386430) ?? FeetLocatorForLoS;
 	}
 
-	[DDLRegistration(0xc835d74au)]
+	[DDLRegistration(0xaa386430u)]
 	public string? FeetLocatorForLoS { get; set; } = default;
 
 	public new static BotComboConditionGoonBikeBolaCheckPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class Cinematic2LightGroupIdsMimeData : DDLObjectType, IDDLObjectType<Cin
 		Tuids = ddl.GetValues<RivetAssetId>(0x005953f7u);
 	}
 
-	[DDLRegistration(0xc53b3b18u)]
+	[DDLRegistration(0x005953f7u)]
 	public List<RivetAssetId> Tuids { get; set; } = [];
 
 	public static Cinematic2LightGroupIdsMimeData Create(DDLObject ddl) => new(ddl);

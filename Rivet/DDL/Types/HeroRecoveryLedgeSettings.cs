@@ -23,22 +23,22 @@ public class HeroRecoveryLedgeSettings : DDLObjectType, IDDLObjectType<HeroRecov
 		EnableEdgeClampingOnHitReact = ddl.GetValue<bool>(0x91d00ec0u, EnableEdgeClampingOnHitReact);
 	}
 
-	[DDLRegistration(0x4705c640u, "Enable Recovery Ledges On Walk Off?")]
+	[DDLRegistration(0x89333d78u, "Enable Recovery Ledges On Walk Off?")]
 	public bool EnableRecoveryLedgesOnWalkOff { get; set; } = false;
 
-	[DDLRegistration(0x4705c640u, "Enable Recovery Ledges On Run Off Out of Combat?")]
+	[DDLRegistration(0xe4ca5bcbu, "Enable Recovery Ledges On Run Off Out of Combat?")]
 	public bool EnableRecoveryLedgesOnRunOffNoCombat { get; set; } = false;
 
-	[DDLRegistration(0x4705c640u, "Enable Recovery Ledges On Run Off in Combat?")]
+	[DDLRegistration(0x48785966u, "Enable Recovery Ledges On Run Off in Combat?")]
 	public bool EnableRecoveryLedgesOnRunOffInCombat { get; set; } = true;
 
-	[DDLRegistration(0x4705c640u, "Enable Front Recovery Ledges on Jump?")]
+	[DDLRegistration(0x22f471b7u, "Enable Front Recovery Ledges on Jump?")]
 	public bool EnableFrontRecoveryLedgesOnJump { get; set; } = true;
 
-	[DDLRegistration(0x4705c640u, "Enable Recovery Ledges On Knocked Off?")]
+	[DDLRegistration(0x4db5c030u, "Enable Recovery Ledges On Knocked Off?")]
 	public bool EnableRecoveryLedgesOnKnockedOff { get; set; } = true;
 
-	[DDLRegistration(0x4705c640u, "Enable Edge Clamping on Hit React?")]
+	[DDLRegistration(0x91d00ec0u, "Enable Edge Clamping on Hit React?")]
 	public bool EnableEdgeClampingOnHitReact { get; set; } = true;
 
 	public static HeroRecoveryLedgeSettings Create(DDLObject ddl) => new(ddl);

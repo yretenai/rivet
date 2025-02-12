@@ -18,7 +18,7 @@ public class ConnectionPinDef : NodeGraphItemDef, IDDLObjectType<ConnectionPinDe
 		Point = ddl.GetObject<DDLVector2>(0xaef63fe5u);
 	}
 
-	[DDLRegistration(0x34a59c22u)]
+	[DDLRegistration(0xaef63fe5u)]
 	public DDLVector2? Point { get; set; } = default;
 
 	public new static ConnectionPinDef Create(DDLObject ddl) => new(ddl);

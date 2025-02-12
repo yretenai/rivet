@@ -36,61 +36,61 @@ public class MissionObjective : DDLObjectType, IDDLObjectType<MissionObjective> 
 		ObjectiveRewards = ddl.GetObjects<ObjectiveRewardArray>(0x2112cec3u);
 	}
 
-	[DDLRegistration(0x5c53ccbbu)]
+	[DDLRegistration(0x58746b9bu)]
 	public string? ObjectiveName { get; set; } = "Objective";
 
-	[DDLRegistration(0x5c53ccbbu)]
+	[DDLRegistration(0x881f7435u)]
 	public string? ObjectiveDisplayName { get; set; } = default;
 
-	[DDLRegistration(0x5c53ccbbu, description: "Will overwrite the hardcoded string if set")]
+	[DDLRegistration(0xad62773bu, description: "Will overwrite the hardcoded string if set")]
 	public string? LocTagObjectiveDisplayName { get; set; } = "INVALID";
 
-	[DDLRegistration(0x5c53ccbbu)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0x5c53ccbbu, description: "Will overwrite the hardcoded string if set")]
+	[DDLRegistration(0xb32a92c4u, description: "Will overwrite the hardcoded string if set")]
 	public string? LocTagDescription { get; set; } = "INVALID";
 
-	[DDLRegistration(0x5c53ccbbu)]
+	[DDLRegistration(0xd436a987u)]
 	public string? Checkpoint { get; set; } = default;
 
-	[DDLRegistration(0x5c53ccbbu, description: "Use the specified lighting mode when this objective is active.")]
+	[DDLRegistration(0x344cb7e0u, description: "Use the specified lighting mode when this objective is active.")]
 	public bool OverrideLightingMode { get; set; } = false;
 
-	[DDLRegistration(0x5c53ccbbu, description: "Lighting mode to use when this objective is active.")]
+	[DDLRegistration(0x537e2fccu, description: "Lighting mode to use when this objective is active.")]
 	public LightingModeGame LightingMode { get; set; } = LightingModeGame.Day;
 
-	[DDLRegistration(0x5c53ccbbu)]
+	[DDLRegistration(0xdbabb63fu)]
 	public bool HideObjective { get; set; } = false;
 
-	[DDLRegistration(0x5c53ccbbu, description: "Does not ping the mission objective if it changes during a mission, only if reloading in to this objective.")]
+	[DDLRegistration(0xec688f42u, description: "Does not ping the mission objective if it changes during a mission, only if reloading in to this objective.")]
 	public bool OnlyShowOnLoad { get; set; } = false;
 
-	[DDLRegistration(0x5c53ccbbu, "NoSave-Objective", "If true, if the user quits during this objective, it will load in next time at the previous objective.")]
+	[DDLRegistration(0x72362b8eu, "NoSave-Objective", "If true, if the user quits during this objective, it will load in next time at the previous objective.")]
 	public bool NoSave { get; set; } = false;
 
-	[DDLRegistration(0x5c53ccbbu, "NoSave-Mission", "If true, if the user quits or dies during this objective, It will abandon mission and load into the mission available state instead")]
+	[DDLRegistration(0x98a355b5u, "NoSave-Mission", "If true, if the user quits or dies during this objective, It will abandon mission and load into the mission available state instead")]
 	public bool NoSaveMission { get; set; } = false;
 
-	[DDLRegistration(0x5c53ccbbu, description: "If true, The pause menu will not have the reload last checkpoint option during this objective")]
+	[DDLRegistration(0x336a865cu, description: "If true, The pause menu will not have the reload last checkpoint option during this objective")]
 	public bool NoReload { get; set; } = false;
 
-	[DDLRegistration(0x5c53ccbbu, description: "If true, the ui will show that the mission is complete at this objective. Use for post mission type hidden objectives")]
+	[DDLRegistration(0x14417b20u, description: "If true, the ui will show that the mission is complete at this objective. Use for post mission type hidden objectives")]
 	public bool ShowAsMissionComplete { get; set; } = false;
 
-	[DDLRegistration(0x5c53ccbbu, description: "If set and in co-op, Character2 will see this text (debug only)")]
+	[DDLRegistration(0xaad20719u, description: "If set and in co-op, Character2 will see this text (debug only)")]
 	public string? ObjectiveDisplayNameCharacter2 { get; set; } = default;
 
-	[DDLRegistration(0x5c53ccbbu, description: "If set and in co-op, Character2 will see this text")]
+	[DDLRegistration(0x27469915u, description: "If set and in co-op, Character2 will see this text")]
 	public string? LocTagObjectiveDisplayNameCharacter2 { get; set; } = "INVALID";
 
-	[DDLRegistration(0x5c53ccbbu, description: "If set and in co-op, Character2 will see this text (debug only)")]
+	[DDLRegistration(0x9ca4e46au, description: "If set and in co-op, Character2 will see this text (debug only)")]
 	public string? DescriptionCharacter2 { get; set; } = default;
 
-	[DDLRegistration(0x5c53ccbbu, description: "If set and in co-op, Character2 will see this text")]
+	[DDLRegistration(0x7b39b46eu, description: "If set and in co-op, Character2 will see this text")]
 	public string? LocTagDescriptionCharacter2 { get; set; } = "INVALID";
 
-	[DDLRegistration(0x5c53ccbbu)]
+	[DDLRegistration(0x2112cec3u)]
 	public List<ObjectiveRewardArray?> ObjectiveRewards { get; set; } = [];
 
 	public static MissionObjective Create(DDLObject ddl) => new(ddl);

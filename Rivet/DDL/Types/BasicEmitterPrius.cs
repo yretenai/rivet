@@ -19,10 +19,10 @@ public class BasicEmitterPrius : WeaponEmitterBasePrius, IDDLObjectType<BasicEmi
 		EmitterLocator = ddl.GetString(0x16f64b86) ?? EmitterLocator;
 	}
 
-	[DDLRegistration(0x178f7590u)]
+	[DDLRegistration(0x13b721dbu)]
 	public bool EmitFromUser { get; set; } = false;
 
-	[DDLRegistration(0x178f7590u)]
+	[DDLRegistration(0x16f64b86u)]
 	public string? EmitterLocator { get; set; } = "igLoc_bulletEmit";
 
 	public new static BasicEmitterPrius Create(DDLObject ddl) => new(ddl);

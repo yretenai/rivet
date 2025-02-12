@@ -25,28 +25,28 @@ public class VisualEffectCommentNode : DDLObjectType, IDDLObjectType<VisualEffec
 		Height = ddl.GetValue<uint>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0xedee0248u)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xedee0248u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0xedee0248u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0xedee0248u, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0xedee0248u)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<VisualEffectNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0xedee0248u)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<VisualEffectNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
-	[DDLRegistration(0xedee0248u)]
+	[DDLRegistration(0x954989eeu)]
 	public uint Width { get; set; } = 0x00000020;
 
-	[DDLRegistration(0xedee0248u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public uint Height { get; set; } = 0x00000020;
 
 	public static VisualEffectCommentNode Create(DDLObject ddl) => new(ddl);

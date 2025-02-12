@@ -20,13 +20,13 @@ public class BotTargetVisibleEvent : EventBase, IDDLObjectType<BotTargetVisibleE
 		TargetLosable = ddl.GetValue<bool>(0xaa0e3b11u, TargetLosable);
 	}
 
-	[DDLRegistration(0xaa37fe78u)]
+	[DDLRegistration(0x7fb3ca8eu)]
 	public int TargetState { get; set; } = 0;
 
-	[DDLRegistration(0xaa37fe78u)]
+	[DDLRegistration(0x356aabe1u)]
 	public DDLVector3? LastKnownPos { get; set; } = default;
 
-	[DDLRegistration(0xaa37fe78u)]
+	[DDLRegistration(0xaa0e3b11u)]
 	public bool TargetLosable { get; set; } = true;
 
 	public new static BotTargetVisibleEvent Create(DDLObject ddl) => new(ddl);

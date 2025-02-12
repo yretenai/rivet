@@ -23,22 +23,22 @@ public class VisualEffectGraphNode : DDLObjectType, IDDLObjectType<VisualEffectG
 		ConnectedOutputs = ddl.GetObjects<VisualEffectNodeConnectedOutputPort>(0x824bee0eu);
 	}
 
-	[DDLRegistration(0x3779cabeu)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x3779cabeu)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x3779cabeu)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x3779cabeu, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x3779cabeu)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<VisualEffectNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0x3779cabeu)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<VisualEffectNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
 	public static VisualEffectGraphNode Create(DDLObject ddl) => new(ddl);

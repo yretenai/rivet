@@ -22,19 +22,19 @@ public class ProjectCustomDef : DDLObjectType, IDDLObjectType<ProjectCustomDef> 
 		ValueD = ddl.GetValue<float>(0xbc62a78eu, ValueD);
 	}
 
-	[DDLRegistration(0xe3f5b553u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
-	[DDLRegistration(0xe3f5b553u)]
+	[DDLRegistration(0xcc085301u)]
 	public float ValueA { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe3f5b553u)]
+	[DDLRegistration(0x550102bbu)]
 	public float ValueB { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe3f5b553u)]
+	[DDLRegistration(0x2206322du)]
 	public float ValueC { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe3f5b553u)]
+	[DDLRegistration(0xbc62a78eu)]
 	public float ValueD { get; set; } = 0.00f;
 
 	public static ProjectCustomDef Create(DDLObject ddl) => new(ddl);

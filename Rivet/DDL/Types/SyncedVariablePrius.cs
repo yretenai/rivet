@@ -19,10 +19,10 @@ public class SyncedVariablePrius : DDLObjectType, IDDLObjectType<SyncedVariableP
 		Variable = ddl.GetValue<uint>(0x364c3afdu, Variable);
 	}
 
-	[DDLRegistration(0x18bc8ce9u, description: "Name of the synced variable")]
+	[DDLRegistration(0x6eb3beb6u, description: "Name of the synced variable")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x18bc8ce9u, description: "Variable synced to all clients")]
+	[DDLRegistration(0x364c3afdu, description: "Variable synced to all clients")]
 	public uint Variable { get; set; } = 0x00000000;
 
 	public static SyncedVariablePrius Create(DDLObject ddl) => new(ddl);

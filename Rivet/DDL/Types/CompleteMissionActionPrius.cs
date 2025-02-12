@@ -19,10 +19,10 @@ public class CompleteMissionActionPrius : DDLObjectType, IDDLObjectType<Complete
 		GotoCleanupState = ddl.GetValue<bool>(0x107b0126u, GotoCleanupState);
 	}
 
-	[DDLRegistration(0x6d819f8fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.MissionSystem;
 
-	[DDLRegistration(0x6d819f8fu, description: "If true, go into cleanup state on completion, and you MUST signal CleanupDone at some future time, which is when the mission overlay will unload.")]
+	[DDLRegistration(0x107b0126u, description: "If true, go into cleanup state on completion, and you MUST signal CleanupDone at some future time, which is when the mission overlay will unload.")]
 	public bool GotoCleanupState { get; set; } = false;
 
 	public static CompleteMissionActionPrius Create(DDLObject ddl) => new(ddl);

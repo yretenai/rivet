@@ -36,61 +36,61 @@ public class GameBotDoomSpawnData : ActorSpawnData, IDDLObjectType<GameBotDoomSp
 		IsUpgraded = ddl.GetValue<bool>(0x253c8e18u, IsUpgraded);
 	}
 
-	[DDLRegistration(0x93c86ddeu, description: "The shot owner's actor handle.")]
+	[DDLRegistration(0x6151ad8fu, description: "The shot owner's actor handle.")]
 	public uint OwnerHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x93c86ddeu, description: "The shot's actor handle.")]
+	[DDLRegistration(0xf47be90bu, description: "The shot's actor handle.")]
 	public uint ShotHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x93c86ddeu, description: "AssetId for the asset we're spawning.")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning.")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x93c86ddeu, description: "The zone index we should put the spawned guy into.")]
+	[DDLRegistration(0x0c9266b7u, description: "The zone index we should put the spawned guy into.")]
 	public int ZoneIndex { get; set; } = 0;
 
-	[DDLRegistration(0x93c86ddeu)]
+	[DDLRegistration(0x902af590u)]
 	public uint WeaponId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x93c86ddeu, description: "Agent lifetime.")]
+	[DDLRegistration(0xc7e68df8u, description: "Agent lifetime.")]
 	public float Lifetime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x93c86ddeu, description: "Agent melee damage.")]
+	[DDLRegistration(0x16a1bbe8u, description: "Agent melee damage.")]
 	public float MeleeDamage { get; set; } = 0.00f;
 
-	[DDLRegistration(0x93c86ddeu, description: "Agent max melee damage over lifetime.")]
+	[DDLRegistration(0x3f8157c8u, description: "Agent max melee damage over lifetime.")]
 	public float MaxMeleeDamage { get; set; } = 0.00f;
 
-	[DDLRegistration(0x93c86ddeu, description: "Agent explosion damage.")]
+	[DDLRegistration(0x9d3dffd2u, description: "Agent explosion damage.")]
 	public float ExplodeDamage { get; set; } = 0.00f;
 
-	[DDLRegistration(0x93c86ddeu, description: "Agent explosion radius.")]
+	[DDLRegistration(0xb789c5e4u, description: "Agent explosion radius.")]
 	public float ExplodeRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0x93c86ddeu, description: "Agent speed.")]
+	[DDLRegistration(0x16753237u, description: "Agent speed.")]
 	public float Speed { get; set; } = 0.00f;
 
-	[DDLRegistration(0x93c86ddeu, description: "Agent awareness range.")]
+	[DDLRegistration(0xbf395be1u, description: "Agent awareness range.")]
 	public float AwarenessRange { get; set; } = 0.00f;
 
-	[DDLRegistration(0x93c86ddeu)]
+	[DDLRegistration(0x45e23d0fu)]
 	public DDLVector3? SpawnPos { get; set; } = default;
 
-	[DDLRegistration(0x93c86ddeu)]
+	[DDLRegistration(0xb37847eeu)]
 	public DDLVector3? Facing { get; set; } = default;
 
-	[DDLRegistration(0x93c86ddeu)]
+	[DDLRegistration(0x76fcc3adu)]
 	public DDLVector3? Up { get; set; } = default;
 
-	[DDLRegistration(0x93c86ddeu)]
+	[DDLRegistration(0xc6ab960eu)]
 	public DDLVector3? LandPos { get; set; } = default;
 
-	[DDLRegistration(0x93c86ddeu)]
+	[DDLRegistration(0xfe1d4900u)]
 	public float MaxDistanceMod { get; set; } = 0.00f;
 
-	[DDLRegistration(0x93c86ddeu)]
+	[DDLRegistration(0x111be174u)]
 	public float MaxHeightMod { get; set; } = 0.00f;
 
-	[DDLRegistration(0x93c86ddeu)]
+	[DDLRegistration(0x253c8e18u)]
 	public bool IsUpgraded { get; set; } = false;
 
 	public new static GameBotDoomSpawnData Create(DDLObject ddl) => new(ddl);

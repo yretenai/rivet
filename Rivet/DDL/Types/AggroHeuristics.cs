@@ -18,7 +18,7 @@ public class AggroHeuristics : DDLObjectType, IDDLObjectType<AggroHeuristics> {
 		Weight = ddl.GetValue<float>(0x39b51b26u, Weight);
 	}
 
-	[DDLRegistration(0x0fe00f59u)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 1.00f;
 
 	public static AggroHeuristics Create(DDLObject ddl) => new(ddl);

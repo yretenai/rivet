@@ -18,7 +18,7 @@ public class NodalShotUIntData : NodalShotVariableDataBase, IDDLObjectType<Nodal
 		Value = ddl.GetValue<uint>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0xba56e8edu)]
+	[DDLRegistration(0x042494f5u)]
 	public uint Value { get; set; } = 0x00000000;
 
 	public new static NodalShotUIntData Create(DDLObject ddl) => new(ddl);

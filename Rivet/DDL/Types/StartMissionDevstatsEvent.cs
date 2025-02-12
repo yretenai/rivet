@@ -22,19 +22,19 @@ public class StartMissionDevstatsEvent : EventBase, IDDLObjectType<StartMissionD
 		PlayerPosInfo = ddl.GetObject<DevstatsPlayerPositionInfo>(0xeadcc3e4u);
 	}
 
-	[DDLRegistration(0x60f91bbbu, "Event ID", "Unique ID for this event instance. Even if you start the same mission multiple times, this each time will have a unique value for Event ID.")]
+	[DDLRegistration(0x2ac4d854u, "Event ID", "Unique ID for this event instance. Even if you start the same mission multiple times, this each time will have a unique value for Event ID.")]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x60f91bbbu, "Mission Segment ID", "Unique ID for this particular mission segment. This and the corresponding End Mission Event will have the same segment id.")]
+	[DDLRegistration(0x1a25ffb8u, "Mission Segment ID", "Unique ID for this particular mission segment. This and the corresponding End Mission Event will have the same segment id.")]
 	public string? MissionSegmentId { get; set; } = default;
 
-	[DDLRegistration(0x60f91bbbu, "Mission Name", "Name of this mission in code.")]
+	[DDLRegistration(0xa5c30e60u, "Mission Name", "Name of this mission in code.")]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x60f91bbbu, "Is Replay", "Is this mission a replay of a previously-completed mission?")]
+	[DDLRegistration(0xe25e4358u, "Is Replay", "Is this mission a replay of a previously-completed mission?")]
 	public bool IsReplay { get; set; } = false;
 
-	[DDLRegistration(0x60f91bbbu)]
+	[DDLRegistration(0xeadcc3e4u)]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
 	public new static StartMissionDevstatsEvent Create(DDLObject ddl) => new(ddl);

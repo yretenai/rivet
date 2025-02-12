@@ -18,7 +18,7 @@ public class GameplayDataRefArray : DDLObjectType, IDDLObjectType<GameplayDataRe
 		GameplayDataReferences = ddl.GetObjects<GameplayDataReferenceDef>(0x529e91dcu);
 	}
 
-	[DDLRegistration(0x9d1e4234u)]
+	[DDLRegistration(0x529e91dcu)]
 	public List<GameplayDataReferenceDef?> GameplayDataReferences { get; set; } = [];
 
 	public static GameplayDataRefArray Create(DDLObject ddl) => new(ddl);

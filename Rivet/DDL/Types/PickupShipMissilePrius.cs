@@ -18,7 +18,7 @@ public class PickupShipMissilePrius : GamePickupItemPrius, IDDLObjectType<Pickup
 		AmmoAmount = ddl.GetValue<uint>(0xa56a6243u, AmmoAmount);
 	}
 
-	[DDLRegistration(0xe26ce1a5u)]
+	[DDLRegistration(0xa56a6243u)]
 	public uint AmmoAmount { get; set; } = 0x00000001;
 
 	public new static PickupShipMissilePrius Create(DDLObject ddl) => new(ddl);

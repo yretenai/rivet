@@ -23,22 +23,22 @@ public class BotCommandJuiceDistractionScriptActionPrius : DDLObjectType, IDDLOb
 		DistractionTime = ddl.GetValue<float>(0xe4701ac7u, DistractionTime);
 	}
 
-	[DDLRegistration(0x560743d5u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
-	[DDLRegistration(0x560743d5u)]
+	[DDLRegistration(0x6376fae0u)]
 	public string? DistractionAlertAnim { get; set; } = "Alert_Intro";
 
-	[DDLRegistration(0x560743d5u)]
+	[DDLRegistration(0x4c126e6cu)]
 	public string? DistractionIntroAnim { get; set; } = default;
 
-	[DDLRegistration(0x560743d5u)]
+	[DDLRegistration(0xbde81daau)]
 	public string? DistractionLoopAnim { get; set; } = "Feeding";
 
-	[DDLRegistration(0x560743d5u)]
+	[DDLRegistration(0x1ed93a9bu)]
 	public string? DistractionOutroAnim { get; set; } = default;
 
-	[DDLRegistration(0x560743d5u)]
+	[DDLRegistration(0xe4701ac7u)]
 	public float DistractionTime { get; set; } = 8.00f;
 
 	public static BotCommandJuiceDistractionScriptActionPrius Create(DDLObject ddl) => new(ddl);

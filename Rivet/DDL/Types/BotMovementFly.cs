@@ -56,121 +56,121 @@ public class BotMovementFly : BotMovementBase, IDDLObjectType<BotMovementFly> {
 		PickupData = ddl.GetObject<MountAbilityFlyPickup>(0x6758c493u);
 	}
 
-	[DDLRegistration(0x229c38f8u, "Perch Animation")]
+	[DDLRegistration(0x9f307b58u, "Perch Animation")]
 	public string? IdleAnimName { get; set; } = default;
 
-	[DDLRegistration(0x229c38f8u, description: "Anim for turning around when going out of bounds of the gameplay space.")]
+	[DDLRegistration(0xd0b8ea57u, description: "Anim for turning around when going out of bounds of the gameplay space.")]
 	public string? TurnAroundAnimName { get; set; } = default;
 
-	[DDLRegistration(0x229c38f8u)]
+	[DDLRegistration(0xf8a9e916u)]
 	public string? IdlePivotAnimName { get; set; } = "Idle_Pivot";
 
-	[DDLRegistration(0x229c38f8u)]
+	[DDLRegistration(0x5d31573cu)]
 	public string? IdlePivotAnimVarName { get; set; } = "Turn_Angle";
 
-	[DDLRegistration(0x229c38f8u, description: "Anim to play when moving fast enough to glide.")]
+	[DDLRegistration(0xe1f67a05u, description: "Anim to play when moving fast enough to glide.")]
 	public string? GlideAnim { get; set; } = default;
 
-	[DDLRegistration(0x229c38f8u, description: "Anim to play when going slow and must be flapping.")]
+	[DDLRegistration(0x1916c5fdu, description: "Anim to play when going slow and must be flapping.")]
 	public string? FlapAnim { get; set; } = default;
 
-	[DDLRegistration(0x229c38f8u, description: "Anim to play when running into a surface.")]
+	[DDLRegistration(0x08d62089u, description: "Anim to play when running into a surface.")]
 	public string? CollideAnim { get; set; } = default;
 
-	[DDLRegistration(0x229c38f8u, description: "Min speed at which the flyer will use its glide animation")]
+	[DDLRegistration(0xe81bf099u, description: "Min speed at which the flyer will use its glide animation")]
 	public float MinGlideSpeed { get; set; } = 12.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Max degrees from level that a flyer can pitch.")]
+	[DDLRegistration(0x9eb9015au, description: "Max degrees from level that a flyer can pitch.")]
 	public float MaxFlightPitch { get; set; } = 45.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Rotational speed at which the flyer changes pitch over time.")]
+	[DDLRegistration(0xf258cc98u, description: "Rotational speed at which the flyer changes pitch over time.")]
 	public float RotatePitchSpeed { get; set; } = 43.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Rotational speed at which the flyer changes yaw over time.")]
+	[DDLRegistration(0x876b56b0u, description: "Rotational speed at which the flyer changes yaw over time.")]
 	public float RotateYawSpeed { get; set; } = 69.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Rotational max speed at which the flyer changes roll over time (anim var related).")]
+	[DDLRegistration(0x7eae4f00u, description: "Rotational max speed at which the flyer changes roll over time (anim var related).")]
 	public float RotateRollSpeed { get; set; } = 86.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Animation acceleration for the roll")]
+	[DDLRegistration(0xdda52023u, description: "Animation acceleration for the roll")]
 	public float RollAnimAccel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Animation deceleration for the roll")]
+	[DDLRegistration(0x302ef08fu, description: "Animation deceleration for the roll")]
 	public float RollAnimDecel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Animation acceleration for the head lean")]
+	[DDLRegistration(0x0df012b3u, description: "Animation acceleration for the head lean")]
 	public float HeadLeanAnimAccel { get; set; } = 30.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Animation deceleration for the head lean")]
+	[DDLRegistration(0xe07bc21fu, description: "Animation deceleration for the head lean")]
 	public float HeadLeanAnimDecel { get; set; } = 20.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Animation deceleration for the head lean")]
+	[DDLRegistration(0x8397a2dcu, description: "Animation deceleration for the head lean")]
 	public float HeadLeanAnimMaxSpeed { get; set; } = 25.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Max angle from zero in which the pitch will level off to zero pitch over time.")]
+	[DDLRegistration(0x6c9dea4au, description: "Max angle from zero in which the pitch will level off to zero pitch over time.")]
 	public float MaxPitchAutoLevel { get; set; } = 18.50f;
 
-	[DDLRegistration(0x229c38f8u, description: "Max angle from zero in which the pitch will level off to zero pitch over time.")]
+	[DDLRegistration(0x3c3286ecu, description: "Max angle from zero in which the pitch will level off to zero pitch over time.")]
 	public float AutoLevelPitchSpeed { get; set; } = 14.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Rotational speed at which the flyer changes pitch over time whiling boosting.")]
+	[DDLRegistration(0x58c6266bu, description: "Rotational speed at which the flyer changes pitch over time whiling boosting.")]
 	public float BoostRotatePitchSpeed { get; set; } = 15.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Rotational speed at which the flyer changes yaw over time whiling boosting.")]
+	[DDLRegistration(0x45fcbc39u, description: "Rotational speed at which the flyer changes yaw over time whiling boosting.")]
 	public float BoostRotateYawSpeed { get; set; } = 25.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Rotational speed at which the flyer changes pitch over time whiling braking.")]
+	[DDLRegistration(0x33293d5fu, description: "Rotational speed at which the flyer changes pitch over time whiling braking.")]
 	public float BrakeRotatePitchSpeed { get; set; } = 43.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Rotational speed at which the flyer changes yaw over time whiling braking.")]
+	[DDLRegistration(0xb17d322au, description: "Rotational speed at which the flyer changes yaw over time whiling braking.")]
 	public float BrakeRotateYawSpeed { get; set; } = 90.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Enable whether you can get a speed boost from gravity")]
+	[DDLRegistration(0x0daa4a1bu, description: "Enable whether you can get a speed boost from gravity")]
 	public bool EnableGravitySpeedBoost { get; set; } = true;
 
-	[DDLRegistration(0x229c38f8u, description: "A Multiplier on how quickly this flyer will gain speed when diving.")]
+	[DDLRegistration(0xba459bc9u, description: "A Multiplier on how quickly this flyer will gain speed when diving.")]
 	public float SpeedMultiplierFromDiving { get; set; } = 0.50f;
 
-	[DDLRegistration(0x229c38f8u, description: "The amount of additional speed that can be added to the base speed (MoveSpeed) from diving.")]
+	[DDLRegistration(0x15957570u, description: "The amount of additional speed that can be added to the base speed (MoveSpeed) from diving.")]
 	public float MaxGravitySpeedBoost { get; set; } = 10.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Amount of speed reduced per second while traveling faster than the base speed (MoveSpeed.)")]
+	[DDLRegistration(0x41489f20u, description: "Amount of speed reduced per second while traveling faster than the base speed (MoveSpeed.)")]
 	public float DragReduction { get; set; } = 3.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "If true, the mount will show a reticle and use the first shot (index zero) from the Shot Spawned Handler Prius.")]
+	[DDLRegistration(0x42638895u, description: "If true, the mount will show a reticle and use the first shot (index zero) from the Shot Spawned Handler Prius.")]
 	public bool CanFireProjectiles { get; set; } = false;
 
-	[DDLRegistration(0x229c38f8u, description: "Locator to shoot projectiles from.")]
+	[DDLRegistration(0xd134c222u, description: "Locator to shoot projectiles from.")]
 	public string? ProjectileLocator { get; set; } = "igLoc_Fire";
 
-	[DDLRegistration(0x229c38f8u, description: "When boosting/braking, this is the acceleration used to vary the speed")]
+	[DDLRegistration(0x2943cdabu, description: "When boosting/braking, this is the acceleration used to vary the speed")]
 	public float FlightAcceleration { get; set; } = 20.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Animation acceleration for the tail's horizontal component")]
+	[DDLRegistration(0xf629728bu, description: "Animation acceleration for the tail's horizontal component")]
 	public float TailHorizontalAnimAccel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Animation deceleration for the tail's horizontal component")]
+	[DDLRegistration(0x1ba2a227u, description: "Animation deceleration for the tail's horizontal component")]
 	public float TailHorizontalAnimDecel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Animation max speed for the tail's horizontal component")]
+	[DDLRegistration(0x331d17d8u, description: "Animation max speed for the tail's horizontal component")]
 	public float TailHorizontalAnimMaxSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Animation acceleration for the tail's vertical component")]
+	[DDLRegistration(0x6555b631u, description: "Animation acceleration for the tail's vertical component")]
 	public float TailVerticalAnimAccel { get; set; } = 5.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Animation deceleration for the tail's vertical component")]
+	[DDLRegistration(0x88de669du, description: "Animation deceleration for the tail's vertical component")]
 	public float TailVerticalAnimDecel { get; set; } = 10.00f;
 
-	[DDLRegistration(0x229c38f8u, description: "Animation max speed for the tail's vertical component")]
+	[DDLRegistration(0x0df143d0u, description: "Animation max speed for the tail's vertical component")]
 	public float TailVerticalAnimMaxSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0x229c38f8u)]
+	[DDLRegistration(0x44934dc7u)]
 	public DamageModifierDamageHashPrius? BoostDamageMod { get; set; } = default;
 
-	[DDLRegistration(0x229c38f8u)]
+	[DDLRegistration(0x1e0cb67bu)]
 	public MovementFlyOnRails? OnRailsMovement { get; set; } = default;
 
-	[DDLRegistration(0x229c38f8u)]
+	[DDLRegistration(0x6758c493u)]
 	public MountAbilityFlyPickup? PickupData { get; set; } = default;
 
 	public new static BotMovementFly Create(DDLObject ddl) => new(ddl);

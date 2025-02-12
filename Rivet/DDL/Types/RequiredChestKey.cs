@@ -20,13 +20,13 @@ public class RequiredChestKey : DDLObjectType, IDDLObjectType<RequiredChestKey> 
 		NumRequired = ddl.GetValue<ushort>(0x257a6d10u, NumRequired);
 	}
 
-	[DDLRegistration(0x214222feu)]
+	[DDLRegistration(0xa88f833fu)]
 	public RivetAssetId ItemConfig { get; set; } = default;
 
-	[DDLRegistration(0x214222feu, description: "Remove this item when it unlocks something")]
+	[DDLRegistration(0x37a80ee3u, description: "Remove this item when it unlocks something")]
 	public bool RemoveWhenUnlocked { get; set; } = true;
 
-	[DDLRegistration(0x214222feu, "Number Required", "Number of these items required to open the chest.")]
+	[DDLRegistration(0x257a6d10u, "Number Required", "Number of these items required to open the chest.")]
 	public ushort NumRequired { get; set; } = 0x0001;
 
 	public static RequiredChestKey Create(DDLObject ddl) => new(ddl);

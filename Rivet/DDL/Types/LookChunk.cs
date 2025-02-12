@@ -30,43 +30,43 @@ public class LookChunk : DDLObjectType, IDDLObjectType<LookChunk> {
 		OverrideConstantTimeToTarget = ddl.GetValue<float>(0xee641488u, OverrideConstantTimeToTarget);
 	}
 
-	[DDLRegistration(0x5a4021a7u, "Uses FX Conduit")]
+	[DDLRegistration(0x7cde1af8u, "Uses FX Conduit")]
 	public bool UsesFXConduit { get; set; } = false;
 
-	[DDLRegistration(0x5a4021a7u, "Uses Audio Conduit")]
+	[DDLRegistration(0xba330feeu, "Uses Audio Conduit")]
 	public bool UsesAudioConduit { get; set; } = false;
 
-	[DDLRegistration(0x5a4021a7u, "Death Only")]
+	[DDLRegistration(0x88ef82adu, "Death Only")]
 	public bool DeathOnly { get; set; } = false;
 
-	[DDLRegistration(0x5a4021a7u, "Trigger Spawn Event", "If true this chunk will trigger a ChunkSpawnedEvent when it is created")]
+	[DDLRegistration(0xee6cfc7eu, "Trigger Spawn Event", "If true this chunk will trigger a ChunkSpawnedEvent when it is created")]
 	public bool TriggerSpawnEvent { get; set; } = true;
 
-	[DDLRegistration(0x5a4021a7u, "Force Fade After Settled", "If true this will cause this chunk to fade out as it settles. You should only use this for big chunks.")]
+	[DDLRegistration(0x3d462c39u, "Force Fade After Settled", "If true this will cause this chunk to fade out as it settles. You should only use this for big chunks.")]
 	public bool ForceFadeAfterSettled { get; set; } = false;
 
-	[DDLRegistration(0x5a4021a7u, "Look To Disable")]
+	[DDLRegistration(0x2f48a06cu, "Look To Disable")]
 	public string? LookToDisable { get; set; } = "";
 
-	[DDLRegistration(0x5a4021a7u, "Looks To Chunk")]
+	[DDLRegistration(0x36f7b273u, "Looks To Chunk")]
 	public List<string?> LooksToChunk { get; set; } = [];
 
-	[DDLRegistration(0x5a4021a7u, "Event Locator", "The ChunkSpawnedEvent will be fired from this locator's position.")]
+	[DDLRegistration(0xbddfefa2u, "Event Locator", "The ChunkSpawnedEvent will be fired from this locator's position.")]
 	public string? EventLocator { get; set; } = "";
 
-	[DDLRegistration(0x5a4021a7u, description: "If set, tests this joint to be relatively not zero scale before we decide to chunk")]
+	[DDLRegistration(0x005a77c3u, description: "If set, tests this joint to be relatively not zero scale before we decide to chunk")]
 	public string? ScaleTestJointName { get; set; } = default;
 
-	[DDLRegistration(0x5a4021a7u, "Optionally set a render constant on the host when this chunk spawns")]
+	[DDLRegistration(0x7abeaa63u, "Optionally set a render constant on the host when this chunk spawns")]
 	public bool SetOverrideRenderConstant { get; set; } = false;
 
-	[DDLRegistration(0x5a4021a7u, "Override name", "When this LookChunk triggers, set this override constant")]
+	[DDLRegistration(0xa1ab8f2cu, "Override name", "When this LookChunk triggers, set this override constant")]
 	public string? OverrideConstantName { get; set; } = "";
 
-	[DDLRegistration(0x5a4021a7u, "Override target value", "Value to set override render constant")]
+	[DDLRegistration(0xa267cc29u, "Override target value", "Value to set override render constant")]
 	public float OverrideConstantTarget { get; set; } = 1.00f;
 
-	[DDLRegistration(0x5a4021a7u, "Override time to target", "time to get to set target value")]
+	[DDLRegistration(0xee641488u, "Override time to target", "time to get to set target value")]
 	public float OverrideConstantTimeToTarget { get; set; } = 0.50f;
 
 	public static LookChunk Create(DDLObject ddl) => new(ddl);

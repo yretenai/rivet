@@ -19,10 +19,10 @@ public class StrandStatePrius : DDLObjectType, IDDLObjectType<StrandStatePrius> 
 		CardLooks = ddl.GetStrings(0x07015642u);
 	}
 
-	[DDLRegistration(0xa863b90eu)]
+	[DDLRegistration(0x06098c4fu)]
 	public List<string?> StrandLooks { get; set; } = [];
 
-	[DDLRegistration(0xa863b90eu)]
+	[DDLRegistration(0x07015642u)]
 	public List<string?> CardLooks { get; set; } = [];
 
 	public static StrandStatePrius Create(DDLObject ddl) => new(ddl);

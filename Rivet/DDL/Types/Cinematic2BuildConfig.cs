@@ -18,7 +18,7 @@ public class Cinematic2BuildConfig : ConfigBase, IDDLObjectType<Cinematic2BuildC
 		MaxNonStreamedSize = ddl.GetValue<uint>(0xd79ef716u, MaxNonStreamedSize);
 	}
 
-	[DDLRegistration(0x0c450068u, description: "The max allowed size (in bytes) for non-streamed cinematics. Exceeding this size results in a builder error. Value of 0 means no limit.")]
+	[DDLRegistration(0xd79ef716u, description: "The max allowed size (in bytes) for non-streamed cinematics. Exceeding this size results in a builder error. Value of 0 means no limit.")]
 	public uint MaxNonStreamedSize { get; set; } = 0x00000000;
 
 	public new static Cinematic2BuildConfig Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class FormationMotionWaveBase : FormationMotionBase, IDDLObjectType<Forma
 		HeightOffset = ddl.GetValue<float>(0x563b3cc7u, HeightOffset);
 	}
 
-	[DDLRegistration(0xc2a43daeu, description: "Height of the wave")]
+	[DDLRegistration(0xe950071du, description: "Height of the wave")]
 	public float Amplitude { get; set; } = 4.00f;
 
-	[DDLRegistration(0xc2a43daeu, description: "Degrees per second of the wave")]
+	[DDLRegistration(0xa482271fu, description: "Degrees per second of the wave")]
 	public float Frequency { get; set; } = 180.00f;
 
-	[DDLRegistration(0xc2a43daeu, description: "Distance between waves")]
+	[DDLRegistration(0xfbc050a9u, description: "Distance between waves")]
 	public float Period { get; set; } = 0.00f;
 
-	[DDLRegistration(0xc2a43daeu, description: "How to determine your initial position on the wave")]
+	[DDLRegistration(0x6b541471u, description: "How to determine your initial position on the wave")]
 	public x0e268370 PhaseType { get; set; } = x0e268370.XAxis;
 
-	[DDLRegistration(0xc2a43daeu, description: "Shifts the entire wave up/down")]
+	[DDLRegistration(0x563b3cc7u, description: "Shifts the entire wave up/down")]
 	public float HeightOffset { get; set; } = 0.00f;
 
 	public new static FormationMotionWaveBase Create(DDLObject ddl) => new(ddl);

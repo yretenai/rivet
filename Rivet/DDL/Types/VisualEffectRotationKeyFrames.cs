@@ -25,28 +25,28 @@ public class VisualEffectRotationKeyFrames : DDLObjectType, IDDLObjectType<Visua
 		Value = ddl.GetObject<DDLVector3>(0x042494f5u);
 	}
 
-	[DDLRegistration(0xa2093b01u, "Loop")]
+	[DDLRegistration(0xe15c9369u, "Loop")]
 	public bool EnableLooping { get; set; } = true;
 
-	[DDLRegistration(0xa2093b01u, "Use Emitter Age")]
+	[DDLRegistration(0x81d6b7fcu, "Use Emitter Age")]
 	public bool UseEmitterAge { get; set; } = false;
 
-	[DDLRegistration(0xa2093b01u, "LifeTime Override")]
+	[DDLRegistration(0x580128bbu, "LifeTime Override")]
 	public float LifeTimeOverride { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa2093b01u)]
+	[DDLRegistration(0xbcb74ebfu)]
 	public x831fe0ea Direction { get; set; } = x831fe0ea.Rand;
 
-	[DDLRegistration(0xa2093b01u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public RotationType Type { get; set; } = RotationType.Speed;
 
-	[DDLRegistration(0xa2093b01u, "Spawn Angles Min")]
+	[DDLRegistration(0x77595c47u, "Spawn Angles Min")]
 	public DDLVector3? SpawnAnglesMin { get; set; } = default;
 
-	[DDLRegistration(0xa2093b01u, "Spawn Angles Max")]
+	[DDLRegistration(0x4b54631eu, "Spawn Angles Max")]
 	public DDLVector3? SpawnAnglesMax { get; set; } = default;
 
-	[DDLRegistration(0xa2093b01u)]
+	[DDLRegistration(0x042494f5u)]
 	public DDLVector3? Value { get; set; } = default;
 
 	public static VisualEffectRotationKeyFrames Create(DDLObject ddl) => new(ddl);

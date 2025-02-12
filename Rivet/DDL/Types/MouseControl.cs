@@ -21,16 +21,16 @@ public class MouseControl : DDLObjectType, IDDLObjectType<MouseControl> {
 		SensitivityFactorY = ddl.GetValue<float>(0x37911e68u, SensitivityFactorY);
 	}
 
-	[DDLRegistration(0x33c5244du)]
+	[DDLRegistration(0xb3aa100eu)]
 	public bool InvertX { get; set; } = false;
 
-	[DDLRegistration(0x33c5244du)]
+	[DDLRegistration(0xc4ad2098u)]
 	public bool InvertY { get; set; } = false;
 
-	[DDLRegistration(0x33c5244du)]
+	[DDLRegistration(0x40962efeu)]
 	public float SensitivityFactorX { get; set; } = 0.50f;
 
-	[DDLRegistration(0x33c5244du)]
+	[DDLRegistration(0x37911e68u)]
 	public float SensitivityFactorY { get; set; } = 0.50f;
 
 	public static MouseControl Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class FinaleHeartPartReactTriggeredEvent : EventBase, IDDLObjectType<Fina
 		Locator = ddl.GetString(0x7bac1d57) ?? Locator;
 	}
 
-	[DDLRegistration(0xe394de07u)]
+	[DDLRegistration(0x90b2e82eu)]
 	public byte NodeChamberIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0xe394de07u)]
+	[DDLRegistration(0x7bac1d57u)]
 	public string? Locator { get; set; } = default;
 
 	public new static FinaleHeartPartReactTriggeredEvent Create(DDLObject ddl) => new(ddl);

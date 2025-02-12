@@ -20,13 +20,13 @@ public class CustomOverlayRegionData : RegionGameDataBase, IDDLObjectType<Custom
 		Unsynced = ddl.GetValue<bool>(0x1a53f86eu, Unsynced);
 	}
 
-	[DDLRegistration(0x23dc70ecu)]
+	[DDLRegistration(0xd8934076u)]
 	public bool ProcessNavMeshObstactles { get; set; } = false;
 
-	[DDLRegistration(0x23dc70ecu)]
+	[DDLRegistration(0x2e62f2d2u)]
 	public OverlayTrigger? OverlayTrigger { get; set; } = default;
 
-	[DDLRegistration(0x23dc70ecu, description: "This overlay should be locally loaded and not synced with other machines.")]
+	[DDLRegistration(0x1a53f86eu, description: "This overlay should be locally loaded and not synced with other machines.")]
 	public bool Unsynced { get; set; } = false;
 
 	public new static CustomOverlayRegionData Create(DDLObject ddl) => new(ddl);

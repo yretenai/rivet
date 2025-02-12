@@ -21,16 +21,16 @@ public class VisualEffectNodeInputPort : DDLObjectType, IDDLObjectType<VisualEff
 		Visible = ddl.GetValue<bool>(0x7b5a8b61u, Visible);
 	}
 
-	[DDLRegistration(0x28a017e8u)]
+	[DDLRegistration(0x93971d83u)]
 	public string? InternalName { get; set; } = default;
 
-	[DDLRegistration(0x28a017e8u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = "unknown";
 
-	[DDLRegistration(0x28a017e8u)]
+	[DDLRegistration(0x8c1e6e85u)]
 	public string? UIType { get; set; } = default;
 
-	[DDLRegistration(0x28a017e8u)]
+	[DDLRegistration(0x7b5a8b61u)]
 	public bool Visible { get; set; } = true;
 
 	public static VisualEffectNodeInputPort Create(DDLObject ddl) => new(ddl);

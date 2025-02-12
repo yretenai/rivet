@@ -21,16 +21,16 @@ public class UBPTrophyUnlock : DDLObjectType, IDDLObjectType<UBPTrophyUnlock> {
 		IsProgressive = ddl.GetValue<bool>(0x6dba7288u, IsProgressive);
 	}
 
-	[DDLRegistration(0xa7b69f85u)]
+	[DDLRegistration(0xa5dbf91au)]
 	public x1a26ec8e Comparator { get; set; } = x1a26ec8e.Ge;
 
-	[DDLRegistration(0xa7b69f85u)]
+	[DDLRegistration(0x47cbcf96u)]
 	public string? TargetValue { get; set; } = default;
 
-	[DDLRegistration(0xa7b69f85u)]
+	[DDLRegistration(0x2db15e82u)]
 	public string? UdsStatName { get; set; } = default;
 
-	[DDLRegistration(0xa7b69f85u)]
+	[DDLRegistration(0x6dba7288u)]
 	public bool IsProgressive { get; set; } = false;
 
 	public static UBPTrophyUnlock Create(DDLObject ddl) => new(ddl);

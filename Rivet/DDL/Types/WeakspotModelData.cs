@@ -19,10 +19,10 @@ public class WeakspotModelData : DDLObjectType, IDDLObjectType<WeakspotModelData
 		HpThreshold = ddl.GetValue<float>(0x7587ae49u, HpThreshold);
 	}
 
-	[DDLRegistration(0xd1bd73eau)]
+	[DDLRegistration(0xcec6be18u)]
 	public RivetAssetId Model { get; set; } = default;
 
-	[DDLRegistration(0xd1bd73eau)]
+	[DDLRegistration(0x7587ae49u)]
 	public float HpThreshold { get; set; } = 0.00f;
 
 	public static WeakspotModelData Create(DDLObject ddl) => new(ddl);

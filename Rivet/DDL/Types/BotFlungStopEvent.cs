@@ -19,10 +19,10 @@ public class BotFlungStopEvent : EventBase, IDDLObjectType<BotFlungStopEvent> {
 		TargetActorHandle = ddl.GetValue<uint>(0xa68ca01fu, TargetActorHandle);
 	}
 
-	[DDLRegistration(0x958ccc5bu)]
+	[DDLRegistration(0xe8d409aau)]
 	public uint SourceActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x958ccc5bu)]
+	[DDLRegistration(0xa68ca01fu)]
 	public uint TargetActorHandle { get; set; } = 0x00000000;
 
 	public new static BotFlungStopEvent Create(DDLObject ddl) => new(ddl);

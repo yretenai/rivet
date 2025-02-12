@@ -19,10 +19,10 @@ public class NodeGraphDebugDataContainer : DDLObjectType, IDDLObjectType<NodeGra
 		NodeData = ddl.GetDictionary<RivetAssetId, NodeGraphNodeDebugData>(0xc98edaac, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NodeGraphNodeDebugData>(mapId));
 	}
 
-	[DDLRegistration(0xaeeed169u)]
+	[DDLRegistration(0x11a7047fu)]
 	public NodeGraphDebugDataBase? GraphData { get; set; } = default;
 
-	[DDLRegistration(0xaeeed169u)]
+	[DDLRegistration(0xc98edaacu)]
 	public Dictionary<RivetAssetId, NodeGraphNodeDebugData?> NodeData { get; set; } = [];
 
 	public static NodeGraphDebugDataContainer Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class PlasmaSphereSpawnData : AttachableShotSpawnData, IDDLObjectType<Pla
 		VortexInfluenceRadius = ddl.GetValue<float>(0xeea91fa2u, VortexInfluenceRadius);
 	}
 
-	[DDLRegistration(0xb3ccbf25u)]
+	[DDLRegistration(0xc7e68df8u)]
 	public float Lifetime { get; set; } = 5.00f;
 
-	[DDLRegistration(0xb3ccbf25u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 4.00f;
 
-	[DDLRegistration(0xb3ccbf25u)]
+	[DDLRegistration(0x2fb01a0bu)]
 	public float Damage { get; set; } = 10.00f;
 
-	[DDLRegistration(0xb3ccbf25u)]
+	[DDLRegistration(0xeea91fa2u)]
 	public float VortexInfluenceRadius { get; set; } = 10.00f;
 
 	public new static PlasmaSphereSpawnData Create(DDLObject ddl) => new(ddl);

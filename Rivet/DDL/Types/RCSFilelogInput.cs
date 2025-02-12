@@ -18,7 +18,7 @@ public class RCSFilelogInput : DDLObjectType, IDDLObjectType<RCSFilelogInput> {
 		Views = ddl.GetStrings(0x08a35046u);
 	}
 
-	[DDLRegistration(0xea12f7aeu, description: "Files (or paths/wildcards) to get file information.")]
+	[DDLRegistration(0x08a35046u, description: "Files (or paths/wildcards) to get file information.")]
 	public List<string?> Views { get; set; } = [];
 
 	public static RCSFilelogInput Create(DDLObject ddl) => new(ddl);

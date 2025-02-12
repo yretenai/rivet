@@ -19,10 +19,10 @@ public class SteeringConfig : DDLObjectType, IDDLObjectType<SteeringConfig> {
 		UseNavPositionTrackerQueries = ddl.GetValue<bool>(0x617c7319u, UseNavPositionTrackerQueries);
 	}
 
-	[DDLRegistration(0x153a00dcu, "Always Use Accel", "Allows use of Acceleration even when using movement intro animations.")]
+	[DDLRegistration(0xc6e2b259u, "Always Use Accel", "Allows use of Acceleration even when using movement intro animations.")]
 	public bool AlwaysUseAccel { get; set; } = false;
 
-	[DDLRegistration(0x153a00dcu, "Use Nav Position Tracker Queries", "If true, this bot's NavPositionTracker will track its ground position using closest pt on nav queries.")]
+	[DDLRegistration(0x617c7319u, "Use Nav Position Tracker Queries", "If true, this bot's NavPositionTracker will track its ground position using closest pt on nav queries.")]
 	public bool UseNavPositionTrackerQueries { get; set; } = false;
 
 	public static SteeringConfig Create(DDLObject ddl) => new(ddl);

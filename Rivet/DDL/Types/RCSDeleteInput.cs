@@ -19,10 +19,10 @@ public class RCSDeleteInput : DDLObjectType, IDDLObjectType<RCSDeleteInput> {
 		Changelist = ddl.GetValue<uint>(0x03b0ddc6u, Changelist);
 	}
 
-	[DDLRegistration(0x2f96733bu, description: "Can be full paths to files to delete, or paths with wildcards.")]
+	[DDLRegistration(0x08a35046u, description: "Can be full paths to files to delete, or paths with wildcards.")]
 	public List<string?> Views { get; set; } = [];
 
-	[DDLRegistration(0x2f96733bu, description: "Changelist to use; 0 (or unspecified) means use the default changelist.")]
+	[DDLRegistration(0x03b0ddc6u, description: "Changelist to use; 0 (or unspecified) means use the default changelist.")]
 	public uint Changelist { get; set; } = 0x00000000;
 
 	public static RCSDeleteInput Create(DDLObject ddl) => new(ddl);

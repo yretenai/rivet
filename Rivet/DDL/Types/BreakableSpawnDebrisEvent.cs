@@ -19,10 +19,10 @@ public class BreakableSpawnDebrisEvent : EventBase, IDDLObjectType<BreakableSpaw
 		TotalChunkCount = ddl.GetValue<int>(0x5c233141u, TotalChunkCount);
 	}
 
-	[DDLRegistration(0x485bc459u, "Stage Index", "The stage that the chunks are coming from")]
+	[DDLRegistration(0x057469b2u, "Stage Index", "The stage that the chunks are coming from")]
 	public int StageIndex { get; set; } = 0;
 
-	[DDLRegistration(0x485bc459u, "Total Chunk Count", "How many colliding and non colliding chunks are being spawned")]
+	[DDLRegistration(0x5c233141u, "Total Chunk Count", "How many colliding and non colliding chunks are being spawned")]
 	public int TotalChunkCount { get; set; } = 0;
 
 	public new static BreakableSpawnDebrisEvent Create(DDLObject ddl) => new(ddl);

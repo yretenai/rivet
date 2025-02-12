@@ -19,10 +19,10 @@ public class RegionLoadedEvent : EventBase, IDDLObjectType<RegionLoadedEvent> {
 		AlreadyLoaded = ddl.GetValue<bool>(0xc410efafu, AlreadyLoaded);
 	}
 
-	[DDLRegistration(0xf5ad4370u)]
+	[DDLRegistration(0x48ed7ef2u)]
 	public int RegionIndex { get; set; } = -1;
 
-	[DDLRegistration(0xf5ad4370u)]
+	[DDLRegistration(0xc410efafu)]
 	public bool AlreadyLoaded { get; set; } = false;
 
 	public new static RegionLoadedEvent Create(DDLObject ddl) => new(ddl);

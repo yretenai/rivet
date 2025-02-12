@@ -19,10 +19,10 @@ public class WaitForPlatformStopIntroPrius : DDLObjectType, IDDLObjectType<WaitF
 		OptionalStopDest = ddl.GetValue<int>(0x70193b39u, OptionalStopDest);
 	}
 
-	[DDLRegistration(0xbadb3141u, description: "Platform whose signal we wait for.")]
+	[DDLRegistration(0xc3536dbbu, description: "Platform whose signal we wait for.")]
 	public RivetAssetId Platform { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xbadb3141u, description: "If not negative, will wait for the signal at this particular stop.")]
+	[DDLRegistration(0x70193b39u, description: "If not negative, will wait for the signal at this particular stop.")]
 	public int OptionalStopDest { get; set; } = -1;
 
 	public static WaitForPlatformStopIntroPrius Create(DDLObject ddl) => new(ddl);

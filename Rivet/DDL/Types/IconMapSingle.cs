@@ -18,7 +18,7 @@ public class IconMapSingle : IconMapBase, IDDLObjectType<IconMapSingle> {
 		IconId = ddl.GetEnum<IconIdGame>(0x34bbecb9u, IconIdGameValues.Lookup);
 	}
 
-	[DDLRegistration(0x49988bb6u)]
+	[DDLRegistration(0x34bbecb9u)]
 	public IconIdGame IconId { get; set; } = IconIdGame.None;
 
 	public new static IconMapSingle Create(DDLObject ddl) => new(ddl);

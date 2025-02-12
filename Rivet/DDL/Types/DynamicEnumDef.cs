@@ -22,19 +22,19 @@ public class DynamicEnumDef : DDLObjectType, IDDLObjectType<DynamicEnumDef> {
 		Values = ddl.GetObjects<DynamicEnumValue>(0x04df0281u);
 	}
 
-	[DDLRegistration(0xe60c1db2u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0xe60c1db2u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0xe60c1db2u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xe60c1db2u)]
+	[DDLRegistration(0x758aa4a7u)]
 	public string? Select { get; set; } = default;
 
-	[DDLRegistration(0xe60c1db2u)]
+	[DDLRegistration(0x04df0281u)]
 	public List<DynamicEnumValue?> Values { get; set; } = [];
 
 	public static DynamicEnumDef Create(DDLObject ddl) => new(ddl);

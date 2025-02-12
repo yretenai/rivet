@@ -23,22 +23,22 @@ public class AnimMaterialComponentMapDef : DDLObjectType, IDDLObjectType<AnimMat
 		ClampMax = ddl.GetValue<float>(0x1e1e9134u, ClampMax);
 	}
 
-	[DDLRegistration(0xc78a7f67u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xb774530f Type { get; set; } = xb774530f.Type1d;
 
-	[DDLRegistration(0xc78a7f67u)]
+	[DDLRegistration(0x14e6530du)]
 	public string? MaterialInputName { get; set; } = default;
 
-	[DDLRegistration(0xc78a7f67u)]
+	[DDLRegistration(0x981e6927u)]
 	public string? MaterialMappingName { get; set; } = default;
 
-	[DDLRegistration(0xc78a7f67u)]
+	[DDLRegistration(0x7e56cbedu)]
 	public List<string?> AnimTrackName { get; set; } = [];
 
-	[DDLRegistration(0xc78a7f67u)]
+	[DDLRegistration(0x2213ae6du)]
 	public float ClampMin { get; set; } = -1.00f;
 
-	[DDLRegistration(0xc78a7f67u)]
+	[DDLRegistration(0x1e1e9134u)]
 	public float ClampMax { get; set; } = 1.00f;
 
 	public static AnimMaterialComponentMapDef Create(DDLObject ddl) => new(ddl);

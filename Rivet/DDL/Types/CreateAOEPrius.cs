@@ -22,19 +22,19 @@ public class CreateAOEPrius : ScriptedShotEffectBasePrius, IDDLObjectType<Create
 		AOESubEffects = ddl.GetObjects<ScriptedShotEffectListElement>(0x6683fcbfu);
 	}
 
-	[DDLRegistration(0x4c8cfecdu)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x4c8cfecdu)]
+	[DDLRegistration(0x115a911bu)]
 	public bool LOS { get; set; } = true;
 
-	[DDLRegistration(0x4c8cfecdu, "Trigger Explode Event")]
+	[DDLRegistration(0xab842fb0u, "Trigger Explode Event")]
 	public bool TriggerExplode { get; set; } = false;
 
-	[DDLRegistration(0x4c8cfecdu, "Ignore Hit Actor")]
+	[DDLRegistration(0x039c79f3u, "Ignore Hit Actor")]
 	public bool IgnoreHitActor { get; set; } = false;
 
-	[DDLRegistration(0x4c8cfecdu)]
+	[DDLRegistration(0x6683fcbfu)]
 	public List<ScriptedShotEffectListElement?> AOESubEffects { get; set; } = [];
 
 	public new static CreateAOEPrius Create(DDLObject ddl) => new(ddl);

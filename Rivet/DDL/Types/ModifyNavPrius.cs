@@ -18,7 +18,7 @@ public class ModifyNavPrius : DDLObjectType, IDDLObjectType<ModifyNavPrius> {
 		TriFlags = ddl.GetBitset<xc204b456>(0xefd3fb40u, xc204b456Values.Lookup);
 	}
 
-	[DDLRegistration(0xf8b9051du)]
+	[DDLRegistration(0xefd3fb40u)]
 	public xc204b456 TriFlags { get; set; } = (xc204b456) 0x00000001;
 
 	public static ModifyNavPrius Create(DDLObject ddl) => new(ddl);

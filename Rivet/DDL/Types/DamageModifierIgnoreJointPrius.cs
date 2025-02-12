@@ -18,7 +18,7 @@ public class DamageModifierIgnoreJointPrius : DamageModifierIncomingPrius, IDDLO
 		JointNames = ddl.GetStrings(0x0cedbe25u);
 	}
 
-	[DDLRegistration(0xd25dbcb9u)]
+	[DDLRegistration(0x0cedbe25u)]
 	public List<string?> JointNames { get; set; } = [];
 
 	public new static DamageModifierIgnoreJointPrius Create(DDLObject ddl) => new(ddl);

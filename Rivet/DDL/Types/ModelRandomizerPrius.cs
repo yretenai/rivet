@@ -18,7 +18,7 @@ public class ModelRandomizerPrius : DDLObjectType, IDDLObjectType<ModelRandomize
 		ModelChoices = ddl.GetObjects<ModelRandomizerItem>(0xd3295439u);
 	}
 
-	[DDLRegistration(0x14a81543u)]
+	[DDLRegistration(0xd3295439u)]
 	public List<ModelRandomizerItem?> ModelChoices { get; set; } = [];
 
 	public static ModelRandomizerPrius Create(DDLObject ddl) => new(ddl);

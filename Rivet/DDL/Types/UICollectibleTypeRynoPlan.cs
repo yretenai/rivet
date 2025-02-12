@@ -20,13 +20,13 @@ public class UICollectibleTypeRynoPlan : UICollectibleTypeBase, IDDLObjectType<U
 		RYNOSchematic = ddl.GetValue<RivetAssetId>(0x8467261bu, RYNOSchematic);
 	}
 
-	[DDLRegistration(0x6a244fa4u, "Save ID", "Save ID to check for collection.")]
+	[DDLRegistration(0xf61c4918u, "Save ID", "Save ID to check for collection.")]
 	public x81d3e717 SaveID { get; set; } = x81d3e717.None;
 
-	[DDLRegistration(0x6a244fa4u, "Dialogue Line", "Dialogue line for this spybot.")]
+	[DDLRegistration(0x21617c3cu, "Dialogue Line", "Dialogue line for this spybot.")]
 	public string? DialogueLine { get; set; } = default;
 
-	[DDLRegistration(0x6a244fa4u, "RYNO Schematic", "RYNO schematic image.")]
+	[DDLRegistration(0x8467261bu, "RYNO Schematic", "RYNO schematic image.")]
 	public RivetAssetId RYNOSchematic { get; set; } = default;
 
 	public new static UICollectibleTypeRynoPlan Create(DDLObject ddl) => new(ddl);

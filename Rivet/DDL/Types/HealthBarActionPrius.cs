@@ -19,10 +19,10 @@ public class HealthBarActionPrius : DDLObjectType, IDDLObjectType<HealthBarActio
 		VertOffset = ddl.GetValue<float>(0xcc290bebu, VertOffset);
 	}
 
-	[DDLRegistration(0x394b1c0cu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.UI;
 
-	[DDLRegistration(0x394b1c0cu, description: "Vert Offset")]
+	[DDLRegistration(0xcc290bebu, description: "Vert Offset")]
 	public float VertOffset { get; set; } = 2.00f;
 
 	public static HealthBarActionPrius Create(DDLObject ddl) => new(ddl);

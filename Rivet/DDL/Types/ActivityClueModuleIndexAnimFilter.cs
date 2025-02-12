@@ -20,13 +20,13 @@ public class ActivityClueModuleIndexAnimFilter : DDLObjectType, IDDLObjectType<A
 		ApplicableDrivers = ddl.GetStrings(0x0de635f6u);
 	}
 
-	[DDLRegistration(0x918b546bu, "Anim Index Start", "Assign this Index filter to the first user of this clue")]
+	[DDLRegistration(0x4c550411u, "Anim Index Start", "Assign this Index filter to the first user of this clue")]
 	public x85cb9e0e AnimIndexStart { get; set; } = x85cb9e0e.One;
 
-	[DDLRegistration(0x918b546bu, "Anim Index Max", "Each time a bot uses this clue, set their Index filter to one more than the previous user. Loop back to 1 after this index is set. This should never be higher than what is available in the given drivers' groups")]
+	[DDLRegistration(0x52cd44f8u, "Anim Index Max", "Each time a bot uses this clue, set their Index filter to one more than the previous user. Loop back to 1 after this index is set. This should never be higher than what is available in the given drivers' groups")]
 	public x85cb9e0e AnimIndexMax { get; set; } = x85cb9e0e.Six;
 
-	[DDLRegistration(0x918b546bu, "Applicable Drivers", "Don't set the Index filter for any driver not in this list. If empty, we'll set Index for all drivers")]
+	[DDLRegistration(0x0de635f6u, "Applicable Drivers", "Don't set the Index filter for any driver not in this list. If empty, we'll set Index for all drivers")]
 	public List<string?> ApplicableDrivers { get; set; } = [];
 
 	public static ActivityClueModuleIndexAnimFilter Create(DDLObject ddl) => new(ddl);

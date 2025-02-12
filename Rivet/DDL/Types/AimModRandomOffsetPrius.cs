@@ -21,16 +21,16 @@ public class AimModRandomOffsetPrius : AimModifierPrius, IDDLObjectType<AimModRa
 		HorizontalMax = ddl.GetValue<float>(0x1d23b2dbu, HorizontalMax);
 	}
 
-	[DDLRegistration(0xe76ec8ceu)]
+	[DDLRegistration(0x12d6232cu)]
 	public float VerticalMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe76ec8ceu)]
+	[DDLRegistration(0x2edb1c75u)]
 	public float VerticalMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe76ec8ceu)]
+	[DDLRegistration(0x212e8d82u)]
 	public float HorizontalMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xe76ec8ceu)]
+	[DDLRegistration(0x1d23b2dbu)]
 	public float HorizontalMax { get; set; } = 0.00f;
 
 	public new static AimModRandomOffsetPrius Create(DDLObject ddl) => new(ddl);

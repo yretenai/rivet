@@ -18,7 +18,7 @@ public class GameBotDoomPrius : GameBotMeleeBasePrius, IDDLObjectType<GameBotDoo
 		V5Bangle = ddl.GetValue<RivetAssetId>(0x8b746988u, V5Bangle);
 	}
 
-	[DDLRegistration(0x3ca599f2u, "V5 Bangle")]
+	[DDLRegistration(0x8b746988u, "V5 Bangle")]
 	public RivetAssetId V5Bangle { get; set; } = default;
 
 	public new static GameBotDoomPrius Create(DDLObject ddl) => new(ddl);

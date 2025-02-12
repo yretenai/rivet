@@ -19,10 +19,10 @@ public class MissionStatesTriggerPrius_Tools : AbstractTriggerPrius_Tools, IDDLO
 		MissionStates = ddl.GetBitset<xa22c2a86>(0x13b9234fu, xa22c2a86Values.Lookup);
 	}
 
-	[DDLRegistration(0x67cf875cu)]
+	[DDLRegistration(0xa5c30e60u)]
 	public string? MissionName { get; set; } = default;
 
-	[DDLRegistration(0x67cf875cu)]
+	[DDLRegistration(0x13b9234fu)]
 	public xa22c2a86 MissionStates { get; set; } = (xa22c2a86) 0x0000000c;
 
 	public new static MissionStatesTriggerPrius_Tools Create(DDLObject ddl) => new(ddl);

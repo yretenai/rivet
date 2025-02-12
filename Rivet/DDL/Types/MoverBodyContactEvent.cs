@@ -18,7 +18,7 @@ public class MoverBodyContactEvent : EventBase, IDDLObjectType<MoverBodyContactE
 		HitMaterial = ddl.GetEnum<x10b3c4cf>(0x6c1be283u, x10b3c4cfValues.Lookup);
 	}
 
-	[DDLRegistration(0xedc4b61eu)]
+	[DDLRegistration(0x6c1be283u)]
 	public x10b3c4cf HitMaterial { get; set; } = x10b3c4cf.None;
 
 	public new static MoverBodyContactEvent Create(DDLObject ddl) => new(ddl);

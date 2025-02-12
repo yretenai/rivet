@@ -19,10 +19,10 @@ public class ShotSpawnerHandlerPrius : DDLObjectType, IDDLObjectType<ShotSpawner
 		Shots = ddl.GetObjects<SpawnShotElement>(0x5e456e46u);
 	}
 
-	[DDLRegistration(0xa1851811u)]
+	[DDLRegistration(0x57a57029u)]
 	public x9443909f OwnerMode { get; set; } = x9443909f.Actor;
 
-	[DDLRegistration(0xa1851811u)]
+	[DDLRegistration(0x5e456e46u)]
 	public List<SpawnShotElement?> Shots { get; set; } = [];
 
 	public static ShotSpawnerHandlerPrius Create(DDLObject ddl) => new(ddl);

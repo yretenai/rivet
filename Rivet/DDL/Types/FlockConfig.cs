@@ -40,73 +40,73 @@ public class FlockConfig : ConfigBase, IDDLObjectType<FlockConfig> {
 		FlockSoundSource = ddl.GetObject<SoundSourceComponentPrius>(0xd8e09e63u);
 	}
 
-	[DDLRegistration(0xa30a2269u)]
+	[DDLRegistration(0x6d61a2f3u)]
 	public RivetAssetId Template { get; set; } = default;
 
-	[DDLRegistration(0xa30a2269u, description: "If this config is not overriden by script, this config contains the default values.")]
+	[DDLRegistration(0x31cc9f3bu, description: "If this config is not overriden by script, this config contains the default values.")]
 	public RivetAssetId DefaultFlockDensityConfig { get; set; } = default;
 
-	[DDLRegistration(0xa30a2269u, "Max Spawned Distance", "No volume farther than this distance from the hero may be active. Closer volumes will still be preferred.")]
+	[DDLRegistration(0xefec9c12u, "Max Spawned Distance", "No volume farther than this distance from the hero may be active. Closer volumes will still be preferred.")]
 	public float DistFarThresh { get; set; } = 500.00f;
 
-	[DDLRegistration(0xa30a2269u, description: "Multiply the distance from the query center (either camera pos or a distance in front of the camera) by this coeff to compute the distance score for a volume. The lower the total score (distance score + angle score), the more likely a volume will be picked.")]
+	[DDLRegistration(0xc3df5f7eu, description: "Multiply the distance from the query center (either camera pos or a distance in front of the camera) by this coeff to compute the distance score for a volume. The lower the total score (distance score + angle score), the more likely a volume will be picked.")]
 	public float SpawnDesireDistanceCoeff { get; set; } = 0.10f;
 
-	[DDLRegistration(0xa30a2269u, description: "Multiply this coeff by 1 - cos^2( angle between camera forward and volume offset ) to compute the angle score. For the non-mathematically-inclined, higher values of this means higher angles have higher scores. The lower the total score (distance score + angle score), the more likely a volume will be picked.")]
+	[DDLRegistration(0x11152dccu, description: "Multiply this coeff by 1 - cos^2( angle between camera forward and volume offset ) to compute the angle score. For the non-mathematically-inclined, higher values of this means higher angles have higher scores. The lower the total score (distance score + angle score), the more likely a volume will be picked.")]
 	public float SpawnDesireAngleCoeff { get; set; } = 20.00f;
 
-	[DDLRegistration(0xa30a2269u, "Minimum Spawn Angle", "Only activate volume when it is not in field of view extended from the camera in cone with this angle.")]
+	[DDLRegistration(0x3bf2f064u, "Minimum Spawn Angle", "Only activate volume when it is not in field of view extended from the camera in cone with this angle.")]
 	public float FovThresh { get; set; } = 5.00f;
 
-	[DDLRegistration(0xa30a2269u, "Low Speed Threshold", "If the hero is moving more slowly than this, then apply a bias to spawned volumes (so that they don't despawn unless there is one MUCH better.)")]
+	[DDLRegistration(0x6ba17f1eu, "Low Speed Threshold", "If the hero is moving more slowly than this, then apply a bias to spawned volumes (so that they don't despawn unless there is one MUCH better.)")]
 	public float LowSpeedThreshold { get; set; } = 7.00f;
 
-	[DDLRegistration(0xa30a2269u, "Low Speed Spawn Penalty", "If the hero is moving slowly, then apply this penalty to all inactive volumes. (So that active volumes will tend to stick around.)")]
+	[DDLRegistration(0x823cec9eu, "Low Speed Spawn Penalty", "If the hero is moving slowly, then apply this penalty to all inactive volumes. (So that active volumes will tend to stick around.)")]
 	public float LowSpeedSpawnPenalty { get; set; } = 5.00f;
 
-	[DDLRegistration(0xa30a2269u, "Low Speed Min Spawn Angle", "If the hero is moving slowly, then flocks may not spawn within this angle of the camera's forward.")]
+	[DDLRegistration(0xcde915dau, "Low Speed Min Spawn Angle", "If the hero is moving slowly, then flocks may not spawn within this angle of the camera's forward.")]
 	public float LowSpeedFovThreshold { get; set; } = 30.00f;
 
-	[DDLRegistration(0xa30a2269u)]
+	[DDLRegistration(0x33765f66u)]
 	public x13bb0809 FlockBehavior { get; set; } = x13bb0809.SwarmFlock;
 
-	[DDLRegistration(0xa30a2269u, "Separation Distance", "Flock will attempt to keep this much space between each element.")]
+	[DDLRegistration(0xa76bfbaau, "Separation Distance", "Flock will attempt to keep this much space between each element.")]
 	public float SeparationDistance { get; set; } = 3.00f;
 
-	[DDLRegistration(0xa30a2269u, "Max Separation Force per Member", "When flock members are stacked on top of one another, how much force do they apply away from each other?")]
+	[DDLRegistration(0x6c210235u, "Max Separation Force per Member", "When flock members are stacked on top of one another, how much force do they apply away from each other?")]
 	public float MaxSeparationForcePerMember { get; set; } = 3.00f;
 
-	[DDLRegistration(0xa30a2269u, "Max Neighbor Distance", "When calculating a flock member's cohesion/alignment forces, neighbors are within this distance.")]
+	[DDLRegistration(0xed38322eu, "Max Neighbor Distance", "When calculating a flock member's cohesion/alignment forces, neighbors are within this distance.")]
 	public float MaxNeighborDistance { get; set; } = 6.00f;
 
-	[DDLRegistration(0xa30a2269u, "Max Alignment Force", "Find neighbors, take their average facing, then apply at most this much force in the same facing. (Each neighbor increases the force.)")]
+	[DDLRegistration(0x1a3c55ebu, "Max Alignment Force", "Find neighbors, take their average facing, then apply at most this much force in the same facing. (Each neighbor increases the force.)")]
 	public float MaxAlignmentForce { get; set; } = 2.00f;
 
-	[DDLRegistration(0xa30a2269u, "Max Boundary Force", "Max force that a boundary applies to a flock member when the flock member is at or beyond the boundary of the flocking volume.")]
+	[DDLRegistration(0xa298e76fu, "Max Boundary Force", "Max force that a boundary applies to a flock member when the flock member is at or beyond the boundary of the flocking volume.")]
 	public float MaxBoundaryForce { get; set; } = 10.00f;
 
-	[DDLRegistration(0xa30a2269u, "Max Cohesion Force", "Find neighbors, take their average position, then apply at most this much force towards that position. (Force increases as the member faces away from this position)")]
+	[DDLRegistration(0xe112b7f1u, "Max Cohesion Force", "Find neighbors, take their average position, then apply at most this much force towards that position. (Force increases as the member faces away from this position)")]
 	public float MaxCohesionForce { get; set; } = 3.00f;
 
-	[DDLRegistration(0xa30a2269u, "Max Separation Force", "When calculating the force that separates flock members, this is the max separation force that all close neighbors can apply to a flock member. (Each close neighbor increases the force.)")]
+	[DDLRegistration(0x3093400eu, "Max Separation Force", "When calculating the force that separates flock members, this is the max separation force that all close neighbors can apply to a flock member. (Each close neighbor increases the force.)")]
 	public float MaxSeparationForce { get; set; } = 5.00f;
 
-	[DDLRegistration(0xa30a2269u, "Destination Force", "Force that the current destination applies to each flock member.")]
+	[DDLRegistration(0xe925aec6u, "Destination Force", "Force that the current destination applies to each flock member.")]
 	public float DestinationForce { get; set; } = 3.00f;
 
-	[DDLRegistration(0xa30a2269u, "Destination Boundary Padding", "When picking a new destination, don't pick a destination within this distance of a volume boundary.")]
+	[DDLRegistration(0xd20ddd31u, "Destination Boundary Padding", "When picking a new destination, don't pick a destination within this distance of a volume boundary.")]
 	public float DestinationBoundaryPadding { get; set; } = 1.25f;
 
-	[DDLRegistration(0xa30a2269u, "Destination Blend Time", "Gradually transition each member to the next destination over this time.")]
+	[DDLRegistration(0xafe36d2du, "Destination Blend Time", "Gradually transition each member to the next destination over this time.")]
 	public float DestinationBlendTime { get; set; } = 0.50f;
 
-	[DDLRegistration(0xa30a2269u, "Near Destination Distance", "Pick a new destination for the flock when a member comes within this distance of the current destination.")]
+	[DDLRegistration(0x56bec468u, "Near Destination Distance", "Pick a new destination for the flock when a member comes within this distance of the current destination.")]
 	public float NearDestinationDistance { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa30a2269u, "Spawn Sound Event", "This wwise event is posted when the flock spawns.")]
+	[DDLRegistration(0xe98b42e4u, "Spawn Sound Event", "This wwise event is posted when the flock spawns.")]
 	public WwiseEvent? SpawnSoundEvent { get; set; } = default;
 
-	[DDLRegistration(0xa30a2269u, "SoundSourceComponentPrius", "This is the sound source component used for the flock. Only one sound source is created (at the average position of the flock).")]
+	[DDLRegistration(0xd8e09e63u, "SoundSourceComponentPrius", "This is the sound source component used for the flock. Only one sound source is created (at the average position of the flock).")]
 	public SoundSourceComponentPrius? FlockSoundSource { get; set; } = default;
 
 	public new static FlockConfig Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class AdvanceCurveActionPrius : DDLObjectType, IDDLObjectType<AdvanceCurv
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x9a02a33bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Math;
 
 	public static AdvanceCurveActionPrius Create(DDLObject ddl) => new(ddl);

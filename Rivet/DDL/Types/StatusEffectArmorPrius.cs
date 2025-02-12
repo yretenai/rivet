@@ -20,13 +20,13 @@ public class StatusEffectArmorPrius : StatusEffectBasePrius, IDDLObjectType<Stat
 		ReboundOnMelee = ddl.GetValue<bool>(0x04a27406u, ReboundOnMelee);
 	}
 
-	[DDLRegistration(0x12bf5f8eu, description: "The amount of damage you absorb each time you are hit.")]
+	[DDLRegistration(0xb0d93e25u, description: "The amount of damage you absorb each time you are hit.")]
 	public float Amount { get; set; } = 50.00f;
 
-	[DDLRegistration(0x12bf5f8eu, "Is Percent", "Is 'Amount' a fixed value or is it a percentage of the damage you inflicted? In this case amount=0 means ignore all damage.")]
+	[DDLRegistration(0x858c4cf5u, "Is Percent", "Is 'Amount' a fixed value or is it a percentage of the damage you inflicted? In this case amount=0 means ignore all damage.")]
 	public bool IsPercent { get; set; } = true;
 
-	[DDLRegistration(0x12bf5f8eu, "Rebound On Melee")]
+	[DDLRegistration(0x04a27406u, "Rebound On Melee")]
 	public bool ReboundOnMelee { get; set; } = false;
 
 	public new static StatusEffectArmorPrius Create(DDLObject ddl) => new(ddl);

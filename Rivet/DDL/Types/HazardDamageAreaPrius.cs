@@ -19,10 +19,10 @@ public class HazardDamageAreaPrius : DDLObjectType, IDDLObjectType<HazardDamageA
 		Explode = ddl.GetValue<bool>(0x55994fb5u, Explode);
 	}
 
-	[DDLRegistration(0x79a6f78fu)]
+	[DDLRegistration(0xeaf2611bu)]
 	public RivetAssetId Config { get; set; } = default;
 
-	[DDLRegistration(0x79a6f78fu, description: "Create explosion event on creation.")]
+	[DDLRegistration(0x55994fb5u, description: "Create explosion event on creation.")]
 	public bool Explode { get; set; } = false;
 
 	public static HazardDamageAreaPrius Create(DDLObject ddl) => new(ddl);

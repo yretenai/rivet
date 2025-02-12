@@ -24,25 +24,25 @@ public class AssetDocument : DDLObjectType, IDDLObjectType<AssetDocument> {
 		Asset = ddl.GetString(0x1bfc969d) ?? Asset;
 	}
 
-	[DDLRegistration(0x09c0aa9eu, description: "Hash of the file path, or 0 if this asset has not been saved to disk yet (you get to have a single unsaved asset per type).")]
+	[DDLRegistration(0x7459aa19u, description: "Hash of the file path, or 0 if this asset has not been saved to disk yet (you get to have a single unsaved asset per type).")]
 	public RivetAssetId _id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x09c0aa9eu, description: "File path of the asset, relative to the asset source root.")]
+	[DDLRegistration(0x0efa614bu, description: "File path of the asset, relative to the asset source root.")]
 	public RivetAssetId AssetPath { get; set; } = "";
 
-	[DDLRegistration(0x09c0aa9eu, description: "Timestamp of the last time this file was modified in the database (not the same as when it was changed on disk).")]
+	[DDLRegistration(0x92a630e4u, description: "Timestamp of the last time this file was modified in the database (not the same as when it was changed on disk).")]
 	public string? LastChanged { get; set; } = "";
 
-	[DDLRegistration(0x09c0aa9eu, description: "Timestamp of when the file was last saved to disk (not the same as when it was modified in the database).")]
+	[DDLRegistration(0x71d1d76au, description: "Timestamp of when the file was last saved to disk (not the same as when it was modified in the database).")]
 	public string? LastSaved { get; set; } = "";
 
-	[DDLRegistration(0x09c0aa9eu, description: "Size of this file as stored in the internal database as BSON.")]
+	[DDLRegistration(0xcb45502eu, description: "Size of this file as stored in the internal database as BSON.")]
 	public uint SizeInDb { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x09c0aa9eu, description: "Size of this file in bytes, as stored on disk.")]
+	[DDLRegistration(0x7c1e2aaau, description: "Size of this file in bytes, as stored on disk.")]
 	public long SavedSize { get; set; } = 0;
 
-	[DDLRegistration(0x09c0aa9eu, description: "Contents of the asset file.  Varies according to asset type, see DDL for: ZoneDef, ModelDef, etc.")]
+	[DDLRegistration(0x1bfc969du, description: "Contents of the asset file.  Varies according to asset type, see DDL for: ZoneDef, ModelDef, etc.")]
 	public string? Asset { get; set; } = default;
 
 	public static AssetDocument Create(DDLObject ddl) => new(ddl);

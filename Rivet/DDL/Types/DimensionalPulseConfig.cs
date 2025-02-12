@@ -24,25 +24,25 @@ public class DimensionalPulseConfig : ConfigBase, IDDLObjectType<DimensionalPuls
 		DefaultTargetConduit = ddl.GetValue<RivetAssetId>(0x2e56f1fdu, DefaultTargetConduit);
 	}
 
-	[DDLRegistration(0x412aac32u, description: "How far the pulse will affect actors.")]
+	[DDLRegistration(0xc40db156u, description: "How far the pulse will affect actors.")]
 	public float PulseRadius { get; set; } = 25.00f;
 
-	[DDLRegistration(0x412aac32u, description: "How long the pulse will take to reach max radius.")]
+	[DDLRegistration(0x7d5fed07u, description: "How long the pulse will take to reach max radius.")]
 	public float PulseDuration { get; set; } = 2.00f;
 
-	[DDLRegistration(0x412aac32u, description: "Chance that an object will be affected by the pulse. Can be overriden by the target object.")]
+	[DDLRegistration(0xaed0c581u, description: "Chance that an object will be affected by the pulse. Can be overriden by the target object.")]
 	public float EffectChance { get; set; } = 0.50f;
 
-	[DDLRegistration(0x412aac32u, description: "Default pre-composite shader to apply to the actor. Shader is applied immediately upon the pulse going out.")]
+	[DDLRegistration(0x076e460du, description: "Default pre-composite shader to apply to the actor. Shader is applied immediately upon the pulse going out.")]
 	public RivetAssetId PreCompositeShader { get; set; } = default;
 
-	[DDLRegistration(0x412aac32u, description: "Default post-composite shader to apply to the actor. Shader is applied immediately upon the pulse going out.")]
+	[DDLRegistration(0xe2b72d5fu, description: "Default post-composite shader to apply to the actor. Shader is applied immediately upon the pulse going out.")]
 	public RivetAssetId PostCompositeShader { get; set; } = default;
 
-	[DDLRegistration(0x412aac32u, description: "Default lifetime of the composite shaders on the actor after it has been hit by the pulse (if greater than the time left in the pulse). -1 = don't remove the shaders")]
+	[DDLRegistration(0xd2ab2353u, description: "Default lifetime of the composite shaders on the actor after it has been hit by the pulse (if greater than the time left in the pulse). -1 = don't remove the shaders")]
 	public float PostHitEffectLifetime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x412aac32u, description: "Default conduit to apply to the target actor if it isn't on that actor already. Actors can opt out of receiving this conduit in their target prius. Added as the lowest priority conduit.")]
+	[DDLRegistration(0x2e56f1fdu, description: "Default conduit to apply to the target actor if it isn't on that actor already. Actors can opt out of receiving this conduit in their target prius. Added as the lowest priority conduit.")]
 	public RivetAssetId DefaultTargetConduit { get; set; } = default;
 
 	public new static DimensionalPulseConfig Create(DDLObject ddl) => new(ddl);

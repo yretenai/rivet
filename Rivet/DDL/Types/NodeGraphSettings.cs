@@ -25,28 +25,28 @@ public class NodeGraphSettings : DDLObjectType, IDDLObjectType<NodeGraphSettings
 		PooledInstanceMax = ddl.GetValue<uint>(0xcff1bb8au, PooledInstanceMax);
 	}
 
-	[DDLRegistration(0x34a82a24u)]
+	[DDLRegistration(0x74f7829fu)]
 	public uint InstanceMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x34a82a24u)]
+	[DDLRegistration(0xf1d37ccdu)]
 	public uint ConnectionMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x34a82a24u)]
+	[DDLRegistration(0xc261be32u)]
 	public uint PlugMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x34a82a24u)]
+	[DDLRegistration(0x849d5db6u)]
 	public uint NodeMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x34a82a24u)]
+	[DDLRegistration(0xe22dcd67u)]
 	public uint EventHandlerMax { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x34a82a24u)]
+	[DDLRegistration(0x2a1da5e8u)]
 	public uint MaxPlugsPerGraph { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x34a82a24u)]
+	[DDLRegistration(0x78ef1644u)]
 	public uint MaxNodesPerGraph { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x34a82a24u)]
+	[DDLRegistration(0xcff1bb8au)]
 	public uint PooledInstanceMax { get; set; } = 0x00000000;
 
 	public static NodeGraphSettings Create(DDLObject ddl) => new(ddl);

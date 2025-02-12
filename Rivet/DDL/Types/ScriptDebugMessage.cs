@@ -20,13 +20,13 @@ public class ScriptDebugMessage : DDLObjectType, IDDLObjectType<ScriptDebugMessa
 		PropertyId = ddl.GetValue<uint>(0xfa3122e7u, PropertyId);
 	}
 
-	[DDLRegistration(0x7becdf7cu)]
+	[DDLRegistration(0x79b4c2f5u)]
 	public xb379a82e Action { get; set; } = xb379a82e.DebugNothing;
 
-	[DDLRegistration(0x7becdf7cu)]
+	[DDLRegistration(0x5953f773u)]
 	public RivetAssetId Tuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x7becdf7cu)]
+	[DDLRegistration(0xfa3122e7u)]
 	public uint PropertyId { get; set; } = 0x00000000;
 
 	public static ScriptDebugMessage Create(DDLObject ddl) => new(ddl);

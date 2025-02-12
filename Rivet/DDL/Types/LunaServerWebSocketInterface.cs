@@ -19,10 +19,10 @@ public class LunaServerWebSocketInterface : DDLObjectType, IDDLObjectType<LunaSe
 		Payload = ddl.GetString(0x43c6092d) ?? Payload;
 	}
 
-	[DDLRegistration(0xa8ee4154u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public xa7988bfd Type { get; set; } = xa7988bfd.ChangelogUpdated;
 
-	[DDLRegistration(0xa8ee4154u)]
+	[DDLRegistration(0x43c6092du)]
 	public string? Payload { get; set; } = default;
 
 	public static LunaServerWebSocketInterface Create(DDLObject ddl) => new(ddl);

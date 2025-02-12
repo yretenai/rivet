@@ -23,22 +23,22 @@ public class Cinematic2TransitionFadeDef : DDLObjectType, IDDLObjectType<Cinemat
 		FadeToColor = ddl.GetObject<DDLVector3>(0xb6164daeu);
 	}
 
-	[DDLRegistration(0xd1f33021u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd1f33021u, description: "This specifies the shot where the transition occurs (the DurationBefore happens before this shot's start time; the DurationAfter happens after this shot's start time).")]
+	[DDLRegistration(0xf097daf3u, description: "This specifies the shot where the transition occurs (the DurationBefore happens before this shot's start time; the DurationAfter happens after this shot's start time).")]
 	public RivetAssetId ShotId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xd1f33021u)]
+	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.50f;
 
-	[DDLRegistration(0xd1f33021u)]
+	[DDLRegistration(0xef116147u)]
 	public x010205e3 StartType { get; set; } = x010205e3.BeginningOfShot;
 
-	[DDLRegistration(0xd1f33021u)]
+	[DDLRegistration(0xc6252625u)]
 	public x53914cb6 SmoothingType { get; set; } = x53914cb6.SmoothingLinear;
 
-	[DDLRegistration(0xd1f33021u)]
+	[DDLRegistration(0xb6164daeu)]
 	public DDLVector3? FadeToColor { get; set; } = default;
 
 	public static Cinematic2TransitionFadeDef Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class RewardMeleeWeaponSkinConfig : ConfigBase, IDDLObjectType<RewardMele
 		Skins = ddl.GetObjects<MeleeWeaponSkinData>(0xf85047c1u);
 	}
 
-	[DDLRegistration(0x56619b43u)]
+	[DDLRegistration(0xf85047c1u)]
 	public List<MeleeWeaponSkinData?> Skins { get; set; } = [];
 
 	public new static RewardMeleeWeaponSkinConfig Create(DDLObject ddl) => new(ddl);

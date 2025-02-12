@@ -19,10 +19,10 @@ public class MaterialConstantHealthControlledValueData : DDLObjectType, IDDLObje
 		ConstantValue = ddl.GetValue<float>(0x268ea8e5u, ConstantValue);
 	}
 
-	[DDLRegistration(0x5b6aabc3u, description: "When health is above or equal to this value, use ConstantValue. HealthAmount is in range [0.0, 1.0] unless UseHitPoints is true.")]
+	[DDLRegistration(0x9b788aa2u, description: "When health is above or equal to this value, use ConstantValue. HealthAmount is in range [0.0, 1.0] unless UseHitPoints is true.")]
 	public float HealthAmount { get; set; } = 0.50f;
 
-	[DDLRegistration(0x5b6aabc3u, description: "The value to set the material constant.")]
+	[DDLRegistration(0x268ea8e5u, description: "The value to set the material constant.")]
 	public float ConstantValue { get; set; } = 0.00f;
 
 	public static MaterialConstantHealthControlledValueData Create(DDLObject ddl) => new(ddl);

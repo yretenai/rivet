@@ -30,43 +30,43 @@ public class HoverbootKickData : DDLObjectType, IDDLObjectType<HoverbootKickData
 		TriggerEffectConfig = ddl.GetValue<RivetAssetId>(0x336655bau, TriggerEffectConfig);
 	}
 
-	[DDLRegistration(0xf8de32aau, description: "Decel for when at max kick speed. (m/s^2)")]
+	[DDLRegistration(0x4930cdf9u, description: "Decel for when at max kick speed. (m/s^2)")]
 	public float MaxSpeedDecel { get; set; } = 18.00f;
 
-	[DDLRegistration(0xf8de32aau, description: "Lateral decel for when at max kick speed. (m/s^2)")]
+	[DDLRegistration(0xe458d785u, description: "Lateral decel for when at max kick speed. (m/s^2)")]
 	public float MaxSpeedLateralDecel { get; set; } = 50.00f;
 
-	[DDLRegistration(0xf8de32aau, description: "Turn gain for when at max kick speed.")]
+	[DDLRegistration(0x66b489eau, description: "Turn gain for when at max kick speed.")]
 	public float MaxSpeedTurnGain { get; set; } = -15.00f;
 
-	[DDLRegistration(0xf8de32aau, description: "Min extra speed to give the hero per kick. For non-optimal kick. (m/s)")]
+	[DDLRegistration(0xd1948addu, description: "Min extra speed to give the hero per kick. For non-optimal kick. (m/s)")]
 	public float ExtraSpeedPerKickBad { get; set; } = 1.00f;
 
-	[DDLRegistration(0xf8de32aau, description: "Max extra speed to give the hero per kick. For optimal kick. (m/s)")]
+	[DDLRegistration(0x6cd89b51u, description: "Max extra speed to give the hero per kick. For optimal kick. (m/s)")]
 	public float ExtraSpeedPerKickGood { get; set; } = 5.00f;
 
-	[DDLRegistration(0xf8de32aau, description: "Max extra speed to give the hero from kicks (m/s)")]
+	[DDLRegistration(0x25ac84b7u, description: "Max extra speed to give the hero from kicks (m/s)")]
 	public float MaxExtraSpeed { get; set; } = 10.00f;
 
-	[DDLRegistration(0xf8de32aau, description: "Acceleration for kick extra speed (m/s^2)")]
+	[DDLRegistration(0x75ae5543u, description: "Acceleration for kick extra speed (m/s^2)")]
 	public float ExtraSpeedAccel { get; set; } = 30.00f;
 
-	[DDLRegistration(0xf8de32aau, description: "Deceleration for kick extra speed (m/s^2)")]
+	[DDLRegistration(0x982585efu, description: "Deceleration for kick extra speed (m/s^2)")]
 	public float ExtraSpeedDecel { get; set; } = 30.00f;
 
-	[DDLRegistration(0xf8de32aau, description: "Decay rate for kick extra speed (m/s^2)")]
+	[DDLRegistration(0x12ce566bu, description: "Decay rate for kick extra speed (m/s^2)")]
 	public float ExtraSpeedDecayRate { get; set; } = 20.00f;
 
-	[DDLRegistration(0xf8de32aau, description: "Kick duration when hero has no extra speed. (seconds)")]
+	[DDLRegistration(0x5e736ec1u, description: "Kick duration when hero has no extra speed. (seconds)")]
 	public float KickDurationInitial { get; set; } = 0.40f;
 
-	[DDLRegistration(0xf8de32aau, description: "Kick duration when hero has full extra speed. (seconds)")]
+	[DDLRegistration(0x6eca7f2du, description: "Kick duration when hero has full extra speed. (seconds)")]
 	public float KickDurationFull { get; set; } = 0.20f;
 
-	[DDLRegistration(0xf8de32aau, description: "Analog value at which to consider input as pressed. Range [0,1]")]
+	[DDLRegistration(0x7fc7024eu, description: "Analog value at which to consider input as pressed. Range [0,1]")]
 	public float InputAnalogValueThreshold { get; set; } = 0.60f;
 
-	[DDLRegistration(0xf8de32aau)]
+	[DDLRegistration(0x336655bau)]
 	public RivetAssetId TriggerEffectConfig { get; set; } = default;
 
 	public static HoverbootKickData Create(DDLObject ddl) => new(ddl);

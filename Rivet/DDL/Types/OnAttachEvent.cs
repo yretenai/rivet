@@ -18,7 +18,7 @@ public class OnAttachEvent : EventBase, IDDLObjectType<OnAttachEvent> {
 		TriggerActor = ddl.GetValue<uint>(0x2a75844bu, TriggerActor);
 	}
 
-	[DDLRegistration(0xe333ccaau)]
+	[DDLRegistration(0x2a75844bu)]
 	public uint TriggerActor { get; set; } = 0x00000000;
 
 	public new static OnAttachEvent Create(DDLObject ddl) => new(ddl);

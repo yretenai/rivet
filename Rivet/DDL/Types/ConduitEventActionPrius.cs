@@ -21,16 +21,16 @@ public class ConduitEventActionPrius : DDLObjectType, IDDLObjectType<ConduitEven
 		Reference = ddl.GetValue<RivetAssetId>(0x2c5ed61fu, Reference);
 	}
 
-	[DDLRegistration(0xb1de4695u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Conduit;
 
-	[DDLRegistration(0xb1de4695u, description: "Event Label - optional, limited to 31 characters")]
+	[DDLRegistration(0x17f49c29u, description: "Event Label - optional, limited to 31 characters")]
 	public string? Label { get; set; } = default;
 
-	[DDLRegistration(0xb1de4695u, description: "Event Parameter - optional")]
+	[DDLRegistration(0xbda9b048u, description: "Event Parameter - optional")]
 	public uint Param { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb1de4695u, description: "Event Actor Reference - optional")]
+	[DDLRegistration(0x2c5ed61fu, description: "Event Actor Reference - optional")]
 	public RivetAssetId Reference { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static ConduitEventActionPrius Create(DDLObject ddl) => new(ddl);

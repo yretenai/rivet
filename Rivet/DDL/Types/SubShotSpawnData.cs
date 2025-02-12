@@ -26,31 +26,31 @@ public class SubShotSpawnData : ActorSpawnData, IDDLObjectType<SubShotSpawnData>
 		AttackId = ddl.GetValue<uint>(0xa9d10a0fu, AttackId);
 	}
 
-	[DDLRegistration(0x730b42eeu, description: "AssetId for the asset we're spawning, if spawning an instance of an actor file")]
+	[DDLRegistration(0xb6e788d7u, description: "AssetId for the asset we're spawning, if spawning an instance of an actor file")]
 	public RivetAssetId AssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x730b42eeu, description: "The zone index we should put the spawned guy into.")]
+	[DDLRegistration(0x0c9266b7u, description: "The zone index we should put the spawned guy into.")]
 	public int ZoneIndex { get; set; } = 0;
 
-	[DDLRegistration(0x730b42eeu)]
+	[DDLRegistration(0xbc2d5985u)]
 	public DDLVector3? Position { get; set; } = default;
 
-	[DDLRegistration(0x730b42eeu)]
+	[DDLRegistration(0xb37847eeu)]
 	public DDLVector3? Facing { get; set; } = default;
 
-	[DDLRegistration(0x730b42eeu)]
+	[DDLRegistration(0x76fcc3adu)]
 	public DDLVector3? Up { get; set; } = default;
 
-	[DDLRegistration(0x730b42eeu)]
+	[DDLRegistration(0xf515e945u)]
 	public float Scale { get; set; } = 1.00f;
 
-	[DDLRegistration(0x730b42eeu, description: "The actor we spawned from.")]
+	[DDLRegistration(0x13ab6550u, description: "The actor we spawned from.")]
 	public uint ParentHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x730b42eeu, description: "The attack ID of the spawner shot")]
+	[DDLRegistration(0xfefeb1b6u, description: "The attack ID of the spawner shot")]
 	public uint ParentAttackId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x730b42eeu, description: "The attack ID")]
+	[DDLRegistration(0xa9d10a0fu, description: "The attack ID")]
 	public uint AttackId { get; set; } = 0x00000000;
 
 	public new static SubShotSpawnData Create(DDLObject ddl) => new(ddl);

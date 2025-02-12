@@ -19,10 +19,10 @@ public class HeroLevelData : DDLObjectType, IDDLObjectType<HeroLevelData> {
 		Health = ddl.GetValue<float>(0xf0a26d74u, Health);
 	}
 
-	[DDLRegistration(0x55c53ecau)]
+	[DDLRegistration(0xe69ffdf3u)]
 	public uint XPForLevel { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x55c53ecau)]
+	[DDLRegistration(0xf0a26d74u)]
 	public float Health { get; set; } = 10.00f;
 
 	public static HeroLevelData Create(DDLObject ddl) => new(ddl);

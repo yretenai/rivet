@@ -19,10 +19,10 @@ public class IndActorList : DDLObjectType, IDDLObjectType<IndActorList> {
 		EnableType = ddl.GetEnum<xe47e5cf7>(0xb8f74eb3u, xe47e5cf7Values.Lookup);
 	}
 
-	[DDLRegistration(0xe7aa737cu, "Actor", "The actor you want to enable/disable/toggle.")]
+	[DDLRegistration(0x49a6ce86u, "Actor", "The actor you want to enable/disable/toggle.")]
 	public RivetAssetId ActorUID { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xe7aa737cu, "Enable Type", "Whether to enable, disable, or toggle (all via the ToggleEvent) this actor.")]
+	[DDLRegistration(0xb8f74eb3u, "Enable Type", "Whether to enable, disable, or toggle (all via the ToggleEvent) this actor.")]
 	public xe47e5cf7 EnableType { get; set; } = xe47e5cf7.Enable;
 
 	public static IndActorList Create(DDLObject ddl) => new(ddl);

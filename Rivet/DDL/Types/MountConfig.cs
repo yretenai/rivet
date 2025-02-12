@@ -23,22 +23,22 @@ public class MountConfig : ConfigBase, IDDLObjectType<MountConfig> {
 		Abilities = ddl.GetObjects<MountAbilityContainer>(0x3ac512a8u);
 	}
 
-	[DDLRegistration(0x58612f37u)]
+	[DDLRegistration(0x34ae7542u)]
 	public HeroMountData? HeroData { get; set; } = default;
 
-	[DDLRegistration(0x58612f37u)]
+	[DDLRegistration(0x59da994bu)]
 	public BotMountData? BotData { get; set; } = default;
 
-	[DDLRegistration(0x58612f37u)]
+	[DDLRegistration(0x1bf25fc0u)]
 	public RivetAssetId MountCameraConfig { get; set; } = default;
 
-	[DDLRegistration(0x58612f37u, "Camera Stick Config")]
+	[DDLRegistration(0xb3806672u, "Camera Stick Config")]
 	public RivetAssetId CameraStickConfig { get; set; } = default;
 
-	[DDLRegistration(0x58612f37u, "Camera Stick Alternate Config")]
+	[DDLRegistration(0x6427a241u, "Camera Stick Alternate Config")]
 	public RivetAssetId CameraStickAltConfig { get; set; } = default;
 
-	[DDLRegistration(0x58612f37u)]
+	[DDLRegistration(0x3ac512a8u)]
 	public List<MountAbilityContainer?> Abilities { get; set; } = [];
 
 	public new static MountConfig Create(DDLObject ddl) => new(ddl);

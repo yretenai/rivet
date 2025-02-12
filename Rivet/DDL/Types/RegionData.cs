@@ -19,10 +19,10 @@ public class RegionData : DDLObjectType, IDDLObjectType<RegionData> {
 		IsBorderRegion = ddl.GetValue<bool>(0x10e11ce2u, IsBorderRegion);
 	}
 
-	[DDLRegistration(0xebd1f077u, description: "Region asset")]
+	[DDLRegistration(0x311abf11u, description: "Region asset")]
 	public RivetAssetId Region { get; set; } = default;
 
-	[DDLRegistration(0xebd1f077u, description: "Whether or not this hex is on the border of its area")]
+	[DDLRegistration(0x10e11ce2u, description: "Whether or not this hex is on the border of its area")]
 	public bool IsBorderRegion { get; set; } = false;
 
 	public static RegionData Create(DDLObject ddl) => new(ddl);

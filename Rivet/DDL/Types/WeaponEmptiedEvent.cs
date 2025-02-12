@@ -18,7 +18,7 @@ public class WeaponEmptiedEvent : WeaponTriggeredEvent, IDDLObjectType<WeaponEmp
 		NumConsecutiveEmptyFires = ddl.GetValue<uint>(0xac1706fbu, NumConsecutiveEmptyFires);
 	}
 
-	[DDLRegistration(0x06f725fbu)]
+	[DDLRegistration(0xac1706fbu)]
 	public uint NumConsecutiveEmptyFires { get; set; } = 0x00000000;
 
 	public new static WeaponEmptiedEvent Create(DDLObject ddl) => new(ddl);

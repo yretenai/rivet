@@ -21,16 +21,16 @@ public class MountAbilitySpeedBrake : MountAbilityBase, IDDLObjectType<MountAbil
 		BrakeOutro = ddl.GetString(0xeb8c1785) ?? BrakeOutro;
 	}
 
-	[DDLRegistration(0x79d4b4eeu, description: "Speed when mount is braking.")]
+	[DDLRegistration(0xf6f7096du, description: "Speed when mount is braking.")]
 	public float BrakeSpeed { get; set; } = 7.00f;
 
-	[DDLRegistration(0x79d4b4eeu)]
+	[DDLRegistration(0xe3d432bbu)]
 	public string? BrakeIntro { get; set; } = "BrakeIntro";
 
-	[DDLRegistration(0x79d4b4eeu)]
+	[DDLRegistration(0xc61d9954u)]
 	public string? BrakeLoop { get; set; } = "BrakeLoop";
 
-	[DDLRegistration(0x79d4b4eeu)]
+	[DDLRegistration(0xeb8c1785u)]
 	public string? BrakeOutro { get; set; } = "BrakeOutro";
 
 	public new static MountAbilitySpeedBrake Create(DDLObject ddl) => new(ddl);

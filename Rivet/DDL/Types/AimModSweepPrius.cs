@@ -24,25 +24,25 @@ public class AimModSweepPrius : AimModifierPrius, IDDLObjectType<AimModSweepPriu
 		EndClamp = ddl.GetValue<float>(0xe82419d1u, EndClamp);
 	}
 
-	[DDLRegistration(0xdcba4f26u, description: "Half of the total sweep angle")]
+	[DDLRegistration(0x59839627u, description: "Half of the total sweep angle")]
 	public float SweepHalfAngle { get; set; } = 30.00f;
 
-	[DDLRegistration(0xdcba4f26u, description: "If true the sweep time is exactly the time it will take for the current burst to complete.")]
+	[DDLRegistration(0x4ed6bd8au, description: "If true the sweep time is exactly the time it will take for the current burst to complete.")]
 	public bool SweepTimeIsBurstTime { get; set; } = false;
 
-	[DDLRegistration(0xdcba4f26u, description: "The amount of time it takes for the sweep to complete")]
+	[DDLRegistration(0x5fa3bce2u, description: "The amount of time it takes for the sweep to complete")]
 	public float TotalSweepTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0xdcba4f26u, description: "The amount of time after the start event is called before the sweep begins.")]
+	[DDLRegistration(0xcaf1ec7fu, description: "The amount of time after the start event is called before the sweep begins.")]
 	public float StartDelay { get; set; } = 0.20f;
 
-	[DDLRegistration(0xdcba4f26u)]
+	[DDLRegistration(0x7e82d654u)]
 	public x69c22897 SweepType { get; set; } = x69c22897.ThruTarget;
 
-	[DDLRegistration(0xdcba4f26u)]
+	[DDLRegistration(0xefe38765u)]
 	public x52f67dac SweepDirection { get; set; } = x52f67dac.LeftToRight;
 
-	[DDLRegistration(0xdcba4f26u, description: "end t value. ONLY FOR kEndAtTarget")]
+	[DDLRegistration(0xe82419d1u, description: "end t value. ONLY FOR kEndAtTarget")]
 	public float EndClamp { get; set; } = 1.00f;
 
 	public new static AimModSweepPrius Create(DDLObject ddl) => new(ddl);

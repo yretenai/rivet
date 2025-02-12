@@ -23,22 +23,22 @@ public class SpawnSyncedActorEffectNodeDef : NodalShotEffectNodeBaseDef, IDDLObj
 		NumToSpawn = ddl.GetValue<int>(0xbf9d56a9u, NumToSpawn);
 	}
 
-	[DDLRegistration(0x2a2439adu)]
+	[DDLRegistration(0x75356989u)]
 	public RivetAssetId ActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x2a2439adu)]
+	[DDLRegistration(0xc7e68df8u)]
 	public float Lifetime { get; set; } = -1.00f;
 
-	[DDLRegistration(0x2a2439adu)]
+	[DDLRegistration(0x27919c52u)]
 	public bool AttachToHitActor { get; set; } = false;
 
-	[DDLRegistration(0x2a2439adu)]
+	[DDLRegistration(0x60d5eba5u)]
 	public bool MatchCreatorAllegiance { get; set; } = true;
 
-	[DDLRegistration(0x2a2439adu)]
+	[DDLRegistration(0xfc7075c0u)]
 	public bool MatchCreatorZone { get; set; } = false;
 
-	[DDLRegistration(0x2a2439adu)]
+	[DDLRegistration(0xbf9d56a9u)]
 	public int NumToSpawn { get; set; } = 1;
 
 	public new static SpawnSyncedActorEffectNodeDef Create(DDLObject ddl) => new(ddl);

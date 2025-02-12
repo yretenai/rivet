@@ -18,7 +18,7 @@ public class ClothChangeGravityEvent : EventBase, IDDLObjectType<ClothChangeGrav
 		Gravity = ddl.GetObject<DDLVector3>(0x5bf7469fu);
 	}
 
-	[DDLRegistration(0xca071849u)]
+	[DDLRegistration(0x5bf7469fu)]
 	public DDLVector3? Gravity { get; set; } = default;
 
 	public new static ClothChangeGravityEvent Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ItemShotPrius : LobbedShotPrius, IDDLObjectType<ItemShotPrius> {
 		BreakOnImpact = ddl.GetValue<bool>(0x0e101d4fu, BreakOnImpact);
 	}
 
-	[DDLRegistration(0x1b4634b0u)]
+	[DDLRegistration(0x0e101d4fu)]
 	public bool BreakOnImpact { get; set; } = false;
 
 	public new static ItemShotPrius Create(DDLObject ddl) => new(ddl);

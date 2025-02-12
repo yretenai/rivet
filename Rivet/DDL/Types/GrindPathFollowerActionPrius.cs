@@ -19,10 +19,10 @@ public class GrindPathFollowerActionPrius : DDLObjectType, IDDLObjectType<GrindP
 		Speed = ddl.GetValue<float>(0x16753237u, Speed);
 	}
 
-	[DDLRegistration(0x1aa1ac1au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.CurveFollower;
 
-	[DDLRegistration(0x1aa1ac1au, description: "Speed to travel along the Grind LedgePath (m/s). If a value is passed in to the Speed var on the node, we use that one.")]
+	[DDLRegistration(0x16753237u, description: "Speed to travel along the Grind LedgePath (m/s). If a value is passed in to the Speed var on the node, we use that one.")]
 	public float Speed { get; set; } = 1.00f;
 
 	public static GrindPathFollowerActionPrius Create(DDLObject ddl) => new(ddl);

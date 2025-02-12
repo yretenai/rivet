@@ -20,13 +20,13 @@ public class CameraConfigVolumePrius : DDLObjectType, IDDLObjectType<CameraConfi
 		OverrideWeaponStickConfig = ddl.GetValue<bool>(0x5425f1a7u, OverrideWeaponStickConfig);
 	}
 
-	[DDLRegistration(0x6e4ceb0cu)]
+	[DDLRegistration(0x245a7f0au)]
 	public RivetAssetId FollowCameraUserConfig { get; set; } = default;
 
-	[DDLRegistration(0x6e4ceb0cu)]
+	[DDLRegistration(0xb3806672u)]
 	public RivetAssetId CameraStickConfig { get; set; } = default;
 
-	[DDLRegistration(0x6e4ceb0cu)]
+	[DDLRegistration(0x5425f1a7u)]
 	public bool OverrideWeaponStickConfig { get; set; } = true;
 
 	public static CameraConfigVolumePrius Create(DDLObject ddl) => new(ddl);

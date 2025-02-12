@@ -21,16 +21,16 @@ public class SoundEmitterComponentPrius : DDLObjectType, IDDLObjectType<SoundEmi
 		FadeTime = ddl.GetValue<float>(0x8833d162u, FadeTime);
 	}
 
-	[DDLRegistration(0x23a6dc3au)]
+	[DDLRegistration(0xcebb3bc3u)]
 	public WwiseEvent? WwiseEvent { get; set; } = default;
 
-	[DDLRegistration(0x23a6dc3au)]
+	[DDLRegistration(0x6d6f1110u)]
 	public bool PlayOnLoad { get; set; } = false;
 
-	[DDLRegistration(0x23a6dc3au, description: "Should this emitter fade out when it is destroyed?")]
+	[DDLRegistration(0x10feb5bbu, description: "Should this emitter fade out when it is destroyed?")]
 	public bool FadeOnDestroy { get; set; } = false;
 
-	[DDLRegistration(0x23a6dc3au, description: "Fade time if FadeOnDestroy is selected. Max value of OrphanedEventTimeout.")]
+	[DDLRegistration(0x8833d162u, description: "Fade time if FadeOnDestroy is selected. Max value of OrphanedEventTimeout.")]
 	public float FadeTime { get; set; } = 0.00f;
 
 	public static SoundEmitterComponentPrius Create(DDLObject ddl) => new(ddl);

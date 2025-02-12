@@ -18,7 +18,7 @@ public class GameBotHealthPrius : HealthPrius, IDDLObjectType<GameBotHealthPrius
 		DefaultMaxHitPoints = ddl.GetValue<float>(0x9ff366f1u, DefaultMaxHitPoints);
 	}
 
-	[DDLRegistration(0x94a518d7u, description: "The max hit points, when playing on normal difficulty.")]
+	[DDLRegistration(0x9ff366f1u, description: "The max hit points, when playing on normal difficulty.")]
 	public float DefaultMaxHitPoints { get; set; } = 100.00f;
 
 	public new static GameBotHealthPrius Create(DDLObject ddl) => new(ddl);

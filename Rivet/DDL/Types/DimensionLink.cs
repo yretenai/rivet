@@ -21,16 +21,16 @@ public class DimensionLink : ActivityLinkBase, IDDLObjectType<DimensionLink> {
 		UnlockSequence = ddl.GetObject<ObjSysUnlockSequence>(0xdd7a0accu);
 	}
 
-	[DDLRegistration(0x27180e4eu, "Planet Name (in code)")]
+	[DDLRegistration(0x38548038u, "Planet Name (in code)")]
 	public string? PlanetName { get; set; } = default;
 
-	[DDLRegistration(0x27180e4eu, "Dimension Name (in code)")]
+	[DDLRegistration(0x2d4a9b83u, "Dimension Name (in code)")]
 	public string? DimensionCodeName { get; set; } = default;
 
-	[DDLRegistration(0x27180e4eu, "Game Intent Checkpoint")]
+	[DDLRegistration(0xd436a987u, "Game Intent Checkpoint")]
 	public string? Checkpoint { get; set; } = default;
 
-	[DDLRegistration(0x27180e4eu, "Card Unlock Sequence")]
+	[DDLRegistration(0xdd7a0accu, "Card Unlock Sequence")]
 	public ObjSysUnlockSequence? UnlockSequence { get; set; } = default;
 
 	public new static DimensionLink Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ZurkonShotConfig : ConfigBase, IDDLObjectType<ZurkonShotConfig> {
 		ShotPrius = ddl.GetObject<BasicBulletPrius>(0x66fe4621u);
 	}
 
-	[DDLRegistration(0xcf7252e4u, "Shot Actor")]
+	[DDLRegistration(0x000f3287u, "Shot Actor")]
 	public RivetAssetId ShotActor { get; set; } = default;
 
-	[DDLRegistration(0xcf7252e4u, "Shot Prius")]
+	[DDLRegistration(0x66fe4621u, "Shot Prius")]
 	public BasicBulletPrius? ShotPrius { get; set; } = default;
 
 	public new static ZurkonShotConfig Create(DDLObject ddl) => new(ddl);

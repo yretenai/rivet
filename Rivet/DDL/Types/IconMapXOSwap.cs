@@ -19,10 +19,10 @@ public class IconMapXOSwap : IconMapBase, IDDLObjectType<IconMapXOSwap> {
 		SwappedIconId = ddl.GetEnum<IconIdGame>(0xab0e13f1u, IconIdGameValues.Lookup);
 	}
 
-	[DDLRegistration(0xabcab87bu)]
+	[DDLRegistration(0x097e90aeu)]
 	public IconIdGame NormalIconId { get; set; } = IconIdGame.None;
 
-	[DDLRegistration(0xabcab87bu)]
+	[DDLRegistration(0xab0e13f1u)]
 	public IconIdGame SwappedIconId { get; set; } = IconIdGame.None;
 
 	public new static IconMapXOSwap Create(DDLObject ddl) => new(ddl);

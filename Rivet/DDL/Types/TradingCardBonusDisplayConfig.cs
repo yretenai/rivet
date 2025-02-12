@@ -18,7 +18,7 @@ public class TradingCardBonusDisplayConfig : ConfigBase, IDDLObjectType<TradingC
 		BonusDisplayList = ddl.GetObjects<BonusDisplayDef>(0x26720388u);
 	}
 
-	[DDLRegistration(0x51539d2fu, description: "Bonus Display List")]
+	[DDLRegistration(0x26720388u, description: "Bonus Display List")]
 	public List<BonusDisplayDef?> BonusDisplayList { get; set; } = [];
 
 	public new static TradingCardBonusDisplayConfig Create(DDLObject ddl) => new(ddl);

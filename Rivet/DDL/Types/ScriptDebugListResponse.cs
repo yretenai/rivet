@@ -20,13 +20,13 @@ public class ScriptDebugListResponse : DDLObjectType, IDDLObjectType<ScriptDebug
 		Entries = ddl.GetObjects<ScriptDebugListEntry>(0x2c12d0fdu);
 	}
 
-	[DDLRegistration(0x73be64fau)]
+	[DDLRegistration(0x58f8e99fu)]
 	public string? ListName { get; set; } = default;
 
-	[DDLRegistration(0x73be64fau)]
+	[DDLRegistration(0xbb3171e6u)]
 	public RivetAssetId VarTuid { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x73be64fau)]
+	[DDLRegistration(0x2c12d0fdu)]
 	public List<ScriptDebugListEntry?> Entries { get; set; } = [];
 
 	public static ScriptDebugListResponse Create(DDLObject ddl) => new(ddl);

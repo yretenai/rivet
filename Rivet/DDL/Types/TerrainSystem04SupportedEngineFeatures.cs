@@ -19,10 +19,10 @@ public class TerrainSystem04SupportedEngineFeatures : DDLObjectType, IDDLObjectT
 		Line01 = ddl.GetString(0x787f8fdd) ?? Line01;
 	}
 
-	[DDLRegistration(0x5627f5f7u, description: "The terrain system supports Havok heightfield collision as well as navmesh.")]
+	[DDLRegistration(0x0f78bf4bu, description: "The terrain system supports Havok heightfield collision as well as navmesh.")]
 	public string? Line00 { get; set; } = default;
 
-	[DDLRegistration(0x5627f5f7u, description: "Other engine systems (like decals) are not supported at the time being.")]
+	[DDLRegistration(0x787f8fddu, description: "Other engine systems (like decals) are not supported at the time being.")]
 	public string? Line01 { get; set; } = default;
 
 	public static TerrainSystem04SupportedEngineFeatures Create(DDLObject ddl) => new(ddl);

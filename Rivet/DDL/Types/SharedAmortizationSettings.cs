@@ -19,10 +19,10 @@ public class SharedAmortizationSettings : DDLObjectType, IDDLObjectType<SharedAm
 		FrameBudgetSettings = ddl.GetObject<SharedFrameBudgetAmortizationSettings>(0x744f9837u);
 	}
 
-	[DDLRegistration(0x5726a226u)]
+	[DDLRegistration(0xf8aaf56fu)]
 	public SharedFrameIntervalAmoritizationSettings? FrameIntervalSettings { get; set; } = default;
 
-	[DDLRegistration(0x5726a226u)]
+	[DDLRegistration(0x744f9837u)]
 	public SharedFrameBudgetAmortizationSettings? FrameBudgetSettings { get; set; } = default;
 
 	public static SharedAmortizationSettings Create(DDLObject ddl) => new(ddl);

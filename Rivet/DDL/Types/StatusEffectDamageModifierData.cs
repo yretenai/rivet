@@ -18,7 +18,7 @@ public class StatusEffectDamageModifierData : DDLObjectType, IDDLObjectType<Stat
 		DamageMods = ddl.GetObjects<StatusEffectDamageModWrapper>(0x6bccb09eu);
 	}
 
-	[DDLRegistration(0x571b93a0u)]
+	[DDLRegistration(0x6bccb09eu)]
 	public List<StatusEffectDamageModWrapper?> DamageMods { get; set; } = [];
 
 	public static StatusEffectDamageModifierData Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class ConversationConfig : ConfigBase, IDDLObjectType<ConversationConfig>
 		DialogLines = ddl.GetObjects<DialogLine>(0xc7155d45u);
 	}
 
-	[DDLRegistration(0xed844ad7u)]
+	[DDLRegistration(0xc7155d45u)]
 	public List<DialogLine?> DialogLines { get; set; } = [];
 
 	public new static ConversationConfig Create(DDLObject ddl) => new(ddl);

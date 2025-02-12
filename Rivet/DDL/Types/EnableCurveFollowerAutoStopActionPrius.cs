@@ -18,7 +18,7 @@ public class EnableCurveFollowerAutoStopActionPrius : DDLObjectType, IDDLObjectT
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0xe5523193u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.CurveFollower;
 
 	public static EnableCurveFollowerAutoStopActionPrius Create(DDLObject ddl) => new(ddl);

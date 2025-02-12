@@ -20,13 +20,13 @@ public class Cinematic2UserRegionDef : DDLObjectType, IDDLObjectType<Cinematic2U
 		UserZones = ddl.GetDictionary<RivetAssetId, Cinematic2UserZoneDef>(0xe1523db2, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2UserZoneDef>(mapId));
 	}
 
-	[DDLRegistration(0xe25f9ebcu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xe25f9ebcu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xe25f9ebcu)]
+	[DDLRegistration(0xe1523db2u)]
 	public Dictionary<RivetAssetId, Cinematic2UserZoneDef?> UserZones { get; set; } = [];
 
 	public static Cinematic2UserRegionDef Create(DDLObject ddl) => new(ddl);

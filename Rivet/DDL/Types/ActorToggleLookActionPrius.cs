@@ -19,10 +19,10 @@ public class ActorToggleLookActionPrius : DDLObjectType, IDDLObjectType<ActorTog
 		Looks = ddl.GetStrings(0xec785832u);
 	}
 
-	[DDLRegistration(0x856a5aa8u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x856a5aa8u, description: "Name of the Look to Enable/Disable.")]
+	[DDLRegistration(0xec785832u, description: "Name of the Look to Enable/Disable.")]
 	public List<string?> Looks { get; set; } = [];
 
 	public static ActorToggleLookActionPrius Create(DDLObject ddl) => new(ddl);

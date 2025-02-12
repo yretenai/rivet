@@ -19,10 +19,10 @@ public class SpawnRewardActionPrius : DDLObjectType, IDDLObjectType<SpawnRewardA
 		XPValue = ddl.GetValue<float>(0x551baad0u, XPValue);
 	}
 
-	[DDLRegistration(0x7a375667u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x7a375667u, description: "XP Value")]
+	[DDLRegistration(0x551baad0u, description: "XP Value")]
 	public float XPValue { get; set; } = 1.00f;
 
 	public static SpawnRewardActionPrius Create(DDLObject ddl) => new(ddl);

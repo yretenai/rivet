@@ -18,7 +18,7 @@ public class EconomyBoltModelSwapConfig : ConfigBase, IDDLObjectType<EconomyBolt
 		SwapData = ddl.GetObjects<SwapDataEntry>(0x82cca5beu);
 	}
 
-	[DDLRegistration(0x43420566u)]
+	[DDLRegistration(0x82cca5beu)]
 	public List<SwapDataEntry?> SwapData { get; set; } = [];
 
 	public new static EconomyBoltModelSwapConfig Create(DDLObject ddl) => new(ddl);

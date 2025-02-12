@@ -19,10 +19,10 @@ public class SetHeroSpaceshipMissileCountActionPrius : DDLObjectType, IDDLObject
 		NumMissiles = ddl.GetValue<uint>(0x10a27bf5u, NumMissiles);
 	}
 
-	[DDLRegistration(0x2b1285ccu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x2b1285ccu, description: "Number of missiles the ship should have")]
+	[DDLRegistration(0x10a27bf5u, description: "Number of missiles the ship should have")]
 	public uint NumMissiles { get; set; } = 0x00000000;
 
 	public static SetHeroSpaceshipMissileCountActionPrius Create(DDLObject ddl) => new(ddl);

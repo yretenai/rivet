@@ -18,7 +18,7 @@ public class SetStrandStateActionPrius : DDLObjectType, IDDLObjectType<SetStrand
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x06e3700au)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
 	public static SetStrandStateActionPrius Create(DDLObject ddl) => new(ddl);

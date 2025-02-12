@@ -18,7 +18,7 @@ public class CinematicTaggedDestroyPrius : DDLObjectType, IDDLObjectType<Cinemat
 		DestroyCategory = ddl.GetBitset<xb54ab3f1>(0x74ccddd0u, xb54ab3f1Values.Lookup);
 	}
 
-	[DDLRegistration(0x2a7e29ceu)]
+	[DDLRegistration(0x74ccddd0u)]
 	public xb54ab3f1 DestroyCategory { get; set; } = (xb54ab3f1) 0x00000001;
 
 	public static CinematicTaggedDestroyPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class CelebrateDifficultyData : DDLObjectType, IDDLObjectType<CelebrateDi
 		Cooldown = ddl.GetValue<float>(0x246291a9u, Cooldown);
 	}
 
-	[DDLRegistration(0x3c7875a1u)]
+	[DDLRegistration(0x605d31d6u)]
 	public DifficultyLevel Difficulty { get; set; } = DifficultyLevel.Easy;
 
-	[DDLRegistration(0x3c7875a1u)]
+	[DDLRegistration(0x246291a9u)]
 	public float Cooldown { get; set; } = 0.00f;
 
 	public static CelebrateDifficultyData Create(DDLObject ddl) => new(ddl);

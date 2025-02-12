@@ -19,10 +19,10 @@ public class MayaExportAnimClipData : DDLObjectType, IDDLObjectType<MayaExportAn
 		ScriptCmd = ddl.GetString(0x526d184c) ?? ScriptCmd;
 	}
 
-	[DDLRegistration(0x18ae92e4u, description: "list of full paths to maya files")]
+	[DDLRegistration(0xe3985a7bu, description: "list of full paths to maya files")]
 	public List<string?> MayaPaths { get; set; } = [];
 
-	[DDLRegistration(0x18ae92e4u, description: "command line used to run this data")]
+	[DDLRegistration(0x526d184cu, description: "command line used to run this data")]
 	public string? ScriptCmd { get; set; } = default;
 
 	public static MayaExportAnimClipData Create(DDLObject ddl) => new(ddl);

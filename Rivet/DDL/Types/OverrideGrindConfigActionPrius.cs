@@ -19,10 +19,10 @@ public class OverrideGrindConfigActionPrius : DDLObjectType, IDDLObjectType<Over
 		OverrideConfig = ddl.GetValue<RivetAssetId>(0xb8b3c47fu, OverrideConfig);
 	}
 
-	[DDLRegistration(0x93e61fd9u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0x93e61fd9u, description: "Override grind config to set on Hero.")]
+	[DDLRegistration(0xb8b3c47fu, description: "Override grind config to set on Hero.")]
 	public RivetAssetId OverrideConfig { get; set; } = default;
 
 	public static OverrideGrindConfigActionPrius Create(DDLObject ddl) => new(ddl);

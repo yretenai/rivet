@@ -22,19 +22,19 @@ public class BonusDisplayDef : DDLObjectType, IDDLObjectType<BonusDisplayDef> {
 		InsertString = ddl.GetValue<bool>(0xda0a9bd1u, InsertString);
 	}
 
-	[DDLRegistration(0x6448de1bu, "Bonus Type")]
+	[DDLRegistration(0x86cbb3bbu, "Bonus Type")]
 	public BonusType Bonus { get; set; } = BonusType.BonusNone;
 
-	[DDLRegistration(0x6448de1bu, "Bonus Desc loc tag")]
+	[DDLRegistration(0x5c3ff112u, "Bonus Desc loc tag")]
 	public string? BonusDescLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x6448de1bu, "Insert amount into Desc")]
+	[DDLRegistration(0xd224362cu, "Insert amount into Desc")]
 	public bool InsertNumber { get; set; } = false;
 
-	[DDLRegistration(0x6448de1bu, "String loc tag")]
+	[DDLRegistration(0xa2967435u, "String loc tag")]
 	public string? StringLocTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x6448de1bu, "Insert String into Desc")]
+	[DDLRegistration(0xda0a9bd1u, "Insert String into Desc")]
 	public bool InsertString { get; set; } = false;
 
 	public static BonusDisplayDef Create(DDLObject ddl) => new(ddl);

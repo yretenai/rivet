@@ -19,10 +19,10 @@ public class SoundPosition : DDLObjectType, IDDLObjectType<SoundPosition> {
 		LocatorName = ddl.GetString(0x5814524d) ?? LocatorName;
 	}
 
-	[DDLRegistration(0xf6590434u)]
+	[DDLRegistration(0x5d269a38u)]
 	public RivetAssetId Actor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf6590434u)]
+	[DDLRegistration(0x5814524du)]
 	public string? LocatorName { get; set; } = default;
 
 	public static SoundPosition Create(DDLObject ddl) => new(ddl);

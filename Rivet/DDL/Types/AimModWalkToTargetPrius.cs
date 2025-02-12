@@ -28,37 +28,37 @@ public class AimModWalkToTargetPrius : AimModifierPrius, IDDLObjectType<AimModWa
 		AutoHitInRange = ddl.GetValue<bool>(0xf334c2cfu, AutoHitInRange);
 	}
 
-	[DDLRegistration(0x878f996cu)]
+	[DDLRegistration(0xb0ebe4c3u)]
 	public float WalkDurationMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x878f996cu)]
+	[DDLRegistration(0x8ce6db9au)]
 	public float WalkDurationMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x878f996cu, description: "Min local space offset of the WalkStart position in X direction.")]
+	[DDLRegistration(0x83bea539u, description: "Min local space offset of the WalkStart position in X direction.")]
 	public float WalkStartMinX { get; set; } = -4.00f;
 
-	[DDLRegistration(0x878f996cu, description: "Max local space offset of the WalkStart position in X direction.")]
+	[DDLRegistration(0x91354156u, description: "Max local space offset of the WalkStart position in X direction.")]
 	public float WalkStartMaxX { get; set; } = 4.00f;
 
-	[DDLRegistration(0x878f996cu, description: "Min local space offset of the WalkStart position in Y direction.")]
+	[DDLRegistration(0xf4b995afu, description: "Min local space offset of the WalkStart position in Y direction.")]
 	public float WalkStartMinY { get; set; } = -2.00f;
 
-	[DDLRegistration(0x878f996cu, description: "Max local space offset of the WalkStart position in Y direction.")]
+	[DDLRegistration(0xe63271c0u, description: "Max local space offset of the WalkStart position in Y direction.")]
 	public float WalkStartMaxY { get; set; } = -2.00f;
 
-	[DDLRegistration(0x878f996cu, description: "Min local space offset of the WalkStart position in Z direction.")]
+	[DDLRegistration(0x6db0c415u, description: "Min local space offset of the WalkStart position in Z direction.")]
 	public float WalkStartMinZ { get; set; } = 6.00f;
 
-	[DDLRegistration(0x878f996cu, description: "Max local space offset of the WalkStart position in Z direction.")]
+	[DDLRegistration(0x7f3b207au, description: "Max local space offset of the WalkStart position in Z direction.")]
 	public float WalkStartMaxZ { get; set; } = 10.00f;
 
-	[DDLRegistration(0x878f996cu, description: "If checked then it'll take '[WalkDurationMin, WalkDurationMax]' shots to get on target. Otherwise it's seconds.")]
+	[DDLRegistration(0x6ec95a4cu, description: "If checked then it'll take '[WalkDurationMin, WalkDurationMax]' shots to get on target. Otherwise it's seconds.")]
 	public bool CountShots { get; set; } = false;
 
-	[DDLRegistration(0x878f996cu, description: "Should the walk continue past the target?")]
+	[DDLRegistration(0xb97c5845u, description: "Should the walk continue past the target?")]
 	public bool WalkPastTarget { get; set; } = false;
 
-	[DDLRegistration(0x878f996cu, description: "Should the walk be abandoned and automatically target the player if they are in close proximity?")]
+	[DDLRegistration(0xf334c2cfu, description: "Should the walk be abandoned and automatically target the player if they are in close proximity?")]
 	public bool AutoHitInRange { get; set; } = true;
 
 	public new static AimModWalkToTargetPrius Create(DDLObject ddl) => new(ddl);

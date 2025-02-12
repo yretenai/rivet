@@ -19,10 +19,10 @@ public class LedgePathAttachActionPrius : DDLObjectType, IDDLObjectType<LedgePat
 		AttachType = ddl.GetEnum<xbabeae30>(0x84877590u, xbabeae30Values.Lookup);
 	}
 
-	[DDLRegistration(0xd94458ccu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Hero;
 
-	[DDLRegistration(0xd94458ccu)]
+	[DDLRegistration(0x84877590u)]
 	public xbabeae30 AttachType { get; set; } = xbabeae30.AEndToBStart;
 
 	public static LedgePathAttachActionPrius Create(DDLObject ddl) => new(ddl);

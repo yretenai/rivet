@@ -23,22 +23,22 @@ public class ECMCommentNodeDef : DDLObjectType, IDDLObjectType<ECMCommentNodeDef
 		Height = ddl.GetValue<uint>(0xcb35ab68u, Height);
 	}
 
-	[DDLRegistration(0xc2475ef4u)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xc2475ef4u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0xc2475ef4u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0xc2475ef4u, "Comment Text")]
+	[DDLRegistration(0x959e3154u, "Comment Text")]
 	public string? Comment { get; set; } = default;
 
-	[DDLRegistration(0xc2475ef4u)]
+	[DDLRegistration(0x954989eeu)]
 	public uint Width { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xc2475ef4u)]
+	[DDLRegistration(0xcb35ab68u)]
 	public uint Height { get; set; } = 0x00000000;
 
 	public static ECMCommentNodeDef Create(DDLObject ddl) => new(ddl);

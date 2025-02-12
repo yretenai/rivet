@@ -21,16 +21,16 @@ public class ObjectiveNodeInfoUI : DDLObjectType, IDDLObjectType<ObjectiveNodeIn
 		AlwaysPing = ddl.GetValue<bool>(0x01667fa0u, AlwaysPing);
 	}
 
-	[DDLRegistration(0x5363cec9u, "Objective Name (HUD)", "Loctag for the name of this objective (HUD notifications).")]
+	[DDLRegistration(0xa0041b54u, "Objective Name (HUD)", "Loctag for the name of this objective (HUD notifications).")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0x5363cec9u, "Objective Description (Map)", "Loctag for the description of this objective (Pause Map objective list).")]
+	[DDLRegistration(0xe61fee0cu, "Objective Description (Map)", "Loctag for the description of this objective (Pause Map objective list).")]
 	public string? DescriptionLocTag { get; set; } = default;
 
-	[DDLRegistration(0x5363cec9u, "Planet Name", "Name of the planet that this objective should be associated with. If empty, this objective will not be associated with any planets.")]
+	[DDLRegistration(0x38548038u, "Planet Name", "Name of the planet that this objective should be associated with. If empty, this objective will not be associated with any planets.")]
 	public string? PlanetName { get; set; } = default;
 
-	[DDLRegistration(0x5363cec9u, "Always Ping", "Always allow pinging while active, even while not on the owning mission's planet (AvailablePlanetName).")]
+	[DDLRegistration(0x01667fa0u, "Always Ping", "Always allow pinging while active, even while not on the owning mission's planet (AvailablePlanetName).")]
 	public bool AlwaysPing { get; set; } = false;
 
 	public static ObjectiveNodeInfoUI Create(DDLObject ddl) => new(ddl);

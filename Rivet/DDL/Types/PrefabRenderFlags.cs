@@ -18,7 +18,7 @@ public class PrefabRenderFlags : DDLObjectType, IDDLObjectType<PrefabRenderFlags
 		Hibernate = ddl.GetValue<bool>(0x6f8e6b06u, Hibernate);
 	}
 
-	[DDLRegistration(0xea8e4b44u, description: "Used to deactivate the prefab and its children in the distance and bring it back to life when nearby")]
+	[DDLRegistration(0x6f8e6b06u, description: "Used to deactivate the prefab and its children in the distance and bring it back to life when nearby")]
 	public bool Hibernate { get; set; } = false;
 
 	public static PrefabRenderFlags Create(DDLObject ddl) => new(ddl);

@@ -27,34 +27,34 @@ public class SegmentedCurveFollowerPrius : DDLObjectType, IDDLObjectType<Segment
 		ExtendOffCurve = ddl.GetValue<bool>(0x35086223u, ExtendOffCurve);
 	}
 
-	[DDLRegistration(0x6089bc34u)]
+	[DDLRegistration(0x0cedbe25u)]
 	public List<string?> JointNames { get; set; } = [];
 
-	[DDLRegistration(0x6089bc34u, description: "Acceleration rate in m/s for this curve follower (use only positive values).")]
+	[DDLRegistration(0xb9f88dfbu, description: "Acceleration rate in m/s for this curve follower (use only positive values).")]
 	public float Acceleration { get; set; } = 2.00f;
 
-	[DDLRegistration(0x6089bc34u, description: "Decceleration rate in m/s for this curve follower (use only positive values).")]
+	[DDLRegistration(0xc9ee30a8u, description: "Decceleration rate in m/s for this curve follower (use only positive values).")]
 	public float Deceleration { get; set; } = 2.00f;
 
-	[DDLRegistration(0x6089bc34u, description: "Maximum speed in m/s for this curve follower (use only positive values).")]
+	[DDLRegistration(0x16b83961u, description: "Maximum speed in m/s for this curve follower (use only positive values).")]
 	public float MaxSpeed { get; set; } = 2.00f;
 
-	[DDLRegistration(0x6089bc34u, description: "Initial curve for this curve follower to start on (optional).")]
+	[DDLRegistration(0x42961e65u, description: "Initial curve for this curve follower to start on (optional).")]
 	public RivetAssetId InitialCurve { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x6089bc34u, description: "Start moving on the specified initial curve on spawn.")]
+	[DDLRegistration(0xe50b4302u, description: "Start moving on the specified initial curve on spawn.")]
 	public bool InitialCurveAutoStart { get; set; } = true;
 
-	[DDLRegistration(0x6089bc34u, description: "Delete this actor when they reach the end of their curve (not applicable for looping curves).")]
+	[DDLRegistration(0x15e49676u, description: "Delete this actor when they reach the end of their curve (not applicable for looping curves).")]
 	public bool DeleteAtEnd { get; set; } = false;
 
-	[DDLRegistration(0x6089bc34u, description: "When coming to the end of the curve this bool determines whether the follower will slow down and stop or not.")]
+	[DDLRegistration(0x28c60b9du, description: "When coming to the end of the curve this bool determines whether the follower will slow down and stop or not.")]
 	public bool IgnoreDecelAtEnd { get; set; } = false;
 
-	[DDLRegistration(0x6089bc34u, description: "When following a new curve after following a previous curve, the actor's speed is maintained.")]
+	[DDLRegistration(0xf46d6975u, description: "When following a new curve after following a previous curve, the actor's speed is maintained.")]
 	public bool KeepSpeedBetweenCurves { get; set; } = false;
 
-	[DDLRegistration(0x6089bc34u, description: "When a segment extends beyond the curve, should we project it off the end of the curve.")]
+	[DDLRegistration(0x35086223u, description: "When a segment extends beyond the curve, should we project it off the end of the curve.")]
 	public bool ExtendOffCurve { get; set; } = false;
 
 	public static SegmentedCurveFollowerPrius Create(DDLObject ddl) => new(ddl);

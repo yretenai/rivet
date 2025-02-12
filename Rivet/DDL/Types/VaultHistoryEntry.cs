@@ -19,10 +19,10 @@ public class VaultHistoryEntry : DDLObjectType, IDDLObjectType<VaultHistoryEntry
 		SaveType = ddl.GetEnum<x07632d21>(0x113c82d1u, x07632d21Values.Lookup);
 	}
 
-	[DDLRegistration(0xe2cb72a3u)]
+	[DDLRegistration(0xd8565038u)]
 	public uint RecordId { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe2cb72a3u)]
+	[DDLRegistration(0x113c82d1u)]
 	public x07632d21 SaveType { get; set; } = x07632d21.Saved;
 
 	public static VaultHistoryEntry Create(DDLObject ddl) => new(ddl);

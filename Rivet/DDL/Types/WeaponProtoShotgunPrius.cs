@@ -19,10 +19,10 @@ public class WeaponProtoShotgunPrius : WeaponGamePrius, IDDLObjectType<WeaponPro
 		V5ShellCasingData = ddl.GetObject<ShellCasingDataMultiEmit>(0xbb2e96adu);
 	}
 
-	[DDLRegistration(0x52b5fd87u, "V1 Shell Casing Data")]
+	[DDLRegistration(0x6f1fda2au, "V1 Shell Casing Data")]
 	public ShellCasingDataMultiEmit? V1ShellCasingData { get; set; } = default;
 
-	[DDLRegistration(0x52b5fd87u, "V5 Shell Casing Data")]
+	[DDLRegistration(0xbb2e96adu, "V5 Shell Casing Data")]
 	public ShellCasingDataMultiEmit? V5ShellCasingData { get; set; } = default;
 
 	public new static WeaponProtoShotgunPrius Create(DDLObject ddl) => new(ddl);

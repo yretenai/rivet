@@ -20,13 +20,13 @@ public class RegisterAttackCooldownData : DDLObjectType, IDDLObjectType<Register
 		PersonalCooldown = ddl.GetObjects<CooldownPerDifficultyData>(0x91725d19u);
 	}
 
-	[DDLRegistration(0xa54a469eu, "Cooldown Type")]
+	[DDLRegistration(0xaad24eb7u, "Cooldown Type")]
 	public x942b54f2 CooldownType { get; set; } = x942b54f2.Leap;
 
-	[DDLRegistration(0xa54a469eu)]
+	[DDLRegistration(0x6a819eb7u)]
 	public List<CooldownPerDifficultyData?> GlobalCooldown { get; set; } = [];
 
-	[DDLRegistration(0xa54a469eu)]
+	[DDLRegistration(0x91725d19u)]
 	public List<CooldownPerDifficultyData?> PersonalCooldown { get; set; } = [];
 
 	public static RegisterAttackCooldownData Create(DDLObject ddl) => new(ddl);

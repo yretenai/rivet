@@ -22,19 +22,19 @@ public class LookEngineItem : DDLObjectType, IDDLObjectType<LookEngineItem> {
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0xf0088e64u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xf0088e64u)]
+	[DDLRegistration(0xe128a208u)]
 	public uint Hash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf0088e64u)]
+	[DDLRegistration(0xaf50ec80u)]
 	public uint HashLower { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf0088e64u)]
+	[DDLRegistration(0x18b84426u)]
 	public bool EnabledByDefault { get; set; } = false;
 
-	[DDLRegistration(0xf0088e64u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = false;
 
 	public static LookEngineItem Create(DDLObject ddl) => new(ddl);

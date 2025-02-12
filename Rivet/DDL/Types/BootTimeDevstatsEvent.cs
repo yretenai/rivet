@@ -19,10 +19,10 @@ public class BootTimeDevstatsEvent : EventBase, IDDLObjectType<BootTimeDevstatsE
 		ElapsedTime = ddl.GetValue<float>(0xeca25771u, ElapsedTime);
 	}
 
-	[DDLRegistration(0x5315616cu)]
+	[DDLRegistration(0x2ac4d854u)]
 	public string? EventId { get; set; } = default;
 
-	[DDLRegistration(0x5315616cu)]
+	[DDLRegistration(0xeca25771u)]
 	public float ElapsedTime { get; set; } = 0.00f;
 
 	public new static BootTimeDevstatsEvent Create(DDLObject ddl) => new(ddl);

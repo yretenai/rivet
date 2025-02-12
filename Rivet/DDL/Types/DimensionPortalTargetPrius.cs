@@ -19,10 +19,10 @@ public class DimensionPortalTargetPrius : DDLObjectType, IDDLObjectType<Dimensio
 		AutoClearDimensionCheckpoint = ddl.GetValue<bool>(0xb718394fu, AutoClearDimensionCheckpoint);
 	}
 
-	[DDLRegistration(0x97d92243u, "Initial Dimension Checkpoint", "Name of the dimension checkpoint to set automatically when the hero enters the pocket dimension through this portal. Leave blank to not automatically set the dimension checkpoint when entering.")]
+	[DDLRegistration(0x172e70e8u, "Initial Dimension Checkpoint", "Name of the dimension checkpoint to set automatically when the hero enters the pocket dimension through this portal. Leave blank to not automatically set the dimension checkpoint when entering.")]
 	public string? InitialDimensionCheckpoint { get; set; } = default;
 
-	[DDLRegistration(0x97d92243u, "Clear Dimension Checkpoint on Exit?", "When the hero leaves the pocket dimension through this portal, should we automatically clear the dimension checkpoint?")]
+	[DDLRegistration(0xb718394fu, "Clear Dimension Checkpoint on Exit?", "When the hero leaves the pocket dimension through this portal, should we automatically clear the dimension checkpoint?")]
 	public bool AutoClearDimensionCheckpoint { get; set; } = true;
 
 	public static DimensionPortalTargetPrius Create(DDLObject ddl) => new(ddl);

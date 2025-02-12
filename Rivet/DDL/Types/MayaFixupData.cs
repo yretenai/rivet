@@ -23,22 +23,22 @@ public class MayaFixupData : DDLObjectType, IDDLObjectType<MayaFixupData> {
 		ScriptCmd = ddl.GetString(0x526d184c) ?? ScriptCmd;
 	}
 
-	[DDLRegistration(0x427c9dc5u)]
+	[DDLRegistration(0xc6d13976u)]
 	public xed092e3a Op { get; set; } = xed092e3a.ColladaSourcePath;
 
-	[DDLRegistration(0x427c9dc5u)]
+	[DDLRegistration(0x67402938u)]
 	public string? ReplaceElementChars { get; set; } = default;
 
-	[DDLRegistration(0x427c9dc5u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x427c9dc5u)]
+	[DDLRegistration(0x7227df2bu)]
 	public RivetAssetId OldMayaPath { get; set; } = default;
 
-	[DDLRegistration(0x427c9dc5u)]
+	[DDLRegistration(0xdaf15595u)]
 	public RivetAssetId NewMayaPath { get; set; } = default;
 
-	[DDLRegistration(0x427c9dc5u, description: "command line used to run this data")]
+	[DDLRegistration(0x526d184cu, description: "command line used to run this data")]
 	public string? ScriptCmd { get; set; } = default;
 
 	public static MayaFixupData Create(DDLObject ddl) => new(ddl);

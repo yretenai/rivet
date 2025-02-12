@@ -19,10 +19,10 @@ public class HoudiniMenuConfig : ConfigBase, IDDLObjectType<HoudiniMenuConfig> {
 		Items = ddl.GetObjects<HoudiniMenuItem>(0xf84d258cu);
 	}
 
-	[DDLRegistration(0x05c50b49u)]
+	[DDLRegistration(0xa0241204u)]
 	public string? HythonExe { get; set; } = default;
 
-	[DDLRegistration(0x05c50b49u, description: "Per-project custom Houdini commands")]
+	[DDLRegistration(0xf84d258cu, description: "Per-project custom Houdini commands")]
 	public List<HoudiniMenuItem?> Items { get; set; } = [];
 
 	public new static HoudiniMenuConfig Create(DDLObject ddl) => new(ddl);

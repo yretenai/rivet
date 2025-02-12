@@ -18,7 +18,7 @@ public class CollectibleTypeEntry : DDLObjectType, IDDLObjectType<CollectibleTyp
 		TypeInfo = ddl.GetObject<CollectibleTypeInfoBase>(0xdec6dc02u);
 	}
 
-	[DDLRegistration(0x5a9bc95du)]
+	[DDLRegistration(0xdec6dc02u)]
 	public CollectibleTypeInfoBase? TypeInfo { get; set; } = default;
 
 	public static CollectibleTypeEntry Create(DDLObject ddl) => new(ddl);

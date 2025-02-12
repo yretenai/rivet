@@ -22,19 +22,19 @@ public class AnimatedLightPrius : DDLObjectType, IDDLObjectType<AnimatedLightPri
 		ColorB = ddl.GetValue<float>(0xad188dc2u, ColorB);
 	}
 
-	[DDLRegistration(0x3f834d70u)]
+	[DDLRegistration(0x2cb9fbf0u)]
 	public uint AttachJointHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3f834d70u)]
+	[DDLRegistration(0xb46e1778u)]
 	public uint DriverJointHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3f834d70u)]
+	[DDLRegistration(0xb0af9da6u)]
 	public float ColorR { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3f834d70u)]
+	[DDLRegistration(0xdd72794du)]
 	public float ColorG { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3f834d70u)]
+	[DDLRegistration(0xad188dc2u)]
 	public float ColorB { get; set; } = 0.00f;
 
 	public static AnimatedLightPrius Create(DDLObject ddl) => new(ddl);

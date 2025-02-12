@@ -21,16 +21,16 @@ public class DamageModifierByTypeIfHasStatusEffectPrius : DamageModifierIncoming
 		StatusEffects = ddl.GetObjects<DamageModStatusEffectData>(0xfcb6a86du);
 	}
 
-	[DDLRegistration(0x56d819f9u)]
+	[DDLRegistration(0x7fb913f8u)]
 	public List<DamageTypesGame> ValidDamageTypes { get; set; } = [];
 
-	[DDLRegistration(0x56d819f9u, description: "Multiply the status amount being done by this.")]
+	[DDLRegistration(0x6fc67017u, description: "Multiply the status amount being done by this.")]
 	public float StatusMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x56d819f9u, description: "Multiply the damage amount being done by this.")]
+	[DDLRegistration(0x26406e37u, description: "Multiply the damage amount being done by this.")]
 	public float DamageMultiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x56d819f9u)]
+	[DDLRegistration(0xfcb6a86du)]
 	public List<DamageModStatusEffectData?> StatusEffects { get; set; } = [];
 
 	public new static DamageModifierByTypeIfHasStatusEffectPrius Create(DDLObject ddl) => new(ddl);

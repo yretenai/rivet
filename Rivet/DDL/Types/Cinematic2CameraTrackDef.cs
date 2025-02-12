@@ -34,55 +34,55 @@ public class Cinematic2CameraTrackDef : DDLObjectType, IDDLObjectType<Cinematic2
 		OrphanTracks = ddl.GetDictionary<RivetAssetId, Cinematic2CameraOrphanTrackDef>(0x00ea59a6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraOrphanTrackDef>(mapId));
 	}
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xf94d0c62u, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0xf94d0c62u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0xf94d0c62u, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0x96f1f1f8u)]
 	public DDLTransform? StartTransform { get; set; } = default;
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0x616c13d7u)]
 	public Cinematic2DefaultCameraValuesDef? DefaultValues { get; set; } = default;
 
-	[DDLRegistration(0xf94d0c62u, description: "If true, cinematic will use the DOF settings from the game camera. DOF tracks act as an override.")]
+	[DDLRegistration(0x6ebf4684u, description: "If true, cinematic will use the DOF settings from the game camera. DOF tracks act as an override.")]
 	public bool InheritGameDof { get; set; } = false;
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0x2a95c808u)]
 	public Dictionary<RivetAssetId, Cinematic2BehaviorPlayAnimClipActionDef?> PlayAnimActions { get; set; } = [];
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0x16d51e79u)]
 	public Dictionary<RivetAssetId, Cinematic2CameraDofTrackDef?> DofTracks { get; set; } = [];
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0xc24de428u)]
 	public Dictionary<RivetAssetId, Cinematic2CameraFovCurveDef?> Fov { get; set; } = [];
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0xfc7ce243u)]
 	public Dictionary<RivetAssetId, Cinematic2CameraFocalLengthCurveDef?> FocalLength { get; set; } = [];
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0x9d08821au)]
 	public Dictionary<RivetAssetId, Cinematic2CameraPosRotTrackDef?> PosRotTracks { get; set; } = [];
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0x6d55f883u)]
 	public Dictionary<RivetAssetId, Cinematic2CameraShakeTrackDef?> Shake { get; set; } = [];
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0xbc4d8836u)]
 	public Dictionary<RivetAssetId, Cinematic2CameraVfxTrackDef?> VfxTracks { get; set; } = [];
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0x653e2373u)]
 	public Dictionary<RivetAssetId, Cinematic2CameraEventTrackDef?> EventTracks { get; set; } = [];
 
-	[DDLRegistration(0xf94d0c62u)]
+	[DDLRegistration(0x00ea59a6u)]
 	public Dictionary<RivetAssetId, Cinematic2CameraOrphanTrackDef?> OrphanTracks { get; set; } = [];
 
 	public static Cinematic2CameraTrackDef Create(DDLObject ddl) => new(ddl);

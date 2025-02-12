@@ -18,7 +18,7 @@ public class StructuredLoggingPhysicsBodyDumpActionPrius : StructuredLoggingActi
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x4450ca14u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
 	public new static StructuredLoggingPhysicsBodyDumpActionPrius Create(DDLObject ddl) => new(ddl);

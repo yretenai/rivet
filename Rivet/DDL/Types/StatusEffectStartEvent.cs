@@ -23,22 +23,22 @@ public class StatusEffectStartEvent : EventBase, IDDLObjectType<StatusEffectStar
 		ApplyCount = ddl.GetValue<uint>(0xb86beda7u, ApplyCount);
 	}
 
-	[DDLRegistration(0xdc2b5475u)]
+	[DDLRegistration(0xb266fef4u)]
 	public string? EffectName { get; set; } = default;
 
-	[DDLRegistration(0xdc2b5475u)]
+	[DDLRegistration(0xe8d409aau)]
 	public uint SourceActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdc2b5475u)]
+	[DDLRegistration(0x290bb426u)]
 	public uint SourceDamageHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdc2b5475u)]
+	[DDLRegistration(0xfc928207u)]
 	public ushort SourceWeaponId { get; set; } = 0x0000;
 
-	[DDLRegistration(0xdc2b5475u)]
+	[DDLRegistration(0xa68ca01fu)]
 	public uint TargetActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xdc2b5475u)]
+	[DDLRegistration(0xb86beda7u)]
 	public uint ApplyCount { get; set; } = 0x00000000;
 
 	public new static StatusEffectStartEvent Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class LevelListSelectionElement : DDLObjectType, IDDLObjectType<LevelList
 		ModelItemId = ddl.GetValue<RivetAssetId>(0x8bf32ff7u, ModelItemId);
 	}
 
-	[DDLRegistration(0x93fa8992u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public x0f02da14 Type { get; set; } = x0f02da14.Asset;
 
-	[DDLRegistration(0x93fa8992u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0x93fa8992u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x93fa8992u)]
+	[DDLRegistration(0xae6e0e80u)]
 	public string? ItemName { get; set; } = default;
 
-	[DDLRegistration(0x93fa8992u)]
+	[DDLRegistration(0x8bf32ff7u)]
 	public RivetAssetId ModelItemId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static LevelListSelectionElement Create(DDLObject ddl) => new(ddl);

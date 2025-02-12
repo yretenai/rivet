@@ -23,22 +23,22 @@ public class AccessibilitySystemConfigGame : AccessibilitySystemConfig, IDDLObje
 		ArcColors = ddl.GetObjects<AccessibilityColorData>(0x0f17b9dau);
 	}
 
-	[DDLRegistration(0x4306d034u, description: "Material to apply to pinged objectives when the high contrast background is enabled.")]
+	[DDLRegistration(0xb0b11dfau, description: "Material to apply to pinged objectives when the high contrast background is enabled.")]
 	public RivetAssetId HighContrastPingMaterial { get; set; } = default;
 
-	[DDLRegistration(0x4306d034u, description: "When Chase assist is on, vehicle tetherspeeds are multiplied by this value.")]
+	[DDLRegistration(0x36ea2060u, description: "When Chase assist is on, vehicle tetherspeeds are multiplied by this value.")]
 	public float ChaseAssistVehicleSpeedMult { get; set; } = 0.75f;
 
-	[DDLRegistration(0x4306d034u, description: "When Chase assist is on, vehicle will stop if this far away from hero. Must be less than the fail distance in script.")]
+	[DDLRegistration(0x155d3c26u, description: "When Chase assist is on, vehicle will stop if this far away from hero. Must be less than the fail distance in script.")]
 	public float ChaseAssistStopDistance { get; set; } = 140.00f;
 
-	[DDLRegistration(0x4306d034u, description: "If provided, applies the accesibility highlight component to the hero with the listed values.")]
+	[DDLRegistration(0x6fe830ddu, description: "If provided, applies the accesibility highlight component to the hero with the listed values.")]
 	public RivetAssetId DefaultHeroAccesibilityHighlightConfig { get; set; } = default;
 
-	[DDLRegistration(0x4306d034u, description: "Acceccibility options list. Containing ID-to-loc mappings for shortcut options.")]
+	[DDLRegistration(0xd328654fu, description: "Acceccibility options list. Containing ID-to-loc mappings for shortcut options.")]
 	public List<AccessibilityOption?> AccessibilityOptions { get; set; } = [];
 
-	[DDLRegistration(0x4306d034u, description: "List of colors for throwable/weapon arc settings.")]
+	[DDLRegistration(0x0f17b9dau, description: "List of colors for throwable/weapon arc settings.")]
 	public List<AccessibilityColorData?> ArcColors { get; set; } = [];
 
 	public new static AccessibilitySystemConfigGame Create(DDLObject ddl) => new(ddl);

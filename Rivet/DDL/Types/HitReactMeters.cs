@@ -18,7 +18,7 @@ public class HitReactMeters : DDLObjectType, IDDLObjectType<HitReactMeters> {
 		Meters = ddl.GetObjects<StaggerMeter>(0x14460e8fu);
 	}
 
-	[DDLRegistration(0x145afa6au)]
+	[DDLRegistration(0x14460e8fu)]
 	public List<StaggerMeter?> Meters { get; set; } = [];
 
 	public static HitReactMeters Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class EndLevelLobbyActionPrius : DDLObjectType, IDDLObjectType<EndLevelLo
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x50ccaeb0u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Game;
 
 	public static EndLevelLobbyActionPrius Create(DDLObject ddl) => new(ddl);

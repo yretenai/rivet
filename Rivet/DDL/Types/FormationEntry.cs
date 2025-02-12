@@ -21,16 +21,16 @@ public class FormationEntry : DDLObjectType, IDDLObjectType<FormationEntry> {
 		ExitCurve = ddl.GetValue<RivetAssetId>(0xd3520623u, ExitCurve);
 	}
 
-	[DDLRegistration(0xb242d68bu)]
+	[DDLRegistration(0xcfce9fc0u)]
 	public RivetAssetId StartPoint { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb242d68bu)]
+	[DDLRegistration(0xb4692482u)]
 	public RivetAssetId EntryCurve { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb242d68bu)]
+	[DDLRegistration(0x51863c0du)]
 	public RivetAssetId AttackPoint { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xb242d68bu)]
+	[DDLRegistration(0xd3520623u)]
 	public RivetAssetId ExitCurve { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static FormationEntry Create(DDLObject ddl) => new(ddl);

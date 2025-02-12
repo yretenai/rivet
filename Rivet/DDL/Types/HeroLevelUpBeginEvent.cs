@@ -20,13 +20,13 @@ public class HeroLevelUpBeginEvent : EventBase, IDDLObjectType<HeroLevelUpBeginE
 		PlayerPosInfo = ddl.GetObject<DevstatsPlayerPositionInfo>(0xeadcc3e4u);
 	}
 
-	[DDLRegistration(0xa89b4fa7u, description: "The hero's new level.")]
+	[DDLRegistration(0x83b900d2u, description: "The hero's new level.")]
 	public uint Level { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xa89b4fa7u, "Primary Segment", "What mission/objective the hero was on when they leveled up.")]
+	[DDLRegistration(0x9e8725dbu, "Primary Segment", "What mission/objective the hero was on when they leveled up.")]
 	public DevstatsPrimarySegmentInfo? PrimarySegmentInfo { get; set; } = default;
 
-	[DDLRegistration(0xa89b4fa7u, "Player Pos", "Where the player was when they leveled up.")]
+	[DDLRegistration(0xeadcc3e4u, "Player Pos", "Where the player was when they leveled up.")]
 	public DevstatsPlayerPositionInfo? PlayerPosInfo { get; set; } = default;
 
 	public new static HeroLevelUpBeginEvent Create(DDLObject ddl) => new(ddl);

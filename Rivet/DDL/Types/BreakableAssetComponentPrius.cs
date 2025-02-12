@@ -18,7 +18,7 @@ public class BreakableAssetComponentPrius : DDLObjectType, IDDLObjectType<Breaka
 		AssetPath = ddl.GetValue<RivetAssetId>(0x0efa614bu, AssetPath);
 	}
 
-	[DDLRegistration(0x9bbbc591u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
 	public static BreakableAssetComponentPrius Create(DDLObject ddl) => new(ddl);

@@ -24,25 +24,25 @@ public class LobbedShotPrius : BasicBulletPrius, IDDLObjectType<LobbedShotPrius>
 		DestroyOnHitEnemy = ddl.GetValue<bool>(0x51573572u, DestroyOnHitEnemy);
 	}
 
-	[DDLRegistration(0xda084860u)]
+	[DDLRegistration(0x14271b94u)]
 	public bool DealDamageOnFirstImpact { get; set; } = true;
 
-	[DDLRegistration(0xda084860u)]
+	[DDLRegistration(0x1d72811eu)]
 	public bool DealDamageOnAllImpacts { get; set; } = false;
 
-	[DDLRegistration(0xda084860u)]
+	[DDLRegistration(0x2fdd4dd1u)]
 	public bool SendHitEventsOnFirstImpact { get; set; } = true;
 
-	[DDLRegistration(0xda084860u)]
+	[DDLRegistration(0x89040c3eu)]
 	public bool SendHitEventsOnAllImpacts { get; set; } = true;
 
-	[DDLRegistration(0xda084860u)]
+	[DDLRegistration(0x219f3f53u)]
 	public bool DestroyOnHit { get; set; } = false;
 
-	[DDLRegistration(0xda084860u)]
+	[DDLRegistration(0xdf5ad352u)]
 	public bool DestroyOnLanded { get; set; } = false;
 
-	[DDLRegistration(0xda084860u)]
+	[DDLRegistration(0x51573572u)]
 	public bool DestroyOnHitEnemy { get; set; } = false;
 
 	public new static LobbedShotPrius Create(DDLObject ddl) => new(ddl);

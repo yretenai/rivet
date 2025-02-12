@@ -24,25 +24,25 @@ public class MaterialConstantJointTransformPrius : DDLObjectType, IDDLObjectType
 		MaterialMappingName = ddl.GetString(0x981e6927) ?? MaterialMappingName;
 	}
 
-	[DDLRegistration(0x3271cc31u, description: "The name of the joint/locator for which the transform is desired.")]
+	[DDLRegistration(0x5ba51db8u, description: "The name of the joint/locator for which the transform is desired.")]
 	public string? JointName { get; set; } = default;
 
-	[DDLRegistration(0x3271cc31u, description: "True: transform is in model space. False: transform is in world space.")]
+	[DDLRegistration(0xd197db9au, description: "True: transform is in model space. False: transform is in world space.")]
 	public bool UseModelSpace { get; set; } = false;
 
-	[DDLRegistration(0x3271cc31u, description: "The name of the material constant to set for the X axis.")]
+	[DDLRegistration(0x08e976e2u, description: "The name of the material constant to set for the X axis.")]
 	public string? XAxisConstantName { get; set; } = default;
 
-	[DDLRegistration(0x3271cc31u, description: "The name of the material constant to set for the Y axis.")]
+	[DDLRegistration(0x8f4fbda1u, description: "The name of the material constant to set for the Y axis.")]
 	public string? YAxisConstantName { get; set; } = default;
 
-	[DDLRegistration(0x3271cc31u, description: "The name of the material constant to set for the Z axis.")]
+	[DDLRegistration(0xdcd5e625u, description: "The name of the material constant to set for the Z axis.")]
 	public string? ZAxisConstantName { get; set; } = default;
 
-	[DDLRegistration(0x3271cc31u, description: "The name of the material constant to set for the position.")]
+	[DDLRegistration(0x899772afu, description: "The name of the material constant to set for the position.")]
 	public string? PositionConstantName { get; set; } = default;
 
-	[DDLRegistration(0x3271cc31u, description: "The Maya material mapping to apply this setting to.")]
+	[DDLRegistration(0x981e6927u, description: "The Maya material mapping to apply this setting to.")]
 	public string? MaterialMappingName { get; set; } = default;
 
 	public static MaterialConstantJointTransformPrius Create(DDLObject ddl) => new(ddl);

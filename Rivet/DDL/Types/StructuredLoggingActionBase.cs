@@ -18,7 +18,7 @@ public class StructuredLoggingActionBase : DDLObjectType, IDDLObjectType<Structu
 		VariableName = ddl.GetString(0x11d33588) ?? VariableName;
 	}
 
-	[DDLRegistration(0xcf7ea8afu, "Variable Name", "???")]
+	[DDLRegistration(0x11d33588u, "Variable Name", "???")]
 	public string? VariableName { get; set; } = default;
 
 	public static StructuredLoggingActionBase Create(DDLObject ddl) => new(ddl);

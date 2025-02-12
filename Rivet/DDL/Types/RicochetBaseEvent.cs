@@ -22,19 +22,19 @@ public class RicochetBaseEvent : EventBase, IDDLObjectType<RicochetBaseEvent> {
 		Blue = ddl.GetValue<float>(0xaea60a04u, Blue);
 	}
 
-	[DDLRegistration(0x4be7a368u, description: "The number of consecutive hits that the current ricochet projectile has made (starts at zero!)")]
+	[DDLRegistration(0x908a038du, description: "The number of consecutive hits that the current ricochet projectile has made (starts at zero!)")]
 	public float HitCount { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4be7a368u, description: "The max number of consecutive hits the ricochet projectile can deliver.")]
+	[DDLRegistration(0xfe9a3649u, description: "The max number of consecutive hits the ricochet projectile can deliver.")]
 	public float MaxHitCount { get; set; } = 10.00f;
 
-	[DDLRegistration(0x4be7a368u)]
+	[DDLRegistration(0xd0347646u)]
 	public float Red { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4be7a368u)]
+	[DDLRegistration(0xc9c922e0u)]
 	public float Green { get; set; } = 0.00f;
 
-	[DDLRegistration(0x4be7a368u)]
+	[DDLRegistration(0xaea60a04u)]
 	public float Blue { get; set; } = 0.00f;
 
 	public new static RicochetBaseEvent Create(DDLObject ddl) => new(ddl);

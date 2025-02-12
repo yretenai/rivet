@@ -43,82 +43,82 @@ public class HeroJumpConfigCollection : DDLObjectType, IDDLObjectType<HeroJumpCo
 		BounceMomentumJumpConfig = ddl.GetObject<HeroJumpConfig>(0xb79ffab9u);
 	}
 
-	[DDLRegistration(0x1f125913u, "Single Jump")]
+	[DDLRegistration(0xa18207f5u, "Single Jump")]
 	public HeroJumpConfig? SingleJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Aim Mode Single Jump")]
+	[DDLRegistration(0x2fded1b0u, "Aim Mode Single Jump")]
 	public HeroJumpConfig? AimModeSingleJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Double Jump")]
+	[DDLRegistration(0xac03a17eu, "Double Jump")]
 	public HeroDoubleJumpConfig? DoubleJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Aim Mode Double Jump")]
+	[DDLRegistration(0x225f773bu, "Aim Mode Double Jump")]
 	public HeroDoubleJumpConfig? AimModeDoubleJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Flip Jump")]
+	[DDLRegistration(0xdea2d468u, "Flip Jump")]
 	public HeroJumpConfig? FlipJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Fall")]
+	[DDLRegistration(0xa5c1950au, "Fall")]
 	public HeroJumpConfig? FallJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Glide")]
+	[DDLRegistration(0xde50c577u, "Glide")]
 	public HeroJumpConfig? GlideJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Melee Smash")]
+	[DDLRegistration(0xe3d6df17u, "Melee Smash")]
 	public HeroJumpConfig? MeleeSmashJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Ledge Jump")]
+	[DDLRegistration(0x9e402e47u, "Ledge Jump")]
 	public HeroJumpConfig? LedgeJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Grind Jump")]
+	[DDLRegistration(0x58c09b3au, "Grind Jump")]
 	public HeroJumpConfig? GrindJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Grind Double Jump")]
+	[DDLRegistration(0x8aac60bdu, "Grind Double Jump")]
 	public HeroDoubleJumpConfig? GrindDoubleJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Grind Jump Transfer")]
+	[DDLRegistration(0x7ea538a7u, "Grind Jump Transfer")]
 	public HeroJumpConfig? GrindJumpTransferConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Wall Jump")]
+	[DDLRegistration(0x5e7c4810u, "Wall Jump")]
 	public HeroJumpConfig? WallJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Wall Run Jump")]
+	[DDLRegistration(0xd377beedu, "Wall Run Jump")]
 	public HeroJumpConfig? WallRunJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Lava Jump")]
+	[DDLRegistration(0x5a4d070bu, "Lava Jump")]
 	public HeroJumpConfig? LavaJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Quicksand Jump")]
+	[DDLRegistration(0xc310dbf0u, "Quicksand Jump")]
 	public HeroJumpConfig? QuicksandJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Spring Jump")]
+	[DDLRegistration(0x9164097au, "Spring Jump")]
 	public HeroJumpConfig? SpringJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Swim Jump")]
+	[DDLRegistration(0x0a1f16dcu, "Swim Jump")]
 	public HeroJumpConfig? SwimJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Vault Jump")]
+	[DDLRegistration(0xd3fa835fu, "Vault Jump")]
 	public HeroJumpConfig? VaultJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Transform Jump")]
+	[DDLRegistration(0x12adc268u, "Transform Jump")]
 	public HeroJumpConfig? TransformJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Hoverboot Jump")]
+	[DDLRegistration(0xb66df6d2u, "Hoverboot Jump")]
 	public HeroJumpConfig? HoverbootJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Hoverboot Double Jump")]
+	[DDLRegistration(0x0d6476dcu, "Hoverboot Double Jump")]
 	public HeroDoubleJumpConfig? HoverbootDoubleJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Hoverboot Fall")]
+	[DDLRegistration(0x87300935u, "Hoverboot Fall")]
 	public HeroJumpConfig? HoverbootFallJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Hoverboot Boost Jump")]
+	[DDLRegistration(0x90ef4223u, "Hoverboot Boost Jump")]
 	public HeroJumpConfig? HoverbootBoostJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Swingshot Jump")]
+	[DDLRegistration(0x4c09df73u, "Swingshot Jump")]
 	public HeroJumpConfig? SwingshotJumpConfig { get; set; } = default;
 
-	[DDLRegistration(0x1f125913u, "Bounce Momentum")]
+	[DDLRegistration(0xb79ffab9u, "Bounce Momentum")]
 	public HeroJumpConfig? BounceMomentumJumpConfig { get; set; } = default;
 
 	public static HeroJumpConfigCollection Create(DDLObject ddl) => new(ddl);

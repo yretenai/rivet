@@ -25,28 +25,28 @@ public class TargetSceneNode : DDLObjectType, IDDLObjectType<TargetSceneNode> {
 		PreviousSelection = ddl.GetValue<RivetAssetId>(0x6c58f6d6u, PreviousSelection);
 	}
 
-	[DDLRegistration(0xba99e6f3u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xba99e6f3u)]
+	[DDLRegistration(0x0efa614bu)]
 	public RivetAssetId AssetPath { get; set; } = default;
 
-	[DDLRegistration(0xba99e6f3u)]
+	[DDLRegistration(0x20da01cau)]
 	public bool AdjustCamera { get; set; } = false;
 
-	[DDLRegistration(0xba99e6f3u)]
+	[DDLRegistration(0x7991d18au)]
 	public DDLVector3? OldCameraPosition { get; set; } = default;
 
-	[DDLRegistration(0xba99e6f3u)]
+	[DDLRegistration(0xe0c8fd06u)]
 	public DDLVector3? OldCameraForward { get; set; } = default;
 
-	[DDLRegistration(0xba99e6f3u)]
+	[DDLRegistration(0x7653e121u)]
 	public DDLVector3? NewCameraPosition { get; set; } = default;
 
-	[DDLRegistration(0xba99e6f3u)]
+	[DDLRegistration(0x2201624fu)]
 	public DDLVector3? NewCameraForward { get; set; } = default;
 
-	[DDLRegistration(0xba99e6f3u)]
+	[DDLRegistration(0x6c58f6d6u)]
 	public RivetAssetId PreviousSelection { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static TargetSceneNode Create(DDLObject ddl) => new(ddl);

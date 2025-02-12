@@ -29,40 +29,40 @@ public class ShootProjectileData : DDLObjectType, IDDLObjectType<ShootProjectile
 		CleanupAimModsOnBurstComplete = ddl.GetValue<bool>(0x7a7c2ae3u, CleanupAimModsOnBurstComplete);
 	}
 
-	[DDLRegistration(0x9bf02991u)]
+	[DDLRegistration(0x2a197307u)]
 	public x768b595c ShootFlags { get; set; } = (x768b595c) 0x00000009;
 
-	[DDLRegistration(0x9bf02991u)]
+	[DDLRegistration(0xae4278c9u)]
 	public string? FireIntroAnim { get; set; } = default;
 
-	[DDLRegistration(0x9bf02991u)]
+	[DDLRegistration(0x666c829du)]
 	public string? FireAnim { get; set; } = default;
 
-	[DDLRegistration(0x9bf02991u)]
+	[DDLRegistration(0xfc892c3eu)]
 	public string? FireOutroAnim { get; set; } = default;
 
-	[DDLRegistration(0x9bf02991u)]
+	[DDLRegistration(0x9dc9f347u)]
 	public float ChargeTimeMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9bf02991u)]
+	[DDLRegistration(0xa1c4cc1eu)]
 	public float ChargeTimeMax { get; set; } = 0.00f;
 
-	[DDLRegistration(0x9bf02991u, description: "The value from the shot index in ShotSpawnerHandlerPrius to use for this combo move.")]
+	[DDLRegistration(0xd9cf9f4au, description: "The value from the shot index in ShotSpawnerHandlerPrius to use for this combo move.")]
 	public string? ShotSpawnerDescription { get; set; } = default;
 
-	[DDLRegistration(0x9bf02991u)]
+	[DDLRegistration(0xc409037fu)]
 	public int ShotIndex { get; set; } = 0;
 
-	[DDLRegistration(0x9bf02991u, "Use Override Burst", "Allow for a custom burst sequence to be used for this particular attack.")]
+	[DDLRegistration(0xd98a5e2bu, "Use Override Burst", "Allow for a custom burst sequence to be used for this particular attack.")]
 	public bool UseOverrideBurst { get; set; } = false;
 
-	[DDLRegistration(0x9bf02991u, "Override Burst", "Allow for a custom burst sequence to be used for this particular attack.")]
+	[DDLRegistration(0x4d2a3ec2u, "Override Burst", "Allow for a custom burst sequence to be used for this particular attack.")]
 	public BurstSequence? OverrideBurst { get; set; } = default;
 
-	[DDLRegistration(0x9bf02991u, "Aim Mods")]
+	[DDLRegistration(0x1d7694a1u, "Aim Mods")]
 	public List<AimModWrapper?> AimMods { get; set; } = [];
 
-	[DDLRegistration(0x9bf02991u, description: "If true, the firing component will clear out all added aim mods from this override on burst complete instead of waiting until end of wait duration")]
+	[DDLRegistration(0x7a7c2ae3u, description: "If true, the firing component will clear out all added aim mods from this override on burst complete instead of waiting until end of wait duration")]
 	public bool CleanupAimModsOnBurstComplete { get; set; } = false;
 
 	public static ShootProjectileData Create(DDLObject ddl) => new(ddl);

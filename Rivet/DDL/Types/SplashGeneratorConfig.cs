@@ -20,13 +20,13 @@ public class SplashGeneratorConfig : DDLObjectType, IDDLObjectType<SplashGenerat
 		Splash = ddl.GetEnum<x56b85d4c>(0x84405a97u, x56b85d4cValues.Lookup);
 	}
 
-	[DDLRegistration(0x82080250u)]
+	[DDLRegistration(0xd78f4ef3u)]
 	public string? LocatorHash { get; set; } = default;
 
-	[DDLRegistration(0x82080250u)]
+	[DDLRegistration(0x0a1247fbu)]
 	public float YOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x82080250u)]
+	[DDLRegistration(0x84405a97u)]
 	public x56b85d4c Splash { get; set; } = x56b85d4c.SplashSmall;
 
 	public static SplashGeneratorConfig Create(DDLObject ddl) => new(ddl);

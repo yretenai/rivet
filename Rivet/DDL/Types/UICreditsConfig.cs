@@ -21,16 +21,16 @@ public class UICreditsConfig : ConfigBase, IDDLObjectType<UICreditsConfig> {
 		CreditsSongData = ddl.GetObject<UISongData>(0x3ad94972u);
 	}
 
-	[DDLRegistration(0x580b2a48u)]
+	[DDLRegistration(0x5aaad564u)]
 	public int CreditsStartIndex { get; set; } = 3;
 
-	[DDLRegistration(0x580b2a48u, description: "Credits line to start at when playing credits that skip the Insomniac devs (that are shown in video).")]
+	[DDLRegistration(0x5b786e02u, description: "Credits line to start at when playing credits that skip the Insomniac devs (that are shown in video).")]
 	public int PostInsomnaicCreditsStartIndex { get; set; } = 403;
 
-	[DDLRegistration(0x580b2a48u)]
+	[DDLRegistration(0xdcef1100u)]
 	public int CreditsEnableSkipIndex { get; set; } = 0;
 
-	[DDLRegistration(0x580b2a48u)]
+	[DDLRegistration(0x3ad94972u)]
 	public UISongData? CreditsSongData { get; set; } = default;
 
 	public new static UICreditsConfig Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class HexapodWeaponTriggerData : DDLObjectType, IDDLObjectType<HexapodWea
 		TriggerAnalogValueBuffer = ddl.GetValue<float>(0x822ab42fu, TriggerAnalogValueBuffer);
 	}
 
-	[DDLRegistration(0x1982236bu)]
+	[DDLRegistration(0xa47ca739u)]
 	public float IdealTriggerAnalogValue { get; set; } = 0.50f;
 
-	[DDLRegistration(0x1982236bu)]
+	[DDLRegistration(0x822ab42fu)]
 	public float TriggerAnalogValueBuffer { get; set; } = 0.25f;
 
 	public static HexapodWeaponTriggerData Create(DDLObject ddl) => new(ddl);

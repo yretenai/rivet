@@ -20,13 +20,13 @@ public class FlyerMountCollisionScriptActionPrius : DDLObjectType, IDDLObjectTyp
 		DoDamage = ddl.GetValue<bool>(0x11da00adu, DoDamage);
 	}
 
-	[DDLRegistration(0x182e8cc6u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Interact;
 
-	[DDLRegistration(0x182e8cc6u)]
+	[DDLRegistration(0x4fba095bu)]
 	public bool DeflectTrajectory { get; set; } = false;
 
-	[DDLRegistration(0x182e8cc6u)]
+	[DDLRegistration(0x11da00adu)]
 	public bool DoDamage { get; set; } = false;
 
 	public static FlyerMountCollisionScriptActionPrius Create(DDLObject ddl) => new(ddl);

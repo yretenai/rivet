@@ -20,13 +20,13 @@ public class AcidSprinklerSpawnData : AttachableShotSpawnData, IDDLObjectType<Ac
 		DamagePerSecond = ddl.GetValue<float>(0x287ed02au, DamagePerSecond);
 	}
 
-	[DDLRegistration(0x6bfac361u)]
+	[DDLRegistration(0xc7e68df8u)]
 	public float Lifetime { get; set; } = 20.00f;
 
-	[DDLRegistration(0x6bfac361u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 4.00f;
 
-	[DDLRegistration(0x6bfac361u)]
+	[DDLRegistration(0x287ed02au)]
 	public float DamagePerSecond { get; set; } = 20.00f;
 
 	public new static AcidSprinklerSpawnData Create(DDLObject ddl) => new(ddl);

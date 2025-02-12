@@ -18,7 +18,7 @@ public class RefireSustainStartEvent : EventBase, IDDLObjectType<RefireSustainSt
 		LocalSource = ddl.GetValue<byte>(0x40245b06u, LocalSource);
 	}
 
-	[DDLRegistration(0xe8607f64u)]
+	[DDLRegistration(0x40245b06u)]
 	public byte LocalSource { get; set; } = 0x00;
 
 	public new static RefireSustainStartEvent Create(DDLObject ddl) => new(ddl);

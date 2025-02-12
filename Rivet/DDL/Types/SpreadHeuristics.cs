@@ -19,10 +19,10 @@ public class SpreadHeuristics : DDLObjectType, IDDLObjectType<SpreadHeuristics> 
 		SpreadTargetMul = ddl.GetValue<float>(0x8c01d0c5u, SpreadTargetMul);
 	}
 
-	[DDLRegistration(0xa7b670e8u, description: "Stickiness of our current target.")]
+	[DDLRegistration(0xae3a0bf5u, description: "Stickiness of our current target.")]
 	public float CurrentTargetStickiness { get; set; } = 1.25f;
 
-	[DDLRegistration(0xa7b670e8u, description: "Effects how much we want to attack targets with a small number of targters.")]
+	[DDLRegistration(0x8c01d0c5u, description: "Effects how much we want to attack targets with a small number of targters.")]
 	public float SpreadTargetMul { get; set; } = 0.60f;
 
 	public static SpreadHeuristics Create(DDLObject ddl) => new(ddl);

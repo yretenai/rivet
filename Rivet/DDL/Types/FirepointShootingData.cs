@@ -21,16 +21,16 @@ public class FirepointShootingData : DDLObjectType, IDDLObjectType<FirepointShoo
 		MaxRangedAttacksToReload = ddl.GetValue<int>(0x254e7e3eu, MaxRangedAttacksToReload);
 	}
 
-	[DDLRegistration(0x4e039efbu, description: "Minimum number of ranged attacks needed to reposition bot. Actual number is random between min and max.")]
+	[DDLRegistration(0x4ac59351u, description: "Minimum number of ranged attacks needed to reposition bot. Actual number is random between min and max.")]
 	public int MinRangedAttacksToReposition { get; set; } = 3;
 
-	[DDLRegistration(0x4e039efbu, description: "Maximum number of ranged attacks bot can do before it repositions. Actual number is random between min and max.")]
+	[DDLRegistration(0x1dcbc312u, description: "Maximum number of ranged attacks bot can do before it repositions. Actual number is random between min and max.")]
 	public int MaxRangedAttacksToReposition { get; set; } = 3;
 
-	[DDLRegistration(0x4e039efbu, description: "Minimum number of ranged attacks before having to reload")]
+	[DDLRegistration(0xfef12dd9u, description: "Minimum number of ranged attacks before having to reload")]
 	public int MinRangedAttacksToReload { get; set; } = 3;
 
-	[DDLRegistration(0x4e039efbu, description: "Maximum number of attacks before the bot will attempt to reload.")]
+	[DDLRegistration(0x254e7e3eu, description: "Maximum number of attacks before the bot will attempt to reload.")]
 	public int MaxRangedAttacksToReload { get; set; } = 3;
 
 	public static FirepointShootingData Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class SpawnShotEffectPrius : ScriptedShotEffectBasePrius, IDDLObjectType<
 		ShotSubEffects = ddl.GetObjects<ScriptedShotEffectListElement>(0x35230399u);
 	}
 
-	[DDLRegistration(0x882713ffu)]
+	[DDLRegistration(0xcd2673a5u)]
 	public x04891b54 SpawnFromActor { get; set; } = x04891b54.HitActor;
 
-	[DDLRegistration(0x882713ffu)]
+	[DDLRegistration(0x6eb58da3u)]
 	public SpawnShotTargetingMode? TargetMode { get; set; } = default;
 
-	[DDLRegistration(0x882713ffu)]
+	[DDLRegistration(0x14f21c90u)]
 	public WeaponAccuracyBasePrius? AccuracyPrius { get; set; } = default;
 
-	[DDLRegistration(0x882713ffu)]
+	[DDLRegistration(0x89263129u)]
 	public WeaponFiringBasePrius? FiringPrius { get; set; } = default;
 
-	[DDLRegistration(0x882713ffu)]
+	[DDLRegistration(0x35230399u)]
 	public List<ScriptedShotEffectListElement?> ShotSubEffects { get; set; } = [];
 
 	public new static SpawnShotEffectPrius Create(DDLObject ddl) => new(ddl);

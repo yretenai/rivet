@@ -19,10 +19,10 @@ public class FinaleBossLaserShotPrius : BotLaserShotPrius, IDDLObjectType<Finale
 		ImpactDamageHeight = ddl.GetValue<float>(0x9a2b8119u, ImpactDamageHeight);
 	}
 
-	[DDLRegistration(0x280207b5u)]
+	[DDLRegistration(0x541a0a4cu)]
 	public float ImpactDamageRadius { get; set; } = 5.00f;
 
-	[DDLRegistration(0x280207b5u)]
+	[DDLRegistration(0x9a2b8119u)]
 	public float ImpactDamageHeight { get; set; } = 0.50f;
 
 	public new static FinaleBossLaserShotPrius Create(DDLObject ddl) => new(ddl);

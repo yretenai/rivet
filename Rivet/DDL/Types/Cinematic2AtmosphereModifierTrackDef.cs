@@ -24,25 +24,25 @@ public class Cinematic2AtmosphereModifierTrackDef : DDLObjectType, IDDLObjectTyp
 		Param = ddl.GetEnum<xae014f93>(0xbda9b048u, xae014f93Values.Lookup);
 	}
 
-	[DDLRegistration(0x8c9212bbu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8c9212bbu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x8c9212bbu, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0x8c9212bbu, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0x8c9212bbu, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0x8c9212bbu)]
+	[DDLRegistration(0x4eca9176u)]
 	public BezierCurveDef? Curve { get; set; } = default;
 
-	[DDLRegistration(0x8c9212bbu)]
+	[DDLRegistration(0xbda9b048u)]
 	public xae014f93 Param { get; set; } = xae014f93.WeatherBloomIntensity;
 
 	public static Cinematic2AtmosphereModifierTrackDef Create(DDLObject ddl) => new(ddl);

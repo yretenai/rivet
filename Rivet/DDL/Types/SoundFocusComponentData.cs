@@ -21,16 +21,16 @@ public class SoundFocusComponentData : DDLObjectType, IDDLObjectType<SoundFocusC
 		AttackingPlayerFocusValue = ddl.GetValue<float>(0x5e15e442u, AttackingPlayerFocusValue);
 	}
 
-	[DDLRegistration(0xb8072cb8u, description: "What to set the RTPC value for SoundFocus when this actor is being targeted by player")]
+	[DDLRegistration(0x287a9996u, description: "What to set the RTPC value for SoundFocus when this actor is being targeted by player")]
 	public float PlayerFocusValue { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb8072cb8u, description: "What to set the RTPC value for SoundFocus by default")]
+	[DDLRegistration(0x113b5a0eu, description: "What to set the RTPC value for SoundFocus by default")]
 	public float DefaultFocusValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb8072cb8u, description: "What to set the RTPC value for SoundFocus when this actor attacking")]
+	[DDLRegistration(0x756a73f9u, description: "What to set the RTPC value for SoundFocus when this actor attacking")]
 	public float AttackingFocusValue { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb8072cb8u, description: "What to set the RTPC value for SoundFocus when this actor attacking the player")]
+	[DDLRegistration(0x5e15e442u, description: "What to set the RTPC value for SoundFocus when this actor attacking the player")]
 	public float AttackingPlayerFocusValue { get; set; } = 1.00f;
 
 	public static SoundFocusComponentData Create(DDLObject ddl) => new(ddl);

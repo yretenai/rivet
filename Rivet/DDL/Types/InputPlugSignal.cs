@@ -18,7 +18,7 @@ public class InputPlugSignal : InputPlugBaseDef, IDDLObjectType<InputPlugSignal>
 		Value = ddl.GetObject<SignalPlug>(0x042494f5u);
 	}
 
-	[DDLRegistration(0x8454d859u)]
+	[DDLRegistration(0x042494f5u)]
 	public SignalPlug? Value { get; set; } = default;
 
 	public new static InputPlugSignal Create(DDLObject ddl) => new(ddl);

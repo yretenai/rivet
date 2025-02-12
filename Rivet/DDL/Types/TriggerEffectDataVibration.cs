@@ -19,10 +19,10 @@ public class TriggerEffectDataVibration : TriggerEffectDataBase, IDDLObjectType<
 		Frequency = ddl.GetValue<uint>(0xa482271fu, Frequency);
 	}
 
-	[DDLRegistration(0xe7ca40e1u, description: "0 = Not pressed at all. 9 = Fully pressed.")]
+	[DDLRegistration(0xca8006c1u, description: "0 = Not pressed at all. 9 = Fully pressed.")]
 	public uint PositionBegin { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xe7ca40e1u, description: "Value in Hz. Range [0, 255].")]
+	[DDLRegistration(0xa482271fu, description: "Value in Hz. Range [0, 255].")]
 	public uint Frequency { get; set; } = 0x00000000;
 
 	public new static TriggerEffectDataVibration Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class CashPickup : DDLObjectType, IDDLObjectType<CashPickup> {
 		Chance = ddl.GetValue<float>(0x1a437543u, Chance);
 	}
 
-	[DDLRegistration(0x24021542u)]
+	[DDLRegistration(0x5d269a38u)]
 	public RivetAssetId Actor { get; set; } = default;
 
-	[DDLRegistration(0x24021542u)]
+	[DDLRegistration(0x1a437543u)]
 	public float Chance { get; set; } = 1.00f;
 
 	public static CashPickup Create(DDLObject ddl) => new(ddl);

@@ -20,13 +20,13 @@ public class SoundMaterialbstructionValue : DDLObjectType, IDDLObjectType<SoundM
 		LowPass = ddl.GetValue<float>(0x2dc6bf81u, LowPass);
 	}
 
-	[DDLRegistration(0x86577329u)]
+	[DDLRegistration(0x86bfc8e5u)]
 	public x10b3c4cf Material { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0x86577329u, description: "How this material affects overall intensity, i.e. volume. 1 to mute completely, 0 to leave unaffected.")]
+	[DDLRegistration(0x42170e5eu, description: "How this material affects overall intensity, i.e. volume. 1 to mute completely, 0 to leave unaffected.")]
 	public float Opacity { get; set; } = 1.00f;
 
-	[DDLRegistration(0x86577329u, description: "How strongly this material lowpasses. 1 mutes all frequencies, 0 lets all frequencies pass.")]
+	[DDLRegistration(0x2dc6bf81u, description: "How strongly this material lowpasses. 1 mutes all frequencies, 0 lets all frequencies pass.")]
 	public float LowPass { get; set; } = 1.00f;
 
 	public static SoundMaterialbstructionValue Create(DDLObject ddl) => new(ddl);

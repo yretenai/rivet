@@ -29,40 +29,40 @@ public class ClankPuzzleSettings : DDLObjectType, IDDLObjectType<ClankPuzzleSett
 		ShowLockOnScores = ddl.GetValue<bool>(0x43cd33aeu, ShowLockOnScores);
 	}
 
-	[DDLRegistration(0xf9c9c58cu, "Spawn Volume On Aim", "When turned on, we spawn the puzzle volume when the player starts aiming.")]
+	[DDLRegistration(0xe111b501u, "Spawn Volume On Aim", "When turned on, we spawn the puzzle volume when the player starts aiming.")]
 	public bool SpawnVolumeOnAim { get; set; } = false;
 
-	[DDLRegistration(0xf9c9c58cu, "Can Slap Bots", "Will clank change the bot direction when he slaps them.")]
+	[DDLRegistration(0xd8e54b2du, "Can Slap Bots", "Will clank change the bot direction when he slaps them.")]
 	public bool CanSlapBots { get; set; } = false;
 
-	[DDLRegistration(0xf9c9c58cu, "Slap Bots Turn 90", "Will the bots turn the direction you slap them, or just turn 90 degrees.")]
+	[DDLRegistration(0x2d71d58du, "Slap Bots Turn 90", "Will the bots turn the direction you slap them, or just turn 90 degrees.")]
 	public bool SlapBotsTurn90 { get; set; } = false;
 
-	[DDLRegistration(0xf9c9c58cu, "Characters World Speed", "When a character goes in a speed up the world slows down instead (same for slow down).")]
+	[DDLRegistration(0x18cb925eu, "Characters World Speed", "When a character goes in a speed up the world slows down instead (same for slow down).")]
 	public bool CharactersWorldSpeed { get; set; } = true;
 
-	[DDLRegistration(0xf9c9c58cu, "Portal Speed Stack", "When you go in multiple portals, does the effect stack.")]
+	[DDLRegistration(0xca3d1dacu, "Portal Speed Stack", "When you go in multiple portals, does the effect stack.")]
 	public bool PortalSpeedStack { get; set; } = false;
 
-	[DDLRegistration(0xf9c9c58cu, "Wire Ride Speed", "When riding a wire, how fast do clank and the clank bots go.")]
+	[DDLRegistration(0x6ff4aec4u, "Wire Ride Speed", "When riding a wire, how fast do clank and the clank bots go.")]
 	public int WireRideSpeed { get; set; } = 12;
 
-	[DDLRegistration(0xf9c9c58cu, "Can Recall Shots", "Can you recall orbs mid air.")]
+	[DDLRegistration(0x7c3fbbe7u, "Can Recall Shots", "Can you recall orbs mid air.")]
 	public bool CanRecallShots { get; set; } = true;
 
-	[DDLRegistration(0xf9c9c58cu, "Can Targets Absorb", "Can Targets absorb volumes when hit by them.")]
+	[DDLRegistration(0xae24b045u, "Can Targets Absorb", "Can Targets absorb volumes when hit by them.")]
 	public bool CanTargetsAbsorb { get; set; } = false;
 
-	[DDLRegistration(0xf9c9c58cu, "Death On Big Move", "Does the player die if they go down too far.")]
+	[DDLRegistration(0x470d0c14u, "Death On Big Move", "Does the player die if they go down too far.")]
 	public bool DeathOnBigMove { get; set; } = true;
 
-	[DDLRegistration(0xf9c9c58cu, "Show Debug Draw", "Show the respawn location, and the camera path to get back to it.")]
+	[DDLRegistration(0x48f109aeu, "Show Debug Draw", "Show the respawn location, and the camera path to get back to it.")]
 	public bool ShowDebugDraw { get; set; } = false;
 
-	[DDLRegistration(0xf9c9c58cu, "Output logging", "Show logging for clank puzzles.")]
+	[DDLRegistration(0xcb7f01c2u, "Output logging", "Show logging for clank puzzles.")]
 	public bool Logging { get; set; } = false;
 
-	[DDLRegistration(0xf9c9c58cu, "Show Lock On Scores", "Show lock on scores for each lock on when debug actor is targeting clank.")]
+	[DDLRegistration(0x43cd33aeu, "Show Lock On Scores", "Show lock on scores for each lock on when debug actor is targeting clank.")]
 	public bool ShowLockOnScores { get; set; } = false;
 
 	public static ClankPuzzleSettings Create(DDLObject ddl) => new(ddl);

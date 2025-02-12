@@ -33,52 +33,52 @@ public class Cinematic2DialogTrackDef : DDLObjectType, IDDLObjectType<Cinematic2
 		BlinkActions = ddl.GetDictionary<RivetAssetId, Cinematic2BlinkActionDef>(0x45b7d6eb, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2BlinkActionDef>(mapId));
 	}
 
-	[DDLRegistration(0x198e7519u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x198e7519u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x198e7519u, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0x198e7519u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0x198e7519u, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0x198e7519u, description: "This specifies the anim filter group (optional).")]
+	[DDLRegistration(0x23256800u, description: "This specifies the anim filter group (optional).")]
 	public string? AnimFilterGroup { get; set; } = default;
 
-	[DDLRegistration(0x198e7519u, description: "This specifies the anim filter id (optional).")]
+	[DDLRegistration(0x3b818b8fu, description: "This specifies the anim filter id (optional).")]
 	public string? AnimFilterId { get; set; } = default;
 
-	[DDLRegistration(0x198e7519u, description: "This specifies the driver variable name to control horizontal LookAt angle (degrees) for the head (required for LookAt Actions).")]
+	[DDLRegistration(0xb7a9f094u, description: "This specifies the driver variable name to control horizontal LookAt angle (degrees) for the head (required for LookAt Actions).")]
 	public string? VarHeadHorizontal { get; set; } = "Head_Aim_Horizontal";
 
-	[DDLRegistration(0x198e7519u, description: "This specifies the driver variable name to control vertical LookAt angle (degrees) for the head (required for LookAt Actions).")]
+	[DDLRegistration(0x2780f795u, description: "This specifies the driver variable name to control vertical LookAt angle (degrees) for the head (required for LookAt Actions).")]
 	public string? VarHeadVertical { get; set; } = "Head_Aim_Vertical";
 
-	[DDLRegistration(0x198e7519u, description: "This specifies the driver variable name to control horizontal LookAt angle (degrees) for eyes (optional for LookAt Actions).")]
+	[DDLRegistration(0x16964fc4u, description: "This specifies the driver variable name to control horizontal LookAt angle (degrees) for eyes (optional for LookAt Actions).")]
 	public string? VarEyeHorizontal { get; set; } = "Eye_Horizontal";
 
-	[DDLRegistration(0x198e7519u, description: "This specifies the driver variable name to control vertical LookAt angle (degrees) for eyes (optional for LookAt Actions).")]
+	[DDLRegistration(0x05cf7a97u, description: "This specifies the driver variable name to control vertical LookAt angle (degrees) for eyes (optional for LookAt Actions).")]
 	public string? VarEyeVertical { get; set; } = "Eye_Vertical";
 
-	[DDLRegistration(0x198e7519u, description: "This specifies the driver variable name to control Blinking; the range is 0 - 1, where 0 means the eyes are open and 1 means eyes closed (required for Blink Actions).")]
+	[DDLRegistration(0xabec5c51u, description: "This specifies the driver variable name to control Blinking; the range is 0 - 1, where 0 means the eyes are open and 1 means eyes closed (required for Blink Actions).")]
 	public string? VarBlink { get; set; } = "Blink";
 
-	[DDLRegistration(0x198e7519u)]
+	[DDLRegistration(0x0ebed4e7u)]
 	public x96e13489 LookAtUnits { get; set; } = x96e13489.Degrees;
 
-	[DDLRegistration(0x198e7519u)]
+	[DDLRegistration(0x1f501f9au)]
 	public Dictionary<RivetAssetId, Cinematic2DialogActionDef?> DialogActions { get; set; } = [];
 
-	[DDLRegistration(0x198e7519u)]
+	[DDLRegistration(0xa2c33691u)]
 	public Dictionary<RivetAssetId, Cinematic2LookAtActionDef?> LookAtActions { get; set; } = [];
 
-	[DDLRegistration(0x198e7519u)]
+	[DDLRegistration(0x45b7d6ebu)]
 	public Dictionary<RivetAssetId, Cinematic2BlinkActionDef?> BlinkActions { get; set; } = [];
 
 	public static Cinematic2DialogTrackDef Create(DDLObject ddl) => new(ddl);

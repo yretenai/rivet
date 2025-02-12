@@ -21,16 +21,16 @@ public class UBPTrophyGroup : DDLObjectType, IDDLObjectType<UBPTrophyGroup> {
 		Images = ddl.GetStrings(0xd9cbf53bu);
 	}
 
-	[DDLRegistration(0xe783cd16u)]
+	[DDLRegistration(0xf55ff6dau)]
 	public string? EntityId { get; set; } = default;
 
-	[DDLRegistration(0xe783cd16u)]
+	[DDLRegistration(0x8b63dca3u)]
 	public x80ef7527 EntityType { get; set; } = x80ef7527.PSNObject;
 
-	[DDLRegistration(0xe783cd16u)]
+	[DDLRegistration(0x2b2fec50u)]
 	public x56d897ac EntitySubtype { get; set; } = x56d897ac.Activity;
 
-	[DDLRegistration(0xe783cd16u)]
+	[DDLRegistration(0xd9cbf53bu)]
 	public List<string?> Images { get; set; } = [];
 
 	public static UBPTrophyGroup Create(DDLObject ddl) => new(ddl);

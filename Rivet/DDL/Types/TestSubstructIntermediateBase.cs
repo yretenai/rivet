@@ -19,10 +19,10 @@ public class TestSubstructIntermediateBase : DDLObjectType, IDDLObjectType<TestS
 		AInt = ddl.GetValue<int>(0x4113ca89u, AInt);
 	}
 
-	[DDLRegistration(0x8b4bc6c6u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x8b4bc6c6u)]
+	[DDLRegistration(0x4113ca89u)]
 	public int AInt { get; set; } = 44;
 
 	public static TestSubstructIntermediateBase Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class HoudiniConfigDataInteger : HoudiniConfigData, IDDLObjectType<Houdin
 		Value = ddl.GetValue<int>(0x042494f5u, Value);
 	}
 
-	[DDLRegistration(0x98c77ab2u, description: "The integer value that will be imported into Houdini.  It will be accessible as a detail attribute using the tag name.")]
+	[DDLRegistration(0x042494f5u, description: "The integer value that will be imported into Houdini.  It will be accessible as a detail attribute using the tag name.")]
 	public int Value { get; set; } = 0;
 
 	public new static HoudiniConfigDataInteger Create(DDLObject ddl) => new(ddl);

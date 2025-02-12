@@ -19,10 +19,10 @@ public class LevelListGameDataClipboard : DDLObjectType, IDDLObjectType<LevelLis
 		Data = ddl.GetObject<DDLStructInst>(0x3d519cedu);
 	}
 
-	[DDLRegistration(0x588cdd4bu)]
+	[DDLRegistration(0xcc24cf63u)]
 	public string? Compatability { get; set; } = default;
 
-	[DDLRegistration(0x588cdd4bu)]
+	[DDLRegistration(0x3d519cedu)]
 	public DDLStructInst? Data { get; set; } = default;
 
 	public static LevelListGameDataClipboard Create(DDLObject ddl) => new(ddl);

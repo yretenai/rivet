@@ -21,16 +21,16 @@ public class MeshExportDef : DDLObjectType, IDDLObjectType<MeshExportDef> {
 		Meshes = ddl.GetObjects<MeshDef>(0x84ca21f3u);
 	}
 
-	[DDLRegistration(0x3e2e2e67u)]
+	[DDLRegistration(0x037889aau)]
 	public VaultMetaData? VaultMetaData { get; set; } = default;
 
-	[DDLRegistration(0x3e2e2e67u)]
+	[DDLRegistration(0xbf5b007fu)]
 	public RivetAssetId IconPath { get; set; } = "";
 
-	[DDLRegistration(0x3e2e2e67u)]
+	[DDLRegistration(0x42954178u)]
 	public List<SkeletonDef?> Skeletons { get; set; } = [];
 
-	[DDLRegistration(0x3e2e2e67u)]
+	[DDLRegistration(0x84ca21f3u)]
 	public List<MeshDef?> Meshes { get; set; } = [];
 
 	public static MeshExportDef Create(DDLObject ddl) => new(ddl);

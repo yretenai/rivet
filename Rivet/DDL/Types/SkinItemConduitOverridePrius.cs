@@ -18,7 +18,7 @@ public class SkinItemConduitOverridePrius : DDLObjectType, IDDLObjectType<SkinIt
 		ConduitAssetId = ddl.GetValue<RivetAssetId>(0x56d49c12u, ConduitAssetId);
 	}
 
-	[DDLRegistration(0x4d67b5a3u)]
+	[DDLRegistration(0x56d49c12u)]
 	public RivetAssetId ConduitAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static SkinItemConduitOverridePrius Create(DDLObject ddl) => new(ddl);

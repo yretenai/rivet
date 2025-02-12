@@ -19,10 +19,10 @@ public class SelfieWeaponData : DDLObjectType, IDDLObjectType<SelfieWeaponData> 
 		GripStyle = ddl.GetEnum<x8c1c9e5c>(0x93d195a6u, x8c1c9e5cValues.Lookup);
 	}
 
-	[DDLRegistration(0xf8d2e544u)]
+	[DDLRegistration(0xed52b0c2u)]
 	public AssetReferenceDef? WeaponActor { get; set; } = default;
 
-	[DDLRegistration(0xf8d2e544u)]
+	[DDLRegistration(0x93d195a6u)]
 	public x8c1c9e5c GripStyle { get; set; } = x8c1c9e5c.GripStyleRifle;
 
 	public static SelfieWeaponData Create(DDLObject ddl) => new(ddl);

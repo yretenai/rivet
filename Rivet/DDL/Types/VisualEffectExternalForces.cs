@@ -23,22 +23,22 @@ public class VisualEffectExternalForces : DDLObjectType, IDDLObjectType<VisualEf
 		Wind = ddl.GetValue<float>(0x119b944eu, Wind);
 	}
 
-	[DDLRegistration(0xb968e1cbu, "Force Field Influence", "Per particle force-field influence 1=100%, 0=unaffected")]
+	[DDLRegistration(0x558c12a6u, "Force Field Influence", "Per particle force-field influence 1=100%, 0=unaffected")]
 	public float ForceFieldInfluence { get; set; } = 1.00f;
 
-	[DDLRegistration(0xb968e1cbu, "Force Field Radius", "Per particle force-field interaction radius")]
+	[DDLRegistration(0xa94827d8u, "Force Field Radius", "Per particle force-field interaction radius")]
 	public float ForceFieldRadius { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb968e1cbu, "Inherit Speed")]
+	[DDLRegistration(0xb3eb63c4u, "Inherit Speed")]
 	public float InheritSpeed { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb968e1cbu, "Gravity")]
+	[DDLRegistration(0x5bf7469fu, "Gravity")]
 	public float Gravity { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb968e1cbu, "Damping")]
+	[DDLRegistration(0x6cd3ba39u, "Damping")]
 	public float Damp { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb968e1cbu, "Wind")]
+	[DDLRegistration(0x119b944eu, "Wind")]
 	public float Wind { get; set; } = 0.00f;
 
 	public static VisualEffectExternalForces Create(DDLObject ddl) => new(ddl);

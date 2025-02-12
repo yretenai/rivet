@@ -21,16 +21,16 @@ public class BotConfigAwareness : ConfigBase, IDDLObjectType<BotConfigAwareness>
 		TargetingStimulus = ddl.GetObject<TargetingStimulusListenerPrius>(0xa40dee7cu);
 	}
 
-	[DDLRegistration(0xbc11c5bcu)]
+	[DDLRegistration(0xeb7b1622u)]
 	public AwarenessBasePrius? Awareness { get; set; } = default;
 
-	[DDLRegistration(0xbc11c5bcu, "Stimulus Source")]
+	[DDLRegistration(0x3bf83781u, "Stimulus Source")]
 	public x2efb4283 StimulusSource { get; set; } = x2efb4283.Here;
 
-	[DDLRegistration(0xbc11c5bcu, "TargetingStimulus Awareness Config", "Use the TargetingStimulus from this awareness config")]
+	[DDLRegistration(0xb0f8678eu, "TargetingStimulus Awareness Config", "Use the TargetingStimulus from this awareness config")]
 	public RivetAssetId StimulusConfig { get; set; } = default;
 
-	[DDLRegistration(0xbc11c5bcu)]
+	[DDLRegistration(0xa40dee7cu)]
 	public TargetingStimulusListenerPrius? TargetingStimulus { get; set; } = default;
 
 	public new static BotConfigAwareness Create(DDLObject ddl) => new(ddl);

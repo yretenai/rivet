@@ -19,10 +19,10 @@ public class OutsourceToolDependencyInfo : DDLObjectType, IDDLObjectType<Outsour
 		Timestamp = ddl.GetString(0x272b7932) ?? Timestamp;
 	}
 
-	[DDLRegistration(0xb2d58019u)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public string? Path { get; set; } = default;
 
-	[DDLRegistration(0xb2d58019u)]
+	[DDLRegistration(0x272b7932u)]
 	public string? Timestamp { get; set; } = default;
 
 	public static OutsourceToolDependencyInfo Create(DDLObject ddl) => new(ddl);

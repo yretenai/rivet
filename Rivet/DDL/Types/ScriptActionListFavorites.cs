@@ -18,7 +18,7 @@ public class ScriptActionListFavorites : DDLObjectType, IDDLObjectType<ScriptAct
 		Names = ddl.GetStrings(0xeb608581u);
 	}
 
-	[DDLRegistration(0x157bc018u)]
+	[DDLRegistration(0xeb608581u)]
 	public List<string?> Names { get; set; } = [];
 
 	public static ScriptActionListFavorites Create(DDLObject ddl) => new(ddl);

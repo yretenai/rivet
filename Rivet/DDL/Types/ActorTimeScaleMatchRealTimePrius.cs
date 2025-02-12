@@ -18,7 +18,7 @@ public class ActorTimeScaleMatchRealTimePrius : ActorTimeScaleMatchBasePrius, ID
 		RealTimeScale = ddl.GetValue<float>(0xb9323e7du, RealTimeScale);
 	}
 
-	[DDLRegistration(0xff78d5dau, description: "The desired perceived real time rate of the actor")]
+	[DDLRegistration(0xb9323e7du, description: "The desired perceived real time rate of the actor")]
 	public float RealTimeScale { get; set; } = 1.00f;
 
 	public new static ActorTimeScaleMatchRealTimePrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class BotDebugSpawnConfig : ConfigBase, IDDLObjectType<BotDebugSpawnConfi
 		Factions = ddl.GetObjects<Faction>(0x1183e5b4u);
 	}
 
-	[DDLRegistration(0x0ae4e072u)]
+	[DDLRegistration(0x1183e5b4u)]
 	public List<Faction?> Factions { get; set; } = [];
 
 	public new static BotDebugSpawnConfig Create(DDLObject ddl) => new(ddl);

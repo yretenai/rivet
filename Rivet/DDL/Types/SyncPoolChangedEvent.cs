@@ -18,7 +18,7 @@ public class SyncPoolChangedEvent : EventBase, IDDLObjectType<SyncPoolChangedEve
 		PoolId = ddl.GetValue<ushort>(0xd6168685u, PoolId);
 	}
 
-	[DDLRegistration(0x0b395595u)]
+	[DDLRegistration(0xd6168685u)]
 	public ushort PoolId { get; set; } = 0x0000;
 
 	public new static SyncPoolChangedEvent Create(DDLObject ddl) => new(ddl);

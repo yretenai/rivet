@@ -19,10 +19,10 @@ public class TextureMipGen : DDLObjectType, IDDLObjectType<TextureMipGen> {
 		PostSharpen = ddl.GetValue<float>(0xac2e7e59u, PostSharpen);
 	}
 
-	[DDLRegistration(0x47b3a896u)]
+	[DDLRegistration(0x41bc117au)]
 	public xae1208ef Filter { get; set; } = xae1208ef.Cubic;
 
-	[DDLRegistration(0x47b3a896u)]
+	[DDLRegistration(0xac2e7e59u)]
 	public float PostSharpen { get; set; } = 0.00f;
 
 	public static TextureMipGen Create(DDLObject ddl) => new(ddl);

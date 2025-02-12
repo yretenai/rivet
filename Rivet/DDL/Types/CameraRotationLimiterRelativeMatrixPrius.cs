@@ -18,7 +18,7 @@ public class CameraRotationLimiterRelativeMatrixPrius : CameraRotationLimiterBas
 		RelativeActor = ddl.GetValue<RivetAssetId>(0xc843c120u, RelativeActor);
 	}
 
-	[DDLRegistration(0xd997895fu)]
+	[DDLRegistration(0xc843c120u)]
 	public RivetAssetId RelativeActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public new static CameraRotationLimiterRelativeMatrixPrius Create(DDLObject ddl) => new(ddl);

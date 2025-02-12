@@ -24,25 +24,25 @@ public class DebugDrawCurveActionPrius : DDLObjectType, IDDLObjectType<DebugDraw
 		DrawMatrix = ddl.GetValue<bool>(0x4536d2ccu, DrawMatrix);
 	}
 
-	[DDLRegistration(0xef62f3f5u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Debug;
 
-	[DDLRegistration(0xef62f3f5u)]
+	[DDLRegistration(0x7f058428u)]
 	public DebugDrawColor? Color { get; set; } = default;
 
-	[DDLRegistration(0xef62f3f5u)]
+	[DDLRegistration(0x0a1247fbu)]
 	public float YOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0xef62f3f5u)]
+	[DDLRegistration(0x194e76e5u)]
 	public float LineWidth { get; set; } = 1.00f;
 
-	[DDLRegistration(0xef62f3f5u)]
+	[DDLRegistration(0x9abf1d2au)]
 	public bool DrawPoints { get; set; } = true;
 
-	[DDLRegistration(0xef62f3f5u)]
+	[DDLRegistration(0xb609818du)]
 	public bool DrawTangents { get; set; } = false;
 
-	[DDLRegistration(0xef62f3f5u)]
+	[DDLRegistration(0x4536d2ccu)]
 	public bool DrawMatrix { get; set; } = false;
 
 	public static DebugDrawCurveActionPrius Create(DDLObject ddl) => new(ddl);

@@ -18,7 +18,7 @@ public class SetFlounderingScriptActionPrius : DDLObjectType, IDDLObjectType<Set
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x28c67c4bu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.EnemyBot;
 
 	public static SetFlounderingScriptActionPrius Create(DDLObject ddl) => new(ddl);

@@ -22,19 +22,19 @@ public class GraphIONodeAux : DDLObjectType, IDDLObjectType<GraphIONodeAux> {
 		Tooltip = ddl.GetString(0xa0533c88) ?? Tooltip;
 	}
 
-	[DDLRegistration(0x4d20c115u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0x4d20c115u)]
+	[DDLRegistration(0xf4b3e9a4u)]
 	public string? SubType { get; set; } = default;
 
-	[DDLRegistration(0x4d20c115u)]
+	[DDLRegistration(0x90fe53d9u)]
 	public x06e9cd50 Dir { get; set; } = x06e9cd50.Invalid;
 
-	[DDLRegistration(0x4d20c115u, "External Name")]
+	[DDLRegistration(0x6eb3beb6u, "External Name")]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x4d20c115u, "External Tooltip")]
+	[DDLRegistration(0xa0533c88u, "External Tooltip")]
 	public string? Tooltip { get; set; } = default;
 
 	public static GraphIONodeAux Create(DDLObject ddl) => new(ddl);

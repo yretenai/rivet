@@ -21,16 +21,16 @@ public class AmoeboidSplitSpawnData : ActorSpawnData, IDDLObjectType<AmoeboidSpl
 		IsCombine = ddl.GetValue<bool>(0x4b875760u, IsCombine);
 	}
 
-	[DDLRegistration(0xae848204u, description: "Index of the spawn in amoeboid system")]
+	[DDLRegistration(0x8087da33u, description: "Index of the spawn in amoeboid system")]
 	public byte SystemIndex { get; set; } = 0x00;
 
-	[DDLRegistration(0xae848204u)]
+	[DDLRegistration(0xbeb8f4dbu)]
 	public uint CombineHostHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xae848204u)]
+	[DDLRegistration(0x14ea5fdcu)]
 	public RivetAssetId CombineSpawnAssetId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xae848204u)]
+	[DDLRegistration(0x4b875760u)]
 	public bool IsCombine { get; set; } = false;
 
 	public new static AmoeboidSplitSpawnData Create(DDLObject ddl) => new(ddl);

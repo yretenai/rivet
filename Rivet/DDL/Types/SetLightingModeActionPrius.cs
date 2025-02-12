@@ -19,10 +19,10 @@ public class SetLightingModeActionPrius : DDLObjectType, IDDLObjectType<SetLight
 		IsSaved = ddl.GetValue<bool>(0xf11ec123u, IsSaved);
 	}
 
-	[DDLRegistration(0x07b56c22u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x07b56c22u)]
+	[DDLRegistration(0xf11ec123u)]
 	public bool IsSaved { get; set; } = true;
 
 	public static SetLightingModeActionPrius Create(DDLObject ddl) => new(ddl);

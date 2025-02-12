@@ -18,7 +18,7 @@ public class BreakableVariantModifierPrius : DDLObjectType, IDDLObjectType<Break
 		BreakableVariantDifficultyModConfig = ddl.GetValue<RivetAssetId>(0x5fbc0c8cu, BreakableVariantDifficultyModConfig);
 	}
 
-	[DDLRegistration(0x586b8c41u, description: "The list of modifiers for each variant for a breakable actor.")]
+	[DDLRegistration(0x5fbc0c8cu, description: "The list of modifiers for each variant for a breakable actor.")]
 	public RivetAssetId BreakableVariantDifficultyModConfig { get; set; } = default;
 
 	public static BreakableVariantModifierPrius Create(DDLObject ddl) => new(ddl);

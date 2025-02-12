@@ -18,7 +18,7 @@ public class ConfigModManagerPrius : DDLObjectType, IDDLObjectType<ConfigModMana
 		Mods = ddl.GetObjects<ConfigMod>(0x538e324au);
 	}
 
-	[DDLRegistration(0xaa5f1077u)]
+	[DDLRegistration(0x538e324au)]
 	public List<ConfigMod?> Mods { get; set; } = [];
 
 	public static ConfigModManagerPrius Create(DDLObject ddl) => new(ddl);

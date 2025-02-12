@@ -37,64 +37,64 @@ public class AnimFlagsEngineItem : DDLObjectType, IDDLObjectType<AnimFlagsEngine
 		TriggerEvents = ddl.GetValue<bool>(0xa4846ab5u, TriggerEvents);
 	}
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x85ec5fb3u)]
 	public bool AlwaysLoop { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x2b63b775u)]
 	public bool AnimationCompleted { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x6d7b034du)]
 	public bool AnimClipHasPhaseData { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x1bf3c075u)]
 	public bool ApplyRotation { get; set; } = true;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0xa27166feu)]
 	public bool ApplyTranslation { get; set; } = true;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x31dc6fa4u)]
 	public bool ClothEnabled { get; set; } = true;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x5e23fd9bu)]
 	public bool LinkCameraToActor { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x9ecea38fu)]
 	public bool PlayingAnimClip { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x931d0203u)]
 	public bool PlayingAnimDriver { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x5dc6b781u)]
 	public bool RenderMotionArrow { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x36f0e417u)]
 	public bool RenderMotionData { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0xd29e0e6fu)]
 	public bool RenderPhaseData { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x98cd30d1u)]
 	public bool Rewind { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x1c457e7eu)]
 	public bool SendUpdateData { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x97648ae2u)]
 	public bool ShowDebugControllerHud { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x750e7efcu)]
 	public bool ShowDebugHud { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x616d2d81u)]
 	public bool ShowDebugMorphHud { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x827e799cu)]
 	public bool ShowDebugDynamicsHud { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0x9bedddfcu)]
 	public bool ShowVisData { get; set; } = false;
 
-	[DDLRegistration(0x5e901cc0u)]
+	[DDLRegistration(0xa4846ab5u)]
 	public bool TriggerEvents { get; set; } = false;
 
 	public static AnimFlagsEngineItem Create(DDLObject ddl) => new(ddl);

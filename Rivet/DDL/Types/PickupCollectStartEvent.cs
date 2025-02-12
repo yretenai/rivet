@@ -18,7 +18,7 @@ public class PickupCollectStartEvent : EventBase, IDDLObjectType<PickupCollectSt
 		LocalCollector = ddl.GetValue<bool>(0xa326e9b3u, LocalCollector);
 	}
 
-	[DDLRegistration(0x018d236fu)]
+	[DDLRegistration(0xa326e9b3u)]
 	public bool LocalCollector { get; set; } = true;
 
 	public new static PickupCollectStartEvent Create(DDLObject ddl) => new(ddl);

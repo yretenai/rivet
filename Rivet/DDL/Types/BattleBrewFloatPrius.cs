@@ -22,19 +22,19 @@ public class BattleBrewFloatPrius : BattleBrewBasePrius, IDDLObjectType<BattleBr
 		IncomingDamageModifier = ddl.GetObject<DamageModifierIncomingBattleBrewFloatPrius>(0x0fd58369u);
 	}
 
-	[DDLRegistration(0xeef7bdf3u, description: "The percent of this enemy's damage that needs to be done in order to pop the bubble.\n- If 0, bubble pops immediately.\n- If 1, bubble only pops when enemy dies.")]
+	[DDLRegistration(0xc7e406b2u, description: "The percent of this enemy's damage that needs to be done in order to pop the bubble.\n- If 0, bubble pops immediately.\n- If 1, bubble only pops when enemy dies.")]
 	public float DamagePercentToPop { get; set; } = 0.30f;
 
-	[DDLRegistration(0xeef7bdf3u)]
+	[DDLRegistration(0x4961b96eu)]
 	public RivetAssetId BubbleActor { get; set; } = default;
 
-	[DDLRegistration(0xeef7bdf3u)]
+	[DDLRegistration(0x785eef60u)]
 	public float MaxFloatHeight { get; set; } = 4.00f;
 
-	[DDLRegistration(0xeef7bdf3u)]
+	[DDLRegistration(0xc1787411u)]
 	public float MinFloatHeight { get; set; } = 6.00f;
 
-	[DDLRegistration(0xeef7bdf3u)]
+	[DDLRegistration(0x0fd58369u)]
 	public DamageModifierIncomingBattleBrewFloatPrius? IncomingDamageModifier { get; set; } = default;
 
 	public new static BattleBrewFloatPrius Create(DDLObject ddl) => new(ddl);

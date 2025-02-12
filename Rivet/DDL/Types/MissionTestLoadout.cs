@@ -19,10 +19,10 @@ public class MissionTestLoadout : DDLObjectType, IDDLObjectType<MissionTestLoado
 		Loadout = ddl.GetValue<RivetAssetId>(0x7f8fad7au, Loadout);
 	}
 
-	[DDLRegistration(0xd8a9ea6au, "Mission", "Mission")]
+	[DDLRegistration(0x918d9104u, "Mission", "Mission")]
 	public string? Mission { get; set; } = default;
 
-	[DDLRegistration(0xd8a9ea6au, "Item Loadout Configs", "Test loadout for the mission")]
+	[DDLRegistration(0x7f8fad7au, "Item Loadout Configs", "Test loadout for the mission")]
 	public RivetAssetId Loadout { get; set; } = default;
 
 	public static MissionTestLoadout Create(DDLObject ddl) => new(ddl);

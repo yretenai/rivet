@@ -18,7 +18,7 @@ public class FollowCurvePredictActionPrius : DDLObjectType, IDDLObjectType<Follo
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
 	}
 
-	[DDLRegistration(0x4fd92739u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.CurveFollower;
 
 	public static FollowCurvePredictActionPrius Create(DDLObject ddl) => new(ddl);

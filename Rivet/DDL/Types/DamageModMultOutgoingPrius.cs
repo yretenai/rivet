@@ -22,19 +22,19 @@ public class DamageModMultOutgoingPrius : DamageModifierOutgoingPrius, IDDLObjec
 		ModifiedTag = ddl.GetValue<uint>(0x75529898u, ModifiedTag);
 	}
 
-	[DDLRegistration(0xcc29fed4u)]
+	[DDLRegistration(0x7facf762u)]
 	public float Multiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0xcc29fed4u, "Damage Type Filter")]
+	[DDLRegistration(0xa75ecb2fu, "Damage Type Filter")]
 	public List<DamageTypesGame> DamageFilter { get; set; } = [];
 
-	[DDLRegistration(0xcc29fed4u)]
+	[DDLRegistration(0x5d5c06ebu)]
 	public uint WeaponTypeFilter { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcc29fed4u)]
+	[DDLRegistration(0x1b32101du)]
 	public uint AllegianceFilter { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xcc29fed4u)]
+	[DDLRegistration(0x75529898u)]
 	public uint ModifiedTag { get; set; } = 0x00000000;
 
 	public new static DamageModMultOutgoingPrius Create(DDLObject ddl) => new(ddl);

@@ -21,16 +21,16 @@ public class POIAttributeDistanceScale : POIAttributeDistanceScaleBase, IDDLObje
 		MaxDistance = ddl.GetValue<float>(0x88831235u, MaxDistance);
 	}
 
-	[DDLRegistration(0xce5792d7u)]
+	[DDLRegistration(0x13b84df2u)]
 	public float MinScale { get; set; } = 0.50f;
 
-	[DDLRegistration(0xce5792d7u)]
+	[DDLRegistration(0xf5d8e213u)]
 	public float MaxScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xce5792d7u)]
+	[DDLRegistration(0x448e693au)]
 	public float MinDistance { get; set; } = 100.00f;
 
-	[DDLRegistration(0xce5792d7u)]
+	[DDLRegistration(0x88831235u)]
 	public float MaxDistance { get; set; } = 1000.00f;
 
 	public new static POIAttributeDistanceScale Create(DDLObject ddl) => new(ddl);

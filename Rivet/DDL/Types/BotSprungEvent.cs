@@ -18,7 +18,7 @@ public class BotSprungEvent : EventBase, IDDLObjectType<BotSprungEvent> {
 		TriggerActor = ddl.GetValue<uint>(0x2a75844bu, TriggerActor);
 	}
 
-	[DDLRegistration(0x3f5ae6f9u)]
+	[DDLRegistration(0x2a75844bu)]
 	public uint TriggerActor { get; set; } = 0x00000000;
 
 	public new static BotSprungEvent Create(DDLObject ddl) => new(ddl);

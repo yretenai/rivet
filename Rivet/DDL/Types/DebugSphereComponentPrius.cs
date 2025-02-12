@@ -20,13 +20,13 @@ public class DebugSphereComponentPrius : DDLObjectType, IDDLObjectType<DebugSphe
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0x20cc5e6du)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 1.00f;
 
-	[DDLRegistration(0x20cc5e6du)]
+	[DDLRegistration(0x7f058428u)]
 	public DDLVector3? Color { get; set; } = default;
 
-	[DDLRegistration(0x20cc5e6du)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
 	public static DebugSphereComponentPrius Create(DDLObject ddl) => new(ddl);

@@ -26,31 +26,31 @@ public class MaterialNodeLibrary : DDLObjectType, IDDLObjectType<MaterialNodeLib
 		Hidden = ddl.GetValue<bool>(0xb625a7dau, Hidden);
 	}
 
-	[DDLRegistration(0xf184af9cu)]
+	[DDLRegistration(0x8de289cdu)]
 	public string? LibraryDirectory { get; set; } = default;
 
-	[DDLRegistration(0xf184af9cu)]
+	[DDLRegistration(0x9034cc0fu)]
 	public string? LibraryFullPath { get; set; } = default;
 
-	[DDLRegistration(0xf184af9cu)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xf184af9cu)]
+	[DDLRegistration(0x046ec93du)]
 	public List<LoadedMaterialNode?> Nodes { get; set; } = [];
 
-	[DDLRegistration(0xf184af9cu)]
+	[DDLRegistration(0x7f058428u)]
 	public uint Color { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf184af9cu)]
+	[DDLRegistration(0xaa224c9au)]
 	public uint FixedWidth { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf184af9cu)]
+	[DDLRegistration(0xd95c8f23u)]
 	public uint TimeStampLow { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf184af9cu)]
+	[DDLRegistration(0x20fa3d23u)]
 	public uint TimeStampHigh { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xf184af9cu)]
+	[DDLRegistration(0xb625a7dau)]
 	public bool Hidden { get; set; } = false;
 
 	public static MaterialNodeLibrary Create(DDLObject ddl) => new(ddl);

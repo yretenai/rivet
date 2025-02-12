@@ -18,7 +18,7 @@ public class AmmoItemConfig : GameItemConfig, IDDLObjectType<AmmoItemConfig> {
 		AmmoData = ddl.GetObject<AmmoConfigBase>(0xea8e9040u);
 	}
 
-	[DDLRegistration(0x7151e5a4u)]
+	[DDLRegistration(0xea8e9040u)]
 	public AmmoConfigBase? AmmoData { get; set; } = default;
 
 	public new static AmmoItemConfig Create(DDLObject ddl) => new(ddl);

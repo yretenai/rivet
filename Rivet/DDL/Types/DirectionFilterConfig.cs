@@ -23,22 +23,22 @@ public class DirectionFilterConfig : DDLObjectType, IDDLObjectType<DirectionFilt
 		Right = ddl.GetValue<bool>(0xad99b9d5u, Right);
 	}
 
-	[DDLRegistration(0x53757f0bu, description: "Name of the animation driver to configure")]
+	[DDLRegistration(0x7a8704f5u, description: "Name of the animation driver to configure")]
 	public string? DriverName { get; set; } = "React_Knockback";
 
-	[DDLRegistration(0x53757f0bu, description: "Number of kIndex variations")]
+	[DDLRegistration(0x698b9d17u, description: "Number of kIndex variations")]
 	public byte IndexCount { get; set; } = 0x03;
 
-	[DDLRegistration(0x53757f0bu, description: "Use kHitDirectionFront when hit from the front")]
+	[DDLRegistration(0xe7a8ae37u, description: "Use kHitDirectionFront when hit from the front")]
 	public bool Front { get; set; } = true;
 
-	[DDLRegistration(0x53757f0bu, description: "Use kHitDirectionBack when hit from the back")]
+	[DDLRegistration(0x5d5e0187u, description: "Use kHitDirectionBack when hit from the back")]
 	public bool Back { get; set; } = false;
 
-	[DDLRegistration(0x53757f0bu, description: "Use kHitDirectionLeft when hit from the left")]
+	[DDLRegistration(0x4af727d8u, description: "Use kHitDirectionLeft when hit from the left")]
 	public bool Left { get; set; } = false;
 
-	[DDLRegistration(0x53757f0bu, description: "Use kHitDirectionRight when hit from the right")]
+	[DDLRegistration(0xad99b9d5u, description: "Use kHitDirectionRight when hit from the right")]
 	public bool Right { get; set; } = false;
 
 	public static DirectionFilterConfig Create(DDLObject ddl) => new(ddl);

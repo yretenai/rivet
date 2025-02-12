@@ -24,25 +24,25 @@ public class SheepinatorShotPrius : BeamShotPrius, IDDLObjectType<SheepinatorSho
 		SheepStatusMaterialGraph = ddl.GetValue<RivetAssetId>(0x9d5b0043u, SheepStatusMaterialGraph);
 	}
 
-	[DDLRegistration(0x475db4c1u)]
+	[DDLRegistration(0x7ed30386u)]
 	public float SheepChargeTime { get; set; } = 1.00f;
 
-	[DDLRegistration(0x475db4c1u)]
+	[DDLRegistration(0xcb4865d4u)]
 	public RivetAssetId SheepActor { get; set; } = default;
 
-	[DDLRegistration(0x475db4c1u)]
+	[DDLRegistration(0xd7de350du)]
 	public RivetAssetId UpgradedSheepActor { get; set; } = default;
 
-	[DDLRegistration(0x475db4c1u)]
+	[DDLRegistration(0xcc329849u)]
 	public RivetAssetId PilotSheepActor { get; set; } = default;
 
-	[DDLRegistration(0x475db4c1u)]
+	[DDLRegistration(0x9c3313dcu)]
 	public RivetAssetId UpgradedPilotSheepActor { get; set; } = default;
 
-	[DDLRegistration(0x475db4c1u)]
+	[DDLRegistration(0x1d8619dcu)]
 	public RivetAssetId ShockwaveRingActor { get; set; } = default;
 
-	[DDLRegistration(0x475db4c1u)]
+	[DDLRegistration(0x9d5b0043u)]
 	public RivetAssetId SheepStatusMaterialGraph { get; set; } = default;
 
 	public new static SheepinatorShotPrius Create(DDLObject ddl) => new(ddl);

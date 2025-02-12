@@ -19,10 +19,10 @@ public class MusicCueListenerActionPrius : DDLObjectType, IDDLObjectType<MusicCu
 		CueString = ddl.GetString(0x14f4dc49) ?? CueString;
 	}
 
-	[DDLRegistration(0x1139b00fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Sound;
 
-	[DDLRegistration(0x1139b00fu)]
+	[DDLRegistration(0x14f4dc49u)]
 	public string? CueString { get; set; } = "end_of_song";
 
 	public static MusicCueListenerActionPrius Create(DDLObject ddl) => new(ddl);

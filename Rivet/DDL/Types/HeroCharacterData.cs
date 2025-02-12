@@ -22,19 +22,19 @@ public class HeroCharacterData : DDLObjectType, IDDLObjectType<HeroCharacterData
 		CharacterOptions = ddl.GetObject<CharacterOptionData>(0x04f11ccbu);
 	}
 
-	[DDLRegistration(0x95bc5fd6u)]
+	[DDLRegistration(0xeaf33243u)]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x95bc5fd6u)]
+	[DDLRegistration(0x1583d108u)]
 	public HeroTypes HeroType { get; set; } = HeroTypes.None;
 
-	[DDLRegistration(0x95bc5fd6u)]
+	[DDLRegistration(0xfea894fau)]
 	public VoiceGame Voice { get; set; } = VoiceGame.Unused;
 
-	[DDLRegistration(0x95bc5fd6u)]
+	[DDLRegistration(0x75356989u)]
 	public AssetReferenceDef? ActorAsset { get; set; } = default;
 
-	[DDLRegistration(0x95bc5fd6u)]
+	[DDLRegistration(0x04f11ccbu)]
 	public CharacterOptionData? CharacterOptions { get; set; } = default;
 
 	public static HeroCharacterData Create(DDLObject ddl) => new(ddl);

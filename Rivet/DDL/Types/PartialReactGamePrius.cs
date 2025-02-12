@@ -20,13 +20,13 @@ public class PartialReactGamePrius : PartialReactBasePrius, IDDLObjectType<Parti
 		PartialReactCooldown = ddl.GetValue<float>(0xa4e1f543u, PartialReactCooldown);
 	}
 
-	[DDLRegistration(0x97d70662u, description: "If this driver exists, it will play when we need a PartialReact. Meant to be an Additive animation")]
+	[DDLRegistration(0x40ab026fu, description: "If this driver exists, it will play when we need a PartialReact. Meant to be an Additive animation")]
 	public string? AdditiveReactDriver { get; set; } = "React_Twitch";
 
-	[DDLRegistration(0x97d70662u, description: "If this driver exists, it will play when we need a PartialReact. Meant to be a Partial animation")]
+	[DDLRegistration(0x4f63a6f1u, description: "If this driver exists, it will play when we need a PartialReact. Meant to be a Partial animation")]
 	public string? PartialReactDriver { get; set; } = "React_Twitch_Partial";
 
-	[DDLRegistration(0x97d70662u)]
+	[DDLRegistration(0xa4e1f543u)]
 	public float PartialReactCooldown { get; set; } = 0.25f;
 
 	public new static PartialReactGamePrius Create(DDLObject ddl) => new(ddl);

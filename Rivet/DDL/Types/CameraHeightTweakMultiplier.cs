@@ -20,13 +20,13 @@ public class CameraHeightTweakMultiplier : CameraHeightTweak, IDDLObjectType<Cam
 		BiDirectionalField = ddl.GetValue<bool>(0x955abfcau, BiDirectionalField);
 	}
 
-	[DDLRegistration(0x383fcb6bu)]
+	[DDLRegistration(0x7facf762u)]
 	public float Multiplier { get; set; } = 1.00f;
 
-	[DDLRegistration(0x383fcb6bu)]
+	[DDLRegistration(0x75edc1a7u)]
 	public float BlendFieldCompletePercent { get; set; } = 0.00f;
 
-	[DDLRegistration(0x383fcb6bu)]
+	[DDLRegistration(0x955abfcau)]
 	public bool BiDirectionalField { get; set; } = false;
 
 	public new static CameraHeightTweakMultiplier Create(DDLObject ddl) => new(ddl);

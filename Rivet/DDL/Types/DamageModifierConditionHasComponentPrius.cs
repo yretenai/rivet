@@ -20,13 +20,13 @@ public class DamageModifierConditionHasComponentPrius : DamageModifierConditionB
 		CheckComponentOnDamager = ddl.GetValue<bool>(0x64c921f1u, CheckComponentOnDamager);
 	}
 
-	[DDLRegistration(0x56f13314u)]
+	[DDLRegistration(0x4a8e53b7u)]
 	public uint CheckComponentHash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x56f13314u)]
+	[DDLRegistration(0x9497a047u)]
 	public bool IsInclude { get; set; } = true;
 
-	[DDLRegistration(0x56f13314u, description: "False means we look for the component on the target, True means we look for the component on the source")]
+	[DDLRegistration(0x64c921f1u, description: "False means we look for the component on the target, True means we look for the component on the source")]
 	public bool CheckComponentOnDamager { get; set; } = false;
 
 	public new static DamageModifierConditionHasComponentPrius Create(DDLObject ddl) => new(ddl);

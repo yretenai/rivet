@@ -18,7 +18,7 @@ public class ScriptVarWatchVec : DDLObjectType, IDDLObjectType<ScriptVarWatchVec
 		Value = ddl.GetObject<DDLVector3>(0x042494f5u);
 	}
 
-	[DDLRegistration(0xa06cebf2u)]
+	[DDLRegistration(0x042494f5u)]
 	public DDLVector3? Value { get; set; } = default;
 
 	public static ScriptVarWatchVec Create(DDLObject ddl) => new(ddl);

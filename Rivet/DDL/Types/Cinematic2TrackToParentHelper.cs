@@ -18,7 +18,7 @@ public class Cinematic2TrackToParentHelper : DDLObjectType, IDDLObjectType<Cinem
 		TrackToParentMap = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0xc0bdb0b2, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 	}
 
-	[DDLRegistration(0x0052b1acu)]
+	[DDLRegistration(0xc0bdb0b2u)]
 	public Dictionary<RivetAssetId, RivetAssetId> TrackToParentMap { get; set; } = [];
 
 	public static Cinematic2TrackToParentHelper Create(DDLObject ddl) => new(ddl);

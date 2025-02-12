@@ -18,7 +18,7 @@ public class TriggerEffectKeyFrameDataCustom : TriggerEffectKeyFrameDataBase, ID
 		CustomValue = ddl.GetValue<float>(0x0d399e0du, CustomValue);
 	}
 
-	[DDLRegistration(0x6e7a162bu, description: "Custom Value (based on the situation). Range [0-1].")]
+	[DDLRegistration(0x0d399e0du, description: "Custom Value (based on the situation). Range [0-1].")]
 	public float CustomValue { get; set; } = 0.00f;
 
 	public new static TriggerEffectKeyFrameDataCustom Create(DDLObject ddl) => new(ddl);

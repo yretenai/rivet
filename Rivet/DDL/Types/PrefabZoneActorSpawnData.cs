@@ -19,10 +19,10 @@ public class PrefabZoneActorSpawnData : ActorSpawnData, IDDLObjectType<PrefabZon
 		PrefabActorUid = ddl.GetValue<ulong>(0x761db945u, PrefabActorUid);
 	}
 
-	[DDLRegistration(0x224a7442u)]
+	[DDLRegistration(0xe74ccaecu)]
 	public ulong ActorUid { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x224a7442u)]
+	[DDLRegistration(0x761db945u)]
 	public ulong PrefabActorUid { get; set; } = 0x0000000000000000;
 
 	public new static PrefabZoneActorSpawnData Create(DDLObject ddl) => new(ddl);

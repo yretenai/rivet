@@ -21,16 +21,16 @@ public class SkinItemPart : DDLObjectType, IDDLObjectType<SkinItemPart> {
 		ExcludeInner = ddl.GetValue<bool>(0x656e21b9u, ExcludeInner);
 	}
 
-	[DDLRegistration(0xfe3ec914u, "Slot", "Slot occupied")]
+	[DDLRegistration(0x9c9ee0d7u, "Slot", "Slot occupied")]
 	public x1b3f99b5 Slot { get; set; } = x1b3f99b5.SlotTorsoUpper;
 
-	[DDLRegistration(0xfe3ec914u, "Layer", "Layer occupied")]
+	[DDLRegistration(0xfd88eddbu, "Layer", "Layer occupied")]
 	public x5eb34cd6 Layer { get; set; } = x5eb34cd6.LayerClothingTight;
 
-	[DDLRegistration(0xfe3ec914u, "Hidden", "Should conflicting parts should be hidden instead of being removed")]
+	[DDLRegistration(0xb625a7dau, "Hidden", "Should conflicting parts should be hidden instead of being removed")]
 	public xc837e0c6 Hidden { get; set; } = xc837e0c6.HiddenNone;
 
-	[DDLRegistration(0xfe3ec914u, "Exclude From Inner Check", "Should this part be excluded from checks to switch to the inner model")]
+	[DDLRegistration(0x656e21b9u, "Exclude From Inner Check", "Should this part be excluded from checks to switch to the inner model")]
 	public bool ExcludeInner { get; set; } = false;
 
 	public static SkinItemPart Create(DDLObject ddl) => new(ddl);

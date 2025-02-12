@@ -18,7 +18,7 @@ public class MissionGraphBuiltGame : MissionGraphBuiltShared, IDDLObjectType<Mis
 		NewGameLoadInfo = ddl.GetObject<ObjectiveLoadInfo>(0xb5e9ee61u);
 	}
 
-	[DDLRegistration(0x9c5c42e4u)]
+	[DDLRegistration(0xb5e9ee61u)]
 	public ObjectiveLoadInfo? NewGameLoadInfo { get; set; } = default;
 
 	public new static MissionGraphBuiltGame Create(DDLObject ddl) => new(ddl);

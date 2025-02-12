@@ -18,7 +18,7 @@ public class CameraShakingPrius : DDLObjectType, IDDLObjectType<CameraShakingPri
 		Data = ddl.GetObject<CameraShakingData>(0x9d6333d3u);
 	}
 
-	[DDLRegistration(0xc2d56fa0u)]
+	[DDLRegistration(0x9d6333d3u)]
 	public CameraShakingData? Data { get; set; } = default;
 
 	public static CameraShakingPrius Create(DDLObject ddl) => new(ddl);

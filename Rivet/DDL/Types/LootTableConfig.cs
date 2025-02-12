@@ -20,13 +20,13 @@ public class LootTableConfig : ConfigBase, IDDLObjectType<LootTableConfig> {
 		LootLists = ddl.GetObjects<LootTableElement>(0x35e07f62u);
 	}
 
-	[DDLRegistration(0xbf8c84c7u)]
+	[DDLRegistration(0xf8d19346u)]
 	public uint MinCash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbf8c84c7u)]
+	[DDLRegistration(0xfb227309u)]
 	public uint MaxCash { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xbf8c84c7u)]
+	[DDLRegistration(0x35e07f62u)]
 	public List<LootTableElement?> LootLists { get; set; } = [];
 
 	public new static LootTableConfig Create(DDLObject ddl) => new(ddl);

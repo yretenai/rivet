@@ -19,10 +19,10 @@ public class ProjectileThrowingManagerEntry : DDLObjectType, IDDLObjectType<Proj
 		ThrowingComponent = ddl.GetObject<ProjectileThrowingPrius>(0xc756c6c5u);
 	}
 
-	[DDLRegistration(0x16f6ecadu)]
+	[DDLRegistration(0x0ebac52cu)]
 	public x40742051 ThrowType { get; set; } = x40742051.Normal;
 
-	[DDLRegistration(0x16f6ecadu)]
+	[DDLRegistration(0xc756c6c5u)]
 	public ProjectileThrowingPrius? ThrowingComponent { get; set; } = default;
 
 	public static ProjectileThrowingManagerEntry Create(DDLObject ddl) => new(ddl);

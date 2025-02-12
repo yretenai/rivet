@@ -20,13 +20,13 @@ public class ChunkingMaterialData : DDLObjectType, IDDLObjectType<ChunkingMateri
 		ApplyToChunksOnly = ddl.GetValue<bool>(0xda485bc1u, ApplyToChunksOnly);
 	}
 
-	[DDLRegistration(0x23f81b2eu)]
+	[DDLRegistration(0xc6991700u)]
 	public string? ConstantName { get; set; } = default;
 
-	[DDLRegistration(0x23f81b2eu, description: "Set constant to this value upon chunking")]
+	[DDLRegistration(0x042494f5u, description: "Set constant to this value upon chunking")]
 	public float Value { get; set; } = 0.00f;
 
-	[DDLRegistration(0x23f81b2eu, description: "True : Material constant applied to chunk actors only. False : Applied to chunks and stump actor.")]
+	[DDLRegistration(0xda485bc1u, description: "True : Material constant applied to chunk actors only. False : Applied to chunks and stump actor.")]
 	public bool ApplyToChunksOnly { get; set; } = false;
 
 	public static ChunkingMaterialData Create(DDLObject ddl) => new(ddl);

@@ -51,106 +51,106 @@ public class Cinematic2CameraOrphanTrackDef : DDLObjectType, IDDLObjectType<Cine
 		TextureActions = ddl.GetDictionary<RivetAssetId, Cinematic2TextureActionDef>(0x0ee61756, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2TextureActionDef>(mapId));
 	}
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0x2e6f0680u, description: "Track will only run on the defined platform(s)")]
+	[DDLRegistration(0x92542397u, description: "Track will only run on the defined platform(s)")]
 	public xb52df7e7 PlatformFilter { get; set; } = (xb52df7e7) 0x00000007;
 
-	[DDLRegistration(0x2e6f0680u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
+	[DDLRegistration(0x5f2c5496u, description: "A set of gameplay-defined values to determine if this track should be processed.")]
 	public Cinematic2TrackTagsDef? Tags { get; set; } = default;
 
-	[DDLRegistration(0x2e6f0680u, description: "If set to true, actions on this track will not move when shots are reordered.")]
+	[DDLRegistration(0xd67dc5e4u, description: "If set to true, actions on this track will not move when shots are reordered.")]
 	public bool Global { get; set; } = false;
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x2a95c808u)]
 	public Dictionary<RivetAssetId, Cinematic2BehaviorPlayAnimClipActionDef?> PlayAnimActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x1a0c8f02u)]
 	public Dictionary<RivetAssetId, Cinematic2BehaviorGoToActionDef?> BehaviorGoToActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x0f706a76u)]
 	public Dictionary<RivetAssetId, Cinematic2BehaviorPlayDriverActionDef?> PlayDriverActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x1f501f9au)]
 	public Dictionary<RivetAssetId, Cinematic2DialogActionDef?> DialogActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0xa2c33691u)]
 	public Dictionary<RivetAssetId, Cinematic2LookAtActionDef?> LookAtActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x45b7d6ebu)]
 	public Dictionary<RivetAssetId, Cinematic2BlinkActionDef?> BlinkActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x098f8a05u)]
 	public Dictionary<RivetAssetId, Cinematic2MovieActionDef?> MovieActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0xf4cfc0eeu)]
 	public Dictionary<RivetAssetId, Cinematic2AtmosphereActionDef?> AtmosphereActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0xf24716d6u)]
 	public Dictionary<RivetAssetId, Cinematic2AudioActionDef?> AudioActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0xda497481u)]
 	public Dictionary<RivetAssetId, Cinematic2AudioGameSyncGroupActionDef?> AudioGameSyncGroupActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0xa2a94853u)]
 	public Dictionary<RivetAssetId, Cinematic2AudioGameSyncActionDef?> AudioGameSyncActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x271e731du)]
 	public Dictionary<RivetAssetId, Cinematic2CameraDofFollowActionDef?> FollowActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0xefa3d18au)]
 	public Dictionary<RivetAssetId, Cinematic2HideActionDef?> HideActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0xd5e966f9u)]
 	public Dictionary<RivetAssetId, Cinematic2MaterialOverrideTextureActionDef?> TextureOverrideActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0xd3e6413cu)]
 	public Dictionary<RivetAssetId, Cinematic2MaterialOverrideMaterialActionDef?> MaterialOverrideActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x2ebd96a8u)]
 	public Dictionary<RivetAssetId, Cinematic2PreCompositeMaterialActionDef?> PreCompositeMaterialActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x874a8f12u)]
 	public Dictionary<RivetAssetId, Cinematic2PostCompositeMaterialActionDef?> PostCompositeMaterialActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x169b90f4u)]
 	public Dictionary<RivetAssetId, Cinematic2SyncActionDef?> SyncActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0xc4bea696u)]
 	public Dictionary<RivetAssetId, Cinematic2VfxActionDef?> VfxActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x920a6fd9u)]
 	public Dictionary<RivetAssetId, Cinematic2LightAttachActionDef?> LightAttachActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x6dff192du)]
 	public Dictionary<RivetAssetId, AnimTriggerEventDef?> Events { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0xd18c17a3u)]
 	public Dictionary<RivetAssetId, Cinematic2CharacterLookActionDef?> CharacterActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x03d46a5fu)]
 	public Dictionary<RivetAssetId, Cinematic2OptInLookActionDef?> OptInActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x9134f197u)]
 	public Dictionary<RivetAssetId, Cinematic2ToggleLookActionDef?> ToggleLookActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x9b27e500u)]
 	public Dictionary<RivetAssetId, Cinematic2ToggleLookGroupActionDef?> ToggleGroupActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0xb55ca35cu)]
 	public Dictionary<RivetAssetId, Cinematic2ApplyLookGroupActionDef?> ApplyGroupActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x01b138e5u)]
 	public Dictionary<RivetAssetId, Cinematic2TagActionDef?> TagActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x8b296b87u)]
 	public Dictionary<RivetAssetId, Cinematic2WindActionDef?> WindActions { get; set; } = [];
 
-	[DDLRegistration(0x2e6f0680u)]
+	[DDLRegistration(0x0ee61756u)]
 	public Dictionary<RivetAssetId, Cinematic2TextureActionDef?> TextureActions { get; set; } = [];
 
 	public static Cinematic2CameraOrphanTrackDef Create(DDLObject ddl) => new(ddl);

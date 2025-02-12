@@ -18,7 +18,7 @@ public class MaterialNotes : DDLObjectType, IDDLObjectType<MaterialNotes> {
 		Notes = ddl.GetString(0x18486a4d) ?? Notes;
 	}
 
-	[DDLRegistration(0xf6ee7633u)]
+	[DDLRegistration(0x18486a4du)]
 	public string? Notes { get; set; } = default;
 
 	public static MaterialNotes Create(DDLObject ddl) => new(ddl);

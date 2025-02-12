@@ -18,7 +18,7 @@ public class DamageModifierAddFlagsPrius : DamageModifierOutgoingPrius, IDDLObje
 		AddFlags = ddl.GetBitset<DamageRequestFlags>(0x63187e25u, DamageRequestFlagsValues.Lookup);
 	}
 
-	[DDLRegistration(0x4d354a69u)]
+	[DDLRegistration(0x63187e25u)]
 	public DamageRequestFlags AddFlags { get; set; } = (DamageRequestFlags) 0x00000000;
 
 	public new static DamageModifierAddFlagsPrius Create(DDLObject ddl) => new(ddl);

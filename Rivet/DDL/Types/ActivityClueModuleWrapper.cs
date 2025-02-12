@@ -18,7 +18,7 @@ public class ActivityClueModuleWrapper : DDLObjectType, IDDLObjectType<ActivityC
 		Module = ddl.GetObject<ActivityClueModuleBase>(0x325c684fu);
 	}
 
-	[DDLRegistration(0xcd801ff6u, "Module", "Extra data that can be processed at various points around the Activity")]
+	[DDLRegistration(0x325c684fu, "Module", "Extra data that can be processed at various points around the Activity")]
 	public ActivityClueModuleBase? Module { get; set; } = default;
 
 	public static ActivityClueModuleWrapper Create(DDLObject ddl) => new(ddl);

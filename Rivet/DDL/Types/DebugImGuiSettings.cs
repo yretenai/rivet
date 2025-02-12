@@ -19,10 +19,10 @@ public class DebugImGuiSettings : DDLObjectType, IDDLObjectType<DebugImGuiSettin
 		FontScale = ddl.GetValue<float>(0xe2d94469u, FontScale);
 	}
 
-	[DDLRegistration(0x2472b38eu)]
+	[DDLRegistration(0x58f75616u)]
 	public bool DarkMode { get; set; } = false;
 
-	[DDLRegistration(0x2472b38eu)]
+	[DDLRegistration(0xe2d94469u)]
 	public float FontScale { get; set; } = 1.00f;
 
 	public static DebugImGuiSettings Create(DDLObject ddl) => new(ddl);

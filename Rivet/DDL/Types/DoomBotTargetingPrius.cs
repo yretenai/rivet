@@ -18,7 +18,7 @@ public class DoomBotTargetingPrius : TieredAggroTargetingPrius, IDDLObjectType<D
 		MultiTargetPenalties = ddl.GetObjects<MultiTargetPenalty>(0x6ef99657u);
 	}
 
-	[DDLRegistration(0x968aec5du)]
+	[DDLRegistration(0x6ef99657u)]
 	public List<MultiTargetPenalty?> MultiTargetPenalties { get; set; } = [];
 
 	public new static DoomBotTargetingPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class NormalizeVectorNodeDef : MathNodeBaseDef, IDDLObjectType<NormalizeV
 		Normalized = ddl.GetObject<OutputPlugVec3>(0xa22bde2eu);
 	}
 
-	[DDLRegistration(0x1b3dccadu)]
+	[DDLRegistration(0x49594b39u)]
 	public InputPlugVec3? Vec { get; set; } = default;
 
-	[DDLRegistration(0x1b3dccadu)]
+	[DDLRegistration(0xa22bde2eu)]
 	public OutputPlugVec3? Normalized { get; set; } = default;
 
 	public new static NormalizeVectorNodeDef Create(DDLObject ddl) => new(ddl);

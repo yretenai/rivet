@@ -20,13 +20,13 @@ public class TargetCheckNavDistancePrius : TargetCheckBasePrius, IDDLObjectType<
 		DistanceMax = ddl.GetValue<float>(0x5dbfd4e1u, DistanceMax);
 	}
 
-	[DDLRegistration(0xb7d9223du, description: "Check the distance from this actor.")]
+	[DDLRegistration(0xb54c733cu, description: "Check the distance from this actor.")]
 	public uint ActorHandle { get; set; } = 0x00000000;
 
-	[DDLRegistration(0xb7d9223du)]
+	[DDLRegistration(0x61b2ebb8u)]
 	public float DistanceMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xb7d9223du)]
+	[DDLRegistration(0x5dbfd4e1u)]
 	public float DistanceMax { get; set; } = 30.00f;
 
 	public new static TargetCheckNavDistancePrius Create(DDLObject ddl) => new(ddl);

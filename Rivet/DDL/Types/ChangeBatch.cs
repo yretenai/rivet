@@ -20,13 +20,13 @@ public class ChangeBatch : DDLObjectType, IDDLObjectType<ChangeBatch> {
 		ExplicitChange = ddl.GetValue<bool>(0x7c48c403u, ExplicitChange);
 	}
 
-	[DDLRegistration(0x8ae415abu, description: "All change log entries that are part of the same batch have the same _id; a NULL value is not a valid batch and will be ignored (not batched).")]
+	[DDLRegistration(0x7459aa19u, description: "All change log entries that are part of the same batch have the same _id; a NULL value is not a valid batch and will be ignored (not batched).")]
 	public RivetAssetId _id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x8ae415abu, description: "For the UI, give a meaningful name to each undoable operation.")]
+	[DDLRegistration(0xe03811fdu, description: "For the UI, give a meaningful name to each undoable operation.")]
 	public string? Description { get; set; } = "";
 
-	[DDLRegistration(0x8ae415abu, description: "Indicate if this change needs to be an explicit step in the batch.")]
+	[DDLRegistration(0x7c48c403u, description: "Indicate if this change needs to be an explicit step in the batch.")]
 	public bool ExplicitChange { get; set; } = false;
 
 	public static ChangeBatch Create(DDLObject ddl) => new(ddl);

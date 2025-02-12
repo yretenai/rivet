@@ -27,34 +27,34 @@ public class GameItemData : DDLObjectType, IDDLObjectType<GameItemData> {
 		IdleAnim = ddl.GetString(0xe747921a) ?? IdleAnim;
 	}
 
-	[DDLRegistration(0x7ccdfa11u)]
+	[DDLRegistration(0x5504e96bu)]
 	public RivetAssetId Icon { get; set; } = default;
 
-	[DDLRegistration(0x7ccdfa11u)]
+	[DDLRegistration(0x659416edu)]
 	public RivetAssetId Video { get; set; } = default;
 
-	[DDLRegistration(0x7ccdfa11u)]
+	[DDLRegistration(0xadf8243cu)]
 	public uint ScrapAmount { get; set; } = 0x0000000a;
 
-	[DDLRegistration(0x7ccdfa11u)]
+	[DDLRegistration(0x489fe4edu)]
 	public string? MissionUnlock { get; set; } = default;
 
-	[DDLRegistration(0x7ccdfa11u, "Challenge Mode Prep Behavior", "What to do with items of this type in the hero's inventory when creating a challenge mode save from an existing save file.")]
+	[DDLRegistration(0x8e166dacu, "Challenge Mode Prep Behavior", "What to do with items of this type in the hero's inventory when creating a challenge mode save from an existing save file.")]
 	public xaa9dd5a4 ChallengeModePrepBehavior { get; set; } = xaa9dd5a4.KeepItem;
 
-	[DDLRegistration(0x7ccdfa11u, description: "The name tag to display")]
+	[DDLRegistration(0x7f9decd5u, description: "The name tag to display")]
 	public string? DisplayNameTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x7ccdfa11u, description: "The uppercase name tag to display")]
+	[DDLRegistration(0xc7615dafu, description: "The uppercase name tag to display")]
 	public string? DisplayNameUpperTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x7ccdfa11u, description: "The description tag to display")]
+	[DDLRegistration(0x2182eb16u, description: "The description tag to display")]
 	public string? DisplayDescriptionTag { get; set; } = "INVALID";
 
-	[DDLRegistration(0x7ccdfa11u, "UI Display Object", "Enum for the object to display in the UI")]
+	[DDLRegistration(0x966feb26u, "UI Display Object", "Enum for the object to display in the UI")]
 	public UIDisplayObjectType UIDisplayObject { get; set; } = UIDisplayObjectType.None;
 
-	[DDLRegistration(0x7ccdfa11u, "Idle Anim", "Driver name.")]
+	[DDLRegistration(0xe747921au, "Idle Anim", "Driver name.")]
 	public string? IdleAnim { get; set; } = "";
 
 	public static GameItemData Create(DDLObject ddl) => new(ddl);

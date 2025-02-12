@@ -28,37 +28,37 @@ public class AnimPerformanceClipDef : DDLObjectType, IDDLObjectType<AnimPerforma
 		BodyGestures = ddl.GetObjects<AnimGestureDef>(0x9a327d20u);
 	}
 
-	[DDLRegistration(0xede10c00u)]
+	[DDLRegistration(0x6eb3beb6u)]
 	public string? Name { get; set; } = default;
 
-	[DDLRegistration(0xede10c00u)]
+	[DDLRegistration(0xf4c854c3u)]
 	public bool LipsyncModified { get; set; } = false;
 
-	[DDLRegistration(0xede10c00u, description: "The performance clip to use for gestures and expressions (if this clip has no gestures nor expressions)")]
+	[DDLRegistration(0x97b00d81u, description: "The performance clip to use for gestures and expressions (if this clip has no gestures nor expressions)")]
 	public RivetAssetId DefaultPerformanceClip { get; set; } = default;
 
-	[DDLRegistration(0xede10c00u)]
+	[DDLRegistration(0xc9bbd1ddu)]
 	public RivetAssetId LocalizationPath { get; set; } = default;
 
-	[DDLRegistration(0xede10c00u, description: "How long (in miliseconds) to smooth out the starting animation.")]
+	[DDLRegistration(0x6d275715u, description: "How long (in miliseconds) to smooth out the starting animation.")]
 	public int PreBlendMs { get; set; } = 66;
 
-	[DDLRegistration(0xede10c00u, description: "Phoneme offset (in miliseconds) so they start a little earlier (Disney trick)")]
+	[DDLRegistration(0x3db15040u, description: "Phoneme offset (in miliseconds) so they start a little earlier (Disney trick)")]
 	public int PhonemeOffsetMs { get; set; } = -50;
 
-	[DDLRegistration(0xede10c00u, description: "Technique used to smooth out the phoneme blending between frames.")]
+	[DDLRegistration(0xd442fa0eu, description: "Technique used to smooth out the phoneme blending between frames.")]
 	public x16d59d74 PhonemeSmoothing { get; set; } = x16d59d74.AnnosoftSmoothing;
 
-	[DDLRegistration(0xede10c00u)]
+	[DDLRegistration(0x7b10215du)]
 	public List<AnimFacialPhonemeDef?> FacialPhonemes { get; set; } = [];
 
-	[DDLRegistration(0xede10c00u)]
+	[DDLRegistration(0xcd0fa43au)]
 	public List<AnimFacialExpressionDef?> FacialExpressions { get; set; } = [];
 
-	[DDLRegistration(0xede10c00u)]
+	[DDLRegistration(0x36c6177au)]
 	public string? FacialClipName { get; set; } = default;
 
-	[DDLRegistration(0xede10c00u)]
+	[DDLRegistration(0x9a327d20u)]
 	public List<AnimGestureDef?> BodyGestures { get; set; } = [];
 
 	public static AnimPerformanceClipDef Create(DDLObject ddl) => new(ddl);

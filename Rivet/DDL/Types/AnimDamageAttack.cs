@@ -22,19 +22,19 @@ public class AnimDamageAttack : DDLObjectType, IDDLObjectType<AnimDamageAttack> 
 		ConfigModDefs = ddl.GetObjects<AnimDamageAttackModDef>(0x3d4ae417u);
 	}
 
-	[DDLRegistration(0xc1b3a742u)]
+	[DDLRegistration(0xe03811fdu)]
 	public string? Description { get; set; } = default;
 
-	[DDLRegistration(0xc1b3a742u)]
+	[DDLRegistration(0x9041e2fcu)]
 	public string? SpecializedReact { get; set; } = default;
 
-	[DDLRegistration(0xc1b3a742u)]
+	[DDLRegistration(0xd59e7743u)]
 	public AnimDamageAttackStyleBase? AttackStyle { get; set; } = default;
 
-	[DDLRegistration(0xc1b3a742u, description: "Used if this is a charge attack")]
+	[DDLRegistration(0x1ffef039u, description: "Used if this is a charge attack")]
 	public ChargeAttackParams? ChargeAttack { get; set; } = default;
 
-	[DDLRegistration(0xc1b3a742u, "Config Mod Defs")]
+	[DDLRegistration(0x3d4ae417u, "Config Mod Defs")]
 	public List<AnimDamageAttackModDef?> ConfigModDefs { get; set; } = [];
 
 	public static AnimDamageAttack Create(DDLObject ddl) => new(ddl);

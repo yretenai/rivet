@@ -24,25 +24,25 @@ public class Seat : DDLObjectType, IDDLObjectType<Seat> {
 		AddRidableAnimset = ddl.GetValue<bool>(0xc743b656u, AddRidableAnimset);
 	}
 
-	[DDLRegistration(0x0dccf6d6u, description: "Locator Name for the position of this seat on the vehicle.")]
+	[DDLRegistration(0x5814524du, description: "Locator Name for the position of this seat on the vehicle.")]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0x0dccf6d6u, description: "Anim name for getting in to the vehicle.")]
+	[DDLRegistration(0xa6329c96u, description: "Anim name for getting in to the vehicle.")]
 	public string? MountAnim { get; set; } = default;
 
-	[DDLRegistration(0x0dccf6d6u, description: "Anim name for getting out of the vehicle.")]
+	[DDLRegistration(0x672e288au, description: "Anim name for getting out of the vehicle.")]
 	public string? DismountAnim { get; set; } = default;
 
-	[DDLRegistration(0x0dccf6d6u, description: "Anim name for the jump to perform after Dismount has finished.")]
+	[DDLRegistration(0xcb3dc9d4u, description: "Anim name for the jump to perform after Dismount has finished.")]
 	public string? JumpAnim { get; set; } = default;
 
-	[DDLRegistration(0x0dccf6d6u, description: "Anim name for looping seated anim")]
+	[DDLRegistration(0xe506c33fu, description: "Anim name for looping seated anim")]
 	public string? SeatedAnim { get; set; } = default;
 
-	[DDLRegistration(0x0dccf6d6u, description: "Additive anim name to play on the passenger")]
+	[DDLRegistration(0x9f2d3c03u, description: "Additive anim name to play on the passenger")]
 	public string? AdditiveAnim { get; set; } = default;
 
-	[DDLRegistration(0x0dccf6d6u, description: "Add BotAnimSet defined in RidablePrius to bot using this seat")]
+	[DDLRegistration(0xc743b656u, description: "Add BotAnimSet defined in RidablePrius to bot using this seat")]
 	public bool AddRidableAnimset { get; set; } = true;
 
 	public static Seat Create(DDLObject ddl) => new(ddl);

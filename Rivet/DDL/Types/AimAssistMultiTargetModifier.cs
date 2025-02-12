@@ -23,22 +23,22 @@ public class AimAssistMultiTargetModifier : DDLObjectType, IDDLObjectType<AimAss
 		CenterMod = ddl.GetValue<float>(0x9237bce3u, CenterMod);
 	}
 
-	[DDLRegistration(0x30050cc0u)]
+	[DDLRegistration(0xcdd88655u)]
 	public bool Enable { get; set; } = true;
 
-	[DDLRegistration(0x30050cc0u)]
+	[DDLRegistration(0xd496c408u)]
 	public uint MinTargets { get; set; } = 0x00000002;
 
-	[DDLRegistration(0x30050cc0u)]
+	[DDLRegistration(0x0f12d4a6u)]
 	public uint ManyTargetCount { get; set; } = 0x00000006;
 
-	[DDLRegistration(0x30050cc0u)]
+	[DDLRegistration(0x259d7ff2u)]
 	public float FrictionMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0x30050cc0u)]
+	[DDLRegistration(0xcc015279u)]
 	public float MagnetMod { get; set; } = 1.00f;
 
-	[DDLRegistration(0x30050cc0u)]
+	[DDLRegistration(0x9237bce3u)]
 	public float CenterMod { get; set; } = 1.00f;
 
 	public static AimAssistMultiTargetModifier Create(DDLObject ddl) => new(ddl);

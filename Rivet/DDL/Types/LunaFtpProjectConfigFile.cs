@@ -23,22 +23,22 @@ public class LunaFtpProjectConfigFile : DDLObjectType, IDDLObjectType<LunaFtpPro
 		Platforms = ddl.GetBitset<x5753f3c8>(0x957c19efu, x5753f3c8Values.Lookup);
 	}
 
-	[DDLRegistration(0xbb3c57aeu)]
+	[DDLRegistration(0xee6efffbu)]
 	public string? ProjectId { get; set; } = "";
 
-	[DDLRegistration(0xbb3c57aeu)]
+	[DDLRegistration(0x337823f3u)]
 	public string? IgProject { get; set; } = "";
 
-	[DDLRegistration(0xbb3c57aeu)]
+	[DDLRegistration(0xa15b4218u)]
 	public string? CodeName { get; set; } = "";
 
-	[DDLRegistration(0xbb3c57aeu)]
+	[DDLRegistration(0xef896febu)]
 	public string? TitleName { get; set; } = "";
 
-	[DDLRegistration(0xbb3c57aeu)]
+	[DDLRegistration(0x6d1bcd43u)]
 	public string? ProductionBranch { get; set; } = default;
 
-	[DDLRegistration(0xbb3c57aeu)]
+	[DDLRegistration(0x957c19efu)]
 	public x5753f3c8 Platforms { get; set; } = (x5753f3c8) 0x00000007;
 
 	public static LunaFtpProjectConfigFile Create(DDLObject ddl) => new(ddl);

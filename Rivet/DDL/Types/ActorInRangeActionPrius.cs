@@ -25,28 +25,28 @@ public class ActorInRangeActionPrius : DDLObjectType, IDDLObjectType<ActorInRang
 		YMax = ddl.GetValue<float>(0x5d994dc1u, YMax);
 	}
 
-	[DDLRegistration(0xa8a21294u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0xa8a21294u)]
+	[DDLRegistration(0x218ab028u)]
 	public float AngleDegreesMin { get; set; } = -180.00f;
 
-	[DDLRegistration(0xa8a21294u)]
+	[DDLRegistration(0x1d878f71u)]
 	public float AngleDegreesMax { get; set; } = 180.00f;
 
-	[DDLRegistration(0xa8a21294u, description: "This will test if the Actor(s) or Actor Group(s) are outside the angle range specified rather than inside.")]
+	[DDLRegistration(0xc38c7115u, description: "This will test if the Actor(s) or Actor Group(s) are outside the angle range specified rather than inside.")]
 	public bool IsOutsideAngleRange { get; set; } = false;
 
-	[DDLRegistration(0xa8a21294u)]
+	[DDLRegistration(0x61b2ebb8u)]
 	public float DistanceMin { get; set; } = 0.00f;
 
-	[DDLRegistration(0xa8a21294u)]
+	[DDLRegistration(0x5dbfd4e1u)]
 	public float DistanceMax { get; set; } = 50.00f;
 
-	[DDLRegistration(0xa8a21294u)]
+	[DDLRegistration(0x61947298u)]
 	public float YMin { get; set; } = -3.00f;
 
-	[DDLRegistration(0xa8a21294u)]
+	[DDLRegistration(0x5d994dc1u)]
 	public float YMax { get; set; } = 3.00f;
 
 	public static ActorInRangeActionPrius Create(DDLObject ddl) => new(ddl);

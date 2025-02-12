@@ -20,13 +20,13 @@ public class AnimDriverRandomElemDef : DDLObjectType, IDDLObjectType<AnimDriverR
 		Weight = ddl.GetValue<float>(0x39b51b26u, Weight);
 	}
 
-	[DDLRegistration(0x641f382du)]
+	[DDLRegistration(0x04a96b99u)]
 	public string? RefNodeName { get; set; } = "";
 
-	[DDLRegistration(0x641f382du)]
+	[DDLRegistration(0x9d7bc01fu)]
 	public uint OutputIndex { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x641f382du)]
+	[DDLRegistration(0x39b51b26u)]
 	public float Weight { get; set; } = 0.00f;
 
 	public static AnimDriverRandomElemDef Create(DDLObject ddl) => new(ddl);

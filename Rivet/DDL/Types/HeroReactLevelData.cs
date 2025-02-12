@@ -21,16 +21,16 @@ public class HeroReactLevelData : DDLObjectType, IDDLObjectType<HeroReactLevelDa
 		CameraShake = ddl.GetObject<CameraShakingData>(0xefd546cau);
 	}
 
-	[DDLRegistration(0xa9470242u)]
+	[DDLRegistration(0x54654134u)]
 	public float DistanceScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa9470242u)]
+	[DDLRegistration(0xc6d5613eu)]
 	public float AnimRateScale { get; set; } = 1.00f;
 
-	[DDLRegistration(0xa9470242u)]
+	[DDLRegistration(0xef493585u)]
 	public float ReReactCooldown { get; set; } = 5.00f;
 
-	[DDLRegistration(0xa9470242u)]
+	[DDLRegistration(0xefd546cau)]
 	public CameraShakingData? CameraShake { get; set; } = default;
 
 	public static HeroReactLevelData Create(DDLObject ddl) => new(ddl);

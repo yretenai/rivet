@@ -22,19 +22,19 @@ public class EngineControlActorData : DDLObjectType, IDDLObjectType<EngineContro
 		ObjToWorld = ddl.GetObject<DDLTransform>(0x3842c592u);
 	}
 
-	[DDLRegistration(0x0d85ea29u)]
+	[DDLRegistration(0x0a7308e7u)]
 	public Dictionary<uint, bool> ActiveLooks { get; set; } = [];
 
-	[DDLRegistration(0x0d85ea29u)]
+	[DDLRegistration(0xb8132d8bu)]
 	public ActorDef? ActorDef { get; set; } = default;
 
-	[DDLRegistration(0x0d85ea29u)]
+	[DDLRegistration(0x5c4d599fu)]
 	public EngineControlActorAnimInfo? AnimInfo { get; set; } = default;
 
-	[DDLRegistration(0x0d85ea29u)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x0d85ea29u)]
+	[DDLRegistration(0x3842c592u)]
 	public DDLTransform? ObjToWorld { get; set; } = default;
 
 	public static EngineControlActorData Create(DDLObject ddl) => new(ddl);

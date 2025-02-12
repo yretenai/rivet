@@ -26,31 +26,31 @@ public class MaterialAlpha : DDLObjectType, IDDLObjectType<MaterialAlpha> {
 		TemporalAA = ddl.GetEnum<xb87f7049>(0x26321147u, xb87f7049Values.Lookup);
 	}
 
-	[DDLRegistration(0x2715e9d5u, "Blend Mode")]
+	[DDLRegistration(0x1b4f6c9au, "Blend Mode")]
 	public BlendType BlendType { get; set; } = BlendType.Opaque;
 
-	[DDLRegistration(0x2715e9d5u, "Alpha", "This alpha value is multiplied by the matgraph's alpha and the per-object alpha to get the final alpha value")]
+	[DDLRegistration(0xc9b3f5abu, "Alpha", "This alpha value is multiplied by the matgraph's alpha and the per-object alpha to get the final alpha value")]
 	public float Alpha { get; set; } = 1.00f;
 
-	[DDLRegistration(0x2715e9d5u, "Alpha Test", "Pixels will alpha values below this are culled, except if the blend mode is Hybrid in which case they are rendered as Blended")]
+	[DDLRegistration(0x5d3ca67eu, "Alpha Test", "Pixels will alpha values below this are culled, except if the blend mode is Hybrid in which case they are rendered as Blended")]
 	public float AlphaTest { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2715e9d5u, "Lit", "If unchecked, this will disable lighting on alpha materials even if the matgraph is lit")]
+	[DDLRegistration(0x778ea754u, "Lit", "If unchecked, this will disable lighting on alpha materials even if the matgraph is lit")]
 	public bool Lit { get; set; } = true;
 
-	[DDLRegistration(0x2715e9d5u, "Depth Pass", "If checked, this will force a depth pass to prevent overlapping blended triangles within the same model")]
+	[DDLRegistration(0x67eff2a3u, "Depth Pass", "If checked, this will force a depth pass to prevent overlapping blended triangles within the same model")]
 	public bool DepthPass { get; set; } = false;
 
-	[DDLRegistration(0x2715e9d5u, "Opaque LoD", "This optimizes materials by fading out alpha blending or alpha testing on the second material LoD. Blended materials will transition to opaque. Opaque materials with alpha test will transition to opaque material without alpha test (saving a depth pre-pass). Hybrid materials will transition to alpha-tested opaque materials (saving the blended pass).")]
+	[DDLRegistration(0xc67375fbu, "Opaque LoD", "This optimizes materials by fading out alpha blending or alpha testing on the second material LoD. Blended materials will transition to opaque. Opaque materials with alpha test will transition to opaque material without alpha test (saving a depth pre-pass). Hybrid materials will transition to alpha-tested opaque materials (saving the blended pass).")]
 	public bool ForceOpaqueLoDs { get; set; } = false;
 
-	[DDLRegistration(0x2715e9d5u, "Use Ray Traced Shadows Alpha Test", "If checked, the ray traced shadows alpha test value will be used instead of the normal alpha test value. This will also force the use of the alpha cutoff on blended materials.")]
+	[DDLRegistration(0xb4ba3e9fu, "Use Ray Traced Shadows Alpha Test", "If checked, the ray traced shadows alpha test value will be used instead of the normal alpha test value. This will also force the use of the alpha cutoff on blended materials.")]
 	public bool UseRayTracedShadowsAlphaTest { get; set; } = false;
 
-	[DDLRegistration(0x2715e9d5u, "Ray Traced Shadows Alpha Test", "The alpha test value that should be used by the ray traced shadows instead of the default alpha test.")]
+	[DDLRegistration(0x0f73883du, "Ray Traced Shadows Alpha Test", "The alpha test value that should be used by the ray traced shadows instead of the default alpha test.")]
 	public float RayTracedShadowsAlphaTest { get; set; } = 0.00f;
 
-	[DDLRegistration(0x2715e9d5u, "Temporal AA", "For non-opaque materials, this forces temporal aa to use more of the current buffer and less of the history buffer")]
+	[DDLRegistration(0x26321147u, "Temporal AA", "For non-opaque materials, this forces temporal aa to use more of the current buffer and less of the history buffer")]
 	public xb87f7049 TemporalAA { get; set; } = xb87f7049.NonResponsive;
 
 	public static MaterialAlpha Create(DDLObject ddl) => new(ddl);

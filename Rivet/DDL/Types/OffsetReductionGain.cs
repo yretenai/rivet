@@ -20,13 +20,13 @@ public class OffsetReductionGain : OffsetReductionMode, IDDLObjectType<OffsetRed
 		Speed = ddl.GetValue<float>(0x16753237u, Speed);
 	}
 
-	[DDLRegistration(0xd8075e3cu, "Gain")]
+	[DDLRegistration(0xe005edb0u, "Gain")]
 	public float Gain { get; set; } = -2.00f;
 
-	[DDLRegistration(0xd8075e3cu, "Damp")]
+	[DDLRegistration(0x6cd3ba39u, "Damp")]
 	public float Damp { get; set; } = -40.00f;
 
-	[DDLRegistration(0xd8075e3cu, "Speed")]
+	[DDLRegistration(0x16753237u, "Speed")]
 	public float Speed { get; set; } = 7.00f;
 
 	public new static OffsetReductionGain Create(DDLObject ddl) => new(ddl);

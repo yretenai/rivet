@@ -21,16 +21,16 @@ public class JointAttachmentItem : DDLObjectType, IDDLObjectType<JointAttachment
 		AttachPositionOnly = ddl.GetValue<bool>(0x167ea522u, AttachPositionOnly);
 	}
 
-	[DDLRegistration(0x32cf0860u, "Attached Actor")]
+	[DDLRegistration(0xdb67f5f9u, "Attached Actor")]
 	public RivetAssetId AttachedActor { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x32cf0860u, "Attach Point")]
+	[DDLRegistration(0xd7124ea3u, "Attach Point")]
 	public string? AttachPoint { get; set; } = default;
 
-	[DDLRegistration(0x32cf0860u, "Attach Relative")]
+	[DDLRegistration(0x710e1574u, "Attach Relative")]
 	public bool AttachRelative { get; set; } = false;
 
-	[DDLRegistration(0x32cf0860u, "No Rotation")]
+	[DDLRegistration(0x167ea522u, "No Rotation")]
 	public bool AttachPositionOnly { get; set; } = false;
 
 	public static JointAttachmentItem Create(DDLObject ddl) => new(ddl);

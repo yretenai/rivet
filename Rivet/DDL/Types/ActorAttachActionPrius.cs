@@ -24,25 +24,25 @@ public class ActorAttachActionPrius : DDLObjectType, IDDLObjectType<ActorAttachA
 		AttachFixedPosition = ddl.GetValue<bool>(0x5fc2c932u, AttachFixedPosition);
 	}
 
-	[DDLRegistration(0x5ffd085fu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Actor;
 
-	[DDLRegistration(0x5ffd085fu, "Attach Point", "Joint or bone name of parent Actor.")]
+	[DDLRegistration(0xd7124ea3u, "Attach Point", "Joint or bone name of parent Actor.")]
 	public string? AttachPoint { get; set; } = default;
 
-	[DDLRegistration(0x5ffd085fu, "Attach Curve T", "If the parent Actor is a curve, the T-value to attach to on that curve.")]
+	[DDLRegistration(0x4ae88ba1u, "Attach Curve T", "If the parent Actor is a curve, the T-value to attach to on that curve.")]
 	public float AttachCurveT { get; set; } = -1.00f;
 
-	[DDLRegistration(0x5ffd085fu, "Attach Closest Curve Pos", "If the parent Actor is a curve, this will find the closest point on that curve and attach to it.")]
+	[DDLRegistration(0xa2b7cbf9u, "Attach Closest Curve Pos", "If the parent Actor is a curve, this will find the closest point on that curve and attach to it.")]
 	public bool AttachClosestCurvePos { get; set; } = false;
 
-	[DDLRegistration(0x5ffd085fu, "Attach Relative", "If enabled, the attachment attaches relative to where it is placed.")]
+	[DDLRegistration(0x710e1574u, "Attach Relative", "If enabled, the attachment attaches relative to where it is placed.")]
 	public bool AttachRelative { get; set; } = false;
 
-	[DDLRegistration(0x5ffd085fu, "No Rotation", "If enabled, the attachment will not follow the parent rotation.")]
+	[DDLRegistration(0x167ea522u, "No Rotation", "If enabled, the attachment will not follow the parent rotation.")]
 	public bool AttachPositionOnly { get; set; } = false;
 
-	[DDLRegistration(0x5ffd085fu, "Fixed Position", "Prevent anything else from moving the attached, so it stays fixed relative to the parent.")]
+	[DDLRegistration(0x5fc2c932u, "Fixed Position", "Prevent anything else from moving the attached, so it stays fixed relative to the parent.")]
 	public bool AttachFixedPosition { get; set; } = false;
 
 	public static ActorAttachActionPrius Create(DDLObject ddl) => new(ddl);

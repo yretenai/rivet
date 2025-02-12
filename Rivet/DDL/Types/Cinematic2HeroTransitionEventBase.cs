@@ -19,10 +19,10 @@ public class Cinematic2HeroTransitionEventBase : EventBase, IDDLObjectType<Cinem
 		TransitionData = ddl.GetObject<HeroCinematicTransitionDataBase>(0x33728871u);
 	}
 
-	[DDLRegistration(0x39de3c75u)]
+	[DDLRegistration(0x4f232549u)]
 	public bool CurrentShotOnly { get; set; } = false;
 
-	[DDLRegistration(0x39de3c75u, "State Data")]
+	[DDLRegistration(0x33728871u, "State Data")]
 	public HeroCinematicTransitionDataBase? TransitionData { get; set; } = default;
 
 	public new static Cinematic2HeroTransitionEventBase Create(DDLObject ddl) => new(ddl);

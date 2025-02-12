@@ -19,10 +19,10 @@ public class OnPortalTransitionActionPrius : DDLObjectType, IDDLObjectType<OnPor
 		StartActive = ddl.GetValue<bool>(0x3e035e82u, StartActive);
 	}
 
-	[DDLRegistration(0x1eae7038u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Loading;
 
-	[DDLRegistration(0x1eae7038u)]
+	[DDLRegistration(0x3e035e82u)]
 	public bool StartActive { get; set; } = true;
 
 	public static OnPortalTransitionActionPrius Create(DDLObject ddl) => new(ddl);

@@ -19,10 +19,10 @@ public class ButtonPressedEvent : EventBase, IDDLObjectType<ButtonPressedEvent> 
 		Instigator = ddl.GetValue<uint>(0x33f2e3d5u, Instigator);
 	}
 
-	[DDLRegistration(0x2cd5a7f5u, "The button pressed")]
+	[DDLRegistration(0xb346619fu, "The button pressed")]
 	public int ButtonIndex { get; set; } = 0;
 
-	[DDLRegistration(0x2cd5a7f5u, "The actor who pressed the button")]
+	[DDLRegistration(0x33f2e3d5u, "The actor who pressed the button")]
 	public uint Instigator { get; set; } = 0x00000000;
 
 	public new static ButtonPressedEvent Create(DDLObject ddl) => new(ddl);

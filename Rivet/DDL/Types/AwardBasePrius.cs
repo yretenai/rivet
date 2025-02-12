@@ -26,31 +26,31 @@ public class AwardBasePrius : DDLObjectType, IDDLObjectType<AwardBasePrius> {
 		Prize = ddl.GetObject<AwardPrizeBasePrius>(0x489b4700u);
 	}
 
-	[DDLRegistration(0xd4f8d602u, "Code Name", "Code name for this award (which will be used for awards that need save data as well as for the UDS data). Must not have spaces.")]
+	[DDLRegistration(0xa15b4218u, "Code Name", "Code name for this award (which will be used for awards that need save data as well as for the UDS data). Must not have spaces.")]
 	public string? CodeName { get; set; } = default;
 
-	[DDLRegistration(0xd4f8d602u, "Name Tag", "Localization tag for the short name of this award.")]
+	[DDLRegistration(0xa0041b54u, "Name Tag", "Localization tag for the short name of this award.")]
 	public string? NameLocTag { get; set; } = default;
 
-	[DDLRegistration(0xd4f8d602u, "Desc Tag", "Localization tag for the longer description of this award.")]
+	[DDLRegistration(0xe02bccb2u, "Desc Tag", "Localization tag for the longer description of this award.")]
 	public string? DescLocTag { get; set; } = default;
 
-	[DDLRegistration(0xd4f8d602u, "Image Path", "Path for the image to display for this award in the OS. Must be a 512x512 png.")]
+	[DDLRegistration(0x3c1a7294u, "Image Path", "Path for the image to display for this award in the OS. Must be a 512x512 png.")]
 	public RivetAssetId ImagePath { get; set; } = default;
 
-	[DDLRegistration(0xd4f8d602u, "Level", "Level or grade of award. See the group type field and its tooltip for the point limits and requirements for each award group.")]
+	[DDLRegistration(0x83b900d2u, "Level", "Level or grade of award. See the group type field and its tooltip for the point limits and requirements for each award group.")]
 	public xfb81cf7c Level { get; set; } = xfb81cf7c.Bronze;
 
-	[DDLRegistration(0xd4f8d602u, "Hidden?", "True if award details are hidden until unlocked (to avoid spoilers).")]
+	[DDLRegistration(0xb625a7dau, "Hidden?", "True if award details are hidden until unlocked (to avoid spoilers).")]
 	public bool Hidden { get; set; } = false;
 
-	[DDLRegistration(0xd4f8d602u, "Progressive?", "Should the OS display the user's progress towards this award?")]
+	[DDLRegistration(0x54bc7138u, "Progressive?", "Should the OS display the user's progress towards this award?")]
 	public bool Progressive { get; set; } = false;
 
-	[DDLRegistration(0xd4f8d602u, "Target Value", "When the current value >= the target value for this stat, give the award. Initial value is always 0.")]
+	[DDLRegistration(0xc1574041u, "Target Value", "When the current value >= the target value for this stat, give the award. Initial value is always 0.")]
 	public uint TargetValue { get; set; } = 0x00000001;
 
-	[DDLRegistration(0xd4f8d602u, "Prize", "Prius to use to give this prize once this award has been completed.")]
+	[DDLRegistration(0x489b4700u, "Prize", "Prius to use to give this prize once this award has been completed.")]
 	public AwardPrizeBasePrius? Prize { get; set; } = default;
 
 	public static AwardBasePrius Create(DDLObject ddl) => new(ddl);

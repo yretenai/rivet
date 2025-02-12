@@ -19,10 +19,10 @@ public class SetAtmosphereDefEngineCommand : DDLObjectType, IDDLObjectType<SetAt
 		Def = ddl.GetObject<AtmosphereDef>(0x2691c8a8u);
 	}
 
-	[DDLRegistration(0x4d73857du)]
+	[DDLRegistration(0x3bc44bbfu)]
 	public RivetAssetId Path { get; set; } = default;
 
-	[DDLRegistration(0x4d73857du)]
+	[DDLRegistration(0x2691c8a8u)]
 	public AtmosphereDef? Def { get; set; } = default;
 
 	public static SetAtmosphereDefEngineCommand Create(DDLObject ddl) => new(ddl);

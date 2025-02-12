@@ -18,7 +18,7 @@ public class CameraEnableObstructorPrius : DDLObjectType, IDDLObjectType<CameraE
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 	}
 
-	[DDLRegistration(0x124f9c5du, description: "Enable this object as camera obstructor, fading it out when the camera intersects it.")]
+	[DDLRegistration(0x5113d8bcu, description: "Enable this object as camera obstructor, fading it out when the camera intersects it.")]
 	public bool Enabled { get; set; } = false;
 
 	public static CameraEnableObstructorPrius Create(DDLObject ddl) => new(ddl);

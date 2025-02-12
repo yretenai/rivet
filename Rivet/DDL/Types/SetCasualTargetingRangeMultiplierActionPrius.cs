@@ -19,10 +19,10 @@ public class SetCasualTargetingRangeMultiplierActionPrius : DDLObjectType, IDDLO
 		Multiplier = ddl.GetValue<float>(0x7facf762u, Multiplier);
 	}
 
-	[DDLRegistration(0xecad0cbcu)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Weapon;
 
-	[DDLRegistration(0xecad0cbcu, "Multiplier", "Multiplier for targeting range in casual mode.")]
+	[DDLRegistration(0x7facf762u, "Multiplier", "Multiplier for targeting range in casual mode.")]
 	public float Multiplier { get; set; } = 1.00f;
 
 	public static SetCasualTargetingRangeMultiplierActionPrius Create(DDLObject ddl) => new(ddl);

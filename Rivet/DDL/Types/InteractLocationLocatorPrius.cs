@@ -26,31 +26,31 @@ public class InteractLocationLocatorPrius : InteractLocationPrius, IDDLObjectTyp
 		UserFacingMax = ddl.GetValue<float>(0xe9d83ef4u, UserFacingMax);
 	}
 
-	[DDLRegistration(0x46817914u, description: "The origin of the UseBox defined below.")]
+	[DDLRegistration(0x7bac1d57u, description: "The origin of the UseBox defined below.")]
 	public string? Locator { get; set; } = default;
 
-	[DDLRegistration(0x46817914u, description: "User is attached here during interact.")]
+	[DDLRegistration(0x2b968714u, description: "User is attached here during interact.")]
 	public string? AnimLocator { get; set; } = default;
 
-	[DDLRegistration(0x46817914u, description: "Warp to here when done.")]
+	[DDLRegistration(0xd20b2f39u, description: "Warp to here when done.")]
 	public string? ExitLocator { get; set; } = default;
 
-	[DDLRegistration(0x46817914u, "Use Box Z Min", "Actor relative min-z value to define the trigger space")]
+	[DDLRegistration(0x58aa3669u, "Use Box Z Min", "Actor relative min-z value to define the trigger space")]
 	public float UseBoxZMin { get; set; } = -0.25f;
 
-	[DDLRegistration(0x46817914u, "Use Box Z Max", "Actor relative max-z value to define the trigger space")]
+	[DDLRegistration(0x64a70930u, "Use Box Z Max", "Actor relative max-z value to define the trigger space")]
 	public float UseBoxZMax { get; set; } = 0.85f;
 
-	[DDLRegistration(0x46817914u, "Use Box Width", "Actor relative x-width to define the trigger space")]
+	[DDLRegistration(0x186a0ff0u, "Use Box Width", "Actor relative x-width to define the trigger space")]
 	public float UseBoxWidth { get; set; } = 0.60f;
 
-	[DDLRegistration(0x46817914u, "Use Box Height", "Actor relative height to define the trigger space")]
+	[DDLRegistration(0x31b7b58du, "Use Box Height", "Actor relative height to define the trigger space")]
 	public float UseBoxHeight { get; set; } = 2.00f;
 
-	[DDLRegistration(0x46817914u, "User Facing Min", "Minimum valid hero facing angle delta from reference direction")]
+	[DDLRegistration(0xd5d501adu, "User Facing Min", "Minimum valid hero facing angle delta from reference direction")]
 	public float UserFacingMin { get; set; } = 120.00f;
 
-	[DDLRegistration(0x46817914u, "User Facing Max", "Maximum valid hero facing angle delta from reference direction")]
+	[DDLRegistration(0xe9d83ef4u, "User Facing Max", "Maximum valid hero facing angle delta from reference direction")]
 	public float UserFacingMax { get; set; } = 180.00f;
 
 	public new static InteractLocationLocatorPrius Create(DDLObject ddl) => new(ddl);

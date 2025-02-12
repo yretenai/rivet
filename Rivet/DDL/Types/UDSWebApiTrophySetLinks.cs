@@ -18,7 +18,7 @@ public class UDSWebApiTrophySetLinks : DDLObjectType, IDDLObjectType<UDSWebApiTr
 		TrophyGroups = ddl.GetObjects<UDSWebApiObjectLink>(0xcdda5b95u);
 	}
 
-	[DDLRegistration(0xa85da6c7u)]
+	[DDLRegistration(0xcdda5b95u)]
 	public List<UDSWebApiObjectLink?> TrophyGroups { get; set; } = [];
 
 	public static UDSWebApiTrophySetLinks Create(DDLObject ddl) => new(ddl);

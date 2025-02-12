@@ -18,7 +18,7 @@ public class DevstatsTimeConfig : ConfigBase, IDDLObjectType<DevstatsTimeConfig>
 		IdleTimeout = ddl.GetValue<float>(0xe402a39fu, IdleTimeout);
 	}
 
-	[DDLRegistration(0xe738536cu)]
+	[DDLRegistration(0xe402a39fu)]
 	public float IdleTimeout { get; set; } = 30.00f;
 
 	public new static DevstatsTimeConfig Create(DDLObject ddl) => new(ddl);

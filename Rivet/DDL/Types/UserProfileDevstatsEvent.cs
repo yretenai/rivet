@@ -25,28 +25,28 @@ public class UserProfileDevstatsEvent : EventBase, IDDLObjectType<UserProfileDev
 		Restrict_ugm = ddl.GetValue<bool>(0x532b5daeu, Restrict_ugm);
 	}
 
-	[DDLRegistration(0x80075b2du)]
+	[DDLRegistration(0x7b66310eu)]
 	public string? Psn_account { get; set; } = default;
 
-	[DDLRegistration(0x80075b2du)]
+	[DDLRegistration(0xc08ba6d6u)]
 	public ulong Np_account_id { get; set; } = 0x0000000000000000;
 
-	[DDLRegistration(0x80075b2du)]
+	[DDLRegistration(0xd7acae93u)]
 	public string? Language { get; set; } = default;
 
-	[DDLRegistration(0x80075b2du)]
+	[DDLRegistration(0x36b6ba27u)]
 	public string? Region { get; set; } = default;
 
-	[DDLRegistration(0x80075b2du)]
+	[DDLRegistration(0xe33ca663u)]
 	public bool Is_guest { get; set; } = false;
 
-	[DDLRegistration(0x80075b2du)]
+	[DDLRegistration(0xb3287f9bu)]
 	public int Age { get; set; } = 0;
 
-	[DDLRegistration(0x80075b2du)]
+	[DDLRegistration(0xb4ce10e5u)]
 	public bool Restrict_chat { get; set; } = false;
 
-	[DDLRegistration(0x80075b2du)]
+	[DDLRegistration(0x532b5daeu)]
 	public bool Restrict_ugm { get; set; } = false;
 
 	public new static UserProfileDevstatsEvent Create(DDLObject ddl) => new(ddl);

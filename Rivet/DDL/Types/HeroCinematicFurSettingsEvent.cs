@@ -21,16 +21,16 @@ public class HeroCinematicFurSettingsEvent : EventBase, IDDLObjectType<HeroCinem
 		FurWindUpdateEnabled = ddl.GetValue<bool>(0x64b8c31au, FurWindUpdateEnabled);
 	}
 
-	[DDLRegistration(0x1b75c629u, description: "Enable or disable fur wetness.")]
+	[DDLRegistration(0xf51fc5dbu, description: "Enable or disable fur wetness.")]
 	public bool FurWetnessEnabled { get; set; } = true;
 
-	[DDLRegistration(0x1b75c629u, description: "Enable or disable fur wind.")]
+	[DDLRegistration(0x2609d20cu, description: "Enable or disable fur wind.")]
 	public bool FurWindEnabled { get; set; } = true;
 
-	[DDLRegistration(0x1b75c629u, description: "Enable or disable gameplay driven updates of fur wetness.")]
+	[DDLRegistration(0x43fe2735u, description: "Enable or disable gameplay driven updates of fur wetness.")]
 	public bool FurWetnessUpdateEnabled { get; set; } = true;
 
-	[DDLRegistration(0x1b75c629u, description: "Enable or disable gameplay driven updates of fur wind.")]
+	[DDLRegistration(0x64b8c31au, description: "Enable or disable gameplay driven updates of fur wind.")]
 	public bool FurWindUpdateEnabled { get; set; } = true;
 
 	public new static HeroCinematicFurSettingsEvent Create(DDLObject ddl) => new(ddl);

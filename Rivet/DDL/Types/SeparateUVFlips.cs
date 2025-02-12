@@ -19,10 +19,10 @@ public class SeparateUVFlips : DDLObjectType, IDDLObjectType<SeparateUVFlips> {
 		V = ddl.GetEnum<x51f134c2>(0xb98b6c8au, x51f134c2Values.Lookup);
 	}
 
-	[DDLRegistration(0xc3070715u)]
+	[DDLRegistration(0x20823d30u)]
 	public x51f134c2 U { get; set; } = x51f134c2.Random;
 
-	[DDLRegistration(0xc3070715u)]
+	[DDLRegistration(0xb98b6c8au)]
 	public x51f134c2 V { get; set; } = x51f134c2.Random;
 
 	public static SeparateUVFlips Create(DDLObject ddl) => new(ddl);

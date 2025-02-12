@@ -20,13 +20,13 @@ public class HexapodWeaponEmitterPrius : ComponentEmitterBasePrius, IDDLObjectTy
 		EmitFromUser = ddl.GetValue<bool>(0x13b721dbu, EmitFromUser);
 	}
 
-	[DDLRegistration(0x3323edd2u)]
+	[DDLRegistration(0x3c7848ccu)]
 	public List<string?> Locators { get; set; } = [];
 
-	[DDLRegistration(0x3323edd2u)]
+	[DDLRegistration(0x3bfa5d66u)]
 	public float ZOffset { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3323edd2u)]
+	[DDLRegistration(0x13b721dbu)]
 	public bool EmitFromUser { get; set; } = false;
 
 	public new static HexapodWeaponEmitterPrius Create(DDLObject ddl) => new(ddl);

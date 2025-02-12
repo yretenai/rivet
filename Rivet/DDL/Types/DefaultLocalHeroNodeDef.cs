@@ -18,7 +18,7 @@ public class DefaultLocalHeroNodeDef : ActorNodeBaseDef, IDDLObjectType<DefaultL
 		Hero = ddl.GetObject<OutputPlugActor>(0x615eae36u);
 	}
 
-	[DDLRegistration(0x6f6e8761u)]
+	[DDLRegistration(0x615eae36u)]
 	public OutputPlugActor? Hero { get; set; } = default;
 
 	public new static DefaultLocalHeroNodeDef Create(DDLObject ddl) => new(ddl);

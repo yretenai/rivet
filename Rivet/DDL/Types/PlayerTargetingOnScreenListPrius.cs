@@ -23,22 +23,22 @@ public class PlayerTargetingOnScreenListPrius : PlayerTargetingStickControlPrius
 		AimCameraAtTarget = ddl.GetValue<bool>(0xe3f7078du, AimCameraAtTarget);
 	}
 
-	[DDLRegistration(0xb53f1aaau, "Target Type")]
+	[DDLRegistration(0x85109145u, "Target Type")]
 	public TargetType TargetTypes { get; set; } = (TargetType) 0x00000000;
 
-	[DDLRegistration(0xb53f1aaau, "Target Enemies")]
+	[DDLRegistration(0x78ff9104u, "Target Enemies")]
 	public bool TargetEnemies { get; set; } = false;
 
-	[DDLRegistration(0xb53f1aaau, "Target Neutral")]
+	[DDLRegistration(0xa4d93ecau, "Target Neutral")]
 	public bool TargetNeutral { get; set; } = true;
 
-	[DDLRegistration(0xb53f1aaau, "Target Friends")]
+	[DDLRegistration(0x2113ab53u, "Target Friends")]
 	public bool TargetFriends { get; set; } = false;
 
-	[DDLRegistration(0xb53f1aaau, "Target Range")]
+	[DDLRegistration(0x4fa7423cu, "Target Range")]
 	public float TargetRange { get; set; } = 50.00f;
 
-	[DDLRegistration(0xb53f1aaau, "Move Camera")]
+	[DDLRegistration(0xe3f7078du, "Move Camera")]
 	public bool AimCameraAtTarget { get; set; } = false;
 
 	public new static PlayerTargetingOnScreenListPrius Create(DDLObject ddl) => new(ddl);

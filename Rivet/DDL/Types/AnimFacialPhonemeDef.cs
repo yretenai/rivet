@@ -22,19 +22,19 @@ public class AnimFacialPhonemeDef : DDLObjectType, IDDLObjectType<AnimFacialPhon
 		Elems = ddl.GetObjects<AnimFacialPhonemeElemDef>(0xa810b7fdu);
 	}
 
-	[DDLRegistration(0x87c185ddu)]
+	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x87c185ddu)]
+	[DDLRegistration(0x0b1b6777u)]
 	public string? Text { get; set; } = default;
 
-	[DDLRegistration(0x87c185ddu)]
+	[DDLRegistration(0x0c5bae2bu)]
 	public float StartTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87c185ddu)]
+	[DDLRegistration(0xf5a688c4u)]
 	public float EndTime { get; set; } = 0.00f;
 
-	[DDLRegistration(0x87c185ddu)]
+	[DDLRegistration(0xa810b7fdu)]
 	public List<AnimFacialPhonemeElemDef?> Elems { get; set; } = [];
 
 	public static AnimFacialPhonemeDef Create(DDLObject ddl) => new(ddl);

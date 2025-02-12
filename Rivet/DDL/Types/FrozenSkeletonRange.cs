@@ -19,10 +19,10 @@ public class FrozenSkeletonRange : DDLObjectType, IDDLObjectType<FrozenSkeletonR
 		MayaEndFrame = ddl.GetValue<uint>(0x4532b3edu, MayaEndFrame);
 	}
 
-	[DDLRegistration(0x3d86d239u, description: "First frame in the animation to freeze the skeleton.")]
+	[DDLRegistration(0xf96ae3e1u, description: "First frame in the animation to freeze the skeleton.")]
 	public uint MayaStartFrame { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x3d86d239u, description: "Last frame in the animation to freeze the skeleton.")]
+	[DDLRegistration(0x4532b3edu, description: "Last frame in the animation to freeze the skeleton.")]
 	public uint MayaEndFrame { get; set; } = 0x00000000;
 
 	public static FrozenSkeletonRange Create(DDLObject ddl) => new(ddl);

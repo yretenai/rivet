@@ -23,22 +23,22 @@ public class DefaultPhotoLightSettings : DDLObjectType, IDDLObjectType<DefaultPh
 		DefaultColorRGB = ddl.GetObject<DDLVector3>(0xd75802d4u);
 	}
 
-	[DDLRegistration(0x484ea4f6u)]
+	[DDLRegistration(0x02cfb4dfu)]
 	public float DefaultIntensity { get; set; } = 10.00f;
 
-	[DDLRegistration(0x484ea4f6u)]
+	[DDLRegistration(0x10b8dc80u)]
 	public float DefaultLightConeAngle { get; set; } = 0.79f;
 
-	[DDLRegistration(0x484ea4f6u)]
+	[DDLRegistration(0xcc575ef5u)]
 	public float DefaultSoftness { get; set; } = 0.50f;
 
-	[DDLRegistration(0x484ea4f6u)]
+	[DDLRegistration(0x891c06d0u)]
 	public float DefaultRange { get; set; } = 1.00f;
 
-	[DDLRegistration(0x484ea4f6u)]
+	[DDLRegistration(0xc3fec21cu)]
 	public bool DefaultShadowOn { get; set; } = true;
 
-	[DDLRegistration(0x484ea4f6u)]
+	[DDLRegistration(0xd75802d4u)]
 	public DDLVector3? DefaultColorRGB { get; set; } = default;
 
 	public static DefaultPhotoLightSettings Create(DDLObject ddl) => new(ddl);

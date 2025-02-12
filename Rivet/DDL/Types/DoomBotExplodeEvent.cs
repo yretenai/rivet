@@ -18,7 +18,7 @@ public class DoomBotExplodeEvent : EventBase, IDDLObjectType<DoomBotExplodeEvent
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
 	}
 
-	[DDLRegistration(0x2b499332u)]
+	[DDLRegistration(0x0504203du)]
 	public float Radius { get; set; } = 0.00f;
 
 	public new static DoomBotExplodeEvent Create(DDLObject ddl) => new(ddl);

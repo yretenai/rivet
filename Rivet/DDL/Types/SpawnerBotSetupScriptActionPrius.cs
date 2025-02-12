@@ -28,37 +28,37 @@ public class SpawnerBotSetupScriptActionPrius : DDLObjectType, IDDLObjectType<Sp
 		ExtraSpawnGroup = ddl.GetValue<RivetAssetId>(0x90028718u, ExtraSpawnGroup);
 	}
 
-	[DDLRegistration(0x090bed61u)]
+	[DDLRegistration(0x874b2194u)]
 	public x10228b34 ActionType { get; set; } = x10228b34.Spawning;
 
-	[DDLRegistration(0x090bed61u)]
+	[DDLRegistration(0x18486a4du)]
 	public string? Notes { get; set; } = "Any values on the properties changed from their default or supplied via plugs on the node will be applied to the supplied SpawnerBot.\nAll other fields are ignored.";
 
-	[DDLRegistration(0x090bed61u, description: "The number of spawned bots that will be active at one time.")]
+	[DDLRegistration(0xf76e8bafu, description: "The number of spawned bots that will be active at one time.")]
 	public float MaxActive { get; set; } = 0.00f;
 
-	[DDLRegistration(0x090bed61u, description: "The total number of spawned bots this spawner will ever create.")]
+	[DDLRegistration(0x73b142f7u, description: "The total number of spawned bots this spawner will ever create.")]
 	public float MaxSpawned { get; set; } = 0.00f;
 
-	[DDLRegistration(0x090bed61u, description: "The delay in seconds from one spawn to the next.")]
+	[DDLRegistration(0x6768b329u, description: "The delay in seconds from one spawn to the next.")]
 	public float SpawnDelay { get; set; } = -1.00f;
 
-	[DDLRegistration(0x090bed61u, description: "The delay before the first spawn occurs.")]
+	[DDLRegistration(0xdc9a5229u, description: "The delay before the first spawn occurs.")]
 	public float TriggerDelay { get; set; } = -1.00f;
 
-	[DDLRegistration(0x090bed61u, description: "The actor(s) that will be used to determine where to spawn the bots.")]
+	[DDLRegistration(0x11e00fc3u, description: "The actor(s) that will be used to determine where to spawn the bots.")]
 	public RivetAssetId SpawnedTargetAreas { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x090bed61u, description: "The template that the SpawnerBot will spawn.")]
+	[DDLRegistration(0x9516bb44u, description: "The template that the SpawnerBot will spawn.")]
 	public RivetAssetId SpawnedTemplate { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x090bed61u, description: "The CombatMarkupCollection to assign to each bot when they spawn.")]
+	[DDLRegistration(0x624d34aeu, description: "The CombatMarkupCollection to assign to each bot when they spawn.")]
 	public RivetAssetId CombatMarkupCollection { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x090bed61u, description: "The actor group which is used to determine when additional bots should be spawned.")]
+	[DDLRegistration(0x5ae33e11u, description: "The actor group which is used to determine when additional bots should be spawned.")]
 	public RivetAssetId SpawnedGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x090bed61u, description: "An additional actor group to place spawned bots into.")]
+	[DDLRegistration(0x90028718u, description: "An additional actor group to place spawned bots into.")]
 	public RivetAssetId ExtraSpawnGroup { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static SpawnerBotSetupScriptActionPrius Create(DDLObject ddl) => new(ddl);

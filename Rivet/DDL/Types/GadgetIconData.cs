@@ -19,10 +19,10 @@ public class GadgetIconData : DDLObjectType, IDDLObjectType<GadgetIconData> {
 		Icon = ddl.GetString(0x5504e96b) ?? Icon;
 	}
 
-	[DDLRegistration(0x0e055f2cu, description: "HudGadgetEnum value.")]
+	[DDLRegistration(0x882719edu, description: "HudGadgetEnum value.")]
 	public HudGadgetEnum Gadget { get; set; } = HudGadgetEnum.Omniboots;
 
-	[DDLRegistration(0x0e055f2cu, description: "Icon SVG filename.")]
+	[DDLRegistration(0x5504e96bu, description: "Icon SVG filename.")]
 	public string? Icon { get; set; } = "WpnUnknown";
 
 	public static GadgetIconData Create(DDLObject ddl) => new(ddl);

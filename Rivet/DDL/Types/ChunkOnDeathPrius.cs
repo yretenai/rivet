@@ -18,7 +18,7 @@ public class ChunkOnDeathPrius : DDLObjectType, IDDLObjectType<ChunkOnDeathPrius
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 	}
 
-	[DDLRegistration(0x7514c4a8u, "LookChunking Name", "Optional.  The name of the LookChunking component you want to use.")]
+	[DDLRegistration(0x6eb3beb6u, "LookChunking Name", "Optional.  The name of the LookChunking component you want to use.")]
 	public string? Name { get; set; } = default;
 
 	public static ChunkOnDeathPrius Create(DDLObject ddl) => new(ddl);

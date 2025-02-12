@@ -24,25 +24,25 @@ public class AttachActorToLocatorPrius : DDLObjectType, IDDLObjectType<AttachAct
 		DestroyAttachOnDestruction = ddl.GetValue<bool>(0xcb34dbe1u, DestroyAttachOnDestruction);
 	}
 
-	[DDLRegistration(0x44be10e9u, description: "Spawn this actor and attach it to the host at the locator")]
+	[DDLRegistration(0xc8d395cfu, description: "Spawn this actor and attach it to the host at the locator")]
 	public RivetAssetId ActorToAttach { get; set; } = default;
 
-	[DDLRegistration(0x44be10e9u)]
+	[DDLRegistration(0x9c04be09u)]
 	public bool SyncedSpawn { get; set; } = false;
 
-	[DDLRegistration(0x44be10e9u)]
+	[DDLRegistration(0x5814524du)]
 	public string? LocatorName { get; set; } = default;
 
-	[DDLRegistration(0x44be10e9u)]
+	[DDLRegistration(0xded88e48u)]
 	public bool SpawnOnInit { get; set; } = true;
 
-	[DDLRegistration(0x44be10e9u, description: "If SpawnOnInit is false, then spawn on this event")]
+	[DDLRegistration(0xc6db35c7u, description: "If SpawnOnInit is false, then spawn on this event")]
 	public EventBase? SpawnOnEvent { get; set; } = default;
 
-	[DDLRegistration(0x44be10e9u)]
+	[DDLRegistration(0x12568d7bu)]
 	public x6d3f730c Flags { get; set; } = (x6d3f730c) 0x00000000;
 
-	[DDLRegistration(0x44be10e9u)]
+	[DDLRegistration(0xcb34dbe1u)]
 	public bool DestroyAttachOnDestruction { get; set; } = true;
 
 	public static AttachActorToLocatorPrius Create(DDLObject ddl) => new(ddl);

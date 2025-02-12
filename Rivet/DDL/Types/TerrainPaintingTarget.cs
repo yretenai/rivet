@@ -19,10 +19,10 @@ public class TerrainPaintingTarget : DDLObjectType, IDDLObjectType<TerrainPainti
 		Type = ddl.GetEnum<x6b1fdfe1>(0xbc4e9799u, x6b1fdfe1Values.Lookup);
 	}
 
-	[DDLRegistration(0xae495a92u, "SplatMask Layer Id", "This is the id of the layer that will be painted when the type is set to 'kSplatMask'")]
+	[DDLRegistration(0xec3e1993u, "SplatMask Layer Id", "This is the id of the layer that will be painted when the type is set to 'kSplatMask'")]
 	public byte SplatMaskLayerId { get; set; } = 0x00;
 
-	[DDLRegistration(0xae495a92u, description: "This determines where the paint will be applied.")]
+	[DDLRegistration(0xbc4e9799u, description: "This determines where the paint will be applied.")]
 	public x6b1fdfe1 Type { get; set; } = x6b1fdfe1.HeightField;
 
 	public static TerrainPaintingTarget Create(DDLObject ddl) => new(ddl);

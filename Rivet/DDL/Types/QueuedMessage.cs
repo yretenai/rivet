@@ -19,10 +19,10 @@ public class QueuedMessage : DDLObjectType, IDDLObjectType<QueuedMessage> {
 		LocTag = ddl.GetString(0x06f8b0e5) ?? LocTag;
 	}
 
-	[DDLRegistration(0x7c5c3f63u, "Temp Text", "Shows this text but will be stripped in final mode and show loc tag instead.")]
+	[DDLRegistration(0x99f2b59fu, "Temp Text", "Shows this text but will be stripped in final mode and show loc tag instead.")]
 	public string? TempText { get; set; } = default;
 
-	[DDLRegistration(0x7c5c3f63u)]
+	[DDLRegistration(0x06f8b0e5u)]
 	public string? LocTag { get; set; } = "INVALID";
 
 	public static QueuedMessage Create(DDLObject ddl) => new(ddl);

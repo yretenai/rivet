@@ -69,160 +69,160 @@ public class VisualEffectRenderNode : DDLObjectType, IDDLObjectType<VisualEffect
 		InputPort_CamAttrOverrides = ddl.GetObject<VisualEffectCamAttr>(0x147e4040u);
 	}
 
-	[DDLRegistration(0x872eed51u)]
+	[DDLRegistration(0x371a59e0u)]
 	public RivetAssetId NodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0x872eed51u)]
+	[DDLRegistration(0xf88aee81u)]
 	public int XPos { get; set; } = 0;
 
-	[DDLRegistration(0x872eed51u)]
+	[DDLRegistration(0x403689e4u)]
 	public int YPos { get; set; } = 0;
 
-	[DDLRegistration(0x872eed51u, "Name")]
+	[DDLRegistration(0xeaf33243u, "Name")]
 	public string? DisplayName { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u)]
+	[DDLRegistration(0x8ca57bf5u)]
 	public List<VisualEffectNodeConnectedInputPort?> ConnectedInputs { get; set; } = [];
 
-	[DDLRegistration(0x872eed51u)]
+	[DDLRegistration(0x824bee0eu)]
 	public List<VisualEffectNodeConnectedOutputPort?> ConnectedOutputs { get; set; } = [];
 
-	[DDLRegistration(0x872eed51u)]
+	[DDLRegistration(0xf07e7fafu)]
 	public bool Collapsed { get; set; } = true;
 
-	[DDLRegistration(0x872eed51u)]
+	[DDLRegistration(0xbc4e9799u)]
 	public string? Type { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u)]
+	[DDLRegistration(0x1ce19fbdu)]
 	public RenderStyle RenderStyle { get; set; } = RenderStyle.SingleQuad;
 
-	[DDLRegistration(0x872eed51u, description: "Pick what platform this render node is active on")]
+	[DDLRegistration(0x957c19efu, description: "Pick what platform this render node is active on")]
 	public VisualEffectPlatforms? Platforms { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Editor Only", "When set to true, the render node will only display in the VFX editor")]
+	[DDLRegistration(0xc2612b29u, "Editor Only", "When set to true, the render node will only display in the VFX editor")]
 	public bool EditorOnly { get; set; } = false;
 
-	[DDLRegistration(0x872eed51u)]
+	[DDLRegistration(0x30210dfbu)]
 	public xfe5100b1 Space { get; set; } = xfe5100b1.Local;
 
-	[DDLRegistration(0x872eed51u, "Render Attributes")]
+	[DDLRegistration(0x8633b21au, "Render Attributes")]
 	public RenderAttributes? RenderAttributes { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "ConduitVFXEvent", "Conduit event to generate")]
+	[DDLRegistration(0xecb72241u, "ConduitVFXEvent", "Conduit event to generate")]
 	public ConduitAttributes? ConduitAttributes { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Decal Trail Attributes")]
+	[DDLRegistration(0xd5354488u, "Decal Trail Attributes")]
 	public DecalTrailAttributes? DecalTrailAttributes { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "UV0 Tiling")]
+	[DDLRegistration(0xf8890730u, "UV0 Tiling")]
 	public UVTiling? UV0Tiling { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "UV1 Tiling")]
+	[DDLRegistration(0x5efe0c84u, "UV1 Tiling")]
 	public UVTiling? UV1Tiling { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Radial Blur")]
+	[DDLRegistration(0xc86e2898u, "Radial Blur")]
 	public RadialBlurInfo? RadialBlur { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Transform")]
+	[DDLRegistration(0x98a0c43au, "Transform")]
 	public VisualEffectTransform? InputPort_Transform { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Lens Flare")]
+	[DDLRegistration(0xb2ff0f67u, "Lens Flare")]
 	public VisualEffectLensFlare? InputPort_LensFlare { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Spherical Normal")]
+	[DDLRegistration(0x9e6e7998u, "Spherical Normal")]
 	public VisualEffectFloat? InputPort_SphericalNormal { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Height")]
+	[DDLRegistration(0xb49f8627u, "Height")]
 	public VisualEffectFloat? InputPort_Height { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Width")]
+	[DDLRegistration(0x55697da2u, "Width")]
 	public VisualEffectFloat? InputPort_Width { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Depth")]
+	[DDLRegistration(0x23d024e4u, "Depth")]
 	public VisualEffectFloat? InputPort_Depth { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Post Effect")]
+	[DDLRegistration(0x77d9aa8eu, "Post Effect")]
 	public PostEffect? PostEffect { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Spline Style")]
+	[DDLRegistration(0xb5cf515fu, "Spline Style")]
 	public SplineStyle SplineStyle { get; set; } = SplineStyle.Standard;
 
-	[DDLRegistration(0x872eed51u, "Beam Offset")]
+	[DDLRegistration(0xe21ec5acu, "Beam Offset")]
 	public DDLVector2? BeamOffset { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Trail/Swipe Attributes")]
+	[DDLRegistration(0xf205bf26u, "Trail/Swipe Attributes")]
 	public TrailAttributes? TrailAttributes { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Swipe Scale Reference")]
+	[DDLRegistration(0x2150ae07u, "Swipe Scale Reference")]
 	public SwipeScale SwipeScale { get; set; } = SwipeScale.Origin;
 
-	[DDLRegistration(0x872eed51u, "Swipe Offset")]
+	[DDLRegistration(0xff74e14cu, "Swipe Offset")]
 	public DDLVector3? SwipeOffset { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Light Attributes")]
+	[DDLRegistration(0x5f04727cu, "Light Attributes")]
 	public VisualEffectLightAttr? InputPort_LightAttr { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "LifeTime")]
+	[DDLRegistration(0x55ea52d3u, "LifeTime")]
 	public VisualEffectMinMax? InputPort_LifeTime { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Spawn Delay")]
+	[DDLRegistration(0x00d8163fu, "Spawn Delay")]
 	public VisualEffectMinMax? InputPort_SpawnDelay { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "UV  Flips")]
+	[DDLRegistration(0xff77e4adu, "UV  Flips")]
 	public SeparateUVFlips? UVFlips { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Luminance")]
+	[DDLRegistration(0xa719d434u, "Luminance")]
 	public VisualEffectFloatKeyFrames? FloatKeyFrames_Luminance { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Color")]
+	[DDLRegistration(0x848dcbf9u, "Color")]
 	public VisualEffectColorKeyFrames? ColorKeyFrames_Color { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Alpha")]
+	[DDLRegistration(0x54d4ba7du, "Alpha")]
 	public VisualEffectFloat2KeyFrames? Float2KeyFrames_Alpha { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Alpha Multiplier")]
+	[DDLRegistration(0xf8073360u, "Alpha Multiplier")]
 	public VisualEffectFloatKeyFrames? FloatKeyFrames_AlphaMultiplier { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Rotation")]
+	[DDLRegistration(0x29ac4bf7u, "Rotation")]
 	public VisualEffectRotationKeyFrames? Float3KeyFrames_Rotation { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Scales")]
+	[DDLRegistration(0x27c45b9du, "Scales")]
 	public VisualEffectFloat3KeyFrames? Float3KeyFrames_Scales { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Custom")]
+	[DDLRegistration(0x23778311u, "Custom")]
 	public VisualEffectFloat3KeyFrames? Float3KeyFrames_Custom { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Camera Offset")]
+	[DDLRegistration(0xd2d4783du, "Camera Offset")]
 	public VisualEffectFloat? InputPort_CameraOffset { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Random Seed")]
+	[DDLRegistration(0x01c11433u, "Random Seed")]
 	public VisualEffectFloat? InputPort_RandomSeed { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Force Field Attributes")]
+	[DDLRegistration(0x8def880cu, "Force Field Attributes")]
 	public ForceFieldAttributes? ForceFieldAttributes { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Turbulence Attributes")]
+	[DDLRegistration(0x39ddadb1u, "Turbulence Attributes")]
 	public TurbulenceAttributes? TurbulenceAttributes { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Age Keyframe Override", "Use the age of the head particle to evaluate keyframes")]
+	[DDLRegistration(0x7d558cbbu, "Age Keyframe Override", "Use the age of the head particle to evaluate keyframes")]
 	public TrailAgeKeyframe? TrailAgeKeyframe { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Decal Attributes")]
+	[DDLRegistration(0xd3487570u, "Decal Attributes")]
 	public DecalAttributes? DecalAttributes { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Acceleration")]
+	[DDLRegistration(0xdd3e607du, "Acceleration")]
 	public VisualEffectAccelerationKeyFrames? FloatKeyFrames_Acceleration { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "External Forces")]
+	[DDLRegistration(0xc3ad64ffu, "External Forces")]
 	public VisualEffectExternalForces? ExternalForces { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Performance Attributes")]
+	[DDLRegistration(0xd24cc1bau, "Performance Attributes")]
 	public VisualEffectPerfAttrOverride? InputPort_PerfAttrOverrides { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Unlit Lighting Controls")]
+	[DDLRegistration(0x548add56u, "Unlit Lighting Controls")]
 	public VisualEffectLumAttr? InputPort_LumAttrOverrides { get; set; } = default;
 
-	[DDLRegistration(0x872eed51u, "Camera Attributes")]
+	[DDLRegistration(0x147e4040u, "Camera Attributes")]
 	public VisualEffectCamAttr? InputPort_CamAttrOverrides { get; set; } = default;
 
 	public static VisualEffectRenderNode Create(DDLObject ddl) => new(ddl);

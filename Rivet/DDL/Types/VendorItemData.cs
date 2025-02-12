@@ -30,43 +30,43 @@ public class VendorItemData : DDLObjectType, IDDLObjectType<VendorItemData> {
 		WeaponInfo = ddl.GetObject<VendorWeaponInfo>(0x5fab299du);
 	}
 
-	[DDLRegistration(0x66ae7475u, description: "Item being bought or sold.")]
+	[DDLRegistration(0x2f8be5aeu, description: "Item being bought or sold.")]
 	public RivetAssetId Item { get; set; } = default;
 
-	[DDLRegistration(0x66ae7475u, description: "Purchase cost, in bolts")]
+	[DDLRegistration(0xd39bee18u, description: "Purchase cost, in bolts")]
 	public int Price { get; set; } = 1;
 
-	[DDLRegistration(0x66ae7475u, description: "When this mission completes, this item will appear")]
+	[DDLRegistration(0xc9eea967u, description: "When this mission completes, this item will appear")]
 	public string? MissionShow { get; set; } = default;
 
-	[DDLRegistration(0x66ae7475u, description: "When this objective completes, this item will appear")]
+	[DDLRegistration(0x3459cc9cu, description: "When this objective completes, this item will appear")]
 	public string? ObjectiveShow { get; set; } = default;
 
-	[DDLRegistration(0x66ae7475u, description: "When this mission completes, this item will unlock")]
+	[DDLRegistration(0x489fe4edu, description: "When this mission completes, this item will unlock")]
 	public string? MissionUnlock { get; set; } = default;
 
-	[DDLRegistration(0x66ae7475u, description: "When this objective completes, this item will unlock")]
+	[DDLRegistration(0x820fb4fbu, description: "When this objective completes, this item will unlock")]
 	public string? ObjectiveUnlock { get; set; } = default;
 
-	[DDLRegistration(0x66ae7475u)]
+	[DDLRegistration(0xc014338bu)]
 	public bool UnlockedInChallengeMode { get; set; } = true;
 
-	[DDLRegistration(0x66ae7475u, description: "Emergent VO to trigger when opening the vendor and this item is newly in stock")]
+	[DDLRegistration(0xa2ab8889u, description: "Emergent VO to trigger when opening the vendor and this item is newly in stock")]
 	public DialogTriggerGame NowInStockEmergentVO { get; set; } = DialogTriggerGame.None;
 
-	[DDLRegistration(0x66ae7475u, description: "Omega Purchase cost, in bolts")]
+	[DDLRegistration(0x6de5f5cau, description: "Omega Purchase cost, in bolts")]
 	public int OmegaPrice { get; set; } = 1;
 
-	[DDLRegistration(0x66ae7475u, description: "Required card bonus for Omega purchase")]
+	[DDLRegistration(0xc46aa58du, description: "Required card bonus for Omega purchase")]
 	public BonusType OmegaRequiredCardBonus { get; set; } = BonusType.BonusNone;
 
-	[DDLRegistration(0x66ae7475u, description: "Only available for purchase as omega")]
+	[DDLRegistration(0xa5423192u, description: "Only available for purchase as omega")]
 	public bool OmegaOnly { get; set; } = false;
 
-	[DDLRegistration(0x66ae7475u, description: "Is this the special case entry for refilling ammo")]
+	[DDLRegistration(0x70ca2541u, description: "Is this the special case entry for refilling ammo")]
 	public bool IsAmmo { get; set; } = false;
 
-	[DDLRegistration(0x66ae7475u, description: "Dummy stats used in the vendor weapon menu")]
+	[DDLRegistration(0x5fab299du, description: "Dummy stats used in the vendor weapon menu")]
 	public VendorWeaponInfo? WeaponInfo { get; set; } = default;
 
 	public static VendorItemData Create(DDLObject ddl) => new(ddl);

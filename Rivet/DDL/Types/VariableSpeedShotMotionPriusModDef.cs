@@ -19,10 +19,10 @@ public class VariableSpeedShotMotionPriusModDef : DDLObjectType, IDDLObjectType<
 		ModList = ddl.GetObjects<ConfigModListElement>(0x2649755bu);
 	}
 
-	[DDLRegistration(0xc7a16fb6u, "Variable", "Variable to modify")]
+	[DDLRegistration(0x364c3afdu, "Variable", "Variable to modify")]
 	public x387e77cd Variable { get; set; } = x387e77cd.None;
 
-	[DDLRegistration(0xc7a16fb6u, "Config Mod List", "List of config mods to apply")]
+	[DDLRegistration(0x2649755bu, "Config Mod List", "List of config mods to apply")]
 	public List<ConfigModListElement?> ModList { get; set; } = [];
 
 	public static VariableSpeedShotMotionPriusModDef Create(DDLObject ddl) => new(ddl);

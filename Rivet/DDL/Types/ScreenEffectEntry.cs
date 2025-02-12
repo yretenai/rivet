@@ -19,10 +19,10 @@ public class ScreenEffectEntry : DDLObjectType, IDDLObjectType<ScreenEffectEntry
 		EffectAtmosphere = ddl.GetValue<RivetAssetId>(0xf687f34bu, EffectAtmosphere);
 	}
 
-	[DDLRegistration(0x19cfef76u, description: "The id that corresponds to this effect. (0 == none (so don't use it), 1 == black and white, rest TBD).")]
+	[DDLRegistration(0x713e680fu, description: "The id that corresponds to this effect. (0 == none (so don't use it), 1 == black and white, rest TBD).")]
 	public byte EffectId { get; set; } = 0x00;
 
-	[DDLRegistration(0x19cfef76u, description: "An atmosphere with the color correction to apply for this effect.")]
+	[DDLRegistration(0xf687f34bu, description: "An atmosphere with the color correction to apply for this effect.")]
 	public RivetAssetId EffectAtmosphere { get; set; } = default;
 
 	public static ScreenEffectEntry Create(DDLObject ddl) => new(ddl);

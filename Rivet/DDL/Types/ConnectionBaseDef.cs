@@ -22,19 +22,19 @@ public class ConnectionBaseDef : NodeGraphItemDef, IDDLObjectType<ConnectionBase
 		TargetPlug = ddl.GetString(0x7357fe84) ?? TargetPlug;
 	}
 
-	[DDLRegistration(0xffcbcbe3u)]
+	[DDLRegistration(0x0f9f2930u)]
 	public List<ConnectionPinDef?> Pins { get; set; } = [];
 
-	[DDLRegistration(0xffcbcbe3u)]
+	[DDLRegistration(0xde701d92u)]
 	public RivetAssetId SourceNodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xffcbcbe3u)]
+	[DDLRegistration(0xedb3d930u)]
 	public string? SourcePlug { get; set; } = default;
 
-	[DDLRegistration(0xffcbcbe3u)]
+	[DDLRegistration(0xfbd35da1u)]
 	public RivetAssetId TargetNodeId { get; set; } = new RivetAssetId(0x0000000000000000);
 
-	[DDLRegistration(0xffcbcbe3u)]
+	[DDLRegistration(0x7357fe84u)]
 	public string? TargetPlug { get; set; } = default;
 
 	public new static ConnectionBaseDef Create(DDLObject ddl) => new(ddl);

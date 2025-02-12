@@ -19,10 +19,10 @@ public class CommandPlayAnimEvent : CommandEvent, IDDLObjectType<CommandPlayAnim
 		FaceActor = ddl.GetValue<uint>(0xf63d95d8u, FaceActor);
 	}
 
-	[DDLRegistration(0x7d8a5d0bu)]
+	[DDLRegistration(0x10f54dceu)]
 	public uint AnimDriver { get; set; } = 0x00000000;
 
-	[DDLRegistration(0x7d8a5d0bu)]
+	[DDLRegistration(0xf63d95d8u)]
 	public uint FaceActor { get; set; } = 0x00000000;
 
 	public new static CommandPlayAnimEvent Create(DDLObject ddl) => new(ddl);

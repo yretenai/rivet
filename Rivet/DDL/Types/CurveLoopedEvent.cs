@@ -18,7 +18,7 @@ public class CurveLoopedEvent : EventBase, IDDLObjectType<CurveLoopedEvent> {
 		CurveActorHandle = ddl.GetValue<uint>(0xfc8b3eb2u, CurveActorHandle);
 	}
 
-	[DDLRegistration(0x8c92d5eeu, description: "The curve that finished a loop.")]
+	[DDLRegistration(0xfc8b3eb2u, description: "The curve that finished a loop.")]
 	public uint CurveActorHandle { get; set; } = 0x00000000;
 
 	public new static CurveLoopedEvent Create(DDLObject ddl) => new(ddl);

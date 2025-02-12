@@ -25,28 +25,28 @@ public class StickerModeData : DDLObjectType, IDDLObjectType<StickerModeData> {
 		Categories = ddl.GetObjects<StickersCategoryData>(0xe1c51851u);
 	}
 
-	[DDLRegistration(0x5d4ad9b4u)]
+	[DDLRegistration(0xf7484bcbu)]
 	public float StickerSpeed { get; set; } = 300.00f;
 
-	[DDLRegistration(0x5d4ad9b4u)]
+	[DDLRegistration(0xe5938d1eu)]
 	public float RotationSpeed { get; set; } = 45.00f;
 
-	[DDLRegistration(0x5d4ad9b4u)]
+	[DDLRegistration(0xa84a2af2u)]
 	public float StickerSpeed4k { get; set; } = 600.00f;
 
-	[DDLRegistration(0x5d4ad9b4u)]
+	[DDLRegistration(0xae01ecbcu)]
 	public float ScaleRate { get; set; } = 0.02f;
 
-	[DDLRegistration(0x5d4ad9b4u)]
+	[DDLRegistration(0x8086aac1u)]
 	public float ScaleRate4k { get; set; } = 0.04f;
 
-	[DDLRegistration(0x5d4ad9b4u)]
+	[DDLRegistration(0xd93c5f2au)]
 	public StickersData? EmptyLayer { get; set; } = default;
 
-	[DDLRegistration(0x5d4ad9b4u)]
+	[DDLRegistration(0xddc56db4u)]
 	public StickersData? LockedLayer { get; set; } = default;
 
-	[DDLRegistration(0x5d4ad9b4u)]
+	[DDLRegistration(0xe1c51851u)]
 	public List<StickersCategoryData?> Categories { get; set; } = [];
 
 	public static StickerModeData Create(DDLObject ddl) => new(ddl);

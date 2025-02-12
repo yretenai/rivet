@@ -34,55 +34,55 @@ public class TrampolinePrius : DDLObjectType, IDDLObjectType<TrampolinePrius> {
 		DoesBounceUseMomentum = ddl.GetValue<bool>(0x02f58ee8u, DoesBounceUseMomentum);
 	}
 
-	[DDLRegistration(0x3b6be249u, description: "Bounce height is defined by this value multiplied by fall height on to the trampoline, clamped to MinHeight/MaxHeight non-zero.  If set to 0, height will be set to MinHeight.")]
+	[DDLRegistration(0x9b2b4ebbu, description: "Bounce height is defined by this value multiplied by fall height on to the trampoline, clamped to MinHeight/MaxHeight non-zero.  If set to 0, height will be set to MinHeight.")]
 	public float ReflectionFactor { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3b6be249u, description: "Min height for bounce, use 0 to disable.")]
+	[DDLRegistration(0x9ed620e3u, description: "Min height for bounce, use 0 to disable.")]
 	public float MinHeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3b6be249u, description: "Max height for bounce, use 0 to disable.")]
+	[DDLRegistration(0x493d92a2u, description: "Max height for bounce, use 0 to disable.")]
 	public float MaxHeight { get; set; } = 0.00f;
 
-	[DDLRegistration(0x3b6be249u, description: "Time to reach peak of bounce, use -1 for default jump timing.")]
+	[DDLRegistration(0x0a54bc58u, description: "Time to reach peak of bounce, use -1 for default jump timing.")]
 	public float TimeToPeak { get; set; } = -1.00f;
 
-	[DDLRegistration(0x3b6be249u)]
+	[DDLRegistration(0x3252a5bdu)]
 	public float MinDesiredDistance { get; set; } = -1.00f;
 
-	[DDLRegistration(0x3b6be249u)]
+	[DDLRegistration(0x61f4bd59u)]
 	public float MaxDesiredDistance { get; set; } = -1.00f;
 
-	[DDLRegistration(0x3b6be249u, description: "Camera behavior when bouncing.")]
+	[DDLRegistration(0x2f100f4du, description: "Camera behavior when bouncing.")]
 	public x925714c8 CameraMode { get; set; } = x925714c8.TrackActor;
 
-	[DDLRegistration(0x3b6be249u, description: "True: Players walking onto the trampoline will launch MinHeight.  False: Players will only bounce off the trampoline if they land on it or jump while standing on it.")]
+	[DDLRegistration(0xb8b7f1e8u, description: "True: Players walking onto the trampoline will launch MinHeight.  False: Players will only bounce off the trampoline if they land on it or jump while standing on it.")]
 	public bool JumpPad { get; set; } = false;
 
-	[DDLRegistration(0x3b6be249u, description: "Option to turn on launching super high if the player presses the jump button while in contact with the trampoline.")]
+	[DDLRegistration(0x2622a132u, description: "Option to turn on launching super high if the player presses the jump button while in contact with the trampoline.")]
 	public bool EnableSuperJump { get; set; } = false;
 
-	[DDLRegistration(0x3b6be249u, description: "If set to true, will stop being a trampoline if it is destroyed.")]
+	[DDLRegistration(0x48fd9be5u, description: "If set to true, will stop being a trampoline if it is destroyed.")]
 	public bool DisableOnDestroyed { get; set; } = false;
 
-	[DDLRegistration(0x3b6be249u, description: "If set to anything besides none, will override the ground material for the bounce events")]
+	[DDLRegistration(0x21926360u, description: "If set to anything besides none, will override the ground material for the bounce events")]
 	public x10b3c4cf OverrideMaterial { get; set; } = x10b3c4cf.None;
 
-	[DDLRegistration(0x3b6be249u, description: "Should we make this model vibrate on bounce?")]
+	[DDLRegistration(0x13a1c2e7u, description: "Should we make this model vibrate on bounce?")]
 	public bool VibrateOnBounce { get; set; } = false;
 
-	[DDLRegistration(0x3b6be249u, description: "Name of the float3 materialgraph constant for the object-space position of the last bounce.")]
+	[DDLRegistration(0x1f072edcu, description: "Name of the float3 materialgraph constant for the object-space position of the last bounce.")]
 	public string? VibratePosConstant { get; set; } = "Vibration_Source_Object_Pos";
 
-	[DDLRegistration(0x3b6be249u, description: "Name of the float materialgraph constant for the current vibration T value. When vibration is active, this will be on the interval: [0, 1]. If the vibration isn't active, this value will not be set.")]
+	[DDLRegistration(0x10510c10u, description: "Name of the float materialgraph constant for the current vibration T value. When vibration is active, this will be on the interval: [0, 1]. If the vibration isn't active, this value will not be set.")]
 	public string? VibrateTConstant { get; set; } = "Vibration_T";
 
-	[DDLRegistration(0x3b6be249u, description: "How long the vibration lasts (i.e. how long it takes for the vibration T value to go from 0 to 1.)")]
+	[DDLRegistration(0x16cc482du, description: "How long the vibration lasts (i.e. how long it takes for the vibration T value to go from 0 to 1.)")]
 	public float VibrateDuration { get; set; } = 1.00f;
 
-	[DDLRegistration(0x3b6be249u)]
+	[DDLRegistration(0x5113d8bcu)]
 	public bool Enabled { get; set; } = true;
 
-	[DDLRegistration(0x3b6be249u)]
+	[DDLRegistration(0x02f58ee8u)]
 	public bool DoesBounceUseMomentum { get; set; } = false;
 
 	public static TrampolinePrius Create(DDLObject ddl) => new(ddl);

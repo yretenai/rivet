@@ -19,10 +19,10 @@ public class PerchPrius : DDLObjectType, IDDLObjectType<PerchPrius> {
 		RopeAttachLocation = ddl.GetValue<RivetAssetId>(0x1f1fe8dcu, RopeAttachLocation);
 	}
 
-	[DDLRegistration(0x4deac0d8u, "Add to DB on activate", "Perch will add itself to the global perch database on activation")]
+	[DDLRegistration(0x2afe7173u, "Add to DB on activate", "Perch will add itself to the global perch database on activation")]
 	public bool AddToDBOnActivate { get; set; } = false;
 
-	[DDLRegistration(0x4deac0d8u, "Location To Attach Rope", "Setting this value will force the rope to attach to this point")]
+	[DDLRegistration(0x1f1fe8dcu, "Location To Attach Rope", "Setting this value will force the rope to attach to this point")]
 	public RivetAssetId RopeAttachLocation { get; set; } = new RivetAssetId(0x0000000000000000);
 
 	public static PerchPrius Create(DDLObject ddl) => new(ddl);
