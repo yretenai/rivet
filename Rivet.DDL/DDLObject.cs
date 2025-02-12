@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Reflection;
 using Rivet.IO;
+using Serilog;
 
 namespace Rivet.DDL;
 
@@ -76,10 +77,8 @@ public class DDLObject : Dictionary<uint, DDLField> {
 	}
 
 	public string? GetString(uint id, int index = 0) {
-		if (TryGetValue(id, out var field) && field.Value.Count > index) {
-			if (field.Value[index] is { } value) {
-				return value.ToString();
-			}
+		if (TryGetValue(id, out var field) && field.Value.Count > index && field.Value[index] is { } value) {
+			return value.ToString();
 		}
 
 		return null;
@@ -94,47 +93,64 @@ public class DDLObject : Dictionary<uint, DDLField> {
 	}
 
 	public T? GetObject<T>(uint id, int index = 0) where T : DDLObjectType, IDDLObjectType<T> {
-		if (TryGetValue(id, out var field) && field.Value.Count > index && field.Value[index] is DDLObject value) {
-			if (value.Count == 2 && DDLPolymorphicObject.Check(value)) {
-				var poly = DDLPolymorphicObject.Create(value);
+		if (TryGetValue(id, out var field) && field.Value.Count > index && field.Value[index] is { } selectedValue) {
+			if (selectedValue is DDLObject value) {
+				if (value.Count == 2 && DDLPolymorphicObject.Check(value)) {
+					var poly = DDLPolymorphicObject.Create(value);
 
-				if (TypeRegistration.TryGetValue(poly.Type, out var subType) && PolymorphicCreate(subType, poly) is T polyType) {
-					return polyType;
+					if (TypeRegistration.TryGetValue(poly.Type, out var subType)) {
+						var polyType = PolymorphicCreate(subType, poly);
+						if (polyType is T correctPolyType) {
+							return correctPolyType;
+						}
+
+						Log.Warning("Tried to cast a substruct to an invalid type: {SubType} is not valid for {AssumedType}", subType.Name, typeof(T).Name);
+					}
+
+					return T.Create(poly.Object);
 				}
 
-				return T.Create(poly.Object);
+				return T.Create(value);
 			}
 
-			return T.Create(value);
+			Log.Warning("Value {Id} exists but is an invalid type: Expected DDLObject but was {T}", id, selectedValue.GetType().Name);
 		}
 
 		return null;
 	}
 
 	public T GetEnum<T>(uint id, Dictionary<uint, T> enumValues, T defaultValue = default, int fieldIndex = 0) where T : struct {
-		if (TryGetValue(id, out var field) && field.Value.Count > fieldIndex && field.Value[fieldIndex] is DDLFullString value) {
-			return enumValues.GetValueOrDefault(value.Type, defaultValue);
+		if (TryGetValue(id, out var field) && field.Value.Count > fieldIndex && field.Value[fieldIndex] is { } selectedValue) {
+			if (selectedValue is DDLFullString value) {
+				return enumValues.GetValueOrDefault(value.Type, defaultValue);
+			}
+
+			Log.Warning("Value {Id} exists but is an invalid type: Expected String but was {T}", id, selectedValue.GetType().Name);
 		}
 
 		return defaultValue;
 	}
 
 	public T GetBitset<T>(uint id, Dictionary<uint, T> enumValues, T defaultValue = default) where T : struct {
-		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is DDLFullString) {
-			var bitset = 0ul;
+		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is { } primaryValue) {
+			if (primaryValue is DDLFullString) {
+				var bitset = 0ul;
 
-			foreach (var value in field.Value) {
-				bitset |= Convert.ToUInt32(enumValues.GetValueOrDefault(((DDLFullString) value!).Type));
+				foreach (var value in field.Value) {
+					bitset |= Convert.ToUInt32(enumValues.GetValueOrDefault(((DDLFullString) value!).Type));
+				}
+
+				return (T) Enum.ToObject(typeof(T), bitset);
 			}
 
-			return (T) Enum.ToObject(typeof(T), bitset);
+			Log.Warning("Value {Id} exists but is an invalid type: Expected String but was {T}", id, primaryValue.GetType().Name);
 		}
 
 		return defaultValue;
 	}
 
 	public List<T> GetValues<T>(uint id) where T : struct {
-		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is T) {
+		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is not null) {
 			var list = new List<T>(field.Value.Count);
 			for (var index = 0; index < field.Value.Count; index++) {
 				switch (field.Value[index]) {
@@ -153,8 +169,6 @@ public class DDLObject : Dictionary<uint, DDLField> {
 					case DDLFullString str when typeof(T) == typeof(RivetAssetId):
 						list.Add((T) (object) str.Asset);
 						break;
-					case null:
-						break;
 					default:
 						list.Add((T) Convert.ChangeType(field.Value[index], typeof(T))!);
 						break;
@@ -168,12 +182,10 @@ public class DDLObject : Dictionary<uint, DDLField> {
 	}
 
 	public List<string?> GetStrings(uint id) {
-		if (TryGetValue(id, out var field) && field.Value.Count > 0) {
-			if (field.Value[0] is not null) {
-				var list = new List<string?>(field.Value.Count);
-				list.AddRange(field.Value.Select(x => x!.ToString()));
-				return list;
-			}
+		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is not null) {
+			var list = new List<string?>(field.Value.Count);
+			list.AddRange(field.Value.Select(x => x!.ToString()));
+			return list;
 		}
 
 		return [];
@@ -188,37 +200,45 @@ public class DDLObject : Dictionary<uint, DDLField> {
 	}
 
 	public List<T?> GetObjects<T>(uint id) where T : DDLObjectType, IDDLObjectType<T> {
-		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is DDLObject) {
-			var list = new List<T?>(field.Value.Count);
-			foreach (var value in field.Value.Cast<DDLObject>()) {
-				if (value.Count == 2 && DDLPolymorphicObject.Check(value)) {
-					var poly = DDLPolymorphicObject.Create(value);
+		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is { } primaryValue) {
+			if (primaryValue is DDLObject) {
+				var list = new List<T?>(field.Value.Count);
+				foreach (var value in field.Value.Cast<DDLObject>()) {
+					if (value.Count == 2 && DDLPolymorphicObject.Check(value)) {
+						var poly = DDLPolymorphicObject.Create(value);
 
-					if (TypeRegistration.TryGetValue(poly.Type, out var subType) && PolymorphicCreate(subType, poly) is T polyValue) {
-						list.Add(polyValue);
+						if (TypeRegistration.TryGetValue(poly.Type, out var subType) && PolymorphicCreate(subType, poly) is T polyValue) {
+							list.Add(polyValue);
+						} else {
+							list.Add(T.Create(poly.Object));
+						}
 					} else {
-						list.Add(T.Create(poly.Object));
+						list.Add(T.Create(value));
 					}
-				} else {
-					list.Add(T.Create(value));
 				}
+
+				return list;
 			}
 
-			return list;
+			Log.Warning("Value {Id} exists but is an invalid type: Expected DDLObject but was {T}", id, primaryValue.GetType().Name);
 		}
 
 		return [];
 	}
 
 	public List<T> GetEnums<T>(uint id, Dictionary<uint, T> enumValues) where T : struct {
-		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is DDLFullString) {
-			var list = new List<T>(field.Value.Count);
+		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is { } primaryValue) {
+			if (primaryValue is DDLFullString) {
+				var list = new List<T>(field.Value.Count);
 
-			foreach (var value in field.Value) {
-				list.Add(enumValues.GetValueOrDefault(((DDLFullString) value!).Type));
+				foreach (var value in field.Value) {
+					list.Add(enumValues.GetValueOrDefault(((DDLFullString) value!).Type));
+				}
+
+				return list;
 			}
 
-			return list;
+			Log.Warning("Value {Id} exists but is an invalid type: Expected String but was {T}", id, primaryValue.GetType().Name);
 		}
 
 		return [];
