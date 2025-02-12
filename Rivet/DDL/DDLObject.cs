@@ -78,8 +78,10 @@ public class DDLObject : Dictionary<uint, DDLField> {
 	}
 
 	public string? GetString(uint id, int index = 0) {
-		if (TryGetValue(id, out var field) && field.Value.Count > index && field.Value[index] is DDLFullString value) {
-			return value.Value;
+		if (TryGetValue(id, out var field) && field.Value.Count > index) {
+			if (field.Value[index] is { } value) {
+				return value.ToString();
+			}
 		}
 
 		return null;
@@ -168,10 +170,12 @@ public class DDLObject : Dictionary<uint, DDLField> {
 	}
 
 	public List<string?> GetStrings(uint id) {
-		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is DDLFullString) {
-			var list = new List<string?>(field.Value.Count);
-			list.AddRange(field.Value.Cast<DDLFullString>().Select(x => x.Value));
-			return list;
+		if (TryGetValue(id, out var field) && field.Value.Count > 0) {
+			if (field.Value[0] is not null) {
+				var list = new List<string?>(field.Value.Count);
+				list.AddRange(field.Value.Select(x => x!.ToString()));
+				return list;
+			}
 		}
 
 		return [];
