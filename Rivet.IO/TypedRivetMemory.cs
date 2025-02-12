@@ -23,7 +23,7 @@ public sealed record TypedRivetMemory<T>(IUnsafeMemoryOwner<byte> UnderlyingOwne
 	public Memory<T> Memory => Size <= 0 ? Memory<T>.Empty : Manager!.Memory;
 
 	public IUnsafeMemoryOwner<T> Shift(int offset) {
-		if (Offset + offset < 0 || Offset + offset > Size) {
+		if (Offset + offset < 0 || offset > Size) {
 			throw new IndexOutOfRangeException();
 		}
 

@@ -6,7 +6,6 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Reflection;
 using Rivet.Models;
-using Rivet.Models.Data;
 
 namespace Rivet.DDL;
 
@@ -37,10 +36,12 @@ public class DDLObject : Dictionary<uint, DDLField> {
 			}
 
 			TypeRegistration[attr.Id] = type;
+			RivetTypeIdRegistry.Names[attr.Id] = type.Name;
 
 			var rootAttributes = type.GetCustomAttributes<DDLTypeRootAttribute>();
 			foreach (var rootAttribute in rootAttributes) {
 				RootRegistration[rootAttribute.Id] = type;
+				RivetTypeIdRegistry.Names[rootAttribute.Id] = type.Name;
 			}
 		}
 	}
@@ -59,9 +60,9 @@ public class DDLObject : Dictionary<uint, DDLField> {
 				case T value:
 					return value;
 				case ulong u when typeof(T) == typeof(RivetAssetId):
-					return (T) (object) u;
+					return (T) (object) new RivetAssetId(u);
 				case uint u when typeof(T) == typeof(RivetTypeId):
-					return (T) (object) u;
+					return (T) (object) new RivetTypeId(u);
 				case DDLFullString str when typeof(T) == typeof(RivetTypeId):
 					return (T) (object) str.Type;
 				case DDLFullString str when typeof(T) == typeof(RivetAssetId):
@@ -97,8 +98,8 @@ public class DDLObject : Dictionary<uint, DDLField> {
 			if (value.Count == 2 && DDLPolymorphicObject.Check(value)) {
 				var poly = DDLPolymorphicObject.Create(value);
 
-				if (TypeRegistration.TryGetValue(poly.ObjectType, out var subType)) {
-					return PolymorphicCreate(subType, poly) as T;
+				if (TypeRegistration.TryGetValue(poly.Type, out var subType) && PolymorphicCreate(subType, poly) is T polyType) {
+					return polyType;
 				}
 
 				return T.Create(poly.Object);
@@ -191,7 +192,7 @@ public class DDLObject : Dictionary<uint, DDLField> {
 				if (value.Count == 2 && DDLPolymorphicObject.Check(value)) {
 					var poly = DDLPolymorphicObject.Create(value);
 
-					if (TypeRegistration.TryGetValue(poly.ObjectType, out var subType) && PolymorphicCreate(subType, poly) is T polyValue) {
+					if (TypeRegistration.TryGetValue(poly.Type, out var subType) && PolymorphicCreate(subType, poly) is T polyValue) {
 						list.Add(polyValue);
 					} else {
 						list.Add(T.Create(poly.Object));
@@ -201,7 +202,6 @@ public class DDLObject : Dictionary<uint, DDLField> {
 				}
 			}
 
-			list.AddRange(field.Value.Cast<T>());
 			return list;
 		}
 

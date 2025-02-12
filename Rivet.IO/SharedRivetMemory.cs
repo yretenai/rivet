@@ -15,7 +15,7 @@ public sealed record SharedRivetMemory<T>(IUnsafeMemoryOwner<T> UnderlyingOwner,
 	public Memory<T> Memory => Size > 0 ? UnderlyingOwner.Memory.Slice(Offset, Size) : Memory<T>.Empty;
 
 	public IUnsafeMemoryOwner<T> Shift(int offset) {
-		if (Offset + offset < 0 || Offset + offset > Size) {
+		if (Offset + offset < 0 || offset > Size) {
 			throw new IndexOutOfRangeException();
 		}
 
