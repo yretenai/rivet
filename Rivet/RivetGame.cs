@@ -27,6 +27,7 @@ public sealed class RivetGame : IDisposable {
 		}
 
 		DDLObject.LoadTypes(typeof(Ability).Assembly);
+		RivetAssetId.NameResolver = id => Instance != null && Instance.TryGetAssetName(id, out var name) ? name : null;
 	}
 
 	public RivetGame(string root) {

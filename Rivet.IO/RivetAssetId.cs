@@ -77,9 +77,13 @@ public record struct RivetAssetId : IEquatable<ulong>, IEquatable<string> {
 	public static implicit operator RivetAssetId(string? text) => FromString(text);
 
 
-	public static Func<RivetAssetId, string?> NameResolver { get; } = _ => null;
+	public static Func<RivetAssetId, string?> NameResolver { get; set; } = _ => null;
 
-	public override string ToString() => NameResolver(Value) ?? $"0x{Value:x16}";
+	public override string ToString() => Value switch {
+		                                     Basis => "",
+		                                     0 => "<null>",
+		                                     _ => NameResolver(Value) ?? $"0x{Value:x16}",
+	                                     };
 
 	public bool Equals(ulong other) => Hash == (other & 0x3FFFFFFFFFFFFFFFUL);
 
