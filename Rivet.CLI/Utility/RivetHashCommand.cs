@@ -1,5 +1,4 @@
 using DragonLib.CommandLine;
-using Rivet.Data;
 using Rivet.IO;
 
 namespace Rivet.CLI.Utility;
@@ -12,15 +11,5 @@ public record RivetHashCommand(CommandLineFlags Flags) : RivetCommand {
 			var assetId = RivetAssetId.FromString(arg);
 			Console.WriteLine($"{arg} = TypeId: {typeId.Hash:x8}; AssetId: {assetId.Hash:x16}");
 		}
-	}
-}
-
-[Command(typeof(CommandLineFlags), "save", "Converts a save file to JSON")]
-public record RivetSaveCommand(CommandLineFlags Flags) : RivetCommand {
-	public override void Execute() {
-		using var image = new FileStream(Flags.Positionals[1], FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-		using var buffer = new RivetMemory<byte>((int) image.Length);
-		image.ReadExactly(buffer.Memory.Span);
-		var save = new SaveData(buffer);
 	}
 }
