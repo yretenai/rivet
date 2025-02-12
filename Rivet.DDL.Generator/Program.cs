@@ -280,6 +280,10 @@ internal class Program {
 			}
 		}
 
+		if (value.Id == 0x4d4b74f2u) {
+			value.ParentId = 0xaed4bb1fu; // ?!
+		}
+
 		var name = value.Name!.Sanitize();
 		var baseName = value.ParentId == 0 ? "DDLObjectType" : nameLookup[value.ParentId].Sanitize();
 

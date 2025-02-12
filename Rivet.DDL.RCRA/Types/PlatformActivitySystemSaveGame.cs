@@ -11,8 +11,8 @@ using Rivet.IO;
 using Rivet.DDL.Enums;
 
 [DDLRegistration(0x4d4b74f2u)]
-public class PlatformActivitySystemSaveGame : DDLObjectType, IDDLObjectType<PlatformActivitySystemSaveGame> {
-	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x4d4b74f2u);
+public class PlatformActivitySystemSaveGame : PlatformActivitySystemSaveBase, IDDLObjectType<PlatformActivitySystemSaveGame> {
+	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x4d4b74f2u);
 
 	public PlatformActivitySystemSaveGame(DDLObject ddl) : base(ddl) {
 		ScriptedGameIntentDisabled = ddl.GetValue<bool>(0x006c2269u, ScriptedGameIntentDisabled);
@@ -21,6 +21,6 @@ public class PlatformActivitySystemSaveGame : DDLObjectType, IDDLObjectType<Plat
 	[DDLRegistration(0x006c2269u)]
 	public bool ScriptedGameIntentDisabled { get; set; } = false;
 
-	public static PlatformActivitySystemSaveGame Create(DDLObject ddl) => new(ddl);
+	public new static PlatformActivitySystemSaveGame Create(DDLObject ddl) => new(ddl);
 }
 
