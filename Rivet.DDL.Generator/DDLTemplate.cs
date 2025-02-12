@@ -29,19 +29,19 @@ public static class DDLTemplate {
 
 		#nullable enable
 
-		using Rivet.Models;
+		using Rivet.IO;
 		using Rivet.DDL.Enums;
 
 		[%attribute%]
 		public class %name% : %base-name%, IDDLObjectType<%name%> {
 			public %new%static RivetTypeId TypeId { get; } = new RivetTypeId(0x%hash%u);
-
+		
 			public %name%(DDLObject ddl) : base(ddl) {
 				%init-body%
 			}
-
+		
 			%field-body%
-
+		
 			public %new%static %name% Create(DDLObject ddl) => new(ddl);
 		}
 

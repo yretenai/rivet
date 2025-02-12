@@ -5,6 +5,7 @@
 using System.Text;
 using DragonLib.CommandLine;
 using Rivet.CLI.Flags;
+using Rivet.IO;
 using Rivet.Models;
 
 namespace Rivet.CLI.List;

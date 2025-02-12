@@ -4,12 +4,11 @@
 
 using System.Runtime.InteropServices;
 using Rivet.IO;
-using Rivet.Models;
 using Rivet.Models.Data;
 
 namespace Rivet.Data;
 
-public class DAT1 : IDisposable {
+public class DAT1 : IDisposable, IStringPooled {
 	protected const uint DAT1Magic = 0x44415431u;
 
 	public DAT1(IUnsafeMemoryOwner<byte> owner, IUnsafeMemoryOwner<byte> buffer, IUnsafeMemoryOwner<byte>? residentBuffer = null) {
@@ -55,6 +54,11 @@ public class DAT1 : IDisposable {
 		GC.SuppressFinalize(this);
 	}
 
+	public string GetString(int offset) =>
+		new MemoryReader(Buffer) {
+			Offset = offset,
+		}.GetCString();
+
 	protected virtual void Dispose(bool disposing) {
 		if (disposing) {
 			Release();
@@ -84,9 +88,4 @@ public class DAT1 : IDisposable {
 	public IUnsafeMemoryOwner<byte> GetSection(uint hash) => !Sections.TryGetValue(hash, out var section) ? IUnsafeMemoryOwner<byte>.Empty : section.Buffer;
 	public ReadOnlySpan<T> GetSection<T>(ReadOnlySpan<byte> name) where T : struct => GetSection<T>(RivetTypeId.Checksum(name));
 	public ReadOnlySpan<T> GetSection<T>(uint hash) where T : struct => MemoryMarshal.Cast<byte, T>(GetSection(hash).Memory.Span);
-
-	public string GetString(int offset) =>
-		new MemoryReader(Buffer) {
-			Offset = offset,
-		}.GetCString();
 }

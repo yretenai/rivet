@@ -4,6 +4,8 @@
 
 using System.Diagnostics.CodeAnalysis;
 using Rivet.Data;
+using Rivet.DDL;
+using Rivet.DDL.Enums;
 using Rivet.IO;
 using Rivet.Models;
 using Rivet.Models.Data;
@@ -23,6 +25,8 @@ public sealed class RivetGame : IDisposable {
 		if (File.Exists(txt)) {
 			LoadFileList(File.ReadAllText(txt));
 		}
+
+		DDLObject.LoadTypes(typeof(Ability).Assembly);
 	}
 
 	public RivetGame(string root) {

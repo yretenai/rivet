@@ -22,6 +22,8 @@ SPDX-License-Identifier: EUPL-1.2
 	<ItemGroup>
 		<ProjectReference Include="..\Libraries\DragonLib\DragonLib\DragonLib.csproj"/>
 		<ProjectReference Include="..\Libraries\GDeflateNet\GDeflateNet\GDeflateNet.csproj"/>
+		<ProjectReference Include="..\Rivet.DDL.RCRA\Rivet.DDL.RCRA.csproj"/>
+		<ProjectReference Include="..\Rivet.DDL\Rivet.DDL.csproj"/>
 		<ProjectReference Include="..\Rivet.IO\Rivet.IO.csproj"/>
 	</ItemGroup>
 

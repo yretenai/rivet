@@ -1,7 +1,6 @@
 using Rivet.DDL;
 using Rivet.DDL.Types;
 using Rivet.IO;
-using Rivet.Models;
 
 namespace Rivet.Data;
 

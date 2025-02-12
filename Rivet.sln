@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rivet.Converters", "Rivet.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rivet.IO", "Rivet.IO\Rivet.IO.csproj", "{58E7225C-B590-4758-8831-67A4388487D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rivet.DDL", "Rivet.DDL\Rivet.DDL.csproj", "{D79F5C8D-503E-4AA0-A049-95F9B9F0679B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rivet.DDL.RCRA", "Rivet.DDL.RCRA\Rivet.DDL.RCRA.csproj", "{9A6B2E47-C8A2-49F5-BB6F-30E6BE603CB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +72,14 @@ Global
 		{58E7225C-B590-4758-8831-67A4388487D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58E7225C-B590-4758-8831-67A4388487D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58E7225C-B590-4758-8831-67A4388487D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D79F5C8D-503E-4AA0-A049-95F9B9F0679B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79F5C8D-503E-4AA0-A049-95F9B9F0679B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79F5C8D-503E-4AA0-A049-95F9B9F0679B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79F5C8D-503E-4AA0-A049-95F9B9F0679B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A6B2E47-C8A2-49F5-BB6F-30E6BE603CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6B2E47-C8A2-49F5-BB6F-30E6BE603CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6B2E47-C8A2-49F5-BB6F-30E6BE603CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6B2E47-C8A2-49F5-BB6F-30E6BE603CB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5E7156D7-C1D3-4B6A-8B5A-996D906A10D0} = {8279A19F-0CA5-49A1-A243-F5C380862E0B}

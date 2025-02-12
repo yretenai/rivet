@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: EUPL-1.2
 
 using System.Runtime.InteropServices;
+using Rivet.IO;
 
 namespace Rivet.Models.Data;
 

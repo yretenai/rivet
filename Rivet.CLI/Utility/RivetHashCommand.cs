@@ -1,7 +1,6 @@
 using DragonLib.CommandLine;
 using Rivet.Data;
 using Rivet.IO;
-using Rivet.Models;
 
 namespace Rivet.CLI.Utility;
 
