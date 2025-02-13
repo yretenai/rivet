@@ -31,18 +31,26 @@ internal record RivetExtractConfigCommand(RivetExtractFlags Flags) : RivetExtrac
 		}
 
 		var name = RivetGame.ProcessName(asset);
+		var outputPath = name;
+		if (Flags.Flatten) {
+			outputPath = Path.GetFileName(outputPath);
+		}
+
+		outputPath = Path.ChangeExtension(outputPath, "json");
+		var target = Path.Combine(Flags.OutputDir, outputPath);
+		if (Flags.NoClobber) {
+			var info = new FileInfo(target);
+			if (info is { Exists: true, Length: > 0 }) {
+				return;
+			}
+		}
+
 		Log.Information("Exporting {Path}", name);
 
 		if (Flags.Dry) {
 			return;
 		}
 
-		if (Flags.Flatten) {
-			name = Path.GetFileName(name);
-		}
-
-		name = Path.ChangeExtension(name, "json");
-		var target = Path.Combine(Flags.OutputDir, name);
 		Directory.CreateDirectory(Path.GetDirectoryName(target) ?? Flags.OutputDir);
 		using var stream = new FileStream(target, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 		JsonSerializer.Serialize(stream, new {

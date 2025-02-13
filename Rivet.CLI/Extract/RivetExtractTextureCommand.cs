@@ -58,19 +58,26 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 		}
 
 		var name = RivetGame.ProcessName(asset);
+		var outputPath = name;
+		if (Flags.Flatten) {
+			outputPath = Path.GetFileName(outputPath);
+		}
+
+		outputPath = Path.ChangeExtension(outputPath, format.ToString("G").ToLower());
+		var target = Path.Combine(Flags.OutputDir, outputPath);
+		if (Flags.NoClobber) {
+			var info = new FileInfo(target);
+			if (info is { Exists: true, Length: > 0 }) {
+				return;
+			}
+		}
+
 		Log.Information("Converting {Path} to {Format} ({Type})", name, format, texture.TextureHeader.Flags.Dimension);
 
 		if (Flags.Dry) {
 			return;
 		}
 
-		if (Flags.Flatten) {
-			name = Path.GetFileName(name);
-		}
-
-		name = Path.ChangeExtension(name, format.ToString("G").ToLower());
-
-		var target = Path.Combine(Flags.OutputDir, name);
 		Directory.CreateDirectory(Path.GetDirectoryName(target) ?? Flags.OutputDir);
 		using var stream = new FileStream(target, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 		if (format == ImageFormat.DDS) {

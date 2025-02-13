@@ -15,6 +15,9 @@ public record RivetExtractFlags : RivetCLIFlags {
 	[Flag("dry", Help = "Do not actually extract anything")]
 	public bool Dry { get; set; }
 
+	[Flag("no-clobber", Help = "Do not overwrite files")]
+	public bool NoClobber { get; set; }
+
 	[Flag("flat", Help = "Do not build directory hierarchies")]
 	public bool Flatten { get; set; }
 
