@@ -58,7 +58,7 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 		}
 
 		var name = RivetGame.ProcessName(asset);
-		Log.Information("Converting {Path} to {Type}", name, format);
+		Log.Information("Converting {Path} to {Format} ({Type})", name, format, texture.TextureHeader.Flags.Dimension);
 
 		if (Flags.Dry) {
 			return;
