@@ -121,7 +121,7 @@ public static class TextureConverter {
 
 			for (var surface = 0u; surface < Math.Max(1, surfaceCount); ++surface) {
 				var oneSurface = CalculateSurfaceSize(width, height, pixelsPerBlock, bitsPerBlock, numMips, out var largestMip);
-				var chunk = new SharedRivetMemory<byte>(hasStream ? texture.StreamBuffer : texture.ResidentBuffer, (int) (oneSurface * surface), (int) largestMip);
+				using var chunk = new SharedRivetMemory<byte>(hasStream ? texture.StreamBuffer : texture.ResidentBuffer, (int) (oneSurface * surface), (int) largestMip);
 
 				switch (texture.TextureHeader.Format) {
 					case DXGIFormat.BC1_UNORM:

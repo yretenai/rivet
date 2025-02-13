@@ -36,10 +36,7 @@ public class AssetPack : IDisposable {
 
 	protected virtual void Dispose(bool disposing) {
 		if (disposing) {
-			if (Buffer is IDisposable bufferDisposable) {
-				bufferDisposable.Dispose();
-			}
-
+			Buffer.Dispose();
 			Buffer = IUnsafeMemoryOwner<byte>.Empty;
 			Buffers.Clear();
 		}

@@ -66,18 +66,9 @@ public class DAT1 : IDisposable, IStringPooled {
 	}
 
 	protected void Release() {
-		if (Owner is IDisposable ownerDisposable) {
-			ownerDisposable.Dispose();
-		}
-
-		if (Buffer is IDisposable bufferDisposable) {
-			bufferDisposable.Dispose();
-		}
-
-		if (ResidentBuffer is IDisposable residentDisposable) {
-			residentDisposable.Dispose();
-		}
-
+		Owner.Dispose();
+		Buffer.Dispose();
+		ResidentBuffer.Dispose();
 		Owner = IUnsafeMemoryOwner<byte>.Empty;
 		Buffer = IUnsafeMemoryOwner<byte>.Empty;
 		ResidentBuffer = IUnsafeMemoryOwner<byte>.Empty;

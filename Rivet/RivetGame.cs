@@ -84,12 +84,12 @@ public sealed class RivetGame : IDisposable {
 		return asset != null || TryFindAsset(assetId, locale, category, out asset);
 	}
 
-	public bool TryLoadAsset<T>(ulong assetId, Locale locale, AssetCategory category, [MaybeNullWhen(false)] out T instance) where T : class, IRivetInstance {
+	public bool TryLoadAsset<T>(ulong assetId, Locale locale, AssetCategory category, [MaybeNullWhen(false)] out T instance) where T : class, IRivetInstance<T> {
 		instance = null;
 		return TryFindAsset(assetId, locale, category, out var asset) && asset.TryLoad(this, out instance);
 	}
 
-	public T? LoadAsset<T>(ulong assetId, Locale locale, AssetCategory category) where T : class, IRivetInstance => TryLoadAsset<T>(assetId, locale, category, out var instance) ? instance : null;
+	public T? LoadAsset<T>(ulong assetId, Locale locale, AssetCategory category) where T : class, IRivetInstance<T> => TryLoadAsset<T>(assetId, locale, category, out var instance) ? instance : null;
 
 	public bool TryFindAsset(ulong assetId, Locale locale, AssetCategory category, [MaybeNullWhen(false)] out RivetAsset asset) {
 		asset = TOC.Groups[category][locale].FirstOrDefault(x => x.Id == assetId);

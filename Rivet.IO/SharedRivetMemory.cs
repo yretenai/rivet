@@ -28,4 +28,8 @@ public sealed record SharedRivetMemory<T>(IUnsafeMemoryOwner<T> UnderlyingOwner,
 	public IUnsafeMemoryOwner<T> Shift<TShift>() => Shift(Unsafe.SizeOf<TShift>());
 
 	public override string ToString() => $"SharedRivetMemory of {(Size * Unsafe.SizeOf<T>()).GetHumanReadableBytes()}";
+
+	public void Dispose() {
+		// note: maybe implement ref counting?
+	}
 }

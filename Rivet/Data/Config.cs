@@ -9,7 +9,7 @@ using Rivet.Models.Data;
 
 namespace Rivet.Data;
 
-public class Config : AssetPack, IRivetInstance {
+public class Config : AssetPack, IRivetInstance<Config> {
 	public const uint TypeId = 0x21A56F68;
 
 	public Config(RivetAsset asset, IUnsafeMemoryOwner<byte> buffer, RivetGame game) : base(asset, buffer, game) {
@@ -31,5 +31,5 @@ public class Config : AssetPack, IRivetInstance {
 	public DDLObject Type { get; }
 	public DDLObject Built { get; }
 
-	public static object CreateInstance(RivetAsset asset, RivetGame game, IUnsafeMemoryOwner<byte> buffer) => new Config(asset, buffer, game);
+	public static Config CreateInstance(RivetAsset asset, RivetGame game, IUnsafeMemoryOwner<byte> buffer) => new(asset, buffer, game);
 }

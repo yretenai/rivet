@@ -28,26 +28,25 @@ public record RivetAsset {
 
 	public RivetMemory<byte>? Open() => Size > -1 && Offset != uint.MaxValue ? Archive?.DataStream?.ReadBytes(Offset, Size) : null;
 
-	public T? Load<T>(RivetGame game) where T : class, IRivetInstance => TryLoad<T>(game, out var instance) ? instance : null;
+	public T? Load<T>(RivetGame game) where T : class, IRivetInstance<T> => TryLoad<T>(game, out var instance) ? instance : null;
 
-	public bool TryLoad<T>(RivetGame game, [MaybeNullWhen(false)] out T instance) where T : class, IRivetInstance {
-		using var data = Open();
-		if (data != null) {
-			var constructed = T.CreateInstance(this, game, data);
-			if (constructed is not T rivetInstance) {
-				if (constructed is IDisposable disposable) {
-					disposable.Dispose();
-				}
-
-				instance = null;
-				return false;
+	public bool TryLoad<T>(RivetGame game, [MaybeNullWhen(false)] out T instance) where T : class, IRivetInstance<T> {
+		var data = Open();
+		instance = null;
+		try {
+			if (data != null) {
+				instance = T.CreateInstance(this, game, data);
+				return instance is not null;
 			}
 
-			instance = rivetInstance;
-			return true;
+			return false;
+		} finally {
+			// being disposable implies ownership transfer
+			// so not being disposable means we have to do it here.
+			// note: if instance is null this will also be true.
+			if (instance is not IDisposable) {
+				data?.Dispose();
+			}
 		}
-
-		instance = null;
-		return false;
 	}
 }

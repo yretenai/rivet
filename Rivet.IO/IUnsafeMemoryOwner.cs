@@ -4,7 +4,7 @@
 
 namespace Rivet.IO;
 
-public interface IUnsafeMemoryOwner<T> where T : struct {
+public interface IUnsafeMemoryOwner<T> : IDisposable where T : struct {
 	Memory<T> Memory { get; }
 
 	public static IUnsafeMemoryOwner<T> Empty { get; } = new ZeroOwner<T>();

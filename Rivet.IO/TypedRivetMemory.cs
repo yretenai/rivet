@@ -45,5 +45,6 @@ public sealed record TypedRivetMemory<T>(IUnsafeMemoryOwner<byte> UnderlyingOwne
 	private void Dispose(bool disposing) {
 		(Manager as IDisposable)?.Dispose();
 		Manager = null;
+		// if SharedRivetMemory implements RefCounting also do it here.
 	}
 }

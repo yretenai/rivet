@@ -10,7 +10,7 @@ using Rivet.Models.Graphics;
 
 namespace Rivet.Graphics;
 
-public class Texture : AssetPack, IRivetInstance {
+public class Texture : AssetPack, IRivetInstance<Texture> {
 	public const uint TypeId = 0x8F53A199;
 
 	public Texture(RivetAsset asset, IUnsafeMemoryOwner<byte> buffer, RivetGame game) : base(asset, buffer, game) {
@@ -44,20 +44,14 @@ public class Texture : AssetPack, IRivetInstance {
 		}
 	}
 
-	public static object CreateInstance(RivetAsset asset, RivetGame game, IUnsafeMemoryOwner<byte> buffer) => new Texture(asset, buffer, game);
+	public static Texture CreateInstance(RivetAsset asset, RivetGame game, IUnsafeMemoryOwner<byte> buffer) => new(asset, buffer, game);
 
 	protected override void Dispose(bool disposing) {
 		base.Dispose(disposing);
 
 		if (disposing) {
-			if (StreamBuffer is IDisposable streamBuffer) {
-				streamBuffer.Dispose();
-			}
-
-			if (ResidentBuffer is IDisposable residentBuffer) {
-				residentBuffer.Dispose();
-			}
-
+			StreamBuffer.Dispose();
+			ResidentBuffer.Dispose();
 			StreamBuffer = IUnsafeMemoryOwner<byte>.Empty;
 			ResidentBuffer = IUnsafeMemoryOwner<byte>.Empty;
 		}
