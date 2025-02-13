@@ -7,7 +7,7 @@ using DragonLib;
 
 namespace Rivet.IO;
 
-public sealed record TypedRivetMemory<T>(IUnsafeMemoryOwner<byte> UnderlyingOwner, int RealOffset, int Size) : IUnsafeMemoryOwner<T>, IDisposable where T : struct {
+public sealed record TypedRivetMemory<T>(IUnsafeMemoryOwner<byte> UnderlyingOwner, int RealOffset, int Size) : IUnsafeMemoryOwner<T> where T : struct {
 	public TypedRivetMemory(IUnsafeMemoryOwner<byte> underlyingOwner, int offset) : this(underlyingOwner, offset, underlyingOwner.Memory.Length - offset) { }
 
 	public MemoryTypeManager<T, byte>? Manager { get; private set; } = new(UnderlyingOwner.Memory.Slice(RealOffset, Size * Unsafe.SizeOf<T>()));

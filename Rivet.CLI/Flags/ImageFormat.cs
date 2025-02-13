@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
-namespace Rivet.CLI.Extract;
+namespace Rivet.CLI.Flags;
 
 internal enum ImageFormat {
 	Auto,

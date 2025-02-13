@@ -14,12 +14,12 @@ public static partial class StringExtensions {
 	private static readonly Regex CollapseBracketRegex = CollapseBracketRegexGen();
 
 	public static string Sanitize(this string value) {
-		if (value == "null") {
-			return "NULL";
-		}
-
-		if (value is ['k', _, ..] && char.IsUpper(value[1])) {
-			value = value[1..];
+		switch (value) {
+			case "null":
+				return "NULL";
+			case ['k', _, ..] when char.IsUpper(value[1]):
+				value = value[1..];
+				break;
 		}
 
 		value = char.ToUpper(value[0]) + value[1..];
