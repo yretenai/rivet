@@ -25,8 +25,8 @@ public class DAT1 : IDisposable, IStringPooled {
 		var sectionHeaders = reader.Get<DAT1Entry>(Header.SectionCount);
 		TypeName = reader.GetCString();
 
-		var residentStart = buffer.Memory.Length;
-		var residentEnd = residentStart + ResidentBuffer.Memory.Length;
+		var residentStart = buffer.Size;
+		var residentEnd = residentStart + ResidentBuffer.Size;
 		foreach (var sectionHeader in sectionHeaders) {
 			if (sectionHeader.Offset > residentEnd) {
 				throw new InvalidOperationException("Section offset is out of bounds");

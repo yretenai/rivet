@@ -11,7 +11,7 @@ namespace Rivet.IO;
 public class MemoryReader(IUnsafeMemoryOwner<byte> buffer) {
 	public IUnsafeMemoryOwner<byte> Buffer { get; } = buffer;
 	public int Offset { get; set; }
-	public int Unconsumed => Buffer.Memory.Length - Offset;
+	public int Unconsumed => Buffer.Size - Offset;
 
 	public T Peek<T>() where T : struct => MemoryMarshal.Read<T>(Buffer.Memory[Offset..].Span);
 

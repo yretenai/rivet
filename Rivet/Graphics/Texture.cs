@@ -39,7 +39,7 @@ public class Texture : AssetPack, IRivetInstance<Texture> {
 
 	public (int Width, int Height) Dimensions {
 		get {
-			var (width, height) = StreamBuffer.Memory.Length > 0 ? TextureHeader.StreamDimensions : TextureHeader.ResidentDimensions;
+			var (width, height) = StreamBuffer.Size > 0 ? TextureHeader.StreamDimensions : TextureHeader.ResidentDimensions;
 			return (width, height);
 		}
 	}

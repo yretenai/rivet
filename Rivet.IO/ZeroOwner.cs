@@ -6,7 +6,7 @@ namespace Rivet.IO;
 
 public sealed record ZeroOwner<T> : IUnsafeMemoryOwner<T> where T : struct {
 	public Memory<T> Memory => Memory<T>.Empty;
-
+	public int Size => 0;
 	public IUnsafeMemoryOwner<T> Shift(int offset) => this;
 
 	public IUnsafeMemoryOwner<T> Shift<TShift>() => this;

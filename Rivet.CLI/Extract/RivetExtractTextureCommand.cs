@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: EUPL-1.2
 
 using DragonLib.CommandLine;
+using ImageMagick;
 using Rivet.CLI.Flags;
 using Rivet.Converters;
 using Rivet.Graphics;
@@ -10,7 +11,6 @@ using Rivet.Models;
 using Rivet.Models.Data;
 using Rivet.Models.Graphics;
 using Serilog;
-using SixLabors.ImageSharp;
 
 namespace Rivet.CLI.Extract;
 
@@ -65,16 +65,7 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 			stream.Write(buffer.Memory.Span);
 		} else {
 			using var image = texture.ToImage();
-			if (image == null) {
-				Log.Error("Unable to convert texture!");
-				return;
-			}
-
-			if (format == ImageFormat.TIF) {
-				image.SaveAsTiff(stream);
-			} else {
-				image.SaveAsPng(stream);
-			}
+			image.Write(stream, format == ImageFormat.TIF ? MagickFormat.Tiff : MagickFormat.Png);
 		}
 	}
 }

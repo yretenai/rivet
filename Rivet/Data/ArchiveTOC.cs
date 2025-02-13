@@ -183,7 +183,7 @@ public sealed class ArchiveTOC : DAT1 {
 
 		var uncompressed = new RivetMemory<byte>(header.Size);
 		using var pinned = remain.Memory.Pin();
-		using var unsafeStream = new UnmanagedMemoryStream((byte*) pinned.Pointer, remain.Memory.Length);
+		using var unsafeStream = new UnmanagedMemoryStream((byte*) pinned.Pointer, remain.Size);
 		using var zStream = new ZLibStream(unsafeStream, CompressionMode.Decompress, false);
 		zStream.ReadExactly(uncompressed.Memory.Span);
 		return uncompressed;

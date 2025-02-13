@@ -8,12 +8,11 @@ using System.Runtime.InteropServices;
 using AssetRipper.TextureDecoder.Bc;
 using AssetRipper.TextureDecoder.Rgb;
 using AssetRipper.TextureDecoder.Rgb.Formats;
+using ImageMagick;
 using Rivet.Converters.Support;
 using Rivet.Graphics;
 using Rivet.IO;
 using Rivet.Models.Graphics;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
 
 namespace Rivet.Converters;
 
@@ -22,7 +21,7 @@ public static class TextureConverter {
 	public static bool IsSupported(this Texture texture) => texture.TextureHeader.Format.GetPitchFactor().PixelsPerBlock > 0;
 
 	public static RivetMemory<byte> ToDDS(this Texture texture) {
-		var hasStream = texture.StreamBuffer.Memory.Length > 0;
+		var hasStream = texture.StreamBuffer.Size > 0;
 		var numMips = texture.TextureHeader.Mips;
 		if (!hasStream) {
 			numMips -= texture.TextureHeader.StreamMips;
@@ -100,160 +99,160 @@ public static class TextureConverter {
 		return buffer;
 	}
 
-	public static Image? ToImage(this Texture texture) {
-		var (bitsPerBlock, pixelsPerBlock) = texture.TextureHeader.Format.GetPitchFactor();
-		if (bitsPerBlock == 0) {
-			return null;
-		}
-
+	public static MagickImageCollection ToImage(this Texture texture) {
 		var (width, height) = texture.Dimensions;
-		Image image = texture.IsHDR ? new Image<RgbaVector>(width, height) : new Image<Rgba32>(width, height);
+
+		using var frameBuffer = new RivetMemory<byte>(width * height * (texture.IsHDR ? 16 : 4));
+
+		#pragma warning disable CA2000 // disposed later or transferred
+		var image = new MagickImageCollection();
+		#pragma warning restore CA2000
 		try {
-			var hasStream = texture.StreamBuffer.Memory.Length > 0;
-			var numMips = !hasStream ? texture.TextureHeader.Mips - texture.TextureHeader.StreamMips : texture.TextureHeader.StreamMips;
-
-			using var frameBuffer = new RivetMemory<byte>(width * height * (texture.IsHDR ? 16 : 4));
-
 			var surfaceCount = (int) texture.TextureHeader.SurfaceCount;
 			if (texture.TextureHeader.Flags.Dimension == TextureDimension.Cube) {
 				surfaceCount *= 6;
 			}
 
 			for (var surface = 0; surface < Math.Max(1, surfaceCount); ++surface) {
-				var oneSurface = CalculateSurfaceSize(width, height, pixelsPerBlock, bitsPerBlock, numMips, out var largestMip);
-
-				#pragma warning disable CA2000 // dogshit analyzer telling me to use using when i'm using using
-				using var chunk = new SharedRivetMemory<byte>(hasStream ? texture.StreamBuffer : texture.ResidentBuffer, (int) (oneSurface * surface), (int) largestMip);
-				#pragma warning restore CA2000
-				switch (texture.TextureHeader.Format) {
-					case DXGIFormat.BC1_UNORM:
-					case DXGIFormat.BC1_UNORM_SRGB:
-						Bc1.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.BC2_UNORM:
-					case DXGIFormat.BC2_UNORM_SRGB:
-						Bc2.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.BC3_UNORM:
-					case DXGIFormat.BC3_UNORM_SRGB:
-						Bc3.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.BC4_UNORM:
-					case DXGIFormat.BC4_SNORM:
-						Bc4.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.BC5_SNORM:
-					case DXGIFormat.BC5_UNORM:
-						Bc5.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.BC6H_SF16:
-					case DXGIFormat.BC6H_UF16:
-						DecompressBC6Float(chunk.Memory.Span, width, height, texture.TextureHeader.Format is DXGIFormat.BC6H_SF16, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.BC7_UNORM:
-					case DXGIFormat.BC7_UNORM_SRGB:
-						Bc7.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.A8_UNORM:
-					case DXGIFormat.R8_UNORM:
-					case DXGIFormat.R8_SNORM:
-						RgbConverter.Convert<ColorR<byte>, byte, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R8G8_SINT:
-					case DXGIFormat.R8G8_SNORM:
-						RgbConverter.Convert<ColorRG<sbyte>, sbyte, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R8G8_UNORM:
-					case DXGIFormat.R8G8_UINT:
-						RgbConverter.Convert<ColorRG<byte>, byte, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R16_SINT:
-					case DXGIFormat.R16_SNORM:
-						RgbConverter.Convert<ColorRG<short>, short, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R16_UINT:
-					case DXGIFormat.R16_UNORM:
-						RgbConverter.Convert<ColorRG<ushort>, ushort, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R16_FLOAT:
-						RgbConverter.Convert<ColorRG<Half>, Half, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R8G8B8A8_UNORM:
-					case DXGIFormat.R8G8B8A8_UNORM_SRGB:
-					case DXGIFormat.R8G8B8A8_UINT:
-						chunk.Memory.Span[..frameBuffer.Memory.Length].CopyTo(frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R8G8B8A8_SNORM:
-					case DXGIFormat.R8G8B8A8_SINT:
-						RgbConverter.Convert<ColorRGBA<sbyte>, sbyte, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R32_FLOAT:
-						RgbConverter.Convert<ColorR<float>, float, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R32_SINT:
-						RgbConverter.Convert<ColorR<int>, int, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R32_UINT:
-						RgbConverter.Convert<ColorR<uint>, uint, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R16G16_FLOAT:
-						RgbConverter.Convert<ColorRG<Half>, Half, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R16G16_UNORM:
-					case DXGIFormat.R16G16_UINT:
-						RgbConverter.Convert<ColorRG<ushort>, ushort, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R16G16_SNORM:
-					case DXGIFormat.R16G16_SINT:
-						RgbConverter.Convert<ColorRG<short>, short, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R10G10B10A2_UNORM:
-					case DXGIFormat.R10G10B10A2_UINT:
-						RgbConverter.Convert<ColorR10G10B10A2, ushort, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.B8G8R8A8_UNORM:
-					case DXGIFormat.B8G8R8A8_UNORM_SRGB:
-					case DXGIFormat.B8G8R8X8_UNORM:
-					case DXGIFormat.B8G8R8X8_UNORM_SRGB:
-						RgbConverter.Convert<ColorBGRA32, byte, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-
-					case DXGIFormat.R16G16B16A16_FLOAT:
-						RgbConverter.Convert<ColorRGBA<Half>, Half, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R16G16B16A16_SINT:
-					case DXGIFormat.R16G16B16A16_UINT:
-					case DXGIFormat.R16G16B16A16_SNORM:
-					case DXGIFormat.R16G16B16A16_UNORM:
-						RgbConverter.Convert<ColorRGBA<ushort>, ushort, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R32G32_FLOAT:
-						RgbConverter.Convert<ColorRG<float>, float, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R32G32_SINT:
-						RgbConverter.Convert<ColorRGBA<int>, int, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R32G32_UINT:
-						RgbConverter.Convert<ColorRG<uint>, uint, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
-						break;
-					case DXGIFormat.R32G32B32A32_FLOAT:
-						chunk.Memory.Span[..frameBuffer.Memory.Length].CopyTo(frameBuffer.Memory.Span);
-						break;
-					default:
-						throw new NotSupportedException();
-				}
-
-				using Image frame = texture.IsHDR ? Image.WrapMemory<RgbaVector>(frameBuffer.Memory, width, height) : Image.WrapMemory<Rgba32>(frameBuffer.Memory, width, height);
-				image.Frames.AddFrame(frame.Frames[0]);
+				image.Add(DecodeSurface(texture, surface, frameBuffer));
 			}
 
-			image.Frames.RemoveFrame(0);
+			return image;
 		} catch {
 			image.Dispose();
 			throw;
 		}
+	}
 
-		return image;
+	private static MagickImage DecodeSurface(Texture texture, int surface, RivetMemory<byte> frameBuffer) {
+		var (width, height) = texture.Dimensions;
+		var (bitsPerBlock, pixelsPerBlock) = texture.TextureHeader.Format.GetPitchFactor();
+		var hasStream = texture.StreamBuffer.Size > 0;
+		var numMips = !hasStream ? texture.TextureHeader.Mips - texture.TextureHeader.StreamMips : texture.TextureHeader.StreamMips;
+		var oneSurface = CalculateSurfaceSize(width, height, pixelsPerBlock, bitsPerBlock, numMips, out var largestMip);
+
+		#pragma warning disable CA2000 // dogshit analyzer telling me to use using when i'm using using
+		using var chunk = new SharedRivetMemory<byte>(hasStream ? texture.StreamBuffer : texture.ResidentBuffer, (int) (oneSurface * surface), (int) largestMip);
+		#pragma warning restore CA2000
+		switch (texture.TextureHeader.Format) {
+			case DXGIFormat.BC1_UNORM:
+			case DXGIFormat.BC1_UNORM_SRGB:
+				Bc1.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.BC2_UNORM:
+			case DXGIFormat.BC2_UNORM_SRGB:
+				Bc2.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.BC3_UNORM:
+			case DXGIFormat.BC3_UNORM_SRGB:
+				Bc3.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.BC4_UNORM:
+			case DXGIFormat.BC4_SNORM:
+				Bc4.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.BC5_SNORM:
+			case DXGIFormat.BC5_UNORM:
+				Bc5.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.BC6H_SF16:
+			case DXGIFormat.BC6H_UF16:
+				DecompressBC6Float(chunk.Memory.Span, width, height, texture.TextureHeader.Format is DXGIFormat.BC6H_SF16, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.BC7_UNORM:
+			case DXGIFormat.BC7_UNORM_SRGB:
+				Bc7.Decompress(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.A8_UNORM:
+			case DXGIFormat.R8_UNORM:
+			case DXGIFormat.R8_SNORM:
+				RgbConverter.Convert<ColorR<byte>, byte, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R8G8_SINT:
+			case DXGIFormat.R8G8_SNORM:
+				RgbConverter.Convert<ColorRG<sbyte>, sbyte, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R8G8_UNORM:
+			case DXGIFormat.R8G8_UINT:
+				RgbConverter.Convert<ColorRG<byte>, byte, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R16_SINT:
+			case DXGIFormat.R16_SNORM:
+				RgbConverter.Convert<ColorRG<short>, short, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R16_UINT:
+			case DXGIFormat.R16_UNORM:
+				RgbConverter.Convert<ColorRG<ushort>, ushort, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R16_FLOAT:
+				RgbConverter.Convert<ColorRG<Half>, Half, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R8G8B8A8_UNORM:
+			case DXGIFormat.R8G8B8A8_UNORM_SRGB:
+			case DXGIFormat.R8G8B8A8_UINT:
+				chunk.Memory.Span[..frameBuffer.Size].CopyTo(frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R8G8B8A8_SNORM:
+			case DXGIFormat.R8G8B8A8_SINT:
+				RgbConverter.Convert<ColorRGBA<sbyte>, sbyte, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R32_FLOAT:
+				RgbConverter.Convert<ColorR<float>, float, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R32_SINT:
+				RgbConverter.Convert<ColorR<int>, int, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R32_UINT:
+				RgbConverter.Convert<ColorR<uint>, uint, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R16G16_FLOAT:
+				RgbConverter.Convert<ColorRG<Half>, Half, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R16G16_UNORM:
+			case DXGIFormat.R16G16_UINT:
+				RgbConverter.Convert<ColorRG<ushort>, ushort, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R16G16_SNORM:
+			case DXGIFormat.R16G16_SINT:
+				RgbConverter.Convert<ColorRG<short>, short, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R10G10B10A2_UNORM:
+			case DXGIFormat.R10G10B10A2_UINT:
+				RgbConverter.Convert<ColorR10G10B10A2, ushort, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.B8G8R8A8_UNORM:
+			case DXGIFormat.B8G8R8A8_UNORM_SRGB:
+			case DXGIFormat.B8G8R8X8_UNORM:
+			case DXGIFormat.B8G8R8X8_UNORM_SRGB:
+				RgbConverter.Convert<ColorBGRA32, byte, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+
+			case DXGIFormat.R16G16B16A16_FLOAT:
+				RgbConverter.Convert<ColorRGBA<Half>, Half, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R16G16B16A16_SINT:
+			case DXGIFormat.R16G16B16A16_UINT:
+			case DXGIFormat.R16G16B16A16_SNORM:
+			case DXGIFormat.R16G16B16A16_UNORM:
+				RgbConverter.Convert<ColorRGBA<ushort>, ushort, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R32G32_FLOAT:
+				RgbConverter.Convert<ColorRG<float>, float, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R32G32_SINT:
+				RgbConverter.Convert<ColorRGBA<int>, int, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R32G32_UINT:
+				RgbConverter.Convert<ColorRG<uint>, uint, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				break;
+			case DXGIFormat.R32G32B32A32_FLOAT:
+				chunk.Memory.Span[..frameBuffer.Size].CopyTo(frameBuffer.Memory.Span);
+				break;
+			default:
+				throw new NotSupportedException();
+		}
+
+		return new MagickImage(frameBuffer.Memory.Span, new PixelReadSettings((uint) width, (uint) height, texture.IsHDR ? StorageType.Float : StorageType.Char, PixelMapping.RGBA));
 	}
 
 	private static uint CalculateSurfaceSize(int width, int height, uint pixelsPerBlock, uint bitsPerBlock, int numMips, out uint largestMip) {

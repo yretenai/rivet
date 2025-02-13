@@ -6,6 +6,7 @@ namespace Rivet.IO;
 
 public interface IUnsafeMemoryOwner<T> : IDisposable where T : struct {
 	Memory<T> Memory { get; }
+	int Size { get; }
 
 	public static IUnsafeMemoryOwner<T> Empty { get; } = new ZeroOwner<T>();
 	public IUnsafeMemoryOwner<T> Shift(int offset);
