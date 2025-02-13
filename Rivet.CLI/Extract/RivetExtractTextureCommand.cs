@@ -96,13 +96,26 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 				crossLayout.Composite(image[5], faceSize * 3, faceSize, CompositeOperator.Copy);
 				crossLayout.Composite(image[3], faceSize, faceSize * 2, CompositeOperator.Copy);
 				crossLayout.Write(stream, magickFormat);
-			} else {
-				if (image.Count == 1) {
-					image[0].Write(stream, magickFormat);
-				} else {
-					image.Write(stream, magickFormat);
-				}
+				return;
 			}
+
+			if (image.Count == 1) {
+				image[0].Write(stream, magickFormat);
+				return;
+			}
+
+			if (format == ImageFormat.TIF) {
+				image.Write(stream, magickFormat);
+				return;
+			}
+
+			using var tileLayout = new MagickImage(MagickColors.Transparent, (uint) texture.Dimensions.Width, (uint) (texture.Dimensions.Height * image.Count));
+			tileLayout.ColorSpace = ColorSpace.RGB; // never apply sRGB transform, we can do that later.
+			for (var surfaceIndex = 0; surfaceIndex < image.Count; ++surfaceIndex) {
+				tileLayout.Composite(image[surfaceIndex], 0, texture.Dimensions.Height * surfaceIndex, CompositeOperator.Copy);
+			}
+
+			tileLayout.Write(stream, magickFormat);
 		}
 	}
 }
