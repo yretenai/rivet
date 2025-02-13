@@ -178,14 +178,14 @@ public static class TextureConverter {
 				break;
 			case DXGIFormat.R16_SINT:
 			case DXGIFormat.R16_SNORM:
-				RgbConverter.Convert<ColorRG<short>, short, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				RgbConverter.Convert<ColorR<short>, short, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
 				break;
 			case DXGIFormat.R16_UINT:
 			case DXGIFormat.R16_UNORM:
-				RgbConverter.Convert<ColorRG<ushort>, ushort, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				RgbConverter.Convert<ColorR<ushort>, ushort, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
 				break;
 			case DXGIFormat.R16_FLOAT:
-				RgbConverter.Convert<ColorRG<Half>, Half, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				RgbConverter.Convert<ColorR<Half>, Half, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
 				break;
 			case DXGIFormat.R8G8B8A8_UNORM:
 			case DXGIFormat.R8G8B8A8_UNORM_SRGB:
@@ -240,7 +240,7 @@ public static class TextureConverter {
 				RgbConverter.Convert<ColorRG<float>, float, ColorRGBA<float>, float>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
 				break;
 			case DXGIFormat.R32G32_SINT:
-				RgbConverter.Convert<ColorRGBA<int>, int, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
+				RgbConverter.Convert<ColorRG<int>, int, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
 				break;
 			case DXGIFormat.R32G32_UINT:
 				RgbConverter.Convert<ColorRG<uint>, uint, ColorRGBA<byte>, byte>(chunk.Memory.Span, width, height, frameBuffer.Memory.Span);
