@@ -326,7 +326,7 @@ public static class TextureConverter {
 	public static (uint BitsPerBlock, uint PixelsPerBlock) GetPitchFactor(this DXGIFormat format) {
 		return format switch {
 			       DXGIFormat.BC1_UNORM or DXGIFormat.BC1_UNORM_SRGB or DXGIFormat.BC2_UNORM or DXGIFormat.BC2_UNORM_SRGB => (64, 16),
-			       DXGIFormat.BC3_UNORM or DXGIFormat.BC3_UNORM_SRGB => (16, 16),
+			       DXGIFormat.BC3_UNORM or DXGIFormat.BC3_UNORM_SRGB => (128, 16),
 			       DXGIFormat.BC4_UNORM or DXGIFormat.BC4_SNORM => (64, 16),
 			       DXGIFormat.BC5_UNORM or DXGIFormat.BC5_SNORM or DXGIFormat.BC6H_SF16 or DXGIFormat.BC6H_UF16 or DXGIFormat.BC7_UNORM or DXGIFormat.BC7_UNORM_SRGB => (128, 16),
 			       DXGIFormat.A8_UNORM or DXGIFormat.R8_UNORM or DXGIFormat.R8_SNORM => (8, 1),
