@@ -12,6 +12,7 @@ SPDX-License-Identifier: EUPL-1.2
 		<LangVersion>preview</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<ApplicationIcon>../Rivet/Resources/icon.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
