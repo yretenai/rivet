@@ -2,6 +2,7 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
+using System.Diagnostics;
 using DragonLib.CommandLine;
 using ImageMagick;
 using Rivet.CLI.Flags;
@@ -33,11 +34,23 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 				return;
 			case ImageFormat.Auto:
 				var isMultiSurface = texture.TextureHeader.SurfaceCount > 1 ||
-				                     texture.TextureHeader.Flags.Dimension is TextureDimension.Array or TextureDimension.Cube or TextureDimension.Texture3D;
-				format = texture.IsSupported() ? texture.IsHDR || isMultiSurface ? ImageFormat.TIF : ImageFormat.PNG : ImageFormat.DDS;
+				                     texture.TextureHeader.Flags.Dimension is TextureDimension.Array or TextureDimension.Texture3D ||
+				                     (texture.TextureHeader.Flags.Dimension is TextureDimension.Cube && Flags.AssumeCubeIsSurfaces);
+
+				if (!texture.IsSupported()) {
+					format = ImageFormat.DDS;
+				} else if (isMultiSurface) {
+					format = ImageFormat.TIF;
+				} else if (texture.IsHDR && !Flags.DisallowHDR) {
+					format = ImageFormat.EXR;
+				} else {
+					format = ImageFormat.PNG;
+				}
+
 				break;
 			case ImageFormat.PNG:
 			case ImageFormat.TIF:
+			case ImageFormat.EXR:
 			case ImageFormat.DDS:
 				break;
 			default:
@@ -64,8 +77,32 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 			using var buffer = texture.ToDDS();
 			stream.Write(buffer.Memory.Span);
 		} else {
-			using var image = texture.ToImage();
-			image.Write(stream, format == ImageFormat.TIF ? MagickFormat.Tiff : MagickFormat.Png);
+			var magickFormat = format switch {
+				                   ImageFormat.TIF => MagickFormat.Tiff,
+				                   ImageFormat.PNG => MagickFormat.Png,
+				                   ImageFormat.EXR => MagickFormat.Exr,
+				                   _ => throw new UnreachableException(),
+			                   };
+
+			using var image = texture.ToImage(!Flags.DisallowHDR);
+			if (texture.TextureHeader.Flags.Dimension is TextureDimension.Cube) {
+				var faceSize = texture.Dimensions.Width;
+				using var crossLayout = new MagickImage(MagickColors.Black, (uint) faceSize * 4, (uint) faceSize * 3);
+				crossLayout.ColorSpace = ColorSpace.RGB; // never apply sRGB transform, we can do that later.
+				crossLayout.Composite(image[2], faceSize, 0, CompositeOperator.Copy);
+				crossLayout.Composite(image[1], 0, faceSize, CompositeOperator.Copy);
+				crossLayout.Composite(image[4], faceSize, faceSize, CompositeOperator.Copy);
+				crossLayout.Composite(image[0], faceSize * 2, faceSize, CompositeOperator.Copy);
+				crossLayout.Composite(image[5], faceSize * 3, faceSize, CompositeOperator.Copy);
+				crossLayout.Composite(image[3], faceSize, faceSize * 2, CompositeOperator.Copy);
+				crossLayout.Write(stream, magickFormat);
+			} else {
+				if (image.Count == 1) {
+					image[0].Write(stream, magickFormat);
+				} else {
+					image.Write(stream, magickFormat);
+				}
+			}
 		}
 	}
 }
