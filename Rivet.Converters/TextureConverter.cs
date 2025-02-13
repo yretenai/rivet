@@ -107,7 +107,7 @@ public static class TextureConverter {
 		}
 
 		var (width, height) = texture.Dimensions;
-		Image? image = null;
+		Image image = texture.IsHDR ? new Image<RgbaVector>(width, height) : new Image<Rgba32>(width, height);
 		try {
 			var hasStream = texture.StreamBuffer.Memory.Length > 0;
 			var numMips = !hasStream ? texture.TextureHeader.Mips - texture.TextureHeader.StreamMips : texture.TextureHeader.StreamMips;
@@ -119,10 +119,12 @@ public static class TextureConverter {
 				surfaceCount *= 6;
 			}
 
-			for (var surface = 0u; surface < Math.Max(1, surfaceCount); ++surface) {
+			for (var surface = 0; surface < Math.Max(1, surfaceCount); ++surface) {
 				var oneSurface = CalculateSurfaceSize(width, height, pixelsPerBlock, bitsPerBlock, numMips, out var largestMip);
-				using var chunk = new SharedRivetMemory<byte>(hasStream ? texture.StreamBuffer : texture.ResidentBuffer, (int) (oneSurface * surface), (int) largestMip);
 
+				#pragma warning disable CA2000 // dogshit analyzer telling me to use using when i'm using using
+				using var chunk = new SharedRivetMemory<byte>(hasStream ? texture.StreamBuffer : texture.ResidentBuffer, (int) (oneSurface * surface), (int) largestMip);
+				#pragma warning restore CA2000
 				switch (texture.TextureHeader.Format) {
 					case DXGIFormat.BC1_UNORM:
 					case DXGIFormat.BC1_UNORM_SRGB:
@@ -238,23 +240,16 @@ public static class TextureConverter {
 						chunk.Memory.Span[..frameBuffer.Memory.Length].CopyTo(frameBuffer.Memory.Span);
 						break;
 					default:
-						image?.Dispose();
-						return null;
+						throw new NotSupportedException();
 				}
 
-				Image frame = texture.IsHDR ? Image.WrapMemory<RgbaVector>(frameBuffer.Memory, width, height) : Image.WrapMemory<Rgba32>(frameBuffer.Memory, width, height);
-				if (image == null) {
-					image = frame;
-				} else {
-					try {
-						image.Frames.AddFrame(frame.Frames[0]);
-					} finally {
-						frame.Dispose();
-					}
-				}
+				using Image frame = texture.IsHDR ? Image.WrapMemory<RgbaVector>(frameBuffer.Memory, width, height) : Image.WrapMemory<Rgba32>(frameBuffer.Memory, width, height);
+				image.Frames.AddFrame(frame.Frames[0]);
 			}
+
+			image.Frames.RemoveFrame(0);
 		} catch {
-			image?.Dispose();
+			image.Dispose();
 			throw;
 		}
 
