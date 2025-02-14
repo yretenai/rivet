@@ -2,14 +2,15 @@ namespace Rivet.Models.Graphics;
 
 [Flags]
 public enum TextureContentType : byte {
+	// todo: figure out which parameters line up with what
 	Linear = 0,
 	sRGB = 1,
 	Normal = 2,
-	Gloss = 4,
+	Parameter1 = 4,
 	IBL = 8,
 	IES = 16,
-	Unknown32 = 32, // more _g params
-	Unknown64 = 64, // more _g params
+	Parameter2 = 32,
+	Parameter3 = 64,
 }
 
 public static class TextureContentTypeExtensions {
