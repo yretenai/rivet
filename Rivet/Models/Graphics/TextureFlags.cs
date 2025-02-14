@@ -12,5 +12,6 @@ public record struct TextureFlags {
 
 	public byte Unknown => (byte) (Value & 0b1111);
 	public TextureDimension Dimension => (TextureDimension) ((Value >> 4) & 0b111);
-	public ushort Remainder => (ushort) (Value >> 7);
+	public TextureContentType ContentType => (TextureContentType) ((Value >> 7) & 0b1111111);
+	public ushort Remainder => (ushort) (Value >> 14);
 }

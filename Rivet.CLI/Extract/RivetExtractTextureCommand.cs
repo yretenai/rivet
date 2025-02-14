@@ -72,7 +72,7 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 			}
 		}
 
-		Log.Information("Converting {Path} to {Format} ({Type})", name, format, texture.TextureHeader.Flags.Dimension);
+		Log.Information("Converting {Path} to {Format} ({Type}, {ContentType:F}, {DXGI})", name, format, texture.TextureHeader.Flags.Dimension, texture.TextureHeader.Flags.ContentType, texture.TextureHeader.Format);
 
 		if (Flags.Dry) {
 			return;
