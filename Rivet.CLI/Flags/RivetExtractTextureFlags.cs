@@ -15,4 +15,10 @@ internal record RivetExtractTextureFlags : RivetExtractFlags {
 
 	[Flag("no-hdr", Help = "Convert HDR colorspaces to SDR")]
 	public bool DisallowHDR { get; set; }
+
+	[Flag("no-normal", Help = "Disallow Normal Z component reconstruction")]
+	public bool DisallowNormalZ { get; set; }
+
+	public bool AllowHDR => !DisallowHDR;
+	public bool AllowNormalZ => !DisallowNormalZ;
 }

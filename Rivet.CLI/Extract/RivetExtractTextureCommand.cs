@@ -41,7 +41,7 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 					format = ImageFormat.DDS;
 				} else if (isMultiSurface) {
 					format = ImageFormat.TIF;
-				} else if (texture.IsHDR && !Flags.DisallowHDR) {
+				} else if (texture.IsHDR && Flags.AllowHDR) {
 					format = ImageFormat.EXR;
 				} else {
 					format = ImageFormat.PNG;
@@ -91,11 +91,10 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 				                   _ => throw new UnreachableException(),
 			                   };
 
-			using var image = texture.ToImage(!Flags.DisallowHDR);
+			using var image = texture.ToImage(Flags.AllowHDR, Flags.AllowNormalZ);
 			if (texture.TextureHeader.Flags.Dimension is TextureDimension.Cube) {
 				var faceSize = texture.Dimensions.Width;
 				using var crossLayout = new MagickImage(MagickColors.Black, (uint) faceSize * 4, (uint) faceSize * 3);
-				crossLayout.ColorSpace = ColorSpace.RGB; // never apply sRGB transform, we can do that later.
 				crossLayout.Composite(image[2], faceSize, 0, CompositeOperator.Copy);
 				crossLayout.Composite(image[1], 0, faceSize, CompositeOperator.Copy);
 				crossLayout.Composite(image[4], faceSize, faceSize, CompositeOperator.Copy);
@@ -117,7 +116,6 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 			}
 
 			using var tileLayout = new MagickImage(MagickColors.Transparent, (uint) texture.Dimensions.Width, (uint) (texture.Dimensions.Height * image.Count));
-			tileLayout.ColorSpace = ColorSpace.RGB; // never apply sRGB transform, we can do that later.
 			for (var surfaceIndex = 0; surfaceIndex < image.Count; ++surfaceIndex) {
 				tileLayout.Composite(image[surfaceIndex], 0, texture.Dimensions.Height * surfaceIndex, CompositeOperator.Copy);
 			}

@@ -97,10 +97,10 @@ public static class TextureConverter {
 		return buffer;
 	}
 
-	public static MagickImageCollection ToImage(this Texture texture, bool allowHDR) {
+	public static MagickImageCollection ToImage(this Texture texture, bool allowHDR, bool allowNormalReconstruction) {
 		var (width, height) = texture.Dimensions;
 		var outputHDR = allowHDR && texture.IsHDR;
-		var isNormal = texture.TextureHeader.Flags.ContentType.HasFlagFast(TextureContentType.Normal);
+		var isNormal = allowNormalReconstruction && texture.TextureHeader.Flags.ContentType == TextureContentType.Normal; // don't allow channel packed formats
 		using var frameBuffer = new RivetMemory<byte>(width * height * (texture.IsHDR ? 16 : 4));
 
 		#pragma warning disable CA2000 // disposed later or transferred
@@ -163,6 +163,7 @@ public static class TextureConverter {
 			case DXGIFormat.BC5_SNORM when isNormal:
 			case DXGIFormat.BC5_UNORM when isNormal:
 				BCDec.DecompressBC5Normal(chunkMem, frameBufferMem, width, height, texture.TextureHeader.Format == DXGIFormat.BC5_SNORM);
+				isNormal = false;
 				break;
 			case DXGIFormat.BC5_SNORM:
 			case DXGIFormat.BC5_UNORM:
@@ -292,12 +293,16 @@ public static class TextureConverter {
 				throw new NotSupportedException();
 		}
 
-		var frame = new MagickImage(frameBufferSrc, new PixelReadSettings((uint) width, (uint) height, isHDR ? StorageType.Float : StorageType.Char, mapping) {
-			ReadSettings = {
-				ColorSpace = ColorSpace.RGB,
-			},
-		});
-		frame.ColorSpace = ColorSpace.RGB;
+		if (isNormal) {
+			var numComponents = mapping == PixelMapping.RGBA ? 4 : 3;
+			if (isHDR) {
+				BCDec.ComputeNormal(MemoryMarshal.Cast<byte, float>(frameBufferSrc), numComponents);
+			} else {
+				BCDec.ComputeNormal(frameBufferSrc, numComponents);
+			}
+		}
+
+		var frame = new MagickImage(frameBufferSrc, new PixelReadSettings((uint) width, (uint) height, isHDR ? StorageType.Float : StorageType.Char, mapping));
 		return frame;
 	}
 
