@@ -2,9 +2,8 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
-using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using DragonLib.CommandLine;
-using ImageMagick;
 using Rivet.CLI.Flags;
 using Rivet.Converters;
 using Rivet.Graphics;
@@ -12,6 +11,9 @@ using Rivet.Models;
 using Rivet.Models.Data;
 using Rivet.Models.Graphics;
 using Serilog;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
 
 namespace Rivet.CLI.Extract;
 
@@ -42,7 +44,7 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 				} else if (isMultiSurface) {
 					format = ImageFormat.TIF;
 				} else if (texture.IsHDR && Flags.AllowHDR) {
-					format = ImageFormat.EXR;
+					format = ImageFormat.TIF; // ImageFormat.EXR;
 				} else {
 					format = ImageFormat.PNG;
 				}
@@ -50,7 +52,7 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 				break;
 			case ImageFormat.PNG:
 			case ImageFormat.TIF:
-			case ImageFormat.EXR:
+			// case ImageFormat.EXR:
 			case ImageFormat.DDS:
 				break;
 			default:
@@ -84,43 +86,76 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 			using var buffer = texture.ToDDS();
 			stream.Write(buffer.Memory.Span);
 		} else {
-			var magickFormat = format switch {
-				                   ImageFormat.TIF => MagickFormat.Tiff,
-				                   ImageFormat.PNG => MagickFormat.Png,
-				                   ImageFormat.EXR => MagickFormat.Exr,
-				                   _ => throw new UnreachableException(),
-			                   };
-
-			using var image = texture.ToImage(Flags.AllowHDR, Flags.AllowNormalZ);
+			using var frames = texture.ToImage(Flags.AllowHDR, Flags.AllowNormalZ);
+			var rootFrame = frames[0];
 			if (texture.TextureHeader.Flags.Dimension is TextureDimension.Cube) {
 				var faceSize = texture.Dimensions.Width;
-				using var crossLayout = new MagickImage(MagickColors.Black, (uint) faceSize * 4, (uint) faceSize * 3);
-				crossLayout.Composite(image[2], faceSize, 0, CompositeOperator.Copy);
-				crossLayout.Composite(image[1], 0, faceSize, CompositeOperator.Copy);
-				crossLayout.Composite(image[4], faceSize, faceSize, CompositeOperator.Copy);
-				crossLayout.Composite(image[0], faceSize * 2, faceSize, CompositeOperator.Copy);
-				crossLayout.Composite(image[5], faceSize * 3, faceSize, CompositeOperator.Copy);
-				crossLayout.Composite(image[3], faceSize, faceSize * 2, CompositeOperator.Copy);
-				crossLayout.Write(stream, magickFormat);
-				return;
+
+				Image crossImage;
+				if (frames[0] is Image<RgbaVector>) {
+					crossImage = new Image<RgbaVector>(rootFrame.Configuration, faceSize * 4, faceSize * 3, new RgbaVector());
+				} else {
+					crossImage = new Image<Rgba32>(rootFrame.Configuration, faceSize * 4, faceSize * 3, new Rgba32());
+				}
+
+				try {
+					crossImage.Mutate([SuppressMessage("ReSharper", "AccessToDisposedClosure")](ctx) => {
+						ctx.DrawImage(frames[2], new Point(faceSize, 0), 1f);
+						ctx.DrawImage(frames[1], new Point(0, faceSize), 1f);
+						ctx.DrawImage(frames[4], new Point(faceSize, faceSize), 1f);
+						ctx.DrawImage(frames[0], new Point(faceSize * 2, faceSize), 1f);
+						ctx.DrawImage(frames[5], new Point(faceSize * 3, faceSize), 1f);
+						ctx.DrawImage(frames[3], new Point(faceSize, faceSize * 2), 1f);
+					});
+					SaveImage(stream, format, crossImage);
+					return;
+				} finally {
+					crossImage.Dispose();
+				}
 			}
 
-			if (image.Count == 1) {
-				image[0].Write(stream, magickFormat);
+			if (frames.Count == 1) {
+				SaveImage(stream, format, frames[0]);
 				return;
 			}
 
 			if (format == ImageFormat.TIF) {
-				image.Write(stream, magickFormat);
+				foreach (var frame in frames.Skip(1)) {
+					rootFrame.Frames.AddFrame(frame.Frames[0]);
+				}
+
+				SaveImage(stream, format, rootFrame);
 				return;
 			}
 
-			using var tileLayout = new MagickImage(MagickColors.Transparent, (uint) texture.Dimensions.Width, (uint) (texture.Dimensions.Height * image.Count));
-			for (var surfaceIndex = 0; surfaceIndex < image.Count; ++surfaceIndex) {
-				tileLayout.Composite(image[surfaceIndex], 0, texture.Dimensions.Height * surfaceIndex, CompositeOperator.Copy);
+			Image tileImage;
+			if (frames[0] is Image<RgbaVector>) {
+				tileImage = new Image<RgbaVector>(rootFrame.Configuration, texture.Dimensions.Width, texture.Dimensions.Height * frames.Count, new RgbaVector(0, 0, 0, 0));
+			} else {
+				tileImage = new Image<Rgba32>(rootFrame.Configuration, texture.Dimensions.Width, texture.Dimensions.Height * frames.Count, new Rgba32(0, 0, 0, 0));
 			}
 
-			tileLayout.Write(stream, magickFormat);
+			try {
+				tileImage.Mutate([SuppressMessage("ReSharper", "AccessToDisposedClosure")](ctx) => {
+					for (var surfaceIndex = 0; surfaceIndex < frames.Count; ++surfaceIndex) {
+						ctx.DrawImage(frames[surfaceIndex], new Point(0, texture.Dimensions.Height * surfaceIndex), 1f);
+					}
+				});
+				SaveImage(stream, format, tileImage);
+			} finally {
+				tileImage.Dispose();
+			}
+		}
+	}
+
+	private static void SaveImage(Stream stream, ImageFormat format, Image image) {
+		switch (format) {
+			case ImageFormat.PNG:
+				image.SaveAsPng(stream);
+				break;
+			case ImageFormat.TIF:
+				image.SaveAsTiff(stream);
+				break;
 		}
 	}
 }

@@ -9,5 +9,5 @@ internal enum ImageFormat {
 	DDS,
 	PNG,
 	TIF,
-	EXR,
+	// EXR,
 }

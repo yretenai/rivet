@@ -12,6 +12,7 @@ SPDX-License-Identifier: EUPL-1.2
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<_MagickNETVersion>14.4.0</_MagickNETVersion>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -23,34 +24,7 @@ SPDX-License-Identifier: EUPL-1.2
 
 	<ItemGroup>
 		<PackageReference Include="AssetRipper.TextureDecoder" Version="2.2.1"/>
+		<PackageReference Include="SixLabors.ImageSharp" Version="3.1.6" />
+		<PackageReference Include="SixLabors.ImageSharp.Drawing" Version="2.1.5" />
 	</ItemGroup>
-
-	<ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
-		<PackageReference Include="Magick.NET-Q16-OpenMP-x64" Version="$(_MagickNETVersion)"/>
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-arm64'">
-		<PackageReference Include="Magick.NET-Q16-OpenMP-arm64" Version="$(_MagickNETVersion)"/>
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(RuntimeIdentifier)' == 'linux-x64'">
-		<PackageReference Include="Magick.NET-Q16-OpenMP-x64" Version="$(_MagickNETVersion)"/>
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(RuntimeIdentifier)' == 'linux-arm64'">
-		<PackageReference Include="Magick.NET-Q16-OpenMP-arm64" Version="$(_MagickNETVersion)"/>
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(RuntimeIdentifier)' == 'osx-x64'">
-		<PackageReference Include="Magick.NET-Q16-OpenMP-x64" Version="$(_MagickNETVersion)"/>
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(RuntimeIdentifier)' == 'osx-arm64'">
-		<PackageReference Include="Magick.NET-Q16-arm64" Version="$(_MagickNETVersion)"/>
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(RuntimeIdentifier)' == ''">
-		<PackageReference Include="Magick.NET-Q16-AnyCPU" Version="$(_MagickNETVersion)"/>
-	</ItemGroup>
-
 </Project>
