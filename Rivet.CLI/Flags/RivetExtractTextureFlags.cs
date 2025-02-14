@@ -3,7 +3,6 @@
 // SPDX-License-Identifier: EUPL-1.2
 
 using DragonLib.CommandLine;
-using Rivet.CLI.Extract;
 
 namespace Rivet.CLI.Flags;
 

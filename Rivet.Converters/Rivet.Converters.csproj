@@ -15,7 +15,7 @@ SPDX-License-Identifier: EUPL-1.2
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Libraries\BCDecNet\BCDecNet\BCDecNet.csproj" />
+		<ProjectReference Include="..\Libraries\BCDecNet\BCDecNet\BCDecNet.csproj"/>
 		<ProjectReference Include="..\Libraries\glTFScaffold\glTFScaffold.csproj"/>
 		<ProjectReference Include="..\Libraries\Pepper\Pepper\Pepper.csproj"/>
 		<ProjectReference Include="..\Rivet\Rivet.csproj"/>
@@ -52,5 +52,5 @@ SPDX-License-Identifier: EUPL-1.2
 	<ItemGroup Condition="'$(RuntimeIdentifier)' == ''">
 		<PackageReference Include="Magick.NET-Q16-AnyCPU" Version="$(_MagickNETVersion)"/>
 	</ItemGroup>
-	
+
 </Project>

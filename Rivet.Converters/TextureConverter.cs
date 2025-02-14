@@ -12,7 +12,6 @@ using Rivet.Converters.Support;
 using Rivet.Graphics;
 using Rivet.IO;
 using Rivet.Models.Graphics;
-using Serilog;
 
 namespace Rivet.Converters;
 
