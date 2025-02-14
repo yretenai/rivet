@@ -18,12 +18,12 @@ using SixLabors.ImageSharp.PixelFormats;
 namespace Rivet.Converters;
 
 public static class TextureConverter {
-	private static Configuration ImageConfiguration { get; }
-
 	static TextureConverter() {
 		ImageConfiguration = Configuration.Default.Clone();
 		ImageConfiguration.MemoryAllocator = new ArrayPoolAllocator();
 	}
+
+	private static Configuration ImageConfiguration { get; }
 
 	public static bool IsSupported(this Texture texture) => texture.TextureHeader.Format.GetPitchFactor().PixelsPerBlock > 0;
 
