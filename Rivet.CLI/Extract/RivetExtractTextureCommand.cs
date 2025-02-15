@@ -6,16 +6,14 @@ using System.Diagnostics.CodeAnalysis;
 using DragonLib.CommandLine;
 using Rivet.CLI.Flags;
 using Rivet.Converters;
+using Rivet.Converters.Imaging;
+using Rivet.Converters.Imaging.Writers;
 using Rivet.Graphics;
 using Rivet.Models;
 using Rivet.Models.Data;
 using Rivet.Models.Graphics;
 using Serilog;
 using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Compression.Zlib;
-using SixLabors.ImageSharp.Formats.Png;
-using SixLabors.ImageSharp.Formats.Tiff;
-using SixLabors.ImageSharp.Formats.Tiff.Constants;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 
@@ -96,8 +94,8 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 				var faceSize = texture.Dimensions.Width;
 
 				Image crossImage;
-				if (frames[0] is Image<RgbaVector>) {
-					crossImage = new Image<RgbaVector>(rootFrame.Configuration, faceSize * 4, faceSize * 3, new RgbaVector());
+				if (frames[0] is Image<Rgba64>) {
+					crossImage = new Image<Rgba64>(rootFrame.Configuration, faceSize * 4, faceSize * 3, new Rgba64());
 				} else {
 					crossImage = new Image<Rgba32>(rootFrame.Configuration, faceSize * 4, faceSize * 3, new Rgba32());
 				}
@@ -111,30 +109,21 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 						ctx.DrawImage(frames[5], new Point(faceSize * 3, faceSize), 1f);
 						ctx.DrawImage(frames[3], new Point(faceSize, faceSize * 2), 1f);
 					});
-					SaveImage(stream, format, crossImage);
+					SaveImage(stream, format, [crossImage]);
 					return;
 				} finally {
 					crossImage.Dispose();
 				}
 			}
 
-			if (frames.Count == 1) {
-				SaveImage(stream, format, frames[0]);
-				return;
-			}
-
-			if (format == ImageFormat.TIF) {
-				foreach (var frame in frames.Skip(1)) {
-					rootFrame.Frames.AddFrame(frame.Frames[0]);
-				}
-
-				SaveImage(stream, format, rootFrame);
+			if (frames.Count == 1 || format == ImageFormat.TIF) {
+				SaveImage(stream, format, frames);
 				return;
 			}
 
 			Image tileImage;
-			if (frames[0] is Image<RgbaVector>) {
-				tileImage = new Image<RgbaVector>(rootFrame.Configuration, texture.Dimensions.Width, texture.Dimensions.Height * frames.Count, new RgbaVector(0, 0, 0, 0));
+			if (frames[0] is Image<Rgba64>) {
+				tileImage = new Image<Rgba64>(rootFrame.Configuration, texture.Dimensions.Width, texture.Dimensions.Height * frames.Count, new Rgba64(0, 0, 0, 0));
 			} else {
 				tileImage = new Image<Rgba32>(rootFrame.Configuration, texture.Dimensions.Width, texture.Dimensions.Height * frames.Count, new Rgba32(0, 0, 0, 0));
 			}
@@ -145,30 +134,20 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 						ctx.DrawImage(frames[surfaceIndex], new Point(0, texture.Dimensions.Height * surfaceIndex), 1f);
 					}
 				});
-				SaveImage(stream, format, tileImage);
+				SaveImage(stream, format, [tileImage]);
 			} finally {
 				tileImage.Dispose();
 			}
 		}
 	}
 
-	private static void SaveImage(Stream stream, ImageFormat format, Image image) {
+	private static void SaveImage(Stream stream, ImageFormat format, ImageCollection images) {
 		switch (format) {
 			case ImageFormat.PNG:
-				image.SaveAsPng(stream, new PngEncoder {
-					BitDepth = image is Image<RgbaVector> ? PngBitDepth.Bit16 : PngBitDepth.Bit8,
-					ColorType = PngColorType.RgbWithAlpha,
-					FilterMethod = PngFilterMethod.None,
-					CompressionLevel = PngCompressionLevel.BestSpeed,
-					TransparentColorMode = PngTransparentColorMode.Preserve,
-				});
+				PNGWriter.WriteToStream(stream, images[0]);
 				break;
 			case ImageFormat.TIF:
-				image.SaveAsTiff(stream, new TiffEncoder {
-					BitsPerPixel = image is Image<RgbaVector> ? TiffBitsPerPixel.Bit64 : TiffBitsPerPixel.Bit32,
-					PhotometricInterpretation = TiffPhotometricInterpretation.Rgb,
-					CompressionLevel = DeflateCompressionLevel.BestSpeed,
-				});
+				TIFFWriter.WriteToStream(stream, images);
 				break;
 		}
 	}

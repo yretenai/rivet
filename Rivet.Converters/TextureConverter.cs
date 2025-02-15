@@ -20,6 +20,8 @@ namespace Rivet.Converters;
 public static class TextureConverter {
 	static TextureConverter() {
 		ImageConfiguration = Configuration.Default.Clone();
+		ImageConfiguration.MaxDegreeOfParallelism = Environment.ProcessorCount;
+		ImageConfiguration.PreferContiguousImageBuffers = true;
 		ImageConfiguration.MemoryAllocator = new ArrayPoolAllocator();
 	}
 
@@ -216,11 +218,12 @@ public static class TextureConverter {
 				}
 
 				if (!isHDR) {
-					RgbConverter.Convert<ColorRGB<float>, float, ColorRGBA<byte>, byte>(frameBufferSrc, width, height, frameBufferSrc);
+					RgbConverter.Convert<ColorRGB<Half>, Half, ColorRGBA<byte>, byte>(frameBufferSrc, width, height, frameBufferSrc);
 					break;
 				}
 
-				return Image.LoadPixelData<RgbaVector>(ImageConfiguration, frameBufferSrc, width, height);
+				RgbConverter.Convert<ColorRGB<Half>, Half, ColorRGBA<ushort>, ushort>(frameBufferSrc, width, height, frameBufferSrc);
+				return Image.LoadPixelData<Rgba64>(ImageConfiguration, frameBufferSrc, width, height);
 			case DXGIFormat.BC7_UNORM:
 			case DXGIFormat.BC7_UNORM_SRGB:
 				BCDec.DecompressBC7(chunkMem, frameBufferMem, width, height);
@@ -307,15 +310,23 @@ public static class TextureConverter {
 				RgbConverter.Convert<ColorRGBA<Half>, Half, ColorRGBA<byte>, byte>(chunkSrc, width, height, frameBufferSrc);
 				break;
 			case DXGIFormat.R16G16B16A16_FLOAT:
-				RgbConverter.Convert<ColorRGBA<Half>, Half, ColorRGBA<float>, float>(chunkSrc, width, height, frameBufferSrc);
+				RgbConverter.Convert<ColorRGBA<Half>, Half, ColorRGBA<ushort>, ushort>(chunkSrc, width, height, frameBufferSrc);
+				break;
+			case DXGIFormat.R16G16B16A16_SINT when !isHDR:
+			case DXGIFormat.R16G16B16A16_SNORM when !isHDR:
+				RgbConverter.Convert<ColorRGBA<short>, short, ColorRGBA<byte>, byte>(chunkSrc, width, height, frameBufferSrc);
 				break;
 			case DXGIFormat.R16G16B16A16_SINT:
 			case DXGIFormat.R16G16B16A16_SNORM:
-				RgbConverter.Convert<ColorRGBA<short>, short, ColorRGBA<byte>, byte>(chunkSrc, width, height, frameBufferSrc);
+				RgbConverter.Convert<ColorRGBA<short>, short, ColorRGBA<ushort>, ushort>(chunkSrc, width, height, frameBufferSrc);
+				break;
+			case DXGIFormat.R16G16B16A16_UINT when !isHDR:
+			case DXGIFormat.R16G16B16A16_UNORM when !isHDR:
+				RgbConverter.Convert<ColorRGBA<ushort>, ushort, ColorRGBA<byte>, byte>(chunkSrc, width, height, frameBufferSrc);
 				break;
 			case DXGIFormat.R16G16B16A16_UINT:
 			case DXGIFormat.R16G16B16A16_UNORM:
-				RgbConverter.Convert<ColorRGBA<ushort>, ushort, ColorRGBA<byte>, byte>(chunkSrc, width, height, frameBufferSrc);
+				frameBufferSrc = chunkSrc[..frameBuffer.Size];
 				break;
 			case DXGIFormat.R32G32_FLOAT when !isHDR:
 				RgbConverter.Convert<ColorRG<float>, float, ColorRGBA<byte>, byte>(chunkSrc, width, height, frameBufferSrc);
@@ -333,7 +344,7 @@ public static class TextureConverter {
 				RgbConverter.Convert<ColorRGBA<float>, float, ColorRGBA<byte>, byte>(chunkSrc, width, height, frameBufferSrc);
 				break;
 			case DXGIFormat.R32G32B32A32_FLOAT:
-				frameBufferSrc = chunkSrc[..frameBuffer.Size];
+				RgbConverter.Convert<ColorRGBA<float>, float, ColorRGBA<ushort>, ushort>(chunkSrc, width, height, frameBufferSrc);
 				break;
 			default:
 				throw new NotSupportedException();
