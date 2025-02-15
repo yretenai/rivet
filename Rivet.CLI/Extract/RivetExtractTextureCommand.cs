@@ -12,6 +12,10 @@ using Rivet.Models.Data;
 using Rivet.Models.Graphics;
 using Serilog;
 using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Compression.Zlib;
+using SixLabors.ImageSharp.Formats.Png;
+using SixLabors.ImageSharp.Formats.Tiff;
+using SixLabors.ImageSharp.Formats.Tiff.Constants;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 
@@ -44,7 +48,7 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 				} else if (isMultiSurface) {
 					format = ImageFormat.TIF;
 				} else if (texture.IsHDR && Flags.AllowHDR) {
-					format = ImageFormat.TIF; // ImageFormat.EXR;
+					format = ImageFormat.PNG; // ImageFormat.TIF; ImageFormat.EXR;
 				} else {
 					format = ImageFormat.PNG;
 				}
@@ -151,10 +155,20 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 	private static void SaveImage(Stream stream, ImageFormat format, Image image) {
 		switch (format) {
 			case ImageFormat.PNG:
-				image.SaveAsPng(stream);
+				image.SaveAsPng(stream, new PngEncoder {
+					BitDepth = image is Image<RgbaVector> ? PngBitDepth.Bit16 : PngBitDepth.Bit8,
+					ColorType = PngColorType.RgbWithAlpha,
+					FilterMethod = PngFilterMethod.None,
+					CompressionLevel = PngCompressionLevel.BestSpeed,
+					TransparentColorMode = PngTransparentColorMode.Preserve,
+				});
 				break;
 			case ImageFormat.TIF:
-				image.SaveAsTiff(stream);
+				image.SaveAsTiff(stream, new TiffEncoder {
+					BitsPerPixel = image is Image<RgbaVector> ? TiffBitsPerPixel.Bit64 : TiffBitsPerPixel.Bit32,
+					PhotometricInterpretation = TiffPhotometricInterpretation.Rgb,
+					CompressionLevel = DeflateCompressionLevel.BestSpeed,
+				});
 				break;
 		}
 	}
