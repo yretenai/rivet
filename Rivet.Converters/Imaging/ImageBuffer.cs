@@ -6,33 +6,6 @@ using Rivet.IO;
 
 namespace Rivet.Converters.Imaging;
 
-public interface IImageBuffer : IDisposable {
-	public IUnsafeMemoryOwner<byte> Data { get; }
-	public int Width { get; }
-	public int Height { get; }
-	public int Stride { get; }
-	public int Components { get; }
-	public bool IsHDR { get; }
-	public bool IsSigned { get; }
-	public int BitDepth { get; }
-
-	public IImageBuffer Cast<TNewColor, TNew>()
-		where TNewColor : unmanaged, IColor<TNewColor, TNew>, IColor<TNew>, IColor
-		where TNew : unmanaged, INumberBase<TNew>, IMinMaxValue<TNew>;
-
-	public IImageBuffer Cast<TNew>()
-		where TNew : unmanaged, INumberBase<TNew>, IMinMaxValue<TNew>;
-
-	public IImageBuffer CreateSubImage(int width, int height);
-
-	public void Draw(IImageBuffer image, int x, int y, ImageDrawOperation op = ImageDrawOperation.Copy);
-}
-
-public enum ImageDrawOperation {
-	Copy,
-	Blend,
-}
-
 public sealed class ImageBuffer<TColor, T> : IImageBuffer
 	where TColor : unmanaged, IColor<TColor, T>, IColor<T>, IColor
 	where T : unmanaged, INumberBase<T>, IMinMaxValue<T> {
@@ -133,26 +106,5 @@ public sealed class ImageBuffer<TColor, T> : IImageBuffer
 		Data.Dispose();
 		ColorData.Dispose();
 		ValueData.Dispose();
-	}
-}
-
-public static class PixelOperations<TColor, T>
-	where TColor : unmanaged, IColor<TColor, T>, IColor<T>, IColor
-	where T : unmanaged, INumberBase<T>, IMinMaxValue<T> {
-	public static void BlendPixel(TColor srcPixel, ref TColor dstPixel) {
-		var tmpSrcPixel = srcPixel.Convert<TColor, T, ColorRGBA<float>, float>();
-		var tmpDstPixel = dstPixel.Convert<TColor, T, ColorRGBA<float>, float>();
-
-		var alpha = tmpSrcPixel.A;
-		var inverseAlpha = 1 - alpha;
-		tmpDstPixel.R = tmpSrcPixel.R * alpha + tmpDstPixel.R * inverseAlpha;
-		tmpDstPixel.G = tmpSrcPixel.G * alpha + tmpDstPixel.G * inverseAlpha;
-		tmpDstPixel.B = tmpSrcPixel.B * alpha + tmpDstPixel.B * inverseAlpha;
-		tmpDstPixel.A = Math.Max(alpha, tmpDstPixel.A);
-		dstPixel = tmpDstPixel.Convert<ColorRGBA<float>, float, TColor, T>();
-	}
-
-	public static void CopyPixel(TColor srcPixel, ref TColor dstPixel) {
-		dstPixel = srcPixel;
 	}
 }
