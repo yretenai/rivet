@@ -131,13 +131,13 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 		}
 	}
 
-	private static void SaveImage(Stream stream, ImageFormat format, ImageCollection images) {
+	private void SaveImage(Stream stream, ImageFormat format, ImageCollection images) {
 		switch (format) {
 			case ImageFormat.PNG:
-				PNGWriter.WriteToStream(stream, PNGCompressionLevel.Small, images[0]);
+				PNGWriter.WriteToStream(stream, Flags.CompressTextures ? PNGCompressionLevel.Small : PNGCompressionLevel.None, images[0]);
 				break;
 			case ImageFormat.TIF:
-				TIFFWriter.WriteToStream(stream, TIFFCompression.LZW, images);
+				TIFFWriter.WriteToStream(stream, Flags.CompressTextures ? TIFFCompression.LZW :  TIFFCompression.None, images);
 				break;
 		}
 	}

@@ -19,6 +19,9 @@ internal record RivetExtractTextureFlags : RivetExtractFlags {
 	[Flag("no-normal", Help = "Disallow Normal Z component reconstruction")]
 	public bool DisallowNormalZ { get; set; }
 
+	[Flag("compress", Help = "Compress textures at the cost of speed.")]
+	public bool CompressTextures { get; set; }
+
 	public bool AllowHDR => !DisallowHDR;
 	public bool AllowNormalZ => !DisallowNormalZ;
 }
