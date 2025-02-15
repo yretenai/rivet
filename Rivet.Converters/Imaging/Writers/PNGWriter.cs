@@ -45,6 +45,7 @@ public static partial class PNGWriter {
 		try {
 			info = NativeMethods.png_create_info_struct(png);
 			NativeMethods.png_set_write_fn(png, nint.Zero, (_, dataPtr, dataSize) => {
+				stream.Flush();
 				var span = new Span<byte>((byte*) dataPtr, int.CreateChecked(dataSize));
 				stream.Write(span);
 			}, _ => {
@@ -67,7 +68,7 @@ public static partial class PNGWriter {
 
 			var rows = stackalloc byte*[image.Height];
 			for (var rowIndex = 0; rowIndex < image.Height; rowIndex++) {
-				rows[rowIndex] = (byte*) rowPin.Pointer + (image.Height - 1 - rowIndex) * image.Width * (image.BitDepth >> 1);
+				rows[rowIndex] = (byte*) rowPin.Pointer + (image.Height - 1 - rowIndex) * image.Width * image.Stride;
 			}
 
 			NativeMethods.png_set_rows(png, info, rows);
