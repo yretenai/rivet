@@ -11,7 +11,7 @@ namespace Rivet.Converters.Imaging.Writers;
 public static partial class TIFFWriter {
 	internal enum TIFFTag : uint {
 		ImageWidth = 256,
-		ImageHeight = 257,
+		ImageLength = 257,
 		RowsPerStrip = 278,
 		SamplesPerPixel = 277,
 		BitsPerSample = 258,
@@ -20,6 +20,7 @@ public static partial class TIFFWriter {
 		PlanarConfig = 284,
 		Photometric = 262,
 		Compression = 259,
+		ExtraSamples = 338,
 	}
 
 	internal enum TIFFCompression {
@@ -64,7 +65,7 @@ public static partial class TIFFWriter {
 		RGB = 2,
 		Palette = 3,
 		Mask = 4,
-		SEparated = 5,
+		Separated = 5,
 		YCbCr = 6,
 		CIELab = 8,
 		ICCLab = 9,
@@ -75,7 +76,7 @@ public static partial class TIFFWriter {
 	}
 
 	internal enum TIFFPlanarConfig {
-		Contigious = 1,
+		Contig = 1,
 		Separate = 2,
 	}
 
@@ -97,6 +98,12 @@ public static partial class TIFFWriter {
 		Void = 4,
 		ComplexInt = 5,
 		ComplexFloat = 6,
+	}
+
+	internal enum TIFFExtraSamples {
+		Unspecified = 0,
+		AssociatedAlpha = 1,
+		UnassociatedAlpha = 2,
 	}
 
 	private static partial class NativeMethods {
@@ -134,6 +141,9 @@ public static partial class TIFFWriter {
 		[LibraryImport(LibraryName), DefaultDllImportSearchPaths(SearchPath)]
 		public static partial void TIFFSetField(nint tiff, TIFFTag tag, int value);
 
+		[LibraryImport(LibraryName, EntryPoint = "TIFFSetField"), DefaultDllImportSearchPaths(SearchPath)]
+		public static partial void TIFFSetFieldArray(nint tiff, TIFFTag tag, int count, nint array);
+
 		[LibraryImport(LibraryName), DefaultDllImportSearchPaths(SearchPath)]
 		public static partial void TIFFWriteEncodedStrip(nint tiff, uint strip, nint data, uint cc);
 
@@ -154,7 +164,7 @@ public static partial class TIFFWriter {
 	}
 
 	public static void WriteToStream(Stream stream, ImageCollection frames) {
-		var stride = frames[0] is Image<Rgba64> ? 32 : 4;
+		var stride = frames[0] is Image<Rgba64> ? 8 : 4;
 		if (!IsAvailable) {
 			Fallback(stream, frames);
 		}
@@ -178,6 +188,7 @@ public static partial class TIFFWriter {
 			                                        var span = new Span<byte>((byte*) dataPtr, int.CreateChecked(dataSize));
 			                                        return stream.Read(span);
 		                                        }, (_, dataPtr, dataSize) => {
+			                                        stream.Flush();
 			                                        var span = new Span<byte>((byte*) dataPtr, int.CreateChecked(dataSize));
 			                                        stream.Write(span);
 			                                        return dataSize;
@@ -188,7 +199,7 @@ public static partial class TIFFWriter {
 			                                        }
 
 			                                        return (ulong) stream.Seek(off, (SeekOrigin) whence);
-		                                        }, (_) => {
+		                                        }, _ => {
 			                                        stream.Flush();
 			                                        stream.Close();
 			                                        return 0;
@@ -199,19 +210,23 @@ public static partial class TIFFWriter {
 		}
 
 		try {
-			var hdr = stride == 32;
+			var hdr = stride == 8;
+
+			var extraSamples = stackalloc ushort[1];
+			extraSamples[0] = (ushort) TIFFExtraSamples.UnassociatedAlpha;
 
 			foreach (var frame in frames.Cast<Image<T>>()) {
 				NativeMethods.TIFFSetField(tiff, TIFFTag.ImageWidth, frame.Width);
-				NativeMethods.TIFFSetField(tiff, TIFFTag.ImageHeight, frame.Height);
+				NativeMethods.TIFFSetField(tiff, TIFFTag.ImageLength, frame.Height);
 				NativeMethods.TIFFSetField(tiff, TIFFTag.RowsPerStrip, frame.Height);
 				NativeMethods.TIFFSetField(tiff, TIFFTag.SamplesPerPixel, 4);
 				NativeMethods.TIFFSetField(tiff, TIFFTag.BitsPerSample, hdr ? 16 : 8);
 				NativeMethods.TIFFSetField(tiff, TIFFTag.SampleFormat, (int) TIFFSampleFormat.UInt); // todo: we can pipe signed and float values but imagesharp is shit
 				NativeMethods.TIFFSetField(tiff, TIFFTag.Orientation, (int) TIFFOrientation.TopLeft);
-				NativeMethods.TIFFSetField(tiff, TIFFTag.PlanarConfig, (int) TIFFPlanarConfig.Contigious);
-				NativeMethods.TIFFSetField(tiff, TIFFTag.Photometric, (int) (hdr ? TIFFPhotometric.LogL : TIFFPhotometric.RGB));
+				NativeMethods.TIFFSetField(tiff, TIFFTag.PlanarConfig, (int) TIFFPlanarConfig.Contig);
+				NativeMethods.TIFFSetField(tiff, TIFFTag.Photometric, (int) TIFFPhotometric.RGB);
 				NativeMethods.TIFFSetField(tiff, TIFFTag.Compression, (int) TIFFCompression.NONE);
+				NativeMethods.TIFFSetFieldArray(tiff, TIFFTag.ExtraSamples, 1, (nint) extraSamples);
 
 				if (!frame.DangerousTryGetSinglePixelMemory(out var rowData)) {
 					return;
