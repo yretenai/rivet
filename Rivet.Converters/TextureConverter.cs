@@ -52,9 +52,20 @@ public static class TextureConverter {
 		dx10.Format = texture.TextureHeader.Format;
 		dx10.ArraySize = surfaceCount;
 
+		if (dds.MipMapCount > 1) {
+			dds.Flags |= DDSFlags.MipMapCount;
+		}
+
 		var (bitsPerBlock, pixelsPerBlock) = texture.TextureHeader.Format.GetPitchFactor();
-		var oneSurface = CalculateSurfaceSize(dds.Width, dds.Height, pixelsPerBlock, bitsPerBlock, numMips, out _);
-		dds.Pitch = oneSurface;
+
+		if (pixelsPerBlock > 1) {
+			var oneSurface = CalculateSurfaceSize(dds.Width, dds.Height, pixelsPerBlock, bitsPerBlock, numMips, out _);
+			dds.PitchOrLinearSize = oneSurface;
+			dds.Flags |= DDSFlags.Linear;
+		} else {
+			dds.PitchOrLinearSize = (uint) (dds.Width * (bitsPerBlock >> 3));
+			dds.Flags |= DDSFlags.Pitch;
+		}
 
 		switch (texture.TextureHeader.Flags.Dimension) {
 			case TextureDimension.Cube:

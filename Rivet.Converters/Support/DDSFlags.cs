@@ -16,7 +16,8 @@ public enum DDSFlags : uint {
 	Depth = 0x800000,
 
 	Texture = Caps | Height | Width | PixelFormat,
+	RGBTexture = Texture | Pitch,
 	DXTTexture = Texture | Linear,
-	MipMappedTexture = Texture | MipMapCount,
+	MipMappedRGBTexture = RGBTexture | MipMapCount,
 	MipMappedDXTTexture = DXTTexture | MipMapCount,
 }
