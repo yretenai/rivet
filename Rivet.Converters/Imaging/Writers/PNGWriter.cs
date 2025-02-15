@@ -68,7 +68,7 @@ public static partial class PNGWriter {
 
 			var rows = stackalloc byte*[image.Height];
 			for (var rowIndex = 0; rowIndex < image.Height; rowIndex++) {
-				rows[rowIndex] = (byte*) rowPin.Pointer + (image.Height - 1 - rowIndex) * image.Width * image.Stride;
+				rows[rowIndex] = (byte*) rowPin.Pointer + rowIndex * image.Width * image.Stride;
 			}
 
 			NativeMethods.png_set_rows(png, info, rows);
