@@ -351,7 +351,7 @@ public static class TextureConverter {
 		}
 
 		if (isHDR) {
-			return Image.LoadPixelData<RgbaVector>(ImageConfiguration, frameBufferSrc, width, height);
+			return Image.LoadPixelData<Rgba64>(ImageConfiguration, frameBufferSrc, width, height);
 		}
 
 		return Image.LoadPixelData<Rgba32>(ImageConfiguration, frameBufferSrc, width, height);

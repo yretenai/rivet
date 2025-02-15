@@ -87,8 +87,8 @@ public static partial class PNGWriter {
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void png_flush(nint png);
 
-		[LibraryImport(LibraryName), DefaultDllImportSearchPaths(SearchPath)]
-		public static partial nint png_create_write_struct(nint userPNGVersion, nint errorPtr, nint errorFunc, nint warnFunc);
+		[LibraryImport(LibraryName, StringMarshalling = StringMarshalling.Utf8), DefaultDllImportSearchPaths(SearchPath)]
+		public static partial nint png_create_write_struct([MarshalAs(UnmanagedType.LPStr)] string userPNGVersion, nint errorPtr, nint errorFunc, nint warnFunc);
 
 		[LibraryImport(LibraryName), DefaultDllImportSearchPaths(SearchPath)]
 		public static partial nint png_create_info_struct(nint pngPtr);
@@ -115,18 +115,25 @@ public static partial class PNGWriter {
 		public static partial void png_set_compression_level(nint pngPtr, PNGCompressionLevel level);
 
 		[LibraryImport(LibraryName), DefaultDllImportSearchPaths(SearchPath)]
-		public static partial nint png_get_libpng_ver(nint pngPtr);
+		public static partial nint png_get_libpng_ver(nint pngPtr); // for some reason string doesn't work here
 
 		[LibraryImport(LibraryName), DefaultDllImportSearchPaths(SearchPath)]
 		public static partial void png_write_png(nint pngPtr, nint infoPtr, PNGTransform transforms, IntPtr @params);
 	}
 
 	public static bool IsAvailable { get; }
+	public static string PNGVersion { get; }
 
 	static PNGWriter() {
+		PNGVersion = "1.6.0";
+
 		if (NativeLibrary.TryLoad(NativeMethods.LibraryName, Assembly.GetExecutingAssembly(), NativeMethods.SearchPath, out var ptr)) {
-			IsAvailable = true;
 			NativeLibrary.Free(ptr);
+			IsAvailable = true;
+			var pngPtr = NativeMethods.png_get_libpng_ver(nint.Zero);
+			if (pngPtr != nint.Zero) {
+				PNGVersion = Marshal.PtrToStringAnsi(pngPtr) ?? PNGVersion;
+			}
 		}
 	}
 
@@ -150,13 +157,7 @@ public static partial class PNGWriter {
 	}
 
 	private static unsafe void NativeWrite<T>(Stream stream, Image<T> image, int bitDepth) where T : unmanaged, IPixel<T> {
-		var ver = NativeMethods.png_get_libpng_ver(nint.Zero);
-		if (ver == nint.Zero) {
-			Fallback(stream, image, bitDepth);
-			return;
-		}
-
-		var png = NativeMethods.png_create_write_struct(NativeMethods.png_get_libpng_ver(nint.Zero), nint.Zero, nint.Zero, nint.Zero);
+		var png = NativeMethods.png_create_write_struct(PNGVersion, nint.Zero, nint.Zero, nint.Zero);
 		if (png == nint.Zero) {
 			Fallback(stream, image, bitDepth);
 			return;
