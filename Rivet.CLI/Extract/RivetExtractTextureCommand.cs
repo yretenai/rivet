@@ -2,7 +2,6 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
-using System.Diagnostics.CodeAnalysis;
 using DragonLib.CommandLine;
 using Rivet.CLI.Flags;
 using Rivet.Converters;
@@ -13,14 +12,20 @@ using Rivet.Models;
 using Rivet.Models.Data;
 using Rivet.Models.Graphics;
 using Serilog;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
-using SixLabors.ImageSharp.Processing;
 
 namespace Rivet.CLI.Extract;
 
 [Command(typeof(RivetExtractTextureFlags), "texture", "Extracts textures and converts them", "extract")]
-internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : RivetExtractCommand<RivetExtractTextureFlags>(Flags) {
+internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTextureFlags> {
+	public RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : base(Flags) {
+		switch (Flags.Format) {
+			case ImageFormat.PNG when !PNGWriter.IsAvailable:
+			case ImageFormat.TIF when !TIFFWriter.IsAvailable:
+				Log.Error("Requested {Format} but the writer is unavailable (needs a dll?)", Flags.Format);
+				return;
+		}
+	}
+
 	protected override void Process(RivetAsset asset) {
 		if (asset.Type is not AssetType.Texture || asset.Category is not AssetCategory.Game) {
 			return;
@@ -33,8 +38,8 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 
 		var format = Flags.Format;
 		switch (Flags.Format) {
-			case ImageFormat.PNG when !texture.IsSupported():
-			case ImageFormat.TIF when !texture.IsSupported():
+			case ImageFormat.PNG when !texture.IsSupported() || !PNGWriter.IsAvailable:
+			case ImageFormat.TIF when !texture.IsSupported() || !TIFFWriter.IsAvailable:
 				return;
 			case ImageFormat.Auto:
 				var isMultiSurface = texture.TextureHeader.SurfaceCount > 1 ||
@@ -50,6 +55,14 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 				} else {
 					format = ImageFormat.PNG;
 				}
+
+				format = format switch {
+					         ImageFormat.PNG when !PNGWriter.IsAvailable && TIFFWriter.IsAvailable => ImageFormat.TIF,
+					         ImageFormat.PNG when !PNGWriter.IsAvailable && !TIFFWriter.IsAvailable => ImageFormat.DDS,
+					         ImageFormat.TIF when !TIFFWriter.IsAvailable && PNGWriter.IsAvailable => ImageFormat.PNG,
+					         ImageFormat.TIF when !TIFFWriter.IsAvailable && !PNGWriter.IsAvailable => ImageFormat.DDS,
+					         _ => format,
+				         };
 
 				break;
 			case ImageFormat.PNG:
@@ -93,27 +106,15 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 			if (texture.TextureHeader.Flags.Dimension is TextureDimension.Cube) {
 				var faceSize = texture.Dimensions.Width;
 
-				Image crossImage;
-				if (frames[0] is Image<Rgba64>) {
-					crossImage = new Image<Rgba64>(rootFrame.Configuration, faceSize * 4, faceSize * 3, new Rgba64());
-				} else {
-					crossImage = new Image<Rgba32>(rootFrame.Configuration, faceSize * 4, faceSize * 3, new Rgba32());
-				}
-
-				try {
-					crossImage.Mutate([SuppressMessage("ReSharper", "AccessToDisposedClosure")](ctx) => {
-						ctx.DrawImage(frames[2], new Point(faceSize, 0), 1f);
-						ctx.DrawImage(frames[1], new Point(0, faceSize), 1f);
-						ctx.DrawImage(frames[4], new Point(faceSize, faceSize), 1f);
-						ctx.DrawImage(frames[0], new Point(faceSize * 2, faceSize), 1f);
-						ctx.DrawImage(frames[5], new Point(faceSize * 3, faceSize), 1f);
-						ctx.DrawImage(frames[3], new Point(faceSize, faceSize * 2), 1f);
-					});
-					SaveImage(stream, format, [crossImage]);
-					return;
-				} finally {
-					crossImage.Dispose();
-				}
+				using var crossImage = rootFrame.CreateSubImage(faceSize * 4, faceSize * 3);
+				crossImage.Draw(frames[2], faceSize, 0);
+				crossImage.Draw(frames[1], 0, faceSize);
+				crossImage.Draw(frames[4], faceSize, faceSize);
+				crossImage.Draw(frames[0], faceSize * 2, faceSize);
+				crossImage.Draw(frames[5], faceSize * 3, faceSize);
+				crossImage.Draw(frames[3], faceSize, faceSize * 2);
+				SaveImage(stream, format, [crossImage]);
+				return;
 			}
 
 			if (frames.Count == 1 || format == ImageFormat.TIF) {
@@ -121,33 +122,22 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 				return;
 			}
 
-			Image tileImage;
-			if (frames[0] is Image<Rgba64>) {
-				tileImage = new Image<Rgba64>(rootFrame.Configuration, texture.Dimensions.Width, texture.Dimensions.Height * frames.Count, new Rgba64(0, 0, 0, 0));
-			} else {
-				tileImage = new Image<Rgba32>(rootFrame.Configuration, texture.Dimensions.Width, texture.Dimensions.Height * frames.Count, new Rgba32(0, 0, 0, 0));
+			using var tileImage = rootFrame.CreateSubImage(texture.Dimensions.Width, texture.Dimensions.Height * frames.Count);
+			for (var surfaceIndex = 0; surfaceIndex < frames.Count; ++surfaceIndex) {
+				tileImage.Draw(frames[surfaceIndex], 0, texture.Dimensions.Height * surfaceIndex);
 			}
 
-			try {
-				tileImage.Mutate([SuppressMessage("ReSharper", "AccessToDisposedClosure")](ctx) => {
-					for (var surfaceIndex = 0; surfaceIndex < frames.Count; ++surfaceIndex) {
-						ctx.DrawImage(frames[surfaceIndex], new Point(0, texture.Dimensions.Height * surfaceIndex), 1f);
-					}
-				});
-				SaveImage(stream, format, [tileImage]);
-			} finally {
-				tileImage.Dispose();
-			}
+			SaveImage(stream, format, [tileImage]);
 		}
 	}
 
 	private static void SaveImage(Stream stream, ImageFormat format, ImageCollection images) {
 		switch (format) {
 			case ImageFormat.PNG:
-				PNGWriter.WriteToStream(stream, images[0]);
+				PNGWriter.WriteToStream(stream, PNGCompressionLevel.Small, images[0]);
 				break;
 			case ImageFormat.TIF:
-				TIFFWriter.WriteToStream(stream, images);
+				TIFFWriter.WriteToStream(stream, TIFFCompression.LZW, images);
 				break;
 		}
 	}
