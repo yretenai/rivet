@@ -46,7 +46,7 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 				} else if (isMultiSurface) {
 					format = ImageFormat.TIF;
 				} else if (texture.IsHDR && Flags.AllowHDR) {
-					format = ImageFormat.PNG; // ImageFormat.TIF; ImageFormat.EXR;
+					format = ImageFormat.TIF; // ImageFormat.EXR;
 				} else {
 					format = ImageFormat.PNG;
 				}
