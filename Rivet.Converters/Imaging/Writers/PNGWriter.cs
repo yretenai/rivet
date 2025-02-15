@@ -184,11 +184,11 @@ public static partial class PNGWriter {
 
 			var rows = stackalloc byte*[image.Height];
 			for (var rowIndex = 0; rowIndex < image.Height; rowIndex++) {
-				rows[rowIndex] = (byte*) rowPin.Pointer + (image.Height - 1 - rowIndex) * image.Width * 4;
+				rows[rowIndex] = (byte*) rowPin.Pointer + (image.Height - 1 - rowIndex) * image.Width * (bitDepth >> 1);
 			}
 
 			NativeMethods.png_set_rows(png, info, rows);
-			NativeMethods.png_write_png(png, info, PNGTransform.Identity, nint.Zero);
+			NativeMethods.png_write_png(png, info, PNGTransform.SwapEndian, nint.Zero);
 			NativeMethods.png_write_end(png, info);
 
 			GC.KeepAlive(rowPin);

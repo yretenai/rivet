@@ -211,18 +211,18 @@ public static class TextureConverter {
 				break;
 			case DXGIFormat.BC6H_SF16:
 			case DXGIFormat.BC6H_UF16:
-				BCDec.DecompressBC6H(chunkMem, frameBufferMem, width, height, texture.TextureHeader.Format == DXGIFormat.BC6H_SF16);
+				BCDec.DecompressBC6HFloat(chunkMem, frameBufferMem, width, height, texture.TextureHeader.Format == DXGIFormat.BC6H_SF16);
 
 				if (isNormal) {
 					BCDec.ComputeNormal(MemoryMarshal.Cast<byte, float>(frameBufferSrc), 3);
 				}
 
 				if (!isHDR) {
-					RgbConverter.Convert<ColorRGB<Half>, Half, ColorRGBA<byte>, byte>(frameBufferSrc, width, height, frameBufferSrc);
+					RgbConverter.Convert<ColorRGB<float>, float, ColorRGBA<byte>, byte>(frameBufferSrc, width, height, frameBufferSrc);
 					break;
 				}
 
-				RgbConverter.Convert<ColorRGB<Half>, Half, ColorRGBA<ushort>, ushort>(frameBufferSrc, width, height, frameBufferSrc);
+				RgbConverter.Convert<ColorRGB<float>, float, ColorRGBA<ushort>, ushort>(frameBufferSrc, width, height, frameBufferSrc);
 				return Image.LoadPixelData<Rgba64>(ImageConfiguration, frameBufferSrc, width, height);
 			case DXGIFormat.BC7_UNORM:
 			case DXGIFormat.BC7_UNORM_SRGB:
