@@ -5,13 +5,13 @@
 using DragonLib.CommandLine;
 using Rivet.CLI.Flags;
 using Rivet.Converters;
-using Rivet.Converters.Imaging;
-using Rivet.Converters.Imaging.Writers;
 using Rivet.Graphics;
 using Rivet.Models;
 using Rivet.Models.Data;
 using Rivet.Models.Graphics;
 using Serilog;
+using Triton;
+using Triton.Encoder;
 
 namespace Rivet.CLI.Extract;
 
@@ -19,12 +19,19 @@ namespace Rivet.CLI.Extract;
 internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTextureFlags> {
 	public RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : base(Flags) {
 		switch (Flags.Format) {
-			case ImageFormat.PNG when !PNGWriter.IsAvailable:
-			case ImageFormat.TIF when !TIFFWriter.IsAvailable:
-				Log.Error("Requested {Format} but the writer is unavailable (needs a dll?)", Flags.Format);
-				return;
+			case ImageFormat.PNG when !PNGEncoder.IsAvailable:
+			case ImageFormat.TIF when !TIFFEncoder.IsAvailable:
+				Log.Error("Requested {Format} but the writer is unavailable (needs a dll?), setting to Auto", Flags.Format);
+				Flags.Format = ImageFormat.Auto;
+				break;
 		}
+
+		PngEncoder = new PNGEncoder(Flags.CompressTextures ? PNGCompressionLevel.Small : PNGCompressionLevel.None);
+		TiffEncoder = new TIFFEncoder(Flags.CompressTextures ? TIFFCompression.LZW : TIFFCompression.None);
 	}
+
+	private PNGEncoder PngEncoder { get; }
+	private TIFFEncoder TiffEncoder { get; }
 
 	protected override void Process(RivetAsset asset) {
 		if (asset.Type is not AssetType.Texture || asset.Category is not AssetCategory.Game) {
@@ -38,8 +45,8 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 
 		var format = Flags.Format;
 		switch (Flags.Format) {
-			case ImageFormat.PNG when !texture.IsSupported() || !PNGWriter.IsAvailable:
-			case ImageFormat.TIF when !texture.IsSupported() || !TIFFWriter.IsAvailable:
+			case ImageFormat.PNG when !texture.IsSupported() || !PNGEncoder.IsAvailable:
+			case ImageFormat.TIF when !texture.IsSupported() || !TIFFEncoder.IsAvailable:
 				return;
 			case ImageFormat.Auto:
 				var isMultiSurface = texture.TextureHeader.SurfaceCount > 1 ||
@@ -57,10 +64,10 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 				}
 
 				format = format switch {
-					         ImageFormat.PNG when !PNGWriter.IsAvailable && TIFFWriter.IsAvailable => ImageFormat.TIF,
-					         ImageFormat.PNG when !PNGWriter.IsAvailable && !TIFFWriter.IsAvailable => ImageFormat.DDS,
-					         ImageFormat.TIF when !TIFFWriter.IsAvailable && PNGWriter.IsAvailable => ImageFormat.PNG,
-					         ImageFormat.TIF when !TIFFWriter.IsAvailable && !PNGWriter.IsAvailable => ImageFormat.DDS,
+					         ImageFormat.PNG when !PNGEncoder.IsAvailable && TIFFEncoder.IsAvailable => ImageFormat.TIF,
+					         ImageFormat.PNG when !PNGEncoder.IsAvailable && !TIFFEncoder.IsAvailable => ImageFormat.DDS,
+					         ImageFormat.TIF when !TIFFEncoder.IsAvailable && PNGEncoder.IsAvailable => ImageFormat.PNG,
+					         ImageFormat.TIF when !TIFFEncoder.IsAvailable && !PNGEncoder.IsAvailable => ImageFormat.DDS,
 					         _ => format,
 				         };
 
@@ -103,18 +110,34 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 		} else {
 			using var frames = texture.ToImage(Flags.AllowHDR, Flags.AllowNormalZ);
 			var rootFrame = frames[0];
-			if (texture.TextureHeader.Flags.Dimension is TextureDimension.Cube) {
-				var faceSize = texture.Dimensions.Width;
+			if ((texture.TextureHeader.Flags.ContentType & TextureContentType.IBL) != 0 && !Flags.AssumeCubeIsSurfaces) {
+				if (texture.TextureHeader.Flags.Dimension is TextureDimension.Cube) {
+					var faceSize = texture.Dimensions.Width;
 
-				using var crossImage = rootFrame.CreateSubImage(faceSize * 4, faceSize * 3);
-				crossImage.Draw(frames[2], faceSize, 0);
-				crossImage.Draw(frames[1], 0, faceSize);
-				crossImage.Draw(frames[4], faceSize, faceSize);
-				crossImage.Draw(frames[0], faceSize * 2, faceSize);
-				crossImage.Draw(frames[5], faceSize * 3, faceSize);
-				crossImage.Draw(frames[3], faceSize, faceSize * 2);
-				SaveImage(stream, format, [crossImage]);
-				return;
+					using var crossImage = rootFrame.CreateSubImage(faceSize * 4, faceSize * 3);
+					crossImage.Draw(frames[2], faceSize, 0); // Y+
+					crossImage.Draw(frames[1], 0, faceSize); // -X
+					crossImage.Draw(frames[4], faceSize, faceSize); // +Z
+					crossImage.Draw(frames[0], faceSize * 2, faceSize); // +X
+					crossImage.Draw(frames[5], faceSize * 3, faceSize); // -Z
+					crossImage.Draw(frames[3], faceSize, faceSize * 2); //-Y
+					SaveImage(stream, format, [crossImage]);
+					return;
+				}
+
+				if (frames.Count == 1 && texture.Dimensions.Width / 4 == texture.Dimensions.Height / 2) {
+					var faceSize = texture.Dimensions.Width / 4;
+					using var crossImage = rootFrame.CreateSubImage(faceSize * 4, faceSize * 3);
+					var tile = new Point(faceSize, faceSize);
+					crossImage.Draw(rootFrame, new Point(faceSize, 0), new Rect(new Point(faceSize * 2, 0), tile)); // Y+
+					crossImage.Draw(rootFrame, new Point(0, faceSize), new Rect(new Point(faceSize, 0), tile)); // -X
+					crossImage.Draw(rootFrame, new Point(faceSize, faceSize), new Rect(new Point(0, faceSize), tile)); // +Z
+					crossImage.Draw(rootFrame, new Point(faceSize * 2, faceSize), new Rect(new Point(0, 0), tile)); // +X
+					crossImage.Draw(rootFrame, new Point(faceSize * 3, faceSize), new Rect(new Point(faceSize, faceSize), tile)); // -Z
+					crossImage.Draw(rootFrame, new Point(faceSize, faceSize * 2), new Rect(new Point(faceSize * 3, 0), tile)); // -Y
+					SaveImage(stream, format, [crossImage]);
+					return;
+				}
 			}
 
 			if (frames.Count == 1 || format == ImageFormat.TIF) {
@@ -124,7 +147,7 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 
 			using var tileImage = rootFrame.CreateSubImage(texture.Dimensions.Width, texture.Dimensions.Height * frames.Count);
 			for (var surfaceIndex = 0; surfaceIndex < frames.Count; ++surfaceIndex) {
-				tileImage.Draw(frames[surfaceIndex], 0, texture.Dimensions.Height * surfaceIndex);
+				tileImage.Draw(frames[surfaceIndex], new Point(0, texture.Dimensions.Height * surfaceIndex));
 			}
 
 			SaveImage(stream, format, [tileImage]);
@@ -134,10 +157,10 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 	private void SaveImage(Stream stream, ImageFormat format, ImageCollection images) {
 		switch (format) {
 			case ImageFormat.PNG:
-				PNGWriter.WriteToStream(stream, Flags.CompressTextures ? PNGCompressionLevel.Small : PNGCompressionLevel.None, images[0]);
+				PngEncoder.Write(stream, images[0]);
 				break;
 			case ImageFormat.TIF:
-				TIFFWriter.WriteToStream(stream, Flags.CompressTextures ? TIFFCompression.LZW :  TIFFCompression.None, images);
+				TiffEncoder.Write(stream, images);
 				break;
 		}
 	}

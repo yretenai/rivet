@@ -2,8 +2,8 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
-using AssetRipper.TextureDecoder.Rgb;
-using AssetRipper.TextureDecoder.Rgb.Formats;
+using Triton.Pixel;
+using Triton.Pixel.Formats;
 
 namespace Rivet.Converters.Support;
 

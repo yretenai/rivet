@@ -5,14 +5,14 @@
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using AssetRipper.TextureDecoder.Rgb;
-using AssetRipper.TextureDecoder.Rgb.Formats;
 using BCDecNet;
-using Rivet.Converters.Imaging;
 using Rivet.Converters.Support;
 using Rivet.Graphics;
 using Rivet.IO;
 using Rivet.Models.Graphics;
+using Triton;
+using Triton.Pixel;
+using Triton.Pixel.Formats;
 
 namespace Rivet.Converters;
 

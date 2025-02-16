@@ -17,3 +17,6 @@
 [submodule "Libraries/BCDecNet"]
 	path = Libraries/BCDecNet
 	url = https://github.com/yretenai/BCDecNet
+[submodule "Libraries/Triton"]
+	path = Libraries/Triton
+	url = https://github.com/yretenai/Triton

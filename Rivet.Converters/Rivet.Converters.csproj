@@ -19,10 +19,7 @@ SPDX-License-Identifier: EUPL-1.2
 		<ProjectReference Include="..\Libraries\BCDecNet\BCDecNet\BCDecNet.csproj"/>
 		<ProjectReference Include="..\Libraries\glTFScaffold\glTFScaffold.csproj"/>
 		<ProjectReference Include="..\Libraries\Pepper\Pepper\Pepper.csproj"/>
+		<ProjectReference Include="..\Libraries\Triton\Triton\Triton.csproj" />
 		<ProjectReference Include="..\Rivet\Rivet.csproj"/>
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="AssetRipper.TextureDecoder" Version="2.2.1"/>
 	</ItemGroup>
 </Project>
