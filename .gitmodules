@@ -19,4 +19,4 @@
 	url = https://github.com/yretenai/BCDecNet
 [submodule "Libraries/Triton"]
 	path = Libraries/Triton
-	url = https://github.com/yretenai/Triton
+	url = git@github.com:yretenai/Triton.git
