@@ -27,7 +27,8 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 		}
 
 		PngEncoder = new PNGEncoder(Flags.CompressTextures ? PNGCompressionLevel.Small : PNGCompressionLevel.None);
-		TiffEncoder = new TIFFEncoder(Flags.CompressTextures ? TIFFCompression.LZW : TIFFCompression.None);
+		var tiffCompression = Flags.CompressTextures ? TIFFCompression.LZW : TIFFCompression.None;
+		TiffEncoder = new TIFFEncoder(tiffCompression, tiffCompression);
 	}
 
 	private PNGEncoder PngEncoder { get; }
