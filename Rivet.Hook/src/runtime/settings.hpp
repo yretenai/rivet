@@ -26,14 +26,14 @@ namespace rivet_hook {
 #define SAVE_SETTING(name) WritePrivateProfileStringA(settings_namespace, #name, name.data(), settings_name)
 
 	struct settings {
-		bool load_renderdoc = false;		// disable by default because it kills ReShade and performance in general.
-		bool dump_ddl = false;				// disable by default for clutter reasons
-		bool attach_context_log = false;	// disable by default for clutter reasons
-		bool attach_log = false;			// disable by default because the same line is printed frequently
-		bool suppress_crash_handler = true; //
-		bool list_versions = true;          //
+		bool load_renderdoc = false;		// loads renderdoc.dll into the game; disable by default because it kills ReShade and performance in general.
+		bool list_versions = false;			// dumps versions to json; disable by default for clutter reasons
+		bool dump_ddl = false;				// dumps DDL structures to json; disable by default for clutter reasons
+		bool debug_dll = false;				// dumps generated DDL classes for manual introspection
+		bool attach_context_log = false;	// redirect the internal logger context state to rivet.log; disable by default for clutter reasons
+		bool attach_log = false;			// redirect the internal logger to rivet.log; disable by default because the same line is printed frequently
+		bool suppress_crash_handler = true; // disable the exception handler allowing for debuggers to attach without invoking the crash handler
 
-		std::array<char, MAX_PATH + 1> exe_name {};		  // name of the exe we are patching, used to find the exe in the same directory.
 		std::array<char, MAX_PATH + 1> renderdoc_path {}; // path to renderdoc/dll
 
 		// load the settings from the ini file
@@ -42,15 +42,14 @@ namespace rivet_hook {
 			settings settings;
 
 			LOAD_SETTING_BOOL(load_renderdoc);
+			LOAD_SETTING_BOOL(list_versions);
 			LOAD_SETTING_BOOL(dump_ddl);
+			LOAD_SETTING_BOOL(debug_dll);
 			LOAD_SETTING_BOOL(attach_context_log);
 			LOAD_SETTING_BOOL(attach_log);
 			LOAD_SETTING_BOOL(suppress_crash_handler);
-			LOAD_SETTING_BOOL(list_versions);
-			LOAD_SETTING(exe_name)
-			LOAD_SETTING(renderdoc_path)
+			LOAD_SETTING(renderdoc_path);
 
-			settings.exe_name[MAX_PATH] = '\0';
 			settings.renderdoc_path[MAX_PATH] = '\0';
 
 			return settings;
@@ -59,15 +58,14 @@ namespace rivet_hook {
 		// save the settings to the ini file
 		void
 		save() {
-			exe_name[MAX_PATH] = '\0';
 			renderdoc_path[MAX_PATH] = '\0';
 			SAVE_SETTING_BOOL(load_renderdoc);
+			SAVE_SETTING_BOOL(list_versions);
 			SAVE_SETTING_BOOL(dump_ddl);
+			SAVE_SETTING_BOOL(debug_dll);
 			SAVE_SETTING_BOOL(attach_context_log);
 			SAVE_SETTING_BOOL(attach_log);
 			SAVE_SETTING_BOOL(suppress_crash_handler);
-			SAVE_SETTING_BOOL(list_versions);
-			SAVE_SETTING(exe_name);
 			SAVE_SETTING(renderdoc_path);
 		}
 	};

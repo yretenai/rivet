@@ -8,6 +8,7 @@
 #include <ostream>
 #include <thread>
 #include <unordered_set>
+#include <cstdio>
 
 #include "ddl.hpp"
 #include "runtime.hpp"
@@ -31,61 +32,191 @@ namespace {
 } // namespace
 
 namespace rivet_hook {
-	auto
-	get_game() -> HMODULE {
-		HMODULE module = nullptr;
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "cppcoreguidelines-pro-bounds-pointer-arithmetic"
+	void
+	get_ddl_field(nlohmann::json &field, const uint8_t* object, uint32_t offset, uint8_t array_type, uint8_t field_type, int32_t index, const rivet_hook::ddl::ddl_type_info* const type_ptr, const int32_t type_index) {
+		if (array_type == 0) {
+			switch (field_type) {
+				case 0: field["default"] = reinterpret_cast<const uint8_t*>(object + offset)[index]; return;
+				case 1: field["default"] = reinterpret_cast<const uint16_t*>(object + offset)[index]; return;
+				case 2: field["default"] = reinterpret_cast<const uint32_t*>(object + offset)[index]; return;
+				case 3: field["default"] = reinterpret_cast<const uint64_t*>(object + offset)[index]; return;
+				case 4: field["default"] = reinterpret_cast<const int8_t*>(object + offset)[index]; return;
+				case 5: field["default"] = reinterpret_cast<const int16_t*>(object + offset)[index]; return;
+				case 6: field["default"] = reinterpret_cast<const int32_t*>(object + offset)[index]; return;
+				case 7: field["default"] = reinterpret_cast<const int64_t*>(object + offset)[index]; return;
+				case 8: field["default"] = reinterpret_cast<const float*>(object + offset)[index]; return;
+				case 9: field["default"] = reinterpret_cast<const double*>(object + offset)[index]; return;
+				case 11: field["default"] = reinterpret_cast<const uint32_t*>(object + offset)[index]; return; // enum
+				case 12: field["default"] = reinterpret_cast<const uint32_t*>(object + offset)[index]; return; // bitset
+				case 15: field["default"] = reinterpret_cast<const bool*>(object + offset)[index]; return;
+				case 17: field["default"] = reinterpret_cast<const uint64_t*>(object + offset)[index]; return; // tuid
+				case 20: field["default"] = reinterpret_cast<const uint64_t*>(object + offset)[index]; return; // instance
+				case 10: { // str
+					auto str = reinterpret_cast<const rivet_hook::ddl::ddl_runtime_str*>(object + offset)[index];
+					if(str.value != nullptr) {
+						nlohmann::json str_default;
+						str_default["value"] = str.value;
+						str_default["id"] = str.hash;
+						field["default"] = str_default;
+					} else {
+						field["default"] = nullptr;
+					}
+					return;
+				}
+				case 16: { // file
+					auto str = reinterpret_cast<const rivet_hook::ddl::ddl_runtime_file*>(object + offset)[index];
+					if(str.value != nullptr) {
+						nlohmann::json str_default;
+						str_default["value"] = str.value;
+						str_default["id"] = str.asset_id;
+						field["default"] = str_default;
+					} else {
+						field["default"] = nullptr;
+					}
+					return;
+				}
+				default: {
+					if(g_settings.debug_dll && reinterpret_cast<const uint8_t*>(object + offset)[index] != 0) {
+						g_output << "[DDL] " << type_ptr->name << " field " << type_ptr->field_names[type_index] << " (index " << index << ", type " << static_cast<int>(field_type) << ") has non-zero value that is not handled" << std::endl;
+					}
 
-		// if the exe name is set, use that
-		if (strnlen_s(g_settings.exe_name.data(), g_settings.exe_name.size()) > 0) {
-			module = GetModuleHandleA(g_settings.exe_name.data());
-			if (module != nullptr) {
-				g_output << "[rivet] found " << std::string_view(g_settings.exe_name.data()) << '\n';
+					field["default"] = nullptr;
+					return;
+				}
 			}
 		}
 
-		// not found
-		return module;
+		if(type_ptr == nullptr || index != 0) {
+			g_output << "[DDL] hit unreachable state";
+			return;
+		}
+
+		if(array_type == 1) {
+			auto count = static_cast<int32_t>(type_ptr->field_array_sizes[type_index]);
+			if(count <= 0) {
+				field["default"] = nullptr;
+				return;
+			}
+			
+			nlohmann::json::array_t values;
+			for(int32_t array_index = 0; array_index < count; ++array_index) {
+				nlohmann::json tmp;
+				get_ddl_field(tmp, object, offset, 0, field_type, array_index, type_ptr, type_index);
+				values.push_back(tmp["default"]);
+			}
+			field["default"] = values;
+
+			return;
+		}
+
+		if(array_type == 2) {
+			auto count = reinterpret_cast<const int32_t*>(object + offset + (sizeof(intptr_t) * 1))[0];
+			if(count <= 0) {
+				field["default"] = nullptr;
+				return;
+			}
+
+			auto ptr_values = reinterpret_cast<const uint8_t* const*>(object + offset)[0];
+			if (ptr_values == nullptr) {
+				field["default"] = nullptr;
+				return;
+			}
+
+			g_output << "[DDL] " << type_ptr->name << " field " << type_ptr->field_names[type_index] << " (type " << static_cast<int>(field_type) << ", array type " << static_cast<int>(array_type) << ") has non-zero dynamic array that is not handled" << std::endl;
+
+			// this is more complex, this will likely crash
+			/*
+			nlohmann::json::array_t values;
+			for(int32_t array_index = 0; array_index < count; ++array_index) {
+				nlohmann::json tmp;
+				get_ddl_field(tmp, ptr_values, 0, 0, field_type, array_index, type_ptr, type_index);
+				values.push_back(tmp["default"]);
+			}
+			field["default"] = values;
+			*/
+
+			return;
+		}
+
+		if(array_type == 3) {
+			auto count = reinterpret_cast<const int32_t*>(object + offset + (sizeof(intptr_t) * 2))[0];
+			if(count <= 0) {
+				field["default"] = nullptr;
+				return;
+			}
+
+			auto ptrs = reinterpret_cast<const uint8_t* const*>(object + offset);
+			auto ptr_keys = ptrs[0];
+			auto ptr_values = ptrs[1];
+			if (ptr_keys == nullptr || ptr_values == nullptr) {
+				field["default"] = nullptr;
+				return;
+			}
+			
+			auto map_type = type_ptr->field_map_types[type_index];
+			
+			nlohmann::json::array_t values;
+			for(int32_t array_index = 0; array_index < count; ++array_index) {
+				nlohmann::json tmp_key;
+				get_ddl_field(tmp_key, ptr_keys, 0, 0, map_type, array_index, type_ptr, type_index);
+				
+				nlohmann::json tmp_value;
+				get_ddl_field(tmp_value, ptr_values, 0, 0, field_type, array_index, type_ptr, type_index);
+				
+				nlohmann::json tmp;
+				tmp["key"] = tmp_key["default"];
+				tmp["value"] = tmp_value["default"];
+				values.push_back(tmp);
+			}
+			field["default"] = values;
+
+			return;
+		}
+
+		if(g_settings.debug_dll && reinterpret_cast<const uint64_t*>(object + offset)[0] != 0) {
+			g_output << "[DDL] " << type_ptr->name << " field " << type_ptr->field_names[type_index] << " (type " << static_cast<int>(field_type) << ", array type " << static_cast<int>(array_type) << ") has non-zero value that is not handled" << std::endl;
+		}
 	}
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "cppcoreguidelines-pro-bounds-pointer-arithmetic"
 
 	void
 	dump_ddl() {
-		g_output << "[rivet] dumping DDL structures\n";
+		g_output << "[rivet] dumping DDL structures" << std::endl;
 		using namespace std::chrono_literals;
 
 		std::vector<uint8_t *> hm_pointers = scan(g_game_module, DDL_HASH_MAP_SIGNATURE);
 		std::vector<uint8_t *> tl_pointers = scan(g_game_module, DDL_TYPE_LIST_SIGNATURE);
 		if (hm_pointers.empty()) {
-			g_output << "[DDL] could not find hash map pointer, aborting\n";
+			g_output << "[DDL] could not find hash map pointer, aborting" << std::endl;
 			return;
 		}
 
 		if (hm_pointers.size() > 1) {
-			g_output << "[DDL] too many hash map pointers, aborting\n";
+			g_output << "[DDL] too many hash map pointers, aborting" << std::endl;
 			return;
 		}
 
 		if (tl_pointers.empty()) {
-			g_output << "[DDL] could not find type list pointer, aborting\n";
+			g_output << "[DDL] could not find type list pointer, aborting" << std::endl;
 			return;
 		}
 
 		if (tl_pointers.size() > 1) {
-			g_output << "[DDL] too many type list pointers, aborting\n";
+			g_output << "[DDL] too many type list pointers, aborting" << std::endl;
 			return;
 		}
 
-		g_output << "[rivet] found hash map pointer at " << std::hex << reinterpret_cast<uintptr_t>(hm_pointers[0]) << '\n';
-		g_output << "[rivet] found type list pointer at " << std::hex << reinterpret_cast<uintptr_t>(tl_pointers[0]) << '\n';
+		g_output << "[rivet] found hash map pointer at " << std::hex << reinterpret_cast<uintptr_t>(hm_pointers[0]) << std::endl;
+		g_output << "[rivet] found type list pointer at " << std::hex << reinterpret_cast<uintptr_t>(tl_pointers[0]) << std::endl;
 
 		g_output << "[DDL] sleeping by 5 seconds to give the game a chance to "
-					"set up...\n";
+					"set up..." << std::endl;
 
 		std::this_thread::sleep_for(5000ms);
 
-		g_output << "[DDL] dumping...\n";
+		g_output << "[DDL] dumping..." << std::endl;
 
 		const auto *hm_rip = hm_pointers[0] + 3 + 7;
 		const auto hm_rip_rel = reinterpret_cast<uint32_t *>(hm_pointers[0] + 6)[0];
@@ -133,7 +264,7 @@ namespace rivet_hook {
 				continue;
 			}
 
-			void* ddl_inst_this = malloc(type_ptr->allocation_size + 16);
+			void* ddl_inst_this = calloc(type_ptr->allocation_size, 1);
 			auto type_ctor = reinterpret_cast<rivet_hook::ddl::ddl_call_t*>(type_ptr->constructor_ptr);
 			auto type_dtor = reinterpret_cast<rivet_hook::ddl::ddl_call_t*>(type_ptr->destructor_ptr);
 			auto type_init = reinterpret_cast<rivet_hook::ddl::ddl_call_t*>(type_ptr->init_defaults_ptr);
@@ -148,6 +279,14 @@ namespace rivet_hook {
 			} else {
 				free(ddl_inst_this);
 				ddl_inst_this = nullptr;
+			}
+
+			if(g_settings.debug_dll && ddl_inst_this != nullptr) {
+				std::ofstream ddl_bin;
+				ddl_bin.open("./ddl/" + std::string(type_ptr->name) + ".bin", std::ios::app | std::ios::binary);
+				ddl_bin.write(reinterpret_cast<char*>(ddl_inst_this), type_ptr->allocation_size + 16);
+				ddl_bin.flush();
+				ddl_bin.close();
 			}
 
 			nlohmann::json type_info;
@@ -173,50 +312,8 @@ namespace rivet_hook {
 				field["fized_size"] = static_cast<uint32_t>(type_ptr->field_array_sizes[fi]);
 				field["offset"] = type_ptr->field_offsets[fi];
 
-				if(ddl_inst_this != 0 && type_ptr->field_array_types[fi] == 0) { // arrays are unsupported
-					auto ddl_inst = static_cast<uint8_t*>(ddl_inst_this);
-					switch (type_ptr->field_types[fi]) {
-						case 0: field["default"] = *reinterpret_cast<const uint8_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
-						case 1: field["default"] = *reinterpret_cast<const uint16_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
-						case 2: field["default"] = *reinterpret_cast<const uint32_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
-						case 3: field["default"] = *reinterpret_cast<const uint64_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
-						case 4: field["default"] = *reinterpret_cast<const int8_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
-						case 5: field["default"] = *reinterpret_cast<const int16_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
-						case 6: field["default"] = *reinterpret_cast<const int32_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
-						case 7: field["default"] = *reinterpret_cast<const int64_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
-						case 8: field["default"] = *reinterpret_cast<const float*>(ddl_inst + type_ptr->field_offsets[fi]); break;
-						case 9: field["default"] = *reinterpret_cast<const double*>(ddl_inst + type_ptr->field_offsets[fi]); break;
-						case 11: field["default"] = *reinterpret_cast<const uint32_t*>(ddl_inst + type_ptr->field_offsets[fi]); break; // enum
-						case 12: field["default"] = *reinterpret_cast<const uint32_t*>(ddl_inst + type_ptr->field_offsets[fi]); break; // bitset
-						case 15: field["default"] = *reinterpret_cast<const bool*>(ddl_inst + type_ptr->field_offsets[fi]); break;
-						case 17: field["default"] = *reinterpret_cast<const uint64_t*>(ddl_inst + type_ptr->field_offsets[fi]); break; // tuid
-						case 20: field["default"] = *reinterpret_cast<const uint64_t*>(ddl_inst + type_ptr->field_offsets[fi]); break; // instance
-						case 10: { // str
-							auto str = reinterpret_cast<const rivet_hook::ddl::ddl_runtime_str*>(ddl_inst + type_ptr->field_offsets[fi]);
-							if(str->value != nullptr) {
-								nlohmann::json str_default;
-								str_default["value"] = str->value;
-								str_default["id"] = str->hash;
-								field["default"] = str_default;
-							} else {
-								field["default"] = nullptr;
-							}
-							break;
-						}
-						case 16: { // file
-							auto str = reinterpret_cast<const rivet_hook::ddl::ddl_runtime_file*>(ddl_inst + type_ptr->field_offsets[fi]);
-							if(str->value != nullptr) {
-								nlohmann::json str_default;
-								str_default["value"] = str->value;
-								str_default["id"] = str->asset_id;
-								field["default"] = str_default;
-							} else {
-								field["default"] = nullptr;
-							}
-							break;
-						}
-						default: field["default"] = nullptr; break;
-					}
+				if(ddl_inst_this != 0) {
+					get_ddl_field(field, static_cast<uint8_t*>(ddl_inst_this), type_ptr->field_offsets[fi], type_ptr->field_array_types[fi], type_ptr->field_types[fi], 0, type_ptr, fi);
 				}
 
 				const auto *extra = type_ptr->field_ex[fi];
@@ -276,6 +373,16 @@ namespace rivet_hook {
 
 			type_info["fields"] = fields;
 			types.push_back(type_info);
+
+			if(g_settings.debug_dll) {
+				std::ofstream ddl_json_data;
+				ddl_json_data.open("./ddl/" + std::string(type_ptr->name) + ".json");
+				auto ddl_json_text = type_info.dump(4);
+				ddl_json_data.write(ddl_json_text.c_str(), static_cast<std::streamsize>(ddl_json_text.size()));
+				ddl_json_data.flush();
+				ddl_json_data.close();
+			}
+
 			if(type_dtor != nullptr && ddl_inst_this != nullptr) {
 				type_dtor(ddl_inst_this);
 				free(ddl_inst_this);
@@ -296,16 +403,16 @@ namespace rivet_hook {
 		json_data.flush();
 		json_data.close();
 
-		g_output << "[DDL] done\n";
-		g_output << "[DDL] found " << enums.size() << " enums\n";
-		g_output << "[DDL] found " << bitsets.size() << " bitsets\n";
-		g_output << "[DDL] found " << roots.size() << " roots\n";
-		g_output << "[DDL] found " << types.size() << " types\n";
+		g_output << "[DDL] done" << std::endl;
+		g_output << "[DDL] found " << enums.size() << " enums" << std::endl;
+		g_output << "[DDL] found " << bitsets.size() << " bitsets" << std::endl;
+		g_output << "[DDL] found " << roots.size() << " roots" << std::endl;
+		g_output << "[DDL] found " << types.size() << " types" << std::endl;
 	}
 
 	void
 	list_versions() {
-		g_output << "[rivet] dumping versions\n";
+		g_output << "[rivet] dumping versions" << std::endl;
 		using namespace std::chrono_literals;
 		using version_str_fn = const char *(*) (uint32_t index);
 		using version_hash_fn = uint32_t(*) (uint32_t index);
@@ -314,7 +421,7 @@ namespace rivet_hook {
 		std::vector<uint8_t *> hash_function_ptrs = scan(g_game_module, VERSION_HASH_SIGNATURE);
 
 		if (function_ptrs.size() != 1 && hash_function_ptrs.size() != 1) {
-			g_output << "[ver] could not find version pointer, aborting\n";
+			g_output << "[ver] could not find version pointer, aborting" << std::endl;
 			return;
 		}
 
@@ -336,7 +443,7 @@ namespace rivet_hook {
 			version["id"] = hash;
 			version["version"] = version_str;
 			versions.emplace_back(version);
-			g_output << "[ver] " << version << " = " << str_stream.str() << '\n';
+			g_output << "[ver] " << version << " = " << str_stream.str() << std::endl;
 		}
 
 		std::ofstream json_data;
@@ -365,7 +472,7 @@ namespace rivet_hook {
 			if (current_context != last_context || current_message != last_message) {
 				last_context = current_context;
 				last_message = current_message;
-				g_output << "[ctx] [" << (context == nullptr ? "?" : context) << "] " << (message == nullptr ? "" : message) << '\n';
+				g_output << "[ctx] [" << (context == nullptr ? "?" : context) << "] " << (message == nullptr ? "" : message) << std::endl;
 			}
 		}
 		return result;
@@ -383,7 +490,9 @@ namespace rivet_hook {
 			std::string buffer_str(buffer.get());
 			g_output << "[log] " << buffer_str;
 			if (buffer_str.back() != '\n') {
-				g_output << '\n';
+				g_output << std::endl;
+			} else {
+				g_output.flush();
 			}
 		}
 
@@ -400,7 +509,7 @@ namespace rivet_hook {
 		}
 
 		if (MH_Initialize() != MH_OK) {
-			g_output << "[rivet] failed to initialize minhook\n";
+			g_output << "[rivet] failed to initialize minhook" << std::endl;
 			return;
 		}
 
@@ -409,33 +518,33 @@ namespace rivet_hook {
 
 	void
 	create_hook(const std::string_view &name, std::ostream &output, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original) {
-		output << "[rivet] searching for " << name << " pointer\n";
+		output << "[rivet] searching for " << name << " pointer" << std::endl;
 		auto pointers = scan(game, signature);
 		if (pointers.empty()) {
-			output << "[rivet] could not find " << name << " pointer, aborting\n";
+			output << "[rivet] could not find " << name << " pointer, aborting" << std::endl;
 			return;
 		}
 
 		if (pointers.size() > 1) {
-			output << "[rivet] found " << pointers.size() << " " << name << " pointers, too many. aborting\n";
+			output << "[rivet] found " << pointers.size() << " " << name << " pointers, too many. aborting" << std::endl;
 			return;
 		}
 
-		output << "[rivet] found " << name << " pointer at " << std::hex << reinterpret_cast<uintptr_t>(pointers[0]) << std::dec << "\n";
+		output << "[rivet] found " << name << " pointer at " << std::hex << reinterpret_cast<uintptr_t>(pointers[0]) << std::dec << std::endl;
 
 		init_minhook();
 
 		if (MH_CreateHook(pointers[0], detour, original) != MH_OK) {
-			output << "[rivet] failed to create " << name << " hook\n";
+			output << "[rivet] failed to create " << name << " hook" << std::endl;
 			return;
 		}
 
 		if (MH_EnableHook(pointers[0]) != MH_OK) {
-			output << "[rivet] failed to enable " << name << " hook\n";
+			output << "[rivet] failed to enable " << name << " hook" << std::endl;
 			return;
 		}
 
-		output << "[rivet] created " << name << " hook\n";
+		output << "[rivet] created " << name << " hook" << std::endl;
 	}
 
 #pragma clang diagnostic pop
@@ -446,14 +555,12 @@ namespace rivet_hook {
 			// this runs on the main thread
 
 			g_output.open("./rivet.log");
-			g_output << "[rivet] init\n";
+			g_output << "[rivet] init" << std::endl;
 
 			g_settings = settings::load();
 
-			g_game_module = get_game();
-			if (g_game_module == nullptr) {
-				g_settings.save();
-				g_output << "[rivet] game not found, set exe_name in ini.\n";
+			if (!GetModuleHandleExA(GET_MODULE_HANDLE_EX_FLAG_PIN, nullptr, &g_game_module)) {
+				g_output << "[rivet] unable to get the executable handle." << std::endl;
 				return;
 			}
 
@@ -462,27 +569,30 @@ namespace rivet_hook {
 			}
 
 			if (g_settings.load_renderdoc) {
-				g_output << "[rivet] loading renderdoc\n";
+				g_output << "[rivet] loading renderdoc" << std::endl;
 				if (std::filesystem::exists("renderdoc.dll")) {
-					g_output << "[rivet] loaded local renderdoc\n";
+					g_output << "[rivet] loaded local renderdoc" << std::endl;
 					g_renderdoc = LoadLibraryA("renderdoc.dll");
 				} else {
 					auto renderdoc_path = std::filesystem::path(g_settings.renderdoc_path.data());
 					if (renderdoc_path.empty()) {
-						g_output << "[rivet] renderdoc.dll not found\n";
+						g_output << "[rivet] renderdoc.dll not found" << std::endl;
 					} else {
 						if (std::filesystem::exists(renderdoc_path)) {
-							g_output << "[rivet] loaded " << renderdoc_path << "\n";
+							g_output << "[rivet] loaded " << renderdoc_path << std::endl;
 							g_renderdoc = LoadLibraryA(g_settings.renderdoc_path.data());
 						} else {
-							g_output << "[rivet] renderdoc.dll not found\n";
+							g_output << "[rivet] renderdoc.dll not found" << std::endl;
 						}
 					}
 				}
 			}
 
 			if (g_settings.dump_ddl) {
-				g_output << "[rivet] starting ddl dump thread\n";
+				if (g_settings.debug_dll) {
+					std::filesystem::create_directory("./ddl");
+				}
+				g_output << "[rivet] starting ddl dump thread" << std::endl;
 				g_ddl_dump_thread = std::thread(dump_ddl);
 			}
 
@@ -495,20 +605,20 @@ namespace rivet_hook {
 			}
 
 			if (g_settings.list_versions) {
-				g_output << "[rivet] dumping versions\n";
+				g_output << "[rivet] dumping versions" << std::endl;
 				list_versions();
 			}
 
-			g_output << "[rivet] init complete\n";
+			g_output << "[rivet] init complete" << std::endl;
 		}
 
 		void
 		fini() {
 			g_settings.save();
-			g_output << "[rivet] fini\n";
+			g_output << "[rivet] fini" << std::endl;
 
 			if (g_renderdoc != nullptr) {
-				g_output << "[rivet] unloading renderdoc\n";
+				g_output << "[rivet] unloading renderdoc" << std::endl;
 				FreeLibrary(g_renderdoc);
 			}
 
@@ -516,7 +626,7 @@ namespace rivet_hook {
 				g_ddl_dump_thread.join();
 			}
 
-			g_output << "[rivet] fini complete\n";
+			g_output << "[rivet] fini complete" << std::endl;
 			g_output.flush();
 			g_output.close();
 		}
