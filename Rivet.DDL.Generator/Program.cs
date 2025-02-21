@@ -401,6 +401,10 @@ internal class Program {
 						defaultValue = field.Default.Value.ToString().ToLower();
 						break;
 					}
+					case JsonValueKind.Array: {
+						// not yet handled.
+						break;
+					}
 					default:
 						defaultValue = field.Default.Value.ToString();
 						break;
