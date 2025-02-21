@@ -16,7 +16,7 @@ public class DetachingBotGeneratorComponentPrius : BotGeneratorComponentPrius, I
 
 	public DetachingBotGeneratorComponentPrius(DDLObject ddl) : base(ddl) {
 		Event = ddl.GetObject<EventBase>(0x22fdc666u);
-		LooksToDisableOnEvent = ddl.GetStrings(0x8820a2efu);
+		LooksToDisableOnEvent = ddl.GetStrings(0x8820a2efu, LooksToDisableOnEvent);
 		IntroAnim = ddl.GetString(0xf227a2c3) ?? IntroAnim;
 		SpawnLocator = ddl.GetString(0x52bc144e) ?? SpawnLocator;
 		SpawnThrowHeight = ddl.GetValue<float>(0xfd52da1eu, SpawnThrowHeight);

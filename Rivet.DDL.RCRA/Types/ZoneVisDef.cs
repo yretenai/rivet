@@ -16,7 +16,7 @@ public class ZoneVisDef : DDLObjectType, IDDLObjectType<ZoneVisDef> {
 
 	public ZoneVisDef(DDLObject ddl) : base(ddl) {
 		Level = ddl.GetString(0x42782fd6) ?? Level;
-		Zones = ddl.GetStrings(0x5d5852adu);
+		Zones = ddl.GetStrings(0x5d5852adu, Zones);
 	}
 
 	[DDLRegistration(0x42782fd6u)]

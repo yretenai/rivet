@@ -27,7 +27,7 @@ public class SaveControlRemapData : DDLObjectType, IDDLObjectType<SaveControlRem
 	public int CurrentCustomRemapSlot { get; set; } = -1;
 
 	[DDLRegistration(0x4d870baeu)]
-	public List<CustomRemapData?> CustomRemaps { get; set; } = [];
+	public List<CustomRemapData?> CustomRemaps { get; set; } = [default, default];
 
 	public static SaveControlRemapData Create(DDLObject ddl) => new(ddl);
 }

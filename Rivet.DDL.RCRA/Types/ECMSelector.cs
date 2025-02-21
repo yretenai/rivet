@@ -21,7 +21,7 @@ public class ECMSelector : DDLObjectType, IDDLObjectType<ECMSelector> {
 	}
 
 	[DDLRegistration(0x042494f5u, "Fields")]
-	public List<ECMField?> Value { get; set; } = [];
+	public List<ECMField?> Value { get; set; } = [default, default];
 
 	[DDLRegistration(0xc6d13976u, "Operator")]
 	public xec77cf54 Op { get; set; } = xec77cf54.SelOpEQ;

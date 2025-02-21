@@ -15,7 +15,7 @@ public class DamageModifierIgnoreJointPrius : DamageModifierIncomingPrius, IDDLO
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xd25dbcb9u);
 
 	public DamageModifierIgnoreJointPrius(DDLObject ddl) : base(ddl) {
-		JointNames = ddl.GetStrings(0x0cedbe25u);
+		JointNames = ddl.GetStrings(0x0cedbe25u, JointNames);
 	}
 
 	[DDLRegistration(0x0cedbe25u)]

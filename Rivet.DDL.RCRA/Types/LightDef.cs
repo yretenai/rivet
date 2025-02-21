@@ -59,7 +59,7 @@ public class LightDef : DDLObjectType, IDDLObjectType<LightDef> {
 		SpecFadeOutDist = ddl.GetValue<float>(0x19cebae2u, SpecFadeOutDist);
 		TextureAsset = ddl.GetValue<RivetAssetId>(0x34776bf1u, TextureAsset);
 		CustomGoboInput = ddl.GetObject<DDLVector3>(0xa788b073u);
-		VolumeLinks = ddl.GetValues<RivetAssetId>(0xeafe00f3u);
+		VolumeLinks = ddl.GetValues<RivetAssetId>(0xeafe00f3u, VolumeLinks);
 		LightingConditions = ddl.GetObject<LightingConditionBitSet>(0xfda14c35u);
 	}
 

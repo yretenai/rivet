@@ -15,7 +15,7 @@ public class RCSFilelogInput : DDLObjectType, IDDLObjectType<RCSFilelogInput> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xea12f7aeu);
 
 	public RCSFilelogInput(DDLObject ddl) : base(ddl) {
-		Views = ddl.GetStrings(0x08a35046u);
+		Views = ddl.GetStrings(0x08a35046u, Views);
 	}
 
 	[DDLRegistration(0x08a35046u, description: "Files (or paths/wildcards) to get file information.")]

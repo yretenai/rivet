@@ -15,7 +15,7 @@ public class MasterVanityItemList : MasterSkinItemList, IDDLObjectType<MasterVan
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x43c0f6a0u);
 
 	public MasterVanityItemList(DDLObject ddl) : base(ddl) {
-		VanitySets = ddl.GetValues<RivetAssetId>(0x22361552u);
+		VanitySets = ddl.GetValues<RivetAssetId>(0x22361552u, VanitySets);
 		AccessoryData = ddl.GetObjects<VanityAccessoryData>(0x4afede63u);
 		UIColors = ddl.GetObjects<VanityUIColor>(0xded0aa4du);
 		CineHelmetTransData = ddl.GetObject<VanityCineHelmetTransData>(0x5624f4ceu);

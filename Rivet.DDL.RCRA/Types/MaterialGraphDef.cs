@@ -37,7 +37,7 @@ public class MaterialGraphDef : DDLObjectType, IDDLObjectType<MaterialGraphDef> 
 		PreviewModel = ddl.GetObject<PreviewModelContainer>(0x5e53ae29u);
 		TessSettings = ddl.GetObject<TessellationSettings>(0x13d5a26fu);
 		Notes = ddl.GetObject<MaterialGraphNotes>(0x18486a4du);
-		ModelSlotExclusion = ddl.GetStrings(0x902ee427u);
+		ModelSlotExclusion = ddl.GetStrings(0x902ee427u, ModelSlotExclusion);
 	}
 
 	[DDLRegistration(0x037889aau)]

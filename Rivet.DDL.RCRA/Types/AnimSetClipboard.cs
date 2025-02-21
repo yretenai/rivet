@@ -15,7 +15,7 @@ public class AnimSetClipboard : DDLObjectType, IDDLObjectType<AnimSetClipboard> 
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x8064fea3u);
 
 	public AnimSetClipboard(DDLObject ddl) : base(ddl) {
-		AnimClipAssetPathArray = ddl.GetStrings(0xdb9a291fu);
+		AnimClipAssetPathArray = ddl.GetStrings(0xdb9a291fu, AnimClipAssetPathArray);
 		AnimClipGroupArray = ddl.GetObjects<AnimClipGroupDef>(0xfd283164u);
 		AnimClipGroupElemArray = ddl.GetObjects<AnimClipGroupElemDef>(0xbcf76bc6u);
 		AnimClipGroupEntryArray = ddl.GetObjects<AnimClipGroupEntryDef>(0xc6c06e84u);

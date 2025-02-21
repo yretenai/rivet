@@ -16,7 +16,7 @@ public class SkySettingsDef : DDLObjectType, IDDLObjectType<SkySettingsDef> {
 
 	public SkySettingsDef(DDLObject ddl) : base(ddl) {
 		SkyObjectsScale = ddl.GetValue<float>(0x87b327afu, SkyObjectsScale);
-		SkyObjects = ddl.GetValues<RivetAssetId>(0xa820b707u);
+		SkyObjects = ddl.GetValues<RivetAssetId>(0xa820b707u, SkyObjects);
 		SkyBoxCubeMap = ddl.GetValue<RivetAssetId>(0x181be623u, SkyBoxCubeMap);
 		SkyBoxSunThreshold = ddl.GetValue<float>(0xfc347756u, SkyBoxSunThreshold);
 	}

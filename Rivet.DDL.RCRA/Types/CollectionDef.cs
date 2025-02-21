@@ -18,7 +18,7 @@ public class CollectionDef : DDLObjectType, IDDLObjectType<CollectionDef> {
 		VaultMetaData = ddl.GetObject<VaultMetaData>(0x037889aau);
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
 		Type = ddl.GetEnum<x9b56bf2d>(0xbc4e9799u, x9b56bf2dValues.Lookup);
-		Paths = ddl.GetValues<RivetAssetId>(0x92e94ad0u);
+		Paths = ddl.GetValues<RivetAssetId>(0x92e94ad0u, Paths);
 		CustomSearch = ddl.GetString(0x39e7f2e4) ?? CustomSearch;
 	}
 

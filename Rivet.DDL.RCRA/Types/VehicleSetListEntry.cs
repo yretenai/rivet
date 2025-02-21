@@ -18,7 +18,7 @@ public class VehicleSetListEntry : DDLObjectType, IDDLObjectType<VehicleSetListE
 		SetName = ddl.GetString(0xca38a032) ?? SetName;
 		RequiredLightingModes = ddl.GetEnums<LightingModeGame>(0xe4bf6a4fu, LightingModeGameValues.Lookup);
 		RequiredMissionUnlocks = ddl.GetObject<ObjSysUnlockSequence>(0x39f41e9cu);
-		RequiredContainerRegions = ddl.GetValues<RivetAssetId>(0x43245e25u);
+		RequiredContainerRegions = ddl.GetValues<RivetAssetId>(0x43245e25u, RequiredContainerRegions);
 		SpawnInfo = ddl.GetObject<VehicleSpawnInfo>(0x56911753u);
 		NodeParams = ddl.GetObject<VehicleNodeParams>(0xc0c72b9cu);
 		MaxVehicles = ddl.GetValue<int>(0x8bdfe14eu, MaxVehicles);

@@ -15,7 +15,7 @@ public class ScriptActionListFavorites : DDLObjectType, IDDLObjectType<ScriptAct
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x157bc018u);
 
 	public ScriptActionListFavorites(DDLObject ddl) : base(ddl) {
-		Names = ddl.GetStrings(0xeb608581u);
+		Names = ddl.GetStrings(0xeb608581u, Names);
 	}
 
 	[DDLRegistration(0xeb608581u)]

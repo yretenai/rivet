@@ -15,7 +15,7 @@ public class NestBotSpawnerPrius : NestBotBasePrius, IDDLObjectType<NestBotSpawn
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x2ff70277u);
 
 	public NestBotSpawnerPrius(DDLObject ddl) : base(ddl) {
-		SpawnActors = ddl.GetValues<RivetAssetId>(0x28933ffbu);
+		SpawnActors = ddl.GetValues<RivetAssetId>(0x28933ffbu, SpawnActors);
 		SpawnThrowHeight = ddl.GetValue<float>(0xfd52da1eu, SpawnThrowHeight);
 		SpawnCountMax = ddl.GetValue<uint>(0x1b319e6au, SpawnCountMax);
 		GlobalSpawnCountMax = ddl.GetValue<uint>(0x59dcabadu, GlobalSpawnCountMax);

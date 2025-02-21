@@ -19,7 +19,7 @@ public class VisibilitySkyEngineItem : DDLObjectType, IDDLObjectType<VisibilityS
 	}
 
 	[DDLRegistration(0x8ab81d39u)]
-	public double Visibility { get; set; } = 1;
+	public double Visibility { get; set; } = 1.00d;
 
 	public static VisibilitySkyEngineItem Create(DDLObject ddl) => new(ddl);
 }

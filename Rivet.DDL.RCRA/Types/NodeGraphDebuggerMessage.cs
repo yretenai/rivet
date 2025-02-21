@@ -16,7 +16,7 @@ public class NodeGraphDebuggerMessage : DDLObjectType, IDDLObjectType<NodeGraphD
 
 	public NodeGraphDebuggerMessage(DDLObject ddl) : base(ddl) {
 		AssetId = ddl.GetValue<RivetAssetId>(0xb6e788d7u, AssetId);
-		BreakpointIds = ddl.GetValues<RivetAssetId>(0xdc9faba7u);
+		BreakpointIds = ddl.GetValues<RivetAssetId>(0xdc9faba7u, BreakpointIds);
 		WantsAutoAttach = ddl.GetValue<bool>(0x1a21a162u, WantsAutoAttach);
 	}
 

@@ -15,7 +15,7 @@ public class P4ServerList : DDLObjectType, IDDLObjectType<P4ServerList> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x3f2d68a5u);
 
 	public P4ServerList(DDLObject ddl) : base(ddl) {
-		Servers = ddl.GetStrings(0x4e6096cfu);
+		Servers = ddl.GetStrings(0x4e6096cfu, Servers);
 	}
 
 	[DDLRegistration(0x4e6096cfu)]

@@ -15,7 +15,7 @@ public class CameraFocusCommand : DDLObjectType, IDDLObjectType<CameraFocusComma
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xc5dd7ad8u);
 
 	public CameraFocusCommand(DDLObject ddl) : base(ddl) {
-		Ids = ddl.GetValues<RivetAssetId>(0x5a8f8e51u);
+		Ids = ddl.GetValues<RivetAssetId>(0x5a8f8e51u, Ids);
 		UseClusters = ddl.GetValue<bool>(0x127904f6u, UseClusters);
 		DistanceFactor = ddl.GetValue<float>(0xf4e39365u, DistanceFactor);
 	}

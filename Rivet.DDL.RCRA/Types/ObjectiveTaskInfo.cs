@@ -31,7 +31,7 @@ public class ObjectiveTaskInfo : DDLObjectType, IDDLObjectType<ObjectiveTaskInfo
 	public uint PlaytimeEstimate { get; set; } = 0x00000005;
 
 	[DDLRegistration(0xf00bc587u)]
-	public List<ActivityHint?> Hints { get; set; } = [];
+	public List<ActivityHint?> Hints { get; set; } = [default, default, default];
 
 	public static ObjectiveTaskInfo Create(DDLObject ddl) => new(ddl);
 }

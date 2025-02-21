@@ -21,8 +21,8 @@ public class ECMInputNodeDef : DDLObjectType, IDDLObjectType<ECMInputNodeDef> {
 		Collapsed = ddl.GetValue<bool>(0xf07e7fafu, Collapsed);
 		Type = ddl.GetEnum<xf5eea2a0>(0xbc4e9799u, xf5eea2a0Values.Lookup);
 		Value = ddl.GetString(0x042494f5) ?? Value;
-		ValueArray = ddl.GetStrings(0x4f31b448u);
-		ValueArrayAux = ddl.GetStrings(0xd23024fbu);
+		ValueArray = ddl.GetStrings(0x4f31b448u, ValueArray);
+		ValueArrayAux = ddl.GetStrings(0xd23024fbu, ValueArrayAux);
 	}
 
 	[DDLRegistration(0x371a59e0u)]

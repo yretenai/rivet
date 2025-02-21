@@ -16,7 +16,7 @@ public class CineMenuOption : DDLObjectType, IDDLObjectType<CineMenuOption> {
 
 	public CineMenuOption(DDLObject ddl) : base(ddl) {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
-		Items = ddl.GetStrings(0xf84d258cu);
+		Items = ddl.GetStrings(0xf84d258cu, Items);
 		DefaultItem = ddl.GetString(0x51f9b12c) ?? DefaultItem;
 	}
 

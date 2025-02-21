@@ -17,7 +17,7 @@ public class AnimSetDef : DDLObjectType, IDDLObjectType<AnimSetDef> {
 	public AnimSetDef(DDLObject ddl) : base(ddl) {
 		VaultMetaData = ddl.GetObject<VaultMetaData>(0x037889aau);
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
-		AnimClips = ddl.GetValues<RivetAssetId>(0x8f5f7a83u);
+		AnimClips = ddl.GetValues<RivetAssetId>(0x8f5f7a83u, AnimClips);
 		ModelAssetPath = ddl.GetValue<RivetAssetId>(0xb8b499c3u, ModelAssetPath);
 		PreviewData = ddl.GetObject<AnimSetPreviewData>(0xb76e93dcu);
 		PruneLevel = ddl.GetEnum<xb521b086>(0xeaa97a2bu, xb521b086Values.Lookup);

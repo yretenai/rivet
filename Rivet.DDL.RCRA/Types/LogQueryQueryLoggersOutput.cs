@@ -15,9 +15,9 @@ public class LogQueryQueryLoggersOutput : DDLObjectType, IDDLObjectType<LogQuery
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x7dfd2239u);
 
 	public LogQueryQueryLoggersOutput(DDLObject ddl) : base(ddl) {
-		NameHash = ddl.GetValues<uint>(0xc2f561e2u);
-		Names = ddl.GetStrings(0xeb608581u);
-		Enabled = ddl.GetValues<bool>(0x5113d8bcu);
+		NameHash = ddl.GetValues<uint>(0xc2f561e2u, NameHash);
+		Names = ddl.GetStrings(0xeb608581u, Names);
+		Enabled = ddl.GetValues<bool>(0x5113d8bcu, Enabled);
 	}
 
 	[DDLRegistration(0xc2f561e2u, description: "Hash of the names for all of the loggers")]

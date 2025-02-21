@@ -15,7 +15,7 @@ public class VendorPrius : DDLObjectType, IDDLObjectType<VendorPrius> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x19712944u);
 
 	public VendorPrius(DDLObject ddl) : base(ddl) {
-		VendorConfigs = ddl.GetValues<RivetAssetId>(0x3d54432bu);
+		VendorConfigs = ddl.GetValues<RivetAssetId>(0x3d54432bu, VendorConfigs);
 		StartActive = ddl.GetValue<bool>(0x3e035e82u, StartActive);
 		AllowUpgrades = ddl.GetValue<bool>(0x5a5f9e61u, AllowUpgrades);
 		TutorialType = ddl.GetEnum<xf88150a5>(0x0e832f21u, xf88150a5Values.Lookup);

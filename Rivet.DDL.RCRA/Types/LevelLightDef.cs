@@ -18,7 +18,7 @@ public class LevelLightDef : DDLObjectType, IDDLObjectType<LevelLightDef> {
 		VaultMetaData = ddl.GetObject<VaultMetaData>(0x037889aau);
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
 		MipData16 = ddl.GetValue<RivetAssetId>(0x7e20949au, MipData16);
-		MipData32 = ddl.GetValues<RivetAssetId>(0x4b7b3201u);
+		MipData32 = ddl.GetValues<RivetAssetId>(0x4b7b3201u, MipData32);
 		EnvProbes = ddl.GetDictionary<RivetAssetId, EnvProbeCache>(0x4ed5e4f6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EnvProbeCache>(mapId));
 	}
 

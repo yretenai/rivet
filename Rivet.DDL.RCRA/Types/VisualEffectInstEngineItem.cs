@@ -37,7 +37,7 @@ public class VisualEffectInstEngineItem : DDLObjectType, IDDLObjectType<VisualEf
 	public RivetAssetId AssetPath { get; set; } = default;
 
 	[DDLRegistration(0x1c901071u)]
-	public double Azimuth { get; set; } = 0;
+	public double Azimuth { get; set; } = 0.00d;
 
 	[DDLRegistration(0xd3eeb0edu)]
 	public bool DisplayDebugStats { get; set; } = false;
@@ -49,7 +49,7 @@ public class VisualEffectInstEngineItem : DDLObjectType, IDDLObjectType<VisualEf
 	public bool DisplayOverdraw { get; set; } = false;
 
 	[DDLRegistration(0x83f0b16eu)]
-	public double Inclination { get; set; } = 0;
+	public double Inclination { get; set; } = 0.00d;
 
 	[DDLRegistration(0x91cfdd5eu)]
 	public bool Loop { get; set; } = false;

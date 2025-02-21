@@ -20,7 +20,7 @@ public class RenderClipComponentPrius : DDLObjectType, IDDLObjectType<RenderClip
 		DirectionVariableName = ddl.GetString(0xf187472a) ?? DirectionVariableName;
 		SkipBoundingSphereChecks = ddl.GetValue<bool>(0x4311e5feu, SkipBoundingSphereChecks);
 		ClipAxis = ddl.GetEnum<x6a9f4317>(0x5f01ab55u, x6a9f4317Values.Lookup);
-		ClipActors = ddl.GetValues<RivetAssetId>(0xf2b2c447u);
+		ClipActors = ddl.GetValues<RivetAssetId>(0xf2b2c447u, ClipActors);
 	}
 
 	[DDLRegistration(0x80e2602du, description: "Pre-composite material to apply to clipped actors")]

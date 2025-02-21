@@ -23,8 +23,8 @@ public class SceneObjectCollectorPrius : DDLObjectType, IDDLObjectType<SceneObje
 		MaxCurves = ddl.GetValue<uint>(0xf22c07d4u, MaxCurves);
 		MaxVisualEffects = ddl.GetValue<uint>(0x02f97273u, MaxVisualEffects);
 		IncludeEnvProbes = ddl.GetValue<bool>(0x41cb9690u, IncludeEnvProbes);
-		ExcludeCollectors = ddl.GetValues<RivetAssetId>(0x3beca248u);
-		IncludeZones = ddl.GetValues<RivetAssetId>(0xcedcd811u);
+		ExcludeCollectors = ddl.GetValues<RivetAssetId>(0x3beca248u, ExcludeCollectors);
+		IncludeZones = ddl.GetValues<RivetAssetId>(0xcedcd811u, IncludeZones);
 	}
 
 	[DDLRegistration(0xcc46eeeau, "Encompassing Volume", "Volume or actor group of volumes that encompasses scene objects to query")]

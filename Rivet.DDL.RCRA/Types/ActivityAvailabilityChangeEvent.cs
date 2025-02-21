@@ -15,8 +15,8 @@ public class ActivityAvailabilityChangeEvent : ChangeModeEvent, IDDLObjectType<A
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x0a6ffa38u);
 
 	public ActivityAvailabilityChangeEvent(DDLObject ddl) : base(ddl) {
-		AvailableActivities = ddl.GetStrings(0x6db95f6cu);
-		UnavailableActivities = ddl.GetStrings(0xdab71815u);
+		AvailableActivities = ddl.GetStrings(0x6db95f6cu, AvailableActivities);
+		UnavailableActivities = ddl.GetStrings(0xdab71815u, UnavailableActivities);
 	}
 
 	[DDLRegistration(0x6db95f6cu)]

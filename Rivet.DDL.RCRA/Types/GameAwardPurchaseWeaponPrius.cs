@@ -15,8 +15,8 @@ public class GameAwardPurchaseWeaponPrius : AwardBasePrius, IDDLObjectType<GameA
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x4e5bc9b5u);
 
 	public GameAwardPurchaseWeaponPrius(DDLObject ddl) : base(ddl) {
-		ItemConfigs = ddl.GetValues<RivetAssetId>(0x7fc28238u);
-		HACK_ItemConfigsToAllowTransfer = ddl.GetValues<RivetAssetId>(0x9e7540f3u);
+		ItemConfigs = ddl.GetValues<RivetAssetId>(0x7fc28238u, ItemConfigs);
+		HACK_ItemConfigsToAllowTransfer = ddl.GetValues<RivetAssetId>(0x9e7540f3u, HACK_ItemConfigsToAllowTransfer);
 	}
 
 	[DDLRegistration(0x7fc28238u, "Item Configs")]

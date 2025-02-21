@@ -64,7 +64,7 @@ public class SkinManagerPrius : SkinManagerBasePrius, IDDLObjectType<SkinManager
 	public string? ColorConfigName { get; set; } = default;
 
 	[DDLRegistration(0xfbc9245fu)]
-	public List<SkinManagerColorPrius?> ColorList { get; set; } = [];
+	public List<SkinManagerColorPrius?> ColorList { get; set; } = [default];
 
 	[DDLRegistration(0xa46ea954u, description: "Ignore modifying the head actor")]
 	public bool IgnoreHead { get; set; } = false;

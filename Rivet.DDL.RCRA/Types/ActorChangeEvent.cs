@@ -16,7 +16,7 @@ public class ActorChangeEvent : UDSEventBase, IDDLObjectType<ActorChangeEvent> {
 
 	public ActorChangeEvent(DDLObject ddl) : base(ddl) {
 		PrimaryActor = ddl.GetString(0xaabdb556) ?? PrimaryActor;
-		SecondaryActors = ddl.GetStrings(0xc52b223au);
+		SecondaryActors = ddl.GetStrings(0xc52b223au, SecondaryActors);
 	}
 
 	[DDLRegistration(0xaabdb556u)]

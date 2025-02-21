@@ -15,9 +15,9 @@ public class PythonSymbols : DDLObjectType, IDDLObjectType<PythonSymbols> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x74385198u);
 
 	public PythonSymbols(DDLObject ddl) : base(ddl) {
-		Functions = ddl.GetStrings(0xc151b200u);
-		Selects = ddl.GetStrings(0x81cb9c69u);
-		Structs = ddl.GetStrings(0xc688332bu);
+		Functions = ddl.GetStrings(0xc151b200u, Functions);
+		Selects = ddl.GetStrings(0x81cb9c69u, Selects);
+		Structs = ddl.GetStrings(0xc688332bu, Structs);
 		Type = ddl.GetString(0xbc4e9799) ?? Type;
 	}
 

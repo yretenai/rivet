@@ -15,8 +15,8 @@ public class DebugCommonMenuSettings : DDLObjectType, IDDLObjectType<DebugCommon
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xc52f0717u);
 
 	public DebugCommonMenuSettings(DDLObject ddl) : base(ddl) {
-		Items = ddl.GetStrings(0xf84d258cu);
-		Operate = ddl.GetStrings(0x45209593u);
+		Items = ddl.GetStrings(0xf84d258cu, Items);
+		Operate = ddl.GetStrings(0x45209593u, Operate);
 	}
 
 	[DDLRegistration(0xf84d258cu, description: "Debug-menu entries to merge into common items, format: 'Parent Menu/Item Name'")]

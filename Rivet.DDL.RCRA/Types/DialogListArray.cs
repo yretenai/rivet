@@ -17,7 +17,7 @@ public class DialogListArray : DDLObjectType, IDDLObjectType<DialogListArray> {
 	public DialogListArray(DDLObject ddl) : base(ddl) {
 		OrderType = ddl.GetEnum<xd3ac14c9>(0xa0213181u, xd3ac14c9Values.Lookup);
 		CompleteType = ddl.GetEnum<x39cee5ac>(0x620228abu, x39cee5acValues.Lookup);
-		LocTags = ddl.GetStrings(0x196acec1u);
+		LocTags = ddl.GetStrings(0x196acec1u, LocTags);
 	}
 
 	[DDLRegistration(0xa0213181u)]

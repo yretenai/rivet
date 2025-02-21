@@ -19,7 +19,7 @@ public class AnimDriverFilterVarDef : DDLObjectType, IDDLObjectType<AnimDriverFi
 		X = ddl.GetValue<float>(0x655d6145u, X);
 		Y = ddl.GetValue<float>(0x125a51d3u, Y);
 		Group = ddl.GetString(0x74938804) ?? Group;
-		Ids = ddl.GetStrings(0x5a8f8e51u);
+		Ids = ddl.GetStrings(0x5a8f8e51u, Ids);
 		Connections = ddl.GetObjects<AnimDriverVarConnection>(0x322aadceu);
 	}
 

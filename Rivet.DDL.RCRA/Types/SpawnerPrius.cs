@@ -15,11 +15,11 @@ public class SpawnerPrius : DDLObjectType, IDDLObjectType<SpawnerPrius> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xc028b90du);
 
 	public SpawnerPrius(DDLObject ddl) : base(ddl) {
-		FactoryGroup = ddl.GetValues<RivetAssetId>(0x4dc3e095u);
+		FactoryGroup = ddl.GetValues<RivetAssetId>(0x4dc3e095u, FactoryGroup);
 		FactorySelectionMethod = ddl.GetEnum<FactorySelectionMethod>(0xb2f1d014u, FactorySelectionMethodValues.Lookup);
-		Templates = ddl.GetValues<RivetAssetId>(0xedd5e282u);
+		Templates = ddl.GetValues<RivetAssetId>(0xedd5e282u, Templates);
 		TemplateSelectionMethod = ddl.GetEnum<x59f4ecd6>(0xdc449308u, x59f4ecd6Values.Lookup);
-		SpawnLocations = ddl.GetValues<RivetAssetId>(0x77c7ed1au);
+		SpawnLocations = ddl.GetValues<RivetAssetId>(0x77c7ed1au, SpawnLocations);
 		LocationSelectionMethod = ddl.GetEnum<x14738916>(0xe9400b68u, x14738916Values.Lookup);
 		InViewValidate = ddl.GetValue<bool>(0xd0e897f6u, InViewValidate);
 		CheckNoLOS = ddl.GetValue<bool>(0xdd348be3u, CheckNoLOS);

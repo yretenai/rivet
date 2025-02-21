@@ -17,14 +17,14 @@ public class BossAttackVolumePrius : DDLObjectType, IDDLObjectType<BossAttackVol
 	public BossAttackVolumePrius(DDLObject ddl) : base(ddl) {
 		CooldownMin = ddl.GetValue<float>(0x7b385fc6u, CooldownMin);
 		CooldownMax = ddl.GetValue<float>(0x4735609fu, CooldownMax);
-		ApplyCooldownToTheseVolumes = ddl.GetValues<RivetAssetId>(0x06a45d32u);
+		ApplyCooldownToTheseVolumes = ddl.GetValues<RivetAssetId>(0x06a45d32u, ApplyCooldownToTheseVolumes);
 		GlobalCooldownMin = ddl.GetValue<float>(0xd31b7effu, GlobalCooldownMin);
 		GlobalCooldownMax = ddl.GetValue<float>(0xef1641a6u, GlobalCooldownMax);
 		InitialCooldownMin = ddl.GetValue<float>(0x450d41ceu, InitialCooldownMin);
 		InitialCooldownMax = ddl.GetValue<float>(0x79007e97u, InitialCooldownMax);
 		OtherCooldownMin = ddl.GetValue<float>(0xe9ee32f8u, OtherCooldownMin);
 		OtherCooldownMax = ddl.GetValue<float>(0xd5e30da1u, OtherCooldownMax);
-		ApplyOtherCooldownToTheseVolumes = ddl.GetValues<RivetAssetId>(0x5f565b77u);
+		ApplyOtherCooldownToTheseVolumes = ddl.GetValues<RivetAssetId>(0x5f565b77u, ApplyOtherCooldownToTheseVolumes);
 		RandomWeighting = ddl.GetValue<float>(0xf4124721u, RandomWeighting);
 		ForceIfInside = ddl.GetValue<bool>(0x9c93347fu, ForceIfInside);
 		ForceIfInsideOnce = ddl.GetValue<bool>(0x41ddf8c2u, ForceIfInsideOnce);

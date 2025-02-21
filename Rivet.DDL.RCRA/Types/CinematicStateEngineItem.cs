@@ -45,7 +45,7 @@ public class CinematicStateEngineItem : DDLObjectType, IDDLObjectType<CinematicS
 	public bool Playing { get; set; } = false;
 
 	[DDLRegistration(0x5f0458f5u)]
-	public double Time { get; set; } = 0;
+	public double Time { get; set; } = 0.00d;
 
 	[DDLRegistration(0x27e71ee4u)]
 	public Dictionary<RivetAssetId, RivetAssetId> TracksInactive { get; set; } = [];

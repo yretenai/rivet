@@ -27,13 +27,13 @@ public class GameCampaignSave : CampaignSave, IDDLObjectType<GameCampaignSave> {
 		Playtime = ddl.GetValue<double>(0x06dfcc00u, Playtime);
 		LastSaveTime = ddl.GetValue<uint>(0x204b772eu, LastSaveTime);
 		Difficulty = ddl.GetValue<int>(0x605d31d6u, Difficulty);
-		LevelBolts = ddl.GetValues<uint>(0xabf06062u);
-		LevelGoldBolts = ddl.GetValues<uint>(0xf997f0f2u);
-		LevelRYNOPlans = ddl.GetValues<uint>(0xd94b72f2u);
-		LevelVanityPickups = ddl.GetValues<uint>(0x41422e75u);
-		LevelRaritanium = ddl.GetValues<uint>(0xe454cf3du);
-		LevelExp = ddl.GetValues<ulong>(0xfd02271cu);
-		LevelWeaponExp = ddl.GetValues<ulong>(0xbeca600fu);
+		LevelBolts = ddl.GetValues<uint>(0xabf06062u, LevelBolts);
+		LevelGoldBolts = ddl.GetValues<uint>(0xf997f0f2u, LevelGoldBolts);
+		LevelRYNOPlans = ddl.GetValues<uint>(0xd94b72f2u, LevelRYNOPlans);
+		LevelVanityPickups = ddl.GetValues<uint>(0x41422e75u, LevelVanityPickups);
+		LevelRaritanium = ddl.GetValues<uint>(0xe454cf3du, LevelRaritanium);
+		LevelExp = ddl.GetValues<ulong>(0xfd02271cu, LevelExp);
+		LevelWeaponExp = ddl.GetValues<ulong>(0xbeca600fu, LevelWeaponExp);
 		GameStage = ddl.GetEnum<GameStage>(0x37703f56u, GameStageValues.Lookup);
 		GameFlags = ddl.GetBitset<xd00d73b0>(0xfe09ed85u, xd00d73b0Values.Lookup);
 		IsChallengeModeAvailable = ddl.GetValue<bool>(0xde85567du, IsChallengeModeAvailable);
@@ -51,16 +51,16 @@ public class GameCampaignSave : CampaignSave, IDDLObjectType<GameCampaignSave> {
 		QuickSelectWeaponDown = ddl.GetValue<RivetAssetId>(0x3e4095fcu, QuickSelectWeaponDown);
 		QuickSelectWeaponLeft = ddl.GetValue<RivetAssetId>(0x58d8e2afu, QuickSelectWeaponLeft);
 		TutorialRaritaniumAwarded = ddl.GetValue<bool>(0xdf7038b1u, TutorialRaritaniumAwarded);
-		VendorWeaponNowInStockShown = ddl.GetStrings(0xed84f3b5u);
+		VendorWeaponNowInStockShown = ddl.GetStrings(0xed84f3b5u, VendorWeaponNowInStockShown);
 		FirstOmegaWeaponPurchased = ddl.GetValue<bool>(0x739bb2e2u, FirstOmegaWeaponPurchased);
 		EntitlementRaritaniumAwarded = ddl.GetValue<bool>(0x82c10439u, EntitlementRaritaniumAwarded);
 		EntitlementRaritaniumToGive = ddl.GetValue<uint>(0x27a57bf9u, EntitlementRaritaniumToGive);
 		EntitlementPixelizerAwarded = ddl.GetValue<bool>(0xbab22070u, EntitlementPixelizerAwarded);
 		EntitlementCarbonoxAwarded = ddl.GetValue<bool>(0xa05350bcu, EntitlementCarbonoxAwarded);
-		Entitlement5ArmorAwarded = ddl.GetValues<bool>(0x4245fd0eu);
-		UITutorialsComplete = ddl.GetStrings(0xa139e33cu);
-		NewItemsViewed = ddl.GetStrings(0x147057d2u);
-		NewMissionsViewed = ddl.GetStrings(0xd0526a4fu);
+		Entitlement5ArmorAwarded = ddl.GetValues<bool>(0x4245fd0eu, Entitlement5ArmorAwarded);
+		UITutorialsComplete = ddl.GetStrings(0xa139e33cu, UITutorialsComplete);
+		NewItemsViewed = ddl.GetStrings(0x147057d2u, NewItemsViewed);
+		NewMissionsViewed = ddl.GetStrings(0xd0526a4fu, NewMissionsViewed);
 		ControlRemap = ddl.GetObject<SaveControlRemapData>(0x88a00900u);
 		CompletionPercent = ddl.GetValue<float>(0x712e5ab7u, CompletionPercent);
 		EntitlementPSNLinkedAwarded = ddl.GetValue<bool>(0xb5c50241u, EntitlementPSNLinkedAwarded);
@@ -95,7 +95,7 @@ public class GameCampaignSave : CampaignSave, IDDLObjectType<GameCampaignSave> {
 	public float CareerRaritaniumSpend { get; set; } = 0.00f;
 
 	[DDLRegistration(0x06dfcc00u)]
-	public double Playtime { get; set; } = 0;
+	public double Playtime { get; set; } = 0.00d;
 
 	[DDLRegistration(0x204b772eu)]
 	public uint LastSaveTime { get; set; } = 0x00000000;
@@ -104,25 +104,25 @@ public class GameCampaignSave : CampaignSave, IDDLObjectType<GameCampaignSave> {
 	public int Difficulty { get; set; } = 1;
 
 	[DDLRegistration(0xabf06062u)]
-	public List<uint> LevelBolts { get; set; } = [];
+	public List<uint> LevelBolts { get; set; } = [0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000];
 
 	[DDLRegistration(0xf997f0f2u)]
-	public List<uint> LevelGoldBolts { get; set; } = [];
+	public List<uint> LevelGoldBolts { get; set; } = [0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000];
 
 	[DDLRegistration(0xd94b72f2u)]
-	public List<uint> LevelRYNOPlans { get; set; } = [];
+	public List<uint> LevelRYNOPlans { get; set; } = [0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000];
 
 	[DDLRegistration(0x41422e75u)]
-	public List<uint> LevelVanityPickups { get; set; } = [];
+	public List<uint> LevelVanityPickups { get; set; } = [0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000];
 
 	[DDLRegistration(0xe454cf3du)]
-	public List<uint> LevelRaritanium { get; set; } = [];
+	public List<uint> LevelRaritanium { get; set; } = [0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000];
 
 	[DDLRegistration(0xfd02271cu)]
-	public List<ulong> LevelExp { get; set; } = [];
+	public List<ulong> LevelExp { get; set; } = [0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000];
 
 	[DDLRegistration(0xbeca600fu)]
-	public List<ulong> LevelWeaponExp { get; set; } = [];
+	public List<ulong> LevelWeaponExp { get; set; } = [0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000, 0x0000000000000000];
 
 	[DDLRegistration(0x37703f56u)]
 	public GameStage GameStage { get; set; } = GameStage.EarlyGame;
@@ -194,7 +194,7 @@ public class GameCampaignSave : CampaignSave, IDDLObjectType<GameCampaignSave> {
 	public bool EntitlementCarbonoxAwarded { get; set; } = false;
 
 	[DDLRegistration(0x4245fd0eu)]
-	public List<bool> Entitlement5ArmorAwarded { get; set; } = [];
+	public List<bool> Entitlement5ArmorAwarded { get; set; } = [false, false, false, false, false];
 
 	[DDLRegistration(0xa139e33cu)]
 	public List<string?> UITutorialsComplete { get; set; } = [];

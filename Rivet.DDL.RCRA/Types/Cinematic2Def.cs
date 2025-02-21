@@ -39,7 +39,7 @@ public class Cinematic2Def : DDLObjectType, IDDLObjectType<Cinematic2Def> {
 		UserRegions = ddl.GetDictionary<RivetAssetId, Cinematic2UserRegionDef>(0x7c67ed0a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2UserRegionDef>(mapId));
 		Cameras = ddl.GetDictionary<RivetAssetId, Cinematic2CameraTrackDef>(0x6ab54452, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraTrackDef>(mapId));
 		LightGroups = ddl.GetDictionary<RivetAssetId, Cinematic2LightGroupDef>(0xf44ff5cc, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2LightGroupDef>(mapId));
-		ShotOrder = ddl.GetValues<RivetAssetId>(0xb153f7e6u);
+		ShotOrder = ddl.GetValues<RivetAssetId>(0xb153f7e6u, ShotOrder);
 		Shots = ddl.GetDictionary<RivetAssetId, Cinematic2ShotDef>(0x5e456e46, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ShotDef>(mapId));
 		Actors = ddl.GetDictionary<RivetAssetId, Cinematic2ActorDef>(0xe153be82, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ActorDef>(mapId));
 		Lights = ddl.GetDictionary<RivetAssetId, Cinematic2LightDef>(0x06c4fc8f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2LightDef>(mapId));

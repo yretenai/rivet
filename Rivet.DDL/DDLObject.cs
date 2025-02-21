@@ -149,7 +149,7 @@ public class DDLObject : Dictionary<uint, DDLField> {
 		return defaultValue;
 	}
 
-	public List<T> GetValues<T>(uint id) where T : struct {
+	public List<T> GetValues<T>(uint id, List<T> defaultValue) where T : struct {
 		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is not null) {
 			var list = new List<T>(field.Value.Count);
 			for (var index = 0; index < field.Value.Count; index++) {
@@ -178,17 +178,17 @@ public class DDLObject : Dictionary<uint, DDLField> {
 			return list;
 		}
 
-		return [];
+		return defaultValue;
 	}
 
-	public List<string?> GetStrings(uint id) {
+	public List<string?> GetStrings(uint id, List<string?> defaultValue) {
 		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is not null) {
 			var list = new List<string?>(field.Value.Count);
 			list.AddRange(field.Value.Select(x => x!.ToString()));
 			return list;
 		}
 
-		return [];
+		return defaultValue;
 	}
 
 	public List<object?> GetFields(uint id) {

@@ -16,7 +16,7 @@ public class ZoneVisibleActionPrius : DDLObjectType, IDDLObjectType<ZoneVisibleA
 
 	public ZoneVisibleActionPrius(DDLObject ddl) : base(ddl) {
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
 	}
 
 	[DDLRegistration(0x874b2194u)]

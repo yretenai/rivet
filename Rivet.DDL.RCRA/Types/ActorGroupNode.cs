@@ -18,7 +18,7 @@ public class ActorGroupNode : DDLObjectType, IDDLObjectType<ActorGroupNode> {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 		IsGlobal = ddl.GetValue<bool>(0xd36c3c29u, IsGlobal);
-		Actors = ddl.GetValues<RivetAssetId>(0xe153be82u);
+		Actors = ddl.GetValues<RivetAssetId>(0xe153be82u, Actors);
 	}
 
 	[DDLRegistration(0x6eb3beb6u)]

@@ -21,8 +21,8 @@ public class RenderThreadStats : DDLObjectType, IDDLObjectType<RenderThreadStats
 		CpuPresentMicros = ddl.GetValue<uint>(0x91759f76u, CpuPresentMicros);
 		GpuFrameMicros = ddl.GetValue<uint>(0x0bbc5d9fu, GpuFrameMicros);
 		GpuBusyMicros = ddl.GetValue<uint>(0xe18dea6bu, GpuBusyMicros);
-		CpuLayerMicros = ddl.GetValues<uint>(0x5aa2e977u);
-		GpuLayerMicros = ddl.GetValues<uint>(0x430e666cu);
+		CpuLayerMicros = ddl.GetValues<uint>(0x5aa2e977u, CpuLayerMicros);
+		GpuLayerMicros = ddl.GetValues<uint>(0x430e666cu, GpuLayerMicros);
 		ModelGBuffer = ddl.GetObject<DrawStats>(0x82ae3b72u);
 		ModelShadow = ddl.GetObject<DrawStats>(0x4b7d1aabu);
 		ModelForward = ddl.GetObject<DrawStats>(0x3176ed86u);
@@ -45,7 +45,7 @@ public class RenderThreadStats : DDLObjectType, IDDLObjectType<RenderThreadStats
 		VfxStartCompositeCount = ddl.GetValue<uint>(0x7a6e49bdu, VfxStartCompositeCount);
 		UIHandlerMicros = ddl.GetValue<uint>(0xab1b66b7u, UIHandlerMicros);
 		UIRenderUpdateMicros = ddl.GetValue<uint>(0x00bbb5bdu, UIRenderUpdateMicros);
-		GpuDeptMicros = ddl.GetValues<uint>(0xaf0bbe7eu);
+		GpuDeptMicros = ddl.GetValues<uint>(0xaf0bbe7eu, GpuDeptMicros);
 		GpuStarvationMicros = ddl.GetValue<uint>(0x6618b0dcu, GpuStarvationMicros);
 	}
 
@@ -68,10 +68,10 @@ public class RenderThreadStats : DDLObjectType, IDDLObjectType<RenderThreadStats
 	public uint GpuBusyMicros { get; set; } = 0x00000000;
 
 	[DDLRegistration(0x5aa2e977u, description: "Wall clock time taken for each of the CPU Render Layers.")]
-	public List<uint> CpuLayerMicros { get; set; } = [];
+	public List<uint> CpuLayerMicros { get; set; } = [0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000];
 
 	[DDLRegistration(0x430e666cu, description: "Wall clock time taken for each of the GPU Render Layers.")]
-	public List<uint> GpuLayerMicros { get; set; } = [];
+	public List<uint> GpuLayerMicros { get; set; } = [0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000];
 
 	[DDLRegistration(0x82ae3b72u, description: "Stats for all models submitted to any GBuffer layers")]
 	public DrawStats? ModelGBuffer { get; set; } = default;
@@ -140,7 +140,7 @@ public class RenderThreadStats : DDLObjectType, IDDLObjectType<RenderThreadStats
 	public uint UIRenderUpdateMicros { get; set; } = 0x00000000;
 
 	[DDLRegistration(0xaf0bbe7eu, description: "Non-idle time taken on GPU for each department. Size of array must match enum in Department.h")]
-	public List<uint> GpuDeptMicros { get; set; } = [];
+	public List<uint> GpuDeptMicros { get; set; } = [0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000];
 
 	[DDLRegistration(0x6618b0dcu, description: "Non-idle time taken on GPU for starvation")]
 	public uint GpuStarvationMicros { get; set; } = 0x00000000;

@@ -15,7 +15,7 @@ public class BloodHitEffectsPrius : DDLObjectType, IDDLObjectType<BloodHitEffect
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x66e9230eu);
 
 	public BloodHitEffectsPrius(DDLObject ddl) : base(ddl) {
-		UsableJoints = ddl.GetStrings(0x42912762u);
+		UsableJoints = ddl.GetStrings(0x42912762u, UsableJoints);
 	}
 
 	[DDLRegistration(0x42912762u, description: "Impacts to other joints will not produce any effects. If the list is empty, all joints are usable.")]

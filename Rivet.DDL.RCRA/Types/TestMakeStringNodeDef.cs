@@ -18,7 +18,7 @@ public class TestMakeStringNodeDef : NodeBaseDef, IDDLObjectType<TestMakeStringN
 		Index = ddl.GetObject<InputPlugInt>(0x9920abc0u);
 		String = ddl.GetObject<OutputPlugString>(0xa0c6fcceu);
 		DebugName = ddl.GetString(0x4ef19112) ?? DebugName;
-		PossibleValues = ddl.GetStrings(0xf97febe6u);
+		PossibleValues = ddl.GetStrings(0xf97febe6u, PossibleValues);
 	}
 
 	[DDLRegistration(0x9920abc0u)]

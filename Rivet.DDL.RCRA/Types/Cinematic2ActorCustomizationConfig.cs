@@ -15,11 +15,11 @@ public class Cinematic2ActorCustomizationConfig : ConfigBase, IDDLObjectType<Cin
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xd8b57470u);
 
 	public Cinematic2ActorCustomizationConfig(DDLObject ddl) : base(ddl) {
-		CineActorNames = ddl.GetStrings(0xe8913841u);
-		CineTagsDef = ddl.GetStrings(0x835700bau);
-		CineActorTagsDef = ddl.GetStrings(0xa07355b3u);
-		CineTrackTagsDef = ddl.GetStrings(0x1ff747ecu);
-		CineActionTagsDef = ddl.GetStrings(0x74b9287cu);
+		CineActorNames = ddl.GetStrings(0xe8913841u, CineActorNames);
+		CineTagsDef = ddl.GetStrings(0x835700bau, CineTagsDef);
+		CineActorTagsDef = ddl.GetStrings(0xa07355b3u, CineActorTagsDef);
+		CineTrackTagsDef = ddl.GetStrings(0x1ff747ecu, CineTrackTagsDef);
+		CineActionTagsDef = ddl.GetStrings(0x74b9287cu, CineActionTagsDef);
 		CineOptionsMenu = ddl.GetObjects<CineMenuOption>(0x3d07821fu);
 		MayaNameTrackTags = ddl.GetObjects<MayaNameTrackTags>(0x2d1628f0u);
 		AnimSkeletonInfos = ddl.GetObjects<AnimSkeletonInfo>(0xfd3c800au);

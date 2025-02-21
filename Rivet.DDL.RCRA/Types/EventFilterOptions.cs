@@ -16,7 +16,7 @@ public class EventFilterOptions : DDLObjectType, IDDLObjectType<EventFilterOptio
 
 	public EventFilterOptions(DDLObject ddl) : base(ddl) {
 		FilterAllEvents = ddl.GetValue<bool>(0x111ff31du, FilterAllEvents);
-		FilterEventsList = ddl.GetStrings(0x6a224c68u);
+		FilterEventsList = ddl.GetStrings(0x6a224c68u, FilterEventsList);
 	}
 
 	[DDLRegistration(0x111ff31du)]

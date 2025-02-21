@@ -15,11 +15,11 @@ public class AnimControllerComponentPrius : DDLObjectType, IDDLObjectType<AnimCo
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x1e0b001eu);
 
 	public AnimControllerComponentPrius(DDLObject ddl) : base(ddl) {
-		AnimSets = ddl.GetValues<RivetAssetId>(0x03492d19u);
+		AnimSets = ddl.GetValues<RivetAssetId>(0x03492d19u, AnimSets);
 		PerformanceType = ddl.GetEnum<x9675aa42>(0x4eb38c52u, x9675aa42Values.Lookup);
 		PerformanceSet = ddl.GetValue<RivetAssetId>(0x535a8946u, PerformanceSet);
 		PerformanceSetOverride = ddl.GetValue<RivetAssetId>(0x3e8d411bu, PerformanceSetOverride);
-		PerformanceSetsAux = ddl.GetValues<RivetAssetId>(0xe6e90e46u);
+		PerformanceSetsAux = ddl.GetValues<RivetAssetId>(0xe6e90e46u, PerformanceSetsAux);
 		MaxUpdateDistance = ddl.GetValue<float>(0x75ad2b16u, MaxUpdateDistance);
 		AnimDynamicsUpdateMultiplier = ddl.GetValue<float>(0x2cd2f6bfu, AnimDynamicsUpdateMultiplier);
 		NeverCull = ddl.GetValue<bool>(0x6a1ae3acu, NeverCull);

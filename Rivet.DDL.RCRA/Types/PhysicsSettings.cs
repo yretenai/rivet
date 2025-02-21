@@ -31,7 +31,7 @@ public class PhysicsSettings : DDLObjectType, IDDLObjectType<PhysicsSettings> {
 		MaxIgnoredSceneObjects = ddl.GetValue<int>(0xbcac0306u, MaxIgnoredSceneObjects);
 		MaxProcrastinatedIgnoreListAdds = ddl.GetValue<int>(0x7084eaaeu, MaxProcrastinatedIgnoreListAdds);
 		PhysicsQueryAllocSize = ddl.GetValue<int>(0x80aeccb0u, PhysicsQueryAllocSize);
-		PhysicsQuerySmallBlockSizes = ddl.GetValues<ushort>(0xae31effcu);
+		PhysicsQuerySmallBlockSizes = ddl.GetValues<ushort>(0xae31effcu, PhysicsQuerySmallBlockSizes);
 		PhysicsStepLocalStreamAllocSize = ddl.GetValue<int>(0x61a93fb0u, PhysicsStepLocalStreamAllocSize);
 		PhysicsPersistentStreamAllocSize = ddl.GetValue<int>(0x90eb4c84u, PhysicsPersistentStreamAllocSize);
 		PhysicsBroadphaseRadiusX = ddl.GetValue<float>(0x0e300cc5u, PhysicsBroadphaseRadiusX);
@@ -98,7 +98,7 @@ public class PhysicsSettings : DDLObjectType, IDDLObjectType<PhysicsSettings> {
 	public int PhysicsQueryAllocSize { get; set; } = 5242880;
 
 	[DDLRegistration(0xae31effcu)]
-	public List<ushort> PhysicsQuerySmallBlockSizes { get; set; } = [];
+	public List<ushort> PhysicsQuerySmallBlockSizes { get; set; } = [0x0040, 0x0080, 0x0100, 0x0140, 0x0220, 0x02a0, 0x0320, 0x0340, 0x03c0, 0x0460, 0x0560, 0x0840, 0x0c00, 0x1500, 0x2680, 0x4000];
 
 	[DDLRegistration(0x61a93fb0u)]
 	public int PhysicsStepLocalStreamAllocSize { get; set; } = 30408704;

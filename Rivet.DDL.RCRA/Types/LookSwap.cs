@@ -17,7 +17,7 @@ public class LookSwap : DDLObjectType, IDDLObjectType<LookSwap> {
 	public LookSwap(DDLObject ddl) : base(ddl) {
 		DeathOnly = ddl.GetValue<bool>(0x88ef82adu, DeathOnly);
 		LookToDisable = ddl.GetString(0x2f48a06c) ?? LookToDisable;
-		LooksToEnable = ddl.GetStrings(0x34dbfb35u);
+		LooksToEnable = ddl.GetStrings(0x34dbfb35u, LooksToEnable);
 	}
 
 	[DDLRegistration(0x88ef82adu, "Death Only")]

@@ -15,9 +15,9 @@ public class MechanicMitigateEvent : UDSEventBase, IDDLObjectType<MechanicMitiga
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x72209a19u);
 
 	public MechanicMitigateEvent(DDLObject ddl) : base(ddl) {
-		UsedMechanics = ddl.GetStrings(0xd8ad4a41u);
+		UsedMechanics = ddl.GetStrings(0xd8ad4a41u, UsedMechanics);
 		InitiatorActor = ddl.GetString(0x556b1ac5) ?? InitiatorActor;
-		TargetActors = ddl.GetStrings(0x35ab613bu);
+		TargetActors = ddl.GetStrings(0x35ab613bu, TargetActors);
 	}
 
 	[DDLRegistration(0xd8ad4a41u)]

@@ -16,10 +16,10 @@ public class ScriptNodesModelMimeData : DDLObjectType, IDDLObjectType<ScriptNode
 
 	public ScriptNodesModelMimeData(DDLObject ddl) : base(ddl) {
 		Comment = ddl.GetValue<bool>(0x959e3154u, Comment);
-		EmbeddedScriptGraphIds = ddl.GetValues<RivetAssetId>(0xed9fa78du);
-		ScriptActionNames = ddl.GetStrings(0x43ab36c8u);
-		ScriptGlobalVariableNames = ddl.GetStrings(0xa9f79b03u);
-		ScriptVariableNames = ddl.GetStrings(0x938028c9u);
+		EmbeddedScriptGraphIds = ddl.GetValues<RivetAssetId>(0xed9fa78du, EmbeddedScriptGraphIds);
+		ScriptActionNames = ddl.GetStrings(0x43ab36c8u, ScriptActionNames);
+		ScriptGlobalVariableNames = ddl.GetStrings(0xa9f79b03u, ScriptGlobalVariableNames);
+		ScriptVariableNames = ddl.GetStrings(0x938028c9u, ScriptVariableNames);
 	}
 
 	[DDLRegistration(0x959e3154u)]

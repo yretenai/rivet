@@ -15,15 +15,15 @@ public class ScreenSettings : DDLObjectType, IDDLObjectType<ScreenSettings> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x95580584u);
 
 	public ScreenSettings(DDLObject ddl) : base(ddl) {
-		WideFov = ddl.GetValues<float>(0xd5ec88deu);
-		StandardFov = ddl.GetValues<float>(0x5453e3a8u);
+		WideFov = ddl.GetValues<float>(0xd5ec88deu, WideFov);
+		StandardFov = ddl.GetValues<float>(0x5453e3a8u, StandardFov);
 	}
 
 	[DDLRegistration(0xd5ec88deu)]
-	public List<float> WideFov { get; set; } = [];
+	public List<float> WideFov { get; set; } = [68.00f, 84.00f, 84.00f, 80.00f, 80.00f, 50.00f, 50.00f, 60.00f, 60.00f, 68.00f, 68.00f, 68.00f, 68.00f];
 
 	[DDLRegistration(0x5453e3a8u)]
-	public List<float> StandardFov { get; set; } = [];
+	public List<float> StandardFov { get; set; } = [60.00f, 80.00f, 80.00f, 70.00f, 70.00f, 60.00f, 60.00f, 60.00f, 60.00f, 60.00f, 60.00f, 60.00f, 60.00f];
 
 	public static ScreenSettings Create(DDLObject ddl) => new(ddl);
 }

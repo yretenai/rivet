@@ -15,7 +15,7 @@ public class CinematicClipboardData : DDLObjectType, IDDLObjectType<CinematicCli
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xcd503d67u);
 
 	public CinematicClipboardData(DDLObject ddl) : base(ddl) {
-		AssetPaths = ddl.GetValues<RivetAssetId>(0x280c42ffu);
+		AssetPaths = ddl.GetValues<RivetAssetId>(0x280c42ffu, AssetPaths);
 		JsonData = ddl.GetObjects<BlobDef>(0xf0ade33eu);
 	}
 

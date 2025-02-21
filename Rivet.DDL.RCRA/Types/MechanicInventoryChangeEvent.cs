@@ -15,8 +15,8 @@ public class MechanicInventoryChangeEvent : ChangeModeEvent, IDDLObjectType<Mech
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x35748b97u);
 
 	public MechanicInventoryChangeEvent(DDLObject ddl) : base(ddl) {
-		AddedMechanics = ddl.GetStrings(0x159a406bu);
-		RemovedMechanics = ddl.GetStrings(0xe5f14bc7u);
+		AddedMechanics = ddl.GetStrings(0x159a406bu, AddedMechanics);
+		RemovedMechanics = ddl.GetStrings(0xe5f14bc7u, RemovedMechanics);
 	}
 
 	[DDLRegistration(0x159a406bu)]

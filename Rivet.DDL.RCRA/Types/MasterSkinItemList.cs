@@ -18,9 +18,9 @@ public class MasterSkinItemList : ConfigBase, IDDLObjectType<MasterSkinItemList>
 		ItemCategoryList = ddl.GetObjects<SkinItemCategoryList>(0x6bbf2976u);
 		ItemPartList = ddl.GetObjects<SkinItemPartList>(0x2e58f6a8u);
 		VanityCategoryList = ddl.GetObjects<VanityCategoryListItem>(0xf89a4963u);
-		ColorConfigs = ddl.GetValues<RivetAssetId>(0x9277805eu);
-		ConstantConfigs = ddl.GetValues<RivetAssetId>(0x262e5777u);
-		DecalConfigs = ddl.GetValues<RivetAssetId>(0x54b89253u);
+		ColorConfigs = ddl.GetValues<RivetAssetId>(0x9277805eu, ColorConfigs);
+		ConstantConfigs = ddl.GetValues<RivetAssetId>(0x262e5777u, ConstantConfigs);
+		DecalConfigs = ddl.GetValues<RivetAssetId>(0x54b89253u, DecalConfigs);
 	}
 
 	[DDLRegistration(0x6bbf2976u, "Item Category List", "Skin item category list(s)")]

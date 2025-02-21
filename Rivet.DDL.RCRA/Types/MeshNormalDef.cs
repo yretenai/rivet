@@ -15,11 +15,11 @@ public class MeshNormalDef : DDLObjectType, IDDLObjectType<MeshNormalDef> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xa2bfaa88u);
 
 	public MeshNormalDef(DDLObject ddl) : base(ddl) {
-		Normal = ddl.GetValues<float>(0x1ffd2683u);
+		Normal = ddl.GetValues<float>(0x1ffd2683u, Normal);
 	}
 
 	[DDLRegistration(0x1ffd2683u)]
-	public List<float> Normal { get; set; } = [];
+	public List<float> Normal { get; set; } = [0.00f, 0.00f, 0.00f];
 
 	public static MeshNormalDef Create(DDLObject ddl) => new(ddl);
 }

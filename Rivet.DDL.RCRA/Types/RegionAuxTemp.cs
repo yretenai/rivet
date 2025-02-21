@@ -18,7 +18,7 @@ public class RegionAuxTemp : DDLObjectType, IDDLObjectType<RegionAuxTemp> {
 		HighLod = ddl.GetValue<RivetAssetId>(0x0f9e326au, HighLod);
 		LowLod = ddl.GetValue<RivetAssetId>(0xcc3cfed1u, LowLod);
 		Units = ddl.GetValue<RivetAssetId>(0xf0e3b888u, Units);
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
 	}
 
 	[DDLRegistration(0x0f9e326au)]

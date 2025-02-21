@@ -15,7 +15,7 @@ public class ErrorComponentPrius : DDLObjectType, IDDLObjectType<ErrorComponentP
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x63a9ca28u);
 
 	public ErrorComponentPrius(DDLObject ddl) : base(ddl) {
-		ErrorText = ddl.GetStrings(0x27cfc163u);
+		ErrorText = ddl.GetStrings(0x27cfc163u, ErrorText);
 	}
 
 	[DDLRegistration(0x27cfc163u)]

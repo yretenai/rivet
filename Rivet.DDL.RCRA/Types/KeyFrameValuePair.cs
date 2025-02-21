@@ -15,15 +15,15 @@ public class KeyFrameValuePair : DDLObjectType, IDDLObjectType<KeyFrameValuePair
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xda35ff95u);
 
 	public KeyFrameValuePair(DDLObject ddl) : base(ddl) {
-		First = ddl.GetValues<float>(0x8b222296u);
-		Second = ddl.GetValues<float>(0x88675f0eu);
+		First = ddl.GetValues<float>(0x8b222296u, First);
+		Second = ddl.GetValues<float>(0x88675f0eu, Second);
 	}
 
 	[DDLRegistration(0x8b222296u)]
-	public List<float> First { get; set; } = [];
+	public List<float> First { get; set; } = [1.00f, 1.00f, 1.00f];
 
 	[DDLRegistration(0x88675f0eu)]
-	public List<float> Second { get; set; } = [];
+	public List<float> Second { get; set; } = [1.00f, 1.00f, 1.00f];
 
 	public static KeyFrameValuePair Create(DDLObject ddl) => new(ddl);
 }

@@ -15,7 +15,7 @@ public class SceneEditorQueryModelLooks : DDLObjectType, IDDLObjectType<SceneEdi
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x828c6ca8u);
 
 	public SceneEditorQueryModelLooks(DDLObject ddl) : base(ddl) {
-		NameHashes = ddl.GetValues<uint>(0x877bbd31u);
+		NameHashes = ddl.GetValues<uint>(0x877bbd31u, NameHashes);
 	}
 
 	[DDLRegistration(0x877bbd31u)]

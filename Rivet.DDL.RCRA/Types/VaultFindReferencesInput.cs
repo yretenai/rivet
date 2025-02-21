@@ -16,7 +16,7 @@ public class VaultFindReferencesInput : DDLObjectType, IDDLObjectType<VaultFindR
 
 	public VaultFindReferencesInput(DDLObject ddl) : base(ddl) {
 		Direction = ddl.GetEnum<x49646b18>(0xbcb74ebfu, x49646b18Values.Lookup);
-		VaultIds = ddl.GetValues<RivetAssetId>(0x8c7bb4c0u);
+		VaultIds = ddl.GetValues<RivetAssetId>(0x8c7bb4c0u, VaultIds);
 		Recursive = ddl.GetValue<bool>(0x3a3803f1u, Recursive);
 	}
 

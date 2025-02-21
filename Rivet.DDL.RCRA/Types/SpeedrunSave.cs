@@ -20,7 +20,7 @@ public class SpeedrunSave : DDLObjectType, IDDLObjectType<SpeedrunSave> {
 	}
 
 	[DDLRegistration(0x88ce26bdu)]
-	public double SpeedrunTime { get; set; } = 0;
+	public double SpeedrunTime { get; set; } = 0.00d;
 
 	[DDLRegistration(0x8e514127u)]
 	public bool TimerStarted { get; set; } = false;

@@ -15,7 +15,7 @@ public class TextureArray : DDLObjectType, IDDLObjectType<TextureArray> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x97d4df1au);
 
 	public TextureArray(DDLObject ddl) : base(ddl) {
-		Textures = ddl.GetValues<RivetAssetId>(0x5f860466u);
+		Textures = ddl.GetValues<RivetAssetId>(0x5f860466u, Textures);
 	}
 
 	[DDLRegistration(0x5f860466u)]

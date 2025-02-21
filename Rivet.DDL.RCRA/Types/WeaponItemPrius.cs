@@ -20,10 +20,10 @@ public class WeaponItemPrius : GameItemPrius, IDDLObjectType<WeaponItemPrius> {
 		LoadedAmmo = ddl.GetValue<float>(0x4977157bu, LoadedAmmo);
 		SyncedExternalWeaponActor = ddl.GetValue<ulong>(0x0d66824fu, SyncedExternalWeaponActor);
 		Mods = ddl.GetValue<ulong>(0x538e324au, Mods);
-		ModGrid = ddl.GetValues<ushort>(0x4ca15474u);
-		ModCount = ddl.GetValues<byte>(0xb86c3a48u);
+		ModGrid = ddl.GetValues<ushort>(0x4ca15474u, ModGrid);
+		ModCount = ddl.GetValues<byte>(0xb86c3a48u, ModCount);
 		SelectedCell = ddl.GetValue<byte>(0x2f1a5c40u, SelectedCell);
-		Test = ddl.GetValues<uint>(0xe8efbebcu);
+		Test = ddl.GetValues<uint>(0xe8efbebcu, Test);
 		Omega = ddl.GetValue<bool>(0x534a51fbu, Omega);
 	}
 
@@ -43,10 +43,10 @@ public class WeaponItemPrius : GameItemPrius, IDDLObjectType<WeaponItemPrius> {
 	public ulong Mods { get; set; } = 0x0000000000000000;
 
 	[DDLRegistration(0x4ca15474u)]
-	public List<ushort> ModGrid { get; set; } = [];
+	public List<ushort> ModGrid { get; set; } = [0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000];
 
 	[DDLRegistration(0xb86c3a48u)]
-	public List<byte> ModCount { get; set; } = [];
+	public List<byte> ModCount { get; set; } = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00];
 
 	[DDLRegistration(0x2f1a5c40u)]
 	public byte SelectedCell { get; set; } = 0x00;

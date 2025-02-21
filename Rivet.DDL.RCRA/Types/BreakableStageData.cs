@@ -18,9 +18,9 @@ public class BreakableStageData : DDLObjectType, IDDLObjectType<BreakableStageDa
 		Model = ddl.GetValue<RivetAssetId>(0xcec6be18u, Model);
 		AnimSet = ddl.GetValue<RivetAssetId>(0xffcf15f1u, AnimSet);
 		AnimDriver = ddl.GetString(0x10f54dce) ?? AnimDriver;
-		ChunkModels = ddl.GetValues<RivetAssetId>(0x4901ec1au);
+		ChunkModels = ddl.GetValues<RivetAssetId>(0x4901ec1au, ChunkModels);
 		NoncollidingChunkModels = ddl.GetObjects<SpawnableChunk>(0xb1362cd8u);
-		DebrisModels = ddl.GetValues<RivetAssetId>(0xf9574946u);
+		DebrisModels = ddl.GetValues<RivetAssetId>(0xf9574946u, DebrisModels);
 		BrokenAtHealth = ddl.GetValue<float>(0x3b00cce2u, BrokenAtHealth);
 		ManualBreak = ddl.GetValue<bool>(0x6a479137u, ManualBreak);
 	}

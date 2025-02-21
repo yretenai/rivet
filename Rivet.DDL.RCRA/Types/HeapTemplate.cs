@@ -22,7 +22,7 @@ public class HeapTemplate : DDLObjectType, IDDLObjectType<HeapTemplate> {
 		SoftAlignment = ddl.GetValue<ulong>(0x6200b6ecu, SoftAlignment);
 		MaxAllocs = ddl.GetValue<int>(0x277f4cf9u, MaxAllocs);
 		SmallBlockFraction = ddl.GetValue<float>(0x0660d387u, SmallBlockFraction);
-		SmallBlockSizes = ddl.GetValues<ushort>(0x1c0e5bcbu);
+		SmallBlockSizes = ddl.GetValues<ushort>(0x1c0e5bcbu, SmallBlockSizes);
 		MaxDeferredFrees = ddl.GetValue<uint>(0x0ef51fb8u, MaxDeferredFrees);
 	}
 
@@ -48,7 +48,7 @@ public class HeapTemplate : DDLObjectType, IDDLObjectType<HeapTemplate> {
 	public float SmallBlockFraction { get; set; } = 0.00f;
 
 	[DDLRegistration(0x1c0e5bcbu)]
-	public List<ushort> SmallBlockSizes { get; set; } = [];
+	public List<ushort> SmallBlockSizes { get; set; } = [0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000];
 
 	[DDLRegistration(0x0ef51fb8u)]
 	public uint MaxDeferredFrees { get; set; } = 0x00000000;

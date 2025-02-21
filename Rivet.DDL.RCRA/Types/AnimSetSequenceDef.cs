@@ -19,10 +19,10 @@ public class AnimSetSequenceDef : DDLObjectType, IDDLObjectType<AnimSetSequenceD
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		StartTime = ddl.GetValue<float>(0x0c5bae2bu, StartTime);
 		EndTime = ddl.GetValue<float>(0xf5a688c4u, EndTime);
-		InitialRandSeed = ddl.GetValues<uint>(0x078c1b58u);
+		InitialRandSeed = ddl.GetValues<uint>(0x078c1b58u, InitialRandSeed);
 		InitialVars = ddl.GetObjects<AnimSetSequenceVarDef>(0x280451c2u);
 		InitialFilters = ddl.GetObjects<AnimSetSequenceFilterDef>(0x6575d7cau);
-		InitialDrivers = ddl.GetStrings(0xf9127340u);
+		InitialDrivers = ddl.GetStrings(0xf9127340u, InitialDrivers);
 		Vars = ddl.GetDictionary<RivetAssetId, AnimSetSequenceVarDef>(0xc2907a09, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimSetSequenceVarDef>(mapId));
 		Filters = ddl.GetDictionary<RivetAssetId, AnimSetSequenceFilterDef>(0x799d04b5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimSetSequenceFilterDef>(mapId));
 		Drivers = ddl.GetDictionary<RivetAssetId, AnimSetSequenceDriverDef>(0xe5faa03f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimSetSequenceDriverDef>(mapId));
@@ -42,7 +42,7 @@ public class AnimSetSequenceDef : DDLObjectType, IDDLObjectType<AnimSetSequenceD
 	public float EndTime { get; set; } = 0.00f;
 
 	[DDLRegistration(0x078c1b58u)]
-	public List<uint> InitialRandSeed { get; set; } = [];
+	public List<uint> InitialRandSeed { get; set; } = [0x00000000, 0x00000000, 0x00000000, 0x00000000];
 
 	[DDLRegistration(0x280451c2u)]
 	public List<AnimSetSequenceVarDef?> InitialVars { get; set; } = [];

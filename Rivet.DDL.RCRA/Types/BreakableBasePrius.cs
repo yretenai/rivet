@@ -61,10 +61,10 @@ public class BreakableBasePrius : DDLObjectType, IDDLObjectType<BreakableBasePri
 		RemoveAnimClues = ddl.GetValue<bool>(0x0b0f884cu, RemoveAnimClues);
 		StumpLifeTime = ddl.GetValue<float>(0x4a319efbu, StumpLifeTime);
 		ShedAttachmentsOnDeath = ddl.GetValue<bool>(0x3080cc34u, ShedAttachmentsOnDeath);
-		DependentBreakables = ddl.GetValues<RivetAssetId>(0x7ba1fab1u);
+		DependentBreakables = ddl.GetValues<RivetAssetId>(0x7ba1fab1u, DependentBreakables);
 		DependentDelay = ddl.GetValue<float>(0xa86e30cbu, DependentDelay);
-		VolumeActors = ddl.GetValues<RivetAssetId>(0x3aca5839u);
-		DeactivateActors = ddl.GetValues<RivetAssetId>(0xb7da8864u);
+		VolumeActors = ddl.GetValues<RivetAssetId>(0x3aca5839u, VolumeActors);
+		DeactivateActors = ddl.GetValues<RivetAssetId>(0xb7da8864u, DeactivateActors);
 		LocatorsInPrev = ddl.GetValue<bool>(0xbe92333fu, LocatorsInPrev);
 	}
 

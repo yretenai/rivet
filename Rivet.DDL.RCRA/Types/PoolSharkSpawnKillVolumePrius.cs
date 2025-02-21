@@ -18,7 +18,7 @@ public class PoolSharkSpawnKillVolumePrius : DDLObjectType, IDDLObjectType<PoolS
 		TimeInVolumeToSpawnShark = ddl.GetValue<float>(0x97503532u, TimeInVolumeToSpawnShark);
 		ResetTime = ddl.GetValue<float>(0x45a33419u, ResetTime);
 		PoolSharkActor = ddl.GetValue<RivetAssetId>(0xb38ccd62u, PoolSharkActor);
-		OtherVolumesToUse = ddl.GetValues<RivetAssetId>(0xe2a16507u);
+		OtherVolumesToUse = ddl.GetValues<RivetAssetId>(0xe2a16507u, OtherVolumesToUse);
 	}
 
 	[DDLRegistration(0x97503532u, description: "How long after hero is in volume will we spawn shark to kill hero")]

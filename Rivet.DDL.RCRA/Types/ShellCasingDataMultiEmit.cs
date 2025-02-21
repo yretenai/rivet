@@ -15,7 +15,7 @@ public class ShellCasingDataMultiEmit : ShellCasingData, IDDLObjectType<ShellCas
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x4bb6d8a6u);
 
 	public ShellCasingDataMultiEmit(DDLObject ddl) : base(ddl) {
-		SpawnLocator = ddl.GetStrings(0x52bc144eu);
+		SpawnLocator = ddl.GetStrings(0x52bc144eu, SpawnLocator);
 	}
 
 	[DDLRegistration(0x52bc144eu)]

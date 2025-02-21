@@ -17,7 +17,7 @@ public class NodeGraphActorContextInfo : DDLObjectType, IDDLObjectType<NodeGraph
 	public NodeGraphActorContextInfo(DDLObject ddl) : base(ddl) {
 		Id = ddl.GetValue<uint>(0x8a514a8du, Id);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
-		Assets = ddl.GetValues<RivetAssetId>(0x47a933e9u);
+		Assets = ddl.GetValues<RivetAssetId>(0x47a933e9u, Assets);
 	}
 
 	[DDLRegistration(0x8a514a8du)]

@@ -31,7 +31,7 @@ public class PlanetRYNOPlan : DDLObjectType, IDDLObjectType<PlanetRYNOPlan> {
 	public uint DefaultPlaytimeEstimate { get; set; } = 0x00000005;
 
 	[DDLRegistration(0xf00bc587u)]
-	public List<ActivityHint?> Hints { get; set; } = [];
+	public List<ActivityHint?> Hints { get; set; } = [default, default, default];
 
 	public static PlanetRYNOPlan Create(DDLObject ddl) => new(ddl);
 }

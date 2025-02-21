@@ -16,7 +16,7 @@ public class UIOptionTypeSettingBase : UIOptionTypeBase, IDDLObjectType<UIOption
 
 	public UIOptionTypeSettingBase(DDLObject ddl) : base(ddl) {
 		ChildOptions = ddl.GetObjects<UIOption>(0x4c60d844u);
-		PresetValues = ddl.GetValues<float>(0xc85a1699u);
+		PresetValues = ddl.GetValues<float>(0xc85a1699u, PresetValues);
 	}
 
 	[DDLRegistration(0x4c60d844u, description: "List of child options. All child settings values are overriden by parents values.")]

@@ -38,7 +38,7 @@ public class SharedSettings : DDLObjectType, IDDLObjectType<SharedSettings> {
 		KickableDrawnTurnOffDistance = ddl.GetValue<float>(0x093d545cu, KickableDrawnTurnOffDistance);
 		KickableNotDrawnTurnOnDistance = ddl.GetValue<float>(0x7f438935u, KickableNotDrawnTurnOnDistance);
 		KickableNotDrawnTurnOffDistance = ddl.GetValue<float>(0xc6fd4062u, KickableNotDrawnTurnOffDistance);
-		Levels = ddl.GetStrings(0xa1522a7eu);
+		Levels = ddl.GetStrings(0xa1522a7eu, Levels);
 		DebugScreenAverageEnabled = ddl.GetValue<bool>(0x3b57e44bu, DebugScreenAverageEnabled);
 		DebugShortcutsEnabled = ddl.GetValue<bool>(0xd3c330e0u, DebugShortcutsEnabled);
 		AllowDemoDebugDraw = ddl.GetValue<bool>(0xde08dfc7u, AllowDemoDebugDraw);

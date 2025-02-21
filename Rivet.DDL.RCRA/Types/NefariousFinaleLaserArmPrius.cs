@@ -15,7 +15,7 @@ public class NefariousFinaleLaserArmPrius : NefariousFinaleWeaponPrius, IDDLObje
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x8ab62350u);
 
 	public NefariousFinaleLaserArmPrius(DDLObject ddl) : base(ddl) {
-		ClawLocator = ddl.GetStrings(0x21ac6113u);
+		ClawLocator = ddl.GetStrings(0x21ac6113u, ClawLocator);
 		AimRefX = ddl.GetValue<float>(0x8611cd7cu, AimRefX);
 		AimRefY = ddl.GetValue<float>(0xf116fdeau, AimRefY);
 		AimRefZ = ddl.GetValue<float>(0x681fac50u, AimRefZ);
@@ -28,7 +28,7 @@ public class NefariousFinaleLaserArmPrius : NefariousFinaleWeaponPrius, IDDLObje
 	}
 
 	[DDLRegistration(0x21ac6113u)]
-	public List<string?> ClawLocator { get; set; } = [];
+	public List<string?> ClawLocator { get; set; } = [default, default, default, default];
 
 	[DDLRegistration(0x8611cd7cu)]
 	public float AimRefX { get; set; } = 0.00f;

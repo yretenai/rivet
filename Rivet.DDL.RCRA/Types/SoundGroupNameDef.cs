@@ -16,7 +16,7 @@ public class SoundGroupNameDef : DDLObjectType, IDDLObjectType<SoundGroupNameDef
 
 	public SoundGroupNameDef(DDLObject ddl) : base(ddl) {
 		GroupName = ddl.GetString(0xb215bfb7) ?? GroupName;
-		Names = ddl.GetStrings(0xeb608581u);
+		Names = ddl.GetStrings(0xeb608581u, Names);
 	}
 
 	[DDLRegistration(0xb215bfb7u)]

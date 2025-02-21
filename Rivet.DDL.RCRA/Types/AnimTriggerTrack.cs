@@ -17,7 +17,7 @@ public class AnimTriggerTrack : DDLObjectType, IDDLObjectType<AnimTriggerTrack> 
 	public AnimTriggerTrack(DDLObject ddl) : base(ddl) {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		Triggers = ddl.GetObjects<AnimTriggerDef>(0xf4cf343du);
-		Events = ddl.GetStrings(0x6dff192du);
+		Events = ddl.GetStrings(0x6dff192du, Events);
 	}
 
 	[DDLRegistration(0x6eb3beb6u, description: "The name of the event track.")]

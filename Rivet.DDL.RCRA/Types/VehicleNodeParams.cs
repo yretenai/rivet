@@ -15,27 +15,27 @@ public class VehicleNodeParams : DDLObjectType, IDDLObjectType<VehicleNodeParams
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xa7a8b7fcu);
 
 	public VehicleNodeParams(DDLObject ddl) : base(ddl) {
-		SpeedLimits = ddl.GetValues<float>(0x6679cfb1u);
-		Densities = ddl.GetValues<float>(0x4db0d03eu);
-		DensitiesPerfMode = ddl.GetValues<float>(0x4ba144adu);
-		DensitiesMediumPerfMode = ddl.GetValues<float>(0x320dbe76u);
-		DensitiesLowPerfMode = ddl.GetValues<float>(0x7d010b11u);
+		SpeedLimits = ddl.GetValues<float>(0x6679cfb1u, SpeedLimits);
+		Densities = ddl.GetValues<float>(0x4db0d03eu, Densities);
+		DensitiesPerfMode = ddl.GetValues<float>(0x4ba144adu, DensitiesPerfMode);
+		DensitiesMediumPerfMode = ddl.GetValues<float>(0x320dbe76u, DensitiesMediumPerfMode);
+		DensitiesLowPerfMode = ddl.GetValues<float>(0x7d010b11u, DensitiesLowPerfMode);
 	}
 
 	[DDLRegistration(0x6679cfb1u)]
-	public List<float> SpeedLimits { get; set; } = [];
+	public List<float> SpeedLimits { get; set; } = [20.00f, 30.00f, 40.00f];
 
 	[DDLRegistration(0x4db0d03eu)]
-	public List<float> Densities { get; set; } = [];
+	public List<float> Densities { get; set; } = [0.50f, 0.75f, 1.00f];
 
 	[DDLRegistration(0x4ba144adu)]
-	public List<float> DensitiesPerfMode { get; set; } = [];
+	public List<float> DensitiesPerfMode { get; set; } = [0.50f, 0.75f, 1.00f];
 
 	[DDLRegistration(0x320dbe76u)]
-	public List<float> DensitiesMediumPerfMode { get; set; } = [];
+	public List<float> DensitiesMediumPerfMode { get; set; } = [0.50f, 0.75f, 1.00f];
 
 	[DDLRegistration(0x7d010b11u)]
-	public List<float> DensitiesLowPerfMode { get; set; } = [];
+	public List<float> DensitiesLowPerfMode { get; set; } = [0.50f, 0.75f, 1.00f];
 
 	public static VehicleNodeParams Create(DDLObject ddl) => new(ddl);
 }

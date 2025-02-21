@@ -17,7 +17,7 @@ public class FastLoadComponentSimplePrius : DDLObjectType, IDDLObjectType<FastLo
 	public FastLoadComponentSimplePrius(DDLObject ddl) : base(ddl) {
 		Alpha = ddl.GetValue<uint>(0xc9b3f5abu, Alpha);
 		Bravo = ddl.GetValue<bool>(0x10c87448u, Bravo);
-		Charlies = ddl.GetValues<int>(0xded4afe3u);
+		Charlies = ddl.GetValues<int>(0xded4afe3u, Charlies);
 		Echo = ddl.GetValue<RivetAssetId>(0x2794f082u, Echo);
 		Foxtrot = ddl.GetValue<int>(0x42c59aa0u, Foxtrot);
 	}
@@ -29,7 +29,7 @@ public class FastLoadComponentSimplePrius : DDLObjectType, IDDLObjectType<FastLo
 	public bool Bravo { get; set; } = false;
 
 	[DDLRegistration(0xded4afe3u)]
-	public List<int> Charlies { get; set; } = [];
+	public List<int> Charlies { get; set; } = [0, 0, 0, 0];
 
 	[DDLRegistration(0x2794f082u)]
 	public RivetAssetId Echo { get; set; } = new RivetAssetId(0x0000000000000000);

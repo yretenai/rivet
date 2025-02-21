@@ -16,12 +16,12 @@ public class SoundBankNameDef : DDLObjectType, IDDLObjectType<SoundBankNameDef> 
 
 	public SoundBankNameDef(DDLObject ddl) : base(ddl) {
 		BankName = ddl.GetString(0x2365a4dc) ?? BankName;
-		EventNames = ddl.GetStrings(0xaa2a04cdu);
-		TriggerNames = ddl.GetStrings(0x9c339bf2u);
+		EventNames = ddl.GetStrings(0xaa2a04cdu, EventNames);
+		TriggerNames = ddl.GetStrings(0x9c339bf2u, TriggerNames);
 		StateGroupNames = ddl.GetObjects<SoundGroupNameDef>(0x0e2afa42u);
 		SwitchGroupNames = ddl.GetObjects<SoundGroupNameDef>(0xc007ebbfu);
-		GameParameterNames = ddl.GetStrings(0xa9451eeau);
-		EnvironmentNames = ddl.GetStrings(0x9593fd9bu);
+		GameParameterNames = ddl.GetStrings(0xa9451eeau, GameParameterNames);
+		EnvironmentNames = ddl.GetStrings(0x9593fd9bu, EnvironmentNames);
 	}
 
 	[DDLRegistration(0x2365a4dcu)]

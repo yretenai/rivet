@@ -23,7 +23,7 @@ public class SessionTransientData : DDLObjectType, IDDLObjectType<SessionTransie
 		CurrentBrightness = ddl.GetValue<float>(0x49b6e044u, CurrentBrightness);
 		LinkMode = ddl.GetObject<SceneNodePropertyLinkMode>(0xcce9c124u);
 		UserMessages = ddl.GetDictionary<RivetAssetId, string>(0xcdbfbb37, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetString(mapId));
-		DebugLog = ddl.GetStrings(0x88c05679u);
+		DebugLog = ddl.GetStrings(0x88c05679u, DebugLog);
 		ActiveSoundEventIds = ddl.GetDictionary<RivetAssetId, bool>(0x4f2f7f71, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
 		RequestPlaySoundEvents = ddl.GetDictionary<RivetAssetId, SessionSoundData>(0x1d1cfb2c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SessionSoundData>(mapId));
 		RequestStopSoundEvents = ddl.GetDictionary<RivetAssetId, string>(0x3ec5852e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetString(mapId));

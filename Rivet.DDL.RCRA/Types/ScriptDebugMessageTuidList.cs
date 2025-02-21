@@ -16,7 +16,7 @@ public class ScriptDebugMessageTuidList : DDLObjectType, IDDLObjectType<ScriptDe
 
 	public ScriptDebugMessageTuidList(DDLObject ddl) : base(ddl) {
 		Action = ddl.GetEnum<xb379a82e>(0x79b4c2f5u, xb379a82eValues.Lookup);
-		Tuids = ddl.GetValues<RivetAssetId>(0xc1987cf3u);
+		Tuids = ddl.GetValues<RivetAssetId>(0xc1987cf3u, Tuids);
 	}
 
 	[DDLRegistration(0x79b4c2f5u)]

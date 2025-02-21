@@ -15,7 +15,7 @@ public class MovingLevelTileList : DDLObjectType, IDDLObjectType<MovingLevelTile
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x49518f0eu);
 
 	public MovingLevelTileList(DDLObject ddl) : base(ddl) {
-		TileList = ddl.GetValues<RivetAssetId>(0x424d4b63u);
+		TileList = ddl.GetValues<RivetAssetId>(0x424d4b63u, TileList);
 	}
 
 	[DDLRegistration(0x424d4b63u, "Tile List", "List of tiles to repeat for this tile set.")]

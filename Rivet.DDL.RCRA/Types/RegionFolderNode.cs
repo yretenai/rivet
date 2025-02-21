@@ -19,7 +19,7 @@ public class RegionFolderNode : DDLObjectType, IDDLObjectType<RegionFolderNode> 
 		ParentId = ddl.GetValue<RivetAssetId>(0xeaeff19eu, ParentId);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		Color = ddl.GetObject<DDLVector3>(0x7f058428u);
-		ChildIds = ddl.GetValues<RivetAssetId>(0x09b55b23u);
+		ChildIds = ddl.GetValues<RivetAssetId>(0x09b55b23u, ChildIds);
 	}
 
 	[DDLRegistration(0x8a514a8du)]

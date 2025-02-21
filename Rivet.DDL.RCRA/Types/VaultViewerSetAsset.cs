@@ -16,7 +16,7 @@ public class VaultViewerSetAsset : DDLObjectType, IDDLObjectType<VaultViewerSetA
 
 	public VaultViewerSetAsset(DDLObject ddl) : base(ddl) {
 		AssetName = ddl.GetString(0x5b8d9442) ?? AssetName;
-		AnimSetStack = ddl.GetStrings(0x5d0f513cu);
+		AnimSetStack = ddl.GetStrings(0x5d0f513cu, AnimSetStack);
 		AnimSetActorAssetPath = ddl.GetString(0xf49c395e) ?? AnimSetActorAssetPath;
 		AnimSetModelAssetPath = ddl.GetString(0x930315ab) ?? AnimSetModelAssetPath;
 	}

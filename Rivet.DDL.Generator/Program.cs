@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: EUPL-1.2
 
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Text;
 using System.Text.Json;
 using Rivet.DDL.Generator.Structs;
@@ -316,99 +317,14 @@ internal class Program {
 				           _ => DDLTemplate.TypeMapping[field.Type],
 			           };
 
-			object defaultValue = field.ArrayType switch {
-				                      DDLArrayKind.None => "default",
-				                      _ => "[]",
-			                      };
+			var defaultValue = field.ArrayType switch {
+				                   DDLArrayKind.None => "default",
+				                   _ => "[]",
+			                   };
 
-			var defaultPrefix = "";
-			if (field.Default.HasValue) {
-				switch (field.Default.Value.ValueKind) {
-					case JsonValueKind.Object: {
-						defaultValue = $"\"{field.Default.Value.GetProperty("value").ToString().Replace(@"\", "/", StringComparison.Ordinal).Strip()}\"";
-
-						if (field.Type is DDLTypeKind.Asset or DDLTypeKind.Identifier) {
-							defaultValue = $"new RivetAssetId.FromString({defaultValue})";
-						}
-
-						break;
-					}
-					case JsonValueKind.Number: {
-						switch (field.Type) {
-							case DDLTypeKind.UInt8: {
-								defaultPrefix = "0x";
-								defaultValue = field.Default.Value.GetByte();
-								break;
-							}
-							case DDLTypeKind.UInt16: {
-								defaultPrefix = "0x";
-								defaultValue = field.Default.Value.GetUInt16();
-								break;
-							}
-							case DDLTypeKind.UInt32: {
-								defaultPrefix = "0x";
-								defaultValue = field.Default.Value.GetUInt32();
-								break;
-							}
-							case DDLTypeKind.UInt64: {
-								defaultPrefix = "0x";
-								defaultValue = field.Default.Value.GetUInt64();
-								break;
-							}
-							case DDLTypeKind.Identifier:
-							case DDLTypeKind.Asset: {
-								defaultValue = $"new RivetAssetId(0x{field.Default.Value.GetUInt64():x16})";
-								break;
-							}
-							case DDLTypeKind.Int8: {
-								defaultValue = field.Default.Value.GetSByte().ToString("D");
-								break;
-							}
-							case DDLTypeKind.Int16: {
-								defaultValue = field.Default.Value.GetInt16().ToString("D");
-								break;
-							}
-							case DDLTypeKind.Int32: {
-								defaultValue = field.Default.Value.GetInt32().ToString("D");
-								break;
-							}
-							case DDLTypeKind.Int64: {
-								defaultValue = field.Default.Value.GetInt64().ToString("D");
-								break;
-							}
-							case DDLTypeKind.Float: {
-								defaultValue = field.Default.Value.GetSingle();
-								break;
-							}
-							case DDLTypeKind.Double: {
-								defaultValue = field.Default.Value.GetDouble();
-								break;
-							}
-							case DDLTypeKind.Enum: {
-								defaultValue = $"{type}.{enumMap[field.EnumTypeId].Values[field.Default.Value.GetInt32()].Name!.Sanitize()}";
-								break;
-							}
-							case DDLTypeKind.Bitfield: {
-								defaultValue = $"({type}) 0x{field.Default.Value.GetUInt32():x8}";
-								break;
-							}
-							default: throw new NotSupportedException();
-						}
-
-						break;
-					}
-					case JsonValueKind.True or JsonValueKind.False: {
-						defaultValue = field.Default.Value.ToString().ToLower();
-						break;
-					}
-					case JsonValueKind.Array: {
-						// not yet handled.
-						break;
-					}
-					default:
-						defaultValue = field.Default.Value.ToString();
-						break;
-				}
+			if (field.Default.HasValue && field.Default.Value.ValueKind is not JsonValueKind.Null) {
+				var defaultField = field.Default.Value;
+				defaultValue = JsonToTemplateValue(enumMap, defaultField, field, type);
 			}
 
 			var label = string.Empty;
@@ -439,7 +355,6 @@ internal class Program {
 				}),
 				["name"] = field.Name!.Sanitize(),
 				["default"] = defaultValue,
-				["default-prefix"] = defaultPrefix,
 				["attribute"] = DDLTemplate.Format(DDLTemplate.RegistrationAttribute, new() {
 					["hash"] = field.Id,
 					["label"] = label,
@@ -496,5 +411,65 @@ internal class Program {
 			["field-body"] = fieldBody.ToString().ReplaceLineEndings("\n").Trim(),
 			["attribute"] = attribute,
 		}).Fixup());
+	}
+
+	private static string JsonToTemplateValue(Dictionary<uint, DDLEnum> enumMap, JsonElement defaultField, DDLTypeField field, string type) {
+		switch (defaultField.ValueKind) {
+			case JsonValueKind.Object: {
+				var defaultValue = $"\"{defaultField.GetProperty("value").ToString().Replace(@"\", "/", StringComparison.Ordinal).Strip()}\"";
+
+				return field.Type is DDLTypeKind.Asset or DDLTypeKind.Identifier ? $"new RivetAssetId.FromString({defaultValue})" : defaultValue;
+			}
+			case JsonValueKind.Number: {
+				return field.Type switch {
+					       DDLTypeKind.UInt8 => "0x" + defaultField.GetByte().ToString("x2"),
+					       DDLTypeKind.UInt16 => "0x" + defaultField.GetUInt16().ToString("x4"),
+					       DDLTypeKind.UInt32 => "0x" + defaultField.GetUInt32().ToString("x8"),
+					       DDLTypeKind.UInt64 => "0x" + defaultField.GetUInt64().ToString("x16"),
+					       DDLTypeKind.Identifier or DDLTypeKind.Asset => $"new RivetAssetId(0x{defaultField.GetUInt64():x16})",
+					       DDLTypeKind.Int8 => defaultField.GetSByte().ToString("D"),
+					       DDLTypeKind.Int16 => defaultField.GetInt16().ToString("D"),
+					       DDLTypeKind.Int32 => defaultField.GetInt32().ToString("D"),
+					       DDLTypeKind.Int64 => defaultField.GetInt64().ToString("D"),
+					       DDLTypeKind.Float => defaultField.GetSingle().ToString("F", CultureInfo.InvariantCulture) + "f",
+					       DDLTypeKind.Double => defaultField.GetDouble().ToString("F", CultureInfo.InvariantCulture) + "d",
+					       DDLTypeKind.Enum => $"{type}.{enumMap[field.EnumTypeId].Values[defaultField.GetInt32()].Name!.Sanitize()}",
+					       DDLTypeKind.Bitfield => $"({type}) 0x{defaultField.GetUInt32():x8}",
+					       _ => throw new NotSupportedException(),
+				       };
+			}
+			case JsonValueKind.True or JsonValueKind.False: {
+				return defaultField.ToString().ToLower();
+			}
+			case JsonValueKind.Array when field.ArrayType is DDLArrayKind.Map: {
+				var result = "{";
+				foreach (var entry in defaultField.EnumerateArray()) {
+					result += "[" + JsonToTemplateValue(enumMap, entry.GetProperty("key"), field with {
+						Type = field.MapType,
+					}, type) + "] = ";
+					result += JsonToTemplateValue(enumMap, entry.GetProperty("value"), field, type) + ",";
+				}
+
+				return result + "}";
+			}
+			case JsonValueKind.Array: {
+				var result = "[";
+				var index = 0;
+				foreach (var entry in defaultField.EnumerateArray()) {
+					if (index++ > 0) {
+						result += ", ";
+					}
+
+					result += JsonToTemplateValue(enumMap, entry, field, type);
+				}
+
+				return result + "]";
+			}
+			case JsonValueKind.Null: {
+				return "default";
+			}
+			default:
+				return defaultField.ToString();
+		}
 	}
 }

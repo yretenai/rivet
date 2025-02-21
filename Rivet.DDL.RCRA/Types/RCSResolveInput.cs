@@ -17,7 +17,7 @@ public class RCSResolveInput : DDLObjectType, IDDLObjectType<RCSResolveInput> {
 	public RCSResolveInput(DDLObject ddl) : base(ddl) {
 		AutoResolve = ddl.GetEnum<x5c9fe7cc>(0xf7d1a503u, x5c9fe7ccValues.Lookup);
 		Changelist = ddl.GetValue<int>(0x03b0ddc6u, Changelist);
-		Files = ddl.GetStrings(0x1f668c98u);
+		Files = ddl.GetStrings(0x1f668c98u, Files);
 		Preview = ddl.GetValue<bool>(0xb86f4c08u, Preview);
 	}
 

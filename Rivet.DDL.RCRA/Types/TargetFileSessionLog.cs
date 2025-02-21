@@ -15,8 +15,8 @@ public class TargetFileSessionLog : DDLObjectType, IDDLObjectType<TargetFileSess
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x65e04713u);
 
 	public TargetFileSessionLog(DDLObject ddl) : base(ddl) {
-		Messages = ddl.GetStrings(0x2103a3e6u);
-		Levels = ddl.GetValues<int>(0xa1522a7eu);
+		Messages = ddl.GetStrings(0x2103a3e6u, Messages);
+		Levels = ddl.GetValues<int>(0xa1522a7eu, Levels);
 	}
 
 	[DDLRegistration(0x2103a3e6u)]

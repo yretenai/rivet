@@ -16,7 +16,7 @@ public class EventForwarderPrius : DDLObjectType, IDDLObjectType<EventForwarderP
 
 	public EventForwarderPrius(DDLObject ddl) : base(ddl) {
 		TargetActor = ddl.GetValue<RivetAssetId>(0x98554e8cu, TargetActor);
-		EventsToForward = ddl.GetStrings(0xa5237249u);
+		EventsToForward = ddl.GetStrings(0xa5237249u, EventsToForward);
 		ForwardedSender = ddl.GetEnum<xc97f8430>(0x883a3c96u, xc97f8430Values.Lookup);
 		QueueImmediateEvent = ddl.GetValue<bool>(0xe596a2aeu, QueueImmediateEvent);
 	}

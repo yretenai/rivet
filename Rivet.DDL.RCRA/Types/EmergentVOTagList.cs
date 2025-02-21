@@ -15,7 +15,7 @@ public class EmergentVOTagList : DDLObjectType, IDDLObjectType<EmergentVOTagList
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x782aa9e4u);
 
 	public EmergentVOTagList(DDLObject ddl) : base(ddl) {
-		Tags = ddl.GetStrings(0x5f2c5496u);
+		Tags = ddl.GetStrings(0x5f2c5496u, Tags);
 	}
 
 	[DDLRegistration(0x5f2c5496u)]

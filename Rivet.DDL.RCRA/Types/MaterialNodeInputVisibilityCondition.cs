@@ -16,7 +16,7 @@ public class MaterialNodeInputVisibilityCondition : DDLObjectType, IDDLObjectTyp
 
 	public MaterialNodeInputVisibilityCondition(DDLObject ddl) : base(ddl) {
 		InternalName = ddl.GetString(0x93971d83) ?? InternalName;
-		Values = ddl.GetStrings(0x04df0281u);
+		Values = ddl.GetStrings(0x04df0281u, Values);
 	}
 
 	[DDLRegistration(0x93971d83u)]

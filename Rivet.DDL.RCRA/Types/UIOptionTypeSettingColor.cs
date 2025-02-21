@@ -15,7 +15,7 @@ public class UIOptionTypeSettingColor : UIOptionTypeSettingBase, IDDLObjectType<
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x66257f4cu);
 
 	public UIOptionTypeSettingColor(DDLObject ddl) : base(ddl) {
-		ColorList = ddl.GetStrings(0xfbc9245fu);
+		ColorList = ddl.GetStrings(0xfbc9245fu, ColorList);
 	}
 
 	[DDLRegistration(0xfbc9245fu, description: "List of the color options for this setting, each value should match a color in the main color list for this file.")]

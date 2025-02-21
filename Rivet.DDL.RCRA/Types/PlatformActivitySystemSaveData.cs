@@ -15,7 +15,7 @@ public class PlatformActivitySystemSaveData : DDLObjectType, IDDLObjectType<Plat
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xc393b61du);
 
 	public PlatformActivitySystemSaveData(DDLObject ddl) : base(ddl) {
-		CachedAvailableActivities = ddl.GetValues<uint>(0xa05da2c8u);
+		CachedAvailableActivities = ddl.GetValues<uint>(0xa05da2c8u, CachedAvailableActivities);
 		DerivedSaveData = ddl.GetObject<PlatformActivitySystemSaveBase>(0x0dc52c00u);
 	}
 

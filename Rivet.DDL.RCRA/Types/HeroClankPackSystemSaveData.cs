@@ -15,15 +15,15 @@ public class HeroClankPackSystemSaveData : DDLObjectType, IDDLObjectType<HeroCla
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x40f0b511u);
 
 	public HeroClankPackSystemSaveData(DDLObject ddl) : base(ddl) {
-		BackpackConfigs = ddl.GetValues<RivetAssetId>(0xfd7b9531u);
-		DebugSourceInfo = ddl.GetStrings(0x645ee190u);
+		BackpackConfigs = ddl.GetValues<RivetAssetId>(0xfd7b9531u, BackpackConfigs);
+		DebugSourceInfo = ddl.GetStrings(0x645ee190u, DebugSourceInfo);
 	}
 
 	[DDLRegistration(0xfd7b9531u)]
-	public List<RivetAssetId> BackpackConfigs { get; set; } = [];
+	public List<RivetAssetId> BackpackConfigs { get; set; } = [default, default, default, default];
 
 	[DDLRegistration(0x645ee190u)]
-	public List<string?> DebugSourceInfo { get; set; } = [];
+	public List<string?> DebugSourceInfo { get; set; } = [default, default, default, default];
 
 	public static HeroClankPackSystemSaveData Create(DDLObject ddl) => new(ddl);
 }

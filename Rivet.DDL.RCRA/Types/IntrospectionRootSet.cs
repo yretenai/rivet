@@ -17,7 +17,7 @@ public class IntrospectionRootSet : DDLObjectType, IDDLObjectType<IntrospectionR
 	public IntrospectionRootSet(DDLObject ddl) : base(ddl) {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		Type = ddl.GetEnum<x39ee8d91>(0xbc4e9799u, x39ee8d91Values.Lookup);
-		Roots = ddl.GetValues<RivetAssetId>(0xfef27f4fu);
+		Roots = ddl.GetValues<RivetAssetId>(0xfef27f4fu, Roots);
 	}
 
 	[DDLRegistration(0x6eb3beb6u)]

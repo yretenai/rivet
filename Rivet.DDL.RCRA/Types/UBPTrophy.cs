@@ -32,7 +32,7 @@ public class UBPTrophy : DDLObjectType, IDDLObjectType<UBPTrophy> {
 	public x56d897ac EntitySubtype { get; set; } = x56d897ac.Activity;
 
 	[DDLRegistration(0xd9cbf53bu)]
-	public List<UBPImage?> Images { get; set; } = [];
+	public List<UBPImage?> Images { get; set; } = [default];
 
 	[DDLRegistration(0x0ea2d68eu)]
 	public List<UBPImage?> Reward_images { get; set; } = [];

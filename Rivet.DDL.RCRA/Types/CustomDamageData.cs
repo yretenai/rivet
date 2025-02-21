@@ -16,7 +16,7 @@ public class CustomDamageData : DDLObjectType, IDDLObjectType<CustomDamageData> 
 
 	public CustomDamageData(DDLObject ddl) : base(ddl) {
 		DataNameHash = ddl.GetValue<uint>(0x124f31c8u, DataNameHash);
-		DataBuffer = ddl.GetValues<byte>(0x29478bfeu);
+		DataBuffer = ddl.GetValues<byte>(0x29478bfeu, DataBuffer);
 	}
 
 	[DDLRegistration(0x124f31c8u)]

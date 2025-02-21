@@ -16,7 +16,7 @@ public class MissionOrderDataBase : DDLObjectType, IDDLObjectType<MissionOrderDa
 
 	public MissionOrderDataBase(DDLObject ddl) : base(ddl) {
 		MissionName = ddl.GetString(0xa5c30e60) ?? MissionName;
-		LockedByMission = ddl.GetStrings(0x9b0151b0u);
+		LockedByMission = ddl.GetStrings(0x9b0151b0u, LockedByMission);
 	}
 
 	[DDLRegistration(0xa5c30e60u)]

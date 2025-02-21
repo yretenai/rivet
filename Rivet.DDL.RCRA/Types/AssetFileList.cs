@@ -15,7 +15,7 @@ public class AssetFileList : DDLObjectType, IDDLObjectType<AssetFileList> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x577be0adu);
 
 	public AssetFileList(DDLObject ddl) : base(ddl) {
-		AssetPaths = ddl.GetValues<RivetAssetId>(0x280c42ffu);
+		AssetPaths = ddl.GetValues<RivetAssetId>(0x280c42ffu, AssetPaths);
 		Force = ddl.GetValue<bool>(0x8e3b4fe9u, Force);
 	}
 

@@ -21,14 +21,14 @@ public class BreakableComponentPrius : BreakableBasePrius, IDDLObjectType<Breaka
 		BrokenAnimSet = ddl.GetValue<RivetAssetId>(0x0399af59u, BrokenAnimSet);
 		BrokenAnimDriver = ddl.GetString(0x5bbcf319) ?? BrokenAnimDriver;
 		BrokenNoncollidingChunkModels = ddl.GetObjects<SpawnableChunk>(0x33256921u);
-		BrokenChunkModels = ddl.GetValues<RivetAssetId>(0x51fde2d3u);
-		BrokenDebrisModels = ddl.GetValues<RivetAssetId>(0x1bf7cf5cu);
+		BrokenChunkModels = ddl.GetValues<RivetAssetId>(0x51fde2d3u, BrokenChunkModels);
+		BrokenDebrisModels = ddl.GetValues<RivetAssetId>(0x1bf7cf5cu, BrokenDebrisModels);
 		DestroyedModel = ddl.GetValue<RivetAssetId>(0x408586ccu, DestroyedModel);
 		DestroyedAnimSet = ddl.GetValue<RivetAssetId>(0x32992337u, DestroyedAnimSet);
 		DestroyedAnimDriver = ddl.GetString(0x8ec3c245) ?? DestroyedAnimDriver;
 		DestroyedNoncollidingChunkModels = ddl.GetObjects<SpawnableChunk>(0xfb7b7ff8u);
-		DestroyedChunkModels = ddl.GetValues<RivetAssetId>(0x33f5803du);
-		DestroyedDebrisModels = ddl.GetValues<RivetAssetId>(0x5c270841u);
+		DestroyedChunkModels = ddl.GetValues<RivetAssetId>(0x33f5803du, DestroyedChunkModels);
+		DestroyedDebrisModels = ddl.GetValues<RivetAssetId>(0x5c270841u, DestroyedDebrisModels);
 		DestroyedChunkConduit = ddl.GetValue<RivetAssetId>(0x0eda6a09u, DestroyedChunkConduit);
 	}
 

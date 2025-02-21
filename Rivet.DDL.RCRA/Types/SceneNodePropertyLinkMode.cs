@@ -17,7 +17,7 @@ public class SceneNodePropertyLinkMode : DDLObjectType, IDDLObjectType<SceneNode
 	public SceneNodePropertyLinkMode(DDLObject ddl) : base(ddl) {
 		LinkModeState = ddl.GetEnum<LinkModeStates>(0x9fbc7928u, LinkModeStatesValues.Lookup);
 		FieldPath = ddl.GetString(0xc4014edf) ?? FieldPath;
-		LinkSources = ddl.GetValues<RivetAssetId>(0x08cbaeb9u);
+		LinkSources = ddl.GetValues<RivetAssetId>(0x08cbaeb9u, LinkSources);
 		LinkDestination = ddl.GetValue<RivetAssetId>(0x8f70517du, LinkDestination);
 	}
 

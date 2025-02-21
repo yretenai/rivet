@@ -15,9 +15,9 @@ public class SortedNodeNames : DDLObjectType, IDDLObjectType<SortedNodeNames> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xd0b0b890u);
 
 	public SortedNodeNames(DDLObject ddl) : base(ddl) {
-		SortedByAlphabet = ddl.GetStrings(0x263e7c0bu);
-		SortedByBFT = ddl.GetStrings(0x90ec11f0u);
-		SortedByDFT = ddl.GetStrings(0x94616d42u);
+		SortedByAlphabet = ddl.GetStrings(0x263e7c0bu, SortedByAlphabet);
+		SortedByBFT = ddl.GetStrings(0x90ec11f0u, SortedByBFT);
+		SortedByDFT = ddl.GetStrings(0x94616d42u, SortedByDFT);
 	}
 
 	[DDLRegistration(0x263e7c0bu)]

@@ -18,7 +18,7 @@ public class ModelVariantSingle : DDLObjectType, IDDLObjectType<ModelVariantSing
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		Morphs = ddl.GetDictionary<uint, MorphValue>(0xd15dd2b2, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<MorphValue>(mapId));
-		Materials = ddl.GetValues<RivetAssetId>(0x19ea89b9u);
+		Materials = ddl.GetValues<RivetAssetId>(0x19ea89b9u, Materials);
 	}
 
 	[DDLRegistration(0x8a514a8du)]
@@ -31,7 +31,7 @@ public class ModelVariantSingle : DDLObjectType, IDDLObjectType<ModelVariantSing
 	public Dictionary<uint, MorphValue?> Morphs { get; set; } = [];
 
 	[DDLRegistration(0x19ea89b9u, description: "path to material for each Maya material mapping name")]
-	public List<RivetAssetId> Materials { get; set; } = [];
+	public List<RivetAssetId> Materials { get; set; } = [default, default, default, default, default, default];
 
 	public static ModelVariantSingle Create(DDLObject ddl) => new(ddl);
 }

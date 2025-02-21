@@ -15,7 +15,7 @@ public class AssetPlacementList : DDLObjectType, IDDLObjectType<AssetPlacementLi
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x7cea1954u);
 
 	public AssetPlacementList(DDLObject ddl) : base(ddl) {
-		AssetList = ddl.GetValues<RivetAssetId>(0x4166125cu);
+		AssetList = ddl.GetValues<RivetAssetId>(0x4166125cu, AssetList);
 	}
 
 	[DDLRegistration(0x4166125cu)]

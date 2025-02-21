@@ -17,9 +17,9 @@ public class EnablePoolsResponseMessage : DDLObjectType, IDDLObjectType<EnablePo
 	public EnablePoolsResponseMessage(DDLObject ddl) : base(ddl) {
 		RequestId = ddl.GetValue<ushort>(0x239eef0du, RequestId);
 		LastMessage = ddl.GetValue<byte>(0x87e83d61u, LastMessage);
-		PoolIds = ddl.GetValues<ushort>(0x540841afu);
-		PoolGenerations = ddl.GetValues<byte>(0x4b3b2283u);
-		PoolEnabledMask = ddl.GetValues<byte>(0x3b957553u);
+		PoolIds = ddl.GetValues<ushort>(0x540841afu, PoolIds);
+		PoolGenerations = ddl.GetValues<byte>(0x4b3b2283u, PoolGenerations);
+		PoolEnabledMask = ddl.GetValues<byte>(0x3b957553u, PoolEnabledMask);
 	}
 
 	[DDLRegistration(0x239eef0du)]

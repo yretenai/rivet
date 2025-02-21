@@ -15,7 +15,7 @@ public class LooksToFilters : DDLObjectType, IDDLObjectType<LooksToFilters> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x34d66690u);
 
 	public LooksToFilters(DDLObject ddl) : base(ddl) {
-		Looks = ddl.GetStrings(0xec785832u);
+		Looks = ddl.GetStrings(0xec785832u, Looks);
 		Filters = ddl.GetObjects<FilterPair>(0x799d04b5u);
 	}
 

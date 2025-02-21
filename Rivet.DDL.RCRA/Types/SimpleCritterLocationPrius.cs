@@ -15,7 +15,7 @@ public class SimpleCritterLocationPrius : DDLObjectType, IDDLObjectType<SimpleCr
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x40f429c2u);
 
 	public SimpleCritterLocationPrius(DDLObject ddl) : base(ddl) {
-		EnabledCritterTypes = ddl.GetStrings(0xe56b40dfu);
+		EnabledCritterTypes = ddl.GetStrings(0xe56b40dfu, EnabledCritterTypes);
 		MeanderRadius = ddl.GetValue<float>(0xf8360daeu, MeanderRadius);
 	}
 

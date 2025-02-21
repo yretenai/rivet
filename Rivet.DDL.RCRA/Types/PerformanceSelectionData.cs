@@ -15,11 +15,11 @@ public class PerformanceSelectionData : DDLObjectType, IDDLObjectType<Performanc
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x0c8debb2u);
 
 	public PerformanceSelectionData(DDLObject ddl) : base(ddl) {
-		Visemes = ddl.GetValues<uint>(0x1fc67dfcu);
-		Expressions = ddl.GetValues<uint>(0xe10d9e10u);
-		BodyGestures = ddl.GetValues<uint>(0x9a327d20u);
-		ExpressionEnvelopes = ddl.GetValues<uint>(0x9f5d1bffu);
-		BodyGestureEnvelopes = ddl.GetValues<uint>(0x53f690aeu);
+		Visemes = ddl.GetValues<uint>(0x1fc67dfcu, Visemes);
+		Expressions = ddl.GetValues<uint>(0xe10d9e10u, Expressions);
+		BodyGestures = ddl.GetValues<uint>(0x9a327d20u, BodyGestures);
+		ExpressionEnvelopes = ddl.GetValues<uint>(0x9f5d1bffu, ExpressionEnvelopes);
+		BodyGestureEnvelopes = ddl.GetValues<uint>(0x53f690aeu, BodyGestureEnvelopes);
 		PhonemeEnvelopes = ddl.GetObjects<PerformanceSelectionIndices>(0xf1544ddeu);
 		PerformanceClips = ddl.GetObjects<PerformanceSelectionIndices>(0xdd623106u);
 	}

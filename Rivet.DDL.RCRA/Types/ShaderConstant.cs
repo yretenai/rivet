@@ -26,9 +26,9 @@ public class ShaderConstant : DDLObjectType, IDDLObjectType<ShaderConstant> {
 		SubGraphAncestors = ddl.GetString(0xaa160e78) ?? SubGraphAncestors;
 		Offset = ddl.GetValue<ushort>(0x677284b7u, Offset);
 		Size = ddl.GetValue<ushort>(0xc750e4dau, Size);
-		MinRange = ddl.GetValues<float>(0x6c79323fu);
-		MaxRange = ddl.GetValues<float>(0x8a199ddeu);
-		Content = ddl.GetValues<float>(0xff2f5391u);
+		MinRange = ddl.GetValues<float>(0x6c79323fu, MinRange);
+		MaxRange = ddl.GetValues<float>(0x8a199ddeu, MaxRange);
+		Content = ddl.GetValues<float>(0xff2f5391u, Content);
 		SelectItems = ddl.GetObjects<MaterialNodeInputSelectItem>(0x5819ef65u);
 		DeveloperMode = ddl.GetValue<bool>(0xfd8c5200u, DeveloperMode);
 		VisibilityCondition = ddl.GetObject<MaterialNodeInputVisibilityCondition>(0x10b37a44u);
@@ -68,13 +68,13 @@ public class ShaderConstant : DDLObjectType, IDDLObjectType<ShaderConstant> {
 	public ushort Size { get; set; } = 0x0000;
 
 	[DDLRegistration(0x6c79323fu)]
-	public List<float> MinRange { get; set; } = [];
+	public List<float> MinRange { get; set; } = [0.00f, 0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0x8a199ddeu)]
-	public List<float> MaxRange { get; set; } = [];
+	public List<float> MaxRange { get; set; } = [1.00f, 1.00f, 1.00f, 1.00f];
 
 	[DDLRegistration(0xff2f5391u)]
-	public List<float> Content { get; set; } = [];
+	public List<float> Content { get; set; } = [0.00f, 0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0x5819ef65u)]
 	public List<MaterialNodeInputSelectItem?> SelectItems { get; set; } = [];

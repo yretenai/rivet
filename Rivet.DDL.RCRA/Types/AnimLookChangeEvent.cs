@@ -15,8 +15,8 @@ public class AnimLookChangeEvent : EventBase, IDDLObjectType<AnimLookChangeEvent
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x2127e69bu);
 
 	public AnimLookChangeEvent(DDLObject ddl) : base(ddl) {
-		DisableLooks = ddl.GetStrings(0x9ad9f90du);
-		EnableLooks = ddl.GetStrings(0x37c7283du);
+		DisableLooks = ddl.GetStrings(0x9ad9f90du, DisableLooks);
+		EnableLooks = ddl.GetStrings(0x37c7283du, EnableLooks);
 	}
 
 	[DDLRegistration(0x9ad9f90du, description: "Looks to enabled")]

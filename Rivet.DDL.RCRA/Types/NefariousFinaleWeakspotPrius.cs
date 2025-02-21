@@ -16,7 +16,7 @@ public class NefariousFinaleWeakspotPrius : WeakspotPrius, IDDLObjectType<Nefari
 
 	public NefariousFinaleWeakspotPrius(DDLObject ddl) : base(ddl) {
 		RequireHero = ddl.GetValue<bool>(0xad1dcf36u, RequireHero);
-		OtherWeakspotJoints = ddl.GetStrings(0x8121d393u);
+		OtherWeakspotJoints = ddl.GetStrings(0x8121d393u, OtherWeakspotJoints);
 	}
 
 	[DDLRegistration(0xad1dcf36u, "Require Hero")]

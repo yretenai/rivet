@@ -16,7 +16,7 @@ public class WalkingArchivesAnimListenerPrius : DDLObjectType, IDDLObjectType<Wa
 
 	public WalkingArchivesAnimListenerPrius(DDLObject ddl) : base(ddl) {
 		Archives = ddl.GetValue<RivetAssetId>(0x18635149u, Archives);
-		AnimEventTimes = ddl.GetValues<float>(0x7ab02beau);
+		AnimEventTimes = ddl.GetValues<float>(0x7ab02beau, AnimEventTimes);
 	}
 
 	[DDLRegistration(0x18635149u, description: "Link to the Walking Archives actor.")]

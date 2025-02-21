@@ -19,7 +19,7 @@ public class GPUProgramDescs : DDLObjectType, IDDLObjectType<GPUProgramDescs> {
 	}
 
 	[DDLRegistration(0x6e50238bu)]
-	public List<GPUProgramDesc?> Descs { get; set; } = [];
+	public List<GPUProgramDesc?> Descs { get; set; } = [default, default, default, default, default, default, default];
 
 	public static GPUProgramDescs Create(DDLObject ddl) => new(ddl);
 }

@@ -17,7 +17,7 @@ public class ClankPuzzleVolumeEndPrius : DDLObjectType, IDDLObjectType<ClankPuzz
 	public ClankPuzzleVolumeEndPrius(DDLObject ddl) : base(ddl) {
 		PrimaryBotCountdownTimer = ddl.GetValue<float>(0xd663f6bau, PrimaryBotCountdownTimer);
 		SecondaryBotCountdownTimer = ddl.GetValue<float>(0xb0235bfbu, SecondaryBotCountdownTimer);
-		GoalMarkers = ddl.GetValues<RivetAssetId>(0x605c25b0u);
+		GoalMarkers = ddl.GetValues<RivetAssetId>(0x605c25b0u, GoalMarkers);
 	}
 
 	[DDLRegistration(0xd663f6bau, description: "The first countdown between bots before you lose your charge up.")]

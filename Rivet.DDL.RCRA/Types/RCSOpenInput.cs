@@ -15,7 +15,7 @@ public class RCSOpenInput : DDLObjectType, IDDLObjectType<RCSOpenInput> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xf46319c1u);
 
 	public RCSOpenInput(DDLObject ddl) : base(ddl) {
-		Views = ddl.GetStrings(0x08a35046u);
+		Views = ddl.GetStrings(0x08a35046u, Views);
 		AutoAdd = ddl.GetValue<bool>(0xbfa92a2au, AutoAdd);
 		AutoSync = ddl.GetValue<bool>(0x1bbe17a3u, AutoSync);
 		Changelist = ddl.GetValue<uint>(0x03b0ddc6u, Changelist);

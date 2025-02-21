@@ -15,7 +15,7 @@ public class ObjSysSaveDataShared : DDLObjectType, IDDLObjectType<ObjSysSaveData
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x83983f42u);
 
 	public ObjSysSaveDataShared(DDLObject ddl) : base(ddl) {
-		RequestedGraphs = ddl.GetValues<ulong>(0xfd5bea83u);
+		RequestedGraphs = ddl.GetValues<ulong>(0xfd5bea83u, RequestedGraphs);
 		PrimaryObjective = ddl.GetObject<ActiveObjective>(0x75d0a0f3u);
 	}
 

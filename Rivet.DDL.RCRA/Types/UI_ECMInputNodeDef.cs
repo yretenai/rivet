@@ -19,7 +19,7 @@ public class UI_ECMInputNodeDef : DDLObjectType, IDDLObjectType<UI_ECMInputNodeD
 		Value = ddl.GetString(0x042494f5) ?? Value;
 		LocTag = ddl.GetString(0x06f8b0e5) ?? LocTag;
 		PhysicsMaterial = ddl.GetString(0x3bd89dc5) ?? PhysicsMaterial;
-		PhysicsMaterials = ddl.GetStrings(0x2239ce24u);
+		PhysicsMaterials = ddl.GetStrings(0x2239ce24u, PhysicsMaterials);
 		ActorFilterTypes = ddl.GetBitset<ActorFilterTypes>(0x3b1d202au, ActorFilterTypesValues.Lookup);
 		VisualEffect = ddl.GetValue<RivetAssetId>(0xafa67994u, VisualEffect);
 		VisualEffectSpawnMesh = ddl.GetObject<VisualEffectSpawnMesh>(0x7225c9b5u);

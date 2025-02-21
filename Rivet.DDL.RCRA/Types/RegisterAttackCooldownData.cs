@@ -24,10 +24,10 @@ public class RegisterAttackCooldownData : DDLObjectType, IDDLObjectType<Register
 	public x942b54f2 CooldownType { get; set; } = x942b54f2.Leap;
 
 	[DDLRegistration(0x6a819eb7u)]
-	public List<CooldownPerDifficultyData?> GlobalCooldown { get; set; } = [];
+	public List<CooldownPerDifficultyData?> GlobalCooldown { get; set; } = [default, default, default];
 
 	[DDLRegistration(0x91725d19u)]
-	public List<CooldownPerDifficultyData?> PersonalCooldown { get; set; } = [];
+	public List<CooldownPerDifficultyData?> PersonalCooldown { get; set; } = [default, default, default];
 
 	public static RegisterAttackCooldownData Create(DDLObject ddl) => new(ddl);
 }

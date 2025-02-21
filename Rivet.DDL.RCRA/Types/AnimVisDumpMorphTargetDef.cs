@@ -16,7 +16,7 @@ public class AnimVisDumpMorphTargetDef : DDLObjectType, IDDLObjectType<AnimVisDu
 
 	public AnimVisDumpMorphTargetDef(DDLObject ddl) : base(ddl) {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
-		Weights = ddl.GetValues<float>(0x1b381060u);
+		Weights = ddl.GetValues<float>(0x1b381060u, Weights);
 	}
 
 	[DDLRegistration(0x6eb3beb6u)]

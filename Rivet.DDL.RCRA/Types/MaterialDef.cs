@@ -41,7 +41,7 @@ public class MaterialDef : DDLObjectType, IDDLObjectType<MaterialDef> {
 		SkipImpostorPojection = ddl.GetValue<bool>(0x12ebb90eu, SkipImpostorPojection);
 		VoxelizationOrderBias = ddl.GetValue<sbyte>(0x1e9fe88bu, VoxelizationOrderBias);
 		WorldMapColor = ddl.GetObject<DDLVector3>(0x3498ff8au);
-		ModelSlotExclusion = ddl.GetStrings(0x902ee427u);
+		ModelSlotExclusion = ddl.GetStrings(0x902ee427u, ModelSlotExclusion);
 		PreviewModel = ddl.GetObject<PreviewModelContainer>(0x5e53ae29u);
 		Notes = ddl.GetObject<MaterialNotes>(0x18486a4du);
 		AlphaProperties = ddl.GetObject<MaterialAlpha>(0xa731268eu);

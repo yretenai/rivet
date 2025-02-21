@@ -29,7 +29,7 @@ public class LunaUpdaterConfigFile : DDLObjectType, IDDLObjectType<LunaUpdaterCo
 		FtpMaya2020Installers = ddl.GetObjects<LunaFtpInstallerInfo>(0xd5a1be32u);
 		FtpUserConfig = ddl.GetObject<LunaFtpUserConfigFile>(0x507e1fc4u);
 		FtpProjects = ddl.GetObjects<LunaFtpProjectConfigFile>(0x91fc54e0u);
-		FtpBranches = ddl.GetStrings(0x1a0f362bu);
+		FtpBranches = ddl.GetStrings(0x1a0f362bu, FtpBranches);
 		FtpToolsPackages = ddl.GetObjects<LunaFtpToolsPackageConfigFile>(0xf4e1f26au);
 		FtpLatestToolsPackage = ddl.GetValue<int>(0xb8c63036u, FtpLatestToolsPackage);
 	}

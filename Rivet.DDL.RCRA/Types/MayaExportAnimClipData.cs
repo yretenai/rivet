@@ -15,7 +15,7 @@ public class MayaExportAnimClipData : DDLObjectType, IDDLObjectType<MayaExportAn
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x18ae92e4u);
 
 	public MayaExportAnimClipData(DDLObject ddl) : base(ddl) {
-		MayaPaths = ddl.GetStrings(0xe3985a7bu);
+		MayaPaths = ddl.GetStrings(0xe3985a7bu, MayaPaths);
 		ScriptCmd = ddl.GetString(0x526d184c) ?? ScriptCmd;
 	}
 

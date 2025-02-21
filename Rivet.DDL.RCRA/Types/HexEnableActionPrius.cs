@@ -16,7 +16,7 @@ public class HexEnableActionPrius : DDLObjectType, IDDLObjectType<HexEnableActio
 
 	public HexEnableActionPrius(DDLObject ddl) : base(ddl) {
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
-		HexList = ddl.GetValues<RivetAssetId>(0x70fa0319u);
+		HexList = ddl.GetValues<RivetAssetId>(0x70fa0319u, HexList);
 	}
 
 	[DDLRegistration(0x874b2194u)]

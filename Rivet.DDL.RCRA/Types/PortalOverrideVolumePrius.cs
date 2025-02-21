@@ -17,7 +17,7 @@ public class PortalOverrideVolumePrius : DDLObjectType, IDDLObjectType<PortalOve
 	public PortalOverrideVolumePrius(DDLObject ddl) : base(ddl) {
 		Atmosphere = ddl.GetValue<RivetAssetId>(0x79fd859au, Atmosphere);
 		ClipExteriorGeometry = ddl.GetValue<bool>(0x31613cd2u, ClipExteriorGeometry);
-		ExitPortals = ddl.GetValues<RivetAssetId>(0x0ef5c2d2u);
+		ExitPortals = ddl.GetValues<RivetAssetId>(0x0ef5c2d2u, ExitPortals);
 	}
 
 	[DDLRegistration(0x79fd859au)]

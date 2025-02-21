@@ -17,10 +17,10 @@ public class SceneEditorHotkey : DDLObjectType, IDDLObjectType<SceneEditorHotkey
 	public SceneEditorHotkey(DDLObject ddl) : base(ddl) {
 		ControlName = ddl.GetString(0xb2f8624a) ?? ControlName;
 		Description = ddl.GetString(0xe03811fd) ?? Description;
-		Key1 = ddl.GetStrings(0x1ccca4e0u);
-		Trigger1 = ddl.GetStrings(0x6c1d1481u);
-		Key2 = ddl.GetStrings(0x85c5f55au);
-		Trigger2 = ddl.GetStrings(0xf514453bu);
+		Key1 = ddl.GetStrings(0x1ccca4e0u, Key1);
+		Trigger1 = ddl.GetStrings(0x6c1d1481u, Trigger1);
+		Key2 = ddl.GetStrings(0x85c5f55au, Key2);
+		Trigger2 = ddl.GetStrings(0xf514453bu, Trigger2);
 	}
 
 	[DDLRegistration(0xb2f8624au)]
@@ -30,16 +30,16 @@ public class SceneEditorHotkey : DDLObjectType, IDDLObjectType<SceneEditorHotkey
 	public string? Description { get; set; } = default;
 
 	[DDLRegistration(0x1ccca4e0u)]
-	public List<string?> Key1 { get; set; } = [];
+	public List<string?> Key1 { get; set; } = [default, default, default, default];
 
 	[DDLRegistration(0x6c1d1481u)]
-	public List<string?> Trigger1 { get; set; } = [];
+	public List<string?> Trigger1 { get; set; } = [default, default, default, default];
 
 	[DDLRegistration(0x85c5f55au)]
-	public List<string?> Key2 { get; set; } = [];
+	public List<string?> Key2 { get; set; } = [default, default, default, default];
 
 	[DDLRegistration(0xf514453bu)]
-	public List<string?> Trigger2 { get; set; } = [];
+	public List<string?> Trigger2 { get; set; } = [default, default, default, default];
 
 	public static SceneEditorHotkey Create(DDLObject ddl) => new(ddl);
 }

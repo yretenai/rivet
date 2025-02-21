@@ -21,7 +21,7 @@ public class Proof4 : DDLObjectType, IDDLObjectType<Proof4> {
 		F64 = ddl.GetValue<double>(0x31e62289u, F64);
 		Bool = ddl.GetValue<bool>(0x6511f622u, Bool);
 		Boolean = ddl.GetValue<bool>(0x8b6feb50u, Boolean);
-		C = ddl.GetValues<int>(0xd4568861u);
+		C = ddl.GetValues<int>(0xd4568861u, C);
 		BitsB = ddl.GetBitset<BitsB>(0xb5956d7du, BitsBValues.Lookup);
 		Proof = ddl.GetObject<Proof3>(0xe2aa8c1cu);
 		Hash = ddl.GetDictionary<int, int>(0xe128a208, DDLMapTypeHandler.VisitInt, (mapId, mapDDL) => mapDDL.GetValue<int>(mapId));
@@ -42,10 +42,10 @@ public class Proof4 : DDLObjectType, IDDLObjectType<Proof4> {
 	public float B { get; set; } = 0.00f;
 
 	[DDLRegistration(0x4a321dc2u)]
-	public double D { get; set; } = 0;
+	public double D { get; set; } = 0.00d;
 
 	[DDLRegistration(0x31e62289u)]
-	public double F64 { get; set; } = 0;
+	public double F64 { get; set; } = 0.00d;
 
 	[DDLRegistration(0x6511f622u)]
 	public bool Bool { get; set; } = false;
@@ -54,7 +54,7 @@ public class Proof4 : DDLObjectType, IDDLObjectType<Proof4> {
 	public bool Boolean { get; set; } = false;
 
 	[DDLRegistration(0xd4568861u)]
-	public List<int> C { get; set; } = [];
+	public List<int> C { get; set; } = [0, 0, 0, 0];
 
 	[DDLRegistration(0xb5956d7du)]
 	public BitsB BitsB { get; set; } = (BitsB) 0x00000000;

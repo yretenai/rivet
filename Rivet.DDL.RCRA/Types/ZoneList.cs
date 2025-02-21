@@ -16,7 +16,7 @@ public class ZoneList : DDLObjectType, IDDLObjectType<ZoneList> {
 
 	public ZoneList(DDLObject ddl) : base(ddl) {
 		Platform = ddl.GetEnum<x104b06bd>(0xc3536dbbu, x104b06bdValues.Lookup);
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
 	}
 
 	[DDLRegistration(0xc3536dbbu, description: "Platform to which the list of zones will be restricted.")]

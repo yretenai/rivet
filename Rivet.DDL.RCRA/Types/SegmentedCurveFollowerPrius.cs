@@ -15,7 +15,7 @@ public class SegmentedCurveFollowerPrius : DDLObjectType, IDDLObjectType<Segment
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x6089bc34u);
 
 	public SegmentedCurveFollowerPrius(DDLObject ddl) : base(ddl) {
-		JointNames = ddl.GetStrings(0x0cedbe25u);
+		JointNames = ddl.GetStrings(0x0cedbe25u, JointNames);
 		Acceleration = ddl.GetValue<float>(0xb9f88dfbu, Acceleration);
 		Deceleration = ddl.GetValue<float>(0xc9ee30a8u, Deceleration);
 		MaxSpeed = ddl.GetValue<float>(0x16b83961u, MaxSpeed);

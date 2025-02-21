@@ -15,7 +15,7 @@ public class ThemeWidgetPalette : DDLObjectType, IDDLObjectType<ThemeWidgetPalet
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xdcda3a9au);
 
 	public ThemeWidgetPalette(DDLObject ddl) : base(ddl) {
-		ClassNames = ddl.GetStrings(0x019c7f29u);
+		ClassNames = ddl.GetStrings(0x019c7f29u, ClassNames);
 		ColorDefs = ddl.GetObjects<ThemeColorDef>(0x9eb68663u);
 	}
 

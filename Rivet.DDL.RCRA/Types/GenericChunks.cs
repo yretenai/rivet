@@ -15,7 +15,7 @@ public class GenericChunks : DDLObjectType, IDDLObjectType<GenericChunks> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x1c9c7798u);
 
 	public GenericChunks(DDLObject ddl) : base(ddl) {
-		Chunks = ddl.GetValues<RivetAssetId>(0xf9358ad2u);
+		Chunks = ddl.GetValues<RivetAssetId>(0xf9358ad2u, Chunks);
 		Min = ddl.GetValue<uint>(0x8b2e3419u, Min);
 		Max = ddl.GetValue<uint>(0xb7230b40u, Max);
 	}

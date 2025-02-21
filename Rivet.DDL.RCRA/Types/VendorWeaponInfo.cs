@@ -28,7 +28,7 @@ public class VendorWeaponInfo : DDLObjectType, IDDLObjectType<VendorWeaponInfo> 
 	public string? Special { get; set; } = "";
 
 	[DDLRegistration(0x4e14ab6bu)]
-	public List<VendorWeaponStat?> Stats { get; set; } = [];
+	public List<VendorWeaponStat?> Stats { get; set; } = [default, default, default, default];
 
 	[DDLRegistration(0x974a32b4u)]
 	public string? CustomStatName { get; set; } = "UI_VENDOR_KNOCKBACK";

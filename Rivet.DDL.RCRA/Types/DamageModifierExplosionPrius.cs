@@ -115,7 +115,7 @@ public class DamageModifierExplosionPrius : DamageModifierOutgoingPrius, IDDLObj
 	public float VictimExploderChance { get; set; } = 1.00f;
 
 	[DDLRegistration(0xcc96e476u)]
-	public List<ExplosionKnockbackData?> KnockbackData { get; set; } = [];
+	public List<ExplosionKnockbackData?> KnockbackData { get; set; } = [default, default, default, default];
 
 	public new static DamageModifierExplosionPrius Create(DDLObject ddl) => new(ddl);
 }

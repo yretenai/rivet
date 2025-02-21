@@ -15,8 +15,8 @@ public class UIVariationPort : DDLObjectType, IDDLObjectType<UIVariationPort> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xff43e949u);
 
 	public UIVariationPort(DDLObject ddl) : base(ddl) {
-		Variations = ddl.GetStrings(0x80850167u);
-		Conditions = ddl.GetValues<uint>(0x2f505790u);
+		Variations = ddl.GetStrings(0x80850167u, Variations);
+		Conditions = ddl.GetValues<uint>(0x2f505790u, Conditions);
 	}
 
 	[DDLRegistration(0x80850167u)]

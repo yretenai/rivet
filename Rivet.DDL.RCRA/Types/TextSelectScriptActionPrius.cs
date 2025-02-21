@@ -16,7 +16,7 @@ public class TextSelectScriptActionPrius : DDLObjectType, IDDLObjectType<TextSel
 
 	public TextSelectScriptActionPrius(DDLObject ddl) : base(ddl) {
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
-		TextLine = ddl.GetStrings(0xd5f69346u);
+		TextLine = ddl.GetStrings(0xd5f69346u, TextLine);
 	}
 
 	[DDLRegistration(0x874b2194u)]

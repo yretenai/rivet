@@ -35,7 +35,7 @@ public class Prims : DDLObjectType, IDDLObjectType<Prims> {
 	public float F32 { get; set; } = 9.00f;
 
 	[DDLRegistration(0x31e62289u)]
-	public double F64 { get; set; } = 102.4;
+	public double F64 { get; set; } = 102.40d;
 
 	[DDLRegistration(0xe88c5752u)]
 	public sbyte I8 { get; set; } = -8;

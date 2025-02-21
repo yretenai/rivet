@@ -15,7 +15,7 @@ public class HashListConfig : ConfigBase, IDDLObjectType<HashListConfig> {
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x7a9b07adu);
 
 	public HashListConfig(DDLObject ddl) : base(ddl) {
-		HashList = ddl.GetStrings(0x50a6559fu);
+		HashList = ddl.GetStrings(0x50a6559fu, HashList);
 	}
 
 	[DDLRegistration(0x50a6559fu, description: "List of strings to be processed by consumer.  User system should define specific actions.")]

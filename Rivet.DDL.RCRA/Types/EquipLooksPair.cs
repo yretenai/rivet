@@ -15,8 +15,8 @@ public class EquipLooksPair : DDLObjectType, IDDLObjectType<EquipLooksPair> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x95386222u);
 
 	public EquipLooksPair(DDLObject ddl) : base(ddl) {
-		EquippedLooks = ddl.GetStrings(0xda69e16bu);
-		UnequippedLooks = ddl.GetStrings(0x4cc12898u);
+		EquippedLooks = ddl.GetStrings(0xda69e16bu, EquippedLooks);
+		UnequippedLooks = ddl.GetStrings(0x4cc12898u, UnequippedLooks);
 		SoundSwitchGroupName = ddl.GetString(0x736eb367) ?? SoundSwitchGroupName;
 	}
 

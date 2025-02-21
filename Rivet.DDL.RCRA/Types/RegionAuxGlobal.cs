@@ -17,7 +17,7 @@ public class RegionAuxGlobal : DDLObjectType, IDDLObjectType<RegionAuxGlobal> {
 	public RegionAuxGlobal(DDLObject ddl) : base(ddl) {
 		Folders = ddl.GetDictionary<RivetAssetId, RegionFolderNode>(0xffddb037, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionFolderNode>(mapId));
 		ZoneAssetIdToFolder = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0xa18793c9, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
 	}
 
 	[DDLRegistration(0xffddb037u)]

@@ -17,7 +17,7 @@ public class ActivityClueModuleIndexAnimFilter : DDLObjectType, IDDLObjectType<A
 	public ActivityClueModuleIndexAnimFilter(DDLObject ddl) : base(ddl) {
 		AnimIndexStart = ddl.GetEnum<x85cb9e0e>(0x4c550411u, x85cb9e0eValues.Lookup);
 		AnimIndexMax = ddl.GetEnum<x85cb9e0e>(0x52cd44f8u, x85cb9e0eValues.Lookup);
-		ApplicableDrivers = ddl.GetStrings(0x0de635f6u);
+		ApplicableDrivers = ddl.GetStrings(0x0de635f6u, ApplicableDrivers);
 	}
 
 	[DDLRegistration(0x4c550411u, "Anim Index Start", "Assign this Index filter to the first user of this clue")]

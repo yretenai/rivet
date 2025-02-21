@@ -15,7 +15,7 @@ public class BreakableDeactivateGroupPrius : DDLObjectType, IDDLObjectType<Break
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x52125a76u);
 
 	public BreakableDeactivateGroupPrius(DDLObject ddl) : base(ddl) {
-		ActorList = ddl.GetValues<RivetAssetId>(0xd6a1cb3fu);
+		ActorList = ddl.GetValues<RivetAssetId>(0xd6a1cb3fu, ActorList);
 	}
 
 	[DDLRegistration(0xd6a1cb3fu, "Actors")]

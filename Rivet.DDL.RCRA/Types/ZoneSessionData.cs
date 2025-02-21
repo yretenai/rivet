@@ -24,7 +24,7 @@ public class ZoneSessionData : DDLObjectType, IDDLObjectType<ZoneSessionData> {
 		TargetSceneNodeStack = ddl.GetObjects<TargetSceneNode>(0x56235257u);
 		Regions = ddl.GetDictionary<RivetAssetId, RegionDefTemp>(0xa38d1acb, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionDefTemp>(mapId));
 		ActiveZone = ddl.GetValue<RivetAssetId>(0xf877d4f8u, ActiveZone);
-		ReferenceableZones = ddl.GetValues<RivetAssetId>(0xff5f46b4u);
+		ReferenceableZones = ddl.GetValues<RivetAssetId>(0xff5f46b4u, ReferenceableZones);
 		CameraPosition = ddl.GetObject<DDLVector3>(0x5498ef5eu);
 		CameraRotation = ddl.GetObject<DDLVector3>(0x3bc8935au);
 	}

@@ -18,13 +18,13 @@ public class BugItCaptureData : DDLObjectType, IDDLObjectType<BugItCaptureData> 
 		Lvl = ddl.GetString(0x91f5777c) ?? Lvl;
 		Chk = ddl.GetString(0xd08c9a3d) ?? Chk;
 		Region = ddl.GetString(0x36b6ba27) ?? Region;
-		Campos = ddl.GetValues<float>(0x14f0d99bu);
-		Camrot = ddl.GetValues<float>(0x89109856u);
-		Camup = ddl.GetValues<float>(0x01fa2ddfu);
-		Camright = ddl.GetValues<float>(0xd3727ecbu);
-		Heropos = ddl.GetValues<float>(0x2c9472f5u);
-		Herofwd = ddl.GetValues<float>(0x35f7b0a9u);
-		ZoneIds = ddl.GetValues<RivetAssetId>(0x7fad4147u);
+		Campos = ddl.GetValues<float>(0x14f0d99bu, Campos);
+		Camrot = ddl.GetValues<float>(0x89109856u, Camrot);
+		Camup = ddl.GetValues<float>(0x01fa2ddfu, Camup);
+		Camright = ddl.GetValues<float>(0xd3727ecbu, Camright);
+		Heropos = ddl.GetValues<float>(0x2c9472f5u, Heropos);
+		Herofwd = ddl.GetValues<float>(0x35f7b0a9u, Herofwd);
+		ZoneIds = ddl.GetValues<RivetAssetId>(0x7fad4147u, ZoneIds);
 		ZoneTransforms = ddl.GetObjects<DDLMatrix4>(0xa075da1bu);
 		ActiveZoneId = ddl.GetValue<RivetAssetId>(0x2e8e0ffau, ActiveZoneId);
 	}
@@ -39,22 +39,22 @@ public class BugItCaptureData : DDLObjectType, IDDLObjectType<BugItCaptureData> 
 	public string? Region { get; set; } = "";
 
 	[DDLRegistration(0x14f0d99bu)]
-	public List<float> Campos { get; set; } = [];
+	public List<float> Campos { get; set; } = [0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0x89109856u)]
-	public List<float> Camrot { get; set; } = [];
+	public List<float> Camrot { get; set; } = [0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0x01fa2ddfu)]
-	public List<float> Camup { get; set; } = [];
+	public List<float> Camup { get; set; } = [0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0xd3727ecbu)]
-	public List<float> Camright { get; set; } = [];
+	public List<float> Camright { get; set; } = [0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0x2c9472f5u)]
-	public List<float> Heropos { get; set; } = [];
+	public List<float> Heropos { get; set; } = [0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0x35f7b0a9u)]
-	public List<float> Herofwd { get; set; } = [];
+	public List<float> Herofwd { get; set; } = [0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0x7fad4147u)]
 	public List<RivetAssetId> ZoneIds { get; set; } = [];

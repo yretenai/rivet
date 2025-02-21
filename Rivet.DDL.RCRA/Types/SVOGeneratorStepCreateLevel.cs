@@ -19,7 +19,7 @@ public class SVOGeneratorStepCreateLevel : DDLObjectType, IDDLObjectType<SVOGene
 	}
 
 	[DDLRegistration(0xbe95476bu)]
-	public List<DDLTransform?> Mat { get; set; } = [];
+	public List<DDLTransform?> Mat { get; set; } = [default, default, default, default, default, default, default, default];
 
 	public static SVOGeneratorStepCreateLevel Create(DDLObject ddl) => new(ddl);
 }

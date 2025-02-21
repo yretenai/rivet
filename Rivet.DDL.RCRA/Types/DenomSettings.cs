@@ -15,7 +15,7 @@ public class DenomSettings : DDLObjectType, IDDLObjectType<DenomSettings> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xb8c5960du);
 
 	public DenomSettings(DDLObject ddl) : base(ddl) {
-		ModelOverride = ddl.GetValues<RivetAssetId>(0x50d70eaau);
+		ModelOverride = ddl.GetValues<RivetAssetId>(0x50d70eaau, ModelOverride);
 		MaterialOverride = ddl.GetValue<RivetAssetId>(0xffafa5a1u, MaterialOverride);
 		Scale = ddl.GetValue<float>(0xf515e945u, Scale);
 	}

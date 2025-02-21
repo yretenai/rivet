@@ -16,8 +16,8 @@ public class FlockingManagerConfig : ConfigBase, IDDLObjectType<FlockingManagerC
 
 	public FlockingManagerConfig(DDLObject ddl) : base(ddl) {
 		RefreshPeriod = ddl.GetValue<float>(0xef2d955fu, RefreshPeriod);
-		FlockTypeNames = ddl.GetStrings(0x046296c4u);
-		FlockConfigs = ddl.GetValues<RivetAssetId>(0xfdc1f358u);
+		FlockTypeNames = ddl.GetStrings(0x046296c4u, FlockTypeNames);
+		FlockConfigs = ddl.GetValues<RivetAssetId>(0xfdc1f358u, FlockConfigs);
 	}
 
 	[DDLRegistration(0xef2d955fu)]

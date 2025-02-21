@@ -15,8 +15,8 @@ public class RCSDictionary : DDLObjectType, IDDLObjectType<RCSDictionary> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xff733d7du);
 
 	public RCSDictionary(DDLObject ddl) : base(ddl) {
-		Keys = ddl.GetStrings(0x841e845cu);
-		Values = ddl.GetStrings(0x04df0281u);
+		Keys = ddl.GetStrings(0x841e845cu, Keys);
+		Values = ddl.GetStrings(0x04df0281u, Values);
 	}
 
 	[DDLRegistration(0x841e845cu)]

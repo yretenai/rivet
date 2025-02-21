@@ -18,9 +18,9 @@ public class NodeGraphSessionData : DDLObjectType, IDDLObjectType<NodeGraphSessi
 		AssetPath = ddl.GetString(0x0efa614b) ?? AssetPath;
 		GraphId = ddl.GetValue<RivetAssetId>(0x76b05713u, GraphId);
 		HoverNode = ddl.GetValue<RivetAssetId>(0xda1e4a39u, HoverNode);
-		SelectedNodes = ddl.GetValues<RivetAssetId>(0xf703b56eu);
-		SelectedConnections = ddl.GetValues<RivetAssetId>(0xfadc380eu);
-		HighlightedNodes = ddl.GetValues<RivetAssetId>(0xc423050bu);
+		SelectedNodes = ddl.GetValues<RivetAssetId>(0xf703b56eu, SelectedNodes);
+		SelectedConnections = ddl.GetValues<RivetAssetId>(0xfadc380eu, SelectedConnections);
+		HighlightedNodes = ddl.GetValues<RivetAssetId>(0xc423050bu, HighlightedNodes);
 		FocusData = ddl.GetObject<NodeGraphFocusData>(0x310012cfu);
 	}
 

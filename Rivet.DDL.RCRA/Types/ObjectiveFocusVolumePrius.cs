@@ -16,7 +16,7 @@ public class ObjectiveFocusVolumePrius : DDLObjectType, IDDLObjectType<Objective
 
 	public ObjectiveFocusVolumePrius(DDLObject ddl) : base(ddl) {
 		Mission = ddl.GetString(0x918d9104) ?? Mission;
-		Objectives = ddl.GetStrings(0xb7863755u);
+		Objectives = ddl.GetStrings(0xb7863755u, Objectives);
 	}
 
 	[DDLRegistration(0x918d9104u, description: "Mission that can be pinged while inside this volume.")]

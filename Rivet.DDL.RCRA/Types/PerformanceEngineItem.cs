@@ -18,7 +18,7 @@ public class PerformanceEngineItem : DDLObjectType, IDDLObjectType<PerformanceEn
 		ActivePerformanceClipDef = ddl.GetObject<AnimPerformanceClipDef>(0x0b92d34fu);
 		ActivePerformanceClipGroupPath = ddl.GetString(0xd933bd4a) ?? ActivePerformanceClipGroupPath;
 		ActivePerformanceClipPath = ddl.GetString(0x05873f7f) ?? ActivePerformanceClipPath;
-		AnimSetStack = ddl.GetStrings(0x5d0f513cu);
+		AnimSetStack = ddl.GetStrings(0x5d0f513cu, AnimSetStack);
 		AssetPath = ddl.GetString(0x0efa614b) ?? AssetPath;
 		BodyId = ddl.GetValue<RivetAssetId>(0x55e4c38fu, BodyId);
 		HeadId = ddl.GetValue<RivetAssetId>(0x9def3859u, HeadId);
@@ -74,7 +74,7 @@ public class PerformanceEngineItem : DDLObjectType, IDDLObjectType<PerformanceEn
 	public bool RequestPause { get; set; } = false;
 
 	[DDLRegistration(0xc23b3e16u)]
-	public double RequestTime { get; set; } = 0;
+	public double RequestTime { get; set; } = 0.00d;
 
 	[DDLRegistration(0x40f112b1u)]
 	public x5907f033 ShowAnimControllerHud { get; set; } = x5907f033.None;
@@ -83,7 +83,7 @@ public class PerformanceEngineItem : DDLObjectType, IDDLObjectType<PerformanceEn
 	public bool ShowAnimDebugHud { get; set; } = false;
 
 	[DDLRegistration(0x5f0458f5u)]
-	public double Time { get; set; } = 0;
+	public double Time { get; set; } = 0.00d;
 
 	public static PerformanceEngineItem Create(DDLObject ddl) => new(ddl);
 }

@@ -16,7 +16,7 @@ public class SceneEditorReparentSceneNodesInput : DDLObjectType, IDDLObjectType<
 
 	public SceneEditorReparentSceneNodesInput(DDLObject ddl) : base(ddl) {
 		NewParent = ddl.GetValue<RivetAssetId>(0xca715534u, NewParent);
-		Children = ddl.GetValues<RivetAssetId>(0x5b960ccau);
+		Children = ddl.GetValues<RivetAssetId>(0x5b960ccau, Children);
 	}
 
 	[DDLRegistration(0xca715534u)]

@@ -15,29 +15,29 @@ public class ZoneLoadStats : DDLObjectType, IDDLObjectType<ZoneLoadStats> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x0061c86cu);
 
 	public ZoneLoadStats(DDLObject ddl) : base(ddl) {
-		Time = ddl.GetValues<float>(0x5f0458f5u);
-		LoadRequested = ddl.GetValues<float>(0x4b7e549bu);
-		LoadFinished = ddl.GetValues<float>(0x539e147du);
-		Initialized = ddl.GetValues<float>(0x166ff4f5u);
-		Instantiated = ddl.GetValues<float>(0xfe5d1e35u);
+		Time = ddl.GetValues<float>(0x5f0458f5u, Time);
+		LoadRequested = ddl.GetValues<float>(0x4b7e549bu, LoadRequested);
+		LoadFinished = ddl.GetValues<float>(0x539e147du, LoadFinished);
+		Initialized = ddl.GetValues<float>(0x166ff4f5u, Initialized);
+		Instantiated = ddl.GetValues<float>(0xfe5d1e35u, Instantiated);
 		InitOverhead = ddl.GetValue<float>(0xad2699bdu, InitOverhead);
-		ZoneIds = ddl.GetValues<RivetAssetId>(0xb01078dbu);
+		ZoneIds = ddl.GetValues<RivetAssetId>(0xb01078dbu, ZoneIds);
 	}
 
 	[DDLRegistration(0x5f0458f5u)]
-	public List<float> Time { get; set; } = [];
+	public List<float> Time { get; set; } = [0.00f, 0.00f];
 
 	[DDLRegistration(0x4b7e549bu)]
-	public List<float> LoadRequested { get; set; } = [];
+	public List<float> LoadRequested { get; set; } = [0.00f, 0.00f];
 
 	[DDLRegistration(0x539e147du)]
-	public List<float> LoadFinished { get; set; } = [];
+	public List<float> LoadFinished { get; set; } = [0.00f, 0.00f];
 
 	[DDLRegistration(0x166ff4f5u)]
-	public List<float> Initialized { get; set; } = [];
+	public List<float> Initialized { get; set; } = [0.00f, 0.00f];
 
 	[DDLRegistration(0xfe5d1e35u)]
-	public List<float> Instantiated { get; set; } = [];
+	public List<float> Instantiated { get; set; } = [0.00f, 0.00f];
 
 	[DDLRegistration(0xad2699bdu)]
 	public float InitOverhead { get; set; } = 0.00f;

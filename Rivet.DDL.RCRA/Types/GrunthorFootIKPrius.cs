@@ -15,15 +15,15 @@ public class GrunthorFootIKPrius : DDLObjectType, IDDLObjectType<GrunthorFootIKP
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xdf4ed28au);
 
 	public GrunthorFootIKPrius(DDLObject ddl) : base(ddl) {
-		FootJoint = ddl.GetStrings(0x351d165eu);
-		IKChainID = ddl.GetStrings(0x81b8f1aeu);
+		FootJoint = ddl.GetStrings(0x351d165eu, FootJoint);
+		IKChainID = ddl.GetStrings(0x81b8f1aeu, IKChainID);
 	}
 
 	[DDLRegistration(0x351d165eu)]
-	public List<string?> FootJoint { get; set; } = [];
+	public List<string?> FootJoint { get; set; } = [default, default];
 
 	[DDLRegistration(0x81b8f1aeu)]
-	public List<string?> IKChainID { get; set; } = [];
+	public List<string?> IKChainID { get; set; } = [default, default];
 
 	public static GrunthorFootIKPrius Create(DDLObject ddl) => new(ddl);
 }

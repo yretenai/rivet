@@ -16,7 +16,7 @@ public class FirepointSetPrius : DDLObjectType, IDDLObjectType<FirepointSetPrius
 
 	public FirepointSetPrius(DDLObject ddl) : base(ddl) {
 		BotUsage = ddl.GetEnum<BotUsage>(0x37a8306du, BotUsageValues.Lookup);
-		Firepoints = ddl.GetValues<RivetAssetId>(0xb506afa2u);
+		Firepoints = ddl.GetValues<RivetAssetId>(0xb506afa2u, Firepoints);
 	}
 
 	[DDLRegistration(0x37a8306du)]

@@ -24,7 +24,7 @@ public class GameBotSargassoCentipedeBossPrius : BotPrius, IDDLObjectType<GameBo
 		PilotActor = ddl.GetValue<RivetAssetId>(0x17aacce7u, PilotActor);
 		PilotScale = ddl.GetValue<float>(0xbf99bf9au, PilotScale);
 		LocatorToAttachPilot = ddl.GetString(0x0d1ba870) ?? LocatorToAttachPilot;
-		DamageReactionThresholds = ddl.GetValues<float>(0xf746e5f2u);
+		DamageReactionThresholds = ddl.GetValues<float>(0xf746e5f2u, DamageReactionThresholds);
 		DamageReactionAnim = ddl.GetString(0x4b34244a) ?? DamageReactionAnim;
 		CanCelebrate = ddl.GetValue<bool>(0xcf82d041u, CanCelebrate);
 		CelebrateAnim = ddl.GetString(0xc8581959) ?? CelebrateAnim;

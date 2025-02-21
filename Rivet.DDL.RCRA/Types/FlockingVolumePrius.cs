@@ -15,7 +15,7 @@ public class FlockingVolumePrius : DDLObjectType, IDDLObjectType<FlockingVolumeP
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x8a5867aau);
 
 	public FlockingVolumePrius(DDLObject ddl) : base(ddl) {
-		EnabledTypes = ddl.GetStrings(0xd5c45476u);
+		EnabledTypes = ddl.GetStrings(0xd5c45476u, EnabledTypes);
 	}
 
 	[DDLRegistration(0xd5c45476u)]

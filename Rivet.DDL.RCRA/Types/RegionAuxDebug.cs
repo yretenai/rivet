@@ -15,7 +15,7 @@ public class RegionAuxDebug : DDLObjectType, IDDLObjectType<RegionAuxDebug> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x8f7093dau);
 
 	public RegionAuxDebug(DDLObject ddl) : base(ddl) {
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
 	}
 
 	[DDLRegistration(0x9c997da9u)]

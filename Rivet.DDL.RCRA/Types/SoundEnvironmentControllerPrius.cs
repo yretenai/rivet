@@ -23,9 +23,9 @@ public class SoundEnvironmentControllerPrius : DDLObjectType, IDDLObjectType<Sou
 		WwiseAuxSends = ddl.GetObjects<WwiseAuxSend>(0xc2c28c0bu);
 		WwiseStates = ddl.GetObjects<WwiseState>(0xa9ea28b0u);
 		DuckTargets = ddl.GetObjects<DuckTarget>(0x03cbb22cu);
-		ChildEmitters = ddl.GetValues<RivetAssetId>(0x9a566859u);
-		SateliteEmitters = ddl.GetValues<RivetAssetId>(0x79a1e898u);
-		Volumes = ddl.GetValues<RivetAssetId>(0x7b36c92du);
+		ChildEmitters = ddl.GetValues<RivetAssetId>(0x9a566859u, ChildEmitters);
+		SateliteEmitters = ddl.GetValues<RivetAssetId>(0x79a1e898u, SateliteEmitters);
+		Volumes = ddl.GetValues<RivetAssetId>(0x7b36c92du, Volumes);
 	}
 
 	[DDLRegistration(0xccb9b06au, description: "Position to test for activating and deactivating thethis environment")]

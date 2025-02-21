@@ -20,7 +20,7 @@ public class SVOGeneratorStepProcessVertsEntry : DDLObjectType, IDDLObjectType<S
 	}
 
 	[DDLRegistration(0x703109c8u)]
-	public List<DDLVector3?> Verts { get; set; } = [];
+	public List<DDLVector3?> Verts { get; set; } = [default, default, default];
 
 	[DDLRegistration(0x8a514a8du)]
 	public RivetAssetId Id { get; set; } = new RivetAssetId(0x0000000000000000);

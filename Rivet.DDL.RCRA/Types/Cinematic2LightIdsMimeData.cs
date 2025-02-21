@@ -15,7 +15,7 @@ public class Cinematic2LightIdsMimeData : DDLObjectType, IDDLObjectType<Cinemati
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x6a990e0eu);
 
 	public Cinematic2LightIdsMimeData(DDLObject ddl) : base(ddl) {
-		Tuids = ddl.GetValues<RivetAssetId>(0x005953f7u);
+		Tuids = ddl.GetValues<RivetAssetId>(0x005953f7u, Tuids);
 	}
 
 	[DDLRegistration(0x005953f7u)]

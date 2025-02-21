@@ -15,11 +15,11 @@ public class MeshPosDef : DDLObjectType, IDDLObjectType<MeshPosDef> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x3579701fu);
 
 	public MeshPosDef(DDLObject ddl) : base(ddl) {
-		Pos = ddl.GetValues<float>(0xaa8ccf65u);
+		Pos = ddl.GetValues<float>(0xaa8ccf65u, Pos);
 	}
 
 	[DDLRegistration(0xaa8ccf65u)]
-	public List<float> Pos { get; set; } = [];
+	public List<float> Pos { get; set; } = [0.00f, 0.00f, 0.00f];
 
 	public static MeshPosDef Create(DDLObject ddl) => new(ddl);
 }

@@ -15,7 +15,7 @@ public class RobotestLookLOD : DDLObjectType, IDDLObjectType<RobotestLookLOD> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xfe5f0120u);
 
 	public RobotestLookLOD(DDLObject ddl) : base(ddl) {
-		SubsetRemap = ddl.GetValues<ushort>(0xaa4b61eeu);
+		SubsetRemap = ddl.GetValues<ushort>(0xaa4b61eeu, SubsetRemap);
 	}
 
 	[DDLRegistration(0xaa4b61eeu, description: "Contents of the modelinst's subset_remap blob for this LOD")]

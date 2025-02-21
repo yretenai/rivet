@@ -60,7 +60,7 @@ public class PlanetDimension : DDLObjectType, IDDLObjectType<PlanetDimension> {
 	public ActivityReward? Reward { get; set; } = default;
 
 	[DDLRegistration(0xf00bc587u)]
-	public List<ActivityHint?> Hints { get; set; } = [];
+	public List<ActivityHint?> Hints { get; set; } = [default, default, default];
 
 	[DDLRegistration(0x5135ecc8u, "Unlock Condition", "The unlock sequence to use to determine if this pocket dimension is even accessible.")]
 	public ObjSysUnlockSequence? UnlockCondition { get; set; } = default;

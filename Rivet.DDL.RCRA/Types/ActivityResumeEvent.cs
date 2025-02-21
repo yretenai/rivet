@@ -16,8 +16,8 @@ public class ActivityResumeEvent : UDSEventBase, IDDLObjectType<ActivityResumeEv
 
 	public ActivityResumeEvent(DDLObject ddl) : base(ddl) {
 		ActivityId = ddl.GetString(0x875ebf15) ?? ActivityId;
-		InProgressActivities = ddl.GetStrings(0x65276378u);
-		CompletedActivities = ddl.GetStrings(0x30805634u);
+		InProgressActivities = ddl.GetStrings(0x65276378u, InProgressActivities);
+		CompletedActivities = ddl.GetStrings(0x30805634u, CompletedActivities);
 	}
 
 	[DDLRegistration(0x875ebf15u)]

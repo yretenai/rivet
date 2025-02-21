@@ -15,7 +15,7 @@ public class ZerpStonePrius : DDLObjectType, IDDLObjectType<ZerpStonePrius> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xce448bfau);
 
 	public ZerpStonePrius(DDLObject ddl) : base(ddl) {
-		SaveIDs = ddl.GetValues<int>(0xda96a499u);
+		SaveIDs = ddl.GetValues<int>(0xda96a499u, SaveIDs);
 		ZerpPickupActor = ddl.GetValue<RivetAssetId>(0x08305210u, ZerpPickupActor);
 	}
 

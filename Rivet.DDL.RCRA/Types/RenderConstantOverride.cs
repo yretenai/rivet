@@ -17,7 +17,7 @@ public class RenderConstantOverride : DDLObjectType, IDDLObjectType<RenderConsta
 	public RenderConstantOverride(DDLObject ddl) : base(ddl) {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		MaterialMappingName = ddl.GetString(0x981e6927) ?? MaterialMappingName;
-		Value = ddl.GetValues<float>(0x042494f5u);
+		Value = ddl.GetValues<float>(0x042494f5u, Value);
 	}
 
 	[DDLRegistration(0x6eb3beb6u, description: "Name of the node in the material graph this is being overridden")]
@@ -27,7 +27,7 @@ public class RenderConstantOverride : DDLObjectType, IDDLObjectType<RenderConsta
 	public string? MaterialMappingName { get; set; } = default;
 
 	[DDLRegistration(0x042494f5u)]
-	public List<float> Value { get; set; } = [];
+	public List<float> Value { get; set; } = [0.00f, 0.00f, 0.00f, 0.00f];
 
 	public static RenderConstantOverride Create(DDLObject ddl) => new(ddl);
 }

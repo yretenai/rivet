@@ -15,7 +15,7 @@ public class UI_CinematicInstanceRegion : DDLObjectType, IDDLObjectType<UI_Cinem
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xf889e44cu);
 
 	public UI_CinematicInstanceRegion(DDLObject ddl) : base(ddl) {
-		ChildZoneAssetPaths = ddl.GetValues<RivetAssetId>(0x52f50d8cu);
+		ChildZoneAssetPaths = ddl.GetValues<RivetAssetId>(0x52f50d8cu, ChildZoneAssetPaths);
 		ParentLevelAssetPath = ddl.GetValue<RivetAssetId>(0x34b79115u, ParentLevelAssetPath);
 		RegionAssetPath = ddl.GetValue<RivetAssetId>(0x501aedfbu, RegionAssetPath);
 	}

@@ -20,7 +20,7 @@ public class RoadMapNodePrius : DDLObjectType, IDDLObjectType<RoadMapNodePrius> 
 	}
 
 	[DDLRegistration(0xc8d16dd9u)]
-	public List<RoadMapNodeLink?> Links { get; set; } = [];
+	public List<RoadMapNodeLink?> Links { get; set; } = [default, default, default, default, default, default];
 
 	[DDLRegistration(0xcd6020fdu, "Authored Node Data", "Path data that Houdini will pass on to each vehicle node it generates.")]
 	public AuthoredNodeData? AuthoredNodeData { get; set; } = default;

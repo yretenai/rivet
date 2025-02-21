@@ -16,7 +16,7 @@ public class LocationChangeEvent : UDSEventBase, IDDLObjectType<LocationChangeEv
 
 	public LocationChangeEvent(DDLObject ddl) : base(ddl) {
 		ZoneId = ddl.GetString(0xc74cfc3f) ?? ZoneId;
-		MapPosition = ddl.GetValues<float>(0xef79418eu);
+		MapPosition = ddl.GetValues<float>(0xef79418eu, MapPosition);
 	}
 
 	[DDLRegistration(0xc74cfc3fu)]

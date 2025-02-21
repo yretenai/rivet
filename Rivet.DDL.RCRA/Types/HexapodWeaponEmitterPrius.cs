@@ -15,7 +15,7 @@ public class HexapodWeaponEmitterPrius : ComponentEmitterBasePrius, IDDLObjectTy
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x3323edd2u);
 
 	public HexapodWeaponEmitterPrius(DDLObject ddl) : base(ddl) {
-		Locators = ddl.GetStrings(0x3c7848ccu);
+		Locators = ddl.GetStrings(0x3c7848ccu, Locators);
 		ZOffset = ddl.GetValue<float>(0x3bfa5d66u, ZOffset);
 		EmitFromUser = ddl.GetValue<bool>(0x13b721dbu, EmitFromUser);
 	}

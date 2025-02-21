@@ -16,7 +16,7 @@ public class ItemLoadoutCategoryList : DDLObjectType, IDDLObjectType<ItemLoadout
 
 	public ItemLoadoutCategoryList(DDLObject ddl) : base(ddl) {
 		Category = ddl.GetEnum<xc457a124>(0xfc4da4b1u, xc457a124Values.Lookup);
-		ItemLoadoutConfigs = ddl.GetValues<RivetAssetId>(0x81444aa9u);
+		ItemLoadoutConfigs = ddl.GetValues<RivetAssetId>(0x81444aa9u, ItemLoadoutConfigs);
 	}
 
 	[DDLRegistration(0xfc4da4b1u, "Category", "How is this loadout categorized")]

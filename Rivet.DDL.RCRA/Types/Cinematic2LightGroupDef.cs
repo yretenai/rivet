@@ -18,7 +18,7 @@ public class Cinematic2LightGroupDef : DDLObjectType, IDDLObjectType<Cinematic2L
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		Active = ddl.GetValue<bool>(0x7566b265u, Active);
-		LightIds = ddl.GetValues<RivetAssetId>(0xe971d214u);
+		LightIds = ddl.GetValues<RivetAssetId>(0xe971d214u, LightIds);
 	}
 
 	[DDLRegistration(0x8a514a8du)]

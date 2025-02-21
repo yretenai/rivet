@@ -20,7 +20,7 @@ public class VanityBundleConfig : ConfigBase, IDDLObjectType<VanityBundleConfig>
 		DisplayName = ddl.GetString(0xeaf33243) ?? DisplayName;
 		DisplayDesc = ddl.GetString(0xbf65e011) ?? DisplayDesc;
 		DisplayImage = ddl.GetValue<RivetAssetId>(0x113d8e81u, DisplayImage);
-		VanityItems = ddl.GetValues<RivetAssetId>(0x471b6f0au);
+		VanityItems = ddl.GetValues<RivetAssetId>(0x471b6f0au, VanityItems);
 		Accessories = ddl.GetEnums<x56bca86c>(0xacd6779bu, x56bca86cValues.Lookup);
 		CoversVoice = ddl.GetValue<bool>(0x026a653cu, CoversVoice);
 	}

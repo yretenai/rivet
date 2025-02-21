@@ -20,7 +20,7 @@ public class ItemLoadoutComponentPrius : DDLObjectType, IDDLObjectType<ItemLoado
 		CanDeferLoadout = ddl.GetValue<bool>(0x7896fc25u, CanDeferLoadout);
 		CheckSaveFile = ddl.GetValue<bool>(0x1f2771a6u, CheckSaveFile);
 		ResetInventory = ddl.GetValue<bool>(0xc31e0661u, ResetInventory);
-		RandomConfigArray = ddl.GetValues<RivetAssetId>(0x42787a93u);
+		RandomConfigArray = ddl.GetValues<RivetAssetId>(0x42787a93u, RandomConfigArray);
 		LoadoutOverrideList = ddl.GetObjects<ItemLoadoutComponentOverrideListElement>(0x8629f694u);
 	}
 

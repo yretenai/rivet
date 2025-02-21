@@ -17,8 +17,8 @@ public class ConsoleSettings : DDLObjectType, IDDLObjectType<ConsoleSettings> {
 	public ConsoleSettings(DDLObject ddl) : base(ddl) {
 		Enable = ddl.GetValue<bool>(0xcdd88655u, Enable);
 		Font = ddl.GetString(0xe004c862) ?? Font;
-		ForegroundColor = ddl.GetValues<byte>(0xc18c46e8u);
-		BackgroundColor = ddl.GetValues<byte>(0x00cbda4au);
+		ForegroundColor = ddl.GetValues<byte>(0xc18c46e8u, ForegroundColor);
+		BackgroundColor = ddl.GetValues<byte>(0x00cbda4au, BackgroundColor);
 	}
 
 	[DDLRegistration(0xcdd88655u)]
@@ -28,10 +28,10 @@ public class ConsoleSettings : DDLObjectType, IDDLObjectType<ConsoleSettings> {
 	public string? Font { get; set; } = default;
 
 	[DDLRegistration(0xc18c46e8u)]
-	public List<byte> ForegroundColor { get; set; } = [];
+	public List<byte> ForegroundColor { get; set; } = [0xc0, 0xc0, 0xc0];
 
 	[DDLRegistration(0x00cbda4au)]
-	public List<byte> BackgroundColor { get; set; } = [];
+	public List<byte> BackgroundColor { get; set; } = [0x00, 0x00, 0x00];
 
 	public static ConsoleSettings Create(DDLObject ddl) => new(ddl);
 }

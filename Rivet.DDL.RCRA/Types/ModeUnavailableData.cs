@@ -15,7 +15,7 @@ public class ModeUnavailableData : DDLObjectType, IDDLObjectType<ModeUnavailable
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xa52f8acau);
 
 	public ModeUnavailableData(DDLObject ddl) : base(ddl) {
-		Objectives = ddl.GetStrings(0xb7863755u);
+		Objectives = ddl.GetStrings(0xb7863755u, Objectives);
 	}
 
 	[DDLRegistration(0xb7863755u)]

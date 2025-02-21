@@ -16,7 +16,7 @@ public class MaterialGraphDefDragAndDrop : DDLObjectType, IDDLObjectType<Materia
 
 	public MaterialGraphDefDragAndDrop(DDLObject ddl) : base(ddl) {
 		Nodes = ddl.GetObjects<MaterialGraphNode>(0x046ec93du);
-		NodeIds = ddl.GetValues<uint>(0x6931d8a7u);
+		NodeIds = ddl.GetValues<uint>(0x6931d8a7u, NodeIds);
 	}
 
 	[DDLRegistration(0x046ec93du)]

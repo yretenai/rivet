@@ -21,7 +21,7 @@ public class ConduitComponentPrius : DDLObjectType, IDDLObjectType<ConduitCompon
 		ShareSoundSource = ddl.GetValue<bool>(0x85d9e149u, ShareSoundSource);
 		SoundSourceLocator = ddl.GetString(0x88e0f6db) ?? SoundSourceLocator;
 		MaxActivateEventDelay = ddl.GetValue<uint>(0x380f11ccu, MaxActivateEventDelay);
-		Mappings = ddl.GetValues<RivetAssetId>(0xec2bfe69u);
+		Mappings = ddl.GetValues<RivetAssetId>(0xec2bfe69u, Mappings);
 	}
 
 	[DDLRegistration(0x492b64a1u, "On Conduit Destroy")]

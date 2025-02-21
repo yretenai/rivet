@@ -24,7 +24,7 @@ public class TweakVarVariable : DDLObjectType, IDDLObjectType<TweakVarVariable> 
 		ToolTip = ddl.GetString(0x981e7a68) ?? ToolTip;
 		Type = ddl.GetEnum<xb44e71fc>(0xbc4e9799u, xb44e71fcValues.Lookup);
 		Value = ddl.GetString(0x042494f5) ?? Value;
-		HoudiniChoiceList = ddl.GetStrings(0xfe7fac93u);
+		HoudiniChoiceList = ddl.GetStrings(0xfe7fac93u, HoudiniChoiceList);
 		HoudiniSortValue = ddl.GetValue<int>(0x78be4c82u, HoudiniSortValue);
 	}
 

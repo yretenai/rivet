@@ -15,10 +15,10 @@ public class RegionAuxInstanceContainer : DDLObjectType, IDDLObjectType<RegionAu
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xad0c0870u);
 
 	public RegionAuxInstanceContainer(DDLObject ddl) : base(ddl) {
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
-		NavExclusionZones = ddl.GetValues<RivetAssetId>(0xfaaad4d2u);
-		NavInclusionZones = ddl.GetValues<RivetAssetId>(0xc4bd3cf8u);
-		Regions = ddl.GetValues<RivetAssetId>(0xa38d1acbu);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
+		NavExclusionZones = ddl.GetValues<RivetAssetId>(0xfaaad4d2u, NavExclusionZones);
+		NavInclusionZones = ddl.GetValues<RivetAssetId>(0xc4bd3cf8u, NavInclusionZones);
+		Regions = ddl.GetValues<RivetAssetId>(0xa38d1acbu, Regions);
 	}
 
 	[DDLRegistration(0x9c997da9u)]

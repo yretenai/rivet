@@ -16,14 +16,14 @@ public class MeshGeneratorQueryCompleteEvent : EventBase, IDDLObjectType<MeshGen
 
 	public MeshGeneratorQueryCompleteEvent(DDLObject ddl) : base(ddl) {
 		Count = ddl.GetValue<int>(0x9c8a88a3u, Count);
-		GroupPositions = ddl.GetValues<uint>(0x21c69f64u);
+		GroupPositions = ddl.GetValues<uint>(0x21c69f64u, GroupPositions);
 	}
 
 	[DDLRegistration(0x9c8a88a3u)]
 	public int Count { get; set; } = 0;
 
 	[DDLRegistration(0x21c69f64u)]
-	public List<uint> GroupPositions { get; set; } = [];
+	public List<uint> GroupPositions { get; set; } = [0x00000000, 0x00000000, 0x00000000, 0x00000000];
 
 	public new static MeshGeneratorQueryCompleteEvent Create(DDLObject ddl) => new(ddl);
 }

@@ -15,8 +15,8 @@ public class UpdatePoolsMessage : DDLObjectType, IDDLObjectType<UpdatePoolsMessa
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xdb8404f5u);
 
 	public UpdatePoolsMessage(DDLObject ddl) : base(ddl) {
-		PoolIds = ddl.GetValues<ushort>(0x540841afu);
-		PoolGenerations = ddl.GetValues<byte>(0x4b3b2283u);
+		PoolIds = ddl.GetValues<ushort>(0x540841afu, PoolIds);
+		PoolGenerations = ddl.GetValues<byte>(0x4b3b2283u, PoolGenerations);
 	}
 
 	[DDLRegistration(0x540841afu)]

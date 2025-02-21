@@ -15,7 +15,7 @@ public class RegionMacroEconomyEntry : DDLObjectType, IDDLObjectType<RegionMacro
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x39a2e421u);
 
 	public RegionMacroEconomyEntry(DDLObject ddl) : base(ddl) {
-		Regions = ddl.GetValues<RivetAssetId>(0xa38d1acbu);
+		Regions = ddl.GetValues<RivetAssetId>(0xa38d1acbu, Regions);
 		EconConfig = ddl.GetValue<RivetAssetId>(0xda3a4a5cu, EconConfig);
 	}
 

@@ -21,7 +21,7 @@ public class UI_OutsourceMaterialDef : DDLObjectType, IDDLObjectType<UI_Outsourc
 		DoubleSided = ddl.GetValue<bool>(0x3e799799u, DoubleSided);
 		SortTriangles = ddl.GetValue<bool>(0x38ec511cu, SortTriangles);
 		AlphaProperties = ddl.GetObject<MaterialAlpha>(0xa731268eu);
-		Textures = ddl.GetValues<RivetAssetId>(0x5f860466u);
+		Textures = ddl.GetValues<RivetAssetId>(0x5f860466u, Textures);
 	}
 
 	[DDLRegistration(0x6eb3beb6u)]

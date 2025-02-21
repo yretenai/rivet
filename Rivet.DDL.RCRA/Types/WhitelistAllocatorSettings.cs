@@ -16,7 +16,7 @@ public class WhitelistAllocatorSettings : DDLObjectType, IDDLObjectType<Whitelis
 
 	public WhitelistAllocatorSettings(DDLObject ddl) : base(ddl) {
 		WhitelistAllocatorSize = ddl.GetValue<uint>(0xb2caad4fu, WhitelistAllocatorSize);
-		WhitelistAssetPaths = ddl.GetStrings(0x8a2e669bu);
+		WhitelistAssetPaths = ddl.GetStrings(0x8a2e669bu, WhitelistAssetPaths);
 	}
 
 	[DDLRegistration(0xb2caad4fu)]

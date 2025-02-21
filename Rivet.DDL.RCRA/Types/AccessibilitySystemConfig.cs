@@ -17,7 +17,7 @@ public class AccessibilitySystemConfig : ConfigBase, IDDLObjectType<Accessibilit
 	public AccessibilitySystemConfig(DDLObject ddl) : base(ddl) {
 		ColorBlindFilters = ddl.GetObject<ColorBlindFilterData>(0x51f45b69u);
 		AccessibilityMaterials = ddl.GetObjects<AccessibilityMaterial>(0xb95dd4c4u);
-		HeroHighlightBypasses = ddl.GetStrings(0xcac899f1u);
+		HeroHighlightBypasses = ddl.GetStrings(0xcac899f1u, HeroHighlightBypasses);
 		ControlRemapData = ddl.GetObject<AccessibilityRemapData>(0x6e300f35u);
 	}
 

@@ -15,8 +15,8 @@ public class StrandStatePrius : DDLObjectType, IDDLObjectType<StrandStatePrius> 
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xa863b90eu);
 
 	public StrandStatePrius(DDLObject ddl) : base(ddl) {
-		StrandLooks = ddl.GetStrings(0x06098c4fu);
-		CardLooks = ddl.GetStrings(0x07015642u);
+		StrandLooks = ddl.GetStrings(0x06098c4fu, StrandLooks);
+		CardLooks = ddl.GetStrings(0x07015642u, CardLooks);
 	}
 
 	[DDLRegistration(0x06098c4fu)]

@@ -15,7 +15,7 @@ public class DebugGraphList_Tools : DDLObjectType, IDDLObjectType<DebugGraphList
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xb3a1cdbfu);
 
 	public DebugGraphList_Tools(DDLObject ddl) : base(ddl) {
-		Graphs = ddl.GetValues<RivetAssetId>(0xaa1a5a96u);
+		Graphs = ddl.GetValues<RivetAssetId>(0xaa1a5a96u, Graphs);
 	}
 
 	[DDLRegistration(0xaa1a5a96u)]

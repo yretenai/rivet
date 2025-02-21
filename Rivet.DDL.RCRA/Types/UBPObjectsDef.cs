@@ -18,7 +18,7 @@ public class UBPObjectsDef : DDLObjectType, IDDLObjectType<UBPObjectsDef> {
 		SchemaVersion = ddl.GetString(0x5af80aee) ?? SchemaVersion;
 		ContextType = ddl.GetEnum<xe07d4302>(0x0aa38892u, xe07d4302Values.Lookup);
 		ContextId = ddl.GetString(0x06df9fd7) ?? ContextId;
-		Entities = ddl.GetStrings(0x539bbbc3u);
+		Entities = ddl.GetStrings(0x539bbbc3u, Entities);
 	}
 
 	[DDLRegistration(0x5af80aeeu)]

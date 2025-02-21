@@ -16,7 +16,7 @@ public class IndexListMessage : DDLObjectType, IDDLObjectType<IndexListMessage> 
 
 	public IndexListMessage(DDLObject ddl) : base(ddl) {
 		MessageType = ddl.GetValue<byte>(0xc56e3adau, MessageType);
-		Indexes = ddl.GetValues<short>(0x5b788b6au);
+		Indexes = ddl.GetValues<short>(0x5b788b6au, Indexes);
 	}
 
 	[DDLRegistration(0xc56e3adau)]

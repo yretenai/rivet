@@ -16,7 +16,7 @@ public class VanitySetConfig : ConfigBase, IDDLObjectType<VanitySetConfig> {
 
 	public VanitySetConfig(DDLObject ddl) : base(ddl) {
 		DisplayName = ddl.GetString(0xeaf33243) ?? DisplayName;
-		VanityBundles = ddl.GetValues<RivetAssetId>(0x229d71b5u);
+		VanityBundles = ddl.GetValues<RivetAssetId>(0x229d71b5u, VanityBundles);
 		DefaultColor = ddl.GetValue<byte>(0x7ccd1470u, DefaultColor);
 		IsDuplicate = ddl.GetValue<bool>(0xa6036107u, IsDuplicate);
 		OriginalSet = ddl.GetValue<RivetAssetId>(0x254f8245u, OriginalSet);

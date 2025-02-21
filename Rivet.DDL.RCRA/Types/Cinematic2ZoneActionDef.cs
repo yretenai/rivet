@@ -19,7 +19,7 @@ public class Cinematic2ZoneActionDef : DDLObjectType, IDDLObjectType<Cinematic2Z
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 		DurationType = ddl.GetEnum<x29c933e2>(0x41e2529fu, x29c933e2Values.Lookup);
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
-		ZonePaths = ddl.GetValues<RivetAssetId>(0x075b87a7u);
+		ZonePaths = ddl.GetValues<RivetAssetId>(0x075b87a7u, ZonePaths);
 		ZoneOp = ddl.GetEnum<x39897f27>(0x8c608af2u, x39897f27Values.Lookup);
 		VisibleTypes = ddl.GetBitset<x0cc20fb0>(0x6d3935b5u, x0cc20fb0Values.Lookup);
 	}

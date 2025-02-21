@@ -15,7 +15,7 @@ public class UniqueDancerData : DDLObjectType, IDDLObjectType<UniqueDancerData> 
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x2b9ae231u);
 
 	public UniqueDancerData(DDLObject ddl) : base(ddl) {
-		DancerActors = ddl.GetValues<RivetAssetId>(0x222c526fu);
+		DancerActors = ddl.GetValues<RivetAssetId>(0x222c526fu, DancerActors);
 	}
 
 	[DDLRegistration(0x222c526fu)]

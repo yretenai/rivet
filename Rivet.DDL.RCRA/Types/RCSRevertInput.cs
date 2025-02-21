@@ -15,7 +15,7 @@ public class RCSRevertInput : DDLObjectType, IDDLObjectType<RCSRevertInput> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xfb615158u);
 
 	public RCSRevertInput(DDLObject ddl) : base(ddl) {
-		Views = ddl.GetStrings(0x08a35046u);
+		Views = ddl.GetStrings(0x08a35046u, Views);
 		IfNotModified = ddl.GetValue<bool>(0xb4a69317u, IfNotModified);
 		Changelist = ddl.GetValue<uint>(0x03b0ddc6u, Changelist);
 	}

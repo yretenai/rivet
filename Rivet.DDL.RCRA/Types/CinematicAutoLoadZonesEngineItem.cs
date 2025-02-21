@@ -15,7 +15,7 @@ public class CinematicAutoLoadZonesEngineItem : DDLObjectType, IDDLObjectType<Ci
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xb62c987au);
 
 	public CinematicAutoLoadZonesEngineItem(DDLObject ddl) : base(ddl) {
-		ZoneList = ddl.GetStrings(0x79dfcd60u);
+		ZoneList = ddl.GetStrings(0x79dfcd60u, ZoneList);
 	}
 
 	[DDLRegistration(0x79dfcd60u)]

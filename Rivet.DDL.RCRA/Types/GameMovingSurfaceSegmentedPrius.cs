@@ -15,7 +15,7 @@ public class GameMovingSurfaceSegmentedPrius : MovingSurfacePrius, IDDLObjectTyp
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x82c3312au);
 
 	public GameMovingSurfaceSegmentedPrius(DDLObject ddl) : base(ddl) {
-		SegmentedJoints = ddl.GetStrings(0x99936213u);
+		SegmentedJoints = ddl.GetStrings(0x99936213u, SegmentedJoints);
 	}
 
 	[DDLRegistration(0x99936213u)]

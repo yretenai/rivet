@@ -15,7 +15,7 @@ public class ActorLinkExample : DDLObjectType, IDDLObjectType<ActorLinkExample> 
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xaf559073u);
 
 	public ActorLinkExample(DDLObject ddl) : base(ddl) {
-		Volumes = ddl.GetValues<RivetAssetId>(0x7b36c92du);
+		Volumes = ddl.GetValues<RivetAssetId>(0x7b36c92du, Volumes);
 		AnyActor = ddl.GetValue<RivetAssetId>(0x3750276du, AnyActor);
 		AnyModelOrVolumeActor = ddl.GetValue<RivetAssetId>(0x3f45340au, AnyModelOrVolumeActor);
 		AnyKindOfModel = ddl.GetValue<RivetAssetId>(0x7bc48dc6u, AnyKindOfModel);

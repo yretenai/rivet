@@ -15,7 +15,7 @@ public class Cinematic2TrackControlMimeData : DDLObjectType, IDDLObjectType<Cine
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x5657451bu);
 
 	public Cinematic2TrackControlMimeData(DDLObject ddl) : base(ddl) {
-		Tuids = ddl.GetValues<RivetAssetId>(0x005953f7u);
+		Tuids = ddl.GetValues<RivetAssetId>(0x005953f7u, Tuids);
 	}
 
 	[DDLRegistration(0x005953f7u)]

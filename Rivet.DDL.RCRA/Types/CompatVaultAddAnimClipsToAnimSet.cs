@@ -16,7 +16,7 @@ public class CompatVaultAddAnimClipsToAnimSet : DDLObjectType, IDDLObjectType<Co
 
 	public CompatVaultAddAnimClipsToAnimSet(DDLObject ddl) : base(ddl) {
 		Type = ddl.GetEnum<x63e8ba6e>(0xbc4e9799u, x63e8ba6eValues.Lookup);
-		AnimClips = ddl.GetValues<RivetAssetId>(0x8f5f7a83u);
+		AnimClips = ddl.GetValues<RivetAssetId>(0x8f5f7a83u, AnimClips);
 	}
 
 	[DDLRegistration(0xbc4e9799u)]

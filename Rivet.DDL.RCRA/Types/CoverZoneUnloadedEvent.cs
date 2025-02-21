@@ -15,7 +15,7 @@ public class CoverZoneUnloadedEvent : EventBase, IDDLObjectType<CoverZoneUnloade
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xab9da79fu);
 
 	public CoverZoneUnloadedEvent(DDLObject ddl) : base(ddl) {
-		CoverZoneIndexUnloadedBitField = ddl.GetValues<ulong>(0xac6e0740u);
+		CoverZoneIndexUnloadedBitField = ddl.GetValues<ulong>(0xac6e0740u, CoverZoneIndexUnloadedBitField);
 	}
 
 	[DDLRegistration(0xac6e0740u)]

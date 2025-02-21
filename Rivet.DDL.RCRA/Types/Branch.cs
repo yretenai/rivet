@@ -15,10 +15,10 @@ public class Branch : DDLObjectType, IDDLObjectType<Branch> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x85fe5578u);
 
 	public Branch(DDLObject ddl) : base(ddl) {
-		CodeBranches = ddl.GetValues<RivetAssetId>(0xa1772e58u);
+		CodeBranches = ddl.GetValues<RivetAssetId>(0xa1772e58u, CodeBranches);
 		MayaVersion = ddl.GetString(0xeeb2b4cc) ?? MayaVersion;
 		BranchName = ddl.GetString(0x0c44d190) ?? BranchName;
-		Games = ddl.GetStrings(0xe670e7f0u);
+		Games = ddl.GetStrings(0xe670e7f0u, Games);
 		HoudiniEngine = ddl.GetObject<HoudiniEngineData>(0x1c0b36beu);
 		Code = ddl.GetObject<CodeData>(0x4785f028u);
 		MayaScripts = ddl.GetObjects<MayaScriptData>(0x8cb0f031u);

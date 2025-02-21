@@ -15,7 +15,7 @@ public class GoldBoltSaveData : DDLObjectType, IDDLObjectType<GoldBoltSaveData> 
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x387bf6b7u);
 
 	public GoldBoltSaveData(DDLObject ddl) : base(ddl) {
-		CollectedBoltHashes = ddl.GetValues<uint>(0x6856baf9u);
+		CollectedBoltHashes = ddl.GetValues<uint>(0x6856baf9u, CollectedBoltHashes);
 		InfiniteHealthEnabled = ddl.GetValue<bool>(0x2d728e1du, InfiniteHealthEnabled);
 		InfiniteAmmoEnabled = ddl.GetValue<bool>(0xe4dd68c7u, InfiniteAmmoEnabled);
 		RPGEnabled = ddl.GetValue<bool>(0x9922b40eu, RPGEnabled);

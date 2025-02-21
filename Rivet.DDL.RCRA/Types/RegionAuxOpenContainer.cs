@@ -21,11 +21,11 @@ public class RegionAuxOpenContainer : DDLObjectType, IDDLObjectType<RegionAuxOpe
 		MapOverlay = ddl.GetObject<Region2DMapOverlay>(0x10c367a4u);
 		Folders = ddl.GetDictionary<RivetAssetId, RegionFolderNode>(0xffddb037, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionFolderNode>(mapId));
 		ZoneAssetIdToFolder = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0xa18793c9, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
 		NavFormat = ddl.GetEnum<x287f0b35>(0x0b7842eau, x287f0b35Values.Lookup);
-		NavExclusionZones = ddl.GetValues<RivetAssetId>(0xfaaad4d2u);
-		NavInclusionZones = ddl.GetValues<RivetAssetId>(0xc4bd3cf8u);
-		Regions = ddl.GetValues<RivetAssetId>(0xa38d1acbu);
+		NavExclusionZones = ddl.GetValues<RivetAssetId>(0xfaaad4d2u, NavExclusionZones);
+		NavInclusionZones = ddl.GetValues<RivetAssetId>(0xc4bd3cf8u, NavInclusionZones);
+		Regions = ddl.GetValues<RivetAssetId>(0xa38d1acbu, Regions);
 	}
 
 	[DDLRegistration(0xe406382bu, "Tile Radius")]

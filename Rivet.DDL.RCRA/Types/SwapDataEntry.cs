@@ -17,7 +17,7 @@ public class SwapDataEntry : DDLObjectType, IDDLObjectType<SwapDataEntry> {
 	public SwapDataEntry(DDLObject ddl) : base(ddl) {
 		BoltModelId = ddl.GetEnum<BoltReplacementType>(0xcadf612au, BoltReplacementTypeValues.Lookup);
 		BaseModel = ddl.GetValue<RivetAssetId>(0x5fef7c3au, BaseModel);
-		RndOptModel = ddl.GetValues<RivetAssetId>(0xd2a40a13u);
+		RndOptModel = ddl.GetValues<RivetAssetId>(0xd2a40a13u, RndOptModel);
 		ForceYUpAndRot = ddl.GetValue<bool>(0x4bdef177u, ForceYUpAndRot);
 		BronzeSettings = ddl.GetObject<DenomSettings>(0xe212882fu);
 		SilverSettings = ddl.GetObject<DenomSettings>(0x37ce4eefu);

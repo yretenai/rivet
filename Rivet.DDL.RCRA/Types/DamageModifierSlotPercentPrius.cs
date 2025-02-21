@@ -15,7 +15,7 @@ public class DamageModifierSlotPercentPrius : DamageModifierIncomingPrius, IDDLO
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xee49070au);
 
 	public DamageModifierSlotPercentPrius(DDLObject ddl) : base(ddl) {
-		PercentSlot = ddl.GetValues<float>(0x65dc2ad9u);
+		PercentSlot = ddl.GetValues<float>(0x65dc2ad9u, PercentSlot);
 	}
 
 	[DDLRegistration(0x65dc2ad9u)]

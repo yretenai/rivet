@@ -16,7 +16,7 @@ public class DebugOutfittingList : DDLObjectType, IDDLObjectType<DebugOutfitting
 
 	public DebugOutfittingList(DDLObject ddl) : base(ddl) {
 		Category = ddl.GetString(0xfc4da4b1) ?? Category;
-		ItemConfig = ddl.GetValues<RivetAssetId>(0xa88f833fu);
+		ItemConfig = ddl.GetValues<RivetAssetId>(0xa88f833fu, ItemConfig);
 	}
 
 	[DDLRegistration(0xfc4da4b1u)]

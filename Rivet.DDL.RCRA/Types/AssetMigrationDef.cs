@@ -17,7 +17,7 @@ public class AssetMigrationDef : DDLObjectType, IDDLObjectType<AssetMigrationDef
 	public AssetMigrationDef(DDLObject ddl) : base(ddl) {
 		Host = ddl.GetString(0xffb7d34d) ?? Host;
 		Port = ddl.GetString(0x73019d7c) ?? Port;
-		Extensions = ddl.GetStrings(0x0ec6c290u);
+		Extensions = ddl.GetStrings(0x0ec6c290u, Extensions);
 		Projects = ddl.GetObjects<AssetMigrationProject>(0xa6920ed4u);
 	}
 

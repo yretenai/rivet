@@ -16,7 +16,7 @@ public class ActorToggleLookActionPrius : DDLObjectType, IDDLObjectType<ActorTog
 
 	public ActorToggleLookActionPrius(DDLObject ddl) : base(ddl) {
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
-		Looks = ddl.GetStrings(0xec785832u);
+		Looks = ddl.GetStrings(0xec785832u, Looks);
 	}
 
 	[DDLRegistration(0x874b2194u)]

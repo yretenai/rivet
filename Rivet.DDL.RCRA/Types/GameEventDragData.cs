@@ -15,7 +15,7 @@ public class GameEventDragData : DDLObjectType, IDDLObjectType<GameEventDragData
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xc8f056b9u);
 
 	public GameEventDragData(DDLObject ddl) : base(ddl) {
-		GameEventNames = ddl.GetStrings(0xf323c89fu);
+		GameEventNames = ddl.GetStrings(0xf323c89fu, GameEventNames);
 	}
 
 	[DDLRegistration(0xf323c89fu)]

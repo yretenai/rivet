@@ -19,12 +19,12 @@ public class DamageModifierPirateShieldPrius : DDLObjectType, IDDLObjectType<Dam
 		FrameLook = ddl.GetString(0xc7cde2a9) ?? FrameLook;
 		ShieldSectionHealth = ddl.GetValue<float>(0xcd95b826u, ShieldSectionHealth);
 		ShieldedAnimset = ddl.GetValue<RivetAssetId>(0x1124259au, ShieldedAnimset);
-		ShieldChunkLooks = ddl.GetStrings(0x175c672du);
+		ShieldChunkLooks = ddl.GetStrings(0x175c672du, ShieldChunkLooks);
 		StartEnabled = ddl.GetValue<bool>(0x6f36ca8bu, StartEnabled);
 	}
 
 	[DDLRegistration(0x946e89deu)]
-	public List<ShieldSectionData?> ShieldSection { get; set; } = [];
+	public List<ShieldSectionData?> ShieldSection { get; set; } = [default, default, default, default];
 
 	[DDLRegistration(0xc7cde2a9u)]
 	public string? FrameLook { get; set; } = default;

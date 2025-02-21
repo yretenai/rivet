@@ -29,10 +29,10 @@ public class PerformanceSessionData : DDLObjectType, IDDLObjectType<PerformanceS
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 		SelectionData = ddl.GetObject<PerformanceSelectionData>(0x4a3db851u);
 		AnimClipData = ddl.GetObjects<PerformanceAnimClipData>(0x9878f47cu);
-		AnimSets = ddl.GetStrings(0x03492d19u);
+		AnimSets = ddl.GetStrings(0x03492d19u, AnimSets);
 		Selection = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x145893db, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
-		MuteNameList = ddl.GetStrings(0x595577bcu);
-		SoloNameList = ddl.GetStrings(0x51729e93u);
+		MuteNameList = ddl.GetStrings(0x595577bcu, MuteNameList);
+		SoloNameList = ddl.GetStrings(0x51729e93u, SoloNameList);
 	}
 
 	[DDLRegistration(0xebb9cd11u)]

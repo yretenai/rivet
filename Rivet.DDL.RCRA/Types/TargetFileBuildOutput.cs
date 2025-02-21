@@ -15,10 +15,10 @@ public class TargetFileBuildOutput : DDLObjectType, IDDLObjectType<TargetFileBui
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x2c4ae382u);
 
 	public TargetFileBuildOutput(DDLObject ddl) : base(ddl) {
-		Messages = ddl.GetStrings(0x2103a3e6u);
-		MessageFormatStrings = ddl.GetStrings(0xf604188fu);
-		MessageIsValidation = ddl.GetValues<bool>(0xa21b5c64u);
-		Levels = ddl.GetValues<int>(0xa1522a7eu);
+		Messages = ddl.GetStrings(0x2103a3e6u, Messages);
+		MessageFormatStrings = ddl.GetStrings(0xf604188fu, MessageFormatStrings);
+		MessageIsValidation = ddl.GetValues<bool>(0xa21b5c64u, MessageIsValidation);
+		Levels = ddl.GetValues<int>(0xa1522a7eu, Levels);
 	}
 
 	[DDLRegistration(0x2103a3e6u)]

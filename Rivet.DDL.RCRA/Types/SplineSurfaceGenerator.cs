@@ -15,7 +15,7 @@ public class SplineSurfaceGenerator : SplineGenerator, IDDLObjectType<SplineSurf
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xdbccbfe2u);
 
 	public SplineSurfaceGenerator(DDLObject ddl) : base(ddl) {
-		Curve = ddl.GetValues<RivetAssetId>(0x4eca9176u);
+		Curve = ddl.GetValues<RivetAssetId>(0x4eca9176u, Curve);
 		VertexColor = ddl.GetObject<DDLVector3>(0x6e07bf94u);
 		VertexAlpha = ddl.GetValue<float>(0xd8b1ce17u, VertexAlpha);
 		VertexSpacing = ddl.GetObject<DDLVector2>(0x513026ceu);

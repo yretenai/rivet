@@ -15,7 +15,7 @@ public class ActorAttachmentPrius : DDLObjectType, IDDLObjectType<ActorAttachmen
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x9c92ff8fu);
 
 	public ActorAttachmentPrius(DDLObject ddl) : base(ddl) {
-		AttachedList = ddl.GetValues<RivetAssetId>(0xe6e52d78u);
+		AttachedList = ddl.GetValues<RivetAssetId>(0xe6e52d78u, AttachedList);
 		JointAttachList = ddl.GetObjects<JointAttachmentItem>(0x16ce71afu);
 		CurveAttachList = ddl.GetObjects<CurveAttachmentItem>(0xe29b1947u);
 		DestroyAttachmentsOnDestroy = ddl.GetValue<bool>(0xea296149u, DestroyAttachmentsOnDestroy);

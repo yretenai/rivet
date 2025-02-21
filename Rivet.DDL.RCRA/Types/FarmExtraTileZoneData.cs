@@ -16,7 +16,7 @@ public class FarmExtraTileZoneData : DDLObjectType, IDDLObjectType<FarmExtraTile
 
 	public FarmExtraTileZoneData(DDLObject ddl) : base(ddl) {
 		TileName = ddl.GetString(0x58a6cd7d) ?? TileName;
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
 		LightingConditions = ddl.GetObject<LightingConditionBitSet>(0xfda14c35u);
 	}
 

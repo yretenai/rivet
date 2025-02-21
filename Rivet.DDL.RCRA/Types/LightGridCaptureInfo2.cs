@@ -18,7 +18,7 @@ public class LightGridCaptureInfo2 : DDLObjectType, IDDLObjectType<LightGridCapt
 		JobName = ddl.GetString(0x7645386b) ?? JobName;
 		JobInfo = ddl.GetObject<CaptureJobInfo>(0xe3ef773au);
 		GridInfo = ddl.GetObjects<CaptureGridInfo2>(0x374cc4d3u);
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
 		Atmosphere = ddl.GetValue<RivetAssetId>(0x79fd859au, Atmosphere);
 		ErrorLogPath = ddl.GetValue<RivetAssetId>(0xeace710au, ErrorLogPath);
 		ProgressLogPath = ddl.GetValue<RivetAssetId>(0x0d644b55u, ProgressLogPath);

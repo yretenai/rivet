@@ -18,7 +18,7 @@ public class ProjectileThrowingConfig : ConfigBase, IDDLObjectType<ProjectileThr
 		DesiredFlightTime = ddl.GetValue<float>(0xd292ec09u, DesiredFlightTime);
 		MinSpeed = ddl.GetValue<float>(0xf0d89680u, MinSpeed);
 		MaxSpeed = ddl.GetValue<float>(0x16b83961u, MaxSpeed);
-		ArcHeights = ddl.GetValues<float>(0x5f3d6c97u);
+		ArcHeights = ddl.GetValues<float>(0x5f3d6c97u, ArcHeights);
 		CollCheckWidth = ddl.GetValue<float>(0x74e30d9bu, CollCheckWidth);
 		MaxPredictionSpeed = ddl.GetValue<float>(0x0276306eu, MaxPredictionSpeed);
 		MaxPredictionSpeedTraversal = ddl.GetValue<float>(0x1cdc53fdu, MaxPredictionSpeedTraversal);
@@ -35,7 +35,7 @@ public class ProjectileThrowingConfig : ConfigBase, IDDLObjectType<ProjectileThr
 	public float MaxSpeed { get; set; } = 50.00f;
 
 	[DDLRegistration(0x5f3d6c97u)]
-	public List<float> ArcHeights { get; set; } = [];
+	public List<float> ArcHeights { get; set; } = [3.00f, 8.00f, 0.50f];
 
 	[DDLRegistration(0x74e30d9bu)]
 	public float CollCheckWidth { get; set; } = 0.10f;

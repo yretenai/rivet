@@ -54,7 +54,7 @@ public class MissionNodeGameDef : MissionNodeSharedDef, IDDLObjectType<MissionNo
 	public MissionActivityCardInfo? ActivityCard { get; set; } = default;
 
 	[DDLRegistration(0xf00bc587u, "Activity Hints")]
-	public List<ActivityHint?> Hints { get; set; } = [];
+	public List<ActivityHint?> Hints { get; set; } = [default, default, default];
 
 	[DDLRegistration(0x67055436u, "Activity Intent Checkpoint/Planet")]
 	public string? ActivityIntentTarget { get; set; } = default;

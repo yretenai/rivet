@@ -27,7 +27,7 @@ public class VisualEffectDef : DDLObjectType, IDDLObjectType<VisualEffectDef> {
 		SortDistanceBias = ddl.GetValue<float>(0x4fa1d0a7u, SortDistanceBias);
 		LightingConditions = ddl.GetObject<LightingConditionBitSet>(0xfda14c35u);
 		RenderOrder = ddl.GetObjects<VisualEffectRenderOrder>(0xda75b44fu);
-		PreviewNames = ddl.GetStrings(0x7bf595b0u);
+		PreviewNames = ddl.GetStrings(0x7bf595b0u, PreviewNames);
 		CullEditorOnlyNodes = ddl.GetValue<bool>(0x9dbbff92u, CullEditorOnlyNodes);
 		OverrideLightingCondition = ddl.GetValue<bool>(0xb22388b9u, OverrideLightingCondition);
 		SharedAssets = ddl.GetObjects<VisualEffectSharedAssetNode>(0xc9a541b9u);

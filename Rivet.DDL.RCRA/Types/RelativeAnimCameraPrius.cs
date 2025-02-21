@@ -16,7 +16,7 @@ public class RelativeAnimCameraPrius : CameraPrius, IDDLObjectType<RelativeAnimC
 
 	public RelativeAnimCameraPrius(DDLObject ddl) : base(ddl) {
 		RelativeActor = ddl.GetValue<RivetAssetId>(0xc843c120u, RelativeActor);
-		CameraAnimList = ddl.GetStrings(0x3bb9260bu);
+		CameraAnimList = ddl.GetStrings(0x3bb9260bu, CameraAnimList);
 		DoCollision = ddl.GetValue<bool>(0x198fefc3u, DoCollision);
 	}
 

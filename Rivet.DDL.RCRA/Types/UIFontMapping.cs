@@ -17,7 +17,7 @@ public class UIFontMapping : DDLObjectType, IDDLObjectType<UIFontMapping> {
 	public UIFontMapping(DDLObject ddl) : base(ddl) {
 		Language = ddl.GetEnum<x0572515d>(0x2edaccc5u, x0572515dValues.Lookup);
 		Font = ddl.GetString(0xe004c862) ?? Font;
-		FontsToReplace = ddl.GetStrings(0x34a083a1u);
+		FontsToReplace = ddl.GetStrings(0x34a083a1u, FontsToReplace);
 	}
 
 	[DDLRegistration(0x2edaccc5u, description: "The language for which to do the swap.")]

@@ -15,7 +15,7 @@ public class VaultFindReferencesOutput : DDLObjectType, IDDLObjectType<VaultFind
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x5ceb8851u);
 
 	public VaultFindReferencesOutput(DDLObject ddl) : base(ddl) {
-		Results = ddl.GetValues<RivetAssetId>(0x9e49872cu);
+		Results = ddl.GetValues<RivetAssetId>(0x9e49872cu, Results);
 	}
 
 	[DDLRegistration(0x9e49872cu)]

@@ -18,7 +18,7 @@ public class BotMusicValue : DDLObjectType, IDDLObjectType<BotMusicValue> {
 		Category = ddl.GetString(0xfc4da4b1) ?? Category;
 		Value = ddl.GetValue<float>(0x042494f5u, Value);
 		Radius = ddl.GetValue<float>(0x0504203du, Radius);
-		Bots = ddl.GetValues<RivetAssetId>(0x412f304du);
+		Bots = ddl.GetValues<RivetAssetId>(0x412f304du, Bots);
 	}
 
 	[DDLRegistration(0xfc4da4b1u)]

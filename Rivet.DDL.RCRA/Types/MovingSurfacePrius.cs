@@ -21,7 +21,7 @@ public class MovingSurfacePrius : DDLObjectType, IDDLObjectType<MovingSurfacePri
 		ReferenceJoint = ddl.GetString(0x248a2a1c) ?? ReferenceJoint;
 		UpdateRiderGravity = ddl.GetValue<bool>(0xab4308c3u, UpdateRiderGravity);
 		NavDataZoneFile = ddl.GetValue<RivetAssetId>(0xb1ee35afu, NavDataZoneFile);
-		SoundEmitterIDs = ddl.GetValues<RivetAssetId>(0xbfdcebd1u);
+		SoundEmitterIDs = ddl.GetValues<RivetAssetId>(0xbfdcebd1u, SoundEmitterIDs);
 	}
 
 	[DDLRegistration(0x44427fe9u, "Motion Style")]

@@ -19,7 +19,7 @@ public class ColorGradeDef : DDLObjectType, IDDLObjectType<ColorGradeDef> {
 		HueSatOps = ddl.GetDictionary<RivetAssetId, ColorGradeHueSatOpDef>(0xe991d44a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ColorGradeHueSatOpDef>(mapId));
 		CurvesOps = ddl.GetDictionary<RivetAssetId, ColorGradeCurvesOpDef>(0xf68be22b, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ColorGradeCurvesOpDef>(mapId));
 		VibranceOps = ddl.GetDictionary<RivetAssetId, ColorGradeVibranceOpDef>(0x117ed8a8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ColorGradeVibranceOpDef>(mapId));
-		OpOrder = ddl.GetValues<RivetAssetId>(0x1890c60au);
+		OpOrder = ddl.GetValues<RivetAssetId>(0x1890c60au, OpOrder);
 	}
 
 	[DDLRegistration(0x02a7e1a2u)]

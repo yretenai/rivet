@@ -20,7 +20,7 @@ public class FogOfWarSavedMapArea : DDLObjectType, IDDLObjectType<FogOfWarSavedM
 		CellDimensions = ddl.GetObject<DDLVector2>(0x59bf8ea9u);
 		ColumnCount = ddl.GetValue<uint>(0x0bc37dc3u, ColumnCount);
 		RowCount = ddl.GetValue<uint>(0x98b569fau, RowCount);
-		RevealedCellsBitSet = ddl.GetValues<byte>(0x2cc32101u);
+		RevealedCellsBitSet = ddl.GetValues<byte>(0x2cc32101u, RevealedCellsBitSet);
 	}
 
 	[DDLRegistration(0x7fc08274u)]

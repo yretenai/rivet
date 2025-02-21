@@ -6,7 +6,7 @@ using System.Text.Json;
 
 namespace Rivet.DDL.Generator.Structs;
 
-public class DDLTypeField {
+public record DDLTypeField {
 	public uint Id { get; set; }
 	public uint TypeId { get; set; }
 	public uint EnumTypeId { get; set; }

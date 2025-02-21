@@ -16,7 +16,7 @@ public class CritterTypeData : DDLObjectType, IDDLObjectType<CritterTypeData> {
 
 	public CritterTypeData(DDLObject ddl) : base(ddl) {
 		Config = ddl.GetValue<RivetAssetId>(0xeaf2611bu, Config);
-		Planets = ddl.GetStrings(0xbc30e83eu);
+		Planets = ddl.GetStrings(0xbc30e83eu, Planets);
 	}
 
 	[DDLRegistration(0xeaf2611bu)]

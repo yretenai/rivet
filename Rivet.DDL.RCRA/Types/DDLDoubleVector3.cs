@@ -21,13 +21,13 @@ public class DDLDoubleVector3 : DDLObjectType, IDDLObjectType<DDLDoubleVector3> 
 	}
 
 	[DDLRegistration(0x5e33418du)]
-	public double X { get; set; } = 0;
+	public double X { get; set; } = 0.00d;
 
 	[DDLRegistration(0x2934711bu)]
-	public double Y { get; set; } = 0;
+	public double Y { get; set; } = 0.00d;
 
 	[DDLRegistration(0xb03d20a1u)]
-	public double Z { get; set; } = 0;
+	public double Z { get; set; } = 0.00d;
 
 	public static DDLDoubleVector3 Create(DDLObject ddl) => new(ddl);
 }

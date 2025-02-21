@@ -15,7 +15,7 @@ public class AnimClueSpotlightPrius : DDLObjectType, IDDLObjectType<AnimClueSpot
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x96608c54u);
 
 	public AnimClueSpotlightPrius(DDLObject ddl) : base(ddl) {
-		AimTargets = ddl.GetValues<RivetAssetId>(0x40252365u);
+		AimTargets = ddl.GetValues<RivetAssetId>(0x40252365u, AimTargets);
 		AimDurationMin = ddl.GetValue<float>(0x887f7c8fu, AimDurationMin);
 		AimDurationMax = ddl.GetValue<float>(0xb47243d6u, AimDurationMax);
 	}

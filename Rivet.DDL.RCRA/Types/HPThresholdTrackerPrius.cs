@@ -15,7 +15,7 @@ public class HPThresholdTrackerPrius : DDLObjectType, IDDLObjectType<HPThreshold
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xcdc9cb43u);
 
 	public HPThresholdTrackerPrius(DDLObject ddl) : base(ddl) {
-		Thresholds = ddl.GetValues<float>(0xd9bfdd69u);
+		Thresholds = ddl.GetValues<float>(0xd9bfdd69u, Thresholds);
 	}
 
 	[DDLRegistration(0xd9bfdd69u, "HP Thresholds", "Fractions of health, eg. 0.5 for <= 50% of max health remaining")]

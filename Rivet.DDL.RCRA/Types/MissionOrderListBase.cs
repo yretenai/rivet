@@ -16,7 +16,7 @@ public class MissionOrderListBase : DDLObjectType, IDDLObjectType<MissionOrderLi
 
 	public MissionOrderListBase(DDLObject ddl) : base(ddl) {
 		MissionOrderListId = ddl.GetString(0x12518503) ?? MissionOrderListId;
-		MissionOrderConfigs = ddl.GetValues<RivetAssetId>(0x01066a49u);
+		MissionOrderConfigs = ddl.GetValues<RivetAssetId>(0x01066a49u, MissionOrderConfigs);
 	}
 
 	[DDLRegistration(0x12518503u)]

@@ -18,7 +18,7 @@ public class BotComboMoveFinaleBarrage : BotComboMoveBase, IDDLObjectType<BotCom
 		PortalActorAsset = ddl.GetValue<RivetAssetId>(0xfec29c86u, PortalActorAsset);
 		PortalSpawnArea = ddl.GetValue<RivetAssetId>(0x03c1fe36u, PortalSpawnArea);
 		ProjectileShotConfig = ddl.GetValue<RivetAssetId>(0x1b3f8e19u, ProjectileShotConfig);
-		ProjectileActor = ddl.GetValues<RivetAssetId>(0x1c826ff4u);
+		ProjectileActor = ddl.GetValues<RivetAssetId>(0x1c826ff4u, ProjectileActor);
 		MinInterval = ddl.GetValue<float>(0x41da1c70u, MinInterval);
 		MaxInterval = ddl.GetValue<float>(0x8dd7677fu, MaxInterval);
 		MinDuration = ddl.GetValue<float>(0xde43737bu, MinDuration);

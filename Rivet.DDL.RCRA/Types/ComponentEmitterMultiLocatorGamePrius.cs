@@ -15,8 +15,8 @@ public class ComponentEmitterMultiLocatorGamePrius : ComponentEmitterBasePrius, 
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x1ff647bau);
 
 	public ComponentEmitterMultiLocatorGamePrius(DDLObject ddl) : base(ddl) {
-		DefaultLocators = ddl.GetStrings(0xba29f75fu);
-		UpgradedLocators = ddl.GetStrings(0x02fe7ad2u);
+		DefaultLocators = ddl.GetStrings(0xba29f75fu, DefaultLocators);
+		UpgradedLocators = ddl.GetStrings(0x02fe7ad2u, UpgradedLocators);
 	}
 
 	[DDLRegistration(0xba29f75fu)]

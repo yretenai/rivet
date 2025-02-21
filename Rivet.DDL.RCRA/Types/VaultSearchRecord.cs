@@ -18,7 +18,7 @@ public class VaultSearchRecord : DDLObjectType, IDDLObjectType<VaultSearchRecord
 		SearchOption = ddl.GetEnum<xbd1cea43>(0x20a91273u, xbd1cea43Values.Lookup);
 		SortOption = ddl.GetEnum<xee77c9ca>(0xbca28051u, xee77c9caValues.Lookup);
 		SearchText = ddl.GetString(0xc95f3b85) ?? SearchText;
-		ExtensionFilters = ddl.GetStrings(0x202d7af1u);
+		ExtensionFilters = ddl.GetStrings(0x202d7af1u, ExtensionFilters);
 	}
 
 	[DDLRegistration(0x20a91273u)]

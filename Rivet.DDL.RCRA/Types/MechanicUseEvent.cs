@@ -15,7 +15,7 @@ public class MechanicUseEvent : UDSEventBase, IDDLObjectType<MechanicUseEvent> {
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x15365323u);
 
 	public MechanicUseEvent(DDLObject ddl) : base(ddl) {
-		UsedMechanics = ddl.GetStrings(0xd8ad4a41u);
+		UsedMechanics = ddl.GetStrings(0xd8ad4a41u, UsedMechanics);
 	}
 
 	[DDLRegistration(0xd8ad4a41u)]

@@ -17,7 +17,7 @@ public class VariantConfiguration : DDLObjectType, IDDLObjectType<VariantConfigu
 	public VariantConfiguration(DDLObject ddl) : base(ddl) {
 		Variant = ddl.GetEnum<xc3e5efea>(0xf0a9dc95u, xc3e5efeaValues.Lookup);
 		ValidLookGroups = ddl.GetObjects<VariantLookData>(0xe1d6fd5bu);
-		VariantConstantLooks = ddl.GetStrings(0x8729cb27u);
+		VariantConstantLooks = ddl.GetStrings(0x8729cb27u, VariantConstantLooks);
 	}
 
 	[DDLRegistration(0xf0a9dc95u)]

@@ -16,15 +16,15 @@ public class RobotestLookState : DDLObjectType, IDDLObjectType<RobotestLookState
 
 	public RobotestLookState(DDLObject ddl) : base(ddl) {
 		LookIds = ddl.GetObjects<RobotestLookId>(0x69a18facu);
-		EnabledLooks = ddl.GetValues<ushort>(0x79df49b5u);
-		DisabledLooks = ddl.GetValues<ushort>(0x5fab67c8u);
+		EnabledLooks = ddl.GetValues<ushort>(0x79df49b5u, EnabledLooks);
+		DisabledLooks = ddl.GetValues<ushort>(0x5fab67c8u, DisabledLooks);
 		LookGroups = ddl.GetObjects<RobotestLookId>(0xb6c4ab29u);
-		EnabledLookGroups = ddl.GetValues<ushort>(0x8da6c2ebu);
+		EnabledLookGroups = ddl.GetValues<ushort>(0x8da6c2ebu, EnabledLookGroups);
 		LODs = ddl.GetObjects<RobotestLookLOD>(0x46fb376du);
-		ActiveJointBspheresRemap = ddl.GetValues<ushort>(0x92ca2d75u);
-		ActiveRigidBodyRemap = ddl.GetValues<ushort>(0xefcbb882u);
-		ActiveClothRemap = ddl.GetValues<ushort>(0xe1de9ca7u);
-		ActiveClothJointsRemap = ddl.GetValues<ushort>(0xa2a1dad2u);
+		ActiveJointBspheresRemap = ddl.GetValues<ushort>(0x92ca2d75u, ActiveJointBspheresRemap);
+		ActiveRigidBodyRemap = ddl.GetValues<ushort>(0xefcbb882u, ActiveRigidBodyRemap);
+		ActiveClothRemap = ddl.GetValues<ushort>(0xe1de9ca7u, ActiveClothRemap);
+		ActiveClothJointsRemap = ddl.GetValues<ushort>(0xa2a1dad2u, ActiveClothJointsRemap);
 	}
 
 	[DDLRegistration(0x69a18facu, description: "Info on all looks on this model.")]

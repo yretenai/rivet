@@ -15,7 +15,7 @@ public class TriggerConditionMatchActorPrius : TriggerConditionAlwaysPrius, IDDL
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xb24c6aacu);
 
 	public TriggerConditionMatchActorPrius(DDLObject ddl) : base(ddl) {
-		Actors = ddl.GetValues<RivetAssetId>(0xe153be82u);
+		Actors = ddl.GetValues<RivetAssetId>(0xe153be82u, Actors);
 	}
 
 	[DDLRegistration(0xe153be82u, "Actor to match", "Only if the actor matches one of these")]

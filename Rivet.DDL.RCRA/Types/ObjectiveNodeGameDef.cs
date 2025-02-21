@@ -19,7 +19,7 @@ public class ObjectiveNodeGameDef : ObjectiveNodeSharedDef, IDDLObjectType<Objec
 		SegmentComplete = ddl.GetValue<bool>(0x93cbc267u, SegmentComplete);
 		UIMode = ddl.GetEnum<x41993474>(0x970a7e07u, x41993474Values.Lookup);
 		InfoUI = ddl.GetObject<ObjectiveNodeInfoUI>(0x13490c9du);
-		AlternatePlanets = ddl.GetStrings(0xf3f7896eu);
+		AlternatePlanets = ddl.GetStrings(0xf3f7896eu, AlternatePlanets);
 		TaskMode = ddl.GetEnum<x41993474>(0xef10b498u, x41993474Values.Lookup);
 		TaskInfo = ddl.GetObject<ObjectiveTaskInfo>(0xb353c264u);
 		AllowGameIntent = ddl.GetValue<bool>(0x3d5f845bu, AllowGameIntent);

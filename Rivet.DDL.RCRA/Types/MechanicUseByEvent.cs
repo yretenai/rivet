@@ -15,7 +15,7 @@ public class MechanicUseByEvent : UDSEventBase, IDDLObjectType<MechanicUseByEven
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x9da4847du);
 
 	public MechanicUseByEvent(DDLObject ddl) : base(ddl) {
-		UsedMechanics = ddl.GetStrings(0xd8ad4a41u);
+		UsedMechanics = ddl.GetStrings(0xd8ad4a41u, UsedMechanics);
 		InitiatorActor = ddl.GetString(0x556b1ac5) ?? InitiatorActor;
 	}
 

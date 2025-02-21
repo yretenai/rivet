@@ -15,19 +15,19 @@ public class AnimVisDumpJointTransformDef : DDLObjectType, IDDLObjectType<AnimVi
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x012ed1a1u);
 
 	public AnimVisDumpJointTransformDef(DDLObject ddl) : base(ddl) {
-		V0 = ddl.GetValues<float>(0xbe89f55cu);
-		V1 = ddl.GetValues<float>(0xc98ec5cau);
-		V2 = ddl.GetValues<float>(0x50879470u);
+		V0 = ddl.GetValues<float>(0xbe89f55cu, V0);
+		V1 = ddl.GetValues<float>(0xc98ec5cau, V1);
+		V2 = ddl.GetValues<float>(0x50879470u, V2);
 	}
 
 	[DDLRegistration(0xbe89f55cu)]
-	public List<float> V0 { get; set; } = [];
+	public List<float> V0 { get; set; } = [0.00f, 0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0xc98ec5cau)]
-	public List<float> V1 { get; set; } = [];
+	public List<float> V1 { get; set; } = [0.00f, 0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0x50879470u)]
-	public List<float> V2 { get; set; } = [];
+	public List<float> V2 { get; set; } = [0.00f, 0.00f, 0.00f, 0.00f];
 
 	public static AnimVisDumpJointTransformDef Create(DDLObject ddl) => new(ddl);
 }

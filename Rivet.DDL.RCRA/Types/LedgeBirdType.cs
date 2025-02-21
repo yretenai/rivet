@@ -17,7 +17,7 @@ public class LedgeBirdType : DDLObjectType, IDDLObjectType<LedgeBirdType> {
 	public LedgeBirdType(DDLObject ddl) : base(ddl) {
 		TypeName = ddl.GetString(0x4b6c9353) ?? TypeName;
 		Config = ddl.GetValue<RivetAssetId>(0xeaf2611bu, Config);
-		Planets = ddl.GetStrings(0xbc30e83eu);
+		Planets = ddl.GetStrings(0xbc30e83eu, Planets);
 	}
 
 	[DDLRegistration(0x4b6c9353u)]

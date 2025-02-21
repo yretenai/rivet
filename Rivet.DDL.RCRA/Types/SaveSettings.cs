@@ -16,12 +16,12 @@ public class SaveSettings : DDLObjectType, IDDLObjectType<SaveSettings> {
 
 	public SaveSettings(DDLObject ddl) : base(ddl) {
 		NumUsers = ddl.GetValue<int>(0x43184e68u, NumUsers);
-		SaveVersion = ddl.GetValues<uint>(0x49c19a2au);
-		SaveTypeNames = ddl.GetStrings(0x78bd86e4u);
-		SaveTypeSizes = ddl.GetValues<uint>(0x3c1048cdu);
-		NewTypeSizes = ddl.GetValues<uint>(0xd5a36e11u);
+		SaveVersion = ddl.GetValues<uint>(0x49c19a2au, SaveVersion);
+		SaveTypeNames = ddl.GetStrings(0x78bd86e4u, SaveTypeNames);
+		SaveTypeSizes = ddl.GetValues<uint>(0x3c1048cdu, SaveTypeSizes);
+		NewTypeSizes = ddl.GetValues<uint>(0xd5a36e11u, NewTypeSizes);
 		CRCWriterHeapSize = ddl.GetValue<uint>(0xd1070d8du, CRCWriterHeapSize);
-		SaveTypeSlots = ddl.GetValues<bool>(0x42fafa74u);
+		SaveTypeSlots = ddl.GetValues<bool>(0x42fafa74u, SaveTypeSlots);
 		Title = ddl.GetString(0x3265b4aa) ?? Title;
 		UseCRC = ddl.GetValue<bool>(0x735bf2fdu, UseCRC);
 		ShowMessages = ddl.GetValue<bool>(0xf2e088deu, ShowMessages);
@@ -42,22 +42,22 @@ public class SaveSettings : DDLObjectType, IDDLObjectType<SaveSettings> {
 	public int NumUsers { get; set; } = 4;
 
 	[DDLRegistration(0x49c19a2au)]
-	public List<uint> SaveVersion { get; set; } = [];
+	public List<uint> SaveVersion { get; set; } = [0x00000001, 0x00000001, 0x00000001, 0x00000001];
 
 	[DDLRegistration(0x78bd86e4u)]
-	public List<string?> SaveTypeNames { get; set; } = [];
+	public List<string?> SaveTypeNames { get; set; } = ["_gamedata", "_debug", "_userprefs", "_extra"];
 
 	[DDLRegistration(0x3c1048cdu)]
-	public List<uint> SaveTypeSizes { get; set; } = [];
+	public List<uint> SaveTypeSizes { get; set; } = [0x00020000, 0x00001000, 0x00001000, 0x00001000];
 
 	[DDLRegistration(0xd5a36e11u)]
-	public List<uint> NewTypeSizes { get; set; } = [];
+	public List<uint> NewTypeSizes { get; set; } = [0x00020000, 0x00001000, 0x00001000, 0x00001000];
 
 	[DDLRegistration(0xd1070d8du)]
 	public uint CRCWriterHeapSize { get; set; } = 0x00200000;
 
 	[DDLRegistration(0x42fafa74u)]
-	public List<bool> SaveTypeSlots { get; set; } = [];
+	public List<bool> SaveTypeSlots { get; set; } = [true, false, false, false];
 
 	[DDLRegistration(0x3265b4aau)]
 	public string? Title { get; set; } = "GameName";

@@ -20,7 +20,7 @@ public class AnimDriverPoseNodeDef : DDLObjectType, IDDLObjectType<AnimDriverPos
 		X = ddl.GetValue<float>(0x655d6145u, X);
 		Y = ddl.GetValue<float>(0x125a51d3u, Y);
 		ClipName = ddl.GetString(0x842d53a9) ?? ClipName;
-		PoseFrameIds = ddl.GetValues<int>(0xd996bda5u);
+		PoseFrameIds = ddl.GetValues<int>(0xd996bda5u, PoseFrameIds);
 		IsAdditive = ddl.GetValue<bool>(0xa60f98d3u, IsAdditive);
 	}
 

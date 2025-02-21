@@ -22,7 +22,7 @@ public class ProjectDef : DDLObjectType, IDDLObjectType<ProjectDef> {
 		GameBuildCacheDir = ddl.GetString(0xae835a98) ?? GameBuildCacheDir;
 		GameBuildCacheOrigin = ddl.GetString(0x6ea74978) ?? GameBuildCacheOrigin;
 		AssetBranchPath = ddl.GetValue<RivetAssetId>(0x6e15e0dau, AssetBranchPath);
-		AssetBranchChoices = ddl.GetValues<RivetAssetId>(0xf61f7bffu);
+		AssetBranchChoices = ddl.GetValues<RivetAssetId>(0xf61f7bffu, AssetBranchChoices);
 	}
 
 	[DDLRegistration(0x8a514a8du, description: "project id (also the key)")]

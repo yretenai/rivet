@@ -19,8 +19,8 @@ public class AnimVisDumpSequenceDef : DDLObjectType, IDDLObjectType<AnimVisDumpS
 		TimeStart = ddl.GetValue<float>(0x2cdd9cb1u, TimeStart);
 		TimeEnd = ddl.GetValue<float>(0x01f00e62u, TimeEnd);
 		SampleRate = ddl.GetValue<float>(0xb9228075u, SampleRate);
-		JointNames = ddl.GetStrings(0x0cedbe25u);
-		MorphTargetNames = ddl.GetStrings(0x5a71d67au);
+		JointNames = ddl.GetStrings(0x0cedbe25u, JointNames);
+		MorphTargetNames = ddl.GetStrings(0x5a71d67au, MorphTargetNames);
 		Joints = ddl.GetObjects<AnimVisDumpJointDef>(0xbb8fe1b3u);
 		MorphTargets = ddl.GetObjects<AnimVisDumpMorphTargetDef>(0x31092478u);
 	}

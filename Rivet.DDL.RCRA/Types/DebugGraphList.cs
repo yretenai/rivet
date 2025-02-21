@@ -15,7 +15,7 @@ public class DebugGraphList : DDLObjectType, IDDLObjectType<DebugGraphList> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x63f0f436u);
 
 	public DebugGraphList(DDLObject ddl) : base(ddl) {
-		Graphs = ddl.GetValues<RivetAssetId>(0xaa1a5a96u);
+		Graphs = ddl.GetValues<RivetAssetId>(0xaa1a5a96u, Graphs);
 	}
 
 	[DDLRegistration(0xaa1a5a96u, description: "Graph to add to debug menu for loading.")]

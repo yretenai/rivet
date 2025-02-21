@@ -16,7 +16,7 @@ public class NPCBotAnimClueMetaDataPrius : DDLObjectType, IDDLObjectType<NPCBotA
 
 	public NPCBotAnimClueMetaDataPrius(DDLObject ddl) : base(ddl) {
 		PrimaryClue = ddl.GetValue<RivetAssetId>(0x69fed122u, PrimaryClue);
-		AnimClues = ddl.GetValues<RivetAssetId>(0xadd6c683u);
+		AnimClues = ddl.GetValues<RivetAssetId>(0xadd6c683u, AnimClues);
 	}
 
 	[DDLRegistration(0x69fed122u, "Primary Clue", "The primary clue that this bot should start fleeing too.  If nothing is defind here, we look for an anim component on this actor to be our primary clue.")]

@@ -15,7 +15,7 @@ public class UIGoldBoltOptionTypeList : UIGoldBoltOptionTypeBase, IDDLObjectType
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x462dfcedu);
 
 	public UIGoldBoltOptionTypeList(DDLObject ddl) : base(ddl) {
-		Options = ddl.GetStrings(0xd1df99bfu);
+		Options = ddl.GetStrings(0xd1df99bfu, Options);
 	}
 
 	[DDLRegistration(0xd1df99bfu)]

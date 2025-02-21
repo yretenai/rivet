@@ -21,7 +21,7 @@ public class VisualEffectGroupNode : DDLObjectType, IDDLObjectType<VisualEffectG
 		DisplayName = ddl.GetString(0xeaf33243) ?? DisplayName;
 		ConnectedInputs = ddl.GetObjects<VisualEffectNodeConnectedInputPort>(0x8ca57bf5u);
 		ConnectedOutputs = ddl.GetObjects<VisualEffectNodeConnectedOutputPort>(0x824bee0eu);
-		Entries = ddl.GetStrings(0x2c12d0fdu);
+		Entries = ddl.GetStrings(0x2c12d0fdu, Entries);
 	}
 
 	[DDLRegistration(0x371a59e0u)]

@@ -19,9 +19,9 @@ public class PythonFunctionDocumentation : DDLObjectType, IDDLObjectType<PythonF
 		Label = ddl.GetString(0x17f49c29) ?? Label;
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		Type = ddl.GetString(0xbc4e9799) ?? Type;
-		ParameterNames = ddl.GetStrings(0x9381e4feu);
+		ParameterNames = ddl.GetStrings(0x9381e4feu, ParameterNames);
 		ParametersSignature = ddl.GetString(0x17313259) ?? ParametersSignature;
-		ParameterTypes = ddl.GetStrings(0x3882248eu);
+		ParameterTypes = ddl.GetStrings(0x3882248eu, ParameterTypes);
 		ReturnType = ddl.GetString(0x27fe850a) ?? ReturnType;
 	}
 

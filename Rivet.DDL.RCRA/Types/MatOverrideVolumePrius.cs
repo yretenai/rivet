@@ -15,8 +15,8 @@ public class MatOverrideVolumePrius : DDLObjectType, IDDLObjectType<MatOverrideV
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xd317b8b2u);
 
 	public MatOverrideVolumePrius(DDLObject ddl) : base(ddl) {
-		PreserveMaterials = ddl.GetValues<RivetAssetId>(0x5e16409eu);
-		PreserveComponents = ddl.GetStrings(0x9033e266u);
+		PreserveMaterials = ddl.GetValues<RivetAssetId>(0x5e16409eu, PreserveMaterials);
+		PreserveComponents = ddl.GetStrings(0x9033e266u, PreserveComponents);
 		DefaultMaterial = ddl.GetValue<RivetAssetId>(0x00ee7776u, DefaultMaterial);
 	}
 

@@ -15,8 +15,8 @@ public class MeshSkinVertDef : DDLObjectType, IDDLObjectType<MeshSkinVertDef> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x0257763au);
 
 	public MeshSkinVertDef(DDLObject ddl) : base(ddl) {
-		JointIds = ddl.GetValues<ushort>(0xf9847a79u);
-		JointWeights = ddl.GetValues<float>(0x60586724u);
+		JointIds = ddl.GetValues<ushort>(0xf9847a79u, JointIds);
+		JointWeights = ddl.GetValues<float>(0x60586724u, JointWeights);
 	}
 
 	[DDLRegistration(0xf9847a79u)]

@@ -15,7 +15,7 @@ public class BotMetaDataPrius : DDLObjectType, IDDLObjectType<BotMetaDataPrius> 
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xad7e260cu);
 
 	public BotMetaDataPrius(DDLObject ddl) : base(ddl) {
-		BotMetaData = ddl.GetValues<RivetAssetId>(0x103224ffu);
+		BotMetaData = ddl.GetValues<RivetAssetId>(0x103224ffu, BotMetaData);
 	}
 
 	[DDLRegistration(0x103224ffu, description: "Any Actor or Group a particular bot class might need as extra info, specific to the intro object this lives on.")]

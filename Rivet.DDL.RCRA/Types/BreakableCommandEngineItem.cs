@@ -16,7 +16,7 @@ public class BreakableCommandEngineItem : DDLObjectType, IDDLObjectType<Breakabl
 
 	public BreakableCommandEngineItem(DDLObject ddl) : base(ddl) {
 		ActorInstEngineItemId = ddl.GetValue<RivetAssetId>(0x520a1e16u, ActorInstEngineItemId);
-		ActorHandleList = ddl.GetValues<uint>(0xce335e20u);
+		ActorHandleList = ddl.GetValues<uint>(0xce335e20u, ActorHandleList);
 		BreakableAssetId = ddl.GetValue<RivetAssetId>(0xbc9b1502u, BreakableAssetId);
 		Command = ddl.GetEnum<x855c1439>(0x8f2089ecu, x855c1439Values.Lookup);
 		AnimationDriverName = ddl.GetString(0xf9c7e746) ?? AnimationDriverName;

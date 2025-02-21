@@ -19,7 +19,7 @@ public class SkinItemCategoryList : DDLObjectType, IDDLObjectType<SkinItemCatego
 		CategoryLocTag = ddl.GetString(0x0f7fa9c5) ?? CategoryLocTag;
 		Display = ddl.GetValue<bool>(0x0d3b119bu, Display);
 		UIType = ddl.GetEnum<xf20c2999>(0x8c1e6e85u, xf20c2999Values.Lookup);
-		ItemConfigs = ddl.GetValues<RivetAssetId>(0x7fc28238u);
+		ItemConfigs = ddl.GetValues<RivetAssetId>(0x7fc28238u, ItemConfigs);
 		IsBodyCategory = ddl.GetValue<bool>(0xa736d6abu, IsBodyCategory);
 		ShowOnBootup = ddl.GetValue<bool>(0xf5805c23u, ShowOnBootup);
 		SubMenu = ddl.GetEnum<xca348341>(0x0568841eu, xca348341Values.Lookup);

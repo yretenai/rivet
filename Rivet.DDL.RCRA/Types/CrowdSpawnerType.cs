@@ -16,7 +16,7 @@ public class CrowdSpawnerType : DDLObjectType, IDDLObjectType<CrowdSpawnerType> 
 
 	public CrowdSpawnerType(DDLObject ddl) : base(ddl) {
 		TypeConfig = ddl.GetValue<RivetAssetId>(0x8c241f18u, TypeConfig);
-		EnabledContainerRegions = ddl.GetValues<RivetAssetId>(0xb8e32d51u);
+		EnabledContainerRegions = ddl.GetValues<RivetAssetId>(0xb8e32d51u, EnabledContainerRegions);
 		MissionUnlocks = ddl.GetObject<ObjSysUnlockSequence>(0x17ff21a7u);
 	}
 

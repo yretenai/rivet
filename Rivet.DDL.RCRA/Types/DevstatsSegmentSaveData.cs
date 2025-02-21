@@ -42,7 +42,7 @@ public class DevstatsSegmentSaveData : DDLObjectType, IDDLObjectType<DevstatsSeg
 	public bool UsePauseTime { get; set; } = false;
 
 	[DDLRegistration(0x0c5bae2bu)]
-	public double StartTime { get; set; } = -1;
+	public double StartTime { get; set; } = -1.00d;
 
 	[DDLRegistration(0x7c5e3db0u)]
 	public float Duration { get; set; } = 0.00f;

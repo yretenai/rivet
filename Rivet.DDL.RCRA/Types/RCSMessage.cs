@@ -16,8 +16,8 @@ public class RCSMessage : DDLObjectType, IDDLObjectType<RCSMessage> {
 
 	public RCSMessage(DDLObject ddl) : base(ddl) {
 		Total = ddl.GetValue<uint>(0xdb7c2d9fu, Total);
-		Messages = ddl.GetStrings(0x2103a3e6u);
-		ClientFilePaths = ddl.GetValues<RivetAssetId>(0x1f9e96ebu);
+		Messages = ddl.GetStrings(0x2103a3e6u, Messages);
+		ClientFilePaths = ddl.GetValues<RivetAssetId>(0x1f9e96ebu, ClientFilePaths);
 	}
 
 	[DDLRegistration(0xdb7c2d9fu, description: "Not all messages are recorded, but the total number is always reported here.")]

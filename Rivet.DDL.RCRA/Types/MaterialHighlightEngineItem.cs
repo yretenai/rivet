@@ -15,7 +15,7 @@ public class MaterialHighlightEngineItem : DDLObjectType, IDDLObjectType<Materia
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x2762b68eu);
 
 	public MaterialHighlightEngineItem(DDLObject ddl) : base(ddl) {
-		MaterialMappingName = ddl.GetStrings(0x981e6927u);
+		MaterialMappingName = ddl.GetStrings(0x981e6927u, MaterialMappingName);
 	}
 
 	[DDLRegistration(0x981e6927u)]

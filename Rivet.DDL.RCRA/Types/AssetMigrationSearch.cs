@@ -17,8 +17,8 @@ public class AssetMigrationSearch : DDLObjectType, IDDLObjectType<AssetMigration
 	public AssetMigrationSearch(DDLObject ddl) : base(ddl) {
 		FileCriteria = ddl.GetString(0xa3c99911) ?? FileCriteria;
 		CreatedBy = ddl.GetString(0x51abd94e) ?? CreatedBy;
-		Suffixes = ddl.GetStrings(0x06395b49u);
-		Branches = ddl.GetStrings(0x2d616c1fu);
+		Suffixes = ddl.GetStrings(0x06395b49u, Suffixes);
+		Branches = ddl.GetStrings(0x2d616c1fu, Branches);
 		UsePath = ddl.GetValue<bool>(0x74903fb5u, UsePath);
 		Limit = ddl.GetValue<int>(0x66c524a1u, Limit);
 	}

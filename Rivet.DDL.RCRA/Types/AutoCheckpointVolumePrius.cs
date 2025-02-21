@@ -15,7 +15,7 @@ public class AutoCheckpointVolumePrius : DDLObjectType, IDDLObjectType<AutoCheck
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x7952b56bu);
 
 	public AutoCheckpointVolumePrius(DDLObject ddl) : base(ddl) {
-		Checkpoints = ddl.GetStrings(0xba0400acu);
+		Checkpoints = ddl.GetStrings(0xba0400acu, Checkpoints);
 	}
 
 	[DDLRegistration(0xba0400acu, description: "Pick the first checkpoint in this list that is in the same container region as we are now and whose actor exists.")]

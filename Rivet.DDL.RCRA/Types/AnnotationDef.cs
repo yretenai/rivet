@@ -15,7 +15,7 @@ public class AnnotationDef : DDLObjectType, IDDLObjectType<AnnotationDef> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x8dc47c70u);
 
 	public AnnotationDef(DDLObject ddl) : base(ddl) {
-		Text = ddl.GetStrings(0x0b1b6777u);
+		Text = ddl.GetStrings(0x0b1b6777u, Text);
 		Color = ddl.GetEnum<x6898de8f>(0x7f058428u, x6898de8fValues.Lookup);
 		VisibleDistance = ddl.GetValue<float>(0x3581c3dcu, VisibleDistance);
 	}

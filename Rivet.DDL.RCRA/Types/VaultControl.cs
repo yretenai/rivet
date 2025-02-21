@@ -17,7 +17,7 @@ public class VaultControl : DDLObjectType, IDDLObjectType<VaultControl> {
 	public VaultControl(DDLObject ddl) : base(ddl) {
 		_id = ddl.GetValue<int>(0x7459aa19u, _id);
 		DatabaseVersion = ddl.GetValue<uint>(0x4e678f99u, DatabaseVersion);
-		ValidExtensions = ddl.GetStrings(0x59d494e2u);
+		ValidExtensions = ddl.GetStrings(0x59d494e2u, ValidExtensions);
 	}
 
 	[DDLRegistration(0x7459aa19u, description: "Required by mongoDb; there's only one entry in this table, so the id is always the same.")]

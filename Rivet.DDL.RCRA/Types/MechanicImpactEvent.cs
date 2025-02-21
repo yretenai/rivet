@@ -15,8 +15,8 @@ public class MechanicImpactEvent : UDSEventBase, IDDLObjectType<MechanicImpactEv
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x61b9a169u);
 
 	public MechanicImpactEvent(DDLObject ddl) : base(ddl) {
-		UsedMechanics = ddl.GetStrings(0xd8ad4a41u);
-		TargetActors = ddl.GetStrings(0x35ab613bu);
+		UsedMechanics = ddl.GetStrings(0xd8ad4a41u, UsedMechanics);
+		TargetActors = ddl.GetStrings(0x35ab613bu, TargetActors);
 	}
 
 	[DDLRegistration(0xd8ad4a41u)]

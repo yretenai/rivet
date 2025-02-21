@@ -19,7 +19,7 @@ public class ScriptActionTypePropertyList : DDLObjectType, IDDLObjectType<Script
 	}
 
 	[DDLRegistration(0x5cf56ffeu)]
-	public List<ScriptActionTypeProperties?> Properties { get; set; } = [];
+	public List<ScriptActionTypeProperties?> Properties { get; set; } = [default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default, default];
 
 	public static ScriptActionTypePropertyList Create(DDLObject ddl) => new(ddl);
 }

@@ -15,8 +15,8 @@ public class MechanicLoadoutChangeEvent : ChangeModeEvent, IDDLObjectType<Mechan
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xd5a653f9u);
 
 	public MechanicLoadoutChangeEvent(DDLObject ddl) : base(ddl) {
-		EquippedMechanics = ddl.GetStrings(0x7e11af85u);
-		UnequippedMechanics = ddl.GetStrings(0x0329ff7du);
+		EquippedMechanics = ddl.GetStrings(0x7e11af85u, EquippedMechanics);
+		UnequippedMechanics = ddl.GetStrings(0x0329ff7du, UnequippedMechanics);
 	}
 
 	[DDLRegistration(0x7e11af85u)]

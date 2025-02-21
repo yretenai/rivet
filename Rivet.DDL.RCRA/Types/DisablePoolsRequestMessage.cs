@@ -17,7 +17,7 @@ public class DisablePoolsRequestMessage : DDLObjectType, IDDLObjectType<DisableP
 	public DisablePoolsRequestMessage(DDLObject ddl) : base(ddl) {
 		RequestId = ddl.GetValue<ushort>(0x239eef0du, RequestId);
 		LastMessage = ddl.GetValue<byte>(0x87e83d61u, LastMessage);
-		PoolIds = ddl.GetValues<ushort>(0x540841afu);
+		PoolIds = ddl.GetValues<ushort>(0x540841afu, PoolIds);
 	}
 
 	[DDLRegistration(0x239eef0du)]

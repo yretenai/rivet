@@ -55,7 +55,7 @@ public class VehicleCurveGeneratorInfo : DDLObjectType, IDDLObjectType<VehicleCu
 	public float MinPostMergeDistance { get; set; } = 1.00f;
 
 	[DDLRegistration(0x3a65202eu)]
-	public List<VehicleMergeDistance?> BezierMergeDistances { get; set; } = [];
+	public List<VehicleMergeDistance?> BezierMergeDistances { get; set; } = [default, default];
 
 	public static VehicleCurveGeneratorInfo Create(DDLObject ddl) => new(ddl);
 }

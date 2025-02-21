@@ -18,7 +18,7 @@ public class TrackerState : DDLObjectType, IDDLObjectType<TrackerState> {
 		BuildManagerStatus = ddl.GetObject<BuildManagerStatus>(0xa093cfdbu);
 		BuildWorkerStatus = ddl.GetObjects<BuildWorkerProgress>(0x57d7b408u);
 		RequestProcessorStatus = ddl.GetObject<RequestProcessorStatus>(0xc2889962u);
-		StatusMessages = ddl.GetStrings(0x0cb41b9cu);
+		StatusMessages = ddl.GetStrings(0x0cb41b9cu, StatusMessages);
 		TrackerStatus = ddl.GetObject<TrackerScanProgress>(0xd91feac8u);
 		WebServerStatus = ddl.GetObject<WebServerStatus>(0x1a457ba5u);
 	}

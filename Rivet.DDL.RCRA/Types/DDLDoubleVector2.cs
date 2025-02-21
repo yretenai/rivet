@@ -20,10 +20,10 @@ public class DDLDoubleVector2 : DDLObjectType, IDDLObjectType<DDLDoubleVector2> 
 	}
 
 	[DDLRegistration(0x5e33418du)]
-	public double X { get; set; } = 0;
+	public double X { get; set; } = 0.00d;
 
 	[DDLRegistration(0x2934711bu)]
-	public double Y { get; set; } = 0;
+	public double Y { get; set; } = 0.00d;
 
 	public static DDLDoubleVector2 Create(DDLObject ddl) => new(ddl);
 }

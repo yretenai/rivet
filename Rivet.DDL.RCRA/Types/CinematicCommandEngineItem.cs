@@ -38,7 +38,7 @@ public class CinematicCommandEngineItem : DDLObjectType, IDDLObjectType<Cinemati
 	public Cinematic2Options? ValueCinematic2Options { get; set; } = default;
 
 	[DDLRegistration(0x2509cfb5u)]
-	public double ValueDouble { get; set; } = 0;
+	public double ValueDouble { get; set; } = 0.00d;
 
 	[DDLRegistration(0x07dd7c95u)]
 	public DDLMatrix4? ValueMatrix { get; set; } = default;

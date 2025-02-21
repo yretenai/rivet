@@ -16,7 +16,7 @@ public class ChangeCritterDensityActionPrius : DDLObjectType, IDDLObjectType<Cha
 
 	public ChangeCritterDensityActionPrius(DDLObject ddl) : base(ddl) {
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
-		CritterTypes = ddl.GetStrings(0x28c9178du);
+		CritterTypes = ddl.GetStrings(0x28c9178du, CritterTypes);
 		DensityOverride = ddl.GetObject<CritterDensity>(0x25a9d44fu);
 	}
 

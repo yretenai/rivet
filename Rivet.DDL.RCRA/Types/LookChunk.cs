@@ -21,7 +21,7 @@ public class LookChunk : DDLObjectType, IDDLObjectType<LookChunk> {
 		TriggerSpawnEvent = ddl.GetValue<bool>(0xee6cfc7eu, TriggerSpawnEvent);
 		ForceFadeAfterSettled = ddl.GetValue<bool>(0x3d462c39u, ForceFadeAfterSettled);
 		LookToDisable = ddl.GetString(0x2f48a06c) ?? LookToDisable;
-		LooksToChunk = ddl.GetStrings(0x36f7b273u);
+		LooksToChunk = ddl.GetStrings(0x36f7b273u, LooksToChunk);
 		EventLocator = ddl.GetString(0xbddfefa2) ?? EventLocator;
 		ScaleTestJointName = ddl.GetString(0x005a77c3) ?? ScaleTestJointName;
 		SetOverrideRenderConstant = ddl.GetValue<bool>(0x7abeaa63u, SetOverrideRenderConstant);

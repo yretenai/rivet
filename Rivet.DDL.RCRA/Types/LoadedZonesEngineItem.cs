@@ -15,7 +15,7 @@ public class LoadedZonesEngineItem : DDLObjectType, IDDLObjectType<LoadedZonesEn
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x202250edu);
 
 	public LoadedZonesEngineItem(DDLObject ddl) : base(ddl) {
-		ZoneList = ddl.GetStrings(0x79dfcd60u);
+		ZoneList = ddl.GetStrings(0x79dfcd60u, ZoneList);
 	}
 
 	[DDLRegistration(0x79dfcd60u)]

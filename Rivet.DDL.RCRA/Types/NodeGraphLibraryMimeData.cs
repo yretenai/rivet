@@ -15,7 +15,7 @@ public class NodeGraphLibraryMimeData : DDLObjectType, IDDLObjectType<NodeGraphL
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xc71ca727u);
 
 	public NodeGraphLibraryMimeData(DDLObject ddl) : base(ddl) {
-		FieldNames = ddl.GetStrings(0xa62d21dcu);
+		FieldNames = ddl.GetStrings(0xa62d21dcu, FieldNames);
 		GraphData = ddl.GetObjects<NodeGraphLibrarySubGraphData>(0x11a7047fu);
 		NodeGraphSymbolName = ddl.GetString(0x84d789a3) ?? NodeGraphSymbolName;
 	}

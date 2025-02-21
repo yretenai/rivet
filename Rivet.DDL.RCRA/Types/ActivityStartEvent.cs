@@ -17,10 +17,10 @@ public class ActivityStartEvent : UDSEventBase, IDDLObjectType<ActivityStartEven
 	public ActivityStartEvent(DDLObject ddl) : base(ddl) {
 		ActivityId = ddl.GetString(0x875ebf15) ?? ActivityId;
 		PrimaryActor = ddl.GetString(0xaabdb556) ?? PrimaryActor;
-		SecondaryActors = ddl.GetStrings(0xc52b223au);
-		EquippedMechanics = ddl.GetStrings(0x7e11af85u);
+		SecondaryActors = ddl.GetStrings(0xc52b223au, SecondaryActors);
+		EquippedMechanics = ddl.GetStrings(0x7e11af85u, EquippedMechanics);
 		ZoneId = ddl.GetString(0xc74cfc3f) ?? ZoneId;
-		MapPosition = ddl.GetValues<float>(0xef79418eu);
+		MapPosition = ddl.GetValues<float>(0xef79418eu, MapPosition);
 		DifficultySetting = ddl.GetValue<int>(0x1f96728eu, DifficultySetting);
 	}
 

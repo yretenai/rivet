@@ -24,7 +24,7 @@ public class ScriptVarNode : DDLObjectType, IDDLObjectType<ScriptVarNode> {
 		Type = ddl.GetEnum<x36ed0644>(0xbc4e9799u, x36ed0644Values.Lookup);
 		BoolValue = ddl.GetValue<bool>(0x07f6e397u, BoolValue);
 		FloatValue = ddl.GetValue<float>(0xf03f0a74u, FloatValue);
-		VecValue = ddl.GetValues<float>(0xb8666495u);
+		VecValue = ddl.GetValues<float>(0xb8666495u, VecValue);
 		StringValue = ddl.GetString(0xbb242993) ?? StringValue;
 		ActorValue = ddl.GetValue<RivetAssetId>(0x6aed6be1u, ActorValue);
 	}
@@ -57,7 +57,7 @@ public class ScriptVarNode : DDLObjectType, IDDLObjectType<ScriptVarNode> {
 	public float FloatValue { get; set; } = 0.00f;
 
 	[DDLRegistration(0xb8666495u, "Vector Value")]
-	public List<float> VecValue { get; set; } = [];
+	public List<float> VecValue { get; set; } = [0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0xbb242993u, "String Value")]
 	public string? StringValue { get; set; } = default;

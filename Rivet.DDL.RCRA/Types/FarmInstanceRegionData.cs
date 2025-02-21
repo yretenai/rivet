@@ -18,7 +18,7 @@ public class FarmInstanceRegionData : DDLObjectType, IDDLObjectType<FarmInstance
 		AtmosphereZone = ddl.GetValue<RivetAssetId>(0x9c553ee6u, AtmosphereZone);
 		RegionFile = ddl.GetValue<RivetAssetId>(0xcabd3504u, RegionFile);
 		LevelFile = ddl.GetValue<RivetAssetId>(0xc002f04bu, LevelFile);
-		ExtraZones = ddl.GetValues<RivetAssetId>(0x56657350u);
+		ExtraZones = ddl.GetValues<RivetAssetId>(0x56657350u, ExtraZones);
 	}
 
 	[DDLRegistration(0x9c553ee6u, "Atmosphere Zone", "specifies atmospheres to use for capture.")]

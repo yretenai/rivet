@@ -15,7 +15,7 @@ public class DimensionPortalSourcePrius : DDLObjectType, IDDLObjectType<Dimensio
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x5b4bb1f1u);
 
 	public DimensionPortalSourcePrius(DDLObject ddl) : base(ddl) {
-		PossibleTargets = ddl.GetStrings(0x7d822939u);
+		PossibleTargets = ddl.GetStrings(0x7d822939u, PossibleTargets);
 		ActivateWhenTargetLoaded = ddl.GetValue<bool>(0xfabb8abcu, ActivateWhenTargetLoaded);
 		ActivateOnThrownMeleeHit = ddl.GetValue<bool>(0x9da82934u, ActivateOnThrownMeleeHit);
 		MutuallyExclusive = ddl.GetValue<bool>(0x6d342a81u, MutuallyExclusive);

@@ -15,15 +15,15 @@ public class FastLoadComponentManyStringPrius : DDLObjectType, IDDLObjectType<Fa
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x4596a4b1u);
 
 	public FastLoadComponentManyStringPrius(DDLObject ddl) : base(ddl) {
-		Numbers = ddl.GetValues<uint>(0x7674a9c1u);
-		Strings = ddl.GetStrings(0xb57009cdu);
+		Numbers = ddl.GetValues<uint>(0x7674a9c1u, Numbers);
+		Strings = ddl.GetStrings(0xb57009cdu, Strings);
 	}
 
 	[DDLRegistration(0x7674a9c1u)]
-	public List<uint> Numbers { get; set; } = [];
+	public List<uint> Numbers { get; set; } = [0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000];
 
 	[DDLRegistration(0xb57009cdu)]
-	public List<string?> Strings { get; set; } = [];
+	public List<string?> Strings { get; set; } = [default, default, default, default, default, default, default, default, default, default];
 
 	public static FastLoadComponentManyStringPrius Create(DDLObject ddl) => new(ddl);
 }

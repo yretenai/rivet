@@ -16,7 +16,7 @@ public class NodeGraphBuiltDebugDef : DDLObjectType, IDDLObjectType<NodeGraphBui
 
 	public NodeGraphBuiltDebugDef(DDLObject ddl) : base(ddl) {
 		IdMappings = ddl.GetObjects<NodeGraphBuiltDebugIdMapping>(0x9ebf377bu);
-		OriginalAssets = ddl.GetValues<RivetAssetId>(0x69ad8572u);
+		OriginalAssets = ddl.GetValues<RivetAssetId>(0x69ad8572u, OriginalAssets);
 	}
 
 	[DDLRegistration(0x9ebf377bu)]

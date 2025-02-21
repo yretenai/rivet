@@ -15,7 +15,7 @@ public class RCSSyncInput : DDLObjectType, IDDLObjectType<RCSSyncInput> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x1f41f4abu);
 
 	public RCSSyncInput(DDLObject ddl) : base(ddl) {
-		Views = ddl.GetStrings(0x08a35046u);
+		Views = ddl.GetStrings(0x08a35046u, Views);
 		Force = ddl.GetValue<bool>(0x8e3b4fe9u, Force);
 		Preview = ddl.GetValue<bool>(0xb86f4c08u, Preview);
 		OverrideRevisionOptions = ddl.GetValue<bool>(0x1303b973u, OverrideRevisionOptions);

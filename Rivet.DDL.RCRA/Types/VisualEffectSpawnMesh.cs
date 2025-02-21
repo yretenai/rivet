@@ -16,8 +16,8 @@ public class VisualEffectSpawnMesh : DDLObjectType, IDDLObjectType<VisualEffectS
 
 	public VisualEffectSpawnMesh(DDLObject ddl) : base(ddl) {
 		TargetSpawnStyleNode = ddl.GetString(0x3f7b4531) ?? TargetSpawnStyleNode;
-		TargetModelMaterialMappings = ddl.GetStrings(0x53142c99u);
-		ExcludeModelMaterialMappings = ddl.GetStrings(0x98ce9e8cu);
+		TargetModelMaterialMappings = ddl.GetStrings(0x53142c99u, TargetModelMaterialMappings);
+		ExcludeModelMaterialMappings = ddl.GetStrings(0x98ce9e8cu, ExcludeModelMaterialMappings);
 	}
 
 	[DDLRegistration(0x3f7b4531u, "Target Spawn Style Node")]

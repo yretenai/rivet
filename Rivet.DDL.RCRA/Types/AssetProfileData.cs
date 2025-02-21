@@ -26,8 +26,8 @@ public class AssetProfileData : DDLObjectType, IDDLObjectType<AssetProfileData> 
 		ManualLoadDeps = ddl.GetObjects<AssetProfileDataDependency>(0xb14a519eu);
 		AutoLoadWwiseEventDeps = ddl.GetObjects<AssetProfileWwiseEventDependency>(0x53add904u);
 		ManualLoadWwiseEventDeps = ddl.GetObjects<AssetProfileWwiseEventDependency>(0x49a26fc8u);
-		HibernatedAssets = ddl.GetStrings(0xdc3692e8u);
-		DelayStreamAssets = ddl.GetStrings(0x308c6cc7u);
+		HibernatedAssets = ddl.GetStrings(0xdc3692e8u, HibernatedAssets);
+		DelayStreamAssets = ddl.GetStrings(0x308c6cc7u, DelayStreamAssets);
 		LightingConditionReferences = ddl.GetDictionary<uint, AssetProfileDataReferenceArray>(0x7cf3f883, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<AssetProfileDataReferenceArray>(mapId));
 		RuntimeZoneTotalModelInstCount = ddl.GetValue<uint>(0x5a453bf7u, RuntimeZoneTotalModelInstCount);
 		RuntimeZoneDelayModelInstCount = ddl.GetValue<uint>(0xdd263255u, RuntimeZoneDelayModelInstCount);
@@ -49,7 +49,7 @@ public class AssetProfileData : DDLObjectType, IDDLObjectType<AssetProfileData> 
 		Height = ddl.GetValue<uint>(0xcb35ab68u, Height);
 		CannotStreamMips = ddl.GetValue<bool>(0x4347d5a5u, CannotStreamMips);
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
-		Components = ddl.GetStrings(0x357eabc4u);
+		Components = ddl.GetStrings(0x357eabc4u, Components);
 	}
 
 	[DDLRegistration(0x7459aa19u)]

@@ -73,10 +73,10 @@ public class SceneEditorPrefs : DDLObjectType, IDDLObjectType<SceneEditorPrefs> 
 		ManipSnapToVertex = ddl.GetValue<bool>(0x3544e8c3u, ManipSnapToVertex);
 		ManipSnapToSurface = ddl.GetValue<bool>(0x3a41935bu, ManipSnapToSurface);
 		ManipSnapToPivot = ddl.GetValue<bool>(0xf05930fcu, ManipSnapToPivot);
-		WorldGridMatrix = ddl.GetValues<double>(0xd8e2f149u);
+		WorldGridMatrix = ddl.GetValues<double>(0xd8e2f149u, WorldGridMatrix);
 		CommandLineSwitches = ddl.GetString(0x1fb654d5) ?? CommandLineSwitches;
 		CurrentViewerAtmosphere = ddl.GetValue<int>(0x93be83b6u, CurrentViewerAtmosphere);
-		ViewerAtmospheres = ddl.GetStrings(0x3bac722bu);
+		ViewerAtmospheres = ddl.GetStrings(0x3bac722bu, ViewerAtmospheres);
 		ModelDisplayFlags = ddl.GetObject<ModelDisplayOptions>(0x7d2286c8u);
 		EventFilterOptions = ddl.GetObject<EventFilterOptions>(0x6feaf664u);
 		AVMaterialOverride = ddl.GetValue<int>(0x67ce3b19u, AVMaterialOverride);
@@ -165,13 +165,13 @@ public class SceneEditorPrefs : DDLObjectType, IDDLObjectType<SceneEditorPrefs> 
 	public bool GridXYZLock { get; set; } = true;
 
 	[DDLRegistration(0x0f32e021u)]
-	public double GridSpacingX { get; set; } = 1;
+	public double GridSpacingX { get; set; } = 1.00d;
 
 	[DDLRegistration(0x7835d0b7u)]
-	public double GridSpacingY { get; set; } = 1;
+	public double GridSpacingY { get; set; } = 1.00d;
 
 	[DDLRegistration(0xe13c810du)]
-	public double GridSpacingZ { get; set; } = 1;
+	public double GridSpacingZ { get; set; } = 1.00d;
 
 	[DDLRegistration(0x593abc3cu)]
 	public float RotationSnap { get; set; } = 45.00f;
@@ -258,7 +258,7 @@ public class SceneEditorPrefs : DDLObjectType, IDDLObjectType<SceneEditorPrefs> 
 	public bool ManipSnapToPivot { get; set; } = false;
 
 	[DDLRegistration(0xd8e2f149u)]
-	public List<double> WorldGridMatrix { get; set; } = [];
+	public List<double> WorldGridMatrix { get; set; } = [1.00d, 0.00d, 0.00d, 0.00d, 1.00d, 0.00d, 0.00d, 0.00d, 1.00d, 0.00d, 0.00d, 0.00d];
 
 	[DDLRegistration(0x1fb654d5u)]
 	public string? CommandLineSwitches { get; set; } = "";

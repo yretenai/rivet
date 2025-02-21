@@ -15,10 +15,10 @@ public class References : DDLObjectType, IDDLObjectType<References> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x442873a5u);
 
 	public References(DDLObject ddl) : base(ddl) {
-		AutoLoad = ddl.GetStrings(0x129306c4u);
-		ManualLoad = ddl.GetStrings(0x1796b3e1u);
-		AutoLoadWwise = ddl.GetStrings(0xbc48a30eu);
-		ManualLoadWwise = ddl.GetStrings(0xe4798b7cu);
+		AutoLoad = ddl.GetStrings(0x129306c4u, AutoLoad);
+		ManualLoad = ddl.GetStrings(0x1796b3e1u, ManualLoad);
+		AutoLoadWwise = ddl.GetStrings(0xbc48a30eu, AutoLoadWwise);
+		ManualLoadWwise = ddl.GetStrings(0xe4798b7cu, ManualLoadWwise);
 	}
 
 	[DDLRegistration(0x129306c4u, description: "Use only for assets that will be quickly grabbed once the asset that gets this reference loads. Autoload references will be automatically loaded by the speculative load system once a load of the containing asset is requested.")]

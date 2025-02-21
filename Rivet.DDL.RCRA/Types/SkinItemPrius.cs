@@ -24,22 +24,22 @@ public class SkinItemPrius : ItemPrius, IDDLObjectType<SkinItemPrius> {
 	}
 
 	[DDLRegistration(0xa6babbdeu)]
-	public List<SkinItemLocatorOverridePrius?> LocatorOverrideList { get; set; } = [];
+	public List<SkinItemLocatorOverridePrius?> LocatorOverrideList { get; set; } = [default];
 
 	[DDLRegistration(0x31be016cu)]
-	public List<SkinItemTextureOverridePrius?> TextureOverrideList { get; set; } = [];
+	public List<SkinItemTextureOverridePrius?> TextureOverrideList { get; set; } = [default, default, default, default];
 
 	[DDLRegistration(0xeb47267au)]
-	public List<SkinItemMaterialOverridePrius?> MaterialOverrideList { get; set; } = [];
+	public List<SkinItemMaterialOverridePrius?> MaterialOverrideList { get; set; } = [default, default, default, default, default, default];
 
 	[DDLRegistration(0x5a9f1a9du)]
-	public List<SkinItemColorOverridePrius?> ColorOverrideList { get; set; } = [];
+	public List<SkinItemColorOverridePrius?> ColorOverrideList { get; set; } = [default, default, default, default];
 
 	[DDLRegistration(0x6c1e1c97u)]
-	public List<SkinItemConduitOverridePrius?> ConduitOverrideList { get; set; } = [];
+	public List<SkinItemConduitOverridePrius?> ConduitOverrideList { get; set; } = [default];
 
 	[DDLRegistration(0xdf65d905u)]
-	public List<SkinItemModelVariantOverridePrius?> ModelVariantOverrideList { get; set; } = [];
+	public List<SkinItemModelVariantOverridePrius?> ModelVariantOverrideList { get; set; } = [default];
 
 	public new static SkinItemPrius Create(DDLObject ddl) => new(ddl);
 }

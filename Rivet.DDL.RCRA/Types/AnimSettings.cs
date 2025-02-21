@@ -18,8 +18,8 @@ public class AnimSettings : DDLObjectType, IDDLObjectType<AnimSettings> {
 		MaxJobCount = ddl.GetValue<uint>(0x0ae0e588u, MaxJobCount);
 		MaxDriverUserPoseCount = ddl.GetValue<uint>(0xf96ebe09u, MaxDriverUserPoseCount);
 		CullAllCullable = ddl.GetValue<bool>(0x3003622eu, CullAllCullable);
-		AnimDriverDataAllocBlockSizes = ddl.GetValues<ushort>(0x78cd1fe2u);
-		AnimDriverDataAllocBlockCounts = ddl.GetValues<ushort>(0x1091f086u);
+		AnimDriverDataAllocBlockSizes = ddl.GetValues<ushort>(0x78cd1fe2u, AnimDriverDataAllocBlockSizes);
+		AnimDriverDataAllocBlockCounts = ddl.GetValues<ushort>(0x1091f086u, AnimDriverDataAllocBlockCounts);
 		AnimStreamInitAllocSize = ddl.GetValue<uint>(0x6ae46b93u, AnimStreamInitAllocSize);
 		DebugDriverMemoryClearing = ddl.GetValue<bool>(0xa34474d0u, DebugDriverMemoryClearing);
 		DebugDriverMemoryAllocating = ddl.GetValue<bool>(0x78bdd1e9u, DebugDriverMemoryAllocating);
@@ -36,10 +36,10 @@ public class AnimSettings : DDLObjectType, IDDLObjectType<AnimSettings> {
 	public bool CullAllCullable { get; set; } = false;
 
 	[DDLRegistration(0x78cd1fe2u)]
-	public List<ushort> AnimDriverDataAllocBlockSizes { get; set; } = [];
+	public List<ushort> AnimDriverDataAllocBlockSizes { get; set; } = [0x0400, 0x1000, 0x2000, 0x4000, 0x6000];
 
 	[DDLRegistration(0x1091f086u)]
-	public List<ushort> AnimDriverDataAllocBlockCounts { get; set; } = [];
+	public List<ushort> AnimDriverDataAllocBlockCounts { get; set; } = [0x0800, 0x0400, 0x0100, 0x0080, 0x0008];
 
 	[DDLRegistration(0x6ae46b93u)]
 	public uint AnimStreamInitAllocSize { get; set; } = 0x01200000;

@@ -18,8 +18,8 @@ public class EnvProbeJob : DDLObjectType, IDDLObjectType<EnvProbeJob> {
 		Changelist = ddl.GetValue<uint>(0x03b0ddc6u, Changelist);
 		CaptureDirectOnly = ddl.GetValue<bool>(0x3fdfd590u, CaptureDirectOnly);
 		UpdateProbeProxy = ddl.GetValue<bool>(0x10008aa0u, UpdateProbeProxy);
-		ProbeZones = ddl.GetStrings(0xdf5240c7u);
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
+		ProbeZones = ddl.GetStrings(0xdf5240c7u, ProbeZones);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
 		Atmosphere = ddl.GetValue<RivetAssetId>(0x79fd859au, Atmosphere);
 		LightingCondition = ddl.GetEnum<LightingConditions>(0xc3b54f69u, LightingConditionsValues.Lookup);
 	}

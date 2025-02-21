@@ -15,7 +15,7 @@ public class RegionCrateVariants : DDLObjectType, IDDLObjectType<RegionCrateVari
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x3b7568a2u);
 
 	public RegionCrateVariants(DDLObject ddl) : base(ddl) {
-		ContainerRegions = ddl.GetValues<RivetAssetId>(0xc9f0b22bu);
+		ContainerRegions = ddl.GetValues<RivetAssetId>(0xc9f0b22bu, ContainerRegions);
 		BoltCrateOverride = ddl.GetObject<CrateMaterialOverride>(0xcadfd873u);
 		AmmoCrateOverride = ddl.GetObject<CrateMaterialOverride>(0x8e947afdu);
 		HealthCrateOverride = ddl.GetObject<CrateMaterialOverride>(0xdb8005c1u);

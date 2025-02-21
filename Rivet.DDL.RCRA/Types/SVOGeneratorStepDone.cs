@@ -17,7 +17,7 @@ public class SVOGeneratorStepDone : DDLObjectType, IDDLObjectType<SVOGeneratorSt
 	public SVOGeneratorStepDone(DDLObject ddl) : base(ddl) {
 		Centers = ddl.GetObjects<DDLVector3>(0x26a7b809u);
 		Radii = ddl.GetObjects<DDLVector3>(0x107672fbu);
-		Clear = ddl.GetValues<bool>(0xfce23dc7u);
+		Clear = ddl.GetValues<bool>(0xfce23dc7u, Clear);
 	}
 
 	[DDLRegistration(0x26a7b809u)]

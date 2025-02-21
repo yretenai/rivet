@@ -15,7 +15,7 @@ public class AutoPlaceCritterSystemConfig : ConfigBase, IDDLObjectType<AutoPlace
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xf0d24212u);
 
 	public AutoPlaceCritterSystemConfig(DDLObject ddl) : base(ddl) {
-		CritterTypeNames = ddl.GetStrings(0x627514a8u);
+		CritterTypeNames = ddl.GetStrings(0x627514a8u, CritterTypeNames);
 		CritterTypes = ddl.GetObjects<CritterTypeData>(0x28c9178du);
 		MinSpawnDistance = ddl.GetValue<float>(0xef1087b4u, MinSpawnDistance);
 		IdealSpawnDistance = ddl.GetValue<float>(0xc7256058u, IdealSpawnDistance);

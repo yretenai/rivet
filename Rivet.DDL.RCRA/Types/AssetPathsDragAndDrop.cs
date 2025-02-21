@@ -15,7 +15,7 @@ public class AssetPathsDragAndDrop : DDLObjectType, IDDLObjectType<AssetPathsDra
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x049b7927u);
 
 	public AssetPathsDragAndDrop(DDLObject ddl) : base(ddl) {
-		AssetPathArray = ddl.GetStrings(0x2c861418u);
+		AssetPathArray = ddl.GetStrings(0x2c861418u, AssetPathArray);
 	}
 
 	[DDLRegistration(0x2c861418u)]

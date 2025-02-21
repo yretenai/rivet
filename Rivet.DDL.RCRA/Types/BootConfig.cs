@@ -15,7 +15,7 @@ public class BootConfig : ConfigBase, IDDLObjectType<BootConfig> {
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x1d7c61b1u);
 
 	public BootConfig(DDLObject ddl) : base(ddl) {
-		Assets = ddl.GetValues<RivetAssetId>(0x47a933e9u);
+		Assets = ddl.GetValues<RivetAssetId>(0x47a933e9u, Assets);
 	}
 
 	[DDLRegistration(0x47a933e9u, "Asset List")]

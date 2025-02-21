@@ -15,7 +15,7 @@ public class TriggerResponderActivateOtherPrius : TriggerResponderBasePrius, IDD
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xc91af0a9u);
 
 	public TriggerResponderActivateOtherPrius(DDLObject ddl) : base(ddl) {
-		ActorsToActivate = ddl.GetValues<RivetAssetId>(0x053f4a60u);
+		ActorsToActivate = ddl.GetValues<RivetAssetId>(0x053f4a60u, ActorsToActivate);
 	}
 
 	[DDLRegistration(0x053f4a60u, "Actors to Activate/Deactivate")]

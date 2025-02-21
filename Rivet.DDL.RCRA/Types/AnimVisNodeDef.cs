@@ -22,7 +22,7 @@ public class AnimVisNodeDef : DDLObjectType, IDDLObjectType<AnimVisNodeDef> {
 		LocalTime = ddl.GetValue<float>(0x1cbeb3a9u, LocalTime);
 		LocalWeight = ddl.GetValue<float>(0x18637134u, LocalWeight);
 		Weight = ddl.GetValue<float>(0x39b51b26u, Weight);
-		RefNames = ddl.GetStrings(0x83a5eaa8u);
+		RefNames = ddl.GetStrings(0x83a5eaa8u, RefNames);
 	}
 
 	[DDLRegistration(0xbc4e9799u)]
@@ -47,7 +47,7 @@ public class AnimVisNodeDef : DDLObjectType, IDDLObjectType<AnimVisNodeDef> {
 	public float Weight { get; set; } = 0.00f;
 
 	[DDLRegistration(0x83a5eaa8u)]
-	public List<string?> RefNames { get; set; } = [];
+	public List<string?> RefNames { get; set; } = [default, default, default];
 
 	public static AnimVisNodeDef Create(DDLObject ddl) => new(ddl);
 }

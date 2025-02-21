@@ -15,7 +15,7 @@ public class BloodPoolPrius : DDLObjectType, IDDLObjectType<BloodPoolPrius> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x67c96fc5u);
 
 	public BloodPoolPrius(DDLObject ddl) : base(ddl) {
-		BloodPoolJoints = ddl.GetStrings(0x476a774eu);
+		BloodPoolJoints = ddl.GetStrings(0x476a774eu, BloodPoolJoints);
 		MaxDist = ddl.GetValue<float>(0x7ce74647u, MaxDist);
 		MaxPools = ddl.GetValue<uint>(0x06e4bf20u, MaxPools);
 	}

@@ -16,7 +16,7 @@ public class UISkipPuzzleActionPrius : DDLObjectType, IDDLObjectType<UISkipPuzzl
 
 	public UISkipPuzzleActionPrius(DDLObject ddl) : base(ddl) {
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
-		SummaryLocTags = ddl.GetStrings(0x86b5220eu);
+		SummaryLocTags = ddl.GetStrings(0x86b5220eu, SummaryLocTags);
 	}
 
 	[DDLRegistration(0x874b2194u)]

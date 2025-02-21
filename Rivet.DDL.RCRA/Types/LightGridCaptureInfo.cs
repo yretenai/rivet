@@ -17,7 +17,7 @@ public class LightGridCaptureInfo : DDLObjectType, IDDLObjectType<LightGridCaptu
 	public LightGridCaptureInfo(DDLObject ddl) : base(ddl) {
 		JobInfo = ddl.GetObject<CaptureJobInfo>(0xe3ef773au);
 		GridInfo = ddl.GetObjects<CaptureGridInfo>(0x374cc4d3u);
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
 		Atmosphere = ddl.GetValue<RivetAssetId>(0x79fd859au, Atmosphere);
 		CaptureDirectOnly = ddl.GetValue<bool>(0x3fdfd590u, CaptureDirectOnly);
 		CaptureGBufferOnly = ddl.GetValue<bool>(0xf2e4098au, CaptureGBufferOnly);

@@ -20,9 +20,9 @@ public class RegionAuxOpenUnit : DDLObjectType, IDDLObjectType<RegionAuxOpenUnit
 		TileRadius = ddl.GetValue<uint>(0xe406382bu, TileRadius);
 		LoadDistance = ddl.GetValue<uint>(0xe94325c0u, LoadDistance);
 		UnloadDistance = ddl.GetValue<uint>(0x4822588au, UnloadDistance);
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
-		NavExclusionZones = ddl.GetValues<RivetAssetId>(0xfaaad4d2u);
-		NavInclusionZones = ddl.GetValues<RivetAssetId>(0xc4bd3cf8u);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
+		NavExclusionZones = ddl.GetValues<RivetAssetId>(0xfaaad4d2u, NavExclusionZones);
+		NavInclusionZones = ddl.GetValues<RivetAssetId>(0xc4bd3cf8u, NavInclusionZones);
 		NamedLinks = ddl.GetDictionary<RivetAssetId, RegionNamedLink>(0x6bee750e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionNamedLink>(mapId));
 	}
 

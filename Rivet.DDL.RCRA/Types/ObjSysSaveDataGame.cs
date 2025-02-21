@@ -16,7 +16,7 @@ public class ObjSysSaveDataGame : ObjSysSaveDataShared, IDDLObjectType<ObjSysSav
 
 	public ObjSysSaveDataGame(DDLObject ddl) : base(ddl) {
 		RecentObjectives = ddl.GetObjects<ActiveObjective>(0x28538295u);
-		RecentAvailableMissions = ddl.GetValues<uint>(0x59924550u);
+		RecentAvailableMissions = ddl.GetValues<uint>(0x59924550u, RecentAvailableMissions);
 	}
 
 	[DDLRegistration(0x28538295u)]

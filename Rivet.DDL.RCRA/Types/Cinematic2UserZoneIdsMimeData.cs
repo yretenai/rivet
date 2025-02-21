@@ -15,7 +15,7 @@ public class Cinematic2UserZoneIdsMimeData : DDLObjectType, IDDLObjectType<Cinem
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x83aa1684u);
 
 	public Cinematic2UserZoneIdsMimeData(DDLObject ddl) : base(ddl) {
-		Tuids = ddl.GetValues<RivetAssetId>(0x005953f7u);
+		Tuids = ddl.GetValues<RivetAssetId>(0x005953f7u, Tuids);
 	}
 
 	[DDLRegistration(0x005953f7u)]

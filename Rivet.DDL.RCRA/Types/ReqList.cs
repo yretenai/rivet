@@ -15,12 +15,12 @@ public class ReqList : ConfigBase, IDDLObjectType<ReqList> {
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xbe44a2e8u);
 
 	public ReqList(DDLObject ddl) : base(ddl) {
-		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
-		Actors = ddl.GetValues<RivetAssetId>(0xe153be82u);
-		Conduits = ddl.GetValues<RivetAssetId>(0x7b4d7a9fu);
-		Configs = ddl.GetValues<RivetAssetId>(0x43831b0bu);
-		Soundbanks = ddl.GetValues<RivetAssetId>(0x6760632au);
-		Misc = ddl.GetValues<RivetAssetId>(0x4f37da0au);
+		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u, Zones);
+		Actors = ddl.GetValues<RivetAssetId>(0xe153be82u, Actors);
+		Conduits = ddl.GetValues<RivetAssetId>(0x7b4d7a9fu, Conduits);
+		Configs = ddl.GetValues<RivetAssetId>(0x43831b0bu, Configs);
+		Soundbanks = ddl.GetValues<RivetAssetId>(0x6760632au, Soundbanks);
+		Misc = ddl.GetValues<RivetAssetId>(0x4f37da0au, Misc);
 	}
 
 	[DDLRegistration(0x9c997da9u, "Zones")]

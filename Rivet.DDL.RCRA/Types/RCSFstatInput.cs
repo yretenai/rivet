@@ -15,7 +15,7 @@ public class RCSFstatInput : DDLObjectType, IDDLObjectType<RCSFstatInput> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x5c2d4628u);
 
 	public RCSFstatInput(DDLObject ddl) : base(ddl) {
-		Views = ddl.GetStrings(0x08a35046u);
+		Views = ddl.GetStrings(0x08a35046u, Views);
 		IncludeValidationData = ddl.GetValue<bool>(0x548bd263u, IncludeValidationData);
 		Flags = ddl.GetBitset<x8f003545>(0x12568d7bu, x8f003545Values.Lookup);
 	}

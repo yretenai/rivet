@@ -19,7 +19,7 @@ public class SoundEngineConfig : ConfigBase, IDDLObjectType<SoundEngineConfig> {
 		ExternalSourceBank = ddl.GetValue<RivetAssetId>(0xe21bae0bu, ExternalSourceBank);
 		VolumeOffsets71 = ddl.GetObject<SoundVolumeOffsets71>(0xfe67bd0au);
 		MidnightModeRTPCName = ddl.GetString(0x8db26bce) ?? MidnightModeRTPCName;
-		MonoDownmixBuses = ddl.GetStrings(0xdee4074bu);
+		MonoDownmixBuses = ddl.GetStrings(0xdee4074bu, MonoDownmixBuses);
 	}
 
 	[DDLRegistration(0xf1b139f4u, description: "The Wwise Init bank. Shouldn't change basically ever, but exists here to insert a reference into the dependency graph")]

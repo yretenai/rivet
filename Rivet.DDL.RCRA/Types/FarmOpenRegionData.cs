@@ -18,7 +18,7 @@ public class FarmOpenRegionData : DDLObjectType, IDDLObjectType<FarmOpenRegionDa
 		AtmosphereZone = ddl.GetValue<RivetAssetId>(0x9c553ee6u, AtmosphereZone);
 		RegionFile = ddl.GetValue<RivetAssetId>(0xcabd3504u, RegionFile);
 		LevelFile = ddl.GetValue<RivetAssetId>(0xc002f04bu, LevelFile);
-		GlobalRegions = ddl.GetValues<RivetAssetId>(0x44015029u);
+		GlobalRegions = ddl.GetValues<RivetAssetId>(0x44015029u, GlobalRegions);
 		ExtraZonesPerTile = ddl.GetObjects<FarmExtraTileZoneData>(0x1ed0234cu);
 	}
 

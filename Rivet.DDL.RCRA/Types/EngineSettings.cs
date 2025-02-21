@@ -40,7 +40,7 @@ public class EngineSettings : DDLObjectType, IDDLObjectType<EngineSettings> {
 		MovieCaptureFaceSize = ddl.GetValue<int>(0x58b01774u, MovieCaptureFaceSize);
 		ScreenshotIp = ddl.GetString(0xe084b4b1) ?? ScreenshotIp;
 		CameraSettings = ddl.GetObject<CameraInputSettings>(0xf7f1ab6eu);
-		LightBarColor = ddl.GetValues<byte>(0x66097a36u);
+		LightBarColor = ddl.GetValues<byte>(0x66097a36u, LightBarColor);
 		NavMeshValidationEnable = ddl.GetValue<bool>(0x231e83e5u, NavMeshValidationEnable);
 		MovieSystemEnable = ddl.GetValue<bool>(0x0ad67a35u, MovieSystemEnable);
 		MovieMemoryBudget = ddl.GetValue<uint>(0x395cc08au, MovieMemoryBudget);
@@ -140,7 +140,7 @@ public class EngineSettings : DDLObjectType, IDDLObjectType<EngineSettings> {
 	public CameraInputSettings? CameraSettings { get; set; } = default;
 
 	[DDLRegistration(0x66097a36u)]
-	public List<byte> LightBarColor { get; set; } = [];
+	public List<byte> LightBarColor { get; set; } = [0x00, 0x00, 0x00];
 
 	[DDLRegistration(0x231e83e5u)]
 	public bool NavMeshValidationEnable { get; set; } = false;

@@ -16,7 +16,7 @@ public class Faction : DDLObjectType, IDDLObjectType<Faction> {
 
 	public Faction(DDLObject ddl) : base(ddl) {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
-		Spawnable = ddl.GetValues<RivetAssetId>(0x20376872u);
+		Spawnable = ddl.GetValues<RivetAssetId>(0x20376872u, Spawnable);
 	}
 
 	[DDLRegistration(0x6eb3beb6u)]

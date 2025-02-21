@@ -19,7 +19,7 @@ public class ActivityEndEvent : UDSEventBase, IDDLObjectType<ActivityEndEvent> {
 		Outcome = ddl.GetEnum<x57af8350>(0xfeeb3766u, x57af8350Values.Lookup);
 		Score = ddl.GetValue<int>(0xea0bd494u, Score);
 		ZoneId = ddl.GetString(0xc74cfc3f) ?? ZoneId;
-		MapPosition = ddl.GetValues<float>(0xef79418eu);
+		MapPosition = ddl.GetValues<float>(0xef79418eu, MapPosition);
 		DifficultySetting = ddl.GetValue<int>(0x1f96728eu, DifficultySetting);
 	}
 

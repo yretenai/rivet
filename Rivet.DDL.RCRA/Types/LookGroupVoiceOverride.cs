@@ -15,7 +15,7 @@ public class LookGroupVoiceOverride : DDLObjectType, IDDLObjectType<LookGroupVoi
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xf093a8c9u);
 
 	public LookGroupVoiceOverride(DDLObject ddl) : base(ddl) {
-		LookGroups = ddl.GetStrings(0xb6c4ab29u);
+		LookGroups = ddl.GetStrings(0xb6c4ab29u, LookGroups);
 		OverrideVoiceMin = ddl.GetEnum<VoiceGame>(0xb429bb9bu, VoiceGameValues.Lookup);
 		OverrideVoiceMax = ddl.GetEnum<VoiceGame>(0x882484c2u, VoiceGameValues.Lookup);
 	}

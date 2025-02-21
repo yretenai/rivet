@@ -15,11 +15,11 @@ public class MeshUvDef : DDLObjectType, IDDLObjectType<MeshUvDef> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x1d9bc567u);
 
 	public MeshUvDef(DDLObject ddl) : base(ddl) {
-		Uv = ddl.GetValues<float>(0x9f9f6698u);
+		Uv = ddl.GetValues<float>(0x9f9f6698u, Uv);
 	}
 
 	[DDLRegistration(0x9f9f6698u)]
-	public List<float> Uv { get; set; } = [];
+	public List<float> Uv { get; set; } = [0.00f, 0.00f, 0.00f];
 
 	public static MeshUvDef Create(DDLObject ddl) => new(ddl);
 }

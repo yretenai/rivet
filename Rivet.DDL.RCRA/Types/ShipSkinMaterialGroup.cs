@@ -17,7 +17,7 @@ public class ShipSkinMaterialGroup : DDLObjectType, IDDLObjectType<ShipSkinMater
 	public ShipSkinMaterialGroup(DDLObject ddl) : base(ddl) {
 		SkinType = ddl.GetEnum<x8a806a76>(0x301c5cc0u, x8a806a76Values.Lookup);
 		Pack = ddl.GetEnum<x84053194>(0xa74e9e93u, x84053194Values.Lookup);
-		Material = ddl.GetValues<RivetAssetId>(0x86bfc8e5u);
+		Material = ddl.GetValues<RivetAssetId>(0x86bfc8e5u, Material);
 	}
 
 	[DDLRegistration(0x301c5cc0u, description: "The enum value to identify this ship skin.")]

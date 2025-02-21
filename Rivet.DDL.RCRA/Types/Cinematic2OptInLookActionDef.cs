@@ -19,7 +19,7 @@ public class Cinematic2OptInLookActionDef : DDLObjectType, IDDLObjectType<Cinema
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 		DurationType = ddl.GetEnum<x29c933e2>(0x41e2529fu, x29c933e2Values.Lookup);
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
-		EnabledLooks = ddl.GetStrings(0x79df49b5u);
+		EnabledLooks = ddl.GetStrings(0x79df49b5u, EnabledLooks);
 	}
 
 	[DDLRegistration(0x8a514a8du)]

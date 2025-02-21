@@ -17,8 +17,8 @@ public class Cinematic2FolderDef : DDLObjectType, IDDLObjectType<Cinematic2Folde
 	public Cinematic2FolderDef(DDLObject ddl) : base(ddl) {
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
-		ChildTuids = ddl.GetValues<RivetAssetId>(0xebe93de2u);
-		SubFolders = ddl.GetValues<RivetAssetId>(0xa1de1c65u);
+		ChildTuids = ddl.GetValues<RivetAssetId>(0xebe93de2u, ChildTuids);
+		SubFolders = ddl.GetValues<RivetAssetId>(0xa1de1c65u, SubFolders);
 	}
 
 	[DDLRegistration(0x8a514a8du)]

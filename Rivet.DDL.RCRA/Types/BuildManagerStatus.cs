@@ -18,7 +18,7 @@ public class BuildManagerStatus : DDLObjectType, IDDLObjectType<BuildManagerStat
 		PausedByUser = ddl.GetValue<bool>(0x8940ceb4u, PausedByUser);
 		PausedUpdatingBuilders = ddl.GetValue<bool>(0x29ef6f9fu, PausedUpdatingBuilders);
 		BackgroundBuildPausedForTracker = ddl.GetValue<bool>(0xb665f602u, BackgroundBuildPausedForTracker);
-		BackgroundPlatforms = ddl.GetStrings(0xf7b2b3b0u);
+		BackgroundPlatforms = ddl.GetStrings(0xf7b2b3b0u, BackgroundPlatforms);
 	}
 
 	[DDLRegistration(0x8940ceb4u)]

@@ -19,7 +19,7 @@ public class AnimDriverGroupNodeDef : DDLObjectType, IDDLObjectType<AnimDriverGr
 		DisplayName = ddl.GetString(0xeaf33243) ?? DisplayName;
 		X = ddl.GetValue<float>(0x655d6145u, X);
 		Y = ddl.GetValue<float>(0x125a51d3u, Y);
-		NodeNames = ddl.GetStrings(0x2b8e04c5u);
+		NodeNames = ddl.GetStrings(0x2b8e04c5u, NodeNames);
 	}
 
 	[DDLRegistration(0x6eb3beb6u)]

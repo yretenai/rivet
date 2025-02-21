@@ -15,7 +15,7 @@ public class AssetProfileDataReferenceArray : DDLObjectType, IDDLObjectType<Asse
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x6e55017eu);
 
 	public AssetProfileDataReferenceArray(DDLObject ddl) : base(ddl) {
-		References = ddl.GetStrings(0x442873a5u);
+		References = ddl.GetStrings(0x442873a5u, References);
 	}
 
 	[DDLRegistration(0x442873a5u)]

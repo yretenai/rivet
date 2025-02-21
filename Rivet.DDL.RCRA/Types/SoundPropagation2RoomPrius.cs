@@ -18,7 +18,7 @@ public class SoundPropagation2RoomPrius : DDLObjectType, IDDLObjectType<SoundPro
 		EffectName = ddl.GetString(0xb266fef4) ?? EffectName;
 		Priority = ddl.GetValue<float>(0x98a76157u, Priority);
 		Params = ddl.GetObject<SoundPropagation2RoomParamsDef>(0xb1b64094u);
-		Shapes = ddl.GetValues<RivetAssetId>(0xada3eb75u);
+		Shapes = ddl.GetValues<RivetAssetId>(0xada3eb75u, Shapes);
 	}
 
 	[DDLRegistration(0xb266fef4u, description: "the wwise effect (share-set) to apply")]

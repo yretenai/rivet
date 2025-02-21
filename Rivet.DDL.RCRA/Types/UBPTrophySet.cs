@@ -18,7 +18,7 @@ public class UBPTrophySet : DDLObjectType, IDDLObjectType<UBPTrophySet> {
 		EntityId = ddl.GetString(0xf55ff6da) ?? EntityId;
 		EntityType = ddl.GetEnum<x80ef7527>(0x8b63dca3u, x80ef7527Values.Lookup);
 		EntitySubtype = ddl.GetEnum<x56d897ac>(0x2b2fec50u, x56d897acValues.Lookup);
-		Images = ddl.GetStrings(0xd9cbf53bu);
+		Images = ddl.GetStrings(0xd9cbf53bu, Images);
 	}
 
 	[DDLRegistration(0xf55ff6dau)]

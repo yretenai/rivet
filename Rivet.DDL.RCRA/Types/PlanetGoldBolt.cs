@@ -39,7 +39,7 @@ public class PlanetGoldBolt : DDLObjectType, IDDLObjectType<PlanetGoldBolt> {
 	public uint DefaultPlaytimeEstimate { get; set; } = 0x00000005;
 
 	[DDLRegistration(0xf00bc587u)]
-	public List<ActivityHint?> Hints { get; set; } = [];
+	public List<ActivityHint?> Hints { get; set; } = [default, default, default];
 
 	public static PlanetGoldBolt Create(DDLObject ddl) => new(ddl);
 }

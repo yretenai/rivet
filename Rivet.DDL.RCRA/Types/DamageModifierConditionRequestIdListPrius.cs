@@ -15,7 +15,7 @@ public class DamageModifierConditionRequestIdListPrius : DamageModifierCondition
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x11fa6024u);
 
 	public DamageModifierConditionRequestIdListPrius(DDLObject ddl) : base(ddl) {
-		RequestIdEntries = ddl.GetValues<uint>(0x255d0411u);
+		RequestIdEntries = ddl.GetValues<uint>(0x255d0411u, RequestIdEntries);
 		CheckType = ddl.GetEnum<x8423053f>(0xb6b0f22cu, x8423053fValues.Lookup);
 	}
 

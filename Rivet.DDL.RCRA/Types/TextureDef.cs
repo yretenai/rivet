@@ -18,7 +18,7 @@ public class TextureDef : DDLObjectType, IDDLObjectType<TextureDef> {
 		VaultMetaData = ddl.GetObject<VaultMetaData>(0x037889aau);
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
 		SourcePath = ddl.GetValue<RivetAssetId>(0x6ccf66b3u, SourcePath);
-		DCCSourcePaths = ddl.GetStrings(0xaae77202u);
+		DCCSourcePaths = ddl.GetStrings(0xaae77202u, DCCSourcePaths);
 		Type = ddl.GetEnum<TextureType>(0xbc4e9799u, TextureTypeValues.Lookup);
 		ContentType = ddl.GetEnum<x9f6b8de9>(0x59b0e6c3u, x9f6b8de9Values.Lookup);
 		Quality = ddl.GetEnum<x771ceda9>(0x7d586828u, x771ceda9Values.Lookup);

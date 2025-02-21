@@ -15,7 +15,7 @@ public class ForceUnloadZonesEngineItem : DDLObjectType, IDDLObjectType<ForceUnl
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xc832fb91u);
 
 	public ForceUnloadZonesEngineItem(DDLObject ddl) : base(ddl) {
-		ZoneList = ddl.GetStrings(0x79dfcd60u);
+		ZoneList = ddl.GetStrings(0x79dfcd60u, ZoneList);
 	}
 
 	[DDLRegistration(0x79dfcd60u)]

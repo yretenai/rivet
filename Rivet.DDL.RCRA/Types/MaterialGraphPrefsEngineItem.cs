@@ -28,7 +28,7 @@ public class MaterialGraphPrefsEngineItem : DDLObjectType, IDDLObjectType<Materi
 	public string? AssetPath { get; set; } = default;
 
 	[DDLRegistration(0x07481864u)]
-	public double AlphaSim { get; set; } = 1;
+	public double AlphaSim { get; set; } = 1.00d;
 
 	[DDLRegistration(0xd4672a50u)]
 	public bool AlphaSort { get; set; } = false;

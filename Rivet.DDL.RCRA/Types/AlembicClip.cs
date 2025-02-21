@@ -19,7 +19,7 @@ public class AlembicClip : DDLObjectType, IDDLObjectType<AlembicClip> {
 		ClipPath = ddl.GetValue<RivetAssetId>(0xd15aa6a0u, ClipPath);
 		StartFrame = ddl.GetValue<int>(0xcd935029u, StartFrame);
 		EndFrame = ddl.GetValue<int>(0xfddf52e6u, EndFrame);
-		AnimatingLooks = ddl.GetStrings(0x28e1bfc3u);
+		AnimatingLooks = ddl.GetStrings(0x28e1bfc3u, AnimatingLooks);
 	}
 
 	[DDLRegistration(0x6eb3beb6u, description: "also used as clip name to be used inside animset")]

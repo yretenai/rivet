@@ -15,7 +15,7 @@ public class Cinematic2ActorTagsDef : DDLObjectType, IDDLObjectType<Cinematic2Ac
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x77670b93u);
 
 	public Cinematic2ActorTagsDef(DDLObject ddl) : base(ddl) {
-		Tags = ddl.GetStrings(0x5f2c5496u);
+		Tags = ddl.GetStrings(0x5f2c5496u, Tags);
 	}
 
 	[DDLRegistration(0x5f2c5496u)]

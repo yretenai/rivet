@@ -15,8 +15,8 @@ public class WalkingArchivesJointIKPrius : DDLObjectType, IDDLObjectType<Walking
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xdbd1112au);
 
 	public WalkingArchivesJointIKPrius(DDLObject ddl) : base(ddl) {
-		FootJoint = ddl.GetStrings(0x351d165eu);
-		IKChainID = ddl.GetStrings(0x81b8f1aeu);
+		FootJoint = ddl.GetStrings(0x351d165eu, FootJoint);
+		IKChainID = ddl.GetStrings(0x81b8f1aeu, IKChainID);
 		MoveDriver = ddl.GetString(0x8bc6d4e3) ?? MoveDriver;
 		CameraShake = ddl.GetValue<RivetAssetId>(0xefd546cau, CameraShake);
 		CameraShakeInnerRadius = ddl.GetValue<float>(0x4ca6dc25u, CameraShakeInnerRadius);
@@ -25,10 +25,10 @@ public class WalkingArchivesJointIKPrius : DDLObjectType, IDDLObjectType<Walking
 	}
 
 	[DDLRegistration(0x351d165eu)]
-	public List<string?> FootJoint { get; set; } = [];
+	public List<string?> FootJoint { get; set; } = [default, default, default, default];
 
 	[DDLRegistration(0x81b8f1aeu)]
-	public List<string?> IKChainID { get; set; } = [];
+	public List<string?> IKChainID { get; set; } = [default, default, default, default];
 
 	[DDLRegistration(0x8bc6d4e3u)]
 	public string? MoveDriver { get; set; } = default;

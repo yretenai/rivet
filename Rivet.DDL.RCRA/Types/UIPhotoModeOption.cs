@@ -23,7 +23,7 @@ public class UIPhotoModeOption : DDLObjectType, IDDLObjectType<UIPhotoModeOption
 		FastFidelity = ddl.GetValue<int>(0x394868eeu, FastFidelity);
 		SliderType = ddl.GetEnum<xed640b4c>(0xf94ba34fu, xed640b4cValues.Lookup);
 		ClampType = ddl.GetEnum<xc57b533a>(0xeb8f1f26u, xc57b533aValues.Lookup);
-		Settings = ddl.GetStrings(0x1f441db5u);
+		Settings = ddl.GetStrings(0x1f441db5u, Settings);
 	}
 
 	[DDLRegistration(0xb13f6a45u)]

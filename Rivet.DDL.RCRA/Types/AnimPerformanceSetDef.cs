@@ -23,8 +23,8 @@ public class AnimPerformanceSetDef : DDLObjectType, IDDLObjectType<AnimPerforman
 		GestureAnimationModelPath = ddl.GetValue<RivetAssetId>(0x1d0e31d0u, GestureAnimationModelPath);
 		LocalizationPath = ddl.GetValue<RivetAssetId>(0xc9bbd1ddu, LocalizationPath);
 		BodyGestureGroup = ddl.GetValue<RivetAssetId>(0xd5e07cd5u, BodyGestureGroup);
-		PerformanceClipGroups = ddl.GetValues<RivetAssetId>(0x73a72cf2u);
-		CustomPerformanceClipGroups = ddl.GetValues<RivetAssetId>(0xb2fdd699u);
+		PerformanceClipGroups = ddl.GetValues<RivetAssetId>(0x73a72cf2u, PerformanceClipGroups);
+		CustomPerformanceClipGroups = ddl.GetValues<RivetAssetId>(0xb2fdd699u, CustomPerformanceClipGroups);
 	}
 
 	[DDLRegistration(0x6eb3beb6u)]

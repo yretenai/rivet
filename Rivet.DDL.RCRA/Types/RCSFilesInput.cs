@@ -15,7 +15,7 @@ public class RCSFilesInput : DDLObjectType, IDDLObjectType<RCSFilesInput> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x23d7b0f2u);
 
 	public RCSFilesInput(DDLObject ddl) : base(ddl) {
-		Views = ddl.GetStrings(0x08a35046u);
+		Views = ddl.GetStrings(0x08a35046u, Views);
 		MaxStats = ddl.GetValue<int>(0x4ed9a03du, MaxStats);
 		ShowDeleted = ddl.GetValue<bool>(0xdf0eee6cu, ShowDeleted);
 	}

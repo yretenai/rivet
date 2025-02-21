@@ -15,11 +15,11 @@ public class MeshUColorDef : DDLObjectType, IDDLObjectType<MeshUColorDef> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xe050b15bu);
 
 	public MeshUColorDef(DDLObject ddl) : base(ddl) {
-		Color = ddl.GetValues<float>(0x7f058428u);
+		Color = ddl.GetValues<float>(0x7f058428u, Color);
 	}
 
 	[DDLRegistration(0x7f058428u)]
-	public List<float> Color { get; set; } = [];
+	public List<float> Color { get; set; } = [0.00f, 0.00f, 0.00f, 0.00f];
 
 	public static MeshUColorDef Create(DDLObject ddl) => new(ddl);
 }

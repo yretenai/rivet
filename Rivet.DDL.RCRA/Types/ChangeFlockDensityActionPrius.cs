@@ -16,7 +16,7 @@ public class ChangeFlockDensityActionPrius : DDLObjectType, IDDLObjectType<Chang
 
 	public ChangeFlockDensityActionPrius(DDLObject ddl) : base(ddl) {
 		ActionType = ddl.GetEnum<x10228b34>(0x874b2194u, x10228b34Values.Lookup);
-		FlockTypes = ddl.GetStrings(0xd1677a17u);
+		FlockTypes = ddl.GetStrings(0xd1677a17u, FlockTypes);
 		FlockDensityConfig = ddl.GetValue<RivetAssetId>(0xfec78f0du, FlockDensityConfig);
 	}
 

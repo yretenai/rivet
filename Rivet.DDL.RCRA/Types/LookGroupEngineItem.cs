@@ -16,7 +16,7 @@ public class LookGroupEngineItem : DDLObjectType, IDDLObjectType<LookGroupEngine
 
 	public LookGroupEngineItem(DDLObject ddl) : base(ddl) {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
-		Looks = ddl.GetStrings(0xec785832u);
+		Looks = ddl.GetStrings(0xec785832u, Looks);
 	}
 
 	[DDLRegistration(0x6eb3beb6u)]

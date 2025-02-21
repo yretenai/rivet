@@ -30,7 +30,7 @@ public class LunaFtpGameBuildConfigFile : DDLObjectType, IDDLObjectType<LunaFtpG
 		HasDebugInfo = ddl.GetValue<bool>(0x277f4438u, HasDebugInfo);
 		IsInSymStore = ddl.GetValue<bool>(0x72e917efu, IsInSymStore);
 		Platforms = ddl.GetBitset<x5753f3c8>(0x957c19efu, x5753f3c8Values.Lookup);
-		PlatformBuildDates = ddl.GetStrings(0x615df743u);
+		PlatformBuildDates = ddl.GetStrings(0x615df743u, PlatformBuildDates);
 		FailedPlatforms = ddl.GetBitset<x5753f3c8>(0x8be65385u, x5753f3c8Values.Lookup);
 		CompatibleUpdaterVersion = ddl.GetString(0xffa3e6ed) ?? CompatibleUpdaterVersion;
 		CompatibleHavokVersion = ddl.GetString(0x2da22199) ?? CompatibleHavokVersion;

@@ -17,7 +17,7 @@ public class HoudiniMenuItem : DDLObjectType, IDDLObjectType<HoudiniMenuItem> {
 	public HoudiniMenuItem(DDLObject ddl) : base(ddl) {
 		Title = ddl.GetString(0x3265b4aa) ?? Title;
 		Tooltip = ddl.GetString(0xa0533c88) ?? Tooltip;
-		HythonCode = ddl.GetStrings(0x1f0caeb4u);
+		HythonCode = ddl.GetStrings(0x1f0caeb4u, HythonCode);
 		Behavior = ddl.GetEnum<xa1814bf4>(0xc1aa1dc0u, xa1814bf4Values.Lookup);
 	}
 

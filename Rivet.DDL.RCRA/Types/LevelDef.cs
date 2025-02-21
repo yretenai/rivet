@@ -20,7 +20,7 @@ public class LevelDef : DDLObjectType, IDDLObjectType<LevelDef> {
 		DefaultNamedLink = ddl.GetString(0xeca46962) ?? DefaultNamedLink;
 		InstallGroup = ddl.GetValue<int>(0xfa716c43u, InstallGroup);
 		GlobalRegion = ddl.GetValue<RivetAssetId>(0x057d5a1fu, GlobalRegion);
-		Regions = ddl.GetValues<RivetAssetId>(0xa38d1acbu);
+		Regions = ddl.GetValues<RivetAssetId>(0xa38d1acbu, Regions);
 		WorldMapAABB = ddl.GetObject<DDLAABB>(0x20248023u);
 		GridSettings = ddl.GetObject<LevelGridSettings>(0x17b372b2u);
 		Aux = ddl.GetObject<LevelDefAux>(0x90972571u);

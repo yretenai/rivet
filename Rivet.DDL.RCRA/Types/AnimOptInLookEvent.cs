@@ -15,7 +15,7 @@ public class AnimOptInLookEvent : EventBase, IDDLObjectType<AnimOptInLookEvent> 
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x5d56c071u);
 
 	public AnimOptInLookEvent(DDLObject ddl) : base(ddl) {
-		Looks = ddl.GetStrings(0xec785832u);
+		Looks = ddl.GetStrings(0xec785832u, Looks);
 	}
 
 	[DDLRegistration(0xec785832u, description: "Looks to enable.")]

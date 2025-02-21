@@ -15,8 +15,8 @@ public class PathsAndIds : DDLObjectType, IDDLObjectType<PathsAndIds> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xb4097630u);
 
 	public PathsAndIds(DDLObject ddl) : base(ddl) {
-		Paths = ddl.GetValues<RivetAssetId>(0x92e94ad0u);
-		Ids = ddl.GetValues<RivetAssetId>(0x5a8f8e51u);
+		Paths = ddl.GetValues<RivetAssetId>(0x92e94ad0u, Paths);
+		Ids = ddl.GetValues<RivetAssetId>(0x5a8f8e51u, Ids);
 	}
 
 	[DDLRegistration(0x92e94ad0u)]

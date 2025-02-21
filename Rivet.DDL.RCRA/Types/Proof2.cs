@@ -16,8 +16,8 @@ public class Proof2 : DDLObjectType, IDDLObjectType<Proof2> {
 
 	public Proof2(DDLObject ddl) : base(ddl) {
 		P = ddl.GetObject<Prims>(0x6b86e977u);
-		FArr = ddl.GetValues<int>(0xddc35be0u);
-		DArr = ddl.GetValues<int>(0x77ca936bu);
+		FArr = ddl.GetValues<int>(0xddc35be0u, FArr);
+		DArr = ddl.GetValues<int>(0x77ca936bu, DArr);
 		Str = ddl.GetString(0x76fb8a30) ?? Str;
 		S = ddl.GetEnum<Select>(0xc9e19805u, SelectValues.Lookup);
 		B = ddl.GetBitset<x1ea7317b>(0xa351b8f7u, x1ea7317bValues.Lookup);
@@ -32,7 +32,7 @@ public class Proof2 : DDLObjectType, IDDLObjectType<Proof2> {
 	public Prims? P { get; set; } = default;
 
 	[DDLRegistration(0xddc35be0u)]
-	public List<int> FArr { get; set; } = [];
+	public List<int> FArr { get; set; } = [1, 2];
 
 	[DDLRegistration(0x77ca936bu)]
 	public List<int> DArr { get; set; } = [];
@@ -50,7 +50,7 @@ public class Proof2 : DDLObjectType, IDDLObjectType<Proof2> {
 	public List<Prims?> PrimArray { get; set; } = [];
 
 	[DDLRegistration(0x6d4aadd2u)]
-	public List<Prims?> PrimFixedArray { get; set; } = [];
+	public List<Prims?> PrimFixedArray { get; set; } = [default, default];
 
 	[DDLRegistration(0xd1f8e3a0u)]
 	public Dictionary<int, int> HM { get; set; } = [];

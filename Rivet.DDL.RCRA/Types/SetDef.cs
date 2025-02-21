@@ -41,7 +41,7 @@ public class SetDef : DDLObjectType, IDDLObjectType<SetDef> {
 	public string? TempSetDesc { get; set; } = "temp desc";
 
 	[DDLRegistration(0xf074f9f2u, "Cards", "Cards belonging to this set")]
-	public List<x507460e6> CardIDs { get; set; } = [];
+	public List<x507460e6> CardIDs { get; set; } = [x507460e6.Workshop, x507460e6.Workshop, x507460e6.Workshop];
 
 	[DDLRegistration(0x86cbb3bbu, "Bonus Type")]
 	public BonusType Bonus { get; set; } = BonusType.BonusNone;

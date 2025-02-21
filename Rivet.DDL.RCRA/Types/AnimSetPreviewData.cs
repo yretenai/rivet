@@ -16,7 +16,7 @@ public class AnimSetPreviewData : DDLObjectType, IDDLObjectType<AnimSetPreviewDa
 
 	public AnimSetPreviewData(DDLObject ddl) : base(ddl) {
 		Actor = ddl.GetValue<RivetAssetId>(0x5d269a38u, Actor);
-		Conduit = ddl.GetValues<RivetAssetId>(0xfc5131b9u);
+		Conduit = ddl.GetValues<RivetAssetId>(0xfc5131b9u, Conduit);
 		Model = ddl.GetValue<RivetAssetId>(0xcec6be18u, Model);
 	}
 

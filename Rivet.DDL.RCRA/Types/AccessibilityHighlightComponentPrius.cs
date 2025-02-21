@@ -21,9 +21,9 @@ public class AccessibilityHighlightComponentPrius : DDLObjectType, IDDLObjectTyp
 		ToggleHair = ddl.GetValue<bool>(0xe39ea036u, ToggleHair);
 		SkipLookToggleOnOrbis = ddl.GetValue<bool>(0x16b47c0fu, SkipLookToggleOnOrbis);
 		ForceKeepOnNPCBot = ddl.GetValue<bool>(0x60d07c39u, ForceKeepOnNPCBot);
-		LookEnableList = ddl.GetStrings(0x227baf14u);
-		LookDisableList = ddl.GetStrings(0x10863bd7u);
-		SkipMaterialList = ddl.GetStrings(0x23e71733u);
+		LookEnableList = ddl.GetStrings(0x227baf14u, LookEnableList);
+		LookDisableList = ddl.GetStrings(0x10863bd7u, LookDisableList);
+		SkipMaterialList = ddl.GetStrings(0x23e71733u, SkipMaterialList);
 		MaterialConstantList = ddl.GetObjects<AccessibilityHighlightMaterialConstant>(0xddf6a4b5u);
 	}
 

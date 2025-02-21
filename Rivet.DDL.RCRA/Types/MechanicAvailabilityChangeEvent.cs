@@ -15,8 +15,8 @@ public class MechanicAvailabilityChangeEvent : ChangeModeEvent, IDDLObjectType<M
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xb0835b34u);
 
 	public MechanicAvailabilityChangeEvent(DDLObject ddl) : base(ddl) {
-		AvailableMechanics = ddl.GetStrings(0x781712c3u);
-		UnavailableMechanics = ddl.GetStrings(0xcb0c50bdu);
+		AvailableMechanics = ddl.GetStrings(0x781712c3u, AvailableMechanics);
+		UnavailableMechanics = ddl.GetStrings(0xcb0c50bdu, UnavailableMechanics);
 	}
 
 	[DDLRegistration(0x781712c3u)]

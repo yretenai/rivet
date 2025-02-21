@@ -15,11 +15,11 @@ public class MoveCosinePrius : Base, IDDLObjectType<MoveCosinePrius> {
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xd5ba509fu);
 
 	public MoveCosinePrius(DDLObject ddl) : base(ddl) {
-		DynamicArray = ddl.GetValues<float>(0xef1993ccu);
-		StaticArray = ddl.GetValues<float>(0x2b9ab9c6u);
-		DynamicStrings = ddl.GetStrings(0x173c9ba3u);
+		DynamicArray = ddl.GetValues<float>(0xef1993ccu, DynamicArray);
+		StaticArray = ddl.GetValues<float>(0x2b9ab9c6u, StaticArray);
+		DynamicStrings = ddl.GetStrings(0x173c9ba3u, DynamicStrings);
 		DynamicStructs = ddl.GetObjects<Simple>(0x64c4a145u);
-		StaticStrings = ddl.GetStrings(0x36687e7cu);
+		StaticStrings = ddl.GetStrings(0x36687e7cu, StaticStrings);
 		String = ddl.GetString(0xa0c6fcce) ?? String;
 		SingleStruct = ddl.GetObject<Simple>(0x650c78f5u);
 		Amplitude = ddl.GetValue<float>(0xe950071du, Amplitude);
@@ -30,7 +30,7 @@ public class MoveCosinePrius : Base, IDDLObjectType<MoveCosinePrius> {
 	public List<float> DynamicArray { get; set; } = [];
 
 	[DDLRegistration(0x2b9ab9c6u)]
-	public List<float> StaticArray { get; set; } = [];
+	public List<float> StaticArray { get; set; } = [0.00f, 0.00f, 0.00f, 0.00f, 0.00f, 0.00f, 0.00f, 0.00f];
 
 	[DDLRegistration(0x173c9ba3u)]
 	public List<string?> DynamicStrings { get; set; } = [];
@@ -39,7 +39,7 @@ public class MoveCosinePrius : Base, IDDLObjectType<MoveCosinePrius> {
 	public List<Simple?> DynamicStructs { get; set; } = [];
 
 	[DDLRegistration(0x36687e7cu)]
-	public List<string?> StaticStrings { get; set; } = [];
+	public List<string?> StaticStrings { get; set; } = [default, default, default, default, default, default, default, default];
 
 	[DDLRegistration(0xa0c6fcceu)]
 	public string? String { get; set; } = default;

@@ -36,18 +36,18 @@ public class EnvProbeDef : DDLObjectType, IDDLObjectType<EnvProbeDef> {
 		ProxyDistPosY = ddl.GetValue<float>(0x9404a97fu, ProxyDistPosY);
 		ProxyDistNegZ = ddl.GetValue<float>(0x9ef28aeau, ProxyDistNegZ);
 		ProxyDistPosZ = ddl.GetValue<float>(0x0d0df8c5u, ProxyDistPosZ);
-		ModelDrawListNegX = ddl.GetValues<RivetAssetId>(0xa6a22bc3u);
-		ModelDrawListPosX = ddl.GetValues<RivetAssetId>(0x355d59ecu);
-		ModelDrawListNegY = ddl.GetValues<RivetAssetId>(0xd1a51b55u);
-		ModelDrawListPosY = ddl.GetValues<RivetAssetId>(0x425a697au);
-		ModelDrawListNegZ = ddl.GetValues<RivetAssetId>(0x48ac4aefu);
-		ModelDrawListPosZ = ddl.GetValues<RivetAssetId>(0xdb5338c0u);
-		ImpostorDrawListNegX = ddl.GetValues<RivetAssetId>(0x01df239du);
-		ImpostorDrawListPosX = ddl.GetValues<RivetAssetId>(0x922051b2u);
-		ImpostorDrawListNegY = ddl.GetValues<RivetAssetId>(0x76d8130bu);
-		ImpostorDrawListPosY = ddl.GetValues<RivetAssetId>(0xe5276124u);
-		ImpostorDrawListNegZ = ddl.GetValues<RivetAssetId>(0xefd142b1u);
-		ImpostorDrawListPosZ = ddl.GetValues<RivetAssetId>(0x7c2e309eu);
+		ModelDrawListNegX = ddl.GetValues<RivetAssetId>(0xa6a22bc3u, ModelDrawListNegX);
+		ModelDrawListPosX = ddl.GetValues<RivetAssetId>(0x355d59ecu, ModelDrawListPosX);
+		ModelDrawListNegY = ddl.GetValues<RivetAssetId>(0xd1a51b55u, ModelDrawListNegY);
+		ModelDrawListPosY = ddl.GetValues<RivetAssetId>(0x425a697au, ModelDrawListPosY);
+		ModelDrawListNegZ = ddl.GetValues<RivetAssetId>(0x48ac4aefu, ModelDrawListNegZ);
+		ModelDrawListPosZ = ddl.GetValues<RivetAssetId>(0xdb5338c0u, ModelDrawListPosZ);
+		ImpostorDrawListNegX = ddl.GetValues<RivetAssetId>(0x01df239du, ImpostorDrawListNegX);
+		ImpostorDrawListPosX = ddl.GetValues<RivetAssetId>(0x922051b2u, ImpostorDrawListPosX);
+		ImpostorDrawListNegY = ddl.GetValues<RivetAssetId>(0x76d8130bu, ImpostorDrawListNegY);
+		ImpostorDrawListPosY = ddl.GetValues<RivetAssetId>(0xe5276124u, ImpostorDrawListPosY);
+		ImpostorDrawListNegZ = ddl.GetValues<RivetAssetId>(0xefd142b1u, ImpostorDrawListNegZ);
+		ImpostorDrawListPosZ = ddl.GetValues<RivetAssetId>(0x7c2e309eu, ImpostorDrawListPosZ);
 	}
 
 	[DDLRegistration(0x037889aau)]

@@ -15,7 +15,7 @@ public class DamageModifierDamageHashPrius : DamageModifierIncomingPrius, IDDLOb
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xd039ea17u);
 
 	public DamageModifierDamageHashPrius(DDLObject ddl) : base(ddl) {
-		DamageHashes = ddl.GetStrings(0xc765ccd5u);
+		DamageHashes = ddl.GetStrings(0xc765ccd5u, DamageHashes);
 		HashList = ddl.GetValue<RivetAssetId>(0x50a6559fu, HashList);
 		Exclude = ddl.GetValue<bool>(0x63688441u, Exclude);
 	}

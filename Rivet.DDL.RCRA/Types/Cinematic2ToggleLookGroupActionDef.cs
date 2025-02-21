@@ -19,8 +19,8 @@ public class Cinematic2ToggleLookGroupActionDef : DDLObjectType, IDDLObjectType<
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 		DurationType = ddl.GetEnum<x29c933e2>(0x41e2529fu, x29c933e2Values.Lookup);
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
-		LookGroupsToEnable = ddl.GetStrings(0x5f37f268u);
-		LookGroupsToDisable = ddl.GetStrings(0x16558d0cu);
+		LookGroupsToEnable = ddl.GetStrings(0x5f37f268u, LookGroupsToEnable);
+		LookGroupsToDisable = ddl.GetStrings(0x16558d0cu, LookGroupsToDisable);
 	}
 
 	[DDLRegistration(0x8a514a8du)]

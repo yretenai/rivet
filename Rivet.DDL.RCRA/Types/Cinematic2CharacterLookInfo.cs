@@ -15,7 +15,7 @@ public class Cinematic2CharacterLookInfo : DDLObjectType, IDDLObjectType<Cinemat
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x15df95aeu);
 
 	public Cinematic2CharacterLookInfo(DDLObject ddl) : base(ddl) {
-		Looks = ddl.GetStrings(0xec785832u);
+		Looks = ddl.GetStrings(0xec785832u, Looks);
 		MaterialOverrides = ddl.GetObjects<Cinematic2MaterialReplaceInfo>(0x68221c5du);
 		MaterialConstOverrides = ddl.GetObjects<Cinematic2MaterialConstOverrideInfo>(0xb7896f8eu);
 		MaterialTextureOverrides = ddl.GetObjects<Cinematic2MaterialTextureOverrideInfo>(0x667945b1u);

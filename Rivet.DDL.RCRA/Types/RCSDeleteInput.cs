@@ -15,7 +15,7 @@ public class RCSDeleteInput : DDLObjectType, IDDLObjectType<RCSDeleteInput> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x2f96733bu);
 
 	public RCSDeleteInput(DDLObject ddl) : base(ddl) {
-		Views = ddl.GetStrings(0x08a35046u);
+		Views = ddl.GetStrings(0x08a35046u, Views);
 		Changelist = ddl.GetValue<uint>(0x03b0ddc6u, Changelist);
 	}
 

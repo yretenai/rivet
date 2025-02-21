@@ -15,10 +15,10 @@ public class CombatMarkupCollectionPrius : DDLObjectType, IDDLObjectType<CombatM
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xbab0a3f1u);
 
 	public CombatMarkupCollectionPrius(DDLObject ddl) : base(ddl) {
-		CombatAreaList = ddl.GetValues<RivetAssetId>(0xd0e6d92du);
-		DefensiveAreaList = ddl.GetValues<RivetAssetId>(0x6d69d342u);
-		IdleAreaList = ddl.GetValues<RivetAssetId>(0x97972686u);
-		ExtraActorGroups = ddl.GetValues<RivetAssetId>(0x098426acu);
+		CombatAreaList = ddl.GetValues<RivetAssetId>(0xd0e6d92du, CombatAreaList);
+		DefensiveAreaList = ddl.GetValues<RivetAssetId>(0x6d69d342u, DefensiveAreaList);
+		IdleAreaList = ddl.GetValues<RivetAssetId>(0x97972686u, IdleAreaList);
+		ExtraActorGroups = ddl.GetValues<RivetAssetId>(0x098426acu, ExtraActorGroups);
 	}
 
 	[DDLRegistration(0xd0e6d92du, "Combat Areas", "Combat Areas that are part of this collection. Pass in a SINGLE ActorGroup or a list of actors")]

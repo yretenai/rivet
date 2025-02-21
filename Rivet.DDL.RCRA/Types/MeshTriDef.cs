@@ -15,31 +15,31 @@ public class MeshTriDef : DDLObjectType, IDDLObjectType<MeshTriDef> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x093cd6c1u);
 
 	public MeshTriDef(DDLObject ddl) : base(ddl) {
-		PositionIds = ddl.GetValues<ushort>(0x7e8e5bd5u);
-		NormalIds = ddl.GetValues<ushort>(0x54779029u);
-		UvIds = ddl.GetValues<ushort>(0x17c19349u);
-		Uv2Ids = ddl.GetValues<ushort>(0x4f336e99u);
-		ColorIds = ddl.GetValues<ushort>(0xae0d868du);
-		SkinIds = ddl.GetValues<ushort>(0xdb38240fu);
+		PositionIds = ddl.GetValues<ushort>(0x7e8e5bd5u, PositionIds);
+		NormalIds = ddl.GetValues<ushort>(0x54779029u, NormalIds);
+		UvIds = ddl.GetValues<ushort>(0x17c19349u, UvIds);
+		Uv2Ids = ddl.GetValues<ushort>(0x4f336e99u, Uv2Ids);
+		ColorIds = ddl.GetValues<ushort>(0xae0d868du, ColorIds);
+		SkinIds = ddl.GetValues<ushort>(0xdb38240fu, SkinIds);
 	}
 
 	[DDLRegistration(0x7e8e5bd5u)]
-	public List<ushort> PositionIds { get; set; } = [];
+	public List<ushort> PositionIds { get; set; } = [0x0000, 0x0000, 0x0000];
 
 	[DDLRegistration(0x54779029u)]
-	public List<ushort> NormalIds { get; set; } = [];
+	public List<ushort> NormalIds { get; set; } = [0x0000, 0x0000, 0x0000];
 
 	[DDLRegistration(0x17c19349u)]
-	public List<ushort> UvIds { get; set; } = [];
+	public List<ushort> UvIds { get; set; } = [0x0000, 0x0000, 0x0000];
 
 	[DDLRegistration(0x4f336e99u)]
-	public List<ushort> Uv2Ids { get; set; } = [];
+	public List<ushort> Uv2Ids { get; set; } = [0x0000, 0x0000, 0x0000];
 
 	[DDLRegistration(0xae0d868du)]
-	public List<ushort> ColorIds { get; set; } = [];
+	public List<ushort> ColorIds { get; set; } = [0x0000, 0x0000, 0x0000];
 
 	[DDLRegistration(0xdb38240fu)]
-	public List<ushort> SkinIds { get; set; } = [];
+	public List<ushort> SkinIds { get; set; } = [0x0000, 0x0000, 0x0000];
 
 	public static MeshTriDef Create(DDLObject ddl) => new(ddl);
 }

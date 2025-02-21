@@ -19,8 +19,8 @@ public class Cinematic2ToggleLookActionDef : DDLObjectType, IDDLObjectType<Cinem
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 		DurationType = ddl.GetEnum<x29c933e2>(0x41e2529fu, x29c933e2Values.Lookup);
 		Duration = ddl.GetValue<float>(0x7c5e3db0u, Duration);
-		LooksToEnable = ddl.GetStrings(0x34dbfb35u);
-		LooksToDisable = ddl.GetStrings(0x03e44c4cu);
+		LooksToEnable = ddl.GetStrings(0x34dbfb35u, LooksToEnable);
+		LooksToDisable = ddl.GetStrings(0x03e44c4cu, LooksToDisable);
 	}
 
 	[DDLRegistration(0x8a514a8du)]

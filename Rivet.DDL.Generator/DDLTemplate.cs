@@ -20,7 +20,7 @@ public static class DDLTemplate {
 		namespace Rivet.DDL.%type%;
 		""";
 
-	public const string DDLField = "\t[%attribute%]\n\tpublic %type% %name% { get; set; } = %default-prefix%%default%;\n";
+	public const string DDLField = "\t[%attribute%]\n\tpublic %type% %name% { get; set; } = %default%;\n";
 
 	public const string DDLInit = "\t\t%name% = ddl.%method%;";
 
@@ -35,13 +35,13 @@ public static class DDLTemplate {
 		[%attribute%]
 		public class %name% : %base-name%, IDDLObjectType<%name%> {
 			public %new%static RivetTypeId TypeId { get; } = new RivetTypeId(0x%hash%u);
-		
+
 			public %name%(DDLObject ddl) : base(ddl) {
 				%init-body%
 			}
-		
+
 			%field-body%
-		
+
 			public %new%static %name% Create(DDLObject ddl) => new(ddl);
 		}
 
@@ -50,7 +50,7 @@ public static class DDLTemplate {
 	public const string DefaultArrayArgument = "0x%hash%u";
 
 	public const string DefaultReader = "GetValue<%type%>(0x%hash%u, %name%)";
-	public const string DefaultArrayReader = "GetValues<%type%>(0x%hash%u)";
+	public const string DefaultArrayReader = "GetValues<%type%>(0x%hash%u, %name%)";
 	public const string DefaultMapReader = "(mapId, mapDDL) => mapDDL.GetValue<%type%>(mapId)";
 	public const string DefaultMapKeyHandler = "DDLMapTypeHandler.Visit%type%";
 	public const string MapReader = "GetDictionary<%map-type%, %type%>(0x%hash%, %key-handler%, %visitor%)";
@@ -117,8 +117,8 @@ public static class DDLTemplate {
 	};
 
 	public static readonly Dictionary<DDLTypeKind, string?> ArrayReaderMapping = new() {
-		[DDLTypeKind.String] = "GetStrings(0x%hash%u)",
-		[DDLTypeKind.Json] = "GetStrings(0x%hash%u)",
+		[DDLTypeKind.String] = "GetStrings(0x%hash%u, %name%)",
+		[DDLTypeKind.Json] = "GetStrings(0x%hash%u, %name%)",
 		[DDLTypeKind.Enum] = "GetEnums<%type%>(0x%hash%u, %type%Values.Lookup)",
 		[DDLTypeKind.Bitfield] = null,
 		[DDLTypeKind.Struct] = "GetObjects<%type%>(0x%hash%u)",
