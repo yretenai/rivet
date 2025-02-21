@@ -11,7 +11,7 @@ using Serilog;
 
 namespace Rivet.CLI.Extract;
 
-[Command(typeof(RivetExtractFlags), "toc", "Extracts all game files without conversion", "extract")]
+[Command<RivetExtractFlags>("toc", "Extracts all game files without conversion", "extract")]
 internal record RivetExtractTOCCommand(RivetExtractFlags Flags) : RivetExtractCommand<RivetExtractFlags>(Flags) {
 	protected override void Process(RivetAsset asset) {
 		var name = RivetGame.ProcessName(asset);

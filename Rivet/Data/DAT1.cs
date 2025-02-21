@@ -9,15 +9,16 @@ using Rivet.Models.Data;
 namespace Rivet.Data;
 
 public class DAT1 : IDisposable, IStringPooled {
-	protected const uint DAT1Magic = 0x44415431u;
+	public const uint MagicValue = 0x44415431u;
 
 	public DAT1(IUnsafeMemoryOwner<byte> owner, IUnsafeMemoryOwner<byte> buffer, IUnsafeMemoryOwner<byte>? residentBuffer = null) {
 		Owner = owner;
 		Buffer = buffer;
 		ResidentBuffer = residentBuffer ?? IUnsafeMemoryOwner<byte>.Empty;
 		var reader = new MemoryReader(Buffer);
+		var residentReader = new MemoryReader(ResidentBuffer);
 
-		if (reader.Peek<uint>() != DAT1Magic) {
+		if (reader.Peek<uint>() != MagicValue) {
 			throw new InvalidDataException("Invalid magic value");
 		}
 
@@ -36,7 +37,7 @@ public class DAT1 : IDisposable, IStringPooled {
 				var slice = reader.Slice(sectionHeader.Offset, sectionHeader.Size);
 				Sections[sectionHeader.TypeId] = (sectionHeader, slice);
 			} else {
-				var slice = reader.Slice(sectionHeader.Offset - residentStart, sectionHeader.Size);
+				var slice = residentReader.Slice(sectionHeader.Offset - residentStart, sectionHeader.Size);
 				Sections[sectionHeader.TypeId] = (sectionHeader, slice);
 			}
 		}

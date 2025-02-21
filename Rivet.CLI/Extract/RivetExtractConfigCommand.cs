@@ -13,7 +13,7 @@ using Serilog;
 
 namespace Rivet.CLI.Extract;
 
-[Command(typeof(RivetExtractFlags), "config", "Extracts all config files to JSON", "extract")]
+[Command<RivetExtractFlags>("config", "Extracts all config files to JSON", "extract")]
 internal record RivetExtractConfigCommand(RivetExtractFlags Flags) : RivetExtractCommand<RivetExtractFlags>(Flags) {
 	private static JsonSerializerOptions Options { get; } = new() {
 		WriteIndented = true,

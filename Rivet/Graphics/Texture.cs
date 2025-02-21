@@ -18,11 +18,11 @@ public class Texture : AssetPack, IRivetInstance<Texture> {
 			throw new InvalidDataException();
 		}
 
-		using var dat = new DAT1(Buffers[0], Buffers[0]);
+		ResidentBuffer = Buffers.Count > 1 ? Buffers[1] : IUnsafeMemoryOwner<byte>.Empty;
+
+		using var dat = new DAT1(Buffers[0], Buffers[0], ResidentBuffer);
 
 		TextureHeader = dat.GetSection<TextureHeader>("Texture Header"u8)[0];
-
-		ResidentBuffer = Buffers.Count > 1 ? Buffers[1] : IUnsafeMemoryOwner<byte>.Empty;
 
 		if (HasStream && Game.TryFindAsset(Asset.Id, asset.Locale, AssetCategory.Texture, out var streamAsset)) {
 			StreamBuffer = streamAsset.Open() ?? IUnsafeMemoryOwner<byte>.Empty;

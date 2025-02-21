@@ -10,28 +10,47 @@ using Rivet.Models;
 
 namespace Rivet.CLI.List;
 
-[Command(typeof(RivetListTOCFlags), "toc", "List all TOC and DAG contents", "list")]
+[Command<RivetListTOCFlags>("toc", "List all TOC and DAG contents", "list")]
 internal record RivetListTOCCommand(RivetListTOCFlags Flags) : RivetCLICommand<RivetListTOCFlags>(Flags) {
 	public override void Execute() {
-		Console.Error.WriteLine("id,name,type,locale,category,is_key,is_texture,size,dag_hash,hash");
+		if (Flags.Legacy) {
+			Console.Error.WriteLine("id,name,schema,type,locale,category,is_key,is_texture,is_stream,size,archive,dag_hash,hash");
+		} else {
+			Console.Error.WriteLine("id,name,schema,locale,category,is_stream,size,archive");
+		}
 
+		var sb = new StringBuilder();
 		foreach (var asset in Game.TOC.Assets.Values.SelectMany(x => x).Concat(Game.DAG.VirtualAssets).OrderBy(x => x.Id)) {
-			var sb = new StringBuilder();
+			sb.Clear();
 			sb.Append(asset.Id.ToString("x16"));
 			sb.Append(',');
 			sb.Append(RivetGame.ProcessName(asset));
 			sb.Append(',');
-			sb.Append(asset.Type.ToString("G").ToLower());
+			sb.Append(asset.Header.Schema.Hash.ToString("x8"));
 			sb.Append(',');
+
+			if (!Flags.Legacy) {
+				sb.Append(asset.Type.ToString("G").ToLower());
+				sb.Append(',');
+			}
+
 			sb.Append(RivetGame.LocalizationStr[(int) asset.Locale]);
 			sb.Append(',');
 			sb.Append(asset.Category.ToString("G").ToLower());
 			sb.Append(',');
-			sb.Append(asset.Flags.IsKey ? 'y' : 'n');
-			sb.Append(',');
-			sb.Append(asset.Flags.IsTexture ? 'y' : 'n');
+
+			if (!Flags.Legacy) {
+				sb.Append(asset.Flags.IsKey ? 'y' : 'n');
+				sb.Append(',');
+				sb.Append(asset.Flags.IsTexture ? 'y' : 'n');
+				sb.Append(',');
+			}
+
+			sb.Append((int) asset.Category % 2 == 1 ? 'y' : 'n');
 			sb.Append(',');
 			sb.Append(asset.Size);
+			sb.Append(',');
+			sb.Append(asset.Archive?.Name ?? "");
 			sb.Append(',');
 			sb.Append(asset.Hash);
 			sb.Append(',');

@@ -14,6 +14,9 @@ public sealed record RivetMemory<T>(int Size) : IUnsafeMemoryOwner<T>, IMemoryOw
 		stream.ReadExactly(Memory.Span.AsBytes());
 	}
 
+	public RivetMemory(Stream stream) : this((int) (stream.Length - stream.Position)) => stream.ReadExactly(Memory.Span.AsBytes());
+	public RivetMemory(Stream stream, int length) : this(length) => stream.ReadExactly(Memory.Span.AsBytes());
+
 	public IMemoryOwner<T>? UnderlyingOwner { get; private set; } = MemoryPool<T>.Shared.Rent(Size);
 	public int Offset { get; set; }
 

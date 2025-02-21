@@ -105,7 +105,7 @@ public sealed class DependencyDAG : DAT1 {
 	private static unsafe IUnsafeMemoryOwner<byte> GetDAT1Stream(IUnsafeMemoryOwner<byte> buffer) {
 		var reader = new MemoryReader(buffer);
 		var header = reader.Get<DAGHeader>();
-		if (header.TypeId == DAT1Magic) {
+		if (header.TypeId == MagicValue) {
 			return buffer;
 		}
 

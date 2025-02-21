@@ -15,7 +15,7 @@ using Triton.Encoder;
 
 namespace Rivet.CLI.Extract;
 
-[Command(typeof(RivetExtractTextureFlags), "texture", "Extracts textures and converts them", "extract")]
+[Command<RivetExtractTextureFlags>("texture", "Extracts textures and converts them", "extract")]
 internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTextureFlags> {
 	public RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : base(Flags) {
 		switch (Flags.Format) {
