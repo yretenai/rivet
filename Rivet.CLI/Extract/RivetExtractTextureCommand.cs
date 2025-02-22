@@ -26,9 +26,8 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 				break;
 		}
 
-		PngEncoder = new PNGEncoder(Flags.CompressTextures ? PNGCompressionLevel.Small : PNGCompressionLevel.None);
-		var tiffCompression = Flags.CompressTextures ? TIFFCompression.LZW : TIFFCompression.None;
-		TiffEncoder = new TIFFEncoder(tiffCompression, tiffCompression);
+		PngEncoder = new PNGEncoder(PNGCompressionLevel.Small);
+		TiffEncoder = new TIFFEncoder(TIFFCompression.LZW, TIFFCompression.LZW);
 	}
 
 	private PNGEncoder PngEncoder { get; }
@@ -122,7 +121,7 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 					crossImage.Draw(frames[0], faceSize * 2, faceSize); // +X
 					crossImage.Draw(frames[5], faceSize * 3, faceSize); // -Z
 					crossImage.Draw(frames[3], faceSize, faceSize * 2); //-Y
-					SaveImage(stream, format, [crossImage]);
+					SaveImage(stream, texture.TextureHeader.Flags.ContentType, format, [crossImage]);
 					return;
 				}
 
@@ -136,13 +135,13 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 					crossImage.Draw(rootFrame, new Point(faceSize * 2, faceSize), new Rect(new Point(0, 0), tile)); // +X
 					crossImage.Draw(rootFrame, new Point(faceSize * 3, faceSize), new Rect(new Point(faceSize, faceSize), tile)); // -Z
 					crossImage.Draw(rootFrame, new Point(faceSize, faceSize * 2), new Rect(new Point(faceSize * 3, 0), tile)); // -Y
-					SaveImage(stream, format, [crossImage]);
+					SaveImage(stream, texture.TextureHeader.Flags.ContentType, format, [crossImage]);
 					return;
 				}
 			}
 
 			if (frames.Count == 1 || format == ImageFormat.TIF) {
-				SaveImage(stream, format, frames);
+				SaveImage(stream, texture.TextureHeader.Flags.ContentType, format, frames);
 				return;
 			}
 
@@ -151,17 +150,22 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 				tileImage.Draw(frames[surfaceIndex], new Point(0, texture.Dimensions.Height * surfaceIndex));
 			}
 
-			SaveImage(stream, format, [tileImage]);
+			SaveImage(stream, texture.TextureHeader.Flags.ContentType, format, [tileImage]);
 		}
 	}
 
-	private void SaveImage(Stream stream, ImageFormat format, ImageCollection images) {
+	private void SaveImage(Stream stream, TextureContentType contentType, ImageFormat format, ImageCollection images) {
+		var options = new EncoderWriteOptions {
+			Compress = Flags.CompressTextures,
+			AssociateAlpha = contentType == TextureContentType.sRGB,
+		};
+
 		switch (format) {
 			case ImageFormat.PNG:
-				PngEncoder.Write(stream, images[0]);
+				PngEncoder.Write(stream, options, images[0]);
 				break;
 			case ImageFormat.TIF:
-				TiffEncoder.Write(stream, images);
+				TiffEncoder.Write(stream, options, images);
 				break;
 		}
 	}
