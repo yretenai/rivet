@@ -62,7 +62,7 @@ public record RivetDAT1Command(RivetDAT1Flags Flags) : RivetCommand {
 				Directory.CreateDirectory(blockDestination);
 
 				foreach (var (sectionId, (_, section)) in dat1.Sections) {
-					var sectionDestination = Path.Combine(blockDestination, sectionId + ".bin");
+					var sectionDestination = Path.Combine(blockDestination, sectionId + ".built");
 					using var sectionStream = new FileStream(sectionDestination, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
 					sectionStream.Write(section.Memory.Span);
 				}
