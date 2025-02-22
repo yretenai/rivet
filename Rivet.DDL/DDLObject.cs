@@ -35,12 +35,10 @@ public class DDLObject : Dictionary<uint, DDLField> {
 			}
 
 			TypeRegistration[attr.Id] = type;
-			RivetTypeIdRegistry.Names[attr.Id] = type.Name;
 
 			var rootAttributes = type.GetCustomAttributes<DDLTypeRootAttribute>();
 			foreach (var rootAttribute in rootAttributes) {
 				RootRegistration[rootAttribute.Id] = type;
-				RivetTypeIdRegistry.Names[rootAttribute.Id] = type.Name;
 			}
 		}
 	}

@@ -19,7 +19,7 @@ internal class Program {
 	};
 
 	private static void Main(string[] args) {
-		if (args.Length < 2) {
+		if (args.Length < 1) {
 			Console.WriteLine($"Usage: {AppDomain.CurrentDomain.FriendlyName} path/to/ddl.json path/to/ddl");
 			return;
 		}
@@ -28,6 +28,17 @@ internal class Program {
 
 		using var stream = new FileStream(args[0], FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 		var registry = JsonSerializer.Deserialize<DDLRegistry>(stream, Options)!;
+
+		if (args.Length < 2) {
+			foreach (var type in registry.Types) {
+				Console.WriteLine(type.Name);
+				foreach (var field in type.Fields) {
+					Console.WriteLine(field.Name);
+				}
+			}
+
+			return;
+		}
 
 		foreach (var value in registry.Types) {
 			if (value.Name!.StartsWith("WWise")) {

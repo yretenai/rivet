@@ -60,7 +60,15 @@ public record struct RivetTypeId : IEquatable<uint>, IEquatable<string> {
 		return hash;
 	}
 
-	public static uint Checksum(string text, uint hash = Basis) => Checksum(Encoding.UTF8.GetBytes(text), hash);
+	public static uint Checksum(string text, uint hash = Basis) {
+		if (text.Length > 1024) {
+			return Checksum(Encoding.UTF8.GetBytes(text), hash);
+		}
+
+		Span<byte> data = stackalloc byte[Encoding.UTF8.GetByteCount(text)];
+		Encoding.UTF8.GetBytes(text, data);
+		return Checksum(data, hash);
+	}
 
 	public static RivetTypeId FromString(string? text, uint hash = Basis) => string.IsNullOrEmpty(text) ? new RivetTypeId(Basis) : new RivetTypeId(Encoding.UTF8.GetBytes(text), hash);
 
@@ -70,7 +78,12 @@ public record struct RivetTypeId : IEquatable<uint>, IEquatable<string> {
 	public static implicit operator RivetTypeId(string? text) => FromString(text);
 
 
-	public override string ToString() => RivetTypeIdRegistry.TryGetName(Hash, out var name) ? name : $"0x{Hash:x8}";
+	public static Func<RivetTypeId, string?> NameResolver { get; set; } = _ => null;
+	public override string ToString() => Hash switch {
+		                                     Basis => "",
+		                                     0 => "<null>",
+		                                     _ => NameResolver(Hash) ?? $"0x{Hash:x8}",
+	                                     };
 
 	public bool Equals(uint other) => Hash == other;
 

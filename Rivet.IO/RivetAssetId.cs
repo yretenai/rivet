@@ -62,7 +62,15 @@ public record struct RivetAssetId : IEquatable<ulong>, IEquatable<string> {
 		return hash;
 	}
 
-	public static ulong Checksum(string text, ulong hash = Basis) => Checksum(Encoding.UTF8.GetBytes(text), hash);
+	public static ulong Checksum(string text, ulong hash = Basis) {
+		if (text.Length > 1024) {
+			return Checksum(Encoding.UTF8.GetBytes(text), hash);
+		}
+
+		Span<byte> data = stackalloc byte[Encoding.UTF8.GetByteCount(text)];
+		Encoding.UTF8.GetBytes(text, data);
+		return Checksum(data, hash);
+	}
 
 	public static string NormalizeString(string? text) => text?.Replace('\\', '/').ToLower().TrimStart('/') ?? "";
 

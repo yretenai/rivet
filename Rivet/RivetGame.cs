@@ -5,7 +5,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Rivet.Data;
 using Rivet.DDL;
-using Rivet.DDL.Enums;
+using Rivet.DDL.Types;
 using Rivet.IO;
 using Rivet.Models;
 using Rivet.Models.Data;
@@ -19,15 +19,15 @@ public sealed class RivetGame : IDisposable {
 	];
 
 	public static readonly string[] StreamExtensions = ["", ".stream", "", ".wem", "", ".animstrm", "", ".lgstream"];
+	public static Dictionary<uint, string> TypeIdLookup { get; } = [];
 
 	static RivetGame() {
-		var txt = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "streamed_files.txt");
-		if (File.Exists(txt)) {
-			LoadFileList(File.ReadAllText(txt));
-		}
+		LoadFileList(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "assets.txt"));
+		LoadTypeIds(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "tags.txt"));
 
-		DDLObject.LoadTypes(typeof(Ability).Assembly);
+		DDLObject.LoadTypes(typeof(DDLAllowSubstruct).Assembly);
 		RivetAssetId.NameResolver = id => Instance != null && Instance.TryGetAssetName(id, out var name) ? name : null;
+		RivetTypeId.NameResolver = id => TypeIdLookup.GetValueOrDefault(id);
 	}
 
 	public RivetGame(string root) {
@@ -126,14 +126,40 @@ public sealed class RivetGame : IDisposable {
 		return instance;
 	}
 
-	public static void LoadFileList(string text) {
-		foreach (var _line in text.Split('\n', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)) {
-			var line = _line.Trim();
+	public static void LoadFileList(string path) {
+		if (!File.Exists(path)) {
+			return;
+		}
+
+		using var reader = new StreamReader(new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+		while (reader.ReadLine() is { } line) {
+			line = line.Trim();
 			if (line.Length == 0) {
 				continue;
 			}
 
 			KnownAssetPaths[RivetAssetId.FromString(line).Value] = line;
+		}
+	}
+
+	public static void LoadTypeIds(string path) {
+		if (!File.Exists(path)) {
+			return;
+		}
+
+		using var reader = new StreamReader(new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+		while (reader.ReadLine() is { } line) {
+			line = line.Trim();
+			if (line.Length == 0) {
+				continue;
+			}
+
+			var eq = line.IndexOf('=', StringComparison.Ordinal);
+			if (eq > -1) {
+				line = line[..eq];
+			}
+
+			TypeIdLookup[RivetTypeId.Checksum(line)] = line;
 		}
 	}
 

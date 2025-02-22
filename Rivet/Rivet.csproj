@@ -28,7 +28,10 @@ SPDX-License-Identifier: EUPL-1.2
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="Resources\streamed_files.txt">
+		<None Update="Resources\assets.txt">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Resources\tags.txt">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
