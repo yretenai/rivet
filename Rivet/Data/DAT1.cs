@@ -2,6 +2,7 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Rivet.IO;
 using Rivet.Models.Data;
@@ -21,6 +22,8 @@ public class DAT1 : IDisposable, IStringPooled {
 		if (reader.Peek<uint>() != MagicValue) {
 			throw new InvalidDataException("Invalid magic value");
 		}
+
+		Debug.Assert(Header.Reserved == 0);
 
 		Header = reader.Get<DAT1Header>();
 		var sectionHeaders = reader.Get<DAT1Entry>(Header.SectionCount);
