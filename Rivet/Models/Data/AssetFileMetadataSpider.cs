@@ -12,5 +12,5 @@ public record struct AssetFileMetadataSpider {
 	public ushort Id { get; set; }
 	public Locale Locale { get; set; }
 	public int ChunkId { get; set; }
-	public Byte64Array Name { get; set; }
+	public Array64 Name { get; set; }
 }

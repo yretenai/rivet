@@ -12,8 +12,8 @@ public record struct AssetHeader {
 	public RivetTypeId Schema { get; set; }
 
 	// sizes of each block, may be 0 or spill into .stream
-	public Int4Array Sizes { get; set; }
+	public AssetSizes Sizes { get; set; }
 
-	// _art.zone: 0 - main block, 1 - physics, 2 - unknown, 3 - texture data
-	public Int4Array FormatData { get; set; }
+	// _art.zone: 0 - data, 1 - physics, 2 - hlod, 3 - texture
+	public Array16 FormatData { get; set; }
 }
