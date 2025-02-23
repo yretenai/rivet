@@ -52,6 +52,7 @@ public record struct RivetAssetId : IEquatable<ulong>, IEquatable<string> {
 	public RivetAssetId(uint value, RivetAssetIdFlags flags) => Value = value | ((ulong) flags << 62);
 
 	public RivetAssetId(ReadOnlySpan<byte> bytes, RivetAssetIdFlags flags, ulong hash = Basis) : this(Checksum(bytes, hash), flags) { }
+	public RivetAssetId(string text, RivetAssetIdFlags flags, ulong hash = Basis) : this(Checksum(text, hash), flags) { }
 
 
 	public static ulong Checksum(ReadOnlySpan<byte> bytes, ulong hash = Basis) {
@@ -74,7 +75,9 @@ public record struct RivetAssetId : IEquatable<ulong>, IEquatable<string> {
 
 	public static string NormalizeString(string? text) => text?.Replace('\\', '/').ToLower().TrimStart('/') ?? "";
 
-	public static RivetAssetId FromString(string? text, RivetAssetIdFlags flags = RivetAssetIdFlags.Shipped, ulong hash = Basis) => string.IsNullOrEmpty(text) ? new RivetAssetId(Basis) : new RivetAssetId(Encoding.UTF8.GetBytes(text), flags, hash);
+	public static RivetAssetId FromString(string? text, RivetAssetIdFlags flags = RivetAssetIdFlags.Shipped, ulong hash = Basis) {
+		return string.IsNullOrEmpty(text) ? new RivetAssetId(Basis) : new RivetAssetId(text, flags, hash);
+	}
 
 	public ulong Value { get; set; }
 	public ulong Hash => Value & 0x3FFFFFFFFFFFFFFFUL;

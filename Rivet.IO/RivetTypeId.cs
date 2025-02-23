@@ -51,6 +51,7 @@ public record struct RivetTypeId : IEquatable<uint>, IEquatable<string> {
 	public RivetTypeId(uint hash) => Hash = hash;
 
 	public RivetTypeId(ReadOnlySpan<byte> bytes, uint hash = Basis) => Hash = Checksum(bytes, hash);
+	public RivetTypeId(string text, uint hash = Basis) => Hash = Checksum(text, hash);
 
 	public static uint Checksum(ReadOnlySpan<byte> bytes, uint hash = Basis) {
 		foreach (var letter in bytes) {
@@ -70,7 +71,7 @@ public record struct RivetTypeId : IEquatable<uint>, IEquatable<string> {
 		return Checksum(data, hash);
 	}
 
-	public static RivetTypeId FromString(string? text, uint hash = Basis) => string.IsNullOrEmpty(text) ? new RivetTypeId(Basis) : new RivetTypeId(Encoding.UTF8.GetBytes(text), hash);
+	public static RivetTypeId FromString(string? text, uint hash = Basis) => string.IsNullOrEmpty(text) ? new RivetTypeId(Basis) : new RivetTypeId(text, hash);
 
 
 	public static implicit operator uint(RivetTypeId rivetAssetId) => rivetAssetId.Hash;

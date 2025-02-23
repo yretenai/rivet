@@ -33,6 +33,6 @@ public record RivetHashCommand(CommandLineFlags Flags) : RivetCommand {
 	private static void Hash(string arg) {
 		var typeId = RivetTypeId.FromString(arg);
 		var assetId = RivetAssetId.FromString(arg);
-		Console.WriteLine($"{arg} = TypeId: {typeId.Hash:x8} AssetId: {assetId.Hash:x16}");
+		Console.WriteLine($"{arg} = TypeId: {typeId.Hash:x8} AssetId: {assetId.Value:x16}");
 	}
 }

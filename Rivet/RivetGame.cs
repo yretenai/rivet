@@ -133,7 +133,7 @@ public sealed class RivetGame : IDisposable {
 
 		using var reader = new StreamReader(new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
 		while (reader.ReadLine() is { } line) {
-			line = line.Trim();
+			line = line.Trim().ToLowerInvariant();
 			if (line.Length == 0) {
 				continue;
 			}
