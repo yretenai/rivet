@@ -333,7 +333,7 @@ internal class Program {
 				                   _ => "[]",
 			                   };
 
-			if (field.Default.HasValue && field.Default.Value.ValueKind is not JsonValueKind.Null) {
+			if (field.Default is { ValueKind: not JsonValueKind.Null }) {
 				var defaultField = field.Default.Value;
 				defaultValue = JsonToTemplateValue(enumMap, defaultField, field, type);
 			}
