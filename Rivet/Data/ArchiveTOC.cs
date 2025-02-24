@@ -13,33 +13,33 @@ using Serilog;
 
 namespace Rivet.Data;
 
-public sealed class ArchiveTOC : DAT1 {
-	private const uint TypeId = 0x4D7CF320;
-	private const uint TypeIdSpider = 0x51B8E006;
+public sealed class ArchiveTOC : IDisposable {
 	private const uint TOCMagic = 0x34E89035;
 	private const uint TOCMagicCompressed = 0x77AF12AF;
 
-	public ArchiveTOC(IUnsafeMemoryOwner<byte> buffer, RivetGame game) : base(buffer, GetDAT1Stream(buffer)) {
+	public ArchiveTOC(IUnsafeMemoryOwner<byte> buffer, RivetGame game) {
 		Log.Information("Loading TOC");
 		Game = game;
 
-		if (Header.Schema.Hash is not (TypeId or TypeIdSpider)) {
+		using var dat = new DAT1(GetDAT1Stream(buffer));
+
+		if (dat.Header.Version is not (AssetVersion.ArchiveTOC or AssetVersion.SpiderArchiveTOC)) {
 			throw new NotSupportedException("ArchiveTOC is not recognized");
 		}
 
-		var isSpider = Header.Schema.Hash is TypeIdSpider;
-		var assetGroups = GetSection<PackedPair<int, int>>("Archive TOC Header"u8);
-		var assetIds = GetSection<ulong>("Archive TOC Asset IDs"u8);
-		var textureIds = GetSection<ulong>("Archive TOC Texture Asset Ids"u8);
-		var textureMetas = GetSection<AssetTextureHeader>("Archive TOC Texture Meta"u8);
-		var assetHeaders = GetSection<AssetHeader>("Archive TOC Asset Header Data"u8);
-		var keyIds = GetSection<ulong>("Archive TOC Key Asset IDs"u8);
-		var textureHeader = GetSection<int>("Archive TOC Texture Header"u8);
-		var assetMetadata = isSpider ? default : GetSection<AssetMetadata>("Archive TOC Asset Metadata"u8);
-		var assetFileMetadata = isSpider ? default : GetSection<AssetFileMetadata>("Archive TOC File Metadata"u8);
-		var spiderAssetMetadata = !isSpider ? default : GetSection<AssetMetadataSpider>("Archive TOC Asset Metadata"u8);
-		var spiderAssetFileMetadata = !isSpider ? default : GetSection<AssetFileMetadataSpider>("Archive TOC File Metadata"u8);
-		var dupeInfo = GetSection<PackedPair<int, uint>>("Archive TOC Asset Dupe Metadata"u8);
+		var isSpider = dat.Header.Version is AssetVersion.SpiderArchiveTOC;
+		var assetGroups = dat.GetSection<PackedPair<int, int>>("Archive TOC Header"u8);
+		var assetIds = dat.GetSection<ulong>("Archive TOC Asset IDs"u8);
+		var textureIds = dat.GetSection<ulong>("Archive TOC Texture Asset Ids"u8);
+		var textureMetas = dat.GetSection<AssetTextureHeader>("Archive TOC Texture Meta"u8);
+		var assetHeaders = dat.GetSection<AssetHeader>("Archive TOC Asset Header Data"u8);
+		var keyIds = dat.GetSection<ulong>("Archive TOC Key Asset IDs"u8);
+		var textureHeader = dat.GetSection<int>("Archive TOC Texture Header"u8);
+		var assetMetadata = isSpider ? default : dat.GetSection<AssetMetadata>("Archive TOC Asset Metadata"u8);
+		var assetFileMetadata = isSpider ? default : dat.GetSection<AssetFileMetadata>("Archive TOC File Metadata"u8);
+		var spiderAssetMetadata = !isSpider ? default : dat.GetSection<AssetMetadataSpider>("Archive TOC Asset Metadata"u8);
+		var spiderAssetFileMetadata = !isSpider ? default : dat.GetSection<AssetFileMetadataSpider>("Archive TOC File Metadata"u8);
+		var dupeInfo = dat.GetSection<PackedPair<int, uint>>("Archive TOC Asset Dupe Metadata"u8);
 
 		if (textureHeader.Length > 0) {
 			StreamedTextureCount = textureHeader[0];
@@ -165,10 +165,16 @@ public sealed class ArchiveTOC : DAT1 {
 
 	public int StreamedTextureCount { get; }
 
+	public void Dispose() {
+		foreach (var archive in Archives) {
+			archive.Dispose();
+		}
+	}
+
 	private static unsafe IUnsafeMemoryOwner<byte> GetDAT1Stream(IUnsafeMemoryOwner<byte> buffer) {
 		var reader = new MemoryReader(buffer);
 		var header = reader.Get<TOCHeader>();
-		if (header.TypeId == MagicValue) {
+		if (header.TypeId == DAT1.MagicValue) {
 			return buffer;
 		}
 
@@ -187,12 +193,5 @@ public sealed class ArchiveTOC : DAT1 {
 		using var zStream = new ZLibStream(unsafeStream, CompressionMode.Decompress, false);
 		zStream.ReadExactly(uncompressed.Memory.Span);
 		return uncompressed;
-	}
-
-	protected override void Dispose(bool disposing) {
-		base.Dispose(disposing);
-		foreach (var archive in Archives) {
-			archive.Dispose();
-		}
 	}
 }

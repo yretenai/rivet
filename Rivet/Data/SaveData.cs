@@ -6,7 +6,7 @@ namespace Rivet.Data;
 
 public class SaveData {
 	public SaveData(IUnsafeMemoryOwner<byte> buffer) {
-		using var dat = new DAT1(buffer, buffer);
+		using var dat = new DAT1(buffer);
 
 		// 0x28338a -- a single number?
 		// 0xd0a9df -- big chunk of data that contains "INVT" atoms?

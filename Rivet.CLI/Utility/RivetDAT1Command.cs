@@ -40,32 +40,45 @@ public record RivetDAT1Command(RivetDAT1Flags Flags) : RivetCommand {
 
 			var destination = arg + ".dat";
 
+			var offset = 0;
+			var datReadPoint = 0;
 			for (var index = 0; index < bundle.Buffers.Count; index++) {
 				using var block = bundle.Buffers[index];
+				var oldOffset = offset;
+				offset += block.Size;
+
+				if (oldOffset + block.Size <= datReadPoint) {
+					continue;
+				}
+
 				if (block.Size <= 4) {
 					continue;
 				}
 
-				var nextBlock = index < bundle.Buffers.Count - 1 ? bundle.Buffers[index + 1] : IUnsafeMemoryOwner<byte>.Empty;
-
-				if (MemoryMarshal.Read<uint>(block.Memory.Span) != DAT1.MagicValue) {
-					continue;
-				}
-
-				using var dat1 = new DAT1(IUnsafeMemoryOwner<byte>.Empty, block, nextBlock);
-
-				if (dat1.Sections.Count == 0) {
-					continue;
-				}
-
+				var magic = MemoryMarshal.Read<uint>(block.Memory.Span);
 				var blockDestination = Path.Combine(destination, index.ToString("D"));
-				Directory.CreateDirectory(blockDestination);
 
-				foreach (var (sectionId, (_, section)) in dat1.Sections) {
-					var sectionDestination = Path.Combine(blockDestination, sectionId + ".built");
-					using var sectionStream = new FileStream(sectionDestination, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
-					sectionStream.Write(section.Memory.Span);
+				if (magic == DAT1.MagicValue) {
+					using var dat1 = new DAT1(bundle.Buffers[index..]);
+
+					if (dat1.Sections.Count == 0) {
+						continue;
+					}
+
+					Directory.CreateDirectory(blockDestination);
+
+					foreach (var (sectionId, (_, section)) in dat1.Sections) {
+						var sectionDestination = Path.Combine(blockDestination, sectionId + ".built");
+						using var sectionStream = new FileStream(sectionDestination, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+						sectionStream.Write(section.Memory.Span);
+					}
+
+					datReadPoint = dat1.Size;
+
+					continue;
 				}
+
+				File.WriteAllBytes(blockDestination + ".bin", block.Memory.Span);
 			}
 		}
 	}

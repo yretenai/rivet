@@ -10,27 +10,28 @@ using Serilog;
 
 namespace Rivet.Data;
 
-public sealed class DependencyDAG : DAT1 {
-	private const uint TypeId = 0x2A077A51;
+public sealed class DependencyDAG {
 	private const uint DAGMagic = 0xB8EF3955;
 	private const uint DAGMagicCompressed = 0x891F77AF;
 
-	public DependencyDAG(IUnsafeMemoryOwner<byte> buffer, RivetGame game) : base(buffer, GetDAT1Stream(buffer)) {
+	public DependencyDAG(IUnsafeMemoryOwner<byte> buffer, RivetGame game) {
 		Log.Information("Loading DAG");
 		Game = game;
 
-		if (Header.Schema.Hash is not TypeId) {
+		using var dat = new DAT1(GetDAT1Stream(buffer));
+
+		if (dat.Header.Version is not AssetVersion.DependencyAssetGraph) {
 			throw new NotSupportedException("DependencyDAG is not recognized");
 		}
 
-		var ids = GetSection<ulong>("Asset Ids"u8);
-		var links = GetSection<uint>("Dependency Links"u8);
-		var heads = GetSection<uint>("Dependency Links Heads"u8);
-		var names = GetSection<int>("Asset Names"u8);
-		var types = GetSection<AssetType>("Asset Types"u8);
-		var chains = GetSection<uint>("LC Link Heads"u8);
+		var ids = dat.GetSection<ulong>("Asset Ids"u8);
+		var links = dat.GetSection<uint>("Dependency Links"u8);
+		var heads = dat.GetSection<uint>("Dependency Links Heads"u8);
+		var names = dat.GetSection<int>("Asset Names"u8);
+		var types = dat.GetSection<AssetType>("Asset Types"u8);
+		var chains = dat.GetSection<uint>("LC Link Heads"u8);
 
-		var reader = new MemoryReader(Buffer);
+		var reader = new MemoryReader(dat.Buffers[0]);
 
 		for (var index = 0; index < names.Length; index++) {
 			var hash = ids[index];
@@ -105,7 +106,7 @@ public sealed class DependencyDAG : DAT1 {
 	private static unsafe IUnsafeMemoryOwner<byte> GetDAT1Stream(IUnsafeMemoryOwner<byte> buffer) {
 		var reader = new MemoryReader(buffer);
 		var header = reader.Get<DAGHeader>();
-		if (header.TypeId == MagicValue) {
+		if (header.TypeId == DAT1.MagicValue) {
 			return buffer;
 		}
 

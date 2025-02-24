@@ -11,16 +11,41 @@ using Rivet.Models.Graphics;
 namespace Rivet.Graphics;
 
 public class Texture : AssetPack, IRivetInstance<Texture> {
-	public const uint TypeId = 0x8F53A199;
-
 	public Texture(RivetAsset asset, IUnsafeMemoryOwner<byte> buffer, RivetGame game) : base(asset, buffer, game) {
-		if (Asset.Header.Schema != TypeId || Buffers.Count < 1) {
+		if (Buffers.Count < 1) {
 			throw new InvalidDataException();
 		}
 
-		ResidentBuffer = Buffers.Count > 1 ? Buffers[1] : IUnsafeMemoryOwner<byte>.Empty;
+		List<IUnsafeMemoryOwner<byte>> buffers;
+		if (asset.Header.Version is AssetVersion.Zone) {
+			if (Buffers.Count < 2) {
+				throw new InvalidDataException();
+			}
 
-		using var dat = new DAT1(Buffers[0], Buffers[0], ResidentBuffer);
+			using var zoneDat = new DAT1(Buffers, true);
+			if (zoneDat.Header.Version is not AssetVersion.Zone) {
+				throw new InvalidDataException();
+			}
+
+			var atlas = zoneDat.GetSection("Zone Impostors Atlas"u8);
+			if (atlas.Size == 0) {
+				ResidentBuffer = IUnsafeMemoryOwner<byte>.Empty;
+				StreamBuffer = IUnsafeMemoryOwner<byte>.Empty;
+				return;
+			}
+
+			buffers = [atlas.Shift(16), Buffers[3]];
+		} else {
+			if (Asset.Header.Version != AssetVersion.Texture) {
+				throw new InvalidDataException();
+			}
+
+			buffers = Buffers;
+		}
+
+		ResidentBuffer = buffers.Count > 1 ? buffers[1] : IUnsafeMemoryOwner<byte>.Empty;
+
+		using var dat = new DAT1(buffers, true);
 
 		TextureHeader = dat.GetSection<TextureHeader>("Texture Header"u8)[0];
 
@@ -43,6 +68,8 @@ public class Texture : AssetPack, IRivetInstance<Texture> {
 			return (width, height);
 		}
 	}
+
+	public bool IsValid => Dimensions.Height * Dimensions.Width > 0 && ResidentBuffer.Size + StreamBuffer.Size > 0;
 
 	public static Texture CreateInstance(RivetAsset asset, RivetGame game, IUnsafeMemoryOwner<byte> buffer) => new(asset, buffer, game);
 

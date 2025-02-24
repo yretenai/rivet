@@ -28,5 +28,7 @@ public enum AssetType : byte {
 	NodeGraph = 20,
 	Unknown21 = 21,
 	WwiseLookup = 22,
+	Unknown23 = 23,
+	Unknown24 = 24,
 	None = 0xFF,
 }

@@ -19,7 +19,6 @@ public sealed class RivetGame : IDisposable {
 	];
 
 	public static readonly string[] StreamExtensions = ["", ".stream", "", ".wem", "", ".animstrm", "", ".lgstream"];
-	public static Dictionary<uint, string> TypeIdLookup { get; } = [];
 
 	static RivetGame() {
 		LoadFileList(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "assets.txt"));
@@ -50,6 +49,8 @@ public sealed class RivetGame : IDisposable {
 		ApplyKnownPaths();
 	}
 
+	public static Dictionary<uint, string> TypeIdLookup { get; } = [];
+
 	public ArchiveTOC TOC { get; }
 	public DependencyDAG DAG { get; }
 	public string Root { get; }
@@ -59,7 +60,7 @@ public sealed class RivetGame : IDisposable {
 
 	public void Dispose() {
 		TOC.Dispose();
-		DAG.Dispose();
+
 		if (Instance != null && Path.GetFullPath(Instance.Root) == Path.GetFullPath(Root)) {
 			Instance = null;
 		}

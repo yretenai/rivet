@@ -36,7 +36,7 @@ public record RivetAsset {
 		try {
 			if (data != null) {
 				instance = T.CreateInstance(this, game, data);
-				return instance is not null;
+				return true;
 			}
 
 			return false;

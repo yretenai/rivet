@@ -7,5 +7,5 @@ using Rivet.IO;
 namespace Rivet.Models;
 
 public interface IRivetInstance<out T> {
-	public static abstract T? CreateInstance(RivetAsset asset, RivetGame game, IUnsafeMemoryOwner<byte> buffer);
+	public static abstract T CreateInstance(RivetAsset asset, RivetGame game, IUnsafeMemoryOwner<byte> buffer);
 }

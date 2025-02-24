@@ -26,7 +26,7 @@ internal record RivetListTOCCommand(RivetListTOCFlags Flags) : RivetCLICommand<R
 			sb.Append(',');
 			sb.Append(RivetGame.ProcessName(asset));
 			sb.Append(',');
-			sb.Append(asset.Header.Schema.Hash.ToString("x8"));
+			sb.Append(((uint) asset.Header.Version).ToString("x8"));
 			sb.Append(',');
 
 			if (!Flags.Legacy) {

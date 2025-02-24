@@ -34,12 +34,12 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 	private TIFFEncoder TiffEncoder { get; }
 
 	protected override void Process(RivetAsset asset) {
-		if (asset.Type is not AssetType.Texture || asset.Category is not AssetCategory.Game) {
+		if (asset.Type is not (AssetType.Texture or AssetType.Zone) || asset.Category is not AssetCategory.Game) {
 			return;
 		}
 
 		using var texture = asset.Load<Texture>(Game);
-		if (texture == null) {
+		if (texture is not { IsValid: true }) {
 			return;
 		}
 

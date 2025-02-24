@@ -9,15 +9,15 @@ using Rivet.Models.Data;
 
 namespace Rivet.Data;
 
-public class DAT1 : IDisposable, IStringPooled {
+public sealed class DAT1 : IDisposable, IStringPooled {
 	public const uint MagicValue = 0x44415431u;
+	public DAT1(IUnsafeMemoryOwner<byte> buffer, bool leaveOpen = false) : this([buffer], leaveOpen) { }
 
-	public DAT1(IUnsafeMemoryOwner<byte> owner, IUnsafeMemoryOwner<byte> buffer, IUnsafeMemoryOwner<byte>? residentBuffer = null) {
-		Owner = owner;
-		Buffer = buffer;
-		ResidentBuffer = residentBuffer ?? IUnsafeMemoryOwner<byte>.Empty;
-		var reader = new MemoryReader(Buffer);
-		var residentReader = new MemoryReader(ResidentBuffer);
+	public DAT1(List<IUnsafeMemoryOwner<byte>> buffers, bool leaveOpen = false) {
+		Buffers = buffers;
+		LeaveOpen = leaveOpen;
+
+		var reader = new MemoryReader(Buffers[0]);
 
 		if (reader.Peek<uint>() != MagicValue) {
 			throw new InvalidDataException("Invalid magic value");
@@ -28,54 +28,49 @@ public class DAT1 : IDisposable, IStringPooled {
 		Header = reader.Get<DAT1Header>();
 		var sectionHeaders = reader.Get<DAT1Entry>(Header.SectionCount);
 		TypeName = reader.GetCString();
-
-		var residentStart = buffer.Size;
-		var residentEnd = residentStart + ResidentBuffer.Size;
 		foreach (var sectionHeader in sectionHeaders) {
-			if (sectionHeader.Offset > residentEnd) {
-				throw new InvalidOperationException("Section offset is out of bounds");
+			var bufferOffset = 0;
+			foreach (var buffer in Buffers) {
+				if (sectionHeader.Offset < bufferOffset + buffer.Size) {
+					var slice = new SharedRivetMemory<byte>(buffer, sectionHeader.Offset - bufferOffset, sectionHeader.Size);
+					Sections[sectionHeader.TypeId] = (sectionHeader, slice);
+					goto nextSection;
+				}
+
+				bufferOffset += buffer.Size;
 			}
 
-			if (sectionHeader.Offset < residentStart) {
-				var slice = reader.Slice(sectionHeader.Offset, sectionHeader.Size);
-				Sections[sectionHeader.TypeId] = (sectionHeader, slice);
-			} else {
-				var slice = residentReader.Slice(sectionHeader.Offset - residentStart, sectionHeader.Size);
-				Sections[sectionHeader.TypeId] = (sectionHeader, slice);
+			throw new InvalidOperationException("Section offset is out of bounds");
+
+		nextSection:
+			var size = sectionHeader.Offset + sectionHeader.Size;
+			if (size > Size) {
+				Size = size;
 			}
 		}
 	}
 
 	public DAT1Header Header { get; }
-	public IUnsafeMemoryOwner<byte> Owner { get; private set; }
-	public IUnsafeMemoryOwner<byte> Buffer { get; private set; }
-	public IUnsafeMemoryOwner<byte> ResidentBuffer { get; private set; }
+	public List<IUnsafeMemoryOwner<byte>> Buffers { get; }
 	public Dictionary<RivetTypeId, (DAT1Entry Entry, IUnsafeMemoryOwner<byte> Buffer)> Sections { get; } = [];
 	public string TypeName { get; }
+	public int Size { get; }
+	private bool LeaveOpen { get; }
 
-	public void Dispose() {
-		Dispose(true);
-		GC.SuppressFinalize(this);
-	}
+	public void Dispose() => Release();
 
 	public string GetString(int offset) =>
-		new MemoryReader(Buffer) {
+		new MemoryReader(Buffers[0]) {
 			Offset = offset,
 		}.GetCString();
 
-	protected virtual void Dispose(bool disposing) {
-		if (disposing) {
-			Release();
+	public void Release() {
+		if (!LeaveOpen) {
+			foreach (var buffer in Buffers) {
+				buffer.Dispose();
+			}
 		}
-	}
 
-	protected void Release() {
-		Owner.Dispose();
-		Buffer.Dispose();
-		ResidentBuffer.Dispose();
-		Owner = IUnsafeMemoryOwner<byte>.Empty;
-		Buffer = IUnsafeMemoryOwner<byte>.Empty;
-		ResidentBuffer = IUnsafeMemoryOwner<byte>.Empty;
 		Sections.Clear();
 	}
 
