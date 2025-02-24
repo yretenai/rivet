@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: EUPL-1.2
 
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using Rivet.Data;
 using Rivet.DDL;
 using Rivet.DDL.Types;
@@ -23,6 +24,7 @@ public sealed class RivetGame : IDisposable {
 	static RivetGame() {
 		LoadFileList(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "assets.txt"));
 		LoadTypeIds(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "tags.txt"));
+		SaveTypeIds(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "tags.txt"));
 
 		DDLObject.LoadTypes(typeof(DDLAllowSubstruct).Assembly);
 		RivetAssetId.NameResolver = id => Instance != null && Instance.TryGetAssetName(id, out var name) ? name : null;
@@ -155,12 +157,21 @@ public sealed class RivetGame : IDisposable {
 				continue;
 			}
 
-			var eq = line.IndexOf('=', StringComparison.Ordinal);
+			var eq = line.IndexOf('\u25b6', StringComparison.Ordinal);
 			if (eq > -1) {
-				line = line[..eq];
+				line = line[..eq].Trim();
 			}
 
 			TypeIdLookup[RivetTypeId.Checksum(line)] = line;
+		}
+	}
+
+	public static void SaveTypeIds(string path) {
+		using var reader = new StreamWriter(new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.ReadWrite));
+		foreach (var (tag, name) in TypeIdLookup.OrderBy(x => x.Value)) {
+			reader.Write(name);
+			reader.Write(" \u25b6 ");
+			reader.WriteLine(tag.ToString("x8", CultureInfo.InvariantCulture));
 		}
 	}
 
