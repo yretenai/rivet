@@ -22,7 +22,7 @@ public class Texture : AssetPack, IRivetInstance<Texture> {
 				throw new InvalidDataException();
 			}
 
-			using var zoneDat = new DAT1(Buffers, true);
+			var zoneDat = new DAT1(Buffers);
 			if (zoneDat.Header.Version is not AssetVersion.Zone) {
 				throw new InvalidDataException();
 			}
@@ -45,7 +45,7 @@ public class Texture : AssetPack, IRivetInstance<Texture> {
 
 		ResidentBuffer = buffers.Count > 1 ? buffers[1] : IUnsafeMemoryOwner<byte>.Empty;
 
-		using var dat = new DAT1(buffers, true);
+		var dat = new DAT1(buffers);
 
 		TextureHeader = dat.GetSection<TextureHeader>("Texture Header"u8)[0];
 

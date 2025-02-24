@@ -21,7 +21,8 @@ public sealed class ArchiveTOC : IDisposable {
 		Log.Information("Loading TOC");
 		Game = game;
 
-		using var dat = new DAT1(GetDAT1Stream(buffer));
+		using var datBuffer = GetDAT1Stream(buffer);
+		var dat = new DAT1(datBuffer);
 
 		if (dat.Header.Version is not (AssetVersion.ArchiveTOC or AssetVersion.SpiderArchiveTOC)) {
 			throw new NotSupportedException("ArchiveTOC is not recognized");

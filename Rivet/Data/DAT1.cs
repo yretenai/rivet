@@ -9,13 +9,15 @@ using Rivet.Models.Data;
 
 namespace Rivet.Data;
 
-public sealed class DAT1 : IDisposable, IStringPooled {
+public sealed class DAT1 : IStringPooled {
 	public const uint MagicValue = 0x44415431u;
-	public DAT1(IUnsafeMemoryOwner<byte> buffer, bool leaveOpen = false) : this([buffer], leaveOpen) { }
 
-	public DAT1(List<IUnsafeMemoryOwner<byte>> buffers, bool leaveOpen = false) {
+	/// <remarks>Ownership of the buffers is NOT TRANSFERRED to this class, the calling class must dispose it.</remarks>
+	public DAT1(IUnsafeMemoryOwner<byte> buffer) : this([buffer]) { }
+
+	/// <remarks>Ownership of the buffers is NOT TRANSFERRED to this class, the calling class must dispose it.</remarks>
+	public DAT1(List<IUnsafeMemoryOwner<byte>> buffers) {
 		Buffers = buffers;
-		LeaveOpen = leaveOpen;
 
 		var reader = new MemoryReader(Buffers[0]);
 
@@ -55,24 +57,11 @@ public sealed class DAT1 : IDisposable, IStringPooled {
 	public Dictionary<RivetTypeId, (DAT1Entry Entry, IUnsafeMemoryOwner<byte> Buffer)> Sections { get; } = [];
 	public string TypeName { get; }
 	public int Size { get; }
-	private bool LeaveOpen { get; }
-
-	public void Dispose() => Release();
 
 	public string GetString(int offset) =>
 		new MemoryReader(Buffers[0]) {
 			Offset = offset,
 		}.GetCString();
-
-	public void Release() {
-		if (!LeaveOpen) {
-			foreach (var buffer in Buffers) {
-				buffer.Dispose();
-			}
-		}
-
-		Sections.Clear();
-	}
 
 	public IUnsafeMemoryOwner<byte> GetSection(ReadOnlySpan<byte> name) => GetSection(RivetTypeId.Checksum(name));
 	public IUnsafeMemoryOwner<byte> GetSection(uint hash) => !Sections.TryGetValue(hash, out var section) ? IUnsafeMemoryOwner<byte>.Empty : section.Buffer;

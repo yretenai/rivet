@@ -59,7 +59,7 @@ public record RivetDAT1Command(RivetDAT1Flags Flags) : RivetCommand {
 				var blockDestination = Path.Combine(destination, index.ToString("D"));
 
 				if (magic == DAT1.MagicValue) {
-					using var dat1 = new DAT1(bundle.Buffers[index..]);
+					var dat1 = new DAT1(bundle.Buffers[index..]);
 
 					if (dat1.Sections.Count == 0) {
 						continue;

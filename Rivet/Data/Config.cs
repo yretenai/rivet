@@ -15,7 +15,7 @@ public class Config : AssetPack, IRivetInstance<Config> {
 			throw new InvalidDataException();
 		}
 
-		using var dat = new DAT1(Buffers[0]);
+		var dat = new DAT1(Buffers);
 
 		foreach (var reference in dat.GetSection<DAT1AssetReference>("Config Asset Refs"u8)) {
 			AssetReferences.Add(new RivetAssetReference(reference.AssetId, RivetAssetId.NormalizeString(dat.GetString(reference.StringOffset)), reference.TypeId));

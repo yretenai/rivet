@@ -18,7 +18,8 @@ public sealed class DependencyDAG {
 		Log.Information("Loading DAG");
 		Game = game;
 
-		using var dat = new DAT1(GetDAT1Stream(buffer));
+		using var datBuffer = GetDAT1Stream(buffer);
+		var dat = new DAT1(datBuffer);
 
 		if (dat.Header.Version is not AssetVersion.DependencyAssetGraph) {
 			throw new NotSupportedException("DependencyDAG is not recognized");
