@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: EUPL-1.2
 
 using DragonLib.CommandLine;
+using Triton;
 
 namespace Rivet.CLI.Flags;
 
@@ -12,6 +13,9 @@ internal record RivetExtractTextureFlags : RivetExtractFlags {
 
 	[Flag("cube-array", Help = "Convert cubemaps into arrays of images instead of a cross")]
 	public bool AssumeCubeIsSurfaces { get; set; }
+
+	[Flag("cube-style", Help = "Convert cubemaps into this style")]
+	public CubemapStyle CubeStyle { get; set; } = CubemapStyle.Cross;
 
 	[Flag("no-hdr", Help = "Convert HDR colorspaces to SDR")]
 	public bool DisallowHDR { get; set; }

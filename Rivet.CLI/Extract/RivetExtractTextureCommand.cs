@@ -33,6 +33,15 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 	private PNGEncoder PngEncoder { get; }
 	private TIFFEncoder TiffEncoder { get; }
 
+	private static readonly Point[] IBLCrop = [
+		new(0, 0), // X+
+		new(1, 0), // X-
+		new(2, 0), // Y+
+		new(3, 0), // Y-
+		new(0, 1), // Z+
+		new(1, 1), // Z-
+	];
+
 	protected override void Process(RivetAsset asset) {
 		if (asset.Type is not (AssetType.Texture or AssetType.Zone) || asset.Category is not AssetCategory.Game) {
 			return;
@@ -112,30 +121,17 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 			var rootFrame = frames[0];
 			if ((texture.TextureHeader.Flags.ContentType & TextureContentType.IBL) != 0 && !Flags.AssumeCubeIsSurfaces) {
 				if (texture.TextureHeader.Flags.Dimension is TextureDimension.Cube) {
-					var faceSize = texture.Dimensions.Width;
-
-					using var crossImage = rootFrame.CreateSubImage(faceSize * 4, faceSize * 3);
-					crossImage.Draw(frames[2], faceSize, 0); // Y+
-					crossImage.Draw(frames[1], 0, faceSize); // -X
-					crossImage.Draw(frames[4], faceSize, faceSize); // +Z
-					crossImage.Draw(frames[0], faceSize * 2, faceSize); // +X
-					crossImage.Draw(frames[5], faceSize * 3, faceSize); // -Z
-					crossImage.Draw(frames[3], faceSize, faceSize * 2); //-Y
-					SaveImage(stream, texture.TextureHeader.Flags.ContentType, format, [crossImage]);
+					using var cubemap = new IBLImage(frames, CubemapOrder.DXGIOrder);
+					using var converted = cubemap.Convert(Flags.CubeStyle);
+					SaveImage(stream, texture.TextureHeader.Flags.ContentType, format, [converted]);
 					return;
 				}
 
 				if (frames.Count == 1 && texture.Dimensions.Width / 4 == texture.Dimensions.Height / 2) {
 					var faceSize = texture.Dimensions.Width / 4;
-					using var crossImage = rootFrame.CreateSubImage(faceSize * 4, faceSize * 3);
-					var tile = new Point(faceSize, faceSize);
-					crossImage.Draw(rootFrame, new Point(faceSize, 0), new Rect(new Point(faceSize * 2, 0), tile)); // Y+
-					crossImage.Draw(rootFrame, new Point(0, faceSize), new Rect(new Point(faceSize, 0), tile)); // -X
-					crossImage.Draw(rootFrame, new Point(faceSize, faceSize), new Rect(new Point(0, faceSize), tile)); // +Z
-					crossImage.Draw(rootFrame, new Point(faceSize * 2, faceSize), new Rect(new Point(0, 0), tile)); // +X
-					crossImage.Draw(rootFrame, new Point(faceSize * 3, faceSize), new Rect(new Point(faceSize, faceSize), tile)); // -Z
-					crossImage.Draw(rootFrame, new Point(faceSize, faceSize * 2), new Rect(new Point(faceSize * 3, 0), tile)); // -Y
-					SaveImage(stream, texture.TextureHeader.Flags.ContentType, format, [crossImage]);
+					using var cubemap = IBLImage.FromCrop(rootFrame, faceSize, CubemapOrder.DXGIOrder, IBLCrop);
+					using var converted = cubemap.Convert(Flags.CubeStyle);
+					SaveImage(stream, texture.TextureHeader.Flags.ContentType, format, [converted]);
 					return;
 				}
 			}
