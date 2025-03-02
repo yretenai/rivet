@@ -126,10 +126,10 @@ public static class TextureConverter {
 
 			for (var surface = 0; surface < surfaceCount; ++surface) {
 				var outputSurface = DecodeSurface(texture, surface, isNormal);
-				if (!outputHDR && outputSurface.IsHDR) {
+				if (!outputHDR && outputSurface.ColorId.IsHDR) {
 					var old = outputSurface;
 					try {
-						outputSurface = outputSurface.IsSigned ? old.Cast<short>() : old.Cast<ushort>();
+						outputSurface = outputSurface.ColorId.IsSigned ? old.Cast<short>() : old.Cast<ushort>();
 					} finally {
 						old.Dispose();
 					}
