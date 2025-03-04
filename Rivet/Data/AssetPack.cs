@@ -25,10 +25,16 @@ public class AssetPack : IDisposable {
 		}
 	}
 
+	~AssetPack() => Dispose(false);
+
 	public RivetAsset Asset { get; }
 	public RivetGame Game { get; }
 	public IUnsafeMemoryOwner<byte> Owner { get; private set; }
 	public List<IUnsafeMemoryOwner<byte>> Buffers { get; } = [];
+#if DEBUG
+	public System.Diagnostics.StackTrace Origin { get; } = new();
+#endif
+
 
 	public void Dispose() {
 		Dispose(true);
@@ -36,10 +42,18 @@ public class AssetPack : IDisposable {
 	}
 
 	protected virtual void Dispose(bool disposing) {
-		if (disposing) {
-			Owner.Dispose();
-			Owner = IUnsafeMemoryOwner<byte>.Empty;
-			Buffers.Clear();
+		Owner.Dispose();
+		foreach (var buffer in Buffers) {
+			buffer.Dispose();
 		}
+
+		Owner = IUnsafeMemoryOwner<byte>.Empty;
+		Buffers.Clear();
+
+	#if DEBUG
+		if (!disposing) {
+			Console.Error.WriteLine($"Leaked Asset Memory. {Origin.ToString().Trim()}");
+		}
+	#endif
 	}
 }

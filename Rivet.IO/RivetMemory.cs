@@ -3,7 +3,6 @@
 // SPDX-License-Identifier: EUPL-1.2
 
 using System.Buffers;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using DragonLib;
 
@@ -20,9 +19,9 @@ public sealed record RivetMemory<T>(int Size) : IUnsafeMemoryOwner<T>, IMemoryOw
 
 	public IMemoryOwner<T>? UnderlyingOwner { get; private set; } = MemoryPool<T>.Shared.Rent(Size);
 	public int Offset { get; set; }
-	#if DEBUG
-	public StackTrace Origin { get; } = new();
-	#endif
+#if DEBUG
+	public System.Diagnostics.StackTrace Origin { get; } = new();
+#endif
 
 	public void Dispose() {
 		Dispose(true);
@@ -43,16 +42,16 @@ public sealed record RivetMemory<T>(int Size) : IUnsafeMemoryOwner<T>, IMemoryOw
 
 	public IUnsafeMemoryOwner<T> Shift<TShift>() => Shift(Unsafe.SizeOf<TShift>());
 
-	~RivetMemory() {
-		#if DEBUG
-		Console.Error.Write($"Leaked Rented Memory. {Origin}");
-		#endif
-		Dispose(false);
-	}
+	~RivetMemory() => Dispose(false);
 
 	private void Dispose(bool disposing) {
 		UnderlyingOwner?.Dispose();
 		UnderlyingOwner = null;
+	#if DEBUG
+		if (!disposing) {
+			Console.Error.WriteLine($"Leaked Rented Memory. {Origin.ToString().Trim()}");
+		}
+	#endif
 	}
 
 	public override string ToString() => $"RivetMemory of {(Size * Unsafe.SizeOf<T>()).GetHumanReadableBytes()}";

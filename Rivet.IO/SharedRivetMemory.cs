@@ -12,6 +12,9 @@ public sealed record SharedRivetMemory<T>(IUnsafeMemoryOwner<T> UnderlyingOwner,
 	public SharedRivetMemory(IUnsafeMemoryOwner<T> underlyingOwner, int offset) : this(underlyingOwner, offset, underlyingOwner.Size - offset) { }
 	public int Offset { get; set; } = Offset;
 	public int Size { get; set; } = Size;
+#if DEBUG
+	public System.Diagnostics.StackTrace Origin { get; } = new();
+#endif
 
 	public Memory<T> Memory => Size > 0 ? UnderlyingOwner.Memory.Slice(Offset, Size) : Memory<T>.Empty;
 
@@ -28,8 +31,20 @@ public sealed record SharedRivetMemory<T>(IUnsafeMemoryOwner<T> UnderlyingOwner,
 
 	public IUnsafeMemoryOwner<T> Shift<TShift>() => Shift(Unsafe.SizeOf<TShift>());
 
+	~SharedRivetMemory() => Dispose(false);
+
 	public void Dispose() {
 		// note: maybe implement ref counting?
+		Dispose(true);
+		GC.SuppressFinalize(this);
+	}
+
+	private void Dispose(bool disposing) {
+	#if DEBUG
+		if (!disposing) {
+			Console.Error.WriteLine($"Leaked Shared Memory. {Origin.ToString().Trim()}");
+		}
+	#endif
 	}
 
 	public override string ToString() => $"SharedRivetMemory of {(Size * Unsafe.SizeOf<T>()).GetHumanReadableBytes()}";

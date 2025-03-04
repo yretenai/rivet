@@ -34,7 +34,7 @@ public sealed class DAT1 : IStringPooled {
 			var bufferOffset = 0;
 			foreach (var buffer in Buffers) {
 				if (sectionHeader.Offset < bufferOffset + buffer.Size) {
-					var slice = new SharedRivetMemory<byte>(buffer, sectionHeader.Offset - bufferOffset, sectionHeader.Size);
+					using var slice = new SharedRivetMemory<byte>(buffer, sectionHeader.Offset - bufferOffset, sectionHeader.Size);
 					Sections[sectionHeader.TypeId] = (sectionHeader, slice);
 					goto nextSection;
 				}
