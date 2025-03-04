@@ -43,8 +43,8 @@ public sealed class RivetGame : IDisposable {
 			throw new InvalidDataException("Missing DAG");
 		}
 
-		var tocData = new RivetMemory<byte>(new FileInfo(tocPath));
-		var dagData = new RivetMemory<byte>(new FileInfo(dagPath));
+		using var tocData = new RivetMemory<byte>(new FileInfo(tocPath));
+		using var dagData = new RivetMemory<byte>(new FileInfo(dagPath));
 
 		TOC = new ArchiveTOC(tocData, this);
 		DAG = new DependencyDAG(dagData, this);
