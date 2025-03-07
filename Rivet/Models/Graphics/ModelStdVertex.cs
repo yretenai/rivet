@@ -15,7 +15,6 @@ public readonly record struct ModelStdVertex {
 	internal const float OneOver1023 = 1f / 1023f;
 	internal const float OneOver255 = 1f / 255f;
 	internal const float OneOver15 = 1f / 15f;
-	internal const float OneOver3 = 1f / 3f;
 
 	public static Vector3 DecodeNormal(Vector3 compressed) {
 		var x = TwoSqrt2 * compressed.X - OneSqrt2;
@@ -44,12 +43,11 @@ public readonly record struct ModelStdVertex {
 		var z = (PackedNormalTangent >> 20) & 0x3FFF;
 		var w = PackedNormalTangent >> 30;
 
-		var normalTangent = new Vector4(x * OneOver1023, y * OneOver1023, z * OneOver1023, w * OneOver3);
+		var normalTangent = new Vector3(x * OneOver1023, y * OneOver1023, z * OneOver1023);
 		vertex.Normal = DecodeNormal(new Vector3(normalTangent.X, Math.Max(normalTangent.Y, 0), Math.Min(normalTangent.Z, 1)));
 
-		var w3 = normalTangent.W * 3;
-		var tan = Math.Clamp(w3 - 1f, 0, 1);
-		var tangent = DecodeNormal(new Vector3(normalTangent.Z, (Math.Abs(PackedPosition[3]) & 0x3ff) * OneOver1023, w3 - (tan - tan)));
+		var tan = Math.Clamp(w - 1f, 0, 1);
+		var tangent = DecodeNormal(new Vector3(normalTangent.Z, (Math.Abs(PackedPosition[3]) & 0x3ff) * OneOver1023, w - (tan - tan)));
 		vertex.Tangent = new Vector4(tangent, PackedPosition[3] >= 0 ? 1.0f : -1.0f);
 
 		vertex.UV0 = new Vector2(PackedUV[0], PackedUV[1]) * (1u << (int) (packedScale & 0xf)) * OneOver16384;
