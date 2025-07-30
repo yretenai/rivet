@@ -44,7 +44,7 @@ public class DDLObject : Dictionary<uint, DDLField> {
 	}
 
 	public static DDLObjectType? Create(uint id, DDLObject ddl) {
-		if (!RootRegistration.TryGetValue(id, out var type) && !TypeRegistration.TryGetValue(id, out type)) {
+		if (!TypeRegistration.TryGetValue(id, out var type) && !RootRegistration.TryGetValue(id, out type)) {
 			return null;
 		}
 

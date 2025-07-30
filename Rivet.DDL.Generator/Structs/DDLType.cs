@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
-﻿namespace Rivet.DDL.Generator.Structs;
+namespace Rivet.DDL.Generator.Structs;
 
 public class DDLType {
 	public uint Id { get; set; }
