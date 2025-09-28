@@ -23,11 +23,20 @@ if not add_languages(asm_compiler, native: false, required: true)
     error(asm_compiler + ' not available')
 endif
 
-shared_library('hid', [
+shared_library('hid_win11', [
         'src/main.cpp',
         'src/trampoline.' + ext
     ],
     name_prefix: '',
     link_args: meson.get_compiler('cpp').get_supported_arguments('-static-libgcc', '-static-libstdc++'),
-    vs_module_defs: 'src/hid.def'
+    vs_module_defs: 'src/hid11.def',
+)
+
+shared_library('hid_win10', [
+        'src/main.cpp',
+        'src/trampoline.' + ext
+    ],
+    name_prefix: '',
+    link_args: meson.get_compiler('cpp').get_supported_arguments('-static-libgcc', '-static-libstdc++'),
+    vs_module_defs: 'src/hid10.def'
 )

@@ -231,6 +231,9 @@ PROXY_HidD_SetOutputReport() {
 
 void
 PROXY_HidP_GetButtonArray() {
+	if (proc[20] == nullptr) {
+		return;
+	}
 	proc_address = proc[20];
 	trampoline();
 }
@@ -314,7 +317,11 @@ PROXY_HidP_GetValueCaps() {
 }
 
 void
-PROXY_HidP_GetVersionInternal() {
+PROXY_HidP_GetVersionInternal() { // uint32_t* Version 
+	if (proc[34] == nullptr) { // alternatively *Version = 1 if Win10
+		return;
+	}
+
 	proc_address = proc[34];
 	trampoline();
 }
@@ -339,6 +346,9 @@ PROXY_HidP_MaxUsageListLength() {
 
 void
 PROXY_HidP_SetButtonArray() {
+	if (proc[38] == nullptr) {
+		return;
+	}
 	proc_address = proc[38];
 	trampoline();
 }
