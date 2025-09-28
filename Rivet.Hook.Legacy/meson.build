@@ -35,39 +35,22 @@ cpp_args = compiler.get_supported_arguments(
     '-Wno-unused-parameter',
 )
 
-add_project_arguments(cpp_args, language: 'cpp')
-
 nlohmann_json_dep = dependency('', required: false)
 if not compiler.check_header('nlohmann/json.hpp')
     nlohmann_json_dep = dependency('nlohmann_json', version: '>=3.11.2')
 endif
 
-if host_machine.system() != 'windows'
-
-endif
-
 minhook_dep = dependency('minhook', version: '>= 1.3.3')
 
-ext = 'asm'
-asm_compiler = 'nasm'
-if build_machine.system() == 'windows'
-    ext = 'masm'
-    asm_compiler = 'masm'
-endif
-
-if not add_languages(asm_compiler, native: false, required: true)
-    error(asm_compiler + ' not available')
-endif
-
 rivet_hook = shared_library('rivet_hook', [
-        'src/dll_main.cpp',
-        'src/trampoline.' + ext,
-        'src/runtime/runtime.cpp'
+        'src/main.cpp',
+        'src/runtime.cpp'
     ],
-    link_args: meson.get_compiler('cpp').get_supported_arguments('-static-libgcc', '-static-libstdc++'),
+    link_args: compiler.get_supported_arguments('-static-libgcc', '-static-libstdc++'),
     dependencies: [
         nlohmann_json_dep,
         minhook_dep,
     ],
-    vs_module_defs: 'src/hid.def'
+    name_prefix: '',
+    cpp_args: cpp_args
 )

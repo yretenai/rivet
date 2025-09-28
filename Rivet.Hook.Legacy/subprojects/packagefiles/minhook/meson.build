@@ -20,7 +20,8 @@ sources = files(
 minhook = static_library(
   'minhook',
   sources,
-  include_directories: 'include'
+  include_directories: 'include',
+  c_args: meson.get_compiler('c').get_supported_arguments('-Wno-pedantic')
 )
 
 minhook_dep = declare_dependency(

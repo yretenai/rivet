@@ -6,27 +6,29 @@
 #define _CRT_SECURE_NO_WARNINGS // NOLINT(*-reserved-identifier, *-dcl37-c, *-dcl51-cpp)
 #include <windows.h>
 
+#include <cstdio>
 #include <array>
-#include <filesystem>
-#include <mutex>
-
-#include "runtime/runtime.hpp"
 
 // this file does 2 things: it sets up the hid.dll trampolines, and it initializes the runtime.
 
 namespace {
-	HINSTANCE h_this = nullptr;
 	std::array<FARPROC, 47> proc;
 	HINSTANCE h_library = nullptr;
-	std::once_flag init;
-	std::once_flag fini;
+	HINSTANCE r_library = nullptr;
 } // namespace
 
 auto WINAPI
-HIDDllMain(HINSTANCE hInst, DWORD dwReason, [[maybe_unused]] LPVOID lpReserved) -> BOOL {
+HIDDllMain(DWORD dwReason) -> BOOL {
 	if (dwReason == DLL_PROCESS_ATTACH) {
-		h_this = hInst;
-		h_library = LoadLibraryA("C:\\windows\\system32\\HID.DLL");
+		char sys_root[MAX_PATH];
+		if (GetEnvironmentVariableA("SystemRoot", sys_root, MAX_PATH - 1) == 0) {
+			strcpy(sys_root, "C\\Windows");
+		}
+
+		char hid_path[MAX_PATH];
+		snprintf(hid_path, MAX_PATH - 1, "%s\\System32\\hid.dll", sys_root);
+
+		h_library = LoadLibraryA(hid_path);
 		if (h_library == nullptr) {
 			return 0;
 		}
@@ -82,6 +84,7 @@ HIDDllMain(HINSTANCE hInst, DWORD dwReason, [[maybe_unused]] LPVOID lpReserved) 
 
 	if (dwReason == DLL_PROCESS_DETACH) {
 		FreeLibrary(h_library);
+		h_library = nullptr;
 		return 1;
 	}
 
@@ -89,14 +92,15 @@ HIDDllMain(HINSTANCE hInst, DWORD dwReason, [[maybe_unused]] LPVOID lpReserved) 
 }
 
 auto APIENTRY
-DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) -> BOOL {
+DllMain(HMODULE, DWORD ul_reason_for_call, LPVOID) -> BOOL {
 	if (ul_reason_for_call == DLL_PROCESS_ATTACH) {
-		std::call_once(init, [&]() { rivet_hook::runtime::init(); });
+		r_library = LoadLibraryA("rivet_hook.dll");
 	} else if (ul_reason_for_call == DLL_PROCESS_DETACH) {
-		std::call_once(fini, [&]() { rivet_hook::runtime::fini(); });
+		FreeLibrary(r_library);
+		r_library = nullptr;
 	}
 
-	return HIDDllMain(hModule, ul_reason_for_call, lpReserved);
+	return HIDDllMain(ul_reason_for_call);
 }
 
 extern "C" {
