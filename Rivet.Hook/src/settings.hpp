@@ -33,6 +33,7 @@ namespace rivet_hook {
 		bool attach_context_log = false;	// redirect the internal logger context state to rivet.log; disable by default for clutter reasons
 		bool attach_log = false;			// redirect the internal logger to rivet.log; disable by default because the same line is printed frequently
 		bool suppress_crash_handler = true; // disable the exception handler allowing for debuggers to attach without invoking the crash handler
+		bool log_cohtml = false;            // logs cohtml url decode requests
 
 		std::array<char, MAX_PATH + 1> renderdoc_path {}; // path to renderdoc/dll
 
@@ -48,6 +49,7 @@ namespace rivet_hook {
 			LOAD_SETTING_BOOL(attach_context_log);
 			LOAD_SETTING_BOOL(attach_log);
 			LOAD_SETTING_BOOL(suppress_crash_handler);
+			LOAD_SETTING_BOOL(log_cohtml);
 			LOAD_SETTING(renderdoc_path);
 
 			settings.renderdoc_path[MAX_PATH] = '\0';
@@ -66,6 +68,7 @@ namespace rivet_hook {
 			SAVE_SETTING_BOOL(attach_context_log);
 			SAVE_SETTING_BOOL(attach_log);
 			SAVE_SETTING_BOOL(suppress_crash_handler);
+			SAVE_SETTING_BOOL(log_cohtml);
 			SAVE_SETTING(renderdoc_path);
 		}
 	};

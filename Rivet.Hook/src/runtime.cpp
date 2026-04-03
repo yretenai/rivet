@@ -99,7 +99,7 @@ namespace rivet_hook {
 				field["default"] = nullptr;
 				return;
 			}
-			
+
 			nlohmann::json::array_t values;
 			for(int32_t array_index = 0; array_index < count; ++array_index) {
 				nlohmann::json tmp;
@@ -154,17 +154,17 @@ namespace rivet_hook {
 				field["default"] = nullptr;
 				return;
 			}
-			
+
 			auto map_type = type_ptr->field_map_types[type_index];
-			
+
 			nlohmann::json::array_t values;
 			for(int32_t array_index = 0; array_index < count; ++array_index) {
 				nlohmann::json tmp_key;
 				get_ddl_field(tmp_key, ptr_keys, 0, 0, map_type, array_index, type_ptr, type_index);
-				
+
 				nlohmann::json tmp_value;
 				get_ddl_field(tmp_value, ptr_values, 0, 0, field_type, array_index, type_ptr, type_index);
-				
+
 				nlohmann::json tmp;
 				tmp["key"] = tmp_key["default"];
 				tmp["value"] = tmp_value["default"];
@@ -547,6 +547,53 @@ namespace rivet_hook {
 		output << "[rivet] created " << name << " hook" << std::endl;
 	}
 
+
+	const char *DecodeURLString_n = "?DecodeURLString@Library@cohtml@@SAXPEBDIPEADPEAI@Z";
+	typedef void (*DecodeURLString_t)(const char* url, unsigned int urlLen, char* decoded, unsigned int* decodedSize);
+	DecodeURLString_t DecodeURLString_o = nullptr;
+
+	void COUIDecodeURLString(const char* url, unsigned int urlLen, char* decoded, unsigned int* decodedSize) {
+		if (url != nullptr) {
+			g_output << "[cohtml] " << url << std::endl;
+		} else {
+			g_output << "[cohtml] got null url" << std::endl;
+		}
+
+		g_output.flush();
+
+		DecodeURLString_o(url, urlLen, decoded, decodedSize);
+	}
+
+	void
+	hook_cohtml() {
+		HMODULE mod = GetModuleHandleA("cohtml.WindowsDesktop.dll");
+		if (!mod) {
+			g_output << "cannot hook cohtml, not loaded yet." << std::endl;
+			return;
+		}
+
+		LPVOID proc = reinterpret_cast<LPVOID>(GetProcAddress(mod, DecodeURLString_n));
+		if (!proc) {
+			g_output << "cannot hook cohtml, export not found." << std::endl;
+			return;
+		}
+
+		init_minhook();
+
+		if (MH_CreateHook(proc, reinterpret_cast<LPVOID>(&COUIDecodeURLString), reinterpret_cast<LPVOID*>(&DecodeURLString_o)) != MH_OK) {
+			g_output << "[rivet] failed to create cohtml hook" << std::endl;
+			return;
+		}
+
+		if (MH_EnableHook(proc) != MH_OK) {
+			g_output << "[rivet] failed to enable cohtml hook" << std::endl;
+			return;
+		}
+
+		g_output << "[rivet] created cohtml hook" << std::endl;
+
+	}
+
 #pragma clang diagnostic pop
 
 	namespace runtime {
@@ -607,6 +654,10 @@ namespace rivet_hook {
 			if (g_settings.list_versions) {
 				g_output << "[rivet] dumping versions" << std::endl;
 				list_versions();
+			}
+
+			if (g_settings.log_cohtml) {
+				hook_cohtml();
 			}
 
 			g_output << "[rivet] init complete" << std::endl;
