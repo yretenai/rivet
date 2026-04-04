@@ -4,10 +4,10 @@
 
 [submodule "Libraries/Pepper"]
 	path = Libraries/Pepper
-	url = https://github.com/yretenai/Pepper
+	url = https://github.com/neptuwunium/Pepper.git
 [submodule "Libraries/BCDecNet"]
 	path = Libraries/BCDecNet
-	url = https://github.com/yretenai/BCDecNet
+	url = https://github.com/neptuwunium/BCDecNet.git
 [submodule "Libraries/Neptune"]
 	path = Libraries/Neptune
 	url = https://github.com/neptuwunium/Neptune.git
