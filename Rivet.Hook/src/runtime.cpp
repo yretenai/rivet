@@ -35,17 +35,20 @@ namespace rivet_hook {
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "cppcoreguidelines-pro-bounds-pointer-arithmetic"
 
-	using context_log_t = const char *(*) (const char *, const char *);
+	using context_log_t = const char *(__stdcall*)(const char *, const char *);
 	context_log_t fwd_context_log = nullptr;
 	std::string last_context;
 	std::string last_message;
 
 	const char *decode_url_string_name = "?DecodeURLString@Library@cohtml@@SAXPEBDIPEADPEAI@Z";
-	using decode_url_t = void (*) (const char*, unsigned int, char*, unsigned int*);
+	using decode_url_t = void (__stdcall*)(const char*, unsigned int, char*, unsigned int*);
 	decode_url_t fwd_decode_url = nullptr;
 
-	using load_asset_t = intptr_t(*) (intptr_t, uint64_t, uint64_t, const char*, intptr_t, intptr_t, int32_t);
+	using load_asset_t = intptr_t (__stdcall*)(intptr_t, uint64_t, uint64_t, const char*, intptr_t, intptr_t, int32_t);
 	load_asset_t fwd_load_asset = nullptr;
+
+	using create_asset_id_t = int32_t* (__stdcall*)(int64_t*, char*);
+	create_asset_id_t fwd_create_asset_id = nullptr;
 
 	void
 	get_ddl_field(nlohmann::json &field, const uint8_t* object, uint32_t offset, uint8_t array_type, uint8_t field_type, int32_t index, const rivet_hook::ddl::ddl_type_info* const type_ptr, const int32_t type_index) {
@@ -524,7 +527,7 @@ namespace rivet_hook {
 	}
 
 	void
-	create_hook(const std::string_view &name, std::ostream &output, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original) {
+	create_hook(const std::string_view &name, std::ostream &output, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original, size_t limit = 1, int select = 0) {
 		output << "[rivet] searching for " << name << " pointer" << std::endl;
 		auto pointers = scan(game, signature);
 		if (pointers.empty()) {
@@ -532,21 +535,23 @@ namespace rivet_hook {
 			return;
 		}
 
-		if (pointers.size() > 1) {
+		if (pointers.size() > limit) {
 			output << "[rivet] found " << pointers.size() << " " << name << " pointers, too many. aborting" << std::endl;
 			return;
 		}
 
-		output << "[rivet] found " << name << " pointer at " << std::hex << reinterpret_cast<uintptr_t>(pointers[0]) << std::dec << std::endl;
-
 		init_minhook();
 
-		if (MH_CreateHook(pointers[0], detour, original) != MH_OK) {
+		auto pointer = pointers[select];
+
+		output << "[rivet] found " << name << " pointer at " << std::hex << reinterpret_cast<uintptr_t>(pointer) << std::dec << std::endl;
+
+		if (MH_CreateHook(pointer, detour, original) != MH_OK) {
 			output << "[rivet] failed to create " << name << " hook" << std::endl;
 			return;
 		}
 
-		if (MH_EnableHook(pointers[0]) != MH_OK) {
+		if (MH_EnableHook(pointer) != MH_OK) {
 			output << "[rivet] failed to enable " << name << " hook" << std::endl;
 			return;
 		}
@@ -619,6 +624,17 @@ namespace rivet_hook {
 		return fwd_load_asset(self, asset_id, parent_asset_id, asset_name, referencing_asset, unknown6, unknown7);
 	}
 
+	int32_t* __stdcall create_asset_id(int64_t* asset_id, char* asset_name) {
+		auto result = fwd_create_asset_id(asset_id, asset_name);
+
+		if (asset_name && *asset_name && asset_id) {
+			g_output << "[asset id] " << std::hex << *asset_id << " " << asset_name << std::endl;
+			g_output.flush();
+		}
+
+		return result;
+	}
+
 #pragma clang diagnostic pop
 
 	namespace runtime {
@@ -687,6 +703,10 @@ namespace rivet_hook {
 
 			if (g_settings.log_paths) {
 				create_hook("asset paths", g_output, g_game_module, LOAD_ASSET_SIGNATURE, reinterpret_cast<LPVOID>(&load_asset), reinterpret_cast<LPVOID *>(&fwd_load_asset));
+			}
+
+			if (g_settings.log_asset_ids) {
+				create_hook("asset ids", g_output, g_game_module, CREATE_ASSET_ID_SIGNATURE, reinterpret_cast<LPVOID>(&create_asset_id), reinterpret_cast<LPVOID *>(&fwd_create_asset_id), 2, 0);
 			}
 
 			g_output << "[rivet] init complete" << std::endl;
