@@ -510,6 +510,20 @@ ui/loaded/authored/Zurkie/img/zurkon_icon_head.png
 ui/loaded/authored/Zurkie/img/zurkon_icon_head_001.png
 ui/loaded/authored/Zurkie/img/zurkon_icon_skull.png
 ui/loaded/authored/Zurkie/js/Zurkie.js
+ui/loaded/authored/_art/icons/AnomElec.svg
+ui/loaded/authored/_art/icons/AnomIce.svg
+ui/loaded/authored/_art/icons/AnomLift.svg
+ui/loaded/authored/_art/icons/AnomSpeed.svg
+ui/loaded/authored/_art/icons/GdgtBoxBreaker.svg
+ui/loaded/authored/_art/icons/GdgtGlitch.svg
+ui/loaded/authored/_art/icons/GdgtGrindBoots.svg
+ui/loaded/authored/_art/icons/GdgtHoverBoots.svg
+ui/loaded/authored/_art/icons/GdgtMagLaunch.svg
+ui/loaded/authored/_art/icons/GdgtMapOMatic.svg
+ui/loaded/authored/_art/icons/GdgtObjectivePing.svg
+ui/loaded/authored/_art/icons/GdgtOmniBoots.svg
+ui/loaded/authored/_art/icons/GdgtOmniGlove.svg
+ui/loaded/authored/_art/icons/GdgtRiftTether.svg
 ui/loaded/authored/_art/icons/WpnBlaster.svg
 ui/loaded/authored/_art/icons/WpnBouncer.svg
 ui/loaded/authored/_art/icons/WpnBurstPistol.svg
@@ -566,6 +580,7 @@ ui/loaded/authored/_common/js/Visibility.js
 ui/loaded/authored/_common/js/cohtml.js
 ui/loaded/exported/ControllerLayout/ControllerLayout.html
 ui/loaded/exported/DisplayGraphicsPC/DisplayGraphicsPC.html
+ui/loaded/exported/DisplayGraphicsPC/none
 ui/loaded/exported/DisplayGraphicsPC/css/DisplayGraphicsPC.css
 ui/loaded/exported/DisplayGraphicsPC/img/DisplayGraphicsPC1.svg
 ui/loaded/exported/DisplayGraphicsPC/img/DisplayGraphicsPC2.svg
@@ -574,11 +589,13 @@ ui/loaded/exported/DisplayGraphicsPC/js/CLAnimations_API.js
 ui/loaded/exported/DisplayGraphicsPC/js/CLAnimations_DisplayGraphicsPC_DisplayGraphicsPC.js
 ui/loaded/exported/DisplayGraphicsPC/js/CLEvents_Symbols_DisplayGraphicsPC_DisplayGraphicsPC.js
 ui/loaded/exported/DrawText/DrawText.html
+ui/loaded/exported/DrawText/none
 ui/loaded/exported/DrawText/css/DrawText.css
 ui/loaded/exported/DrawText/js/CLAnimations_API.js
 ui/loaded/exported/DrawText/js/CLAnimations_DrawText_DrawText.js
 ui/loaded/exported/DrawText/js/CLEvents_Symbols_DrawText_DrawText.js
 ui/loaded/exported/HUD/HUD.html
+ui/loaded/exported/HUD/none
 ui/loaded/exported/HUD/css/HUD.css
 ui/loaded/exported/HUD/img/HUD1.svg
 ui/loaded/exported/HUD/img/HUD10.svg
@@ -610,6 +627,7 @@ ui/loaded/exported/HUD/js/CLAnimations_API.js
 ui/loaded/exported/HUD/js/CLAnimations_HUD_HUD.js
 ui/loaded/exported/HUD/js/CLEvents_Symbols_HUD_HUD.js
 ui/loaded/exported/Lobby/Lobby.html
+ui/loaded/exported/Lobby/none
 ui/loaded/exported/Lobby/css/Lobby.css
 ui/loaded/exported/Lobby/img/Lobby1.svg
 ui/loaded/exported/Lobby/img/Lobby10.svg
@@ -653,6 +671,7 @@ ui/loaded/exported/Lobby/js/CLAnimations_API.js
 ui/loaded/exported/Lobby/js/CLAnimations_Lobby_Lobby.js
 ui/loaded/exported/Lobby/js/CLEvents_Symbols_Lobby_Lobby.js
 ui/loaded/exported/Overlay/Overlay.html
+ui/loaded/exported/Overlay/none
 ui/loaded/exported/Overlay/css/Overlay.css
 ui/loaded/exported/Overlay/img/Overlay1.svg
 ui/loaded/exported/Overlay/img/Overlay10.svg
@@ -689,14 +708,15 @@ ui/loaded/exported/Overlay/img/Overlay9.svg
 ui/loaded/exported/Overlay/js/CLAnimations_API.js
 ui/loaded/exported/Overlay/js/CLAnimations_Overlay_Overlay.js
 ui/loaded/exported/Overlay/js/CLEvents_Symbols_Overlay_Overlay.js
-ui/loaded/exported/OverlayMinimal/
 ui/loaded/exported/OverlayMinimal/OverlayMinimal.html
+ui/loaded/exported/OverlayMinimal/none
 ui/loaded/exported/OverlayMinimal/css/OverlayMinimal.css
 ui/loaded/exported/OverlayMinimal/img/OverlayMinimal1.svg
 ui/loaded/exported/OverlayMinimal/js/CLAnimations_API.js
 ui/loaded/exported/OverlayMinimal/js/CLAnimations_OverlayMinimal_OverlayMinimal.js
 ui/loaded/exported/OverlayMinimal/js/CLEvents_Symbols_OverlayMinimal_OverlayMinimal.js
 ui/loaded/exported/PauseMenu/PauseMenu.html
+ui/loaded/exported/PauseMenu/none
 ui/loaded/exported/PauseMenu/css/PauseMenu.css
 ui/loaded/exported/PauseMenu/img/PauseMenu1.svg
 ui/loaded/exported/PauseMenu/img/PauseMenu10.svg
@@ -745,6 +765,7 @@ ui/loaded/exported/PauseMenu/js/CLAnimations_API.js
 ui/loaded/exported/PauseMenu/js/CLAnimations_PauseMenu_PauseMenu.js
 ui/loaded/exported/PauseMenu/js/CLEvents_Symbols_PauseMenu_PauseMenu.js
 ui/loaded/exported/PlanetMenu/PlanetMenu.html
+ui/loaded/exported/PlanetMenu/none
 ui/loaded/exported/PlanetMenu/css/PlanetMenu.css
 ui/loaded/exported/PlanetMenu/img/PlanetMenu1.svg
 ui/loaded/exported/PlanetMenu/img/PlanetMenu2.svg
@@ -753,6 +774,7 @@ ui/loaded/exported/PlanetMenu/js/CLAnimations_PlanetMenu_PlanetMenu.js
 ui/loaded/exported/PlanetMenu/js/CLEvents_Symbols_PlanetMenu_PlanetMenu.js
 ui/loaded/exported/PlanetMenu/js/CustomPCAttributes.js
 ui/loaded/exported/ScreenUI/ScreenUI.html
+ui/loaded/exported/ScreenUI/none
 ui/loaded/exported/ScreenUI/css/ScreenUI.css
 ui/loaded/exported/ScreenUI/img/ScreenUI1.svg
 ui/loaded/exported/ScreenUI/img/ScreenUI10.svg
@@ -840,6 +862,7 @@ ui/loaded/exported/ScreenUI/js/CLAnimations_API.js
 ui/loaded/exported/ScreenUI/js/CLAnimations_ScreenUI_ScreenUI.js
 ui/loaded/exported/ScreenUI/js/CLEvents_Symbols_ScreenUI_ScreenUI.js
 ui/loaded/exported/Vendor/Vendor.html
+ui/loaded/exported/Vendor/none
 ui/loaded/exported/Vendor/css/Vendor.css
 ui/loaded/exported/Vendor/img/Vendor1.svg
 ui/loaded/exported/Vendor/img/Vendor10.svg
@@ -884,6 +907,7 @@ ui/loaded/exported/Vendor/js/CLAnimations_API.js
 ui/loaded/exported/Vendor/js/CLAnimations_Vendor_Vendor.js
 ui/loaded/exported/Vendor/js/CLEvents_Symbols_Vendor_Vendor.js
 ui/loaded/exported/Zurkie/Zurkie.html
+ui/loaded/exported/Zurkie/none
 ui/loaded/exported/Zurkie/css/Zurkie.css
 ui/loaded/exported/Zurkie/img/Zurkie1.svg
 ui/loaded/exported/Zurkie/img/Zurkie2.svg
