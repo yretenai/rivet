@@ -3,11 +3,8 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Libraries/BCDecNet" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Libraries/DragonLib" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Libraries/GDeflateNet" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Libraries/Pepper" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Libraries/Triton" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Libraries/glTFScaffold" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Libraries/Neptune" vcs="Git" />
   </component>
   <component name="VcsProjectSettings">
     <option name="detectVcsMappingsAutomatically" value="false" />

@@ -2,21 +2,12 @@
 #
 # SPDX-License-Identifier: EUPL-1.2
 
-[submodule "Libraries/DragonLib"]
-	path = Libraries/DragonLib
-	url = https://github.com/yretenai/DragonLib/
 [submodule "Libraries/Pepper"]
 	path = Libraries/Pepper
 	url = https://github.com/yretenai/Pepper
-[submodule "Libraries/glTFScaffold"]
-	path = Libraries/glTFScaffold
-	url = https://github.com/yretenai/glTFScaffold
-[submodule "Libraries/GDeflateNet"]
-	path = Libraries/GDeflateNet
-	url = https://github.com/yretenai/GDeflateNet
 [submodule "Libraries/BCDecNet"]
 	path = Libraries/BCDecNet
 	url = https://github.com/yretenai/BCDecNet
-[submodule "Libraries/Triton"]
-	path = Libraries/Triton
-	url = https://github.com/yretenai/Triton
+[submodule "Libraries/Neptune"]
+	path = Libraries/Neptune
+	url = https://github.com/neptuwunium/Neptune.git

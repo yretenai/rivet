@@ -6,9 +6,9 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using BCDecNet;
+using Pluto.IO.Binary;
 using Rivet.Converters.Support;
 using Rivet.Graphics;
-using Rivet.IO;
 using Rivet.Models.Graphics;
 using Triton;
 using Triton.Pixel;
@@ -17,148 +17,150 @@ using Triton.Pixel.Formats;
 namespace Rivet.Converters;
 
 public static class TextureConverter {
-	public static bool IsSupported(this Texture texture) => texture.TextureHeader.Format.GetPitchFactor().PixelsPerBlock > 0;
+	extension(Texture texture) {
+		public bool IsSupported() => texture.TextureHeader.Format.GetPitchFactor().PixelsPerBlock > 0;
 
-	public static RivetMemory<byte> ToDDS(this Texture texture) {
-		var hasStream = texture.StreamBuffer.Size > 0;
-		var numMips = texture.TextureHeader.Mips;
-		if (!hasStream) {
-			numMips -= texture.TextureHeader.StreamMips;
-		}
-
-		var surfaceCount = texture.TextureHeader.SurfaceCount;
-		if (texture.TextureHeader.Flags.Dimension == TextureDimension.Cube) {
-			surfaceCount *= 6;
-		}
-
-		var streamOnly = hasStream && surfaceCount > 1;
-		if (streamOnly) {
-			numMips = texture.TextureHeader.StreamMips;
-		}
-
-		DDSHeader dds = new();
-		DX10Header dx10 = new();
-		dds.Width = hasStream ? texture.TextureHeader.StreamDimensions.Key : texture.TextureHeader.ResidentDimensions.Key;
-		dds.Height = hasStream ? texture.TextureHeader.StreamDimensions.Value : texture.TextureHeader.ResidentDimensions.Value;
-		dds.MipMapCount = numMips;
-		dx10.Format = texture.TextureHeader.Format;
-		dx10.ArraySize = surfaceCount;
-
-		if (dds.MipMapCount > 1) {
-			dds.Flags |= DDSFlags.MipMapCount;
-		}
-
-		var (bitsPerBlock, pixelsPerBlock) = texture.TextureHeader.Format.GetPitchFactor();
-
-		if (pixelsPerBlock > 1) {
-			var oneSurface = CalculateSurfaceSize(dds.Width, dds.Height, pixelsPerBlock, bitsPerBlock, numMips, out _);
-			dds.PitchOrLinearSize = oneSurface;
-			dds.Flags |= DDSFlags.Linear;
-		} else {
-			dds.PitchOrLinearSize = (uint) (dds.Width * (bitsPerBlock >> 3));
-			dds.Flags |= DDSFlags.Pitch;
-		}
-
-		switch (texture.TextureHeader.Flags.Dimension) {
-			case TextureDimension.Cube:
-				dds.Caps2 |= DDSCaps2.CubeMapAll;
-				break;
-			case TextureDimension.Texture3D:
-				dds.Depth = texture.TextureHeader.SurfaceCount;
-				dds.Caps2 |= DDSCaps2.Volume;
-				break;
-		}
-
-		var gpuHeader = texture.Asset.TextureHeader;
-		if (gpuHeader.ResidentSize + gpuHeader.StreamSize > 0) {
-			dx10.ResourceDimension = gpuHeader.Descriptor.Dimension;
-		} else {
-			dx10.ResourceDimension = texture.TextureHeader.Flags.Dimension switch {
-				                         TextureDimension.Texture1D => DXGIResourceDimension.Texture1D,
-				                         TextureDimension.Texture2D => DXGIResourceDimension.Texture2D,
-				                         TextureDimension.Array => DXGIResourceDimension.Texture2D,
-				                         TextureDimension.Cube => DXGIResourceDimension.Texture2D,
-				                         TextureDimension.Texture3D => DXGIResourceDimension.Texture3D,
-				                         _ => DXGIResourceDimension.Texture2D,
-			                         };
-		}
-
-		var bufferSize = Unsafe.SizeOf<DDSHeader>() + Unsafe.SizeOf<DX10Header>();
-		var offset = bufferSize;
-		if (hasStream) {
-			bufferSize += texture.TextureHeader.StreamSize;
-		}
-
-		if (!streamOnly) {
-			bufferSize += texture.TextureHeader.ResidentSize;
-		}
-
-		var buffer = new RivetMemory<byte>(bufferSize);
-
-		MemoryMarshal.Write(buffer.Memory.Span, dds);
-		MemoryMarshal.Write(buffer.Memory[Unsafe.SizeOf<DDSHeader>()..].Span, dx10);
-		if (hasStream) {
-			texture.StreamBuffer.Memory[..texture.TextureHeader.StreamSize].CopyTo(buffer.Memory[offset..]);
-			offset += texture.TextureHeader.StreamSize;
-		}
-
-		if (!streamOnly) {
-			texture.ResidentBuffer.Memory[..texture.TextureHeader.ResidentSize].CopyTo(buffer.Memory[offset..]);
-		}
-
-		return buffer;
-	}
-
-	public static ImageCollection ToImage(this Texture texture, bool allowHDR, bool allowNormalReconstruction) {
-		var outputHDR = allowHDR && texture.IsHDR;
-		var isNormal = allowNormalReconstruction && texture.TextureHeader.Flags.ContentType == TextureContentType.Normal; // don't allow channel packed formats
-
-		ImageCollection frames = [];
-		try {
-			var surfaceCount = (int) texture.TextureHeader.SurfaceCount;
-			if (surfaceCount < 1) {
-				surfaceCount = 1;
+		public RentedArray<byte> ToDDS() {
+			var hasStream = texture.StreamBuffer.Length > 0;
+			var numMips = texture.TextureHeader.Mips;
+			if (!hasStream) {
+				numMips -= texture.TextureHeader.StreamMips;
 			}
 
+			var surfaceCount = texture.TextureHeader.SurfaceCount;
 			if (texture.TextureHeader.Flags.Dimension == TextureDimension.Cube) {
 				surfaceCount *= 6;
 			}
 
-			for (var surface = 0; surface < surfaceCount; ++surface) {
-				var outputSurface = DecodeSurface(texture, surface, isNormal);
-				if (!outputHDR && outputSurface.ColorId.IsHDR) {
-					var old = outputSurface;
-					try {
-						outputSurface = outputSurface.ColorId.IsSigned ? old.Cast<short>() : old.Cast<ushort>();
-					} finally {
-						old.Dispose();
-					}
-				}
-
-				frames.Add(outputSurface);
+			var streamOnly = hasStream && surfaceCount > 1;
+			if (streamOnly) {
+				numMips = texture.TextureHeader.StreamMips;
 			}
 
-			return frames;
-		} catch {
-			frames.Dispose();
-			throw;
+			DDSHeader dds = new();
+			DX10Header dx10 = new();
+			dds.Width = hasStream ? texture.TextureHeader.StreamDimensions.Key : texture.TextureHeader.ResidentDimensions.Key;
+			dds.Height = hasStream ? texture.TextureHeader.StreamDimensions.Value : texture.TextureHeader.ResidentDimensions.Value;
+			dds.MipMapCount = numMips;
+			dx10.Format = texture.TextureHeader.Format;
+			dx10.ArraySize = surfaceCount;
+
+			if (dds.MipMapCount > 1) {
+				dds.Flags |= DDSFlags.MipMapCount;
+			}
+
+			var (bitsPerBlock, pixelsPerBlock) = texture.TextureHeader.Format.GetPitchFactor();
+
+			if (pixelsPerBlock > 1) {
+				var oneSurface = CalculateSurfaceSize(dds.Width, dds.Height, pixelsPerBlock, bitsPerBlock, numMips, out _);
+				dds.PitchOrLinearSize = oneSurface;
+				dds.Flags |= DDSFlags.Linear;
+			} else {
+				dds.PitchOrLinearSize = (uint) (dds.Width * (bitsPerBlock >> 3));
+				dds.Flags |= DDSFlags.Pitch;
+			}
+
+			switch (texture.TextureHeader.Flags.Dimension) {
+				case TextureDimension.Cube:
+					dds.Caps2 |= DDSCaps2.CubeMapAll;
+					break;
+				case TextureDimension.Texture3D:
+					dds.Depth = texture.TextureHeader.SurfaceCount;
+					dds.Caps2 |= DDSCaps2.Volume;
+					break;
+			}
+
+			var gpuHeader = texture.Asset.TextureHeader;
+			if (gpuHeader.ResidentSize + gpuHeader.StreamSize > 0) {
+				dx10.ResourceDimension = gpuHeader.Descriptor.Dimension;
+			} else {
+				dx10.ResourceDimension = texture.TextureHeader.Flags.Dimension switch {
+					                         TextureDimension.Texture1D => DXGIResourceDimension.Texture1D,
+					                         TextureDimension.Texture2D => DXGIResourceDimension.Texture2D,
+					                         TextureDimension.Array => DXGIResourceDimension.Texture2D,
+					                         TextureDimension.Cube => DXGIResourceDimension.Texture2D,
+					                         TextureDimension.Texture3D => DXGIResourceDimension.Texture3D,
+					                         _ => DXGIResourceDimension.Texture2D,
+				                         };
+			}
+
+			var bufferSize = Unsafe.SizeOf<DDSHeader>() + Unsafe.SizeOf<DX10Header>();
+			var offset = bufferSize;
+			if (hasStream) {
+				bufferSize += texture.TextureHeader.StreamSize;
+			}
+
+			if (!streamOnly) {
+				bufferSize += texture.TextureHeader.ResidentSize;
+			}
+
+			var buffer = new RentedArray<byte>(bufferSize);
+
+			MemoryMarshal.Write(buffer.Memory.Span, dds);
+			MemoryMarshal.Write(buffer.Memory[Unsafe.SizeOf<DDSHeader>()..].Span, dx10);
+			if (hasStream) {
+				texture.StreamBuffer.Memory[..texture.TextureHeader.StreamSize].CopyTo(buffer.Memory[offset..]);
+				offset += texture.TextureHeader.StreamSize;
+			}
+
+			if (!streamOnly) {
+				texture.ResidentBuffer.Memory[..texture.TextureHeader.ResidentSize].CopyTo(buffer.Memory[offset..]);
+			}
+
+			return buffer;
+		}
+
+		public ImageCollection ToImage(bool allowHDR, bool allowNormalReconstruction) {
+			var outputHDR = allowHDR && texture.IsHDR;
+			var isNormal = allowNormalReconstruction && texture.TextureHeader.Flags.ContentType == TextureContentType.Normal; // don't allow channel packed formats
+
+			ImageCollection frames = [];
+			try {
+				var surfaceCount = (int) texture.TextureHeader.SurfaceCount;
+				if (surfaceCount < 1) {
+					surfaceCount = 1;
+				}
+
+				if (texture.TextureHeader.Flags.Dimension == TextureDimension.Cube) {
+					surfaceCount *= 6;
+				}
+
+				for (var surface = 0; surface < surfaceCount; ++surface) {
+					var outputSurface = DecodeSurface(texture, surface, isNormal);
+					if (!outputHDR && outputSurface.ColorId.IsHDR) {
+						var old = outputSurface;
+						try {
+							outputSurface = outputSurface.ColorId.IsSigned ? old.Cast<short>() : old.Cast<ushort>();
+						} finally {
+							old.Dispose();
+						}
+					}
+
+					frames.Add(outputSurface);
+				}
+
+				return frames;
+			} catch {
+				frames.Dispose();
+				throw;
+			}
 		}
 	}
 
 	private static IImageBuffer DecodeSurface(Texture texture, int surface, bool isNormal) {
 		var (width, height) = texture.Dimensions;
 		var (bitsPerBlock, pixelsPerBlock) = texture.TextureHeader.Format.GetPitchFactor();
-		var hasStream = texture.StreamBuffer.Size > 0;
+		var hasStream = texture.StreamBuffer.Length > 0;
 		var numMips = !hasStream ? texture.TextureHeader.Mips - texture.TextureHeader.StreamMips : texture.TextureHeader.StreamMips;
 		var oneSurface = CalculateSurfaceSize(width, height, pixelsPerBlock, bitsPerBlock, numMips, out var largestMip);
 
-		var chunk = new SharedRivetMemory<byte>(hasStream ? texture.StreamBuffer : texture.ResidentBuffer, (int) (oneSurface * surface), (int) largestMip);
+		var chunk = new UnownedRentedArray<byte>(hasStream ? texture.StreamBuffer : texture.ResidentBuffer, (int) (oneSurface * surface), (int) largestMip);
 		var chunkMem = chunk.Memory;
 		var chunkSrc = chunkMem.Span;
 
 		if (texture.TextureHeader.Format is >= DXGIFormat.BC1_TYPELESS and <= DXGIFormat.BC5_SNORM or >= DXGIFormat.BC6H_TYPELESS and <= DXGIFormat.BC7_UNORM_SRGB) {
 			try {
-				var frameBuffer = new RivetMemory<byte>(width * height * 16);
+				var frameBuffer = new RentedArray<byte>(width * height * 16);
 				try {
 					var frameBufferMem = frameBuffer.Memory;
 					var frameBufferSrc = frameBufferMem.Span;
@@ -282,8 +284,8 @@ public static class TextureConverter {
 			case DXGIFormat.R10G10B10A2_UNORM:
 			case DXGIFormat.R10G10B10A2_UINT:
 				try {
-					var frameBuffer = new RivetMemory<byte>(width * height * 8);
-					RgbConverter.Convert<ColorR10G10B10A2, ushort, ColorRGBA<ushort>, ushort>(chunkSrc, width, height, frameBuffer.Memory.Span);
+					var frameBuffer = new RentedArray<byte>(width * height * 8);
+					RgbConverter.Convert<ColorR10G10B10A2, float, ColorRGBA<ushort>, ushort>(chunkSrc, width, height, frameBuffer.Memory.Span);
 					return new ImageBuffer<ColorRG<ushort>, ushort>(frameBuffer, width, height);
 				} finally {
 					chunk.Dispose();
@@ -293,8 +295,8 @@ public static class TextureConverter {
 			case DXGIFormat.B8G8R8X8_UNORM:
 			case DXGIFormat.B8G8R8X8_UNORM_SRGB:
 				try {
-					var frameBuffer = new RivetMemory<byte>(width * height * 4);
-					RgbConverter.Convert<ColorBGRA32, byte, ColorRGBA<byte>, byte>(chunkSrc, width, height, frameBuffer.Memory.Span);
+					var frameBuffer = new RentedArray<byte>(width * height * 4);
+					RgbConverter.Convert<ColorBGRA<byte>, byte, ColorRGBA<byte>, byte>(chunkSrc, width, height, frameBuffer.Memory.Span);
 					return new ImageBuffer<ColorRGBA<byte>, byte>(frameBuffer, width, height);
 				} finally {
 					chunk.Dispose();

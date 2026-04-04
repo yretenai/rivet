@@ -5,8 +5,8 @@
 using System.IO.Compression;
 using System.Runtime.CompilerServices;
 using System.Text;
-using DragonLib;
-using Rivet.IO;
+using Pluto.Extensions;
+using Pluto.IO.Binary;
 using Rivet.Models;
 using Rivet.Models.Data;
 using Serilog;
@@ -17,7 +17,7 @@ public sealed class ArchiveTOC : IDisposable {
 	private const uint TOCMagic = 0x34E89035;
 	private const uint TOCMagicCompressed = 0x77AF12AF;
 
-	public ArchiveTOC(IUnsafeMemoryOwner<byte> buffer, RivetGame game) {
+	public ArchiveTOC(IRentedArray<byte> buffer, RivetGame game) {
 		Log.Information("Loading TOC");
 		Game = game;
 
@@ -172,14 +172,14 @@ public sealed class ArchiveTOC : IDisposable {
 		}
 	}
 
-	private static unsafe IUnsafeMemoryOwner<byte> GetDAT1Stream(IUnsafeMemoryOwner<byte> buffer) {
-		var reader = new MemoryReader(buffer);
-		var header = reader.Get<TOCHeader>();
+	private static unsafe IRentedArray<byte> GetDAT1Stream(IRentedArray<byte> buffer) {
+		var reader = new ArrayPoolBinaryReader(buffer, true);
+		var header = reader.Read<TOCHeader>();
 		if (header.TypeId == DAT1.MagicValue) {
 			return buffer;
 		}
 
-		var remain = reader.Slice(reader.Unconsumed);
+		var remain = reader.ReadSharedBytes(reader.Unconsumed);
 		if (header.TypeId == TOCMagic) {
 			return remain;
 		}
@@ -188,9 +188,9 @@ public sealed class ArchiveTOC : IDisposable {
 			throw new NotSupportedException("Unknown filetype");
 		}
 
-		var uncompressed = new RivetMemory<byte>(header.Size);
+		var uncompressed = new RentedArray<byte>(header.Size);
 		using var pinned = remain.Memory.Pin();
-		using var unsafeStream = new UnmanagedMemoryStream((byte*) pinned.Pointer, remain.Size);
+		using var unsafeStream = new UnmanagedMemoryStream((byte*) pinned.Pointer, remain.Length);
 		using var zStream = new ZLibStream(unsafeStream, CompressionMode.Decompress, false);
 		zStream.ReadExactly(uncompressed.Memory.Span);
 		return uncompressed;

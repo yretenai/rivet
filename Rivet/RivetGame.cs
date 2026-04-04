@@ -4,6 +4,7 @@
 
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
+using Pluto.IO.Binary;
 using Rivet.Data;
 using Rivet.DDL;
 using Rivet.DDL.Types;
@@ -43,8 +44,8 @@ public sealed class RivetGame : IDisposable {
 			throw new InvalidDataException("Missing DAG");
 		}
 
-		using var tocData = new RivetMemory<byte>(new FileInfo(tocPath));
-		using var dagData = new RivetMemory<byte>(new FileInfo(dagPath));
+		using var tocData = RentedArray<byte>.FromFile(tocPath);
+		using var dagData = RentedArray<byte>.FromFile(dagPath);
 
 		TOC = new ArchiveTOC(tocData, this);
 		DAG = new DependencyDAG(dagData, this);

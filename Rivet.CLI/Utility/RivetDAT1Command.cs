@@ -1,10 +1,10 @@
 using System.Runtime.InteropServices;
-using DragonLib.CommandLine;
-using DragonLib.IO;
+using Pluto.CommandLine;
+using Pluto.IO.Binary;
+using Pluto.IO.FileSystem;
 using Rivet.CLI.Flags;
 using Rivet.Data;
 using Rivet.DDL.Enums;
-using Rivet.IO;
 using Rivet.Models;
 using Rivet.Models.Data;
 
@@ -31,7 +31,7 @@ public record RivetDAT1Command(RivetDAT1Flags Flags) : RivetCommand {
 
 			using var stream = new FileStream(arg, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 			stream.ReadExactly(headerBlit);
-			using var data = new RivetMemory<byte>(stream);
+			using var data = RentedArray<byte>.FromStream(stream, true);
 
 			using var bundle = new AssetPack(blank with {
 				Type = (AssetType) assetExt,
@@ -45,13 +45,13 @@ public record RivetDAT1Command(RivetDAT1Flags Flags) : RivetCommand {
 			for (var index = 0; index < bundle.Buffers.Count; index++) {
 				using var block = bundle.Buffers[index];
 				var oldOffset = offset;
-				offset += block.Size;
+				offset += block.Length;
 
-				if (oldOffset + block.Size <= datReadPoint) {
+				if (oldOffset + block.Length <= datReadPoint) {
 					continue;
 				}
 
-				if (block.Size <= 4) {
+				if (block.Length <= 4) {
 					continue;
 				}
 

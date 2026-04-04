@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: EUPL-1.2
 
 using System.Diagnostics.CodeAnalysis;
+using Pluto.IO.Binary;
 using Rivet.IO;
 using Rivet.Models.Data;
 
@@ -26,7 +27,7 @@ public record RivetAsset {
 	public AssetType Type { get; set; } = AssetType.None;
 	public ulong Hash { get; set; }
 
-	public RivetMemory<byte>? Open() => Size > -1 && Offset != uint.MaxValue ? Archive?.DataStream?.ReadBytes(Offset, Size) : null;
+	public RentedArray<byte>? Open() => Size > -1 && Offset != uint.MaxValue ? Archive?.DataStream?.ReadBytes(Offset, Size) : null;
 
 	public T? Load<T>(RivetGame game) where T : class, IRivetInstance<T> => TryLoad<T>(game, out var instance) ? instance : null;
 

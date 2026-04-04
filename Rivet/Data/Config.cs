@@ -2,6 +2,7 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
+using Pluto.IO.Binary;
 using Rivet.DDL;
 using Rivet.IO;
 using Rivet.Models;
@@ -10,7 +11,7 @@ using Rivet.Models.Data;
 namespace Rivet.Data;
 
 public class Config : AssetPack, IRivetInstance<Config> {
-	public Config(RivetAsset asset, IUnsafeMemoryOwner<byte> buffer, RivetGame game) : base(asset, buffer, game) {
+	public Config(RivetAsset asset, IRentedArray<byte> buffer, RivetGame game) : base(asset, buffer, game) {
 		if (Asset.Header.Version != AssetVersion.Config || Buffers.Count < 1) {
 			throw new InvalidDataException();
 		}
@@ -29,5 +30,5 @@ public class Config : AssetPack, IRivetInstance<Config> {
 	public DDLObject Type { get; }
 	public DDLObject Built { get; }
 
-	public static Config CreateInstance(RivetAsset asset, RivetGame game, IUnsafeMemoryOwner<byte> buffer) => new(asset, buffer, game);
+	public static Config CreateInstance(RivetAsset asset, RivetGame game, IRentedArray<byte> buffer) => new(asset, buffer, game);
 }

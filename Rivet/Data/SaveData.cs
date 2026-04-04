@@ -1,3 +1,4 @@
+using Pluto.IO.Binary;
 using Rivet.DDL;
 using Rivet.DDL.Types;
 using Rivet.IO;
@@ -5,7 +6,7 @@ using Rivet.IO;
 namespace Rivet.Data;
 
 public class SaveData {
-	public SaveData(IUnsafeMemoryOwner<byte> buffer) {
+	public SaveData(IRentedArray<byte> buffer) {
 		var dat = new DAT1(buffer);
 
 		// 0x28338a -- a single number?
@@ -23,11 +24,13 @@ public class SaveData {
 		}
 
 		if (dat.Sections.ContainsKey(0x1cea6ceb)) {
-			Segments = DevstatsSegmentSystemSaveData.Create(DDLSerializer.Deserialize(dat.GetSection(0x1cea6ceb).Shift(4), dat));
+			using var section = new UnownedRentedArray<byte>(dat.GetSection(0x1cea6ceb), 4);
+			Segments = DevstatsSegmentSystemSaveData.Create(DDLSerializer.Deserialize(section, dat));
 		}
 
 		if (dat.Sections.ContainsKey(0x21a6159f)) {
-			Objectives = ObjectiveSystemSaveBlock.Create(DDLSerializer.Deserialize(dat.GetSection(0x21a6159f).Shift(8), dat));
+			using var section = new UnownedRentedArray<byte>(dat.GetSection(0x21a6159f), 8);
+			Objectives = ObjectiveSystemSaveBlock.Create(DDLSerializer.Deserialize(section, dat));
 		}
 
 		if (dat.Sections.ContainsKey(0x19c54b9)) {

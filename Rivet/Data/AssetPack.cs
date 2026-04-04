@@ -2,13 +2,13 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
-using Rivet.IO;
+using Pluto.IO.Binary;
 using Rivet.Models;
 
 namespace Rivet.Data;
 
 public class AssetPack : IDisposable {
-	public AssetPack(RivetAsset asset, IUnsafeMemoryOwner<byte> buffer, RivetGame game) {
+	public AssetPack(RivetAsset asset, IRentedArray<byte> buffer, RivetGame game) {
 		Asset = asset;
 		Owner = buffer;
 		Game = game;
@@ -16,11 +16,11 @@ public class AssetPack : IDisposable {
 		var cur = 0;
 		for (var i = 0; i < 4; ++i) {
 			if (Asset.Header.Sizes[i] == 0) {
-				Buffers.Add(IUnsafeMemoryOwner<byte>.Empty);
+				Buffers.Add(RentedArray<byte>.Empty);
 				continue;
 			}
 
-			Buffers.Add(new SharedRivetMemory<byte>(Owner, cur, Asset.Header.Sizes[i]));
+			Buffers.Add(new UnownedRentedArray<byte>(Owner, cur, Asset.Header.Sizes[i]));
 			cur += Asset.Header.Sizes[i];
 		}
 	}
@@ -29,8 +29,8 @@ public class AssetPack : IDisposable {
 
 	public RivetAsset Asset { get; }
 	public RivetGame Game { get; }
-	public IUnsafeMemoryOwner<byte> Owner { get; private set; }
-	public List<IUnsafeMemoryOwner<byte>> Buffers { get; } = [];
+	public IRentedArray<byte> Owner { get; private set; }
+	public List<IRentedArray<byte>> Buffers { get; } = [];
 #if DEBUG
 	public System.Diagnostics.StackTrace Origin { get; } = new();
 #endif
@@ -47,7 +47,6 @@ public class AssetPack : IDisposable {
 			buffer.Dispose();
 		}
 
-		Owner = IUnsafeMemoryOwner<byte>.Empty;
 		Buffers.Clear();
 
 	#if DEBUG

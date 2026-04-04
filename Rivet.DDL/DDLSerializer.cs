@@ -4,27 +4,28 @@
 
 using System.Runtime.CompilerServices;
 using System.Text;
+using Pluto.IO.Binary;
 using Rivet.DDL.Models;
 using Rivet.IO;
 
 namespace Rivet.DDL;
 
 public static class DDLSerializer {
-	public static DDLObject Deserialize(IUnsafeMemoryOwner<byte> data, IStringPooled stringPool) => Deserialize(new MemoryReader(data), stringPool);
+	public static DDLObject Deserialize(IRentedArray<byte> data, IStringPooled stringPool) => Deserialize(new ArrayPoolBinaryReader(data, true), stringPool);
 
-	public static DDLObject Deserialize(MemoryReader reader, IStringPooled stringPool) {
+	public static DDLObject Deserialize(BufferBinaryReader reader, IStringPooled stringPool) {
 		if (reader.Unconsumed <= Unsafe.SizeOf<DDLHeader>()) {
 			return [];
 		}
 
-		var header = reader.Get<DDLHeader>();
+		var header = reader.Read<DDLHeader>();
 		if (header.Magic != DDLHeader.MagicValue) {
 			return [];
 		}
 
-		var objectBlob = new MemoryReader(reader.Slice(header.Size));
-		var fieldInfos = objectBlob.Get<DDLFieldHeader>(header.FieldCount);
-		var fieldNameOffsets = objectBlob.Get<int>(header.FieldCount);
+		var objectBlob = new ArrayPoolBinaryReader(reader.ReadSharedBytes(header.Size));
+		var fieldInfos = objectBlob.Read<DDLFieldHeader>(header.FieldCount);
+		var fieldNameOffsets = objectBlob.Read<int>(header.FieldCount);
 
 		var result = new DDLObject();
 		for (var fieldIndex = 0; fieldIndex < header.FieldCount; ++fieldIndex) {
@@ -36,7 +37,7 @@ public static class DDLSerializer {
 		return result;
 	}
 
-	public static List<object?> ReadValue(DDLFieldHeader field, IStringPooled stringPool, MemoryReader reader) {
+	public static List<object?> ReadValue(DDLFieldHeader field, IStringPooled stringPool, BufferBinaryReader reader) {
 		var count = field.Type == DDLTypeKind.Default ? Math.Min(1, field.Count) : field.Count;
 		if (count == 0) {
 			return [];
@@ -46,52 +47,52 @@ public static class DDLSerializer {
 		for (var index = 0; index < count; ++index) {
 			switch (field.Type) {
 				case DDLTypeKind.Bool: {
-					result.Add(reader.Get<byte>() != 0);
+					result.Add(reader.Read<byte>() != 0);
 					break;
 				}
 				case DDLTypeKind.UInt8: {
-					result.Add(reader.Get<byte>());
+					result.Add(reader.Read<byte>());
 					break;
 				}
 				case DDLTypeKind.UInt16: {
-					result.Add(reader.Get<ushort>());
+					result.Add(reader.Read<ushort>());
 					break;
 				}
 				case DDLTypeKind.UInt32: {
-					result.Add(reader.Get<uint>());
+					result.Add(reader.Read<uint>());
 					break;
 				}
 				case DDLTypeKind.Identifier:
 				case DDLTypeKind.UInt64: {
-					result.Add(reader.Get<ulong>());
+					result.Add(reader.Read<ulong>());
 					break;
 				}
 				case DDLTypeKind.Asset: {
-					result.Add(new RivetAssetId(reader.Get<ulong>()));
+					result.Add(new RivetAssetId(reader.Read<ulong>()));
 					break;
 				}
 				case DDLTypeKind.Int8: {
-					result.Add(reader.Get<sbyte>());
+					result.Add(reader.Read<sbyte>());
 					break;
 				}
 				case DDLTypeKind.Int16: {
-					result.Add(reader.Get<short>());
+					result.Add(reader.Read<short>());
 					break;
 				}
 				case DDLTypeKind.Int32: {
-					result.Add(reader.Get<int>());
+					result.Add(reader.Read<int>());
 					break;
 				}
 				case DDLTypeKind.Int64: {
-					result.Add(reader.Get<long>());
+					result.Add(reader.Read<long>());
 					break;
 				}
 				case DDLTypeKind.Float: {
-					result.Add(reader.Get<float>());
+					result.Add(reader.Read<float>());
 					break;
 				}
 				case DDLTypeKind.Double: {
-					result.Add(reader.Get<double>());
+					result.Add(reader.Read<double>());
 					break;
 				}
 				case DDLTypeKind.Enum:
@@ -99,21 +100,21 @@ public static class DDLSerializer {
 				case DDLTypeKind.Json:
 				case DDLTypeKind.String:
 				case DDLTypeKind.File: {
-					var str = reader.Get<DDLString>();
-					var value = str.Length == 0 ? string.Empty : Encoding.UTF8.GetString(reader.Get<byte>(str.Length));
+					var str = reader.Read<DDLString>();
+					var value = reader.ReadCString<byte>(Encoding.UTF8, str.Length, true);
 					result.Add(new DDLFullString(value, str.Hash, str.Checksum));
-					reader.Offset += 1;
-					reader.Align(4);
+					reader.Position += 1;
+					reader.Align();
 					break;
 				}
 				case DDLTypeKind.Struct: {
 					result.Add(Deserialize(reader, stringPool));
-					reader.Align(4);
+					reader.Align();
 					break;
 				}
 				case DDLTypeKind.Default: {
 					result.Add(null);
-					reader.Offset += 1;
+					reader.Position += 1;
 					break;
 				}
 				case DDLTypeKind.Unknown:

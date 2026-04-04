@@ -1,7 +1,7 @@
-using DragonLib.CommandLine;
+using Pluto.CommandLine;
+using Pluto.IO.Binary;
 using Rivet.CLI.Flags;
 using Rivet.Data;
-using Rivet.IO;
 
 namespace Rivet.CLI.Utility;
 
@@ -9,7 +9,7 @@ namespace Rivet.CLI.Utility;
 public record RivetSaveCommand(RivetCLIFlags Flags) : RivetCLICommand<RivetCLIFlags>(Flags) {
 	public override void Execute() {
 		using var image = new FileStream(Flags.Positionals[1], FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-		using var buffer = new RivetMemory<byte>((int) image.Length);
+		using var buffer = new RentedArray<byte>((int) image.Length);
 		image.ReadExactly(buffer.Memory.Span);
 		var save = new SaveData(buffer);
 		// todo: save

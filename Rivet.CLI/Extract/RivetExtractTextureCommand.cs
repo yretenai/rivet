@@ -2,7 +2,8 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
-using DragonLib.CommandLine;
+using Pluto.CommandLine;
+using Pluto.Maths;
 using Rivet.CLI.Flags;
 using Rivet.Converters;
 using Rivet.Graphics;
@@ -33,7 +34,7 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 	private PNGEncoder PngEncoder { get; }
 	private TIFFEncoder TiffEncoder { get; }
 
-	private static readonly Point[] IBLCrop = [
+	private static readonly Point<int>[] IBLCrop = [
 		new(0, 0), // X+
 		new(1, 0), // X-
 		new(2, 0), // Y+
@@ -143,7 +144,7 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 
 			using var tileImage = rootFrame.CreateSubImage(texture.Dimensions.Width, texture.Dimensions.Height * frames.Count);
 			for (var surfaceIndex = 0; surfaceIndex < frames.Count; ++surfaceIndex) {
-				tileImage.Draw(frames[surfaceIndex], new Point(0, texture.Dimensions.Height * surfaceIndex));
+				tileImage.Draw(frames[surfaceIndex], new Point<int>(0, texture.Dimensions.Height * surfaceIndex));
 			}
 
 			SaveImage(stream, texture.TextureHeader.Flags.ContentType, format, [tileImage]);

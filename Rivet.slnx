@@ -1,0 +1,23 @@
+<!--
+SPDX-FileCopyrightText: 2025 Legiayayana
+
+SPDX-License-Identifier: EUPL-1.2
+-->
+
+<Solution>
+  <Folder Name="/Libraries/">
+    <Project Path="Libraries/BCDecNet/BCDecNet/BCDecNet.csproj" />
+    <Project Path="Libraries/Neptune/Ceres/Ceres.csproj" />
+    <Project Path="Libraries/Pepper/Pepper/Pepper.csproj" />
+    <Project Path="Libraries/Neptune/Charon/Charon.csproj" />
+    <Project Path="Libraries/Neptune/Pluto/Pluto.csproj" />
+    <Project Path="Libraries/Neptune/Triton/Triton.csproj" />
+  </Folder>
+  <Project Path="Rivet.CLI/Rivet.CLI.csproj" />
+  <Project Path="Rivet.Converters/Rivet.Converters.csproj" />
+  <Project Path="Rivet.DDL.Generator/Rivet.DDL.Generator.csproj" />
+  <Project Path="Rivet.DDL.RCRA/Rivet.DDL.RCRA.csproj" />
+  <Project Path="Rivet.DDL/Rivet.DDL.csproj" />
+  <Project Path="Rivet.IO/Rivet.IO.csproj" />
+  <Project Path="Rivet/Rivet.csproj" />
+</Solution>

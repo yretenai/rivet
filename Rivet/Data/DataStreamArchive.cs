@@ -4,10 +4,9 @@
 
 using System.Buffers;
 using System.Diagnostics;
-using DragonLib;
-using GDeflateNet;
-using IronCompress;
-using Rivet.IO;
+using Charon.Compression;
+using Pluto.Extensions;
+using Pluto.IO.Binary;
 using Rivet.Models.Data;
 
 namespace Rivet.Data;
@@ -45,18 +44,17 @@ public sealed class DataStreamArchive : IDisposable, IAsyncDisposable {
 	public bool IsCompressed { get; } = true;
 	public DSARHeader Header { get; }
 	public DSARChunk[] Chunks { get; } = [];
-	private static Iron Iron { get; } = new();
 	public ValueTask DisposeAsync() => BaseStream.DisposeAsync();
 
 	public void Dispose() => BaseStream.Dispose();
 
-	public RivetMemory<byte> ReadBytes(long assetOffset, int assetSize) {
+	public RentedArray<byte> ReadBytes(long assetOffset, int assetSize) {
 		var assetEnd = assetOffset + assetSize;
 
-		ArgumentOutOfRangeException.ThrowIfGreaterThan(assetOffset, Header.Size, nameof(assetOffset));
-		ArgumentOutOfRangeException.ThrowIfGreaterThan(assetEnd, Header.Size, nameof(assetOffset));
+		ArgumentOutOfRangeException.ThrowIfGreaterThan(assetOffset, Header.Size);
+		ArgumentOutOfRangeException.ThrowIfGreaterThan(assetEnd, Header.Size);
 
-		var buffer = new RivetMemory<byte>(assetSize);
+		var buffer = new RentedArray<byte>(assetSize);
 
 		try {
 			var tmp = buffer;
@@ -104,26 +102,17 @@ public sealed class DataStreamArchive : IDisposable, IAsyncDisposable {
 				BaseStream.Position = chunk.CompressedOffset;
 				BaseStream.ReadExactly(compressedBuffer.Memory[..chunk.CompressedSize].Span);
 
-				switch (chunk.CompressionType) {
-					case DSARCompression.None: {
-						compressedBuffer.Memory[..chunk.CompressedSize].CopyTo(uncompressedBuffer.Memory[..chunk.Size]);
-						break;
-					}
-					case DSARCompression.Unknown1: {
-						throw new NotSupportedException("compression type 1 has never been seen before");
-					}
-					case DSARCompression.GDeflate: {
-						if (!GDeflate.Decompress(compressedBuffer.Memory[..chunk.CompressedSize], uncompressedBuffer.Memory[..chunk.Size])) {
-							throw new InvalidOperationException("gdeflate failure");
-						}
+				var charonType = chunk.CompressionType switch {
+					                 DSARCompression.None => CompressionType.None,
+					                 DSARCompression.ZLib => CompressionType.Zlib,
+					                 DSARCompression.GDeflate => CompressionType.GDeflate,
+					                 DSARCompression.LZ4 => CompressionType.LZ4,
+					                 _ => throw new NotSupportedException(),
+				                 };
 
-						break;
-					}
-					case DSARCompression.LZ4: {
-						using var lz4 = Iron.Decompress(Codec.LZ4, compressedBuffer.Memory[..chunk.CompressedSize].Span, chunk.Size);
-						lz4.AsSpan().CopyTo(uncompressedBuffer.Memory.Span);
-						break;
-					}
+				var n = CompressionHelper.Decompress(charonType, compressedBuffer.Memory[..chunk.CompressedSize], uncompressedBuffer.Memory[..chunk.Size]);
+				if (n != chunk.Size) {
+					throw new InvalidDataException("cannot decompress");
 				}
 
 				var copy = uncompressedBuffer.Memory[..chunk.Size].Span[shift..];
