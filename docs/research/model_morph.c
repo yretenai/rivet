@@ -1,4 +1,10 @@
 /*
+ * SPDX-FileCopyrightText: 2025-2026 Neptuwunium
+ *
+ * SPDX-License-Identifier: CC0-1.0
+ */
+
+/*
 Overall structure:
 
 morph_header_t

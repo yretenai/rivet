@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025-2026 Neptuwunium
+
+SPDX-License-Identifier: EUPL-1.2
+-->
+
 # dumping ddl structures
 
 use a memory dumped executable, as these structures are initially empty, engine fills them on boot
