@@ -34,6 +34,19 @@ namespace {
 namespace rivet_hook {
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "cppcoreguidelines-pro-bounds-pointer-arithmetic"
+
+	using context_log_t = const char *(*) (const char *, const char *);
+	context_log_t fwd_context_log = nullptr;
+	std::string last_context;
+	std::string last_message;
+
+	const char *decode_url_string_name = "?DecodeURLString@Library@cohtml@@SAXPEBDIPEADPEAI@Z";
+	using decode_url_t = void (*) (const char*, unsigned int, char*, unsigned int*);
+	decode_url_t fwd_decode_url = nullptr;
+
+	using load_asset_t = intptr_t(*) (intptr_t, uint64_t, uint64_t, const char*, intptr_t, intptr_t, int32_t);
+	load_asset_t fwd_load_asset = nullptr;
+
 	void
 	get_ddl_field(nlohmann::json &field, const uint8_t* object, uint32_t offset, uint8_t array_type, uint8_t field_type, int32_t index, const rivet_hook::ddl::ddl_type_info* const type_ptr, const int32_t type_index) {
 		if (array_type == 0) {
@@ -455,12 +468,6 @@ namespace rivet_hook {
 		json_data.close();
 	}
 
-	using context_log_t = const char *(*) (const char *, const char *);
-	context_log_t fwd_context_log = nullptr;
-
-	std::string last_context;
-	std::string last_message;
-
 	auto
 	context_log(const char *context, const char *message) -> const char * {
 		auto valid = (context != nullptr && context[0] != 0 && context[0] != '?') && (message != nullptr && message[0] != 0 && message[0] != '?');
@@ -547,21 +554,13 @@ namespace rivet_hook {
 		output << "[rivet] created " << name << " hook" << std::endl;
 	}
 
-
-	const char *DecodeURLString_n = "?DecodeURLString@Library@cohtml@@SAXPEBDIPEADPEAI@Z";
-	typedef void (*DecodeURLString_t)(const char* url, unsigned int urlLen, char* decoded, unsigned int* decodedSize);
-	DecodeURLString_t DecodeURLString_o = nullptr;
-
-	void COUIDecodeURLString(const char* url, unsigned int urlLen, char* decoded, unsigned int* decodedSize) {
+	void decode_url(const char* url, unsigned int urlLen, char* decoded, unsigned int* decodedSize) {
 		if (url != nullptr) {
 			g_output << "[cohtml] " << url << std::endl;
-		} else {
-			g_output << "[cohtml] got null url" << std::endl;
+			g_output.flush();
 		}
 
-		g_output.flush();
-
-		DecodeURLString_o(url, urlLen, decoded, decodedSize);
+		fwd_decode_url(url, urlLen, decoded, decodedSize);
 	}
 
 	void
@@ -572,7 +571,7 @@ namespace rivet_hook {
 			return;
 		}
 
-		LPVOID proc = reinterpret_cast<LPVOID>(GetProcAddress(mod, DecodeURLString_n));
+		LPVOID proc = reinterpret_cast<LPVOID>(GetProcAddress(mod, decode_url_string_name));
 		if (!proc) {
 			g_output << "cannot hook cohtml, export not found." << std::endl;
 			return;
@@ -580,7 +579,7 @@ namespace rivet_hook {
 
 		init_minhook();
 
-		if (MH_CreateHook(proc, reinterpret_cast<LPVOID>(&COUIDecodeURLString), reinterpret_cast<LPVOID*>(&DecodeURLString_o)) != MH_OK) {
+		if (MH_CreateHook(proc, reinterpret_cast<LPVOID>(&decode_url), reinterpret_cast<LPVOID*>(&fwd_decode_url)) != MH_OK) {
 			g_output << "[rivet] failed to create cohtml hook" << std::endl;
 			return;
 		}
@@ -591,7 +590,33 @@ namespace rivet_hook {
 		}
 
 		g_output << "[rivet] created cohtml hook" << std::endl;
+	}
 
+	intptr_t load_asset(intptr_t self, uint64_t asset_id, uint64_t parent_asset_id, const char* asset_name, intptr_t referencing_asset, intptr_t unknown6, int32_t unknown7) {
+		g_output << "[load asset] " << std::hex << asset_id << " ";
+
+		if (asset_name && *asset_name) {
+			g_output << asset_name << " from ";
+		} else {
+			g_output << "(null) from ";
+		}
+
+		if (referencing_asset) {
+			auto upper_path = reinterpret_cast<const char**>(referencing_asset + 0x10);
+
+			if (upper_path && *upper_path && **upper_path) {
+				g_output << *upper_path;
+			} else {
+				g_output << "(null)";
+			}
+		} else {
+			g_output << "(nowhere)";
+		}
+
+		g_output << std::endl;
+		g_output.flush();
+
+		return fwd_load_asset(self, asset_id, parent_asset_id, asset_name, referencing_asset, unknown6, unknown7);
 	}
 
 #pragma clang diagnostic pop
@@ -658,6 +683,10 @@ namespace rivet_hook {
 
 			if (g_settings.log_cohtml) {
 				hook_cohtml();
+			}
+
+			if (g_settings.log_paths) {
+				create_hook("asset paths", g_output, g_game_module, LOAD_ASSET_SIGNATURE, reinterpret_cast<LPVOID>(&load_asset), reinterpret_cast<LPVOID *>(&fwd_load_asset));
 			}
 
 			g_output << "[rivet] init complete" << std::endl;
