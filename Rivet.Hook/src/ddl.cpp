@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025-2026 Neptuwunium
+//
+// SPDX-License-Identifier: EUPL-1.2
+
 #include <vector>
 #include <thread>
 #include <unordered_set>
