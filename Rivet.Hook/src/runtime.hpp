@@ -27,7 +27,7 @@ namespace rivet_hook {
 
 	auto
 	create_hook(const std::string_view &name, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original, size_t limit = 1, int select = 0) -> void;
-	
+
 	namespace runtime {
 		auto init() -> void;
 		auto fini() -> void;

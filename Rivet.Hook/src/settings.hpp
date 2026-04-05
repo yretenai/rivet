@@ -23,6 +23,8 @@ namespace rivet_hook {
 		bool attach_log = false;
 		bool log_cohtml = false;
 		bool log_paths = false;
+		bool log_loose_opens = false;
+		bool log_asset_opens = false;
 		bool log_asset_ids = false;
 
 		static auto load() -> Settings;

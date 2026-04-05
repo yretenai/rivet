@@ -4,6 +4,7 @@
 
 #include <unordered_map>
 #include <string>
+#include <algorithm>
 
 #include "runtime_loader.hpp"
 #include "runtime.hpp"
@@ -12,28 +13,37 @@
 
 namespace rivet_hook {
 	std::unordered_map<AssetId, std::string> mod_files = {};
-	
-	std::array<AssetId, 8> known_important_assets = {
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
-		0,
+
+	std::array<AssetId, 7> known_important_assets = {
+		0x8e7f2fafc675d9ef,
+		0xa5fd9d73bb4f722e,
+		0xb575e9facf1a38bc,
+		0xabe81779b7c45edf,
+		0x82ce4031e142c7f3,
+		0x8323511e0074e322,
+		0x98aa90ad5ea29cf5,
 	}; // todo
 
 	create_asset_id_t game_create_asset_id = nullptr;
 	is_valid_asset_t game_is_valid_asset = nullptr;
-	is_installed_asset_t game_is_installed_asset = nullptr;
-	// open_file_t game_open_file = nullptr;
-	// read_file_t game_read_file = nullptr;
-	// close_file_t game_close_file = nullptr;
+	is_valid_asset_t game_is_installed_asset = nullptr;
+	open_file_t game_open_file = nullptr;
+	read_file_t game_read_file = nullptr;
+	close_file_t game_close_file = nullptr;
 	decode_url_t game_decode_url = nullptr;
 	mgr_load_asset_t game_mgr_load_asset = nullptr;
-	
-	intptr_t game_load_ops = 0;
+	sort_t game_sort = nullptr;
+	mount_archive_t game_mount_archive = nullptr;
+	commit_assets_t game_commit_assets = nullptr;
+	alloc_asset_t game_alloc_asset = nullptr;
+	resolve_asset_t game_resolve_asset = nullptr;
+	get_language_t game_get_text_language = nullptr;
+	get_language_t game_get_audio_language = nullptr;
+
+	create_asset_t *game_create_asset = nullptr;
+	void* game_create_asset_data = nullptr;
+	LoadOperation* game_load_ops = 0;
+	SortFunc game_sort_op = {};
 
 	auto
 	create_asset_id(AssetId* asset_id, char* asset_name) -> AssetId* {
@@ -104,22 +114,140 @@ namespace rivet_hook {
 
 	auto
 	load_mod_assets() -> void {
-
+		// todo
 	}
 
 	auto
-	reimpl_load_ops(void* self, AssetId* asset_ids, void* metadata, int32_t asset_count) -> int32_t {
-		return 0; // todo
+	load_asset(AssetHeader* header, const std::string &path) -> void {
+		// todo
+		// special considerations: .texture.stream should be appended?
+		// todo: find allocator? -> NxStorage seems to just malloc???
 	}
 
 	auto
-	is_valid_asset(AssetId asset_id) -> bool {
-		return mod_files.contains(asset_id) || game_is_valid_asset(asset_id);
+	open_file(intptr_t self, AssetFile* file, AssetId asset_id, int32_t type, int32_t platform, uint8_t manager_id) -> void {
+		if (g_settings.log_loose_opens) {
+			g_output << "[open loose] " << std::hex << asset_id << " type: " << type << " manager: " << static_cast<uint32_t>(manager_id) << std::endl;
+			g_output.flush();
+		}
+
+		// todo
+		game_open_file(self, file, asset_id, type, platform, manager_id);
 	}
 
 	auto
-	is_installed_asset(AssetId asset_id) -> bool {
-		return mod_files.contains(asset_id) || game_is_installed_asset(asset_id);	
+	read_file(intptr_t self, AssetFile* file, char* buffer, size_t offset, size_t size, int32_t unknown1, int32_t unknown2) -> void {
+		// todo
+		game_read_file(self, file, buffer, offset, size, unknown1, unknown2);
+	}
+
+	auto
+	close_file(intptr_t self, AssetFile* file) -> void {
+		// todo
+		game_close_file(self, file);
+	}
+
+	auto
+	reimpl_load_ops(ArchiveFileSystem* self, int64_t* assetIds, LoadMetadata* metadata, int32_t assetCount) -> int64_t {
+		if (assetCount <= 0) {
+			return 0;
+		}
+
+		int32_t loadIndex = 0;
+		uint32_t textLanguage = game_get_text_language();
+		uint32_t audioLanguage = game_get_audio_language();
+
+		for(int32_t i = 0; i < assetCount; ++i) {
+			LoadMetadata meta = metadata[i];
+			uint64_t assetId = assetIds[i];
+
+			if (g_settings.log_asset_opens) {
+				g_output << "[open asset] " << std::hex << assetId << " type: " << static_cast<uint32_t>(meta.type) << std::endl;
+				g_output.flush();
+			}
+
+			auto mod_index = mod_files.find(assetId);
+			if (mod_index != mod_files.end()) {
+				AssetHeader* header = game_alloc_asset(0, 1, assetId, &meta, meta.language);
+				if (header) {
+					load_asset(header, (*mod_index).second);
+					game_commit_assets(1);
+				}
+
+				continue;
+			}
+
+			FoundAsset* asset = nullptr;
+			uint32_t selectedLanguage = audioLanguage;
+			if (meta.type == 0xE /* soundbank */) {
+				asset = game_resolve_asset(&self->toc, assetId, audioLanguage, 0);
+			}
+
+			if (!asset) {
+				asset = game_resolve_asset(&self->toc, assetId, textLanguage, 0);
+				selectedLanguage = textLanguage;
+			}
+
+			if (!asset) {
+				asset = game_resolve_asset(&self->toc, assetId, audioLanguage, 0);
+				selectedLanguage = audioLanguage;
+			}
+
+			if (!asset) {
+				asset = game_resolve_asset(&self->toc, assetId, 0, 0);
+				selectedLanguage = 0;
+			}
+
+			if(!asset || asset->header == -1) {
+				// here in case of crash becasue i haven't seen this yet
+				// there's 3 different ways it fails early prior to this so if it happens here something really bad happened
+
+				g_output << "[reimpl_load_ops] invalid path " << std::hex << assetId << std::endl;
+				g_output.flush();
+
+				if (game_alloc_asset(0, 1, assetId, &meta, meta.language)) {
+					game_commit_assets(1);
+				}
+
+				g_output << "[reimpl_load_ops] skipped " << std::hex << assetId << std::endl;
+				g_output.flush();
+
+				continue;
+			}
+
+			ArchiveAsset archiveAsset = asset->asset;
+
+			if (!self->mountedTable[archiveAsset.index]) {
+				game_mount_archive(self, archiveAsset.index);
+			}
+
+			game_load_ops[loadIndex].index = i;
+			game_load_ops[loadIndex].asset = archiveAsset;
+			game_load_ops[loadIndex].size = asset->size;
+			game_load_ops[loadIndex].header = asset->header;
+			game_load_ops[loadIndex].language = selectedLanguage;
+			game_load_ops[loadIndex].priority |= 1;
+
+			if (std::ranges::contains(known_important_assets, assetId)) {
+				game_load_ops[loadIndex].priority &= ~1;
+			}
+
+			loadIndex += 1;
+		}
+
+		game_sort((intptr_t) game_load_ops, loadIndex, 0x18, game_sort_op);
+
+		return loadIndex;
+	}
+
+	auto
+	is_valid_asset(ArchiveFileSystem* self, AssetId asset_id) -> bool {
+		return mod_files.contains(asset_id) || game_is_valid_asset(self, asset_id);
+	}
+
+	auto
+	is_installed_asset(ArchiveFileSystem* self, AssetId asset_id) -> bool {
+		return mod_files.contains(asset_id) || game_is_installed_asset(self, asset_id);
 	}
 
 	auto
@@ -146,5 +274,33 @@ namespace rivet_hook {
 		}
 
 		load_mod_assets();
+
+		#define RVA(n) ((intptr_t) g_game_module + n - 0x140000000)
+
+		// todo: find signatures for all of these aaaaaahhhhhhh!!!
+
+		game_resolve_asset = (resolve_asset_t) RVA(0x141057420);
+		game_get_text_language = (get_language_t) RVA(0x14158e140);
+		game_get_audio_language = (get_language_t) RVA(0x14158dad0);
+		game_alloc_asset = (alloc_asset_t) RVA(0x140fa2a80);
+		game_commit_assets = (commit_assets_t) RVA(0x140fa2c00);
+		game_mount_archive = (mount_archive_t) RVA(0x1410597e0);
+		game_sort_op.func = RVA(0x141058480);
+		game_sort_op.target = 0;
+
+		game_sort = (sort_t) RVA(0x141598f30);
+		game_load_ops = (LoadOperation*) RVA(0x14628fdc0);
+		game_create_asset = (create_asset_t*) RVA(0x14640fe18);
+		game_create_asset_data = (void*) RVA(0x14640fe20);
+
+		create_hook("preload file op", reinterpret_cast<LPVOID>(RVA(0x1410599c0)), reinterpret_cast<LPVOID>(&reimpl_load_ops), nullptr);
+		create_hook("is valid asset", reinterpret_cast<LPVOID>(RVA(0x141059530)), reinterpret_cast<LPVOID>(&is_valid_asset), reinterpret_cast<LPVOID *>(&game_is_valid_asset));
+		create_hook("is installed asset", reinterpret_cast<LPVOID>(RVA(0x141059480)), reinterpret_cast<LPVOID>(&is_installed_asset), reinterpret_cast<LPVOID *>(&game_is_installed_asset));
+
+		create_hook("open file", reinterpret_cast<LPVOID>(RVA(0x141059900)), reinterpret_cast<LPVOID>(&open_file), reinterpret_cast<LPVOID *>(&game_open_file));
+		create_hook("read file", reinterpret_cast<LPVOID>(RVA(0x141059c70)), reinterpret_cast<LPVOID>(&read_file), reinterpret_cast<LPVOID *>(&game_read_file));
+		create_hook("close file", reinterpret_cast<LPVOID>(RVA(0x141058720)), reinterpret_cast<LPVOID>(&close_file), reinterpret_cast<LPVOID *>(&game_close_file));
+
+		#undef RVA
 	}
 }

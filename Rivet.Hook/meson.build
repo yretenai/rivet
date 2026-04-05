@@ -8,7 +8,7 @@ project('rivet', 'cpp',
 	default_options: [
 		'prefix=/usr',
 		'warning_level=3',
-		'cpp_std=c++20'
+		'cpp_std=c++23'
 	],
     meson_version: '>=1.2.1')
 
@@ -30,6 +30,7 @@ cpp_args = compiler.get_supported_arguments(
     '-pedantic',
     '-Wno-unused-variable',
     '-Wno-unused-parameter',
+    '-Wno-deprecated-literal-operator',
 )
 
 minhook_dep = dependency('minhook', version: '>= 1.3.3')

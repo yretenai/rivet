@@ -50,7 +50,7 @@ namespace rivet_hook {
 			g_output << "[rivet] could not find " << name << " pointer, aborting" << std::endl;
 			return {};
 		}
-		
+
 		return pointers;
 	}
 
