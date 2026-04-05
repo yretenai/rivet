@@ -1,6 +1,6 @@
 [wrap-git]
 url = https://github.com/TsudaKageyu/minhook.git
-revision = c1a7c3843bd1a5fe3eb779b64c0d823bca3dc339
+revision = c3fcafdc10146beb5919319d0683e44e3c30d537
 depth = 1
 patch_directory = minhook
 

@@ -17,10 +17,7 @@ compiler = meson.get_compiler('cpp')
 cpp_args = []
 
 cpp_args = compiler.get_supported_arguments(
-    '/wd4251', # do i need to define my own template exports? kinda cringe! do better msvc
-    '/wd4913',
     '/utf-8',
-    '/bigobj',
     '/EHsc',
     '-fPIC',
     '-finput-charset=utf-8',
@@ -35,12 +32,17 @@ cpp_args = compiler.get_supported_arguments(
     '-Wno-unused-parameter',
 )
 
+minhook_dep = dependency('minhook', version: '>= 1.3.3')
+
 nlohmann_json_dep = dependency('', required: false)
 if not compiler.check_header('nlohmann/json.hpp')
-    nlohmann_json_dep = dependency('nlohmann_json', version: '>=3.11.2')
+    nlohmann_json_dep = dependency('nlohmann_json', version: '>= 3.11.2')
 endif
 
-minhook_dep = dependency('minhook', version: '>= 1.3.3')
+toml11_dep = dependency('', required: false)
+if not compiler.check_header('toml.hpp')
+    toml11_dep = dependency('toml11', version: '>= 4.4.0')
+endif
 
 rivet_hook = shared_library('rivet_hook', [
         'src/main.cpp',
@@ -48,8 +50,9 @@ rivet_hook = shared_library('rivet_hook', [
     ],
     link_args: compiler.get_supported_arguments('-static-libgcc', '-static-libstdc++'),
     dependencies: [
-        nlohmann_json_dep,
         minhook_dep,
+        nlohmann_json_dep,
+        toml11_dep,
     ],
     name_prefix: '',
     cpp_args: cpp_args

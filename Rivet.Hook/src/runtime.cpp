@@ -15,6 +15,7 @@
 #include "settings.hpp"
 #include "signature.hpp"
 #include "signature_engine.hpp"
+#include "runtime_loader.hpp"
 
 #include <MinHook.h>
 #include <nlohmann/json.hpp>
@@ -29,25 +30,25 @@ namespace {
 	bool g_minhook_initialized = false;
 	rivet_hook::settings g_settings;
 	std::thread g_ddl_dump_thread;
+	rivet_hook::AssetLoader loader;
 } // namespace
 
 namespace rivet_hook {
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "cppcoreguidelines-pro-bounds-pointer-arithmetic"
 
-	using context_log_t = const char *(__stdcall*)(const char *, const char *);
+	using context_log_t = const char *(*)(const char *, const char *);
 	context_log_t fwd_context_log = nullptr;
 	std::string last_context;
 	std::string last_message;
 
 	const char *decode_url_string_name = "?DecodeURLString@Library@cohtml@@SAXPEBDIPEADPEAI@Z";
-	using decode_url_t = void (__stdcall*)(const char*, unsigned int, char*, unsigned int*);
+	using decode_url_t = void (*)(const char*, unsigned int, char*, unsigned int*);
 	decode_url_t fwd_decode_url = nullptr;
 
-	using load_asset_t = intptr_t (__stdcall*)(intptr_t, uint64_t, uint64_t, const char*, intptr_t, intptr_t, int32_t);
+	using load_asset_t = intptr_t (*)(intptr_t, AssetId, AssetId, const char*, intptr_t, intptr_t, int32_t);
 	load_asset_t fwd_load_asset = nullptr;
 
-	using create_asset_id_t = int32_t* (__stdcall*)(int64_t*, char*);
 	create_asset_id_t fwd_create_asset_id = nullptr;
 
 	void
@@ -94,7 +95,7 @@ namespace rivet_hook {
 					return;
 				}
 				default: {
-					if(g_settings.debug_dll && reinterpret_cast<const uint8_t*>(object + offset)[index] != 0) {
+					if(g_settings.debug_ddl && reinterpret_cast<const uint8_t*>(object + offset)[index] != 0) {
 						g_output << "[DDL] " << type_ptr->name << " field " << type_ptr->field_names[type_index] << " (index " << index << ", type " << static_cast<int>(field_type) << ") has non-zero value that is not handled" << std::endl;
 					}
 
@@ -191,7 +192,7 @@ namespace rivet_hook {
 			return;
 		}
 
-		if(g_settings.debug_dll && reinterpret_cast<const uint64_t*>(object + offset)[0] != 0) {
+		if(g_settings.debug_ddl && reinterpret_cast<const uint64_t*>(object + offset)[0] != 0) {
 			g_output << "[DDL] " << type_ptr->name << " field " << type_ptr->field_names[type_index] << " (type " << static_cast<int>(field_type) << ", array type " << static_cast<int>(array_type) << ") has non-zero value that is not handled" << std::endl;
 		}
 	}
@@ -297,7 +298,7 @@ namespace rivet_hook {
 				ddl_inst_this = nullptr;
 			}
 
-			if(g_settings.debug_dll && ddl_inst_this != nullptr) {
+			if(g_settings.debug_ddl && ddl_inst_this != nullptr) {
 				std::ofstream ddl_bin;
 				ddl_bin.open("./ddl/" + std::string(type_ptr->name) + ".bin", std::ios::app | std::ios::binary);
 				ddl_bin.write(reinterpret_cast<char*>(ddl_inst_this), type_ptr->allocation_size + 16);
@@ -390,7 +391,7 @@ namespace rivet_hook {
 			type_info["fields"] = fields;
 			types.push_back(type_info);
 
-			if(g_settings.debug_dll) {
+			if(g_settings.debug_ddl) {
 				std::ofstream ddl_json_data;
 				ddl_json_data.open("./ddl/" + std::string(type_ptr->name) + ".json");
 				auto ddl_json_text = type_info.dump(4);
@@ -526,37 +527,51 @@ namespace rivet_hook {
 		g_minhook_initialized = true;
 	}
 
-	void
-	create_hook(const std::string_view &name, std::ostream &output, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original, size_t limit = 1, int select = 0) {
-		output << "[rivet] searching for " << name << " pointer" << std::endl;
+	std::vector<uint8_t *>
+	find_function(const std::string_view &name, HMODULE game, const hex_signature &signature) {
+		g_output << "[rivet] searching for " << name << " pointer" << std::endl;
 		auto pointers = scan(game, signature);
+
 		if (pointers.empty()) {
-			output << "[rivet] could not find " << name << " pointer, aborting" << std::endl;
-			return;
+			g_output << "[rivet] could not find " << name << " pointer, aborting" << std::endl;
+			return {};
 		}
+		
+		return pointers;
+	}
 
-		if (pointers.size() > limit) {
-			output << "[rivet] found " << pointers.size() << " " << name << " pointers, too many. aborting" << std::endl;
-			return;
-		}
-
+	void
+	create_hook(const std::string_view &name, LPVOID pointer, LPVOID detour, LPVOID *original) {
 		init_minhook();
 
-		auto pointer = pointers[select];
-
-		output << "[rivet] found " << name << " pointer at " << std::hex << reinterpret_cast<uintptr_t>(pointer) << std::dec << std::endl;
+		g_output << "[rivet] found " << name << " pointer at " << std::hex << reinterpret_cast<uintptr_t>(pointer) << std::dec << std::endl;
 
 		if (MH_CreateHook(pointer, detour, original) != MH_OK) {
-			output << "[rivet] failed to create " << name << " hook" << std::endl;
+			g_output << "[rivet] failed to create " << name << " hook" << std::endl;
 			return;
 		}
 
 		if (MH_EnableHook(pointer) != MH_OK) {
-			output << "[rivet] failed to enable " << name << " hook" << std::endl;
+			g_output << "[rivet] failed to enable " << name << " hook" << std::endl;
 			return;
 		}
 
-		output << "[rivet] created " << name << " hook" << std::endl;
+		g_output << "[rivet] created " << name << " hook" << std::endl;
+	}
+
+	void
+	create_hook(const std::string_view &name, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original, size_t limit, int select) {
+		auto pointers = find_function(name, game, signature);
+		if (pointers.empty()) {
+			return;
+		}
+
+		if (pointers.size() > limit) {
+			g_output << "[rivet] found " << pointers.size() << " " << name << " pointers, too many. aborting" << std::endl;
+			return;
+		}
+
+		create_hook(name, pointers[select], detour, original);
 	}
 
 	void decode_url(const char* url, unsigned int urlLen, char* decoded, unsigned int* decodedSize) {
@@ -597,7 +612,8 @@ namespace rivet_hook {
 		g_output << "[rivet] created cohtml hook" << std::endl;
 	}
 
-	intptr_t load_asset(intptr_t self, uint64_t asset_id, uint64_t parent_asset_id, const char* asset_name, intptr_t referencing_asset, intptr_t unknown6, int32_t unknown7) {
+	intptr_t
+	load_asset(intptr_t self, AssetId asset_id, AssetId parent_asset_id, const char* asset_name, intptr_t referencing_asset, intptr_t unknown6, int32_t unknown7) {
 		g_output << "[load asset] " << std::hex << asset_id << " ";
 
 		if (asset_name && *asset_name) {
@@ -624,7 +640,8 @@ namespace rivet_hook {
 		return fwd_load_asset(self, asset_id, parent_asset_id, asset_name, referencing_asset, unknown6, unknown7);
 	}
 
-	int32_t* __stdcall create_asset_id(int64_t* asset_id, char* asset_name) {
+	AssetId*
+	create_asset_id(AssetId* asset_id, char* asset_name) {
 		auto result = fwd_create_asset_id(asset_id, asset_name);
 
 		if (asset_name && *asset_name && asset_id) {
@@ -653,7 +670,7 @@ namespace rivet_hook {
 			}
 
 			if (g_settings.suppress_crash_handler) {
-				create_hook("crash handler", g_output, g_game_module, CRASH_HANDLER_SIGNATURE, reinterpret_cast<LPVOID>(&null_func), nullptr);
+				create_hook("crash handler", g_game_module, CRASH_HANDLER_SIGNATURE, reinterpret_cast<LPVOID>(&null_func), nullptr);
 			}
 
 			if (g_settings.load_renderdoc) {
@@ -677,7 +694,7 @@ namespace rivet_hook {
 			}
 
 			if (g_settings.dump_ddl) {
-				if (g_settings.debug_dll) {
+				if (g_settings.debug_ddl) {
 					std::filesystem::create_directory("./ddl");
 				}
 				g_output << "[rivet] starting ddl dump thread" << std::endl;
@@ -685,11 +702,11 @@ namespace rivet_hook {
 			}
 
 			if (g_settings.attach_context_log) {
-				create_hook("context log", g_output, g_game_module, CONTEXT_LOG_SIGNATURE, reinterpret_cast<LPVOID>(&context_log), reinterpret_cast<LPVOID *>(&fwd_context_log));
+				create_hook("context log", g_game_module, CONTEXT_LOG_SIGNATURE, reinterpret_cast<LPVOID>(&context_log), reinterpret_cast<LPVOID *>(&fwd_context_log));
 			}
 
 			if (g_settings.attach_log) {
-				create_hook("log", g_output, g_game_module, LOG_SIGNATURE, reinterpret_cast<LPVOID>(&log), nullptr);
+				create_hook("log", g_game_module, LOG_SIGNATURE, reinterpret_cast<LPVOID>(&log), nullptr);
 			}
 
 			if (g_settings.list_versions) {
@@ -702,11 +719,11 @@ namespace rivet_hook {
 			}
 
 			if (g_settings.log_paths) {
-				create_hook("asset paths", g_output, g_game_module, LOAD_ASSET_SIGNATURE, reinterpret_cast<LPVOID>(&load_asset), reinterpret_cast<LPVOID *>(&fwd_load_asset));
+				create_hook("asset paths", g_game_module, LOAD_ASSET_SIGNATURE, reinterpret_cast<LPVOID>(&load_asset), reinterpret_cast<LPVOID *>(&fwd_load_asset));
 			}
 
 			if (g_settings.log_asset_ids) {
-				create_hook("asset ids", g_output, g_game_module, CREATE_ASSET_ID_SIGNATURE, reinterpret_cast<LPVOID>(&create_asset_id), reinterpret_cast<LPVOID *>(&fwd_create_asset_id), 2, 0);
+				create_hook("asset ids", g_game_module, CREATE_ASSET_ID_SIGNATURE, reinterpret_cast<LPVOID>(&create_asset_id), reinterpret_cast<LPVOID *>(&fwd_create_asset_id), 2, 0);
 			}
 
 			g_output << "[rivet] init complete" << std::endl;
