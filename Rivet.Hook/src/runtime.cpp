@@ -41,13 +41,6 @@ namespace rivet_hook {
 	std::string last_context;
 	std::string last_message;
 
-	const char *decode_url_string_name = "?DecodeURLString@Library@cohtml@@SAXPEBDIPEADPEAI@Z";
-	using decode_url_t = void (*)(const char*, unsigned int, char*, unsigned int*);
-	decode_url_t fwd_decode_url = nullptr;
-
-	using load_asset_t = intptr_t (*)(intptr_t, AssetId, AssetId, const char*, intptr_t, intptr_t, int32_t);
-	load_asset_t fwd_load_asset = nullptr;
-
 	auto
 	find_function(const std::string_view &name, HMODULE game, const hex_signature &signature) -> std::vector<uint8_t *>{
 		g_output << "[rivet] searching for " << name << " pointer" << std::endl;
@@ -103,6 +96,10 @@ namespace rivet_hook {
 
 	auto null_func() -> void { }
 
+	auto return_true() -> bool { return true; }
+
+	auto return_false() -> bool { return false; }
+
 	auto
 	context_log(const char *context, const char *message) -> const char * {
 		auto valid = (context != nullptr && context[0] != 0 && context[0] != '?') && (message != nullptr && message[0] != 0 && message[0] != '?');
@@ -115,6 +112,7 @@ namespace rivet_hook {
 				last_context = current_context;
 				last_message = current_message;
 				g_output << "[ctx] [" << (context == nullptr ? "?" : context) << "] " << (message == nullptr ? "" : message) << std::endl;
+				g_output.flush();
 			}
 		}
 		return result;
@@ -139,61 +137,6 @@ namespace rivet_hook {
 		}
 
 		return nullptr;
-	}
-
-	auto
-	decode_url(const char* url, unsigned int urlLen, char* decoded, unsigned int* decodedSize) -> void {
-		if (url != nullptr) {
-			g_output << "[cohtml] " << url << std::endl;
-			g_output.flush();
-		}
-
-		fwd_decode_url(url, urlLen, decoded, decodedSize);
-	}
-
-	auto
-	hook_cohtml() -> void {
-		HMODULE mod = GetModuleHandleA("cohtml.WindowsDesktop.dll");
-		if (!mod) {
-			g_output << "cannot hook cohtml, not loaded yet." << std::endl;
-			return;
-		}
-
-		LPVOID proc = reinterpret_cast<LPVOID>(GetProcAddress(mod, decode_url_string_name));
-		if (!proc) {
-			g_output << "cannot hook cohtml, export not found." << std::endl;
-			return;
-		}
-
-		create_hook("cohtml", proc,  reinterpret_cast<LPVOID*>(decode_url), reinterpret_cast<LPVOID*>(&fwd_decode_url));
-	}
-
-	auto
-	load_asset(intptr_t self, AssetId asset_id, AssetId parent_asset_id, const char* asset_name, intptr_t referencing_asset, intptr_t unknown6, int32_t unknown7) -> intptr_t {
-		g_output << "[load asset] " << std::hex << asset_id << " ";
-
-		if (asset_name && *asset_name) {
-			g_output << asset_name << " from ";
-		} else {
-			g_output << "(null) from ";
-		}
-
-		if (referencing_asset) {
-			auto upper_path = reinterpret_cast<const char**>(referencing_asset + 0x10);
-
-			if (upper_path && *upper_path && **upper_path) {
-				g_output << *upper_path;
-			} else {
-				g_output << "(null)";
-			}
-		} else {
-			g_output << "(nowhere)";
-		}
-
-		g_output << std::endl;
-		g_output.flush();
-
-		return fwd_load_asset(self, asset_id, parent_asset_id, asset_name, referencing_asset, unknown6, unknown7);
 	}
 
 #pragma clang diagnostic pop
@@ -257,14 +200,6 @@ namespace rivet_hook {
 			if (g_settings.list_versions) {
 				g_output << "[rivet] dumping versions" << std::endl;
 				rivet_hook::ddl::list_versions();
-			}
-
-			if (g_settings.log_cohtml) {
-				hook_cohtml();
-			}
-
-			if (g_settings.log_paths) {
-				create_hook("asset paths", g_game_module, LOAD_ASSET_SIGNATURE, reinterpret_cast<LPVOID>(&load_asset), reinterpret_cast<LPVOID *>(&fwd_load_asset));
 			}
 
 			g_output << "[rivet] init complete" << std::endl;

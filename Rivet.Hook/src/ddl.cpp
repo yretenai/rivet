@@ -193,8 +193,7 @@ namespace rivet_hook::ddl {
 		g_output << "[rivet] found hash map pointer at " << std::hex << reinterpret_cast<uintptr_t>(hm_pointers[0]) << std::endl;
 		g_output << "[rivet] found type list pointer at " << std::hex << reinterpret_cast<uintptr_t>(tl_pointers[0]) << std::endl;
 
-		g_output << "[DDL] sleeping by 5 seconds to give the game a chance to "
-					"set up..." << std::endl;
+		g_output << "[DDL] sleeping by 5 seconds to give the game a chance to set up..." << std::endl;
 
 		std::this_thread::sleep_for(5000ms);
 
