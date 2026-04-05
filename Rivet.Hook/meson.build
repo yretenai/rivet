@@ -45,8 +45,12 @@ if not compiler.check_header('toml.hpp')
 endif
 
 rivet_hook = shared_library('rivet_hook', [
+        'src/ddl.cpp',
         'src/main.cpp',
-        'src/runtime.cpp'
+        'src/runtime.cpp',
+        'src/runtime_loader.cpp',
+        'src/settings.cpp',
+        'src/signature_engine.cpp',
     ],
     link_args: compiler.get_supported_arguments('-static-libgcc', '-static-libstdc++'),
     dependencies: [

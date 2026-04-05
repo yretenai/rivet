@@ -9,10 +9,16 @@
 
 #include <vector>
 #include <string_view>
+#include <fstream>
 
 #include "signature_types.hpp"
+#include "settings.hpp"
 
 namespace rivet_hook {
+	extern std::ofstream g_output;
+	extern rivet_hook::Settings g_settings;
+	extern HMODULE g_game_module;
+
 	std::vector<uint8_t *>
 	find_function(const std::string_view &name, HMODULE game, const hex_signature &signature);
 
