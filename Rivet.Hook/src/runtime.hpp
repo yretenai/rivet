@@ -19,20 +19,17 @@ namespace rivet_hook {
 	extern rivet_hook::Settings g_settings;
 	extern HMODULE g_game_module;
 
-	std::vector<uint8_t *>
-	find_function(const std::string_view &name, HMODULE game, const hex_signature &signature);
+	auto
+	find_function(const std::string_view &name, HMODULE game, const hex_signature &signature) -> std::vector<uint8_t *>;
 
-	void
-	create_hook(const std::string_view &name, LPVOID pointer, LPVOID detour, LPVOID *original);
+	auto
+	create_hook(const std::string_view &name, LPVOID pointer, LPVOID detour, LPVOID *original) -> void;
 
-	void
-	create_hook(const std::string_view &name, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original, size_t limit = 1, int select = 0);
+	auto
+	create_hook(const std::string_view &name, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original, size_t limit = 1, int select = 0) -> void;
 	
 	namespace runtime {
-		void
-		init();
-
-		void
-		fini();
+		auto init() -> void;
+		auto fini() -> void;
 	} // namespace runtime
 } // namespace rivet_hook

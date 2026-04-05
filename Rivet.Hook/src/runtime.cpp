@@ -48,8 +48,8 @@ namespace rivet_hook {
 	using load_asset_t = intptr_t (*)(intptr_t, AssetId, AssetId, const char*, intptr_t, intptr_t, int32_t);
 	load_asset_t fwd_load_asset = nullptr;
 
-	std::vector<uint8_t *>
-	find_function(const std::string_view &name, HMODULE game, const hex_signature &signature) {
+	auto
+	find_function(const std::string_view &name, HMODULE game, const hex_signature &signature) -> std::vector<uint8_t *>{
 		g_output << "[rivet] searching for " << name << " pointer" << std::endl;
 		auto pointers = scan(game, signature);
 
@@ -61,8 +61,8 @@ namespace rivet_hook {
 		return pointers;
 	}
 
-	void
-	create_hook(const std::string_view &name, LPVOID pointer, LPVOID detour, LPVOID *original) {
+	auto
+	create_hook(const std::string_view &name, LPVOID pointer, LPVOID detour, LPVOID *original) -> void {
 		if (!g_minhook_initialized) {
 			if (MH_Initialize() != MH_OK) {
 				g_output << "[rivet] failed to initialize minhook" << std::endl;
@@ -86,8 +86,8 @@ namespace rivet_hook {
 		g_output << "[rivet] created " << name << " hook" << std::endl;
 	}
 
-	void
-	create_hook(const std::string_view &name, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original, size_t limit, int select) {
+	auto
+	create_hook(const std::string_view &name, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original, size_t limit, int select) -> void {
 		auto pointers = find_function(name, game, signature);
 		if (pointers.empty()) {
 			return;
@@ -101,8 +101,7 @@ namespace rivet_hook {
 		create_hook(name, pointers[select], detour, original);
 	}
 
-	void
-	null_func() { }
+	auto null_func() -> void { }
 
 	auto
 	context_log(const char *context, const char *message) -> const char * {
@@ -142,7 +141,8 @@ namespace rivet_hook {
 		return nullptr;
 	}
 
-	void decode_url(const char* url, unsigned int urlLen, char* decoded, unsigned int* decodedSize) {
+	auto
+	decode_url(const char* url, unsigned int urlLen, char* decoded, unsigned int* decodedSize) -> void {
 		if (url != nullptr) {
 			g_output << "[cohtml] " << url << std::endl;
 			g_output.flush();
@@ -151,8 +151,8 @@ namespace rivet_hook {
 		fwd_decode_url(url, urlLen, decoded, decodedSize);
 	}
 
-	void
-	hook_cohtml() {
+	auto
+	hook_cohtml() -> void {
 		HMODULE mod = GetModuleHandleA("cohtml.WindowsDesktop.dll");
 		if (!mod) {
 			g_output << "cannot hook cohtml, not loaded yet." << std::endl;
@@ -168,8 +168,8 @@ namespace rivet_hook {
 		create_hook("cohtml", proc,  reinterpret_cast<LPVOID*>(decode_url), reinterpret_cast<LPVOID*>(&fwd_decode_url));
 	}
 
-	intptr_t
-	load_asset(intptr_t self, AssetId asset_id, AssetId parent_asset_id, const char* asset_name, intptr_t referencing_asset, intptr_t unknown6, int32_t unknown7) {
+	auto
+	load_asset(intptr_t self, AssetId asset_id, AssetId parent_asset_id, const char* asset_name, intptr_t referencing_asset, intptr_t unknown6, int32_t unknown7) -> intptr_t {
 		g_output << "[load asset] " << std::hex << asset_id << " ";
 
 		if (asset_name && *asset_name) {
@@ -199,8 +199,7 @@ namespace rivet_hook {
 #pragma clang diagnostic pop
 
 	namespace runtime {
-		void
-		init() {
+		auto init() -> void {
 			// this runs on the main thread
 
 			g_output.open("./rivet.log");
@@ -271,8 +270,7 @@ namespace rivet_hook {
 			g_output << "[rivet] init complete" << std::endl;
 		}
 
-		void
-		fini() {
+		auto fini() -> void {
 			g_settings.save();
 			g_output << "[rivet] fini" << std::endl;
 
