@@ -11,19 +11,29 @@
 #include "signature.hpp"
 
 namespace rivet_hook {
+	std::unordered_map<AssetId, std::string> mod_files = {};
+	
+	std::array<AssetId, 8> known_important_assets = {
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+	}; // todo
+
 	create_asset_id_t game_create_asset_id = nullptr;
 	is_valid_asset_t game_is_valid_asset = nullptr;
 	is_installed_asset_t game_is_installed_asset = nullptr;
-	load_assets_t game_load_assets = nullptr;
-	lookup_asset_t game_lookup_asset = nullptr;
-	open_file_t game_open_file = nullptr;
-	read_file_t game_read_file = nullptr;
-	close_file_t game_close_file = nullptr;
+	// open_file_t game_open_file = nullptr;
+	// read_file_t game_read_file = nullptr;
+	// close_file_t game_close_file = nullptr;
 	decode_url_t game_decode_url = nullptr;
 	mgr_load_asset_t game_mgr_load_asset = nullptr;
-
-
-	std::unordered_map<AssetId, std::string> mod_files = {};
+	
+	intptr_t game_load_ops = 0;
 
 	auto
 	create_asset_id(AssetId* asset_id, char* asset_name) -> AssetId* {
@@ -93,6 +103,26 @@ namespace rivet_hook {
 	}
 
 	auto
+	load_mod_assets() -> void {
+
+	}
+
+	auto
+	reimpl_load_ops(void* self, AssetId* asset_ids, void* metadata, int32_t asset_count) -> int32_t {
+		return 0; // todo
+	}
+
+	auto
+	is_valid_asset(AssetId asset_id) -> bool {
+		return mod_files.contains(asset_id) || game_is_valid_asset(asset_id);
+	}
+
+	auto
+	is_installed_asset(AssetId asset_id) -> bool {
+		return mod_files.contains(asset_id) || game_is_installed_asset(asset_id);	
+	}
+
+	auto
 	AssetLoader::init() -> void {
 		auto create_asset_id_ptrs = find_function("asset ids", g_game_module, CREATE_ASSET_ID_SIGNATURE);
 		if (!create_asset_id_ptrs.empty()) {
@@ -114,5 +144,7 @@ namespace rivet_hook {
 		if (!g_settings.enable_asset_loader) {
 			return;
 		}
+
+		load_mod_assets();
 	}
 }
