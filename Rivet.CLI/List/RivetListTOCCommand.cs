@@ -13,11 +13,13 @@ namespace Rivet.CLI.List;
 [Command<RivetListTOCFlags>("toc", "List all TOC and DAG contents", "list")]
 internal record RivetListTOCCommand(RivetListTOCFlags Flags) : RivetCLICommand<RivetListTOCFlags>(Flags) {
 	public override void Execute() {
-		if (Flags.Legacy) {
-			Console.Error.WriteLine("id,name,schema,type,locale,category,is_key,is_texture,is_stream,size,archive,dag_hash,hash");
-		} else {
-			Console.Error.WriteLine("id,name,schema,locale,category,is_stream,size,archive");
+		Console.Error.Write("id,name,schema,type,locale,category,is_key,is_texture,is_virtual,has_header,size,archive,dag_hash");
+
+		if (!Flags.Fast) {
+			Console.Error.Write(",hash");
 		}
+
+		Console.Error.WriteLine();
 
 		var sb = new StringBuilder();
 		foreach (var asset in Game.TOC.Assets.Values.SelectMany(x => x).Concat(Game.DAG.VirtualAssets).OrderBy(x => x.Id)) {
@@ -28,33 +30,31 @@ internal record RivetListTOCCommand(RivetListTOCFlags Flags) : RivetCLICommand<R
 			sb.Append(',');
 			sb.Append(((uint) asset.Header.Version).ToString("x8"));
 			sb.Append(',');
-
-			if (!Flags.Legacy) {
-				sb.Append(asset.Type.ToString("G").ToLower());
-				sb.Append(',');
-			}
-
+			sb.Append(asset.Type.ToString("G").ToLower());
+			sb.Append(',');
 			sb.Append(RivetGame.LocalizationStr[(int) asset.Locale]);
 			sb.Append(',');
 			sb.Append(asset.Category.ToString("G").ToLower());
 			sb.Append(',');
-
-			if (!Flags.Legacy) {
-				sb.Append(asset.Flags.IsKey ? 'y' : 'n');
-				sb.Append(',');
-				sb.Append(asset.Flags.IsTexture ? 'y' : 'n');
-				sb.Append(',');
-			}
-
-			sb.Append((int) asset.Category % 2 == 1 ? 'y' : 'n');
+			sb.Append(asset.Flags.IsKey ? 'y' : 'n');
+			sb.Append(',');
+			sb.Append(asset.Flags.IsTexture ? 'y' : 'n');
+			sb.Append(',');
+			sb.Append(asset.Flags.IsVirtual ? 'y' : 'n');
+			sb.Append(',');
+			sb.Append(asset.Flags.HasHeader ? 'y' : 'n');
 			sb.Append(',');
 			sb.Append(asset.Size);
 			sb.Append(',');
 			sb.Append(asset.Archive?.Name ?? "");
 			sb.Append(',');
-			sb.Append(asset.Hash);
-			sb.Append(',');
-			sb.Append(CalculateChecksum(asset).ToString("x16"));
+			sb.Append(asset.Hash.ToString("x16"));
+
+			if (!Flags.Fast) {
+				sb.Append(',');
+				sb.Append(CalculateChecksum(asset).ToString("x16"));
+			}
+
 			Console.Error.WriteLine(sb.ToString());
 		}
 

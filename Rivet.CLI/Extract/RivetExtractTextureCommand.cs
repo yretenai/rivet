@@ -44,7 +44,7 @@ internal record RivetExtractTextureCommand : RivetExtractCommand<RivetExtractTex
 	];
 
 	protected override void Process(RivetAsset asset) {
-		if (asset.Type is not (AssetType.Texture or AssetType.Zone) || asset.Category is not AssetCategory.Game) {
+		if (asset.Type is not (AssetType.Texture or AssetType.Zone) || asset.Category is not AssetCategory.Built) {
 			return;
 		}
 

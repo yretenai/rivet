@@ -13,8 +13,6 @@ namespace Rivet.CLI.Extract;
 
 [Command<RivetExtractFlags>("toc", "Extracts all game files without conversion", "extract")]
 internal record RivetExtractTOCCommand(RivetExtractFlags Flags) : RivetExtractCommand<RivetExtractFlags>(Flags) {
-	private static readonly HashSet<string> PlainData = ["html", "ttf", "svg", "png", "jpg", "tif", "css", "js", "bnk", "wem", "bin"];
-
 	protected override void Process(RivetAsset asset) {
 		var name = RivetGame.ProcessName(asset);
 		var outputPath = name;
@@ -39,8 +37,7 @@ internal record RivetExtractTOCCommand(RivetExtractFlags Flags) : RivetExtractCo
 		Directory.CreateDirectory(Path.GetDirectoryName(target) ?? Flags.OutputDir);
 		using var stream = new FileStream(target, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 
-		var ext = Path.GetExtension(target).ToLowerInvariant()[1..];
-		if (!PlainData.Contains(ext)) {
+		if (asset.Flags.HasHeader) {
 			var header = asset.Header;
 			stream.Write(new ReadOnlySpan<AssetHeader>(ref header).AsBytes());
 		}

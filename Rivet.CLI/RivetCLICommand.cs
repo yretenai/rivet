@@ -39,7 +39,7 @@ public abstract record RivetExtractCommand<T>(T Flags) : RivetCLICommand<T>(Flag
 		if (Flags.Filter.Count != 0) {
 			var ids = ProcessFilters(Flags.Filter);
 			foreach (var id in ids) {
-				if (Game.TryFindAsset(id, Flags.Locale is Locale.All ? Locale.English : Flags.Locale, AssetCategory.Game, out var asset)) {
+				if (Game.TryFindAsset(id, Flags.Locale is Locale.All ? Locale.English : Flags.Locale, AssetCategory.Built, out var asset)) {
 					ProcessInternal(asset);
 				}
 			}

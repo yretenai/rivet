@@ -5,7 +5,7 @@
 namespace Rivet.Models.Data;
 
 public enum AssetCategory : byte {
-	Game = 0,
+	Built = 0,
 	Texture = 1,
 	SoundBank = 2,
 	Audio = 3,
