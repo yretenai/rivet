@@ -303,33 +303,43 @@ namespace rivet_hook {
 
 		// todo: find signatures for all of these aaaaaahhhhhhh!!!
 
-		game_resolve_asset = (resolve_asset_t) RVA(0x141057420);
-		game_get_text_language = (get_language_t) RVA(0x14158e140);
-		game_get_audio_language = (get_language_t) RVA(0x14158dad0);
-		game_alloc_asset = (alloc_asset_t) RVA(0x140fa2a80);
-		game_commit_assets = (commit_assets_t) RVA(0x140fa2c00);
-		game_mount_archive = (mount_archive_t) RVA(0x1410597e0);
+		// functions we need to call for reimpl_load_ops
+		game_resolve_asset = reinterpret_cast<resolve_asset_t>(RVA(0x141057420));
+		game_get_text_language = reinterpret_cast<get_language_t>(RVA(0x14158e140));
+		game_get_audio_language = reinterpret_cast<get_language_t>(RVA(0x14158dad0));
+		game_alloc_asset = reinterpret_cast<alloc_asset_t>(RVA(0x140fa2a80));
+		game_commit_assets = reinterpret_cast<commit_assets_t>(RVA(0x140fa2c00));
+		game_mount_archive = reinterpret_cast<mount_archive_t>(RVA(0x1410597e0));
+		game_sort = reinterpret_cast<sort_t>(RVA(0x141598f30));
 		game_sort_op.func = RVA(0x141058480);
 		game_sort_op.target = 0;
 
-		game_sort = (sort_t) RVA(0x141598f30);
-		game_load_ops = (LoadOperation*) RVA(0x14628fdc0);
-		game_create_asset = (create_asset_t*) RVA(0x14640fe18);
-		game_create_asset_data = (void*) RVA(0x14640fe20);
+		// vars we need to read/write to for reimpl_load_ops
+		game_load_ops = reinterpret_cast<LoadOperation*>(RVA(0x14628fdc0));
 
+		// vars we need to call/read to for asset header creation
+		game_create_asset = reinterpret_cast<create_asset_t*>(RVA(0x14640fe18));
+		game_create_asset_data = reinterpret_cast<void*>(RVA(0x14640fe20));
+
+		// vars we need to overwrite to disable texture fencing
+		disable_directstorage = reinterpret_cast<bool*>(RVA(0x146798084));
+		legacy_texture_loading = reinterpret_cast<bool*>(RVA(0x1467c728b));
+
+		// asset io
 		create_hook("preload file op", reinterpret_cast<LPVOID>(RVA(0x1410599c0)), reinterpret_cast<LPVOID>(&reimpl_load_ops), nullptr);
 		create_hook("is valid asset", reinterpret_cast<LPVOID>(RVA(0x141059530)), reinterpret_cast<LPVOID>(&is_valid_asset), reinterpret_cast<LPVOID *>(&game_is_valid_asset));
 		create_hook("is installed asset", reinterpret_cast<LPVOID>(RVA(0x141059480)), reinterpret_cast<LPVOID>(&is_installed_asset), reinterpret_cast<LPVOID *>(&game_is_installed_asset));
 
+		// loose io
 		create_hook("open file", reinterpret_cast<LPVOID>(RVA(0x141059900)), reinterpret_cast<LPVOID>(&open_file), reinterpret_cast<LPVOID *>(&game_open_file));
 		create_hook("read file", reinterpret_cast<LPVOID>(RVA(0x141059c70)), reinterpret_cast<LPVOID>(&read_file), reinterpret_cast<LPVOID *>(&game_read_file));
 		create_hook("close file", reinterpret_cast<LPVOID>(RVA(0x141058720)), reinterpret_cast<LPVOID>(&close_file), reinterpret_cast<LPVOID *>(&game_close_file));
 
-		create_hook("window", reinterpret_cast<LPVOID>(RVA(0x141520370)), reinterpret_cast<LPVOID>(&window_init), reinterpret_cast<LPVOID *>(&game_window_init));
+		// needed to reset fencing a second time once the game starts.
+		create_hook("window init", reinterpret_cast<LPVOID>(RVA(0x141520370)), reinterpret_cast<LPVOID>(&window_init), reinterpret_cast<LPVOID *>(&game_window_init));
 
+		// disable fencing
 		// NOTE: This bricks DirectStorage, need to find a workaround for "next gen" texture fencing.
-		legacy_texture_loading = reinterpret_cast<bool*>(RVA(0x1467c728b));
-		disable_directstorage = reinterpret_cast<bool*>(RVA(0x146798084));
 		*legacy_texture_loading = true;
 		*disable_directstorage = true;
 
