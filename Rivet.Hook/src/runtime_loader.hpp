@@ -57,8 +57,8 @@ namespace rivet_hook {
 	static_assert(sizeof(DataRange) == 0x10, "DataRange size mismatch");
 
 	struct AssetHeader {
-		int64_t committedVersion; // set this to zero
-		int64_t completedVersion; // set this to 0x1000000000000000
+		int64_t committedVersion; // set this to zero?
+		int64_t completedVersion; // set this to zero?
 		int32_t loadResult; // 0 is success
 		int64_t assetId; // from args
 		int32_t assetIndex; // from LoadMeta
@@ -92,15 +92,14 @@ namespace rivet_hook {
 		int32_t status;
 		int32_t padding;
 		int64_t data;
-		int32_t offset;
-		int32_t size;
+		AssetId asset_id;
 	};
 #pragma pack(pop)
 
 	using create_asset_id_t = AssetId* (*)(AssetId* result, const char* path);
 	using is_valid_asset_t = bool (*)(ArchiveFileSystem* self, AssetId asset);
 	using open_file_t = void (*)(intptr_t self, AssetFile* file, AssetId asset_id, int32_t type, int32_t platform, uint8_t manager_id);
-	using read_file_t = bool (*)(intptr_t self, AssetFile* file, char* buffer, size_t offset, size_t size, int32_t unknown1, int32_t unknown2);
+	using read_file_t = bool (*)(intptr_t self, AssetFile* file, char* buffer, size_t offset, size_t size, int32_t priority, int32_t unknown2);
 	using close_file_t = void (*)(intptr_t self, AssetFile* file);
 	using decode_url_t = void (*)(const char*, unsigned int, char*, unsigned int*);
 	using mgr_load_asset_t = intptr_t (*)(intptr_t, AssetId, AssetId, const char*, intptr_t, intptr_t, int32_t);
@@ -111,6 +110,9 @@ namespace rivet_hook {
 	using resolve_asset_t = FoundAsset* (*)(void* self, AssetId asset_id, int32_t type, int32_t unknown);
 	using get_language_t = int32_t (*)();
 	using create_asset_t = uint8_t (*)(AssetHeader* header, uint8_t* dataHeader, void* globalData);
+	using create_mip_t = void (*)(intptr_t self, intptr_t asset, uint32_t lod);
+	using create_mip_ng_t = void (*)(intptr_t self);
+	using window_init_t = bool (*)(intptr_t self);
 
 	struct AssetLoader {
 		auto init() -> void;

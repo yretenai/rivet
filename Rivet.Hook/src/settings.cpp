@@ -29,7 +29,7 @@ rivet_hook::Settings::load() -> rivet_hook::Settings {
 		LOAD_SETTING(bool, attach_log);
 		LOAD_SETTING(bool, log_cohtml);
 		LOAD_SETTING(bool, log_paths);
-		LOAD_SETTING(bool, log_loose_opens);
+		LOAD_SETTING(bool, log_loose_io);
 		LOAD_SETTING(bool, log_asset_opens);
 		LOAD_SETTING(bool, log_asset_ids);
 	} catch(const std::exception&) {
@@ -55,7 +55,7 @@ rivet_hook::Settings::save() -> void {
 	SAVE_SETTING(attach_log, "redirect the internal logger to rivet.log; disable by default because the same line is printed frequently");
 	SAVE_SETTING(log_cohtml, "logs coherent ui url decode requests; disable by default because log noise");
 	SAVE_SETTING(log_paths, "logs asset paths as they are loaded; disable by default because log noise");
-	SAVE_SETTING(log_loose_opens, "logs loose paths as they are opened; disable by default because log noise");
+	SAVE_SETTING(log_loose_io, "logs loose io; disable by default because log noise");
 	SAVE_SETTING(log_asset_opens, "logs asset paths as they are assets; disable by default because log noise");
 	SAVE_SETTING(log_asset_ids, "logs asset ids as they are hashed; disable by default because log noise");
 

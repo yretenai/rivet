@@ -39,11 +39,14 @@ namespace rivet_hook {
 	resolve_asset_t game_resolve_asset = nullptr;
 	get_language_t game_get_text_language = nullptr;
 	get_language_t game_get_audio_language = nullptr;
+	window_init_t game_window_init = nullptr;
 
 	create_asset_t *game_create_asset = nullptr;
 	void* game_create_asset_data = nullptr;
 	LoadOperation* game_load_ops = 0;
 	SortFunc game_sort_op = {};
+	bool* legacy_texture_loading = nullptr;
+	bool* disable_directstorage = nullptr;
 
 	auto
 	create_asset_id(AssetId* asset_id, char* asset_name) -> AssetId* {
@@ -126,23 +129,33 @@ namespace rivet_hook {
 
 	auto
 	open_file(intptr_t self, AssetFile* file, AssetId asset_id, int32_t type, int32_t platform, uint8_t manager_id) -> void {
-		if (g_settings.log_loose_opens) {
-			g_output << "[open loose] " << std::hex << asset_id << " type: " << type << " manager: " << static_cast<uint32_t>(manager_id) << std::endl;
-			g_output.flush();
-		}
-
 		// todo
 		game_open_file(self, file, asset_id, type, platform, manager_id);
+
+		if (g_settings.log_loose_io) {
+			g_output << "[loose][open ] " << std::hex << asset_id << " type: " << type << " manager: " << static_cast<uint32_t>(manager_id) << " status: " << file->status << " padding: " << file->padding << " data: " << file->data << " asset_id: " << file->asset_id << std::endl;
+			g_output.flush();
+		}
 	}
 
 	auto
-	read_file(intptr_t self, AssetFile* file, char* buffer, size_t offset, size_t size, int32_t unknown1, int32_t unknown2) -> void {
+	read_file(intptr_t self, AssetFile* file, char* buffer, size_t offset, size_t size, int32_t priority, int32_t unknown2) -> bool {
 		// todo
-		game_read_file(self, file, buffer, offset, size, unknown1, unknown2);
+		if (g_settings.log_loose_io) {
+			g_output << "[loose][read ] offset: " << std::hex << offset << " size: " << size << " status: " << file->status << " padding: " << file->padding << " data: " << file->data << " asset_id: " << file->asset_id << std::endl;
+			g_output.flush();
+		}
+
+		return game_read_file(self, file, buffer, offset, size, priority, unknown2);
 	}
 
 	auto
 	close_file(intptr_t self, AssetFile* file) -> void {
+		if (g_settings.log_loose_io) {
+			g_output << "[loose][close] status: " << file->status << " padding: " << file->padding << " data: " << file->data << " asset_id: " << file->asset_id << std::endl;
+			g_output.flush();
+		}
+
 		// todo
 		game_close_file(self, file);
 	}
@@ -162,7 +175,7 @@ namespace rivet_hook {
 			uint64_t assetId = assetIds[i];
 
 			if (g_settings.log_asset_opens) {
-				g_output << "[open asset] " << std::hex << assetId << " type: " << static_cast<uint32_t>(meta.type) << std::endl;
+				g_output << "[built] " << std::hex << assetId << " type: " << static_cast<uint32_t>(meta.type) << std::endl;
 				g_output.flush();
 			}
 
@@ -202,14 +215,14 @@ namespace rivet_hook {
 				// here in case of crash becasue i haven't seen this yet
 				// there's 3 different ways it fails early prior to this so if it happens here something really bad happened
 
-				g_output << "[reimpl_load_ops] invalid path " << std::hex << assetId << std::endl;
+				g_output << "[built] invalid path " << std::hex << assetId << std::endl;
 				g_output.flush();
 
 				if (game_alloc_asset(0, 1, assetId, &meta, meta.language)) {
 					game_commit_assets(1);
 				}
 
-				g_output << "[reimpl_load_ops] skipped " << std::hex << assetId << std::endl;
+				g_output << "[built] skipped " << std::hex << assetId << std::endl;
 				g_output.flush();
 
 				continue;
@@ -248,6 +261,17 @@ namespace rivet_hook {
 	auto
 	is_installed_asset(ArchiveFileSystem* self, AssetId asset_id) -> bool {
 		return mod_files.contains(asset_id) || game_is_installed_asset(self, asset_id);
+	}
+
+	auto
+	window_init(intptr_t self) -> bool {
+		auto result = game_window_init(self);
+
+		// NOTE: This bricks DirectStorage, need to find a workaround for "next gen" texture fencing.
+		*legacy_texture_loading = true;
+		*disable_directstorage = true;
+
+		return result;
 	}
 
 	auto
@@ -300,6 +324,14 @@ namespace rivet_hook {
 		create_hook("open file", reinterpret_cast<LPVOID>(RVA(0x141059900)), reinterpret_cast<LPVOID>(&open_file), reinterpret_cast<LPVOID *>(&game_open_file));
 		create_hook("read file", reinterpret_cast<LPVOID>(RVA(0x141059c70)), reinterpret_cast<LPVOID>(&read_file), reinterpret_cast<LPVOID *>(&game_read_file));
 		create_hook("close file", reinterpret_cast<LPVOID>(RVA(0x141058720)), reinterpret_cast<LPVOID>(&close_file), reinterpret_cast<LPVOID *>(&game_close_file));
+
+		create_hook("window", reinterpret_cast<LPVOID>(RVA(0x141520370)), reinterpret_cast<LPVOID>(&window_init), reinterpret_cast<LPVOID *>(&game_window_init));
+
+		// NOTE: This bricks DirectStorage, need to find a workaround for "next gen" texture fencing.
+		legacy_texture_loading = reinterpret_cast<bool*>(RVA(0x1467c728b));
+		disable_directstorage = reinterpret_cast<bool*>(RVA(0x146798084));
+		*legacy_texture_loading = true;
+		*disable_directstorage = true;
 
 		#undef RVA
 	}
