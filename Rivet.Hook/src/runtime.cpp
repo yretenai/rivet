@@ -214,6 +214,8 @@ namespace rivet_hook {
 				FreeLibrary(g_renderdoc);
 			}
 
+			loader.fini();
+
 			if (g_ddl_dump_thread.joinable()) {
 				g_ddl_dump_thread.join();
 			}

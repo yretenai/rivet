@@ -17,6 +17,54 @@ namespace rivet_hook {
 	using AssetId = uint64_t;
 
 #pragma pack(push, 1)
+	enum class AssetType : uint32_t {
+		Built = 0,
+		TextureStream = 1,
+		SoundBank = 2,
+		Audio = 3,
+		Unknown4 = 4,
+		Animation = 5,
+		Unknown6 = 6,
+		ZoneGrid = 7,
+		Count = 8,
+	};
+
+	enum class AssetLanguage : uint32_t {
+		None = 0x0,
+		English = 0x1,
+		EnglishUK = 0x2,
+		Danish = 0x3,
+		Dutch = 0x4,
+		Finnish = 0x5,
+		French = 0x6,
+		German = 0x7,
+		Italian = 0x8,
+		Japanese = 0x9,
+		Korean = 0xa,
+		Norwegian = 0xb,
+		Polish = 0xc,
+		Portuguese = 0xd,
+		Russian = 0xe,
+		Spanish = 0xf,
+		Swedish = 0x10,
+		PortugueseBR = 0x11,
+		Arabic = 0x12,
+		Turkish = 0x13,
+		SpanishLA = 0x14,
+		ChineseSimplified = 0x15,
+		ChineseTraditional = 0x16,
+		FrenchCA = 0x17,
+		Czech = 0x18,
+		Hungarian = 0x19,
+		Greek = 0x1a,
+		Romanian = 0x1b,
+		Thai = 0x1c,
+		Vietnamese = 0x1d,
+		Indonesian = 0x1e,
+		Croatian = 0x1f,
+		Count = 0x20,
+	};
+
 	struct ArchiveAsset {
 		uint32_t index;
 		uint32_t offset;
@@ -51,15 +99,16 @@ namespace rivet_hook {
 	static_assert(sizeof(LoadOperation) == 0x18, "LoadOperation size mismatch");
 
 	struct DataRange {
-		uint8_t* start;
+		uint8_t* buffer;
 		int64_t size;
+		int64_t unknown;
 	};
-	static_assert(sizeof(DataRange) == 0x10, "DataRange size mismatch");
+	static_assert(sizeof(DataRange) == 0x18, "DataRange size mismatch");
 
 	struct AssetHeader {
 		int64_t committedVersion; // set this to zero?
 		int64_t completedVersion; // set this to zero?
-		int32_t loadResult; // 0 is success
+		int32_t status; // 0 is success
 		int64_t assetId; // from args
 		int32_t assetIndex; // from LoadMeta
 		uint8_t assetType; // from LoadMeta
@@ -69,7 +118,7 @@ namespace rivet_hook {
 		int32_t dataRangeCount;
 		struct DataRange* dataRanges; // pointer to data ranges
 		struct DataRange defaultDataRanges[0x4];
-		void* customData[0x8]; // stuff from the asset manager, initialized to zero
+		void* customData[0x4]; // stuff from the asset manager, initialized to zero
 	};
 	static_assert(sizeof(AssetHeader) == 0xb0, "AssetHeader size mismatch");
 
@@ -98,7 +147,7 @@ namespace rivet_hook {
 
 	using create_asset_id_t = AssetId* (*)(AssetId* result, const char* path);
 	using is_valid_asset_t = bool (*)(ArchiveFileSystem* self, AssetId asset);
-	using open_file_t = void (*)(intptr_t self, AssetFile* file, AssetId asset_id, int32_t type, int32_t platform, uint8_t manager_id);
+	using open_file_t = void (*)(intptr_t self, AssetFile* file, AssetId asset_id, AssetType type, int32_t platform, uint8_t manager_id);
 	using read_file_t = bool (*)(intptr_t self, AssetFile* file, char* buffer, size_t offset, size_t size, int32_t priority, int32_t unknown2);
 	using close_file_t = void (*)(intptr_t self, AssetFile* file);
 	using decode_url_t = void (*)(const char*, unsigned int, char*, unsigned int*);
@@ -107,14 +156,16 @@ namespace rivet_hook {
 	using mount_archive_t = void (*)(ArchiveFileSystem* self, int32_t index);
 	using commit_assets_t = void (*)(int32_t count);
 	using alloc_asset_t = AssetHeader* (*)(uint32_t flags, int32_t result, AssetId asset_id, LoadMetadata* metadata, uint8_t language);
-	using resolve_asset_t = FoundAsset* (*)(void* self, AssetId asset_id, int32_t type, int32_t unknown);
-	using get_language_t = int32_t (*)();
-	using create_asset_t = uint8_t (*)(AssetHeader* header, uint8_t* dataHeader, void* globalData);
+	using resolve_asset_t = FoundAsset* (*)(void* self, AssetId asset_id, AssetLanguage language, AssetType type);
+	using set_language_t = void (*)(AssetLanguage language);
+	using create_asset_t = bool (*)(AssetHeader* header, const uint8_t* dataHeader, void* globalData);
 	using create_mip_t = void (*)(intptr_t self, intptr_t asset, uint32_t lod);
 	using create_mip_ng_t = void (*)(intptr_t self);
 	using window_init_t = bool (*)(intptr_t self);
+	using is_asset_valid_t = bool (*)(int32_t magic, uint8_t manager_id, int64_t asset_id);
 
 	struct AssetLoader {
 		auto init() -> void;
+		auto fini() -> void;
 	};
 } // namespace rivet_hook

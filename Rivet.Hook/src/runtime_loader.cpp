@@ -5,6 +5,7 @@
 #include <unordered_map>
 #include <string>
 #include <algorithm>
+#include <filesystem>
 
 #include "runtime_loader.hpp"
 #include "runtime.hpp"
@@ -12,7 +13,39 @@
 #include "signature.hpp"
 
 namespace rivet_hook {
-	std::unordered_map<AssetId, std::string> mod_files = {};
+	const uint64_t RIVET_SENTINEL = 0xffffffffffffff00;
+
+	struct MemoryFile {
+		const uint8_t* buffer;
+		HANDLE map;
+		HANDLE file;
+		size_t size;
+		AssetLanguage language;
+
+		MemoryFile(std::filesystem::path path) {
+			file = CreateFileW(path.c_str(), GENERIC_READ, FILE_SHARE_READ, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
+			GetFileSizeEx(file, reinterpret_cast<LARGE_INTEGER*>(&size));
+			map = CreateFileMapping(file, nullptr, PAGE_READONLY | PAGE_WRITECOPY, 0, 0, nullptr);
+			buffer = reinterpret_cast<const uint8_t*>(MapViewOfFile(map, FILE_MAP_READ | FILE_MAP_COPY, 0, 0, 0));
+			language = AssetLanguage::None;
+		}
+
+		MemoryFile(const MemoryFile&) = delete;
+		MemoryFile& operator=(const MemoryFile&) = delete;
+
+		auto close() -> void {
+			if (buffer == nullptr) {
+				return;
+			}
+
+			UnmapViewOfFile(buffer);
+			buffer = nullptr;
+			CloseHandle(map);
+			CloseHandle(file);
+		}
+	};
+
+	std::array<std::unordered_map<AssetId, MemoryFile>, static_cast<int32_t>(AssetType::Count)> mod_files = {};
 
 	std::array<AssetId, 7> known_important_assets = {
 		0x8e7f2fafc675d9ef,
@@ -22,7 +55,21 @@ namespace rivet_hook {
 		0x82ce4031e142c7f3,
 		0x8323511e0074e322,
 		0x98aa90ad5ea29cf5,
-	}; // todo
+	};
+
+	std::array<std::string_view, static_cast<int32_t>(AssetType::Count)> rivet_exts = {
+		"",
+		".stream",
+		"",
+		".wem",
+		"",
+		".animstrm",
+		"",
+		".lgstream",
+	};
+
+	AssetLanguage text_language = AssetLanguage::None;
+	AssetLanguage audio_language = AssetLanguage::None;
 
 	create_asset_id_t game_create_asset_id = nullptr;
 	is_valid_asset_t game_is_valid_asset = nullptr;
@@ -37,9 +84,10 @@ namespace rivet_hook {
 	commit_assets_t game_commit_assets = nullptr;
 	alloc_asset_t game_alloc_asset = nullptr;
 	resolve_asset_t game_resolve_asset = nullptr;
-	get_language_t game_get_text_language = nullptr;
-	get_language_t game_get_audio_language = nullptr;
+	set_language_t game_set_text_language = nullptr;
+	set_language_t game_set_audio_language = nullptr;
 	window_init_t game_window_init = nullptr;
+	is_asset_valid_t game_is_asset_valid = nullptr;
 
 	create_asset_t *game_create_asset = nullptr;
 	void* game_create_asset_data = nullptr;
@@ -121,29 +169,51 @@ namespace rivet_hook {
 	}
 
 	auto
-	load_asset(AssetHeader* header, const std::string &path) -> void {
-		// todo
-		// special considerations: .texture.stream should be appended?
-		// todo: find allocator? -> NxStorage seems to just malloc???
-	}
-
-	auto
-	open_file(intptr_t self, AssetFile* file, AssetId asset_id, int32_t type, int32_t platform, uint8_t manager_id) -> void {
-		// todo
-		game_open_file(self, file, asset_id, type, platform, manager_id);
-
+	open_file(intptr_t self, AssetFile* file, AssetId asset_id, AssetType type, int32_t platform, uint8_t manager_id) -> void {
 		if (g_settings.log_loose_io) {
-			g_output << "[loose][open ] " << std::hex << asset_id << " type: " << type << " manager: " << static_cast<uint32_t>(manager_id) << " status: " << file->status << " padding: " << file->padding << " data: " << file->data << " asset_id: " << file->asset_id << std::endl;
+			g_output << "[loose][open ] " << std::hex << asset_id << " type: " << static_cast<int32_t>(type) << " manager: " << static_cast<uint32_t>(manager_id) << " status: " << file->status << " padding: " << file->padding << " data: " << file->data << " asset_id: " << file->asset_id << std::endl;
 			g_output.flush();
 		}
+
+		if (type < AssetType::Count) {
+			if (mod_files[static_cast<int32_t>(type)].contains(asset_id)) {
+				file->status = 2;
+				file->padding = 0;
+				file->data = RIVET_SENTINEL | static_cast<uint8_t>(static_cast<int32_t>(type));
+				file->asset_id = asset_id;
+				return;
+			}
+		}
+
+		game_open_file(self, file, asset_id, type, platform, manager_id);
 	}
 
 	auto
 	read_file(intptr_t self, AssetFile* file, char* buffer, size_t offset, size_t size, int32_t priority, int32_t unknown2) -> bool {
-		// todo
 		if (g_settings.log_loose_io) {
 			g_output << "[loose][read ] offset: " << std::hex << offset << " size: " << size << " status: " << file->status << " padding: " << file->padding << " data: " << file->data << " asset_id: " << file->asset_id << std::endl;
 			g_output.flush();
+		}
+
+		auto type = static_cast<AssetType>(file->data & 0xFF);
+		if ((file->data & RIVET_SENTINEL) == RIVET_SENTINEL && type < AssetType::Count) {
+			auto &mod_list = mod_files[static_cast<int32_t>(type)];
+			const auto &mod_index = mod_list.find(file->asset_id);
+			file->status = 0x8000000a;
+
+			if (mod_index != mod_list.end()) {
+				const auto &mod_file = mod_index->second;
+				if (offset + size > mod_file.size) {
+					return false;
+				}
+
+				std::copy_n(mod_file.buffer + offset, size, buffer);
+
+				file->status = 3;
+				return true;
+			}
+
+			return false;
 		}
 
 		return game_read_file(self, file, buffer, offset, size, priority, unknown2);
@@ -156,8 +226,12 @@ namespace rivet_hook {
 			g_output.flush();
 		}
 
-		// todo
-		game_close_file(self, file);
+		auto type = static_cast<AssetType>(file->data & 0xFF);
+		if ((file->data & RIVET_SENTINEL) == RIVET_SENTINEL && type < AssetType::Count) {
+			file->data = 0;
+		} else {
+			game_close_file(self, file);
+		}
 	}
 
 	auto
@@ -167,8 +241,8 @@ namespace rivet_hook {
 		}
 
 		int32_t loadIndex = 0;
-		uint32_t textLanguage = game_get_text_language();
-		uint32_t audioLanguage = game_get_audio_language();
+		AssetLanguage textLanguage = text_language;
+		AssetLanguage audioLanguage = audio_language;
 
 		for(int32_t i = 0; i < assetCount; ++i) {
 			LoadMetadata meta = metadata[i];
@@ -179,11 +253,30 @@ namespace rivet_hook {
 				g_output.flush();
 			}
 
-			auto mod_index = mod_files.find(assetId);
-			if (mod_index != mod_files.end()) {
-				AssetHeader* header = game_alloc_asset(0, 1, assetId, &meta, meta.language);
+			const auto &mod_index = mod_files[0].find(assetId);
+			if (mod_index != mod_files[0].end()) {
+				const auto &mod_file = mod_index->second;
+				AssetHeader* header = game_alloc_asset(0, 1, assetId, &meta, static_cast<uint8_t>(mod_file.language));
 				if (header) {
-					load_asset(header, (*mod_index).second);
+					if (mod_file.size <= 0x24 || !game_is_asset_valid(*reinterpret_cast<const uint32_t*>(mod_file.buffer), meta.type, assetId)) {
+						header->status = 7;
+					} else if ((*game_create_asset)(header, mod_file.buffer, game_create_asset_data)) {
+						intptr_t offset = 0x24;
+						for (int32_t i = 0; i < header->dataRangeCount; ++i) {
+							if (static_cast<size_t>(offset + header->dataRanges[i].size) > mod_file.size) {
+								header->status = 6;
+								break;
+							}
+
+							std::copy_n(mod_file.buffer + offset, header->dataRanges[i].size, header->dataRanges[i].buffer);
+							offset += header->dataRanges[i].size;
+						}
+
+						header->status = 0;
+					} else {
+						header->status = 4;
+					}
+
 					game_commit_assets(1);
 				}
 
@@ -191,24 +284,24 @@ namespace rivet_hook {
 			}
 
 			FoundAsset* asset = nullptr;
-			uint32_t selectedLanguage = audioLanguage;
+			AssetLanguage selectedLanguage = audioLanguage;
 			if (meta.type == 0xE /* soundbank */) {
-				asset = game_resolve_asset(&self->toc, assetId, audioLanguage, 0);
+				asset = game_resolve_asset(&self->toc, assetId, audioLanguage, AssetType::Built);
 			}
 
 			if (!asset) {
-				asset = game_resolve_asset(&self->toc, assetId, textLanguage, 0);
+				asset = game_resolve_asset(&self->toc, assetId, textLanguage, AssetType::Built);
 				selectedLanguage = textLanguage;
 			}
 
 			if (!asset) {
-				asset = game_resolve_asset(&self->toc, assetId, audioLanguage, 0);
+				asset = game_resolve_asset(&self->toc, assetId, audioLanguage, AssetType::Built);
 				selectedLanguage = audioLanguage;
 			}
 
 			if (!asset) {
-				asset = game_resolve_asset(&self->toc, assetId, 0, 0);
-				selectedLanguage = 0;
+				asset = game_resolve_asset(&self->toc, assetId, AssetLanguage::None, AssetType::Built);
+				selectedLanguage = AssetLanguage::None;
 			}
 
 			if(!asset || asset->header == -1) {
@@ -238,7 +331,7 @@ namespace rivet_hook {
 			game_load_ops[loadIndex].asset = archiveAsset;
 			game_load_ops[loadIndex].size = asset->size;
 			game_load_ops[loadIndex].header = asset->header;
-			game_load_ops[loadIndex].language = selectedLanguage;
+			game_load_ops[loadIndex].language = static_cast<uint8_t>(selectedLanguage);
 			game_load_ops[loadIndex].priority |= 1;
 
 			if (std::ranges::contains(known_important_assets, assetId)) {
@@ -255,12 +348,54 @@ namespace rivet_hook {
 
 	auto
 	is_valid_asset(ArchiveFileSystem* self, AssetId asset_id) -> bool {
-		return mod_files.contains(asset_id) || game_is_valid_asset(self, asset_id);
+		if (game_is_valid_asset(self, asset_id)) {
+			return true;
+		}
+
+		for (const auto& mod_list : mod_files) {
+			if (mod_list.contains(asset_id)) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	auto
 	is_installed_asset(ArchiveFileSystem* self, AssetId asset_id) -> bool {
-		return mod_files.contains(asset_id) || game_is_installed_asset(self, asset_id);
+		if (game_is_installed_asset(self, asset_id)) {
+			return true;
+		}
+
+		for (const auto& mod_list : mod_files) {
+			if (mod_list.contains(asset_id)) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	auto
+	set_text_language(AssetLanguage lang) -> void {
+		game_set_text_language(lang);
+		if (lang == text_language) {
+			return;
+		}
+
+		text_language = lang;
+		load_mod_assets();
+	}
+
+	auto
+	set_audio_language(AssetLanguage lang) -> void {
+		game_set_audio_language(lang);
+		if (lang == audio_language) {
+			return;
+		}
+
+		audio_language = lang;
+		load_mod_assets();
 	}
 
 	auto
@@ -305,11 +440,10 @@ namespace rivet_hook {
 
 		// functions we need to call for reimpl_load_ops
 		game_resolve_asset = reinterpret_cast<resolve_asset_t>(RVA(0x141057420));
-		game_get_text_language = reinterpret_cast<get_language_t>(RVA(0x14158e140));
-		game_get_audio_language = reinterpret_cast<get_language_t>(RVA(0x14158dad0));
 		game_alloc_asset = reinterpret_cast<alloc_asset_t>(RVA(0x140fa2a80));
 		game_commit_assets = reinterpret_cast<commit_assets_t>(RVA(0x140fa2c00));
 		game_mount_archive = reinterpret_cast<mount_archive_t>(RVA(0x1410597e0));
+		game_is_asset_valid = reinterpret_cast<is_asset_valid_t>(RVA(0x14105a640));
 		game_sort = reinterpret_cast<sort_t>(RVA(0x141598f30));
 		game_sort_op.func = RVA(0x141058480);
 		game_sort_op.target = 0;
@@ -324,6 +458,10 @@ namespace rivet_hook {
 		// vars we need to overwrite to disable texture fencing
 		disable_directstorage = reinterpret_cast<bool*>(RVA(0x146798084));
 		legacy_texture_loading = reinterpret_cast<bool*>(RVA(0x1467c728b));
+
+		// language tracking
+		create_hook("set text lang", reinterpret_cast<LPVOID>(RVA(0x14158e5a0)), reinterpret_cast<LPVOID>(&set_text_language), reinterpret_cast<LPVOID *>(&game_set_text_language));
+		create_hook("set audio lang", reinterpret_cast<LPVOID>(RVA(0x14158e550)), reinterpret_cast<LPVOID>(&set_audio_language), reinterpret_cast<LPVOID *>(&game_set_audio_language));
 
 		// asset io
 		create_hook("preload file op", reinterpret_cast<LPVOID>(RVA(0x1410599c0)), reinterpret_cast<LPVOID>(&reimpl_load_ops), nullptr);
@@ -344,5 +482,16 @@ namespace rivet_hook {
 		*disable_directstorage = true;
 
 		#undef RVA
+	}
+
+	auto
+	AssetLoader::fini() -> void {
+		for (auto& mod_list : mod_files) {
+			for (auto& [_, value] : mod_list) {
+				value.close();
+			}
+
+			mod_list.clear();
+		}
 	}
 }
