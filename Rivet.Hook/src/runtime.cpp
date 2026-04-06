@@ -149,6 +149,7 @@ namespace rivet_hook {
 			g_output << "[rivet] init" << std::endl;
 
 			g_settings = Settings::load();
+			g_settings.save();
 
 			if (!GetModuleHandleExA(GET_MODULE_HANDLE_EX_FLAG_PIN, nullptr, &g_game_module)) {
 				g_output << "[rivet] unable to get the executable handle." << std::endl;
@@ -206,7 +207,6 @@ namespace rivet_hook {
 		}
 
 		auto fini() -> void {
-			g_settings.save();
 			g_output << "[rivet] fini" << std::endl;
 
 			if (g_renderdoc != nullptr) {
