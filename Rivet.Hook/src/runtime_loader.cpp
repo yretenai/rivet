@@ -332,11 +332,21 @@ namespace rivet_hook {
 					continue;
 				}
 			} else {
-				if (type != AssetType::Built) {
-					relative_path = relative_path.replace_extension("");
-				}
+				auto first_dir = *relative_path.begin();
+				if (first_dir == "unknown") {
+					try {
+						asset_id = std::stoull(relative_path.stem().string());
+					} catch (const std::exception &e) {
+						g_output << "could not parse asset id for path " << relative_path << ": " << e.what() << std::endl;
+						continue;
+					}
+				} else {
+					if (type != AssetType::Built) {
+						relative_path = relative_path.replace_extension("");
+					}
 
-				game_create_asset_id(&asset_id, relative_path.string().c_str());
+					game_create_asset_id(&asset_id, relative_path.string().c_str());
+				}
 			}
 
 			populate_mod_asset(mod_path, relative_path.string(), asset_id, type, language);
@@ -385,7 +395,7 @@ namespace rivet_hook {
 					try {
 						asset_id = std::stoull(relative_path.filename().string());
 					} catch (const std::exception &e) {
-						g_output << "could not parse asset_id id for path " << relative_path << ": " << e.what() << std::endl;
+						g_output << "could not parse asset id for path " << relative_path << ": " << e.what() << std::endl;
 						continue;
 					}
 				} else {
