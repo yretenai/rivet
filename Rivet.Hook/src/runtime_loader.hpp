@@ -20,7 +20,7 @@ namespace rivet_hook {
 	enum class AssetType : uint32_t {
 		Built = 0,
 		TextureStream = 1,
-		SoundBank = 2,
+		Unknown2 = 2,
 		Audio = 3,
 		Unknown4 = 4,
 		Animation = 5,

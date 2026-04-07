@@ -13,7 +13,7 @@ namespace rivet_hook {
 	struct Settings {
 		bool suppress_crash_handler = true;
 		bool enable_asset_loader = true;
-		std::vector<std::string> asset_paths = { "mods/default"};
+		std::vector<std::string> asset_paths = { "mods/default" };
 		bool load_renderdoc = false;
 		std::string renderdoc_path { "renderdoc.dll"};
 		bool list_versions = false;
@@ -26,6 +26,8 @@ namespace rivet_hook {
 		bool log_loose_io = false;
 		bool log_asset_opens = false;
 		bool log_asset_ids = false;
+		bool log_mod_access = false;
+		bool log_mod_state = false;
 
 		static auto load() -> Settings;
 		auto save() -> void;

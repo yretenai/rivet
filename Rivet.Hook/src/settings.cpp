@@ -39,6 +39,8 @@ rivet_hook::Settings::load() -> rivet_hook::Settings {
 		LOAD_SETTING_EX("renderdoc", std::string, renderdoc_path, "dll_path");
 
 		LOAD_SETTING_EX("assets", bool, enable_asset_loader, "enabled");
+		LOAD_SETTING_EX("assets", bool, log_mod_access, "log");
+		LOAD_SETTING_EX("assets", bool, log_mod_state, "verbose");
 		LOAD_SETTING_EX("assets", std::vector<std::string>, asset_paths, "paths");
 
 		LOAD_SETTING_EX("log", bool, log_cohtml, "cohtml");
@@ -70,6 +72,8 @@ rivet_hook::Settings::save() -> void {
 
 	SAVE_SETTING_EX("assets", enable_asset_loader, "enabled", "enables loose asset loading");
 	SAVE_SETTING_EX("assets", asset_paths, "paths", "list of paths to load assets from");
+	SAVE_SETTING_EX("assets", log_mod_access, "log", "logs when mod files are accessed; disable by default because log noise");
+	SAVE_SETTING_EX("assets", log_mod_state, "verbose", "logs the mod pipeline state; disable by default because log noise");
 
 	SAVE_SETTING_EX("log", log_cohtml, "cohtml", "logs coherent ui url decode requests; disable by default because log noise");
 	SAVE_SETTING_EX("log", log_paths, "paths", "logs asset paths as they are loaded; disable by default because log noise");
