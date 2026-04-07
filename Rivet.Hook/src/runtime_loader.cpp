@@ -376,6 +376,7 @@ namespace rivet_hook {
 				load_mod_assets_rivet(path);
 			}
 		}
+		g_output.flush();
 	}
 
 	auto
@@ -399,6 +400,7 @@ namespace rivet_hook {
 			if (has_mod_asset(asset_id, type)) {
 				if (g_settings.log_mod_access) {
 					g_output << "[loose][open ] " << std::hex << asset_id << " is modded" << std::endl;
+					g_output.flush();
 				}
 
 				file->status = 2;
@@ -409,6 +411,7 @@ namespace rivet_hook {
 			}
 		}
 
+		g_output.flush();
 		game_open_file(self, file, asset_id, type, platform, manager_id);
 	}
 
@@ -416,6 +419,7 @@ namespace rivet_hook {
 	read_file(intptr_t self, AssetFile* file, char* buffer, size_t offset, size_t size, int32_t priority, int32_t unknown2) -> bool {
 		if (g_settings.log_loose_io) {
 			g_output << "[loose][read ] offset: " << std::hex << offset << " size: " << size << " status: " << file->status << " padding: " << file->padding << " data: " << file->data << " asset_id: " << file->asset_id << std::endl;
+			g_output.flush();
 		}
 
 		auto type = static_cast<AssetType>(file->data & 0xFF);
@@ -444,6 +448,7 @@ namespace rivet_hook {
 	close_file(intptr_t self, AssetFile* file) -> void {
 		if (g_settings.log_loose_io) {
 			g_output << "[loose][close] status: " << file->status << " padding: " << file->padding << " data: " << file->data << " asset_id: " << file->asset_id << std::endl;
+			g_output.flush();
 		}
 
 		auto type = static_cast<AssetType>(file->data & 0xFF);
@@ -622,6 +627,7 @@ namespace rivet_hook {
 
 		game_sort((intptr_t) game_load_ops, loadIndex, 0x18, game_sort_op);
 
+		g_output.flush();
 		return loadIndex;
 	}
 
@@ -738,6 +744,7 @@ namespace rivet_hook {
 		for (auto &type_mod_list : mod_files_combined) {
 			for (auto &mod_list : type_mod_list) {
 				for (auto &[_, value] : mod_list) {
+					g_output << "[loader] closing " << value.original_path.string() << std::endl;
 					value.close();
 				}
 

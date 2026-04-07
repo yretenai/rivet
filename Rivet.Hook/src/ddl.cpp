@@ -172,21 +172,25 @@ namespace rivet_hook::ddl {
 		std::vector<uint8_t *> tl_pointers = scan(g_game_module, DDL_TYPE_LIST_SIGNATURE);
 		if (hm_pointers.empty()) {
 			g_output << "[DDL] could not find hash map pointer, aborting" << std::endl;
+			g_output.flush();
 			return;
 		}
 
 		if (hm_pointers.size() > 1) {
 			g_output << "[DDL] too many hash map pointers, aborting" << std::endl;
+			g_output.flush();
 			return;
 		}
 
 		if (tl_pointers.empty()) {
 			g_output << "[DDL] could not find type list pointer, aborting" << std::endl;
+			g_output.flush();
 			return;
 		}
 
 		if (tl_pointers.size() > 1) {
 			g_output << "[DDL] too many type list pointers, aborting" << std::endl;
+			g_output.flush();
 			return;
 		}
 
@@ -389,6 +393,7 @@ namespace rivet_hook::ddl {
 		g_output << "[DDL] found " << bitsets.size() << " bitsets" << std::endl;
 		g_output << "[DDL] found " << roots.size() << " roots" << std::endl;
 		g_output << "[DDL] found " << types.size() << " types" << std::endl;
+		g_output.flush();
 	}
 
 	auto
@@ -403,6 +408,7 @@ namespace rivet_hook::ddl {
 
 		if (function_ptrs.size() != 1 && hash_function_ptrs.size() != 1) {
 			g_output << "[ver] could not find version pointer, aborting" << std::endl;
+			g_output.flush();
 			return;
 		}
 
@@ -434,5 +440,6 @@ namespace rivet_hook::ddl {
 		json_data.write(json_text.c_str(), static_cast<std::streamsize>(json_text.size()));
 		json_data.flush();
 		json_data.close();
+		g_output.flush();
 	}
 }

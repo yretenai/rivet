@@ -112,7 +112,6 @@ namespace rivet_hook {
 				last_context = current_context;
 				last_message = current_message;
 				g_output << "[ctx] [" << (context == nullptr ? "?" : context) << "] " << (message == nullptr ? "" : message) << std::endl;
-				g_output.flush();
 			}
 		}
 		return result;
@@ -132,7 +131,6 @@ namespace rivet_hook {
 			if (buffer_str.back() != '\n') {
 				g_output << std::endl;
 			} else {
-				g_output.flush();
 			}
 		}
 
@@ -204,6 +202,7 @@ namespace rivet_hook {
 			}
 
 			g_output << "[rivet] init complete" << std::endl;
+			g_output.flush();
 		}
 
 		auto fini() -> void {
