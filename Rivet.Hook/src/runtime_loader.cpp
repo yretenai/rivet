@@ -344,12 +344,66 @@ namespace rivet_hook {
 	}
 
 	auto
-	load_mod_assets_common(std::filesystem::path &path) -> void {
+	load_mod_assets_common(std::filesystem::path &base_dir) -> void {
 		// 0/... -> ... (built, none)
 		// 1/... -> ... (texture, none)
 		// 8/... -> ... (built, us)
 		// 9/... -> ... (texture, us)
-		// todo
+		for (const auto &entry : std::filesystem::directory_iterator(base_dir)) {
+			if (!entry.is_directory()) {
+				continue;
+			}
+
+			auto &entry_path = entry.path();
+
+			uint32_t directory_id = 0;
+			try {
+				directory_id = std::stoul(entry_path.filename().string());
+			} catch (const std::exception &e) {
+				g_output << "could not parse group id for path " << entry_path << ": " << e.what() << std::endl;
+				continue;
+			}
+
+			if (directory_id > 0xff) {
+				g_output << "group id for " << entry_path << " is malformed. skipping" << std::endl;
+				continue;
+			}
+
+			AssetLanguage language = static_cast<AssetLanguage>(directory_id / 8);
+			AssetType type = static_cast<AssetType>(directory_id % 8);
+
+			for (const auto &entry : std::filesystem::recursive_directory_iterator(entry_path)) {
+				if (!entry.is_regular_file()) {
+					continue;
+				}
+
+				const auto &mod_path = entry.path();
+				auto relative_path = std::filesystem::relative(mod_path, entry_path);
+
+				AssetId asset_id = 0;
+				if (relative_path.extension() == "") {
+					try {
+						asset_id = std::stoull(relative_path.filename().string());
+					} catch (const std::exception &e) {
+						g_output << "could not parse asset_id id for path " << relative_path << ": " << e.what() << std::endl;
+						continue;
+					}
+				} else {
+					if (type == AssetType::Audio) {
+						try {
+							asset_id = 0xE000000000000000 | std::stoul(relative_path.stem().string());
+						} catch (const std::exception &e) {
+							g_output << "could not parse asset id for path " << relative_path << ": " << e.what() << std::endl;
+							continue;
+						}
+					} else {
+						game_create_asset_id(&asset_id, relative_path.string().c_str());
+					}
+				}
+
+				populate_mod_asset(mod_path, relative_path.string(), asset_id, type, language);
+			}
+		}
 	}
 
 	auto
@@ -364,15 +418,15 @@ namespace rivet_hook {
 			}
 
 			if (!std::filesystem::is_directory(path)) {
-				g_output << "[loader] mod path " << path << " does not exist! skipping." << std::endl;
+				g_output << "[loader] mod path " << entry << " does not exist! skipping." << std::endl;
 				continue;
 			}
 
 			if (std::filesystem::exists(path / "info.json")) {
-				g_output << "[loader] mod path " << path << " is common format." << std::endl;
+				g_output << "[loader] mod path " << entry << " is common format." << std::endl;
 				load_mod_assets_common(path);
 			} else {
-				g_output << "[loader] mod path " << path << " is rivet format." << std::endl;
+				g_output << "[loader] mod path " << entry << " is rivet format." << std::endl;
 				load_mod_assets_rivet(path);
 			}
 		}
