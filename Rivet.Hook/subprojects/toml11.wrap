@@ -1,8 +1,0 @@
-[wrap-git]
-url = https://github.com/ToruNiina/toml11.git
-revision = be08ba2be2a964edcdb3d3e3ea8d100abc26f286
-depth = 1
-patch_directory = toml11
-
-[provide]
-toml11 = toml11_dep
