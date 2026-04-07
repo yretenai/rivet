@@ -71,7 +71,7 @@ rivet_hook::Settings::save() -> void {
 	SAVE_SETTING_EX("renderdoc", renderdoc_path, "dll_path", "path to renderdoc/dll");
 
 	SAVE_SETTING_EX("assets", enable_asset_loader, "enabled", "enables loose asset loading");
-	SAVE_SETTING_EX("assets", asset_paths, "paths", "list of paths to load assets from");
+	SAVE_SETTING_EX("assets", asset_paths, "paths", "list of paths to load assets from, order is priority. first entry is least priority.");
 	SAVE_SETTING_EX("assets", log_mod_access, "log", "logs when mod files are accessed; disable by default because log noise");
 	SAVE_SETTING_EX("assets", log_mod_state, "verbose", "logs the mod pipeline state; disable by default because log noise");
 
