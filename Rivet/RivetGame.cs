@@ -20,7 +20,7 @@ public sealed class RivetGame : IDisposable {
 		"se", "br", "ar", "tr", "la", "cs", "ct", "fc", "cz", "hu", "el", "ro", "th", "vi", "id", "hr",
 	];
 
-	public static readonly string[] StreamExtensions = ["", ".stream", "", ".wem", "", ".animstrm", "", ".lgstream"];
+	public static readonly string[] StreamExtensions = ["", ".stream", ".unk2strm", ".wem", ".unk4strm", ".animstrm", ".unk6strm", ".lgstream"];
 
 	static RivetGame() {
 		LoadFileList(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "assets.txt"));
