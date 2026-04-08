@@ -6,7 +6,9 @@ SPDX-License-Identifier: EUPL-1.2
 
 # ![rivet icon](Resources/icon32.png) rivet
 
-rivet is a processor for rift apart archives.
+rivet is a project researching luna engine, specializing in rift apart.
+
+check out the [rivet_hook repo](https://github.com/neptuwunium/rivet_hook) for the mod loader.
 
 ## Notice
 
